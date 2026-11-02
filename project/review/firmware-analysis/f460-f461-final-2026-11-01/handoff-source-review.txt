@@ -1,0 +1,118 @@
+# F460/F461 final handoff source-to-summary review
+
+**PASS for the frozen candidate's documentary/source-to-summary scope. No correction requested.** This is an independent review of the handoff's wording and its relationship to saved reports and curated product roles. It is not another binary-source audit, semantic re-audit of all indexed files, manufacturer-document review, source-collector run, database query, CPU replay or runtime/physical validation. No original firmware/provider/native/target instructions, clocks, services, modules or output delegates were executed.
+
+The reviewer authored the F461 packets and the F460 source peer reviews, and authored the final navigation catalogue. F461 conclusions are compared with the independently completed F461 source reviews; this document does not recast authorship as independent source verification. For F460 the current handoff is checked against the authoritative author reports and the already saved independent source reviews, without reopening original binaries. All source/candidate files remain unchanged.
+
+## Candidate and scope
+
+Candidate `handoff/HANDOFF_CANDIDATE.md` is SHA256 **6a61539cd196a2bb691363690811be5c0243db2679952fe6746f1f7860bbc1dc**, interpreted at its intended public firmware-analysis location. Exact read-time input identities are listed below. Those identities describe the bytes reviewed, not a guarantee that later current pages remain unchanged.
+
+The candidate correctly separates F460 2.0.12 and F461 2.0.11 archive/build identities and curated OWN-DEV-0207 Home + Project/Home + Control versus OWN-DEV-0208 third-party-integration roles. The product definitions are context sources, not newly approved full manufacturer dossiers. No electrical, physical, public WHO or active configuration meaning is inferred from equal database bytes, filenames, DTBs, internal class labels or offsets. F454, MH202 and MyHOMEServer1 layouts/roles/ledgers are not transferred.
+
+## Source-to-summary findings
+
+| Handoff area | Documentary result and preserved boundary |
+|---|---|
+| F461 configuration | The run11 main option-table destinations, successful parse/load continuation, nonnull option-pointer precedence, key requests and parent fallback reach the same M+16 holder. Holder P+8/P+16 are separate library/configuration directory fields. The candidate claims selection/copy requests, not actual argv, working directory, loaded configuration or startup readiness. |
+| F461 module admission | Run14 requires the exact local filename and both symbol-result gates, retains its own 16-byte path/handle entry in P+0 before initializer(P+16), and gives qualified traversal returns. The candidate does not promote a traversal return, symbol presence, initializer request or local omission of a return-value branch into activation, complete ABI validation or safety. |
+| F461 removal | Run15 authoritative report v2 supports monitor callback/userdata M, same holder/list, numeric event0 and the exact suffix-argument orientation, conditional stop-symbol request, list/head bookkeeping, path free, close request and entry free under normal returns. The candidate explicitly preserves path LOAD558c before head STORE5590 and FREE5594 afterward. No actual event, stop, unload, ownership, concurrency or filesystem identity is asserted. |
+| F461 structured translation | Runs03/04 distinguish complete 64-bit field-route identity from low32 direction, descriptor direction and criterion lists. Runs05/06/10 retain conditional typed-object output/address rules, existing ID copy and opaque later output/frame-preparation boundaries. The candidate does not compose contradictory parsed-field premises or turn an ASCII component into observed raw traffic/public grammar/delivery/physical topology. |
+| F461 clocks and producer gap | Runs12/13 retain unsigned due/min selection versus a fresh signed subtraction/division/narrowed interval, candidate provider/API assumptions, callback/source/lifetime premises, deadline32 producer/coordinate OPEN and constructor stamp24 distinct. Different private-list/parsed-string offset32 roles do not supply that producer. The handoff does not assert positive elapsed delta, universal scheduling units or a fired timer. |
+| F461 platform/log path | Runs07/09 prove getter/cache/selected source requests only; run08 supplies conditional configuration/status/log-persistence requests. The handoff leaves actual board, packaged DTB/auxiliary-core selection, active boot profile, installed identity and readiness unestablished. Excluded uncertain process and command-fallback routes remain closed. |
+| F460 catalogue | Runs04/05 give the actual source SQL/reader and supplied-owner selector tuple. The candidate keeps key89 separate from Device/WHO, names columns13/14 as slots/system ID and preserves bounded repeated-row/null-text observations as local interpretation limits, not runtime defects or a complete selection/fallback/provider policy. Shared catalogue data does not establish an F461 binary reader. |
+| F460 scene and condition objects | Runs06/07/09/10/14/15 support their own raw/compiled identities, conditional SceneRunner context, eight-byte condition pointers versus sixteen-byte action pairs, non-owning raw callback capture and selected condition/serializer paths. Valid casts/objects, normal providers, status/selector and unchanged-value premises remain explicit; no natural scene, public operator vocabulary, physical unit, whole truth policy or safe lifetime is claimed. |
+| F460 wait, marker and local writer | Run03's seconds meaning remains conditional on ordinary Linux LP64 API/ABI and binding; non-retry wait errors can return normally before the separate marker store. Run10 cleanup can also follow scene-byte state without a fresh true marker. Run11's provided-receiver writer has no qualified natural caller/class join. The candidate preserves these distinctions and does not assert all-action success, elapsed delay or natural cancellation. |
+| F460 update/profile | Runs08/12/13 keep producer/consumer same-context and natural-order premises, record-kind versus selector/status namespaces, opaque helper X0 value and later state-machine request separate. No runtime environment read, compatibility/trust policy, signature verification, extraction/flash/install result or platform activation is inferred. |
+
+The ranked next questions address remaining configured/natural objects, record correlation, ownership/lifecycle and platform/update context. They do not falsely reopen completed selected joins or imply that the list is exhaustive. Closed receiving/output/transport/authentication/session/framing/MQTT/libjel and excluded process/command routes remain expressly closed.
+
+## Execution, versions and navigation
+
+The handoff correctly reports zero new original F460/F461 execution and separates host extraction/identity/initial SQLite comparison from target SQL or vendor execution. The inherited MyHOMEServer1 metadata remains one corpus/eight entries/340 original visits/0 C primitives/12 redirects/8 EXIT/0 guard stops/360 hooks, with four data-relocation setups and other host register writes separate. These are saved observations, not another run. Old F454/MH202 ledgers and unavailable MH202 run18/run21 intermediate histories stay separate/unverified. Full Device/source/runtime/physical approval is not conferred.
+
+The 15-checkpoint catalogue is explicitly navigation/hash verification, not a coverage percentage or fresh semantic review. The handoff preserves report refinements versus older canonical collector pins and exact retained historical inputs; it does not claim a current pass for old source collectors after page changes. The latest run15 state/index v2 coordination correction is saved metadata, not firmware behavior or a new current-branch assertion.
+
+## Links and pending mechanical completion
+
+At this review's read time the candidate has **32 Markdown links / 21 unique local targets**. Resolved against its intended public directory, **20 unique files exist**. The sole pending file is `../../project/review/firmware-analysis/f460-f461-final-2026-11-01/README.md`, the final capsule still being assembled. The catalogue-profile section anchor is present. This review does not pre-certify that future capsule, review/validation copies, their eventual bytes or final strict link/gate results. Parent final mechanical validation remains required after actual assembly; no placeholder or exemption is approved.
+
+## Exact reviewed input identities
+
+The following are file identities and review inputs, not newly evaluated original source. Thirty authoritative report versions and thirty saved source reviews retain their own limits and original peer scopes. No old collector was run.
+
+| Input | Bytes | SHA-256 |
+|---|---:|---|
+| `work/f460-f461-comparison/2026-11-01-final/handoff/HANDOFF_CANDIDATE.md` | 16284 | `6a61539cd196a2bb691363690811be5c0243db2679952fe6746f1f7860bbc1dc` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md` | 43781 | `3195fb54f4d533cbd6ba01eb8956a9141faa14ff687af4bbf43ed21c8b1e5734` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-2.0.12-and-f461-2.0.11.md` | 6995 | `702d30094daeb126727f7b8d485421fcca1fe849fb63280049770197ffb5d69e` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-selected-source-paths.md` | 4520 | `96732373ac912f84b9f539c77924247ad21ee1364d151d8b27a9dacc1709af1a` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | 15603 | `bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba` |
+| `OpenWebNet-Encyclopedia/devices/definitions/own-dev-0207-f460-myhome-server.md` | 41934 | `ed4af14a11813ba1fdc53dfbf131a388b2cf8066fc688888e30da7c158579932` |
+| `OpenWebNet-Encyclopedia/devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md` | 39923 | `89f0a1cd681924ec8bf6b093c4c39d3d037b14cd416547b8111bffecd2eb5323` |
+| `work/f460-f461-comparison/2026-11-01-final/verification/REPORT.md` | 3772 | `64e79871bb0f27aa9371b137247531dcceba162756c664b59128454d685c910c` |
+| `work/f460-f461-comparison/2026-11-01-final/verification/CATALOGUE.json` | 90479 | `bf95392a35a3874945418b1e8e3027c0a9d327434d2129d015d1965cb6b677dd` |
+| `work/f460-f461-comparison/2026-11-01-run15/RESEARCH_STATE.v2.json` | 34783 | `cf4de356e900caa93cebfbe39cb2d22079a7aa4e8eaf402f11a221db18df1589` |
+| `work/f460-f461-comparison/2026-11-01-run15/IDENTITY_VALIDATION.json` | 36694 | `db834a70fea933910b686746b9b2ebccbc01b09cb725a1a0853676520e719d93` |
+| `work/f460-firmware/2.0.12/research/2026-11-01/first-pass/REPORT.md` | 7328 | `c7a2949ed3f49a14fa611561795c68f3f166d980326719d61029975069263945` |
+| `work/f461-firmware/2.0.11/research/2026-11-01/REPORT.v2.md` | 12048 | `187877260da89ef432021b971268f83854641a72b73e4d7c8d4d02b035b1dd16` |
+| `work/f460-f461-comparison/2026-11-01/reviews/f460-source-review.md` | 4303 | `99f9f603381611a6f22a58e7631471285cd3ee9dc92b9b3a1539bcd6882ea88d` |
+| `work/f460-f461-comparison/2026-11-01/reviews/f461-source-review.md` | 7383 | `56e9d58cc23b99a5093ea7772323e9783496824ad30d031c9c669a2fbf1b34ea` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/REPORT.md` | 5142 | `4caa7e282a04f4a514803b4da93c875e5da20b6ccd4ccae14542d855726eb68a` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/REPORT.v2.md` | 5869 | `b26581f9a9292aec707562863ba43e7dfc8dcbca1bb6d51e2037295304ca72ec` |
+| `work/f460-f461-comparison/2026-11-01-depth/reviews/f460-source-review.md` | 3546 | `99245aee7920799ad5c5aac57df6bfc7c4ffb7ce4b7049fbe1e59ae50f93223c` |
+| `work/f460-f461-comparison/2026-11-01-depth/reviews/f461-source-review.md` | 4522 | `68e7e4fecd83b2e1b0e1d8aab86f46bad43d1bf01dd7e7abec1809de1c501b84` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run03-sleep-invoker/REPORT.md` | 9034 | `ee7c55b26c5587121bdd27347e602d7cc9f5c3105a407d68f84294c19949d521` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/REPORT.md` | 9896 | `a89d70211c3f6eecb92f620d9e1aecdc52c2c1a06dbff99cdcc89b139b0f6c19` |
+| `work/f460-f461-comparison/2026-11-01-run03/reviews/f460-source-review.md` | 4478 | `9fb28914733382eadb8b1021084dffeba11822cf2f34ebed37a325d2b58bc6ee` |
+| `work/f460-f461-comparison/2026-11-01-run03/reviews/f461-source-review.md` | 5525 | `74ead3147ceade81adb9a1c76806caaaed1cb338eec47d6332e8ba480760407c` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/REPORT.v2.md` | 6764 | `00c18455900a2ac60c25d0ad0d0d19ec12935e264b960c30c321da054b477687` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/REPORT.md` | 9454 | `91a541f322d8126f3dc8c5e64547242ebedecbb8c3d6b959e9494ffe2ee2ff3f` |
+| `work/f460-f461-comparison/2026-11-01-run04/reviews/f460-source-review.md` | 4845 | `e261fa073f196e780e28829e7f51156cfa9f12c9a66ac72753fc07372c67650c` |
+| `work/f460-f461-comparison/2026-11-01-run04/reviews/f461-source-review.md` | 4327 | `6103784f71cb44276b76b4ef3e87957fae6e0f2605fb4c1d923a9623a3c3dfd2` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run05-selector/REPORT.md` | 7108 | `3c6d2d502e1322c7279f3fe259e4e30a9348858add5b656ed332a08ebdf7bdfb` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/REPORT.md` | 8532 | `295e1e82d037adfaa3e6846fa3de579232dc5cbaefdd88734a7d294877b19631` |
+| `work/f460-f461-comparison/2026-11-01-run05/reviews/f460-source-review.md` | 4494 | `002b6a8a6942d3d23fb50bca6e30916a5187b7755dfc65ac66dfb5cda92d0dc5` |
+| `work/f460-f461-comparison/2026-11-01-run05/reviews/f461-source-review.md` | 4046 | `0ab9d39ddaeeca104c3ac6d87aef404cf9fc2c92e387888290832c81cce6e251` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run06-trigger/REPORT.md` | 8740 | `06435e577532e42b000a89b5cb7125faea507da85d8a79f791e9aae6f120157f` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run06-address/REPORT.md` | 7350 | `d8be70c3da862cfe82c367b1537beb6918ceaada5c5200cda2910b6ec049f52c` |
+| `work/f460-f461-comparison/2026-11-01-run06/reviews/f460-source-review.md` | 5045 | `9138708c663f0bf3f90c53165aca508abb3ea55ea4d24bb5c8d6565bfeb4e738` |
+| `work/f460-f461-comparison/2026-11-01-run06/reviews/f461-source-review.md` | 3761 | `00311f3f40e01cff1bd1b67765a35b02cc336db8fb27c2b05459b9bacf1103df` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/REPORT.md` | 8030 | `578653ad15a4c18b203d9917867f32384d017894875e88054043fae29ff46557` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/REPORT.md` | 6813 | `1599bdd53dd4f3a9f20091f141338dfd22249fd0fb7b3ab0e900108a992f11ae` |
+| `work/f460-f461-comparison/2026-11-01-run07/reviews/f460-source-review.md` | 4405 | `a4bdfb5d3f019d03e768733df85b081ffa5dece0653ce92e202d077c6f155484` |
+| `work/f460-f461-comparison/2026-11-01-run07/reviews/f461-source-review.md` | 3854 | `5150123d077525bf0f80e9560d58a0b191ffb755ba3abedbf2b35c7b40a30edd` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run08-update/REPORT.v3.md` | 8249 | `8edf41662a72cbdfad04dd09febfe8eb8826ab6d55dddb5b6a2445f38ebf6d4e` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/REPORT.v2.md` | 6993 | `88568663f780e22040ffe7fe6f50530fd620e7ae25133f594937ae16f9dff312` |
+| `work/f460-f461-comparison/2026-11-01-run08/reviews/f460-source-review.v2.md` | 2336 | `4c8432f94a508a12ce3b468c6c1a29cd8dc4179426fd1f0d02770d94f068905f` |
+| `work/f460-f461-comparison/2026-11-01-run08/reviews/f461-source-review.md` | 4221 | `6e7d0fee0a163584fb18e65243e2ddfb59f20b0d6e6b5a16516f9ee883cef953` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run09-condition/REPORT.md` | 8247 | `db8227a6259b29bf1c29cb118dbe462de6c21ae5eb675bdaf07af0674f688a19` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run09-platform/REPORT.md` | 7295 | `f8ee2fabea6b81b234fef657fca5314a206f2a785c2a0d312eb6597ae3774d3b` |
+| `work/f460-f461-comparison/2026-11-01-run09/reviews/f460-source-review.md` | 4819 | `98fcb72d3555a86f2449f41972eef5f978d3e591003074714e2d7d04426a2ef1` |
+| `work/f460-f461-comparison/2026-11-01-run09/reviews/f461-source-review.md` | 3699 | `6cec5aaa827a88d0f9136a769203f48dd81f54c2aeb9e9dce9d6cfdf18ee8c34` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/REPORT.v2.md` | 8497 | `0e960fe9a386c15467227feb382366becd285b324e59eed7eb5c01d0f386df64` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run10-address/REPORT.md` | 7848 | `289215b4a715abf4b148af32327883fd1246a8282a6535f7a061d50f4f89589a` |
+| `work/f460-f461-comparison/2026-11-01-run10/reviews/f460-source-review.md` | 4966 | `029b838a0c0badb4e69c4d2ba3ab0a367e044bb1415b725bb17e1525b88ef6c2` |
+| `work/f460-f461-comparison/2026-11-01-run10/reviews/f461-source-review.md` | 4549 | `287c6dbbe061873285d72e952bddfb69b95616d402bcd9b201bdebf3812df021` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run11-scene-control/REPORT.md` | 6474 | `c378a24d9bda1856de09e9be59047b53f68909aa418cb3ab584ea74dceb6d650` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run11-config-selection/REPORT.md` | 7731 | `034b07713342adc93dab60818a90d92b724ad10d6047581124972ae17a358595` |
+| `work/f460-f461-comparison/2026-11-01-run11/reviews/f460-source-review.md` | 3924 | `c960abd7fd7804899de1898972c4cf3f1cd2bc4b9d66cf594b928ea48345c8b5` |
+| `work/f460-f461-comparison/2026-11-01-run11/reviews/f461-source-review.md` | 4746 | `9bf18c56bd1922eae2b4cc4e2ed2f94eb19e39ddd540852a2123eab238c9b864` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/REPORT.md` | 6241 | `d288575f22d4e76b0c257ce2cbfad0dd2424efc59f5fa20e92ac310f5675a620` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/REPORT.md` | 8843 | `0e13cbfe063217d9234b916774616ee5233a2a5892ba7ffdb3dd19aa3fb3ec04` |
+| `work/f460-f461-comparison/2026-11-01-run12/reviews/f460-source-review.md` | 4233 | `702fa2c7906e475bef5fd9ffd6a0174e91fad5e76b569c1724f39729f19b26be` |
+| `work/f460-f461-comparison/2026-11-01-run12/reviews/f461-source-review.md` | 5176 | `dc29c4d41b0f275e193d8ec02e2627d2024099f5ab1be0cd5b2207d329569264` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run13-compatibility/REPORT.md` | 6981 | `e54bdfb6f6e196584bb9c97a35d6cf984cc4082d1b3e13ced22875a00250cd78` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/REPORT.v2.md` | 7447 | `2b36473953ba35ff6e06d418a8a78d83eddb435d29ee48258748371f2980816c` |
+| `work/f460-f461-comparison/2026-11-01-run13/reviews/f460-source-review.md` | 4307 | `ec873f4f59d038ddb80bf0084dcd2308161b4a68c6742a9b66900fd967ba0e8b` |
+| `work/f460-f461-comparison/2026-11-01-run13/reviews/f461-source-review.md` | 5740 | `00202481238b0d9c1678dffe5ececa84cd68762ebedc968451033434db1a5ee9` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run14-numeric/REPORT.v2.md` | 8499 | `72c63ccc002bc723808670dc7835b7732b3362e1277a7cb2004a531031fab59f` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run14-boot-selection/REPORT.md` | 7609 | `85438c26d5c27d9259e8970633318f3f3ea495fee5444865b75219ff59009e64` |
+| `work/f460-f461-comparison/2026-11-01-run14/reviews/f460-source-review.md` | 5965 | `98a86a235c8651d78a96a718f605b3e7bf5579b1f539f87cb6a29f67ad9f323f` |
+| `work/f460-f461-comparison/2026-11-01-run14/reviews/f461-source-review.md` | 4593 | `8a7f67eef0fae3ef1e0d79e9aade00bd58e5b25a1d05272be4a6dafd01a66f9a` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/REPORT.v2.md` | 7653 | `346d77b15b08e3da42e1f5aafe3ed1717d4bf20c13eca1929e1b4c8143469420` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/REPORT.v2.md` | 7463 | `dcce7197af2737f165295c51bcb3b51ff07bc3076550daa4732da48e38c3ae70` |
+| `work/f460-f461-comparison/2026-11-01-run15/reviews/f460-source-review.md` | 5371 | `db66c8db063702dc7d2162b5da264740a08f3898bb31c2533d412f564cf2444b` |
+| `work/f460-f461-comparison/2026-11-01-run15/reviews/f461-source-review.md` | 5853 | `a9338460a240f65a8be4a95a9c23673164cfffade42e17f8c6fed6b310a5ec10` |
+
+Review completed 2026-11-01T17:37:33.375913+00:00. First review bytes are preserved immediately with a precomputed non-circular index.

@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "bytes": 55359,
+      "path": "work/f453av-firmware/3.0.14/analysis/recovery-regular-files.json",
+      "sha256": "4e93d6d001272cb7a68bc6c72b2162b1bb0caca9efe25175a75469ef2a1b73b2"
+    },
+    {
+      "bytes": 37956,
+      "path": "work/f453av-firmware/3.0.14/analysis/recovery/bin/bt_start",
+      "sha256": "f5a4f002e212e97e5f3e40fc4ed067237ad0095642bdec0b2c8792fa22a2fbd9"
+    },
+    {
+      "bytes": 5412,
+      "path": "work/f453av-firmware/3.0.14/research/2026-11-01-night05-recovery/REPORT.md",
+      "sha256": "fa4ee00fce4f0dda5a3e66754e9e44a00bb0c1455697256b41daa5ff36f913b9"
+    },
+    {
+      "bytes": 5695,
+      "path": "work/f453av-firmware/3.0.14/research/2026-11-01-night05-recovery/SOURCE.json",
+      "sha256": "25af62ff37b1571acf3925fca094ef32a4648faaa56ae315725be0525358c42c"
+    }
+  ]
+}

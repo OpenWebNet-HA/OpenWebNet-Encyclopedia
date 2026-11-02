@@ -1,0 +1,109 @@
+{
+  "checked_at": "2026-10-30T16:29:41.344961+00:00",
+  "passed": true,
+  "scope": "Run3 selected static joins; source reviews and exact identity, not runtime/physical proof",
+  "original_execution": 0,
+  "scripts": [
+    {
+      "script": "functional/run3/collect_evidence.py",
+      "passed": true,
+      "output": "PASS: 20 outputs + manifest; 8 spans, 11 words; original execution0"
+    },
+    {
+      "script": "triggers/run3/collect_evidence.py",
+      "passed": true,
+      "output": "{\n  \"outputs\": 8,\n  \"original_spans\": 4,\n  \"word_checks\": 14,\n  \"ordinary_models\": 10,\n  \"special_field_models\": 4,\n  \"original_execution\": 0\n}"
+    },
+    {
+      "script": "protocol/run3/collect_evidence.py",
+      "passed": true,
+      "output": "{\n  \"outputs\": 26,\n  \"inputs\": 9,\n  \"original_spans\": 19,\n  \"critical_words\": 26,\n  \"selected_relocations\": 4,\n  \"original_execution\": 0,\n  \"code_hooks\": 0\n}"
+    },
+    {
+      "script": "boot/run3/collect_startup.py",
+      "passed": true,
+      "output": "{\n  \"outputs\": 21,\n  \"spans\": 10,\n  \"word_assertions\": 16,\n  \"inputs\": 12,\n  \"host_cases\": 8,\n  \"original_instructions\": 0,\n  \"hooks\": 0\n}"
+    }
+  ],
+  "published_exports": 9,
+  "local_links": 104,
+  "preserved_prior_artifacts": 277,
+  "reviewed_prior_document_snapshots": 13,
+  "document_pins": [
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24.md",
+      "sha256": "763ce809e4bff87dd3a85d03129fd3b19d110cae4830149e43e868738735bb6d"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-state-and-routing.md",
+      "sha256": "3509942a5cb8cd530838705e4ecdc34d39b93685418b9af4587ac043a5b74789"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/README.md",
+      "sha256": "0d08572985f519f93d556edc1421f9420ee48e13306556dbc4c0cfb2b75d55f9"
+    },
+    {
+      "path": "project/review/firmware-analysis/README.md",
+      "sha256": "653317d0bca414bf4a20fbc3ff75fb8cb6b0ad1d5a23420088d52bde4a869512"
+    },
+    {
+      "path": "project/review/firmware-analysis/mh202-1.0.24/README.md",
+      "sha256": "a4ed4cc5b72101a9d812f4d950cb8cec485e54e37c74e3b3e717de6d9d0c16f3"
+    },
+    {
+      "path": "functional/who-17-scenario-management/README.md",
+      "sha256": "95eb2ae111f534ce84e33d41fc2057775cf5bea7cb520e7cbf1d5d5352c02679"
+    },
+    {
+      "path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "sha256": "a587419d33e4201025db715e70160b248fb8aeae76f50f5b91cbe655d062dd23"
+    },
+    {
+      "path": "devices/work-queue.yaml",
+      "sha256": "417c3c4a4d03775ae28701b7a8a73c2f41548dc39799470ab1beb4e7c4a2b856"
+    }
+  ],
+  "repository_checks": [
+    {
+      "name": "ESG",
+      "exit_code": 0,
+      "output": "STATS human_pages=382 support_pages=117 objective_failures=0 review_candidates=6867"
+    },
+    {
+      "name": "ECV",
+      "exit_code": 0,
+      "output": "STATS human_pages=382 objective_failures=0 review_candidates=14"
+    },
+    {
+      "name": "diff",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "protected_F454_dossiers": [
+    {
+      "dossier": "2026-10-29",
+      "index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df",
+      "files_verified": 1917
+    },
+    {
+      "dossier": "2026-10-30-targeted",
+      "index_sha256": "ddb83866292f70631b968b91f07e08fbc79415b5e1762cf3699f8e326eacff79",
+      "files_verified": 107
+    },
+    {
+      "dossier": "2026-10-30-targeted-2",
+      "index_sha256": "2dc3f9e3541478eff304d1d9bb368d02504c39cc3d5d8d3aec7ca96650032d82",
+      "files_verified": 130
+    },
+    {
+      "dossier": "2026-10-30-final-pass",
+      "index_sha256": "bf27345d8ce8d1e4e9277ad9346c62fcfde1f0b33bb20783ae5e66963ad100f2",
+      "files_verified": 83
+    }
+  ],
+  "sources_changed": false,
+  "branch": "docs/static-firmware-analysis-findings",
+  "commits_or_pushes": false,
+  "overnight_status": "ACTIVE, final consolidation31October07:15Paris; cutoff08:00"
+}

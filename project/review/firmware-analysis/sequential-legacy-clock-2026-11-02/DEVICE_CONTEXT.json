@@ -1,0 +1,21 @@
+{
+  "classification": "Read-only curated role context, no Device review upgrade or imported firmware semantics",
+  "roles": [
+    "F453AV: own curated audio/video webserver context",
+    "MH200N: own curated scenario programmer context"
+  ],
+  "files": [
+    {
+      "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0089-webserver-audio-video-din.md",
+      "bytes": 22283,
+      "sha256": "3440020c733174c7bf29f81500c5b7543ec799b623de94e14c88bf651ea191c4"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0131-mh200n-scenario-programmer.md",
+      "bytes": 25558,
+      "sha256": "2c8d3344a4331aefdb03fde54c1a6c6deca8063725700c0f5d5888e7f91cecd7"
+    }
+  ],
+  "no_shared_script_capability_transfer": true,
+  "Device_edits": false
+}

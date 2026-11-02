@@ -1,0 +1,33 @@
+# F454 frontend temperature-event handoff
+
+Static-only continuation, 30 October2026. The selected packaged frontend path preserves the supplied `actual_temperature` field through event dispatch, model cache and registered view handling until the shared renderer. This supplies the frontend counterpart to the separate backend mapper investigation. No JavaScript, browser, Backbone object, event, network result or DOM update executes here.
+
+## Recorded original inputs
+
+`collect_frontend.py` reads canonical original files through the existing read-only ImageVFS and records nine original source hashes/scopes plus three bounded fragments in the configured `main-built.js` bundle. Original image paths are retained in `frontend-evidence.json` and numbered excerpts. The full bundle hash is270f101d725a949b43f6d1a4db9e94c0b3476d7e257a6f73fde591480e35566c. The current package remains F4542.0.51, archiveSHA25615f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3.
+
+## Selected static chain
+
+| Stage | Original source locator | Field/dataflow |
+| --- | --- | --- |
+| Successful live-update result | jquery.myhomeliveupdate.js:59..73 | Calls processEvent(data.result); transport, token/current-session policy and actual JSON parsing are outside this selected trace. |
+| Array result | Same:126..143; jquery.myevents.js:263..281 | fireEventBurstFromNetwork→fireEventBurstInternal passes the actual burst element asparams to fireEvent, with its eventName/where. Cursor bookkeeping changes a separate last-event identifier, not temperature text. |
+| Individual thermal dispatch | jquery.myevents.js:166..187 | For selected nonzero targets, the thermal event-name exception selects individual routing even when a one-character WHERE resembles an environment. It finds matching object IDs, updates their cache, annotates params.uii and passes the same params to registered views. WHERE0/general follows a different branch. |
+| Object association | jquery.myobjects.js:133..150 | Exact/loose source comparison against object.where, or eprobe=='1' plus matching where_probe. Runtime object inventory and registration must exist. No universal address canonicalization is inferred. |
+| Thermal cache | Same:28..35,153..179 | cu_zone_set_actual_temperature maps to the actual_temperature key. Selected model IDs8002/8004/8005/8006/8007/8009/8008 read params[key] and set the same value. No numeric/sign conversion occurs in that assignment. Other models can take their own updateStatus route. |
+| Registered view dispatch | jquery.myevents.js:21..39; BaseView.js:76..86 | Registry is keyed byevent/UII/view. dispatchEvent selects the source-declared handler using params.eventName, then passes params unchanged. This source lookup/eval is not executed or security-tested. |
+| Controlled-zone view | ThermoUnitZoneView.js:19..27,62..71,254..267 | Registers the thermal event and copies params.actual_temperature into its model/local; selects sharedCelsius/Fahrenheit renderer and later requests text update. |
+| External-probe view | ExternalProbeObjectView.js:14..19,44..60,63..74 | Registers the sameevent and passes the event/cache field directly to the same renderer. |
+| Model/helper evidence | TemperatureZoneModel.js:12..34; jquery.myhomeapi.js:2188..2237 | The model's own handler likewise copies field without numeric conversion. The shared renderer performs the earlier recovered leading-character removal/decimal conversion. |
+
+The readable source module names are bound by main.js:15..20. `main-built.js` also contains the complete bounded burst, WHERE-object association and object-update function fragments saved in the collector. Its burst calls `fireEvent(e[n].eventName,e[n].where,e[n])`; its thermal cache assignment uses `eventToStatusMapping[e]`, reads n[key] and stores that value. This narrows the concern that only an unused readable-source helper was inspected; actual module loading/execution remains unobserved.
+
+## What the handoff closes
+
+Given a delivered event object whose eventName iscu_zone_set_actual_temperature, a matching configured object, a registered appropriate view and a four-character-string actual_temperature, the inspected frontend chain supplies that same string to the sharedrenderer. It contains no compensating sign operation before rendering on this selected path. A schema-preserving backend string such as1010 therefore needs no additional frontend data rewrite to reach the previously derived positive1°C rendering rule.
+
+This is a conditional static dataflow conclusion. The separate backend report establishes its own WHO4/DIM guards and JSON construction. Combining the two does not execute a Firmware monitor/cache/HTTP exchange, parser, browser, event registry, Backbone callbacks or hardware transaction. Runtime monkey-patching, other paths and arbitrary side effects remain outside this trace. The complete F454 installation's input production and physical validity remain unresolved.
+
+## Reproduction
+
+Run `python3 work/f454-firmware/research/2026-10-30-targeted-2/frontend/collect_frontend.py` from the local task workspace. Nine exact source scopes and three bundled function fragments are inspected; zero original instructions/evaluations occur. Only this new batch's evidence outputs are written. Prior completed dossiers, source material and original Firmware remain unchanged.

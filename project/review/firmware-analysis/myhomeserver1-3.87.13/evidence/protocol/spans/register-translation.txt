@@ -1,0 +1,47 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/libcoso/libcoso.so:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00001ee0 <register_translation@@Base>:
+    1ee0:	e92d41f0 	push	{r4, r5, r6, r7, r8, lr}
+    1ee4:	e1a04000 	mov	r4, r0
+    1ee8:	e24dd010 	sub	sp, sp, #16
+    1eec:	e3a00000 	mov	r0, #0
+    1ef0:	ebfffdd1 	bl	163c <get_plug_m@plt>
+    1ef4:	e1a05000 	mov	r5, r0
+    1ef8:	e1a00004 	mov	r0, r4
+    1efc:	ebfffdbf 	bl	1600 <unregister_translation@plt>
+    1f00:	e1a01004 	mov	r1, r4
+    1f04:	e5950014 	ldr	r0, [r5, #20]
+    1f08:	ebfffdda 	bl	1678 <g_list_prepend@plt>
+    1f0c:	e1a08000 	mov	r8, r0
+    1f10:	e594e010 	ldr	lr, [r4, #16]
+    1f14:	e594c00c 	ldr	ip, [r4, #12]
+    1f18:	e594701c 	ldr	r7, [r4, #28]
+    1f1c:	e5946014 	ldr	r6, [r4, #20]
+    1f20:	e59f2050 	ldr	r2, [pc, #80]	@ 1f78 <register_translation@@Base+0x98>
+    1f24:	e59f0050 	ldr	r0, [pc, #80]	@ 1f7c <register_translation@@Base+0x9c>
+    1f28:	e5943018 	ldr	r3, [r4, #24]
+    1f2c:	e3a01040 	mov	r1, #64	@ 0x40
+    1f30:	e5858014 	str	r8, [r5, #20]
+    1f34:	e08f2002 	add	r2, pc, r2
+    1f38:	e88d5000 	stm	sp, {ip, lr}
+    1f3c:	e08f0000 	add	r0, pc, r0
+    1f40:	e58d700c 	str	r7, [sp, #12]
+    1f44:	e58d6008 	str	r6, [sp, #8]
+    1f48:	ebfffddf 	bl	16cc <g_log@plt>
+    1f4c:	e3a00000 	mov	r0, #0
+    1f50:	ebfffdb9 	bl	163c <get_plug_m@plt>
+    1f54:	e5943024 	ldr	r3, [r4, #36]	@ 0x24
+    1f58:	e5840040 	str	r0, [r4, #64]	@ 0x40
+    1f5c:	e3530000 	cmp	r3, #0
+    1f60:	0a000001 	beq	1f6c <register_translation@@Base+0x8c>
+    1f64:	e1a00004 	mov	r0, r4
+    1f68:	e12fff33 	blx	r3
+    1f6c:	e3a00000 	mov	r0, #0
+    1f70:	e28dd010 	add	sp, sp, #16
+    1f74:	e8bd81f0 	pop	{r4, r5, r6, r7, r8, pc}
+    1f78:	000012f0 	strdeq	r1, [r0], -r0
+    1f7c:	000012a8 	andeq	r1, r0, r8, lsr #5

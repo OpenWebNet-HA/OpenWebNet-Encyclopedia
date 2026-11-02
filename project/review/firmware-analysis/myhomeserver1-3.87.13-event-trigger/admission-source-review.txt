@@ -1,0 +1,39 @@
+# BNIL local state admission: independent source review
+
+Verdict: PASS; no correction requested. This is an independent current-source/control-flow review of the selected original local handler, caller and temporary-copy cleanup. It is not accepted wire grammar, proof of an installed subscription, runtime callback execution, a complete receiver-lifetime assessment, global deduplication policy or physical behavior. No author file was edited. Original instructions, native helpers, target/provider/event/JSON objects and semantic host cases executed in this review:0.
+
+## Reproduction and independent source checks
+
+The read-only `python3 -B collect_admission_v1.py --check` reproduced18 outputs,9 spans,22 instruction guards and5 branch checks. Separately mapped original ELF32 PT_LOAD segments verified the scheduler SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`, all9 span hashes,22 guards,5 decoded Thumb targets,4 GOT/pool/value/relative-relocation bindings and3 class-method/RTTI relative entries. Original RTTI/string bytes and the known primary/secondary method values agree. The retained source spans were read for actual dataflow, not merely compared to expected output.
+
+An independent bounded halfword-position scan of the same original text0x11880..0x113fb0 reproduced the sole selected syntactic BL/B.W hit0x53a92 for0xee708. This only corroborates the selected direct-call locator; it is not whole-program absence of indirect/other-form callers. The selected PIC prefix independently gives GOTbase0x1659a4, and the handler's primary-method fast-path pool gives Thumb0xee59d.
+
+## Critical original semantics
+
+- Separate default fire0xee59c uses manager inner+12, invoker+16 and data+4. Handler0xee708 is a separate nonvirtual path: its enabled byte+48 can return before input-string inspection. These fields belong to the compiled inner, not the allocation/control base, scene/action state or cancellation domains.
+- The selected length/character checks yield on as0 and off as1. For length8, ordinary memcmp equality with exact noStatus yields0, then the common subtract1 gives local minus-one. No case-insensitive, generic numeric or external OPEN grammar is inferred. Valid live string/object/ABI/provider semantics remain explicit premises.
+- Operator+56 equal2 compares configured+60 for equality, equal3 for inequality. Other words reach the selected fire path without either comparison; no ordered comparison is implemented by this local path. This source fact is distinct from configured admission or a public operator/support domain. The method performs no previous-event store, without proving any global change-detection/deduplication property.
+- A known slot0 method uses the direct manager/invoker path; a different primary method remains opaque. The selected captured-scene wrapper0xa60a8 dereferences its capture then tailcalls0xa5db0. Scene enable/active/worker/condition gates remain later boundaries, not an automatic completed action.
+- The selected caller copies scene+104/+108 handles via0xa6508, extracts a pointer and requests the RTTI-backed TriggerRunner-to-BnilTriggerRunner cast. Successful nonnull live type/vtable is a premise. Secondary slot+12's known getter returns secondary receiver+4, corresponding to inner+24; string equality checks lengths and ordinary memcmp. Only a nonzero equality result passes event r8+8 and the typed receiver to0xee708. Upstream supplied objects, scene association, parser/event classification and runtime binding remain unclosed.
+- Crucially0x53a5a calls0x573a4 after retaining the raw cast result but before ID comparison and handler invocation. The copy helper increments each nonzero control's selected strong count; cleanup releases copied counts, requests last-owner/weak disposal conditionally and deletes its raw buffer. The temporary copy therefore does not itself prove ownership through the later call. Other scene/owner retention may exist. This ordering proves neither safety nor a UAF/leak, and no actual lifetime/concurrency outcome is assigned.
+
+No upstream transport, authentication, session or framing implementation was followed. Receiver validity, normal helper returns, errors/unwind and natural ordering remain conditional.
+
+## Preservation and exact pins
+
+All19 immediate output/code snapshots,2 original report/development-note snapshots and2 current-v2 report/refinement snapshots match current immutable bytes and indexes. The exact v1-to-v2 substitution is solely the recorded spacing repair from '+104/+1088-byte' to '+104/+108 in8-byte'; original report and results remain unchanged. DEVELOPMENT_NOTES correctly describes an unsaved exploratory inline SyntaxError with only a transcribed excerpt and no invented historical file hash. This review verifies those current records without certifying unavailable earlier inline bytes or historical execution.
+
+Paths below are relative to admission/.
+
+| File | SHA256 |
+| --- | --- |
+| `REPORT.v2.md` | `b838a55616eb012ce7b00aa1f355ae1ae13bdff3e132359be5502f0b02ea47b3` |
+| `collect_admission_v1.py` | `91401b006bf9096a7807aa9cf7cde69ea55f42452f6977a2b609087607758532` |
+| `OUTPUT_MANIFEST.json` | `b1e5ad21bbc340fe3ef58a4f14056f3e16440998b4f12904b28e11d3ea2f7c6b` |
+| `SOURCE_SPANS.json` | `380fc53c4bb2a6d5c316164b2d8f6063a01ca21b2a468baf8f56a0e526060ef3` |
+| `ADMISSION_LEDGER.json` | `392aeb9e4fbe4e49be4f56f3740a9c9c1b99b5ae4efbe63c3a50f26b5414a9d3` |
+| `WORDING_REFINEMENT.json` | `a06e0cd14c5f7e9de6ddf5ba3e774c35b5e81708c27baff90cc0503c9c9bec5a` |
+| `DEVELOPMENT_NOTES.json` | `a7cad9bd12b6a8aa02eb83450a46ac13fe594b197c67c19c4e45efa502ddde8f` |
+| `first-candidate/INDEX.json` | `a9a8070ea98561094ad1fc3e59d05b19b15d0d15a0ff7c4ae68699d201ceafd8` |
+| `report-first-candidate/INDEX.json` | `1076892c51250e2279d46e279720876492649581273f36d8d4c5f70161f3205f` |
+| `report-v2-first-candidate/INDEX.json` | `ac2cf573a5fc0fab1d36b9bc9c26b28b9e350b6fed88a4822fa2ec1e0a8fc593` |

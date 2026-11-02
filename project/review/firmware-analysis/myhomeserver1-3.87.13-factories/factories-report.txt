@@ -1,0 +1,68 @@
+# MyHOMEServer1 3.87.13: selected scheduler action factories
+
+This static batch closes two scene-element construction paths: the `SLEEP` and `SCENARIO` action discriminators select concrete 44-byte objects, with `seconds` and `sceneId` respectively stored at object offset40, then transferred into the scene action vector. It does not execute a scene, sleep, resolve a target scene, or establish timing units from behavior.
+
+The original image path is `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. All VAs below are original ELF VAs. Local evidence paths are relative to this report. Original inputs and the previous consumer report are read-only and pinned in `INPUTS.v1.json`.
+
+## Discrimination and scope
+
+The preceding consumer report establishes scene `triggers`, `conditions` and `actions` handoffs to0x2e9fc,0x2fa4c and0x30cb0. This batch adds original factory prefixes and the selected action constructors rather than counting that inherited handoff as a new finding.
+
+All three selected prefixes read the element's `type` through the C++ JsonCpp interface, obtain a string and compare its length followed by `memcmp` against their own original local table. The pointer-table resolution is checked through the actual GOT base0x1659a4, original `R_ARM_RELATIVE` slot, then original string rows. These are local enum namespaces, not OPEN WHO, parsed kind, bus class, firmware capability or physical device categories. The full declared rows are retained in `LOCAL_ENUM_TABLES.v1.json` for reproducibility; this is not a complete support/validation table.
+
+| Factory | Entry | Table VA | Row count | Selected control boundary |
+|---|---|---|---:|---|
+| Trigger |0x2e9fc|0x160450|24|Match index is decremented before the23-entry TBH; index0 takes a separate route, not classified here.|
+| Condition |0x2fa4c|0x1605b0|23|Match index is decremented before the22-entry TBH; index0 takes a separate route, not classified here.|
+| Action |0x30cb0|0x160710|24|Match index0..23 feeds TBH0x30d74, table base0x30d78.|
+
+For action strings, exact length comparison is0x30d50 and `memcmp` is0x30d58. There is no case folding in this local comparison. Unmatched nonempty strings reach0x30ea8 and iterator advancement0x30e58 after string cleanup; the zero-length path scans for a zero-length table row and none exists in the pinned table. `TIME`, although a declared action-table name at index7, targets the same iterator-advance0x30e58 in this factory. This shows why declaration and a concrete construction branch must be distinguished. It says nothing about `TIME` in the trigger/condition factories or other program paths. Original exceptions/conversion errors can leave these selected normal paths; no claim of global graceful rejection is made.
+
+## Two original construction paths
+
+| Local action index | Exact type | TBH entry VA/value | Branch | Derived member key | Derived store |
+|---:|---|---|---|---|---|
+|10|`SLEEP`|0x30d8c /0x036f|0x31456|`seconds` via0x31474, `asUInt`0x31478|object+40 at0x3149c|
+|11|`SCENARIO`|0x30d8e /0x0347|0x31406|`sceneId` via0x31424, `asUInt`0x31428|object+40 at0x3144c|
+
+In both branches the current original JSON element is r6, and the factory first calls0x2af90 with the stack-local base-action object. It then reads the selected derived value, calls allocation with r0=44, copies the base object through0x2e1ac, installs the selected vtable address point and stores the derived uint. This is static original dataflow with normal-return premises for JsonCpp conversion, allocation and string copy; no supplied scene/object fixture or substitute parser was used.
+
+The shared base constructor0x2af90 stores these fields:
+
+| Exact JSON key | Conversion/store | Fresh base-object field |
+|---|---|---|
+|`id`|`asString`0x2afc8|C++ string beginning+4|
+|`delay`|`asUInt`0x2afda, store0x2afe0|+32|
+|`duration`|`asUInt`0x2afea, store0x2aff2|+36|
+|`type`|`asString`0x2b000, same24-row action enum table, matching index store0x2b02e|+28, initially0 at0x2afd2|
+
+The base copy at0x2e1ac constructs the destination string and copies +28 at0x2e206..0x2e210 and the +32/+36 pair at0x2e20c..0x2e214. Thus the selected derived objects inherit their type enum and delay/duration fields before +40 is stored. The local branch has no further numeric min/max predicate after `asUInt`. This does not establish acceptance of missing/null/negative/overflow values: JsonCpp conversion and exception behavior remain provider boundaries, not executed or modeled. The `seconds` spelling is a schema label here; actual sleep scheduling/clock semantics are outside this batch. Likewise `delay` and `duration` names alone are not unit evidence.
+
+Selected vtable ownership is checked independently of guessed stripped-symbol annotations:
+
+| Selected type | Header VA | Stored address point | Original typeinfo name | First method pointer |
+|---|---|---|---|---|
+|`SLEEP`|0x15ffb0|0x15ffb8|`11SleepAction`|Thumb0x24c9d|
+|`SCENARIO`|0x15ffa4|0x15ffac|`14ScenarioAction`|Thumb0x24fa5|
+
+These are concrete action-class identities. The first vtable method is not promoted to a sleep or scene execution entry; method bodies are not part of this batch.
+
+## Pointer transfer and object identities
+
+Both selected branches derive r5=scene-owner+24 (0x31432/0x31482), retain the new object pointer in a local slot at stack+80, and call0x30c8c with r0=r5, r1=&that slot (0x31450/0x314a0). On the inspected capacity-available branch,0x30c8c reads the vector end/capacity, writes the object pointer to the old end at0x30c9a, clears the source slot at0x30c9e and updates end at0x30ca0. Its capacity-full branch tailcalls0x30bc4 and is a retained unexamined delegate. Common cleanup0x30e34 only destroys the local pointer when nonzero; the selected normal transfer leaves that slot zero.
+
+This closes the construction-to-action-vector ownership join under the stated normal/capacity premises. It does not establish global destruction/lifetime correctness, runner invocation, actual side effects or capacity-reallocation semantics. The scene owner+24 action vector and action-object enum+28 are distinct from the runner trigger-vector+0 and trigger-element+32 axes being investigated separately. Equal numeric offsets or enum indices cannot join those different objects.
+
+## Evidence, reproduction and limits
+
+Run from the workspace root:
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/collect_factories_v1.py --check`
+
+The collector verifies original hashes, fresh PT_LOAD VA-to-file mapping (RW data has a different file offset),11 retained Thumb2 spans,7 PIC strings, three table pointer/relocation chains, selected three TBH entries, six direct original BLs,13 critical instruction-byte guards and four source pins. It emits22 files including its manifest. All22 outputs plus the collector were immediately copied to `first-candidate/`; its23-member snapshot index was computed before opening the index. This separately published first report is copied byte-for-byte to `report-first-candidate/`. No generated candidate or earlier dossier was overwritten.
+
+The local packaged C++ JsonCpp candidate is `/usr/lib/libjsoncpp.so.1.9.5`, SHA256 `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36`; selected `Value::asUInt`, `asString` and key-access scheduler imports and candidate definitions are preserved in `PROVIDERS.v1.json`. These are static declarations/definitions, not effective live binding or provider execution. No C JsonGLib/jsonmsg, COSO parsed object, or earlier firmware object layout is reused.
+
+Accounting: original ARM/Thumb instructions executed0; native helper entries0; primitive callbacks0; redirects0; EXIT/stop callbacks0; scene fixtures0; semantic host models0. Host operations read original files and run static binutils/Python only. An exploratory command failed because the `python` alias is absent, then was rerun as `python3` before candidate generation; no first-candidate source/result assertion failed or was corrected.
+
+Ranked remaining questions: (1) original runner action dispatch and the precise role of +32/+36 versus derived +40; (2) full caller/provider conversion and error semantics, including missing or invalid element fields; (3) full action-vector reallocation/destruction and scene-target lookup; (4) bounded concrete trigger/condition element branches. No configured scene file, natural execution, accepted command, physical support, timing behavior or exhaustive command-table claim follows from these static construction results.

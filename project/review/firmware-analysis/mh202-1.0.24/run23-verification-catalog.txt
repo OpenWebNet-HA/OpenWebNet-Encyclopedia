@@ -1,0 +1,36 @@
+# MH202 verification catalog through checkpoint22
+
+This immutable navigation catalog pins saved validation/source-review/provenance records. It runs no collectors, tests or native code and does not semantically re-audit every historical finding. Recorded PASS scopes are bounded and do not establish physical behavior or authenticate missing intermediate drafts.
+
+Current validated totals (not historical subtotals): **14corpora,68entries,31581original visits,3140declared primitives,128redirects,24EXIT boundaries,2selector stops =34875hooks**. Target processes/OS calls remain0. Replays/setup writes are separate. Exact14result identities and recorded scopes are in the JSON.
+
+The31repository tests and210Device completeness checks are inherited recorded run1 checks, explicitly carried forward by run2; this catalog does not rerun them or close pending Device gates. [Original record](../../../validation/run1/device-validation.json).
+
+| Checkpoint | Saved validation | Historical original-visit subtotal | Recorded scope |
+|---|---|---:|---|
+|1|[Record](../../../validation/run1/final-checkpoint.json)|0|Run1 selected static paths; source reviews and exact identity, not runtime/physical proof|
+|2|[Record](../../../validation/run2/final-checkpoint.json)|0|Run2 selected static joins; source reviews and exact identity, not runtime/physical proof|
+|3|[Record](../../../validation/run3/final-checkpoint.json)|0|Run3 selected static joins; source reviews and exact identity, not runtime/physical proof|
+|4|[Record](../../../validation/run4/final-checkpoint.json)|0|Run4 selected static joins; source reviews and exact identity, not runtime/physical proof|
+|5|[Record](../../../validation/run5/final-checkpoint.json)|0|Run5 selected static joins; source reviews and exact identity, not runtime/physical proof|
+|6|[Record](../../../validation/run6/final-checkpoint.json)|0|Run6 selected static joins; source reviews and exact identity, not runtime/physical proof|
+|7|[Record](../../../validation/run7/final-checkpoint.json)|1485|Run7 three static areas plus isolated original comparator corpus; not full firmware runtime or physical proof|
+|8|[Record](../../../validation/run8/final-checkpoint.json)|2765|Run8 three static areas plus isolated original packaged copy corpus; not full firmware runtime or physical proof|
+|9|[Record](../../../validation/run9/final-checkpoint.json)|4424|Run9 static source, supplied-parser normalizer body, prepared suffix objects; no whole parser/runtime/physical proof|
+|10|[Record](../../../validation/run10/final-checkpoint.json)|11904|Run10 static source plus full selected normal libopen builder/parser object route under C primitives; no raw diagnostic decoder, runtime or physical proof|
+|11|[Record](../../../validation/run11/final-checkpoint.json)|15082|Run10 static source plus coherent ordinary taskmanager/common130 native parser-normalizer under C primitives; no specialDIM1/rawdiagnostic/runtime/physical proof|
+|12|[Record](../../../validation/run12/final-checkpoint.json)|20104|Run10 static source plus native bracket/level common130 normalization plus static logical/lighting/component evidence; no specialDIM1/configured/runtime/physical proof|
+|13|[Record](../../../validation/run13/final-checkpoint.json)|28379|Run13 special-DIM1 entry prefixes with two native parsers each, stopped before selector consumption; static mixed logical-state and WHO2 translation evidence; no configured/runtime/physical proof|
+|14|[Record](../../../validation/run14/final-checkpoint.json)|28379|Run14 static diagnostic output-reference/return continuation, automationSTM and selected WHO4 translation; no new original execution or configured/runtime/physical proof|
+|15|[Record](../../../validation/run15/final-checkpoint.json)|28379|Run14 static diagnostic output-reference/return continuation, automationSTM and selected WHO4 translation; no new original execution or configured/runtime/physical proof|
+|16|[Record](../../../validation/run16/final-checkpoint.json)|29010|Run16 selected original48-byteCOSO parser/queryserializer with explicit C/GLib/cleanup/data-binding models plus static synchronizer/thermoSTM evidence; no targetOS/fullruntime/physical proof|
+|17|[Record](../../../validation/run17/final-checkpoint.json)|29327|Run17 selected original COSO in-place record helper and native48-byte parser with explicit C/GLib/free/list/data-binding models, plus static configured synchronizer/timer and interpreter GOTO evidence; no targetOS/fullruntime/physical proof|
+|18|[Record](../../../validation/run18/final-checkpoint.json)|29652|Run18 selected original NULL-source core/parser/native-ID path with explicit allocator/list/counter state plus static generated-record monitor ownership and script node-construction; no targetOS/fullruntime/physical proof|
+|19|[Record](../../../validation/run19/final-checkpoint.json)|29652|Run19 static WHO17 manager slots, event-cache/provider correspondence and selected WHO9 translation evidence; no new native corpus or targetOS/fullruntime/physical proof|
+|20|[Record](../../../validation/run20/final-checkpoint.json)|30035|Run20 original same-object auxiliary parser/selectorcopy with explicit C/GLib/clock/counter models, plus static sound/alarm translation; no targetOS/fullruntime/physical proof|
+|21|[Record](../../../validation/run21/final-checkpoint.json)|30687|Run21 exact generated alarm/sound candidates through original parser with explicit C/GLib/list models, plus static multimedia receipt state and post-decoded routing; current-source verification does not authenticate missing multimedia drafts; no targetOS/fullruntime/physical proof|
+|22|[Record](../../../validation/run22/final-checkpoint.json)|31581|Run22 actual parser→same-object serializer with originalGLibtraversal/callbacks and explicit ordinarymodels, static non-transport registration plus frozennavigation; prior missingdraftlimits retained; no targetOS/fullruntime/physical proof|
+
+Historical document pins resolve to retained byte snapshots, not current mutable prose. Thirteen final checkpoint22 documents are newly frozen here solely for future catalog reproducibility. This does not alter any earlier index. Source reviews/methods/recorded stdout digests and exact file hashes are navigation evidence, not a claim those programs were rerun now.
+
+The frozen24-row through21 view remains unchanged. [Two reviewed run22 additions](RUN22_FINDINGS_SUPPLEMENT.md) refine only local serializer closure and conditional callback initialization;26navigation rows are not a coverage percentage. Current source reproducibility does not restore unavailable sound21 intermediate drafts.

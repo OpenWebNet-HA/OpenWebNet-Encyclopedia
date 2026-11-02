@@ -1,0 +1,29 @@
+# MyHOMEServer1 3.87.13 Selected Retained Action State
+
+The first and second selected BN3L callable bodies access the same linked global storage. The first can copy a query-returned string into it; one second-callable branch converts a retained exact `on` string into a `status` string `on` request in its actual parameter object. This is a conditional local source relation, rather than evidence of natural callback order, current device state, successful rollback or physical restoration.
+
+The [review capsule](../../project/review/firmware-analysis/myhomeserver1-3.87.13-action-retained-state/README.md) retains original bytes, address/copy/branch/table proofs, exact first candidates, independent reviews and the final continuation handoff. Scheduler image object `home/bticino/scheduling_manager/scheduling_manager` has SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Addresses below are linked ELF addresses; no original callback, query, global value or JSON expression was executed or supplied as a fixture.
+
+## A concrete producer and shared address
+
+The [earlier capture/handoff study](myhomeserver1-3.87.13-action-output.md) identifies the distinct52-byte/24-byte captures and the two original bodies. On the first body's inspected path, nonzero capture48 permits a guarded query request0x10f4a0 using the captured configured ID. After a normal return, a null result pointer skips the selected copy. A nonnull result is used as an object with a string at+8 and readable words36/40/44. A valid object, appropriate type, matching identity/freshness and provider success remain premises; no cached-record class is inferred from these accesses.
+
+Three independent PC-relative joins resolve the same global G=0x167808: pools0xd01ac/0xd01b0 in the first body and0xce890 in the second. G is inside writable memory-only `.bss`; runtime contents are not file-backed evidence. The first body requests string assignment returnedRecord+8 to G+24, then copies returned words36/40/44 to G+48/+52/+56. Only the selected string consumer is interpreted here; the three numeric properties and other consumers remain unclassified.
+
+This is fixed-address retained storage on the selected path. The query's configured-ID argument does not turn that destination into a proven per-ID map. No collision, defect or concurrency outcome follows. The separate shared action-stop byte0x167800 is a different address and namespace; adjacency does not establish ownership or aliasing.
+
+## One selected string-to-parameter consumer
+
+The second body reads the same string pointer/length pair G+24/+28. Its selected length2 and exact lowercase `o`/`n` comparisons reach a local status assignment. The source literal1 is decremented to0, stored into local recordSP268+32 and marked present at byte28. Other strings and branches are not generalized into a full state matrix.
+
+The concrete pair copy0xcddf4..0xcde00 transfers localSP296/+300 intoSP628/+632. The actual converter source at0xcdf16 isSP600, making the destinations precisely its presence28/status32. The local prefix record is not overlaid with that distinct converter input.
+
+With nonzero presence28, the selected converter increments code0 to table index1. Original relocated table0x16216c supplies length2 and literal `on` at0x1362d4. The source requests a JsonCpp string and member assignment under exact key `status`. This local code0 is not a public OPEN WHAT or raw action discriminator.
+
+Consequently, if the earlier producer writes a valid `on` string, that value remains until the selected second read, all required paths are reached and providers return normally, the source asks for `status: on` in the second parameter object. The [descriptor study](myhomeserver1-3.87.13-action-request-values.md) supplies its separate `2.0` / `light.setStatus` constructor contract. Neither result proves a complete serialized request, matched natural action pair, prior-state restoration or delivery.
+
+## Limits and verification
+
+Query0x10f4a0 and output0x5dda0 remain opaque boundaries. No receiving/transport/MQTT/libjel/authentication/session/framing body was opened. Effective object/type/ID/freshness, global initialization/mutation/locking, natural callback order, complete ownership/errors/unwind/concurrency and physical observations remain open. Missing configured assets/extras80/81/94/95 are not inferred from defaults. Wider Device/source gates remain pending.
+
+All new execution, models, fixtures and replays are0. The MHS cumulative original-provider experiment remains one corpus/eight entries/340 code-hook visits/zero C primitives/12 redirects/eight EXIT/zero stops/360 hooks plus four data setups. Full JSON/scheduler/process/OS/services/threads/timers/network/bus/physical execution remains0; F454/MH202 ledgers and prior history limits stay separate. This is the final source packet in the noon-bounded continuation; subsequent work is synthesis, review and saving only.

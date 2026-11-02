@@ -1,0 +1,41 @@
+# MH202 1.0.24: conditional clock units for the selected multimedia utility deadline
+
+This static-only continuation resolves the selected clock-provider arithmetic and narrows the sound/run23 `ENTRYclock + 600` question. Under the identified packaged provider model, an ordinary successful Linux ARM32 `gettimeofday` timeval ABI gives a microsecond-valued clock result, so the literal increment is **600 microseconds (0.0006 seconds)**. This is a conditional arithmetic unit result, not an observed elapsed interval, timer firing, scheduling delay, defect, or physical effect. No original ARM, syscall, vendor process, or service was executed.
+
+## Original inputs and provider scope
+
+All image paths below are image-relative absolute paths. The collector freshly reads the normal image through `image_vfs.py`, resolves original symlinks, and hashes every selected ELF and dependency. `input-hashes.json`, `conditional-provider-closure.json`, and `original-spans.json` are the exact identities, closure edges, file offsets, and raw span hashes; no host `ldd` or vendor loader is used.
+
+The consumer is `/home/bticino/libcoso/libplug_multi_stm.so` (SHA256 `8b9f393f5b8b4f47645821d7e7eedcc2cc15351f76d10fc8d8c8f6c38cd69128`). Its `g_get_real_time` import has JUMP_SLOT `0x1aae8`; its first DT_NEEDED is `libglib-2.0.so.0`. The packaged `/etc/init.d/bt_daemon-apps.sh` line 3 declares `LD_LIBRARY_PATH=/home/bticino/lib:/home/bticino/libcoso`. The bounded original metadata query for `ld.so.cache`, `ld.so.conf`, and `ld.so.preload` is recorded separately; absence from that query is not absence from a running system.
+
+The collector models breadth-first DT_NEEDED lookup using that packaged library path followed by conventional `/lib`, `/usr/lib` fallback. It records all packaged candidates, selected paths, dynamic flags, and export visibility/binding, and rejects selected RPATH/RUNPATH ambiguity. This produces `/usr/lib/libglib-2.0.so.0.2800.7` (SHA256 `029c2a7913131a84c46958d9ed445cb8a79dd1c8abc61116321badb7ad2735c0`) as the selected `g_get_real_time` definition. GLib's imported `gettimeofday@GLIBC_2.4` JUMP_SLOT is `0xe53d8`; the compatible candidate is `/lib/libc-2.8.so`, with weak `gettimeofday@@GLIBC_2.4` and strong `__gettimeofday@@GLIBC_2.4` sharing VA `0x81560`.
+
+This is conditional candidate ownership, not proof of an actual loader binding. No preload/interposer, alternate namespace/dlopen scope, replacement filesystem, or changed environment is included. The root plugin alone is a closure root; full application runtime loading remains outside the proof.
+
+## Original arithmetic and return ABI
+
+| Original provider | Exact code | Consequence under the stated premises |
+| --- | --- | --- |
+| GLib `g_get_current_time` | `0x3544c..0x3547c`; at `0x35458` sets `r1=0`, at `0x3545c` passes an eight-byte stack temporary in `r0`, at `0x35460` calls imported `gettimeofday`; `0x35464..0x35470` copies words at offsets 4 and 0 into the caller's object | The compiled selected ABI uses two 32-bit fields at offsets 0 and 4. It does not establish units by itself. |
+| GLib `g_get_real_time` | `0x3547c..0x354b0`; direct BL `0x35488 -> 0x3544c`, LDM `0x3548c`, sign extension `0x35494`, SMLAL `0x35498`, literal `0x354ac = 0x000f4240`, return-word moves `0x3549c/0x354a0` | Returns the 64-bit quantity `signed32(word0) * 1000000 + signed32(word1)` in low `r0`, high `r1`. The internal current-time call is direct, not an imported same-name stub. |
+| libc candidate | `0x81560..0x8157c`; sets `r7=78` at `0x81564`, contains SVC at `0x81568`, then ordinary error check | This identifies the packaged ARM syscall wrapper boundary, not a syscall execution or success observation. |
+
+The GLib current-time helper copies the stack words without checking the `gettimeofday` return register. Therefore a successful ordinary ABI write is an explicit premise; the report does not assign valid time units to an error path or uninitialized output.
+
+The bounded original image basename query finds no `time.h` or `time_types.h`; no target header is invented. As a separately labeled semantic reference, host-installed Linux UAPI `/usr/include/linux/time.h` lines 16-19 documents `struct timeval` fields `tv_sec` as seconds and `tv_usec` as microseconds. Its full hash and exact lines are recorded in `host-UAPI-timeval-unit-reference.json`. This host header is not original firmware evidence, is not used to infer host/target layout equality, and does not independently prove which ABI a running target uses. The 32-bit offset/width layout is supported by the actual selected GLib instructions and compatible ELF32 little-endian ARM libc; the unit conclusion is expressly conditional on the ordinary successful Linux ARM32 timeval contract.
+
+With that premise, both terms of the recovered formula are microseconds. A finite host arithmetic illustration uses `(seconds, microseconds)=(1,999900)`: the returned quantity is `1999900`; adding 600 yields `2000500`, or 2 seconds plus 500 microseconds. This is a pure Python consistency calculation, not an original clock reading.
+
+## Consumer connection and limits
+
+The same plugin requests `g_get_real_time` at `0xc650` and saves returned low/high words to SL/FP at `0xc660/0xc664`. In the selected sound/run23 utility path, the later `send_util_state` call precedes the deadline write. At `0xcc8c` the immediate is 600; `0xcc90` adds it to saved SL with carry, `0xcc98` propagates carry into saved FP, and `0xcc9c/0xcca0` store low/high words to the supplied private context at offsets 152/156. These are entry-clock words, not a fresh clock sampled at the later store. The preserved original words and spans support this connection; the earlier sound report and its independent review are hashed read-only inputs.
+
+This resolves the unit of the arithmetic increment only under the provider/ABI/success premises. The actual restoration comparison and selected context-state premises remain those of sound/run23; they are not rerun or widened here. A realtime clock need not be a monotonic elapsed timer. Helper work between the entry request and deadline store, wall-clock adjustments, polling frequency, scheduling, actual current values, context activation, physical behavior, and failure handling are not measured. No claim is made about an installed kernel, full time-domain behavior, or year-2038 handling.
+
+## Reproduction and immutable first candidate
+
+Run `python3 -B clock/run24/collect_clock_v1.py --check` from the research `2026-10-30` directory. The collector uses only host Python, readelf, and objdump to read immutable original bytes. Its generated closure, selected symbols/relocations, five original spans, 24 exact instruction/literal words, packaged startup declaration, host UAPI unit reference, one finite host arithmetic case, and all input hashes are deterministic. The final printed counts give the closure/input/output cardinalities. Original execution, syscall execution, and hook counts are all zero; no native corpus is added.
+
+Initial generation refuses existing outputs and immediately snapshots this report, collector, and first generated outputs in `initial-generated-v1/` with `SNAPSHOT_INDEX.json`. Thereafter `--check` is byte comparison only. No earlier report, index, source, image, or repository document is edited. Any later correction requires separately preserved/versioned artifacts under parent coordination; independent review is not included in this self-manifest.
+
+The remaining highest question is actual runtime binding and successful clock/ABI behavior, which this static batch intentionally does not observe. The bounded conditional proof is sufficient to distinguish the literal 600 arithmetic units from an unsupported 600-millisecond interpretation; it does not establish real activation or timing consequences.

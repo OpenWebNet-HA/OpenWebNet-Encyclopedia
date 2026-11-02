@@ -1,0 +1,7 @@
+# Depth follow-up coverage
+
+F460: one original AArch64 SLEEP raw-serializer/same-result-reparse/compiled-field/callable-binding source path. Seven selected spans, 16 instruction guards, eight ADRP/ADD and seven BL checks, six import proofs and two class headers. Complete factory admission, JSON/provider/value coherence, invocation, timing and natural scene assets remain open.
+
+F461: one automation translator descriptor-to-candidate-registration path, initializer callback slot and selected local direction/representation/category gates leading to two-character slice requests. Seven selected spans and 16 instruction guards; actual outer translator caller, criteria interpretation, natural records, configuration, output and binding remain open.
+
+Counts describe selected evidence reach and integrity, not firmware coverage percentages or a full semantic audit. Host collector reproduction and independent source/documentary review are distinct. All new original/helper/native/emulator/model/fixture/runtime/bus/physical execution is zero. Earlier MHS8-entry/340-code-hook-visit corpus and F454/MH202 ledgers remain separate and unchanged. Full Device/source gates remain pending.

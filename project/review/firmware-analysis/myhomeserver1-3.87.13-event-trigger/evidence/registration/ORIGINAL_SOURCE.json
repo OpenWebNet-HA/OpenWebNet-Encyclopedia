@@ -1,0 +1,246 @@
+{
+  "GOT_chains": [
+    {
+      "GOT_slot": "0x1665d8",
+      "header": "0x161b9c",
+      "pool": "0xa96a4"
+    },
+    {
+      "GOT_slot": "0x166400",
+      "header": "0x1625ac",
+      "pool": "0xa96a8"
+    }
+  ],
+  "PIC_code_pointers": [
+    {
+      "ADD_PC": "0xa8f34",
+      "pool": "0xa9698",
+      "target": "0xa60a9"
+    },
+    {
+      "ADD_PC": "0xa8f38",
+      "pool": "0xa969c",
+      "target": "0xa56c1"
+    },
+    {
+      "ADD_PC": "0xee66a",
+      "pool": "0xee6fc",
+      "target": "0x1625ac"
+    }
+  ],
+  "byte_guards": [
+    {
+      "VA": "0xa72d0",
+      "bytes": "0190"
+    },
+    {
+      "VA": "0xa8f3a",
+      "bytes": "c6e90221"
+    },
+    {
+      "VA": "0xa8f42",
+      "bytes": "3260"
+    },
+    {
+      "VA": "0xa8f46",
+      "bytes": "7260"
+    },
+    {
+      "VA": "0xee5f4",
+      "bytes": "0222"
+    },
+    {
+      "VA": "0xee5fa",
+      "bytes": "c847"
+    },
+    {
+      "VA": "0xee606",
+      "bytes": "43f98f07"
+    },
+    {
+      "VA": "0xa8fd4",
+      "bytes": "4c20"
+    },
+    {
+      "VA": "0xa8fd6",
+      "bytes": "03f1680a"
+    },
+    {
+      "VA": "0xa9034",
+      "bytes": "c4e90087"
+    },
+    {
+      "VA": "0xa5706",
+      "bytes": "46f98f07"
+    },
+    {
+      "VA": "0xa570a",
+      "bytes": "6a60"
+    },
+    {
+      "VA": "0xa56ce",
+      "bytes": "0b68"
+    },
+    {
+      "VA": "0xa56d0",
+      "bytes": "0360"
+    },
+    {
+      "VA": "0xee59c",
+      "bytes": "c368"
+    },
+    {
+      "VA": "0xee5a0",
+      "bytes": "0369"
+    },
+    {
+      "VA": "0xa60a8",
+      "bytes": "0068"
+    }
+  ],
+  "direct_branches": [
+    {
+      "VA": "0xa8f52",
+      "bytes": "0bf041fa",
+      "target": "0xb43d8"
+    },
+    {
+      "VA": "0xa8f86",
+      "bytes": "45f011fb",
+      "target": "0xee5ac"
+    },
+    {
+      "VA": "0xa900c",
+      "bytes": "0bf0e4f9",
+      "target": "0xb43d8"
+    },
+    {
+      "VA": "0xa9044",
+      "bytes": "fcf74efb",
+      "target": "0xa56e4"
+    },
+    {
+      "VA": "0xa904c",
+      "bytes": "76f72afc",
+      "target": "0x1f8a4"
+    },
+    {
+      "VA": "0xa60aa",
+      "bytes": "fff781be",
+      "target": "0xa5db0"
+    }
+  ],
+  "relative_relocations": [
+    "001665d8  00000017 R_ARM_RELATIVE",
+    "00166400  00000017 R_ARM_RELATIVE",
+    "001625b4  00000017 R_ARM_RELATIVE",
+    "001625b8  00000017 R_ARM_RELATIVE",
+    "001625bc  00000017 R_ARM_RELATIVE"
+  ],
+  "spans": [
+    {
+      "end_VA_exclusive": "0xa7304",
+      "file_offset": "0xa72c0",
+      "image": "/home/bticino/scheduling_manager/scheduling_manager",
+      "name": "initializer-context-save",
+      "raw_sha256": "ff4b05e2ce5b9745b80cc8b337852c6db1115f31f7b2983e07260f577754b38b",
+      "start_VA": "0xa72c0"
+    },
+    {
+      "end_VA_exclusive": "0xa8f56",
+      "file_offset": "0xa8f1c",
+      "image": "/home/bticino/scheduling_manager/scheduling_manager",
+      "name": "scene-callback-capture",
+      "raw_sha256": "666995ec77137c9afcc8069dd7aeacfe245b13a47492f971c96fbda147eac1dc",
+      "start_VA": "0xa8f1c"
+    },
+    {
+      "end_VA_exclusive": "0xee60a",
+      "file_offset": "0xee5ac",
+      "image": "/home/bticino/scheduling_manager/scheduling_manager",
+      "name": "compiled-callback-constructor-prefix",
+      "raw_sha256": "241b1dabd377d173930c79e00e644ba9a07637b4dbbcc89e01caae02d1c37405",
+      "start_VA": "0xee5ac"
+    },
+    {
+      "end_VA_exclusive": "0xa9050",
+      "file_offset": "0xa8fd2",
+      "image": "/home/bticino/scheduling_manager/scheduling_manager",
+      "name": "persistent-runner-local-publication",
+      "raw_sha256": "aeb88e44ac47ba32c9c8a69f09c33711276294bac6cc9a97bb0fefa73c5bd8ee",
+      "start_VA": "0xa8fd2"
+    },
+    {
+      "end_VA_exclusive": "0xb4414",
+      "file_offset": "0xb43d8",
+      "image": "/home/bticino/scheduling_manager/scheduling_manager",
+      "name": "callback-copy-helper",
+      "raw_sha256": "397b02ba9bbecb75aede077932a2fbf2cbe9779b0c75999635c3538508459970",
+      "start_VA": "0xb43d8"
+    },
+    {
+      "end_VA_exclusive": "0xee5ac",
+      "file_offset": "0xee59c",
+      "image": "/home/bticino/scheduling_manager/scheduling_manager",
+      "name": "primary-callable-forwarder",
+      "raw_sha256": "d26ab52e8e0588448e20b1f45cc7ac754966b9466edf3da14d5e480b8295b977",
+      "start_VA": "0xee59c"
+    },
+    {
+      "end_VA_exclusive": "0xa56e4",
+      "file_offset": "0xa56c0",
+      "image": "/home/bticino/scheduling_manager/scheduling_manager",
+      "name": "scene-pointer-callable-manager",
+      "raw_sha256": "0dd197d53c54a92eb70633f70d7e6f673266c4632e32f9545e38261bf73ecaff",
+      "start_VA": "0xa56c0"
+    },
+    {
+      "end_VA_exclusive": "0xa60ae",
+      "file_offset": "0xa60a8",
+      "image": "/home/bticino/scheduling_manager/scheduling_manager",
+      "name": "scene-pointer-callable-invoker",
+      "raw_sha256": "cd233fe5c11721c1f34b51ef22bf227bb15d4e3604169a9ed25d7c6c01cea00e",
+      "start_VA": "0xa60a8"
+    },
+    {
+      "end_VA_exclusive": "0xa5712",
+      "file_offset": "0xa56e4",
+      "image": "/home/bticino/scheduling_manager/scheduling_manager",
+      "name": "trigger-vector-normal-move",
+      "raw_sha256": "f2b3d2303d70eace6a42b980660eadc916d1ade54feb6cf0c95264e68dda50c7",
+      "start_VA": "0xa56e4"
+    },
+    {
+      "end_VA_exclusive": "0xee68e",
+      "file_offset": "0xee666",
+      "image": "/home/bticino/scheduling_manager/scheduling_manager",
+      "name": "compiled-vtable-install",
+      "raw_sha256": "4ba893e7425f640681336eb64eee45aaafce4270889d794f092a502a92001ad0",
+      "start_VA": "0xee666"
+    }
+  ],
+  "types": [
+    {
+      "RTTI": "0x165474",
+      "first_three_Thumb": [
+        "0xee59d",
+        "0xee7b5",
+        "0xee869"
+      ],
+      "header": "0x1625ac",
+      "name": "17BnilTriggerRunner",
+      "primary_address_point": "0x1625b4"
+    },
+    {
+      "RTTI": "0x1649f8",
+      "first_three_Thumb": [
+        "0xaf535",
+        "0xaf97d",
+        "0xaf539"
+      ],
+      "header": "0x161b9c",
+      "name": "St23_Sp_counted_ptr_inplaceI17BnilTriggerRunnerSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE",
+      "primary_address_point": "0x161ba4"
+    }
+  ]
+}

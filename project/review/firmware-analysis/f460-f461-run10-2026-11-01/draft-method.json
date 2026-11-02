@@ -1,0 +1,14 @@
+{
+  "anchor": "## Evidence status and next questions",
+  "appendix": "ANALYSIS_APPENDIX_DRAFT.md",
+  "substitutions": [
+    {
+      "before": "The positive additions include F460's wait/completion, catalogue/selector, state-trigger and conditional SceneRunner worker, concrete condition-predicate and update-manifest staging paths, plus F461's matcher/field/route, selected output/address-prefix and bounded HAL getter, platform-selector and log-persistence selection contracts. Their numeric fields and offsets belong to different objects and namespaces. Earlier MyHOMEServer1 layouts and physical meanings are not substituted.",
+      "after": "The positive additions include F460's wait/completion, catalogue/selector, state-trigger and conditional SceneRunner worker, concrete condition-predicate, action dispatch/poll and update-manifest staging paths, plus F461's matcher/field/route, selected output/address-prefix/suffix and bounded HAL getter, platform-selector and log-persistence selection contracts. Their numeric fields and offsets belong to different objects and namespaces. Earlier MyHOMEServer1 layouts and physical meanings are not substituted."
+    },
+    {
+      "before": "The next useful source work includes the local action gate after the condition worker, updater staging-record ownership and later nontransport consumers, plus complete catalogue selection for F460. F461 still needs justified typed-address/suffix or DTB/auxiliary-core selection evidence, configuration-source precedence, a concrete extras-status producer, natural message producers and later output ownership. Full JSON/XML, configuration, time/error providers, lifetime/unwind/concurrency and runtime or physical evidence remain separate gaps. Closed receiving, transport, authentication, session, framing and equivalent investigations remain closed; the excluded uncertain identity consumer and later command fallback are not reopened.",
+      "after": "The next useful source work includes a positive scene-control-byte producer or ownership edge, updater staging-record ownership and later nontransport consumers, plus complete catalogue selection for F460. F461 still needs actual nonsecret configuration/directory/module or DTB/auxiliary-core selection evidence, a concrete extras-status producer, natural message producers and later permitted local ownership. Full JSON/XML, configuration, time/error providers, lifetime/unwind/concurrency and runtime or physical evidence remain separate gaps. Closed receiving, output, transport, authentication, session, framing and equivalent bodies remain closed; the excluded uncertain identity consumer and later command fallback are not reopened."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+# Independent MH202 run26 WHO15 source review
+
+**PASS for the selected TR/STM source relations and finite models. No author correction requested.** This review uses the unchanged host collector `--check`, independent original-byte/hash/metadata/arithmetic inspection and saved source spans only. No original ARM/vendor/parser/native/helper code, syscall, timer, transport, service or device executes. Original entries/instructions/hooks added by this review are0. Only this NEW review file is written; author artifacts and WHO14's immutable candidate remain untouched.
+
+## Final reviewed pins
+
+Paths below are relative to who15/run26/.
+
+| Artifact | SHA256 |
+|---|---|
+|`REPORT.md`|`b5150e300259ddca55b0c5239549ef8f31579ab208cdd0a6e5d4a9dfdd8c5e86`|
+|`collect_cen_v1.py`|`f2cdbacc00d3ff515b67d282e516eb3c44ca34807d8f893c3dbde4b228729fa9`|
+|`output-manifest.json`|`3c9a5feb61e0f6e33d0956de9e03f809b60d34f42a755a5db6f411ffe94fb598`|
+|`initial-generated-v1/SNAPSHOT_INDEX.json`|`42b998646f7f33715c3b8b9c8fb268640dbd05b04fc365264793902854ad7cfa`|
+|`reference-WHO15-README.txt`|`daff88e28ce1273ba2d3ded02f40192a0478ce40765dcdb3a4dd114af3b5b00d`|
+|`host-selected-ledgers.json`|`ae925e0ff5026327666b1e9a1418efd31fa1a946044b721c9f8399dc45fa0888`|
+
+## Reproduction and independent checks
+
+The unchanged final collector passes **24 outputs including manifest,16 original spans,53 words,7 pools,6 inputs and5 finite host ledgers**. I independently verify all6 input hashes/sizes, the16 raw span hashes using fresh ImageVFS/PT_LOAD reads, all53 exact words, seven NUL-terminated format targets and their original pool arithmetic. Fresh selected readelf rows match each original provider/relocation record. I independently recompute the chosen byte/format examples and the local parameter/signedness decisions.
+
+All23 deterministic manifest members plus report/collector identities verify, and all **27 immediately preserved first-candidate files** match snapshot hashes and current bytes exactly. This includes the frozen canonical reference input. The collector refuses existing output destinations, uses exclusive creation and a new first-snapshot directory; check mode compares bytes without writes. This is generator refusal/current snapshot integrity, not filesystem-enforced immutability against arbitrary edits. No generation/rewrite attempt or author modification was made.
+
+## Original source agreement
+
+- TR descriptor0xa48c has initializer/callback relocations0xa4b0→0x1cc8 and0xa4b4→0x18a0. Its selected registration appends1 to list52 and15 to list56, with pair(1,2) reverse and pair(2,1) forward. STM descriptor0x9f30 separately binds init0x169c/field0x16a4/application0x1734 and criterion15. Direction/criterion/type/representation/kind offsets are not conflated. Candidate same-build providers and registrations are not actual loader/active-registry proof.
+- Forward entry's **fifth argument/current SP72**, then argument+60→slot→configuration pointer, is real source. Push28+locals44 explains the target stack offset. Config words8/12 feed comparisons; the finite3/0 values are supplied, not installed defaults. Init0x1cc8 reuses a nonNULL4-byte slot or requests one, calls lighting_read_cfg and stores its returned pointer into that slot. This extra pointer indirection is retained rather than copied from WHO14's direct configuration pointer layout. Valid slots/configuration, ordinary ABI and normal helper binding/return remain prerequisites.
+- Supplied coherent representation3/kind1/WHAT05/first parameter2/WHERE12 takes the selected construction. Original liblights two-character branch uses ordinary digit-value results1/2 to produce0x12; original TR prefix byte is0xcd. Parameter packing writes opcode0x10 and `5 | (2<<5)=0x45`. Matching supplied selectors/config3/0 selects four-byte ASCII/core helper output **CD121045**. Address/digit/helper contracts are premises; no raw parser, original conversion or physical address domain executes.
+- Separately supplied reverse CD121045/bodytype3 goes through the CD guard and opcode0x10 bit split. Low5bits yield5, high3bits2; exact original **%02d#%d** produces **05#2**, preserving padding, and reverse address **%d%d** gives12. Original ***15*%s*%s%s##** and empty suffix yield `*15*05#2*12##`. The example is independent of the forward candidate, not an executed roundtrip, causal counterpart or physical CEN interpretation.
+- Fresh core brief/reverse constructors preserve their different metadata contracts: forward criterion1/type3/repr1 and selected source-field/ID60 copy, versus reverse new plaintext record criterion15/type2/repr2, fixed4=2/8=0 and source status52/ID60 copy. Unzeroed64-byte allocations, unassigned fields and ordinary string/list/owner returns do not imply initialization, successful ACK, actual delivery or a safe complete allocator domain. Reverse text is not an already accepted parsed object.
+
+## Own STM and scoped guard difference
+
+The complete **0x169c..0x16a4** initializer is two instructions returning0, with no private allocation/state/timer setup in that body. No WHO14/WHO25/other context layout is inserted. Application directly borrows a coherent parsed pointer, sets metadata4/8=1, requires kind1 and uses local converted WHAT/parameter guards. For nonnegative WHAT5 with nonempty list, unsigned(parameter−1)<=6 permits parameter2 and rejects8. The accepted selected branch appends **same Q** to argument2 and requests local ACK on argument3, then returns0. Failure requests NACK/local1. The whole displayed application has no WHERE guard, saved-ID/status correlation, private allocation or timer request; these are bounded-body observations, not universal framework behavior.
+
+The negative-conversion case is accurately restricted: supplied converted WHAT−1 with no parameters takes STM's **signed** <=255 path, while TR's **unsigned** bound rejects that word. I inspected CMP/BGT versus CMP/BHI source and independently checked that finite predicate distinction. It does not prove any raw negative WHAT is parsed/routed, define a public negative button/domain, validate host arithmetic for all values beyond target32-bit/strtol contracts, or establish a defect/unsafe outcome. The two local guards cannot be promoted into one general acceptance predicate.
+
+Field callback's direct representation3 continuation writes metadata8=3 and appends **same F** to argument3. Its complete selected body does not compare WHAT/kind/status52/ID60 or request receipt/timer. Representation2's parse/free/install path is a distinct unexecuted boundary. Actual outer criterion15 eligibility, parser return/object coherence, binding/container/lifetime and consumer behavior remain premises; no physically successful feedback is inferred from unconditional local forwarding.
+
+## Reference and integrity boundaries
+
+The frozen WHO15 reference is a separately hashed local input and an exact first-snapshot member. It is not reread from mutable current repository documentation, so later legitimate integration cannot silently change this candidate. Its public button/padding/phase1..3/timing/address/physical vocabulary is boundary context only. The firmware's selected parameter4..7 branch is not public-vocabulary expansion or a newly verified oracle/spec/hardware result. The padded reverse05 remains an original formatting fact, not a reinterpretation of the canonical reference.
+
+All five host ledgers are independent supplied-source models. Current source/report/model/first-snapshot correspondence passes within the stated scope. Remaining boundaries include actual raw grammar/admission/outer selection, configuration ownership and effective providers, ordinary allocator/list/helper/ABI completion, natural request/feedback correlation, full owner lifetime/publication and physical/timing behavior. This review neither adds a native corpus nor certifies complete WHO15 support or whole-system runtime behavior.

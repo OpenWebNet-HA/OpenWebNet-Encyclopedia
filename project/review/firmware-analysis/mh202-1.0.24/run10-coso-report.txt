@@ -1,0 +1,61 @@
+# MH2021.0.24 run10 — selected WHO1 lighting command and feedback translation
+
+## Result
+
+The actual lighting TR plugin has a coherent selected normal command→body→output-record route. Under a supplied parsed WHO1 command, kind1, no parameters, WHERE `11`, absent selectors (defaults3/0) and matching private selectors3/0:
+
+| Supplied WHAT text | Conditional four-byte body | Selected core wrapper |
+|---|---|---|
+|`1`|`11 00 12 00`|prepare_p2p_briefscs_frames|
+|`0`|`11 00 12 01`|prepare_p2p_briefscs_frames|
+
+The low values are deliberately0 for WHAT1 and1 for WHAT0, as the original branches store them. These are host-derived body candidates from fresh MH202 instructions, not copied F454 behavior, accepted raw commands or captured serial traffic. Separate original reverse branches construct fixed-WHO1 status candidates from decoded opcode0x12/value0 or1, conditional on successful address conversion. The state-machine/application feedback effects are **not** traced merely from a plugin name.
+
+Original ARM/vendor/parser/JS/PHP execution, original instructions executed, emulator hooks and live I/O are **0** in this batch. Host tools only read verified original bytes, disassemble/check metadata and compute finite models. No original process, OS/device/network operation, credential/authentication or HTTP/template route is executed or investigated. Earlier research and repository documents remain read-only.
+
+## Source identities and reproduction
+
+Fresh original normal-image sources:
+
+| Original image path | SHA256 |
+|---|---|
+| `/home/bticino/libcoso/libplug_lights_tr.so` | `4a3b3aa2f949b4e1ac69f9ac869403f7a8ee699aca499660d34f2be9a1693fc8` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+| `/home/bticino/lib/liblights.so` | `8213ad1cb44db31606550935cf6e68712b3e28c5446fe1dadbffcbda26d9717e` |
+| `/home/bticino/bin/coso` | `6865c2d1d441d25effa31275080ded70ad3538a8a49288e3002ffb196b066175` |
+
+`python3 work/mh202-firmware/research/2026-10-30/coso/run10/collect_lighting.py --check` strictly reproduces24 outputs:17 selected original spans,27 exact words, selected descriptor relocations/fields, safe fixed-WHO1 format strings,2 forward and2 reverse host cases and associated identities. All6 inputs are pinned, including accessor and immutable coso/run5 report. `original-spans.json` supplies VAs, offsets and byte hashes. The author manifest separately pins report, collector and evidence, excluding itself and later reviews. No emulator or old firmware harness is imported.
+
+## 1. Descriptor registration and actual dispatch criteria
+
+Original descriptor **lights_tr at0xb714** is68bytes. Relocations at0xb738 and0xb73c explicitly identify initializer **lights_tr_init0x2e90** (+36) and translator **lights_translate0x1720** (+40). They are different roles. `init_plugin0x15c8..0x1720` fills other descriptor fields, appends numeric1 to both +52 and+56 lists (`0x1674..0x168c`), and requests `register_translation` at0x1694. The core registration/initializer contract was established independently in run5; this pass does not pretend registration alone observes an initialized live plugin. Its private initializer0x2e90 calls lighting_read_cfg when descriptor+60 is null, storing the returned pointer; concrete runtime context contents remain conditional.
+
+The original main COSO dispatcher gives these list entries a concrete routing use. In `send_list_field`, selected span **0xb1ac..0xb240** compares descriptor+44 with record+12, descriptor+48 with endpoint+52, then descriptor+52 list entries against **record+48**. The descriptor’s original fixed +44/+48 are1/2. The reverse orientation compares corresponding swapped fields and selects descriptor+56 at **0xb370..0xb380**. The indirect translator call at **0xb220** loads descriptor+40 and passes the actual selected numeric pair plus input record/output-list/descriptor. This is not an inference from library names.
+
+Core `add_open_buf_to_msg_list0x23b8..0x2408` stores a parsed object in record+0, writes representation+56=3 and converts its first text field with g_ascii_strtoll(base10), storing the low returned routing word at record+48 (`0x23dc..0x23f4`). Thus the numeric1 criteria are connected to the parsed first-field route; fixed original reverse output format **`*1*%s%d*%s%s##`** independently establishes this selected lighting WHO1 output namespace. Whole input grammar/parser acceptance and effective loaded descriptor/provider membership remain outside this evidence.
+
+Translator0x1720 itself accepts numeric pairs(1,2) and(2,1); the displayed other-pair route returns0 immediately. Under pair(2,1), record+56=3 takes the supplied parsed object; value2 takes a separate imported buf_to_openmsg conversion route not relied on by the host examples. Parsed kind at+44 equal1 branches from0x17e8 to the normal-command handler0x229c. These fields belong to this COSO/libopenmsg layout, not the libopen kind4 object layout in the separate protocol branch.
+
+## 2. Concrete normal WHAT1/WHAT0 command→body
+
+At0x229c, parsed command text+8 is converted by strtol(base10). Parsed parameter-list+12 is counted; selected length0 takes0x22c4, supplies brief-buffer byte positions+2/+3 and sets r8=0. The unsigned command checks lead values0/1 through0x22e0→0x2860→0x2970. At **0x2978**, the code subtracts1 from the converted command and sets flags; **0x297c** conditionally substitutes1 when the result is nonzero. It writes opcode0x12 and the low result byte at0x2984/0x2988. Hence WHAT1→0 and WHAT0→1. Parameters, negative/overflow/unusual numeric text and advanced commands follow other branches; no supported public WHAT/domain list is inferred.
+
+The common continuation reads parsed selectors+24/+20, decimal-converting present strings and supplying defaults0/3 for nulls (`0x1814..0x185c`). With selected r8=0, it calls imported **lighting_address_open2scs(parsed WHERE+16, buffer)** at0x1dcc. Fresh same-image candidate **liblights.so0x1954..0x1ac0** handles ordinary two-character address text by calling **lighting_address_open2scs_singlechar0x1418**. Its exact two-digit branch0x1490..0x14a8 calls digit-value primitives, shifts the first digit4, ORs the second and masks to8bits; the outer helper writes that byte and second byte0 at0x1a5c..0x1a64. Ordinary ASCII `11` therefore supplies `[0x11,0]`. This is selected well-formed arithmetic under ordinary primitives, not a whole address grammar/valid-device assertion.
+
+Translator0x1ddc/0x1de0 compares those converted/default selectors with private context+8/+12. Equality requests **array_to_ascii_hex_frame(buffer,4)** at0x1df4. If the constructed first byte’s high nibble equals0xb0, it takes the separate prepare_briefscs_frames call0x2858. Selected first byte0x11 instead takes **prepare_p2p_briefscs_frames at0x1e1c**. Interface mismatch/extended bodies are deliberately outside these two host examples.
+
+The core p2p wrapper **0x29c4..0x2a04** stores output record+48 from its supplied argument1, type+40=9 and representation+56=1, invokes imported prepare_scs_from_open, and appends the resulting record pointer to the supplied output list. Run5’s selected core metadata helper independently recorded copies of source fields+4,+8,+12,+16,+24,+28,+32,+36,+44,+60; these metadata copies are not physical state updates. The frame-formatting, allocation/list behavior, complete effective provider binding, output draining and UART framing remain delegated/unobserved. Our model displays body bytes/plain hex only; it does not invent a complete SCS wire frame.
+
+## 3. Separate selected feedback→OPEN branch
+
+On pair(1,2), original type+40=3 or9 enters the brief decode route, with private context+12=0 taking the displayed path0x1948..0x196c. It requests ascii_hex_frame_to_array with count8; the selected normal opcode dispatch additionally requires the first decoded byte’s high nibble≤0xb. Opcode0x12 takes jump-table branch0x1994→0x1c84. Low value nibble0→0x1d4c sets WHAT1; nibble1→0x1d40 sets WHAT0. These two examples are not a full status/opcode enumeration.
+
+The shared continuation calls **lighting_address_scs2open** at0x1a98 and requires a nonempty supplied converted WHERE. With that WHERE=`11`, address-suffix flag0 and empty format-prefix/suffix strings selected through pool0x26c8, original formatting0x1ac8..0x1adc gives conditional `*1*1*11##` or `*1*0*11##`. The actual original format is `*1*%s%d*%s%s##` (pool0x265c→0x31ac), not a guessed simple format. The resulting text is passed to scsmsg_to_openlist at0x1b74; earlier run5 bounds that core metadata/list wrapper, but no subscriber/state-machine/physical feedback is executed here.
+
+These reverse host cases **supply** successful decoded bytes and address conversion; they do not claim that the forward candidate body is an observed response, an executed inverse/round trip or a proof of real endpoint state. The source path identifies a conditional status publication construction boundary only.
+
+## Confidence and remaining questions
+
+High-confidence static: descriptor initializer/translator distinction, list criteria/dispatcher relation, numeric pair/representation/kind guards, selected WHAT byte stores, selected two-digit address packing, matching-selector wrapper choice, output type/metadata/list boundary and fixed-WHO1 reverse formatting. Host-only: two ordinary forward bodies and two conditional reverse strings. Conditional: successful initialization, coherent parsed fields, numeric/digit/string/list/address/format imports, private context selectors and normal returns. Not established: raw input acceptance, effective runtime plugin/provider owner, advanced/suffix grammar, output lifecycle/draining/serial framing, STM state/echo/event policy or hardware effects.
+
+A useful next distinct step is the lighting STM’s selected state/echo path or the liblights reverse address helper for a justified captured/constructed brief response. It should preserve the forward-vs-feedback distinction and avoid promoting the byte table into a public supported-command matrix.

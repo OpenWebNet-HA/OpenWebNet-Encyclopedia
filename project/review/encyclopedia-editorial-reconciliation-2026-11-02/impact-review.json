@@ -1,0 +1,20 @@
+{
+  "initial_reference_ids": 1035,
+  "current_reference_ids": 1406,
+  "current_new_live_refs": 374,
+  "current_new_affected_refs": 374,
+  "old_affected_refs_still_affected": 1032,
+  "additional_old_refs_not_in_initial_plan": [],
+  "old_affected_refs_no_longer_in_current_impact": [
+    "ownkb:entity:topic:d000084-s000002",
+    "ownkb:entity:topic:d000084-s000003",
+    "ownkb:entity:topic:d000084-s000006"
+  ],
+  "current_summary": {
+    "affected_chunk_ids": 720,
+    "affected_claim_ids": 3256,
+    "affected_reference_ids": 1406,
+    "changed_paths": 3654
+  },
+  "scope": "Automated final impact is retained full_review_required; semantic review is evidenced separately, not cleared by changing tool flags"
+}

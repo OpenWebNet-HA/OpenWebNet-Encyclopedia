@@ -1,0 +1,66 @@
+# F454 AV follow-up: concrete writers of mutable bt_vct mode
+
+The previously unresolved mutable word **bt_vct global0x2b5f8 has concrete ordinary command producers**. On the selected role1 path, base WHAT37 reaches a local branch which accepts first WHAT parameter1,2 or3 and stores that parameter into the same global. Role2 has separate selected WHAT37 stores for1,2 and0. Startup role5 has a further explicit override to1 after its constructor initially stores−1. These are software assignment/control-flow findings; they do not define camera readiness, answering-machine availability, physical call state or the frontend's unknown DIM35 field index4.
+
+**Static-only:** original/native/vendor/target-process/target-OS/network/device execution0. No previous ordinary DIM35 parser/ACK/KO or mode truth matrix was replayed. No authentication, session, connection or framing implementation was inspected. This pass reads original source bytes through ImageVFS, runs host binutils and two finite assignment ledgers. Earlier dossiers and repository pages remain read-only.
+
+## Identity and reproducibility
+
+Original `/home/bticino/bin/bt_vct` SHA256 is **`b9bf0ba4cc212b84be19f8b57c9f57bcc0cd7dfb9d7cdf31af578713f3ecd076`**, from F4542.0.51. The previous reports establish the selected role caller and ordinary DIM35 gate; their exact current identities are pinned as historical source inputs, not newly executed evidence. This report starts a distinct state-writer question, with fresh original span/word checks.
+
+```sh
+python3 -B work/f454-firmware/research/2026-10-31-av-state/collect_state_v1.py --check
+```
+
+The deterministic collector saves selected disassembly, exact original words, span VAs/file offsets/hashes, a bounded direct-global reference query, source/config-key relations and two explicitly HOST-only assignment examples. It refuses existing generated destinations, creates outputs exclusively and immediately preserves first report/collector/output bytes. Read-only check compares exact bytes. No existing evidence or original firmware is modified.
+
+## One global, separate roles and inputs
+
+The target word is not config+32's role selector1/2/5, factory `vde_enabled`, discovery `feature_vde`, WHO7 board profile, answering-machine permission or the frontend's result field4. Prior final-pass media evidence showed its actual read at pool0x15460 and selected constructor write at0xdaf4. This batch verifies fresh direct references to that same address and traces selected additional stores.
+
+The bounded query searches **one original ELF**, aligned PT_LOAD words equal0x2b5f8 and ARM immediate PC-relative word-load candidates selecting such literals. It retains exact candidate VAs and words. Some data may resemble instructions; concrete disassembly/dataflow spans, not the encoding query alone, establish the writers below. This is not exhaustive alias analysis, an external-provider scan, all process writes or a whole-archive absence claim. Computed aliases and other unexamined paths remain outside it.
+
+## Role1: first WHAT parameter → guarded store
+
+The previously selected role1 ordinary handler is0x143f0. Its WHAT extraction at0x14538..0x145bc calls local helper0xc11c and places the result in **r5** at0x14558. A separate helper0xc0f0 yields the base component in **ip** at0x1457c. They must not be interchanged:
+
+* Helper0xc044 clears30-byte component buffers and invokes the selected token splitter for nonempty input.
+* The splitter uses the original `#` delimiter. Its initial token is copied to buffer0x2b6a1; the following selected numeric-leading token goes to0x2b6bf, exactly base+30.
+* Getter0xc0f0 converts the base buffer through atoi, or returns−1 for empty. Getter0xc11c converts base+30, or returns−1 for empty. Thus r5 is the first parameter, while ip selects the base WHAT. Ordinary imported token/copy/atoi contracts and compatible input pointers are premises; no raw parser or malformed-string experiment occurred.
+
+Conditional on successful earlier WHO/category/local admission and reaching normal dispatch0x14910, base WHAT37 selects0x15d24 through0x14b74/0x14b78. The branch first requests a destination helper and rejects its result−1 at0x15d48..0x15d54. It then compares **r5 with1,2,3** at0x15d58,0x15d6c and0x15d7c. Matching values join0x15d94; other values branch away before the selected store. At0x15d98, the original negative PC-relative literal load again selects pool0x15460→0x2b5f8; **0x15d9c stores r5 there**. The next branch is0x15da0→0x148fc.
+
+This closes a concrete selected caller-input→mode assignment. It does not prove complete raw acceptance, every earlier admission guard, successful send/acknowledgement, the destination helper's physical meaning or actual command arrival. The host ledger supplies an already admitted local WHAT37 branch, first parameter2 and destination-helper result11: its sole asserted assignment is global2. It is not an example of captured wire traffic or an executed full handler.
+
+## Role2 has its own WHAT37 policy
+
+The separate role2 handler0xf130 places its first WHAT parameter into **r8** at0xf280 and its base component into ip at0xf2a4. Its selected WHO8/category branch tests base WHAT37 at0xf444 and jumps to0xf8ec. That branch requests destination decoding, stores its selected result in the role record and checks−1 before parameter cases.
+
+Under those local admission/helper premises, r8=1 reaches store0xf940, r8=2 reaches0xf9c0, and r8=0 reaches the explicit zero store0xf9ec. Each selects the same global through pool0x10160. The role2 zero path is therefore distinct from role1's selected1..3 store guard. This is a few specific original branches, not a full supported command/domain table, universal mode transition policy or physical-state interpretation. Other paths and caller state remain unexamined.
+
+## Startup: role1/2 initial−1 versus role5 override1
+
+Complete constructor0xdad4 obtains its fifth ABI argument from the stack and writes it into global0x2b5f8 at0xdaf4. The selected startup role2 and role1 record branches at0x1d804..0x1d870 supply that fifth argument as−1; role1's record is stored at application+0xf60 and role2's at+0xf5c. This confirms initial assignment on those successful constructor paths, not a universal live value.
+
+The separate role5 branch requests GetConfigValue using whitelisted path `/home/bticino/cfg/extra/9/schema.xml` and keys `schema`, `derivati`, `max_der`. Neither file/API nor any resulting process action is executed. It tests whether the local output buffer is nonempty:
+
+* Nonempty branch converts the text with atoi, constructs a36-byte role5 record with fifth argument−1, then explicitly stores global1 at **0x1d910**. The converted max_der value is stored separately at record+32.
+* Empty branch likewise constructs with−1, then explicitly stores global1 at **0x1d954**, while storing default24 in record+32.
+
+Thus both inspected role5 branches override the constructor's initial−1 with1, independent of whether max_der text is present. This does not mean arbitrary GetConfigValue errors necessarily result in empty text; the stated branches are conditional on the actual output buffer and normal allocation/import/constructor completion. Record+32's configured/default number is distinct from the global's value1.
+
+The second host ledger supplies successful role5 setup with max_der text7: constructor−1→override1, with separate record+32=7. It does not execute original startup, API parsing, configuration replacement, runtime initialization or timing. Packaged role1 does not automatically take this role5 override merely because the binary contains it.
+
+## Relation to camera/answering-machine documentation
+
+The existing reviewed device page describes camera/video and an answering-machine workflow **where configured**, and documents attached-product exclusions/dependencies. Its selected lines/current hash are pinned. This pass uses that reviewed product-document synthesis; it adds no fresh primary-PDF or hardware verification.
+
+The prior frontend still gates camera switching using auto-switching status and `get_vde_iu_status` result split index4. The actual DIM35 status-field producer/schema remains unresolved; no new write above is linked to that field. Likewise the role5 extra/9 schema setting, mutable global, role selector, answering-machine permission, factory `vde_enabled` and discovery feature remain distinct. A writable software mode cannot be substituted for proof that an attached camera, call path or answering-machine function is available.
+
+The new assignment evidence explains **how the word can change after a constructor sets−1**, within identified command/startup paths. It does not establish which value a deployed role1 device reaches after boot, any physical state transition, or that a particular mode permits recording/camera operation. No full live status response, bus-origin event or actual callback/publication join is claimed.
+
+## Confidence and remaining scope
+
+High confidence static: same global address at all selected stores; distinct base/first-parameter getters; guarded role1 WHAT37 store1..3; separate role2 stores1/2/0; selected role1/2 constructor−1; both inspected role5 overrides1 with separate max_der record field. Conditional: original parsed-object admission, role/caller/state pointers, destination conversion, allocation/token/API contracts and actual configuration/provider execution. Unknown: complete writer set or physical mode meanings, actual field-origin updates, installed state, exact DIM35 status producer/schema and the frontend field4 relation.
+
+No archive-wide absence or hardware/status-schema conclusion follows. A subsequent bounded investigation would need a distinct original status formatter or demonstrated state-field producer/caller; it should not rerun the completed ordinary query truth matrix or equate similarly named controls.

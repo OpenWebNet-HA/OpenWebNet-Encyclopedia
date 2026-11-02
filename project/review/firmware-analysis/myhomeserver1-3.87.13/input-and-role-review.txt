@@ -1,0 +1,49 @@
+# MyHOMEServer1 first-pass input and role preflight
+
+PASS for the reviewed local input/extraction identities, with the limits below. This is a new first-pass read-only identity/product-scope review plus bounded source leads. No vendor program, shell script, JavaScript, firmware/helper/emulator, target process/OS, gateway/network/device operation or closed authentication/session/framing route was executed or investigated. No unknown configuration or packaged credential/key value was dumped. Only this new review was written.
+
+## Input and extraction checks
+
+Root: `work/myhomeserver1-firmware/3.87.13/`.
+
+| Artifact | SHA256 |
+| --- | --- |
+| SMARTGW_038713.fwz,183381241bytes | 4ca1bcc70c1616270cb4c1f4b3ceb3c01c941797e437c3544d7d3d11b159c603 |
+| README.md | 556b2a688db89ae8accf52a9b2507e29692ab0c8ced72fb215bbfe9720a11258 |
+| provenance.json | 877fe41eeb1628d4168a87e2e32b8adb693049fca61af3af780a092d09ce5456 |
+| package-output-identities.json | be99f1d457ad44dc8eea2dbb1a096a468eb2831a4fd616c9be659da06c8c36c7 |
+| image-extraction-provenance.json | 4e4a27c485e3767c4b577547c2c092b86656e21d155b90f74bef16aaccd889f4 |
+| analysis/extraction-summary.json | a473b464368e16d7408e8567ab89c0ababf3cac08495ef7fac22272313ecdcb8 |
+| analysis/normal-regular-files.json | 066ba8668cbce4b10a2d4f06167eb20b74817abfae3ac683f67af1a7c5c6b580 |
+| analysis/recovery-regular-files.json | b68235ee11ca690097c49c449136ab0106505eaec2ef4a6f30fd3281d3513a19 |
+| analysis/normal-symlinks.json | 49fa9efbe8f3abc7fc289b6d50cbae9e4cefc1bf1caceecadb67351bc2f581dd |
+| analysis/recovery-symlinks.json | 7a76cbfb719454b2aea5a330ca6cbdb3251becbeb8f63bc150fd2dca3a37fbbb |
+| extract_filesystems_v1.py | afd6a1c6b1c4275485382f617a11e30d13e59d448284c2eb9aaab30bd65cf749 |
+
+Fresh local hashing verifies the original archive, all six declared outer outputs, all13 nested outputs and both full ext images against recorded sizes/SHA256. Normal image1073741824bytes/SHA2560a7ded1eeeff8a6c888903f02a28879b91259067fc4222839d604094035ef273; recovery524288000bytes/SHA2563d8d5ee888d80e94a0479352342dafc306239bf9ef269581d12a5894b96b4400. Independent superblock reads confirm ext magic and declared normal262144x4096/recovery512000x1024 block geometry. Independent original uImage header/payload CRC arithmetic agrees.
+
+All5924 normal and5384 recovery host regular files match their recorded sizes and SHA256, and exact manifest/tree path sets agree. Host files are444/directories555 with no materialized symlinks or unexpected special nodes. Link metadata counts1821/1703 agree; hardlink/special-node metadata collections are empty. The extraction script's regular-file allowlist and forbidden-parent checks deliberately avoid creating/following original symlinks on the host. This does not give symlink aliases ordinary-file semantics; later lookup must resolve them explicitly within the image namespace.
+
+As an independent extraction sample, host7z read five exact image entries into memory: normal scheduling_manager, normal matrix_mx/MHCatalogue.db, normal usr/lib/libjsonmsg.so.1.0.0, recovery scheduling_manager and recovery bt_daemon. Their direct image bytes match the file-manifest/tree hashes. This is five direct image/file joins, not an independent re-extraction of every file. Earlier guessed os-release paths were not present and were discarded before the final sample; no missing-path product conclusion follows.
+
+Offline recorded HTTP Content-Length and Content-MD5 match the original archive. I made no publisher/network request. Outer encrypted-ZIP CRC verification and gzip trailer checks remain the parent's recorded extraction results corroborated by exact input/output identities, not a new password/key/decryption exercise by this reviewer. Three signature blobs are present, but no cryptographic signature verification was performed. Hash/CRC consistency is not equivalent to signature/authenticity validation.
+
+The update identity is recorded as MyHomeServer1/Firmware3.87.13/XML3.1/Object model5.0.67. Missing separately referenced80/81/94/95.xtz assets remain unavailable. Complete extraction of this downloaded package does not supply their contents or establish every deployment role. No newest-release or installed-state claim follows.
+
+## Product-role boundary
+
+Reviewed canonical `devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md` SHA2565940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855 identifies item2198/MyHOMEServer1 as an SCS-to-Ethernet/app home-automation server supporting commissioning, compatible functions and scenarios across source-scoped app generations. Its documented automation SCS/Ethernet/auxiliary/USB/RS232 interfaces and catalogue associations are product/reference evidence, not observed runtime services.
+
+Historical catalogue slots150/216 and reused F454-related Object text do not transfer F454's dedicated SCS AI electrical path or every F454 audiovisual function. MH202's separately examined scheduler,300-script loader, interpreter grammar and local layouts also do not transfer by product feature/name similarity. Earlier Qt/COSO/libcommon filenames or IDs are not proof of same providers/layouts. Device documentation's source-scoped scenario limits are not inferred anew from firmware counts or names.
+
+## Bounded next-source leads, not promoted owners
+
+Filename metadata places application candidates outside the19 home/bticino/bin files: `home/bticino/scheduling_manager/scheduling_manager`, `home/bticino/bt_smart_home_manager/bt_smart_home_manager`, `home/bticino/matrix_mx/matrix_mx`, plus dedicated gateway/energy/player/backup/alarm directories. Paths/names alone do not establish scenario, alarm-control or persistence ownership. No raw unknown config was printed to pursue them.
+
+Fresh host readelf DT_NEEDED inspection gives a concrete narrower next edge: matrix_mx imports libsqlite3 plus libjsonmsg/libopenmsg/libjel/liblcm and other declared providers. Smart-home manager imports JSON/GLib/LCM/open-message support; scheduling_manager imports jsoncpp/logger/UUID/debug/C++ support; bt_dbus_manager imports GIO/GObject/GLib/LCM and other providers. These four selected executables do not list Qt dependencies; that is not a global Qt absence verdict. Provider definitions, indirect binding and actually used methods remain to be traced.
+
+Actual regular provider files are under usr/lib: libjel.so.1.0.0, libjsonmsg.so.1.0.0, libopenmsg.so.1.0.0, liblcm.so.1.4.0, libutils.so.1.1.0 and libcommon.so.1.0.0, with recorded SONAME aliases; libhiredis.so.1.0.0 is also packaged. Redis/D-Bus/MQTT executable names and support libraries are only implementation leads until actual callers, database keys/messages and startup context are joined. Do not convert packaged-client/tool presence into an active service or live state claim.
+
+The selected extension-path query finds `home/bticino/matrix_mx/MHCatalogue.db`,2233344bytes/SHA25679fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb. It differs from Suite3.5.38's previously reviewed catalogue. No old schema, rows or namespace joins should be inherited without fresh comparison. Extensionless stores, Redis persistence and absent separately downloaded assets remain outside that filename query. The parent's full signature/data/app mapping is a separate author task.
+
+Subsequent first-pass reports should separate file/dependency identity, actual call/field/key ownership, configured startup eligibility and unobserved runtime/physical behavior. This preflight adds no native corpus or source-owner conclusion beyond the stated static metadata/dependency relations.

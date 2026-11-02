@@ -1,0 +1,84 @@
+# MH2021.0.24 — COSO dispatcher criteria, callback arguments and record keys
+
+Bounded **static-only** continuation of the reviewed scenario STM report. Original ARM/vendor/parser/library instructions, emulator hooks, callbacks, process/service/socket/device operations and network activity all remain0 in this batch. Finite host models are calculations, not original execution. Original images, prior dossiers and repository documents stayed read-only.
+
+## Material result
+
+Actual COSO application and field-to-STM dispatchers compare descriptor+52 **list-item numbers against record+48**, then call different descriptor callbacks with concrete record/output-list arguments. The scenario STM initializer's previously supplied publication callback is now joined to main's installed **`sm_receive`**, subject to ordinary fresh manager initialization and selected ELF binding. It routes the first supplied list toward OPEN handling and the second toward field handling.
+
+A successful `buf_to_open_message` construction gives a post-parser WHO0 record a real source for key+60: original `new_id` loads a local32-bit counter, returns its previous value and stores previous+1. The STM application path saves that record key. Selected SCS queued-record feedback can update numeric flag+52 to1/2 without changing that selected record's key; a separate fresh-field branch obtains a new key and flag3. These joins do not prove full decoder eligibility, a natural round trip, timer/counter history, transport acknowledgement or physical scenario behavior.
+
+## Original inputs and reproduction
+
+Fresh verified normal-image paths:
+
+| Original image path | SHA256 |
+|---|---|
+| `/home/bticino/bin/coso` | `6865c2d1d441d25effa31275080ded70ad3538a8a49288e3002ffb196b066175` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+| `/home/bticino/libcoso/libplug_scenarios_stm.so` | `5b5709bd9b33945b4650f1ee86532b6459724376c108c22f69b097fc43f12d82` |
+| `/home/bticino/libcoso/libplug_scs.so` | `07fe8d2b35264df4961e1cc9b648808a6ee5b32754a705b237fb90d0a6a6f6af` |
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/functional/run7/collect_evidence.py --check
+```
+
+Collector:27 outputs plus manifest,17 exact original spans,31 original word assertions,4 original inputs,5 list-selection/1 composed post-parser/4 metadata host examples. It pins input sizes/hashes, accessor and immutable run6 context report. Generated spans include VA/file offsets and raw-byte hashes. No F454 layout/harness or original execution is used. Manifest excludes report/reviews.
+
+## 1. Actual application dispatch and one conditional ordinary record
+
+Complete `appl_receive`0xb614..0xb7b8 first sets incoming record+52=3. It obtains the state-machine list from supplied manager+24. For every descriptor, it iterates descriptor+52 list items and compares each item directly with incoming record+48 at0xb6a8..0xb6b4. A matching item calls **descriptor+44** at0xb6cc with:
+
+| Register | Actual argument |
+|---|---|
+|r0|Descriptor|
+|r1|Incoming record|
+|r2|Address of local field list, SP+20|
+|r3|Address of local OPEN list, SP+16|
+
+It concatenates those locals onto descriptor+60 manager's +68 field queue and +60 OPEN queue, respectively (0xb6d0..0xb6ec). Callback r0 is not tested before list processing. The displayed loops do not stop at the first matching criterion; duplicate numeric list entries can select repeated callback calls under the supplied list model. This is not a claim that the installed scenario descriptor has duplicates.
+
+Scenario STM registration0x16d8..0x16ec appends numeric0 into descriptor+52. Its +44 relocation identifies application handler0x1bb4. Thus a supplied coherent post-parser record+48=0 matches that criterion and reaches the actual reviewed STM handler with the above argument order. Its own parsed kind2/idle-state path then appends the existing request to the supplied field list and saves record+60, as run6 established. Descriptor registry membership and ordinary parser/allocator/list completion remain premises; no valid raw network/frame fixture is asserted.
+
+`host-dispatch-models.json` composes one explicit candidate: successful supplied parser object WHO text0/kind2, supplied initial counter7, constructor produces record+48=0,+56=3,+60=7, application entry sets flag+52=3, criteria[0] selects the actual STM+44 callback, and its reviewed idle kind2 contract saves pending key7. This is a static argument/field join, not a simulated complete process, configured scenario or accepted raw command.
+
+The application function also has no-match/default queueing and subsequent record-find/free decisions. Their complete source is retained; this batch does not replace full multi-plugin/list ownership with the single-candidate model or infer callback success from an ignored return.
+
+## 2. Actual field-to-STM callback and list ownership boundary
+
+`send_to_sm_from_field`0xb7b8..0xb8a8 requests foreach over supplied field-result records, with callback address reconstructed from original pool0xb898/PIC base as **0xade8**. It then frees the input list nodes/nulls its list head and processes manager OPEN/field output queues. Successful foreach/container completion is a source premise, not executed lifetime validation.
+
+The callback0xade8..0xaf14 iterates manager+24 descriptors and their +52 criteria. At0xae60..0xae80 it compares each criterion to record+48 and calls **descriptor+40**, with r0=descriptor,r1=record, **r2=address of local field list SP+12,r3=address of local OPEN list SP+8**. These are the actual arguments corresponding to the scenario field handler0x1910. It concatenates the two locals into manager+68/+60. Again, the callback integer return is not inspected at this layer. Subsequent source checks existing-record membership before free; full natural allocation/reclamation/refcount and inter-plugin behavior remain unexecuted.
+
+This callback begins with a record already produced by the field translation path. This batch does not close actual raw SCS→TR→this record eligibility. In particular, outgoing body metadata, transport-record numeric types and WHO-bearing post-translation records must not be conflated merely because they share a64-byte layout.
+
+## 3. Supplied STM publication callback gains a concrete selected source
+
+Main requests a zeroed76-byte manager at0xa1e4..0xa1f0 and passes it to imported `get_plug_m` at0xa1f8. The selected core0x1994..0x19bc installs its supplied pointer only when its saved pointer is null. Therefore a normal first-manager/ordinary binding premise is explicit; a previously installed different pointer is not excluded by executing nothing.
+
+Main's PIC base reconstructs as0x16660. Pool0xaae8 resolves to GOT0x167f0, whose original relocation is `field_receive`0xb8a8; pool0xaaf0 resolves to GOT0x16808, relocation `sm_receive`0xb564. Original0xa5e4/0xa5f0 install **manager+48=sm_receive, manager+44=context**; +32/+36 similarly provide context/field_receive. This is a static startup installation path, not successful initialized services or active providers.
+
+Run6's core STM registration passes manager+44 to the original initializer, which copies these two words to private+36/+40. The selected timeout's publication callback is consequently candidate **sm_receive0xb564**. Its complete body0xb564..0xb614 sends a nonnull first list pointer to `send_msgs2open`0xbc10 and a nonnull second list pointer to `send_msgs2field`0xb4dc with r2 manager as context; it combines their results. This closes the function-pointer direction/argument boundary. Actual serialization, socket writes, timer scheduling, list-node cleanup and delivery remain outside this static callback join.
+
+## 4. Key+60 and numeric metadata+52 source distinctions
+
+`buf_to_open_message`0x2b9c..0x2c64 calls imported `buf_to_openmsg`. Only result0 proceeds to a new record; this is a supplied parser-success condition. The constructor derives record+48 from decimal parsed WHO (null text gives−1), sets record+56=3, clears+32/+36, calls `new_id` at0x2c44 and stores its return at+60. `new_message_to_open`0x2b5c initializes record+52=0 under its zeroed allocation contract; later application dispatch overwrites this to3.
+
+Complete `new_id`0x220c..0x2230 resolves its local counter at **0xbcb4**, in original ELF NOBITS storage. It returns the current word, stores current+1 and returns; there is no atomic operation in this selected body. Ordinary fresh-loader zero-fill is a premise, not an observed running counter, process-wide uniqueness guarantee, no-wrap policy or full caller synchronization proof.
+
+Selected existing metadata wrappers copy source+60 to output+60: `prepare_scs_from_open`0x2238/0x2250 and `scsmsg_to_openlist`0x2708/0x2744. They preserve a supplied correlation number along those particular constructor/copy paths; they do not establish every intermediate record was the intended request or that arbitrary raw/parser fields agree. No body-packing matrix is rerun.
+
+Selected SCS queue-feedback slice0x2cb4..0x2d40 selects a queue-head record, reads its existing+60, removes the list link, and writes record+52=1 when the supplied stack+60 predicate is nonzero, otherwise2. It also writes+16 from a descriptor field,+56=1,+12=1. It does not store a new+60 in this saved slice. The normal timestamp/callback tail0x294c..0x298c then calls a supplied field callback. **The origin/meaning of that stack predicate and complete receive/parser eligibility are not recovered here**; numeric1/2 are not promoted to physical ACK/error claims or successful delivery.
+
+A separate fresh-field slice0x2e1c..0x2e64 calls `new_id`, then stores flag+52=3 and the new key+60. Its input/decoder route remains supplied. This separates preserved queued-record keys from independently assigned fresh-field keys; it does not prove which natural scenario event reaches which route.
+
+## Confidence, correction history and next questions
+
+High-confidence static: exact numeric list criteria, callback offsets/arguments, manager-installed function-pointer identities, parser-success constructor key and selected metadata stores. Conditional: fresh/ordinary manager installation and symbol binding, supplied coherent parser result, loaded descriptor membership, ordinary allocator/container/foreach completion and incoming record route. Unknown: complete dispatcher sequence across TR/STM/field providers, SCS predicate source/meaning, natural pending/counter history, full lifetime/refcounts and runtime/physical delivery.
+
+An author-stage GOT assertion caught a misselected adjacent pool: sm_receive uses0xaaf0, while0xaaf4 supplies syn_receive for manager+56. The initial collector stopped before output writes. Exact failed draft is retained in `development-before-assert/collect_evidence.py`; final collector assertions and main source now distinguish these words. No earlier completed report changed and no original execution occurred.
+
+1. Recover the selected SCS stack+60 predicate producer/eligible receive branch and carry one justified queue result through actual TR output into field-to-STM dispatch, preserving key and parser-type distinctions.
+2. Resolve how a concrete raw application source enters successful `buf_to_open_message` without treating a supplied object as accepted network grammar; avoid closed connection/authentication branches.
+3. Follow one manager callback's serialization/list cleanup boundary only if useful; do not turn actual callback identity into delivered ACK or complete ownership.
+4. Establish natural counter+32 reuse/initialization from an actual dispatcher sequence before assigning per-request meaning. The run6 reset-retention observation remains unchanged.

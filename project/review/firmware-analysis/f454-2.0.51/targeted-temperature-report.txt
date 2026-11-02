@@ -1,0 +1,120 @@
+# Targeted static followup — temperature raw501..511
+
+**The raw501..511 interval remains physically unclassified.** Available code supplies a more precise software answer: the short B5 decoder emits these integers unchanged as `0501..0511`, and the packaged web display converter contains no corresponding sentinel/error remapping. Given those exact four-digit strings, its source logic produces numeric labels50.1..51.1°C, with integer Fahrenheit rounding. Those are conditional client representations, **not proof that the gateway measures temperatures above the documented50.0°C limit**.
+
+This followup is strictly static. It adds original instruction/source inspection and a clearly separated Python derivation; **zero original ARM instructions, original JavaScript evaluations, firmware/helper processes, browsers or live I/O** were executed. Earlier fixtures/matrices were not rerun. The completed2026-10-29 dossier and repository sources were left read-only.
+
+## Evidence, identity and reproduction
+
+```
+python3 work/f454-firmware/research/2026-10-30-targeted/temperature/collect_evidence.py
+python3 work/f454-firmware/research/2026-10-30-targeted/temperature/model_range.py
+```
+
+The collector writes numbered original-source excerpts, bounded objdump spans, resolved format literals, selected bundle fragments, a scoped numeric-token search and `input-manifest.json`. It imports no earlier harness and executes no vendor code. The Python model copies only the recovered arithmetic/string rules for four-digit decimal inputs; it is neither JavaScript execution nor independent proof of live firmware results.
+
+Principal original inputs:
+
+| Input | SHA256 |
+|---|---|
+|`/home/bticino/bin/bt_termo`|`d2c9f8e5f62d45e836f5b52780f8353d89cad57acd40540f6852b3be5461870f`|
+|`/home/httpd/html/myhome/js/libs/myhome/jquery.myhomeapi.js`|`0a8a583135b6bbc812b32f5407cde3a790dc72af010667658c2d3fdd0fbd7e13`|
+|`/home/httpd/html/myhome/js/main-built.js`|`270f101d725a949b43f6d1a4db9e94c0b3476d7e257a6f73fde591480e35566c`|
+|`/home/httpd/html/myhome/js/libs/myhome/jquery.mywidgets.js`|`306d88ee99ab7769cff1aad93ca6b76e0f78a41c5b14687d054eb04260a9b999`|
+|`.../views/objectsPartial/ThermoUnitZoneView.js`|`2f315fd5f5d7248a9d4ed6ade9002645b91f15c35307f52110bc02b47f0763a1`|
+|`.../views/objectsPartial/ExternalProbeObjectView.js`|`997f9ce3c109a9855c9ee1c04438432f6f10065090914321f4830171672504f3`|
+
+Full paths, hashes and exact line/VA scopes of all selected originals, local reference text and prior run7/11/12/13 reports are in the manifest. The prior reports are historical evidence, not newly executed experiments.
+
+## Short DIM0 interval: exact arithmetic and classification
+
+Original bt_termo0xff4c–0xff6c reconstructs the unsigned byte XX from hexadecimal digits. The B5 alternatives add256 at0xffd0 or0xfff8. The two formatter paths use the resolved literals:
+
+```
+*#4*%d*0*%04d##          [ordinary probe0]
+*#4*%d%02d*0*%04d##      [individual probe1..8]
+```
+
+Thus `Q=XX+256` for B5;501..511 corresponds exactly to XX=`F5..FF`. No Q-range comparison, clamp, sign operation or special-value substitution occurs between this reconstruction and original formatting/CreateMsgOpen call0x10028. The checks in this branch select B4/B5, length/qualifier and addressing forms; they do not classify501..511 as a special measurement class.
+
+The model's scalar text is therefore `0501` through `0511`, with ordinary DIM0 syntax. This agrees with the saved endpoint examples from run7 but extends the arithmetic derivation over the interval **without rerunning its99-fixture execution**. Zero extension plus decimal padding is not evidence of physical meaning or hardware production.
+
+Evidence: `unsigned-DIM0.txt`, `format-literals.json`; prior run7 report for upstream length/discriminator/qualifier context. The full prefix grammar, parser applicability and physical origin remain outside this static followup.
+
+## Packaged client consumer: concrete representation, no interval sentinel
+
+Readable `jquery.myhomeapi.js:2221–2236` implements `convertTemperatureToFloatValue` by:
+
+1. Taking characters1..3 of the input string, unconditionally discarding character0.
+2. Removing one leading0 from that substring.
+3. Treating its last digit as a decimal tenth, unless it is0, then converting with Number.
+
+There is no501/511 threshold or error-code lookup in this function. Celsius rendering at2189–2196 uses the numeric result's ordinary string representation. Fahrenheit rendering at2199–2206 invokes `Math.round(value*9/5+32)` from2210–2213. `replaceSeparator` at2551–2560 applies the selected decimal separator and both renderers append explicit degree/unit labels.
+
+This is present in the selected packaged bundle as well: `index.html:13` names `js/main-built`, and `active-bundle-fragments.json` records exact bounded minified function fragments and character offsets with the full bundle hash. The readable-source finding is therefore corroborated in the configured bundle. It is still static packaging evidence, not an observed browser load or DOM update.
+
+Concrete consumers include:
+
+- `TemperatureZoneModel.js:28–32` copies the event's actual_temperature into the model without numeric conversion.
+- `ThermoUnitZoneView.js:253–269` stores the event field and selects the shared Celsius/Fahrenheit renderer.
+- `ExternalProbeObjectView.js:49–78` passes event and cached actual_temperature through the same shared renderer.
+- `jquery.myhomeapi.js:1620–1631` dispatches external-probe result objects into the frontend event mechanism; it does not itself numerically transform those result fields in this span.
+
+The source does not establish that the backend supplies the raw DIM0/DIM15 field verbatim to every such consumer. The host model therefore explicitly assumes that `actual_temperature` reaches this converter as the four-digit string shown. It does not silently join the bus decoder, backend event mapper and live frontend.
+
+## Pure host derivation over the requested interval
+
+`range-model.json` contains eleven arithmetic/source-model rows. The following are **conditional labels from that model**, not measured temperatures:
+
+| Raw Q | DIM0 scalar | Client Celsius label | Client Fahrenheit label |
+|---:|---|---|---|
+|501|0501|50.1°C|122°F|
+|502|0502|50.2°C|122°F|
+|503|0503|50.3°C|123°F|
+|504|0504|50.4°C|123°F|
+|505|0505|50.5°C|123°F|
+|506|0506|50.6°C|123°F|
+|507|0507|50.7°C|123°F|
+|508|0508|50.8°C|123°F|
+|509|0509|50.9°C|124°F|
+|510|0510|51°C|124°F|
+|511|0511|51.1°C|124°F|
+
+Integer Fahrenheit rounding collapses several adjacent raw values into the same label. The absence of `.0` for0510 follows ordinary number-to-string rendering. Neither behavior is a fault/sentinel classification.
+
+There is a concrete different fallback: both renderer functions use `if(floatTemp)`. Under the source model, `0000` becomes numeric0 and therefore the dash label `-°C`/`-°F`. ExternalProbeModel also defaults actual_temperature to `'-'`. That is a UI truthiness/default-state behavior; it does **not** establish that raw0 means a failed or absent sensor. Local documentation includes0.0°C as an ordinary status endpoint.
+
+## Extended signed DIM15 is a different representation
+
+Run11/12's extended operation21 path is confirmed statically at0xeb98–0xebcc: it constructs a16-bit word, tests/clears bit0x8000 and formats a separate sign digit plus minimum-three-digit magnitude using `15*%d*%01d%03d*%s`. Selector and flag fields are also carried. This is sign-magnitude input encoding, not the unsigned short B4/B5 scalar and not two's-complement reinterpretation of501..511.
+
+For magnitude501, the host derivation gives word01F5→scalar0501 and word81F5→scalar1501. Both are DIM15-context scalar fields, with selector/flags, rather than short DIM0 frames. Their physical range/selector/flag meanings remain unproved. No new DIM15 producer/consumer matrix ran.
+
+The shared packaged web converter simply drops its first input character; it does not apply the historical touchscreen's signed negation rule. Conditional control1010 therefore gives numeric1/label1°C in this model, whereas the separate historical client evidence documents1010 as−1.0°C. This is a precise source-level representation difference, **not proof of an actual negative-reading display defect**: the backend-to-actual_temperature mapping and real emitted input remain unjoined. It must not be generalized into a claim that all F454 signed readings use this renderer unchanged.
+
+## Measured/status domains versus setpoint domains
+
+The read-only local Encyclopedia dimensions reference explicitly separates:
+
+| Operation/reference | Documented domain |
+|---|---|
+|DIM0 measured/status|0000..0500, tenths over0.0..50.0°C|
+|DIM14 setpoint write|0050..0400,0.5°C steps|
+|DIM14 setpoint read|0050..0400,0.1°C resolution|
+|DIM12 full-probe adjusted setpoint|0020..0430 in the cited public flow|
+
+These clauses were read in the local documentation at lines69–77,89–93 and113–125; the underlying manufacturer PDF was not independently reopened in this static followup. They are independent domain evidence, not bounds inferred from `%04d` or the renderer.
+
+Packaged Celsius setpoint UI is separately concrete: `jquery.mywidgets.js:34–37` formats spinner index i as0.5*i+4.5, while327–334 restrict its indices to1..71. That yields5.0..40.0°C in0.5 steps, independently consistent with the documented write domain. These are indices, not direct measured-temperature values. SimpleSpinnerObjectView selects that widget; the main bundle contains the same constants/formula.
+
+The Fahrenheit widget instead declares source bounds38..95. They are UI defaults, not a device/backend acceptance contract or a reason to widen the Celsius/public domain. The AC wrapper uses model-provided setpoint_min/max/step fields and its own conversions. Neither is a special interpretation of raw501..511.
+
+`convertTemperatureForStoring` also returns an already-four-digit/no-dot string unchanged at2243–2246. That formatter is not a complete domain validator. None of these source facts establishes that the backend or a physical device accepts0501 as a setpoint. All eleven requested values exceed the local DIM14 write maximum; their DIM0 software passthrough must not expand that domain.
+
+## Special labels and remaining gap
+
+A scoped exact-token search of57 enumerated thermoregulation UI files found no501..511 or0501..0511 literal classification. The explicit converter itself has no corresponding semantic branch. This does not exclude symbolic conditions elsewhere, backend mapping, another firmware release or device-specific meanings.
+
+Label resources have a concrete missing boundary: original-image symlink `/home/httpd/html/myhome/translations` points to **`/home/bticino/cfg/extra/2/translations`**, absent from this extraction. `internationalization.js:3–5` loads those language scripts. The external template requests the generic `externalProbe` label; that is not a fault-code mapping. `translation-boundary.json` records the authoritative image-link target and inventory identity. No missing label text or error name was invented.
+
+The targeted question is narrowed, not fully closed: **available short-decoder and shared-client code treat501..511 as ordinary scalar digits; physical validity/sentinel meaning is still unknown.** Useful next evidence is a concrete backend WHO4/DIM0 or DIM15→actual_temperature mapping, actual special-value-producing device logic or authoritative manufacturer semantics/captures. Missing translated labels alone cannot supply that meaning. There is no new live/hardware transaction or source change in this report.

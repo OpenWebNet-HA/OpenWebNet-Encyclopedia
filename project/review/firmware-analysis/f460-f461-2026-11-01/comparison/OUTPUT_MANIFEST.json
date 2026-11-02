@@ -1,0 +1,41 @@
+{
+  "collector_sha256": "1417e1e82ee9ff3d970a1d23e72073d332c3064f44d9f54ce7c2f95d7555d568",
+  "counts": {
+    "catalogue_pairs": 3,
+    "catalogue_profiles": 4,
+    "new_original_execution": 0,
+    "path_hash_pairs": 6,
+    "products": 3,
+    "selected_paths_per_product": 13
+  },
+  "outputs": {
+    "BOOT_BUNDLE_COMPARISON.json": {
+      "bytes": 4489,
+      "sha256": "c53ab93d83877f5eb949989a2be9652d98444d62cc9675b943d0c1a056d5d711"
+    },
+    "CATALOGUE_COMPARISON.json": {
+      "bytes": 11879,
+      "sha256": "d9174c80abcbcbcd861d950db5867cfdcff4da59695ffaac0813a43ad6a222bb"
+    },
+    "CATALOGUE_PROFILES.json": {
+      "bytes": 134704,
+      "sha256": "c9085227000fa0983910c83d49c1f368eab0b84bae7ba017abd54987e947ec0a"
+    },
+    "INPUTS.json": {
+      "bytes": 2778,
+      "sha256": "88e4eb9d56b39c495ab5fc5fe16408de863f79feb82831cb028c581607742dc4"
+    },
+    "METHOD.json": {
+      "bytes": 599,
+      "sha256": "777bc809106cf82b4f0b304615f3744d5df383cec0b3cecdb38628d4b8bee61a"
+    },
+    "PATH_HASH_COMPARISON.json": {
+      "bytes": 4032,
+      "sha256": "18eef92283fd8d4e73c637c089eb3c6cc08a4c7cd46ca39f5c6a6b9b74cab17b"
+    },
+    "SELECTED_COMPONENTS.json": {
+      "bytes": 29725,
+      "sha256": "10b34ca8936b947b7619ad78a8cb512843c99dbc06c500cac288981832f081fd"
+    }
+  }
+}

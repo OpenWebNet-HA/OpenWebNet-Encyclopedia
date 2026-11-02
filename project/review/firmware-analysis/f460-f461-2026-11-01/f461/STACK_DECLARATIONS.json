@@ -1,0 +1,442 @@
+[
+  {
+    "count": 17,
+    "image": "normal",
+    "normal_status": [
+      "4"
+    ],
+    "path": "/home/bticino/cfg/stack_open.xml",
+    "process_declarations": [
+      {
+        "name": "openserver",
+        "path": "bin",
+        "tag": "p0",
+        "working_mode": "1"
+      },
+      {
+        "name": "scsserver",
+        "path": "bin",
+        "tag": "p1",
+        "working_mode": "1"
+      },
+      {
+        "name": "bt_luci",
+        "path": "bin",
+        "tag": "p2",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_device",
+        "path": "bin",
+        "tag": "p3",
+        "working_mode": "1"
+      },
+      {
+        "name": "bt_dbus_manager",
+        "path": "bin",
+        "tag": "p4",
+        "working_mode": "1"
+      },
+      {
+        "name": "coso",
+        "path": "bin",
+        "tag": "p5",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_termo",
+        "path": "bin",
+        "tag": "p6",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_supervisione",
+        "path": "bin",
+        "tag": "p7",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_multi",
+        "path": "bin",
+        "tag": "p8",
+        "working_mode": "0"
+      },
+      {
+        "name": "fw_manager",
+        "path": "bin",
+        "tag": "p9",
+        "working_mode": "1"
+      },
+      {
+        "name": "matrix_mx",
+        "path": "matrix_mx",
+        "tag": "p10",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_drover_mx.sh",
+        "path": "bt_drover_mx",
+        "tag": "p11",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_jdevice",
+        "path": "bin",
+        "tag": "p12",
+        "working_mode": "0"
+      },
+      {
+        "name": "backup_manager",
+        "path": "backup_manager",
+        "tag": "p13",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_eliot_v2",
+        "path": "bin",
+        "tag": "p14",
+        "working_mode": "0"
+      },
+      {
+        "name": "gateway_manager",
+        "path": "gateway_manager",
+        "tag": "p15",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_smart_home_manager",
+        "path": "bt_smart_home_manager",
+        "tag": "p16",
+        "working_mode": "0"
+      }
+    ],
+    "sha256": "bc9e8f64e44f562d53b08398b4c0d7be7393d8c17a30aa76f350422789c44d3d"
+  },
+  {
+    "count": 16,
+    "image": "normal",
+    "normal_status": [
+      "4"
+    ],
+    "path": "/home/bticino/cfg/stack_open_reduced.xml",
+    "process_declarations": [
+      {
+        "name": "openserver",
+        "path": "bin",
+        "tag": "p0",
+        "working_mode": "1"
+      },
+      {
+        "name": "scsserver",
+        "path": "bin",
+        "tag": "p1",
+        "working_mode": "1"
+      },
+      {
+        "name": "bt_luci",
+        "path": "bin",
+        "tag": "p2",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_device",
+        "path": "bin",
+        "tag": "p3",
+        "working_mode": "1"
+      },
+      {
+        "name": "bt_dbus_manager",
+        "path": "bin",
+        "tag": "p4",
+        "working_mode": "1"
+      },
+      {
+        "name": "coso",
+        "path": "bin",
+        "tag": "p5",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_termo",
+        "path": "bin",
+        "tag": "p6",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_supervisione",
+        "path": "bin",
+        "tag": "p7",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_multi",
+        "path": "bin",
+        "tag": "p8",
+        "working_mode": "0"
+      },
+      {
+        "name": "fw_manager",
+        "path": "bin",
+        "tag": "p9",
+        "working_mode": "1"
+      },
+      {
+        "name": "matrix_mx",
+        "path": "matrix_mx",
+        "tag": "p10",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_drover_mx.sh",
+        "path": "bt_drover_mx",
+        "tag": "p11",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_jdevice",
+        "path": "bin",
+        "tag": "p12",
+        "working_mode": "0"
+      },
+      {
+        "name": "backup_manager",
+        "path": "backup_manager",
+        "tag": "p13",
+        "working_mode": "0"
+      },
+      {
+        "name": "gateway_manager",
+        "path": "gateway_manager",
+        "tag": "p14",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_smart_home_manager",
+        "path": "bt_smart_home_manager",
+        "tag": "p15",
+        "working_mode": "0"
+      }
+    ],
+    "sha256": "f58632cef544dd507a9218f563b507b2525147f972b1408430314af28728a5e2"
+  },
+  {
+    "count": 17,
+    "image": "recovery",
+    "normal_status": [
+      "4"
+    ],
+    "path": "/home/bticino/cfg/stack_open.xml",
+    "process_declarations": [
+      {
+        "name": "openserver",
+        "path": "bin",
+        "tag": "p0",
+        "working_mode": "1"
+      },
+      {
+        "name": "scsserver",
+        "path": "bin",
+        "tag": "p1",
+        "working_mode": "1"
+      },
+      {
+        "name": "bt_luci",
+        "path": "bin",
+        "tag": "p2",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_device",
+        "path": "bin",
+        "tag": "p3",
+        "working_mode": "1"
+      },
+      {
+        "name": "bt_dbus_manager",
+        "path": "bin",
+        "tag": "p4",
+        "working_mode": "1"
+      },
+      {
+        "name": "coso",
+        "path": "bin",
+        "tag": "p5",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_termo",
+        "path": "bin",
+        "tag": "p6",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_supervisione",
+        "path": "bin",
+        "tag": "p7",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_multi",
+        "path": "bin",
+        "tag": "p8",
+        "working_mode": "0"
+      },
+      {
+        "name": "fw_manager",
+        "path": "bin",
+        "tag": "p9",
+        "working_mode": "1"
+      },
+      {
+        "name": "matrix_mx",
+        "path": "matrix_mx",
+        "tag": "p10",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_drover_mx.sh",
+        "path": "bt_drover_mx",
+        "tag": "p11",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_jdevice",
+        "path": "bin",
+        "tag": "p12",
+        "working_mode": "0"
+      },
+      {
+        "name": "backup_manager",
+        "path": "backup_manager",
+        "tag": "p13",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_eliot_v2",
+        "path": "bin",
+        "tag": "p14",
+        "working_mode": "0"
+      },
+      {
+        "name": "gateway_manager",
+        "path": "gateway_manager",
+        "tag": "p15",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_smart_home_manager",
+        "path": "bt_smart_home_manager",
+        "tag": "p16",
+        "working_mode": "0"
+      }
+    ],
+    "sha256": "bc9e8f64e44f562d53b08398b4c0d7be7393d8c17a30aa76f350422789c44d3d"
+  },
+  {
+    "count": 16,
+    "image": "recovery",
+    "normal_status": [
+      "4"
+    ],
+    "path": "/home/bticino/cfg/stack_open_reduced.xml",
+    "process_declarations": [
+      {
+        "name": "openserver",
+        "path": "bin",
+        "tag": "p0",
+        "working_mode": "1"
+      },
+      {
+        "name": "scsserver",
+        "path": "bin",
+        "tag": "p1",
+        "working_mode": "1"
+      },
+      {
+        "name": "bt_luci",
+        "path": "bin",
+        "tag": "p2",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_device",
+        "path": "bin",
+        "tag": "p3",
+        "working_mode": "1"
+      },
+      {
+        "name": "bt_dbus_manager",
+        "path": "bin",
+        "tag": "p4",
+        "working_mode": "1"
+      },
+      {
+        "name": "coso",
+        "path": "bin",
+        "tag": "p5",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_termo",
+        "path": "bin",
+        "tag": "p6",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_supervisione",
+        "path": "bin",
+        "tag": "p7",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_multi",
+        "path": "bin",
+        "tag": "p8",
+        "working_mode": "0"
+      },
+      {
+        "name": "fw_manager",
+        "path": "bin",
+        "tag": "p9",
+        "working_mode": "1"
+      },
+      {
+        "name": "matrix_mx",
+        "path": "matrix_mx",
+        "tag": "p10",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_drover_mx.sh",
+        "path": "bt_drover_mx",
+        "tag": "p11",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_jdevice",
+        "path": "bin",
+        "tag": "p12",
+        "working_mode": "0"
+      },
+      {
+        "name": "backup_manager",
+        "path": "backup_manager",
+        "tag": "p13",
+        "working_mode": "0"
+      },
+      {
+        "name": "gateway_manager",
+        "path": "gateway_manager",
+        "tag": "p14",
+        "working_mode": "0"
+      },
+      {
+        "name": "bt_smart_home_manager",
+        "path": "bt_smart_home_manager",
+        "tag": "p15",
+        "working_mode": "0"
+      }
+    ],
+    "sha256": "f58632cef544dd507a9218f563b507b2525147f972b1408430314af28728a5e2"
+  }
+]

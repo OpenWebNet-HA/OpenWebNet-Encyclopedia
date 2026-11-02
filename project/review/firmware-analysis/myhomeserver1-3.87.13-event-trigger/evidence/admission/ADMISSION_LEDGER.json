@@ -1,0 +1,19 @@
+{
+  "configured_status_word": 60,
+  "enabled_byte": 48,
+  "fire": "knownprimaryslot0Thumb0xee59d fastpath checksmanager12 then invokesinvoker16 withdata4; differentprimarymethod isopaquevirtualdelegate",
+  "lifetime_order": "a6508 sourcecopies scene104handle range andincrementsnonzero control count; 573a4 releasescopiedcontrols/rawbuffer beforeselectedID/handlercalls. No wholeownerlifetime/unsafeinterleaving claim.",
+  "no_local_prior_state": "Retained handler performs no event-value store; no globaldedup/eventdelivery claim.",
+  "operator2": "recognizedstate==configuredstatus permits selectedfire",
+  "operator3": "recognizedstate!=configuredstatus permits selectedfire",
+  "operator_word": 56,
+  "other_operator_words": "recognizedstate reachesselectedfire withoutthesecomparisons",
+  "receiver": "compiledinner, not76Bcontrolbase",
+  "recognized_input_strings": {
+    "noStatus": -1,
+    "off": 1,
+    "on": 0
+  },
+  "selected_caller": "dynamiccastcandidate13TriggerRunner\u219217BnilTriggerRunner; IDstringequality theninputr8+8 tohandler",
+  "upstream": "Provided event/ID objects and typed live receiver remainpremises; no rawtransport/body/authentication/session/framing orsource of event strings investigated."
+}

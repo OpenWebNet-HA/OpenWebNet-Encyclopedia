@@ -1,0 +1,10 @@
+{
+  "scope": "Parent read-only navigation reproduction; no old source collector/native replay",
+  "actual_tool_result": {
+    "chunk_id": "332a52",
+    "wall_time_seconds": 0.00001206,
+    "exit_code": 0,
+    "original_token_count": 24,
+    "output": "{\"status\": \"PASS\", \"checkpoints\": 15, \"reports\": 30, \"outputs\": 8, \"new_firmware_execution\": 0}\n"
+  }
+}

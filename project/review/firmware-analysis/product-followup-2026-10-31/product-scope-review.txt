@@ -1,0 +1,48 @@
+# Product-led scope review: F454 alarm ownership and MH202 scenario artifacts
+
+This is an independent documentary review of current Device definitions, their retained manufacturer-manual reconciliation and existing research boundaries. It does not freshly re-audit the original PDFs/catalogue database or investigate vendor binaries/source, execute firmware/native/OS/network code, inspect transport/authentication/framing, or modify repository/old dossier files. Only this NEW review is written. Product roles set the questions; they do not predetermine implementation answers.
+
+## Product expectations and useful investigations
+
+| Product evidence | Investigation justified by that role | Boundary to preserve |
+|---|---|---|
+| F454/OWN-DEV-0002 is an audio/video web server and gateway, with documented burglar-alarm application support. Device lines57 and299 retain the connector legends and application evidence. MQ00519-c-EN PDFp1, O1754E PDFpp1-2, and the retained software/user manual reconciliation supply distinct physical/application scopes. | Establish the original alarm producer and actual bus/lane/daemon ownership leading to the already traced software alarm path. Start from the documented burglar-alarm interface expectation and require exact configuration/caller/field evidence for each new edge. | Literal SCS AV/SCS AI labels, software SCS/SCSAI lane values, catalogue bus associations and real electrical connectors are different namespaces. Do not infer a physical pin/riser or logical-to-connector assignment from an acronym, filename, enum or available plugin. Preserve publisher legends literally where they differ. |
+| F454 has2 catalogue Modules: Object216 enhanced audio/video web server and Object150 Open SCS gateway, Device lines149-166. | Use these as catalogue roles when reconciling implementation modules and diagnostics. | They are not two physical connectors, proof of two electrical buses, ordinary actuator Modules, or extra Modules for every web application. Catalogue1.0.37/2.0.1 records are not automatically the examined2.0.51 build or installed state. |
+| MH202/OWN-DEV-0151 is a scenario programmer with up to300 scenarios, one documented SCS BUS, Ethernet and configuration/update USB; one catalogue Module is Object61 scheduler. Device lines5,53-58,127-133. | Trace actual configured scenario/index/script artifacts, their producers/consumers and lifecycle. Use published Start/Only if/Stop/Action and repeat/restart/panic distinctions as reconciliation targets, with exact code/config joins required. | Remote lighting, motors, alarm events, temperature, sound/video, sensors and variables are scenario families, not extra physical MH202 Modules or proof it is a general alarm/gateway appliance. Catalogue capacity, file loops and actual valid scenario IDs are not interchangeable. |
+| MH202 manual reconciliation explicitly limits alarm events/zone status to reactions/trigger-condition use and prohibits alarm arming/disarming. Software ENpp32-33 and Device lines256,265-271 retain that boundary. | Determine how an alarm event reaches the scheduler's trigger/condition logic where justified; distinguish that observation from an alarm command producer. | A packaged alarm translator, WHO5 route, generated frame, GUI category or software receipt cannot establish product arm/disarm support, a local alarm panel, or a dedicated physical alarm port. Existing public scenario/manual restrictions must not silently disappear during code integration. |
+| Fresh MH202 loader evidence already names `/home/bticino/cfg/extra/4/<number>.spt/<number>.spt`; PHP config names extra/4/info.xml and independent XMLid/name fields. | Locate a concrete available scenario artifact/generator/serializer or a narrower proven schema edge. Correlate only exact identifiers/path/content where present. | A consumer path is not evidence that an actual configured body exists or that missing4.xtz has a particular archive layout. Firmware manifest extra_download metadata, mounted persistent extra data, Suite export/project artifacts, runtime staged scripts and PHP metadata remain separate until exact provenance joins them. |
+
+## Existing research is the starting boundary
+
+F454 run26/27 establish one staged normal alarm object through an explicit idle-state handler, monitor consumer, original callbacks/serializer and recorded10-byte send of `*5*17*#5##`. The selected software object/call path is concrete. The raw serial/internal producer, actual plugin/idle-state initialization, real subscription/readiness, physical bus origin and message destruction remain open. The one private subscriber and modeled send are not a capture or proof of delivery. The followup should close a new producer/ownership edge, not repeat the completed zone/serializer cases or relabel their synthetic raw input as physical alarm traffic.
+
+MH202 native taskmanager WHO17 ownership is distinct from COSO's WHO0 scenario translation. Its loader tests numeric1..300 across failed opens; the PHP index stops at the first empty scenario name and sends its separate XMLid. Native `.spt` paths, info.xml metadata and the source-view expression cannot be assumed mutually complete or valid on a running product. The supplied package lacks referenced2.xtz/4.xtz and mounted extra contents. A newly found artifact may narrow this, but filenames/path coincidence, catalogue Extra XML associations or missing root-image descendants alone cannot prove a generator/schema, installation layout, global artifact absence or full accepted script grammar.
+
+The already reviewed interpreter/FIFO work is conditional source behavior, not actual configured source-to-action execution. New artifact evidence should state whether bytes are manufacturer package content, Suite configuration output, a supplied project, documented example or host reconstruction. Report exact provenance and which caller consumes it. Do not invent missing configured scripts from manual examples or treat a finite host grammar model as a real artifact.
+
+## Integration acceptance checks
+
+1. Keep documented product purpose/connector legends and catalogue roles separate from new build-specific code findings; cite the exact original path/VA/field and remaining edge.
+2. For F454, name whether ownership is logical lane, daemon, UART/internal envelope or electrical connector; stop at the precise missing mapping rather than assuming all are synonymous.
+3. For MH202, preserve alarm reaction-only scope, scenario Module61 and missing configured resources. Any artifact conclusion needs its own exact source/identity and producer-consumer correspondence.
+4. Keep software publication, local API receipt, serializer output and physical delivery distinct. No new installed state, public support/grammar, physical topology, full-source coverage or cross-build behavior follows from names.
+
+The current Device/manufacturer reconciliation supports these investigations without requiring a new feature claim. This review approves the product-led question framing only; parent source findings and later integration require their own independent review. Original execution and live contact added here:0.
+
+## Exact read-time references
+
+Paths are workspace-relative. Manual page scopes above are retained source accounting, not a new original-PDF audit.
+
+| Reference | SHA256 |
+|---|---|
+|OpenWebNet-Encyclopedia/devices/definitions/own-dev-0002-audio-video-web-server-gateway.md|f300b28ca0f358b73dff111ee47f1a911c71f8b949ecc979726a2b5ec5459af9|
+|OpenWebNet-Encyclopedia/devices/definitions/own-dev-0151-mh202-scenario-programmer.md|74f961aa3aaafb99003d1677304a6d971a42c871950796707712d1c66f50bbb9|
+|OpenWebNet-Encyclopedia/project/review/device-reviews-0001-0010-2026-10-05.md|f365bca4dad572139d61c79030ae8bc98940598d37a1a5f090486fa178a81776|
+|OpenWebNet-Encyclopedia/project/review/device-reviews-0151-0160-2026-10-07.md|8a730dd3b8ac15007c6c68674dc5da9ab9c9ba054dfe9d4f23878a1da1581bf2|
+|work/f454-firmware/research/2026-10-29/functional/run26-alarm/REPORT.md|c67560a28bab4ba269e2efa095bd3d557d3a3f9d2f6cf4612217ca696bdcca7b|
+|work/f454-firmware/research/2026-10-29/functional/run27-alarm/REPORT.md|bd5778fd14cda76c03846ae54a55359f511a4e94f59cbf0259450e0765dcb92a|
+|work/f454-firmware/research/2026-10-29/REMAINING_QUESTIONS.md|af3d7e45b8f316dadd59376149d22215591a97ce4916453c53f3b5ec6c719c70|
+|work/mh202-firmware/research/2026-10-30/functional/run1/REPORT.md|4bd567b9a05afe7a728895966aabbcc2d6c20929b9ffa12d1524fe7f7b0061f6|
+|work/mh202-firmware/research/2026-10-30/web/run1/REPORT.md|c7e4d114ff1676841968f09839db39c1966bcb492791f6562fd2a352607a728b|
+|work/mh202-firmware/research/2026-10-30/boot/run1/REPORT.md|6035e497fcf4c8373ec84ae18ef2a2ff034ee4d8f49c16afac6d8c2199b1a4de|
+|work/mh202-firmware/research/2026-10-30/FINAL_REPORT.md|5b9e38d62cfee76bca3ea995a565a07deebf2d8e1a8b7f5931b5eafad906341b|

@@ -1,0 +1,52 @@
+# ScenarioSuite scheduler/area/timing metadata: independent source review
+
+PASS within the selected static database/reference scope; no correction requested. I independently ran the hardened read-only collector, reran all24 saved SQL statements with their actual parameters and compared complete rows/column order/counts, checked selected schemas and original DB/reference/first-copy hashes, and used additional direct queries for key placement/tension claims. This is not vendor UI/compiler/firmware execution, native replay, installed-scenario or physical verification. Only this NEW review is written; database, author artifacts, repository and earlier dossiers remain unchanged.
+
+## Reproduction and exact scope
+
+`python3 -B work/mh202-firmware/research/2026-10-31-database-analysis/scheduler/collect_scheduler_v1.py --check` passes2 outputs/24 recorded queries/64 permission rows/63 matching objects/40 selected object-command-area rows/24 empty TMP tables. The24 result sets contain1301 rows in total; that is reproducibility metadata, not1301 independent features/tests. The16 selected schemas and9 reference pins agree. Input bytes remain SHA256ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29 before/after; URI ro/immutable, query_only1 and trusted_schema0 are explicit, with no extensions/vendor functions loaded.
+
+All4 actual first report/collector/evidence/manifest copies equal the current immutable files and their snapshot hashes. The index is built before its output file opens and excludes itself. Both output hashes and report/collector manifest pins match. This verifies actual saved first candidate, not unsaved exploratory query history or all previous drafts. The source has no declared FK relationships for these selected schema joins; explicit analyst equality joins do not acquire enforced application semantics from names.
+
+## Object permissions, areas and declaration differences
+
+Own NOT EXISTS queries confirm all63 actual ANA_OGGETTI objects have ASS_OBJ_AREE rows, while the64th permission PK0 has no object. PK0's flags are retained, not invented as an editor Object; placeholder/consumer intent remains unknown. All nine flags and family activation are distinct source fields. PANICKEY/TRIGGERENABLE/TRIGGERDISABLE selection is exactly objects7/52 within this table, not proof of the only runtime panic producers. The raw area dictionary supports the stated English role labels but not old ScenarioDevices CategoryFlag values or assigned COND_KO/ACT_ELSE area IDs.
+
+Independent raw selected queries confirm Alarm39 flags TRIGGER/COND_OK/TRIGGERSTOP1 and ACT/ACT_ELSE0. Its18 associations are6 each in areas3/4/6 and none5. Engage Disengage54 has2 associations each in areas3/6, no4/5, and only TRIGGER/TRIGGERSTOP1 among those flags. Its names/token8/9 are event choices here, not MH202 arm/disarm commands. This supplies source corroboration for the existing product/manual reaction-only restriction while leaving actual UI/filter/compiler consumers unclosed.
+
+The opposing compile declarations are explicit: PK231..236 for object39/COSA238..243 have ACT_AREA1, despite object-level ACT0/noAction5 associations. Rules506/507 for object54 have ACT_AREA0/COND_OK_AREA0. The collector's full per-level difference inventory reproduces258 start,258 stop,465 condition and60 action differing compile rows; enable/disable/panic differences0. These sets may overlap and are not an additive count of unique defects or capabilities. Neither level overrides the other without a proven consumer order; the report properly retains this tension rather than claiming the alarm can be armed or that configuration is impossible.
+
+Load-control/Lighting family ATTIVA0 remains raw metadata, not proof of absent runtime support or invisible UI. Count/permission completeness is limited to this shipped table, not whole product functionality.
+
+## Timing forms and exact ownership
+
+Selected Hour/Hour-and-day/Days, Delay/Random delay and Astronomic-clock association/rule rows match their IDs and placements. Shared COSA120 does not merge objects23/70 or their different areas. Action-only delay/unit-token evidence, Sunrise/Sunset event versus Day/Night OnlyIf placement and ACT_ELSE differences remain source declarations, not actual scheduling or generated frames.
+
+I independently queried the34 selected composition rows before their group CAST: all nonNULL ID_OBJ_FIELDS_GROUPS values in this subset are numeric text, so no comma/multi-value token is silently collapsed in these selected results. That is a subset check, not a generic TEXT-field consumer contract. The matched group names TimePicker/Hour_From_To/Delay/random_delay/hour_&_day/Weekly_plan/Yearly_plan are genuine form metadata, not an executed editor/serializer. Selected keyobject-parameter and COSA-auxiliary association queries both return0; their scope is correctly limited and does not imply all custom inputs are absent.
+
+Range/unit rows, labels and12 ASS_RES_TIME combinations reproduce exactly. Resource27/28 are not Object27/28 merely by numeric equality. Arithmetic255*3600+59*60+59=921599 agrees with the extended time bound, but does not prove a conversion, accepted value, default or enforcement. Reuse of time-labelled range IDs under other auxiliary labels remains explicit; no seconds/volume/preset semantics should be imposed from that join alone. Range7's minimum1 does not exclude every possible midnight form. Validation labels are stored text, not evidence an actual runtime check fired.
+
+## Scenario storage and inherited firmware/manual comparison
+
+TMP_SCENARI's ID/name/REPEAT/RESTART/SPT_PATH shape and all24 zero-row TMP tables are schema evidence, not defaults, configured scenarios, actual output files or execution history. The two old four-table ScenarioDevices databases, catalogue IDs and this79-table SuiteDB retain separate namespaces and version/applicability. No full Start/OnlyIf/delayed-Action compiler is recovered.
+
+The report's manual comparison is inherited reviewed source, not a new PDF audit. Prior selected firmware SLEEP/local CHKTIME/UTC CHKDATE, numeric result/IIF, saved-active RESTART, always-start and panic/gate-clear limits remain distinct. I am source-aware in previously authored interpreter areas; this review does not replay or independently re-audit those original binaries. Database intent does not join exact custom-form values to original helper arguments or establish deployed time zone/DST/astronomical/power-cycle behavior. The unknown gate clearing is retained rather than filled by labels.
+
+The9 comparison references are current hash-checked read inputs, including Device0151. Parent's no-edit-Device0151 integration policy preserves this candidate's reproducibility; a future legitimate reference change must be explicitly versioned/preserved rather than silently repinning the collector. The resource reportv1 reference remains a historical source/context pin, not authority for the separately corrected acquisition chronology.
+
+No new original execution, native corpus, compatibility proof, complete FK integrity, UI precedence, alarm command capability or physical behavior follows. Highest-value continuation remains an actual vendor rule/form/consumer-to-output trace with justified state, preserving the conflicting declaration levels. Current source and stated limits pass.
+
+## Exact reviewed identities
+
+Paths are relative to scheduler/ unless qualified.
+
+| Artifact | SHA256 |
+|---|---|
+|REPORT.md|08082d7321d3ed4ec5e3ecb903d973ee1a28a9b296bf1101941ffd52a3a344e8|
+|collect_scheduler_v1.py|7ea40b7e0620f0722613ffb0b0286c7ecf05cd99551028756b0365a19921ee99|
+|scheduler-evidence.json|c663b3e96b16d947a6563b50d42b41e052654cf2c26ac6e4ce2455571e696e02|
+|output-manifest.json|898749c1634bd47a44380fe87a590e4cc7a32a138c53dab83eedd3656519d71e|
+|initial-generated-v1/SNAPSHOT_INDEX.json|1741f70e15624b29e05d8e6daac3ff568d532ee615304e5f8d495357ce38c655|
+|reviews/BASELINE_REVIEW.md|1dfc37e924c5b4d308125600defdbf8f5f1d0f00091b14357773fc843af24af0|
+
+Exact24 SQL strings/parameters,1301 rows, original selected schema/PK metadata,9 reference identities and per-level difference PKs are in the pinned evidence file. The additional independent queries described above corroborate actual selected keys/flags and raw composition values, without claiming full application semantics.

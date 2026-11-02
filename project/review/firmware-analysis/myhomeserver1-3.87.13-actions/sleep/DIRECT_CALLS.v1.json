@@ -1,0 +1,27 @@
+[
+  {
+    "bytes": "0ff08bff",
+    "call_va": "0xa7676",
+    "target": "0xb7590"
+  },
+  {
+    "bytes": "0cf0e2fe",
+    "call_va": "0xa7684",
+    "target": "0xb444c"
+  },
+  {
+    "bytes": "fff7bffd",
+    "call_va": "0xa7706",
+    "target": "0xa7288"
+  },
+  {
+    "bytes": "16f099f9",
+    "call_va": "0xb7652",
+    "target": "0xcd988"
+  },
+  {
+    "bytes": "16f08ef9",
+    "call_va": "0xb7670",
+    "target": "0xcd990"
+  }
+]

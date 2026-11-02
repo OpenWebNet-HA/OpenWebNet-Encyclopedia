@@ -1,0 +1,35 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a8c62:
+   a8c62:	9804      	ldr	r0, [sp, #16]
+   a8c64:	f766 efba 	blx	fbdc <sqlite3_step@plt+0x4>
+   a8c68:	2865      	cmp	r0, #101	@ 0x65
+   a8c6a:	d039      	beq.n	a8ce0
+   a8c6c:	9c04      	ldr	r4, [sp, #16]
+   a8c6e:	2c00      	cmp	r4, #0
+   a8c70:	d039      	beq.n	a8ce6
+   a8c72:	210d      	movs	r1, #13
+   a8c74:	4620      	mov	r0, r4
+   a8c76:	f766 eebe 	blx	f9f4 <sqlite3_column_text@plt>
+   a8c7a:	220a      	movs	r2, #10
+   a8c7c:	2100      	movs	r1, #0
+   a8c7e:	f767 ede8 	blx	10850 <strtol@plt>
+   a8c82:	4603      	mov	r3, r0
+   a8c84:	210e      	movs	r1, #14
+   a8c86:	616b      	str	r3, [r5, #20]
+   a8c88:	4620      	mov	r0, r4
+   a8c8a:	f766 eeb4 	blx	f9f4 <sqlite3_column_text@plt>
+   a8c8e:	220a      	movs	r2, #10
+   a8c90:	2100      	movs	r1, #0
+   a8c92:	f767 edde 	blx	10850 <strtol@plt>
+   a8c96:	61a8      	str	r0, [r5, #24]
+   a8c98:	4620      	mov	r0, r4
+   a8c9a:	f766 efa0 	blx	fbdc <sqlite3_step@plt+0x4>
+   a8c9e:	2864      	cmp	r0, #100	@ 0x64
+   a8ca0:	d0e7      	beq.n	a8c72
+   a8ca2:	4620      	mov	r0, r4
+   a8ca4:	f767 ebac 	blx	10400 <sqlite3_finalize@plt>

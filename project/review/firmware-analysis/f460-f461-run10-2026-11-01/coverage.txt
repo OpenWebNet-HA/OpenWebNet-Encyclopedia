@@ -1,0 +1,10 @@
+# Run10 coverage and boundaries
+
+| Area | Selected original reach | Remaining boundary |
+| --- | --- | --- |
+| F460 action gate | Same selected compiled pointer/control-word pair, available-capacity16B publication to scene216; real f84d0 same receiver/range/slot0; whole action8 getter; selected one-entry poll/scene248 recheck and249/248zero stores | Normal helper/preservation/objects/providers, growth/action/control bodies, field public meanings/nonzero producer, other counts/full policy, configured/natural action outcome, ownership/errors/unwind/concurrency |
+| F461 suffix | Own supplied parsed fields/currentnon-NULLcase, signedconversionlowword/%X context, W20zero connector, exactCCMP/CSEL, sameGString suffix and local formatter returned store | Full predecessors/schema/configvalues/providers/strings, all components/grammar, allocation/lifetime/natural data, opaque nextcall and downstream behavior |
+
+F460:13 deterministic outputs,10 spans,44 instruction guards, three imports, four local calls, nine branches, seven input pins and15 first copies. F461:9 outputs, six spans,34 guards, seven PIC joins,11 import proofs, six input pins and11 first copies. Reviewers independently supplement one allocation-size instruction and one selected flag-preserving connector. Counts are integrity/selected reach, not semantic coverage percentages or executed cases.
+
+All new original/helper/native/emulator/model/fixture/SQL/JSON/file/service/OS/network/bus/physical execution zero. Earlier MHS onecorpus/eightentries/340originalcodehookvisits and separate F454/MH202 ledgers unchanged. Full Device/source gates pending. Closed output/receiving/transport/auth/session/framing/MQTT/libjel bodies and excluded platformcommand/uncertainprocess consumer remain closed. No full config/private runtime values exported.

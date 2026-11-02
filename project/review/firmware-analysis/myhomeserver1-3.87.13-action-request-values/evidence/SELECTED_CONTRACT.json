@@ -1,0 +1,62 @@
+{
+  "descriptor": {
+    "final_RTTI": "18LightSetStatusBean",
+    "initial_RTTI": "14JsonRpcRequest",
+    "method_string28": "light.setStatus",
+    "outer_ID_string52": "two generation/unparse request pairs; later temporary string assignment replaces earlier outerID on normal path",
+    "params_presence76": "initialized0",
+    "version_string4": "2.0"
+  },
+  "execution": {
+    "input_fixtures": 0,
+    "new_original": 0,
+    "prior_ledger_unchanged": {
+      "C_primitives": 0,
+      "EXIT": 8,
+      "corpora": 1,
+      "data_setup_relocations": 4,
+      "entries": 8,
+      "hooks": 360,
+      "original_visits": 340,
+      "redirects": 12,
+      "stops": 0
+    },
+    "semantic_models": 0
+  },
+  "first_caller_join": {
+    "ID": "descriptor80=source4; copiedconfiguredID string, not outerUUIDID",
+    "actual_converter_source": "SP480=descriptor+76, not prefixSP148",
+    "assumptions": [
+      "blocks reached normally with valid object/storage",
+      "normal string allocation/copy/assignment, UUID/mutex and JsonCpp/provider returns",
+      "same captured/merged record lifetime and no incompatible mutation",
+      "candidate import binding/ABI/canary"
+    ],
+    "capture": "configuredIDstring4/capturedspeedword0 distinct52Bcapture",
+    "descriptor": "SP404; constructorpresence76=0 selectsout-of-lineIDcopyd05ac\u2192d05f2\u2192cf7e4",
+    "prefix": "SP148: IDpresence0=1; signedpositivecapture0\u2192presence36=1/value40",
+    "speed": "pairSP184/188(prefix36/40)\u2192SP516/520(convertersource36/40)"
+  },
+  "limits": [
+    "not a full payload/schema/status table",
+    "no actual UUID values/uniqueness/randomness",
+    "no naturalscene/physicalcommand/delivery/restore/correlation",
+    "no outputdelegate implementation",
+    "no whole constructor/unwind/concurrency ownership proof"
+  ],
+  "params_helper_ABI": "hidden resultR0/sourceR1, savedR6/R4; no this/vtable dispatch here",
+  "selected_params": [
+    {
+      "arm": "0xd1772",
+      "key": "id",
+      "presence_byte": 0,
+      "value": "string subobject4"
+    },
+    {
+      "arm": "0xd17d8",
+      "key": "speed",
+      "presence_byte": 36,
+      "value": "signedword40 to Json::Value(int)"
+    }
+  ]
+}

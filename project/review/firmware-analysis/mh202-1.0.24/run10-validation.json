@@ -1,0 +1,180 @@
+{
+  "checked_at": "2026-10-30T19:54:32.264904+00:00",
+  "passed": true,
+  "scope": "Run10 static source plus full selected normal libopen builder/parser object route under C primitives; no raw diagnostic decoder, runtime or physical proof",
+  "original_execution": 11904,
+  "run10_original_execution": 7480,
+  "original_execution_scope": "Five canonical named corpora; replays not accumulated",
+  "primitive_callbacks": 1079,
+  "linker_redirect_callbacks": 10,
+  "boundary_callbacks": 6,
+  "code_hook_visits": 12999,
+  "original_helper_calls": 48,
+  "execution_corpora": [
+    {
+      "artifact": "triggers/run7/execution-results.json",
+      "helper_calls": 13,
+      "original_instruction_visits": 1485,
+      "primitive_callbacks": 75,
+      "code_hook_visits": 1560,
+      "firmware_processes": 0,
+      "target_OS_calls": 0,
+      "count_scope": "Canonical corpus only; verifier replays not accumulated"
+    },
+    {
+      "artifact": "strings/run8/execution-results.json",
+      "helper_calls": 16,
+      "original_instruction_visits": 1280,
+      "primitive_callbacks": 0,
+      "code_hook_visits": 1280,
+      "firmware_processes": 0,
+      "target_OS_calls": 0,
+      "count_scope": "Canonical corpus only; verifier replays not accumulated"
+    },
+    {
+      "artifact": "triggers/run9/execution-results.json",
+      "helper_calls": 13,
+      "original_instruction_visits": 1515,
+      "primitive_callbacks": 142,
+      "boundary_callbacks": 0,
+      "code_hook_visits": 1657,
+      "firmware_processes": 0,
+      "target_OS_calls": 0,
+      "count_scope": "Five original normalizer calls with explicit parser primitives, eight comparator handoffs; canonical only, replays not accumulated"
+    },
+    {
+      "artifact": "protocol/run9/leaf-results.json",
+      "helper_calls": 4,
+      "original_instruction_visits": 144,
+      "primitive_callbacks": 24,
+      "boundary_callbacks": 4,
+      "code_hook_visits": 172,
+      "firmware_processes": 0,
+      "target_OS_calls": 0,
+      "count_scope": "Four prepared-object selected suffix helpers; canonical only, replays not accumulated"
+    },
+    {
+      "artifact": "protocol/run10/builder-results.json",
+      "helper_calls": 2,
+      "original_instruction_visits": 7480,
+      "primitive_callbacks": 838,
+      "linker_redirect_callbacks": 10,
+      "boundary_callbacks": 2,
+      "code_hook_visits": 8330,
+      "firmware_processes": 0,
+      "target_OS_calls": 0,
+      "count_scope": "Two top-level original normal builder/parser calls with ordinary C primitives and original-definition redirects; canonical only, replays not accumulated"
+    }
+  ],
+  "firmware_processes": 0,
+  "target_OS_calls": 0,
+  "scripts": [
+    {
+      "script": "functional/run10/collect_evidence.py",
+      "passed": true,
+      "output": "PASS 18outputs+manifest/10spans/32words/2inputs/4lookup+4handoffhostcases; originalexecution0"
+    },
+    {
+      "script": "triggers/run10/collect_selector_ownership.py",
+      "passed": true,
+      "output": "{\n  \"outputs\": 11,\n  \"spans\": 5,\n  \"word_assertions\": 13,\n  \"inputs\": 6,\n  \"reset_write_ranges\": 114,\n  \"original_execution\": 0,\n  \"hooks\": 0\n}"
+    },
+    {
+      "script": "protocol/run10/collect_evidence.py",
+      "passed": true,
+      "output": "{\n  \"outputs\": 16,\n  \"inputs\": 8,\n  \"spans\": 11,\n  \"critical_words\": 7,\n  \"original_function_relocations\": 5,\n  \"native_calls_recounted\": 2,\n  \"native_area_counts\": {\n    \"original_instruction_visits\": 7480,\n    \"primitive_callbacks\": 838,\n    \"linker_redirect_callbacks\": 10,\n    \"exit_boundaries\": 2,\n    \"code_hook_steps\": 8330\n  },\n  \"collector_original_execution\": 0\n}"
+    },
+    {
+      "script": "protocol/run10/emulate_normal_builder.py",
+      "passed": true,
+      "output": "{\n  \"calls\": 2,\n  \"code_hook_steps\": 8330,\n  \"exit_boundaries\": 2,\n  \"linker_redirect_callbacks\": 10,\n  \"original_instruction_visits\": 7480,\n  \"primitive_callbacks\": 838\n}"
+    },
+    {
+      "script": "coso/run10/collect_lighting.py",
+      "passed": true,
+      "output": "{\n  \"outputs\": 24,\n  \"spans\": 17,\n  \"words\": 27,\n  \"inputs\": 6,\n  \"host_command_cases\": 2,\n  \"host_feedback_cases\": 2,\n  \"original_execution\": 0,\n  \"hooks\": 0\n}"
+    }
+  ],
+  "published_exports": 10,
+  "local_links": 231,
+  "preserved_prior_artifacts": 933,
+  "reviewed_prior_document_snapshots": 66,
+  "document_pins": [
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24.md",
+      "sha256": "5b2b66f4c47dcc82fe94ac1cb8bdfe0234a8ea13ea0718c90bc001a17888034c"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-state-and-routing.md",
+      "sha256": "f95459fb8727c41b38a5a4f02536778c745455574ffdf3c9b5f60f974e62eb4c"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/README.md",
+      "sha256": "99e22fdff50c29d4ebb58b61528a4f496494636e32910e4742236a445f6eb90f"
+    },
+    {
+      "path": "project/review/firmware-analysis/README.md",
+      "sha256": "e41ed4496df13c9cb007bd505c1628ee5b5b03c656e3b5647063ae6039d780c1"
+    },
+    {
+      "path": "project/review/firmware-analysis/mh202-1.0.24/README.md",
+      "sha256": "fba793e7cf35acdc166e513950f33073c72fa34b1aab2abad74cdecfc1c5e13e"
+    },
+    {
+      "path": "functional/who-17-scenario-management/README.md",
+      "sha256": "347fc0b8759a4f4e49e3823bf4f2879fb22c9907b10799ebead433bbe67da95c"
+    },
+    {
+      "path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    {
+      "path": "devices/work-queue.yaml",
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    }
+  ],
+  "repository_checks": [
+    {
+      "name": "ESG",
+      "exit_code": 0,
+      "output": "STATS human_pages=382 support_pages=124 objective_failures=0 review_candidates=6867"
+    },
+    {
+      "name": "ECV",
+      "exit_code": 0,
+      "output": "STATS human_pages=382 objective_failures=0 review_candidates=14"
+    },
+    {
+      "name": "diff",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "protected_F454_dossiers": [
+    {
+      "dossier": "2026-10-29",
+      "index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df",
+      "files_verified": 1917
+    },
+    {
+      "dossier": "2026-10-30-targeted",
+      "index_sha256": "ddb83866292f70631b968b91f07e08fbc79415b5e1762cf3699f8e326eacff79",
+      "files_verified": 107
+    },
+    {
+      "dossier": "2026-10-30-targeted-2",
+      "index_sha256": "2dc3f9e3541478eff304d1d9bb368d02504c39cc3d5d8d3aec7ca96650032d82",
+      "files_verified": 130
+    },
+    {
+      "dossier": "2026-10-30-final-pass",
+      "index_sha256": "bf27345d8ce8d1e4e9277ad9346c62fcfde1f0b33bb20783ae5e66963ad100f2",
+      "files_verified": 83
+    }
+  ],
+  "sources_changed": false,
+  "branch": "docs/static-firmware-analysis-findings",
+  "commits_or_pushes": false,
+  "prior_corpus_validation": "Frozen inherited hashes and prior saved validation, not rerun by run10 final validator; new selected builder corpus replayed",
+  "overnight_status": "ACTIVE, final-only31October07:15Paris, cutoff08:00; delete only after final saved"
+}

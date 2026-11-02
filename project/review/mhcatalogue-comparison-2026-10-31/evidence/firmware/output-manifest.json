@@ -1,0 +1,56 @@
+{
+  "counts": {
+    "endpoint_relations": 14,
+    "firmware_only_builds": 7,
+    "firmware_only_definitions": 8,
+    "frozen_reference_files": 4,
+    "input_databases": 2,
+    "original_execution": 0,
+    "shared_firmware": 114,
+    "shared_owner_relation_types": 5,
+    "shared_referenced_items": 104,
+    "tables_inspected": 16
+  },
+  "generator": {
+    "path": "collect_firmware_v1.py",
+    "sha256": "a50b4ed85b6c5faf3ea7751bcdd83e62faabd5fb910a562f51d1c0081c136d9b"
+  },
+  "outputs": {
+    "canonical-products.json": {
+      "bytes": 24209,
+      "sha256": "6dce86be0c4887ea851bac7d8b05cbe968c101e6ecc21ec368f45a0b464d9a1c"
+    },
+    "firmware-contexts.json": {
+      "bytes": 141837,
+      "sha256": "97216f491ddff5cfa073fed1d94b33493a4d66989bcc3ef9cc022ad1868c74e4"
+    },
+    "input-manifest.json": {
+      "bytes": 1733,
+      "sha256": "2de8b19ed1f1d72e928d052cf350cd77a65a5476fd4d7f45b51f83b8d86d5d0e"
+    },
+    "relationship-audit.json": {
+      "bytes": 7138,
+      "sha256": "cd0dac132d0c46cb22e23efc178570de5b8ff95ccf791dd0bd91b6280bb445ef"
+    },
+    "resources-and-associations.json": {
+      "bytes": 96733,
+      "sha256": "26452f0f16b05839880341230ee5bdaefaf300b824bcef6114aa1f59179b8109"
+    },
+    "schema-and-queries.json": {
+      "bytes": 53792,
+      "sha256": "b52c8f3d12493638418278caa5225f42a8833c7bc35f16f3124177e1ddc773a5"
+    },
+    "shared-firmware-graph.json": {
+      "bytes": 33745,
+      "sha256": "16ec766ca44f189f0d8bb6cfa7295ed493383eda65eb133a59993ed13c75a843"
+    },
+    "table-comparison.json": {
+      "bytes": 88723,
+      "sha256": "5071e65248a86b65830996e9002a947616a1e15e9bf4e58b368e90e5efb2beee"
+    }
+  },
+  "report": {
+    "path": "REPORT.md",
+    "sha256": "d70cd72edbf7460ac94907fd8a0116c889c48e4c1d7a223884760f869eeaa2bc"
+  }
+}

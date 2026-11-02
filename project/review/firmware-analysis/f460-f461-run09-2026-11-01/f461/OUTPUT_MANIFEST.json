@@ -1,0 +1,42 @@
+{
+  "collector_sha256": "13dd29ca6003daa0a58a9e88ae4db173a6aba4253fb97ebfa316e4cfcd51663a",
+  "outputs": {
+    "INPUTS.json": {
+      "sha256": "463ca0ce364349db286515cf54dc0d3632bc9f8220001462c19b193ffc0c6774",
+      "size": 866
+    },
+    "SOURCE.json": {
+      "sha256": "463f39c8a8e456da3c3f53c77b506fc2a31e9808a5c860dafef5cd3dab11a165",
+      "size": 8635
+    },
+    "spans/cache-prefix-and-return.txt": {
+      "sha256": "fbd02b611cd5fed61717d6080da466e864475ce3b068f932354d6b66652afb09",
+      "size": 1475
+    },
+    "spans/classification-prefix-and-cache-store.txt": {
+      "sha256": "71cce112528b529d5f41e508ce7edae98904881fab86649084602cd3b2a51ba7",
+      "size": 2250
+    },
+    "spans/cpuinfo-read-and-marker-gate.txt": {
+      "sha256": "f591e8da58e05f9a6639633284c8d22bb5656262bc68ac27a76b248d9049d4ce",
+      "size": 1707
+    },
+    "spans/device-tree-fallback-only.txt": {
+      "sha256": "44ef1d4ddfbd97dd3c3b5f41b77657a33a70c35ce417c4a68ebbf10b60356c7f",
+      "size": 914
+    },
+    "spans/fallback-open-failure-bridge.txt": {
+      "sha256": "efb48fa8ba0d404aee2f08724cb4ef6c061f0010e58d9b4d0aab69971604d45c",
+      "size": 600
+    },
+    "spans/pure-getter-call-only.txt": {
+      "sha256": "ea2658446657c13b3cddfb24614ab94644552215a3ef906114376a38e8f6b4e1",
+      "size": 745
+    },
+    "spans/selected-label-path.txt": {
+      "sha256": "164d19e8f1441019b14d5a8aaf621921d07e8c78e2a1d7ed0321743f4eaf27cd",
+      "size": 6733
+    }
+  },
+  "report_sha256": "f8ee2fabea6b81b234fef657fca5314a206f2a785c2a0d312eb6597ae3774d3b"
+}

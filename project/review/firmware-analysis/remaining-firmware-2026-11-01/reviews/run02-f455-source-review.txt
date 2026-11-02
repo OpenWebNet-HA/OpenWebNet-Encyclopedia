@@ -1,0 +1,48 @@
+# F455 night02 independent retained-format and candidate-scope review
+
+**PASS. No correction requested.** The packet adds exact container/source integrity and a finite vector-shaped byte-arithmetic candidate. It explicitly leaves CPU, actual endian mode, ISA/ABI, true base/load map, complete vector extent and entry behavior **unproved**. The review did not assign a processor or force a disassembler. No image/firmware/provider/native/helper/target code, OS/service/device/network/bus action, model/fixture, SQL, key trial or decryption was executed. Original/candidate/author files remained unchanged.
+
+## Container/source identities and packaging labels
+
+Read-only `collect_format_v1.py --check` reproduces **five outputs / seven exact first copies / nine input pins**. Independently hashing the original180196-byte archive,301016-byte extracted payload and453-byte XML reproduces their saved identities. Independent ZIP central-directory inspection confirms exactly two encrypted entries and declared sizes matching the extracted originals. Fresh CRC32 values d801438a(payload) and4b488fc1(XML) match ZIP metadata; no encrypted member was opened or decrypted by this packet/review. Integrity is not cryptographic authenticity or a trusted/accepted update chain.
+
+The XML declarations independently agree: Basic Gateway/version1.1.2, object-model label5.0.8, namedF455_1_1_2.bin and update modebootloader. These are packaging/source labels, not a recovered CPU, loader implementation, target address map, installed version, flash capacity or hardware identity. The already extracted payload's provenance is retained, not replaced with synthetic bytes or a fresh password route.
+
+## Independent finite-byte checks
+
+I independently interpreted the first384 original bytes as96 little-endian words solely for this finite comparison, checked every recorded word/index, and confirmed:
+
+- First word0x20004178 has eight-byte divisibility; second word0x080024e9 is odd. The first word is not certified as an actual stack value or SRAM address.
+- The95 words after word0 contain88 nonzero odd values and seven zeros at indices7/8/9/10/11/13/14. This window is not an established complete vector table, exception assignment, interrupt count or target byte-order proof.
+- Under the explicitly **hypothesized** B=0x08000000, clearing each selected nonzero value's low bit produces an in-file arithmetic offset. No XML/header/source loader supplies B as an actual load address.
+- The second word's arithmetic offset is0x24e8. The exact16 original bytes there match the retained hex and their final two little-endian words0x08000c41/0x080024f9. Their further offsets are only same-hypothesis arithmetic. Neither those bytes nor their values were decoded as instructions, a reset routine, call chain or executed entry.
+- Independently recomputed word-aligned offset sets for0xe000ed08/0xe000ed0c/0xe000e010 match the saved arrays. These are raw numeric coincidences/context, not proved register-access instructions, MMIO use, CPU/peripheral identity or a hardware result.
+
+The arithmetic and sample agree without importing an ARM ABI or forcing original control flow. Offset0's four tested signature results are correctly limited to ELF/ZIP/gzip/SQLite at that one offset; no whole-file compression/code/database/structured-data absence is asserted.
+
+## Primary documentary context and interpretation boundary
+
+The retained official Arm PDF is independently byte-pinned at962520 bytes/SHA25609fdd7deebbb2d3df401838d9d199397cc2f6f43a3683b1d3a2d768541795bda. I read its section2.3.4, printed2-18/PDF30, using host text extraction. It supplies a generic example of initial-stack/reset-vector structure and low-bit convention. The context note's14 quoted words and locator agree with that page; no new network request was made in this review.
+
+This source is a **Cortex-M0+ guide, not F455 target provenance**. Its reserved-slot/exception arrangement is not claimed to be a complete match for the F455 finite prefix and must not be transferred. The report carefully labels only a vector-shaped M-profile/Thumb-compatible **format candidate**, explicitly rejecting a proved ARM/Cortex-M0+/STM32/manufacturer/part/base/endianness/ABI assignment. It does not use a forced disassembler's acceptance as evidence. An actual map/debug/linker/loader source or authoritative product target metadata remains necessary before assigning architecture or following code. This limited documentary analogy does not recover such metadata.
+
+## Preservation and applicability
+
+All nine input hashes/sizes and all seven first-copy members independently match their current canonical bytes. The first index excludes itself and is constructed before writing, and the separate public PDF remains a pinned input rather than an invented original firmware artifact. Source/report/collector/context are frozen with no canonical failure or generated overwrite claimed. No earlier F450/MHS/MH202/F454 instruction, provider experiment, class layout or runtime ledger is transferred. Parent database work keeps its own scope; no database is recovered, constructed or uploaded.
+
+Original/native/target execution additions remain0. Whole-product support, physical capability, runtime loading, update acceptance, security/trust policy and active installed configuration are outside this selected review. Closed receiving/transport/authentication/session/framing/MQTT/libjel and equivalent implementations remain opaque.
+
+## Exact reviewed frozen identities
+
+| Member | Bytes | SHA-256 |
+|---|---:|---|
+| `work/f455-firmware/1.1.2/research/2026-11-01-night02-format/REPORT.md` | 5859 | `f955678a426ff1f4602fc4d481cb7b1b79f23d619c9d3f1cbf5b3a2e0b835a87` |
+| `work/f455-firmware/1.1.2/research/2026-11-01-night02-format/collect_format_v1.py` | 13710 | `4f8829acda5536e216240f10889d03c496b340ff899ee3593801a53c661ddc76` |
+| `work/f455-firmware/1.1.2/research/2026-11-01-night02-format/OUTPUT_MANIFEST.json` | 728 | `7e6460abbd1fd1664542b743e4f28f640e1d837f0383b5d8eaef177c5718ab2b` |
+| `work/f455-firmware/1.1.2/research/2026-11-01-night02-format/INPUTS.json` | 1747 | `e1df05104658f4a5985f2ae98967feb1b02aff1e802030435aba16ebe20e26fd` |
+| `work/f455-firmware/1.1.2/research/2026-11-01-night02-format/PACKAGE_FORMAT.json` | 1075 | `d4b63281cc9396b669c20e0a408f385a2da3d5f72788a6398a11f0a9a8017622` |
+| `work/f455-firmware/1.1.2/research/2026-11-01-night02-format/CANDIDATE_PREFIX.json` | 28848 | `83d8185db63b092241a8a85fcb336cb23c841a295d4009beb5411fc0f11530a5` |
+| `work/f455-firmware/1.1.2/research/2026-11-01-night02-format/ARM_CONTEXT.json` | 1322 | `480bac5da2b3838921c83b8c4a202db3f44fc98681480a7c6c51ae9de3cfb528` |
+| `work/f455-firmware/1.1.2/research/2026-11-01-night02-format/first-candidate/INDEX.json` | 1235 | `d5fc52ee1e8bef7fb39a443a75a0de0c5d6e55282fab3978c031894937fa0d28` |
+
+Completed 2026-11-01T20:21:50.449785+00:00. First review bytes are preserved immediately with a precomputed non-circular index.

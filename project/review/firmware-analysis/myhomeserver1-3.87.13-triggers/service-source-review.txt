@@ -1,0 +1,33 @@
+# Independent TIME service and condition-caller source review
+
+PASS for service/REPORT.md, no correction requested. This independent source review covers the selected registration, map initialization, deadline-qualified call and condition-worker control edges. No original instructions, clock/tree/parser/provider, thread, wait, callback, scene or physical behavior were executed. No semantic host scene/clock fixture was supplied. Author files remain unchanged.
+
+Reproduced collect_service_v1.py --check: 21 outputs and 13 source spans. Independently mapped original scheduler and libstdc++ ELF32 PT_LOAD ranges and verified all 13 raw span hashes, seven PIC joins, five original relocation records, six exidx starts, two init_array pointers, both sets of six literal weekday pairs and the 23 indexed first copies (outputs, collector, API context). The separate actual report copy also matches. Independently checked the 1,000,000,000 literal and paired constants 30,000,000,000 / 86,400,000,000,000 against the retained original instruction arithmetic, not elapsed measurements.
+
+Key source/control conclusions:
+
+- Registration b9814 uses service mutex+20, copies the same two-word handle on the available-capacity branch, performs selected reference bookkeeping, advances end by8, unlocks and requests CV+48 notification. Full-capacity bbd8c and error/lifetime behavior remain separate. Constructor b94f0 and state-vtable slot161e9c -> bbd84 -> bb5ec support a conditional service-worker route, not an observed thread or natural constructor flag.
+- Init_array14/15 point to146b1/147a1 and separate map targets1674f8/167510. Original stack zero pair plus literal rows produce (0,0),(1,6),(2,5),(3,4),(4,3),(5,2),(6,1). Builder b891c requests24-byte nodes, stores key/value at16/20 and delegates insertion/rebalancing; no actual tree or invariants were manufactured. Consumer localtime+24 and returned value+20/low-five-bit shift are distinct source joins. Monday-through-Sunday character orientation is conditional on ordinary successful Linux ARM32 tm_wday ABI and the independently verified seven-bit serializer. It is not inferred from the raw string alone or treated as target-header/runtime proof.
+- Preparation b8be0 requests time/localtime, parses with the exact %H:%M string through a delegate, selects hour/minute and seconds0, then requests mktime. Signed result times1e9 is compared to a fresh clock value; only an earlier pair receives one fixed86400e9 addition. This selected preparation does not choose the next enabled weekday. Valid parsing, DST/locale/timezone/API results and actual current state remain premises.
+- The actual packaged system_clock::now provider959a0 calls clock_gettime with numeric clock0 and computes signed seconds*1e9 plus fractional word without checking its return. Nanosecond/real-time interpretation is ordinary API context with effective binding/success premises, not measured firmware timing or complete provider/syscall closure.
+- Worker selected first live entry obtains D through b8bcc, divides by1e9 for timedwait argument words and ignores the wait result on the selected continuation. The first post-wait sample N1 must be >=D. The second N2 is compared against a reread deadline, then source branches compute N2-D or D-N2. Both reach the signed paired threshold comparison whose value is30e9; equality passes. Under stable object/deadline and nonoverflow premises this is abs(N2-D)<=30e9. This does not prove queue ordering, catch-up, a delivered deadline or clock monotonicity.
+- Original virtual call bb906 uses primary slot0, which for the selected TimeTriggerRunner is b8a08. After a normal return it rereads that object's deadline and requests setter b8bd8 with fixed addition86400e9. This follows normal return even when the fire helper's own enabled/day gate suppresses its scene callback. It is not successful action or next-local-day proof.
+- Fire b8a08 gates own enabled+48, map/day mask+84 and callable manager+12, then invokes +16 using data+4. Captured wrapper a60a8 tailcalls a5db0. These actual addresses connect only under the selected handle/callback/provider/state premises, without proving activation or scene launch success.
+- Condition worker a6d18 uses scene range116/120, calls vtable+8 in an unrolled four-pointer loop and tail, and stops at the first zero result. Its normal failure path clears scene+145/+144 at a6e6a/a6e76; the all-nonzero or empty-range continuation reaches a6734 at a6f8c. Logging/cleanup and valid-range/objects remain normal-return premises; no invented predicate vector was run. The concrete TIME predicate's placement in this range remains an object/population condition, not a runtime observation.
+
+The report's boundaries retain queue rebuild/ordering/removal, expired handles, complete lifetime/unwind/concurrency, callback retention, installed inputs and state, clock/API failures and physical behavior. This is a conditional source chain rather than end-to-end execution. External API context is separately pinned; this review does not certify target headers or repeat network retrieval. Pre-generation exploratory errors are disclosed, not reconstructed as an independent historical replay.
+
+Reviewed SHA-256 pins relative to service/:
+
+| File | SHA-256 |
+| --- | --- |
+| REPORT.md | 570893c1ad74814836d268da94f09e95748b36f56dd44d37bf271d1a09188550 |
+| collect_service_v1.py | d4365df19efcb942b9b27db17cecfb8bdac8762281d321d4ce3b31c24ef8b89c |
+| OUTPUT_MANIFEST.v1.json | 1071c36c57b55966842b389e06fd81a2aba769002acca9ca341354bb25fdd843 |
+| PIC_RELOC_EXIDX.v1.json | 295fc8d8f2202d9b5ddf0f1668773ef21909ac60649c8551c0b36c2c2954397a |
+| WEEKDAY_MAPS.v1.json | 3897e95775ed8e417d677a48ef1f93d177c841b7547bd1407658757dec59f6bd |
+| SERVICE_LEDGER.v1.json | 1083818f6bb489b1f983ea16c5f69a83e7f0f0b358fa139a138446325d863930 |
+| API_CONTEXT.json | de3bb73555c16717a1623c55e90e7d3b9353482eedcf3d7af10eb312524c7626 |
+| first-candidate/SNAPSHOT.json | c9df32011a04f15aad7c7b38de6ad61e06a90ab3178c9f7dafded23a12b47820 |
+
+This new ASCII review is exclusively created and immediately copied with a precomputed non-self-referencing first-review index before its exact hash is announced. No old candidate or review was overwritten.

@@ -1,0 +1,46 @@
+# MH202 scenario lifecycle: declared panic configuration to firmware gate
+
+A newly recovered MyHOME Suite1902_1.0_LGG package supplies a concrete declarative producer for the firmware's previously identified panic configuration leaf. It does not supply an installed configuration or an executed full scenario. Suite3.5.38 resources and MH2021.0.24 are separate version scopes; compatibility, successful conversion, export/loading and original event admission remain conditional.
+
+All new original ARM/Windows/.NET/Tcl/PHP/JS/vendor execution and hook counts are0. Only host XML parsing, original-byte/binutils inspection and four finite declared-rule/equality ledgers run. There is no vendor conversion-engine, process, bus, transport/session/authentication/framing execution. Earlier completed dossiers and originals remain read-only.
+
+## Exact source and resource provenance
+
+The parent acquisition matches the registered MyHOME_Suite_030538.exe:599437936bytes/SHA256707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b. Static CookFS extraction verified selected page sizes and CRC32 values without evaluating installer or Tcl code. This report uses the recovered1902_1.0_LGG XML originals:
+
+| Installer member suffix | SHA256 | Selected source |
+|---|---|---|
+|xml/Steps/Step_1/BTParametersManager_Step1.xml|01ff0cd26d98961f33723c9469d3a48fe56504bd2f22c4164d13f0ee4e4ca98b|lines502..525|
+|xml/prj2conf.xml|02abbe97f44589a39e4d500dd9c8e6ab66ab95d2a8919ebe1368b461483a934c|lines374..381|
+
+The original normal-image `/home/bticino/bin/bt_taskmanager` remains SHA256ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e. The collector pins original source spans/file offsets and previously reviewed configuration/getter/gate/readiness reports. No F454 behavior or layout is imported.
+
+## Suite declares an enable-controlled copy
+
+Step1 parameterP50 binds `panicKey/enabling` under `configuratore/setup/sicurezza`, with default string0 and selectable0/1. P51 binds `panicKey/command`; its packaged default action OPEN text is `*15*00*01##`. These are resource declarations, not a captured button command or proof of a valid installed address. P52 is the hidden `panic` target with an empty default.
+
+`prj2conf.xml:374..381` declares one copy rule: only when `configuratore/setup/sicurezza/panicKey/enabling` equals string1, copy the value at `panicKey/command/action/open` to `configuratore/setup/sicurezza/panic`. Its `from` attributes are delete0/modevalue. This is an actual rule declaration; the vendor engine that interprets it is not executed or completely reconstructed.
+
+Skipping this one rule with enable0 does not, by itself, prove that the entire converter clears a previously populated panic leaf. Fresh-project hidden-target empty, stale-target retention and other conversion/template behavior are different premises. Four host ledgers illustrate only this declared copy operation and byte equality, not whole project-to-configuration behavior.
+
+## Same firmware leaf reaches an exact full-frame comparison
+
+Original taskmanager `0xb074..0xb0c0` supplies the previously reviewed GetConfigValue path `configuratore/setup/sicurezza/panic` and destination buffer0x1b528. Original `0xa36c..0xa394` compares the incoming object's full-frame string to that configured buffer with strcmp. Equality stores1 to command gate0x1b4c4, then `0xa398..0xa3c4` walks records and requests stop for nonzero control state through `0xd47c`.
+
+This joins a product configuration declaration to a concrete firmware consumer under unchanged-path/value/provider premises. It does not prove Suite exports that exact buffer, a process loads it, the default frame is accepted upstream or a physical CEN button invokes it. A supplied alternative spelling `*15*0*1##` is a different byte string; the host inequality is not evidence of a production false trigger because prior parsing/canonicalization/export behavior remains unexecuted.
+
+The same gate controls the separately selected ordinary event path; readiness/cursor state is separate. The collector retains the ordinary stop-own-body source interval as context, not as a newly executed lifecycle or universal action-suppression proof. Ordinary Stop, panic and RESTART remain distinct documented and code policies.
+
+## Power-cycle and restoration boundary
+
+The existing reviewed ELF metadata locates gate0x1b4c4 in NOBITS `.bss`0x196a0..0x1d9f4. Ordinary fresh-process loading therefore provides a zero-initialization premise. It is not an observed power-cycle reset. A separate working-mode4 path sets that same gate1; startup ordering, mode provider, initialization callbacks and installed configuration remain necessary to explain actual recovery.
+
+Earlier source shows saved-active restoration with the per-record RESTART flag, followed by a separate always-start pass after query readiness. This does not establish automatic rerun at EOF or after every stop, nor that panic equals ordinary Stop. The manual's power-removal/restoration statement remains documented product behavior; this static join does not claim a completed implementation proof of it.
+
+## Reproduction, confidence and next boundary
+
+Run `python3 -B work/mh202-firmware/research/2026-10-31-scenario-lifecycle/collect_panic_join_v1.py --check`. The exclusive generator immediately preserves the report/collector/first outputs and refuses overwrite. Check mode writes nothing and rereads original XML/code/pinned historical context. Seven exact instruction words and pool-address relations, four original spans and four host ledgers are retained.
+
+High confidence: exact packaged enable/default/target paths, single-copy rule declaration, original getter buffer/strcmp/gate-set/stop branch and the distinction between private configuration and a physical event. Conditional: Suite/runtime versions, conversion-engine semantics, configured values, parser/provider binding, startup modes and natural event/callback delivery.
+
+A genuine generated scenario remains needed to connect a documented Start→OnlyIf→delayed Action sequence without inventing source syntax. The packaged default/restoration4.xtz central directories do not contain such a scenario. Static references to `.spt` and `info.xml` in recovered ScenarioSuite assemblies identify a precise next generator source, not executed generation or recovered full grammar. This bounded pass narrows the panic producer/consumer relationship while retaining full scenario execution, power-cycle behavior and complete gate clearing as open questions.

@@ -1,0 +1,409 @@
+{
+  "PIC_joins": [
+    {
+      "ADD_PC_VA": "0x1547a",
+      "pool_VA": "0x154a8",
+      "target_VA": "0x1677b8",
+      "word": "0x15233a"
+    },
+    {
+      "ADD_PC_VA": "0xcd5e0",
+      "pool_VA": "0xcd6e0",
+      "target_VA": "0x1677b8",
+      "word": "0x9a1d4"
+    },
+    {
+      "ADD_PC_VA": "0xcd6b0",
+      "pool_VA": "0xcd6ec",
+      "target_VA": "0x1677b8",
+      "word": "0x9a104"
+    },
+    {
+      "ADD_PC_VA": "0xcd6f4",
+      "pool_VA": "0xcd71c",
+      "target_VA": "0x1677b8",
+      "word": "0x9a0c0"
+    },
+    {
+      "ADD_PC_VA": "0xcd73c",
+      "pool_VA": "0xcd838",
+      "target_VA": "0x1677b8",
+      "word": "0x9a078"
+    },
+    {
+      "ADD_PC_VA": "0xcd80c",
+      "pool_VA": "0xcd844",
+      "target_VA": "0x1677b8",
+      "word": "0x99fa8"
+    },
+    {
+      "ADD_PC_VA": "0xcd8b0",
+      "pool_VA": "0xcd974",
+      "target_VA": "0x162100",
+      "word": "0x9484c"
+    },
+    {
+      "ADD_PC_VA": "0xcd8fa",
+      "pool_VA": "0xcd978",
+      "target_VA": "0x162100",
+      "word": "0x94802"
+    }
+  ],
+  "Thumb_halfword_assertions": [
+    {
+      "VA": "0xcd862",
+      "file_bytes": "0571",
+      "halfwords": [
+        "0x7105"
+      ]
+    },
+    {
+      "VA": "0xcd864",
+      "file_bytes": "beb9",
+      "halfwords": [
+        "0xb9be"
+      ]
+    },
+    {
+      "VA": "0xcd872",
+      "file_bytes": "e368",
+      "halfwords": [
+        "0x68e3"
+      ]
+    },
+    {
+      "VA": "0xcd87a",
+      "file_bytes": "2371",
+      "halfwords": [
+        "0x7123"
+      ]
+    },
+    {
+      "VA": "0xcd5e8",
+      "file_bytes": "9f68",
+      "halfwords": [
+        "0x689f"
+      ]
+    },
+    {
+      "VA": "0xcd744",
+      "file_bytes": "df68",
+      "halfwords": [
+        "0x68df"
+      ]
+    },
+    {
+      "VA": "0xcd606",
+      "file_bytes": "a7fb0336",
+      "halfwords": [
+        "0xfba7",
+        "0x3603"
+      ]
+    },
+    {
+      "VA": "0xcd60a",
+      "file_bytes": "02fb0766",
+      "halfwords": [
+        "0xfb02",
+        "0x6607"
+      ]
+    },
+    {
+      "VA": "0xcd638",
+      "file_bytes": "0122",
+      "halfwords": [
+        "0x2201"
+      ]
+    },
+    {
+      "VA": "0xcd642",
+      "file_bytes": "43f752eb",
+      "halfwords": [
+        "0xf743",
+        "0xeb52"
+      ]
+    },
+    {
+      "VA": "0xcd676",
+      "file_bytes": "1a71",
+      "halfwords": [
+        "0x711a"
+      ]
+    },
+    {
+      "VA": "0xcd706",
+      "file_bytes": "84f84830",
+      "halfwords": [
+        "0xf884",
+        "0x3048"
+      ]
+    },
+    {
+      "VA": "0xcd550",
+      "file_bytes": "7047",
+      "halfwords": [
+        "0x4770"
+      ]
+    },
+    {
+      "VA": "0xcd97c",
+      "file_bytes": "0079",
+      "halfwords": [
+        "0x7900"
+      ]
+    },
+    {
+      "VA": "0xcd988",
+      "file_bytes": "8160",
+      "halfwords": [
+        "0x6081"
+      ]
+    },
+    {
+      "VA": "0xcdaf0",
+      "file_bytes": "c160",
+      "halfwords": [
+        "0x60c1"
+      ]
+    },
+    {
+      "VA": "0x1548e",
+      "file_bytes": "84f84830",
+      "halfwords": [
+        "0xf884",
+        "0x3048"
+      ]
+    },
+    {
+      "VA": "0xb7632",
+      "file_bytes": "10ee901b",
+      "halfwords": [
+        "0xee10",
+        "0x1b90"
+      ]
+    },
+    {
+      "VA": "0xb763c",
+      "file_bytes": "43f98f07",
+      "halfwords": [
+        "0xf943",
+        "0x78f"
+      ]
+    },
+    {
+      "VA": "0xb75ce",
+      "file_bytes": "40f98f07",
+      "halfwords": [
+        "0xf940",
+        "0x78f"
+      ]
+    }
+  ],
+  "initializer": {
+    "index": 28,
+    "init_array_VA": "0x15fb1c",
+    "stored_Thumb_pointer": "0x15475"
+  },
+  "primary_vtables": [
+    {
+      "RTTI_VA": "0x1650a4",
+      "RTTI_name": "12ActionRunner",
+      "RTTI_name_VA": "0x1360d0",
+      "address_point": "0x162130",
+      "header_VA": "0x162128",
+      "header_file_offset": "0x152128",
+      "name": "ActionRunner",
+      "primary_methods_Thumb": [
+        "0xcd849",
+        "0xcd6f1",
+        "0xcd551"
+      ],
+      "raw_header_sha256": "b29e0a83e9e4dbf23a03bccf6247cebebdaf327d1be606216aa8979ec28e5c29"
+    },
+    {
+      "RTTI_VA": "0x1648a0",
+      "RTTI_name": "17SleepActionRunner",
+      "RTTI_name_VA": "0x1342ec",
+      "address_point": "0x164d64",
+      "header_VA": "0x164d5c",
+      "header_file_offset": "0x154d5c",
+      "name": "SleepActionRunner",
+      "primary_methods_Thumb": [
+        "0xcd849",
+        "0xcd6f1",
+        "0xcd551"
+      ],
+      "raw_header_sha256": "09d99cca7b7d79759d7fcc871fd53f0a72aee791243f259ecb881a133ea26804"
+    }
+  ],
+  "selected_relocations": [
+    "00162130  00000017 R_ARM_RELATIVE",
+    "00162134  00000017 R_ARM_RELATIVE",
+    "00162138  00000017 R_ARM_RELATIVE",
+    "00164d64  00000017 R_ARM_RELATIVE",
+    "00164d68  00000017 R_ARM_RELATIVE",
+    "00164d6c  00000017 R_ARM_RELATIVE",
+    "00162110  00000017 R_ARM_RELATIVE",
+    "00162124  00000017 R_ARM_RELATIVE"
+  ],
+  "spans": [
+    {
+      "end_VA_exclusive": "0xcd896",
+      "file_offset": "0xcd848",
+      "name": "execute-entry-inline-branch",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "77df91911439b44550946bec7ffc09ff55214333094437036166193c0f48ca3c",
+      "start_VA": "0xcd848"
+    },
+    {
+      "end_VA_exclusive": "0xcd8e0",
+      "file_offset": "0xcd896",
+      "name": "execute-delay-thread-request",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "1c285e5e3ff5b8267d6f1c4ed3cb20d45405535709030e3606517a4a7afcbf5b",
+      "start_VA": "0xcd896"
+    },
+    {
+      "end_VA_exclusive": "0xcd936",
+      "file_offset": "0xcd8e0",
+      "name": "execute-duration-thread-request",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "e67a7d586d1ed722d41e811bfd23ab6a5b679df62ea9bd842d4f37b3dcacca7e",
+      "start_VA": "0xcd8e0"
+    },
+    {
+      "end_VA_exclusive": "0xcd620",
+      "file_offset": "0xcd5c4",
+      "name": "delay-worker-deadline",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "6b3e4b283c8accd976304588f78fbae0c80068b38ee3dd14f7d143fa040146e6",
+      "start_VA": "0xcd5c4"
+    },
+    {
+      "end_VA_exclusive": "0xcd6ca",
+      "file_offset": "0xcd620",
+      "name": "delay-worker-wait-and-callback",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "e9c05a448ea7354925612fad70f5318826cd350c7151f5dc90998d40793ed126",
+      "start_VA": "0xcd620"
+    },
+    {
+      "end_VA_exclusive": "0xcd77c",
+      "file_offset": "0xcd720",
+      "name": "duration-worker-deadline",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "9ea66e677ddbf7f8ba07012156b8c3e74987d87d5b3d2a607bad93dfafc6adb8",
+      "start_VA": "0xcd720"
+    },
+    {
+      "end_VA_exclusive": "0xcd826",
+      "file_offset": "0xcd77c",
+      "name": "duration-worker-wait-and-callback",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "752d1a3fe16bd832087259ea94fd0d0d8bd680c9880bd698ba15e08ddc61484d",
+      "start_VA": "0xcd77c"
+    },
+    {
+      "end_VA_exclusive": "0xcd71c",
+      "file_offset": "0xcd6f0",
+      "name": "shared-stop-notify",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "f00c30a40a4d94fe3ad8cb92feb4a23bf40fad2e85a2e6b57123b113be6ac98a",
+      "start_VA": "0xcd6f0"
+    },
+    {
+      "end_VA_exclusive": "0xcd554",
+      "file_offset": "0xcd550",
+      "name": "primary-third-slot-noop",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "0c302d771ae76f031fe8c4a87c6f54f6b1e93bbf4552d26a8ea553f2a89c0530",
+      "start_VA": "0xcd550"
+    },
+    {
+      "end_VA_exclusive": "0xcd98c",
+      "file_offset": "0xcd97c",
+      "name": "completion-and-first-wait-accessors",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "ff882c7810b57906de35970285dea05baab685b18f9f15218cfe5465177d8b8a",
+      "start_VA": "0xcd97c"
+    },
+    {
+      "end_VA_exclusive": "0xcdaf4",
+      "file_offset": "0xcdaec",
+      "name": "second-wait-accessors",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "123856ef8537964018f60e2f387b50c4a94b54615f5f58d6429c0337914df8d3",
+      "start_VA": "0xcdaec"
+    },
+    {
+      "end_VA_exclusive": "0x154a8",
+      "file_offset": "0x15474",
+      "name": "shared-domain-initializer",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "169e868f49dcfa9fd589857ccb8c7a7db050a7b77fa7c60fc04f0814abf4b844",
+      "start_VA": "0x15474"
+    },
+    {
+      "end_VA_exclusive": "0xb44de",
+      "file_offset": "0xb444c",
+      "name": "base-operational-move",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "7264b5a58c380d521d0236dba68a1f31127e9188b1956d7f06b3ab244cf4a6b8",
+      "start_VA": "0xb444c"
+    },
+    {
+      "end_VA_exclusive": "0xb75d2",
+      "file_offset": "0xb75a6",
+      "name": "sleep-operational-zero-prefix",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "1e479d6d16aa0a9463e8bcc92d208da2cecd2ac7f574a2f82bc435274c939903",
+      "start_VA": "0xb75a6"
+    },
+    {
+      "end_VA_exclusive": "0xb7656",
+      "file_offset": "0xb7626",
+      "name": "sleep-metadata-and-first-wait-store",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "29406dc657e070c587a1fa1812ac2a3c3ae52e6c9422166225771d4d5ac95384",
+      "start_VA": "0xb7626"
+    },
+    {
+      "end_VA_exclusive": "0xa6914",
+      "file_offset": "0xa6906",
+      "name": "selected-completion-caller",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "69046601400422330a5e4398cece5b6b38013f6375f9dae72d77e3ffbec99b9e",
+      "start_VA": "0xa6906"
+    },
+    {
+      "end_VA_exclusive": "0x959f6",
+      "file_offset": "0x959cc",
+      "name": "candidate-steady-clock-now",
+      "path": "/usr/lib/libstdc++.so.6.0.29",
+      "sha256": "d828041828298e6304327b9a70bce29f262ddbd5e3e120caea6aaa30285d2ca5",
+      "start_VA": "0x959cc"
+    }
+  ],
+  "thread_worker_slots": [
+    {
+      "address_point": "0x162108",
+      "stored_Thumb_pointer": "0xcd5c5",
+      "worker_slot": "0x162110"
+    },
+    {
+      "address_point": "0x16211c",
+      "stored_Thumb_pointer": "0xcd721",
+      "worker_slot": "0x162124"
+    }
+  ],
+  "wait_factor": {
+    "divisor_pools": [
+      "0xcd6d0",
+      "0xcd828"
+    ],
+    "divisor_uint64": 1000000000,
+    "high_word": 13,
+    "low_word": "0xf8475800",
+    "unsigned64_factor": 60000000000
+  }
+}

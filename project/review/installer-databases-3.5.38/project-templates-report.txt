@@ -1,0 +1,55 @@
+# MyHOME Suite project and plant database templates
+
+Two newly registered original installer members establish previously missing project/plant persistence structures. MHPrj.db contains19tables and22declared foreign-key rows; PTDB.db contains8tables including sqlite_sequence and6declared foreign-key rows. Across both,22tables are empty and38reference/seed rows remain. They are manufacturer templates, not recovered user projects or evidence of installed Devices.
+
+All analysis is read-only host SQLite/schema/row inspection. Original installer, CLR, firmware, target OS, gateway/bus and physical execution remain0. Credential-bearing defaults and populated plant GUID/network/contact/credential values are withheld; raw CREATE SQL is SHA-pinned rather than exported. No authentication/session/framing implementation is investigated.
+
+## Exact canonical source identities
+
+| Source | Original installer member | Bytes / SHA256 |
+| --- | --- | --- |
+| MHPrj.db | default/resTargetDir2/db/MHPrj.db |50176 /74fc3762e47718da40f85562225fb676932349e39bd797ff94a073b8db8bd39a|
+| PTDB.db | default/resTargetDir2/db/PTDB.db |17408 /606f0fef30b8db6c5a2998ae5ef88d7193488479ad97f7aea89c8f274c41ae64|
+
+Canonical artifact IDs are myhome-suite-3.5.38-mhprj and myhome-suite-3.5.38-ptdb. Both are private content-addressed openwebnet-data records in manifest-only main commit974eced66cf40fdc5b5dc3417357244db710d848. Exact original installer/page/member verification and13R2readback receipts are preserved by the separate completed conservation dossier. Suite3.5.38, database metadata and product Firmware remain different version namespaces.
+
+## Complete schema and declared local relationships
+
+The collector inventories every table, column/type/nullability/default/PK position, index and declared FK; computes all-table logical-row hashes/counts; and checks quick_check and foreign_key_check on both exact files. It records142SQL/PRAGMA queries. Neither original application FK-enforcement settings nor actual insert/delete/assignment behavior is executed. Successful FK checks describe the shipped small/empty dataset, not a populated project or comprehensive application constraint audit.
+
+MHPrj's positive declared graph includes:
+
+| Child/table | Declared referenced structure | Source role/boundary |
+| --- | --- | --- |
+| RT_SYSTEM | RT_BUS | Local system/bus relation, not automatic WHO identity |
+| RT_DEVICE | RT_SYSTEM and RT_COLLECTION_BOX | Separate project Device record and grouping |
+| RT_AS_KO_DEVICE | RT_DEVICE and RT_OBJECT | Explicit association, composite key(device,object); no universal one-Object-per-Device inference |
+| RT_OBJECT | RT_COLLECTION_OBJECTS and RT_COLLECTION_ROOM | Separate project Object row, key_object text and slot integer |
+| RT_DEVICE_CONF / RT_OBJECT_CONF | Respective Device/Object rows | Distinct configuration records |
+| RT_DEVICE_STATE / RT_OBJECT_STATE | Respective records plus RT_AS_AREA_TYPE | Distinct state records and local area association |
+| RT_AS_AREA_DEVICE_CODE | RT_DEVICE and RT_AS_AREA_TYPE | Area/device/code tuple, without a populated example |
+| RT_AS_BUS_INTERFACE | RT_OBJECT | Separate id_bus_out column is not itself a declared RT_BUS FK in this table |
+
+Both CONF tables have two-part primary keys combining a named configuration key with the owning runtime-row ID. The Object table separately stores id_rt_object, key_object and slot. The schema therefore positively distinguishes these storage concepts. Empty instance tables leave catalogue/protocol joins and actual persistence code unproved; matching column names or numeric values are not sufficient.
+
+PTDB declares EN_AREA.area_type_id→EN_AREA_TYPE and area_type_category_id→EN_AREA_TYPE_CATEGORY. AS_AREA_HOST references both EN_AREA and EN_HOST and has a composite(area_id,host_id,progressive) key; the meaning/order policy of progressive is not executed. AS_AREA_RELATIONSHIP has separate parent/child FKs to EN_AREA. These are local declared relations, without proof of a complete tree-validation or multi-host application policy.
+
+No cross-file FK or populated bridge connects PTDB to MHPrj or either to ScenarioSuite's79table schema. In particular, MHPrj RT_DEVICE.id_device is INT while PTDB EN_HOST.id_device is varchar(50); neither name proves they refer to the same identifier. MHPrj's local id_rt_area FK target is RT_AS_AREA_TYPE, so absence of a literal RT_AREA table is not a missing-target conclusion.
+
+## Seed and version evidence
+
+MHPrj has only5DB_INFO rows and1RT_COLLECTION_ROOM row;17other tables, including RT_PROJECT, RT_DEVICE, RT_OBJECT, all configuration/state/association tables and buses/systems, are empty. DB_INFO has V7/R0 and DATA_V4/DATA_R4/DATA_B0. These literal metadata values are not a Suite or firmware release claim, and the source does not establish their operational interpretation. DB_INFO's PK is(param,value), not a declaration that param alone must be unique.
+
+The room row has id_room1, room_type19, room_floor9, fixed_row1 and NULLid_rt_area_type. These latter integer enums retain unknown meaning. RT_OBJECT.id_room has default1 and a declared room FK with ON DELETE SET DEFAULT; that source declaration directly relates the fallback identifier to the supplied room seed under ordinary SQLite/provider premises. No delete/default assignment is executed, and the user-description text is not exported.
+
+PTDB has8area-type rows,6category rows and18EN_PLANT_INFO rows. EN_AREA, EN_HOST, both association tables and sqlite_sequence are empty. Its retained area types are1District,2Building,3Raiser,4Floor,5Indoor/Apartment,6Common Areas,7Technical Areas,8Hotel Room. Raiser is the exact source spelling. Categories1..6 are Single room, Twin room, Double room, Triple room, Quadruple room and Suite. These are application spatial/category definitions, not WHO values or ScenarioSuite Start/OnlyIf/Action area IDs.
+
+The plant db_ver literal is2.0. Other populated manufacturer defaults are withheld. The exact key containing leading space and trailing CRLF, " state_province\r\n", is preserved as data; this does not establish whether the application trims it or has a defect. Contact/project instance fields are empty in this template. No source default becomes an active network endpoint or current credential claim.
+
+## Reproduction, confidence and history
+
+Run python3 -B work/installer-database-analysis/2026-10-31/project-templates/collect_project_templates_v2.py --check. It reproduces7evidence payloads from exact sources, verifies the frozen manifest and never overwrites existing generated outputs. The complete schema/declared relationships and finite seed/reference rows are high-confidence implementation data. Application use, enforcement, catalogue/protocol identity binding, user project contents and runtime/physical behavior remain unresolved.
+
+Before any generated output, collectorv1 incorrectly assumed there were zero declared FKs and stopped at its assertion. Its exact source remains unchanged; PREOUTPUT_HISTORY.json discloses this failed assumption. New collectorv2 inventories/asserts the actual22+6FK rows and distinguishes declared local relations from unproved cross-file joins. No prior database finding was promoted from that failed preflight. Exploratory metadata preceded credential-default filtering; final saved evidence deliberately withholds those values.
+
+The next discriminating evidence is the original project loader/saver and key-resolution consumer, or a sanitized genuine configured project. These templates clarify available storage structure without manufacturing populated relationships or extending gateway support claims.

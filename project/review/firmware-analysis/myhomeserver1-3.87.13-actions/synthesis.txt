@@ -1,0 +1,9 @@
+# Selected compiled scene-action results
+
+Three independently reviewed static areas now connect JSON-facing action data to actual compiled callbacks and common dispatch. SLEEP captures seconds by value and requests a blocking relative nanosleep. Its selected constructor binds delay to operational+8, retains duration at metadata+88 and leaves operational+12 zero. SCENARIO captures sceneId plus supplied context, checks a local ordered registry and conditionally reaches the target scene's ordinary enabled/active launch entry.
+
+The shared runner separates per-action completion+4 from a shared stop flag used by the two wait workers. Its selected wait arithmetic uses60,000,000,000 ticks per operational unit; original packaged clock conversion plus an ordinary successful Linux API premise gives60 seconds per unit. The delay branch does not automatically chain into the second-wait worker on its inspected local path. Completion is callback return bookkeeping, not physical success.
+
+Original instruction/vendor/target API/scene/SQL/thread/timer/service/network/bus/physical execution remains0 in this batch. The common author supplies15 finite host branch/arithmetic examples; they do not supply a scene, runtime tree, clock/API success or concurrency. Earlier original execution corpora are unchanged.
+
+Source and version histories are retained exactly: a SCENARIO report v2 corrects CBNZ branch-vs-fallthrough wording without changing source/results, and the root SLEEP pre-generation byte audit retains its actual draft before one transcription fix. Current source reviews pass; documentary and mechanical completion are separately recorded. Missing configured scenes/extras, active registry/provider state, later duration setters/stop resets, full lifecycle/concurrency, actual timing and physical effects remain open.

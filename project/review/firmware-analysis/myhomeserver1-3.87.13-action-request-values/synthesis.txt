@@ -1,0 +1,5 @@
+# Selected action request values
+
+Actual descriptor d20c0 writes2.0/light.setStatus, with two imported UUID generation/conversion request pairs and later outer-ID assignment. Actual caller copies connect captured targetID and signed>0 speed into the distinct params recordSP480, then d163c requests id/speed assignments. Outer UUID-derived id differs from params capturedid. This narrows earlier opaque local helper contracts without opening output5dda0/transport bodies.
+
+Normal valid object/branch/import/string/UUID/JSON/assignment returns remain premises; no full payload, actual generated UUID/JSON, service support, delivery, restoration or physical meaning. Newexecution/models/fixtures/replays0; old MHS1/8/340/0C/12redirect/8EXIT/0stops/360hooks+4setup preserved. FullJSON/scheduler/targetruntime/physical0. User hard stop11:00UTC/noonParis; stop newsource10:15UTC.

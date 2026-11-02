@@ -1,0 +1,190 @@
+{
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/BOUNDED_CALL_LOCATOR.json",
+      "published": "removal/BOUNDED_CALL_LOCATOR.json",
+      "sha256": "7add0bea9e7ae61b94d03131612749343051785bf5555f6de675bdfab3bf0d64",
+      "bytes": 364
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/BYTE_GUARDS.json",
+      "published": "removal/BYTE_GUARDS.json",
+      "sha256": "1b80591111d9179a5ac58671e139ab08da879580ffced1d1c01b04b3ac45d481",
+      "bytes": 811
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/DATA_SPANS.json",
+      "published": "removal/DATA_SPANS.json",
+      "sha256": "bf05702c56119b208aefa3c37993685c317e784bb836da71c00d4cf4e10c07f8",
+      "bytes": 307
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/DIRECT_BRANCHES.json",
+      "published": "removal/DIRECT_BRANCHES.json",
+      "sha256": "93270787967d4933766d34d452e6d6c1436603263b3b0276f1dd5fbf84ad157b",
+      "bytes": 319
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/INPUTS.json",
+      "published": "removal/INPUTS.json",
+      "sha256": "7fad9177d0b03d7673c9e8c8244e94eb25df21cf2dfb82b64fda5fd0f9f41d7c",
+      "bytes": 1078
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/METHOD.json",
+      "published": "removal/METHOD.json",
+      "sha256": "902dbc6e72adbffd4b62a62858b3e975f180b0fb8a0a955a76c3b7e9551d3352",
+      "bytes": 401
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/OWNER_IDENTITY.json",
+      "published": "removal/OWNER_IDENTITY.json",
+      "sha256": "d1816ca8ff6d99c74cd727e4fefa003c20ba9a58169751b51ce3a47a2e7c5f4c",
+      "bytes": 659
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/REMOVAL_LEDGER.json",
+      "published": "removal/REMOVAL_LEDGER.json",
+      "sha256": "54277a7fb2dc3a083c3a9f22aee54da3f0c462e4729491eaeb099cf634f6b840",
+      "bytes": 1564
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/SOURCE_SPANS.json",
+      "published": "removal/SOURCE_SPANS.json",
+      "sha256": "7fdf58e48334d54b9d8a9224eb92c75ae1a9df9ec90ded42c9c81b2297448d1d",
+      "bytes": 881
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/spans/keyed-tree-erase.txt",
+      "published": "removal/spans/keyed-tree-erase.txt",
+      "sha256": "8cd4889ebab6c00ef0143467c544c280b677629373cfc8d0f43062ddb2267936",
+      "bytes": 5025
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/spans/matched-owner-removal.txt",
+      "published": "removal/spans/matched-owner-removal.txt",
+      "sha256": "6422ce077cc38372688c280ab13465bf3b890fe06b55c970815bbe0d671681bd",
+      "bytes": 3966
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/spans/selected-local-caller.txt",
+      "published": "removal/spans/selected-local-caller.txt",
+      "sha256": "9955b694aee463a1e04af6cbcd3d71d6eb21fd0cb9b34b33407a4195f7db5e35",
+      "bytes": 418
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/spans/selected-scene-owner-dispose.txt",
+      "published": "removal/spans/selected-scene-owner-dispose.txt",
+      "sha256": "eb6ab7ebe6b265439327b401657a0e4128a5b1a216ad83a041ff63619869e345",
+      "bytes": 219
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/OUTPUT_MANIFEST.json",
+      "published": "removal/OUTPUT_MANIFEST.json",
+      "sha256": "37e3fa9a0aecd27238f324548e523479945f82337e91822356030f6c1b37223b",
+      "bytes": 2042
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/collect_removal_v1.py",
+      "published": "removal/collector.py.txt",
+      "sha256": "4d81644c82953731db4894b5669355a505f3f61016a830ab8e6f5d64d70172bf",
+      "bytes": 7764
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/REPORT.md",
+      "published": "removal-report.txt",
+      "sha256": "68c32fd66ef0d6c8d310a9e1efde7163a76fd334399a8cb5c025dc4c6eb74659",
+      "bytes": 9145
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/reviews/removal-source-review.md",
+      "published": "removal-source-review.txt",
+      "sha256": "1ee9b216941061b06a74c85269d6d64ec67f24e2f262434b046535bacae4cc2b",
+      "bytes": 5440
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/reset/BOUNDED_CALLER_QUERY.json",
+      "published": "reset/BOUNDED_CALLER_QUERY.json",
+      "sha256": "36bc9e9f1a61452c19c14bbdfc9576db7a40e60375ac0673559644b8287f039b",
+      "bytes": 1359
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/reset/INPUTS.json",
+      "published": "reset/INPUTS.json",
+      "sha256": "a9c5c248fbc43709bbbfc8c5b2ff683ac588eda3d0e55e9b418710cf238e4176",
+      "bytes": 1358
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/reset/ORIGINAL_SOURCE.json",
+      "published": "reset/ORIGINAL_SOURCE.json",
+      "sha256": "1cd4f8e4210ff7d86550c64d304c3207c80153c3527161a0f7561d3744ed7390",
+      "bytes": 1674
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/reset/spans/selected-stack-caller.txt",
+      "published": "reset/spans/selected-stack-caller.txt",
+      "sha256": "80b2044a182632ad9fec7594806412ac173c6ee9610af983aad7bcecb3bbb176",
+      "bytes": 579
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/reset/spans/supplied-constructor-inline-string.txt",
+      "published": "reset/spans/supplied-constructor-inline-string.txt",
+      "sha256": "ee139dca8c3ceb66a221c8b5e60431c1d5aca3586e0c05e9d7643e181507f594",
+      "bytes": 1316
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/reset/OUTPUT_MANIFEST.json",
+      "published": "reset/OUTPUT_MANIFEST.json",
+      "sha256": "95e2855f49ea20fa27db7fd6fdfd1c4192555a0638b6ff20f0236cc765248109",
+      "bytes": 1119
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/reset/collect_reset_caller_v1.py",
+      "published": "reset/collector.py.txt",
+      "sha256": "4ab1bba16aa0f245b8dde908012519fd017ae3cd278f647eb929be8a254798af",
+      "bytes": 6798
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/reset/REPORT.md",
+      "published": "reset-report.txt",
+      "sha256": "2ba2740c2dd49d5cb9a40c265c0effc083c30d2fe172c053b21ee7d2ab63fdbd",
+      "bytes": 5679
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/reviews/reset-source-review.md",
+      "published": "reset-source-review.txt",
+      "sha256": "a868233485d4af65ae71948231b97a75db056fa43785e160e87156e75c57e8c3",
+      "bytes": 2931
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/SYNTHESIS.md",
+      "published": "synthesis.txt",
+      "sha256": "f04e1b1b2aa8c4efe6a029b261ffbdf58a4ff9661aa64231b1162ecfbe3d9cc1",
+      "bytes": 1670
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/COVERAGE.md",
+      "published": "coverage.txt",
+      "sha256": "e5f1ce7d54b730a3bb3d670e607596184ac760a66e8332cd34433c853d5e2572",
+      "bytes": 1422
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/RANKED_REMAINING_QUESTIONS.md",
+      "published": "remaining-questions.txt",
+      "sha256": "2cb95bebb3520d27158808a804d6854d237b3d24c075534ea89968d093d04616",
+      "bytes": 1513
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/RUN_LOG.md",
+      "published": "run-log.txt",
+      "sha256": "c73bf6d170f5dc63646827f11fec182ef247a642b47d9519f764a684a7960d60",
+      "bytes": 1051
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/SOURCE_CHECKS.json",
+      "published": "source-checks.json",
+      "sha256": "04d287fc7f2c768f81be8f6536944c126a6cabb857a7562abc68d8c6bfde9985",
+      "bytes": 853
+    }
+  ]
+}

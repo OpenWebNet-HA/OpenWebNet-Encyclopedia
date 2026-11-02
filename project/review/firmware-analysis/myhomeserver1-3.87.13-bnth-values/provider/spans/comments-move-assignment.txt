@@ -1,0 +1,28 @@
+
+/usr/lib/libjsoncpp.so.1.9.5:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000159ec <_ZN4Json5Value8CommentsaSEOS1_@@Base>:
+   159ec:	2200      	movs	r2, #0
+   159ee:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+   159f0:	680b      	ldr	r3, [r1, #0]
+   159f2:	4605      	mov	r5, r0
+   159f4:	600a      	str	r2, [r1, #0]
+   159f6:	6806      	ldr	r6, [r0, #0]
+   159f8:	6003      	str	r3, [r0, #0]
+   159fa:	b186      	cbz	r6, 15a1e <_ZN4Json5Value8CommentsaSEOS1_@@Base+0x32>
+   159fc:	f106 0438 	add.w	r4, r6, #56	@ 0x38
+   15a00:	f1a6 0710 	sub.w	r7, r6, #16
+   15a04:	f854 0c08 	ldr.w	r0, [r4, #-8]
+   15a08:	42a0      	cmp	r0, r4
+   15a0a:	f1a4 0418 	sub.w	r4, r4, #24
+   15a0e:	d001      	beq.n	15a14 <_ZN4Json5Value8CommentsaSEOS1_@@Base+0x28>
+   15a10:	f7f5 ebdc 	blx	b1cc <_ZdlPv@plt+0x4>
+   15a14:	42bc      	cmp	r4, r7
+   15a16:	d1f5      	bne.n	15a04 <_ZN4Json5Value8CommentsaSEOS1_@@Base+0x18>
+   15a18:	4630      	mov	r0, r6
+   15a1a:	f7f5 ebd8 	blx	b1cc <_ZdlPv@plt+0x4>
+   15a1e:	4628      	mov	r0, r5
+   15a20:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}

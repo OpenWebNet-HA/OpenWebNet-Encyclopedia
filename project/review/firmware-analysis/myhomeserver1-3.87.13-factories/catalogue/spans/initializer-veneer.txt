@@ -1,0 +1,8 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000161c8:
+   161c8:	f7ff b94c 	b.w	15464 <g_source_set_callback@plt+0x4988>

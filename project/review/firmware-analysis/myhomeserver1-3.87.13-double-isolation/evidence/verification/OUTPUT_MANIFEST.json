@@ -1,0 +1,63 @@
+{
+  "collector_sha256": "59519f23773574416ac8802df642386d68a512c7be493b8d51500b379f61801e",
+  "counts": {
+    "RECORD_hashed": 41,
+    "RECORD_rows": 63,
+    "canary_PIC_joins": 4,
+    "guards": 8,
+    "original_execution": 0,
+    "source_spans": 7,
+    "tool_files": 63
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 767,
+      "sha256": "5769e3aaed560f68255ffbbc38f0d42dfd6560de6c9bc98e9d3fc37983046251"
+    },
+    "PACKAGE_RECORD_VERIFICATION.json": {
+      "bytes": 17579,
+      "sha256": "04fe2bff2e1635d0f1f6f0bf2886a0884ee4a2e90180a3ca9d92a342817cf0c3"
+    },
+    "PROVIDER_ATTRIBUTES.txt": {
+      "bytes": 585,
+      "sha256": "7dc30b897def278c2fa81f8023537ecda32fa3afcc038d3b2bca85b336d5ecca"
+    },
+    "PROVIDER_SOURCE.json": {
+      "bytes": 4234,
+      "sha256": "bb9097856f79b3088c9368dc21230bc9165cc356fed5b0da67d00f1e6d610734"
+    },
+    "TOOL_TREE_BEFORE.json": {
+      "bytes": 13596,
+      "sha256": "3ebab93891ce85f986507232376fc1cbc0f0d4e12a85a3f9774444962e739b7e"
+    },
+    "spans/C1-double.txt": {
+      "bytes": 583,
+      "sha256": "4ca8e954c6053b4ea294ed11430cf07548a974426c94d7ee2dc3700e20013144"
+    },
+    "spans/Comments-move.txt": {
+      "bytes": 1083,
+      "sha256": "4e0a13c3cbb56546604c643990074f2fa18b0e86c04ce9b6ca50210419203f95"
+    },
+    "spans/asDouble-epilogue.txt": {
+      "bytes": 700,
+      "sha256": "3cf7befb525c30506116751672ed7796607c2710a4a6977749da1276f6ad6177"
+    },
+    "spans/asDouble-prefix.txt": {
+      "bytes": 820,
+      "sha256": "230d991c3366a608c01c95e1c1ca518b443756518e55708e5caf7b209f49a9d6"
+    },
+    "spans/asDouble-type3.txt": {
+      "bytes": 252,
+      "sha256": "6ff010972f72055543592a8de212792ea5c61a08c26dee1e13eb2a2186da18c7"
+    },
+    "spans/initBasic.txt": {
+      "bytes": 2334,
+      "sha256": "8f88c27041f4e7bc5b74cb93ed36af9068abfb680f13f2c7892f1731d378f3ac"
+    },
+    "spans/type-byte.txt": {
+      "bytes": 203,
+      "sha256": "613cf76ab1e5f775eb14e9e3e5bff678b881edb663cc40ba697cf6ab97f36c80"
+    }
+  },
+  "report_sha256": "0f5bad12227b48e30646918853d56dbbce5641d91d4c385b51d1648c3f55f45f"
+}

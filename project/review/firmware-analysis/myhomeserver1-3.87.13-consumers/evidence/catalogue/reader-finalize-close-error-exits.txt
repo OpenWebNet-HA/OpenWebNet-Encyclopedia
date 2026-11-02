@@ -1,0 +1,43 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a8ca8:
+   a8ca8:	4a18      	ldr	r2, [pc, #96]	@ (a8d0c)
+   a8caa:	4b16      	ldr	r3, [pc, #88]	@ (a8d04)
+   a8cac:	447a      	add	r2, pc
+   a8cae:	58d3      	ldr	r3, [r2, r3]
+   a8cb0:	681a      	ldr	r2, [r3, #0]
+   a8cb2:	9b1b      	ldr	r3, [sp, #108]	@ 0x6c
+   a8cb4:	405a      	eors	r2, r3
+   a8cb6:	f04f 0300 	mov.w	r3, #0
+   a8cba:	d11e      	bne.n	a8cfa
+   a8cbc:	4630      	mov	r0, r6
+   a8cbe:	b01c      	add	sp, #112	@ 0x70
+   a8cc0:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
+   a8cc4:	f767 bdee 	b.w	108a4 <sqlite3_close@plt>
+   a8cc8:	4a11      	ldr	r2, [pc, #68]	@ (a8d10)
+   a8cca:	4b0e      	ldr	r3, [pc, #56]	@ (a8d04)
+   a8ccc:	447a      	add	r2, pc
+   a8cce:	58d3      	ldr	r3, [r2, r3]
+   a8cd0:	681a      	ldr	r2, [r3, #0]
+   a8cd2:	9b1b      	ldr	r3, [sp, #108]	@ 0x6c
+   a8cd4:	405a      	eors	r2, r3
+   a8cd6:	f04f 0300 	mov.w	r3, #0
+   a8cda:	d10e      	bne.n	a8cfa
+   a8cdc:	b01c      	add	sp, #112	@ 0x70
+   a8cde:	bd70      	pop	{r4, r5, r6, pc}
+   a8ce0:	9804      	ldr	r0, [sp, #16]
+   a8ce2:	f767 eb8e 	blx	10400 <sqlite3_finalize@plt>
+   a8ce6:	4a0b      	ldr	r2, [pc, #44]	@ (a8d14)
+   a8ce8:	4b06      	ldr	r3, [pc, #24]	@ (a8d04)
+   a8cea:	447a      	add	r2, pc
+   a8cec:	58d3      	ldr	r3, [r2, r3]
+   a8cee:	681a      	ldr	r2, [r3, #0]
+   a8cf0:	9b1b      	ldr	r3, [sp, #108]	@ 0x6c
+   a8cf2:	405a      	eors	r2, r3
+   a8cf4:	f04f 0300 	mov.w	r3, #0
+   a8cf8:	d0e0      	beq.n	a8cbc
+   a8cfa:	f766 efc0 	blx	fc7c <__stack_chk_fail@plt>

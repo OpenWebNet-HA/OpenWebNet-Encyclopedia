@@ -1,0 +1,24 @@
+# Run15 state-correction review
+
+PASS. This is a bounded independent metadata and actual-branch check, not a source-semantic review, collector/native replay or future final-handoff certification. No completed run15 file, author output or repository document was changed by this reviewer.
+
+The retained save_checkpoint_v1.py helper applies .strip() to porcelain status text. The first raw line starts with a space followed by M. Removing the first leading space shifts that entry's index/worktree columns, reproducing exactly the erroneous staged1/unstaged27 classification. Independent git status --porcelain=v1 -z and cached-diff checks establish the current branch docs/static-firmware-analysis-findings, 0 staged entries, 28 tracked unstaged entries, 11 untracked entries and 39 entries total. Cached diff is empty. This is a current observation, not a promise that a later working tree is unchanged.
+
+RESEARCH_STATE.v2 differs from retained v1 only in branch metadata, save time and explicit state-version/correction fields. Source packets, findings, document/review identities, execution counts and gates are unchanged. The three exact before-state-v2 snapshots equal the still-retained original state, script and index. The original205-entry index remains exact; all its entries are retained without repinning in current214-entry EVIDENCE_INDEX.v2. Independently hashing all214 current entries verifies their lengths and identities. The current index has SHA256 5404603de569afe83163cce60b8d64c9a3cf9965da15cf5b9468d1d3627476a6.
+
+The read-time mutable CONTROL explicitly selects RESEARCH_STATE.v2 and EVIDENCE_INDEX.v2 plus the correction record. Its automation/final-consolidation status is coordination evidence only. This review does not certify future automation deletion, final completion, branch cleanliness, source approval or physical behavior. No source/public/result/review change is attributed to this metadata correction.
+
+## Exact read-time pins
+
+| File | SHA-256 |
+| --- | --- |
+| `work/f460-f461-comparison/2026-11-01-run15/RESEARCH_STATE.json` | `080ba467a3553d8a21f557f423c73b7162413c83892d1ef8d0c0bf0aee0f1d19` |
+| `work/f460-f461-comparison/2026-11-01-run15/RESEARCH_STATE.v2.json` | `cf4de356e900caa93cebfbe39cb2d22079a7aa4e8eaf402f11a221db18df1589` |
+| `work/f460-f461-comparison/2026-11-01-run15/STATE_CORRECTION.v2.json` | `c44c971d3a5799b7cf56c766c3fd13bbe865e22654a9714f7437cc4f46c2ded6` |
+| `work/f460-f461-comparison/2026-11-01-run15/EVIDENCE_INDEX.json` | `d2349cd049143c4471517ed0a0ffb743752a62911524998e6457342ae42eb553` |
+| `work/f460-f461-comparison/2026-11-01-run15/EVIDENCE_INDEX.v2.json` | `5404603de569afe83163cce60b8d64c9a3cf9965da15cf5b9468d1d3627476a6` |
+| `work/f460-f461-comparison/2026-11-01-run15/save_checkpoint_v1.py` | `d02251b9a41c2434e943a4dd8275a59d367a0660c679de40dbf43160820f6bf3` |
+| `work/f460-f461-comparison/2026-11-01-run15/integration/before-state-v2/INDEX.json` | `fb6efdad343b4bc55860ea2a9f719a55c65d095af86f819be278879152b81b59` |
+| `work/f460-f461-comparison/continuation-2026-11-01/CONTROL.json` | `83e98d485d230524e39573dabfa965d9b74b5a74bec7ac540396cf274728e072` |
+
+Scope complete: preserved-original, corrected-current metadata and actual read-time branch agree. Final handoff remains separate work.

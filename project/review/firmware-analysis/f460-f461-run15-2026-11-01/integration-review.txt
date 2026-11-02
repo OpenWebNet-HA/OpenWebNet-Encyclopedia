@@ -1,0 +1,71 @@
+# Run15 final documentary integration review
+
+PASS for the current INDEX.v2 integration after the preserved synthesis wording refinement. No further correction requested. Actual review-copy assembly, actual validation and strict gates remain pending mechanical completion.
+
+This independent documentary review compares new public/capsule/coordination text with frozen authoritative source reports and source-peer reviews. Prior product/source familiarity informs scope checks; no fresh original-byte audit, all-inherited-claim audit, source-collector replay or native execution is claimed. Only host file reads, hashes, exact reference reconstruction and local-reference checks were performed. Author reports/code/evidence, original images and repository pages were not edited by this reviewer.
+
+## Claim and boundary assessment
+
+F460 narrows the selected raw BNLD value-coherence premise. Own final raw slot0/hidden X8 result connects to the common condition serializer, which emits local operator spellings higher/lower/equal/different for selected words0..3; the own parser decodes those words back under ordinary string/member returns. Minus1 skips operator emission. Run14 numeric operand orientation is inherited, not re-audited, and no physical-unit/public-protocol meaning follows from the names. On raw status52==-1, the selected branch supplies raw level56 to the signed-int JSON constructor and moves it into the SAME result member level, without a direct level-zero/sentinel omission test or status assignment on that branch. Composition with reparse remains conditional on ordinary fresh JSON/member/string/move/int/asInt behavior, no extra status/mutation, valid objects and normal returns. It is not a complete JSON implementation or universal roundtrip, configured scene, query freshness or physical result. No fixture or signed-provider execution was transferred from MHS.
+
+F461 connects main monitor requests, actual changed-callback identity and SAME supplied-manager userdata to a retained path/handle entry consumer under ordinary provider/signal/object/lifetime premises. Numeric event0 and suffix(returned file path, stored entry path) are local gates, not canonical file equality or a complete event policy. Successful stop-symbol lookup leads to an opaque callable request; failed lookup can skip it before bookkeeping. The selected list removal/head-store/path-free/module-close/entry-free request order is preserved. In authoritative v2, path LOAD558c precedes head STORE5590, while free request5594 follows the store. No stop argument ABI, successful stop/unload, full ownership, concurrency safety, actual event delivery or physical shutdown is inferred. Current summaries precisely leave GModule-provider and plugin-stop bodies opaque while acknowledging the statically inspected local loader.
+
+Canonical F461 v1 remains intentionally bound to its old report/collector/manifest/evidence and first copies. Current REPORT.v2 is separately pinned with an exact one-sentence instruction-order clarification; source/request order and results did not change. F460 v1 history is one retained staged-unexecuted collector only, corrected before any report/output/canonical attempt. One redundant strict hex-guard byte plus current-report references changed; no failed canonical run, old report/output or historical terminal artifact is invented.
+
+The requested synthesis refinement replaced only Loader/provider/pluginstop bodiesopaque. with GModule-provider/pluginstop bodiesopaque. Exact four-file pre-edit copies, the old candidate index/synthesis and new first synthesis are retained. Current INDEX.v2 differs from original INDEX only in its synthesis row. This is documentary scope precision, not a source, code, evidence or count correction.
+
+Product roles/namespaces remain separate. No F454/MH202/MHS layouts or physical meaning transfer by class/filename. New original/helper/native/provider/emulator/model/fixture/SQL/JSON/runtime/physical execution remains zero; earlier ledgers and MH202 unavailable-history limits remain scoped unchanged. Wider Device/source gates remain pending and source investigation is stopped for consolidation. Closed receiving/output/transport/authentication/session/framing bodies remain excluded.
+
+## Exact audit
+
+- All16 current INDEX.v2 paths equal their frozen copies, byte lengths and SHA-256 values. Original INDEX/current historical copies remain preserved.
+- All51 SOURCE_EXPORTS entries equal source and capsule bytes, including both current v2 reports/history and actual independent source-peer copies. The separate current synthesis.txt equals the refined synthesis.
+- Five source/review first-copy indexes verify30 members: F46015, F461 canonical11, F461 v2/refinement2 and two independent reviews. Two pre-edit reference copies, one staged collector and three F461 pre-v2 files also verify:36 members across eight indexes.
+- The F460 exact staged-script difference is its declared one hex-guard substitution plus three current-report reference roles. F461 v2 equals v1 with exactly the declared instruction-order sentence substitution; canonical old identities remain unchanged.
+- The four before-synthesis-v2 snapshots verify; the synthesis difference is exactly the declared phrase replacement, and SYNTHESIS.v2.first.md equals current synthesis. The old candidate pin row remains exact.
+- The appendix insertion and two declared substitutions reconstruct current REFERENCE_DRAFT.md/public main exactly from the retained old main. Core profile is unchanged at bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba.
+- Selected current-context integration Markdown has35 local-reference occurrences:33 resolve now and one heading fragment verifies. Only capsule integration-review.txt and validation.json await actual assembly. Their future bytes, final identity validation and strict ESG/ECV/diff are not certified; no placeholder or exemption is requested.
+- Parent/source-peer static checks are separate recorded work, not replayed here. Preservation checks certify available retained bytes, not unavailable exploratory completeness.
+
+## Source and preservation pins
+
+| File | SHA-256 |
+| --- | --- |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/REPORT.v2.md` | `346d77b15b08e3da42e1f5aafe3ed1717d4bf20c13eca1929e1b4c8143469420` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/collect_serializer_v2.py` | `06864c8ee0fdef852243b116a908c0d39e5328903674c239c6a3a97a96f139d4` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/VERSION_HISTORY.v2.json` | `a737be0e05d3041c686bc0639746073e8be77491edf3015ec163d4420dd7f3f4` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/REPORT.v2.md` | `dcce7197af2737f165295c51bcb3b51ff07bc3076550daa4732da48e38c3ae70` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/REPORT.md` | `891728ccd1d024c018cc8362d0399cd5bdc793c0597c696b68560765407735d3` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/collect_removal_v1.py` | `bcde12a10d6d8b83f9305d076c53d9018573abbca18b54c595d4688a0e3a1435` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/WORDING_REFINEMENT.v2.json` | `bde209563f58d1e8e09374221068cda6d40e1c3b4e146508013417fcc3be7b70` |
+| `work/f460-f461-comparison/2026-11-01-run15/integration/f460-before-v2/INDEX.json` | `487a04c9f2ec6c560438e9f427d429cf94ae15bf79539e23e13ebe8c5bb59f31` |
+| `work/f460-f461-comparison/2026-11-01-run15/integration/f461-before-report-v2/INDEX.json` | `e68204e9afadaaf20060e17d5c0bf50849d4b14cb5ffc3ee0556f220a7f76f21` |
+| `work/f460-f461-comparison/2026-11-01-run15/integration/SYNTHESIS_REFINEMENT.json` | `2a1c682951ed7bccad4ecf115a31df792e8cbc7aa9b876b4ed72af4ef2d9736e` |
+| `work/f460-f461-comparison/2026-11-01-run15/integration/before-synthesis-v2/INDEX.json` | `ee1cf98c981d22b488633c589a2b2bb344013c1952fbb735b7e26c159f35bfad` |
+| `work/f460-f461-comparison/2026-11-01-run15/SYNTHESIS.v2.first.md` | `ad464639b736c22844984f3aeac8f47e9f6c5ac4204e1603b113f5dbc8f0036c` |
+| `work/f460-f461-comparison/2026-11-01-run15/review-candidate/INDEX.json` | `0f0e673c9bc5e72f70de6952c24cf0c88d41bfc2640a4065cec64fe0654d0f32` |
+| `work/f460-f461-comparison/2026-11-01-run15/review-candidate/INDEX.v2.json` | `9fb1d58aa43eb50703e1237968176231e5d8f731561a8df78e05835e5bc06a8c` |
+| `work/f460-f461-comparison/2026-11-01-run15/integration/pre-edit/INDEX.json` | `45bc55a736724d004813fe6e2ba653d31d16e9f1434f9d94291a92b32dc735a5` |
+
+## Frozen current integration pins
+
+| Current file | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md` | 43781 | `3195fb54f4d533cbd6ba01eb8956a9141faa14ff687af4bbf43ed21c8b1e5734` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | 15603 | `bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run15-2026-11-01/README.md` | 3317 | `3e996a48c4a14a95f48fba62c0869873423d4f826ad575ad662f77febb4aed81` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run15-2026-11-01/SOURCE_EXPORTS.json` | 14246 | `361772059a7833dacf44acb08760190f2fd7b521a723ef81eb82c8edf3270424` |
+| `work/f460-f461-comparison/2026-11-01-run15/SYNTHESIS.md` | 1533 | `ad464639b736c22844984f3aeac8f47e9f6c5ac4204e1603b113f5dbc8f0036c` |
+| `work/f460-f461-comparison/2026-11-01-run15/COVERAGE.md` | 1684 | `a1743dd99214e95fae1f26cf405239064ef6cd52482e6ef7b185fc529ca11eaf` |
+| `work/f460-f461-comparison/2026-11-01-run15/RANKED_REMAINING_QUESTIONS.md` | 1446 | `cb57772fb0e06e2bc561d7142fcb3e0187c2480ea045d38c85d65496083f08aa` |
+| `work/f460-f461-comparison/2026-11-01-run15/SOURCE_CHECKS.json` | 506 | `c7d0a924a2cbad434188ed5117072fc058d7cc0b7f6ca269b3fd44b796d490dc` |
+| `work/f460-f461-comparison/2026-11-01-run15/integration/DOCUMENT_PATCH.json` | 754 | `d3c4dbd47013903b320f7382b3388663f5bfa4f6f352d7255657241da10b5ca5` |
+| `work/f460-f461-comparison/2026-11-01-run15/REFERENCE_DRAFT.md` | 43781 | `3195fb54f4d533cbd6ba01eb8956a9141faa14ff687af4bbf43ed21c8b1e5734` |
+| `work/f460-f461-comparison/2026-11-01-run15/REFERENCE_DRAFT_METHOD.json` | 3212 | `7d46d589dbff245b4f8cac22974899dde71a65ede167c531312706e1786d3997` |
+| `work/f460-f461-comparison/2026-11-01-run15/ANALYSIS_APPENDIX_DRAFT.md` | 2793 | `e7b7a380d10f24bc102bf3995482ddde74edc0d602209766bc5dd30bdb0f5527` |
+| `work/f460-f461-comparison/2026-11-01-run15/reviews/f460-source-review.md` | 5371 | `db66c8db063702dc7d2162b5da264740a08f3898bb31c2533d412f564cf2444b` |
+| `work/f460-f461-comparison/2026-11-01-run15/reviews/f461-source-review.md` | 5853 | `a9338460a240f65a8be4a95a9c23673164cfffade42e17f8c6fed6b310a5ec10` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run15-2026-11-01/f460-source-review.txt` | 5371 | `db66c8db063702dc7d2162b5da264740a08f3898bb31c2533d412f564cf2444b` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run15-2026-11-01/f461-source-review.txt` | 5853 | `a9338460a240f65a8be4a95a9c23673164cfffade42e17f8c6fed6b310a5ec10` |
+
+This bounded current documentary PASS does not pre-certify review exports, final validation, strict gates or later closure/coordination transitions. These remain subsequent parent-owned actual steps.

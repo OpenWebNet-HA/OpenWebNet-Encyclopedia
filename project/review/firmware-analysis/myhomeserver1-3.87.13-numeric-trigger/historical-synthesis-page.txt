@@ -1,0 +1,100 @@
+# MyHOMEServer1 3.87.13 Research Synthesis
+
+The strongest result is a source-level map of this build's scenario engine: how selected JSON scenes become compiled objects, how time and local events can request a scene launch, how conditions gate actions, and how completion, cancellation and ownership differ. The embedded catalogue is also understood as a separate source profile with concrete consumers. Most findings remain conditional code evidence. One small isolated experiment executes the packaged JSON provider; no complete gateway, configured scene or physical installation has been run.
+
+This overview consolidates the [first pass](myhomeserver1-3.87.13.md) and its reviewed continuations. The [synthesis review capsule](../../project/review/firmware-analysis/myhomeserver1-3.87.13-synthesis/README.md) supplies a frozen navigation and verification catalog, source-report links, review identities and remaining questions. It adds no new firmware-source investigation or native execution.
+
+## Product and build scope
+
+[MyHOMEServer1](../../devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md) is an SCS/Ethernet home-automation server with app commissioning and scenario functions. Manufacturer documentation supplies that role; this binary analysis examines selected implementations in one exact build. It does not import F454 AV/alarm hardware roles or MH202 script-engine semantics from shared filenames, catalogue labels or enum values. Manual revisions and catalogue generations retain their own applicability.
+
+| Original artifact | Exact identity |
+| --- | --- |
+|Manufacturer package|SMARTGW_038713.fwz, SHA256 `4ca1bcc70c1616270cb4c1f4b3ceb3c01c941797e437c3544d7d3d11b159c603`|
+|Scheduler|home/bticino/scheduling_manager/scheduling_manager, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`|
+|Embedded catalogue|home/bticino/matrix_mx/MHCatalogue.db, SHA256 `79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb`|
+|Packaged scalar provider|usr/lib/libjsoncpp.so.1.9.5, SHA256 `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36`|
+
+Addresses in the reports are linked ELF addresses, with Thumb pointers and instructions distinguished. The current ARM hard-float C++ layouts were derived independently. File identity, declared dependencies, source requests, live provider binding and observed runtime behavior are separate evidence levels.
+
+## The scenario engine has concrete owners and gates
+
+The [startup analysis](myhomeserver1-3.87.13-startup.md) connects main to a scene container, a time-trigger service and a configured scenes directory under extra0. The selected loader reads candidate JSON files, requests JsonCpp parsing, builds raw trigger/condition/action objects and initializes compiled runners. The downloaded images contain no regular files under that exact scene-directory prefix. This leaves installed configuration unavailable; it does not establish an absent live directory or disabled scenario feature.
+
+```mermaid
+flowchart LR
+    A[Selected scene JSON] --> B[Raw schema objects]
+    B --> C[Serializer and reparse requests]
+    C --> D[Compiled scene and objects]
+    T[TIME service or selected local event] --> L[Scene callback and launch gates]
+    D --> L
+    L --> K[Condition predicates]
+    K --> W[Action worker]
+    W --> P[Completion poll and scene cleanup]
+    R[Selected typed local records] --> K
+```
+
+The arrows represent selected conditional source relations. They are not a captured transaction. Valid objects, ordinary provider returns, matching IDs/types, configured admission and lifetime remain premises at their respective boundaries.
+
+The [factory](myhomeserver1-3.87.13-factories.md) and [action](myhomeserver1-3.87.13-actions.md) studies distinguish raw JSON-facing objects from compiled callables. Selected SLEEP and SCENARIO paths reach actual constructors and action storage. The nested SCENARIO callable's captured container is connected to the same startup container populated by the loader. Numeric IDs, duplicate-key insertion and one category-specific key allocator are traced; they do not establish a universal external ID grammar or ordering policy.
+
+The scene's enabled and active checks govern selected thread requests. A condition worker calls each compiled condition's predicate slot and stops at the first zero. The all-nonzero or empty-condition path reaches the action worker. Trigger and action vectors contain selected eight-byte pointer/control pairs; the condition range uses four-byte compiled-object pointers. That representation difference does not establish absent condition ownership: a later teardown loop positively calls each nonnull condition's deleting slot before requesting vector-storage deletion.
+
+## Selected trigger and condition behavior is now specific
+
+| Source path | Established behavior | Boundary still open |
+| --- | --- | --- |
+|[TIME trigger and condition](myhomeserver1-3.87.13-time-scenarios.md)|Own schema, weekday maps, service registration and captured scene callback; selected condition checks day and local-time boundaries|Configured input, full parsing/clock/timezone/DST/error policy, queue readiness and actual scheduling|
+|[BNIL local event trigger](myhomeserver1-3.87.13-event-trigger.md)|Own enabled/ID/state/operator admission and captured scene callback; local publication into the trigger vector|External subscription, natural event delivery and complete owner lifetime|
+|[BNLD condition](myhomeserver1-3.87.13-event-routing.md)|Own status-versus-level schema, serializer/reparse contract and selected cached/query predicate|Full JSON semantics, suitable record type/freshness, miss-response producer and correlation|
+|[BNTH condition](myhomeserver1-3.87.13-event-routing.md)|Selected setpoint schema/serialization, compiled double comparison and a typed local record producer feeding cached field32|Natural configured input, provider/type/ID/freshness, other branches, units and physical meaning|
+|[BNCUSCENE condition](myhomeserver1-3.87.13-event-routing.md)|Entire selected predicate reads its enabled byte and XORs1; ordinary enabled1 therefore returns0 to the generic condition gate|Actual configuration admission, other methods/mutations, intended feature meaning and physical consequences|
+
+These private class names and local type numbers are not a published command-support table. In particular, the BNCUSCENE result is a concrete local predicate finding, without a product-wide unsupported-feature or defect conclusion.
+
+The [local event-routing work](myhomeserver1-3.87.13-event-routing.md) follows selected classifier, ID, record construction, cache storage and caller joins. A Light record and the later Thermostat record have independently derived layouts and control offsets. The latter supplies the selected cached double consumed by BNTH under same-ID/type/normal-provider premises. A constructed default value is a software field default, not a missing-device interpretation or physical measurement. Event params.id also remains distinct from the removal path's params.scene_id.
+
+## Timing, cancellation and lifetime answer different questions
+
+SLEEP's selected callable requests whole seconds under the verified ordinary API layout. The common action wait uses a separately derived operational scale of60 seconds. JSON metadata, operational delay and operational duration must therefore be traced through their own setters; equal field names do not establish equal use. One BN3L construction route positively connects duration to operational+12 and a second callable, while the earlier selected SLEEP route retains duration metadata separately. The [serialization and ownership study](myhomeserver1-3.87.13-serialization.md) preserves these distinctions.
+
+| State or owner | What the selected source establishes |
+| --- | --- |
+|Scene stop+144 and active+145|Scene cleanup can clear both after leaving a completion poll|
+|Action completion+4|A separate per-action value; scene cleanup does not set it or prove worker completion|
+|Shared action-domain flag+72|Selected action stop requests set a common cancellation flag; scene-byte clearing is not its reset|
+|Thread-state receiver|A raw action/scene pointer; disposal of the small state is separate from receiver lifetime|
+|Thread holder|Successful detach can clear its word before worker completion|
+|Registry and compiled owners|Concrete retain/release, vector and teardown requests are traced; natural last ownership and concurrent ordering remain open|
+
+The [cancellation](myhomeserver1-3.87.13-cancellation.md) and [lifetime](myhomeserver1-3.87.13-lifetime.md) reports establish these source relations without declaring a race, leak, use-after-free, permanent cancellation latch or successful restart. A selected numeric scene-removal caller clears a stored scene/control pair before requesting release and keyed erasure. Its local ID provenance is traced, but equality between that dispatcher's supplied context and startup's main container remains unresolved. A positive runtime reset owner for the shared action flag is still missing.
+
+## The database has practical value without being a capability oracle
+
+The [complete catalogue comparison](../../internals/mhcatalogue-source-profiles.md) establishes a distinct embedded profile: all75 table definitions match the Suite version, but the complete schema has one additional embedded index;42 table row multisets match and33 differ. Some definitions are retained, others omitted or embedded-only. Reused Configuration IDs and equivalent renumbered fields require owner-aware correspondence. Combining rows by filename or integer ID can assign a field to the wrong product.
+
+The [consumer](myhomeserver1-3.87.13-consumers.md) and [ownership](myhomeserver1-3.87.13-factories.md) continuations add actual compiled opening requests and the selected15-column SQL producer. They identify the selected columns as catalogue slots and system IDs. They do not execute those SQL requests in the firmware or resolve the server's entire device-selection/fallback policy. The embedded catalogue's omission of MyHOMEServer1's own item also prevents treating its contents as a complete self-capability declaration. Canonical archive identities remain separate for the embedded and Suite databases.
+
+## Exactly what has executed
+
+The [double-helper experiment](myhomeserver1-3.87.13-serialization.md) executes the original packaged constructor and type3 asDouble on four supplied finite bit patterns: positive zero, negative zero, negative one and1.25. The SAME original-constructed24-byte object is read back without field reseeding; returned bits match, including signed zero. This narrows one scalar-provider premise in the earlier BNTH argument. It does not execute a complete JSON serialization/reparse or the BNTH predicate.
+
+| Current MyHOMEServer1 canonical ledger | Count |
+| --- | ---: |
+|Saved helper corpora / top-level entries|1 /8|
+|Original code-hook visits|340|
+|C primitive callbacks|0|
+|Actual-definition linker redirects|12|
+|Private EXIT boundaries / guard stops|8 /0|
+|Total code-hook callbacks|360|
+|Synthetic data-relocation setup writes, separate|4|
+
+Visits are not measured retired instructions. Private candidate self-binding, canary, caller storage and CPU/FP setup are explicit; no guest failure or CPU replay occurred. Independent post-run peers audited source and saved traces without executing a replay. Nested original helpers are not additional entries. Earlier static-only reports retain their historical zero-execution scope; later static checks do not reset this ledger. Earlier F454 and MH202 ledgers are separate.
+
+Scheduler processes, configured scenes, target OS/services, full JSON member/map/assignment/parser operations, clocks/threads/timers, network/bus contact and physical behavior have not been executed by this research. No active service, measured deadline, accepted external traffic or successful physical command is inferred from a source request.
+
+## Remaining investigations and verification limits
+
+The highest-value unfinished questions are actual configured scene/generator assets; one distinct numeric/event trigger path; effective provider/type/readiness and query correlation; a positive shared-reset owner; and natural owner/polling/removal order. Full exceptional/unwind/concurrency behavior and physical validation remain separate work. Referenced extras80/81/94/95 are missing from this download. Closed receiving/transport/MQTT/libjel/authentication/session/framing investigations remain closed.
+
+The [scoped coverage and evidence catalog](../../project/review/firmware-analysis/myhomeserver1-3.87.13-synthesis/README.md) links exact reports, preserved corrections, independent reviews, saved validation identities and immutable original-helper results. Navigation rows and hash checks are not coverage percentages or a fresh full semantic re-audit. Prior MH202 run18/run21 unavailable intermediate histories remain explicitly unverified; current source conclusions do not authenticate missing historical drafts. Wider Device/source review gates remain pending. The work is saved locally on docs/static-firmware-analysis-findings, with no staging, commit or publication.

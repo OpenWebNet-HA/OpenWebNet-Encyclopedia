@@ -1,0 +1,37 @@
+# Independent source review: firmware/build/resource graph
+
+PASS, no required correction. This reviewer did not author the firmware-area candidate. I authored the separate objects-area comparison; this review independently re-queried the original databases for the selected firmware graph. No firmware, vendor, CLR, stored expression, target or physical operation executed. Author artifacts remain untouched.
+
+## Exact reviewed pins
+
+Paths below are relative to `firmware/`.
+
+| Artifact | SHA-256 |
+| --- | --- |
+| `REPORT.md` | `d70cd72edbf7460ac94907fd8a0116c889c48e4c1d7a223884760f869eeaa2bc` |
+| `collect_firmware_v1.py` | `a50b4ed85b6c5faf3ea7751bcdd83e62faabd5fb910a562f51d1c0081c136d9b` |
+| `output-manifest.json` | `b78e80495f8b1518559e391b7b6ab5e41a6b83822f709eb904efa61eb59e4b47` |
+| `input-manifest.json` | `2de8b19ed1f1d72e928d052cf350cd77a65a5476fd4d7f45b51f83b8d86d5d0e` |
+| `shared-firmware-graph.json` | `16ec766ca44f189f0d8bb6cfa7295ed493383eda65eb133a59993ed13c75a843` |
+| `firmware-contexts.json` | `97216f491ddff5cfa073fed1d94b33493a4d66989bcc3ef9cc022ad1868c74e4` |
+| `resources-and-associations.json` | `26452f0f16b05839880341230ee5bdaefaf300b824bcef6114aa1f59179b8109` |
+| `references-v1/REFERENCE_INDEX.json` | `912daa2bec962cb4e2f08f2d7cacb408dd055552c6b013b5537643e0d976f1c5` |
+| `initial-generated-v1/SNAPSHOT_INDEX.json` | `9744f22c8d737a041cefd2289cfa6b8a32ac5bb9e7768ccf2dca4f906450ec73` |
+
+## Reproduction and source checks
+
+The unmodified read-only collector --check passed9 outputs,16 selected tables,114 shared firmware IDs,104 referenced shared item IDs,5 owner-child relation types,14 endpoint probes per source and11 exact first copies. I inspected its immutable read-only URI, query_only/trusted_schema settings, source hashes before/after reads, exclusive outputs and input/reference/candidate snapshot handling. No EN_CONF values are read by this collector, and exported resource paths remain declarations rather than contents or successful consumption.
+
+Independently from the author's dictionary-JSON row-bag implementation, I compared all16 complete original table bags with explicit value type tags and multiplicity. All saved counts, equal rows, one-source differences and exact stored table-definition equalities agree. The five relation types preserve all duplicate row multiplicity, including AS_FIRMWARE_CONFIG_MODE, which has no declared primary key.
+
+For every114 shared EN_FIRMWARE owner I verified complete firmware row equality and all570 complete per-owner child-bag comparisons (builds, modes, parameters, packages, connections). All104 referenced shared item rows match completely. Independently, all added child rows in those relations belong to one of the8 firmware-only owners and all removed ones to one of the197 Suite-only owners. This is source-specific evidence for the unchanged retained graph, not an assumption based only on a numeric firmware key and not a claim about changed configuration rows elsewhere.
+
+I verified the full eight-ID set321,798,844,849,850,851,852,853; its7Prototype/1RC labels; seven added build rows and17 mode associations. The report retains literal negative V/R/B fields and distinguishes source flags from an implemented wildcard/default/selection policy. Added798/1.0 alongside retained801/2.0 prevents interpreting additions as a universally newer release set. No-build cases18/19 and17 shared owners remain data conditions, not corruption or support findings.
+
+The original mode lookup maps ID1->code1,2->2,3->0 and4->3, matching the report's explicit namespace warning. Original EN_PACKAGE50 and AS_LANGUAGE_PACKAGE148 row bags remain equal while embedded AS_FW_PACKAGE is empty. The retained23 parameter and23 association rows and two connection links are source rows, not proof of a commissioning route or resource availability. I independently repeated all28 endpoint checks; each selected non-NULL target resolved, without promoting inferred edges to declared-FK guarantees.
+
+I verified all eight evidence-member hashes, generator/report hashes, both original input identities, frozen reference hashes and all11 initial snapshot copies. Canonical product identities were compared with those frozen reference pages and source item/commercial/firmware contexts. F4541455, MH2021902 and MyHOMEServer12198 are absent embedded, and the Suite package versions do not identify the examined2.0.51/1.0.24/3.87.13 packages. The report explicitly requires consumer selection/fallback evidence to bridge that gap and does not transfer F454 alarm or MH202 scheduler topology to the server.
+
+## Conclusion and boundaries
+
+The report accurately characterizes the selected graph as retained shared owners plus omissions and additions, rather than an entire catalogue subset or chronological replacement. All technical counts above are row/relationship evidence, not executed firmware acceptance, payload deployment, installed state or physical compatibility. The broader object's20/48 configuration classification and parent's75-table schema/data audit remain complementary, separately scoped findings. No new source investigation or native replay was needed for this review.

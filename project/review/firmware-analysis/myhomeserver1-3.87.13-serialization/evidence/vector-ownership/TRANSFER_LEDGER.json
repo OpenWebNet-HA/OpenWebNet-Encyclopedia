@@ -1,0 +1,45 @@
+{
+  "full_capacity": {
+    "delegate": "b509c",
+    "inputs": "sameheader,r1=oldend,r2=&temporarypair",
+    "limits": "No allocation/provider success, memory-alias safety, inputadmission, concurrentmutation or all-unwind guarantee; no actual heap/vector fixture.",
+    "normal_growth": [
+      "n=(oldend-oldbegin)>>3",
+      "checkselectedmax n0x0fffffff; normalgrowth n+max(n,1) subjectcarry/clamp",
+      "requestnewcapacitybytes",
+      "moveincoming8Bpair tonewbase+(oldend-oldbegin) andzeroits2sourcewords",
+      "copyexisting8Bprefix/suffixrecordbytes without per-element countcalls in this retained helper",
+      "requestdeleteoldstorage sizedoldcapacitybytes ifnonnull",
+      "store newbegin/newend/newcapacityend"
+    ],
+    "ownership": "Existingrecord/controlvalues relocate without a new copy-countincrement or elementdestructorrelease on selected normal path; oldbuffer freed as rawstorage",
+    "selected_append": "r1==oldend, so old suffix empty; newend=oldsizebytes+8"
+  },
+  "normal_capacity": {
+    "condition": "end!=capacity_end",
+    "count_update": "none in selected move helper",
+    "effect": [
+      "loadaction/controlfromsourcepair",
+      "zerobothsourcewords",
+      "storeexactpairatoldend",
+      "advanceendby8"
+    ],
+    "scope": "Stored vector entry owns the transferred control under valid vector/shared-owner/provider premises, not an extra owning worker-state capture.",
+    "source": "a7288"
+  },
+  "original_execution": 0,
+  "positive_relation": "A scene vector can retain one concrete action/control handle while the separate worker-state stores a rawactionpointer. This is not proof when that ownerisremoved or of whole receiver lifetime, completion, cancellation or safety/defect.",
+  "selected_initializer": {
+    "action_allocation": "operatornew96 ata767c returnedr6; selectedsame-build SleepActionRunner copy path",
+    "append": "a7706\u2192a7288 passes &scene128 and &temporarypair",
+    "control_allocation": "operatornew16 ata76d2; vptr+0; two countwords+4/+8 each1; actionptr+12",
+    "control_assignment": "a76f6\u2192a5980 with destinationSP596 and newcontrol; samecontrol normalstrongincrement1\u21922, oldcontrol0, store destination",
+    "header_words": "begin+0,end+4,capacity_end+8",
+    "post_append_cleanup": "a770a checks temporarycontrol; normalmove leaves0 so1f8a4 callskipped",
+    "scene_pointer": "initializerSP4 savedincomingr0 at a72d0",
+    "standalone_release": "a76fe\u21921f8a4 decrementsstrong2\u21921 on selected normal initialized path; no disposal becausepriorcount2",
+    "temporary_control_word": "SP596 initially0",
+    "temporary_pair": "initializerSP592=(actionpointer,controlpointer)",
+    "vector_header": "scene+128 savedinitializerSP28 at a7648"
+  }
+}

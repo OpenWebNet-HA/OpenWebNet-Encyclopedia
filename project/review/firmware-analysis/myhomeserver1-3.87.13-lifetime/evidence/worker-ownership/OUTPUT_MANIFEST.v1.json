@@ -1,0 +1,74 @@
+{
+  "CRITICAL_BYTES.v1.json": {
+    "bytes": 655,
+    "sha256": "985fcee0ffded29b1c9acd7130038181fa91b7dc9991a5ed1b89c8531b84f7cc"
+  },
+  "INPUTS.v1.json": {
+    "bytes": 1253,
+    "sha256": "18a334ffed18ecf50a01cce4fe81ab29fd9059ab1e75bb3e1d1d9cb9dc045861"
+  },
+  "METHOD.v1.json": {
+    "bytes": 491,
+    "sha256": "3d5799baa5c0669ef851adbf03826edd2efedd9d2a2fd2c6567405d859db0334"
+  },
+  "PROVIDERS.v1.json": {
+    "bytes": 1701,
+    "sha256": "071a04db343be7cc4dda3108449e836e4ae166ba9f83c6d29f32b1e2ec838ebe"
+  },
+  "SOURCE_SPANS.v1.json": {
+    "bytes": 3411,
+    "sha256": "be6c3d38f2fb63f2469ac15c9c3260747c1376d2a370bb3ccc8b60a4e2704ed4"
+  },
+  "VTABLES_AND_OWNERS.v1.json": {
+    "bytes": 2027,
+    "sha256": "fc3fb3fb3a7fd5d586ee042182f371d58bbb33c9e6af44977a5c0cb2449ab866"
+  },
+  "spans/action-wait-state-construction.txt": {
+    "bytes": 4417,
+    "sha256": "70726c17dc31e014a34c221d7a33b04092a45fa0666ec614f7755e9a416edc21"
+  },
+  "spans/action-wait-state-destructors.txt": {
+    "bytes": 2531,
+    "sha256": "eb1869a93e0afe2f6f081a8b90cd719cd76f9256094441daeac3d75731c1bf9f"
+  },
+  "spans/provider-join-detach-start.txt": {
+    "bytes": 2139,
+    "sha256": "d3b0bddb140ec25d1dec5cd42639a168f4bbf2f1aa1d1efb0bb6ed0cbe80f9a6"
+  },
+  "spans/provider-state-entry-and-base-destructor.txt": {
+    "bytes": 896,
+    "sha256": "e07b118f9af77fa3f4786bb31dc7bfa1be25128ba65b23dfad09322edf5ae414"
+  },
+  "spans/scene-owner-dispose-thunk.txt": {
+    "bytes": 363,
+    "sha256": "2e3bd0c39b4e16f0c5ebda0405191f19897a03a8e3ff3977694837d74a3f2b7e"
+  },
+  "spans/scene-state-construction.txt": {
+    "bytes": 2808,
+    "sha256": "b6dcf3cecfe9a31a06084cb764c330f99825d3404d681e6b7b0499e5a1bd6cd5"
+  },
+  "spans/scene-state-destructors.txt": {
+    "bytes": 2515,
+    "sha256": "33c86c683661b54a3a5ee20a544dada4754d95ec24c67cac27739b21f3c9851f"
+  },
+  "spans/scene-teardown-holder-and-action-release.txt": {
+    "bytes": 6099,
+    "sha256": "82766418929e43d4cad5a0a0a5743b73be38235bd16f16dd981cdedcb9161a1b"
+  },
+  "spans/scene-teardown-join-and-terminate.txt": {
+    "bytes": 4307,
+    "sha256": "5a5ae409db6974122a404c049eadcef908e65dafa5858cc63f6f71697a613163"
+  },
+  "spans/sleep-owner-dispose.txt": {
+    "bytes": 3315,
+    "sha256": "87a8dbaefdc691fef0bf7c064aa2179395bdafdffcc4f0d9f5ce4acbe9dcfcc0"
+  },
+  "spans/sleep-shared-owner-construction.txt": {
+    "bytes": 2266,
+    "sha256": "e2118a9e2a3de8d9742d798c2d486479638491b5ca5f77288b179eae8ea7dcee"
+  },
+  "spans/temporary-action-owner-cleanup.txt": {
+    "bytes": 3187,
+    "sha256": "d0837881ab3ddf23ea7a755c16e17062a9bbe3beece66addba7a22541d1debbc"
+  }
+}

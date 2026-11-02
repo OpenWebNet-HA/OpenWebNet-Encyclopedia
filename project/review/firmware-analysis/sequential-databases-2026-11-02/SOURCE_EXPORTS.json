@@ -1,0 +1,119 @@
+{
+  "files": [
+    {
+      "bytes": 13013,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/source/collect_formats_v1.py.txt",
+      "sha256": "ca36fe66cd19d9cd5e88508cb0bcd1aab2f86f60a8e4476e99e8cdc39e0cb7dc",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/source-format/collect_formats_v1.py"
+    },
+    {
+      "bytes": 4026,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/source/REPORT.txt",
+      "sha256": "76f4e53ef07de0f7705cb8401ea65d02b59d69280511271ce2668fe4a5c6397d",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/source-format/REPORT.md"
+    },
+    {
+      "bytes": 453,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/source/SUMMARY.json",
+      "sha256": "cb816ee59f1923d2f06a85d60fb2c2f29f919739e972aeac1c4b0f781bfdcac2",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/source-format/SUMMARY.json"
+    },
+    {
+      "bytes": 1643194,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/source/CANDIDATES.json",
+      "sha256": "7fa085f48a0fd8a37c32ad3b1040fbe70062ab7cb8326d681bfdc125a9c08412",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/source-format/CANDIDATES.json"
+    },
+    {
+      "bytes": 5240011,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/source/SOURCES.json",
+      "sha256": "96b361a0b53849bdde3e31fabcc39e1706863d715c680c8cdc99e04f73b9eea9",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/source-format/SOURCES.json"
+    },
+    {
+      "bytes": 2060,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/source/INPUTS.json",
+      "sha256": "0447d6eaac2f3ed261f5163dcd79a08d7f632358cbe1fa04e8ff7421f8ccdacd",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/source-format/INPUTS.json"
+    },
+    {
+      "bytes": 1179,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/source/ARCHIVES.json",
+      "sha256": "46e6165227527e66a4f421f4e4668ac6ef4d23dfa537d1797c8cee040d9cbd5d",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/source-format/ARCHIVES.json"
+    },
+    {
+      "bytes": 1017,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/source/OUTPUT_MANIFEST.json",
+      "sha256": "8e265551a60abc54d20c163db1359a76bd2e724c11523092a28195ebdc50d109",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/source-format/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 3898,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/source/CANDIDATE_CONTAINER_CONTEXT.json",
+      "sha256": "22d6b8091665261064b340f8c917089fe31d7e501fead284bfdd7842f079478c",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/source-format/CANDIDATE_CONTAINER_CONTEXT.json"
+    },
+    {
+      "bytes": 1141,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/source/SCOPE.json",
+      "sha256": "2ce55c362376d933544b9d7e7522cd3527219c5476c6480154be1df5cd8e2246",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/source-format/SCOPE.json"
+    },
+    {
+      "bytes": 1424,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/ARCHIVE_INHERITANCE.json",
+      "sha256": "afb681788562430eb78740d3332be2f47cd4263f43fc87e2aca68ab609fbfefa",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/ARCHIVE_INHERITANCE.json"
+    },
+    {
+      "bytes": 235,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/R2_RECEIPT.inherited.json",
+      "sha256": "072092bb105685ab2aa0395cde439b431ac6a016037b501a06d2faf509b07793",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/R2_RECEIPT.inherited.json"
+    },
+    {
+      "bytes": 1361,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/R2_ARCHIVE_INDEX.json",
+      "sha256": "8dd68fdf43eb133b3e27136efbe3ab450fe3ca0e1fcf62077750d2001240cab9",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/R2_ARCHIVE_INDEX.json"
+    },
+    {
+      "bytes": 931,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/FORMAT_CONTEXT.json",
+      "sha256": "be6ba85d7545c0e6b0f91d92d0aab42ac18546b9602712c9aea9a2691d431b7c",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/FORMAT_CONTEXT.json"
+    },
+    {
+      "bytes": 574,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/METADATA_LABEL_NOTE.json",
+      "sha256": "a778259f744bd92a3cb22129b8f049c71443402381ba394532517e4fff26d8d9",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/METADATA_LABEL_NOTE.json"
+    },
+    {
+      "bytes": 397,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/PARENT_SOURCE_CHECK.json",
+      "sha256": "c1bd732384b254278e4fdf02654425e83893dc941cc15263a1b7798416d72d72",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/PARENT_SOURCE_CHECK.json"
+    },
+    {
+      "bytes": 1184,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/SCOPE_AUTHORIZATION.json",
+      "sha256": "d3d808c2d7221b9ab043a1cab20c665efaf1cbfc9245d913cd47f67fefeb683c",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/SCOPE_AUTHORIZATION.json"
+    },
+    {
+      "bytes": 7223,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/source-review.txt",
+      "sha256": "5a31699810b4ff4bfd1b577f22afb12573bdaebff4d87b80bfc25f4018d252de",
+      "source": "work/sequential-firmware-priorities/2026-11-02/reviews/stage2-database-source-review.md"
+    },
+    {
+      "bytes": 500,
+      "export": "project/review/firmware-analysis/sequential-databases-2026-11-02/PLAN_VS_PERFORMED.json",
+      "sha256": "c0b26d17981747fdbc092f3e07d3d5040259adbffc5374d1b306d1efcc31c3b2",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/PLAN_VS_PERFORMED.json"
+    }
+  ],
+  "scope": "Finite alloffset original-byte signature/header/extent admission; no recovered DB, SQL or new archival action"
+}

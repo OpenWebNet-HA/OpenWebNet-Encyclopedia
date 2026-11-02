@@ -1,0 +1,62 @@
+# F454 2.0.51 Targeted Static Follow-up
+
+This follow-up narrows four questions left by the [initial analysis](f454-2.0.51.md). It examines the same exact archive, SHA-256 `15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3`. No new original ARM or JavaScript instructions, Firmware process, browser, live gateway or bus were executed. Host code inspected original bytes and derived selected arithmetic/string results.
+
+The [subsequent static continuation](f454-2.0.51-continuation.md) joins selected backend/frontend temperature paths and the distinct VDE discovery consumer, and identifies an older energy producer. The earlier source reports remain preserved; the current boundaries below note those refinements.
+
+## Results
+
+| Question | Result | Remaining boundary |
+| --- | --- | --- |
+| Does this package declare gateway `N_CONF = 15`? | Yes: `/art.xml` declares `mynconfdiag=15`; static parser and conditional setter dataflow are identified | Meaning of `15`, live persistent value and actual startup/write remain unproved |
+| What happens to short temperature codes `501..511`? | Selected decoder preserves their digits; the configured frontend bundle treats four-digit string inputs numerically | Physical validity, sentinel semantics and runtime behavior remain unresolved; the [continuation](f454-2.0.51-continuation.md#temperature-frame-to-json) recovers the selected static backend/frontend join |
+| Does the selected direct DH branch publish its local energy frame? | No continuing consumer exists in the inspected normal handler/direct-caller route; return `0` bypasses caller output processing | Other paths, physical DH support, branch intent and longer payload assembly are separate questions |
+| Does the factory VDE-enable leaf control media activation? | No controlling consumer established; concrete sibling configuration consumers and an independent camera-status gate recovered | The flag must not be equated with board capability, role, discovery, status or service readiness |
+
+Evidence and collector identities are retained in the [targeted provenance record](../../project/review/firmware-analysis/f454-2.0.51/targeted-provenance.json). Report counts and host consistency checks are not execution or hardware coverage.
+
+## Packaged identity declaration
+
+The original normal image contains `/root/art1/mynconfdiag` with decimal text `15` in `/art.xml:8`. `liblghal`'s XML text callback checks `root` and `art1`, matches `mynconfdiag` at virtual address `0x126dc`, and stores the duplicated text in result-array offset `12` at `0x126f8`.
+
+The inspected `configure_device(bool)` route loads `/art.xml` through `load_device_data` and passes result slot `3` to `hal_set_nconfdiag` at `0x8880`. A separate conditional synchronization route can prefer `/art.xml.<codename>` when that file exists, otherwise the base file, then compare the parsed value with the getter and call the setter on mismatch at `0x8ac8`. These are static conditional paths; actual parser execution, generation detection, caller selection, storage contents and successful writes are not established.
+
+The earlier inspection found the getter/cache and persistent offset `0x15e` but did not identify a packaged declaration. The new evidence closes that provenance gap. It does not turn `15` into a count of physical configurators, a proven sentinel, a Module count or a universal gateway value. See [Device Identity](../../diagnostics/dim1-device-identity.md#address-context) and the [identity report](../../project/review/firmware-analysis/f454-2.0.51/targeted-identity-report.txt).
+
+## Temperature conversion and client representation
+
+The short B5 decoder reconstructs an unsigned byte plus `256`: `F5..FF` becomes `501..511`, formatted as `0501..0511`. No range clamp, sign operation or special-value substitution occurs in that bounded formatter route. This does not establish that a physical probe emits those codes.
+
+The packaged `jquery.myhomeapi.js` converter at lines `2221..2236` drops input character `0`, then treats the remaining three decimal digits as tenths. Its equivalent logic is present in the `main-built.js` bundle selected by `index.html`. Controlled-zone and external-probe views call the shared renderer. The following are **conditional host derivations for four-character string inputs**, not measured temperatures or executed browser results:
+
+| Input string | Derived Celsius label | Interpretation |
+| --- | --- | --- |
+| `0501..0509` | `50.1..50.9°C` | No interval-specific sentinel mapping in the inspected converter |
+| `0510` | `51°C` | Ordinary number-to-string formatting omits `.0` |
+| `0511` | `51.1°C` | Numeric formatting does not establish a valid physical range |
+| `0000` | `-°C` | Numeric zero fails the renderer's truthiness test; not proof of a missing sensor |
+| `1010` | `1°C` | Leading character discarded; differs from the historical touchscreen signed converter |
+
+At this first checkpoint the backend event mapping was unjoined. The [continuation](f454-2.0.51-continuation.md#json-event-to-renderer) now establishes preservation for selected mapped strings and their frontend handoff; the `1010` result remains a static representation finding rather than an observed live display defect. The separate signed extended `DIMENSION 15` decoder and short unsigned `DIMENSION 0` route must remain distinct.
+
+The Celsius setpoint spinner is independent: indices `1..71` use `0.5*i + 4.5`, giving `5..40°C` in `0.5°C` steps. Neither measured-value pass-through nor the display formatter widens the documented setpoint domain. The original translation link points into missing `extra/2/translations`; no unavailable label or physical error meaning was invented. See the [temperature report](../../project/review/firmware-analysis/f454-2.0.51/targeted-temperature-report.txt), [host model](../../project/review/firmware-analysis/f454-2.0.51/targeted-temperature-model.json) and [canonical temperature dimensions](../../functional/who-4-temperature-control/dimensions.md#f454-2051-implementation-boundary).
+
+## Direct DH energy candidate lifetime
+
+The selected `bt_supervisione` direct-DH route formats its OPEN-looking candidate into local stack storage at offset `472`. The final `sprintf` at `0xc2e0` immediately branches to epilogue `0xe8e0`, which returns `r5=0` and releases the local frame. The actual direct caller tests that zero at `0xa0ec` and resumes receiving, bypassing its correlation/output route. The candidate is neither a returned string nor the caller's OPEN output Object. Dead stack bytes need not be erased for this lifetime conclusion.
+
+A distinct outgoing `4xx` query route does exist: table lookup formats internal `$06D1A2F233%02X%02X0000`, records request state and calls the send helper. Its request-state return does not prove delivery. The selected incoming DH discriminator uses `D2`/`DC`, `A2`, `F234`, and a conditional receive-wrapper category `4`; this category is not an OPEN frame kind or WHO identifier. No physical query/reply association was observed.
+
+The concrete implication is that the presence of the `401..428` formatter table and labels is insufficient to advertise those dimensions as emitted responses on this route. The prior continuous-history path remains a separate software publication result. No defect, intent, universal unsupported feature or lack of every alternative producer is inferred. See the [energy report](../../project/review/firmware-analysis/f454-2.0.51/targeted-energy-report.txt) and [canonical energy scope](../../functional/who-18-energy-management/dimensions.md#f454-2051-direct-dh-path).
+
+## VDE controls and unresolved enablement
+
+The available `GetConfigValue` implementations in `libcommon` and `libopen` are concrete generic XML readers. Finding them does not identify a reader of every factory leaf. The recovered `libbt_upnp` PI/WebSrv callers supply sibling paths under `vdes/guardunits/item` and `vdes/alarmlogger/{enabled,address}` to configure CDP/alarm-logger addresses. They do not read `communication/vde_enabled`; their exact runtime host/binding also remains conditional.
+
+The packaged camera frontend separately checks auto-switching state, then `get_vde_iu_status`; a returned split field at index `4` equal to string `0` allows its camera-switch action. The original API helper constructs the seven-byte prefix `*#8**35` and appends another global string before exchanging it. The [continuation](f454-2.0.51-continuation.md#vde-discovery-consumer-and-initial-status-request) establishes the initial suffix `##`; the actual result schema and a factory-flag connection remain unestablished. This is a static UI/status path, not a complete captured frame or active camera proof.
+
+New exact-key searches found no literal `vde_enabled` in the inspected regular frontend, `/usr` and `/etc` scopes. They exclude archive interiors, constructed names, absent optional content and runtime replacements; they do not prove the leaf is unused. Factory default, WHO 8 role, WHO 7 board profile, discovery controls, process eligibility and camera status remain separate. See the [media report](../../project/review/firmware-analysis/f454-2.0.51/targeted-media-report.txt) and [WHO 8 implementation note](../../functional/who-8-video-door-entry-telephony/README.md#f454-2051-camera-availability-path).
+
+## Remaining work
+
+The next valuable steps require genuinely different evidence: broader temperature/runtime evidence, a separate DH producer/consumer or valid transaction evidence, and an actual factory-enable consumer. Repeating the recovered formatter, generic XML-reader names or the same exact-key scan cannot close these joins. Missing persistent/optional inputs, runtime initialization, physical semantics and broader dossier-to-reference reconciliation remain open.

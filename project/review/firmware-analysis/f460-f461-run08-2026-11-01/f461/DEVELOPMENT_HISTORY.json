@@ -1,0 +1,15 @@
+{
+  "cause": "v1 readelf header hexadecimal conversion failed before outputs",
+  "source_interpretation_changed": false,
+  "guards_changed": false,
+  "prior_files": {
+    "REPORT.md": "7a4fdc98c06f7dcf5239bbe5032db962ba26e424ac012fe29ca0e7dfcd5db6a5",
+    "collect_boot_v1.py": "e1005c31a6a940074eff48652bf97aa9e5607291103fb6f7dbb502a741ebf8d8",
+    "FIRST_FAILURE.json": "a5c9e7ab249e4477325c2ba04f2c5f1825bba9565643bb94d32e726a620c7bdd"
+  },
+  "new_files": {
+    "REPORT.v2.md": "88568663f780e22040ffe7fe6f50530fd620e7ae25133f594937ae16f9dff312",
+    "collect_boot_v2.py": "8796e3b7c83b89fa1cbe01e00b9a69ae770f645310eabaf2ebc2306d99e3738c"
+  },
+  "parent_snapshot": "work/f460-f461-comparison/2026-11-01-run08/integration/f461-before-v2"
+}

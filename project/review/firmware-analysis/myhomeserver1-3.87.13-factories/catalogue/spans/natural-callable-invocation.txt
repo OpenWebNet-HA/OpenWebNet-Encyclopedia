@@ -1,0 +1,33 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a1400:
+   a1400:	9c02      	ldr	r4, [sp, #8]
+   a1402:	f7ea fec3 	bl	8c18c
+   a1406:	4606      	mov	r6, r0
+   a1408:	6820      	ldr	r0, [r4, #0]
+   a140a:	f05e feb7 	bl	10017c
+   a140e:	4683      	mov	fp, r0
+   a1410:	6820      	ldr	r0, [r4, #0]
+   a1412:	f05e fecf 	bl	1001b4
+   a1416:	4680      	mov	r8, r0
+   a1418:	6820      	ldr	r0, [r4, #0]
+   a141a:	f05e fed9 	bl	1001d0
+   a141e:	693b      	ldr	r3, [r7, #16]
+   a1420:	e9cd 8b07 	strd	r8, fp, [sp, #28]
+   a1424:	9006      	str	r0, [sp, #24]
+   a1426:	2b00      	cmp	r3, #0
+   a1428:	d05b      	beq.n	a14e2
+   a142a:	ab06      	add	r3, sp, #24
+   a142c:	f107 0108 	add.w	r1, r7, #8
+   a1430:	9300      	str	r3, [sp, #0]
+   a1432:	aa08      	add	r2, sp, #32
+   a1434:	9b04      	ldr	r3, [sp, #16]
+   a1436:	f8d7 8014 	ldr.w	r8, [r7, #20]
+   a143a:	9803      	ldr	r0, [sp, #12]
+   a143c:	47c0      	blx	r8
+   a143e:	Address 0xa143e is out of bounds.
+

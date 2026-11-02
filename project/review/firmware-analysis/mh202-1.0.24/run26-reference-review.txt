@@ -1,0 +1,33 @@
+# Run26 WHO14/WHO15 curated-reference boundary review
+
+PASS. No refinement requested. Independent read-only documentary review of the NEW boundary note, two exact pre-edit reference snapshots and12 saved locators. Only this NEW review file is written; no author report/model/output, root coordination, repository/reference page, old index or prior snapshot was changed. New original/native/vendor/parser execution, source-specification/database/oracle re-verification, target process/OS, services, network/devices and physical observations are0.
+
+## Preservation and locators
+
+Both frozen files match their recorded exact old source hashes. Each of12 locator records agrees with the same supplement path/hash and exact one-based line/full excerpt in its snapshot. There are11 distinct page/line positions because the leading-zero line20 is deliberately cited twice; record count is not a completeness measure. The separately pinned prior SOURCE_SNAPSHOTS index still has14 document rows; this two-page supplement does not retroactively expand that completed historical validation or rewrite its old pins.
+
+## Boundary assessment
+
+The WHO14 note correctly preserves attributed MyHOME_Suite ScenarioDevices actuator-Object evidence: WHAT0 Lock actuator and WHAT1 Unlock actuator, selected WHERE placeholder/context and lack of a dedicated public WHO14 PDF in the current curated corpus. It does not manufacture an independent universal address domain, extra WHAT values, physical locking, all-target support or a WHO0/WHO17 scenario-management identity. Scenario action use is distinct from scenario storage/control protocols.
+
+The WHO15 note keeps button00..31, WHAT#1/#2/#3 phases and separate source WHERE forms distinct. Published leading-zero text is retained without replacing it with a firmware-wide normalization claim. WHERE#3 and WHERE#4#I4 remain source-address qualifiers, not button-phase parameters. A compiled formatter may establish only its own padding/field construction under source premises; that does not validate the entire published grammar, physical press/hold interval or universal address acceptance. Local signed/unsigned conversions similarly need upstream coherent input/provider premises rather than an arbitrary-input defect/support verdict.
+
+CEN versus CEN+ remains distinct: WHO15 button/phase/source fields do not become WHO25 virtual-Object fields. Historical scenario labels attached to configured CEN actions do not make button numbers universal execution/enable/disable controls. A software ACK/NACK request or separately supplied reverse text is not proof of actual SCS transmission, measured timing, causal exchange or physical behavior. The note maintains original static byte construction, finite host ledgers, isolated helper execution, historical client/database content and physical observation as different evidence methods.
+
+This review reads the curated pages as they stand. It does not fetch/re-audit their PDFs/databases, reproduce an oracle or corroborate hardware, and it does not independently validate the pending MH202 WHO14/15 firmware source reports. A later implementation note may link independently reviewed build-specific paths while retaining these attributed labels/forms and full-source/Device gate limits. No new source/firmware semantic claim is promoted by this reference PASS.
+
+## Exact reviewed identities
+
+| Artifact | SHA-256 |
+|---|---|
+| `reconciliation/run26/REFERENCE_BOUNDARIES.md` | `79e122c1ef5beabca8ba1659514eaf72f9307d2dba841bee7c46a9da4a5e497c` |
+| `reconciliation/run26/reference-locators.json` | `662f84e5f02ee4dfc9770d2da66f98ea26f0dffa32879a0daf2f2838a4b72bfc` |
+| `reviewed/run25/WHO14_WHO15_REFERENCE_PIN_SUPPLEMENT.json` | `d2109989cbe755c34081b69030272bd5a34809bdd68f0d1dce5c26d2ce32054d` |
+| `reviewed/run25/SOURCE_SNAPSHOTS.json` (separate prior14 index) | `569b4cf6a3da74eda3d6955bbb62a07a586f44c1806e0cee187ad0fc395cc77e` |
+
+| Preserved old page | Exact old source/snapshot SHA-256 |
+|---|---|
+| `functional/who-14-special-commands/README.md` | `19fe928cfe21226d8595930b12be3696df45d8caf18bcc9a21867b0cb22edd33` |
+| `functional/who-15-cen/README.md` | `daff88e28ce1273ba2d3ded02f40192a0478ce40765dcdb3a4dd114af3b5b00d` |
+
+Paths in the supplement are repository-relative. This PASS applies to the exact boundary-note/snapshot identities; new firmware findings require separate source and integration reviews.

@@ -1,0 +1,10 @@
+# FIFO run28 wording refinement
+
+Parent preserved the exact first report, collector and manifest under validation/run28/FIFO_BEFORE_WORDING before requesting this separately named report. REPORT.v2.md is the authoritative prose. Original REPORT.md remains unchanged at SHA256 5e5fe4a5a42a8e143c32d7d8819e57da278beb9ec9bb03ad4894814c4442d647. New REPORT.v2.md SHA256: 59a19126dfca9f0ff909b04f7e70af1f9df5ec2f09f368b70c93942fb0d81d5c.
+
+Only these two exact substitutions were made:
+
+1. `Original instructions, native helpers, vendor processes and target/host I/O calls executed: **0**.` → `Original instructions, native helpers, vendor processes and original target open/read calls executed: **0**.`. Host analysis necessarily reads files; zero refers to original target open/read execution, alongside zero original instructions/native helpers/vendor processes.
+2. `Further work would require a separately authorized non-transport producer source or actual configured script provenance` → `Further progress needs an identifiable non-transport producer source or actual configured script provenance`. Existing user authorization already permits bounded internal static work; the unknown is a usable source/provenance, not fresh permission.
+
+No source finding, code, generated evidence, result, count, input or first snapshot changed. Collector SHA256 remains 1525af71d5f58d6759044032cc2db378e6b3b235c8d5f520f61204540c00b0ec; original manifest remains 3aee60641c10b2f5a2d6b81c69dd2acf11fdaba26e39829bafa60d3577f80565. Its --check intentionally reproduces and pins immutable v1, not the separately versioned prose.

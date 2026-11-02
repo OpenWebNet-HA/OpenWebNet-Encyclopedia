@@ -1,0 +1,41 @@
+# Independent F460 input/file-open prefix review
+
+**PASS for the narrowly bounded original-source facts, with the disclosed preparation/order defect retained.** This verdict does not endorse the failed pre-read workflow, erase its history or establish a configured scene, complete file-to-JSON trace, parser acceptance or runtime behavior. I independently checked the frozen canonical packet and own original bytes; I authored neither its source report nor its preparation records.
+
+## Exact identity and reproduction
+
+Source root: work/configured-scene-module-investigation/2026-11-02/source/f460-scene-input-producer. Canonical REPORT.md is6279B/SHA2563cb67adf71f4a4e8fde4ddc3eae8367e8fc4169519179c8a09685ee9c2eaaa8a. Collector collect_input_v1.py is15398B/SHA256d3c2f57fc9e30e9c7c506efb2813c63e4fc1a63d8c94e3e9dbe58725e5fb6910. Actual canonical --check passed with five outputs/eight immediate firstcopies, one512B source span and original execution0. I independently checked all canonical output hashes/sizes, exact collector/output/preparation/postscope copies and six direct input pins. No old collector/native corpus was replayed.
+
+Own scheduling_manager remains2161128B/SHA2565017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62, ELF64 little-endian ET_DYN/machine183. Own PT_LOAD mapping, full raw512-byte span10fe60..110060/endexclusive, all44 fixed words, selected local branch arithmetic, eleven import call targets/PLT rawbytes/GOT relocation records, two imported-table metadata records and key stack immediates match. No instruction at110060 or beyond this bound was read or needed for this review; imported PLT/table metadata and the inherited permitted caller are separate evidence scopes.
+
+## Procedural history is a real defect, not clean preflight
+
+PREPARATION_HISTORY.json records the wrong inline105768 precheck assertion before a required SOURCE_AUTHORIZATION file could be created. The next tool display continued despite that failed preparation. The exact1907B history/SHA25647c763a29a29837201c5f530842446a01b68a6cdce8b6667c17dc2a62b53dbde matches the root parent snapshot and immediate preparation copy. No pre-read authorization file is retrospectively asserted. The failed inline source was unsaved: no original failed-script/report/output or terminal-file hash was invented.
+
+Root's actual body authorization already limited the static range to10fe60..110060. PRODUCER_POSTREAD_DECISION and POSTREAD_SCOPE honestly authorize canonical verification of that already-read range plus the correct inherited caller/import metadata after the disclosed mistake, with no additional body/neighbor/provider route. Canonical generation requires the actual postread records as inputs and preserves their exact firstcopies. This establishes the scoped correction process, not successful completion of the earlier pre-read-file requirement. No original/guest execution or firmware fault is implied by the host assertion.
+
+One reviewer inline metadata lookup assumed a field named start in the inherited span dictionary and raised KeyError before any review artifact was written. I used its actual retained disassembly/context afterward; no new source-body expansion, prior saved script/hash or failed review-report candidate is invented.
+
+## Positive source contract
+
+The inherited original constructor context has the actual BL at105760→10fe60. Its retained entry-to-call instructions do not overwrite incoming X0 or X1 before that first call; the SceneRunner owner/type interpretation remains the earlier reviewed context, not a new class or natural-rootcaller proof. Wrong105768 instead lies after the call in that immutable context and is not the source callsite.
+
+Within the newly checked prefix, destination X0 is saved X19 and incoming source X1 is saved X21. Before the first local request,10ff0c loads that supplied source's first two64-bit words;10ff1c forms one endpoint by addition and localf6e60 receives the range into SP+0xd0(208decimal). This is a source request under valid unchanged source/object/ABI premises; f6e60 remains opaque and supplies no file-content/JSON semantics here.
+
+Actual relocation metadata identifies path::_List and _M_split_cmpts construction requests followed by filesystem::status. The selected arithmetic forms((low32result+1)&0xff); original unsigned<=1 branch goes11047c outside the packet. No file-type enum, actual existence/permissions, provider success or whole failure policy follows. Subsequent cleanup/provider requests and reused stack storage do not establish an unchanged semantic path object.
+
+Local stream setup uses actual ios_base/basic_ios/basic_filebuf imports. The two GLOB_DAT records name candidate basic_ifstream VTT/vtable data under ordinary binding/ABI premises; they are not observed live pointers or a full provider contract. Own ADD-immediates establish SP+0xd0=208decimal and filebuffer SP+0xe0=224decimal. At110000 the retained source X21's firstword becomes X1, while X0 is the filebuffer and W2 is numeric8. The actual11000c/PLT24220/GOT21e780 relocation names basic_filebuf::open. Nearest objdump labels are not adopted as import identities. Appropriate valid C-string/source storage, normal binding and provider outcomes remain premises; no private configured filename or actual open is observed, and numeric8 is not promoted to a complete openmode domain.
+
+The same open return word is retained X2 at110010, and110020 tests X2 for zero before reaching a later clear request. Zero goes110144 outside the bound; nonzero requests basic_ios::clear with numeric0 after a table-derived receiver calculation. This confirms a distinct return channel and local gate, not a complete open-error outcome, exception/lifetime policy or successful constructor return.
+
+## Exact stopping point
+
+Selected nonzero continuation requests Json::Value construction atSP+0x38(56decimal) with numeric0 and CharReaderBuilder construction atSP+0x60(96decimal). At the end of the permitted prefix the registers are prepared as builder/streamcandidate/value/error-storage addresses. Original X21 has been repurposed to the Value address, and SP+0xd0 is reused from temporary path to streamcandidate. Reused register/storage is not same unchanged semantic object/value.
+
+The span ends after11005c. It contains NOparse call/result, member/type validation, accepted input, parsed-object publication or full file→JSON→scene producer closure. I did not inspect the next instruction or any provider/extra helper body to complete a narrative. The prior filesystem-admission gate and old construction span compose only under their independent predecessor, effective-binding, valid-object/source and ordinary-return premises. Actual configured scene and natural caller remain unavailable/unproved.
+
+## Disposition
+
+Root may promote the local supplied-source→file-buffer-open request/result gate and reader-setup facts with these premises and the disclosed procedural defect. No full schema, complete loader/filter, provider binding, configured runtime, thread/ownership/concurrency, public protocol behavior or physical effect is established. Source/guard counts are selected reach/integrity, not complete coverage. No MHS ARM32/MH202 offsets or product roles transfer to this own AArch64 object.
+
+No original/vendor/helper/native/emulator/provider/JSON/SQL/model/fixture/targetOS/service/network/bus/physical execution, remote write or repository edit occurred in this review. Original/synced/source/completed evidence and older execution ledgers remain unchanged. Closed receiving/output/transport/auth/session/framing/MQTT/libjel/frame-preparation/platformfallback/excluded-process/F450helper-equivalent routes remain closed. Wider Device/source/runtime gates are still pending.

@@ -1,0 +1,22 @@
+[
+  {
+    "bytes": 1406680,
+    "path": "work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager",
+    "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26"
+  },
+  {
+    "bytes": 5611,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/image_vfs.py",
+    "sha256": "890e3526e2fc29c630cb45dad15d91fecb6b32007c0be04e5af28c85a48f1ae4"
+  },
+  {
+    "bytes": 43131,
+    "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md",
+    "sha256": "5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855"
+  },
+  {
+    "bytes": 10058,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime/worker-ownership/REPORT.v2.md",
+    "sha256": "a065946b921909290bf1a88ea5ce9064b0487c5f99625a6d72e7b460cd45af92"
+  }
+]

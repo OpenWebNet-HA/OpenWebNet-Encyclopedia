@@ -1,0 +1,31 @@
+# Independent review — MH202 protocol/run9
+
+**PASS within the stated prepared-state/static scope; no material correction requested.** Reviewed the final report, static collector, fresh isolated harness, saved leaf results, original spans/words and manifest. This reviewer independently reran the host static collector only, not the original-instruction emulator. The native-result assessment below is a source/saved-output audit, not an independently rerun native experiment. Reviewer original ARM/vendor/parser/JS/PHP execution and live I/O:0.
+
+## Independent verification
+
+`collect_evidence.py --check` reproduced8 outputs/6 input identities/4 spans/18 words/2 host cases without writes. Independently mapped original normal-image libopen PT_LOAD bytes via ImageVFS, checked all4 original span hashes/all18 asserted words and all13 manifest entries. Independently recomputed saved per-leaf trace lengths, primitive-event counts, separate EXIT counts and aggregate accounting. Every saved original VA is aligned/in its selected recorded helper range and file-backed original bytes; this audit does not itself regenerate dynamic traces.
+
+The original libopen identity is `/home/bticino/lib/libopen.so.0.0`, SHA256 `868eeb717020232c11623224df17bd6b2034fffc2fb80043c39c34b76310fb04`.
+
+## Source and scope checks
+
+- WHO suffix helper0x9fa8 copies the supplied WHO field into90-byte stack buffers and strchr checks `#`. For supplied WHO1001, the zero-result branch0xa00c→0xa234 bypasses its object stores and invalid-kind1 store0xa230. The function name does not justify treating this path as WHERE/device-address validation.
+- Interface helper0xa24c clears/copies object+0x5dde from WHERE+540 before its suffix check. WHERE0 takes0xa2f0→0xa410 and does not reach interface flag+0x6240 or invalid-kind+0x623c stores. The report correctly distinguishes these actual same-value fullDove writes from “no writes”: the prepared object comparison remains equal because fullDove was already supplied as0.
+- Original IsCorrect continuation0xb0c4 checks invalid kind1 before each helper, then returns after the selected helper calls. Conditional final kind4 follows the earlier static parsed-field premise plus these helpers. No whole IsCorrect/builder/parser execution, caller interpretation or formal boolean acceptance is promoted from it. Saved r0 observations are not acceptance assertions.
+- The harness privately prepares kind4/WHO1001/WHERE0/DIM1/raw/value-count/value strings and zero metadata. It does not derive those fields by running the earlier native builder/parser. Original image pages become read/execute only; only private object/stack are writable. Selected helper instruction ranges are allowed; unknown PC/interrupt/protected or unmapped access abort. The three intercepted PLT entries implement bounded private memset/strcpy/strchr and return through LR. EXIT is a separate private stop boundary. The source does not forward real OS/device/socket operations.
+
+Saved accounting is exactly **4 leaf invocations on2 prepared objects:144 original instruction visits+24 host primitive callbacks+4 EXIT callbacks=172 code hooks**. Per case WHO helper28/5/1=34, interface44/7/1=52. Original-instruction visits exclude intercepted primitive and EXIT entries. The10000 caps bound each invocation. The isolated author results therefore provide a narrow prepared-leaf check; this review does not rerun them or merge parent/earlier execution corpora. The package-RECORD verification loop and saved tool identities are inspected as analysis-tool provenance, not firmware initialization or provider proof.
+
+The report keeps `native_full_parser_accepted:null`, natural raw provenance, live provider/initialization, descriptors/publication/hardware/model meaning unresolved. Synthetic2629 remains arithmetic fixture data. Two different value/raw candidate objects intentionally share the same suffix-helper path and are not claimed as new protocol coverage. No credential/authentication/closed framing branch is investigated by the inspected code.
+
+## Exact reviewed hashes
+
+- `protocol/run9/REPORT.md` SHA256 `a64de16441ddefa4b01ed77e9480cc30aa172b7bc46270f97b1147024ba62653`.
+- `protocol/run9/collect_evidence.py` SHA256 `8863940ae0730088c49b67710461b4d09d15f2cbff47612306c69d9f746bb030`.
+- `protocol/run9/emulate_normal_suffix_helpers.py` SHA256 `e71983f69f7b73eb4a79c1c4fc85e701fdd2941c4289bc6b396934d5d693243e`.
+- `protocol/run9/leaf-results.json` SHA256 `73cb6347f8ae129ea6898fae690d97d12a08fb0215ad0da594b5d57dbc4f7ce3`.
+- `protocol/run9/output-manifest.json` SHA256 `0e769991999edc8e3aec229394ff843dbe9a8059c6429578b53fcbdef567f58d`.
+- `protocol/run9/original-spans.json` SHA256 `32cbf0113a01bead9ca885909909f0979c0ed279166794e8b45ac22e7386ca28`.
+- `protocol/run9/critical-words.json` SHA256 `985484fa3b6c718e83ea61f67b8faa921f3bbef5c956fb35a31cafd377aff47c`.
+- `protocol/run9/verified-tool-package.json` SHA256 `1916bab249ce486d9520c7fe10b965cdd8271a09d0a3e03db5cae6f597d26f9a`.

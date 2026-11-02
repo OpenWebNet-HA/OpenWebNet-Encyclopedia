@@ -1,0 +1,39 @@
+# Independent source review: C JSON data provider
+
+PASS; no author correction requested. This reviewer authored the separate catalogue consumer batch, not this provider candidate. The review reran the host static collector `--check` and independently compared selected original bytes, literal arithmetic, saved helper spans and resolved-node host cases. No original instructions, native harnesses, JSON parser, target OS, network/transport, stored expression or physical operation was executed. Author files remain unchanged.
+
+## Exact reviewed candidate
+
+Paths below are relative to `providers/`.
+
+| Artifact | SHA-256 |
+| --- | --- |
+| `REPORT.md` | `653c93560b2a2604ad7973d62e4eabc4d64c41e645e5ece3b4bbd979b4438c9f` |
+| `collect_json_provider_v1.py` | `e42d4032a27adb9afd577e9de14573030ea6d83b2eecb73c0206e352bff6e024` |
+| `OUTPUT_MANIFEST.json` | `692c73f2b0b391ed4da2fc99ef2f9e7daae1a35220f3ba936edeb95a07f9b5f9` |
+| `ORIGINAL_SOURCE.json` | `2438ee15964d6dfa979bf4c954aea0667f558c2d397131b8c7a891d03ae9b0b7` |
+| `RESOLVED_NODE_HOST_CASES.json` | `1e2c2e8891deb84d784133563129217bfb396753d714608af1db71973f5dd7ce` |
+| `PROVIDER_DECLARATIONS.json` | `92a702781657f20c8cd34976651dc5994acea70e14f6327d21eca53570240ea3` |
+| `first-candidate/INDEX.json` | `e67efdeae8d8eec41c96349e3f572c00af0804fae4bdd660a190f3af5a09d2aa` |
+
+## Source and method verification
+
+The unchanged collector reproduces 16 outputs, ten original-source spans, eighteen exact file-byte assertions, five public literal joins and eight host cases. Independently parsed the original library ELF load segments and verified all ten source-span hashes and all eighteen asserted ranges against SHA-256 `d78437fdb23fb78ba881dbb22a14570b441a178e31c84244b126a5dfbf7866a7`. Recomputed all five Thumb PC/literal-pool target addresses and literal bytes. All saved original input hashes agree. Verified the output manifest, all seventeen indexed first copies, and the separately frozen report copy; no historical candidate was replaced.
+
+Direct dependency and selected symbol declarations support the report's limited family distinction: matrix_mx declares the C libjsonmsg provider; scheduling_manager declares JsonCpp and selected C++ Json::Value/parseFromStream imports; the C provider requests JSON-GLib/GObject/GLib. This is not a complete loader closure or live binding proof. No C message/node layout was transferred to the C++ scene model or the separate C OPEN object.
+
+## Critical source contracts
+
+- At original `new_json_msg` 0x3bd8..0x3c48, NULL output-slot pointer returns1. Selected normal construction requests zeroed20bytes and a separate zeroed32-byte root; duplicated `2.0` goes into object+0, root pointer into object+16, and root word0 is explicitly0. The ordinary allocator/duplicate-string completion premise is essential. No whole allocator failure or object lifetime contract is claimed.
+- `add_node` 0x36e0..0x3798 independently agrees with the fresh32-byte node shape: supplied kind+0, duplicated name+4, value type+8, selected payload+16, child-list slot+24 and parent+28. The Boolean wrapper supplies kind2/type20, and the selected branch stores the low supplied word unchanged. The report accurately avoids universal normalization to0/1 or treating these tags as OPEN/application status numbers.
+- `generate_json_ack` 0x3f70..0x3fdc checks the identifier and constructor return; its normal path duplicates ID into message+12 and requests `add_val_bool_node(root,"result",1)`. It retains the constructor status0 and does not test the node-builder return. This creates local data under the stated assumptions, not a receipt from a device, action success, bus response or actual send.
+- Original `is_json_response` requires a selected named result node with word0=0. `is_json_ack` delegates through the Boolean value reader, whose selected leaf requires kind2/type20 then returns word16. Thus the generated result node can yield ack1 and response0 under an effective same-definition lookup/binding composition. This is not an inconsistency or standards defect inferred from names. The noncanonical7 fixture returns the raw7; it is not an accepted JSON input or observed Boolean value.
+- NULL/missing/wrong-kind/wrong-type and false results remain distinguishable premises that may collapse to return0; the report does not claim that return0 identifies a complete failure cause. The error helper's selected test indicates node presence, not a valid error schema or observed failure cause.
+
+The lookup boundary is accurately retained: `get_node_by_name` supplies selector4, while the inspected recursive body walks child lists and may descend. As a narrow review crosscheck, I also read the original intermediate wrapper at0x48c8..0x4908: it supplies sensitivity selector1 and tail-requests `get_node_by_name_and_type_sens`. This supports the declared selected composition without inventing top-level-only matching. GLib lists, duplicate keys, parser-produced trees, actual lookup results and imported interposition remain premises, not executed findings.
+
+Independently recomputed all eight saved host-case outcomes from the explicit resolved-node fixtures, with no parser or original helper call. Their guards match the source comparison/store branches. The review does not promote those cases into full API, serialization, natural application caller, accepted input or physical coverage.
+
+## Scope conclusion
+
+Fresh allocations and local helper dataflow are well supported by exact current source, with compiled helper calls distinguished from provider behavior. The report keeps C versus C++ and JSON versus OPEN namespaces separate, bounds recursive lookup and live binding, and avoids successful action/transport/physical claims. No source change or further investigation is required for this bounded candidate.

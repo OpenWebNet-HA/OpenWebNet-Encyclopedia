@@ -1,0 +1,65 @@
+{
+  "boundaries": [
+    "complete serializer/reparse consistency",
+    "fullotherfield/operatorvocabulary andrawgrammar",
+    "suitablecachedobject/control/lifetime/providerstate",
+    "effectiveproviders/FPexceptionalenvironment",
+    "naturalconfiguredworker/event/physicalmeaning"
+  ],
+  "compiled": {
+    "ID": 108,
+    "bytes": 184,
+    "class": "BnthConditionRunner",
+    "constructor": "0x103b08",
+    "enabled": 132,
+    "operator": 140,
+    "other_double_at168": "differentfield,notselected",
+    "predicate": "0x103c6c",
+    "selected_double": 160,
+    "selector": 144
+  },
+  "method": {
+    "original_execution": 0,
+    "provider/transport_auth_bodies_inspected": 0,
+    "semantic_host_fixtures": 0,
+    "target_calls": 0
+  },
+  "publication_consumer": {
+    "aggregate": "nonzero continues,zero failure; fullnormalaggregate inherited",
+    "entry_bytes": 4,
+    "generic_call": "actualprimaryvptrslot+8 ofselectedconditionpointer",
+    "normal_append": "samecompiledprimarypointer movedunchanged;sourceONEwordzero,end+4",
+    "scene_vector": 116
+  },
+  "raw": {
+    "bytes": 80,
+    "class": "BnthCondition",
+    "conversion": "importedJsonasDouble,notexecuted",
+    "enabled": 28,
+    "operator": 36,
+    "selected_double": 56,
+    "selected_presence": "modeABSENT,statusABSENT,setpointPRESENT",
+    "selector_store": 40,
+    "selector_value": 2
+  },
+  "record": {
+    "cached_double": "record+32 loadedD9",
+    "freshness/producer": "unclosed",
+    "key": "compiledIDstring108",
+    "miss": "103e30notfollowed",
+    "nonnull_and_suitable_type": "premise",
+    "provider_call": "0x103cfa\u21920x10e3d8",
+    "receiver": "0x167368"
+  },
+  "selected_comparison": {
+    "cached_source": "record+32\u2192D9",
+    "configured_source": "own+160\u2192D16",
+    "float_exceptional_environment": "unexecuted/unclosed",
+    "instruction": "VCMP.F64D16,D9;VMRS;EQ\u2192R4=1,else0",
+    "normal_return": "localcontrolcleanup\u2192resultR4normalepilogue",
+    "operator": 2,
+    "selector": 2,
+    "target": "0x104b10",
+    "units_or_domain": "notassigned"
+  }
+}

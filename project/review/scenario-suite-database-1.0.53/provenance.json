@@ -1,0 +1,103 @@
+{
+  "scope": "Read-only SuiteDB declarations and complete selected relationships, compared with existing reference/firmware evidence and original manufacturerPDF. No new native/vendor/physical execution.",
+  "database": {
+    "artifact_id": "myhome-suite-3.5.38-mh202-1902-lgg-scen-suite-db-eng",
+    "sha256": "ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29",
+    "bytes": 2542592,
+    "internal_version": "1.0.53",
+    "source_package": "1902_1.0_LGG",
+    "installer_version": "3.5.38"
+  },
+  "publisher_document": {
+    "artifact_id": "document-sha256-122d9c1a43e1610a",
+    "sha256": "122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927",
+    "bytes": 425272,
+    "address_table_page": 4,
+    "availability_page": 13,
+    "method": "Full page visual+original text independently inspected; exact alreadyregistered bytes reacquired"
+  },
+  "exports": [
+    {
+      "source": "scheduler/REPORT.md",
+      "published": "scheduler-report.txt",
+      "bytes": 12988,
+      "sha256": "08082d7321d3ed4ec5e3ecb903d973ee1a28a9b296bf1101941ffd52a3a344e8",
+      "transform": "None"
+    },
+    {
+      "source": "variables/REPORT.md",
+      "published": "variables-report.txt",
+      "bytes": 11487,
+      "sha256": "d092247c9b31a99f7b5499af59e55e505d0b33479c442fd36d9618cf4a55ee88",
+      "transform": "None"
+    },
+    {
+      "source": "addressing/REPORT.v2.md",
+      "published": "addressing-report.txt",
+      "bytes": 7882,
+      "sha256": "4584ccd771a7e941c038c491bc2c4a3ad3c77027429ccd9d4df8d7df614caac0",
+      "transform": "None"
+    },
+    {
+      "source": "reviews/BASELINE_REVIEW.md",
+      "published": "baseline-review.txt",
+      "bytes": 10654,
+      "sha256": "1dfc37e924c5b4d308125600defdbf8f5f1d0f00091b14357773fc843af24af0",
+      "transform": "None"
+    },
+    {
+      "source": "reviews/VARIABLES_SOURCE_REVIEW.md",
+      "published": "variables-source-review.txt",
+      "bytes": 7776,
+      "sha256": "abce9a514dc6e647848c0e2917f9c1af84bc81be76756183d543cf984930e37c",
+      "transform": "None"
+    },
+    {
+      "source": "reviews/SCHEDULER_SOURCE_REVIEW.md",
+      "published": "scheduler-source-review.txt",
+      "bytes": 8341,
+      "sha256": "5817428a561ca799d10a1775f1341557b38ed954a922408a9ff620c06959b445",
+      "transform": "None"
+    },
+    {
+      "source": "reviews/ADDRESSING_SOURCE_REVIEW.md",
+      "published": "addressing-source-review.txt",
+      "bytes": 7490,
+      "sha256": "f3cde28e4062cb056953bb9e644980a748eb68f53da382012aa18b3c4e28234b",
+      "transform": "None"
+    },
+    {
+      "source": "reviews/WHO25_SOURCE_REVIEW.md",
+      "published": "who25-source-review.txt",
+      "bytes": 8488,
+      "sha256": "c2c944999f93c23e4f702738fb76ac55d8211657baca759cc731a3f9d9127e10",
+      "transform": "None"
+    },
+    {
+      "source": "addressing/DEVELOPMENT_HISTORY.json",
+      "published": "addressing-development-history.json",
+      "bytes": 571,
+      "sha256": "795716c8f2492b707ce54434d750b82fe2c6e048b46946deb8474cd2ce0a8b54",
+      "transform": "None"
+    }
+  ],
+  "collectors": [
+    {
+      "path": "scheduler/collect_scheduler_v1.py",
+      "sha256": "7ea40b7e0620f0722613ffb0b0286c7ecf05cd99551028756b0365a19921ee99"
+    },
+    {
+      "path": "variables/collect_variables_v1.py",
+      "sha256": "7cf33829fb7821d1154f1e9558bf5cc06162d27ce063c2dc6b8b2587179cf160"
+    },
+    {
+      "path": "addressing/collect_addressing_v2.py",
+      "sha256": "28ac0e0d88e1a5cea3a4a6d7897caa25564687c6e94e46f8f271e7f64a4da038"
+    }
+  ],
+  "original_execution": 0,
+  "new_native_corpora": 0,
+  "source_files_edited": false,
+  "historical_dossiers_and_capture_bytes": "Unchanged; exact preedit source statements preserved",
+  "review_limits": "Source-aware firmware/manual comparisons; no repeated hardware/oracle test or full editor/compiler audit. Data-set rows and field text are not a universal support matrix."
+}

@@ -1,0 +1,43 @@
+# Independent review — MH202 protocol run4
+
+**PASS after one material input-identity clarification.** The corrected report/model distinguish the second text pointer from the original parsed-request object, and condition WHO1000 null-helper nonwrite on the second object's own successful parse. The final104-key ownership result and selected collector/ACK call-site findings are supported within their stated static bounds.
+
+This review used host static inspection only. No original ARM/JavaScript/PHP/vendor code, loader, emulator, network/device/service or actual filesystem/status/socket operation ran. Original instruction and hook counts remain zero. I wrote only this review; author source changes were requested from the author and preserved by them.
+
+## Reproduction and source checks
+
+The final collector `--check` strictly reproduces32 outputs from six pinned inputs, with25 original spans,104 constructor key-assignment chains/104 distinct keys, ten selected class relocations and twenty instruction-word assertions. All39 current producer-manifest identities match. The manifest includes preserved pre-review artifacts and excludes itself/future reviews.
+
+I independently mapped verified original ELF load segments to bytes and checked the25 span hashes. A separate host verifier checked all104 saved literal chains: original PC-relative load encodings identify the saved pool; PIC-base addition identifies the exact NUL-terminated original key bytes; the recorded direct calls target the original string constructor and the corresponding map-index PLT. All104 keys are distinct and only General owns `R0P0` in these constructor assignments. This checks original bytes/dataflow rather than merely accepting saved JSON counts.
+
+The static decoder is explicitly a bounded constructor-pattern recognizer, not a complete ARM interpreter. The report correctly conditions final ownership on the complete five-class factory and ordinary constructor/enumerator/map/smart-pointer completion, candidate same-build binding, no interposition and no later mutation. The original factory order, managed-map offsets and registry `map[key]`/assignment calls agree with that scope. Class names alone are not used to infer key sets. This closes the specific later-constructor collision question under those assumptions, not raw-parser acceptance or all possible runtime registry changes.
+
+## Response field and selected call paths
+
+Original outer response storage at this+48 and bt_device's translator pointer base+4/read base+52 identify the same response-type field. It remains separate from Boolean translation success and parser kind. Response0 bypasses the selected4/2 branches; the original object's measure predicate and selected DIM0 skip the20/21 and unsigned1..8 cases. The original WHERE decimal extraction, including the conditional leading-`#` skip, supplies the reported caller r7 premise.
+
+The marker read at `0x1eed8` and compare with `0xd5` select mode8 versus7 call-argument branches. Both branch directly to call `0x1f168`, so they bypass the unrelated `0x1f160/0x1f164` argument-adjustment entry; their supplied r3 values remain8/7. The saved call-entry stores agree with the described argument boundary. Collector body behavior, live descriptor state, timeout, response correlation and physical outcomes are not established.
+
+The returned result's zero/nonzero branch at `0x1f174` selects imported OPENOK/OPENKO getters respectively and reaches the send-helper import at `0x1f1a8`. This is a local return-dependent string choice/request, not a delivered acknowledgement or proof of the collector's detailed success/error contract.
+
+## Review correction: second input identity
+
+The initial report called the second parser's input “request text,” while its saved source showed a distinct slot: second text is loaded from **FP−28672−2228** at `0x1e908/0x1e924`; earlier original parsed-object use loads **FP−28672−2232**. The reviewed spans did not establish the two slots' source relationship. Accordingly original request WHO1000 could not by itself justify applying the WHO1000 null translator to the second local object.
+
+I requested that the author either establish this provenance or keep it explicitly conditional. The corrected report/model take the latter route: second text identity and parsed WHO are unknown, and helper nonwrite requires the additional successful second-WHO1000 premise. The author preserved four exact pre-review artifacts and a snapshot index under `development-before-review/`; current manifest verification includes that history. No earlier completed report was rewritten.
+
+This correction is independent of prior-marker storage: even under the additional second-WHO1000 premise, the libwhere helper leaves the structure-return destination unchanged, but whole-caller initialization/stores/aliasing of FP−224 remain unclosed. The final report appropriately assigns neither deterministic marker0/0xd5 nor an uninitialized-memory defect, reliable request-derived collector mode or physical failure.
+
+## Exact reviewed pins
+
+Paths are relative to `protocol/run4/`.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `abb25a5c162dc988447fc0b1bc756c65d9209c07d7bc58eee73748fa7faef5b5` |
+| `collect_evidence.py` | `8b10b836fb988548fd705c573bb738a09ec71aa88bce9cf52e5a5ce13dd14187` |
+| `conditional-registry-and-collector-model.json` | `bcb2c2140778792bd25597b72f31a021c29226fa3edb32944cca2410910ae403` |
+| `all-class-literal-key-assignments.json` | `4a43a7d353be7744ddc233c070d2d5f3358f8cde58fd798b9a4f3efabd97fb3d` |
+| `output-manifest.json` | `df6c97542883d72e258204606665ca1d62a8d834b29f36645275903c46ee7065` |
+
+The review applies to these current corrected bytes. It checks the listed constructor/source branches and provenance; it does not certify the full raw parser, second-buffer origin, complete collector, runtime provider binding, recovery environment or hardware support. Remaining questions in the final report preserve these boundaries.

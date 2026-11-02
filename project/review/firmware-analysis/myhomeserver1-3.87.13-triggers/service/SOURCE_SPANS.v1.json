@@ -1,0 +1,106 @@
+[
+  {
+    "bytes": 476,
+    "end_exclusive": "0x1488c",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "weekday-initializers",
+    "sha256": "477ee9d59137541e43082997303bc2e8a5ef8c04e805f67db1bd7cef8bc9ce9a",
+    "start_va": "0x146b0"
+  },
+  {
+    "bytes": 236,
+    "end_exclusive": "0xb8a08",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "weekday-tree-builder",
+    "sha256": "c4c0a46ec5e7e6c6055624b785de505ed6e74a37ee9770f159a284eb3156e3a4",
+    "start_va": "0xb891c"
+  },
+  {
+    "bytes": 204,
+    "end_exclusive": "0xb8ad4",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "time-fire",
+    "sha256": "bb58baacb6cde9b276b71139f36da73228df91e4e89e16cb6c55076fd388a765",
+    "start_va": "0xb8a08"
+  },
+  {
+    "bytes": 20,
+    "end_exclusive": "0xb8be0",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "deadline-accessors",
+    "sha256": "e83b4413bb45f9d3f360825b59444be8dd603883882ef3824d3eb4bf98014b4c",
+    "start_va": "0xb8bcc"
+  },
+  {
+    "bytes": 668,
+    "end_exclusive": "0xb8e7c",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "deadline-preparation",
+    "sha256": "1eba86a5ab2d23fd5fdabb51bc50bf33b6bbdefc73b0bf914335f1efd0b1e51c",
+    "start_va": "0xb8be0"
+  },
+  {
+    "bytes": 328,
+    "end_exclusive": "0xb9638",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "service-constructor",
+    "sha256": "3e32c001fc632d32bc6e1d371d1773e6389d631a4a703dc28c771b29e8f1cde9",
+    "start_va": "0xb94f0"
+  },
+  {
+    "bytes": 140,
+    "end_exclusive": "0xb98a0",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "service-register",
+    "sha256": "1226f2f9ea49fd4691574fe81c7e5d297549c746ea97d87003f44085c477f8b7",
+    "start_va": "0xb9814"
+  },
+  {
+    "bytes": 1952,
+    "end_exclusive": "0xbbd8c",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "service-worker",
+    "sha256": "a80252d410ad4f32191384cdc5da8d54ebdeb598668ba7b11ec47120f2e67ddc",
+    "start_va": "0xbb5ec"
+  },
+  {
+    "bytes": 8,
+    "end_exclusive": "0xa60b0",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "scene-start-wrapper",
+    "sha256": "cb8cef26b2f4119bede95225f9fea0dd952eac6197f33ebba8a5aaa01fd6fab2",
+    "start_va": "0xa60a8"
+  },
+  {
+    "bytes": 896,
+    "end_exclusive": "0xa7098",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "condition-worker",
+    "sha256": "27d2e0f6fd34b1e937dfb222481c427fba42482c58014893969a6f7b2da8fc73",
+    "start_va": "0xa6d18"
+  },
+  {
+    "bytes": 560,
+    "end_exclusive": "0xa8338",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "time-registration-handoff",
+    "sha256": "046a044b3c25850081869f35277d68bc55a611da5d6f4167da4ce1dd4cecc54c",
+    "start_va": "0xa8108"
+  },
+  {
+    "bytes": 116,
+    "end_exclusive": "0xb444c",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "callback-copy-helper",
+    "sha256": "21ec7052182a6ddd7f31ca06fe3c443bee63677a04bfecca06daeb16a5ad03e6",
+    "start_va": "0xb43d8"
+  },
+  {
+    "bytes": 44,
+    "end_exclusive": "0x959cc",
+    "image_path": "/usr/lib/libstdc++.so.6.0.29",
+    "name": "system-clock-provider",
+    "sha256": "cba1dd2841ddb9a1a16f97d4fc31c6772c64cbe70c638b45a080dc1f7c650afa",
+    "start_va": "0x959a0"
+  }
+]

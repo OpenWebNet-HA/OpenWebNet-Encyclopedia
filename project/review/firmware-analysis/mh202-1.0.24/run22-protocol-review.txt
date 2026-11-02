@@ -1,0 +1,42 @@
+# MH202 run22 independent protocol source and isolation review
+
+PASS. No author correction requested. Review scope is independent original-source, harness/containment and saved-result audit, with static collector reproduction only. I did not import Unicorn or replay original instructions. Earlier read-only consultation supplied original serializer/GLib locators and a guard-scope caveat; it made no author file or result changes. Parent native replay is separate.
+
+I ran `protocol/run22/collect_evidence_v1.py --check`:17 deterministic outputs,9 input identities,10 original spans and20 critical words pass. A separate ELF32/PT_LOAD mapper checked all10 raw-span hashes and20 words through verified ImageVFS bytes, all46 author-manifest entries and9 input identities, plus the41 digest-bearing analysis-tool files and RECORD. The current harness, first native results, tool manifest and collector exactly match their immutable initial-generated-v1 copies. Original/author/earlier files remained read-only; this is the only review file written.
+
+## Exact source-to-result join
+
+Each independent session executes the actual parser0x2704 and actual constructor0x1c80, then passes the same returned48-byte pointer to actual openmsg_to_buf0x1e9c. The harness reads the source48 bytes immediately before serialization, supplies that pointer directly, and compares the full bytes plus owned-string/parameter readbacks afterward. It does not reseed fields, parameters or kind. Both serializer r0 values are0 and the readback strings equal their exact selected inputs.
+
+WHO5's parsed WHERE is actually NULL. Original serializer0x2150..0x2158 branches to0x219c, resolving pool0x21dc/PICbase0xed50 to the original empty-string literal0x6644, then rejoins g_strdup0x215c. This is original NULL handling, not a model's semantic normalization or g_strdup(NULL) substitution. Kind1/no-parameters duplicates WHAT27; the original final format at0x6310 receives5,27 and the allocated empty text. Native output is `*5*27*##`; no downstream plugin/recipient or physical42/09 correspondence is executed.
+
+WHO22's actual parser object retains baseWHAT1 with two ordered parameters1,0, baseWHERE1 and selector20=1. The original serializer's WHERE format is `%s#%s`. Its WHAT branch invokes parser PLT0x192c redirected to packaged GLib g_list_foreach0x32cc8, whose original body caches next, loads data, passes user-data and calls the original libopenmsg0x2250 callback via BLX. That is actual foreach/callback control flow, not host parameter joining or a foreach stub.
+
+Callback0x2250 computes old length +parameter length +2, requests realloc and stores the returned buffer into the mutable temporary slot at0x229c. It then calls strlcat for hash and parameter. The second callback reads the slot updated by the first. Saved ordinary primitive events show realloc sizes4,6 and concatenations1#,1#1,1#1#,1#1#0. Final format yields `*22*1#1#0*1#1##`. The source WHAT string/list nodes and source48-byte object remain unchanged/live under the declared private ledger. This does not establish physical source/volume/ON semantics or a natural query/reply.
+
+## Ordinary models and containment
+
+Original GLib append/strlcat and libutils free_gchar0x1904 bodies are retained as static model bases. The g_list_append primitive preserves the selected12-byte data/next/prev relations with finite known-node/cycle/predecessor checks. Always-move realloc copies min(oldsize,newsize), marks the old temporary dead and returns a fresh bounded allocation. strlcat takes total capacity, stores a terminating NUL and returns old destination length +source length on these selected fitting inputs. Original free_gchar's nullable slot/free/slot-zero source agrees with the explicit selected private temporary model; its native body, real allocator and OS free do not run. No GString path or whole serializer/string-join stub is introduced.
+
+I checked mapping protections, native PC/definition redirects, memory hooks and caps. Parser code is RX; GLib data is RO except one RX page for foreach, and only the actual foreach body is in its PC allowlist. Stack/input/heap are RW/nonexecuting; EXIT is RX. Unknown PCs/imports, interrupts, invalid/protected accesses and ledger-dead reads abort. Setup consists of two explicit table-data relocations per session, four total; it is separate from callbacks/visits. Limits remain4096 bytes per string/allocation,64KiB private heap,16 known list nodes,100000 total hooks per session and100000 emulator instructions per entry.
+
+The report accurately retains that write guards bound private regions, not individual allocation extents. The exact computed capacities/readbacks support these selected cases, not general memory safety, allocator alias/failure behavior, concurrency, complete cleanup or unwinding. The free model marks temporary ownership dead; it does not claim actual host/target reclamation. No target OS, vendor process, syscall, service, live device/network or authentication path runs.
+
+## Independent saved accounting and history
+
+Saved arrays and per-entry slices recount WHO5 parser248 original/18 primitives/1 redirect/1 EXIT=268 hooks; WHO5 serializer83/10/0/1=94; WHO22 parser404/27/1/1=433; WHO22 serializer159/20/1/1=181. Total4 top entries/894 original visits/75 ordinary primitives/3 redirects/4 EXIT/0 stops=976 hooks. WHO22 serializer includes89 serializer,52 original parameter-callback and18 original GLib foreach visits. Nested constructors/callbacks are included, not added top entries. Reused parser PCs count as visits, not all new code coverage. No private callback-return trampoline or pre-read stop is hidden in this corpus.
+
+The selected original/source and output allocations remain live after temporary cleanup checks. Four setup relocations are not primitive callbacks. Exact immutable initial harness, first generated results and collector outputs are preserved with current hashes; no reconstruction is presented as historical authenticity. All reviewed final identities match those announced by the author. Complete grammar, active provider/registry/plugin context, records/queues/recipient lifecycle, raw admission and physical effects remain outside these two local roundtrips.
+
+## Final reviewed identities
+
+| Current artifact, relative to protocol/run22 | SHA-256 |
+|---|---|
+| `REPORT.md` | `35369bef23a8032dc0553a5dc4c75717f6d79625e7695d463ff50e8e5b73ee49` |
+| `collect_evidence_v1.py` | `59372af7cf6c46c903247e2b7bc41dbc4fcbadd3b0f7f6f326f75ad6277fd2be` |
+| `emulate_serializer_v1.py` | `624a7215d57a2b4e6e75b888862a9b5e6076acba3063f06a836606e955d9e71d` |
+| `parser-results.json` | `9a6104f12213dc1b7aad5ecc8e6668e3bdbdebf86c2505c8d52068126f8f1d17` |
+| `output-manifest.json` | `36ff4f0fd2603da3ff584e093d9684090ac7d5c7c53dcefc1ba3d9606a9460ca` |
+| `verified-tool-package.json` | `9f9bae4d6be11b8849669aeca2375469304e78ab5697abb89e47d3d73f6ca36a` |
+
+Original inputs: libopenmsg `7a4793f740c4cb41a774bf06e3af3acf4bd8a7606c5329ac70d7e0e7fd64bcd7`; GLib `029c2a7913131a84c46958d9ed445cb8a79dd1c8abc61116321badb7ad2735c0`; static-only libutils `53ef706201b13f6966dc6a0ca71bae345e9835e24bced6c557071b797d196e79`. Only the separately distributed verified read-only analysis tool is reused from its earlier storage; no F454 firmware/layout/fixture/harness is used.

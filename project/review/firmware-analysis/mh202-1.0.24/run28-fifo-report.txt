@@ -1,0 +1,45 @@
+# MH202 run28: local script pathname → descriptor ownership, bounded R/P gap
+
+This static batch closes the local `bt_script -r/-w` pathname handoff into two descriptor globals and one selected `OREAD` read-API boundary. It does **not** establish an internal R/P producer, successful FIFO opening, complete response handling, live binding, or process/device behavior. Original instructions, native helpers, vendor processes and original target open/read calls executed: **0**. Host ImageVFS reads, binutils and finite ledgers only.
+
+## Provenance and reproduction
+
+| Original normal-image file | SHA256 |
+|---|---|
+| `/home/bticino/bin/bt_script` | `f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4` |
+| `/home/bticino/lib/libdomotica.so.0.0` | `5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09` |
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/lifecycle/run28/collect_fifo_v1.py --check
+```
+
+The collector verifies five selected original spans, sixteen instruction words, exact pointer/PIC/GOT relations, selected symbol/dependency metadata, bounded exact byte queries and four HOST-only supplied-open-result ledgers. `input-hashes.json` also pins the accessor and historical functional/run1 and run3 reports. The exclusive generator refuses existing output files; `--check` compares exact bytes without writing. `initial-generated-v1/` preserves exact report/collector/first outputs immediately. No prior report or original source changed. Addresses are ELF VAs, with file offsets/span hashes in `original-spans.json`.
+
+## Actual local path and descriptor contract
+
+The earlier reviewed functional/run1 launch formats two named FIFO paths into `-w` (script→taskmanager) and `-r` (taskmanager→script). That is contextual intended path ownership, not a new launch/cleanup execution or matrix here. This batch independently derives the interpreter option semantics from fresh original instructions:
+
+* Local option routine `0x98e8..0x99b8` uses original getopt format `f:s:r:w:i` at `0xae21`. Its `w` branch stores the **optarg pointer** at `0x13920`; `r` stores it at `0x13924`. These are pathname pointer slots, not descriptor integers. Selected instructions are `str r2,[r3,#0x48c]` at `0x9968` and `str r2,[r3,#0x490]` at `0x997c`, with base `0x13494`.
+* Main `0x9a74..0x9ab8` requires the selected script pathname and both option pointers to be nonNULL. It loads `-r` into r0 and `-w` into r1, then calls imported `crea_connessione(char*,char*)` at `0x9ab0`. This selected gate does not validate filesystem type, FIFO visibility, successful opening or raw IPC content.
+* The **complete local candidate wrapper**, `/home/bticino/lib/libdomotica.so.0.0:0x9120..0x9188`, calls only `open`: first `open(read_path,0)` at `0x9144`, storing its returned word through GOT `0x12238` (`f_rd`) at `0x9154`; then `open(write_path,1)` at `0x9160`, storing its returned word through GOT `0x12214` (`f_wr`) at `0x9170`. It returns the second open result in r0. There is no intervening result comparison or close in this complete 104-byte wrapper. Numeric flags0/1 are exact source values; their ordinary read/write access interpretation depends on the platform API contract.
+* Main's very next instruction is `bl getpid` at `0x9ab4`, overwriting r0 without a comparison of the wrapper result. This is a narrow local return-consumption fact, **not** a whole-process failure/liveness claim. Supplied HOST examples `(5,6)`, `(-1,6)`, `(5,-1)` and `(0,1)` preserve both stored results and return the second. None is an observed open outcome.
+
+Evidence: `option-path-pointer-selection.txt`, `main-path-gate-and-local-helper-return-boundary.txt`, `complete-local-open-global-store-wrapper.txt`, `exact-pointer-and-GOT-relations.json` and `host-descriptor-effect-ledgers.json`.
+
+The executable exports `f_rd` at `0x13938` and `f_wr` at `0x13928`; the library separately defines them at `0x12688` and `0x1268c` and accesses the two GLOB_DAT slots above. The same-build executable directly needs `libdomotica.so.0`. Neither selected ELF has RPATH, RUNPATH or SYMBOLIC dynamic tags. **Conditional composed join:** ordinary executable-first symbol resolution without interposition would bind library accesses to executable-exported globals. These facts are not a new complete dependency closure, observed binding, or proof against later overrides. See `selected-imports-symbols-relocations.json`.
+
+## Read descriptor reaches one API boundary
+
+Only the `OREAD` PIC prologue `0x7fcc..0x7ff0` and descriptor-to-read slice `0x82b0..0x82e4` are included. The prologue computes PIC base `0x12114`. Pool `0x8514` selects offset `0x124`, hence the same `f_rd` GOT slot `0x12238`. At the selected boundary the loaded descriptor word is passed as read r0, a local buffer as r1, and exact count **0x408 (1032)** as r2 to `read@plt` at `0x82d8`; the returned word is stored at fp−24. This establishes a descriptor dataflow into an original API request, under binding/caller/API premises. It does not establish that this branch is naturally reached, read success, data availability, valid message content, response classification, or complete OREAD behavior. Inspection stops before the read-result/payload handling; no framing or connection internals were investigated.
+
+## Exact bounded R/P result
+
+A new, deliberately narrow whole-file byte query checked only `R\n\0` and `P\n\0` in these two verified ELFs. `R\n\0` occurs zero times in each. `P\n\0` occurs once in `bt_script`, at file offset `0x315a` / VA `0xb15a`, and zero times in the library. That match is an **interior suffix**, 27 bytes into a 29-byte NUL-delimited string, not preceded by NUL. Its containing text is not exported; only length/hash/offset metadata is saved. The exact little-endian 32-bit word `0xb15a` has zero occurrences in `bt_script`.
+
+This query does **not** establish a dedicated R/P writer or its absence. Computed/interior/PIC references, generated characters, other providers, configured script text and missing extra/4 resources remain possible. Functional/run3's earlier S/F/E producer and direct-write-site findings are pinned historical context, not repeated here. Neither an unreferenced interior literal nor a missing exact pattern settles accepted raw IPC grammar, reachability, support, or global producer ownership. See `bounded-R-P-byte-query.json`.
+
+The separate third-party helper at `0x8c90` is **opaque and uninspected**. The complete selected wrapper at `0x9120` does not call it: it contains only the two open requests and global stores above. No external connection/session/authentication/framing helper was opened to force R/P closure. No full process/signal/cleanup audit is claimed.
+
+## Confidence and remaining boundary
+
+High-confidence static facts are the option-pointer slots, argument order, two open requests/stores, second-result return, immediate getpid overwrite, and selected read-global API request. Actual descriptor/global/provider binding, configured paths/assets, original scheduling, return outcomes and complete response/cleanup behavior remain conditional or unknown. The R/P producer remains unresolved within the explicit two-file exact-pattern and selected local-code scope. Further progress needs an identifiable non-transport producer source or actual configured script provenance; this report does not propose reopening the closed external delegate.

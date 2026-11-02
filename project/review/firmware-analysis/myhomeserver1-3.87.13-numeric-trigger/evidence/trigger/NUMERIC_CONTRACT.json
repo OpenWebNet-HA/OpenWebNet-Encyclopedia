@@ -1,0 +1,73 @@
+{
+  "capture": "initializer storesprovidedsceneSP4 withmanagera56c1/invokera60a9; actualmanageroperation2 copiesrawpointer; constructorcopiescallable andpersistentaggregate beforeappend; wrappera60a8 loadsstoredscene thena5db0 launchboundary",
+  "limits": [
+    "no status-selected siblinghandler classification",
+    "providedparsedlocalinput/recordtype/provider/ID/cast/vectoralignment/owner/lifetime premises",
+    "fullJSONserializer/default/error/unwind/thresholdrange/publicprotocol/physicalmeaning unclosed",
+    "sceneenabled/active/condition/thread/provider outcomes inheritedconditional, not actualsuccess"
+  ],
+  "method": {
+    "original_execution_additions": 0,
+    "prior_cumulative": "1corpus8entries340originalvisits0C12redirect8EXIT360hooks unchanged",
+    "semantic_host_fixtures": 0,
+    "target_IO": 0
+  },
+  "numeric_handler": {
+    "callback": "ownprimary slot0==f486d fastpath checksmanager12 then tailcalls invoker16 atfunctionstorage+4; differentvirtual target remainsdelegate",
+    "enabled": "own48mustnonzero",
+    "entry": "f4a80",
+    "operands": "eventinteger r1 compared with configuredthreshold own64",
+    "operator": "own56",
+    "operator0": "invoke only event > threshold (signed)",
+    "operator1": "invoke only event < threshold (signed)",
+    "operator2": "invoke only event == threshold",
+    "operator3": "invoke only event != threshold",
+    "otheroperator": "selected code bypasses numericcomparison and proceeds to callback branch; not a public admissibleoperator domain",
+    "threshold": "own64 signed32"
+  },
+  "schema": {
+    "aggregate": {
+      "bytes": 80,
+      "inner": 12,
+      "outgoing_pair": "inner/control",
+      "scene_append": 104
+    },
+    "coherence": "Virtualrawslot+8\u2192sameJSONreparse2cc00; fullserializer/provider preservation remainspremise",
+    "compiled_inner": {
+      "ID": 24,
+      "bytes": 68,
+      "callback": [
+        4,
+        12,
+        16
+      ],
+      "enabled": 48,
+      "level": 64,
+      "operator": 56,
+      "schema_secondary": 20,
+      "status": 60,
+      "type": 52
+    },
+    "final": "BnldTrigger",
+    "numeric_path": "statusmemberABSENT\u2192leveloperator[]/asInt\u2192raw44; no levelpresence/type/range admission proved",
+    "raw_bytes": 48,
+    "raw_enabled": 28,
+    "raw_level": 44,
+    "raw_operator": 36,
+    "raw_status": 40,
+    "raw_type": 32,
+    "temporary": "BaseBnldTrigger"
+  },
+  "selected_caller": {
+    "ID": "selectedfastgetter pointer/length vsFP ID at539f4",
+    "call": "54c34 f4a80(r0=compiledprimary,r1=suppliedrecordinteger32)",
+    "compiled_vector": "index-correlated copiedscene104handles; pointer/cast validpremises; copyreleased573a4 before lateruse",
+    "numeric_selection": "compiledstatus60==-1",
+    "raw_trigger_type": 3,
+    "record_integer": "record32!=-1",
+    "record_status": "recordstring8 length2 exactASCII on",
+    "record_type": "suitablevalidrecord layout premise, NOT Thermostatdouble/otherrecordtransfer",
+    "relative_table_index": 2,
+    "target": "5398c"
+  }
+}

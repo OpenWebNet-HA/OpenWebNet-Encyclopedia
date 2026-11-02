@@ -1,0 +1,61 @@
+# MH202 run12 — selected PARENTESI OR fold and recursive buffer handoff
+
+**Static source and finite host composition; original execution **0**.** This batch goes beyond run11's ordinary operand scanner: one two-clause `|` path evaluates its clauses, folds them through the actual named OR provider and rewrites the operand buffers into an explicit Boolean comparison. A selected extra parenthesis layer shares those same output buffers and hands the returned cursor back to its caller. These are conditional source/call/state relations, not complete accepted DSL, deployed scripts, a full precedence rule or executed actions.
+
+## Original inputs and reproduction
+
+Fresh normal-image bytes are read through the MH202 verified ImageVFS:
+
+| Original image path | Bytes | SHA256 |
+|---|---:|---|
+|`/home/bticino/bin/bt_script`|14884|`f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4`|
+|`/home/bticino/lib/libdomotica.so.0.0`|42908|`5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09`|
+
+From the research root run `python3 -B functional/run12/collect_evidence.py --check`. It strictly reproduces 18 evidence outputs plus their manifest: 10 exact original spans, 33 instruction words, 7 safe literal references, selected symbols/relocations, explicit reset footprints and 4 finite OR/recursive handoff cases. `original-spans.json` records VAs/file offsets/byte hashes; `input-hashes.json` pins originals, accessor and the two preceding operand/numeric reports. The output manifest excludes this report and reviews. No ARM, original libc, clock, script process, configured asset, target OS/I/O or closed authentication/framing work executes. Ordinary scanner, numeric lookup, calendar and copy matrices are not rerun.
+
+## Actual selected state and first OR boundary
+
+PARENTESI's original entry/control layout is inherited from the reviewed run11 source: operator pointer at fp−32, left at fp−36, right as fifth argument fp+4; cursor fp−28 and shared byte-output index fp−16. Local byte fp−20 is the OR-seen flag, fp−19 the separate AND-seen flag, fp−18 the accumulated comparison byte and fp−17 the pending comparison byte. Entry initializes the flags 0 and both comparison bytes to character`n` (110). This batch selects two ordinary short constant comparisons separated by exactly one `|`, with no mixed operator or percent/time/variable substitution.
+
+At`0x421c..0x4234`, the source compares current global-line byte with`|`. With OR flag 0, `0x4240` branches to`0x4a0c`, which stores flag 1 at`0x4a10`. The source then evaluates the already extracted left/operator/right buffers. For supplied ordinary decimal constants, neither `$V` nor `$S` prefix routes apply; the actual fallback at`0x519c..0x51c8` calls `atoi(left)`, `atoi(right)`, then `INT_OPERATORI(operator,left_value,right_value)` at`0x51c0`, storing its result byte into accumulator fp−18 at`0x51c8`. Fresh `first-or-lane-typed-selection.txt` retains the guards through this fallback. The earlier exact signed comparison/operator evidence is reused as a provider premise, not repeated as a new matrix.
+
+The shared continuation at`0x51cc..0x5214` requests three `memset(...,0,4)` operations, for operator, left and right, then increments the source cursor past`|`, resets the shared output index 0 and returns to the scan guard. It does **not** clear the entire10-byte left/right regions. The selected examples have short one-byte operands/operators, so the remaining cleared bytes suffice for their declared termination model; arbitrary longer fields are not inferred.
+
+The exact four-byte request is also wider than the executable's original three-byte operator initial clear: operator sp+63 requests range[63,67), while left sp+53 requests[53,57) and right sp+43 requests[43,47). `reset-footprint-contract.json` records these half-open requested footprints. The extra operator byte is within retained stack space beyond that initial region; no actual access, corruption, defect or impact is executed or assessed. This must not be paraphrased as three four-byte-sized caller buffers.
+
+## Delimiter finalization and actual OR helper
+
+At the selected delimiter the source has OR flag 1, AND flag 0, an accumulator from the first comparison and pending comparison byte still`n`. The guards at`0x632c..0x634c` specifically select the final OR evaluation when flag is nonzero, accumulator!=`n`, and pending result==`n`. This is a control-state premise, not a generic short-circuit specification.
+
+With the supplied second ordinary constant comparison, the fallback at`0x6aa0..0x6acc` again calls both `atoi` conversions and `INT_OPERATORI` (`0x6ac4`), storing its result into fp−17. The chosen source route reaches this second evaluation even when the first result is 1; the model records both comparisons before computing the OR. It does not claim anything about short-circuit behavior for every other expression/type/path.
+
+`0x6ad0..0x6afc` normalizes each saved comparison byte with a source zero/nonzero test and passes normalized r0/r1 to OR PLT`0x16d8` at`0x6b00`. The matching original named provider **OR(bool,bool) at`0x1a10..0x1a70`** tests the first byte for nonzero, otherwise the second, and returns 1 when either is nonzero, 0 otherwise. `or-original-complete.txt` and exact words retain that body; no inference depends only on the name. Actual runtime binding/imports remain conditional and no helper executes in this batch.
+
+The returned byte is stored as the accumulator at`0x6b08`. `0x6b0c..0x6b38` again requests four zero bytes for each output pointer. It then writes **two bytes including NUL** through `memcpy` calls: left receives original literal`1` or`0` (`0x6b60`/`0x6bc0`), right receives`1` (`0x6bdc`), operator receives`=` (`0x6bf8`). Pools`0x6b9c/0x6ba0/0x6ba4` resolve to original literals`0`/`1`/`=` under PICbase`0x12114`. With AND flag still 0, `0x6c04` skips AND finalization to return. Thus the later IIF receives an explicit `0=1` or `1=1` comparison, not the original multi-clause text.
+
+## One additional parenthesis layer and cursor ownership
+
+Fresh `recursive-output-buffer-call.txt` records `0x41ac..0x41f0`. When the current source byte is`(`, the parent passes the **same** operator/left/right pointers to recursive PARENTESI through PLT`0x1600` (`0x41e0`), with delimiter`)` and the current source cursor. The callee's normal entry increments that cursor before scanning. The callee return is stored as the parent's cursor at`0x41e8`; the parent immediately reevaluates its delimiter guard. Output-buffer sharing and returned-cursor ownership are actual argument/register relations.
+
+For the narrowly supplied shape `IIF((1=0|2=2),TRUE_BODY,FALSE_BODY)`, outer cursor 4 sees`(`. Recursive entry starts scanning 5, folds its two comparisons before the closing`)`, writes normalized buffers, and returns closing-index+1. That position is the outer comma in the supplied text. The parent's own flags remain0, so it retains the shared normalized buffers and returns the outer comma-index+1 without another fold. These source indices are saved in the host evidence; no recursive original invocation occurs.
+
+On these selected constant/OR/one-parenthesis paths, modeled memory writes are local control state and the supplied output buffers; global source text is retained unchanged. No selected helper rewrites the source into a single Boolean text. The executable still passes left/operator/right to IIF (`bt_script 0x9be4..0x9bf0`) and ignores PARENTESI's return. IIF's later global comma-prefix copies remain the separately reviewed operation. Full configured syntax, closing/action argument rules, provider/global binding and actual IIF/copy/action execution remain unclosed.
+
+## Finite host evidence and limits
+
+`host-selected-or-fold.json` records state/call events, reset requests, normalized outputs, both comparison results and returned cursor for four supplied source shapes:
+
+| Selected constant condition | Comparison bytes | Normalized buffers left / operator / right |
+|---|---|---|
+|`1=0\|2=2`|0,1|`1` / `=` / `1`|
+|`1=1\|2=3`|1,0|`1` / `=` / `1`|
+|`1=0\|2=3`|0,0|`0` / `=` / `1`|
+|one nested layer around `1=0\|2=2`|0,1|same normalized buffers shared with parent|
+
+These are finite host source/state compositions, not native parser runs, accepted script examples or generator output. `TRUE_BODY/FALSE_BODY` are symbolic. Inputs are readable, contain the declared delimiters, use short ordinary decimal operands/equality, take no variable/string/time substitution and have exactly one OR separator. The source's ordinary scanner is inherited rather than reimplemented as another acceptance matrix. Hypothetical final IIF equality 1=1 or 0=1 is recorded without running IIF or claiming successful action execution.
+
+High confidence applies to original call/return/register and output-write relations. Conditional confidence applies to applying them under supplied source/field/ordinary primitive/provider state. Full recursion, multiple logical separators, mixed `|`/`&` precedence/associativity, quotes/percent behavior, bounds, error handling, actual configured bodies and physical/product-level Only-if semantics remain open.
+
+1. Obtain the missing configured extra/4 script/generator evidence before labeling full syntax or canonical parenthesis/action forms.
+2. A future narrowly bounded original execution can test this selected constant-OR/one-recursive-call state, preserving actual callbacks/reset footprints and provider/global contracts. This batch performs none.
+3. Treat mixed logical expressions and longer operand residual-buffer behavior as distinct questions, rather than extrapolating a precedence or capacity rule from these finite short examples.

@@ -1,0 +1,66 @@
+# Independent final synthesis review
+
+PASS for the bounded source-to-summary content of authoritative FINAL_REPORT.v2.md and unchanged REFERENCE_CANDIDATE.md, with final assembly/closure targets explicitly pending. No further content correction requested. This is documentary comparison and exact saved-byte/version verification; no firmware/database/provider source was newly investigated, no collector or CPU corpus was replayed, and no original/native/target execution, semantic fixture/model or live account/automation action was added. All three resumed source packets already received this reviewer's separate independent original-byte source review; this final review does not count those prior checks as new source coverage.
+
+## Resumed findings and unresolved premises
+
+The final report's three-source summary is faithful to the reviewed packets:
+
+- Action output establishes distinct52-byte/24-byte heap captures, tiny adapters and selected four-key local request handoffs with the same relocation-backed receiver. It does not execute either callback, establish full callback completion, equal payloads, natural invocation order, output delivery or restoration.
+- Request values establish actual descriptor constants `2.0`/`light.setStatus`, two normal-path UUID-generation/unparse request pairs and a separate captured params.id. Selected ID/signed-positive-speed fields reach the actual converter input through proven merge/copies. This does not establish UUID uniqueness, full accepted payload, a physical speed domain or product support. The authoritative wording now uses literal request/params identity labels rather than operational correlation or target-lookup claims.
+- Retained state establishes a conditional query-return string→fixed G→selected exact on branch→local status code/presence→actual params input→on table/status-assignment relation. It retains null/duration/path guards, unknown query-record class/type/freshness, no-intervening-mutation/object/provider premises and explicit lack of natural ordering or same-ID correlation. The global is not equated with the adjacent shared action-stop byte, captures or a cached-record class. Neither summary turns this into rollback, restored device state, synchronization or a defect.
+
+The raw/compiled/capture/descriptor/parameter namespaces remain distinct. The reference candidate correctly calls the parameter-pair copy an actual source/argument join rather than overlaying prefix and converter input records. Its one selected on value is not generalized into a complete state/property matrix or accepted external grammar. Query0x10f4a0 and output0x5dda0 remain opaque; receiving/transport/MQTT/libjel/authentication/session/framing routes remain closed.
+
+The offline-tooling benefit is reasonably stated as a stronger conditional implementation chain. Original catalogue profiles and the selected15-column consumer remain separate from installed-capability inference. Curated MyHOMEServer1 SCS/Ethernet/app/scenario role, MH202 programmer/generator/script role and F454 documented AV/dedicated-alarm connections are correctly separated. No MH202 script semantics or F454 wiring/functionality is transferred through names/offsets. Current F454 gaps remain initial role1 activation/private-state lifecycle/electrical serial attribution; its video-status producer is already identified. MH202 genuine configured export remains open after the completed generator/native syntax joins. Neither product is newly investigated here.
+
+## Execution ledger, final-only decision and ranked work
+
+Saved RESULTS.json still records1 corpus/8 entries/340 original code-hook visits/0 C primitives/12 definition redirects/8 EXIT/0 guard stops/360 hooks and4 relocation setups. Its saved FP/control field is24; the previously documented R0/SP/LR caller setup is separately24 host writes. All setup counts remain outside code callbacks, and visits are not retired instructions. The four finite SAME-constructed-object double cases do not execute full JSON/scene/scheduler/target OS/services/threads/timers/network/bus or physical behavior. The three resumed static packets add zero execution/models/fixtures/replays, and F454/MH202 ledgers remain separate.
+
+FINAL_ONLY_DECISION.json is treated as a saved coordinator observation, not a fresh usage/account check. It records usedPercent1, ordinary usage allowed, a reset timestamp one second different from the resumed observation, final-only completion and an11:00UTC deadline. The report neither forces an exact window identity nor claims allowance exhaustion. The manual-reset authorization and actual automation state are not newly operated or independently re-established by this documentary review.
+
+Ranked gaps remain concrete and unclosed: genuine configured scenes/missing assets; effective provider/type/ID/freshness, natural callback order/global mutation/locking; positive shared-reset ownership; natural owner/poll/removal; complete JSON/errors/unwind/lifetime/concurrency and separately scoped physical corroboration. No defaults or missing extras80/81/94/95 are invented as configured data. Wider Device/source gates, incomplete coverage and unavailable MH20218/21 intermediate-history limitations remain explicit. New investigation is closed; subsequent work is final saving/review/integrity/closure only.
+
+## Exact precision refinement and preserved candidates
+
+I independently reconstructed FINAL_REPORT.v2.md from the exact original FINAL_REPORT.md using WORDING_REFINEMENT.json's single substitution, `outer correlation ID from target ID`→`outer UUID-derived request ID from captured params.id`. The complete current bytes match the declared v2 hash. Original final report/reference-first copies are unchanged; the v2 has its own exact first copy/index. REFERENCE_CANDIDATE.md remains b3686b6c…04c68.
+
+The root pre-wording three files retain the old report, then-current handoff and old HANDOFF_PATCH.json. The old report matches its original first copy; the old patch bytes remain unchanged. The retained current-handoff bytes hash054da9ea…d7d7e5, and the one declared handoff phrase refinement reconstructs current6a3e6bc1…29008. Independently applying both authoritative HANDOFF_PATCH.v2.json substitutions to the retained4487454c…018e6 handoff also reconstructs the complete current file. No source/collector/result/count or firmware interpretation changed. No nonexistent draft/history/index is invented for the pre-wording folder; the actual retained files and hashes are what were checked.
+
+## Pending mechanical closure and review limit
+
+All8 Markdown link occurrences in FINAL_REPORT.v2.md resolve at this review time. In the reference candidate's intended public context, its2 prior-study links resolve; the final retained-state capsule README link is PENDING assembly. Final synthesis/documentary review exports, IDENTITY_VALIDATION.json, FINAL_CHECKS.json, final EVIDENCE_INDEX.json and actual automation-deletion/control/branch receipts are not certified as completed by this review. Statements about final closure must be delivered with those actual records after assembly; no placeholder, exemption or inferred deletion is approved. Parent final checks must validate existing completed targets and actual closure evidence.
+
+This review does not certify future bytes, a clean/staged Git state, publication, exhaustive firmware knowledge, whole manufacturer documentation or full Device gates. No author/repository/source/earlier packet was edited. PASS is limited to the exact current synthesis/refinement/reference content, saved ledger consistency and the explicitly bounded source/history comparison.
+
+## Exact reviewed identities
+
+| File | Bytes | SHA256 |
+| --- | ---: | --- |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/FINAL_REPORT.md` | 6867 | `8d2a042ce795b6dc29377971832fffdc3bbe5e17c0f531f7736af307743eb17f` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/FINAL_REPORT.v2.md` | 6885 | `17c64aef52f06905aac93105413ce5d792dfd7d46f74a2ac9ddde199f8d713ce` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/REFERENCE_CANDIDATE.md` | 4954 | `b3686b6cf85ce9f02e038ca7687bf8e98ea4aa4ea7b6a1bdfb87216748404c68` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/WORDING_REFINEMENT.json` | 1258 | `36a1ae03b9ef61187b6ec4850073f3a6a385a36a7014c0dc04e4b2dd1c4db05c` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/FINAL_ONLY_DECISION.json` | 639 | `e8e0270e6529c05728c134a6968677d51dcb3da823fb5d327a207eb022180cbf` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/COVERAGE.md` | 1360 | `f5088abcdbf818b1acdf4af0949e10cc5e46a0151caf3418e42b1ae5e46f4dd8` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/RANKED_REMAINING_QUESTIONS.md` | 1212 | `68096aae9db0eb3f7898208b723b35341d6ec51850a40adc9d18fab7c75e945d` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/integration/HANDOFF_PATCH.json` | 1614 | `8eafc07fbfa7e9a755ecc9db939539b33b02dcc6c4b0f0f658bdf7282e002301` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/integration/HANDOFF_PATCH.v2.json` | 1610 | `75e21ed7d673ddc86032acc68d5bbce629c9da2c59cf09090a9731d0e2f65efb` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/reference-first-candidate/INDEX.json` | 266 | `96d3ab139524e5e6ff09aaa77cff0ed3ea7b6cde96e05209ddfba38a0be205f7` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/final-report-v2-first-candidate/INDEX.json` | 134 | `e95464008dd7475102970716de2ccf6ea84d6796eccdcbfca0370f4e0a11cd95` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/callable/REPORT.md` | 9307 | `0f55aa02fd373acbd1b7ef81f2e85aa71bf7ae27e826663bf91061f1376fb3e7` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/reviews/callable-source-review.md` | 7493 | `75adc74bd12e1850e6fe62a496f56ba1c6f74078ff6e7b2b0afdca1a5ab43ab0` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-request-values/values/REPORT.md` | 9887 | `6a74a40a5c0eababb207f405c944205dc703203486d7698b4a1ac0d7246ecb4c` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-request-values/reviews/values-source-review.md` | 6962 | `493d170ec0ad6ac4e8da3ddcaee8f6aa06df219bb92013ed7e2aaae955e93217` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/state/REPORT.md` | 10185 | `fc0f6a13fdde606d950b8f95f3b66c2a899e8f524a0effbbe86b5e1471774075` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/reviews/state-source-review.md` | 6699 | `6c05ca566d799864558e64c0e6d24b4cd47381334164a9f8ae21dfbae1697975` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md` | 16239 | `4e2cf1f6d26e9b04debbd14a8e0e5fac1f61e87826850bfdce853f4547196c76` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-knowledge-handoff.md` | 11005 | `6a3e6bc1e82379e0b403fbaa93d18886213a0687606ef418abf208edcdc29008` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f454-2.0.51-av-and-board.md` | 7003 | `c1cbfa5a7af37642d6e54c23573824541b09b594d0b0f172c1415ce5f277c1ad` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/mh202-1.0.24-generated-scenarios.md` | 6542 | `9abcb0bb59764d90bf9a9737ee2f9b595c77e23a2122b8e78748228acd55b991` |
+| `OpenWebNet-Encyclopedia/devices/definitions/own-dev-0002-audio-video-web-server-gateway.md` | 33863 | `f300b28ca0f358b73dff111ee47f1a911c71f8b949ecc979726a2b5ec5459af9` |
+| `OpenWebNet-Encyclopedia/devices/definitions/own-dev-0151-mh202-scenario-programmer.md` | 27314 | `74f961aa3aaafb99003d1677304a6d971a42c871950796707712d1c66f50bbb9` |
+| `OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md` | 43560 | `bd64060e1e19f90eecad2808b62327847a0f541ae2fc46239bbda29a5efe5c98` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/RESULTS.json` | 22496 | `450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/REPORT.RESULTS.md` | 9258 | `a18c1a027645fa7cc17e9882d09a49099509b2f33bb6f502f25ce7a2ea018c3f` |

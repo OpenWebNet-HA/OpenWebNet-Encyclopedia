@@ -1,0 +1,66 @@
+# WHO25 dry-contact WHERE source review
+
+CONFIRMED SOURCE CORRECTION. The publisher PDF includes prefix `3` in both dry-contact WHERE rows. The existing canonical table omits that prefix, and the two existing claims that literal WHERE `339` is outside the published forms are incorrect. This conclusion comes from the manufacturer page, independently visually read and text-checked; the recovered database is supporting implementation evidence, not its sole authority.
+
+This is a source/document review, not an author edit or a reclassification of a device's observed capability. No original firmware/native/vendor execution, hardware operation, new transport operation, network acquisition or configured target test was performed. Existing captures, manifests, first snapshots, documents and old reports were not modified. The parent addressing author report was not yet available when this review was written; this review covers the source discovery itself.
+
+## Original publication and visual verification
+
+The parent-acquired `WHO_25.pdf` is 425272 bytes, SHA256 `122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927`. Host pdfinfo reports 13 pages. I independently viewed the complete saved render of printed page4 and checked the original PDF's page4 using host `pdftotext -f 4 -l 4 -layout ... -`. Both show a WHERE table whose VALUE header spans two subcolumns. The left subcolumn contains literal `3` in EACH of its two rows. It is not part of the nearby connection footnote or a table-row number.
+
+The first row is prefix `3` followed by range `[1-201]`, for the listed automation dry-contact interfaces configured with Virtual Configurator Software. The second is prefix `3` followed by two single-digit ranges `[1-9][1-9]`, for the listed alarm dry-contact and IR interfaces configured with physical Z and N configurators. The correct source notation therefore preserves concatenation of the prefix with the row's following component(s), rather than copying only the right subcolumn.
+
+Literal `339` fits the second row as `3` + `3` + `9`. It also has the syntactic shape of the first row as prefix `3` + virtual suffix `39`, which lies in1..201. This overlapping spelling does not establish which interface family, installed configuration, or application was addressed by the existing unconfigured probe. In particular, it does not prove a configured physical Z3/N9 device or a valid reachable target in the tested installation. Conversely, calling `339` outside both published address forms is not justified.
+
+The 13-page source's page13 has a separate gateway/device availability table. Host extraction independently confirms MH200 is labelled NO, MH200N YES, F453AV1.0.19 NO and F453AV2.1.7 YES; several other models are listed separately. That table is a distinct published availability claim, not WHERE grammar. It cannot restore the incorrect address classification, turn literal NACK into a configured-target capability test, or justify assuming every newer gateway/firmware supports the function. This review adds no fresh hardware verification and makes no new claim for unlisted MH202 or F454 from that historical table.
+
+## Required document corrections and protected evidence
+
+At the reviewed current bytes:
+
+- `functional/who-25-transversal/dry-contact-ir.md:27` gives `1..201` and line28 gives `[1-9][1-9]`; both omit the original prefix `3`. They should preserve the prefix and the distinct virtual/physical suffix forms.
+- The same page's line56 says WHERE339 is outside the published forms. That classification should be corrected while retaining the raw literal frame/reply/timing, the statement that no dry-contact/IR interface was installed/configured, and the lack of physical bus/event testing.
+- `project/review/who25-gateway-compatibility.md:66` repeats the outside-published-forms claim. The correction must likewise leave the literal capture/oracle evidence, synthetic positive-control privacy projection, firmware/version scopes and valid-target/capability limitations unchanged.
+
+These are current editorial/source-interpretation corrections. They are not evidence that original capture bytes or reply classifications changed. Existing `*25*31#1*339##` remains that exact supplied probe; its observed reply remains its observed reply. Reinterpreting the source notation must not rewrite raw captures, historical first snapshots or claim a successful contact transaction. Historical incorrect prose should be retained through the parent's normal correction/version history rather than silently presenting it as a different original observation.
+
+## Independent database cross-check
+
+The recovered manufacturer ScenarioSuite DB is opened only using an absolute SQLite URI, `uri=True`, `mode=ro&immutable=1`, `PRAGMA query_only=ON`, `PRAGMA trusted_schema=OFF`. Its SHA256 is `ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29`; original path is the selected `1902_1.0_LGG/xml/Steps/Step_2/Scen_SuiteDB_ENG.db` under `scenario-artifacts/acquisition/selected-files-v2/`. This remains Suite3.5.38/package-specific data, not demonstrated firmware1.0.24 runtime behavior.
+
+Independent SQL results:
+
+1. `SELECT * FROM ANA_OGGETTI WHERE ID_OBJ=53` returns object Contact. Joining `ASS_OBJ_CHI` to `ANA_CHI` on ID_CHI returns association `(ID_OBJ53,ID_CHI14)`, description PPT, `OPEN_CHI='25'`. Database CHI primary key14 is not wire WHO14.
+2. Joining `ASS_OBJ_DOVE a JOIN ANA_DOVE d USING(ID_DOVE)` for `a.ID_OBJ=53`, grouped by area, yields201 associations in each area3,4,6. `SELECT DISTINCT d.OPEN_DOVE ...` returns201 unique strings. I independently checked exact set equality with `{'3'+str(n) for n in range(1,202)}`; this is complete set equality, not an endpoint inference.
+3. Selected original row examples are PK7796 Contact1/OPEN_DOVE31, PK7834 Contact39/OPEN_DOVE339, and PK8023 Contact201/OPEN_DOVE3201. Noncontiguous database PKs are not transmitted addresses or an interval validator.
+4. `SELECT * FROM ANA_DOVE WHERE ID_WHERE_TYPE=22 AND OPEN_DOVE='30'` returns PK7795 General/OPEN_DOVE30. It is absent from the selected object's association list. Here `30` is the OPEN text, not `ID_DOVE=30`; those ID namespaces must not be conflated. This scoped exclusion does not prove a general address is forbidden in every other object or runtime route.
+5. The object WHERE-type join selects association PK75/type22, description Contatto, `REGEXP='3[c]'`. The database placeholder reinforces prefix3 but is not an independently executed regex engine, raw parser or the source of the publisher's physical Z/N grammar.
+
+For reproduction, the relevant read-only queries are:
+
+```sql
+SELECT a.*,b.DESCRI_CHI,b.OPEN_CHI
+FROM ASS_OBJ_CHI a JOIN ANA_CHI b USING(ID_CHI) WHERE a.ID_OBJ=53;
+SELECT DISTINCT d.ID_DOVE,d.DESCRI_DOVE,d.OPEN_DOVE,d.ID_WHERE_TYPE
+FROM ASS_OBJ_DOVE a JOIN ANA_DOVE d USING(ID_DOVE)
+WHERE a.ID_OBJ=53 ORDER BY d.ID_DOVE;
+SELECT * FROM ANA_DOVE WHERE ID_WHERE_TYPE=22 AND OPEN_DOVE='30';
+SELECT COUNT(*) FROM ASS_OBJ_DOVE WHERE ID_OBJ=53 AND ID_DOVE=7795;
+SELECT a.*,b.DESCR,b.REGEXP
+FROM ASS_OBJ_WHERE_TYPE a JOIN ANA_WHERE_TYPE b USING(ID_WHERE_TYPE)
+WHERE a.ID_OBJ=53 ORDER BY a.ID_ASS;
+```
+
+The publisher source independently establishes the correction even if these catalogue joins were unavailable. No generator, client, native WHERE parser, byte forwarding, configured address acceptance or device capability is inferred from the SQL rows.
+
+## Exact reviewed source pins
+
+Paths below are workspace-relative. Current-document pins describe the pre-correction bytes reviewed here, not a recommendation to preserve their wrong wording as canonical truth.
+
+| Source | SHA256 |
+| --- | --- |
+| `work/mh202-firmware/research/2026-10-31-database-analysis/addressing/public-source/WHO_25.pdf` | `122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927` |
+| `work/mh202-firmware/research/2026-10-31-database-analysis/addressing/public-source/WHO_25-page4.png` | `6d3d6616c866235501c5c41fcfc1530be38a60271d411d3fdb5754fcf89cc271` |
+| `work/mh202-firmware/research/2026-10-31-database-analysis/addressing/public-source/WHO_25.layout.txt` | `e219d1216144abd34f77655d95afdf0b6de853f12c03c1e3971f4a9a4498f55d` |
+| `OpenWebNet-Encyclopedia/functional/who-25-transversal/dry-contact-ir.md` | `1c0a04bae56ba9312392632fbbe8b8ca5ad81e1e7d0ed9c561cb936b180b86e9` |
+| `OpenWebNet-Encyclopedia/project/review/who25-gateway-compatibility.md` | `021e839b7549a6474cbae4fa89486dbf67202b1acb17b314a92448959c58c6f2` |

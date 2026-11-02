@@ -1,0 +1,35 @@
+# MH202 run6 independent readiness/gate source review
+
+**PASS for the selected original source joins and stated limits. No correction requested.** This review reproduced the host collector and independently read original MH202 bytes/ELF metadata. No original ARM/vendor/library/parser/callback code executes; no query, clock, process, network or device activity occurs. Only this review was written.
+
+## Reproduction and exact source checks
+
+`lifecycle/run6/collect_evidence.py --check` reproduces12 outputs plus manifest,7 original spans,17 exact instruction words and6 finite host query examples. An independent PT_LOAD mapper verified those17 words, all7 raw-span offsets/hashes and all12 current manifest-entry hashes. Nine additional original words verified the global base literal, response-handler active-null gate, both OK/KO branches, immediate helper-return comparison/return and reset tail branch. Independent section-header arithmetic confirms gate0x1b4c4 is inside type8/NOBITS `.bss` range0x196a0..0x1d9f4. This is a storage/ordinary-loader premise, not observed initialized process state.
+
+## Gate, initialization and query state remain separate
+
+- Original base word at0xb534 is0x1b6ac. The mode4 path's store at0xb304 targets base−488=0x1b4c4, matching the previously reviewed configured-panic setter. Its separate one-time flag is base−500=0x1b4b8. The report correctly requires mode getter text decimal4 and once flag0; getter return is not checked before parsing. It does not identify this as a complete factory-reset or successful runtime transition.
+- The query object pointer global is base−472=0x1b4d4; the object is separately requested by calloc(12,1). Cursor+0, ready+4 and list+8 are not aliases of the global gate in the inspected stores. Helper0xd838 reads query+4. Helper0xd840 explicitly zeros query+0/+4 then tail-branches to initialization callback traversal0xd804. The callback calls remain opaque effects: these two direct stores are not a demonstrated gate clear, and their separation does not prove no indirect/other clear exists.
+- Cursor helper0xda24 obtains the supplied list traversal and compares its local index to query+0. A selected matching entry calls0xc330 with first argument4 and supplied query text. Signed result>=0 conditionally increments cursor; negative leaves it. Both immediately return. Exhaustion writes ready1. The six finite nonnegative-index/list examples agree, including an empty list completing immediately and a last attempted item requiring a later traversal before the displayed ready write. This is not full initial-query construction, delivery, retry, health or accepted-parser proof.
+
+## Response and synchronization boundaries
+
+The original0xa4b0 prologue loads active request from base−492 and branches on null to0xa64c. In that branch, ready0 permits field dispatch followed by IsOKFrame; nonzero OK reaches0xda24. Zero OK tests IsKOFrame; nonzero KO reaches the same call, zero KO exits. The report correctly does not require positive answers for this selected query advance, and preserves input/parser/correlation/dispatcher-effect premises. It does not claim an arbitrary KO is associated with the intended query or that no earlier parser guard exists.
+
+The selected outer WHO subtraction/unsigned comparison admits1000..1999; first WHAT byte ASCII9 or decimal1 reaches0x9f64 before the displayed ordinary gate test. These are post-getter source conditions, not public accepted operations. The saved synchronization body contains stop iteration, delegated receive/select/watchdog and its counter100 branch to0xd840 then0xda24. The report correctly assigns no elapsed wall time, full cancellation, successful script stop/resynchronization or panic-clear guarantee. Callback/provider side effects and complete caller/alias analysis remain open.
+
+Main's ready/once slice calls restoration0xac4c then always-start0xa6dc only behind the displayed guards and increments its local once flag. It is not promoted to successfully running children or unconditional automatic reruns.
+
+## Final reviewed pins
+
+Paths relative to `lifecycle/run6/`:
+
+| Artifact | SHA256 |
+|---|---|
+| REPORT.md | `38bcdd3d720aa85ea95f8a17a727c1bcb4d20864bd71f65460e466d09626fd76` |
+| collect_evidence.py | `0e9885aaf6eaf6aaa22c5bb39602b13cf60f8eb01406b2f1e94620c3dc8ff16f` |
+| output-manifest.json | `b96efdb1845e7d21e7455cf2021b7c62aa92e3aaaf3ac11ad428ba0f452aecc6` |
+| gate-vs-ready-storage.json | `00aeb4f2af1fa90f2831eaaa6c666653294679cf24b9fd75cd938856b0c2ca3a` |
+| host-query-step-model.json | `a8a9ea5fad38cdb7da3cd031ea511fe8f220baf783e7a503c882ae647f381c48` |
+
+No author files, previous dossiers or repository documents changed. The review does not certify whole-program absence of a panic clear, effective loaded providers, complete normal parser grammar, actual query scheduling/correlation, service health or physical recovery.

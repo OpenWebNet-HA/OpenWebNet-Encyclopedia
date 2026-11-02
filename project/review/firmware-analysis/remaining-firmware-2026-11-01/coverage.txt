@@ -1,0 +1,11 @@
+# Coverage after run04
+
+| Family | Selected evidence | Unresolved |
+| --- | --- | --- |
+| F450std/PROD | Prior DB-open/copy/unzip requests plus actual registered db_name/db_compressed field producers | Effective temporary configuration, extra50 input relation, actual extraction/DB, full markup/providers/owner/admission |
+| MH200N | Prior resource-cell/reader/token gates plus one third-token copy-destination request | Full grammar/semantic fields/capacity/validdata/copy/install/activepartition |
+| F453AV | Normal startup/module request and differing recovery script | Independent recovery admission, kernel/module/environment/physical readiness |
+| F455 | Original wrapper/CRC and finite raw-format candidate | CPU/ISA/ABI/endian/load map/entry/authoritative loader provenance |
+| F459 | Constructor/write/read selected SQL request contracts | Actual DB bytes/namespace/caller/rows/schema/provider/freshness/errors/lifetime/durability |
+
+The encyclopedia landing/capsule is a documentary integration of selected reviewed evidence, not new firmware coverage or complete source/Device approval. Prefix census16088offset0files0SQLite3magic remains bounded. Newdatabase0/newR2object0; cumulative1encryptedSupport/0plaintext. All new original/native/helper/SQL/target/runtime/physical execution0; earlier ledgers separate. Prior94run03 indexedmembers protected without oldcollector replay.

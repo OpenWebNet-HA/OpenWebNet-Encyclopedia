@@ -1,0 +1,370 @@
+{
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/DEVELOPMENT_HISTORY.json",
+      "published": "serializer/DEVELOPMENT_HISTORY.json",
+      "sha256": "522288bc7b8025be24c2b9698eb95b68bb3b4e26f126d17c1ed680ef8f8c0e15",
+      "bytes": 909
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/INPUTS.json",
+      "published": "serializer/INPUTS.json",
+      "sha256": "a2782d3b27307c9247038691ea274f95d751f52089306ec61470152a0fe312d3",
+      "bytes": 896
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/ORIGINAL_SOURCE.json",
+      "published": "serializer/ORIGINAL_SOURCE.json",
+      "sha256": "34af2adb52571b9d766fabdd1fd4487d3a87f13913c0d9b472f3c0cf4576c431",
+      "bytes": 8082
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/VALUE_CONTRACT.json",
+      "published": "serializer/VALUE_CONTRACT.json",
+      "sha256": "5902fef3528c35554d5936f8539952867b66cd049e36e2d50f5d64304b74b93f",
+      "bytes": 1962
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/spans/base-serializer.txt",
+      "published": "serializer/spans/base-serializer.txt",
+      "sha256": "193a26f210751fd207b4fd34c471f9b6aa99a91da6eb4b9ee086f2b7dd173f70",
+      "bytes": 5975
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/spans/compiled-value-copies.txt",
+      "published": "serializer/spans/compiled-value-copies.txt",
+      "sha256": "b297b225c14c967cd4ebd2c79904a320e0689e51ca516da13e1ae7b983cca16d",
+      "bytes": 828
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/spans/derived-serializer-arms-and-return.txt",
+      "published": "serializer/spans/derived-serializer-arms-and-return.txt",
+      "sha256": "7376372cab2b0c014f25413b924922668d8eadffdfdaa1ae44f07f4fc5e18885",
+      "bytes": 2945
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/spans/derived-serializer-prefix.txt",
+      "published": "serializer/spans/derived-serializer-prefix.txt",
+      "sha256": "075c34f80adcb14658c30b9f2a70b58ed90d9d0cef2c5b528364dd26f25e52d9",
+      "bytes": 725
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/spans/reparse-selected-presence.txt",
+      "published": "serializer/spans/reparse-selected-presence.txt",
+      "sha256": "40e83397d7385d4d80aad873011ffe230146734ff5610fd792623f598bd77988",
+      "bytes": 3409
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/spans/same-JSON-initializer.txt",
+      "published": "serializer/spans/same-JSON-initializer.txt",
+      "sha256": "e4a3b4ad8074f6e7265aec872278836bf1f647b001682b7ea4e79f0a7bf9c081",
+      "bytes": 759
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/OUTPUT_MANIFEST.json",
+      "published": "serializer/OUTPUT_MANIFEST.json",
+      "sha256": "7b9d18538084483d7fce0a5827160b044c1ef6071ec42fc691c9f48938901ee4",
+      "bytes": 1922
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/collect_values_v2.py",
+      "published": "serializer/collector.py.txt",
+      "sha256": "e6bd23219c93fd466942cdc91e98c98a289a1800061bbab27436117a131eda9d",
+      "bytes": 10577
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/REPORT.v2.md",
+      "published": "serializer-report-v2.txt",
+      "sha256": "57cf16095f0da61eddf81d3b0133f30ab8b6848ec9f2fc1f74dea8001924c97d",
+      "bytes": 10292
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/reviews/serializer-source-review.md",
+      "published": "serializer-source-review.txt",
+      "sha256": "7f8066cba98684cb66f98a7c525a123d2827bffc970c75b3831ef861c9c3c0b3",
+      "bytes": 5867
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/INPUTS.json",
+      "published": "record/INPUTS.json",
+      "sha256": "8b8d424b5ec18a6c80bb0675644a4a0953ffca8821e32b5710ccd6b27b2d1ee1",
+      "bytes": 1136
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/ORIGINAL_SOURCE.json",
+      "published": "record/ORIGINAL_SOURCE.json",
+      "sha256": "208989976ec8645b54ce2a2d2f5866ab02329040781d2aaec96f36c362fab0f7",
+      "bytes": 6401
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/TYPED_VALUE_FLOW.json",
+      "published": "record/TYPED_VALUE_FLOW.json",
+      "sha256": "945d0e349d2e948030d280a3ef5ad41ce0c801f1a7b23672b8a69657b34665e0",
+      "bytes": 1716
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/spans/bnth-cached-control-present.txt",
+      "published": "record/spans/bnth-cached-control-present.txt",
+      "sha256": "dad9ab64875b0ef73be8d3a6e6d14f1dfe438ccc504a026cc0eb20e6ca442f07",
+      "bytes": 329
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/spans/bnth-cached-control-zero.txt",
+      "published": "record/spans/bnth-cached-control-zero.txt",
+      "sha256": "0a8bc7f608208bc47aa94ff5d0214464807a491a76ac093fd2cf4b973c144490",
+      "bytes": 509
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/spans/generic-stored-pair.txt",
+      "published": "record/spans/generic-stored-pair.txt",
+      "sha256": "8345f03ea528b25be004f95c97d63d2f9a3851d7db64d69f0dc3388aa7f4598d",
+      "bytes": 1159
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/spans/id-member-copy.txt",
+      "published": "record/spans/id-member-copy.txt",
+      "sha256": "b0a15253a3196b199d377c6c74602265a18126842e58c2700568c42d8c7c0974",
+      "bytes": 1152
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/spans/lookup-stored-pair.txt",
+      "published": "record/spans/lookup-stored-pair.txt",
+      "sha256": "c05aba99a58c08f8fcc5f5c8e77f00dc556c1ebd80726c51982f74ac1e81d488",
+      "bytes": 292
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/spans/map-type-dispatch.txt",
+      "published": "record/spans/map-type-dispatch.txt",
+      "sha256": "527732ae83e2f991b39f1dee5beb634a1cd2969328bc9c9e5d4b046981e337a9",
+      "bytes": 901
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/spans/missing-setpoint-default.txt",
+      "published": "record/spans/missing-setpoint-default.txt",
+      "sha256": "f661b70380eda86a55a8993f7b019c9fca0dc02b8e3b22bee62879e598ff7cb6",
+      "bytes": 214
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/spans/params-copy.txt",
+      "published": "record/spans/params-copy.txt",
+      "sha256": "553928325c8a642c2aa234a717e60eab3e558b26507d76a41949f4171d0abe5b",
+      "bytes": 930
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/spans/selected-setpoint-conversion.txt",
+      "published": "record/spans/selected-setpoint-conversion.txt",
+      "sha256": "1442467759e13033e59bf3310c6c5db023126ad05b861e1a54cd973b3871cf30",
+      "bytes": 694
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/spans/typed-change-guard.txt",
+      "published": "record/spans/typed-change-guard.txt",
+      "sha256": "4abdf16db632365442f1751f520a9ae2c76ad0a34e8441954df2609e8a712c95",
+      "bytes": 722
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/spans/typed-construction-registry-handoff.txt",
+      "published": "record/spans/typed-construction-registry-handoff.txt",
+      "sha256": "b8a9320057cd29c0dbfde74350b8c2496cc93b560733b461bba708202c083708",
+      "bytes": 2141
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/spans/typed-update-copy.txt",
+      "published": "record/spans/typed-update-copy.txt",
+      "sha256": "41fc7850d4ea9a0eee0f032f398d84f928ee4439d8ea92365643486ea5a0289b",
+      "bytes": 771
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/spans/typed-update-read-compare.txt",
+      "published": "record/spans/typed-update-read-compare.txt",
+      "sha256": "e0c213fd9c8695e7870372810e0a10af79b339499f20df5426a69c5fa2579c79",
+      "bytes": 2220
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/OUTPUT_MANIFEST.json",
+      "published": "record/OUTPUT_MANIFEST.json",
+      "sha256": "16eea723f88168e594da6b4d966911c9bb34d138c514e568219adc84cd6083ee",
+      "bytes": 2794
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/collect_record_value_v2.py",
+      "published": "record/collector.py.txt",
+      "sha256": "cef2c95008c1e6419bae4ecffff03f72f9e9f3b4cb600fe4bb8bf7a6902874dc",
+      "bytes": 8353
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/REPORT.v2.md",
+      "published": "record-report-v2.txt",
+      "sha256": "9d5e8401ea962f30b509964f8ed4ac5c8dff069b118f33cc14b0a0fb3a2490f7",
+      "bytes": 9022
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/reviews/record-source-review.md",
+      "published": "record-source-review.txt",
+      "sha256": "c233ae838a1701d0cf375338468f62bb1bcc37fcf550b7a3ae06b20b5be07ac9",
+      "bytes": 6266
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/provider/CONTRACT.json",
+      "published": "provider/CONTRACT.json",
+      "sha256": "09c68f42a69b71aac9245e132540817bc6a17259d25da54dda7a84610210ea2f",
+      "bytes": 755
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/provider/INPUTS.json",
+      "published": "provider/INPUTS.json",
+      "sha256": "b996238a4809a621cd799d26d326ccb016bdb9838a72e8754326c72d61ce2a79",
+      "bytes": 392
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/provider/ORIGINAL_SOURCE.json",
+      "published": "provider/ORIGINAL_SOURCE.json",
+      "sha256": "aee9f3f5af8bbb3465c16f5692670b12d2323ed824292fdb22c39f38b9452c78",
+      "bytes": 5502
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/provider/spans/asDouble-normal-epilogue.txt",
+      "published": "provider/spans/asDouble-normal-epilogue.txt",
+      "sha256": "3cf7befb525c30506116751672ed7796607c2710a4a6977749da1276f6ad6177",
+      "bytes": 700
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/provider/spans/asDouble-prefix.txt",
+      "published": "provider/spans/asDouble-prefix.txt",
+      "sha256": "230d991c3366a608c01c95e1c1ca518b443756518e55708e5caf7b209f49a9d6",
+      "bytes": 820
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/provider/spans/asDouble-type3-load.txt",
+      "published": "provider/spans/asDouble-type3-load.txt",
+      "sha256": "6ff010972f72055543592a8de212792ea5c61a08c26dee1e13eb2a2186da18c7",
+      "bytes": 252
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/provider/spans/basic-initialization.txt",
+      "published": "provider/spans/basic-initialization.txt",
+      "sha256": "8f88c27041f4e7bc5b74cb93ed36af9068abfb680f13f2c7892f1731d378f3ac",
+      "bytes": 2334
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/provider/spans/comments-move-assignment.txt",
+      "published": "provider/spans/comments-move-assignment.txt",
+      "sha256": "4e0a13c3cbb56546604c643990074f2fa18b0e86c04ce9b6ca50210419203f95",
+      "bytes": 1083
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/provider/spans/double-normal-constructor.txt",
+      "published": "provider/spans/double-normal-constructor.txt",
+      "sha256": "4ca8e954c6053b4ea294ed11430cf07548a974426c94d7ee2dc3700e20013144",
+      "bytes": 583
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/provider/spans/type-byte.txt",
+      "published": "provider/spans/type-byte.txt",
+      "sha256": "613cf76ab1e5f775eb14e9e3e5bff678b881edb663cc40ba697cf6ab97f36c80",
+      "bytes": 203
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/provider/OUTPUT_MANIFEST.json",
+      "published": "provider/OUTPUT_MANIFEST.json",
+      "sha256": "d388d6e54028b8171cc319801ff0e1bd0230766249c01d4ce94e822d606fecfe",
+      "bytes": 1805
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/provider/collect_provider_v1.py",
+      "published": "provider/collector.py.txt",
+      "sha256": "0b86d7fe2350dc117108b2e9c39c389ca64f6a6638ed83232b0c3e082799aebc",
+      "bytes": 7222
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/provider/REPORT.md",
+      "published": "provider-report.txt",
+      "sha256": "5ae3040b3f3b8e24edff3d6b893c1a78053f6c3d4fc27b66837f90a67e768bd2",
+      "bytes": 6070
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/reviews/provider-source-review.md",
+      "published": "provider-source-review.txt",
+      "sha256": "7729b58f0f80fd6c2ff1c6285b9604cf5a9a7fa2f1cc7d1ec7bb9f3b6793a5e0",
+      "bytes": 4924
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/REPORT.md",
+      "published": "serializer-report-v1.txt",
+      "sha256": "dd78ee833414f4476a4e658df3c9683afd6cd0bf75e5bb0b3fb3a91bef66d783",
+      "bytes": 9369
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/collect_values_v1.py",
+      "published": "serializer-collector-v1.py.txt",
+      "sha256": "8c0496ad8b691bf589192155a07f85fb21a64c82e59fa4e536916d06d264f6b6",
+      "bytes": 10183
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/FIRST_GENERATION_FAILURE.json",
+      "published": "serializer-first-failure.json",
+      "sha256": "9d5b58f4b7ee73615e60b527a350bdc0d61fc8c78702b5d69927483da6ec2480",
+      "bytes": 933
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/VERSION_HISTORY.json",
+      "published": "serializer-version-history.json",
+      "sha256": "f6575cf96a442b331865c14b3b631407d99241c6e0ac5a32ddf28b46397966ab",
+      "bytes": 1414
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/REPORT.md",
+      "published": "record-report-v1.txt",
+      "sha256": "7d68c13a2ca3939ef8427c64fd327b33026c8a12b25874537ad41a8bfd205e51",
+      "bytes": 8405
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/collect_record_value_v1.py",
+      "published": "record-collector-v1.py.txt",
+      "sha256": "0008e9a9f6ce97d6ec9a680617709cb5b9323489061d31f6334f1b92efc1979e",
+      "bytes": 8027
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/development-first-failure-v1/FAILURE.json",
+      "published": "record-first-failure.json",
+      "sha256": "c57422c44b764d201bdae6eb23841867d065170e4530d54f5a5583016b29e6c0",
+      "bytes": 606
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/VERSION_HISTORY.json",
+      "published": "record-version-history.json",
+      "sha256": "b2e1919dd6955ace1980ceb3e976538a35b89841d302efe2287897f481e5c1b5",
+      "bytes": 932
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/SYNTHESIS.md",
+      "published": "synthesis.txt",
+      "sha256": "21152bc173653a79618f5714874090a7a208a78229764271482d452ea9f2fa9e",
+      "bytes": 1735
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/COVERAGE.md",
+      "published": "coverage.txt",
+      "sha256": "5c22e3c15aee0744ff7c9d4015c53e79a3bb5d7cecae17a8c99fda815f981eb5",
+      "bytes": 1800
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/RANKED_REMAINING_QUESTIONS.md",
+      "published": "remaining-questions.txt",
+      "sha256": "5f2fb808dded3bf47b65f82a0062adee544d14913880baa0cd15aa56147733cf",
+      "bytes": 1803
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/RUN_LOG.md",
+      "published": "run-log.txt",
+      "sha256": "61af2dad509360acaf6fd0f92b55828392b377798fd356597924efe1ded6f35e",
+      "bytes": 1277
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/SOURCE_CHECKS.json",
+      "published": "source-checks.json",
+      "sha256": "f01ba565c285802739b42f8e4e992d2dfcc9741032b0d9fbea75f6f2c6346851",
+      "bytes": 1114
+    }
+  ]
+}

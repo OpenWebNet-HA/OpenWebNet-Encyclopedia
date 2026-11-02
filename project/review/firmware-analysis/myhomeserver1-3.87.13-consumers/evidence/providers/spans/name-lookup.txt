@@ -1,0 +1,35 @@
+
+
+
+Disassembly of section .text:
+
+000047e0 <get_node_by_name@@Base>:
+    47e0:	4a0d      	ldr	r2, [pc, #52]	@ (4818 <get_node_by_name@@Base+0x38>)
+    47e2:	4b0e      	ldr	r3, [pc, #56]	@ (481c <get_node_by_name@@Base+0x3c>)
+    47e4:	b500      	push	{lr}
+    47e6:	b083      	sub	sp, #12
+    47e8:	447a      	add	r2, pc
+    47ea:	58d3      	ldr	r3, [r2, r3]
+    47ec:	4a0c      	ldr	r2, [pc, #48]	@ (4820 <get_node_by_name@@Base+0x40>)
+    47ee:	681b      	ldr	r3, [r3, #0]
+    47f0:	9301      	str	r3, [sp, #4]
+    47f2:	f04f 0300 	mov.w	r3, #0
+    47f6:	4b09      	ldr	r3, [pc, #36]	@ (481c <get_node_by_name@@Base+0x3c>)
+    47f8:	447a      	add	r2, pc
+    47fa:	58d3      	ldr	r3, [r2, r3]
+    47fc:	681a      	ldr	r2, [r3, #0]
+    47fe:	9b01      	ldr	r3, [sp, #4]
+    4800:	405a      	eors	r2, r3
+    4802:	f04f 0300 	mov.w	r3, #0
+    4806:	d105      	bne.n	4814 <get_node_by_name@@Base+0x34>
+    4808:	2204      	movs	r2, #4
+    480a:	b003      	add	sp, #12
+    480c:	f85d eb04 	ldr.w	lr, [sp], #4
+    4810:	f7fd bcaa 	b.w	2168 <get_node_by_name_and_type@plt>
+    4814:	f7fd ec94 	blx	2140 <__stack_chk_fail@plt>
+    4818:	2674      	movs	r6, #116	@ 0x74
+    481a:	0001      	movs	r1, r0
+    481c:	0178      	lsls	r0, r7, #5
+    481e:	0000      	movs	r0, r0
+    4820:	2664      	movs	r6, #100	@ 0x64
+    4822:	0001      	movs	r1, r0

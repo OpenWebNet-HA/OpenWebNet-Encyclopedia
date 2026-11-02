@@ -1,0 +1,14 @@
+{
+  "/home/bticino/scheduling_manager/scheduling_manager": [
+    "23: 00000000     0 FUNC    GLOBAL DEFAULT  UND __aeabi_atexit@CXXABI_ARM_1.3.3 (11)",
+    "25: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_cond_destroy@GLIBC_2.4 (2)",
+    "233: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt18condition_variableC1Ev@GLIBCXX_3.4.11 (17)",
+    "319: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt18condition_variableD1Ev@GLIBCXX_3.4.11 (17)"
+  ],
+  "/usr/lib/libstdc++.so.6.0.29": [
+    "118: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_cond_destroy@GLIBC_2.4 (48)",
+    "1607: 00097531    16 FUNC    GLOBAL DEFAULT   12 _ZNSt18condition_variableC1Ev@@GLIBCXX_3.4.11",
+    "1744: 0007dbad    10 FUNC    GLOBAL DEFAULT   12 __aeabi_atexit@@CXXABI_ARM_1.3.3",
+    "5015: 00097541    12 FUNC    GLOBAL DEFAULT   12 _ZNSt18condition_variableD1Ev@@GLIBCXX_3.4.11"
+  ]
+}

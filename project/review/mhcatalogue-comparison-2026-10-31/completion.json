@@ -1,0 +1,50 @@
+{
+  "status": "requested_thorough_database_comparison_complete",
+  "completed_UTC": "2026-10-31T19:07:39.696379+00:00",
+  "scope": "Two exact canonical MHCatalogue payloads: alltable/allrow/key/schema comparison, resolved commercial/item/firmware/Object/configuration graphs and reviewed source-profile integration; not complete runtime consumer semantics",
+  "inputs": {
+    "firmware": "79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb",
+    "suite": "f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5"
+  },
+  "table_count_each": 75,
+  "complete_row_counts": {
+    "firmware": 49184,
+    "suite": 59138
+  },
+  "same_tables": 42,
+  "different_tables": 33,
+  "current_collectors": 5,
+  "current_deterministic_outputs": 42,
+  "exact_capsule_exports": 50,
+  "source_reviews": 4,
+  "documentary_reviews": 2,
+  "source_reports": {
+    "catalogue/REPORT.md": "4d34c288a3bc577cec4c4a758d54841a1af539026e2535136dc686e1bb003bd5",
+    "objects/REPORT.md": "c312fe9bec13bd8b076f70832ac9ac7fe783327a086cf5facbbb0f835f3ce576",
+    "firmware/REPORT.md": "d70cd72edbf7460ac94907fd8a0116c889c48e4c1d7a223884760f869eeaa2bc"
+  },
+  "encyclopedia_page": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+  "report_sha256": "35cab23085fdc9120784916657da218aabd783a0f2008705ba8e41cc3485f809",
+  "validation_sha256": "f730378b3b5048e5063b9407df0d940b01eef2c30cffc442a8ea4f8950616535",
+  "final_checks_sha256": "64c4a94fcda624aa92bd537c614994354dbbf08d1f3585f42788b4b251d7eec1",
+  "final_pending_link_targets": "All eight earlier pending review/reproduction/validation targets now actual files; strict final ESG/ECV/Git checks pass with no exemption or placeholder",
+  "protected_indexed_entries": 6571,
+  "historical_reference_substitutions": [
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "retained_prior_snapshot": "work/mhcatalogue-comparison/2026-10-31/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "prior_sha256": "0581a52f32a95f4cae419693fe8d20b4ecf272f5e195f40070b00e166aea173f"
+    }
+  ],
+  "branch": "docs/static-firmware-analysis-findings",
+  "staged": false,
+  "committed": false,
+  "published": false,
+  "source_manifest_changed": false,
+  "all_vendor_expression_firmware_runtime_physical_execution": 0,
+  "earlier_firmware_execution_ledgers": "Unchanged, not replayed/reset",
+  "coverage": "COVERAGE.md",
+  "remaining_consumers": "RANKED_REMAINING_QUESTIONS.md",
+  "wider_Device_gates": "Pending, unchanged",
+  "automation_created": false
+}

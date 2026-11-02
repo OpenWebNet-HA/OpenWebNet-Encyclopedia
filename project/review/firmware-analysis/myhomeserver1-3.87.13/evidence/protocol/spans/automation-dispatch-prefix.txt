@@ -1,0 +1,71 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/libcoso/libplug_automation_tr.so:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00003140 <automation_tr_translate@@Base>:
+    3140:	e92d4ff0 	push	{r4, r5, r6, r7, r8, r9, sl, fp, lr}
+    3144:	e1a0c001 	mov	ip, r1
+    3148:	e1a0a000 	mov	sl, r0
+    314c:	e59f7fe8 	ldr	r7, [pc, #4072]	@ 413c <automation_tr_translate@@Base+0xffc>
+    3150:	e59f8fe8 	ldr	r8, [pc, #4072]	@ 4140 <automation_tr_translate@@Base+0x1000>
+    3154:	e59f6fe8 	ldr	r6, [pc, #4072]	@ 4144 <automation_tr_translate@@Base+0x1004>
+    3158:	e08f7007 	add	r7, pc, r7
+    315c:	e08f8008 	add	r8, pc, r8
+    3160:	e08f6006 	add	r6, pc, r6
+    3164:	e24dd034 	sub	sp, sp, #52	@ 0x34
+    3168:	e1a04002 	mov	r4, r2
+    316c:	e1a05003 	mov	r5, r3
+    3170:	e1a02008 	mov	r2, r8
+    3174:	e3a01080 	mov	r1, #128	@ 0x80
+    3178:	e1a00006 	mov	r0, r6
+    317c:	e2873040 	add	r3, r7, #64	@ 0x40
+    3180:	e1a0900c 	mov	r9, ip
+    3184:	e59db058 	ldr	fp, [sp, #88]	@ 0x58
+    3188:	ebfff898 	bl	13f0 <g_log@plt>
+    318c:	e35a0001 	cmp	sl, #1
+    3190:	0a00000b 	beq	31c4 <automation_tr_translate@@Base+0x84>
+    3194:	e35a0002 	cmp	sl, #2
+    3198:	0a00001b 	beq	320c <automation_tr_translate@@Base+0xcc>
+    319c:	e59f2fa4 	ldr	r2, [pc, #4004]	@ 4148 <automation_tr_translate@@Base+0x1008>
+    31a0:	e1a0300a 	mov	r3, sl
+    31a4:	e3a01040 	mov	r1, #64	@ 0x40
+    31a8:	e1a00006 	mov	r0, r6
+    31ac:	e08f2002 	add	r2, pc, r2
+    31b0:	ebfff88e 	bl	13f0 <g_log@plt>
+    31b4:	e3a09001 	mov	r9, #1
+    31b8:	e1a00009 	mov	r0, r9
+    31bc:	e28dd034 	add	sp, sp, #52	@ 0x34
+    31c0:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, sl, fp, pc}
+    31c4:	e59f2f80 	ldr	r2, [pc, #3968]	@ 414c <automation_tr_translate@@Base+0x100c>
+    31c8:	e3a01040 	mov	r1, #64	@ 0x40
+    31cc:	e1a00006 	mov	r0, r6
+    31d0:	e08f2002 	add	r2, pc, r2
+    31d4:	ebfff885 	bl	13f0 <g_log@plt>
+    31d8:	e3590002 	cmp	r9, #2
+    31dc:	0a000032 	beq	32ac <automation_tr_translate@@Base+0x16c>
+    31e0:	e1a03009 	mov	r3, r9
+    31e4:	e3a09001 	mov	r9, #1
+    31e8:	e59f2f60 	ldr	r2, [pc, #3936]	@ 4150 <automation_tr_translate@@Base+0x1010>
+    31ec:	e59f0f60 	ldr	r0, [pc, #3936]	@ 4154 <automation_tr_translate@@Base+0x1014>
+    31f0:	e3a01040 	mov	r1, #64	@ 0x40
+    31f4:	e08f2002 	add	r2, pc, r2
+    31f8:	e08f0000 	add	r0, pc, r0
+    31fc:	ebfff87b 	bl	13f0 <g_log@plt>
+    3200:	e1a00009 	mov	r0, r9
+    3204:	e28dd034 	add	sp, sp, #52	@ 0x34
+    3208:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, sl, fp, pc}
+    320c:	e59f2f44 	ldr	r2, [pc, #3908]	@ 4158 <automation_tr_translate@@Base+0x1018>
+    3210:	e3a01040 	mov	r1, #64	@ 0x40
+    3214:	e1a00006 	mov	r0, r6
+    3218:	e08f2002 	add	r2, pc, r2
+    321c:	ebfff873 	bl	13f0 <g_log@plt>
+    3220:	e3590001 	cmp	r9, #1
+    3224:	1affffed 	bne	31e0 <automation_tr_translate@@Base+0xa0>
+    3228:	e59f2f2c 	ldr	r2, [pc, #3884]	@ 415c <automation_tr_translate@@Base+0x101c>
+    322c:	e3a01040 	mov	r1, #64	@ 0x40
+    3230:	e08f2002 	add	r2, pc, r2
+    3234:	e1a00006 	mov	r0, r6
+    3238:	ebfff86c 	bl	13f0 <g_log@plt>
+    323c:	e3a03000 	mov	r3, #0

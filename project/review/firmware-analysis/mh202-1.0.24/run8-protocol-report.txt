@@ -1,0 +1,82 @@
+# MH2021.0.24 run8 — selected diagnostic WHO/WHERE and final builder guards
+
+Static-only continuation of run7's synthetic D2S80 examples. **Original ARM/vendor/parser/JS/PHP execution, original instructions executed, emulator hooks and live I/O are all0 in this batch.** Host calculations do not execute the native parser. They are separate from any parent-area execution metrics.
+
+## Result
+
+For the exact two19-character synthetic strings retained in run7, the selected original providers resolve diagnostic **WHO1001** and **WHERE`0`**, under ordinary initialized map/stream/string semantics. WHO1000 must not be substituted: system1's first diagnostic mapping is1001. The final original libopen builder can therefore be reconstructed as:
+
+- `$04D200010480000000` → conditional text `*#1001*0*1*0*0*0*0##`.
+- `$04D200010480A12345` → conditional text `*#1001*0*1*2629*1*2*3##`.
+
+These are host-derived candidate texts. The arbitrary value2629 is not a hardware model identity, and neither line is an accepted original-parser output or captured frame. The original builder tailcalls IsCorrect; selected syntax/classification/field-copy code is traced below, while later address/interface assignment and whole native parser execution remain outside the demonstrated result.
+
+## Originals, provenance and reproduction
+
+Fresh original paths refer to the normal firmware image:
+
+| Original | SHA256 |
+|---|---|
+| `/home/bticino/lib/libopenscs.so.0.0` | `b9b1c5f6937c0aea88f416517706b3dd38d46476974f252cd1c6b39aef62127a` |
+| `/home/bticino/lib/libwhere.so.0.0` | `334cf3461e23712a85098e171a1cbcc6c675fedc9a12dd516954adaf7ecbaea5` |
+| `/home/bticino/lib/libopen.so.0.0` | `868eeb717020232c11623224df17bd6b2034fffc2fb80043c39c34b76310fb04` |
+
+`python3 work/mh202-firmware/research/2026-10-30/protocol/run8/collect_evidence.py --check` reads originals through the shared ImageVFS, invokes host objdump/readelf, and strictly reproduces25 outputs:18 original spans,28 exact words,4 original PIC strings,2 vtable relocation lines, two finite host cases and associated identities/provenance. All9 inputs are hashed. `original-spans.json` records VA ranges, original byte offsets and hashes. The author output manifest separately pins report/collector/evidence and excludes itself and later reviews. Earlier dossiers, images, sources and repository documents remain read-only.
+
+Provider scope reuses run2's concrete packaged bt_device dependency closure/no-preload/no-dlopen/no-replacement assumptions. Selected `getOpenWho` is actually defined by **libopenscs**, not libopen or a guessed libwho file. `getOpenWhere` is libwhere; the selected five-argument read-dimension builder is libopen. Effective live binding or successful ELF/C++ initialization is not observed.
+
+## 1. The selected WHO is1001
+
+Run7's original General composer calls s2o_getWho, whose original wrapper passes the whole raw C string and diagnostic=true to imported getOpenWho. This batch follows the actual candidate definition `libopenscs::getOpenWho(char const*,bool)` at`0x26c8..0x27e0`:
+
+- It obtains raw[8] at`0x2714..0x271c`.
+- Only when this character is ASCII`9` does it replace it with raw[11] (`0x2720..0x2734`). Both retained examples have raw[8]=`1`, so this alternate extraction is skipped.
+- It sends that single character through the selected numeric stream conversion, then calls the integer overload at`0x2788`, preserving the diagnostic flag.
+
+The integer overload`0x2350..0x2410` iterates the original WHO→system map by key. For a system match, `0x23ac` checks the WHO key against1000. A matching normal WHO<1000 is returned only when diagnostic=false; with diagnostic=true it continues. A matching WHO>=1000 is returned directly. End-of-map returns−1.
+
+Selected initializer span`0x2410..0x2470` constructs WHO1/system1 and WHO1001/system1 pairs. The map construction/range is retained at`0x25f8..0x26c8`. Under completed ordinary std::map initialization, system1 with diagnostic=true skips key1 and returns **1001**. This selected reverse lookup is not arithmetic `1000+system` and does not require recreating the whole earlier16-pair inventory. It also does not promote the distinct absent generic WHO1000 mapping to a global parser rejection.
+
+## 2. System1 selects Light WHERE translation; D2/zero address returns`0`
+
+Original `libwhere::getOpenWhere` at`0x5064..0x5228` similarly selects raw[8], substituting raw[11] only for ASCII`9`, converts it to an integer and looks up a **system→WHERE translator map**. This is a different map/namespace from outgoing WHO→translator lookup and its previously established WHO1000 null entry.
+
+Its PIC reconstruction identifies global base`0x13760`, system map at base+256=`0x13860`. Initializer `0x4c74` constructs the Light translator singleton at base+20=`0x13774`. The selected pair construction `0x4fa4..0x4fb4` associates key1 with that singleton; pair range ending at base+256 is consumed by the system-map constructor at`0x5000`. Thus raw[8]=`1` chooses Light under ordinary completed initialization. The lookup does not synthesize this pointer from a class name.
+
+The original vtable relocations connect virtual call+12 to Light::where(std::string const&) at`0x8558` (`0x1337c`), which adapts to virtual call+16 and the char overload`0x85c0` (`0x13380`). The Light constructor's vptr setup at`0x9904..0x9938` and these two relocation lines are retained.
+
+The selected char overload obtains:
+
+- marker from `getHexByte(raw,3)` (`0x85ec..0x85f8`), giving D2;
+- native numeric address through `getScsAddr` (`0x8604`);
+- level through `getScsLevel` (`0x862c`).
+
+Exact original helpers`0x61dc..0x6270` extract two hex characters and call strtol(base16). For length19, the address calculation at`0x6258..0x6264` is `(hex(raw[5:7])&255) | ((hex(raw[7:9])&0xf0)<<4)`. It is different from the displayed non19-character low-nibble shift8 branch. The level is `hex(raw[9:11])>>4`.
+
+Both retained examples have raw[5:7]=`00`, raw[7:9]=`01`, raw[9:11]=`04`: numeric address0 and level0. Light's decomposition therefore has zero high/nibble components. Since markerD2 matches at`0x87a4` and their OR is0 at`0x87ac/0x87b0`, the branch loads the exact original literal **`0`** via pool`0x8958`, emits it and goes straight to return-string construction at`0x8900`. This selected result does not use the advanced-address branches. The arithmetic and string result are statically reconstructed with ordinary primitives, not native helper execution.
+
+## 3. Actual final builder and selected parser guards
+
+The original five-argument libopen read-dimension builder is `0xb680..0xb800`. It creates a null object, builds the raw string at object+`0x5e3c`, and concatenates exact original pieces:
+
+`*#` + WHO + `*` + WHERE + `*` + DIM + each(`*` + value) + `##`.
+
+WHO and WHERE are the two results above; run7's original DIM argument is1 and four decimal value strings are reused read-only. Original PIC pool/target identities for `*#`,`*`,`##` are recorded in `selected-original-literals.json`. The final suffix uses pool`0xb7f8` plus14, not a separately invented literal. Builder also records the raw length at object+`0x5e38`, trims possible final CR/LF bytes and zero-terminates its chosen end. The two constructed cases have no CR/LF.
+
+At **`0xb7e8`** the builder restores its frame and tailbranches to imported **IsCorrect**, whose same-build candidate definition is`0xad60`. It is therefore inaccurate to describe this builder as merely formatting without any parser call. Conversely, the presence of that call is not proof the whole parser accepts our host candidates.
+
+Selected source guards in `0xadc4..0xaf34` require initial `*`, stored length≤1024, final two`#`, and characters consisting of decimal digits,`*`,`#`. The selected delimiter-segment traversal rejects a segment longer than89. Both short constructed candidate texts satisfy these displayed guard calculations under ordinary C-string operations. The host model checks only these ordinary cases, not a complete parser/invalid-input grammar.
+
+Their raw[1] is`#`; the selected classification path at`0xaf68` strips WHO and WHERE through ordinary token/copy helpers. At`0xb068` the remaining segment begins`*`; its next character is DIM digit`1`, not`#`. Thus the original branch **writes kind4** at`0xb09c..0xb0a0` and calls **Assegna_chi_dove_grandezza** at`0xb0a8`. It is not kind8's different `*#` dimension branch. Kind4 is the selected libopen internal namespace; numeric transport selector4, DIM1 and General response enum0 remain separate.
+
+The retained full field-assignment helper`0xaa5c..0xad60` copies WHO to object+0, WHERE to+540, DIM to+900, then ordinary tokenizes/copies value strings into90-byte slots starting+990 and stores count at+`0x6244`. For these normal constructed fields, the conditional expected values are WHO`1001`, WHERE`0`, DIM`1`, and four strings from run7. These are source-level expectations under ordinary primitive contracts, not a readback from a native object.
+
+IsCorrect then checks whether the kind became invalid1, and otherwise calls **Assegna_indirizzo** at`0xb0d4`, then (if still not invalid1) **Assegna_livello_interfaccia** at`0xb0ec`. Those complete later helper guards/side effects are not reconstructed in this bounded batch. No final kind/readback or IsCorrect boolean is asserted. IsCorrect's shown epilogue itself must not be invented as a clean boolean-return contract merely because its name sounds like one.
+
+## Boundaries and next question
+
+Confirmed statically: original selected WHO1001 reverse lookup, system1→Light map/vtable identity,19-character address formula and D2/zero-address literal`0`, final builder concatenation/tailcall, selected syntax screen and kind4/field-assignment branch. Host-only: two synthetic candidate texts and normal field arithmetic. Not established: final native parser acceptance after address/interface helpers, initialized container/stream behavior beyond ordinary assumptions, actual object state, live binding, natural input provenance, output descriptors, collector publication or physical device/model support.
+
+No prior report is rewritten: run7 deliberately left WHO/WHERE/final parsing unknown; this batch narrows the first two under selected-provider assumptions and locates the remaining parser helpers. Original execution remains0 for this area even though execution may be counted elsewhere in the wider MH202 project.
+
+Highest next question is the exact normal `Assegna_indirizzo`/`Assegna_livello_interfaccia` path for WHO1001/WHERE0 and its kind stores. An independently scoped fresh isolated leaf execution could later test a justified normal case, but this static checkpoint does not claim to have performed it. The separate output descriptor setup/no-data/context-stop questions also remain open. No authentication, credentials, handshake derivation, live test or F454 fixture is involved.

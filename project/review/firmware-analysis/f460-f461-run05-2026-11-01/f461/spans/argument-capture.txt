@@ -1,0 +1,28 @@
+
+/home/bticino/libcoso/libplug_automation_tr.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000003a30 <automation_tr_translate@@Base>:
+    3a30:	a9b57bfd 	stp	x29, x30, [sp, #-176]!
+    3a34:	910003fd 	mov	x29, sp
+    3a38:	a90153f3 	stp	x19, x20, [sp, #16]
+    3a3c:	aa0203f3 	mov	x19, x2
+    3a40:	a9025bf5 	stp	x21, x22, [sp, #32]
+    3a44:	d0000015 	adrp	x21, 5000 <automation_tr_translate@@Base+0x15d0>
+    3a48:	913042b4 	add	x20, x21, #0xc10
+    3a4c:	a90363f7 	stp	x23, x24, [sp, #48]
+    3a50:	f0000018 	adrp	x24, 6000 <automation_tr_translate@@Base+0x25d0>
+    3a54:	911f4317 	add	x23, x24, #0x7d0
+    3a58:	a9046bf9 	stp	x25, x26, [sp, #64]
+    3a5c:	d0000019 	adrp	x25, 5000 <automation_tr_translate@@Base+0x15d0>
+    3a60:	91302336 	add	x22, x25, #0xc08
+    3a64:	2a0003fa 	mov	w26, w0
+    3a68:	aa1603e2 	mov	x2, x22
+    3a6c:	aa1403e0 	mov	x0, x20
+    3a70:	a90573fb 	stp	x27, x28, [sp, #80]
+    3a74:	2a0103fb 	mov	w27, w1
+    3a78:	aa0403fc 	mov	x28, x4
+    3a7c:	52801001 	mov	w1, #0x80                  	// #128
+    3a80:	f90033e3 	str	x3, [sp, #96]

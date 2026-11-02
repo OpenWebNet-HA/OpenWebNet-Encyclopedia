@@ -1,0 +1,32 @@
+[
+  {
+    "index_va": "0x14c170",
+    "next_exidx_start_va": "0x18188",
+    "scope": "Boundary metadata, not source function name.",
+    "start_va": "0x17630"
+  },
+  {
+    "index_va": "0x14c878",
+    "next_exidx_start_va": "0x324c4",
+    "scope": "Boundary metadata, not source function name.",
+    "start_va": "0x31e34"
+  },
+  {
+    "index_va": "0x14c8b0",
+    "next_exidx_start_va": "0x337a4",
+    "scope": "Boundary metadata, not source function name.",
+    "start_va": "0x32b8c"
+  },
+  {
+    "index_va": "0x14e6b0",
+    "next_exidx_start_va": "0xb5dac",
+    "scope": "Boundary metadata, not source function name.",
+    "start_va": "0xb57fc"
+  },
+  {
+    "index_va": "0x14e318",
+    "next_exidx_start_va": "0xaf444",
+    "scope": "Boundary metadata, not source function name.",
+    "start_va": "0xaf3d4"
+  }
+]

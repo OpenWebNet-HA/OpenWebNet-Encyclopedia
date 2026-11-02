@@ -1,0 +1,17 @@
+{
+  "scope": "Selected F460 serializer and F461 module removal source; profile unchanged",
+  "patches": [
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "snapshot": "f460-f461-deep-analysis.md",
+      "before_bytes": 40876,
+      "before_sha256": "fc0d7a526f141f009d101a3ad9e90af2bc1086559998bf5041eaa9a3c30899a5",
+      "candidate": "REFERENCE_DRAFT.md",
+      "mode": "replace-reviewed-candidate",
+      "after_bytes": 43781,
+      "after_sha256": "3195fb54f4d533cbd6ba01eb8956a9141faa14ff687af4bbf43ed21c8b1e5734"
+    }
+  ],
+  "main_reproduction": "REFERENCE_DRAFT_METHOD.json",
+  "unchanged_profile_sha256": "bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba"
+}

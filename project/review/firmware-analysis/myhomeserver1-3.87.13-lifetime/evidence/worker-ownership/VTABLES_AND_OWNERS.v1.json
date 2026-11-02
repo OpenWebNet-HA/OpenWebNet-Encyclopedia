@@ -1,0 +1,77 @@
+{
+  "provider_entry_pic": {
+    "add_pc_va": "0x9b272",
+    "pool_va": "0x9b284",
+    "target_thumb_pointer": "0x9b1f9"
+  },
+  "relative_relocations": [
+    "00162108  00000017 R_ARM_RELATIVE        ",
+    "0016210c  00000017 R_ARM_RELATIVE        ",
+    "00162110  00000017 R_ARM_RELATIVE        ",
+    "0016211c  00000017 R_ARM_RELATIVE        ",
+    "00162120  00000017 R_ARM_RELATIVE        ",
+    "00162124  00000017 R_ARM_RELATIVE        ",
+    "00161df0  00000017 R_ARM_RELATIVE        ",
+    "00161df4  00000017 R_ARM_RELATIVE        ",
+    "00161df8  00000017 R_ARM_RELATIVE        ",
+    "00161e04  00000017 R_ARM_RELATIVE        ",
+    "00161e08  00000017 R_ARM_RELATIVE        ",
+    "00161e0c  00000017 R_ARM_RELATIVE        ",
+    "00166c2c  00000017 R_ARM_RELATIVE        ",
+    "0015fd34  00000017 R_ARM_RELATIVE        ",
+    "001669c4  00000017 R_ARM_RELATIVE        ",
+    "001619ec  00000017 R_ARM_RELATIVE        "
+  ],
+  "selected_owner_chains": [
+    {
+      "dispose_slot_va": "0x15fd34",
+      "dispose_thumb_pointer": "0x1a049",
+      "got_slot_va": "0x166c2c",
+      "name": "scene-owner",
+      "offset_pool_va": "0x18150",
+      "vtable_header_va": "0x15fd24"
+    },
+    {
+      "dispose_slot_va": "0x1619ec",
+      "dispose_thumb_pointer": "0xb0b61",
+      "got_slot_va": "0x1669c4",
+      "name": "sleep-action-owner",
+      "offset_pool_va": "0xa7f50",
+      "vtable_header_va": "0x1619dc"
+    }
+  ],
+  "thread_state_tables": [
+    {
+      "name": "action-wait",
+      "start_va": "0x162100",
+      "words": [
+        "0x0",
+        "0x1650ac",
+        "0xcd555",
+        "0xcd56d",
+        "0xcd5c5",
+        "0x0",
+        "0x1650b8",
+        "0xcd58d",
+        "0xcd5a5",
+        "0xcd721"
+      ]
+    },
+    {
+      "name": "scene-workers",
+      "start_va": "0x161de8",
+      "words": [
+        "0x0",
+        "0x164d84",
+        "0xa5651",
+        "0xa5669",
+        "0xa6d19",
+        "0x0",
+        "0x164d90",
+        "0xa5689",
+        "0xa56a1",
+        "0xa6d11"
+      ]
+    }
+  ]
+}

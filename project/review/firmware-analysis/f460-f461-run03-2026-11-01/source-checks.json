@@ -1,0 +1,17 @@
+{
+  "scope": "Actual read-only host reconstruction checks of the two saved static packets; no original firmware or CPU replay",
+  "F460": {
+    "chunk_id": "a14e70",
+    "wall_time_seconds": 0.136005247,
+    "exit_code": 0,
+    "original_token_count": 22,
+    "output": "{\"check\": true, \"outputs\": 15, \"spans\": 10, \"guards\": 35, \"new_original_execution\": 0}\n"
+  },
+  "F461": {
+    "chunk_id": "6a93e9",
+    "wall_time_seconds": 0.054267794,
+    "exit_code": 0,
+    "original_token_count": 26,
+    "output": "{\"check\": true, \"outputs\": 18, \"spans\": 9, \"guards\": 31, \"firstcopies\": 20, \"original_execution\": 0}\n"
+  }
+}

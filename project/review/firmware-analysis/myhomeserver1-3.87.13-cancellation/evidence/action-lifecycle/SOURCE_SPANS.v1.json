@@ -1,0 +1,51 @@
+[
+  {
+    "bytes": 8,
+    "end_va_exclusive": "0xcdaf4",
+    "name": "duration-getter-setter",
+    "sha256": "123856ef8537964018f60e2f387b50c4a94b54615f5f58d6429c0337914df8d3",
+    "start_va": "0xcdaec"
+  },
+  {
+    "bytes": 1372,
+    "end_va_exclusive": "0xcf5c8",
+    "name": "selected-constructor",
+    "sha256": "df4fd276ec2c44caab09bdf995957fb5415c7f6fcc1c03b50c8f81271b2fb438",
+    "start_va": "0xcf06c"
+  },
+  {
+    "bytes": 176,
+    "end_va_exclusive": "0xcda40",
+    "name": "first-callable-storage",
+    "sha256": "6e52cb4b5e9e94c7ec00969f2461fd7de22b89809af8be86bd874886b301074e",
+    "start_va": "0xcd990"
+  },
+  {
+    "bytes": 172,
+    "end_va_exclusive": "0xcdaec",
+    "name": "second-callable-storage",
+    "sha256": "6a7eb372cfc10244c6eb461cbd47789d859c3985210fdd73b87da766927083e2",
+    "start_va": "0xcda40"
+  },
+  {
+    "bytes": 78,
+    "end_va_exclusive": "0xcd896",
+    "name": "execute-inline-first-path",
+    "sha256": "77df91911439b44550946bec7ffc09ff55214333094437036166193c0f48ca3c",
+    "start_va": "0xcd848"
+  },
+  {
+    "bytes": 86,
+    "end_va_exclusive": "0xcd936",
+    "name": "duration-thread-request",
+    "sha256": "e67a7d586d1ed722d41e811bfd23ab6a5b679df62ea9bd842d4f37b3dcacca7e",
+    "start_va": "0xcd8e0"
+  },
+  {
+    "bytes": 262,
+    "end_va_exclusive": "0xcd826",
+    "name": "duration-worker",
+    "sha256": "ddeb347a97283e8fa8ee244b7da6772d415961309441d717a0ebbdaa572abfc9",
+    "start_va": "0xcd720"
+  }
+]

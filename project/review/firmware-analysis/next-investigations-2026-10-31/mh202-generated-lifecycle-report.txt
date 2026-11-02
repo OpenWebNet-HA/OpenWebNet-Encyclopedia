@@ -1,0 +1,59 @@
+# ScenarioSuite generated lifecycle syntax and MH202 consumers
+
+Original compiler source now supplies specific header, trigger, OnlyIf and delay syntax for comparison with the MH202 consumers. It narrows the earlier independently supplied basename/label/separator premises and gives a direct ordinary-delay parameter extraction join. It does not recover or execute a configured scenario, prove a complete `.spt` grammar, or establish a live Start-to-action transaction.
+
+All original CLR/ARM/vendor/native/JavaScript/script/target-process/network execution and new hooks are0. This pass uses static original IL, metadata, ELF bytes and host binutils only. It does not rerun old EOF/GOTO/RESTART, parser, clock or mode matrices. Stop/disable/panic/restart policies remain separate where this new source does not connect them. No closed authentication/session/framing delegate is examined.
+
+## Original identities and evidence scope
+
+The immutable `2026-10-31-generator-chain/METHODS.v1.json` supplies original Core MethodDef0600001f `Bticino.ScenarioSuite.Core.cCompiler::CompileScenario`, RVA0x22f8. Its complete original body hash is rechecked against fresh original Core.dll bytes before selecting IL ranges. The prior manifest authenticates that exact method evidence. The selected producer slices are exact source records, not re-executed compilation or new source-coverage counts for every previously decoded instruction.
+
+Fresh metadata/body parsing adds six small original cCompiler predicates at tokens06000024/26/28/2a/2c/31, plus MethodSpec-to-MemberRef resolution. Their original bytes, RVAs, offsets, signatures/targets and body hashes are preserved. The host static parsers are the same verified read-only dnfile/dncil/pefile package files; all relevant existing tool pins are checked.
+
+Fresh normal-image inputs are MH202 `/home/bticino/bin/bt_taskmanager`, `/home/bticino/bin/bt_script` and `/home/bticino/lib/libdomotica.so.0.0`. `INPUTS.v1.json` records full hashes; `NATIVE_SOURCE.v1.json` records spans, words and public syntax/pool relationships. Eight selected disassemblies retain immediate context, including the library PIC calculation. Firmware1.0.24 and Suite3.5.38/package1902_1.0_LGG remain separate applicability scopes. Original/finished dossiers and canonical references are unchanged; five prior source reports are frozen as comparison inputs.
+
+## Header order, basename and prefix match
+
+CompileScenario's selected line construction begins at code-relative IL0a41: number/string counters start1, line label starts2, and the string-assignment template is `{0} {1}="{2}"`. The first append is `$NOMESCRIPT` with `Path.GetFileName(FileSPT)` at IL0a77..0a9c. Subsequent selected appends are `$GENERATORE`, `$DATACREAZIONE`, `$RESTART` with SI/NO from Scenario.Restart, optional trigger-enable/disable commands, `$NUMVAR`, and `$NUMSTRING`. Each shown label advance adds2; later optional/loop-dependent rows make the BEGIN/action labels dynamic. No particular configured file or complete label list is fabricated.
+
+The taskmanager's selected original file pattern at0xce44..0xce64 is `%s%d.spt/%d.spt` under `/home/bticino/cfg/extra/4/`. That has the same nested ID.spt/ID.spt component structure as CompileAll's original Path.Combine calls established in the preceding report. Actual Windows path separators, packaging/export/installation and an ID admitted by the native1..300 file-search loop remain premises; a path-shape match alone does not prove installed contents or a scene-address validator.
+
+The new basename producer is relevant to two different native prefixes. Taskmanager0xcef8..0xcefc compares only5 bytes with `$NOME`; therefore `$NOMESCRIPT` matches that selected prefix. Interpreter0x979c..0x97a8 separately compares12 bytes with exact leading-blank ` $NOMESCRIPT`. The generated labelled single-space string assignment supplies that leading blank in the pre-BEGIN remainder. Under normal decimal-ID basename generation and successful ordinary scanner/copy/format contracts, both source branches receive the same producer-selected basename. They do not need independently invented directive values merely because the compared literals have different lengths.
+
+This narrows the prior name-choice gap; it does not prove runtime global/provider binding, actual directory equality or universal copying. Taskmanager uses the quoted payload as snprintf's format with size31, and the interpreter has a quote/copy/tokenization path with retained overlap/provider premises. The selected ordinary basename from a decimal scenario-ID path does not contain a percent directive, but arbitrary configured names/copy errors are not assessed. The action-specific OWRITE DISABLED-marker contract remains inherited conditional evidence, not a new all-action suppression result.
+
+## Start/Stop selection and BEGIN placement
+
+Actual compiler collection getters are Scenario.StartTrigger at IL01ef, StopTrigger02f6, OnlyIf0406 and Execute093b. Their support records receive distinct TypeCommandSupport tags3/6/4/5 at IL0226/0334/047f/0972. Fresh predicate bodies select those exact tags; original generic MethodSpecs resolve to System.Linq.Enumerable.Where, Select and Count, under their normal framework contracts. This is stronger than equating the integers with similarly numbered database areas by name alone; no LINQ or vendor delegate executes here.
+
+For the selected Start list, original source appends `$TRIGGERSTART` and a support command's MakeOpen. The empty selected-list branch at IL0fe3..1007 uses literal SEMPRE. The analogous Stop list appends `$TRIGGERSTOP`, with its empty-list branch IL139e..13c2 using MAI. Both precede BEGIN. Native taskmanager retains separate directive kinds/callbacks and SEMPRE/MAI branches; these new literal producers do not merge Stop with panic, disablement or interpreter END.
+
+Compiler IL17e3..1805 appends a numbered BEGIN row, stores that label for later repeat control, and advances by2 before OnlyIf body construction. Native bt_script's original scanner reads a label token, takes ftell+1, reads the remainder, and matches exact six-byte ` BEGIN` to populate its selected head. The compiler's one-space `{0} {1}` template supplies that separator/marker shape. Successful ordinary stdio, readable complete records, allocation/global binding and installation are still premises. EOF/list-tail/END behavior is inherited from the prior reviewed construction report and is not remodelled here.
+
+## OnlyIf precedes the action list
+
+The post-BEGIN filter at IL1817..1845 selects TypeCommandSupport4; no selected entries bypasses to IL35f7. A nonempty selected OnlyIf region builds result variables and conditional text. One genuine template at IL1ddb is `{0} IIF({1}{2}{3}%,{4}=1%,{5}=0%)`. Its logical aggregation is not reconstructed as a complete precedence or short-circuit language.
+
+The final selected aggregate template at IL35ab is `{0} IIF({1},GOTO{2}%,GOTO{3}%)`: the true target is the current label+2 and the false target initially contains `%REP_ACT%`. Subsequent variable-reset rows and the Action selection follow; delay/action records are not placed before this aggregate gate in the selected construction order. This establishes source control-target construction, not the truth of a configured condition or a physical OnlyIf policy.
+
+Native bt_script0x9b68..0x9bf4 checks the first3 bytes IIF, passes comma delimiter44 and source position3 to PARENTESI, then passes its output buffers to IIF. The producer actually supplies `IIF(` with the opening parenthesis at index3, narrowing the previously supplied prefix/position premise. Percent/numeric substitution, logical recursion and IIF suffix/copy behavior remain separate consumer branches. No complete compiler-produced expression has been accepted or run by the native parser in this pass.
+
+## Ordinary delay syntax reaches actual argument extraction
+
+The compiler's Execute filter at IL3648..3676 selects tag5. For a CUSTOM support record with object9 and successful `UnpackData4Time`, IL36cb..3749 reads `ORAFROM` and `ORAFROMMULTI` through Int32.Parse. Multipliers1,60,3600 select exact unit strings s,m,h at IL3754..377f. IL3781 formats `{0} SLEEP({1}%,"{2}")`, then appends it. Other input/multiplier values and conversion errors are not forced into this selected contract. Random-delay object45 has a different SLEEPRANDOM format; its complete native join is not claimed here.
+
+Fresh bt_script0xa904..0xa918 selects the five-byte SLEEP prefix. It starts its decimal cursor at index6 (`0xa930`), accumulates digit conversions until `%` (`0xa954`), then copies from three bytes after that marker, matching the producer's percent-comma-quote separator, until the next quote. It terminates the unit and calls imported SLEEP(amount,unit) at0xaa64. This is a concrete producer-format-to-native-call-argument source join for ordinary nonnegative decimal amounts, readable delimiters and bounded units. No invented configured delay or original parser/helper execution occurs.
+
+The candidate same-build libdomotica SLEEP source independently retained here distinguishes exact ms, then first-character m/h/s; m multiplies amount by60 and h by3600 while s retains it. This agrees with the source-selected units rather than treating ORAFROMMULTI as another already-applied multiplication. Runtime binding, numeric overflow, provider/cancellation/scheduling and elapsed time remain untested. Previously established chunk/delegate arithmetic is inherited context, not a new repeated timing experiment.
+
+## Repeat and policy boundaries
+
+After the selected Execute loop, Scenario.Repeat at IL39da selects an optional GOTO-format append targeting the saved BEGIN label. END follows. The final writer substitutes `%REP_ACT%` with either that optional repeat-GOTO label or the END label, and replaces `%END%` with END's label. This provides original target-selection provenance for the earlier hypothetical labels; it does not establish real rerun-at-EOF behavior, a full GOTO/list lifetime or a deployed repeat outcome.
+
+Restart is a separate SI/NO header producer, consumed by taskmanager's exact SI branch, with saved-active/startup readiness semantics retained from the earlier reports. These new literal joins do not prove panic gate clearing, power-cycle recovery, pause semantics, all-action disablement or a dedicated R/P IPC producer. No new whole-program absence query is used to turn those remaining gaps into verdicts. Stop-trigger, ordinary WHO17 Stop, END, disable and panic retain separate conditions/call paths.
+
+## Reproduction and confidence
+
+Run `python3 -B work/mh202-firmware/research/2026-10-31-generated-lifecycle/collect_lifecycle_v1.py --check`. It checks immutable producer/tool/reference identities, original Core body bytes, six fresh predicate methods, MethodSpec resolution and selected native words/pools/spans; it regenerates static evidence exactly. Existing files cannot be overwritten. First collector/report/output hashes and snapshot membership are computed before the snapshot index is opened, then exact first bytes are preserved. No older report, source image or native corpus is changed.
+
+High confidence: literal/header order, separate tag filters, default trigger strings, BEGIN and control-target placement, basename prefix relation, and ordinary-delay extraction/call argument alignment. Conditional: normal framework/stdio/copy/import contracts, installed matching paths, provider/global/state binding, coherent source records and version applicability. Unknown: a genuine configured compiler output, complete generated/parser acceptance, original OnlyIf truth/action execution, full pause/stop/panic/restart recovery and physical behavior. Decoded IL and static source spans are not executed instructions or completed lifecycle coverage.

@@ -1,0 +1,27 @@
+{
+  "/home/bticino/scheduling_manager/scheduling_manager": {
+    "bytes": 2161128,
+    "resolved": "/home/bticino/scheduling_manager/scheduling_manager",
+    "sha256": "5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62"
+  },
+  "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0207-f460-myhome-server.md": {
+    "bytes": 41934,
+    "sha256": "ed4af14a11813ba1fdc53dfbf131a388b2cf8066fc688888e30da7c158579932"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01-run03-sleep-invoker/REPORT.md": {
+    "bytes": 9034,
+    "sha256": "ee7c55b26c5587121bdd27347e602d7cc9f5c3105a407d68f84294c19949d521"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/REPORT.md": {
+    "bytes": 8030,
+    "sha256": "578653ad15a4c18b203d9917867f32384d017894875e88054043fae29ff46557"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/REPORT.v2.md": {
+    "bytes": 8497,
+    "sha256": "0e960fe9a386c15467227feb382366becd285b324e59eed7eb5c01d0f386df64"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01/image_vfs.py": {
+    "bytes": 5602,
+    "sha256": "32e453cb6af0e2daafb8325d7b5115c3c13883e57d279d347aa8ea4baa3e3838"
+  }
+}

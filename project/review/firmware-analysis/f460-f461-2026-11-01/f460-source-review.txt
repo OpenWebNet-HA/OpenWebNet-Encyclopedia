@@ -1,0 +1,27 @@
+# Independent F460 first-pass source review
+
+PASS within the bounded package/platform/structural source scope. No source-result correction requested. I authored the separate F461 first pass; this review independently reads F460 original package/image-backed files and metadata. It does not certify product behavior from cross-product names or catalogue identity.
+
+Independently verified the canonical F460 archive size (158,564,663 bytes) and SHA256 b5a50d606578f47ecbf0d327d7078b1357abb78425ea821ce743cd486b801b26, four encrypted ZIP member declarations, extracted outer/nested member and normal/recovery image sizes/hashes. The manifest itself names F460 2.0.12 and model 5.0.132. These are packaged declarations, not hardware replies or cryptographic signature verification. Extraction provenance and regular-only VFS design retain symlinks as metadata; no host links were found in either tree.
+
+Read and hashed all 1,631 saved ELF candidates through the verified image VFS: normal875/recovery756, with fresh class/machine fields agreeing. Normal5873 and recovery6179 are regular-file counts. The selected scheduler and matrix objects independently have ELF64 class, machine183 and PIE type3; no MHS ARM32 layout is transferred. Raw kernel bytes independently have ARM64 magic at0x38 and match their packaged MD5. Parsed six original FDT headers/tags and verified root model/compatible properties and source hashes; none proves which DTB boots. Setup_m4 script lines10/15/16 are remoteproc request text, not auxiliary-core execution.
+
+Compared all25 application declarations to original stack XML, checked every selected launcher/setup script line directly, and verified the exact packaged scene-prefix count0. Working-mode literals are not activation or readiness evidence. The separate extra partition, configured scenes, daemon decision semantics and actual boot remain outside this pass.
+
+Opened both actual catalogues using immutable read-only SQLite with query_only=ON and trusted_schema=OFF. Each has75 stored tables including sqlite_sequence; independently checked all table-definition hashes. Catalogue file identity is bd2ff4d326692c85bc4eb3f86504d615758da97dc832389fac523734574833e9. All saved MHS comparison row hashes were cross-checked against the pinned original MHS manifest and existing same-path files; byte inequality is not a behavioral theorem. SQL row semantics, effective provider binding and catalogue-reader functions were not audited here.
+
+Verified27 input pins, every output-manifest member and14 exact first-candidate copies. Replayed only the host collector --check successfully (13 outputs). Its console field normal_files=875 is a disclosed labeling issue: that console value is the ELF count; saved HEADER_CENSUS, report and manifest correctly say5873 regular files and875 ELFs. This does not change saved source results. One earlier inline reviewer script failed Python parsing before any analysis or writes because else64 lacked a space; the corrected inline audit passed. No firmware failure or generated candidate overwrite occurred.
+
+No original program/helper/CPU, service, target syscall, device, bus/network or physical operation was executed. No authentication, session, framing or transport implementation was examined. This is a bounded identity/structural source review, not exhaustive firmware, security, command, runtime or hardware validation. Existing product execution ledgers are unchanged.
+
+## Exact reviewed pins
+
+- `REPORT.md`: `c7a2949ed3f49a14fa611561795c68f3f166d980326719d61029975069263945`
+- `collect_first_v1.py`: `6d683761d400f35202495a9648af9a355833c358f5f09f3bd235dc3bd6a6f030`
+- `OUTPUT_MANIFEST.json`: `45e25271e23e59d0924ca3ba64e0c352fc68fe7ca6de9f70f4841c7fca4712a9`
+- `first-candidate/INDEX.json`: `5781c18870f1129c3d07d84e116fa6d77a0d1abdd2e383516792ca815a073a70`
+- `INPUTS.json`: `2aa74995cb5de35cbd0f36128c3167cf795b75d4df1829c7538def94f5cbcd87`
+- `KERNEL_DTB.json`: `f07e1d98b3b749b21aa607003c92ec147fbc41ed86ed0b8ab4a748bf143d2fad`
+- `STARTUP_DECLARATIONS.json`: `c113a52c11a5e02a366bc0c1b5b89c60539d27c0b7c2921552e85342c3e710fa`
+- `DATABASE_STRUCTURE.json`: `fe4da2f2e7e7904369e8438b9c14ad48294a787ef4a61a2bc02ce7a1dd93108a`
+- `MHS_IDENTITY_COMPARISON.json`: `95a0c4fead1cd18a6c449896f1ac5284e4f78f7f8787692f09166fb53800c0b2`

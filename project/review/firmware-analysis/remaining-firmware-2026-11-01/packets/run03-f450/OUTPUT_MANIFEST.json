@@ -1,0 +1,26 @@
+{
+  "collector_sha256": "ac1907c687a32dccca777b74718e1624b681492dcd1f7b7b80b1750697d5f6e3",
+  "files": {
+    "INPUTS.json": {
+      "bytes": 856,
+      "sha256": "28d17ce4827abd7765b89e4c5588873f389c58234149961f9e699d4b3e64d1cc"
+    },
+    "POINTER_FLOW.json": {
+      "bytes": 1946,
+      "sha256": "8940d0edb73c17d530512ff4b75ab87345125beb2cadf6a527aa940c68c9620e"
+    },
+    "REPORT.md": {
+      "bytes": 5648,
+      "sha256": "fb73ae57a898efca61b10dede7029744b3d85fd267eae1900f5b190f9a07b797"
+    },
+    "SOURCE.json": {
+      "bytes": 6026,
+      "sha256": "e8c8ccea0c0e372fc6a37717e1b9bed857c9102166e13bcf0dc8a4d3999ee1b7"
+    },
+    "SPANS.json": {
+      "bytes": 3135,
+      "sha256": "d4e565914cc570fccb1d1b378f2d97b4e137104104ac88940117fe68d6729676"
+    }
+  },
+  "scope": "Canonical generated members excluding this manifest"
+}

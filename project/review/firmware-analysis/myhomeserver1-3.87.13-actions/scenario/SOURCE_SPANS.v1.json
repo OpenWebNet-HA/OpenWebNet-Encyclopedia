@@ -1,0 +1,79 @@
+[
+  {
+    "bytes": 64,
+    "end_va_exclusive": "0xa7630",
+    "name": "compiled-dispatch",
+    "sha256": "34f1d994e30ba43898bae82d56923f709da5bc09f598e54ac18954839d0056ee",
+    "start_va": "0xa75f0"
+  },
+  {
+    "bytes": 230,
+    "end_va_exclusive": "0xabd36",
+    "name": "compiled-scenario",
+    "sha256": "dac146a2af8d9bd7b032a943b45cd7d036ca269ba107d2eea55ead6ee80518ce",
+    "start_va": "0xabc50"
+  },
+  {
+    "bytes": 16,
+    "end_va_exclusive": "0xac7c4",
+    "name": "compiled-pools",
+    "sha256": "27da64ee3a6a687b18121c651ff1f1e53efacb33bd9972e7eb8521d9102f01ce",
+    "start_va": "0xac7b4"
+  },
+  {
+    "bytes": 460,
+    "end_va_exclusive": "0x113c54",
+    "name": "scenario-runner-constructor",
+    "sha256": "45da586135895f030b88c2baf619827a9a2e8d9d4b9cc9e347338027e77aa180",
+    "start_va": "0x113a88"
+  },
+  {
+    "bytes": 44,
+    "end_va_exclusive": "0x113a88",
+    "name": "functor-manager",
+    "sha256": "4d2244e5dd4b54226705d5942a5cd2ee71d637f9194c76712e5e4ec33f152afe",
+    "start_va": "0x113a5c"
+  },
+  {
+    "bytes": 860,
+    "end_va_exclusive": "0x113fb0",
+    "name": "scenario-invoker",
+    "sha256": "ff6f17686b7be37499234ba52d76115d42320fbd267bf1ced5aa6f8d64d8ad5c",
+    "start_va": "0x113c54"
+  },
+  {
+    "bytes": 60,
+    "end_va_exclusive": "0xb65bc",
+    "name": "registry-key-predicate",
+    "sha256": "90f293f6c21463593818fa388f6eec5f24e9ece854ed37a0a6edc3b580225f34",
+    "start_va": "0xb6580"
+  },
+  {
+    "bytes": 180,
+    "end_va_exclusive": "0xb6ab0",
+    "name": "registry-value-normal-path",
+    "sha256": "72c0b64d19a10015b5f76b9421c6f4565642c98577b2791c4a9b6c3f8f818c25",
+    "start_va": "0xb69fc"
+  },
+  {
+    "bytes": 180,
+    "end_va_exclusive": "0xcda3c",
+    "name": "functor-storage",
+    "sha256": "548decf0a5a45a9ae8888d458053e4cd4075f9ef5a787f6a7aaf6319c79adb82",
+    "start_va": "0xcd988"
+  },
+  {
+    "bytes": 42,
+    "end_va_exclusive": "0x2503e",
+    "name": "serializer-derived-field",
+    "sha256": "eda50bccbddcc3dbba08ec8d3ab30aa631371a786f5753d13d8452e8f5928fcd",
+    "start_va": "0x25014"
+  },
+  {
+    "bytes": 40,
+    "end_va_exclusive": "0x25128",
+    "name": "serializer-pools",
+    "sha256": "9b34eaa121b538de1436fd23f2e2ddec3f79a4d779794e4af2a3e8d3cbb354a0",
+    "start_va": "0x25100"
+  }
+]

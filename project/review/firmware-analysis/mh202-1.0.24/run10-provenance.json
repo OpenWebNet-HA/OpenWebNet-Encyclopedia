@@ -1,0 +1,150 @@
+{
+  "checkpoint": "run10",
+  "status": "four reviewed areas; full selected normal parser-body corpus; overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "report",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run10/REPORT.md",
+      "source_sha256": "3cb3a737cea3b41b8687d0808894f5627787fb5447c1139216f32ce5cd3fb414",
+      "published": "run10-functional-report.txt",
+      "published_sha256": "3cb3a737cea3b41b8687d0808894f5627787fb5447c1139216f32ce5cd3fb414"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run10/functional-review.md",
+      "source_sha256": "86e40e211f615f26c494aa9baffc6725171cf7f93ee25f194f8abcbe22fc3830",
+      "published": "run10-functional-review.txt",
+      "published_sha256": "86e40e211f615f26c494aa9baffc6725171cf7f93ee25f194f8abcbe22fc3830"
+    },
+    {
+      "role": "report",
+      "area": "triggers",
+      "research_path": "work/mh202-firmware/research/2026-10-30/triggers/run10/REPORT.md",
+      "source_sha256": "778801130a8a6188111f34caa734c540197c35ed47499d155c220f9349f41153",
+      "published": "run10-triggers-report.txt",
+      "published_sha256": "778801130a8a6188111f34caa734c540197c35ed47499d155c220f9349f41153"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "triggers",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run10/triggers-review.md",
+      "source_sha256": "fa7a6786ce64009eb79953e64c362fffdd288b66ae75de03d201592acf2f2a43",
+      "published": "run10-triggers-review.txt",
+      "published_sha256": "fa7a6786ce64009eb79953e64c362fffdd288b66ae75de03d201592acf2f2a43"
+    },
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run10/REPORT.md",
+      "source_sha256": "dd782d0ccd5329a88862eafc1983fe28a8be56a6a037481482d162fe54589367",
+      "published": "run10-protocol-report.txt",
+      "published_sha256": "dd782d0ccd5329a88862eafc1983fe28a8be56a6a037481482d162fe54589367"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run10/protocol-review.md",
+      "source_sha256": "ae5cfef534a1629c9044a97bd439f35082ecd6c4fd9310e2b9aae80072c9b20d",
+      "published": "run10-protocol-review.txt",
+      "published_sha256": "ae5cfef534a1629c9044a97bd439f35082ecd6c4fd9310e2b9aae80072c9b20d"
+    },
+    {
+      "role": "report",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run10/REPORT.md",
+      "source_sha256": "63fc28bfb92bd6030becfbad8f35da2e43b58d8294c298196f657f861d84ea32",
+      "published": "run10-coso-report.txt",
+      "published_sha256": "63fc28bfb92bd6030becfbad8f35da2e43b58d8294c298196f657f861d84ea32"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run10/coso-review.md",
+      "source_sha256": "bf3ddbd66a1c9900f3935a5c261c37c13ab3744bebe563a253f74ab2f6752e50",
+      "published": "run10-coso-review.txt",
+      "published_sha256": "bf3ddbd66a1c9900f3935a5c261c37c13ab3744bebe563a253f74ab2f6752e50"
+    },
+    {
+      "role": "pre-promotion wording history",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run10/protocol-wording-refinement.md",
+      "source_sha256": "55500546aa307caf42e3ceb5c7756691a539a7cdeddf364841aeff34a0f3ebbc",
+      "published": "run10-protocol-wording-refinement.txt",
+      "published_sha256": "55500546aa307caf42e3ceb5c7756691a539a7cdeddf364841aeff34a0f3ebbc"
+    },
+    {
+      "role": "pre-promotion wording history",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run10/protocol-report-before-wording-refinement.md",
+      "source_sha256": "c8f58bac3d67b6b43cb634c2f58094bca3dd2789a94fd5b51ac4362f7f66e9da",
+      "published": "run10-protocol-before-wording-refinement.txt",
+      "published_sha256": "c8f58bac3d67b6b43cb634c2f58094bca3dd2789a94fd5b51ac4362f7f66e9da"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run10/collect_evidence.py",
+      "sha256": "43597beddb95b8b693019da7365bd07f6e1139962d804ffb0791ea3d0003a4ed",
+      "method": "static original/finite host evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/triggers/run10/collect_selector_ownership.py",
+      "sha256": "5119b1507ae692e3e55b875fc3ea4bba9f7bedf8fb0ddf53286cbdc8126de9df",
+      "method": "static original/finite host evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run10/collect_evidence.py",
+      "sha256": "3003f9e192c57b20e16a4ab59115df99ba747fc050d5b837c262fa72d8e191e3",
+      "method": "static original/finite host evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run10/emulate_normal_builder.py",
+      "sha256": "7a41b303760a2e1a5addf70f6abd99bde746f514f3a50e9145dc442babceb209",
+      "method": "full selected original normal builder/parser with explicit C primitives/PLTredirects/EXIT"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run10/collect_lighting.py",
+      "sha256": "314f34a2a54e655e6e20658242aba94cff68a41e1eba3023d6a0ec5b957ae3c6",
+      "method": "static original/finite host evidence"
+    }
+  ],
+  "method": "Static source plus strict private ARM original normal builder/parser experiment; no targetOS or firmware process",
+  "canonical_execution": {
+    "new_corpus": {
+      "top_level_calls": 2,
+      "original_instruction_visits": 7480,
+      "primitive_callbacks": 838,
+      "linker_redirect_callbacks": 10,
+      "boundary_callbacks": 2,
+      "code_hook_visits": 8330
+    },
+    "cumulative": {
+      "corpora": 5,
+      "top_level_calls": 48,
+      "original_instruction_visits": 11904,
+      "primitive_callbacks": 1079,
+      "linker_redirect_callbacks": 10,
+      "boundary_callbacks": 6,
+      "code_hook_visits": 12999,
+      "firmware_processes": 0,
+      "target_OS_calls": 0
+    },
+    "scope": "Canonical named corpora only; verification replays do not accumulate; redirects/EXIT separate from C primitives"
+  },
+  "history": {
+    "run9_document_snapshots": "reviewed/run9/SOURCE_SNAPSHOTS.json",
+    "all_earlier_research_unchanged": true,
+    "wording_refinement": "Generic cstring cap versus region-bounded strtok scan clarified; prior report reconstructed and SHA-verified; no code/result/cap changes"
+  },
+  "limits": [
+    "Actual original builder/parser/helper path runs with supplied C-interface strings and ordinary host C primitives, not upstream raw diagnostic decoder/maps/target runtime",
+    "Numeric lookup/create/key/global/line/action join is static conditional, no valid full DSL or boundary access/impact",
+    "Special DIM1 reset writes do not reach selectors under selected provider; complete subsequent parser writes and eventual bytes remain unknown",
+    "Lighting route is postparser/context conditional body/status construction, no serialframe/STM/state/physical roundtrip proof",
+    "Missing2.xtz/4.xtz/assets and wider Device gates remain open"
+  ]
+}

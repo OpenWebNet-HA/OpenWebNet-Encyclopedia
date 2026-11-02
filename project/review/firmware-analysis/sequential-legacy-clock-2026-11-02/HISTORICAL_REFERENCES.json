@@ -1,0 +1,11 @@
+{
+  "mappings": [
+    {
+      "current_sha256": "012378faf435fe5996f6d016dc004ade2ba6e51f45302083ac96a93d1a1785c6",
+      "expected_old_sha256": "eb6ca3a2725aa286941e91c0fc6b14eaf325c9ab48de6705c6cfd377139bce2a",
+      "original_path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+      "retained_local": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/integration-pre-edit/OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md"
+    }
+  ],
+  "scope": "Only exact prior firmware-index bytes, no broad fallback or repinning"
+}

@@ -1,0 +1,43 @@
+{
+  "numeric142": {
+    "current_path_matches": 141,
+    "distinct_paths_in_set": 142,
+    "exact_historical_overrides": [
+      {
+        "bytes": 13742,
+        "expected_sha256": "5a3dec72f1d14ac5c338a38571c809749594e761854e915c8a0decea447bcd52",
+        "original_path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+        "resolved_snapshot": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/pre-edit/myhomeserver1-3.87.13-research-synthesis.md"
+      }
+    ],
+    "expected_membership_digest": "a6a3500ffd1415f49464bff557b83eb3e945d300be1c4d2a66d175f3f7885621",
+    "memberships_checked": 142,
+    "scope": "Member hashes/sizes only; no old collector/test/CPU/source semantic replay. No generic fallback resolver."
+  },
+  "numeric_index": {
+    "bytes": 36229,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/EVIDENCE_INDEX.json",
+    "sha256": "9aa272b2543bded5bd6765473851fdd9897e9abfde504239218b15dbd274a9f2"
+  },
+  "old614": {
+    "current_path_matches": 613,
+    "distinct_paths_in_set": 614,
+    "exact_historical_overrides": [
+      {
+        "bytes": 43131,
+        "expected_sha256": "5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855",
+        "original_path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md",
+        "resolved_snapshot": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/pre-edit/own-dev-0199-myhomeserver1-home-automation-server.md"
+      }
+    ],
+    "expected_membership_digest": "e9e4357825f2b14920891f797c5d9b33899434b8f2dd3690345bb11ddd4e485b",
+    "memberships_checked": 614,
+    "scope": "Member hashes/sizes only; no old collector/test/CPU/source semantic replay. No generic fallback resolver."
+  },
+  "root_preedit_index": {
+    "bytes": 837,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/pre-edit/INDEX.json",
+    "sha256": "bdc6c5f67619b05cb33cb07c5ae9f1583b0999ef756689097690e36a8f2502a9"
+  },
+  "scope": "Only these size/hash reference checks, not fresh semantic/source/CPU/test audit."
+}

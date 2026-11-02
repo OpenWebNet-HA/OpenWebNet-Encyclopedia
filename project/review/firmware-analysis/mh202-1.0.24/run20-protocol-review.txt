@@ -1,0 +1,37 @@
+# MH202 run20 protocol independent review
+
+PASS. No source or scope correction requested. This is an independent original-source, harness/isolation and saved-result review, with a replay of the static collector only. I did not execute the native harness, import Unicorn, or replay firmware instructions. Parent native reproduction is separate.
+
+I ran `protocol/run20/collect_evidence.py --check`: 16 deterministic outputs, 11 input identities, nine original spans and 32 critical words pass. A separate host ELF32/PT_LOAD reader checked all nine raw span hashes and all 32 original words through the verified image accessor. All 28 author-manifest entries and 11 input hashes match. I independently rehashed the 41 digest-bearing analysis-tool files and their RECORD against the saved tool manifest without importing that package. One initial reviewer path calculation for that tool directory was corrected before these checks passed; no author or tool files changed.
+
+## Original dataflow and object namespaces
+
+The selected original normal pointer parser at libopenmsg VA0x2704 produces the actual WHO9/WHAT3/WHERE5/kind1 object. The second top entry uses that exact pointer at libcoso VA0x2fa4; the harness has no source field reseeding between entries. Source48-byte identity, unchanged contents and distinct output string/object pointers are checked. The original selector table VA0x2fc8 branches to0x3178. The command wrapper0x2c78 calls the original base constructor0x2b5c, then sets envelope+8=4. This is constructor metadata, separate from parsed kind+44=1 and envelope type+40=1. It is not DIM4, parsed kind4, an ACK or proof of actuation.
+
+Original new_open_msg0x1c80 creates the new48-byte parsed object; original clone code duplicates WHO/WHAT/WHERE strings and preserves their texts. NULL source optional fields/lists take selected original branches with explicitly modeled NULL-list imports. The new64-byte envelope has metadata+4=2, route+48=9, explicit status+52=0, representation+56=3 and the actual original new_id0x220c return at+60. The timestamp is a fixed synthetic clock primitive and counter initial value is supplied private state. Original new_id incrementing that state is execution evidence, not uniqueness, concurrency or real-clock evidence. The helper returns the envelope pointer Q, not a Boolean or a list-head result.
+
+The additional coso send_msgs2open0xbc10 source span supports a static classification only: representation3 is admitted; metadata4 bypasses monitor3/5 and enters the command-list append at0xbcf8..0xbd04, followed by original queue-link deletion and conditional call to send_msg2cmd0xbb78. The original field record with metadata3 and this new metadata4 envelope are distinct records. No native field STM caller, queue/consumer, recipient list, serializer, I/O or natural delivery is executed by this corpus.
+
+## Isolation and counts
+
+I inspected original mappings, PC/import allowlists, protected memory hooks, exact counter write range, invalid access/interrupt traps, string/allocation bounds and 100000 total-hook/per-entry instruction caps. Original code is RX; GLib table data is RO and nonexecuting; the counter page and private buffers are RW and nonexecuting. The selected GLib table/cell uses two explicit data setup writes. One separate counter setup write is not a callback. Unknown code/imports and unsupported primitive cases fail closed. The existing free/read guards do not prove reclamation safety: the selected corpus requests no frees.
+
+Saved trace slices independently recount two top entries: parser266 original visits +19 primitives +1 redirect +1 EXIT=287 hooks; helper117 +10 +4 +1=132. Total383 original instruction visits +29 declared primitives +5 redirects +2 EXIT +0 selector stops=419 hooks. There are86 original memory-write events and15 primitive write events. These are visits, including reused original code, not383 newly covered PCs. Nested constructor/parser/new_id calls are included, not extra top entries. Synthetic allocation, string, decimal conversion, list and clock callbacks remain explicit; original parser/clone/constructors/new_id bodies are not replaced by a central grammar or parsed-field stub.
+
+The saved output confirms actual source and clone fields agree, their WHO/WHAT/WHERE pointers differ, original source remains unchanged, and source/parser pointer equals the second entry argument. No whole grammar, active provider/interposition, nonempty-list, failure/unwinding, target runtime, physical transaction or wire ACK conclusion follows.
+
+## History and final identities
+
+The exact pre-consumer-extension report, collector and manifest are preserved with snapshot hashes. The initial stdout-label draft is also retained: saved native result already had two entries; only the terminal summary label was refined. Saved results/counts are unchanged across that label refinement. Current source extension is static and does not add native visits. Review found no author bytes requiring revision.
+
+| Current artifact, relative to protocol/run20 | SHA-256 |
+|---|---|
+| `REPORT.md` | `fe3e7fd6bc39f606d7aa76b1f2d8c3c4962faeae30ba8fa3ca648db09b48f98b` |
+| `collect_evidence.py` | `3f0195cad82a943b7a67f088234c0ce54e2a26aa2cda1d43c8ba47664fc196b4` |
+| `emulate_selector4.py` | `49a291e14d9ce8e72769a6545d3b8799e1edfb9a17a8fbe9a9dffa55bc4dc3c9` |
+| `joined-results.json` | `3d00d1880895de9c6cb538bcee259e7be095e5e3de64ba69aa504feb4d630019` |
+| `output-manifest.json` | `4517fdb7c778fcee106b00c561066aeb85e14c633278967bcc066dc7db8b03b6` |
+| `verified-tool-package.json` | `9f9bae4d6be11b8849669aeca2375469304e78ab5697abb89e47d3d73f6ca36a` |
+| `static-metadata-consumer-continuation.json` | `a51b2346b1e32329dbd19e71725617a28bd0de2fcb579da24256ee40a6724890` |
+
+Original inputs: libopenmsg `7a4793f740c4cb41a774bf06e3af3acf4bd8a7606c5329ac70d7e0e7fd64bcd7`; libcoso `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97`; GLib `029c2a7913131a84c46958d9ed445cb8a79dd1c8abc61116321badb7ad2735c0`; coso `6865c2d1d441d25effa31275080ded70ad3538a8a49288e3002ffb196b066175`. All source/image/earlier evidence remained read-only.

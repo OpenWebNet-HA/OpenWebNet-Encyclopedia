@@ -1,0 +1,206 @@
+{
+  "firmware": [
+    {
+      "edge": [
+        "EN_CONF",
+        "id_key_object",
+        "EN_KEY_OBJECT",
+        "id_key_object"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": true
+    },
+    {
+      "edge": [
+        "EN_CONF",
+        "id_firmware",
+        "EN_FIRMWARE",
+        "id_firmware"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": true
+    },
+    {
+      "edge": [
+        "EN_CONF_RANGE",
+        "id_conf",
+        "EN_CONF",
+        "id_conf"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    },
+    {
+      "edge": [
+        "EN_FILTER",
+        "id_conf",
+        "EN_CONF",
+        "id_conf"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    },
+    {
+      "edge": [
+        "EN_FILTER",
+        "id_object_firmware",
+        "AS_OBJECT_FIRMWARE",
+        "id_object_firmware"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    },
+    {
+      "edge": [
+        "EN_FILTER_RANGE",
+        "id_filter",
+        "EN_FILTER",
+        "id_filter"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    },
+    {
+      "edge": [
+        "AS_SLOT_CONDITION",
+        "id_slot",
+        "EN_SLOTS",
+        "id_slot"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    },
+    {
+      "edge": [
+        "AS_SLOT_CONDITION",
+        "id_condition",
+        "EN_CONDITION",
+        "id_condition"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    },
+    {
+      "edge": [
+        "AS_HIDDEN_KCONF",
+        "id_conf_range",
+        "EN_CONF_RANGE",
+        "id_conf_range"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    },
+    {
+      "edge": [
+        "AS_HIDDEN_KCONF",
+        "id_conf",
+        "EN_CONF",
+        "id_conf"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    }
+  ],
+  "suite": [
+    {
+      "edge": [
+        "EN_CONF",
+        "id_key_object",
+        "EN_KEY_OBJECT",
+        "id_key_object"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": true
+    },
+    {
+      "edge": [
+        "EN_CONF",
+        "id_firmware",
+        "EN_FIRMWARE",
+        "id_firmware"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": true
+    },
+    {
+      "edge": [
+        "EN_CONF_RANGE",
+        "id_conf",
+        "EN_CONF",
+        "id_conf"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    },
+    {
+      "edge": [
+        "EN_FILTER",
+        "id_conf",
+        "EN_CONF",
+        "id_conf"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    },
+    {
+      "edge": [
+        "EN_FILTER",
+        "id_object_firmware",
+        "AS_OBJECT_FIRMWARE",
+        "id_object_firmware"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    },
+    {
+      "edge": [
+        "EN_FILTER_RANGE",
+        "id_filter",
+        "EN_FILTER",
+        "id_filter"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    },
+    {
+      "edge": [
+        "AS_SLOT_CONDITION",
+        "id_slot",
+        "EN_SLOTS",
+        "id_slot"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    },
+    {
+      "edge": [
+        "AS_SLOT_CONDITION",
+        "id_condition",
+        "EN_CONDITION",
+        "id_condition"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    },
+    {
+      "edge": [
+        "AS_HIDDEN_KCONF",
+        "id_conf_range",
+        "EN_CONF_RANGE",
+        "id_conf_range"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    },
+    {
+      "edge": [
+        "AS_HIDDEN_KCONF",
+        "id_conf",
+        "EN_CONF",
+        "id_conf"
+      ],
+      "unresolved_rows": 0,
+      "zero_sentinel_excluded": false
+    }
+  ]
+}

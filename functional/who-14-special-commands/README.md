@@ -32,3 +32,7 @@ ScenarioDevices exposes `WHO 14` as an action capability, so MyHOME_Suite can pl
 Stored scenarios remain under [`WHO 0`](../who-0-scenarios/), while scenario-programmer execution and management are under [`WHO 17`](../who-17-scenario-management/).
 
 See [Cross-database functional coverage](../cross-database-coverage.md) for the relationship between ScenarioDevices, `OPEN.db`, and `MHCatalogue.db`, and [Scenario Engine](../../scenario-engine/) for the higher-level trigger/condition/action model.
+
+## MH202 implementation evidence
+
+For MH202 Firmware `1.0.24`, the inspected translator and state-machine paths handle selected `WHAT 0/1` requests, construct an internal brief body and process local software receipts under configured-address and provider assumptions. This source evidence does not expand the published actuator lock/unlock grammar or establish a physical lock operation. The [build-specific translation reference](../../reverse-engineering/firmware-analysis/mh202-1.0.24-functional-translation.md#who-14-special-commands-and-who-15-cen) distinguishes message construction, pending-ID state and field forwarding from accepted network input, timeout behavior and delivery.

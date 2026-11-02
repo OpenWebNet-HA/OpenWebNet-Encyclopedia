@@ -1,0 +1,36 @@
+# Independent asset-admission review
+
+PASS — asset admission and identity/classification only. No genuine commissioned scene/module export or manufacturer scene example is admitted by these finite selected retained inputs. The parent reports that the human has no configured installation/export. This review does not approve a configured execution trace, new binary-body findings, complete Device/source gates or runtime/physical behavior.
+
+## Exact reviewed identities
+
+| Admission-relative file | Bytes | SHA256 |
+| --- | ---: | --- |
+| mhs/REPORT.md | 3500 | `191e7c46fc321fcad96850d04022f12fbdda6fa462aead336536669e2dabd777` |
+| mhs/collect_admission_v1.py | 9836 | `5d24915043fe124967bd4ec39d866eef516f50d53c8fff6d691822d3b309f9a5` |
+| mhs/OUTPUT_MANIFEST.json | 687 | `f55767566028c23ac10b0658b1936988e73c5d494ff2dec699771e660f6916c8` |
+| mhs/first-candidate/INDEX.json | 842 | `ed239f8b3b290d3f732b551cde21bee3e34dc734dccae3620d9fc51a1302b325` |
+| f46/REPORT.md | 2971 | `e32dbc59066ef8ffecd875632ab9490ac2ed384987efd885a813a4820dc7568d` |
+| f46/collect_admission_v1.py | 9870 | `bc1c514948d61dada67ea718a27b8f84d1cc36415f7cac53483e2ee98d99202c` |
+| f46/OUTPUT_MANIFEST.json | 597 | `7efa56536d8972addb48dc01dab3d4609c1358956e1ec4fd59f1b2bd88175b5a` |
+| f46/first-candidate/INDEX.json | 713 | `8ceab64e26bd827ec47f272489af6d28fbc04ea70d234baa254bbf87dce5e7bf` |
+
+## Independent checks and results
+
+Both frozen admission collectors' read-only `--check` modes passed. I independently rehashed all 9 MHS and 38 F46 input pins, every declared output, both collector identities and every exact immediate first copy. The packets contain 5+4 declared outputs and 6+5 first copies; these counts describe integrity, not semantic coverage. I separately reconstructed the selected original-manifest and sanitized structure joins for all 30 F46 settings assets. No author/source/repository file was edited and no correction was required.
+
+For MHS normal/recovery, each own manifest contains exactly the scheduler binary and its settings file in the selected scheduler directory. The settings have the reported six logging/watchdog/scenesPath keys; the compiled-default-equivalent selected prefix has zero retained regular files, as does the finite home-subtree .scene/.scn/.spt selector. The retained outer listing has six members and does not supply the referenced 80/81/94/95.xtz extras. This does not prove any live directory absent, classify missing extra contents, exhaust all formats or exclude an external/private export. The filename-only MH202 ScenarioSuite lead belongs to another product and supplies no MHS configured data, grammar, ownership or ABI.
+
+For F460 both views, the own settings and exact selected prefix agree with the admission. For both F46 products/views I checked each own original settings identity against its own regular-file manifest; COSO and the six selected plugin files yield the reported group/key names. These are packaged manager/communication/logging settings, not commissioned module instances, accepted messages, active configuration, successful registration or initialized state. An independent exact-path check confirms F461 does not retain F460's selected scheduler-config path; this establishes no global capability absence. Shared hashes do not transfer product roles, layouts, providers, runtime environment or installed overlays. MHS ARM32 and F460/F461 AArch64 implementation contexts remain distinct; this admission introduces no new architecture or instruction interpretation.
+
+The exported admission fields contain key/group/type names, original identities, finite counts/classification and the previously reviewed packaged selector. No settings leaf values, full private configuration, credentials, scene IDs, keys or runtime identities were exported. Host Python JSON/config metadata parsing is a static classification operation; original JSON/Qt/provider/native/SQL/model/fixture/target execution remains zero. This distinction prevents the zero-original-parser ledger from being mistaken for a claim that host JSON decoding did not run.
+
+## Phase and source boundaries
+
+The immutable proposal/report pending-authorization wording records its admission-stage chronology. The separate MHS SOURCE_AUTHORIZATION.json records the parent's later bounded-source authorization and explicitly supersedes only that phase label. The parent's direct task also authorizes a later F460 directory/path slice. Neither authorization is evidence for those bodies or an approval by this review. The prospective MHS structural root/category/id/name guards and F460 filesystem/path admission are different layers and cannot be composed into a genuine configured scene/module trace without actual data and independently reviewed source edges. No binary/provider body was inspected for this admission review; the new source packets require separate review.
+
+The two old closed controls still match PLAN's exact pins (3395/2648 bytes) and remain CLOSED. The frozen MHS helper RESULTS.json still hashes to `450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525`; this review adds no native corpus/replay and does not reset the separate 340 original code-hook visits/360 hooks ledger or its separate setup writes. No old schedule was reopened or created, and no archive/network action occurred. Earlier F454/MH202 ledgers and unavailable MH202 run18/run21 intermediate histories retain their existing scope.
+
+## Review method and limitations
+
+Read-only source-identity and finite original-manifest checks, host metadata decoding and sanitized structure comparison only. One earlier inline audit tool result exceeded the visible output allowance; no review file or fabricated script/hash was produced from it. Compact independent identity and classification audits were then observed to exit zero. Their PASS results are reflected above. No full private values were printed. This review certifies the current admission artifacts and limits, not future source packets, documentary integration, future gates or final workflow closure.

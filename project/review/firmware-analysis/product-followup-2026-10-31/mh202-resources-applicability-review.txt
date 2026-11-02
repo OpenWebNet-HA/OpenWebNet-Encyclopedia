@@ -1,0 +1,41 @@
+# MH202 resources: independent documentary applicability review
+
+**PASS within documentary/source-applicability scope; no correction requested.** This review distinguishes genuine available manufacturer resources from proof of a configured scenario generator/output. It is not the extraction-format review assigned separately to the functional reviewer, a full generator reverse engineering, fresh firmware compatibility test or independent primary-document/catalogue reconstruction. No vendor assembly/tool, Tcl/XML transformation, firmware/native helper, target process, network, authentication/session/framing or live device code was executed.
+
+## Exact reviewed candidate
+
+Paths below are relative to `work/mh202-firmware/research/2026-10-31-scenario-artifacts/`:
+
+| Artifact | SHA256 |
+|---|---|
+| REPORT.md | `15ce268fc91529c5d7c55aacb2fd74be7da5d513277257eadf7ab12498d39c80` |
+| collect_artifacts_v1.py | `0b199603a76b0709928a7ed7803995107b461cba9d76562ad572921db9fb71c6` |
+| DOCUMENTARY_INPUTS.v1.json | `6d0ad406a73b45bed7905423800d6023c5e5cb41801817c19d203ec5e1c40cff` |
+| EVIDENCE.v1.json | `cc091828fa4a2a126ac4177abf72b9f0d620f88c99a8e64c8d96515bb652aec0` |
+| INPUTS.v1.json | `7f3b7b7853c18beaecce037819b4257b99706bf0cfe644530f990c4f2d8735c8` |
+| OUTPUT_MANIFEST.v1.json | `4a1154247ca19e87c0eb8b461e72d3d71637e7c06881fb17ebd7630f277ad390` |
+| initial-artifacts-v1/SNAPSHOT_INDEX.json | `74db1b1351c46dba139486acdea4e4095bc53779a928152436696aa7cb37ea5d` |
+
+The host-only collector `--check` passes: four outputs, 36 inputs, 25 selected files, 21 saved page-proof records, original execution0. It hashes the installer/selected files, parses safe XML structure, reads SQLite table names with mode=ro/immutable, scans whitelisted assembly literals and reads ZIP central directories. **It does not reacquire or re-extract CookFS pages**, so this replay is not an independent decompressor/CRC validation. I separately verified every selected file's size/SHA256, the five selected ZIP path-list bounds, the frozen association count/path normalization and all five exact initial collector/output copies. A separate reviewer owns full acquisition/extraction replay.
+
+## What the source chain establishes
+
+The installer identity is the recorded publisher acquisition of MyHOME Suite3.5.38, 599,437,936 bytes, SHA256 `707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b`. The collector freshly matches its size/hash. This does not add an Authenticode signature claim or a statement about today's download contents.
+
+Frozen documentary input retains 15 item1902/firmware-definition561 parameter associations and 13 distinct normalized paths: shared `xml/SDC/sdc.xml`, plus the BT/LGG/LG directory-scoped SVM/Extra/Director/Protocol paths. These are catalogue parameter scopes; directory suffixes are not a new diagnostic brand identity. The frozen earlier statement that referenced payloads were unavailable belongs to the pre-acquisition catalogue extraction. The new installer supplies positive actual LGG resources without retroactively claiming all 15 referenced payloads were acquired or inspected.
+
+The selected `1902_1.0_LGG` resources have concrete installer path ownership and local extracted-byte identities, including Director/Extra/Protocol/SDC structures, conversion resources, scenario-suite XML, default archives and scenario database. XML roots/tag names/counts establish available structures; they do not execute their rules or settle a compiler grammar. Database table names establish a specific schema lead; no database rows or actual configured scenario values were inspected/exported. The default project resources are manufacturer defaults, not an observed user's programmed/exported project.
+
+The catalogue default build1.0.0, Suite release3.5.38, package directory1902_1.0_LGG and examined MH202 firmware1.0.24 remain separate namespaces. None alone proves mutual binary/schema compatibility, installed firmware, installed extra content, natural project generation or physical function. The report preserves that limitation.
+
+## The actual remaining generator gap
+
+The original selected Core.dll hash is `7b7269a14652472fc471568430364a038f02a8c881cb5c9db089a7683e38307b`; OSJConverter.dll is `a1ccd67d0ee970922d2d4b08dba8b914168dedf63e5ebca783e1a79a1aa3a0fa`. Their whitelisted UTF-16LE `.spt`/`info.xml` offsets match the saved evidence; Core's OWRITE literal matches offset0xee0fe. These are credible original source leads, **not identified writing methods, an executed generator, a demonstrated data-to-output contract, complete grammar or acceptance under firmware1.0.24**. Generic suite assembly ownership must not be promoted to an MH202-specific method merely because the same installer includes device1902 resources.
+
+The five ZIP central-directory inventories contain no `.spt` or basename info.xml paths. The decoded top-level CookFS index likewise reports none, within its 8,166-entry scope. Encrypted/nested/opaque payload contents and dynamically generated output are expressly outside that negative result. Default `4.xtz` containing extra.xml is not evidence of installed scenario scripts. Firmware fwz.xml's separately referenced action3 `4.xtz` and action4 `2.xtz` are not proved identical to these installer defaults. A common basename does not close that provenance link.
+
+The report correctly retains 29 unparsed trailing decoded-index metadata bytes, earlier failed/versioned extraction attempts and the distinction between current size/CRC proof and the obsolete assumed-MD5 path. My scope does not certify full installer-format validation or unavailable historical draft bytes. The frozen pre-acquisition local filename inventory is historical; its absence result is not reused as a current global claim after positive acquisition.
+
+A bounded static original method→output trace using the actual resource/project/schema inputs, or a genuine configured project/export pair with provenance, is still needed to claim generation semantics. The available manufacturer resources remove a practical input gap; they do not remove that method/output/compatibility gap. No new firmware-native coverage, UI behavior, installed script presence or physical scenario outcome follows.
+
+Generation is exclusive and first copies remain exact; `--check` is read-only. Only this NEW review was written. Candidate reports, collectors, extracted resources, originals, completed dossiers and repository documents were not edited.

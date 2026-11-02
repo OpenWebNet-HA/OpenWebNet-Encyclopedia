@@ -1,0 +1,14 @@
+# MHCatalogue comparison coverage
+
+| Area | Examined scope | Limit |
+| --- | --- | --- |
+| Source identities | Both canonical database hashes/bytes and exact original paths | No substitute installer/firmware release |
+| SQLite structure | All75tables, all146sharedschemaobjects plus extraindex, completeintegrity/3declaredFKchecks perDB | Not application constraint enforcement/query-plan/runtime |
+| All data |49184embedded/59138Suite rows, complete typed bags, duplicate multiplicity and declared-key differences | Not every cell's consumer semantics or all physical capabilities |
+| Commercial/item model | Exactunique branded/linecode anchors,330matched fullrows, allone-source device/item rows, family profiles and selectedproductcontexts | No inferred hardware equivalence or omitted-product incompatibility |
+| Firmware/resources |16tables,114sharedowners/104itemrows,570per-ownerchildbag checks,8addeddefinitions/allbuild/mode/resource differences,28endpointchecks | Status labels not release maturity; no file invocation/download/versionfallback |
+| Object/configuration |20relationtables+10support tables,94sharedfullObjectrows,68same-ID classifications,114uniquefieldmoves, normalizedrange/contextbags,20edgeprobes | No condition evaluation, originalcompiler or acceptedaddress grammar |
+| Selected declarations | Object39 graph,20actual fieldmetadata differences, M1541label-onlywordorder change | No universaladdressrange/mode/physicalsupport inference |
+| Method/review | Five current exclusive deterministic collectors (42outputs including their manifests), immutable first candidates and disclosed earlierattempts; independent source/documentary review | Counts are method/navigation scope, no exhaustive firmware/globalpercentage claim |
+
+All current vendor/original-code/runtime/physical execution counters are0. Stored expressions are treated as inert data; raw credentials/defaults/opaque condition/filter/state records are not exported wholesale. Hash fingerprints retain complete difference coverage. Primary keys, NULL/emptyTEXT/zero/negative sentinels and owner context remain explicit. Historical reference versions are preserved before the two current encyclopedia links advance.

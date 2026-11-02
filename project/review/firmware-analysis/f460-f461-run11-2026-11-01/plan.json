@@ -1,0 +1,17 @@
+{
+  "started_UTC": "2026-11-01T15:03:18.385117+00:00",
+  "scope": [
+    "F460 one positive scene248nonzero producer/localcaller or concrete ownershipedge",
+    "F461 one actual nonsecret config-file/directory/module-selection caller chain"
+  ],
+  "authors": {
+    "F460": "firmware_protocol",
+    "F461": "firmware_boot"
+  },
+  "source_review": "Independent cross-source peers",
+  "documentary_review": "firmware_functional read-only/newreviewfilesonly",
+  "new_execution": 0,
+  "constraints": "Original/completed/synced/first candidates readonly; immediate exact copies, parent before corrections, exclusive versions. Whitelist nonsecret config only, no closed route/proxy/native/model/runtime/device operations.",
+  "deadline_UTC": "2026-11-01T19:00:00Z",
+  "final_only_UTC": "2026-11-01T18:15:00Z"
+}

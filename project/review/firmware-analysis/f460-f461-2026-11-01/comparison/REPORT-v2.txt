@@ -1,0 +1,42 @@
+# F460 2.0.12 and F461 2.0.11: parallel static comparison
+
+Both exact firmware packages were already registered in the private R2 software archive. The already-conserved originals remained in the configured archive server staging area; authenticated SCP retrieved those copies after remote size/SHA verification. Local copies independently match the canonical manifest. No publisher redownload, new remote upload or artifact-manifest mutation was needed. F460 archive b5a50d606578f47ecbf0d327d7078b1357abb78425ea821ce743cd486b801b26 has158564663 bytes; F461 cb6f3e9d875c14f74a0791d7f3f420ce9d4babadb4459c1250c6cba7e741af2b has138644991.
+
+## Original per-product extraction
+
+Protocol independently owns the F460 workspace, Boot the F461 workspace. Their safe host-only extractors verify original four-member encrypted ZIPs, nested CRCs, image gzip/filesystem sizes and packaged kernel-header evidence. F460 additionally checks the packaged Image.md5; F461 retains that file without an MD5-verification claim. Original extracted trees/images are read-only; symlinks/hardlinks/specials remain metadata and are not host links or devices. Cryptographic signature authentication remains unverified, separately from CRC/hash integrity. No vendor process, original helper, emulator, target service/network/bus/physical operation or flashing ran.
+
+The actual update XMLs confirm F4602.0.12/model5.0.132 and F4612.0.11/model5.0.134, both XML3.1. These are source declarations rather than diagnostic replies or filenames used as proof. Normal images are1GiB and recovery256MiB. The roots derive their own product views and fresh ELF/DTB identities rather than importing earlier firmware layouts.
+
+## Same platform family does not mean identical software
+
+The parent collector independently reads the three product image manifests through the verified host ImageVFS parser, then verifies actual selected binaries and ELF headers. Selected F460/F461 core/apps are ELF64 machine183/AArch64; the corresponding selected MHS1 apps are ARM32. The code samples, pointer widths, ABI and old helper harnesses cannot be transferred by name. Header inventories also retain minority/other machine objects rather than calling every packaged file AArch64.
+
+Normal F460/F461 share5823 regular paths:5757 have equal complete SHA256 and66 differ. F460 has50 normal paths absent in F461; F461 has30 absent in F460. These are path/hash counts, not coverage percentages, capability absence, loaded-code or behavioral equivalence. Eight selected common application/core binaries are present in both and ALL differ in whole-file bytes. Matching names/dependencies do not close function/layout/provider identity.
+
+F460 normal packaged applications include scheduling_manager, alarm_manager, energy_manager, player_manager and bt_netatmo at their named executable paths; these five exact paths are absent from F461 normal regular-file inventory. Per-product stack_open.xml declarations independently number25 versus17. A declaration is not observed activation, and this bounded absence is not proof that F461 lacks all scenario/energy functionality or that an alternative owner does not exist.
+
+The raw Image kernel and hygw_cortex-m.bin payload differ in exact hashes between packages, while all six corresponding DTBs are byte-identical. Bundle equality does not identify a selected live DTB/board or prove identical hardware. Source setup_m4/daemon scripts declare auxiliary-firmware/remoteproc/device-node sequencing; actual provider/peripheral readiness is unobserved. No underlying SCS/IPC command translation or transport body was investigated in this pass.
+
+## One shared embedded catalogue, distinct source profile
+
+Both normal embedded home/bticino/matrix_mx/MHCatalogue.db files are EXACTLY2633728 bytes/SHA256bd2ff4d326692c85bc4eb3f86504d615758da97dc832389fac523734574833e9. They are one byte-identical data profile despite different packages/executable inventories. This provides concrete evidence against treating the stored catalogue as an installed-capability oracle.
+
+The parent independently uses immutable mode=ro, query_only and trusted_schema=OFF SQLite reads. All75 total table definitions, every complete typed-row-multiset hash and index metadata are recorded without raw row/default/config values. F461's independently saved per-product schema output excludes sqlite_% and thus lists74 application tables; the additional sqlite_sequence internal bookkeeping table accounts for the75-total namespace. Both numbers are retained and not silently substituted.
+
+All75 table SQL definitions match the MHS1 and Suite profiles. Against MHS1,52 table row multisets match and23 differ; against Suite,42 match and33 differ. Those are full typed/multiplicity-preserving multiset comparisons, NOT a stable-ID semantic mapping or changed-function count. Primary-key/owner/context correspondence, actual catalogue consumers, filtering/fallback and selected device/firmware support need separate evidence. No configured data or private IDs were exported.
+
+## Reproducibility and history
+
+Run python3 -B work/f460-f461-comparison/2026-11-01/collect_comparison_v3.py --check. It reproduces eight deterministic outputs for three image profiles, six normal/recovery path pairs,13 selected paths per product, four catalogue profiles/300 table instances and three catalogue comparisons. Nine immediate first copies include output files and the collector; this report has its own exact first copy. Product reports/extraction inventories remain separate evidence, each with its own host reproduction and source review.
+
+The initial v1 AST parse rejected missing else whitespace before execution. V2 preserved that correction but stopped before output generation when a shared extracted kernel-directory assumption did not match F461's independent safe extractor. Exact v1/v2 and pre-correction copies remain retained. New v3 uses actual distinct product-specific nested paths, pins both extraction provenance files and enables trusted_schema=OFF; no fingerprint, member or original guard was weakened. No failed v1/v2 outputs or historical terminal-file hashes are fabricated. F460 collector stdout labels an ELF count as normal_files; the saved source census/report correctly distinguish5873 files and875 ELF objects. This console-only limitation remains disclosed without altering frozen product outputs.
+
+## Ranked next investigations and applicability
+
+1. Derive the fresh F461 AArch64 OPEN parser/command-router and selected WHO/plugin descriptor/address/diagnostic paths from its own original objects; keep output/physical semantics and closed authentication/session/framing routes separate.
+2. Follow the F460 AArch64 scheduler and matrix catalogue opening/consumer paths, using prior MHS results as search leads only. Actual configuration/extra assets, owners and provider readiness remain premises.
+3. Trace a selected declared SCS/remoteproc IPC handoff and identify the chosen auxiliary image/DTB through original startup/source evidence before any board or bus mapping claim.
+4. Perform owner-aware semantic comparison of the shared embedded catalogue with Suite/MHS, retaining canonical profiles rather than merging reused IDs.
+
+Curated Device0207 assigns F460 Home+Project commissioning and Home+Control resident management; Device0208 assigns F461 third-party local control. F461 export app classification conflicts remain scoped. Reused catalogue Object216/F454 labels do not create F454 AV/alarm hardware in either product. Existing F454/MH202/MHS research and native ledgers remain read-only and unchanged. This first pass adds no original execution/models/fixtures or full Device/source approval. Packaged structure is not a live gateway result or exhaustive source audit.

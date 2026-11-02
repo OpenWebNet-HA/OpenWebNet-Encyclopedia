@@ -1,0 +1,70 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0002a140:
+   2a140:	4a22      	ldr	r2, [pc, #136]	@ (2a1cc <g_source_set_callback@plt+0x196f0>)
+   2a142:	4b23      	ldr	r3, [pc, #140]	@ (2a1d0 <g_source_set_callback@plt+0x196f4>)
+   2a144:	b5f0      	push	{r4, r5, r6, r7, lr}
+   2a146:	f100 0708 	add.w	r7, r0, #8
+   2a14a:	447a      	add	r2, pc
+   2a14c:	b083      	sub	sp, #12
+   2a14e:	58d3      	ldr	r3, [r2, r3]
+   2a150:	681b      	ldr	r3, [r3, #0]
+   2a152:	9301      	str	r3, [sp, #4]
+   2a154:	f04f 0300 	mov.w	r3, #0
+   2a158:	6007      	str	r7, [r0, #0]
+   2a15a:	2900      	cmp	r1, #0
+   2a15c:	d032      	beq.n	2a1c4 <g_source_set_callback@plt+0x196e8>
+   2a15e:	4604      	mov	r4, r0
+   2a160:	4608      	mov	r0, r1
+   2a162:	460e      	mov	r6, r1
+   2a164:	f7e6 e8ca 	blx	102fc <strlen@plt>
+   2a168:	280f      	cmp	r0, #15
+   2a16a:	4605      	mov	r5, r0
+   2a16c:	9000      	str	r0, [sp, #0]
+   2a16e:	d818      	bhi.n	2a1a2 <g_source_set_callback@plt+0x196c6>
+   2a170:	2801      	cmp	r0, #1
+   2a172:	bf04      	itt	eq
+   2a174:	7833      	ldrbeq	r3, [r6, #0]
+   2a176:	7223      	strbeq	r3, [r4, #8]
+   2a178:	d110      	bne.n	2a19c <g_source_set_callback@plt+0x196c0>
+   2a17a:	9b00      	ldr	r3, [sp, #0]
+   2a17c:	2100      	movs	r1, #0
+   2a17e:	6822      	ldr	r2, [r4, #0]
+   2a180:	6063      	str	r3, [r4, #4]
+   2a182:	54d1      	strb	r1, [r2, r3]
+   2a184:	4a13      	ldr	r2, [pc, #76]	@ (2a1d4 <g_source_set_callback@plt+0x196f8>)
+   2a186:	4b12      	ldr	r3, [pc, #72]	@ (2a1d0 <g_source_set_callback@plt+0x196f4>)
+   2a188:	447a      	add	r2, pc
+   2a18a:	58d3      	ldr	r3, [r2, r3]
+   2a18c:	681a      	ldr	r2, [r3, #0]
+   2a18e:	9b01      	ldr	r3, [sp, #4]
+   2a190:	405a      	eors	r2, r3
+   2a192:	f04f 0300 	mov.w	r3, #0
+   2a196:	d113      	bne.n	2a1c0 <g_source_set_callback@plt+0x196e4>
+   2a198:	b003      	add	sp, #12
+   2a19a:	bdf0      	pop	{r4, r5, r6, r7, pc}
+   2a19c:	2800      	cmp	r0, #0
+   2a19e:	d0ec      	beq.n	2a17a <g_source_set_callback@plt+0x1969e>
+   2a1a0:	e008      	b.n	2a1b4 <g_source_set_callback@plt+0x196d8>
+   2a1a2:	2200      	movs	r2, #0
+   2a1a4:	4669      	mov	r1, sp
+   2a1a6:	4620      	mov	r0, r4
+   2a1a8:	f7e6 e83a 	blx	10220 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERjj@plt>
+   2a1ac:	9b00      	ldr	r3, [sp, #0]
+   2a1ae:	4607      	mov	r7, r0
+   2a1b0:	6020      	str	r0, [r4, #0]
+   2a1b2:	60a3      	str	r3, [r4, #8]
+   2a1b4:	462a      	mov	r2, r5
+   2a1b6:	4631      	mov	r1, r6
+   2a1b8:	4638      	mov	r0, r7
+   2a1ba:	f7e5 ef3c 	blx	10034 <memcpy@plt>
+   2a1be:	e7dc      	b.n	2a17a <g_source_set_callback@plt+0x1969e>
+   2a1c0:	f7e5 ed5c 	blx	fc7c <__stack_chk_fail@plt>
+   2a1c4:	4804      	ldr	r0, [pc, #16]	@ (2a1d8 <g_source_set_callback@plt+0x196fc>)
+   2a1c6:	4478      	add	r0, pc
+   2a1c8:	Address 0x2a1c8 is out of bounds.
+

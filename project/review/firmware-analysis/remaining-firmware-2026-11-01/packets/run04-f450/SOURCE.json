@@ -1,0 +1,427 @@
+{
+  "branch_joins": [
+    {
+      "VA": "0xfb04",
+      "target": "0xa65c"
+    },
+    {
+      "VA": "0xfb14",
+      "target": "0x12908"
+    },
+    {
+      "VA": "0x12928",
+      "target": "0x15744"
+    },
+    {
+      "VA": "0x15798",
+      "target": "0xa500"
+    },
+    {
+      "VA": "0x15828",
+      "target": "0xa59c"
+    },
+    {
+      "VA": "0x1584c",
+      "target": "0xa428"
+    },
+    {
+      "VA": "0x15874",
+      "target": "0xa440"
+    },
+    {
+      "VA": "0x16888",
+      "target": "0x17cac"
+    },
+    {
+      "VA": "0x172c8",
+      "target": "0x173c4"
+    },
+    {
+      "VA": "0x17358",
+      "target": "0x1737c"
+    },
+    {
+      "VA": "0x17364",
+      "target": "0xa1c4"
+    },
+    {
+      "VA": "0x173a8",
+      "target": "0x17cac"
+    },
+    {
+      "VA": "0x173b0",
+      "target": "0xa374"
+    },
+    {
+      "VA": "0x11460",
+      "target": "0x158f0"
+    },
+    {
+      "VA": "0x11468",
+      "target": "0xf96c"
+    }
+  ],
+  "guard_words": [
+    {
+      "VA": "0xfafc",
+      "word": "0xe3a00001"
+    },
+    {
+      "VA": "0xfb00",
+      "word": "0xe3a010f0"
+    },
+    {
+      "VA": "0xfb04",
+      "word": "0xebffead4"
+    },
+    {
+      "VA": "0xfb0c",
+      "word": "0xe50b3028"
+    },
+    {
+      "VA": "0xfb10",
+      "word": "0xe51b0028"
+    },
+    {
+      "VA": "0xfb14",
+      "word": "0xeb000b7b"
+    },
+    {
+      "VA": "0x12914",
+      "word": "0xe50b0008"
+    },
+    {
+      "VA": "0x12918",
+      "word": "0xe59f3014"
+    },
+    {
+      "VA": "0x1291c",
+      "word": "0xe5933000"
+    },
+    {
+      "VA": "0x12924",
+      "word": "0xe51b1008"
+    },
+    {
+      "VA": "0x12928",
+      "word": "0xeb000b85"
+    },
+    {
+      "VA": "0x1575c",
+      "word": "0xe7820003"
+    },
+    {
+      "VA": "0x15768",
+      "word": "0xe78c1003"
+    },
+    {
+      "VA": "0x1577c",
+      "word": "0xe7910003"
+    },
+    {
+      "VA": "0x1578c",
+      "word": "0xe7920003"
+    },
+    {
+      "VA": "0x15798",
+      "word": "0xebffd358"
+    },
+    {
+      "VA": "0x157d8",
+      "word": "0xe59f3104"
+    },
+    {
+      "VA": "0x157dc",
+      "word": "0xe5823000"
+    },
+    {
+      "VA": "0x157e4",
+      "word": "0xe59f30fc"
+    },
+    {
+      "VA": "0x157e8",
+      "word": "0xe5823004"
+    },
+    {
+      "VA": "0x157f0",
+      "word": "0xe59f30f4"
+    },
+    {
+      "VA": "0x157f4",
+      "word": "0xe5823008"
+    },
+    {
+      "VA": "0x15820",
+      "word": "0xe79c2003"
+    },
+    {
+      "VA": "0x15828",
+      "word": "0xebffd35b"
+    },
+    {
+      "VA": "0x1584c",
+      "word": "0xebffd2f5"
+    },
+    {
+      "VA": "0x15874",
+      "word": "0xebffd2f1"
+    },
+    {
+      "VA": "0x1682c",
+      "word": "0xe92d4810"
+    },
+    {
+      "VA": "0x1683c",
+      "word": "0xe50b1034"
+    },
+    {
+      "VA": "0x16840",
+      "word": "0xe50b2038"
+    },
+    {
+      "VA": "0x16844",
+      "word": "0xe50b303c"
+    },
+    {
+      "VA": "0x1684c",
+      "word": "0xe50b3028"
+    },
+    {
+      "VA": "0x16854",
+      "word": "0xe59330a8"
+    },
+    {
+      "VA": "0x16888",
+      "word": "0x1a000507"
+    },
+    {
+      "VA": "0x172c8",
+      "word": "0xa00003d"
+    },
+    {
+      "VA": "0x17358",
+      "word": "0xa000007"
+    },
+    {
+      "VA": "0x1735c",
+      "word": "0xe51b0034"
+    },
+    {
+      "VA": "0x17360",
+      "word": "0xe51b1038"
+    },
+    {
+      "VA": "0x17364",
+      "word": "0xebffcb96"
+    },
+    {
+      "VA": "0x17370",
+      "word": "0xe51b3028"
+    },
+    {
+      "VA": "0x17374",
+      "word": "0xe583204c"
+    },
+    {
+      "VA": "0x173a8",
+      "word": "0xa00023f"
+    },
+    {
+      "VA": "0x173ac",
+      "word": "0xe51b0034"
+    },
+    {
+      "VA": "0x173b0",
+      "word": "0xebffcbef"
+    },
+    {
+      "VA": "0x173b8",
+      "word": "0xe51b3028"
+    },
+    {
+      "VA": "0x173bc",
+      "word": "0xe5832050"
+    },
+    {
+      "VA": "0x1145c",
+      "word": "0xe51b1028"
+    },
+    {
+      "VA": "0x11460",
+      "word": "0xeb001122"
+    },
+    {
+      "VA": "0x11464",
+      "word": "0xe51b0028"
+    },
+    {
+      "VA": "0x11468",
+      "word": "0xebfff93f"
+    }
+  ],
+  "image": {
+    "ELF32_LE": true,
+    "PT_LOAD": [
+      [
+        1,
+        0,
+        32768,
+        32768,
+        79552,
+        79552,
+        5,
+        32768
+      ],
+      [
+        1,
+        79552,
+        145088,
+        145088,
+        1868,
+        2068,
+        6,
+        32768
+      ]
+    ],
+    "bytes": 83040,
+    "flags": "0x5000002",
+    "machine": 40,
+    "path": "work/f450-firmware/2.0.10/analysis/rootfs/home/bticino/bin/bt_daemon",
+    "sha256": "85e7ca65b4d1c4e8ab23a93ac532aea568dd06272fefb1b1be928eeba18f3d73"
+  },
+  "imports": [
+    {
+      "GOT": "0x239d8",
+      "PLT": "0xa65c",
+      "name": "calloc",
+      "relocation": "000239d8  00007c16 R_ARM_JUMP_SLOT        0000a65c   calloc@GLIBC_2.4"
+    },
+    {
+      "GOT": "0x23964",
+      "PLT": "0xa500",
+      "name": "open",
+      "relocation": "00023964  00005616 R_ARM_JUMP_SLOT        0000a500   open@GLIBC_2.4"
+    },
+    {
+      "GOT": "0x23998",
+      "PLT": "0xa59c",
+      "name": "g_markup_parse_context_new",
+      "relocation": "00023998  00006516 R_ARM_JUMP_SLOT        0000a59c   g_markup_parse_context_new"
+    },
+    {
+      "GOT": "0x2391c",
+      "PLT": "0xa428",
+      "name": "read",
+      "relocation": "0002391c  00004316 R_ARM_JUMP_SLOT        0000a428   read@GLIBC_2.4"
+    },
+    {
+      "GOT": "0x23924",
+      "PLT": "0xa440",
+      "name": "g_markup_parse_context_parse",
+      "relocation": "00023924  00004516 R_ARM_JUMP_SLOT        0000a440   g_markup_parse_context_parse"
+    },
+    {
+      "GOT": "0x23a64",
+      "PLT": "0xa800",
+      "name": "g_strcmp0",
+      "relocation": "00023a64  0000a716 R_ARM_JUMP_SLOT        0000a800   g_strcmp0"
+    },
+    {
+      "GOT": "0x23850",
+      "PLT": "0xa1c4",
+      "name": "strndup",
+      "relocation": "00023850  00000416 R_ARM_JUMP_SLOT        0000a1c4   strndup@GLIBC_2.4"
+    },
+    {
+      "GOT": "0x238e0",
+      "PLT": "0xa374",
+      "name": "atoi",
+      "relocation": "000238e0  00002f16 R_ARM_JUMP_SLOT        0000a374   atoi@GLIBC_2.4"
+    }
+  ],
+  "pool_joins": [
+    {
+      "instruction": "0x12918",
+      "pool": "0x12934",
+      "value": "0x23a74"
+    },
+    {
+      "instruction": "0x15754",
+      "pool": "0x158dc",
+      "value": "0xffffefec"
+    },
+    {
+      "instruction": "0x15760",
+      "pool": "0x158e0",
+      "value": "0xffffefe8"
+    },
+    {
+      "instruction": "0x157d8",
+      "pool": "0x158e4",
+      "value": "0x17cb4"
+    },
+    {
+      "instruction": "0x157e4",
+      "pool": "0x158e8",
+      "value": "0x16750"
+    },
+    {
+      "instruction": "0x157f0",
+      "pool": "0x158ec",
+      "value": "0x1682c"
+    },
+    {
+      "instruction": "0x15810",
+      "pool": "0x158e0",
+      "value": "0xffffefe8"
+    },
+    {
+      "instruction": "0x16864",
+      "pool": "0x176d4",
+      "value": "0x1b004"
+    },
+    {
+      "instruction": "0x172a4",
+      "pool": "0x17738",
+      "value": "0x1b0e0"
+    },
+    {
+      "instruction": "0x17334",
+      "pool": "0x1773c",
+      "value": "0x1b0f4"
+    },
+    {
+      "instruction": "0x17384",
+      "pool": "0x17740",
+      "value": "0x1b0fc"
+    }
+  ],
+  "provider_bodies": "OPAQUE; only original import/PLT requests read",
+  "safe_literals": [
+    {
+      "NUL_bytes_hex": "2f7661722f746d702f737461636b5f6f70656e2e786d6c00",
+      "VA": "0x19ee8",
+      "text": "/var/tmp/stack_open.xml"
+    },
+    {
+      "NUL_bytes_hex": "726f6f7400",
+      "VA": "0x1b004",
+      "text": "root"
+    },
+    {
+      "NUL_bytes_hex": "66756c6c69705f61646472657373626f6f6b00",
+      "VA": "0x1b0e0",
+      "text": "fullip_addressbook"
+    },
+    {
+      "NUL_bytes_hex": "64625f6e616d6500",
+      "VA": "0x1b0f4",
+      "text": "db_name"
+    },
+    {
+      "NUL_bytes_hex": "64625f636f6d7072657373656400",
+      "VA": "0x1b0fc",
+      "text": "db_compressed"
+    }
+  ]
+}

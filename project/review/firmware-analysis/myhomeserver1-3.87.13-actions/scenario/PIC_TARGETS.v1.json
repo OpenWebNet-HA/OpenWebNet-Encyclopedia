@@ -1,0 +1,34 @@
+[
+  {
+    "add_pc_va": "0xabc7e",
+    "literal": "sceneId",
+    "name": "sceneId",
+    "pool_va": "0xac7b8",
+    "pool_word": "0x6962e",
+    "target_va": "0x1152b0"
+  },
+  {
+    "add_pc_va": "0x113b66",
+    "literal": null,
+    "name": "invoker",
+    "pool_va": "0x113c44",
+    "pool_word": "0xeb",
+    "target_va": "0x113c55"
+  },
+  {
+    "add_pc_va": "0x113b6c",
+    "literal": null,
+    "name": "functor-manager",
+    "pool_va": "0x113c48",
+    "pool_word": "0xfffffeed",
+    "target_va": "0x113a5d"
+  },
+  {
+    "add_pc_va": "0x2502c",
+    "literal": "sceneId",
+    "name": "serialized-sceneId",
+    "pool_va": "0x25110",
+    "pool_word": "0xf0280",
+    "target_va": "0x1152b0"
+  }
+]

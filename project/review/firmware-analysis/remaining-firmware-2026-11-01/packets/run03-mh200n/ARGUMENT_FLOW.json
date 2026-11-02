@@ -1,0 +1,55 @@
+{
+  "inherited_argument": "Prior selected same-cell load\u21920xa3ec\u21920xa424 passes its providedR0 into0xa1dc under prior source/normal-return/no-mutation premises",
+  "open_limits": [
+    "No explicit check on open/read machine result before selected token requests in this bounded prefix",
+    "Valid FD/buffer/string state and normal C provider semantics are premises",
+    "Subsequent tokens/field outputs/full grammar, cleanup and success return remain unexamined",
+    "No copy/install/mount/partition or current runtime data claim"
+  ],
+  "preserved_arguments": {
+    "R4": "provided pathname",
+    "R7": "provided R2 output address",
+    "R8": "provided R1 output address"
+  },
+  "requests": [
+    {
+      "API": "open",
+      "R0": "provided pathname",
+      "R1": 0,
+      "VA": "0xa224",
+      "saved_return": "R6"
+    },
+    {
+      "API": "memset",
+      "R0": "SP buffer",
+      "R1": 0,
+      "R2": 1024,
+      "VA": "0xa238"
+    },
+    {
+      "API": "read",
+      "R0": "saved open machine return R6",
+      "R1": "same SP buffer",
+      "R2": 1024,
+      "VA": "0xa248"
+    },
+    {
+      "API": "strtok",
+      "R0": "same buffer",
+      "R1": "compiled * delimiter",
+      "VA": "0xa280"
+    },
+    {
+      "API": "strtok",
+      "R0": 0,
+      "R1": "same delimiter",
+      "VA": "0xa298"
+    }
+  ],
+  "scope": "One actual provided-path resource-consumer prefix; no original data supplied or read",
+  "selected_missing_token_returns": {
+    "epilogue": "0xa3a8 restores1024-byte stack allocation and saved registers",
+    "first": 1,
+    "second": 2
+  }
+}

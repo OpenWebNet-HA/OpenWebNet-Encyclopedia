@@ -1,0 +1,110 @@
+#!/usr/bin/env python3
+"""Static original Tcl line proof only. Never invoke Tcl or target clocks/providers."""
+from pathlib import Path
+import argparse,hashlib,json
+O=Path(__file__).resolve().parent
+W=next(p for p in O.parents if (p/'AGENTS.md').is_file())
+H=lambda b:hashlib.sha256(b).hexdigest()
+J=lambda x:(json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+
+def build():
+ pins=[]
+ def pin(p):
+  b=p.read_bytes();pins.append({'path':str(p.relative_to(W)),'bytes':len(b),'sha256':H(b)});return b
+ scope=json.loads(pin(O/'SCOPE.json'));decision=W/scope['parent_decision']['path'];d=pin(decision)
+ assert len(d)==scope['parent_decision']['bytes'] and H(d)==scope['parent_decision']['sha256']
+ a=json.loads(pin(W/'work/remaining-firmware-acquisition/2026-11-01/SUMMARY.json'))
+ contexts=[];rows=[];manifests={}
+ for p in a['packages']:
+  if p['product'] not in ('F453AV','MH200N'):continue
+  for c in p['components']:
+   if c['label'] not in ('normal','recovery'):continue
+   m=W/p['directory']/'analysis'/(c['label']+'-regular-files.json');manifests[(p['product'],c['label'])]=(c['path'],json.loads(pin(m)))
+   contexts.append({'artifact':p['artifact_id'],'product':p['product'],'version':p['version'],'view':c['label'],'root':c['path'],'package_archive_sha256_from_verified_acquisition':p['archive_sha256'],'archive_hash_role':'Inherited acquisition identity, not a fresh archive hash operation'})
+ expected={
+  'init':'0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb',
+  'S10rtc_verify':'0f6e3f123e1ad9cab1fcd00d87ce3617cfd2d5b50db78e457c385582fb983d10',
+  'conditional_hwtosys':'ae5d328983802c1540debd016fc10618d4b99654d406ccacca32e4fbdbea1963',
+  'direct_hwtosys':'fe6a7e98ac58df697f294d4b319a5dfc2bd6c7cc90a4a28a25d5731d4d298ae1'}
+ assert len(scope['sources'])==12
+ for s in scope['sources']:
+  p=W/s['path'];assert p.is_file() and not p.is_symlink();b=pin(p);assert len(b)==s['bytes'] and H(b)==s['sha256']
+  root,files=manifests[(s['product'],s['view'])];rel=str(p.relative_to(W/root));assert files[rel]['bytes']==len(b) and files[rel]['sha256']==H(b)
+  lines=b.decode('utf-8').splitlines();name=p.name
+  if name=='init':
+   assert H(b)==expected['init'];selected=range(103,107)
+   assert lines[103]=='foreach n [lsort [glob -nocomplain /etc/init.d/scripts/S*]] {'
+   assert lines[104]=='    try [list source $n]' and lines[105]=='}'
+   role='INHERITED startup selector context, freshly identity/line checked, not duplicate new functional coverage'
+  elif name=='S10rtc_verify':
+   assert H(b)==expected[name];selected=range(1,14)
+   assert lines[1]=='set t [open /proc/sys/dev/btweb/rtc_invalid r]'
+   assert lines[2]=='gets $t line' and lines[3]=='scan $line %d num'
+   assert lines[4]=='if [expr $num==1] then {'
+   assert lines[6]==' date -s 2000.1.1-00:00:00'
+   assert lines[7].lstrip().startswith('# hwclock --systohc --utc')
+   assert lines[12]=='close $t'
+   role='NEW selected local clock-flag/read/branch/request script contract'
+  else:
+   assert name=='hwtosys.tcl';selected=range(1,len(lines)+1)
+   if s['product']=='MH200N' and s['view']=='normal':
+    assert H(b)==expected['direct_hwtosys'];assert lines==['#!/bin/ettclsh','exec hwclock --hctosys --utc']
+   else:
+    assert H(b)==expected['conditional_hwtosys'];assert lines[2]=='set str [exec uname -m]'
+    assert lines[5]=='if [string compare $str $str1] then {' and lines[7]==' exec rtc-rw r'
+    assert lines[10]==' exec hwclock --hctosys --utc'
+   role='NEW selected wrapper contract; natural caller OPEN and separate from init-to-S10 contract'
+  rows.append({'product':s['product'],'version':s['version'],'view':s['view'],'path':s['path'],'relative_path':rel,'bytes':len(b),'sha256':H(b),'role':role,'safe_selected_lines':[{'line':i,'text':lines[i-1]} for i in selected]})
+ assert len(rows)==12
+ contracts={
+  'init_to_S10':{'source_lines':[103,106],'selector':'sorted glob /etc/init.d/scripts/S*','request':'try [list source $n]','join':'Own packaged S10rtc_verify matches selected prefix; evaluation requires natural init reachability, runtime directory visibility, ordinary try/source binding and normal returns','coverage':'Inherited init selector context plus NEW S10 local branch; no application ordering or successful source guarantee'},
+  'S10_local_branch':{'source_lines':[2,13],'path_literal':'/proc/sys/dev/btweb/rtc_invalid','flow':'open r -> gets channel line -> scan line %d num -> if num==1 -> date -s compiled literal -> close request','compiled_date_argument':'2000.1.1-00:00:00','commented_not_requested':'hwclock --systohc --utc','premises':['Valid open channel and readable ordinary line','Numeric scan supplies num; no scan result guard in selected script','Natural admission, ordinary Tcl/extension command binding and normal returns','No target proc file or current time was read'], 'limits':['No hardware-flag truth or actual invalid RTC established','No completed reset, correct time, timezone, RTC write or synchronization established','Errors/cleanup/lifetime/wholeboot/readiness not closed']},
+  'hwtosys_wrapper':{'natural_caller':'OPEN: not joined to init/S10; no broader caller search performed','F453AV_normal_recovery_and_MH200N_recovery':'exec uname -m; string compare against compiled armv5tel -> nonzero requests exec rtc-rw r; zero requests exec hwclock --hctosys --utc under ordinary Tcl comparison/conditional semantics','MH200N_normal':'Direct exec hwclock --hctosys --utc, no uname/compare branch in own44B script','comments_not_provenance':['SA1110','PXA255'],'provider_bodies':'uname/rtc-rw/hwclock/Tcl/command resolution opaque; no native or script execution'}}
+ report='''# F453AV/MH200N local clock-script contracts
+
+This pass adds one own-script clock admission branch and a separate wrapper-selection comparison. It does not execute Tcl, read a target clock or kernel status, or establish a successful system/RTC operation. Normal/recovery views remain separate original inputs; equal source bytes do not make their environments identical.
+
+## Exact original scope and source identity
+
+Twelve own source occurrences are size/SHA256 checked against four product/view regular-file manifests: each view's `sbin/init`, `etc/init.d/scripts/S10rtc_verify` and `bin/hwtosys.tcl`. Only init lines103..106 are exported; the startup selector is inherited context, not new duplicate coverage. All selected script lines are safe original code/compiled literals, with no runtime/configuration values. `SOURCE_LINES.json` retains exact paths, own hashes and line numbers; `INPUTS.json` pins original manifest/source and actual pre-body scope decisions. Source names/hashes were proposed first, the parent approved the exact bounded selection, then SCOPE.json was saved before the first selected body read. Systohw, options/profile, other init regions and underlying executable/provider bodies were not expanded.
+
+The shared init source is4269B/SHA256`0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb`; shared S10 source is294B/SHA256`0f6e3f123e1ad9cab1fcd00d87ce3617cfd2d5b50db78e457c385582fb983d10`. These identities are separately checked for each F453AV3.0.14 and MH200N1.1.8 normal/recovery view.
+
+## Init selector and local numeric branch
+
+Original init lines103..106 enumerate `lsort [glob -nocomplain /etc/init.d/scripts/S*]` and request `try [list source $n]`. The own packaged S10rtc_verify filename matches that selector. This joins a concrete packaged source candidate to a conditional source-evaluation request, under natural init reachability, runtime filesystem visibility and ordinary try/source binding/normal-return premises. It does not establish successful sourcing, relative order with other components or a complete boot.
+
+S10 lines2..4 request open of compiled `/proc/sys/dev/btweb/rtc_invalid` in mode `r`, then `gets` into `line` and `scan $line %d num`. Line5 tests numeric `num==1`. That selected branch requests the Tcl/extension command `date -s 2000.1.1-00:00:00` at line7; this is a compiled fallback argument, not an observed clock value. The `hwclock --systohc --utc` text at line8 begins with a comment marker and supplies NO clock-operation request. Line13 requests channel close after the selected normal branch continuation.
+
+Valid channel/line/numeric conversion, binding and ordinary returns remain premises. The scan result is not tested in this selected script; invalid/missing input and error paths are not closed. The pathname and diagnostic text do not prove hardware-invalid truth, successful correction, actual time, timezone, RTC writing, clock synchronization, cleanup, readiness or physical behavior. No target `/proc` file or host/target clock was read.
+
+## Separate hwtosys wrapper comparison
+
+F453AV normal/recovery and MH200N recovery each contain the231B wrapper SHA256`ae5d328983802c1540debd016fc10618d4b99654d406ccacca32e4fbdbea1963`. It requests `exec uname -m`, compares the returned string to compiled `armv5tel`, and uses the comparison result as the condition. Under ordinary Tcl comparison semantics, nonzero selects `exec rtc-rw r`; zero selects `exec hwclock --hctosys --utc`. Duplicate assignment of the compiled comparison string is source text, not an additional runtime observation. Comment labels SA1110/PXA255 are not CPU/board/ABI provenance.
+
+MH200N normal instead has a44B wrapper SHA256`fe6a7e98ac58df697f294d4b319a5dfc2bd6c7cc90a4a28a25d5731d4d298ae1`, whose selected entire source directly requests `exec hwclock --hctosys --utc`. Its own source has no uname/compare branch. This is a product/view source difference, not a claim about the installed command, actual platform, command success or hardware. Natural invocation of this wrapper remains OPEN: no caller is established by the approved init slice, and it is NOT joined to the separate init-to-S10 chain.
+
+The official Tcl string manual is API context only: it documents zero for equal strings. It is not an assignment of the exact target interpreter release or effective command binding. Underlying uname/hwclock/rtc-rw/Tcl providers and command resolution remain opaque.
+
+## Reproduction and limitations
+
+Run `python3 -B work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/source-component/collect_clock_v1.py --check` from the workspace. The static host collector verifies original bytes, own manifests, selected exact lines and pre-body scope records; it never sources Tcl or executes a clock/provider command. Exact first copies preserve code/report/output identities. Counts are bounded reach/integrity, not exhaustive source or Device/runtime/physical approval. Existing firmware/native execution ledgers remain unchanged, with no old collector/corpus replay, synthetic models/fixtures, private values, remote writes, repository edits, staging, commit or push.
+'''
+ out={'INPUTS.json':J(pins),'SOURCE_LINES.json':J({'own_sources':rows,'product_view_contexts':contexts,'unique_selected_body_hashes':len({r['sha256'] for r in rows}),'private_runtime_values_exported':False}),'CONTRACTS.json':J(contracts),'REPORT.md':report.encode()}
+ out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(Path(__file__).read_bytes()),'outputs':{n:{'bytes':len(b),'sha256':H(b)} for n,b in out.items()},'own_source_occurrences':12,'new_original_Tcl_native_provider_clock_execution':0,'new_models_fixtures':0,'new_source_body_reads_outside_declared_scope':0})
+ return out
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build()
+ if a.check:
+  for n,b in out.items():assert (O/n).read_bytes()==b,n
+ else:
+  d=O/'first-candidate-v1';assert not d.exists() and all(not(O/n).exists() for n in out)
+  for n,b in out.items():
+   with (O/n).open('xb') as f:f.write(b)
+  d.mkdir();names=['collect_clock_v1.py','SCOPE.json']+list(out)
+  for n in names:
+   with (d/n).open('xb') as f:f.write((O/n).read_bytes())
+  with (d/'INDEX.json').open('xb') as f:f.write(J({n:{'bytes':(O/n).stat().st_size,'sha256':H((O/n).read_bytes())} for n in names}))
+ print(json.dumps({'check':a.check,'outputs':len(out),'own_source_occurrences':12,'new_original_execution':0}))
+if __name__=='__main__':main()

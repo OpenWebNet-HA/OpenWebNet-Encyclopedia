@@ -1,0 +1,7 @@
+{
+  "scope": "Exploratory inline query, not a generated canonical candidate or independently preserved historical file",
+  "error_excerpt": "SyntaxError: expected else after if expression",
+  "source_excerpt": "((1<<25)if S else0)",
+  "resolution": "A separate corrected inline query used ((1<<25) if S else 0) and found selected original direct caller0x53a92. No original code or generated output executed/changed during failed parse.",
+  "historical_file_hash": "Not applicable: query was inline, no on-disk draft existed; excerpts transcribed from actual tool invocation."
+}

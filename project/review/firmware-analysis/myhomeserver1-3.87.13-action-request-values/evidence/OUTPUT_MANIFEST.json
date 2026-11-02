@@ -1,0 +1,98 @@
+{
+  "collector_sha256": "ba3beec5e7ed2cc7ac2b13255ab263113b0572b3293e522f87148d1bdc70cb82",
+  "counts": {
+    "GOT_base_PIC": 2,
+    "class_identities": 2,
+    "code_spans": 17,
+    "guards": 39,
+    "import_call_PLT_proofs": 19,
+    "inputs": 7,
+    "literal_PIC": 4,
+    "local_branches_calls": 9,
+    "original_execution_additions": 0,
+    "relative_relocations": 6
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 1650,
+      "sha256": "a50e52794d3a220f0fbe5598b3bd3e7b32937b6784b6b41023dff3f571951e89"
+    },
+    "ORIGINAL_SOURCE.json": {
+      "bytes": 15634,
+      "sha256": "0529c9d80ea85c2de726b7fb12d5aecbb0ad02d6b929ef0b9d3db9c0748b658e"
+    },
+    "SELECTED_CONTRACT.json": {
+      "bytes": 2183,
+      "sha256": "8e7e9bf397e30f88bf4e230627f46dec08144a6df77ed25f86b9d16936ee2ea0"
+    },
+    "spans/caller-ID-long-copy.txt": {
+      "bytes": 925,
+      "sha256": "f58b5490e83cf70337e301f1ed0c1f78638a902e65ef7200894d26c6dc261a24"
+    },
+    "spans/caller-ID-mark-and-speed-input.txt": {
+      "bytes": 397,
+      "sha256": "fbefb99d2174663ef17f8172a400c837477faca8dce7ed2efb109f97ae9e2df1"
+    },
+    "spans/caller-ID-non-single-length.txt": {
+      "bytes": 392,
+      "sha256": "cbe891d1822fde1396197db7412cbf93519f3ee5251926cb63d9ac8282122780"
+    },
+    "spans/caller-ID-out-of-line-merge.txt": {
+      "bytes": 1503,
+      "sha256": "e75df82ca9d0f3b4b42eef9fc74e08e0e65af6d5079fc995506d87d4f2aa162c"
+    },
+    "spans/caller-actual-converter-input.txt": {
+      "bytes": 714,
+      "sha256": "f9ead7c285ea104cec4b3c920b03f65ecec9b08b596a761b9f597382ed1fafcc"
+    },
+    "spans/caller-descriptor-ID-merge-guard.txt": {
+      "bytes": 1039,
+      "sha256": "54f27f02cbd18b93da3118c6986d6a5baeaed48c66365843735bfb2141871cee"
+    },
+    "spans/caller-parameter-pair-copy.txt": {
+      "bytes": 1049,
+      "sha256": "c1d60fd1abad131f721ab081e4f346775f15c57c6d1348e4204dd4963781f166"
+    },
+    "spans/caller-speed-positive-store.txt": {
+      "bytes": 446,
+      "sha256": "6fd44e9404b051f7a31073a7148768bae7474fbcde37d38c16a27e87edf242ef"
+    },
+    "spans/descriptor-final-class-method.txt": {
+      "bytes": 1669,
+      "sha256": "4be219fadafe884ea5065d2a8502218eaa105a23fd1b9289c9d01eaad71e8b1d"
+    },
+    "spans/descriptor-first-ID-requests.txt": {
+      "bytes": 1050,
+      "sha256": "cad2929c3194c9198a50f5f253a0615b837f65a70f71d0920204ac339dd742e3"
+    },
+    "spans/descriptor-normal-return.txt": {
+      "bytes": 802,
+      "sha256": "55e1e7e493e5cb457a8ef05cddd7d11979074ef7eda3544c4cd6503112aec0a2"
+    },
+    "spans/descriptor-second-ID-requests.txt": {
+      "bytes": 1539,
+      "sha256": "6653e857a0f0f16ec9cd497f00a47fe2a705eed78e18583875d15eb6a176a10e"
+    },
+    "spans/descriptor-version-and-first-lock.txt": {
+      "bytes": 1953,
+      "sha256": "358a108b032bee02574e0d38c9e632afab82a2e9a8f28aba86a0aeeef560a869"
+    },
+    "spans/params-ID-arm.txt": {
+      "bytes": 856,
+      "sha256": "38f4fb9f0c64638f3546905c9836099cb831d3075627d16d93951b10be8cdbab"
+    },
+    "spans/params-initial-ID-guard.txt": {
+      "bytes": 1099,
+      "sha256": "cc11bddeef7277273fb302f6ea92f51820537c52c9a0028db31a8b8d7bf373ee"
+    },
+    "spans/params-speed-arm.txt": {
+      "bytes": 812,
+      "sha256": "8fd710433c3d2f73ff073d58b178f8cd554dcbbc2e729f6b23f4601be062d69d"
+    },
+    "spans/params-speed-guard.txt": {
+      "bytes": 653,
+      "sha256": "9895b955fc592bbf0e83040a34db56064fae73a96e51bf765012d104519371ff"
+    }
+  },
+  "report_sha256": "6a74a40a5c0eababb207f405c944205dc703203486d7698b4a1ac0d7246ecb4c"
+}

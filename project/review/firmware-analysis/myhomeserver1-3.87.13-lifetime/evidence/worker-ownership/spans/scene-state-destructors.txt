@@ -1,0 +1,57 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a5650 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5a8dc>:
+   a5650:	4b04      	ldr	r3, [pc, #16]	@ (a5664 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5a8f0>)
+   a5652:	b510      	push	{r4, lr}
+   a5654:	4604      	mov	r4, r0
+   a5656:	447b      	add	r3, pc
+   a5658:	3308      	adds	r3, #8
+   a565a:	6003      	str	r3, [r0, #0]
+   a565c:	f76b eb38 	blx	10cd0 <_ZNSt6thread6_StateD2Ev@plt>
+   a5660:	4620      	mov	r0, r4
+   a5662:	bd10      	pop	{r4, pc}
+   a5664:	c78e      	stmia	r7!, {r1, r2, r3, r7}
+   a5666:	000b      	movs	r3, r1
+   a5668:	4b06      	ldr	r3, [pc, #24]	@ (a5684 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5a910>)
+   a566a:	b510      	push	{r4, lr}
+   a566c:	4604      	mov	r4, r0
+   a566e:	447b      	add	r3, pc
+   a5670:	3308      	adds	r3, #8
+   a5672:	6003      	str	r3, [r0, #0]
+   a5674:	f76b eb2c 	blx	10cd0 <_ZNSt6thread6_StateD2Ev@plt>
+   a5678:	4620      	mov	r0, r4
+   a567a:	2108      	movs	r1, #8
+   a567c:	f76b ec18 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   a5680:	4620      	mov	r0, r4
+   a5682:	bd10      	pop	{r4, pc}
+   a5684:	c776      	stmia	r7!, {r1, r2, r4, r5, r6}
+   a5686:	000b      	movs	r3, r1
+   a5688:	4b04      	ldr	r3, [pc, #16]	@ (a569c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5a928>)
+   a568a:	b510      	push	{r4, lr}
+   a568c:	4604      	mov	r4, r0
+   a568e:	447b      	add	r3, pc
+   a5690:	331c      	adds	r3, #28
+   a5692:	6003      	str	r3, [r0, #0]
+   a5694:	f76b eb1c 	blx	10cd0 <_ZNSt6thread6_StateD2Ev@plt>
+   a5698:	4620      	mov	r0, r4
+   a569a:	bd10      	pop	{r4, pc}
+   a569c:	c756      	stmia	r7!, {r1, r2, r4, r6}
+   a569e:	000b      	movs	r3, r1
+   a56a0:	4b06      	ldr	r3, [pc, #24]	@ (a56bc <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5a948>)
+   a56a2:	b510      	push	{r4, lr}
+   a56a4:	4604      	mov	r4, r0
+   a56a6:	447b      	add	r3, pc
+   a56a8:	331c      	adds	r3, #28
+   a56aa:	6003      	str	r3, [r0, #0]
+   a56ac:	f76b eb10 	blx	10cd0 <_ZNSt6thread6_StateD2Ev@plt>
+   a56b0:	4620      	mov	r0, r4
+   a56b2:	2108      	movs	r1, #8
+   a56b4:	f76b ebfc 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   a56b8:	4620      	mov	r0, r4
+   a56ba:	bd10      	pop	{r4, pc}
+   a56bc:	c73e      	stmia	r7!, {r1, r2, r3, r4, r5}
+   a56be:	000b      	movs	r3, r1

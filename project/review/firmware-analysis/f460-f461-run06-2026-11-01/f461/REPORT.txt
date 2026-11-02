@@ -1,0 +1,44 @@
+# F461 2.0.11 run06: address-shape helper to local prefix normalization
+
+Fresh original source connects the packaged `automation_get_where_type` helper to an actual typed-object address caller and one prefix-normalization branch. Its selected return4 is derived from string shape; a consumer then writes prefix `D1` and appends two delegated byte-to-digit results. This is not a complete address output, public protocol grammar/domain, accepted raw command, physical address attribution or executed fixture.
+
+## Original identities and provider resolution
+
+- `/home/bticino/lib/libautomation.so.1.1.0` SHA256 `da1cc59320d4175db85d99b9986fc371c7076e0dede02ef62daf0ada5c4914ec`.
+- `/home/bticino/libcoso/libplug_automation_tr.so` SHA256 `d7d361798ccec65843bd41c9ad7b8897645a334b0cd08121d372949f78eac277`.
+
+The plugin's original DT_NEEDED requests `libautomation.so.1`. Verified ImageVFS resolves the image alias `/home/bticino/lib/libautomation.so.1` using saved symlink metadata to the actual regular file above. No host symlink is created or followed. SOURCE.json pins that alias metadata, original file identities and fresh ELF64/AArch64 PT_LOADs. The actual exported helper definition is VA0x1c10. The plugin's actual BL0x40c4→PLT0x1fe0→JUMP_SLOT0x18148 names `automation_get_where_type`. These establish a packaged candidate; effective dynamic binding/interposition and active loading are not observed.
+
+Curated Device0208 supplies F461 third-party-integration context only. No F454/MH202/MHS32 address layouts, hardware roles or inferred public WHO values are transferred. Original/provider/vendor/native/OS execution and semantic fixtures/models added:0.
+
+## Selected helper path and exact numeric return
+
+Original helper0x1c10 preserves its supplied string pointer inX19. The selected path requires the actual delegated comparisons not to match: exact `0` (VA0x21a8), prefix `#` of one byte (VA0x21e0), exact `00` (VA0x21e8), and exact `100` (VA0x21f0). This packet follows only the remaining path relevant to return4; it does not publish the other return values as a supported address table.
+
+At0x1cc8..0x1cd4 it requests `g_utf8_strlen(pointer,-1)` and compares the result with1. The selected result is not1. Source0x1cdc subtracts2;0x1ce0 setsW2=4;0x1ce4 tests the64-bit result with mask0xfffffffffffffffd;0x1ce8 uses CSINV to preserve4 on equality or supply all-one bits otherwise. Along the ordinary normal stack-canary return,0x1c6c returns W2 throughW0. Algebraically, for ordinary nonnegative lengths the tested equality is satisfied by length2 or4. This is instruction/control-flow interpretation, not a finite input simulation or an executed string/parser corpus.
+
+The selected path contains string comparisons and a length test, not an independently established decimal-address domain. Under the ordinary valid-string/provider premises, shape classification and numeric validation remain separate. UTF-8 character count is also distinct from byte offsets later read by the consumer. No invalid-input behavior, rejection, vulnerability, fault or universal validator claim follows from this bounded source inspection.
+
+## Actual supplied object and caller branch
+
+At plugin0x4024 the existing saved parsed-object pointer is loaded;0x4028 reads its pointer+32 intoX27. The actual helper call0x40c0..0x40c4 passes that same X27. Local source also retains a GString pointer inX24 from its earlier construction. This closes an original object-field→helper argument edge; it does not close every outer branch that naturally reaches this stage. Supplied valid record/parsed object, source lifetime, normal preceding helper returns and reaching the selected local caller remain premises. The previous route and typed-object reports are documentary context, not a new accepted raw language test.
+
+The caller compares returnedW0 with3 at0x40cc: result4 takes the greater-than branch0x40d4→0x43c4. There it must equal4; this comparison is a classifier-result namespace, distinct from the earlier plugin-private word+4 selector, parsed kind+104, record representation+56, message criteria+48 and public identifiers.
+
+Original0x43d0..0x43e0 requests `g_string_printf(localGString,"D1")`, with literal VA0x5fe8. It then reuses the same X27 string in `g_utf8_strlen(...,-1)` at0x43e4..0x43ec. The selected repeated length2 comparison0x43f0..0x43f8 branches to0x568c. This repeated check and the same input pointer are source-backed; no concurrent mutation or lifetime guarantee is supplied by them.
+
+## Exact two-byte prefix construction and stopping boundary
+
+At0x568c the code loads the first byte of that original string intoW0 and requests `g_ascii_digit_value`; it retains the returned32-bit word. It loads byte+1 at0x5698 and requests the same conversion again. At0x56a4/0x56a8 the second/first conversion results are placed in W3/W2 respectively, so the original first-byte result is the first variadic integer argument. X0 is the same local GString, and format VA0x6030 is exactly `%d%d`;0x56b8 requests `g_string_append_printf`.
+
+Therefore under ordinary successful GString/conversion interpretation, this selected prefix is `D1` followed by the decimal rendering of the delegated first-byte result and then the second-byte result. For a naturally supplied pair of valid ASCII decimal bytes this retains their digit order, but this packet supplies no such runtime string or finite example fixture. Conversion/provider behavior for other bytes and full address validity remain unestablished. There is no claim that a UTF-8 length2 string necessarily consists of exactly two ASCII bytes.
+
+The next actual branch0x56c0 goes to0x4404, where additional suffix/context logic exists. That suffix and full output/delivery are outside this packet. This report deliberately establishes prefix normalization only; it does not repeat the earlier B1001208 output-record case or infer complete `D1` addressing semantics/physical topology from the literal.
+
+## Reproduction, preservation and gaps
+
+`python3 -B work/f461-firmware/2.0.11/research/2026-11-01-run06-address/collect_address_v1.py --check`
+
+The host collector checks two original mapped objects, five selected spans,15 helper/19 caller instruction guards, six safe literal/PIC joins and nine actual import proofs. It pins the metadata-only image alias and verifies the exported helper symbol. Generation refuses overwrite and immediately snapshots exact report/collector/output bytes using an index computed before its file is opened; --check only reproduces and compares saved bytes. No canonical failed generation or generated-candidate overwrite occurred. Exploratory direct-host probes of a metadata-only alias and a guessed library revision found no such host files; the final collector uses the verified image alias and actual1.1.0 regular file. No bogus decode or target execution resulted.
+
+Remaining questions are the full natural caller/typed-object schema, richer address categories and suffix context, original configuration/provenance of the supplied fields, active provider binding and physical/public meaning. g_ascii_digit_value/GString/string-library provider bodies were not executed or expanded. Receiving, transport, authentication, session, framing, MQTT/libjel and equivalent closed implementations remain opaque. Existing product execution ledgers are unchanged.

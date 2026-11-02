@@ -1,0 +1,25 @@
+{
+  "actual_component_view_count": 4,
+  "actual_component_views": [
+    [
+      "firmware-f450-020010",
+      "normal"
+    ],
+    [
+      "firmware-f450-020010-prod",
+      "normal"
+    ],
+    [
+      "firmware-f459-020105",
+      "normal"
+    ],
+    [
+      "firmware-f459-020105",
+      "recovery"
+    ]
+  ],
+  "canonical_outputs_unchanged": true,
+  "classification": "Label clarification only; no canonical change or new source coverage",
+  "historical_field": "SUMMARY.json package_views=3",
+  "meaning": "Three selected packages, not component/filesystem view count"
+}

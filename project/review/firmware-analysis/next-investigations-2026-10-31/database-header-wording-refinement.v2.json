@@ -1,0 +1,18 @@
+{
+  "prior_report": "REPORT.v2.md",
+  "prior_sha256": "07588f1f803d50840bd970fe428dd9f3b953effe6ae083fc705a78c9e5bd8e9a",
+  "current_report": "REPORT.v3.md",
+  "current_sha256": "e6e1f0305be2fb69c2ed8ea7fcae6a368c7922a91802cf73781c28c7c24e2b58",
+  "exact_substitution": {
+    "old": "IL offsets are code-relative excluding the12-byte method header.",
+    "new": "IL offsets are code-relative excluding each method header (12-byte fat or1-byte tiny, recorded per method)."
+  },
+  "source_and_outputs": "Unchanged; original Class0600017c constructor has1-byte tiny header/code21; Class0600018d getter has12-byte fat header/code9; remaining selected methods have12-byte fat headers.",
+  "first_candidates": "20 original snapshots including REPORT.v2 remain unchanged.",
+  "requested_by": "Independent source reviewer; documentation precision only.",
+  "sidecar_correction": {
+    "prior": "HEADER_WORDING_REFINEMENT.json",
+    "sha256": "64c29f5ddaf50b5a0e21ba666fb5715e5cace70570ae9c54c0585af1325bea91",
+    "reason": "Reviewer immediately corrected its initial grouping of both methods as tiny; only constructor is tiny. REPORT.v3 per-method wording remains correct and unchanged."
+  }
+}

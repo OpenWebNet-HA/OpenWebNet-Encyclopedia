@@ -1,0 +1,24 @@
+# F460 run11 independent source review — PASS, caller boundary retained
+
+I independently reviewed the frozen report/collector/evidence and original mapped AArch64 scheduler bytes. Host read-only `collect_control_v1.py --check` passes7 outputs/4 spans/21 guards. No firmware/native/provider/helper/model/fixture/target I/O executed and no author files were edited. Original `/home/bticino/scheduling_manager/scheduling_manager` SHA256 is `5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62`.
+
+I independently checked all4 raw spans/21 instruction words against the product ImageVFS/PT_LOAD mapping, selected delete-call PLT bytes/relocations, six branch targets, the conditional SLEEP slot relocation and all9 immediate first copies. First generation/check and preservation claims agree; no candidate correction is requested.
+
+The positive local source is supported. Entry0xf7ad0 preserves provided X0 inX20 at0xf7aec. With the report's selected valid local string/normal-return premises,0xf7bd8 sets W1=1,0xf7bdc computes X20+248 and0xf7be0 release-stores that byte. Then0xf7be4 loads begin/end from that SAME incoming receiver+216/+224 before reusing registerX20 for end. The loop loads the first pointer and postincrements16 at0xf7bf0, loads that pointee's primary vtable and slot+8, then BLR0xf7bfc. Empty range skips requests; otherwise normal return/end comparison repeats. It does not invoke the second control word or infer an action result from a void-style request. The normal canary epilogue/RET is retained, with errors/exceptions/lifetime/concurrent mutation outside scope.
+
+The critical identity limitation is correctly explicit: **no actual incoming caller or natural invocation is established, and this packet does not positively identify the incoming receiver as SceneRunner**. Similar offsets do not prove object identity. Only IF the valid incoming receiver is the same run07 scene does its byte248/range216 coincide with the earlier independently inspected source consumers. That conditional composition is useful, but is not a completed natural scene-cancellation or producer-origin closure.
+
+Original AP0x21cc50+8 relocation0x21cc58 really points0x130000. This supplies one conditional slot destination only when the actual dynamic action has that primary AP. I did not expand0x130000 or any action/output/provider implementation. Source requests, release ordering and normal returns do not certify stop success, all actions, ownership safety or physical effects. Byte248 is a numeric receiver field here; public cancellation semantics are not assigned from it.
+
+I inspected the finite locator algorithm and its saved no-hit scope: aligned B/BL targets, ADR-to-entry, and same-base ADRP(page0xf7000)/ADD0xad0 pairs within512 bytes of executable PT_LOAD file bytes. Its host reconstruction passes. These finite forms are not a comprehensive xref/relocation/vtable/caller analysis; no hit is not global absence, unreachability, dead code or missing natural invocation. No closed route was followed to force a caller. Earlier source reports are documentary premises, not old collector/native replay or new semantic coverage.
+
+Receiving/transport/authentication/session/framing/MQTT/libjel bodies and equivalent stopped routes remain closed. No full lifecycle/reset policy, global writer census, product capability, defect or runtime conclusion is added.
+
+Exact reviewed pins:
+
+- REPORT.md: `c378a24d9bda1856de09e9be59047b53f68909aa418cb3ab584ea74dceb6d650`.
+- collect_control_v1.py: `08f7ae006babd3c5c7a7a17ec37fdd3dafbd8bb67fae24bf4f2fa98f73e73169`.
+- OUTPUT_MANIFEST.json: `f1ebb95753bcbc34d5c0c4a748500af0a6f177b25482f402b0ccc133dc10d1cc`.
+- first-candidate/INDEX.json: `43e849f123c3f4aa57e5580f5d2934297cc012587e93b3981f07993d0e6dca30`.
+
+PASS is bounded source/provenance/reproducibility agreement, with the caller and receiver-class boundary OPEN, not whole scene-policy verification.

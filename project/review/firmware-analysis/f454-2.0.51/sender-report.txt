@@ -1,0 +1,55 @@
+# Run25 — native sender failure, reset and remaining-output policy
+
+## Finding
+
+For the selected original WHO0 sender, a first write return of −1 or 0 causes the original library helper to return −1. The original sender calls close for its private descriptor 42, sets both its local descriptor and client field+24 to −1, skips the second output's write, and executes the deleting destructors for **both** output objects. The sender still returns 0. Its original transaction/consumer then completes cleanup and next-batch reset under the existing fixture.
+
+A short-positive return 1 for a 10-byte request follows the helper's success branch: no retry of the remaining 9 bytes, no close, and the next request is the separate full second frame. A failure on that second write closes/reset the descriptor after the first request. These are original caller/helper decisions under explicit record-only return fixtures, not observed delivery, data loss, hardware failure, exploitability or actual connection behavior.
+
+## Provenance and reproducible boundaries
+
+Read-only originals:
+
+- `analysis/rootfs/home/bticino/bin/bt_luci`, SHA256 `1c9f959acd002fa5c97f0073eda767bade580bd3f2cf242e1e305c631342581c`;
+- `analysis/rootfs/home/bticino/lib/libcommon.so.0.0`, SHA256 `3890711968ffa0c89136c20e7e73f82b6314513cf3aab0334d9b4843f84a025a`.
+
+Each case consumes the exact hashed `functional/run24/sender-results.json` producer and asserts equality of its raw source, `source_before_route`, native `queued` object and selected `transaction.native_send_interface.source_fields`. The same source flags/address/routes therefore still construct exactly the original two outputs, `*0*40*11##` and `*0*43*11##`, before any failure callback. No earlier codec/batch matrix is investigated again; reconstruction supplies the saved handoff.
+
+Private descriptor 42 is supplied at the original sender `0x18058` entry, exactly as in run24. No real socket/open/accept executes. The actual sender, native vector, translator, original output constructors/deleting destructors and original `libcommon` invio helper execute. Only final writes/close, non-SSL selection, logging, strings and memory APIs are explicit primitives. `write` records original byte/count arguments and returns its declared sequence; close records its argument and returns 0 without host effects. A failed callback does not simulate a real kernel/socket state.
+
+From the workspace root:
+
+```
+python3 work/f454-firmware/research/2026-10-29/functional/run25/emulate_sender_failures.py
+python3 work/f454-firmware/research/2026-10-29/functional/run25/collect_evidence.py
+```
+
+`failure-results.json` records every byte/count request, helper return, original item iteration/cleanup/deleting-destructor entry, final client field and normal transaction/batch observations. `input-evidence.json` hashes the current scripts, original inputs and exact producer. Bounded spans preserve native result guards, return and deletion paths. No actual poll, network, process or syscall is forwarded; execution remains capped and unexpected imports/interrupts fail closed.
+
+## Two different result layers
+
+Original library VA `0xc3d8` calls write. At `0xc3dc` it compares the returned value with 0, and `0xc3e8` branches on signed ≤0 into failure. The original failure tail `0xc42c..0xc43c` logs and returns−1. Positive values reach `0xc3ec..0xc3fc`, which return 1; this selected helper path does not compare against requested length or retry a remaining tail.
+
+Original `bt_luci` `0x18390` calls that helper via PLT `0xb984`, bound privately to actual `libcommon` `0xc348`. Original `0x18394..0x183a4` tests the **helper** return and branches on nonnegative into its normal path. The helper returns 1 or−1 in these fixtures. A hypothetical helper 0 would take the nonnegative caller branch by static code, but no helper 0 is injected here; the zero-write case actually executes the native library's−1 return.
+
+The negative branch executes original `0x183a8..0x183e4`: logging, `0x183d8` close call, `0x183dc` local descriptor−1, `0x183e0` client+24 store−1, then branch to current output cleanup `0x18414`. No original reconnect helper is called on this selected mode 2 error tail. Later connection acceptance/readiness is outside this run; this is not a claim of permanent disconnection or absence of future recovery.
+
+At the next item, original `0x18374..0x18378` sees its local descriptor−1 and branches directly to cleanup. It does not invoke `invio_msg_open` for the second item. Original code continues native vector iteration, rather than returning immediately upon the first failure or retaining the second object for retry in this batch.
+
+## Four selected original checks
+
+Every case creates two original output objects; the selected write return sequence is the only variation. “Full” means the record-only callback returns the request's actual 10-byte length.
+
+| Case | Actual write requests/returns | Native helper results | Close calls / final client+24 | Sender return | Sender instructions | Whole-run instructions/hooks |
+|---|---|---|---|---:|---:|---:|
+|First−1|Frame40:10→−1; no frame43 write|−1|[42] /−1|0|604|6006/6177|
+|First0|Frame40:10→0; no frame43 write|−1|[42] /−1|0|604|6006/6177|
+|First short1|Frame40:10→1; frame43:10→10|1,1|[] /42|0|654|6056/6235|
+|Second−1|Frame40:10→10; frame43:10→−1|1,−1|[42] /−1|0|659|6061/6241|
+
+Frame40 and frame43 mean exact separate constructed strings `*0*40*11##` and `*0*43*11##`. The short case asserts requests `[10,10]` with returns `[1,10]`; the second request is a different frame, not a resend of the missing suffix of the first. This is a caller/helper request observation, not evidence of how many bytes any remote endpoint received.
+
+For first−1/0, item-guard observations are descriptor 42 on the first output, then−1 on the second. There is one actual provider redirect/write request. Both outputs still reach original deleting destructor `0xd7ec`→`0xd7b4`, exactly twice per case. For short-positive and second−1, there are two original provider redirects/write requests. Both output pointers are asserted to have native destructor entries and free requests.
+
+The sender then frees its native vector backing store and reaches normal return0 at `0x184b8..0x184c0`. No error code is propagated from this original sender return to the enclosing callback in the selected cases. Original transaction state ends 0/step 1, app active slots `[0,0]`, and native input source/transaction-owned copy/transaction/both wrappers follow their original cleanup route. The next collector resets batch count 0, and the final stop remains before actual poll. These downstream equalities are asserted, rather than inferred from the record-only close.
+

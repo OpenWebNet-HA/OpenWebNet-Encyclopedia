@@ -1,0 +1,18 @@
+{
+  "scope": "Frozen author outputs then independent cross-source review; no author report overwritten by parent",
+  "required_per_packet": [
+    "Exact original image/path/ELF hash and virtual-to-file mapping",
+    "Selected original instructions/literal/relocation/call evidence and reproducible collector",
+    "Immediate immutable first output copies",
+    "Explicit valid-object/provider/configuration/runtime/physical boundaries",
+    "Independent original-source peer check"
+  ],
+  "integration_rules": [
+    "New focused reference and capsule; preceding public comparison and Device definitions remain unchanged",
+    "Parent snapshots any candidate before requesting correction; new versions retain exact prior files",
+    "No staging, commits, publishing, source-manifest changes, remote writes or automation",
+    "Strict ESG/ECV/diff after review/validation targets actually exist; index last"
+  ],
+  "cumulative_execution": "F460/F461 new original/native/model/fixture/runtime execution0; prior MHS8entries340code-hook visits remains separate, no replay; F454/MH202 ledgers unchanged",
+  "previous_history_limit": "MH202 run18/run21 unavailable intermediate histories remain unverified"
+}

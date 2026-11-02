@@ -1,0 +1,21 @@
+# MH202 run14 thermoregulation independent source review
+
+PASS. Parent independently audited the boot agent's selected WHO4 report against fresh original bytes, selected disassembly, a separate ELF PT_LOAD offset decoder and saved finite models; the collector --check reproduces22 outputs. This is static source/model review, not original converter/parser/callback/runtime execution.
+
+Report SHA256: `d438f0e99f660adc5a67b2cf83f2e1f8ea57dd865d3d483320a921be4a4b62cb`.
+
+Collector SHA256: `daa8037c090240c4d892dc0d8542956840f91ad3117d88d29b8c864bb704c278`.
+
+Manifest SHA256: `b2a0ec09afe90df32dc8ff3cc9fdb5ed9979b48e5339b271e94a77c6fc5030b0`.
+
+Independent checks verify all5 input identities, 14 exact span hashes/VA offsets, 24 original instruction words, 4 safe literal targets and all24 final manifest entries. Earlier sources and canonical native corpora remain unchanged; run14 original execution/hook counts are0.
+
+## Scoped semantic checks
+
+- Descriptor1089c binds initializer79e0/translator7940. Criteria3/+52 and4/+56 belong to reverse SCS-family and forward parsed-WHO axes, not two universalWHO4 lists. Selected pair1→2 reaches thermo_scs2open7528 and briefscs_translate41f8; actual registration/live imports are not observed.
+- Candidate libthermo provider and getHexByte1154 parse exactly two ASCII characters. Under selected length8 inputs, thermo_where1c08 combines byte01 with opcode30 low nibble0, producing decimal WHERE1 through1d5c. Extended length16 and full address domains remain separate.
+- Brief dispatch marker-low4/5 reaches4420; opcode30 passes unsigned30..38 guard. MarkerB4 retains final byte200; selectedB5 adds256 to245, giving501. Format4a78→7c10 hardcodes DIM0 and four-digit decimal, yielding0200/0501. This is code arithmetic/formatting, not measured temperature, scale, signedness, error/sentinel/setpoint domain or F454 equivalence.
+- check_open_frame4c84 is a coarse character/table/prefix/suffix screen, not a complete OPEN parser. The selected short numeric examples satisfy only its stated source/ASCII premises; malformed/empty-input behavior is not tested or generalized.
+- Successful coarse screen calls scsmsg_to_openlist; candidate core26d8 duplicates text into a64-byte record, sets type2/representation2/routing4, copies selected source metadata and appends a pointer. It does NOT call buf_to_openmsg. No parser acceptance, actual list/drain/provider behavior, natural source provenance or physical transport is inferred.
+
+No source correction was required. Selected paths and finite host expectations are reproducible implementation evidence; configured/runtime/physical and wider Device gates remain open. The raw501 fact must remain unclassified beyond the demonstrated software formatting until independently supported consumer/source evidence is available.

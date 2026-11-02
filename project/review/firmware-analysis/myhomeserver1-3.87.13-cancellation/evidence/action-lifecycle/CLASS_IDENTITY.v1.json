@@ -1,0 +1,20 @@
+{
+  "address_point_va": "0x164b1c",
+  "got_base": "0x1659a4",
+  "header_va": "0x164b14",
+  "primary_methods": [
+    "0xcd849",
+    "0xcd6f1",
+    "0xcd551"
+  ],
+  "relocations": [
+    "00166d24  00000017 R_ARM_RELATIVE        ",
+    "00164b1c  00000017 R_ARM_RELATIVE        ",
+    "00164b20  00000017 R_ARM_RELATIVE        ",
+    "00164b24  00000017 R_ARM_RELATIVE        "
+  ],
+  "rtti_name": "16Bn3lActionRunner",
+  "rtti_va": "0x164660",
+  "scope": "Selected compiled class ownership, no public product/WHO/physical-family meaning.",
+  "slot_va": "0x166d24"
+}

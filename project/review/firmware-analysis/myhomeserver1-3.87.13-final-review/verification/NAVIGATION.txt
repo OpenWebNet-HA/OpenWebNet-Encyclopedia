@@ -1,0 +1,14 @@
+# Two-checkpoint navigation supplement
+
+This adds synthesis and numeric-trigger references after the unchanged seventeen-row guide. Two rows and17+2 are navigation counts, not coverage percentages, fresh source claims or rerun tests.
+
+| Row | Scoped checkpoint | Exact report | Limit |
+| --- | --- | --- | --- |
+| N18 | Readable source synthesis and frozen seventeen-row navigation | [work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/overview/ENCYCLOPEDIA_CANDIDATE.md](${WORKSPACE}/work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/overview/ENCYCLOPEDIA_CANDIDATE.md:3) | Navigation/documentary consolidation only, not new source coverage; earlier report/refinement/provider/lifetime/physical limits remain. |
+| N19 | Selected BNLD numeric trigger and local caller | [work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/REPORT.md](${WORKSPACE}/work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/REPORT.md:3) | Selected private raw-trigger3/caller/threshold/callback source only; no accepted wire grammar, natural scene, physical semantics, crossing/dedup or whole lifetime claim. |
+
+Saved ledger unchanged: **1 corpus,8 entries,340 original code-hook visits,0 C primitives,12 redirects,8 EXIT/0 guard stops,360 hooks**. Four data relocations and24 FP/control setup writes are separate. This supplement executes/replays zero original code.
+
+Frozen old614 inputs are verified as613 current matches plus one exact retained Device0199 version. Numeric142 is141 current matches plus one exact retained overview version. Old documents/indexes/generators are untouched. The old guide direct--check requires its original working-path bytes and is NOT claimed to pass on the corrected Device page; this new verifier validates that exact historical version through the explicit snapshot.
+
+Saved reviews/PASS/validation identities remain historical records, not a fresh full semantic/test audit. Full runtime, physical, provider, concurrency and missing-history limitations remain.

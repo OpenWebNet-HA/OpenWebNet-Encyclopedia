@@ -1,0 +1,17 @@
+## F460: selected numeric serializer and operator spellings
+
+The actual BNLD raw serializer uses its own hidden-result ABI and calls the common condition serializer on the same result. For selected operator words0 through3, the common serializer emits `higher`, `lower`, `equal` and `different`; the original parser independently decodes those spellings back to the same words. Sentinel−1 skips operator emission. These are local condition spellings, not a public protocol or physical-unit mapping.
+
+On the selected raw status−1 branch, the serializer passes raw level+56 to the signed-int JSON constructor and assigns `level` in the same result. That branch has no direct zero or level-sentinel omission test and requests no status assignment. The common result construction supplies its own other fields.
+
+Under ordinary fresh JSON, member/string/move/int/asInt behavior, no extra status member or mutation and normal returns, the inherited reparse carries this selected level to the compiled numeric threshold while preserving status−1 and the chosen operator. This narrows the earlier value-coherence premise; complete JSON/runtime behavior, actual configuration, query-record suitability and physical outcomes remain open.
+
+## F461: monitor registration to a retained module-entry consumer
+
+The main routine requests a directory monitor through the same manager and library-directory holder. On the selected nonnull monitor/cast path, the registration supplies the actual `changed` callback and that same manager as userdata. Valid provider objects, the signal ABI and eventual delivery remain premises.
+
+The selected callback path obtains the holder's entry list, requests a path from the supplied file and checks whether it has the stored entry path as a suffix. A nonzero result and numeric event0 select the retained path/handle entry. This is a delegated suffix relation, not proof of canonical file identity or a complete event policy.
+
+If the stop-symbol lookup succeeds, the callback requests that callable; its body, argument ABI and result remain opaque. Under normal returns the callback then requests list removal, writes the returned head, requests stored-path free, module close and entry free. The stop lookup may also fail and skip the callable before bookkeeping. This is local request ordering, not successful stopping, code unloading, complete ownership, concurrency safety or physical shutdown.
+
+The [final source-batch capsule](../../project/review/firmware-analysis/f460-f461-run15-2026-11-01/README.md) retains original serializer/operator and callback/entry-consumer evidence, exact version histories and independent reviews. These are static source contracts; no JSON fixture, timer/file event, plugin stop, module close or physical operation was executed.

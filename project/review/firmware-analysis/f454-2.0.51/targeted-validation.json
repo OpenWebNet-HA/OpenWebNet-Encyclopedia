@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "method": "Host-only static collectors/models replayed with writes intercepted and exact prior canonical-reference read overlay. No ARM/JS/vendor execution.",
+  "scripts": [
+    {
+      "script": "identity/collect_identity.py",
+      "passed": true,
+      "output_bytes_compared": 9,
+      "strict_read_only_check": false
+    },
+    {
+      "script": "temperature/collect_evidence.py",
+      "passed": true,
+      "output_bytes_compared": 19,
+      "strict_read_only_check": false
+    },
+    {
+      "script": "temperature/model_range.py",
+      "passed": true,
+      "output_bytes_compared": 1,
+      "strict_read_only_check": false
+    },
+    {
+      "script": "energy/collect_evidence.py",
+      "passed": true,
+      "output_bytes_compared": 0,
+      "strict_read_only_check": true
+    },
+    {
+      "script": "media/collect_static.py",
+      "passed": true,
+      "output_bytes_compared": 25,
+      "strict_read_only_check": false
+    }
+  ],
+  "report_exports_verified": 4,
+  "model_exports_verified": 3,
+  "original_overnight_index_unchanged": true,
+  "temperature_reference_snapshot": {
+    "source_path": "OpenWebNet-Encyclopedia/functional/who-4-temperature-control/dimensions.md",
+    "source_sha256": "a9326991d5e2b43fc08693aa12e1729b3610f1cd420889ed9c1fe562720c703e",
+    "snapshot": "reference-dimensions.snapshot.txt",
+    "scope": "Exact pre-followup canonical reference bytes read by the collector and peer review. Subsequent Encyclopedia promotion must not rewrite the historical input identity. Exact replay uses a read-only overlay for this one local reference; original Firmware inputs remain unchanged."
+  },
+  "original_firmware_instructions_executed": 0
+}

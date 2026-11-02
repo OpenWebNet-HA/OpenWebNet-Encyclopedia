@@ -1,0 +1,129 @@
+{
+  "checkpoint": "run7",
+  "status": "reviewed three static areas and one isolated original-helper corpus; overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "method": "Static source plus guarded mapped original ARM leaf; no target OS/firmware process",
+  "canonical_execution": {
+    "original_ARM_instructions": 1485,
+    "primitive_callbacks": 75,
+    "code_hook_visits": 1560,
+    "original_helper_calls": 13,
+    "firmware_processes": 0,
+    "native_target_OS_calls": 0,
+    "count_scope": "Recorded original instruction visits per canonical13-case corpus; verification replays are not accumulated into this corpus count"
+  },
+  "exports": [
+    {
+      "role": "report",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run7/REPORT.md",
+      "source_sha256": "9f677fb93603e88f3297bb8785bf85fd2f4ba1161bd084d808f17b17e975c218",
+      "published": "run7-functional-report.txt",
+      "published_sha256": "9f677fb93603e88f3297bb8785bf85fd2f4ba1161bd084d808f17b17e975c218",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run7/functional-review.md",
+      "source_sha256": "4b3131e0e12bb944dd82747bbcf798939a9c79bc3603ea779d2db3e1d37d583e",
+      "published": "run7-functional-review.txt",
+      "published_sha256": "4b3131e0e12bb944dd82747bbcf798939a9c79bc3603ea779d2db3e1d37d583e",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "report",
+      "area": "triggers",
+      "research_path": "work/mh202-firmware/research/2026-10-30/triggers/run7/REPORT.md",
+      "source_sha256": "9f66c9ef4ec240da0acab34e5e8d5a38c9f02357e36bee6e7ea754ddc6d3a861",
+      "published": "run7-triggers-report.txt",
+      "published_sha256": "9f66c9ef4ec240da0acab34e5e8d5a38c9f02357e36bee6e7ea754ddc6d3a861",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "triggers",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run7/triggers-review.md",
+      "source_sha256": "6a870c567c027a2dea9840db7e6b62b416a77d6033c35dbc319c456e5c0824e1",
+      "published": "run7-triggers-review.txt",
+      "published_sha256": "6a870c567c027a2dea9840db7e6b62b416a77d6033c35dbc319c456e5c0824e1",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run7/REPORT.md",
+      "source_sha256": "c64a332dfca5077368c7d613d436a85001535ecfdb02d33d5cb1606a391bf6a4",
+      "published": "run7-protocol-report.txt",
+      "published_sha256": "c64a332dfca5077368c7d613d436a85001535ecfdb02d33d5cb1606a391bf6a4",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run7/protocol-review.md",
+      "source_sha256": "04739c693839f5d2d5c875229699cc748c6abd34daf0504a608e548c44c9bfc0",
+      "published": "run7-protocol-review.txt",
+      "published_sha256": "04739c693839f5d2d5c875229699cc748c6abd34daf0504a608e548c44c9bfc0",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "report",
+      "area": "boot",
+      "research_path": "work/mh202-firmware/research/2026-10-30/boot/run7/REPORT.md",
+      "source_sha256": "c5e52e89091aca64fcd804fd4151a6248a5fa984c17e0207d71965197c34115d",
+      "published": "run7-boot-report.txt",
+      "published_sha256": "c5e52e89091aca64fcd804fd4151a6248a5fa984c17e0207d71965197c34115d",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "boot",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run7/boot-review.md",
+      "source_sha256": "f2b625791df509815772aa9d13c57ee378ed639807a6c8c4a67a26cb662d54c3",
+      "published": "run7-boot-review.txt",
+      "published_sha256": "f2b625791df509815772aa9d13c57ee378ed639807a6c8c4a67a26cb662d54c3",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run7/collect_evidence.py",
+      "sha256": "d9089ab8e07785069395db53a31a3111dff99d24d76bef6f77f6a00fc2a1f4fe",
+      "method": "static original source/host model"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/triggers/run7/emulate_comparator.py",
+      "sha256": "2752ac36e164809049fea1958854e04eee7fc61350e5ac215864f91ab76764b4",
+      "method": "bounded original leaf emulator with declared primitives"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run7/collect_evidence.py",
+      "sha256": "ab8d42af9b69bff4b0ce8b83f7b42a23b547d4b6a97d7c8647b568c7912c445b",
+      "method": "static original source/host model"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/boot/run7/collect_config_effects.py",
+      "sha256": "a2565fdabb586159ecbd6992efac73a0e61ac471fe74dc39add2318f8d4f9fb4",
+      "method": "static original source/host model"
+    }
+  ],
+  "history": {
+    "run6_reviewed_document_snapshots": "reviewed/run6/SOURCE_SNAPSHOTS.json",
+    "earlier_reports_unchanged": true,
+    "prior_zero_counts": "First six checkpoints static-only; run7 other author/review areas static0, separate from trigger corpus",
+    "tool_discovery": "Existing standalone Unicorn analysis package only,41RECORDhashes and peer63fileunchangedcheck; no F454 firmware/harness/layout reused",
+    "functional_assertion": "Adjacent sm_receive/syn_receive GOT assumption caught before outputs; exact author draft retained"
+  },
+  "limits": [
+    "Only c6dc..c8e0 originalhelper runs in allowed PC/interrupt/memory/cap guarded emulator",
+    "Host strlen/atoi are explicit primitives, not original libc",
+    "No original parser/normalizer/specialcomparator, configured scripts or physical false-trigger proof",
+    "COSO dispatcher/key/callback joins are postparser/selectedmanager/criteria assumptions",
+    "Diagnostic rawstrings synthetic; WHO/WHERE/finalparser/hardware identity unknown",
+    "Runtime XML callbacks/HTTPcalls static, not GLib/actualconfig/chunk/service readiness",
+    "Full Device gates/runtime/physical evidence remain incomplete"
+  ],
+  "reproduction_limit": "Original images/tool/fullspans/harness remain in local dossier; exports are documentary evidence"
+}

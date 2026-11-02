@@ -1,0 +1,46 @@
+{
+  "collector_sha256": "3155c9f76cfc9c34cb0b1af2fb638d64f0c667a5add3ab9337dcc97bd64943b2",
+  "outputs": {
+    "INPUTS.json": {
+      "sha256": "80cd6b63303a541038fd2a0ed07d736f31005fb0c4657a4fef3a87ad91e5760c",
+      "size": 1091
+    },
+    "SOURCE.json": {
+      "sha256": "7cb9a9e4bddb2f8bcdd7f3a48e0ef8697b068c7c6a7059eb31eb28d375f06a7a",
+      "size": 9046
+    },
+    "spans/actual-main-call.txt": {
+      "sha256": "5981b229548e64206715c06a4421ce29bd1f37ea7c970f4f0e623f9bb3913f5f",
+      "size": 269
+    },
+    "spans/entry-store-and-initializer-boundary.txt": {
+      "sha256": "855b81978788ed5fa0c3fb83f65df0f20bbff6843a5d3895e55c3ee57a807408",
+      "size": 739
+    },
+    "spans/filename-filters-and-open.txt": {
+      "sha256": "dd33ba022ac17173338fdef300e0b34a2651c52ab5d7d60d887245badb618f7c",
+      "size": 1252
+    },
+    "spans/iteration-and-normal-return.txt": {
+      "sha256": "7e0efff6ea4df0ec8155a5576bec518bdd1228f37a5ff178cef831ae9ec2109f",
+      "size": 712
+    },
+    "spans/module-open-and-directory-failure.txt": {
+      "sha256": "53773ffb17017c0f0e9106ea6dbafa210af736da285a4545df82f0610c404bd6",
+      "size": 741
+    },
+    "spans/support-and-directory.txt": {
+      "sha256": "e139aa29b04d218f070358cdedd141053bf649ea1c9c3c8da071843460fe51d4",
+      "size": 829
+    },
+    "spans/symbol-gates.txt": {
+      "sha256": "de6fe361c2bf4a6b53bc99bccea968736d3a820dba1ffd0702aa6ef4dc0f7492",
+      "size": 949
+    },
+    "spans/unsupported-diagnostic-return.txt": {
+      "sha256": "e2e004bbba15ec955a0c1252953742105ae5d2a82ac527f16fff4f6654d914bd",
+      "size": 612
+    }
+  },
+  "report_sha256": "85438c26d5c27d9259e8970633318f3f3ea495fee5444865b75219ff59009e64"
+}

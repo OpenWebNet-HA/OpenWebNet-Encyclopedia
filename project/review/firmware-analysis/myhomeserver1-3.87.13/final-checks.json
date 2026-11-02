@@ -1,0 +1,44 @@
+{
+  "scope": "Final strict mechanical checks after actual review exports and validation target exist; resolves documentary pending links without placeholders or exemptions",
+  "checks": [
+    {
+      "name": "ESG",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "68e2ec",
+          "wall_time_seconds": 3.943509213,
+          "exit_code": 0,
+          "original_token_count": 21,
+          "output": "STATS human_pages=394 support_pages=148 objective_failures=0 review_candidates=6869\n"
+        }
+      }
+    },
+    {
+      "name": "ECV",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "efc482",
+          "wall_time_seconds": 1.685330467,
+          "exit_code": 0,
+          "original_token_count": 16,
+          "output": "STATS human_pages=394 objective_failures=0 review_candidates=14\n"
+        }
+      }
+    },
+    {
+      "name": "Git_diff",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "ed763e",
+          "wall_time_seconds": 0.00001429,
+          "exit_code": 0,
+          "original_token_count": 0,
+          "output": ""
+        }
+      }
+    }
+  ]
+}

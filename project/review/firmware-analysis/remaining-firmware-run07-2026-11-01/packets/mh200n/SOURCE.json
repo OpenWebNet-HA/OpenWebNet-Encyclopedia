@@ -1,0 +1,383 @@
+{
+  "PT_LOAD": [
+    {
+      "VA": 32768,
+      "file_bytes": 154668,
+      "flags": 5,
+      "memory_bytes": 154668,
+      "offset": 0
+    },
+    {
+      "VA": 221184,
+      "file_bytes": 2024,
+      "flags": 6,
+      "memory_bytes": 12252,
+      "offset": 155648
+    }
+  ],
+  "component": "Separate MH200N application bundle, NOT an installed overlay",
+  "direct_calls": [
+    {
+      "VA": "0xa938",
+      "target": "0x9d04"
+    },
+    {
+      "VA": "0xa94c",
+      "target": "0x9e24"
+    },
+    {
+      "VA": "0xa96c",
+      "target": "0x9d04"
+    },
+    {
+      "VA": "0xa984",
+      "target": "0x9fa4"
+    }
+  ],
+  "header52_hex": "7f454c46010101610000000000000000020028000100000050a2000034000000386902000202000034002000060028001a001900",
+  "imports": [
+    {
+      "GOT_slot": "0x36620",
+      "PLT_VA": "0x9d04",
+      "name": "sprintf",
+      "original_relocation": "00036620  00000416 R_ARM_JUMP_SLOT        00009d04   sprintf@GLIBC_2.0",
+      "words": [
+        "0xe28fc600",
+        "0xe28cca2c",
+        "0xe5bcf914"
+      ]
+    },
+    {
+      "GOT_slot": "0x36680",
+      "PLT_VA": "0x9e24",
+      "name": "system",
+      "original_relocation": "00036680  00001f16 R_ARM_JUMP_SLOT        00009e24   system@GLIBC_2.0",
+      "words": [
+        "0xe28fc600",
+        "0xe28cca2c",
+        "0xe5bcf854"
+      ]
+    },
+    {
+      "GOT_slot": "0x36700",
+      "PLT_VA": "0x9fa4",
+      "name": "fopen",
+      "original_relocation": "00036700  00004716 R_ARM_JUMP_SLOT        00009fa4   fopen@GLIBC_2.1",
+      "words": [
+        "0xe28fc600",
+        "0xe28cca2c",
+        "0xe5bcf754"
+      ]
+    }
+  ],
+  "original": {
+    "bytes": 159048,
+    "path": "work/mh200n-firmware/1.1.8/analysis/application/home/bticino/bin/bt_taskmanager",
+    "sha256": "ad68f9bf43f7f10af122f34d3cb14b7d8c02730c46225a9a6cd1bf3e663072cb"
+  },
+  "outer_caller": "NOT ESTABLISHED; selected local routine0xa8f0 is the actual caller to imported formatting/system/file requests; no boot or natural reach claim",
+  "pool_joins": [
+    {
+      "instruction_VA": "0xa910",
+      "pool_VA": "0xaa74",
+      "pool_word": "0x2b8a8"
+    },
+    {
+      "instruction_VA": "0xa918",
+      "pool_VA": "0xaa78",
+      "pool_word": "0x2b8b0"
+    },
+    {
+      "instruction_VA": "0xa920",
+      "pool_VA": "0xaa7c",
+      "pool_word": "0x2b8cc"
+    },
+    {
+      "instruction_VA": "0xa92c",
+      "pool_VA": "0xaa80",
+      "pool_word": "0x2b8d4"
+    },
+    {
+      "instruction_VA": "0xa930",
+      "pool_VA": "0xaa84",
+      "pool_word": "0x2b8e4"
+    },
+    {
+      "instruction_VA": "0xa934",
+      "pool_VA": "0xaa88",
+      "pool_word": "0x2b5d8"
+    },
+    {
+      "instruction_VA": "0xa960",
+      "pool_VA": "0xaa8c",
+      "pool_word": "0x2b8ec"
+    },
+    {
+      "instruction_VA": "0xa964",
+      "pool_VA": "0xaa78",
+      "pool_word": "0x2b8b0"
+    },
+    {
+      "instruction_VA": "0xa968",
+      "pool_VA": "0xaa7c",
+      "pool_word": "0x2b8cc"
+    },
+    {
+      "instruction_VA": "0xa980",
+      "pool_VA": "0xaa90",
+      "pool_word": "0x2b8f4"
+    }
+  ],
+  "raw_flags": "0x202",
+  "safe_literals": [
+    {
+      "NUL_bytes_hex": "2a2e2a2e73707400",
+      "VA": "0x2b8a8",
+      "file_offset": "0x238a8",
+      "text": "*.*.spt"
+    },
+    {
+      "NUL_bytes_hex": "2f7661722f746d702f62746963696e6f2f7363726970742f00",
+      "VA": "0x2b8b0",
+      "file_offset": "0x238b0",
+      "text": "/var/tmp/bticino/script/"
+    },
+    {
+      "NUL_bytes_hex": "6c6973746100",
+      "VA": "0x2b8cc",
+      "file_offset": "0x238cc",
+      "text": "lista"
+    },
+    {
+      "NUL_bytes_hex": "25732025732573203e202573257300",
+      "VA": "0x2b8d4",
+      "file_offset": "0x238d4",
+      "text": "%s %s%s > %s%s"
+    },
+    {
+      "NUL_bytes_hex": "6c73202d3100",
+      "VA": "0x2b8e4",
+      "file_offset": "0x238e4",
+      "text": "ls -1"
+    },
+    {
+      "NUL_bytes_hex": "2f726f6f742f7363726970742f00",
+      "VA": "0x2b5d8",
+      "file_offset": "0x235d8",
+      "text": "/root/script/"
+    },
+    {
+      "NUL_bytes_hex": "2573257300",
+      "VA": "0x2b8ec",
+      "file_offset": "0x238ec",
+      "text": "%s%s"
+    },
+    {
+      "NUL_bytes_hex": "7200",
+      "VA": "0x2b8f4",
+      "file_offset": "0x238f4",
+      "text": "r"
+    }
+  ],
+  "spans": [
+    {
+      "bytes_hex": "0dc0a0e100d82de904b04ce247de4de204d04de2462e4be20c2042e2082042e25c319fe500308de558319fe504308de554319fe508308de50200a0e14c119fe54c219fe54c319fe5f1fcffeb463e4be20c3043e2083043e20300a0e134fdffeb463e4be20c3043e2083043e20300a0e124119fe50c219fe50c319fe5e4fcffeb463e4be20c3043e2083043e20300a0e108119fe586fdffeb",
+      "end_exclusive_VA": "0xa988",
+      "file_offset": "0x28f0",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/application/home/bticino/bin/bt_taskmanager:     file format elf32-littlearm\n\n\nDisassembly of section .text:\n\n0000a8f0 <.text+0x6a0>:\n    a8f0:\te1a0c00d \tmov\tip, sp\n    a8f4:\te92dd800 \tpush\t{fp, ip, lr, pc}\n    a8f8:\te24cb004 \tsub\tfp, ip, #4\n    a8fc:\te24dde47 \tsub\tsp, sp, #1136\t@ 0x470\n    a900:\te24dd004 \tsub\tsp, sp, #4\n    a904:\te24b2e46 \tsub\tr2, fp, #1120\t@ 0x460\n    a908:\te242200c \tsub\tr2, r2, #12\n    a90c:\te2422008 \tsub\tr2, r2, #8\n    a910:\te59f315c \tldr\tr3, [pc, #348]\t@ aa74 <Leggi_path_var@plt+0x830>\n    a914:\te58d3000 \tstr\tr3, [sp]\n    a918:\te59f3158 \tldr\tr3, [pc, #344]\t@ aa78 <Leggi_path_var@plt+0x834>\n    a91c:\te58d3004 \tstr\tr3, [sp, #4]\n    a920:\te59f3154 \tldr\tr3, [pc, #340]\t@ aa7c <Leggi_path_var@plt+0x838>\n    a924:\te58d3008 \tstr\tr3, [sp, #8]\n    a928:\te1a00002 \tmov\tr0, r2\n    a92c:\te59f114c \tldr\tr1, [pc, #332]\t@ aa80 <Leggi_path_var@plt+0x83c>\n    a930:\te59f214c \tldr\tr2, [pc, #332]\t@ aa84 <Leggi_path_var@plt+0x840>\n    a934:\te59f314c \tldr\tr3, [pc, #332]\t@ aa88 <Leggi_path_var@plt+0x844>\n    a938:\tebfffcf1 \tbl\t9d04 <sprintf@plt>\n    a93c:\te24b3e46 \tsub\tr3, fp, #1120\t@ 0x460\n    a940:\te243300c \tsub\tr3, r3, #12\n    a944:\te2433008 \tsub\tr3, r3, #8\n    a948:\te1a00003 \tmov\tr0, r3\n    a94c:\tebfffd34 \tbl\t9e24 <system@plt>\n    a950:\te24b3e46 \tsub\tr3, fp, #1120\t@ 0x460\n    a954:\te243300c \tsub\tr3, r3, #12\n    a958:\te2433008 \tsub\tr3, r3, #8\n    a95c:\te1a00003 \tmov\tr0, r3\n    a960:\te59f1124 \tldr\tr1, [pc, #292]\t@ aa8c <Leggi_path_var@plt+0x848>\n    a964:\te59f210c \tldr\tr2, [pc, #268]\t@ aa78 <Leggi_path_var@plt+0x834>\n    a968:\te59f310c \tldr\tr3, [pc, #268]\t@ aa7c <Leggi_path_var@plt+0x838>\n    a96c:\tebfffce4 \tbl\t9d04 <sprintf@plt>\n    a970:\te24b3e46 \tsub\tr3, fp, #1120\t@ 0x460\n    a974:\te243300c \tsub\tr3, r3, #12\n    a978:\te2433008 \tsub\tr3, r3, #8\n    a97c:\te1a00003 \tmov\tr0, r3\n    a980:\te59f1108 \tldr\tr1, [pc, #264]\t@ aa90 <Leggi_path_var@plt+0x84c>\n    a984:\tebfffd86 \tbl\t9fa4 <fopen@plt>\n",
+      "label": "new-local-pattern-list-path-caller",
+      "sha256": "7aad37912118a5e062ae37b73d83dbbd94489bcc83295e6fa26183a7bc3e1a5e",
+      "start_VA": "0xa8f0"
+    },
+    {
+      "bytes_hex": "a8b80200b0b80200ccb80200d4b80200e4b80200d8b50200ecb80200f4b80200",
+      "end_exclusive_VA": "0xaa94",
+      "file_offset": "0x2a74",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/application/home/bticino/bin/bt_taskmanager:     file format elf32-littlearm\n\n\nDisassembly of section .text:\n\n0000aa74 <.text+0x824>:\n    aa74:\t0002b8a8 \tandeq\tfp, r2, r8, lsr #17\n    aa78:\t0002b8b0 \t\t\t@ <UNDEFINED> instruction: 0x0002b8b0\n    aa7c:\t0002b8cc \tandeq\tfp, r2, ip, asr #17\n    aa80:\t0002b8d4 \tldrdeq\tfp, [r2], -r4\n    aa84:\t0002b8e4 \tandeq\tfp, r2, r4, ror #17\n    aa88:\t0002b5d8 \tldrdeq\tfp, [r2], -r8\n    aa8c:\t0002b8ec \tandeq\tfp, r2, ip, ror #17\n    aa90:\t0002b8f4 \tstrdeq\tfp, [r2], -r4\n",
+      "label": "exact-safe-argument-pools",
+      "sha256": "ba245035a92137c15827135b2c758d73d93bb88108ec23d09d069931f4dc802a",
+      "start_VA": "0xaa74"
+    },
+    {
+      "bytes_hex": "00c68fe22cca8ce214f9bce5",
+      "end_exclusive_VA": "0x9d10",
+      "file_offset": "0x1d04",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/application/home/bticino/bin/bt_taskmanager:     file format elf32-littlearm\n\n\nDisassembly of section .plt:\n\n00009d04 <sprintf@plt>:\n    9d04:\te28fc600 \tadd\tip, pc, #0, 12\n    9d08:\te28cca2c \tadd\tip, ip, #44, 20\t@ 0x2c000\n    9d0c:\te5bcf914 \tldr\tpc, [ip, #2324]!\t@ 0x914\n",
+      "label": "sprintf-PLT",
+      "sha256": "7d881449bf07f47f9d692aa3ddd0c546f8d14ff68308018c445dc4840f0113c7",
+      "start_VA": "0x9d04"
+    },
+    {
+      "bytes_hex": "00c68fe22cca8ce254f8bce5",
+      "end_exclusive_VA": "0x9e30",
+      "file_offset": "0x1e24",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/application/home/bticino/bin/bt_taskmanager:     file format elf32-littlearm\n\n\nDisassembly of section .plt:\n\n00009e24 <system@plt>:\n    9e24:\te28fc600 \tadd\tip, pc, #0, 12\n    9e28:\te28cca2c \tadd\tip, ip, #44, 20\t@ 0x2c000\n    9e2c:\te5bcf854 \tldr\tpc, [ip, #2132]!\t@ 0x854\n",
+      "label": "system-PLT",
+      "sha256": "e4baa2b81c5a0e0902564b8ab46983d6541ff8d85530d51b70c632dbd696bedf",
+      "start_VA": "0x9e24"
+    },
+    {
+      "bytes_hex": "00c68fe22cca8ce254f7bce5",
+      "end_exclusive_VA": "0x9fb0",
+      "file_offset": "0x1fa4",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/application/home/bticino/bin/bt_taskmanager:     file format elf32-littlearm\n\n\nDisassembly of section .plt:\n\n00009fa4 <fopen@plt>:\n    9fa4:\te28fc600 \tadd\tip, pc, #0, 12\n    9fa8:\te28cca2c \tadd\tip, ip, #44, 20\t@ 0x2c000\n    9fac:\te5bcf754 \tldr\tpc, [ip, #1876]!\t@ 0x754\n",
+      "label": "fopen-PLT",
+      "sha256": "dbfd7c4f9184357f9d884a2635dddd975f35bc79cba163e1e8d651adadaf304f",
+      "start_VA": "0x9fa4"
+    }
+  ],
+  "word_guards": [
+    {
+      "VA": "0xa8f0",
+      "word": "0xe1a0c00d"
+    },
+    {
+      "VA": "0xa8f4",
+      "word": "0xe92dd800"
+    },
+    {
+      "VA": "0xa8f8",
+      "word": "0xe24cb004"
+    },
+    {
+      "VA": "0xa8fc",
+      "word": "0xe24dde47"
+    },
+    {
+      "VA": "0xa900",
+      "word": "0xe24dd004"
+    },
+    {
+      "VA": "0xa904",
+      "word": "0xe24b2e46"
+    },
+    {
+      "VA": "0xa908",
+      "word": "0xe242200c"
+    },
+    {
+      "VA": "0xa90c",
+      "word": "0xe2422008"
+    },
+    {
+      "VA": "0xa910",
+      "word": "0xe59f315c"
+    },
+    {
+      "VA": "0xa914",
+      "word": "0xe58d3000"
+    },
+    {
+      "VA": "0xa918",
+      "word": "0xe59f3158"
+    },
+    {
+      "VA": "0xa91c",
+      "word": "0xe58d3004"
+    },
+    {
+      "VA": "0xa920",
+      "word": "0xe59f3154"
+    },
+    {
+      "VA": "0xa924",
+      "word": "0xe58d3008"
+    },
+    {
+      "VA": "0xa928",
+      "word": "0xe1a00002"
+    },
+    {
+      "VA": "0xa92c",
+      "word": "0xe59f114c"
+    },
+    {
+      "VA": "0xa930",
+      "word": "0xe59f214c"
+    },
+    {
+      "VA": "0xa934",
+      "word": "0xe59f314c"
+    },
+    {
+      "VA": "0xa938",
+      "word": "0xebfffcf1"
+    },
+    {
+      "VA": "0xa93c",
+      "word": "0xe24b3e46"
+    },
+    {
+      "VA": "0xa940",
+      "word": "0xe243300c"
+    },
+    {
+      "VA": "0xa944",
+      "word": "0xe2433008"
+    },
+    {
+      "VA": "0xa948",
+      "word": "0xe1a00003"
+    },
+    {
+      "VA": "0xa94c",
+      "word": "0xebfffd34"
+    },
+    {
+      "VA": "0xa950",
+      "word": "0xe24b3e46"
+    },
+    {
+      "VA": "0xa954",
+      "word": "0xe243300c"
+    },
+    {
+      "VA": "0xa958",
+      "word": "0xe2433008"
+    },
+    {
+      "VA": "0xa95c",
+      "word": "0xe1a00003"
+    },
+    {
+      "VA": "0xa960",
+      "word": "0xe59f1124"
+    },
+    {
+      "VA": "0xa964",
+      "word": "0xe59f210c"
+    },
+    {
+      "VA": "0xa968",
+      "word": "0xe59f310c"
+    },
+    {
+      "VA": "0xa96c",
+      "word": "0xebfffce4"
+    },
+    {
+      "VA": "0xa970",
+      "word": "0xe24b3e46"
+    },
+    {
+      "VA": "0xa974",
+      "word": "0xe243300c"
+    },
+    {
+      "VA": "0xa978",
+      "word": "0xe2433008"
+    },
+    {
+      "VA": "0xa97c",
+      "word": "0xe1a00003"
+    },
+    {
+      "VA": "0xa980",
+      "word": "0xe59f1108"
+    },
+    {
+      "VA": "0xa984",
+      "word": "0xebfffd86"
+    }
+  ]
+}

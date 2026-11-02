@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "manufacturer_default_inputs_checked": 4,
+  "parent_pre_generation_exact_files": 3,
+  "XML_leaf_values_exported": false,
+  "archive_members_decrypted": 0,
+  "vendor_execution": 0,
+  "scope": "Independent host admission and exact snapshot verification; no commissioned project or generated export"
+}

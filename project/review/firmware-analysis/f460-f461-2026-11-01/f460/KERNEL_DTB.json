@@ -1,0 +1,124 @@
+{
+  "ARM64_Image_magic_bytes": "41524d64",
+  "ARM64_Image_magic_offset": "0x38",
+  "banner": "Linux version 5.10.35+g59ec3f0ef418+p0 (oe-user@oe-host) (aarch64-poky-linux-gcc (GCC) 11.5.0, GNU ld (GNU Binutils) 2.38.20220708) #1 SMP PREEMPT Tue Apr 5 23:00:00 UTC 2011",
+  "banner_date_scope": "Literal build banner; not independently corroborated chronology or hardware state.",
+  "dtbs": [
+    {
+      "FDT_total_size_verified": true,
+      "identity": {
+        "bytes": 39164,
+        "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/chess_dig2_car0.dtb",
+        "sha256": "ba3074579a434c3150c8af2185e270955666d98b0cf8038d72fea0d99897b848"
+      },
+      "root_whitelist": {
+        "compatible": [
+          "fsl,imx8mm-chess",
+          "fsl,imx8mm"
+        ],
+        "model": [
+          "Bticino Chess Board DIG-2 CAR-0"
+        ]
+      }
+    },
+    {
+      "FDT_total_size_verified": true,
+      "identity": {
+        "bytes": 39164,
+        "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/chess_dig2_car1.dtb",
+        "sha256": "50f363f083e586a7dc80b7106f1fb432b87e4348d6c00cd77cc7224801931923"
+      },
+      "root_whitelist": {
+        "compatible": [
+          "fsl,imx8mm-chess",
+          "fsl,imx8mm"
+        ],
+        "model": [
+          "Bticino Chess Board DIG-2 CAR-1"
+        ]
+      }
+    },
+    {
+      "FDT_total_size_verified": true,
+      "identity": {
+        "bytes": 39164,
+        "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/chess_dig2_car2.dtb",
+        "sha256": "1359a9f571bd1abaf220cf4e61f88ecebdb513b5cc1d677378ab6125b095e62c"
+      },
+      "root_whitelist": {
+        "compatible": [
+          "fsl,imx8mm-chess",
+          "fsl,imx8mm"
+        ],
+        "model": [
+          "Bticino Chess Board DIG-2 CAR-2"
+        ]
+      }
+    },
+    {
+      "FDT_total_size_verified": true,
+      "identity": {
+        "bytes": 39164,
+        "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/chess_dig2_car3.dtb",
+        "sha256": "b119d8de7e0e3e7da12ea0932c23caf4f9b033f965f7ab27b66fc74883a46bac"
+      },
+      "root_whitelist": {
+        "compatible": [
+          "fsl,imx8mm-chess",
+          "fsl,imx8mm"
+        ],
+        "model": [
+          "Bticino Chess Board DIG-2 CAR-3"
+        ]
+      }
+    },
+    {
+      "FDT_total_size_verified": true,
+      "identity": {
+        "bytes": 39247,
+        "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/chess_dig2_car4.dtb",
+        "sha256": "1ca50d33072f493c3da01b79b8dd33e589dd7a289c324e00af8755f17630ce4b"
+      },
+      "root_whitelist": {
+        "compatible": [
+          "fsl,imx8mm-chess",
+          "fsl,imx8mm"
+        ],
+        "model": [
+          "Bticino Chess Board DIG-2 CAR-4"
+        ]
+      }
+    },
+    {
+      "FDT_total_size_verified": true,
+      "identity": {
+        "bytes": 46174,
+        "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/chess_mfg.dtb",
+        "sha256": "5ad562855b03cbd68cededd2af9e70a8e646ef6e633c9e82a136fa5b921b1a89"
+      },
+      "root_whitelist": {
+        "compatible": [
+          "fsl,imx8mm-hello",
+          "fsl,imx8mm"
+        ],
+        "model": [
+          "Bticino Hello Board MFG"
+        ]
+      }
+    }
+  ],
+  "kernel": {
+    "bytes": 14434312,
+    "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/Image",
+    "sha256": "58f870d27c4df42e5287be1a5b762a4fddbe85aa3489605bfcfa2d65237624fc"
+  },
+  "other_bundle_members": [
+    {
+      "bytes": 22648,
+      "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/hygw_cortex-m.bin",
+      "sha256": "40119bf92d0d959e074b5201f782c1e4aa33b1df1de670175cdfa0bde7986163"
+    }
+  ],
+  "packaged_MD5_matches": true,
+  "scope": "Static image headers, whitelisted root DTB model/compatible and identities; no boot/electrical mapping or Cortex-M execution."
+}

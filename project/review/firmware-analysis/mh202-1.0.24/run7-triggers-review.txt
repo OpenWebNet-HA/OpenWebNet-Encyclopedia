@@ -1,0 +1,37 @@
+# MH202 run7 independent comparator source/isolation review
+
+**PASS for the bounded13-call ordinary comparator corpus and its stated isolation/scope. No correction requested.** The replay genuinely executes selected original MH202 ARM leaf instructions under explicit host primitives; it is not whole firmware/process/parser execution. This review replayed that corpus once independently and does not add the repeated visits to the canonical saved corpus count.
+
+## Independent replay and tool immutability
+
+Read the report/harness and prior immutable run3 trigger report, inspected the complete original comparator disassembly0xc6dc..0xc8e0, then ran `python3 -B triggers/run7/emulate_comparator.py --check`. Replay reproduced the two saved deterministic outputs plus manifest: **13 helper calls,1485 original instruction visits,75 primitive callbacks,1560 code-hook visits**, all expected returns and normal sentinel exits, no recorded guard violation. Saved per-case totals and current output hashes independently agree.
+
+I compared the old standalone tool tree before/after replay by relative file paths, sizes, modification timestamps and SHA256 for all63 current regular files. These were unchanged; no file or bytecode output was added. The harness verifies all41 hash-bearing Unicorn wheel RECORD entries before importing it, and pins the RECORD/package identities. Only the standalone analysis engine is imported: no F454 firmware, object, input fixture or firmware harness is used. Earlier search-path/package-unavailability observations are properly refined rather than reinterpreted as a universal absence claim.
+
+## Source and guard checks
+
+The original selected range matches the MH202 taskmanager identity/source span pinned in provenance, including offset0x46dc and SHA2564044fe1a3de303d2897afa24045780b77e5d476fe25eeca455c61e15d8e176e0. Its displayed external BL targets are the same two explicitly intercepted PLT sites: strlen0x9b5c and atoi0x994c. Their host bodies are not counted as original instruction visits. Original branch/call-site/comparison/return instructions remain in the executed range; the private return sentinel itself is not executed or counted.
+
+Every fixture creates a separate emulator/memory image. Only the selected original function is populated as original executable code; page remainder/PLT/sentinel maps contain no further original implementation and unknown code PCs are rejected. Code permissions become read/execute; strings and stack are read/write. Valid PC hook range is exactly0xc6dc≤PC<0xc8e0, with only the two named primitive PCs excepted. There is no target syscall implementation or host forwarding. Interrupts stop/reject; invalid memory rejects without mapping fallback. Normal completion requires sentinel0xf000. Caps100000/1000000microseconds are explicit. Each primitive string read caps at4096bytes, and ordinary integer fixtures are checked against signed32-bit bounds.
+
+Host strlen/atoi provide declared synthetic contracts; the regex-based integer primitive is not packaged libc malformed/overflow behavior. The fixture set stays within its stated ordinary ASCII/nonoverflow domain. No actual dynamic loader, target OS, filesystem/device/socket service, script process or network route is initialized.
+
+## Results and unchanged semantic boundaries
+
+Original results agree with the prior selected run3 observations: literal equality/mismatch, list membership, inclusive range ends, negation, selected single-element bracket rejection, leading-zero numeric consumption, and either-cursor-exhaustion result0. The AB/ABC cases are now original leaf results under declared primitives, not host transcriptions alone. They remain helper strings, not accepted raw frames/configured scripts, physical false triggers, complete matching grammar or a bypass verdict.
+
+The full original normalizer0xcb38, special comparator0xc8e0, raw parser, stored trigger/latch dispatcher and deployed scenario state remain unexecuted. Earlier six checkpoints' execution0 remains historically accurate; this new corpus does not retroactively turn their static outcomes into runtime tests. The source return0/1 is not a physical acknowledgement/action result. Tool/emulator semantics, supplied memory/ABI and host primitives remain explicit limits; no full-device or physical-support claim is justified.
+
+## Exact final reviewed pins
+
+Paths relative to `triggers/run7/`:
+
+| Artifact | SHA256 |
+|---|---|
+| REPORT.md | `9f66c9ef4ec240da0acab34e5e8d5a38c9f02357e36bee6e7ea754ddc6d3a861` |
+| emulate_comparator.py | `2752ac36e164809049fea1958854e04eee7fc61350e5ac215864f91ab76764b4` |
+| execution-results.json | `de4322a1b1563cd424642cf5fb34dd806c0cedf8e34ae8607cabc8d96e9a4a1a` |
+| isolation-and-provenance.json | `ffa62765146c39c22f661c2ec19af5f6d3baeb9edc3bc54862ba1cd38585f16b` |
+| output-manifest.json | `12b243ea7cf64df674072ebff93631ccfdd23a365bc10faa5ebdf13a77c2e659` |
+
+Only `reviews/run7/triggers-review.md` was written. Author artifacts, old reports/tools, original images and repository files were not changed.

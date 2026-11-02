@@ -1,0 +1,46 @@
+# Independent static review — MH202 functional/run5
+
+**PASS within the declared CHKTIME source/helper/model scope; no required correction.** I independently read the report, collector and all three saved original spans, reproduced the read-only collector, and checked original bytes, result branches and host models. No original ARM/PHP/JavaScript, loader, vendor/library/libc helper, emulator, real time/localtime call, clock, script, network, service or device operation ran. Only this review file was written; author artifacts, old dossiers, images, synced sources and repository documents remained unchanged.
+
+## Reproduction and original checks
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/functional/run5/collect_evidence.py --check
+```
+
+Result:12 deterministic outputs plus manifest,3 original ranges,28 author instruction-word assertions,2 verified original files,5 safe literal references and6 finite host comparison cases. Original execution/hooks remain0. Independently verified all12 producer-manifest hashes and all3 original range hashes through a separate ELF load-segment mapping. Independently checked14 selected original instruction words and6 branch destinations, plus the6 comparison examples and the declared conditional extraction result. This validates the reviewed source/model, not an original parser or C-library run.
+
+Original firmware-image sources:
+
+- `/home/bticino/bin/bt_script`, SHA256 `f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4`.
+- `/home/bticino/lib/libdomotica.so.0.0`, SHA256 `5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09`.
+
+## Findings checked and retained limits
+
+- **Actual prefix and arguments:** Original `0x9da8` supplies prefix length8 for `=CHKTIME`; mismatch branches out at`0x9db4`. The selected path clears10 bytes in the first buffer, finds `(` and requests the suffix copy, copies10 bytes and tokenizes on comma, then requests quote-suffix/token copies on the global line. Both overlapping-copy boundaries remain explicit. The first strtok return is unused and the buffer itself is passed as r0. Helper call`0x9e50` supplies first buffer and changed line as the two arguments. No null/length/complete-statement validity is inferred from these call sites.
+- **Returned number reaches storage:** Branch`0x9e54` targets`0xa480`, whose original word stores r0 into selected numeric record+4. The selected caller does not convert the helper result into a Boolean. Variable indexing, outer statement grammar and actual configured inputs remain unproved; the prefix is not a complete DSL specification.
+- **Candidate provider and exact selector:** The matching imported/defined CHKTIME symbol identifies candidate library VA`0x1d60`, with runtime binding still qualified. Original PIC/literal evidence identifies exact `SYSTIME`. Non-equal selector reaches`0x2010`, sets−1 at`0x203c` and returns through the common tail. It is a selected parameter-error return, not a parser/network verdict.
+- **Clock/target field dataflow:** Original calls time/localtime, then reads current words+8/+4 under the declared ordinary32-bit libc tm-hour/minute assumption. Target bytes8/9 are formatted with exact `%c%c\n` and passed to atoi; minutes use bytes11/12 only after equal hours. Comparisons at`0x1e50/0x1ed0` place current field against parsed target; signed less goes to return2, remaining inequality to1, equality to0. All error/normal return stores converge on`0x2044..0x2050`. The six saved cases agree with equal/later/earlier/non-SYSTIME semantics.
+- **Scope of omissions:** The complete selected helper body does not read seconds/date fields, inspect the first8 target bytes, require a colon, check target length/ranges or implement an overnight interval. That is a statement about this helper body only; other parser/generator/validation behavior remains separate. Successful time/localtime and readable targets are model prerequisites; no failure, DST/timezone or clock-change behavior was executed.
+- **Hypothetical extraction:** The model candidate supplies `SYSTIME` and `0000000012:34` only under its explicit forward-suffix/token model. It is not packaged-libc behavior for overlapping strcpy, a proved complete valid statement, an executed script or an actual configured scenario. The8 leading zero bytes are dummy positional data and acquire no calendar/date-format meaning. The report correctly leaves missing extra/4 assets, full copy/DSL semantics and effective provider/global content unresolved.
+
+CHKTIME remains a three-way numeric comparison, separate from SLEEP duration units, IIF's control transformations and complete scenario-level Only-if behavior. No physical scheduler/trigger/action conclusion is promoted from the stored number.
+
+## Exact reviewed artifact pins
+
+Paths are relative to `functional/run5/`.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `70ed2298f89a0611e0b6e56a851a9e62904a81e28b1391e499df11d875609a00` |
+| `collect_evidence.py` | `0efc8ef6250645810f84279c199dcf80e0a2c1ca793bb4014fc3c71d0a63584e` |
+| `output-manifest.json` | `73c1386560a084b65c8f357598d5efa01eb577e35649843e8712ca96df3d8781` |
+| `input-hashes.json` | `3c82a0c9794a90969b5336b667ef3dfc7685ffa0a2f9a35fdc3848303960c17f` |
+| `original-spans.json` | `a16e8b11c5153e522224996e7b3227dd5addc190d346ac8b0c3b1baf18b7ccfa` |
+| `critical-words.json` | `8ae0c6fa4b5ba834e903e50a34640f77d73b04d18e89ed88c765fde2adacda93` |
+| `safe-literals.json` | `9e77567460452667733afae4408fc26979961247b18d9938f034f8c0c26d38d2` |
+| `conditional-extraction-model.json` | `15d6b41338af527c11e164f895e5c188c1fba1dc1b38857645faed2f5a29c00f` |
+| `host-local-models.json` | `d8b9df3853479bd77e9b9600a55ed20a025aab62dec6ce523713c48f84d7b25a` |
+| `selected-symbols.json` | `a7946894cdd498e9c1a8612fb53ede53caa0f03988cf1572a84298f82ff4a806` |
+
+The producer manifest pins remaining generated evidence and excludes report/review to avoid cycles. This review applies to the exact bytes and bounded scope above, not a complete interpreter, runtime-clock or firmware/hardware audit.

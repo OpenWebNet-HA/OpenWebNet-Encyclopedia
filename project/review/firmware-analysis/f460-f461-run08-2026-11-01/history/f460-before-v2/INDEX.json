@@ -1,0 +1,22 @@
+{
+  "saved_UTC": "2026-11-01T13:39:35.657066+00:00",
+  "scope": "Exact parent snapshots after author reported Python parse failure BEFOREbody/outputgeneration and BEFORE requested newv2 correction; no target/original execution",
+  "files": [
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/REPORT.md",
+      "snapshot": "REPORT.md",
+      "bytes": 7729,
+      "sha256": "cee75d144a076d862b771d91133dca0fb1e892fc3170d29ded555bb58a5afecf"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/collect_update_v1.py",
+      "snapshot": "collect_update_v1.py",
+      "bytes": 8886,
+      "sha256": "f7185cd42fea9765bbc889e9053432917922452bf1f52db9bf13a4f74eaaff02"
+    }
+  ],
+  "directory_at_snapshot": [
+    "REPORT.md",
+    "collect_update_v1.py"
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "source": "work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/REPORT.md",
+    "snapshot": "work/f460-f461-comparison/2026-11-01-run13/integration/f461-before-report-v2/REPORT.md",
+    "bytes": 7433,
+    "sha256": "f24311c51db4c9290b8586ce4841a69cbc016defa69bf628f9ba00c3fc5e1ce2"
+  },
+  {
+    "source": "work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/collect_gap_v1.py",
+    "snapshot": "work/f460-f461-comparison/2026-11-01-run13/integration/f461-before-report-v2/collect_gap_v1.py",
+    "bytes": 7842,
+    "sha256": "0a539491391faf33ab259a13208de92773471a7a73671d5359a6bafc4bc25eb4"
+  },
+  {
+    "source": "work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/OUTPUT_MANIFEST.json",
+    "snapshot": "work/f460-f461-comparison/2026-11-01-run13/integration/f461-before-report-v2/OUTPUT_MANIFEST.json",
+    "bytes": 1711,
+    "sha256": "fca1061545d61ec217bc0d29def671a76128bee2aa6dc984f7e6ba7b865fa666"
+  }
+]

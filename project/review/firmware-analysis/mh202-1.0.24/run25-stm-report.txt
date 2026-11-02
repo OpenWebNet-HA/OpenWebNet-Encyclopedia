@@ -1,0 +1,96 @@
+# MH202 run25 — WHO25 own STM query, field and timeout ownership
+
+## Result and scope
+
+The original WHO25 state-machine plugin has its **own24-byte private context**, distinct from lighting, automation, thermo and multimedia layouts. A supplied coherent parsed kind2 query whose WHERE **first character is3** appends the same request Q to its field-output argument, saves Q.ID60 at private8, sets private state4=1 and requests a timer source with argument1000. The source does not require exact WHERE text3 at this local branch.
+
+The field callback's saved-ID comparison is conditional, **not a universal admission gate**. In state1, matching ID/status1 sets state2 before forwarding/rearming. Matching ID/status2 resets and requests local NACK without that same-field append. An ID mismatch still reaches forwarding/rearming with state1 unchanged; state2 forwards/rearms without that ID comparison. A later timeout in state1 requests NACK, in state2 ACK, invokes the supplied publication callback and resets. These local states/status values/helper requests are not a captured causal exchange or physical acknowledgement.
+
+Original ARM/vendor/parser execution, native helper entries, primitive callbacks, hooks, target OS/device/network operations and physical observations added here are all **0**. This is fresh ImageVFS/binutils source evidence and nine finite source-effect ledgers. No transport, connection, session, authentication or framing internals are inspected. No oracle verification, public physical WHO25 meaning, accepted raw grammar, elapsed timer guarantee or copied module-private layout is used.
+
+## Reproduction and provenance
+
+Run `python3 -B work/mh202-firmware/research/2026-10-30/who25/run25-stm/collect_stm_v1.py --check`. The collector uses PT_LOAD VA mapping and exact hashes/words, fresh symbol/relocation metadata, callback arithmetic and finite host ledgers. Check mode writes nothing. Generation refuses existing destinations and immediately snapshots report, collector and first outputs/manifest to **initial-generated-v1/** with an exact index. No postgeneration correction or old-source edit is permitted; any parent-requested revision requires exact preservation and a separately versioned candidate.
+
+| Verified original normal-image file | SHA256 |
+|---|---|
+| `/home/bticino/libcoso/libplug_trasv_cmd_stm.so` (10600bytes) | `8e656523b5bb4c22196203c7e801e631a3481b529982baa1a9f4a9ca13febe2d` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+| `/home/bticino/bin/coso` | `6865c2d1d441d25effa31275080ded70ad3538a8a49288e3002ffb196b066175` |
+
+Input hashes also pin the accessor and immutable functional/run7/coso/run18 reports for already established common outer-dispatch context. The new WHO25 plugin is read directly; no F454/plugin-name transfer supplies its layout or behavior. All earlier reports and original files remain read-only.
+
+## 1. Actual descriptor, registration and24-byte owner
+
+Original registration **0x1a0c..0x1a4c** requests numeric descriptor word32=3, appends **criterion25** to descriptor+52 and calls register_state_machine. Plugin PIC base independently reconstructs to0xa2f0, GOT slot0xa390 names **descriptor0xa3b4**, and exact ABS32 relocations identify:
+
+| Descriptor offset/relocation | Original callback |
+|---|---|
+|+36 /0xa3d8|initializer0x18cc|
+|+40 /0xa3dc|field0x15a4|
+|+44 /0xa3e0|application0x17b4|
+
+These are actual function-pointer roles, not labels inferred from exported names. Same-build core **register_state_machine0x2074..0x2120** prepends the descriptor to manager+24, stores manager at descriptor+60 and, when initializer+36 is nonNULL, calls it with r0=descriptor/r1=manager+44. Binding, normal registration, active list/order and installed manager are premises.
+
+The plugin initializer **0x18cc..0x190c** requests **g_malloc0(24)**, stores its result at descriptor+56 and fills these fields, then calls its own reset:
+
+| Private offset | Actual source/use |
+|---|---|
+|0|descriptor pointer|
+|4|local state, reset0; query1; matched status1→2|
+|8|saved envelope ID60, reset0xffffffff|
+|12|returned source pointer, initialized0/reset-cleared|
+|16|supplied initialization tuple word0, used by source_attach|
+|20|tuple word4, invoked by timeout publication|
+
+This initializer allocates its own object; it is not an imported automation/multimedia layout. Successful allocation and normal callback/container/ABI contracts are explicit. No reused private pointer, installed live context or complete initialization lifetime is observed.
+
+Fresh main source **0xa5b4..0xa600** and its GOT relocation identify manager+48 as **sm_receive0xb564**, with context at manager+44. Under the same installed-manager and normal initialization premises, private16/20 therefore receive that context and candidate sm_receive callback. The callback body **0xb564..0xb614** requests send_msgs2open for a supplied first-list pointer and send_msgs2field for a second, with the supplied manager argument. Those are publication/delegate boundaries only; serialization, output draining, delivery and physical recipients are not investigated here.
+
+## 2. Outer criteria and input assumptions
+
+The actual original application dispatcher **appl_receive0xb614..0xb6d0** iterates manager+24 STM descriptors and their+52 criteria. At0xb6a8..0xb6cc it compares a numeric criterion to envelope+48 and calls descriptor+44 with descriptor, same envelope, address of local field list and address of local OPEN list. Thus a supplied routing criterion25 plus an actually registered matching WHO25 descriptor gives a concrete candidate caller for0x17b4.
+
+The independently inspected field foreach callback **0xade8..0xae84** likewise compares descriptor+52 items to envelope+48, then calls **descriptor+40** at0xae80 with descriptor, same field envelope, local field-list slot and local OPEN-list slot. Its stripped nearest exported label is not treated as the callback identity. Registration/list order, other callback effects, coherent parser/record fields, allocation/ownership and effective providers remain premises; neither dispatcher proves natural raw admission or uniqueness of the matching entry.
+
+The selected application query supplies a coherent pointer object at Q+0, parsed kind44=2, WHERE text3, envelope representation56=3, routing48=25 and ID60=41. The application callback directly dereferences Q+0; it has **no representation/parser validation wrapper in this displayed body**. Coherent parsed storage is supplied by the caller, not manufactured in original memory or accepted from a raw frame.
+
+## 3. Query path and separate kind1 command guard
+
+Application **0x17b4..0x18cc** writes Q metadata+4/+8=1 **before** its kind/address branches. Kind2 at0x17ec/0x17f0 takes **0x180c..0x1864**. Its local guard reads WHERE+16 and compares only byte0 with ASCII3; there is no terminator check in this slice. The finite case uses text3, while whole address grammar/domain remains outside the proof.
+
+On that selected branch,0x181c..0x1830 requests appending **the same Q pointer** to output argument2, copies Q.ID60→private8 and stores state4=1. It requests `g_timeout_source_new(1000)`, stores its returned pointer at12, loads the timeout pointer via GOT0xa38c and installs **trasv_gest_status_from_timeout0x173c**, with this private object as userdata/null destroy notifier. It requests attachment using private16, then returns local0. Attach/creation/helper returns are not converted into an observed successful schedule.
+
+The ledger starts with initialized state0/sourceNULL. The displayed query branch has no busy-state admission check or selected prior-source destruction before writing the new source pointer. Natural dispatcher serialization, repeated-query policy, nonnormal helper outcomes, timer replacement/cancellation/concurrency and resource ownership remain open; no leak or fault outcome is inferred.
+
+Kind1 is separate. At **0x1868..0x1894**, decimal WHAT is converted by a delegate; unsigned32(WHAT−11)<=21 must hold and the corresponding bit must be set in original literal **0x0033fc1f at0x18c8**. Exact local integer bit reconstruction yields **11..15,21..28,31,32**. This comes from source arithmetic, not public operation-family labels or an oracle. The permitted selected branch appends the same Q, requests local ACK and resets; other displayed kinds/guard failures request NACK and reset. It is not a complete public WHO25 support/rejection table or valid raw grammar statement, and no physical meaning is assigned to that integer set.
+
+## 4. Field callback and ID correlation limits
+
+Field entry **0x15a4..0x173c** accepts representation3 directly. Its separate representation2 route requests imported parsing, frees old text and replaces the record pointer/representation; the displayed continuation does not use the parser return as a successful-admission proof. Only supplied coherent direct representation3 is used in the finite cases.
+
+With private state0, the original stores **F metadata+8=3** and appends the same F to output argument3, returning0 without the selected ID/timer/constructor requests. With state1, **0x166c..0x1678** compares private8 to F.ID60. Matching IDs inspect envelope status52 at0x1700:
+
+- status1 stores state2, then goes to the common forward/rearm path;
+- status2 requests own reset, then queue_nack_to_open(output argument3), returning0 without that same-F append;
+- another displayed status takes the common forward/rearm path with state1 retained.
+
+An ID mismatch also takes that common path with state1 retained. **State2 enters the common path without this saved-ID comparison.** The finite counterexamples therefore prevent a universal claim that every forwarded field must match the saved ID or that any status2 always generates local NACK. These are source branches, not a defect or cross-device outcome claim; outer eligibility/state lifetime is unproved.
+
+Common **0x167c..0x16fc** stores F metadata+8=3 and appends **the same F** to output argument3. If F's parsed kind44 is not2, it additionally requests **new_openmsg_from_openmsg(selector4,Fparsed)** and appends the returned pointer. This constructor selector4 is not silently equated with parsed kind4, envelope state/status or a receipt. The finite common-path cases supply parsed kind4; actual constructor allocation/copy/return/provider/lifetime remain delegates rather than executed output evidence.
+
+The common path requests destruction of nonNULL existing source12, requests a new source with argument1000, stores it at12, installs timeout173c with private userdata and attaches using16. It returns0. This rearm occurs even on the selected ID-mismatch path. No measured reset interval, actual callback scheduling, output publication or physical acknowledgement is shown.
+
+## 5. Timeout and reset order
+
+Timeout **0x173c..0x17b4** starts two local list heads at0. State1 requests queue_nack_to_open on the first; state2 requests queue_ack_to_open on the first. It then invokes **private20** with r0=&local OPEN list, r1=&local field list and r2=descriptor+60. The second list remains initially0 in the displayed callback. Under the conditional initialization join above the target is sm_receive; actual invocation/consumption is not executed here. Other displayed states skip receipt/publication and go directly to reset. The timeout returns0 after normal delegate/reset completion.
+
+Own complete reset **0x1574..0x15a4** writes savedID8=0xffffffff and state4=0. If source12 is NULL it returns; otherwise it requests **g_source_destroy(source12)** and writes12=0. There is no g_source_unref request in this bounded reset body; the rearm code likewise requests destroy rather than establishing full refcount policy. This is not a process-wide lifetime or leak conclusion. During timeout, publication is requested **before** reset/source destruction; during matching status2, reset is requested **before** local NACK queueing.
+
+## Finite cases and confidence
+
+Nine host-only ledgers contain one idle selected query, five **independent** field inputs and three independent timeout states. Field cases cover state1/matchingID/status1, state1/mismatchingID/status2, state1/matchingID/status2, state2/mismatchingID/status2, and initialized idle state0. Timeout cases are states0/1/2. They are supplied source-effect comparisons, not a consecutive captured exchange, original code execution or actual timer/GLib/container test.
+
+**Confirmed static:** fresh descriptor/criterion/callback identities, own24-byte owner, reset stores, query prefix guard/same-Q ID/timer requests, conditional field ID/status branches, same-F/additional-constructor requests, timeout receipt/publication/reset order and selected outer callback arguments. **Host-only:** nine finite ledgers and exact kind1 mask arithmetic. **Conditional:** coherent parsed/context inputs, active installed manager/registry/provider, ordinary allocation/list/helper ABI/completion, same private userdata and callback lifetime/noninterference. **Unknown:** raw admission/full WHAT/WHERE grammar, natural request/feedback correlation, repeated-query/complete cancellation/refcount policy, real interval/elapsed schedule, output ownership/delivery and physical behavior.
+
+The highest next source question is a justified non-transport upstream parsed-record/translator→this query/feedback caller join with exact envelope metadata and eligibility, followed by ownership across any returned constructor pointer. It should not infer physical ScenarioPlus/CEN/contact/ZigBee semantics, global support or an oracle result from the local mask alone.

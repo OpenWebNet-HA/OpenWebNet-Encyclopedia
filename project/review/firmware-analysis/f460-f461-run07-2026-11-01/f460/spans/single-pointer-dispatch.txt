@@ -1,0 +1,24 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000f8edc <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x8132c>:
+   f8edc:	cb1302c0 	sub	x0, x22, x19
+   f8ee0:	9343fc00 	asr	x0, x0, #3
+   f8ee4:	f100081f 	cmp	x0, #0x2
+   f8ee8:	54000d80 	b.eq	f9098 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x814e8>  // b.none
+   f8eec:	f1000c1f 	cmp	x0, #0x3
+   f8ef0:	54000c60 	b.eq	f907c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x814cc>  // b.none
+   f8ef4:	f100041f 	cmp	x0, #0x1
+   f8ef8:	54000de0 	b.eq	f90b4 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x81504>  // b.none
+   f8efc:	f94006a3 	ldr	x3, [x21, #8]
+   f8f00:	910063f3 	add	x19, sp, #0x18
+   f8f04:	f9402c62 	ldr	x2, [x3, #88]
+   f8f08:	f90007f3 	str	x19, [sp, #8]
+   f8f0c:	910023f4 	add	x20, sp, #0x8
+   f8f10:	f9402861 	ldr	x1, [x3, #80]
+   f8f14:	aa1403e0 	mov	x0, x20
+   f8f18:	8b020022 	add	x2, x1, x2
+   f8f1c:	97fff80d 	bl	f6f50 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x7f3a0>

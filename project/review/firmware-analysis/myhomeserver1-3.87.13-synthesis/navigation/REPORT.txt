@@ -1,0 +1,19 @@
+# Frozen navigation and saved-verification catalogue
+
+This packet indexes seventeen completed MyHOMEServer1 3.87.13 research roots, from the first2026-10-31 pass through2026-11-01 double-isolation. It selects one bounded topic per root and preserves exact report lines, excerpts, reported VAs, identities, saved reviews/checks and relevant corrected-version history. Seventeen is a navigation count, not coverage or an assertion that every firmware behavior was audited.
+
+The collector reads saved documents and result data. It does not run old source collectors, import original/provider libraries, open original images or databases, execute SQL, replay the guest corpus, contact a device, or inspect closed transport/authentication/session/framing branches. Semantic claims remain those of the linked reports and their independent source reviews. Several indexed packets were authored by this cataloguer; this navigation check is not an independent re-review of that source work.
+
+The historical catalogue-reader gap is kept atN02 and its later class139/SQL-owner closure isN03. Local trigger/action eight-byte control pairs remain distinct from four-byte condition pointers. The scoped condition-storage refinement, report.v2 versions, failed pre-output draft histories and wording refinements remain separately pinned; current versions do not erase earlier evidence. This index does not retest prior history failures or silently change old execution scopes.
+
+## Verification performed
+
+The17 primary report needles each resolve to exactly one actual line. All listed inputs receive sizes and SHA256 identities. All228 members of the exact prior protected index b6133496c1f9ab0989c832bcdb741727457acc9585e4ec91c37ae5f5ecab2867 match its saved size/hash. Saved reviews and validation records are pinned as saved records, not rerun or treated as a fresh whole-repository certification.
+
+The saved canonical double corpus has8 entries,340 original code-hook visits,0 C primitives,12 redirects,8 EXIT,0 guard stops and360 total hooks. Four data-relocation writes and24 FP setup writes are kept separate. Per-attempt sums, eight individual result files, ten exact first-result snapshot members and four same-object finite constructor/readback pairs are checked without guest replay. Saved BEFORE/AFTER records agree across63 tool path/size/mtime/hash entries; this is verification of those saved observations, not a new import or current live tool scan. Original visits are code-hook visits, not measured retired instructions.
+
+## Reproduction and preservation
+
+Run `python3 -B build_navigation_v1.py --check` here for read-only byte reproduction and saved-input verification. Ordinary generation refuses any existing output/first-candidate directory. First copies contain the exact collector and all generated files; their index is fully computed before its exclusive creation. Inputs and reports are otherwise left untouched. This packet adds zero firmware/original/vendor executions, zero guest replays and zero semantic fixtures.
+
+The human navigation isCATALOGUE.md; machine references/excerpts areCATALOGUE.json;INPUTS.json lists exact input bytes;SAVED_CORPUS.json separates saved accounting from current execution;PROTECTED_CHECK.json records the bounded228-member check;VERSION_NAVIGATION.json retains selected authoritative versions. Further firmware questions remain in each saved ranked-questions document; this index does not close them by row count or hash equality.

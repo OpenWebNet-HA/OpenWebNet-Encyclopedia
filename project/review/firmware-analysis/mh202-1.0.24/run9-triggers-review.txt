@@ -1,0 +1,43 @@
+# MH202 run9 independent normalizer source/isolation review
+
+**PASS for the selected original-body/supplied-parser-field corpus and actual output-byte handoff. No correction requested.** I inspected the complete original normalizer span and harness, reproduced `python3 -B triggers/run9/emulate_normalizer.py --check`, and independently checked counts, outputs/mutations, literal references and source identity. This verification replay is not another canonical corpus and does not execute the original parser.
+
+## Source identity and isolation
+
+Verified normal MH202 taskmanager SHA256ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e. Separate ELF segment arithmetic confirms normalizer0xcb38..0xce14, file offset0x4b38 and code SHA256d259b2c38e00351ecac0e46c149d2fe80714f7f37ab405289532273ad5d91e61. This includes its original literal pool. Independently read all four retained pool pointers/string bytes and matched their provenance text. Comparator source identity remains4044fe1a3de303d2897afa24045780b77e5d476fe25eeca455c61e15d8e176e0 at0xc6dc..0xc8e0, used only on these newly returned normalizer strings.
+
+The harness maps populated original code RX, selected original literal strings RO, and input/stack/private heap RW without execute. Normalizer PC ranges0xcb38..0xcdbc and0xcdd4..0xcdfc exclude exception cleanup0xcdbc..0xcdd4 and literal-pool execution; the ordinary comparator has its own exact allowed range. Unknown code PCs, interrupts and invalid memory reject with no automatic fault mapping. Per-call100000-instruction and1000000microsecond limits and normal sentinel0xf000 are explicit; nonreturn fails. No target OS, loader, filesystem/service/process/socket/bus/device implementation or host forwarding exists.
+
+Primitive PC sites are named and correspond to actual original call targets. Object constructor/destructor no-ops, CreateMsgOpen recording, supplied Extract/IsMeasureFrame fields, bounded strlen/strchr/atoi, finite safe sprintf and private strdup remain **host primitives**. CreateMsgOpen checks/records actual original text length but performs no parsing; field extraction is fixture-dependent, including after reparse. No original C++ object state, libc formatting/tokenization or native parser acceptance is thereby established. Heap/string/format caps remain explicit and fixtures stay in their declared ordinary domain.
+
+The41 hash-bearing Unicorn RECORD entries are verified before read-only import. All63 old standalone tool-tree regular files were independently compared before/after replay by path,size,mtime andSHA256: unchanged. Only the analysis engine is reused, not F454 firmware/layout/fixture/harness. The saved development note accurately describes a pre-output host offset-helper fix; no guard weakening or failed original result is promoted.
+
+## Actual selected mutation and handoff checks
+
+- WHO2/nonbracket fixture returns a duplicate of unchanged input under the supplied WHO field.
+- WHO1/measure/DIM1/value100 fixtures reach original guarded formatter selection. Supplied empty versus1/interface2 level fields produce the reported final OFF-form strings. These fixture fields are not inferred from actual parser execution or physical dimming semantics.
+- The bracket fixtures execute original0xccec NUL store at the first opening bracket, leaving input buffer exactly `*1*`. Original `%s1%s` argument preparation produces the recorded bracket-free CreateMsgOpen input. I checked each recorded actual reparse string and final pattern; for these two fixtures they coincide. The supplied reparse fields, not an executed parser, determine later WHERE/level/interface extraction. This is not a universal bracket preservation rule.
+- Each of the four transformed actual returned strings is copied byte-for-byte into the original comparator fixture. Identical event returns0 and the selected WHAT-digit9 variation returns1. This exercises literal outputs/handoff, not the earlier bracket matrix, outer matcher or configured event pipeline.
+
+The original input strings and returned bytes are specific fixtures, not complete valid script or network inputs. Raw parser, special comparator, trigger latch/dispatcher, configured extra/4 assets, natural event arrival and physical action remain unexecuted.
+
+## Accounting
+
+Independent replay reproduces **5 normalizer calls/383 original visits/74 primitive callbacks**, followed by **8 comparator calls/1132 visits/68 callbacks**. Per-case sums give **13 helper calls/1515 original instruction visits/142 primitives/1657 code-hook visits**; both current deterministic output hashes match their manifest. All calls return normally with no recorded guard violation. Counts are dynamic visits, not unique instruction totals, and primitive bodies are excluded from original visits.
+
+Adding prior two corpora produces the report's correct canonical totals:42calls/4280original visits/217primitives/4497hooks. Verification replays do not accumulate. Target firmware processes/OS and original parser calls remain0. Other static run9 author areas do not inherit original-body execution from this corpus.
+
+## Exact final reviewed pins
+
+Paths relative to `triggers/run9/`:
+
+| Artifact | SHA256 |
+|---|---|
+| REPORT.md | `958775cd08e3bc150ab4d58811714e5ede949a27e6480e3c667970caa90e79a4` |
+| emulate_normalizer.py | `abd3cb11b85d3b4df65dece5e21e750a8c9c8b13aa34c684350a4130c78f9f5f` |
+| execution-results.json | `5aaaffe9e23e906048df2f14c1420d2dc778e9d6a64ad21872f2fd670e1f1a99` |
+| isolation-and-provenance.json | `12acc55be62b8e5f07854fafbf70c0dad91f8545e72aa087cb71e9728c2fe5c4` |
+| output-manifest.json | `762e39affa59b767646d052fc56533adb79c091ff0b512bf650132296257563f` |
+| DEVELOPMENT_NOTES.md | `44df49b6b7e7ecc08bcfcfc7c4df08a8044a92add0953ae7511d88f41470305e` |
+
+Only `reviews/run9/triggers-review.md` was written. No author, original image/tool, historical dossier or repository artifact changed.

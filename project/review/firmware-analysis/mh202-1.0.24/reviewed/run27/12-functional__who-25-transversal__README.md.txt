@@ -1,0 +1,59 @@
+# `WHO 25` - Transversal Functions
+
+`WHO 25` contains multiple transversal OpenWebNet functions whose grammars are selected by their `WHAT` family. The namespace includes CEN+ virtual-command events and dry-contact/IR state reporting. Sharing `WHO 25` does not make these functions one address or parameter model.
+
+The [ZigBee Interface](../../protocol/zigbee-interface.md) also exposes a distinct binding family under `WHO 25`. Resolve the interface variant before applying the SCS virtual-Object and button rules below; the ZigBee binding lifecycle is documented separately in [ZigBee Binding](zigbee-binding.md).
+
+## Reference
+
+| Function | Reference | Established vocabulary |
+| --- | --- | --- |
+| CEN+ | [CEN+](cen-plus.md) | `WHAT 21..28`; pushbutton `0..31`; virtual Object `0..2047` |
+| Dry contact / IR | [Dry Contact and IR](dry-contact-ir.md) | `WHAT 31..32`; state/event parameter `0`/`1` |
+| ZigBee binding | [ZigBee Binding](zigbee-binding.md) | `WHAT 33..37`; ZigBee product-and-Unit `WHERE` |
+
+## Historical ScenarioPlus controls
+
+The BTicino touchscreen `ScenarioPlusDevice` emits a separate `WHAT 11..15` family under `WHO 25`:
+
+| Operation | Implemented frame |
+| --- | --- |
+| ON | `*25*11#0*WHERE##` |
+| OFF | `*25*12*WHERE##` |
+| Increase | `*25*13#0#5*WHERE##` |
+| Decrease | `*25*14#0#5*WHERE##` |
+| Stop | `*25*15*WHERE##` |
+
+These are executable implementation forms at `TS10_1_0_23`, separate from CEN+ `21..28`. Earlier source used increment/decrement suffix `#1`; the 2010 correction uses `#5`. The meaning and accepted range of this step parameter, and the complete ScenarioPlus address domain, are not independently established. Do not apply the CEN+ virtual-Object range automatically. See [Transversal evidence](../../project/review/myopencommunity-integration.md#transversal-functions).
+
+An earlier touchscreen controller sends increase/decrease on press, repeats the command using a one-second timer, and sends stop when release cancels the active timer. This is application behavior, separate from CEN+ `22..24` held-button events. The `ScenarioPlusDevice` API supplies command writers without a dedicated state decoder; sending ON/OFF does not establish an observed scenario state. See [Controller and feedback evidence](../../project/review/myopencommunity-cen-history-review.md#scenarioplus-writers-and-controller).
+
+The [2026-10-22 physical MH200 capture](../../evidence/cap-mh200-who25-boundary-20261022/manifest.json) records NACK on firmware 2.1.0 for literal ScenarioPlus-family probes `*25*11#0*11##` after 25.392 ms, `*25*11#121*10##` after 23.398 ms, and `*25*12*131##` after 34.942 ms. These are responses to those bytes in the recorded setup; the test does not establish the complete valid ScenarioPlus address/parameter domain or a namespace-wide WHO 25 rejection rule. It does not establish incoming ScenarioPlus event handling or physical bus forwarding.
+
+## Function selection
+
+A parser should resolve the OpenWebNet interface variant, `WHO 25`, and then the `WHAT` family before decoding the remaining fields. CEN+ interprets the `WHAT` parameter as a virtual pushbutton and uses a `2`-prefixed virtual Object `WHERE`. Dry-contact/IR operations instead use the parameter to distinguish requested state from event/action context and use Device-family-specific `WHERE` ranges. ZigBee binding uses the radio product-and-Unit `WHERE` grammar with family suffix `#9`.
+
+## CEN+ relationship
+
+CEN+ complements Basic/Evolved CEN under [`WHO 15`](../who-15-cen/). In CEN+, the interaction phase moves into `WHAT 21..24`, the pushbutton becomes a `WHAT` parameter, and the source is represented by a virtual Object. Rotary-selector operations `25..28` extend that model further.
+
+## Dry-contact and IR relationship
+
+The dry-contact/IR family uses `WHAT 31` for ON/detection and `WHAT 32` for OFF/no detection. It remains under the canonical `WHO 25` namespace even though its address grammar is unrelated to CEN+ virtual Objects.
+
+The [functional overview](../) provides alternate navigation by function while these pages remain organized under their canonical protocol namespace.
+
+## Gateway boundaries
+
+For gateway compatibility, see [CEN+ gateway compatibility](cen-plus.md#gateway-compatibility-and-hardware-boundaries) and [Dry-contact and IR gateway compatibility](dry-contact-ir.md#gateway-compatibility-and-hardware-boundaries). These references distinguish published function support from scoped firmware observations.
+
+## MH202 implementation evidence
+
+The exact MH2021.0.24 package has separately reviewed translator and24-byte state-machine paths for WHO25. Selected static constructions include WHAT12/WHERE112 and a query using WHERE312, with internal body and output-metadata contracts. These examples do not establish a complete accepted grammar or the physical meaning of an exchange.
+
+The state machine saves a query ID and requests a timer, but its field ID comparison selects local state behavior rather than universally rejecting unmatched records. Software receipt/publication requests and source rearming remain distinct from physical acknowledgement and measured timing. Its local numeric command mask is not a replacement for the variant-specific tables above.
+
+See the [build-specific continuation](../../reverse-engineering/firmware-analysis/mh202-1.0.24-functional-translation.md#who25-selected-translation-and-its-own-state-machine) and [source review capsule](../../project/review/firmware-analysis/mh202-1.0.24/). Those translator/state reports are static/finite-host evidence; no new firmware runtime, oracle or physical test is reported. Published functions, historical inspected harness results and captured Device observations keep their existing scopes.
+
+A later [original query-helper case](../../reverse-engineering/firmware-analysis/mh202-1.0.24-functional-translation.md#original-who25-query-object-enters-its-own-stm) manually hands one original parser/core-produced object to the original initializer/application code in isolated private memory. Timer APIs remain models and no real gateway transaction or elapsed timer is observed. This distinct local execution does not promote the earlier independent translation examples into physical or parser-wide proof.

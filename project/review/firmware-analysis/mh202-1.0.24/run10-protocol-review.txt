@@ -1,0 +1,38 @@
+# Independent review — MH202 protocol/run10
+
+**PASS after one containment-wording clarification; no code or result correction required.** Reviewed current report, both scripts, original evidence/relocations, saved native results/ledger and manifest. Reviewer reran only the host static collector, not the emulator/native experiment. This is an independent original-source and saved-result audit, not a second native reproduction. Parent’s independent replay and other project corpora are separate. Reviewer original execution/live I/O:0.
+
+## Verified evidence and saved accounting
+
+`collect_evidence.py --check` strictly reproduced16 outputs from8 input identities:11 original spans,7 exact words,5 selected function relocation rows and ledger for2 native calls. Independently mapped original normal-image libopen PT_LOAD bytes through ImageVFS and checked every span hash/word. Independently recounted both saved original-PC arrays and primitive/redirect arrays, checked each recorded original VA is aligned/file-backed and inside one of the six allowed original ranges, and verified final field/value assertions against supplied direct C arguments. All21 current manifest entries match.
+
+Original `/home/bticino/lib/libopen.so.0.0` SHA256 `868eeb717020232c11623224df17bd6b2034fffc2fb80043c39c34b76310fb04`.
+
+Saved new-area accounting agrees exactly: **2 top-level calls,7480 original instruction visits+838 C primitive callbacks+10 original-function PLT redirect callbacks+2 private EXIT callbacks=8330 code-hook steps**. Cases have3725/3755 original visits,419 primitive callbacks each,5 redirects each and1 EXIT each. The source and report correctly exclude intercepted PLT instructions/EXIT from original instruction visits and keep linker redirects separate from C primitives. This recount cannot establish that the emulator ran as saved; the explicit native `--check` is the independent replay path, not executed by this reviewer.
+
+## Original path and harness checks
+
+Original builder0xb680 calls original-null PLT0x5614 and tailbranches IsCorrect PLT0x5368 at0xb7e8. Original IsCorrect assigns kind4 and calls measurement-field helper PLT0x5b0c, then suffix helpers PLT0x529c/0x559c through the invalid-kind1 guards. Same-build definitions/relocation targets and actual caller words agree with the five explicit harness redirects. The redirect callback preserves LR and changes PC to the original definition; it does not replace the parser or field-assignment result.
+
+The harness begins with object bytes0xa5; it supplies only C-interface argument strings/pointer array/count, not prepared parsed fields/kind/raw state. Original Null, builder, IsCorrect and the three assignment/suffix bodies are allowed original instruction ranges. Private argument memory becomes read-only; original image pages become read/execute; object and stack are the only writable guest regions. Unknown PC, interrupts/protected/unmapped access and caps abort. No loader/init/C++ maps/registry/decoder or OS/device/transport process is executed. Only nine named ordinary C primitive PLT callbacks and the five original-body redirects are admitted on these selected paths. The sprintf model accepts the selected literal WHERE0 with no percent conversion; this is not a general format implementation.
+
+Saved original-written readback matches WHO1001/WHERE0/DIM1/kind4, values0/0/0/0 or2629/1/2/3, count4, raw texts, fullDove0 and zero interface/WHO-address metadata. This is materially stronger than prior prepared-object suffix-only checks under the explicit model. The raw synthetic context is lineage, not the top-level input to this experiment. Neither r0 observation0 nor kind4 is promoted to a formal Boolean, physical acceptance, hardware identity or whole raw exchange.
+
+## Clarification requested and accepted
+
+The draft report’s general “Strings are bounded to4096bytes” sentence exceeded the actual tokenizer implementation. `cstring` has an explicit4096-byte cap, but strtok’s token scanner uses per-byte readable-region checks rather than the same numeric scan cap. The author narrowed the report to that distinction and refreshed the manifest. No fixture/code/output changed and no native rerun was required for this prose correction. The selected short strings and finite private-memory range remain the relevant demonstrated containment. Current report is pinned below.
+
+The review does not certify all malformed inputs, suffix grammar, allocator/global-token concurrency, effective live binding, upstream C++ WHO/WHERE conversion, descriptors/collector/publication, or physical/model semantics. It also does not rerun earlier corpora. Final claims remain confined to these2 selected direct C-interface cases under ordinary primitive/provider/private-memory contracts.
+
+## Exact reviewed hashes
+
+- `protocol/run10/REPORT.md` SHA256 `dd782d0ccd5329a88862eafc1983fe28a8be56a6a037481482d162fe54589367`.
+- `protocol/run10/collect_evidence.py` SHA256 `3003f9e192c57b20e16a4ab59115df99ba747fc050d5b837c262fa72d8e191e3`.
+- `protocol/run10/emulate_normal_builder.py` SHA256 `7a41b303760a2e1a5addf70f6abd99bde746f514f3a50e9145dc442babceb209`.
+- `protocol/run10/builder-results.json` SHA256 `622e35eb432f026d16f548a367c8bfbcfcae850562cc068ee29183f2840a3057`.
+- `protocol/run10/execution-ledger.json` SHA256 `b18b64fb65bdac74c896eac96da7cf6a6f3c37b60c29f520433d558d6cfdf60a`.
+- `protocol/run10/output-manifest.json` SHA256 `5d767ef069acd0bf3c8460ee98e8acfdb5dfca87fb5b1de7023185788b1e80de`.
+- `protocol/run10/original-spans.json` SHA256 `66bb7e9ae9b431e82c3f651666ce9b02b99389a5a4cfe913b56689fe2501606b`.
+- `protocol/run10/critical-words.json` SHA256 `9fb3b165790310e7081b1cf159dd0a9aa451692e66c7896c1bbca65dd5a4adb3`.
+- `protocol/run10/selected-original-function-relocations.txt` SHA256 `de5fd8f1579d49b88ac16b52c6ef5071e1b7f7711465bffc6e0481fc9bdc0fa8`.
+- `protocol/run10/verified-tool-package.json` SHA256 `9f9bae4d6be11b8849669aeca2375469304e78ab5697abb89e47d3d73f6ca36a`.

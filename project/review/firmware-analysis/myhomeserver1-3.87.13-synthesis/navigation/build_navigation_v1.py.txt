@@ -1,0 +1,252 @@
+#!/usr/bin/env python3
+"""Frozen saved-document navigation; no firmware execution or source imports."""
+import sys
+sys.dont_write_bytecode = True
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import re
+import stat
+
+HERE = Path(__file__).resolve().parent
+ROOT = next(p for p in HERE.parents if (p/'work/myhomeserver1-firmware/3.87.13/research').is_dir())
+BASE = ROOT/'work/myhomeserver1-firmware/3.87.13/research'
+PROTECTED_SHA = 'b6133496c1f9ab0989c832bcdb741727457acc9585e4ec91c37ae5f5ecab2867'
+# Each row is a scoped navigation reference, not an independent new semantic finding.
+SPEC = [
+('2026-10-31','boot/REPORT.md','Packaged boot and daemon requests','The available launch helper at0x116ac',[],
+ 'Normal/recovery declarations and selected launch guards; no boot, child success or readiness is demonstrated.'),
+('2026-10-31-consumers','catalogue/REPORT.v2.md','Catalogue path and reader, before SQL-owner closure','At `0xd3948`',[],
+ 'Opening requests and handle guards only. This historical packet leaves the reader SQL unnamed; the next checkpoint closes that question without substituting the separate two-column query.'),
+('2026-10-31-factories','catalogue/REPORT.md','Fifteen-column SQL owner','The earlier selected reader now', ['N02'],
+ 'The selected factory binds key139 and names result columns13/14; actual SQL execution, configured context and eligibility remain conditional.'),
+('2026-10-31-actions','common/REPORT.md','Shared action execute, wait and stop contracts','At `0xcd848`',[],
+ 'Operational8/12 differ from metadata84/88; units depend on ordinary successful API/provider semantics. Delay does not automatically run a second phase.'),
+('2026-10-31-triggers','service/REPORT.md','TIME service and condition conjunction','The previously identified condition worker0xa6d18',[],
+ 'Selected live-entry/deadline/weekday and all-condition source contracts; no queue-wide catch-up, DST, actual time or callback delivery guarantee.'),
+('2026-10-31-startup','startup/REPORT.md','Entry, main and same service/container loader handoff','ELF `e_entry` is Thumb pointer', ['N05'],
+ 'Literal constructor flag1 and same-object startup argument identity under normal returns; settings-loader zero logs then continues, not a false prerequisite exit.'),
+('2026-10-31-cancellation','action-lifecycle/REPORT.md','Explicit operational duration producer','At0xcf156', ['N04'],
+ 'Selected derived constructor explicitly links metadata88 to operational12 and conditionally installs the second callable. Local flags and shared stop are separate namespaces.'),
+('2026-10-31-lifetime','worker-ownership/REPORT.v2.md','Raw worker receivers and holder teardown','The shared execute path requests', ['N04','N07'],
+ 'Raw receiver state and selected teardown/provider source only. Successful detach clears its holder word, not completion; no whole lifetime, concurrency or defect proof.'),
+('2026-11-01-serialization','vector-ownership/REPORT.v2.md','Positive retained action-vector owner','Initializer `0xa72c0` saves', ['N08'],
+ 'Selected eight-byte pointer/control pair transfer and growth source. Retained owner is not a complete worker lifetime or safe/unsafe interleaving proof.'),
+('2026-11-01-event-trigger','admission/REPORT.v2.md','Separate BNIL local admission handler','A bounded halfword-position',[],
+ 'Selected enabled/status/operator and ID-matched local caller only. Scene104 vector publication is not external service registration; copied controls are released before the later raw receiver use.'),
+('2026-11-01-event-routing','record/REPORT.md','Local ID/state record and cache pair','The outgoing pair at SP+296', ['N10'],
+ 'Light type0 string+8 and alternate Load type10 string+20 remain distinct; local JSON/member and map joins do not establish reception, accepted wire input or physical behavior.'),
+('2026-11-01-condition-query','query/REPORT.md','Cache fast return versus selected miss wait','The BNLD predicate\'s query', ['N11'],
+ 'Nonnull pair returns before selector/type checks. Selector0 miss reaches opaque delegates and conditional response-string wait; no universal freshness/readiness/timing contract.'),
+('2026-11-01-owner-removal','removal/REPORT.md','Numeric scene owner removal','2.0xb6bb8 supplies', [],
+ 'Selected matched pair is zeroed before control release and keyed erase; valid registry/control/provider premises remain. Reset investigation leaves a positive shared runtime reset open.'),
+('2026-11-01-removal-context','scene-condition/REPORT.md','Removal context and distinct BNCUSCENE condition','The actual worker source `0xa6d30', ['N13'],
+ 'Incoming removal context and numeric scene_id are separate from event params.id. Conditions use four-byte primary pointers, not the eight-byte trigger/action control pairs; scoped old terminology refinement is retained.'),
+('2026-11-01-condition-ownership','distinct-condition/REPORT.md','BNTH selected nonconstant comparison','At `0x103d46`', ['N14'],
+ 'Own selector/operator dispatch reaches one configured-double equality predicate and primary slot+8 consumer. Suitable cached type, freshness, providers, units and natural configuration remain unproved.'),
+('2026-11-01-bnth-values','record/REPORT.v2.md','Typed record+32 producer and consumer correspondence','At **`0x53c7c`**', ['N15'],
+ 'Fresh ItemStatusThermostat allocation+16/type3, converted or default-zero double, same registry and selected update. Static provider/serializer joins do not execute JSON or create a physical-value contract.'),
+('2026-11-01-double-isolation','harness/REPORT.RESULTS.md','Saved bounded original double-constructor/readback corpus','Totals: **8 top-level entries', ['N16'],
+ 'One saved canonical finite corpus, not a replay here: same constructed private object readback, explicit self-binding/canary/FP setup; no full JSON, scheduler, target OS, destructor or physical execution.')
+]
+
+
+def sha(b): return hashlib.sha256(b).hexdigest()
+def encode(x): return (json.dumps(x, sort_keys=True, indent=2, ensure_ascii=False)+'\n').encode()
+def rel(p): return p.relative_to(ROOT).as_posix()
+
+def build():
+    inputs = {}
+    def read(p):
+        p = p if isinstance(p,Path) else ROOT/p
+        assert p.resolve().is_relative_to(ROOT), str(p)
+        assert stat.S_ISREG(p.lstat().st_mode) and not p.is_symlink(), str(p)
+        b=p.read_bytes()
+        v={'path':rel(p),'bytes':len(b),'sha256':sha(b)}
+        assert rel(p) not in inputs or inputs[rel(p)]==v, str(p)
+        inputs[rel(p)]=v
+        return b
+    def pin(p):
+        read(p); return inputs[rel(p)]
+    def load(p): return json.loads(read(p))
+    rows=[]
+    histories=[]
+    for number,(area,report_name,title,needle,prior,bounds) in enumerate(SPEC,1):
+        directory=BASE/area
+        report=directory/report_name
+        lines=read(report).decode().splitlines()
+        found=[(n,line) for n,line in enumerate(lines,1) if needle in line]
+        assert len(found)==1,(area,needle,found)
+        n,excerpt=found[0]
+        checkpoints=[]
+        for name in ['SYNTHESIS.md','COVERAGE.md','RANKED_REMAINING_QUESTIONS.md','RANKED_REMAINING_QUESTIONS.v2.md','EVIDENCE_INDEX.json','IDENTITY_VALIDATION.json','FINAL_CHECKS.json','SOURCE_CHECKS.json','STATIC_CHECKS.json']:
+            p=directory/name
+            if p.exists():checkpoints.append(pin(p))
+        assert len(checkpoints)>=7,area
+        reviews=[pin(p) for p in sorted((directory/'reviews').iterdir()) if p.is_file() and p.suffix in {'.md','.json'}]
+        assert reviews,area
+        related=[]
+        versions=[]
+        # Only direct packet documents/metadata. No original images, source ELF,
+        # vendor code, failure transcripts or provider libraries are read/imported.
+        for sub in sorted(p for p in directory.iterdir() if p.is_dir() and p.name not in {'integration','reviews','verification'}):
+            for p in sorted(sub.iterdir()):
+                if not p.is_file():continue
+                name=p.name
+                if (name.startswith('REPORT') and name.endswith('.md')) or (name.endswith('.json') and any(token in name.upper() for token in ['OUTPUT_MANIFEST','INPUTS','HISTORY','REFINEMENT'])):
+                    related.append(pin(p))
+                    if any(token in name.upper() for token in ['HISTORY','REFINEMENT']):versions.append(pin(p))
+            # Pin saved first-candidate indexes without relabelling a draft as final.
+            for d in sorted(p for p in sub.iterdir() if p.is_dir() and ('first' in p.name or 'candidate' in p.name)):
+                for p in sorted(d.glob('*INDEX*.json')):related.append(pin(p))
+        for p in sorted(directory.iterdir()):
+            if p.is_file() and ('REFINEMENT' in p.name or 'HISTORY' in p.name):
+                versions.append(pin(p));related.append(pin(p))
+        capsule_name='myhomeserver1-3.87.13'+('' if area=='2026-10-31' else '-'+area[11:])
+        capsule=ROOT/'OpenWebNet-Encyclopedia/project/review/firmware-analysis'/capsule_name/'README.md'
+        assert capsule.is_file(),capsule
+        row={'id':f'N{number:02d}','checkpoint':area,'title':title,
+             'epistemic_scope':'Navigation to inherited scoped reports; not a new semantic source audit or coverage claim',
+             'report':pin(report),'locator':{'line':n,'needle':needle,'exact_excerpt':excerpt,
+              'VAs_reported_in_excerpt':sorted(set(re.findall(r'0x[0-9a-fA-F]+',excerpt)))},
+             'bounds':bounds,'related_prior_rows':prior,'saved_checkpoint_documents':checkpoints,
+             'saved_review_documents':reviews,'related_packet_documents':related,
+             'history_and_refinements':versions,'capsule':pin(capsule)}
+        rows.append(row)
+        histories.append({'row':row['id'],'authoritative_selected_report':rel(report),'version_and_refinement_documents':versions,
+                          'historical_reports_remain_immutable':True})
+    assert len(rows)==17
+    for row in rows:
+        assert all(int(x[1:])<int(row['id'][1:]) for x in row['related_prior_rows'])
+    role=ROOT/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md'
+    role_pin=pin(role)
+    protected_path=BASE/'2026-11-01-double-isolation/EVIDENCE_INDEX.json'
+    index_bytes=read(protected_path)
+    assert sha(index_bytes)==PROTECTED_SHA
+    protected=json.loads(index_bytes)['files']
+    assert len(protected)==228 and len({x['path'] for x in protected})==228
+    for expected in protected:
+        b=read(ROOT/expected['path'])
+        assert len(b)==expected['bytes'] and sha(b)==expected['sha256'],expected['path']
+    protection={'index':pin(protected_path),'saved_index_member_count':228,
+                'all_saved_members_size_and_sha_equal':True,
+                'scope':'Current bytes of the frozen 228-member index only; count is not semantic coverage, a new source audit or a claim about all earlier dossiers.'}
+    d=BASE/'2026-11-01-double-isolation'
+    result_path=d/'harness/RESULTS.json'
+    results=load(result_path)
+    assert sha(read(result_path))=='450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525'
+    assert results['status']=='COMPLETE' and results['top_level_entries']==8
+    want={'original_code_visits':340,'linker_redirect_callbacks':12,'EXIT_callbacks':8,'guard_stop_callbacks':0,'code_hook_steps':360,'setup_data_relocations':4}
+    assert results['totals']==want and results['C_primitive_callbacks']==0 and results['setup_FP_register_writes']==24
+    attempts=results['attempts'];assert len(attempts)==8
+    for key,value in want.items():assert sum(x[key] for x in attempts)==value,(key,value)
+    assert all(x['original_code_visits']+x['linker_redirect_callbacks']+x['EXIT_callbacks']+x['guard_stop_callbacks']==x['code_hook_steps'] for x in attempts)
+    snap_path=d/'harness/first-results/INDEX.json';snap=load(snap_path)
+    assert len(snap)==10
+    for name,expected in snap.items():
+        actual=read(snap_path.parent/name)
+        assert len(actual)==expected['bytes'] and sha(actual)==expected['sha256'],name
+        current=read(d/'harness'/name)
+        assert current==actual,name
+    paths=sorted((d/'harness/attempts').glob('*.json'));assert len(paths)==8
+    for path,attempt in zip(paths,attempts):assert load(path)==attempt,path
+    pairs=[]
+    for i in range(0,8,2):
+        ctor,getter=attempts[i:i+2]
+        assert ctor['phase']=='constructor' and getter['phase']=='asDouble'
+        assert ctor['input_hex']==getter['input_hex']
+        assert ctor['object_address']==getter['object_address']
+        assert ctor['object_after_hex']==getter['object_before_hex']==getter['object_after_hex']
+        assert getter['D0_after_hex']==getter['input_hex']
+        assert getter['same_constructed_object_no_reseed'] is True
+        pairs.append({'case':ctor['case'],'input_hex':ctor['input_hex'],'object_address':ctor['object_address'],
+                      'constructor_visits':ctor['original_code_visits'],'readback_visits':getter['original_code_visits'],
+                      'same_object_bytes_without_reseed':True,'readback_hex':getter['D0_after_hex']})
+    before=load(d/'verification/TOOL_TREE_BEFORE.json');after=load(d/'verification/TOOL_TREE_AFTER.json')
+    assert len(before['files'])==len(after['files'])==63 and before['files']==after['files']
+    assert after['all63paths_sizes_mtimes_hashes_equal_BEFORE'] and after['no_extra_or_missing_tool_files'] and after['disabled_pycache_prefix_absent']
+    # These are saved before/after observations, not a fresh inspection of tools.
+    corpus={'source_results':pin(result_path),'saved_first_results_index':pin(snap_path),
+      'top_level_entries':8,'C_primitive_callbacks':0,'totals':want,'FP_control_setup_writes':24,
+      'four_finite_bit_pattern_pairs':pairs,'saved_before':pin(d/'verification/TOOL_TREE_BEFORE.json'),
+      'saved_after':pin(d/'verification/TOOL_TREE_AFTER.json'),'saved_63_tool_entries_equal':True,
+      'first_result_members_byte_identical':10,
+      'current_task_guest_execution':0,'current_task_guest_replay':0,
+      'scope':'Saved canonical corpus and saved tool observations only. Hook visits are not retired-instruction measurements. Setup relocations/FP writes are not code callbacks. Historical static zero-execution reports retain their earlier scope.'}
+    for p in [d/'harness/REPORT.RESULTS.md',d/'harness/isolate_double_v3.py',d/'harness/SOURCE_PREFLIGHT.json',d/'harness/TOOL_PINS.json',d/'verification/AFTER_CHECK.md',d/'verification/REPORT.v2.md']:
+        pin(p) # Bytes only; the harness is never imported or executed.
+    catalogue={'title':'MyHOMEServer1 3.87.13: scoped saved-evidence navigation',
+      'scope':'17 completed local research roots from 2026-10-31 through double-isolation, excluding allowance-continuation and this synthesis batch.',
+      'method':'Hash/size checks, report line/VA navigation and saved result arithmetic; no fresh firmware semantics, source collectors, original imports, vendor/guest execution, SQL queries or full semantic re-audit.',
+      'navigation_rows':len(rows),'row_count_is_not_coverage':True,'product_role_context':role_pin,
+      'prior_protected_index':protection['index'],'rows':rows,
+      'historical_execution_rule':'Static reports remain historical static reports. The final row separately identifies the one saved 8-entry/340-original-visit double corpus; no experiment is rerun here.'}
+    md=['# MyHOMEServer1 3.87.13: scoped evidence navigation','',
+        'Seventeen navigation rows lead to frozen reports and their saved evidence, reviews and validation records. This is a document/hash verification index, not a fresh semantic audit, coverage percentage or new firmware experiment.', '',
+        '| Row | Scoped topic | Exact report location | Remaining boundary |','|---|---|---|---|']
+    for row in rows:
+        target=ROOT/row['report']['path'];label=row['id']
+        md.append(f"| {label} | {row['title']} | [{row['checkpoint']} / {Path(row['report']['path']).name}]({target}:{row['locator']['line']}) | {row['bounds']} |")
+    md.extend(['','The JSON catalogue carries exact report excerpts, reported VAs, byte sizes and SHA256 pins, source-review/checkpoint/capsule references, prior-row relations and version/refinement documents. Historical unknowns are not silently rewritten; later owner/record joins are separate rows.', '',
+               'Saved final corpus: **8 top-level entries; 340 original code-hook visits; 0 C primitives; 12 linker redirects; 8 EXIT; 0 guard stops; 360 hooks**. Four data relocations and24 FP setup writes are setup, not code callbacks. The four finite constructor/readback pairs use the same constructed object without reseeding. No guest replay occurs in this index.', '',
+               'The228-member prior protected index is byte/hash checked. Saved before/after tool records contain the same63 path/size/mtime/hash entries; this task does not re-import the analysis tools or relabel the saved observations as a new live inventory.', '',
+               'The OWN-DEV-0199 device definition supplies product-role context only. No F454 dedicated alarm-bus or MH202 scheduler implementation is transferred by analogy. Archive and catalogue source profiles remain separate dossiers.'])
+    report='''# Frozen navigation and saved-verification catalogue
+
+This packet indexes seventeen completed MyHOMEServer1 3.87.13 research roots, from the first2026-10-31 pass through2026-11-01 double-isolation. It selects one bounded topic per root and preserves exact report lines, excerpts, reported VAs, identities, saved reviews/checks and relevant corrected-version history. Seventeen is a navigation count, not coverage or an assertion that every firmware behavior was audited.
+
+The collector reads saved documents and result data. It does not run old source collectors, import original/provider libraries, open original images or databases, execute SQL, replay the guest corpus, contact a device, or inspect closed transport/authentication/session/framing branches. Semantic claims remain those of the linked reports and their independent source reviews. Several indexed packets were authored by this cataloguer; this navigation check is not an independent re-review of that source work.
+
+The historical catalogue-reader gap is kept atN02 and its later class139/SQL-owner closure isN03. Local trigger/action eight-byte control pairs remain distinct from four-byte condition pointers. The scoped condition-storage refinement, report.v2 versions, failed pre-output draft histories and wording refinements remain separately pinned; current versions do not erase earlier evidence. This index does not retest prior history failures or silently change old execution scopes.
+
+## Verification performed
+
+The17 primary report needles each resolve to exactly one actual line. All listed inputs receive sizes and SHA256 identities. All228 members of the exact prior protected index b6133496c1f9ab0989c832bcdb741727457acc9585e4ec91c37ae5f5ecab2867 match its saved size/hash. Saved reviews and validation records are pinned as saved records, not rerun or treated as a fresh whole-repository certification.
+
+The saved canonical double corpus has8 entries,340 original code-hook visits,0 C primitives,12 redirects,8 EXIT,0 guard stops and360 total hooks. Four data-relocation writes and24 FP setup writes are kept separate. Per-attempt sums, eight individual result files, ten exact first-result snapshot members and four same-object finite constructor/readback pairs are checked without guest replay. Saved BEFORE/AFTER records agree across63 tool path/size/mtime/hash entries; this is verification of those saved observations, not a new import or current live tool scan. Original visits are code-hook visits, not measured retired instructions.
+
+## Reproduction and preservation
+
+Run `python3 -B build_navigation_v1.py --check` here for read-only byte reproduction and saved-input verification. Ordinary generation refuses any existing output/first-candidate directory. First copies contain the exact collector and all generated files; their index is fully computed before its exclusive creation. Inputs and reports are otherwise left untouched. This packet adds zero firmware/original/vendor executions, zero guest replays and zero semantic fixtures.
+
+The human navigation isCATALOGUE.md; machine references/excerpts areCATALOGUE.json;INPUTS.json lists exact input bytes;SAVED_CORPUS.json separates saved accounting from current execution;PROTECTED_CHECK.json records the bounded228-member check;VERSION_NAVIGATION.json retains selected authoritative versions. Further firmware questions remain in each saved ranked-questions document; this index does not close them by row count or hash equality.
+'''
+    outputs={'CATALOGUE.json':encode(catalogue),'CATALOGUE.md':('\n'.join(md)+'\n').encode(),
+             'SAVED_CORPUS.json':encode(corpus),'PROTECTED_CHECK.json':encode(protection),
+             'VERSION_NAVIGATION.json':encode(histories),'REPORT.md':report.encode()}
+    outputs['INPUTS.json']=encode({'method':'Exact saved-document bytes read by this collector; no original firmware imports/execution. Paths are workspace-relative.',
+                                  'count':len(inputs),'files':[inputs[k] for k in sorted(inputs)]})
+    manifest={'generator':{'path':rel(Path(__file__)),'bytes':len(Path(__file__).read_bytes()),'sha256':sha(Path(__file__).read_bytes())},
+              'outputs':[{'path':name,'bytes':len(data),'sha256':sha(data)} for name,data in sorted(outputs.items())],
+              'scope':'Manifest excludes itself to avoid a circular identity; first-candidate index separately pins this manifest and the generator.'}
+    outputs['OUTPUT_MANIFEST.json']=encode(manifest)
+    return outputs,len(inputs)
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--check',action='store_true');args=parser.parse_args()
+    outputs,count=build()
+    first=HERE/'first-candidate-v1'
+    copies={**outputs,'build_navigation_v1.py':Path(__file__).read_bytes()}
+    index=encode({name:{'bytes':len(data),'sha256':sha(data)} for name,data in sorted(copies.items())})
+    if args.check:
+        for name,data in outputs.items():assert (HERE/name).read_bytes()==data,name
+        assert (first/'INDEX.json').read_bytes()==index,'snapshot index'
+        assert sorted(p.name for p in first.iterdir())==sorted([*copies,'INDEX.json'])
+        for name,data in copies.items():assert (first/name).read_bytes()==data,name
+    else:
+        assert not first.exists(),'refusing existing first-candidate directory'
+        assert all(not (HERE/name).exists() for name in outputs),'refusing existing generated output'
+        for name,data in outputs.items():
+            with (HERE/name).open('xb') as f:f.write(data)
+        first.mkdir()
+        for name,data in copies.items():
+            with (first/name).open('xb') as f:f.write(data)
+        with (first/'INDEX.json').open('xb') as f:f.write(index)
+    print(json.dumps({'mode':'check' if args.check else 'generate','outputs':len(outputs),'input_pins':count,
+                      'rows':17,'completed_checkpoints':17,'protected_members':228,'saved_entries':8,
+                      'saved_original_code_visits':340,'current_guest_execution':0,'current_guest_replay':0,
+                      'first_copies':len(copies)},sort_keys=True))
+
+if __name__=='__main__':main()

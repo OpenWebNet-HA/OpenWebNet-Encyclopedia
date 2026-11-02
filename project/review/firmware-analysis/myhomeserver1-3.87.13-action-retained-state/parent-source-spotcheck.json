@@ -1,0 +1,26 @@
+{
+  "scope": "Parent readonly verification of already-reviewed exact PICglobal equality/memory-only location and selectedstatus table row; no runtime content read or supplied",
+  "image_sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26",
+  "global_PIC": [
+    {
+      "pool": "0xd01ac",
+      "ADD_PC": "0xcf648",
+      "linked_global": "0x167808"
+    },
+    {
+      "pool": "0xd01b0",
+      "ADD_PC": "0xcf656",
+      "linked_global": "0x167808"
+    },
+    {
+      "pool": "0xce890",
+      "ADD_PC": "0xcdda8",
+      "linked_global": "0x167808"
+    }
+  ],
+  "memory_only_global": "0x167808",
+  "selected_table": "0x16216c",
+  "selected_row": 1,
+  "string": "on",
+  "new_execution_models_fixtures": 0
+}

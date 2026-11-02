@@ -1,0 +1,41 @@
+{
+  "cases": [
+    {
+      "constructor_flag": 1,
+      "path_source": "default literal",
+      "reaches_selected_constructor_after_normal_delegates": true,
+      "scope": "Finite branch decisions only; no args/config/parser/process/thread/scene objects executed.",
+      "synthetic_argc": 1,
+      "synthetic_settings_return": 0,
+      "zero_diagnostic_requested": true
+    },
+    {
+      "constructor_flag": 1,
+      "path_source": "default literal",
+      "reaches_selected_constructor_after_normal_delegates": true,
+      "scope": "Finite branch decisions only; no args/config/parser/process/thread/scene objects executed.",
+      "synthetic_argc": 1,
+      "synthetic_settings_return": 1,
+      "zero_diagnostic_requested": false
+    },
+    {
+      "constructor_flag": 1,
+      "path_source": "argv[1]",
+      "reaches_selected_constructor_after_normal_delegates": true,
+      "scope": "Finite branch decisions only; no args/config/parser/process/thread/scene objects executed.",
+      "synthetic_argc": 2,
+      "synthetic_settings_return": 0,
+      "zero_diagnostic_requested": true
+    },
+    {
+      "constructor_flag": 1,
+      "path_source": "argv[1]",
+      "reaches_selected_constructor_after_normal_delegates": true,
+      "scope": "Finite branch decisions only; no args/config/parser/process/thread/scene objects executed.",
+      "synthetic_argc": 2,
+      "synthetic_settings_return": 1,
+      "zero_diagnostic_requested": false
+    }
+  ],
+  "original_execution": 0
+}

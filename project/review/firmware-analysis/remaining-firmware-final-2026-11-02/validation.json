@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "phase": "CURRENT_DOCUMENTARY_AND_INPUT_IDENTITIES; actual automation closure and strict final checks recorded separately AFTER completion",
+  "scope": "Final selected navigation/integrity only, no new functional source coverage, full source/Device/runtime approval or old collector/native replay. Old reference hashes resolve ONLY to exact retained versions.",
+  "source_packets": [],
+  "gap_packets": [],
+  "final_boundary": {
+    "path": "work/remaining-firmware-investigation/2026-11-02-run10/SCOPE_BOUNDARY.json",
+    "bytes": 4084,
+    "sha256": "48066e9d03ba9d7f3bcc91d154005194cef072a8013323c813016d640dff3ff4"
+  },
+  "new_functional_source_coverage": 0,
+  "new_original_helper_SQLite_runtime_physical_execution": 0,
+  "source_outputs": 0,
+  "source_firstcopies": 0,
+  "reviews": {
+    "f453av-boundary-review": {
+      "path": "work/remaining-firmware-investigation/2026-11-02-run10/reviews/f453av-boundary-review.md",
+      "bytes": 4146,
+      "sha256": "48b86f0e5ae463c90848305cd3a16d84b821c63a8cef6f83d82406e8d43675f0"
+    },
+    "integration-review": {
+      "path": "work/remaining-firmware-investigation/2026-11-02-final/reviews/integration-review.md",
+      "bytes": 13488,
+      "sha256": "6475c57f4d305708c3030eae2b53542f44fe1077786630ef09728fa1fc873c9c"
+    }
+  },
+  "exact_selected_exports": 11,
+  "first_documentary_copies": 11,
+  "historical_reference_mappings": 3,
+  "frozen_navigation_checkpoints": 11,
+  "prior_index": {
+    "path": "work/remaining-firmware-investigation/2026-11-01-run09/EVIDENCE_INDEX.json",
+    "bytes": 22201,
+    "sha256": "da44b3ffe24b0dfc5c547c305450b0e041cd7bd0dbf096b88df74aa8d7efae26"
+  },
+  "prior_members_verified": 92,
+  "prior_capsule_members_verified": {
+    "remaining-firmware-2026-11-01": 104,
+    "remaining-firmware-run05-2026-11-01": 34,
+    "remaining-firmware-run06-2026-11-01": 35,
+    "remaining-firmware-run07-2026-11-01": 32,
+    "remaining-firmware-run08-2026-11-01": 29,
+    "remaining-firmware-run09-2026-11-01": 23
+  },
+  "unchanged_Device_pages_verified": 5,
+  "source_manifest_unchanged": true,
+  "archive_index": {
+    "path": "work/remaining-firmware-investigation/2026-11-02-final/R2_ARCHIVE_INDEX.json",
+    "bytes": 1119,
+    "sha256": "133c94eb95859e111df0c1b6c005636ce8ee13ce164e3576fae85e70256f0719"
+  },
+  "actual_prior_archive_receipt": {
+    "path": "work/remaining-firmware-investigation/2026-11-01-run01/archive/R2_RECEIPT.json",
+    "bytes": 235,
+    "sha256": "072092bb105685ab2aa0395cde439b431ac6a016037b501a06d2faf509b07793"
+  },
+  "new_R2_objects": 0,
+  "this_investigation_encrypted_support_objects": 1,
+  "this_investigation_plaintext_database_objects": 0,
+  "prior_MHS_ledger": {
+    "corpora": 1,
+    "top_level_entries": 8,
+    "original_code_hook_visits": 340,
+    "C_primitives": 0,
+    "definition_redirects": 12,
+    "EXIT": 8,
+    "guard_stops": 0,
+    "total_hooks": 360,
+    "data_relocation_setups": 4,
+    "FP_control_host_register_writes": 24,
+    "R0_SP_LR_host_register_writes": 24
+  },
+  "prior_F454_MH202_ledgers": "Separate unchanged, no CPUreplay",
+  "repository_integration": {
+    "page": {
+      "path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f450-f453av-f455-f459-mh200n.md",
+      "bytes": 22983,
+      "sha256": "76e855cf78cfb618b60a6ee0df68805cab653c00384cf33c914502d6fda063bb"
+    },
+    "handoff": {
+      "path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/remaining-firmware-database-handoff.md",
+      "bytes": 10657,
+      "sha256": "800dbf69ca31d7d6420ededc3630512cbfe35d287685f636b7db8cdffed9476a"
+    },
+    "firmware_index": {
+      "path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+      "bytes": 11635,
+      "sha256": "2a770e16c29599830e1257b890c6b20033e9154aaaec2c2973b3893dc22719dd"
+    },
+    "capsule": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/remaining-firmware-final-2026-11-02",
+    "prior_capsules_unchanged": true,
+    "Device_pages_unchanged": true,
+    "all_three_reference_edits_have_exact_old_inputs": true
+  },
+  "automation_closure": "PENDING_ACTUAL_DELETION_RESPONSE",
+  "final_strict_checks": "PENDING_ACTUAL_RESULTS",
+  "staged": false,
+  "committed": false,
+  "Git_published": false
+}

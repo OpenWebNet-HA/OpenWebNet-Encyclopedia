@@ -1,0 +1,10 @@
+# Bounded coverage
+
+| Area | New source edge | Open boundary |
+| --- | --- | --- |
+|Condition teardown|Actual scene1164Bwalker/nullleg→ownprimaryslot4; selectedBNCUSCENE member/CV/delete192 requests; separate vector storage/import identities|Successful provider/free, unique/current ownership, natural disposal and worker/polling order, all errors/unwind/concurrency|
+|Distinct BNTH|Own row/raw/compiled/schema copies and suitablecache double32→selected equality→actualconsumer|Complete serializer/subschema/vocabulary, record producer/type/freshness, miss pipeline, units/domain/floating exceptions/configured/runtime/physical effects|
+
+Original execution0 and semantic fixtures0, no full runtime/physical or complete source/Device approval, no coverage percentage. No old whole action-vector/holder cleanup, XOR predicate, worker/poll,22alias/747 or JSON tables rerun as native coverage. Missing extras80/81/94/95, dispatcher/main identity, positive shared reset and complete provider/lifetime remain open.
+
+Both canonical first generations and read-only checks pass without failures or overwrite. Immediate first candidates preserved. Prior condition-storage correction and all exact old versions remain immutable; prior unavailable MH202run18/run21 intermediate histories remain explicitly unverified. Original archives/images/sources/synced/completed dossiers read-only. Functional agent reviewer/read-only; local branch unstaged/uncommitted, no publishing/source-manifest changes/live contact.

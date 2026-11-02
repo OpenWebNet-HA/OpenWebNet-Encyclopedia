@@ -1,0 +1,219 @@
+{
+  "critical_words": [
+    {
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "va": "0x133c",
+      "word": "e3a01009"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "va": "0x1364",
+      "word": "e3a01009"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "va": "0x1344",
+      "word": "e5843020"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "va": "0x1380",
+      "word": "ebffff38"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "va": "0x18d4",
+      "word": "e3500001"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "va": "0x18d8",
+      "word": "03510002"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "va": "0x18ec",
+      "word": "e3500002"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "va": "0x18f0",
+      "word": "03510001"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "va": "0x1714",
+      "word": "e3530002"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "va": "0x1720",
+      "word": "e3530003"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "va": "0x173c",
+      "word": "e3510001"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "va": "0x1804",
+      "word": "e1833200"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "va": "0x1830",
+      "word": "e3a03009"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "va": "0x15a8",
+      "word": "e35300b0"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "va": "0x163c",
+      "word": "e59f00b4"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_automation_tr.so",
+      "va": "0x17cc",
+      "word": "e3a06002"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_automation_tr.so",
+      "va": "0x17d8",
+      "word": "e3a01001"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_automation_tr.so",
+      "va": "0x17f4",
+      "word": "ebffff03"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_automation_tr.so",
+      "va": "0x1804",
+      "word": "ebfffeff"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libplug_automation_tr.so",
+      "va": "0x1814",
+      "word": "ebfffef2"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libcoso.so",
+      "va": "0x1f08",
+      "word": "ebfffdda"
+    },
+    {
+      "image_path": "/home/bticino/libcoso/libcoso.so",
+      "va": "0x1f30",
+      "word": "e5858014"
+    },
+    {
+      "bytes_hex": "3820",
+      "image_path": "/usr/lib/libopenmsg.so.1.0.0",
+      "va": "0x3a30"
+    },
+    {
+      "bytes_hex": "5863",
+      "image_path": "/usr/lib/libopenmsg.so.1.0.0",
+      "va": "0x3a64"
+    },
+    {
+      "bytes_hex": "5a63",
+      "image_path": "/usr/lib/libopenmsg.so.1.0.0",
+      "va": "0x3c32"
+    }
+  ],
+  "original_execution": 0,
+  "safe_format": {
+    "add_pc_instruction_va": "0x1644",
+    "literal": "*9*%d*%d##",
+    "pool_va": "0x16f8",
+    "pool_word": "0x69c",
+    "target_va": "0x1ce8"
+  },
+  "spans": [
+    {
+      "bytes": 712,
+      "end_va_exclusive": "0x1530",
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "name": "aux-init",
+      "sha256": "06e16a493292003ba5bae3398a2946c0f46d4a8520d42830a2d69e5ad0f0f77d",
+      "start_va": "0x1268"
+    },
+    {
+      "bytes": 404,
+      "end_va_exclusive": "0x16fc",
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "name": "aux-reverse",
+      "sha256": "9e5fa945a50dab07fd17a877c6f4f15d1613a46b5859600d26b5042876e1d3c9",
+      "start_va": "0x1568"
+    },
+    {
+      "bytes": 472,
+      "end_va_exclusive": "0x18d4",
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "name": "aux-forward",
+      "sha256": "df3bbbd82097cb7e4c4db8cb05a52d93c0e5012a38665d9e2b7694335c0ddda7",
+      "start_va": "0x16fc"
+    },
+    {
+      "bytes": 88,
+      "end_va_exclusive": "0x192c",
+      "image_path": "/home/bticino/libcoso/libplug_aux_tr.so",
+      "name": "aux-dispatch",
+      "sha256": "c60f9a0e63302e46a2d4949453f309e47b3deec5dd07eb28ddb188bc0e7a09c0",
+      "start_va": "0x18d4"
+    },
+    {
+      "bytes": 216,
+      "end_va_exclusive": "0x183c",
+      "image_path": "/home/bticino/libcoso/libplug_automation_tr.so",
+      "name": "automation-registration",
+      "sha256": "14547a50f5c50b39b1085374accb3b9a45160fe2e6dac81156da1eb803513938",
+      "start_va": "0x1764"
+    },
+    {
+      "bytes": 256,
+      "end_va_exclusive": "0x3240",
+      "image_path": "/home/bticino/libcoso/libplug_automation_tr.so",
+      "name": "automation-dispatch-prefix",
+      "sha256": "1b5d92d92584985c8b1a72741d2b0b33618f224e567e07f5ded1790fefd8cc32",
+      "start_va": "0x3140"
+    },
+    {
+      "bytes": 160,
+      "end_va_exclusive": "0x1f80",
+      "image_path": "/home/bticino/libcoso/libcoso.so",
+      "name": "register-translation",
+      "sha256": "ded0dc4c451f8adfedc52a5d2596018398395b819733994b5adbfbd5e661df1c",
+      "start_va": "0x1ee0"
+    },
+    {
+      "bytes": 104,
+      "end_va_exclusive": "0x3a8c",
+      "image_path": "/usr/lib/libopenmsg.so.1.0.0",
+      "name": "new-open-object",
+      "sha256": "a338850d0cc198946b6ece8508fd7db05965128b0164bdfd0b0a11d4a925fe58",
+      "start_va": "0x3a24"
+    },
+    {
+      "bytes": 316,
+      "end_va_exclusive": "0x3d64",
+      "image_path": "/usr/lib/libopenmsg.so.1.0.0",
+      "name": "normal-parser-fields",
+      "sha256": "7e79d17ac75ec1d4736b78aef42c6d57988404842807be318f687a4a5e0488db",
+      "start_va": "0x3c28"
+    },
+    {
+      "bytes": 240,
+      "end_va_exclusive": "0x3448",
+      "image_path": "/usr/lib/libutils.so.1.1.0",
+      "name": "hex-converters",
+      "sha256": "486f25c24ac4e26be16d9f5bccf8761806d0a47dc58c202260d8ef0aa7c85dd1",
+      "start_va": "0x3358"
+    }
+  ]
+}

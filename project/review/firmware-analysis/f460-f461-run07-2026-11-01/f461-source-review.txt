@@ -1,0 +1,21 @@
+# Independent F461 run07 source review
+
+PASS; no source correction requested. Review is restricted to the frozen pure-getter packet and original metadata; uncertain process caller bodies and the opaque board selector are not followed.
+
+Reproduced `python3 -B work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/collect_identity_v1.py --check`:10 outputs/6 HAL code spans/29 exact guards/12 first copies. Independently read both resolved original regular ELF streams, checked SHA256 identities and fresh ELF64 PT_LOAD maps, all six HAL span hashes,29 instruction words, two safe compiled C-string literals and four original BL/import rows. Independently decoded the two selected conditional branch destinations and their two ordinary epilogue tails. All nine non-self output-manifest members and12 first-copy byte identities match. Saved image alias rows independently match normal-symlinks metadata; no host link or vendor instruction is created/executed.
+
+The original source agrees with the selected output-slot contracts. Each getter preserves its own caller-supplied output pointer, requests opaque hal_board through an actual imported PLT and selects the literal branch only under result22. The earlier mask/compare branches do not intercept that selected numeric result; this is bounded source interpretation, not an executed selector case or runtime observation. Original ADRP/ADD pairs select exact F461 and134 literals, each requested through strdup, then stores through the preserved caller slot. Normal canary epilogues are retained. Valid writable destination, normal provider returns and any allocation outcome remain conditions; no integer/Boolean status or whole ownership policy is inferred.
+
+The candidate HAL SONAME/export metadata, device DT_NEEDED and the two actual import declarations support a packaged-provider lead only. They do not prove an invocation, active dynamic binding or a permitted complete consumer. The possible process fragment was excluded before generation and is not reconstructed, expanded or used as a proxy for receiving/authentication/session/framing. The board-selector body likewise remains opaque. No serial/MAC/provisioning/configuration or private identity values are exported.
+
+Numeric22, string134, catalogue item/model metadata, package object-model5.0.134 and public WHO/project identifiers remain separate namespaces. Source compatibility with documented labels does not establish installed board/hardware identity or diagnostic composition. First generation/current copies are exact; review does not certify unsaved exploratory transcript history. No author files were altered, no original/provider/OS/native/SQL or semantic fixtures/models were executed, and prior product ledgers remain unchanged.
+
+Exact reviewed pins:
+
+- `work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/REPORT.md`: `1599bdd53dd4f3a9f20091f141338dfd22249fd0fb7b3ab0e900108a992f11ae`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/collect_identity_v1.py`: `3c446b200568f9734bc4fba4bde420a61db958fa6b70ce36adb717b3bd43848f`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/SOURCE.json`: `291caeccc7cbe3c6a9aa288cb930dde6c0e2855bec1a66630dbc4b2918c798c5`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/SELECTED_METADATA.json`: `939a0173baa6ae0767b5bc1cde8232cd97ac67950793d3237deb6b8d3bb06b7b`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/INPUTS.json`: `2f66e5332839d773366133fe079bea8e7e1460e94b7dac0e80b54c8af588b115`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/OUTPUT_MANIFEST.json`: `1f2f8ecb2e2f78cd5a403427963698967ae71456721a92dd8110501f8e0e0aa2`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/first-candidate/INDEX.json`: `18517f1d944ccea1579f003a3523f796bd2e0041ec6ee6c0f43078304731c437`.

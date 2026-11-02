@@ -1,0 +1,58 @@
+# MH202 run19 WHO17 direct-slot source review
+
+**PASS — no correction requested.** Independent source/host-ledger review of `functional/run19`; no source or author file edited. This review did not execute original ARM/JS, target parser/interpreter, OS/IPC/transport or a native harness. Original instruction visits, primitive callbacks and code hooks added by this review are **0**. The author report is static0 as stated.
+
+## Reproduction and exact source checks
+
+Reproduced the author's `collect_evidence.py --check`:17outputs plus manifest,11original spans,31critical words,twoELFs,one response format,three candidate provider definitions,nine finite ledgers. The check compares bytes and writes nothing. Independently reread both original ELFs through ImageVFS; used an independent PT_LOAD VA/file-offset mapping to compare all11span hashes and31words. All17deterministic manifest members and20author-manifest members match current bytes. Accessor and prior functional/run1 report pins match. Recomputed all nine finite effects independently from the supplied converted-field cases, including slot values, local return2/3, formatted strings and publication selector lists.
+
+Read the actual instruction control/dataflow and independently inspected the publication gap0xc364..0xc3d0 plus pool0xc464. Additional exact original checks:0xc378=`1a00000c` branches to0xc3b0 for selected non4/6 selectors, and pool0xc464=`000194e0`. Those words support the narrowly scoped table/bypass sentence; they do not inspect transport framing/session internals.
+
+## Source agreement and boundaries
+
+- Original entry0xa72c extracts WHO/WHAT/WHERE/DIM through imported accessors and atoi; scene lookup0xa780 returns r5 before WHO17 test. The selected IsNormalFrame=false/IsStateFrame=false continuations are explicit premises. There is no r5-dependent scene existence guard/read on selected DIM6/7/8 blocks, so the direct global-slot route is correctly separated from scene-record fields and interpreter/event-cache storage.
+- Candidate libcommon0x249f8 tests kindword+0x1dec==4 for IsMeasureFrame;0x24a30 tests==8 for IsWriteFrame. Original Extract_valori0x24954 forms object+1430+130*index. Taskmanager's direct dependency order supports the named conditional common130 provider; it does not prove live binding or full parser acceptance. COSO's pointer-string48-byte enum/layout is not transferred.
+- Both selected measure/write branches require unsigned(WHERE−1)<=127. Base0x1b6ac plus0x27c yields wordslot1=0x1b928; byte base+1+0x47b=0x1bb28. The latter begins after128words. These are indexed software regions, not declared physical/script variable domains or proof of their runtime initial values.
+- DIM6 measure reads a word and passes0xab34's exact−1 suppression. DIM7 measure loads an unsigned byte and bypasses that test; no Boolean normalization occurs on this read path. The supplied byte2 example is conditional storage, not observed natural state.
+- Write admission0xa9e4..0xa9f8 permits gateword0 or numeric WHAT2 and leaves r1=0 in the allowed branch. No intervening call occurs before DIM7 Extract_valori0xaa78, so index0 is justified. Positive count+0x1df4 is required for DIM6/7; DIM8 requires count>1. The command gate's broader reset/runtime provenance stays outside this result.
+- DIM6 original `str r0`0xaa58 occurs **before** unsigned-bound branch0xaa5c, preserving flags from0xaa4c. Supplied32001 therefore remains stored before local3/no publication. This is confirmed source order; neither valid raw parser acceptance, impact, defect nor physical state change is claimed. DIM7 checks unsigned value<=1 at0xaa80..0xaa88 before byte store0xaa9c, so supplied2 leaves the old byte unchanged.
+- DIM8 gets direction index0 and amount index1, separately checks unsigned direction<=1 and signed0<=amount<=32000. Original0xab18 computes old±amount; signed upper clamp0xab20 and sign-mask0xab24 produce selected0..32000 results, then0xab2c forces **output DIM6**. The finite old/value domain avoids overflow; arbitrary corrupted words/concurrency are not modeled as mathematical integers outside that scope.
+- Formatter0xab3c..0xab54 uses literal0x10262 `*#17*%d*%d*%d##`, WHERE/DIM/value, then publication selectors0 and1. Original0xab60/0xab98 helper returns are ignored; dispatch returns local2. Rejections return local3, wrong WHO returns0. The report correctly avoids interpreting these numbers as wire ACK/KO.
+- Publication0xc330 computes a24-byte row from0x194e0, loads descriptor+20 for selectors0/1 and bypasses special4/6 initialization. Under an existing nonnegative descriptor,0xc3c0 requests imported invio_msg_open. Actual output recipients, delivery, retry, connection/session/framing and callee behavior remain opaque/unexecuted. This review adds no transport investigation.
+
+The nine ledgers preserve all appropriate distinctions: numeric words versus guarded Boolean writes, unnormalized byte reads, post-store DIM6 rejection versus pre-store DIM7 rejection, DIM8 input versus emitted DIM6, slot arrays versus scene lookup, and local control returns versus publication requests. Input fields/predicates/counts, ordinary atoi/provider/call completion, initialized storage and lack of concurrent aliases remain supplied conditions. No correction/history snapshot is required because final source/report/model agree and no pre-refinement author overwrite was reported.
+
+## Exact reviewed identities
+
+Paths are relative to `work/mh202-firmware/research/2026-10-30/`. Author manifest excludes itself/later reviews; this review is not added into a citing source manifest.
+
+| Artifact in `functional/run19/` | SHA-256 |
+|---|---|
+| `DIM7-byte-write-and-DIM8-value-extraction.txt` | `32aa8599af583e901dbd393a66b20a5b92b338f3e8e7a961de146a9e48a8c6e8` |
+| `DIM8-guard-clamp-and-common-publish-return.txt` | `26e5b8f3d9077fbc084bd986dc59eb2bc43325915296860dd445b18bbe9e0e1b` |
+| `REPORT.md` | `bd6ee8b3150d5ce7c277903be38f38a03ed7073b6309614128147b621e53d030` |
+| `WHO-WHERE-DIM-extraction-and-unused-scene-lookup.txt` | `531e06e956471250de7e5b2d1ca2dcabd11463632ae11e5c80452d0aa015f2ca` |
+| `candidate-measure-and-write-predicates.txt` | `bae54a52fc5b0e2c3364919c37856ce9839bdb400b7cf71d2274b2e5cf4d76e8` |
+| `candidate-provider-contract.json` | `8e03cd051910bf09e58a3616ba3a6c677c3d044afde05253c0fc401d31eeaf04` |
+| `candidate-value-pointer-stride.txt` | `2356eab1775f3897d78df7df98f6e57fcd7fbac2bc7b86ea36b87c95e2247bf9` |
+| `collect_evidence.py` | `d36f31bd86334e6b2b7c45d47733e233946642657966c9f4f26c238d6560e69e` |
+| `critical-words.json` | `5986bf6763431c0c192307e9e7cb3aa58aab344d6cddf53390665d8d9039afa0` |
+| `direct-slot-and-format-contract.json` | `28087d1f2414b57f369cbebe6fa2c199f9b2f0a4cc1651c75d207458f4cca4a7` |
+| `host-selected-slot-effect-ledgers.json` | `c7cb373e6dc3ec4f4931a0220cf18cef54af46d05f214d2a574851d5538f5a18` |
+| `input-hashes.json` | `2ce42a3575496f9f71eafc424f8fb94482f584a61e85a68f111c48b0e95005c0` |
+| `measure-DIM6-7-slot-read.txt` | `c81f16a9288d8e432cb03eca9c2acf1bf5140eb815fb552765c72e9d1e44d813` |
+| `original-spans.json` | `8199674ad0bb1525f8044efc094ebf264145cf38a1b2f150b0454d686dfb06f2` |
+| `output-manifest.json` | `86ef0e73ad5077917553a0d8f1ede804ba2b0dfa09d6a9e6909cb4d375463dcf` |
+| `publication-existing-channel-entry.txt` | `5772a2d1c4f6b295a25576368caf2557d6dce059c756c50b5a9bca59ad24a535` |
+| `publication-existing-fd-send-boundary.txt` | `da24350b0da6832cbc1c7999127a580f17f6f8da18703f67a92083b6ab7e3831` |
+| `publication-local-return.txt` | `4dbca16e932b9e1dc6358f3c1bdf80c71e936119e3a3c7c4a9c813e4d4c008f7` |
+| `state-fallthrough-into-DIM-handler.txt` | `9e7ad256a33c448d9257c7fc655d1a764504d41d71d09151bdc4603b36e3532a` |
+| `write-gate-and-DIM6-store-before-guard.txt` | `a8d3c2186d932058f1b192d3ad36a79959d9d580627dd30657acb134193a7f17` |
+| `author-manifest.json` | `e0ae8b7727582e1b021d2e894ada883cf26a527e4d09412ffcb6a9788fd1e39b` |
+
+| Original normal-image file | SHA-256 |
+|---|---|
+| `/home/bticino/bin/bt_taskmanager` | `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e` |
+| `/home/bticino/lib/libcommon.so.0.0` | `07b2c6d09e4a1b317bb3b37aff8f7ddd72dcec15e1e7194fde00c4f0ce1ecab5` |
+
+Accessor `image_vfs.py`: `67fbac9a1508655bd69ac15dacf1b98679def8c62fad344c4b3c01c3ba2219a3`. Prior `functional/run1/REPORT.md`: `4bd567b9a05afe7a728895966aabbcc2d6c20929b9ffa12d1524fe7f7b0061f6`.

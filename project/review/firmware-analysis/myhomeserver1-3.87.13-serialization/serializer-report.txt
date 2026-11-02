@@ -1,0 +1,72 @@
+# MyHOMEServer1 3.87.13: actual raw BN3L JSON serialization and reparse
+
+This static batch replaces the preceding raw-serializer delegate boundary with its original class method, exact key spellings, emission guards and initializer result alias. It establishes a conditional value-coherence route for the selected BN3L construction, not an executed JSON roundtrip, complete accepted scene grammar, naturally configured action, action invocation or physical behavior. Original instructions/native helpers/vendor processes/JsonCpp/target APIs executed0; semantic host models and configured fixtures0.
+
+## Original class ownership and source boundaries
+
+The original image `/home/bticino/scheduling_manager/scheduling_manager` SHA256 is `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Fresh ELF PT_LOAD mapping resolves raw class header `0x15fe90`, address point `0x15fe98`, first virtual method Thumb`0x279a5` (instruction entry `0x279a4`), RTTI `0x162dac` and original name `10Bn3lAction`. Original relative relocations substantiate these class/pointer identities. This raw64-byte schema is distinct from the previously recovered compiled116-byte action and its operational/thread/callable fields.
+
+The complete local method code, including cleanup paths, is retained as `0x279a4..0x27c14`. Its following pool `0x27c14..0x27c54` is separately recorded as data; objdump interpretations of pool words are not instruction evidence. No nearest exported-template name is treated as a class name. The local serializer inlines the base field emission; no separate base serializer call is invented. JsonCpp and string/allocation provider calls remain request sites, not executed or fully audited implementations.
+
+## Exact emission rules
+
+At entry, r0 is the result JSON storage and r1 is the raw object; the method preserves them as r6 and r5 respectively. It constructs the result with `Json::Value(ValueType)` argument0 at `0x279b2..0x279c4`, then requests keyed assignments. Successful JsonCpp member creation, value assignment, temporary lifetime and ordinary ABI returns are premises of the following source rules.
+
+| Key | Raw field | Selected normal emission rule |
+| --- | --- | --- |
+| `id` | std::string at+4, length+8 | Only when length is nonzero (`0x279c8..0x279ce`); value constructed as Json string at `0x27bb4` |
+| `type` | unsigned enum+28 | Always assigned on the normal source path; enum0..23 selects the original name table, otherwise empty string |
+| `delay` | unsigned word+32 | Omitted when zero (`0x27a18..0x27a1c`); otherwise Json unsigned integer at `0x27b92` |
+| `duration` | unsigned word+36 | Omitted when zero (`0x27a20..0x27a24`); otherwise Json unsigned integer at `0x27b74` |
+| `status` | word+40 | Always assigned a Json string; exact local mapping below |
+| `brightness` | signed word+44 | Omitted only for bit pattern0xffffffff; other values use Json signed integer |
+| `saturation` | signed word+48 | Same sentinel rule |
+| `hue` | signed word+52 | Same sentinel rule |
+| `temperature` | signed word+56 | Same sentinel rule |
+| `speed` | signed word+60 | Same sentinel rule |
+
+The five numeric tests increment the field modulo32 and branch on nonzero at `0x27a7c..0x27a98` and their continuation checks. Thus zero and negative values other than−1 are emitted on those selected paths. This is a sentinel rule, not a positive-value filter, clipping rule, validated range or physical unit. Their Json signed-int construction requests are at `0x27ace`, `0x27af0`, `0x27b12`, `0x27b34` and `0x27b56`.
+
+The type key resolves to `0x115f5c`; pool `0x27c30` via GOT base `0x1659a4` resolves slot `0x166650` and table `0x160710`. Row12 has length4/string `BN3L` at `0x115cf4`. The unsigned bound at `0x279d4..0x279d6` is23. Out-of-range type takes the source empty-string construction rather than an error return or omitted key; no malformed-object acceptance conclusion follows.
+
+The status key resolves to `0x1151ac`. The source computes word+1 and compares unsigned with2 (`0x27a28..0x27a34`), selecting table `0x1607d0` through GOT slot `0x166840` only when that result is0..2:
+
+| Raw status bits interpreted signed | Table row | String |
+| --- | --- | --- |
+| −1 | 0 | `noStatus` |
+| 0 | 1 | `on` |
+| 1 | 2 | `off` |
+
+All other raw status bit patterns take an empty-string construction before the same status assignment. A status of−1 is therefore emitted as `noStatus`, unlike optional numeric−1 fields which are omitted. These names/integers are local schema state; they are not OPEN WHAT values or a physical-state observation.
+
+`PIC_KEYS.json` proves all ten exact key spellings from original pool+PC arithmetic. `IDENTITY.json` retains table rows and relative relocations; arbitrary configuration values, credentials and command bodies are not exported.
+
+## Same returned JSON feeds the selected constructor
+
+In the original initializer branch `0xac198..0xac1dc`, incoming r1 supplies the raw object's vptr. `0xac1a4` reads that vtable's first method and `0xac1a6` invokes it, with result storage r9=currentSP+376. Original `0xac1aa` then passes this same r9 as constructor JSON input r1, destination r8=currentSP+1464 as r0, and directly calls `0x2b0b4` at `0xac1b2`. There is no selected intervening JSON replacement or manually supplied parsed-field fixture.
+
+The new raw object is then supplied to compiled constructor `0xcf06c` at `0xac1ca`; the temporary compiled destination is currentSP+3552. This is a static same-result alias/call chain, not natural execution, vtable integrity for arbitrary objects, successful construction or a whole runtime binding claim.
+
+The retained constructor source reads `id` with asString, `delay` and `duration` unconditionally with asUInt into+32/+36 (`0x2b100..0x2b11a`), resolves the local type name, initializes derived40..63 to−1 and conditionally processes the optional scalar keys. The original order and positive-value status overrides are inherited from the reviewed schema-activation report: positive brightness/saturation/hue/temperature replace status with0; speed does not perform that subsequent override. No provider behavior is inferred merely because a method is named asUInt/asInt/asString.
+
+This permits a narrower coherent-value statement under explicit ordinary provider/valid-object premises:
+
+- Nonempty id is serialized as a Json string; the omitted empty-id case additionally needs the original JsonCpp missing-member/asString result to reconstruct empty.
+- Selected type12 has the actual serializer spelling `BN3L` from the same name table the constructor searches. No equality of raw/compiled layouts is assumed.
+- Nonzero unsigned delay/duration are emitted with unsigned Json constructors and read back with asUInt. Omitted zero fields additionally need missing-member/asUInt to produce0. This batch neither executes nor independently derives that provider case.
+- Constructor-produced status−1/0/1 selects exactly noStatus/on/off, which the original constructor maps to−1/0/1. Other bit patterns are outside that bounded preservation statement.
+- Optional numeric−1 fields are omitted and need successful original missing-key membership behavior to retain the initialized−1. Other signed numeric values use signed Json constructors then asInt. Positive middle fields can reapply the same status0 override; arbitrary manually altered object combinations are not claimed to preserve every status.
+
+These are source-backed requests plus identified provider premises, not a host simulation advertised as a roundtrip. They do not preserve original JSON member-presence distinctions: zero delay/duration and numeric−1 are conditionally omitted while status−1 becomes an explicit string.
+
+## Operational duration and remaining limits
+
+The compiled prefix loads raw+36, stores the metadata pair containing duration at compiled+88 and later loads compiled+88 at `0xcf15a` for the original operational setter call `0xcf15e`→`0xcdaf0`. The preceding duration/schema reports establish the setter, common move/append and second-callable storage; those matrices/paths are not repeated as new coverage. Consequently, for a valid selected original object and successful provider conversion/reparse, a nonzero raw duration has a concrete serializer-to-reparse-to-constructor storage route, rather than an unexamined serializer assumption. It still does not establish actual configured nonzero values, callable execution, successful cancellation/restart, timing, lifetime adequacy or physical operation.
+
+Transport/invoker/send/authentication/session/framing bodies remain outside this batch. Complete parser/provider/error/unwind semantics, corrupted/unconstructed objects, all enum families and actual runtime state remain open. Confidence is high for the original class/key/table/branch/call/alias facts, conditional for value coherence under the listed provider premises, and unassigned for runtime/physical outcomes.
+
+## Reproduction and preservation
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/collect_serializer_v1.py --check`
+
+The deterministic collector records four original code spans,20 instruction-byte guards,10 key pools, separate pool data, nine relative relocations, three direct-call checks and four input identities. It refuses generated overwrites; all outputs plus report and collector are copied immediately to first-candidate with index bytes computed before opening that index. First-generation/check outcome is recorded by the parent/source review; no original execution or JSON semantic fixtures are introduced.

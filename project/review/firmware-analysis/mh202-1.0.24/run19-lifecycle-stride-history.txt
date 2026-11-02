@@ -1,0 +1,11 @@
+# Run19 storage-key refinement after independent source review
+
+The initial collector used duplicate generic `stride`/`index` keys inside one manager-command-storage dictionary. Python retained the later generic stride1, making the saved JSON adjacent to DIM6 ambiguous. The original source spans, report table and direct address arithmetic correctly distinguish DIM6 four-byte slots from DIM7 byte slots; this was a host metadata representation error.
+
+The final collector uses explicit `DIM6_integer_stride:4`, `DIM6_integer_index:WHERE−1`, `DIM7_boolean_stride:1` and `DIM7_boolean_index:WHERE−1`. No original source, selected effect, host event outcome or execution counter changes. Event caches retain their separate four-byte stride and direct numeric-WHERE index. No original code executes.
+
+Exact pre-refinement collector/model/manifest bytes were saved before editing under `development-before-stride-key-refinement/`, with a snapshot SHA256 index. These are immutable preparation history, not final metadata. The pre-refinement pins are:
+
+- `collect_storage.py`: `21925f47dc02846a6be274db27dfb389dec26d4c1f31d86219a5bd5f90f3ed83`.
+- `storage-domains-and-event-row.json`: `430ac4e2d9205e18a5922920b63a2c0524b6727a3cf3d0f4ce559d3d5cc5ff05`.
+- `output-manifest.json`: `c331ac296e80bed8b093c702abc7d5002764660ad6924e7256e18a41e6e37924`.

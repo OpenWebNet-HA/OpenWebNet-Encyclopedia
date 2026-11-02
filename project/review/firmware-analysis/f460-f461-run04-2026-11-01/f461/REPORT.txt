@@ -1,0 +1,51 @@
+# F461 2.0.11 run04: actual field owner, configuration and packed local route
+
+A concrete packaged field owner now joins the previous local matcher: original `libplug_scs.so` conditionally registers `scs_field_bus`; candidate libcoso inserts that exact pointer into manager+24. Separately, the original SCS-command constructor builds the exact packed route value consumed by that field match. This is a local source/configuration contract, not a running service, live bus, accepted raw input, public protocol support table or electrical connector attribution.
+
+## Source identities and scope
+
+- `/home/bticino/libcoso/libplug_scs.so` SHA256 `cb166fdfb540077a48d591dcf2f45748908fe88734256cc8d7c07aa7cdebdc2b`.
+- `/home/bticino/libcoso/libcoso.so` SHA256 `572bca218965a040393361bea4044b0d55519b4f2146ef69c9aa18d4aa6ef690`.
+- `/home/bticino/bin/coso` SHA256 `2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197`.
+
+All three are independently mapped ELF64 little-endian AArch64 originals. SOURCE.json records PT_LOADs,11 selected code spans and32 exact instruction guards. Original code/provider/vendor/native/target/OS execution0; semantic fixtures/models0. The original ImageVFS and prior run03 report/source are pinned. OWN-DEV0208 supplies F461 third-party-integration product context only. No ARM32 layout or other product's alarm/bus role is transferred.
+
+## Which actual object is registered
+
+The plugin's original GLOB_DAT0x14fb0 names `scs_field_bus`0x15220 (112 bytes);0x14fa0 separately names `scsai_field_bus`0x151b0 (112 bytes). These are actual exported object identities, not inferred from a filename. Initial data at scs descriptor+80 encodes low/high32 words `(1,1)`; the separate scsai descriptor+80 encodes `(1,2)`. Both initially have callback slots+48/+56 resolved by ABS64 relocations to `scs_init`0x2780 and `scs_send`0x3130. Those callback bodies and downstream connection/output/receiving delegates are outside this packet; no operational or physical meaning is assigned from their names.
+
+Plugin `init_plugin`0x3180 has an init-once guard. On its selected initialization path it allocates separate64-byte private blocks, stores their owner-descriptor pointer at private+8 and writes their addresses into the corresponding descriptors+96 (0x31dc..0x3200 and0x3218..0x323c). This offset96 is field-plugin private data; it is not the translation descriptor+96 manager slot from the earlier packet.
+
+The nonzero `scs_enable` global is read through GOT0x14f88 at0x3278..0x3280 and reaches0x33e0. That selected path loads the actual scs descriptor through GOT0x14fb0 at0x3414, writes word+8=1 and name pointer+24, then passes that same descriptor to imported `register_field_bus` at0x3424. The import's actual PLT0x1f50 reaches JUMP_SLOT0x15020 with that name. A separate `scsai_enable` global through GOT0x14f98 controls the other descriptor's registration at0x33d8; its descriptor word+8 is set34. These plugin bookkeeping values are distinct from descriptor route+80 and from public protocol namespaces.
+
+Candidate libcoso `register_field_bus`0x2650 obtains the manager via get_plug_m(0), requests unregister of the same supplied field descriptor, prepends it to manager list+24, and writes the resulting list back at0x2694. It subsequently stores a manager pointer to descriptor+104, loads initializer slot+48 and conditionally calls it with X0=same descriptor and X1=manager+56 at0x26c4. Actual provider binding/interposition, initialized same-manager identity, list/allocation success and ordinary returns remain premises. Invoking that initializer is a source request; its body is not promoted into proof of a connection or field readiness.
+
+## Exact configuration ownership and qualified packaged defaults
+
+The plugin preserves its supplied directory argument inX22. It builds a candidate pathname with literal `%s/%s`0x38c0 and literal `scs_cmd`0x38b8, then requests g_key_file_load_from_file with flags0/error-pointerNULL at0x325c. On a successful load, it requests boolean key `SCSEnable` in group `Communication Settings` at0x32d8 and stores the result in the actual `scs_enable` global at0x32e4. The second boolean `SCSAIEnable` in the same group is requested at0x3304 and stored in actual `scsai_enable` at0x3310. Intervening nonsecret tuning-key requests are retained as code context but their values/semantics are not exported or analyzed as transport behavior.
+
+Original data initializes both enable globals to1. A failed file load therefore does not prove either route disabled: the selected no-load path uses the existing globals. A successful load can change them before the registration gates. This is a source distinction between static fallback data and selected packaged configuration, not a general error-policy or active-state result.
+
+Only three safe configuration values are exported in CONFIG_WHITELIST.json, with exact original file SHA/line: `/home/bticino/cfg/coso_plugins/scs_cmd` line7 `SCSEnable=1`, line10 `SCSAIEnable=0`; `/home/bticino/cfg/coso_cfg` line19 `PlugCfgDir=/home/bticino/cfg/coso_plugins`. No full configuration, adjacent values or secrets are copied. These packaged values are not automatically the file/values used on an installed device.
+
+There is a positive original directory-argument handoff. Executable `init_plugin_data`0x5640 allocates24 bytes, stores the duplicated supplied second directory argument at private+16 (0x5684..0x569c), or duplicates `./` if it is null. Selected `register_plugins` source requests symbol `init_plugin`0x62f0 into SP80 and, on the successful module/symbol path, loads that function pointer at0x5850 and calls it at0x585c with the same plugin-data object's+16 pointer. The earlier module open/symbol resolution and current directory/config selection are conditional delegates. This proves how an actual selected initializer receives the directory; this packet does not reconstruct every main/CLI/config precedence path or certify that the packaged PlugCfgDir is selected at runtime.
+
+## Positive local message-constructor-to-field match
+
+Candidate libcoso `new_message_to_scs`0x2cd0 requests72 zeroed bytes. It loads the exact64-bit constant at0x4160, whose low/high32 words are `(1,0)`, and stores it to message+8 at0x2cf4; it writes message word+16=2 at0x2cf8, records a delegated time value at+24 and sets representation word+56=3. These are freshly derived fields, distinct from descriptor fields and the previous message criterion+48.
+
+The base `(1,0)` route is NOT equal to the scs descriptor's `(1,1)`. The actual exported wrapper `new_message_to_scscmd`0x2d30 calls the base constructor through actual PLT0x1f10/JUMP_SLOT0x15068 and then writes word+12=1 at0x2d40. Because the object is little-endian and the store changes the upper32 half of the64-bit value at+8, the resulting message+8 is exactly `(1,1)`—equal to `scs_field_bus`+80. Word+16 remains2 under the candidate base-call/normal-return premise. This is actual source dataflow and an exact byte/pair relationship, not an executed fixture or a claim of successful physical transmission.
+
+The separate `new_message_to_scsai`0x2d50 calls the same base and writes word+12=2 at0x2d60, yielding `(1,2)`, equal to its own scsai descriptor+80. Both full64 packed values have low32=1; selecting on that low word alone would conflate the routes. The earlier run03 matcher first compares full64 field+80 to message+8 and only separately uses field's low32+80 as a direction axis. Descriptor translation criteria+72/+80 remain yet another namespace.
+
+Conditional composition with run03 is now more precise: an actual scscmd-constructor result supplies the exact field-route match and direction word16=2 needed for the scs field. The prior automation descriptor's direction pair `(1,2)` can therefore take its complementary `(2,1)` callback orientation on this local route, provided the same manager/descriptor lists exist and the remaining due/criterion/message-content premises hold. This packet does not force message criterion+48=2, claim a naturally admitted command or prove translation output/delivery.
+
+The separate scsai route's presence/default/configuration is not evidence that F461 has F454's dedicated alarm connector, any particular UART or electrical alarm bus. The inspected local objects and route words do not supply that physical attribution.
+
+## Reproduction and remaining gaps
+
+`python3 -B work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/collect_field_v1.py --check`
+
+The collector validates original bytes/mappings, exact selected guards, safe literal addresses, descriptor/GOT/callback/constructor-PLT relocations, route constants and only whitelisted configuration values. First generation refuses overwrite and immediately preserves exact report/collector/output bytes with an index computed before opening it. No canonical failed generation or output overwrite occurred. Exploratory source checks resolved the base `(1,0)` versus wrapper `(1,1)` distinction before generation; no earlier claimed fixture/result was silently replaced.
+
+Remaining gaps are actual main/CLI/config selection and loaded module instances, natural parsed-message/criterion construction, provider binding/lifetime and active installed state. Initialization/connect/send/receive/transport/authentication/session/framing/MQTT/libjel bodies remain opaque. New physical/runtime/target/native/semantic-model evidence0; prior product execution ledgers are unchanged.

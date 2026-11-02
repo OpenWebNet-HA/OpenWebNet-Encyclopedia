@@ -1,0 +1,115 @@
+{
+  "checkpoint": "run17",
+  "status": "three independently source-reviewed areas including native core/parser join; documentary integration recorded separately, overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run17/REPORT.md",
+      "source_sha256": "84220fe09ba11ed5cec0ea46378942cd7c32ed4928766e3ca938aea5d5a71be3",
+      "published": "run17-protocol-report.txt",
+      "published_sha256": "84220fe09ba11ed5cec0ea46378942cd7c32ed4928766e3ca938aea5d5a71be3"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run17/protocol-review.md",
+      "source_sha256": "013794a3acdba9cefeb4c544e0bbeca44be1749cb313bb39b8a531866a041e40",
+      "published": "run17-protocol-review.txt",
+      "published_sha256": "013794a3acdba9cefeb4c544e0bbeca44be1749cb313bb39b8a531866a041e40"
+    },
+    {
+      "role": "report",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run17/REPORT.md",
+      "source_sha256": "00cddc41451d6553b7986c50a2d6585e60113fc7ef1bb963c9c84cc583142138",
+      "published": "run17-coso-report.txt",
+      "published_sha256": "00cddc41451d6553b7986c50a2d6585e60113fc7ef1bb963c9c84cc583142138"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run17/coso-review.md",
+      "source_sha256": "2201c32dbe0aa421844c88a56525e3f97259feecca87962579d94e174481d657",
+      "published": "run17-coso-review.txt",
+      "published_sha256": "2201c32dbe0aa421844c88a56525e3f97259feecca87962579d94e174481d657"
+    },
+    {
+      "role": "report",
+      "area": "lifecycle",
+      "research_path": "work/mh202-firmware/research/2026-10-30/lifecycle/run17/REPORT.md",
+      "source_sha256": "d178923e423d0d2cd089805e9d8553ac849ac1eb4565504a1713db94e1bd03f0",
+      "published": "run17-lifecycle-report.txt",
+      "published_sha256": "d178923e423d0d2cd089805e9d8553ac849ac1eb4565504a1713db94e1bd03f0"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "lifecycle",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run17/lifecycle-review.md",
+      "source_sha256": "a7fe1c6abdee643b87f6a90494110f607b005ff2516c1a1c68f34a7e6fd11c1b",
+      "published": "run17-lifecycle-review.txt",
+      "published_sha256": "a7fe1c6abdee643b87f6a90494110f607b005ff2516c1a1c68f34a7e6fd11c1b"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run17/collect_evidence.py",
+      "sha256": "acd4176e4f257d712ccbdb8555b368da646bdb00cf6ed16d1edd148cb9b1cc0d",
+      "method": "static original/finitehost evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run17/emulate_core_inplace.py",
+      "sha256": "5fe9e8cdb8ab529720cc6edc6665ac3cde4331c23b6daeed8505822fc86cbec3",
+      "method": "isolated original corehelper/native48parser with explicit envelope/primitive/data-binding fixtures"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run17/collect_evidence.py",
+      "sha256": "729aa0956c0cfc0e0830d691519d5b56433fb9b99ba17dec114a19998c7350b6",
+      "method": "static original/finitehost evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/lifecycle/run17/collect_lifecycle.py",
+      "sha256": "86859787a50fe576d09e2bd9a1d313d00d1f5b1e7deeae492cdcb8d2003b0b53",
+      "method": "static original/finitehost evidence"
+    }
+  ],
+  "canonical_execution": {
+    "new_corpus": {
+      "top_level_entries": 1,
+      "original_instruction_visits": 317,
+      "primitive_callbacks": 24,
+      "linker_redirect_callbacks": 2,
+      "exit_boundaries": 1,
+      "stop_boundaries": 0,
+      "code_hook_visits": 344,
+      "setup_data_relocation_writes": 2
+    },
+    "cumulative": {
+      "corpora": 10,
+      "top_level_entries": 59,
+      "original_instruction_visits": 29327,
+      "primitive_callbacks": 2967,
+      "linker_redirect_callbacks": 115,
+      "exit_boundaries": 15,
+      "selector_read_stop_boundaries": 2,
+      "code_hook_visits": 32426,
+      "firmware_processes": 0,
+      "target_OS_calls": 0
+    },
+    "count_scope": "Canonical named corpora only; newnestedparser/newobjectnotextraentries, setupdatawrites/notcodecallbacks, verificationreplaysnotaccumulated"
+  },
+  "history": {
+    "run16_snapshots": "reviewed/run16/SOURCE_SNAPSHOTS.json",
+    "earlier_artifacts_unchanged": true,
+    "protocol_preparations": "Missingmemoryhookimport stoppedbeforeemu_start; guessedrelocationprefix assertion and later Python whitespacefix stoppedbeforestaticoutputs. Exactdrafts/hashes retained; no native/result/sourceinterpretation/priorartifactchange."
+  },
+  "limits": [
+    "InitialQ64/body/status/ID/otherwords/list are fixtures; actualsameQ/native48parser/stores/frees selectedonly, not naturalqueue/wholeTR/sync/STM/runtime",
+    "Private ordinaryC/GLib/allocation/free/dead-read/list/nonfataldebugmodels explicit; originaldatarelocations notactualloader/GLibcode",
+    "Configuredsynstate/timerNULLsource/new_id/statuszero are staticconditionalcallbacks not actualconfiguration/timing/physicalposition or guaranteeduniqueID",
+    "GOTO pointer/head/predecessor/file-offset join depends on source/global/nodepremises, not publiclabelsemantics/wholeDSL/gatereset/RPproducer closure",
+    "Missingassets/liveproviders/runtime/physical/widerDevicegates remain open"
+  ]
+}

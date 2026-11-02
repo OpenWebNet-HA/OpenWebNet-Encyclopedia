@@ -113,3 +113,9 @@ CEN+ is carried under [`WHO 25`](../who-25-transversal/cen-plus.md) and uses a d
 A parser must therefore select `WHO 15` or `WHO 25` before interpreting the numeric fields. CEN and CEN+ are related command systems but are not alternate encodings of one universal `WHAT` table.
 
 See the [functional overview](../) for navigation by `WHO` and by function.
+
+## MH202 implementation evidence
+
+MH202 Firmware `1.0.24` contains a CEN translation path whose inspected source-derived case constructs `*15*05#2*12##`. This is a statically reconstructed example, not captured traffic: base `WHAT 05`, parameter `2` and `WHERE 12` remain separate fields.
+
+The selected state-machine initializer allocates no private state, and its complete inspected application/field methods provide neither a held-button timer nor saved-ID correlation. Those local software paths do not replace the published interaction phases or establish physical button timing. See [MH202 CEN translation](../../reverse-engineering/firmware-analysis/mh202-1.0.24-functional-translation.md#who-14-special-commands-and-who-15-cen).

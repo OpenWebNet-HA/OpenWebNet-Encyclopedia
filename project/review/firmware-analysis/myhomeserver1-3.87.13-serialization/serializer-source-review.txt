@@ -1,0 +1,14 @@
+# Independent source review: raw BN3L serializer
+
+PASS. Root independently read the original method0x279a4..0x27c14 and initializer/reparse source through ImageVFS and fresh PT_LOAD mapping. This is a source-aware review, not only an author-output replay. Original scheduler hash, four raw source-span hashes,20 instruction guards, ten PC-relative key literals, nine actual R_ARM_RELATIVE targets, raw vtable/RTTI and three original status rows agree. Parent read-only collector reproduction returned14 matching outputs; all16 immediate first copies remain exact.
+
+The original r0 hidden result/r1 receiver convention is visible in retained aliases: result r9=SP+376 from initializer0xac19a reaches virtualcall0xac1a6 then the same input to rawconstructor0xac1b2. Raw/compiled object sizes and enum namespace remain distinct. Nonzero delay/duration use unsigned Json constructors; zero is omitted. Optional numeric words omit only0xffffffff, so zero/other negatives are emitted. Status always assigns its table-derived string on normal paths, including noStatus for−1; nonempty id is conditional. Those source guards, field spellings and status mappings are directly corroborated.
+
+The report correctly retains ordinary object/string/allocation/assignment/conversion/provider premises; it neither executes JsonCpp nor claims a complete roundtrip/configured action. Missing-member default conversion was unproved within this author scope; the separate provider-values packet can narrow it without modifying this frozen report. Arbitrary status/type values, full grammar/error/unwind, effective loader binding, timer/callable lifetime/concurrency and physical outcomes remain open. No transport/session/authentication/framing bodies or original execution were used. No correction requested.
+
+Exact current pins:
+
+- REPORT.md: 9764cd1a79d78665b802ec3393e7261d247aca9bf4a0d165cd58feb7eb5bdfd8
+- collect_serializer_v1.py: f4baef80658ed0164cd0b40eb4d361c945c6b6ee0c0bf5c179e4ce49069deeeb
+- OUTPUT_MANIFEST.json: cf3371f04b78cfde27c08cd14f15c1583bd85afb7499f851f9c4f2ddf49e9d77
+- first-candidate/INDEX.json: b8787597d58b3b48f64c6337abc93b5fc5b7ec540d4aa5324280b36a542f519e

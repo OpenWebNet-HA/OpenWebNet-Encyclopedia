@@ -96,6 +96,22 @@ In particular, the implementation data distinguishes operations for:
 
 The public `WHO 17` functional state model remains the canonical interpretation of `WHAT 1..4`; implementation-only programming operations are complementary and must not be collapsed into that four-value table.
 
+## MH202 1.0.24 implementation evidence
+
+MH202 Firmware `1.0.24` maintains scene execution and availability separately. Its scenario-manager source corroborates the four public operations while adding build-specific loading and restart behavior:
+
+| Aspect | Implementation behavior | Interpretation limit |
+| --- | --- | --- |
+| Control and status | Separate launch/stop and enable/disable paths; separate execution and availability fields feed the status renderers | A retained control value can outlive a stop request; a formatted status is not proof of a live child process |
+| Script indexing | The native loader searches numbered `.spt` files `1..300` and continues after failed opens | File numbers do not establish a universal MH202 scene-address validator |
+| Configuration index | The packaged web index stops at the first missing name and carries each entry's separate XML scene ID | Web enumeration and native loading have different termination policies |
+| Startup restoration | `$RESTART=SI` gates restoration of a saved-active scene; the always-start pass has separate guards | This is not an automatic repeat-after-completion rule |
+| Action disablement | The inspected `OWRITE` path checks a matching `DISABLED` marker before requesting its write | Matching script names and runtime globals are required; this does not establish suppression of every action or the separate `OREAD` path |
+
+The [MH202 implementation reference](../../reverse-engineering/firmware-analysis/mh202-1.0.24.md) and [scenario lifecycle](../../reverse-engineering/firmware-analysis/mh202-1.0.24-state-and-routing.md) explain the source and helper-execution evidence. Stored action results, local receipts, query readiness and interpreter progression remain distinct from command delivery or physical completion. Complete configured-script behavior and process/FIFO lifecycle are unresolved.
+
+Script-language constructs such as `BEGIN`, `IIF` and `GOTO` belong to the [embedded interpreter](../../reverse-engineering/firmware-analysis/mh202-1.0.24-record-and-script-lifecycle.md). They do not extend the public `WHO 17` command vocabulary.
+
 ## Relationship to scenario systems
 
 [`WHO 0`](../who-0-scenarios/) addresses scenario modules such as F420 and their stored scenario slots. `WHO 17` addresses scenes managed by scenario-programmer/gateway devices. The MyHOME_Suite [Scenario Engine](../../scenario-engine/) is a higher-level capability model that can compose functional operations from multiple `WHO` namespaces.
@@ -103,3 +119,17 @@ The public `WHO 17` functional state model remains the canonical interpretation 
 See [Protocol](../../protocol/) for common command, status and event-session behavior.
 
 The [functional overview](../) groups `WHO 0` and `WHO 17` under scenario-related functions without merging their protocol namespaces.
+
+## MH202 indexed dimension storage
+
+Build-specific source and the [ScenarioSuite variable profile](../../scenario-engine/scenario-suite-database.md#counter-and-boolean-operations-in-who-17) associate Counter and Boolean editor operations with the following storage:
+
+| Dimension | Selected implementation role | Indexed address scope |
+| --- | --- | --- |
+| `6` | Counter word value and status | `1..128` |
+| `7` | Boolean byte value and status | `1..128` |
+| `8` | Counter increase/decrease operations | Separate adjustment handlers in the same manager |
+
+These indexed locations are separate from scene IDs, event caches and named interpreter variables. Local handler return codes are not established as wire acknowledgements. The [manager and interpreter storage reference](../../reverse-engineering/firmware-analysis/mh202-1.0.24-record-and-script-lifecycle.md) preserves those namespaces.
+
+The generator resolves Counter text fields through `ANA_TEXT.ID_KIND = 2` (CountValue) and `ANA_TEXT.ID_KIND = 3` (ValueStep), both with stored range `[0-32000]`. Earlier temperature/time-labelled range candidates do not describe those fields. This is an editor-data/consumer relationship; actual UI enforcement, Boolean OnlyIf precedence and propagation into runtime variables remain unresolved. See [field resolution](../../scenario-engine/scenario-suite-generator.md#counter-text-field-namespace).

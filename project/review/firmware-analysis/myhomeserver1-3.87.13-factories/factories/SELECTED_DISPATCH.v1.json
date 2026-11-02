@@ -1,0 +1,32 @@
+[
+  {
+    "entry_va": "0x30d86",
+    "entry_value": 112,
+    "local_index": 7,
+    "name": "TIME",
+    "scope": "Selected source branch, not invocation or full support statement.",
+    "table_base_va": "0x30d78",
+    "target_va": "0x30e58",
+    "tbh_instruction_va": "0x30d74"
+  },
+  {
+    "entry_va": "0x30d8c",
+    "entry_value": 879,
+    "local_index": 10,
+    "name": "SLEEP",
+    "scope": "Selected source branch, not invocation or full support statement.",
+    "table_base_va": "0x30d78",
+    "target_va": "0x31456",
+    "tbh_instruction_va": "0x30d74"
+  },
+  {
+    "entry_va": "0x30d8e",
+    "entry_value": 839,
+    "local_index": 11,
+    "name": "SCENARIO",
+    "scope": "Selected source branch, not invocation or full support statement.",
+    "table_base_va": "0x30d78",
+    "target_va": "0x31406",
+    "tbh_instruction_va": "0x30d74"
+  }
+]

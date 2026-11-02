@@ -1,0 +1,60 @@
+# Second documentary integration review: MyHOMEServer1 3.87.13
+
+Result: PASS for build/product scope, source-to-summary consistency and current source/evidence export integrity. **PENDING** final mechanical resolution of seven forward review/validation targets listed below. This review does not certify final strict link/ESG completion before those actual artifacts exist; the parent will perform that final validation without placeholders or exemptions.
+
+This is a documentary review of the six exact integration-candidate documents. I authored the boot report, so this document does not replace its independent original-source review. The separate functional reviewer owns that source verification. My independent ABI/catalogue source review is retained separately; protocol source semantics here are checked against the current authoritative v2 report and evidence scope, not newly re-executed or exhaustively re-audited.
+
+## Exact reviewed document pins
+
+All six current source bytes agree exactly with their source/size/SHA records and copies under integration/review-candidate/. Its INDEX.json SHA is `ac68aa2dc4871db212e8edaa9def9071a601402f272c11e0e79f631b918e870a`.
+
+| Reviewed source | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md` | `0581a52f32a95f4cae419693fe8d20b4ecf272f5e195f40070b00e166aea173f` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md` | `312d54e3264bad9ddc1226ecebd93880359ae3f992265d8667d92fd9f81722fb` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13/README.md` | `e0ba2c545915090cf872fae542650c6fafd6f0c3c6599acfcb2da56e9074daac` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31/SYNTHESIS.md` | `6e745a8d2490558970863d2e3bb96cde37c7e9cbcaf37d93bc8e24ade90bc645` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31/COVERAGE.md` | `569d62500da242b3cf5c6da69ef8038f2841a9fd1137bf93c1574dd213b725ee` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31/RANKED_REMAINING_QUESTIONS.md` | `e8a73171bf9e2211b09ff16a5d935debe25e545c94fd8cde4a39f2650fd8608c` |
+
+The broader firmware-analysis README review is limited to the new MyHOMEServer1 row/link and its local consistency. Older historical F454/MH202 documentary semantics are not re-certified by this review.
+
+## Source/export integrity
+
+Authoritative report identities are inventory/REPORT.md SHA`3f78472f276680b6903ae9c5c15eb6ace7753b28870975c49cb016d26f373fb7`, boot/REPORT.md SHA`1a6b4c49e70da30a687196fca6189bcd590d00479e4ad7302749092b29cb469c`, and protocol/REPORT.v2.md SHA`b07a9d0fcb645f42c347a47075997dbee23a202a18e797d57825da82d2a7a97d`. The published protocol-report.txt is this corrected v2, not an earlier report-only draft.
+
+The capsule source-exports.json SHA`981a0177940ddaec22bb6fb21b8a0b17426f0b5c8cb0fbde09527a30ac830f3f` identifies4 report/input-review copies. Its evidence-exports.json SHA`c6259ff4e7788c5fab9ba729f2e588ff2d511149d5f2f8fe314bcfd44064a79c` identifies45 selected evidence copies. I independently compared every listed source and destination's exact bytes/size/SHA; all49 comparisons passed. Root SYNTHESIS/COVERAGE/RANKED documents are also byte-identical to the three capsule text copies. These are selected source exports, not original binary/database publication or completeness of all private research artifacts.
+
+The present local Markdown targets in the new detailed analysis/capsule pages resolve, with17 checked existing links in the selected nonhistorical documents at review time. The new index-row target also exists. Remote manufacturer/archive URLs and anchors were not fetched or independently revalidated; this is a local documentary review. No vendor source collector/native harness or new firmware investigation ran for this final review. Parent-reported three collector checks and ECV/ESG/diff checks are separate mechanical evidence, not tests performed anew here.
+
+## Product and catalogue boundaries
+
+The new analysis correctly links OWN-DEV-0199/item2198, an SCS/Ethernet home automation server with commissioning/app/project functions. It does not inherit F454's dedicated alarm-bus or audiovisual topology from reusable Object labels, nor MH202 taskmanager/.spt implementation from the existence of scenarios. Package MyHomeServer1/3.87.13/XML3.1/Object model5.0.67 remain update declarations rather than a captured diagnostic response or an interchangeable catalogue firmware ID.
+
+The original183381241-byte archive and image hashes match the frozen input/author reports. The composition counts5924/5384 regular files and858/740 ELF-prefix objects,5378 shared regular paths,5368 identical/10 different and546/6 one-image paths match the structural evidence. Counts are explicitly file/input scope rather than semantic coverage or runtime equivalence. ARM32 hard-float/Thumb claims are restricted to the selected applications/provider corpus; old layouts/harnesses are not transferred by name.
+
+The embedded catalogue's2233344 bytes and SHA`79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb` stay distinct from the archived installer2625536-byte SHA`f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`.75 exact table definitions,42 equal/33 differing row multisets and DATA4.4.0/export_date20240327 are preserved without interpreting integer IDs as stable semantics or the date as established build time. The precise empty name/code and item2198 firmware lookups are not promoted to absent hardware support. matrix_mx's literal/SQLite imports remain a consumer lead, not a traced opening/query or active-capability oracle.
+
+## Boot, runtime and protocol scope
+
+Startup prose accurately separates SysV/runlevel declarations, a volatile alias declaration, the vendor script's library-path/working-directory/no-explicit-argument request, original configuration reader/stores and the available conditional launch helper.25 normal/recovery and23 reduced XML records are not claimed as running processes. Record working_mode and global status2/normal_status4 remain separate numeric scopes with no inherited old-firmware meanings. The eligible nice/helper path remains conditional; live library overrides, global-list binding, parser completion, helper outcomes and readiness are open.
+
+Redis/D-Bus retain actual packaged service-start requests, not observed listeners. Modern scheduling/alarm/energy/player/backup/gateway paths remain declared data locations with untraced schemas/consumers. The one scsserver ttymxc2/bus_type0 declaration is not equated with electrical connector topology. Recovery/normal marker/converter differences are described as source requests. Kernel/DTB Linda/i.MX6DL/Cortex-A9 metadata does not become an observed board revision or actual DTB selection.
+
+The new56-byte C parser allocation/discriminator52 and ordinary branch stores are described as original code behavior, not successful raw parser execution or a shared C++ layout. The separate C/C++ provider families and duplicate definitions preserve dynamic-binding uncertainty. Auxiliary/automation criteria, WHO, callback direction, envelope representation and parser kind remain distinct namespaces. The two host arithmetic examples are synthetic and separate; no accepted input, natural roundtrip, STM/publication, serialization, bus effect or expanded public support table is asserted.
+
+Signature presence/CRC/hash checks remain separate from cryptographic signature verification. Referenced missing80/81/94/95 extras are not reconstructed from unrelated resources. Existing stopped authentication/session/framing or equivalent investigations stay closed. Zero new original execution and no runtime/physical coverage are consistent across synthesis, coverage, analysis and the authoritative reports. Ranked next questions start with actual database/query, scheduler, fresh dispatch/STM and alarm/backup/update consumers; they do not silently authorize an overnight continuation or claim those gaps completed.
+
+## Pending completion targets
+
+At the pinned capsule README checkpoint, these forward local targets are intentionally not yet present and are **not verified bytes** in this review:
+
+- inventory-source-review.txt
+- inventory-second-review.txt
+- boot-source-review.txt
+- protocol-source-review.txt
+- integration-review.txt
+- integration-second-review.txt
+- validation.json
+
+The parent explicitly plans to copy actual completed reviews/validation and then run final strict ESG/link validation. This review neither creates placeholders nor exempts those links. The README's completed-review wording is therefore reviewed as the intended completed capsule state, conditional on that finishing step; current forward targets remain recorded as pending. No author report, candidate, source export or repository document was edited by me. Final completion should retain these exact reviewed content pins or obtain a new documentary review if substantive content changes.

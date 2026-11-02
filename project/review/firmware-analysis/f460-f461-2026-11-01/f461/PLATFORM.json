@@ -1,0 +1,415 @@
+{
+  "DTBs": [
+    {
+      "bytes": 39164,
+      "file": "chess_dig2_car0.dtb",
+      "sha256": "ba3074579a434c3150c8af2185e270955666d98b0cf8038d72fea0d99897b848",
+      "whitelisted_metadata": [
+        {
+          "node": "/",
+          "property": "model",
+          "strings": [
+            "Bticino Chess Board DIG-2 CAR-0"
+          ]
+        },
+        {
+          "node": "/",
+          "property": "compatible",
+          "strings": [
+            "fsl,imx8mm-chess",
+            "fsl,imx8mm"
+          ]
+        },
+        {
+          "node": "/cpus/idle-states/cpu-pd-wait",
+          "property": "compatible",
+          "strings": [
+            "arm,idle-state"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@0",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@1",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@2",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@3",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/l2-cache0",
+          "property": "compatible",
+          "strings": [
+            "cache"
+          ]
+        }
+      ]
+    },
+    {
+      "bytes": 39164,
+      "file": "chess_dig2_car1.dtb",
+      "sha256": "50f363f083e586a7dc80b7106f1fb432b87e4348d6c00cd77cc7224801931923",
+      "whitelisted_metadata": [
+        {
+          "node": "/",
+          "property": "model",
+          "strings": [
+            "Bticino Chess Board DIG-2 CAR-1"
+          ]
+        },
+        {
+          "node": "/",
+          "property": "compatible",
+          "strings": [
+            "fsl,imx8mm-chess",
+            "fsl,imx8mm"
+          ]
+        },
+        {
+          "node": "/cpus/idle-states/cpu-pd-wait",
+          "property": "compatible",
+          "strings": [
+            "arm,idle-state"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@0",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@1",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@2",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@3",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/l2-cache0",
+          "property": "compatible",
+          "strings": [
+            "cache"
+          ]
+        }
+      ]
+    },
+    {
+      "bytes": 39164,
+      "file": "chess_dig2_car2.dtb",
+      "sha256": "1359a9f571bd1abaf220cf4e61f88ecebdb513b5cc1d677378ab6125b095e62c",
+      "whitelisted_metadata": [
+        {
+          "node": "/",
+          "property": "model",
+          "strings": [
+            "Bticino Chess Board DIG-2 CAR-2"
+          ]
+        },
+        {
+          "node": "/",
+          "property": "compatible",
+          "strings": [
+            "fsl,imx8mm-chess",
+            "fsl,imx8mm"
+          ]
+        },
+        {
+          "node": "/cpus/idle-states/cpu-pd-wait",
+          "property": "compatible",
+          "strings": [
+            "arm,idle-state"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@0",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@1",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@2",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@3",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/l2-cache0",
+          "property": "compatible",
+          "strings": [
+            "cache"
+          ]
+        }
+      ]
+    },
+    {
+      "bytes": 39164,
+      "file": "chess_dig2_car3.dtb",
+      "sha256": "b119d8de7e0e3e7da12ea0932c23caf4f9b033f965f7ab27b66fc74883a46bac",
+      "whitelisted_metadata": [
+        {
+          "node": "/",
+          "property": "model",
+          "strings": [
+            "Bticino Chess Board DIG-2 CAR-3"
+          ]
+        },
+        {
+          "node": "/",
+          "property": "compatible",
+          "strings": [
+            "fsl,imx8mm-chess",
+            "fsl,imx8mm"
+          ]
+        },
+        {
+          "node": "/cpus/idle-states/cpu-pd-wait",
+          "property": "compatible",
+          "strings": [
+            "arm,idle-state"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@0",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@1",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@2",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@3",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/l2-cache0",
+          "property": "compatible",
+          "strings": [
+            "cache"
+          ]
+        }
+      ]
+    },
+    {
+      "bytes": 39247,
+      "file": "chess_dig2_car4.dtb",
+      "sha256": "1ca50d33072f493c3da01b79b8dd33e589dd7a289c324e00af8755f17630ce4b",
+      "whitelisted_metadata": [
+        {
+          "node": "/",
+          "property": "model",
+          "strings": [
+            "Bticino Chess Board DIG-2 CAR-4"
+          ]
+        },
+        {
+          "node": "/",
+          "property": "compatible",
+          "strings": [
+            "fsl,imx8mm-chess",
+            "fsl,imx8mm"
+          ]
+        },
+        {
+          "node": "/cpus/idle-states/cpu-pd-wait",
+          "property": "compatible",
+          "strings": [
+            "arm,idle-state"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@0",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@1",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@2",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@3",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/l2-cache0",
+          "property": "compatible",
+          "strings": [
+            "cache"
+          ]
+        }
+      ]
+    },
+    {
+      "bytes": 46174,
+      "file": "chess_mfg.dtb",
+      "sha256": "5ad562855b03cbd68cededd2af9e70a8e646ef6e633c9e82a136fa5b921b1a89",
+      "whitelisted_metadata": [
+        {
+          "node": "/",
+          "property": "model",
+          "strings": [
+            "Bticino Hello Board MFG"
+          ]
+        },
+        {
+          "node": "/",
+          "property": "compatible",
+          "strings": [
+            "fsl,imx8mm-hello",
+            "fsl,imx8mm"
+          ]
+        },
+        {
+          "node": "/cpus/idle-states/cpu-pd-wait",
+          "property": "compatible",
+          "strings": [
+            "arm,idle-state"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@0",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@1",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@2",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/cpu@3",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a53"
+          ]
+        },
+        {
+          "node": "/cpus/l2-cache0",
+          "property": "compatible",
+          "strings": [
+            "cache"
+          ]
+        }
+      ]
+    }
+  ],
+  "kernel": {
+    "ARM64_Image_magic": true,
+    "banner": "Linux version 5.10.35+g59ec3f0ef418+p0 (oe-user@oe-host) (aarch64-poky-linux-gcc (GCC) 11.5.0, GNU ld (GNU Binutils) 2.38.20220708) #1 SMP PREEMPT Tue Apr 5 23:00:00 UTC 2011",
+    "banner_file_offset": "0x8e00c8",
+    "bytes": 14434312,
+    "declared_Image_size": 14811136,
+    "path": "extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/Image",
+    "sha256": "f249b7bb544db7743a5b76d5927c5a154204f7c90a946ce08f5177bd46431a94",
+    "text_offset": "0x0"
+  },
+  "meaning": "Packaged target metadata only, not actual selected DTB/hardware or running kernel.",
+  "other_kernel_members": [
+    {
+      "ZIP_CRC_verified": true,
+      "archive": "extracted/Image.zip.sha256.sig.zip.contents/Image.zip",
+      "bytes": 40,
+      "path": "extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/Image.md5",
+      "sha256": "ceef89de2e4a25eb5f21af45c8ef98afc37b53a1f4497bc142adab664322f1b1"
+    },
+    {
+      "ZIP_CRC_verified": true,
+      "archive": "extracted/Image.zip.sha256.sig.zip.contents/Image.zip",
+      "bytes": 22648,
+      "path": "extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/hygw_cortex-m.bin",
+      "sha256": "bd7726245c447f3563f44fd0c404405c6dd176015e1d586f1454bbd931aee8b3"
+    }
+  ]
+}

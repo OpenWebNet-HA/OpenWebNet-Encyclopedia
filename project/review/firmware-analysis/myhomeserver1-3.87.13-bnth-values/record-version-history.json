@@ -1,0 +1,24 @@
+{
+  "authoritative": "REPORT.v2.md",
+  "change": "ExactselectedThumb16 B.n0xe75c at10ee0c decoder/target assertion and versioned report/firstcopy names; retainedThumb32. No firmware source/semantics/count changes.",
+  "failed_v1_inputs": {
+    "REPORT.md": {
+      "bytes": 8405,
+      "sha256": "7d68c13a2ca3939ef8427c64fd327b33026c8a12b25874537ad41a8bfd205e51"
+    },
+    "collect_record_value_v1.py": {
+      "bytes": 8027,
+      "sha256": "0008e9a9f6ce97d6ec9a680617709cb5b9323489061d31f6334f1b92efc1979e"
+    },
+    "development-first-failure-v1/FAILURE.json": {
+      "bytes": 606,
+      "sha256": "c57422c44b764d201bdae6eb23841867d065170e4530d54f5a5583016b29e6c0"
+    },
+    "development-first-failure-v1/INDEX.json": {
+      "bytes": 388,
+      "sha256": "85d58378a0ee2474d2146506aa5688ecd3c0eb1cf986f0def953e30a29002856"
+    }
+  },
+  "parent_pre_v2_snapshot": "../integration/pre-v2-record/INDEX.json",
+  "v1_outputs": 0
+}

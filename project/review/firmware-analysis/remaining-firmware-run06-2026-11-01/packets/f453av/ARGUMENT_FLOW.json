@@ -1,0 +1,26 @@
+{
+  "R1_flags": "0xb99c copies currentR5 toR1; own earlier main0xb8d0 setsR5=0. Current zero requires natural intervening flow, ordinary callee-save ABI and no invalidating change; it is an explicit premise.",
+  "gate": "CMN return,1; non-flag-setting MOV/LDR/ADD keep condition flags untilBEQ0xb9bc. Equality branches0xb9e4; selected non-equality falls through after an opaque request that must return normally.",
+  "inherited": "Night05 supplies own recovery entry/import candidate-main0xb8c0; this packet does not establish that it actually executes",
+  "limits": [
+    "Not\u22121 is a numerical gate, not proof of valid descriptor/open success or marker existence/truth",
+    "Original initializer is file metadata only; no live pre-state or equal-leg value preserved claim",
+    "Names do not prove marker purpose, active partition, hardware/device identity, application copy/install or recovery success",
+    "No later cell consumer/table ownership/full main matrix, further resource fields or closed provider/output/transport bodies examined as evidence",
+    "No normal-image or MH200N/MHS/MH202/F454 semantics transferred"
+  ],
+  "premises": [
+    "Actual recovery environment/path/image/provider selection and natural own main admission",
+    "CurrentR5=0 for numeric-zero open flags; expected ABI and earlier normal provider returns",
+    "Valid earlier diagnostic/context addresses and ordinary instruction/ABI state",
+    "Opaque intervening request0xb9c4 returns normally; writable valid mapped cell and no invalidating side effects"
+  ],
+  "request": {
+    "R0": "compiled /NO_APP_COPY pointer via0xc8b8",
+    "R1": "currentR5 (zero only under stated premise)",
+    "VA": "0xb9a4",
+    "binding": "actual original open import metadata, effective provider opaque"
+  },
+  "scope": "One own recovery-main file-request result gate to one compiled path-cell assignment; not marker semantics or whole main",
+  "store": "0xb9c8 loads compiled0xf0e4 intoR2;0xb9cc loads cell0x188bc intoR3;0xb9d0 storesR2 tothatcell. No pathname is dereferenced or device accessed by the analysis."
+}

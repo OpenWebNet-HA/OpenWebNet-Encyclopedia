@@ -1,0 +1,32 @@
+[
+  {
+    "pool_va": "0x2c8f8",
+    "slot_va": "0x166ae8",
+    "stored_operator": -1,
+    "text": "noOperator"
+  },
+  {
+    "pool_va": "0x2c8fc",
+    "slot_va": "0x165e70",
+    "stored_operator": 0,
+    "text": "higher"
+  },
+  {
+    "pool_va": "0x2c904",
+    "slot_va": "0x1663f8",
+    "stored_operator": 1,
+    "text": "lower"
+  },
+  {
+    "pool_va": "0x2c908",
+    "slot_va": "0x166304",
+    "stored_operator": 2,
+    "text": "equal"
+  },
+  {
+    "pool_va": "0x2c900",
+    "slot_va": "0x166274",
+    "stored_operator": 3,
+    "text": "different"
+  }
+]

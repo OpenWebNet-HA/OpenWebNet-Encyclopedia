@@ -1,0 +1,27 @@
+# F450 night04: actual configuration producers for the selected context fields
+
+The original daemon contains a new positive producer contract: under selected root/fullip_addressbook callback admission, db_name text is passed with its supplied length to strndup and the returned word is stored at context+76; db_compressed text is passed to atoi and its returned numeric word is stored at context+80. These are the same offsets used by the prior selected archive-request consumer. This is a qualified configuration source join, not an association with extra/check50, a recovered decoder or recovered database.
+
+## Own image, allocation and registered owner
+
+SOURCE.json pins bt_daemon SHA256 85e7ca65b4d1c4e8ab23a93ac532aea568dd06272fefb1b1be928eeba18f3d73, fresh ELF32 little-endian ARM machine40 flags0x5000002, own PT_LOAD mappings and exact instruction/pool/import guards. Stripped nearest-symbol annotations are not function identities. At0xfb04 the original caller requests calloc(1,240), stores its result at FP-40 and passes that word to local0x12908. Allocation success/validity and natural outer admission remain premises.
+
+Forwarder0x12908 preserves that owner, reads a pathname through global0x23a74 and passes owner asR1 to0x15744. The initialized global points at literal /var/tmp/stack_open.xml. It is writable data: this establishes the original initializer, not its effective live value or any live file. Loader0x15744 saves its filename and owner in distinct FP-4120/FP-4124 cells. It installs local0x1682c in allocated table+8 and requests g_markup_parse_context_new with this table,R1=0,R2=same owner,R3=0. Selected read/parse requests feed an up-to4096-byte buffer and returned count to the imported markup parser. No file is opened/read by the investigation, and open/read/parser/allocation success is not assumed.
+
+## Bounded field producers
+
+The registered callback0x1682c saves entryR1 atFP-52, R2 atFP-56, R3 atFP-40. Under ordinary GLib markup callback ABI and actual provider binding these are text, length and the supplied owner. The callback reads owner+168 as a list pointer. A selected first root comparison and later fullip_addressbook comparison qualify the selected field branch; valid object/list, proper list state and earlier intervening decisions remain premises. Start/end callbacks and list population bodies remain unexpanded; no complete schema or universal routing policy is claimed.
+
+At0x17334 the literal db_name is supplied to imported g_strcmp0 against the selected next list entry. The numeric-zero comparison result selects0x1735c/0x17360, forwarding saved text and length to strndup at0x17364; its result is stored through the saved owner at+76 at0x17374. The alternative db_compressed comparison at0x17384/0x1738c selects0x173ac→atoi0x173b0, then stores the returned word through the same saved owner at+80 at0x173bc. No text value, pathname value, integer value or allocation result is invented. A nonterminated/invalid text object, failed allocation or unexpected provider behavior remains outside the proven contract. The imported comparison/duplication/conversion bodies stay opaque.
+
+A later selected original main block requests a different configuration parser0x158f0 with lexical FP-40, reloads FP-40 and calls0xf96c at0x11468. The prior packet follows that caller to the consumer. This does not prove uninterrupted unchanged ownership from the early allocation through all unexamined code, natural admission, valid lifetime, successful configuration or effective field values. Those remain explicit premises; matching offsets and lexical caller slots are source facts, not a runtime observation.
+
+## Extra50 remains separate
+
+The packaged home/bticino/cfg/stack_open.xml has root and zero fullip_addressbook nodes. Only its separate safe extra fields are exported: enable0/check50/empty nocheck. The inspected initialized parser pathname is /var/tmp/stack_open.xml; no copying, identity or effective configuration relation to the packaged file is established. Neither db_name nor db_compressed proves an extra50 archive pathname. No key/password is guessed or exported; no second unzip site, output/transport/auth/session/framing/MQTT/libjel body or closed-route proxy is expanded.
+
+No original/vendor/native/helper/emulator/model/SQL/targetOS/network/bus/physical execution occurred. Only host static byte readers, readelf and selected host ARM disassembly read original bytes. No archive extraction/decryption occurred, no actual original database was recovered/generated and no remote write/upload occurred. Cumulative archive remains inherited one encrypted F450 support container and zero plaintext databases; parent alone controls archival changes. Original/synced/completed sources, histories, source manifest, Git staging/commits/push and older execution ledgers remain unchanged.
+
+## Reproduction
+
+Run python3 -B collect_config_v1.py --check. The collector checks source identities, ELF mappings, original words, pool/branch/PLT joins and whitelisted XML facts without original execution. Canonical outputs and collector are created exclusively and immediately copied exactly to first-candidate; the index is computed before opening itself. Initial canonical generation and read-only reproduction passed; no overwrite or failed canonical generation is claimed.

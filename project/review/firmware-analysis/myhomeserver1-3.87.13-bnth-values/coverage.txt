@@ -1,0 +1,11 @@
+# Bounded coverage
+
+| Area | New source closure | Remaining premise |
+| --- | --- | --- |
+|BNTH serialization|Own finalraw method/selector2/setpoint emission/freshbaseJSON/same-result reparse|Complete Json/member/map/assignment/string/provider/value/grammar/configured state|
+|Typed cached record|Own Thermostat RTTI/control+16, selected setpoint/default+32, same registry/newpair/matching-type update/consumer correspondence|Local branch eligibility, sameID/type, allocation/provider/lifetime/freshness/concurrency/alltype errors and physical source|
+|Candidate double provider|C1double/initBasic/emptyComments/type3 directreadback and actual PLT/self-definition identities|Runtime binding/interposition/canary/validobject/no-mutation, fullJSON/error/unwind and physical semantics|
+
+Original execution0 and semantic fixtures0. No complete runtime/physical or source/Device approval; no coverage percentage. No old predicate/XOR/table/teardown/22alias matrices counted as native progress. Missing configured extras80/81/94/95, positive shared reset, dispatcher/main identity, full ownership/provider/error/unwind/concurrency and physical evidence remain open.
+
+Preservation: serializer v1 rejected a versioned-symbol assumption for actual unversioned Json imports before outputs; record v1 generation/check rejected a32-bit decoder on an actual selected16-bitB.n before outputs. Exact old files/failure notes and parent pre-v2 snapshots remain, with NEWv2 strict exact-symbol and exact16-bit target handling. No firmware/source-outcome changes or weakened semantic guard. Later-transcribed failures do not authenticate nonexistent historical terminal files. Provider v1 first generation passed. All earlier corrections and unavailable MH202 intermediate histories remain scoped/unverified as before.

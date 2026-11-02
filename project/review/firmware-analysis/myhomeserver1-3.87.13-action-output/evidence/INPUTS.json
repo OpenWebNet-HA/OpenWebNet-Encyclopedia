@@ -1,0 +1,36 @@
+{
+  "/home/bticino/scheduling_manager/scheduling_manager": {
+    "bytes": 1406680,
+    "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26"
+  },
+  "current_curated_role": {
+    "bytes": 43560,
+    "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md",
+    "sha256": "bd64060e1e19f90eecad2808b62327847a0f541ae2fc46239bbda29a5efe5c98"
+  },
+  "image_accessor": {
+    "bytes": 5611,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/image_vfs.py",
+    "sha256": "890e3526e2fc29c630cb45dad15d91fecb6b32007c0be04e5af28c85a48f1ae4"
+  },
+  "inherited_class_activation": {
+    "bytes": 7346,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime/schema-activation/REPORT.md",
+    "sha256": "481a0997aeef396372be9146a2e6adf2bfe1f496a50e3a77f7297043f1ea58d3"
+  },
+  "inherited_duration_binding": {
+    "bytes": 8456,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/REPORT.md",
+    "sha256": "8bd31bb61d023eb7113c99ae99d0e3437be617a90f63d0992c322b1c8fbae779"
+  },
+  "inherited_raw_serializer": {
+    "bytes": 9612,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/REPORT.md",
+    "sha256": "9764cd1a79d78665b802ec3393e7261d247aca9bf4a0d165cd58feb7eb5bdfd8"
+  },
+  "unchanged_native_ledger": {
+    "bytes": 22496,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/RESULTS.json",
+    "sha256": "450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525"
+  }
+}

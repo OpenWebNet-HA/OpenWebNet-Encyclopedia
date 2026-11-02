@@ -1,0 +1,34 @@
+# MyHOMEServer1 compiled-action vector: independent source review
+
+Verdict: PASS for the selected static source contract. No correction requested. This review independently checked the current v2 original bytes, source dataflow and provenance; it is not original execution, a complete lifetime audit or a demonstration of successful allocation, thread completion, safe/unsafe interleaving, leakage, UAF or physical behavior. Author outputs and original files were read-only.
+
+## Source checks
+
+The read-only `python3 -B collect_vector_v2.py --check` reproduced all12 outputs and verified14 first-candidate-v2 copies. A separate ELF32 PT_LOAD mapper independently verified the original scheduler SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`, all7 raw span hashes,19 byte guards,7 decoded Thumb branch targets,2 R_ARM_RELATIVE entries, selected control RTTI and grouped exidx interval. The selected disassembly was read for control/count, append and growth semantics rather than relying only on equal output hashes. Original instruction execution, native helpers and semantic scene/heap models in this review:0.
+
+- Initializer0xa72d0 saves the incoming scene pointer;0xa7646/0xa7648 derives scene+128, while the temporary handle is initializerSP+592/+596. Control allocation16 and action allocation96 remain separate. The control stores both count words1, the same action pointer at+12 and the relocation-backed concrete SLEEP control vptr. Its selected dispose prefix0xb0b62 loads that actual action pointer. This is a concrete retained-owner source relation.
+- On the selected old-control0/new-control-nonzero path,0xa5980 increments control+4, then installs its pointer in the temporary pair. The subsequent0x1f8a4 call decrements the same count; prior2 bypasses last-count disposal. Thus1->2->1 is justified under the stated valid sequential/provider premises. The weak-count word+8 remains1 on this selected non-final release. Neither atomic count machinery nor actual allocator behavior was executed.
+- Available-capacity0xa7288 loads the actual action/control pair, zeroes both source words, stores the pair at old end and advances end8. Full capacity tailcalls0xb509c with position=old end and the same source pair. Both selected normal transfers leave the caller's temporary control0, so its post-append conditional release is skipped. This move establishes no additional owner for the separate raw-pointer worker state.
+- Growth computes count from end-minus-begin in8-byte units, bounds/clamps capacity, moves the incoming pair with sourcezero, then relocates prefix/suffix records through scalar/NEON branches. For the actual append position the suffix is empty. No per-element control increment or release occurs in this retained normal body. The old-buffer sized-delete request uses old capacity bytes, followed by installation of new header words. It is a raw-storage request under valid headers/separation and normal providers, not proof of heap reclamation, lifetime adequacy or all exception/unwind behavior.
+
+## Boundary and history checks
+
+The direct branch0xa72ba identifies selected growth entry0xb509c. Independently decoded exidx metadata instead encloses0xb4fd4..0xb51f4 and includes an earlier helper and terminal pool. It must not be presented as an exact source-function boundary. The retained v1 source asserts the incorrect exact start inside its in-memory build before any generation writes; FAILURE.json records generated_outputs0. Both preserved failed-source/report hashes match that record. Current v2 has separate immutable report/code/generated snapshots and refuses existing output creation. No historical execution was reconstructed or replayed here.
+
+All37 parent snapshot entries also match `integration/vector-pre-refinement/INDEX.json`. Its SCOPE.md correctly states that this parent capture occurred after author v2 already existed. The folder name is not evidence of a pre-v2 parent snapshot, and this review does not certify any unrecorded earlier bytes. The selected pointer/count/storage result remains distinct from natural class/configuration activation, effective dynamic providers, removal/replacement scheduling, concurrent mutation and whole receiver lifetime.
+
+## Exact reviewed pins
+
+Paths below are relative to `vector-ownership/`.
+
+| File | SHA256 |
+| --- | --- |
+| `REPORT.v2.md` | `60323fc53eed456b2a0b6a648e9bbf8e5a7158ee6180cd58534e249aa150c5f0` |
+| `collect_vector_v2.py` | `667387237443ffd224edb25a929e588157af299ad2bc5bbf657eefeb74a7bae1` |
+| `ORIGINAL_SOURCE.json` | `3ea3a8597cc5e86108f7068d547969a7704d72845f2d8e586a43ca2aca585bdf` |
+| `TRANSFER_LEDGER.json` | `d71933322d55dce0f2397af46213c5cb1d5af36e5f239fe6980dae83813922ac` |
+| `OUTPUT_MANIFEST.json` | `1a7d26fbd871c2e03ab6eb0e81ca22d3d1f198b7a76a4f1f923db3acb5b634d3` |
+| `first-candidate-v2/INDEX.json` | `fdc7b34c496bd5598ef0c69ab6f186f540275037264a47ef0df9d8eb565e2456` |
+| `failed-first-v1/FAILURE.json` | `6c274fc30e7bb9db788bd0659f9e3545f4ccb78fddcf8e8a99fb30a5171d5b8d` |
+
+Parent timing-scope SHA256 `071cefe7d16f94c6aa896f5d74ef4fc5619e03b22944c13767b12b3e0ca694df`; parent37-entry index SHA256 `2814e55aadea3d404323da34b62435b5ece506a53729e1ad4c282541fdf15f7e`.

@@ -1,0 +1,39 @@
+# Independent review — MH202 protocol run5
+
+**PASS for the exact raw-buffer alias and bounded marker-provenance findings.** No correction requested. This review retains the report's distinctions between pointer identity, object/text coherence, successful original parsing, helper nonwrite and the unknown prior marker byte.
+
+The author confirmed current artifacts stable. I read the collector/report, reproduced its strict read-only `--check`, inspected the selected original spans and independently checked span/word identities against verified original-image bytes using a separate ELF segment mapping. All18 generated outputs, six inputs, twelve spans, fifteen instruction words and two WHO literal checks pass. All20 current producer-manifest entries match. Separate host range arithmetic confirms the three explicit prologue fills do not overlap `[FP−224,FP−212)`. No original ARM/loader/JavaScript/PHP/vendor execution, emulation, code hooks or live file/status/process/socket/network/device activity occurred. Only this review was written.
+
+## Input-source and selected routing checks
+
+Original handler `0x1523c` stores incoming r0 using base `FP−28672` and offset−2232, yielding original-object slot FP−30904. The later original load/add/add/store sequence at `0x1533c..0x1534c` computes the incoming object's address plus `0x5e00+0x3c`, storing it in slot FP−30900. Candidate libopen `CreateMsgOpen` independently computes the same embedded raw-text offset before strcpy. Later strlen/parser input loads use that second slot. This closes the previously unresolved slot-source relation for the stated candidate layout and unchanged-object/pointer premise.
+
+The source relation does not prove the prior parsed fields equal what a new parse of its current text would return. The report explicitly preserves upstream construction, normalization, lifetime/no-mutation and provider assumptions, plus full raw-parser acceptance. The second pointer is an alias into the existing object, not proof of an independent input or a newly validated raw string. Historical run4 bounds remain unchanged.
+
+Original PIC calculations and branch targets identify the two specialized WHO text comparisons13/1013. A getter text1000 differs from each and takes the shown diagnostic route, under ordinary getter/strcmp contracts. The report neither executes nor assumes all other WHO bodies run. The two direct call sites' preceding fixed-size copies and handler arguments support the bounded ownership context; size0x624c is not itself an upstream parser/validation result and the report makes no indirect-caller absence claim.
+
+## Marker storage and collector bounds
+
+The selected prologue request ranges are correctly calculated:252 bytes from FP−3144,34 from FP−366, and34 from FP−401. None overlaps the12-byte result range beginning FP−224. The original stack allocation is not a memory-zeroing operation. Explicit nearby byte/word initialization does not by itself determine this result's contents.
+
+The saved original-word scan is appropriately described as an encoding locator. Its output identifies the two selected negative2228/2232 immediate-store forms and the exact direct FP−224 address/read forms. It includes in-range pools and is not instruction/control-flow/alias-complete. Composed bases, wider or overlapping writes, callee effects, indirect stores and prior state are correctly left outside that negative result. I do not interpret it as proof that no initialization exists.
+
+The second `getScsAddr` destination is FP−224. Applying the previously reviewed WHO1000 null-map nonwrite still requires a successful second parse yielding WHO1000 and the initialized candidate map/provider. Under that condition the marker preserves prior storage/callee effects; neither this alias nor the three zero-fill ranges assign zero or0xd5. The mode8/7 comparison remains a conditional selector from the earlier report, with no new collector-body or physical result claimed.
+
+The report therefore answers a real source-provenance question without turning the unfinished marker trace into a guaranteed uninitialized-memory defect, input rejection, physical failure or accepted/transmitted fixture. Its next questions correctly preserve upstream coherence, full parser, complete alias/callee-write analysis and any future collector slice as separate work.
+
+## Exact reviewed pins
+
+Paths are relative to `protocol/run5/`.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `31fd8aa084176230fd4facbe0aa8e64f7ba74309257500b90f2aa8ad2337cc4a` |
+| `collect_evidence.py` | `40d74c1123de06a7f0e2774fc1ed44d1ff0d0f33728bc5d21b40ed3330dcb225` |
+| `input-alias-and-route.json` | `81aeda03ea981834138434811abbfeaee8b44706d39ff86fa93f9766da290755` |
+| `host-marker-provenance-boundary.json` | `1b8097a3c1ae099371d26251e1372c79e14bbcc79a29e03007e595a9f2fdfc56` |
+| `bounded-frame-encoding-locators.json` | `7718af60384d4f704f5dcdd32aad12e6dc2a1d2738263b4813cb6ee58acd9afa` |
+| `original-spans.json` | `69623a0cc522ad5d256c0e0be7a85e09101e7ebdd0860076c91c0653fb9e7dce` |
+| `output-manifest.json` | `08847cc97a5388011f3011e1f43616d03ebdd435886fc524c3e422a68e9e6d38` |
+
+This review is tied to these exact bytes and selected source checks. It does not certify the complete handler, every caller/alias, effective runtime binding, recovery environment, full original parser, collector completion or hardware support.

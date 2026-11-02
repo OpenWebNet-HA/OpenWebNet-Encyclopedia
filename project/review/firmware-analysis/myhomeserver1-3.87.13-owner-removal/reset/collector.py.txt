@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+"""One new concrete receiver/caller edge; no whole-firmware reset absence claim."""
+import sys
+sys.dont_write_bytecode=True
+import pathlib,json,hashlib,struct,re,subprocess,importlib.util,argparse,os
+D=pathlib.Path(__file__).resolve().parent;W=next(x for x in D.parents if(x/'sources').is_dir());R=W/'work/myhomeserver1-firmware/3.87.13/research';V=R/'2026-10-31/image_vfs.py';S='/home/bticino/scheduling_manager/scheduling_manager';H=lambda z:hashlib.sha256(z).hexdigest();J=lambda x:(json.dumps(x,sort_keys=True,indent=2)+'\n').encode()
+sp=importlib.util.spec_from_file_location('resetcallvfs',V);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+def build():
+ v=m.ImageVFS();b=v.read_bytes(S);assert H(b)=='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26';ph=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);segs=[struct.unpack_from('<8I',b,ph+i*sz)for i in range(n)]
+ def off(a,n=1):return next(o+a-va for t,o,va,_,fs,*_ in segs if t==1 and va<=a and a+n<=va+fs)
+ def raw(a,n):return b[off(a,n):off(a,n)+n]
+ def u(a):return struct.unpack('<I',raw(a,4))[0]
+ def txt(a):o=off(a);z=b.index(0,o);assert z-o<128;return b[o:z].decode()
+ hp=v.root/v.resolve(S).lstrip('/');env=dict(os.environ,DEBUGINFOD_URLS='');out={};rs=[]
+ for name,a,z in [('selected-stack-caller',0xa79ea,0xa7a0a),('supplied-constructor-inline-string',0xb2bc4,0xb2c14)]:
+  t=subprocess.check_output(['objdump','-d','--dwarf=no-follow-links','-M','force-thumb',f'--start-address={a}',f'--stop-address={z}',str(hp)],text=True,env=env).replace(str(hp),S);t=re.sub(r' <([^>]+)>',lambda q:q[0]if'@plt'in q[1]else'',t);out['spans/'+name+'.txt']=t.encode();rs.append({'name':name,'start_VA':hex(a),'end_VA_exclusive':hex(z),'file_offset':hex(off(a,z-a)),'raw_sha256':H(raw(a,z-a))})
+ guards=[(0xa79f0,'0df58559'),(0xa79f4,'09f11809'),(0xa7a00,'4846'),(0xa7a06,'0bf0ddf8'),(0xb2bd4,'0446'),(0xb2bde,'04f1480a'),(0xb2c0a,'6364'),(0xb2c0c,'84f84830'),(0xb2c10,'c4f840a0')]
+ for a,z in guards:assert raw(a,len(bytes.fromhex(z))).hex()==z,hex(a)
+ def branch(a,t):
+  x,y=struct.unpack('<HH',raw(a,4));assert x&0xf800==0xf000;s=x>>10&1;i1=1-((y>>13&1)^s);i2=1-((y>>11&1)^s);d=s<<24|i1<<23|i2<<22|(x&1023)<<12|(y&2047)<<1;assert(a+4+d-((1<<25)if s else 0))&0xffffffff==t;return{'VA':hex(a),'target':hex(t),'bytes':raw(a,4).hex()}
+ calls=[branch(0xa7a06,0xb2bc4),branch(0xb2bea,0x2b7d0)]
+ whole=subprocess.check_output(['objdump','-d','--dwarf=no-follow-links','-M','force-thumb',str(hp)],text=True,env=env);q=re.compile(r'^\s*([0-9a-f]+):.*\b(bl|blx|b\.w)\s+b2bc4\b',re.M);hits=[{'VA':hex(int(x.group(1),16)),'mnemonic':x.group(2),'target':'0xb2bc4'}for x in q.finditer(whole)];assert hits==[{'VA':'0xa7a06','mnemonic':'bl','target':'0xb2bc4'}]
+ base=(0xb2bdc+4+u(0xb2d98))&0xffffffff;slot=base+u(0xb2d9c);header=u(slot);rt=u(header+4);nm=u(rt+4);assert(base,slot,header,rt,nm)==(0x1659a4,0x166b70,0x16004c,0x162f40,0x1155e8)and txt(nm)=='18BncuSceneCondition'
+ rel=subprocess.check_output(['readelf','-rW',str(hp)],text=True,env=env);row=next(x.strip()for x in rel.splitlines()if x.startswith('00166b70 '));assert'R_ARM_RELATIVE'in row
+ pins={S:{'sha256':H(b),'bytes':len(b)}}
+ for p,k in [(V,'image_accessor'),(R/'2026-10-31-cancellation/stop-domain/REPORT.md','prior_stop_domain'),(R/'2026-10-31-lifetime/reset-alias/REPORT.md','prior_receiver_classification'),(R/'2026-10-31-lifetime/reset-alias/RECEIVER_LEDGER.json','prior_receiver_ledger'),(W/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md','curated_product_context')]:z=p.read_bytes();pins[k]={'path':str(p.relative_to(W)),'sha256':H(z),'bytes':len(z)}
+ ledger=json.loads((R/'2026-10-31-lifetime/reset-alias/RECEIVER_LEDGER.json').read_bytes());assert'0xb2c0c'in ledger['local_string_or_conversion_notes']
+ out['ORIGINAL_SOURCE.json']=J({'image':S,'spans':rs,'guards':[{'VA':hex(a),'bytes':z}for a,z in guards],'direct_calls':calls,'PIC_GOT_RTTI':{'pool_base':'0xb2d98','ADD_PC':'0xb2bdc','base':hex(base),'pool_slot':'0xb2d9c','slot':hex(slot),'header':hex(header),'RTTI':hex(rt),'name_pointer':hex(nm),'name':txt(nm),'relative_relocation':row}})
+ out['BOUNDED_CALLER_QUERY.json']=J({'method':'Host objdump -d force-thumb linear rendering; exact numeric direct BL/BLX/B.W target0xb2bc4. Positive hit independently decoded from originalbytes.','target':'0xb2bc4','hits':hits,'selected_receiver':{'caller':'0xa7a06','input_R0':'current SP4256+24 = SP4280','constructor_saved_receiver':'b2bd4 R4=R0','selected_store':'b2c0c byte0 atreceiver+72','effective_selected_byte':'current SP4352','premises':['ordinary validstack distinctfromstaticBSS','opaquevirtualcall/basehelper normalreturns andABI callee-preservation'],'exclusion':'Only this actualselectedcaller path, not allcallers/aliases ofconstructor'},'shared_domain':{'base':'0x1677b8','flag':'0x167800','known_startup_zero':'0x1548e inheritedonly','known_stop_one':'0xcd706 inheritedonly','new_positive_reset':'UNRESOLVED'},'limits':['linearcode/data ambiguity handledonlyforpositivehit','indirectcallers/thunks/entryaliases/computedtargets unclosed','no747widerstoreor22rowmatrixrerun/reclassification','no completewriter/resetabsence/permanentlatch/defect/runtimeclaim'],'method_counts':{'original_execution':0,'host_semantic_cases':0}})
+ out['INPUTS.json']=J(pins);out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(pathlib.Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes()),'outputs':{n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()},'counts':{'spans':2,'guards':len(guards),'direct_calls':len(calls),'direct_target_query_hits':len(hits),'PIC_GOT_RTTI_chains':1,'inputs':len(pins),'original_execution':0}});return out
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');ck=ap.parse_args().check;out=build()
+ if ck:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  for n,r in json.loads((D/'first-candidate/INDEX.json').read_text()).items():z=(D/n).read_bytes();assert z==(D/'first-candidate'/n).read_bytes()and H(z)==r['sha256']and len(z)==r['bytes'],n
+ else:
+  s=D/'first-candidate';assert not s.exists(),'refuse firstsnapshot overwrite'
+  for n in out:assert not(D/n).exists(),'refuse generatedoverwrite'
+  cp={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),pathlib.Path(__file__).name:pathlib.Path(__file__).read_bytes()};ix=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in cp.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in cp.items():p=s/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (s/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':ck,'outputs':len(out),'original_execution':0}))
+if __name__=='__main__':main()

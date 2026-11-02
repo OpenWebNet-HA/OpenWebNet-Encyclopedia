@@ -1,0 +1,48 @@
+{
+  "normal": {
+    "SQLite3": [
+      {
+        "original_gid": "1000",
+        "original_inode": "6799",
+        "original_mode": "-rw-rw-r--",
+        "original_uid": "1000",
+        "path": "home/bticino/matrix_mx/MHCatalogue.db",
+        "sha256": "79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb",
+        "size": 2233344
+      }
+    ],
+    "counts": {
+      "ELF": 858,
+      "SQLite3": 1,
+      "other": 5065
+    },
+    "database_extension_candidates": [
+      "home/bticino/matrix_mx/MHCatalogue.db"
+    ],
+    "regular_files": 5924,
+    "signature_scope": "ELF, SQLite3, REDIS and ZIP local-header prefixes; not all embedded/renamed/container database formats"
+  },
+  "recovery": {
+    "SQLite3": [
+      {
+        "original_gid": "1000",
+        "original_inode": "32730",
+        "original_mode": "-rw-rw-r--",
+        "original_uid": "1000",
+        "path": "home/bticino/matrix_mx/MHCatalogue.db",
+        "sha256": "79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb",
+        "size": 2233344
+      }
+    ],
+    "counts": {
+      "ELF": 740,
+      "SQLite3": 1,
+      "other": 4643
+    },
+    "database_extension_candidates": [
+      "home/bticino/matrix_mx/MHCatalogue.db"
+    ],
+    "regular_files": 5384,
+    "signature_scope": "ELF, SQLite3, REDIS and ZIP local-header prefixes; not all embedded/renamed/container database formats"
+  }
+}

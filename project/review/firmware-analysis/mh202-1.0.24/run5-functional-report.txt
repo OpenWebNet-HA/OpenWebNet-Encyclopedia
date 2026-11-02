@@ -1,0 +1,66 @@
+# MH202 1.0.24 — CHKTIME source branch, argument extraction and numeric result
+
+Status: bounded static finding; original execution **0**. This batch follows one interpreter source branch into its actual helper and result store. It does not establish a complete accepted script grammar, a configured scenario or a working clock/timer.
+
+## Material result
+
+The actual `bt_script` `=CHKTIME` branch calls `CHKTIME(char*,char*)` and stores the returned number in the selected numeric record. In the packaged `libdomotica` implementation, exact first argument `SYSTIME` selects current local hour/minute comparison against two fixed-position fields of the second string. The source returns **0 for equal hour/minute, 1 when current hour/minute is later, 2 when earlier**, and **−1 for another first argument**. This is a three-way numeric comparison, not a Boolean condition or a duration timer.
+
+The original argument-extraction calls include overlapping `strcpy` source/destination ranges. Static call arguments and a deliberately hypothetical forward-copy model are recorded separately; neither proves the actual libc result or that the supplied current-line candidate is a valid complete DSL statement. The missing configured extra/4 assets remain important to that gap.
+
+## Provenance and reproduction
+
+Fresh MH202 normal-image inputs, read through the verified `ImageVFS` accessor:
+
+| Original image path | Bytes | SHA-256 |
+|---|---:|---|
+| `/home/bticino/bin/bt_script` | 14884 | `f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4` |
+| `/home/bticino/lib/libdomotica.so.0.0` | 42908 | `5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09` |
+
+From the research root:
+
+```sh
+python3 functional/run5/collect_evidence.py --check
+```
+
+The collector checks 12 output files plus their manifest, 3 original spans, 28 exact instruction words, 5 safe literal references and 6 finite host comparison cases. It uses host binutils and Python; no firmware instruction or original libc operation executes. `input-hashes.json`, `original-spans.json` and `output-manifest.json` pin the evidence. The manifest excludes this report and independent reviews.
+
+## Actual source branch and call arguments
+
+`chktime-prefix-and-extraction.txt` covers `bt_script` VA `0x9da0..0x9e58` (exclusive end). At `0x9da4..0x9db4`, it compares the first **8** current-line bytes against literal `=CHKTIME` (`0xaeff`, pointer word `0xa9b4`) and proceeds only for zero `strncmp` result. This is a prefix check; it does not itself validate a closing delimiter or complete statement.
+
+The selected path then performs these actual operations:
+
+1. Clears 10 bytes at `sp+53` (`0x9dcc..0x9dd8`). Finds the first `(` in the current global line and requests `strcpy(line, found+1)` (`0x9ddc..0x9df0`). Source and destination can overlap; no null-result branch appears between this search and copy.
+2. Requests `strncpy(first_buffer,line,10)` (`0x9df4..0x9e00`), then `strtok(first_buffer,",")` (`0x9e04..0x9e0c`). Its returned pointer is unused; the buffer itself is later passed as argument 0. In the bounded model, the comma lies within these ten bytes and terminates the selector.
+3. Finds the first `"` in the changed line and requests `strcpy(line,found+1)` (`0x9e10..0x9e24`), another potentially overlapping copy. Calls `strtok(line,"\"")` and requests `strcpy(line,returned_pointer)` (`0x9e28..0x9e3c`).
+4. Passes the first buffer in `r0` and the changed global line in `r1` at `0x9e44..0x9e50`. This calls the executable's imported `_Z7CHKTIMEPcS_` PLT entry `0x91f4`; the selected library defines that exact symbol at `0x1d60`, size 792. This is an observed declaration/call/provider match, not a full runtime dependency/binding proof.
+5. `0x9e40..0x9e4c` forms the selected numeric-record pointer from `Valori_num` and `r9`. After the helper, `0x9e54` branches to `0xa480`, which stores **r0 at record+4**, then continues at `0xa4f4`. `numeric-return-store.txt` saves the store. The caller does not reinterpret the returned code as Boolean in this selected path.
+
+`conditional-extraction-model.json` uses the current RHS-line candidate `=CHKTIME(SYSTIME,"0000000012:34")`. Under the explicitly hypothetical suffix-copy/token model, it supplies `SYSTIME` and `0000000012:34`. The first eight zero characters are dummy bytes chosen solely to meet the observed fixed-index accesses. They establish no calendar format. This model runs no `strcpy`, original interpreter or packaged script; outer numeric-variable parsing, actual copy behavior and deployed source syntax remain open.
+
+## Complete selected helper and exact comparison
+
+`chktime-complete-body.txt` saves the entire `CHKTIME` body and literal pool (`0x1d60..0x2078`). PIC arithmetic at `0x1d78` plus the original word at `0x2054` gives base `0x12114`; pointer `0x2058` resolves to exact literal `SYSTIME` at `0x91b8`. `strcmp` at `0x1d9c` branches on nonzero at `0x1da8` to the parameter-error path, returning −1 (`0x203c..0x2050`).
+
+For exact `SYSTIME`, `0x1de0` calls imported `time` with a stack pointer; `0x1dec` passes that pointer to imported `localtime`. The helper then uses the returned structure pointer without an intervening success/null check. Its fields at offsets **8 and 4** correspond to `tm_hour` and `tm_min` under the ordinary selected 32-bit libc ABI; no libc or environment executes here.
+
+| Target field extraction | Current field | Branch/result |
+|---|---|---|
+| bytes **8,9**, `sprintf("%c%c\n")`, `atoi` (`0x1df8..0x1e48`) | structure word+8 | signed less at `0x1e54` → return2 (`0x2004`); unequal after that at `0x1e74` → return1 (`0x1fcc`) |
+| only when hours equal: bytes **11,12**, same format/`atoi` (`0x1e78..0x1ec8`) | structure word+4 | signed less at `0x1ed4` → return2 (`0x1f94`); unequal after that at `0x1ef4` → return1 (`0x1f5c`); equal → return0 (`0x1f24`) |
+
+The original format literal is `%c%c\n` at `0x9204` (pool word `0x2064`). The comparison is lexicographic by current local hour then minute. The complete body does not consult seconds/date fields or inspect the first eight target bytes, validate a `:` delimiter, check string length, enforce hour/minute ranges, or implement an overnight interval. These are scoped observations of this helper, not assertions about validation elsewhere.
+
+`host-local-models.json` records six explicit cases: 12:34 vs12:34→0; 12:35 vs12:34→1; 12:33 vs12:34→2; 13:00 vs12:59→1; 11:59 vs12:00→2; non-SYSTIME selector→−1. It transcribes ordinary two-digit inputs and signed branches only. It does not model malformed `atoi`, null `localtime`, timezone selection, DST, clock changes, interruption or physical scheduling. Native helper invocation/instruction count remains **0**.
+
+## Confidence, contradictions and ranked next questions
+
+High confidence: original prefix length and extraction call arguments; matching imported/defined symbol; three-way helper branch/return values; fixed target positions; direct numeric result store. Conditional: ordinary libc `struct tm` field interpretation and selected symbol provider. Unresolved: complete valid source syntax, actual overlapping-copy result and effective configured script/clock environment.
+
+No contradiction with run4's SLEEP units or run2's IIF observations: CHKTIME is a separate numeric helper; no new claim connects its return codes to complete Only-if semantics. This batch does not examine CHKDATE or repeat SLEEP arithmetic.
+
+1. Recover an actual configured `.spt` asset / exact generator format before proposing executable DSL examples or interpreting the dummy target prefix as a date.
+2. Trace CHKDATE separately for its own target positions, year/month/day/weekday comparison and return codes; no calendar equivalence can be transferred from CHKTIME.
+3. Establish how stored CHKTIME numeric results feed an actual guarded action through the outer interpreter and IIF parser, preserving the overlapping-copy/runtime boundary.
+4. Resolve exact runtime libc/provider and local clock/timezone configuration only through a separately authorized bounded route; no runtime conclusions follow from these static references.

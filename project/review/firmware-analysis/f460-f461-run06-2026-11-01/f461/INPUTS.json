@@ -1,0 +1,78 @@
+{
+  "originals": {
+    "helper": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          9864,
+          9864,
+          65536
+        ],
+        [
+          1,
+          6,
+          11368,
+          76904,
+          76904,
+          928,
+          936,
+          65536
+        ]
+      ],
+      "bytes": 14152,
+      "requested_image_path": "/home/bticino/lib/libautomation.so.1",
+      "resolved_image_path": "/home/bticino/lib/libautomation.so.1.1.0",
+      "sha256": "da1cc59320d4175db85d99b9986fc371c7076e0dede02ef62daf0ada5c4914ec"
+    },
+    "plugin": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          27368,
+          27368,
+          65536
+        ],
+        [
+          1,
+          6,
+          31456,
+          96992,
+          96992,
+          1864,
+          1872,
+          65536
+        ]
+      ],
+      "bytes": 35240,
+      "requested_image_path": "/home/bticino/libcoso/libplug_automation_tr.so",
+      "resolved_image_path": "/home/bticino/libcoso/libplug_automation_tr.so",
+      "sha256": "d7d361798ccec65843bd41c9ad7b8897645a334b0cd08121d372949f78eac277"
+    }
+  },
+  "references": {
+    "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md": {
+      "bytes": 39923,
+      "sha256": "89f0a1cd681924ec8bf6b093c4c39d3d037b14cd416547b8111bffecd2eb5323"
+    },
+    "work/f461-firmware/2.0.11/analysis/normal-symlinks.json": {
+      "bytes": 142861,
+      "sha256": "a6c0efe9a99158a93014fee307e9690fbbac8ef642d40d14d24ca760db4077bf"
+    },
+    "work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/REPORT.md": {
+      "bytes": 8532,
+      "sha256": "295e1e82d037adfaa3e6846fa3de579232dc5cbaefdd88734a7d294877b19631"
+    },
+    "work/f461-firmware/2.0.11/research/2026-11-01/image_vfs.py": {
+      "bytes": 5602,
+      "sha256": "6c54cac0515e0c74409e802fd8f4bf7a23caa2fff876287333917f598f72106a"
+    }
+  }
+}

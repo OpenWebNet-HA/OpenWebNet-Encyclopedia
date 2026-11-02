@@ -1,0 +1,94 @@
+# MH202 run16 — original COSO pointer parser and query serializer
+
+Three strict private CPU entries now narrow the explicit parser/serializer premises in COSO15 and thermo15. The same-build candidate is **libopenmsg.so**, with original `buf_to_openmsg` at `0x2704`, not either previously studied C++ parser class. Its actual48-byte pointer/string object, original allocator wrapper and field helpers run; no classifier or parsed field is supplied by the host. The WHO4 query's **actual returned object** is then passed unchanged to original `openmsg_to_buf`.
+
+| New top-level original call | Supplied text / object | Native result under stated primitives/providers |
+| --- | --- | --- |
+| Parser `0x2704` | `*2*0*0##`, initially null output-pointer slot | return0; WHO`2`, WHAT`0`, WHERE`0`, kind1 |
+| Parser `0x2704` | `*#4*1*0##`, initially null output-pointer slot | return0; WHO`4`, WHERE`1`, DIM`0`, kind3 |
+| Serializer `0x1e9c` | same native-returned WHO4 object from previous entry, no field reseeding | return0; exact `*#4*1*0##`;48 object bytes unchanged |
+
+These are synthetic ordinary inputs in an isolated analysis model, not captures, complete COSO callback executions, transport frames, observed gateway commands or physical acceptance. Native kind1/kind3 here belong to **COSO/libopenmsg**, distinct from libcommon130/libopen90 C++ object enums/layouts and the64-byte COSO envelope record.
+
+## Actual candidate providers and object layout
+
+Original COSO executable and libcoso import `buf_to_openmsg`; both directly NEEDED `libopenmsg.so`. The thermo TR imports the selected parser/serializer as well. Fresh original definitions are `buf_to_openmsg 0x2704`, `openmsg_to_buf 0x1e9c`, and `new_open_msg 0x1c80` in `/home/bticino/lib/libopenmsg.so`. Selected symbol/relocation/direct-NEEDED lines are retained. This is the concrete same-build candidate under ordinary packaged search/no overrides, not a full dynamic plugin closure, live loader/interposition or observed process binding.
+
+Original `new_open_msg` requests `g_malloc0(48)` at `0x1c88..0x1c8c`, stores the returned pointer through the caller's pointer slot at `0x1c94`, and explicitly initializes its fields. The field relations used by original code are:
+
+| Parsed-object offset | Binary source use |
+| --- | --- |
+|0 /4|WHO char pointer / WHO parameter-list pointer|
+|8 /12|WHAT char pointer / WHAT parameter-list pointer|
+|16|WHERE char pointer|
+|20 /24|optional selector char pointers|
+|28|optional command-tail char pointer|
+|32 /36|DIM char pointer / DIM parameter-list pointer|
+|40|value-list pointer|
+|44|numeric parsed kind|
+
+For both executed inputs, all four list pointers at4/12/36/40 and optional pointers20/24/28 are null. Ordinary command DIM is null; query WHAT is null. Those are original parser readbacks, not prefilled fields. The private malloc model supplies zeroed storage as GLib malloc0 promises, and the original wrapper/parser performs its actual stores.
+
+## Original grammar and real ASCII table data
+
+The ordinary parser uses direct character/token instructions, not an unknown regex engine or registry. It calls normal prefix/suffix string helpers, checks the actual delimiters and scans original input characters. Its numeric-character test at `0x278c..0x27b0` follows two original data-pointer indirections and tests mask`0x0008` (bit3) of a GLib halfword entry. The host does not replace that classifier or field extraction.
+
+Original source/relocations identify:
+
+* libopenmsg GOT `0xee78`: R_ARM_GLOB_DAT `g_ascii_table`;
+* candidate GLib exported pointer cell `0xe50c8`, whose original word points to table `0x9ed8a`;
+* that cell's original R_ARM_RELATIVE relocation;
+* the original512-byte character table, read from the packaged GLib ELF.
+
+The harness maps the original GLib data at private base `0x10000000`, resolves the libopenmsg GOT to the relocated exported cell, and adds that private base to the cell's original table pointer. These are **two explicit setup data relocations per private session**, not executed loader code, callbacks or firmware instructions. There are two private sessions/four setup writes total. The serializer reuses the query's session and adds no setup relocation. Original GLib mappings are read-only/nonexecuting, and a native-read guard permits only that4-byte exported cell and512-byte table. Each parser makes four recorded original GLib data reads: the cell and the three selected digit entries. No original GLib code executes.
+
+Original `buf_to_openmsg` invokes real `new_open_msg` through its redirected PLT at `0x27d8`. The ordinary command branch stores kind1 at `0x2834/0x2838`, then executes its own WHO/WHAT/WHERE token/field paths. The query branch invokes original WHO helper `0x23b0` and WHERE helper `0x2488`; it extracts DIM into object+32 and, with the original value list still null, stores kind3 at `0x2a90/0x2a98`. Exact original helpers, classification, allocation wrapper and pointer stores execute; only ordinary string/allocation operations are modeled.
+
+## Native query serializer uses the actual parsed object
+
+The third entry is deliberately separate in the result ledger: top-level index2 consumes the object produced by parser entry1 in private session1. It does not reconstruct a postparsed fixture. The48 object bytes are checked unchanged after serialization.
+
+Original serializer `0x1e9c` reads the actual null parameter/selector lists, WHO/WHERE/DIM pointers and kind3. It duplicates the ordinary WHO/WHERE strings, obtains the DIM copy using actual original format `%s`, then its kind jump table `0x1fb0..0x1fcc` selects `0x202c`. Original format `*#%s*%s*%s##` is passed with those actual pointers to the finite printf primitive model at `0x2040`; `0x2048` stores its allocated output pointer. Normal cleanup precedes the original explicit return0 at `0x2020`.
+
+The cleanup-only `free_gchar` model is separately audited against its candidate original libutils wrapper `0x1904..0x192c`: for a valid pointer slot containing a nonnull allocation, free it and clear that slot; a null pointed value returns without a store. It maintains a private allocation/free ledger rather than invoking an OS allocator. The model's r0 is ignored by this selected original continuation, which finally sets return0 itself. This wrapper is not misrepresented as native execution or central parser/serializer grammar.
+
+This narrows thermo15's serializer-return0 premise for exactly this native-produced WHO4/WHERE1/DIM0/kind3 object. It does not execute thermo plugin entry/configuration, scsDest, its output records or any STM/transport. Likewise COSO15 now has an original parser/kind result for its selected `*2*0*0##` text under these conditions, but the whole nonnull record replacement, synchronizer registry, callback/queue identity and natural correlation remain separate.
+
+## Containment and primitive scope
+
+The harness is fresh MH202 code/layout work; it reuses only the RECORD-verified independent Unicorn2.1.4 analysis package. Its historical tool-storage location under the F454 tooling directory supplies no F454 firmware, layout or harness.
+
+Original libopenmsg image bytes are read/execute-only; original GLib mappings are read-only/nonexecuting. Private stack/input/output slots/heap are the only writable regions. Native PCs are allowlisted to the actual normal parser, allocator wrapper, selected field helpers and serializer. Unknown calls, interrupts and invalid/protected accesses abort; each top-level entry has100,000-hook and100,000-emulator-instruction caps. C-string reads are bounded4,096 bytes; modeled allocations fit a64KiB private heap and each allocation is at most4,096 bytes. Output slots are initially null for parser entries, so existing-object free/replacement branches are not pretended to execute.
+
+Ordinary primitive models are strlen, prefix/suffix checks, comparison-sign g_strcmp0, strchr, bounded g_strndup, g_strstr_len with selected length−1, successful g_malloc0(48), g_strdup, two exact source-verified printf formats, and the cleanup-only free_gchar contract above. They do not implement a replacement grammar, numeric field classification, registry, regex or invented object state. Lists remain null in these cases; unexpected list/other imports abort. No original libc/GLib, configured plugin initialization, allocation failure/error/NULL-input/Unicode/replacement cases or full accepted-language domain is tested. No target OS/process/syscall/network/device or authentication/handshake/caller-framing branch is executed.
+
+## Exact accounting
+
+| New top-level entry | Original instruction visits | Ordinary C/GLib primitive callbacks | Redirect to original definition | EXIT | Stops | Code hooks |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| WHO2 ordinary parser |266|19|1|1|0|287|
+| WHO4 DIM0 query parser |287|18|1|1|0|307|
+| WHO4 serializer on its actual object |78|9|0|1|0|88|
+| **Run16:3 top-level entries** |**631**|**46**|**2**|**3**|**0**|**682**|
+
+The two original `new_open_msg` calls are nested parser calls, not extra top-level entries. Two private sessions/four setup data-relocation writes are separate from these counters. Memory-read observation hooks are not code-hook callbacks. Replays do not accumulate new corpus coverage. `parser-results.json` explicitly records `top_level_entries=3`, parser_calls2, serializer_calls1, a three-element runs array with zero-based entry/session indices, all original-PC/primitive/redirect arrays and actual object readbacks.
+
+## Provenance, history and reproduction
+
+Principal originals:
+
+| Normal image path | SHA256 |
+| --- | --- |
+| `/home/bticino/lib/libopenmsg.so` | `7a4793f740c4cb41a774bf06e3af3acf4bd8a7606c5329ac70d7e0e7fd64bcd7` |
+| `/usr/lib/libglib-2.0.so.0.2800.7` | `029c2a7913131a84c46958d9ed445cb8a79dd1c8abc61116321badb7ad2735c0` |
+
+`input-hashes.json` pins13 original/research inputs, including six fresh ELF files, accessor, immutable COSO15/thermo15 reports, harness/results/tool identities. `original-spans.json` pins six original spans by VA/file offset/raw hash;21 words, four safe literals, original table and provider/relocation metadata are independently asserted. The host collector produces20 deterministic evidence outputs. The native harness produces two further outputs. The author manifest pins all finished artifacts/history and excludes itself/future peer review.
+
+An initial collector-only draft had missing whitespace in a Python conditional expression and did not parse or write outputs. Its exact bytes/hash are retained under `development-before-collector-fix/`. The final metadata selection also explicitly retains the symbol-free GLib R_ARM_RELATIVE row. No original execution result, field interpretation or prior dossier changed in that collector preparation. A later self-review replaced ambiguous “bit8” wording with exact mask`0x0008` (bit3), matching original `tst r3,#8`; exact pre-refinement report/collector/table metadata/manifest bytes are retained under `development-before-mask-wording/`. Native code/harness/results/counters are unchanged. Earlier firmware/sources/reports remain read-only.
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run16/collect_evidence.py --check
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run16/emulate_pointer_parser.py --check
+```
+
+Both pass. The first performs host source reads/disassembly/saved-array recounts only. The second strictly reproduces the three private original entries and saved bytes. The remaining joins are effective dynamic provider/registry state and actual core/plugin/record/callback consumers; parser success for two ordinary strings is not physical feature support or a real causal transaction.

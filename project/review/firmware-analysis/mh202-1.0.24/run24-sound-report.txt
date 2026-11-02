@@ -1,0 +1,81 @@
+# MH202 run24 — ordered DIM15 application values produce utility260
+
+## Result and execution boundary
+
+A concrete **later application** call can request the private utility260 value that run23 supplied as a premise. The selected original path requires parsed numeric **kind5**, exact DIM text **15**, successful local address-check return and a normal ordered value list at parsed+40. Its **tenth list node (zero-based9)** is converted with `strtol(...,NULL,10)`, preserved in r5, passed as outgoing stack20 to `init_status`, then loaded and stored at private260. A missing tenth node or NULL tenth data defaults that word to0. A selected conversion return7 remains7 at the store; this branch does not normalize it to Boolean1.
+
+The eighth and ninth values independently become private252/source and256/ordinary. The optional eleventh word is a different argument, default1. The original initial `sm_init` call that supplied utility0 remains true; it is a different callsite from this later conditional producer. This new source join does **not** prove that either call runs naturally, that the ordered values are accepted by a raw parser, or that a service/device activates.
+
+Original ARM/vendor/parser/JavaScript/PHP execution, native helper entries, primitive callbacks, hooks and target/physical operations added here are all **0**. This is verified ImageVFS host reading, binutils and four finite converted-value/default ledgers. No transport, connection, session, authentication or framing internals are inspected. Prior sound23 and all older dossiers/originals remain unchanged.
+
+## Reproduction and first-candidate preservation
+
+`python3 -B work/mh202-firmware/research/2026-10-30/sound/run24/collect_enable_v1.py --check` reconstructs exact evidence bytes without writing. Principal original normal-image file: `/home/bticino/libcoso/libplug_multi_stm.so`, SHA256 **8b9f393f5b8b4f47645821d7e7eedcc2cc15351f76d10fc8d8c8f6c38cd69128**. The collector pins the accessor and immutable sound21/sound23 reports, maps VAs through PT_LOAD and saves exact raw span hashes/instruction words and selected relocation rows.
+
+Initial generation refuses any existing output destination, uses exclusive creation and immediately copies report, collector, outputs/manifest to **initial-generated-v1/** with a hash index. The candidate and original evidence are not silently corrected. Any later requested correction requires parent-controlled exact preservation and a separate new version before changes. The manifest includes the report and collector identities as well as evidence.
+
+## 1. Application and local-check premises
+
+Application entry **gest_status_from_openserver0xfc04..0xfc9c** loads descriptor+56 into a local private-pointer slot at SP192, borrows the input envelope and requests ordinary clock data. This batch supplies representation56=3, so the direct parsed pointer is used. The representation2 parser route is not taken/executed or promoted into accepted grammar.
+
+Original0xfc70 requests `check_open_multi`; only return0 continues. It loads parsed kind+44 and equality5 at0xfc8c/0xfc90 selects0xfe54. The following **0xfe54..0xfe7c** compares DIM pointer parsed+32 character-by-character with ASCII1,ASCII5,NUL. This is exact text15, not a range test or an assumption that kind5 means WHO5.
+
+A coherent selected WHERE text1 and NULL selectors20/24 supplies a narrow local-check source path: **0xbacc..0xbaf4** borrows/duplicates WHERE; **0xbb94..0xbbe8** calls `check_multi_where` and, with its return0, kind5 bypasses the kind1 WHAT-check branch. Selected WHERE1 helper source **0xb9b8..0xba1c** returns0 on its displayed literal1 branch. Allocation/string/helper/container success and safe coherent pointers are premises; there is no complete parser or malformed-input validation.
+
+The supplied parsed WHO is22, but the DIM15 branch displayed here does not itself establish an exclusive WHO22 admission test. Prior registration declares criteria22 and8. Actual outer descriptor/WHO routing, active registry, coherent full raw input and context lifetime remain unexecuted and conditional. Numeric parsed kind5, DIM text15, criterion22/8 and private fields are separate namespaces.
+
+## 2. The actual list and ordinal walk
+
+At **0xfe94..0xfea4**, the original loads **parsed+40** and calls `g_list_first`. Each later traversal loads node+4 as next, and node+0 as its data pointer. This is an actual ordered linked-list walk, not the fixed64-byte envelope, parsed kind, WHAT parameter list+12 or manager numeric-variable array.
+
+The selected branch explicitly accesses up to11 value nodes, with early missing-node/default continuations. It has no displayed total-length equality check. An outer parser/registry may impose constraints that this branch does not show; this result is not a public minimum/exact/maximal accepted wire-value count. Nodes after the eleventh are not consumed by the displayed call-argument path; no complete-input validation is inferred.
+
+| One-based value | Selected conversion/use | Local NULL/missing behavior |
+|---|---|---|
+|1|decimal full word→init argument r1|0|
+|2|decimal low nibble→caller local byte SP199 low nibble, packed into r2|NULL leaves that caller byte unchanged; missing node skips to suffix defaults|
+|3|decimal low byte→caller local byte SP198, packed into r2|NULL leaves that caller byte unchanged; missing node skips to suffix defaults|
+|4|first character→htod low byte; two tests produce packed r3 bits0/4|missing/NULL produces two zero bits|
+|5|first character→htod low byte; two tests produce outgoing stack byte0 bits0/4|missing/NULL produces two zero bits|
+|6|decimal low byte→r9→outgoing stack4|0|
+|7|decimal low byte→SL→outgoing stack8|0|
+|8|decimal full word→r7→outgoing stack12→private252|0|
+|9|decimal full word→r6→outgoing stack16→private256|0|
+|**10**|**decimal full word→r5→outgoing stack20→private260**|**0**|
+|11|decimal full word→LR→outgoing stack24|1|
+
+For values4/5, the two original tests are htod result5..9 and result4-or9; they are numeric source bits, not assigned physical functions here. The halfword combining values2/3 also preserves unresolved caller-local bits, including the unassigned high nibble of byteSP199 in this selected source. The table is a set of local assignments/defaults, **not a claim that every shortened or NULL-containing configuration is completely initialized, valid or safe**. No invalid-script/runtime defect outcome is inferred.
+
+Missing-node paths **0x10910..0x1099c**, **0x11578..0x11584** and **0x10f00..0x10f08** supply the displayed suffix defaults. The finite model deliberately supplies coherent earlier values and does not invent those packed-byte contents or emulate the whole reinitializer.
+
+## 3. Exact tenth-value and call-stack dataflow
+
+After values6..9, **0x100a0** loads the next node. This is the tenth, after nine preceding data-node positions;0x100a4 tests NULL and0x100a8 branches to0x10990 for the missing-node default. If the node exists, **0x100ac..0x100b8** tests its data pointer: NULL sets r5=0 and rejoins0x100cc. NonNULL data is passed at **0x100bc..0x100c4** to imported `strtol`, with null end pointer and base10. **0x100c8** copies its return directly to r5. There is no mask, Boolean coercion or selected numeric range check before the subsequent store.
+
+The optional next node is handled at **0x100cc..0x100f0**. Missing or NULL data takes **0x10f00**, setting LR=1; a normal nonNULL conversion supplies LR instead. This eleventh value does not replace r5.
+
+The call preparation **0x100f4..0x10140** passes **r0=&local SP192**, initially holding descriptor+56. Selected stores put r7 at stack12, r6 at stack16, r5 at **stack20** and LR at stack24. Original0x10140 calls `init_status` through PLT0x1b7c; relocation/definition metadata identifies the same-build candidate **0xf588**. Real binding/interposition, ordinary target ABI and normal helper completion remain premises.
+
+The callee prologue **0xf588..0xf5a8** saves36 register bytes and allocates116 local bytes, a total SP delta152. Thus the later loads are target-instruction stack arithmetic, not a host structure-size assumption:
+
+| Caller outgoing offset | Callee current-SP offset | Store |
+|---|---|---|
+|12|164 at0xf9a4|private252 at0xf9ac|
+|16|168 at0xf9b0|private256 at0xf9b4|
+|20|172 at0xf9b8|**private260 at0xf9c0**|
+
+The callee dereferences the passed private-pointer slot; it does not interpret this argument as the original descriptor itself. `init_status` reinitializes many other fields and requests other helpers; this batch proves these selected stores and does not replace that whole function with a one-field write or execution claim.
+
+## 4. Caller return and relation to run23
+
+After the initializer request, **0x10144..0x10150** rereads the private pointer and source252. It does not inspect the initializer's integer return as a Boolean success result. The selected source252=0 branch reaches **0x10210..0x10220**, requesting `queue_ack_to_open` on application output argument3, then selects local return0. A nonzero source252 takes a different continuation outside this narrow ledger. No queued wire ACK, successful allocation/reinitialization, persistent configuration change, service activation or physical device result follows from this local return/helper name.
+
+Run21's earlier selected `sm_init` call passed source0/ordinary1/util0. The later source here may pass source0/ordinary1/**util1 or7**, if those actual converted eighth/ninth/tenth values and all earlier admission/context premises hold. Run23's consumer uses utility260 nonzero, so these later word values conditionally satisfy that one gate. This joins an available setter callsite to its consumer predicate without asserting a natural configuration message, callback sequence or complete runtime history.
+
+Four independent finite host ledgers supply coherent earlier values8=0/value9=1 and a missing eleventh default1. The tenth is respectively present/conversion1, present/conversion7, missing, and NULL-data. Requested private252/256/260 stores are respectively(0,1,1),(0,1,7),(0,1,0),(0,1,0). The conversions are explicit supplied return values; Python does not execute/substitute target strtol, htod, GLib or init_status. The ledgers contain no fabricated valid raw frame or parsed-field injection into original code.
+
+## Confidence and remaining boundary
+
+**Confirmed static:** exact kind5/DIM15 route and local WHERE1 premise; parsed+40 ordered traversal/selected defaults; tenth conversion, unchanged word argument, target stack-offset mapping and private260 store; separate eighth/ninth fields, optional eleventh default and selected caller ACK/local-return policy. **Host-only:** four converted-value/default compositions. **Conditional:** coherent post-parser fields, active descriptor/registry/provider and private owner, ordinary ABI/import/list/helper completion and actual invocation. **Unknown:** complete raw grammar/admission, naturally sent configuration and value-domain semantics, full reinitialization/lifetime, persistence/publication, installed enablement and physical behavior.
+
+The later utility producer is therefore concrete while runtime activation remains open. A distinct next question can follow non-transport ordinary source/configuration ownership or actual noncredential status consumers. It should preserve the independent clock-provider/unit limitation for run23's literal600 until that separate provider analysis is reviewed, rather than inventing timing or defect meaning here.

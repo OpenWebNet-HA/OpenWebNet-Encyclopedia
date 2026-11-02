@@ -1,0 +1,52 @@
+{
+  "scope": "Exact final F454 document pins before MH202 investigation updates shared navigation; prior review and research unchanged",
+  "review": "../final-pass-integration-review.md",
+  "review_sha256": "e95323a1549cc37ebfe586f9dd41995faada873b507a75c4e075e053a9bd2819",
+  "files": [
+    {
+      "source_path": "reverse-engineering/firmware-analysis/f454-2.0.51-final-pass.md",
+      "source_sha256": "60565b7f632120772ee7228d49ad61eae26fad1ac28b4f94de090937b6f7530d",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/final-pass-reviewed/reverse-engineering__firmware-analysis__f454-2.0.51-final-pass.md.txt"
+    },
+    {
+      "source_path": "reverse-engineering/firmware-analysis/f454-2.0.51-continuation.md",
+      "source_sha256": "c46636321d02ff375b730b6f083f956ceec2a5dd5e5837af1496e22a66fc1261",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/final-pass-reviewed/reverse-engineering__firmware-analysis__f454-2.0.51-continuation.md.txt"
+    },
+    {
+      "source_path": "reverse-engineering/firmware-analysis/f454-2.0.51.md",
+      "source_sha256": "f100f0a173d18ba43cb9ffde1f6a05b760d43c8d6d96ab04120ba67a3085a3b8",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/final-pass-reviewed/reverse-engineering__firmware-analysis__f454-2.0.51.md.txt"
+    },
+    {
+      "source_path": "reverse-engineering/firmware-analysis/README.md",
+      "source_sha256": "c5f54f0c2969adf22c66f15d009d55a907e81c5be954a951b82d924b1a36a3c8",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/final-pass-reviewed/reverse-engineering__firmware-analysis__README.md.txt"
+    },
+    {
+      "source_path": "functional/who-18-energy-management/dimensions.md",
+      "source_sha256": "64c5e6c4bf9de5829394acf9dbe7703647576fa9e62fce99460a8b20754734bf",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/final-pass-reviewed/functional__who-18-energy-management__dimensions.md.txt"
+    },
+    {
+      "source_path": "functional/who-8-video-door-entry-telephony/README.md",
+      "source_sha256": "fc6e61be49bfbf7fc227384d8b781f54b49a0af82b3f66da89096e485537d6b8",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/final-pass-reviewed/functional__who-8-video-door-entry-telephony__README.md.txt"
+    },
+    {
+      "source_path": "devices/definitions/own-dev-0002-audio-video-web-server-gateway.md",
+      "source_sha256": "f300b28ca0f358b73dff111ee47f1a911c71f8b949ecc979726a2b5ec5459af9",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/final-pass-reviewed/devices__definitions__own-dev-0002-audio-video-web-server-gateway.md.txt"
+    },
+    {
+      "source_path": "devices/work-queue.yaml",
+      "source_sha256": "79baeb5ad9a47dadd46683c01d5fff827c8dc343e945ac6393ebebeb133fbe80",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/final-pass-reviewed/devices__work-queue.yaml.txt"
+    },
+    {
+      "source_path": "project/review/firmware-analysis/f454-2.0.51/README.md",
+      "source_sha256": "ff631e7da999b8ecaa6e008e84361875a6f6f7f5f2196781e43329b921dc5ff7",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/final-pass-reviewed/project__review__firmware-analysis__f454-2.0.51__README.md.txt"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-knowledge-handoff.md",
+  "snapshot": "myhomeserver1-3.87.13-knowledge-handoff.md",
+  "before_sha256": "4487454c6cb76efb3850b8ccdd30e9f01414eefccf5acbf84f8ff725cfc018e6",
+  "after_sha256": "6a3e6bc1e82379e0b403fbaa93d18886213a0687606ef418abf208edcdc29008",
+  "substitutions": [
+    {
+      "before": "## Product roles guide the questions\n",
+      "after": "The resumed [local action-handoff](myhomeserver1-3.87.13-action-output.md) and [request-value](myhomeserver1-3.87.13-action-request-values.md) packets connect selected BN3L callables to a `2.0` / `light.setStatus` construction request, with the outer UUID-derived request ID distinct from captured `params.id` and a conditional signed-positive `params.speed` producer. The [retained-state packet](myhomeserver1-3.87.13-action-retained-state.md) adds one conditional query-string-to-second-`status` request relation through shared local storage. These are source-level joins, not a complete payload, supported speed domain, natural callback order, fresh same-ID state, successful delivery or physical rollback. The final continuation is consolidation-only after those three reviewed packets.\n\n## Product roles guide the questions\n"
+    },
+    {
+      "before": "a justified local action-output handoff, positive shared reset or natural owner/polling/removal sequence",
+      "after": "remaining payload and retained-state correlation after the selected local action handoff, positive shared reset or natural owner/polling/removal sequence"
+    }
+  ]
+}

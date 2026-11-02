@@ -1,0 +1,43 @@
+# Independent stage 2 database-byte source review and candidate preflight
+
+PASS for the finite original-byte scan, selected SQLite3-header rejection findings, archive inheritance and current documentary preflight. No plaintext database is recovered or admitted; alternate signatures remain unparsed. This verdict is not global absence, a schema/provider/runtime result, complete format coverage or final integration/check approval.
+
+| Reviewed file | Bytes | SHA256 |
+| --- | ---: | --- |
+| REPORT.md | 4026 | `76f4e53ef07de0f7705cb8401ea65d02b59d69280511271ce2668fe4a5c6397d` |
+| collect_formats_v1.py | 13013 | `ca36fe66cd19d9cd5e88508cb0bcd1aab2f86f60a8e4476e99e8cdc39e0cb7dc` |
+| OUTPUT_MANIFEST.json | 1017 | `8e265551a60abc54d20c163db1359a76bd2e724c11523092a28195ebdc50d109` |
+| CANDIDATES.json | 1643194 | `7fa085f48a0fd8a37c32ad3b1040fbe70062ab7cb8326d681bfdc125a9c08412` |
+| ARCHIVE_INHERITANCE.json | 1424 | `afb681788562430eb78740d3332be2f47cd4263f43fc87e2aca68ab609fbfefa` |
+| FORMAT_CONTEXT.json | 931 | `be6ba85d7545c0e6b0f91d92d0aab42ac18546b9602712c9aea9a2691d431b7c` |
+| PAGE_CANDIDATE.md | 4735 | `be8f5cdd8968468b3f5d202d7af5d510519ee2762e95cdcd08137287fb2a1233` |
+
+## Independent byte/identity checks
+
+Actual new collector --check passed7canonical outputs. I independently checked all11input pins, collector/output identities,9canonical firstcopies and2separate context/validation copies. Independently reconstructing the selected acquisition/manifests and scanning the same originals as data reproduced3packages/4component views,14,303regular-file occurrences/250,627,785bytes and6,888unique regular payloads/193,955,589bytes. Every occurrence agrees with its own manifest size/SHA and retained artifact/view/path/scan-source provenance. Repeated hashes share only scan content, without merging product environment or installed overlays.
+
+An independent overlapping-pattern search reproduced all48(offset,signature-label,payload-hash) tuples:7SQLite3 and41alternate leads. The seven exact100-byte SQLite headers/hash/offsets match saved fields. Every one independently has an invalid page-size field AND wrong fixed64/32/32fractions; these rejections do not rely on stale pagecount or a guessed file extent. All seven are inside payloads whose own leading bytes are ELF magic. The separate11file-holder context records match exact original hashes/lengths and four-byte ELF prefixes. No executable code, CPU/ABI, provider body, embedded object boundary or runtime was interpreted from that context. ELF containment itself does not rule out embedded data.
+
+I checked the selected SQLite constraints against the primary [SQLite database file-format documentation](https://sqlite.org/fileformat.html): header100bytes, size/fractions/reserved/usable-size fields and nonzero pagecount plus matching counters rule. Modern pagecount is not always authoritative, and the actual collector correctly does not use it as a rejection gate. Selected ordinary read/write versions and first-page-byte gates are finite candidate admission, not a full SQLite parser, schema/tree/checksum verifier or effective vendor-release proof. No candidate reaches plausible-header status here, and no header/string match is automatically treated as a recovered original database.
+
+## Limits and metadata labels
+
+SQLite2/BDB/GDBM/LMDB labels identify only the declared finite raw pattern set. All41alternate hits remain UNPARSED; no layout, complete header, page extent, type assignment, schema or compatible parser result follows. The stored SCOPE phrase promising alternate header checks was not performed: PLAN_VS_PERFORMED explicitly preserves it as unfulfilled plan wording while code/report/public candidate correctly disclaim such parsing. No frozen canonical scope/code/result was silently edited to rewrite that history.
+
+SUMMARY's historical `package_views=3` is the selected-package count. METADATA_LABEL_NOTE correctly records four actual component views, which I independently verified: F450standardnormal, F450PRODnormal, F459normal and F459recovery. This is a label clarification, not another discovered file/payload or new semantic coverage. The candidate distinguishes3packages from4views and does not repeat old SQL-method proofs as fresh work.
+
+This pass covers selected retained regular payloads and eligible PK-leading containers only. It does not exhaust other signatures, encrypted/compressed/custom/fragmented stores, unallocated image bytes or configured/runtime-created assets. It supplies no global database-absence/capability inference and does not reconstruct an installed extra overlay. Conservative header rejection at these seven offsets cannot rule out databases elsewhere.
+
+## Original support container and actual archive record
+
+I independently verified the72774B encrypted F450PROD50.xtz original hash and central directory: directory50/, encryptedextra.xml and encryptedmaster.sqlite metadata. The latter's declared289792B size/name/CRC are not recovered plaintext bytes. All non-directory members are encrypted; zero member payload bytes were opened, decrypted, extracted or scanned as plaintext. No password/key trials, SQL/query/repair, synthetic database or private row/configuration export occurred.
+
+ARCHIVE_INHERITANCE pins the actual earlier235B receipt SHA072092bb105685ab2aa0395cde439b431ac6a016037b501a06d2faf509b07793. Its current inherited copy is byte-identical; statusuploaded/ok, exact container SHA/size and private content key agree. This verifies documentary identity/consistency of the earlier completed upload, not an independent network replay. One encrypted SUPPORT object/zero plaintextDB objects is this investigation's archive result, not an inventory of allR2. New stage2uploads/readbacks/remoteoperations remain0; no newly recovered DB is available to archive.
+
+## Public candidate and disposition
+
+PAGE_CANDIDATE accurately represents finite all-offset reach, separate packages/views, seven rejected SQLite3headers, forty-one unparsed leads, ELF context limits and actual inherited archive classification. FORMAT_CONTEXT is primary documentation context, not vendor input or target binding. Prior F450copy/open and F459SQL/lifetime requests remain inherited conditional source evidence rather than packaged data or observed persistence. No fake recovered database, provider success or fullcoverage is promoted.
+
+The planned capsule/source/documentary/validation/check links still require actual integration and results; this preflight does not certify them or stage closure. Full source/Device/runtime/physical gates, missing configured assets and old execution-history limitations remain explicit. Stage3 was not investigated.
+
+Review used static host hashing/byte scanning/header-field interpretation/XML-free ZIP-directory inspection and official format documentation only. No vendor/original/native/helper/CLR/emulator/SQL/model/fixture/targetOS/service/network/bus/physical execution or source/repository/remote edit occurred; a public documentation read is separate from target/R2 contact. Only this new review and exact immediate copy/index were written. Prior native ledgers, immutable first artifacts and all closed routes/F450helper denial stay unchanged.

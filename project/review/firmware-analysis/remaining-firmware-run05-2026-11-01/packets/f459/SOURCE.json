@@ -1,0 +1,222 @@
+{
+  "ELF_class": 32,
+  "PT_LOAD": [
+    [
+      1,
+      0,
+      0,
+      0,
+      40840,
+      40840,
+      5,
+      32768
+    ],
+    [
+      1,
+      40960,
+      73728,
+      73728,
+      816,
+      832,
+      6,
+      32768
+    ]
+  ],
+  "SQL_queries": 0,
+  "calls": [
+    {
+      "GOT": "0x1225c",
+      "PLT_bytes": "00c68fe20fca8ce2d4ffbce5",
+      "actual_relocation": "0001225c  00003816 R_ARM_JUMP_SLOT        00000000   _ZN7QObjectC2EPS_",
+      "call": "0x67d0",
+      "role": "Normal-return prerequisite only",
+      "symbol": "_ZN7QObjectC2EPS_",
+      "targetPLT": "0x2280"
+    },
+    {
+      "GOT": "0x12284",
+      "PLT_bytes": "00c68fe20fca8ce284ffbce5",
+      "actual_relocation": "00012284  00004116 R_ARM_JUMP_SLOT        00000000   _ZN18QFileSystemWatcherC1EP7QObject",
+      "call": "0x6800",
+      "role": "Normal-return prerequisite only",
+      "symbol": "_ZN18QFileSystemWatcherC1EP7QObject",
+      "targetPLT": "0x22f8"
+    },
+    {
+      "GOT": "0x1224c",
+      "PLT_bytes": "00c68fe20fca8ce2f4ffbce5",
+      "actual_relocation": "0001224c  00003216 R_ARM_JUMP_SLOT        00000000   _ZN7QStringaSERKS_",
+      "call": "0x6828",
+      "role": "Selected assignment request",
+      "symbol": "_ZN7QStringaSERKS_",
+      "targetPLT": "0x2250"
+    }
+  ],
+  "constructor_symbol": [
+    "128: 000067c0   700 FUNC    GLOBAL DEFAULT   11 _ZN8mhSharedC1EP7QObject"
+  ],
+  "globals": [
+    {
+      "GOT": "0x122f4",
+      "actual_relocation": "000122f4  00005c15 R_ARM_GLOB_DAT         00012020   _ZTV8mhShared",
+      "pool": "0x6a4c",
+      "symbol": "_ZTV8mhShared",
+      "word": "00000174"
+    },
+    {
+      "GOT": "0x122f0",
+      "actual_relocation": "000122f0  00002615 R_ARM_GLOB_DAT         00000000   _ZN10QArrayData11shared_nullE",
+      "pool": "0x6a50",
+      "symbol": "_ZN10QArrayData11shared_nullE",
+      "word": "00000170"
+    },
+    {
+      "GOT": "0x1230c",
+      "actual_relocation": "0001230c  00003b15 R_ARM_GLOB_DAT         00000000   _ZN9QHashData11shared_nullE",
+      "pool": "0x6a54",
+      "symbol": "_ZN9QHashData11shared_nullE",
+      "word": "0000018c"
+    },
+    {
+      "GOT": "0x12310",
+      "actual_relocation": "00012310  00004715 R_ARM_GLOB_DAT         00000000   _ZN9bt_global10global_setE",
+      "pool": "0x6a58",
+      "symbol": "_ZN9bt_global10global_setE",
+      "word": "00000190"
+    }
+  ],
+  "guards": [
+    {
+      "VA": "0x67cc",
+      "word": "e1a04000"
+    },
+    {
+      "VA": "0x67d4",
+      "word": "e59f2270"
+    },
+    {
+      "VA": "0x67d8",
+      "word": "e08f5005"
+    },
+    {
+      "VA": "0x67dc",
+      "word": "e7952002"
+    },
+    {
+      "VA": "0x67e0",
+      "word": "e59f3268"
+    },
+    {
+      "VA": "0x67e4",
+      "word": "e2822008"
+    },
+    {
+      "VA": "0x67e8",
+      "word": "e284a010"
+    },
+    {
+      "VA": "0x67ec",
+      "word": "e5842000"
+    },
+    {
+      "VA": "0x67f0",
+      "word": "e7953003"
+    },
+    {
+      "VA": "0x67f4",
+      "word": "e584300c"
+    },
+    {
+      "VA": "0x67f8",
+      "word": "e1a0000a"
+    },
+    {
+      "VA": "0x67fc",
+      "word": "e3a01000"
+    },
+    {
+      "VA": "0x6804",
+      "word": "e59f2248"
+    },
+    {
+      "VA": "0x6808",
+      "word": "e59f3248"
+    },
+    {
+      "VA": "0x680c",
+      "word": "e7952002"
+    },
+    {
+      "VA": "0x6810",
+      "word": "e5842018"
+    },
+    {
+      "VA": "0x6814",
+      "word": "e795b003"
+    },
+    {
+      "VA": "0x6818",
+      "word": "e284900c"
+    },
+    {
+      "VA": "0x681c",
+      "word": "e59b1000"
+    },
+    {
+      "VA": "0x6820",
+      "word": "e1a00009"
+    },
+    {
+      "VA": "0x6824",
+      "word": "e2811018"
+    },
+    {
+      "VA": "0x6828",
+      "word": "ebffee88"
+    }
+  ],
+  "inherited_operand_spans": 2,
+  "machine": 40,
+  "needed_declarations": [
+    "0x00000001 (NEEDED)                     Shared library: [libsqlite3.so.0]",
+    "0x00000001 (NEEDED)                     Shared library: [libQt5Core.so.5]",
+    "0x00000001 (NEEDED)                     Shared library: [libstdc++.so.6]",
+    "0x00000001 (NEEDED)                     Shared library: [libgcc_s.so.1]",
+    "0x00000001 (NEEDED)                     Shared library: [libc.so.6]"
+  ],
+  "new_actual_database_bytes": false,
+  "new_source_span_count": 1,
+  "original": {
+    "bytes": 43208,
+    "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libmhshared.so.1",
+    "sha256": "4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377"
+  },
+  "original_execution": 0,
+  "source_contract": "IncomingthisR4; relocationglobal_setslot->externalglobaladdress->loadedpointerP->P+24R1; SAMEreceiver+12R0->QStringassignmentrequest. No supplied/runtime/global contents read.",
+  "spans": [
+    {
+      "bytes_hex": "f04f2de97c529fe524d04de20040a0e1aaeeffeb70229fe505508fe0022095e768329fe5082082e210a084e2002084e5033095e70c3084e50a00a0e10010a0e3bceeffeb48229fe548329fe5022095e7182084e503b095e70c9084e200109be50900a0e1181081e288eeffeb",
+      "end_exclusive": "0x682c",
+      "inherited_context_not_new_coverage": false,
+      "name": "new-constructor-namespace-source",
+      "sha256": "617ca517abb45cd719269a6efc2209e6401eaa6686835a5db7b96f5f2120074a",
+      "start": "0x67c0"
+    },
+    {
+      "bytes_hex": "48308de20c1087e228308de544408de244008de50300a0e19ffbffeb",
+      "end_exclusive": "0x331c",
+      "inherited_context_not_new_coverage": true,
+      "name": "inherited-write-first-string-operand",
+      "sha256": "66da82625ec2fa51bef95553bf512228a582f8c93fa5d8a1e72604b6965a278e",
+      "start": "0x3300"
+    },
+    {
+      "bytes_hex": "30208de20c1084e20c208de52c408de22c008de50200a0e156f8ffeb",
+      "end_exclusive": "0x4040",
+      "inherited_context_not_new_coverage": true,
+      "name": "inherited-read-first-string-operand",
+      "sha256": "684b59d7294b9e24f51452781a8d4e8c3c0071c5acaf4eef3fb84aa02e1216ff",
+      "start": "0x4024"
+    }
+  ]
+}

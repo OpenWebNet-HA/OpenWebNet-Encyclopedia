@@ -1,0 +1,72 @@
+{
+  "method": "finite host-only static def-use reconstruction; no original parser/helper execution",
+  "raw": "*#8**35##",
+  "length": 9,
+  "who_suffix": "8**35##",
+  "where_suffix": "*35##",
+  "dim_suffix": "35##",
+  "selected_fields": {
+    "WHO": "8",
+    "WHERE": "",
+    "WHAT": "",
+    "DIM": "35",
+    "address0": "",
+    "kind": 4
+  },
+  "guards": [
+    "ordinary NUL-terminated text, length9, only digits/*/# and final##",
+    "normal named C/string/Expat-independent parser contracts",
+    "receive descriptor supplies these exact bytes; read operations not executed",
+    "packaged device1 role selected and normal caller receives positive parse status",
+    "ordinary no-address/no-multimedia variant; no object corruption or interposed provider"
+  ],
+  "mode_routes": [
+    {
+      "declared_mode": -1,
+      "local_flag_before_14778": 0,
+      "selected_output": "*#*0##",
+      "boundary": "conditional original local send call; no actual send/full end-to-end transport"
+    },
+    {
+      "declared_mode": 0,
+      "local_flag_before_14778": 0,
+      "selected_output": "*#*0##",
+      "boundary": "conditional original local send call; no actual send/full end-to-end transport"
+    },
+    {
+      "declared_mode": 1,
+      "local_flag_before_14778": 1,
+      "selected_output": "*#*1##",
+      "boundary": "conditional original local send call; no actual send/full end-to-end transport"
+    },
+    {
+      "declared_mode": 2,
+      "local_flag_before_14778": 1,
+      "selected_output": "*#*1##",
+      "boundary": "conditional original local send call; no actual send/full end-to-end transport"
+    },
+    {
+      "declared_mode": 3,
+      "local_flag_before_14778": 1,
+      "selected_output": "*#*1##",
+      "boundary": "conditional original local send call; no actual send/full end-to-end transport"
+    },
+    {
+      "declared_mode": 4,
+      "local_flag_before_14778": 0,
+      "selected_output": "*#*0##",
+      "boundary": "conditional original local send call; no actual send/full end-to-end transport"
+    }
+  ],
+  "initial_constructor_mode": -1,
+  "actual_later_mode": "unobserved mutable state",
+  "not_claimed": [
+    "physical response",
+    "actual process reachability",
+    "role2/5 behavior",
+    "complete upstream routing",
+    "status-fields producer/schema",
+    "actual ACK/KO receipt",
+    "auth connection/handshake"
+  ]
+}

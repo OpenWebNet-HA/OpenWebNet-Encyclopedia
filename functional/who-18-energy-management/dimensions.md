@@ -314,3 +314,34 @@ The simulator's `113` read emits the active-power report through its monitor pat
 The simulator reads measurements from configured files and uses a fixed year value `13`. Its periodic-power handler parses the leading write marker in `#1200#Type` as an empty numeric component; the internal switch value `0` is not evidence for a separate public dimension-zero update operation. Simulation timing and generated totals should not be used to infer hardware precision, energy integration, or current Firmware behavior. See [Simulator evidence](../../project/review/myopencommunity-integration.md#simulator-models).
 
 Its `52#Y#M` handler selects file data by month without using `Y`. For `512`, the built model computes tag `25` by dividing the sum of its 24 hourly averages by 24. A resource copy uses a different calculation and is not selected by the plugin build. Its `514` values subtract previous-year file values from current-file values. These model choices cannot establish year retention or the physical Device's historical-value calculations. See [F520 history evidence](../../project/review/myopencommunity-energy-history-review.md#f520-model-lineage).
+
+## F454 2.0.51 direct DH path
+
+The inspected F454 build contains table entries for DIMENSION `401..428`, including power/energy labels and value formatters. In its selected normal `bt_supervisione` direct-DH route, the formatted candidate remains a local character array: the handler returns `0` without populating the caller's OPEN output object, and the direct caller resumes receiving before correlation/output processing.
+
+A separate outgoing query path looks up the table, formats an internal request and records expected state. Table presence, candidate formatting and a send/state return therefore establish different things. They do not prove that every report is published, a physical query/reply succeeds or a Firmware defect exists. See [direct-DH candidate ownership](../../reverse-engineering/firmware-analysis/f454-2.0.51-follow-up.md#direct-dh-energy-candidate-lifetime).
+
+## F454 2.0.51 old-format history producer
+
+A different `bt_supervisione` path maps FD `0x50` rows `0x10` and `0x14` to DIMENSION `56` and `510`. Its record construction has these selected rules:
+
+| Record position | Scratch-text operation |
+| --- | --- |
+| First accepted record | Replace with two current decimal byte values |
+| Later ordinary record | Replace with three current decimal byte values |
+| Selected terminal row `0x10` | Replace with two values |
+| Selected terminal row `0x14` | Replace with one value |
+
+The append branch belongs to separate row `0x19`. Applying it to the two history rows would change their representation incorrectly. Intermediate/terminal branches request the original OPEN parser and, when the descriptor is not `-1`, a send helper. This is a source publication path, with successful parsing/delivery unobserved. Countdown fields and terminal widths alone do not establish calendar, units or sample roles, and the rules do not apply to newer DIMENSION `511..514`. See [old-format record construction](../../reverse-engineering/firmware-analysis/f454-2.0.51-continuation.md#old-format-energy-producer).
+
+## F454 2.0.51 old-format history consumer
+
+Selected API mappings carry DIMENSION `56` / `510` date text and packet values into dedicated old-device events. The packaged web client places hourly values by record identifier and reconstructs daily high/low byte pairs.
+
+| Consumer behavior | Scope and consequence |
+| --- | --- |
+| Selected scalar/daily byte conversions replace individual `255` values with zero | Hourly record `9` totalizer high byte remains unnormalized. The historical touchscreen instead handles the complete `255*255` pair; neither defines a universal sentinel |
+| Selected hourly sequence leaves initialized index `1` unchanged and writes through index `24` | An initialized zero is not a received zero measurement |
+| Daily handler has cases `1..21` | A shortened terminal record `21` lacks values that case `21` reads; record `22` has no case |
+
+Actual stream length, ordering and calendar termination are prerequisites for interpreting these client edge cases. Static/host-derived examples do not establish a live display defect, packet loss or physical record counts. The [old-energy consumer reference](../../reverse-engineering/firmware-analysis/f454-2.0.51-final-pass.md#old-energy-frame-to-consumer) explains those dependencies.

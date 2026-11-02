@@ -1,0 +1,55 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0010f56a:
+  10f56a:	f109 0848 	add.w	r8, r9, #72	@ 0x48
+  10f56e:	4640      	mov	r0, r8
+  10f570:	f701 ea96 	blx	10aa0 <pthread_mutex_lock@plt>
+  10f574:	2800      	cmp	r0, #0
+  10f576:	f041 8447 	bne.w	110e08
+  10f57a:	ad20      	add	r5, sp, #128	@ 0x80
+  10f57c:	f10d 0a84 	add.w	sl, sp, #132	@ 0x84
+  10f580:	4628      	mov	r0, r5
+  10f582:	f701 eee2 	blx	11348 <_ZNSt6chrono3_V212steady_clock3nowEv@plt>
+  10f586:	682e      	ldr	r6, [r5, #0]
+  10f588:	f44f 4364 	mov.w	r3, #58368	@ 0xe400
+  10f58c:	f8d9 2064 	ldr.w	r2, [r9, #100]	@ 0x64
+  10f590:	f2c5 430b 	movt	r3, #21515	@ 0x540b
+  10f594:	9f21      	ldr	r7, [sp, #132]	@ 0x84
+  10f596:	18f6      	adds	r6, r6, r3
+  10f598:	f147 0702 	adc.w	r7, r7, #2
+  10f59c:	2a00      	cmp	r2, #0
+  10f59e:	f040 8089 	bne.w	10f6b4
+  10f5a2:	f60f 138c 	addw	r3, pc, #2444	@ 0x98c
+  10f5a6:	e9d3 2300 	ldrd	r2, r3, [r3]
+  10f5aa:	4630      	mov	r0, r6
+  10f5ac:	4639      	mov	r1, r7
+  10f5ae:	f109 0b18 	add.w	fp, r9, #24
+  10f5b2:	f701 ee52 	blx	11258 <__aeabi_ldivmod@plt>
+  10f5b6:	4653      	mov	r3, sl
+  10f5b8:	46c2      	mov	sl, r8
+  10f5ba:	4698      	mov	r8, r3
+  10f5bc:	e9cd 0203 	strd	r0, r2, [sp, #12]
+  10f5c0:	9b03      	ldr	r3, [sp, #12]
+  10f5c2:	2201      	movs	r2, #1
+  10f5c4:	4651      	mov	r1, sl
+  10f5c6:	4658      	mov	r0, fp
+  10f5c8:	6023      	str	r3, [r4, #0]
+  10f5ca:	9b04      	ldr	r3, [sp, #16]
+  10f5cc:	6063      	str	r3, [r4, #4]
+  10f5ce:	4623      	mov	r3, r4
+  10f5d0:	f701 eb8a 	blx	10ce8 <pthread_cond_clockwait@plt>
+  10f5d4:	4628      	mov	r0, r5
+  10f5d6:	f701 eeb8 	blx	11348 <_ZNSt6chrono3_V212steady_clock3nowEv@plt>
+  10f5da:	6828      	ldr	r0, [r5, #0]
+  10f5dc:	f8d8 2000 	ldr.w	r2, [r8]
+  10f5e0:	42b0      	cmp	r0, r6
+  10f5e2:	41ba      	sbcs	r2, r7
+  10f5e4:	db61      	blt.n	10f6aa
+  10f5e6:	f8d9 2064 	ldr.w	r2, [r9, #100]	@ 0x64
+  10f5ea:	46d0      	mov	r8, sl
+  10f5ec:	2a00      	cmp	r2, #0
+  10f5ee:	d161      	bne.n	10f6b4

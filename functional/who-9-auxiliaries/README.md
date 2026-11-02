@@ -29,3 +29,9 @@ Alarm auxiliary-source configuration selects the separate `WHO 5` technical-alar
 The physical `AUX` plug, the numeric channel in an `AUX` socket and an analogue audio connector marked AUX have distinct roles. Manufacturer-defined configuration examples are maintained in [SCS Configurator Labels](../../device-model/configurators.md#positions-and-functions); neither a shared label nor a product's channel range establishes one universal auxiliary wire grammar.
 
 See [Protocol](../../protocol/) for common frame syntax and [`WHO 5` - Alarm](../who-5-alarm/) for Alarm-side AUX references.
+
+## MH202 implementation evidence
+
+MH202 Firmware `1.0.24` provides an auxiliary translation path and a separate state-machine application handler. The latter applies unsigned guards `WHERE <= 15` and `WHAT <= 10`; the standalone translator does not apply the same address guard. These are local source contracts, not universal `WHO 9` support ranges.
+
+For the supplied example `*9*3*5##`, selected source translation constructs an internal body and a separate reverse construction yields the same OPEN text. An isolated original parser/copy-helper case also retains the parsed fields in a distinct command-directed envelope. These are separate source and local-execution results; they establish neither the physical meaning of `WHAT 3` nor a causal bus exchange. Internal record kind, copied ID/status and local receipt handling remain separate from functional state and physical completion. See [auxiliary message ownership](../../reverse-engineering/firmware-analysis/mh202-1.0.24-record-and-script-lifecycle.md#auxiliary-field-records-use-a-command-directed-copy) and [translation evidence](../../project/review/firmware-analysis/mh202-1.0.24/run19-coso-report.txt).

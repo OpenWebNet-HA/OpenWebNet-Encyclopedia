@@ -1,0 +1,10 @@
+{
+  "scope": "One reproduction-context paragraph clarification, no source/verification result changed",
+  "first_candidate": "handoff/HANDOFF_CANDIDATE.md",
+  "first_sha256": "0d313e41b4214ce228d7d0a3e0f1a783090a15738c7e7ed105e6dd0e05438ad8",
+  "current_candidate": "handoff/HANDOFF_CANDIDATE.v2.md",
+  "current_sha256": "4487454c6cb76efb3850b8ccdd30e9f01414eefccf5acbf84f8ff725cfc018e6",
+  "exact_old": "A documented Device-reference scope correction retains the exact old Device version used by the guide. The new verification checks that historical pin explicitly instead of claiming the old collector still passes against a changed working path.",
+  "exact_new": "A documented Device-reference scope correction retains the exact old Device version used by the guide. The new verification checks that historical pin explicitly instead of claiming the old collector still passes against a changed working path. The numeric-trigger collector also pins that Device version in its product-context input; byte-exact reproduction of that historical packet likewise requires the retained version. Those earlier saved passes remain historical, and no direct old-collector replay was performed after the document changed.",
+  "reason": "Tooling code inspection confirms frozen numeric source collector also includes the historical Device input pin; no failed command was run or invented"
+}

@@ -1,0 +1,10 @@
+# Run09 coverage and boundaries
+
+| Area | Selected source reach | Open boundary |
+| --- | --- | --- |
+| F460 concrete condition | Own raw row18/schema/class/parser; virtual result/reparse request;256-byte base allocation/constructor; raw40→compiled176; actual primary slot16 whole byte-XOR predicate; same receiver192 eight-byte pointer publication and inherited worker consumer | Full JSON/serializer coherence, actual configured presence/class intent/target metadata, growth/provider/normal returns, complete policy/actions/lifecycle/unwind/concurrency |
+| F461 HAL selector | Own normal/recovery file identity; four-byte sentinel/cache-hit gate; CPUinfo Hardware-line requests; separate DT-model fallback; selected BEAR→22/cache write; actual same-definition pure-getter call request | Actual contents/board/DTB/auxiliary core, other classifier/fallback branches, runtime binding/providers, cache refresh/ownership/concurrency, physical behavior |
+
+F460:13 deterministic outputs,10 spans,35 instruction guards, two class identities, seven PIC joins, five import proofs, four local calls, six input pins and15 first copies. F461:10 outputs, seven spans,23 guards, five safe PIC joins,10 import proofs, five input pins and12 first copies. Counts describe bounded reach and integrity, not semantic coverage percentages or executed cases.
+
+New original/helper/native/emulator/model/fixture/SQL/JSON/file/service/OS/network/bus/physical execution zero. Prior MHS one corpus/eight entries/340 original code-hook visits remains separate unchanged, as do F454/MH202 ledgers. Full Device/source gates pending. No installed/private identity or host platform file was read. Command fallback, uncertain identity-process caller and all closed receiving/output/transport/auth/session/framing/MQTT/libjel routes remain excluded.

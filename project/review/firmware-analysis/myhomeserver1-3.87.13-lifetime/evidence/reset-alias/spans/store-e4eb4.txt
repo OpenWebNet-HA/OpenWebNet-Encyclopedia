@@ -1,0 +1,50 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000e4e50:
+   e4e50:	b570      	push	{r4, r5, r6, lr}
+   e4e52:	b082      	sub	sp, #8
+   e4e54:	4e2d      	ldr	r6, [pc, #180]	@ (e4f0c)
+   e4e56:	4604      	mov	r4, r0
+   e4e58:	3040      	adds	r0, #64	@ 0x40
+   e4e5a:	4d2d      	ldr	r5, [pc, #180]	@ (e4f10)
+   e4e5c:	447e      	add	r6, pc
+   e4e5e:	f810 2c04 	ldrb.w	r2, [r0, #-4]
+   e4e62:	5975      	ldr	r5, [r6, r5]
+   e4e64:	682d      	ldr	r5, [r5, #0]
+   e4e66:	9501      	str	r5, [sp, #4]
+   e4e68:	f04f 0500 	mov.w	r5, #0
+   e4e6c:	b172      	cbz	r2, e4e8c
+   e4e6e:	4a29      	ldr	r2, [pc, #164]	@ (e4f14)
+   e4e70:	4b27      	ldr	r3, [pc, #156]	@ (e4f10)
+   e4e72:	447a      	add	r2, pc
+   e4e74:	58d3      	ldr	r3, [r2, r3]
+   e4e76:	681a      	ldr	r2, [r3, #0]
+   e4e78:	9b01      	ldr	r3, [sp, #4]
+   e4e7a:	405a      	eors	r2, r3
+   e4e7c:	f04f 0300 	mov.w	r3, #0
+   e4e80:	d13e      	bne.n	e4f00
+   e4e82:	b002      	add	sp, #8
+   e4e84:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
+   e4e88:	f72b bf70 	b.w	10d6c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_@plt>
+   e4e8c:	460b      	mov	r3, r1
+   e4e8e:	f104 0148 	add.w	r1, r4, #72	@ 0x48
+   e4e92:	6421      	str	r1, [r4, #64]	@ 0x40
+   e4e94:	e9d3 6500 	ldrd	r6, r5, [r3]
+   e4e98:	426b      	negs	r3, r5
+   e4e9a:	fab6 f286 	clz	r2, r6
+   e4e9e:	0952      	lsrs	r2, r2, #5
+   e4ea0:	429e      	cmp	r6, r3
+   e4ea2:	bf08      	it	eq
+   e4ea4:	2200      	moveq	r2, #0
+   e4ea6:	bb6a      	cbnz	r2, e4f04
+   e4ea8:	2d0f      	cmp	r5, #15
+   e4eaa:	9500      	str	r5, [sp, #0]
+   e4eac:	d819      	bhi.n	e4ee2
+   e4eae:	2d01      	cmp	r5, #1
+   e4eb0:	d114      	bne.n	e4edc
+   e4eb2:	7833      	ldrb	r3, [r6, #0]
+   e4eb4:	f884 3048 	strb.w	r3, [r4, #72]	@ 0x48

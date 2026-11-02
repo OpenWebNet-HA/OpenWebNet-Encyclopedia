@@ -1,0 +1,51 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/usr/lib/libopenmsg.so.1.0.0:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00003a24 <new_open_msg@@Base>:
+    3a24:	4a16      	ldr	r2, [pc, #88]	@ (3a80 <new_open_msg@@Base+0x5c>)
+    3a26:	4b17      	ldr	r3, [pc, #92]	@ (3a84 <new_open_msg@@Base+0x60>)
+    3a28:	b510      	push	{r4, lr}
+    3a2a:	4604      	mov	r4, r0
+    3a2c:	447a      	add	r2, pc
+    3a2e:	b082      	sub	sp, #8
+    3a30:	2038      	movs	r0, #56	@ 0x38
+    3a32:	58d3      	ldr	r3, [r2, r3]
+    3a34:	681b      	ldr	r3, [r3, #0]
+    3a36:	9301      	str	r3, [sp, #4]
+    3a38:	f04f 0300 	mov.w	r3, #0
+    3a3c:	f7fe eea6 	blx	278c <g_malloc0@plt>
+    3a40:	4a11      	ldr	r2, [pc, #68]	@ (3a88 <new_open_msg@@Base+0x64>)
+    3a42:	4603      	mov	r3, r0
+    3a44:	2000      	movs	r0, #0
+    3a46:	6023      	str	r3, [r4, #0]
+    3a48:	e9c3 0000 	strd	r0, r0, [r3]
+    3a4c:	6098      	str	r0, [r3, #8]
+    3a4e:	447a      	add	r2, pc
+    3a50:	e9c3 0004 	strd	r0, r0, [r3, #16]
+    3a54:	e9c3 0006 	strd	r0, r0, [r3, #24]
+    3a58:	e9c3 0008 	strd	r0, r0, [r3, #32]
+    3a5c:	6298      	str	r0, [r3, #40]	@ 0x28
+    3a5e:	6318      	str	r0, [r3, #48]	@ 0x30
+    3a60:	60d8      	str	r0, [r3, #12]
+    3a62:	62d8      	str	r0, [r3, #44]	@ 0x2c
+    3a64:	6358      	str	r0, [r3, #52]	@ 0x34
+    3a66:	4b07      	ldr	r3, [pc, #28]	@ (3a84 <new_open_msg@@Base+0x60>)
+    3a68:	58d3      	ldr	r3, [r2, r3]
+    3a6a:	681a      	ldr	r2, [r3, #0]
+    3a6c:	9b01      	ldr	r3, [sp, #4]
+    3a6e:	405a      	eors	r2, r3
+    3a70:	f04f 0300 	mov.w	r3, #0
+    3a74:	d101      	bne.n	3a7a <new_open_msg@@Base+0x56>
+    3a76:	b002      	add	sp, #8
+    3a78:	bd10      	pop	{r4, pc}
+    3a7a:	f7fe ed1c 	blx	24b4 <__stack_chk_fail@plt>
+    3a7e:	bf00      	nop
+    3a80:	7418      	strb	r0, [r3, #16]
+    3a82:	0001      	movs	r1, r0
+    3a84:	0194      	lsls	r4, r2, #6
+    3a86:	0000      	movs	r0, r0
+    3a88:	73f6      	strb	r6, [r6, #15]
+    3a8a:	0001      	movs	r1, r0

@@ -1,0 +1,21 @@
+{
+  "mappings": [
+    {
+      "current_bytes": 11560,
+      "current_sha256": "ce01c4d35f26e5c798d1b2f179a9457ca9b8adea3e752c49dc695a35b92f748e",
+      "expected_old_sha256": "aa7c70da0facac0260d00d38de3235ef4c8656874daf0f21c10c23b6e6d0e1f3",
+      "old_bytes": 11179,
+      "original_path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+      "reason": "Add separate six-package/five-family static-study link; no older claim change",
+      "retained_export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/pre-edit/firmware-README.txt",
+      "retained_local": "work/remaining-firmware-investigation/2026-11-01-run04/integration/pre-edit/firmware-README.md"
+    }
+  ],
+  "scope": "Exact expected-hash substitution for the single changed reference, not broad fallback/repinning",
+  "intermediate_version": {
+    "sha256": "f958183511be01cd0a0ccdac95b8aa0a089fb0f95f7301e68b1600f12119fd05",
+    "bytes": 11561,
+    "exact_snapshot": "work/remaining-firmware-investigation/2026-11-01-run04/integration/before-readme-table-v2/OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+    "reason": "Parent observed new row separated by blank line from original table; formatting-onlyv2, no source claim change"
+  }
+}

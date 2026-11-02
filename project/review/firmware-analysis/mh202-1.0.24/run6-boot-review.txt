@@ -1,0 +1,19 @@
+# MH202 run6 independent process-helper source review
+
+PASS. Parent reproduced collect_process_helpers.py --check:16 outputs,23 ELF objects/102 dependency edges,29 inputs,6 spans/16 words and no original execution. Independently verified every modeled object hash, inspected dynamic symbols across all23 objects and found only libutils definitions for the three selected names. Rechecked six original span hashes/offsets and16 words with a separate ELF mapper. These are conditional packaged lookup facts; no loader/preload/dlopen/interposition/environment runtime was observed.
+
+Read complete call/call_nowait/call_daemon bodies plus selected daemon comparison/storage sites. call's local word atSP+4 is initiallyzero, options0; call_nowait result goes unchanged into waitpid, neither return is checked, and ldrb r0,[sp,#5] zero-extends byte1. Independently checked the original0xe5dd0005 instruction and every low16bit host value: possible returned-byte range0..255 excludes-1. This host arithmetic proof is not original CPU/syscall execution.
+
+Therefore under selected provider/ordinary-return assumptions, exact-1 daemon checks do not reject positive exit-byte values. Distinct downstream marker/content/default gates still exist. No successful copy/archive/status or actual failure incident follows. Signal/error fixtures retain explicit supplied stored-word assumptions; a real wait error's writes/nonwrites are not invented.
+
+call_nowait returns any nonzero fork result directly before exec confirmation; zero child closes3..19 and requests exec/exit. call_daemon's parent waits withNULL status then returns originalPID; child daemon-failure return differs from parent. Their results are not call's status byte and none proves service readiness. Verified startup export of vendor library paths; no hostldd/targetloader/process/argv/password was used. Source review does not claim complete kernel/libc behavior or effective runtime binding.
+
+Old reports retain their earlier opaque-helper uncertainty. Current report narrows it with fresh same-build evidence rather than silently rewriting past outcomes. No correction required, no original file edits, network/device/mount, commits or publication.
+
+## Final pins
+
+- `boot/run6/REPORT.md` SHA256 `f0c2b3215c01ecaf58dc07f27eaa1bd5b0f8dfa8b8550ea04d26a28f7ae2785a`
+- `boot/run6/collect_process_helpers.py` SHA256 `877c4b0b332f4968b9fe1017c36b88afff0eff447f2aadf69e17acb421da7f50`
+- `boot/run6/output-manifest.json` SHA256 `0f084e561ae449db7b787c157890d67e4124d3500f2dfba1544f62aa95525177`
+- `boot/run6/conditional-provider-closure.json` SHA256 `8c4abdb8909c1054e1e60e52b4b578da5dcfe07393e7376cc73fe55875b9fa6d`
+- `validation/run6/independent-helper-source.json` SHA256 `70d0204936346154ebc3251ee8d983935bf6f5f563ed0c8243020a9e0ec9e37f`

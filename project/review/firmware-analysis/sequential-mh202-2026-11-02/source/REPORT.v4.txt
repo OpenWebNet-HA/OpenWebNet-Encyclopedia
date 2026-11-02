@@ -1,0 +1,70 @@
+# MH202 ScenarioSuite local project XML to scenario collection
+
+The original Suite Core has a local filesystem/XML loader that inserts a returned `cScenario` object into the same newly published `cScenariosCollection` container. This narrows the upstream object-source gap in the earlier compiler study: the loader accepts per-scenario XML files and retains their deserialized objects, while the earlier `CompileAll` accepts a supplied collection of those declared types. A real caller passing the loader's output to that compiler, a genuine populated project, successful provider operations and emitted scripts are still unproved.
+
+This is static original IL and metadata evidence. No vendor CLR, reflection, XML deserializer, file operation, project, compiler, SQL provider, native helper, fixture or model ran. Manufacturer defaults inspected by the parent are defaults, not a commissioned installation/export. There is no newly recovered configured scene or database here.
+
+## Original source and exact selected scope
+
+Inputs are the installer-derived assemblies under `work/mh202-firmware/research/2026-10-31-scenario-artifacts/acquisition/selected-files-v2/default/targetDir/`:
+
+| Assembly | Bytes | SHA256 |
+| --- | ---: | --- |
+| `Bticino.ScenarioSuite.Core.dll` | 1021440 | `7b7269a14652472fc471568430364a038f02a8c881cb5c9db089a7683e38307b` |
+| `Bticino.ScenarioSuite.Class.dll` | 51200 | `3a9ef4d3c41889d5990ce1977b4782580d9b6bed7f2a3a28ab4693d091dc3afb` |
+
+| Assembly | Local MethodDef | RVA | Original method |
+| --- | --- | --- | --- |
+| Core | `0x0600008d` | `0x8e98` | `cCore.Loadscenarios` |
+| Core | `0x0600008e` | `0x8ecc` | `cCore.LoadscenariosMH202` |
+| Class | `0x06000215` | `0x4b54` | `cScenariosCollection..ctor` |
+| Class | `0x06000220` | `0x4c3c` | `cScenariosCollection.get_ScenariosCollection` |
+
+`METHODS.v2.json` retains full selected method header/IL/exception bytes, byte hashes, file offsets, signatures, parameter names, decoded instructions and explicit branch-coordinate normalization. Its historical field `exception_regions_dncil_body_coordinates` is misnamed: raw exception-clause offsets are direct IL coordinates, and each end is start plus length, with no subtraction of the 12-byte method header. This differs from dncil instruction-branch operands, whose body-relative targets are separately normalized by subtracting the header. `COORDINATE_MAPPING.v2.json` preserves the original field and records the raw fat-section correction without changing canonical v2 evidence. Tokens are local to their assembly. Four methods are selected source reach, not a complete loader/compiler coverage claim. Local `CleaupFolder`, `CopyFolder`, `SaveScenarios`, XML and filesystem provider bodies, the MH200N switch destination and all closed transport routes remain opaque.
+
+## Local file selection and collection publication
+
+`Loadscenarios` reads its own `_Mode` field at IL0001. Its switch selects IL0015 for numeric0, where the same receiver and supplied argument are passed to `LoadscenariosMH202` at IL0017 and that result is returned. Numeric1 selects the separate MH200N method, whose body was not read. The other local dispatch path returns numeric−100. Metadata names do not prove the runtime mode or a particular object's natural invocation.
+
+`LoadscenariosMH202` requests cleanup of `lcTempFolder` at IL001f and discards its returned word. IL0025..0035 combines `_WorkingFolder` with compiled `ScenarioCollection.xml`. Its `File.Exists` result governs whether that path is copied, overwrite argument true, into `lcTempFolder/ScenarioCollection.xml`; absent selection instead stores an empty string. A separate equivalent branch selects compiled `info.xml`. These are original arguments and call requests, not observed files, successful copies or an assertion about all file-error behavior.
+
+At IL00c4..00ca the method constructs `cScenariosCollection` through MemberRef`0x0a000110` and stores that exact returned reference through its supplied by-reference argument. Selected collection-level XML can be deserialized as `cPRJScenarioCollection`, then supply name/author/description/panic-key setter arguments to that published container. Those values were not supplied or exported by this analysis; no configured content is inferred from the field names.
+
+## Per-scenario source to retained object
+
+IL01ad..01bf creates a `DirectoryInfo` for `_WorkingFolder` and requests its directories. For a selected directory D, IL01d4..01e6 constructs a temporary directory using `lcTempFolder` and `D.Name`; a failed `Directory.Exists` result selects a `CreateDirectory` request. IL01fd..0207 requests opaque `CopyFolder(D.FullName, temporaryDirectory)` and discards its return value.
+
+IL020d..022a constructs the selected scenario filename from that temporary directory, `Path.GetFileNameWithoutExtension(D.FullName)` and compiled `.xml`. A nonzero `File.Exists` selection reaches IL023c..0265: `XmlSerializer` is requested for metadata type `Bticino.ScenarioSuite.Class.cScenario`, a `FileStream` is requested with numeric mode3, and the serializer result passes `isinst` for that same declared type into local17. FileStream/serialization semantics and binding are ordinary provider premises; numeric mode3 is retained without claiming a successful open.
+
+After selected normal close/handler continuation, IL0286..0288 tests local17 for null. On the nonnull branch:
+
+| IL | Source operation |
+| --- | --- |
+| `028a..028b` | Read the same container reference through the supplied by-reference argument |
+| `028c` | Request `cScenariosCollection.get_ScenariosCollection` |
+| `0291` | Load the same local17 returned by the deserialize/type-test chain |
+| `0293` | Request the selected generic collection's `Add` with that object |
+
+This is reference identity through the original local variables and call operands, not an analyst-constructed scene. Exceptions, stream validity, serializer type support, directory contents, writable paths, ordinary returns and preservation of the published output slot remain premises. The helper's return being discarded does not establish that a copy succeeded; the later existence check is separate. No row-to-object SQL loader was found or claimed in this selected method.
+
+## Own backing collection and compiler applicability limit
+
+The Class constructor requests a new collection at IL0012 and stores it in `_ScenariosCollection`, Field`0x0400011d`, at IL0017. The entire selected getter reads that field at IL0001 and returns its reference at IL0008. Selected TypeSpec signatures identify the constructor's collection as `System.Collections.ObjectModel.ObservableCollection<cScenario>`: Class TypeSpec22 `151255011280c4` uses its own TypeRef21 and TypeDef49. Core getter MemberRef`0x0a000124` declares the same generic return type through its own TypeRef54/TypeRef12. The Core `Add` method is declared on `System.Collections.ObjectModel.Collection<cScenario>`: TypeSpec55 `1512815d011231` uses Core TypeRef87/TypeRef12. These are different generic type declarations, preserved explicitly; the source requests a base-collection member using the getter result under ordinary CLR binding/type premises. No runtime binding or ownership guarantee is demonstrated.
+
+The earlier frozen `CompileAll` method and its getter/enumerator calls are imported as **inherited evidence only** in `INHERITED_COMPILEALL.v2.json`. Its original body is not re-decoded or counted as new coverage. The present source proves how a loader can publish a collection containing a deserialized object. It does not prove an actual UI/export caller subsequently passes this same instance to `CompileAll`, that the slot or list survives without replacement/mutation, or that a configured action/condition passes compiler checks. Those are explicit premises for composing the two studies.
+
+## Selected completion and error channels
+
+The selected normal tail logs, writes receiver `lcLibInit=0`, stores return0 and leaves to IL039b..039c. This is a source return channel, not semantic certification of complete or nonempty project loading. The outer exception route requests logging and then, under its ordinary normal returns and the initialized local status remaining zero, selects return−100. Inner handlers request stream close; a failing/null stream close or logger can itself prevent the described continuation. Exception-region bytes are retained; no claim of complete cleanup, atomic replacement, rollback, full error policy, lifetime or concurrent safety follows.
+
+## Reproduction, preservation and confidence
+
+The canonical historical command is `python3 -B work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/collect_loader_v2.py --check` from the workspace. It pins unchanged historical `REPORT.v2.md` and canonical v2 outputs; it does not validate this separately authoritative `REPORT.v4.md` or correct the misnamed EH-coordinate field. This report and the coordinate supplement are separately pinned by `COORDINATE_MAPPING.v2.json`; run `python3 -B work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/coordinate_supplement_v2.py --check` to reproduce that mapping from unchanged saved method bytes. The historical collector verifies both exact assemblies, the frozen static host-tool identities, scope record and inherited method snapshot; reparses only the four declared original methods; and byte-compares canonical outputs. Host Python parsers run; vendor IL does not. No old collector, vendor/native corpus, fixture, model or SQL/XML provider is replayed.
+
+`PREPARATION_HISTORY.json` records a coordination error honestly: the child sent the proposal, then read the two Core bodies before the explicit parent reply; after saving scope and declaring Class helpers it read those before the later root-snapshot acknowledgment requirement arrived. These reads are not described as having pre-body parent receipts. The root captured exact history/scope/collector bytes and explicitly permitted generation. V1 syntax compilation passed, but its first generation failed before outputs because a manually assumed List type name disagreed with the actual metadata. The actual rows are Collection/ObservableCollection; the strict guard caught the error. Parent exact snapshots preceded the new v2 code/report with actual type identities and unchanged raw signatures, original input hashes and method scope. V1 report/code/failure and immediate copies remain unchanged. V2 syntax compilation precedes its canonical generation. Exact first copies include source collector, report, scope and generated outputs; no prior output or completed report is overwritten. The actual history and parent snapshot remain separate preservation evidence, not source behavior or a clean pre-read authorization claim.
+
+Confidence is high for the selected original metadata/IL arguments, branches and same-local reference identity; conditional for composition with the inherited compiler under genuine object/provider/caller assumptions. Natural populated project admission, actual XML values and grammar, upstream project packaging, full compiler behavior, emitted bytes, installation, firmware runtime and physical scene outcomes remain open. Existing MH202 and other native-execution ledgers remain unchanged.
+
+The independent review also found the historical EH-coordinate field label inaccurate. The parent retained exact v2 report/code/method/manifest bytes before this report-only v3 clarification. At saved method-body offset940, raw fat EH header `417c0000` introduces five 24-byte clauses. The first is try start252, length25, handler start277, length22; the second is try start599, length25, handler start624, length22 (all four starts decimal). These decimal starts correspond to hexadecimal IL00fc/0115 and IL0257/0270 respectively. The numbers are direct IL coordinates: no header adjustment applies. The supplement records all five clauses and preserves exact old/current report identities. Canonical v2 code/results/manifest/first copies remain unchanged; this clarification adds no original source coverage or vendor execution.
+
+The first supplementary host parser used an incorrect expected length104 for the fourth EH try range (start699/end820). Its guard failed before outputs; the correct length is121. Parent exact snapshots preceded NEW supplementary v2/reportv4 filenames. The failed helper, reportv3 draft and failure note remain unchanged; no source behavior or canonical v2 bytes changed.

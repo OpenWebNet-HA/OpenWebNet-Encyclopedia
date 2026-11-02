@@ -1,0 +1,10 @@
+{
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/PATH_REPRESENTATION_HISTORY.json",
+      "published": "path-representation-history.json",
+      "sha256": "24558df097d290213126753ad8ebccbc1c93afc81bb344eb9b04165054461a38",
+      "bytes": 1427
+    }
+  ]
+}

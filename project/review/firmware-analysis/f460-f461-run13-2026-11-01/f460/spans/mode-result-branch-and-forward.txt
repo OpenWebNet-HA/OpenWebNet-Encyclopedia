@@ -1,0 +1,28 @@
+
+/home/bticino/bin/dedrifupdater:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000028b8 <.text+0xf8>:
+    28b8:	aa1503e0 	mov	x0, x21
+    28bc:	97fffe8d 	bl	22f0 <_ZN13StatusMachine19get_upgr_time_startEv@plt>
+    28c0:	f947eec1 	ldr	x1, [x22, #4056]
+    28c4:	2a0003f3 	mov	w19, w0
+    28c8:	7100081f 	cmp	w0, #0x2
+    28cc:	f9400020 	ldr	x0, [x1]
+    28d0:	54000e80 	b.eq	2aa0 <_ZN8PlatformC1Ei@plt+0x18>  // b.none
+    28d4:	7100067f 	cmp	w19, #0x1
+    28d8:	b0000021 	adrp	x1, 7000 <_ZN8PlatformC1Ei@plt+0x4578>
+    28dc:	9115c021 	add	x1, x1, #0x570
+    28e0:	b0000022 	adrp	x2, 7000 <_ZN8PlatformC1Ei@plt+0x4578>
+    28e4:	91164042 	add	x2, x2, #0x590
+    28e8:	9a810042 	csel	x2, x2, x1, eq	// eq = none
+    28ec:	b0000021 	adrp	x1, 7000 <_ZN8PlatformC1Ei@plt+0x4578>
+    28f0:	911c2021 	add	x1, x1, #0x708
+    28f4:	97fffe1f 	bl	2170 <_ZN7slogger5debugEPKcz@plt>
+    28f8:	2a1303e1 	mov	w1, w19
+    28fc:	aa1403e0 	mov	x0, x20
+    2900:	97ffff14 	bl	2550 <hal_board_reboot@plt+0x8>
+    2904:	2a0003f3 	mov	w19, w0
+    2908:	350010c0 	cbnz	w0, 2b20 <_ZN8PlatformC1Ei@plt+0x98>

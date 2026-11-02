@@ -1,0 +1,83 @@
+{
+  "scope": "Exact safe object/context/query/hash evidence, no whole raw configuration/default records",
+  "exports": [
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/objects/CONF_ID_CLASSIFICATION.v1.json",
+      "published": "evidence/objects/CONF_ID_CLASSIFICATION.v1.json",
+      "size": 83021,
+      "sha256": "6b1093a7531f8397da8106663e70a3f85d9a911cca1a13996dcdcb83ed1d61c3"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/objects/INPUTS.v1.json",
+      "published": "evidence/objects/INPUTS.v1.json",
+      "size": 467,
+      "sha256": "d172e377e44d2bb942be5697cc3f511ac92a666b8bbff5364282608f26bfb80b"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/objects/METHOD.v1.json",
+      "published": "evidence/objects/METHOD.v1.json",
+      "size": 601,
+      "sha256": "9534afa8764d69841fa533f7f9b56e055a84f35678d6748fff1e3197197f8f66"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/objects/NORMALIZED_RELATIONSHIPS.v1.json",
+      "published": "evidence/objects/NORMALIZED_RELATIONSHIPS.v1.json",
+      "size": 56787,
+      "sha256": "d0fce81d8dcdd4aacc98052eb35844521f99eabcc8bd233890d17ac2bb08a795"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/objects/OBJECT_EQUIVALENCE.v1.json",
+      "published": "evidence/objects/OBJECT_EQUIVALENCE.v1.json",
+      "size": 15797,
+      "sha256": "3d4f22d33762bf2119037adaed577c8847a23f749447bb7964e18589007e1b5e"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/objects/ORPHAN_PROBES.v1.json",
+      "published": "evidence/objects/ORPHAN_PROBES.v1.json",
+      "size": 3930,
+      "sha256": "aafaef956d86b2f9f64aeac86ed06fb0027b0080c68f1a4157fa95f35b592911"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/objects/OUTPUT_MANIFEST.v1.json",
+      "published": "evidence/objects/OUTPUT_MANIFEST.v1.json",
+      "size": 1604,
+      "sha256": "27f22eca8df88212c4ea8a76053d3178068f48002cf1a14060ba6191bf0414ed"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/objects/QUERIES.v1.json",
+      "published": "evidence/objects/QUERIES.v1.json",
+      "size": 27095,
+      "sha256": "2ee83c33a213db5d7298a2883dda48bc1d1f0828928c9f59823c09668760df8f"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/objects/RAW_DELTA_IDENTITIES.v1.json",
+      "published": "evidence/objects/RAW_DELTA_IDENTITIES.v1.json",
+      "size": 1289577,
+      "sha256": "37e6d48156ef183462d192cccadbff06501c62f8eea13211e26ab104c993d304"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/objects/SAFE_EXAMPLES.v1.json",
+      "published": "evidence/objects/SAFE_EXAMPLES.v1.json",
+      "size": 41329,
+      "sha256": "09ab89f5c9fa7221e62f8e8d80e7157bb81959f6ddbbc54cf26dc1e349181b2d"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/objects/SCHEMA_AND_KEYS.v1.json",
+      "published": "evidence/objects/SCHEMA_AND_KEYS.v1.json",
+      "size": 49554,
+      "sha256": "35a792c01bad66dc2ae223b5e2bdd0329b06a907e238f3254ae84a302788dab7"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/objects/SELECTED_RANGE_LABELS.v1.json",
+      "published": "evidence/objects/SELECTED_RANGE_LABELS.v1.json",
+      "size": 2038,
+      "sha256": "c1c695a5d5294338fcf91efaf8fbc82a923b94c40e2e6beddf0eeb980c9bba0d"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/objects/TABLE_COVERAGE.v1.json",
+      "published": "evidence/objects/TABLE_COVERAGE.v1.json",
+      "size": 5458,
+      "sha256": "46ca261bf946543c33e97ff9751742855f4c4b22c197bccc6a61df0e3b1a6665"
+    }
+  ]
+}

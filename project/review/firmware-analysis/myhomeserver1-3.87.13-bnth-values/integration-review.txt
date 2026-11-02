@@ -1,0 +1,61 @@
+# BNTH value-source integration: documentary review
+
+Verdict: PASS for authoritative current review-candidate-v2 after the requested documentary locator correction. Source semantics needed no correction. This is source-aware of my independent candidate JsonCpp-double provider audit. Serializer and typed-record claims are independently compared documentarily with their authoritative v2 reports and independent peer source reviews; it is not my fresh original-byte audit of those two whole areas, native replay or complete firmware/physical evaluation. No author, original, repository or previous report/review file was edited by this reviewer.
+
+## Value-chain applicability and limits
+
+The event-routing page correctly narrows the selected BNTH value source on both sides of its inherited comparison. Its actual raw serializer selector2 requests raw double56 ->Json double ->setpoint without a local value/sentinel/zero suppression. The common base requests a fresh ValueType0 destination and only its base member set; under ordinary successful fresh-object/member/assignment/string semantics mode/status do not preempt the chosen reparse. The SAME returned JSON address is passed to the raw constructor and then the inherited compiled160 copy. This is a conditional structural/value source relation, not complete JSON execution, arbitrary-double bitwise preservation or a naturally configured scene.
+
+The separate local event-code3 producer and new record discriminator3 are not equated to public WHO or physical state by their equal integers. The current typed record is ItemStatusThermostat in an88-byte control allocation with embedded record+16, independently distinguished from the earlier Light record+12. Present setpoint requests asDouble into D9; the selected absent-member source explicitly supplies local double zero. VSTR at allocation48 means record32, while the separate D8 source goes to record48. This is a software default and field relation, not a physical zero, measurement unit or supported domain.
+
+The outgoing typed pair and local params.id reach the same registry. Selected new-pair storage and a concrete matching-discriminator changed-double copy can feed the predicate's prior record32 load under suitable same-ID, record-type, tree/provider/ownership and normal-return premises. This does not prove every cached entry is suitable, an actual update occurred, freshness/notification, all replacement/error returns or natural event-to-scene execution. The separate removal params.scene_id namespace and compiled selector/operator fields are not substituted.
+
+The serialization page accurately narrows the candidate scalar provider: constructor D0 ->D8 ->union0/type3, explicitly empty comments and selected zero-comments path, then type3 asDouble union ->D0 without numeric conversion on the retained normal leg. Candidate hash/alias/SONAME/symbol/BLX/ARM-PLT/JUMP_SLOT identity is distinct from effective runtime binding/interposition. Valid constructed storage, ordinary hard-float ABI/canary/provider and no intervening mutation remain explicit. This scalar contract does not execute or close object construction/member insertion/move assignment/map/string/reparse/error behavior as a whole.
+
+Current pages/capsule/coordination documents retain raw grammar/configuration, exceptional floating environment, provider/binding, assets80/81/94/95, record freshness/type/correlation, reset/context/owner/unwind/concurrency and physical gaps. Wider Device/source gates and prior execution ledgers remain pending/unchanged. Original/native/provider/JSON/floating/target and semantic fixtures remain0. The proposed bounded helper experiment is FUTURE work only, without a current native harness, tool package use, numeric fixture or executed corpus. Closed transport/authentication/session/framing/equivalent bodies remain opaque.
+
+## Correction and immutable history
+
+The initial page said 'provider supplement below' even though that supplement resides in the linked capsule/serialization page. Parent preserved its exact pre-correction page and initial eight-document candidate, then replaced ONLY that locator phrase with a direct provider-report link. WORDING_REFINEMENT's exact substitution independently reproduces the current page and hashes. The other seven previous documents are unchanged; current v2 adds the refinement record as its ninth pin. No integration review existed before this correction, so this is the exclusive first review rather than an overwritten earlier review.
+
+The two original page additions also reproduce exactly from retained pre-edit bytes and DOCUMENT_PATCH. The failed serializer import-matcher v1 and record Thumb32-only branch-decoder v1 remain separately retained, with parent pre-v2 snapshots of3 and6 exact files. Current strict v2 matchers account for actual unversioned symbols and the selected exact Thumb16 branch without changing original source behavior. Later failure/probe transcripts remain explicitly later disclosures, not authenticated nonexistent historical terminal files. Earlier missing-history limits and scoped storage corrections remain unchanged.
+
+## Identity and local references
+
+All9 current frozen document/history pins match their exact v2 copies, sizes and hashes. All61 SOURCE_EXPORTS pairs match local and published bytes/metadata. Current serializer17, record19 and provider13 first-candidate rows (49 total), plus3+6 parent pre-v2 rows, match their originals/indexes. Saved parent source checks record11+17+11 outputs,39 total. This review adds no native corpus or broad source replay.
+
+There are46 local Markdown link occurrences and0 fragments. All44 existing targets resolve. Only capsule integration-review.txt and validation.json await actual assembly. This review certifies neither their future bytes nor present existence. Parent must create actual exact copies and complete strict link/identity/ESG/ECV/diff gates with those files present, with no placeholder or exemption. Coordination log references to subsequent final checks are checkpoint sequencing, not premature validation certification.
+
+## Exact current v2 document pins
+
+| Workspace-relative file | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md` | `a33d0cbacec9e522b2f6237ab2a9c06b6d29c72378371c542175b162b749b069` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-routing.md` | `c7e309cf81b4a32110db37f441a820d04d08ece7554c07a38833bc8c72205409` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-bnth-values/README.md` | `73c741984af29642018fda22370b2fb3acb1e0ea92c5765ff5b84fd9bab5fbbc` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/SYNTHESIS.md` | `21152bc173653a79618f5714874090a7a208a78229764271482d452ea9f2fa9e` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/COVERAGE.md` | `5c22e3c15aee0744ff7c9d4015c53e79a3bb5d7cecae17a8c99fda815f981eb5` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/RANKED_REMAINING_QUESTIONS.md` | `5f2fb808dded3bf47b65f82a0062adee544d14913880baa0cd15aa56147733cf` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/RUN_LOG.md` | `61af2dad509360acaf6fd0f92b55828392b377798fd356597924efe1ded6f35e` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-bnth-values/SOURCE_EXPORTS.json` | `d1e8da97a801e3a5e64cd8ebff501561e6c6687120dad5d4e9ce98b47000caed` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/integration/WORDING_REFINEMENT.json` | `b696b2b6dab781b00aa6258e66fcf566d699ad55e8529aa21c921f5f9fafd57e` |
+
+## Source/review/history applicability pins
+
+Paths below are relative to this research batch.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `serializer/REPORT.v2.md` | `57cf16095f0da61eddf81d3b0133f30ab8b6848ec9f2fc1f74dea8001924c97d` |
+| `record/REPORT.v2.md` | `9d5e8401ea962f30b509964f8ed4ac5c8dff069b118f33cc14b0a0fb3a2490f7` |
+| `provider/REPORT.md` | `5ae3040b3f3b8e24edff3d6b893c1a78053f6c3d4fc27b66837f90a67e768bd2` |
+| `reviews/serializer-source-review.md` | `7f8066cba98684cb66f98a7c525a123d2827bffc970c75b3831ef861c9c3c0b3` |
+| `reviews/record-source-review.md` | `c233ae838a1701d0cf375338468f62bb1bcc37fcf550b7a3ae06b20b5be07ac9` |
+| `reviews/provider-source-review.md` | `7729b58f0f80fd6c2ff1c6285b9604cf5a9a7fa2f1cc7d1ec7bb9f3b6793a5e0` |
+| `integration/pre-v2-serializer/INDEX.json` | `c92c60090acd3cc57fb282826701068f83ad313fd21abb46915ede4f352572dd` |
+| `integration/pre-v2-record/INDEX.json` | `ac753482acbd3df597cc88c3de8caefb00e788259e2e77cc7e234610cb4db974` |
+| `integration/review-candidate/INDEX.json` | `0cee0d5ef3509398f928e6eded0e9d010f59133fcb872c887cbc869357a6fe13` |
+| `integration/pre-wording-refinement/INDEX.json` | `f33edd7c151218772c1e07771c35dbc75b15b6f3f755fabcc94abf262900dd36` |
+| `integration/WORDING_REFINEMENT.json` | `b696b2b6dab781b00aa6258e66fcf566d699ad55e8529aa21c921f5f9fafd57e` |
+
+Current v2 index SHA256 `0e36985bfead3990123b4c381bf252eb329c21300196d777fe30ea2233314c9b`. SOURCE_EXPORTS.json SHA256 `d1e8da97a801e3a5e64cd8ebff501561e6c6687120dad5d4e9ce98b47000caed`.

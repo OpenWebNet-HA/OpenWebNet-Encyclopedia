@@ -1,0 +1,202 @@
+#!/usr/bin/env python3
+"""One own recovery main file-request gate to a compiled path-cell store."""
+import sys
+sys.dont_write_bytecode = True
+import argparse
+import hashlib
+import json
+import re
+import struct
+import subprocess
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = next(p for p in HERE.parents if (p / 'work/f453av-firmware').is_dir())
+BASE = Path('work/f453av-firmware/3.0.14')
+GUARDS = {
+    0xb8d0: 0xe3a05000,
+    0xb99c: 0xe1a01005, 0xb9a0: 0xe59f0f10, 0xb9a4: 0xebfff530,
+    0xb9a8: 0xe3700001, 0xb9ac: 0xe1a05000, 0xb9b0: 0xe5982000,
+    0xb9b4: 0xe5970000, 0xb9b8: 0xe28d409c, 0xb9bc: 0x0a000008,
+    0xb9c0: 0xe59f1ef4, 0xb9c4: 0xebfff4a0, 0xb9c8: 0xe59f2ef0,
+    0xb9cc: 0xe59f3ef0, 0xb9d0: 0xe5832000,
+    0xc8b8: 0x0000f0b8, 0xc8c0: 0x0000f0e4, 0xc8c4: 0x000188bc,
+    0x188bc: 0x0000e43c,
+    0x8e6c: 0xe59fc004, 0x8e70: 0xe08fc00c,
+    0x8e74: 0xe59cf000, 0x8e78: 0x0001005c,
+}
+SPANS = [('earlier-own-main-R5-zero-context', 0xb8d0, 0xb8d4),
+         ('new-open-gate-and-single-path-cell-store', 0xb99c, 0xb9d4),
+         ('selected-marker-path-pool', 0xc8b8, 0xc8bc),
+         ('selected-compiled-path-and-cell-pools', 0xc8c0, 0xc8c8),
+         ('original-cell-initializer-only', 0x188bc, 0x188c0),
+         ('actual-open-PLT-and-offset', 0x8e6c, 0x8e7c)]
+
+
+def sha(b):
+    return hashlib.sha256(b).hexdigest()
+
+
+def enc(x):
+    return (json.dumps(x, indent=2, sort_keys=True) + '\n').encode()
+
+
+def exclusive(p, b):
+    p.parent.mkdir(parents=True, exist_ok=True)
+    with p.open('xb') as f:
+        f.write(b)
+
+
+def build():
+    pins = {}
+
+    def read(p):
+        p = Path(p)
+        f = ROOT / p
+        assert not p.is_absolute() and '..' not in p.parts
+        assert f.is_file() and not f.is_symlink() and ROOT in f.resolve().parents
+        raw = f.read_bytes()
+        pins[str(p)] = {'path': str(p), 'bytes': len(raw), 'sha256': sha(raw)}
+        return raw
+
+    manifest = json.loads(read(BASE / 'analysis/recovery-regular-files.json'))
+    original = BASE / 'analysis/recovery/bin/bt_start'
+    b = read(original)
+    assert len(b) == manifest['bin/bt_start']['bytes'] == 37956
+    assert sha(b) == manifest['bin/bt_start']['sha256'] == 'f5a4f002e212e97e5f3e40fc4ed067237ad0095642bdec0b2c8792fa22a2fbd9'
+    assert b[:8] == bytes.fromhex('7f454c4601010161')
+    h = struct.unpack_from('<HHIIIIIHHHHHH', b, 16)
+    assert h[0:2] == (2, 40) and h[3] == 0x8f6c and h[6] == 2 and h[8] == 32
+    ph = [struct.unpack_from('<8I', b, h[4] + i * h[8]) for i in range(h[9])]
+    loads = [{'offset': s[1], 'VA': s[2], 'file_bytes': s[4], 'memory_bytes': s[5], 'flags': s[6]} for s in ph if s[0] == 1]
+
+    def off(a, n=4):
+        xs = [s['offset'] + a - s['VA'] for s in loads if s['VA'] <= a and a + n <= s['VA'] + s['file_bytes']]
+        assert len(xs) == 1, hex(a)
+        return xs[0]
+
+    def word(a):
+        return struct.unpack_from('<I', b, off(a))[0]
+
+    def pool(a):
+        w = word(a)
+        assert w & 0x0f7f0000 == 0x051f0000
+        return a + 8 + (w & 4095) * (1 if w & (1 << 23) else -1)
+
+    def branch(a, linked):
+        w = word(a)
+        assert w & 0x0f000000 == (0x0b000000 if linked else 0x0a000000)
+        n = w & 0xffffff
+        if n & (1 << 23):
+            n -= 1 << 24
+        return a + 8 + n * 4
+
+    for a, w in GUARDS.items():
+        assert word(a) == w, hex(a)
+    assert branch(0xb9a4, True) == 0x8e6c
+    assert branch(0xb9bc, False) == 0xb9e4
+    joins = []
+    for a, p, value in [(0xb9a0, 0xc8b8, 0xf0b8), (0xb9c8, 0xc8c0, 0xf0e4), (0xb9cc, 0xc8c4, 0x188bc)]:
+        assert pool(a) == p and word(p) == value
+        joins.append({'instruction_VA': hex(a), 'pool_VA': hex(p), 'pool_word': hex(value)})
+    literals = []
+    for a, text, role in [(0xf0b8, '/NO_APP_COPY', 'open pathname only; marker meaning unproved'),
+                          (0xf0e4, '/dev/mtd5', 'compiled pointer stored on selected leg; device/partition role unproved'),
+                          (0xe43c, '/dev/mtd6', 'original cell initializer only; effective live value unproved')]:
+        raw = text.encode('ascii') + b'\0'
+        assert b[off(a, len(raw)):off(a, len(raw)) + len(raw)] == raw
+        literals.append({'VA': hex(a), 'file_offset': hex(off(a, len(raw))), 'text': text, 'NUL_bytes_hex': raw.hex(), 'role': role})
+    cell_load = [x for x in loads if x['VA'] <= 0x188bc and 0x188c0 <= x['VA'] + x['file_bytes']]
+    assert len(cell_load) == 1 and cell_load[0]['flags'] == 6
+    slot = 0x8e70 + 8 + word(0x8e78)
+    assert pool(0x8e6c) == 0x8e78 and slot == 0x18ed4
+    rel = subprocess.check_output(['readelf', '-rW', str(ROOT / original)], text=True)
+    rows = [x.strip() for x in rel.splitlines() if 'R_ARM_JUMP_SLOT' in x and re.search(r'\bopen@GLIBC_', x)]
+    assert len(rows) == 1 and int(rows[0].split()[0], 16) == slot
+    spans = []
+    for label, a, z in SPANS:
+        o = off(a, z - a)
+        raw = b[o:o + z - a]
+        asm = subprocess.check_output(['objdump', '-d', '-m', 'arm', f'--start-address={a}', f'--stop-address={z}', str(ROOT / original)], text=True)
+        spans.append({'label': label, 'start_VA': hex(a), 'end_exclusive_VA': hex(z), 'file_offset': hex(o), 'bytes_hex': raw.hex(), 'sha256': sha(raw), 'host_disassembly': asm})
+    prior = BASE / 'research/2026-11-01-night05-recovery'
+    prior_source = json.loads(read(prior / 'SOURCE.json'))
+    assert prior_source['main_candidate']['R0_word'] == '0xb8c0'
+    assert prior_source['original']['sha256'] == sha(b)
+    read(prior / 'REPORT.md')
+    source = {'component': 'Own F453AV recovery only', 'original': pins[str(original)],
+              'ELF_mapping_role': 'Own header/PT_LOAD verified for mapping only; prior entry/import/main-argument edge inherited, not new coverage',
+              'header52_hex': b[:52].hex(), 'PT_LOAD': loads,
+              'spans': spans, 'word_guards': [{'VA': hex(a), 'word': hex(w)} for a, w in sorted(GUARDS.items())],
+              'pool_joins': joins, 'safe_literals': literals,
+              'open_import': {'call_VA': '0xb9a4', 'PLT_VA': '0x8e6c', 'PLT_literal_VA': '0x8e78', 'PLT_literal_word': hex(word(0x8e78)), 'computed_GOT_slot': hex(slot), 'original_relocation': rows[0]},
+              'comparison_branch': {'comparison_VA': '0xb9a8', 'word': '0xe3700001', 'meaning': 'CMN returnedR0,1 sets equality only for32-bit0xffffffff', 'branch_VA': '0xb9bc', 'equal_target': '0xb9e4', 'selected_store_leg': 'not-equal fallthrough after opaque normal-return request'},
+              'single_store': {'VA': '0xb9d0', 'operation': 'STR R2,[R3]', 'R2_compiled_pointer': '0xf0e4', 'R3_cell': '0x188bc', 'width_bytes': 4, 'cell_original_initializer': '0xe43c', 'cell_containing_writable_PT_LOAD': cell_load[0], 'no_current_state_claim': True}}
+    flow = {'scope': 'One own recovery-main file-request result gate to one compiled path-cell assignment; not marker semantics or whole main',
+            'inherited': 'Night05 supplies own recovery entry/import candidate-main0xb8c0; this packet does not establish that it actually executes',
+            'R1_flags': '0xb99c copies currentR5 toR1; own earlier main0xb8d0 setsR5=0. Current zero requires natural intervening flow, ordinary callee-save ABI and no invalidating change; it is an explicit premise.',
+            'request': {'VA': '0xb9a4', 'R0': 'compiled /NO_APP_COPY pointer via0xc8b8', 'R1': 'currentR5 (zero only under stated premise)', 'binding': 'actual original open import metadata, effective provider opaque'},
+            'gate': 'CMN return,1; non-flag-setting MOV/LDR/ADD keep condition flags untilBEQ0xb9bc. Equality branches0xb9e4; selected non-equality falls through after an opaque request that must return normally.',
+            'store': '0xb9c8 loads compiled0xf0e4 intoR2;0xb9cc loads cell0x188bc intoR3;0xb9d0 storesR2 tothatcell. No pathname is dereferenced or device accessed by the analysis.',
+            'premises': ['Actual recovery environment/path/image/provider selection and natural own main admission', 'CurrentR5=0 for numeric-zero open flags; expected ABI and earlier normal provider returns', 'Valid earlier diagnostic/context addresses and ordinary instruction/ABI state', 'Opaque intervening request0xb9c4 returns normally; writable valid mapped cell and no invalidating side effects'],
+            'limits': ['Not−1 is a numerical gate, not proof of valid descriptor/open success or marker existence/truth', 'Original initializer is file metadata only; no live pre-state or equal-leg value preserved claim', 'Names do not prove marker purpose, active partition, hardware/device identity, application copy/install or recovery success', 'No later cell consumer/table ownership/full main matrix, further resource fields or closed provider/output/transport bodies examined as evidence', 'No normal-image or MH200N/MHS/MH202/F454 semantics transferred']}
+    report = '''# F453AV 3.0.14 night06 — own recovery file-request gate to one path cell
+
+The new bounded source result is in **F453AV's own recovery candidate main**: a request on compiled pathname `/NO_APP_COPY` feeds an exact numerical−1 comparison; the selected not-equal leg assigns compiled `/dev/mtd5` pointer0xf0e4 to one writable cell0x188bc. This is one file-request admission/resource-pointer assignment. No marker meaning, valid descriptor, active partition, hardware, application-copy/install or recovery-success interpretation follows from these names or the selected gate.
+
+## Inherited main and own admission
+
+Night05 already proves the own recovery entry/import/candidate-main argument0xb8c0. Its unchanged REPORT/SOURCE are pinned as inherited context only; script/header/entry facts are not promoted as new coverage. This packet freshly maps the same own recovery bt_start37956 bytes/SHA256 f5a4f002e212e97e5f3e40fc4ed067237ad0095642bdec0b2c8792fa22a2fbd9 from the own recovery regular-file manifest. ELF32 little-endian ARM EXEC/machine40/raw flags0x2 and own PT_LOADs justify addresses, without normal-to-recovery or MH200N/MHS/MH202/F454 semantic transfer.
+
+Natural main/recovery/image/path/helper admission remains unproved. At own main0xb8d0, the exact instruction setsR5=0. At the later selected0xb99c, currentR5 is copied intoR1. Treating these open flags as numeric0 requires natural intervening flow, ordinary callee-save ABI, earlier provider normal returns and no invalidating change. **CurrentR5=0 is explicit admission context**, not an observed machine state or whole-main control-flow proof. Prior diagnostics and their context addresses remain opaque valid/normal-return premises.
+
+## Exact open request and numerical branch
+
+0xb9a0 loadsR0 through pool0xc8b8→0xf0b8, whose exact safe NUL-terminated literal is `/NO_APP_COPY`. BL0xb9a4 decodes to originalPLT0x8e6c. The own PLT uses offset word0x1005c at0x8e78; arithmetic at0x8e70 gives GOT0x18ed4, whose original R_ARM_JUMP_SLOT row names open@GLIBC_2.0. Effective binding and the provider's implementation/results stay opaque. No firmware call, target pathname, file or device is opened/read by this analysis.
+
+CMN R0,1 at0xb9a8 sets equality precisely for returned32-bitword0xffffffff. The intervening MOV/LDR/ADD instructions do not update condition flags before BEQ0xb9bc→0xb9e4. The selected **not-equal fallthrough** therefore gates the subsequent assignment, subject to its intervening opaque request0xb9c4 returning normally. The negative-one comparison is only a source numerical gate: any other machine word follows that selected leg. It is not certified open success, a valid descriptor, actual marker existence or marker truth. No errno/error-policy/defect claim or complete alternative-leg behavior is inferred.
+
+## One compiled resource-cell assignment
+
+At0xb9c8 the PC-relative load selects pool0xc8c0→literal pointer0xf0e4 (`/dev/mtd5`) intoR2.0xb9cc selects pool0xc8c4→cell address0x188bc intoR3. STR R2,[R3] at0xb9d0 requests a four-byte assignment of that compiled pointer. The cell lies within the own writable file-backed PT_LOAD. Its exact original file initializer is0xe43c, pointing at compiled `/dev/mtd6`; that initializer is metadata, not an observed live state, and this packet does not assert the equal leg preserves it.
+
+This is a positive assignment/dataflow edge to a selected path cell, not a whole marker/cell matrix or field taxonomy. Writable mapped storage, valid machine/context state and no invalidating provider side effects remain premises. The packet stops immediately after this single store. It does not claim a later consumer, table ownership, target partition identity, actual access to either named device, installation or completed startup. No later resource logic or closed implementation is used to promote the path strings into behavior.
+
+## Evidence and boundaries
+
+SOURCE.json holds six exact original spans,23 fixed word guards, three PC-relative joins, three whitelisted path literals, exact numerical branch/store evidence and own actual open PLT/GOT/relocation proof. ARGUMENT_FLOW.json keeps inherited candidate-main context, currentR5 premise, request/gate/store and unclosed environment/provider roles separate. INPUTS.json pins own original binary/manifest plus two immutable night05 members. The single earlierR5 instruction is admission context; remaining main and alternative paths are not claimed as reviewed.
+
+Reproduce `python3 -B collect_resource_v1.py --check`: deterministic host static bytes/hash/header parsing, readelf and bounded ARM disassembly only. Initial generation refuses existing outputs and immediately retains exact first copies of all five generated outputs and collector with a precomputed non-circular index. No old collector, original/vendor/native/helper/emulator/SQL/targetstartup/module/OS/device/service/network/bus/mount/flash, model, fixture or physical execution occurs. No private configuration, invented objects, display/output/receiving/transport/authentication/session/framing/MQTT/libjel/provider body or proxy is expanded. New original execution0; actual database recovery/generation0 and remote writes0. Parent alone owns public edits/archival; cumulative archive remains inherited one encrypted F450 support container/zero plaintext databases. Originals/synced/completed artifacts and MHS340 code-hook-visits/360 hooks plus separate F454/MH202 ledgers remain unchanged.
+'''
+    out = {'SOURCE.json': enc(source), 'ARGUMENT_FLOW.json': enc(flow), 'INPUTS.json': enc({'files': sorted(pins.values(), key=lambda x: x['path'])}), 'REPORT.md': report.encode()}
+    out['OUTPUT_MANIFEST.json'] = enc({'scope': 'Generated members excluding this manifest', 'files': {n: {'bytes': len(v), 'sha256': sha(v)} for n, v in sorted(out.items())}})
+    return out
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--check', action='store_true')
+    a = ap.parse_args()
+    names = ['SOURCE.json', 'ARGUMENT_FLOW.json', 'INPUTS.json', 'REPORT.md', 'OUTPUT_MANIFEST.json']
+    if not a.check:
+        assert not any((HERE / n).exists() for n in names) and not (HERE / 'first-candidate').exists()
+    out = build()
+    if a.check:
+        for n, b in out.items():
+            assert (HERE / n).read_bytes() == b, n
+        for x in json.loads((HERE / 'first-candidate/INDEX.json').read_bytes())['files']:
+            b = (HERE / 'first-candidate' / x['copy']).read_bytes()
+            assert len(b) == x['bytes'] and sha(b) == x['sha256'] and b == (HERE / x['copy']).read_bytes()
+    else:
+        for n, b in out.items():
+            exclusive(HERE / n, b)
+        copies = {**out, 'collect_resource_v1.py': Path(__file__).read_bytes()}
+        ix = {'scope': 'Immediate exact first outputs and collector; index precomputed excludes itself', 'files': [{'copy': n, 'bytes': len(b), 'sha256': sha(b)} for n, b in sorted(copies.items())]}
+        for n, b in copies.items():
+            exclusive(HERE / 'first-candidate' / n, b)
+        exclusive(HERE / 'first-candidate/INDEX.json', enc(ix))
+    print(json.dumps({'status': 'PASS', 'outputs': len(out), 'spans': len(SPANS), 'guards': len(GUARDS), 'original_execution': 0, 'new_coverage': 'own recovery file-request gate to one compiled path-cell store'}))
+
+
+if __name__ == '__main__':
+    main()

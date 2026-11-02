@@ -1,0 +1,141 @@
+{
+  "scope": "Second targeted static continuation; exact identified F4542.0.51 Firmware. No original ARM/JS, process, browser, physical Device or I/O execution.",
+  "archive": {
+    "artifact_id": "firmware-f454-020051",
+    "filename": "F454_020051.fwz",
+    "version": "2.0.51",
+    "bytes": 74448014,
+    "sha256": "15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3",
+    "redistribution": "private-archive-only",
+    "manifest": "sources/artifact-manifest.yaml"
+  },
+  "reports": [
+    {
+      "area": "temperature",
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/temperature/REPORT.md",
+      "source_sha256": "051da2368efdeb1b97526bfd88c49a1223a51546a24e43195727aafcc3962f9f",
+      "published": "continuation-temperature-report.txt",
+      "published_sha256": "051da2368efdeb1b97526bfd88c49a1223a51546a24e43195727aafcc3962f9f",
+      "normalization": "Local workspace prefix removed if present; no finding content changed."
+    },
+    {
+      "area": "frontend",
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/frontend/REPORT.md",
+      "source_sha256": "f23f158a7d380bd8e2fddf52b4faf83c36267a38d437cdef1cb36b81ec798689",
+      "published": "continuation-frontend-report.txt",
+      "published_sha256": "f23f158a7d380bd8e2fddf52b4faf83c36267a38d437cdef1cb36b81ec798689",
+      "normalization": "Local workspace prefix removed if present; no finding content changed."
+    },
+    {
+      "area": "energy",
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/energy/REPORT.md",
+      "source_sha256": "4b1c391eec22a9ec880c5ac8cb32830a23bd6c2ff983dc918b02363fcd288652",
+      "published": "continuation-energy-report.txt",
+      "published_sha256": "4b1c391eec22a9ec880c5ac8cb32830a23bd6c2ff983dc918b02363fcd288652",
+      "normalization": "Local workspace prefix removed if present; no finding content changed."
+    },
+    {
+      "area": "media",
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/media/REPORT.md",
+      "source_sha256": "abc19ee23d27650c6a7fd49c0ce49c61c5ac455d3bf3500c56ab52f96558117d",
+      "published": "continuation-media-report.txt",
+      "published_sha256": "abc19ee23d27650c6a7fd49c0ce49c61c5ac455d3bf3500c56ab52f96558117d",
+      "normalization": "Local workspace prefix removed if present; no finding content changed."
+    }
+  ],
+  "independent_source_reviews": [
+    {
+      "area": "temperature",
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/temperature/review.md",
+      "source_sha256": "70e5ed4acb9b32ea829a9719a381b776574f68c14f557a6bef4196fa15bb698c",
+      "published": "continuation-temperature-review.txt",
+      "published_sha256": "70e5ed4acb9b32ea829a9719a381b776574f68c14f557a6bef4196fa15bb698c",
+      "normalization": "Local workspace prefix removed if present; no finding content changed."
+    },
+    {
+      "area": "frontend",
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/frontend/review.md",
+      "source_sha256": "923f36343515099a615a81f40ef894e4f5edd21059b4a03a9981371df7e47eac",
+      "published": "continuation-frontend-review.txt",
+      "published_sha256": "923f36343515099a615a81f40ef894e4f5edd21059b4a03a9981371df7e47eac",
+      "normalization": "Local workspace prefix removed if present; no finding content changed."
+    },
+    {
+      "area": "energy",
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/energy/review.md",
+      "source_sha256": "93ab35100113c0989f39d0949fe4f47bdbbc4d4b7be181c020b963fd22f2c489",
+      "published": "continuation-energy-review.txt",
+      "published_sha256": "93ab35100113c0989f39d0949fe4f47bdbbc4d4b7be181c020b963fd22f2c489",
+      "normalization": "Local workspace prefix removed if present; no finding content changed."
+    },
+    {
+      "area": "media",
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/media/review.md",
+      "source_sha256": "babc16d8ff932a704dd2e33309df626c1f3c4ce9f0bb8ddb28483250bca0baa8",
+      "published": "continuation-media-review.txt",
+      "published_sha256": "babc16d8ff932a704dd2e33309df626c1f3c4ce9f0bb8ddb28483250bca0baa8",
+      "normalization": "Local workspace prefix removed if present; no finding content changed."
+    }
+  ],
+  "selected_derived_evidence": [
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/temperature/model-results.json",
+      "published": "continuation-temperature-model.json",
+      "sha256": "dd6ad1aaf820bd8c2051bfed6b1af7509b158ddf6cfa1fb261383e35e52630e1",
+      "method": "Static source/ELF or host-model evidence only; no original instructions evaluated."
+    },
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/frontend/frontend-evidence.json",
+      "published": "continuation-frontend-evidence.json",
+      "sha256": "6a35dbc055486b4a2625d8849e0df7388a2fdb58153a4083825eed67a26e81b8",
+      "method": "Static source/ELF or host-model evidence only; no original instructions evaluated."
+    },
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/energy/host-oldstream-model.json",
+      "published": "continuation-energy-model.json",
+      "sha256": "546fd529b0199d6d6ca0201cbcc78f175f3f4d2868a11aee96a6a81915581ba7",
+      "method": "Static source/ELF or host-model evidence only; no original instructions evaluated."
+    },
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/media/discovery-fields.json",
+      "published": "continuation-discovery-fields.json",
+      "sha256": "cae46d8b8c01d45b1d0f32fe9e22d599dec68de91339e964e27293cedca8facf",
+      "method": "Static source/ELF or host-model evidence only; no original instructions evaluated."
+    },
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/media/vde-search-targets.json",
+      "published": "continuation-discovery-targets.json",
+      "sha256": "8329b6aa1042d2f2fcd4d9117c8bc695264459baa0f2b725e87204444a66539a",
+      "method": "Static source/ELF or host-model evidence only; no original instructions evaluated."
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/temperature/collect_temperature_mapping.py",
+      "sha256": "b604c7a062b07ff9dfc7d23adf1dba8a22fd751d6cfe00688f04e9fcd4b39dcb"
+    },
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/temperature/model_mapping.py",
+      "sha256": "ff86ab569ad1ab25966f4c225a4f1e92e8389886ed33c5699b25248c2a6cc761"
+    },
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/frontend/collect_frontend.py",
+      "sha256": "6dfd9a65c6e49e47f37b42ff156ee36bffc4ca4ca176e8f18105f553ef3637d2"
+    },
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/energy/collect_evidence.py",
+      "sha256": "7a9d3f37dac6daeca4cbbd7642d039924a7be891a4aeaceea8573427b70ea89a"
+    },
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-targeted-2/media/collect_evidence.py",
+      "sha256": "3f6d0129bd4b58775dc367416e627bdc56ebee5f9a9bb6bdfb8278ba9048f81b"
+    }
+  ],
+  "energy_correction": {
+    "published": "continuation-energy-correction.txt",
+    "sha256": "71a301893850f3bb828ba4c9d788bda992b750527ba23e899690493a39f777cf",
+    "history": "Pre-review misrouting of selected rows through row0x19-only append was corrected before promotion. Exact superseded files retained in local development-pre-review/ snapshot.",
+    "snapshot_manifest_sha256": "bab25028ec0f379996750b1a8d93d19ac649660bdf0222946d25362410c4ae7b"
+  },
+  "reproduction_limit": "Original images/dependencies/static spans/collectors and superseded-development snapshot remain in the separate local dossier. These published records are not a self-contained Firmware runtime or hardware evidence manifest. Prior completed dossier/indexes were not modified."
+}

@@ -1,0 +1,303 @@
+#!/usr/bin/env python3
+"""Read-only original-file/header exploration of two legacy packages. No target execution."""
+import sys
+sys.dont_write_bytecode = True
+import argparse
+import collections
+import hashlib
+import json
+import re
+import struct
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = next(p for p in HERE.parents if (p / 'work/remaining-firmware-acquisition').is_dir())
+SPECS = [
+    ('MH200N', '1.1.8', 'work/mh200n-firmware/1.1.8', 'scheduler_010108.fwz',
+     'e32d3404302f3619bbbb564ae50554ab81ac6ef818b6e5a2290142a5e2ab5fb3',
+     'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0131-mh200n-scenario-programmer.md'),
+    ('F453AV', '3.0.14', 'work/f453av-firmware/3.0.14', 'WS_10DIN_030014.fwz',
+     '673d7ab2802fc324802bb8f59c50e018850e8c724e923e0bd7cbc8b5cca86d4a',
+     'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0089-webserver-audio-video-din.md'),
+]
+OUTPUTS = ['PACKAGES.json', 'COMPONENTS.json', 'STARTUP.json', 'DECLARATIONS.json',
+           'DATA_FILE_LEADS.json', 'COMPARISONS.json', 'INPUTS.json', 'REPORT.md', 'OUTPUT_MANIFEST.json']
+
+
+def sha(b):
+    return hashlib.sha256(b).hexdigest()
+
+
+def enc(obj):
+    return (json.dumps(obj, indent=2, sort_keys=True, ensure_ascii=False) + '\n').encode()
+
+
+def exclusive(p, b):
+    p.parent.mkdir(parents=True, exist_ok=True)
+    with p.open('xb') as f:
+        f.write(b)
+
+
+def build():
+    pins = {}
+
+    def read(p, expected=None):
+        p = Path(p)
+        assert not p.is_absolute() and '..' not in p.parts
+        f = ROOT / p
+        assert f.is_file() and not f.is_symlink() and ROOT in f.resolve().parents
+        b = f.read_bytes()
+        if expected is not None:
+            assert len(b) == expected['bytes'] and sha(b) == expected['sha256'], str(p)
+        pins[str(p)] = {'path': str(p), 'bytes': len(b), 'sha256': sha(b)}
+        return b
+
+    def elf(b):
+        assert b[:4] == b'\x7fELF' and b[4:6] == b'\x01\x01', 'Expected own ELF32 little endian'
+        h = struct.unpack_from('<HHIIIIIHHHHHH', b, 16)
+        typ, machine, version, entry, phoff, shoff, flags, ehsize, phentsize, phnum, *_ = h
+        assert machine == 40 and (phnum == 0 or phentsize == 32)
+        ph = [struct.unpack_from('<8I', b, phoff + i * phentsize) for i in range(phnum)]
+
+        def vaddr(v):
+            matches = [p[1] + v - p[2] for p in ph if p[0] == 1 and p[2] <= v < p[2] + p[4]]
+            assert len(matches) == 1, hex(v)
+            return matches[0]
+
+        tags = collections.defaultdict(list)
+        for p in ph:
+            if p[0] == 2:
+                for off in range(p[1], p[1] + p[4], 8):
+                    tag, val = struct.unpack_from('<iI', b, off)
+                    if tag == 0:
+                        break
+                    tags[tag].append(val)
+        needed = []
+        if tags[1]:
+            assert len(tags[5]) == 1 and len(tags[10]) == 1
+            st = vaddr(tags[5][0])
+            for n in tags[1]:
+                assert n < tags[10][0]
+                end = b.index(b'\0', st + n, st + tags[10][0])
+                name = b[st+n:end].decode('ascii')
+                assert re.fullmatch(r'[A-Za-z0-9_.+\-]+', name)
+                needed.append(name)
+        interps = [b[p[1]:p[1]+p[4]].rstrip(b'\0').decode('ascii') for p in ph if p[0] == 3]
+        return {'class': 32, 'endian': 'little', 'machine': machine, 'machine_name': 'ARM',
+                'type': typ, 'entry': hex(entry), 'e_flags': hex(flags), 'osabi_byte': b[7],
+                'header52_hex': b[:52].hex(), 'interpreter_requests': interps, 'DT_NEEDED_requests': needed}
+
+    class Image:
+        def __init__(self, base, component):
+            self.component = component
+            self.tree = base / 'analysis' / {'normal': 'rootfs', 'recovery': 'recovery', 'application': 'application'}[component]
+            self.manpath = base / 'analysis' / (component + '-regular-files.json')
+            self.man = json.loads(read(self.manpath))
+
+        def file(self, path):
+            assert path in self.man, (self.component, path)
+            return read(self.tree / path, self.man[path])
+
+        def safe_lines(self, path, nums):
+            b = self.file(path)
+            lines = b.decode('utf-8').splitlines()
+            return {'path': str(self.tree / path), 'sha256': sha(b), 'lines': [
+                {'line': n, 'text': lines[n-1]} for n in nums if n <= len(lines)]}
+
+    summarypath = Path('work/remaining-firmware-acquisition/2026-11-01/SUMMARY.json')
+    summary = json.loads(read(summarypath))
+    packages, components, startups, declarations, leads, comparisons = [], [], [], [], [], []
+    init_hashes = []
+    for product, version, basestr, archive, expectedsha, rolepath in SPECS:
+        base = Path(basestr)
+        role = read(rolepath)
+        archivebytes = read(base / archive)
+        assert sha(archivebytes) == expectedsha
+        acquisition = json.loads(read(base / 'acquisition.json'))
+        extraction = json.loads(read(base / 'analysis/extraction-summary.json'))
+        summaryrow = next(x for x in summary['packages'] if x['product'] == product)
+        assert summaryrow['archive_sha256'] == expectedsha and summaryrow['archive_bytes'] == len(archivebytes)
+        packages.append({'product': product, 'version': version, 'archive': pins[str(base / archive)],
+                         'acquisition_pin': pins[str(base / 'acquisition.json')], 'extraction': extraction,
+                         'curated_role_pin': pins[rolepath], 'scope': 'Base normal/recovery and application bundle remain distinct; no applied overlay inferred'})
+        images = {c: Image(base, c) for c in ['normal', 'recovery', 'application']}
+        for name, im in images.items():
+            meta = 'application-link-special-metadata.json' if name == 'application' else name + '-symlinks.json'
+            links = json.loads(read(base / 'analysis' / meta))
+            scsai = ([r for r in links if r.get('path') == 'home/bticino/bin/scsai'] if isinstance(links, list)
+                     else ([{'path': 'home/bticino/bin/scsai', 'target': links['home/bticino/bin/scsai']}] if 'home/bticino/bin/scsai' in links else []))
+            elfs = []
+            for path in sorted(im.man):
+                f = ROOT / im.tree / path
+                assert f.is_file() and not f.is_symlink()
+                with f.open('rb') as h:
+                    magic = h.read(4)
+                if magic == b'\x7fELF':
+                    b = im.file(path)
+                    e = elf(b)
+                    elfs.append({'path': path, 'bytes': len(b), 'sha256': sha(b),
+                                 'class': e['class'], 'machine': e['machine'], 'e_flags': e['e_flags']})
+            selected = []
+            names = ['bin/bt_start', 'home/bticino/bin/bt_processi', 'home/bticino/bin/bt_taskmanager',
+                     'home/bticino/bin/bt_script', 'home/bticino/bin/bt_audiovideo', 'home/bticino/bin/bt_vct']
+            for path in names:
+                if path in im.man:
+                    b = im.file(path)
+                    if b[:4] == b'\x7fELF':
+                        selected.append({'path': str(im.tree / path), 'sha256': sha(b), 'bytes': len(b), **elf(b)})
+            components.append({'product': product, 'component': name, 'manifest': pins[str(im.manpath)],
+                               'regular_files': len(im.man), 'ELF_count': len(elfs), 'ELFs': elfs,
+                               'selected_headers_and_dynamic_requests': selected, 'scsai_alias_metadata_only': scsai,
+                               'kernel_module_directory_labels': sorted({p.split('/')[2] for p in im.man if p.startswith('lib/modules/')})})
+        for name in ['normal', 'recovery']:
+            im = images[name]
+            lines = [im.safe_lines('sbin/init', [21,103,104,105,106,120,121,122,123,124,125,126,127])]
+            init_hashes.append(sha(im.file('sbin/init')))
+            start = 'etc/applications/bt_start.tcl'
+            # Exact handoff lines only, excluding unrelated runtime settings.
+            all_lines = im.file(start).decode().splitlines()
+            nums = [i for i,l in enumerate(all_lines,1) if l.startswith(('after ', 'sys_exec /bin/bt_start'))]
+            lines.append(im.safe_lines(start, nums))
+            if 'etc/init.d/scripts/S10tmpfs' in im.man:
+                lines.append(im.safe_lines('etc/init.d/scripts/S10tmpfs', [1,2]))
+            if 'etc/init.d/scripts/S60apache' in im.man:
+                lines.append(im.safe_lines('etc/init.d/scripts/S60apache', [1,2,3,4]))
+                lines.append(im.safe_lines('bin/start_apache', [1,2]))
+            if 'bin/bt_processi.sh' in im.man:
+                lines.append(im.safe_lines('bin/bt_processi.sh', [1,4,5]))
+            if 'bin/cp_tmp.tcl' in im.man:
+                lines.append(im.safe_lines('bin/cp_tmp.tcl', [1]))
+            marker = {'present_in_regular_manifest': 'NO_APP_COPY' in im.man}
+            if marker['present_in_regular_manifest']:
+                marker['identity'] = pins[str(im.tree / 'NO_APP_COPY')] if str(im.tree / 'NO_APP_COPY') in pins else None
+                b = im.file('NO_APP_COPY')
+                marker['identity'] = pins[str(im.tree / 'NO_APP_COPY')]
+                assert len(b) == 0
+            startups.append({'product': product, 'component': name, 'safe_source_lines': lines,
+                             'NO_APP_COPY_marker': marker, 'scope': 'Source requests only; /bin/bt_start body and composition/loading remain unexamined'})
+        artpath = 'art.xml'
+        art = ET.fromstring(images['normal'].file(artpath))
+        arts = []
+        for row in art:
+            arts.append({x.tag: (x.text or '').strip() for x in row if x.tag in ['machine','mycodecfg','mycode','mycodediag','mynconfdiag','mybranddiag','mylinediag']})
+        versiondecl = []
+        for name in ['normal','recovery']:
+            im = images[name]
+            txt = im.file('Info_Rel.txt').decode()
+            versiondecl.append({'component': name, 'path': str(im.tree/'Info_Rel.txt'), 'sha256': sha(txt.encode()),
+                                'lines': [{'line': i, 'text': line} for i,line in enumerate(txt.splitlines(),1)
+                                          if re.fullmatch(r'(ETLINUX|KERNEL)[123]=[0-9]+',line)]})
+        stacks = []
+        for name in ['recovery','application']:
+            im = images[name]; path = 'home/bticino/cfg/stack_open.xml'; b = im.file(path); tree = ET.fromstring(b)
+            names = [(x.text or '').strip() for x in tree.findall('./sw/openserver/*/name')]
+            process = tree.find('./sw/bt_processi')
+            plist = [] if process is None else [{'tag': x.tag, 'path': (x.text or '').strip()} for x in process if re.fullmatch(r'p[0-9]+', x.tag)]
+            assert all(re.fullmatch(r'bin/[A-Za-z0-9_]+', x['path']) for x in plist)
+            stacks.append({'component': name, 'path': str(im.tree/path), 'sha256': sha(b), 'client_names': names,
+                           'process_list': plist, 'scope': 'Only whitelisted names/relative process paths; no parser/launcher/installed support outcome'})
+        dbpath = 'home/bticino/sp/dbfiles_ws.xml'; b = images['application'].file(dbpath); tree = ET.fromstring(b)
+        dbmeta = {k: [(x.text or '').strip() for x in tree.iter(k)] for k in ['ver_webserver','ver_webserver_hw','webserver_type','latest_sp']}
+        assert dbmeta['ver_webserver'] == [version]
+        declarations.append({'product': product, 'art_path': str(images['normal'].tree/artpath),
+                             'art_identity_labels': arts, 'component_release_metadata': versiondecl,
+                             'application_metadata_XML': {'path': str(images['application'].tree/dbpath), 'sha256': sha(b), 'whitelisted_values': dbmeta},
+                             'stack_declarations': stacks})
+        literal_leads = []
+        for path, literal in [('home/bticino/bin/bt_processi', b'/home/bticino/sp/dbfiles_ws.xml'),
+                              ('home/bticino/bin/bt_taskmanager', b'*.*.spt')]:
+            im = images['application']
+            if path not in im.man:
+                continue
+            b = im.file(path); off = b.find(literal+b'\0')
+            assert off >= 0, (product,path,literal)
+            literal_leads.append({'path': str(im.tree/path), 'sha256': sha(b), 'file_offset': off,
+                                  'literal': literal.decode(), 'scope': 'Exact compiled literal only; caller/reader/compiler/source-use not established'})
+        file_leads = []
+        for name, im in images.items():
+            for path in sorted(im.man):
+                if path.endswith(('.db','.sqlite','.spt','.wws')) or path.endswith('/dbfiles_ws.xml'):
+                    file_leads.append({'component': name, 'path': path, **{k:im.man[path][k] for k in ['bytes','sha256']}})
+        leads.append({'product': product, 'literal_leads': literal_leads, 'name_only_file_leads': file_leads,
+                      'scope': 'Filename/header-language leads only. Parent DB/magic collector owns database/schema analysis; a .db suffix need not denote SQLite, and dbfiles_ws.xml is version metadata XML.'})
+        normal, recovery, app = [images[n].man for n in ['normal','recovery','application']]
+        common = set(normal)&set(recovery)
+        comparisons.append({'product': product, 'scope':'Manifest path/hash comparison only; no runtime equivalence or application overlay claim',
+                            'normal_recovery_same_path': len(common), 'normal_recovery_equal_bytes': sum(normal[x]['sha256']==recovery[x]['sha256'] for x in common),
+                            'normal_recovery_changed_same_path': [x for x in sorted(common) if normal[x]['sha256']!=recovery[x]['sha256']],
+                            'normal_only_paths': len(set(normal)-set(recovery)), 'recovery_only_paths': len(set(recovery)-set(normal)),
+                            'application_normal_same_path': len(set(app)&set(normal)),
+                            'application_recovery_same_path': len(set(app)&set(recovery))})
+    assert len(set(init_hashes)) == 1, 'Do not silently infer same init source'
+    data = {'PACKAGES.json': packages, 'COMPONENTS.json': components, 'STARTUP.json': startups,
+            'DECLARATIONS.json': declarations, 'DATA_FILE_LEADS.json': leads, 'COMPARISONS.json': comparisons,
+            'INPUTS.json': {'scope':'Exact file identities read; config/body content withheld except explicit safe lines/keys/header data', 'files': sorted(pins.values(),key=lambda x:x['path'])}}
+    report = '''# MH200N 1.1.8 and F453AV 3.0.14 — first package/application exploration
+
+This consolidated first pass establishes original component/header identities, a narrow text startup handoff, whitelisted application/version declarations and data-file leads. It does **not** establish an installed overlay, active applications, raw protocol support, scenario compiler, firmware update policy, physical capability or safe runtime lifetime. No original/vendor/native/provider/target execution, script sourcing, target operating-system/service/device/network/bus call, mount, SQL or semantic fixture/model was performed. Host hashing and structured text/ELF-header parsing are analysis only.
+
+## Separate packaged components and product roles
+
+MH200N archive `scheduler_010108.fwz` is SHA256 `e32d3404302f3619bbbb564ae50554ab81ac6ef818b6e5a2290142a5e2ab5fb3`; F453AV `WS_10DIN_030014.fwz` is `673d7ab2802fc324802bb8f59c50e018850e8c724e923e0bd7cbc8b5cca86d4a`. Both exact local archive hashes/sizes are independently checked against the saved acquisition summary. Existing acquisition records report authenticated-cache/R2 identity matching; no new retrieval, upload or cryptographic signature trust-chain verification is performed here.
+
+The MH200N normal/recovery trees have267/225 regular files; its separate application bundle has197. F453AV has342/222 and a separate532-file application bundle. PACKAGES.json retains image hashes/extraction records and link/special-node metadata counts. Components remain independent views; no application installation/copy/overlay is inferred. Host symlinks and special nodes are not followed or created. Normal images contain a zero-byte NO_APP_COPY marker; its meaning/consumer is not derived merely from its name.
+
+Curated OWN-DEV-0131 identifies the MH200N scenario programmer (commercial MH200N/003565), and OWN-DEV-0089 identifies F453AV Audio/Video DIN. Original normal `art.xml` supplies matching packaged label alternatives: MH200N/003565 versus F453AV/573992. Distinct mycodecfg/mycode/mycodediag values are retained as named metadata fields, not equated with public WHO, runtime board IDs or installed identity. No F454/MH202/MyHOMEServer1 layouts, scenario language, physical buses or capabilities are transferred.
+
+## Fresh headers and component requests
+
+Selected executables in both products are **ELF32, little-endian ARM (e_machine40)**. Fresh original header words differ: selected MH200N bt_start/bt_processi/bt_taskmanager/bt_script use raw e_flags0x202; selected F453AV bt_start/bt_processi/bt_audiovideo/bt_vct use0x2. COMPONENTS.json supplies exact first52 header bytes, entry/type, interpreter and DT_NEEDED requests and all manifest-backed ELF identities. No modern AArch64, hard-float ABI, Thumb/layout or same-name behavioral assumption is imported; these legacy flag words are recorded without over-interpreting tool-specific ABI labels. Dynamic requests do not prove provider binding, available dependency closure or original execution.
+
+MH200N's separate application includes actual bt_taskmanager and bt_script executables; its XML process list contains13 pN paths including bt_taskmanager. F453AV's contains14 pN paths including bt_audiovideo and bin/scsai. The F453AV application metadata records `home/bticino/bin/scsai -> scsserver`; this is a metadata alias, not a separate executable, installed alias or electrical alarm-bus attribution. Recovery and application views have distinct bins/configuration. Client-name declarations number11/10 in the MH200N/F453AV application XML and one bt_device client in each recovery XML. Names/process slots are declarations, not enabled/active support counts or actual launch observations.
+
+## Actual bounded startup source and unclosed composition
+
+All four selected normal/recovery `/sbin/init` files are byte-identical. Their **lines103–106** sort/source `/etc/init.d/scripts/S*`; **lines120–126** enumerate regular `/etc/applications/*`, fork and source each selected script in the child. These are Tcl source control requests under ordinary interpreter/helper/file/provider premises, not observed boot execution. STARTUP.json retains exact safe source lines and hashes. A full init/respawn/error policy is not reconstructed.
+
+The MH200N normal `etc/applications/bt_start.tcl` has `after 4000` atline1 and `sys_exec /bin/bt_start` atline2. Its recovery script and both F453AV scripts request `/bin/bt_start` atline3. The normal MH200N S10tmpfs script declares a `/home` tmpfs mount request; no mount occurred and the later application source/copy relationship is unclosed. F453AV normal S60apache lines1–4 fork/request `/bin/start_apache` then wait; that wrapper's line2 declares `LD_LIBRARY_PATH=/lib /usr/sbin/apache`. No HTTP/authentication/session or server body is examined or executed.
+
+Separately, both normal `/bin/bt_processi.sh` scripts line4 change to `/home/bticino`, then line5 request `bin/bt_processi`. The natural caller of this wrapper, `/bin/bt_start`'s body, application extraction/copy and successful launch remain **OPEN**. Do not compose the script filename or XML process list into an unproved complete boot-to-application chain. The selected `cp_tmp.tcl` line names a copy source/target only, not a live data copy.
+
+## Version metadata and concrete data-file leads
+
+Each separate application's `home/bticino/sp/dbfiles_ws.xml` is a small metadata XML, not an established SQL database. Whitelisted fields identify MH200N `ver_webserver=1.1.8`, `webserver_type=SCHEDULER`, `latest_sp=SCHEDULER_1_1_8.fwz`; F453AV declares3.0.14/WS_10DIN/WS_10DIN_3_0_14.fwz. This corroborates the application-bundle version without inferring installed version, exact manifest trust or all code/version coherence. `Info_Rel.txt` declares ETLINUX3.0.1 and component KERNEL_BTPXA2.3.8; these release fields are **not** a measured Linux kernel version. Kernel module directory labels are separately recorded, without claiming the selected boot kernel.
+
+Both application bt_processi executables contain the exact NUL-terminated path `/home/bticino/sp/dbfiles_ws.xml`; MH200N bt_taskmanager contains `*.*.spt`. DATA_FILE_LEADS.json gives exact original file/hash/file-offset locators. These literal-presence observations do not prove callers, reads, parameter substitutions, script production/acceptance or a whole .spt compiler. The parent central collector owns SQLite/BDB/magic/schema analysis. Name-only .db/.sqlite/.spt/.wws leads are exported without evaluating any PHP/Tcl/JS/vendor data expression; a .db suffix is not a database-format diagnosis. No complete configuration, private key, credential, private runtime identifier or adjacent payload is reproduced.
+
+## Reproduction, confidence and next gaps
+
+`python3 -B collect_first_v1.py --check` reconstructs host-only JSON/report bytes read-only. Initial output generation refuses overwrites and immediately freezes report/collector/outputs with a precomputed non-circular first-candidate index. Exact input hashes are in INPUTS.json, selected startup lines in STARTUP.json, whitelisted version/process declarations in DECLARATIONS.json, original ELF header/dynamic requests in COMPONENTS.json and path-only comparisons in COMPARISONS.json. Same bytes/paths establish identities only, not equivalent behavior. This first pass does not rerun previous firmware collectors or change old execution ledgers.
+
+Confidence is high for exact bytes, named XML fields and selected text handoffs; provider behavior, startup/copy composition, configured activation and actual file consumers remain conditional/unclosed. Highest next steps: qualify the application-copy/boot composition from permitted local startup source; follow one actual MH200N taskmanager/script or F453AV local data consumer under a separately bounded source task; correlate the parent magic/database results with typed owners before semantic use. Receiving/transport/authentication/session/framing/MQTT/libjel and equivalent closed routes remain opaque. No new source registry, public page, repository staging/commit, remote write or automation is performed.
+'''
+    result = {n:enc(d) for n,d in data.items()}
+    result['REPORT.md'] = report.encode()
+    result['OUTPUT_MANIFEST.json'] = enc({'scope':'Generated outputs excluding this manifest', 'files':[
+        {'path': n, 'bytes':len(b), 'sha256':sha(b)} for n,b in sorted(result.items())]})
+    return result
+
+
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');args=ap.parse_args()
+    if not args.check:
+        assert not any((HERE/n).exists() for n in OUTPUTS), 'Refusing generated overwrite'
+        assert not (HERE/'first-candidate').exists()
+    out=build()
+    if args.check:
+        for n,b in out.items():assert (HERE/n).read_bytes()==b,n
+        idx=json.loads((HERE/'first-candidate/INDEX.json').read_text())
+        for r in idx['files']:
+            b=(HERE/'first-candidate'/r['copy']).read_bytes();assert len(b)==r['bytes'] and sha(b)==r['sha256']
+        print(json.dumps({'status':'PASS','products':2,'outputs':len(out),'original_execution':0}))
+        return
+    for n,b in out.items():exclusive(HERE/n,b)
+    copies={**out,'collect_first_v1.py':Path(__file__).read_bytes()}
+    idx={'scope':'Exact first generated bytes; index excludes itself','files':[{'copy':n,'bytes':len(b),'sha256':sha(b)} for n,b in sorted(copies.items())]}
+    first=HERE/'first-candidate';first.mkdir()
+    for n,b in copies.items():exclusive(first/n,b)
+    exclusive(first/'INDEX.json',enc(idx))
+    print(json.dumps({'status':'GENERATED','products':2,'outputs':len(out),'first_copies':len(copies),'original_execution':0}))
+
+
+if __name__=='__main__':main()

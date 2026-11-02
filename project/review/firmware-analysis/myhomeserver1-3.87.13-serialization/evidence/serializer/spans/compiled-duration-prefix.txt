@@ -1,0 +1,94 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000cf06c:
+   cf06c:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   cf070:	b0a7      	sub	sp, #156	@ 0x9c
+   cf072:	f8df 4510 	ldr.w	r4, [pc, #1296]	@ cf584
+   cf076:	f8df 2510 	ldr.w	r2, [pc, #1296]	@ cf588
+   cf07a:	447c      	add	r4, pc
+   cf07c:	f8df 750c 	ldr.w	r7, [pc, #1292]	@ cf58c
+   cf080:	f8df 350c 	ldr.w	r3, [pc, #1292]	@ cf590
+   cf084:	58a2      	ldr	r2, [r4, r2]
+   cf086:	4604      	mov	r4, r0
+   cf088:	447f      	add	r7, pc
+   cf08a:	efc0 0010 	vmov.i32	d16, #0	@ 0x00000000
+   cf08e:	3008      	adds	r0, #8
+   cf090:	6812      	ldr	r2, [r2, #0]
+   cf092:	9225      	str	r2, [sp, #148]	@ 0x94
+   cf094:	f04f 0200 	mov.w	r2, #0
+   cf098:	f8df 24f8 	ldr.w	r2, [pc, #1272]	@ cf594
+   cf09c:	58fb      	ldr	r3, [r7, r3]
+   cf09e:	9305      	str	r3, [sp, #20]
+   cf0a0:	3308      	adds	r3, #8
+   cf0a2:	6023      	str	r3, [r4, #0]
+   cf0a4:	2300      	movs	r3, #0
+   cf0a6:	7123      	strb	r3, [r4, #4]
+   cf0a8:	f940 078f 	vst1.32	{d16}, [r0]
+   cf0ac:	61a3      	str	r3, [r4, #24]
+   cf0ae:	e9c4 3304 	strd	r3, r3, [r4, #16]
+   cf0b2:	e9c4 3307 	strd	r3, r3, [r4, #28]
+   cf0b6:	e9c4 3309 	strd	r3, r3, [r4, #36]	@ 0x24
+   cf0ba:	e9c4 330b 	strd	r3, r3, [r4, #44]	@ 0x2c
+   cf0be:	58bb      	ldr	r3, [r7, r2]
+   cf0c0:	f104 0240 	add.w	r2, r4, #64	@ 0x40
+   cf0c4:	688e      	ldr	r6, [r1, #8]
+   cf0c6:	63a2      	str	r2, [r4, #56]	@ 0x38
+   cf0c8:	f8d1 8004 	ldr.w	r8, [r1, #4]
+   cf0cc:	9304      	str	r3, [sp, #16]
+   cf0ce:	3308      	adds	r3, #8
+   cf0d0:	9203      	str	r2, [sp, #12]
+   cf0d2:	6363      	str	r3, [r4, #52]	@ 0x34
+   cf0d4:	fab8 f288 	clz	r2, r8
+   cf0d8:	4273      	negs	r3, r6
+   cf0da:	0952      	lsrs	r2, r2, #5
+   cf0dc:	4598      	cmp	r8, r3
+   cf0de:	bf08      	it	eq
+   cf0e0:	2200      	moveq	r2, #0
+   cf0e2:	f104 0310 	add.w	r3, r4, #16
+   cf0e6:	9306      	str	r3, [sp, #24]
+   cf0e8:	f104 0320 	add.w	r3, r4, #32
+   cf0ec:	9307      	str	r3, [sp, #28]
+   cf0ee:	2a00      	cmp	r2, #0
+   cf0f0:	f040 81dd 	bne.w	cf4ae
+   cf0f4:	2e0f      	cmp	r6, #15
+   cf0f6:	460d      	mov	r5, r1
+   cf0f8:	960d      	str	r6, [sp, #52]	@ 0x34
+   cf0fa:	f200 8169 	bhi.w	cf3d0
+   cf0fe:	2e01      	cmp	r6, #1
+   cf100:	f040 80f0 	bne.w	cf2e4
+   cf104:	f898 3000 	ldrb.w	r3, [r8]
+   cf108:	f884 3040 	strb.w	r3, [r4, #64]	@ 0x40
+   cf10c:	9b03      	ldr	r3, [sp, #12]
+   cf10e:	2200      	movs	r2, #0
+   cf110:	63e6      	str	r6, [r4, #60]	@ 0x3c
+   cf112:	559a      	strb	r2, [r3, r6]
+   cf114:	f105 0320 	add.w	r3, r5, #32
+   cf118:	f104 005c 	add.w	r0, r4, #92	@ 0x5c
+   cf11c:	f963 078f 	vld1.32	{d16}, [r3]
+   cf120:	69eb      	ldr	r3, [r5, #28]
+   cf122:	6523      	str	r3, [r4, #80]	@ 0x50
+   cf124:	f104 0354 	add.w	r3, r4, #84	@ 0x54
+   cf128:	f943 078f 	vst1.32	{d16}, [r3]
+   cf12c:	f105 0328 	add.w	r3, r5, #40	@ 0x28
+   cf130:	e9d5 120e 	ldrd	r1, r2, [r5, #56]	@ 0x38
+   cf134:	f963 2a8f 	vld1.32	{d18-d19}, [r3]
+   cf138:	f8df 345c 	ldr.w	r3, [pc, #1116]	@ cf598
+   cf13c:	f940 2a8f 	vst1.32	{d18-d19}, [r0]
+   cf140:	4620      	mov	r0, r4
+   cf142:	e9c4 121b 	strd	r1, r2, [r4, #108]	@ 0x6c
+   cf146:	58fb      	ldr	r3, [r7, r3]
+   cf148:	ee10 1b90 	vmov.32	r1, d16[0]
+   cf14c:	f103 0208 	add.w	r2, r3, #8
+   cf150:	331c      	adds	r3, #28
+   cf152:	6022      	str	r2, [r4, #0]
+   cf154:	6363      	str	r3, [r4, #52]	@ 0x34
+   cf156:	f7fe fc17 	bl	cd988
+   cf15a:	6da1      	ldr	r1, [r4, #88]	@ 0x58
+   cf15c:	4620      	mov	r0, r4
+   cf15e:	f7fe fcc7 	bl	cdaf0
+   cf162:	Address 0xcf162 is out of bounds.
+

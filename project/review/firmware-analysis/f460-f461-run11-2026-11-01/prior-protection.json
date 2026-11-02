@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "saved_UTC": "2026-11-01T15:03:18.385117+00:00",
+  "prior_index": "work/f460-f461-comparison/2026-11-01-run10/EVIDENCE_INDEX.json",
+  "sha256": "933633007a66611375d4c31da20ca6bd05f699406809714d381745c43eda88eb",
+  "checked_members": 184,
+  "scope": "Exact current checkpoint identities before edits; cumulative historical protection at final integration."
+}

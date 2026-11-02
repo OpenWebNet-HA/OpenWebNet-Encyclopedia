@@ -1,0 +1,33 @@
+# MH200N night01 resource pointer source review
+
+PASS. No author correction requested.
+
+Reviewed UTC: 2026-11-01T19:52:52.825205+00:00. Scope is the frozen MH200N1.1.8 marker-controlled path-cell packet, not a broader application-copy, archive, partition or startup investigation.
+
+I read the full collector/report/source/flow evidence and reproduced its permitted read-only --check using the parent-verified host ARM objdump environment. Actual result: PASS, five outputs, eight spans,35 guards, zero original execution. Host readelf/disassembly reads original bytes; no vendor instructions or provider/target operating-system calls execute. This does not replay an old native corpus.
+
+An independent raw-byte audit checked all seven input identities and six exact first copies; all generated manifest entries match. Fresh ELF header/program-header mapping agrees with ELF32 little-endian ARM machine40, entry0x8dc8 and flags0x202. All eight retained PT_LOAD spans,35 guarded words, five BL destinations, seven signed-direction PC-relative pool joins, five NUL-terminated safe literals and three PLT slot calculations agree with the originals. The independent PLT arithmetic used decoded ARM rotated immediates; the source rows identify the actual GLIBC_2.0 JUMP_SLOT imports, not stripped nearest-symbol labels.
+
+The positive source edge is precise. Entry pool0x8df4 supplies0xb618 to the libc entry request under its ordinary ABI premise. In the selected main prefix, R4 is initialized to0 and has no intervening local reassignment before0xb6ec copies it into open argumentR1; normal callee-save preservation remains conditional. The original CMN R0,#1 tests machine−1. Subsequent MOV/LDR operations do not alter the flags before BEQ0xb708→0xb730. The non−1 leg, after normal diagnostic return, stores literal /dev/mtd5 through0x180f4 and /dev/mtdr5 through0x180f0; their file-backed initial pointers address /dev/mtd6 and /dev/mtdr6. Both retained legs converge on the close request using savedR4. A−1 machine result does not receive those two stores. This is not a valid-fd or file-existence theorem, active partition identity, executed close, error-policy or defect conclusion.
+
+The later pool0xc864 is the SAME absolute cell0x180f0. Original0xcba8/0xcbac load that cell's current pointer intoR0 and BL0xcbb0 requests local0xa3ec. CMP0xcbb4 and the nonzero branch0xcbc4→0xcbd8 are verified; no return type or success meaning is assigned. In the bounded helper prefix R0 is not overwritten before0xa424, while R1/R2 are constructed as SP12/SP8 addresses and their pointed words zeroed. R4 is0 for CMP0xa428; BNE0xa42c→0xa63c is the nonzero leg. The0xa1dc body and remainder0xa3ec stay opaque. Equality of the cell address plus a no-relevant-mutation/normal-path premise supports the conditional source composition; it does not prove every startup reaches the later fragment or that the selected literal survives all possible paths/aliases.
+
+Normal and recovery bt_start bytes match exactly, and each is bound to its own extraction manifest. The normal zero-byte NO_APP_COPY marker exists in the retained regular tree; the recovery regular manifest lacks that named path. These are separately checked image facts, not current runtime state, global path absence or environment equivalence. The earlier Tcl handoff remains inherited context, not repeated new coverage. No F453AV behavior, MH202 language, MHS layouts, installed application overlay, actual resource read/copy, partition operation, physical capability or full lifecycle guarantee is transferred or established.
+
+All author files and old original inputs remain unchanged. No SQL, semantic fixtures/models, native/emulator/target/vendor execution, mount, network/device operation or receiving/transport/authentication/session/framing/MQTT/libjel implementation was performed or newly opened. No key, credential, private configuration or broad literal contents are exported. Curated role and filenames supply scope only. Positive local path/caller facts and the unresolved deeper helper/admission boundary are accurately separated in the report.
+
+## Exact frozen identities
+
+Paths below are relative to `work/mh200n-firmware/1.1.8/research/2026-11-01-night01-resources/`.
+
+| File | Bytes | SHA-256 |
+|---|---:|---|
+| `REPORT.md` | 6363 | `908ed410d6954c8080c0a50821ca1cbbd5e7c2533b7b4320893aebc4d6004f4c` |
+| `collect_resources_v1.py` | 15454 | `fd998b8f6df2ee68ae9119c11fc37a91b0bb9443c127ef17dd683b21df258046` |
+| `OUTPUT_MANIFEST.json` | 609 | `7b815b42b906d97a92b87ba8301052f831223a251bf8667df96005aa92165a83` |
+| `SOURCE.json` | 16710 | `877a472b9766e671f271e84a3ce3002072968b97a7f9284c092df7ec5e87c017` |
+| `POINTER_FLOW.json` | 1529 | `a7024291d81dfcdfbcd77e76f78384088b37e59991cc05cef5663c7f014cc00f` |
+| `INPUTS.json` | 1417 | `7ee8fdcf5f7892681d76277836d34f2658fd25a61c16e1b617b7175ad7fba96c` |
+| `first-candidate/INDEX.json` | 977 | `059be666e954df8b69ac4e293f18819d6a6b557941829e29ae5a098be83c798d` |
+
+The review is a new exclusive file with an immediate exact first copy. The copy index excludes itself and its bytes were computed before its file was opened. No review or author correction was required.

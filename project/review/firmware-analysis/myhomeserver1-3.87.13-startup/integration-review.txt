@@ -1,0 +1,25 @@
+# Startup integration review v2: path representation only
+
+PASS for the current seven-file candidate and disclosed representation-only refinement. No additional correction requested. This review supplements the unchanged first integration-review.md, SHA-2567236afdc870b62837eedc8f32560ce3b3b044e7ab50f6d5db027712ba8e62938; its source-aware startup review, documentary registry comparison, six-document consistency assessment and pending-completion limits remain applicable. No original/native/provider/SQL execution or expanded source audit was performed here.
+
+Independently verified PATH_REPRESENTATION_HISTORY.json against the actual original frozen page and current page: exactly one sentence substitutes the Firmware image-relative rendering home/bticino/cfg/extra/0/scheduling_manager and explicitly points readers to the unchanged exact source report for its leading-slash literal. This changes presentation only; source values, path interpretation, startup/registry semantics and product-role limits remain unchanged. The other five previously reviewed documents are byte-identical. All seven current files match their frozen v2 snapshot/hash/size pins.
+
+Rechecked all54 source/published export pairs against their recorded sizes/hashes and exact source bytes. Verified that the actual original review and immediate first-review copy remain unchanged. The old six-file candidate is retained. No source, author, old review or repository bytes were modified by this reviewer. This review does not certify the parent's current ECV result or future final identity/ESG validation; it verifies the exact stated documentary delta.
+
+The capsule integration-review.txt and validation.json retain their pending actual-assembly scope. Parent must create actual copies/validation and then run strict final checks without placeholders or exemptions. A representation-only correction does not constitute a guard exemption, valid-input test or runtime result.
+
+Exact current pins:
+
+| File | SHA-256 |
+| --- | --- |
+| OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-startup.md | 373bc378d94e31a59a0f7e9b40ac143a474d0a98e220336bb46d366f17cb4e88 |
+| OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-time-scenarios.md | fe129d97448d6e09bffe82c6b536bb252890f306580c7b8224690c330a07aefa |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-startup/README.md | 969595314791ea2933d21d62d2b9a3f52cc01514d9c2740199008471383f5c4b |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/SYNTHESIS.md | 429772ca74b97fd11e33418c32e72c1f599a5af3184e377774e605168206fa5d |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/COVERAGE.md | 1667e191073dedc1bdebaa0deac6edb095587b506b395253ccb9eba7b2cd02b6 |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/RANKED_REMAINING_QUESTIONS.md | 452cad786543a6474cb0fddd05d54d31a7059115ac95fbb0e209b31ee28fa92b |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/PATH_REPRESENTATION_HISTORY.json | 24558df097d290213126753ad8ebccbc1c93afc81bb344eb9b04165054461a38 |
+
+Candidate-v2 index SHA-256: 05334bbd391053ca9a601088071e057283885d40b4ad497d105095374cbcc6d7. Capsule SOURCE_EXPORTS SHA-256: b1ef4cea80194a8b432aa84d85e383ff123ee5bf59d18aacd3c87487ecf33c4f.
+
+This new ASCII review is exclusively created and immediately frozen as exact first-review bytes with a precomputed non-self-referencing index before announcing its hash. The first review and its pending-final-validation status are not silently replaced.

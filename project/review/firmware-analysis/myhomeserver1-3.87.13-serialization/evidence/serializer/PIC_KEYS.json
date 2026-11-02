@@ -1,0 +1,62 @@
+[
+  {
+    "add_pc_va": "0x279f8",
+    "key": "type",
+    "pool_va": "0x27c20",
+    "target_va": "0x115f5c"
+  },
+  {
+    "add_pc_va": "0x27a5c",
+    "key": "status",
+    "pool_va": "0x27c28",
+    "target_va": "0x1151ac"
+  },
+  {
+    "add_pc_va": "0x27ad6",
+    "key": "brightness",
+    "pool_va": "0x27c34",
+    "target_va": "0x115240"
+  },
+  {
+    "add_pc_va": "0x27af8",
+    "key": "saturation",
+    "pool_va": "0x27c38",
+    "target_va": "0x11524c"
+  },
+  {
+    "add_pc_va": "0x27b1a",
+    "key": "hue",
+    "pool_va": "0x27c3c",
+    "target_va": "0x115258"
+  },
+  {
+    "add_pc_va": "0x27b3c",
+    "key": "temperature",
+    "pool_va": "0x27c40",
+    "target_va": "0x1151e0"
+  },
+  {
+    "add_pc_va": "0x27b5e",
+    "key": "speed",
+    "pool_va": "0x27c44",
+    "target_va": "0x115280"
+  },
+  {
+    "add_pc_va": "0x27b7c",
+    "key": "duration",
+    "pool_va": "0x27c48",
+    "target_va": "0x115290"
+  },
+  {
+    "add_pc_va": "0x27b9a",
+    "key": "delay",
+    "pool_va": "0x27c4c",
+    "target_va": "0x115288"
+  },
+  {
+    "add_pc_va": "0x27bbc",
+    "key": "id",
+    "pool_va": "0x27c50",
+    "target_va": "0x116adc"
+  }
+]

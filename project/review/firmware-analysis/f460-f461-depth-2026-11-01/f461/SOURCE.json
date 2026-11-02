@@ -1,0 +1,82 @@
+{
+  "descriptor_VA": "0x18190",
+  "descriptor_bytes": "0000000001000000000000000100000001000000440000000000000000000000285d00000000000000000000000000000000000000000000000000000000000001000000020000000000000000000000000000000000000000000000000000000000000000000000",
+  "guards": {
+    "0x2200": "97ffff60",
+    "0x221c": "f9002c79",
+    "0x2264": "528000c4",
+    "0x2268": "52800043",
+    "0x2278": "b9000a84",
+    "0x2280": "b9002a83",
+    "0x22a8": "97fffeba",
+    "0x3a8c": "7100075f",
+    "0x3a94": "71000b5f",
+    "0x3aec": "71000b7f",
+    "0x3b44": "7100077f",
+    "0x3cf4": "b9403a63",
+    "0x3cf8": "7100047f",
+    "0x3d04": "71002c7f",
+    "0x3d0c": "71000c7f",
+    "0x3d10": "7a491864"
+  },
+  "inputs": [
+    {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          27368,
+          27368,
+          65536
+        ],
+        [
+          1,
+          6,
+          31456,
+          96992,
+          96992,
+          1864,
+          1872,
+          65536
+        ]
+      ],
+      "bytes": 35240,
+      "image_path": "/home/bticino/libcoso/libplug_automation_tr.so",
+      "sha256": "d7d361798ccec65843bd41c9ad7b8897645a334b0cd08121d372949f78eac277"
+    },
+    {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          19020,
+          19020,
+          65536
+        ],
+        [
+          1,
+          6,
+          19216,
+          84752,
+          84752,
+          1616,
+          1648,
+          65536
+        ]
+      ],
+      "bytes": 22752,
+      "image_path": "/home/bticino/libcoso/libcoso.so",
+      "sha256": "572bca218965a040393361bea4044b0d55519b4f2146ef69c9aa18d4aa6ef690"
+    }
+  ],
+  "original_execution": 0,
+  "scope": "Fresh AArch64 descriptor/registration/admission and byte-slice delegation, no transport/runtime/public semantics.",
+  "semantic_fixtures": 0,
+  "span_count": 7
+}

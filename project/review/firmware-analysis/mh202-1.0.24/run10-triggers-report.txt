@@ -1,0 +1,48 @@
+# MH2021.0.24: special DIM1 selector ownership, run10
+
+This static pass narrows the previously unresolved selector source without executing a special comparison or assigning a defect/physical outcome. The selected original default-reset writes do not reach the special comparator's six-word selector area. DIM1 reaches its first read without the explicit local selector stores seen on other branches. **Complete parser effects and live provider binding remain unclosed**, so unknown stack bytes are not replaced with an invented zero or match-all result.
+
+## Originals and conditional provider scope
+
+Image-relative normal originals, freshly verified by ImageVFS:
+
+- `home/bticino/bin/bt_taskmanager` SHA256 `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e`
+- `home/bticino/lib/libcommon.so.0.0` SHA256 `07b2c6d09e4a1b317bb3b37aff8f7ddd72dcec15e1e7194fde00c4f0ce1ecab5`
+- `home/bticino/lib/libopen.so.0.0` SHA256 `868eeb717020232c11623224df17bd6b2034fffc2fb80043c39c34b76310fb04`
+
+Original taskmanager imports the default openwebnet constructor at PLT0x9a84. Its first two DT_NEEDED entries are libcommon.so.0 and libopen.so.0, both supplying same-named parser symbols. Under the ordinary packaged lookup/no-override premise, the first candidate is libcommon's C1 constructor0x24bf0, which calls candidate CreateNullMsgOpen0x24aa0 via PLT0x9c84. This batch records direct metadata and selected definitions, not a complete taskmanager dependency closure, ELF initialization/interposition or observed runtime binding. No F454 layout/address is substituted.
+
+## Exact stack regions
+
+At special comparator entry0xc8e0, push saves four registers, then0xc8e4/0xc8e8 reserves15360+16=15376 bytes. Offsets below use the resulting local SP:
+
+| Region | Derived range | Original source |
+|---|---|---|
+|First parsed object/reset base|SP+0|0xc904..0xc90c|
+|Second parsed object/reset base|SP+7676|0xc8f0..0xc900|
+|Six-word selector array|SP+15352..15376|explicit other-dimension stores0xc990..0xc9e0 and loop base0xca40/0xca44|
+|Saved register area|beginsSP+15376|original entry frame arithmetic|
+
+The second base is7680+16−20=7676. The selector is15296+56=15352=2×7676. The selected reset's maximum write extent is derived below, rather than treating a guessed sizeof as a boundary.
+
+DIM1 comparison at0xc974 branches0xc978→0xcac4. That sets the selector-byte cursor to0 and jumps to0xca40. The first load0xca48 therefore reads the word atSP+15352. DIM0/DIM22 take separate explicit-store branches, already documented in run3; their fixture tables are not repeated as new evidence.
+
+## What the selected original constructor resets
+
+Complete libcommon CreateNullMsgOpen0x24aa0..0x24bf0 clears raw storage object+6636 for1024 bytes, sets kind/length/flag/count/metadata locations, clears eleven130-byte fields and forty130-byte value slots. Its highest displayed normal write ends at object+0x1dfc=7676, from the word at+0x1df8. The value region is object+1430 through+6630. Its wrapper constructor simply calls this reset and returns the original object pointer.
+
+The deterministic host interval model transcribes all57 normal write ranges for each of the two actual bases,114 ranges total. The first reset ends bySP+7676; the second ends bySP+15352, exactly where the selector array starts. **None of those selected reset writes overlaps any selector word.** This is a source/host interval proof, not executed constructors, and the gap/padding inside the object is not silently presented as zero-filled.
+
+The original special body then calls CreateMsgOpen twice at0xc940/0xc960. Their complete writes, delegated parser effects and any provider override are outside this proof. Consequently the result does not establish the selector bytes at the eventual DIM1 read. Fresh stack memory is not ELF NOBITS, and no zero-fill premise is supplied for it.
+
+## Selected value accessor and remaining contract
+
+Candidate libcommon Extract_valori(int)0x24954..0x24968 directly computes object+1430+130×index. Its displayed five-instruction leaf has no index guard. This is not a whole-parser bounds claim or an invalid-index test: no selector fixture, index dereference, malformed input or comparator CPU experiment is run here. Callers and upstream accepted fields remain separate.
+
+High confidence applies to selected original stack arithmetic, branch/read order, constructor/reset write ranges and accessor formula. Conditional confidence applies to choosing these same-build definitions at runtime. Unknowns remain the actual selector source after both full parsers, other writes/aliases, configured input, eventual comparison result and physical effects. No match-all, uninitialized-memory defect, exploitability or device-failure verdict follows.
+
+## Reproduction and accounting
+
+Run `python3 -B work/mh202-firmware/research/2026-10-30/triggers/run10/collect_selector_ownership.py --check`. It strictly reproduces11 outputs: five original disassembly spans with VA/file-offset/byte hashes,13 exact instruction assertions,6 input identities, provider metadata and114 finite write ranges. `output-manifest.json` pins deterministic outputs; report/review identities are separate. Own original ARM/interpreter/parser/process/OS/I/O execution and hooks remain0. Existing project corpora retain their separate cumulative counts; static0 does not reset them.
+
+A useful next question is complete normal libcommon CreateMsgOpen write ownership for a justified DIM1 input, or actual selector-producing code if it exists. Repeating the old DIM0/22 comparison or ordinary bracket matrices cannot answer that question. The closed authentication/framing branch remains excluded.

@@ -1,0 +1,17 @@
+{
+  "scope": "Actual parent read-only reconstruction of original-source collectors; no original/CPU/SQL/model execution",
+  "F460": {
+    "chunk_id": "fd30ac",
+    "wall_time_seconds": 0.158855635,
+    "exit_code": 0,
+    "original_token_count": 22,
+    "output": "{\"check\": true, \"outputs\": 21, \"spans\": 18, \"guards\": 54, \"new_original_execution\": 0}\n"
+  },
+  "F461": {
+    "chunk_id": "3da056",
+    "wall_time_seconds": 0.03643677,
+    "exit_code": 0,
+    "original_token_count": 22,
+    "output": "{\"check\": true, \"outputs\": 14, \"spans\": 5, \"firstcopies\": 16, \"original_execution\": 0}\n"
+  }
+}

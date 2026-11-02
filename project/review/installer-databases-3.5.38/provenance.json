@@ -1,0 +1,150 @@
+{
+  "scope": "Canonical13database archival and methodical structural/comparative analysis of7newpayloads pluspreservedMH202 baseline; selected semantic findings without runtime/physical proof.",
+  "timestamp_UTC": "2026-10-31T16:42:31.534452+00:00",
+  "exports": [
+    {
+      "source": "work/installer-database-analysis/2026-10-31/systems/REPORT.md",
+      "published": "systems-report.txt",
+      "bytes": 16279,
+      "sha256": "ca046a1f5f6764935455040a09c3e2f7c8221ba466a448e89fe811168e922e5b"
+    },
+    {
+      "source": "work/installer-database-analysis/2026-10-31/reviews/SYSTEMS_SOURCE_REVIEW.md",
+      "published": "systems-source-review.txt",
+      "bytes": 8320,
+      "sha256": "3aa0af045f83bb277ea0a766727f546c0b723982186e963519c026e5c5627437"
+    },
+    {
+      "source": "work/installer-database-analysis/2026-10-31/scenario-variants/REPORT.v2.md",
+      "published": "scenario-variants-report.v2.txt",
+      "bytes": 12512,
+      "sha256": "b2eee5bb1c8a51a0bfa7eff3b146268aba7c225150430738395d23298597529f"
+    },
+    {
+      "source": "work/installer-database-analysis/2026-10-31/reviews/SCENARIO_VARIANTS_SOURCE_REVIEW.md",
+      "published": "scenario-variants-source-review.txt",
+      "bytes": 6249,
+      "sha256": "a9dcf7d9a1f88a3d2ec36e88a88482a8f69e0d63aecd6361917747acc7a43f18"
+    },
+    {
+      "source": "work/installer-database-analysis/2026-10-31/project-templates/REPORT.md",
+      "published": "project-templates-report.txt",
+      "bytes": 7641,
+      "sha256": "595c1169811d27506e7ab3a2cfe9c9775c0d10f1356961a3b0649d4d06d4fd24"
+    },
+    {
+      "source": "work/installer-database-analysis/2026-10-31/reviews/PROJECT_TEMPLATES_SOURCE_REVIEW.md",
+      "published": "project-templates-source-review.txt",
+      "bytes": 7374,
+      "sha256": "092877dd9be3d2bfccccf064ab324885c0d6bb91a1e1107625c6b28112a3c771"
+    },
+    {
+      "source": "work/installer-database-analysis/2026-10-31/reviews/ARCHIVE_SOURCE_REVIEW.md",
+      "published": "archive-source-review.txt",
+      "bytes": 6130,
+      "sha256": "46b1092c8841111b95a2d893b06da69132687810bf5771138a2ba0c288f9604c"
+    },
+    {
+      "source": "work/installer-database-conservation/2026-10-31/R2_COMPLETE.json",
+      "published": "archive-readback-receipts.json",
+      "bytes": 4288,
+      "sha256": "1f6f7b64923d9f92f461511bb66378c17580ba53844d318b7d59269e387de2b5"
+    },
+    {
+      "source": "work/installer-database-conservation/2026-10-31/REGISTRY_COMPLETE.json",
+      "published": "canonical-registration.json",
+      "bytes": 1118,
+      "sha256": "a0d8524c808f992d4404bad4376dd402832e77d4bb1aaa84158650596b05e3a2"
+    },
+    {
+      "source": "work/installer-database-conservation/2026-10-31/PLAN.json",
+      "published": "canonical-member-map.json",
+      "bytes": 8802,
+      "sha256": "dfea91e352ec507c5e3fd2317c7ead13c4d7cf2534cd85f1438eee15fb5fb0a8"
+    },
+    {
+      "source": "work/installer-database-conservation/2026-10-31/ARCHIVE_COMPLETE.json",
+      "published": "archive-completion.json",
+      "bytes": 830,
+      "sha256": "bbca9bad3126b4d6ce7b33f7adb16f6512b4a4497528c5c18d3f971149e1cfc3"
+    },
+    {
+      "source": "work/installer-database-analysis/2026-10-31/scenario-variants/LOGICAL_DIFFERENCES.v2.json",
+      "published": "scenario-logical-differences.v2.json",
+      "bytes": 13553,
+      "sha256": "e15792b55a871273988620c53bd8a766c18906327fe6243af364214d9f89c118"
+    },
+    {
+      "source": "work/installer-database-analysis/2026-10-31/scenario-variants/CONTEXT_QUERIES.v2.json",
+      "published": "scenario-context-queries.v2.json",
+      "bytes": 12717,
+      "sha256": "9e09dcc65cf267d33d3e23caa51d96924589906f12ef912c57d6a33dee79fdab"
+    },
+    {
+      "source": "work/installer-database-analysis/2026-10-31/project-templates/evidence-v1/schema.json",
+      "published": "project-schema-sanitized.json",
+      "bytes": 32872,
+      "sha256": "a96ece06d9c8c3d1b3c0ac03474ccb68317aecbe19d4b2031cde558022d1ef06"
+    },
+    {
+      "source": "work/installer-database-analysis/2026-10-31/project-templates/evidence-v1/reference-rows.json",
+      "published": "project-reference-rows.json",
+      "bytes": 2756,
+      "sha256": "29593557dbf4bf6f873f5fadf4a7da7988c55400883b956f3ca0c28df8d848e8"
+    },
+    {
+      "source": "work/installer-database-analysis/2026-10-31/project-templates/PREOUTPUT_HISTORY.json",
+      "published": "project-preoutput-history.json",
+      "bytes": 768,
+      "sha256": "ba9de484b43699ee83249f13a73059ccbdfe2626589682fc5da08b71969f9a0f"
+    },
+    {
+      "source": "work/installer-database-analysis/2026-10-31/scenario-variants/DEVELOPMENT_HISTORY.v2.json",
+      "published": "scenario-version-key-history.v2.json",
+      "bytes": 1107,
+      "sha256": "277ba251f0fa64099cf8817745f042242106d48f26f45b45d5838923ef517f28"
+    },
+    {
+      "source": "work/installer-database-audit/2026-10-31/AUDIT.json",
+      "published": "installer-database-inventory.json",
+      "bytes": 173332,
+      "sha256": "63a049c4ad34e7e21ef0fc2d3e9ee42bfba9b48f0c7157c9dafb85c17ac8ba50"
+    },
+    {
+      "source": "work/installer-database-analysis/2026-10-31/systems/SELECTED_SOURCE_ROWS.v1.json",
+      "published": "systems-selected-source-rows.json",
+      "bytes": 683429,
+      "sha256": "81e863b702cd299f6d41c4982905e98c1028b66a099306af65ce57ca41430b04"
+    }
+  ],
+  "collectors": [
+    {
+      "path": "work/installer-database-analysis/2026-10-31/systems/collect_systems_v1.py",
+      "sha256": "cd84f548182819f3ee3adc85d309902d0c0e1f26b73e4bda2520310137a425fc"
+    },
+    {
+      "path": "work/installer-database-analysis/2026-10-31/scenario-variants/collect_variants_v2.py",
+      "sha256": "3833d0089df7313ff8fb30ecf52f9c9f62290dff7c787f5c6dc6b0a2e83828fc"
+    },
+    {
+      "path": "work/installer-database-analysis/2026-10-31/project-templates/collect_project_templates_v2.py",
+      "sha256": "313c5eeda359550c8aa031ce74ed28199f4dc42ee908cec5acdf0454a1068bef"
+    }
+  ],
+  "canonical_archive": {
+    "commit": "974eced66cf40fdc5b5dc3417357244db710d848",
+    "manifest_sha256": "dff0aac04bdb06c9ea298845d8666dce293818e65b03ae5882c3ab0aed883a05",
+    "database_payloads_verified": 13,
+    "new_records": 7,
+    "installer_member_paths": 20,
+    "record_changes": "Only7additive manifestrecords;832prior rawblocks unchanged. Vendorbinaries private;researchbranch unpublished."
+  },
+  "installer": {
+    "sha256": "707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b",
+    "bytes": 599437936,
+    "selected_page_proof": "37pages size/CRC32;29trailingindexbytes unparsed; nested/extensionlesssearch excluded."
+  },
+  "method": "Read-only hostSQLite/staticdata only; no vendorSQLfunctions,expressions,CLR,firmware,targetnetwork/device execution.",
+  "new_original_execution": 0,
+  "history": "Exact first candidates and guarded pre-output corrections retained; prior completed dossiers remain immutable. Authorized artifact-registry update supersedes current manifest identity while historical validation capture pins remain preserved."
+}

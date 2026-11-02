@@ -1,0 +1,62 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0010ed46:
+  10ed46:	6930      	ldr	r0, [r6, #16]
+  10ed48:	2500      	movs	r5, #0
+  10ed4a:	6922      	ldr	r2, [r4, #16]
+  10ed4c:	edd6 1b08 	vldr	d17, [r6, #32]
+  10ed50:	6977      	ldr	r7, [r6, #20]
+  10ed52:	edd4 3b08 	vldr	d19, [r4, #32]
+  10ed56:	1a12      	subs	r2, r2, r0
+  10ed58:	6963      	ldr	r3, [r4, #20]
+  10ed5a:	bf18      	it	ne
+  10ed5c:	2201      	movne	r2, #1
+  10ed5e:	edd6 0b0c 	vldr	d16, [r6, #48]	@ 0x30
+  10ed62:	f362 0507 	bfi	r5, r2, #0, #8
+  10ed66:	edd4 2b0c 	vldr	d18, [r4, #48]	@ 0x30
+  10ed6a:	1bdb      	subs	r3, r3, r7
+  10ed6c:	f8d6 e03c 	ldr.w	lr, [r6, #60]	@ 0x3c
+  10ed70:	bf18      	it	ne
+  10ed72:	2301      	movne	r3, #1
+  10ed74:	7222      	strb	r2, [r4, #8]
+  10ed76:	eef4 3b61 	vcmp.f64	d19, d17
+  10ed7a:	f363 250f 	bfi	r5, r3, #8, #8
+  10ed7e:	6be2      	ldr	r2, [r4, #60]	@ 0x3c
+  10ed80:	f8d6 c044 	ldr.w	ip, [r6, #68]	@ 0x44
+  10ed84:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+  10ed88:	7263      	strb	r3, [r4, #9]
+  10ed8a:	bf18      	it	ne
+  10ed8c:	2101      	movne	r1, #1
+  10ed8e:	6c63      	ldr	r3, [r4, #68]	@ 0x44
+  10ed90:	bf08      	it	eq
+  10ed92:	2100      	moveq	r1, #0
+  10ed94:	eef4 2b60 	vcmp.f64	d18, d16
+  10ed98:	f361 4517 	bfi	r5, r1, #16, #8
+  10ed9c:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+  10eda0:	72a1      	strb	r1, [r4, #10]
+  10eda2:	bf14      	ite	ne
+  10eda4:	2101      	movne	r1, #1
+  10eda6:	2100      	moveq	r1, #0
+  10eda8:	ebb2 020e 	subs.w	r2, r2, lr
+  10edac:	bf18      	it	ne
+  10edae:	2201      	movne	r2, #1
+  10edb0:	ebb3 030c 	subs.w	r3, r3, ip
+  10edb4:	bf18      	it	ne
+  10edb6:	2301      	movne	r3, #1
+  10edb8:	f361 651f 	bfi	r5, r1, #24, #8
+  10edbc:	7363      	strb	r3, [r4, #13]
+  10edbe:	72e1      	strb	r1, [r4, #11]
+  10edc0:	7322      	strb	r2, [r4, #12]
+  10edc2:	60b5      	str	r5, [r6, #8]
+  10edc4:	7332      	strb	r2, [r6, #12]
+  10edc6:	7373      	strb	r3, [r6, #13]
+  10edc8:	6923      	ldr	r3, [r4, #16]
+  10edca:	edd4 3b08 	vldr	d19, [r4, #32]
+  10edce:	edd4 2b0c 	vldr	d18, [r4, #48]	@ 0x30
+  10edd2:	4298      	cmp	r0, r3
+  10edd4:	f000 817f 	beq.w	10f0d6
+  10edd8:	6be3      	ldr	r3, [r4, #60]	@ 0x3c

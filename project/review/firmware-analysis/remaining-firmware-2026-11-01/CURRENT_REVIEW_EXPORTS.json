@@ -1,0 +1,18 @@
+{
+  "files": [
+    {
+      "source": "work/remaining-firmware-investigation/2026-11-01-run04/reviews/f450-source-review.md",
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/run04-f450-source-review.txt",
+      "bytes": 7893,
+      "sha256": "56b1b18ede5639bf19551bce8cffa2fcf6a053a7f500bdb22cf92da12db9f6fc",
+      "role": "Current independent original-byte source peer, not a duplicate source author"
+    },
+    {
+      "source": "work/remaining-firmware-investigation/2026-11-01-run04/reviews/mh200n-source-review.md",
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/run04-mh200n-source-review.txt",
+      "bytes": 4012,
+      "sha256": "ccdb39dd6c16a4fe4da13fed10bea75c1e51bb33c74884ad2e1564b002d37c8a",
+      "role": "Current independent original-byte source peer, not a duplicate source author"
+    }
+  ]
+}

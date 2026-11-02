@@ -1,0 +1,48 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a8e36:
+   a8e36:	9b01      	ldr	r3, [sp, #4]
+   a8e38:	2050      	movs	r0, #80	@ 0x50
+   a8e3a:	f103 0a68 	add.w	sl, r3, #104	@ 0x68
+   a8e3e:	f767 ee1e 	blx	10a7c <_Znwj@plt>
+   a8e42:	f8df 384c 	ldr.w	r3, [pc, #2124]	@ a9690
+   a8e46:	1d02      	adds	r2, r0, #4
+   a8e48:	efc0 0011 	vmov.i32	d16, #1	@ 0x00000001
+   a8e4c:	4680      	mov	r8, r0
+   a8e4e:	f50d 5685 	add.w	r6, sp, #4256	@ 0x10a0
+   a8e52:	f100 0910 	add.w	r9, r0, #16
+   a8e56:	361c      	adds	r6, #28
+   a8e58:	4607      	mov	r7, r0
+   a8e5a:	f942 078f 	vst1.32	{d16}, [r2]
+   a8e5e:	4631      	mov	r1, r6
+   a8e60:	58eb      	ldr	r3, [r5, r3]
+   a8e62:	3308      	adds	r3, #8
+   a8e64:	f848 3b0c 	str.w	r3, [r8], #12
+   a8e68:	9b02      	ldr	r3, [sp, #8]
+   a8e6a:	3308      	adds	r3, #8
+   a8e6c:	60c3      	str	r3, [r0, #12]
+   a8e6e:	4648      	mov	r0, r9
+   a8e70:	f00b fab2 	bl	b43d8
+   a8e74:	f50d 5186 	add.w	r1, sp, #4288	@ 0x10c0
+   a8e78:	f107 0020 	add.w	r0, r7, #32
+   a8e7c:	310c      	adds	r1, #12
+   a8e7e:	f785 f85d 	bl	2df3c
+   a8e82:	f50d 5387 	add.w	r3, sp, #4320	@ 0x10e0
+   a8e86:	f107 0248 	add.w	r2, r7, #72	@ 0x48
+   a8e8a:	3314      	adds	r3, #20
+   a8e8c:	4650      	mov	r0, sl
+   a8e8e:	4621      	mov	r1, r4
+   a8e90:	f963 078f 	vld1.32	{d16}, [r3]
+   a8e94:	f8df 37fc 	ldr.w	r3, [pc, #2044]	@ a9694
+   a8e98:	f942 078f 	vst1.32	{d16}, [r2]
+   a8e9c:	f855 9003 	ldr.w	r9, [r5, r3]
+   a8ea0:	e9c4 8700 	strd	r8, r7, [r4]
+   a8ea4:	f109 0308 	add.w	r3, r9, #8
+   a8ea8:	60fb      	str	r3, [r7, #12]
+   a8eaa:	f109 031c 	add.w	r3, r9, #28
+   a8eae:	623b      	str	r3, [r7, #32]
+   a8eb0:	f7fc fc18 	bl	a56e4

@@ -1,0 +1,31 @@
+# Independent review: WHO25 packaged GSource ownership, run28
+
+**PASS within the stated static scope; no correction requested.** I reviewed the immutable report, collector, original-byte evidence, selected disassembly, provider/import records, three HOST ledgers and exact first snapshots. I independently ran the host/static collector `--check`; **no original CPU/native/vendor/GLib/timer/callback/syscall execution or native replay** occurred in this review. This is a source and finite-ledger audit, not a complete lifetime investigation.
+
+## Exact reviewed identities
+
+| Artifact under `who25/run28-source/` | SHA256 |
+|---|---|
+| REPORT.md | `d3c4f4f85dbd6b5417ddf0173b537491babdb411da6821c3780f2832e006217e` |
+| collect_source_v1.py | `8a2bfa7302f87a7ecd0b84be56e6f6e61dc6f3c877d639b11b2a3a397c9d2717` |
+| output-manifest.json | `cf3e52b5bef2c9169816e4673712d9553fd86db6a5f1418a5da23bfa36ae684d` |
+| initial-generated-v1/SNAPSHOT_INDEX.json | `d90c0302622f05da43b5028e58c9bf45ac6c125326c197c9c80ef22cca764d91` |
+| host-conditional-reference-ledgers.json | `3323e09541cf5f189322f58c6c2b37753b598063d59d8fcc79e7c2ce3d89871b` |
+
+Fresh original ImageVFS reads confirm `/usr/lib/libglib-2.0.so.0.2800.7` SHA256 `029c2a7913131a84c46958d9ed445cb8a79dd1c8abc61116321badb7ad2735c0` and `/home/bticino/libcoso/libplug_trasv_cmd_stm.so` SHA256 `8e656523b5bb4c22196203c7e801e631a3481b529982baa1a9f4a9ca13febe2d`. Thus the earlier corrected WHO25 versus multimedia identity distinction is preserved. Six current inputs, eighteen original span offsets/hashes, thirty-nine original instruction words, six exact branch targets and all twenty-six evidence-manifest members were independently rechecked with a separate PT_LOAD reader. All twenty-nine indexed first copies match both their snapshot SHA256 and unchanged current files. Host collector reproduces twenty-seven outputs including its manifest.
+
+## Source conclusions checked
+
+Original new at `0x343a4` calls zero allocation and writes count+12=1 and flags+24=1. Internal attach `0x34124` loads/increments/stores the same count at `0x34140/0x34148/0x34150` and stores context+16 at `0x34154`. The attach wrapper's original call `0x369b8` targets that exact entry. The reference-count claim is grounded in these loads/stores and the independent ref/unref code, not an exported name or nearest objdump label.
+
+Destroy wrapper `0x34e54` distinguishes nonNULL context from the unattached path. The latter clears mask0x1 in source+24 and returns without a displayed count decrement. The attached branch targets actual internal `0x348a4`, whose active-bit guard `0x348d8/0x348dc` skips the selected cleanup when inactive. Its active path clears that bit, removes callback-box pointers and, after guarded child/poll work, calls exact helper `0x34560` at `0x349cc`. That helper subtracts/stores one from +12 and branches away from cleanup on nonzero. Zero reaches conditional cleanup and eventual source free request `0x34684`, subject to compatible state/helper/callback completion. Child recursion can affect child objects; the report's one decrement is the selected parent-source effect, not a global count of all helper calls.
+
+The explicit unref wrapper at `0x34898` also targets `0x34560`. Framework dispatch at `0x34d0c..0x34d54` separately decrements +12 directly when greater than1 or calls the same helper otherwise; its adjacent guarded destroy route is distinguished from the local plugin caller. All six saved branch targets agree with independent signed ARM imm24 decoding. Conditional runtime binding/interposition, context locks, reentrant callbacks and other references remain premises; no actual GLib provider selection or object lifetime was observed.
+
+WHO25 own reset `0x1574..0x15a4` stores ID8=-1/state4=0, conditionally requests destroy on source pointer12, then clears pointer12. The common field continuation `0x16bc..0x16fc` conditionally destroys the old pointer, requests new1000, stores the returned pointer at private12, supplies private userdata/NULL destroy notifier, and attaches with private16. The selected query body `0x17b4..0x18c0` creates/stores/sets/attaches after the kind2/WHERE-first-character3 gate without a displayed prior-source destroy or busy test. This is limited to that path and does not establish repeated-query or resource effects. The complete timeout/reset and own initializer support the report's distinction between GLib source+12 **count** and WHO25 private+12 **pointer**, with private+20 publication callback separate from the timer callback. No structure layout is borrowed from the previous opaque native timer fixture.
+
+## Ledgers, immutability and limits
+
+The three host cases correctly yield 1 for new→attach→destroy, 0 for new→attach→unref→destroy, and 0 for unattached new→destroy→unref, under their explicit closed assumptions. Their active/count arithmetic is an illustration, not a GLib allocator/object/context simulation. Actual dispatch reference changes exist and prevent promotion of a local missing explicit unref request into a process-wide leak or compensation claim. Zero is a cleanup-branch candidate, not observed deallocation. The report makes no timing, scheduling, private-context destruction, resource-growth, physical or global reference-balance claim.
+
+The generator preflights output existence and uses exclusive writes; successful check compares bytes without writing. First outputs/report/collector are preserved immediately and remain exact. This review changed no author, firmware, prior dossier, source or repository files. Full acquisition/release provenance, installed callbacks/context teardown and actual runtime ownership remain unresolved.

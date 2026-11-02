@@ -1,0 +1,24 @@
+# Material peer-review correction: replacement versus row0x19 append
+
+The first development report and host model incorrectly routed later records for selected rows0x10/0x14 through the **row0x19-only** append branch. Independent static peer review caught the wrong branch selection before promotion. No original code ran; the mistake was in the static interpretation and Python model.
+
+Correct original control/dataflow:
+
+1.0xe70c compares row0x16 and takes the nonmatching branch0xe714→0xe76c for selected rows0x10/0x14.
+2.0xe76c compares row0x19; original word0xe3530019. Nonmatching0xe770 word0x1a00001e branches to0xe7f0.
+3.0xe840 loads pool0xe928, whose format is `%d*%d*%d`. Word0xe59f10e0 is pinned.
+4.0xe850 sets destination r0=context+820, word0xe2850fcd. The common0xdd00 `sprintf` **replaces** the scratch buffer.
+5.The `strlen` and end-pointer `context+820+strlen` logic0xe774–0xe7ec belongs to row0x19; it uses the distinct leading-star format `*%d*%d*%d` at pool0xe9b0. It is not used by either selected model row.
+
+Corrected selected second records:
+
+| Dimension | Superseded development text | Correct current conditional parser input |
+|---|---|---|
+|56|`*#18*51*56#10#2*2*10*11*12*13*14##`|`*#18*51*56#10#2*2*12*13*14##`|
+|510|`*#18*51*510#10*2*10*11*12*13*14##`|`*#18*51*510#10*2*12*13*14##`|
+
+The terminal record temporarily holds `3*15*16`, not a cumulative prefix, before the existing terminal rules replace it with `3*15` (row0x10) or `3` (row0x14). First-record results, terminal outputs, original parser/send call sites and outgoing request reconstruction remain unchanged.
+
+Exact pre-review files are preserved in `development-pre-review/` and pinned by `development-pre-review/snapshot-sha256.json`. Superseded report SHA256 was `7917b1bf58e4847a042024391167df8574ea1b67d24637706adb428a5320ae51`; collector `22f6de3ae713c1621e582026bfff44f214acccb37f14dc98ed75622d39add231`; model output `cf106a4986a0bb51f02ee43c17dd67d3dc3cd28d62c71e003b6fda9ef85b550c`. The misleadingly named old span file `oldstream-append-values.txt` is retained only in that superseded snapshot; its unchanged original bytes are now named `oldstream-later-values.txt`.
+
+The current collector adds the actual row dispatch span and four exact word assertions. Counts are now36 generated outputs,28 original spans,30 exact words, nine input hashes and two finite host models. Reproduction remains static host ELF/binutils/Python only, with zero original instructions or hooks. This correction does not establish physical metadata, delivery or a longer-DH7E publication route.

@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+"""Original BNIL local state-string admission and selected typed/id-matched caller, static only."""
+import argparse,hashlib,importlib.util,json,struct,subprocess,sys
+from pathlib import Path
+sys.dont_write_bytecode=True
+D=Path(__file__).resolve().parent;P=D.parents[2];W=P.parents[2];H=lambda b:hashlib.sha256(b).hexdigest();J=lambda x:(json.dumps(x,sort_keys=True,indent=2)+'\n').encode()
+HP=P/'research/2026-10-31/image_vfs.py';s=importlib.util.spec_from_file_location('admission_vfs',HP);m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+IMAGE='/home/bticino/scheduling_manager/scheduling_manager';SHA='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26'
+SPANS=[('local-state-handler',0xee708,0xee7a8),('default-fire',0xee59c,0xee5ac),('selected-local-dispatch',0x53a1a,0x53aa0),('caller-got-prefix',0x51968,0x519a2),('id-getter',0x2264c,0x22650),('string-equality',0x4f000,0x4f024),('trigger-handle-copy',0xa6508,0xa65bc),('temporary-copy-release',0x573a4,0x57450),('captured-scene-wrapper',0xa60a8,0xa60b0)]
+GUARDS=[(0xee708,'90f83020'),(0xee71c,'082a'),(0xee720,'022a'),(0xee724,'032a'),(0xee73c,'a26b'),(0xee740,'022a'),(0xee744,'032a'),(0xee77c,'e26b'),(0xee794,'e26b'),(0xee754,'e368'),(0xee758,'2369'),(0xee75a,'201d'),(0xee59c,'c368'),(0xee5a0,'0369'),(0xee5a2,'0430'),(0x53a56,'0546'),(0x53a8c,'08f10801'),(0x53a90,'2846'),(0x17 if False else 0x4f000,'9942'),(0xa650c,'d1e91a34'),(0x573da,'012b'),(0x57410,'b9f74eed')]
+def target(raw,pc):
+ a,z=struct.unpack('<HH',raw);assert a&0xf800==0xf000 and z&0xd000 in[0xd000,0x9000];q=(a>>10)&1;i1=1-(((z>>13)&1)^q);i2=1-(((z>>11)&1)^q);imm=(q<<24)|(i1<<23)|(i2<<22)|((a&1023)<<12)|((z&2047)<<1);return(pc+4+imm-((1<<25)if q else 0))&0xffffffff
+def build():
+ v=m.ImageVFS();b=v.read_bytes(IMAGE);assert H(b)==SHA;ph=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);L=[struct.unpack_from('<8I',b,ph+i*sz)for i in range(n)];L=[q for q in L if q[0]==1]
+ def at(a,n):
+  for q in L:
+   if q[2]<=a and a+n<=q[2]+q[4]:return b[q[1]+a-q[2]:q[1]+a-q[2]+n]
+  raise ValueError(hex(a))
+ u=lambda a:struct.unpack('<I',at(a,4))[0];bp=v.root/IMAGE.lstrip('/');out={};rows=[]
+ for name,a,e in SPANS:
+  rows.append({'name':name,'start_va':hex(a),'end_va_exclusive':hex(e),'bytes':e-a,'sha256':H(at(a,e-a))});out['spans/'+name+'.txt']=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(bp)],text=True).replace(str(W)+'/', '').encode()
+ for a,h in GUARDS:assert at(a,len(bytes.fromhex(h))).hex()==h
+ assert(0x51994+4+u(0x52520))&0xffffffff==0x1659a4
+ assert(0xee74e+4+u(0xee7ac))&0xffffffff==0xee59d
+ assert u(0x1625b4)==0xee59d and u(0x1625d4)==0x2264d
+ rel={}
+ for p in range(0x498c,0x100d4,8):
+  a,z=struct.unpack('<II',at(p,8));rel[a]=(p,z&255)
+ bindings=[]
+ for pool,slot,value in [(0x53ef0,0x1662a4,0x165474),(0x53ec8,0x165e8c,0x16335c),(0x53ecc,0x166798,0x2264d),(0xee7b0,0x166444,0x115d68)]:
+  assert 0x1659a4+u(pool)==slot and u(slot)==value and rel[slot][1]==23;bindings.append({'pool':hex(pool),'slot':hex(slot),'value':hex(value),'relative_relocation_va':hex(rel[slot][0])})
+ for a in [0x1625b0,0x1625b4,0x1625d4]:assert rel[a][1]==23
+ for a,s in [(u(0x165478),'17BnilTriggerRunner'),(u(0x163360),'13TriggerRunner'),(0x115d68,'noStatus')]:assert at(a,len(s)+1)==s.encode()+b'\0'
+ calls=[]
+ for p,t in [(0x53a22,0xa6508),(0x53a5a,0x573a4),(0x53a82,0x4f000),(0x53a92,0xee708),(0xa60aa,0xa5db0)]:assert target(at(p,4),p)==t;calls.append({'va':hex(p),'bytes':at(p,4).hex(),'target_va':hex(t)})
+ hits=[]
+ for p in range(0x11880,0x113fb0-3,2):
+  a,z=struct.unpack('<HH',at(p,4))
+  if a&0xf800==0xf000 and z&0xd000 in[0xd000,0x9000] and target(at(p,4),p)==0xee708:hits.append(hex(p))
+ assert hits==['0x53a92']
+ inputs=[{'path':str(p.relative_to(W)),'sha256':H(z),'bytes':len(z)}for p,z in [(bp,b),(HP,HP.read_bytes())]+[(W/p,(W/p).read_bytes())for p in ['OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md','work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime/worker-ownership/REPORT.v2.md']]]
+ out.update({'INPUTS.json':J(inputs),'SOURCE_SPANS.json':J(rows),'BYTE_GUARDS.json':J([{'va':hex(a),'bytes_hex':h}for a,h in GUARDS]),'POINTER_BINDINGS.json':J(bindings),'DIRECT_CALLS.json':J(calls),'BOUNDED_LOCATOR.json':J({'start':'0x11880','end_exclusive':'0x113fb0','stride':2,'encodings':'selected ThumbBL/B.W forms only','target':'0xee708','syntactic_candidates':hits,'scope':'Only retained direct caller validated; not indirect-call/global-absence proof.'}),'ADMISSION_LEDGER.json':J({'receiver':'compiledinner, not76Bcontrolbase','enabled_byte':48,'operator_word':56,'configured_status_word':60,'recognized_input_strings':{'on':0,'off':1,'noStatus':-1},'operator2':'recognizedstate==configuredstatus permits selectedfire','operator3':'recognizedstate!=configuredstatus permits selectedfire','other_operator_words':'recognizedstate reachesselectedfire withoutthesecomparisons','fire':'knownprimaryslot0Thumb0xee59d fastpath checksmanager12 then invokesinvoker16 withdata4; differentprimarymethod isopaquevirtualdelegate','no_local_prior_state':'Retained handler performs no event-value store; no globaldedup/eventdelivery claim.','selected_caller':'dynamiccastcandidate13TriggerRunner→17BnilTriggerRunner; IDstringequality theninputr8+8 tohandler','lifetime_order':'a6508 sourcecopies scene104handle range andincrementsnonzero control count; 573a4 releasescopiedcontrols/rawbuffer beforeselectedID/handlercalls. No wholeownerlifetime/unsafeinterleaving claim.','upstream':'Provided event/ID objects and typed live receiver remainpremises; no rawtransport/body/authentication/session/framing orsource of event strings investigated.'}),'METHOD.json':J({'original_execution':0,'host_semantic_models_or_event_objects':0,'target_IO':0,'scope':'Selected local admitted-string handler, defaultfire, one typed/IDmatched caller and sourcecopy/release ordering; notwholeeventloop orwireacceptedinput.','history':'One unsaved exploratory locator invocation had a Python conditional-spacing SyntaxError before any output; transcribed error is separately documented. Canonical collector first generation refuses overwrite.'})})
+ return out
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build();out['OUTPUT_MANIFEST.json']=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()})
+ if a.check:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+ else:
+  assert not any((D/n).exists()for n in out);S=D/'first-candidate';assert not S.exists();copies={**out,Path(__file__).name:Path(__file__).read_bytes()}
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in copies.items():p=S/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (S/'INDEX.json').open('xb').write(J({n:{'sha256':H(z),'bytes':len(z)}for n,z in copies.items()}))
+ print(json.dumps({'check':a.check,'outputs':len(out),'spans':len(SPANS),'guards':len(GUARDS),'branch_checks':5,'original_execution':0}))
+if __name__=='__main__':main()

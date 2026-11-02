@@ -1,0 +1,43 @@
+# Independent review — MH202 protocol/run12
+
+**PASS; no material correction requested.** Reviewed final report, both scripts, original taskmanager/common source spans/words/pools, saved parser input/readbacks/input-byte differences, trace accounting and manifest. Reviewer reran only the host static collector; the native emulator was **not replayed by this reviewer**. Parent independently replayed that experiment separately. This document is an original-source/harness/saved-output audit, not a second native reproduction. Reviewer original ARM/vendor/parser/JS/PHP execution and live I/O:0.
+
+## Reproduction and independent checks
+
+`collect_evidence.py --check` strictly reproduced18 outputs from11 pinned inputs,11 source spans,31 original words and4 format pools, with the three-call saved execution ledger. Independently mapped both original ELF PT_LOAD files through ImageVFS and verified all11 span hashes,31 instruction/pool words and4 exact public format targets/texts. Verified all23 current manifest entries. Independently recounted saved original-PC/primitive/redirect arrays, checked original VAs are aligned/file-backed and within the harness’s admitted image-specific code ranges, and verified input-byte differences and actual parser-input/readback linkage. Recomputed run12’s858 unique PCs and143-PC difference versus run11 (57 common,86 taskmanager); this is saved trace-set coverage, not branch exhaustiveness or independent new-call coverage.
+
+Original normal-image identities remain taskmanager SHA256 `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e` and libcommon SHA256 `07b2c6d09e4a1b317bb3b37aff8f7ddd72dcec15e1e7194fde00c4f0ce1ecab5`.
+
+## Original branch and parser-field join
+
+Source `0xcb38` retains the actual16-byte push/7768-byte local frame and localSP+12 object. C1 reaches actual common Null; CreateMsgOpen reaches actual common IsCorrect/field/suffix routines; getters/predicate and actual one-instruction D1 execute as original allowed definitions. No parsed fields/getter returns/constructor no-op are supplied by the host. Common130-byte field layout and separate image base0x10000000 remain explicit; libopen90 layout is not substituted. Redirects bind selected same-build definitions and preserve LR, without claiming live loader/initialization/interposition proof.
+
+For the measurement input, source checks WHO1/measure/DIM1/value100 and nonempty parsed level, then uses native getters for WHERE/level/interface. Original ARM places the third variadic argument at [SP]; the finite sprintf model reads that pointer and produces `11#1#2` under exact `%s#%s#%s`, then source `*1*0*%s##` supplies returned `*1*0*11#1#2##`. Parsed kind4/WHERE11/level1/interface2/DIM1/value100 are saved original-written observations at the parser return, not preparations.
+
+For each bracket case, the original first-`[` lookup and digit/closing-bracket branch precede input store0xccec. The saved whole input bytes independently show **exactly offset3 changes5b→00**; all remaining bytes through the original NUL remain unchanged. Original `%s1%s` uses that terminated prefix and suffix after the first `]`, producing ordinary temporary `*1*1*11##` or `*1*1*11#1#2##`. The common parser entry hook records exactly one actual input/call per case at original0xcd14, with return0xcd18 and the correct local object pointer. Parser input is that temporary ordinary frame, not the bracket expression. Actual parsed kind3/WHAT1/WHERE11 and optional level1/interface2 then drive original getters/final formatting. No later parser call validates the final returned text.
+
+The first-digit==1 guard is not bracket-list membership validation. The experiment does not interpret `[1,2]` as an accepted configured set or prove a later comparison result. The report makes that boundary clear and keeps the special WHO13/DIM1 comparator/selector question separate.
+
+## Containment and accounting
+
+The harness privately maps two read/execute-only original ELF images and separate writable stack/input/heap. Stack begins poisoned0xa5. Unknown PC, original interrupts/protected/unmapped access or caps abort; exception/unwind cleanup PCs0xcdbc..0xcdd4 are excluded.100000 code-hook/emulator-instruction caps apply per top-level call. Explicit primitive models are finite ordinary C memory/string/decimal operations, allowlisted literal/format cases and private heap strdup. cstring has4096-byte cap; strtok uses per-byte permitted-region checks, not an invented identical scan cap. These are selected contracts, not whole libc/allocator behavior.
+
+Original parser-entry/return observation logic only reads and records state inside already-counted original-PC hook entries; it does not inject parser results or add independent primitive/redirect/EXIT entries. The allowed format cases and ARM stack argument preserve the actual source arguments. Private input mutation is intentional and fully checked. No configured loader, matcher/event callback, task action, target OS/syscall/process, transport or physical state is executed by the inspected original code/model.
+
+Saved totals are exactly **3 new calls:5022 original visits+547 C primitive callbacks+41 native-definition redirects+3 EXIT boundaries=5613 code hooks**. Per case1832/201/17/1=2051,1506/162/11/1=1680,1684/184/13/1=1882. Repeats count as visits; intercepted PLT redirects and EXIT execute no original PLT/EXIT instruction. The static collector and this review add no native corpus calls. Earlier corpus/replay totals are not merged into these area counts.
+
+This closes the supplied-parser-field boundary for the selected ordinary level/interface and bracket-temporary paths under explicit primitive/provider assumptions. It does not prove whole bracket grammar, configured trigger matching, callback/task execution, complete address domain, live provider binding or physical effects. No corrective author edit was requested.
+
+## Exact final reviewed hashes
+
+- `protocol/run12/REPORT.md` SHA256 `00eb78b0ff647c8d1e6fee74c9c53a25971c9c13495910093992279e3d68fc48`.
+- `protocol/run12/collect_evidence.py` SHA256 `8592996442589f2d7f3cf9c3170004a2f58f98e200855af2a210808eb5dffeb8`.
+- `protocol/run12/emulate_common_normalizer.py` SHA256 `4815183016d34967bf569b3b997e32a063222f5e9ae4dfd8e9aeecde33c35848`.
+- `protocol/run12/normalizer-results.json` SHA256 `b9af7a91306d113e0ea48b492263d24cd7d93e5594dcc7b004512009567d7c55`.
+- `protocol/run12/execution-ledger.json` SHA256 `4ded6193623381391ebf5bd92ca26d8e7da95cdac2a2bf10a749b2d1d6051c9b`.
+- `protocol/run12/new-PC-coverage.json` SHA256 `9926eb4f6760a446890c59f61c3ee6649f33f3878053126011d9f4c675356800`.
+- `protocol/run12/output-manifest.json` SHA256 `d43fdda83303166adaed11dbc99a235af3bcb6a8e830c29514245d078f9c421b`.
+- `protocol/run12/original-spans.json` SHA256 `ff58c0568d713333bb475777b4513449e9dd20cfcfdc76e30e16960213a3947b`.
+- `protocol/run12/critical-words.json` SHA256 `ea76584e1e50501cce56b83b8aebea53933aaa3b900c790ab1cc88255f1f3bd1`.
+- `protocol/run12/format-pools.json` SHA256 `bd7b450847370f933b622d7196c51dd71f56973de27ce3f646afea6fb659f534`.
+- `protocol/run12/verified-tool-package.json` SHA256 `9f9bae4d6be11b8849669aeca2375469304e78ab5697abb89e47d3d73f6ca36a`.

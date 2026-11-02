@@ -1,0 +1,47 @@
+[
+  {
+    "source": "scenario-engine/README.md",
+    "sha256": "0e83160fed92382fb52350d5a49f53fbccd04f11896b1f80a29b9abfb417c920",
+    "snapshot": "01-scenario-engine__README.md.txt"
+  },
+  {
+    "source": "scenario-engine/sources-and-identifiers.md",
+    "sha256": "1db842b69622bc25da637f8b061943d350c7ba8cf1df0cd48890a010351c0327",
+    "snapshot": "02-scenario-engine__sources-and-identifiers.md.txt"
+  },
+  {
+    "source": "scenario-engine/open-questions.md",
+    "sha256": "a5664b07d7de42fa30067e7f6871a2c836dc43a76d561392d85b8bd02fc30c72",
+    "snapshot": "03-scenario-engine__open-questions.md.txt"
+  },
+  {
+    "source": "functional/who-17-scenario-management/README.md",
+    "sha256": "f9825e4dd40ef229a422df501ecaa44378b912833a3c45d3f7d3e8ad796b9402",
+    "snapshot": "04-functional__who-17-scenario-management__README.md.txt"
+  },
+  {
+    "source": "functional/who-25-transversal/README.md",
+    "sha256": "2820e158d641d7c47c7c1e19be457df347f093d1a440acc7455ac22c332237a2",
+    "snapshot": "05-functional__who-25-transversal__README.md.txt"
+  },
+  {
+    "source": "functional/who-25-transversal/cen-plus.md",
+    "sha256": "86f2d687f90e84d0991f8d99915e0146858fa8b817c99ca553e5ea25919d681d",
+    "snapshot": "06-functional__who-25-transversal__cen-plus.md.txt"
+  },
+  {
+    "source": "functional/who-25-transversal/dry-contact-ir.md",
+    "sha256": "1c0a04bae56ba9312392632fbbe8b8ca5ad81e1e7d0ed9c561cb936b180b86e9",
+    "snapshot": "07-functional__who-25-transversal__dry-contact-ir.md.txt"
+  },
+  {
+    "source": "project/review/who25-gateway-compatibility.md",
+    "sha256": "021e839b7549a6474cbae4fa89486dbf67202b1acb17b314a92448959c58c6f2",
+    "snapshot": "08-project__review__who25-gateway-compatibility.md.txt"
+  },
+  {
+    "source": "reverse-engineering/README.md",
+    "sha256": "7e4ac3bf373177fda08721aa3a1da629cd7829a7c150a434b2b713d3bed35c92",
+    "snapshot": "09-reverse-engineering__README.md.txt"
+  }
+]

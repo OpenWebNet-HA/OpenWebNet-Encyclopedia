@@ -1,0 +1,10 @@
+# Independent boot run9 source review
+
+PASS. Parent reproduced collect_marker.py --check:17 deterministic outputs,10 original spans,17 critical words,6 inputs, four path and four select-return host cases; own original instruction execution0. Re-read source disassembly for actual marker construction and select-return branches.
+
+The config callback stores path_var into userdata+8; subsequent setup passes it plus exact application name to the observed format and stores global+12. Parsed /var produces the same daemon prefix+bt_supervisione name. Default var and null-pointer fallbacks remain relative, with runtime alias/parser/working-directory premises explicit. The initial request precedes later socket creation. Original bge at10a10 selects the marker call for nonnegative select returns; errno4 resets1/0 then retries without marker, other negatives leave selected loop. Timeout is requested timeval1/0, not an elapsed cadence or readiness certificate. Candidate libcommon import is supported, but live binding/configuration/create success/full workload health are unproved. No whole XML/authentication/credentials or real I/O included.
+
+Exact author identities:
+- `boot/run9/REPORT.md` SHA256 `6252cfd0328a677e41af4b4210d3ef25c86bb779c6bbad899cf5085ee05b77c2`
+- `boot/run9/collect_marker.py` SHA256 `b06387a7a1077ec9c94ddcb4c7580406f122319b26fdfcea8c72722e6bb9a23b`
+- `boot/run9/output-manifest.json` SHA256 `6253f1ad76635f36794350816160e94ba4de6e68bc905b971bac1c43d12ee728`

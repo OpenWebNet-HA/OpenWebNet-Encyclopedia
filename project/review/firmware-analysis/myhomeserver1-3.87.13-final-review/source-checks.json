@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "command": "verification/build_supplement_v2.py --check",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "181300",
+          "wall_time_seconds": 0.006270171,
+          "exit_code": 0,
+          "original_token_count": 59,
+          "output": "{\"check\": true, \"outputs\": 8, \"direct_input_pins\": 38, \"rows\": 2, \"old_input_memberships\": 614, \"numeric_protected_memberships\": 142, \"historical_overrides\": 2, \"first_copies\": 11, \"original_execution_additions\": 0, \"guest_replays\": 0}\n"
+        }
+      }
+    }
+  ],
+  "scope": "Parent readonly verification after overview changed; explicit historical input mappings, no old-collector or guest replay"
+}

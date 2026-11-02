@@ -1,0 +1,19 @@
+{
+  "scope": "One official public Arm document supplies candidate-format semantic comparison only. It is not original F455 CPU, memory map, loader or execution evidence.",
+  "URL": "https://documentation-service.arm.com/static/5f04abc8dbdee951c1cdc9f7",
+  "title": "Cortex-M0+ Devices Generic User Guide",
+  "document": "ARM DUI 0662B, ID011713",
+  "HTTP_status": 200,
+  "retrieved_UTC": "2026-11-01T20:17:35.626581+00:00",
+  "local_file": "public-context/ARM-DUI0662B.pdf",
+  "bytes": 962520,
+  "sha256": "09fdd7deebbb2d3df401838d9d199397cc2f6f43a3683b1d3a2d768541795bda",
+  "locator": "Section2.3.4, printed page2-18, PDF page30 (zero-based29), Figure2-1",
+  "verbatim_excerpts": [
+    "The least-significant bit of each enabled vector must be 1",
+    "Initial SP value",
+    "Reset"
+  ],
+  "paraphrase": "The documented vector arrangement begins with an initial stack value and reset entry. Enabled vectors use the low bit to indicate Thumb state. This generic example is suitable for a limited pattern comparison, not for assigning its M0+ target to F455.",
+  "comparison_limit": "F455's architecture, exact Cortex model, STM32 or other manufacturer/part, byte order, actual vector extent, actual load address and runtime entry remain unproved. No forced-ISA disassembler or original instruction execution is used."
+}

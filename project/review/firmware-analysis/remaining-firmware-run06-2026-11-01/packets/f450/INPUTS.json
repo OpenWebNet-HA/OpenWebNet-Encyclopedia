@@ -1,0 +1,19 @@
+{
+  "files": [
+    {
+      "bytes": 991447,
+      "path": "work/f450-firmware/2.0.10/analysis/normal-regular-files.json",
+      "sha256": "cbbdfd87f04c8b1c06ee8759b87ad88cbf9cdfeadfcbf52a425603b3e9dd4ac7"
+    },
+    {
+      "bytes": 518608,
+      "path": "work/f450-firmware/2.0.10/analysis/rootfs/home/bticino/bin/bacclient",
+      "sha256": "e5bd026f22d56f40b697b55d1f0865aed4bbeb2aafbeafc1b1d53e6ca9fe1ec4"
+    },
+    {
+      "bytes": 8503,
+      "path": "work/f450-firmware/2.0.10/analysis/rootfs/home/bticino/cfg/BACnetTemplates.xml",
+      "sha256": "b837e1f86167dfdbf814f0e562c9c2b7349d603939c4945eb3937efc8477ea04"
+    }
+  ]
+}

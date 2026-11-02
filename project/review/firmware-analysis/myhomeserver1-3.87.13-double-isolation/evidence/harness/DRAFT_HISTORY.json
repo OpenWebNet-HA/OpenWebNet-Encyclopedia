@@ -1,0 +1,25 @@
+{
+  "canonical_guest_attempts": 0,
+  "changes": [
+    "Fresh caller object storage zero instead of A5 per root clarification; no parsedfield reseed",
+    "Import actual UC_MEM_WRITE rather than hardcoded integer",
+    "Strengthen static original BLX/ARM PLT slot arithmetic checks",
+    "Require Thumb EXIT and balanced callstack",
+    "Assert absent cacheprefix before source-only analysis package import",
+    "Versioned preflight snapshot, include original draft and this history"
+  ],
+  "new_v2_sha256": "2a0d92654a132921dea699a32c18cd45d7353f2b880303c52881fe6e73ebbe3f",
+  "note": "Preserved actual initial draft and transparent preflight design refinement; no failed guest or overwritten candidate.",
+  "original_execution": 0,
+  "parent_pre_v2_snapshot": {
+    "path": "../integration/pre-v2-harness/INDEX.json",
+    "sha256": "a05ce101916874606278ada7f2fda4e52119a808b40a29a306904a780187e3b2"
+  },
+  "preserved_actual_v1": {
+    "bytes": 15985,
+    "path": "isolate_double_v1.py",
+    "sha256": "5a9c7288d9e99d1c42d6e8a3c4863f922e1e10799af43c45a1b4969d23f68c01"
+  },
+  "stage": "before static-preflight or any guest execution",
+  "v1_failures": 0
+}

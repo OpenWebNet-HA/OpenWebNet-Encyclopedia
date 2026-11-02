@@ -1,0 +1,75 @@
+{
+  "collector_sha256": "051bfd97e70c7e18566420437168b9dc5314ead1512b551d7a78802170800b90",
+  "counts": {
+    "PIC_joins": 5,
+    "branches": 7,
+    "direct_calls": 7,
+    "guards": 43,
+    "inputs": 6,
+    "original_execution": 0,
+    "spans": 13
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 1127,
+      "sha256": "1803b2a000dfe718096a5c2aa5b744015b604c55ef1604737e9c51d87b15c694"
+    },
+    "SOURCE.json": {
+      "bytes": 13428,
+      "sha256": "fe53347164fcbbfd3dd2ebf13d1906452a5c7edd11e61eccd51c4c1e7b610c5e"
+    },
+    "spans/callable-addresses.txt": {
+      "bytes": 689,
+      "sha256": "8e289b3ebed54457a0097c5366e4fd5945b94d2f6a64f1eff663dab90a33818d"
+    },
+    "spans/callable-copy-manager.txt": {
+      "bytes": 1319,
+      "sha256": "0e52939829e617573257aa340467b9f4fa0f5e953432820fcfb93b6b85b2c895"
+    },
+    "spans/callable-pointer-invoker.txt": {
+      "bytes": 1802,
+      "sha256": "e9de5895833e4e21473e36858bec4cd4b686f5e5198c604db6e7b781619432a7"
+    },
+    "spans/caller-entry-owner-range.txt": {
+      "bytes": 2640,
+      "sha256": "e0394193909d140fc135a5664270da8fbbe18af0ea6a6561f48d4ef49f13b728"
+    },
+    "spans/existing-key-tuple-check.txt": {
+      "bytes": 2838,
+      "sha256": "ce011a7c0f064addff143012491b1d50cae2d8d197f752d890f8f4d56f319728"
+    },
+    "spans/key89-pointer-key-producer.txt": {
+      "bytes": 3107,
+      "sha256": "00d170894d128d606f12f36cfe7c255fc20c92749afe67fa502354d84ab771f3"
+    },
+    "spans/owner-word120-getter.txt": {
+      "bytes": 377,
+      "sha256": "bd380b3aa7421a51d0e1aa52c7feff3aa873e154a39aaca0a71ac828ea3e8fef"
+    },
+    "spans/owner-word124-getter.txt": {
+      "bytes": 377,
+      "sha256": "c1f23f50860821397318564063cd3650892041431bed95c58f3349c65fc518c4"
+    },
+    "spans/owner-word128-getter.txt": {
+      "bytes": 377,
+      "sha256": "f700ef71e403dcbc51216eb96b820bfbbb147d04c60ca037b684b772e0b9cbf2"
+    },
+    "spans/registration-global-and-range.txt": {
+      "bytes": 10814,
+      "sha256": "dc673d2c027c17d341cf61adec9557a36c2f755397fd618c1b74058ec35a1553"
+    },
+    "spans/registry-construction-request.txt": {
+      "bytes": 2411,
+      "sha256": "ac315cd3e4abb43c032a9be94832d033240a5795fa4d4b6453b8081086f26a9e"
+    },
+    "spans/selected-entry-node-copy.txt": {
+      "bytes": 3734,
+      "sha256": "e4725e724b408d52e8ae52be060e20e23c7397a61f7c89997361a12419f5150d"
+    },
+    "spans/selected-hash-lookup-and-call.txt": {
+      "bytes": 3944,
+      "sha256": "eb46112e5584f5d65ef184ccb61efacb165e7bff188949c6ba9c07a66a9293c4"
+    }
+  },
+  "report_sha256": "3c6d2d502e1322c7279f3fe259e4e30a9348858add5b656ed332a08ebdf7bdfb"
+}

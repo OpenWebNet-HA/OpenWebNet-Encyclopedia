@@ -1,0 +1,22 @@
+
+/home/bticino/libcoso/libplug_aux_stm.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000001f50 <aux_stm_gest_status_from_appli@@Base>:
+    1f50:	a9bc7bfd 	stp	x29, x30, [sp, #-64]!
+    1f54:	910003fd 	mov	x29, sp
+    1f58:	a9025bf5 	stp	x21, x22, [sp, #32]
+    1f5c:	aa0303f5 	mov	x21, x3
+    1f60:	f9400036 	ldr	x22, [x1]
+    1f64:	a90153f3 	stp	x19, x20, [sp, #16]
+    1f68:	f9402c13 	ldr	x19, [x0, #88]
+    1f6c:	f94012c0 	ldr	x0, [x22, #32]
+    1f70:	b40002a0 	cbz	x0, 1fc4 <aux_stm_gest_status_from_appli@@Base+0x74>
+    1f74:	aa0103f4 	mov	x20, x1
+    1f78:	d2800001 	mov	x1, #0x0                   	// #0
+    1f7c:	f9001bf7 	str	x23, [sp, #48]
+    1f80:	aa0203f7 	mov	x23, x2
+    1f84:	52800142 	mov	w2, #0xa                   	// #10
+    1f88:	97fffe7a 	bl	1970 <strtol@plt>

@@ -1,0 +1,49 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00018130 <_ZNKSt5ctypeIcE8do_widenEc@@Base-0x1ad0>:
+   18130:	e34c      	b.n	187cc <_ZNSt6localeC1Ev@plt+0x6f58>
+   18132:	0014      	movs	r4, r2
+   18134:	06b4      	lsls	r4, r6, #26
+   18136:	0000      	movs	r0, r0
+   18138:	e33a      	b.n	187b0 <_ZNSt6localeC1Ev@plt+0x6f3c>
+   1813a:	0014      	movs	r4, r2
+   1813c:	0eec      	lsrs	r4, r5, #27
+   1813e:	0000      	movs	r0, r0
+   18140:	f078 000f 	orns	r0, r8, #15
+   18144:	e27c      	b.n	18640 <_ZNSt6localeC1Ev@plt+0x6dcc>
+   18146:	0014      	movs	r4, r2
+   18148:	c8d2      	ldmia	r0!, {r1, r4, r6, r7}
+   1814a:	000f      	movs	r7, r1
+   1814c:	c88e      	ldmia	r0!, {r1, r2, r3, r7}
+   1814e:	000f      	movs	r7, r1
+   18150:	1288      	asrs	r0, r1, #10
+   18152:	0000      	movs	r0, r0
+   18154:	c7d2      	stmia	r7!, {r1, r4, r6, r7}
+   18156:	000f      	movs	r7, r1
+   18158:	0894      	lsrs	r4, r2, #2
+   1815a:	0000      	movs	r0, r0
+   1815c:	ed36 000f 	ldc	0, cr0, [r6, #-60]!	@ 0xffffffc4
+   18160:	0594      	lsls	r4, r2, #22
+   18162:	0000      	movs	r0, r0
+   18164:	0a1c      	lsrs	r4, r3, #8
+   18166:	0000      	movs	r0, r0
+   18168:	11d4      	asrs	r4, r2, #7
+   1816a:	0000      	movs	r0, r0
+   1816c:	c508      	stmia	r5!, {r3}
+   1816e:	000f      	movs	r7, r1
+   18170:	0ffc      	lsrs	r4, r7, #31
+   18172:	0000      	movs	r0, r0
+   18174:	c7cc      	stmia	r7!, {r2, r3, r6, r7}
+   18176:	000f      	movs	r7, r1
+   18178:	c3ba      	stmia	r3!, {r1, r3, r4, r5, r7}
+   1817a:	000f      	movs	r7, r1
+   1817c:	c3fc      	stmia	r3!, {r2, r3, r4, r5, r6, r7}
+   1817e:	000f      	movs	r7, r1
+   18180:	c526      	stmia	r5!, {r1, r2, r5}
+   18182:	000f      	movs	r7, r1
+   18184:	c3d0      	stmia	r3!, {r4, r6, r7}
+   18186:	000f      	movs	r7, r1

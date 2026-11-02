@@ -1,0 +1,12 @@
+{
+  "correction_proposed": "or 12",
+  "exception": "SyntaxError: invalid syntax",
+  "file": "collect_update_v1.py",
+  "generated_outputs": 0,
+  "line": 49,
+  "no_v1_overwrite": true,
+  "offending_token": "or12",
+  "original_execution": 0,
+  "phase": "Python parsing before collector execution/output writes",
+  "transcription": "Later transcription of actual captured tool output; no contemporaneous full terminal file claimed"
+}

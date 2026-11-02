@@ -1,0 +1,8 @@
+{
+  "entry_va": "0xa7616",
+  "halfword": "0x2328",
+  "local_action_enum": 11,
+  "scope": "Original selected initializer branch, no original invocation.",
+  "table_base_va": "0xa7600",
+  "target_va": "0xabc50"
+}

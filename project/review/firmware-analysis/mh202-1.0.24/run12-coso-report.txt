@@ -1,0 +1,81 @@
+# MH2021.0.24 run12 — actual lighting STM request, pending ID and timeout policy
+
+## Result and limits
+
+The lighting **STM** has concrete original callbacks and44-byte private context governing requests, field callbacks and timer completion. A supplied parsed ordinary kind1/WHAT1 request, starting in numeric state0, is appended to the field-output list, stores its record ID/address/kind, changes state to1 and requests a timeout source with argument1000. A selected field callback with matching stored ID and numeric status word1 changes state to2; for this ordinary request kind, the following branch resets state/timer, queues an OPEN ACK and appends the field record. Matching status2 queues NACK/reset instead. Timeout in state1 queues NACK; timeout in2 or3 queues ACK, then invokes a supplied completion callback and resets.
+
+This is source control/data flow and six finite host decision/effect transcriptions, **not** executed original callbacks, actual plugin loading/timer scheduling, accepted full commands, transport delivery or physical completion. Numeric state/status namespaces remain local. Original ARM/vendor/parser/JS/PHP execution, original instructions executed, emulator hooks and live I/O are all **0**. All originals, earlier research and repository files remain read-only; no auth/HTTP/template route or credential material is inspected/exported.
+
+## Source identities and reproduction
+
+| Original normal-image path | SHA256 |
+|---|---|
+| `/home/bticino/libcoso/libplug_lights_stm.so` | `146a9ea1f616c7d5525b3b3ac18778371a32f812add1adb76dd0f1a6ba5fe258` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+
+Run `python3 work/mh202-firmware/research/2026-10-30/coso/run12/collect_lighting_stm.py --check`. It strictly reproduces19 outputs:12 original spans,30 asserted words,4 selected callback relocation rows,2 safe receipt literals, context/descriptor metadata and6 host cases. All5 inputs are pinned: both originals, VFS and immutable run10/run11 reports. Exact original VAs/file offsets/byte hashes are in `original-spans.json`. Separate author manifest pins report/collector/evidence, excluding itself and later reviews. No previous execution corpus or old firmware layout is reused.
+
+## 1. Real registration, callbacks and private context
+
+Original descriptor **lights_stm_sm0xa4a0** differs from the TR descriptor layout. Actual relocations identify:
+
+| Descriptor offset | Original callback |
+|---|---|
+|+36|lights_stm_sm_init0x1d24|
+|+40|lights_stm_gest_status_from_field0x16f4|
+|+44|lights_stm_gest_status_from_appli0x1b20|
+
+`init_plugin0x14c4..0x15f8` appends numeric1 to descriptor+52 and requests **register_state_machine** at0x1574. Same-build core **0x2074..0x2120** prepends the descriptor, stores the plugin-manager pointer at descriptor+60 and calls its nonnull +36 initializer with manager+44. This is original pointer/argument evidence, not a name-based inference that the callbacks are active on a running gateway.
+
+Initializer0x1d24 requests g_malloc0(44), puts the result at descriptor+56 and calls reset. It stores descriptor pointer at context+0, supplied context argument[0] at+36 and supplied argument[1] at+40. These become main-context and completion-callback inputs to the original timer paths; their actual live values/owner behavior remain unestablished. Null allocation/initialization failures and complete loader/lifetime policy are not modeled here.
+
+The selected context fields are:
+
+| Offset | Concrete selected use |
+|---|---|
+|+4|numeric state|
+|+8|saved request record+60 ID|
+|+12|saved parsed request kind|
+|+16|dimension saved by the separate kind3 query branch|
+|+20|duplicated parsed WHERE text|
+|+24/+28|optional duplicated parsed selector+20/+24 strings|
+|+32|requested timer-source pointer|
+|+36/+40|supplied attach context/completion callback|
+
+These are context fields, distinct from COSO message metadata, parsed-field layout and protocol-run libcommon/libopen object layouts.
+
+## 2. Selected ordinary application request → pending state
+
+Application callback0x1b20 loads descriptor+56 and its state+4. Nonzero state takes **0x1c0c**: queue_nack_to_open on the supplied OPEN-output list, reset the existing context, return1. This selected busy path resets the pending context; it does not establish the destination request’s full ID/transport semantics or actual receipt delivery.
+
+For state0 it uses input record+0 as the supplied parsed object, sets record+4/+8 to1, and dispatches parsed kind+44. Selected kind1 reads WHAT text+8 at0x1c64 and decimal-converts it. WHAT1 follows signed lower/range guards0x1c74..0x1d10 to **0x1c50**; no parameter-list branch is needed for this command. Broader WHAT domains and kinds are not inventoried here.
+
+At0x1c50 the request pointer is appended to the supplied field-output list. Then0x1b7c duplicates parsed WHERE+16 into context+20 and optional selector strings into+24/+28. **0x1bb0..0x1bc4** saves input record+60 into context+8, stores state1 and saves parsed kind1 at context+12. No host-supplied source object is called an accepted raw parser result; the six models explicitly begin at coherent private post-parser/context premises.
+
+The original then calls **g_timeout_source_new(1000)** at0x1bc8..0x1bcc, stores its result+32, sets the callback to **lights_gest_status_from_timeout0x1678** with userdata=context and null destroy-notifier, and requests attachment using context+36. Selected original PIC arithmetic reconstructs GOT slot0xa470; its R_ARM_GLOB_DAT relocation identifies timeout callback0x1678. The argument1000 is an observed API request; no actual delay, scheduler cadence or callback delivery is observed. Delegate returns and allocation/attach success are not checked into a runtime-success claim.
+
+## 3. Selected field callback, ID/status branch and ordinary completion
+
+Field callback obtains context from descriptor+56. Input record+56=3 uses its parsed pointer directly; value2 requests buf_to_openmsg and replaces prior text/representation before continuation. Only the direct parsed premise is used in the host cases. That is a different boundary from proving a complete raw status parse.
+
+For state1, **0x1a34..0x1a40** compares context+8 against input record+60. In the selected **matching-ID** path, record+52=1 writes state2 at0x1a4c/0x1a50. Numeric2 instead calls reset and queue_nack_to_open at0x1a60..0x1a70 and returns0. These numbers are actual local branch values; this report does not assign a global transport/ACK enum based solely on them.
+
+After the state2 store, **0x183c..0x1850** examines saved parsed request kind. Kinds2 or3 take a different state3/address/query policy. Selected saved kind1 instead goes straight to **0x1a04..0x1a30**: reset context, queue_ack_to_open on the supplied output list, set incoming record+8 to3, append that record to the output list and return0. This branch does not require the later query address parser or value/dimension comparison. It is a local receipt/list policy, not a physical lighting-readback proof.
+
+The matching-ID comparison is **not a demonstrated universal guard over all completion routes**. The source’s ID-mismatch branch at0x1a40 also reaches0x183c, and an ordinary saved kind1 can therefore reach that ordinary completion branch if an otherwise eligible field callback is supplied. Outer routing/key/ownership constraints have not been traced far enough to assign a real cross-request outcome. The report neither claims completion requires ID equality globally nor promotes this local path to a defect. Precise outer callback admission is a distinct remaining question.
+
+Separate query-kind/address/value work at0x187c onward and state3 behavior are not expanded into another address matrix. Earlier TR WHAT/body and reverse-address findings are inputs for future joins, not silently treated as STM state execution.
+
+## 4. Timeout, reset and concrete receipt construction
+
+Timeout callback **0x1678..0x16f4** starts two local list pointers at0. State1 requests queue_nack_to_open; states2 or3 request queue_ack_to_open; state0 or other displayed states go to reset without that selected queue/completion path. After a queued receipt it loads descriptor+60 through context+0, passes local-list addresses and that manager pointer to the **supplied context+40 completion callback**, then resets and returns0. Callback implementation/publication and callback-after-destroy scheduling are not reconstructed.
+
+Reset **0x15f8..0x1678** writes state0, saved ID−1, saved dimension−1 and saved kind0; frees/nonzero-clears copied strings+20/+24/+28; requests g_source_destroy for a nonnull timer pointer then clears+32. Descriptor/context/completion fields+0/+36/+40 remain outside those reset stores. No actual memory/source lifetime guarantee or cancellation race behavior is inferred from static calls.
+
+Same-build core queue helpers **0x2a44..0x2b5c** resolve the receipt boundary concretely. queue_nack_to_open duplicates exact literal **`*#*0##`** and assigns type+40=7; queue_ack_to_open duplicates **`*#*1##`** and assigns type+40=6. Both allocate a64-byte zeroed message, request a timestamp, finish metadata+4=2/+8=4/representation+56=2 and append to the supplied list. The intermediate stores differ from these final fields; these numeric types are distinct from STM state numbers and parsed kinds. No original allocation/time/list/format primitive executes in this static batch, and no output transmission is shown.
+
+## Confidence and next gap
+
+Confirmed static: descriptor callback roles, original initializer/context argument stores, selected ordinary request pending ID/kind/address storage, timer request/callback binding, selected ID/status branch, ordinary receipt/list completion, timeout receipt policy, reset stores and core receipt literals/types. Host-only:6 finite supplied-context/post-parser branch/effect examples; all filesystem, services, callbacks, memory/list/timer effects remain recorded delegates rather than executed operations. Conditional: successful plugin registration/provider binding, valid parsed object/context, imported primitive returns, outer callback admission and supplied completion owner. Unknown: complete STM/query/echo/key routing, timer delivery/cancellation/lifetime, transport/subscriber results and physical state.
+
+Highest next question is the actual outer state-machine callback admission/routing and request ID/status metadata producer. It should establish which records can reach these branches before drawing request-correlation conclusions. Another useful distinct step is a selected query-kind2/3 completion path under justified address metadata, not repetition of the completed TR/body/reverse-address tables.

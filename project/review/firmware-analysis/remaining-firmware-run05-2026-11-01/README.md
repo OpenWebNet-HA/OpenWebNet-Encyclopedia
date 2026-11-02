@@ -1,0 +1,11 @@
+# Five-family run05 source continuation
+
+The [current overview](../../../../reverse-engineering/firmware-analysis/f450-f453av-f455-f459-mh200n.md) adds three selected conditional source joins. The [prior capsule](../remaining-firmware-2026-11-01/README.md) remains unchanged with its historical scope.
+
+[Source exports](SOURCE_EXPORTS.json) retain exact current reports, collectors, source metadata, peers, archive receipt and history. [F450 review](reviews/f450-source-review.txt), [F453AV review](reviews/f453av-source-review.txt), [F459 review](reviews/f459-source-review.txt), [documentary review](integration-review.txt), [current identity validation](validation.json) and [actual style/core-values/diff checks](checks.json) are separate records. [Coverage](coverage.txt) and [ranked questions](remaining-questions.txt) retain applicability gaps.
+
+F459's authoritative report is packets/f459/REPORT.txt, copied from separate REPORT.v2.md; its unchanged canonical-REPORT.txt remains pinned by the successful collector/outputmanifest. The separate refinement corrects a reproduction-command label only. Do not silently substitute the current report into the old manifest or rerun parser-failingv1. Earlier F450/F459 host-tool failures occurred before outputs and are preserved with exact parent snapshots, not vendor failures or missing invented drafts. Full firstcopies/original inputs/tools remain local; exported collectors alone do not provide self-contained reproduction.
+
+[Pre-edit overview](pre-edit/overview.txt) and [exact historical mapping](HISTORICAL_REFERENCES.json) retain the actual previous public input. No Device/source-manifest/firmware-index/prior-capsule edit occurred. Saved checks use their recorded versions; broad fallback and repinning are invalid.
+
+[Archive status](archive-index.json) and [actual prior receipt](archive-receipt.json) remain one encrypted SUPPORTcontainer/zero plaintext databases, with no new upload/readback. Original/vendor/helper/native/emulator/SQLite/target/runtime/physical execution remains zero; earlier ledgers/history limits are separate unchanged. FullDevice/source/runtime/physical approval stayspending. Current actual continuation/control/index receipts remain in the local run05checkpoint; final automation deletion is not anticipated here.

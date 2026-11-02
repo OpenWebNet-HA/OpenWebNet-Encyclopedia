@@ -1,0 +1,14 @@
+{
+  "API_premise": "UnderordinaryLinux/POSIXLP64timespec/errno andcandidateproviderbinding, firstwordseconds/secondnanoseconds and4EINTR; no actualalias/rounding/scheduling/elapsed/validalldomains proof",
+  "execution": {
+    "fixtures": 0,
+    "models": 0,
+    "new_original": 0,
+    "old_product_ledgers": "unchanged"
+  },
+  "loop": "return!=-1\u2192normalepilogue; return-1\u2192errno pointer/word; numeric4\u2192retry withsame storage; othercode\u2192normalepilogue",
+  "marker_limit": "Normalcallbackreturn includesnon-EINTRerror exits; markerdoesnotproveactualsleep success/elapsedtime/wholeScenecompletion",
+  "request": "freshLDRW0zeroextends toX0; nonzero\u2192two64bitwords[UInt32,0]atSP8/16; X0=X1=SP8 foractualnanosleeprequest",
+  "selected_common_caller": "zerooperational12+manager40nonNULL\u2192invoker48(data24),normalreturn\u2192freshoperational16zero\u2192markerbyte8=1 andnormalW0=1",
+  "stored_data": "manageroperation2 copies32-bitword; storagehelper placesinline data24/32,manager40/invoker48"
+}

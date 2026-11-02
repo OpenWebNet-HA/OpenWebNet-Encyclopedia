@@ -1,0 +1,111 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/usr/lib/libutils.so.1.1.0:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00003358 <ascii_hex_frame_to_array@@Base>:
+    3358:	b5f0      	push	{r4, r5, r6, r7, lr}
+    335a:	1e17      	subs	r7, r2, #0
+    335c:	4c15      	ldr	r4, [pc, #84]	@ (33b4 <ascii_hex_frame_to_array@@Base+0x5c>)
+    335e:	b083      	sub	sp, #12
+    3360:	4b15      	ldr	r3, [pc, #84]	@ (33b8 <ascii_hex_frame_to_array@@Base+0x60>)
+    3362:	447c      	add	r4, pc
+    3364:	58e3      	ldr	r3, [r4, r3]
+    3366:	681b      	ldr	r3, [r3, #0]
+    3368:	9301      	str	r3, [sp, #4]
+    336a:	f04f 0300 	mov.w	r3, #0
+    336e:	dd13      	ble.n	3398 <ascii_hex_frame_to_array@@Base+0x40>
+    3370:	460e      	mov	r6, r1
+    3372:	1e45      	subs	r5, r0, #1
+    3374:	2400      	movs	r4, #0
+    3376:	f815 0f01 	ldrb.w	r0, [r5, #1]!
+    337a:	f7fe efac 	blx	22d4 <g_ascii_xdigit_value@plt>
+    337e:	1063      	asrs	r3, r4, #1
+    3380:	07e2      	lsls	r2, r4, #31
+    3382:	b2c0      	uxtb	r0, r0
+    3384:	f104 0401 	add.w	r4, r4, #1
+    3388:	bf4b      	itete	mi
+    338a:	5cf2      	ldrbmi	r2, [r6, r3]
+    338c:	0100      	lslpl	r0, r0, #4
+    338e:	4310      	orrmi	r0, r2
+    3390:	b2c0      	uxtbpl	r0, r0
+    3392:	42a7      	cmp	r7, r4
+    3394:	54f0      	strb	r0, [r6, r3]
+    3396:	d1ee      	bne.n	3376 <ascii_hex_frame_to_array@@Base+0x1e>
+    3398:	4a08      	ldr	r2, [pc, #32]	@ (33bc <ascii_hex_frame_to_array@@Base+0x64>)
+    339a:	4b07      	ldr	r3, [pc, #28]	@ (33b8 <ascii_hex_frame_to_array@@Base+0x60>)
+    339c:	447a      	add	r2, pc
+    339e:	58d3      	ldr	r3, [r2, r3]
+    33a0:	681a      	ldr	r2, [r3, #0]
+    33a2:	9b01      	ldr	r3, [sp, #4]
+    33a4:	405a      	eors	r2, r3
+    33a6:	f04f 0300 	mov.w	r3, #0
+    33aa:	d101      	bne.n	33b0 <ascii_hex_frame_to_array@@Base+0x58>
+    33ac:	b003      	add	sp, #12
+    33ae:	bdf0      	pop	{r4, r5, r6, r7, pc}
+    33b0:	f7fe ef48 	blx	2244 <__stack_chk_fail@plt>
+    33b4:	3a76      	subs	r2, #118	@ 0x76
+    33b6:	0001      	movs	r1, r0
+    33b8:	0208      	lsls	r0, r1, #8
+    33ba:	0000      	movs	r0, r0
+    33bc:	3a3c      	subs	r2, #60	@ 0x3c
+    33be:	0001      	movs	r1, r0
+
+000033c0 <array_to_ascii_hex_frame@@Base>:
+    33c0:	4a1d      	ldr	r2, [pc, #116]	@ (3438 <array_to_ascii_hex_frame@@Base+0x78>)
+    33c2:	4b1e      	ldr	r3, [pc, #120]	@ (343c <array_to_ascii_hex_frame@@Base+0x7c>)
+    33c4:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+    33c8:	460f      	mov	r7, r1
+    33ca:	2101      	movs	r1, #1
+    33cc:	447a      	add	r2, pc
+    33ce:	fa07 f801 	lsl.w	r8, r7, r1
+    33d2:	b084      	sub	sp, #16
+    33d4:	58d3      	ldr	r3, [r2, r3]
+    33d6:	4604      	mov	r4, r0
+    33d8:	4488      	add	r8, r1
+    33da:	4640      	mov	r0, r8
+    33dc:	681b      	ldr	r3, [r3, #0]
+    33de:	9303      	str	r3, [sp, #12]
+    33e0:	f04f 0300 	mov.w	r3, #0
+    33e4:	f7fe ee0a 	blx	1ffc <calloc@plt>
+    33e8:	2f00      	cmp	r7, #0
+    33ea:	4681      	mov	r9, r0
+    33ec:	dd13      	ble.n	3416 <array_to_ascii_hex_frame@@Base+0x56>
+    33ee:	f8df a050 	ldr.w	sl, [pc, #80]	@ 3440 <array_to_ascii_hex_frame@@Base+0x80>
+    33f2:	3c01      	subs	r4, #1
+    33f4:	4605      	mov	r5, r0
+    33f6:	4427      	add	r7, r4
+    33f8:	44fa      	add	sl, pc
+    33fa:	f814 6f01 	ldrb.w	r6, [r4, #1]!
+    33fe:	4628      	mov	r0, r5
+    3400:	f04f 33ff 	mov.w	r3, #4294967295	@ 0xffffffff
+    3404:	2201      	movs	r2, #1
+    3406:	4641      	mov	r1, r8
+    3408:	3502      	adds	r5, #2
+    340a:	e9cd a600 	strd	sl, r6, [sp]
+    340e:	f7fe eed8 	blx	21c0 <__snprintf_chk@plt>
+    3412:	42bc      	cmp	r4, r7
+    3414:	d1f1      	bne.n	33fa <array_to_ascii_hex_frame@@Base+0x3a>
+    3416:	4a0b      	ldr	r2, [pc, #44]	@ (3444 <array_to_ascii_hex_frame@@Base+0x84>)
+    3418:	4b08      	ldr	r3, [pc, #32]	@ (343c <array_to_ascii_hex_frame@@Base+0x7c>)
+    341a:	447a      	add	r2, pc
+    341c:	58d3      	ldr	r3, [r2, r3]
+    341e:	681a      	ldr	r2, [r3, #0]
+    3420:	9b03      	ldr	r3, [sp, #12]
+    3422:	405a      	eors	r2, r3
+    3424:	f04f 0300 	mov.w	r3, #0
+    3428:	d103      	bne.n	3432 <array_to_ascii_hex_frame@@Base+0x72>
+    342a:	4648      	mov	r0, r9
+    342c:	b004      	add	sp, #16
+    342e:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
+    3432:	f7fe ef08 	blx	2244 <__stack_chk_fail@plt>
+    3436:	bf00      	nop
+    3438:	3a0c      	subs	r2, #12
+    343a:	0001      	movs	r1, r0
+    343c:	0208      	lsls	r0, r1, #8
+    343e:	0000      	movs	r0, r0
+    3440:	27f0      	movs	r7, #240	@ 0xf0
+    3442:	0000      	movs	r0, r0
+    3444:	39be      	subs	r1, #190	@ 0xbe
+    3446:	0001      	movs	r1, r0

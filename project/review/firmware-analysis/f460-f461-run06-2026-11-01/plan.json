@@ -1,0 +1,19 @@
+{
+  "run": "06",
+  "scope": "F460 new functional trigger/condition/callback source and F461 local address/diagnostic helper; static source only",
+  "authors": {
+    "F460": "firmware_protocol",
+    "F461": "firmware_boot"
+  },
+  "reviewer": "firmware_functional reviewer/read-only",
+  "prior_batch": "work/f460-f461-comparison/2026-11-01-run05",
+  "prior_index": {
+    "path": "work/f460-f461-comparison/2026-11-01-run05/EVIDENCE_INDEX.json",
+    "bytes": 43727,
+    "sha256": "420016be1282100405980fee2866f4c7982e8dd910c13c7756734a0c0fa1f6bb"
+  },
+  "deadline_UTC": "2026-11-01T19:00:00Z",
+  "final_only_UTC": "2026-11-01T18:15:00Z",
+  "new_original_execution": 0,
+  "user_summary_each_run": true
+}

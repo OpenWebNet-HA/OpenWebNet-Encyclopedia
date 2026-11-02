@@ -1,0 +1,73 @@
+{
+  "collector_sha256": "0b9d444aaf356a3e7f1a9aec630d84c1a12e21df3033b50a3afa6a219db8d9c1",
+  "counts": {
+    "GOT_chains": 2,
+    "PIC_code_pointers": 3,
+    "branches": 6,
+    "guards": 17,
+    "inputs": 5,
+    "original_execution": 0,
+    "relocations": 5,
+    "spans": 10,
+    "types": 2
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 698,
+      "sha256": "8caddf52bba0337c066bbf04c30d83c9517e796e103a59ad07f294c1dec06d06"
+    },
+    "LOCAL_HANDOFF.json": {
+      "bytes": 2530,
+      "sha256": "ed5f9c82b79c7424035ff4c22d69185247990b160bf8a181d5aafe882a9c0c25"
+    },
+    "METHOD.json": {
+      "bytes": 407,
+      "sha256": "1accbf6f9828b01f2ac262c49e8ff3f335295e37b103db002addb20bd8deb82e"
+    },
+    "ORIGINAL_SOURCE.json": {
+      "bytes": 6056,
+      "sha256": "c66d1cd179333055778ec28ac1e265a9df429370bf916704a022ccca6dd2e6bc"
+    },
+    "spans/callback-copy-helper.txt": {
+      "bytes": 990,
+      "sha256": "3ec969b277e5f14b7df21f59b6c1d51a446da66e828687de4a50a13b1749a515"
+    },
+    "spans/compiled-callback-constructor-prefix.txt": {
+      "bytes": 1466,
+      "sha256": "5e23cdeb5879eb94ce767a74f4b94613ba352a5cca1a42f36c91cf50e28b2a14"
+    },
+    "spans/compiled-vtable-install.txt": {
+      "bytes": 831,
+      "sha256": "9d4f6d805313aaac075b7b87928b0276783fe4b18efc1e8120613d2b66ffafda"
+    },
+    "spans/initializer-context-save.txt": {
+      "bytes": 1105,
+      "sha256": "46247edfb1296d3b6f4d3fab1a3ac1e549f84804d5e14c5496637ce7d1ffaccc"
+    },
+    "spans/persistent-runner-local-publication.txt": {
+      "bytes": 1784,
+      "sha256": "2dce91cb5f13eb48f90608b9de1b185cd29551ae725d5ebf8347dba8d9b92a59"
+    },
+    "spans/primary-callable-forwarder.txt": {
+      "bytes": 407,
+      "sha256": "44c3e8b0da961fb48c5a15d1ec8e9eecf3b3383c472512e95988958055c06a2f"
+    },
+    "spans/scene-callback-capture.txt": {
+      "bytes": 920,
+      "sha256": "aee0a7a7a2fcf635ac042a4520faa2dc0d83700b328a155d92bf075cdffbf4d3"
+    },
+    "spans/scene-pointer-callable-invoker.txt": {
+      "bytes": 198,
+      "sha256": "f40de36060aef042554d6cd5eb17d683cf8821da30fe71cbf45d3d463dbb9064"
+    },
+    "spans/scene-pointer-callable-manager.txt": {
+      "bytes": 722,
+      "sha256": "a22e78b3f668d34b8b489ca4dd9f28edf4e86f374deee378c5836e9f73d0ad3a"
+    },
+    "spans/trigger-vector-normal-move.txt": {
+      "bytes": 840,
+      "sha256": "397d55c763bc3c2335a2cbcfb7487e171a33ec86b140aa00da25d7c36b2ecdd2"
+    }
+  },
+  "report_sha256": "6917cdb678ecff2a78cf91287a9ee87f31ee5adfb50e43b603b7111404d77223"
+}

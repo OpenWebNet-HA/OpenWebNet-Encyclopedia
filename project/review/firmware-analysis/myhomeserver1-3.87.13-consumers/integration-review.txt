@@ -1,0 +1,32 @@
+# Consumer continuation integration review v2
+
+PASS for the report-only precision and current seven-document candidate. This new review supplements the unchanged INTEGRATION_REVIEW.md (SHA-256 393c8362caf6b64d7fb620589821353cf876ea605700905f9ccf606ae1b0f7af), whose source-aware scheduler/provider review, documentary catalogue comparison, 67 exact export-pair audit and bounded conclusions remain applicable. No fresh source execution or full audit was performed for this precision review.
+
+Independently verified REPORT_PRECISION_HISTORY.json against both actual provider reports: exactly one sentence changes. REPORT.v2.md now says the stored-word-7 fixture does not establish parser-produced data or an application Boolean ABI contract and does not imply that nonzero integers are invalid. This is the appropriate scope of the inspected raw-word return guard; the application Boolean prototype/validity rule remains unknown. The old report, source export, source reviews and first candidates remain historical evidence. All manifest-listed provider evidence bytes remain unchanged; the 16-output source case/guard/count results are not new or rerun.
+
+Verified the two new PROVIDER_PRECISION_EXPORTS exact source/published pairs, sizes and SHA-256 values. Compared all seven old/new document snapshots: only the consumer page and capsule README change, each by exactly one providers-report.txt to providers-report-v2.txt link replacement. The other five documents are byte-identical. All current seven snapshot/current-document identities match.
+
+The existing seven review-copy/validation forward targets retain the pending-assembly scope in the prior review. This review does not certify future exported review bytes, validation results or final strict mechanical completion. Parent must assemble actual files and run those checks without placeholders or exemptions. No source, author, repository or old review bytes were edited by this reviewer.
+
+Current reviewed document pins:
+
+| Document | SHA-256 |
+| --- | --- |
+| OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md | ff3b179e05c69f6a1f34ab97ee76c43c3e72bdfff89d6c6661644c4bd45f4583 |
+| OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md | ee2ac5108fec4dca958afa73832cc874f43aebb9e1e6f4ffa5d5c4ecaab4d381 |
+| OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md | 5c60cbbf8796612b1efaa80392d77cf067b1ec647ca802dae72f91b673da2dac |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-consumers/README.md | 4b806d4bb483b5fcd77a9f9057cd2bf1b29a52b724a47d44181d0b7491bb4abc |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/SYNTHESIS.md | 3f0982b54b2cd1973c083620891311db23f28dafffe24e617186d70b6801bd24 |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/COVERAGE.md | 14f68a093f38427f75ac6c16cd08bed8ca2fef402429f55e4954753723b47799 |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/RANKED_REMAINING_QUESTIONS.md | d3cf75eb44d90a55f3ac1a9f3084287b453f7f07315878b5dd841d59c76db633 |
+
+Additional reviewed pins:
+
+| Record | SHA-256 |
+| --- | --- |
+| providers/REPORT.v2.md | a15c6eddf21993e7b5f41372c747412fce771471632429b4da2896ac5c4b13da |
+| providers/REPORT_PRECISION_HISTORY.json | ed0973060344ff88aa64adf347693350b1554d9658bb4484195839e61504cc90 |
+| capsule PROVIDER_PRECISION_EXPORTS.json | 93ff818fc5a4a4809c2100931ec67ce71f67c1e1a61177e099864cf09d5f0258 |
+| integration/review-candidate-v2/INDEX.json | ad6f86f750728fef439c28c4a4b472c879f1677e26f454c30cec248ff148e9aa |
+
+Review development: an initial read-only comparison assertion used an unprefixed parenthesized link literal and stopped before creating any review file; the comparison was corrected to verify the exact filename suffix in both actual links. No generated review or author artifact was overwritten.

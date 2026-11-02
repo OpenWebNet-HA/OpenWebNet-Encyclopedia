@@ -1,0 +1,9 @@
+# Executable startup and registry ownership
+
+The original ELF entry supplies the identified main function to libc startup. Its selected source constructs TimeTriggersService with literal flag1, resolving the previously conditional thread-request branch at this actual caller. The same service inner pointer, same main-local scene container and copied scenesPath reach file loader17630.
+
+The loader passes those exact objects through each SceneRunner constructor and initializer: service becomes initializer r1, container becomes r2. Compiled TIME registration uses that service; SCENARIO captures that same container for target lookup. The loader populates the container's first tree with numeric scene keys and scene/control handles in the same layout used by SCENARIO readers.
+
+The selected equal-key insertion wrapper returns0 without replacement, while construction/possible trigger registration already preceded this check. Category2 has an intervening key allocator for IDs outside its selected direct range. No universal duplicate/ID/category policy or complete load readiness follows. A zero settings-loader return logs and continues on the retained normal path, rather than acting as the presumed exit prerequisite.
+
+This closes source ownership/argument joins, not actual boot, installed scenes, successful API/thread execution, complete configuration/registry contents or physical behavior. Original execution is0; four startup host branch examples are synthetic. Prior firmware execution ledgers and completed dossiers remain unchanged.

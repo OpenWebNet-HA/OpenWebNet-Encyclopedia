@@ -1,0 +1,22 @@
+# F461 run09 independent platform-source review
+
+PASS. No author correction requested. This is a bounded independent static source and artifact review, not an original-code, provider, target-OS or runtime replay. Author files were left unchanged.
+
+The reviewed packet is `work/f461-firmware/2.0.11/research/2026-11-01-run09-platform/`. Current authoritative pins:
+
+- `REPORT.md`: `f8ee2fabea6b81b234fef657fca5314a206f2a785c2a0d312eb6597ae3774d3b`.
+- `collect_platform_v1.py`: `13dd29ca6003daa0a58a9e88ae4db173a6aba4253fb97ebfa316e4cfcd51663a`.
+- `SOURCE.json`: `463f39c8a8e456da3c3f53c77b506fc2a31e9808a5c860dafef5cd3dab11a165`.
+- `INPUTS.json`: `463ca0ce364349db286515cf54dc0d3632bc9f8220001462c19b193ffc0c6774`.
+- `OUTPUT_MANIFEST.json`: `906480c7334507583ee6bb3cf29ac637325c130b553acbc6c36d2226bdc94c3a`.
+- `first-candidate/INDEX.json`: `7a7af54f43c94963911d5c5acf50be5d31abddaf89119f3b19f99096f7271a07`.
+
+I reproduced the collector's read-only `--check`: 10 outputs, seven spans, 23 word guards, five safe literal joins, ten import proofs, five input pins and 12 first-candidate copies. Separately, I read both original normal/recovery `/usr/lib/liblghal.so.1.0.0` files, verified their equal 247,928-byte identity and SHA256 `c0f9c41de5c3380efa69a9ccecb9a3fd5ef558c151150197cc366199f1a81863`, and mapped the selected VAs through their own ELF64 AArch64 PT_LOADs. All seven saved span hashes/hex bytes, 23 words, five literal joins and ten BL/PLT/relocation rows agree with original bytes. The nine non-self output-manifest members and all 12 current/first-copy identities also agree. This is fresh selected-source verification, not a complete library audit or proof of undocumented draft history.
+
+The source supports the stated cache contract: original file-backed word VA0x4c020 is `ffffffff`; the `CMN W19,#1`/equality branch selects the uncached path only for that word, while other words reach the W0 return. This proves neither an observed boot value nor reset, refresh, lifetime or concurrency policy. The uncached path requests `/proc/cpuinfo` line reads and case-insensitive `Hardware` tests; a missing/nonmatching retained line leads to the separate `/sys/firmware/devicetree/base/model` request. Its nonnull line-pointer branch at 0x2539c reaches the classifier without the earlier Hardware test. Read/close outcomes and actual runtime file contents remain provider/runtime premises.
+
+The positive selected classifier path is precise: after earlier comparisons do not match, the `BEAR` request at 0x255d0 has a nonzero-result fallthrough, W19=22 at 0x255d8, then the common store at 0x252c8 addresses the same 0x4c020 word. The subsequent free and return are requests/source paths, not an observed platform identification. The report correctly keeps the command-based fallback starting at 0x253a0, including its literal, outside exported spans and interpretation. I did not expand that body or the uncertain bt_device caller.
+
+The pure-getter call at 0xe474 uses original PLT0xa0d0/JUMP_SLOT0x4b8c0 naming `hal_board`; the packaged exported definition is 0x251b0. Active self-binding/interposition, valid supplied storage and ordinary provider returns remain conditional. Composition with the previously reviewed selector22 getter branch does not establish installed F461 hardware, selected DTB, code134/model5.0.134 equivalence, public WHO, Device identity or service readiness. The report preserves these namespaces and limits.
+
+No firmware/provider/native execution, semantic fixture, model, target file read, service or syscall was performed by this review. No capability, physical, security, defect or whole-runtime conclusion follows. Existing execution ledgers are unchanged.

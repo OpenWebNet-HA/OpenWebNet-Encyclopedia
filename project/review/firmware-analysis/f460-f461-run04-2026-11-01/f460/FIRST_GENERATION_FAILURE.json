@@ -1,0 +1,12 @@
+{
+  "actual_word": "0xf9000ebf",
+  "additional_static_pre_v2_check": "HOST /usr/include/sqlite3.h absent; no generated HOST proof exists",
+  "earlier_launcher": "python command absent; python3 invoked actual generator",
+  "exception": "AssertionError: ('0x1120d0', '0xf9000ebf', '0xf9000abf')",
+  "expected_word": "0xf9000abf",
+  "generated_outputs": 0,
+  "original_execution": 0,
+  "phase": "first v1 canonical host collector, before output writes",
+  "source_guard": "0x1120d0",
+  "transcription": "Later transcription of actual captured tool output, not a contemporaneous full terminal file"
+}

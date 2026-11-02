@@ -1,0 +1,50 @@
+# Independent review — MH202 protocol run7
+
+**PASS for the selected static D2S80→General deviceModel/DIM1 route and host arithmetic.** No correction requested. The final key is exactly **D2S80**, with member slot `0x38168` targeting `s2o_deviceModel` `0x18c30`; this review does not substitute a nearby D2S8C or wrong-configuration entry.
+
+The author confirmed the reviewed artifacts stable. I read the report and collector, reproduced its read-only `--check`, inspected the decisive original instruction/relocation spans, and independently verified all27 span hashes and29 instruction words against hash-checked original bytes using a separate ELF segment mapping. All34 outputs, nine inputs, eight selected PIC strings, five selected relocations and two host cases pass; all36 producer-manifest entries match. I separately recalculated both synthetic keys/field values and their length/index guards. Original firmware execution and code hooks in **this author batch and review** remain zero; this statement does not characterize separate agents' experiments. Only this review was written.
+
+## Selected decoder guards and input bounds
+
+The selected source requires receive selector4 and length19. The original byte loads/stores establish the four two-character local fields and their NUL terminators. In the chosen D2 branch, raw[8]+raw[10] replaces one local comparison field. The two host strings produce `14`, bypassing96/97 alternatives. Raw[8] equals1, which is included by the actual mask helper; raw[10] equals4 and satisfies the selected branch. The character set `12345689F` agrees with the original subtraction/bounds/mask data.
+
+These are selected local guards over constructed text, not a complete input grammar. The report correctly does not invent validation of prefix bytes0..2 or treat the `$04` fixture prefix as an independently closed envelope guard. Other D0/DC/D8/96/97 alternatives and exception paths are not silently used to justify the chosen route. Actual raw source identity, parser acceptance and captured device traffic remain unestablished.
+
+## Exact first-rule and member identity
+
+The original first SCS key-rule member entry `0x382f8`, its relocation to `scsKeyGen` `0x23e04`, vector order and outer class call agree. That first rule requires length>12; it compares raw.substr(10,1) with8 and takes an exception path on equality. The selected fixture character4 avoids it. The normal rule combines raw.substr(3,2), literalS and raw.substr(11,2), yielding **D2S80** for both supplied host strings.
+
+The General constructor literal/map-index/member assignment chain uses the D2S80 literal and tablebase+232. The exact ABS32 entry identifies `s2o_deviceModel`, with its paired adjustment word zero. Previous immutable104-key evidence supplies the separately stated normal-factory ownership assumption; this batch does not pretend it reran that entire matrix or observed initialized map state. Ordinary registry/virtual/member-pointer dispatch, string/container completion, same-build candidate providers and no later mutation remain prerequisites.
+
+The method's numeric response enum0 and General's normal Boolean1 are kept distinct. The selected source does not justify interpreting enum0 as a failed outer translation.
+
+## Values and formatter boundary
+
+The original one-character/two-character helpers call substring with lengths1/2 and strtol base16. The deviceModel arithmetic is precisely:
+
+- value0: one nibble at raw[13], shifted8, plus the two-character byte at raw[17:19];
+- subsequent values: separate raw[14], raw[15] and raw[16] nibbles.
+
+This is not a four-contiguous-byte extraction. The host examples correctly yield `[0,0,0,0]` and `[2629,1,2,3]`;2629 is a private arithmetic result, not hardware/model identification. I additionally inspected original helper `0x14bf4..0x14c54`: it streams an int into a newly constructed stringstream and obtains the string, supporting the ordinary decimal-conversion contract used by the report without executing C++.
+
+DIM1 is supplied at `0x18e58`; the composer obtains WHO/WHERE through the shown imported helpers and supplies DIM/value arguments to `CreateRdDimensionMsgOpen` at `0x16f14`. The report correctly leaves actual WHO, WHERE, serialized result and IsCorrect unknown. Static source inspection or a host numeric transcription does not establish an accepted final OPEN frame.
+
+## Conditional output-array tail
+
+The selected translation-success tail tests output DIM for the special23 branch; conditional DIM1 skips it. The normal continuation constructs the OPEN-OK literal in array element1, using destination+0x624c and length6. The branch from `0x144fc` enters `0x14740` directly, preserving that computed array1 destination and bypassing the adjacent array0 setup. The normal decoder return is then1.
+
+This source-level append/return path does not execute the constructor/parser, establish a resulting kind, prove collector qualification or deliver traffic. It is correctly conditional on class/outer/primitive completion. Earlier marker uncertainty and downstream collector/descriptor/provider assumptions are retained, and no physical support or transaction result is inferred.
+
+## Exact reviewed pins
+
+Paths below are relative to `protocol/run7/`.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `c64a332dfca5077368c7d613d436a85001535ecfdb02d33d5cb1606a391bf6a4` |
+| `collect_evidence.py` | `ab8d42af9b69bff4b0ce8b83f7b42a23b547d4b6a97d7c8647b568c7912c445b` |
+| `host-selected-raw-and-values.json` | `f322298cf0248f9f133eb6f20efe0affffaafcb9796ec88cf12e9a6fb6757e23` |
+| `selected-registry-identity.json` | `84f263341ea6ca9470c03e9c8ed81022910490237586982ad942284a26de8d5f` |
+| `output-manifest.json` | `c83676405cf04de0f0d87216ebe6c50f64f573993ba80eeeb2a1647fec70c43d` |
+
+This review applies to these current bytes and selected code/dataflow checks. It does not certify complete decoding/WHO-WHERE conversion, final parser validity, all exception/unwind paths, actual symbol binding, recovery runtime, input provenance, transport delivery or physical behavior. No F454 fixture/layout or closed authentication branch was used.

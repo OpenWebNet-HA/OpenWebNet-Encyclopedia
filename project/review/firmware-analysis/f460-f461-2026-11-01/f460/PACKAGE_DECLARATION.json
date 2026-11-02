@@ -1,0 +1,28 @@
+{
+  "actions": [
+    {
+      "files": [
+        "btweb_only.ext4.gz.sha256.sig.zip",
+        "Image.zip.sha256.sig.zip"
+      ],
+      "id": "1",
+      "provider": "btesuv3",
+      "type": "firmware"
+    },
+    {
+      "files": [
+        "btweb_only_recovery.ext4.gz.sha256.sig.zip",
+        "Image.zip.sha256.sig.zip"
+      ],
+      "id": "2",
+      "provider": "btesuv3",
+      "type": "recovery_firmware"
+    }
+  ],
+  "name": "F460",
+  "object_models": [
+    "5.0.132"
+  ],
+  "version": "2.0.12",
+  "xml_version": "3.1"
+}

@@ -1,0 +1,7 @@
+# Run05 dual-analysis synthesis
+
+F460 now has a positive indirect constructor-selection path: key89 and pointer112fd0 are registered in global31a798 with its own callable manager/invoker, the higher selected new-object route resolves that same key, owner getters120/124/128 supply three values and the adapter forwards them to the constructor as modobj/line/brand SQL roles. The root owner class/configuration/key-list provenance, actual values, successful map/string/SQL behavior and full selection remain conditional. It is not a51-device support table or Device/WHO identity mapping.
+
+F461 now has one conditional original typed-object converter normal form, ASCII B1001208, derived from literals and formatting argument order. Its new72B output record receives selected metadata, copied source byte regions/status/64-bit ID and same-pointer list insertion. The selected normal callback frees temporary strings while retaining the appended record; this is not new-ID generation, global lifetime, raw command acceptance, physical bytes or delivery acknowledgment.
+
+Both source paths are independently reviewed and statically reproducible. Main/core-profile references retain exact preceding versions before integration. No original/provider/native/SQL/model/fixture/runtime/physical execution is added; prior ledgers and correction histories remain unchanged.

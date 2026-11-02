@@ -1,0 +1,42 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000cd8e0:
+   cd8e0:	2004      	movs	r0, #4
+   cd8e2:	f743 e8cc 	blx	10a7c <_Znwj@plt>
+   cd8e6:	4605      	mov	r5, r0
+   cd8e8:	2008      	movs	r0, #8
+   cd8ea:	602e      	str	r6, [r5, #0]
+   cd8ec:	f743 e8c6 	blx	10a7c <_Znwj@plt>
+   cd8f0:	4b21      	ldr	r3, [pc, #132]	@ (cd978)
+   cd8f2:	2200      	movs	r2, #0
+   cd8f4:	6044      	str	r4, [r0, #4]
+   cd8f6:	4669      	mov	r1, sp
+   cd8f8:	9000      	str	r0, [sp, #0]
+   cd8fa:	447b      	add	r3, pc
+   cd8fc:	331c      	adds	r3, #28
+   cd8fe:	6003      	str	r3, [r0, #0]
+   cd900:	4628      	mov	r0, r5
+   cd902:	f743 ebda 	blx	110b8 <_ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@plt>
+   cd906:	9800      	ldr	r0, [sp, #0]
+   cd908:	b110      	cbz	r0, cd910
+   cd90a:	6803      	ldr	r3, [r0, #0]
+   cd90c:	685b      	ldr	r3, [r3, #4]
+   cd90e:	4798      	blx	r3
+   cd910:	6b20      	ldr	r0, [r4, #48]	@ 0x30
+   cd912:	6325      	str	r5, [r4, #48]	@ 0x30
+   cd914:	b128      	cbz	r0, cd922
+   cd916:	6803      	ldr	r3, [r0, #0]
+   cd918:	b95b      	cbnz	r3, cd932
+   cd91a:	2104      	movs	r1, #4
+   cd91c:	f743 eac8 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   cd920:	6b25      	ldr	r5, [r4, #48]	@ 0x30
+   cd922:	4628      	mov	r0, r5
+   cd924:	f743 eed2 	blx	116cc <_ZNSt6thread6detachEv@plt+0x4>
+   cd928:	e7a8      	b.n	cd87c
+   cd92a:	f743 ec5e 	blx	111e8 <__stack_chk_fail@plt>
+   cd92e:	f743 e982 	blx	10c34 <_ZSt25__throw_bad_function_callv@plt>
+   cd932:	f743 e942 	blx	10bb8 <_ZSt9terminatev@plt>

@@ -1,0 +1,33 @@
+# Independent F460 filesystem-admission source review
+
+**PASS for the selected static source contract and authoritative report-only v2, within the stated premises.** This is not configured-scene admission, complete loader behavior, actual JSON parsing or runtime/physical approval. I independently checked the original own AArch64 source, retained results/copies and report roles; I authored neither the F460 packet nor its source interpretation.
+
+## Exact current/canonical roles
+
+Reviewed source root: work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission. Canonical collector collect_filesystem_v1.py remains12836B/SHA256fc897bf53c543b598df8fa5093cf95e88fc190bcc5beff77582a23fc41f4f80e. Its canonical REPORT.md remains4630B/SHA256cfb0b3b7778fb732dac7f78f65c85c46a48323f461be36d92cc5e2b006e97b65. The separate current REPORT.v2.md is5083B/SHA25669e004bdab8f0bd2a58af69dee1d1b94c294089f108e432bb12ebdf03900d523. Actual canonical --check passed with6outputs/7firstcopies/one512Bnewspan; it still checks old REPORT.md and does not silently stand in for a check of current REPORT.v2.
+
+The reviewer-requested report clarification has an exact parent3file snapshot before the separate v2. Independent raw ADD-immediate decoding gives SP+0x50=80decimal at2cae4 and SP+0x198=408decimal at2cbc0. V2 changes only those two mixed-basis notations and appends a role/history paragraph. Canonical code/results/manifest/report/firstcopies are byte-identical to the parent snapshot. Current v2 and its exact separate firstcopy/mapping match. No source behavior, guard or output-count correction occurred.
+
+## Original-source checks
+
+Original F460 scheduling_manager is2161128B/SHA2565017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62, own ELF64 little-endian ET_DYN/machine183. I checked file hash, class/type/machine, own PT_LOAD mapping, complete512B span2ca20..2cc20 against exact raw bytes/hash, all44 fixed words, selected branch arithmetic, six original callsite targets/relocation records and the two compiled literal ranges. Source/input pins and all six canonical outputs/seven immediate collector/output copies match their manifests. No old collector was replayed.
+
+The actual relocation chain identifies directory_iterator::operator*, path::_M_find_extension, path::compare, path::_List construction and path::_M_split_cmpts despite misleading nearest PLT/disassembly labels. Six callsite proofs refer to five unique imported symbols; they are not six independent runtime observations. Original BL target calculation and saved import records agree with readelf relocation evidence. These declarations and source requests still depend on effective binding/provider/ABI/object premises.
+
+At2cae4/2cae8 the source supplies local iterator-address storage SP+0x50, retaining the returned entry pointer in X22. The same returned pointer reaches the extension helper request. Its exact current semantic object/value, valid filesystem state and original function/caller are not supplied by this prefix. The finite defined-FUNC containment result is not a function-absence or natural reachability claim.
+
+The .json range resolves to197cf0..197cf5 and action_schedule.json to1951e8..1951fc, each with checked terminating NUL. They are compiled safe operands, not configured file data. The raw zero compare branch2cb78→2d114 is outside this packet. The local prefix writes W28=1 before comparison, while2cbac branches away on W28nonzero. Therefore the selected W28zero continuation requires an unclosed outside producer/predecessor; neither the local .json text nor one equality branch proves a complete extension filter or successful scene-file admission.
+
+Given that continuation,2cbb0 supplies X19 as hidden result STORAGE and2cbb4 supplies same entry X22 to local386d0. The helper body remains opaque; basename/fullpath identity is unproved. The source builds a local path at SP+0x198 and compares its address with X19 storage at2cc04. The returned word is saved W24 before two opaque38670 requests. Under ordinary callee preservation and normal returns, W24zero branches2d188 and bypasses the immediate allocation2cc20. Nonzero falls through. This is conditional selected request/branch order, not universal ignored-file policy, loop admission or an observed path equality.
+
+The old2cc20 construction range is separately pinned INHERITED_CONTEXT, including same entry first-word reads, endpoint formation, opaque2c600 request and same X19 STORAGE passed to105740. Those old bytes and constructor identity are not new coverage. Storage reuse across calls/reconstruction does not prove the compared semantic value is an unchanged JSON root or scene object. The report correctly refrains from a file-read/JSONparse/raw-scene producer claim or a genuine configured end-to-end path.
+
+## Separate helper-qualification boundary
+
+I identity/scope-checked source/f460-file-scene-producer/QUALIFICATION_BOUNDARY.json and its pre-read SOURCE_AUTHORIZATION record. Its original binary pin,240B already-read helper hash/range and authorization hash match. It records that the desired raw-scene/file/JSON producer was not admitted, zero new functional coverage, no second source packet/collector, no body export or further path. The initial256B qualification display's16B next prologue is explicitly unpromoted. I did not decode/expand that helper or independently promote its generic-operation interpretation: this review accepts only the documented qualification STOP and exact identity/scope record, not a new semantic helper contract.
+
+## Limits and disposition
+
+The packet establishes fresh own AArch64 filesystem request/path-comparison gates before an inherited construction site. It adds no configured scene, valid directory, JSON input grammar, parser/provider success, natural outercaller, ownership/unwind/concurrency or physical result. Private field roles and hidden-result storage remain product-specific; no MHS ARM32/MH202 layouts or public protocol values transfer. Current asset admission reports no user installation/export, and packaged settings/examples cannot become commissioned data.
+
+No original/vendor/helper/native/emulator/provider/JSON/SQL/model/fixture/targetOS/network/bus/physical execution or remote write occurred in this review. Host metadata/hash/readelf/binutils reproduction only. Closed receiving/output/transport/auth/session/framing/MQTT/libjel/frame-preparation/platformfallback/excluded-process and denied F450helper/equivalent routes remain closed. Originals/sources/synced/completed dossiers/firstcopies and older execution ledgers remain unchanged. Root may promote the narrowly conditional report-v2 findings; full source/Device/runtime gates remain pending.

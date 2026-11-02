@@ -1,0 +1,28 @@
+
+/home/bticino/bin/dedrifupdater:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000005fac <.text+0x37ec>:
+    5fac:	f94002a0 	ldr	x0, [x21]
+    5fb0:	aa1803e2 	mov	x2, x24
+    5fb4:	92800001 	mov	x1, #0xffffffffffffffff    	// #-1
+    5fb8:	f9400000 	ldr	x0, [x0]
+    5fbc:	97fff11d 	bl	2430 <X509_get_pubkey@plt+0x8>
+    5fc0:	b4000040 	cbz	x0, 5fc8 <_ZN8PlatformC1Ei@plt+0x3540>
+    5fc4:	34000176 	cbz	w22, 5ff0 <_ZN8PlatformC1Ei@plt+0x3568>
+    5fc8:	f94006b5 	ldr	x21, [x21, #8]
+    5fcc:	b40037b5 	cbz	x21, 66c0 <_ZN8PlatformC1Ei@plt+0x3c38>
+    5fd0:	f94002a0 	ldr	x0, [x21]
+    5fd4:	aa1703e2 	mov	x2, x23
+    5fd8:	92800001 	mov	x1, #0xffffffffffffffff    	// #-1
+    5fdc:	f9400000 	ldr	x0, [x0]
+    5fe0:	97fff114 	bl	2430 <X509_get_pubkey@plt+0x8>
+    5fe4:	b4fffe40 	cbz	x0, 5fac <_ZN8PlatformC1Ei@plt+0x3524>
+    5fe8:	710006df 	cmp	w22, #0x1
+    5fec:	54fffe01 	b.ne	5fac <_ZN8PlatformC1Ei@plt+0x3524>  // b.any
+    5ff0:	f94002a0 	ldr	x0, [x21]
+    5ff4:	f9400000 	ldr	x0, [x0]
+    5ff8:	97fff0ce 	bl	2330 <umount_kernel_recovery@plt+0x10>
+    5ffc:	aa0003f5 	mov	x21, x0

@@ -1,0 +1,36 @@
+# Source-scope correction: predecessor to run6's qualification table
+
+This run15 refinement leaves every prior artifact unchanged. It corrects the completeness of run6's selected matching-DIM shortcut list/host predicate, not its entire report or its eight finite examples.
+
+`protocol/run6/REPORT.md` lines38–39 says:
+
+> Decoded DIM30,31,32,62 or64 equal to requested DIM qualifies immediately at `0x10c0c..0x10c38`, before WHERE comparison.
+
+It then begins the next rule with “Otherwise, when decoded DIM equals requested DIM” and describes WHERE comparisons. The saved `protocol/run6/collect_evidence.py` function `qualify` likewise lists only `(30,31,32,62,64)` for the early matching-DIM shortcut. Its retained `qualification.txt` span begins `0x10c0c`, omitting the immediately preceding four instructions.
+
+Fresh original bt_device source is:
+
+```text
+0x10bfc e2453001  sub   r3,r5,#1
+0x10c00 e3550012  cmp   r5,#18
+0x10c04 13530007  cmpne r3,#7
+0x10c08 9a000007  bls   0x10c2c
+```
+
+Thus **DIM18 or unsigned32(DIM−1)<=7** also reaches `0x10c2c`. On equality to requested DIM at `0x10c34`, `0x10c38→0x10d84` qualifies before later WHERE checks. The additional values are1 through8 inclusive, and18. This applies only to the applicable diagnostic collector path reaching this code; earlier mode2/mode10 paths and all decoder/provider/diagnostic-membership prerequisites remain separate.
+
+The discriminating supplied state is mode7, decoded WHO1001/DIM1/WHERE`0`/WHATempty, requested DIM1/WHERE42. Under successful decoder/provider/membership and normal call premises, the early DIM equality qualifies despite the different numeric WHERE. Run6's incomplete host predicate would reject that state because WHERE differs and WHAT is not`4`. This is a conditional original source relation, not raw acceptance, a physical device correlation finding or an actual transaction.
+
+All eight previously saved finite qualification truth outcomes remain unchanged when checked against the refined predicate. Those eight cases did not expose this matching-DIM1/different-WHERE omission. They are inherited integrity checks, not new native/host coverage claims. No old report, collector, result or review has been rewritten.
+
+Exact immutable old pins:
+
+| Run6 artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `0389b36c43fa8da6156f3974dd98bf21893029167b5d0678c64216af19976bfa` |
+| `collect_evidence.py` | `ce17cf7eb5f670e116a3c9f9bd6c3c0aaffc5aeaca308327f647933ea73bbbe2` |
+| `host-selected-qualification-cases.json` | `a3c05fad419df525ce9064200dba3208c1fc054f33b55592e1c157e09c543898` |
+| `original-spans.json` | `3589968076eaa5182d3f589dcfe90007ab9ed635c26bda9432b8ade566c5d67e` |
+| `output-manifest.json` | `2f8608ce2b9728162e17bed86153def1f79bbfccf5438025165985bf8d15c68c` |
+
+Run15's collector also verifies all32 prior manifest entries read-only. The new original predecessor is saved in `previously-unretained-shortcut-entry.txt`, its raw span/VA/file hash in `original-spans.json`, and all four exact words in `critical-words.json`. `qualification-refinement.json` records the scoped correction, explicit new fixture and unchanged old-case results. Original execution and all new native counters are0.

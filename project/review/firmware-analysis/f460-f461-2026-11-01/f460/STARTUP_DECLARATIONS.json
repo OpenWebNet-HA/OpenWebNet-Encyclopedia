@@ -1,0 +1,195 @@
+{
+  "applications": [
+    {
+      "element": "p0",
+      "name": "openserver",
+      "path": "bin",
+      "working_mode_literal": "1"
+    },
+    {
+      "element": "p1",
+      "name": "scsserver",
+      "path": "bin",
+      "working_mode_literal": "1"
+    },
+    {
+      "element": "p2",
+      "name": "bt_luci",
+      "path": "bin",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p3",
+      "name": "bt_device",
+      "path": "bin",
+      "working_mode_literal": "1"
+    },
+    {
+      "element": "p4",
+      "name": "bt_dbus_manager",
+      "path": "bin",
+      "working_mode_literal": "1"
+    },
+    {
+      "element": "p5",
+      "name": "coso",
+      "path": "bin",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p6",
+      "name": "bt_termo",
+      "path": "bin",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p7",
+      "name": "bt_supervisione",
+      "path": "bin",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p8",
+      "name": "bt_multi",
+      "path": "bin",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p9",
+      "name": "fw_manager",
+      "path": "bin",
+      "working_mode_literal": "1"
+    },
+    {
+      "element": "p10",
+      "name": "bt_netatmo.sh",
+      "path": "bt_netatmo",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p11",
+      "name": "bt_drover.sh",
+      "path": "bt_drover",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p12",
+      "name": "matrix_mx",
+      "path": "matrix_mx",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p13",
+      "name": "bt_drover_mx.sh",
+      "path": "bt_drover_mx",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p14",
+      "name": "bt_thermo_manager",
+      "path": "bin",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p15",
+      "name": "bt_mail_sender",
+      "path": "bin",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p16",
+      "name": "scheduling_manager",
+      "path": "scheduling_manager",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p17",
+      "name": "bt_smart_home_manager",
+      "path": "bt_smart_home_manager",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p18",
+      "name": "energy_manager",
+      "path": "energy_manager",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p19",
+      "name": "bt_jdevice",
+      "path": "bin",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p20",
+      "name": "player_manager",
+      "path": "player_manager",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p21",
+      "name": "bt_ext_light",
+      "path": "bin",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p22",
+      "name": "alarm_manager",
+      "path": "alarm_manager",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p23",
+      "name": "backup_manager",
+      "path": "backup_manager",
+      "working_mode_literal": "0"
+    },
+    {
+      "element": "p24",
+      "name": "gateway_manager",
+      "path": "gateway_manager",
+      "working_mode_literal": "0"
+    }
+  ],
+  "packaged_regular_files_under_exact_scene_prefix": 0,
+  "scheduler_scenesPath": "/home/bticino/cfg/extra/0/scheduling_manager",
+  "scope": "Declarations and script requests, not daemon mode interpretation, activation, readiness, live extras or service/target execution. Config values outside whitelist withheld.",
+  "selected_source_lines": [
+    {
+      "line": 108,
+      "path": "etc/init.d/bt_daemon-apps.sh",
+      "text": "export LD_LIBRARY_PATH=${USER_LIBDIR}:/usr/lib:/home/bticino/lib:/home/bticino/libcoso:/home/bticino/bt_netatmo/lib"
+    },
+    {
+      "line": 111,
+      "path": "etc/init.d/bt_daemon-apps.sh",
+      "text": "while [ ! -e /dev/ttyRPMSG30 ]; do sleep 0.1; done"
+    },
+    {
+      "line": 113,
+      "path": "etc/init.d/bt_daemon-apps.sh",
+      "text": "cd /home/bticino"
+    },
+    {
+      "line": 114,
+      "path": "etc/init.d/bt_daemon-apps.sh",
+      "text": "bin/bt_daemon &"
+    },
+    {
+      "line": 10,
+      "path": "etc/init.d/setup_m4.sh",
+      "text": "echo stop > /sys/class/remoteproc/remoteproc0/state"
+    },
+    {
+      "line": 15,
+      "path": "etc/init.d/setup_m4.sh",
+      "text": "echo mx_cortex-m.elf > /sys/class/remoteproc/remoteproc0/firmware"
+    },
+    {
+      "line": 16,
+      "path": "etc/init.d/setup_m4.sh",
+      "text": "echo start > /sys/class/remoteproc/remoteproc0/state"
+    }
+  ],
+  "stack_path": "home/bticino/cfg/stack_open.xml"
+}

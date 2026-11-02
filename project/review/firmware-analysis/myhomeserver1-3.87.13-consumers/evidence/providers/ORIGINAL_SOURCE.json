@@ -1,0 +1,201 @@
+{
+  "PIC_literals": [
+    {
+      "Thumb_PC_add_instruction": "0x3bfc",
+      "pool_VA": "0x3c40",
+      "pool_word": "0x2438",
+      "public_literal": "2.0",
+      "target_VA": "0x6038",
+      "target_bytes_hex": "322e3000"
+    },
+    {
+      "Thumb_PC_add_instruction": "0x3fc0",
+      "pool_VA": "0x3fd8",
+      "pool_word": "0x2100",
+      "public_literal": "result",
+      "target_VA": "0x60c4",
+      "target_bytes_hex": "726573756c7400"
+    },
+    {
+      "Thumb_PC_add_instruction": "0x546a",
+      "pool_VA": "0x54a4",
+      "pool_word": "0xc56",
+      "public_literal": "result",
+      "target_VA": "0x60c4",
+      "target_bytes_hex": "726573756c7400"
+    },
+    {
+      "Thumb_PC_add_instruction": "0x54da",
+      "pool_VA": "0x5510",
+      "pool_word": "0xbe6",
+      "public_literal": "result",
+      "target_VA": "0x60c4",
+      "target_bytes_hex": "726573756c7400"
+    },
+    {
+      "Thumb_PC_add_instruction": "0x5532",
+      "pool_VA": "0x5564",
+      "pool_word": "0xc5e",
+      "public_literal": "error",
+      "target_VA": "0x6194",
+      "target_bytes_hex": "6572726f7200"
+    }
+  ],
+  "asserted_byte_ranges": [
+    {
+      "VA": "0x3bf0",
+      "bytes": "1420fef7d6eb"
+    },
+    {
+      "VA": "0x3c04",
+      "bytes": "20202b60fef7caeb"
+    },
+    {
+      "VA": "0x3c14",
+      "bytes": "0b611a60"
+    },
+    {
+      "VA": "0x3f84",
+      "bytes": "29b106460d46fef7d2e9044668b10124"
+    },
+    {
+      "VA": "0x3fb8",
+      "bytes": "01220749e86018697944fef76ee9e5e7"
+    },
+    {
+      "VA": "0x3706",
+      "bytes": "2020fef74aee0446c0f800a0"
+    },
+    {
+      "VA": "0x3718",
+      "bytes": "282dc4e9010508bfc4e90467"
+    },
+    {
+      "VA": "0x3742",
+      "bytes": "266119d1"
+    },
+    {
+      "VA": "0x3746",
+      "bytes": "d9f818002146c4f81c90fef768ecc9f81800"
+    },
+    {
+      "VA": "0x39f2",
+      "bytes": "002314250a46009402210c4c01930c4b7c44"
+    },
+    {
+      "VA": "0x4808",
+      "bytes": "042203b05df804ebfdf7aabc"
+    },
+    {
+      "VA": "0x485c",
+      "bytes": "b8f1040f1ad0a368434517d0"
+    },
+    {
+      "VA": "0x4884",
+      "bytes": "4ff400723046fdf754ec0028ead1"
+    },
+    {
+      "VA": "0x52de",
+      "bytes": "18b10368022b10d00020"
+    },
+    {
+      "VA": "0x5308",
+      "bytes": "8368142bebd10069eae7"
+    },
+    {
+      "VA": "0x5468",
+      "bytes": "00697944fcf7d4ed78b10368012063b9"
+    },
+    {
+      "VA": "0x54d6",
+      "bytes": "0e490069794403b05df804ebfcf7d5be"
+    },
+    {
+      "VA": "0x5530",
+      "bytes": "00697944fcf770ed003818bf0120"
+    }
+  ],
+  "original_library_sha256": "d78437fdb23fb78ba881dbb22a14570b441a178e31c84244b126a5dfbf7866a7",
+  "spans": [
+    {
+      "end_VA_exclusive": "0x3c48",
+      "file_offset": "0x3bd8",
+      "name": "new-json-object",
+      "original_byte_sha256": "491bced6fe8d479a22f70f4fa9320c62771c4c3d29ed85e30b07be551194ce16",
+      "original_image_path": "/usr/lib/libjsonmsg.so.1.0.0",
+      "start_VA": "0x3bd8"
+    },
+    {
+      "end_VA_exclusive": "0x3798",
+      "file_offset": "0x36e0",
+      "name": "new-data-node",
+      "original_byte_sha256": "465d83a5342c5efa50a6fb11148bb95e3f90b4929e8c823bf6f00dfc3d3cfccb",
+      "original_image_path": "/usr/lib/libjsonmsg.so.1.0.0",
+      "start_VA": "0x36e0"
+    },
+    {
+      "end_VA_exclusive": "0x3a3c",
+      "file_offset": "0x39ec",
+      "name": "boolean-node-builder",
+      "original_byte_sha256": "62c3f07cfb299d06a819875d4b5860bb674342b43178b0d17a7762d967ea026d",
+      "original_image_path": "/usr/lib/libjsonmsg.so.1.0.0",
+      "start_VA": "0x39ec"
+    },
+    {
+      "end_VA_exclusive": "0x3fdc",
+      "file_offset": "0x3f70",
+      "name": "json-ack-builder",
+      "original_byte_sha256": "e27125e62e9ca4e237b5d438630ba8e82e1a7dbc30965b79312d65f395f8f068",
+      "original_image_path": "/usr/lib/libjsonmsg.so.1.0.0",
+      "start_VA": "0x3f70"
+    },
+    {
+      "end_VA_exclusive": "0x4824",
+      "file_offset": "0x47e0",
+      "name": "name-lookup",
+      "original_byte_sha256": "f2d5f212971ee914cf0b1cc7e5088ca5e2f9bdcdd3337dc16d322f4f8fdff664",
+      "original_image_path": "/usr/lib/libjsonmsg.so.1.0.0",
+      "start_VA": "0x47e0"
+    },
+    {
+      "end_VA_exclusive": "0x48c8",
+      "file_offset": "0x4824",
+      "name": "recursive-name-lookup-body",
+      "original_byte_sha256": "d1eee9d5034dcff88efdcb6178415f7dfbef6ed88af390612bb876757d0524de",
+      "original_image_path": "/usr/lib/libjsonmsg.so.1.0.0",
+      "start_VA": "0x4824"
+    },
+    {
+      "end_VA_exclusive": "0x5368",
+      "file_offset": "0x52c0",
+      "name": "boolean-node-value-reader",
+      "original_byte_sha256": "4f7dff82b486e632057ae4f9bbf1d3dc988d88c14d90b607fa3bdc7e05455e14",
+      "original_image_path": "/usr/lib/libjsonmsg.so.1.0.0",
+      "start_VA": "0x52c0"
+    },
+    {
+      "end_VA_exclusive": "0x54ac",
+      "file_offset": "0x5450",
+      "name": "result-response-predicate",
+      "original_byte_sha256": "a42cc47d7ca2dcc9ff08cacb8134efdea292fbaf0e1da4f9cbefe81c2e3f92d3",
+      "original_image_path": "/usr/lib/libjsonmsg.so.1.0.0",
+      "start_VA": "0x5450"
+    },
+    {
+      "end_VA_exclusive": "0x5518",
+      "file_offset": "0x54ac",
+      "name": "ack-predicate",
+      "original_byte_sha256": "9e6067e0b0cc486a717695c985f658204fc1734a5b20dcc4080b356b65a2fc97",
+      "original_image_path": "/usr/lib/libjsonmsg.so.1.0.0",
+      "start_VA": "0x54ac"
+    },
+    {
+      "end_VA_exclusive": "0x556c",
+      "file_offset": "0x5518",
+      "name": "error-predicate",
+      "original_byte_sha256": "58abfed8f187478e4bcff918d31cfbeb1aa442fedb066c5bb8ceb9c3fb29fa24",
+      "original_image_path": "/usr/lib/libjsonmsg.so.1.0.0",
+      "start_VA": "0x5518"
+    }
+  ]
+}

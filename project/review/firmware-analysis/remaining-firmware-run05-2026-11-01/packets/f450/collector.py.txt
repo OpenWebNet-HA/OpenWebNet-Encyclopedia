@@ -1,0 +1,92 @@
+#!/usr/bin/env python3
+"""Static original startup alias selection joining the initialized markup path."""
+from pathlib import Path
+import argparse,hashlib,json,struct,xml.etree.ElementTree as ET
+O=Path(__file__).resolve().parent;W=O.parents[4];A=W/'work/f450-firmware/2.0.10/analysis';T=A/'rootfs'
+def sha(b):return hashlib.sha256(b).hexdigest()
+def enc(x):return(json.dumps(x,sort_keys=True,indent=2)+'\n').encode()
+def build():
+ pins=[]
+ def read(p,expected):
+  assert p.is_file() and not p.is_symlink();b=p.read_bytes();assert sha(b)==expected,str(p);pins.append({'path':str(p.relative_to(W)),'bytes':len(b),'sha256':sha(b)});return b
+ mb=read(A/'normal-regular-files.json','cbbdfd87f04c8b1c06ee8759b87ad88cbf9cdfeadfcbf52a425603b3e9dd4ac7');manifest=json.loads(mb)
+ sb=read(A/'normal-symlinks.json','50b6e3a00b6b12427bce55dd665ba5a19431ac11754dba79abc3fae53fb64442');syms=json.loads(sb)
+ expected={'etc/default/volatiles/00_core':'a40f3fe0477f9d60dc095a22c86cef45ed6f76c6fc66643c2758426fdba97207','etc/init.d/populate-volatile.sh':'62f2d22a2591f2a5d6b76a5ea9e9fe6ad9ab634c84378bc48d050054f1b602ec','etc/default/rcS':'7bc15f9fa8e0cc56528c6880675d701b2f6e87eac931b88dd76015dd6ff07e6a','home/bticino/cfg/stack_open.xml':'17a56dbaba4a039d41b52c732042bcf301f5df0bb41fbca96529336070f3ade9','home/bticino/bin/bt_daemon':'85e7ca65b4d1c4e8ab23a93ac532aea568dd06272fefb1b1be928eeba18f3d73'}
+ raw={}
+ for n,h in expected.items():
+  b=read(T/n,h);assert len(b)==manifest[n]['bytes'] and sha(b)==manifest[n]['sha256'];raw[n]=b
+ linkkey='etc/rcS.d/S37populate-volatile.sh';assert syms[linkkey]=='../init.d/populate-volatile.sh'
+ core=raw['etc/default/volatiles/00_core'].decode().splitlines();rec=core[81];assert rec=='l root root 0777 /var/tmp/stack_open.xml /home/bticino/cfg/stack_open.xml';fields=rec.split();assert len(fields)==6
+ rc=raw['etc/default/rcS'].decode().splitlines();assert rc[26]=='VOLATILE_ENABLE_CACHE=no'
+ script=raw['etc/init.d/populate-volatile.sh'].decode().splitlines()
+ lineguards={3:'. /etc/default/rcS',5:'CFGDIR="/etc/default/volatiles"',7:'COREDEF="00_core"',63:'  [ `basename "${CFGFILE}"` = "${COREDEF}" ] && return 0',107:'  CFGFILE="$1"',114:'  cat ${CFGFILE} | grep -v "^#" | \\',115:'  while read LINE; do',122:'    [ "${TTYPE}" = "l" ] && {',123:'      TSOURCE="$TLTARGET"',124:'      [ -L "${TNAME}" ] || {',126:'        link_file "${TSOURCE}" "${TNAME}" &',128:'      continue',163:'if test -e /etc/volatile.cache -a "$VOLATILE_ENABLE_CACHE" = "yes" -a "x$1" != "xupdate"',169:'\t\tapply_cfgfile "${CFGDIR}/${file}"'}
+ for n,s in lineguards.items():assert script[n-1]==s,(n,script[n-1])
+ assert 'TTYPE=\\1' in script[116] and 'TNAME=\\5 TLTARGET=\\6' in script[116]
+ assert script[41].strip()==r'EXEC="test -e \"$2\" -o -L $2 || ln -s \"$1\" \"$2\" >/dev/tty0 2>&1"' 
+ ranges=[('defaults',1,7),('link-request',41,51),('core-admission',61,63),('record-and-link-selection',105,129),('cache-and-file-selection',163,171)]
+ textspans=[]
+ for label,a,z in ranges:
+  lines=[{'line':i,'text':script[i-1]}for i in range(a,z+1)];data=('\n'.join(script[a-1:z])+'\n').encode();textspans.append({'label':label,'path':'etc/init.d/populate-volatile.sh','start_line':a,'end_line':z,'lines':lines,'selected_LF_text_sha256':sha(data)})
+ db=raw['home/bticino/bin/bt_daemon'];assert db[:6]==b'\x7fELF\x01\x01';h=struct.unpack_from('<HHIIIIIHHHHHH',db,16);assert h[0]==2 and h[1]==40 and h[6]==0x5000002
+ ph=[struct.unpack_from('<8I',db,h[4]+i*h[8])for i in range(h[9])];loads=[p for p in ph if p[0]==1]
+ def off(a,n=4):
+  xs=[p[1]+a-p[2]for p in loads if p[2]<=a and a+n<=p[2]+p[4]];assert len(xs)==1;return xs[0]
+ def word(a):return struct.unpack_from('<I',db,off(a))[0]
+ guards={0x12908:0xe92d4800,0x12914:0xe50b0008,0x12918:0xe59f3014,0x1291c:0xe5933000,0x12920:0xe1a00003,0x12924:0xe51b1008,0x12928:0xeb000b85,0x12934:0x00023a74,0x23a74:0x00019ee8}
+ for a,v in guards.items():assert word(a)==v,hex(a)
+ assert 0x12918+8+(word(0x12918)&4095)==0x12934
+ x=word(0x12928)&0xffffff;x-=1<<24 if x&(1<<23)else 0;assert 0x12928+8+x*4==0x15744
+ path=b'/var/tmp/stack_open.xml\0';assert db[off(0x19ee8,len(path)):off(0x19ee8,len(path))+len(path)]==path
+ binary=[]
+ for label,a,z in [('selected-config-forwarder',0x12908,0x12938),('initialized-global-pointer',0x23a74,0x23a78),('safe-path-literal',0x19ee8,0x19ee8+len(path))]:
+  data=db[off(a,z-a):off(a,z-a)+z-a];binary.append({'label':label,'VA':hex(a),'end_exclusive':hex(z),'file_offset':hex(off(a,z-a)),'bytes_hex':data.hex(),'sha256':sha(data)})
+ tree=ET.fromstring(raw['home/bticino/cfg/stack_open.xml']);assert tree.tag=='root' and tree.findall('.//fullip_addressbook')==[]
+ extra=tree.find('.//extra');safe={a.tag:a.text for a in extra if a.tag in ['enable','check','nocheck']};assert safe=={'enable':'0','check':'50','nocheck':None}
+ source={'image':{'path':'home/bticino/bin/bt_daemon','sha256':sha(db),'bytes':len(db),'ELF32_LE':True,'type':h[0],'machine':h[1],'flags':hex(h[6]),'PT_LOAD':[list(p)for p in loads]},'word_guards':[{'VA':hex(a),'word':hex(v)}for a,v in guards.items()],'original_startup_declaration':{'manifest_path':linkkey,'manifest_target':syms[linkkey],'role':'original symlink metadata only, not a materialized host link or observed boot'},'selected_manifest_records':{n:manifest[n]for n in expected},'script_line_guards':len(lineguards),'safe_core_record':{'line':82,'text':rec,'fields':fields},'safe_rcS_record':{'line':27,'text':rc[26]},'safe_XML':{'root':tree.tag,'fullip_addressbook_nodes':0,'extra':safe}}
+ flow={'positive_join':'00_core names /var/tmp/stack_open.xml as link pathname and /home/bticino/cfg/stack_open.xml as link source; initialized daemon parser pathname is exactly that link pathname','static_startup_selection':'symlink metadata names rcS S37populate-volatile.sh; original script sources rcS, sets CFGDIR/COREDEF, original cache setting no selects config iteration under unchanged values/ordinary shell premises','record_selection':'apply_cfgfile uses six-field sed/eval assignment; selected simple record assigns TTYPE=l,TNAME=temporary path,TLTARGET=packaged cfg path; no shell eval performed by collector','request':'l branch tests -L TNAME; missing-link branch backgrounds link_file(TLTARGET,TNAME). link_file tests -e destination and generated command again tests -e OR -L before requesting ln -s source,destination','limits':['Original normal-image declarations, not actual boot or live link','Effective rcS/CFGDIR/00_core/cached script/path/working environment, parser fidelity and ordinary shell/provider binding remain premises','Existing symlink is skipped even if target differs; existing file prevents creation; asynchronous request completion/races/admission not proved','No link command/test/sed/eval/firmware script executed; read original source bytes only','No XML value production or db_name text inferred; no fullip_addressbook subtree in packaged XML','extra enable0/check50 remains separate; no extraction/decryption or recovered DB'], 'new_original_vendor_helper_native_emulator_SQL_target_OS_network_bus_physical_execution':0,'remote_writes':0,'recovered_DB':False}
+ report='''# F450 night05: safe startup alias declaration for the temporary markup path
+
+A new original filesystem-configuration source qualifies the previously unresolved temporary pathname: etc/default/volatiles/00_core line82 declares a symbolic-link request from /var/tmp/stack_open.xml to /home/bticino/cfg/stack_open.xml. The actual packaged population script interprets the selected link record and conditionally requests that link. This establishes a safe conditional source relation between the daemon's initialized temporary markup pathname and the packaged configuration path. It does not establish an effective live link, received configuration, db_name value, extra50 association, extraction or database recovery.
+
+## Original selection and caller declaration
+
+SOURCE.json pins original normal-image regular-file and symlink manifests, exact script/default/config/daemon hashes and original manifest records. The symlink manifest declares etc/rcS.d/S37populate-volatile.sh→../init.d/populate-volatile.sh. This is original startup metadata, not a materialized host symlink or observed runlevel execution. Original populate-volatile.sh sources /etc/default/rcS, sets CFGDIR=/etc/default/volatiles and COREDEF=00_core. Original rcS line27 sets VOLATILE_ENABLE_CACHE=no. Under unchanged shell values and the ordinary selected script admission, its final branch selects configuration iteration rather than the cached script. Selection of 00_core bypasses the script's user/group requirement checks by basename; full other-file handling remains outside this packet.
+
+The six-field source record is exactly l root root 0777 /var/tmp/stack_open.xml /home/bticino/cfg/stack_open.xml. apply_cfgfile's selected source pipeline and sed/eval assignment associate type=l, pathname=/var/tmp/stack_open.xml, linksource=/home/bticino/cfg/stack_open.xml. No shell, sed, eval, pipeline or original script is executed by this investigation; these are inspected source requests under ordinary parsing premises.
+
+## Selected link request and limits
+
+The l branch assigns TSOURCE=TLTARGET. If TNAME is already a symlink, it skips this request regardless of its target. Otherwise it backgrounds link_file(source,name). That function separately checks whether its destination exists and, on the selected absent leg, backgrounds the constructed command. The command again tests existing destination or symlink before requesting ln -s source destination. Mode0777/owner/group are record fields; this l branch does not itself request their application to the link. Actual checks/creation, tool binding, existing objects, asynchronous completion, races, writable filesystem and startup ordering remain unproved. Existing files/links may prevent or bypass the selected request. No filesystem action is performed on behalf of the firmware.
+
+Fresh own ELF32 little-endian ARM EXEC/machine40/flags0x5000002 parsing and nine exact word guards independently re-establish daemon0x12908's selected filename handoff. Its original initialized writable pointer0x23a74→0x19ee8 names exactly /var/tmp/stack_open.xml; forwarder0x12928 calls loader0x15744 with that loaded pathname and its supplied owner. These are the initializer/caller source facts needed to join the new alias record. Effective global contents and valid owner/admission remain premises. The prior callback producers are inherited, not reauthored or replayed as new coverage.
+
+## Configuration and archive boundary
+
+The packaged target configuration still has root and no fullip_addressbook subtree. Its only exported safe extra declaration remains enable0/check50/empty nocheck. A conditional alias request does not manufacture db_name/db_compressed text, prove the live file equals this package, activate extra50, identify an archive key or relate the selected archive-request field to encrypted50.xtz. Configuration content may differ at runtime; no receiving/output/transport/auth/session/framing/MQTT/libjel implementation or closed-route proxy was expanded. No key/password guess, second unzip site or broad keyword inventory is part of this packet.
+
+Original/vendor/native/helper/emulator/model/SQL/targetOS/device/service/network/bus/physical executions, decryption and remote writes are zero. No actual original database was recovered/generated or uploaded. Cumulative R2 remains inherited one encrypted F450 supporting container and zero plaintext databases. Parent alone controls archival/public-page changes. Originals/synced/completed artifacts, older ledgers/history, source manifest and Git staging/commits/push remain unchanged.
+
+## Reproduction and preservation
+
+python3 -B collect_origin_v2.py --check reads source bytes and parses metadata/ELF/XML only. It never interprets original script text as code. Selected script spans, core/default fields and three binary spans are preserved with exact bytes or line-addressed text/hashes; no adjacent private configuration is exported. Initial generation refuses existing outputs and immediately saves exact first copies of collector and all generated outputs, with index computed before opening itself. The first v1 attempt failed before outputs on an incorrectly negative escaped-string assertion. Parent retained the exact v1 collector before this new v2 replaced that assertion with a positive exact-line guard. v1 remains unchanged; FAILED_V1.json records its identity/failure. Initial v2 generation and read-only reproduction passed. No previous output/report or terminal hash is invented, and no canonical output was overwritten.
+'''
+ out={'SOURCE.json':enc(source),'SPANS.json':enc({'script':textspans,'binary':binary}),'ORIGIN_FLOW.json':enc(flow),'INPUTS.json':enc({'files':sorted(pins,key=lambda x:x['path'])}),'REPORT.md':report.encode()}
+ out['OUTPUT_MANIFEST.json']=enc({'collector_sha256':sha(Path(__file__).read_bytes()),'files':{n:{'bytes':len(b),'sha256':sha(b)}for n,b in sorted(out.items())},'scope':'Generated members excluding this manifest'})
+ return out
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build()
+ if a.check:
+  for n,b in out.items():assert(O/n).read_bytes()==b,n
+  ix=json.loads((O/'first-candidate/INDEX.json').read_bytes());assert len(ix['files'])==7
+  for x in ix['files']:
+   b=(O/'first-candidate'/x['copy']).read_bytes();assert len(b)==x['bytes'] and sha(b)==x['sha256'] and b==(O/x['copy']).read_bytes()
+ else:
+  assert not(O/'first-candidate').exists()and all(not(O/n).exists()for n in out)
+  for n,b in out.items():(O/n).open('xb').write(b)
+  d=O/'first-candidate';d.mkdir();rows=[]
+  for n,b in sorted({**out,Path(__file__).name:Path(__file__).read_bytes()}.items()):
+   (d/n).open('xb').write(b);rows.append({'copy':n,'bytes':len(b),'sha256':sha(b)})
+  index=enc({'scope':'Exact first generated outputs and collector; index excluded','files':rows});(d/'INDEX.json').open('xb').write(index)
+ print(json.dumps({'status':'PASS','outputs':len(out),'firstcopies':7,'binary_spans':3,'script_spans':5,'original_execution':0,'remote_writes':0,'recovered_DB':False}))
+if __name__=='__main__':main()

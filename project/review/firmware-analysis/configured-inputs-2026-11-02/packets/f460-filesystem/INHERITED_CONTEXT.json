@@ -1,0 +1,13 @@
+{
+  "entry_argument_words": "2cc44/54 read SAME X22 first two words;2cc5c forms second endpoint;opaque2c600 writes providedX19storage;2cc68 passes SAMEstorage to105740",
+  "original_span": {
+    "bytes_hex": "002280d2ff3700f9b6ddff972004000fe20300aaf5e300f9f80300aa230f00f063401191c10240f9400400fde21b00f9e00313aac20640f9030701f82200028b68feff97e30b40a9e10313aae00318aab4620394e0e340f91f0015eb80000054e1eb40f921040091a2ddff97e01b40f9f88306a9019b40b9",
+    "end_VA_exclusive": "0x2cc98",
+    "name": "selected-owner-allocation",
+    "sha256": "b51af6abce1e8618a85bb4db9e1716163f1246dd56169076e0e86c0ef2685f93",
+    "start_VA": "0x2cc20"
+  },
+  "raw_input_or_file_read": "NOT established;2c600 body unexpanded",
+  "same_storage_not_same_object": "X19 storage participates in opaque calls/reconstruction; no preserved semantic object/value claim",
+  "scope": "Selected existing run07 construction span is inherited, NOT new source coverage or an old collector rerun"
+}

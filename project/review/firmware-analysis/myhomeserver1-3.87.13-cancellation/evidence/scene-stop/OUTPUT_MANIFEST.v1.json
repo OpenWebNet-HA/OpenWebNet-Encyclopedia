@@ -1,0 +1,54 @@
+{
+  "CRITICAL_BYTES.v1.json": {
+    "bytes": 1023,
+    "sha256": "3954068409ada0f6dda62f8d7fcf6a7e8724e368bf8686f679e94fd71dd9b353"
+  },
+  "DIRECT_CALLS.v1.json": {
+    "bytes": 276,
+    "sha256": "c659e9d45eaecab9a6071651f4489c3420c1002173d8ee8a45458de7ab6b0cf1"
+  },
+  "FIELD_LEDGER.v1.json": {
+    "bytes": 824,
+    "sha256": "76f352a49ebef932463482fdc61aa5a416ea53b3a6091a434a1fb48c6207068c"
+  },
+  "INPUTS.v1.json": {
+    "bytes": 1049,
+    "sha256": "177b375ef494929717c522ff349cd6ccbf5f06521b12ebc1c09756303e412584"
+  },
+  "METHOD.v1.json": {
+    "bytes": 532,
+    "sha256": "20e28933b9830a30214d62fb2659b1135102d92b32781535e784e1988728e03c"
+  },
+  "POLL_LITERAL.v1.json": {
+    "bytes": 416,
+    "sha256": "d3f5c70b7de0fea7d52b395d5142d41e43b352f4f8f47a53d93480f70d1e9129"
+  },
+  "SOURCE_SPANS.v1.json": {
+    "bytes": 1233,
+    "sha256": "ae6c97f5c465b2f4fd8be9361007bc13048231d3041ce642f819f61db230c589"
+  },
+  "spans/action-dispatch-and-poll-cleanup.txt": {
+    "bytes": 18433,
+    "sha256": "b3d1584775570e8f2dfcf612145d847bc9390130a97e230e64da4dc99d77a0d5"
+  },
+  "spans/completion-getter.txt": {
+    "bytes": 422,
+    "sha256": "db8d0c974d22f4572a3fcd7f200b2b1bac99b961412bb1a0f7203c83761a2ac3"
+  },
+  "spans/first-launch-gates.txt": {
+    "bytes": 3867,
+    "sha256": "86dad347ab06e74fdf829b306c9ab6a03b35ea729f5d0a63d5d0040357a7504d"
+  },
+  "spans/poll-stack-binding.txt": {
+    "bytes": 863,
+    "sha256": "8c26e347fe74eec68bd0bcfba3354c09e8a014fe5a30478e401cb8cb8b3b7409"
+  },
+  "spans/scene-stop-prefix.txt": {
+    "bytes": 7468,
+    "sha256": "c2761451ac98ec0b6c1c33c146fae306d6c4d0819128411ce69e874660e055b3"
+  },
+  "spans/worker-receiver.txt": {
+    "bytes": 1677,
+    "sha256": "e85001db54b96d13b4d3f4dcaf58ee732644c4f1e442f9edf0a97a0129883022"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "home/bticino/cfg/coso_cfg": {
+    "bytes": 333,
+    "selected": [
+      {
+        "key": "PlugCfgDir",
+        "line": 19,
+        "section": "Plugins settings",
+        "value": "/home/bticino/cfg/coso_plugins"
+      }
+    ],
+    "sha256": "7d4f87e391dc416a7f227bfed9fb24d1df5606952f705cd6884087677c0d583f"
+  },
+  "home/bticino/cfg/coso_plugins/scs_cmd": {
+    "bytes": 157,
+    "selected": [
+      {
+        "key": "SCSEnable",
+        "line": 7,
+        "section": "Communication Settings",
+        "value": "1"
+      },
+      {
+        "key": "SCSAIEnable",
+        "line": 10,
+        "section": "Communication Settings",
+        "value": "0"
+      }
+    ],
+    "sha256": "22d9ae840fbbc5f1313a13ad135a8c1dad2f6b91aac0ddcf0db83bdee0c99eb2"
+  }
+}

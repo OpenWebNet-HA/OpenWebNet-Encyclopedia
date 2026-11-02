@@ -1,0 +1,18 @@
+{
+  "/usr/lib/libjsoncpp.so.1.9.5": {
+    "bytes": 144780,
+    "sha256": "5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36"
+  },
+  "image_accessor": {
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/image_vfs.py",
+    "sha256": "890e3526e2fc29c630cb45dad15d91fecb6b32007c0be04e5af28c85a48f1ae4"
+  },
+  "old_tool_baseline": {
+    "path": "work/mh202-firmware/research/2026-10-30/validation/run27/PARENT_TOOL_TREE_BEFORE.json",
+    "sha256": "da7c6752a50262bb0311b827513b87f2bea16fa749a6eebd0289dc946ed8160a"
+  },
+  "prior_source_provider": {
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/provider/REPORT.md",
+    "sha256": "5ae3040b3f3b8e24edff3d6b893c1a78053f6c3d4fc27b66837f90a67e768bd2"
+  }
+}

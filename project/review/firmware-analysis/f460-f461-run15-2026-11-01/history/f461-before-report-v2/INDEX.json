@@ -1,0 +1,20 @@
+[
+  {
+    "source": "work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/REPORT.md",
+    "snapshot": "work/f460-f461-comparison/2026-11-01-run15/integration/f461-before-report-v2/REPORT.md",
+    "bytes": 7415,
+    "sha256": "891728ccd1d024c018cc8362d0399cd5bdc793c0597c696b68560765407735d3"
+  },
+  {
+    "source": "work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/collect_removal_v1.py",
+    "snapshot": "work/f460-f461-comparison/2026-11-01-run15/integration/f461-before-report-v2/collect_removal_v1.py",
+    "bytes": 6797,
+    "sha256": "bcde12a10d6d8b83f9305d076c53d9018573abbca18b54c595d4688a0e3a1435"
+  },
+  {
+    "source": "work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/OUTPUT_MANIFEST.json",
+    "snapshot": "work/f460-f461-comparison/2026-11-01-run15/integration/f461-before-report-v2/OUTPUT_MANIFEST.json",
+    "bytes": 1401,
+    "sha256": "efd02f55889d6aef0fd2d065e18f22c2cac655360da5b58ad9f576fb16f22ee3"
+  }
+]

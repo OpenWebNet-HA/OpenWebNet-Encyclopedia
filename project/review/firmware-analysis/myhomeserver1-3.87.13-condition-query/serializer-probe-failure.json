@@ -1,0 +1,7 @@
+{
+  "correction": "A separate corrected host probe used an explicit if block. No collector/evidence existed or was overwritten; no source guard weakened.",
+  "provenance": "Transcribed now from the recorded failed tool call; no independently pinned pre-call file was claimed.",
+  "recorded_faulty_line": "for p in range(0x14bfc0,0x14f8f8,8):x=w(p)&0x7fffffff;x-=0x80000000 if x&0x40000000 else0;ex.append((p+x)&0xfffffffe)",
+  "returned_error": "SyntaxError: expected 'else' after 'if' expression",
+  "stage": "Before collector/report/generation; exploratory host Python source failed to parse and executed no body."
+}

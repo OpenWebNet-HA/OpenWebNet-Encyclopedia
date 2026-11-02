@@ -1,0 +1,118 @@
+{
+  "collector_sha256": "8778eed02bac5c29d6901b5a507bb9d0e6b5c8bfef8f174d7f3a468571d6cebf",
+  "outputs": {
+    "HOST_TEXT_MODEL.json": {
+      "bytes": 768,
+      "sha256": "00b1f9f85eb03681a0069f29792d88d49a75ed5ee984acaafedbe0ca8e19b328"
+    },
+    "INPUTS.json": {
+      "bytes": 876,
+      "sha256": "80c88c6b1222a49930faf09d0b9d6a2a92aef9a407342dad018f0b48aca8603e"
+    },
+    "METHOD.json": {
+      "bytes": 720,
+      "sha256": "c56417454bac8fbd2ddaaf5d51f99e8209203cb76283b58a9f49cfc6391be718"
+    },
+    "ORIGINAL_SOURCE.json": {
+      "bytes": 11768,
+      "sha256": "4d2fb1f280a135a7019a287a63cb34db4fe51b851f9d1b0d22b8a70a10807605"
+    },
+    "OWNER_ALIAS_LEDGER.json": {
+      "bytes": 2660,
+      "sha256": "0d9254fc8c6e38af6a7316d79026d614379f0844b82d724a7315607234b8071d"
+    },
+    "SQL_TEMPLATE.json": {
+      "bytes": 3506,
+      "sha256": "f7cbb38253d5a7a2ade9d3211e539a52d5ce9590d157f67dc06b322f62552fa5"
+    },
+    "spans/base-query-copy-and-context.txt": {
+      "bytes": 1716,
+      "sha256": "216702eeef6029f2da89d94be4d6df6762aa4bde5be9173b981020e9bf5dde17"
+    },
+    "spans/callable-invoker.txt": {
+      "bytes": 1271,
+      "sha256": "aa967d6411506b40d5089c2f253ad63cbf08347bd0867c7cb7cb66970dc43d44"
+    },
+    "spans/context-getter-brand.txt": {
+      "bytes": 184,
+      "sha256": "05db96823fe7d1a9bace1c8b08a3fb03a215362bec3aa6df323cd0a1b91160c3"
+    },
+    "spans/context-getter-line.txt": {
+      "bytes": 184,
+      "sha256": "b0e38ae5a70f5774fe7df9f84251c35efa2829e5b93b9a8adf71d65582cc2fce"
+    },
+    "spans/context-getter-model.txt": {
+      "bytes": 184,
+      "sha256": "07ebbcfe47031123f221d07b36d9205437fe65dfe99566ef1579e8db28928b27"
+    },
+    "spans/factory-inline-query-results.txt": {
+      "bytes": 2349,
+      "sha256": "aeabaab81fde339af4b353c24868692f23234984dbe937bbb423729fb3ac71e4"
+    },
+    "spans/factory-prologue-and-base-vtable.txt": {
+      "bytes": 1873,
+      "sha256": "cedae37d2fcd6c8e66ae9a42cc1221fc5eb472fa168045dc3f8211dd0da46f46"
+    },
+    "spans/initializer-veneer.txt": {
+      "bytes": 177,
+      "sha256": "84707013c0a1ab4b40396018f151ab572f7c35017c90d6841c07cc8d2c417539"
+    },
+    "spans/natural-callable-invocation.txt": {
+      "bytes": 1011,
+      "sha256": "9db88cbce1a88a5d6b963c1d68bfefe2648b4adc17a82a31d68c43482c287d29"
+    },
+    "spans/natural-registry-lookup.txt": {
+      "bytes": 1079,
+      "sha256": "223417d5c992bc92373159db5dffae4e299c54a6b5f6e24e514925e55747f47c"
+    },
+    "spans/reader-column-alias.txt": {
+      "bytes": 1401,
+      "sha256": "b558f52f4ecf632c146885800383f41f8fa3a8fda4af95eb244c37b10af49e00"
+    },
+    "spans/replace-brand-modobj.txt": {
+      "bytes": 1619,
+      "sha256": "8fa98f2df987e1075f8db953b8e794410b7869d6454d4d0e751e4599c7a6cd88"
+    },
+    "spans/replace-key-object.txt": {
+      "bytes": 1543,
+      "sha256": "56bb8f430bd180c73e6b1a6bcfce5cecd72883051e87ba62be73c14796ff5980"
+    },
+    "spans/replace-line-modobj.txt": {
+      "bytes": 1618,
+      "sha256": "b566554c1ee900ccfe1e80d538d08e4e4444bd6f094a5bfaeac2d9517c25f130"
+    },
+    "spans/replace-modobj.txt": {
+      "bytes": 1500,
+      "sha256": "e38173b731bdc48c95eb93169aba29225f6191b4a0e393d3419556599af9655c"
+    },
+    "spans/signed-decimal-string.txt": {
+      "bytes": 4954,
+      "sha256": "62c8cef94512ca7efa28693669a4bb3e33f8e65d8a5afb8bc077209aff5dc6af"
+    },
+    "spans/startup-callable-columns.txt": {
+      "bytes": 1158,
+      "sha256": "87e81aa9f93f4229bd59516347f25660f003d0d7bfb149a699d2d1f1ae09a75a"
+    },
+    "spans/startup-key139-record.txt": {
+      "bytes": 715,
+      "sha256": "672f5a4b267397ada844c856c429dc0a44fd9dab28f2a5db1687083dee0cd00a"
+    },
+    "spans/startup-registry-construction.txt": {
+      "bytes": 754,
+      "sha256": "75a70ccaabeced345d442e7a076c2f2bda6926e516c9117c4c446be5a79b1857"
+    },
+    "spans/startup-registry-setup.txt": {
+      "bytes": 872,
+      "sha256": "1e154e62c13d83dd5d05053e9d0d9306c0314228b9f92ec6f6e10ef62b241e25"
+    },
+    "spans/startup-template-copy.txt": {
+      "bytes": 726,
+      "sha256": "b0f516d0e2c79845ec739764cd55e53cdd6d5bfd6e49c3cd8d2fddcba65755fb"
+    },
+    "spans/string-range-copy.txt": {
+      "bytes": 2472,
+      "sha256": "4647351c90210d5ecae01413077103a177283bab9f50ecccebc700ce40ddd7cc"
+    }
+  },
+  "report_sha256": "03e91bcd39e0c1c1dc4d0b08145981bcd1ea73556f97e868b0113172b33c835a"
+}

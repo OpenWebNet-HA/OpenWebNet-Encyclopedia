@@ -1,0 +1,24 @@
+# MH202 run13 automation translation independent source review
+
+PASS. Parent reviewed the boot agent's report independently against original MH202 normal-image bytes and selected disassembly, then ran its collector --check successfully. This is static source/model review, not native plugin, parser, callback, service or device execution.
+
+## Identity and reproduction
+
+Report SHA256: `fff630872cb31bc442f64c961b22953dedc75327adfb6ccdda1ee168812882fd`.
+
+Collector SHA256: `6cd1e24fcd4660a8e0f6f1a7eadd4f1caddca6817ddcac2d239f20abbdf4bee0`.
+
+Manifest SHA256: `d63ec4f14e9e5b502323b9beccf087d26a52e0e15055304cdf9c806d708548ed`.
+
+Independent ImageVFS reads and a separate ELF PT_LOAD offset decoder verified all 6 input identities, 21 exact span hashes/offsets, 28 instruction words, 15 safe literal targets and all 31 final manifest entries. The collector reproduced29 outputs with two forward/one reverse finite host cases. No canonical native corpus was rerun or added.
+
+## Semantic checks
+
+- Descriptor0xdb5c relocations bind init0x4c40 and translator0x3174. Initialization stores separate criteria1/+52 and2/+56. Original COSO direct/swapped direction paths select those different lists; the values are not both a universal WHO2 filter. Core output routing+48=1 independently matches the reverse route's namespace.
+- Private config default3 follows actual allocation/initializer stores4d74/4c80/4c88. Configuration can replace it. Selected postparsed kind1/WHAT0 or1/WHERE0/null selector/config3 are explicit premises, not raw parser acceptance or active configuration.
+- Original literal pools and jumps2330/2334 select0A/08 with opcode12. WHERE0 selects B1 plus00, then concatenation gives ASCII bodiesB100120A/B1001208. These remain ASCII body candidates; their host-decoded four bytes are not complete serial frames.
+- Native core prepare_briefscs_frames2a04 sets type3, representation1 and route1, then metadata copy2230 preserves source fields without overwriting those type/representation words. List allocation/publication/drain and effective providers are delegates.
+- Separate reverse source type3/representation1/bodyB8111208 selects B8 address branch, two decimal address digits11, opcode12/value08 and fixed WHO2 format. Result*2*1*11## reaches a parser/list API boundary. It is not proved parser acceptance, a causal response to a forward example or physical motion/status.
+- The stripped local helper is identified as0x1c84; nearest-symbol init_plugin text is not used as its function identity. The report correctly leaves broader command/address/position/interface domains and automation STM state outside this batch.
+
+No semantic correction or new source contradiction was required. Original execution and hooks in this area remain0. Reviewed source/model confidence does not close wider Device, full-source, live-provider, runtime or physical gates. Historical reports and all prior source pins remain unchanged.

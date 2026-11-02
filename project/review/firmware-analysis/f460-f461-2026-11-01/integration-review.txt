@@ -1,0 +1,54 @@
+# F460/F461 documentary integration review
+
+PASS for the exact current v2 candidate, no correction requested. I compared the new first-pass reference, landing addition, capsule and coordination documents with the three authoritative reports and independent source reviews. This review is source-aware for my own comparison/archive/DB audit and documentary for the separately peer-reviewed per-product extraction/platform/startup reports. It is not a fresh semantic re-audit of both firmware implementations, all manufacturer documents or the old encyclopedia. No additional collector, original/vendor code, native helper, emulator, semantic fixture, service, device or network/bus/physical operation was executed here.
+
+## Product, artifact and source scope
+
+The public page preserves F460 Home + Project/Home + Control versus F461 local third-party-control roles, without transferring F460 app/alarm behavior or F454 hardware from reusable Object216 labels. Package XML versions/models are source declarations independent of catalogue V/R/build, filenames, installed diagnostic identity and branch ordering. Both curated Device pages remain exactly unchanged at their initial read-time hashes, keeping the per-product collector context reproducible; the new separate build reference does not close their wider Device/source gates.
+
+The canonical cache-copy provenance, local/archive SHA/size matches, extraction integrity and unverified cryptographic signatures remain distinct. F460 packaged MD5 checking is not transferred to F461. AArch64 selected apps require fresh layout/provider evidence rather than ARM32 MHS harness transfer. Normal5823 common paths split5757 equal/66 different; eight selected common app/core binaries differ in bytes, while the five absent F461 executable paths are exact-path inventory facts, not absent capabilities. Kernel/auxiliary differences and six equal DTBs do not select live hardware or prove identical behavior. Startup/script/stack and device-node waits remain requests/declarations, not activation/readiness.
+
+The byte-identical2633728-byte embedded catalogue is correctly treated as one data profile, not installed capability.75 stored tables including sqlite_sequence versus74 noninternal application tables are explicit scopes. The75 equal table SQL definitions,52/23 MHS and42/33 Suite typed-row-multiset comparisons preserve types/multiplicity but do not map reused IDs, prove whole-schema identity or identify changed functionality. Other containers/encrypted/runtime databases, full catalogue consumers/filter/fallback, configured assets and command/parser semantics remain open. No raw credential/configuration/database records are newly exposed by the comparison.
+
+All new original/runtime/native/model/fixture execution remains zero; prior MHS/F454/MH202 ledgers are separate and unchanged. No full Device/source approval, exhaustive analysis, hardware/electrical mapping, accepted protocol, installed endpoint or physical effect is claimed. Future work is ranked as fresh per-build evidence, and closed auth/session/framing/transport scopes are not reopened.
+
+## Exact copies, versions and links
+
+Verified all14 current v2 document pins/copies and all64 exact SOURCE_EXPORTS.v2 source/published pairs. The first62 export entries remain unchanged, with two explicit refinement exports added. Verified the original v1 review-candidate snapshot bytes, comparison nine first copies, original/v2 comparison-report copies, four coordination copies, and nine product/reviewer first-copy sets containing41 members. The new public page equals REFERENCE_CANDIDATE. The retained pre-edit landing plus authoritative DOCUMENT_PATCH.v2 exactly reproduces the current landing.
+
+The pre-format landing, old patch, capsule README and62-entry export index remain preserved. The original patch reconstructs the retained pre-format landing; the v2 insertion removes the separating LF and spaces visible labels without changing source claims/counts. Current README selects the explicit v2 export index; original index/patch/candidate versions remain intact. Authoritative comparison REPORT.v2 retains its two disclosed checksum-scope/filename refinements. F461 REPORT.v2 and LOCATOR_REFINEMENT.v2 retain the original report and superseded metadata-path typo. Disclosed pre-output v1/v2 collector failures, honest terminal-history limits and the F460 stdout ELF-count label are not recast as firmware failures or silently normalized outputs.
+
+Checked43 local Markdown link occurrences and two fragments: all41 existing targets and both fragments resolve. Only the intended later capsule integration-review.txt and validation.json targets await actual assembly. Final complete prior-file protection/identity, strict ESG/ECV/diff and actual branch/status checks remain parent-owned subsequent gates against actual saved files. No future bytes, placeholder or missing-link exemption is certified. No author/repository/source/prior artifact was edited.
+
+## Exact current document pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-2.0.12-and-f461-2.0.11.md` | `702d30094daeb126727f7b8d485421fcca1fe849fb63280049770197ffb5d69e` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md` | `cec905b76f4c95fc3309774a0d453ff7cb0d6d0dfa6f7c2d5714f0a8e2743274` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-2026-11-01/README.md` | `0ec2bda6035182d8af35176dfe5b1f033173a7182d224e6cdcd769e0ad141e1a` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-2026-11-01/SOURCE_EXPORTS.v2.json` | `eeae125b1a6bd4a1d462fbc29ff744d56e57a10babb5787ec389981c764399dc` |
+| `work/f460-f461-comparison/2026-11-01/REPORT.v2.md` | `73b59a730aea8720c0a174a4731bcaf5978ba21c655c55750f1db4e11414e254` |
+| `work/f460-firmware/2.0.12/research/2026-11-01/first-pass/REPORT.md` | `c7a2949ed3f49a14fa611561795c68f3f166d980326719d61029975069263945` |
+| `work/f461-firmware/2.0.11/research/2026-11-01/REPORT.v2.md` | `187877260da89ef432021b971268f83854641a72b73e4d7c8d4d02b035b1dd16` |
+| `work/f460-f461-comparison/2026-11-01/SYNTHESIS.md` | `ca5cca1f72e3283e96b6622a100c16539570b708e6c650c2439ae3a62001960b` |
+| `work/f460-f461-comparison/2026-11-01/COVERAGE.md` | `49da2c494734ebca00b6791465ca3ae3d81b144857c4bfd1f924b18f52cdbb22` |
+| `work/f460-f461-comparison/2026-11-01/RANKED_REMAINING_QUESTIONS.md` | `e4289a921ee89b146c5742a79fde6682037c6594c5fe65a1a0a908e4b85c1c81` |
+| `work/f460-f461-comparison/2026-11-01/RUN_LOG.md` | `203af7af4023db756c68c137de0fd291e35490185ac77872514a50a2ee609349` |
+| `work/f460-f461-comparison/2026-11-01/reviews/f460-source-review.md` | `99f9f603381611a6f22a58e7631471285cd3ee9dc92b9b3a1539bcd6882ea88d` |
+| `work/f460-f461-comparison/2026-11-01/reviews/f461-source-review.md` | `56e9d58cc23b99a5093ea7772323e9783496824ad30d031c9c669a2fbf1b34ea` |
+| `work/f460-f461-comparison/2026-11-01/reviews/comparison-source-review.md` | `ebed42f918ffd09f67ec5107a8b40698a5f625f1d658da9578d8642b8fa8cb93` |
+
+## Preservation and authoritative-method pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `collect_comparison_v3.py` | `1417e1e82ee9ff3d970a1d23e72073d332c3064f44d9f54ce7c2f95d7555d568` |
+| `OUTPUT_MANIFEST.json` | `57af131dcd2ca9e5e99913bf3aa25f6829415ce4f0f568dd5a27b17140660872` |
+| `REPORT_REFINEMENT.json` | `376240409fc561dfb2810413c6625987568f36dc35f8b3941789a0bf46264733` |
+| `FORMAT_REFINEMENT.json` | `63b38b431964ad24626237605eb40f18775e02ded444e5f0f6358d0cad1877fb` |
+| `integration/DOCUMENT_PATCH.json` | `4eb0708fb8ec5154696c0f62e2cef9d01f18e6d71036a7b62b6bb5cc029a931e` |
+| `integration/DOCUMENT_PATCH.v2.json` | `03471034608ee3a109a7e7bbac009cfa441ba506d3d196a1c9a51a0e9b4552b8` |
+| `integration/review-candidate/INDEX.json` | `17e14facd4823ae39195a0bbe6b304894249b376f188df137473f97dc48fe26b` |
+| `integration/review-candidate-v2/INDEX.json` | `ffba913737b38e9b572297c0241a82a116c33b41744d27aac82d3414df0427ae` |
+| `SOURCE_CHECKS.json` | `dc2ea14ec0c632fb0bbc489cd64ed9a56563584e44536e3cb9e438807710bc42` |

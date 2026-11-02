@@ -1,0 +1,38 @@
+# Condition-pointer teardown: independent source review
+
+Verdict: PASS; no correction requested. This is an independent original-byte/static control-flow review of the fresh condition teardown packet. I source-reviewed the earlier BNCUSCENE construction/predicate and four-byte storage refinement; those are inherited context, not newly executed construction or complete teardown proof. No original/native/vendor/provider/target instructions, semantic fixtures, scene/vector objects or live calls were executed. Author files and originals remained read-only.
+
+## Reproduction and independent evidence
+
+Read-only `python3 -B collect_teardown_v1.py --check` reproduced12 outputs. A separate ELF32 PT_LOAD mapper independently verified scheduler SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`, all8 code and3 data span hashes,32 instruction guards,9 decoded Thumb BL/BLX requests, constructor/destructor PIC header identity, actual RTTI/primary slots,6 relative/import relocation rows and2 ARM PLT rotated-immediate jump-slot proofs. All5 input pins and14 immediate first copies match current bytes, sizes and hashes. Retained selected source was read for actual receiver/loop/cleanup order, not only replayed output equality.
+
+## Original relations checked
+
+SceneRunner entry0xa5a40 preserves the primary receiver in r5. The selected cleanup at0xa5b46 loads begin/end from this scene116/120. Its nonempty loop loads one pointee while advancing by4, checks null, then invokes that unchanged primary receiver's vtable+4. The separate null leg0xa5cf6 compares the already advanced cursor, loops when nonfinal, or reloads scene116 and rejoins storage cleanup. Empty ranges skip element callbacks. These are valid-vector/normal-return source contracts, not malformed-range or concurrency guarantees.
+
+The retained selected initializer and available-capacity append re-establish the192-byte BNCUSCENE primary-pointer publication to scene116: one source word is moved unchanged, zeroed and end advances4. No eight-byte control record/count release is substituted. Actual construction/capacity/growth/provider and same valid object/vptr premises stay explicit.
+
+Primary AP0x161fb8 slots0/4/8 hold Thumb0xc86f1/0xc864d/0xc83d9. The deleting slot+4 therefore selects instruction0xc864c, distinct from predicate+8. Destructor PIC independently resolves the same header0x161fb0 and exact24BncuSceneConditionRunner RTTI. The report does not assume every condition has this class or derive destruction merely from its enabled-XOR1 result.
+
+The selected deleting body saves this in r4. Its normal source order conditionally requests deletion of strings at168,144,108 and80 when their pointers differ from their inline buffers176,152,116 and88; each uses stored capacity+1. Then it supplies object+8 to imported condition_variable D1 at0xc86cc and, after normal return, this with size192 to sized delete at0xc86d4. A condition object's own inline string116 is not the scene116 vector. No actual buffer free, CV success/wake/stop, object reclamation or complete unwinding is inferred.
+
+Separately the scene loop's normal/empty/final-null continuation tests begin. Nonzero begin requests sized deletion with capacity pointer scene124 minus begin at0xa5b6c. Element-callback requests therefore precede raw vector-storage deletion on this selected normal composition. The source does not zero each scene entry or establish that every callback completes under errors, invalid aliases or concurrent changes. The preceding action-vector cleanup and following trigger range are inherited ordering context, not a fresh universal join-before-destruction or worker-completion guarantee.
+
+The independent PLT arithmetic binds request entrance0x10eb0 to slot0x165b20/_ZdlPvj@CXXABI_1.3.9 and0x11738 to0x165df0/condition_variableD1@GLIBCXX_3.4.11. These corroborate imported request identities, not live loader/provider binding or successful APIs. No provider, opaque receiving/transport/authentication/session/framing/MQTT/libjel body was inspected.
+
+## Applicability and open boundaries
+
+The report appropriately narrows one selected pointer-teardown route, without an executed removal, reference uniqueness, natural after-poll timing, all worker completion, lifetime adequacy/failure, UAF/leak, cancellation/physical outcome or global absence claim. Natural SceneRunner disposal activation, valid current scene/vector/vptr/string/allocator state, other aliases/owners, all errors/unwind/concurrency and effective providers remain open. The first-copy integrity checks do not independently prove every historical development event; no earlier byte history is reconstructed or authenticated.
+
+## Exact current pins
+
+Paths below are relative to teardown/.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `4bbc78187774b2e08795eedeafd212cc100ead905e19f6face1500fc0f40b2e1` |
+| `collect_teardown_v1.py` | `71fb996acddf857c048843644862e792a6eed5e2c66df8914a2d6b6b3858f679` |
+| `OUTPUT_MANIFEST.json` | `c5898e90f559ad7490a32ef4b4df6ece7a1985ace919143c528cb4ab2aa18da6` |
+| `ORIGINAL_SOURCE.json` | `47af2a761dbfed3ac42d9b7ac9cd6b8e8dbe86f4c1065d9e2e16f5b09d644c02` |
+| `TEARDOWN_CONTRACT.json` | `c01c483ff10c8fd2ca6c498b70ce4b1e13d6dc4e82306329e90153091bc98eeb` |
+| `first-candidate/INDEX.json` | `1001f245511a0fe98831e985c34cc22f34cf4233b30e34df1df1b76fa1588774` |

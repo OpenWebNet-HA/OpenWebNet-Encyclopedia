@@ -1,0 +1,52 @@
+# MH202 run22 field-initialization pointer provenance review
+
+PASS, no correction requested. Independent static current-source/finite-pointer-ledger review of alarm/run22's immutable first candidate. No collector, output, source report or original firmware was changed. Only this NEW review file was written. Original/native execution, callbacks/code hooks and target OS/network/device operations by this review are0; no native replay or new runtime experiment occurred.
+
+## Reproduction, original checks and first-generation identity
+
+Reproduced collect_registration.py --check:20outputs/10spans/21words/7input identities/6relocation rows/2finite ledgers. The collector compares bytes and writes nothing. Independently reread the three original ELFs and other four input identities, used separate PT_LOAD mapping to verify all10raw span hashes/file offsets and21words, and checked main/plugin PIC/GOT arithmetic plus descriptor+56 values. Read actual original main/get_plug_m/register_field_bus/private-allocation/initializer tuple/callback-entry/selected configuration branches rather than only hashes.
+
+All44author-manifest members match recorded SHA-256 and sizes. All21first-generated-candidate members (collector plus20outputs) match snapshot-index hashes AND current root bytes. The first-generation snapshots are actual retained bytes, not reconstructed history. Current report is separately pinned. No overwrite or version correction is indicated by this review. The checker's exclusive generation and read-only --check behavior agree with the immutability claim.
+
+Two supplementary narrow source checks support incidental initializer wording without entering excluded helpers: original0x2634 is movr4,#0 before private+24 store0x2644; original alternate-branch instruction0x2664=eaffffeb rejoins0x2618. No connection/source-registration helper implementation, transport/session/authentication/framing path or activation internals were inspected.
+
+## Source and scope agreement
+
+- Main0xa1e4..0xa1f8 requests76zeroed manager bytes and passes the pointer to get_plug_m. Candidate helper0x1994..0x19b0 preserves an already nonNULL saved manager, so first/normal installed manager identity remains an explicit premise. Main's PICbase0x16660/pool0xaae8 ->GOT0x167f0 resolves field_receive0xb8a8. Stores0xa5ec and0xa5f4 place context atmanager+32 and field_receive atmanager+36. Adjacent callbacks are not substituted.
+- Original descriptor declarations scs_field_bus0xba78 and scsai_field_bus0xbac4 have separate field-descriptor word56 values1 and2, private68/manager72 initially0, and initializer36 relocations toscs_init0x25ec. These are on-disk declaration values, not immutable live configuration or record representation56. Plugin allocations at0x1a50/0x1a98 request separate40byte private objects; stores0x1a6c/0x1a70 and0x1ac0/0x1ac4 associate descriptor68/private+4 back-pointers. Normal allocation and no intervening mutation remain conditions.
+- Both register_field_bus requests0x1b70/0x1bc8 are visible in the selected common subsequent path. Candidate core0x2120..0x21c0 prepends descriptor to manager+16, stores manager atdescriptor+72, and calls descriptor initializer36 withr0=descriptor/r1=manager+32 at0x21a8..0x21b0. Prior unregistration/container/initializer effects and local constant return0 are not made runtime success/connected-source evidence.
+- scs_init retains passedr1 inr6 and descriptor68 private pointer inr5;0x2640 writes private[0]=r6. Under the stated same-private-userdata premise, callback entry0x2680 placesr2 inr8 and0x269c loadsr9/SL fromprivate0/+4. Thus r9=manager+32,SL=that descriptor,[r9+4]=manager+36=field_receive and[r8+4]=SL. This closes a conditional static initialization-to-entry pointer relation. It does NOT establish that an outer source actually installs/passes that private userdata or invokes the callback. The remaining activation premise is precise and honestly retained.
+- The two finite host ledgers correctly compose SCS descriptor1 versus SCSAI descriptor2 with run21's existing criterion4 gate. They do not fabricate a new body/classifier test or raw admitted event. Declared descriptor2 permits the selected callback;1skips it only under the already bounded run21 source conditions. No live source, registry, physical delivery, suppression, leak or defect follows.
+- Only whitelisted packaged config lines are emitted: sectionline6 and SCSAIEnable=1line10. The selected getter uses a null error argument and nonzero0x1cac branch targets0x1cd0 optional parameter reads. Both field registration requests remain after those selected normal paths; the enable boolean alone is not their universal registration gate, activation/readiness signal or evidence of an active connection. Runtime file overrides/GLib parsing/errors remain unexecuted. No unselected config contents or credential values were emitted by this review.
+
+The source/provider distinctions are correct: import/NEEDED/actual executable definition identify a same-build candidate; live symbol binding/order and startup side effects remain conditional. Run21's opaque target[r9+4] is narrowed by a real initializer composition, while same-userdata activation is still unclosed. There is no promotion of the historical synthetic00004209 body into a physically received valid alarm event. No excluded lower-level branch is needed to make the scoped claim reviewable.
+
+## Reviewed pins
+
+Paths below are relative to work/mh202-firmware/research/2026-10-30/. The44-entry manifest pins every author file/history member; this later review is excluded to avoid a provenance cycle.
+
+| Artifact in alarm/run22/ | SHA-256 |
+|---|---|
+| `REPORT.md` | `9d47e1b79578fd6e97765d1392d1d6afdacd078e7ca81b01ad743d4e5748e43a` |
+| `collect_registration.py` | `eecc1e4e7d45ab7e4bef7bb1f1d5e1a768d41f549dee5e71da9d12868998961d` |
+| `output-manifest.json` | `659ac212aeedbf3cac08ace3cc03db050e6a3819774f66ce6134685618fb8183` |
+| `original-spans.json` | `309c18a1b97f186a439389f535a35c5c45e2346c28762a783e3a766bad34c679` |
+| `critical-words.json` | `830021e5a3463a0cf8db9bcfd06c02c2ca9a26b69da0d7ef95945750f5cb8cf6` |
+| `input-hashes.json` | `842a0967db10f06ff4981a9dd624a63971e7bf58728fb73b0cfd1bed42730eb8` |
+| `checked-pointer-joins.json` | `8b2665961ecdeeb6d1d1c8f8321dd8033e488816330ef8edbd27a1628d152ecb` |
+| `declared-descriptors.json` | `e7babd732e4a6f360eb6bed486a48f5bc21231a358698b9940b54fb928a7cacc` |
+| `host-initialization-ledger.json` | `0d84148dfc673b458ea310a31f12dd317861b80d571fc317a8d4f06380241dd2` |
+| `selected-registration-relocations.txt` | `0bdc879448de59a9690c2fb5c6e6ffb3836c8eb25c10cb2286786c5bb875ea27` |
+| `whitelisted-config-literals.json` | `902fb851dbaf7c6110a8fcc9a847fca78dfbf8fe940bbf46abe019c48da280fc` |
+| `whitelisted-packaged-config.json` | `ae178c095fb4c589f9fae0237478f1b3b8902a38a9ea212091b83973aeaaf690` |
+| `first-generated-candidate/snapshot-index.json` | `0e65ccf8c2519f11dd6372a2c141014a104a92790de5cac4f0d1dcb3adc45b3e` |
+
+| Verified input identity | SHA-256 |
+|---|---|
+| `/home/bticino/libcoso/libplug_scs.so` | `07fe8d2b35264df4961e1cc9b648808a6ee5b32754a705b237fb90d0a6a6f6af` |
+| `/home/bticino/bin/coso` | `6865c2d1d441d25effa31275080ded70ad3538a8a49288e3002ffb196b066175` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+| `/home/bticino/cfg/coso_plugins/scs_cmd` | `c9b0f2d52b87aa89f7b1cc27877f3d0042f7cea777b2f448b723218ba8a6f532` |
+| `research:image_vfs.py` | `67fbac9a1508655bd69ac15dacf1b98679def8c62fad344c4b3c01c3ba2219a3` |
+| `research:alarm/run21/REPORT.md` | `7d7d27de1854e897b3761034265f7ee2dc4179edbc12eb31f4b85d9c8728c870` |
+| `research:functional/run7/REPORT.md` | `9f677fb93603e88f3297bb8785bf85fd2f4ba1161bd084d808f17b17e975c218` |

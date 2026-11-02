@@ -1,0 +1,10 @@
+{
+  "reason": "Pre-final ECV reports literal target /home/bticino as user-specific path. Public prose now uses configuration-directory-relative extra/70; original full source evidence remains unchanged in supporting reports. No source behavior or semantics corrected.",
+  "before": "/home/bticino/cfg/extra/70",
+  "after": "extra/70",
+  "before_public_sha256": "9212657411f70769273720fc0a2421362bb6ae93556be27c0416fe756c9f4f9b",
+  "after_public_sha256": "5e655436978dc032f0d4c750e5dfbd56cd17efbda2bd4a135129b1280e7f691a",
+  "exact_pre_edit_index": "work/f460-f461-comparison/2026-11-01-run08/integration/before-wording-v2/INDEX.json",
+  "history": "Initial inline snapshot assembly mixed relative O and absolute W; ValueError occurred after one exact oldmain copy and before index/public edit. Resumed with absolute O after asserting that existing copy equals original. No historical script/file hash fabricated.",
+  "preliminary_gates": "ESG expected pending review/validation links; ECV one public-path violation; diff clean. Final gates after actual reviews/validation."
+}

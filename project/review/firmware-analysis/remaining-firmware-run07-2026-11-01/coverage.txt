@@ -1,0 +1,11 @@
+# Coverage after run07
+
+| Strand | Classification/current reach | Remaining |
+| --- | --- | --- |
+| MH200Napplication | NEWselected pattern/variadicformat/system→listingpath/fopen request | Naturaloutercaller/providers/shell/currentfiles/capacity/streamcontents/grammar/compiler/installedoverlay |
+| F459 | NEWwatcher/filelist/pathadd/namedconnection + conditional owncallbackrequest | Register/objectpreservation/Qtname-resolution/actualevents/freshness/connection/quiescence/lifetime |
+| F455 | GAP/admission, ZEROnewsourcecoverage, selectedmetadata/contextpins only | Authoritative CPU/ISA/ABI/endian/base/loader/linker/debug/hardwarerevision |
+| F450 | Prior permittedsource only | Deniedhelper2eec4/body/equivalents remainCLOSED; actualparser/assets/config/extra50/DB |
+| F453AV | Prior ownrecovery source only | Naturalrecovery/main/provider/fullresource/hardware/installedstate |
+
+Two newsourcepackets mustnotbe counted as three. Separate gap checks are integrity/admission, not semantic firmware coverage. No neworiginal/native/helper/SQL/target/runtime/physical execution orDB/retrieval/upload; cumulative1encryptedSupport0plaintext. Prior144run06indexedmembers protected. Currentpublicpage has exactold/currentmapping; priorcapsulesunchanged. Fullsource/Device/runtimeapprovalpending.

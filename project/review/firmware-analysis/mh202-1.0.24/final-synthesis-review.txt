@@ -1,0 +1,72 @@
+# MH202 final synthesis independent review
+
+PASS for the exact NEW FINAL_REPORT.md bytes pinned below. I read the complete final synthesis, compared it to the frozen through26 basis and retained final versions, current coverage/ranking, the reviewed27/28 reports/refinements/source reviews and selectively relevant inherited reports. This is a source-aware synthesis/documentary review, with byte/link/count checks, not a new all-original-source semantic re-audit, native replay, firmware execution or physical validation. My earlier authored interpreter/COSO areas and prior source-reviewed navigation/helpers are source-aware; other areas are documentary comparisons to designated independent reviews. Only this NEW review is written.
+
+## Main findings and retained boundaries
+
+The final report correctly keeps WHO17 task management separate from COSO WHO0 translation, availability from execution/control state, numeric script filenames from PHP XMLid/gap rules, direct taskmanager slots/event caches from named interpreter heap records, and local software receipts from bus or physical evidence. The selected IIF/clock/GOTO/mixed-state conclusions remain conditional source findings rather than a complete configured grammar/action execution. Missing2.xtz/4.xtz and configured assets remain explicit.
+
+Parser90/130 address-slot layouts and48-byte COSO pointer objects/64-byte envelopes remain separate. Actual ordinary parser-normalizer and selected exact parser/serializer tests are distinguished from modelled primitives, fixture state and the two prefixes stopped before DIM1 selector reads. The diagnostic qualifier's omitted-predecessor correction is retained, without raw/global acceptance, physical identity or correlation promotion. No F454 layout or behavior transfer follows from filenames.
+
+Independent source examples, supplied address/configuration/helper returns and reverse candidates for WHO25/14/15 remain independent, with no physical/public-domain expansion. The source context table44/60/68/320/24/8/no selected initializer allocation agrees with the scoped reports. Its WHO25 cell now acknowledges the later manual original initializer/application corpus while retaining real-timer/publication limits. Conditional utility600microsecond arithmetic is correctly qualified by provider/success/ARM32 timeval ABI, not a measured interval/bug. Utility260's tenth converted value is not a Boolean/full accepted configuration or activation claim.
+
+The reviewed WHO25 manual join has the corrected source role: the original initializer creates the24-byte private object, while only the application consumes SAME Q from original core/parser/new_id. No parsed/private reseeding occurs, metadata4/8 changes are explicit, and synthetic counter/tuple/list/opaque unmapped timer-context/NULL publication callback remain disclosed. Original initializer/reset code and application execution do not become a natural registry/queue/field/translator transaction, uniqueness/lifetime safety, real GSource, callback or I/O. The3-entry380+25+4+3=412 contribution includes reused code and excludes setup/replay accumulation. The separate source-identity table refinement promotes corrected REPORT.v2 and preserves the wrong historical table without changing actual code/results.
+
+Positive WHO29 ownership is supported by registration/criterion/callback/exact WHO check. The already-parsed selected getter fixture and raw constructor-vector boundary do not establish current logger state, final object/wire schema, exclusive ownership, full vocabulary, active loading or access policy. The summary does not expand into other debug/secret implementations.
+
+Source28's GLib counter/private-pointer distinction and attached/unattached destruction semantics remain source contracts, not retained-reference/leak/compensation/deallocation/timing proof. FIFO pathname slots, two-open/global stores/second-return overwrite and readAPI count are likewise source dataflow, not observed successful descriptors, payload/response parsing, liveness, cleanup or dedicated R/P production. The bounded byte miss/interior suffix is not global absence. External0x8c90/session/authentication/framing and closed-equivalent branches remain opaque; the report does not propose retrying them.
+
+Storage copy-operand and unsigned helper-byte versus exact-minus-one caller observations retain their static scopes, with no observed damage/repair/reset/durability claim. PHPCLI5.2.13 versus Apache-module5.1.6, GLib2.28.7 versus ABI SONAME2.0 and selected recovery-path aliases remain package/source evidence, not active service inventory, global capability absence, full SBOM or vulnerability assessment.
+
+## Arithmetic, references and immutable lineage
+
+I independently reconciled all15 saved corpus records in completed28 validation:71 top-level entries,31961 original instruction visits,3165 declared primitives,132 original-definition redirects,27 explicitly recorded EXIT boundaries and2 selector-read stops total35287 hooks. Older corpora without an EXIT-hook counter do not acquire one merely because a helper returned; their saved method/counter schema is retained. Setup data writes, nested parsers, original GLib visit subsets and parent verification replays do not create extra canonical entries/visits. No new28/final native experiment is claimed. Inherited31 tooling tests/210 Device checks remain inherited, with wider gates pending.
+
+All87 final-report Markdown references were checked:84 existing occurrences resolve and exactly3 prospective occurrences remain at read time, comprising the final verification target twice and this synthesis-review target once. No heading fragments need resolution in these87 links. Relative relocation from the NEW root report is correct, including the main repository profile. Final validation is still pending; this review does not claim final strict gates/automation closure have already happened. The report explicitly separates those completion records from source investigation completion. Its final verification references must resolve before final handoff.
+
+The final v1 snapshot/lineage and candidate-v2 are retained. I independently verified that the initial-v1 to current-v2 difference is exactly the disclosed single sentence substitution: initializer/private creation versus application/Q consumption. No other bytes changed in that refinement; candidate-v2 equals current FINAL_REPORT.md. The current file has2897 whitespace-separated words; this documentary count is not a coverage measure. Both earlier through22/through26 morning drafts remain at their reviewed hashes and are not overwritten or relabeled current.
+
+The frozen24-through21 guide, separate2-run22 supplement and9 later23..27 rows are scoped as35 navigation rows rather than tests/coverage/all-source semantic audit; source28 remains separately reviewed. Current final source/effects and preserved later first candidates do not authenticate unavailable run18/sound21 intermediate generated drafts. Both historical limits remain explicit. Remaining questions align with current ranking: configured assets/IPC bridge; active providers/registry/context/queue/lifetime; R/P and gate clearing; production selectors/full grammar/actions; diagnostic C++/thermo/publication and runtime/concurrency/physical corroboration. No exhaustive/completely covered/device-ready claim is made.
+
+No report refinement is requested. Final coverage/ranking/state may advance to completion after this read-time review without changing the reviewed source claims. Final branch/reference/identity checks and actual same-heartbeat closure remain parent-owned prerequisites. This PASS applies to the pinned report and described synthesis scope, not to ungenerated future validation or completion receipts.
+
+## Exact reviewed final and lineage bytes
+
+| Research-relative artifact | SHA256 |
+|---|---|
+|FINAL_REPORT.md|5b9e38d62cfee76bca3ea995a565a07deebf2d8e1a8b7f5931b5eafad906341b|
+|reconciliation/final/FINAL_REPORT.initial-v1.txt|2a954de090d71f9600a6d59aa37497f27a3eb8c44eb49aacbfbfe0bfa94837c5|
+|reconciliation/final/FINAL_REPORT_LINEAGE.v1.json|1634c7fc6872b1bff505114f9271e1e025118cd853bee777aeb3f825674ec4f0|
+|reconciliation/final/FINAL_REPORT.candidate-v2.txt|5b9e38d62cfee76bca3ea995a565a07deebf2d8e1a8b7f5931b5eafad906341b|
+|reconciliation/final/FINAL_REPORT_VERSION_HISTORY.v2.json|f4f7672237c52e2d08cf8329ebab83beb075b57a9dbeaf00eef81687b8d5b0ab|
+|MORNING_REPORT.md|ad21bd70deb3c1b21eec6d52f86d473162b3ede66b7cb6ed1164193c3fc7ab44|
+|reconciliation/run27/FINAL_DRAFT.through26.md|e1ba480d93b1a0c60105c85a5f0ab6e8bfa94db8bfa066c421baa1cf2f1ae301|
+|validation/run28/final-checkpoint.json|038294f02662844b7c175c4fb0e87db742b03c788a6a28020c8c158ad932803d|
+|validation/run28/postwrite-ESG.json|20400405864c3e13820f7aa577f34caca43716639fcc33b9ded38800d86e33d3|
+|COVERAGE.md|4710125b7ba3f4411724f9ae3bd485f1b2a5165d19ebd505c3a2277e237e9a33|
+|REMAINING_QUESTIONS.md|94f92cedb1196d8fd97b20406f8877a132181e289029fd930dc164da28b13f2f|
+|SYNTHESIS.md|d76115207cb69a3f056580bd6a15e88394412096658b2ec3be4da8f90c9ddbb8|
+|reviews/final/preflight.md|a5e482fa7681fdfb8b86590b88f6118280688f7e9652020c0ff3d14a2d3b3b04|
+
+Current coordination hashes above identify read-time bytes, not an assertion that coverage/ranking/synthesis will remain frozen during final completion.
+
+## Principal27/28 supporting report and review pins
+
+| Research-relative artifact | SHA256 |
+|---|---|
+|who25/run27-native/REPORT.v2.md|437cb8bb3777594d10b27bbc76a10a7b944431b1e918f28db51e89eaae50416a|
+|who25/run27-native/SOURCE_IDENTITY_REFINEMENT.md|cceba8f83a6b808192c848b1a5e131733970ce323dd603328d075a0ad12e4ccd|
+|reviews/run27/native-review.md|187e879f6fe2ff617239169b2ccbd672e6753b75864298520c806ebc04a49852|
+|routing/run27/REPORT.md|b28b2d23d05d5edb25ba0fa70886c98b50fbcdcf9b370d3dcdfe268dd34e9712|
+|reviews/run27/owner-review.md|66ec88c1ae2a86d1f506cb9e8c770884ff8eeafb1fd24a99641ca82673168544|
+|who25/run28-source/REPORT.md|d3c4f4f85dbd6b5417ddf0173b537491babdb411da6821c3780f2832e006217e|
+|reviews/run28/source-ownership-review.md|2dcc2aaa20236b5fda6fd5fbf78961e387c5158c104dade12e8a978b7c8d7fc1|
+|lifecycle/run28/REPORT.v2.md|59a19126dfca9f0ff909b04f7e70af1f9df5ec2f09f368b70c93942fb0d81d5c|
+|lifecycle/run28/WORDING_REFINEMENT.md|15c0350d69c0d835114651ec70c1a6b5a2f97caea8634c89d7c8a5a806d6cc46|
+|reviews/run28/fifo-review.md|282d65fa08f982d0688f800d63bdae273a5e2535e0886cb31085596137b31690|
+|reconciliation/run28/candidate-v3/LATER_FINDINGS.md|dad01efec97fce3645a644a29347d652b243d305429d1bbe49fa9d3c040bf347|
+|reconciliation/run28/candidate-v3/VERIFICATION_EXTENSION.md|47e6cc03475f9fb90265f0054c53eff3252fa98d183ddafe9aaef341297ef2a9|
+|reviews/run28/navigation-review.md|d0b1cf4bf79cb5b319aa743ed39ad22b523d25a5aca2e7dcbf8c2cb431e76a9b|
+|reviews/run28/integration-review.md|45edb302974bb0263580c3bcb51d3c338964acb47e4c4966ae0ff68dca84d988|
+
+Direct final-report citations carry the inherited exact-source evidence and previously reviewed limits. Their use here is documentary support, not a claim that every old binary instruction or source conclusion was independently re-audited in this final review.

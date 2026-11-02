@@ -1,0 +1,29 @@
+{
+  "classification": "HOST_UPSTREAM_FORMAT_CONTEXT_NOT_TARGET_HEADERS_OR_BINDING",
+  "retrieved_UTC": "2026-11-01T23:16:29.648524+00:00",
+  "method": "web tool opened upstream qt/qtbase 5.15 source; selected human paraphrases, not full source downloads or target provider inspection",
+  "sources": [
+    {
+      "url": "https://github.com/qt/qtbase/blob/5.15/src/corelib/kernel/qmetaobject_p.h",
+      "web_lines": [
+        1025,
+        1054
+      ],
+      "paraphrase": "The upstream private header begins with revision and class-name fields, then class-info count/data, method count/data, further count/data pairs, flags and signal count. Its commentary associates revision7 with Qt5.0 and revision8 with a later enum-format addition. This is documentary format context only."
+    },
+    {
+      "url": "https://github.com/qt/qtbase/blob/5.15/src/corelib/kernel/qmetaobject.cpp",
+      "web_lines": [
+        3103,
+        3192
+      ],
+      "paraphrase": "The upstream method matcher reads argument count at row+1, resolves the name using row0 and string data, and checks parameter types for each argument. Its local search derives a row using the method-data offset plus five times the local index and returns the matching local index. This supports the selected revision7-compatible interpretation without proving the target loader/provider or executing matching."
+    }
+  ],
+  "limits": [
+    "Not the original target headers, exact target Qt release or effective loaded provider.",
+    "Original target bytes/relocations are independently required; modern upstream context cannot replace them.",
+    "Earlier official v5.0.0/5.3 retrieval attempts returned unavailable/cache-miss; no bytes/hash from those absent pages claimed.",
+    "No provider body/target code execution, network to target, or complete Qt connection semantic proof."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "branch": "0xa7630",
+  "halfword": "0x18",
+  "scope": "Halfwords are data. Selected branch only; no action executed.",
+  "selected_local_enum": 10,
+  "table_base": "0xa7600"
+}

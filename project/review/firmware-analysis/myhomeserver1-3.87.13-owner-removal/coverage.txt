@@ -1,0 +1,10 @@
+# Bounded coverage
+
+| Area | New original source edge | Unresolved |
+| --- | --- | --- |
+|Owner removal|Concrete local numeric-context/ID caller; matching-node pair clear before control release; conditional SceneRunner disposal; keyed eraser branches|Caller-context/main-registry equality and eligibility, actual last owner, after-poll relation, complete recursive/error/provider/worker/lifetime/concurrency|
+|Reset-candidate caller|One exact-target direct call gives stack receiver and inline string byte72 alias|Positive shared reset owner, other calls/aliases/indirect/bulk/provider writers; no global absence|
+
+No previous append/thread/polling/22alias/747-store table is recounted as new coverage. All new original execution and semantic host cases0, full runtime/physical observation0. No complete Device/source approval or coverage percentage. Missing configured extras80/81/94/95, effective binding/readiness, shared reset and natural ownership ordering remain open.
+
+Both author packets retain exclusive first-generation candidates and exact first copies. Original sources/images/synced files/completed dossiers remain read-only. Prior serializer temporary/final v1/v2 history and prior MH202 run18/run21 unavailable intermediate histories remain unchanged and explicitly scoped. Functional agent reviewer/read-only only. Local work remains uncommitted/unstaged; no publishing/source-manifest edits/live contact.

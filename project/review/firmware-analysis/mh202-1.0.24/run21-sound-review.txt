@@ -1,0 +1,63 @@
+# MH202 run21 multimedia STM source review
+
+PASS for the current source/finite models, with an explicitly unresolved earlier draft-history omission. No source-outcome correction requested. This is independent static source review and host ledger recount, not native replay, actual parser acceptance or a causal sound request/reply test. Original instruction visits, primitive callbacks, code hooks and target OS/I/O operations performed by this review are0. Only this NEW review file was written; author files and older evidence remain unchanged.
+
+## Reproduction and source checks
+
+Reproduced sound/run21/collect_evidence.py --check successfully:17deterministic outputs plus manifest,12spans,41words,one original ELF,seven selected relocations and four finite source cases. The collector writes nothing in check mode. Independently reread the original ELF via ImageVFS, mapped PT_LOAD VAs/file offsets separately, and checked all12raw span hashes/41words. All17output-manifest members,23current author-manifest members, accessor/prior sound20 pins and two actually retained announced snapshots match current bytes. Independently compared all7relocation rows to fresh readelf output and verified named callback targets.
+
+Additionally inspected original init_status prologue0xf588/0xf58c words e92d4ff0/e24dd074:36saved-register bytes +116local bytes =152stack delta. Its later SP+164/+168/+172 loads therefore correspond to incoming stack12/16/20, supporting the report's argument-to-private252/256/260 provenance. This is source reading only, not execution of this large initializer.
+
+## Actual source agreement
+
+- Descriptor0x1ab24 callbacks+36/+40/+44 resolve to sm_init0xfb0c/field0xcde4/application0xfc04. Registration appends numeric22/8 to criterion list52, distinct from parsed WHO/kind and raw descriptor words32/48. Context320zero-allocation/reuse and successful active registration remain conditional. sm_init stores descriptor268/context276/callback280. Its actual stack0/1/0 inputs reach private252/256/260 through init_status as reported; subsequent state and existing-context contents are not inferred.
+- The selected application branch supplies coherent repr3/WHO22/kind2/WHERE1/nullselector object. check_open_multi duplicates WHERE, exact1 returns through check_multi_where0xba14, and parsedkind2 bypasses normal-WHAT validation. No outer WHO admission/parser/runtime execution is claimed. Flags252=0/260=0 bypass source/util delegates,256nonzero permits the ordinary branch.
+- At0xfcd4 pending296 is set1; comparisons of bytes0..14 against9 can clear it. Selected all1 bytes leave it1. Original0xfe08/0xfe0c writes Qmeta8/meta4=1, append0xfe14 uses the same Q, and0xfe40 copies Q.ID60 to private300. There is no new_id call here. The model's ID41 and deadline zeros are supplied values, not natural state/queue ownership or a delivered query. All-zero deadline pairs support manage_timeout0x22d0..0x22d4's return before timer creation; this does not make all queries untimed.
+- Field receipt classification at0xce38..0xce44 uses envelope status52 in1..2 before ordinary source/util processing. Original0xcfdc..0xcfe8 compares recordID60 against private300; mismatch returns0 without the selected changes. Matching ID additionally needs pending296nonzero. At0xd01c pending is cleared BEFORE status2 comparison. Thus matching status1 returns with pending cleared only; matching status2 requests queue_nack_to_open(output argument3), conditionally destroys/unrefs nonNULL timer312, sets trackedDIM304=-1 and clears pending. No physical ACK/acceptance/delivery is implied by status numbers or helper names.
+- The kind4/DIM timer is a DISTINCT nonreceipt path. Original0xceec..0xcef8 checks parsedkind4,0xd070..0xd088 compares converted DIM against private304, then metadata8=5 and existing source cleanup precede the308gate. Nonzero308 requests interval literal1300 and stores source312; relocated timeout_req_dim0x205c is installed with private context and attached to context276. Zero308 requests a local ACK instead. Both reset trackedDIM304. This is not a demonstrated deadline for the selected kind2 query, and no physical dimension/volume interpretation is introduced.
+- timeout_req_dim checks pending296 for local ACK/NACK selection, passes &local_list/0/descriptor+60 to stored callback280 and resets304/296/312. Actual callback identity/consumption, scheduling, timing units/firing and lifetimes remain external contracts. Logging timer284/288 and manage_timeout's clock/deadline/divide1000/control_timeout scheduler are separately identified; none is collapsed into the1300timer or empirically executed.
+
+Independently recomputed the query and three separate receipt ledgers. ID40/status2 leaves the declared state; ID41/status1 clears pending; ID41/status2 requests the selected NACK/conditional cleanup. Cases start from the same declared post-query state rather than forming a consecutive captured exchange. All-zero deadline input and NULLexisting timer are explicit; conditional cleanup callsite wording is not an assertion that destroy/unref actually ran in that NULL case. The report preserves candidate-provider/import, grammar, initialization, active-registry, normal-helper completion, nonaliasing/ownership and physical limits. No other STM/F454 layout was used.
+
+## Provenance limitation
+
+The current report explicitly discloses that an earlier raw-descriptor key neutralization overwrote generated descriptor JSON, deterministic output-manifest and collector draft WITHOUT retaining their exact pre-edit bytes or an independently pinned prior hash. No reconstruction is provided. This review cannot verify those unavailable historical bytes or certify full draft-history integrity; author statements that source/outcomes/counts did not change are not independent historical hash proof.
+
+The two actually announced report/author-manifest files immediately BEFORE the later provenance clarification ARE retained under history-before-provenance-clarification and match the recorded11d1fcef...2455c04 /9515390b...38fb8e pins. Those snapshots do not recover the earlier neutralization drafts. Current final source/result/model correspondence is independently verified above. This is a disclosed current-batch provenance omission, not an invented authenticated historical snapshot or an alteration to an older completed dossier. No additional author edits were requested by this source review.
+
+## Exact reviewed pins
+
+Paths below are relative to work/mh202-firmware/research/2026-10-30/. The author manifest excludes itself and later reviews; this review introduces no provenance self-cycle.
+
+| Artifact in sound/run21/ | SHA-256 |
+|---|---|
+| `REPORT.md` | `7a620c417174980119e9573c914dbe7730823697661cb975a20708e8e127aea6` |
+| `application-query-gate-forward-ID.txt` | `2c88cba85810bd1d7f05e539363cc6714f27605e6bd310c60309809e42d421fa` |
+| `application-text-reparse-and-delegates.txt` | `e1b384e8d2fad2e99cf25224b23b0d8eb533cb5f931ac89a77e4acf58def4795` |
+| `collect_evidence.py` | `6e0d435df598cb7586c82967b565af9cd2d3a4fcef8b16b5daa5b8acc1251ec3` |
+| `critical-words.json` | `2a8d6d3b7434188f21d11b66b90c58e983d7f0316b9e5bf656f4ba46fb99f651` |
+| `descriptor-callback-and-provider.json` | `7fc3c615783b111d1bbcc2d4b3dc840665a38fac77576ecb9eb873c4f72e017f` |
+| `field-dimension-timer.txt` | `c420632224cb1dd4cb38629cc7b1960084feafa1001ee52583738db21f3a6061` |
+| `field-reparse-ID-result-and-cleanup.txt` | `ca6e657c762468abbb238fc5af93104cb0ce2175750d7dc7165850050b28349e` |
+| `field-representation-status-and-output.txt` | `38e396e7585ea2a1f5ca46cc39f8f5fecbb422e15e5b040e184f0c5a898f95a6` |
+| `finite-query-and-separate-receipts.json` | `d0be2a20de63b37301e7d135b10f8006ad1680eb510ee7866c1d53ca3542eeb4` |
+| `history-before-provenance-clarification/REPORT.md` | `11d1fcefd6f7057b56ab8bfdf930d753bec91c590dbbb1ad2d2c11e5b2455c04` |
+| `history-before-provenance-clarification/SNAPSHOT.json` | `681902ad2b341c84610d936077960fa1f0d562635b23d71c040064383f170292` |
+| `history-before-provenance-clarification/author-manifest.json` | `9515390bed875689faf9681a3e0b077af3e657adde9943bc551aed488f38fb8e` |
+| `init-status-selected-config-fields.txt` | `feb4cf9c2c2b87117109ddb82663da4ae06fa5b670babfa4df5eb33892853f7b` |
+| `input-hashes.json` | `0c14cc730784e6da3747850a8cafaec8599f5084d065e8eb0df4c1f6870c13df` |
+| `manage-timeout-choose-and-schedule.txt` | `593d0e531d352ef824c96cebf234f09821cab0392b0f21e23eb7a456aa348fbb` |
+| `original-spans.json` | `a23c3958a9005c32802f34b5af75f73d975607c1e38b6524ad9e19220555e282` |
+| `output-manifest.json` | `c6649050ea1545e7d158327289fa6c7910fc5d121f199930ddf32bc7e1aa8d14` |
+| `parsed-address-and-kind-check.txt` | `eedf8d9fac5a6ac2afc10a5d447aa3a8cb8c5fa6ef5a8e30acdbef2cedaf246e` |
+| `registration-context-and-criteria.txt` | `e56704e0f2f333c6971a394626a2a9d3783ede8e14586adc3df9ef1641ec6fda` |
+| `sm-init-context-and-callback.txt` | `1f936d68342bf69f1817c6d9154ffa028630863ff90da5e6152f2594c45e4d78` |
+| `timeout-result-callback.txt` | `765e47bb024ed8920b8069b10e1c8aff1a7f90aadf6f8720af5c7b82506f6921` |
+| `where1-check.txt` | `18021ceaeacb7c2e547ae708464268a3250f4808033fe8bb7fa092c6f4d35d31` |
+| `author-manifest.json` | `db20ddde7509313161867d5ccf505b63b5ea342d2ec8706c501a4643085f2c6b` |
+
+| Original normal-image file | SHA-256 |
+|---|---|
+| `/home/bticino/libcoso/libplug_multi_stm.so` | `8b9f393f5b8b4f47645821d7e7eedcc2cc15351f76d10fc8d8c8f6c38cd69128` |
+
+Accessor image_vfs.py: `67fbac9a1508655bd69ac15dacf1b98679def8c62fad344c4b3c01c3ba2219a3`. Prior sound/run20/REPORT.md: `81440e9833acb835626e2036923e2614db5bdf341ad03b5cf877e585a50d1e33`.

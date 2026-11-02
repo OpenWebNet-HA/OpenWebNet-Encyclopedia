@@ -1,0 +1,54 @@
+{
+  "collector_sha256": "0b86d7fe2350dc117108b2e9c39c389ca64f6a6638ed83232b0c3e082799aebc",
+  "counts": {
+    "PLT_proofs": 3,
+    "code_spans": 7,
+    "guards": 10,
+    "original_execution": 0,
+    "scheduler_imports": 2,
+    "symbols": 6
+  },
+  "outputs": {
+    "CONTRACT.json": {
+      "bytes": 755,
+      "sha256": "09c68f42a69b71aac9245e132540817bc6a17259d25da54dda7a84610210ea2f"
+    },
+    "INPUTS.json": {
+      "bytes": 392,
+      "sha256": "b996238a4809a621cd799d26d326ccb016bdb9838a72e8754326c72d61ce2a79"
+    },
+    "ORIGINAL_SOURCE.json": {
+      "bytes": 5502,
+      "sha256": "aee9f3f5af8bbb3465c16f5692670b12d2323ed824292fdb22c39f38b9452c78"
+    },
+    "spans/asDouble-normal-epilogue.txt": {
+      "bytes": 700,
+      "sha256": "3cf7befb525c30506116751672ed7796607c2710a4a6977749da1276f6ad6177"
+    },
+    "spans/asDouble-prefix.txt": {
+      "bytes": 820,
+      "sha256": "230d991c3366a608c01c95e1c1ca518b443756518e55708e5caf7b209f49a9d6"
+    },
+    "spans/asDouble-type3-load.txt": {
+      "bytes": 252,
+      "sha256": "6ff010972f72055543592a8de212792ea5c61a08c26dee1e13eb2a2186da18c7"
+    },
+    "spans/basic-initialization.txt": {
+      "bytes": 2334,
+      "sha256": "8f88c27041f4e7bc5b74cb93ed36af9068abfb680f13f2c7892f1731d378f3ac"
+    },
+    "spans/comments-move-assignment.txt": {
+      "bytes": 1083,
+      "sha256": "4e0a13c3cbb56546604c643990074f2fa18b0e86c04ce9b6ca50210419203f95"
+    },
+    "spans/double-normal-constructor.txt": {
+      "bytes": 583,
+      "sha256": "4ca8e954c6053b4ea294ed11430cf07548a974426c94d7ee2dc3700e20013144"
+    },
+    "spans/type-byte.txt": {
+      "bytes": 203,
+      "sha256": "613cf76ab1e5f775eb14e9e3e5bff678b881edb663cc40ba697cf6ab97f36c80"
+    }
+  },
+  "report_sha256": "5ae3040b3f3b8e24edff3d6b893c1a78053f6c3d4fc27b66837f90a67e768bd2"
+}

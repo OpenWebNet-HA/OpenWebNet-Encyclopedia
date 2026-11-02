@@ -1,0 +1,7 @@
+# Run12 dual-analysis synthesis
+
+F460 has an actual wrapper/consumer join: selector3 with sameouterinput→C=[input]→recordC56/list8→selectednodeGStringtext/dot-positive/masked1→newGString request using same text. IFsamecontext this consumes the previously staged recovery_firmware list, but common constructor/caller, natural parser order/list state and later command/output/install semantics remain unclosed. Recordkind2, selector3/status4 differ. The packet stops6000 before downstream commands/providers; no validation/trust claim.
+
+F461 takes the permitted selected defer alternative. Unsignedrecord32 clockgate/minimum→freshclock subtraction/signedreciprocaldivision1000/low32 timeoutinterval→actualcallback/dataowner/attach requests→complete owner136 list reentry. Fresh limited candidateGLib wallclock and conditional monotonic ready-time arithmetic provide separate ordinaryABI/provider context. Nonzerorecord32producer remainsOPEN; timestamp24/source96/source100/owner136 differ. No actualclock, schedule, positive/nooverflow delta, sourceflag/runtimebinding/readiness/callback/physical outcome inferred.
+
+Both first source generations and parent static reconstructions pass; exact immediate firstcopies and independent source/documentary gates are separate. All new original/provider/native/emulator/model/fixture/SQL/JSON/time/file/service/runtime/physical execution zero; earlier ledgers/history unchanged. Wider Device/source gates pending.

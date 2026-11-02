@@ -1,0 +1,77 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000cdd14 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1555c>:
+   cdd14:	f8df 2b6c 	ldr.w	r2, [pc, #2924]	@ ce884 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x160cc>
+   cdd18:	2300      	movs	r3, #0
+   cdd1a:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   cdd1e:	f5ad 7d6b 	sub.w	sp, sp, #940	@ 0x3ac
+   cdd22:	f8df 1b64 	ldr.w	r1, [pc, #2916]	@ ce888 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x160d0>
+   cdd26:	ad43      	add	r5, sp, #268	@ 0x10c
+   cdd28:	447a      	add	r2, pc
+   cdd2a:	4606      	mov	r6, r0
+   cdd2c:	9202      	str	r2, [sp, #8]
+   cdd2e:	f8df 2b5c 	ldr.w	r2, [pc, #2908]	@ ce88c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x160d4>
+   cdd32:	4479      	add	r1, pc
+   cdd34:	e9d0 7400 	ldrd	r7, r4, [r0]
+   cdd38:	a846      	add	r0, sp, #280	@ 0x118
+   cdd3a:	9506      	str	r5, [sp, #24]
+   cdd3c:	900a      	str	r0, [sp, #40]	@ 0x28
+   cdd3e:	588a      	ldr	r2, [r1, r2]
+   cdd40:	6812      	ldr	r2, [r2, #0]
+   cdd42:	92e9      	str	r2, [sp, #932]	@ 0x3a4
+   cdd44:	f04f 0200 	mov.w	r2, #0
+   cdd48:	fab7 f287 	clz	r2, r7
+   cdd4c:	702b      	strb	r3, [r5, #0]
+   cdd4e:	0952      	lsrs	r2, r2, #5
+   cdd50:	772b      	strb	r3, [r5, #28]
+   cdd52:	f885 3024 	strb.w	r3, [r5, #36]	@ 0x24
+   cdd56:	f885 302c 	strb.w	r3, [r5, #44]	@ 0x2c
+   cdd5a:	f885 3034 	strb.w	r3, [r5, #52]	@ 0x34
+   cdd5e:	f885 303c 	strb.w	r3, [r5, #60]	@ 0x3c
+   cdd62:	f885 3044 	strb.w	r3, [r5, #68]	@ 0x44
+   cdd66:	f885 304c 	strb.w	r3, [r5, #76]	@ 0x4c
+   cdd6a:	f885 3068 	strb.w	r3, [r5, #104]	@ 0x68
+   cdd6e:	f885 3070 	strb.w	r3, [r5, #112]	@ 0x70
+   cdd72:	f885 3078 	strb.w	r3, [r5, #120]	@ 0x78
+   cdd76:	4263      	negs	r3, r4
+   cdd78:	429f      	cmp	r7, r3
+   cdd7a:	6068      	str	r0, [r5, #4]
+   cdd7c:	bf08      	it	eq
+   cdd7e:	2200      	moveq	r2, #0
+   cdd80:	2a00      	cmp	r2, #0
+   cdd82:	f041 80ac 	bne.w	ceede <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16726>
+   cdd86:	2c0f      	cmp	r4, #15
+   cdd88:	ad14      	add	r5, sp, #80	@ 0x50
+   cdd8a:	602c      	str	r4, [r5, #0]
+   cdd8c:	f200 81e0 	bhi.w	ce150 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15998>
+   cdd90:	2c01      	cmp	r4, #1
+   cdd92:	f040 8149 	bne.w	ce028 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15870>
+   cdd96:	783b      	ldrb	r3, [r7, #0]
+   cdd98:	4601      	mov	r1, r0
+   cdd9a:	9a06      	ldr	r2, [sp, #24]
+   cdd9c:	7313      	strb	r3, [r2, #12]
+   cdd9e:	9806      	ldr	r0, [sp, #24]
+   cdda0:	2200      	movs	r2, #0
+   cdda2:	f8df 3aec 	ldr.w	r3, [pc, #2796]	@ ce890 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x160d8>
+   cdda6:	6084      	str	r4, [r0, #8]
+   cdda8:	447b      	add	r3, pc
+   cddaa:	550a      	strb	r2, [r1, r4]
+   cddac:	2101      	movs	r1, #1
+   cddae:	7001      	strb	r1, [r0, #0]
+   cddb0:	e9d3 0206 	ldrd	r0, r2, [r3, #24]
+   cddb4:	b142      	cbz	r2, cddc8 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15610>
+   cddb6:	2a08      	cmp	r2, #8
+   cddb8:	f000 87ce 	beq.w	ced58 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x165a0>
+   cddbc:	2a02      	cmp	r2, #2
+   cddbe:	f000 87db 	beq.w	ced78 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x165c0>
+   cddc2:	2a03      	cmp	r2, #3
+   cddc4:	f000 87e1 	beq.w	ced8a <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x165d2>
+   cddc8:	ab83      	add	r3, sp, #524	@ 0x20c
+   cddca:	4618      	mov	r0, r3
+   cddcc:	461c      	mov	r4, r3
+   cddce:	9304      	str	r3, [sp, #16]
+   cddd0:	f004 f976 	bl	d20c0 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x19908>

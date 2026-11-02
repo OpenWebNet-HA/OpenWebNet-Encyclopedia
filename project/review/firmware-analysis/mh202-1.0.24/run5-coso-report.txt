@@ -1,0 +1,56 @@
+# MH2021.0.24 COSO scenario translation - run5
+
+The scenario TR plugin has a concrete fixed-WHO0 translation path, distinct from WHO17's taskmanager scheduler. Selected parsed command fields construct brief or extended SCS body candidates; a selected reverse status byte constructs two separate WHO0 OPEN candidates. These are static function/argument/format joins, not executed parsers, accepted complete frames or physical device support.
+
+Normal-image inputs are verified with ImageVFS. Principal paths/hashes: `/home/bticino/libcoso/libplug_scenarios_tr.so` SHA256 `b64fcd47314d457be86f7ce86406a401786f877b8e3a420c247376018e27a6fa`; `/home/bticino/libcoso/libcoso.so` SHA256 `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97`. The collector also pins two original safe configuration files, accessor and immutable run1 report. No F454 fixture or address was transferred. Original ARM/PHP/JS/vendor instructions and callbacks executed0/0. All original images, previous dossiers and synced files stayed read-only.
+
+## Registration and input boundaries
+
+Original `init_plugin` calls `register_translation` at0x1660 with descriptor `scenarios_tr_tr` at0xa518. Relocations at0xa53c and0xa540 identify initializer0x1da8 (descriptor+36) and translator0x1788 (+40). Registration helper in selected libcoso0x1fd0 prepends the descriptor and invokes its nonnull +36 initializer. The plugin initializer calls imported lighting_read_cfg only if private +60 is null, then stores its result there. These are candidate same-image import contracts, not an observed initialized plugin. Descriptor-list criteria/full dispatcher interpretation and actual active routes remain open; list insertions of numeric1/0 are retained without inventing enumeration names.
+
+The actual translator accepts numeric direction pairs(1,2) and(2,1), returning0 immediately for the displayed other-pair route. The fixed original OPEN format literals establish WHO0 output rather than WHO17. On pair(2,1), input record+56 equal3 supplies a parsed object directly; equal2 invokes buf_to_openmsg, frees prior text and changes +56 to3 before continuing. No full parser or ownership/error model was executed. The following command path assumes a successful parsed object, ordinary list/numeric/address/format providers and private context.
+
+## Selected command-to-body construction
+
+Original parsed kind+44 equal1 takes normal-command handling at0x1bbc. The decimal command text comes from object+8. Parameter-list+12 length zero or its first item follow separate branches. A present first item must convert into1..31 under the unsigned comparison at0x1cd0..1cd8; the full list is not validated here. Raw complete command syntax and later list elements are not established by that first-item check.
+
+For selected nonnegative command values0..31, the branch writes opcode byte0x14 and the low command byte. For40..44 it writes opcode0x1c and chooses these values:
+
+| Supplied command | Constructed byte in selected path |
+| --- | --- |
+|40|0x40 OR first parameter; no parameter yields0xff|
+|41|0x60 OR first parameter; no parameter yields0xff|
+|42|0 when no parameter; otherwise0x20 OR first parameter|
+|43|0xff|
+|44|0xe0|
+
+The local selected domain is not a new public supported-WHAT list: command0 is merely included by the original unsigned range, and valid product operations/grammar can have separate requirements. Nonnegative32..39 and values above44 reach the displayed no-output/free route in these selected branches. No conclusion about other command kinds or STM behavior follows.
+
+The address helper receives parsed field+16 at0x18f4..18f8 and supplies a byte. Two additional selector fields+20/+24 decimal-convert, with defaults3/0 for null pointers. Their pair is compared with private context+8/+12. Equality leads to a four-byte body `[address,0,opcode,value]`, calls array_to_ascii_hex_frame(...,4), then prepare_briefscs_frames at0x19a8. Inequality leads to eight bytes `[0xec,selector24-low-byte,0,0,address,0,opcode,value]` and prepare_encscs_frames at0x1bb0. These offset/compare/byte relationships are concrete; actual address conversion, context contents, scope meanings, formatting or wire transmission remain delegated.
+
+Selected core wrappers set type+40 to3 or11 and +56 to1, copy the actual original metadata through prepare_scs_from_open0x2230, then append the resulting pointer to the supplied output list. The metadata helper copies fields+4,+8,+12,+16,+24,+28,+32,+36,+44,+60 from the input record. This closes a static native builder-to-list/metadata boundary, without executing allocation/list/copy, actual output draining or serial framing.
+
+The15 finite host examples use supplied converted address0x11 and supplied selector equality/mismatch. Their body arrays are host consistency candidates, not original generated data or serial traffic. No valid raw parser fixture is claimed.
+
+## Selected body-to-OPEN status construction
+
+On pair(1,2), source type+40 of3 or9 calls imported ascii_hex_frame_to_array with count8; type11 has a separate extended route not modeled here. Under a successful decoded brief body `[0xb8,address,0x1c,value]`, the plugin converts the address byte through lighting_address_scs2open_singlechar. A nonempty result is required. For values whose high nibble is0x80, original0x1d14..1d50 forms one command from bit1 and one from bit0:
+
+- bit1 set→WHAT40; clear→41;
+- bit0 set→WHAT43; clear→44.
+
+Both use original format `*0*%s*%s%s##`; the selected brief route has an empty suffix. At the list helper call boundary, source value0x83 and a supplied converted WHERE string11 yield conditional candidates `*0*40*11##` and `*0*43*11##`. Four private host cases0x80..0x83 illustrate those bit decisions. No decoder/address/formatter, original parser, subscriber or physical feedback executed.
+
+Original scsmsg_to_openlist0x26d8 duplicates the supplied text, copies selected source metadata and appends a new output record; its output type+40/+56 are2. This is a static publication-list construction boundary, not an actual gateway observation or paired-delivery guarantee. Additional status/opcode/extended-interface branches and all scenario STM application/timer behavior remain open.
+
+## Reproduction and confidence
+
+`python3 work/mh202-firmware/research/2026-10-30/coso/run5/collect_evidence.py --check` reproduces16 outputs plus manifest, eight original spans,19 exact word checks, safe original format/relocation/descriptor evidence and15 forward/four reverse host examples. Original images are verified; --check writes no generated outputs. The original whole translator is retained for branch context, while the host models intentionally cover selected normal/brief routes only.
+
+High-confidence static: registration/initializer/translator pointer distinction, selected pair/kind/parameter guards, byte stores, original WHO0 format strings, paired bit-selected candidate calls and core metadata/list wrappers. Conditional: parsed inputs, private context, imported conversion/container providers and normal completion. Open: full dispatcher/criteria, exact configured addresses/context, parser acceptance, unsupported branches, STM semantics, output lifetimes/drain/transport and physical behavior.
+
+An author-stage metadata label initially conflated descriptor+40 translation pointer with registration's actual +36 initialization callback. The collector was corrected before this report/review; both offsets and targets are now explicit. No earlier completed report was changed, and no executed outcome depended on that draft label.
+
+## Independent review correction
+
+The initial table/model assumed no-parameter40/41 would OR with zero. Original0x1bdc sets flags from list length and0x1be0 conditionally sets r0 to-1 before the no-parameter branches. Therefore0x1ca4/0x1c94 OR with-1 and store low byte0xff. Independent source review caught the incorrect absent-parameter premise; final report/model now include two explicit finite cases. Exact prior report/collector/model/manifest/descriptor bytes are preserved in development-before-review with snapshot hashes. This is a corrected local code fact, not observed physical equivalence or a valid no-parameter command policy.

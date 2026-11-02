@@ -1,0 +1,29 @@
+# Independent targeted static review
+
+Reviewed `REPORT.md`, `collect_evidence.py`, the original-byte span manifest, selected receive/formatter/caller/request/provider disassembly and the host-only example. No blocking discrepancy found. The narrowly scoped conclusion supports canonical promotion: this selected direct-DH normal branch formats a local candidate, returns0, and its actual direct caller skips correlation/output. It does not support a general claim that DH or energy replies are unsupported, lost on hardware, or absent from all components.
+
+Independently ran only `python3 work/f454-firmware/research/2026-10-30-targeted/energy/collect_evidence.py --check`. It reproduced28 generated static files,16 original byte spans,17 exact opcode assertions and8 input hashes without writing. Original firmware instructions/code hooks executed:0/0. Independently checked all32 existing output-manifest entries: zero mismatches. No previous matrices, original helpers or firmware processes were executed.
+
+## Critical conclusion
+
+- `0xc24c` sets r5 from the successful `strcmp` result0. Neither the local helper's normal preserved-register calling convention nor the subsequent formatter changes that return register. `0xc29c`/`0xc2a0` replace r7/r6 with **local** DIM/VALUE buffers at handler SP+164/+216. `0xc2c8–0xc2e0` passes those strings and formats into handler SP+472; `0xc2e4` immediately branches to `0xe8e0`, which returns r5 and restores the frame. There is no post-format publication/copy, pointer return or use of `sprintf`'s character-count return on that tail. Normal imported C-function/ARM ABI semantics are explicit assumptions.
+- Caller `0xa0c8–0xa0e4` supplies a distinct caller SP+184 OPEN object and invokes the handler. Its test `0xa0e8–0xa0ec` returns to `0x9d7c` when r0 is0. Thus the later object flag/DIM/WHERE tests and output branch are not reached for this selected result. The main-exit object destructor is not destruction of the handler's local C array. This is a static lifetime/def-use conclusion, not actual execution or a claim that dead stack bytes are erased.
+- The original raw field reads are from context `0x1b314` with buffer beginning at+4; raw indexes in the report correctly account for that offset. `raw[3:5]=D2/DC`, `[5:7]=A2`, `[7]=F`, `[8:11]=234`, table/row/value positions all agree with the saved instructions. The actual caller supplies that same buffer; the report avoids treating an arbitrary nonempty r1 and unrelated globals as a complete natural path.
+
+## Query and selector boundaries
+
+- The actual outgoing lookup `0xaa9c` compares table dimension pointers at stride24,+12 and returns table/row words+16/+20. The selected literal at pool`0xfc8c` resolves to `$06D1A2F233%02X%02X0000`; the neighboring D2000 literal belongs to another branch. The DIM402 table row and unscaled scalar example agree with the original bytes and host reconstruction. The reconstruction is correctly labeled host-only, not parser acceptance, captured reply or publication.
+- Original `0xf3f4` stores state2 at context+1860; the send tail records an internal send call and returns2 even after its zero-result close/reset branch. Main's return2 bookkeeping stores expected DIM, original WHERE and time. The report correctly avoids making return2 imply delivery, and avoids claiming correlation failure from the unused local candidate's WHERE0.
+- The libcommon candidate `advanced_receive_from_scs` body decodes wrapper decimal mode2/subtype2, requests20 body bytes, forces caller byte19 to NUL and returns application category4. It is correctly distinguished from OPEN kind4, state4 and physical operation4. Direct dependency order is evidence for a candidate provider under normal packaged loading, not proof against duplicate symbols/interposition. Read checks are zero/nonzero; no full-read or delimiter-validation guarantee was inferred.
+
+No correction requested. Retain the report's narrow branch scope, conventional-import assumptions, conditional provider attribution, and separation between internal query formatting and unobserved physical query/reply behavior.
+
+## Reviewed pins
+
+| File | SHA256 |
+|---|---|
+| REPORT.md | `dd3893b974652e9937c9e1a45d51957ec93044ba6288c2e1adb54ffea47f6adc` |
+| collect_evidence.py | `b120202dd1f86b6b372190dfd586cffc17a839f17d16d46f7a788c27589c6ab8` |
+| input-hashes.json | `8de1aa4c4553d35015aeae05b1e7a638e05c9927d9b17216afd0ddb734055e0a` |
+| original-spans.json | `5021fc023766cb3822dfaaf147c3acbebfe33a053db8bd0f8c988221c10a7594` |
+| output-manifest.json, before this review | `bbea30668190cd49fc5fc7ae4c52b849f2b2cb0bb93097d7c248acc581ceb89e` |

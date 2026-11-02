@@ -1,0 +1,335 @@
+{
+  "scope": "Exact copies; no vendor binaries or runtime execution",
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/CRITICAL_BYTES.v1.json",
+      "published": "evidence/scene-stop/CRITICAL_BYTES.v1.json",
+      "sha256": "3954068409ada0f6dda62f8d7fcf6a7e8724e368bf8686f679e94fd71dd9b353",
+      "bytes": 1023
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/DIRECT_CALLS.v1.json",
+      "published": "evidence/scene-stop/DIRECT_CALLS.v1.json",
+      "sha256": "c659e9d45eaecab9a6071651f4489c3420c1002173d8ee8a45458de7ab6b0cf1",
+      "bytes": 276
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/FIELD_LEDGER.v1.json",
+      "published": "evidence/scene-stop/FIELD_LEDGER.v1.json",
+      "sha256": "76f352a49ebef932463482fdc61aa5a416ea53b3a6091a434a1fb48c6207068c",
+      "bytes": 824
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/INPUTS.v1.json",
+      "published": "evidence/scene-stop/INPUTS.v1.json",
+      "sha256": "177b375ef494929717c522ff349cd6ccbf5f06521b12ebc1c09756303e412584",
+      "bytes": 1049
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/METHOD.v1.json",
+      "published": "evidence/scene-stop/METHOD.v1.json",
+      "sha256": "20e28933b9830a30214d62fb2659b1135102d92b32781535e784e1988728e03c",
+      "bytes": 532
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/POLL_LITERAL.v1.json",
+      "published": "evidence/scene-stop/POLL_LITERAL.v1.json",
+      "sha256": "d3f5c70b7de0fea7d52b395d5142d41e43b352f4f8f47a53d93480f70d1e9129",
+      "bytes": 416
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/SOURCE_SPANS.v1.json",
+      "published": "evidence/scene-stop/SOURCE_SPANS.v1.json",
+      "sha256": "ae6c97f5c465b2f4fd8be9361007bc13048231d3041ce642f819f61db230c589",
+      "bytes": 1233
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/spans/action-dispatch-and-poll-cleanup.txt",
+      "published": "evidence/scene-stop/spans/action-dispatch-and-poll-cleanup.txt",
+      "sha256": "b3d1584775570e8f2dfcf612145d847bc9390130a97e230e64da4dc99d77a0d5",
+      "bytes": 18433
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/spans/completion-getter.txt",
+      "published": "evidence/scene-stop/spans/completion-getter.txt",
+      "sha256": "db8d0c974d22f4572a3fcd7f200b2b1bac99b961412bb1a0f7203c83761a2ac3",
+      "bytes": 422
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/spans/first-launch-gates.txt",
+      "published": "evidence/scene-stop/spans/first-launch-gates.txt",
+      "sha256": "86dad347ab06e74fdf829b306c9ab6a03b35ea729f5d0a63d5d0040357a7504d",
+      "bytes": 3867
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/spans/poll-stack-binding.txt",
+      "published": "evidence/scene-stop/spans/poll-stack-binding.txt",
+      "sha256": "8c26e347fe74eec68bd0bcfba3354c09e8a014fe5a30478e401cb8cb8b3b7409",
+      "bytes": 863
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/spans/scene-stop-prefix.txt",
+      "published": "evidence/scene-stop/spans/scene-stop-prefix.txt",
+      "sha256": "c2761451ac98ec0b6c1c33c146fae306d6c4d0819128411ce69e874660e055b3",
+      "bytes": 7468
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/spans/worker-receiver.txt",
+      "published": "evidence/scene-stop/spans/worker-receiver.txt",
+      "sha256": "e85001db54b96d13b4d3f4dcaf58ee732644c4f1e442f9edf0a97a0129883022",
+      "bytes": 1677
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/OUTPUT_MANIFEST.v1.json",
+      "published": "evidence/scene-stop/OUTPUT_MANIFEST.v1.json",
+      "sha256": "2c89abe2ce2d24ccbbf9c7388f36cda0e9e487dff8c7d7ac4b866c29cbbd3156",
+      "bytes": 1774
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/collect_scene_stop_v1.py",
+      "published": "evidence/scene-stop/collect_scene_stop_v1.py.txt",
+      "sha256": "09585479aad0a63a3ed94fd1b67269d50654af856719a2a5cb6d226ba274e24f",
+      "bytes": 5867
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/REPORT.md",
+      "published": "scene-stop-report.txt",
+      "sha256": "7d1a47397dd19a52227a2da0e560b4398e9a7c88a08b319778ac3bc2dcb1619d",
+      "bytes": 5009
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/reviews/scene-stop-source-review.md",
+      "published": "scene-stop-source-review.txt",
+      "sha256": "bc47a7bd0d1daf1ad9732f39ee45e07983c11f9be4955813fb7909f276b94686",
+      "bytes": 4952
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/stop-domain/BOUNDED_QUERIES.json",
+      "published": "evidence/stop-domain/BOUNDED_QUERIES.json",
+      "sha256": "21fc8415c1f27b9e6015a3dbb4aaf34604c724ab69f1bea68252513bbf9fb35a",
+      "bytes": 85110
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/stop-domain/INPUTS.json",
+      "published": "evidence/stop-domain/INPUTS.json",
+      "sha256": "66864b3f14492c19f6a2fcadf43df395cbcf84889f16f6ca42025847c367dd0f",
+      "bytes": 956
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/stop-domain/METHOD.json",
+      "published": "evidence/stop-domain/METHOD.json",
+      "sha256": "37d1bf115151885380dfa853dd59aa250d87650bc044314efe828ad170e2eb2b",
+      "bytes": 307
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/stop-domain/OWNERSHIP.json",
+      "published": "evidence/stop-domain/OWNERSHIP.json",
+      "sha256": "cf019a34e153ad07a915af752868779cc1249bd7dd397fae30cb5d76b28b93cc",
+      "bytes": 3964
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/stop-domain/PROVIDER_REQUESTS.json",
+      "published": "evidence/stop-domain/PROVIDER_REQUESTS.json",
+      "sha256": "b10fdcc83890867d85561b3043f4356e1098dba56d51e44e90cf9e05a0318272",
+      "bytes": 880
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/stop-domain/spans/candidate-CV-constructor-and-destructor.txt",
+      "published": "evidence/stop-domain/spans/candidate-CV-constructor-and-destructor.txt",
+      "sha256": "447fb48e097704f60394ff17f17f9ab6977aee198868cf39d920d3e7293305b0",
+      "bytes": 563
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/stop-domain/spans/delay-worker-aliases-and-flag.txt",
+      "published": "evidence/stop-domain/spans/delay-worker-aliases-and-flag.txt",
+      "sha256": "d802b8da0a55bfe493c13177e51a45552a521162d9cb78a954e176f7b983481a",
+      "bytes": 4964
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/stop-domain/spans/duration-worker-aliases-and-flag.txt",
+      "published": "evidence/stop-domain/spans/duration-worker-aliases-and-flag.txt",
+      "sha256": "1688f8b48a828b2cc4d03f3303afb1d1c3030ef3de9cd99dff561bc1cb78b760",
+      "bytes": 4945
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/stop-domain/spans/shared-domain-exit-wrapper.txt",
+      "published": "evidence/stop-domain/spans/shared-domain-exit-wrapper.txt",
+      "sha256": "a39194d2f16f1cfd710fded0bd1b58bd5a656ff5b8ac4cab54a9ea256ef7a4da",
+      "bytes": 329
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/stop-domain/spans/shared-domain-initializer.txt",
+      "published": "evidence/stop-domain/spans/shared-domain-initializer.txt",
+      "sha256": "fad94e763d9180ded0223a42c3f7044712b347b2dedba37cb89cdb8cba1bd1f2",
+      "bytes": 1418
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/stop-domain/spans/shared-stop-request.txt",
+      "published": "evidence/stop-domain/spans/shared-stop-request.txt",
+      "sha256": "40b361fe0b7ee2b1c6359f1203ece2ed88267c68db8434d9043d4339706a79aa",
+      "bytes": 913
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/stop-domain/OUTPUT_MANIFEST.json",
+      "published": "evidence/stop-domain/OUTPUT_MANIFEST.json",
+      "sha256": "1623e89ba913bb41d76a1f5c0439ef37a2a1c3612e7df5e43e04adc7483acdda",
+      "bytes": 2026
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/stop-domain/collect_stop_v1.py",
+      "published": "evidence/stop-domain/collect_stop_v1.py.txt",
+      "sha256": "a6af3d8612668aa2e2ede3ff2497405022970e1d4eebe40acc7e86b042babab7",
+      "bytes": 11725
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/stop-domain/REPORT.md",
+      "published": "stop-domain-report.txt",
+      "sha256": "c91d8ac959061cede3645d0d72d947359a0d8af66439701d7b240b2279dac67d",
+      "bytes": 8226
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/reviews/stop-domain-source-review.md",
+      "published": "stop-domain-source-review.txt",
+      "sha256": "be5d6dcfd491bbe56bde577e2ce4747607fe759d9646cbe550ae2a594a460088",
+      "bytes": 4928
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/BOUNDED_CALL_LOCATOR.v1.json",
+      "published": "evidence/action-lifecycle/BOUNDED_CALL_LOCATOR.v1.json",
+      "sha256": "caff0114204bff3fc7d7b42c9c3b56f30f48c719ef48f668a2fe3daa09da9f0a",
+      "bytes": 585
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/CALLABLE_POINTERS.v1.json",
+      "published": "evidence/action-lifecycle/CALLABLE_POINTERS.v1.json",
+      "sha256": "9e6d777c4761a37c14db23bf855b102f7bf85a3fcfb073f9ddfe21bba5b47dfa",
+      "bytes": 731
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/CLASS_IDENTITY.v1.json",
+      "published": "evidence/action-lifecycle/CLASS_IDENTITY.v1.json",
+      "sha256": "92d8b3880f1d13b17d23b3878f00ebf18f483f68cc305b1107a89338166e144f",
+      "bytes": 564
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/CRITICAL_BYTES.v1.json",
+      "published": "evidence/action-lifecycle/CRITICAL_BYTES.v1.json",
+      "sha256": "b9e5adc89cd124716a7f7b0a8109cc7c6caa59e1760ffd618854d12eba5f3f29",
+      "bytes": 713
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/DIRECT_CALLS.v1.json",
+      "published": "evidence/action-lifecycle/DIRECT_CALLS.v1.json",
+      "sha256": "14873cf3b8658d3862a121475c4c99abd2ce6ddbb0bf52d64825563cdf3b6f99",
+      "bytes": 549
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/INPUTS.v1.json",
+      "published": "evidence/action-lifecycle/INPUTS.v1.json",
+      "sha256": "ea53d01faeffdeb7ab63008c8c3007c078607b42b56a65c952f0f12b935116fc",
+      "bytes": 842
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/METHOD.v1.json",
+      "published": "evidence/action-lifecycle/METHOD.v1.json",
+      "sha256": "b35fa1951b73c210a528d1d436454dfb78d885581bcdaab49c5571de87c549b8",
+      "bytes": 534
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/SOURCE_SPANS.v1.json",
+      "published": "evidence/action-lifecycle/SOURCE_SPANS.v1.json",
+      "sha256": "616ed9469b74ef3bb8fcd9f488fa97b1dab81f4eac359a205231564c96bc834d",
+      "bytes": 1452
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/spans/duration-getter-setter.txt",
+      "published": "evidence/action-lifecycle/spans/duration-getter-setter.txt",
+      "sha256": "9b4e8e682af8b2203c7ce8d0eb67620d798ba0c94c366a39c48aa50ffba2170b",
+      "bytes": 357
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/spans/duration-thread-request.txt",
+      "published": "evidence/action-lifecycle/spans/duration-thread-request.txt",
+      "sha256": "b719e4130c3d14b3cbbc3042d1c221f4ea3a0d7045628802b0a5a3f4f0f86eee",
+      "bytes": 1931
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/spans/duration-worker.txt",
+      "published": "evidence/action-lifecycle/spans/duration-worker.txt",
+      "sha256": "25b0adae14dfb52fd0d71e28bee30353dc5bd104a54612a41a6581404e7e17dc",
+      "bytes": 5178
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/spans/execute-inline-first-path.txt",
+      "published": "evidence/action-lifecycle/spans/execute-inline-first-path.txt",
+      "sha256": "0048243ef01f03f26b8f55bbe8166278696811c0e64d36c98238fa72ff8ac157",
+      "bytes": 1952
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/spans/first-callable-storage.txt",
+      "published": "evidence/action-lifecycle/spans/first-callable-storage.txt",
+      "sha256": "ef4f731d7026a6322b34dd69af63dd097d6b6fa5f1b4cd1f4352e9338fd1edb6",
+      "bytes": 3269
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/spans/second-callable-storage.txt",
+      "published": "evidence/action-lifecycle/spans/second-callable-storage.txt",
+      "sha256": "a6ebf47a4119a5bb49e3ee99c48107f5d17cfb03e49bc730ba00cb2c29ffe279",
+      "bytes": 3216
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/spans/selected-constructor.txt",
+      "published": "evidence/action-lifecycle/spans/selected-constructor.txt",
+      "sha256": "8b3d1766a741e8b432774a185fe1bb4a4ede36f2182d715a1a751df967021969",
+      "bytes": 26265
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/OUTPUT_MANIFEST.v1.json",
+      "published": "evidence/action-lifecycle/OUTPUT_MANIFEST.v1.json",
+      "sha256": "ead6d286c5a9d15987b4ef5ed4239e371faf00e4e1834fbbce06ad55d497da46",
+      "bytes": 2076
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/collect_duration_v1.py",
+      "published": "evidence/action-lifecycle/collect_duration_v1.py.txt",
+      "sha256": "dfbf7331b1e6c8758433cb55fea953c54a93c03fceca8116adbc59d5d8e87938",
+      "bytes": 6832
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/REPORT.md",
+      "published": "action-lifecycle-report.txt",
+      "sha256": "8bd31bb61d023eb7113c99ae99d0e3437be617a90f63d0992c322b1c8fbae779",
+      "bytes": 8456
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/reviews/action-lifecycle-source-review.md",
+      "published": "action-lifecycle-source-review.txt",
+      "sha256": "c059151ef96bb7ce439fb3d21806c2e0fe2624f1e3e02ddc61252cef0da4f1a3",
+      "bytes": 6440
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/SYNTHESIS.md",
+      "published": "synthesis.txt",
+      "sha256": "d753d04956b74d3f04eaf864133a017f8a3a18160fd627913b9fa69312a27214",
+      "bytes": 953
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/COVERAGE.md",
+      "published": "coverage.txt",
+      "sha256": "318acacd94419bdd992631c899033b61e212cb143dd1bbc65ebeaf0af7460415",
+      "bytes": 758
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/RANKED_REMAINING_QUESTIONS.md",
+      "published": "remaining-questions.txt",
+      "sha256": "e5fef63e2ea310fffade0e3073d40668c3ba5c3978d5cacb9cd6993463607024",
+      "bytes": 1028
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/SOURCE_CHECKS.json",
+      "published": "source-checks.json",
+      "sha256": "426e27d8eba89ae0b0275c97a360da067340894a8eada816bae4fcef1e4b2c50",
+      "bytes": 1377
+    }
+  ]
+}

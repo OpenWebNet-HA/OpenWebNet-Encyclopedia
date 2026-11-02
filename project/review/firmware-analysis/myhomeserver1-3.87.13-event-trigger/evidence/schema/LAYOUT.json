@@ -1,0 +1,34 @@
+{
+  "allocation": {
+    "append_target": "scene+104 via0xa56e4",
+    "bytes": 76,
+    "control_base_offset": 0,
+    "inner_offset": 12,
+    "outgoing_pair": "inner pointer/control allocation pointer",
+    "secondary_schema_offset": 32
+  },
+  "compiled": {
+    "callable_storage_and_manager_invoker": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "enabled_byte": 48,
+    "id_string": 24,
+    "operator_word": 56,
+    "schema_secondary_vptr": 20,
+    "status_word": 60,
+    "type_word": 52
+  },
+  "compiled_inner_extent_bytes": 64,
+  "raw": {
+    "enabled_byte": 28,
+    "id_string": 4,
+    "operator_word": 36,
+    "status_word": 40,
+    "type_word": 32
+  },
+  "raw_object_bytes": 44,
+  "scope": "Source layout on selected successful normal paths only; no object fixtures/lifetime/handler/physical meaning."
+}

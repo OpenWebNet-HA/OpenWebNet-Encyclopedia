@@ -1,0 +1,52 @@
+[
+  {
+    "source": "reverse-engineering/firmware-analysis/f454-2.0.51.md",
+    "sha256": "f100f0a173d18ba43cb9ffde1f6a05b760d43c8d6d96ab04120ba67a3085a3b8",
+    "snapshot": "pre-edit-documents/01-reverse-engineering__firmware-analysis__f454-2.0.51.md.txt"
+  },
+  {
+    "source": "reverse-engineering/firmware-analysis/mh202-1.0.24.md",
+    "sha256": "4656b8f9e6e412fb6ecfc52fce29c31e77cf6158a037470b3904b66fdadd3169",
+    "snapshot": "pre-edit-documents/02-reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt"
+  },
+  {
+    "source": "reverse-engineering/firmware-analysis/README.md",
+    "sha256": "774a4dfeb26aacca02d30b1566a2ec2a39f4de0160dabaac6e105e561ff8fdce",
+    "snapshot": "pre-edit-documents/03-reverse-engineering__firmware-analysis__README.md.txt"
+  },
+  {
+    "source": "project/review/firmware-analysis/README.md",
+    "sha256": "48fdf6b94072f689205c82bee7ab396195e06350a361cbdb9e1abdf1b8a198b6",
+    "snapshot": "pre-edit-documents/04-project__review__firmware-analysis__README.md.txt"
+  },
+  {
+    "source": "project/review/firmware-analysis/f454-2.0.51/README.md",
+    "sha256": "ff631e7da999b8ecaa6e008e84361875a6f6f7f5f2196781e43329b921dc5ff7",
+    "snapshot": "pre-edit-documents/05-project__review__firmware-analysis__f454-2.0.51__README.md.txt"
+  },
+  {
+    "source": "project/review/firmware-analysis/mh202-1.0.24/README.md",
+    "sha256": "e038eb78d6a94732a06c110ef317b181e3ffff9448cfc801eaab4c1d87cc5e57",
+    "snapshot": "pre-edit-documents/06-project__review__firmware-analysis__mh202-1.0.24__README.md.txt"
+  },
+  {
+    "source": "functional/who-5-alarm/README.md",
+    "sha256": "b4dd242f30c4c9dde1e4e04772eb7c39e74cd503b2e3cc241186701ac9f4abe3",
+    "snapshot": "pre-edit-documents/07-functional__who-5-alarm__README.md.txt"
+  },
+  {
+    "source": "functional/who-17-scenario-management/README.md",
+    "sha256": "f9825e4dd40ef229a422df501ecaa44378b912833a3c45d3f7d3e8ad796b9402",
+    "snapshot": "pre-edit-documents/08-functional__who-17-scenario-management__README.md.txt"
+  },
+  {
+    "source": "devices/definitions/own-dev-0002-audio-video-web-server-gateway.md",
+    "sha256": "f300b28ca0f358b73dff111ee47f1a911c71f8b949ecc979726a2b5ec5459af9",
+    "snapshot": "pre-edit-documents/09-devices__definitions__own-dev-0002-audio-video-web-server-gateway.md.txt"
+  },
+  {
+    "source": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+    "sha256": "74f961aa3aaafb99003d1677304a6d971a42c871950796707712d1c66f50bbb9",
+    "snapshot": "pre-edit-documents/10-devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt"
+  }
+]

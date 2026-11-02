@@ -1,0 +1,22 @@
+{
+  "scope": "Cumulative actual R2 archive status through run01; no canonical manifest or Git publication. Supporting container is not recovered plaintext DB.",
+  "actual_plaintext_database_objects_archived": 0,
+  "actual_encrypted_support_containers_archived": 1,
+  "objects": [
+    {
+      "classification": "original_encrypted_database_bearing_support_container",
+      "artifact_id": "firmware-f450-020010-prod-extra50-container",
+      "sha256": "824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8",
+      "bytes": 72774,
+      "bucket": "openwebnet-data",
+      "object_key": "sha256/82/4b/824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8",
+      "status": "uploaded",
+      "full_readback_SHA_size_verified_by_configured_helper": true,
+      "source_plan": "archive/UPLOAD_PLAN.json",
+      "actual_receipt": "archive/R2_RECEIPT.json",
+      "descriptor": "archive/descriptor.json",
+      "registry_status": "Candidatepatch prepared in work only; canonical sources manifest untouched",
+      "plaintext_database_status": "50/master.sqlite remains encrypted/unrecovered"
+    }
+  ]
+}

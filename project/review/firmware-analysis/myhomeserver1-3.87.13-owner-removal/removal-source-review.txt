@@ -1,0 +1,33 @@
+# Numeric owner removal: independent source review
+
+Verdict: PASS; no correction requested. This independently audits current original code/data and the frozen source packet for one selected local removal/release caller. I previously source-reviewed the separate retained-action vector evidence; that inherited context is not claimed as newly replayed or a fresh complete teardown audit here. Original firmware/native/provider/vendor/target processes, count/scene fixtures and semantic host models executed0. Author files and originals remained read-only. No actual after-poll removal, main-container identity, last-owner state, worker completion, safety/defect, UAF/leak or physical behavior is established.
+
+## Exact reproduction and original checks
+
+The read-only `python3 -B collect_removal_v1.py --check` reproduced14 outputs,4 code spans,16 guards,4 direct branches,6 bounded BL candidates,4 relative entries,2 data spans and5 input pins. A separate original ELF32 PT_LOAD mapping independently rehashed all4 code and2 data spans, compared all16 guards, decoded all4 direct branch targets, reproduced the6 syntactic BL hits and verified the concrete control RTTI/header/dispose pointer plus all4 R_ARM_RELATIVE entries. All5 source/prior-report hashes and16 immediate first-candidate copies match current saved bytes, sizes and hashes. Original scheduler SHA256 is `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`.
+
+The actual selected disassembly was read for register/branch/order contracts rather than relying only on matching generated files. The bounded BL locator and direct chosen caller are not an all-encoding/indirect/global caller-absence proof. No historical development event is certified merely from an exclusive-generation statement.
+
+## Source contracts checked
+
+- Caller0x3e73c loads supplied context from its SP+20, receiver=context word0, and numeric ID from SP+28;0x3e742 calls0xb6b5c. This is a positive original callsite, not a named external operation or natural active context. Equality of that receiver with startup main's actual numeric first-tree container remains a premise.
+- The callee searches root receiver+8 with numeric key node+16, children+8/+12 and header/end receiver+4 under unsigned comparisons. Selected found-key equality reaches node pair20/24. Empty/not-found paths request out_of_range; complete catch/error behavior stays outside the selected normal contract.
+- Original0xb6bb0 saves control node+24;0xb6bb4 derives pair+20 and0xb6bbc zeroes both pair words BEFORE release. A nonzero saved control decrements strong+4 through direct or exclusive-update source. Prior count1 at0xb6bd2 reaches virtual address-point+8 disposal0xb6bfe; after its normal return the weak+8 transition may request virtual+12. Other normal strong counts bypass that disposal request. No actual concurrent count, allocation or virtual return is supplied.
+- Normal continuation0xb6bda calls keyed eraser0xb6324 on the same receiver and saved ID, then sets local result1. The report correctly distinguishes this local normal result from unconditional API/wire success or proof of actual destruction.
+- Eraser whole-range logic calls0xb5dac and resets tree headers/count; that recursive helper remains opaque. The retained non-whole-range iteration instead requests next-node, rebalance-for-erase and then examines returned node control+24. Its sized-delete28 request and tree count+20 decrement are visible. They must not be collapsed into one fully audited erase policy. Composing the already-zeroed selected pair with a returned erased node needs valid key/tree/provider correspondence and normal returns; generic control-release code is not proof of a second release of that selected cleared pair.
+- The selected concrete SceneRunner control owner is relocation-backed: GOT0x166c2c ->header0x15fd24, exact inplace SceneRunner RTTI and header+16/address-point+8 Thumb0x1a049. Its original instruction entry0x1a048 adds12 to control and tailbranches0xa5a3c. Under this actual removed-control-type and prior-count1 premise, removal can request the inherited scene teardown before keyed erase returns. That composition does not prove every removed control has that type, that this control is naturally last, that caller removal follows polling or that every worker is joined before destruction.
+
+Scene/control pair20/24, scene thread holder140, compiled-action vector128, trigger104 and condition116 remain distinct objects/axes. The inherited selected teardown's holder/null/detached/other-owner and normal-unwind limits are accurately retained. No lifetime adequacy or failure follows from a positive removal-to-disposal edge alone. No transport/authentication/session/framing/MQTT/libjel implementation was followed.
+
+## Exact current reviewed pins
+
+Paths below are relative to removal/.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `68c32fd66ef0d6c8d310a9e1efde7163a76fd334399a8cb5c025dc4c6eb74659` |
+| `collect_removal_v1.py` | `4d81644c82953731db4894b5669355a505f3f61016a830ab8e6f5d64d70172bf` |
+| `OUTPUT_MANIFEST.json` | `37e3fa9a0aecd27238f324548e523479945f82337e91822356030f6c1b37223b` |
+| `REMOVAL_LEDGER.json` | `54277a7fb2dc3a083c3a9f22aee54da3f0c462e4729491eaeb099cf634f6b840` |
+| `OWNER_IDENTITY.json` | `d1816ca8ff6d99c74cd727e4fefa003c20ba9a58169751b51ce3a47a2e7c5f4c` |
+| `first-candidate/INDEX.json` | `7b9008d42de91d831c0fc6600cde9d134e138660903a41ad52aa988fefa6dd98` |

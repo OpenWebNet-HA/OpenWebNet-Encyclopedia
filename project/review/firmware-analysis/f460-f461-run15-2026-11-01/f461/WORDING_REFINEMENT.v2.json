@@ -1,0 +1,16 @@
+{
+  "authoritative_report": "REPORT.v2.md",
+  "old_report_sha256": "891728ccd1d024c018cc8362d0399cd5bdc793c0597c696b68560765407735d3",
+  "new_report_sha256": "dcce7197af2737f165295c51bcb3b51ff07bc3076550daa4732da48e38c3ae70",
+  "changes": [
+    {
+      "old": "4. `0x558c/0x5594` loads and requests `g_free(entry_path)` after the head update.",
+      "new": "4. `0x558c` loads the entry path before the head store at `0x5590`; `0x5594` then requests `g_free(entry_path)` after that store."
+    }
+  ],
+  "reason": "Path LOAD558c precedes list-head STORE5590; path FREErequest5594 follows the store. Requested-call ordering was already correct.",
+  "source_code_results_counts_unchanged": true,
+  "old_report_collector_first_candidate_unchanged": true,
+  "collector_check_scope": "v1 collector remains intentionally bound to original REPORT.md",
+  "parent_pre_edit_snapshot": "work/f460-f461-comparison/2026-11-01-run15/integration/f461-before-report-v2/INDEX.json"
+}

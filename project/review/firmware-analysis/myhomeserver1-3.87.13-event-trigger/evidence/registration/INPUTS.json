@@ -1,0 +1,22 @@
+{
+  "/home/bticino/scheduling_manager/scheduling_manager": {
+    "bytes": 1406680,
+    "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26"
+  },
+  "image_accessor": {
+    "bytes": 5611,
+    "sha256": "890e3526e2fc29c630cb45dad15d91fecb6b32007c0be04e5af28c85a48f1ae4"
+  },
+  "prior_scene_callback_context": {
+    "bytes": 11216,
+    "sha256": "570893c1ad74814836d268da94f09e95748b36f56dd44d37bf271d1a09188550"
+  },
+  "prior_scene_registry": {
+    "bytes": 8963,
+    "sha256": "bf0b87c8b304c8a3e417d261fea2a5cf9212c12c46d64061f9d0fa4eb1af19df"
+  },
+  "prior_startup": {
+    "bytes": 8604,
+    "sha256": "534a49a90aa4f6058322b12cd466ce10bd2f28c776cf667a3ea764779ee0bc0b"
+  }
+}

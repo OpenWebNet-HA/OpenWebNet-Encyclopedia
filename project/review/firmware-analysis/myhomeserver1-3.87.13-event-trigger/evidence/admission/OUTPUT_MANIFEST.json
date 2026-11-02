@@ -1,0 +1,70 @@
+{
+  "ADMISSION_LEDGER.json": {
+    "bytes": 1228,
+    "sha256": "392aeb9e4fbe4e49be4f56f3740a9c9c1b99b5ae4efbe63c3a50f26b5414a9d3"
+  },
+  "BOUNDED_LOCATOR.json": {
+    "bytes": 284,
+    "sha256": "e08eb508b7d7ac25de0109b8c40d51655d45d4b7a3099415d8682c3adc926c9b"
+  },
+  "BYTE_GUARDS.json": {
+    "bytes": 1207,
+    "sha256": "026eb5343ba856b666119d04f823f9a3718d764d318eb8630b37d53e7337d544"
+  },
+  "DIRECT_CALLS.json": {
+    "bytes": 413,
+    "sha256": "41948d15f1698280fb7310cc1e9ef11ae677ff81bfee78b193e58652da229abc"
+  },
+  "INPUTS.json": {
+    "bytes": 868,
+    "sha256": "583dffe12ac0375ac753a7b47acd516a6ca4fb67bfaeb9edcde1f6629bb11465"
+  },
+  "METHOD.json": {
+    "bytes": 483,
+    "sha256": "31a10513d23a933425a48c3de8ada92f51fd04947622763b92628aeae0c6d931"
+  },
+  "POINTER_BINDINGS.json": {
+    "bytes": 482,
+    "sha256": "fb0e522a739b0c3e49dd8751378abbb32e33660c2301f617a11977594abf48f9"
+  },
+  "SOURCE_SPANS.json": {
+    "bytes": 1828,
+    "sha256": "380fc53c4bb2a6d5c316164b2d8f6063a01ca21b2a468baf8f56a0e526060ef3"
+  },
+  "spans/caller-got-prefix.txt": {
+    "bytes": 1372,
+    "sha256": "247fce96763f2337ea5df1c7bb5d8251d070fcf519f58720578d8b0ccdd4452e"
+  },
+  "spans/captured-scene-wrapper.txt": {
+    "bytes": 428,
+    "sha256": "82822bc508125bbfc3b9d111925750b63a462290d226c3a154cc887b5867a97d"
+  },
+  "spans/default-fire.txt": {
+    "bytes": 548,
+    "sha256": "35c7e4000a3cf44fa7ce415a2efe675a8c2563f8777e221ec3fb574daac2f19d"
+  },
+  "spans/id-getter.txt": {
+    "bytes": 402,
+    "sha256": "0392810b4871988f78944935dcda77bdb863581b3ec1e0717348b50e27415a9c"
+  },
+  "spans/local-state-handler.txt": {
+    "bytes": 3817,
+    "sha256": "11caf8fba784e3879cb7a7ee6be9d2a11edc15066497052699f4e87827bfdecb"
+  },
+  "spans/selected-local-dispatch.txt": {
+    "bytes": 2786,
+    "sha256": "1b5d5b9be08c4771f04f45ccfa8ba03689a1c01abaccf415bef2e65047e3c207"
+  },
+  "spans/string-equality.txt": {
+    "bytes": 948,
+    "sha256": "4d97fbccf349c7227c4bce7edcc44615902fdc4ce79c69260e19afb15806ac47"
+  },
+  "spans/temporary-copy-release.txt": {
+    "bytes": 3924,
+    "sha256": "2d21d9ef1dbe5290599e8b30e1abfd8259b7a121d0560cf0b46044fbd0cc1a78"
+  },
+  "spans/trigger-handle-copy.txt": {
+    "bytes": 3943,
+    "sha256": "7a216622fdd46b854736e46f8251e0800362056f712ce351f1a00824deffe3e0"
+  }
+}

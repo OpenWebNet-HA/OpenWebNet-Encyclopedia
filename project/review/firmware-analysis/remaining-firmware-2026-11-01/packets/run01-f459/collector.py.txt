@@ -1,0 +1,60 @@
+from pathlib import Path
+import json,hashlib,struct,re,subprocess,argparse,os
+O=Path(__file__).resolve().parent;W=next(p for p in O.parents if (p/'OpenWebNet-Encyclopedia').is_dir());B=W/'work/f459-firmware/2.1.5';P=B/'analysis/rootfs/home/bticino/drivermanager/modules/libmhshared.so.1';EXPECTED='4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377'
+def hb(b):return hashlib.sha256(b).hexdigest()
+def J(x):return (json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+def build():
+ b=P.read_bytes();assert len(b)==43208 and hb(b)==EXPECTED and b[:6]==b'\x7fELF\x01\x01' and struct.unpack_from('<H',b,18)[0]==40
+ ph=struct.unpack_from('<I',b,28)[0];pe,pn=struct.unpack_from('<HH',b,42);loads=[x for i in range(pn) if (x:=struct.unpack_from('<8I',b,ph+i*pe))[0]==1]
+ def raw(a,n):
+  r=next(r for r in loads if r[2]<=a and a+n<=r[2]+r[4]);off=r[1]+a-r[2];return b[off:off+n]
+ def u(a):return struct.unpack('<I',raw(a,4))[0]
+ def string(a,cap=512):
+  out=bytearray()
+  for i in range(cap):
+   x=raw(a+i,1)
+   if x==b'\0':return out.decode('ascii')
+   out+=x
+  raise AssertionError('CString bound')
+ def bl(a):
+  w=u(a);assert w>>24==0xeb;v=w&0xffffff;v=v-(1<<24) if v&(1<<23) else v;return a+8+(v<<2)
+ guards={0x67cc:0xe1a04000,0x682c:0xe59f0228,0x6830:0xe2841008,0x6834:0xe08f0000,0x6838:0xebffeec3,0x683c:0xe59f121c,0x6840:0xe5940008,0x6844:0xe08f1001,0x6848:0xe3a02000,0x684c:0xebffee61,0x6850:0xe59f320c,0x6854:0xe59f120c,0x6858:0xe7953003,0x685c:0xe3a02000,0x6860:0xe5940008,0x6864:0xe08f1001,0x6868:0xe58d3000,0x686c:0xe1a03002,0x6870:0xebffee7f}
+ for a,v in guards.items():assert u(a)==v,(hex(a),hex(u(a)),hex(v))
+ path_va=0x6834+8+u(0x6a5c);ddl_va=0x6864+8+u(0x6a68);assert path_va==0x90b4 and ddl_va==0x9150;path=string(path_va);ddl=string(ddl_va)
+ assert path=='/tmp/plugin.shared.sqlite';assert ddl=='CREATE TABLE shared (pluginname varchar(90), key varchar(90), value varchar(32768), persistent boolean default 0, PRIMARY KEY (pluginname,key))'
+ rel=subprocess.check_output(['readelf','-rW',str(P)],text=True);sym=subprocess.check_output(['readelf','--dyn-syms','--wide',str(P)],text=True);calls=[]
+ def imm(w):
+  v=w&255;n=((w>>8)&15)*2;return ((v>>n)|(v<<(32-n)))&0xffffffff if n else v
+ for call,target,got,name in [(0x6838,0x234c,0x122a0,'sqlite3_open'),(0x684c,0x21d8,0x12224,'sqlite3_busy_handler'),(0x6870,0x2274,0x12258,'sqlite3_exec')]:
+  assert bl(call)==target;a,c,d=[u(target+i*4) for i in range(3)];assert a&0xfffff000==0xe28fc000 and c&0xfffff000==0xe28cc000 and d&0xfffff000==0xe5bcf000;derived=target+8+imm(a)+imm(c)+(d&4095);assert derived==got
+  row=next(x.strip() for x in rel.splitlines() if x.startswith(f'{got:08x} '));assert 'R_ARM_JUMP_SLOT' in row and row.endswith(' '+name);calls.append({'call_VA':hex(call),'PLT_VA':hex(target),'GOT_relocation_VA':hex(got),'symbol':name,'actual_relocation':row,'PLT_bytes_hex':raw(target,12).hex()})
+ gotbase=0x67d8+8+u(0x6a48);errslot=gotbase+u(0x6a64);assert gotbase==0x12180 and errslot==0x12300;err=next(x.strip() for x in rel.splitlines() if x.startswith('00012300 '));assert 'R_ARM_GLOB_DAT' in err and err.endswith(' zErrorMessage')
+ spans=[('constructor-prefix',0x67c0,0x6840),('selected-following-requests',0x683c,0x6874)];out={};spanmeta=[];env=dict(os.environ,DEBUGINFOD_URLS='')
+ for name,a,e in spans:
+  text=subprocess.check_output(['objdump','-d','-m','arm',f'--start-address={a}',f'--stop-address={e}',str(P)],text=True,env=env).replace(str(P),'libmhshared.so.1');out['spans/'+name+'.txt']=text.encode();spanmeta.append({'name':name,'start_VA':hex(a),'end_exclusive':hex(e),'bytes_hex':raw(a,e-a).hex(),'sha256':hb(raw(a,e-a))})
+ pins=[]
+ for p in [P,B/'acquisition.json',B/'analysis/normal-regular-files.json']:
+  z=p.read_bytes();pins.append({'path':str(p.relative_to(W)),'bytes':len(z),'sha256':hb(z)})
+ source={'original_path':str(P.relative_to(W)),'original_bytes':len(b),'original_sha256':EXPECTED,'ELF_class':32,'machine':40,'endianness':'little','e_flags_hex':hex(u(36)),'PT_LOAD':[{'offset':r[1],'VA':hex(r[2]),'file_bytes':r[4],'memory_bytes':r[5],'flags':r[6]} for r in loads],'selected_constructor_symbol':[x.strip() for x in sym.splitlines() if '_ZN8mhSharedC1EP7QObject' in x],'guards':[{'VA':hex(a),'word_hex':f'{v:08x}'} for a,v in guards.items()],'spans':spanmeta,'pool':[{'VA':hex(a),'word_hex':f'{u(a):08x}'} for a in [0x6a48,0x6a5c,0x6a60,0x6a64,0x6a68]],'literals':[{'VA':hex(path_va),'text':path,'bytes_hex':raw(path_va,len(path)).hex()},{'VA':hex(ddl_va),'text':ddl,'bytes_hex':raw(ddl_va,len(ddl)).hex()}],'calls':calls,'error_global_relocation':err,'got_base_VA':hex(gotbase),'contract':'Constructor saves same receiverR4; ordinarynormalprelude -> filenameR0 andreceiver+8R1 sqlite3_open request -> receiver8handle/selectedbusyhandler -> SAMEhandleR0+DDL R1/nullR2/nullR3/GOTzErrorMessagepointer stackarg sqlite3_exec request. No selected intervening return-resultbranch. Selectedprefix ends6874 beforelaterQFile/source/error/unwind policy.','caller_and_runtime':'Actual natural constructorcaller, validobject/provider/OS/FS/allocation/normalreturns and actual DBcreation/schema/rows/lifetime remain unproved','original_execution':0,'host_SQLite_queries_or_synthetic_DB':0,'new_database_bytes_recovered':False}
+ out['SOURCE.json']=J(source);out['INPUT_PINS.json']=J(pins)
+ report='''# F459 shared-store constructor: selected original request chain
+
+The own F4592.1.5 packaged libmhshared.so.1 is43208B/SHA4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377. This packet freshly checks ELF32 little-endian ARM, its PT_LOAD mapping and exported C1 constructor67c0; no MHS/AArch64 fields are substituted.
+
+At6834, actual PC-relative literal data derives90b4 (/tmp/plugin.shared.sqlite) intoR0. At6830 R1=SAMEsavedreceiverR4+8;6838 requests sqlite3_open through actualPLT234c/GOT122a0/R_ARM_JUMP_SLOT. Under ordinary validreceiver/prelude/provider/normal-return premises, this closes the earlier literal-to-open argument edge. It does not execute SQLite, prove the caller or establish that a file was opened/created.
+
+The following source readsreceiver+8 intoR0 for busy-handler request684c, and again intoR0 for exec6870. Literal9150 (exactCREATE TABLEshared DDL) derivesR1 at6864; R2/R3zero and the actualGOTzErrorMessagepointer is supplied in the stack argument slot. Fresh selectedPLT/GOTrelocations prove symbols sqlite3_busy_handler andsqlite3_exec, rather than nearest-name annotations. No local return-resultbranch intervenes in the selected normal prefix; this is not a full error/unwind, provider or failure/safety judgment. Prefix stops6874, before laterQFile/permissions and exception policy.
+
+The DDL fieldspluginname/key/value/persistentdefault0 and PK(pluginname,key) are exact original SQL text. This packet proves the selected request argument, not successful CREATE, an installed/current schema, data values, persistence durability, ownership or concurrent behavior. Busy-handler body, SQLite/OS/provider bodies and natural caller remain opaque. Rawliteralpool words are data, not executed instructions.
+
+SOURCE.json/INPUT_PINS.json preserve exactoriginalpath/hash, header/PT_LOAD,19instructionguards,2selectedspans/pool/literalbytes and3actualcall/PLT/GOTrelocations. Reproduce static --check on the installed hostARM objdump; no original/helper/native/targetprocess/OS/network/bus/mount or hostSQL query ran. No actual database bytes were recovered or generated here; do not archive a synthetic database made from this DDL as a vendor original. Separate F450candidate/database recovery remains open. Closed transport/auth/session/framing/receiving/output/MQTT/libjel bodies were not expanded.
+''';out['REPORT.md']=report.encode();manifest={'collector_sha256':hb(Path(__file__).read_bytes()),'outputs':{k:{'bytes':len(v),'sha256':hb(v)} for k,v in out.items()},'original_execution':0};out['OUTPUT_MANIFEST.json']=J(manifest);return out
+p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');args=p.parse_args();out=build()
+if args.check:
+ for n,b in out.items():assert (O/n).read_bytes()==b,n
+else:
+ for n,b in out.items():q=O/n;q.parent.mkdir(parents=True,exist_ok=True);q.open('xb').write(b)
+ D=O/'first-candidate';D.mkdir();copies={}
+ for n,b in {Path(__file__).name:Path(__file__).read_bytes(),**out}.items():q=D/n;q.parent.mkdir(parents=True,exist_ok=True);q.open('xb').write(b);copies[n]={'bytes':len(b),'sha256':hb(b)}
+ (D/'INDEX.json').open('xb').write(J({'files':copies}))
+print(json.dumps({'check':args.check,'outputs':len(out),'guards':19,'selected_spans':2,'selected_import_calls':3,'original_execution':0,'actual_database_recovered':False}))

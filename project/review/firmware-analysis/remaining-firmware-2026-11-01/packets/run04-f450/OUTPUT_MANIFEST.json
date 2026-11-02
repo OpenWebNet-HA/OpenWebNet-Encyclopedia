@@ -1,0 +1,26 @@
+{
+  "collector_sha256": "1c0769d6c64bf652a4f444d47bd50ca4cb28209a870e62e7e2fee4c2bc081c09",
+  "files": {
+    "INPUTS.json": {
+      "bytes": 432,
+      "sha256": "a1d63fe63658cfc64e413455cf79cce424e8074068e4e46b1ae90b5ccfdccae1"
+    },
+    "PRODUCER_FLOW.json": {
+      "bytes": 1940,
+      "sha256": "bc8b9ff977be55940ebe128d7997b81413ad23c6dafb729b10175e3e03518aa8"
+    },
+    "REPORT.md": {
+      "bytes": 5332,
+      "sha256": "e8de9351b23a232ab5898a7023f342f11fb40418a9773367c95575b1bfe88db7"
+    },
+    "SOURCE.json": {
+      "bytes": 7847,
+      "sha256": "a7bace175e8a5cab4167ffbaf44d33258ca7660411864f3ad1994dcbf7f33761"
+    },
+    "SPANS.json": {
+      "bytes": 6232,
+      "sha256": "592aab749233b837648b3c8ab46eb481b122dfc6b0a051b51a3ac6e9475c0d47"
+    }
+  },
+  "scope": "Generated members excluding self"
+}

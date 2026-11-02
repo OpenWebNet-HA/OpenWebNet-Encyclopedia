@@ -1,0 +1,15 @@
+{
+  "base": {
+    "enabled": "byte28 always JsonBool",
+    "id": "string+4 emitted only length8nonzero",
+    "operator": "word36 omitted iff\u22121, else table(raw+1 unsigned<=4) or emptystring",
+    "type": "word32 always condition-name string, unsigned0..22 elseempty"
+  },
+  "derived": {
+    "status40_equals_minus1": "emit level44 through signed JsonInt, including\u22121; do not emit status",
+    "status40_other": "emit statusstring via(raw+1 unsigned<=2)table elseemptystring; do not emit level"
+  },
+  "initializer": "virtualslot0\u2192JSONSP592\u2192sameinput2bd58rawtempSP4280\u2192f1634; normalproviders/assignment/cast/lifetime stillpremises",
+  "reparse": "2bd58 presentstatus branch always levelsentinel\u22121; absentstatus branch readslevel asInt, independentlyofpositivevalue; no providerexecution",
+  "scope": "Constructor-reachable scalar coherence conditional; not sourceJSONmemberpresence preservation/fullroundtrip/validation/predicate behavior."
+}

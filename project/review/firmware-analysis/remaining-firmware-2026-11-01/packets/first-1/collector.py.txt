@@ -1,0 +1,176 @@
+#!/usr/bin/env python3
+"""Read-only host metadata first pass; never execute original code or decrypt archives."""
+from pathlib import Path
+import argparse, collections, hashlib, json, re, struct, subprocess, zipfile
+import xml.etree.ElementTree as ET
+
+O=Path(__file__).resolve().parent
+W=O.parents[4]
+F=W/'work/f450-firmware/2.0.10'
+P=W/'work/f450-firmware/2.0.10-PROD'
+G=W/'work/f455-firmware/1.1.2'
+T=F/'analysis/rootfs'
+def h(b): return hashlib.sha256(b).hexdigest()
+def raw(p): return p.read_bytes()
+def js(d): return (json.dumps(d,indent=2,sort_keys=True,ensure_ascii=True)+'\n').encode()
+def load(p): return json.loads(p.read_text())
+def ident(p):
+ b=raw(p);return {'path':str(p.relative_to(W)),'bytes':len(b),'sha256':h(b)}
+def elf(b):
+ assert b[:4]==b'\x7fELF' and b[5]==1
+ c=b[4];assert c in (1,2)
+ if c==1:
+  v=struct.unpack_from('<HHIIIIIHHHHHH',b,16);entry,phoff,flags,ents,num=v[3],v[4],v[6],v[8],v[9]
+ else:
+  v=struct.unpack_from('<HHIQQQIHHHHHH',b,16);entry,phoff,flags,ents,num=v[3],v[4],v[6],v[8],v[9]
+ seg=[]
+ for i in range(num):
+  if c==1:
+   typ,off,va,pa,fs,ms,fl,al=struct.unpack_from('<8I',b,phoff+i*ents)
+  else:
+   typ,fl,off,va,pa,fs,ms,al=struct.unpack_from('<II6Q',b,phoff+i*ents)
+  if typ==1:seg.append({'offset':off,'VA':hex(va),'file_bytes':fs,'memory_bytes':ms,'flags':fl})
+ return {'class':32 if c==1 else 64,'byte_order':'little','type':v[0],'machine':v[1],'entry':hex(entry),'flags':hex(flags),'PT_LOAD':seg}
+def zipmeta(p):
+ with zipfile.ZipFile(p) as z:
+  return [{'name':x.filename,'declared_bytes':x.file_size,'compressed_bytes':x.compress_size,'CRC32':f'{x.CRC:08x}','encrypted':bool(x.flag_bits&1)} for x in z.infolist()]
+def source_lines(p,nums):
+ lines=p.read_text().splitlines()
+ return {'source':ident(p),'selected_lines':[{'line':i,'text':lines[i-1]} for i in nums]}
+def build():
+ inputs=[]
+ def pin(p):
+  row=ident(p);inputs.append(row);return row
+ summary=W/'work/remaining-firmware-acquisition/2026-11-01/SUMMARY.json';pin(summary)
+ packages=[]
+ for base,archive,expected in [(F,'F450_020010.fwz','9e625012d3e8629bea15d608f7c1de160e971499a39f3fd86f0c68103da8b9da'),(P,'F450_020010-PROD.fwz','27c5640916f980be2c16fd14ed7818d8b361e69b439e7a774bd4e90e57b9b96f'),(G,'F455_1_1_2.fwz','cd99299fc729679b4eade46acda7bd4f5e619a0a9eac34a1f6a3b73b625a18f9')]:
+  a=pin(base/archive);assert a['sha256']==expected
+  for name in ['acquisition.json','outer-extraction.json','image-extraction.json','analysis/extraction-summary.json']:pin(base/name)
+  x=base/'extracted/fwz.xml';pin(x);root=ET.fromstring(raw(x))
+  model=[n.text for n in root.findall('.//object_model')]
+  actions=[{'id':n.attrib.get('id'),'provider':n.attrib.get('provider'),'type':n.attrib.get('type'),'file_labels':[a.text for a in n.findall("attr[@type='file']")]} for n in root.findall('.//action') if 'type'in n.attrib]
+  packages.append({'directory':str(base.relative_to(W)),'archive':a,'outer_members':zipmeta(base/archive),'manifest':{'name':root.findtext('name'),'version':root.findtext('fwz_ver'),'xml_version':root.findtext('xml_ver'),'object_model_labels':model,'actions':actions,'status4_action_order':[n.attrib['act_id'] for n in root.findall(".//status[@value='4']/action")]}})
+ manifests=[]
+ for base in (F,P):
+  for n in ['analysis/normal-regular-files.json','analysis/normal-symlinks.json','analysis/normal-special-nodes.json']:pin(base/n)
+  m=load(base/'analysis/normal-regular-files.json');assert len(m)==3839
+  manifests.append(m)
+  # Full regular-file identity verification reads bytes only, never target code.
+  for name,row in m.items():
+   rel=Path(name);assert not rel.is_absolute() and '..'not in rel.parts
+   p=base/'analysis/rootfs'/rel;assert p.is_file() and not p.is_symlink()
+   b=raw(p);assert len(b)==row['bytes'] and h(b)==row['sha256'],name
+ assert manifests[0]==manifests[1]
+ common=[]
+ for name in ['btweb_only.ext3.gz','uImage','fwz.xml','images/normal.img']:
+  a=pin(F/'extracted'/name);b=pin(P/'extracted'/name);assert (a['sha256'],a['bytes'])==(b['sha256'],b['bytes']);common.append({'component':name,'bytes':a['bytes'],'sha256':a['sha256']})
+ image=raw(F/'extracted/uImage');magic,hcrc,stamp,size,loadaddr,entry,dcrc,os,arch,kind,comp,name=struct.unpack('>7I4B32s',image[:64]);assert magic==0x27051956 and size==len(image)-64
+ kernel={'source':ident(F/'extracted/uImage'),'first64_hex':image[:64].hex(),'header_name':name.split(b'\0')[0].decode('ascii'),'header_numeric_os_arch_type_compression':[os,arch,kind,comp],'load_word':hex(loadaddr),'entry_word':hex(entry),'declared_payload_bytes':size,'scope':'uImage header metadata; no kernel execution, hardware or boot selection proof'}
+ aux=P/'extracted/50.xtz';pin(aux);auxmeta=zipmeta(aux)
+ assert any(x['name']=='50/master.sqlite' and x['encrypted'] for x in auxmeta)
+ comparison={'regular_file_count_each':3839,'regular_content_manifests_equal':True,'regular_file_bytes_each':sum(x['bytes']for x in manifests[0].values()),'all_regular_files_verified_against_saved_manifest':True,'common_extracted_components':common,'PROD_50_xtz_metadata':auxmeta,'PROD_extra_outer_names':sorted(set(x['name']for x in packages[1]['outer_members'])-set(x['name']for x in packages[0]['outer_members'])),'limit':'Root image and retained regular-tree equality do not prove package, installed-state, hardware or runtime equivalence. Encrypted ancillary database contents remain unknown.'}
+ headers=[]
+ for name,row in sorted(manifests[0].items()):
+  p=T/name
+  with p.open('rb')as f:b=f.read(64)
+  if b[:4]==b'\x7fELF':headers.append({'path':name,'sha256':row['sha256'],**elf(raw(p))})
+ counts=collections.Counter((x['class'],x['byte_order'],x['machine'])for x in headers)
+ selected=[];literal_leads=[]
+ for name in ['home/bticino/bin/bt_daemon','home/bticino/bin/bacclient','home/bticino/bin/ebacgw','home/bticino/lib/libopen.so.0.0','home/bticino/lib/libopenmsg.so']:
+  p=T/name;pin(p);b=raw(p);meta=elf(b)
+  dynamic=subprocess.check_output(['readelf','-dW',str(p)],text=True)
+  symbols=subprocess.check_output(['readelf','--dyn-syms','-W',str(p)],text=True)
+  needed=re.findall(r'\(NEEDED\).*?\[(.*?)\]',dynamic)
+  sql_imports=[]
+  for line in symbols.splitlines():
+   if ' UND 'in line and re.search(r'\bsqlite3_(?:open|close|exec|free|errmsg|prepare[^ ]*|step|finalize)\b',line):sql_imports.append(line.strip())
+  selected.append({'source':ident(p),'ELF':meta,'DT_NEEDED':needed,'selected_SQLite_symbol_declarations':sql_imports})
+  for marker in [b'BACnetTemplates.xml',b'dbfiles_ws.xml']:
+   for match in re.finditer(re.escape(marker),b):
+    off=match.start();vas=[hex(int(s['VA'],16)+off-s['offset'])for s in meta['PT_LOAD']if s['offset']<=off<s['offset']+s['file_bytes']]
+    literal_leads.append({'source':str(p.relative_to(W)),'source_sha256':h(b),'literal':marker.decode(),'file_offset':hex(off),'mapped_VA':vas,'scope':'Literal presence only; no callsite, parser, query or live binding established'})
+ startup=T/'etc/init.d/bt_daemon-apps.sh';pin(startup)
+ startup_safe=source_lines(startup,[1,2,3,5,6]);assert startup_safe['selected_lines'][-1]['text']=='bin/bt_daemon &'
+ stack=T/'home/bticino/cfg/stack_open.xml';pin(stack);tree=ET.fromstring(raw(stack));apps=[]
+ for n in tree.findall('./sw/stackopen/*'):
+  if n.tag.startswith('p')and n.find('name')is not None:apps.append({'row':n.tag,'name':n.findtext('name'),'path':n.findtext('path'),'working_mode':n.findtext('working_mode')})
+ # Locate only the five explicit process declarations, without full config export.
+ if not apps:
+  for n in tree.findall('.//stackopen/*'):
+   if n.find('name')is not None:apps.append({'row':n.tag,'name':n.findtext('name'),'path':n.findtext('path'),'working_mode':n.findtext('working_mode')})
+ assert [x['name']for x in apps]==['bacclient','ebacgw','bt_device','scsserver','bt_termo']
+ line_nums=[i for i,s in enumerate(stack.read_text().splitlines(),1)if any(f'<name>{x["name"]}</name>'in s for x in apps)and i<90]
+ cfg={'script':startup_safe,'stack_source':ident(stack),'safe_process_declarations':apps,'safe_name_line_numbers':line_nums,'scope':'On-disk startup requests/declarations only; configuration selection, process creation, service readiness and bodies not audited'}
+ structures=[]
+ for name in ['home/bticino/cfg/BACnetTemplates.xml','home/bticino/sp/dbfiles_ws.xml']:
+  p=T/name;pin(p);root=ET.fromstring(raw(p));structures.append({'source':ident(p),'root_tag':root.tag,'element_counts':dict(sorted(collections.Counter(x.tag for x in root.iter()).items())),'attribute_names':sorted({a for x in root.iter()for a in x.attrib}),'scope':'Host XML structure only; no stored values, full configuration, generator or runtime semantics exported'})
+ blob=G/'extracted/F455_1_1_2.bin';pin(blob);b=raw(blob);assert len(b)==301016 and h(b)=='6d61c308888ccd78f6fb289cf23e672203921a50931b838533a7a315c5d49ccc'
+ f455={'source':ident(blob),'first64_hex':b[:64].hex(),'first16_little_endian_words':[hex(x)for x in struct.unpack('<16I',b[:64])],'known_magic_at_offset0':{'ELF':b.startswith(b'\x7fELF'),'ZIP':b.startswith(b'PK\x03\x04'),'gzip':b.startswith(b'\x1f\x8b'),'SQLite':b.startswith(b'SQLite format 3\0')},'whitelisted_markers':{m.decode():[x.start()for x in re.finditer(re.escape(m),b)]for m in [b'F455',b'Basic Gateway',b'1.1.2',b'ARM']},'scope':'Opaque standalone payload. Numeric words and ASCII marker offsets do not identify architecture, vector table, address map, codec, device behavior or usable structured data.'}
+ curated=W/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0152-f455-basic-gateway.md';pin(curated)
+ source={'packages':packages,'kernel_header':kernel,'execution':{'original_firmware':0,'native_helpers':0,'models_fixtures':0,'SQL_queries':0,'vendor_processes':0,'target_OS_IO_network_bus':0,'archive_decryption_attempts_in_this_packet':0},'method':'Read-only host file hashes/header parsing, XML element-name counts, zip central-directory metadata and host readelf. No SQL/schema work, provider/receiving/transport/auth/session/framing implementation or target script execution.'}
+ outputs={'PACKAGE_SOURCE.json':js(source),'F450_COMPARISON.json':js(comparison),'ELF_HEADERS.json':js({'count':len(headers),'ABI_counts':[{'class':k[0],'byte_order':k[1],'machine':k[2],'count':v}for k,v in sorted(counts.items())],'files':headers}),'SELECTED_COMPONENTS.json':js({'components':selected,'structured_file_literal_leads':literal_leads}),'STARTUP_SAFE.json':js(cfg),'STRUCTURED_LEADS.json':js({'XML_structures':structures,'encrypted_database':auxmeta,'division_of_work':'Parent owns central database magic/structural/schema analysis; no duplicate SQL executed here.'}),'F455_HEADER.json':js(f455),'INPUTS.json':js({'inputs':sorted({x['path']:x for x in inputs}.values(),key=lambda x:x['path']),'original_regular_tree_identity_inputs':'All3839 regular files in each F450tree checked against pinned read-only extraction manifests; ELF_HEADER rows pin each ELF source. No complete raw configuration export.'})}
+ report=f'''# F450 standard/PROD 2.0.10 and F455 1.1.2: bounded first exploration
+
+The F450 packages retain identical normal root images and all 3,839 regular-file identities, but their outer packages differ. F455 is a separate opaque standalone payload. These findings concern exact retained originals, not installed devices or runtime equivalence.
+
+## Exact applicability and package distinction
+
+- F450 standard archive: 13,265,378 bytes, SHA256 `9e625012d3e8629bea15d608f7c1de160e971499a39f3fd86f0c68103da8b9da`.
+- F450 PROD archive: 13,444,140 bytes, SHA256 `27c5640916f980be2c16fd14ed7818d8b361e69b439e7a774bd4e90e57b9b96f`.
+- F455 archive: 180,196 bytes, SHA256 `cd99299fc729679b4eade46acda7bd4f5e619a0a9eac34a1f6a3b73b625a18f9`.
+
+Both F450 fwz.xml originals are identical 790-byte files (`4b5709921d308716dbd4f9dea0ccea9f5265331ea67beb0c0076e6ee5d9d330c`). Their name/version are F450/2.0.10 and object-model labels are 1.0.52/2.0.52 (lines3-9). They declare firmware and recovery_firmware actions using the same two file labels, plus extra_download 50.xtz (lines13-24); status4 orders actions2,1,3 (lines26-29). This is manifest declaration, not actual recovery selection or installation proof.
+
+The standard outer ZIP has three members; PROD has eight. PROD adds 50.xtz, bubl.bin, default_env.img, parts.in and u-boot.bin. Only metadata/hashes of these packaging additions are used; environment contents are not inspected or exported. Shared extracted gzip/uImage/fwz.xml and normal image hashes match. The normal image SHA256 is `92aa546baf4c330b842e6e0f0336acd264787a944c9b27838c5aacdd04ff1f10`. Each retained regular tree totals {comparison['regular_file_bytes_each']:,} bytes; all individual sizes/hashes were verified. Saved link/special-node metadata remains separate; this collector never makes or follows target links.
+
+## F450 architecture and selected startup structure
+
+Fresh original headers identify {len(headers)} regular ELF files; ABI counts are in ELF_HEADERS.json. The selected bt_daemon, bacclient, ebacgw, libopen.so.0.0 and libopenmsg.so are ELF32 little-endian ARM (machine40), flags0x5000002/EABI5. This is distinct from later AArch64 F460/F461 and does not authorize transferring their layouts. The uImage header name is `Arago/2.6.32.17-davinci1/lago`; its numeric OS/architecture/type/compression tuple is [{os},{arch},{kind},{comp}] and declared payload size is {size}. Header bytes are saved, not a statement about a booted kernel or hardware.
+
+Original etc/init.d/bt_daemon-apps.sh lines3,5,6 request library path `/home/bticino/lib:/home/bticino/libcoso`, directory `/home/bticino`, and `bin/bt_daemon &`. The safe stack_open.xml process names at lines{','.join(map(str,line_nums))} are bacclient, ebacgw, bt_device, scsserver and bt_termo. STARTUP_SAFE.json retains only these whitelisted declarations/script lines. Actual configuration selection, startup, module binding and readiness are unproved; no script is sourced or run.
+
+## Structured data and concrete follow-up leads
+
+PROD 50.xtz central-directory metadata lists `50/master.sqlite`, declared289,792 bytes, CRC32 52150069, encrypted, plus encrypted zero-byte extra.xml. Neither content is available to this packet. No password/key study, decryption attempt or SQLite query was made. The standard outer package does not contain 50.xtz despite the identical manifest reference. This is an explicit package-composition gap, not a runtime missing-file defect.
+
+Original `home/bticino/cfg/BACnetTemplates.xml` is8,503 bytes/SHA256 `b837e1f86167dfdbf814f0e562c9c2b7349d603939c4945eb3937efc8477ea04`: root BACnetTemplates, eight DeviceType and126 object elements, attribute names class/grandezza/name/unit. `home/bticino/sp/dbfiles_ws.xml` is477 bytes/SHA256 `be6767b12639e64a4ca3e136be73a93d5e61e2f2dd35daee1172c6919945a05a`: a Root_Element wrapper with general_info and five metadata leaf element names. Structural counts reveal no configured device instances or accepted protocol/support table.
+
+bacclient contains both XML filename literals and bt_daemon contains dbfiles_ws.xml; exact file offsets and PT_LOAD-derived VAs are in SELECTED_COMPONENTS.json. ebacgw declares DT_NEEDED libsqlite3.so.0 and selected SQLite symbol imports including sqlite3_open. These are useful original consumer candidates, not proved calls, query ownership, successful opening, schema compatibility or live bindings. The parent owns the wider DB signature/schema census; this collector does not duplicate it or infer global DB absence.
+
+## F455 standalone boundary
+
+fwz.xml declares Basic Gateway, version1.1.2, model label5.0.8, and file F455_1_1_2.bin with update mode bootloader. The extracted payload is301,016 bytes/SHA256 `6d61c308888ccd78f6fb289cf23e672203921a50931b838533a7a315c5d49ccc`. Its first64 raw bytes and little-endian word interpretation are saved in F455_HEADER.json. It has none of the selected ELF/ZIP/gzip/SQLite magic values at offset0; the whitelisted ASCII F455 marker occurs at299056. No architecture, executable section, vector table, load address, filesystem or data grammar is established. The curated OWN-DEV-0152 product role is context only, not a binary capability oracle; credential material is not copied.
+
+## Ranked remaining questions and reproducibility
+
+1. Obtain an authorized genuine plaintext/source form of the encrypted PROD master.sqlite; central-directory naming alone cannot establish its schema or configured content. No further key/decryption investigation is part of this packet.
+2. Separately trace bacclient's two XML literal users and ebacgw's declared SQLite opening consumer, stopping at closed delegates; names/imports alone do not close these joins.
+3. Identify F455's original format/target using authoritative packaging/tool metadata before interpreting code or structured objects.
+
+Run `python3 -B collect_firstpass_v2.py --check` from this directory. Initial outputs and collector/report copies are exclusive and frozen immediately; index bytes are computed before its own file is opened. --check only compares bytes. All original firmware/native/provider/model/fixture/vendor/SQL/target OS/network/bus execution additions are0; host readelf and metadata parsing are analysis tools. Canonical archive provenance/CRC checks are inherited separately from acquisition, not cryptographic authenticity. No old dossier or source/repository file is edited. There were no failed canonical generations or overwritten candidates in this packet. A staged unexecuted v1 script was retained before the sole six-to-five XML leaf-count prose correction and v2 reproduction-name update; VERSION_HISTORY.v2.json pins the exact parent snapshot and changes. Exploratory host-only reads preceded this frozen collector; one harmless invalid-escape SyntaxWarning in an ad-hoc search did not execute target code or create evidence outputs. Full runtime, physical support, authentication and transport behavior remain outside scope.
+'''
+ outputs['REPORT.md']=report.encode()
+ outputs['OUTPUT_MANIFEST.json']=js({'collector_sha256':h(raw(Path(__file__))),'scope':'Generated files excluding this manifest itself; originals unchanged','files':{n:{'bytes':len(b),'sha256':h(b)}for n,b in sorted(outputs.items())}})
+ return outputs
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build()
+ if a.check:
+  for n,b in out.items():assert raw(O/n)==b,n
+  rows=load(O/'first-candidate/INDEX.json')['files']
+  assert len(rows)==len(out)+1
+  for x in rows:
+   b=raw(O/'first-candidate'/x['copy']);assert len(b)==x['bytes'] and h(b)==x['sha256'];assert b==raw(O/x['copy'])
+ else:
+  assert not(O/'first-candidate').exists()
+  assert all(not(O/n).exists()for n in out)
+  for n,b in out.items():
+   with (O/n).open('xb')as f:f.write(b)
+  d=O/'first-candidate';d.mkdir();rows=[]
+  for n,b in sorted({**out,Path(__file__).name:raw(Path(__file__))}.items()):
+   with (d/n).open('xb')as f:f.write(b)
+   rows.append({'copy':n,'bytes':len(b),'sha256':h(b)})
+  index=js({'scope':'Exact first generated outputs and collector; index excluded and computed before its creation','files':rows})
+  with (d/'INDEX.json').open('xb')as f:f.write(index)
+ print(json.dumps({'status':'PASS','outputs':len(out),'first_copies':len(out)+1,'regular_files_each':3839,'ELF_files':load(O/'ELF_HEADERS.json')['count'],'new_original_execution':0}))
+if __name__=='__main__':main()

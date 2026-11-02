@@ -1,0 +1,62 @@
+[
+  {
+    "bytes_hex": "013c",
+    "va": "0x2eab4"
+  },
+  {
+    "bytes_hex": "162c",
+    "va": "0x2eab6"
+  },
+  {
+    "bytes_hex": "00f29886",
+    "va": "0x2eab8"
+  },
+  {
+    "bytes_hex": "4420",
+    "va": "0x2f7f4"
+  },
+  {
+    "bytes_hex": "0628",
+    "va": "0x2d1c2"
+  },
+  {
+    "bytes_hex": "302a",
+    "va": "0x2d1dc"
+  },
+  {
+    "bytes_hex": "312a",
+    "va": "0x2d1e0"
+  },
+  {
+    "bytes_hex": "2064",
+    "va": "0x2d1f2"
+  },
+  {
+    "bytes_hex": "7020",
+    "va": "0xa81a2"
+  },
+  {
+    "bytes_hex": "c7e900a8",
+    "va": "0xa829e"
+  },
+  {
+    "bytes_hex": "c6e900a8",
+    "va": "0xa82ca"
+  },
+  {
+    "bytes_hex": "de66",
+    "va": "0xa82e6"
+  },
+  {
+    "bytes_hex": "84f83030",
+    "va": "0xb8f3a"
+  },
+  {
+    "bytes_hex": "6265",
+    "va": "0xb8f90"
+  },
+  {
+    "bytes_hex": "c4ed160b",
+    "va": "0xb8f98"
+  }
+]

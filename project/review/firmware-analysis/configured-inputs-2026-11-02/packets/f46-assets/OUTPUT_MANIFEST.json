@@ -1,0 +1,18 @@
+{
+  "collector_sha256": "bc1c514948d61dada67ea718a27b8f84d1cc36415f7cac53483e2ee98d99202c",
+  "outputs": {
+    "ASSET_ADMISSION.json": {
+      "bytes": 26200,
+      "sha256": "bc3effb54795af6d1743e991e2d33a705d07a704acb5d13b9a92f5614c2a77fe"
+    },
+    "INPUT_PINS.json": {
+      "bytes": 10927,
+      "sha256": "89c342c4b9aec3f7ff4a2eca8fbede75c36dc12c2ce15b9f6c31a4a0cdf9e413"
+    },
+    "REPORT.md": {
+      "bytes": 2971,
+      "sha256": "e32dbc59066ef8ffecd875632ab9490ac2ed384987efd885a813a4820dc7568d"
+    }
+  },
+  "scope": "Targeted asset admission, zero new functional source coverage"
+}

@@ -1,0 +1,34 @@
+# Packaged JsonCpp double value: independent source review
+
+Verdict: PASS; no correction requested. This independently checks original packaged-provider bytes, candidate definitions/import chains, scalar dataflow and frozen evidence. No original/native/provider/vendor/target instructions, JSON object, floating-value fixture, semantic host model or harness executed. Author, original and prior source files remained read-only. This closes a selected candidate scalar source contract, not live binding, whole JSON member/assignment/map/reparse execution or physical behavior.
+
+## Reproduction and exact source checks
+
+Read-only `python3 -B collect_provider_v1.py --check` passed11 outputs. A separate ELF32 PT_LOAD mapper independently verified all7 raw span hashes,10 byte guards,6 dynamic definitions,3 decoded Thumb BLX ->ARM PLT ->JUMP_SLOT chains,2 scheduler import rows and the type3 TBB target. All13 immediate first copies match current bytes/sizes/hashes. Both extra input pins and the ImageVFS metadata alias from libjsoncpp.so.25 to the candidate bytes were independently verified. The retained original methods were read for register/branch/dataflow semantics, not merely compared with expected generated data.
+
+Provider SHA256 `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36` and scheduler SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26` agree. NEEDED/SONAME, alias bytes and candidate definitions substantiate packaged applicability only. Thumb low bits are not instruction addresses, and original PLT/relocation names do not prove effective loader/interposition choices or successful runtime self-binding.
+
+## Actual selected contracts
+
+The double overload C1/C2 definition is Thumb0x15ce1, instruction0x15ce0. It explicitly clears comments object12, passes type3/flag0, copies incoming D0 into D8, calls candidate initBasic via its actual PLT request and stores D8 into union object0 after normal return. Ordinary hard-float ABI/callee preservation, valid storage and normal returns remain premises. No source numeric-to-string/integer/unit conversion occurs on that retained normal route.
+
+initBasic0x15ad4 writes supplied type byte to8, separately updates its flag bit9 and prepares a zero comments source. Comments assignment0x159ec reads that source, zeroes its source slot, installs it and branches around old-destination disposal when old comments0. The constructor supplied old0, so this composed selected route needs no invented successful free primitive. initBasic then clears offsets16/20 and follows its canary/normal return. Other old comments, arbitrary flags, allocation/error/unwind and whole lifecycle are not closed.
+
+Type getter0x14e3c reads byte8. asDouble0x171c4 requests this candidate method; original TBB37181f343a03 at0x171e6 selects0x1724e for type3. That block loads union0 into D0 and branches to the normal epilogue, which does not perform floating arithmetic/conversion on D0. Under valid unchanged constructor-produced type3 state, candidate binding, ordinary ABI/canary/provider and no-intervening-mutation premises, the stored scalar therefore has a direct source path to asDouble's returned D0. This is not a numerical execution result or a general exceptional/unordered/other-type conversion claim.
+
+The scheduler's ValueC1(double) and asDouble import declarations support the exact requested overloads. The separate BNTH serializer/reparse packet owns their callsite/schema chain; this provider review does not independently substitute for that report or execute a complete object roundtrip. Actual result-object creation, keyed insertion, move assignment, tree/member lookup, string conversion, selected raw schema admission, runtime binding and configured values stay additional premises.
+
+The report accurately keeps accepted setpoint domain, physical temperature units, public protocol/product support, actual records/scenes/actions, complete errors/ownership and full Device approval open. No F454/MH202 layout, harness, tool-emulation corpus or opaque receiving/transport/authentication/session/framing body was reused or expanded. First-copy identities are verified without authenticating unavailable historical drafts or every development event.
+
+## Exact current reviewed pins
+
+Paths below are relative to provider/.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `5ae3040b3f3b8e24edff3d6b893c1a78053f6c3d4fc27b66837f90a67e768bd2` |
+| `collect_provider_v1.py` | `0b86d7fe2350dc117108b2e9c39c389ca64f6a6638ed83232b0c3e082799aebc` |
+| `OUTPUT_MANIFEST.json` | `d388d6e54028b8171cc319801ff0e1bd0230766249c01d4ce94e822d606fecfe` |
+| `ORIGINAL_SOURCE.json` | `aee9f3f5af8bbb3465c16f5692670b12d2323ed824292fdb22c39f38b9452c78` |
+| `CONTRACT.json` | `09c68f42a69b71aac9245e132540817bc6a17259d25da54dda7a84610210ea2f` |
+| `first-candidate/INDEX.json` | `72d62d221570fd67711e132f338b762233a8fc026620a7a48f484f8698b6d2e3` |

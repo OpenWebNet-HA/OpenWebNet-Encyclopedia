@@ -1,0 +1,19 @@
+{
+  "comments": "constructor explicitly zeros object12; selectedmove source0/old0 bypassesnonnull disposal",
+  "constructor": "D0 preserved in D8 then stored object0 after type3initBasic",
+  "not_proved": [
+    "wholeJSONcreation/memberassignment/map/reparse",
+    "runtimebinding/interposition",
+    "allcomments/flags/errors/unwind",
+    "actualconfiguredsetpoint/domain/units/physicalbehavior"
+  ],
+  "original_execution": 0,
+  "premises": [
+    "validconstructedobject/storage",
+    "ordinaryARMhardfloatABI",
+    "selectedcandidatePLT/selfbindingandnormalcanary/providerreturns",
+    "nointerveningmutation"
+  ],
+  "readback": "type() readsbyte8; type3TBB\u2192VLDR D0object0\u2192normalepilogue withoutnumericconversion",
+  "semantic_fixtures": 0
+}

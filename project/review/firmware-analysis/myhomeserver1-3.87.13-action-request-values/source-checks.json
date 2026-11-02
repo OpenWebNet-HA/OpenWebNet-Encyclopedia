@@ -1,0 +1,14 @@
+{
+  "commands": [
+    "python3 -B values/collect_values_v1.py --check",
+    "python3 -B parent_probe_v1.py --check"
+  ],
+  "result": {
+    "chunk_id": "55659d",
+    "wall_time_seconds": 0.274403644,
+    "exit_code": 0,
+    "original_token_count": 42,
+    "output": "{\"check\": true, \"outputs\": 21, \"spans\": 17, \"guards\": 39, \"import_call_proofs\": 19, \"new_original_execution\": 0}\n{\"PIC_literals\": 4, \"new_execution\": 0, \"check\": true}\n"
+  },
+  "scope": "Actual parent host source reproduction only; no original code or CPU replay"
+}

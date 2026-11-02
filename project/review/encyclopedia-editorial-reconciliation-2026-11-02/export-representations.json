@@ -1,0 +1,111 @@
+{
+  "scope": "Specific identity mappings for representation/navigation changes to published supporting records; original proof/source semantics unchanged",
+  "original_preservation": "Exact private pre-edit branch snapshot, indexed by original repository path and SHA-256",
+  "historical_manifests": "Retain original byte identities; do not treat old checks as validation of changed public exports",
+  "mappings": [
+    {
+      "original_repository_path": "project/review/firmware-analysis/f460-f461-final-2026-11-01/verification/CATALOGUE.txt",
+      "original_bytes": 6865,
+      "original_sha256": "6419e3f3b82721524dd1a93950bc25a36fdec7213aff5b6040485a7f6e7be5ee",
+      "sanitized_bytes": 5125,
+      "sanitized_sha256": "3233b3db875cfb94ad9d672d231c88534310a57117fadb6124dff39351848935",
+      "transformation": "Replace exact local workspace prefix with ${WORKSPACE}; exact archive checkout prefix with ${ARCHIVE_CHECKOUT}; no instruction bytes, original source identities or semantic fields changed"
+    },
+    {
+      "original_repository_path": "project/review/firmware-analysis/myhomeserver1-3.87.13-final-review/verification/NAVIGATION.txt",
+      "original_bytes": 2178,
+      "original_sha256": "00055dd385816dded10a70e14a745b1bf47ce8bfd67b73d42a2326568e1f327d",
+      "sanitized_bytes": 2062,
+      "sanitized_sha256": "ed95619247107fe5317512290e5d31b7ba0dd8fe2865ea05c249e4e5d4acc789",
+      "transformation": "Replace exact local workspace prefix with ${WORKSPACE}; exact archive checkout prefix with ${ARCHIVE_CHECKOUT}; no instruction bytes, original source identities or semantic fields changed"
+    },
+    {
+      "original_repository_path": "project/review/firmware-analysis/myhomeserver1-3.87.13-synthesis/navigation/CATALOGUE.txt",
+      "original_bytes": 8852,
+      "original_sha256": "692bdffd1c0f648599a5eecc6ad8bd9b0b4361a0594b2b26cded6d4c863d774e",
+      "sanitized_bytes": 7866,
+      "sanitized_sha256": "72ab3fa3d0bc9d29ae93f74dbe42ee012d5756127286ca65a5b6280916559d27",
+      "transformation": "Replace exact local workspace prefix with ${WORKSPACE}; exact archive checkout prefix with ${ARCHIVE_CHECKOUT}; no instruction bytes, original source identities or semantic fields changed"
+    },
+    {
+      "original_repository_path": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run01-mh200n/SOURCE.json",
+      "original_bytes": 16710,
+      "original_sha256": "877a472b9766e671f271e84a3ce3002072968b97a7f9284c092df7ec5e87c017",
+      "sanitized_bytes": 16246,
+      "sanitized_sha256": "6a7a05184cd960665f40862a1396beb1bad28609731e3362b3f81a42f128a355",
+      "transformation": "Replace exact local workspace prefix with ${WORKSPACE}; exact archive checkout prefix with ${ARCHIVE_CHECKOUT}; no instruction bytes, original source identities or semantic fields changed"
+    },
+    {
+      "original_repository_path": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-mh200n/SOURCE.json",
+      "original_bytes": 12964,
+      "original_sha256": "91a223cfd41f7eef759d9b5d69fa0a5fc4d00e9ddfb5495c619251938fb47fd5",
+      "sanitized_bytes": 12500,
+      "sanitized_sha256": "c5bb62d7446137e701ba6d17093abad7632ff7a38cce92279378cae8313df34d",
+      "transformation": "Replace exact local workspace prefix with ${WORKSPACE}; exact archive checkout prefix with ${ARCHIVE_CHECKOUT}; no instruction bytes, original source identities or semantic fields changed"
+    },
+    {
+      "original_repository_path": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run04-mh200n/SOURCE.json",
+      "original_bytes": 6798,
+      "original_sha256": "2f2743423265987d92f10ee3c97fce35d6a5b9df0748e6f0e7ec9ed67e957b83",
+      "sanitized_bytes": 6508,
+      "sanitized_sha256": "5340382b2d1f5b93d21fc28159cac3ff03abdfd80d873bbe9cfb2a49c889af58",
+      "transformation": "Replace exact local workspace prefix with ${WORKSPACE}; exact archive checkout prefix with ${ARCHIVE_CHECKOUT}; no instruction bytes, original source identities or semantic fields changed"
+    },
+    {
+      "original_repository_path": "project/review/firmware-analysis/remaining-firmware-run05-2026-11-01/packets/f453av/SOURCE.json",
+      "original_bytes": 5695,
+      "original_sha256": "25af62ff37b1571acf3925fca094ef32a4648faaa56ae315725be0525358c42c",
+      "sanitized_bytes": 5521,
+      "sanitized_sha256": "693edc73978c53e102d13899d51eefe7204c368b7701f4eb6a1dbe4caed80b43",
+      "transformation": "Replace exact local workspace prefix with ${WORKSPACE}; exact archive checkout prefix with ${ARCHIVE_CHECKOUT}; no instruction bytes, original source identities or semantic fields changed"
+    },
+    {
+      "original_repository_path": "project/review/firmware-analysis/remaining-firmware-run06-2026-11-01/packets/f453av/SOURCE.json",
+      "original_bytes": 8671,
+      "original_sha256": "29dc793f576b880f858de119e105ebb3dfd84454e943bf9bbef6829a63bfb815",
+      "sanitized_bytes": 8323,
+      "sanitized_sha256": "09100dd1f94cc8c4fecc21ca9b2f6b759c0f1ef0117d031792f5a525ed8d1fc6",
+      "transformation": "Replace exact local workspace prefix with ${WORKSPACE}; exact archive checkout prefix with ${ARCHIVE_CHECKOUT}; no instruction bytes, original source identities or semantic fields changed"
+    },
+    {
+      "original_repository_path": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/mh200n/SOURCE.json",
+      "original_bytes": 12516,
+      "original_sha256": "7e511fa58fb12cc4b0545bd487d735c13b3b62744a1e1541c0dbcb9579cfb305",
+      "sanitized_bytes": 12226,
+      "sanitized_sha256": "6ba7bbb99132c9f02db2720ba156c49d78028401d4000b88620efcfb17830600",
+      "transformation": "Replace exact local workspace prefix with ${WORKSPACE}; exact archive checkout prefix with ${ARCHIVE_CHECKOUT}; no instruction bytes, original source identities or semantic fields changed"
+    },
+    {
+      "original_repository_path": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/mh200n/SOURCE.json",
+      "original_bytes": 10867,
+      "original_sha256": "7512c154892a4c6298fa5ff15c92cf0df6463d5f8316eec3b00ffd78119fdcde",
+      "sanitized_bytes": 10519,
+      "sanitized_sha256": "ca484f645a674803652d8ae16193d3a2804fb4002266e4cb035d90566ea7dcf6",
+      "transformation": "Replace exact local workspace prefix with ${WORKSPACE}; exact archive checkout prefix with ${ARCHIVE_CHECKOUT}; no instruction bytes, original source identities or semantic fields changed"
+    },
+    {
+      "original_repository_path": "project/review/firmware-analysis/f460-f461-run04-2026-11-01/README.md",
+      "original_sha256": "0f58c2256208cba174ae620fbe77c07557da00b8a69cbb8549d9915036ff6e96",
+      "public_sha256": "53c0b282b9d0c5f00328cdd379cb072ed7256386a56cfded5a59b4d9c5e4542d",
+      "transformation": "Navigation-only repair to the same retained concept; original source/report bytes and historical pins unchanged"
+    },
+    {
+      "original_repository_path": "project/review/firmware-analysis/f460-f461-run05-2026-11-01/README.md",
+      "original_sha256": "e6e10c20210cd11aa374a303510851bf5fe932e134d7461bbad9557e3e6951ea",
+      "public_sha256": "f81d847a250250484e2c336407b0ab546226c5e0e5bc719ee6e2a387d0c63fc5",
+      "transformation": "Navigation-only repair to the same retained concept; original source/report bytes and historical pins unchanged"
+    },
+    {
+      "original_repository_path": "project/review/firmware-analysis/README.md",
+      "original_sha256": "956b8e4a5127f0c63f47f54d517bc13819a46a2a5e2bb1d47882be7386bf539b",
+      "public_sha256": "92b509c9ddd09130390b74ff37d06e5836a8cf1fe1925532af114c76e820dc1c",
+      "transformation": "Replace append-only run log with evidence roles, complete collection navigation and explicit historical/representation policy"
+    },
+    {
+      "original_repository_path": "project/review/firmware-analysis/f454-2.0.51/first-targeted-reviewed/diagnostics__dim1-device-identity.md.txt",
+      "original_sha256": "df460bc77a64985a2f7f3d943cdaa25214533613d228aa82ba5b9f7e3087d72d",
+      "sanitized_sha256": "8f92aeb2f9b7f513a6f553e12a367ea45db537fbda5349eef01bc4d4eee3f03c",
+      "transformation": "Replace an observed installation identifier with an explicitly anonymized Device label; model107/item1184/SKU statements unchanged; exact original retained privately"
+    }
+  ]
+}

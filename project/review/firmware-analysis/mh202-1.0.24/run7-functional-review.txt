@@ -1,0 +1,39 @@
+# MH202 run7 functional independent source review — PASS
+
+Independent static review of the COSO dispatcher/context/metadata findings. No corrections required. Reviewer authored the separate protocol/run7 analysis, not these functional findings. Only this review is written; author sources/evidence and originals remain unchanged.
+
+## Verification
+
+Author collector `functional/run7/collect_evidence.py --check` passed27 outputs plus manifest,17 spans,31 words,4 original inputs and5 list/1 post-parser/4 metadata finite host cases. Separately parsed original ELF PT_LOAD mappings via read-only ImageVFS (without importing the author collector), recomputed all17 span offsets/hashes and31 word values, all4 original input hashes, and all27 manifest entries. Independently recalculated the finite criteria-list and queue-feedback models.
+
+I also checked actual original `coso` relocation rows: pool0xaaf0 plus original main PIC base0x16660 selects GOT0x16808 with GLOB_DAT `sm_receive`0xb564. Adjacent pool0xaaf4 instead selects GOT0x16810 with `syn_receive`0xb4a0. The retained development assertion failure occurs before the collector's final output-writing loop; it does not represent original execution or an earlier successful source claim.
+
+This review inspected original disassembly/code relationships for the complete application dispatcher, field STM callback, publication callback, constructor/key helpers and selected SCS metadata spans. No ARM/library/parser/JS/PHP/vendor execution, emulator, timer, device, socket or live I/O occurred in this reviewed batch or review. The parent's separately authorized work has its own execution accounting and is not negated by this area's zero counts.
+
+## Source interpretation checked
+
+- Application0xb614..0xb7b8 sets record+52=3, traverses manager+24 descriptors and descriptor+52 criteria, compares criterion numbers with record+48, and invokes descriptor+44 with descriptor/record/field-list-address SP+20/OPEN-list-address SP+16. Return r0 is not consulted before list concatenation. Matching duplicates remain loop-eligible; the model does not claim installed duplicates or callback success. Selected locals feed descriptor+60 manager field+68 and OPEN+60 queues.
+- Actual field callback0xade8..0xaf14 uses the same criterion equality, invokes descriptor+40 with field list SP+12 and OPEN list SP+8, concatenates selected outputs and has source-visible record-find/free decisions. The wrapper's foreach/callback/list-node boundary is not represented as a full successful ownership lifecycle or accepted raw TR result.
+- Scenario descriptor numeric0 registration and application-handler relocation join a supplied post-parser WHO0/kind2 record to the run6 handler's field-list/key-save contract. The synthetic key7 fixture begins with a supplied current counter7, not a claim that a fresh zeroed process begins at7 or that any raw request was accepted.
+- Main0xa5c4..0xa5fc installs manager+48 from the sm_receive GOT, with context at+44; selected core first-pointer semantics and initializer copying of manager+44/+48 to private+36/+40 are retained as fresh/ordinary initialization premises. sm_receive0xb564 sends the first nonnull list-pointer argument to send_msgs2open and the second to send_msgs2field, passing the saved manager argument as field context and combining returns. That identifies the publication direction/call boundary, not completed serialization, actual descriptor recipient or delivery.
+- buf_to_open_message0x2b9c..0x2c64 only constructs a record after parser return0; it derives WHO metadata, format3 and record+60 from new_id. Complete new_id0x220c..0x2230 is a load/32-bit increment/store at original NOBITS0xbcb4, returning the preincrement value. No runtime uniqueness, atomicity, synchronization or nonwrapping guarantee follows.
+- Metadata wrappers' selected+60 copies, queue-feedback0x2cb4..0x2d40 and fresh-field0x2e1c..0x2e64 agree: the queued-record slice retains its existing key and writes numeric flag1/2 from a supplied zero/nonzero stack predicate; fresh-field requests a new id and flag3. Their numeric flags are not promoted to physical ACK/NACK meanings. Actual predicate production, raw SCS eligibility, intermediate TR conversion and natural key correlation remain open.
+
+No material scope issue found. The report correctly stops at static callback/metadata joins: actual dispatcher/TR round trip, coherent parser fields, natural pending/counter+32 history, timer behavior, provider binding, allocator/container completion, object lifetime and physical scenario effects remain conditional or unknown. The historical run6 reset-retained counter is not reinterpreted as universal second reply semantics.
+
+## Exact pins
+
+Author paths below are relative to `functional/run7/`. The pinned manifest covers all27 generated outputs; it excludes report/reviews, so report and collector are separately pinned. Historical assertion draft is separately pinned without rewriting it.
+
+| File | SHA256 |
+|---|---|
+| `REPORT.md` | `9f677fb93603e88f3297bb8785bf85fd2f4ba1161bd084d808f17b17e975c218` |
+| `collect_evidence.py` | `d9089ab8e07785069395db53a31a3111dff99d24d76bef6f77f6a00fc2a1f4fe` |
+| `output-manifest.json` | `114a43603ad4f4f9d53a3b9a77713299b11d34070de477c2a96a82191ae1d572` |
+| `input-hashes.json` | `8747d57335dc577dd0ab910f86d9428f97b55be4a7f143062df7aa9e25ef1e8f` |
+| `original-spans.json` | `820e7d984308baab989391a98625ab7b65619ffba3ef741b97c3c89e417034ca` |
+| `critical-words.json` | `16470b80641da0125456bb8e0dc0ba09fba710db73f9ee824a8fda57266d788a` |
+| `checked-address-joins.json` | `6c0ad33071077bf5880aa4e3b938ccffe266b445f667d357f8c9ddbf58f9fa14` |
+| `host-dispatch-models.json` | `25d8a6fba04dc270a261319306a094142455f00bffbb1087fed66a01599326a7` |
+| `host-metadata-models.json` | `5cdbc6acbd6bc4c1662dd7348395f336ddc4a4c2bf1f95b1c8cb009dabdb0735` |
+| `development-before-assert/collect_evidence.py` | `1b12326ac26bebb6c62fe6ace74c155d637e5c2b36ec3d0bd9e54d0dd6cde612` |

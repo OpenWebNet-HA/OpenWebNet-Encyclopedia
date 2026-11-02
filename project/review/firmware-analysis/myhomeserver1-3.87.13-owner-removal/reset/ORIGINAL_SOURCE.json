@@ -1,0 +1,81 @@
+{
+  "PIC_GOT_RTTI": {
+    "ADD_PC": "0xb2bdc",
+    "RTTI": "0x162f40",
+    "base": "0x1659a4",
+    "header": "0x16004c",
+    "name": "18BncuSceneCondition",
+    "name_pointer": "0x1155e8",
+    "pool_base": "0xb2d98",
+    "pool_slot": "0xb2d9c",
+    "relative_relocation": "00166b70  00000017 R_ARM_RELATIVE",
+    "slot": "0x166b70"
+  },
+  "direct_calls": [
+    {
+      "VA": "0xa7a06",
+      "bytes": "0bf0ddf8",
+      "target": "0xb2bc4"
+    },
+    {
+      "VA": "0xb2bea",
+      "bytes": "78f7f1fd",
+      "target": "0x2b7d0"
+    }
+  ],
+  "guards": [
+    {
+      "VA": "0xa79f0",
+      "bytes": "0df58559"
+    },
+    {
+      "VA": "0xa79f4",
+      "bytes": "09f11809"
+    },
+    {
+      "VA": "0xa7a00",
+      "bytes": "4846"
+    },
+    {
+      "VA": "0xa7a06",
+      "bytes": "0bf0ddf8"
+    },
+    {
+      "VA": "0xb2bd4",
+      "bytes": "0446"
+    },
+    {
+      "VA": "0xb2bde",
+      "bytes": "04f1480a"
+    },
+    {
+      "VA": "0xb2c0a",
+      "bytes": "6364"
+    },
+    {
+      "VA": "0xb2c0c",
+      "bytes": "84f84830"
+    },
+    {
+      "VA": "0xb2c10",
+      "bytes": "c4f840a0"
+    }
+  ],
+  "image": "/home/bticino/scheduling_manager/scheduling_manager",
+  "spans": [
+    {
+      "end_VA_exclusive": "0xa7a0a",
+      "file_offset": "0xa79ea",
+      "name": "selected-stack-caller",
+      "raw_sha256": "a1da946a475d69b08cb29892fa47c1dc3d4239b95c48143ff040ac234ab0e958",
+      "start_VA": "0xa79ea"
+    },
+    {
+      "end_VA_exclusive": "0xb2c14",
+      "file_offset": "0xb2bc4",
+      "name": "supplied-constructor-inline-string",
+      "raw_sha256": "9d4e775ab5075e1604e941a7be77ac087a1ef17601be3ebdba3ee54937409f2a",
+      "start_VA": "0xb2bc4"
+    }
+  ]
+}

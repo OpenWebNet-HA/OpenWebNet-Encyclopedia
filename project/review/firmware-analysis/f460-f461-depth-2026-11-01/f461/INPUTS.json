@@ -1,0 +1,65 @@
+[
+  {
+    "PT_LOAD": [
+      [
+        1,
+        5,
+        0,
+        0,
+        0,
+        27368,
+        27368,
+        65536
+      ],
+      [
+        1,
+        6,
+        31456,
+        96992,
+        96992,
+        1864,
+        1872,
+        65536
+      ]
+    ],
+    "bytes": 35240,
+    "image_path": "/home/bticino/libcoso/libplug_automation_tr.so",
+    "sha256": "d7d361798ccec65843bd41c9ad7b8897645a334b0cd08121d372949f78eac277"
+  },
+  {
+    "PT_LOAD": [
+      [
+        1,
+        5,
+        0,
+        0,
+        0,
+        19020,
+        19020,
+        65536
+      ],
+      [
+        1,
+        6,
+        19216,
+        84752,
+        84752,
+        1616,
+        1648,
+        65536
+      ]
+    ],
+    "bytes": 22752,
+    "image_path": "/home/bticino/libcoso/libcoso.so",
+    "sha256": "572bca218965a040393361bea4044b0d55519b4f2146ef69c9aa18d4aa6ef690"
+  },
+  {
+    "bytes": 5602,
+    "path": "work/f461-firmware/2.0.11/research/2026-11-01/image_vfs.py",
+    "sha256": "6c54cac0515e0c74409e802fd8f4bf7a23caa2fff876287333917f598f72106a"
+  },
+  {
+    "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md",
+    "sha256": "89f0a1cd681924ec8bf6b093c4c39d3d037b14cd416547b8111bffecd2eb5323"
+  }
+]

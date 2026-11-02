@@ -1,0 +1,41 @@
+{
+  "scope": "Exact current independent/source-aware review records; source/content passes and final mechanical pending items remain separate",
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/reviews/INVENTORY_SOURCE_REVIEW.md",
+      "published": "inventory-source-review.txt",
+      "bytes": 5323,
+      "sha256": "53a3956079dfa1f7cd61fdadd3220228a1781a0532448ebdbc2fe6df63dc91af"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/reviews/INVENTORY_SECOND_REVIEW.md",
+      "published": "inventory-second-review.txt",
+      "bytes": 5586,
+      "sha256": "804c7dc5c3ed0fdf81975cc85862623602d9e14f416819dcc54d513183fef961"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/reviews/BOOT_SOURCE_REVIEW.md",
+      "published": "boot-source-review.txt",
+      "bytes": 5928,
+      "sha256": "03489612b423c76c9e7a30e6a2dac42d8daff4e0b8f13d2aba3e44593e55237e"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/reviews/PROTOCOL_SOURCE_REVIEW.md",
+      "published": "protocol-source-review.txt",
+      "bytes": 5665,
+      "sha256": "c8904900870b8a5028badfa076ca397cc9615810558b53522ae68e03c3131194"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/reviews/INTEGRATION_REVIEW.md",
+      "published": "integration-review.txt",
+      "bytes": 8649,
+      "sha256": "871eff383a6171c4f2125efff12fd22417dfddec40f08528d5b4f4f20e46f6ea"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/reviews/INTEGRATION_SECOND_REVIEW.md",
+      "published": "integration-second-review.txt",
+      "bytes": 8981,
+      "sha256": "feed66ad4d4ee09b7555df4af18c9ae0349af39bafceb06468ae1d8802c3517f"
+    }
+  ]
+}

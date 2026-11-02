@@ -1,0 +1,31 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000cf114 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1695c>:
+   cf114:	f105 0320 	add.w	r3, r5, #32
+   cf118:	f104 005c 	add.w	r0, r4, #92	@ 0x5c
+   cf11c:	f963 078f 	vld1.32	{d16}, [r3]
+   cf120:	69eb      	ldr	r3, [r5, #28]
+   cf122:	6523      	str	r3, [r4, #80]	@ 0x50
+   cf124:	f104 0354 	add.w	r3, r4, #84	@ 0x54
+   cf128:	f943 078f 	vst1.32	{d16}, [r3]
+   cf12c:	f105 0328 	add.w	r3, r5, #40	@ 0x28
+   cf130:	e9d5 120e 	ldrd	r1, r2, [r5, #56]	@ 0x38
+   cf134:	f963 2a8f 	vld1.32	{d18-d19}, [r3]
+   cf138:	f8df 345c 	ldr.w	r3, [pc, #1116]	@ cf598 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16de0>
+   cf13c:	f940 2a8f 	vst1.32	{d18-d19}, [r0]
+   cf140:	4620      	mov	r0, r4
+   cf142:	e9c4 121b 	strd	r1, r2, [r4, #108]	@ 0x6c
+   cf146:	58fb      	ldr	r3, [r7, r3]
+   cf148:	ee10 1b90 	vmov.32	r1, d16[0]
+   cf14c:	f103 0208 	add.w	r2, r3, #8
+   cf150:	331c      	adds	r3, #28
+   cf152:	6022      	str	r2, [r4, #0]
+   cf154:	6363      	str	r3, [r4, #52]	@ 0x34
+   cf156:	f7fe fc17 	bl	cd988 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x151d0>
+   cf15a:	6da1      	ldr	r1, [r4, #88]	@ 0x58
+   cf15c:	4620      	mov	r0, r4
+   cf15e:	f7fe fcc7 	bl	cdaf0 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15338>

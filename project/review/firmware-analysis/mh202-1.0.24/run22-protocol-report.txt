@@ -1,0 +1,74 @@
+# MH2021.0.24 run22 - original serialization of actual generated-candidate parser objects
+
+## Result and boundaries
+
+Two fresh private sessions run the original parser and then original **openmsg_to_buf0x1e9c** on the **same actual returned48-byte object**, without reseeding or assuming textual equivalence. Both serializer calls return0 and produce these exact readback strings:
+
+| Native parsed candidate | Actual serialized text | Object result |
+|---|---|---|
+| `*5*27*##`,WHERE pointerNULL | `*5*27*##` | Same48bytes; source strings/list state remain live |
+| `*22*1#1#0*1#1##`,WHATbase1/params1,0;WHEREbase1/selector1 | `*22*1#1#0*1#1##` | Same48bytes and ordered parameter-list readbacks |
+
+For WHO5, actual originalNULL handling selects a packaged empty-string literal before duplication; the model does not convert NULL into empty text itself. For WHO22, the serializer executes **original packaged GLib g_list_foreach** and original **libopenmsg parameter callback0x2250 twice**. That callback mutates the serializer's private copied-WHAT slot using ordinary modeled realloc/strlcat semantics. It does not change the source object's WHAT/parameter list.
+
+These are selected local parse/serialize roundtrips under explicit private C/GLib/API models. No alarm/multimedia plugin, core record helper, STM, queue/recipient, bus admission, target OS/process, network/device or physical outcome executes. WHAT27's published label and physical42/09 significance remain distinct; WHO22's full fields and public target grammar remain separate. The earlier simple-query serializer corpus is not relabeled as this coverage.
+
+## Immutable first generation and reproduction
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run22/collect_evidence_v1.py --check
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run22/emulate_serializer_v1.py --check
+```
+
+Both scripts create outputs exclusively on first generation and refuse to overwrite existing files; use --check for byte reproduction. The first generated harness was snapshotted before its first execution. Its first successful native outputs were immediately copied under **initial-generated-v1/**, followed by the first collector and all its first outputs with exact hashes. No author version/result was overwritten, no failed behavioral attempt or guard weakening occurred, and no reconstruction is supplied as history. Any later requested correction requires a new preserved version, not editing this candidate.
+
+The collector performs host source/binutils/saved-array checks only: **17outputs,9inputs,10spans,20critical words**. The second command reruns the one four-entry corpus and compares bytes. Replays do not accumulate coverage. The readonly verified Unicorn2.1.4 analysis package is reused after digest/size checks for every RECORD member. Only own MH202-only run21 harness lineage is adapted; no F454 firmware/layout/fixture/harness is imported. Original/synced/earlier evidence is unchanged.
+
+## Exact native and static-source identities
+
+| Native/data image | SHA-256 |
+|---|---|
+| `/home/bticino/lib/libopenmsg.so` | `7a4793f740c4cb41a774bf06e3af3acf4bd8a7606c5329ac70d7e0e7fd64bcd7` |
+| `/usr/lib/libglib-2.0.so.0.2800.7` | `029c2a7913131a84c46958d9ed445cb8a79dd1c8abc61116321badb7ad2735c0` |
+
+Static-only libutils.so SHA-256 is `53ef706201b13f6966dc6a0ca71bae345e9835e24bced6c557071b797d196e79`. Its free_gchar0x1904..0x192c body justifies the modeled temporary pointer-slot/free/zero behavior; that body itself is not native executed here. Original GLib strlcat/list-append bodies similarly justify the selected ordinary models. Actual same-build provider candidates/relocations, not a target loader/global-runtime closure, are recorded in provider-and-execution-scope.json. Source VAs/file offsets/raw hashes are in original-spans.json.
+
+## WHO5 NULL-WHERE serialization
+
+Each parser starts with an output pointer slotNULL and actually executes constructor/WHO/WHAT/WHERE grammar. The alarm returns kind1 with WHO`5`,WHAT`27`,WHERE pointerNULL. Serializer **0x2150..0x2158** tests that member and takes **0x219c**, whose original pool0x21dc/PICbase0xed50 selects literal **0x6644**, the empty string. It rejoins **0x215c** g_strdup on that nonNULL original literal. It does not call g_strdup on the originalNULLWHERE or silently rewrite the target to0/1.
+
+Kind1 with no WHAT-parameter list uses **0x2168** duplication of WHAT, followed by NULL text28 g_strdup returningNULL under the ordinary API contract. **0x217c..0x2194** selects exact original format **`*%s*%s*%s##`** and arguments `5`,`27`,empty string, and writes the allocated final string to the caller's output slot. Original cleanup calls free_gchar on temporary slots, then sets its own r0=0 at0x2020. Output is observed `*5*27*##`; the source48-byte object remains unchanged and its owned strings are still readable/live in the private ledger.
+
+## WHO22 parameter-list serialization and actual callback loop
+
+The second original parser constructs baseWHAT`1` with ordered WHAT-parameter nodes `1`,`0`; baseWHERE`1` and selector20=`1`. The serializer uses original **`%s#%s`** for WHERE1#1. Its WHAT branch **0x2070..0x20a4** duplicates baseWHAT through original `%s` format and invokes g_list_foreach on the actual parameter list. Original pool0x21b0/PIC0xed50 resolves callback **0x2250**.
+
+ParserPLT0x192c redirects to **packaged original GLib0x32cc8..0x32cf8**, which caches node.next before calling callback(data,user_data) via BLX. That body executes18instructions in the selected two-node loop. It invokes the original callback twice, totaling52libopenmsg instructions. No host foreach, parameter joining or callback substitution replaces that control flow.
+
+Original callback computes old-string length +parameter length +2, calls ordinary realloc, stores its returned pointer into the mutable serializer slot at0x229c, and calls strlcat twice for `#` then parameter. In the explicit always-move private allocator model, requested sizes are4 then6; old temporary allocations become ledger-dead after their bytes are copied. The four concatenations read back **`1#`,`1#1`,`1#1#`,`1#1#0`**. The second native callback reads the updated slot from the first; source WHAT/list nodes are not reseeded or replaced.
+
+Original final format receives `22`,`1#1#0`,`1#1`, producing observed `*22*1#1#0*1#1##`. This is an actual selected serializer return, not a physical ON/source/volume report or changed public grammar. Both output slots startedNULL and end nonNULL. Source object48bytes and parameter-list traversal results match their pre-serializer readbacks. Each final output remains live after native temporary cleanup; no later caller destruction/publication runs.
+
+## Models, containment and lifetime limits
+
+Ordinary modeled APIs cover prior parser strings/list append/allocation plus g_strdup/g_strdup_printf on exact selected original formats, realloc, strlcat and free_gchar. Realloc always allocates a new private block, copies min(oldsize,newsize), and marks the old temporary dead. strlcat uses total buffer capacity, terminates the chosen result, and returns old destination length +source length. The selected calls fit their computed capacities. free_gchar checks pointer slot/nonNULL allocation, marks the temporary dead and zeroes that slot, matching the retained candidate source contract. NULL g_strdup returnsNULL; the WHO5 WHERE substitution itself is original code. No GString path/model is needed here.
+
+Original/data mappings: parserbase0x10000000 read/execute; GLibbase0x20000000 read-only except one read/execute page0x32000..0x33000 for the foreach body; private stack0x02000000/input0x04000000/heap0x05000000 and EXIT0x03000000. PC allowlists include only original parser/field/new_open/serializer/parameter-callback and GLib foreach spans. UnknownPC/import, interrupt or invalid/protected access aborts. Reads of private ledger-dead allocations abort; writes are bounded to private stack/input/heap regions. **These are private-region guards, not per-allocation object-extent guards**. Selected allocation lengths, string capacities, live source readbacks and exact outputs support these concrete cases, not a general allocator/memory-safety theorem.
+
+Limits remain4096bytes per C-string read/per allocation,64KiBprivateheap,16known unique list nodes,100000code hooks per session and100000emulator instructions per entry. Actual table-data classification uses original mask0x0008(bit-index3). Four setup relocation writes are separate from callbacks. No GLib allocator, native realloc/strlcat/free implementation or target syscall executes; ordinary API semantics are explicit assumptions, including normal allocation success and no concurrency/alias mutation.
+
+## Exact accounting
+
+| Entry | Original | Primitives | Redirects | EXIT | Stops | Hooks |
+|---|---:|---:|---:|---:|---:|---:|
+| WHO5 parser |248|18|1|1|0|268|
+| WHO5 serializer on same object |83|10|0|1|0|94|
+| WHO22 parser |404|27|1|1|0|433|
+| WHO22 serializer on same object |159|20|1|1|0|181|
+| Total |894|75|3|4|0|976|
+
+WHO22 serializer's159original visits include89serializer +52parameter-callback +18GLibforeach. WHO5 uses83serializer visits with no foreach. Other nested constructor/field visits and parser preparation are included; not all original PCs are newly discovered code. New semantic closure is serialization of these exact returned objects. Native-definition redirects are two new_open calls plus one GLibforeach call. There are no private callback-return trampolines or stop-before-read boundaries.
+
+WHO5 records59original/16primitive memory-write events, WHO22 records82/37. Output slots, allocation/dead-temporary ledgers, original trace and per-entry slices are retained. Final outputs/source objects remain live under the selected ledger; no full cleanup/allocator-error/unwind/lifetime guarantee follows. Functional agent's read-only model consultation identified no correction and specifically recommended retaining the private-region-versus-object-extent limit above; it wrote no author file or native result.
+
+High confidence under stated private premises: both exact local parser/serializer roundtrips, native foreach/callback mutation and observed source/output/lifetime readbacks/counts. Static confidence: original literal/API/definition/relocation identities. Unknown: actual runtime providers, plugin invocation/raw admission, record/queue/recipient lifecycle, allocation failures, nonempty other fields, broader grammar/serializer classes and physical effects. No whole firmware, natural alarm/sound exchange or exhaustive coverage claim is made.

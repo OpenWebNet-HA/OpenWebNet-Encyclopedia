@@ -1,0 +1,18 @@
+{
+  "HAL_SONAME": [
+    "0x000000000000000e (SONAME)             Library soname: [liblghal.so.1]"
+  ],
+  "HAL_definitions": [
+    "277: 000000000000e440   680 FUNC    GLOBAL DEFAULT   12 hal_get_codename",
+    "485: 000000000000cc20   580 FUNC    GLOBAL DEFAULT   12 hal_get_code",
+    "387: 00000000000251b0  1316 FUNC    GLOBAL DEFAULT   12 hal_board"
+  ],
+  "device_NEEDED_HAL": [
+    "0x0000000000000001 (NEEDED)             Shared library: [liblghal.so.1]"
+  ],
+  "device_import_declarations_only": [
+    "000000000003cd40  000000f700000402 R_AARCH64_JUMP_SLOT    0000000000000000 hal_get_codename + 0",
+    "000000000003c688  0000001300000402 R_AARCH64_JUMP_SLOT    0000000000000000 hal_get_code + 0"
+  ],
+  "scope": "No device caller or transport/auth/framing body included; imports do not establish effective binding or natural invocation."
+}

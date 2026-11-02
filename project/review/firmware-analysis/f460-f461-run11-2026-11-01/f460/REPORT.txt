@@ -1,0 +1,33 @@
+# F460 run11: positive local byte248 writer and action-slot8 requests
+
+Original source proves one provided-receiver method release-stores1 to byte248 and then requests primary virtual slot8 on each action handle in its216/224 range. **CALLER AND NATURAL INVOCATION REMAIN OPEN.** This is a positive local producer/consumer relation, not a natural cancellation operation, successful stop, scene ownership proof, all-writer census or physical behavior. New original/native/provider execution, semantic models, fixtures, SQL and target operations are0; previous execution ledgers remain unchanged.
+
+## Original source and conditional receiver identity
+
+Original `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62` is freshly checked ELF64 little-endian AArch64. Exact PT_LOAD mappings, four selected textual/hex code spans, instruction words, import relocations and branch targets are retained in SOURCE.json. Curated Device0207 supplies product role only. No MHS layout, method identity or public cancellation semantics is transferred.
+
+The local entry at0xf7ad0 saves incoming X0 in callee-saved X20 at0xf7aec. It reads a pointer/length pair at receiver80/88 for diagnostic/string preparation. This does not identify its incoming caller or establish that every supplied receiver is a SceneRunner. The comparison with the previously established run07 SceneRunner domain is explicitly conditional: **if the incoming valid receiver is that same scene object**, byte248 and range216/224 coincide with the scene fields independently consumed in run10. Similar offsets alone do not close a caller or runtime-object identity.
+
+## Actual positive writer and subsequent action request
+
+The retained prefix and cleanup show one normal route through local string/diagnostic operations. For example the selected provided-length1 branch at0xf7b30..0xf7b44 reads one supplied byte and joins the diagnostic request. The source reaches0xf7bd8 only under valid source/string objects and ordinary normal helper/provider returns. Other string lengths, error/unwind branches and full diagnostic behavior are not promoted into completed policy. No actual scene name, configuration or user input is supplied.
+
+At0xf7bd8 the original loads W1=1;0xf7bdc forms X0=X20+248;0xf7be0 performs `STLRB W1,[X0]`. This is an actual release store of1, not a guessed field value or inferred inverse of the earlier zero stores. There is no dependency on any claimed public cancellation label.
+
+Immediately afterward0xf7be4 loads begin/end from the SAME receiver+216/+224 into X19/X20. The old X20 receiver is consumed before its register is reused as end. Equal begin/end skips to0xf7c08. Otherwise0xf7bf0 loads the first pointer and postincrements the iterator by16 bytes,0xf7bf4 loads that pointee's vtable,0xf7bf8 loads primary slot+8, and0xf7bfc requests it through BLR. Normal return reaches an end comparison and repeats while unequal. Thus the first pointer of each16-byte handle, rather than its second control word, is passed to a method distinct from run10's primary slot0 request.
+
+The previously reviewed selected SLEEP action AP0x21cc50 has original relative relocation at0x21cc58 to0x130000. This packet freshly verifies that slot/target as one conditional concrete destination only when the actual pointee has that primary AP. It stops at0x130000: its body, action state changes, wait/thread behavior, external output and provider effects are not expanded. Other dynamic action classes and virtual binding remain premises. Neither a request through slot8 nor its normal return proves a completed stop or successful physical effect.
+
+After the selected normal loop, the original canary comparison and epilogue return at0xf7c3c are retained. Exceptions, failure of a virtual method to return and concurrent mutation/lifetime remain outside the proof. The writer precedes these action requests in this local source path; that is not a measured runtime ordering or an atomic whole-scene transaction.
+
+## Relation to prior consumers and precise caller boundary
+
+Run10 independently proves that scene byte248 is acquire-read after action-slot0 calls and after the selected marker-wait continuation, with nonzero taking local exit paths. It separately proves action byte8 polling and selected normal zero stores to scene249/248. Those are inherited facts, not repeated new source coverage. Under the same-receiver, valid-object, normal-call and lifetime premises above, this new store supplies a positive nonzero producer for those numeric reads. It does not make marker truth equivalent to elapsed success, establish all-actions completion, reset a global flag or prove a universal stop/restart policy.
+
+A bounded static locator attempted to qualify an incoming call before freezing. It checked four-byte-aligned BL/B targets and ADR-to-entry targets in executable PT_LOAD file bytes, and same-base ADRP(page0xf7000)+ADD(low0xad0) pairs within512 subsequent bytes. None located entry0xf7ad0. These are exact finite locator forms, **not** all function-pointer constructions, all callsites, reachability, absence, dead code or lack of natural callers. No receiving/transport/callback route was followed to work around this boundary. The caller, natural invocation and actual relation to a main/registry-provided scene therefore remain explicitly unclosed.
+
+## Reproduction and preservation
+
+Run `python3 -B work/f460-firmware/2.0.12/research/2026-11-01-run11-scene-control/collect_control_v1.py --check`. Generation refuses existing outputs, immediately copies collector/report/evidence, and computes the first-copy index bytes before opening that index. Check reconstructs and compares read-only. No failed generation or overwritten candidate occurred. Local reads/binutils perform no original instruction, target I/O, service, model or fixture execution; original trees and old dossiers remain unchanged.
+
+The useful result is narrowly positive: provided receiver -> release-store1 at248 -> same handle range -> first-pointer virtual-slot8 requests. The highest remaining source gap is a safely qualified natural local caller/context, not an inferred public cancel operation. Whole lifetime/concurrency, ownership/refcounts, leak/UAF/safety/defect and physical conclusions remain unproved. Opaque action/output/provider bodies and receiving/transport/MQTT/libjel/auth/session/framing or equivalent stopped routes stay closed.

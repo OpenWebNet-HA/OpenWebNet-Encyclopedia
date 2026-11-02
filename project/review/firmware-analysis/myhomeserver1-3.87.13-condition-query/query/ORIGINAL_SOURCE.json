@@ -1,0 +1,236 @@
+{
+  "GOT_chains": [
+    {
+      "GOT_slot": "0x166bf8",
+      "addend": "0x167368",
+      "pool": "0xf1620"
+    },
+    {
+      "GOT_slot": "0x166bf8",
+      "addend": "0x167368",
+      "pool": "0x572c4"
+    },
+    {
+      "GOT_slot": "0x166894",
+      "addend": "0x167360",
+      "pool": "0x572c0"
+    }
+  ],
+  "PIC_bases": [
+    {
+      "ADD_PC": "0xf1362",
+      "base": "0x1659a4",
+      "pool": "0xf1614"
+    },
+    {
+      "ADD_PC": "0x57252",
+      "base": "0x1659a4",
+      "pool": "0x572bc"
+    }
+  ],
+  "deadline_increment": {
+    "count": 10000000000,
+    "high_word": 2,
+    "low_word": "0x540be400",
+    "scope": "Literal count increment only; no newly established tick unit/elapsed-time guarantee"
+  },
+  "direct_branches": [
+    {
+      "VA": "0xf13b4",
+      "bytes": "1ef074f8",
+      "target": "0x10f4a0"
+    },
+    {
+      "VA": "0x10f4ce",
+      "bytes": "fef783ff",
+      "target": "0x10e3d8"
+    },
+    {
+      "VA": "0x10fac2",
+      "bytes": "fdf7afff",
+      "target": "0x10da24"
+    },
+    {
+      "VA": "0x10fd6c",
+      "bytes": "4ff79afb",
+      "target": "0x5f4a4"
+    },
+    {
+      "VA": "0x10fe18",
+      "bytes": "fff7a7bb",
+      "target": "0x10f56a"
+    }
+  ],
+  "guards": [
+    {
+      "VA": "0x10f4ce",
+      "bytes": "fef783ff"
+    },
+    {
+      "VA": "0x10f4de",
+      "bytes": "a2b1"
+    },
+    {
+      "VA": "0x10f4e2",
+      "bytes": "c6e90023"
+    },
+    {
+      "VA": "0x10f550",
+      "bytes": "c9f86430"
+    },
+    {
+      "VA": "0x10f564",
+      "bytes": "002a"
+    },
+    {
+      "VA": "0x10f56a",
+      "bytes": "09f14808"
+    },
+    {
+      "VA": "0x10f588",
+      "bytes": "4ff46443"
+    },
+    {
+      "VA": "0x10f590",
+      "bytes": "c5f20b43"
+    },
+    {
+      "VA": "0x10f598",
+      "bytes": "47f10207"
+    },
+    {
+      "VA": "0x10f5c2",
+      "bytes": "0122"
+    },
+    {
+      "VA": "0x10f5d0",
+      "bytes": "01f78aeb"
+    },
+    {
+      "VA": "0x10f5d4",
+      "bytes": "2846"
+    },
+    {
+      "VA": "0x10f6aa",
+      "bytes": "d9f86420"
+    },
+    {
+      "VA": "0x10f6b0",
+      "bytes": "86d0"
+    },
+    {
+      "VA": "0x10f69e",
+      "bytes": "43f98f07"
+    },
+    {
+      "VA": "0x10fe18",
+      "bytes": "fff7a7bb"
+    },
+    {
+      "VA": "0x10f79c",
+      "bytes": "d9e91865"
+    },
+    {
+      "VA": "0x10f812",
+      "bytes": "01f784e9"
+    }
+  ],
+  "image": "/home/bticino/scheduling_manager/scheduling_manager",
+  "relative_relocations": [
+    "00166bf8  00000017 R_ARM_RELATIVE",
+    "00166894  00000017 R_ARM_RELATIVE"
+  ],
+  "spans": [
+    {
+      "end_VA_exclusive": "0xf13d8",
+      "file_offset": "0xf13a6",
+      "name": "bnld-query-caller",
+      "raw_sha256": "c7cde0f55ae3854da18401da1ee0bd50493f0d81e41f4c967b5596b81b1cd96f",
+      "start_VA": "0xf13a6"
+    },
+    {
+      "end_VA_exclusive": "0x10f50a",
+      "file_offset": "0x10f4a0",
+      "name": "query-fast-return",
+      "raw_sha256": "7985f505ca438541759d8981782fdf7670685765d26bc9a50fd081b53a80e9fe",
+      "start_VA": "0x10f4a0"
+    },
+    {
+      "end_VA_exclusive": "0x10f54a",
+      "file_offset": "0x10f50a",
+      "name": "miss-control-cleanup",
+      "raw_sha256": "53af00b0c2d7a84eb9cd600246fcb80360f1d03f0da7eefbf00fcbe03625735d",
+      "start_VA": "0x10f50a"
+    },
+    {
+      "end_VA_exclusive": "0x10f56a",
+      "file_offset": "0x10f54a",
+      "name": "miss-clear-and-selectors",
+      "raw_sha256": "2dd543c6b274e8a90a9bbd5f9df47c9ad47f190c9f79fd7a41b464fc88a8837c",
+      "start_VA": "0x10f54a"
+    },
+    {
+      "end_VA_exclusive": "0x10fac6",
+      "file_offset": "0x10fa80",
+      "name": "selector-zero-prefix",
+      "raw_sha256": "b6e25101280e608942349c8071ab789a9e0138e61df5b7770aa127d7c8fd0209",
+      "start_VA": "0x10fa80"
+    },
+    {
+      "end_VA_exclusive": "0x10fd7c",
+      "file_offset": "0x10fd58",
+      "name": "opaque-handoff-callsite",
+      "raw_sha256": "27b7540a8fe4185a7e3ea1a63ea258d96438c1cb6f7f3712cbee917e6d0094e7",
+      "start_VA": "0x10fd58"
+    },
+    {
+      "end_VA_exclusive": "0x10fe1c",
+      "file_offset": "0x10fdfe",
+      "name": "normal-cleanup-wait-join",
+      "raw_sha256": "ff69b33859f9e82010c3c98cb9b3945b728fdc970bdbb9648d041a63b0390220",
+      "start_VA": "0x10fdfe"
+    },
+    {
+      "end_VA_exclusive": "0x10f5f0",
+      "file_offset": "0x10f56a",
+      "name": "local-wait",
+      "raw_sha256": "672b9f7f65aff8716b92d6e8e9b11918e5c7ba6a3ca5f05c51ebb33182731c7c",
+      "start_VA": "0x10f56a"
+    },
+    {
+      "end_VA_exclusive": "0x10f6c6",
+      "file_offset": "0x10f6aa",
+      "name": "wait-length-recheck",
+      "raw_sha256": "807d9baf7bab90db1dc10f3fdc7d2a596bafb8ac837e7409b12e6967847aedfe",
+      "start_VA": "0x10f6aa"
+    },
+    {
+      "end_VA_exclusive": "0x10f6aa",
+      "file_offset": "0x10f698",
+      "name": "zero-output-normal-tail",
+      "raw_sha256": "39bf646d432157f5e24d261d9e8745f6f450b1b8bcff4142e5642b26b14738ed",
+      "start_VA": "0x10f698"
+    },
+    {
+      "end_VA_exclusive": "0x10f7c0",
+      "file_offset": "0x10f794",
+      "name": "response-string-alias",
+      "raw_sha256": "565b8f822d39d4fd85395d01c339aa86287c1c43a65f9794f648a50a0fa2d534",
+      "start_VA": "0x10f794"
+    },
+    {
+      "end_VA_exclusive": "0x10f81c",
+      "file_offset": "0x10f7f8",
+      "name": "imported-parse-boundary",
+      "raw_sha256": "84589b02ca7a62a22f7cba7595b66da07ce458c74ae45d42b37ef18b4850657a",
+      "start_VA": "0x10f7f8"
+    },
+    {
+      "end_VA_exclusive": "0x572ac",
+      "file_offset": "0x5728c",
+      "name": "getter-string-initialization",
+      "raw_sha256": "d902b10ddaa8e1fefe437024091612bb059519208107c57affa75b81b93cd43f",
+      "start_VA": "0x5728c"
+    }
+  ]
+}

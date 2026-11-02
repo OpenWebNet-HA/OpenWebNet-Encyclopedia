@@ -1,0 +1,50 @@
+# MyHOMEServer1 3.87.13: shared action-stop domain ownership and bounded reset search
+
+The new positive ownership result is an original process-exit registration for the shared domain's condition variable: initializer `0x15474` passes the exact global receiver `0x1677b8`, a local destructor wrapper and a DSO token to imported `__aeabi_atexit`. The wrapper requests `condition_variableD1` with that same receiver. The same-image C++ provider's selected constructor initializes48 bytes; its destructor requests `pthread_cond_destroy` with the unchanged receiver. Those selected operations concern the CV at domain+0, while the stop byte is domain+72. No additional reset/owner is established by the explicitly bounded reference searches below. This is **not** proof of a permanent latch, global absence of reset, a defect or any actual cancellation/relaunch outcome.
+
+Original instructions, native emulation, vendor processes, target syscall/thread/clock/I/O and semantic host-model executions: **0**. Original images, source and all completed dossiers remain read-only. Previous worker timing/branch matrices are not rerun; this batch examines visibility, exit ownership and additional reference forms only. Closed authentication/session/framing/transport/equivalent routes remain untouched.
+
+## Original inputs and reproduction
+
+Executable `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`; selected provider `/usr/lib/libstdc++.so.6.0.29` SHA256 `02d98c9486577d7be0b3fb71b5f0c0b6c090b72554c83640cb525cb3a3c1549a`. `INPUTS.json` pins both, the reviewed metadata-only ImageVFS/inventories and prior common-action report. ELF32 PT_LOAD mapping, Thumb2 instructions, original data/pools/relocations and `.init_array` are independently read here. Linked VAs do not imply observed live PIE addresses or effective bindings.
+
+`python3 collect_stop_v1.py --check` reproduces outputs read-only. First generation refuses existing generated files and immediately preserves report/collector/outputs under `first-candidate/`, with the index computed before opening it. Selected spans have original path, VA range, file offset and raw-byte hashes in `OWNERSHIP.json`. Queries are deterministic host parsing of original bytes/disassembly, not firmware execution.
+
+## 1. Domain identity, static storage and visibility
+
+The shared domain is base `0x1677b8`: CV+0, mutex+48 and stop byte+72=`0x167800`. The six established PC-add joins in initializer/delay/stop/duration methods resolve to that exact same base. They are retained as evidence anchors, not claimed as newly discovered behavioral coverage. Original initializer `0x1548e` writes byte0; original stop helper `0xcd706` writes byte1 after requesting the shared mutex lock and requests notification. These are not scene active/stop bytes+145/+144 or per-action completion byte+4.
+
+The domain lies inside original `.bss` (`SHT_NOBITS`, VA `0x1670f8`, size `0xf34`), so its mutable state is not an original file-backed runtime snapshot. The explicit initializer is the source-backed zero producer; no loader execution is performed. The executable's defined dynamic OBJECT symbols are `Prefix`, `VERBOSITY_LEVEL` and `app_logger`; none covers this domain/flag. This bounds ordinary dynamic-symbol visibility in this one object. It does not exclude address-computed access, external memory mutation, interposition or other modules' aliases.
+
+## 2. Actual initializer and exit ownership
+
+Original `.init_array` contains Thumb `0x15475` once, at index28. The selected initializer constructs the CV at the shared base, explicitly zeros mutex words+48..+68 and flag+72, then prepares these arguments:
+
+| Original request | Exact source provenance |
+| --- | --- |
+| r0 receiver | domain `0x1677b8`, retained from PC-add at `0x1547a` |
+| r1 callback | GOT `0x166858` resolved by pool `0x154b0`/GOT base `0x1659a4`; stored Thumb `0xcdaf5` with original `R_ARM_RELATIVE` |
+| r2 token | original PC-derived `0x167004` |
+| request | tail branch at `0x154a4` to `__aeabi_atexit@plt` |
+
+Under ordinary ARM C++ ABI/initialization and normal provider premises this requests process/DSO exit destruction of that receiver. It does not demonstrate actual startup/exit invocation, destruction order, process restart or successful registration.
+
+Wrapper code `0xcdaf4..0xcdb00` preserves r0, requests imported `condition_variableD1` at `0xcdaf8`, then returns the same receiver. The executable's selected D1 import has original `R_ARM_JUMP_SLOT` at `0x165df0`; actual effective loader binding is not observed. Same-image libstdc++ candidate D1 at `0x97540` requests `pthread_cond_destroy(receiver)` and returns receiver. Candidate C1 at `0x97530` requests `memset(receiver,0,48)` and returns receiver. Thus that selected constructor's bounded memset does not cover domain+72, and the wrapper/provider source contains no separate local flag-zero store. The `pthread_cond_destroy` delegate is opaque: no claim about every memory effect, target kernel/API state or destruction-based reset is inferred from its name.
+
+This newly closes the receiver/callback ownership chain rather than identifying a runtime reset. Re-running the initializer would write zero by its code, but no actual reinitialization caller after stop is established here.
+
+## 3. Exact bounded additional-reference queries
+
+`BOUNDED_QUERIES.json` retains results, candidate addresses/operands and limitations. The host rendering is linear `objdump -d -M force-thumb`; it includes literal-pool/table decodes and is not a complete control-flow or alias proof.
+
+1. Register-only `ADD reg,pc` with the nearest same-register PC-literal LDR within24 prior rendered lines, resolving into `0x1677b8..0x167803`: six candidates, exactly the already manually established source joins. The expression explicitly excludes ADR/add-with-immediate so a pool halfword misdecoded as ADR is not promoted into a new alias. No additional reference of this restricted form is found.
+2. Every two-byte-aligned little-endian32 word in each file-backed PT_LOAD, compared with that same target range: no match. This is a file-byte pointer-value search; it does not search populated `.bss`, live memory, relative/compressed pointers or arbitrary arithmetic.
+3. Rendered MOVT combined with the nearest same-register MOVW within20 prior instruction rows, target in that range: no match. Other constant construction, intervening clobbers or unrecognized encodings are not closed by this syntactic search.
+4. Rendered direct branch/call operand targeting code `0x15474`: no match. The positive `.init_array` pointer above is an indirect startup source. Other indirect callers, function aliases or reinitialization paths remain unresolved.
+5. Rendered byte stores with immediate offset72 produce22 candidates. Only the two independently resolved initializer/stop stores are assigned to the shared global; other stack/object-looking operands are not equated with it merely by offset. Broader STR/STRD immediate offsets65..72 produce747 candidates; they are retained as unresolved syntax candidates, not flag writes. Their receiver identity, actual width/overlap, reachability and computed aliases are unproved.
+
+The wider candidate count intentionally documents unfinished work. It is not a negative whole-firmware result or a mutation map. Full source/compiler-assisted alias recovery or a concrete nonsecret owner/caller artifact would be needed to close those forms; a fresh bounded caller is preferable to repeating the known worker truth matrix.
+
+## Conclusion and next boundary
+
+Confidence is high for exact global/flag identity, `.bss` placement, dynamic-symbol inventory and original startup/exit callback/provider request chain. Confidence is only syntactic scope for the finite additional-reference queries; they establish no new reset. Reset/reinitialization ownership, arbitrary/wider memory aliases, effective external providers, natural process lifetime, cancellation/completion/relaunch consequences and physical observations remain separate. Scene-level stop and shared action-stop domains must remain distinct when the complementary caller analysis is composed with this report.

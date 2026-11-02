@@ -1,0 +1,129 @@
+{
+  "checkpoint": "run23",
+  "status": "One independently reviewed static source area, navigation and draft synthesis; documentary integration and final verification recorded separately",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "static_report",
+      "research_path": "work/mh202-firmware/research/2026-10-30/sound/run23/REPORT.md",
+      "source_sha256": "bbc268a6a786661cfccc02fa286bddd3e135326ff640f8184877e5366d3539ba",
+      "published": "run23-sound-report.txt",
+      "published_sha256": "bbc268a6a786661cfccc02fa286bddd3e135326ff640f8184877e5366d3539ba"
+    },
+    {
+      "role": "independent_source_review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run23/sound-review.md",
+      "source_sha256": "fccb6d10dac9bac59fbc9b15ad7784e25a90878e4762a4fd4138f8c088401959",
+      "published": "run23-sound-review.txt",
+      "published_sha256": "fccb6d10dac9bac59fbc9b15ad7784e25a90878e4762a4fd4138f8c088401959"
+    },
+    {
+      "role": "saved_validation_navigation",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run23/candidate-v2/VERIFICATION_CATALOG.md",
+      "source_sha256": "0711ad6b0409b359d748ae778fe60243031730eb533aa9be58f8b46fe579c790",
+      "published": "run23-verification-catalog.txt",
+      "published_sha256": "0711ad6b0409b359d748ae778fe60243031730eb533aa9be58f8b46fe579c790"
+    },
+    {
+      "role": "structured_saved_validation_navigation",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run23/candidate-v2/VERIFICATION_CATALOG.json",
+      "source_sha256": "3ad31180caa077713dda4a8d89679e7c398547cf1dbcc6fbba54cd7bd5312bfe",
+      "published": "run23-verification-catalog.json",
+      "published_sha256": "3ad31180caa077713dda4a8d89679e7c398547cf1dbcc6fbba54cd7bd5312bfe"
+    },
+    {
+      "role": "two_reviewed_run22_rows_not_new_execution",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run23/candidate-v2/RUN22_FINDINGS_SUPPLEMENT.md",
+      "source_sha256": "1b6eac7693cde0afd4244b85062434d6ae1f5128f0d0e76c74cd2db5f62fda7e",
+      "published": "run23-run22-supplement.txt",
+      "published_sha256": "1b6eac7693cde0afd4244b85062434d6ae1f5128f0d0e76c74cd2db5f62fda7e"
+    },
+    {
+      "role": "structured_supplement",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run23/candidate-v2/RUN22_FINDINGS_SUPPLEMENT.json",
+      "source_sha256": "746fdd8e794566319ab33465530d575420620075582afab9672ed1bc6eb2e2de",
+      "published": "run23-run22-supplement.json",
+      "published_sha256": "746fdd8e794566319ab33465530d575420620075582afab9672ed1bc6eb2e2de"
+    },
+    {
+      "role": "exact_stable_source_pins",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run23/candidate-v2/SOURCE_PINS.json",
+      "source_sha256": "6dd5789afcc7d9382df3d10cc66ed2389df1fc3c37d85e79d4413f52a6566af4",
+      "published": "run23-catalog-source-pins.json",
+      "published_sha256": "6dd5789afcc7d9382df3d10cc66ed2389df1fc3c37d85e79d4413f52a6566af4"
+    },
+    {
+      "role": "independent_navigation_review_not_full_semantic_reaudit",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run23/catalog-review.md",
+      "source_sha256": "aef5237fd398f587e26b66848fe2fcd420746544a5ab90b9d7bf1e35f5e9fd72",
+      "published": "run23-catalog-review.txt",
+      "published_sha256": "aef5237fd398f587e26b66848fe2fcd420746544a5ab90b9d7bf1e35f5e9fd72"
+    },
+    {
+      "role": "frozen_draft_through22_not_final_completion",
+      "research_path": "work/mh202-firmware/research/2026-10-30/MORNING_REPORT.md",
+      "source_sha256": "ad21bd70deb3c1b21eec6d52f86d473162b3ede66b7cb6ed1164193c3fc7ab44",
+      "published": "run23-morning-draft.txt",
+      "published_sha256": "ad21bd70deb3c1b21eec6d52f86d473162b3ede66b7cb6ed1164193c3fc7ab44"
+    },
+    {
+      "role": "documentary_source_synthesis_review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run23/morning-draft-review.md",
+      "source_sha256": "84029ad6d340450a0f43b9fe2c34c2d15a6ac0c712e908fa66af0e93cde18f4e",
+      "published": "run23-morning-draft-review.txt",
+      "published_sha256": "84029ad6d340450a0f43b9fe2c34c2d15a6ac0c712e908fa66af0e93cde18f4e"
+    },
+    {
+      "role": "preserved_failed_v1_and_separate_v2",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run23/VERSION_HISTORY.md",
+      "source_sha256": "e8ae35ca4b38968ddb5b45065f2685f755e0bf8e32dc82e8e9fa5224e54fe397",
+      "published": "run23-catalog-version-history.txt",
+      "published_sha256": "e8ae35ca4b38968ddb5b45065f2685f755e0bf8e32dc82e8e9fa5224e54fe397"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/sound/run23/collect_deadline_v1.py",
+      "sha256": "9b8a299955de239266197e954811e9066a984488dcb02815c1fa3aabcee4b034",
+      "method": "static host/source arithmetic only"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run23/build_catalog_v2.py",
+      "sha256": "c427fe1ce244d3ee51583a457b1820d2cab94a4c5d186befd0d028941b546ccf",
+      "method": "frozen saved-validation navigation only, zero tests/native execution"
+    }
+  ],
+  "new_original_execution": 0,
+  "generated_outputs": {
+    "sound_including_manifest": 23,
+    "catalog_including_13_frozen_document_copies": 19,
+    "total": 42
+  },
+  "canonical_execution": {
+    "new_corpora": 0,
+    "corpora": 14,
+    "top_level_entries": 68,
+    "original_instruction_visits": 31581,
+    "primitive_callbacks": 3140,
+    "linker_redirect_callbacks": 128,
+    "exit_boundaries": 24,
+    "selector_read_stop_boundaries": 2,
+    "code_hook_visits": 34875,
+    "firmware_processes": 0,
+    "target_OS_calls": 0
+  },
+  "navigation_scope": {
+    "saved_checkpoints": 22,
+    "base_frozen_rows_through21": 24,
+    "linked_reviewed_run22_rows": 2,
+    "pinned_inputs": 809,
+    "not_a_coverage_percentage_or_new_semantic_reaudit": true
+  },
+  "draft_scope": {
+    "through_checkpoint": 22,
+    "frozen_sha256": "ad21bd70deb3c1b21eec6d52f86d473162b3ede66b7cb6ed1164193c3fc7ab44",
+    "final_edition_requires_new": "FINAL_REPORT.md"
+  },
+  "history": "Exact source first candidates preserved. Catalogv1 self-input metadata check failed and all bytes retained; new separate v2 reproduces. Old run18/run21 unavailable drafts remain unverified."
+}

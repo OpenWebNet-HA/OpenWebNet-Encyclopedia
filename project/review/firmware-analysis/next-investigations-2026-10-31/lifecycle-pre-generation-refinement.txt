@@ -1,0 +1,11 @@
+# Pre-generation draft refinement
+
+Before REPORT.md existed and before the collector's first execution, the author changed an unexecuted staged collector draft to resolve libdomotica's SLEEP unit pool as PIC-relative rather than treating its word as an absolute VA. The original draft also began the saved library span after its PIC prologue; the refinement extended it to0x3ab4 so the base calculation is retained.
+
+The final source derives base from ARM PC at0x3acc plus8 and original pool0x3e00, then adds original pool0x3e04 modulo32bits. Its target is public unit literal `ms` at0x94e0. The pool0x3e04 word is0xffff73cc, not an absolute mapped string address.
+
+No execution attempt of the earlier staged collector occurred. No generated output or canonical candidate existed when this edit was made. The first actual generation and subsequent read-only check both passed; all16 exact first-candidate files are preserved. The frozen collector is SHA25694327c49680884e4e8643c5b01164dfa411fab138c2265259aae5e0d7f68620f, report42466947a14493cfdc310844fd34652d0c40c0149cf58ab7a09cb9c7a9f068a9, snapshot-index94633087cb52c6efc91daf234b519d775c32191fe1bdebf14cff34ed30b5bedf.
+
+The reviewer had read the earlier staged source and independently flagged the same issue after the author announced the corrected frozen candidate. No reviewer-requested code/result change was necessary. The earlier staged source was not separately snapshotted or independently hash-pinned before this routine pre-generation edit; this note does not invent historical byte authentication or claim complete draft integrity. The actual first-generation bytes remain available and unchanged.
+
+This is a NEW explanatory history note outside the first-candidate manifest. It does not modify the collector, report, outputs, counts or first snapshots, and adds no firmware/native execution.

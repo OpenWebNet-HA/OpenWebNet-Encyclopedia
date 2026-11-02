@@ -1,0 +1,35 @@
+# F460 run13: actual local profile-result getter and updater handoff
+
+The safe bounded alternative is a profile-result chain, not a new version-compatibility verdict. Original updater construction/call source reaches a packaged Platform method that requests a file read and returns numeric0/1/2 from explicit gates; the caller forwards the result to a separate StatusMachine request. No actual boot/profile state, compatibility, signature, authenticity, installation or physical outcome is established. New original/provider/native/target execution, runtime file reads, models, fixtures and SQL are0; existing ledgers remain unchanged.
+
+## Fresh original identities and binding premise
+
+Executable `/home/bticino/bin/dedrifupdater` is ELF64 little-endian AArch64,43088 bytes, SHA256 `8f32212bee98b507690f1e22d6b26524c8a13dc20efcc8cc05900ac4142f9753`. Fresh candidate `/usr/lib/libdedrifupdater.so.1.0.0` is30840 bytes, SHA256 `ccd87b29d164976bb5ab626ead466fb1875854bb2fbb036982d4e3eea9e4cc89`. The executable declares DT_NEEDED libdedrifupdater.so.1, and image metadata resolves that name to this regular candidate. Actual dynamic binding/interposition, valid objects and normal imported returns remain premises. Nearest disassembly annotations are not accepted as symbol identity: actual PLT/GOT/JUMP_SLOT rows prove the selected calls.
+
+SOURCE.json retains six code spans with exact bytes/hex, fresh PT_LOAD mappings, original word guards, two whitelisted compiled literals, named import/relative call proofs and candidate exported definitions. Curated Device0207 supplies product role only. No MHS layout, catalog model, physical platform or update-policy meaning is transferred.
+
+## Actual distinct local objects and provider constructor
+
+On the selected normal executable path,0x288c forms X20=SP+64 and0x2898 forms X21=SP+104. At0x28a0 the original passes X0=X21 and saved integerW23 to actual imported **Platform C1(int)** at0x28a8. After the separate source gate0x28ac..0x28b4,0x28b8 passes the SAME X21 to its actual **get_working_mode** request at0x28bc. Earlier outer arguments, the source gate, construction success and the lifetime of both stack objects remain premises; they are not injected or executed.
+
+The candidate Platform constructor0x2fe0 saves its provided destination X0 as X19 and requests get_running_platform at0x2ff8. That method's body and actual selector result remain opaque. Only a selected normal constructor continuation is used here:0x30e8/0x30ec forms exact compiled **`/var/tmp/dedrifu_env.txt`**,0x30f0 requests g_string_new and0x30f4 stores its returned pointer at SAME Platform+48. Reaching that continuation and ordinary nonnull provider/object results are explicit premises; this is not a universal constructor-path assertion or observation of a created path object. Other constructor branch tables, fields and platform selector meanings are not interpreted as a product matrix.
+
+## Whole selected getter: numeric gates and substring result
+
+The exported candidate `Platform::get_working_mode` is0x3200, size200 bytes. Its complete body is retained through0x32c8. It saves its provided receiver as X19, reads the GString pointer at receiver+48, then its first text pointer, and requests **stat(path,local_storage)** at0x323c. The exact gate0x3240 tests returned W0 bit31; only that negative32-bit result selects local0. It is not rewritten as an arbitrary nonzero-failure test.
+
+On the nonnegative path it reloads the SAME receiver+48 text pointer and requests **g_file_get_contents(path,&local_buffer,NULL,NULL)** at0x3258. A zero Boolean result or a subsequently NULL buffer selects local0. These are source gates and ordinary-provider premises, not an actual host/target file read, successful allocation or real runtime configuration.
+
+With a successful nonnull buffer,0x32a0/0x32a4 forms exact compiled marker **`MYRECOVERY=y`**, and0x32a8 requests **g_strrstr(buffer,marker)**. The source compares that returned pointer withNULL, sets W19=1 for nonnull or0 forNULL, then adds1 at0x32b8. After requesting free on the buffer, the normal epilogue returns W19: **2 for a nonnull substring result,1 forNULL;0 for the earlier selected failure/null gates**. The marker is an ordinary compiled nonsecret literal, not an exported environment-file value. No `/var/tmp/dedrifu_env.txt` content is read or reproduced by this analysis. A substring match is not exact environment-assignment parsing, shell evaluation, a validated boot setting or an observed recovery boot.
+
+## Actual result branch and separate StatusMachine request
+
+Executable0x28c4 preserves the get_working_mode return in W19. The numeric comparison with2 at0x28c8 branches0x28d0 to0x2aa0; that short diagnostic branch rejoins0x28ec. The other path compares with1 to select a diagnostic argument. Under normal diagnostic/ABI returns,0x28f8 copies the retained mode W19 into W1,0x28fc passes **X0=X20=SP+64**, and0x2900 requests actual **StatusMachine::next_step(WorkingMode)**. Its implementation and all later update behavior remain opaque. The caller tests that request's own return at0x2908; no meaning for its outcomes is supplied here.
+
+This is a positive source constructor -> SAME PlatformSP104 getter -> retained numeric result -> separate StatusMachineSP64 argument handoff. It is not a proof every updater caller takes the path, that a profile result is active, or that numeric0 is necessarily rejected. Platform fields, StatusMachine state, mode0/1/2, XML package status4 and staged-record kind2 are separate namespaces. No result is called signature acceptance, supported version, safe compatibility or successful update merely because it is forwarded to a method with this name.
+
+## Reproduction, preservation and boundaries
+
+Run `python3 -B work/f460-firmware/2.0.12/research/2026-11-01-run13-compatibility/collect_profile_v1.py --check`. The exclusive generator immediately copies collector, report and evidence; its first-copy index is computed before opening the index. Check reconstructs and compares without modifying source or outputs. No failed generation or overwritten candidate occurred. Early misleading nearest PLT annotations were resolved from actual original relocation slots before any candidate generation; no unsupported symbol interpretation is retained.
+
+The original environment file, full boot environment, keys, credentials, private values and unrelated config contents are not read/exported. get_running_platform, next_step, extraction0x5140, precheck0x4b60, output/flash/install/mount/reboot and provider bodies remain opaque. Receiving/transport/MQTT/libjel/auth/session/framing and equivalent stopped routes remain closed. The highest remaining question is a separately justified natural outer caller/profile source or explicit policy consumer, rather than inferring real mode, compatibility, readiness or trust from these conditional file/string requests. No whole-runtime, concurrency, security, defect or physical conclusion follows.

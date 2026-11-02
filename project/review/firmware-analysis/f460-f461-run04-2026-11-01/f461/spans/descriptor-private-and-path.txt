@@ -1,0 +1,35 @@
+
+/home/bticino/libcoso/libplug_scs.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000031d4 <init_plugin@@Base+0x54>:
+    31d4:	97fffbab 	bl	2080 <g_malloc@plt>
+    31d8:	aa0003f5 	mov	x21, x0
+    31dc:	f947da61 	ldr	x1, [x19, #4016]
+    31e0:	90000000 	adrp	x0, 3000 <scs_send_msg@@Base+0x810>
+    31e4:	fd460c00 	ldr	d0, [x0, #3096]
+    31e8:	d2800800 	mov	x0, #0x40                  	// #64
+    31ec:	f90006a1 	str	x1, [x21, #8]
+    31f0:	f9000ebf 	str	xzr, [x21, #24]
+    31f4:	b90032bf 	str	wzr, [x21, #48]
+    31f8:	f9001ebf 	str	xzr, [x21, #56]
+    31fc:	fd000aa0 	str	d0, [x21, #16]
+    3200:	f9003035 	str	x21, [x1, #96]
+    3204:	97fffb9f 	bl	2080 <g_malloc@plt>
+    3208:	aa0003f4 	mov	x20, x0
+    320c:	90000001 	adrp	x1, 3000 <scs_send_msg@@Base+0x810>
+    3210:	fd461020 	ldr	d0, [x1, #3104]
+    3214:	9122e322 	add	x2, x25, #0x8b8
+    3218:	f947d263 	ldr	x3, [x19, #4000]
+    321c:	aa1603e1 	mov	x1, x22
+    3220:	f9000683 	str	x3, [x20, #8]
+    3224:	90000000 	adrp	x0, 3000 <scs_send_msg@@Base+0x810>
+    3228:	91230000 	add	x0, x0, #0x8c0
+    322c:	f9000e9f 	str	xzr, [x20, #24]
+    3230:	b900329f 	str	wzr, [x20, #48]
+    3234:	f9001e9f 	str	xzr, [x20, #56]
+    3238:	fd000a80 	str	d0, [x20, #16]
+    323c:	f9003074 	str	x20, [x3, #96]
+    3240:	97fffb8c 	bl	2070 <g_strdup_printf@plt>

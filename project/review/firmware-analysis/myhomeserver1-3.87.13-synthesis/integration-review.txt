@@ -1,0 +1,59 @@
+# MyHOMEServer1 synthesis: documentary integration review
+
+Verdict: PASS; no correction requested. This is a bounded product/method/source-to-summary and current-document identity review. It is source-aware of my prior selected helper, vector, condition and teardown audits; other areas are compared documentarily with reviewed pages/reports and the independent synthesis/navigation reviews. It is not fresh semantic re-audit of all inherited source, all catalogue rows, historic tests or full firmware. No author/source/repository file was edited; no original execution, CPU replay, semantic fixture or new firmware-source investigation occurred.
+
+## Scope and current conclusions
+
+The new overview leads with a selected source-level scenario-engine map and distinct catalogue consumers, rather than complete gateway or command coverage. OWN-DEV-0199 supplies SCS/Ethernet home-automation/scenario role only; F454 AV/alarm hardware, MH202 scripts, reusable Object labels, manual revisions and catalogue generations are not imported as this build's behavior. Linked ELF VAs, raw/compiled objects, local type/code/ID namespaces, provider declarations and live state remain separate.
+
+Loader/configuration gaps are bounded to original packaged files, not an absent live scene directory or disabled feature. TIME/BNIL admission and BNLD/BNTH/BNCUSCENE predicates remain conditional on their own class/schema/ID/type/provider/ownership premises. Four-byte condition pointees and their deleting slot+4 are distinct from trigger/action eight-byte control pairs and predicate slot+8. BNCUSCENE's ordinary Boolean XOR result is reported without unsupported-feature/defect/physical extrapolation. BNTH typed producer, scalar provider and same-result reparse do not become a natural transaction or whole JSON result.
+
+Timing is source request/ordinary ABI context, not observed scheduling. Scene144/145, action completion4, shared cancellation72, registrymutex72, raw worker receivers, thread holders and concrete owners remain separate. No detach-as-completion, natural last-owner/removal-after-poll, positive post-stop reset, safety/failure or successful restart is claimed. The source-connected startup nested-action container remains distinct from unresolved removal-dispatch context identity.
+
+The catalogue is an exact source profile, not a capability oracle:75 matching table definitions plus an additional embedded index,42 equal/33 differing row bags, owner-aware IDs and selected SQL/columns do not establish installed support or full fallback policy. Its omitted self-item is not lack of Device support. Product/configuration/protocol/physical meanings remain scoped.
+
+The current cumulative MyHOMEServer1 ledger remains one finite corpus/eight entries/340 original code-hook visits/0 C primitives/12 redirects/8 EXIT/0 guard stops=360 hooks, with4 data setups separate. Four same-original-object patterns preserve signed-zero and other supplied bits. Visits are not retired instructions; nested helpers and saved-check replays are not new entries. Historical static0 remains historical, while full JSON member/map/assignment/parser/reparse, scheduler/target process/OS/scene/thread/timer/network/bus/physical execution stays0. Earlier F454/MH202 ledgers are not merged. No new execution or reset of cumulative accounting occurs here.
+
+## Preservation and bounded navigation
+
+All11 current pins and15 SOURCE_EXPORTS pairs match exact current/local/published bytes, lengths and hashes. The overview's one first copy,13 frozen reference snapshots, navigation9 first copies and4 coordination copies match their indexes. The old first-pass main page is preserved, and applying its documented navigation/method/historical-scope substitutions reproduces the current page exactly. Its initial question list is explicitly historical, with current synthesis/ranking links.
+
+The17-row/614-input navigation,8 generated outputs,228-member saved protection check and source-report locators are independently source-reviewed as navigation/integrity. They are not coverage percentages, new source proof or retested historic validations. I checked their exact published identities and peer review applicability, without repeating all614 source pins or the future10478-entry full protection validator. That final protection and strict repository pass remain parent completion duties, not certified present outcomes. Missing MH20218/21 intermediate histories and scoped condition-storage/version/refinement records remain explicit; unavailable drafts are not authenticated.
+
+There are68 local Markdown link occurrences and0 fragments;66 existing targets resolve. Only capsule integration-review.txt and validation.json await actual assembly. Parent must create their exact actual files before strict identity/link/ESG/ECV/diff checks, without placeholders or missing-link exemptions. This review certifies current bounded integration, not those future bytes or final mechanical completion. No full Device/source gate closure or exhaustive coverage is asserted.
+
+## Exact current pins
+
+| Workspace-relative file | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md` | `5d9426583d60ffe1618b2a82e0bf9bd97426387a6245c7b8e6500bfe09cdc5c1` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md` | `fe62c6fc373713f9d873656d49e53a9f729bf7306f70588424f54f379dabc981` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-synthesis/README.md` | `76ac7060409a10be2028c209445247d535a271e941207ee7351d60b2aacd99a8` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-synthesis/SOURCE_EXPORTS.json` | `1763dfa865c11070dba51633a4b5dd3f1ac88a7a8ce8efc3e5b18ad42f708ed6` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-synthesis/synthesis.txt` | `15b364ca90900801ef1eb95b098b0e8b8121ae38d7fc8b8e9e46f98c797c6fe4` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-synthesis/coverage.txt` | `2a4fa1f143d3521991e2c3fac4a0e7ec5aa26b2cde52a06f44df2f58f1ceb6c3` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-synthesis/remaining-questions.txt` | `3e6ce068c1842af2c57a4bfdd826ad10fc85ef3baa4f0f2bcf5c192c0a1ad388` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/SYNTHESIS.md` | `15b364ca90900801ef1eb95b098b0e8b8121ae38d7fc8b8e9e46f98c797c6fe4` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/COVERAGE.md` | `2a4fa1f143d3521991e2c3fac4a0e7ec5aa26b2cde52a06f44df2f58f1ceb6c3` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/RANKED_REMAINING_QUESTIONS.md` | `3e6ce068c1842af2c57a4bfdd826ad10fc85ef3baa4f0f2bcf5c192c0a1ad388` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/RUN_LOG.md` | `dfc49aae9c114dbad5ad5969302a200e0b6f7fe7ad2cbc8cdb1f64e179d536a2` |
+
+## Review, navigation and history applicability
+
+Paths below are relative to this research batch.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `overview/ENCYCLOPEDIA_CANDIDATE.md` | `5d9426583d60ffe1618b2a82e0bf9bd97426387a6245c7b8e6500bfe09cdc5c1` |
+| `overview/input-snapshots/INDEX.json` | `40e6b33c384cc564c24b41ceeb05efe1aafd967cdcd172e757e01232f9f0c5dc` |
+| `overview/first-candidate/INDEX.json` | `399525f28be2b544d6e804e37ded329be4253cc1680a390cc7a83ca524a2a0c0` |
+| `reviews/synthesis-source-review.md` | `dec06ad8f9dd676731dab1ff55b2c2eaff54276c8de35b11a02f5dcf6d42740c` |
+| `reviews/navigation-review.md` | `ad61489ba711d6a9de6b103ccb51ea556f3bf280989883d89b6cfda829bc2cc0` |
+| `navigation/REPORT.md` | `41a3481502c1951bf58c7d475518d670fb9acd806c26bd509ce10902be9152f8` |
+| `navigation/INPUTS.json` | `470397b9d7f8cbc15d01f3451d3da26fb43d96f6b3d339d760d6418eb315d342` |
+| `navigation/SAVED_CORPUS.json` | `17f93c8ee2e00f7cfaad49f7d41c40305bb4f24564b7521acc999c866afc6ee9` |
+| `navigation/first-candidate-v1/INDEX.json` | `eb99ef1bdf998e0006e68b25ea3eb44e4bdf39b605e8d3f9bc4894f494c6c0b3` |
+| `integration/pre-edit/INDEX.json` | `741d3a1e5b936016db6392b63af9b573428f9455384946fbe7cbae417c19577b` |
+| `integration/DOCUMENT_PATCH.json` | `3f53fe16a91c454500c447f9fb12d3b44512792633b35a50294380a0a82b7934` |
+
+Current candidate index SHA256 `9e92cb9a39381adcc8e3610c3ddcb098e29938938ce5742b59535199172a1c86`. SOURCE_EXPORTS.json SHA256 `1763dfa865c11070dba51633a4b5dd3f1ac88a7a8ce8efc3e5b18ad42f708ed6`.

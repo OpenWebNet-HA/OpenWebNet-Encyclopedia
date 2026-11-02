@@ -1,0 +1,61 @@
+# MHCatalogue source-pair comparison: complete rows and commercial ownership
+
+The embedded MyHOMEServer1 catalogue is a distinct source profile, not a strict subset or a drop-in replacement for MyHOME Suite's catalogue. Most shared identities are unchanged, but retained firmware-specific records and reused Configuration IDs require source-scoped joins. This report covers every table and row in the two exact sources; it does not claim complete consumer semantics, vendor execution or physical support.
+
+## Exact inputs and safe method
+
+| Profile | Canonical artifact ID | Bytes | SHA-256 |
+| --- | --- | ---: | --- |
+| MyHOMEServer1 Firmware3.87.13 embedded catalogue | `myhomeserver1-3.87.13-mhcatalogue` |2233344| `79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb` |
+| MyHOME Suite3.5.38 installer catalogue | `myhome-suite-3.5.38-mhcatalogue` |2625536| `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5` |
+
+The original embedded image path is home/bticino/matrix_mx/MHCatalogue.db; its normal/recovery copies were independently preserved and are identical. The installer copy is the previously canonical archived original. INPUTS.json records local immutable source paths and identities. Both pass complete SQLite integrity_check and their three declared foreign-key checks. Host connections use immutable read-only URI mode, query_only=ON and trusted_schema=OFF. No extension, stored expression, trigger, vendor program, service, firmware or physical operation is executed.
+
+The complete comparison preserves SQLite/Python value types, duplicate row multiplicity and NULL. All-table typed-row bags are compared before any identifier-based inference. Declared primary-key differences are audited separately and never automatically used as a semantic correspondence. Original arbitrary row/configuration/condition/default/state values are withheld; all-table evidence uses keys, changed-column names, counts and SHA-256 fingerprints. Explicit manufacturer device/item labels and association fields are whitelisted.
+
+## Schema, integrity and metadata
+
+All75 stored CREATE TABLE texts and their column definitions match. The complete schemas are nevertheless different: the embedded source has147 sqlite_master objects (75tables/72indexes), versus Suite146 (75/71). All146 shared schema objects match exactly. The only addition is nonunique, nonpartial EN_CONF_INDEX on EN_CONF(id_conf,id_key_object). This is an index declaration, not measured acceleration, an executed query plan or proof of its consumer.
+
+Both use1024-byte pages, UTF-8, user_version0, application_id0 and auto_vacuum1. Their page counts are2181/2564, with freelist_count0 in both. The383-page difference is392192bytes; it is not evidence of a particular pruning algorithm or a successful runtime migration.
+
+Both DB_INFO sets declare V=3, R=0 and DATA4.4.0. Embedded export_date is literal20240327 and date1304041729; Suite export_date is20260520 and date2606181506. Their operational/timestamp formats and actual generation chronology are not established. Identical data-version labels plainly do not identify identical catalogue content, so archive SHA/source identity must remain part of every comparison and join.
+
+Declared constraints comprise AS_CONNECTION_FIRMWARE references to EN_CONNECTION and EN_FIRMWARE, and EN_PHY_TO_ADV_TRANS to EN_FIRMWARE. Clean declared checks do not validate all reconstructed relations or application enforcement. There are no views/triggers in the recorded schema inventory.
+
+## Complete data differences
+
+Forty-two of75 complete typed table row multisets are identical;33 differ. Thirteen differing tables are literal embedded-row subsets of Suite. Twenty have at least one embedded-only row, including DB_INFO metadata. Thus the entire embedded database is not a strict row subset. SUMMARY.json enumerates the categories, and ALL_TABLE_DIFFERENCES.json covers all75 tables, including unchanged tables and zero rows.
+
+For all declared primary keys with actual data, duplicate typed key groups are zero. RIF_MH_COLLECTION_OBJECTS contains one NULL-bearing composite key in each source. That is preserved as an observed literal row/key condition; it is not dropped, equated through SQL NULL semantics, or called a defect. Nonkey tables are compared as bags without inventing row identities.
+
+Only EN_CONF has changed complete rows at shared declared primary keys:68. Its changed-column counts are id_firmware48, conf_name21, id_conf_type25, descr21, descr_ext22, id_conf_data_type21, progressive40, read_only21, hidden1, id_key_object9 and idx9. These counts overlap because a row can change several fields. They are not68 newly supported functions. In particular, owner/name reuse must be resolved before interpreting child ranges or firmware settings; the independent objects report owns that semantic analysis.
+
+For every other declared-key table, all shared-key complete rows are identical. Differences in those tables are one-source key/row additions or omissions, not edited shared records. This is a result for this exact pair, not an assumption that catalogue IDs are stable across arbitrary releases. DECLARED_PK_DIFFERENCE_LEDGER.json retains all one-source keys and every changed-key row digest/column list. NONKEY_BAG_DIFFERENCE_LEDGER.json preserves complete differing row digests/multiplicities for tables without a declared key.
+
+## Stronger commercial correspondence and source scope
+
+The literal tuple (code,id_brand,id_line) is nonempty and unique in each EN_DEVICE table. Full EN_BRAND and EN_LINE tables are identical, supporting this stronger within-pair commercial anchor. No case, spacing, brand or line normalization is applied. There are330 matching commercial tuples; all330 full device rows and their matched item rows are identical. They also retain the same device/item IDs, so this commercial portion shows no renumbering masquerading as changed products.
+
+| Entity group | Embedded | Suite | Shared complete rows | Embedded-only | Suite-only |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Commercial device records |331|541|330|1|211|
+| Technical item records |105|210|104|1|106|
+
+The single embedded-only commercial/item row is533: literal code L/N/NT4672, label Energy control actuator, brand1/line4, family12. It is not the distinct retained L/N/NT4672N reference. Its source declares buses1/2 (Automation private-riser/local-bus), systems1/7 (Automation/energy-management functions), item modobj103, firmware321 with V/R−1 and one slot, and separately external Object39 (Actuator Control Item Loads). Item ID533, model103, Object39, system7 and WHO values must not be conflated. Actual released hardware, compatibility or a current installed actuator is not established by this catalogue row.
+
+The embedded item family profile omits entire Suite family groups such as Network device, Burglar alarm control unit/devices, video door-entry device/panel, Room controller, Sound system device and Access control device. It still retains broad identical system/bus/enumeration/reference tables. This supports a differently curated component/capability source profile; it does not by itself prove the producer's pruning rule, the firmware's full supported-device surface, disabled functions or missing physical interfaces.
+
+Canonical F454 item1455, MH200N1331, MH2021902 and MyHOMEServer1's own item2198 are absent from the embedded EN_ITEM/EN_DEVICE/EN_FIRMWARE selected contexts, but present in Suite. The known server's own absence is particularly strong reason not to treat this bundled catalogue as a complete server self-description or a product-wide incompatibility list. Existing device definitions remain scoped to their documented manufacturer/catalogue sources. SELECTED_PRODUCT_CONTEXTS.json records each exact source query context, including empty results.
+
+## Reference-data and relationship caveats
+
+The exact unchanged42-table group includes EN_BUS/EN_BUS_TYPE/EN_SYSTEM, EN_COLLECTION/types, brand/line/family/status tables,7899 EN_CONV_RULE rows, the Unicode ranges/sets and all RIF_* and TMP_ID rows. Shared conversion-rule data is not executed code; unchanged system labels do not prove active routing. Identical RIF_ANA_GROUP256, RIF_MH_COLLECTION_OBJECTS189, RIF_MH_OBJECT2001 and TMP_ID2000 source rows are not a newly captured installation or active device inventory.
+
+Thirteen selected candidate ownership joins are audited in each source separately. The database's permissive declared types matter: EN_ITEM.id_family has empty TEXT rather than SQL NULL for one embedded item and six Suite items. The unchanged AS_BUS_SYSTEM has four rows referencing bus key7, absent from EN_BUS in both copies; Suite additionally has two AS_BUS_ITEM rows with that key. These are literal unmatched values under the specified candidate joins, not new declared-FK failures or demonstrated consumer faults. No missing parent is silently substituted from the other source.
+
+## Reproduction, history and limits
+
+Current collectors are compare_catalogues_v2.py and collect_supplement_v2.py, each with read-only --check and exclusive initial writes. The root comparison generates14 outputs; the current supplement generates6, with explicit manifests. Exact first successful candidate sets are frozen in initial-generated-v2 and supplement-first-v2. The original source v1 assumption that all declared composite keys were non-NULL failed before any generated outputs; its exact script, premature code-only snapshot and corrected NULL audit are disclosed in DEVELOPMENT_HISTORY.json. The supplement's original broad raw-value metadata key was clarified in a separate v2 namespace; all v1 bytes remain frozen and selected query results are unchanged.
+
+Confidence is high for exact schemas, full-row/key differences, types, unique literal commercial matches, selected public catalogue labels and stated query results. Consumer intent is an inference requiring original matrix_mx/catalogue-reader evidence. No expression evaluation, actual protocol acceptance, installed state, parameter-file content, cross-database migration, hardware equivalence or physical outcome is claimed. Source-specific object/configuration and firmware/package reports provide separate exact relationship analyses, independently reviewed before integration. Wider Device review remains pending.

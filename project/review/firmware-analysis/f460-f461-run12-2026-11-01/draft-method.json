@@ -1,0 +1,14 @@
+{
+  "anchor": "## Evidence status and next questions",
+  "appendix": "ANALYSIS_APPENDIX_DRAFT.md",
+  "substitutions": [
+    {
+      "before": "The positive additions include F460's wait/completion, catalogue/selector, state-trigger and conditional SceneRunner worker, concrete condition-predicate, action dispatch/poll and update-manifest staging paths, plus F461's matcher/field/route, selected output/address-prefix/suffix and bounded HAL getter, platform-selector, main configuration-selection and log-persistence selection contracts. A separate local control writer is recorded with its receiver/caller join unresolved. Their numeric fields and offsets belong to different objects and namespaces. Earlier MyHOMEServer1 layouts and physical meanings are not substituted.",
+      "after": "The positive additions include F460's wait/completion, catalogue/selector, state-trigger and conditional SceneRunner worker, concrete condition-predicate, action dispatch/poll and update-manifest staging and selected list-consumer paths, plus F461's matcher/field/route, selected output/address-prefix/suffix and bounded HAL getter, platform-selector, main configuration-selection, deferred-record and log-persistence selection contracts. A separate local control writer is recorded with its receiver/caller join unresolved. Their numeric fields and offsets belong to different objects and namespaces. Earlier MyHOMEServer1 layouts and physical meanings are not substituted."
+    },
+    {
+      "before": "The next useful source work includes updater staging-list consumers or justified compatibility gates for F460, plus a local clock-word producer or defer-path connection for F461. The F460 control writer still needs a qualified caller and actual scene-object identity; finite locator misses and matching offsets do not close that gap. Actual configuration/module and DTB/auxiliary-core selection, root catalogue queries, configured scenes, effective providers, lifetime/unwind/concurrency and runtime or physical observations remain separate gaps. Closed receiving, output, transport, authentication, session, framing and equivalent bodies remain closed; excluded process and command-fallback routes are not reopened.",
+      "after": "The next useful source work includes justified compatibility or boot/profile selection for F460, and a concrete message-clock-field producer or boot/auxiliary-core selector for F461. The updater parser-to-consumer common context and natural order remain conditional; the local F460 control writer still lacks a qualified caller and actual scene-object identity. Installed configuration/modules, root catalogue queries, configured scenes, effective providers, lifetime/unwind/concurrency and runtime or physical observations remain separate gaps. Closed receiving, output, transport, authentication, session, framing and equivalent bodies remain closed; excluded process and command-fallback routes are not reopened."
+    }
+  ]
+}

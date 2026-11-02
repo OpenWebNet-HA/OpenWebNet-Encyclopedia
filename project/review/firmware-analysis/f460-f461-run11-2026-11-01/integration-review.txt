@@ -1,0 +1,58 @@
+# Run11 documentary integration review
+
+PASS for the frozen current integration. No documentary correction requested. Final mechanical completion remains pending the actual review export, actual validation record and strict checks.
+
+This is an independent documentary comparison of the new run11 integration against its two frozen author reports and independent source-peer reports. Prior product/source familiarity informs scope checks; this is not a fresh original-byte semantic audit, complete review of inherited encyclopedia claims, source-collector replay or native execution. Only host file reads, hashes, exact reconstruction and local-reference checks were performed. Author reports, original images and repository documents were not edited.
+
+## Source and claim assessment
+
+F460 is described as a positive local writer for a PROVIDED receiver, not a closed SceneRunner producer. The selected normal path release-stores 1 to that receiver+248 before traversing the same receiver+216/+224 range as sixteen-byte entries and requesting primary slot+8 through the first pointer. The known action-slot target remains conditional and opaque. Actual incoming caller, receiver class, natural invocation and equality to the earlier valid scene remain unproved. Matching offsets, adjacency and finite locator misses do not establish identity, dead code or global caller absence. The new page, capsule, synthesis and ranking preserve that distinction; no completed stop, public cancellation, ownership or concurrency guarantee is promoted.
+
+F461 closes a selected main configuration-selection/argument/copy edge: three actual option destinations and parse requests; nonnull config pointer versus relative cfg/coso_cfg default; successful load continuation; null-only directory-key requests; and remaining-null plugin-directory parent fallback. These are pointer-presence predicates, not proof of valid or active settings. The same manager is passed to initializer/registration requests, while M+16 holds the allocated holder pointer and P+8/P+16 hold distinct directory copies. Actual argv, working directory, file contents, successful providers, valid parent, binding, allocations and normal returns remain premises. Only three safe configuration declarations are exported. No actual module activation, whole startup, readiness or product-feature conclusion follows.
+
+Curated F460/F461 roles remain separate. No MyHOMEServer1/F454 layout or physical meaning is transferred by filename or matching offsets. New execution remains zero, including original/native/provider/emulator/model/fixture/SQL/JSON/runtime/physical execution. Earlier independently scoped execution ledgers and unavailable MH202 run18/run21 intermediate-history limits remain unchanged. Full Device/source gates and closed receiving/output/transport/authentication/session/framing routes remain outside this review.
+
+## Exact checks
+
+- All 16 current source paths match their frozen review-candidate copies, recorded byte lengths and SHA-256 values.
+- All 33 SOURCE_EXPORTS entries match both their source and capsule bytes, lengths and hashes; source-peer exports are actual exact copies.
+- Four source/review first-copy indexes verify 25 members: F460 9, F461 14, and one member for each independent source review. This certifies those retained bytes, not unrecorded historical intermediates.
+- The retained two-document pre-edit index verifies both old snapshots. The old main is reconstructed exactly by the single appendix insertion and two declared substitutions in REFERENCE_DRAFT_METHOD.json; the result equals both REFERENCE_DRAFT.md and the current public page. The catalogue profile remains byte-identical at bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba.
+- The selected current integration Markdown references contain 31 local occurrences: 29 resolve now, with one verified heading fragment. The two unresolved targets are only capsule integration-review.txt and validation.json. Their future contents and final strict ESG/ECV/diff are not certified here. No placeholder or exemption is requested.
+- New source generations are reported PASS without correction/failed generation/overwrite; current indexed first copies agree. Parent SOURCE_CHECKS is an existing report of separate static checks, not work replayed by this reviewer.
+
+## Authoritative source and peer pins
+
+| File | SHA-256 |
+| --- | --- |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run11-scene-control/REPORT.md` | `c378a24d9bda1856de09e9be59047b53f68909aa418cb3ab584ea74dceb6d650` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run11-scene-control/collect_control_v1.py` | `08f7ae006babd3c5c7a7a17ec37fdd3dafbd8bb67fae24bf4f2fa98f73e73169` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run11-config-selection/REPORT.md` | `034b07713342adc93dab60818a90d92b724ad10d6047581124972ae17a358595` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run11-config-selection/collect_selection_v1.py` | `68ea48c841f49afa664549c55ab9bde8bfb315fce739ed747133f26901989283` |
+| `work/f460-f461-comparison/2026-11-01-run11/reviews/f460-source-review.md` | `c960abd7fd7804899de1898972c4cf3f1cd2bc4b9d66cf594b928ea48345c8b5` |
+| `work/f460-f461-comparison/2026-11-01-run11/reviews/f461-source-review.md` | `9bf18c56bd1922eae2b4cc4e2ed2f94eb19e39ddd540852a2123eab238c9b864` |
+| `work/f460-f461-comparison/2026-11-01-run11/integration/pre-edit/INDEX.json` | `560acea564535fb0bab4d93b31f870b6b37762489f3d2752646d001a227af5bd` |
+| `work/f460-f461-comparison/2026-11-01-run11/review-candidate/INDEX.json` | `47afaf3b8be9ddb51e3d2746bc7b49ca95a2a3b8617b11f78b3e18a4da93a70f` |
+
+## Frozen current integration pins
+
+| Current file | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md` | 32126 | `478e81003ae6f419f1c3ccee6e108f4ddf554d2020fefdb12ba82b326db463a6` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | 15603 | `bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run11-2026-11-01/README.md` | 3098 | `81e60c0c1be8364b77e3b45634bf1228a31e5ce7f068a1084623559fc05fcd15` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run11-2026-11-01/SOURCE_EXPORTS.json` | 9168 | `f0807fbca1c51b49e0b77cd4906a450f6c21e0432494eb4e24aa5e9602534fc6` |
+| `work/f460-f461-comparison/2026-11-01-run11/SYNTHESIS.md` | 1541 | `7cf3a29c46c71f55196951ebcc29516fab27d69e215c3d0846ee1bb372dac8c0` |
+| `work/f460-f461-comparison/2026-11-01-run11/COVERAGE.md` | 1773 | `a59bfaf14fb04be522e2375506302da2a3a98254aca06dc9d01d94a24e4bf746` |
+| `work/f460-f461-comparison/2026-11-01-run11/RANKED_REMAINING_QUESTIONS.md` | 1462 | `674b885df40bbaaa63799253bd8f1541f2d1e1c8101be3128a8279d5f3bb0595` |
+| `work/f460-f461-comparison/2026-11-01-run11/SOURCE_CHECKS.json` | 533 | `ffdaa2207a2fcb81ea6ab4181c77733c5ad49ab49e16f90f8efbdac3d510fbef` |
+| `work/f460-f461-comparison/2026-11-01-run11/integration/DOCUMENT_PATCH.json` | 799 | `14195d503effebe16eaa905818fe44bcb7cd47a551c3844f439e6c61739211e7` |
+| `work/f460-f461-comparison/2026-11-01-run11/REFERENCE_DRAFT.md` | 32126 | `478e81003ae6f419f1c3ccee6e108f4ddf554d2020fefdb12ba82b326db463a6` |
+| `work/f460-f461-comparison/2026-11-01-run11/REFERENCE_DRAFT_METHOD.json` | 2825 | `269ec2b537827c21d2ed73a07b13f5143d092b9d612926f985e5e2f3625da5fe` |
+| `work/f460-f461-comparison/2026-11-01-run11/ANALYSIS_APPENDIX_DRAFT.md` | 3159 | `c7792444fa7c2fa0f5f37d0d2895171a67bad038b2182be485816624d9c8c674` |
+| `work/f460-f461-comparison/2026-11-01-run11/reviews/f460-source-review.md` | 3924 | `c960abd7fd7804899de1898972c4cf3f1cd2bc4b9d66cf594b928ea48345c8b5` |
+| `work/f460-f461-comparison/2026-11-01-run11/reviews/f461-source-review.md` | 4746 | `9bf18c56bd1922eae2b4cc4e2ed2f94eb19e39ddd540852a2123eab238c9b864` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run11-2026-11-01/f460-source-review.txt` | 3924 | `c960abd7fd7804899de1898972c4cf3f1cd2bc4b9d66cf594b928ea48345c8b5` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run11-2026-11-01/f461-source-review.txt` | 4746 | `9bf18c56bd1922eae2b4cc4e2ed2f94eb19e39ddd540852a2123eab238c9b864` |
+
+Review completion: current documentary PASS only. Actual final identity validation, review-copy assembly, strict repository gates and any later coordination transition remain parent-owned subsequent work.

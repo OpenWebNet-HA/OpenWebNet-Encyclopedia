@@ -1,0 +1,37 @@
+[
+  {
+    "end_va_exclusive": "0x282c4",
+    "file_offset": "0x28178",
+    "name": "bnld-serializer",
+    "sha256": "c8b2ec1a382eef32578393b456633a64d214e0c55412ea38894ffa11ef994a4b",
+    "start_va": "0x28178"
+  },
+  {
+    "end_va_exclusive": "0x23c14",
+    "file_offset": "0x23aac",
+    "name": "base-condition-serializer",
+    "sha256": "53dc3baa49942f91dab8d28c56890c7f8ff31cd8d8339faa3664b85a3c071ef5",
+    "start_va": "0x23aac"
+  },
+  {
+    "end_va_exclusive": "0x2ba20",
+    "file_offset": "0x2b7d0",
+    "name": "base-condition-constructor",
+    "sha256": "be6dcc0d9229b507b53a39d8aaa3f9e28eff00539da000dc68393a9f7e20492b",
+    "start_va": "0x2b7d0"
+  },
+  {
+    "end_va_exclusive": "0x2be7c",
+    "file_offset": "0x2bd58",
+    "name": "bnld-constructor",
+    "sha256": "46ca9ef3ff471e80000348a6009736f412dfd9acdee3434f8f9cfb5f694793cd",
+    "start_va": "0x2bd58"
+  },
+  {
+    "end_va_exclusive": "0xa7d86",
+    "file_offset": "0xa7d40",
+    "name": "same-result-initializer",
+    "sha256": "1c92e6ae416bbf06fe9eb7a04efc86fe8b38a071b95fd4d2e38be8ae7c41da14",
+    "start_va": "0xa7d40"
+  }
+]

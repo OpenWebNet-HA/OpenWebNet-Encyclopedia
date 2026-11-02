@@ -1,0 +1,13 @@
+# Stage 2 database-byte documentary integration review
+
+PASS for current documentary prose, exact selected exports/document copies and local navigation. Actual final validation/strict checks and stage closure remain pending.
+
+The public f450-f459-database-byte-followup.md exactly matches the source-reviewed PAGE_CANDIDATE:4735B/SHA256be8f5cdd8968468b3f5d202d7af5d510519ee2762e95cdcd08137287fb2a1233. All19 source/export pairs and5immediate documentary copies match declared bytes/hashes. The exact prior firmware-index snapshot resolves its single expected-old-hash mapping; its current change is exactly one added table row, with no broad fallback or old-validator replay.
+
+The page preserves3packages/4views,14,303file occurrences/6,888unique payloads,7rejected SQLite3headers and41unparsed alternate signatures as finite byte reach rather than coverage/absence claims. Header, pagecount, extent and ELF-container limitations agree with the independent source review. The historical package_views label and unfulfilled alternate-header scope phrase remain separately documented; neither is promoted to performed parsing or new evidence. No database/schema/rows, successful provider or configured/runtime persistence is inferred from magic or old SQLite API requests.
+
+Archive prose correctly distinguishes one exact original encrypted SUPPORT container from zero plaintextDB objects, with the actual earlier inherited receipt as documentary evidence only. Encrypted master.sqlite central-directory name/size is not recovered plaintext. No new upload/readback, decryption, SQL, synthetic database or private values are claimed. This investigation's archive result is not an inventory of all R2. Prior source/Device/runtime/physical gates and execution ledgers remain scoped and unchanged.
+
+All8local links from public analysis/capsule README resolve. The linked documentary-review.txt,validation.json,checks.json currently exist as EMPTY placeholders. Their presence/labels do not establish completed results. Parent must copy this actual review, produce actual identity/strict-check results and close stage2 before stage3 begins. This review does not anticipate future PASS or workflow closure.
+
+Read-only current-document/hash/history/link comparison only; no new source-body/provider investigation, collector/native replay, SQL/vendor/original/native/helper/emulator/model/fixture/target/network/bus/physical execution or repository/remote edit. Only this new review and its immediate exact copy/index were written.

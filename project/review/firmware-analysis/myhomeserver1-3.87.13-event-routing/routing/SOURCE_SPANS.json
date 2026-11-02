@@ -1,0 +1,100 @@
+[
+  {
+    "end_va_exclusive": "0x52240",
+    "file_offset": "0x521e4",
+    "name": "local-prefix-and-selected-label",
+    "sha256": "e4843efa3c8bc3df96f3ecc69250f09b66e782927c1a00ba5194634361be1598",
+    "start_va": "0x521e4"
+  },
+  {
+    "end_va_exclusive": "0x54db2",
+    "file_offset": "0x54daa",
+    "name": "classification-store",
+    "sha256": "e55d89b7679a74d47bcab90875be5657fda7cfb21122a79086b9f964efc6a6c9",
+    "start_va": "0x54daa"
+  },
+  {
+    "end_va_exclusive": "0x55452",
+    "file_offset": "0x5544e",
+    "name": "selected-label-value",
+    "sha256": "e43856b3ead5b8d10f68f36ab06a41d2515de581448f52b575688c6da4440e72",
+    "start_va": "0x5544e"
+  },
+  {
+    "end_va_exclusive": "0x52374",
+    "file_offset": "0x52322",
+    "name": "params-id-initial-guard",
+    "sha256": "57cb905125a43fb7c9808c2bc8fe04657d0cc3a1d6125259c8977dd8980bdccf",
+    "start_va": "0x52322"
+  },
+  {
+    "end_va_exclusive": "0x54df4",
+    "file_offset": "0x54db2",
+    "name": "params-id-population",
+    "sha256": "88d1505fbac3c6907d58529f43793f6a6964fd7b76058863d3f2f79560c725b6",
+    "start_va": "0x54db2"
+  },
+  {
+    "end_va_exclusive": "0x54344",
+    "file_offset": "0x5430c",
+    "name": "selected-producer-tail",
+    "sha256": "1759a67f8bda608788eb239f05580a7704eca8cb290d37effa36c862a2e1b23b",
+    "start_va": "0x5430c"
+  },
+  {
+    "end_va_exclusive": "0x527e4",
+    "file_offset": "0x527b4",
+    "name": "producer-return-gate",
+    "sha256": "53a8d3ef8b111307552395e2109bc81eef83cee26e2d732a218f90c48dad0732",
+    "start_va": "0x527b4"
+  },
+  {
+    "end_va_exclusive": "0x551ca",
+    "file_offset": "0x551b4",
+    "name": "return-one-cleanup-leg",
+    "sha256": "b7ee828e17ccd00918cb6180cefbfb22ada44e82ddf4a3e231049f21fb6c0689",
+    "start_va": "0x551b4"
+  },
+  {
+    "end_va_exclusive": "0x528aa",
+    "file_offset": "0x52864",
+    "name": "scene-and-second-dispatch",
+    "sha256": "f1b884a1712308751305a2ca10d09776fc62a04ef3eeffc385d7ad34dd93eae7",
+    "start_va": "0x52864"
+  },
+  {
+    "end_va_exclusive": "0x52d5c",
+    "file_offset": "0x52d10",
+    "name": "record-and-trigger-dispatch",
+    "sha256": "62676338ee48d85f45116980ff6e097a0e1a5dc7a3c824745c4381986a0f832b",
+    "start_va": "0x52d10"
+  },
+  {
+    "end_va_exclusive": "0x53aa0",
+    "file_offset": "0x53a1a",
+    "name": "bnil-recipient",
+    "sha256": "e40d22b283addbe687a68289070f63a1f54a5865a0439dad75070dcd807191f9",
+    "start_va": "0x53a1a"
+  },
+  {
+    "end_va_exclusive": "0x52994",
+    "file_offset": "0x5297e",
+    "name": "iteration-step",
+    "sha256": "eabe0e5be0fdc8e95a5dbff8cf3f29049c4e4c3e6fc12645535de206ed6c9974",
+    "start_va": "0x5297e"
+  },
+  {
+    "end_va_exclusive": "0x4f244",
+    "file_offset": "0x4f20c",
+    "name": "prefix-equality",
+    "sha256": "2a535163076d3c102400f8cbeba88294f453cbced8a4ea3b001a773372efeacf",
+    "start_va": "0x4f20c"
+  },
+  {
+    "end_va_exclusive": "0x4f024",
+    "file_offset": "0x4f000",
+    "name": "id-equality",
+    "sha256": "6b029eb6bd537e48f6da0825c56724647943ac3ff8d3c57815f7042a111dd738",
+    "start_va": "0x4f000"
+  }
+]

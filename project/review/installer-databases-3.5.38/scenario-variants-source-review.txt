@@ -1,0 +1,32 @@
+# Independent source review: ScenarioSuite database variants v2
+
+Result: PASS for the complete two-payload logical/schema comparison and its bounded selected interpretations. No material correction requested. The authoritative author report for this review is REPORT.v2.md; the preserved v1 report contains the explicitly corrected expected-count error and is not silently promoted.
+
+Reviewed area: `work/installer-database-analysis/2026-10-31/scenario-variants/`.
+
+| File | SHA256 |
+| --- | --- |
+| REPORT.v2.md | `b2eee5bb1c8a51a0bfa7eff3b146268aba7c225150430738395d23298597529f` |
+| collect_variants_v2.py | `3833d0089df7313ff8fb30ecf52f9c9f62290dff7c787f5c6dc6b0a2e83828fc` |
+| OUTPUT_MANIFEST.v2.json | `243a66a2406eb6c5e088f7fb3a061cfe573f2ebb761971d1374e251333e32b5d` |
+| DEVELOPMENT_HISTORY.v2.json | `277ba251f0fa64099cf8817745f042242106d48f26f45b45d5838923ef517f28` |
+| initial-generated-v2/SNAPSHOT_INDEX.json | `eb1dd806eaa775f3712421c3e2691957ca23ec22f59325005a0ad1b24c93fb82` |
+
+I ran the v2 collector's read-only `--check`: PASS6 outputs,79 tables/54406 rows per payload,75 equal/4 changed tables,8 same-key updates/9 changed nonkey cells, one added and one removed version key,926 logged inventory queries. I independently verified all11 input hashes/sizes, all5 evidence members plus the report/collector/manifest pins, and all8 exact first-v2 copies. The successful checker only compares bytes; ordinary generation refuses existing evidence or the initial snapshot directory. Snapshot membership/hashes precede opening the index file. Author originals and prior dossier files were not edited.
+
+I separately reopened both exact recovered originals with absolute SQLite URI mode=ro&immutable=1, query_onlyON and trusted_schemaOFF, verified their SHA256 and2542592-byte sizes, and read all79 schemas/counts. Every24 TMP table was verified empty before any temporary row read; no TMP row contents or private unchanged data were printed or saved. Independent type-aware complete row-bag comparisons, preserving duplicate multiplicity and excluding rowid, confirmed exactly75 equal tables and the same4 changed tables. Both datasets total54406 rows. There are59 declared-key tables and20 unkeyed tables; the collector also checks every declared key for NULL/duplicates and establishes no declared FKs. The different fingerprint codecs are correctly distinguished; an old inventory fingerprint is not compared directly to a differently encoded new digest.
+
+The exact same-key changes are one ANA_COSA row317 OPEN_COSA text1→4; one ANA_OPEN_RULE_COMPILE row284 OPEN_FIELD_3 text1→4; five sensor order shifts on59/62/63/64/65; and object69 Presence sensor with order2→1 and family13→15. That is8 updates and9 cells. ANA_VERSIONE_DB declares the full composite PK(VERSION,RELEASE,BUILD); old(1,1,0) and new(1,0,53) are one removal and one addition, not matched-row nonkey updates. I independently checked this event partition from original rows, not only the saved summary.
+
+The source-context qualifications are accurate:
+
+- The complete command317 association query yields only1340/1341, object43 Dimmer100 and areas3/6. Compile rule284 retains Start/Stop flags1, OnlyIf/Action flags0. Its first fields are exactly `#1`, `ID_DOVE`, literal1 or4, `[101-200]*`, then empty fields. This is an ordered trigger-template distinction. It must not be restated as an ordinary WHO1 WHAT1→WHAT4 replacement, a universal dimension change or an accepted wire frame.
+- Independently queried Dimmer100 status rows36/37/38 retain REQUEST_DIMENSION text1 in both databases. The full status table67-row equality is part of the complete comparison. The saved FINDDIMMERON/EXTRACTVALUE names and public DIM1/DIM4 reference context do not execute those functions or prove physical causation.
+- Family13 Lighting and15 Sensors rows are unchanged, including ATTIVA0/1. The complete two-family member sets show Presence moving, then the five Sensors order shifts. That is catalogue membership/order metadata, not actual editor visibility, a physical sensor capability or an override of per-object permissions.
+- The frozen compiler-chain report supplies prior original method ownership for ordered field substitution/area filtering. I did not rerun/re-audit CLR instructions or compile a scenario as part of this comparison review. Compatible provider/resource/profile binding, an actual WHERE/project, successful compilation/export/installation and native matcher acceptance remain premises. The ANA_TEXT consumer refinement and distinct object/area/range namespaces are preserved rather than generalized from coincident IDs.
+
+The current v2 history is explicit and verifiable. Root v1 REPORT.md and collect_variants_v1.py still exactly match their copies in development-v1-failed/. Their hashes are03d5b7560211cef5f79fb464be3ae1d12318347611c9231fa203ee47d641844e and80214c031c0421686de2994cfeb8d95c6294431655e132fc0f274cbb7f5e451d. FAILURE.json SHA45ae5182aca5889d134ff17b7673dd532285bda334e0b3d67063658057b0ea56 agrees with DEVELOPMENT_HISTORY.v2.json. The old guard stopped before output writes because its expected9 same-key rows/11 cells was wrong; its actual comparison had already honored the composite key. The separately named v2 adds exact event/key guards and corrected prose, retaining that first failure. There is no claimed successful v1 evidence set, weakened comparator or overwritten canonical candidate.
+
+Original sources pinned independently are MH200N1331 SHA83b7fa13c224012ebd1561fbc2895deb599b06223eb8e5041f565b7c5b7dbfd8 and MH202/common SHAae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29. Installer member aliases, product identity references, internal version tuples and actual firmware releases remain separate scopes. PLAN is acquisition-time provenance; remote archive completion belongs to the parent's separate checkpoint and was not repeated here.
+
+No vendor code, generator, CLR/ARM/JavaScript, native harness, network, hardware or target process was executed. This review validates source identities, full logical comparison and the selected bounded explanation; it does not certify runtime behavior, a complete compiler grammar, actual device applicability or all prior historical firmware semantics.

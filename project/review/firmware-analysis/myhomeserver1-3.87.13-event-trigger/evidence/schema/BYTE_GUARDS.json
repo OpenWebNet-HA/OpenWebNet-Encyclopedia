@@ -1,0 +1,78 @@
+[
+  {
+    "bytes": "013c",
+    "va": "0x2eab4"
+  },
+  {
+    "bytes": "162c",
+    "va": "0x2eab6"
+  },
+  {
+    "bytes": "2c20",
+    "va": "0x2f4ac"
+  },
+  {
+    "bytes": "ab62",
+    "va": "0x2f4ce"
+  },
+  {
+    "bytes": "3077",
+    "va": "0x2c6cc"
+  },
+  {
+    "bytes": "3462",
+    "va": "0x2c784"
+  },
+  {
+    "bytes": "7362",
+    "va": "0x2c81a"
+  },
+  {
+    "bytes": "a262",
+    "va": "0x2cb32"
+  },
+  {
+    "bytes": "a362",
+    "va": "0x2cb98"
+  },
+  {
+    "bytes": "1b6a",
+    "va": "0xa7322"
+  },
+  {
+    "bytes": "9b68",
+    "va": "0xa8f60"
+  },
+  {
+    "bytes": "9847",
+    "va": "0xa8f62"
+  },
+  {
+    "bytes": "4c20",
+    "va": "0xa8fd4"
+  },
+  {
+    "bytes": "48f80c3b",
+    "va": "0xa9000"
+  },
+  {
+    "bytes": "c4e90087",
+    "va": "0xa9034"
+  },
+  {
+    "bytes": "bb64",
+    "va": "0xa902a"
+  },
+  {
+    "bytes": "84f83020",
+    "va": "0xee65e"
+  },
+  {
+    "bytes": "e163",
+    "va": "0xee67c"
+  },
+  {
+    "bytes": "2277",
+    "va": "0x2dfa0"
+  }
+]

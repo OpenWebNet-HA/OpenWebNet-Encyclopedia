@@ -1,0 +1,46 @@
+# F459 run07 watcher-registration source review — PASS
+
+Reviewer /root/evidence_reviewer, new review files only. CompletedUTC 2026-11-01T22:52:04.377194+00:00. No correction requested. This review is limited to selected original watcher/connection/local-dispatch request edges and their stated applicability, not effective callbacks, freshness, safe lifetime or full Device/source/runtime/physical approval.
+
+## Exact frozen source
+
+Root `work/f459-firmware/2.1.5/research/2026-11-01-night07-watcher`:
+
+- `REPORT.md` — 4520 bytes, SHA256 `901fd74d2d0f097eb2bdc2c1099c4a32f9d54285984318b9048e4e79c17e41b4`.
+- `collect_watcher_v1.py` — 10895 bytes, SHA256 `1b2d28451f0fa216a932a1bc201849cabe4b512e039f44824b4f396c036c14bf`.
+- `SOURCE.json` — 9661 bytes, SHA256 `af21885ba7d74f5bf909c84750061ba70e52a9d05f176ef6a473749c5f69fd59`.
+- `INPUT_PINS.json` — 624 bytes, SHA256 `fef125fc58bb51af525d18e50f94380ca98b8adfe9dfbf7ea15610e6562db964`.
+- `OUTPUT_MANIFEST.json` — 1638 bytes, SHA256 `67ecca7d0cc97d7ccf7d76991ac4e5af05bc6f74b2f9e0dd7ecb9edbe6112923`.
+- `first-candidate/INDEX.json` — 1803 bytes, SHA256 `43a7fb30a868ea2fdab18381b4e00c0ac6c6a6b50da5a52880e1e79977873e12`.
+
+Own original libmhshared.so.1 is43208bytes/SHA2564d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377, fresh ELF32 little-endian ARM/machine40/PT_LOAD. Actual export metadata gives monitor5558/2480bytes, qt_metacall7ed4/108bytes and candidate_onChange5f08/2232bytes. I did not inspect that candidate callback body. Curated Device context is a read-only role pin, not proof of active driver identity or a transferred other-product object layout.
+
+## Independent exact checks
+
+Actual permitted host `collect_watcher_v1.py --check` passes11outputs/8callproofs/7spans/originalexecution0. Separately, I independently mapped original ELF/program headers and checked all43guard words, all7span exact byte strings/SHA, all3pool/literal arithmetic/bytes, all8BL destinations and actual12bytePLT stub/GOT arithmetic plus matching readelf JUMP_SLOT rows, all3symbol rows, all3current input pins and12exact first copies. Collector hash and every output-manifest member match. Selected equality branch58c8→5a74, caller7f38→local74bc and branch-tableword7508→7d18 recompute directly. Exact PC-index arithmetic74e0+8+8*4 selects7508. No saved source span overlaps callbackbody5f08..67c0. Counts are integrity/selected reach, not all-source approval or complete method coverage.
+
+### Same provided receiver and registration request
+
+Entry5560 `e1a09000` saves incoming receiverR0 inR9. Under the report's no-invalidating-change, valid object/register, natural admission, ABI/provider/preceding normal-return premises,5880 `e289b010` formsFP=R9+16. Files request588c has resultstorageSP48 inR0 and SAMEwatcherFP inR1, consistent with ordinary ARM32/Qt result ABI. The returned list representation's two selected words are retained atSP12/SP16 and compared58c4; equality58c8 reaches5a74. The report does not invent complete QList layout/invariants, universal empty/first-watch/deduplication behavior, whole preceding monitor/hash policy or a natural outer caller.
+
+Original pool5ef8 derives exact25character /tmp/plugin.shared.sqlite at90b4. After actual fromAscii_helper5a80, its temporary QString representation is retainedSP52. AddPath5a90 has SAMEwatcherFP inR0 and localQStringSP52address inR1. After that call5a94 loads the temporary representation pointer and5a98 overwritesR0 from it before5a9c compares. No intervening stored/tested addPath machine result is present in this selected continuation. Selected temporary-count/indirect-helper/deallocation paths conditionally return to5ab0 under ordinary normal-return/validity premises. No successful add, actual file/watch/event, complete error policy or universal lifetime conclusion follows.
+
+### Hidden result storage versus explicit connection arguments
+
+At5ab8/5abc the compiled1_onChange() pointer and numeric0 are supplied atstack0/stack4. At5ac4 R1=SAMEwatcherFP,5ac8 R3=SAMEprovidedreceiverR9,5acc R0=SP56 and5ad0 R2=compiled2fileChanged(QString). Actual connect request5ad4→PLT22b0/GOT1226c matches `_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE`.
+
+The immediately selected5ad8 again supplies SP56 inR0 before actual QMetaObject::Connection destructor5adc→PLT23a0/GOT122bc. Together with ordinary ARM32/Qt returned-object ABI, this supports R0as result storage, not the sender. The actual sender/receiver/name/mode argument ownership in the report is correct under that explicit ABI premise. The encoded names and numeric0 are source literals, not public protocol values or proved connection-type behavior. Destruction of a local returned Connection representation does not prove disconnect, failed/successful connection, event delivery, callback quiescence, safe ownership or global lifecycle policy; provider bodies remain opaque.
+
+### Qualified own local callback target
+
+Own qt_metacall saves suppliedreceiverR7, modeR5 and argument-arrayR6; it requests the QObject base. The base-return adjustedID is retained inR4; a signed-negative result bypasses the selected dispatch. Mode0 and adjustedID<=8 after that nonnegative admission select7f28..7f38, forwarding SAMEreceiver/mode/adjustedID/argument-array to local74bc. The helper retains SAMEreceiver inR6. Its mode0/index8 selected branch tableword7508 reaches7d18 without overwriting incomingR0 along the straight branch. Actual BL7d18→PLT2130/GOT121ec requests `_ZN8mhShared9_onChangeEv`, whose exported5f08definition is only a candidate under effective binding/interposition.
+
+This proves one conditional same-object local callback request target. It does not close encoded slot-name→metadata-index resolution, a real fileChanged event, proper Qt/event admission, active connection/binding, callback invocation/contents or natural timing. Full object/metadata/lifetime/provider/name-resolution premises are accurately retained for composing registration and dispatch. The callback body is expressly unexpanded; no SQL/query/hash/encoding matrix or transport implementation was used to infer its behavior. The old teardown packet remains inherited context, not fresh proof that close-before-watcher requests are callback-safe or quiescent.
+
+## Limits and preservation
+
+**PASS, no correction requested.** Selected original word/argument/branch facts have high confidence. Actual notifications, successful file registration, schema/contents/query freshness, natural caller/ordering, effective binding, ownership/concurrency and runtime/physical behavior remain unproved.
+
+The author reports a preliminary decimal-address lookup into adjacent unpromoted Qt cleanup before selecting the correct hex source. No candidate/output failure or promoted claim is attributed to that probe, and this review does not invent an older on-disk candidate/hash or exact terminal receipt for it. The actual frozen source and first copies reproduced without correction. The initial canonical generation/history remains separate from original execution.
+
+No original/vendor/helper/native/emulator/SQLite/targetOS/services/network/bus/runtime/physical execution. Host Python/readelf/ARMobjdump read frozen files only; actual callback/provider bodies and F450rejectedhelper2eec4/equivalent routes were not read/retried/proxied. No database recovered/generated or syntheticDB, no archive upload/readback/remote write, no private values exported. Cumulative prior one encrypted F450support container/zero plaintextDB scope remains unchanged and is not independently network-verified here. Old MHS340code-hookvisits/360hooks and separate F454/MH202 ledgers remain unchanged; no old collector/corpus replay. Source/research/repository/original/firstcandidate/manifest files remain untouched, with no staging/commit/push/publication. This exclusive review is immediately copied exactly, with its noncircular index precomputed before opening its own file.

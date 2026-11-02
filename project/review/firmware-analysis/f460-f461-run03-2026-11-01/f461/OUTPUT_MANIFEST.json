@@ -1,0 +1,81 @@
+{
+  "collector_sha256": "2b856f965333e23066d83d82f8a1ae7d77fa969e7a66c3dbd658f09393d1b627",
+  "counts": {
+    "guards": 31,
+    "new_original_execution": 0,
+    "new_semantic_fixtures_models": 0,
+    "originals": 3,
+    "spans": 9
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 2299,
+      "sha256": "8ea73ac0a634047a6384db1510404f14685cd28215fa69acac3c19b8cfa89368"
+    },
+    "SOURCE.json": {
+      "bytes": 4864,
+      "sha256": "2cb9d0b1cab5555b8216adbc22068ea6ae1142c2e2ac9798e32d9d11ab9093a4"
+    },
+    "core-dynamic.txt": {
+      "bytes": 2046,
+      "sha256": "6b17590bea57feca1705db5c53c4464a03530e4bc3332801b5e1571541377d06"
+    },
+    "core-relocations.txt": {
+      "bytes": 7841,
+      "sha256": "b84cd46e900d90c0ce6488379ebe5bba80fb333cc0b802eb34f6ee2593f95476"
+    },
+    "exe-dynamic.txt": {
+      "bytes": 2215,
+      "sha256": "43dcadde53a06b12a00c0813f667a7ef66b08bcab7de54d885a63991d7e755ee"
+    },
+    "exe-relocations.txt": {
+      "bytes": 14418,
+      "sha256": "af570b366dcda1128810476e7d264e00b40e3525dd2e905114a09e6d5591ad6d"
+    },
+    "plugin-dynamic.txt": {
+      "bytes": 2268,
+      "sha256": "f18bb3b60d7778343b7e5748a6041552f472322c4084e3ce009afae1af630c05"
+    },
+    "plugin-relocations.txt": {
+      "bytes": 9160,
+      "sha256": "ce250d3ddf38c8b3d0b5330245e6cfff875fda351cb3088d6f916f25785b7a84"
+    },
+    "spans/criterion-to-callback.txt": {
+      "bytes": 1511,
+      "sha256": "150d836b2d6d746cd9e60fd8de901a524221046714ab12328e8d41151ca90d65"
+    },
+    "spans/due-field-and-descriptor.txt": {
+      "bytes": 3358,
+      "sha256": "3d980fd181bede47c94f5dd53443eb0c44d6845a9069373367d625895187df14"
+    },
+    "spans/list-prologue.txt": {
+      "bytes": 688,
+      "sha256": "180db72eadfadee3c2aa827bc7f429843ea36f7a41a0ebc4810b850b23e13459"
+    },
+    "spans/local-post-selection-boundary.txt": {
+      "bytes": 1218,
+      "sha256": "3164631919eb207963ca85ed695030b7c42974c0707f19117fbe6b22d9bf3389"
+    },
+    "spans/manager-accessor.txt": {
+      "bytes": 466,
+      "sha256": "b6d88d27800864d4ce1708bb7fd5e709476eb4981f24978f376eb87058d44761"
+    },
+    "spans/manager-request.txt": {
+      "bytes": 311,
+      "sha256": "df7b3cbfbaf51238f797b5dd3f5b2bad3e65ef5a5fac048d27cc5344bca1cf4d"
+    },
+    "spans/numeric-criterion-provenance.txt": {
+      "bytes": 804,
+      "sha256": "625a31a2202ea547568bbc5d96184643f6a4d6f06ca1d69ab5b498dc20710249"
+    },
+    "spans/registered-list-owner.txt": {
+      "bytes": 1189,
+      "sha256": "37765860551bf88615d48f65a0bff7143b4478fd9e24e7964fe5a6430b47560d"
+    },
+    "spans/same-manager-wrapper.txt": {
+      "bytes": 316,
+      "sha256": "81c6a76597de0ab71faca10c073869b756efcd8a6ff4a9d1b05ec0f9ddc5317c"
+    }
+  },
+  "report_sha256": "a89d70211c3f6eecb92f620d9e1aecdc52c2c1a06dbff99cdcc89b139b0f6c19"
+}

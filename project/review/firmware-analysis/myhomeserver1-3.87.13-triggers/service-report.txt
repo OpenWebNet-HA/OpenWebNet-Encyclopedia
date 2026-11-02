@@ -1,0 +1,82 @@
+# MyHOMEServer1 3.87.13: TIME service, weekday maps and condition caller
+
+This batch connects the selected TIME runner's registration to a dedicated time-trigger service, a deadline-qualified virtual firing call and the captured scene-launch callback. It separately identifies the two original weekday-map producers and the condition worker's all-nonzero/first-zero behavior. The chain is compiled source under explicit ordinary initialization, object, parser, clock and provider premises. No configured scene, clock, thread, wait, callback, vendor instruction or physical effect is executed.
+
+## Original identities and method
+
+| Original image path | SHA256 |
+| --- | --- |
+| `/home/bticino/scheduling_manager/scheduling_manager` | `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26` |
+| `/usr/lib/libstdc++.so.6.0.29` | `02d98c9486577d7be0b3fb71b5f0c0b6c090b72554c83640cb525cb3a3c1549a` |
+
+`SOURCE_SPANS.v1.json` pins13 original ranges; `spans/` retains Thumb2 disassembly. `PIC_RELOC_EXIDX.v1.json` retains seven exact PIC chains, five selected R_ARM_RELATIVE slots, six original exception-index boundaries and two actual initializer pointers. PT_LOAD VA-to-file translation is fresh for both images; linked VAs have no observed live PIE bias. Original literal/TBH pools are data and nearby stripped-template labels are not function names.
+
+## 1. Registration and service ownership
+
+The separate trigger author establishes the exact raw TIME→compiled constructor→112-byte allocation with inner object=allocation+16, plus a two-word `(inner,control)` handle. The selected initializer invokes0xb9814 at0xa830e with its saved incoming first context argument and the address of that same handle. No actual context identity or active service is injected here.
+
+Registration0xb9814 locks mutex at service+20. Its normal capacity-available path copies both handle words into the vector end, increments the selected control word at+8 using the original single-threaded/atomic branch, advances the end by8, unlocks and requests condition-variable notification at service+48. The full-capacity branch delegates to0xbbd8c; complete allocation/reallocation/lifetime and actual notification are unproved.
+
+Service constructor0xb94f0 clears its vector storage, sets running byte+12=1 and initializes its condition variable at+48. A nonzero supplied constructor flag requests a thread with an8-byte state containing this service pointer. PIC resolves original thread-state vtable header0x161e8c, whose worker slot+8 at0x161e9c contains Thumb0xbbd85. Original RTTI names the thread closure inside `TimeTriggersService`. Instruction0xbbd84 loads state+4 and tailcalls worker0xbb5ec. Actual constructor invocation with a nonzero flag, successful thread creation, service lifetime and running loop remain premises, not observations.
+
+The selected worker locks the same mutex and waits while its range is empty. Later it obtains a normal live handle from the current first service entry and reads that inner object's deadline at+88 through0xb8bcc. Queue sorting/rebuild/removal helpers and every expired-handle/error path are not closed here; no earliest-entry or global catch-up guarantee is inferred.
+
+## 2. Original weekday producers and conditional orientation
+
+The original `.init_array` contains Thumb pointers0x146b1 and0x147a1 at indices14/15. These entries construct separate maps at globals0x1674f8 (condition) and0x167510 (trigger). Their supplied seven key/value pairs are identical:
+
+| Original weekday key | Stored bit index |
+| ---: | ---: |
+|0|0|
+|1|6|
+|2|5|
+|3|4|
+|4|3|
+|5|2|
+|6|1|
+
+Each source places a zero pair on the stack, then copies six original doubleword literals at0x14750..0x14780 or0x14840..0x14870. It passes that seven-pair range to0xb891c. The inspected constructor iterates an8-byte pair range, compares original keys, requests24-byte nodes, stores key/value at node+16/+20 and delegates red-black insertion/rebalancing. Effective normal initialization, allocation/insertion success, tree invariants and no later mutation remain premises; no manufactured tree is executed.
+
+The trigger consumer's PIC0xb8a52/pool0xb8ac8 resolves to the same trigger map. The independently examined condition uses its separate condition map. Both load returned localtime word+24 as the map key, then take value+20 masked31 as a bit index. Under the ordinary Linux ARM32 `tm` field ABI and successful API semantics, this is weekday with Sunday=0. Combining these original maps with the raw seven-bit serializer's bits6..0 therefore makes a seven-character days string Monday through Sunday. This does not assert an accepted short-string calendar interpretation, effective timezone or complete parser grammar.
+
+[Linux tm documentation](https://man7.org/linux/man-pages/man3/tm.3type.html) supplies the external weekday convention; [localtime/mktime documentation](https://man7.org/linux/man-pages/man3/ctime.3.html) supplies local-calendar semantic context. `API_CONTEXT.json` keeps that context separate from original target headers, source bytes and actual API success.
+
+## 3. Calendar preparation and system-clock scale
+
+Compiled constructor0xb8e7c calls preparation0xb8be0. That method requests `time(NULL)` and `localtime`, constructs a stream from its time string at inner+60, and invokes parsing helper0xb908c with exact original format `%H:%M` at0x135818. Selected stores copy parsed hour/minute into the current localtime result and set seconds0; current calendar-date/DST fields are retained on that path. Full stream parsing, locale, malformed values, null pointers and API errors are unexecuted delegates and are not forced into a valid result.
+
+It calls `mktime`, multiplies the signed32 returned value by1,000,000,000, and compares it with a fresh `system_clock::now`. Strictly earlier values receive a single addition of86,400,000,000,000; the resulting pair is stored at inner+88/+92. It does not inspect the requested days mask to find the next enabled weekday in this selected preparation span.
+
+The packaged provider's `system_clock::now` at0x959a0 requests `clock_gettime(0,...)`, reads two32-bit words and computes signed seconds×1,000,000,000 plus the fraction. It does not check the delegated return in that body. Under ordinary successful Linux API semantics and effective same-build binding, the scale is nanoseconds and the addition represents86,400 seconds. This is fixed integer arithmetic, not an observed next local calendar day, timezone/DST policy, successful parsing or measured interval.
+
+## 4. Selected due-entry call and rearm
+
+Worker0xbb5ec reads a live first entry's deadline through0xb8bcc, divides it by literal1,000,000,000 and supplies the low quotient/remainder words to `pthread_cond_timedwait` at0xbb898. It then requests system clock values. The selected normal callback route requires:
+
+- first post-wait reading N1 at/past the stored deadline D;
+- selected second reading N2 within absolute difference30,000,000,000 of D, using original signed pair comparisons/subtractions under nonoverflow premises;
+- valid retained object and normal provider/control paths.
+
+At0xbb906 it calls that object's primary vtable slot0. The original relative slot0x161e64 contains Thumb0xb8a09, so for this selected class the call reaches instruction0xb8a08. This does not establish a30-second delivered deadline, actual catch-up or no-data policy. Multiple clock samples, ignored wait results, queue changes, provider failures and other paths remain explicit boundaries.
+
+After a normally returning selected virtual call it rereads the same object's deadline, adds86,400,000,000,000 and requests setter0xb8bd8 at0xbb922. This follows even when the virtual fire method returned normally without invoking its scene callback; it is not proof of a successful action. The selected source uses a fixed increment, not a demonstrated recomputation against the next local calendar date. No DST incident, missed firing or defect is claimed.
+
+## 5. Enabled/day gate to scene callback
+
+TimeTriggerRunner fire0xb8a08 first reads own enabled byte+48. Zero returns without invoking its captured scene callback. Otherwise it requests the current local weekday, looks up the original map, checks the bit in days mask+84, requires callable manager+12 and calls invoker+16 with data at+4. Missing map keys/callables request original exception providers rather than a modeled Boolean result.
+
+The initializer built that callable using original function manager Thumb0xa56c1 and invoker Thumb0xa60a9. The trigger constructor/copy retains it in the same inner object. Original wrapper0xa60a8 loads the captured scene pointer and tailcalls0xa5db0, the already established scene enabled/active launch gate. Callback registration, successful invocation, a valid scene object, enabled/active values and thread creation remain conditions of the source chain. Raw/compiled object offsets and callback fields are not borrowed from MH202.
+
+## 6. Concrete condition caller to action worker
+
+The previously identified condition worker0xa6d18 now has a bounded complete normal-range interpretation. It loads scene+116/+120 and calls each condition pointee's vtable+8, with an unrolled four-pointer loop and0..3 tail. A zero return identifies the first failing condition, takes the logging/normal cleanup path, clears scene+145 and+144 at0xa6e6a/0xa6e76, and returns without reaching the action worker. Normal logging/cleanup returns are premises.
+
+If every selected predicate returns nonzero, the pointer reaches the end and the normal continuation tailcalls action worker0xa6734 at0xa6f8c. Empty condition ranges reach that continuation as well. The independent TIME condition's concrete vtable+8 slot points to0xb86a4; its result therefore participates in this conjunction when that compiled object is in the range. No invented condition vector is run. Exceptions, invalid objects, concurrent mutation and action outcomes remain unproved.
+
+## Reproduction and limits
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31-triggers/service/collect_service_v1.py --check`
+
+The collector emits21 deterministic files including its manifest; all outputs plus collector/API context were immediately copied to the exclusive first-candidate snapshot. This first report is copied separately before review. It executes no semantic host scene/tree/clock fixture or original helper. An exploratory inline exidx locator had a Python spacing SyntaxError, and an initial apply_patch header typo rejected its whole patch; both were corrected before source/output generation and no candidate was overwritten.
+
+Confidence is high for the selected original registrations, map pairs, callback/field/PIC/relocation joins, deadline arithmetic and normal predicate-control paths. Natural installed objects, initialization/ordering/catch-up, full calendar/stream grammar, provider/kernel/API success, timezone/DST, complete lifetime/unwind/concurrency and physical behavior remain unresolved. This closes one conditional source path from a concrete TIME trigger through a concrete TIME condition's caller to the previously examined action worker; it is not an end-to-end runtime or full-source Device approval.

@@ -1,0 +1,37 @@
+# Run25 WHO25 reference-boundary review
+
+PASS. No refinement requested. Independent read-only documentary review of the NEW reference-boundary note, fourteen saved locators and four pre-integration curated-page snapshots. Only this NEW review file is written; no source/reference page, author report/model, root coordination, branch document, old index or prior snapshot was edited. Original/native/vendor/parser execution, oracle replay, target OS, services, network/devices and physical observations added here are0.
+
+## Preservation and locator checks
+
+All four snapshot bytes match the recorded pre-edit source hashes. All14 locators reference the same four snapshot paths/hashes and match their exact one-based lines and complete saved excerpts. The four current source pages also matched those old hashes at review time; later authorized implementation-note edits must preserve these snapshots rather than refresh their old pins. The previous13-document SOURCE_SNAPSHOTS index remains separately identified below; this supplemental reference freeze is not a retroactive expansion of the completed run24 validation.
+
+## Boundary assessment
+
+The note agrees with the preserved curated pages. Historical ScenarioPlus WHAT11..15, CEN+21..28, contact/IR31..32 and ZigBee binding33..37 retain distinct address/parameter/interface applicability. The ZigBee page also records its scenario short-pressure WHAT21; the note's binding-family summary does not assert that33..37 exhausts every ZigBee WHO25 operation. CEN+ button/Object fields, contact/IR address forms and ZigBee product-and-Unit/#9 grammar cannot be inferred from one shared numeric WHO or a plugin filename.
+
+Published CEN+ compatibility, oracle-v3 results, superseded oracle-v1 observations and contributor physical MH200 captures remain separate evidence classes. In particular MH202v1 ACK/silent and v3 ACK/out reflect their recorded differing harness conditions; no new run, source refetch or independent external-result/specification audit is claimed here. Socket ACK/NACK, recorded simulated bus output, physical gateway reply, incoming event and independent physical bus execution remain distinct. The physical probes do not establish namespace-wide rejection, complete valid domains or configured transmitter behavior.
+
+The note appropriately requires new MH202 descriptors/criteria/directions/guards/fields to come from the supplied firmware. Reverse criterion9 is not automatically WHO9. Postparsed ledgers and independently supplied reverse examples are not accepted raw commands, causal roundtrips, whole-gateway support or physical effects. Local ACK/NACK helper requests do not establish delivery or Device state. A narrow software-family guard also cannot prove absence of a different ZigBee interface. Pending static implementation reports may add a linked build-specific note; they may not replace public tables, change existing labels or rehabilitate historical oracle claims without separate evidence.
+
+No source/firmware interpretation is promoted by this review. It checks curated-reference preservation and the note's evidence boundaries, not the correctness/completeness of every underlying external specification, capture, oracle result or the pending MH202 translation/STM. No source correction or wider Device-gate closure follows.
+
+## Exact reviewed identities
+
+| Artifact | SHA-256 |
+|---|---|
+| `reconciliation/run25/REFERENCE_BOUNDARIES.md` | `e0339217ccf75a1408c591f714a300bc127e1ec0a8a903f766faa2f3fb8d5b95` |
+| `reconciliation/run25/reference-locators.json` | `9d3a9195c7155b57b2277574a3878e8a800204749f43b9508624daf250cd1ea7` |
+| `reviewed/run24/WHO25_REFERENCE_PIN_SUPPLEMENT.json` | `4a34b99303a25a74501612f84c03a698c247e78d6a642caabdfc4905e13b6aad` |
+| `reviewed/run24/SOURCE_SNAPSHOTS.json` (separate prior13 index) | `640a4c5744c7d2dbbc6883d21bf910129e92a667df3cd0b6ba0b9c6ce3a97502` |
+
+Snapshot paths are repository-relative.
+
+| Preserved original page | Exact old source/snapshot SHA-256 |
+|---|---|
+| `functional/who-25-transversal/README.md` | `e9ba3229e4a09c9412b21b59bcaf316d81ecc5499a0afdb19225fe1370e79acb` |
+| `functional/who-25-transversal/cen-plus.md` | `86f2d687f90e84d0991f8d99915e0146858fa8b817c99ca553e5ea25919d681d` |
+| `functional/who-25-transversal/dry-contact-ir.md` | `1c0a04bae56ba9312392632fbbe8b8ca5ad81e1e7d0ed9c561cb936b180b86e9` |
+| `functional/who-25-transversal/zigbee-binding.md` | `bdea58b831237abc6628ed5cfc23d1d1c4d8a67239ebe6d459e7ba192dc01951` |
+
+This PASS applies to these exact reference-note/snapshot identities; final new firmware findings require their own source reviews and documentary integration.

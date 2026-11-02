@@ -1,0 +1,31 @@
+{
+  "/home/bticino/scheduling_manager/scheduling_manager": {
+    "bytes": 1406680,
+    "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26"
+  },
+  "curated_product_context": {
+    "bytes": 43131,
+    "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md",
+    "sha256": "5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855"
+  },
+  "image_accessor": {
+    "bytes": 5611,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/image_vfs.py",
+    "sha256": "890e3526e2fc29c630cb45dad15d91fecb6b32007c0be04e5af28c85a48f1ae4"
+  },
+  "prior_receiver_classification": {
+    "bytes": 8129,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime/reset-alias/REPORT.md",
+    "sha256": "7b2ae0004d18f99a200af2c4d383716786f1e70d75a06ef88f85059bc517702f"
+  },
+  "prior_receiver_ledger": {
+    "bytes": 14840,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime/reset-alias/RECEIVER_LEDGER.json",
+    "sha256": "23f0af62b5d1c3ba9ce1186a37ed581475ffdca7bd14d399e011873eb4ac9bf1"
+  },
+  "prior_stop_domain": {
+    "bytes": 8226,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/stop-domain/REPORT.md",
+    "sha256": "c91d8ac959061cede3645d0d72d947359a0d8af66439701d7b240b2279dac67d"
+  }
+}

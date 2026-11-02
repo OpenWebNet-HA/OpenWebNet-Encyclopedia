@@ -1,0 +1,154 @@
+{
+  "checkpoint": "final",
+  "status": "Reviewed final bounded synthesis/referenceintegration; finalstrictvalidation and actualautomationclosure recordedseparately",
+  "source_checkpoints": 28,
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "archive_bytes": 37111681,
+  "exports": [
+    {
+      "role": "finalreviewed synthesis throughsource28",
+      "research_path": "work/mh202-firmware/research/2026-10-30/FINAL_REPORT.md",
+      "source_sha256": "5b9e38d62cfee76bca3ea995a565a07deebf2d8e1a8b7f5931b5eafad906341b",
+      "published": "final-report.txt",
+      "published_sha256": "5b9e38d62cfee76bca3ea995a565a07deebf2d8e1a8b7f5931b5eafad906341b"
+    },
+    {
+      "role": "sourceaware/documentary synthesisreview, notallsource/native reaudit",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/final/synthesis-review.md",
+      "source_sha256": "b86f86afba1b315c700cada2db35a53f81f2af4d4fcbee0ee93c74e0e77a7028",
+      "published": "final-synthesis-review.txt",
+      "published_sha256": "b86f86afba1b315c700cada2db35a53f81f2af4d4fcbee0ee93c74e0e77a7028"
+    },
+    {
+      "role": "fresharchive/source/savedresult/hashandledger verification",
+      "research_path": "work/mh202-firmware/research/2026-10-30/validation/final/independent-identity-verification.json",
+      "source_sha256": "6cbd6f6e164c577d741002ba82783a30c1f87fb0692b5308a7d3216b5d238080",
+      "published": "final-identity-verification.json",
+      "published_sha256": "6cbd6f6e164c577d741002ba82783a30c1f87fb0692b5308a7d3216b5d238080"
+    },
+    {
+      "role": "independent identity/arithmetic review, no native replay",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/final/identity-review.md",
+      "source_sha256": "64b7f0401dff5c8f29dc5f3724b33cfd632e11a9276148103661bc6eaa38932d",
+      "published": "final-identity-review.txt",
+      "published_sha256": "64b7f0401dff5c8f29dc5f3724b33cfd632e11a9276148103661bc6eaa38932d"
+    },
+    {
+      "role": "37bounded navigationrows preserving35inherited+2reviewed28",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/final/FINAL_FINDINGS.md",
+      "source_sha256": "1b091c5621fe7057e209b0876e9dd302b696ca41f43b62c22679c2d19564d2ff",
+      "published": "final-findings-index.txt",
+      "published_sha256": "1b091c5621fe7057e209b0876e9dd302b696ca41f43b62c22679c2d19564d2ff"
+    },
+    {
+      "role": "exactpredecessorpins/rowhashes and2laterlocators",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/final/FINAL_FINDINGS.json",
+      "source_sha256": "b3fb1b4e3404fe5622196d0d441538b003876515786a66dd0ff71db02223d58d",
+      "published": "final-findings-index.json",
+      "published_sha256": "b3fb1b4e3404fe5622196d0d441538b003876515786a66dd0ff71db02223d58d"
+    },
+    {
+      "role": "savedchecks1..28 metadata, no rerunfulltests",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/final/VERIFICATION_CATALOG.md",
+      "source_sha256": "40d66ab1d7d08f0a3dfff0e36cd3af53281025a0c39db0245e44be7a806920c9",
+      "published": "final-verification-catalog.txt",
+      "published_sha256": "40d66ab1d7d08f0a3dfff0e36cd3af53281025a0c39db0245e44be7a806920c9"
+    },
+    {
+      "role": "savedvalidation/source/report/snapshot and15resultidentities",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/final/VERIFICATION_CATALOG.json",
+      "source_sha256": "8a3ea4031ffad1adf3798fa2ff3d30781fe0de50eedea3572f56a19c2afec162",
+      "published": "final-verification-catalog.json",
+      "published_sha256": "8a3ea4031ffad1adf3798fa2ff3d30781fe0de50eedea3572f56a19c2afec162"
+    },
+    {
+      "role": "independenthosthash/byte/navigation review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/final/navigation-review.md",
+      "source_sha256": "a1a0e22dd137beeda817cf5acf7a8b9ae1db1070621a9418e4063a8669ba2c47",
+      "published": "final-navigation-review.txt",
+      "published_sha256": "a1a0e22dd137beeda817cf5acf7a8b9ae1db1070621a9418e4063a8669ba2c47"
+    },
+    {
+      "role": "finalboundedcoveragematrix, notpercentage",
+      "research_path": "work/mh202-firmware/research/2026-10-30/COVERAGE.md",
+      "source_sha256": "2937e4bd29e9fd3338cdf5e310266843e48f7f22c85044c983d6d0c99544b652",
+      "published": "final-coverage.txt",
+      "published_sha256": "2937e4bd29e9fd3338cdf5e310266843e48f7f22c85044c983d6d0c99544b652"
+    },
+    {
+      "role": "rankedremainingevidence gaps",
+      "research_path": "work/mh202-firmware/research/2026-10-30/REMAINING_QUESTIONS.md",
+      "source_sha256": "fa19550370aa03740c988e83171b6e70ed4236765b8acbf92ac9088b4150740f",
+      "published": "final-remaining-questions.txt",
+      "published_sha256": "fa19550370aa03740c988e83171b6e70ed4236765b8acbf92ac9088b4150740f"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/validation/final/verify_identities_v1.py",
+      "sha256": "0628e986cca9d2be18ccfbc10a4ad3b973b19b9f79e2d173bdfe2daef0be26f3",
+      "method": "host-onlyoriginal/savedhash/ledger/navigationverification, no firmware/native/sourcecollector execution"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/final/build_final_navigation_v1.py",
+      "sha256": "e326f5933f56730024bc45729aaa6fbf2baa649190f118a6ff016fd25d1845a6",
+      "method": "host-onlyoriginal/savedhash/ledger/navigationverification, no firmware/native/sourcecollector execution"
+    }
+  ],
+  "generated_outputs": {
+    "final_navigation_including_manifest": 6,
+    "independent_identity_record": 1,
+    "total": 7
+  },
+  "new_original_execution": 0,
+  "new_native_replays": 0,
+  "new_repository_test_runs": 0,
+  "canonical_execution": {
+    "corpora": 15,
+    "top_level_entries": 71,
+    "original_instruction_visits": 31961,
+    "primitive_callbacks": 3165,
+    "linker_redirect_callbacks": 132,
+    "EXIT_boundaries": 27,
+    "selector_read_stops": 2,
+    "code_hook_visits": 35287,
+    "firmware_processes": 0,
+    "target_OS_calls": 0
+  },
+  "navigation": {
+    "validated_through": 28,
+    "preserved_inherited_rows": 35,
+    "reviewed28_additions": 2,
+    "navigation_rows": 37,
+    "scope": "Navigation notcoverage/semanticreaudit",
+    "inputs": 319
+  },
+  "identity_scope": {
+    "fresharchive": true,
+    "extracted_originals": 6,
+    "selected_source_files": 9,
+    "frozen_old_artifacts": 2669,
+    "frozen_catalog_inputs": 809,
+    "protected_F454_listed_files": 2237,
+    "canonical_results": 15,
+    "unique_readtime_pathpins": 5377,
+    "scope": "Selectedidentity/ledger verification, not globalinventory or allsource semantic proof"
+  },
+  "inherited_checks": {
+    "tooling_tests": 31,
+    "Device_checks": 210,
+    "rerun": false,
+    "wider_gates": "pending"
+  },
+  "final_report_lineage": [
+    "reconciliation/final/FINAL_REPORT_LINEAGE.v1.json",
+    "reconciliation/final/FINAL_REPORT_VERSION_HISTORY.v2.json"
+  ],
+  "limits": [
+    "Missing2.xtz/4.xtz/configuredassets/activeproviders/productionselectors/diagnosticC++/thermocorrelation/queue/lifetime/runtime/physical/concurrency remainopen",
+    "Run18/21 unavailableintermediatehistories unverified; currentreview/snapshots do not authenticate missingbytes",
+    "No commits/publishing/livegateway/bus/flash/remote writes/vendor processes/targetOS/network; stoppedauth/session/framing/equivalent branchclosed",
+    "Actualautomationdeletion only after finalfiles/reviews/checks saved; response/state and LASTindex recorded in researchdossier"
+  ]
+}

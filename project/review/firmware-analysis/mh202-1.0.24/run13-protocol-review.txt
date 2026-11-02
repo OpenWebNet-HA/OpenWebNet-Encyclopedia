@@ -1,0 +1,41 @@
+# Independent review — MH202 protocol/run13
+
+**PASS within the two selected entry-prefix experiments; no material correction requested.** Reviewed final report, original source/word/pool evidence, harness, saved parser/readback/write events and accounting. Reviewer replayed the host static collector only, **not the native emulator**. This is a source/harness/saved-result audit; parent’s independent native replay is separate. Reviewer original ARM/vendor/parser/JS/PHP execution/live I/O:0.
+
+## Independent verification
+
+`collect_evidence.py --check` reproduced16 outputs/11 pinned inputs/10 spans/21 original words and the saved execution/write ledger. Independently mapped both original ELF PT_LOAD images through ImageVFS, checked all10 source span hashes/all21 words and original outer-prefix/entry-prefix/function-pointer pools. Verified all21 final manifest entries. Independently checked every saved original PC is aligned, file-backed and within the harness’s selected image-specific ranges; recounted original-PC/primitive/redirect arrays and stop-vs-EXIT categories. Recomputed all882 write events from absolute addresses relative to independently computed local SP and verified every interval avoids `[15352,15376)`.
+
+Original normal-image taskmanager hash is `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e`; common hash is `07b2c6d09e4a1b317bb3b37aff8f7ddd72dcec15e1e7194fde00c4f0ce1ecab5`.
+
+## Caller premise, native parser fields and stop boundary
+
+Outer source0xc608 compares incoming text with exact8-byte prefix `*#13**22`, selects special entry0xc8e0 versus ordinary0xc6dc through pools, and calls the selected pointer indirectly at0xc658 with stored trigger text in r0 and incoming text in r1. The outer matcher is not invoked in this corpus. The first canonical fixture is correctly retained as entry-only DIM1/DIM1; the second adds a statically compatible incoming DIM22 prefix. Prefix compatibility is not whole upstream frame acceptance, configured trigger membership or original caller execution.
+
+The actual special entry separately checks first trigger prefix `*#13`; native parsed **trigger DIM1** controls the jump0xc978→0xcac4. It is not selected by the second parsed received DIM22. Fresh common C1/Null/CreateMsgOpen/IsCorrect/measurement/suffix/getter definitions produce both objects under the selected provider model. The harness supplies original raw texts and poisoned private stack, not parsed fields, predicate results or constructor no-ops. Saved parser-entry/return readbacks confirm two real parser calls per top-level entry and actual WHO13/kind4/values, including empty received WHERE/DIM22 in the second case. Common130 layout and separate base0x10000000 prevent conflating it with libopen90 or overlapping linked image addresses.
+
+The original16-byte push/15376-byte local frame places objects at localSP+0/+7676 and selector words at localSP+15352..15375. Original DIM1 branch sets byte cursor0, computes r3=localSP+15352, then reaches0xca48. The harness stops in the code hook **before** that `ldr r4,[r3,r5]` instruction executes. It is absent from saved original-PC visits. No indexed value access/comparison/return/hit consumer or destructor tail executes. Private selector canary bytes80..97 are host test state and never a claimed original initialization/production value.
+
+## Write/read containment and precise counters
+
+Original write hooks record each original write attempt; the explicit primitive-write helper separately records modeled writes. Source read guards reject original/primitive data reads intersecting the selector region before the stop. The post-stop host canary inspection is analysis observation, not a native selector consumption. The recorded canary remains identical, and independently recounted writes are **252 original+630 modeled primitive=882 events**, with0 selector overlaps. The selected object-intersecting write end15352 is exclusive and exactly the selector lower boundary. Callee-stack/saved-register writes are kept separate from object intervals. This evidence is specific to the two short normal parser inputs; input-dependent copies/value progression prevent a universal parser-write bound.
+
+Code-hook accounting is **8275 original visits+925 C primitive callbacks+34 redirects+2 stop-before-selector boundary callbacks=9236 code hooks**; **EXIT is0**. Per case4152/466/17/1=4636 and4123/459/17/1=4600. The2 boundaries are neither original executed selector instructions nor normal returns. Memory read/write observation callbacks are separate from these code-hook totals. Four constructors and four parser calls are nested inside2 top-level entry calls, not additional top-level corpus calls. Static recount/replay does not add canonical coverage.
+
+The source confines original PCs and private writable stack/input/heap, maps original images read/execute, and traps unknown PC/interrupt/protected/unmapped access.100000 hook/emulator caps bound each prefix. C primitives are explicit finite ordinary models; cstring reads cap4096 while tokenizer scans are checked per byte against permitted regions. Selected native redirects preserve LR and choose common definitions without a live loader/closure/interposition guarantee. No selector read proceeds with an invented index/canary/sentinel. No native allocator/libc, target OS/process/syscall, network/device, interpreter or authentication route is forwarded by the inspected experiment.
+
+No correction was requested. The final report keeps development entry-only vs prefix-compatible history explicit and does not generalize these results into production stack initialization, an actual selector word, comparator result, configured match, defect or physical outcome. Actual caller/stack history determining those words remains unresolved.
+
+## Exact final reviewed hashes
+
+- `protocol/run13/REPORT.md` SHA256 `e708d11afe6a77b54f536ebc18d2fa49552370205639aef6a568977cd6660adb`.
+- `protocol/run13/collect_evidence.py` SHA256 `ea25ee1d687fde9e9281fe7060b64850989ec5248202a9604440a70dfe91f868`.
+- `protocol/run13/emulate_preselector.py` SHA256 `ef4596f70e66e0c7150559fc1f51e2d752d14b55ece8dacc2652e81e8905a05c`.
+- `protocol/run13/preselector-results.json` SHA256 `3fca7f3fd6dec7a049bcd642af09bf4fc47f9578bf921f5a2f7b1c7c582ab0d0`.
+- `protocol/run13/execution-and-write-ledger.json` SHA256 `3166435704d15274935870140abd767c30ac803f22bf927471b5e2b02c7b98c0`.
+- `protocol/run13/stack-regions.json` SHA256 `697891dcbfbce8d4644c91c6bf9b892df813c889c7cd44bbe59747d344ceebb8`.
+- `protocol/run13/caller-and-entry-contract.json` SHA256 `0f009a0990209f3e15605afdcfa7d4bcb2d9dbadd2007503568f849751e94275`.
+- `protocol/run13/output-manifest.json` SHA256 `c8a25a638b0abe92dbfa9601586c7ddd15b7b5a9c3b5d59b795a87b1245788e8`.
+- `protocol/run13/original-spans.json` SHA256 `457b5fcfa38efda77ad0ce32ab8d5e3d0a7e9934fb5d9de8859777347d46f6eb`.
+- `protocol/run13/critical-words.json` SHA256 `5314eb116453312b99a73dcd99feccdf7c1fe209e1413da53dff9b6f5443eff1`.
+- `protocol/run13/verified-tool-package.json` SHA256 `9f9bae4d6be11b8849669aeca2375469304e78ab5697abb89e47d3d73f6ca36a`.

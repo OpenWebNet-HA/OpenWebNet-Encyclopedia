@@ -1,0 +1,41 @@
+# F460 2.0.12 run07: captured receiver identity and conditional worker handoff
+
+Fresh original source identifies a concrete SceneRunner-owned allocation/constructor feeding the initializer receiver captured in run06. It closes the local receiver gate, thread-state capture and one condition-predicate-to-next-local-method request. It does not prove a naturally configured scene, actual thread creation, condition truth, action success, ownership safety or physical behavior. New original execution, models, fixtures, SQL and target operations: zero; earlier product ledgers remain unchanged.
+
+## Original source and reproduction
+
+Original `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62`, is freshly mapped ELF64/AArch64. SOURCE.json records original PT_LOADs, span bytes/hashes, exact instruction guards, calls, relocated tables and named import proofs. Nearest disassembly labels are not function identities. Curated Device0207 supplies product context only. No MHS class layout, task/thread API outcome, physical mapping or command grammar is transferred.
+
+Reproduce: `python3 -B work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/collect_receiver_v1.py --check`. Host reads/binutils only. Generation refuses existing outputs and immediately preserves exact first copies, computing index bytes before opening the index. No failed canonical generation or overwritten candidate occurred. Run06 authoritative source/review is inherited by exact pins, not replayed as new coverage.
+
+## Positive owner and same-inner constructor identity
+
+A selected original caller0x2cc20..0x2cc70 requests272 bytes, retains the allocation base, stores control address point0x213450 at that base with initial count words, advances its inner pointer by16 at0x2cc58, and passes that exact inner to constructor0x105740 at0x2cc70. Its normal path publishes inner/control pair atSP+104/+112 (0x2cc90). Prior parse/success branches and supplied source/configuration remain premises; no installed asset is reconstructed.
+
+Original header0x213440/RTTI0x2190d0/name0x196470 identifies `St23_Sp_counted_ptr_inplaceI11SceneRunnerSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE`. This positively identifies the **control block's** class ownership intent. AP0x213450 is not declared to be a SceneRunner object's primary vtable. The inner storage is256 bytes within this272-byte aggregate; no arbitrary runtime allocation or lifetime is inferred.
+
+Constructor0x105740 saves incoming destinationX0 asX19, requests local base/source construction0x10fe60, zeros halfword248 (bytes248/249), byte250, four16-byte blocks beginning168 and216/232 storage, including pointer240. It then calls0xf94c0 with X0=the SAME X19 and saved supplied auxiliary arguments (0x105778..0x105790). The separate constructor0x105690 has the same destination-to-initializer join after a different base helper0x54050; this packet retains that bounded source alternative without assigning equal configuration behavior.
+
+Run06 already proved that selected BNIL callback construction captures this initializer's incoming receiver pointer and its original invoker tail passes that pointer to0xf7650. The new allocation/constructor join therefore supplies one positive owner context for that captured pointer, conditional on choosing this normal construction path. It does not prove every captured receiver was built by this caller, that the object survives callbacks, or that shared control ownership is captured by the callback: the capture remains one plain pointer.
+
+## Actual local gate and original thread request
+
+Method0xf7650 saves its supplied receiver asX19. It first loads byte113; zero takes the separate0xf7828 path. This packet labels it the source gate byte113 rather than assigning a public enabled/configuration meaning without completing its producer. On nonzero113, it acquire-loads byte249 (0xf7688); a nonzero value takes a separate0xf774c path. Only the selected zero249 route proceeds here. Source ordering alone is not an atomic compare-exchange, concurrency exclusion guarantee or universal admission policy.
+
+The selected path release-stores byte249=1 and byte248=0 at0xf7698/0xf76a0. It requests an8-byte holder allocation, writes its first word0, requests a16-byte thread-state allocation, then writes state AP0x216f80 and raw receiver pointer at state+8 (0xf76b0..0xf76d4). It passes holderX20 and address of that state-pointer slotSP to the actual imported `std::thread::_M_start_thread`, with third argument0 (0xf76e0). Thread/provider behavior and actual scheduling remain opaque; no OS or provider executes.
+
+After normal return it conditionally requests deletion through a residual state's vtable+8 if the state slot remains nonnull. It replaces receiver pointer240 with the new holder at0xf76fc. A previous holder whose first word is nonzero reaches the actual `std::terminate` import; otherwise it requests sized deletion before using the new holder. The selected normal branch then tail-requests actual `std::thread::detach` at0xf7748. These are source requests, not demonstrated thread start/detach/success or a full join/teardown contract. Other error/unwind paths and later receiver/holder ownership remain open.
+
+## Fresh state table, predicate request and next local boundary
+
+Original thread-state header0x216f70/AP0x216f80/RTTI0x21cc90 has the original name containing `SceneRunner21verifySceneConditions` and relocated slot+16=0xf8cb0; slots0/+8 are different methods. More than its name connects it: the exact AP installed by0xf76d4 is this table, and0xf8cb0 loads the SAME raw receiver from its state+8 at0xf8cc4. Thus the source state/receiver/method relation is positive. Dynamic provider thread dispatch and receiver lifetime are still premises; there is no captured owner/control pair or refcount increment in this selected16-byte state construction.
+
+At0xf8cd4 the worker loads receiver+192/+200 as its condition-pointer begin/end range. Its local source uses eight-byte pointers and unrolled groups of four; this packet follows only the explicit single-pointer tail, not a whole-scene truth model. For a valid range with one remaining pointer,0xf8ef4..0xf8ef8 reaches0xf90b4. That block loads the pointee, its vtable, and method slot+16, calls that method and tests the low8 bits of W0. False goes to the failure/log path0xf8d6c. True reloads the same receiver from state+8 and joins0xf8f00. Predicate implementation/type/value/provider effects are not supplied or executed.
+
+Under normal intermediate string/diagnostic/cleanup returns on that true path,0xf903c reloads the SAME receiver and0xf9054 tail-branches to local0xf84d0. This packet stops at0xf84d0 and does not inspect its body, worker actions, external output or transport. The condition-vector schema/type population, zero/multiple conditions, exceptions, cancellation, timing and actual next-method outcome remain unclosed. No predicate completion or action success is inferred merely because the source issues a call.
+
+## Limits and ranked gaps
+
+This is a new positive owner/constructor -> captured receiver -> conditional gate -> state+8 -> actual predicate request -> next-local-method chain. It does not repeat BNIL raw/operator rules as new evidence. Raw object pointers, control blocks, caller closure storage, thread states, holder240, flags248/249/250 and condition pointer range192/200 are distinct namespaces. No full lifecycle/concurrency/UAF/leak/safety or physical claim follows.
+
+Highest gaps are a bounded original condition-range producer and concrete predicate identity; receiver/holder/state teardown and concurrency with future callbacks; the local0xf84d0 gate/body only if a new bounded nontransport scope is justified. Full original dynamic binding, valid supplied source objects and normal parser/string/allocator/thread returns remain premises. Receiving/transport/MQTT/libjel/auth/session/framing and equivalents stay closed, with no caller/delegate implementation reopened.

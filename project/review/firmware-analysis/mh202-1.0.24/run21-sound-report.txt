@@ -1,0 +1,53 @@
+# MH202 1.0.24 run21: multimedia ordinary query and separate receipt lifecycle
+
+## Result and execution boundary
+
+The actual MH202 multimedia STM has an ordinary application path for the run20-style supplied parsed WHO22/kind2/WHERE1 query. It appends the **same input envelope Q** to its output argument2 list after setting envelope metadata+4/+8 to1, records Q.ID60 in **private+300**, and maintains a distinct **private pending byte296**. An independent field receipt with supplied status52 in1..2 reaches an ID comparison against that private value. Matching status1 clears pending and returns; matching status2 also requests a local NACK-list helper and timer cleanup. These are original source contracts with separately supplied records, not an observed request/reply or physical sound acknowledgement.
+
+All new original execution, primitive callbacks, redirects and hooks are **0**. This batch is host-only verified image reads, binutils and four finite source-state cases. No original parser, plugin, GLib callback, target process/OS, service, device or network runs. No volume/source/channel meaning or F454 layout transfers by filename.
+
+## Reproduction and ownership
+
+Run `python3 -B work/mh202-firmware/research/2026-10-30/sound/run21/collect_evidence.py --check`. It checks17 deterministic outputs plus manifest,12 original spans,41 word assertions,one original ELF,seven selected callback/data relocations and four finite cases. `--check` writes nothing. `original-spans.json` gives original VAs, file offsets and raw hashes; full original and accessor hashes are in `input-hashes.json`. The original file is `/home/bticino/libcoso/libplug_multi_stm.so`; source/callback/import providers are conditional same-image candidates, not effective runtime loader/interposition evidence.
+
+## Registration and private context
+
+Original initializer0x1d24 allocates **320 zeroed bytes** when descriptor+56 is NULL at0x1fa8..0x1fb8. Its source descriptor is **0x1ab24**, independently resolved from PIC base0x1a9dc and pool0x1fe0. Original ABS32 relocations install sm_init0xfb0c at descriptor+36, gest_status_from_field0xcde4 at+40, and gest_status_from_openserver0xfc04 at+44. Numeric descriptor words+32=3 and+48=2 are retained as raw distinct descriptor fields. Initializer0x1e5c..0x1e88 appends criteria22 and8 to descriptor+52 and requests register_state_machine. Successful allocation/config/registration and active registry/order are premises.
+
+`sm_init`0xfb0c stores descriptor pointer into private+268, passed contextword0 into private+276 and passed callbackword4 into private+280 at0xfb30..0xfb3c. It then calls original init_status with source/ordinary/util selected arguments0/1/0 (outgoing stack12/16/20). The callee stores those independent integer values at private+252/+256/+260 at0xf9ac/0xf9b4/0xf9c0. This ties the selected no-source/no-util/ordinary-enabled branch to actual initializer arguments, while reuse of an existing context and subsequent changes remain open. These private offsets are not envelope fields, parsed kind or the automation layout.
+
+A separate optional logging timer is controlled by private+284 in sm_init0xfb94..0xfbd8, with interval arithmetic1000*private288 and relocated log_status_to_file callback. That is distinct from request pending, the per-state deadline scheduler and the later1300 interval below. No actual timer firing or configured logging state is shown.
+
+## Selected ordinary query admission and forwarding
+
+Application entry0xfc04 borrows descriptor, Q, output argument2 and result-list argument3; descriptor+56 supplies its private context. It requests ordinary clock data, then permits representation3 directly. Representation2 instead calls imported buf_to_openmsg and, on local return0, frees old text and installs parsed storage/representation3 at0x10220..0x1024c. This source route is not a parser execution or proof of raw acceptance.
+
+For the selected representation3 parsed object, `check_open_multi`0xbacc duplicates WHERE and may combine selectors20/24. With both selectors NULL and WHERE exactly`1`, 0xbb94..0xbbb4 calls original check_multi_where;0xb9ec..0xb9f4 branches to0xba14 and returns0. Parsed kind44=2 is not1, so0xbbcc..0xbbdc returns0 without the ordinary WHAT validation branch. This is a coherent-object premise and a selected structural guard, not the complete WHO22 grammar; outer manager WHO admission is not executed here.
+
+Back at0xfc7c..0xfc98, kind2 bypasses dedicated kind3/5/1 routes. With private252=0 and260=0, neither source nor utility delegate is invoked. Private256 must be nonzero at0xfcc4..0xfccc to enter the ordinary path. It sets pending296=1, then explicitly tests private bytes0..14 for value9; any equal9 clears pending. The report does not assign those bytes physical device meanings.
+
+Regardless of that selected pending-byte result,0xfe04..0xfe1c writes literal1 to Q+8 and Q+4 and appends the **same Q pointer** to the list at application argument2. After the logging prerequisite,0xfe38..0xfe40 stores Q.ID60 at private300, calls manage_timeout(private) and returns local0. Neither this local return nor same-pointer append establishes physical delivery, eventual list ownership/reclamation, a new ID or a successful command. ID is copied from this Q; this path does not call new_id.
+
+The finite query ledger supplies ID41,15 private bytes all1 and all per-state deadline words zero. It produces pending1/savedID41/Qmetadata1,1 and one same-Q append. Its all-zero deadline premise means manage_timeout reaches its zero-pair return at0x22d0..0x22d4 before timer creation. The model does not assert that all queries always lack a timeout, or prove an initialized runtime's complete deadline state.
+
+## Separate field receipts and narrow ID/result handling
+
+Field entry0xcde4 accepts representation3; representation2 has its own imported parser/text-free/install path0xcfac..0xcfd8. For supplied envelope status52 in1..2, unsigned(status-1)<=1 at0xce38..0xce44 selects the receipt path before source/utility event processing. It compares record.ID60 with private300 at0xcfdc..0xcfe8. A mismatch returns local0 without these state changes or output requests.
+
+A match additionally requires pending296 nonzero at0xd00c..0xd014. The code clears pending **before** checking status52 at0xd018..0xd028. Matching status1 then returns local0 without the selected NACK request or timer destruction. Matching status2 calls imported queue_nack_to_open on output argument3; if private312 is nonNULL it requests g_source_destroy and g_source_unref and clears that pointer. It sets trackedDIM304=-1 and clears pending again at0xd050..0xd060. Helper effects, callback exceptions and actual resource destruction remain import/runtime boundaries.
+
+The three separate finite receipt cases are ID40/status2 (no changes), ID41/status1 (pending cleared only) and ID41/status2 (NACK request and cleanup). All start from the same declared post-query private state; they are not consecutive actual events or a captured causal exchange. Local status1/2 and ACK/NACK helper names are not equated to physical bus acknowledgement or wire output.
+
+## Distinct dimension timer and later callback boundary
+
+The field nonreceipt route can append an event and, for parsed kind4 with decimal DIM equal private304, set metadata8=5 and clean an existing private312 source at0xd070..0xd0b0. If private308 is nonzero,0xd0c0 loads literal **1300** from0xd114, requests g_timeout_source_new, stores private312, installs relocated timeout_req_dim0x205c with private context as user data, and attaches to context private276. With private308=0 it instead requests queue_ack_to_open; both paths reset trackedDIM304=-1. This is a different parsed-kind/DIM path, not a newly invented timer on the selected kind2 query. Actual interval units/firing are not empirically tested here.
+
+Original timeout_req_dim0x205c checks private296: zero requests queue_ack_to_open, nonzero requests queue_nack_to_open on a local list. It calls the stored callback at private280 with (&local_list,0,descriptor+60), then resets private304=-1, pending296=0 and timer312=NULL. Callback/private-descriptor lifetimes, output consumption and actual scheduled invocation remain conditional. The per-state scheduler manage_timeout has a separate original clock/deadline-selection/divide-by1000/source-create/control_timeout chain0x20cc..0x24ec; only the supplied all-zero deadline branch is modeled, not a universal minimum/deadline or clock-validity claim.
+
+## Confidence, limits and next questions
+
+High static confidence: original registration pointers, private argument stores, selected WHERE1/kind2 guard, same-Q append/metadata/ID copy, receipt ordering and timer/callback argument stores. Finite models reproduce selected conditions and outputs without executing original instructions. Effective providers, active plugin set, complete parser/selector/source/util grammar, configured context, timer dispatch, nonnormal helper outcomes, ownership/destruction and physical sound meaning remain open.
+
+The next distinct question is an actual ordinary source/utility state producer or per-state deadline producer, followed by exact publication/cleanup ownership. This should precede physical sound-source/volume semantics or a causal query/reply claim. No ordinary command matrix or large flag matrix was rerun.
+
+Author preparation and provenance note: before report publication, two raw descriptor JSON key labels were refined from kind/axes wording to neutral descriptor-word offsets. That refinement overwrote the generated descriptor JSON, deterministic output-manifest and collector draft. Their exact prior bytes were not preserved at the time and no independently pinned prior hash is available. This is an explicit draft-history omission; no historical authenticity is claimed for any reconstruction, and no reconstruction is supplied. Source bytes, finite outcomes and execution counts did not change. The actual announced report/author-manifest bytes preceding this clarification are preserved in history-before-provenance-clarification, which does not recover those earlier label drafts. No earlier completed dossier changed. Exact current outputs/report/method and this actual snapshot are pinned by the author manifest.

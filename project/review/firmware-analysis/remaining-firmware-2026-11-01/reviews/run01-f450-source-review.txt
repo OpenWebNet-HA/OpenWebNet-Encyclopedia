@@ -1,0 +1,53 @@
+# F450 night01 independent local database-consumer source review
+
+**PASS. No correction requested.** The new positive result is a selected local source request: a whitelisted copy command supplies a concrete cfg/extra/50 pathname and destination, then the same destination is passed through an original helper's preserved argument to sqlite3_open. The encrypted original database remains unrecovered. No actual copying, database opening, extraction/installation, decryption or archive-to-installed-file identity is inferred.
+
+This review independently read the exact original ebacgw bytes, decoded its own ARM/PT_LOAD/PLT/dataflow and compared the frozen source packet. Read-only `collect_archive_v1.py --check` passes seven outputs/eight spans/28 guards/five direct-call targets/nine first copies. Host objdump/readelf read source bytes only. No original/vendor/provider/native code, target process, OS service, file/device/network/bus action, mount, SQL, semantic model/fixture or decryption/password trial was executed. Author outputs and all old dossiers remained unchanged. Parent database/schema work remains separate.
+
+## Original mapping and selected call sequence
+
+Original `/home/bticino/bin/ebacgw`,539612 bytes, SHA256 `b99d2566662f692d949f24f4d0f9c2c9eb5c00f24e90b319a183462155c63ddd`, independently decodes as ELF32 little-endian ARM EXEC, flags0x5000002. Fresh program-header mappings reproduce all eight retained span hashes/words and all28 word guards. Both whitelisted literals' exact lengths, bytes, hashes, file offsets and virtual addresses agree. No layout or behavior from MHS/MH202/F454 was reused.
+
+The source at0xa618 obtains pool0xaea0→VA0x7a444/fileoffset0x72444, the exact69-byte command `cp /home/bticino/cfg/extra/50/master.sqlite /var/tmp/db/master.sqlite`.0xa61c calls the original system import stub. Source stores its numeric return, masks0xff00 and arithmetic-shifts8 for local diagnostic request0xfe1c. The selected continuation has no copy-result branch before0xa644..0xa64c loads the separate exact destination literalVA0x7a4ac/fileoffset0x724ac and calls helper0xfcb4 with that pointer inR0. This is request order under prior reachability and normal diagnostics/providers; it does not certify shell semantics, source-file existence, copy completion, valid database bytes or natural startup.
+
+The helper prologue preserves the filename inFP−16 at0xfcc0. The retained initialization loop and mutex-init request do not directly overwrite that slot in the inspected source. Under valid runtime mappings, normal provider/callee-save ABI and ordinary stack/object premises,0xfd8c reloads the same pointer intoR0.0xfd90 obtains output-storage address0xc1f8c through pool0xfe10 inR1, then0xfd94 requests sqlite3_open. The output-storage address is not a demonstrated live handle or copied record layout.
+
+The numeric open result is tested against0. Nonzero takes the selected diagnostic/−1 return path; zero reaches0xfdcc, loads the output handle and requests sqlite3_exec at0xfdec with a separate compiled SQL pointer. The query literal/body was not inspected, evaluated or exported by this reviewer. Source then stores0 after normal exec return without testing that return here. Therefore local helper0 neither proves the exec request succeeded nor qualifies data/schema semantics. The outer normalized zero test at0xa650..0xa668 takes0xa684 on helper result0; the report leaves the alternate continuation outside its claim.
+
+## Independent actual import-slot proof
+
+I independently decoded the three ARM PLT address calculations, rather than accepting nearest objdump labels or only the dynsym value:
+
+| Call/stub | Decoded GOT slot | Original R_ARM_JUMP_SLOT name |
+|---|---|---|
+|0xa61c →0x9e88|0x912d8|system|
+|0xfd94 →0xa140|0x913c0|sqlite3_open|
+|0xfdec →0x9fb4|0x9133c|sqlite3_exec|
+
+The actual relocation rows and declared libsqlite3.so.0/libc.so.6 dependencies agree. Five local/PLT call targets and selected branch targets independently reproduce. This proves original import/caller identity, not active loader binding, provider implementations, ABI acceptance or actual calls. System/SQLite/diagnostic/output/receiving/transport/authentication/session/framing/MQTT/libjel and equivalent closed bodies remain opaque.
+
+## Archive applicability and preservation
+
+The PROD50.xtz exact72774-byte/SHA256 `824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8` is pinned. Independent ZIP central-directory inspection confirms encrypted50/master.sqlite, declared289792 bytes/CRC3252150069, and the separate encrypted zero-byte extra.xml declaration. No member is decrypted, read as plaintext, guessed or synthesized. The path suffix and original local source command identify a useful **candidate relationship to pursue**, not equality between encrypted archive contents and any runtime cfg/extra/50 file.
+
+The bounded liblghal keyword/symbol/pointer observations remain discovery metadata; they do not qualify a key, this archive's decoder or legitimate installed producer. No update_fs/recovery/mount implementation was expanded into an archive-recovery claim. The report correctly preserves bounded search limits, encrypted-content/schema unknowns and the absence of a qualified packaging input without claiming global absence. The original first-pass package/tree equality is inherited identity evidence, not another semantic result in this packet.
+
+All five input pins and nine exact first copies were independently rechecked. Frozen HOST_DISASSEMBLY.json agrees with the source independently decoded here; host-tool success/failure records do not represent vendor execution. Recorded initial default disassembler failures and successful parent host ARM disassembly are distinguished from a canonical generation failure or guest run; no overwritten generated candidate or invented recovered database is claimed. AUTHOR_CHECKS.json remains separate author/tool metadata. No row/private configuration/key/credential content was read or exported.
+
+## Exact frozen packet identities
+
+| Input | Bytes | SHA-256 |
+|---|---:|---|
+| `work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/REPORT.md` | 5971 | `3e25a7de747b22c77afed6eff8f8751e8b0e050a23a9708703dde67e2dbef2d2` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/collect_archive_v1.py` | 14932 | `3529802d1dfb118ccdfa9f4d7405d089a8670285e1f56da404a4758b3c182ae1` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/SOURCE.json` | 3578 | `b83297b4cc219c429482b5c2512a379bc9b50c0c1e4fae58594323386a0597c9` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/SPANS.json` | 9558 | `4bb837a6bf692f04e8770ec7173cc4dde44d8a39f42f12fdba15a6a97d7a3304` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/IMPORTS.json` | 1120 | `71b67deecff268651ccf6254a492152f31b04b390552f5973c3fe8f94c473650` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/INPUTS.json` | 1041 | `3902a2356ef6e1f50f16173284c9f2cc8fc763f7ae9a680b14e6fdbe296a4095` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/ARCHIVE_METADATA.json` | 1858 | `4a7a1592eaba469f1e499af87c67f722927a542839131595b158ba16b17b7cd1` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/HOST_DISASSEMBLY.json` | 4340 | `cb37742471dd8b92200cb4e1e591fb8c9975f868b58b4c13da60ed1f8fb8d242` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/OUTPUT_MANIFEST.json` | 981 | `58958954a980fc8d22602c6a69dad911120ab7ea1213aa3652a393063815b83e` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/first-candidate/INDEX.json` | 1502 | `3e751ca8f17237e24857b9c505b7e5602a739520cfbd0387475bb0bc0fb8eb4f` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/AUTHOR_CHECKS.json` | 807 | `dd06aeaa3ff65fdd0596801a5e6cdab1299439e41e0db1ebed049dfb24f0f445` |
+
+Completed 2026-11-01T19:52:43.472414+00:00. The exact first review is frozen immediately with an index computed before its own creation. This selected source review does not establish whole startup, copy/open success, DB compatibility, schema, lifetime/concurrency safety, cryptographic authenticity or physical behavior; all new original execution remains0.

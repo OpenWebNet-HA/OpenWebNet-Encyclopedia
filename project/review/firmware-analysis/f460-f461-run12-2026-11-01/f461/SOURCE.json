@@ -1,0 +1,270 @@
+{
+  "PT_LOAD": {
+    "exe": [
+      [
+        1,
+        5,
+        0,
+        0,
+        0,
+        27804,
+        27804,
+        65536
+      ],
+      [
+        1,
+        6,
+        27848,
+        93384,
+        93384,
+        2328,
+        2432,
+        65536
+      ]
+    ],
+    "glib": [
+      [
+        1,
+        5,
+        0,
+        0,
+        0,
+        1317904,
+        1317904,
+        65536
+      ],
+      [
+        1,
+        6,
+        1319824,
+        1385360,
+        1385360,
+        4928,
+        7848,
+        65536
+      ]
+    ]
+  },
+  "callback": {
+    "data": "same supplied third argument savedSP112; callbackX0\u2192X2, X0+136\u2192list-address, X1=0; tail3df0",
+    "relocation": "0000000000016f88  0000000000000403 R_AARCH64_RELATIVE                        4170",
+    "slot": "0x16f88",
+    "target": "0x4170"
+  },
+  "candidate_definitions": {
+    "g_get_real_time": [
+      "931: 00000000000570e0   112 FUNC    GLOBAL DEFAULT   12 g_get_real_time"
+    ],
+    "g_timeout_source_new": [
+      "546: 00000000000592d0    80 FUNC    GLOBAL DEFAULT   12 g_timeout_source_new"
+    ]
+  },
+  "execution": {
+    "fixtures": 0,
+    "models": 0,
+    "original": 0,
+    "provider": 0,
+    "target_IO": 0
+  },
+  "guards": {
+    "exe": {
+      "0x3dfc": "0xaa0003f3",
+      "0x3e08": "0xf9003be2",
+      "0x3e70": "0xf9003fff",
+      "0x3e78": "0xa94783f6",
+      "0x3e94": "0xf940029c",
+      "0x3e98": "0xf9401393",
+      "0x3ea0": "0x91002800",
+      "0x3ea4": "0xeb00027f",
+      "0x3ea8": "0x54000269",
+      "0x3eac": "0xf9401380",
+      "0x3eb0": "0xb4000096",
+      "0x3eb8": "0xeb00003f",
+      "0x3ebc": "0x54000049",
+      "0x3ec0": "0xf9003fe0",
+      "0x3ed0": "0xb5001000",
+      "0x40f0": "0xcb000038",
+      "0x4104": "0x9b407f00",
+      "0x4108": "0x9347fc00",
+      "0x410c": "0xcb98fc00",
+      "0x4118": "0xd2800003",
+      "0x411c": "0xf9403be2",
+      "0x4120": "0xaa0003f3",
+      "0x4124": "0xf947c421",
+      "0x4130": "0xaa0003e1",
+      "0x4144": "0x52800000",
+      "0x4160": "0xd65f03c0",
+      "0x4170": "0xaa0003e2",
+      "0x4174": "0xd2800001",
+      "0x4178": "0x91022000",
+      "0x417c": "0x17ffff1d"
+    },
+    "glib": {
+      "0x55a58": "0xb9406400",
+      "0x55a5c": "0x34000460",
+      "0x55ae8": "0xb9406262",
+      "0x55aec": "0x52807d00",
+      "0x55af0": "0x9ba00441",
+      "0x570ec": "0xd2800001",
+      "0x570f0": "0x910023e0",
+      "0x57110": "0xa9408be0",
+      "0x57118": "0xd2884803",
+      "0x5711c": "0xf2a001e3",
+      "0x57124": "0x9b030800",
+      "0x592e4": "0x2a0003f4",
+      "0x592f4": "0xb9006014"
+    }
+  },
+  "imports": [
+    {
+      "PLT": "0x2ee0",
+      "call": "0x3e9c",
+      "input": "exe",
+      "relocation": "00000000000172f8  0000006500000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_get_real_time + 0",
+      "slot": "0x172f8"
+    },
+    {
+      "PLT": "0x2ee0",
+      "call": "0x40e8",
+      "input": "exe",
+      "relocation": "00000000000172f8  0000006500000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_get_real_time + 0",
+      "slot": "0x172f8"
+    },
+    {
+      "PLT": "0x2c80",
+      "call": "0x4110",
+      "input": "exe",
+      "relocation": "00000000000171c8  0000003f00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_timeout_source_new + 0",
+      "slot": "0x171c8"
+    },
+    {
+      "PLT": "0x29e0",
+      "call": "0x4128",
+      "input": "exe",
+      "relocation": "0000000000017078  0000001200000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_source_set_callback + 0",
+      "slot": "0x17078"
+    },
+    {
+      "PLT": "0x2920",
+      "call": "0x412c",
+      "input": "exe",
+      "relocation": "0000000000017018  0000000600000402 R_AARCH64_JUMP_SLOT    0000000000000000 get_main_context + 0",
+      "slot": "0x17018"
+    },
+    {
+      "PLT": "0x2de0",
+      "call": "0x4138",
+      "input": "exe",
+      "relocation": "0000000000017278  0000005500000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_source_attach + 0",
+      "slot": "0x17278"
+    },
+    {
+      "PLT": "0x2d80",
+      "call": "0x4140",
+      "input": "exe",
+      "relocation": "0000000000017248  0000004f00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_source_unref + 0",
+      "slot": "0x17248"
+    },
+    {
+      "PLT": "0x1d0b0",
+      "call": "0x5710c",
+      "input": "glib",
+      "relocation": "0000000000152a68  0000005900000402 R_AARCH64_JUMP_SLOT    0000000000000000 gettimeofday@GLIBC_2.17 + 0",
+      "slot": "0x152a68"
+    }
+  ],
+  "paths": {
+    "exe": "/home/bticino/bin/coso",
+    "glib": "/usr/lib/libglib-2.0.so.0.7200.3"
+  },
+  "provider_scope": {
+    "excluded": "OS/gettimeofday, monotonic clock, source dispatch/attach/readiness implementations remain opaque; no provider execution",
+    "real_time": "gettimeofday request then pairword0*1000000+pairword1; ordinary successful AArch64 timevalABI required",
+    "timeout": "W0 saved32\u2192field96; separate g_get_monotonic_time request; helper flag100==0 branch forms now+1000*unsignedfield96 then tail g_source_set_ready_time"
+  },
+  "source_arithmetic": {
+    "deferred_local_min": "SP120 initial0, replace with smaller deferred field under unsigned comparison",
+    "delta": "SUB64(minimum,newclock), signed interpretation for next operations; no positive/nooverflow guarantee",
+    "due_gate": "unsigned64 field <= freshclock+10",
+    "field_offset": 32,
+    "field_width_bytes": 8,
+    "interval_argument": "low32 passed by candidate g_timeout_source_new W0\u2192field96",
+    "producer_of_nonzero_message_field32": "OPEN; timestamp24 is separate",
+    "quotient_sequence": "SMULH signed64; ASR7; subtract(delta ASR63)",
+    "reciprocal_hex": "0x20c49ba5e353f7cf"
+  },
+  "spans": [
+    {
+      "bytes_hex": "fd7bb5a9fd030091f35301a9f30300aae00709a9000040f9e23b00f941fbff97a0000035",
+      "end_VA_exclusive": "0x3e14",
+      "input": "exe",
+      "name": "provided-owner-and-list",
+      "sha256": "7a0ae94cbda17d1feb2d5bc6071d2fdeeabc7801bef59db7612410cf8e4f0d78",
+      "start_VA": "0x3df0"
+    },
+    {
+      "bytes_hex": "1b0000d060c33a91ff3f00f9e04700f9f68347a901088052840240f9e24740f9e30316aa00002591",
+      "end_VA_exclusive": "0x3e90",
+      "input": "exe",
+      "name": "local-min-initialization",
+      "sha256": "30215c5f2055cfe510b51ad253e542375126b377609b5d25b1632d6c58824dd2",
+      "start_VA": "0x3e68"
+    },
+    {
+      "bytes_hex": "9c0240f9931340f911fcff97002800917f0200eb69020054801340f9960000b4e13f40f93f0000eb49000054e03f00f9940640f994fdffb5e03f40f9001000b500008052f35341a9f55b42a9f76343a9f96b44a9fb7345a9fd7bcba8c0035fd6",
+      "end_VA_exclusive": "0x3ef4",
+      "input": "exe",
+      "name": "unsigned-due-min-and-branch",
+      "sha256": "188ab769d433cdbd943831017d2263da786263b33349100447dc6669cea3ab9b",
+      "start_VA": "0x3e94"
+    },
+    {
+      "bytes_hex": "7efbff97e13f40f9380000cbe0f99ed2606abcf2a074d3f28018e4f2007f409b00fc479300fc98cbdcfaff97810000d0030080d2e23b40f9f30300aa21c447f92efaff97fdf9ff97e10300aae00313aa2afbff97e00313aa10fbff9700008052f35341a9f55b42a9f76343a9f96b44a9fb7345a9fd7bcba8c0035fd6",
+      "end_VA_exclusive": "0x4164",
+      "input": "exe",
+      "name": "signed-delta-source-requests-return",
+      "sha256": "1a437d1ccc0ff91d87b414c5ec7a5dd24a5b77299ca595192f7f678a9a5cdbe2",
+      "start_VA": "0x40e8"
+    },
+    {
+      "bytes_hex": "e20300aa010080d2002002911dffff17",
+      "end_VA_exclusive": "0x4180",
+      "input": "exe",
+      "name": "same-data-callback-reentry",
+      "sha256": "7031734a0fbf31ff87ee3635bd86ba6804fee33ff9310cee5d8398a6a59ef18b",
+      "start_VA": "0x4170"
+    },
+    {
+      "bytes_hex": "3f2303d5ffc300d1c20700f0010080d2e0230091fd7b02a9fd83009142c447f9430040f9e30f00f9030080d2e917ff97e08b40a9c10700f0034888d2e301a0f221c447f90008039be30f40f9220040f9630002eb020080d2a1000054fd7b42a9ffc30091bf2303d5c0035fd63518ff97",
+      "end_VA_exclusive": "0x57150",
+      "input": "glib",
+      "name": "candidate-realtime-provider",
+      "sha256": "dbcbd712cb3c7ae5f5ab302acede49d39f3913f62fb7a1df9d5df6bf790f9a41",
+      "start_VA": "0x570e0"
+    },
+    {
+      "bytes_hex": "3f2303d5fd7bbea9c20700b0fd030091f35301a9f403002a010d8052406c47f98ceeff97146000b9f30300aab5f7ff97e10300aae00313aacef1ff97e00313aaf35341a9fd7bc2a8bf2303d5c0035fd6",
+      "end_VA_exclusive": "0x59320",
+      "input": "glib",
+      "name": "candidate-interval-field-request",
+      "sha256": "f616a390d0a8183ac69ddb5bad99ec047370349208ba570fb4cb68ecaaa74be1",
+      "start_VA": "0x592d0"
+    },
+    {
+      "bytes_hex": "3f2303d5fd7bbda9fd030091f35301a9f30300aaf40301aa006440b960040034",
+      "end_VA_exclusive": "0x55a60",
+      "input": "glib",
+      "name": "candidate-ready-helper-flag-gate",
+      "sha256": "b3fbbc80be7b50ed15f83760afc6850796af17b45d72a90a4bfe33fa8071a107",
+      "start_VA": "0x55a40"
+    },
+    {
+      "bytes_hex": "626240b9007d80524104a09be00313aaf35341a9fd7bc3a8bf2303d58bffff17",
+      "end_VA_exclusive": "0x55b08",
+      "input": "glib",
+      "name": "candidate-ready-helper-factor1000",
+      "sha256": "3fb1f2ea2cb956e4944cea945b3094b5aaeb080074fb27e3895def385aeb332f",
+      "start_VA": "0x55ae8"
+    }
+  ]
+}

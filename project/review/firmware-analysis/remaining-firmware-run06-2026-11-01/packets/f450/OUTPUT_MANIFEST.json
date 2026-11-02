@@ -1,0 +1,30 @@
+{
+  "collector_sha256": "c24f85db1a0cf860c2251e6767f818c8a6f2787ecb5f220966c7a0e6ce131b09",
+  "files": {
+    "INPUTS.json": {
+      "bytes": 635,
+      "sha256": "9d332ebf5d7d5951d16b8a275989d493bf0de3b9963cb8cb2fbe02565e727c0f"
+    },
+    "REPORT.md": {
+      "bytes": 5214,
+      "sha256": "5361f580155de4d0f169c27af4d79ef5c95f6472d1ae991ae3ac84f80dbe81dc"
+    },
+    "RESOURCE_FLOW.json": {
+      "bytes": 1302,
+      "sha256": "2ad11498f21632f26ed401919c08708001e1cb23cce49eb4f70ef82ff54a33e2"
+    },
+    "SOURCE.json": {
+      "bytes": 3639,
+      "sha256": "8f6c2fe8241a01a02e0023831911a9145a986f3b06ca01108ac1f81b98fbc3df"
+    },
+    "SPANS.json": {
+      "bytes": 1933,
+      "sha256": "38e767c3ae7d8f70b103cb34f15e351e56f8f98ac7a73ebd30838e766562df35"
+    },
+    "TOOL_BOUNDARY.json": {
+      "bytes": 1318,
+      "sha256": "70b86f65076f5c535c034685c6dc36dc3d429e4fc098306da5dd5982a06ecba0"
+    }
+  },
+  "scope": "Generated members excluding this manifest"
+}

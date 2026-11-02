@@ -1,0 +1,43 @@
+{
+  "checks": [
+    {
+      "path": "scene-stop/collect_scene_stop_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "2ca8e3",
+          "wall_time_seconds": 0.031142616,
+          "exit_code": 0,
+          "original_token_count": 33,
+          "output": "{\"check\": true, \"outputs\": 14, \"spans\": 6, \"calls\": 3, \"byte_guards\": 18, \"poll_literals\": 1, \"inputs\": 5, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "path": "stop-domain/collect_stop_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "d3605e",
+          "wall_time_seconds": 1.933604254,
+          "exit_code": 0,
+          "original_token_count": 14,
+          "output": "{\"check\": true, \"outputs\": 12, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "path": "action-lifecycle/collect_duration_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "d6b397",
+          "wall_time_seconds": 0.322840891,
+          "exit_code": 0,
+          "original_token_count": 45,
+          "output": "{\"check\": true, \"outputs\": 16, \"spans\": 7, \"calls\": 6, \"byte_guards\": 13, \"PIC_code_targets\": 4, \"relocations\": 4, \"locator_candidates\": 13, \"inputs\": 4, \"original_execution\": 0}\n"
+        }
+      }
+    }
+  ]
+}

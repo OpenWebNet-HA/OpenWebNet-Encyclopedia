@@ -1,0 +1,57 @@
+# Final documentary integration review
+
+PASS for the current bounded source integration. No prose/source correction requested. This is a documentary comparison against the five source reports and their independent reviews. I previously source-reviewed F454 AV, MH202 generator and supplemental database binding, so those comparisons are source-aware; board/kernel attribution and generated lifecycle are independent documentary comparisons against their separately source-reviewed reports. This review is not a fresh all-source semantic audit, vendor compiler run, native replay, hardware test or final mechanical validation.
+
+## Current reviewed documents
+
+Paths below are relative to `OpenWebNet-Encyclopedia/`.
+
+| Document | SHA256 |
+| --- | --- |
+| reverse-engineering/firmware-analysis/f454-2.0.51-product-paths.md | 84316d465c6135bad1dd75669313b83d708de23ecc68ae9c467f1c01e3e44d8a |
+| reverse-engineering/firmware-analysis/mh202-1.0.24-scenario-resources.md | 84ea1599c1f6dd494f679d6faf8ed3df4b8a2894a5110703f8b7e6f5cfca073f |
+| reverse-engineering/firmware-analysis/mh202-1.0.24-record-and-script-lifecycle.md | 4ac3074e73d4f2dd62d6c641725f4a1a9160c0c4c1ec1da654d85713124cc29c |
+| reverse-engineering/firmware-analysis/README.md | d7a71f3fdd842353cb2b46cfa87006b9bcefd659b314c349a9290e645f632b31 |
+| scenario-engine/scenario-suite-database.md | da0c2e3892823211d8384a6f71b7889f4c39198920f966248fa08c4c19061233 |
+| scenario-engine/README.md | c122e78ccc7b5abd7873fe38feb04ae15b199a7c4bea8fa40236c5feb39f25e6 |
+| scenario-engine/open-questions.md | 2a60ee5bebaed07696a94cd601092f5caba82e7a46e331707c1efa21be5fb7a7 |
+| scenario-engine/sources-and-identifiers.md | 888c136f1a550e6de53fcab1e98057782f967a4a79555e5bb96554cb0cb8718f |
+| functional/who-17-scenario-management/README.md | bf2f1470c2547bdec0c406dcd9dfcd1b35f4f23a9194ae3ef3adb7362a127397 |
+| reverse-engineering/firmware-analysis/f454-2.0.51-av-and-board.md | 06f26f11b101ffdd54f0987178a149361e36b04ec0870fcddce18e2d6e1f667f |
+| reverse-engineering/firmware-analysis/mh202-1.0.24-generated-scenarios.md | 9abcb0bb59764d90bf9a9737ee2f9b595c77e23a2122b8e78748228acd55b991 |
+| scenario-engine/scenario-suite-generator.md | 2d13975a4167754c4b6c411b1febd671cbd95df62659bafe3e98d666f358314b |
+| project/review/firmware-analysis/next-investigations-2026-10-31/README.md | 6f605dcab07d74c37fa4342d81668f1c3129e9c58d11aef93215f500c0ecc33b |
+
+## Provenance and preservation
+
+The capsule's `provenance.json` SHA256 is `1e9738bcc1352bf5077b06aa815aecb8d63164d6001adbca4a590e4c107500fc`. I verified all16 declared source/export pairs as exact bytes, sizes and SHA256 values, plus all five declared collector hashes. This pins the final source reports and reviews, including database REPORT.v3, final binding review.v2, retained preliminary/v2 reports, development/header history, lifecycle pre-generation disclosure and board-review location correction. The original vendor database, assemblies, firmware and kernel are not included as published binary exports.
+
+The five source tracks are not independent additive execution or compiler coverage. Six query/materializer methods and GetOpenParameterObject overlap the generator/binding work. All current tracks remain static: new original ARM/CLR execution, target processes, service/device/network activity and native corpora are0. Existing historical corpora are not replayed or recounted by this review.
+
+Snapshot/control identities:
+
+| Local artifact under current research root | SHA256 |
+| --- | --- |
+| pre-edit-documents/SOURCE_SNAPSHOTS.json | 246f8a12c3cfbc6ff652fef9e6c684206eb501801a2cde3169ca1c663a3298a5 |
+| initial-reference-candidates/SOURCE_SNAPSHOTS.json | 390539dbe15f9ea5b90e7cf776728f6a4d9e5f9e4b0f456ed9cd767baa401735 |
+| REFERENCE_PATH_REFINEMENT.json | 74ccb07347fce48aaa9b64b62b88f3e087ffc4b47f16e5c0921d3045ebd3e5b2 |
+| INTEGRATION_EDITS.json | bc3a04bf7637f7425ec3fda95d979f8086338ad613aa30aa5be64a7da9d82778 |
+| PREFLIGHT_CHECKS.json | 7b0908594358ab690ce46a99a77bbc571c4735611ce200dab9d678ca3be65f48 |
+
+All nine actual pre-edit copies and12 first-reference copies match their recorded hashes/sizes. The current generated-consumer page's vendor-relative path wording is separately disclosed from its first candidate; the original first bytes remain retained. The old source reports are not rewritten to retroactively remove provisional Counter range joins. Header precision is corrected through retained report versions: only the selected Class constructor has a one-byte tiny header; its getter is a12-byte fat-header method. The earlier raw-branch message inversion remains a disclosed transcription, not an authenticated missing message snapshot. Unavailable lifecycle staged bytes and older overnight run18/run21 histories are not certified.
+
+## Essential claim checks
+
+* F454 status schema belongs to bt_answering_machine's same private+0xac/+0x238/+0x244 object. The frontend index4 relation remains conditional on delivery of that response, with actual private guards and opaque publication/exchange boundaries retained. The WHO1013 route gate+0x1cc, distinct bt_vct global, configured role, permission/discovery/factory flags and physical camera readiness are not equated. Selected state writers do not close the role1 initial-1 to2 transition.
+* Board attribution correctly separates packaged major4/minor66 and tty line2 from SoC UART numbering. Two DM365 platform records and the separate BASI address0x04000000/IRQ65 record, registration requests and port-slot criteria support a conditional line allocation. Platform ID1 is not a tty index, and literal UART1 pinmux labels do not establish PCB/connector wiring. The source-specific software lane and documented SCS AI terminal remain separate from the unresolved electrical association and actual runtime probe/slot state.
+* MH202 generator pages describe actual selected SQL/materialization/command/line-list/file/XML source calls. Managerreturn0/local-3 versus normalreturn1/missing-table fallback is correct. Default ordered fields and selected Counter/Boolean templates stay distinct; UI permission precedence and alarm action availability are not inferred from compile flags. EXTRACTVALUE declaration-to-template use does not resolve reply indexing or actual evaluation. Nested ID.spt/ID.spt output and info.xml writer ownership do not imply observed export/installation or firmware compatibility.
+* Current Counter wording explicitly supersedes the candidate ANA_RANGE equality join as a consumer relation: GraphicType3 dispatches to ANA_TEXT2/3, both `[0-32000]`. The ordinary new object's constructor supplies multiplier1 and the selected text path does not import temperature multiplier10. Unchanged-property/provider and saved-project premises remain explicit; neither UI enforcement nor automatic WHO17-slot/interpreter-variable propagation is claimed. Historical range rows remain exact database facts without defining Counter temperature/time units.
+* The generated lifecycle page preserves separate source stages and tags, `$NOMESCRIPT` basename/prefix consumers, BEGIN/OnlyIf/action ordering, false-target placeholder provenance and repeat-GOTO/END handling. The ordinary SLEEP amount/unit source join is limited to selected bounded decimal/delimiter/provider premises; multiplier chooses s/m/h before the helper's unit conversion. No full native expression acceptance, actual false-condition action suppression, elapsed timing, SLEEPRANDOM closure or universal Stop/panic/restart policy follows. MH202 alarm reactions remain distinct from arming/disarming and F454 alarm-port ownership.
+
+The nine existing-document changes accurately update the former missing-producer/consumer questions and add navigation. They retain historical source context, pending wider Device gates, genuine configured export, deployment/runtime/provider/physical boundaries and missing separately configured extra assets. Product/catalogue/database/firmware identities remain distinct. There is no new public grammar/domain claim from local source selectors or loader1..300.
+
+## Links and validation boundary
+
+Independently checked inline local links across all13 current documents:171 existing targets resolve and31 supplied fragments match headings/anchors. Exactly two expected future targets remain, both in the capsule README: `validation.json` and `integration-review.txt`. They were intentionally pending at review time; this review does not certify either as saved or final validation as passed. Parent final identity/protected-file/branch and strict ESG/ECV/diff checks remain separate. I read the retained initial preflight, including its disclosed ECV vendor-path rejection; I did not replace it with an invented historical pass.
+
+Only this new review was written. No author evidence, source, repository document, earlier dossier, snapshot or candidate was edited. New source work, firmware execution, deployment and physical tests were not performed for this documentary review.

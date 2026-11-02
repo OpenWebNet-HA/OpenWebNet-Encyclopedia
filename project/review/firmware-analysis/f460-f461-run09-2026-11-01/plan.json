@@ -1,0 +1,17 @@
+{
+  "started_UTC": "2026-11-01T14:03:17.301206+00:00",
+  "scope": [
+    "F460 one new actual condition/predicate/action gate source path",
+    "F461 one auxiliary-core/platform/profile selection source path beyond declarations"
+  ],
+  "source_authors": {
+    "F460": "firmware_protocol",
+    "F461": "firmware_boot"
+  },
+  "source_review": "Independent cross-source peers",
+  "documentary_reviewer": "firmware_functional, read-only only",
+  "constraints": "Static host reads only. Original/old/first candidates immutable, parent snapshots before correction and exclusive versions. No closed transport/auth/receiving or uncertain F461 consumer proxy. Source reasoning not runtime/physical result.",
+  "new_execution": 0,
+  "deadline_UTC": "2026-11-01T19:00:00Z",
+  "final_only_UTC": "2026-11-01T18:15:00Z"
+}

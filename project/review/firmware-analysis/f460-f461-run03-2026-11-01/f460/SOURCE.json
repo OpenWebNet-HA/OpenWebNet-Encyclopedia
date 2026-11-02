@@ -1,0 +1,387 @@
+{
+  "candidate_libc_definitions": [
+    "803: 00000000000b97c0    72 FUNC    WEAK   DEFAULT   14 nanosleep@@GLIBC_2.17",
+    "2639: 000000000002b700    24 FUNC    GLOBAL DEFAULT   14 __errno_location@@GLIBC_2.17",
+    "644: 00000000000b47a0   192 FUNC    GLOBAL DEFAULT   14 clock_nanosleep@@GLIBC_2.17"
+  ],
+  "compiled_primary": {
+    "relocation": "000000000021cc50  0000000000000403 R_AARCH64_RELATIVE                        1301e0",
+    "slot": "0x21cc50",
+    "target": "0x1301e0"
+  },
+  "errno_TLS": {
+    "joins": [
+      {
+        "ADRP": "0xb97f0",
+        "LDR": "0xb97f4",
+        "slot": "0x19ade0"
+      },
+      {
+        "ADRP": "0x2b704",
+        "LDR": "0x2b708",
+        "slot": "0x19ade0"
+      }
+    ],
+    "original_relocation": "000000000019ade0  0000000000000406 R_AARCH64_TLS_TPREL64                     10"
+  },
+  "guards": [
+    {
+      "VA": "0x112630",
+      "object": "scheduler",
+      "word": "0xb9400021"
+    },
+    {
+      "VA": "0x112634",
+      "object": "scheduler",
+      "word": "0xb9000001"
+    },
+    {
+      "VA": "0x11265c",
+      "object": "scheduler",
+      "word": "0xb9400013"
+    },
+    {
+      "VA": "0x112664",
+      "object": "scheduler",
+      "word": "0xaa0003f4"
+    },
+    {
+      "VA": "0x112880",
+      "object": "scheduler",
+      "word": "0xb9400280"
+    },
+    {
+      "VA": "0x112884",
+      "object": "scheduler",
+      "word": "0xb40001a0"
+    },
+    {
+      "VA": "0x11288c",
+      "object": "scheduler",
+      "word": "0xa900ffe0"
+    },
+    {
+      "VA": "0x11289c",
+      "object": "scheduler",
+      "word": "0x7100101f"
+    },
+    {
+      "VA": "0x1128a4",
+      "object": "scheduler",
+      "word": "0xaa1303e1"
+    },
+    {
+      "VA": "0x1128a8",
+      "object": "scheduler",
+      "word": "0xaa1303e0"
+    },
+    {
+      "VA": "0x1128b0",
+      "object": "scheduler",
+      "word": "0x3100041f"
+    },
+    {
+      "VA": "0x1128e8",
+      "object": "scheduler",
+      "word": "0xd65f03c0"
+    },
+    {
+      "VA": "0x130410",
+      "object": "scheduler",
+      "word": "0xf9400823"
+    },
+    {
+      "VA": "0x13043c",
+      "object": "scheduler",
+      "word": "0x52800042"
+    },
+    {
+      "VA": "0x130440",
+      "object": "scheduler",
+      "word": "0xd63f0060"
+    },
+    {
+      "VA": "0x130450",
+      "object": "scheduler",
+      "word": "0x3c828261"
+    },
+    {
+      "VA": "0x130464",
+      "object": "scheduler",
+      "word": "0xa9018660"
+    },
+    {
+      "VA": "0x130200",
+      "object": "scheduler",
+      "word": "0xb9400c00"
+    },
+    {
+      "VA": "0x130210",
+      "object": "scheduler",
+      "word": "0x3900227f"
+    },
+    {
+      "VA": "0x130218",
+      "object": "scheduler",
+      "word": "0xf9401661"
+    },
+    {
+      "VA": "0x13021c",
+      "object": "scheduler",
+      "word": "0x91006260"
+    },
+    {
+      "VA": "0x130224",
+      "object": "scheduler",
+      "word": "0xf9400c01"
+    },
+    {
+      "VA": "0x130228",
+      "object": "scheduler",
+      "word": "0xd63f0020"
+    },
+    {
+      "VA": "0x13022c",
+      "object": "scheduler",
+      "word": "0xb9401260"
+    },
+    {
+      "VA": "0x130238",
+      "object": "scheduler",
+      "word": "0x39002260"
+    },
+    {
+      "VA": "0x130258",
+      "object": "scheduler",
+      "word": "0x52800020"
+    },
+    {
+      "VA": "0x1303a4",
+      "object": "scheduler",
+      "word": "0x39402000"
+    },
+    {
+      "VA": "0x1303b4",
+      "object": "scheduler",
+      "word": "0x39002001"
+    },
+    {
+      "VA": "0xb97c8",
+      "object": "libc",
+      "word": "0xaa0003e2"
+    },
+    {
+      "VA": "0xb97d0",
+      "object": "libc",
+      "word": "0xaa0103e3"
+    },
+    {
+      "VA": "0xb97d4",
+      "object": "libc",
+      "word": "0x52800000"
+    },
+    {
+      "VA": "0xb97d8",
+      "object": "libc",
+      "word": "0x52800001"
+    },
+    {
+      "VA": "0xb97fc",
+      "object": "libc",
+      "word": "0xb8216840"
+    },
+    {
+      "VA": "0xb9800",
+      "object": "libc",
+      "word": "0x12800000"
+    },
+    {
+      "VA": "0x2b710",
+      "object": "libc",
+      "word": "0x8b000020"
+    }
+  ],
+  "images": {
+    "libc": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          1604755,
+          1604755,
+          65536
+        ],
+        [
+          1,
+          6,
+          1608096,
+          1673632,
+          1673632,
+          18720,
+          70184,
+          65536
+        ]
+      ],
+      "path": "/lib/libc.so.6",
+      "sha256": "e918bb2e904dae5cec4a203741a4379bad4ed05199b69dacd87d7a7a83d01e09"
+    },
+    "scheduler": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          2106758,
+          2106758,
+          65536
+        ],
+        [
+          1,
+          6,
+          2107680,
+          2173216,
+          2173216,
+          51288,
+          58200,
+          65536
+        ]
+      ],
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62"
+    }
+  },
+  "local_branch_targets": [
+    {
+      "VA": "0x112884",
+      "bytes": "a00100b4",
+      "target": "0x1128b8"
+    },
+    {
+      "VA": "0x1128a0",
+      "bytes": "c1000054",
+      "target": "0x1128b8"
+    },
+    {
+      "VA": "0x1128b4",
+      "bytes": "00ffff54",
+      "target": "0x112894"
+    },
+    {
+      "VA": "0x130214",
+      "bytes": "e0020035",
+      "target": "0x130270"
+    },
+    {
+      "VA": "0x130230",
+      "bytes": "00060035",
+      "target": "0x1302f0"
+    }
+  ],
+  "scheduler_import_calls": [
+    {
+      "PLT": "0x24140",
+      "PLT_bytes": "d00f00d0118a43f910421c9120021fd6",
+      "call": "0x1128ac",
+      "call_bytes": "2546fc97",
+      "relocation": "000000000021e710  0000008200000402 R_AARCH64_JUMP_SLOT    0000000000000000 nanosleep@GLIBC_2.17 + 0",
+      "slot": "0x21e710"
+    },
+    {
+      "PLT": "0x245a0",
+      "PLT_bytes": "d00f00d011a244f91002259120021fd6",
+      "call": "0x112894",
+      "call_bytes": "4347fc97",
+      "relocation": "000000000021e940  000000d600000402 R_AARCH64_JUMP_SLOT    0000000000000000 __errno_location@GLIBC_2.17 + 0",
+      "slot": "0x21e940"
+    }
+  ],
+  "source_boundaries": [
+    "opaque formatting/diagnostic helpers",
+    "nonnull-delay andduration workers",
+    "clock_nanosleep/OS delegate body",
+    "receiving/transport/MQTT/libjel/auth/session/framing",
+    "actual binding/TLS/error/elapsed/runtime state"
+  ],
+  "spans": [
+    {
+      "end_VA_exclusive": "0x11263c",
+      "name": "manager",
+      "object": "scheduler",
+      "sha256": "d27ec0f012c117690544c8f00e7480e9838ff15b54a374abdcb19d55e179fb2b",
+      "start_VA": "0x1125f0"
+    },
+    {
+      "end_VA_exclusive": "0x112680",
+      "name": "invoker-prefix",
+      "object": "scheduler",
+      "sha256": "0fde4cf3c23b52e3159ac4de6b80efe8ae087aef66417a298267e6abdcc1a0ea",
+      "start_VA": "0x112640"
+    },
+    {
+      "end_VA_exclusive": "0x112880",
+      "name": "prewait-boundary",
+      "object": "scheduler",
+      "sha256": "1b260746f9f512bcf22372575f8bfe50375820c58dee22a3708c8258f6a7ee3c",
+      "start_VA": "0x112828"
+    },
+    {
+      "end_VA_exclusive": "0x1128ec",
+      "name": "timing-loop-and-return",
+      "object": "scheduler",
+      "sha256": "fc25388ffdbe04ba4b50bdc4b558c4f3686f23930acfc660f81395747241c9a2",
+      "start_VA": "0x112880"
+    },
+    {
+      "end_VA_exclusive": "0x1304b8",
+      "name": "callable-storage",
+      "object": "scheduler",
+      "sha256": "5b592ad20348502d70990656f76244af14302a931bfc583a2cc2e60db917c2b1",
+      "start_VA": "0x1303f0"
+    },
+    {
+      "end_VA_exclusive": "0x130270",
+      "name": "common-inline-marker",
+      "object": "scheduler",
+      "sha256": "cb4da75b4d81c668c9b0c44dfdbdeb3fa19218d3b68272fcd6875d9c444060b6",
+      "start_VA": "0x1301e0"
+    },
+    {
+      "end_VA_exclusive": "0x1303bc",
+      "name": "marker-accessors",
+      "object": "scheduler",
+      "sha256": "36dd46ac97b8bc9cd5fb9c5757b2652a72bd9a9d01ee0d98488f134986fe8e73",
+      "start_VA": "0x1303a0"
+    },
+    {
+      "end_VA_exclusive": "0x112b68",
+      "name": "inherited-constructor-binding",
+      "object": "scheduler",
+      "sha256": "78c3f7f673d778a1e59cc228803d30168bf81f8e3382918ba41a99f2db4556ec",
+      "start_VA": "0x112b34"
+    },
+    {
+      "end_VA_exclusive": "0xb9808",
+      "name": "nanosleep-wrapper",
+      "object": "libc",
+      "sha256": "16e0be0915af536a0d21a5d2d0702cb295066db12e42f9061cb53db9f8aa6282",
+      "start_VA": "0xb97c0"
+    },
+    {
+      "end_VA_exclusive": "0x2b718",
+      "name": "errno-location",
+      "object": "libc",
+      "sha256": "c6d5efed8d95db3a38a9f07dea25b51f47df053d108ba98126ba7e87de32af00",
+      "start_VA": "0x2b700"
+    }
+  ],
+  "wrapper_local_delegate": {
+    "BL": "0xb97dc",
+    "body_not_followed": true,
+    "target": "0xb47a0"
+  }
+}

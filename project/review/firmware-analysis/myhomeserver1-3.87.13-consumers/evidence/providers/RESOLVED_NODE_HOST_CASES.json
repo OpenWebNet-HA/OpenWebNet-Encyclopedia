@@ -1,0 +1,122 @@
+[
+  {
+    "boundary": "synthetic resolved-node predicate composition only; no parser, lookup, provider, original helper, target or physical execution",
+    "fixture": {
+      "message_nonNULL": false,
+      "selected_error_node_nonNULL": false,
+      "selected_result_node_nonNULL": false,
+      "selected_result_node_word0": null,
+      "selected_result_node_word16": null,
+      "selected_result_node_word8": null
+    },
+    "is_json_ack_return": 0,
+    "is_json_error_return": 0,
+    "is_json_response_return": 0,
+    "label": "null-message"
+  },
+  {
+    "boundary": "synthetic resolved-node predicate composition only; no parser, lookup, provider, original helper, target or physical execution",
+    "fixture": {
+      "message_nonNULL": true,
+      "selected_error_node_nonNULL": false,
+      "selected_result_node_nonNULL": false,
+      "selected_result_node_word0": null,
+      "selected_result_node_word16": null,
+      "selected_result_node_word8": null
+    },
+    "is_json_ack_return": 0,
+    "is_json_error_return": 0,
+    "is_json_response_return": 0,
+    "label": "no-selected-result"
+  },
+  {
+    "boundary": "synthetic resolved-node predicate composition only; no parser, lookup, provider, original helper, target or physical execution",
+    "fixture": {
+      "message_nonNULL": true,
+      "selected_error_node_nonNULL": false,
+      "selected_result_node_nonNULL": true,
+      "selected_result_node_word0": 0,
+      "selected_result_node_word16": 0,
+      "selected_result_node_word8": 4
+    },
+    "is_json_ack_return": 0,
+    "is_json_error_return": 0,
+    "is_json_response_return": 1,
+    "label": "selected-container-result"
+  },
+  {
+    "boundary": "synthetic resolved-node predicate composition only; no parser, lookup, provider, original helper, target or physical execution",
+    "fixture": {
+      "message_nonNULL": true,
+      "selected_error_node_nonNULL": false,
+      "selected_result_node_nonNULL": true,
+      "selected_result_node_word0": 2,
+      "selected_result_node_word16": 1,
+      "selected_result_node_word8": 20
+    },
+    "is_json_ack_return": 1,
+    "is_json_error_return": 0,
+    "is_json_response_return": 0,
+    "label": "selected-true-bool-result"
+  },
+  {
+    "boundary": "synthetic resolved-node predicate composition only; no parser, lookup, provider, original helper, target or physical execution",
+    "fixture": {
+      "message_nonNULL": true,
+      "selected_error_node_nonNULL": false,
+      "selected_result_node_nonNULL": true,
+      "selected_result_node_word0": 2,
+      "selected_result_node_word16": 0,
+      "selected_result_node_word8": 20
+    },
+    "is_json_ack_return": 0,
+    "is_json_error_return": 0,
+    "is_json_response_return": 0,
+    "label": "selected-false-bool-result"
+  },
+  {
+    "boundary": "synthetic resolved-node predicate composition only; no parser, lookup, provider, original helper, target or physical execution",
+    "fixture": {
+      "message_nonNULL": true,
+      "selected_error_node_nonNULL": false,
+      "selected_result_node_nonNULL": true,
+      "selected_result_node_word0": 2,
+      "selected_result_node_word16": 7,
+      "selected_result_node_word8": 20
+    },
+    "is_json_ack_return": 7,
+    "is_json_error_return": 0,
+    "is_json_response_return": 0,
+    "label": "selected-noncanonical-bool-word"
+  },
+  {
+    "boundary": "synthetic resolved-node predicate composition only; no parser, lookup, provider, original helper, target or physical execution",
+    "fixture": {
+      "message_nonNULL": true,
+      "selected_error_node_nonNULL": false,
+      "selected_result_node_nonNULL": true,
+      "selected_result_node_word0": 2,
+      "selected_result_node_word16": 1,
+      "selected_result_node_word8": 40
+    },
+    "is_json_ack_return": 0,
+    "is_json_error_return": 0,
+    "is_json_response_return": 0,
+    "label": "selected-wrong-value-tag"
+  },
+  {
+    "boundary": "synthetic resolved-node predicate composition only; no parser, lookup, provider, original helper, target or physical execution",
+    "fixture": {
+      "message_nonNULL": true,
+      "selected_error_node_nonNULL": true,
+      "selected_result_node_nonNULL": false,
+      "selected_result_node_word0": null,
+      "selected_result_node_word16": null,
+      "selected_result_node_word8": null
+    },
+    "is_json_ack_return": 0,
+    "is_json_error_return": 1,
+    "is_json_response_return": 0,
+    "label": "selected-error-present"
+  }
+]

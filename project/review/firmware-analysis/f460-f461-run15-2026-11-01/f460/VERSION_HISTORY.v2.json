@@ -1,0 +1,23 @@
+{
+  "authoritative_report_sha256": "346d77b15b08e3da42e1f5aafe3ed1717d4bf20c13eca1929e1b4c8143469420",
+  "hex_guard_correction": {
+    "actual": "012d8d52e10cad725f00016b",
+    "occurrences": 1,
+    "old": "012d8d52e10cad723f00016b",
+    "role": "Redundant exact three-instruction original-byte comparison; CMPbyte3f\u21925f; all other word/opcode guards retained"
+  },
+  "history_limit": "No failed canonical run, old report/output or contemporaneous terminal file is invented; only available exact staged script is preserved",
+  "new_collector_sha256": "06864c8ee0fdef852243b116a908c0d39e5328903674c239c6a3a97a96f139d4",
+  "old_collector_sha256": "f8b9a8c7488ac2176669593344d8cf59aec159e90a53ead6bedefb26d09537b3",
+  "original_execution": 0,
+  "parent_snapshot": {
+    "path": "work/f460-f461-comparison/2026-11-01-run15/integration/f460-before-v2/INDEX.json",
+    "sha256": "487a04c9f2ec6c560438e9f427d429cf94ae15bf79539e23e13ebe8c5bb59f31"
+  },
+  "scope": "Exact staged-unexecuted v1 script before any report/generated output/canonical attempt; parent preserved before NEWv2",
+  "version_references": {
+    "new": "REPORT.v2.md",
+    "occurrences": 3,
+    "old": "REPORT.md"
+  }
+}

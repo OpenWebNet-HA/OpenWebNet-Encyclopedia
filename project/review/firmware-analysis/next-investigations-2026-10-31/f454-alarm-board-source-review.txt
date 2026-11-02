@@ -1,0 +1,60 @@
+# F454 alarm board/serial source review
+
+PASS for the conditional source attribution. No required correction found. This independent review adds no native execution, vendor process, actual target syscall, hardware observation, live gateway/bus operation or source edit. The reviewer replayed host static collection and independently inspected original kernel bytes, records, symbols and relevant predecessor/register context.
+
+## Checks performed
+
+Read-only `collect_board_v1.py --check` passed: 22 outputs, 10 instruction spans, 27 critical words, 6 original call edges, 9 input pins, 3 original packaged character-node records, 3 platform serial records, 20 selected symbol identities, 28211 decoded kernel names, 111 name markers and256 token offsets. The finite host ledger is conditional ordinal/minor arithmetic, not a boot or serial-driver execution.
+
+Independently reread original extracted uImage and recomputed U-Boot header CRC and declared payload CRC. Independently decompressed the embedded gzip at original file offset0x3172; kernel SHA256 is `7eca710bc8ebe4b9787cfedc6b0773e83170075ce4ba7e17d140639448153f84`. Separately rehashed all10 raw kernel source spans and verified all27 saved instruction words directly against the fresh decompressed bytes. Host collector replay also checked embedded IKCONFIG against the previous saved config and issued only original-image debugfs stat requests, without -w or mounting the image.
+
+Independently reconstructed compressed symbol names using original address/name/token-index bytes, checked28211 addresses and all111 recorded name boundaries, and matched every20 selected name/type/VA/compressed-offset identity. The source name table and addresses, rather than disassembler nearest-symbol guesses, ground the selected function/data attribution. Kernel virtual base0xc0008000 is kept distinct from the uImage physical load/entry0x80008000.
+
+Independently decoded both platform device prefixes, all3 complete48-byte records and their all-zero terminators; verified6 signed ARM BL target calculations, BASI machine name/init pointer, and both16-byte pinmux records/labels. All24 exact first-candidate files match their snapshot index/current bytes. Both retained pre-output report/collector draft hashes match PREFLIGHT_FAILURE.json. No report, collector or source was modified by the reviewer.
+
+## Source findings confirmed
+
+The exact machine descriptor points to basi_init and names `BTicino BASI board`. Both serial platform devices name serial8250, with distinct platform IDs0/1 and distinct platform-data pointers at+80. DM365 has two nonterminating records, address words0x01c20000/0x01d06000 and interrupt words40/41. The separate BASI record has address word0x04000000, interrupt65, clock8000000 and type4. Its address/table/platform ID do not make it DM365 UART2 or directly identify its electrical connector.
+
+The driver/probe source actually consumes the stated record structure: pointer+80,48-byte stride, flags+32 termination and the preserved field copies into the temporary port. The proposed address/interrupt/clock/flag/type offsets are grounded in those original instructions. The report does not substitute an unrelated application structure or assume hardware state from an XML bus_type.
+
+BASI selected code requests mux indices36/37 and then davinci_serial_init with enabled mask7. The latter's selected code iterates two records and requests registration of the DM365 serial device. The later separate platform registration really loads the BASI serial pointer at0xc000f230/0xc000f384; the earlier0xc000efd8 registration uses a distinct LED pointer. This is ordered source-call evidence, not an observed driver-probe ordering guarantee or completed boot.
+
+The two original pinmux labels are UART1_RXD_34 and UART1_TXD_25 with the recorded configuration bytes. They identify literal table entries used by the selected mux operation; suffixes34/25 are not proven package-ball, GPIO, board-header or product-terminal pin numbers.
+
+The packaged serial driver prefix ttyS, major4 and base minor64 agree with original special-node major/minor records ttyS0=4/64, ttyS1=4/65, ttyS2=4/66. This is filesystem/driver-namespace evidence, not proof that a successful runtime open reaches a particular physical transceiver.
+
+## Predecessor/ordinal premises and limits
+
+I inspected the additional original register-port prologue0xc0187254..0xc0187280 before the retained selection span. It saves the input port in r5, tests input clock+24 for nonzero, and sets up the lock/count/port-array pointers before the slot scans. Thus clock/provider/entry success is an explicit additional local prerequisite; the report's BASI record has a nonzero clock, but no hardware or provider outcome is inferred.
+
+The subsequent code first checks matching existing ports, then type/IObase-zero slots, with a further untyped-slot fallback. A platform ID or declaration order is not itself a tty ordinal. The report's finite sufficient premise correctly requires typed DM365 slots0/1, available slot2, no earlier match/other registration/override changing that state, and successful BASI probe/register completion. Under those premises slot2/base minor64 gives minor66. The review confirms that conditional composition; it does not establish those premises actually hold during boot or eliminate other mappings.
+
+The kernel source does not close the net/connector relationship between the BASI address0x04000000/interrupt65 and the documented SCS AI terminal. Driver/table/tty names and ordinal arithmetic are insufficient electrical wiring evidence. The frozen product-terminal description remains an inherited reviewed document synthesis; no fresh schematic or primary-PDF verification was performed here. No global absence of a schematic, other provider or writer is claimed.
+
+## History and boundaries
+
+The retained pre-output failure expected shortened machine name BASI, while the original string is BTicino BASI board. Exact old report/collector drafts and the failure disclosure remain present; current first-candidate bytes contain the precise name. The reviewer verified those preserved byte identities and source literal, but did not rerun the intentionally failed draft or claim a new firmware failure. No generated candidate replacement occurred in this reviewed history.
+
+New original ARM/native/hook counts remain0. Host debugfs stat, decompression, binutils and file hashing are analysis operations, not original target I/O. Actual active kernel/machine selection, registration callbacks, clock success, resource ownership, port probing, electrical topology, connector wiring and natural alarm event origin remain conditional or unresolved. No authentication/session/framing implementation or external delegate was examined.
+
+## Exact reviewed pins
+
+Paths below are relative to `work/f454-firmware/research/2026-10-31-alarm-board/`.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `863f30cc5d72632036b402124ae5ac7afcdb6815148533fecac8cb8a2bfc4c08` |
+| `collect_board_v1.py` | `c361a395660e0c411bb592fa31e372954d6cccca788e1308b51567ba0f86d034` |
+| `output-manifest.json` | `1323298b39b2b06d23c294debebd88dd0f8ff3eb6d776e0042884a6b58c5a8e0` |
+| `kernel-symbol-provenance.json` | `5db2eaa3e38617c2cc021da683da46ce620d6349d71c18958fbdc9d5df827320` |
+| `board-and-driver-data.json` | `81de021499bd635a4bdd62637c79e35d3f5df788361bf850940ba79f43af484e` |
+| `selected-data-bytes.json` | `f329890700e9bcad8ae231454e1049a168a77d2264f182e569ce519f4a1eee08` |
+| `selected-UART1-pinmux.json` | `70be4be8ee30e3ce6f744b797269d3421840b4a37efcdbd7ca4bafed7cdf7d5d` |
+| `original-device-node-metadata.json` | `5d2138691c817e735bc7647f8f3b016621e69244650f74f74f2289af39b5faf1` |
+| `conditional-line-ledger.json` | `9d460e724997829e04d6e931f7de3b51fda8a3f00347bb6ea4d1e3e407bc79ab` |
+| `original-spans.json` | `d246b5fca8b2e4fb9ce2701c161618325ab2c1f639d97937050e61f8894fadde` |
+| `critical-words.json` | `198989f64c8c7db75eb01924be68c489c90e4c1b365cbe6d823b0362b056f820` |
+| `input-hashes.json` | `1548ebc414dabb70d8c569cb24ccab5eedbb7b7844359664539c585fca21b682` |
+| `initial-generated-v1/SNAPSHOT_INDEX.json` | `7f25c9a38cb6f7591390f2c75c1b9d99ba30cbd3fd111abc7300afb3a2d2805d` |
+| `development-before-first-generation/PREFLIGHT_FAILURE.json` | `c32b86e1b136d342a24f5d7788d318df24c8b9e8adf1dde98b0109ad65e63814` |

@@ -1,0 +1,49 @@
+
+/usr/lib/liblghal.so.1.0.0:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000252b0 <hal_board@@Base+0x100>:
+   252b0:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   252b4:	910ea021 	add	x1, x1, #0x3a8
+   252b8:	aa1403e0 	mov	x0, x20
+   252bc:	52800013 	mov	w19, #0x0                   	// #0
+   252c0:	97ff968c 	bl	acf0 <strcasestr@plt>
+   252c4:	b40000c0 	cbz	x0, 252dc <hal_board@@Base+0x12c>
+   252c8:	b90022b3 	str	w19, [x21, #32]
+   252cc:	aa1403e0 	mov	x0, x20
+   252d0:	97ff933c 	bl	9fc0 <free@plt>
+   252d4:	a94563f7 	ldp	x23, x24, [sp, #80]
+   252d8:	17ffffc6 	b	251f0 <hal_board@@Base+0x40>
+   252dc:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   252e0:	910ec021 	add	x1, x1, #0x3b0
+   252e4:	aa1403e0 	mov	x0, x20
+   252e8:	52800033 	mov	w19, #0x1                   	// #1
+   252ec:	97ff9681 	bl	acf0 <strcasestr@plt>
+   252f0:	b5fffec0 	cbnz	x0, 252c8 <hal_board@@Base+0x118>
+   252f4:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   252f8:	910ee021 	add	x1, x1, #0x3b8
+   252fc:	aa1403e0 	mov	x0, x20
+   25300:	52800053 	mov	w19, #0x2                   	// #2
+   25304:	97ff967b 	bl	acf0 <strcasestr@plt>
+   25308:	b5fffe00 	cbnz	x0, 252c8 <hal_board@@Base+0x118>
+   2530c:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   25310:	910f0021 	add	x1, x1, #0x3c0
+   25314:	aa1403e0 	mov	x0, x20
+   25318:	52800073 	mov	w19, #0x3                   	// #3
+   2531c:	97ff9675 	bl	acf0 <strcasestr@plt>
+   25320:	b5fffd40 	cbnz	x0, 252c8 <hal_board@@Base+0x118>
+   25324:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   25328:	910f2021 	add	x1, x1, #0x3c8
+   2532c:	aa1403e0 	mov	x0, x20
+   25330:	52800093 	mov	w19, #0x4                   	// #4
+   25334:	97ff966f 	bl	acf0 <strcasestr@plt>
+   25338:	b5fffc80 	cbnz	x0, 252c8 <hal_board@@Base+0x118>
+   2533c:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   25340:	910f4021 	add	x1, x1, #0x3d0
+   25344:	aa1403e0 	mov	x0, x20
+   25348:	97ff966a 	bl	acf0 <strcasestr@plt>
+   2534c:	b40004a0 	cbz	x0, 253e0 <hal_board@@Base+0x230>
+   25350:	528000b3 	mov	w19, #0x5                   	// #5
+   25354:	17ffffdd 	b	252c8 <hal_board@@Base+0x118>

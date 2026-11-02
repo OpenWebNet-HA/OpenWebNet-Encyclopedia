@@ -1,0 +1,45 @@
+# F461 run10 — typed address context, exact suffix flags and local formatter handoff
+
+This original-source packet completes one local suffix question beyond run06's D1 prefix. On the selected typed-object path it traces parsed-field strings into a hexadecimal context, exact conditional-compare flags into the final suffix character, and the same address GString into a local formatter request. It supplies no raw command, example fixture, accepted grammar, public WHO, physical address meaning, identifier, acknowledgment or delivery result. All new original/native/provider/target execution, semantic models, fixtures, SQL and target I/O are **0**.
+
+Original `/home/bticino/libcoso/libplug_automation_tr.so` SHA256 is `d7d361798ccec65843bd41c9ad7b8897645a334b0cd08121d372949f78eac277`. It is freshly mapped ELF64 AArch64 through the verified F461 ImageVFS. SOURCE.json retains textual and exact-hex spans, fixed instruction guards, original literal joins and actual BL→PLT→JUMP_SLOT names; no nearest disassembler label substitutes for a provider identity. Curated Device0208 supplies the third-party-integration role only. Prior run03 establishes the selected callback/axis composition, and run06 establishes the length-classification/D1 prefix under its own explicit premises; their exact report/source identities are pinned, not replayed as new coverage.
+
+## Fresh supplied-object and context path
+
+The callback's selected forward axes are the existing local `(2,1)` source route. At `0x3b8c..0x3ba8`, message word+56 is compared with3; that selected branch loads message pointer+0 and saves it at SP152, then reads that provided object's word+104. These are representation/parsed-kind namespaces, not public protocol categories. The complete intervening kind/body predecessors are not re-audited here: reaching the local block at0x4024 with valid same objects, allocation/string/provider results and ordinary ABI preservation remains a premise.
+
+Fresh local accesses at `0x4024..0x402c` recover the saved object: pointer+32 becomes X27, and pointers+48/+56 become X23/X20. A new local GString is retained in X24. The selected comparison at `0x405c` requires pointer+48's supplied string to compare equal to exact literal **`4`**, then the low private/config word loaded at `0x400c`/savedSP104 must differ from4 at `0x4068/0x406c`. These conditions differ from the earlier run05 command path with a NULL pointer+48; no contradictory cases are composed.
+
+On this path, pointer+56 supplies `g_ascii_strtoll(pointer,NULL,10)` at `0x407c`. `MOV W1,W0` at `0x4084` passes the low32 bits of that signed64-bit conversion result into `g_strdup_printf` with exact **`%X`** (VA0x6608). Thus the local context string X25 comes from an uppercase hexadecimal formatting request of that low word under ordinary provider/variadic-ABI returns. No range, full-string validation, configured value or semantic interpretation of the field is established. The code also makes local duplicate-string requests, and explicitly sets **W20=0 at0x40a8** before the address helper call.
+
+The original pointer+32 goes to `automation_get_where_type` at0x40c4. The current selected continuation assumes its return4 and the same repeated length2 prefix path already reviewed in run06. The D1 prefix uses the first two supplied bytes through delegated digit conversions, not proof that UTF-8 length2 implies ASCII digits. The exact connector at0x56bc reloads X4 from SP128 (the saved literal-page base) and0x56c0 branches to the new suffix entry0x4404. This preserves the same GString and the selected callee-saved W20=0 premise; no complete raw-address admission is inferred.
+
+## New suffix and exact conditional flags
+
+At0x4404..0x4414, a null context X25 selects display fallback literal **`0`** at0x6038 into X27; a nonnull context keeps X25. The comparison request at0x441c itself receives X25 and exact literal **`F`** at0x6228. The fallback display pointer and the pointer passed to comparison are therefore distinct dataflow roles. No NULL-comparison behavior is executed or generalized.
+
+The exact decisive instructions are:
+
+- `0x4420`: compare the delegated comparison result W0 with0.
+- `0x4428`, word **0x7a400a84**: `CCMP W20,#0,#4,EQ`. If the first result is unequal, this supplies NZCV=4, meaning **Z=1**. If equal, it compares W20 with0.
+- `0x4430`: initialize X3 to literal **`4`** via the saved base+0xf8.
+- `0x4434/0x4438`: form alternative literal **`3`** at0x61c8.
+- `0x443c`: `CSEL X3,X0,X3,NE` selects alternative3 only when NE, otherwise keeps4.
+
+Consequently the local alternate3 condition is **context compares equal to F AND W20 is nonzero**. On this packet's actual selected earlier **W20=0** path, the selected character is therefore **4**, including when the first comparison is unequal. The immediate NZCV=4 must not be misread as preserving a prior comparison or forcing NE. This is exact source/flags reasoning, not a truth-table simulation, semantic fixture or product rule.
+
+At0x4440..0x444c the source requests `g_string_append_printf` on the SAME X24 GString with exact **`%s1%s`** at0x66d0, X2=the selected context/display pointer and X3=the selected character pointer. Under ordinary successful string providers and this selected zero-flag path, it appends context text, literal1 and literal4 to the existing address prefix. No particular context or completed address string is fabricated, and no meaning is assigned to those characters.
+
+## Local component handoff and closed boundary
+
+After selected local frees of temporary strings,0x416c loads X23 from `[X24]`, the same GString's current data pointer. The nonnull path passes it as **X1** at0x4180 into `g_strdup_printf` at0x4190, with exact **`%s%s%s%s`** at0x6708 and other existing local components in X2/X3/X4. Their semantic fields and whole output language are not closed by this packet. The formatter's returned pointer is stored through the previously supplied local output-record pointer at0x4198; this is a local return/store edge, not publication, ownership/lifetime or successful physical delivery.
+
+The next request at **0x41a8** names `prepare_extscs_frames` through the actual original import relocation. This is **an opaque call boundary only**. Its body, raw/frame acceptance, receiving, transport, authentication, session, framing, MQTT/libjel and equivalent stopped routes remain closed. No later output metadata, fresh identifier, ACK or bus operation is inferred from its name. The packet stops at that request and does not claim the whole translator returns or completes successfully.
+
+## Preservation, reproduction and gaps
+
+`python3 -B collect_suffix_v1.py --check` performs strict read-only reconstruction of six new/connector spans, original instruction and literal assertions,11 actual import-call proofs and pinned context reports. Generation refuses existing outputs; immediate `first-candidate/` copies include report and collector with an index computed before opening its own file. No canonical failed generation or generated overwrite occurred.
+
+Before any report, collector or output was created, an exploratory early message initially misread CCMP's false NZCV. A subsequent source read corrected it to the exact Z=1 behavior above, and the parent was informed before generation. There is no fabricated earlier candidate/file/hash or firmware test associated with that exploratory correction. Completed prior dossiers remain unchanged.
+
+The positive closure is one supplied-object/context→exact suffix selection→same local address component→formatter argument/return-store edge. Full natural predecessor/parsed schema, source configuration values, active provider binding, valid public grammar, remaining components, allocation/lifetime policy and downstream behavior remain open. No physical capability or defect conclusion follows.

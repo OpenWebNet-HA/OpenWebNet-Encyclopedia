@@ -442,7 +442,7 @@ Installed app/Firmware pairing, mapping of all catalogue tuples to document gene
 
 No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
 
-The later 2024/2025 feature matrices establish explicit app-version requirements but not installed state or payload behavior. Feature-detail pages 12–20 and 23 beyond the inspected matrix remain outside this review scope. The old exact-product export lead redirected to an unavailable product URL (HTTP 404); its search-only EAN was not adopted. Current firmware binaries and parameter payloads were not examined.
+The later 2024/2025 feature matrices establish explicit app-version requirements but not installed state or payload behavior. Feature-detail pages 12–20 and 23 beyond the inspected matrix remain outside this review scope. The old exact-product export lead redirected to an unavailable product URL (HTTP 404); its search-only EAN was not adopted. [Firmware `3.87.13`](../../reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md) supplies separate source evidence for the embedded catalogue and server scene processor, plus one isolated scalar-provider experiment. It does not establish installed state, complete parameter-payload semantics or a running/physical scene outcome.
 
 ## Sources
 

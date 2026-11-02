@@ -1,0 +1,44 @@
+[
+  {
+    "bytes": 332,
+    "end_va_exclusive": "0xa61fc",
+    "name": "scene-stop-prefix",
+    "sha256": "882834c92841b8dc6c73e974a28330f282ede7183d9a382ba9b466a02ed635cb",
+    "start_va": "0xa60b0"
+  },
+  {
+    "bytes": 72,
+    "end_va_exclusive": "0xa677c",
+    "name": "worker-receiver",
+    "sha256": "45438252ddaceabf6e70a6a03e3202d29a329b18b74f1218cb7c1821b0fff4fa",
+    "start_va": "0xa6734"
+  },
+  {
+    "bytes": 30,
+    "end_va_exclusive": "0xa6858",
+    "name": "poll-stack-binding",
+    "sha256": "66266eba4538f7df7608cb2906b0efd766127f59968101bc94fbe9bb86515b69",
+    "start_va": "0xa683a"
+  },
+  {
+    "bytes": 852,
+    "end_va_exclusive": "0xa6bdc",
+    "name": "action-dispatch-and-poll-cleanup",
+    "sha256": "b3548ff53ca3a56223ba2ed1fd52743139e82dee1be72df4c8cbfe26d7a8a59c",
+    "start_va": "0xa6888"
+  },
+  {
+    "bytes": 190,
+    "end_va_exclusive": "0xa5e6e",
+    "name": "first-launch-gates",
+    "sha256": "0de7340e766f2693fecc50a2ac4ea8c55b5b44827ee9bf16d366db845bb4b408",
+    "start_va": "0xa5db0"
+  },
+  {
+    "bytes": 12,
+    "end_va_exclusive": "0xcd988",
+    "name": "completion-getter",
+    "sha256": "dd150e2a22290bfc748a3b31abb370ee995bf9fa758998bda546f56f32376352",
+    "start_va": "0xcd97c"
+  }
+]

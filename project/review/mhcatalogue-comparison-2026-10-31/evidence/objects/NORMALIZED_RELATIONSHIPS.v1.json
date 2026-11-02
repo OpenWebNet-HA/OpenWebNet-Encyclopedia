@@ -1,0 +1,3159 @@
+{
+  "ambiguous_field_contexts": {
+    "firmware": [],
+    "suite": []
+  },
+  "counts": {
+    "AS_HIDDEN_KCONF": {
+      "common": 262,
+      "firmware": 266,
+      "firmware_only": 4,
+      "suite": 289,
+      "suite_only": 27
+    },
+    "AS_OBJECT_COLLECTION": {
+      "common": 1140,
+      "firmware": 1151,
+      "firmware_only": 11,
+      "suite": 1352,
+      "suite_only": 212
+    },
+    "AS_OBJECT_FIRMWARE": {
+      "common": 416,
+      "firmware": 470,
+      "firmware_only": 54,
+      "suite": 827,
+      "suite_only": 411
+    },
+    "AS_OBJECT_SYSTEM": {
+      "common": 178,
+      "firmware": 179,
+      "firmware_only": 1,
+      "suite": 251,
+      "suite_only": 73
+    },
+    "AS_SLOT_CONDITION": {
+      "common": 912,
+      "firmware": 912,
+      "firmware_only": 0,
+      "suite": 1000,
+      "suite_only": 88
+    },
+    "EN_CONF": {
+      "common": 1703,
+      "firmware": 1760,
+      "firmware_only": 57,
+      "suite": 2883,
+      "suite_only": 1180
+    },
+    "EN_CONF_RANGE": {
+      "common": 11179,
+      "firmware": 11412,
+      "firmware_only": 233,
+      "suite": 14346,
+      "suite_only": 3167
+    },
+    "EN_FILTER": {
+      "common": 1537,
+      "firmware": 1649,
+      "firmware_only": 112,
+      "suite": 1909,
+      "suite_only": 372
+    },
+    "EN_FILTER_RANGE": {
+      "common": 4698,
+      "firmware": 4848,
+      "firmware_only": 150,
+      "suite": 6152,
+      "suite_only": 1454
+    },
+    "EN_SLOTS": {
+      "common": 1050,
+      "firmware": 1153,
+      "firmware_only": 103,
+      "suite": 1725,
+      "suite_only": 675
+    }
+  },
+  "projection_scope": "Complete typed source-owner-linked bags for named relations; no stored expression evaluation or forced ambiguous field matching.",
+  "unique_context_ID_moves": [
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1,
+            "1 relay DIN actuator 16 A",
+            2
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5228,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5411
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1104,
+            "Extended control item",
+            1
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5215,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5398
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1121,
+            "Flush mounted actuator 1 relay",
+            2
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5246,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5429
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1122,
+            "Shutter flush mounted actuator",
+            2
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5248,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5431
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1123,
+            "Flush mounted leading dimmer 300 VA",
+            4
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5256,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5439
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1147,
+            "Local Display",
+            1
+          ],
+          1,
+          3,
+          4,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5199,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5358
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1156,
+            "DIN - Switch  8 x 16 A - 230V",
+            2
+          ],
+          -1,
+          -1,
+          8,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5258,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5441
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1160,
+            "Bus meter with memory 3-inputs for toroids - 1 DIN",
+            12
+          ],
+          -1,
+          -1,
+          3,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5277,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5469
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1160,
+            "Bus meter with memory 3-inputs for toroids - 1 DIN",
+            12
+          ],
+          3,
+          0,
+          3,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5294,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5536
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1162,
+            "Load management central unit",
+            12
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5276,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5467
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1162,
+            "Load management central unit",
+            12
+          ],
+          3,
+          0,
+          1,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5293,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5535
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1163,
+            "Actuator 16A with current sensor - 1 DIN",
+            102
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5274,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5465
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1164,
+            "Actuator 16A - 1 DIN",
+            102
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5275,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5466
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1165,
+            "Flush mounted actuator 16A",
+            102
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5278,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5470
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1171,
+            "8 channels DALI/SCS interface, 10DIN",
+            4
+          ],
+          -1,
+          -1,
+          8,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5263,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5451
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1184,
+            "Flush mounted actuator and free control",
+            2
+          ],
+          -1,
+          -1,
+          4,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5219,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5402
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1190,
+            "Touch control",
+            1
+          ],
+          -1,
+          -1,
+          7,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5216,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5399
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1191,
+            "Touch control",
+            1
+          ],
+          -1,
+          -1,
+          9,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5220,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5403
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            12,
+            "Soft touch control",
+            1
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5212,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5394
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            128,
+            "1 relay DIN actuator 16 A 100/240 V",
+            2
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5229,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5412
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1311,
+            "DIN - Dimmer 4X  1-10V 1 000VA - 230V",
+            4
+          ],
+          -1,
+          -1,
+          4,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5262,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5447
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            134,
+            "2 relay DIN actuator 16 A 100/240 V",
+            2
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5230,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5413
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1376,
+            "Touch control multifunction",
+            1
+          ],
+          -1,
+          -1,
+          5,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5221,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5404
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1463,
+            "Actuator DIN with 4 fil pilote outputs bus",
+            2
+          ],
+          -1,
+          -1,
+          4,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5271,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5459
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1493,
+            "6 channel dimmer",
+            4
+          ],
+          -1,
+          -1,
+          6,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5269,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5457
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1524,
+            "Special control",
+            1
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5209,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5391
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1525,
+            "Special functions",
+            1
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5210,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5392
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1554,
+            "Soft touch control",
+            1
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5213,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5395
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1559,
+            "PIR+US flush mounted sensor",
+            5
+          ],
+          -1,
+          -1,
+          17,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5270,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5458
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1563,
+            "Key card switch",
+            1
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5223,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5406
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1566,
+            "PIR flush mounted sensor",
+            5
+          ],
+          -1,
+          -1,
+          17,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5272,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5460
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1570,
+            "Shutter actuator DIN 1 motor bus",
+            2
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5250,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5433
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1571,
+            "DIN dimmer 1000 VA 127 V",
+            4
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5239,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5422
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1579,
+            "Shutter control bus",
+            1
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5260,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5445
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1582,
+            "Dimmer for energy saving lamps bus",
+            4
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5249,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5432
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1586,
+            "Shutter actuator bus",
+            2
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5251,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5434
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1593,
+            "1 relay DIN NC actuator 16 A",
+            2
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5232,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5415
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1594,
+            "Actuator with 1 relay DIN",
+            2
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5233,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5416
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1595,
+            "Actuator 1 relay fluorescent lamps 2 DIN",
+            2
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5234,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5417
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1596,
+            "2 relays DIN NC actuator 10 A",
+            2
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5235,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5418
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1597,
+            "Ballast DIN dimmer 1-10 V",
+            4
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5237,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5420
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1599,
+            "DIN dimmer 400 VA",
+            4
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5243,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5426
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1602,
+            "DIN dimmer 400 VA 127 V",
+            4
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5279,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5471
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1678,
+            "8 scenarios control",
+            1
+          ],
+          1,
+          0,
+          9,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5200,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5368
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            168,
+            "Flush mounted temperature central unit",
+            11
+          ],
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5198,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5309
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1683,
+            "Actuator DIN with 8 outputs",
+            2
+          ],
+          -1,
+          -1,
+          8,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5217,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5400
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1684,
+            "Actuator DIN with 2 outputs 0-10V",
+            2
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5280,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5473
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1685,
+            "Actuator DIN with 3 relays and 2 outputs 0-10V",
+            2
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5218,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5401
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1685,
+            "Actuator DIN with 3 relays and 2 outputs 0-10V",
+            2
+          ],
+          2,
+          0,
+          1,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5292,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5526
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1686,
+            "Display thermostat 2 modules",
+            7
+          ],
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5222,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5405
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1686,
+            "Display thermostat 2 modules",
+            7
+          ],
+          2,
+          0,
+          1,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5289,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5518
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            17,
+            "DIN dimmer 1000 W",
+            4
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5238,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5421
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1847,
+            "Key card switch RFID",
+            1
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5224,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5407
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1852,
+            "DIN actuator",
+            2
+          ],
+          6,
+          0,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5225,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5408
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1852,
+            "DIN actuator",
+            2
+          ],
+          7,
+          0,
+          2,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5197,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5300
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1854,
+            "Probe with regulation",
+            7
+          ],
+          5,
+          2,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5281,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5477
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1854,
+            "Probe with regulation",
+            7
+          ],
+          6,
+          0,
+          1,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5244,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5427
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1856,
+            "Fan-coil probe",
+            7
+          ],
+          5,
+          2,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5282,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5478
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1856,
+            "Fan-coil probe",
+            7
+          ],
+          6,
+          0,
+          1,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5245,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5428
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1859,
+            "DIN actuator/4",
+            2
+          ],
+          5,
+          0,
+          4,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5226,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5409
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1859,
+            "DIN actuator/4",
+            2
+          ],
+          6,
+          0,
+          4,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5196,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5299
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1862,
+            "Basic probe",
+            7
+          ],
+          5,
+          2,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5227,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5410
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1862,
+            "Basic probe",
+            7
+          ],
+          6,
+          0,
+          1,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5214,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5397
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            1885,
+            "Pulses counter interface",
+            100
+          ],
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5284,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5486
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2,
+            "2 relays DIN actuator 10 A",
+            2
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5202,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5377
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            20,
+            "Scenario control unit",
+            19
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5273,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5461
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2065,
+            "2x1,6A universal dimmer, 4DIN",
+            4
+          ],
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5285,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5497
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2115,
+            "2x10A actuator, 2DIN",
+            2
+          ],
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5286,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5507
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2131,
+            "1x10A actuator, 2DIN",
+            2
+          ],
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5287,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5515
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2147,
+            "IP55 PIR wall mounted sensor, long range",
+            5
+          ],
+          2,
+          9,
+          17,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5288,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5517
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2180,
+            "Flush mounted actuator and free control with zero crossing",
+            2
+          ],
+          1,
+          0,
+          4,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5290,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5523
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2205,
+            "Comando unico Living Now 2 moduli",
+            1
+          ],
+          1,
+          0,
+          3,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5295,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5538
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2208,
+            "Comando unico Living Now 3 moduli",
+            1
+          ],
+          1,
+          0,
+          4,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5296,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5539
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2233,
+            "Comando-Attuatore Living Now Luci",
+            2
+          ],
+          1,
+          0,
+          5,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5297,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5541
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2237,
+            "Comando-Attuatore Living Now Tapparelle",
+            2
+          ],
+          1,
+          0,
+          4,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5298,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5542
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2242,
+            "Add-on SCS thermostat",
+            11
+          ],
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5299,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5543
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2243,
+            "Comando unico MYHOME 2 moduli",
+            1
+          ],
+          1,
+          0,
+          3,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5300,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5544
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2245,
+            " Comando unico MYHOME 3 moduli",
+            1
+          ],
+          1,
+          0,
+          4,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5301,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5545
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2247,
+            "Comando-Attuatore MYHOME Luci ",
+            2
+          ],
+          1,
+          0,
+          5,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5302,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5546
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2248,
+            "Comando-Attuatore MYHOME Tapparelle",
+            2
+          ],
+          1,
+          0,
+          4,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5303,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5547
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2268,
+            "Basic probe with wired sensor",
+            11
+          ],
+          2,
+          0,
+          1,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5306,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5551
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2269,
+            "Light Actuator Living Now advanced",
+            2
+          ],
+          1,
+          0,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5305,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5549
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2272,
+            "Adv - command white",
+            1
+          ],
+          1,
+          0,
+          3,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5307,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5552
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2273,
+            "Adv - command advanced white",
+            1
+          ],
+          1,
+          0,
+          5,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5308,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5553
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2275,
+            "Shutter Actuator Living Now advanced",
+            2
+          ],
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5309,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5554
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            2276,
+            "Adv - voice assistant Amazon",
+            1
+          ],
+          1,
+          0,
+          5,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5310,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5555
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            23,
+            "Flush mounted dimmer",
+            4
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5257,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5440
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            25,
+            "Regulation rotative control",
+            1
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5264,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5452
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            28,
+            "Receiving radio interface",
+            27
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5265,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5453
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            281,
+            "Basic control",
+            1
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5208,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5390
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            3,
+            "4 relay actuator 2 modules DIN bus",
+            2
+          ],
+          -1,
+          -1,
+          4,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5205,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5387
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            31,
+            "Ballast DIN dimmer 1-10 V",
+            4
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5236,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5419
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            34,
+            "Transmitting radio interface",
+            27
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5266,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5454
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            37,
+            "IR receiver",
+            100
+          ],
+          -1,
+          -1,
+          4,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5267,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5455
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            4,
+            "Basic control",
+            1
+          ],
+          -1,
+          -1,
+          3,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5211,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5393
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            40,
+            "Flush mounted radio receiver for HA/HB4572SB",
+            27
+          ],
+          -1,
+          -1,
+          4,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5268,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5456
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            402,
+            "Scenario control",
+            1
+          ],
+          1,
+          0,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5195,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5294
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            45,
+            "PIR ceiling mounted sensor",
+            5
+          ],
+          -1,
+          -1,
+          17,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5203,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5384
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            47,
+            "Ballast DIN dimmer 0-10 V",
+            4
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5261,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5446
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            49,
+            "PIR+US ceiling mounted sensor",
+            5
+          ],
+          -1,
+          -1,
+          17,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5204,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5386
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            54,
+            "Basic actuator",
+            2
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5252,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5435
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            55,
+            "Basic control actuator",
+            2
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5253,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5436
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            60,
+            "Memory module",
+            100
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5247,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5430
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            61,
+            "Scenario module",
+            100
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5255,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5438
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            63,
+            "4 relay DIN actuator 16 A 100/240 V",
+            2
+          ],
+          -1,
+          -1,
+          4,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5231,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5414
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            66,
+            "Actuator 1 module 1 relay",
+            2
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5254,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5437
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            71,
+            "SCS/DALI gateway",
+            4
+          ],
+          -1,
+          -1,
+          8,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5242,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5425
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            79,
+            "DIN contacts interface",
+            100
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5207,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5389
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            80,
+            "Module contacts interface",
+            ""
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5259,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5444
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            81,
+            "Basic contacts interface",
+            100
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5201,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5374
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            84,
+            "DIN dimmer 1000 VA",
+            4
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5240,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5423
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            85,
+            "DIN dimmer 2 x 400 VA",
+            4
+          ],
+          -1,
+          -1,
+          2,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5241,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5424
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            90,
+            "SCS-SCS interface",
+            3
+          ],
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5206,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5388
+    },
+    {
+      "changed_nonidentity_columns": [],
+      "context": [
+        [
+          "Object_zero_sentinel",
+          0
+        ],
+        [
+          "Firmware",
+          [
+            90,
+            "SCS-SCS interface",
+            3
+          ],
+          6,
+          0,
+          1,
+          0,
+          0
+        ],
+        "AID",
+        -1
+      ],
+      "firmware_id_conf": 5291,
+      "nonidentity_columns_equal": true,
+      "suite_id_conf": 5525
+    }
+  ]
+}

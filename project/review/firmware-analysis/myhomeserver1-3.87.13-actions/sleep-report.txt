@@ -1,0 +1,61 @@
+# MyHOMEServer1 3.87.13: compiled SLEEP callable and request units
+
+The selected compiled SLEEP object binds the JSON-facing `seconds` word to a start callable that issues a relative `nanosleep` request. It binds `delay` to a separate operational field, while retaining JSON `duration` only in metadata on this constructor/move path: operational duration remains initially zero. Its blocking sleep loop does not read the common cancellation flag. These are original static construction/control-flow facts under normal-return and provider premises, not an executed scene, valid-input or measured cancellation/timing result.
+
+## Original identities and scope
+
+| Original image object | SHA256 |
+| --- | --- |
+| `/home/bticino/scheduling_manager/scheduling_manager` | `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26` |
+| `/lib/libc.so.6` | `c8598ca6fd7a47a301fd0b09937f5ab3e270e53db22c7a35b196485c2772d5c6` |
+
+Linked ELF VAs below have no observed runtime PIE bias. `SOURCE_SPANS.v1.json` pins ten original ranges with fresh PT_LOAD mapping; `spans/` preserves Thumb2 disassembly. `PIC_AND_VTABLE.v1.json`, `BYTE_GUARDS.v1.json`, `DIRECT_CALLS.v1.json` and `PROVIDERS.v1.json` retain exact original bytes/relocations and imports/definitions. Source words in literal pools are data, not instructions; stripped nearest-template labels are not function names.
+
+The prior factory batch established44-byte JSON-facing `SleepAction` with seconds at+40. This batch follows its original selected initializer conversion rather than supplying any parsed field or scene fixture. No original ARM/Thumb, parser, string helper, target API, thread, timer, SQL, service, network, bus or physical execution is performed.
+
+## 1. From JSON-facing action to compiled96-byte object
+
+Initializer0xa72c0 uses the selected local action10 table branch0xa7630. Its virtual serialization/base parsing obtains the action fields, and0xa7676 calls compiled constructor0xb7590 on a temporary. A separate96-byte allocation is supplied to move-like prefix0xb444c at0xa7684. The initializer copies metadata, reinstalls the derived primary/secondary vptrs at0xa76c8/0xa76ce, builds shared ownership and supplies runner+128 to append helper0xa7288 at0xa7706. All constructor/allocation/string/container returns remain conditional.
+
+Constructor GOT computation0xb75a4+4+word[0xb7734] gives0x1659a4. Its pool0xb7740 and initializer pool0xa7f4c both contain0x540; GOT slot0x165ee4 points to vtable header0x164d5c. The stored primary address point0x164d64 contains Thumb methods0xcd849/0xcd6f1/0xcd551. Secondary address point0x164d78, stored at runtime object+52, points to the JSON serializer Thumb0x24c9d. Original RTTI0x1648a0 points to string `17SleepActionRunner` at0x1342ec. All selected slots carry original R_ARM_RELATIVE relocations. The runtime object and JSON-facing class are distinct despite the shared serializer.
+
+The operational fields and retained metadata are also separate:
+
+| Input JSON-facing field | Retained runtime metadata | Selected operational binding |
+| --- | --- | --- |
+|+32 `delay`|runtime+84|passed to0xcd988, which stores runtime+8|
+|+36 `duration`|runtime+88|runtime+12 remains zero on the selected constructor/move path|
+|+40 `seconds`|runtime+92|captured by value in the start callable at runtime+16|
+
+At0xb75a6..0xb75ce the constructor explicitly zeroes operational+8/+12. At0xb762c..0xb763c it reads the input+32/+36 pair, stores metadata+84/+88, and passes only the low element (delay) in r1. Setter0xcd988's complete selected body stores r1 at object+8 and returns. No operational duration setter occurs in this selected constructor. The move prefix loads/stores the operational+8/+12 pair at0xb4470/0xb447a, so the separately retained JSON duration value is not substituted there. The initializer's subsequent selected metadata stores remain distinct. This is not a whole-program absence of later duration mutation or a claim that all action types ignore duration.
+
+## 2. Actual captured start function
+
+The constructor copies input seconds to runtime+92 at0xb7640/0xb7642. It then reads that word and constructs temporary callable data `[seconds,0,manager,invoker]`. Exact PIC pools resolve manager Thumb0xb72b1 and invoker Thumb0xb72d5. Call0xb7670→0xcd990 installs the callable at runtime+16. Its normal copy requests manager operation2; original manager0xb72b0 copies the captured word for that operation. The installer transfers data and manager/invoker into the action object and requests old callable cleanup if present. No host function or parser result replaces the original binding.
+
+The selected constructor initially leaves the separate stop callable at runtime+32 with zero manager at+40 and zero invoker at+44. Move prefix0xb444c transfers the selected callable data/manager/invoker into the heap object and clears source ownership words; complete reference-count, exception/unwind and destruction correctness are not proved.
+
+## 3. Blocking sleep, retry and provider ABI
+
+Original invoker0xb72d4 loads its captured word from supplied callable data, constructs a diagnostic string and requests the local logging delegate. The formatting/logging does not prove any elapsed pause. The decisive request loop is0xb746e..0xb7492:
+
+- It reloads the captured word at0xb746e. Zero branches over the sleep call.
+- For nonzero it places `[captured word,0]` at stack+12/+16 at0xb7476.
+- Both r0 (request) and r1 (remaining interval) receive the same stack address at0xb7486/0xb7488, then call imported `nanosleep` at0xb748a.
+- Only return−1 reaches errno inspection. Errno4 retries with that same now-possibly-updated interval; another return or error leaves the selected loop. The callable does not construct a separate Boolean sleep-success result.
+
+The scheduler import is `nanosleep@GLIBC_2.4`. The exact packaged libc exports its92-byte32-bit wrapper at Thumb0x860d5 (instruction0x860d4). That original wrapper reads two32-bit request words, sign-extends the first via ASR31 at0x860e0, and supplies an expanded temporary to `__clock_nanosleep_time64`. On code4 with a nonnull remaining pointer it copies remaining words back at0x86124. This verifies the selected packaged request layout and conversion, not effective live binding, the full downstream syscall implementation or kernel success.
+
+Under the ordinary Linux API contract, these fields express seconds and nanoseconds; interrupted calls may return the remaining interval. The [Linux man-pages nanosleep documentation](https://man7.org/linux/man-pages/man2/nanosleep.2.html) supplies that semantic context, separately retained in `API_CONTEXT.json`. It is not an original target header or firmware measurement. The source therefore supports a requested whole-second SLEEP interval with zero fractional field for ordinary valid values. JSON `asUInt`, libc's signed extension, valid interval range, conversion errors and actual accepted scenes remain distinct unresolved boundaries. No claim that every uint32 value is a valid sleep interval follows.
+
+The explicit blocking loop contains no read of the shared condition-variable cancellation flag and no condition-variable wait. Common runner stop signaling is a separate source path. This establishes why immediate interruption of an already entered sleep is not proved by that signaling alone; signals, thread cancellation, provider side effects, outer lifetime and actual scheduling are not reconstructed or exercised.
+
+## Reproduction and retained history
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/collect_sleep_v1.py --check`
+
+The collector verifies two original binaries, prior runner report/helper/API-context pins, ten source spans, four PIC joins, seven selected relative relocations,15 instruction-byte guards and five direct calls. Its19 outputs plus collector/API-context receive immediate exact first copies; this first report is frozen separately. No semantic host scene, native helper, API-success primitive, clock fixture or callback is executed.
+
+A pre-generation direct-byte audit caught one manually transcribed VST1 guard byte (`0f` versus original `8f`) before the first collector invocation or generated output. The exact draft and audit are retained under `development/`; source interpretation is unchanged. The initial Open Group API page request returned HTTP403; maintainer Linux man-pages context was used instead, without any firmware/closed-route execution. No canonical output was overwritten or guard relaxed.
+
+Confidence is high for the selected class/capture/operational-vs-metadata/move/request/retry/ABI relationships. Common execute/stop/completion behavior is separately reviewed; actual elapsed time, all valid input fields, provider/kernel behavior, full lifecycle/concurrency and physical outcomes remain unproved. Earlier firmware instruction ledgers remain unchanged; wider Device review gates remain pending.

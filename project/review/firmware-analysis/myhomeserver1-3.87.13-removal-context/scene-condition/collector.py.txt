@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+"""Fresh BNCUSCENE row/schema/compiled predicate and exact 4B condition-vector consumer."""
+import sys
+sys.dont_write_bytecode=True
+import pathlib,json,hashlib,struct,re,subprocess,importlib.util,argparse,os
+D=pathlib.Path(__file__).resolve().parent;W=next(x for x in D.parents if(x/'sources').is_dir());R=W/'work/myhomeserver1-firmware/3.87.13/research';V=R/'2026-10-31/image_vfs.py';S='/home/bticino/scheduling_manager/scheduling_manager';H=lambda z:hashlib.sha256(z).hexdigest();J=lambda x:(json.dumps(x,sort_keys=True,indent=2)+'\n').encode()
+sp=importlib.util.spec_from_file_location('sceneconditionvfs',V);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+def build():
+ v=m.ImageVFS();b=v.read_bytes(S);assert H(b)=='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26';ph=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);segs=[struct.unpack_from('<8I',b,ph+i*sz)for i in range(n)]
+ def off(a,n=1):return next(o+a-va for t,o,va,_,fs,*_ in segs if t==1 and va<=a and a+n<=va+fs)
+ def raw(a,n):return b[off(a,n):off(a,n)+n]
+ def u(a):return struct.unpack('<I',raw(a,4))[0]
+ def txt(a):o=off(a);z=b.index(0,o);assert z-o<128;return b[o:z].decode()
+ hp=v.root/v.resolve(S).lstrip('/');env=dict(os.environ,DEBUGINFOD_URLS='');out={};rs=[]
+ spans=[('raw-factory-row-selection',0x2fac6,0x2fb0e),('raw-selected-construction',0x2fd44,0x2fe24),('raw-base-enabled',0x2b7d0,0x2b82a),('raw-type-store',0x2b8c8,0x2b8de),('raw-derived-schema',0xb2bc4,0xb2caa),('compiled-dispatch',0xa7508,0xa7516),('compiled-initializer',0xa79ea,0xa7a24),('compiled-base-construction',0xc83e4,0xc844a),('compiled-derived-copy-header',0xc847a,0xc8522),('exact-predicate',0xc83d8,0xc83e2),('condition-pointer-append',0xa7264,0xa7286),('condition-consumer-range',0xa6d30,0xa6d48),('condition-consumer-predicate-slot',0xa6d88,0xa6d9a),('cleanup-slot-one-body',0xc864c,0xc86dc),('cleanup-slot-zero-body',0xc86f0,0xc8778)]
+ for name,a,z in spans:
+  t=subprocess.check_output(['objdump','-d','--dwarf=no-follow-links','-M','force-thumb',f'--start-address={a}',f'--stop-address={z}',str(hp)],text=True,env=env).replace(str(hp),S);t=re.sub(r' <([^>]+)>',lambda q:q[0]if'@plt'in q[1]else'',t);out['spans/'+name+'.txt']=t.encode();rs.append({'name':name,'start_VA':hex(a),'end_VA_exclusive':hex(z),'file_offset':hex(off(a,z-a)),'raw_sha256':H(raw(a,z-a))})
+ guards=[(0x2fb02,'013c'),(0xa750c,'0b6a'),(0xa7a0a,'c020'),(0xa7a14,'20f0e6fc'),(0xa7a1e,'3e60'),(0xa7272,'43f8040b'),(0xa7276,'0a60'),(0xc848e,'2b7f'),(0xc8490,'84f88430'),(0xc83d8,'90f88400'),(0xc83dc,'80f00100'),(0xc83e0,'7047'),(0xa6d92,'9b68'),(0xa6d94,'9847'),(0xa6d96,'0028'),(0x2b824,'3077'),(0xc849a,'ee6a'),(0xc84e4,'d5e91056')]
+ for a,z in guards:assert raw(a,len(bytes.fromhex(z))).hex()==z,hex(a)
+ def branch(a,t):
+  x,y=struct.unpack('<HH',raw(a,4));assert x&0xf800==0xf000;s=x>>10&1;i1=1-((y>>13&1)^s);i2=1-((y>>11&1)^s);d=s<<24|i1<<23|i2<<22|(x&1023)<<12|(y&2047)<<1;assert(a+4+d-((1<<25)if s else 0))&0xffffffff==t;return{'VA':hex(a),'target':hex(t),'bytes':raw(a,4).hex()}
+ calls=[branch(a,t)for a,t in [(0xa7a06,0xb2bc4),(0xa7a14,0xc83e4),(0xa7a20,0xa7264),(0x2fd4e,0x2b7d0),(0x2fde4,0x2e008),(0x2fe20,0x2fa28)]]
+ keys=[]
+ for p,pc,s in [(0x306a4,0x2fa8e,'type'),(0x306d0,0x2fd60,'id'),(0x306d4,0x2fdb0,'name'),(0xb2da0,0xb2bf8,'id'),(0xb2da4,0xb2c62,'name'),(0x2ba30,0x2b7fe,'enabled')]:a=(u(p)+pc+4)&0xffffffff;assert txt(a)==s;keys.append({'pool':hex(p),'ADD_PC':hex(pc),'literal_VA':hex(a),'text':s})
+ base=(u(0x306a0)+0x2fa70+4)&0xffffffff;slot=base+u(0x306b0);tab=u(slot);assert base==0x1659a4 and tab==0x1605b0;row=tab+17*8;assert u(row)==9 and txt(u(row+4))=='BNCUSCENE'
+ tables=[]
+ for a,j,n,t in [(0x2fb0e,16,0x11b,0x2fd44),(0xa7516,17,0x26a,0xa79ea)]:val=int.from_bytes(raw(a+j*2,2),'little');assert val==n and a+2*val==t;tables.append({'data_base':hex(a),'index':j,'selected_halfword_VA':hex(a+j*2),'value':hex(val),'target':hex(t)})
+ h=(u(0xc8638)+0xc8514+4)&0xffffffff;assert h==0x161fb0 and[u(h+x)for x in [8,12,16]]==[0xc86f1,0xc864d,0xc83d9];rt=u(h+4);assert txt(u(rt+4))=='24BncuSceneConditionRunner';rawslot=base+u(0xb2d9c);rh=u(rawslot);rrt=u(rh+4);assert(rawslot,rh)==(0x166b70,0x16004c)and txt(u(rrt+4))=='18BncuSceneCondition';assert base+u(0x306cc)==rawslot
+ rel=subprocess.check_output(['readelf','-rW',str(hp)],text=True,env=env);relrows=[]
+ for a in [rawslot,h+8,h+12,h+16]:t=next(x.strip()for x in rel.splitlines()if x.startswith(f'{a:08x} '));assert'R_ARM_RELATIVE'in t;relrows.append(t)
+ pins={S:{'sha256':H(b),'bytes':len(b)}}
+ for p,k in [(V,'image_accessor'),(R/'2026-11-01-owner-removal/reset/REPORT.md','prior_reset_caller_lead'),(R/'2026-10-31-triggers/service/REPORT.md','prior_complete_condition_worker'),(W/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md','curated_product_context')]:z=p.read_bytes();pins[k]={'path':str(p.relative_to(W)),'sha256':H(z),'bytes':len(z)}
+ out['ORIGINAL_SOURCE.json']=J({'image':S,'spans':rs,'guards':[{'VA':hex(a),'bytes':z}for a,z in guards],'calls':calls,'keys':keys,'condition_table':{'GOT_base':hex(base),'slot':hex(slot),'table':hex(tab),'row':17,'length':9,'text':'BNCUSCENE'},'TBH_tables':tables,'raw_header':{'GOT_slot':hex(rawslot),'header':hex(rh),'RTTI':hex(rrt),'name':'18BncuSceneCondition'},'compiled_header':{'PIC_pool':'0xc8638','ADD_PC':'0xc8514','header':hex(h),'RTTI':hex(rt),'name':'24BncuSceneConditionRunner','primary_AP':hex(h+8),'primary_slots_Thumb':['0xc86f1','0xc864d','0xc83d9'],'secondary_AP':'0x161fcc','primary_predicate_slot_plus8':'0x161fc0'},'relative_relocations':relrows})
+ out['CONDITION_CONTRACT.json']=J({'selection':{'raw_name_row':17,'raw_factory_index':16,'compiled_dispatch_index':17,'source':'Actual selectedtables, not transferredneighborlayout'},'raw':{'bytes':88,'base_ID':4,'enabled':28,'type':32,'operator':36,'derived_id':40,'derived_name':64,'conversion':'ImportedJson asBool/asString; normalvalues/defaults/errorsunexecuted'},'compiled':{'bytes':192,'ID':108,'enabled':132,'type':136,'operator':140,'derived_id':144,'derived_name':168,'constructor':'0xc83e4','schema_reparse':'Rawvirtualserializer→0xb2bc4; fullvaluecoherenceunclosed'},'publication':{'scene_vector':116,'entry_bytes':4,'availablecap':'a7264 movesONEunchangedpointer,zerosONEsourceword,end+4','source':'compiledallocationR6→SP568→a7a20','growth':'opaque delegateb4fd4','shared_control_word':'noneinthisselected4Bentry; no fullownershipinference'},'consumer':{'scene_range':[116,120],'pointer':'a6d88 unchangedprimaryconditionpointee','virtual_call':'a6d90 vptr→a6d92 slot+8→a6d94call','selected_target':'compiledAP161fb8+8 storedThumbc83d9','method':'c83d8 LDRB132; c83dc XOR1; c83e0return','ordinary_boolean_result':'enabled0→1,enabled1→0, not originalexecution','local_query_or_otherfield_read':'noneinthisentire3instructionmethod','aggregate':'nonzero continuesloop; zero entersfailure; fullnormalaggregate inheritedfrompinnedreviewedservicepacket'},'limits':['not actualconfiguredinstance/sceneexecution/physicalrole','complete serializer/reparse/otherclassmethods notclosed','ABI/provider/string/construction/allocation/lifetime/unwind/concurrency premises','notunsupported/defect/productcapabilityabsenceclaim'],'method_counts':{'original_execution':0,'host_semantic_cases':0,'target_calls':0}})
+ out['INPUTS.json']=J(pins);out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(pathlib.Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes()),'outputs':{n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()},'counts':{'spans':len(spans),'guards':len(guards),'calls':len(calls),'keys':len(keys),'tables':len(tables),'relocations':len(relrows),'inputs':len(pins),'original_execution':0}});return out
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');ck=ap.parse_args().check;out=build()
+ if ck:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  for n,r in json.loads((D/'first-candidate/INDEX.json').read_text()).items():z=(D/n).read_bytes();assert z==(D/'first-candidate'/n).read_bytes()and H(z)==r['sha256']and len(z)==r['bytes'],n
+ else:
+  s=D/'first-candidate';assert not s.exists(),'refuse firstsnapshot overwrite'
+  for n in out:assert not(D/n).exists(),'refuse generatedoverwrite'
+  cp={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),pathlib.Path(__file__).name:pathlib.Path(__file__).read_bytes()};ix=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in cp.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in cp.items():p=s/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (s/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':ck,'outputs':len(out),'original_execution':0}))
+if __name__=='__main__':main()

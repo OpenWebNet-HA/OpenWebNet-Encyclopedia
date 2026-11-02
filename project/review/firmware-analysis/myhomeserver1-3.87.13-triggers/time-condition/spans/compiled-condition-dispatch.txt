@@ -1,0 +1,49 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a74e4:
+   a74e4:	9a01      	ldr	r2, [sp, #4]
+   a74e6:	e9d2 3a03 	ldrd	r3, sl, [r2, #12]
+   a74ea:	459a      	cmp	sl, r3
+   a74ec:	d06c      	beq.n	a75c8
+   a74ee:	4698      	mov	r8, r3
+   a74f0:	f8df 3a30 	ldr.w	r3, [pc, #2608]	@ a7f24
+   a74f4:	447b      	add	r3, pc
+   a74f6:	9302      	str	r3, [sp, #8]
+   a74f8:	f8df 3a2c 	ldr.w	r3, [pc, #2604]	@ a7f28
+   a74fc:	447b      	add	r3, pc
+   a74fe:	9303      	str	r3, [sp, #12]
+   a7500:	f8df 3a28 	ldr.w	r3, [pc, #2600]	@ a7f2c
+   a7504:	447b      	add	r3, pc
+   a7506:	9304      	str	r3, [sp, #16]
+   a7508:	f858 1b04 	ldr.w	r1, [r8], #4
+   a750c:	6a0b      	ldr	r3, [r1, #32]
+   a750e:	2b16      	cmp	r3, #22
+   a7510:	d858      	bhi.n	a75c4
+   a7512:	e8df f013 	tbh	[pc, r3, lsl #1]
+   a7516:	0465      	lsls	r5, r4, #17
+   a7518:	0438      	lsls	r0, r7, #16
+   a751a:	0415      	lsls	r5, r2, #16
+   a751c:	03f7      	lsls	r7, r6, #15
+   a751e:	03d9      	lsls	r1, r3, #15
+   a7520:	03bb      	lsls	r3, r7, #14
+   a7522:	039d      	lsls	r5, r3, #14
+   a7524:	037a      	lsls	r2, r7, #13
+   a7526:	053b      	lsls	r3, r7, #20
+   a7528:	04c7      	lsls	r7, r0, #19
+   a752a:	04a8      	lsls	r0, r5, #18
+   a752c:	0489      	lsls	r1, r1, #18
+   a752e:	05b4      	lsls	r4, r6, #22
+   a7530:	057f      	lsls	r7, r7, #21
+   a7532:	0349      	lsls	r1, r1, #13
+   a7534:	032b      	lsls	r3, r5, #12
+   a7536:	0296      	lsls	r6, r2, #10
+   a7538:	026a      	lsls	r2, r5, #9
+   a753a:	01c5      	lsls	r5, r0, #7
+   a753c:	01a7      	lsls	r7, r4, #6
+   a753e:	0183      	lsls	r3, r0, #6
+   a7540:	015f      	lsls	r7, r3, #5
+   a7542:	0017      	movs	r7, r2

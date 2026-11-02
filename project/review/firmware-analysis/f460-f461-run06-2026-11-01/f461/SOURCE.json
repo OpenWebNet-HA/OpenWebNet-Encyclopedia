@@ -1,0 +1,366 @@
+{
+  "PIC_joins": [
+    {
+      "ADD": "0x1c20",
+      "ADRP": "0x1c1c",
+      "object": "helper",
+      "target": "0x21a8"
+    },
+    {
+      "ADD": "0x1c90",
+      "ADRP": "0x1c8c",
+      "object": "helper",
+      "target": "0x21e0"
+    },
+    {
+      "ADD": "0x1ca4",
+      "ADRP": "0x1ca0",
+      "object": "helper",
+      "target": "0x21e8"
+    },
+    {
+      "ADD": "0x1cb8",
+      "ADRP": "0x1cb4",
+      "object": "helper",
+      "target": "0x21f0"
+    },
+    {
+      "ADD": "0x43d8",
+      "ADRP": "0x43d4",
+      "object": "plugin",
+      "target": "0x5fe8"
+    },
+    {
+      "ADD": "0x56b4",
+      "ADRP": "0x56b0",
+      "object": "plugin",
+      "target": "0x6030"
+    }
+  ],
+  "guards": {
+    "helper": [
+      {
+        "VA": "0x1c44",
+        "word": "0x97fffd03"
+      },
+      {
+        "VA": "0x1c4c",
+        "word": "0x350001c0"
+      },
+      {
+        "VA": "0x1c94",
+        "word": "0x97fffcd3"
+      },
+      {
+        "VA": "0x1c9c",
+        "word": "0x34fffda0"
+      },
+      {
+        "VA": "0x1cac",
+        "word": "0x97fffce9"
+      },
+      {
+        "VA": "0x1cb0",
+        "word": "0x34000200"
+      },
+      {
+        "VA": "0x1cc0",
+        "word": "0x97fffce4"
+      },
+      {
+        "VA": "0x1cc4",
+        "word": "0x34000160"
+      },
+      {
+        "VA": "0x1cd0",
+        "word": "0x97fffcd8"
+      },
+      {
+        "VA": "0x1cd4",
+        "word": "0xf100041f"
+      },
+      {
+        "VA": "0x1cdc",
+        "word": "0xd1000800"
+      },
+      {
+        "VA": "0x1ce0",
+        "word": "0x52800082"
+      },
+      {
+        "VA": "0x1ce4",
+        "word": "0xf27ef81f"
+      },
+      {
+        "VA": "0x1ce8",
+        "word": "0x5a9f0042"
+      },
+      {
+        "VA": "0x1c6c",
+        "word": "0x2a0203e0"
+      }
+    ],
+    "plugin": [
+      {
+        "VA": "0x4028",
+        "word": "0xf940103b"
+      },
+      {
+        "VA": "0x40c0",
+        "word": "0xaa1b03e0"
+      },
+      {
+        "VA": "0x40c4",
+        "word": "0x97fff7c7"
+      },
+      {
+        "VA": "0x40cc",
+        "word": "0x71000c1f"
+      },
+      {
+        "VA": "0x40d0",
+        "word": "0x54006460"
+      },
+      {
+        "VA": "0x40d4",
+        "word": "0x5400178c"
+      },
+      {
+        "VA": "0x43c4",
+        "word": "0x7100101f"
+      },
+      {
+        "VA": "0x43cc",
+        "word": "0x54ffeb61"
+      },
+      {
+        "VA": "0x43f0",
+        "word": "0xf100081f"
+      },
+      {
+        "VA": "0x43f8",
+        "word": "0x540094a0"
+      },
+      {
+        "VA": "0x568c",
+        "word": "0x39400360"
+      },
+      {
+        "VA": "0x5690",
+        "word": "0x97fff21c"
+      },
+      {
+        "VA": "0x5698",
+        "word": "0x39400760"
+      },
+      {
+        "VA": "0x56a0",
+        "word": "0x97fff218"
+      },
+      {
+        "VA": "0x56a4",
+        "word": "0x2a0003e3"
+      },
+      {
+        "VA": "0x56a8",
+        "word": "0x2a1b03e2"
+      },
+      {
+        "VA": "0x56ac",
+        "word": "0xaa1803e0"
+      },
+      {
+        "VA": "0x56b8",
+        "word": "0x97fff252"
+      },
+      {
+        "VA": "0x56c0",
+        "word": "0x17fffb51"
+      }
+    ]
+  },
+  "helper_definition": "    30: 0000000000001c10   280 FUNC    GLOBAL DEFAULT   12 automation_get_where_type",
+  "image_alias_metadata": {
+    "home/bticino/lib/libautomation.so": "libautomation.so.1",
+    "home/bticino/lib/libautomation.so.1": "libautomation.so.1.1.0"
+  },
+  "import_proofs": [
+    {
+      "BL": "0x43e0",
+      "PLT": "0x1e90",
+      "PLT_bytes": "b00000f0115240f91082029120021fd6",
+      "object": "plugin",
+      "relocation": "00000000000180a0  0000001700000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_string_printf + 0",
+      "slot": "0x180a0"
+    },
+    {
+      "BL": "0x43ec",
+      "PLT": "0x1f10",
+      "PLT_bytes": "b00000f0117240f91082039120021fd6",
+      "object": "plugin",
+      "relocation": "00000000000180e0  0000001f00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_utf8_strlen + 0",
+      "slot": "0x180e0"
+    },
+    {
+      "BL": "0x40c4",
+      "PLT": "0x1fe0",
+      "PLT_bytes": "b00000f011a640f91022059120021fd6",
+      "object": "plugin",
+      "relocation": "0000000000018148  0000002d00000402 R_AARCH64_JUMP_SLOT    0000000000000000 automation_get_where_type + 0",
+      "slot": "0x18148"
+    },
+    {
+      "BL": "0x5690",
+      "PLT": "0x1f00",
+      "PLT_bytes": "b00000f0116e40f91062039120021fd6",
+      "object": "plugin",
+      "relocation": "00000000000180d8  0000001e00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_ascii_digit_value + 0",
+      "slot": "0x180d8"
+    },
+    {
+      "BL": "0x56a0",
+      "PLT": "0x1f00",
+      "PLT_bytes": "b00000f0116e40f91062039120021fd6",
+      "object": "plugin",
+      "relocation": "00000000000180d8  0000001e00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_ascii_digit_value + 0",
+      "slot": "0x180d8"
+    },
+    {
+      "BL": "0x56b8",
+      "PLT": "0x2000",
+      "PLT_bytes": "b00000d011ae40f91062059120021fd6",
+      "object": "plugin",
+      "relocation": "0000000000018158  0000002f00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_string_append_printf + 0",
+      "slot": "0x18158"
+    },
+    {
+      "BL": "0x1c44",
+      "PLT": "0x1050",
+      "PLT_bytes": "900000b0119a47f910c23c9120021fd6",
+      "object": "helper",
+      "relocation": "0000000000012f30  0000001100000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_strcmp0 + 0",
+      "slot": "0x12f30"
+    },
+    {
+      "BL": "0x1c94",
+      "PLT": "0xfe0",
+      "PLT_bytes": "900000d0117e47f910e23b9120021fd6",
+      "object": "helper",
+      "relocation": "0000000000012ef8  0000000a00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_ascii_strncasecmp + 0",
+      "slot": "0x12ef8"
+    },
+    {
+      "BL": "0x1cd0",
+      "PLT": "0x1030",
+      "PLT_bytes": "900000b0119247f910823c9120021fd6",
+      "object": "helper",
+      "relocation": "0000000000012f20  0000000f00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_utf8_strlen + 0",
+      "slot": "0x12f20"
+    }
+  ],
+  "new_original_execution": 0,
+  "originals": {
+    "helper": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          9864,
+          9864,
+          65536
+        ],
+        [
+          1,
+          6,
+          11368,
+          76904,
+          76904,
+          928,
+          936,
+          65536
+        ]
+      ],
+      "bytes": 14152,
+      "requested_image_path": "/home/bticino/lib/libautomation.so.1",
+      "resolved_image_path": "/home/bticino/lib/libautomation.so.1.1.0",
+      "sha256": "da1cc59320d4175db85d99b9986fc371c7076e0dede02ef62daf0ada5c4914ec"
+    },
+    "plugin": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          27368,
+          27368,
+          65536
+        ],
+        [
+          1,
+          6,
+          31456,
+          96992,
+          96992,
+          1864,
+          1872,
+          65536
+        ]
+      ],
+      "bytes": 35240,
+      "requested_image_path": "/home/bticino/libcoso/libplug_automation_tr.so",
+      "resolved_image_path": "/home/bticino/libcoso/libplug_automation_tr.so",
+      "sha256": "d7d361798ccec65843bd41c9ad7b8897645a334b0cd08121d372949f78eac277"
+    }
+  },
+  "prefix_contract": "selected class4 and repeatedlength2 \u2192GStringD1+append%d%d with g_ascii_digit_value byte0,byte1; suffix/output unclosed",
+  "safe_literals": {
+    "helper": {
+      "0x21a8": "0",
+      "0x21e0": "#",
+      "0x21e8": "00",
+      "0x21f0": "100"
+    },
+    "plugin": {
+      "0x5fe8": "D1",
+      "0x6030": "%d%d"
+    }
+  },
+  "semantic_fixtures_models": 0,
+  "spans": [
+    {
+      "VA": "0x1c10",
+      "end_exclusive": "0x1d28",
+      "input": "helper",
+      "sha256": "bd5d1c9d511214daa8157ae43827dd535def118687c0cfde987b5c0d8f7849aa"
+    },
+    {
+      "VA": "0x400c",
+      "end_exclusive": "0x404c",
+      "input": "plugin",
+      "sha256": "9e61bc0d4f8f16681afa49367add5bc9354d7cc041770decf54a52646a9c9ac3"
+    },
+    {
+      "VA": "0x40c0",
+      "end_exclusive": "0x40e8",
+      "input": "plugin",
+      "sha256": "6e7a9dde6873bb8cd250875c9725067656ac4ed349c406183693afe56b3eef08"
+    },
+    {
+      "VA": "0x43c4",
+      "end_exclusive": "0x4404",
+      "input": "plugin",
+      "sha256": "80463e7eb4373550bfd641ef14b35346c09c3621ca3495a742f50f460cdcf11a"
+    },
+    {
+      "VA": "0x568c",
+      "end_exclusive": "0x56c4",
+      "input": "plugin",
+      "sha256": "6cbfc48fcc9f4c2868cf3e9f90c28917875114fe707e2873e438caaaaf329525"
+    }
+  ]
+}

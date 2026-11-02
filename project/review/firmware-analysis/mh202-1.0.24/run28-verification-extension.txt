@@ -1,0 +1,15 @@
+# MH202 verification navigation extension23..27
+
+Saved validation and byte identities only; no tests/native replay or full semantic re-audit by this catalog. Earlier catalog1..22 and its historical scope labels remain unchanged.
+
+| Checkpoint | Saved validation | Historical original visits |
+|---|---|---:|
+|23|[Record](../../../validation/run23/final-checkpoint.json)|31581|
+|24|[Record](../../../validation/run24/final-checkpoint.json)|31581|
+|25|[Record](../../../validation/run25/final-checkpoint.json)|31581|
+|26|[Record](../../../validation/run26/final-checkpoint.json)|31581|
+|27|[Record](../../../validation/run27/final-checkpoint.json)|31961|
+
+Through27:15 canonical corpora,71top-level entries including2 stopped prefixes,31961original visits+3165declared primitives+132definition redirects+27EXIT returns+2selector stops=35287hooks. Replays do not accumulate; setup data writes are separate. Target process/OS calls0. Tooling31tests/Device210checks are inherited run1 records, not rerun here; wider gates pending. Historical document hashes resolve to retained exact snapshots.
+
+[Later findings](LATER_FINDINGS.md) provide9 bounded rows. Prior18/21 intermediate-draft authenticity remains incomplete.

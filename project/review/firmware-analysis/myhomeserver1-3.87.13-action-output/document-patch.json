@@ -1,0 +1,11 @@
+{
+  "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+  "snapshot": "myhomeserver1-3.87.13-research-synthesis.md",
+  "before_sha256": "2d906542a4a369b4dd71c4e1820a79205a70613ddaf739e4b5265b26bb6106d2",
+  "after_sha256": "03dc425c580d209ae4dbd6749e0455ab7e514f3873208b9c3543b0148f4c10d6",
+  "operation": "insert-before-exact-anchor",
+  "anchor": "## Timing, cancellation and lifetime answer different questions\n",
+  "insert": "## Selected action callables reach a local request interface\n\nThe [action-output continuation](myhomeserver1-3.87.13-action-output.md) follows the selected BN3L first and duration-related callable adapters beyond their earlier bindings. Distinct52-byte/24-byte captures reach two local blocks which assemble `jsonrpc`, `method`, `id`, `params` and request the same relocation-backed local output helper. These selected source edges do not establish method values, complete parameters, natural invocation order, prior-state restoration, delivery or physical effects. Descriptor/conversion/helper returns, object lifetime and complete branch admission remain premises; no additional original execution is introduced.\n\n",
+  "new_page": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-action-output.md",
+  "new_page_sha256": "641fbc991b13ec0b1fbca991f6d15775d47805bfea40272298c8e80871b2ab3f"
+}

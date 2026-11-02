@@ -1,0 +1,82 @@
+{
+  "collector_sha256": "cef2c95008c1e6419bae4ecffff03f72f9e9f3b4cb600fe4bb8bf7a6902874dc",
+  "counts": {
+    "GOT_chains": 3,
+    "branches": 4,
+    "guards": 13,
+    "inputs": 5,
+    "keys": 5,
+    "original_execution": 0,
+    "relocations": 3,
+    "spans": 13,
+    "tables": 2,
+    "types": 2
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 1136,
+      "sha256": "8b8d424b5ec18a6c80bb0675644a4a0953ffca8821e32b5710ccd6b27b2d1ee1"
+    },
+    "ORIGINAL_SOURCE.json": {
+      "bytes": 6401,
+      "sha256": "208989976ec8645b54ce2a2d2f5866ab02329040781d2aaec96f36c362fab0f7"
+    },
+    "TYPED_VALUE_FLOW.json": {
+      "bytes": 1716,
+      "sha256": "945d0e349d2e948030d280a3ef5ad41ce0c801f1a7b23672b8a69657b34665e0"
+    },
+    "spans/bnth-cached-control-present.txt": {
+      "bytes": 329,
+      "sha256": "dad9ab64875b0ef73be8d3a6e6d14f1dfe438ccc504a026cc0eb20e6ca442f07"
+    },
+    "spans/bnth-cached-control-zero.txt": {
+      "bytes": 509,
+      "sha256": "0a8bc7f608208bc47aa94ff5d0214464807a491a76ac093fd2cf4b973c144490"
+    },
+    "spans/generic-stored-pair.txt": {
+      "bytes": 1159,
+      "sha256": "8345f03ea528b25be004f95c97d63d2f9a3851d7db64d69f0dc3388aa7f4598d"
+    },
+    "spans/id-member-copy.txt": {
+      "bytes": 1152,
+      "sha256": "b0a15253a3196b199d377c6c74602265a18126842e58c2700568c42d8c7c0974"
+    },
+    "spans/lookup-stored-pair.txt": {
+      "bytes": 292,
+      "sha256": "c05aba99a58c08f8fcc5f5c8e77f00dc556c1ebd80726c51982f74ac1e81d488"
+    },
+    "spans/map-type-dispatch.txt": {
+      "bytes": 901,
+      "sha256": "527732ae83e2f991b39f1dee5beb634a1cd2969328bc9c9e5d4b046981e337a9"
+    },
+    "spans/missing-setpoint-default.txt": {
+      "bytes": 214,
+      "sha256": "f661b70380eda86a55a8993f7b019c9fca0dc02b8e3b22bee62879e598ff7cb6"
+    },
+    "spans/params-copy.txt": {
+      "bytes": 930,
+      "sha256": "553928325c8a642c2aa234a717e60eab3e558b26507d76a41949f4171d0abe5b"
+    },
+    "spans/selected-setpoint-conversion.txt": {
+      "bytes": 694,
+      "sha256": "1442467759e13033e59bf3310c6c5db023126ad05b861e1a54cd973b3871cf30"
+    },
+    "spans/typed-change-guard.txt": {
+      "bytes": 722,
+      "sha256": "4abdf16db632365442f1751f520a9ae2c76ad0a34e8441954df2609e8a712c95"
+    },
+    "spans/typed-construction-registry-handoff.txt": {
+      "bytes": 2141,
+      "sha256": "b8a9320057cd29c0dbfde74350b8c2496cc93b560733b461bba708202c083708"
+    },
+    "spans/typed-update-copy.txt": {
+      "bytes": 771,
+      "sha256": "41fc7850d4ea9a0eee0f032f398d84f928ee4439d8ea92365643486ea5a0289b"
+    },
+    "spans/typed-update-read-compare.txt": {
+      "bytes": 2220,
+      "sha256": "e0c213fd9c8695e7870372810e0a10af79b339499f20df5426a69c5fa2579c79"
+    }
+  },
+  "report_sha256": "9d5e8401ea962f30b509964f8ed4ac5c8dff069b118f33cc14b0a0fb3a2490f7"
+}

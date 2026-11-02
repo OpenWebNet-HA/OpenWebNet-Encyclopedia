@@ -1,0 +1,68 @@
+{
+  "new_binary_code_or_format_coverage": false,
+  "retained_XML_topology": [
+    {
+      "attribute_names": [],
+      "element_path": "/fwz"
+    },
+    {
+      "attribute_names": [],
+      "element_path": "/fwz/name"
+    },
+    {
+      "attribute_names": [],
+      "element_path": "/fwz/fwz_ver"
+    },
+    {
+      "attribute_names": [
+        "id"
+      ],
+      "element_path": "/fwz/device"
+    },
+    {
+      "attribute_names": [],
+      "element_path": "/fwz/device/name"
+    },
+    {
+      "attribute_names": [],
+      "element_path": "/fwz/device/object_models"
+    },
+    {
+      "attribute_names": [
+        "id"
+      ],
+      "element_path": "/fwz/device/object_models/object_model"
+    },
+    {
+      "attribute_names": [],
+      "element_path": "/fwz/device/files"
+    },
+    {
+      "attribute_names": [
+        "id"
+      ],
+      "element_path": "/fwz/device/files/file"
+    },
+    {
+      "attribute_names": [
+        "id"
+      ],
+      "element_path": "/fwz/file"
+    },
+    {
+      "attribute_names": [],
+      "element_path": "/fwz/file/name"
+    },
+    {
+      "attribute_names": [],
+      "element_path": "/fwz/file/version"
+    },
+    {
+      "attribute_names": [
+        "mode"
+      ],
+      "element_path": "/fwz/file/update"
+    }
+  ],
+  "scope": "Exact original manifest element paths/attribute names only; no executable target schema assumed"
+}

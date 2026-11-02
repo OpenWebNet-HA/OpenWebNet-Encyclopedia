@@ -1,0 +1,53 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/usr/lib/libjsoncpp.so.1.9.5:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00015b54 <_ZN4Json5ValueC1ENS_9ValueTypeE@@Base>:
+   15b54:	2200      	movs	r2, #0
+   15b56:	b538      	push	{r3, r4, r5, lr}
+   15b58:	60c2      	str	r2, [r0, #12]
+   15b5a:	4605      	mov	r5, r0
+   15b5c:	460c      	mov	r4, r1
+   15b5e:	f7f5 ef9a 	blx	ba94 <_ZN4Json5Value9initBasicENS_9ValueTypeEb@plt>
+   15b62:	1e61      	subs	r1, r4, #1
+   15b64:	2906      	cmp	r1, #6
+   15b66:	d810      	bhi.n	15b8a <_ZN4Json5ValueC1ENS_9ValueTypeE@@Base+0x36>
+   15b68:	e8df f001 	tbb	[pc, r1]
+   15b6c:	1111      	asrs	r1, r2, #4
+   15b6e:	211b      	movs	r1, #27
+   15b70:	0417      	lsls	r7, r2, #16
+   15b72:	0004      	movs	r4, r0
+   15b74:	2018      	movs	r0, #24
+   15b76:	f7f4 efd2 	blx	ab1c <_Znwj@plt>
+   15b7a:	2300      	movs	r3, #0
+   15b7c:	1d02      	adds	r2, r0, #4
+   15b7e:	e9c0 3301 	strd	r3, r3, [r0, #4]
+   15b82:	e9c0 2203 	strd	r2, r2, [r0, #12]
+   15b86:	6143      	str	r3, [r0, #20]
+   15b88:	6028      	str	r0, [r5, #0]
+   15b8a:	4628      	mov	r0, r5
+   15b8c:	bd38      	pop	{r3, r4, r5, pc}
+   15b8e:	efc0 0010 	vmov.i32	d16, #0	@ 0x00000000
+   15b92:	4628      	mov	r0, r5
+   15b94:	edc5 0b00 	vstr	d16, [r5]
+   15b98:	bd38      	pop	{r3, r4, r5, pc}
+   15b9a:	2300      	movs	r3, #0
+   15b9c:	4628      	mov	r0, r5
+   15b9e:	702b      	strb	r3, [r5, #0]
+   15ba0:	bd38      	pop	{r3, r4, r5, pc}
+   15ba2:	2200      	movs	r2, #0
+   15ba4:	2300      	movs	r3, #0
+   15ba6:	4628      	mov	r0, r5
+   15ba8:	e9c5 2300 	strd	r2, r3, [r5]
+   15bac:	bd38      	pop	{r3, r4, r5, pc}
+   15bae:	4b05      	ldr	r3, [pc, #20]	@ (15bc4 <_ZN4Json5ValueC1ENS_9ValueTypeE@@Base+0x70>)
+   15bb0:	4628      	mov	r0, r5
+   15bb2:	447b      	add	r3, pc
+   15bb4:	602b      	str	r3, [r5, #0]
+   15bb6:	bd38      	pop	{r3, r4, r5, pc}
+   15bb8:	68e8      	ldr	r0, [r5, #12]
+   15bba:	b108      	cbz	r0, 15bc0 <_ZN4Json5ValueC1ENS_9ValueTypeE@@Base+0x6c>
+   15bbc:	f7f5 ffb4 	bl	bb28 <_ZNSt6localeC1Ev@plt+0xc>
+   15bc0:	f7f5 ebd8 	blx	b374 <__cxa_end_cleanup@plt>

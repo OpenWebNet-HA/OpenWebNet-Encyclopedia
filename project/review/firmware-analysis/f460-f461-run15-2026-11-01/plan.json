@@ -1,0 +1,18 @@
+{
+  "started_UTC": "2026-11-01T17:03:07.375822+00:00",
+  "scope": [
+    "FINAL F460selectedBNLDserializer/reparse numericvaluecontract",
+    "FINAL F461localmoduleremoval/entryconsumer/callbackordering"
+  ],
+  "authors": {
+    "F460": "firmware_protocol",
+    "F461": "firmware_boot"
+  },
+  "source_review": "Independent cross-source peers",
+  "documentary_reviewer": "firmware_functional read-only/newreviewfilesonly",
+  "new_execution": 0,
+  "constraints": "Original/completed/synced/firstcandidatesreadonly; immediateexactcopies,parentbeforecorrection,exclusiveversions. No closedroutes/proxies/private/fullconfig/bootenv/keys/native/models/targetruntime/deviceoperations.",
+  "final_consolidation_start_UTC": "2026-11-01T17:32:00Z",
+  "deadline_UTC": "2026-11-01T19:00:00Z",
+  "final_only_UTC": "2026-11-01T18:15:00Z"
+}

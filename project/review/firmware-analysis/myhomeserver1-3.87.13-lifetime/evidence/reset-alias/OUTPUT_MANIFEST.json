@@ -1,0 +1,117 @@
+{
+  "collector_sha256": "d3bb1bf7ae79dc59d337c25f348560f908bb8202a1125d2eaa331880ff7d3f38",
+  "counts": {
+    "alias_guards": 15,
+    "inputs": 5,
+    "original_execution": 0,
+    "receiver_rows": 22,
+    "spans": 22
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 702,
+      "sha256": "7d38d55b9d65edbaf903c714c6d2ca50351e05f170ad1c2b38ab95f8052f8b68"
+    },
+    "METHOD.json": {
+      "bytes": 474,
+      "sha256": "b3faac4eb6e91b0aaf9b29ab94348b0b7fa3993a88c21726d76fe1dd2fbea441"
+    },
+    "RECEIVER_LEDGER.json": {
+      "bytes": 14840,
+      "sha256": "23f0af62b5d1c3ba9ce1186a37ed581475ffdca7bd14d399e011873eb4ac9bf1"
+    },
+    "SOURCE_EVIDENCE.json": {
+      "bytes": 8235,
+      "sha256": "e5b4ce408de56d72477646825f96fb45ea6ae02fad618bc2e6e4e8d71a4ef7d7"
+    },
+    "spans/store-1041da.txt": {
+      "bytes": 1207,
+      "sha256": "6d7e607857bf4e1368f645e8280f7262aa0cdc689e01d9bda25002c54a1f6c69"
+    },
+    "spans/store-108060.txt": {
+      "bytes": 178,
+      "sha256": "4b409d47dbcb1e1d57ab3e3d26f528e26d67c43c33c419f0bd3bde2b2a49f9ff"
+    },
+    "spans/store-108c5e.txt": {
+      "bytes": 1205,
+      "sha256": "4e21cabeaeff4ff167b2c659c7a25fde0e4e9698da5d3489430d6497e6dcb182"
+    },
+    "spans/store-10abde.txt": {
+      "bytes": 2183,
+      "sha256": "c1c7d35b6b068ab64478a05c3c011c2981954b649e9e32f16187605681ea787c"
+    },
+    "spans/store-1548e.txt": {
+      "bytes": 811,
+      "sha256": "fffa32d7fd4f1148e292fb19dcc621ef12ab481946ebff70409d37f5ec909aca"
+    },
+    "spans/store-2b4ce.txt": {
+      "bytes": 5134,
+      "sha256": "0152464f9727011263f5d0a7d41f2bfe490361190fad311e95ab82d19a5aedfd"
+    },
+    "spans/store-31392.txt": {
+      "bytes": 1238,
+      "sha256": "ace8927a4c4e59165f4fa9216ae7c69f26111a3d87176e33d5234e9086a73d46"
+    },
+    "spans/store-392fc.txt": {
+      "bytes": 10184,
+      "sha256": "51708dc45db0ff7a57db93cabb413b188ec62a73610d6f7d6503fff614ee85e9"
+    },
+    "spans/store-5d636.txt": {
+      "bytes": 178,
+      "sha256": "6418fb8114662acb697a010eaf2ca890c691760a225ea3135ffddfa6d96f9a7d"
+    },
+    "spans/store-6ad74.txt": {
+      "bytes": 178,
+      "sha256": "3e2108525b0268e9802821d0c2f25f56e94c7320ce9bfd0fda9dc69f7c99b598"
+    },
+    "spans/store-b2c0c.txt": {
+      "bytes": 1268,
+      "sha256": "d62430028d1c1ba177e1b7ea508dbf60e7608d3a252f0646ed9601c83eda6151"
+    },
+    "spans/store-b365c.txt": {
+      "bytes": 1268,
+      "sha256": "0a18964ee554dbc65f3ead50bda51991f5fb58636160292fbb2c630c6490491a"
+    },
+    "spans/store-b4eda.txt": {
+      "bytes": 3659,
+      "sha256": "97667ed2ed15fde3494adffe6d98bd7f12a1f0c27d53bcb71ad6b18f5622c631"
+    },
+    "spans/store-c3798.txt": {
+      "bytes": 3785,
+      "sha256": "931680582c2e90450bdef89e913807e4caa9b2d57073ea1a25ee06fa88af8b1d"
+    },
+    "spans/store-c4402.txt": {
+      "bytes": 178,
+      "sha256": "7bcf5ba79300bb4c7c6434ecef3229c9c60cb21326883aa5abd5feef2c789c2a"
+    },
+    "spans/store-cd706.txt": {
+      "bytes": 537,
+      "sha256": "9a6ad91f44a8b8de17ce11cb7beffd385068d274cc9065f412ce61e9e61e8bee"
+    },
+    "spans/store-d7508.txt": {
+      "bytes": 178,
+      "sha256": "74db9dbdbc8a389a4a339438f5e10ec8eb7e830c68daf9e343a2bb06a959d7a5"
+    },
+    "spans/store-e4eb4.txt": {
+      "bytes": 1821,
+      "sha256": "1936f8844d264703e01e34ec261ae5a018391d3574d764b6bb38bd45f1512b18"
+    },
+    "spans/store-e618c.txt": {
+      "bytes": 1203,
+      "sha256": "18309f25abf4d4f8d0c818368f4c48a2b425cf83553754492f7b4f562804ed50"
+    },
+    "spans/store-e85f2.txt": {
+      "bytes": 2173,
+      "sha256": "652f43ead35c266a900b23d7c11f7d6bd5f43513dd8ab5e99cd42e34b9c9b7e3"
+    },
+    "spans/store-e8c20.txt": {
+      "bytes": 13191,
+      "sha256": "10ea061e405e7e3a229681e0647c6a9e9782fdb694e8c27dd6c7902180dda9cb"
+    },
+    "spans/store-f586a.txt": {
+      "bytes": 178,
+      "sha256": "8cb29d7ba69c70165f6f07a47e99036e01bbc60b7f6a3c254cdc07ab3ea708a3"
+    }
+  },
+  "report_sha256": "7b2ae0004d18f99a200af2c4d383716786f1e70d75a06ef88f85059bc517702f"
+}

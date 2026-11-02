@@ -1,0 +1,79 @@
+[
+  {
+    "bytes": 260,
+    "end_va_exclusive": "0x2eb00",
+    "name": "trigger-discrimination",
+    "sha256": "d0a19d543d44dc1f3e1396ba2b6fa1e5cd43cb3c1dd709c19b31d7ac276f0add",
+    "start_va": "0x2e9fc"
+  },
+  {
+    "bytes": 244,
+    "end_va_exclusive": "0x2fb40",
+    "name": "condition-discrimination",
+    "sha256": "ef45c5e56955f472fbd8c4c4e57e311c4bf43622c48fd14fd9ea2891dccd7def",
+    "start_va": "0x2fa4c"
+  },
+  {
+    "bytes": 248,
+    "end_va_exclusive": "0x30da8",
+    "name": "action-discrimination",
+    "sha256": "4c7040fdc5df7d82855f04d12f2de97f4ac110eddf36bd6bdee26efbc665bff0",
+    "start_va": "0x30cb0"
+  },
+  {
+    "bytes": 134,
+    "end_va_exclusive": "0x30eba",
+    "name": "action-cleanup-and-advance",
+    "sha256": "9ae8bd50f5f727e46f217733f6127b59d98db873259d4ee3dc99afe44296f490",
+    "start_va": "0x30e34"
+  },
+  {
+    "bytes": 160,
+    "end_va_exclusive": "0x314a6",
+    "name": "selected-scenario-and-sleep",
+    "sha256": "6f8704d1de0bbae777ba8eb7064eea7c164d343570703acd86def4c1d0d98009",
+    "start_va": "0x31406"
+  },
+  {
+    "bytes": 292,
+    "end_va_exclusive": "0x2b0b4",
+    "name": "base-action-json",
+    "sha256": "6fb9359011f009c67216062f7107c4a12e10244746bac238cac424a191fbd7fc",
+    "start_va": "0x2af90"
+  },
+  {
+    "bytes": 200,
+    "end_va_exclusive": "0x2e274",
+    "name": "base-action-copy",
+    "sha256": "96ef3014aff5f44644159d86100dd72d91cd6d0af66d64ec2be1373107aaaa11",
+    "start_va": "0x2e1ac"
+  },
+  {
+    "bytes": 36,
+    "end_va_exclusive": "0x30cb0",
+    "name": "pointer-vector-append",
+    "sha256": "c6470c98cc99e2181c78823a6ac1c1905d40efa8557f311f723fd384f8a2cb0f",
+    "start_va": "0x30c8c"
+  },
+  {
+    "bytes": 20,
+    "end_va_exclusive": "0x2f644",
+    "name": "trigger-pools",
+    "sha256": "c93cc5c76349ef691af5bb526c51afea284e01c7c14dc9bc95f60c33bb9e6c85",
+    "start_va": "0x2f630"
+  },
+  {
+    "bytes": 20,
+    "end_va_exclusive": "0x306b4",
+    "name": "condition-pools",
+    "sha256": "3cabeb9747ae5a73b1727baef87582c05972baf25f7d30d5da90d7f27b766c1f",
+    "start_va": "0x306a0"
+  },
+  {
+    "bytes": 156,
+    "end_va_exclusive": "0x319ec",
+    "name": "action-pools",
+    "sha256": "d5fb00aa29fb697895c3efa22ecdf2ff5bd9ec4f25c531c36e53256b772de580",
+    "start_va": "0x31950"
+  }
+]

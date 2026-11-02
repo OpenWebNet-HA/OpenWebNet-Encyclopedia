@@ -1,0 +1,9 @@
+# Concrete TIME trigger to condition/action caller
+
+The selected original raw TIME trigger becomes a compiled TimeTriggerRunner inside an owned112-byte allocation. Its captured scene callback, compiled trigger vector and dedicated TimeTriggersService registration are now connected. The original service worker has a deadline-qualified virtual firing route to the trigger's enabled/day gate, then the scene's normal enabled/active launch entry.
+
+Two registered weekday-map producers supply the same seven key/bit pairs to distinct condition/trigger globals. Combined with the ordinary tm weekday ABI and the raw serializer's bits6..0, the normalized seven-character days form is Monday through Sunday. Original clock conversion/arithmetic distinguishes local calendar preparation, a bounded firing-window check and a fixed86,400-second-scale deadline increment from an actual timezone/DST/timing guarantee.
+
+The concrete TIME condition is separately traced through factory/serialization/reparse/200-byte compiled object/predicate slot. Disabled bypass, day mask, equal-boundary true and strict distinct-boundary comparisons are source facts. The generic caller requires every selected predicate to be nonzero before reaching the action worker; first-zero cleanup clears scene active/stop bytes. Empty condition ranges reach action continuation.
+
+Three author scopes remain distinct. Original/vendor/SQL/JSON/scene/clock/thread/timer/service/network/bus/physical execution is0. The condition author supplies13 finite host branch/prefix cases; no configured scene/tree/clock/API success is injected. Previous original execution ledgers remain unchanged. Full parsing/provider/error/ordering/lifetime/concurrency, natural installed contexts/registries, timezone/DST and physical outcomes remain unresolved.

@@ -1,0 +1,11 @@
+# Examined scope and explicit gaps
+
+| Area | New bounded closure | Remaining boundary |
+| --- | --- | --- |
+| SLEEP | Original compiled constructor/move/vtable, separate metadata/operational fields, captured start callable, nanosleep request/retry, exact packaged32-bit libc wrapper | Accepted scenes/uint range, effective binding, signal/thread cancellation, elapsed timing and full ownership |
+| Shared runner | Execute branches, operational waits, completion getter/stores, shared mutex/CV/stop addressing and registered startup zero, original clock conversion and scaling | Naturally produced operational duration, later reset/aliases, complete provider/error/unwind/reentrancy/concurrency and actual stop outcomes |
+| SCENARIO | Compiled100-byte object, captured ID/context, conditional ordered-tree lookup/handle retrieval and normal target launch | Registry population/source identity, target validity/condition state, expired/error handles, recursion policy and actual target execution |
+
+Three collectors reproduce63 deterministic outputs (19SLEEP,24common,20SCENARIO). There are15 finite common host cases, zero original execution, zero supplied scene/tree/clock objects and no imported API-success primitives. Counts are reproduction/navigation scope, not whole-firmware coverage. External Linux API documentation supplies semantic context; it is separate from exact packaged source and target ABI/normal-return premises.
+
+Prior reports, source inputs, images/databases and completed dossiers remain read-only. The original factory page receives one continuation crosslink after an exact pre-edit copy. Full-source/Device review and physical/product support remain pending. Configured extra0 scene assets and missing extras80/81/94/95 cannot be invented. Closed authentication/session/framing/equivalent routes remain closed.

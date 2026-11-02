@@ -1,0 +1,145 @@
+#!/usr/bin/env python3
+"""One F453AV normal-image local module request. Header/text metadata only; never target code."""
+import sys
+sys.dont_write_bytecode=True
+import argparse
+import hashlib
+import json
+import re
+import struct
+from pathlib import Path
+
+HERE=Path(__file__).resolve().parent
+ROOT=next(p for p in HERE.parents if(p/'work/f453av-firmware').is_dir())
+BASE=Path('work/f453av-firmware/3.0.14')
+MODULE='lib/modules/2.4.19-rmk7-pxa2-btweb/kernel/drivers/video/tvia5202/tviafb.o'
+
+
+def sha(b):return hashlib.sha256(b).hexdigest()
+def enc(v):return(json.dumps(v,indent=2,sort_keys=True)+'\n').encode()
+def exclusive(p,b):
+ p.parent.mkdir(parents=True,exist_ok=True)
+ with p.open('xb')as f:f.write(b)
+
+
+def build():
+ pins={}
+ def read(p):
+  p=Path(p);f=ROOT/p;assert not p.is_absolute()and '..'not in p.parts and f.is_file()and not f.is_symlink()
+  assert ROOT in f.resolve().parents
+  b=f.read_bytes();pins[str(p)]={'path':str(p),'bytes':len(b),'sha256':sha(b)};return b
+ mans={c:json.loads(read(BASE/'analysis'/f'{c}-regular-files.json'))for c in ['normal','recovery','application']}
+ def original(c,name):
+  tree={'normal':'rootfs','recovery':'recovery','application':'application'}[c]
+  b=read(BASE/'analysis'/tree/name);row=mans[c][name];assert len(b)==row['bytes']and sha(b)==row['sha256'];return b
+ def source(c,name,nums):
+  b=original(c,name);ls=b.decode().splitlines();return{'component':c,'path':str(BASE/'analysis'/('rootfs'if c=='normal'else c)/name),'sha256':sha(b),'lines':[{'line':n,'text':ls[n-1]}for n in nums]}
+ init=original('normal','sbin/init');assert sha(init)=='0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb'
+ initlines=init.decode().splitlines();assert initlines[0]=='#!/bin/ettclsh'
+ assert initlines[120]=='foreach n [lsort [glob -nocomplain /etc/applications/*]] {'
+ assert initlines[121]=='    if ![file isfile $n] continue; # skip directories'
+ assert initlines[122]=='    if ![sys_fork] {' and initlines[125].strip()=='source $n; exit'
+ script=original('normal','etc/applications/bt_fb.tcl')
+ expected=['puts "INSMOD TVIA"','if ![sys_fork] {',f'  sys_exec /sbin/insmod /{MODULE}','}','sys_wait']
+ assert script.decode().splitlines()==expected
+ safe={'scope':'Actual normal-image text request under interpreter/fork/exec/file/normal-return premises; no execution',
+       'inherited_init_loop_context':source('normal','sbin/init',[1,120,121,122,123,124,125,126,127,128,129,130]),
+       'new_script_body':source('normal','etc/applications/bt_fb.tcl',[1,2,3,4,5]),
+       'argument_contract':{'callee_path':'/sbin/insmod','first_argument':'/'+MODULE,'child_condition':'sys_fork result is logically false under normal Tcl semantics','following_request':'sys_wait after child branch','status_limit':'No captured/tested sys_wait or sys_exec result in this five-line body; successful replacement/nonreturn remains a provider premise'},
+       'limits':['No actual startup selection or interpreter execution','No source body of insmod or module inspected','No driver loading, device/connector identity, output/physical capability or readiness','No ordering/completion relation with separately forked bt_start application']}
+ def elf(c,name):
+  b=original(c,name);assert b[:8]==bytes.fromhex('7f454c4601010161')
+  h=struct.unpack_from('<HHIIIIIHHHHHH',b,16);assert h[1]==40 and h[7]==52
+  result={'component':c,'path':str(BASE/'analysis'/('rootfs'if c=='normal'else c)/name),'sha256':sha(b),'bytes':len(b),
+          'header52_hex':b[:52].hex(),'class':32,'endian':'little','machine':40,'type':h[0],'entry_word':hex(h[3]),'flags':hex(h[6]),'program_header_count':h[9]}
+  return b,h,result
+ eb,eh,interp=elf('normal','bin/ettclsh');ib,ih,loader=elf('normal','sbin/insmod');mb,mh,module=elf('normal',MODULE)
+ assert ih[0]==2 and ih[6]==2 and mh[0]==1 and mh[6]==0x200 and mh[9]==0 and mh[3]==0
+ assert mh[10]==40
+ sections=[struct.unpack_from('<10I',mb,mh[5]+i*mh[10])for i in range(mh[11])]
+ sn=sections[mh[12]];names=mb[sn[4]:sn[4]+sn[5]]
+ def name(o):return names[o:names.index(b'\0',o)].decode()
+ named=[{'name':name(s[0]),'type':s[1],'file_offset':s[4],'bytes':s[5],'entry_size':s[9],'link':s[6],'address_word':hex(s[3])}for s in sections]
+ mod=[s for s in named if s['name']=='.modinfo'];assert len(mod)==1
+ s=mod[0];raw=mb[s['file_offset']:s['file_offset']+s['bytes']]
+ target=b'kernel_version=2.4.19-rmk7-pxa2-btweb-2_3_8';at=raw.find(target+b'\0');assert at>=0
+ metadata={'section':s,'field':'kernel_version','value':target.decode().split('=',1)[1],
+           'file_offset':s['file_offset']+at,'bytes_including_NUL':len(target)+1,'exact_hex':(target+b'\0').hex(),
+           'scope':'Original .modinfo literal only; neither directory label nor this declaration proves the booted kernel or module ABI acceptance'}
+ syms=[]
+ for sh in sections:
+  if sh[1]!=2:continue
+  assert sh[9]==16;strsec=sections[sh[6]];st=mb[strsec[4]:strsec[4]+strsec[5]]
+  for off in range(sh[4],sh[4]+sh[5],16):
+   no,val,size,info,other,idx=struct.unpack_from('<IIIBBH',mb,off);z=st[no:st.index(b'\0',no)].decode()
+   if z in ['init_module','cleanup_module']:
+    syms.append({'name':z,'value_word':hex(val),'size':size,'binding':info>>4,'type':info&15,'section_index':idx,'symbol_file_offset':off})
+ assert {x['name']for x in syms}=={'init_module','cleanup_module'}
+ module['selected_symbols']=syms;module['modinfo_kernel_version']=metadata
+ compare=[]
+ for n in ['sbin/init','etc/applications/bt_fb.tcl','sbin/insmod',MODULE]:
+  a=original('normal',n);z=original('recovery',n)
+  compare.append({'path':n,'normal':{'bytes':len(a),'sha256':sha(a)},'recovery':{'bytes':len(z),'sha256':sha(z)},'equal_bytes':a==z})
+ assert [x['equal_bytes']for x in compare]==[True,False,True,True]
+ assert 'etc/applications/bt_fb.tcl'not in mans['application']and MODULE not in mans['application']
+ prior=read('work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration/REPORT.md')
+ role=read('OpenWebNet-Encyclopedia/devices/definitions/own-dev-0089-webserver-audio-video-din.md')
+ report='''# F453AV 3.0.14 night02 — original startup script to a packaged module request
+
+This distinct F453AV result connects the previously identified local init application-source loop to **its own normal-image bt_fb.tcl** and that script's exact `/sbin/insmod` argument. The named module exists as a separately verified original ARM relocatable object, with a whitelisted .modinfo kernel-version declaration. This is a positive local caller/resource/argument chain, not an observed driver load, video/output capability, selected hardware, readiness, installation or whole startup ordering. No MH200N marker/copy logic or other-product layout is transferred.
+
+All original/vendor/provider/native/target/module execution, target OS/device/network/bus calls, mounts, clocks, SQL, semantic models and fixtures are0. No script is sourced, insmod invoked, module linked/relocated or runtime path inspected. Interpreter, fork/exec/wait and module-loader implementations remain opaque.
+
+## Own source and exact selected caller
+
+Normal `/sbin/init` SHA256 `0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb` names `/bin/ettclsh` in its line1 shebang. Its original lines120–130 enumerate sorted `/etc/applications/*`, skip nonregular entries, request sys_fork and source the selected file in the false-result child branch. This is inherited caller context re-pinned for this particular file, not a new reconstruction of all init semantics. Valid ordinary interpreter/helper ABI, file/provider results and actually reaching that loop remain premises; no kernel/init activation occurred.
+
+Normal `etc/applications/bt_fb.tcl` is146 bytes/SHA256 `a16df5cbf1e40029f2385f7cfdce1d6f11c1221ddd3870a8caca979b0daa80b4`. Its **entire five-line body** is retained as safe source in STARTUP.json: line2 requests sys_fork; under the logically false child result, line3 requests `/sbin/insmod` with exactly `/lib/modules/2.4.19-rmk7-pxa2-btweb/kernel/drivers/video/tvia5202/tviafb.o`; line5 requests sys_wait. The body does not capture/test an exec/wait machine result. No provider success, fork scheduling, wait-status meaning or actual child replacement/nonreturn is presumed.
+
+The init parent branch continues its directory loop separately. Neither sorted source iteration nor this script's later wait establishes an initialization/completion dependency with the separately forked bt_start application. No readiness or video/answering-machine availability follows. The module path/component names are software file identities, not an electrical connector, bus, active driver or public protocol mapping.
+
+## Fresh original program and module metadata
+
+The original normal `/sbin/insmod` file is96972 bytes/SHA256 `26f1bbdf39a42fcf310190c1d5e3bc66de896b6bdb61033e24c6d5acb5c3859c`. Fresh first52 bytes identify ELF32 little-endian ARM EXEC(machine40), raw flags0x2. It is an actual retained regular file; no host symlink or guessed executable provider is substituted. Its main/argument parser and operating-system/module-loading body are not inspected or executed here. `/bin/ettclsh` is separately hash/header-pinned as the declared script interpreter, not a proof of interpreter/helper success.
+
+The exact requested tviafb.o is143523 bytes/SHA256 `7fc425cc40afba681917e5bbdb836fedba7fe4747efbbc6fd298d2d287f45066`. Its own ELF header is32-bit little-endian ARM **REL**, raw flags0x200, entry word0 and no program headers. It is not treated as a directly executable process or given a fabricated runtime load address. MODULE.json parses only original section/symbol metadata: the actual .modinfo section and selected init_module/cleanup_module declarations are file/section-relative facts, not original function execution or loader control-flow proof. No module implementation, register/pin/device I/O, output or rendering body is expanded.
+
+One exact whitelisted .modinfo string declares **kernel_version=2.4.19-rmk7-pxa2-btweb-2_3_8**. Its section bounds/file offset/bytes are retained. The script directory label is `2.4.19-rmk7-pxa2-btweb`; these two named metadata forms remain separate. Neither certifies the kernel actually booted, acceptable symbol versions, successful relocation, available provider dependency closure, active driver or physical hardware. The earlier Info_Rel component release fields are not substituted for a measured Linux kernel.
+
+## Separate views, preservation and limits
+
+Normal and recovery `/sbin/init`, `/sbin/insmod` and the named module are byte-identical in their own verified manifests. **The recovery bt_fb.tcl differs** (477 bytes versus normal146); its body is not examined or assigned the normal script's semantics by this packet. The separate application bundle's regular manifest contains neither this script path nor the named module path; this is a bounded manifest fact, not runtime absence, an installed overlay or all-path/alias census. COMPARISONS.json retains exact file identities. No actual composition or normal/recovery configuration equivalence is inferred.
+
+Curated OWN-DEV-0089 supplies F453AV Audio/Video DIN context only. The prior consolidated first pass remains unchanged; this packet adds this one newly read script/resource chain, not a repeated inventory, protocol/support count or transferred MH200N/MH202/F454/MHS behavior. No credential, key, private identifier, runtime file value, full configuration, broad module string dump or boot environment is exported.
+
+Reproduce `python3 -B collect_resources_v1.py --check`: host byte/header/section/symbol/text parsing only, with no external tools or old collectors invoked. Initial generation is exclusive; immediate exact first copies include report/collector/outputs, and their index bytes are computed before opening the index file. No failed canonical generation or generated overwrite occurred. All originals/old dossiers/ledgers/repository/source registry and remote records are unchanged.
+
+The next useful question is a separately bounded permitted original module-loader/provider acceptance or actual application readiness dependency, rather than guessing behavior from the path or script names. No data file/database was recovered or synthesized. Output/receiving/transport/authentication/session/framing/MQTT/libjel and equivalent closed implementations remain opaque, as do platform command fallbacks and uncertain process consumers. All new original execution remains0.
+'''
+ data={'STARTUP.json':safe,'MODULE.json':{'scope':'Headers/one whitelisted metadata field/two symbol declarations only, no code bodies','program_ELF_headers':[interp,loader],'module':module},
+       'COMPARISONS.json':{'scope':'Own manifest/bytes only; recovery script body and application composition unexamined','files':compare,'application_regular_manifest_has_script':False,'application_regular_manifest_has_module':False},
+       'INPUTS.json':{'files':sorted(pins.values(),key=lambda x:x['path'])}}
+ out={n:enc(v)for n,v in data.items()};out['REPORT.md']=report.encode()
+ out['OUTPUT_MANIFEST.json']=enc({'scope':'Generated members excluding manifest itself','files':{n:{'bytes':len(v),'sha256':sha(v)}for n,v in sorted(out.items())}})
+ return out
+
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args()
+ names=['STARTUP.json','MODULE.json','COMPARISONS.json','INPUTS.json','REPORT.md','OUTPUT_MANIFEST.json']
+ if not a.check:assert not any((HERE/n).exists()for n in names)and not(HERE/'first-candidate').exists()
+ out=build()
+ if a.check:
+  for n,b in out.items():assert(HERE/n).read_bytes()==b,n
+  for x in json.loads((HERE/'first-candidate/INDEX.json').read_text())['files']:
+   b=(HERE/'first-candidate'/x['copy']).read_bytes();assert len(b)==x['bytes']and sha(b)==x['sha256']and b==(HERE/x['copy']).read_bytes()
+ else:
+  for n,b in out.items():exclusive(HERE/n,b)
+  copies={**out,'collect_resources_v1.py':Path(__file__).read_bytes()};idx={'scope':'Exact first outputs/collector; index excludes itself','files':[{'copy':n,'bytes':len(b),'sha256':sha(b)}for n,b in sorted(copies.items())]}
+  p=HERE/'first-candidate';p.mkdir()
+  for n,b in copies.items():exclusive(p/n,b)
+  exclusive(p/'INDEX.json',enc(idx))
+ print(json.dumps({'status':'PASS','outputs':len(out),'new_script_lines':5,'original_execution':0}))
+
+
+if __name__=='__main__':main()

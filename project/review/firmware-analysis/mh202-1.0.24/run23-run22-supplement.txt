@@ -1,0 +1,10 @@
+# Reviewed run22 supplement to the frozen through21 view
+
+The original24rows and source identities remain untouched in reconciliation/run22. This linked supplement contains only2reviewed run22 findings. It adds no original execution/tests and is not a complete claim-register or semantic re-audit.
+
+| New row | Frozen row refined | Bounded addition | Evidence | Remaining boundary |
+|---|---|---|---|---|
+|MH22-S01|MH21-13|Exact WHO5 empty-WHERE and WHO22 parameterized actual parser objects serialize back to their supplied strings under explicit private models; original GLib foreach and parameter callbacks execute.|[Report](../../../protocol/run22/REPORT.md),line5; [review](../../../reviews/run22/protocol-review.md)|Selected local roundtrips only. No plugins/core/STM/bus admission/publication/physical meaning or general allocator safety; source object/lifetime guards are bounded.|
+|MH22-S02|MH21-16|Main manager callback, register_field_bus initializer argument and private tuple stores conditionally identify field_receive and declared SCS/SCSAI descriptor values.|[Report](../../../alarm/run22/REPORT.md),line5; [review](../../../reviews/run22/alarm-review.md)|Actual same-private userdata activation, active descriptor/provider/source state, raw admission and publication remain unclosed; excluded transport/session/auth/framing internals were not investigated.|
+
+Exact current report/review hashes, locator text and inherited base pins are in RUN22_FINDINGS_SUPPLEMENT.json. Old through21 statements remain historical, including their earlier unclosed serializer/callback boundaries; the supplement narrows only the reviewed22 parts. Current canonical counts come from checkpoint22 (14corpora), not the through21 baseline.

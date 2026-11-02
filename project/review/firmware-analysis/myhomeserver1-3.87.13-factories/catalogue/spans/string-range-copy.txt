@@ -1,0 +1,69 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00095384:
+   95384:	b570      	push	{r4, r5, r6, lr}
+   95386:	4614      	mov	r4, r2
+   95388:	3a00      	subs	r2, #0
+   9538a:	460e      	mov	r6, r1
+   9538c:	bf18      	it	ne
+   9538e:	2201      	movne	r2, #1
+   95390:	2900      	cmp	r1, #0
+   95392:	491e      	ldr	r1, [pc, #120]	@ (9540c)
+   95394:	bf18      	it	ne
+   95396:	2200      	movne	r2, #0
+   95398:	4b1d      	ldr	r3, [pc, #116]	@ (95410)
+   9539a:	b082      	sub	sp, #8
+   9539c:	4479      	add	r1, pc
+   9539e:	58cb      	ldr	r3, [r1, r3]
+   953a0:	681b      	ldr	r3, [r3, #0]
+   953a2:	9301      	str	r3, [sp, #4]
+   953a4:	f04f 0300 	mov.w	r3, #0
+   953a8:	bb62      	cbnz	r2, 95404
+   953aa:	1ba4      	subs	r4, r4, r6
+   953ac:	4605      	mov	r5, r0
+   953ae:	2c0f      	cmp	r4, #15
+   953b0:	9400      	str	r4, [sp, #0]
+   953b2:	d818      	bhi.n	953e6
+   953b4:	2c01      	cmp	r4, #1
+   953b6:	6800      	ldr	r0, [r0, #0]
+   953b8:	d112      	bne.n	953e0
+   953ba:	7833      	ldrb	r3, [r6, #0]
+   953bc:	7003      	strb	r3, [r0, #0]
+   953be:	9c00      	ldr	r4, [sp, #0]
+   953c0:	6828      	ldr	r0, [r5, #0]
+   953c2:	2300      	movs	r3, #0
+   953c4:	4a13      	ldr	r2, [pc, #76]	@ (95414)
+   953c6:	606c      	str	r4, [r5, #4]
+   953c8:	5503      	strb	r3, [r0, r4]
+   953ca:	4b11      	ldr	r3, [pc, #68]	@ (95410)
+   953cc:	447a      	add	r2, pc
+   953ce:	58d3      	ldr	r3, [r2, r3]
+   953d0:	681a      	ldr	r2, [r3, #0]
+   953d2:	9b01      	ldr	r3, [sp, #4]
+   953d4:	405a      	eors	r2, r3
+   953d6:	f04f 0300 	mov.w	r3, #0
+   953da:	d111      	bne.n	95400
+   953dc:	b002      	add	sp, #8
+   953de:	bd70      	pop	{r4, r5, r6, pc}
+   953e0:	2c00      	cmp	r4, #0
+   953e2:	d0ee      	beq.n	953c2
+   953e4:	e005      	b.n	953f2
+   953e6:	4669      	mov	r1, sp
+   953e8:	f77a ef1a 	blx	10220 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERjj@plt>
+   953ec:	9b00      	ldr	r3, [sp, #0]
+   953ee:	6028      	str	r0, [r5, #0]
+   953f0:	60ab      	str	r3, [r5, #8]
+   953f2:	4622      	mov	r2, r4
+   953f4:	4631      	mov	r1, r6
+   953f6:	f77a ee1e 	blx	10034 <memcpy@plt>
+   953fa:	9c00      	ldr	r4, [sp, #0]
+   953fc:	6828      	ldr	r0, [r5, #0]
+   953fe:	e7e0      	b.n	953c2
+   95400:	f77a ec3c 	blx	fc7c <__stack_chk_fail@plt>
+   95404:	4804      	ldr	r0, [pc, #16]	@ (95418)
+   95406:	4478      	add	r0, pc
+   95408:	f77a ea9a 	blx	f940 <_ZSt19__throw_logic_errorPKc@plt>

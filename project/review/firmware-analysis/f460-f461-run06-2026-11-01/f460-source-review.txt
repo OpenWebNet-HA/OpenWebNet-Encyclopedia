@@ -1,0 +1,38 @@
+# Independent F460 run06 BNIL source review
+
+PASS within the raw/compiled/caller/local-handler source scope, with the caller precision below. No author correction requested or made. I authored the separate F461 address packet; this review independently checks original F460 AArch64 bytes/layouts, not older MHS fields or public command meanings. No native/provider/vendor/JSON/SQL or target operation was executed.
+
+Original scheduler SHA5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62 and own PT_LOAD mapping agree. Independently verified18 retained raw spans/hashes,54 guarded words,3 raw/temporary/compiled RTTI groups, the two distinct table entries and11 direct calls/6 import bindings. Raw row1 is BNIL length4; factory decrement and own table entry select its source block. The final56-byte raw object's AP2141a0 slot+16 is48bd0, distinct from destructor slots and temporary BaseBnilTrigger AP214168. Initializer uses that actual slot with hidden X8=SP976 and reparses the same address into its actual temporary; full serialization/provider/value coherence remains unclosed.
+
+Fresh constructor copies raw enabled40 to compiled80, raw type/operator44/48 to84/88 and status52 to92. The112-byte aggregate has its96-byte inner at allocation+16; these are neither the raw layout nor older ARM32 control/inner offsets. Source callback construction copies the supplied initializer receiver pointer with managerf6cb0 operation2. Actual primary method and invokerf7ac0 reach the local f7650 receiver handoff, whose body stays opaque. No proof identifies that supplied receiver as an actual configured SceneRunner, shared owner, successful scene activation or physical operation.
+
+Original handler15dda0 has enabled/length/byte guards and recognizes exact on/off/noStatus. Its temporary integers1/2/0 are decremented to0/1/all-one32 respectively. Actual operator88=2 compares configured92 for equality before callback; operator3 admits inequality. Other operator words reach callback after recognized state, but are not promoted to valid external grammar. No edge, history, deduplication or bus-state interpretation follows.
+
+The local caller's requested dynamic_cast is established by its actual import and RTTI arguments, followed by method/ID comparisons and actual BL847e0 to15dda0. Precise qualification: successful cast and valid result are supplied-object premises, NOT a proved post-cast nonnull branch. In retained source8479c..847b8 the result is assigned toX27 and dereferenced before such a null test. This is not a runtime failure/defect finding: no naturally failing cast, bad object or input was supplied or executed. The author's pointer-validity premises apply.
+
+There is an additional actual identity guard before ID comparison:847ac loads the secondary vtable from compiled+40,847b0 loads that table's slot+24,847b4 compares it with retainedX22 and847b8 branches on inequality. This expected pointer's upstream identity remains a premise. Only then are compiled ID pointer/length48/56 passed to the equality helper and tested; same-byte/same-length under ordinary memcmp semantics is source-backed. Handler inputX1=X25+16 is a provided string object whose record origin, type, outer admission and lifetime remain open. Thus the summary should say cast request plus valid-result/method-identity/ID premises, not an observed successful cast or a guarded null-check.
+
+Read-only host collector --check passes21 outputs. Independently verified4 input pins and23 exact first-candidate copies. No failed generated output or overwritten author candidate is claimed. New execution, semantic fixtures/models and physical evidence0; prior ledgers unchanged. Receiving, transport, authentication, session, framing, MQTT/libjel and equivalent closed bodies were not followed.
+
+## Exact caller precision words
+
+- VA`0x8479c` original little-endian bytes`fb0300aa`.
+- VA`0x847a8` original little-endian bytes`60a30091`.
+- VA`0x847ac` original little-endian bytes`611740f9`.
+- VA`0x847b0` original little-endian bytes`210c40f9`.
+- VA`0x847b4` original little-endian bytes`3f0016eb`.
+- VA`0x847b8` original little-endian bytes`a16b0054`.
+- VA`0x847bc` original little-endian bytes`63c30091`.
+- VA`0x847d0` original little-endian bytes`1f1c0072`.
+- VA`0x847d4` original little-endian bytes`6078ff54`.
+
+These bytes are already inside the author's selected-local-caller span; this review adds interpretation precision, not a changed source outcome or repaired candidate.
+
+## Exact reviewed pins
+
+- `REPORT.md`: `06435e577532e42b000a89b5cb7125faea507da85d8a79f791e9aae6f120157f`
+- `collect_trigger_v1.py`: `c26356cf414b3258695bee028bf5e29d12d03bac9d9ecb140526b693558ab8de`
+- `SOURCE.json`: `0d6c9d1b70750c8cea171badf7eda8ccfe940f9d02b186f1e9fc2275c57a24bc`
+- `INPUTS.json`: `4cab388887ab2dfb5328316d20c808d2341ce783a78a07b3a1434bd474ddeb81`
+- `OUTPUT_MANIFEST.json`: `b6206fafa8eaa76a9a9ed96c51cc953b39d27560266c88629339b1c92f6a1e49`
+- `first-candidate/INDEX.json`: `444ba5ca6430aadbbd9724497b8a84393b991bb22643ea1043d0a84b9eb0cb83`

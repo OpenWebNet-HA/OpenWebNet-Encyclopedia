@@ -1,0 +1,27 @@
+
+/home/bticino/libcoso/libplug_automation_tr.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000004404 <automation_tr_translate@@Base+0x9d4>:
+    4404:	f100033f 	cmp	x25, #0x0
+    4408:	d000001b 	adrp	x27, 6000 <automation_tr_translate@@Base+0x25d0>
+    440c:	9100e37b 	add	x27, x27, #0x38
+    4410:	9108a081 	add	x1, x4, #0x228
+    4414:	9a99037b 	csel	x27, x27, x25, eq	// eq = none
+    4418:	aa1903e0 	mov	x0, x25
+    441c:	97fff709 	bl	2040 <g_strcmp0@plt>
+    4420:	7100001f 	cmp	w0, #0x0
+    4424:	f9403be0 	ldr	x0, [sp, #112]
+    4428:	7a400a84 	ccmp	w20, #0x0, #0x4, eq	// eq = none
+    442c:	aa1b03e2 	mov	x2, x27
+    4430:	9103e003 	add	x3, x0, #0xf8
+    4434:	d0000000 	adrp	x0, 6000 <automation_tr_translate@@Base+0x25d0>
+    4438:	91072000 	add	x0, x0, #0x1c8
+    443c:	9a831003 	csel	x3, x0, x3, ne	// ne = any
+    4440:	aa1803e0 	mov	x0, x24
+    4444:	d0000001 	adrp	x1, 6000 <automation_tr_translate@@Base+0x25d0>
+    4448:	911b4021 	add	x1, x1, #0x6d0
+    444c:	97fff6ed 	bl	2000 <g_string_append_printf@plt>
+    4450:	17ffff3a 	b	4138 <automation_tr_translate@@Base+0x708>

@@ -1,0 +1,7 @@
+# Run11 dual-analysis synthesis
+
+F460 has one positive local method relation: providedreceiver→releasebyte248=1→same216/224 range→16Bentry firstpointer primaryslot8 requests. Its incoming caller, receiver class and natural invocation remain unqualified. Only IF it receives the same valid scene object does this supply the earlier scene-byte producer; matching offsets are not an object-identity proof. The bounded locator did not close a caller and supports no global absence/dead-code conclusion. Virtual/provider effects, public cancellation, ownership and whole policy remain open.
+
+F461 closes a concrete main-selection/argument/copy premise: original option destinations and parse request; supplied configfilename versus relativedefault; successful file-load branch; nonnull CLI directory pointers suppress corresponding file-key requests; stillNULL plugin-directory slot requests config-parent fallback. Same M+16 holder initializer copies two distinct directory fields and register requests use same M. Actual commandline/currentdirectory/file contents/providers/binding/modules/readiness remain unobserved. Only3 safe packaged lines exported.
+
+Both source first generations and parent static checks pass, with immediate exact candidates and no correction/overwrite. Source peers and documentary review are separate bounded checks. All new original/native/provider/emulator/model/fixture/SQL/JSON/file/service/runtime/physical execution zero; earlier histories and separate ledgers unchanged. Full Device/source gates pending.

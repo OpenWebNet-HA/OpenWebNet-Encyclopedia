@@ -1,0 +1,33 @@
+# MH200N 1.1.8 night03 — actual local resource read and first-token gates
+
+This packet follows the prior source-selected resource pointer into its **actual local consumer0xa1dc**. The bounded new result is provided pathname→open request→same-return/same-buffer read request→first two token-presence gates and selected numeric returns. It does not recover or execute a resource, prove its complete grammar, copy/install an application, identify a live partition or establish startup success. All original/vendor/provider/native/target/OS/device/network/bus operations, mounts, clocks, SQL, semantic models and fixtures are0.
+
+## Exact source and inherited caller boundary
+
+Original MH200N1.1.8 normal `/bin/bt_start`,36080 bytes/SHA256 `63c0b0a9b6f67e6564f23f5ffcf18c3716bc27dc9b0b03009324af0fa0a21d48`, is freshly mapped ELF32 little-endian ARM EXEC, raw flags0x202. Exact original PT_LOADs, code/PLT bytes, words and relocation identities are retained. No modern ARM/MHS/MH202 layout, script language or provider implementation is transferred. Curated OWN-DEV-0131 supplies scenario-programmer product context only.
+
+The unchanged night01 source already proves a selected later main fragment loads the resource-path cell intoR0 and calls0xa3ec. Its bounded prefix retains thatR0, supplies two zero-initialized local output-word addresses inR1/R2 and calls0xa1dc at0xa424. That caller span is re-pinned as **inherited context**, not repeated marker/cell coverage. The earlier/later main admission, actually chosen resource path, no relevant mutation/aliases, valid provided addresses, callee-save ABI and normal returns remain premises. F453AV's separate module request is not used to infer this consumer's behavior.
+
+## Actual pathname, descriptor-return and buffer arguments
+
+Entry0xa1dc saves suppliedR0 inR4 at0xa1e4, suppliedR1 inR8 and suppliedR2 inR7, then allocates1024 stack bytes at0xa1f8. A selected diagnostic path remains an opaque normal-return prerequisite; it does not become a readiness result or data observation.
+
+At0xa21c the consumer reloads the SAME provided pathname intoR0, setsR1=0 and requests actual **open@GLIBC_2.0** at0xa224. Its returned machine word is retained inR6 at0xa22c. The source requests **memset(bufferSP,0,1024)** at0xa238, then **read(savedR6,sameSPbuffer,1024)** at0xa248. Exact register assignments establish the argument chain; no file/device open or read is performed by this analysis.
+
+Within this selected prefix there is **no explicit test of the open or read machine result before the later token requests**. This is a bounded source fact, not a global failure-policy or defect claim. A valid descriptor, usable/terminated buffer, appropriate actual data and normal provider semantics are not supplied by the source request alone. Zeroing before a possible1024-byte read is not promoted into an unconditional C-string, complete read, valid resource or safety guarantee. No arbitrary data fixture is injected.
+
+## Same-buffer tokenizer and exact selected returns
+
+The consumer retains the sameSP buffer pointer inR4 at0xa254, supplies it asR0 at0xa278, and loads literal **`*`** through pool0xa3c4→0xe488 intoR1. The original two bytes are2a00.0xa280 requests **strtok@GLIBC_2.0**. CMP0 at0xa284 followed by ADDEQ R0,R0,#1 and BEQ0xa28c selects numeric**1** through common epilogue0xa3a8 when the first request returnsNULL.
+
+On the nonnull selected continuation,0xa290 setsR0=0, reloads the SAME delimiter and0xa298 requests strtok again. CMP0/ADDEQ #2/BEQ at0xa29c..0xa2a4 select numeric**2** through the SAME epilogue when that request returnsNULL. Under ordinary strtok continuation semantics this is the next token request. These are local machine-return codes, not OS errors, child exits, application modes or public protocol statuses.
+
+The epilogue0xa3a8 restores the1024-byte allocation then returns saved registers/PC. The nonnull second-token continuation and all subsequent token-field stores, full resource format/validation, output values, complete cleanup and successful-return semantics remain **unexamined**. No token content, key, private configuration, resource body or later diagnostic string is exported. The inspected prefix does not establish raw protocol acceptance, script compilation, archive compatibility or installation.
+
+## Actual imports, evidence and reproducibility
+
+The four calls are connected to actual original ARM PLT/GOT/JUMP_SLOT identities for open/memset/read/strtok, not nearest disassembler names. Effective binding and ordinary ARM32 call/provider conventions remain premises; provider bodies, target OS behavior and actual access outcomes remain opaque. SOURCE.json supplies8 exact spans (including one inherited caller context),33 fixed word guards,6 direct-call targets, two selected branch targets, delimiter bytes/pool and4 original import proofs. ARGUMENT_FLOW.json keeps provided arguments, buffer and numeric-return namespaces distinct.
+
+Reproduce with `python3 -B collect_consumer_v1.py --check`: host readelf/disassembly/hash/byte verification only. It never executes original/provider/emulator code or reads a target/host device path. Initial output generation refuses overwrites and freezes exact report/collector/outputs immediately, with an index precomputed before opening itself. No failed canonical generation or generated overwrite occurred. Earlier reports/source trees/ledgers and public/source-registry/repository/remote records remain unchanged.
+
+The next permitted gap is a separately bounded subsequent resource-field/output contract, then a source-backed relationship to an actual local application-file/copy request. The current prefix and prior selected path do not force copy/install behavior or naturally configured resource state. Output/receiving/transport/authentication/session/framing/MQTT/libjel and equivalent closed bodies remain opaque. All new original execution remains0.

@@ -1,0 +1,40 @@
+
+/home/bticino/bin/dedrifupdater:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000005d60 <.text+0x35a0>:
+    5d60:	d503233f 	paciasp
+    5d64:	d100c3ff 	sub	sp, sp, #0x30
+    5d68:	900000a1 	adrp	x1, 19000 <_ZN8PlatformC1Ei@plt+0x16578>
+    5d6c:	a9017bfd 	stp	x29, x30, [sp, #16]
+    5d70:	910043fd 	add	x29, sp, #0x10
+    5d74:	f947fc21 	ldr	x1, [x1, #4088]
+    5d78:	f90013f3 	str	x19, [sp, #32]
+    5d7c:	aa0003f3 	mov	x19, x0
+    5d80:	f9400022 	ldr	x2, [x1]
+    5d84:	f90007e2 	str	x2, [sp, #8]
+    5d88:	d2800002 	mov	x2, #0x0                   	// #0
+    5d8c:	97fffb75 	bl	4b60 <_ZN8PlatformC1Ei@plt+0x20d8>
+    5d90:	52800022 	mov	w2, #0x1                   	// #1
+    5d94:	340001c0 	cbz	w0, 5dcc <_ZN8PlatformC1Ei@plt+0x3344>
+    5d98:	900000a1 	adrp	x1, 19000 <_ZN8PlatformC1Ei@plt+0x16578>
+    5d9c:	f947fc21 	ldr	x1, [x1, #4088]
+    5da0:	f94007e0 	ldr	x0, [sp, #8]
+    5da4:	f9400023 	ldr	x3, [x1]
+    5da8:	eb030000 	subs	x0, x0, x3
+    5dac:	d2800003 	mov	x3, #0x0                   	// #0
+    5db0:	54000181 	b.ne	5de0 <_ZN8PlatformC1Ei@plt+0x3358>  // b.any
+    5db4:	2a0203e0 	mov	w0, w2
+    5db8:	a9417bfd 	ldp	x29, x30, [sp, #16]
+    5dbc:	f94013f3 	ldr	x19, [sp, #32]
+    5dc0:	9100c3ff 	add	sp, sp, #0x30
+    5dc4:	d50323bf 	autiasp
+    5dc8:	d65f03c0 	ret
+    5dcc:	aa1303e0 	mov	x0, x19
+    5dd0:	97fffe30 	bl	5690 <_ZN8PlatformC1Ei@plt+0x2c08>
+    5dd4:	7100001f 	cmp	w0, #0x0
+    5dd8:	1a9f07e2 	cset	w2, ne	// ne = any
+    5ddc:	17ffffef 	b	5d98 <_ZN8PlatformC1Ei@plt+0x3310>
+    5de0:	97fff234 	bl	26b0 <_ZN7slogger12set_log_fileEPc@plt>

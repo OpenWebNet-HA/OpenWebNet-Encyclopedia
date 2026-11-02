@@ -1,0 +1,134 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/usr/lib/libopenmsg.so.1.0.0:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00003c28 <buf_to_openmsg@@Base+0xdc>:
+    3c28:	682b      	ldr	r3, [r5, #0]
+    3c2a:	2201      	movs	r2, #1
+    3c2c:	4414      	add	r4, r2
+    3c2e:	4629      	mov	r1, r5
+    3c30:	4620      	mov	r0, r4
+    3c32:	635a      	str	r2, [r3, #52]	@ 0x34
+    3c34:	f7ff fd96 	bl	3764 <ic_msg_add_params@@Base+0x2f8>
+    3c38:	2800      	cmp	r0, #0
+    3c3a:	f040 808e 	bne.w	3d5a <buf_to_openmsg@@Base+0x20e>
+    3c3e:	212a      	movs	r1, #42	@ 0x2a
+    3c40:	4620      	mov	r0, r4
+    3c42:	f7fe ed16 	blx	2670 <strchr@plt>
+    3c46:	2800      	cmp	r0, #0
+    3c48:	f000 8142 	beq.w	3ed0 <buf_to_openmsg@@Base+0x384>
+    3c4c:	f100 0801 	add.w	r8, r0, #1
+    3c50:	212a      	movs	r1, #42	@ 0x2a
+    3c52:	4640      	mov	r0, r8
+    3c54:	f7fe ed0c 	blx	2670 <strchr@plt>
+    3c58:	4607      	mov	r7, r0
+    3c5a:	2123      	movs	r1, #35	@ 0x23
+    3c5c:	4640      	mov	r0, r8
+    3c5e:	f7fe ed08 	blx	2670 <strchr@plt>
+    3c62:	4606      	mov	r6, r0
+    3c64:	2f00      	cmp	r7, #0
+    3c66:	d06e      	beq.n	3d46 <buf_to_openmsg@@Base+0x1fa>
+    3c68:	45b8      	cmp	r8, r7
+    3c6a:	d031      	beq.n	3cd0 <buf_to_openmsg@@Base+0x184>
+    3c6c:	42be      	cmp	r6, r7
+    3c6e:	682c      	ldr	r4, [r5, #0]
+    3c70:	bf94      	ite	ls
+    3c72:	2300      	movls	r3, #0
+    3c74:	2301      	movhi	r3, #1
+    3c76:	2e00      	cmp	r6, #0
+    3c78:	bf08      	it	eq
+    3c7a:	f043 0301 	orreq.w	r3, r3, #1
+    3c7e:	4640      	mov	r0, r8
+    3c80:	2b00      	cmp	r3, #0
+    3c82:	bf18      	it	ne
+    3c84:	463e      	movne	r6, r7
+    3c86:	eba6 0108 	sub.w	r1, r6, r8
+    3c8a:	3601      	adds	r6, #1
+    3c8c:	f7fe edb0 	blx	27f0 <g_strndup@plt>
+    3c90:	42be      	cmp	r6, r7
+    3c92:	60a0      	str	r0, [r4, #8]
+    3c94:	d21c      	bcs.n	3cd0 <buf_to_openmsg@@Base+0x184>
+    3c96:	2123      	movs	r1, #35	@ 0x23
+    3c98:	4630      	mov	r0, r6
+    3c9a:	f7fe ecea 	blx	2670 <strchr@plt>
+    3c9e:	4604      	mov	r4, r0
+    3ca0:	4630      	mov	r0, r6
+    3ca2:	42bc      	cmp	r4, r7
+    3ca4:	bf94      	ite	ls
+    3ca6:	2300      	movls	r3, #0
+    3ca8:	2301      	movhi	r3, #1
+    3caa:	2c00      	cmp	r4, #0
+    3cac:	bf08      	it	eq
+    3cae:	f043 0301 	orreq.w	r3, r3, #1
+    3cb2:	2b00      	cmp	r3, #0
+    3cb4:	bf18      	it	ne
+    3cb6:	463c      	movne	r4, r7
+    3cb8:	1ba1      	subs	r1, r4, r6
+    3cba:	1c66      	adds	r6, r4, #1
+    3cbc:	f7fe ed98 	blx	27f0 <g_strndup@plt>
+    3cc0:	682c      	ldr	r4, [r5, #0]
+    3cc2:	4601      	mov	r1, r0
+    3cc4:	68e0      	ldr	r0, [r4, #12]
+    3cc6:	f7fe eb82 	blx	23cc <g_list_append@plt>
+    3cca:	42be      	cmp	r6, r7
+    3ccc:	60e0      	str	r0, [r4, #12]
+    3cce:	d3e2      	bcc.n	3c96 <buf_to_openmsg@@Base+0x14a>
+    3cd0:	212a      	movs	r1, #42	@ 0x2a
+    3cd2:	4640      	mov	r0, r8
+    3cd4:	f7fe eccc 	blx	2670 <strchr@plt>
+    3cd8:	2800      	cmp	r0, #0
+    3cda:	f000 80f9 	beq.w	3ed0 <buf_to_openmsg@@Base+0x384>
+    3cde:	682b      	ldr	r3, [r5, #0]
+    3ce0:	1c44      	adds	r4, r0, #1
+    3ce2:	2701      	movs	r7, #1
+    3ce4:	4629      	mov	r1, r5
+    3ce6:	4620      	mov	r0, r4
+    3ce8:	615f      	str	r7, [r3, #20]
+    3cea:	f7ff fc7d 	bl	35e8 <ic_msg_add_params@@Base+0x17c>
+    3cee:	4606      	mov	r6, r0
+    3cf0:	bb98      	cbnz	r0, 3d5a <buf_to_openmsg@@Base+0x20e>
+    3cf2:	4620      	mov	r0, r4
+    3cf4:	212a      	movs	r1, #42	@ 0x2a
+    3cf6:	f7fe ecbc 	blx	2670 <strchr@plt>
+    3cfa:	4604      	mov	r4, r0
+    3cfc:	2800      	cmp	r0, #0
+    3cfe:	f000 80e7 	beq.w	3ed0 <buf_to_openmsg@@Base+0x384>
+    3d02:	682b      	ldr	r3, [r5, #0]
+    3d04:	443c      	add	r4, r7
+    3d06:	212a      	movs	r1, #42	@ 0x2a
+    3d08:	4620      	mov	r0, r4
+    3d0a:	625f      	str	r7, [r3, #36]	@ 0x24
+    3d0c:	f7fe ecb0 	blx	2670 <strchr@plt>
+    3d10:	4607      	mov	r7, r0
+    3d12:	2123      	movs	r1, #35	@ 0x23
+    3d14:	4620      	mov	r0, r4
+    3d16:	f7fe ecac 	blx	2670 <strchr@plt>
+    3d1a:	4680      	mov	r8, r0
+    3d1c:	2f00      	cmp	r7, #0
+    3d1e:	f000 80e1 	beq.w	3ee4 <buf_to_openmsg@@Base+0x398>
+    3d22:	42bc      	cmp	r4, r7
+    3d24:	f000 80d4 	beq.w	3ed0 <buf_to_openmsg@@Base+0x384>
+    3d28:	f1b8 0f00 	cmp.w	r8, #0
+    3d2c:	f000 80d6 	beq.w	3edc <buf_to_openmsg@@Base+0x390>
+    3d30:	45b8      	cmp	r8, r7
+    3d32:	f200 80d3 	bhi.w	3edc <buf_to_openmsg@@Base+0x390>
+    3d36:	682d      	ldr	r5, [r5, #0]
+    3d38:	eba8 0104 	sub.w	r1, r8, r4
+    3d3c:	4620      	mov	r0, r4
+    3d3e:	f7fe ed58 	blx	27f0 <g_strndup@plt>
+    3d42:	6228      	str	r0, [r5, #32]
+    3d44:	e71e      	b.n	3b84 <buf_to_openmsg@@Base+0x38>
+    3d46:	4a7c      	ldr	r2, [pc, #496]	@ (3f38 <buf_to_openmsg@@Base+0x3ec>)
+    3d48:	f04f 31ff 	mov.w	r1, #4294967295	@ 0xffffffff
+    3d4c:	4640      	mov	r0, r8
+    3d4e:	447a      	add	r2, pc
+    3d50:	f7fe ec82 	blx	2658 <g_strstr_len@plt>
+    3d54:	4607      	mov	r7, r0
+    3d56:	2800      	cmp	r0, #0
+    3d58:	d186      	bne.n	3c68 <buf_to_openmsg@@Base+0x11c>
+    3d5a:	4628      	mov	r0, r5
+    3d5c:	2601      	movs	r6, #1
+    3d5e:	f7fe eb30 	blx	23c0 <free_open_msg@plt>
+    3d62:	e70f      	b.n	3b84 <buf_to_openmsg@@Base+0x38>

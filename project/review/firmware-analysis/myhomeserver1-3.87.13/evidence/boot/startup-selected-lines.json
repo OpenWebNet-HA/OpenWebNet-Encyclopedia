@@ -1,0 +1,1266 @@
+{
+  "/etc/default/volatiles/00_core": [
+    {
+      "line": 56,
+      "text": "d root root 0777 /var/tmp/bticino/bt_wd none"
+    },
+    {
+      "line": 70,
+      "text": "# stack_open customization"
+    },
+    {
+      "line": 71,
+      "text": "l root root 0777 /var/tmp/stack_open.xml /home/bticino/cfg/stack_open.xml"
+    }
+  ],
+  "/etc/fstab": [
+    {
+      "line": 3,
+      "text": "/dev/root            /                        auto       ro              1  0"
+    },
+    {
+      "line": 4,
+      "text": "proc                 /proc                    proc       defaults              0  0"
+    },
+    {
+      "line": 5,
+      "text": "devpts               /dev/pts                 devpts     mode=0620,gid=5       0  0"
+    },
+    {
+      "line": 6,
+      "text": "tmpfs                /run                     tmpfs      mode=0755,nodev,nosuid,strictatime 0  0"
+    },
+    {
+      "line": 7,
+      "text": "tmpfs                /var/volatile            tmpfs      defaults              0  0"
+    },
+    {
+      "line": 8,
+      "text": "/dev/mmcblk1p7       /home/bticino/cfg/extra  ext4       rw,sync,noatime,noauto,errors=continue,data=journal   0  2"
+    }
+  ],
+  "/etc/init.d/bt_daemon-apps.sh": [
+    {
+      "line": 11,
+      "text": "set -o errexit"
+    },
+    {
+      "line": 12,
+      "text": "set -o pipefail"
+    },
+    {
+      "line": 13,
+      "text": "set -o nounset"
+    },
+    {
+      "line": 14,
+      "text": ""
+    },
+    {
+      "line": 15,
+      "text": "CFG_BASEDIR=/home/bticino/cfg"
+    },
+    {
+      "line": 16,
+      "text": "EXTRA_BASEDIR=${CFG_BASEDIR}/extra"
+    },
+    {
+      "line": 17,
+      "text": "DIR_USBKEY=${EXTRA_BASEDIR}/usbkey_dir"
+    },
+    {
+      "line": 18,
+      "text": "FILE_USBKEY=${EXTRA_BASEDIR}/usbkey"
+    },
+    {
+      "line": 19,
+      "text": "USER_LIBDIR=${DIR_USBKEY}/lib"
+    },
+    {
+      "line": 20,
+      "text": "FW_VER_FILE=$EXTRA_BASEDIR/.license_ver"
+    },
+    {
+      "line": 21,
+      "text": "REBOOT=false"
+    },
+    {
+      "line": 23,
+      "text": "function check_version() {"
+    },
+    {
+      "line": 24,
+      "text": "\tFW_V=$(awk -F'[<>]' '/<ver_webserver>/ { print $3}' /home/bticino/sp/dbfiles_ws.xml) || true"
+    },
+    {
+      "line": 25,
+      "text": "\tOLD_FW_V=$(cat $FW_VER_FILE) || true"
+    },
+    {
+      "line": 26,
+      "text": "\techo \"$FW_V\" > $FW_VER_FILE"
+    },
+    {
+      "line": 27,
+      "text": "\tif [ \"$FW_V\" != \"$OLD_FW_V\" ]; then"
+    },
+    {
+      "line": 28,
+      "text": "\t\trm -rf $DIR_USBKEY || true"
+    },
+    {
+      "line": 29,
+      "text": "\tfi"
+    },
+    {
+      "line": 30,
+      "text": ""
+    },
+    {
+      "line": 31,
+      "text": "}"
+    },
+    {
+      "line": 33,
+      "text": "function check_libnetatmo_abi() {"
+    },
+    {
+      "line": 34,
+      "text": "\tFW_VERSION=$(cat ${FW_VER_FILE}) || true"
+    },
+    {
+      "line": 35,
+      "text": "\tcase $FW_VERSION in"
+    },
+    {
+      "line": 36,
+      "text": "\t    \"2.83.22\"|\"2.83.23\"|\"2.83.24\"|\"3.83.22\"|\"3.83.23\"|\"3.83.24\")"
+    },
+    {
+      "line": 37,
+      "text": "\t\techo \"Firmware version was ${FW_VERSION}, running libnetatmo fix tool...\""
+    },
+    {
+      "line": 38,
+      "text": "\t\t/usr/local/bin/libnetatmo-abi-fix/libnetatmo-abi-fix-tool.sh"
+    },
+    {
+      "line": 39,
+      "text": "\t\tREBOOT=true"
+    },
+    {
+      "line": 40,
+      "text": "\t\t;;"
+    },
+    {
+      "line": 41,
+      "text": "\t    *)"
+    },
+    {
+      "line": 42,
+      "text": "\t\techo \"No need to run libnetatmo fix tool.\""
+    },
+    {
+      "line": 43,
+      "text": "\t\t;;"
+    },
+    {
+      "line": 44,
+      "text": "\tesac"
+    },
+    {
+      "line": 45,
+      "text": "}"
+    },
+    {
+      "line": 46,
+      "text": ""
+    },
+    {
+      "line": 47,
+      "text": "function reboot_if_libnetatmo_update() {"
+    },
+    {
+      "line": 48,
+      "text": "\techo \"Check if reboot is needed\""
+    },
+    {
+      "line": 49,
+      "text": "\tif [ $REBOOT == true ]; then"
+    },
+    {
+      "line": 50,
+      "text": "\t\techo \"Rebooting because libnetatmo fix tool was run...\""
+    },
+    {
+      "line": 51,
+      "text": "\t\treboot"
+    },
+    {
+      "line": 52,
+      "text": "\tfi"
+    },
+    {
+      "line": 55,
+      "text": "function setup_usbkey() {"
+    },
+    {
+      "line": 56,
+      "text": "\tif [ -d \"$DIR_USBKEY\" ]; then"
+    },
+    {
+      "line": 57,
+      "text": "\t\t# if lib dir is empty run full apps, otherwise run minimal ops"
+    },
+    {
+      "line": 58,
+      "text": "\t\tlosetup /dev/loop2 $FILE_USBKEY || true"
+    },
+    {
+      "line": 59,
+      "text": "\t\tmount -o sync /dev/loop2 $DIR_USBKEY || true"
+    },
+    {
+      "line": 60,
+      "text": "\t\tif [ \"$(ls -A $USER_LIBDIR 2> /dev/null)\" ]; then"
+    },
+    {
+      "line": 61,
+      "text": "\t\t\techo \"Take action $USER_LIBDIR is not Empty: reduced ops\""
+    },
+    {
+      "line": 62,
+      "text": "\t\t\trm /var/tmp/stack_open.xml || true"
+    },
+    {
+      "line": 63,
+      "text": "\t\t\tln -s ${CFG_BASEDIR}/stack_open_reduced.xml /var/tmp/stack_open.xml || true"
+    },
+    {
+      "line": 64,
+      "text": "\t\tfi"
+    },
+    {
+      "line": 65,
+      "text": "\tfi"
+    },
+    {
+      "line": 66,
+      "text": "\tif [ ! -d \"$DIR_USBKEY\" ] || [ ! -d \"$DIR_USBKEY/common-licenses\" ]; then"
+    },
+    {
+      "line": 67,
+      "text": "\t\t# executed only one time in runlevel 5 to export licenses"
+    },
+    {
+      "line": 68,
+      "text": "\t\tdd if=/dev/zero of=$FILE_USBKEY bs=1M count=50 || true"
+    },
+    {
+      "line": 69,
+      "text": "\t\tmkfs.vfat $FILE_USBKEY || true"
+    },
+    {
+      "line": 70,
+      "text": "\t\tfatlabel $FILE_USBKEY SMARTGW || true"
+    },
+    {
+      "line": 71,
+      "text": "\t\tlosetup /dev/loop2 $FILE_USBKEY || true"
+    },
+    {
+      "line": 72,
+      "text": "\t\tmkdir ${DIR_USBKEY} >/dev/null 2>&1 || true"
+    },
+    {
+      "line": 73,
+      "text": "\t\tmount -o sync /dev/loop2 $DIR_USBKEY || true"
+    },
+    {
+      "line": 74,
+      "text": "\t\tmkdir ${DIR_USBKEY}/common-licenses >/dev/null 2>&1 || true"
+    },
+    {
+      "line": 75,
+      "text": "\t\tcd /usr/share/common-licenses >/dev/null 2>&1 || true"
+    },
+    {
+      "line": 76,
+      "text": "\t\ttar -czf ${DIR_USBKEY}/common-licenses/common-licenses.tar.gz * >/dev/null 2>&1 || true"
+    },
+    {
+      "line": 77,
+      "text": "\t\tchmod -w -R $DIR_USBKEY/common-licenses >/dev/null 2>&1 || true"
+    },
+    {
+      "line": 78,
+      "text": "\t\tcp ${CFG_BASEDIR}/README $DIR_USBKEY/README >/dev/null 2>&1 || true"
+    },
+    {
+      "line": 79,
+      "text": "\t\tif [ -e ${CFG_BASEDIR}/ReadMe_OSS_SMARTGW.tar.gz ]; then"
+    },
+    {
+      "line": 80,
+      "text": "\t\t\tcp ${CFG_BASEDIR}/ReadMe_OSS_SMARTGW.tar.gz $DIR_USBKEY/ReadMe_OSS_SMARTDES.tar.gz >/dev/null 2>&1 || true"
+    },
+    {
+      "line": 81,
+      "text": "\t\tfi"
+    },
+    {
+      "line": 82,
+      "text": "\t\tsync >/dev/null 2>&1 || true"
+    },
+    {
+      "line": 83,
+      "text": "\tfi"
+    },
+    {
+      "line": 84,
+      "text": "}"
+    },
+    {
+      "line": 86,
+      "text": "function wait_extra() {"
+    },
+    {
+      "line": 87,
+      "text": "\tS=$(( SECONDS + 10 ))"
+    },
+    {
+      "line": 88,
+      "text": "\twhile [ $SECONDS -lt $S ]; do"
+    },
+    {
+      "line": 89,
+      "text": "\t\tFOUND=1"
+    },
+    {
+      "line": 90,
+      "text": "\t\tmount | grep extra -q || FOUND=0"
+    },
+    {
+      "line": 91,
+      "text": "\t\t[ \"$FOUND\" == \"1\" ] && break"
+    },
+    {
+      "line": 92,
+      "text": "\t\techo \"waiting extra partition to be mounted\""
+    },
+    {
+      "line": 93,
+      "text": "\tdone"
+    },
+    {
+      "line": 94,
+      "text": "\tif [ \"$FOUND\" == \"0\" ]; then"
+    },
+    {
+      "line": 95,
+      "text": "\t\techo \"===> extra partition NOT MOUNTED: giving-up\""
+    },
+    {
+      "line": 96,
+      "text": "\t\tfsck.ext4 -y /dev/mmcblk1p7"
+    },
+    {
+      "line": 97,
+      "text": "\t\tmount /dev/mmcblk1p7 ${EXTRA_BASEDIR}"
+    },
+    {
+      "line": 98,
+      "text": "\t\t[ $? == 0 ] || reboot"
+    },
+    {
+      "line": 99,
+      "text": "\tfi"
+    },
+    {
+      "line": 100,
+      "text": "}"
+    },
+    {
+      "line": 101,
+      "text": ""
+    },
+    {
+      "line": 102,
+      "text": "function check_native() {"
+    },
+    {
+      "line": 103,
+      "text": "\tPERSISTENT=\"/home/bticino/cfg/extra/95/persistent/features\""
+    },
+    {
+      "line": 104,
+      "text": "\t[ -e \"${PERSISTENT}/netcom_native\" ] && rm -fr ${PERSISTENT}/netcom_native || true"
+    },
+    {
+      "line": 105,
+      "text": "}"
+    },
+    {
+      "line": 106,
+      "text": ""
+    },
+    {
+      "line": 107,
+      "text": "start() {"
+    },
+    {
+      "line": 108,
+      "text": "\texport LD_LIBRARY_PATH=${USER_LIBDIR}:/usr/lib:/home/bticino/lib:/home/bticino/libcoso:/home/bticino/bt_netatmo/lib"
+    },
+    {
+      "line": 109,
+      "text": "\t/bin/bt_hosts.sh add localhost 127.0.0.1"
+    },
+    {
+      "line": 110,
+      "text": "\t/bin/bt_hosts.sh add openserver 127.0.0.1"
+    },
+    {
+      "line": 111,
+      "text": ""
+    },
+    {
+      "line": 112,
+      "text": "\tcd /home/bticino"
+    },
+    {
+      "line": 113,
+      "text": "\tbin/bt_daemon &"
+    },
+    {
+      "line": 114,
+      "text": "}"
+    },
+    {
+      "line": 131,
+      "text": "case \"$1\" in"
+    },
+    {
+      "line": 132,
+      "text": "\tstart)"
+    },
+    {
+      "line": 133,
+      "text": "\t\twait_extra"
+    },
+    {
+      "line": 134,
+      "text": "\t\tcheck_libnetatmo_abi"
+    },
+    {
+      "line": 135,
+      "text": "\t\tcheck_version"
+    },
+    {
+      "line": 136,
+      "text": "\t\tsetup_usbkey"
+    },
+    {
+      "line": 137,
+      "text": "\t\tcheck_native"
+    },
+    {
+      "line": 138,
+      "text": "\t\treboot_if_libnetatmo_update"
+    },
+    {
+      "line": 139,
+      "text": "\t\tstart &"
+    },
+    {
+      "line": 140,
+      "text": "\t;;"
+    }
+  ],
+  "/etc/init.d/bt_daemon-apps_rec.sh": [
+    {
+      "line": 15,
+      "text": "CFG_BASEDIR=/home/bticino/cfg"
+    },
+    {
+      "line": 16,
+      "text": "EXTRA_BASEDIR=${CFG_BASEDIR}/extra"
+    },
+    {
+      "line": 17,
+      "text": "MIGRATED_STATES=${EXTRA_BASEDIR}/3/bt_netatmo-status.json"
+    },
+    {
+      "line": 19,
+      "text": "function wait_extra() {"
+    },
+    {
+      "line": 20,
+      "text": "\tS=$(( SECONDS + 10 ))"
+    },
+    {
+      "line": 21,
+      "text": "\twhile [ $SECONDS -lt $S ]; do"
+    },
+    {
+      "line": 22,
+      "text": "\t\tFOUND=1"
+    },
+    {
+      "line": 23,
+      "text": "\t\tmount | grep extra -q || FOUND=0"
+    },
+    {
+      "line": 24,
+      "text": "\t\t[ \"$FOUND\" == \"1\" ] && break"
+    },
+    {
+      "line": 25,
+      "text": "\t\techo \"waiting extra partition to be mounted\""
+    },
+    {
+      "line": 26,
+      "text": "\tdone"
+    },
+    {
+      "line": 27,
+      "text": "\tif [ \"$FOUND\" == \"0\" ]; then"
+    },
+    {
+      "line": 28,
+      "text": "\t\techo \"===> extra partition NOT MOUNTED: giving-up\""
+    },
+    {
+      "line": 29,
+      "text": "\t\tfsck.ext4 -y /dev/mmcblk1p7"
+    },
+    {
+      "line": 30,
+      "text": "\t\tmount /dev/mmcblk1p7 ${EXTRA_BASEDIR}"
+    },
+    {
+      "line": 31,
+      "text": "\t\t[ $? == 0 ] || reboot"
+    },
+    {
+      "line": 32,
+      "text": "\tfi"
+    },
+    {
+      "line": 33,
+      "text": "}"
+    },
+    {
+      "line": 34,
+      "text": ""
+    },
+    {
+      "line": 35,
+      "text": "function check_migration_status() {"
+    },
+    {
+      "line": 36,
+      "text": "\tPERSISTENT=\"/home/bticino/cfg/extra/95/persistent/features\""
+    },
+    {
+      "line": 37,
+      "text": "\t[ ! -d \"${PERSISTENT}\" ] && mkdir -p ${PERSISTENT}"
+    },
+    {
+      "line": 38,
+      "text": "\t[ ! -e \"${PERSISTENT}/netcom_native\" ] && touch ${PERSISTENT}/netcom_native || true"
+    },
+    {
+      "line": 39,
+      "text": "}"
+    },
+    {
+      "line": 40,
+      "text": ""
+    },
+    {
+      "line": 41,
+      "text": "start() {"
+    },
+    {
+      "line": 42,
+      "text": "\texport LD_LIBRARY_PATH=/usr/lib:/home/bticino/lib:/home/bticino/libcoso:/home/bticino/bt_netatmo/lib"
+    },
+    {
+      "line": 43,
+      "text": "\t/bin/bt_hosts.sh add localhost 127.0.0.1"
+    },
+    {
+      "line": 44,
+      "text": "\t/bin/bt_hosts.sh add openserver 127.0.0.1"
+    },
+    {
+      "line": 45,
+      "text": ""
+    },
+    {
+      "line": 46,
+      "text": "\tcd /home/bticino"
+    },
+    {
+      "line": 47,
+      "text": "\tbin/bt_daemon &"
+    },
+    {
+      "line": 67,
+      "text": "case \"$1\" in"
+    },
+    {
+      "line": 68,
+      "text": "\tstart)"
+    },
+    {
+      "line": 69,
+      "text": "\t\twait_extra"
+    },
+    {
+      "line": 70,
+      "text": "\t\tLD_LIBRARY_PATH=/usr/lib:/home/bticino/lib /usr/local/bin/converter_0_1 -m -e -n -d -v || true"
+    },
+    {
+      "line": 71,
+      "text": "\t\tcheck_migration_status"
+    },
+    {
+      "line": 72,
+      "text": "\t\tstart &"
+    },
+    {
+      "line": 73,
+      "text": "\t;;"
+    }
+  ],
+  "/etc/init.d/dbus-1": [
+    {
+      "line": 22,
+      "text": "DAEMON=/usr/bin/dbus-daemon"
+    },
+    {
+      "line": 63,
+      "text": "  start-stop-daemon -o --start --quiet --pidfile $PIDFILE \\"
+    },
+    {
+      "line": 64,
+      "text": "    --user $DAEMONUSER --exec $DAEMON -- --system $PARAMS"
+    }
+  ],
+  "/etc/init.d/dedrifu_env.sh": [
+    {
+      "line": 1,
+      "text": "#!/bin/sh"
+    },
+    {
+      "line": 2,
+      "text": "cat /proc/cmdline > /var/tmp/dedrifu_env.txt"
+    }
+  ],
+  "/etc/init.d/init_wdt.sh": [
+    {
+      "line": 1,
+      "text": "#!/bin/bash"
+    },
+    {
+      "line": 2,
+      "text": ""
+    },
+    {
+      "line": 3,
+      "text": "/bin/watchdog &"
+    },
+    {
+      "line": 4,
+      "text": "PID=$!"
+    },
+    {
+      "line": 5,
+      "text": "sleep 0.2"
+    },
+    {
+      "line": 6,
+      "text": "kill $PID"
+    }
+  ],
+  "/etc/init.d/populate-volatile.sh": [
+    {
+      "line": 19,
+      "text": "CFGDIR=\"${ROOT_DIR}/etc/default/volatiles\""
+    },
+    {
+      "line": 68,
+      "text": "link_file() {"
+    },
+    {
+      "line": 69,
+      "text": "\tEXEC=\""
+    },
+    {
+      "line": 70,
+      "text": "\tif [ -L \\\"$2\\\" ]; then"
+    },
+    {
+      "line": 71,
+      "text": "\t\t[ \\\"\\$(readlink -f \\\"$2\\\")\\\" != \\\"\\$(readlink -f \\\"$1\\\")\\\" ] && { rm -f \\\"$2\\\"; ln -sf \\\"$1\\\" \\\"$2\\\"; };"
+    },
+    {
+      "line": 72,
+      "text": "\telif [ -d \\\"$2\\\" ]; then"
+    },
+    {
+      "line": 73,
+      "text": "\t\tif awk '\\$2 == \\\"$2\\\" {exit 1}' /proc/mounts; then"
+    },
+    {
+      "line": 74,
+      "text": "\t\t\tcp -a $2/* $1 2>/dev/null;"
+    },
+    {
+      "line": 75,
+      "text": "\t\t\tcp -a $2/.[!.]* $1 2>/dev/null;"
+    },
+    {
+      "line": 76,
+      "text": "\t\t\trm -rf \\\"$2\\\";"
+    },
+    {
+      "line": 77,
+      "text": "\t\t\tln -sf \\\"$1\\\" \\\"$2\\\";"
+    },
+    {
+      "line": 78,
+      "text": "\t\tfi"
+    },
+    {
+      "line": 79,
+      "text": "\telse"
+    },
+    {
+      "line": 80,
+      "text": "\t\tln -sf \\\"$1\\\" \\\"$2\\\";"
+    },
+    {
+      "line": 81,
+      "text": "\tfi"
+    },
+    {
+      "line": 82,
+      "text": "        \""
+    },
+    {
+      "line": 154,
+      "text": "\t\tTNAME=${ROOT_DIR}${TNAME}"
+    },
+    {
+      "line": 155,
+      "text": "\t\t[ \"${VERBOSE}\" != \"no\" ] && echo \"Checking for -${TNAME}-.\""
+    },
+    {
+      "line": 156,
+      "text": ""
+    },
+    {
+      "line": 157,
+      "text": "\t\t[ \"${TTYPE}\" = \"l\" ] && {"
+    },
+    {
+      "line": 158,
+      "text": "\t\t\tTSOURCE=\"$TLTARGET\""
+    },
+    {
+      "line": 159,
+      "text": "\t\t\t[ \"${VERBOSE}\" != \"no\" ] && echo \"Creating link -${TNAME}- pointing to -${TSOURCE}-.\""
+    },
+    {
+      "line": 160,
+      "text": "\t\t\tlink_file \"${TSOURCE}\" \"${TNAME}\""
+    },
+    {
+      "line": 161,
+      "text": "\t\t\tcontinue"
+    },
+    {
+      "line": 162,
+      "text": "\t\t}"
+    }
+  ],
+  "/etc/init.d/rc": [
+    {
+      "line": 41,
+      "text": "startup() {"
+    },
+    {
+      "line": 42,
+      "text": "  # Handle verbosity"
+    },
+    {
+      "line": 43,
+      "text": "  [ \"$VERBOSE\" = very ] && echo \"INIT: Running $@...\""
+    },
+    {
+      "line": 44,
+      "text": ""
+    },
+    {
+      "line": 45,
+      "text": "  case \"$1\" in"
+    },
+    {
+      "line": 46,
+      "text": "\t*.sh)"
+    },
+    {
+      "line": 47,
+      "text": "\t\t# Source shell script for speed."
+    },
+    {
+      "line": 48,
+      "text": "\t\t("
+    },
+    {
+      "line": 49,
+      "text": "\t\t\ttrap - INT QUIT TSTP"
+    },
+    {
+      "line": 50,
+      "text": "\t\t\tscriptname=$1"
+    },
+    {
+      "line": 51,
+      "text": "\t\t\tshift"
+    },
+    {
+      "line": 52,
+      "text": "\t\t\t. $scriptname"
+    },
+    {
+      "line": 53,
+      "text": "\t\t)"
+    },
+    {
+      "line": 54,
+      "text": "\t\t;;"
+    },
+    {
+      "line": 55,
+      "text": "\t*)"
+    },
+    {
+      "line": 56,
+      "text": "\t\t\"$@\""
+    },
+    {
+      "line": 57,
+      "text": "\t\t;;"
+    },
+    {
+      "line": 58,
+      "text": "  esac"
+    },
+    {
+      "line": 145,
+      "text": "\tfor i in /etc/rc$runlevel.d/S*"
+    },
+    {
+      "line": 146,
+      "text": "\tdo"
+    },
+    {
+      "line": 147,
+      "text": "\t\t[ ! -f $i ] && continue"
+    },
+    {
+      "line": 148,
+      "text": ""
+    },
+    {
+      "line": 149,
+      "text": "\t\tif [ $previous != N ] && [ $previous != S ]"
+    },
+    {
+      "line": 150,
+      "text": "\t\tthen"
+    },
+    {
+      "line": 151,
+      "text": "\t\t\t#"
+    },
+    {
+      "line": 152,
+      "text": "\t\t\t# Find start script in previous runlevel and"
+    },
+    {
+      "line": 153,
+      "text": "\t\t\t# stop script in this runlevel."
+    },
+    {
+      "line": 154,
+      "text": "\t\t\t#"
+    },
+    {
+      "line": 155,
+      "text": "\t\t\tsuffix=${i#/etc/rc$runlevel.d/S[0-9][0-9]}"
+    },
+    {
+      "line": 156,
+      "text": "\t\t\tstop=/etc/rc$runlevel.d/K[0-9][0-9]$suffix"
+    },
+    {
+      "line": 157,
+      "text": "\t\t\tprevious_start=/etc/rc$previous.d/S[0-9][0-9]$suffix"
+    },
+    {
+      "line": 158,
+      "text": "\t\t\t#"
+    },
+    {
+      "line": 159,
+      "text": "\t\t\t# If there is a start script in the previous level"
+    },
+    {
+      "line": 160,
+      "text": "\t\t\t# and _no_ stop script in this level, we don't"
+    },
+    {
+      "line": 161,
+      "text": "\t\t\t# have to re-start the service."
+    },
+    {
+      "line": 162,
+      "text": "\t\t\t#"
+    },
+    {
+      "line": 163,
+      "text": "\t\t\t[ -f $previous_start ] && [ ! -f $stop ] && continue"
+    },
+    {
+      "line": 164,
+      "text": "\t\tfi"
+    },
+    {
+      "line": 165,
+      "text": "\t\tcase \"$runlevel\" in"
+    },
+    {
+      "line": 166,
+      "text": "\t\t\t0|6)"
+    },
+    {
+      "line": 167,
+      "text": "\t\t\t\tstartup $i stop"
+    },
+    {
+      "line": 168,
+      "text": "\t\t\t\t;;"
+    },
+    {
+      "line": 169,
+      "text": "\t\t\t*)"
+    },
+    {
+      "line": 170,
+      "text": "\t\t\t\tstartup $i start"
+    }
+  ],
+  "/etc/init.d/rcS": [
+    {
+      "line": 9,
+      "text": "PATH=/sbin:/bin:/usr/sbin:/usr/bin"
+    },
+    {
+      "line": 10,
+      "text": "runlevel=S"
+    },
+    {
+      "line": 11,
+      "text": "prevlevel=N"
+    },
+    {
+      "line": 12,
+      "text": "umask 022"
+    },
+    {
+      "line": 13,
+      "text": "export PATH runlevel prevlevel"
+    },
+    {
+      "line": 29,
+      "text": "#"
+    },
+    {
+      "line": 30,
+      "text": "#\tCall all parts in order."
+    },
+    {
+      "line": 31,
+      "text": "#"
+    },
+    {
+      "line": 32,
+      "text": "exec /etc/init.d/rc S"
+    }
+  ],
+  "/etc/init.d/redis-server": [
+    {
+      "line": 16,
+      "text": "ARGS=\"/etc/redis/redis.conf\""
+    },
+    {
+      "line": 17,
+      "text": ""
+    },
+    {
+      "line": 18,
+      "text": "case \"$1\" in"
+    },
+    {
+      "line": 19,
+      "text": "    start)"
+    },
+    {
+      "line": 20,
+      "text": "\techo \"Starting redis-server...\""
+    },
+    {
+      "line": 21,
+      "text": "        start-stop-daemon --start --quiet --exec /usr/bin/redis-server -- $ARGS"
+    },
+    {
+      "line": 22,
+      "text": "\t;;"
+    },
+    {
+      "line": 23,
+      "text": "    stop)"
+    },
+    {
+      "line": 24,
+      "text": "        echo \"Stopping redis-server...\""
+    },
+    {
+      "line": 25,
+      "text": "        start-stop-daemon --stop --quiet --exec /usr/bin/redis-server"
+    }
+  ],
+  "/etc/inittab": [
+    {
+      "line": 4,
+      "text": "# The default runlevel."
+    },
+    {
+      "line": 5,
+      "text": "id:5:initdefault:"
+    },
+    {
+      "line": 6,
+      "text": ""
+    },
+    {
+      "line": 7,
+      "text": "# Boot-time system configuration/initialization script."
+    },
+    {
+      "line": 8,
+      "text": "# This is run first except when booting in emergency (-b) mode."
+    },
+    {
+      "line": 9,
+      "text": "si::sysinit:/etc/init.d/rcS"
+    },
+    {
+      "line": 22,
+      "text": "l0:0:wait:/etc/init.d/rc 0"
+    },
+    {
+      "line": 23,
+      "text": "l1:1:wait:/etc/init.d/rc 1"
+    },
+    {
+      "line": 24,
+      "text": "l2:2:wait:/etc/init.d/rc 2"
+    },
+    {
+      "line": 25,
+      "text": "l3:3:wait:/etc/init.d/rc 3"
+    },
+    {
+      "line": 26,
+      "text": "l4:4:wait:/etc/init.d/rc 4"
+    },
+    {
+      "line": 27,
+      "text": "l5:5:wait:/etc/init.d/rc 5"
+    },
+    {
+      "line": 28,
+      "text": "l6:6:wait:/etc/init.d/rc 6"
+    },
+    {
+      "line": 31,
+      "text": "#mxc::respawn:/etc/init.d/rc_mxc.S"
+    },
+    {
+      "line": 32,
+      "text": "mxc3:12345:respawn:/bin/start_getty 115200 ttymxc3 vt102"
+    },
+    {
+      "line": 43,
+      "text": "gpu::sysinit:/etc/init.d/rc_gpu.S"
+    }
+  ],
+  "/etc/issue": [
+    {
+      "line": 10,
+      "text": "The BTicino Distribution (Linda board) \\l"
+    },
+    {
+      "line": 11,
+      "text": "Poky (Yocto Project Reference Distro) 4.0.23 \\n \\l"
+    }
+  ],
+  "/etc/version": [
+    {
+      "line": 1,
+      "text": "20260309120312"
+    }
+  ],
+  "/home/bticino/cfg/bt_daemon": [
+    {
+      "line": 1,
+      "text": "# Configuration file for bt_daemon"
+    },
+    {
+      "line": 2,
+      "text": "[General Parameters]"
+    },
+    {
+      "line": 3,
+      "text": "LogLev=0"
+    },
+    {
+      "line": 4,
+      "text": "HwWDTtime=30"
+    },
+    {
+      "line": 5,
+      "text": "manage_time=0"
+    },
+    {
+      "line": 6,
+      "text": ""
+    },
+    {
+      "line": 7,
+      "text": "[Network settings]"
+    },
+    {
+      "line": 8,
+      "text": "eth=0"
+    },
+    {
+      "line": 9,
+      "text": "usb=1"
+    },
+    {
+      "line": 10,
+      "text": ""
+    },
+    {
+      "line": 11,
+      "text": "[Services]"
+    },
+    {
+      "line": 12,
+      "text": "avahi=1;1"
+    }
+  ],
+  "/home/bticino/cfg/fw_manager": [
+    {
+      "line": 1,
+      "text": "[General Parameters]"
+    },
+    {
+      "line": 2,
+      "text": "Logfile=/var/tmp/fw_manager.log"
+    },
+    {
+      "line": 3,
+      "text": "LogLev=0"
+    },
+    {
+      "line": 4,
+      "text": "LogTime=0"
+    },
+    {
+      "line": 5,
+      "text": "UnpackFwToExtras=0"
+    },
+    {
+      "line": 6,
+      "text": ""
+    },
+    {
+      "line": 7,
+      "text": "[Watchdog settings]"
+    },
+    {
+      "line": 8,
+      "text": "WDTfile=/var/tmp/bticino/bt_wd/fw_manager"
+    },
+    {
+      "line": 9,
+      "text": "WDTtime=10"
+    },
+    {
+      "line": 10,
+      "text": ""
+    },
+    {
+      "line": 11,
+      "text": "[Communication]"
+    },
+    {
+      "line": 12,
+      "text": "Id=1090"
+    },
+    {
+      "line": 13,
+      "text": "Name=fw_manager"
+    },
+    {
+      "line": 14,
+      "text": "ChnName=fwm"
+    },
+    {
+      "line": 15,
+      "text": ""
+    },
+    {
+      "line": 16,
+      "text": "[firwareUpdate]"
+    },
+    {
+      "line": 17,
+      "text": "install_time_range=1"
+    },
+    {
+      "line": 18,
+      "text": "range_low=60"
+    },
+    {
+      "line": 19,
+      "text": "range_high=240"
+    },
+    {
+      "line": 20,
+      "text": "defer_delay=0"
+    },
+    {
+      "line": 21,
+      "text": "delay_start_install=0"
+    }
+  ]
+}

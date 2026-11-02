@@ -1,0 +1,3 @@
+# Pre-promotion literal-check correction
+
+The first collector draft expected C-style equality tokens == and !=. Its original literal assertion stopped with actual tokens = and <> before any evidence/model outputs were written. Exact draft bytes are preserved in development-before-literal-check/collect_evidence.py.txt. The corrected collector/model use the actual six original operator strings; original firmware inputs were never changed or executed. This is a host transcription correction, not a vendor-code failure.

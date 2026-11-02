@@ -1,0 +1,30 @@
+
+work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/libcoso/libplug_automation_tr.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000002150 <init_plugin@@Base>:
+    2150:	a9bb7bfd 	stp	x29, x30, [sp, #-80]!
+    2154:	f0000003 	adrp	x3, 5000 <automation_tr_translate@@Base+0x15d0>
+    2158:	f0000002 	adrp	x2, 5000 <automation_tr_translate@@Base+0x15d0>
+    215c:	910003fd 	mov	x29, sp
+    2160:	91302042 	add	x2, x2, #0xc08
+    2164:	913ec063 	add	x3, x3, #0xfb0
+    2168:	52801001 	mov	w1, #0x80                  	// #128
+    216c:	a90153f3 	stp	x19, x20, [sp, #16]
+    2170:	aa0003f4 	mov	x20, x0
+    2174:	a9025bf5 	stp	x21, x22, [sp, #32]
+    2178:	f0000015 	adrp	x21, 5000 <automation_tr_translate@@Base+0x15d0>
+    217c:	913042a0 	add	x0, x21, #0xc10
+    2180:	a90363f7 	stp	x23, x24, [sp, #48]
+    2184:	97ffff07 	bl	1da0 <g_log@plt>
+    2188:	d00000b7 	adrp	x23, 18000 <prepare_extscs_frames@Base>
+    218c:	b9422ee2 	ldr	w2, [x23, #556]
+    2190:	340000e2 	cbz	w2, 21ac <init_plugin@@Base+0x5c>
+    2194:	52800000 	mov	w0, #0x0                   	// #0
+    2198:	a94153f3 	ldp	x19, x20, [sp, #16]
+    219c:	a9425bf5 	ldp	x21, x22, [sp, #32]
+    21a0:	a94363f7 	ldp	x23, x24, [sp, #48]
+    21a4:	a8c57bfd 	ldp	x29, x30, [sp], #80
+    21a8:	d65f03c0 	ret

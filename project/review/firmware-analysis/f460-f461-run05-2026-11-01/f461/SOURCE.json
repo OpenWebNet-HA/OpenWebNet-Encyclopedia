@@ -1,0 +1,462 @@
+{
+  "PIC_literal_joins": [
+    {
+      "ADD": "0x451c",
+      "ADRP": "0x4518",
+      "target": "0x6528"
+    },
+    {
+      "ADD": "0x4610",
+      "ADRP": "0x460c",
+      "target": "0x6530"
+    },
+    {
+      "ADD": "0x3c0c",
+      "ADRP": "0x3c08",
+      "target": "0x6038"
+    },
+    {
+      "ADD": "0x49c8",
+      "ADRP": "0x49c0",
+      "target": "0x64e0"
+    },
+    {
+      "ADD": "0x49cc",
+      "ADRP": "0x49c4",
+      "target": "0x6718"
+    },
+    {
+      "ADD": "0x4a0c",
+      "ADRP": "0x4a08",
+      "target": "0x6750"
+    },
+    {
+      "ADD": "0x4a20",
+      "ADRP": "0x4a18",
+      "target": "0x6740"
+    }
+  ],
+  "core_guards": [
+    {
+      "VA": "0x3a04",
+      "word": "0x52800000"
+    },
+    {
+      "VA": "0x3a08",
+      "word": "0x3cc08021"
+    },
+    {
+      "VA": "0x3a10",
+      "word": "0x3cc18020"
+    },
+    {
+      "VA": "0x3a14",
+      "word": "0x3c808041"
+    },
+    {
+      "VA": "0x3a18",
+      "word": "0xb9402c23"
+    },
+    {
+      "VA": "0x3a1c",
+      "word": "0x3c818040"
+    },
+    {
+      "VA": "0x3a20",
+      "word": "0xf9402021"
+    },
+    {
+      "VA": "0x3a24",
+      "word": "0xb9002c43"
+    },
+    {
+      "VA": "0x3a28",
+      "word": "0xf9002041"
+    },
+    {
+      "VA": "0x3a34",
+      "word": "0x52800065"
+    },
+    {
+      "VA": "0x3a38",
+      "word": "0x52800024"
+    },
+    {
+      "VA": "0x3a50",
+      "word": "0xb9002845"
+    },
+    {
+      "VA": "0x3a54",
+      "word": "0xb9003043"
+    },
+    {
+      "VA": "0x3a58",
+      "word": "0xb9003844"
+    },
+    {
+      "VA": "0x3a70",
+      "word": "0xf9000261"
+    }
+  ],
+  "import_proofs": [
+    {
+      "PLT": "0x1ff0",
+      "PLT_bytes": "b00000f011aa40f91042059120021fd6",
+      "call": "0x4538",
+      "object": "plugin",
+      "relocation": "0000000000018150  0000002e00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_ascii_strtoll + 0",
+      "slot": "0x18150"
+    },
+    {
+      "PLT": "0x1e20",
+      "PLT_bytes": "b00000f0113640f910a2019120021fd6",
+      "call": "0x49d0",
+      "object": "plugin",
+      "relocation": "0000000000018068  0000001000000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_strdup_printf + 0",
+      "slot": "0x18068"
+    },
+    {
+      "PLT": "0x1e20",
+      "PLT_bytes": "b00000f0113640f910a2019120021fd6",
+      "call": "0x4a10",
+      "object": "plugin",
+      "relocation": "0000000000018068  0000001000000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_strdup_printf + 0",
+      "slot": "0x18068"
+    },
+    {
+      "PLT": "0x1f70",
+      "PLT_bytes": "b00000f0118a40f91042049120021fd6",
+      "call": "0x4a50",
+      "object": "plugin",
+      "relocation": "0000000000018110  0000002500000402 R_AARCH64_JUMP_SLOT    0000000000000000 prepare_briefscs_frames + 0",
+      "slot": "0x18110"
+    },
+    {
+      "PLT": "0x1fa0",
+      "PLT_bytes": "b0000090115a40f910c2029120021fd6",
+      "call": "0x3a5c",
+      "object": "core",
+      "relocation": "00000000000150b0  0000002400000402 R_AARCH64_JUMP_SLOT    0000000000003a00 prepare_scs_from_open + 0",
+      "slot": "0x150b0"
+    },
+    {
+      "PLT": "0x1f90",
+      "PLT_bytes": "b0000090115640f910a2029120021fd6",
+      "call": "0x3a68",
+      "object": "core",
+      "relocation": "00000000000150a8  0000001000000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_list_append + 0",
+      "slot": "0x150a8"
+    }
+  ],
+  "models_fixtures": 0,
+  "new_original_execution": 0,
+  "originals": {
+    "core": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          19020,
+          19020,
+          65536
+        ],
+        [
+          1,
+          6,
+          19216,
+          84752,
+          84752,
+          1616,
+          1648,
+          65536
+        ]
+      ],
+      "bytes": 22752,
+      "image_path": "/home/bticino/libcoso/libcoso.so",
+      "sha256": "572bca218965a040393361bea4044b0d55519b4f2146ef69c9aa18d4aa6ef690"
+    },
+    "plugin": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          27368,
+          27368,
+          65536
+        ],
+        [
+          1,
+          6,
+          31456,
+          96992,
+          96992,
+          1864,
+          1872,
+          65536
+        ]
+      ],
+      "bytes": 35240,
+      "image_path": "/home/bticino/libcoso/libplug_automation_tr.so",
+      "sha256": "d7d361798ccec65843bd41c9ad7b8897645a334b0cd08121d372949f78eac277"
+    }
+  },
+  "plugin_guards": [
+    {
+      "VA": "0x3b64",
+      "word": "0xd2800900"
+    },
+    {
+      "VA": "0x3b68",
+      "word": "0xf9402f9b"
+    },
+    {
+      "VA": "0x3b8c",
+      "word": "0xb9403a63"
+    },
+    {
+      "VA": "0x3b98",
+      "word": "0x71000c7f"
+    },
+    {
+      "VA": "0x3ba0",
+      "word": "0xf9400260"
+    },
+    {
+      "VA": "0x3ba8",
+      "word": "0xb9406803"
+    },
+    {
+      "VA": "0x3bbc",
+      "word": "0x54004ae0"
+    },
+    {
+      "VA": "0x4524",
+      "word": "0xaa0003f6"
+    },
+    {
+      "VA": "0x4534",
+      "word": "0xf9400860"
+    },
+    {
+      "VA": "0x4538",
+      "word": "0x97fff6ae"
+    },
+    {
+      "VA": "0x453c",
+      "word": "0xf1002c1f"
+    },
+    {
+      "VA": "0x4548",
+      "word": "0xf100081f"
+    },
+    {
+      "VA": "0x4600",
+      "word": "0xb4006a40"
+    },
+    {
+      "VA": "0x4604",
+      "word": "0xf100041f"
+    },
+    {
+      "VA": "0x4618",
+      "word": "0xaa0003fa"
+    },
+    {
+      "VA": "0x461c",
+      "word": "0x17fffd73"
+    },
+    {
+      "VA": "0x3c00",
+      "word": "0xf9401097"
+    },
+    {
+      "VA": "0x3c14",
+      "word": "0x97fff90b"
+    },
+    {
+      "VA": "0x3c18",
+      "word": "0x34006d40"
+    },
+    {
+      "VA": "0x49d0",
+      "word": "0x97fff514"
+    },
+    {
+      "VA": "0x49e0",
+      "word": "0xf9401820"
+    },
+    {
+      "VA": "0x49e4",
+      "word": "0xb40000a0"
+    },
+    {
+      "VA": "0x49fc",
+      "word": "0xaa1a03e3"
+    },
+    {
+      "VA": "0x4a00",
+      "word": "0xaa1603e2"
+    },
+    {
+      "VA": "0x4a04",
+      "word": "0xaa1703e1"
+    },
+    {
+      "VA": "0x4a10",
+      "word": "0x97fff504"
+    },
+    {
+      "VA": "0x4a14",
+      "word": "0xf90002a0"
+    },
+    {
+      "VA": "0x4a28",
+      "word": "0x97fff4f6"
+    },
+    {
+      "VA": "0x4a30",
+      "word": "0xb9400760"
+    },
+    {
+      "VA": "0x4a38",
+      "word": "0x54000380"
+    },
+    {
+      "VA": "0x4a3c",
+      "word": "0xf94033e2"
+    },
+    {
+      "VA": "0x4a44",
+      "word": "0x910283e0"
+    },
+    {
+      "VA": "0x4a48",
+      "word": "0x52800023"
+    },
+    {
+      "VA": "0x4a50",
+      "word": "0x97fff548"
+    },
+    {
+      "VA": "0x41b4",
+      "word": "0x52800017"
+    },
+    {
+      "VA": "0x3ca4",
+      "word": "0x34fff0b7"
+    }
+  ],
+  "record_contract": {
+    "body_pointer_offset": 0,
+    "bytes_requested": 72,
+    "output_word40": 3,
+    "output_word48": 1,
+    "output_word56": 1,
+    "same_output_record_appended": true,
+    "source_copied_ranges": [
+      [
+        8,
+        16
+      ],
+      [
+        24,
+        16
+      ],
+      [
+        44,
+        4
+      ],
+      [
+        64,
+        8
+      ]
+    ]
+  },
+  "safe_literals": {
+    "0x6038": "0",
+    "0x64e0": "B1",
+    "0x6528": "12",
+    "0x6530": "08",
+    "0x6718": "%s00",
+    "0x6740": "B",
+    "0x6750": "%s%s%s"
+  },
+  "selected_form": {
+    "arguments": [
+      "B100 (source %s00 with B1)",
+      "12",
+      "08"
+    ],
+    "derived_ASCII": "B1001208",
+    "format": "%s%s%s",
+    "scope": "conditional source normal form, not an executed fixture/output capture"
+  },
+  "spans": [
+    {
+      "VA": "0x3a30",
+      "end_exclusive": "0x3a84",
+      "input": "plugin",
+      "sha256": "c7acb060d1d73493afbfce4d8a72a8ba65abd9c55786ff67f1e3198e6976fc7b"
+    },
+    {
+      "VA": "0x3b60",
+      "end_exclusive": "0x3bc0",
+      "input": "plugin",
+      "sha256": "31c95cfde53da915b699bbba8998e7f0382448af808a8919172f24bb1e5c4c1b"
+    },
+    {
+      "VA": "0x4518",
+      "end_exclusive": "0x4554",
+      "input": "plugin",
+      "sha256": "1954e769e805627ca63ae55596fef815fcb3da566fa734b52006d843e9fe77f3"
+    },
+    {
+      "VA": "0x4600",
+      "end_exclusive": "0x4620",
+      "input": "plugin",
+      "sha256": "6135d4ee315418a1db49430463e1d8d1902729d45aa83793e6b88c00d6aba03f"
+    },
+    {
+      "VA": "0x3be8",
+      "end_exclusive": "0x3c1c",
+      "input": "plugin",
+      "sha256": "695c1892b19664dd0a528a37f6a3574f4017b85c2ea2d16c4a05f9461e982d74"
+    },
+    {
+      "VA": "0x49c0",
+      "end_exclusive": "0x4a58",
+      "input": "plugin",
+      "sha256": "00a85436754b8e0c7ce21bc2aa6d196ce2888fbfe9f322ee16643118b9183ec4"
+    },
+    {
+      "VA": "0x41b0",
+      "end_exclusive": "0x41c0",
+      "input": "plugin",
+      "sha256": "85af2619bb2f10ef93f552d90c431f2eca15847087bc65b71f0efbc31a923af2"
+    },
+    {
+      "VA": "0x3c80",
+      "end_exclusive": "0x3cb8",
+      "input": "plugin",
+      "sha256": "4117d50f8694bf1f9522ed7abc9267f59aa314078f9aaf2eeec738b90f145f4a"
+    },
+    {
+      "VA": "0x3ab8",
+      "end_exclusive": "0x3ad8",
+      "input": "plugin",
+      "sha256": "0805ece0606586dcf9d1ec6a500c3e7e7e424c39a568c5f8fd9610399b702e2a"
+    },
+    {
+      "VA": "0x3a00",
+      "end_exclusive": "0x3a84",
+      "input": "core",
+      "sha256": "394e6aadb055ba1f8aae8e39adf3582d63ec3d515df637e850b7a0c3d5dc98a0"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "authoritative_report": {
+    "bytes": 14234,
+    "path": "REPORT.v2.md",
+    "sha256": "b07a9d0fcb645f42c347a47075997dbee23a202a18e797d57825da82d2a7a97d"
+  },
+  "authorization": "Parent authorized new v2/report-only history before writing; original report and source outputs remain unchanged.",
+  "no_native_execution": true,
+  "old_report": {
+    "bytes": 14234,
+    "path": "REPORT.md",
+    "preserved_actual_copy": "report-first-candidate/REPORT.md",
+    "sha256": "10f066119eef1e6c8e4fbae952b5cad54fd744dfdbe6ce3a435d8b663b767c74"
+  },
+  "scope": "Author-caught pre-promotion report-only counts and line-locator precision correction. Source bytes, collector, all22 generated outputs, reconstruction cases and execution counts unchanged.",
+  "substitutions": [
+    {
+      "count": 1,
+      "new": "all7 in `/home/bticino/libcoso`, and five named",
+      "old": "all8 in `/home/bticino/libcoso`, and four named"
+    },
+    {
+      "count": 1,
+      "new": "`coso_cfg`, lines18-19",
+      "old": "`coso_cfg`, lines19-21"
+    },
+    {
+      "count": 1,
+      "new": "complete7-file directory enumeration",
+      "old": "complete8-file directory enumeration"
+    }
+  ],
+  "unchanged_collector_sha256": "d6a452eebebf65d4c75548799971841ade9d3b278580dcf2209f0e745ba35727",
+  "unchanged_manifest_sha256": "0564eeee2fce37ef3028ad451bb6be714bc6b8cbe615f21a52128002e7d0c559"
+}

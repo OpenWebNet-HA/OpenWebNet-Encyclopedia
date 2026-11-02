@@ -1,0 +1,41 @@
+# Documentary integration review v2: catalogue ownership and scene factories
+
+PASS for the current versioned documentary candidate; the sole first-review ranking precision issue is resolved. This review supersedes the first candidate's pending-content conclusion while preserving `reviews/integration-review.md` unchanged at SHA-256 `4d9fa153c1afe79f1b2f858376bc7326dc1324b4c1e0637c72f7ae6f8c1cb62e`. Final mechanical completion of integration-review.txt and validation.json remains pending.
+
+The authorship/scope disclosure is unchanged: I authored catalogue/REPORT.md. Its independent source reviewer verified its original code separately; this documentary review does not self-certify that source. Factory/runner integration is compared with their frozen reports and source reviews. No collector/native replay, new firmware investigation, SQL, parser, target process, network or physical operation occurred. Only these separately versioned review documents were written.
+
+## Exact current candidate pins
+
+All seven current candidate files byte-match their frozen review-candidate-v2 snapshots and size/hash records. The new index SHA-256 is `0fcc52a09a3e1e5f6c469d0f027dbbfd118c36c734d2034aba5205c87dd15b5f`. Workspace-relative paths follow.
+
+| File | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-factories.md` | 7387 | `00ff0103bb815431071651ee12c170078e345649728e36e3bfe0eb7c9f4bea10` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md` | 11224 | `23629011fc6f1afd56e837d5d0a65e62952c02c051573bea534ffd4a9535d848` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md` | 9295 | `0306fe7a480c2111933b39fbe22a39ba7b3483264c48110c2dd3025cafb2c492` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | 11611 | `59affbd225571e554a49ad784619912a1521ff5b00c80bf5ea28094540b942b9` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-factories/README.md` | 3944 | `cd69bdb2e6094c6500e10cee30aee0a8e4bcc25ad20efdfe3e4b75c8e34e581b` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/RANKED_REMAINING_QUESTIONS.v2.md` | 1508 | `5a50b8418c74a33806defe2db5840adb29c7d9349e6a9261e5cda6bb69c05c5a` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/RANKING_PRECISION_HISTORY.json` | 731 | `3d280aaf3df97223cfc7b1cbdc96a4d47e537670edf1113adcdc90fd6fd0387f` |
+
+## Precision resolution and retained history
+
+Verified the exact RANKING_PRECISION_HISTORY.json substitution against both complete ranking files. The only source-ranking change is `Full23-type initializer and configured scene grammar remain unreviewed.` to `The full initializer and configured scene grammar remain unreviewed.` The old file remains `9a14046ffe212dc90fbe8a49093a44b56847cb91d176dcbc090989ffca367448`; new v2 is `5a50b8418c74a33806defe2db5840adb29c7d9349e6a9261e5cda6bb69c05c5a`. This correctly avoids assigning an unexamined whole-initializer count from an inclusive23 bound or the separate23-row condition table. No replacement type count, runtime claim or new firmware semantics is introduced.
+
+The original five-page snapshot/index and first review remain preserved. Four current human pages are byte-identical to that earlier five-page candidate; only capsule README advances its ranking link and adds an explicit history/refinement note. The new ranking and history are additive files in the seven-file v2 snapshot. SYNTHESIS.md and COVERAGE.md retain their first-review pins and bounded claims. The source reports, evidence/code and original output counts remain unchanged.
+
+Verified both additive PRECISION_EXPORTS.json entries: the actual remaining-questions-v2.txt bytes equal the new ranking, and ranking-precision-history.json equals the source history, each with declared size/SHA-256. The precision export index is `ae1a8c88ec7fe1b496ebb43ccec0db23a7623d82469a0b737c0c935253ae4afe`. Original84-pair SOURCE_EXPORTS.json remains `a653d677dee07e4c69ee010d02abb30a7188d366fc93ea07ca67d0b94f1df2f5`; its complete byte-pair audit is retained in the first review rather than falsely reported as freshly rerun here. Old remaining-questions.txt/source-ranking bytes were not replaced.
+
+## Final source-summary/product conclusion
+
+The full source-to-summary assessment in the first review remains applicable with that count qualifier removed. The class139 SQL producer and result13/14 metadata names are now source-supported, with correct inner/wrapper aliasing and conditional registry/caller premises. They do not become physical capacity/WHO, actual row success, full compatibility or complete version/admission policy. The independent catalogue source review remains `902f3914dcc6a1684f60b5035d2aacdf162fc9a04fb771422920944b116a94a2`.
+
+The selected SLEEP/SCENARIO44-byte JSON-facing construction/schema and normal-capacity vector transfer remain separate from compiled runtime actions and their virtual execute/stop effects. The selected runtime96-byte allocation, large initializer/worker guards, enabled/active/stop-request bytes and thread requests do not establish actual execution, timing, immediate interruption, race freedom or complete scene grammar/lifetime. Factory/runner source review pins remain respectively `979d136e497c78afe9f0b46cbbac77d9a38c95b80ff3d00cba1741111cb438c2` and `a3ba1e101e7147c1c86bee383160b1ad7027872fc9a3e0fcccb01683fff2165e`. No old layouts or product interface/panic meanings are imported. Original/runtime/SQL/scene/physical execution stays0 and wider Device gates remain pending.
+
+The70-output arithmetic29+22+19 remains method/navigation scope. No source collector or target was run as part of this v2 documentary check; existing source checks and peer reviews retain their own actual provenance.
+
+## Actual link status and pending final validation
+
+Across the current Markdown candidate files there are50 existing local link occurrences and exactly two still missing capsule completion targets: **integration-review.txt** and **validation.json**. The new precision/ranking links resolve to actual verified files. The two remaining targets are PENDING final copy/validation and strict ESG/link checking, not certified future bytes. No placeholder, link exemption or circular certification of this review's eventual exported copy is granted.
+
+This exclusive new v2 review freezes the current documentary result. Earlier reports, old/current candidate snapshots, first review, source artifacts and code/results remain untouched by this reviewer.

@@ -1,0 +1,7 @@
+{
+  "retained_failed_collector": "collect_project_templates_v1.py",
+  "sha256": "6d3048634e225933b62ab9f253fae99fdeb53396eff3e9e0f5d8154f002e6a3a",
+  "failure": "Before any output writes, an incorrect preflight assumption of zero declared FKs failed. Actual source declares22 MHPrj and6 PTDB relationships.",
+  "correction": "New collectorv2 records and asserts actual28 FK rows, adds foreign_key_check and distinguishes declared local references from unproved cross-database joins. Originalv1 remains unchanged.",
+  "privacy": "Final output withholds credential-bearing defaults, raw CREATE SQL and populated plant values. Initial exploratory metadata was read before default-field filtering; no credential values are copied into saved reports/candidate evidence."
+}

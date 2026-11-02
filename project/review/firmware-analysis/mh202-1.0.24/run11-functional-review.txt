@@ -1,0 +1,36 @@
+# MH202 run11 functional independent static source review — PASS
+
+No corrections required. Reviewer authored the distinct protocol/run11 common parser/normalizer CPU experiment, not this PARENTESI finding. This review writes only this file. Author evidence, original images and prior reports stay unchanged.
+
+## Reproduction and source checks
+
+`python3 -B work/mh202-firmware/research/2026-10-30/functional/run11/collect_evidence.py --check` passed14 evidence outputs plus manifest,6 original spans,29 words,2 original inputs and4 finite ordinary host cases. Independently parsed ELF PT_LOAD mappings through ImageVFS without importing the author collector, recomputing all6 original byte offsets/span hashes,29 word values, both original file hashes and all14 manifest entries. Independently checked the actual original GOT0x1222c relocation names linea. Recalculated the4 operand tuples/cursor returns with a separate host decomposition and checked every saved per-byte source/destination trace against its input/output.
+
+Inspected actual caller zeroing/argument setup, complete original PARENTESI prologue/body/branches/return, selected ordinary writers and unflagged tails, as well as the retained recursive/logical call/normalization sites. No original ARM/library/parser/JS/PHP/interpreter/clock or target OS/process/I/O executes in this functional batch/review. Its0 execution count does not alter the separate protocol CPU corpus or parent-wide ledger.
+
+## Semantic assessment
+
+- Actual caller0x9b68..0x9c08 selects the IIF3-byte prefix, zeros operator3/left10/right10 at SP+63/+53/+43, then passes comma/start3/operator/left/right to PARENTESI. Original return is not checked or used before the next call; IIF receives left/operator/right. Thus the supplied output capacities and roles follow actual registers/stack, not guessed signatures.
+- Native source increments cursor3→4 at0x419c..0x41a4. Ordinary body scans until the supplied delimiter, with distinct opening-parenthesis/percent/OR/AND paths bypassed by the finite fixtures. Current byte comparisons at0x61e8/0x6204/0x6220 select operator writer for `>`,`<`,`=`; otherwise current operator[0] selects left versus right writer. First operator/right writes reset the shared index as described. Byte stores0x6258/0x62a4/0x62f0 and cursor increment agree with the host traces.
+- This route adds no trimming or explicit output NUL; caller-zeroed short buffers preserve termination only under the stated field lengths. No whole bounds, malformed-source, canonical whitespace or accepted-DSL conclusion is promoted. Complete readable first-comma input remains a premise; NUL is not a substitute delimiter in this selected body.
+- Both logical flags remain0 for these ordinary cases, so0x6334→0x6bfc and0x6c04→0x748c reach cursor+1 return. Selected writes affect control locals and supplied operand buffers; given the actual nonaliasing caller stacks/shared-line premise, global linea bytes stay unchanged. IIF's later global suffix copying is a different operation, not PARENTESI's returned cursor acting as an action selector.
+- Same-named executable/library globals and actual linea GOT usage justify only a conditional effective-binding join. For the short supplied shape `IIF($V001=0,...)`, actual selected buffer dataflow can yield left `$V001`, operator `=`, right `0`; this narrows the prior supplied-operand premise but does not run native parsing, numeric lookup, comparison or action. Symbolic TRUE_BODY/FALSE_BODY remain symbolic, not valid action arguments or configured source.
+- Recursion through original PLT0x1600, OR/AND sites and two-byte0/1/=/1 normalization stores are retained source context. They do not establish mixed precedence, short-circuiting, complete logical grammar, recursive shared-buffer semantics or physical Only-if behavior. The report correctly keeps these branches outside the ordinary model.
+
+The source/model/limits agree. No configured extra/4 asset, natural full interpreter line, loader/provider resolution or whole guarded action is established. Prior numeric lookup capacity, unknown-name mutation, global ownership and overlapping copy limitations remain intact.
+
+## Exact pins
+
+Author paths below are relative to `functional/run11/`. Manifest covers all14 generated outputs and excludes report/reviews; report/collector are separately pinned.
+
+| File | SHA256 |
+|---|---|
+| `REPORT.md` | `bde5160852a2633b415ec463050b319456fe26f92b60b59746a6466324f397b3` |
+| `collect_evidence.py` | `87c1d2ba646590b74eddbfc9b438b1fc65e1a5a867525be32335d28144a9e57e` |
+| `output-manifest.json` | `619a1f6bb9d38555e792f20d84e04707bb38d4a799942b71c2a5bb84f9c0a208` |
+| `input-hashes.json` | `4a195ad2bacb976a9b77ca5bf46923f39dcee79512c4514ba5eee56c05739c35` |
+| `original-spans.json` | `d8297766e23520462d07df0cfe0e12a0afdefa07d0cc05d39c4d8650d7aa6b5f` |
+| `critical-words.json` | `0870ec4456648d0fa255243dd3da0004401e3bcf63e6ce84056bb782db3971a6` |
+| `selector-literal-got-facts.json` | `1c2dbb1c81c3c0c52d8b25140defffe1be707ab4b7f0996f5075b23a65965a27` |
+| `host-selected-operand-model.json` | `45b62cecb41081a7ba63a26659869e775b9699823bd78128c303c80d011308a6` |
+| `source-relationship.json` | `5daed9ff9ff4a3ef0a3a8584180624bcfb70c79b11837cc95b58cb013c80019b` |

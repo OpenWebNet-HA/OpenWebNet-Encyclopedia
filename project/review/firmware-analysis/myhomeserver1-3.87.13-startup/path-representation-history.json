@@ -1,0 +1,11 @@
+{
+  "scope": "Representation-only documentation refinement after mechanical ECV preflight; original path literal/report/source/exports unchanged",
+  "old_page_snapshot": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/integration/review-candidate/OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-startup.md",
+  "old_sha256": "7c290aac300926e51dcdf1c36e0a25aa31a310ee7edc2e88bba071cf62e22727",
+  "new_page": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-startup.md",
+  "new_sha256": "373bc378d94e31a59a0f7e9b40ac143a474d0a98e220336bb46d366f17cb4e88",
+  "exact_old_sentence": "The whitelisted packaged/default `scenesPath` is `/home/bticino/cfg/extra/0/scheduling_manager`.",
+  "exact_new_sentence": "The packaged/default `scenesPath` points to Firmware image-relative `home/bticino/cfg/extra/0/scheduling_manager`; its original leading-slash literal is retained in the exact startup report.",
+  "preflight_failure_transcribed_from_tool": "FAIL PRIVATE_PATH reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-startup.md:13: user-specific path /home/bticino",
+  "reason": "Original image path is an embedded firmware account path. Render its image-relative counterpart in the human page, while the complete absolute literal remains in exact source evidence. No synthetic label, guard exemption or source interpretation change."
+}

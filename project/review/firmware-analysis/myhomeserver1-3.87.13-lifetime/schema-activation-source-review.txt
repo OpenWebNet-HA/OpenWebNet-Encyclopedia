@@ -1,0 +1,28 @@
+# Independent BN3L schema/construction source review
+
+PASS for schema-activation/REPORT.md; no correction requested. This independent static source/byte/dataflow review covers selected raw schema, dispatch, construction/move and append. No original instructions, JsonCpp/serializer/provider, action, configured scene, timer, thread, transport or physical operation was executed. No input fixture or semantic host model was supplied; author files remain unchanged.
+
+Reproduced collect_activation_v1.py --check: 15 outputs, six spans, eight BL checks, ten schema literals and 14 instruction guards. Independently mapped original ELF32 PT_LOAD ranges and checked all six raw span hashes, 14 original byte ranges, ten PIC key resolutions/literal bytes, eight Thumb BL targets, both selected TBH entries, two relocated vtable-header/GOT chains and the noStatus pointer/literal. Verified all16 indexed first collector/output copies and the separate actual report against current exact bytes.
+
+Source conclusions verified:
+
+- Exact action row12 is BN3L, length4. Raw table entry30d90 selects313b4 -> constructor2b0b4, requests64 bytes, copies base/six derived words, installs the raw class address point and hands the pointer to the scene+24 vector helper. This local enum/table route is distinct from OPEN WHO/kind or product support.
+- Raw defaults40..63 are explicitly all0xffffffff before optional checks. Original length/byte comparisons map exact on/off/noStatus to0/1/-1. The noStatus comparison result0 is decremented before the store; its final -1 value is not guessed from a label. Unknown strings do not locally replace the selected initial word before the later numeric branches, with provider/conversion/input validity still unproved.
+- Present brightness/saturation/hue/temperature use asInt, store their signed value in their own field and take a signed greater-than-zero predicate before replacing status40 with0. Zero/negative values still store the field but do not take that particular override. Speed's selected present-key path stores60 without the override. Source order and optional missing/default roles are kept distinct; no range, unit, clipping, physical state or complete accepted JSON grammar is inferred.
+- Initializer's separate local index12 TBH selectsac198. The raw object's virtual serializer supplies JSON to the original constructor2b0b4. Its serialization coherence remains an opaque delegate premise, not executed or replaced by an assumed copied input. The branch requests compiled constructorcf06c and116-byte allocation, uses common moveb444c, copies metadata/derived words, reinstalls derived vtables and calls scene+128 appenda7288.
+- Operational8/12 are copied together by the actual move, distinct from metadata84/88. Combined with the earlier reviewed constructor's explicit duration->operational12 setter, this supports the selected normal route to a compiled action whose duration can be nonzero under the stated selected-value/provider premises. It is not evidence of actual configured activation, a universal delay-then-duration schedule, later field stability, callable effects or full ownership/unwind correctness. Raw64-byte/compiled116-byte/subobject/callable layouts are not conflated.
+
+The new report's boundaries retain serializer and JsonCpp behavior, actual assets/classes, provider state, shared-stop/cancellation, full move/destruction/concurrency and physical outcomes. No callable/send/transport internals were inspected to assign a physical role from BN3L or its optional key names. Earlier source reports are inherited at their explicit normal-return scope, not rerun as new behavioral coverage.
+
+Reviewed SHA-256 pins relative to schema-activation/:
+
+| File | SHA-256 |
+| --- | --- |
+| REPORT.md | 481a0997aeef396372be9146a2e6adf2bfe1f496a50e3a77f7297043f1ea58d3 |
+| collect_activation_v1.py | 6a8ccee2543962e0bb6e8eaf56497e93d2cbf0cb71cdd016726bb048c7328ed5 |
+| OUTPUT_MANIFEST.json | 7071768465cce6674b22d69f383ffd70b9313b2a06bec7155393142e600d70b3 |
+| DISPATCH_AND_IDENTITY.json | 4f6233a13fd3afdc62a90166c126bf9c71fcf98a5e550a7eb81d44f4109d477e |
+| FIELD_LEDGER.json | f2cd8ba4cd8f5189550c7ecb16055750623a39ed52fcfae6da1555644cc9c7d5 |
+| first-candidate/INDEX.json | faea1e071f4a6cece8cb87d1ea19471b7b9eaa0037430fb751045d284d3f7e81 |
+
+Original scheduler SHA-256: 7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26. This new ASCII review is exclusively created and immediately frozen as exact first-review bytes with an index computed before opening it; no earlier author or review candidate was overwritten.

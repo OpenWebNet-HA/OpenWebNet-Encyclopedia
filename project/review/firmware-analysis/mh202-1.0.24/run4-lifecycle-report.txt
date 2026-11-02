@@ -1,0 +1,36 @@
+# MH2021.0.24 saved scenario-control file - run4
+
+This is a static original-code examination of the saved-state file read/write contract, refining the run2 startup restoration evidence. Original ARM/vendor/helper execution and hooks remain0. No state file was created, opened by firmware, truncated or changed; host examples do not establish crash recovery or product behavior.
+
+Input: normal-image `/home/bticino/bin/bt_taskmanager`, SHA256 `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e`. `inputs.json` pins ImageVFS/accessor and the earlier immutable report. All addresses below are ELF VAs, not file offsets; `original-spans.json` maps five source ranges and hashes. All originals and prior evidence remain read-only.
+
+## Header and array
+
+Literal pool0xac38 names `/home/bticino/cfg/extra/SCRIPTS_STATUS`; writer mode is `w`, reader mode `r`. The original initialization helper0xad38 zeroes a12-byte header at0x1bba8, fills300 state bytes at0x1bbb4 with0xff, and copies four ASCII magic bytes `0123` into header positions0..3 (0xad58..ad88). This is not a firmware version or time stamp. Header byte4 is the marker written below; no sequence number, checksum or generation-age comparison occurs in the selected read/write bodies.
+
+State updater0xace4 bounds ID-1 unsigned below300. It derives a numeric active bit from helper0xb5f8, adds numeric mask2 when record+52 is nonzero, stores one byte at array[ID-1], then tail-calls the writer. The earlier run2 interpretation of saved numeric masks1/2 and RESTART restoration remains separate from child liveness.
+
+## Save order and return contract
+
+On fopen failure, writer0xabac returns-1. After a nonnull stream it performs this original order:
+
+1. Set header[4] to ASCII `1`; request fwrite(header,12,1).
+2. Request fwrite(state-array,300,1).
+3. Set the in-memory header[4] to ASCII `0`; request fseek(stream,0,SEEK_SET).
+4. Request fwrite(header,12,1), then fclose and return0.
+
+Calls/guards are in `save-header-and-state.txt`: marker stores0xabe0/0xac0c, writes0xabe4/0xabf8/0xac24, seek0xac10 and final explicit return0xac30. The selected body does not branch on fwrite/fseek/fclose return values and contains no fsync/rename call. This establishes its local API-request/return policy. It does not establish successful file replacement, bytes on disk, durability, actual failure occurrence or the policy of unseen wrappers/filesystems. Zero/short failed imported results were not executed.
+
+## Load policy and incomplete marker
+
+Reader0xada0 requests12 bytes as one fread item and then compares only the first four header bytes with `0123` (0xadc8..addc). The fread return is not tested before this comparison. Missing fopen or unequal magic closes where applicable, tail-calls initialization0xad38, which itself tail-calls the save helper. A failed default save therefore need not have the same return as the normal load path.
+
+When magic matches, header byte4 is compared with ASCII `1` at0xadf8..ae00. That branch changes a logger call only: both displayed alternatives converge at0xae14 and request300 bytes as one fread item into the state array, close and return0. The marker is not used here as a rejection, replay or rollback gate. The second fread and fclose results are also not tested. This is a local code finding, not proof of acceptance of a particular truncated file: actual pre-read storage, partial-read writes, standard-I/O behavior and later consumers remain unexecuted and could affect such an example.
+
+Startup0xb25c calls this reader. A later guarded mode4 path calls initialization0xad38 at0xb2fc and sets a separate global flag; its enclosing status source is outside this batch. Initialization requests a save, so mode reset is not simply a memory clear. `host-source-order.json` supplies five finite supplied-open/magic/marker cases; these are host transcriptions only and do not model partial reads or actual process recovery.
+
+## Reproduction and limits
+
+Run `python3 work/mh202-firmware/research/2026-10-30/lifecycle/run4/collect_evidence.py --check`. It checks10 deterministic outputs plus a manifest, five original spans and12 exact instruction words. Five host examples are not original test cases. Original instruction and callback counts0/0.
+
+High confidence: original file path, header/array sizes and initialization, marker/request order, local explicit return and missing result tests, matching-magic marker branch convergence, ID-index/mask update and selected startup/reset calls. Conditional: imported FILE contracts, actual process state/provider binding and call reachability. Open: original persisted contents, freshness versus actual configuration, complete readiness/reset lifecycle, interruption/recovery, physical effects and consumers outside the reviewed restore paths. No full scenario-engine or device-health assertion follows.

@@ -1,0 +1,10 @@
+{
+  "previous_history_sha256": "ebee9952361dc20f6fc765710356e5e498d0d8531b16816e9b655d6326ce403d",
+  "v2_sha256": "37df4f6dc32c1440996d41fb9825e52197ce703575120899911258cd0dcfb080",
+  "v3_sha256": "1417e1e82ee9ff3d970a1d23e72073d332c3064f44d9f54ce7c2f95d7555d568",
+  "observed_failure": "v2 build asserted common extracted/nested/Image.zip path before any output generation. F461 safe extractor actually preserves nested .contents directories; parent inspected actual extracted paths.",
+  "correction": "Newv3 uses both exact independently observed product-specific bundle paths and pins both original extraction provenance files. Enables trusted_schema=OFF for SQLite. No fingerprint/member/existing guard removed; v2 and exactpre-v3 copy retained.",
+  "v2_generated_outputs": 0,
+  "original_execution": 0,
+  "terminal_history": "Observed v2 tool traceback transcribed; no fabricated original on-disk terminal log"
+}

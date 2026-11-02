@@ -1,0 +1,31 @@
+{
+  "/home/bticino/bin/dedrifupdater": {
+    "bytes": 43088,
+    "resolved": "/home/bticino/bin/dedrifupdater",
+    "sha256": "8f32212bee98b507690f1e22d6b26524c8a13dc20efcc8cc05900ac4142f9753"
+  },
+  "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0207-f460-myhome-server.md": {
+    "bytes": 41934,
+    "sha256": "ed4af14a11813ba1fdc53dfbf131a388b2cf8066fc688888e30da7c158579932"
+  },
+  "work/f460-f461-comparison/2026-11-01-run08/reviews/f460-source-review.v2.md": {
+    "bytes": 2336,
+    "sha256": "4c8432f94a508a12ce3b468c6c1a29cd8dc4179426fd1f0d02770d94f068905f"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/REPORT.v3.md": {
+    "bytes": 8249,
+    "sha256": "8edf41662a72cbdfad04dd09febfe8eb8826ab6d55dddb5b6a2445f38ebf6d4e"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/RETURN_VALUE_REFINEMENT.v3.json": {
+    "bytes": 946,
+    "sha256": "5896d75fea34b22522936410bcebe4ca382fd1bea7b21215ca8649484fe4dfbd"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/SOURCE.json": {
+    "bytes": 14447,
+    "sha256": "7caa414a7f7ac40d07046c62390f93b6b28d169bdad2825f90616d87c794173b"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01/image_vfs.py": {
+    "bytes": 5602,
+    "sha256": "32e453cb6af0e2daafb8325d7b5115c3c13883e57d279d347aa8ea4baa3e3838"
+  }
+}

@@ -1,0 +1,54 @@
+
+
+
+Disassembly of section .text:
+
+00003f70 <generate_json_ack@@Base>:
+    3f70:	4a16      	ldr	r2, [pc, #88]	@ (3fcc <generate_json_ack@@Base+0x5c>)
+    3f72:	4b17      	ldr	r3, [pc, #92]	@ (3fd0 <generate_json_ack@@Base+0x60>)
+    3f74:	b570      	push	{r4, r5, r6, lr}
+    3f76:	b082      	sub	sp, #8
+    3f78:	447a      	add	r2, pc
+    3f7a:	58d3      	ldr	r3, [r2, r3]
+    3f7c:	681b      	ldr	r3, [r3, #0]
+    3f7e:	9301      	str	r3, [sp, #4]
+    3f80:	f04f 0300 	mov.w	r3, #0
+    3f84:	b129      	cbz	r1, 3f92 <generate_json_ack@@Base+0x22>
+    3f86:	4606      	mov	r6, r0
+    3f88:	460d      	mov	r5, r1
+    3f8a:	f7fe e9d2 	blx	2330 <new_json_msg@plt>
+    3f8e:	4604      	mov	r4, r0
+    3f90:	b168      	cbz	r0, 3fae <generate_json_ack@@Base+0x3e>
+    3f92:	2401      	movs	r4, #1
+    3f94:	4a0f      	ldr	r2, [pc, #60]	@ (3fd4 <generate_json_ack@@Base+0x64>)
+    3f96:	4b0e      	ldr	r3, [pc, #56]	@ (3fd0 <generate_json_ack@@Base+0x60>)
+    3f98:	447a      	add	r2, pc
+    3f9a:	58d3      	ldr	r3, [r2, r3]
+    3f9c:	681a      	ldr	r2, [r3, #0]
+    3f9e:	9b01      	ldr	r3, [sp, #4]
+    3fa0:	405a      	eors	r2, r3
+    3fa2:	f04f 0300 	mov.w	r3, #0
+    3fa6:	d10f      	bne.n	3fc8 <generate_json_ack@@Base+0x58>
+    3fa8:	4620      	mov	r0, r4
+    3faa:	b002      	add	sp, #8
+    3fac:	bd70      	pop	{r4, r5, r6, pc}
+    3fae:	4628      	mov	r0, r5
+    3fb0:	6835      	ldr	r5, [r6, #0]
+    3fb2:	f7fe ea10 	blx	23d4 <g_strdup@plt>
+    3fb6:	6833      	ldr	r3, [r6, #0]
+    3fb8:	2201      	movs	r2, #1
+    3fba:	4907      	ldr	r1, [pc, #28]	@ (3fd8 <generate_json_ack@@Base+0x68>)
+    3fbc:	60e8      	str	r0, [r5, #12]
+    3fbe:	6918      	ldr	r0, [r3, #16]
+    3fc0:	4479      	add	r1, pc
+    3fc2:	f7fe e96e 	blx	22a0 <add_val_bool_node@plt>
+    3fc6:	e7e5      	b.n	3f94 <generate_json_ack@@Base+0x24>
+    3fc8:	f7fe e8ba 	blx	2140 <__stack_chk_fail@plt>
+    3fcc:	2ee4      	cmp	r6, #228	@ 0xe4
+    3fce:	0001      	movs	r1, r0
+    3fd0:	0178      	lsls	r0, r7, #5
+    3fd2:	0000      	movs	r0, r0
+    3fd4:	2ec4      	cmp	r6, #196	@ 0xc4
+    3fd6:	0001      	movs	r1, r0
+    3fd8:	2100      	movs	r1, #0
+	...

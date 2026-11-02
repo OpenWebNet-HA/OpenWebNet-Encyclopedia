@@ -1,0 +1,61 @@
+{
+  "collector_sha256": "898e268ac4c187ec7a708e2fe5031f07ce9b36fa9e64b7a8494a690ddb985a5a",
+  "counts": {
+    "PIC_joins": 2,
+    "branches": 5,
+    "direct_calls": 5,
+    "guards": 39,
+    "imports": 7,
+    "inputs": 6,
+    "original_execution": 0,
+    "spans": 9,
+    "tables": 2
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 1156,
+      "sha256": "cdbd41e56e9bde6d8025b4bebcde3f4597671f90a537367698dffef54ff13e9d"
+    },
+    "SOURCE.json": {
+      "bytes": 13261,
+      "sha256": "2b0aaadc55a2e7f62c00cbe8e611d8cc00a09020f4035133fc06224fd0fa6395"
+    },
+    "spans/alternative-constructor.txt": {
+      "bytes": 1286,
+      "sha256": "814888dfb33342e2af2a1ad48dfd784d6f1a003c1a8c4cbb087c38a8439c8a2a"
+    },
+    "spans/condition-worker-entry.txt": {
+      "bytes": 2535,
+      "sha256": "3fc07f2b9bd339c88d885fc3de48076657e79ef468fda0ae44d3ceca2a0b4436"
+    },
+    "spans/gate-and-thread-state-request.txt": {
+      "bytes": 3437,
+      "sha256": "0932d5431f58347d66182cb33421a4e7e20cba94ba7fe77e90f76eacff1cd31f"
+    },
+    "spans/normal-true-path-local-handoff.txt": {
+      "bytes": 4779,
+      "sha256": "1e94aa0a6dac4dee0b335bdb9e0babedf17c2cd9344bce8047cd112df5130481"
+    },
+    "spans/owner-constructor.txt": {
+      "bytes": 1321,
+      "sha256": "d6e05958c382561a1e6e4c8fd82a46d42bac56af412c749810c60ed657bb6625"
+    },
+    "spans/previous-holder-nonzero-branch.txt": {
+      "bytes": 323,
+      "sha256": "5967a158cfd419cef9c97ebabd569dbac7d60852b4dff760cf2312e5fc4b7240"
+    },
+    "spans/selected-owner-allocation.txt": {
+      "bytes": 1569,
+      "sha256": "dc036b445b4c8a8315077f8ac104d30984e0aef0a4246e208cb2170ee8c45459"
+    },
+    "spans/single-pointer-dispatch.txt": {
+      "bytes": 1148,
+      "sha256": "1c30b21fa0c39b7c1a8e92d66cdfd196fa55023af29e99c8aea1fbc0b8441e3f"
+    },
+    "spans/single-predicate-tail.txt": {
+      "bytes": 646,
+      "sha256": "7c41a2e2da621d569eb506e3270dd88e7dcf303192b7855b9826f1df3054fcb3"
+    }
+  },
+  "report_sha256": "578653ad15a4c18b203d9917867f32384d017894875e88054043fae29ff46557"
+}

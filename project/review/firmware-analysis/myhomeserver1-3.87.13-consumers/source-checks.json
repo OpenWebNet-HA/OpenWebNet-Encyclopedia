@@ -1,0 +1,44 @@
+{
+  "scope": "Parent read-only reproduction of current three static consumer collectors; no original/vendor/target SQL/runtime execution",
+  "checks": [
+    {
+      "path": "catalogue/collect_catalogue_v2.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "a34b40",
+          "wall_time_seconds": 0.094875069,
+          "exit_code": 0,
+          "original_token_count": 33,
+          "output": "{\"check\": true, \"outputs\": 16, \"spans\": 10, \"Thumb_assertions\": 17, \"PIC_literals\": 3, \"original_execution\": 0, \"SQL_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "path": "scheduler/collect_scheduler_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "24acb7",
+          "wall_time_seconds": 0.14469126,
+          "exit_code": 0,
+          "original_token_count": 38,
+          "output": "{\"check\": true, \"outputs\": 27, \"spans\": 17, \"PIC_literals\": 28, \"direct_calls\": 10, \"critical_byte_guards\": 11, \"inputs\": 6, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "path": "providers/collect_json_provider_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "00cdd5",
+          "wall_time_seconds": 0.148095463,
+          "exit_code": 0,
+          "original_token_count": 35,
+          "output": "{\"status\": \"PASS\", \"outputs\": 16, \"source_spans\": 10, \"byte_assertions\": 18, \"literal_joins\": 5, \"host_cases\": 8, \"original_execution\": 0}\n"
+        }
+      }
+    }
+  ]
+}

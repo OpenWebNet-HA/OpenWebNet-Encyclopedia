@@ -1,0 +1,36 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000cdbf8 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15440>:
+   cdbf8:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+   cdbfc:	4604      	mov	r4, r0
+   cdbfe:	4840      	ldr	r0, [pc, #256]	@ (cdd00 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15548>)
+   cdc00:	b082      	sub	sp, #8
+   cdc02:	4b40      	ldr	r3, [pc, #256]	@ (cdd04 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1554c>)
+   cdc04:	4478      	add	r0, pc
+   cdc06:	58c3      	ldr	r3, [r0, r3]
+   cdc08:	681b      	ldr	r3, [r3, #0]
+   cdc0a:	9301      	str	r3, [sp, #4]
+   cdc0c:	f04f 0300 	mov.w	r3, #0
+   cdc10:	b312      	cbz	r2, cdc58 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x154a0>
+   cdc12:	2a01      	cmp	r2, #1
+   cdc14:	d025      	beq.n	cdc62 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x154aa>
+   cdc16:	2a02      	cmp	r2, #2
+   cdc18:	d026      	beq.n	cdc68 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x154b0>
+   cdc1a:	2a03      	cmp	r2, #3
+   cdc1c:	d10e      	bne.n	cdc3c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15484>
+   cdc1e:	6824      	ldr	r4, [r4, #0]
+   cdc20:	b164      	cbz	r4, cdc3c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15484>
+   cdc22:	6860      	ldr	r0, [r4, #4]
+   cdc24:	f104 030c 	add.w	r3, r4, #12
+   cdc28:	4298      	cmp	r0, r3
+   cdc2a:	d003      	beq.n	cdc34 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1547c>
+   cdc2c:	68e1      	ldr	r1, [r4, #12]
+   cdc2e:	3101      	adds	r1, #1
+   cdc30:	f743 e93e 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   cdc34:	2134      	movs	r1, #52	@ 0x34
+   cdc36:	4620      	mov	r0, r4
+   cdc38:	f743 e93a 	blx	10eb0 <_ZdlPvj@plt+0x4>

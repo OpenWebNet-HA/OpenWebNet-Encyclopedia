@@ -382,7 +382,7 @@ The exact 2024 Italian and 2026 English descriptions both assign user control to
 
 ## Evidence limits and open work
 
-Installed release / build, production-specific compatibility, actual capacity under the installed version, third-party payload behavior and endpoints remain uncorroborated. Linked firmware packages and external developer-protocol payloads are explicitly pending inspection; a manufacturer link alone does not establish exact runtime operation.
+Installed release / build, production-specific compatibility, actual capacity under the installed version, third-party payload behavior and endpoints remain uncorroborated. The [retained `2.0.11` implementation](../../reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md) provides selected source evidence, with [product-specific implications](../../reverse-engineering/firmware-analysis/f460-f461-knowledge-handoff.md). It does not establish an installed release, active Configuration, successful protocol delivery or additional physical capability. External developer-protocol payloads remain pending inspection; a manufacturer link alone does not establish exact runtime operation.
 
 No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
 
@@ -396,11 +396,11 @@ These manufacturer-listed resources are visible discovery work. A listing establ
 | `Brochure Living_NOW 3M.pdf` | Brochure BRO-LNOW-3M  /  PDF (16.3 MB)  /  EN | [Manufacturer link](https://assets.legrand.com/pim/DOCUMENT/Brochure%20Living_NOW%203M.pdf) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |
 | `Catalogue Living_NOW 2M.pdf` | Catalog Commercial Page CAT-LNOW-2M  /  PDF (23.1 MB)  /  EN | [Manufacturer link](https://assets.legrand.com/pim/DOCUMENT/Catalogue%20Living_NOW%202M.pdf) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |
 | `Catalogue Living_NOW 3M.pdf` | Catalog Commercial Page CAT-LNOW-3M  /  PDF (22.5 MB)  /  EN | [Manufacturer link](https://assets.legrand.com/pim/DOCUMENT/Catalogue%20Living_NOW%203M.pdf) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |
-| `F461_020011.fwz` | Firmware F461_020011  /  FWZ (132.2 MB) | [Manufacturer link](https://assets.legrand.com/pim/AUTRE/F461_020011.fwz) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |
+| `F461_020011.fwz` | Firmware F461_020011  /  FWZ (132.2 MB) | [Manufacturer link](https://assets.legrand.com/pim/AUTRE/F461_020011.fwz) | Selected source paths described in the [F461 2.0.11 implementation reference](../../reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md), without installed/runtime approval |
 | `MyHOME_Suite_030538.exe` | Software MYHOME_SUITE_030538  /  EXE (571.7 MB) | [Manufacturer link](https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |
 | `MyHome_Suite_README_v2.pdf` | Software MYHOME_SUITE_README_V2  /  PDF (551 KB)  /  EN | [Manufacturer link](https://assets.legrand.com/pim/AUTRE/MyHome_Suite_README_v2.pdf) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |
 
-The shared commissioning manual was examined at limits, update, scan, role and settings scopes; detailed UI screens of every graphic-object chapter remain unexamined. The developer Local Interoperability specification and linked firmware/XML payloads were not inspected. Product export and guide integration examples do not establish every available driver or protocol behavior.
+The shared commissioning manual was examined at limits, update, scan, role and settings scopes; detailed UI screens of every graphic-object chapter remain unexamined. The developer Local Interoperability specification remains outside this manual/catalogue review. The retained F461 `2.0.11` build has selected source paths documented above; linked XML resources and unrelated listed payloads retain their own examination status. Product export and guide integration examples do not establish every available driver or protocol behavior.
 
 ## Sources
 

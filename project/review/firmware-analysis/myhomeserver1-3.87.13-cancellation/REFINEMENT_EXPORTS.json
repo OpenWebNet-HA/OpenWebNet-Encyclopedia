@@ -1,0 +1,11 @@
+{
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/API_WORDING_HISTORY.json",
+      "published": "API_WORDING_HISTORY.json",
+      "sha256": "9c2bf9d5cde596824121f5a6e42abd7390c888817fe29a8a5f980fa0360f9419",
+      "bytes": 741
+    }
+  ],
+  "scope": "Exact documentary wording history; no source/report/code change"
+}

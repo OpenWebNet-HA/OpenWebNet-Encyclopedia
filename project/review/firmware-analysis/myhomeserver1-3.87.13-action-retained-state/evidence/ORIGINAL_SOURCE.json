@@ -1,0 +1,518 @@
+{
+  "image": "/home/bticino/scheduling_manager/scheduling_manager",
+  "instruction_guards": [
+    {
+      "VA": "0xcf5d8",
+      "bytes": "8346"
+    },
+    {
+      "VA": "0xcf5dc",
+      "bytes": "00f10409"
+    },
+    {
+      "VA": "0xcf5f4",
+      "bytes": "036b"
+    },
+    {
+      "VA": "0xcf5f6",
+      "bytes": "002b"
+    },
+    {
+      "VA": "0xcf618",
+      "bytes": "4b46"
+    },
+    {
+      "VA": "0xcf61a",
+      "bytes": "0022"
+    },
+    {
+      "VA": "0xcf622",
+      "bytes": "2c68"
+    },
+    {
+      "VA": "0xcf624",
+      "bytes": "64b3"
+    },
+    {
+      "VA": "0xcf644",
+      "bytes": "04f10801"
+    },
+    {
+      "VA": "0xcf64a",
+      "bytes": "1830"
+    },
+    {
+      "VA": "0xcf654",
+      "bytes": "626a"
+    },
+    {
+      "VA": "0xcf658",
+      "bytes": "1a63"
+    },
+    {
+      "VA": "0xcf65a",
+      "bytes": "a26a"
+    },
+    {
+      "VA": "0xcf65c",
+      "bytes": "5a63"
+    },
+    {
+      "VA": "0xcf65e",
+      "bytes": "e26a"
+    },
+    {
+      "VA": "0xcf660",
+      "bytes": "9a63"
+    },
+    {
+      "VA": "0xcddac",
+      "bytes": "0121"
+    },
+    {
+      "VA": "0xcddb0",
+      "bytes": "d3e90602"
+    },
+    {
+      "VA": "0xcddbc",
+      "bytes": "022a"
+    },
+    {
+      "VA": "0xced78",
+      "bytes": "0378"
+    },
+    {
+      "VA": "0xced7a",
+      "bytes": "6f2b"
+    },
+    {
+      "VA": "0xced80",
+      "bytes": "4378"
+    },
+    {
+      "VA": "0xced82",
+      "bytes": "6e2b"
+    },
+    {
+      "VA": "0xced6c",
+      "bytes": "0139"
+    },
+    {
+      "VA": "0xced6e",
+      "bytes": "0123"
+    },
+    {
+      "VA": "0xced70",
+      "bytes": "1162"
+    },
+    {
+      "VA": "0xced72",
+      "bytes": "1377"
+    },
+    {
+      "VA": "0xcddd4",
+      "bytes": "94f84c30"
+    },
+    {
+      "VA": "0xce0ca",
+      "bytes": "81f84c30"
+    },
+    {
+      "VA": "0xcddf4",
+      "bytes": "4aab"
+    },
+    {
+      "VA": "0xcddf6",
+      "bytes": "93e80300"
+    },
+    {
+      "VA": "0xcddfa",
+      "bytes": "9dab"
+    },
+    {
+      "VA": "0xcddfc",
+      "bytes": "83e80300"
+    },
+    {
+      "VA": "0xcdf0e",
+      "bytes": "96ab"
+    },
+    {
+      "VA": "0xcdf12",
+      "bytes": "1946"
+    },
+    {
+      "VA": "0xd1644",
+      "bytes": "0c46"
+    },
+    {
+      "VA": "0xd164c",
+      "bytes": "0646"
+    },
+    {
+      "VA": "0xd1668",
+      "bytes": "237f"
+    },
+    {
+      "VA": "0xd166c",
+      "bytes": "236a"
+    },
+    {
+      "VA": "0xd166e",
+      "bytes": "0133"
+    },
+    {
+      "VA": "0xd1670",
+      "bytes": "022b"
+    },
+    {
+      "VA": "0xd1736",
+      "bytes": "52f83370"
+    },
+    {
+      "VA": "0xd173e",
+      "bytes": "d1f804a0"
+    },
+    {
+      "VA": "0xd174c",
+      "bytes": "0097"
+    },
+    {
+      "VA": "0xd1764",
+      "bytes": "3a46"
+    },
+    {
+      "VA": "0xd18c8",
+      "bytes": "012f"
+    },
+    {
+      "VA": "0xd18f4",
+      "bytes": "4046"
+    }
+  ],
+  "not_audited": [
+    "query10f4a0 body/type/freshness",
+    "other record/state/property consumers",
+    "global initialization/reference/locking whole-program proof",
+    "output5dda0/receiving/transport/MQTT/libjel/auth/session/framing bodies",
+    "native/provider runtime/fixtures"
+  ],
+  "retained_global": {
+    "PT_LOAD": {
+      "VA": "0x15fb1c",
+      "file_bytes": 30172,
+      "file_offset": "0x14fb1c",
+      "flags": 6,
+      "memory_bytes": 34064
+    },
+    "direct_PIC_joins": [
+      {
+        "ADD_PC_VA": "0xcf648",
+        "PC_value": "0xcf64c",
+        "pool_VA": "0xd01ac",
+        "pool_word": "0x981bc",
+        "target_G": "0x167808"
+      },
+      {
+        "ADD_PC_VA": "0xcf656",
+        "PC_value": "0xcf65a",
+        "pool_VA": "0xd01b0",
+        "pool_word": "0x981ae",
+        "target_G": "0x167808"
+      },
+      {
+        "ADD_PC_VA": "0xcdda8",
+        "PC_value": "0xcddac",
+        "pool_VA": "0xce890",
+        "pool_word": "0x99a5c",
+        "target_G": "0x167808"
+      }
+    ],
+    "no_class_RTTI_or_complete_extent_claim": true,
+    "no_runtime_content_read": true,
+    "section": [
+      {
+        "VA": "0x1670f8",
+        "memory_bytes": 3892,
+        "name": ".bss",
+        "type": "SHT_NOBITS"
+      }
+    ],
+    "selected_memory_extent": "G..G+59 lies in writable memory-only PT_LOAD tail"
+  },
+  "selected_code_spans": [
+    {
+      "end_VA_exclusive": "0xcf624",
+      "file_offset": "0xcf5d8",
+      "name": "first-capture-query-prefix",
+      "sha256": "32d73baf7f277068e4cec53c0fc04147b28c77e160fa5163c6c691815131fe8c",
+      "start_VA": "0xcf5d8"
+    },
+    {
+      "end_VA_exclusive": "0xcf640",
+      "file_offset": "0xcf622",
+      "name": "first-return-nonnull-guard",
+      "sha256": "bffffb2b5179948425def71bf2eecc5272f6f75dd9c706d632ae00c2c46898c8",
+      "start_VA": "0xcf622"
+    },
+    {
+      "end_VA_exclusive": "0xcf662",
+      "file_offset": "0xcf640",
+      "name": "first-retained-string-word-stores",
+      "sha256": "4cbf525b8e371db750343e3ba1ed14cd4c1e2cad7ee2e73041a95f8fc4065408",
+      "start_VA": "0xcf640"
+    },
+    {
+      "end_VA_exclusive": "0xcddc8",
+      "file_offset": "0xcdd9e",
+      "name": "second-global-string-selection",
+      "sha256": "2c297158252497f7853f617b5434d1d69a9b4fd92679e6639d19037555354e26",
+      "start_VA": "0xcdd9e"
+    },
+    {
+      "end_VA_exclusive": "0xced8a",
+      "file_offset": "0xced78",
+      "name": "second-selected-on-arm",
+      "sha256": "e882034dfdcd132a865f00812c886f5b9340bcd9ca1fca6ea7a2dc822925d43e",
+      "start_VA": "0xced78"
+    },
+    {
+      "end_VA_exclusive": "0xced78",
+      "file_offset": "0xced6a",
+      "name": "second-status-store-rejoin",
+      "sha256": "9d2dd7ff333cd99d6ea02f049f7744da0cad1c4afa0ef04985432362750b156a",
+      "start_VA": "0xced6a"
+    },
+    {
+      "end_VA_exclusive": "0xcddf4",
+      "file_offset": "0xcddc8",
+      "name": "second-descriptor-merge-guard",
+      "sha256": "7259e6e8c22b10f533f61060836ec786294f6f41b97c0f672a1a6b7833484fa9",
+      "start_VA": "0xcddc8"
+    },
+    {
+      "end_VA_exclusive": "0xce0d0",
+      "file_offset": "0xce084",
+      "name": "second-ID-merge-local",
+      "sha256": "6ee779d0ae43e8237e2559aae999411368831989b95bc73af98508d5157622a9",
+      "start_VA": "0xce084"
+    },
+    {
+      "end_VA_exclusive": "0xcde00",
+      "file_offset": "0xcddf4",
+      "name": "second-status-pair-copy",
+      "sha256": "d60ad7cd38144fd6518591273ce72605b933faa941284635c6f8069c822737ea",
+      "start_VA": "0xcddf4"
+    },
+    {
+      "end_VA_exclusive": "0xcdf1a",
+      "file_offset": "0xcdf0e",
+      "name": "second-actual-params-source",
+      "sha256": "018478db16a701377b48ef43f1e35dc8929a2819584771952655568ceadbd940",
+      "start_VA": "0xcdf0e"
+    },
+    {
+      "end_VA_exclusive": "0xd165e",
+      "file_offset": "0xd1640",
+      "name": "converter-result-source-ABI",
+      "sha256": "34c1a4227309965f1aa775279f91e22aac4c02edf7d2baa7ebe160c5e3b3fac2",
+      "start_VA": "0xd1640"
+    },
+    {
+      "end_VA_exclusive": "0xd1674",
+      "file_offset": "0xd1668",
+      "name": "converter-status-guard-index",
+      "sha256": "c581a882a14cbf9041eecca316ebc543f4ae68053355cdafe82a7b50947098d9",
+      "start_VA": "0xd1668"
+    },
+    {
+      "end_VA_exclusive": "0xd1752",
+      "file_offset": "0xd1726",
+      "name": "converter-status-table-selection",
+      "sha256": "a374ce1596331584b8c26371fdf70a56a634e56901db9a0f03362be2d77f2ea7",
+      "start_VA": "0xd1726"
+    },
+    {
+      "end_VA_exclusive": "0xd18da",
+      "file_offset": "0xd18c8",
+      "name": "converter-short-string-branch",
+      "sha256": "011e87d7ca0c7a1698d13ef338365c9ef5bf397d7ad0f87d074c05fcdd24504b",
+      "start_VA": "0xd18c8"
+    },
+    {
+      "end_VA_exclusive": "0xd18fa",
+      "file_offset": "0xd18e8",
+      "name": "converter-length-two-copy-path",
+      "sha256": "a1c4ac257380dc4cdf55c0208fbb6147e4a36d39bacea200b3f7f54b5fa68a65",
+      "start_VA": "0xd18e8"
+    },
+    {
+      "end_VA_exclusive": "0xd1772",
+      "file_offset": "0xd1764",
+      "name": "converter-status-copy-rejoin",
+      "sha256": "0a741796f3b926372792e5b9114d5720ea142fd5e21b01b48634f01c1f131a74",
+      "start_VA": "0xd1764"
+    },
+    {
+      "end_VA_exclusive": "0xd16a6",
+      "file_offset": "0xd1682",
+      "name": "converter-status-member-store",
+      "sha256": "e581386822276c32bffc913d39d7735251f5f5f940edcf9da8ad8c83a9d19000",
+      "start_VA": "0xd1682"
+    }
+  ],
+  "selected_converter_data": {
+    "GOT_base_ADD_PC": "0xd1660",
+    "GOT_base_pool": "0xd1940",
+    "GOT_slot": "0x166eb4",
+    "key": "status",
+    "key_ADD_PC": "0xd1694",
+    "key_pool": "0xd1944",
+    "key_target": "0x1151ac",
+    "original_relative_relocations": [
+      "00166eb4  00000017 R_ARM_RELATIVE",
+      "00162178  00000017 R_ARM_RELATIVE"
+    ],
+    "selected_index": 1,
+    "selected_length": 2,
+    "selected_literal_bytes": "6f6e00",
+    "selected_pointer_VA": "0x162178",
+    "selected_string_target": "0x1362d4",
+    "table": "0x16216c",
+    "table_offset_pool": "0xd194c"
+  },
+  "selected_import_calls": [
+    {
+      "ARM_PLT": "0x10d70",
+      "ARM_PLT_bytes": "01c68fe254ca8ce240fdbce5",
+      "call_VA": "0xcf64c",
+      "call_bytes": "41f790eb",
+      "original_relocation": "00165ab8  00004d16 R_ARM_JUMP_SLOT        00000000   _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_@GLIBCXX_3.4.21",
+      "slot": "0x165ab8"
+    },
+    {
+      "ARM_PLT": "0x11474",
+      "ARM_PLT_bytes": "01c68fe254ca8ce28cf8bce5",
+      "call_VA": "0xd1768",
+      "call_bytes": "3ff784ee",
+      "original_relocation": "00165d08  0000f716 R_ARM_JUMP_SLOT        00000000   memcpy@GLIBC_2.4",
+      "slot": "0x165d08"
+    },
+    {
+      "ARM_PLT": "0x11558",
+      "ARM_PLT_bytes": "01c68fe254ca8ce2f4f7bce5",
+      "call_VA": "0xd168c",
+      "call_bytes": "3ff764ef",
+      "original_relocation": "00165d54  00010f16 R_ARM_JUMP_SLOT        00000000   _ZN4Json5ValueC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE",
+      "slot": "0x165d54"
+    },
+    {
+      "ARM_PLT": "0x10c70",
+      "ARM_PLT_bytes": "01c68fe254ca8ce2ecfdbce5",
+      "call_VA": "0xd1696",
+      "call_bytes": "3ff7ecea",
+      "original_relocation": "00165a64  00003816 R_ARM_JUMP_SLOT        00000000   _ZN4Json5ValueixEPKc",
+      "slot": "0x165a64"
+    },
+    {
+      "ARM_PLT": "0x11294",
+      "ARM_PLT_bytes": "01c68fe254ca8ce2ccf9bce5",
+      "call_VA": "0xd169c",
+      "call_bytes": "3ff7faed",
+      "original_relocation": "00165c68  0000c716 R_ARM_JUMP_SLOT        00000000   _ZN4Json5ValueaSEOS0_",
+      "slot": "0x165c68"
+    }
+  ],
+  "selected_local_targets": [
+    {
+      "VA": "0xcf5f8",
+      "bytes": "5fd0",
+      "target": "0xcf6ba"
+    },
+    {
+      "VA": "0xcf61e",
+      "bytes": "3ff03fff",
+      "target": "0x10f4a0"
+    },
+    {
+      "VA": "0xcf624",
+      "bytes": "64b3",
+      "target": "0xcf680"
+    },
+    {
+      "VA": "0xcddbe",
+      "bytes": "00f0db87",
+      "target": "0xced78"
+    },
+    {
+      "VA": "0xced7c",
+      "bytes": "7ff424a8",
+      "target": "0xcddc8"
+    },
+    {
+      "VA": "0xced84",
+      "bytes": "7ff420a8",
+      "target": "0xcddc8"
+    },
+    {
+      "VA": "0xced88",
+      "bytes": "efe7",
+      "target": "0xced6a"
+    },
+    {
+      "VA": "0xced74",
+      "bytes": "fff728b8",
+      "target": "0xcddc8"
+    },
+    {
+      "VA": "0xcddde",
+      "bytes": "00f05181",
+      "target": "0xce084"
+    },
+    {
+      "VA": "0xce0ce",
+      "bytes": "91e6",
+      "target": "0xcddf4"
+    },
+    {
+      "VA": "0xcdf16",
+      "bytes": "03f091fb",
+      "target": "0xd163c"
+    },
+    {
+      "VA": "0xd166a",
+      "bytes": "1bb3",
+      "target": "0xd16b4"
+    },
+    {
+      "VA": "0xd1672",
+      "bytes": "58d9",
+      "target": "0xd1726"
+    },
+    {
+      "VA": "0xd174e",
+      "bytes": "40f2bb80",
+      "target": "0xd18c8"
+    },
+    {
+      "VA": "0xd18ca",
+      "bytes": "0dd1",
+      "target": "0xd18e8"
+    },
+    {
+      "VA": "0xd18e8",
+      "bytes": "27b9",
+      "target": "0xd18f4"
+    },
+    {
+      "VA": "0xd18f8",
+      "bytes": "34e7",
+      "target": "0xd1764"
+    },
+    {
+      "VA": "0xd1770",
+      "bytes": "87e7",
+      "target": "0xd1682"
+    }
+  ]
+}

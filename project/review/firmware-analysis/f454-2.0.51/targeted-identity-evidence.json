@@ -1,0 +1,108 @@
+{
+  "method": "Static original-byte/literal/configuration inspection; host XML parsing only; zero original instructions executed",
+  "original_files": [
+    {
+      "image_path": "/home/bticino/lib/liblghal.so.0.0",
+      "sha256": "ed3c3ebd4ad722c25ccf4651edf5665d5dccc21fb6d35774fef6bfaf4878e250",
+      "bytes": 102884
+    },
+    {
+      "image_path": "/art.xml",
+      "sha256": "695d843aff590f632101d4d957d7d59a183abc2710d53b6f0fe6e56ba6b0b1a3",
+      "bytes": 306
+    }
+  ],
+  "prior_disassembly": {
+    "research_path": "protocol/lib__liblghal.so.0.0.disasm.txt",
+    "sha256": "06bd6bc707f4bfc106915e672448091db10b8a3433202a8a5347ef1a88fa9e04"
+  },
+  "allowlisted_xml": [
+    {
+      "line": 8,
+      "text": "<mynconfdiag>15</mynconfdiag>"
+    }
+  ],
+  "selected_literals": [
+    {
+      "pool_va": "0x8d4c",
+      "add_pc": "0x8814",
+      "literal_va": "0x14221",
+      "literal": "/art.xml"
+    },
+    {
+      "pool_va": "0x8d78",
+      "add_pc": "0x8968",
+      "literal_va": "0x14221",
+      "literal": "/art.xml"
+    },
+    {
+      "pool_va": "0x8d7c",
+      "add_pc": "0x8978",
+      "literal_va": "0x14346",
+      "literal": "%s.%s"
+    },
+    {
+      "pool_va": "0x127b8",
+      "add_pc": "0x126dc",
+      "literal_va": "0x16422",
+      "literal": "mynconfdiag"
+    },
+    {
+      "pool_va": "0x127a0",
+      "add_pc": "0x125f4",
+      "literal_va": "0x163f4",
+      "literal": "root"
+    },
+    {
+      "pool_va": "0x127a4",
+      "add_pc": "0x12618",
+      "literal_va": "0x163f9",
+      "literal": "art1"
+    }
+  ],
+  "spans": [
+    {
+      "start": "0x6dac",
+      "end": "0x6e10",
+      "lines": 26
+    },
+    {
+      "start": "0x880c",
+      "end": "0x881c",
+      "lines": 5
+    },
+    {
+      "start": "0x887c",
+      "end": "0x8880",
+      "lines": 2
+    },
+    {
+      "start": "0x8948",
+      "end": "0x89a0",
+      "lines": 23
+    },
+    {
+      "start": "0x8a90",
+      "end": "0x8acc",
+      "lines": 16
+    },
+    {
+      "start": "0x125d4",
+      "end": "0x12630",
+      "lines": 24
+    },
+    {
+      "start": "0x126d4",
+      "end": "0x126f8",
+      "lines": 10
+    },
+    {
+      "start": "0x127cc",
+      "end": "0x128a0",
+      "lines": 54
+    }
+  ],
+  "instruction_words_verified": 160,
+  "asserted_nconfdiag_leaf": "15",
+  "bounds": "Packaged identity metadata and conditional static writer dataflow; no actual XML callback, EEPROM write, startup or live gateway. Other XML field values deliberately omitted."
+}

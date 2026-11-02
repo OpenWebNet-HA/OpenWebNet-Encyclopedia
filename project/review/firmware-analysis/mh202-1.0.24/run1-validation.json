@@ -1,0 +1,116 @@
+{
+  "checked_at": "2026-10-30T15:11:54.950131+00:00",
+  "passed": true,
+  "scope": "Run1 selected static paths; source reviews and exact identity, not runtime/physical proof",
+  "original_execution": 0,
+  "scripts": [
+    {
+      "script": "inventory/collect_inventory.py",
+      "passed": true,
+      "output": "{\"outputs\": 5, \"selected_ELFs\": 16, \"all_selected_MH202_machine_ARM\": true, \"web_files\": 123, \"original_execution\": 0}"
+    },
+    {
+      "script": "functional/run1/collect_evidence.py",
+      "passed": true,
+      "output": "PASS: 19 static outputs and manifest; zero original code execution"
+    },
+    {
+      "script": "protocol/run1/collect_evidence.py",
+      "passed": true,
+      "output": "{\n  \"outputs\": 34,\n  \"original_spans\": 11,\n  \"critical_word_assertions\": 12,\n  \"ELF_components\": 10,\n  \"inputs\": 13,\n  \"WHO_pairs\": 16,\n  \"host_original_execution\": 0,\n  \"code_hooks\": 0\n}"
+    },
+    {
+      "script": "boot/run1/collect_boot.py",
+      "passed": true,
+      "output": "{\n  \"generated_outputs\": 60,\n  \"spans\": 17,\n  \"original_instruction_execution\": 0,\n  \"counts\": {\n    \"identical\": 4400,\n    \"changed\": 3,\n    \"normal_only\": 495,\n    \"recovery_only\": 5\n  },\n  \"daemon_path_references\": 67\n}"
+    },
+    {
+      "script": "web/run1/collect_evidence.py",
+      "passed": true,
+      "output": "{\"outputs\": 12, \"original_file_identities\": 8, \"original_code_execution\": 0, \"credential_excerpts\": 0}"
+    }
+  ],
+  "published_exports": 9,
+  "local_links": 58,
+  "document_pins": [
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24.md",
+      "sha256": "38b07257b6ccc90b87f8b9f997acce5fc079da8bfea1597aff292ee831b45b12"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/README.md",
+      "sha256": "0d08572985f519f93d556edc1421f9420ee48e13306556dbc4c0cfb2b75d55f9"
+    },
+    {
+      "path": "project/review/firmware-analysis/README.md",
+      "sha256": "653317d0bca414bf4a20fbc3ff75fb8cb6b0ad1d5a23420088d52bde4a869512"
+    },
+    {
+      "path": "project/review/firmware-analysis/mh202-1.0.24/README.md",
+      "sha256": "b7863a94c2e80e36105f50fb4b37897385f1db9c2fb1f84270fa6fdcd775c5de"
+    },
+    {
+      "path": "functional/who-17-scenario-management/README.md",
+      "sha256": "4367d9cc45fc805f397636c6986bae0808b8d458455914dc5041faceda659dc9"
+    },
+    {
+      "path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "sha256": "8455d4b23663c5e88f77e655c438513324c726cbd7b133fa28ce445330420d9b"
+    }
+  ],
+  "repository_checks": [
+    {
+      "name": "ESG",
+      "exit_code": 0,
+      "output": "STATS human_pages=381 support_pages=115 objective_failures=0 review_candidates=6861"
+    },
+    {
+      "name": "ECV",
+      "exit_code": 0,
+      "output": "STATS human_pages=381 objective_failures=0 review_candidates=14"
+    },
+    {
+      "name": "diff",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "protected_F454_dossiers": [
+    {
+      "dossier": "2026-10-29",
+      "index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df",
+      "files_verified": 1917
+    },
+    {
+      "dossier": "2026-10-30-targeted",
+      "index_sha256": "ddb83866292f70631b968b91f07e08fbc79415b5e1762cf3699f8e326eacff79",
+      "files_verified": 107
+    },
+    {
+      "dossier": "2026-10-30-targeted-2",
+      "index_sha256": "2dc3f9e3541478eff304d1d9bb368d02504c39cc3d5d8d3aec7ca96650032d82",
+      "files_verified": 130
+    },
+    {
+      "dossier": "2026-10-30-final-pass",
+      "index_sha256": "bf27345d8ce8d1e4e9277ad9346c62fcfde1f0b33bb20783ae5e66963ad100f2",
+      "files_verified": 83
+    }
+  ],
+  "sources_changed": false,
+  "branch": "docs/static-firmware-analysis-findings",
+  "commits_or_pushes": false,
+  "overnight_status": "ACTIVE, final consolidation31October07:15Paris; cutoff08:00",
+  "device_validation": {
+    "passed": true,
+    "definitions": 210,
+    "tests": 31
+  },
+  "automation": {
+    "id": "mh202-overnight-firmware-research",
+    "status": "ACTIVE",
+    "cadence_minutes": 30,
+    "deadline": "2026-10-31T08:00:00+01:00",
+    "final_consolidation_from": "2026-10-31T07:15:00+01:00"
+  }
+}

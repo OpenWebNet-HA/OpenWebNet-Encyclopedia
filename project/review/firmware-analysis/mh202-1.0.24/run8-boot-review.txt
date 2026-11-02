@@ -1,0 +1,10 @@
+# Independent boot run8 source review
+
+PASS. Parent reviewed the original marker, hardware write, ordinary counter and refresh-gate spans and reproduced collect_watchdog.py --check (17 deterministic outputs, ten spans, sixteen exact words, five inputs). Original execution in this author/review scope is0.
+
+Record+12 nonzero selection, immediate metadata-failure return, ignored unlink return and supplied-path producer remain distinct. Original 13a50..13a74 sleeps after each attempted open including success, tests exact−1, then requests two bytes at13a84; literal pool decodes0d00. Refresh requires sweepcount>2 and nonzero metadata return for a relative literal, not a proven absence or absolute path. Host unsigned-byte arithmetic matches all256 values; wrap checkpoint256 follows240 by16 iterations, without wallclock inference. No actual driver/reset, process health, timestamp refresh, matching application producer or marker age is established. The optional recovery helper and provider/OS effects remain explicit delegates.
+
+Report and collector pins:
+- `boot/run8/REPORT.md` SHA256 `cf709ab806af5a40441066123a01113ac53c91d0a92df05ea7f89ae5e56b86d7`
+- `boot/run8/collect_watchdog.py` SHA256 `b0df984731bb02d59b51638c211c69509880df7f0a6d7ea6c9500138fdf958d4`
+- `boot/run8/output-manifest.json` SHA256 `d681840822fc9f8014139632b8882dbbeb477cf49391af4fd4a84efcc0f6fc49`

@@ -1,0 +1,30 @@
+{
+  "collector_sha256": "3529802d1dfb118ccdfa9f4d7405d089a8670285e1f56da404a4758b3c182ae1",
+  "files": {
+    "ARCHIVE_METADATA.json": {
+      "bytes": 1858,
+      "sha256": "4a7a1592eaba469f1e499af87c67f722927a542839131595b158ba16b17b7cd1"
+    },
+    "IMPORTS.json": {
+      "bytes": 1120,
+      "sha256": "71b67deecff268651ccf6254a492152f31b04b390552f5973c3fe8f94c473650"
+    },
+    "INPUTS.json": {
+      "bytes": 1041,
+      "sha256": "3902a2356ef6e1f50f16173284c9f2cc8fc763f7ae9a680b14e6fdbe296a4095"
+    },
+    "REPORT.md": {
+      "bytes": 5971,
+      "sha256": "3e25a7de747b22c77afed6eff8f8751e8b0e050a23a9708703dde67e2dbef2d2"
+    },
+    "SOURCE.json": {
+      "bytes": 3578,
+      "sha256": "b83297b4cc219c429482b5c2512a379bc9b50c0c1e4fae58594323386a0597c9"
+    },
+    "SPANS.json": {
+      "bytes": 9558,
+      "sha256": "4bb837a6bf692f04e8770ec7173cc4dde44d8a39f42f12fdba15a6a97d7a3304"
+    }
+  },
+  "scope": "Canonical generated files excluding this manifest itself"
+}

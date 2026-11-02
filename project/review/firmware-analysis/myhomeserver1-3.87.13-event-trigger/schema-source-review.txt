@@ -1,0 +1,32 @@
+# Independent BNIL schema and construction source review
+
+PASS for schema/REPORT.md; no correction requested. This is independent original-byte/static source and saved-output review of local trigger selection, raw schema/serializer and compiled construction. No original instructions, native helpers, parser/JsonCpp/provider callbacks, scene fixture, OS/network/bus or physical behavior was executed. No handler-admission, transport/authentication/session/framing or equivalent body was expanded. The reviewer authored the separate local callback/vector-publication report; that authorship is disclosed and is not independent review of that own area.
+
+Reproduced collect_schema_v1.py --check:20 outputs,9 original code spans,19 byte guards,9 key PIC joins,4 class identities,9 direct BL checks and2 input pins. Independently mapped original ELF32 PT_LOAD ranges, rehashed all9 raw code spans and6 separate data spans, checked all19 file-byte guards/9 original key targets, original RTTI/GOT/method data for all4 types, and all24 unique R_ARM_RELATIVE records through original SHT_REL data. Both input identities, all19 manifest evidence members and all22 immediate first copies agree with current saved bytes/size/hash. Original parser/operator/status/serializer instruction paths were inspected, not merely the saved field JSON. No semantic host model was run.
+
+## Source facts and limits
+
+- Original local raw trigger table0x160450 row1 is exactly length4/string BNIL. The raw matched index is decremented before unsigned bound22 and TBH, so index1 selects its entry0 and reaches2f4a2. The initializer separately reads raw type+32 and uses its direct-index trigger table entry1 to a8f1c. They remain separate dispatch transformations and are not public OPEN WHO or a comprehensive support table.
+- The actual raw factory calls2cb04, requests44 bytes and copies its base before storing status+40. The constructor temporarily installs BaseBnilTrigger, RTTI15BaseBnilTrigger/header160298, while the factory's final object installs BnilTrigger, RTTI11BnilTrigger/header1602b4/AP1602bc. The final raw AP+8 serializer is Thumb28fdd. Temporary and final types are not collapsed by matching fields or nearby stripped labels.
+- Raw base source establishes id string+4/length+8, enabled byte+28, local type+32 and operator+36. The original pair initialization gives type0/operator−1 before optional matching writes. The report's local operator integer mapping noOperator−1/higher0/lower1/equal2/different3 agrees with exact original comparisons and subtract/store paths. These spellings do not assign mathematical handler semantics.
+- Derived status+40 begins−1. Exact lowercase on/off/noStatus selected paths store0/1/−1; empty or unmatched strings retain−1 locally. No wrong-type/missing/null/overflow/exception acceptance rule is inferred from unexecuted JsonCpp asString, asBool or string providers. No physical meaning is imported from BNIL spelling.
+- Raw serializer28fdc conditionally emits nonempty id, emits its bounded local type name or selected empty text, emits enabled as a Json Boolean, omits operator−1, uses the selected table for recognized operators and emits status through its own bounded table. The ordinary−1/0/1 status spellings agree. This is source emission, not an executed lossless roundtrip or full configured-scene grammar.
+- Initializer invokes the actual raw virtual slot+8, passes that same result JSON address to2cb04 and reinstalls the final BnilTrigger vptr. No field fixture or replaced JSON result is supplied. The compiled call ee5ac receives the separate function wrapper and reparsed raw object in distinct arguments. Allocation/copy/parser/provider normal returns remain premises.
+- Compiled inner fields are independently derived: raw id4/8→inner24/28; enabled28→48; type/operator32/36→52/56; status40→60. The callable area+4/+8/+12/+16 and secondary schema vptr+20 are separate from those raw fields. Initial zeros describe constructor stores, not a newly inferred event state or runtime inactivity.
+- The final allocation is76 bytes with inner=controlbase+12, leaving64 bytes for the selected inner extent. Secondary schema is allocation+32=inner+20 and status allocation+72=inner+60. Original outgoing pair(inner,controlbase) and scene+104 append argument are exact. This is a local handoff, not external service registration, event delivery, actual ownership-count success or whole lifetime.
+- Compiled BnilTriggerRunner header1625ac/AP1625b4 has primary first method Thumbee59d. That pointer is retained only; primary destructor entries and a separate nonvirtual admission function must not be relabeled as virtual event-admission slots. Schema counts and inherited callback/registry behavior remain source-scoped; no handler-body behavior or external namespace is certified by this review.
+
+The report correctly leaves full validation/provider behavior, actual configured assets, registration/filtering/admission/callback effects, effective runtime binding, exception/unwind/concurrency/lifetime, physical operation and complete Device approval open. Original/schema execution counts remain0. No author change or new source investigation is requested.
+
+## Exact reviewed pins
+
+| File relative to schema/ | SHA256 |
+| --- | --- |
+| REPORT.md | 9f6a8393a6e86acaf34f2f3538d187a4ec67f911eb1db5a72e2dd569b281a2c9 |
+| collect_schema_v1.py | 9ff81491dcdf4d41b760cf805c747bbef7d63273ed45334cc802c9f8b0c8ecf4 |
+| OUTPUT_MANIFEST.json | 0b8aa8830ee1447f258e1a95602fee4ec7b588c543fe4de0c3e26e0b87fa2b09 |
+| CLASS_IDENTITY.json | 15de35f45bd282193d88771061749e3f9b7805ce15cfd8104e64e50d305c0bdb |
+| LAYOUT.json | 0553195665be4dd303ce857c04e5bc9baf16adb2c04b9471a773fba2ef74c853 |
+| first-candidate/INDEX.json | be4e005e51d5a242b7f537b7545b480ebaccfb0ab8c4af418c2cb21f5d3f30dc |
+
+Original scheduler SHA2567d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26. This new review is written exclusively and immediately copied with a non-self-referencing index computed before opening it. Source-author files and earlier research remain untouched; no unavailable historical draft or witnessed development chronology is invented.

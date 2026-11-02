@@ -1,0 +1,24 @@
+# F461 run11 independent main-configuration source review
+
+PASS. No author correction requested. This is independent bounded original-byte/source and preservation verification plus read-only host collector replay. No original/provider/native/target execution, model, fixture, SQL, configuration evaluation or service action was performed. Author outputs were unchanged.
+
+Authoritative area: `work/f461-firmware/2.0.11/research/2026-11-01-run11-config-selection/`. Exact current pins:
+
+- `REPORT.md`: `034b07713342adc93dab60818a90d92b724ad10d6047581124972ae17a358595`.
+- `collect_selection_v1.py`: `68ea48c841f49afa664549c55ab9bde8bfb315fce739ed747133f26901989283`.
+- `SOURCE.json`: `e91b387a96cf93afbbcf05db02f701c421499c0bb40e33bb251834e6dbce757c`.
+- `INPUTS.json`: `8bc2598f6c843ecbb8f295b4ba89ffaf70d4765985eb6ac4268f6a66573ae32e`.
+- `OUTPUT_MANIFEST.json`: `ab52040b80bb50b44e4d8ae5b3d396bdd0705a5da35f95b51e64d85fa6ca8397`.
+- `first-candidate/INDEX.json`: `9d9e8bbf9bb29d5a9c38f4198415d7a1de15143a5f8a0d553de9c2cf10babff1`.
+
+The collector's `--check` passes12 outputs, nine spans,35 guards, three selected48-byte option rows, five safe literal joins,11 imported call proofs, three local calls, six input pins and14 first copies. Independently reading original `/home/bticino/bin/coso` gives SHA256 `2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197`. Fresh ELF64/AArch64 PT_LOAD mapping reproduces all nine span hashes/hex and35 words. I separately checked five literals,11 BL/PLT/JUMP_SLOT rows, three local BL targets, actual selected option-row bytes/name relocations and14 exact first copies/output identities. The original configuration hash and only three whitelisted line values agree. This selected audit is not a complete main/configuration/module policy review.
+
+Actual instruction dataflow supports the declared option destinations: row0/4/11 have names dirname/configfile/path_to_plug_cfg_dir,48-byte spacing, argument-kind word1, and their arg_data writes address SP112/SP128/SP160. The same table is passed to the named option-registration request, followed by the parse request and zero-result branch. These declarations become supplied values only under ordinary successful provider parsing and valid-storage premises. Original `g_malloc0` request144 and saved X20 support the separate managerM; no global active-manager identity is inferred from `get_plug_m` or names.
+
+The selected main config pointerSP128 has a null-dependent relative `cfg/coso_cfg` duplication path. The subsequent key-file load request uses that slot, flags0 and NULL error destination; the report correctly conditions subsequent precedence on its successful continuation. Nonnull SP112/SP160 suppress their corresponding key getters, and the source key-reader branches store LibDir and PlugCfgDir results back into those separate slots. If SP160 remains null, the original GFile path->parent->path request chain stores its final returned pointer there. No parent existence, file-open success, effective target working directory or nonnull API result is established merely by those requests.
+
+The main handoff loads SP112/SP160 as X1/X2, forms X0=M+16, calls actual0x5640, then calls0x58a0 and0x56f0 with SAME savedM. The selected0x5640 source requests24 bytesP, storesP through the supplied holder, duplicates X1 intoP+8 and X2 intoP+16, with independently visible NULL branches requesting `./` for the respective field. Thus M+16 (holder) and P+16 (copied configuration-directory field) are distinct object namespaces. Allocation, copy/provider normal returns and lifetime remain conditional; monitoring/registration bodies and actual loaded modules were not expanded or executed. The run04 downstream initializer edge is inherited by exact pins, not claimed as new active loading proof.
+
+The only exported config lines are17 `[Plugins settings]`,18 `LibDir=/home/bticino/libcoso`,19 `PlugCfgDir=/home/bticino/cfg/coso_plugins`. Full original file bytes are hash-pinned without reproducing unrelated/private settings. These are packaged normal-image declarations, not demonstrated effective runtime values. CLI overrides, runtime file replacement, active provider binding, module availability/readiness, public WHO and physical support remain open.
+
+First-candidate preservation and the reported no-failed-generation history are consistent with retained bytes and current collector reproduction; unavailable exploratory history is not independently certified. Original trees, previous packets and author files remain unchanged. No output/receiving/transport/authentication/session/framing/MQTT/libjel body, closed platform fallback or uncertain bt_device caller was used to complete the join. Existing execution ledgers are unchanged.

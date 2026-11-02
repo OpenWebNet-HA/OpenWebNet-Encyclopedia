@@ -1,0 +1,67 @@
+# MH202 run15 — selected decoder array through collector recipients
+
+**Static source/dataflow composition; new original execution0.** The selected local decoder writes a collector-local object array `D`, appends a separate OPEN-OK object in slot1, and returns into a collector that reparses slot0 text into a distinct caller object `C`. Qualification and both array-forward calls continue using `D`, not the reparsed `C`. Under the explicit same-build parser/kind and normal-return premises, the selected data/sentinel pair makes each array walk request one data write, then stop before writing the OPEN-OK sentinel.
+
+A new predecessor guard also corrects run6's incomplete matching-DIM shortcut list: DIM1..8 and18 can qualify on matching requested DIM before WHERE comparisons. The exact correction/history/pins are in `REFINEMENT.md`; prior reports, collectors and outputs remain immutable. There is no newly executed raw decoder, C++ registry, parser, array walker, socket call, recipient or physical transaction.
+
+## Inherited versus newly joined scope
+
+Run6 already established selector4 receive/decoder invocation, diagnostic-family branch, much of qualification/completion and the general array helper. Protocol run7/8 mapped the selected synthetic D2S80→General/DIM1/WHO1001/WHERE0 route; run10 executed only its two direct C-interface builder endpoints. Run14 established that the selected builder receives the same object pointer supplied to the local decoder. `diagnostics/run11` independently identified monitor/command globals and no-data policy. Those maps, eight old qualification cases and native endpoint experiments are inherited here, not repeated as new coverage.
+
+New joins distinguish `D` from caller `C`, connect producer slots0/1 to actual array traversal and data-write boundaries, apply one explicit conditional route to both inherited recipient roles, and retain the previously missing `0x10bfc..0x10c08` source predecessor. This is selected original storage/control proof plus finite host composition, not a replacement raw parser or native full-transaction model.
+
+## Exact storage identities
+
+Original bt_device collector entry `0xf2dc` saves incoming r1 as **C** at local SP+28 (`0xf2f4`). Its eight output objects **D[i]** start at local SP+60 and have stride `0x624c` (25,164 bytes). Before each selected decoder call, `0x107b8..0x107d8` calls the original null-reset import on all8 slots using the original pool stride `0x10254=0x624c`.
+
+At `0x107e0/0x107ec`, decoder r0 is D[0], local SP+60. Its other arguments are the received buffer, numeric selector and caller context; selector4 is an inherited selected-route premise. The decoder call is `0x107f8→0x12588`; zero return follows another continuation. Run14's alias proof then places the selected builder output into that same D[0]. The selected decoder tail computes **D+0x624c** at `0x144ec/0x144f4` and invokes `CreateMsgOpen` at `0x14740` with exact `*#*1##`, length6, then returns1.
+
+On the collector's nonzero-decoder path, D[0].raw is computed as local SP+24,184: `60+0x5e3c`, identically `24576+96−488` at `0x108e4..0x108ec`. `0x108f4..0x10904` measures that string and calls `CreateMsgOpen` with destination **C**, loaded from SP+28 at `0x10900`. Under the same-build libopen normal parser contract this resets/reparses caller C; it is neither a pointer assignment C=D nor a replacement of D's output array.
+
+After this separate reparse, WHO extraction at `0x10908..0x10910` explicitly passes D[0] again. DIM/WHERE getters at `0x10a8c..0x10ac8` and monitor/command array arguments at `0x10a14/0x10a1c` and `0x10de0/0x10de8` likewise use D. Requested DIM/WHERE integers are caller stack arguments, distinct from those decoded D fields and C's reparsed state. Well-formed caller object storage and collector-local array storage are separate-object premises; no arbitrary pointer-alias/global-runtime claim follows.
+
+## Producer sentinel and exact array consumer
+
+Candidate libopen `CreateMsgOpen(char*,int)` at `0xb370` calls its original null reset at `0xb380`, copies into object raw offset `0x5e3c`, handles stored length and tailbranches to IsCorrect at `0xb408`. IsCorrect's first exact string comparison at `0xad90`, under normal string/provider completion, compares the raw buffer with original literal `*#*1##`; equality stores kind6 at offset `0x623c` (`0xad98/0xadbc`). `sentinel-parser-and-walker-contract.json` records the original PIC/string target and kind offset. This is static original parser evidence, not executed sentinel parsing.
+
+The local array helper `0xf038` receives integer output descriptor in r0 and array D in r1, saved into fp and r9 (`0xf048/0xf04c`). Its byte offset r8 starts0. Loop `0xf27c` computes D+r8 and calls IsOKFrame at `0xf284`. Same-build libopen IsOKFrame `0x9ac0..0x9adc` tests exactly kind6 at `0x623c`. True returns1 from the helper before reaching its raw-write body.
+
+For a non-OK slot, `0xf05c/0xf068` selects object.raw at +`0x5e3c`, then `0xf080..0xf094` requests `write(descriptor,raw,strlen(raw))`. No trailing NUL is included. Negative write takes the helper's error route. On the selected nonnegative/normal logging and destructor continuation, `0xf174/0xf17c` increments the offset by `0x624c`. The loop cap is original pool `0xf2cc=0x31260=8×0x624c`.
+
+Consequently, **conditional on D[0] being the inherited kind4 endpoint object and D[1] being the original parser-produced kind6 sentinel**, each walk checks slot0, requests one data-string write, advances exactly one stride, checks slot1, and stops. It does not request a data write of slot1's `*#*1##`, and does not reach other null-reset slots. The sentinel is OPEN-OK, not a generic null terminator. If the decoder append/parser/provider does not yield kind6, stopping at slot1 is not established. No private kind6 is injected or native CPU experiment run here.
+
+## One conditional qualification/recipient route
+
+The finite composition uses the immutable second run10 endpoint object: kind4, WHO1001, WHERE`0`, DIM1, values `2629,1,2,3`, raw `*#1001*0*1*2629*1*2*3##`. This is an actual prior isolated builder result, **not** an actual local-decoder output or captured MH202 identity. WHO1001 satisfies the already reviewed diagnostic membership mask under normal text conversion; raw decoder acceptance, registry/container/map/stream state, coherent C reparse and ordinary logging/provider completion remain premises.
+
+Choose supplied mode7, requested DIM1 and requested numeric WHERE42. This intentionally differs from decoded WHERE0 to expose the new early shortcut:
+
+1. After decoder nonzero, normal C reparse and D[0] diagnostic-family membership, the first array call `0x10a24` uses inherited **sock_cep_web_monitor** current descriptor (symbol `0x2e51c`, pool `0x10270→GOT0x2e150`). It precedes request DIM/WHERE filtering. Under the selected two-slot premise it requests one D[0] data write and stops at D[1].
+2. Newly retained `0x10bfc..0x10c08` tests DIM18 or unsigned32(DIM−1)<=7; DIM1 jumps to `0x10c2c`. Requested-DIM equality at `0x10c34/0x10c38` goes directly to `0x10d84`. Thus this matching DIM1 route does not compare WHERE42 against decoded0. Earlier mode2/mode10 routes differ; this is not an all-mode or arbitrary-WHO acceptance rule.
+3. DIM1 skips the DIM23/full-WHERE special preface. The qualified array call `0x10df0` reads inherited **sock_cep_web** current descriptor (symbol `0x2e520`, pool `0x10290→GOT0x2e0e4`). Under the same two-slot premise and normal helper return it independently requests one D[0] data write, then stops at D[1]. Recipient names/roles are inherited storage identities, not connected or observed peer identities.
+4. Qualified helper nonnegative plus mode7/requested DIM1 reaches collector return0 via `0x10e4c→0x11280`, before the counting/terminal-field path. The caller's later OPEN-OK choice/call is an inherited separate boundary, not delivery or physical acknowledgment. The array sentinel was not itself forwarded as that caller ACK.
+
+`host-selected-two-slot-consumer.json` records this one explicitly conditional source-contract composition and both pointer/length/write-call boundaries. No target write, parser or source helper runs. Monitor/command errors, disconnected slots, short writes, no-data/context-stop, other dimensions/modes and output lifetimes retain their separate prior source scopes.
+
+## Correction/refinement and checks
+
+Run6's retained qualification span started `0x10c0c`; its “otherwise” table and host predicate omitted the four-instruction predecessor. Run15 preserves exact old hashes, quote and locators in `REFINEMENT.md`. All32 prior author-manifest entries are verified unchanged read-only. The eight old finite qualification truth outcomes remain valid under the refined predicate; this is an integrity check, not new native or matrix coverage. The correction is the completeness of that shortcut list/model, not invalidation of the whole run6 report.
+
+## Provenance and reproduction
+
+Original normal-image identities:
+
+| Firmware image path | SHA256 |
+| --- | --- |
+| `/home/bticino/bin/bt_device` | `65dad019cc15cf5036c04ec7ef23d0f9c2f388324f44692f43af37fd82192f70` |
+| `/home/bticino/lib/libopen.so.0.0` | `868eeb717020232c11623224df17bd6b2034fffc2fb80043c39c34b76310fb04` |
+
+`input-hashes.json` pins15 original/research inputs; `original-spans.json` records14 fresh ELF spans with VAs/file offsets/raw hashes; `critical-words.json` asserts40 words. The collector strictly reproduces23 outputs including D/C/recipient/sentinel ledgers, the new conditional consumer and refinement/integrity facts. The author manifest pins collector/report/refinement/evidence and excludes itself/later review files.
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run15/collect_evidence.py --check
+```
+
+PASS, host reads/binutils/Python only. New native calls/original visits/C primitives/linker redirects/EXIT/stop/code hooks are all0. No original ARM/vendor/JS/PHP, target process/OS/syscall or network/device execution occurs. Credential/authentication/accept/handshake and the closed caller-framing branch remain excluded. No prior report, synced source, image or repository documentation is changed.
+
+Highest remaining boundary is actual coherent selected decoder/registry execution that produces D[0]/D[1] in this collector invocation and actual provider/C state, followed by output-descriptor lifecycle/delivery. This selected source composition does not close it by substituting saved endpoint objects for original upstream execution.

@@ -1,0 +1,99 @@
+#!/usr/bin/env python3
+"""Bounded shared stop-domain reference and destruction ownership queries; static only."""
+import sys
+sys.dont_write_bytecode=True
+import pathlib,struct,hashlib,json,re,subprocess,importlib.util,argparse,os
+D=pathlib.Path(__file__).resolve().parent;W=next(x for x in D.parents if(x/'sources').is_dir());R=W/'work/myhomeserver1-firmware/3.87.13/research/2026-10-31';H=lambda b:hashlib.sha256(b).hexdigest();J=lambda x:(json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+spec=importlib.util.spec_from_file_location('svfs',R/'image_vfs.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+S='/home/bticino/scheduling_manager/scheduling_manager';L='/usr/lib/libstdc++.so.6.0.29';BASE=0x1677b8;FLAG=BASE+72
+
+def build():
+ v=m.ImageVFS();bs={};maps={};pins={};out={};env=dict(os.environ,DEBUGINFOD_URLS='')
+ for p in [S,L]:
+  b=v.read_bytes(p);bs[p]=b;ph=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);maps[p]=[struct.unpack_from('<8I',b,ph+i*sz)for i in range(n)];pins[p]={'sha256':H(b),'bytes':len(b),'resolved':v.resolve(p)}
+ assert H(bs[S])=='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26'
+ for p,label in [(R/'image_vfs.py','image_accessor'),(R.parents[1]/'analysis/normal-regular-files.json','regular_metadata'),(R.parents[1]/'analysis/normal-symlinks.json','symlink_metadata'),(R.parent/'2026-10-31-actions/common/REPORT.md','prior_common_report')]:b=p.read_bytes();pins[label]={'sha256':H(b),'bytes':len(b)}
+ def off(a,n=1,p=S):return next(o+a-va for t,o,va,_,fs,*_ in maps[p]if t==1 and va<=a and a+n<=va+fs)
+ def raw(a,n,p=S):return bs[p][off(a,n,p):off(a,n,p)+n]
+ def word(a,p=S):return struct.unpack('<I',raw(a,4,p))[0]
+ def sections(p=S):
+  b=bs[p];sh=struct.unpack_from('<I',b,32)[0];sz,n,si=struct.unpack_from('<HHH',b,46);rows=[struct.unpack_from('<10I',b,sh+i*sz)for i in range(n)];strs=rows[si];names=b[strs[4]:strs[4]+strs[5]];return{names[r[0]:].split(b'\0',1)[0].decode():r for r in rows}
+ spans=[(S,'shared-domain-initializer',0x15474,0x154b8),(S,'shared-domain-exit-wrapper',0xcdaf4,0xcdb00),(S,'shared-stop-request',0xcd6f0,0xcd720),(S,'delay-worker-aliases-and-flag',0xcd5c4,0xcd6f0),(S,'duration-worker-aliases-and-flag',0xcd720,0xcd848),(L,'candidate-CV-constructor-and-destructor',0x97530,0x9754c)]
+ records=[]
+ for p,name,a,e in spans:
+  hp=v.root/v.resolve(p).lstrip('/');s=subprocess.check_output(['objdump','-d','--dwarf=no-follow-links','-M','force-thumb',f'--start-address={a}',f'--stop-address={e}',str(hp)],text=True,env=env).replace(str(hp),p);s=re.sub(r' <([^>]+)>',lambda q:q[0]if'@plt'in q[1]else'',s);out['spans/'+name+'.txt']=s.encode();records.append({'path':p,'name':name,'start_VA':hex(a),'end_VA_exclusive':hex(e),'file_offset':hex(off(a,e-a,p)),'raw_sha256':H(raw(a,e-a,p))})
+ joins=[]
+ for pool,pc in [(0x154a8,0x1547a),(0xcd6e0,0xcd5e0),(0xcd6ec,0xcd6b0),(0xcd71c,0xcd6f4),(0xcd838,0xcd73c),(0xcd844,0xcd80c)]:assert(word(pool)+pc+4)&0xffffffff==BASE;joins.append({'pool':hex(pool),'ADD_PC':hex(pc),'target':hex(BASE)})
+ got=(word(0x154ac)+0x15488+4)&0xffffffff;slot=got+word(0x154b0);dso=(word(0x154b4)+0x15496+4)&0xffffffff;assert(got,slot,dso,word(slot))==(0x1659a4,0x166858,0x167004,0xcdaf5)
+ guards=[(0x15484,'0023'),(0x1548e,'84f84830'),(0xcd702,'0123'),(0xcd706,'84f84830'),(0xcdaf4,'10b5'),(0xcdaf8,'43f71eee')]
+ for a,h in guards:assert raw(a,len(bytes.fromhex(h))).hex()==h,hex(a)
+ sec=sections();bss=sec['.bss'];assert bss[1]==8 and bss[3]<=BASE<=FLAG<bss[3]+bss[5]
+ init=sec['.init_array'];arr=struct.unpack('<'+'I'*(init[5]//4),raw(init[3],init[5]));assert arr.count(0x15475)==1
+ host=v.root/v.resolve(S).lstrip('/');sym=subprocess.check_output(['readelf','--dyn-syms','-W',str(host)],text=True,env=env);rel=subprocess.check_output(['readelf','-rW',str(host)],text=True,env=env);full=subprocess.check_output(['objdump','-d','--dwarf=no-follow-links','-M','force-thumb',str(host)],text=True,env=env);lines=full.splitlines()
+ pat=re.compile(r'^\s*([0-9a-f]+):\s+([0-9a-f]{4}(?: [0-9a-f]{4})?)\s+([^\t]+)\t(.*)');ins=[]
+ for l in lines:
+  q=pat.match(l)
+  if q:ins.append((int(q[1],16),q[3].strip(),q[4]))
+ # Syntax-specific candidates: register-only ADD reg,pc, nearest earlier same-register PC-literal LDR in24 disassembly lines.
+ pic_candidates=[]
+ for i,l in enumerate(lines):
+  a=re.search(r'^\s*([0-9a-f]+):.*\badd\s+(\w+), pc\s*(?:@.*)?$',l)
+  if not a:continue
+  pc=int(a[1],16);reg=a[2]
+  for prior in reversed(lines[max(0,i-24):i]):
+   ld=re.search(r'\bldr(?:\.w)?\s+'+reg+r', \[pc, #[^\]]+\].*@\s*\(?([0-9a-f]+)',prior)
+   if ld:
+    pool=int(ld[1],16)
+    try:target=(word(pool)+pc+4)&0xffffffff
+    except StopIteration:break
+    if BASE<=target<=FLAG+3:pic_candidates.append({'ADD_PC':hex(pc),'pool':hex(pool),'reg':reg,'target':hex(target)})
+    break
+ assert len(pic_candidates)==6 and{int(x['ADD_PC'],16)for x in pic_candidates}=={x[1]for x in [(0x154a8,0x1547a),(0xcd6e0,0xcd5e0),(0xcd6ec,0xcd6b0),(0xcd71c,0xcd6f4),(0xcd838,0xcd73c),(0xcd844,0xcd80c)]}
+ absolute=[]
+ for t,o,va,_,fs,*_ in maps[S]:
+  if t!=1:continue
+  for i in range(0,fs-3,2):
+   value=struct.unpack_from('<I',bs[S],o+i)[0]
+   if BASE<=value<=FLAG+3:absolute.append({'VA':hex(va+i),'value':hex(value)})
+ movpairs=[]
+ for i,(a,mn,op)in enumerate(ins):
+  if not mn.startswith('movt'):continue
+  q=re.match(r'(\w+), #([0-9]+)',op)
+  if not q:continue
+  for pa,pm,po in reversed(ins[max(0,i-20):i]):
+   lo=re.match(q[1]+r', #([0-9]+)',po)
+   if pm.startswith('movw')and lo:
+    val=(int(q[2])<<16)|int(lo[1])
+    if BASE<=val<=FLAG+3:movpairs.append({'movw':hex(pa),'movt':hex(a),'value':hex(val)})
+    break
+ direct_init=[{'VA':hex(a),'mnemonic':mn,'operand':op.split('<')[0].strip()}for a,mn,op in ins if mn.startswith(('b','bl'))and re.search(r'\b15474\b',op)]
+ byte72=[{'VA':hex(a),'mnemonic':mn,'operand':op.split('@')[0].strip(),'ownership':'known-global-initializer'if a==0x1548e else('known-global-set1'if a==0xcd706 else'not resolved to domain; offset equality is not identity')}for a,mn,op in ins if re.match(r'strb(?:\.w)?$',mn)and re.search(r'#72\]',op)]
+ wider=[{'VA':hex(a),'mnemonic':mn,'operand':op.split('@')[0].strip()}for a,mn,op in ins if re.match(r'str(?:\.w)?$|strd(?:\.w)?$',mn)and any('#'+str(z)+']'in op for z in range(65,73))]
+ defs=[]
+ for l in sym.splitlines():
+  q=re.match(r'\s*(\d+):\s+([0-9a-f]+)\s+(\d+)\s+OBJECT\s+(\w+)\s+(\w+)\s+(\S+)\s+(.*)',l)
+  if q and q[6]!='UND':defs.append({'VA':hex(int(q[2],16)),'bytes':int(q[3]),'binding':q[4],'visibility':q[5],'section':q[6],'name':q[7]})
+ assert not any(int(x['VA'],16)<=FLAG<int(x['VA'],16)+max(1,x['bytes'])for x in defs)
+ rels=[l.strip()for l in rel.splitlines()if l.startswith('00166858 ')or'condition_variableD1Ev'in l];assert len(rels)==2
+ provider={}
+ for p in [S,L]:
+  hp=v.root/v.resolve(p).lstrip('/');s=subprocess.check_output(['readelf','--dyn-syms','-W',str(hp)],text=True,env=env);provider[p]=[x.strip()for x in s.splitlines()if any(z in x for z in ['condition_variableC1Ev','condition_variableD1Ev','pthread_cond_destroy','__aeabi_atexit'])]
+ out['OWNERSHIP.json']=J({'spans':records,'known_domain_PIC':joins,'guards':[{'VA':hex(a),'bytes':h}for a,h in guards],'domain':{'base':hex(BASE),'CV_offset':0,'mutex_offset':48,'flag_offset':72,'flag_VA':hex(FLAG),'section':'.bss','section_VA':hex(bss[3]),'section_bytes':bss[5],'file_storage':'SHT_NOBITS; not a packaged mutable-state snapshot'},'init_array':{'VA':hex(init[3]),'count':len(arr),'selected_index':arr.index(0x15475),'pointer':'0x15475'},'atexit_request':{'VA':'0x154a4','r0_object':hex(BASE),'r1_GOT_slot':hex(slot),'r1_stored_Thumb':hex(word(slot)),'r2_dso':hex(dso),'wrapper_code':'0xcdaf4','wrapper_request':'condition_variableD1@plt at0xcdaf8'},'selected_relocations':rels,'candidate_provider_range':{'constructor':'0x97530→memset(receiver,0,48)','destructor':'0x97540→pthread_cond_destroy(receiver); returns receiver','boundary':'Source request only; no effective binding/provider/kernel state or reset from destructor name.'}})
+ out['BOUNDED_QUERIES.json']=J({'query_scope':'One original executable objdump-d host rendering, ELF PT_LOAD file bytes and dynsym only. Linear disassembly also decodes pools; syntax candidates are not complete control/data-flow. No full alias absence proof.','parsed_rendered_instruction_rows':len(ins),'simple_PIC_query':{'form':'ADDreg,pc without immediate; nearest same-register PC-literal LDR within24 prior rendered lines; target in1677b8..167803','results':pic_candidates,'manual_confirmation':'Six original established joins, no newly discovered reference in this restricted form. ADR+immediate pool misdecodes explicitly excluded.'},'absolute_word_query':{'form':'every2-byte-aligned little32 word in each file-backed PT_LOAD, including code/data; value in1677b8..167803','results':absolute},'movw_movt_query':{'form':'MOVT with nearest earlier same-register MOVW within20 rendered instruction rows; combined target in1677b8..167803','results':movpairs},'direct_init_branch_query':{'form':'rendered branch/call operand target15474','results':direct_init},'byte_stores_immediate72':byte72,'wider_stores_near_flag_offsets':{'form':'rendered STR/STRD immediate offsets65..72','count':len(wider),'candidates':wider,'limits':'Receiver aliases/actual store width/overlap/liveness not resolved; these are not claimed flag writes.'},'defined_dynamic_OBJECTS':defs,'unresolved':['arbitrary computed/GOT/heap/stack aliases or bulk writes with bases outside selected range','unrecognized encoding/rendering forms and pool/code distinction outside manually confirmed joins','external mutation/debugging/interposition, provider behavior and process reinitialization','actual stop/reset lifetime, persistence or relaunch consequence'],'reset_conclusion':'No additional reset is established by these bounded forms; no global absence/permanent latch/defect inference.'})
+ out['PROVIDER_REQUESTS.json']=J(provider);out['INPUTS.json']=J(pins);out['METHOD.json']=J({'static_host_only':True,'original_instructions':0,'native_helpers':0,'target_IO_clock_process_thread':0,'semantic_host_models':0,'scope':'Domain visibility/exit ownership and restricted reference queries; previous worker timing/model matrices not rerun. Closed routes untouched.'})
+ out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(pathlib.Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes()),'outputs':{n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()},'counts':{'spans':len(spans),'known_PIC':len(joins),'guards':len(guards),'inputs':len(pins),'query_byte72_candidates':len(byte72),'query_wider_store_candidates':len(wider),'original_execution':0}});return out
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');check=ap.parse_args().check;out=build()
+ if check:
+  for n,b in out.items():assert(D/n).read_bytes()==b,n
+  for n,r in json.loads((D/'first-candidate/INDEX.json').read_text()).items():b=(D/'first-candidate'/n).read_bytes();assert b==(D/n).read_bytes()and H(b)==r['sha256']and len(b)==r['bytes']
+ else:
+  s=D/'first-candidate';assert not s.exists(),'refuse snapshots overwrite'
+  for n in out:assert not(D/n).exists(),'refuse generated overwrite'
+  cp={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),pathlib.Path(__file__).name:pathlib.Path(__file__).read_bytes()};idx=J({n:{'sha256':H(b),'bytes':len(b)}for n,b in cp.items()})
+  for n,b in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(b)
+  for n,b in cp.items():p=s/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(b)
+  (s/'INDEX.json').open('xb').write(idx)
+ print(json.dumps({'check':check,'outputs':len(out),'original_execution':0}))
+if __name__=='__main__':main()

@@ -1,0 +1,87 @@
+{
+  "classes": [
+    {
+      "address_point_va": "0x1602a0",
+      "first_three_methods_thumb": [
+        "0x22bd1",
+        "0x22c01",
+        "0x28fdd"
+      ],
+      "header_va": "0x160298",
+      "pool_va": "0x2cbec",
+      "rtti_name": "15BaseBnilTrigger",
+      "rtti_va": "0x1630a4",
+      "slot_va": "0x166a90"
+    },
+    {
+      "address_point_va": "0x1602bc",
+      "first_three_methods_thumb": [
+        "0x22ca1",
+        "0x22cd1",
+        "0x28fdd"
+      ],
+      "header_va": "0x1602b4",
+      "pool_va": "0x2f6ec",
+      "rtti_name": "11BnilTrigger",
+      "rtti_va": "0x1630b0",
+      "slot_va": "0x166314"
+    },
+    {
+      "address_point_va": "0x1625b4",
+      "first_three_methods_thumb": [
+        "0xee59d",
+        "0xee7b5",
+        "0xee869"
+      ],
+      "header_va": "0x1625ac",
+      "pool_va": "0xa96a8",
+      "rtti_name": "17BnilTriggerRunner",
+      "rtti_va": "0x165474",
+      "slot_va": "0x166400"
+    },
+    {
+      "address_point_va": "0x161ba4",
+      "first_three_methods_thumb": [
+        "0xaf535",
+        "0xaf97d",
+        "0xaf539"
+      ],
+      "header_va": "0x161b9c",
+      "pool_va": "0xa96a4",
+      "rtti_name": "St23_Sp_counted_ptr_inplaceI17BnilTriggerRunnerSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE",
+      "rtti_va": "0x1649f8",
+      "slot_va": "0x1665d8"
+    }
+  ],
+  "compiled_primary_method": "Thumb0xee59d; pointer only, implementation not analyzed",
+  "raw_serializer": "Thumb0x28fdd",
+  "relocations": [
+    "0016029c  00000017 R_ARM_RELATIVE        ",
+    "001602a0  00000017 R_ARM_RELATIVE        ",
+    "001602a4  00000017 R_ARM_RELATIVE        ",
+    "001602a8  00000017 R_ARM_RELATIVE        ",
+    "001602b8  00000017 R_ARM_RELATIVE        ",
+    "001602bc  00000017 R_ARM_RELATIVE        ",
+    "001602c0  00000017 R_ARM_RELATIVE        ",
+    "001602c4  00000017 R_ARM_RELATIVE        ",
+    "00161ba0  00000017 R_ARM_RELATIVE        ",
+    "00161ba4  00000017 R_ARM_RELATIVE        ",
+    "00161ba8  00000017 R_ARM_RELATIVE        ",
+    "00161bac  00000017 R_ARM_RELATIVE        ",
+    "001625b0  00000017 R_ARM_RELATIVE        ",
+    "001625b4  00000017 R_ARM_RELATIVE        ",
+    "001625b8  00000017 R_ARM_RELATIVE        ",
+    "001625bc  00000017 R_ARM_RELATIVE        ",
+    "001630a8  00000017 R_ARM_RELATIVE        ",
+    "001630b4  00000017 R_ARM_RELATIVE        ",
+    "001649fc  00000017 R_ARM_RELATIVE        ",
+    "00165478  00000017 R_ARM_RELATIVE        ",
+    "00166314  00000017 R_ARM_RELATIVE        ",
+    "00166400  00000017 R_ARM_RELATIVE        ",
+    "001665d8  00000017 R_ARM_RELATIVE        ",
+    "00166a90  00000017 R_ARM_RELATIVE        "
+  ],
+  "type_row": 1,
+  "type_table": "0x160450",
+  "type_text": "BNIL"
+}

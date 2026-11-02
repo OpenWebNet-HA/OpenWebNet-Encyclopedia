@@ -1,0 +1,8 @@
+# Final source gaps before consolidation
+
+1. Actualconfiguredscenes/moduleinstances/records and effectiveprovider/binding/readiness remainunobserved. Privateclasses, sourcecomparisons, formattedcomponents and numericflags do not establish publicOPEN/WHO/physicalunits/capabilities.
+2. F461nonzerodeadline32producer and actualclockcoordinate/timerbehavior; F460localwriter caller/receiverclass/naturalinvocation andupdatercommoncontext/order remainopen. Finitequeries/offsetmatches are not absence or identity proofs.
+3. FullJSON/XML/SQL/schema/provider/error/unwind semantics, catalogueowner/key/selection/fallback, module/scene/actionownership/lifetime/concurrency and physical observations remainunclosed. Localstop/close/free requests are not completedunload or safetyproof.
+4. Finalwork now: cohesiveuser-readablehandoff, scopednavigation/verification withfrozen current/historical identities, reviewedDevicehistoricalscopecorrections/links afterexactpreedits, strictchecks, realbranchstatus, ACTUALsameheartbeatdelete/receipt/control/indexlast by19UTC/20Paris. No more newsourcebatches.
+
+Closedoutput/receiving/transport/auth/session/framing/MQTT/libjel/frameprep/platformcommand/uncertainprocess remainclosed. Original/synced/completed/firstcandidatesreadonly, oldnativeledgers/histories/MH20218/21 unavailableintermediates protected. No source-manifest edits/staging/commit/publishing/remote/devicewrites. WiderDevice/source gatespending.

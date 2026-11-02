@@ -1,0 +1,21 @@
+
+/home/bticino/libcoso/libplug_scs.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000003180 <init_plugin@@Base>:
+    3180:	a9ba7bfd 	stp	x29, x30, [sp, #-96]!
+    3184:	910003fd 	mov	x29, sp
+    3188:	a90363f7 	stp	x23, x24, [sp, #48]
+    318c:	d0000097 	adrp	x23, 15000 <g_socket_connection_get_socket@Base>
+    3190:	910c02e1 	add	x1, x23, #0x300
+    3194:	a9025bf5 	stp	x21, x22, [sp, #32]
+    3198:	aa0003f6 	mov	x22, x0
+    319c:	b941a420 	ldr	w0, [x1, #420]
+    31a0:	340000c0 	cbz	w0, 31b8 <init_plugin@@Base+0x38>
+    31a4:	52800000 	mov	w0, #0x0                   	// #0
+    31a8:	a9425bf5 	ldp	x21, x22, [sp, #32]
+    31ac:	a94363f7 	ldp	x23, x24, [sp, #48]
+    31b0:	a8c67bfd 	ldp	x29, x30, [sp], #96
+    31b4:	d65f03c0 	ret

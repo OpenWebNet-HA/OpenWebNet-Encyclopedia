@@ -1,0 +1,17 @@
+{
+  "scope": "Actual read-only parent reconstruction of authoritative source collectors; no original/CPU/SQL/model execution",
+  "F460": {
+    "chunk_id": "6ca027",
+    "wall_time_seconds": 0.087391062,
+    "exit_code": 0,
+    "original_token_count": 22,
+    "output": "{\"check\": true, \"outputs\": 16, \"spans\": 13, \"guards\": 43, \"new_original_execution\": 0}\n"
+  },
+  "F461": {
+    "chunk_id": "ff1e85",
+    "wall_time_seconds": 0.057358658,
+    "exit_code": 0,
+    "original_token_count": 22,
+    "output": "{\"check\": true, \"outputs\": 17, \"spans\": 10, \"firstcopies\": 19, \"original_execution\": 0}\n"
+  }
+}

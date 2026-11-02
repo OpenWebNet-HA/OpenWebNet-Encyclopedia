@@ -1,0 +1,22 @@
+# Independent BNTH selected comparison source review
+
+Verdict: PASS, no correction requested. Root independently read the original selected raw-schema, compiled initializer/field copies, enabled/cache prefix, cached double loads, selector/operator dispatch, comparison body and actual condition consumer. A separate ImageVFS/ELF32 PT_LOAD mapper/checker validates the immutable author's evidence. Original/native/provider/JsonCpp/lookup/floating-operation/target process/OS/network/bus/physical execution and semantic fixtures remain0.
+
+The independent check_distinct_condition_independently_v1.py validates original scheduler SHA2567d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26,15 raw span hashes,21 byte guards,6 decoded Thumb direct branches,7 PIC key references,4 distinct table-entry arithmetic joins,2 RTTI identities, compiled predicate slot, registry chain and21 exact first copies. Author --check reproduces19 outputs. These are source checks, not executed comparison cases or a whole-method audit.
+
+- Own condition row11 BNTH, adjusted raw factory index10 and direct compiled index11 select original raw80-byte and compiled184-byte construction paths. The raw final header and compiled19BnthConditionRunner identity are separate original proof, not nearby class naming or another firmware's layout. Serializer/reparse value coherence remains explicitly unclosed.
+- Raw constructor0x2c050 tests mode before status before setpoint. The selected mode-absent/status-absent/setpoint-present branch requests asDouble, stores selector2 at raw40 and D0 at raw56. The constructor's other conversion/default/missing branches are not treated as equivalent grammar. Fresh compiled instructions copy rawenabled28 to132, selector40 to144 and rawdouble56 bits to160; raw64 goes elsewhere at168.
+- The actual initialized primary pointer is placed at the temporary by0xa7e5c and supplied through0xa7264 to this scene's116 range. The helper's one-word move/end+4/sourcezero and actual worker primary-slot+8 call positively compose with this class's AP0x1628c0, whose slot0x1628c8 contains Thumb0x103c6d. This does not rely on the previous BNCUSCENE or BNLD methods.
+- Predicate0x103c6c initializes result1; enabled0 takes the normal result epilogue. The enabled selected initialized-global path requests ordinary lookup0x10e3d8 with own ID108 and global0x167368. Missing data branches outside the chosen path; no query/receive pipeline is followed. With suitable nonnull record state, original cached-control and control-zero legs load record+32 into D9. Shared registry identity alone does not establish cached record type, producer/freshness or safe concurrent lifetime.
+- Own selector144==2 subtracts1 and uses TBH base0x103e0c/index1/value0x062d to reach0x104a66. Its unsigned operator bound3 precedes a SEPARATE TBB base0x104a74. Byte index2=0x4e reaches0x104b10, not a result guessed from block order. There VLDR reads own160 into D16, VCMP.F64 compares D16,D9, VMRS transfers flags and EQ chooses result1/otherwise0 before normal cleanup. Ordinary finite-double/VFP semantics are an explicit premise; no NaN/exception/environment/domain/unit fixture is supplied.
+
+The current report correctly limits the result to one nonconstant setpoint/equality source path. It does not assign physical temperature units or public protocol/thermostat support from BNTH/setpoint names, accept raw JSON or scene grammar, promise normal provider/control cleanup or actual aggregate/scene execution, or close full errors/unwind/ownership/concurrency. Curated OWN-DEV-0199 supplies product context, not field meaning. No opaque receiving/transport/MQTT/libjel/auth/session/framing body or earlier completed dossier was changed.
+
+Reviewed SHA256:
+
+| Artifact | SHA256 |
+| --- | --- |
+|distinct-condition/REPORT.md|a931c47b595f61be0194befc3f39abafc464b4dce9a57b5cb1ca9d4ea2d6eda0|
+|distinct-condition/collect_distinct_condition_v1.py|9d4184350efc20011de2152d8da1183fbab3d19976e7c9c7a6ac7f8b44f0cdf0|
+|distinct-condition/OUTPUT_MANIFEST.json|24c935d1920daed2c6da9dd1da138cd1f0d754c4f36700a43f692778efc49899|
+|distinct-condition/first-candidate/INDEX.json|07425a525e7985463953c08a205ea92b2e379bd526986fc9c8da9b5b6ee07a0f|

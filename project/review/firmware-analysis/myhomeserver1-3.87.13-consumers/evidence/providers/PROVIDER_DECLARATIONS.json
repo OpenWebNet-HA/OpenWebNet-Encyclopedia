@@ -1,0 +1,98 @@
+[
+  {
+    "DT_NEEDED": [
+      "libjson-glib-1.0.so.0",
+      "libgobject-2.0.so.0",
+      "libglib-2.0.so.0",
+      "libc.so.6",
+      "ld-linux-armhf.so.3"
+    ],
+    "requested_image_path": "/usr/lib/libjsonmsg.so.1",
+    "resolved_image_path": "/usr/lib/libjsonmsg.so.1.0.0",
+    "same_recovery_bytes": true,
+    "selected_dynamic_symbols": [
+      "58: 000054ad   108 FUNC    GLOBAL DEFAULT   11 is_json_ack",
+      "61: 00003d69   104 FUNC    GLOBAL DEFAULT   11 jsonmsg_to_jsonbuf",
+      "79: 000036e1   184 FUNC    GLOBAL DEFAULT   11 add_node",
+      "94: 000047e1    68 FUNC    GLOBAL DEFAULT   11 get_node_by_name",
+      "95: 00003bd9   112 FUNC    GLOBAL DEFAULT   11 new_json_msg",
+      "99: 00003f71   108 FUNC    GLOBAL DEFAULT   11 generate_json_ack",
+      "100: 00005451    92 FUNC    GLOBAL DEFAULT   11 is_json_response",
+      "112: 00004825   164 FUNC    GLOBAL DEFAULT   11 get_node_by_name_and_type_sens",
+      "113: 00005325    68 FUNC    GLOBAL DEFAULT   11 get_val_bool_node",
+      "126: 000052c1   100 FUNC    GLOBAL DEFAULT   11 get_val_bool_node_sens",
+      "128: 000039ed    80 FUNC    GLOBAL DEFAULT   11 add_val_bool_node",
+      "131: 00005519    84 FUNC    GLOBAL DEFAULT   11 is_json_error"
+    ],
+    "sha256": "d78437fdb23fb78ba881dbb22a14570b441a178e31c84244b126a5dfbf7866a7",
+    "size": 29936
+  },
+  {
+    "DT_NEEDED": [
+      "libutils.so.1",
+      "libglib-2.0.so.0",
+      "libc.so.6",
+      "ld-linux-armhf.so.3"
+    ],
+    "requested_image_path": "/usr/lib/libopenmsg.so.1",
+    "resolved_image_path": "/usr/lib/libopenmsg.so.1.0.0",
+    "same_recovery_bytes": true,
+    "selected_dynamic_symbols": [],
+    "sha256": "8d1ac556922c280688b0e424737682d9ec2caa83b6783b621677fcdba153c8e1",
+    "size": 46412
+  },
+  {
+    "DT_NEEDED": [
+      "libglib-2.0.so.0",
+      "libjsoncpp.so.25",
+      "libcurl.so.4",
+      "libsqlite3.so.0",
+      "liblcm.so.1",
+      "libuuid.so.1",
+      "libcrypto.so.3",
+      "libacca.so.1",
+      "libapplogger.so.1",
+      "libopenmsg.so.1",
+      "libjsonmsg.so.1",
+      "libjel.so.1",
+      "libutils.so.1",
+      "liblgsafe.so.1",
+      "liblghal.so.1",
+      "libdw.so.1",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-armhf.so.3"
+    ],
+    "requested_image_path": "/home/bticino/matrix_mx/matrix_mx",
+    "resolved_image_path": "/home/bticino/matrix_mx/matrix_mx",
+    "same_recovery_bytes": true,
+    "selected_dynamic_symbols": [
+      "3: 00000000     0 FUNC    GLOBAL DEFAULT  UND generate_json_ack",
+      "203: 00000000     0 FUNC    GLOBAL DEFAULT  UND jsonmsg_to_jsonbuf",
+      "362: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZN4Json15parseFromStreamERKNS_10CharReader7FactoryERSiPNS_5ValueEPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE"
+    ],
+    "sha256": "96348136c2a0ebe859c689eb6246e3889e5154fdb63ffd5f3fc76975ac596717",
+    "size": 2094580
+  },
+  {
+    "DT_NEEDED": [
+      "libapplogger.so.1",
+      "libjsoncpp.so.25",
+      "libuuid.so.1",
+      "libdw.so.1",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-armhf.so.3"
+    ],
+    "requested_image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "resolved_image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "same_recovery_bytes": true,
+    "selected_dynamic_symbols": [
+      "24: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZN4Json15parseFromStreamERKNS_10CharReader7FactoryERSiPNS_5ValueEPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE"
+    ],
+    "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26",
+    "size": 1406680
+  }
+]

@@ -1,0 +1,61 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/libcoso/libplug_automation_tr.so:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00001764 <init_plugin@@Base+0x9c>:
+    1764:	e3a0000c 	mov	r0, #12
+    1768:	ebffff77 	bl	154c <g_malloc0@plt>
+    176c:	e1a09000 	mov	r9, r0
+    1770:	e59f323c 	ldr	r3, [pc, #572]	@ 19b4 <init_plugin@@Base+0x2ec>
+    1774:	e59f223c 	ldr	r2, [pc, #572]	@ 19b8 <init_plugin@@Base+0x2f0>
+    1778:	e59f023c 	ldr	r0, [pc, #572]	@ 19bc <init_plugin@@Base+0x2f4>
+    177c:	e1a01004 	mov	r1, r4
+    1780:	e7974003 	ldr	r4, [r7, r3]
+    1784:	e08f2002 	add	r2, pc, r2
+    1788:	e08f0000 	add	r0, pc, r0
+    178c:	e584903c 	str	r9, [r4, #60]	@ 0x3c
+    1790:	ebffff2b 	bl	1444 <g_strdup_printf@plt>
+    1794:	e1a05000 	mov	r5, r0
+    1798:	ebffff47 	bl	14bc <g_key_file_new@plt>
+    179c:	e3a03000 	mov	r3, #0
+    17a0:	e1a01005 	mov	r1, r5
+    17a4:	e1a02003 	mov	r2, r3
+    17a8:	e1a06000 	mov	r6, r0
+    17ac:	ebffff06 	bl	13cc <g_key_file_load_from_file@plt>
+    17b0:	e2508000 	subs	r8, r0, #0
+    17b4:	1a000060 	bne	193c <init_plugin@@Base+0x274>
+    17b8:	e1a00006 	mov	r0, r6
+    17bc:	ebffff56 	bl	151c <g_key_file_free@plt>
+    17c0:	e1a00005 	mov	r0, r5
+    17c4:	ebffff36 	bl	14a4 <g_free@plt>
+    17c8:	e3a05006 	mov	r5, #6
+    17cc:	e3a06002 	mov	r6, #2
+    17d0:	e3a00000 	mov	r0, #0
+    17d4:	e59f31e4 	ldr	r3, [pc, #484]	@ 19c0 <init_plugin@@Base+0x2f8>
+    17d8:	e3a01001 	mov	r1, #1
+    17dc:	e08f3003 	add	r3, pc, r3
+    17e0:	e5843018 	str	r3, [r4, #24]
+    17e4:	e5845008 	str	r5, [r4, #8]
+    17e8:	e5846020 	str	r6, [r4, #32]
+    17ec:	e5840038 	str	r0, [r4, #56]	@ 0x38
+    17f0:	e5840034 	str	r0, [r4, #52]	@ 0x34
+    17f4:	ebffff03 	bl	1408 <g_list_append@plt>
+    17f8:	e1a01006 	mov	r1, r6
+    17fc:	e5840034 	str	r0, [r4, #52]	@ 0x34
+    1800:	e5940038 	ldr	r0, [r4, #56]	@ 0x38
+    1804:	ebfffeff 	bl	1408 <g_list_append@plt>
+    1808:	e1a03000 	mov	r3, r0
+    180c:	e1a00004 	mov	r0, r4
+    1810:	e5843038 	str	r3, [r4, #56]	@ 0x38
+    1814:	ebfffef2 	bl	13e4 <register_translation@plt>
+    1818:	e59f31a4 	ldr	r3, [pc, #420]	@ 19c4 <init_plugin@@Base+0x2fc>
+    181c:	e1a01005 	mov	r1, r5
+    1820:	e7974003 	ldr	r4, [r7, r3]
+    1824:	e5940000 	ldr	r0, [r4]
+    1828:	ebfffef6 	bl	1408 <g_list_append@plt>
+    182c:	e1a03000 	mov	r3, r0
+    1830:	e1a00004 	mov	r0, r4
+    1834:	e5843000 	str	r3, [r4]
+    1838:	ebffff46 	bl	1558 <log_init@plt>

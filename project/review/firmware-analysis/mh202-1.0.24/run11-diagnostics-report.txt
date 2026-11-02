@@ -1,0 +1,41 @@
+# MH2021.0.24: diagnostic output slots and no-data completion, run11
+
+This static continuation identifies the two output descriptor roles and a distinct no-data completion path. The first diagnostic array forward uses the **monitor client slot** before request-correlated DIM/WHERE filtering; the qualified forward uses the **command client slot**. Independently, under six consecutive constructed zero-select outcomes from the initial counters, the collector reaches a no-data finish block. Mode8 can return0 there even with accepted-count0. This is local source/control behavior, not a physical response, socket delivery or a wall-clock deadline.
+
+Own original ARM/parser/vendor-process/OS/I/O/network execution and hooks remain0. All examples are host transcriptions. Only application caller/descriptor storage and wait/return branches are inspected; imported socket/accept implementations, authorization, handshake and framing internals are not investigated. No live peer, port contact or secret value is used.
+
+## Original and reproduction
+
+Normal image-relative `home/bticino/bin/bt_device` SHA256 `65dad019cc15cf5036c04ec7ef23d0f9c2f388324f44692f43af37fd82192f70`, verified through ImageVFS. Run `python3 -B work/mh202-firmware/research/2026-10-30/diagnostics/run11/collect_output_policy.py --check`. It strictly reproduces19 outputs:13 original spans with VA/file-offset/hash,21 asserted words, four relocation/pool identities, three input hashes, seven return cases and a six-step timeout-counter fixture. Report/review identities are separate from the deterministic output manifest.
+
+## The output globals have concrete storage and caller roles
+
+Original PICbase is0x2dd68. Pool0x10270 gives GOT0x2e150, whose original R_ARM_GLOB_DAT names **sock_cep_web_monitor at0x2e51c**. Pool0x10290 gives GOT0x2e0e4, naming **sock_cep_web at0x2e520**. Original main-loop pools0x20890/0x20888 identify the same two symbols respectively. These are relocation-backed identities, not names guessed from logs.
+
+At0x10a10..0x10a24, the diagnostic-family route passes the monitor slot's current descriptor plus the decoded object array to local array-forward helper0xf038. The request DIM/WHERE filter appears later; thus this is a monitor-oriented forward before that request correlation, conditional on prior decoder/family qualification and normal returns. Its failure cleanup/reset remains the earlier run6 evidence.
+
+The qualified array forward0x10ddc..0x10df0 reads sock_cep_web instead. Mode10 also has a separate displayed command-slot forwarding branch at0x10a5c..0x10a70. This pass does not rerun the old qualification or array-serialization matrices, and symbol identity does not prove a connected recipient or completed write.
+
+The main application requests two server descriptors: config+12→create_socket_server0x1f998→localSP+32; config+16→call0x1f9a4→SP+36. In the displayed acceptance branches, the result using SP+32 is stored into sock_cep_web at0x20d74; the result using SP+36 is stored into sock_cep_web_monitor at0x20e24. Those assignments connect the collector's roles to two distinct application server/client slots. No port number, accepted peer, helper internals or authorization contract is derived. Other socket lifetimes/replacements and effective configuration remain separate.
+
+## Selected wait, error and context exits
+
+At0xf3d4..0xf408 the collector initializes timeout-counterSP+48=1, accepted-countSP+52=0 and consecutive counterr7=1. Its initial timeval storage is0seconds/500000microseconds (pool0x101a8); the select call0xf668 receives that pointer. Timeout continuation0xfadc..0xfb00 rewrites0/500000 and increments both timeout counter andr7. These are requested values, not measured elapsed time; actual select can modify timeout memory, and logging/other delegates/scheduling consume time.
+
+A negative select result checks errno:4 branches0xf750→0xf418 without these timeout increments/reset; other negatives follow normal cleanup to−1. The top context gate requires context+28==1; another value enters0x11630 and normal destructor cleanup ultimately returns−1. These claims assume displayed delegates return normally; exceptions/reboots/real OS behavior are not executed.
+
+For a positive select result, other descriptor/readiness checks may resetr7 or proceed to receive. Those routes are not collapsed into a universal consecutive-counter policy.
+
+## Distinct no-data finish contract
+
+On zero select,0xf8f8..0xf900 finishes if timeout-counter>11. Otherwise0xf9c0 tests r7>5. Under the explicit initial state and only zero-select outcomes, the first five increment the counters; the **sixth** reaches the finish block before increment. The pure host fixture records those six branch states. It is not a proof of a3-second gateway deadline, and accepted-count is still0 in that fixture.
+
+At0xfa90..0xfad8, finish returns0 for modes1,4,5,8,10. Other modes return0 only when requestedDIM==0 and accepted-count>0; otherwise−1. The host models include mode8/DIM35/count0→0, mode7/DIM35/count0→−1, and mode7/DIM0/count1→0. They supply branch inputs, not physical decoded objects or complete transactions.
+
+Thus the mode8 no-data return0 is separate from run6's **received-timestamp elapsed>5** return0, which may follow a decoded but unqualified object. Neither local result proves a positive diagnostic answer. Run6's actual caller chooses an OPEN-OK string for collector return0; this pass inherits that call boundary without emitting or delivering it. No device-success or protocol-acceptance meaning is assigned to the local return alone.
+
+## Confidence and remaining questions
+
+High confidence: original relocation identities/forward arguments, main slot/result-store relation, initial/reset timeval and counters, selected no-data/negative/context branch returns. Conditional: coherent earlier object/context/descriptor state, normal C++/transport/provider completion, applicable configured main path. Unknown: actual server creation/client identity, receive/decoder/raw acceptance, authorization, OS select outcomes, elapsed duration, physical data or subscriber delivery. No authentication/framing route or stop restriction is reopened.
+
+A useful next step is a justified upstream diagnostic raw decoder/registry→builder join, or another distinct functional/ownership question. Repeating these no-data branch matrices or treating OPEN-OK choice as hardware ACK would add no evidence.

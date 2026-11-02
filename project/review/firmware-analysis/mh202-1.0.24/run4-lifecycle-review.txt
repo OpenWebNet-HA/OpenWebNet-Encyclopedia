@@ -1,0 +1,34 @@
+# MH202 saved-control lifecycle run4 independent static review
+
+**PASS within the declared source/API-request scope.** Independently reproduced `lifecycle/run4/collect_evidence.py --check`: ten deterministic outputs plus manifest, five original spans,12 exact words,five supplied-outcome host cases and zero original execution/hooks. All 10 producer-manifest entries match independently. No original FILE/libc operation, persisted state, write, interruption or recovery was executed.
+
+## Source-critical verification
+
+- Original literals/pointers name SCRIPTS_STATUS, writer modew, reader moder and magic0123. Initialization at0xad38 zeroes12 header bytes at0x1bba8, sets300 array bytes at0x1bbb4 to0xff and copies four magic bytes. Header+4 equals global-base+0x500; state array begins header+12. No original version/timestamp/checksum meaning is assigned.
+- State updater unsigned ID−1<300 guard, boolean active mask1 and disabled numeric mask2 store agree with prior source. It tailcalls writer after the byte store, which is distinct from proving child liveness or durable saved data.
+- Writer nonnull-open path sets ASCII1, requests fwrite(header,12,1), fwrite(states,300,1), sets in-memory ASCII0, requests fseek(stream,0,SEEK_SET), rewrites header, closes and explicitly returns0. Fopen-null returns−1. Inspected body does not consume write/seek/close results or call fsync/rename. These are local source requests/returns, not successful disk bytes or crash-safety guarantees.
+- Reader requests a12-byte item then memcmp of only four magic bytes without checking the fread result. Missing open or magic mismatch tailcalls initialization/save after applicable close. Therefore its fallback return can be the save return rather than unconditional0. Report preserves this distinction.
+- On matching magic, marker ASCII1 changes a logger branch only. Both marker alternatives converge at0xae14 and request300 bytes, close, then explicit return0, without using second fread/close results. No actual truncated-file acceptance or replay/rollback claim is justified; report correctly says those depend on pre-read storage and imported FILE behavior.
+- Startup call0xb25c reaches reader. The selected later numeric-mode4/local-global guard invokes initialization at0xb2fc and writes a global flag. Its enclosing mode producer/complete state policy remains outside this small pass, so no automatic reset/recovery behavior is inferred.
+- Five host examples use supplied fopen/magic/marker outcomes only; they do not emulate original fread, partial writes, runtime scheduling or filesystem recovery.
+
+## Review correction history
+
+A nonsemantic source-locator typo remained in the initial report read: `0xadc8..adddc`. Reviewer notified parent; author corrected the range to **`0xadc8..addc`** before these final pins. Actual call/cmp sites are0xadd8/0xaddc. No collector/model/original code changed for this correction; no material semantic issue remains.
+
+## Exact reviewed final pins
+
+Paths below are relative to `lifecycle/run4/`.
+
+| Artifact | SHA256 |
+|---|---|
+| `REPORT.md` | `c3f8cef9b952e4485e37fba9079ca8825a32caaad7810b803584450ff893e0d8` |
+| `collect_evidence.py` | `c6d48552d73bc70be7c30f80896995cb9b76a498aeabac39b979a87d8c2bd462` |
+| `output-manifest.json` | `1d80397208816f1b4b9868e2264e0647bf6ea149f6aad2d3439cff7a55c0f453` |
+| `inputs.json` | `a51e596a96b91f142ab9124d16ed8ba229f6d407c9f7cc38592607f9bed8a74e` |
+| `original-spans.json` | `152a68add609bacacb45f2152f5b29dbf7188cea911cc7b4eefac580483a914c` |
+| `critical-words.json` | `7bbc90c47aa7581d555f40d1d6346b1c6fcd5325ddea0992423d7e0b164828a0` |
+| `schema-and-literals.json` | `052bc06fba5d72d1b8193430091ee0509074aeebc4c5c4d5d949fe4d17cbe903` |
+| `host-source-order.json` | `e30c4bfb5f272d8a95b92be9f5bb488bdb8d5cff5612cbed36a902573d50ea43` |
+
+Reviewer wrote only `reviews/run4/lifecycle-review.md`; producer artifacts were not edited by reviewer.

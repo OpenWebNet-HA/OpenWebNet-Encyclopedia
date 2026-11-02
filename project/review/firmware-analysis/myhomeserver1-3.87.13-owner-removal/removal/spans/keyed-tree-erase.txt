@@ -1,0 +1,142 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b6324:
+   b6324:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+   b6328:	4606      	mov	r6, r0
+   b632a:	f8df 9148 	ldr.w	r9, [pc, #328]	@ b6474
+   b632e:	b082      	sub	sp, #8
+   b6330:	f100 0804 	add.w	r8, r0, #4
+   b6334:	f8d0 c008 	ldr.w	ip, [r0, #8]
+   b6338:	44f9      	add	r9, pc
+   b633a:	f1bc 0f00 	cmp.w	ip, #0
+   b633e:	f000 8096 	beq.w	b646e
+   b6342:	680a      	ldr	r2, [r1, #0]
+   b6344:	4647      	mov	r7, r8
+   b6346:	4664      	mov	r4, ip
+   b6348:	6923      	ldr	r3, [r4, #16]
+   b634a:	4293      	cmp	r3, r2
+   b634c:	d219      	bcs.n	b6382
+   b634e:	68e4      	ldr	r4, [r4, #12]
+   b6350:	2c00      	cmp	r4, #0
+   b6352:	d1f9      	bne.n	b6348
+   b6354:	eba8 0307 	sub.w	r3, r8, r7
+   b6358:	fab3 f383 	clz	r3, r3
+   b635c:	095b      	lsrs	r3, r3, #5
+   b635e:	68f2      	ldr	r2, [r6, #12]
+   b6360:	42ba      	cmp	r2, r7
+   b6362:	bf14      	ite	ne
+   b6364:	2300      	movne	r3, #0
+   b6366:	f003 0301 	andeq.w	r3, r3, #1
+   b636a:	b13b      	cbz	r3, b637c
+   b636c:	4660      	mov	r0, ip
+   b636e:	f7ff fd1d 	bl	b5dac
+   b6372:	2300      	movs	r3, #0
+   b6374:	e9c6 3802 	strd	r3, r8, [r6, #8]
+   b6378:	e9c6 8304 	strd	r8, r3, [r6, #16]
+   b637c:	b002      	add	sp, #8
+   b637e:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
+   b6382:	68a3      	ldr	r3, [r4, #8]
+   b6384:	d904      	bls.n	b6390
+   b6386:	4627      	mov	r7, r4
+   b6388:	461c      	mov	r4, r3
+   b638a:	2c00      	cmp	r4, #0
+   b638c:	d1dc      	bne.n	b6348
+   b638e:	e7e1      	b.n	b6354
+   b6390:	68e5      	ldr	r5, [r4, #12]
+   b6392:	b14b      	cbz	r3, b63a8
+   b6394:	6918      	ldr	r0, [r3, #16]
+   b6396:	e9d3 1e02 	ldrd	r1, lr, [r3, #8]
+   b639a:	4290      	cmp	r0, r2
+   b639c:	bf2a      	itet	cs
+   b639e:	461c      	movcs	r4, r3
+   b63a0:	4673      	movcc	r3, lr
+   b63a2:	460b      	movcs	r3, r1
+   b63a4:	2b00      	cmp	r3, #0
+   b63a6:	d1f5      	bne.n	b6394
+   b63a8:	b14d      	cbz	r5, b63be
+   b63aa:	6928      	ldr	r0, [r5, #16]
+   b63ac:	e9d5 1302 	ldrd	r1, r3, [r5, #8]
+   b63b0:	4282      	cmp	r2, r0
+   b63b2:	bf36      	itet	cc
+   b63b4:	462f      	movcc	r7, r5
+   b63b6:	461d      	movcs	r5, r3
+   b63b8:	460d      	movcc	r5, r1
+   b63ba:	2d00      	cmp	r5, #0
+   b63bc:	d1f5      	bne.n	b63aa
+   b63be:	68f3      	ldr	r3, [r6, #12]
+   b63c0:	42a3      	cmp	r3, r4
+   b63c2:	bf08      	it	eq
+   b63c4:	45b8      	cmpeq	r8, r7
+   b63c6:	d0d1      	beq.n	b636c
+   b63c8:	42a7      	cmp	r7, r4
+   b63ca:	d10a      	bne.n	b63e2
+   b63cc:	e7d6      	b.n	b637c
+   b63ce:	211c      	movs	r1, #28
+   b63d0:	4628      	mov	r0, r5
+   b63d2:	f75a ed6e 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   b63d6:	6973      	ldr	r3, [r6, #20]
+   b63d8:	42bc      	cmp	r4, r7
+   b63da:	f103 33ff 	add.w	r3, r3, #4294967295	@ 0xffffffff
+   b63de:	6173      	str	r3, [r6, #20]
+   b63e0:	d0cc      	beq.n	b637c
+   b63e2:	4620      	mov	r0, r4
+   b63e4:	f75a ef32 	blx	1124c <_ZSt18_Rb_tree_incrementPKSt18_Rb_tree_node_base@plt>
+   b63e8:	4641      	mov	r1, r8
+   b63ea:	4603      	mov	r3, r0
+   b63ec:	4620      	mov	r0, r4
+   b63ee:	461c      	mov	r4, r3
+   b63f0:	f75a ecea 	blx	10dc8 <_ZSt28_Rb_tree_rebalance_for_erasePSt18_Rb_tree_node_baseRS_@plt>
+   b63f4:	4605      	mov	r5, r0
+   b63f6:	6980      	ldr	r0, [r0, #24]
+   b63f8:	2800      	cmp	r0, #0
+   b63fa:	d0e8      	beq.n	b63ce
+   b63fc:	4b1e      	ldr	r3, [pc, #120]	@ (b6478)
+   b63fe:	f859 a003 	ldr.w	sl, [r9, r3]
+   b6402:	f89a 3000 	ldrb.w	r3, [sl]
+   b6406:	b1ab      	cbz	r3, b6434
+   b6408:	6843      	ldr	r3, [r0, #4]
+   b640a:	1e5a      	subs	r2, r3, #1
+   b640c:	6042      	str	r2, [r0, #4]
+   b640e:	2b01      	cmp	r3, #1
+   b6410:	d1dd      	bne.n	b63ce
+   b6412:	6803      	ldr	r3, [r0, #0]
+   b6414:	9001      	str	r0, [sp, #4]
+   b6416:	689b      	ldr	r3, [r3, #8]
+   b6418:	4798      	blx	r3
+   b641a:	f89a 3000 	ldrb.w	r3, [sl]
+   b641e:	9801      	ldr	r0, [sp, #4]
+   b6420:	b1b3      	cbz	r3, b6450
+   b6422:	6883      	ldr	r3, [r0, #8]
+   b6424:	1e5a      	subs	r2, r3, #1
+   b6426:	6082      	str	r2, [r0, #8]
+   b6428:	2b01      	cmp	r3, #1
+   b642a:	d1d0      	bne.n	b63ce
+   b642c:	6803      	ldr	r3, [r0, #0]
+   b642e:	68db      	ldr	r3, [r3, #12]
+   b6430:	4798      	blx	r3
+   b6432:	e7cc      	b.n	b63ce
+   b6434:	1d02      	adds	r2, r0, #4
+   b6436:	f3bf 8f5b 	dmb	ish
+   b643a:	e852 3f00 	ldrex	r3, [r2]
+   b643e:	1e59      	subs	r1, r3, #1
+   b6440:	e842 1c00 	strex	ip, r1, [r2]
+   b6444:	f1bc 0f00 	cmp.w	ip, #0
+   b6448:	d1f7      	bne.n	b643a
+   b644a:	f3bf 8f5b 	dmb	ish
+   b644e:	e7de      	b.n	b640e
+   b6450:	f100 0208 	add.w	r2, r0, #8
+   b6454:	f3bf 8f5b 	dmb	ish
+   b6458:	e852 3f00 	ldrex	r3, [r2]
+   b645c:	1e59      	subs	r1, r3, #1
+   b645e:	e842 1c00 	strex	ip, r1, [r2]
+   b6462:	f1bc 0f00 	cmp.w	ip, #0
+   b6466:	d1f7      	bne.n	b6458
+   b6468:	f3bf 8f5b 	dmb	ish
+   b646c:	e7dc      	b.n	b6428
+   b646e:	4647      	mov	r7, r8
+   b6470:	2301      	movs	r3, #1
+   b6472:	e774      	b.n	b635e

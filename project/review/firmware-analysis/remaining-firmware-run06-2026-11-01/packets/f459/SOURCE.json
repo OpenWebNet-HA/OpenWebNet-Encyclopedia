@@ -1,0 +1,245 @@
+{
+  "ELF_class": 32,
+  "PT_LOAD": [
+    [
+      1,
+      0,
+      0,
+      0,
+      40840,
+      40840,
+      5,
+      32768
+    ],
+    [
+      1,
+      40960,
+      73728,
+      73728,
+      816,
+      832,
+      6,
+      32768
+    ]
+  ],
+  "SQL_queries": 0,
+  "calls": [
+    {
+      "GOT": "0x121bc",
+      "PLT_bytes_hex": "00c68fe210ca8ce214f1bce5",
+      "actual_relocation": "000121bc  00001216 R_ARM_JUMP_SLOT        00000000   sqlite3_close",
+      "call": "0x6aa0",
+      "symbol": "sqlite3_close",
+      "targetPLT": "0x20a0"
+    },
+    {
+      "GOT": "0x12254",
+      "PLT_bytes_hex": "00c68fe20fca8ce2e4ffbce5",
+      "actual_relocation": "00012254  00003616 R_ARM_JUMP_SLOT        00000000   _ZN9QHashData11free_helperEPFvPNS_4NodeEE",
+      "call": "0x6ac0",
+      "symbol": "_ZN9QHashData11free_helperEPFvPNS_4NodeEE",
+      "targetPLT": "0x2268"
+    },
+    {
+      "GOT": "0x121a8",
+      "PLT_bytes_hex": "00c68fe210ca8ce23cf1bce5",
+      "actual_relocation": "000121a8  00000c16 R_ARM_JUMP_SLOT        00000000   _ZN18QFileSystemWatcherD1Ev",
+      "call": "0x6ac8",
+      "symbol": "_ZN18QFileSystemWatcherD1Ev",
+      "targetPLT": "0x2064"
+    },
+    {
+      "GOT": "0x12200",
+      "PLT_bytes_hex": "00c68fe210ca8ce28cf0bce5",
+      "actual_relocation": "00012200  00002116 R_ARM_JUMP_SLOT        00000000   _ZN10QArrayData10deallocateEPS_jj",
+      "call": "0x6ae8",
+      "symbol": "_ZN10QArrayData10deallocateEPS_jj",
+      "targetPLT": "0x216c"
+    },
+    {
+      "GOT": "0x122a4",
+      "PLT_bytes_hex": "00c68fe20fca8ce244ffbce5",
+      "actual_relocation": "000122a4  00004916 R_ARM_JUMP_SLOT        00000000   _ZN7QObjectD2Ev",
+      "call": "0x6af0",
+      "symbol": "_ZN7QObjectD2Ev",
+      "targetPLT": "0x2358"
+    },
+    {
+      "GOT": "0x1221c",
+      "PLT_bytes_hex": "00c68fe210ca8ce254f0bce5",
+      "actual_relocation": "0001221c  00006d16 R_ARM_JUMP_SLOT        00006a7c   _ZN8mhSharedD1Ev",
+      "call": "0x6bc0",
+      "symbol": "_ZN8mhSharedD1Ev",
+      "targetPLT": "0x21c0"
+    },
+    {
+      "GOT": "0x12218",
+      "PLT_bytes_hex": "00c68fe210ca8ce25cf0bce5",
+      "actual_relocation": "00012218  00002a16 R_ARM_JUMP_SLOT        00000000   _ZdlPv@GLIBCXX_3.4",
+      "call": "0x6bc8",
+      "symbol": "_ZdlPv@GLIBCXX_3.4",
+      "targetPLT": "0x21b4"
+    }
+  ],
+  "free_callback_relocation": "000122fc  00007e15 R_ARM_GLOB_DAT         00006d94   _ZN5QHashI7QStringN8mhShared13t_changevalueEE11deleteNode2EPN9QHashData4NodeE",
+  "guards": [
+    {
+      "VA": "0x6a88",
+      "word": "e08f7007"
+    },
+    {
+      "VA": "0x6a8c",
+      "word": "e7973003"
+    },
+    {
+      "VA": "0x6a90",
+      "word": "e1a04000"
+    },
+    {
+      "VA": "0x6a94",
+      "word": "e2833008"
+    },
+    {
+      "VA": "0x6a98",
+      "word": "e5900008"
+    },
+    {
+      "VA": "0x6a9c",
+      "word": "e5843000"
+    },
+    {
+      "VA": "0x6aa0",
+      "word": "ebffed7e"
+    },
+    {
+      "VA": "0x6aa4",
+      "word": "e5946018"
+    },
+    {
+      "VA": "0x6aa8",
+      "word": "e5960008"
+    },
+    {
+      "VA": "0x6aac",
+      "word": "e3500000"
+    },
+    {
+      "VA": "0x6ab0",
+      "word": "1a000011"
+    },
+    {
+      "VA": "0x6ac4",
+      "word": "e2840010"
+    },
+    {
+      "VA": "0x6ac8",
+      "word": "ebffed65"
+    },
+    {
+      "VA": "0x6acc",
+      "word": "e594500c"
+    },
+    {
+      "VA": "0x6ad0",
+      "word": "e5950000"
+    },
+    {
+      "VA": "0x6ad4",
+      "word": "e3500000"
+    },
+    {
+      "VA": "0x6ad8",
+      "word": "1a000017"
+    },
+    {
+      "VA": "0x6adc",
+      "word": "e1a00005"
+    },
+    {
+      "VA": "0x6ae0",
+      "word": "e3a01002"
+    },
+    {
+      "VA": "0x6ae4",
+      "word": "e3a02004"
+    },
+    {
+      "VA": "0x6aec",
+      "word": "e1a00004"
+    },
+    {
+      "VA": "0x6af4",
+      "word": "e1a00004"
+    },
+    {
+      "VA": "0x6af8",
+      "word": "e8bd83f8"
+    },
+    {
+      "VA": "0x6bbc",
+      "word": "e1a04000"
+    },
+    {
+      "VA": "0x6bc0",
+      "word": "ebffed7e"
+    },
+    {
+      "VA": "0x6bc4",
+      "word": "e1a00004"
+    },
+    {
+      "VA": "0x6bc8",
+      "word": "ebffed79"
+    },
+    {
+      "VA": "0x6bcc",
+      "word": "e1a00004"
+    },
+    {
+      "VA": "0x6bd0",
+      "word": "e8bd8010"
+    }
+  ],
+  "indirect_helper_word": "ffff0fc0",
+  "machine": 40,
+  "new_actual_database_bytes": false,
+  "normal_scope": "D1entry through normal selected return/connectors; unwind6b78..6ba8 unexpanded; D0whole28bytes. Indirecthelper/Qt/SQLite/deallocation providerbodies unexpanded.",
+  "original": {
+    "bytes": 43208,
+    "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libmhshared.so.1",
+    "sha256": "4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377"
+  },
+  "original_execution": 0,
+  "spans": [
+    {
+      "bytes_hex": "f8432de920719fe520319fe507708fe0033097e70040a0e1083083e2080090e5003084e57eedffeb186094e5080096e5000050e31100001af4309fe50600a0e1031097e7e8edffeb100084e265edffeb0c5094e5000095e5000050e31700001a0500a0e10210a0e30420a0e39fedffeb0400a0e118eeffeb0400a0e1f883bde8010070e3efffff0aa8909fe5088086e2000000ea080096e5015040e20510a0e10820a0e139ff2fe1000050e3f8ffff1a000055e3e3ffff1a186094e5ddffffea010070e3e9ffff0a68709fe5000000ea000095e5016040e20610a0e10520a0e137ff2fe1000050e3f8ffff1a000056e3deffff1a0c5094e5d8ffffea",
+      "end_exclusive": "0x6b78",
+      "name": "D1-selected-normal-requests-and-local-connectors",
+      "pool_data_not_executed": false,
+      "sha256": "f6ecbb164af177badcef3423ab7eaeb5717cc4a1b9e83ff113e5ef43906cb178",
+      "start": "0x6a7c"
+    },
+    {
+      "bytes_hex": "f0b60000740100007c010000c00fffff",
+      "end_exclusive": "0x6bb8",
+      "name": "D1-literal-pool-data",
+      "pool_data_not_executed": true,
+      "sha256": "3a377f7e9a7f8fb4f8747a3b4df5aa52454eaa9d1346e92837d06863b8b5f568",
+      "start": "0x6ba8"
+    },
+    {
+      "bytes_hex": "10402de90040a0e17eedffeb0400a0e179edffeb0400a0e11080bde8",
+      "end_exclusive": "0x6bd4",
+      "name": "D0-entire-exported-body",
+      "pool_data_not_executed": false,
+      "sha256": "fcd0b57798291db5d28d29e29ebc4d359a5637621946473aa27754447bed39f6",
+      "start": "0x6bb8"
+    }
+  ],
+  "symbols": {
+    "_ZN8mhSharedD0Ev": "124: 00006bb8    28 FUNC    GLOBAL DEFAULT   11 _ZN8mhSharedD0Ev",
+    "_ZN8mhSharedD1Ev": "109: 00006a7c   316 FUNC    GLOBAL DEFAULT   11 _ZN8mhSharedD1Ev",
+    "_ZN8mhSharedD2Ev": "97: 00006a7c   316 FUNC    GLOBAL DEFAULT   11 _ZN8mhSharedD2Ev"
+  },
+  "vtable_relocation": "000122f4  00005c15 R_ARM_GLOB_DAT         00012020   _ZTV8mhShared"
+}

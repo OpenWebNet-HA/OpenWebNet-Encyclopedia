@@ -1,0 +1,77 @@
+# MH202 run27 — positive WHO29 code owner and bounded metadata query
+
+## Result
+
+The declared WHO29 route has a **positive packaged owner**: `/home/bticino/libcoso/libplug_debug.so` appends29 to an STM descriptor's criterion list, binds its application callback, requests registration and then checks exact parsed WHO text29 inside that actual callback. This is source/relocation ownership evidence, not filename inference or a repeated whole-package inventory. The selected available descriptor is **debug_sm0xa578**, application **0x1518**.
+
+A narrow noncredential read path further establishes actual module role. Supplied coherent parsed WHO29/WHERE4/kind3/DIM2 fields reach imported **get_log_type**, then a constructor/list/ACK request. With an explicitly supplied getter result0, the source formats WHERE4 and one value1, calls `new_openmsg_dim` with the recorded raw argument vector, appends its returned pointer, frees temporary strings, requests local ACK and returns0. No actual logger state, debug command, request, object construction or physical WHO29 meaning is observed.
+
+Original ARM/vendor/parser/native/helper execution, primitive callbacks, hooks, target OS/device/network/syscall operations and physical observations added here are all **0**. Only host ImageVFS/binutils inspection and three finite source-contract ledgers run. Transport, connection, session, authentication, framing, secret-bearing data and other command implementations are outside the investigation. Positive ownership closes the requested concrete gap, so the optional GSource fallback is not used.
+
+## Reproduction and immutable first candidate
+
+Run `python3 -B work/mh202-firmware/research/2026-10-30/routing/run27/collect_owner_v1.py --check`. The collector rereads original bytes through ImageVFS, maps PT_LOAD VAs and checks exact words/spans/relocations/literals, safe configuration excerpts and finite host ledgers. Check mode compares exact bytes and writes nothing. Initial generation refuses existing destinations, uses exclusive creation and immediately snapshots report, collector and first outputs/manifest into **initial-generated-v1/** with a hash index. No postgeneration correction is permitted without parent exact preservation and a separate version.
+
+The principal original normal-image plugin is **libplug_debug.so**,11052bytes, SHA256 **65abf41c70e2eee02c08392d34e9d387fcb450b1bd282f0324a2919a35a03a4f**. Input hashes also pin original coso executable, libcoso/liblog, two configuration files and the shared accessor. Only selected routing/config lines and three nonsecret literal strings are emitted; no whole config or logger contents are dumped. All original inputs, earlier reports, synced sources and repository documents remain read-only.
+
+## 1. Packaged declaration and positive load/registration chain
+
+Original `/home/bticino/cfg/stack_open.xml` **lines154..159** declares client06 named coso and WHO-list text `0.1.2.4.5.9.14.15.22.25.29`, at line158. This is a packaged normal route declaration, not installed mutable state or activation. Original `coso_cfg` **lines18/19** supplies LibDir `/home/bticino/libcoso` and PlugCfgDir `/home/bticino/cfg/coso_plugins`.
+
+Fresh actual **register_plugins0xc9a0..0xcb6c** enumerates the configured directory, filters candidate names by lib prefix/.so suffix, opens modules, requires init_plugin/stop_plugin symbols, then requests the initializer. Successful configuration, directory/module enumeration, symbol resolution and ordinary initializer returns remain premises; no current file/module order, runtime-loaded list, exclusive owner or complete external-resource inventory is inferred. The packaged libplug_debug.so is a concrete qualifying file, not proof it was actually opened.
+
+Original **init_plugin0x144c..0x1508** has an initialized-state guard. Its selected first path performs two separate29 insertions:
+
+- **0x146c/0x1478/0x1480** appends29 to logging descriptor **plug_debug_log0xa560 +16**;
+- **0x14c0/0x14d0/0x14d4** appends29 to **debug_sm criterion+52**, followed by `register_state_machine` at0x14dc.
+
+The first list is logging metadata, not the STM registry itself. Plugin PIC base independently reconstructs to **0xa4c0**, with GOT0xa554→descriptor0xa578. Exact ABS32 relocations identify:
+
+| Descriptor offset / relocation | Original callback |
+|---|---|
+|+36 /0xa59c|debug_sm_init0x1508|
+|+40 /0xa5a0|debug_gest_status_from_field0x1510|
+|+44 /0xa5a4|debug_gest_status_from_appli0x1518|
+
+The complete initializer0x1508..0x1510 and field callback0x1510..0x1518 each simply return0. No private allocation or field-output behavior is invented for those two bodies. The name debug is not used as a public physical-function label; criterion insertion and exact callback checks establish this source owner.
+
+## 2. Actual outer match and independent exact WHO check
+
+Same-build core **register_state_machine0x2074..0x2120** prepends a supplied descriptor to manager+24, stores the manager at descriptor+60 and invokes a nonNULL initializer with descriptor/manager+44. Effective provider binding, same installed manager, ordinary lists and successful registration remain premises.
+
+Original outer **appl_receive0xb614..0xb6d0** iterates those descriptor criteria, compares each against **envelope+48**, and on equality calls **descriptor+44** at0xb6cc with descriptor, same input envelope and local field/OPEN-list slots. An actually present descriptor with criterion29 therefore selects the concrete application callback candidate; duplicate/interfering registrations, later mutation and natural parser/record eligibility are not exhaustively analyzed.
+
+The application **0x1518..0x1618** accepts representation3 directly, using the existing pointer object; representation2 has a separate unexecuted parse/free/install route. Other representations request local NACK/return1. The chosen coherent direct object must additionally pass original **0x1568..0x158c** comparisons: WHO byte0=ASCII2,byte1=ASCII9,byte2=NUL. Thus this available handler explicitly checks exact text29 in addition to the outer numeric criterion. Routing29, parsed WHO29, parsed kind and logging enum values remain separate namespaces, even where a specific source join relates them.
+
+## 3. Selected noncredential read/query branch
+
+The source decimal-converts parsed WHERE+16 and tests conversion4 at **0x1590..0x15a8**. Equality takes **0x16a4..0x16b0**, supplying selected category3 and selector0 to the next dispatch; it bypasses the separate nonNULL selector20 requirement on other WHERE paths. Neither arbitrary WHERE syntax nor a global address domain is validated by this local decimal conversion.
+
+Original **0x1618..0x1640** dispatches numeric parsed kind44. The finite source fixture uses **kind3**, then **0x177c..0x17d0** converts DIM+32 and selects2. It does not use a fabricated complete raw frame; WHO29/WHERE4/kind3/DIM2 are already coherent supplied fields. No target parser executes or receives injected fields.
+
+At **0x17e8**, this selected branch requests **get_log_type**. Fresh liblog.so export/caller import metadata identifies same-build candidate **0x1074..0x1094**. That complete getter loads a GOT-referenced pointer then reads its word into r0 and returns. It does not write that getter word in the displayed body. No underlying stored/default/current value, logging destination, file contents or secret is read into evidence; the host ledger explicitly supplies return0. Actual effective provider, memory contents and normal ABI remain premises.
+
+For that supplied result0, original **0x17f8..0x1808** formats value1 with literal `%d`; an earlier selected formatter produces WHERE4. Original pool0x1eb8 resolves to `%d`,0x1ebc to literal **2**,0x1ec0 to literal **29**. The constructor request **0x1808..0x1840** has this exact raw target-ABI vector:
+
+| Location | Supplied/source-derived argument |
+|---|---|
+|r0|3|
+|r1|4|
+|r2|literal29|
+|r3|formatted WHERE string4|
+|stack0|literal DIM2|
+|stack4|address of one formatted-value pointer, string1|
+|stack8|count1|
+|stack12/16|NULL/NULL|
+
+The imported `new_openmsg_dim` has a packaged core candidate; this batch intentionally stops at its constructor contract rather than declaring the numeric3/4 argument meanings, final parsed kind, envelope metadata or exact wire text without inspecting/executing that whole delegate. Original0x1844..0x1850 requests appending **the returned pointer** to application argument3's output list. It then requests freeing temporary formatted value/WHERE strings and branches to **0x1694..0x16a4** for local ACK request and return0. Normal constructor copying/ownership, nonNULL return, container behavior and callback consumption remain explicit assumptions. Local ACK/helper return0 does not prove an externally delivered response.
+
+This selected path only requests a scalar logging-type getter and response construction. Other module requests, enumeration contents, modifications, shell/files/process or secret-bearing delegates are not investigated or executed. No public WHO29 command vocabulary, enablement policy, diagnostic access route or remote-operation conclusion follows.
+
+## Finite ledgers and remaining scope
+
+Two independent host registry ledgers compare criterion29 with supplied record routing29 and28. One independently supplied query/getter-return ledger records the above call vector and output requests. They execute neither dispatcher/parser/getter nor string/list/constructor/logging code. No natural query/response sequence, actual plugin order or runtime state is reconstructed.
+
+**Confirmed static:** packaged coso WHO29 declaration, configured plugin-directory loader, actual29 logging/STM list stores, descriptor/relocations/registration, outer criterion/callback arguments, exact parsed WHO29 check and selected getter/constructor/list/ACK call boundaries. **Host-only:** three finite ownership/query ledgers. **Conditional:** active configured manager/module/provider/registry, coherent parsed/context inputs, ordinary allocation/numeric/list/string/helper ABI/return and source lifetime. **Unknown:** exclusive/global owner, full WHO29/public grammar, installed activation/current logger state, constructor internals/complete output lifetime/publication, raw admission and physical behavior.
+
+WHO29 is no longer merely an unassigned declaration in the available packaged source. The next useful question is a separately bounded nonsecret getter/constructor/ownership contract or actual configured invocation evidence, rather than expanding to debug-command execution, access controls, full inventory or physical semantics. The optional GSource ownership fallback is unnecessary for this positive result.

@@ -1,0 +1,11 @@
+# Remaining MyHOMEServer1 consumer joins
+
+| Rank | Concrete source target | Useful closure |
+| --- | --- | --- |
+|1|Constructor/virtual caller supplying matrix reader0xa8c00 object+36 SQL|Assign actual query/column13/14 meanings and selection policy without substituting the separate2column declaration |
+|2|Scheduler factories0x2e9fc/0x2fa4c/0x30cb0|Resolve one actual trigger/condition/action element type, validation and fresh object construction, with no invented scene syntax |
+|3|Runner initializer0xa72c0 and later users of scene enabled+65/state|Connect loading to actual registration/activation and execution/cancel/restart gates |
+|4|One timing primitive and a nontransport action-object handoff|Establish fields/units/provider/caller return use before any elapsed-time or delivery claim |
+|5|A natural matrix caller's C JSON result handling|Connect local20/32data helpers to actual caller semantics, keeping receipts separate from physical outcomes |
+
+The first-pass alarm/persistence/update questions remain separate later areas. Genuine configured scene assets, extras80/81/94/95, live providers/state, complete object lifetime/unwind, concurrency and physical behavior remain unavailable/unproved. This continuation does not schedule automatic work or reopen prior closed authentication/session/framing/equivalent routes.

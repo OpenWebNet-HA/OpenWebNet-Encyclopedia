@@ -1,0 +1,168 @@
+{
+  "arithmetic_cases": [
+    {
+      "deadline_mod64": 1000,
+      "passed_timespec_words": [
+        0,
+        1000
+      ],
+      "product_mod64": 0,
+      "quotient_trunc_toward0": 0,
+      "remainder": 1000,
+      "scope": "Pure integer instruction-arithmetic illustration; maxword is not claimed admitted input, valid timer or a defect/hardware occurrence.",
+      "signed_deadline": 1000,
+      "synthetic_now": 1000,
+      "synthetic_unsigned_word": 0
+    },
+    {
+      "deadline_mod64": 60000001000,
+      "passed_timespec_words": [
+        60,
+        1000
+      ],
+      "product_mod64": 60000000000,
+      "quotient_trunc_toward0": 60,
+      "remainder": 1000,
+      "scope": "Pure integer instruction-arithmetic illustration; maxword is not claimed admitted input, valid timer or a defect/hardware occurrence.",
+      "signed_deadline": 60000001000,
+      "synthetic_now": 1000,
+      "synthetic_unsigned_word": 1
+    },
+    {
+      "deadline_mod64": 120000001000,
+      "passed_timespec_words": [
+        120,
+        1000
+      ],
+      "product_mod64": 120000000000,
+      "quotient_trunc_toward0": 120,
+      "remainder": 1000,
+      "scope": "Pure integer instruction-arithmetic illustration; maxword is not claimed admitted input, valid timer or a defect/hardware occurrence.",
+      "signed_deadline": 120000001000,
+      "synthetic_now": 1000,
+      "synthetic_unsigned_word": 2
+    },
+    {
+      "deadline_mod64": 17890364741775829992,
+      "passed_timespec_words": [
+        3738587965,
+        3361245672
+      ],
+      "product_mod64": 17890364741775828992,
+      "quotient_trunc_toward0": -556379331,
+      "remainder": -933721624,
+      "scope": "Pure integer instruction-arithmetic illustration; maxword is not claimed admitted input, valid timer or a defect/hardware occurrence.",
+      "signed_deadline": -556379331933721624,
+      "synthetic_now": 1000,
+      "synthetic_unsigned_word": 4294967295
+    }
+  ],
+  "execute_cases": [
+    {
+      "completion_written_inline": true,
+      "execute_path": "inline-start-then-completion1",
+      "model_scope": "Branch selection after ordinary delegate returns; no thread/callback executed.",
+      "source_flag_checked_by_execute": false,
+      "synthetic_fields": {
+        "shared_stopbyte": 0,
+        "word12": 0,
+        "word8": 0
+      }
+    },
+    {
+      "completion_written_inline": false,
+      "execute_path": "inline-start-then-request-duration-worker",
+      "model_scope": "Branch selection after ordinary delegate returns; no thread/callback executed.",
+      "source_flag_checked_by_execute": false,
+      "synthetic_fields": {
+        "shared_stopbyte": 0,
+        "word12": 1,
+        "word8": 0
+      }
+    },
+    {
+      "completion_written_inline": false,
+      "execute_path": "request-delay-worker",
+      "model_scope": "Branch selection after ordinary delegate returns; no thread/callback executed.",
+      "source_flag_checked_by_execute": false,
+      "synthetic_fields": {
+        "shared_stopbyte": 0,
+        "word12": 0,
+        "word8": 1
+      }
+    },
+    {
+      "completion_written_inline": false,
+      "execute_path": "request-delay-worker",
+      "model_scope": "Branch selection after ordinary delegate returns; no thread/callback executed.",
+      "source_flag_checked_by_execute": false,
+      "synthetic_fields": {
+        "shared_stopbyte": 0,
+        "word12": 1,
+        "word8": 1
+      }
+    },
+    {
+      "completion_written_inline": true,
+      "execute_path": "inline-start-then-completion1",
+      "model_scope": "Branch selection after ordinary delegate returns; no thread/callback executed.",
+      "source_flag_checked_by_execute": false,
+      "synthetic_fields": {
+        "shared_stopbyte": 1,
+        "word12": 0,
+        "word8": 0
+      }
+    },
+    {
+      "completion_written_inline": false,
+      "execute_path": "request-delay-worker",
+      "model_scope": "Branch selection after ordinary delegate returns; no thread/callback executed.",
+      "source_flag_checked_by_execute": false,
+      "synthetic_fields": {
+        "shared_stopbyte": 1,
+        "word12": 0,
+        "word8": 1
+      }
+    }
+  ],
+  "original_execution": 0,
+  "target_API_calls": 0,
+  "unit_boundary": "Conditional ordinary successful clock_gettime seconds/nanoseconds API + candidate steady_clock conversion gives ns ticks; factor60000000000 is then60seconds per operationalword unit, not measured elapsed or universalJSON duration.",
+  "wait_guard_cases": [
+    {
+      "boundary": "No OS wait/notify order, natural callback or actual clock is modeled.",
+      "selected_outcome": "unlock-no-callback-no-completion-write",
+      "synthetic_after_wait_now_at_or_past_deadline": false,
+      "synthetic_shared_flag_after_wait": 1,
+      "synthetic_shared_flag_initial": 1
+    },
+    {
+      "boundary": "No OS wait/notify order, natural callback or actual clock is modeled.",
+      "selected_outcome": "repeat-wait",
+      "synthetic_after_wait_now_at_or_past_deadline": false,
+      "synthetic_shared_flag_after_wait": 0,
+      "synthetic_shared_flag_initial": 0
+    },
+    {
+      "boundary": "No OS wait/notify order, natural callback or actual clock is modeled.",
+      "selected_outcome": "unlock-no-callback-no-completion-write",
+      "synthetic_after_wait_now_at_or_past_deadline": false,
+      "synthetic_shared_flag_after_wait": 1,
+      "synthetic_shared_flag_initial": 0
+    },
+    {
+      "boundary": "No OS wait/notify order, natural callback or actual clock is modeled.",
+      "selected_outcome": "unlock-callback-then-completion1",
+      "synthetic_after_wait_now_at_or_past_deadline": true,
+      "synthetic_shared_flag_after_wait": 0,
+      "synthetic_shared_flag_initial": 0
+    },
+    {
+      "boundary": "No OS wait/notify order, natural callback or actual clock is modeled.",
+      "selected_outcome": "unlock-no-callback-no-completion-write",
+      "synthetic_after_wait_now_at_or_past_deadline": true,
+      "synthetic_shared_flag_after_wait": 1,
+      "synthetic_shared_flag_initial": 0
+    }
+  ]
+}

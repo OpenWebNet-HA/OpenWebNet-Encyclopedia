@@ -1,0 +1,82 @@
+# MH202 1.0.24 — startup XML alias and ordinary working-status writer
+
+This bounded static pass closes two concrete links left by boot/run2: the packaged startup rule requests a `/var/tmp/stack_open.xml` symlink to `/home/bticino/cfg/stack_open.xml`; `openserver` contains an ordinary working-mode-1 writer gated by three other status values. Neither finding proves that the startup link exists on a running unit, the status write succeeds, or services are fully ready.
+
+Image paths below refer to the firmware image. Evidence filenames are relative to this directory. Sources, images, prior dossiers and repository documents were unchanged. Host Python, `readelf` metadata from prior reviewed evidence and `objdump` static decoding were used. Original ARM/JavaScript/PHP/vendor execution, original instruction counts, code hooks, live file/status/socket/service activity and process launches: **zero**. No authentication, session or credential branch was investigated. The connection helper mentioned below remains an opaque call/flag boundary.
+
+## Startup configuration producer: a declared link, not newly generated XML
+
+`/etc/default/volatiles/00_core` line82 contains this exact declaration:
+
+```
+l root root 0777 /var/tmp/stack_open.xml /home/bticino/cfg/stack_open.xml
+```
+
+Line46 separately declares `/var/tmp` as a link to `/var/volatile/tmp`. `startup-declarations.json` and `00_core.selected.txt` preserve these selected facts. Original normal-image symlink metadata contains `/etc/rcS.d/S37populate-volatile.sh` targeting `../init.d/populate-volatile.sh`. The runtime `var/tmp/stack_open.xml` entry itself is absent from that original symlink metadata: the declaration is intended startup work, not a packaged resolved symlink at this path.
+
+The producer policy is concrete in `/etc/init.d/populate-volatile.sh`:
+
+- Lines3–7 source `/etc/default/rcS`, set the configuration directory `/etc/default/volatiles` and core filename.
+- Lines114–128 parse the six fields; type `l` takes `TLTARGET` as source and `TNAME` as destination. An existing symlink passes the `-L` guard; otherwise `link_file` is requested asynchronously at line126.
+- `link_file`, lines40–50, constructs a conditional `ln -s` request, avoids an existing destination, and executes its recorded command asynchronously. The inner command also guards existing files/symlinks.
+- Lines163–171 either execute a cache or iterate the configuration files. Packaged `/etc/default/rcS` line27 declares `VOLATILE_ENABLE_CACHE=no`, selecting the configuration-iteration policy under that unchanged setting. This is not an observed shell environment or boot execution.
+
+These asynchronous shell paths do not supply a completed-operation/readiness guarantee. Existing regular destinations, existing symlinks, changed runtime settings, errors and scheduling can affect the result. The configured `0777` field is not evidence that this branch calls `chmod` on the link or target: the link branch is separate from the file/directory helpers.
+
+The daemon's runtime filename remains the original data pointer at `0x234c4` to literal `0x19960`, `/var/tmp/stack_open.xml`. Its configuration wrapper is called at `0xfa48`; the parsed configuration list at config+100 is bound to the launch object at `0xfa64` (`daemon-config-read-binding.txt`). Thus the initial filename's expected source is now explainable without inventing an XML generator. It does not establish that the effective XML equals the packaged configuration at runtime.
+
+The exact `stack_open.xml` byte locator scan across all packaged normal regular files is saved in `runtime-config-literal-locators.json`. It also identifies application and library users. That scan is a locator inventory, not proof of every user's read/write role. **A later XML-content replacement/rewrite producer was not established in this pass**; indirect paths, generated names and runtime configuration remain open questions. No credential-bearing configuration content was exported.
+
+## Normal service launch and status do not form one atomic readiness event
+
+The daemon ordinary child-entry helper `0xf8a0` calls `fork`; on the zero-result child branch it invokes routine `0xc7f0` at `0xf91c` (`daemon-ordinary-child-entry.txt`). In that ordinary routine, `0xee88` calls the existing child-list launcher `0x14dd0` (`daemon-ordinary-launch.txt`). This is separate from run2's recovery/minimal entry route. The selected branch and launch request are original static instructions; no successful fork, child start or readiness was observed.
+
+Run2 established that the launcher reads current working-mode text and suppresses XML mode0 records only for current status2. Its predicate is not repeated as a new finding here. In particular, this ordinary caller is not itself a write of working mode1. The previous startup write0 and recovery write2 are separate status transitions.
+
+A concrete writer1 is instead present in `/home/bticino/bin/openserver`. `openserver-initial-status-gate.txt` shows this original sequence:
+
+| Original call/comparison | Meaning within the selected block |
+| --- | --- |
+| `0xeb44` | Read recovery-partition-kernel status into its own buffer |
+| `0xeb50` | Read extras status into a different buffer |
+| `0xeb60` | Read configuration status into a third buffer |
+| `0xeb70`, compare `0xeb74` | Decimal-convert configuration status and require1 |
+| `0xeb84`, compare `0xeb88` | Decimal-convert extras status and require1 |
+| `0xeb98`, compare `0xeb9c` | Decimal-convert recovery-kernel status and require1 |
+| `0xeba0` | Keep the final conversion result in `r5`; on the passing branch this is1 |
+| `0xebc4..0xebcc` | Format that1 using literal `%d` from pool `0xf7b4` |
+| `0xebd4` | Request `set_mystatus_working_mode` with the resulting text1 |
+
+The three getter return values are not tested before these selected `atoi` calls. The gate therefore operates on the buffers presented by its providers; the report does not assert successful reads or actual current values. `host-status-gate-model.json` transcribes only the three numeric comparisons over eight 0/1 combinations. Only `(1,1,1)` requests mode1. This is a host Boolean model, not original parser/status execution or a complete numeric-domain model.
+
+The mode setter's zero return skips an error log; nonzero logs and joins the same continuation at `0xebf4`. This block does not read the status back or abort solely because the setter reports failure. Its next selected operations include a listen-helper call at `0xec04` (`openserver-later-listen-call.txt`). Accordingly, this earlier mode1 request cannot prove that even those later listen operations have completed successfully, much less establish whole-system service or physical-bus readiness.
+
+The previously reviewed protocol/run2 conditional closure assigns `openserver`'s same-named status helpers to `libcommon`, under its packaged/no-interposition assumptions. The selected `libcommon` setter `0x28b54` is preserved as a static delegation boundary in `common-working-setter.txt`; filesystem persistence and effective binding were not executed. The daemon's own effective status provider remains outside that earlier two-process closure.
+
+## Conditional pending recheck and ordinary daemon consumer
+
+Immediately preceding the initial status reads, `openserver` calls helper `0xb4d8` at `0xeae8`. Its internals are not part of this report. A nonzero helper return selects branch `0x1077c`, which sets local `[SP+56]` to1 at `0x10794` and returns to the common continuation at `0xeb30`. A zero result participates in a counter loop through `my_sleep(1)` and a comparison with100 (`openserver-connection-attempt-loop.txt`). No actual connection result, elapsed timing or network/session behavior is inferred.
+
+Later, original code calls the same opaque helper at `0xecf4`; the following pending-gate entry tests `[SP+56]` at `0xecfc`. If it is nonzero, the same three status getters/conversions/comparisons are performed at `0xed0c..0xed68`, and a passing gate requests mode1 at `0xed9c` (`openserver-pending-status-gate.txt`). The flag's role here is a **conditional opportunity to recheck**, not a firmware-wide retry guarantee. Passing/error branches clear the local pending value in the selected continuation; actual caller scheduling, provider updates and persistence remain unobserved.
+
+An ordinary daemon loop separately reads working mode at `0xef08`, decimal-converts it at `0xef10`, and compares1 at `0xef18`. This consumer is behind earlier config-field/global-byte guards (`daemon-mode1-consumer.txt`). It demonstrates that mode1 is consulted after the launch request; it does not establish that this consumer caused the writer, or that a numeric mode proves service health. The XML leaf called `normal_status`, per-child XML `working_mode`, recovery-kernel status, extras status, configuration status, running firmware copy and global working mode remain distinct fields/namespaces. This pass does not assign new meanings to their other numeric values.
+
+## Reproduction and exact identities
+
+From the workspace root:
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/boot/run3/collect_startup.py --check
+```
+
+The collector strictly byte-compares21 generated outputs: ten original-code spans, sixteen exact original instruction words, twelve pinned inputs and eight host-only Boolean cases. `original-spans.json` includes original image paths, VA ranges, file offsets and byte hashes. `input-hashes.json` pins original ELF/script bytes, source regular/symlink inventories, shared accessor and the read-only prior reports used for joins. No original instruction or code hook executes.
+
+| Original image source | SHA256 |
+| --- | --- |
+| `/home/bticino/bin/bt_daemon` | `41a8844318d47cf33571b6d74a7de528dea5118d4c2289f4d666de419d91b1b6` |
+| `/home/bticino/bin/openserver` | `5858374ef26a02c10381cb7ffd09cabbf762367ecce090e238cdde81c1ffced4` |
+| `/home/bticino/lib/libcommon.so.0.0` | `07b2c6d09e4a1b317bb3b37aff8f7ddd72dcec15e1e7194fde00c4f0ce1ecab5` |
+| `/etc/default/volatiles/00_core` | `a40f3fe0477f9d60dc095a22c86cef45ed6f76c6fc66643c2758426fdba97207` |
+| `/etc/init.d/populate-volatile.sh` | `62f2d22a2591f2a5d6b76a5ea9e9fe6ad9ab634c84378bc48d050054f1b602ec` |
+
+Ranked remaining questions: identify a concrete later XML rewrite/replacement producer; reconstruct the actual status-getter buffer/error contracts and updater origins of the three gate values; establish a needed daemon provider closure before joining same-named implementations. Complete persistence/header/fallback analysis was deliberately deferred after these two substantive positive joins. No F454 behavior was transplanted into the MH202 findings, and no recovery-runtime equivalence is claimed by this normal-image pass.

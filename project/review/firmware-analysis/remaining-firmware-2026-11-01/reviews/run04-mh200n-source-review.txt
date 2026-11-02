@@ -1,0 +1,23 @@
+# Independent MH200N run04 source peer review
+
+Reviewer: f450_archive_analysis. Result: PASS for the bounded third-token-to-compiled-destination request and stated limits. No source/report correction requested. This independent review does not approve full Device/source/runtime/physical gates.
+
+The frozen collect_fields_v1.py --check passed through the existing host ARM-disassembly route: five generated outputs, five original spans, thirteen word guards, zero original executions. I independently parsed the original ELF header/program headers, recomputed its two PT_LOAD mappings, read the selected original words and independently calculated the two BL targets, NULL branch target and PC-relative pools. I compared all five retained span bytes/hashes to the original source and verified all six exact first-copy records against the frozen canonical members. The original is ARM EXEC machine40 flags0x202, SHA256 63c0b0a9b6f67e6564f23f5ffcf18c3716bc27dc9b0b03009324af0fa0a21d48.
+
+The adjacent original second-token test at0xa29c, MOVEQ R0,2 at0xa2a0 and BEQ0xa2a4 support entry to the new0xa2a8 continuation on the nonnull leg. New0xa2a8 supplies zeroR0 and0xa2ac obtains exact '*' NUL-terminated delimiter through0xa3c4→0xe488. BL0xa2b0 decodes to0x8d38, whose retained PLT/GOT/JUMP_SLOT evidence identifies strtok. CMP0xa2b4, non-flag-setting MOVEQ R0,3 and BEQ0xa2bc→0xa3a8 support the selected local numeric3 return. The stored epilogue words restore1024bytes and return throughPC. No target instruction was executed.
+
+On the nonnull leg MOV0xa2c0 forwards the same returned token intoR1. LDR0xa2c4 resolves pool0xa3c8→0x18090 intoR0; BL0xa2c8 resolves0x8cb4, whose original import evidence identifies strcpy. Thus the selected argument order/source identity claim is supported. The destination's writable file-backed PT_LOAD/.data membership and four-byte provenance hash are narrower than a destination object extent; the report correctly withholds size/capacity/live-identity, semantic filename, overflow, accepted-format or installation claims. No destination content is exported. There is no intervening explicit length/type/content test in this exact span; this is not a whole-function absence claim.
+
+The third ordinal remains conditional on ordinary tokenizer continuation/state and inherited prior admission. Actual pathname/descriptor/read data termination, valid token, source/destination validity and capacity/non-overlap, normal imports/ABI/returns, lifetime and absence of invalidating aliases remain premises. Providers stay opaque. The packet stops at the request, and does not imply actual copy, installed overlay, recovery behavior, final success or complete grammar. Inherited night03 findings remain identified as inherited; this review checks the narrow adjacent continuation, not the entire earlier semantic dossier.
+
+Original/vendor/native/helper/emulator/SQL/targetOS/network/bus/device/physical executions and new DB recovery/upload are zero in this review. Earlier source packets, synced files, source manifest and ledgers were not changed. Cumulative one encrypted F450 support container/zero plaintext databases remains inherited, not newly read back or independently reuploaded here. No blocking issue found.
+
+## Frozen reviewed members
+
+- collect_fields_v1.py: 15476 bytes, SHA256 f3174863a055a1170fbce9d8d3cdd4c285446e9a762574dcca378c266842696f
+- REPORT.md: 5469 bytes, SHA256 bf26786cbb8638a41d94240203d14c5b5ae593de00623ddd19848c4721f46ab2
+- SOURCE.json: 6798 bytes, SHA256 2f2743423265987d92f10ee3c97fce35d6a5b9df0748e6f0e7ec9ed67e957b83
+- ARGUMENT_FLOW.json: 1881 bytes, SHA256 70a5c6b1fca2445e4d353f158e7f96db1e919485c54ec9b17e6522ab995a9674
+- INPUTS.json: 1044 bytes, SHA256 5717839bf4259582f3a08ceef8209a6c98debf9c5408ea91671f3f89c6cf6a00
+- OUTPUT_MANIFEST.json: 611 bytes, SHA256 ec46c6df4bda669c83cebae705f76c06bcd0bcd61680429d1e6752934f6e854a
+- first-candidate/INDEX.json: 998 bytes, SHA256 db3f3ba84cdce4297568469c39fec3f6b24dc3d7c773e3f0e6130bc41e7ea124

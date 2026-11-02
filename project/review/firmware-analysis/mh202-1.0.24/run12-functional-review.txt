@@ -1,0 +1,49 @@
+# Independent source review — MH202 functional run12
+
+**PASS, scoped static findings; no material correction required.** I independently compared the author report/collector and saved finite host evidence with original MH202 image bytes, disassembly, literal pools and linkage. I did not author this functional batch. This review executes no original ARM/helper/libc, interpreter, configured script, target OS or live I/O. It is separate from protocol run12's native normalizer experiments.
+
+## Reproduction and original-byte checks
+
+From the workspace root:
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/functional/run12/collect_evidence.py --check
+```
+
+PASS:18 deterministic outputs plus manifest,10 original spans,33 critical words,2 original files,7 literal references and4 finite host cases. The collector's `--check` uses strict saved-byte comparisons. Its execution here is host disassembly/reading/composition only, original execution0.
+
+Separately from the author's collector logic, I read the two fresh original ELF files through the read-only ImageVFS, independently mapped VAs using their PT_LOAD entries, and verified all10 raw-byte span SHA256 values and33 instruction words. All18 output-manifest identities match current bytes. I independently resolved all7 recorded PIC literal references from original words/base `0x12114`, and checked the four fixed Boolean output/cursor results without executing the original helper. Additional original disassembly at `0x4140..0x41ac`, `0x4a0c..0x4a60` and `0x630c..0x6330` verifies the inherited flag/cursor initialization, first-OR flag store and actual delimiter guard.
+
+## Source findings checked
+
+* Original PARENTESI entry at `0x4140` saves operator/left at fp−32/fp−36 and accesses the right pointer at fp+4. Flags fp−20/fp−19 initialize0; comparison bytes fp−18/fp−17 initialize110 (`n`), output index fp−16 initializes0. Cursor increments once before entering the delimiter loop. These state roles are distinct; the byte110 is a sentinel, not Boolean true.
+* `0x4230` compares the current global-line byte with `|`. On the selected zero-OR-flag branch `0x4240→0x4a0c`, `0x4a10` stores flag1. The ordinary constant route eventually calls `atoi(left)`, `atoi(right)` and `INT_OPERATORI` at `0x51c0`, storing its byte at fp−18. The retained typed-selection source supports the supplied nonvariable/string/time constant premise. This does not establish acceptance of full DSL or configured assets.
+* First reset calls at `0x51d8/0x51e8/0x51f8` each request4 zero bytes, then advance the source cursor and reset the shared output index. They do not clear full10-byte left/right regions. The report correctly distinguishes requested footprints from caller initial-clear sizes: operator `[63,67)` requested versus `[63,66)` initially cleared, left `[53,57)` versus `[53,63)`, right `[43,47)` versus `[43,53)`. No buffer safety/impact finding is inferred or executed.
+* Delimiter guards `0x632c..0x634c` require OR flag nonzero, accumulator not110, pending comparison still110. Selected second constant conversion/comparison at `0x6aa0..0x6acc` therefore remains part of this route even for a first result1. The narrow statement that both comparisons occur before this final OR fold is supported; a universal language short-circuit rule is not established.
+* `0x6ad0..0x6afc` converts both saved bytes to zero/nonzero Boolean arguments, then calls OR PLT `0x16d8` at `0x6b00`. The actual named provider at `0x1a10..0x1a70` tests first and second byte nonzero and returns1/0 accordingly. The matching symbol and relocation identify the static candidate provider; no effective live binding or original execution is claimed.
+* After storing the fold result, `0x6b0c..0x6b38` requests three further4-byte resets. `0x6b60` or `0x6bc0` copies2 bytes from the corresponding `1`/`0` literal into left; `0x6bdc` copies `1` plus NUL into right, and `0x6bf8` copies `=` plus NUL into operator. The retained pools and raw words resolve those exact literals. With AND flag0, branch `0x6c04→0x748c` returns cursor+1. Thus the modeled selected outputs are `1=1` or `0=1`, not a rewrite of the global source string.
+* Recursive call `0x41e0` passes delimiter `)`, current cursor and the same operator/left/right output pointers, including the fifth stack argument. The returned cursor is stored at `0x41e8` and the parent reevaluates its delimiter guard. For the supplied one-layer shape, the child's returned cursor13 points to the parent's comma; the parent flags remain0 and its return is14. This is conditional shared-buffer/cursor composition, not a native recursive invocation or general precedence proof.
+* Actual executable `0x9be0` calls PARENTESI, then `0x9be4..0x9bf0` passes its output pointers to IIF without using that return as an action cursor. Effective `linea`/provider binding and IIF's separate global-copy/action contracts remain unresolved. Source-report language retains those limits.
+
+## Finite host cases and boundaries
+
+The selected comparison-byte pairs `(0,1)`, `(1,0)`, `(0,0)`, and nested `(0,1)` independently give normalized left strings `1,1,0,1`, operator `=`, right `1`. Saved top-level returned cursors are12/12/12/14. The nested child's cursor13 and the actual supplied comma at index13 agree. Global source after these selected helper paths is modeled unchanged. These checks use declared short ordinary operands/equality, one OR separator, readable delimiters, normal primitive/provider returns and short caller-zeroed buffers; the host model does not prove actual scanner/DSL acceptance or configured expression semantics.
+
+The report correctly leaves multiple/mixed logical operators, precedence/associativity, quoted/percent substitutions, longer residual-buffer behavior, general recursion, runtime imports/globals, accepted complete syntax, configured action bodies and physical Only-if semantics open. Symbolic `TRUE_BODY`/`FALSE_BODY` values are not observed or accepted scripts. IIF comparison/action execution remains unexecuted. No correction or expanded source claim is requested.
+
+## Exact reviewed identities
+
+All paths below are research-root-relative or original image paths. SHA256 pins apply to current final author bytes.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `functional/run12/REPORT.md` | `91a006a6359fd8d68b1b69068d819ab9c537afc2a5ecfab77f2eeed89ff9e823` |
+| `functional/run12/collect_evidence.py` | `8566a0d4f2477b84c474735bdc0c3870e064412c4411d1b6058ae57befdb5bc0` |
+| `functional/run12/output-manifest.json` (18 entries) | `a7be4cffab246eb0cf6373987b9a57545bc13b9547c74cfc85589592804a6592` |
+| `functional/run12/input-hashes.json` | `431b8644f115f7dd95cd32a6786dd430e79210d279de70ee86efe95b39b7c960` |
+| `functional/run12/host-selected-or-fold.json` | `d0d43d8d5139420ed87f96d94ca6e843af6377ef0a06633a01ca553f63622918` |
+| `functional/run12/original-spans.json` | `47cbf57315735e1ae054692dbc8a50ab0637ddef115553567425ed83767ea5dc` |
+| `/home/bticino/bin/bt_script` | `f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4` |
+| `/home/bticino/lib/libdomotica.so.0.0` | `5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09` |
+
+Only this independent review file is written by the reviewer. Author evidence, earlier reports, synced sources and original images remain unchanged. The manifest intentionally excludes report/reviews; this review pins the report separately and does not create a provenance cycle.

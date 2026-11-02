@@ -1,0 +1,45 @@
+{
+  "files": [
+    {
+      "bytes": 1341,
+      "path": "COMPARISONS.json",
+      "sha256": "c0fff2969cd446e424c13d8434c135a09f18ac122c6875b7f0dda876f452a599"
+    },
+    {
+      "bytes": 204843,
+      "path": "COMPONENTS.json",
+      "sha256": "9eb0868b1d584ee88422409f57f57cac76a719e6276dde5437b996588f0f1f03"
+    },
+    {
+      "bytes": 2349,
+      "path": "DATA_FILE_LEADS.json",
+      "sha256": "fbecb2f920fc5563b22eb4079b6200339320ae419da04e38679c5da07769533a"
+    },
+    {
+      "bytes": 9711,
+      "path": "DECLARATIONS.json",
+      "sha256": "c1944d5762a58bbe34170359eb9a343d045106c5149b74a9926875256adc97a2"
+    },
+    {
+      "bytes": 173818,
+      "path": "INPUTS.json",
+      "sha256": "91426086fe65869cc2f71fbd6c7a017c462cbc862be666a558ea4fa938b85da2"
+    },
+    {
+      "bytes": 5111,
+      "path": "PACKAGES.json",
+      "sha256": "8f5b950837f084efc5f7d39471cd070f5af0a716fdc1e910dbaed67555852353"
+    },
+    {
+      "bytes": 8091,
+      "path": "REPORT.md",
+      "sha256": "77c1b90bf0d3fe2d4a651d26f5f93dad728b04ebf8c3e7f0efd60c94b402f778"
+    },
+    {
+      "bytes": 12111,
+      "path": "STARTUP.json",
+      "sha256": "c70d00ed8d368d32bcf488431b776ca42d0b297645d6488dc061a3b48fc8f33b"
+    }
+  ],
+  "scope": "Generated outputs excluding this manifest"
+}

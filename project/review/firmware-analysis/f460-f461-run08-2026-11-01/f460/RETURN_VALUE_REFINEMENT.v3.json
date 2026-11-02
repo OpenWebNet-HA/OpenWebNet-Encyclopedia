@@ -1,0 +1,21 @@
+{
+  "authoritative_report": "REPORT.v3.md",
+  "changes": [
+    {
+      "new": "then tests its returned X0 value.",
+      "old": "then tests its returned pointer."
+    },
+    {
+      "new": "zero extraction/helper result",
+      "old": "null extraction/helper result"
+    }
+  ],
+  "new_sha256": "8edf41662a72cbdfad04dd09febfe8eb8826ab6d55dddb5b6a2445f38ebf6d4e",
+  "new_target_execution": 0,
+  "old_report_collector_outputs_histories_preserved": true,
+  "old_sha256": "8a46eb35e26d98eef19e44c9730445a8cee86f0b87866337fd304faf5262c93f",
+  "parent_pre_edit_snapshot": "work/f460-f461-comparison/2026-11-01-run08/integration/f460-before-v3/INDEX.json",
+  "predecessor_report": "REPORT.v2.md",
+  "reason": "Opaque local helper0x5140 is not audited; its return is tested only as X0 at0x56fc, so pointer return type is not established. Actual xmlReadFile pointer-return contract remains separate.",
+  "source_collector_outputs_counts_unchanged": true
+}

@@ -1,0 +1,45 @@
+# Independent review — MH202 protocol run6
+
+**PASS for the selected static receive/qualification/completion contract.** No semantic correction requested. During review I requested a wider saved elapsed-success source span; the author expanded it from `0x10ed8` through `0x10f9c`, regenerated evidence and confirmed stable bytes. This adds retained evidence for the ordinary logging/destructor route without changing the report/model claims.
+
+I read the report/collector, reproduced its strict read-only `--check`, inspected the selected original branches and independently verified span/word identities through a separate ELF load-segment mapping of hash-checked original bytes. All30 outputs, eight inputs,24 original spans,30 words, two PIC literals and eight pure host cases pass. All32 producer-manifest entries match final bytes. No original ARM, loader, PHP/JavaScript/vendor/library execution, emulator, code hook, live I/O, process/service/network/device operation ran. Only this review was written.
+
+## Selector, decoder and field premises
+
+The receive return zero/reset branch is separate from selected data selector4. For4, the earlier1/7 and99/2 tests fall through. At `0x10574`, compare5 alone would give a negative result; the **conditional compare with2 at `0x10578`** is executed for4 and changes the flags to positive. Thus the following signed-LE branch does not exclude4. The report captures this actual conditional-instruction behavior.
+
+The decoder's selector4 and length19 guards are necessary selected source conditions, not complete acceptance of any19-character input. The downstream source reparses decoded array0 text and tests its diagnostic WHO membership. No equality check with the original request WHO is promoted from that membership gate. The host cases explicitly begin after successful decoder/ordinary parser/provider/membership premises and do not fabricate a raw accepted frame.
+
+The saved stack arithmetic agrees:201828 reserved bytes plus36 saved-register bytes place the three incoming stack arguments at current SP+201864/+201868/+201872. Their selected loads supply requested DIM/WHERE/context. Array stride0x624c and baseSP+60 agree with the raw-text locations. Actual context readiness, descriptor value, receive API results and imported ABI/provider completion remain assumptions, not observed state.
+
+## Qualification model and selected original predicates
+
+Original source confirms the special decoded DIM set30/31/32/62/64 can qualify on DIM equality before a WHERE test. This shortcut precedes the selected mode7/8 guard; the report correctly avoids calling it exclusive to those modes.
+
+For selected modes7/8, equal DIM21/23 requires a hash-prefixed WHERE and matching numeric suffix. Other equal dimensions accept hash/numeric address matching or the exact getter-field terminator WHERE0/WHAT4. For differing dimensions the code retests diagnostic membership and implements the signed requested-DIM domain0..8 using both the MVN/shift and upper comparison. I checked the host predicates against these source branches; the model's decimal fixtures are appropriately narrower than a replacement `atoi`/OPEN grammar.
+
+The model permits a requested DIM0 to qualify some diagnostic results with differing DIM/WHERE under the selected branch. It does not convert that source predicate into full raw-frame eligibility, received/request-WHO equality or physical cross-device behavior. The additional DIM23/requested-WHERE0 special forwarding branch is explicitly outside the eight examples.
+
+## Forwarding, completion and elapsed branch
+
+The report correctly separates first forwarding before the request-correlated filter from later qualified forwarding. Their original global-slot references are different; actual recipients remain unresolved. The local array helper's IsOKFrame predicate uses the candidate libopen kind6 offset, and its normal stop/cap result and negative-write branch are scoped to that helper. Exact write-length completion or delivered output is not asserted.
+
+After nonnegative qualified forwarding, mode7 with requested DIM nonzero reaches source result0 immediately. Mode8, and mode7 with requested DIM0, reach the counting continuation. Exact decoded WHERE0 and WHAT4 terminate through result0. The strings are PIC-resolved getter-field literals, not proof of a complete accepted terminal raw frame.
+
+The selected elapsed comparison uses a receive-related timestamp taken **before** the corresponding receive and the earlier start value. Its signed comparison is with5; it is not a measured real-time deadline. On the inspected >5 route, mode8 reaches ordinary logging/destructor cleanup and result0 without testing accepted count; selected mode7 reaches−1. The widened original saved span supports that normal continuation. A nonqualifying decoded diagnostic object can reach the selected mode8 elapsed route under the explicit decoder/provider/normal-completion premises. Select/no-data/error/context-stop paths, scheduler timing, actual units/wall duration and complete timeout behavior remain outside this check.
+
+The shared caller maps collector zero/nonzero to local OPENOK/OPENKO getter choice and send-helper request. Mode8's direct branch enters the shared callsite without the adjacent unrelated argument adjustment. This is a local return/argument/ACK-choice boundary, not an observed response or acknowledgement delivery. The earlier unknown marker byte still leaves actual selection between mode7/8 unresolved; this report compares the two conditional modes without assigning that byte.
+
+## Exact reviewed pins
+
+Paths below are relative to `protocol/run6/`.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `0389b36c43fa8da6156f3974dd98bf21893029167b5d0678c64216af19976bfa` |
+| `collect_evidence.py` | `ce17cf7eb5f670e116a3c9f9bd6c3c0aaffc5aeaca308327f647933ea73bbbe2` |
+| `host-selected-qualification-cases.json` | `a3c05fad419df525ce9064200dba3208c1fc054f33b55592e1c157e09c543898` |
+| `original-spans.json` | `3589968076eaa5182d3f589dcfe90007ab9ed635c26bda9432b8ade566c5d67e` |
+| `output-manifest.json` | `2f8608ce2b9728162e17bed86153def1f79bbfccf5438025165985bf8d15c68c` |
+
+This review applies to the final bytes above and the listed selected source branches. It does not certify the full local decoder/translator registry, complete transport protocol, descriptor setup, original parser, all collector paths, runtime timing/binding, recovery environment or physical support. No earlier report or author artifact was edited by this reviewer.

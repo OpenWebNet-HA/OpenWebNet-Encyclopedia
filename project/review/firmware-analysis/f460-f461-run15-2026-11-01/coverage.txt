@@ -1,0 +1,10 @@
+# Run15 source coverage and limits
+
+| Area | Selected original reach | Remaining boundary |
+| --- | --- | --- |
+| F460 BNLD serialization | ActualrawAPslot0/hiddenX8serializer/base; selectedoperator spellings/ownparser decode; status−1/level56 signedint/member/move request; sameJSONreparse inherited | FullJSON/provider/assignment/int/asInt/type/error/coherence, extramembers/mutation, actualconfiguredcondition/queryrecord/lifetime/physical |
+| F461 module-entry removal | Mainmonitorcaller/actualcallback/userdataM; sameholder/list/entry; suppliedfilepathsuffix/event0; conditionalstoplookup/call; list/head/free/close/free requestorder | Activation/eventdelivery/signalproviders/pathidentity/otherbranches, stopABI/body/result/actualunload, failure/unwind/ownership/concurrency/physical |
+
+F460:13 deterministic outputs,10 spans,38 guards,10 importproofs, six keys, four operatorrows, six pins and15 firstcopies. F461:9 outputs, six spans,38 guards, three PICjoins, two safeliterals,13 imports, six pins and11 firstcopies. F461currentreportv2hasseparatecopies/refinement; canonicalv1report/output untouched. Counts express selectedreach/integrity, not coverage percentages or executed cases.
+
+Neworiginal/helper/native/provider/emulator/model/fixture/SQL/JSON/file/clock/timer/service/OS/network/bus/physicalexecution0. EarlierMHSonecorpus/eightentries/340originalcodehookvisits and separateF454/MH202 ledgers unchanged. FullDevice/sourcegatespending; allclosedroutes/provider/pluginstop bodies remainopaque. No runtime/private/fullconfiguration/bootenv/keys exported. Afterthischeckpoint no newbinaryresearch, onlysource-summary/review/navigation/referenceintegration/closure.

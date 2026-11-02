@@ -1,0 +1,20 @@
+[
+  {
+    "source": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/REPORT.v2.md",
+    "snapshot": "work/f460-f461-comparison/2026-11-01-run08/integration/f460-before-v3/REPORT.v2.md",
+    "bytes": 8248,
+    "sha256": "8a46eb35e26d98eef19e44c9730445a8cee86f0b87866337fd304faf5262c93f"
+  },
+  {
+    "source": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/collect_update_v2.py",
+    "snapshot": "work/f460-f461-comparison/2026-11-01-run08/integration/f460-before-v3/collect_update_v2.py",
+    "bytes": 8899,
+    "sha256": "4cf6d6b32b5c9855589b879b488c7828683c6ca545f824b49d0f434512e12c1a"
+  },
+  {
+    "source": "work/f460-f461-comparison/2026-11-01-run08/reviews/f460-source-review.md",
+    "snapshot": "work/f460-f461-comparison/2026-11-01-run08/integration/f460-before-v3/f460-source-review.md",
+    "bytes": 4153,
+    "sha256": "b8dee4c06881329bd92da661758173fa211727a120a880b17831deb8652655fe"
+  }
+]

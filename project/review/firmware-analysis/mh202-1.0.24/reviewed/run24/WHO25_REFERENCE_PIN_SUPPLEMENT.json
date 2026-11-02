@@ -1,0 +1,26 @@
+{
+  "checkpoint": "run24",
+  "role": "Four reference pages preserved before WHO25 implementation-note integration; original thirteen-document index unchanged",
+  "files": [
+    {
+      "source": "functional/who-25-transversal/README.md",
+      "source_sha256": "e9ba3229e4a09c9412b21b59bcaf316d81ecc5499a0afdb19225fe1370e79acb",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-README.md.txt"
+    },
+    {
+      "source": "functional/who-25-transversal/cen-plus.md",
+      "source_sha256": "86f2d687f90e84d0991f8d99915e0146858fa8b817c99ca553e5ea25919d681d",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-cen-plus.md.txt"
+    },
+    {
+      "source": "functional/who-25-transversal/dry-contact-ir.md",
+      "source_sha256": "1c0a04bae56ba9312392632fbbe8b8ca5ad81e1e7d0ed9c561cb936b180b86e9",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-dry-contact-ir.md.txt"
+    },
+    {
+      "source": "functional/who-25-transversal/zigbee-binding.md",
+      "source_sha256": "bdea58b831237abc6628ed5cfc23d1d1c4d8a67239ebe6d459e7ba192dc01951",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-zigbee-binding.md.txt"
+    }
+  ]
+}

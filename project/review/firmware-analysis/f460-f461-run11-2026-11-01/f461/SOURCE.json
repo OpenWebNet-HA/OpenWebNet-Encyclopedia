@@ -1,0 +1,317 @@
+{
+  "PT_LOAD": [
+    [
+      1,
+      5,
+      0,
+      0,
+      0,
+      27804,
+      27804,
+      65536
+    ],
+    [
+      1,
+      6,
+      27848,
+      93384,
+      93384,
+      2328,
+      2432,
+      65536
+    ]
+  ],
+  "configuration_whitelist": {
+    "path": "/home/bticino/cfg/coso_cfg",
+    "scope": "packaged normal image values; not runtime selected configuration",
+    "selected_lines": [
+      {
+        "line": 17,
+        "text": "[Plugins settings]"
+      },
+      {
+        "line": 18,
+        "text": "LibDir=/home/bticino/libcoso"
+      },
+      {
+        "line": 19,
+        "text": "PlugCfgDir=/home/bticino/cfg/coso_plugins"
+      }
+    ],
+    "sha256": "7d4f87e391dc416a7f227bfed9fb24d1df5606952f705cd6884087677c0d583f",
+    "size": 333
+  },
+  "execution": {
+    "models": 0,
+    "original": 0,
+    "provider": 0,
+    "target_IO": 0
+  },
+  "guards": {
+    "0x2f68": "0xb00000b3",
+    "0x2f6c": "0x910c4273",
+    "0x2f7c": "0xaa0003f4",
+    "0x2f8c": "0x9101c3eb",
+    "0x2f9c": "0x910203e7",
+    "0x2fac": "0x910283e2",
+    "0x2fb4": "0xf9000e6b",
+    "0x2fcc": "0xf9006e67",
+    "0x2fe8": "0xf9011662",
+    "0x3018": "0x34002640",
+    "0x3058": "0xf94043e0",
+    "0x305c": "0xb4002060",
+    "0x30b0": "0xf94043e1",
+    "0x30b4": "0xd2800003",
+    "0x30b8": "0x52800002",
+    "0x30c0": "0x34002220",
+    "0x3118": "0xf9403be0",
+    "0x311c": "0xb4003200",
+    "0x3120": "0xf94053e0",
+    "0x3124": "0xb40030a0",
+    "0x3244": "0xf94053e3",
+    "0x3248": "0xb4001903",
+    "0x32d4": "0xf9403be1",
+    "0x32dc": "0xf94053e2",
+    "0x32e4": "0x91004280",
+    "0x32ec": "0xaa1403e0",
+    "0x32f4": "0xaa1403e0",
+    "0x3474": "0xf90043e0",
+    "0x3588": "0xf90053e1",
+    "0x3754": "0xf90053e0",
+    "0x3778": "0xf9003be0",
+    "0x5668": "0xf9000280",
+    "0x567c": "0xf9000660",
+    "0x569c": "0xf9000a61",
+    "0x56d8": "0xf9000a61"
+  },
+  "image": "/home/bticino/bin/coso",
+  "imports": [
+    {
+      "PLT": "0x2ac0",
+      "call": "0x3000",
+      "relocation": "00000000000170e8  0000002100000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_option_context_add_main_entries + 0",
+      "slot": "0x170e8"
+    },
+    {
+      "PLT": "0x2ba0",
+      "call": "0x3014",
+      "relocation": "0000000000017158  0000003100000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_option_context_parse + 0",
+      "slot": "0x17158"
+    },
+    {
+      "PLT": "0x2cc0",
+      "call": "0x30bc",
+      "relocation": "00000000000171e8  0000004300000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_key_file_load_from_file + 0",
+      "slot": "0x171e8"
+    },
+    {
+      "PLT": "0x29a0",
+      "call": "0x3750",
+      "relocation": "0000000000017058  0000000e00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_key_file_get_string + 0",
+      "slot": "0x17058"
+    },
+    {
+      "PLT": "0x29a0",
+      "call": "0x3774",
+      "relocation": "0000000000017058  0000000e00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_key_file_get_string + 0",
+      "slot": "0x17058"
+    },
+    {
+      "PLT": "0x2a20",
+      "call": "0x3470",
+      "relocation": "0000000000017098  0000001600000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_strdup + 0",
+      "slot": "0x17098"
+    },
+    {
+      "PLT": "0x2e30",
+      "call": "0x356c",
+      "relocation": "00000000000172a0  0000005a00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_file_new_for_path + 0",
+      "slot": "0x172a0"
+    },
+    {
+      "PLT": "0x2a40",
+      "call": "0x3574",
+      "relocation": "00000000000170a8  0000001800000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_file_get_parent + 0",
+      "slot": "0x170a8"
+    },
+    {
+      "PLT": "0x2d90",
+      "call": "0x357c",
+      "relocation": "0000000000017250  0000005000000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_file_get_path + 0",
+      "slot": "0x17250"
+    },
+    {
+      "PLT": "0x2a20",
+      "call": "0x5678",
+      "relocation": "0000000000017098  0000001600000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_strdup + 0",
+      "slot": "0x17098"
+    },
+    {
+      "PLT": "0x2a20",
+      "call": "0x568c",
+      "relocation": "0000000000017098  0000001600000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_strdup + 0",
+      "slot": "0x17098"
+    }
+  ],
+  "literal_joins": [
+    {
+      "ADD": "0x346c",
+      "ADRP": "0x3468",
+      "target": "0x59e8",
+      "value": "cfg/coso_cfg"
+    },
+    {
+      "ADD": "0x3748",
+      "ADRP": "0x3740",
+      "target": "0x5a88",
+      "value": "Plugins settings"
+    },
+    {
+      "ADD": "0x3744",
+      "ADRP": "0x373c",
+      "target": "0x5aa0",
+      "value": "PlugCfgDir"
+    },
+    {
+      "ADD": "0x3768",
+      "ADRP": "0x3760",
+      "target": "0x5a80",
+      "value": "LibDir"
+    },
+    {
+      "ADD": "0x56b0",
+      "ADRP": "0x56ac",
+      "target": "0x6318",
+      "value": "./"
+    }
+  ],
+  "local_calls": [
+    {
+      "call": "0x32e8",
+      "target": "0x5640"
+    },
+    {
+      "call": "0x32f0",
+      "target": "0x58a0"
+    },
+    {
+      "call": "0x32f8",
+      "target": "0x56f0"
+    }
+  ],
+  "selected_option_rows": [
+    {
+      "arg_data_store": "0x2fb4",
+      "argument_kind_word": 1,
+      "bytes_hex": "885b000000000000640000000000000001000000000000000000000000000000905b000000000000b85b000000000000",
+      "entry_VA": "0x17310",
+      "flags": 0,
+      "long_option": "dirname",
+      "name_relocation": "0000000000017310  0000000000000403 R_AARCH64_RELATIVE                        5b88",
+      "row": 0,
+      "short_option": "d",
+      "stack_destination": 112
+    },
+    {
+      "arg_data_store": "0x2fcc",
+      "argument_kind_word": 1,
+      "bytes_hex": "885c000000000000630000000000000001000000000000000000000000000000985c000000000000805c000000000000",
+      "entry_VA": "0x173d0",
+      "flags": 0,
+      "long_option": "configfile",
+      "name_relocation": "00000000000173d0  0000000000000403 R_AARCH64_RELATIVE                        5c88",
+      "row": 4,
+      "short_option": "c",
+      "stack_destination": 128
+    },
+    {
+      "arg_data_store": "0x2fe8",
+      "argument_kind_word": 1,
+      "bytes_hex": "105e000000000000700000000000000001000000000000000000000000000000285e000000000000b85b000000000000",
+      "entry_VA": "0x17520",
+      "flags": 0,
+      "long_option": "path_to_plug_cfg_dir",
+      "name_relocation": "0000000000017520  0000000000000403 R_AARCH64_RELATIVE                        5e10",
+      "row": 11,
+      "short_option": "p",
+      "stack_destination": 160
+    }
+  ],
+  "selection_contract": {
+    "configfile_slot": 128,
+    "default_relative_file": "cfg/coso_cfg",
+    "inner_copy": "P24 atM16; LibDir copiedP8; PlugCfgDir copiedP16",
+    "libdir_slot": 112,
+    "main_handoff": "init_plugin_data(&M[16],slot112,slot160); register_plugins(M)",
+    "module_and_provider_outcome": "unobserved; inherited run04 selected init_plugin request only",
+    "plugcfgdir_slot": 160,
+    "remaining_null_fallback": "GFile parent(selected configuration filename)\u2192path",
+    "successful_file_read_key": "Plugins settings/PlugCfgDir only when slot160null"
+  },
+  "sha256": "2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197",
+  "spans": [
+    {
+      "bytes_hex": "b30000b073420c9114ffff97001280d266ffff97f40300aa2cffff97e3a301918c120091ebc30191eab30191e9430291e8e30191e7030291e6c30291e5230291e4630291e2830291e1a302916b0e00f9000000f0008025916a2600f9693e00f9685600f9676e00f9668600f9749e00f96cb600f965ce00f964e600f963fe00f9621601f9612e01f96cffff97f60300aae10313aa020080d2b0feff97e00316aae3e30291e2430191e1730191e3feff9740260034",
+      "end_VA_exclusive": "0x301c",
+      "name": "manager-and-option-destinations",
+      "sha256": "9a3900b1846d9eacdfac983e72f56387edac82cbfd004cb54a662ea19bcd8dcf",
+      "start_VA": "0x2f68"
+    },
+    {
+      "bytes_hex": "e04340f9602000b4e03b40f9",
+      "end_VA_exclusive": "0x3064",
+      "name": "selected-main-config-file-gate",
+      "sha256": "5568608d779778cbaceb15ae67f996b54e204ae5850a86eb6d1924a34bf6e33c",
+      "start_VA": "0x3058"
+    },
+    {
+      "bytes_hex": "5afeff97f70300aae14340f9030080d20200805201ffff9720220034",
+      "end_VA_exclusive": "0x30c4",
+      "name": "selected-main-file-load",
+      "sha256": "0657d6589f4ab0186ff97289e10f95ac06dba5ea6804b0f3141a9ff5a5071c17",
+      "start_VA": "0x30a8"
+    },
+    {
+      "bytes_hex": "e03b40f9003200b4e05340f9a03000b4",
+      "end_VA_exclusive": "0x3128",
+      "name": "directory-presence-tests",
+      "sha256": "97d8220f5017f46d1382cb86467f3db2cee7223d9f40e6f489f4bd3a795c0183",
+      "start_VA": "0x3118"
+    },
+    {
+      "bytes_hex": "000000d000a027916cfdff97e04300f940dfffb5",
+      "end_VA_exclusive": "0x347c",
+      "name": "default-main-config-path",
+      "sha256": "ea6eacd433fa4201405d42396c5960dab7ab96ad4592da83c74933bee43e3473",
+      "start_VA": "0x3468"
+    },
+    {
+      "bytes_hex": "e00317aa020000d0010000d042802a9121202a91030080d294fcff97e05300f974feff17e00317aa020000d0010000d042002a9121202a91030080d28bfcff97e03b00f969feff17",
+      "end_VA_exclusive": "0x3780",
+      "name": "library-and-config-key-readers",
+      "sha256": "3ebebbc7f79e7a9c919c8d4cc5cd4db00575319260afc5a04f3a80a2df556675",
+      "start_VA": "0x3738"
+    },
+    {
+      "bytes_hex": "830640f9831e00f9e13b40f9832a00f9e25340f9833200f980420091d6080094e00314aa6c090094e00314aafe080094a00d0035",
+      "end_VA_exclusive": "0x3300",
+      "name": "directory-main-handoff",
+      "sha256": "bb8b1b8a820f91ff1136d7a6cca2d180b470727b3f96de169b7f010454344df1",
+      "start_VA": "0x32cc"
+    },
+    {
+      "bytes_hex": "e04340f931feff97f90300aa33fdff97f80300aa05feff97e10300aae00319aae15300f919fdff97e00318aa17fdff97e35340f92cffff17",
+      "end_VA_exclusive": "0x35a0",
+      "name": "parent-directory-fallback",
+      "sha256": "d59e6eb1234a32f884424728971432d44948d7315a434afa717d51287946e21c",
+      "start_VA": "0x3568"
+    },
+    {
+      "bytes_hex": "fd7bbda9fd030091f35301a9f40300aa000380d2f55b02a9f60301aaf50302aa10f5ff971f0000f9800200f9f30300aaf60100b4e00316aaeaf4ff97600600f9930240f9150200b4e00315aae5f4ff97e10300aa00008052f55b42a9610a00f9f35341a9fd7bc3a8c0035fd6000000b000600c91dbf4ff97600600f9930240f955feffb5000000b000600c91d5f4ff97e10300aaf55b42a9610a00f900008052f35341a9fd7bc3a8c0035fd6",
+      "end_VA_exclusive": "0x56ec",
+      "name": "plugin-data-copy-and-fallback",
+      "sha256": "6bd28f0a46aec8a583c55567fea8efc3a103db84a232352951f72fc391bbd071",
+      "start_VA": "0x5640"
+    }
+  ]
+}

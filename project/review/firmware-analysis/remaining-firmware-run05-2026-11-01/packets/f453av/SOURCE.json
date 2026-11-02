@@ -1,0 +1,163 @@
+{
+  "ELF_entry_VA": "0x8f6c",
+  "PT_LOAD": [
+    {
+      "VA": 32768,
+      "file_bytes": 34760,
+      "flags": 5,
+      "memory_bytes": 34760,
+      "offset": 0
+    },
+    {
+      "VA": 100296,
+      "file_bytes": 1868,
+      "flags": 6,
+      "memory_bytes": 1988,
+      "offset": 34760
+    }
+  ],
+  "component": "F453AV own recovery only",
+  "declared_script_interpreter": {
+    "header52_hex": "7f454c460101016100000000000000000200280001000000cca800003400000018cc03000200000034002000060028001a001900",
+    "identity": {
+      "bytes": 249896,
+      "path": "work/f453av-firmware/3.0.14/analysis/recovery/bin/ettclsh",
+      "sha256": "b99e2354a939eed2fb18a888e1b636680fe0dbbfae91497b3f95126f68bb6024"
+    },
+    "path": "/bin/ettclsh",
+    "raw_flags": "0x2",
+    "scope": "Inherited interpreter identity, not new execution/provider coverage"
+  },
+  "guards": [
+    {
+      "VA": "0x8e0c",
+      "word": "0xe59fc004"
+    },
+    {
+      "VA": "0x8e10",
+      "word": "0xe08fc00c"
+    },
+    {
+      "VA": "0x8e14",
+      "word": "0xe59cf000"
+    },
+    {
+      "VA": "0x8e18",
+      "word": "0x100a4"
+    },
+    {
+      "VA": "0x8f6c",
+      "word": "0xe3a0b000"
+    },
+    {
+      "VA": "0x8f70",
+      "word": "0xe8bd0002"
+    },
+    {
+      "VA": "0x8f74",
+      "word": "0xe1a0200d"
+    },
+    {
+      "VA": "0x8f78",
+      "word": "0xe92d0001"
+    },
+    {
+      "VA": "0x8f7c",
+      "word": "0xe59f0010"
+    },
+    {
+      "VA": "0x8f80",
+      "word": "0xe92d0001"
+    },
+    {
+      "VA": "0x8f84",
+      "word": "0xe59f000c"
+    },
+    {
+      "VA": "0x8f88",
+      "word": "0xe59f300c"
+    },
+    {
+      "VA": "0x8f8c",
+      "word": "0xebffff9e"
+    },
+    {
+      "VA": "0x8f90",
+      "word": "0xebffff6d"
+    },
+    {
+      "VA": "0x8f94",
+      "word": "0xe3c0"
+    },
+    {
+      "VA": "0x8f98",
+      "word": "0xb8c0"
+    },
+    {
+      "VA": "0x8f9c",
+      "word": "0x8b80"
+    },
+    {
+      "VA": "0xb8c0",
+      "word": "0xe92d4ff0"
+    }
+  ],
+  "header52_hex": "7f454c4601010161000000000000000002002800010000006c8f000034000000349000000200000034002000060028001a001900",
+  "import": {
+    "PLT_VA": "0x8e0c",
+    "PLT_literal_VA": "0x8e18",
+    "PLT_literal_word": "0x100a4",
+    "call_VA": "0x8f8c",
+    "computed_GOT_slot": "0x18ebc",
+    "name": "__libc_start_main",
+    "original_relocation": "00018ebc  00002916 R_ARM_JUMP_SLOT        00008e0c   __libc_start_main@GLIBC_2.0"
+  },
+  "main_candidate": {
+    "R0_word": "0xb8c0",
+    "body_scope": "One original first-word provenance only; body unexpanded",
+    "containing_executable_PT_LOAD": {
+      "VA": 32768,
+      "file_bytes": 34760,
+      "flags": 5,
+      "memory_bytes": 34760,
+      "offset": 0
+    },
+    "load_instruction": "0x8f84",
+    "pool_VA": "0x8f98"
+  },
+  "original": {
+    "bytes": 37956,
+    "path": "work/f453av-firmware/3.0.14/analysis/recovery/bin/bt_start",
+    "sha256": "f5a4f002e212e97e5f3e40fc4ed067237ad0095642bdec0b2c8792fa22a2fbd9"
+  },
+  "raw_flags": "0x2",
+  "spans": [
+    {
+      "bytes_hex": "00b0a0e30200bde80d20a0e101002de910009fe501002de90c009fe50c309fe59effffeb6dffffebc0e30000c0b80000808b0000",
+      "end_exclusive_VA": "0x8fa0",
+      "file_offset": "0xf6c",
+      "host_disassembly": "\n${WORKSPACE}/work/f453av-firmware/3.0.14/analysis/recovery/bin/bt_start:     file format elf32-littlearm\n\n\nDisassembly of section .text:\n\n00008f6c <.text>:\n    8f6c:\te3a0b000 \tmov\tfp, #0\n    8f70:\te8bd0002 \tldmfd\tsp!, {r1}\n    8f74:\te1a0200d \tmov\tr2, sp\n    8f78:\te92d0001 \tstmfd\tsp!, {r0}\n    8f7c:\te59f0010 \tldr\tr0, [pc, #16]\t@ 8f94 <_IO_stdin_used@@Base-0x5444>\n    8f80:\te92d0001 \tstmfd\tsp!, {r0}\n    8f84:\te59f000c \tldr\tr0, [pc, #12]\t@ 8f98 <_IO_stdin_used@@Base-0x5440>\n    8f88:\te59f300c \tldr\tr3, [pc, #12]\t@ 8f9c <_IO_stdin_used@@Base-0x543c>\n    8f8c:\tebffff9e \tbl\t8e0c <_IO_stdin_used@@Base-0x55cc>\n    8f90:\tebffff6d \tbl\t8d4c <_IO_stdin_used@@Base-0x568c>\n    8f94:\t0000e3c0 \tandeq\tlr, r0, r0, asr #7\n    8f98:\t0000b8c0 \tandeq\tfp, r0, r0, asr #17\n    8f9c:\t00008b80 \tandeq\tr8, r0, r0, lsl #23\n",
+      "label": "new-recovery-entry-instructions-and-pools",
+      "sha256": "b297e269d9e5803dc3e4b4f912a24303e320be82dde7500bf947d770a5fce562",
+      "start_VA": "0x8f6c"
+    },
+    {
+      "bytes_hex": "04c09fe50cc08fe000f09ce5a4000100",
+      "end_exclusive_VA": "0x8e1c",
+      "file_offset": "0xe0c",
+      "host_disassembly": "\n${WORKSPACE}/work/f453av-firmware/3.0.14/analysis/recovery/bin/bt_start:     file format elf32-littlearm\n\n\nDisassembly of section .plt:\n\n00008e0c <.plt+0x270>:\n    8e0c:\te59fc004 \tldr\tip, [pc, #4]\t@ 8e18 <_IO_stdin_used@@Base-0x55c0>\n    8e10:\te08fc00c \tadd\tip, pc, ip\n    8e14:\te59cf000 \tldr\tpc, [ip]\n    8e18:\t000100a4 \tandeq\tr0, r1, r4, lsr #1\n",
+      "label": "actual-libc-start-import-stub-and-offset",
+      "sha256": "0dca70f8e837d32a936f3bf1c0f98a515cca0b2d1a55f4a2158f09f22d302ec9",
+      "start_VA": "0x8e0c"
+    },
+    {
+      "bytes_hex": "f04f2de9",
+      "end_exclusive_VA": "0xb8c4",
+      "file_offset": "0x38c0",
+      "host_disassembly": "\n${WORKSPACE}/work/f453av-firmware/3.0.14/analysis/recovery/bin/bt_start:     file format elf32-littlearm\n\n\nDisassembly of section .text:\n\n0000b8c0 <.text+0x2954>:\n    b8c0:\te92d4ff0 \tpush\t{r4, r5, r6, r7, r8, r9, sl, fp, lr}\n",
+      "label": "candidate-main-first-word-provenance-only",
+      "sha256": "0364d1b7df2db60c4cd96870820a20bb7afe45b2c2b6e133ed65e1150b17019a",
+      "start_VA": "0xb8c0"
+    }
+  ]
+}

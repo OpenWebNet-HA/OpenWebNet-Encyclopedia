@@ -1,0 +1,37 @@
+# F460/F461 selected source-path documentary review
+
+PASS, no correction requested. I compared the current public reference, capsule, scoped coverage/synthesis/ranking and source-check record against the two authoritative reports and completed independent original-source reviews. This is documentary/product/method review, informed by my prior comparison-source audit; it is not a fresh original-byte or full semantic review of the two new code paths. No source collector, original/vendor/provider/helper code, emulator, semantic fixture or CPU replay was executed by me in this review.
+
+F460 source is correctly limited to one selected AArch64 raw serializer/same-result reparse/compiled field/callable-binding connection. Raw versus compiled layout, action table position versus public action number, exact imported const-access/asUInt identity and callable storage versus actual invocation remain separate. SLEEP and seconds are names here: the page does not infer timing units, elapsed behavior, arbitrary valid values, full factory admission or a universal JSON roundtrip. Normal provider returns, binding, configured assets and lifetime remain premises.
+
+F461 source correctly connects the actual descriptor and callback relocations to a same-pointer registration request and the packaged candidate registry consumer. Initializer slot versus translator slot, effective libcoso binding versus declared dependencies, registration versus loading, private storage versus event record, two local argument axes and record category/representation fields remain distinct. Selected pair guards and four length-two duplication requests are not promoted to valid pointer/string inputs, accepted wire frames, WHO vocabulary, delivered output or physical automation. The actual outer translator caller and criteria semantics remain open.
+
+The curated F460 resident-app versus F461 third-party-control roles remain separate. Shared filenames, prior MyHOMEServer1 offsets, catalogue Object labels or source methods do not transfer product capabilities or hardware. All new original/native/model/fixture/runtime/network/bus/physical execution is zero. Earlier MHS eight-entry/340-code-hook-visit corpus and F454/MH202 ledgers/history limits remain separate and unchanged. Wider Device/source gates are still pending. Closed receiving/transport/MQTT/libjel/authentication/session/framing scopes were not expanded.
+
+## Exact copies, history and pending gates
+
+Verified all11 frozen current pins and candidate copies, all40 SOURCE_EXPORTS source/export pairs, and five source/reviewer snapshot sets containing34 members. The new public page equals both REFERENCE_DRAFT and its preserved first copy; the current capsule README equals its first copy. The predecessor comparison/Device pages are not edited by this packet. F461 exact v1 source/report and disclosed pre-output workspace-parent failure remain retained alongside v2; parent first-observed copies are not misrepresented as earlier than their actual capture. The F460 out-of-text probe produced no retained code proof and is not a canonical generation failure. Neither history is converted into original execution or silently overwritten output.
+
+Checked17 local Markdown link occurrences in their actual public/capsule/source-review context;15 existing targets resolve, with no fragments. Only the intended later capsule integration-review.txt and validation.json remain pending actual assembly. Final identity/protection, strict ESG/ECV/diff, actual branch status and index-last checkpoint checks remain subsequent parent-owned gates. No future bytes, placeholder or missing-link exemption is certified.
+
+One inline review helper initially assumed the export index used an exports key; it stopped before review writes. Inspection showed the actual files/export schema, and the corrected read-only audit passed. This was reviewer bookkeeping, not a source/author failure or unavailable historical-file claim. No author/repository/prior evidence file was edited.
+
+## Exact current pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-selected-source-paths.md` | `96732373ac912f84b9f539c77924247ad21ee1364d151d8b27a9dacc1709af1a` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-depth-2026-11-01/README.md` | `5590248e16fad34abd1eace6f2e7c2fe662819c1dbade84989de87a824536b19` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-depth-2026-11-01/SOURCE_EXPORTS.json` | `ce365252a905d65e5262205bbf83c4f7fb7dabdd6f00e8fe98a8ad0369438aaf` |
+| `work/f460-f461-comparison/2026-11-01-depth/REFERENCE_DRAFT.md` | `96732373ac912f84b9f539c77924247ad21ee1364d151d8b27a9dacc1709af1a` |
+| `work/f460-f461-comparison/2026-11-01-depth/CAPSULE_README.first.md` | `5590248e16fad34abd1eace6f2e7c2fe662819c1dbade84989de87a824536b19` |
+| `work/f460-f461-comparison/2026-11-01-depth/COVERAGE.md` | `1d3ed7d5713fd0319bdece0443e69eec90d10aee641f9539157e3aabea28f2ab` |
+| `work/f460-f461-comparison/2026-11-01-depth/SYNTHESIS.md` | `85c9757169a12d56080d4b0f1ca9a7d888d8cb3462d5871531f637a900638156` |
+| `work/f460-f461-comparison/2026-11-01-depth/RANKED_REMAINING_QUESTIONS.md` | `96422fd0900360dfa3075890b799756795187f944446d7ae6fa3358901ba0d0a` |
+| `work/f460-f461-comparison/2026-11-01-depth/SOURCE_CHECKS.json` | `538c9dfa92170301aa214bb4b9942cb966f6741ffa36f293518ef740779a2274` |
+| `work/f460-f461-comparison/2026-11-01-depth/reviews/f460-source-review.md` | `99245aee7920799ad5c5aac57df6bfc7c4ffb7ce4b7049fbe1e59ae50f93223c` |
+| `work/f460-f461-comparison/2026-11-01-depth/reviews/f461-source-review.md` | `68e7e4fecd83b2e1b0e1d8aab86f46bad43d1bf01dd7e7abec1809de1c501b84` |
+| `review-candidate/INDEX.json` | `338a268797d2d8cada6278f8b6b0329c8a94b04e1c89ef15151774f86b35f11c` |
+| `REVIEW_CONTRACT.json` | `406b725f36de331bfdbb922bd846530aea25d278a8fe61f67e83a216e64adbe8` |
+| `PLAN.json` | `1a3fb237d01b7edf1ffe2eda1278fcb9748d72c84991a30a66bd97193aa006e2` |
+| `PRIOR_PROTECTION.json` | `8086e39b340ff1614f445c227be70a41d90637cf709c81cd0726a4ea69f3bba1` |

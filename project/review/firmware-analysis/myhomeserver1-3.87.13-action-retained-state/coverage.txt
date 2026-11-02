@@ -1,0 +1,9 @@
+# Final selected state coverage and continuation limits
+
+| Area | Reviewed source reach | Remaining evidence |
+| --- | --- | --- |
+|Localretainedproducer|Duration/non-null guards, queryrecord string/wordcopies and threeconverging originalPICs toG167808|Concretequeryrecordtype/ID/freshness, normalproviders, actual invocation and globalmutation|
+|Selectedsecondconsumer|Exactlength2/on→statusmarker/code→actualparamspaircopy→originaltable/on/statusassignment|Otherstrings/propertymatrix, naturalcorrelation/order, locking/lifetime and actualJSON/send/physicaleffect|
+|Resumedactionchain|Capture/handoff and descriptorconstants/selectedID-speed results remain separate priorreviewedpackets|Fullpayload/configuredassets/binding, sharedreset/naturalownership, errors/unwind/concurrency/physical|
+
+Current source21outputs/17spans/47guards/18localtargets/3globalPICs/one table row/two relocations/five import proofs/eightpins/23exactfirstcopies. Finalreport is synthesis of reviewed evidence, not new source coverage. Navigation/hashcounts are integrity, not exhaustivecoverage or fullDevice/sourceapproval. No new originalexecution/models/fixtures/replays; cumulativeMHS ONEcorpus/eightentries/340codehookvisits/0C/12redirect/eightEXIT/0stops/360hooks+4setup staysunchanged. F454/MH202 records separate; prior unavailableMH20218/21history remainsunverified.

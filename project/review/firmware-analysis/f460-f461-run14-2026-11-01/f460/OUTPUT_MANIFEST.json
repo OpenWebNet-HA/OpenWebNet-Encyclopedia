@@ -1,0 +1,63 @@
+{
+  "collector_sha256": "00a0f3456765e89eb97390a55784a20b4ff2c65eef89227895075cc47c78f463",
+  "counts": {
+    "classes": 3,
+    "guards": 45,
+    "imports": 4,
+    "inputs": 5,
+    "local_calls": 6,
+    "original_execution": 0,
+    "spans": 10
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 971,
+      "sha256": "b3d11486067aff5d7a873c5907472fcbab219a42d3f0b72c73def06737dc3047"
+    },
+    "SOURCE.json": {
+      "bytes": 12052,
+      "sha256": "123fd06f46b65a6faddd3fd3cdae3beb6b6d152b862832f9ff86269ecf248aad"
+    },
+    "spans/compiled-field-copy-primary.txt": {
+      "bytes": 826,
+      "sha256": "c9fe836cc8d1a058ab83dbe2925adb42f8f75e7d2fc7d20fe63370e2205cb873"
+    },
+    "spans/numeric-equal-and-less-threshold.txt": {
+      "bytes": 567,
+      "sha256": "b7622d94c47091ff58db521cbc231bb891d7201f2a27b7251d1dc20c35efbdb6"
+    },
+    "spans/own-raw-factory-jump.txt": {
+      "bytes": 533,
+      "sha256": "f9804499ef7eda24e8fbcfd8d4b4e8f86bf0f491e38cdae15a6d8272c20fcdae"
+    },
+    "spans/own-raw-name-match-and-row-index.txt": {
+      "bytes": 1510,
+      "sha256": "eb586fe96b910880725b69d42dd620c443e96926324e94aededcf9f952312109"
+    },
+    "spans/predicate-entry-return-query.txt": {
+      "bytes": 2345,
+      "sha256": "74f1e72c714d7ec5fcd3a9765fdcd98bb5f8405413c687b06741e997aefe4ded"
+    },
+    "spans/raw-level-asint-no-status.txt": {
+      "bytes": 875,
+      "sha256": "1bf536433cdcba666f59c33eb11076ea4a21ed2e1ba81368cfa67784b3be4415"
+    },
+    "spans/raw-status-default-and-presence.txt": {
+      "bytes": 857,
+      "sha256": "c1ab84b984573eb0d66f12a89b353ac80e68095fa6799f098aa30a49be358434"
+    },
+    "spans/same-json-reparse-compiled-construction.txt": {
+      "bytes": 1325,
+      "sha256": "cc0a8904e3c97132add4c65b36bf72d6f4b0bd1dad141ffbea3b60836430eb20"
+    },
+    "spans/selected-on-string-and-numeric-operators.txt": {
+      "bytes": 1521,
+      "sha256": "af15f5e0a213ccce02ae669883cad2d3ce9ddb87d85b4755b952f160099166fc"
+    },
+    "spans/selected-raw-factory-allocation.txt": {
+      "bytes": 1110,
+      "sha256": "5ae8706e051c6c03585df6eb22fd552bfcfb8a50a0dfa0bfaace32a717d2cdce"
+    }
+  },
+  "report_sha256": "72c63ccc002bc723808670dc7835b7732b3362e1277a7cb2004a531031fab59f"
+}

@@ -1,0 +1,42 @@
+# MH202 WHO29 owner run27 independent static source review
+
+PASS. No correction requested. This is independent original-source, saved-evidence, finite-host-ledger and first-candidate review, including static collector reproduction. Original/native replay, target process/syscall, getter/constructor execution and physical observations are all0 in this review. Author files, originals and prior artifacts stayed read-only; this review is a new file.
+
+## Exact final identities
+
+| Artifact relative to research 2026-10-30 | SHA256 |
+| --- | --- |
+| routing/run27/REPORT.md | b28b2d23d05d5edb25ba0fa70886c98b50fbcdcf9b370d3dcdfe268dd34e9712 |
+| routing/run27/collect_owner_v1.py | 354bcb9a88b2ac7846986dcc3f62c12186073b01182c235931bdb824ac53a088 |
+| routing/run27/output-manifest.json | 7607a886a724574b42363d25f0c94894e8ad8d7265155b3f260b22146f967896 |
+| routing/run27/initial-generated-v1/SNAPSHOT_INDEX.json | 0c401509e614fb4744701b211596a9e211971b43911332fe4faaccffd59bcedc |
+
+Original image-relative /home/bticino/libcoso/libplug_debug.so matches11052bytes/SHA25665abf41c70e2eee02c08392d34e9d387fcb450b1bd282f0324a2919a35a03a4f. Original coso/libcoso/liblog, two whitelisted configuration inputs and shared accessor identities match the reviewed seven-input file. These paths are image-relative, not private host paths.
+
+## Reproduction, bytes and preservation
+
+`python3 -B work/mh202-firmware/research/2026-10-30/routing/run27/collect_owner_v1.py --check` passes22 outputs including manifest,12 spans,30 critical words, seven inputs, three safe literal pools and three finite host ledgers; original execution/hooks0. I independently reread original bytes through ImageVFS, mapped ELF32 PT_LOAD ranges, and compared every raw-span hash and critical word. All seven input hashes/lengths,21 evidence hashes and report/collector pins match. All24 indexed actual first-candidate copies match recorded hashes and current bytes; no reconstructed earlier draft is involved.
+
+I separately resolved all three query literals via original PIC arithmetic, checked the selected configuration lines against their original line numbers, and independently resolved the loader's four safe selector strings: .so,lib,stop_plugin,init_plugin. This supports the described name filter and required-symbol requests without inspecting unrelated command contents. Finite registry29/29 and29/28 comparisons and the supplied getter0/raw constructor vector agree with the host ledgers. These are static/host checks only.
+
+## Positive ownership and route boundaries
+
+The packaged stack_open.xml coso declaration includes29, and the selected coso_cfg entries identify the library/configuration directories. The report correctly treats these as packaged declarations. Original register_plugins0xc9a0..0xcb6c checks module support, enumerates the configured directory, filters prefixlib/suffix.so, opens qualifying paths and requests both init_plugin/stop_plugin before requesting the initializer. Directory order, successful loading, current configuration and actual activation remain unobserved.
+
+Original debug init_plugin0x144c..0x1508 has a first-initialization guard. It appends29 separately to logging descriptor+16 and STM descriptor+52; the logging list is not substituted for registration. Descriptor debug_sm0xa578 has exact relocations to no-op initializer0x1508, no-op field0x1510 and application0x1518. Both tiny complete no-op bodies return0, without inferred private state or field output. The registration call and exact application WHO test establish a concrete available packaged owner, not an exclusive owner or filename-based guess.
+
+Core register_state_machine and outer appl_receive source provide a conditional candidate caller: supplied descriptor goes into manager+24, descriptor60 gets the manager, and matching envelope48/descriptor52 criteria select application+44 with the same envelope and separate local output-list slots. Active installed manager/registry, provider binding, ordinary container behavior and noninterference remain premises. Positive source ownership is not a demonstrated runtime callback.
+
+## Narrow selected getter/query proof
+
+The application requires representation3 or follows its separate unexecuted representation2 parser/free/install path. The selected coherent direct pointer must pass exact WHO bytes2,9,NUL at0x1568..0x158c, independently from outer routing criterion29. The WHERE conversion4 branch0x15a8 ->0x16a4 supplies the selected local category/selector values and bypasses the separate selector20 requirement. This is decimal conversion of a supplied string, not a complete public WHERE grammar.
+
+Parsed kind3 selects0x177c; DIM is converted and exact selected numeric2 leads to0x17e8 get_log_type. Fresh liblog getter0x1074..0x1094 loads a GOT-referenced pointer, reads its word and returns. It has no store in this complete getter body. The review/collector never execute that getter or read its underlying logger-state contents. Return0 is an explicit supplied finite fixture; no default/current log type or destination is inferred.
+
+The selected0 branch formats value1 with original%d and formats WHERE4. Literal pools resolve to%d,2,29. Original0x1808..0x1840 requests new_openmsg_dim with raw ABI vector r0=3,r1=4,r2=literal29,r3=formattedWHERE4,stack0=literal2,stack4=address of one formatted-value pointer,stack8=1,stack12/16=NULL. STM parsed kind3, constructor arguments3/4, routing29 and logging type fixture0 remain distinct namespaces. The report deliberately assigns no constructor enum meanings, produced object metadata/kind or final wire text.
+
+After that unexecuted constructor request, the original source appends its returned pointer to application argument3's list, frees the two temporary strings, then requests local ACK and returns0. Normal constructor copying, successful return/list/helper completion, owner lifetime and eventual publication are explicit boundaries. A helper name or local return cannot prove an externally delivered response. This selected path is scalar read/response construction source, not execution of debug commands, access policy, logger mutation, files, processes or secret-bearing delegates.
+
+## Scope conclusion
+
+The positive WHO29 owner/registration/callback check and selected noncredential getter/constructor boundary are supported by fresh original source. The three host ledgers add no target execution, natural sequence or current logger value. Provider/activation/outer eligibility, full raw grammar, complete constructor/object lifetime and physical semantics remain open. Only the whitelisted safe source/configuration/literal material was used; no other debug command implementation, session/authentication/framing or source-effect investigation was added in review. No author correction is required.

@@ -1,0 +1,62 @@
+# MyHOMEServer1 3.87.13: compiled-condition pointer teardown
+
+The original SceneRunner cleanup contains a positive teardown consumer for the same scene's compiled-condition vector at +116: it walks four-byte raw pointees, skips null pointees and requests each nonnull object's primary vtable slot+4. For the previously constructed BNCUSCENE condition, that slot is its deleting destructor at instruction `0xc864c`. After selected member cleanup and a condition-variable destructor request, this method requests sized deletion of the 192-byte condition object. After normally returning element callbacks, SceneRunner separately requests deletion of the condition vector storage.
+
+These are original static requests under valid scene/vector/object/current-vptr/provider and normal-return premises. They do not establish actual removal, destruction, reference uniqueness, worker completion, lifetime/concurrency safety, a leak/UAF, cancellation behavior or any physical outcome. Original/native/vendor/provider/target execution and host semantic fixtures are zero. Host analysis reads, hashes and disassembles files only.
+
+## Identity and inherited scope
+
+Original image `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Fresh ELF PT_LOAD records map each retained original code/data VA to file bytes; code spans, literal pools, primary vtable words and import PLT bytes are recorded separately. Stripped nearby-symbol names do not identify these methods.
+
+Read-only `2026-11-01-removal-context/scene-condition/REPORT.md` established BNCUSCENE's 192-byte compiled allocation, its four-byte publication into scene+116 and actual predicate primary slot+8. Read-only `2026-10-31-lifetime/worker-ownership/REPORT.v2.md` established selected SceneRunner cleanup entry `0xa5a3c`, holder handling and separate action/control release source. Those completed construction, predicate, action-holder/action-vector and thread paths are inherited rather than rerun as new coverage. Curated OWN-DEV-0199 supplies product/scenario context only, without attributing a public or physical meaning to this private condition type.
+
+The new edge is the actual scene+116 teardown walker to the selected condition's deleting-destructor interface and its ordered object/storage deletion requests.
+
+## Same scene range, four-byte entries
+
+At cleanup entry `0xa5a3c`, `0xa5a40` preserves incoming scene receiver in r5. The selected normal continuation reaches `0xa5b46`, loading condition begin/end from that unchanged receiver's +116/+120. Equal begin/end skips element callbacks. Otherwise `0xa5b4e` loads one condition pointer into r0 while advancing the cursor by four bytes.
+
+For a nonnull pointee, `0xa5b58` loads its own primary vptr, `0xa5b5a` loads slot+4, and `0xa5b5c` invokes that method with the unchanged primary pointee still in r0. On normal return, `0xa5b5e..0xa5b60` compares the advanced cursor with the saved end and either repeats or reloads begin at `0xa5b62`.
+
+The null branch is explicit: `0xa5b54` reaches `0xa5cf6`, which compares the already advanced cursor and loops at `0xa5b4e` when more entries remain. At its final null entry it reloads scene+116 at `0xa5cfc` and rejoins `0xa5b64`. Null entries therefore do not request virtual destruction on this selected source leg. This is not an assertion about arbitrary malformed ranges or concurrent vector mutation.
+
+The current construction link is independently rechecked narrowly: initializer `0xa7a02` computes the same scene's +116 destination, `0xa7a14` constructs the selected compiled object, `0xa7a1e` retains its primary pointer and `0xa7a20` requests append through `0xa7264`. The capacity-available append stores the unchanged single four-byte pointee, zeros its source temporary and advances end by four. The full-capacity path and all construction/allocation outcomes remain inherited delegates/premises. No eight-byte shared-owner entry or control-count release is substituted for this condition vector.
+
+## The selected deleting slot is distinct from the predicate
+
+The compiled constructor installs header `0x161fb0`, address point `0x161fb8`; original RTTI is exactly `24BncuSceneConditionRunner`. The three primary slots are Thumb pointers:
+
+| Primary offset | Original pointer | Retained role |
+| --- | --- | --- |
+| +0 | `0xc86f1` | Nondeleting cleanup body, inherited identity |
+| +4 | `0xc864d` | Selected deleting destructor, instruction `0xc864c` |
+| +8 | `0xc83d9` | Earlier three-instruction XOR predicate |
+
+Original relative relocations cover these table words. The deleting body itself resets its primary vptr using its own PIC pool `0xc86dc` plus PC `0xc8656` to that same header, giving independent class/address-point corroboration. The current join requires an actual valid BNCUSCENE pointee retaining this interface; it does not assume every condition has this implementation or infer a destructor from the predicate's result.
+
+## Ordered member, object and vector-storage requests
+
+Deleting body `0xc864c..0xc86dc` saves the primary object pointer in r4 and follows this selected normal sequence:
+
+1. It considers the derived name string at object+168; when its pointer differs from its inline buffer object+176, it requests sized deletion using stored capacity+1.
+2. It similarly considers the derived ID string at +144 versus inline buffer +152.
+3. It considers the base ID string at +108 versus inline buffer +116.
+4. It considers the base string at +80 versus inline buffer +88.
+5. `0xc86c8` supplies object+8; `0xc86cc` requests imported `std::condition_variable::~condition_variable`.
+6. After a normal return, `0xc86d0..0xc86d4` supplies the original primary object pointer with size192 to imported sized delete.
+
+The four string requests are conditional pointer-versus-inline-buffer branches, not unconditional deallocations or executed string-provider behavior. This report does not establish allocation validity, successful condition-variable destruction, stopping/waking of threads or all unwind effects. The destructor's own object+116 is a string's inline buffer: it is not the scene receiver's +116 condition vector despite the equal numeric offset.
+
+Separately, SceneRunner's walker reaches `0xa5b64` after empty range or normally completed/null-skipped entries. Null begin skips vector deallocation. For nonnull begin, `0xa5b66..0xa5b6c` supplies r0=begin and r1=scene capacity pointer+124 minus begin to sized delete. Thus selected object requests precede vector-storage deletion on this normal source composition. No claim is made that the walker zeros each stored pointer or that its request always destroys every original object in the presence of exceptions or invalid/concurrently changed state.
+
+The selected cleanup ordering places inherited compiled-action+128 cleanup before this condition+116 loop, followed by the later trigger+104 storage cleanup. Earlier trigger reference handling and the scene-holder paths are inherited source, not a new universal ordering of all cleanup effects. In particular this is no new proof that a join or worker completion actually happened before condition destruction.
+
+## Imports, reproduction and open limits
+
+Fresh ARM PLT immediate decoding resolves the sized-delete entrance `0x10eb0` to jump slot `0x165b20`, relocation `_ZdlPvj@CXXABI_1.3.9`; condition-variable destructor entrance `0x11738` resolves to `0x165df0`, relocation `_ZNSt18condition_variableD1Ev@GLIBCXX_3.4.11`. The collector verifies the original BL/BLX call targets as well as the slots. Import requests and relocation identities are not observed live binding or provider execution.
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/collect_teardown_v1.py --check`
+
+The exclusive collector records eight code spans, three separate data spans,32 byte guards, nine decoded direct requests, six relative/import relocations, two original PLT proofs and five input pins. Generated outputs, report and collector are immediately copied; index bytes are computed before opening the index. First generation refuses existing outputs/snapshot; check compares exact bytes without mutations.
+
+High confidence covers the four-byte walker/null leg, unchanged primary-pointer invocation, correct deleting slot, ordered selected member/CV/self deletion requests and separate vector-storage deletion. Remaining questions include natural SceneRunner teardown activation, current object/ABI/allocator invariants, other aliases/owners, successful provider effects, all exceptions and concurrent execution, polling/removal timing and complete lifetime. No transport, receiving, session, authentication, framing, MQTT/libjel body or physical behavior is inspected or executed.

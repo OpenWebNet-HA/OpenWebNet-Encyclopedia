@@ -1,0 +1,20 @@
+{
+  "reason": "Independent final synthesis reviewer requested literal request-ID wording to avoid implying established operational response correlation; applied same precision to current handoff addition",
+  "original_final_report_sha256": "8d2a042ce795b6dc29377971832fffdc3bbe5e17c0f531f7736af307743eb17f",
+  "new_final_report": "FINAL_REPORT.v2.md",
+  "new_final_report_sha256": "17c64aef52f06905aac93105413ce5d792dfd7d46f74a2ac9ddde199f8d713ce",
+  "report_substitution": {
+    "before": "outer correlation ID from target ID",
+    "after": "outer UUID-derived request ID from captured params.id"
+  },
+  "handoff_before_sha256": "054da9ea45714877acbeb3163f81860ba64c6b6deb1e3c3d88cf08695ad7d7e5",
+  "handoff_after_sha256": "6a3e6bc1e82379e0b403fbaa93d18886213a0687606ef418abf208edcdc29008",
+  "handoff_substitution": {
+    "before": "outer UUID-derived correlation ID",
+    "after": "outer UUID-derived request ID"
+  },
+  "old_patch_preserved": "integration/HANDOFF_PATCH.json",
+  "authoritative_patch": "integration/HANDOFF_PATCH.v2.json",
+  "source_outputs_counts_or_firmware_semantics_changed": false,
+  "history": "Exact root pre-refinement report/handoff/patch saved before correction; original candidates/first copies unchanged; report v2 separate"
+}

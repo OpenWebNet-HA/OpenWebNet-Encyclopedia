@@ -1,0 +1,74 @@
+# MH202 run26 — WHO14 selected translator and own8-byte STM
+
+## Result and limits
+
+The original special-command translator and state machine have concrete **WHO14 criterion registration**, selected WHAT0/1 conversion and an independent pending-ID/receipt path. Under supplied ordinary address-converter output `[0x11,0]` and matching selector/config pair3/0, the translator's kind1 WHAT0/1 branches request brief ASCII candidates **11001100 /11001000**. A separately supplied reverse body **B1111100**, with a normal address helper yielding WHERE11, requests text **`*14*0*11##`**. The reverse body is not the forward output or an observed counterpart.
+
+The STM allocates **its own8-byte context**, containing pending flag0 and saved envelope ID4. A selected kind1 converted WHAT<=1 appends the same Q to its field-output argument, then sets pending1/copies Q.ID60. A matching pending ID/status1 or2 requests local ACK/NACK, clears pending/ID, and then independently applies the ordinary field WHAT-forwarding guard. Mismatching fields can be forwarded while the pending ID remains. These source branches are not a captured causal exchange, physical receipt, accepted raw grammar or full public WHO14 support table.
+
+Original ARM/vendor/parser/native code, primitive callbacks, hooks, target processes/syscalls/network/device operations and physical observations executed here are all **0**. This is fresh ImageVFS/binutils source inspection and six finite host source-effect ledgers. No timer/receipt assumptions, private layouts or physical meanings are imported from WHO25, lighting, automation, thermo, multimedia or public labels. Transport/connection/session/authentication/framing internals, oracle/spec/hardware tests and repository edits remain outside this batch.
+
+## Reproduction and exact sources
+
+`python3 -B work/mh202-firmware/research/2026-10-30/who14/run26/collect_who14_v1.py --check` compares all generated evidence bytes without writes. Original PT_LOAD mapping, raw span hashes, exact words, selected relocations/provider metadata and only whitelisted format literals are preserved. The first generation refuses existing outputs, uses exclusive file creation and immediately snapshots report, collector and generated outputs/manifest into **initial-generated-v1/** with an exact hash index. Parent preservation/new version is required for any later correction; no old file is changed.
+
+| Original normal-image input | SHA256 |
+|---|---|
+| `/home/bticino/libcoso/libplug_special_cmd_tr.so` (9536bytes) | `c5638e801335d8710e2320c8636341c323f6b4f9b6e1f78cbf6c744ac56ebeec` |
+| `/home/bticino/libcoso/libplug_special_cmd_stm.so` (8540bytes) | `58e0db730d3e8afbdd30ae255b989365ff34872ace0e802b3224a86dbf457c3b` |
+
+`input-hashes.json` also pins same-build libcoso/liblights/libutils and the accessor. Their exports/imports/direct dependencies are candidate provider evidence, not an effective runtime loader closure or interposition proof. No actual liblights address helper, numeric/ASCII converter, parser, allocation or list helper executes in this pass.
+
+## 1. Registration and separate pointer roles
+
+Translator descriptor **0x9f88/68bytes** has actual initializer+36→0x1894 through relocation0x9fac, translator+40→0x1504 through0x9fb0. Its original registration **0x1428..0x1484** appends **1 to criterion list+52** and **14 to list+56**, then requests register_translation. Callback pair(1,2) takes reverse; pair(2,1) forward. These direction numbers, routing criteria, parsed kind44, body/type40 and representation56 are distinct. Reverse-input criterion1/forward-output criterion1 does not by itself make this an OPEN WHO1 operation.
+
+Initializer **0x1894..0x18bc** calls lighting_read_cfg only when descriptor+60 isNULL, then stores that returned pointer at+60. The selected forward callback reads config+8/+12. Actual config content and lifecycle/provider remain premises; no packaged credential/config content is dumped and no default installed configuration is assumed.
+
+STM descriptor **0x9ba8/64bytes** separately has relocations0x9bcc/+36→initializer0x1510,0x9bd0/+40→field0x136c and0x9bd4/+44→application0x1490. Its **0x12ac..0x12ec** appends criterion14 to descriptor+52 and requests register_state_machine. Registration success/active list, outer descriptor selection, natural parsed WHO14 admission and helper-provider binding are not executed. The criteria establish concrete candidate ownership, not complete registry order or physical support.
+
+## 2. Selected forward translator body
+
+Translator **0x1504..0x15a0** chooses its forward direction and requests an unzeroed64-byte output record. Representation56=3 supplies an existing parsed pointer; representation2 has a separate imported parse/free/install route, not used/executed by the finite cases. Parsed kind44 must be1 in the displayed selected forward path.
+
+At **0x16b0..0x16ec**, decimal WHAT conversion chooses exactly0 or1: WHAT0 stores operation bytes **0x11,0** at the last two positions of a four-byte stack buffer, WHAT1 stores **0x10,0**. Another converted value takes the displayed no-selected-output return1 route; this is not a global supported-WHAT conclusion.
+
+The source separately decimal-converts selectors+24/+20, supplying defaults **0/3** whenNULL. It requests `lighting_address_open2scs(parsedWHERE, buffer)` at0x1744, with the address-converter result remaining a declared delegate premise here. It compares selector20 with config+8 and selector24 with config+12. Equality branches to **0x1848..0x187c**, requesting ASCII conversion with length4, then **prepare_briefscs_frames(&new_record,input,outlist,1)** and local return0. Inequality enters a distinct extended-body path outside the selected examples; no extended support matrix is inferred.
+
+For the two finite cases, coherent WHAT0/1 and WHERE text11 are supplied, address helper writes the first two bytes `[0x11,0]`, NULL selectors yield3/0, and the supplied config values at8/12 match3/0. The requested four-byte arrays are therefore `[0x11,0,0x11,0]` and `[0x11,0,0x10,0]`; host uppercase hex renders **11001100 /11001000**. **The mapping of WHERE11 to those supplied address bytes is not independently executed/proved in this pass.** No physical address/range/command semantics follows from the host example.
+
+Fresh core **prepare_briefscs_frames0x2a04..0x2a44** sets body/type40=3, representation56=1 and routing48=1, requests the metadata-copy helper, then appends the new pointer. **prepare_scs_from_open0x2230..0x2294** copies source4/8/12/16/24/28/32/36/44/**60**; there is no fresh ID request in that selected helper. Unwritten fields are not zeroed by implication. This is an internal construction/list boundary, not physical four-byte serial transmission or actual output draining.
+
+## 3. Independent reverse brief branch
+
+The reverse type guard admits body/type3 or9, with a separate type11 branch not modeled. For the selected independent eight-character ASCII **B1111100**, the source requests eight-character hex decoding into four bytes at **0x1600..0x1610**. The high nibble of byte0 must be<=0xb. Opcode byte2=0x11 with byte3=0 gives numeric WHAT0 at **0x1638..0x164c**; the adjacent0x10/zero path selects1, without assigning physical meaning to either.
+
+At0x1650..0x1660, the caller requests `lighting_address_scs2open(bytes,destination,&flag)`. Its actual address conversion/flag behavior is a delegate; the selected finite case supplies normal WHERE string11. The brief suffix is the original empty string resolved from pool0x1880. Exact format pool0x188c resolves to **`*14*%d*%s%s##`**, so WHAT0/WHERE11/empty suffix request **`*14*0*11##`**. Original0x1684..0x1690 passes that text, supplied output-list slot/source record and criterion14 to scsmsg_to_openlist.
+
+Fresh core **0x26d8..0x2764** duplicates text into a separately requested unzeroed64-byte record, sets metadata4=2/8=0, body/type40=2, routing48=14 and representation56=2, and copies source12/16/24/28/**52/60**. The source status/ID are inputs, not success/zero defaults. That new plaintext object is not yet an accepted parsed object; feeding it to an STM parser would add an explicit unexecuted boundary. The reverse example is independent from both forward bodies and makes no inverse/roundtrip/correlation claim.
+
+## 4. Own STM8-byte layout and application behavior
+
+Initializer **0x1510..0x153c** requests `g_malloc0(8)`, stores its pointer at descriptor+56, writes **pending[0]=0** and **savedID[4]=0xffffffff**, then returns0. It stores neither a record pointer nor a timer/context/publication callback in those eight bytes. Allocation/owner/registration/lifetime success remain premises; other modules' field offsets do not apply.
+
+Application **0x1490..0x1510** directly borrows the parsed pointer from Q+0; this body has no parser/representation guard, so coherent parsed storage is supplied. It sets Q metadata+8/+4=1 before the kind decision. For parsed kind1, it converts WHAT and requires an **unsigned** comparison<=1. Success requests appending **the same Q** to argument2's field list, then writes pending1 and copies Q.ID60 into private4, returning0.
+
+The displayed **non-kind1** branch also writes pending1/ID, returning0, **without this Q append**. This does not prove a valid public query or any complete behavior for arbitrary kinds. A rejected kind1 conversion>1 requests NACK on argument3 and returns parsed kind1/local1; the displayed path does not clear an existing pending pair. Natural outer eligibility, invalid-input behavior and repeated/interfering call policy remain unproved.
+
+The finite application case supplies coherent kind1/WHAT0, initial pending0/ID−1 and Q.ID60=41. The requested result is same-Q append plus pending1/ID41. No timer is requested in the complete own initializer/application/field bodies, and this local8-byte layout contains no timer handle. That bounded observation is **not proof that the whole framework/device never applies timeouts**.
+
+## 5. Field ID/status handling and separate forwarding
+
+Field **0x136c..0x1490** accepts representation3 directly. Its representation2 path requests parsing, frees prior text and installs parsed storage/representation3 without using the parser return as an admission proof. Only supplied coherent direct representation3 is used in host cases.
+
+If pending0 is nonzero, **0x140c..0x143c** compares savedID4 with F.ID60. A mismatch jumps directly to the normal field-kind/WHAT decision without a receipt or pending clear. For a matching ID, source status52=1 requests queue_ack_to_open(argument3); status2 requests queue_nack_to_open(argument3); other displayed status values request neither. **After the selected receipt helper returns**, the original clears pending0 and setsID4=0xffffffff, then also applies the ordinary field decision.
+
+That independent decision **0x13e0..0x1474** requires parsed kind44=1 and converted WHAT unsigned<=1. If so it sets **F metadata+8=3** and appends **the same F** to argument3's OPEN list, returning0. Other displayed parsed kinds/WHATs do not take this selected append. Thus a matching status can request a local receipt **and** forward a same-F ordinary record, while an ID mismatch can forward without clearing a pending request. Status52, parsed WHAT and pending/id fields remain separate; no physical ACK/causal signal or defect meaning is assigned.
+
+Two independent field ledgers start with pending1/ID41 and supplied parsed kind1/WHAT0. F.ID41/status1 requests ACK, clears the pair and appends F; F.ID40/status2 requests no receipt, retains pending1/ID41 and still appends F. They are independent source-effect cases, not consecutive bus events or source records naturally returned by the translator.
+
+## Confidence and next boundary
+
+**Confirmed static:** actual two descriptors/criteria/callbacks, selected translator pair/kind/WHAT/selector branches and brief/helper requests, exact independent reverse literal/WHAT choice, candidate core metadata copies, own8-byte STM, application pending/ID stores and field receipt-clear-forward order. **Host-only:** two supplied-address forward candidates, one separately supplied-address reverse candidate, one application and two independent field cases. **Conditional:** coherent parsed/decoded inputs, address/config/ASCII/numeric helper results, active registry/provider/owner, ordinary allocation/list/ABI/return and actual invocation. **Unknown:** raw grammar/admission, actual installed config/address mapping in these cases, full lifetime/publication, natural correlation, whole-framework timeout policy, oracle/spec/hardware verification and physical meanings.
+
+The next useful join would justify a real non-transport parsed-record/translation/STM caller and source status/ID correspondence before promoting this local pending-ID behavior to an observed transaction. No public WHO14 meaning or complete support table should be inferred from function names or the two numeric command branches alone.

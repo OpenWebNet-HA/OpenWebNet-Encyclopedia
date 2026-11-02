@@ -1,0 +1,26 @@
+{
+  "base": {
+    "delay": 32,
+    "duration": 36,
+    "type": 28
+  },
+  "compiled_move": "b444c copies operational8/12 together and transfers callable storage; selected initializer reinstalls derived vtables and appends handle to scene128 range.",
+  "compiled_size": 116,
+  "duration_join": "Raw36\u2192compiledmetadata88\u2192operational12, preserved by common move; first/second callable effects remain opaque.",
+  "initial_optional_words": "all six =0xffffffff",
+  "numeric_override": "Each present brightness/saturation/hue/temperature asInt writes its field; signed result>0 then writes status40=0. Zero/negative does not take that particular override. speed does not use this override path. No whole grammar/range/API acceptance proof.",
+  "raw_optional_signed_fields": {
+    "brightness": 44,
+    "hue": 52,
+    "saturation": 48,
+    "speed": 60,
+    "status": 40,
+    "temperature": 56
+  },
+  "raw_size": 64,
+  "status_spellings": {
+    "noStatus": -1,
+    "off": 1,
+    "on": 0
+  }
+}

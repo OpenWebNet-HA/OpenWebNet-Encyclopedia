@@ -1,0 +1,58 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00055380:
+   55380:	f001 ff64 	bl	5724c
+   55384:	9004      	str	r0, [sp, #16]
+   55386:	2040      	movs	r0, #64	@ 0x40
+   55388:	f7bb eb78 	blx	10a7c <_Znwj@plt>
+   5538c:	4605      	mov	r5, r0
+   5538e:	1d02      	adds	r2, r0, #4
+   55390:	f8df 3734 	ldr.w	r3, [pc, #1844]	@ 55ac8
+   55394:	9805      	ldr	r0, [sp, #20]
+   55396:	efc0 0011 	vmov.i32	d16, #1	@ 0x00000001
+   5539a:	f942 078f 	vst1.32	{d16}, [r2]
+   5539e:	e9d0 1202 	ldrd	r1, r2, [r0, #8]
+   553a2:	f859 3003 	ldr.w	r3, [r9, r3]
+   553a6:	6840      	ldr	r0, [r0, #4]
+   553a8:	440a      	add	r2, r1
+   553aa:	3308      	adds	r3, #8
+   553ac:	901b      	str	r0, [sp, #108]	@ 0x6c
+   553ae:	4628      	mov	r0, r5
+   553b0:	f840 3b0c 	str.w	r3, [r0], #12
+   553b4:	9b1b      	ldr	r3, [sp, #108]	@ 0x6c
+   553b6:	901a      	str	r0, [sp, #104]	@ 0x68
+   553b8:	f105 0014 	add.w	r0, r5, #20
+   553bc:	612b      	str	r3, [r5, #16]
+   553be:	9b19      	ldr	r3, [sp, #100]	@ 0x64
+   553c0:	3308      	adds	r3, #8
+   553c2:	60eb      	str	r3, [r5, #12]
+   553c4:	f105 031c 	add.w	r3, r5, #28
+   553c8:	616b      	str	r3, [r5, #20]
+   553ca:	f7f9 fe87 	bl	4f0dc
+   553ce:	e9dd 0304 	ldrd	r0, r3, [sp, #16]
+   553d2:	aa4a      	add	r2, sp, #296	@ 0x128
+   553d4:	991a      	ldr	r1, [sp, #104]	@ 0x68
+   553d6:	eddd 0b98 	vldr	d16, [sp, #608]	@ 0x260
+   553da:	eddd 1b9a 	vldr	d17, [sp, #616]	@ 0x268
+   553de:	6b1b      	ldr	r3, [r3, #48]	@ 0x30
+   553e0:	914a      	str	r1, [sp, #296]	@ 0x128
+   553e2:	4611      	mov	r1, r2
+   553e4:	f105 022c 	add.w	r2, r5, #44	@ 0x2c
+   553e8:	9104      	str	r1, [sp, #16]
+   553ea:	954b      	str	r5, [sp, #300]	@ 0x12c
+   553ec:	f942 0a8f 	vst1.32	{d16-d17}, [r2]
+   553f0:	460a      	mov	r2, r1
+   553f2:	63eb      	str	r3, [r5, #60]	@ 0x3c
+   553f4:	4659      	mov	r1, fp
+   553f6:	f0b9 fb8b 	bl	10eb10
+   553fa:	9a04      	ldr	r2, [sp, #16]
+   553fc:	4605      	mov	r5, r0
+   553fe:	6850      	ldr	r0, [r2, #4]
+   55400:	b108      	cbz	r0, 55406
+   55402:	f7ca fa4f 	bl	1f8a4
+   55406:	9a05      	ldr	r2, [sp, #20]
+   55408:	2d01      	cmp	r5, #1

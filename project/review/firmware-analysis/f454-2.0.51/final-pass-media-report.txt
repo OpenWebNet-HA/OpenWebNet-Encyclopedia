@@ -1,0 +1,86 @@
+# Final F454 pass: ordinary WHO8/DIM35 parser→role1→conditional ACK/KO
+
+The selected **ordinary `*#8**35##` query can now be followed statically from the module receive/parser boundary through the packaged role1 handler**. Its empty WHERE is preserved and explicitly handled. The earlier conditional ACK statement has a concrete additional guard: mutable `bt_vct` global `0x2b5f8` must be1,2 or3 for this route to retain its positive local flag. Other values select the KO path for this exact ordinary query.
+
+No WHO8/DIM35 status-fields producer/schema was recovered on this route. The results are a bounded static local routing conclusion, not an observed ACK/KO exchange, full upstream/API transport proof or archive-wide absence verdict. Roles2/5, alternative addressed/multimedia inputs and production state initialization remain separate. This final bounded pass does not repeat discovery/initializer matrices or factory-key searches.
+
+**Static only:** zero original ARM/JavaScript instructions, original helpers, firmware processes, services, sockets, browser operations or live I/O executed. Host Python reads original bytes and invokes host binutils; its one-query/six-declared-mode consistency model is not an ARM interpreter or an executed parser. No API exchange connection/handshake or closed authentication branch was followed. All old dossiers/indexes and original/source files remain unchanged; writes stay in this new area.
+
+## Identity, provider and external boundary
+
+The same F4542.0.51 archive identity is inherited from the prior pinned reports: SHA256 `15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3`. New inspected originals:
+
+| Original image input | SHA256 |
+|---|---|
+|`/home/bticino/bin/bt_vct`|`b9bf0ba4cc212b84be19f8b57c9f57bcc0cd7dfb9d7cdf31af578713f3ecd076`|
+|`/home/bticino/lib/libcommon.so.0.0`|`3890711968ffa0c89136c20e7e73f82b6314513cf3aab0334d9b4843f84a025a`|
+
+`bt_vct`'s first direct dependency is `libcommon.so.0`; the inspected original library exports the selected receive/parser/extractor functions. This is static candidate-provider ownership under ordinary packaged binding, not an executed loader/interposition test. Original file and span hashes are retained.
+
+Packaged `/home/bticino/cfg/stack_open.xml:234–239` associates WHO8 with bt_vct; its role field is `device=1` at lines312–325. Previous evidence established that role's actual parser/config consumer. The present trace starts with **these exact bytes supplied on the module's selected receive descriptor**, after any upstream connection/session work. Actual API→openserver→module transport delivery, active processes, descriptor ownership and runtime configuration replacement are not executed or silently assumed proven. No connection/handshake helper was inspected.
+
+## Receive and exact ordinary parser selection
+
+`bt_vct!0xaf00–0xaf0c` supplies its descriptor and new_openwebnet object to `receive_from_web`; a positive return reaches role selection. The candidate original provider `libcommon!0xbfe0` has a normal plain-text receive loop at`0xc1c0–0xc25c`, reading bytes until consecutive final`##`, then joining its normal parser call at`0xc0f0–0xc0fc`. It calls `CreateMsgOpen` with the selected object, buffer and length; after Error/Null predicate tests, normal success returns1 at`0xc2e0–0xc2f0`. No actual read, descriptor, SSL branch or error/malformed-read campaign ran.
+
+For the **nine-byte NUL-terminated string `*#8**35##`**, the inspected `openwebnet` parser has a fully specified static route under ordinary imported C/string contracts:
+
+1. `CreateMsgOpen!0x32374` calls `CreateNullMsgOpen`, which clears WHO, WHAT, WHERE, DIM, addresses and value fields. It copies the raw text at object+`0x879c`, stores the selected length and calls `IsCorrect` at`0x32404`.
+2. Normal guards check leading`*`, length at most1024, final`##`, allowed digit/`*`/`#` characters and segment lengths (`0x30fa0–0x310e4`). The exact example satisfies these selected checks; this is not a general grammar/malformed-input proof.
+3. The `*#` route enters`0x3114c`. Its first token is`8`; source-offset arithmetic then sees suffix`*35##`. The second byte is`3`, so`0x31264–0x31280` assigns **kind4** and calls `Assegna_chi_dove_grandezza!0x30168`. This kind is the original libcommon parser namespace, not WHO4, role4, a bus category or request state.
+4. The measure field helper copies WHO`8`. Its next source suffix is`*35##`; `0x30210–0x30214` skips WHERE copying because its first byte is`*`, preserving the initialized **empty string**. The following source suffix is`35##`; with no further`*`, `0x30418–0x30430` copies its length minus two final hashes into DIM: **`35`**. WHAT remains initialized empty.
+5. `Assegna_indirizzo` finds no`#` inside WHO`8` and exits through`0x30f00`, preserving empty address0. `Assegna_livello_interfaccia` finds no`#` in empty WHERE and exits through`0x30c4c`, leaving those initialized fields unchanged. Kind4 survives; original predicate`IsMeasureFrame!0x3275c` tests exactly that value.
+
+The field getter offsets are WHO0, address0+130, WHAT+650, WHERE+780 and DIM+1300. `host-query-route-model.json` records the exact suffixes and selected field result; it transcribes this single normal branch rather than substituting a regex/general-purpose parser. The model does not execute `CreateMsgOpen`, `IsCorrect`, C++ methods or their imports.
+
+## Actual role1 caller and empty-WHERE handler
+
+At `bt_vct!0xaf20–0xaf80`, config field+32 selects role2,1 or5. **Role1** loads application+`0xf60`, supplies the parsed object and other state pointers, then calls handler **`0x143f0` at`0xaf60`**. Successful parsing and a matching role are separate conditions. The trace does not treat packaged role1 as observed runtime state.
+
+The handler:
+
+- Rejects Null at`0x14480–0x14488`; the selected parser kind4 is non-Null.
+- Calls `new_openwebnet::analyse_frame_MM` at`0x14490`. That provider constructs from WHAT, clears multimedia fields and returns through its empty-WHAT branch at`0x1667c–0x166a4`. Its WHERE-derived computations read the initialized empty WHERE storage; no IP/WHAT payload is introduced by this ordinary example. This is static code reasoning, not a multimedia parser run.
+- Tests `Extract_indirizzo(0)` at`0x1449c`; the empty address0 skips the addressed-IP rejection/delegate route and reaches`0x1450c`.
+- Extracts WHO8 at`0x14510–0x14534`. Empty WHAT takes`0x145ac–0x145b8`, recording missing WHAT components as−1. Empty WHERE takes **`0x145d4–0x145e0`**, recording−1 and skipping destination helpers. Empty WHERE is therefore not silently converted into destination0 in this selected handler.
+- WHO8 plus `IsMeasureFrame` true branches at`0x14644` to`0x167ec`, stores local flag1, then returns to`0x146d8`. This upstream trampoline is important: the later shared dimension block is not an unconditional measure entry.
+
+Thus the earlier parser/WHERE/role gaps are narrowed for this ordinary local route. Valid initialized state pointers, normal import contracts, no object corruption and the selected role1 receive branch remain explicit assumptions; actual process scheduling/transport is outside the result.
+
+## Mutable mode gate and conditional output
+
+Pool`0x15460` points to process-global **`0x2b5f8`**. At`0x146d8–0x146e8`, code subtracts1 from its word and performs an unsigned compare with2. Only values **1,2,3** retain the local measure flag on that branch.
+
+For this query WHAT is absent, represented by−1. When the mode is outside1..3, the later exceptional-WHAT cases (19..22,37,77) do not apply; `0x14704` clears the flag. Logger/state-label reads intervene but do not change this branch predicate in the inspected normal flow.
+
+| Declared mutable global | Selected static continuation for this exact query |
+|---|---|
+|1,2,3|Flag survives → shared measure block`0x14990` → ordinary DIM35 → ACK selection.|
+|−1,0,4, or other values outside1..3|Missing WHAT does not qualify for the exceptions → flag0 → WHO6/7-only fallback rejects WHO8 → KO selection.|
+
+The six host cases explicitly declare−1,0,1,2,3,4; the general outside-range description is the static unsigned-compare consequence, not additional executions.
+
+In the positive branch, dimension pool values`0x15370`/`0x15374` are9001/9002, so DIM35 bypasses that special translation. It sets flag1 at`0x149e0`, fails the DIM30 comparison at`0x14a44`, and reaches`0x148f0`→`Extract_OpenOK` at`0x14908`. In the negative branch, `0x147cc–0x147d8` accepts only WHO6/7 and directs WHO8 to `Extract_OpenKO` at`0x14974`.
+
+Candidate libcommon getters resolve the literals **ACK `*#*1##`** (`0x326e4`) and **KO `*#*0##`** (`0x326f4`). Both selections join the original send wrapper at`0x14984`→`0xdb44`; it passes the selected descriptor/text to imported `invio_msg_open`, closes the descriptor on−1 and returns0, otherwise returning1. This wrapper does not itself reset a stored descriptor field. No actual send, descriptor validity, remote receipt or delivery is established. Neither selected string contains the three status fields suggested by the frontend's example.
+
+### Initial constructor state is not live configuration
+
+The role1 record initialization at`0x1d848–0x1d864` passes−1 in the fifth argument to constructor`0xdad4`. At`0xdaec–0xdaf4` that constructor stores the fifth argument into **the same global `0x2b5f8`**. Thus this constructor establishes an initial−1 on that code path; this does not make−1 a universal live value. Later mutation, startup completion, other record creation, incoming bus/state activity and production provider state are not reconstructed here.
+
+This mutable state word is **not** config+32's role1, WHO7's board-derived profile, factory `communication/vde_enabled`, or discovery `feature_vde`. No semantic name beyond the inspected mode/state gate is assigned to its values. A default constructor store cannot prove what the device would answer after startup.
+
+## What is closed and what remains open
+
+Closed within static ordinary/local assumptions: kind4 parser selection, exact WHO/empty-WHERE/DIM extraction, empty address/WHAT behavior, actual role1 caller, upstream measure trampoline, mutable gate, and conditional ACK/KO literal/send-wrapper paths. The unconditional `DIM35→ACK` shortcut is too strong; the original state predicate must be retained.
+
+Still open: actual WHO8/DIM35 **status response producer/schema**; complete API/openserver/module transport and production state; role2/5 or other addressed/multimedia routes; actual device/status semantics. This batch does not prove that every query receives ACK/KO, that no alternative producer exists, or that the frontend's index4 state means a factory enable flag. No whole-archive scan, extra discovery work or new firmware investigation was started.
+
+## Reproduction and hashes
+
+```sh
+python3 work/f454-firmware/research/2026-10-30-final-pass/media/collect_evidence.py
+python3 work/f454-firmware/research/2026-10-30-final-pass/media/collect_evidence.py --check
+```
+
+The host-only collector emits40 evidence outputs,30 original byte spans,25 exact original-word assertions and6 input identities. The one-query/six-declared-mode model is separate from original execution. `--check` reproduces bytes without writing. The output manifest excludes itself, this report and independent review; parent evidence indexing pins them separately. The prior complete query suffix/discovery evidence is only read/hashed, not rerun as a new matrix. No original instruction/code-hook count is implied by the amount of collected disassembly.

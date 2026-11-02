@@ -1,0 +1,53 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00032418 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x127e8>:
+   32418:	4abc      	ldr	r2, [pc, #752]	@ (3270c <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x12adc>)
+   3241a:	0010      	movs	r0, r2
+   3241c:	3b3a      	subs	r3, #58	@ 0x3a
+   3241e:	0013      	movs	r3, r2
+   32420:	06b4      	lsls	r4, r6, #26
+   32422:	0000      	movs	r0, r0
+   32424:	3b36      	subs	r3, #54	@ 0x36
+   32426:	0013      	movs	r3, r2
+   32428:	2510      	movs	r5, #16
+   3242a:	000e      	movs	r6, r1
+   3242c:	24f6      	movs	r4, #246	@ 0xf6
+   3242e:	000e      	movs	r6, r1
+   32430:	24ea      	movs	r4, #234	@ 0xea
+   32432:	000e      	movs	r6, r1
+   32434:	24e2      	movs	r4, #226	@ 0xe2
+   32436:	000e      	movs	r6, r1
+   32438:	4bde      	ldr	r3, [pc, #888]	@ (327b4 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x12b84>)
+   3243a:	000e      	movs	r6, r1
+   3243c:	4bd0      	ldr	r3, [pc, #832]	@ (32780 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x12b50>)
+   3243e:	000e      	movs	r6, r1
+   32440:	247e      	movs	r4, #126	@ 0x7e
+   32442:	000e      	movs	r6, r1
+   32444:	2416      	movs	r4, #22
+   32446:	000e      	movs	r6, r1
+   32448:	3f9a      	subs	r7, #154	@ 0x9a
+   3244a:	000e      	movs	r6, r1
+   3244c:	2378      	movs	r3, #120	@ 0x78
+   3244e:	000e      	movs	r6, r1
+   32450:	236a      	movs	r3, #106	@ 0x6a
+   32452:	000e      	movs	r6, r1
+   32454:	2384      	movs	r3, #132	@ 0x84
+   32456:	000e      	movs	r6, r1
+   32458:	2378      	movs	r3, #120	@ 0x78
+   3245a:	000e      	movs	r6, r1
+   3245c:	2372      	movs	r3, #114	@ 0x72
+   3245e:	000e      	movs	r6, r1
+   32460:	2372      	movs	r3, #114	@ 0x72
+   32462:	000e      	movs	r6, r1
+   32464:	390a      	subs	r1, #10
+   32466:	0013      	movs	r3, r2
+   32468:	233c      	movs	r3, #60	@ 0x3c
+   3246a:	000e      	movs	r6, r1
+   3246c:	2334      	movs	r3, #52	@ 0x34
+   3246e:	000e      	movs	r6, r1
+   32470:	2300      	movs	r3, #0
+   32472:	000e      	movs	r6, r1

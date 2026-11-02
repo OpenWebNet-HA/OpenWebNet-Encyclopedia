@@ -1,0 +1,23 @@
+# F460 run08 independent source review — PASS
+
+I independently reviewed the authoritative `work/f460-firmware/2.0.12/research/2026-11-01-run08-update/REPORT.v2.md`, collector and original updater source. I replayed only the host static collector (`--check`: 11 outputs, seven spans, 36 guards, original execution0). No firmware, provider, XML parser, native/helper experiment, semantic model, install or I/O syscall was run.
+
+Original normal `/home/bticino/bin/dedrifupdater` bytes independently read through product ImageVFS have SHA256 `8f32212bee98b507690f1e22d6b26524c8a13dc20efcc8cc05900ac4142f9753`, 43,088 bytes. I independently remapped saved PT_LOAD-backed spans/words, checked all seven raw spans and36 instruction guards,18 actual PLT byte sequences, ten literal joins and selected branch/call instructions. Reported normal/recovery equality is scoped to this object. All13 first-candidate-v2 copies and their index agree with current exact author bytes. No author files were edited.
+
+The concrete source route is supported: function0x5690 saves entryX0 inX22, tests literal `/tmp/fwz.xml`, conditionally requests the opaque0x5140 helper, and requests xmlReadFile under its documented pointer/result premises. The wrapper0x5d60 only calls it on the selected zero result of opaque0x4b60. The ordinary libxml node offsets are original accesses, not supplied trees or transferred32-bit layouts. Root/actions/action/type selection, C=[X22], R=[C+48]/[C+56], zero record-word guards and stores1/2, then selected child-content→GString→sameR+8 append/store are supported. Imported names come from actual relocations rather than misleading nearby objdump labels.
+
+I additionally inspected the original property-scan bridge **0x5b14..0x5bd8**, not retained in the author's seven disassembly spans. Its raw bytes SHA256 is `2dd39ba75709f8da0bbed4ba8ef32ec267aaa2571559dd0a6cac9a481c6b7a28` (196 bytes; executable PT_LOAD VA/file-offset mapping is identity here). Relevant exact words are `0x5b80=f9401b7b` (property next), `0x5b84=b5fff8fb` (nonnull→0x5aa0), `0x5b88=17ffffb7` (→0x5a64); `0x5a64=f9400e95` loads the action's children and `0x5a68=b5000bd5` selects0x5be0. This completes the selected property-loop→child-loop join without editing the frozen source packet. Intermediate alternative-label comparisons do not overwrite selected W19 unless their own distinct equality/zero-word gates succeed; the reviewed normal string-comparison premise keeps the selected firmware case distinct. No universal malformed-tree or duplicate policy is inferred.
+
+The selected attr block does not itself check `name="file"`; the report correctly avoids claiming complete validation. Cleanup/normal numeric0 result and wrapper normalization are conditional source behavior, not archive authenticity, device/version compatibility, partition success or actual boot/readiness. Package fwz.xml declaration concordance remains separate from an observed runtime file. Context/action-record initialization, current writable records, imported providers, helper internals and later list consumers remain open. No physical capabilities or public protocol meanings follow from local numeric codes.
+
+Development history is accurate: v1 Python `or12` syntax failed before body/output generation; v1 files and parent pre-v2 copies remain, and v2 source guards were not weakened. The failure JSON is explicitly a later transcription. This review does not turn the failed host parse into target execution or an additional source test corpus.
+
+Exact reviewed pins:
+
+- REPORT.v2.md: `8a46eb35e26d98eef19e44c9730445a8cee86f0b87866337fd304faf5262c93f`.
+- collect_update_v2.py: `4cf6d6b32b5c9855589b879b488c7828683c6ca545f824b49d0f434512e12c1a`.
+- OUTPUT_MANIFEST.json: `e013fefb190316b2c41c0f8cc88877b7a266e52a9038190456fa72c3c1492e11`.
+- first-candidate-v2/INDEX.json: `613cbc9ad8f6ed9832fe75072b17f36fefa9661e982a8298b11b237030a2d732`.
+- DEVELOPMENT_HISTORY.json: `034a9cc9d8d17176536f0457047c8ae229cee9eccab67d7a5b6505660a056652`.
+
+No correction is requested. This is a bounded original-source and reproducibility review, not a whole updater/security/physical audit.

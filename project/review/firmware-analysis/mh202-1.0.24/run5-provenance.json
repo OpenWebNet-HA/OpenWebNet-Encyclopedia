@@ -1,0 +1,115 @@
+{
+  "checkpoint": "run5",
+  "status": "reviewed selected static paths; overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "method": "Original-byte static source and explicit finite host models; original execution0",
+  "exports": [
+    {
+      "role": "report",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run5/REPORT.md",
+      "source_sha256": "70ed2298f89a0611e0b6e56a851a9e62904a81e28b1391e499df11d875609a00",
+      "published": "run5-functional-report.txt",
+      "published_sha256": "70ed2298f89a0611e0b6e56a851a9e62904a81e28b1391e499df11d875609a00",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run5/functional-review.md",
+      "source_sha256": "f1912dc66adda6fc029af3c1c3893ed74466e89bbac518e1591f1b628d5baf63",
+      "published": "run5-functional-review.txt",
+      "published_sha256": "f1912dc66adda6fc029af3c1c3893ed74466e89bbac518e1591f1b628d5baf63",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "report",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run5/REPORT.md",
+      "source_sha256": "9b872ed01536f561a8b0f0fe49425e0323a2f1732218428cdea5525da18b111d",
+      "published": "run5-coso-report.txt",
+      "published_sha256": "9b872ed01536f561a8b0f0fe49425e0323a2f1732218428cdea5525da18b111d",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run5/coso-review.md",
+      "source_sha256": "0696c7256f9a26d1dd599eee8bcce8fcf5a2628232de98ccfa636e8cbbf49346",
+      "published": "run5-coso-review.txt",
+      "published_sha256": "0696c7256f9a26d1dd599eee8bcce8fcf5a2628232de98ccfa636e8cbbf49346",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run5/REPORT.md",
+      "source_sha256": "31fd8aa084176230fd4facbe0aa8e64f7ba74309257500b90f2aa8ad2337cc4a",
+      "published": "run5-protocol-report.txt",
+      "published_sha256": "31fd8aa084176230fd4facbe0aa8e64f7ba74309257500b90f2aa8ad2337cc4a",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run5/protocol-review.md",
+      "source_sha256": "3442136518de9a1a25ed11d217c9fff800cc29f2aaebe60e5b4d54e1165dd8eb",
+      "published": "run5-protocol-review.txt",
+      "published_sha256": "3442136518de9a1a25ed11d217c9fff800cc29f2aaebe60e5b4d54e1165dd8eb",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "report",
+      "area": "boot",
+      "research_path": "work/mh202-firmware/research/2026-10-30/boot/run5/REPORT.md",
+      "source_sha256": "0ca889b14130dd039b050f1d4f4166ec02d54fa28b5d28d2987f0e6049b54421",
+      "published": "run5-boot-report.txt",
+      "published_sha256": "0ca889b14130dd039b050f1d4f4166ec02d54fa28b5d28d2987f0e6049b54421",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "boot",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run5/boot-review.md",
+      "source_sha256": "5e51cb0b9f03d787b6eceafe6fd12ab776feb01f8467e41e30ba781bd79e76fb",
+      "published": "run5-boot-review.txt",
+      "published_sha256": "5e51cb0b9f03d787b6eceafe6fd12ab776feb01f8467e41e30ba781bd79e76fb",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run5/collect_evidence.py",
+      "sha256": "0efc8ef6250645810f84279c199dcf80e0a2c1ca793bb4014fc3c71d0a63584e"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run5/collect_evidence.py",
+      "sha256": "3af7d3e7680618da1a80139057d09c1751e5b1436664a4a4d2a66706b6f63f85"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run5/collect_evidence.py",
+      "sha256": "40d74c1123de06a7f0e2774fc1ed44d1ff0d0f33728bc5d21b40ed3330dcb225"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/boot/run5/collect_restore.py",
+      "sha256": "1f2e254dc156152ce144904bbf8762695112e25d4d839a96805590f2786c2434"
+    }
+  ],
+  "history": {
+    "run4_reviewed_document_snapshots": "reviewed/run4/SOURCE_SNAPSHOTS.json",
+    "old_reports_unchanged": true,
+    "COSO_absent_parameter_correction": "Independent review traced original conditional r0=-1 sentinel; exact pre-review report/collector/model/manifest/descriptor retained in coso/run5/development-before-review; final no-param40/41byteFF",
+    "diagnostic_refinement": "Actual object+0x5e3c alias narrows prior independently recorded source uncertainty; raw coherence/marker state still conditional"
+  },
+  "limits": [
+    "No original firmware process/parser/physical execution",
+    "CHKTIME three-way number is not Boolean/full accepted DSL/calendar input",
+    "COSO post-parser/body/list paths under supplied conversions/context, not observed traffic",
+    "Native metadata/list helpers unexecuted and full dispatcher/STM not closed",
+    "Raw-buffer alias not a valid original object/text coherence or accepted parser fixture",
+    "Default fallback/extraction return and source-selection/opaque helper status are separate",
+    "Complete recovery/durability/full Device gates pending"
+  ],
+  "reproduction_limit": "Original images/spans/collectors remain in local dossier; documentary exports are not standalone runtime tests"
+}

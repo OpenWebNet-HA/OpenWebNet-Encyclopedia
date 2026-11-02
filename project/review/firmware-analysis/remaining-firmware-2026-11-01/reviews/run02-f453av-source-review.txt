@@ -1,0 +1,34 @@
+# F453AV night02 startup/module source review
+
+PASS. No author correction requested.
+
+Reviewed UTC: 2026-11-01T20:21:28.706781+00:00. This review is limited to the frozen F453AV3.0.14 normal-script/resource request and original header/section/symbol metadata. It does not extend the author packet into loader, driver, application-readiness or operating-system behavior.
+
+The permitted host-only `python3 -B work/f453av-firmware/3.0.14/research/2026-11-01-night02-resources/collect_resources_v1.py --check` returned PASS: six outputs, five new script lines, zero original execution. I read the complete collector/report/evidence, independently verified all14 input size/SHA-256 pins, all output-manifest members and all seven exact first copies. The source tree and author outputs were unchanged.
+
+Original selected init lines1,120-130 and the complete five-line normal bt_fb.tcl match their one-based retained locations. The init path enumeration/regular-file filter/false-result fork branch supplies a local source context; the new script's false-result branch requests /sbin/insmod with the exact original tviafb.o pathname, followed in source by sys_wait. Interpretation as a child branch remains conditional on ordinary interpreter/helper conventions and provider results, not an independently proved sys_fork implementation. No captured/tested exec/wait result appears in those five script lines. Neither source ordering nor a wait request proves successful replacement, actual waiting, completed module setup, or dependency/readiness relative to the separately forked bt_start application.
+
+Fresh independent ELF header checks of ettclsh, insmod and the exact requested module agree with the saved52-byte headers. insmod is ARM ELF32 little-endian EXEC with flags0x2; tviafb.o is ARM ELF32 little-endian REL, flags0x200, zero entry word and no program headers. The module is a file/section-relative relocatable object, not a process with a guessed runtime address. I independently located .modinfo from its original section/string tables and checked the exact whitelisted NUL-terminated kernel_version field at its recorded file offset. Host readelf independently corroborated only the selected init_module and cleanup_module symbol values/sizes/section indices. No function body or loader path was disassembled, linked, relocated or executed.
+
+The directory label2.4.19-rmk7-pxa2-btweb and the original kernel_version value2.4.19-rmk7-pxa2-btweb-2_3_8 remain distinct declarations. They do not identify the running kernel, prove ABI/symbol-version acceptance or establish a successfully loaded/active driver. The earlier release metadata remains separate. Path/component names and curated Audio/Video DIN context do not prove connectors, hardware, rendering, answering-machine operation or public protocol/physical capability.
+
+I checked normal/recovery byte comparisons for init, insmod, the named module and bt_fb.tcl. Only the script differs (normal146bytes/recovery477bytes); its recovery body is not interpreted or assigned the normal script's semantics. The application regular manifest lacks the two specifically tested script/module paths. That is a bounded retained-manifest fact, not a global alias/path census, current runtime absence, installed overlay or whole-view equivalence. Exact script, program and module arguments are correctly joined without transferring MH200N marker logic or other-product layouts.
+
+No original/vendor/native/provider/target/module code, Tcl script, target OS/service/device/network/bus operation, mount, clock, SQL, model/fixture or previous corpus was executed or replayed. Host parsing, hashing, readelf and read-only collector reproduction are analysis only. Module-loader/interpreter/helper implementations, output/receiving/transport/authentication/session/framing/MQTT/libjel and equivalent closed bodies remain opaque. No credentials, keys, private configuration, runtime identifiers or broad module strings were exported. No database was recovered or synthesized. The report's positive caller/resource proof and open activation/readiness/composition boundaries agree with original source.
+
+## Exact frozen identities
+
+Paths below are relative to `work/f453av-firmware/3.0.14/research/2026-11-01-night02-resources/`.
+
+| File | Bytes | SHA-256 |
+|---|---:|---|
+| `REPORT.md` | 6387 | `30aa6c495f788ef11feb91381cf0347ca25c09dc8b1bc6bedf69a8e6996f363e` |
+| `collect_resources_v1.py` | 14310 | `2e8488bccc8f1af59cad8955396cf3e50cb7b20ae904fdf883fc22be272cd49a` |
+| `OUTPUT_MANIFEST.json` | 742 | `63d7cb93a4fc35ce507685e4bcb2d53e761bda0e61626cfa4eca6953f8b0144d` |
+| `STARTUP.json` | 2798 | `dc10b03318ad5e04fb998698062574003b784e27c42b602f73e987c117130113` |
+| `MODULE.json` | 2817 | `151353d4db381eda9a1272c66e5691b298ba378f860b5bf375f61a4d9359f9f0` |
+| `COMPARISONS.json` | 1663 | `26fe05e2e556e09acc3e0c7090c1dee0fe3fedb8b2513cc8282d2b86765cf247` |
+| `INPUTS.json` | 2926 | `5abf23c9cda54c9545a35ebeafe1342ca93297ca61b815f9e7fcd40baa65642a` |
+| `first-candidate/INDEX.json` | 1134 | `b616e6d0a0db5b606b38d0322cceb29df6cb5d79fbaf83de6e9f335feb6b62a3` |
+
+This independent review is a new exclusive file with an immediate exact first copy. Its index excludes itself and is computed before its own creation. No correction or rewrite was needed.

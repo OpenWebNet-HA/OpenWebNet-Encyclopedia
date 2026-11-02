@@ -1,0 +1,17 @@
+{
+  "scope": "Actual read-only host reproduction of saved static collectors; no vendor/CPU execution",
+  "F460": {
+    "chunk_id": "588a96",
+    "wall_time_seconds": 0.07825336,
+    "exit_code": 0,
+    "original_token_count": 14,
+    "output": "{\"check\": true, \"outputs\": 11, \"original_execution\": 0}\n"
+  },
+  "F461": {
+    "chunk_id": "c9c204",
+    "wall_time_seconds": 0.03653153,
+    "exit_code": 0,
+    "original_token_count": 21,
+    "output": "{\"check\": true, \"outputs\": 16, \"spans\": 7, \"guards\": 16, \"original_execution\": 0}\n"
+  }
+}

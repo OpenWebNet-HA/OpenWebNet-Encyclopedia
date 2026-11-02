@@ -1,0 +1,46 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a72c0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5c54c>:
+   a72c0:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   a72c4:	4606      	mov	r6, r0
+   a72c6:	ed2d 8b02 	vpush	{d8}
+   a72ca:	f5ad 5d8b 	sub.w	sp, sp, #4448	@ 0x1160
+   a72ce:	b081      	sub	sp, #4
+   a72d0:	9001      	str	r0, [sp, #4]
+   a72d2:	2000      	movs	r0, #0
+   a72d4:	f8df 4c14 	ldr.w	r4, [pc, #3092]	@ a7eec <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5d178>
+   a72d8:	f50d 578a 	add.w	r7, sp, #4416	@ 0x1140
+   a72dc:	f886 0092 	strb.w	r0, [r6, #146]	@ 0x92
+   a72e0:	371c      	adds	r7, #28
+   a72e2:	f8df 0c0c 	ldr.w	r0, [pc, #3084]	@ a7ef0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5d17c>
+   a72e6:	447c      	add	r4, pc
+   a72e8:	6833      	ldr	r3, [r6, #0]
+   a72ea:	f8df 5c08 	ldr.w	r5, [pc, #3080]	@ a7ef4 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5d180>
+   a72ee:	5820      	ldr	r0, [r4, r0]
+   a72f0:	447d      	add	r5, pc
+   a72f2:	6800      	ldr	r0, [r0, #0]
+   a72f4:	6038      	str	r0, [r7, #0]
+   a72f6:	f04f 0000 	mov.w	r0, #0
+   a72fa:	e9cd 1205 	strd	r1, r2, [sp, #20]
+   a72fe:	6872      	ldr	r2, [r6, #4]
+   a7300:	429a      	cmp	r2, r3
+   a7302:	9204      	str	r2, [sp, #16]
+   a7304:	f000 80ee 	beq.w	a74e4 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5c770>
+   a7308:	469b      	mov	fp, r3
+   a730a:	f8df 3bec 	ldr.w	r3, [pc, #3052]	@ a7ef8 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5d184>
+   a730e:	ef80 8e30 	vmov.i64	d8, #0x0000000000000000
+   a7312:	447b      	add	r3, pc
+   a7314:	9307      	str	r3, [sp, #28]
+   a7316:	f8df 3be4 	ldr.w	r3, [pc, #3044]	@ a7efc <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5d188>
+   a731a:	447b      	add	r3, pc
+   a731c:	9308      	str	r3, [sp, #32]
+   a731e:	f85b 3b04 	ldr.w	r3, [fp], #4
+   a7322:	6a1b      	ldr	r3, [r3, #32]
+   a7324:	2b17      	cmp	r3, #23
+   a7326:	f200 80d9 	bhi.w	a74dc <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5c768>
+   a732a:	e8df f013 	tbh	[pc, r3, lsl #1]
+   a732e:	06ed      	lsls	r5, r5, #27

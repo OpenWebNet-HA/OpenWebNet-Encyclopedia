@@ -1,0 +1,50 @@
+# Final retained-state documentary integration review
+
+PASS, no correction requested. I compared the exact public state reference, overview/handoff additions, capsule, FINAL_REPORT.v2 and coordination documents with the frozen state report and independent source/final-synthesis reviews. This is a bounded documentary integration audit, informed by my prior selected helper/ownership and two resumed documentary reviews. It is not a fresh audit of retained-state source bytes, complete firmware/product semantics, runtime or physical behavior. I executed no collector, original/provider/JSON/query/output code, semantic fixture or CPU replay.
+
+The new relation remains correctly conditional: suitable nonnull query result string+8 is assigned to fixed anonymous G+24; a later selected valid exact-on read can produce local status0/presence and actual pair-copy into converter SP600+28/+32, then selected table1/on and status-assignment requests. G=0x167808 is memory-only storage with no invented runtime contents or class identity, not an inferred per-ID map, compiled capture or adjacent shared-stop0x167800. Source words36/40/44 copied into G48/52/56 are not assigned physical properties. Query type/ID/freshness, state initialization/mutation/locking, valid objects/providers, natural pairing/order and lifetime/error/unwind/concurrency remain premises. No rollback, current same-device state, collision, defect or physical restoration is proved.
+
+The current summary faithfully keeps the three resumed results separate: selected local callable handoff, descriptor/version/method plus actual ID/speed copies, and one retained-state consumer. The method spelling and status string do not become public device-support or physical-domain claims. Actual query0x10f4a0/output0x5dda0 and closed receiving/transport/MQTT/libjel/auth/session/framing bodies remain opaque. Curated MyHOMEServer1, MH202 and F454 roles are not transferred by names/layouts; completed F454 status and MH202 generator/native joins are distinguished from their genuine configuration/activation/electrical gaps. Wider Device/source gates, missing assets and unavailable MH20218/21 intermediate-history limits remain explicit.
+
+New source packets add zero original execution/models/fixtures/replays. The saved MyHOMEServer1 corpus stays one/eight entries/340 original code-hook visits/zero C primitives/12 definition redirects/eight EXIT/zero stops/360 hooks; four data relocations, 24 FP/control and 24 R0/SP/LR setup writes remain separate. Earlier static-zero scopes and F454/MH202 ledgers stay separate. The selected finite double-helper corpus is not a full JSON/scene/scheduler/process/OS/thread/timer/network/bus or physical result. Visits are not retired instructions.
+
+The report accurately treats the last usage/reset difference and final-only decision as saved coordination observations, without claiming exhaustion or exact window identity. No further research is proposed in this completion phase. Actual final validation, evidence index, automation deletion, control and branch receipts remain separate subsequent artifacts; neither this review nor a final-report title proves their completion.
+
+## Preservation, wording refinement and links
+
+Verified all 13 current document pins/candidate copies, all 38 exact SOURCE_EXPORTS source/published pairs, 23 source first copies, four coordination first copies, both independent-review first copies, reference/original-report first copies and separate v2-report first copy. The public reference equals REFERENCE_CANDIDATE. Exact overview insertion and authoritative HANDOFF_PATCH.v2 reconstruct the current pages from retained pre-edit bytes. Original pre-edit INDEX remains intact; INDEX.with-handoff separately retains its unchanged first record and additional handoff record.
+
+Verified the exact single report phrase substitution into FINAL_REPORT.v2 and corresponding literal request-ID refinement in the handoff. Original FINAL_REPORT/first copy, old HANDOFF_PATCH and pre-wording report/current-handoff/patch bytes remain unchanged. The source/outputs/counts are not revised. Literal outer UUID-derived request ID remains distinct from captured params.id, without implying operational response correlation.
+
+Checked 74 local Markdown link occurrences and two fragments. All 72 existing targets and both fragments resolve. Only the intended later capsule integration-review.txt and validation.json are pending actual assembly. Final protection/identity, strict ESG/ECV/diff, actual automation deletion/control/branch checks and index-last closure must use actual completed artifacts after this review. No future-byte certification, placeholder or missing-link exemption is endorsed.
+
+## Exact current pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-action-retained-state.md` | `b3686b6cf85ce9f02e038ca7687bf8e98ea4aa4ea7b6a1bdfb87216748404c68` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md` | `4e2cf1f6d26e9b04debbd14a8e0e5fac1f61e87826850bfdce853f4547196c76` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-knowledge-handoff.md` | `6a3e6bc1e82379e0b403fbaa93d18886213a0687606ef418abf208edcdc29008` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-action-retained-state/README.md` | `839aab150a4ef5af37f6ab641db445d70d78e6dff41a6c8edf382248f880bb45` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-action-retained-state/SOURCE_EXPORTS.json` | `f9946cb864846214f8a39f866987e045b6b6b4ccebd6295efa0c45dea19cd730` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/FINAL_REPORT.v2.md` | `17c64aef52f06905aac93105413ce5d792dfd7d46f74a2ac9ddde199f8d713ce` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/SYNTHESIS.md` | `94357cd92a04951b53a704ad8e39c020eca871fb933194f2a814e817105776be` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/COVERAGE.md` | `f5088abcdbf818b1acdf4af0949e10cc5e46a0151caf3418e42b1ae5e46f4dd8` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/RANKED_REMAINING_QUESTIONS.md` | `68096aae9db0eb3f7898208b723b35341d6ec51850a40adc9d18fab7c75e945d` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/RUN_LOG.md` | `b8a7d11ba4ec2f072b24e57a315d7cf6c490716332e4cf7701782be01d978015` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/reviews/state-source-review.md` | `6c05ca566d799864558e64c0e6d24b4cd47381334164a9f8ae21dfbae1697975` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/reviews/final-synthesis-review.md` | `efd08ae80f162442b8e04fad3b95a8f2061ee8c92b1d29133a916943ba38d2b5` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/PARENT_SOURCE_SPOTCHECK.json` | `2ab5a8b21ff12d812b49a0ef795139d2e8c9e684dba047512eaa42da4af2b9bc` |
+| `state/REPORT.md` | `fc0f6a13fdde606d950b8f95f3b66c2a899e8f524a0effbbe86b5e1471774075` |
+| `state/collect_state_v1.py` | `084389db91846c162c66e92370d3ce3ae8af457a8d8d66e3030496bed2c5a7a6` |
+| `state/OUTPUT_MANIFEST.json` | `c9d43b9d66bcd2f850b2118718f702371f355227af37e6f9503f973b44190500` |
+| `state/first-candidate/INDEX.json` | `68abcba7385f0f1576ab68739091f45b4661bee5a18baa29e67697f36e221ab9` |
+| `REFERENCE_CANDIDATE.md` | `b3686b6cf85ce9f02e038ca7687bf8e98ea4aa4ea7b6a1bdfb87216748404c68` |
+| `FINAL_REPORT.md` | `8d2a042ce795b6dc29377971832fffdc3bbe5e17c0f531f7736af307743eb17f` |
+| `WORDING_REFINEMENT.json` | `36a1ae03b9ef61187b6ec4850073f3a6a385a36a7014c0dc04e4b2dd1c4db05c` |
+| `integration/DOCUMENT_PATCH.json` | `5be087391f8becf2db3b069d9a237a43fba926f4ededcd08a4986395401e3b9e` |
+| `integration/HANDOFF_PATCH.json` | `8eafc07fbfa7e9a755ecc9db939539b33b02dcc6c4b0f0f658bdf7282e002301` |
+| `integration/HANDOFF_PATCH.v2.json` | `75e21ed7d673ddc86032acc68d5bbce629c9da2c59cf09090a9731d0e2f65efb` |
+| `integration/pre-edit/INDEX.json` | `b1fe06b25c61f805f2fa16cdc460667be46c49cdd72d77479081f73fb7ced03e` |
+| `integration/pre-edit/INDEX.with-handoff.json` | `3b8f8d7e57c3df3a23ca604c27d8ce2f36b74102d45b135117d4251fcfd02804` |
+| `integration/review-candidate/INDEX.json` | `2f0aa8b4b7573b1fb0182a23675dc0ac38f039a11a11e4fb572ae010512031d3` |

@@ -1,0 +1,66 @@
+{
+  "BYTE_GUARDS.json": {
+    "bytes": 937,
+    "sha256": "a5a2c9fe867610071e7a237fcdcd71264689627fee0b7591929f7134a04b31f5"
+  },
+  "CANDIDATE_SYMBOLS.json": {
+    "bytes": 1151,
+    "sha256": "fdedd6915c29d0f41e7c735f64fed8e4b27dcbdf1369d98874d9d78802704916"
+  },
+  "CONVERSION_TABLE.json": {
+    "bytes": 207,
+    "sha256": "0020b2dd98f52e94677b5130bdd60f7419ed1bc2a6f68a28609673163a46e921"
+  },
+  "INPUTS.json": {
+    "bytes": 632,
+    "sha256": "2d932d35cf344435b25d2a919470e2adc9bd5cba5e00cbdf68ba65b6ca65b568"
+  },
+  "METHOD.json": {
+    "bytes": 430,
+    "sha256": "24707f9b953b5f7843ca0322eb54a9008caf0490d5fa9f83351e8be3ba69d166"
+  },
+  "SOURCE_SPANS.json": {
+    "bytes": 1828,
+    "sha256": "b28cfe70cdd4a2b349d8605b7a5f8a41868b5d0f850c75d2a769a03d5b683a0f"
+  },
+  "VALUE_LEDGER.json": {
+    "bytes": 822,
+    "sha256": "f41abf6b4e5cb11b05f4140281a708bd1cc550d8edaccfb43b00c2297c768ab9"
+  },
+  "spans/basic-tag-write.txt": {
+    "bytes": 2438,
+    "sha256": "62e6911d2104fbaa2d07cf23c2db7fe08002dbcfe6e98d5ca0198c2ef3fcd0ed"
+  },
+  "spans/const-key-access.txt": {
+    "bytes": 765,
+    "sha256": "6ce78a325f976e2b8ef024018891d200b3d4b64275656b6dbfc327b17dd174a9"
+  },
+  "spans/find-normal-paths.txt": {
+    "bytes": 2746,
+    "sha256": "371a0a61f3797005c225a03e48602ef4cb65767f4c690e3efbba85f5d1a50ca6"
+  },
+  "spans/null-singleton.txt": {
+    "bytes": 2113,
+    "sha256": "4fc931826ef614b927901746f5a8796687a6f23cd2cf48cf01d7dce980fd313b"
+  },
+  "spans/type-byte.txt": {
+    "bytes": 254,
+    "sha256": "028c54c8926e67580b6241588ab0b6e5e30c76db8f24283e5cfb2bcc78874723"
+  },
+  "spans/unsigned-constructor.txt": {
+    "bytes": 619,
+    "sha256": "f1f648cb754b83f6f213be50c0625688d513643f3f74d1d58d2cd09d82724043"
+  },
+  "spans/unsigned-conversion-prefix.txt": {
+    "bytes": 2233,
+    "sha256": "a0d6d8e9f51ce7baaf3b52e9f30bfd1b93bbe3f1ec0d5a0fceabae00c352d2c6"
+  },
+  "spans/unsigned-predicate.txt": {
+    "bytes": 1752,
+    "sha256": "2412e6cd7cb97067f133043ae88b745f4b3dd5ea0aa12e85195ae7b4d72a5bc2"
+  },
+  "spans/value-type-constructor.txt": {
+    "bytes": 2113,
+    "sha256": "820435731288890a7a25dbad060e0eeca12522015ebd5cb49936571f55d52d34"
+  }
+}

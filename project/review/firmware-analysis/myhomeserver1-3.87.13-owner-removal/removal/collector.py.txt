@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+"""One local scene-owner removal caller and first-tree pair release/erase; static only."""
+import argparse,hashlib,importlib.util,json,re,struct,subprocess,sys
+from pathlib import Path
+sys.dont_write_bytecode=True
+D=Path(__file__).resolve().parent;P=D.parents[2];W=P.parents[2];H=lambda b:hashlib.sha256(b).hexdigest();J=lambda x:(json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+V=P/'research/2026-10-31/image_vfs.py';s=importlib.util.spec_from_file_location('remove_vfs',V);m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+S='/home/bticino/scheduling_manager/scheduling_manager';SHA='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26'
+SPANS=[('selected-local-caller',0x3e73c,0x3e74e),('matched-owner-removal',0xb6b5c,0xb6c5a),('keyed-tree-erase',0xb6324,0xb6474),('selected-scene-owner-dispose',0x1a048,0x1a050)]
+GUARDS=[(0x3e740,'1868'),(0x3e73e,'0799'),(0xb6b66,'8368'),(0xb6b68,'0191'),(0xb6bb0,'dcf81840'),(0xb6bbc,'4cf98f07'),(0xb6bcc,'6368'),(0xb6bd0,'6260'),(0xb6bd2,'012b'),(0xb6bfc,'9b68'),(0xb6bfe,'9847'),(0xb6c08,'a260'),(0xb63f6,'8069'),(0xb63ce,'1c21'),(0xb63de,'7361'),(0x1a048,'0c30')]
+def branch(z,pc):
+ a,b=struct.unpack('<HH',z);assert a&0xf800==0xf000;s=a>>10&1;i=1-((b>>13&1)^s);j=1-((b>>11&1)^s);n=(s<<24)|(i<<23)|(j<<22)|((a&1023)<<12)|((b&2047)<<1);return(pc+4+n-((1<<25)if s else 0))&0xffffffff
+def build():
+ v=m.ImageVFS();b=v.read_bytes(S);assert H(b)==SHA;ph=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);L=[struct.unpack_from('<8I',b,ph+i*sz)for i in range(n)]
+ def off(a,z):return next(o+a-va for t,o,va,_,fs,*_ in L if t==1 and va<=a and a+z<=va+fs)
+ def at(a,z):o=off(a,z);return b[o:o+z]
+ def w(a):return struct.unpack('<I',at(a,4))[0]
+ def text(a):return at(a,128).split(b'\0')[0].decode('ascii')
+ hp=v.root/S.lstrip('/');out={};spans=[]
+ for name,a,e in SPANS:
+  spans.append({'name':name,'start_va':hex(a),'end_va_exclusive':hex(e),'file_offset':hex(off(a,e-a)),'sha256':H(at(a,e-a))});z=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(hp)],text=True).replace(str(hp),S);z=re.sub(r' <([^>]+)>',lambda q:q[0]if'@plt'in q[1]else'',z);out['spans/'+name+'.txt']=z.encode()
+ for a,z in GUARDS:assert at(a,len(bytes.fromhex(z))).hex()==z,hex(a)
+ calls=[]
+ for pc,t in [(0x3e742,0xb6b5c),(0xb6bda,0xb6324),(0xb636e,0xb5dac),(0x1a04a,0xa5a3c)]:assert branch(at(pc,4),pc)==t;calls.append({'pc':hex(pc),'bytes':at(pc,4).hex(),'target':hex(t)})
+ # Bounded syntactic BL locator; only the selected local caller is semantically retained.
+ hits=[]
+ for pc in range(0x11880,0x113fb0-3,2):
+  x,y=struct.unpack('<HH',at(pc,4))
+  if x&0xf800==0xf000 and y&0xd000==0xd000 and branch(at(pc,4),pc)==0xb6b5c:hits.append(hex(pc))
+ assert hits==['0x2203c','0x3e742','0x403d8','0x43962','0x44b16','0x47a2a']
+ h=w(0x166c2c);assert h==0x15fd24;rt=w(h+4);name=text(w(rt+4));assert name=='St23_Sp_counted_ptr_inplaceI11SceneRunnerSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE'and w(h+16)==0x1a049
+ rel=subprocess.check_output(['readelf','-rW',str(hp)],text=True);rs=[]
+ for a in [0x166c2c,h+4,h+16,rt+4]:r=[x for x in rel.splitlines()if re.match('^'+f'{a:08x}'+r'\s',x)];assert len(r)==1 and'R_ARM_RELATIVE'in r[0];rs+=r
+ data=[{'start_va':hex(a),'end_va_exclusive':hex(e),'sha256':H(at(a,e-a))}for a,e in [(0xb6474,0xb647c),(0xb6ce4,0xb6cf8)]]
+ paths=[hp,V,P/'research/2026-11-01-serialization/vector-ownership/REPORT.v2.md',P/'research/2026-10-31-lifetime/worker-ownership/REPORT.v2.md',P/'research/2026-10-31-startup/registry/REPORT.md'];pins=[{'path':str(p.relative_to(W)),'bytes':len(p.read_bytes()),'sha256':H(p.read_bytes())}for p in paths]
+ out.update({'INPUTS.json':J(pins),'SOURCE_SPANS.json':J(spans),'BYTE_GUARDS.json':J([{'va':hex(a),'bytes':z}for a,z in GUARDS]),'DIRECT_BRANCHES.json':J(calls),'BOUNDED_CALL_LOCATOR.json':J({'start_va':'0x11880','end_va_exclusive':'0x113fb0','stride':2,'target':'0xb6b5c','syntactic_BL_candidates':hits,'selected_semantic_caller':'0x3e742','scope':'No indirect/otherencoding/globalcallerabsence claim; other candidates not promoted.'}),'OWNER_IDENTITY.json':J({'GOT_slot':'0x166c2c','header':hex(h),'rtti':hex(rt),'name':name,'dispose_slot':'header+16 / addresspoint+8','dispose_Thumb':'0x1a049','scene_inner_offset':12,'tailcall_target':'0xa5a3c','relocations':rs,'boundary':'Applies when removed control has this actual inherited loader-produced type. No forced control/vtable/count fixtures.'}),'DATA_SPANS.json':J(data),'REMOVAL_LEDGER.json':J({'caller':'3e73c loadssuppliedcontextfromSP20;3e740receiver=contextword0;IDnumericwordfromSP28;3e742callsb6b5c','receiver':'suppliednumericfirsttree root+8,nodekey16,pair20/24; equalitywithstartupmaincontainer is explicitpremise','matched_normal_order':['loadcontrolfromnode24','zeroentirepairnode20/24 atb6bbc','ifcontrolnonnull decrementstrong+4 via direct/atomicbranch','priorcount1 invokescontroladdresspoint+8 disposal beforecontinuation','onselectedlastweakcount requestcontroladdresspoint+12 destruction','normalcontinuationb6bda requestskeyederaseb6324','selectednonwhole-range eraserrequestsrebalance/remove thennode28Bdeleteandcount20decrement'],'eraser_paths':'selectednonwhole-rangebodyb63e2ff; whole-tree branchb636c callsb5dac andresetsheader, fullrecursiveimplementationnotinspected','inherited_positive_join':'selectedactualSceneRunnerownerdispose1a048 adds12 thena5a3c; priorreportscopedsceneholder/compiledactionvectorrelease appliesconditionally','scope':'Positive source removal/release request, not actualafterpoll removal, replacement, workercompletion, destructionguarantee or physical consequence.','unclosed':['callerouterargument/eligibility/activatedentry and actualsamecontaineridentity','normalproviders/tree/key/count/controltype and no concurrent mutation','fullrangeeraserrecursivebody/rebalance/deallocator/exceptionbehavior','otherowners/workerretention/completeconcurrentlifetime','configuredscene/assets and actualtargetexecution']}),'METHOD.json':J({'original_execution':0,'semantic_models_or_input_fixtures':0,'target_IO':0,'scope':'One suppliedlocalcallertoactualfirsttree pairclear/release/keyederase and inheritedselectedownerdispose. No transport/session/auth/framing/provider implementation or acceptedrequest parsing.','history':'Exclusivefirstgeneration; no generatedcandidate overwrite. Priorcompletedreportsreadonly.'})})
+ return out
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build();out['OUTPUT_MANIFEST.json']=J({'outputs':{n:{'bytes':len(z),'sha256':H(z)}for n,z in out.items()},'collector_sha256':H(Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes())})
+ if a.check:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  for n,p in json.loads((D/'first-candidate/INDEX.json').read_bytes()).items():z=(D/n).read_bytes();assert z==(D/'first-candidate'/n).read_bytes()and H(z)==p['sha256']and len(z)==p['bytes']
+ else:
+  C=D/'first-candidate';assert not C.exists();assert not any((D/n).exists()for n in out);copies={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),Path(__file__).name:Path(__file__).read_bytes()};ix=J({n:{'bytes':len(z),'sha256':H(z)}for n,z in copies.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in copies.items():p=C/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (C/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':a.check,'outputs':len(out),'spans':len(SPANS),'guards':len(GUARDS),'direct_branches':4,'locator_candidates':6,'relocations':4,'data_spans':2,'inputs':5,'original_execution':0}))
+if __name__=='__main__':main()

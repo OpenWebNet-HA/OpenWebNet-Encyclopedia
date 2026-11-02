@@ -1,0 +1,39 @@
+{
+  "actual_encrypted_support_containers_archived": 1,
+  "actual_inherited_receipt": {
+    "bytes": 235,
+    "path": "work/remaining-firmware-investigation/2026-11-01-run01/archive/R2_RECEIPT.json",
+    "sha256": "072092bb105685ab2aa0395cde439b431ac6a016037b501a06d2faf509b07793"
+  },
+  "actual_plaintext_database_objects_archived": 0,
+  "new_uploads_this_stage": 0,
+  "object": {
+    "bytes": 72774,
+    "classification": "Original encrypted support container, not recovered plaintext database",
+    "entries": [
+      {
+        "CRC32": "00000000",
+        "encrypted": false,
+        "name": "50/",
+        "uncompressed_bytes": 0
+      },
+      {
+        "CRC32": "00000000",
+        "encrypted": true,
+        "name": "50/extra.xml",
+        "uncompressed_bytes": 0
+      },
+      {
+        "CRC32": "52150069",
+        "encrypted": true,
+        "name": "50/master.sqlite",
+        "uncompressed_bytes": 289792
+      }
+    ],
+    "object_key": "sha256/82/4b/824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8",
+    "path": "work/f450-firmware/2.0.10-PROD/extracted/50.xtz",
+    "private_bucket": "openwebnet-data",
+    "sha256": "824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8"
+  },
+  "scope": "Cumulative THIS remaining-firmware investigation only, inherited actual prior receipt; no current upload or network readback"
+}

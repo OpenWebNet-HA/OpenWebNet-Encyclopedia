@@ -1,0 +1,7 @@
+{
+  "history": "Exclusive first candidate, no generated overwrite; exploratory disassembly slices are not input acceptance or native execution.",
+  "original_execution": 0,
+  "scope": "Local discriminator/ID guard/tables/loop/recipient aliases only; original imported parse/receiving/provider and transport/auth/session/framing bodies not followed.",
+  "semantic_models_or_input_fixtures": 0,
+  "target_IO": 0
+}

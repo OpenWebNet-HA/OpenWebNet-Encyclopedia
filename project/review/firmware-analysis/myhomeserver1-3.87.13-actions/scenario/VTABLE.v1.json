@@ -1,0 +1,25 @@
+{
+  "got_base_va": "0x1659a4",
+  "header_va": "0x164d3c",
+  "original_relative_relocations": [
+    "0016610c  00000017 R_ARM_RELATIVE        ",
+    "00164d44  00000017 R_ARM_RELATIVE        ",
+    "00164d48  00000017 R_ARM_RELATIVE        ",
+    "00164d4c  00000017 R_ARM_RELATIVE        ",
+    "00164d58  00000017 R_ARM_RELATIVE        "
+  ],
+  "primary_address_point": "0x164d44",
+  "rtti": "20ScenarioActionRunner",
+  "secondary_at_compiled_offset52_address_point": "0x164d58",
+  "slot_va": "0x16610c",
+  "words": [
+    "0x0",
+    "0x164880",
+    "0xcd849",
+    "0xcd6f1",
+    "0xcd551",
+    "0xffffffcc",
+    "0x164880",
+    "0x24fa5"
+  ]
+}

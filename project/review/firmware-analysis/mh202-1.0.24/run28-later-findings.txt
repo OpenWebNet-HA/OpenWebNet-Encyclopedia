@@ -1,0 +1,17 @@
+# MH202 later findings navigation through checkpoint27
+
+This supplement preserves the frozen24-row through21 guide and separate2-row run22 supplement. These9 later rows are bounded navigation, not coverage or a fresh semantic re-audit. New run28 source findings are excluded.
+
+| Row | Finding | Source | Remaining boundary |
+|---|---|---|---|
+|MH23-01|Selected utility-enabled branch saves/restores private state and writes entry-clock+600; strictly later comparison restores, equal does not.|[Report](../../../sound/run23/REPORT.md), line35|Run24 narrows arithmetic units conditionally; real activation/scheduling/output remain unproved.|
+|MH24-01|Packaged candidate formula and ordinary successful Linux ARM32 timeval ABI make the selected offset600 microseconds.|[Report](../../../clock/run24/REPORT.md), line15|No actual loader/syscall/success/provider/timer/physical measurement; host header is semantic context.|
+|MH24-02|Selected kind5/DIM15 tenth ordered converted value reaches private utility260, default0; conversion7 stores7.|[Report](../../../sound/run24/REPORT.md), line51|Full grammar/configuration/activation/persistence remains unproved.|
+|MH25-01|Selected command12 and distinct query312 yield separate internal bodies and independent reverse candidates, with distinct reverse9/forward25 axes.|[Report](../../../who25/run25-tr/REPORT.md), line15|Not native raw admission, natural inverse, domain support or physical behavior.|
+|MH25-02|Own24-byte query/pending/ID/source state; mismatch/state2 forwarding and reset/receipt requests are bounded local contracts.|[Report](../../../who25/run25-stm/REPORT.md), line68|Actual outer admission/timers/lifetime/delivery/global correlation remain unproved.|
+|MH26-01|Fresh translator/address/config premises and own8-byte pending/ID handling differ from other families.|[Report](../../../who14/run26/REPORT.md), line50|No complete domain/source meaning/framework timing or physical proof.|
+|MH26-02|Selected padding/parameter packing and own no-allocation initializer/receipt/field paths; separate signed/unsigned guards.|[Report](../../../who15/run26/REPORT.md), line48|No public domain expansion, configured address/provider or physical proof.|
+|MH27-01|Original core/parser/new-ID produces Q handed as the same object without reseeding to own initializer/application; application changes only envelope metadata4/8 under opaque API models.|[Report](../../../who25/run27-native/REPORT.v2.md), line43|Actual source/timer/registry/callback/publication/OS/physical unexecuted; corrected v2 table replaces only one wrong first-report hash.|
+|MH27-02|Positive packaged debug plugin registration and exact parsed WHO29 check; selected getter/constructor-call boundary is concrete.|[Report](../../../routing/run27/REPORT.md), line38|No actual activation/current logger state/constructor-output/wire/public grammar/exclusive owner claim.|
+
+Exact report/review hashes, locators, original-method distinctions and retained corrections are in LATER_FINDINGS.json. Current source PASS does not authenticate unavailable run18/run21 intermediate drafts.

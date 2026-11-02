@@ -1,0 +1,85 @@
+{
+  "adjacent_value_limit": "0xa8f1 queried as an exact integer only; no alternate ISA, Thumb state, new entry or address interpretation assigned",
+  "aligned_pointer_queries": [
+    {
+      "VA": "0x8000",
+      "aligned_words": 38667,
+      "exact_integer_values_queried": [
+        "0xa8f0",
+        "0xa8f1"
+      ],
+      "file_bytes": 154668,
+      "file_offset": "0x0",
+      "matches": []
+    },
+    {
+      "VA": "0x36000",
+      "aligned_words": 506,
+      "exact_integer_values_queried": [
+        "0xa8f0",
+        "0xa8f1"
+      ],
+      "file_bytes": 2024,
+      "file_offset": "0x26000",
+      "matches": []
+    }
+  ],
+  "bounded_omissions": [
+    "Indirect/computed/relative/relocated/interworking representations and external objects not proved absent",
+    "No alternate architecture/ISA, broader address sweep, receiver/transport/provider body or dynamic execution attempted"
+  ],
+  "immediate_query": {
+    "VA": "0xa250",
+    "aligned_words": 33978,
+    "bytes": 135912,
+    "encoding_candidate_words": 4889,
+    "file_offset": "0x2250",
+    "interpretation": "Words/pools may resemble instruction encodings;4889 is not a call/function/execution count. No containing body or non-target instruction is decoded/exported.",
+    "rule": "(word & 0x0e000000)==0x0a000000 and condition!=15; target=VA+8+4*signextend24(word&0xffffff)",
+    "section": ".text",
+    "selected_target_matches": []
+  },
+  "inherited_target": {
+    "VA": "0xa8f0",
+    "boundary_word": "0xe1a0c00d",
+    "role": "Previously selected local routine only; not a symbol/natural-entry/admission proof"
+  },
+  "mapping_context": {
+    "ELF32_LE_ARM_EXEC_rawflags": "0x202",
+    "PT_LOAD": [
+      [
+        1,
+        0,
+        32768,
+        32768,
+        154668,
+        154668,
+        5,
+        32768
+      ],
+      [
+        1,
+        155648,
+        221184,
+        221184,
+        2024,
+        12252,
+        6,
+        32768
+      ]
+    ]
+  },
+  "original": {
+    "bytes": 159048,
+    "path": "work/mh200n-firmware/1.1.8/analysis/application/home/bticino/bin/bt_taskmanager",
+    "sha256": "ad68f9bf43f7f10af122f34d3cb14b7d8c02730c46225a9a6cd1bf3e663072cb"
+  },
+  "scope": "One finite target-directed reference candidate lookup, not body disassembly/interpretation or a complete caller census",
+  "symbol_value_queries": [
+    {
+      "entries": 140,
+      "exact_selected_value_matches": [],
+      "section": ".dynsym"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+# MH202 1.0.24 Review Evidence
+
+This capsule supports the [MH202 Firmware analysis](../../../../reverse-engineering/firmware-analysis/mh202-1.0.24.md). The examination is in progress; initial reports and source reviews cover selected static paths only. Exact original images, the read-only filesystem accessor, full disassembly and reproducible collectors remain in the separate local research dossier.
+
+## Initial checkpoint
+
+| Report | Scope |
+| --- | --- |
+| [Inventory](run1-inventory-report.txt) | Original regular-file and selected executable/code identities |
+| [Scenario engine](run1-functional-report.txt) | WHO17 control, extra/4 loader, callbacks and interpreter launch boundary |
+| [Protocol](run1-protocol-report.txt) | Configured routing, provider/layout differences and selected diagnostics |
+| [Platform](run1-boot-report.txt) | Boot/storage/update declarations and original HAL branches |
+| [Web](run1-web-report.txt) | Packaged PHP/browser command, index and state consumers |
+
+The [provenance record](run1-provenance.json) pins report/collector/source-review identities. Independent reviews cover [functional paths](run1-functional-review.txt), [protocol](run1-protocol-review.txt), [platform](run1-boot-review.txt) and [inventory/web](run1-inventory-web-review.txt). These are source reviews and host reproduction, not a complete process or hardware oracle.
+
+## Limits and history
+
+No original ARM/PHP/JavaScript or service ran in this checkpoint. Packaged credential-bearing templates are withheld. The original manufacturer archive is private-archive-only and is not copied into this capsule. Missing2.xtz/4.xtz and mounted persistent data remain unexamined; distinct code consumers establish extra2 language and extra4 script associations, not exact missing archive contents.
+
+The Device remains review-ready for wider source reconciliation. Later batches retain separate evidence/review identities; source snapshots preserve prior review pins before changing reviewed documentation. Existing F454 evidence and its completed reviews remain separate.
+
+The [run1 integration review](run1-integration-review.md) and [checkpoint validation](run1-validation.json) record the promoted wording, current document identities and repository checks.
+
+## State and routing continuation
+
+The [continuation](../../../../reverse-engineering/firmware-analysis/mh202-1.0.24-state-and-routing.md) has separate [run2 provenance](run2-provenance.json), [taskmanager](run2-functional-report.txt), [interpreter](run2-interpreter-report.txt), [protocol](run2-protocol-report.txt) and [daemon](run2-boot-report.txt) reports. Four [source reviews](run2-functional-review.txt), [interpreter review](run2-interpreter-review.txt), [protocol review](run2-protocol-review.txt) and [daemon review](run2-boot-review.txt) retain static scope. The interpreter's [pre-promotion literal correction](run2-interpreter-correction.txt) is preserved. Exact earlier document bytes are in [run1 snapshots](reviewed/run1/SOURCE_SNAPSHOTS.json).
+
+The [run2 integration review](run2-integration-review.md) and [validation](run2-validation.json) record current wording and checks. The overnight research remains active; full Device gates remain pending.
+
+## Action, trigger and startup refinement
+
+[Run3 provenance](run3-provenance.json) pins the [action/IPC](run3-functional-report.txt), [trigger comparison](run3-triggers-report.txt), [diagnostic continuation](run3-protocol-report.txt) and [startup/status](run3-boot-report.txt) reports with [functional](run3-functional-review.txt), [trigger](run3-triggers-review.txt), [protocol](run3-protocol-review.txt) and [platform](run3-boot-review.txt) source reviews. The [directive literal correction](run3-functional-correction.txt) retains pre-promotion history. Earlier reviewed document bytes remain in [run2 snapshots](reviewed/run2/SOURCE_SNAPSHOTS.json).
+
+The [run3 integration review](run3-integration-review.md) and [validation](run3-validation.json) retain current scope and checks. Full source reconciliation and runtime/physical coverage remain unfinished.
+
+## Caller, saved-state and configuration contracts
+
+[Run4 provenance](run4-provenance.json) pins [action callers/timing](run4-functional-report.txt), [saved scenario state](run4-lifecycle-report.txt), [diagnostic factory/collector](run4-protocol-report.txt) and [configuration persistence](run4-boot-report.txt), with [functional](run4-functional-review.txt), [saved-state](run4-lifecycle-review.txt), [protocol](run4-protocol-review.txt) and [platform](run4-boot-review.txt) source reviews. A [copy-operand correction](run4-boot-correction.txt) preserves the author-stage history. Exact prior documents are in [run3 snapshots](reviewed/run3/SOURCE_SNAPSHOTS.json).
+
+The [run4 integration review](run4-integration-review.md) and [validation](run4-validation.json) retain current scope. All original execution counts remain zero; runtime, physical and wider Device gates remain pending.
+
+## Clock, COSO and default fallback
+
+[Run5 provenance](run5-provenance.json) pins the [clock helper](run5-functional-report.txt), [COSO scenario translation](run5-coso-report.txt), [diagnostic raw-buffer provenance](run5-protocol-report.txt) and [default fallback](run5-boot-report.txt) reports, with [functional](run5-functional-review.txt), [COSO](run5-coso-review.txt), [protocol](run5-protocol-review.txt) and [platform](run5-boot-review.txt) source reviews. The COSO report retains its absent-parameter correction; prior reviewed documents remain in [run4 snapshots](reviewed/run4/SOURCE_SNAPSHOTS.json).
+
+The [run5 integration review](run5-integration-review.md) and [validation](run5-validation.json) retain current scope. Original execution remains zero; complete grammar, runtime/physical behavior and wider source gates remain unfinished.
+
+## Readiness, pending state and helper returns
+
+[Run6 provenance](run6-provenance.json) pins [query readiness/gate](run6-lifecycle-report.txt), [scenario STM](run6-functional-report.txt), [diagnostic collection](run6-protocol-report.txt) and [daemon helper returns](run6-boot-report.txt), with [readiness](run6-lifecycle-review.txt), [STM](run6-functional-review.txt), [protocol](run6-protocol-review.txt) and [platform](run6-boot-review.txt) source reviews. Earlier exact document bytes remain in [run5 snapshots](reviewed/run5/SOURCE_SNAPSHOTS.json).
+
+The [run6 integration review](run6-integration-review.md) and [validation](run6-validation.json) retain conditional source scope. Original firmware execution remains zero; complete runtime, physical and wider Device evidence gates remain pending.

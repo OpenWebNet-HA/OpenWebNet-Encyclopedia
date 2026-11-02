@@ -1,0 +1,17 @@
+{
+  "GOT_slot": "0x166c2c",
+  "boundary": "Applies when removed control has this actual inherited loader-produced type. No forced control/vtable/count fixtures.",
+  "dispose_Thumb": "0x1a049",
+  "dispose_slot": "header+16 / addresspoint+8",
+  "header": "0x15fd24",
+  "name": "St23_Sp_counted_ptr_inplaceI11SceneRunnerSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE",
+  "relocations": [
+    "00166c2c  00000017 R_ARM_RELATIVE        ",
+    "0015fd28  00000017 R_ARM_RELATIVE        ",
+    "0015fd34  00000017 R_ARM_RELATIVE        ",
+    "00162c20  00000017 R_ARM_RELATIVE        "
+  ],
+  "rtti": "0x162c1c",
+  "scene_inner_offset": 12,
+  "tailcall_target": "0xa5a3c"
+}

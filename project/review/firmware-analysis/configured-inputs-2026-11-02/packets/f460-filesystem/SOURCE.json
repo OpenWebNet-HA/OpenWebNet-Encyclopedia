@@ -1,0 +1,350 @@
+{
+  "ELF_class": 64,
+  "PT_LOAD": [
+    [
+      1,
+      5,
+      0,
+      0,
+      0,
+      2106758,
+      2106758,
+      65536
+    ],
+    [
+      1,
+      6,
+      2107680,
+      2173216,
+      2173216,
+      51288,
+      58200,
+      65536
+    ]
+  ],
+  "branches": [
+    {
+      "VA": "0x2cb78",
+      "raw_zero_target": "0x2d114",
+      "target_body": "unexpanded"
+    },
+    {
+      "VA": "0x2cbac",
+      "producer_of_selectedW28zero": "UNPROVED within this prefix",
+      "raw_nonzero_target": "0x2d038",
+      "zero_fallthrough": "0x2cbb0"
+    },
+    {
+      "VA": "0x2cc1c",
+      "nonzero_fallthrough": "0x2cc20 inherited allocation",
+      "raw_zero_target": "0x2d188",
+      "target_body": "unexpanded, no global loop/ignore claim"
+    }
+  ],
+  "fixed_guards": [
+    {
+      "VA": "0x2ca78",
+      "word": "f9402ff6"
+    },
+    {
+      "VA": "0x2ca8c",
+      "word": "b50002b6"
+    },
+    {
+      "VA": "0x2cae4",
+      "word": "910143fb"
+    },
+    {
+      "VA": "0x2cae8",
+      "word": "aa1b03e0"
+    },
+    {
+      "VA": "0x2caf8",
+      "word": "97ffe036"
+    },
+    {
+      "VA": "0x2cafc",
+      "word": "aa0003f6"
+    },
+    {
+      "VA": "0x2cb00",
+      "word": "97ffdc80"
+    },
+    {
+      "VA": "0x2cb34",
+      "word": "f0000b42"
+    },
+    {
+      "VA": "0x2cb38",
+      "word": "9133d442"
+    },
+    {
+      "VA": "0x2cb3c",
+      "word": "f0000b41"
+    },
+    {
+      "VA": "0x2cb40",
+      "word": "9133c021"
+    },
+    {
+      "VA": "0x2cb64",
+      "word": "910483f9"
+    },
+    {
+      "VA": "0x2cb68",
+      "word": "aa1703e1"
+    },
+    {
+      "VA": "0x2cb6c",
+      "word": "aa1903e0"
+    },
+    {
+      "VA": "0x2cb70",
+      "word": "5280003c"
+    },
+    {
+      "VA": "0x2cb74",
+      "word": "97ffddc3"
+    },
+    {
+      "VA": "0x2cb78",
+      "word": "34002ce0"
+    },
+    {
+      "VA": "0x2cbac",
+      "word": "3500247c"
+    },
+    {
+      "VA": "0x2cbb0",
+      "word": "aa1303e8"
+    },
+    {
+      "VA": "0x2cbb4",
+      "word": "aa1603e0"
+    },
+    {
+      "VA": "0x2cbb8",
+      "word": "94002ec6"
+    },
+    {
+      "VA": "0x2cbbc",
+      "word": "9106a3e0"
+    },
+    {
+      "VA": "0x2cbc0",
+      "word": "910663fc"
+    },
+    {
+      "VA": "0x2cbc4",
+      "word": "aa0003e3"
+    },
+    {
+      "VA": "0x2cbc8",
+      "word": "b0000b41"
+    },
+    {
+      "VA": "0x2cbcc",
+      "word": "b0000b42"
+    },
+    {
+      "VA": "0x2cbd0",
+      "word": "9107f042"
+    },
+    {
+      "VA": "0x2cbd4",
+      "word": "aa1c03e0"
+    },
+    {
+      "VA": "0x2cbd8",
+      "word": "9107a021"
+    },
+    {
+      "VA": "0x2cbe4",
+      "word": "97fffe4b"
+    },
+    {
+      "VA": "0x2cbe8",
+      "word": "9106e3f8"
+    },
+    {
+      "VA": "0x2cbec",
+      "word": "aa1803e0"
+    },
+    {
+      "VA": "0x2cbf0",
+      "word": "97ffdbe4"
+    },
+    {
+      "VA": "0x2cbf4",
+      "word": "aa1c03e0"
+    },
+    {
+      "VA": "0x2cbf8",
+      "word": "97ffdd46"
+    },
+    {
+      "VA": "0x2cbfc",
+      "word": "aa1c03e1"
+    },
+    {
+      "VA": "0x2cc00",
+      "word": "aa1303e0"
+    },
+    {
+      "VA": "0x2cc04",
+      "word": "97ffdd9f"
+    },
+    {
+      "VA": "0x2cc08",
+      "word": "2a0003f8"
+    },
+    {
+      "VA": "0x2cc0c",
+      "word": "aa1c03e0"
+    },
+    {
+      "VA": "0x2cc10",
+      "word": "94002e98"
+    },
+    {
+      "VA": "0x2cc14",
+      "word": "aa1303e0"
+    },
+    {
+      "VA": "0x2cc18",
+      "word": "94002e96"
+    },
+    {
+      "VA": "0x2cc1c",
+      "word": "34002b78"
+    }
+  ],
+  "import_call_proofs": [
+    {
+      "GOT": "0x21ec58",
+      "PLT": "0x24bd0",
+      "PLT_bytes_hex": "d00f00d0112e46f91062319120021fd6",
+      "actual_relocation": "000000000021ec58  0000014700000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNKSt10filesystem7__cxx1118directory_iteratordeEv@GLIBCXX_3.4.26 + 0",
+      "call_VA": "0x2caf8",
+      "symbol": "_ZNKSt10filesystem7__cxx1118directory_iteratordeEv"
+    },
+    {
+      "GOT": "0x21e4f0",
+      "PLT": "0x23d00",
+      "PLT_bytes_hex": "d00f00f0117a42f910c2139120021fd6",
+      "actual_relocation": "000000000021e4f0  0000003800000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNKSt10filesystem7__cxx114path17_M_find_extensionEv@GLIBCXX_3.4.26 + 0",
+      "call_VA": "0x2cb00",
+      "symbol": "_ZNKSt10filesystem7__cxx114path17_M_find_extensionEv"
+    },
+    {
+      "GOT": "0x21e7b0",
+      "PLT": "0x24280",
+      "PLT_bytes_hex": "d00f00d011da43f910c21e9120021fd6",
+      "actual_relocation": "000000000021e7b0  0000009900000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNKSt10filesystem7__cxx114path7compareERKS1_@GLIBCXX_3.4.26 + 0",
+      "call_VA": "0x2cb74",
+      "symbol": "_ZNKSt10filesystem7__cxx114path7compareERKS1_"
+    },
+    {
+      "GOT": "0x21e430",
+      "PLT": "0x23b80",
+      "PLT_bytes_hex": "d00f00f0111a42f910c2109120021fd6",
+      "actual_relocation": "000000000021e430  0000001e00000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNSt10filesystem7__cxx114path5_ListC1Ev@GLIBCXX_3.4.26 + 0",
+      "call_VA": "0x2cbf0",
+      "symbol": "_ZNSt10filesystem7__cxx114path5_ListC1Ev"
+    },
+    {
+      "GOT": "0x21e6f8",
+      "PLT": "0x24110",
+      "PLT_bytes_hex": "d00f00d0117e43f910e21b9120021fd6",
+      "actual_relocation": "000000000021e6f8  0000007f00000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNSt10filesystem7__cxx114path14_M_split_cmptsEv@GLIBCXX_3.4.26 + 0",
+      "call_VA": "0x2cbf8",
+      "symbol": "_ZNSt10filesystem7__cxx114path14_M_split_cmptsEv"
+    },
+    {
+      "GOT": "0x21e7b0",
+      "PLT": "0x24280",
+      "PLT_bytes_hex": "d00f00d011da43f910c21e9120021fd6",
+      "actual_relocation": "000000000021e7b0  0000009900000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNKSt10filesystem7__cxx114path7compareERKS1_@GLIBCXX_3.4.26 + 0",
+      "call_VA": "0x2cc04",
+      "symbol": "_ZNKSt10filesystem7__cxx114path7compareERKS1_"
+    }
+  ],
+  "local_requests": [
+    {
+      "body": "OPAQUE/UNEXPANDED",
+      "call_VA": "0x2cbb8",
+      "target_VA": "0x386d0"
+    },
+    {
+      "body": "OPAQUE/UNEXPANDED",
+      "call_VA": "0x2cbe4",
+      "target_VA": "0x2c510"
+    },
+    {
+      "body": "OPAQUE/UNEXPANDED",
+      "call_VA": "0x2cb4c",
+      "target_VA": "0x2c510"
+    },
+    {
+      "body": "OPAQUE/UNEXPANDED",
+      "call_VA": "0x2cc10",
+      "target_VA": "0x38670"
+    },
+    {
+      "body": "OPAQUE/UNEXPANDED",
+      "call_VA": "0x2cc18",
+      "target_VA": "0x38670"
+    }
+  ],
+  "machine": 183,
+  "models_fixtures_SQL": 0,
+  "natural_outer_caller": "UNPROVED",
+  "new_code_spans": [
+    {
+      "bytes": 512,
+      "bytes_hex": "f70302f9f80702f9122f0094e013c03d163c184e763a00b4970f00d0e07647f900004039803d0034c00a40b900040011c00a00b9e017803df77647f9e0024039203c0034c00a40b900040011c00a00b9e00316aaef4e0094f62f40f9800f00d0009446f900400091e01300f9b60200b5e02740f9400000b4e64e0094f70342f920008052f80742f9810f00d021bc46f9e3e741f9220040f9630002eb020080d2c1420054f5fb41f9f6ff41f9ff430f91f35341a9fd7bc6a8bf2303d5c0035fd6fb1302f9fb430191e0031baaf90b02f9fa0f02f9fc1702f936e0ff97f60300aa80dcff971f0000f1241841baa12b0054e0c30491ffc30439e10300aae0030591e10b00f9e17f12a916dcff97f7230591fa630591420b00f042d43391410b00f021c03391e00317aafaa700f971feff97f8a30591e00318aa0adcff97e00317aa6cddff97f9830491e10317aae00319aa3c008052c3ddff97e02c0034e1b740f9610000b4e00318aafadbff97e0a740f91f001aeb80000054e1af40f921040091dcddff97e00319aab22e00947c240035e80313aae00316aac62e0094e0a30691fc630691e30300aa410b00b0420b00b042f00791e0031caa21a00791e31700f9e3cf00f94bfeff97f8e30691e00318aae4dbff97e0031caa46ddff97e1031caae00313aa9fddff97f803002ae0031caa982e0094e00313aa962e0094782b0034",
+      "end_exclusive": "0x2cc20",
+      "sha256": "8c05185d4d5b432d59ebd00cdbd6927c89345be75559f578c8a3eeca077cf413",
+      "start": "0x2ca20"
+    }
+  ],
+  "original": {
+    "bytes": 2161128,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager",
+    "role": "Own immutable F460 ELF64/AArch64 source",
+    "sha256": "5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62"
+  },
+  "original_execution": 0,
+  "owner_function_symbol": "UNASSIGNED; no retained defined function containing2cc20, nearest disassembly labels are not identity",
+  "provider_JSON_filesystem_or_target_execution": 0,
+  "safe_literal_range_joins": [
+    {
+      "NUL_terminated_bytes_hex": "2e6a736f6e00",
+      "begin": "0x197cf0",
+      "begin_instructions": [
+        "0x2cb3c",
+        "0x2cb40"
+      ],
+      "end_exclusive": "0x197cf5",
+      "end_instructions": [
+        "0x2cb34",
+        "0x2cb38"
+      ],
+      "text": ".json"
+    },
+    {
+      "NUL_terminated_bytes_hex": "616374696f6e5f7363686564756c652e6a736f6e00",
+      "begin": "0x1951e8",
+      "begin_instructions": [
+        "0x2cbc8",
+        "0x2cbd8"
+      ],
+      "end_exclusive": "0x1951fc",
+      "end_instructions": [
+        "0x2cbcc",
+        "0x2cbd0"
+      ],
+      "text": "action_schedule.json"
+    }
+  ]
+}

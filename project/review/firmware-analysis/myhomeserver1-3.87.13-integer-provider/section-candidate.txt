@@ -1,0 +1,10 @@
+
+## Candidate signed-integer provider source contract
+
+A separate [signed-provider review capsule](../../project/review/firmware-analysis/myhomeserver1-3.87.13-integer-provider/README.md) examines the exact packaged libjsoncpp.so.1.9.5 candidate, SHA256 `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36`. This narrows a scalar premise of the selected trigger path through original source, rather than importing behavior from the executed double helper or the separate unsigned study.
+
+Actual Value(int) entry0x15c40 preserves its signed32 argument, supplies type1 to initBasic and stores the argument as a low word with an arithmetic-sign-extension high word at object+0/+4. The candidate type() reads byte+8. Its actual type1 asInt route at0x1687a calls isInt, then loads the low word on the nonzero normal path.
+
+The selected type1 isInt body at0x1556c adds0x80000000 to the stored64-bit pair through ADDS/ADC. CLZ of the adjusted high word, shifted right by5, returns1 exactly when that high word is zero. For the constructor's sign-extended signed32 representation, this range test succeeds and the selected getter loads the original argument word. This is source algebra, without a numerical fixture or executed provider call.
+
+Candidate self-binding, valid unchanged objects, ordinary ABI/canary/delegate returns and all JSON member/map/move/assignment behavior remain premises. The source link is not full serializer/reparse execution, arbitrary JSON input acceptance, threshold-domain validation or physical-unit evidence. This supplement adds zero original execution/replay/model cases; the existing eight-entry/340-visit double-helper ledger is unchanged. Other type/error branches and full lifetime/unwind are outside this selected proof.

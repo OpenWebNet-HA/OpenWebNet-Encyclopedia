@@ -1,0 +1,10 @@
+# SCENARIO report branch-wording precision
+
+The first immutable REPORT.md and all collector outputs, manifests and first snapshots remain unchanged. After first publication, the author noticed the predicate-result sentence imprecisely described a zero-result branch. The parent authorized a new report version. This is a source-facing instruction-description correction; the already stated zero-result cleanup versus nonzero-result retrieval outcome is unchanged.
+
+- Original REPORT.md SHA256: `5bdc4d3073d388aae6589d92f838a0de6ea121bc3a0c2a1b9ce16bde934ab39d`.
+- Authoritative REPORT.v2.md SHA256: `159b9fbdd60e0e8f16256e1deecd6fa6df11a43bba057914d99fb2bfdb2fefd5`.
+- Exact old bytes interpreted as UTF-8: `A zero result branches at0x113da4 to the callback cleanup/return path0x113da6. A nonzero result reaches0x113df2,`
+- Exact replacement: `At0x113da4, the original CBNZ branches on a nonzero result to0x113df2; a zero result falls through to the callback cleanup/return path0x113da6. The nonzero path then reaches0x113df2,`
+
+The original instruction at0x113da4 is CBNZ r0,0x113df2. Zero takes its fallthrough0x113da6. No firmware/source/evidence/collector/count changes or rerun were needed; v1 --check intentionally still reproduces its unchanged v1 outputs. The report difference is exactly the one substitution above, verified before creating this new file. Actual earlier bytes exist and are independently retained, not reconstructed.

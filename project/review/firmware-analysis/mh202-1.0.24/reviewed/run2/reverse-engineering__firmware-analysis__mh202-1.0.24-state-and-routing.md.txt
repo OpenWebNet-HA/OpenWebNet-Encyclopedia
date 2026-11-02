@@ -1,0 +1,66 @@
+# MH202 1.0.24 State and Routing
+
+This continuation adds selected static joins to the [MH202 build profile](mh202-1.0.24.md). It uses the same archive SHA-256 `bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7`. Original-code execution remains `0`. Original ELF virtual addresses, file hashes, reproducible collectors and source reviews are recorded in the [run2 provenance](../../project/review/firmware-analysis/mh202-1.0.24/run2-provenance.json).
+
+## Event matching and the configured panic frame
+
+An actual `bt_taskmanager` path now joins its WHO callback table, a changed-value handler, trigger matching and stored callback invocation. For the selected WHO 9 route, WHERE `1..10` and a changed cached WHAT can reach the matcher, subject to an additional readiness field. A first-known value and an unchanged value follow different paths; this is not a general rule for every event family.
+
+Before dispatch, the outer handler clears trigger-hit fields. The matcher marks matching entries, and the callback traversal clears each hit before calling its stored callback with the script record. It traverses all matched entries. The ordinary comparator has bracket/range handling; its complete pattern grammar and a separate special comparator remain unexamined. Configured trigger contents and actual event delivery are unavailable.
+
+The previously unresolved command gate now has a concrete setter. A configuration read selects `configuratore/setup/sicurezza/panic`; a full-frame comparison against that buffer sets global `0x1b4c4` and iterates scripts whose control state is nonzero, calling stop. The same global gates later ordinary matching and WHO 17 normal commands. This establishes a configured panic-frame path, not the accepted raw input, installed key, gate-reset mechanism or the manual's complete recovery procedure.
+
+The inspected matcher, start callback and always-start pass do not themselves test disabled field `+52`. That does not establish that a disabled script performs actions: interpreter-side and other lifecycle gates remain separate. See the [event/control report](../../project/review/firmware-analysis/mh202-1.0.24/run2-functional-report.txt).
+
+## Control state, FIFO messages and restoration
+
+The original FIFO receiver and main-loop handoff now reach the native message handler. These letters are internal IPC commands, not additional WHO 17 wire operations.
+
+| Received first byte | Selected native receiver action |
+| --- | --- |
+| `S` | Set control state `2`, parse PID from payload offset `+2`, with additional previous-state cleanup conditions |
+| `R` | Set control state `2` |
+| `P` | Set control state `3` |
+| `E` | Invoke cleanup and selected request-association clearing |
+| `F` | Under length/global guards, parse a supplied OPEN string and pass it to the request helper; a qualifying helper result sets state `4` |
+
+The earlier WHO 17 status formatter tests whether control field `+60` is zero. Nonzero values include pending/request/pause/stop states; a formatted `WHAT 1` alone is not proof of a running child or physical action.
+
+Two startup passes have distinct conditions and a concrete order. The saved-status restoration pass interprets numeric mask `1` as execution/control and mask `2` as disabled. It relaunches saved-active records only when the `$RESTART=SI` flag is set. The subsequent always-start pass tests inactive control state and the `SEMPRE` flag. The outer readiness/once guard is retained. This supports saved-state restoration, not universal restart after every normal completion or EOF. Saved-file validity, producer messages, complete readiness and request/publication ownership remain open.
+
+## Interpreter conditional and operator spelling
+
+The original `bt_script` loop seeks to a stored line offset, reads into `linea`, recognizes prefix `IIF`, calls `PARENTESI` with comma and source position `3`, then calls the candidate `libdomotica` `IIF` implementation. The return value is unused; the interpreter continues testing the line's ordinary instruction prefixes.
+
+The selected numeric-variable branch reaches signed integer comparison. Its original operator strings are `=`, `<`, `<=`, `>`, `>=`, `<>`; an unrecognized operator returns zero in that helper. Additional variable/string branches and the complete expression grammar remain separate. A pre-promotion host assumption about equality spelling was caught by the original-literal assertion and corrected; the [correction record](../../project/review/firmware-analysis/mh202-1.0.24/run2-interpreter-correction.txt) preserves it.
+
+The helper's two conditional tails request one versus two comma-prefix removals through `strcpy` on the global line buffer. Source and destination overlap. The retained host example is explicitly a hypothetical forward-copy suffix model; actual packaged-libc handling and resulting script execution were not demonstrated. The library and executable also export `linea`; the composed global-data join retains its provider-resolution assumption. This is a concrete per-line conditional target, not established equivalence to the product's entire scenario-level Only if stage. See the [interpreter report](../../project/review/firmware-analysis/mh202-1.0.24/run2-interpreter-report.txt).
+
+## Candidate process providers and a WHO 1000 exception
+
+Modeled dependency scopes now separate two same-named parser implementations, under the declared library paths, conventional fallback directories, and explicit no-preload/no-extra-namespace/runtime-replacement assumptions.
+
+| Process scope | Unique objects including executable | Selected candidate providers |
+| --- | ---: | --- |
+| `bt_device` | `27` | `libopen` parser, `libbase` transport, `libdiag` translator; `libcommon` absent from this modeled scope |
+| `openserver` | `29` | `libcommon` parser; `libopen` and `libbase` absent from this modeled scope |
+
+This is a static dependency/symbol model, not execution of the target loader. It narrows which native layout should be used for a specific code join and does not describe a C++ object crossing process boundaries.
+
+A selected diagnostic General path explains why the generic WHO-to-SCS table's missing WHO `1000` entry is insufficient for a global support verdict. For a conditional measure DIM `0`, the key generator forms `R0P0`; the General constructor maps that key to its all-parameters member. That member supplies suffix `8C000100`. The later General method calls WHERE resolution first, then has a WHO `1000` branch that supplies fixed header `$04` instead of the generic header helper.
+
+Under successful parser, selected-class, WHERE and ordinary C++ completion assumptions, the internal ASCII candidate is `$048C000100`. It is not an accepted raw request, serial bytes, a send call or a physical reply. Complete WHERE-map registration, outer class/key selection and the vector/response-type consumer are still needed. See the [provider/diagnostic report](../../project/review/firmware-analysis/mh202-1.0.24/run2-protocol-report.txt).
+
+## Environment selector and the child launch filter
+
+The demonstrated daemon selector reads `MYRECOVERY` from an export of the current process environment. It does not demonstrate a consumer of the packaged `sp/Recovery` marker or a bootloader-variable reader. Exact value `yes` requests running-copy flag `2`; other values request `1`. Writes, readback, environment-file handling and status helpers retain their delegate/failure boundaries.
+
+A readback value `2` reaches a route that requests working status `2` and invokes the child launcher. The namespaces remain distinct: running-copy flag, current working status, per-child XML `working_mode`, packaged `normal_status`, and the recovery marker are separate quantities.
+
+The runtime configuration pointer initially names image-root-relative `var/tmp/stack_open.xml`; its producer/replacement is not yet established. The selected XML text callback stores each child's `working_mode` into record `+8`. The actual launcher skips that record only when its saved current status equals `2` and the child mode equals `0`. Other current statuses do not apply this exclusion in that helper. Therefore a packaged child mode `0` is not a universal disabled flag.
+
+On the packaged nine-entry list, the conditional status-`2` model selects openserver, scsserver and bt_device; the other declared model cases include all nine. These are launch-call choices, not successful children or readiness observations. Argument-table validity, `call_nowait` semantics, stored results, actual XML contents and later supervision remain open. See the [daemon mode/configuration report](../../project/review/firmware-analysis/mh202-1.0.24/run2-boot-report.txt).
+
+## Remaining boundaries
+
+Highest-value next joins are interpreter disabled/condition handling and IPC producer/receiver correspondence, complete trigger pattern semantics, WHO 1000 WHERE/outer/vector selection, runtime-configuration production and normal-status transitions, daemon provider/launch-result handling, and persistent primary/mirror policy. Missing external assets and physical/runtime behavior remain explicit. This checkpoint does not close wider Device review gates or assign a coverage percentage.

@@ -1,0 +1,60 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b444c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x696d8>:
+   b444c:	f8df c090 	ldr.w	ip, [pc, #144]	@ b44e0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6976c>
+   b4450:	4603      	mov	r3, r0
+   b4452:	b510      	push	{r4, lr}
+   b4454:	460a      	mov	r2, r1
+   b4456:	f8df e08c 	ldr.w	lr, [pc, #140]	@ b44e4 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x69770>
+   b445a:	44fc      	add	ip, pc
+   b445c:	7914      	ldrb	r4, [r2, #4]
+   b445e:	4661      	mov	r1, ip
+   b4460:	f85c 000e 	ldr.w	r0, [ip, lr]
+   b4464:	f102 0c08 	add.w	ip, r2, #8
+   b4468:	f103 0108 	add.w	r1, r3, #8
+   b446c:	711c      	strb	r4, [r3, #4]
+   b446e:	3008      	adds	r0, #8
+   b4470:	f96c 078f 	vld1.32	{d16}, [ip]
+   b4474:	6018      	str	r0, [r3, #0]
+   b4476:	e9d2 4006 	ldrd	r4, r0, [r2, #24]
+   b447a:	f941 078f 	vst1.32	{d16}, [r1]
+   b447e:	2100      	movs	r1, #0
+   b4480:	e9c3 1104 	strd	r1, r1, [r3, #16]
+   b4484:	e9c3 1006 	strd	r1, r0, [r3, #24]
+   b4488:	b16c      	cbz	r4, b44a6 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x69732>
+   b448a:	f102 0110 	add.w	r1, r2, #16
+   b448e:	efc0 0010 	vmov.i32	d16, #0	@ 0x00000000
+   b4492:	c903      	ldmia	r1, {r0, r1}
+   b4494:	f103 0c10 	add.w	ip, r3, #16
+   b4498:	e88c 0003 	stmia.w	ip, {r0, r1}
+   b449c:	f102 0118 	add.w	r1, r2, #24
+   b44a0:	619c      	str	r4, [r3, #24]
+   b44a2:	f941 078f 	vst1.32	{d16}, [r1]
+   b44a6:	e9d2 400a 	ldrd	r4, r0, [r2, #40]	@ 0x28
+   b44aa:	2100      	movs	r1, #0
+   b44ac:	f103 0c20 	add.w	ip, r3, #32
+   b44b0:	e9c3 1108 	strd	r1, r1, [r3, #32]
+   b44b4:	e9c3 100a 	strd	r1, r0, [r3, #40]	@ 0x28
+   b44b8:	b15c      	cbz	r4, b44d2 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6975e>
+   b44ba:	f102 0120 	add.w	r1, r2, #32
+   b44be:	efc0 0010 	vmov.i32	d16, #0	@ 0x00000000
+   b44c2:	c903      	ldmia	r1, {r0, r1}
+   b44c4:	e88c 0003 	stmia.w	ip, {r0, r1}
+   b44c8:	f102 0128 	add.w	r1, r2, #40	@ 0x28
+   b44cc:	629c      	str	r4, [r3, #40]	@ 0x28
+   b44ce:	f941 078f 	vst1.32	{d16}, [r1]
+   b44d2:	6b14      	ldr	r4, [r2, #48]	@ 0x30
+   b44d4:	2100      	movs	r1, #0
+   b44d6:	4618      	mov	r0, r3
+   b44d8:	631c      	str	r4, [r3, #48]	@ 0x30
+   b44da:	6311      	str	r1, [r2, #48]	@ 0x30
+   b44dc:	bd10      	pop	{r4, pc}
+   b44de:	bf00      	nop
+   b44e0:	1546      	asrs	r6, r0, #21
+   b44e2:	000b      	movs	r3, r1
+   b44e4:	053c      	lsls	r4, r7, #20
+	...

@@ -1,0 +1,13 @@
+{
+  "bytes_hex": "0100000000000000",
+  "copy_va": "0xa691a",
+  "import_call": "0xa692e to nanosleep PLT0x10e64",
+  "load_va": "0xa6914",
+  "pool_va": "0xa6bf8",
+  "stack_pointer": "r5=SP+40 at0xa684a; r0=r1=r5 at0xa692a/0xa692c",
+  "units": "Inherited original libc wrapper and ordinary nanosleep ABI: one second and zero nanoseconds; request not measured elapsed/cadence/deadline.",
+  "words": [
+    1,
+    0
+  ]
+}

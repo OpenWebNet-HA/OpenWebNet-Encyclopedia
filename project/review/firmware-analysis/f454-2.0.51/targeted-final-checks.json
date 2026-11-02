@@ -1,0 +1,71 @@
+{
+  "checked_at": "2026-10-30T11:24:08.442031+00:00",
+  "branch": "docs/static-firmware-analysis-findings",
+  "passed": true,
+  "scope": "Targeted static/document consistency checks, not Firmware execution or complete semantic acceptance",
+  "mechanical_style": {
+    "exit_code": 0,
+    "objective_failures": 0,
+    "human_pages": 378,
+    "support_pages": 111
+  },
+  "mechanical_evidence_privacy": {
+    "exit_code": 0,
+    "objective_failures": 0
+  },
+  "device_completeness": {
+    "exit_code": 0,
+    "definitions": 210
+  },
+  "device_unit_tests": {
+    "exit_code": 0,
+    "tests": 31
+  },
+  "diff_check": {
+    "exit_code": 0
+  },
+  "source_files_changed": false,
+  "original_overnight_index_unchanged": true,
+  "initial_during_review_link_failure": {
+    "cause": "Two links pointed to the integration review before its author had written it.",
+    "resolved": "Final style checker passed after review completion; no source/semantic rule weakened."
+  },
+  "reviewed_roots": [
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-follow-up.md",
+      "sha256": "ea7bafebfd9efe5661a36a16bcd690f31ace037a6681e54a6a84407e7f0da204"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51.md",
+      "sha256": "eb774bf167c48a619e893244b04489cdcb5183455de72c643fb8c3320d5b6d9a"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/README.md",
+      "sha256": "8aa3bad529d32a91db6adad2bcb0c6d96da78d12431992534541a5c35d6a7df1"
+    },
+    {
+      "path": "devices/definitions/own-dev-0002-audio-video-web-server-gateway.md",
+      "sha256": "b3965d163dfb6c7675460ad13714572a46c6df12ec51fbaa31324ba44d31715d"
+    },
+    {
+      "path": "diagnostics/dim1-device-identity.md",
+      "sha256": "df460bc77a64985a2f7f3d943cdaa25214533613d228aa82ba5b9f7e3087d72d"
+    },
+    {
+      "path": "functional/who-4-temperature-control/dimensions.md",
+      "sha256": "1a4de975d97ab2f83e8de9f69ce5b2bb81408a4fb48c3a3db13e16b0051f9bf1"
+    },
+    {
+      "path": "functional/who-18-energy-management/dimensions.md",
+      "sha256": "cdb921df9223bab86d4746d2d37ed5a890e56e6a62ae5f51da9738acc23a833b"
+    },
+    {
+      "path": "functional/who-8-video-door-entry-telephony/README.md",
+      "sha256": "03268c5a148e5bd016f557b326b02003a870b62081a073f6a70d666de1af06d3"
+    },
+    {
+      "path": "device-model/firmware.md",
+      "sha256": "ad681ed30c0c38ce0cee5509330ddd8e8e343a19b063b64d5ea3a8866fa01b87"
+    }
+  ]
+}

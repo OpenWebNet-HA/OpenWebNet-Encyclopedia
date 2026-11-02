@@ -1,0 +1,98 @@
+# MyHOMEServer1 3.87.13: selected scheduler scene-file consumer
+
+There is an actual original-code path from the `scenesPath` setting to directory enumeration, scene-file JSON parsing and separate trigger/condition/action factories. It is a fresh C++/JsonCpp implementation, not evidence that this server uses the previously studied MH202 script engine. This bounded batch closes that loading/field-dispatch path; timing policy, scene execution and command publication remain unclosed.
+
+Original ARM/Thumb/vendor execution: **0**. No services, target calls, live files, bus/network operations, emulation or central parser substitutions ran. No synthetic scene was injected or presented as a manufacturer-generated artifact. Host tools only read original bytes and selected configuration metadata.
+
+## Sources and identity
+
+| Original image path | SHA-256 / scope |
+| --- | --- |
+| `/home/bticino/scheduling_manager/scheduling_manager` | `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26` |
+| `/usr/lib/libjsoncpp.so.1.9.5` | `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36` |
+| `/home/bticino/scheduling_manager/config.json` | Full original bytes hashed in `INPUTS.v1.json`; only `scenesPath` is exported |
+
+The ordinary source tree is `work/myhomeserver1-firmware/3.87.13/analysis/rootfs/`. Original metadata-only ImageVFS is imported from the earlier read-only first-pass helper. It verifies regular backing bytes against the original extraction manifests and handles image symlinks as metadata. Selected direct source pins are in `INPUTS.v1.json`; the helper also reads original extraction path/link metadata, retained in that earlier dossier. This is not a new complete dependency closure of all metadata used by ImageVFS.
+
+The ELF is ARM32 little-endian EABI5 hard-float PIE; its selected code is Thumb2. Original program headers place the selected code and literal pools in the equal-VA/file-offset RX mapping. The later RW segment has a different VA/file offset and is not conflated with it. Retained disassembly explicitly selects Thumb and disables external debug-link following. Names printed by objdump for nearby exported C++ templates are **not** adopted as the identities of stripped functions. Original exception-index starts provide an independent boundary check for `0x17630`, `0x31e34`, `0x32b8c`, `0xb57fc` and `0xaf3d4`.
+
+The executable directly declares `libjsoncpp.so.25`; the original alias points to `libjsoncpp.so.1.9.5`. It imports C++ `Json::Value` conversions/member access and `Json::parseFromStream`. The packaged candidate defines `parseFromStream` at exported Thumb value`0x12525` (instruction VA`0x12524`). These are provider/dependency declarations plus image-link metadata, not measured effective runtime binding or an executed JsonCpp parser. C `libjsonmsg`/`libopenmsg` objects and their prior layouts are not used as substitutes for these C++ objects.
+
+## Join1: setting reader to original directory loader
+
+The selected packaged setting is:
+
+```text
+scenesPath = /home/bticino/cfg/extra/0/scheduling_manager
+```
+
+The original caller at `0x1316a` invokes settings reader `0x32b8c`. In that reader:
+
+1. `0x32ee6` loads pool`0x33748`, word`0x000e2f08`; `add r1,pc` at`0x32eec` resolves the original literal`scenesPath` at`0x115df8`.
+2. `0x32eee` calls JSON member access and `0x32efa` calls `Json::Value::asString`.
+3. The selected string-move path stores pointer/length into settings+60/+64 at`0x32f1c`, with capacity/storage handling following. This is source dataflow, not a supplied settings object.
+4. Getter`0x32ae4` loads the string at input+60 using original `ldrd` at`0x32afe` and constructs its returned string. Startup's selected caller invokes that getter at`0x1333e` and passes the result to loader`0x17630` at`0x1334a`.
+
+This joins original field selection/storage/getter/caller instructions. Reaching it with a successfully parsed settings object and normal C++ returns is an explicit premise; the firmware was not run. Missing/default settings and exception paths are not reduced to a universal outcome from this selected path.
+
+Loader`0x17630` has the preserved original diagnostic signature literal `bool loadScenesFromFS(const string&, ScenesContainer&, TimeTriggersService&)` in its catch/log path (pool`0x18178` resolves at add`0x17d3e` to`0x1140fc`). The name supports the local interpretation; the decisive evidence is its code:
+
+- It calls original `std::filesystem::status`, and on a selected status branch calls `create_directories` (`0x1774e`) before returning0. This is a code path, not evidence directories were created or any API succeeded.
+- It constructs a directory iterator at`0x1769a`, dereferences at`0x17764` and advances at`0x177ae`.
+- It calls helper`0x1d9c8` at`0x1776e`; that helper invokes imported `path::_M_find_extension` at`0x1d9e0`. The returned extension path is compared with literal`.json`, resolved from pool`0x18140` via add`0x176f8` to VA`0x116774`.
+- Original additional path comparisons exclude the literal names`twiligts_times.json` and`action_schedule.json`, resolved from pools`0x18148`/`0x1814c` at adds`0x177d6`/`0x1782e`. The first spelling is the original source spelling and is not silently repaired. These are named exclusions from this selected scene loader, not assertions those files are unused elsewhere.
+- For the selected remaining entry it constructs an object through original call`0x178ae -> 0xaf3d4`, passing the selected file path and container/service arguments. The concrete callthrough is preserved without assuming all constructors, registration or runtime startup complete successfully.
+
+This is directory enumeration, not a proved recursively exhaustive search or a complete JSON admission policy. The original normal and recovery regular-file manifests both contain **0 regular files under the literal configured prefix**. This is a packaged-input gap, not a claim the live path/directory is absent, that no scenes can later be created, or that a service is inactive.
+
+## Join2: selected file constructor to parsed scene members/factories
+
+Function`0xaf3d4` passes its existing object and file argument to original `0xb57fc` at`0xaf3e0`; it later delegates initialization to `0xa72c0`, which is outside this batch's closure. Source RTTI/loader labels suggest a SceneRunner-related object, but no guessed nearest-symbol label or old class layout is needed for the following alias proof.
+
+`0xb57fc` preserves incoming object pointer inr5 and file argument inr7. It performs a filesystem status check and constructs a C++ file stream. At`0xb5944` it calls imported `basic_filebuf::open` with the original file string and literal mode8. At`0xb598e` it calls imported `Json::parseFromStream`, giving it the file stream, a local JsonCpp root atsp+48 and local error-string storage. The return is tested at`0xb5992..0xb5994`; the zero branch reaches the original invalid-JSON exception construction. Separate original error text includes`Scene JSON not found`, `Invalid JSON scene` and `Invalid JSON scene format`.
+
+After selected category/member guards, `0xb5a54..0xb5a58` passes **that same local JSON root** inr1 and **the same incoming object** inr0 to scene constructor`0x31e34`. These are original moves and a direct call; no parsed fields or class state were invented. The nearby category/id/name/enabled guards are retained. They are not promoted to a complete JSON Schema, all-category validation proof, exception-unwinding result or guarantee the file would load.
+
+The original scene constructor establishes these selected fields:
+
+| JSON member | Original access/store evidence | Established local meaning |
+| --- | --- | --- |
+| `name` | `0x31e74..0x31e7e` | `asString` into object+40 |
+| `hidden` | `0x31e8a..0x31eaa` | `asBool` into object+64 |
+| `customizable` | `0x31ec0..0x31ecc` | `asBool` into object+100 |
+| `editable` | `0x31ed4..0x31ee0` | `asBool` into object+101 |
+| `has_button_trigger` | `0x31ee8..0x31ef4` | `asBool` into object+102 |
+| `id` | member check at`0x31efc`, string/decimal conversion through`0x31f2c`, store at`0x31f46` | Selected local numeric identifier; conversion failures have separate branches |
+| `enabled` | member check at`0x31f60`, optional `asBool` at`0x320e2`; store at`0x31f70` | Missing member selects literal true via`0x31f6a`; present member uses conversion result |
+
+These offsets belong only to this freshly traced C++ scene object. Hidden/enabled/customizable/button-trigger values and numeric ID are different fields, not imported MH202 status words or runtime state enums. The `enabled` initializer is not yet a proved execution gate: its later consumers were not traced here.
+
+The constructor then independently checks the three collection members:
+
+| Member | Selected guard/access | Original factory handoff |
+| --- | --- | --- |
+| `triggers` | `0x3205c..0x32072` | direct BL`0x32076 -> 0x2e9fc` |
+| `conditions` | `0x3207a..0x32080`, then`0x320b0..0x320ba` | direct BL`0x320be -> 0x2fa4c` |
+| `actions` | `0x32086..0x32090`, then`0x320c4..0x320ce` | direct BL`0x320d2 -> 0x30cb0` |
+
+Original PIC literal arithmetic proves each key separately; conditions are not mislabeled as actions because their adjacent pool words happen to be equal. Member presence dispatch and constructor storage are confirmed. Collection type requirements, per-action payloads, condition operators, trigger matching, factory result ownership and meaningful timing units remain factory/runner boundaries. No full or partial user scene file was manufactured from these keys.
+
+## Timing, state and command limits
+
+The source has declared timer/clock/thread facilities and type-name leads for time triggers, scene runners and sleep actions. This batch does not derive a complete time-trigger calendar, timer unit, ordering/concurrency policy, cancellation/restart semantics, execution eligibility, state machine or command publication from those names. An exploratory sleep-related literal/call location was a lead only and is not a closed file-to-action execution join. No C JSON serializer, OPEN frame formatter, MQTT/other transport body or authentication/session/framing path was examined to fill that gap.
+
+The retained boundary at `0xa72c0` is particularly important: loading and parsing a scene object does not prove trigger subscription or runner activation. The member factories at`0x2e9fc`, `0x2fa4c`, `0x30cb0` are the next source targets for a later bounded pass. No observed action command, provider callback, bus message, persistence result or physical effect is claimed here.
+
+## Evidence, reproduction and history
+
+```text
+python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/collect_scheduler_v1.py --check
+```
+
+The immutable first collector generates27 outputs:17 selected disassembly spans and10 structured evidence/manifest files. It checks28 original PIC literal resolutions,10 exact original direct BL targets and11 raw instruction byte guards; records five original exception-index boundaries, six selected direct input pins, whitelisted configuration/provider metadata and the two original regular-prefix counts. Original execution and host scene reconstructions are both0. No vendor/provider implementation is substituted with a host model.
+
+Initial generation refuses any existing candidate output or snapshot directory. All28 initial collector/output copies were frozen immediately; the snapshot index bytes are computed before opening its own file. `--check` compares bytes in memory without rewriting. This report receives a separate actual first-byte snapshot on publication. Old dossiers and original image files are unchanged.
+
+Development history is explicit: default exploratory disassembly incorrectly interpreted a Thumb loader prefix as ARM and was discarded before evidence generation; retained spans force Thumb. A pre-output ad-hoc branch-locator typo (`else0`) raised Python SyntaxError; the corrected locator supplied only candidate PCs, subsequently checked against original instructions and direct-target arithmetic. No generated candidate existed or was overwritten in either probe. A literal xref scan was a locator aid, not proof every scan hit is a real function reference.
+
+Highest remaining questions are: actual trigger/action factory element layouts and validation; caller-preserved service/container and `0xa72c0` initialization; execution uses of enabled/hidden/state fields; one timing primitive's exact fields/units/cancel path; and the eventual nontransport command-object handoff. Missing configured scene assets and normal runtime provider/state remain explicit premises. These are future source questions, not implied unsupported features or defects.

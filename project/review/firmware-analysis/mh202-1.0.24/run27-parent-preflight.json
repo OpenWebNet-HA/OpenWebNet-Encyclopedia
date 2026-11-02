@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "scope": "Independent parent source/containment preflight only, no original execution/replay. Canonical execution within this exact reviewed design is authorized by existing user scope.",
+  "harness_sha256": "a01175bf586005b229cbf255ebe6f2a2fed33ce4d1eb73d1e0e8215c54138b4a",
+  "preflight_sha256": "c24aa801185953516120a51d8150e3ae3b295e57eab8315ad579dc0d0adfc9a2",
+  "old_tool_record_sha256": "a6aaee9cc319e3b1a9b65c0d6487a1a11e344a79189835b10585d11dde4ff121",
+  "old_tool_files_verified": 41,
+  "source_inspected": "Entire168-line harness and PREFLIGHT; realcore/parser/new_id/reset/init/app ranges vs ordinaryboundedAPI primitives; unmappedopaque source/context; importedtimerrequestrecordonly; zero actualI/O/syscalls/callbacks",
+  "fixture_limits": [
+    "Manual three-entry handoff, no actualregistry/loader/eventloop",
+    "Tuple context opaque/unmapped and callbackNULL; timeoutpublication not executed",
+    "Counter synthetic and initial Q parsedfields actualoriginal-produced, private state actualinitializer-produced",
+    "Two image-data exactnativewrite ranges; setuprelocations separate; unknownstate/PC abort with failures preserved"
+  ],
+  "canonical_execution_permitted_after_this_review": true
+}

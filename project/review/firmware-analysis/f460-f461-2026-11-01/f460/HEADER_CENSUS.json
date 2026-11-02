@@ -1,0 +1,34 @@
+{
+  "normal": {
+    "SQLite3_paths": [
+      "home/bticino/matrix_mx/MHCatalogue.db"
+    ],
+    "extension_candidates": [
+      "home/bticino/matrix_mx/MHCatalogue.db"
+    ],
+    "regular_bytes": 233938092,
+    "regular_files": 5873,
+    "signature_counts": {
+      "ELF": 875,
+      "SQLite3": 1,
+      "other": 4997
+    },
+    "signature_scope": "Leading ELF/SQLite3/Redis/ZIP and four Berkeley magic forms, across every regular file. Not an exhaustive embedded/container/unknown database-format detector."
+  },
+  "recovery": {
+    "SQLite3_paths": [
+      "home/bticino/matrix_mx/MHCatalogue.db"
+    ],
+    "extension_candidates": [
+      "home/bticino/matrix_mx/MHCatalogue.db"
+    ],
+    "regular_bytes": 197382300,
+    "regular_files": 6179,
+    "signature_counts": {
+      "ELF": 756,
+      "SQLite3": 1,
+      "other": 5422
+    },
+    "signature_scope": "Leading ELF/SQLite3/Redis/ZIP and four Berkeley magic forms, across every regular file. Not an exhaustive embedded/container/unknown database-format detector."
+  }
+}

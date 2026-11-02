@@ -1,0 +1,13 @@
+{
+  "started_UTC": "2026-11-01T17:33:05.160209+00:00",
+  "scope": "Final synthesis/navigation/reference integration/review/closure only; source investigation stopped",
+  "public_handoff": "reverse-engineering/firmware-analysis/f460-f461-knowledge-handoff.md",
+  "source_checkpoints": 15,
+  "author": "root",
+  "verification_author": "firmware_boot",
+  "independent_navigation_reviewer": "firmware_protocol",
+  "documentary_reviewer": "firmware_functional read-only/newreviewfilesonly",
+  "deadline_UTC": "2026-11-01T19:00:00Z",
+  "new_firmware_provider_native_model_execution": 0,
+  "reference_policy": "Exact five pre-edit references preserved before any edits; expected-hash historical mappings, no broad fallback/repin. Full Device/source/runtime/physical gates remain pending."
+}

@@ -1,0 +1,35 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00052864:
+   52864:	9b17      	ldr	r3, [sp, #92]	@ 0x5c
+   52866:	6818      	ldr	r0, [r3, #0]
+   52868:	f064 f8c6 	bl	b69f8
+   5286c:	68c2      	ldr	r2, [r0, #12]
+   5286e:	4603      	mov	r3, r0
+   52870:	3304      	adds	r3, #4
+   52872:	9310      	str	r3, [sp, #64]	@ 0x40
+   52874:	4293      	cmp	r3, r2
+   52876:	9203      	str	r2, [sp, #12]
+   52878:	f000 8094 	beq.w	529a4
+   5287c:	f8df 39c8 	ldr.w	r3, [pc, #2504]	@ 53248
+   52880:	447b      	add	r3, pc
+   52882:	9312      	str	r3, [sp, #72]	@ 0x48
+   52884:	ab3a      	add	r3, sp, #232	@ 0xe8
+   52886:	9308      	str	r3, [sp, #32]
+   52888:	9b03      	ldr	r3, [sp, #12]
+   5288a:	695b      	ldr	r3, [r3, #20]
+   5288c:	e9d3 3100 	ldrd	r3, r1, [r3]
+   52890:	428b      	cmp	r3, r1
+   52892:	bf1c      	itt	ne
+   52894:	f04f 0a00 	movne.w	sl, #0
+   52898:	4654      	movne	r4, sl
+   5289a:	d07b      	beq.n	52994
+   5289c:	9802      	ldr	r0, [sp, #8]
+   5289e:	f853 5024 	ldr.w	r5, [r3, r4, lsl #2]
+   528a2:	280a      	cmp	r0, #10
+   528a4:	d86f      	bhi.n	52986
+   528a6:	e8df f010 	tbh	[pc, r0, lsl #1]

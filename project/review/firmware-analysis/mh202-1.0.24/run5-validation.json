@@ -1,0 +1,109 @@
+{
+  "checked_at": "2026-10-30T17:24:30.112790+00:00",
+  "passed": true,
+  "scope": "Run5 selected static joins; source reviews and exact identity, not runtime/physical proof",
+  "original_execution": 0,
+  "scripts": [
+    {
+      "script": "functional/run5/collect_evidence.py",
+      "passed": true,
+      "output": "PASS: 12 outputs + manifest; 3 spans, 28 words, 2 inputs, 6 finite comparison cases; original execution0"
+    },
+    {
+      "script": "coso/run5/collect_evidence.py",
+      "passed": true,
+      "output": "PASS: 16 static outputs +manifest, 8spans,19words,15forward/4reverse hostcases, original execution0"
+    },
+    {
+      "script": "protocol/run5/collect_evidence.py",
+      "passed": true,
+      "output": "{\n  \"outputs\": 18,\n  \"inputs\": 6,\n  \"spans\": 12,\n  \"critical_words\": 15,\n  \"WHO_literals\": 2,\n  \"original_execution\": 0,\n  \"code_hooks\": 0\n}"
+    },
+    {
+      "script": "boot/run5/collect_restore.py",
+      "passed": true,
+      "output": "{\n  \"outputs\": 15,\n  \"spans\": 8,\n  \"word_assertions\": 22,\n  \"inputs\": 6,\n  \"host_cases\": 6,\n  \"original_execution\": 0,\n  \"hooks\": 0\n}"
+    }
+  ],
+  "published_exports": 8,
+  "local_links": 143,
+  "preserved_prior_artifacts": 484,
+  "reviewed_prior_document_snapshots": 27,
+  "document_pins": [
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24.md",
+      "sha256": "0ebdd53a25c0f94a87d41962226c01de3640ca1d2fdb7e875818aded5f4fdb00"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-state-and-routing.md",
+      "sha256": "de13dfb568895d4b68bbc9493bf298490ab329d1f755807547f7e14a9c3dd3d5"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/README.md",
+      "sha256": "0d08572985f519f93d556edc1421f9420ee48e13306556dbc4c0cfb2b75d55f9"
+    },
+    {
+      "path": "project/review/firmware-analysis/README.md",
+      "sha256": "653317d0bca414bf4a20fbc3ff75fb8cb6b0ad1d5a23420088d52bde4a869512"
+    },
+    {
+      "path": "project/review/firmware-analysis/mh202-1.0.24/README.md",
+      "sha256": "cda2ad79d1cb0af1e72414bd802f5f7ba7a529194c7acce07bb77d18c995a1de"
+    },
+    {
+      "path": "functional/who-17-scenario-management/README.md",
+      "sha256": "539e2b962eb50338110903269418d713b846fe292fc2545ee88eed2b1330fe59"
+    },
+    {
+      "path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "sha256": "f4a784fbb820db18b1e97caed0865cef7580ccec91a0e889d4e05ffefea3e87a"
+    },
+    {
+      "path": "devices/work-queue.yaml",
+      "sha256": "17563979ec2836eaae9f2038f177fb70e49abd6c2cf2772f28730c958247abfd"
+    }
+  ],
+  "repository_checks": [
+    {
+      "name": "ESG",
+      "exit_code": 0,
+      "output": "STATS human_pages=382 support_pages=119 objective_failures=0 review_candidates=6866"
+    },
+    {
+      "name": "ECV",
+      "exit_code": 0,
+      "output": "STATS human_pages=382 objective_failures=0 review_candidates=14"
+    },
+    {
+      "name": "diff",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "protected_F454_dossiers": [
+    {
+      "dossier": "2026-10-29",
+      "index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df",
+      "files_verified": 1917
+    },
+    {
+      "dossier": "2026-10-30-targeted",
+      "index_sha256": "ddb83866292f70631b968b91f07e08fbc79415b5e1762cf3699f8e326eacff79",
+      "files_verified": 107
+    },
+    {
+      "dossier": "2026-10-30-targeted-2",
+      "index_sha256": "2dc3f9e3541478eff304d1d9bb368d02504c39cc3d5d8d3aec7ca96650032d82",
+      "files_verified": 130
+    },
+    {
+      "dossier": "2026-10-30-final-pass",
+      "index_sha256": "bf27345d8ce8d1e4e9277ad9346c62fcfde1f0b33bb20783ae5e66963ad100f2",
+      "files_verified": 83
+    }
+  ],
+  "sources_changed": false,
+  "branch": "docs/static-firmware-analysis-findings",
+  "commits_or_pushes": false,
+  "overnight_status": "ACTIVE, final consolidation31October07:15Paris; cutoff08:00"
+}

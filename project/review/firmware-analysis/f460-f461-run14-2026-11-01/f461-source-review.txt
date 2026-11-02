@@ -1,0 +1,24 @@
+# F461 run14 independent module-selection source review
+
+PASS. No author correction requested. This is the documented module-selection alternative, not a new boot/DTB/auxiliary-core selector. Independent original-byte/artifact checks and read-only host collector replay performed no original/provider/native/target execution, module load, initializer call, target directory read, semantic model, fixture or SQL. Author files were unchanged.
+
+Authoritative area: `work/f461-firmware/2.0.11/research/2026-11-01-run14-boot-selection/`. Exact pins:
+
+- `REPORT.md`: `85438c26d5c27d9259e8970633318f3f3ea495fee5444865b75219ff59009e64`.
+- `collect_modules_v1.py`: `3155c9f76cfc9c34cb0b1af2fb638d64f0c667a5add3ab9337dcc97bd64943b2`.
+- `SOURCE.json`: `7cb9a9e4bddb2f8bcdd7f3a48e0ef8697b068c7c6a7059eb31eb28d375f06a7a`.
+- `INPUTS.json`: `80cd6b63303a541038fd2a0ed07d736f31005fb0c4657a4fef3a87ad91e5760c`.
+- `OUTPUT_MANIFEST.json`: `14aae1e3a98f67e2c189dab6851e841908c7c5c6073096cb072c3eb7899f8820`.
+- `first-candidate/INDEX.json`: `7fbf0162854c552c06c75f69e6f2825c56ddb2aad28fe5fe50215c012cea2ff9`.
+
+The collector's host `--check` passes11 outputs, eight spans,37 words, four safe literals,16 import proofs, six input pins and13 first copies. Independent regular-file read confirms `/home/bticino/bin/coso` SHA256 `2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197`. Fresh ELF64/AArch64 PT_LOAD mapping reproduces all eight span hashes/hex,37 words, four PIC/string joins and16 BL/PLT/JUMP_SLOT rows. The register_plugins definition0x56f0/428-byte extent, two declared GLib/GModule SONAME requests, main BL and all13 first-copy/output identities agree. This is selected source verification, not actual dynamic dependency closure or a whole startup audit.
+
+The actual main call passes its saved manager to0x56f0. The callee saves provided ownerX0 asX22, reads P=[owner+16] and library-directory pointerP+8 for g_dir_open. Inherited run11 establishes one normal holder producer; actual same-owner, valid object/storage and normal providers remain premises. P+16 is a separate configuration-directory field, P+0 a module-entry list, and none is a message/deadline/descriptor by matching offsets.
+
+Source support/directory/name gates are precise. Unsupported GModule reaches numeric logflag4 and source return1 only if that diagnostic returns. Directory NULL selects low32 minus1. Names require delegated nonzero prefix `lib` and suffix `.so` tests; the prefix is not libplug-specific. Constructed path is passed to g_module_open with numeric flags3. These are conditional string/loader requests, not ELF/ABI validation, actual modules, trust/security policy or an accepted public grammar. NULL module handles and failed symbol requests have separate ordinary continuation paths; provider/diagnostic behavior is not generalized.
+
+Both init_plugin and stop_plugin lookups must return nonzero before the selected success path. The latter pointer is resolved here but not invoked. MOVX0=16 at0x57c0 precedes the success branch to allocation. The returned entry records the constructed path and handle as two64-bit words, is appended to P+0, and that returned list is stored before the initializer call. The source then loads the init pointer fromSP80 and configuration directoryP+16 intoX0, invoking it at0x585c. This establishes local request ordering, not a complete owning lifetime, successful initialization or active capability.
+
+Immediately after the initializer request the source requests update_log_type and resumes enumeration, with no intervening explicit local branch on the initializer machine return. The report correctly confines that fact to this block, without declaring a full return ABI, global ignoring/absence of validation or downstream outcome. Normal traversal closes the directory and returns0 even when names/modules were skipped or failed locally; therefore0 does not prove any module initialized. Actual firing, binding, constructor/stop bodies, concurrency, unloading and complete cleanup remain unresolved.
+
+Current first-candidate preservation agrees with retained files and reconstruction; unavailable exploratory completeness is not certified. No private config or runtime filename/error text is exported. Original trees and old dossiers remain unchanged. Actual boot/profile/DTB/auxiliary-core selection, readiness, installed features and physical meaning stay open. Receiving/output/transport/authentication/session/framing/MQTT/libjel, frame-preparation, platform-command and uncertain bt_device bodies remain closed. Existing execution ledgers are unchanged.

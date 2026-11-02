@@ -1,0 +1,29 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00015894:
+   15894:	f8df 37d8 	ldr.w	r3, [pc, #2008]	@ 16070 <g_source_set_callback@plt+0x5594>
+   15898:	2201      	movs	r2, #1
+   1589a:	60a6      	str	r6, [r4, #8]
+   1589c:	f04f 0c06 	mov.w	ip, #6
+   158a0:	6022      	str	r2, [r4, #0]
+   158a2:	f50a 707f 	add.w	r0, sl, #1020	@ 0x3fc
+   158a6:	58eb      	ldr	r3, [r5, r3]
+   158a8:	6063      	str	r3, [r4, #4]
+   158aa:	f8df 37c8 	ldr.w	r3, [pc, #1992]	@ 16074 <g_source_set_callback@plt+0x5598>
+   158ae:	58e9      	ldr	r1, [r5, r3]
+   158b0:	f8df 37c4 	ldr.w	r3, [pc, #1988]	@ 16078 <g_source_set_callback@plt+0x559c>
+   158b4:	6121      	str	r1, [r4, #16]
+   158b6:	58ea      	ldr	r2, [r5, r3]
+   158b8:	f8df 37c0 	ldr.w	r3, [pc, #1984]	@ 1607c <g_source_set_callback@plt+0x55a0>
+   158bc:	61e6      	str	r6, [r4, #28]
+   158be:	60e2      	str	r2, [r4, #12]
+   158c0:	f8c4 c014 	str.w	ip, [r4, #20]
+   158c4:	f04f 0c07 	mov.w	ip, #7
+   158c8:	58eb      	ldr	r3, [r5, r3]
+   158ca:	e9c4 2108 	strd	r2, r1, [r4, #32]
+   158ce:	6326      	str	r6, [r4, #48]	@ 0x30
+   158d0:	61a3      	str	r3, [r4, #24]

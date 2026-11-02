@@ -1,0 +1,10 @@
+{
+  "canonical_outputs": 5,
+  "command": "python3 -B work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/collect_loader_v2.py --check",
+  "exact_first_copies": 8,
+  "methods": 4,
+  "observed_exit_code": 0,
+  "scope": "Actual static canonical reproduction and direct selected first-copy comparison, not runtime or complete project approval",
+  "status": "PASS",
+  "vendor_execution": 0
+}

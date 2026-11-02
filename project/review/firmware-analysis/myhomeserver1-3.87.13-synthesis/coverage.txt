@@ -1,0 +1,15 @@
+# Scope of the consolidated evidence
+
+| Area | Reviewed source/experiment reach | Remaining boundary |
+| --- | --- | --- |
+|Package and startup|Exact images, selected service/configuration and main/container/time-service requests|Actual boot/readiness/binding/active assets and physical topology|
+|Catalogue|Complete pairwise database-profile comparison; selected original opening/SQL/column consumer|Full device selection/fallback, installed support, actual original SQL execution|
+|Scene construction|Selected raw schemas/serializer/reparse/compiled constructor and vector publications|Complete JSON grammar/member/map semantics, actual scene/generator assets and all classes|
+|Trigger/condition/action chain|TIME and one local event trigger, distinct BNLD/BNTH/BNCUSCENE predicates, selected SLEEP/SCENARIO/duration source|Natural admitted transactions, other branches, event/query correlation, physical units/effects|
+|State and ownership|Separate scene/action/shared flags, concrete vector/control/teardown/removal requests|Positive shared reset, natural last owner/polling order, dispatcher/main identity, full errors/unwind/concurrency|
+|Original helper execution|One frozen4-value same-object packaged JsonCpp scalar corpus|Full JSON/member/map/assignment/serializer/reparse, arbitrary types/values/errors, scheduler/physical execution|
+|This synthesis batch|Readable architecture and frozen scoped navigation/hash/saved-validation links|No new source investigation, native replay, semantic fixture or full semantic re-audit|
+
+Current cumulative ledger:1corpus,8top-level entries,340original code-hook visits,0Cprimitives,12definitionredirects,8EXIT,0stops,360hooks;4data setupwrites separate. New execution additions in this batch are ALL0; they do not reset the cumulative ledger. Earlier static-zero reports retain historical scope. Earlier F454/MH202 totals are not merged. No completeness percentage or row-count coverage claim.
+
+Curated OWN-DEV-0199 supplies MHS product role; F454 AV/alarm hardware and MH202 scripts are not inferred from shared catalogue or file names. Missing extras80/81/94/95 and packaged configured scenes remain explicit. Closed receiving/transport/MQTT/libjel/auth/session/framing bodies remain uninspected. Wider Device/source gates and unavailable prior MH202 intermediate-history limitations are unchanged.

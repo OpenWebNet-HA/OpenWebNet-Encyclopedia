@@ -1,0 +1,54 @@
+# F459 night05 namespace initialization — independent source review PASS
+
+Reviewer /root/evidence_reviewer, new review files only; original/research/repository files read-only. CompletedUTC 2026-11-01T21:50:14.936531+00:00. The decision applies to the original selected constructor dataflow and authoritative report-only v2. Full source/Device/runtime/physical approval remains pending.
+
+## Exact current and historical identities
+
+Root `work/f459-firmware/2.1.5/research/2026-11-01-night05-namespace`:
+
+- `REPORT.v2.md` — 4759 bytes, SHA256 `35b284912fb9bec53ad4276f8a8afcf79b7ea3df65a1dc4858f2460c32b6b385`.
+- `REPORT.md` — 4311 bytes, SHA256 `a88088bf8c2cd0908fb77ac57110c9de0c106f67e0fa940dab3ff17642cfa5cf`.
+- `collect_namespace_v2.py` — 10127 bytes, SHA256 `69626d04c787f4c41dae4c538e4039e03c8a664a5704c322ee6f1d468c0dfa86`.
+- `collect_namespace_v1.py` — 9715 bytes, SHA256 `b5e97288b74d96464113b09d462a3c4517b9c11c934b3fe030b3b1b139085f7c`.
+- `SOURCE.json` — 5883 bytes, SHA256 `11f23ff8b471e1407fcfd621f20e72a2f3e1a57b218eae5d8cc46453f234611b`.
+- `INPUT_PINS.json` — 831 bytes, SHA256 `e496475e0b3f321a4dc128562e96e91c1c7d9c1efdcfcb4155d2e1335b68adee`.
+- `OUTPUT_MANIFEST.json` — 1030 bytes, SHA256 `e1bef86a6912159ada65b250bc3de3af484cf39dd48d2aebb3ef87272064242c`.
+- `first-candidate/INDEX.json` — 1197 bytes, SHA256 `5f417e10757431b818f8ced7b44295569dc8874e6fb5bc83981de4af9b9f4ad0`.
+- `VERSION_HISTORY.v2.json` — 965 bytes, SHA256 `319b3fe741b606d9ebbfdb8d5b804aaaa2fcb3f7c3283739d79f179dfd5c8e53`.
+- `PREPARATION_HISTORY.json` — 724 bytes, SHA256 `89b1db8064a0c190e7095649f8b931ffe3e954cde76679f49ee8e6678b5b5a79`.
+- `REPORT_REFINEMENT.v2.json` — 996 bytes, SHA256 `7b8dee28815e1bd502fefb4a7ec24ab5392cd655b64967648aee2962d30c1945`.
+- `report-v2-first-copy/INDEX.json` — 153 bytes, SHA256 `b3e4c801eca061819c19e5a5a4c32c04af371d96a5a54e8fee9c513b4b4397e8`.
+
+The original own libmhshared.so.1 is43208bytes/SHA2564d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377. Four current input pins match, including unchanged curated F459 Device context and earlier write/read SOURCE files. Those older consumer spans are inherited context only; they were not replayed or counted as new semantic coverage.
+
+## Independent original-byte checks
+
+Actual successful collector `collect_namespace_v2.py --check` passes7outputs/22wordguards/4GLOB_DATproofs/3callproofs/one new plus two inherited spans/originalexecution0. Separately from that replay, I independently parsed original ELF32 little-endian machine40 and PT_LOADs; mapped and compared all22guard words and all3span byte strings/SHA; recomputed PC+pool GOTbase12180 and all4global slots; matched actual readelf R_ARM_GLOB_DAT rows; confirmed global_set is an undefined external symbol in this image; decoded all3ARM BL targets, original12bytePLT stubs and their rotated-immediate GOT calculations; corroborated actual JUMP_SLOT symbol rows. All current input/manifest/first-candidate identities and exact history copies match. Source header/relocation agreement is not effective runtime binding or provider execution.
+
+The selected original C1constructor67c0/700bytes is exported, not guessed from adjacent labels. Entry67cc `e1a04000` retains supplied receiver inR4. Its normal QObject-constructor request67d0 and watcher request6800 are provider/normal-return prerequisites only. Vtable relocation/address+8→receiver0 and importedQArrayData::shared_null→receiver12 are raw source facts; they do not certify completed Qt invariants, allocation/liveness or all exception/unwind paths.
+
+Original literalpool6a58 holds0x190; actual GOTbase12180 therefore selects12310. Its relocation is `_ZN9bt_global10global_setE`, undefined external data in this image. The pointer distinction is correctly preserved:
+
+- 6814 `e795b003` loads the relocated symbol **address** from the GOT slot intoFP.
+- 681c `e59b1000` loads the word stored AT that address intoR1, calledP in the report.
+- 6824 `e2811018` adds24 toP for sourceR1.
+- 6818 `e284900c` and6820 `e1a00009` supply SAME receiverR4+12 inR0.
+- 6828 `ebffee88` reaches PLT2250; original stub computes GOT1224c, whose actual JUMP_SLOT is `_ZN7QStringaSERKS_`.
+
+Thus the selected QString assignment request takes destinationreceiver+12 and sourceP+24 under ordinary valid receiver/global-pointer/QString, actual ABI/binding/provider/callee-save and normal-return premises. The GOT slot itself, the external symbol address, pointerP and its+24 field are not conflated. No runtime/global/string value was read or supplied. The source does not establish the external definition/producer/type/lifetime, actual contents/identity/uniqueness, natural constructor caller, assignment success or no later mutation/alias.
+
+The constructor prefix stops682c before inherited database-open/DDL requests. The tiny old write/read operand spans3300..331c and4024..4040 each use their own saved receiver+12 as the first-string input; the report explicitly composes them only under SAMEobject/normalcopy/noinvalidatingmutation/provider premises. That supports a conditional source for the selected SQL pluginname namespace, not installed driver/plugin identity, configured value, cross-process isolation, universal object identity or successful SQL/durable state. Equal offsets or a symbol name do not close those questions. No additional SQL method/provider/global-initializer or closed implementation body was inspected by this review.
+
+## Version and reproduction wording history
+
+Retained v1 source and its exact parent pre-v2 snapshot match9715bytes/SHA b5e97288b74d96464113b09d462a3c4517b9c11c934b3fe030b3b1b139085f7c. Its recorded first canonical failure is Python parsing before build/output generation because a bytes literal contained Unicode. I did **not** rerun that failed script. An independent textual v1→successfulv2 diff changes report literal encoding and adds honest history prose; all original source/hash/word/import guards remain. PREPARATION_HISTORY separately records an inline compile indentation error before a v2file existed, then a nonexistent-file invocation, without invented older v2/hash or target execution. Structured error notes are not asserted as original terminal-byte hashes. No v1generated report/result or guest/vendor failure is invented.
+
+The successful collector's historical REPORT.md accidentally still instructed running the failed v1. I requested this documentary correction BEFORE any edit. Parent retained exact report/collectorv2/outputmanifest in `run05/integration/before-namespace-report-v2` before creating a separate authoritative REPORT.v2.md. The new report changes the command to successfulv2 and appends the explicit oldcanonical/currentreport mapping. Canonical REPORT.md, collectorv2, generated results, first copies and outputmanifest remain unchanged. The new report's exact immediate copy/index and REPORT_REFINEMENT.v2 correctly require its independent current pin; old collector --check still reproduces its historical report bytes, not this new report. No source/result/guard correction occurred.
+
+My first inline report-difference assertion allowed only the command replacement and therefore failed when the new report also contained the promised appended mapping paragraph. No review file or nonexistent previous audit-script hash was produced. I inspected the actual diff and then independently verified that the only remaining addition is the explicit mapping paragraph, with exact current SHA35b284912fb9bec53ad4276f8a8afcf79b7ea3df65a1dc4858f2460c32b6b385. This is an honest reviewer metadata-assumption correction, not a source/tool result change or a fabricated old draft.
+
+## Final scope decision
+
+**PASS for authoritative REPORT.v2 and frozen original source packet.** The source/argument/relocation claims and conservative applicability limits are supported. No further correction requested. Confidence high for selected byte/dataflow facts; actual running object/provider/SQL/physical behavior remains conditional.
+
+Original/vendor/helper/native/emulator/SQLite/targetOS/services/network/bus/runtime/physical execution0. Host Python/readelf/ARMobjdump only read frozen bytes. No actual DB recovered or generated, no synthetic DB or new upload/readback, and no actual namespace/private value exported. Cumulative archive remains the parent's earlier one encrypted support container/zero recovered plaintextDB scope, not a fresh independent remote verification. Old MHS340code-hookvisits/360hooks and separate F454/MH202 ledgers remain unchanged, with no old corpus replay. Sources/images/completed evidence/source manifest/Git staging/commits/push/publication remain untouched. Closed receiving/output-transport/auth/session/framing/MQTT/libjel/equivalent bodies remain opaque. This new review is immediately copied exactly with its index precomputed before opening itself.

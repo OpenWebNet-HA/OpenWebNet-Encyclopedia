@@ -1,0 +1,214 @@
+#!/usr/bin/env python3
+"""One original recovery ELF entry-to-libc-start argument edge; static reads only."""
+import sys
+sys.dont_write_bytecode = True
+import argparse
+import hashlib
+import json
+import re
+import struct
+import subprocess
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = next(p for p in HERE.parents if (p / 'work/f453av-firmware').is_dir())
+BASE = Path('work/f453av-firmware/3.0.14')
+GUARDS = {
+    0x8f6c: 0xe3a0b000, 0x8f70: 0xe8bd0002, 0x8f74: 0xe1a0200d,
+    0x8f78: 0xe92d0001, 0x8f7c: 0xe59f0010, 0x8f80: 0xe92d0001,
+    0x8f84: 0xe59f000c, 0x8f88: 0xe59f300c, 0x8f8c: 0xebffff9e,
+    0x8f90: 0xebffff6d, 0x8f94: 0x0000e3c0, 0x8f98: 0x0000b8c0,
+    0x8f9c: 0x00008b80, 0x8e0c: 0xe59fc004, 0x8e10: 0xe08fc00c,
+    0x8e14: 0xe59cf000, 0x8e18: 0x000100a4, 0xb8c0: 0xe92d4ff0,
+}
+INIT_LINES = {1: '#!/bin/ettclsh', 120: '# Run user applications in /etc/applications',
+              121: 'foreach n [lsort [glob -nocomplain /etc/applications/*]] {',
+              122: '    if ![file isfile $n] continue; # skip directories',
+              123: '    if ![sys_fork] {', 124: '\tcatch {unset pid}',
+              125: '        newcmdname [file tail $n]', 126: '        source $n; exit',
+              127: '    } else {', 128: '        puts "   Application: [file tail $n]"',
+              129: '    }', 130: '}'}
+APP_LINES = {1: 'puts "Sys_Exec Bt_Start"', 2: 'echo 1 > /proc/sys/kernel/printk',
+             3: 'sys_exec /bin/bt_start'}
+SPANS = [('new-recovery-entry-instructions-and-pools', 0x8f6c, 0x8fa0),
+         ('actual-libc-start-import-stub-and-offset', 0x8e0c, 0x8e1c),
+         ('candidate-main-first-word-provenance-only', 0xb8c0, 0xb8c4)]
+
+
+def sha(b):
+    return hashlib.sha256(b).hexdigest()
+
+
+def enc(x):
+    return (json.dumps(x, indent=2, sort_keys=True) + '\n').encode()
+
+
+def exclusive(p, b):
+    p.parent.mkdir(parents=True, exist_ok=True)
+    with p.open('xb') as f:
+        f.write(b)
+
+
+def build():
+    pins = {}
+
+    def read(p):
+        p = Path(p)
+        f = ROOT / p
+        assert not p.is_absolute() and '..' not in p.parts
+        assert f.is_file() and not f.is_symlink() and ROOT in f.resolve().parents
+        b = f.read_bytes()
+        pins[str(p)] = {'path': str(p), 'bytes': len(b), 'sha256': sha(b)}
+        return b
+
+    manifest = json.loads(read(BASE / 'analysis/recovery-regular-files.json'))
+    image_record = json.loads(read(BASE / 'image-extraction.json'))
+    extraction = json.loads(read(BASE / 'analysis/extraction-summary.json'))
+    image = read(BASE / 'extracted/images/recovery.img')
+    assert len(image) == 19922944 and sha(image) == 'ed5897736769f2fadbf3c7668ae4b58728346c769d165647c59989320f0db729'
+    ir = [x for x in image_record['images'] if x['label'] == 'recovery']
+    er = [x for x in extraction['components'] if x['label'] == 'recovery']
+    assert len(ir) == len(er) == 1 and ir[0]['sha256'] == er[0]['image_sha256'] == sha(image)
+
+    def recovery(p):
+        b = read(BASE / 'analysis/recovery' / p)
+        assert len(b) == manifest[p]['bytes'] and sha(b) == manifest[p]['sha256']
+        return b
+
+    init = recovery('sbin/init')
+    app = recovery('etc/applications/bt_start.tcl')
+    interp = recovery('bin/ettclsh')
+    b = recovery('bin/bt_start')
+    assert sha(init) == '0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb'
+    assert len(app) == 81 and sha(app) == '1029a6e6ed6ea12650c63b8d1f73cd7d9730865cd26c3341a6e94cbce993c9a2'
+    assert len(b) == 37956 and sha(b) == 'f5a4f002e212e97e5f3e40fc4ed067237ad0095642bdec0b2c8792fa22a2fbd9'
+    for raw, guards in [(init, INIT_LINES), (app, APP_LINES)]:
+        lines = raw.decode('ascii').splitlines()
+        for n, text in guards.items():
+            assert lines[n - 1] == text, n
+    assert len(app.decode('ascii').splitlines()) == 3
+    assert interp[:6] == b'\x7fELF\x01\x01'
+    ih = struct.unpack_from('<HHIIIIIHHHHHH', interp, 16)
+    assert ih[0:2] == (2, 40) and ih[6] == 2
+    assert b[:8] == bytes.fromhex('7f454c4601010161')
+    h = struct.unpack_from('<HHIIIIIHHHHHH', b, 16)
+    assert h[0:2] == (2, 40) and h[3] == 0x8f6c and h[6] == 2 and h[8] == 32
+    ph = [struct.unpack_from('<8I', b, h[4] + i * h[8]) for i in range(h[9])]
+    loads = [{'offset': s[1], 'VA': s[2], 'file_bytes': s[4], 'memory_bytes': s[5], 'flags': s[6]} for s in ph if s[0] == 1]
+
+    def off(a, n=4):
+        xs = [s['offset'] + a - s['VA'] for s in loads if s['VA'] <= a and a + n <= s['VA'] + s['file_bytes']]
+        assert len(xs) == 1, hex(a)
+        return xs[0]
+
+    def word(a):
+        return struct.unpack_from('<I', b, off(a))[0]
+
+    def pool(a):
+        w = word(a)
+        assert w & 0x0f7f0000 == 0x051f0000
+        return a + 8 + (w & 4095) * (1 if w & (1 << 23) else -1)
+
+    for a, w in GUARDS.items():
+        assert word(a) == w, hex(a)
+    w = word(0x8f8c)
+    assert w & 0xff000000 == 0xeb000000
+    n = w & 0xffffff
+    if n & (1 << 23):
+        n -= 1 << 24
+    assert 0x8f8c + 8 + n * 4 == 0x8e0c
+    assert pool(0x8f84) == 0x8f98 and word(0x8f98) == 0xb8c0
+    assert pool(0x8e0c) == 0x8e18
+    slot = 0x8e10 + 8 + word(0x8e18)
+    assert slot == 0x18ebc
+    target_load = [x for x in loads if x['VA'] <= 0xb8c0 and 0xb8c4 <= x['VA'] + x['file_bytes']]
+    assert len(target_load) == 1 and target_load[0]['flags'] & 1
+    original = ROOT / BASE / 'analysis/recovery/bin/bt_start'
+    rel = subprocess.check_output(['readelf', '-rW', str(original)], text=True)
+    rows = [x.strip() for x in rel.splitlines() if 'R_ARM_JUMP_SLOT' in x and re.search(r'\b__libc_start_main@GLIBC_', x)]
+    assert len(rows) == 1 and int(rows[0].split()[0], 16) == slot
+    spans = []
+    for label, a, z in SPANS:
+        o = off(a, z - a)
+        raw = b[o:o + z - a]
+        asm = subprocess.check_output(['objdump', '-d', '-m', 'arm', f'--start-address={a}', f'--stop-address={z}', str(original)], text=True)
+        spans.append({'label': label, 'start_VA': hex(a), 'end_exclusive_VA': hex(z), 'file_offset': hex(o), 'bytes_hex': raw.hex(), 'sha256': sha(raw), 'host_disassembly': asm})
+    prior = Path('work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration')
+    baseline = {n: read(prior / n) for n in ['REPORT.md', 'STARTUP.json', 'COMPONENTS.json']}
+    # Exact prior packet is context, not another execution or repeated coverage.
+    assert b'sys_exec /bin/bt_start' in baseline['STARTUP.json'] and b'0x8f6c' in baseline['COMPONENTS.json']
+    for raw in baseline.values():
+        assert b'0xb8c0' not in raw and b'__libc_start_main' not in raw
+    source = {'component': 'F453AV own recovery only', 'original': pins[str(BASE / 'analysis/recovery/bin/bt_start')],
+              'header52_hex': b[:52].hex(), 'ELF_entry_VA': hex(h[3]), 'raw_flags': hex(h[6]), 'PT_LOAD': loads,
+              'spans': spans, 'guards': [{'VA': hex(a), 'word': hex(w)} for a, w in sorted(GUARDS.items())],
+              'import': {'name': '__libc_start_main', 'call_VA': '0x8f8c', 'PLT_VA': '0x8e0c', 'PLT_literal_VA': '0x8e18', 'PLT_literal_word': hex(word(0x8e18)), 'computed_GOT_slot': hex(slot), 'original_relocation': rows[0]},
+              'main_candidate': {'load_instruction': '0x8f84', 'pool_VA': '0x8f98', 'R0_word': '0xb8c0', 'containing_executable_PT_LOAD': target_load[0], 'body_scope': 'One original first-word provenance only; body unexpanded'},
+              'declared_script_interpreter': {'path': '/bin/ettclsh', 'identity': pins[str(BASE / 'analysis/recovery/bin/ettclsh')], 'header52_hex': interp[:52].hex(), 'raw_flags': hex(ih[6]), 'scope': 'Inherited interpreter identity, not new execution/provider coverage'}}
+    context = {'coverage_role': 'Inherited recovery script/init/header context; new coverage only the exact ELF entry/import/main-argument edge',
+               'recovery_image': {'bytes': len(image), 'sha256': sha(image), 'provenance': 'Own saved extraction records; no mount/re-extraction/runtime selection'},
+               'init_selected_lines': [{'line': n, 'text': t} for n, t in INIT_LINES.items()],
+               'application_script_all_three_lines': [{'line': n, 'text': t} for n, t in APP_LINES.items()],
+               'selected_chain': 'On natural admission of own recovery init applications loop and selected regular script, false sys_fork result requests source; after normal completion of preceding script commands, line3 requests sys_exec /bin/bt_start. If actual helpers/loader select this exact original binary and reach its entry,0x8f84 supplies0xb8c0 inR0 to actual libc-start request0x8f8c.',
+               'echo_limit': 'Line2 is retained as a Tcl command request with literal > argument; helper/command resolution/body/redirection/write semantics are opaque, and successful completion is a premise.',
+               'premises': ['Actual recovery environment/image selection, loader/interpreter availability and effective path composition', 'Natural init-loop and child-branch admission, regular-file/provider results, valid interpreter/helper ABI and normal preceding command returns', 'sys_exec provider binds requested pathname to this exact ELF and loader reaches declared entry with valid initial ABI/state', 'Effective __libc_start_main binding and conventional startup ABI/provider meaning; no provider/main body executed or inferred'],
+               'not_proved': ['Recovery actually booted, process created/replaced, candidate main called or successfully returned', 'Complete startup/admission/order/readiness/dependencies, installed application overlay, copy/install or live configuration', 'Module/display/output/physical behavior, protocol support, database bytes/schema or archive extraction'],
+               'baseline_boundary': 'Prior first-exploration packet already records recovery script launch and header entry; new main argument/import handoff not present in its three pinned selected members'}
+    report = '''# F453AV 3.0.14 night05 — own recovery entry-to-startup-provider handoff
+
+The genuinely new edge is in **F453AV's own recovery `/bin/bt_start` entry code**: its0x8f84 instruction loads compiled pointer0xb8c0 intoR0, and0x8f8c requests the actual `__libc_start_main` import. Under conventional startup ABI/provider meaning this is a candidate main argument, not an observed call or an executed startup. The old init/script/header facts are inherited context only. No normal-image module semantics, other-product layouts or display/output proxies are used.
+
+## Inherited recovery script admission
+
+The prior joint first-exploration report already records recovery `etc/applications/bt_start.tcl` line3's `/bin/bt_start` launch request and ELF entry0x8f6c. Its REPORT/STARTUP/COMPONENTS members are pinned, read as context and checked to contain neither the new0xb8c0 target nor the libc-start handoff. This packet does not claim another init-loop/header inventory as new coverage.
+
+Own saved recovery-image identity is19922944 bytes/SHA256 ed5897736769f2fadbf3c7668ae4b58728346c769d165647c59989320f0db729; saved image/extraction records and own recovery regular-file manifest identify this separate component. No normal/application overlay is composed or recovery environment actually selected. Own recovery init line1 names `/bin/ettclsh`; lines120–130 source selected regular application scripts in the false-result sys_fork branch. The three-line recovery bt_start.tcl is81 bytes/SHA2561029a6e6ed6ea12650c63b8d1f73cd7d9730865cd26c3341a6e94cbce993c9a2. After its puts and echo command requests, line3 requests `sys_exec /bin/bt_start` with no additional script words. Natural loop/file/child admission, ordinary Tcl/helper ABI, command resolution and normal completion of the preceding commands remain premises.
+
+Line2's literal `echo 1 > /proc/sys/kernel/printk` is a Tcl command request. This packet does not assume shell redirection, a proc-file write, command success or the helper's implementation. The interpreter and sys_exec/provider bodies stay opaque. No script is sourced and no command, target OS path, service or process is invoked by the analysis.
+
+## New exact recovery ELF edge
+
+Own recovery bt_start is37956 bytes/SHA256 f5a4f002e212e97e5f3e40fc4ed067237ad0095642bdec0b2c8792fa22a2fbd9. Fresh original bytes confirm ELF32 little-endian ARM EXEC/machine40/raw flags0x2 and declared entry0x8f6c. Own PT_LOAD mapping supports all retained addresses; flags are recorded without assigning a modern ABI or transferring MH200N/MHS/MH202/F454 layouts.
+
+At0x8f84, LDR R0,[PC,#12] selects pool0x8f98, whose exact original word is0xb8c0. The next instruction0x8f88 writesR3, preserving thisR0; BL0x8f8c decodes exactly to0x8e0c. That original PLT stub loads its offset from0x8e18, adds it to the PC value at0x8e10 and dispatches through computed GOT slot0x18ebc. The actual original R_ARM_JUMP_SLOT row names `__libc_start_main@GLIBC_2.0` at that slot. This is an actual imported request identity, not a nearest-symbol label or effective runtime binding proof.
+
+The candidate0xb8c0 points within the own executable file-backed PT_LOAD. Only its exact first instruction word is retained as code-address provenance; its body is unexpanded. Under actual loader/helper admission, valid entry-state/ARM32 convention and conventional libc startup-provider semantics, this establishes the compiled candidate main argument. It does not establish that the provider invokes it, that its body runs, natural recovery startup, success, readiness, installed overlay, complete initialization order or application-copy behavior. The entry instruction stream and original relocation metadata do not prove an actual selected kernel, provider dependency closure or current device state.
+
+## Evidence, preservation and limits
+
+SOURCE.json retains three exact original spans,18 fixed word guards, entry/header/PT_LOAD evidence, the main-pointer pool and actual PLT/GOT/relocation proof. RECOVERY_CONTEXT.json retains exact selected source-line guards and separates inherited context from the new edge. INPUTS.json pins original image, saved provenance/extraction records, own recovery manifest/four selected files and three unchanged prior packet members. The recovery script and interpreter are freshly identity-checked against their own manifest; no normal-to-recovery equivalence is used.
+
+Reproduce `python3 -B collect_recovery_v1.py --check`: deterministic host byte/hash/header/line parsing, readelf and bounded ARM disassembly only. Initial generation refuses existing outputs and immediately retains exact first copies of the collector and all five outputs with a precomputed index excluding itself. No old collector, original/vendor/native/helper/emulator/targetstartup/module/OS/device/service/network/bus/SQL code, mount, flash, model, fixture or physical operation is executed. No private values/full configuration, module/output body, closed receiving/transport/authentication/session/framing/MQTT/libjel implementation or proxy is exported or expanded. New original execution0; recovered/generated databases0 and remote writes0. Archive remains inherited one encrypted F450 support container and zero plaintext databases, parent-controlled. Earlier originals/synced/completed evidence/source manifest/public integration and MHS340 code-hook-visits/360 hooks plus separate F454/MH202 ledgers remain unchanged.
+'''
+    out = {'SOURCE.json': enc(source), 'RECOVERY_CONTEXT.json': enc(context), 'INPUTS.json': enc({'files': sorted(pins.values(), key=lambda x: x['path'])}), 'REPORT.md': report.encode()}
+    out['OUTPUT_MANIFEST.json'] = enc({'scope': 'Generated members excluding manifest itself', 'files': {n: {'bytes': len(v), 'sha256': sha(v)} for n, v in sorted(out.items())}})
+    return out
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--check', action='store_true')
+    a = ap.parse_args()
+    names = ['SOURCE.json', 'RECOVERY_CONTEXT.json', 'INPUTS.json', 'REPORT.md', 'OUTPUT_MANIFEST.json']
+    if not a.check:
+        assert not any((HERE / n).exists() for n in names) and not (HERE / 'first-candidate').exists()
+    out = build()
+    if a.check:
+        for n, b in out.items():
+            assert (HERE / n).read_bytes() == b, n
+        for x in json.loads((HERE / 'first-candidate/INDEX.json').read_bytes())['files']:
+            b = (HERE / 'first-candidate' / x['copy']).read_bytes()
+            assert len(b) == x['bytes'] and sha(b) == x['sha256'] and b == (HERE / x['copy']).read_bytes()
+    else:
+        for n, b in out.items():
+            exclusive(HERE / n, b)
+        copies = {**out, 'collect_recovery_v1.py': Path(__file__).read_bytes()}
+        ix = {'scope': 'Immediate exact first outputs and collector; precomputed index excludes itself', 'files': [{'copy': n, 'bytes': len(b), 'sha256': sha(b)} for n, b in sorted(copies.items())]}
+        for n, b in copies.items():
+            exclusive(HERE / 'first-candidate' / n, b)
+        exclusive(HERE / 'first-candidate/INDEX.json', enc(ix))
+    print(json.dumps({'status': 'PASS', 'outputs': len(out), 'spans': len(SPANS), 'guards': len(GUARDS), 'original_execution': 0, 'new_coverage': 'own recovery entry/import/candidate-main argument edge only'}))
+
+
+if __name__ == '__main__':
+    main()

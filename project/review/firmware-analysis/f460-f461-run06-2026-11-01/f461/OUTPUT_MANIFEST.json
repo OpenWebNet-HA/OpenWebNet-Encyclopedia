@@ -1,0 +1,66 @@
+{
+  "collector_sha256": "de9a8dd63e8e6755109c5bde1a5053542cbcfffe0884046bf6fa71636eb65a31",
+  "counts": {
+    "PIC_joins": 6,
+    "helper_guards": 15,
+    "imports": 9,
+    "original_execution": 0,
+    "plugin_guards": 19,
+    "spans": 5
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 1999,
+      "sha256": "ab188393268424c530d6e25bb26e41426e51b9d111629b2309b17c557b56f081"
+    },
+    "SOURCE.json": {
+      "bytes": 8483,
+      "sha256": "c6269441d7d2e1942c0abe35e0e6ff08ae91333da46318f25bf265c595f831b0"
+    },
+    "helper-dynamic.txt": {
+      "bytes": 1734,
+      "sha256": "ad042d1ed4272d4f56f7f9234bfdd3bf4759a0bb45bcf930a10417641e702ab3"
+    },
+    "helper-relocations.txt": {
+      "bytes": 4415,
+      "sha256": "78b0f46bc17d987b8e3d2bd880ad020e5e75d2a0fe8c544cdd78a2e1a3c491c6"
+    },
+    "helper-symbols.txt": {
+      "bytes": 3566,
+      "sha256": "753040158466efab2f4c35eee69e35a28194bf3351177e73f304e29913a7f6f8"
+    },
+    "plugin-dynamic.txt": {
+      "bytes": 2268,
+      "sha256": "f18bb3b60d7778343b7e5748a6041552f472322c4084e3ce009afae1af630c05"
+    },
+    "plugin-relocations.txt": {
+      "bytes": 9160,
+      "sha256": "ce250d3ddf38c8b3d0b5330245e6cfff875fda351cb3088d6f916f25785b7a84"
+    },
+    "plugin-symbols.txt": {
+      "bytes": 7285,
+      "sha256": "608515ddf74cf57ed6380f84fdf47ae4999de9e2d5e96152da78443d6df85362"
+    },
+    "spans/actual-helper-caller.txt": {
+      "bytes": 744,
+      "sha256": "b453f54e68ada5cf1b7d3058e30cae33f471bc064ae9e3f779a945b5f4020d5e"
+    },
+    "spans/class-four-prefix-and-length.txt": {
+      "bytes": 995,
+      "sha256": "ae5bbf817090a7ab0a2ac100abacbc6156fb50d0ae3ee436e25b61c8f1b21f5d"
+    },
+    "spans/parsed-pointer-and-local-string.txt": {
+      "bytes": 859,
+      "sha256": "2fd4a3974e10632a5181ff22cc332331f96d93994615234c9a63c319d9b72461"
+    },
+    "spans/shape-classifier.txt": {
+      "bytes": 3577,
+      "sha256": "ea2c7d36e4e887e26cd332f22f205606b417ad4c7410a050a3185a3e88133223"
+    },
+    "spans/two-byte-conversion-and-append.txt": {
+      "bytes": 787,
+      "sha256": "69b1d8b31249cbc2330de6312d367cf7267ffbec57b09ea9dfb7267b974dd85c"
+    }
+  },
+  "report_sha256": "d8be70c3da862cfe82c367b1537beb6918ceaada5c5200cda2910b6ec049f52c"
+}

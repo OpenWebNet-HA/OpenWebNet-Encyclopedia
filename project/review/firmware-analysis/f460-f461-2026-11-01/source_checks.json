@@ -1,0 +1,58 @@
+{
+  "checks": [
+    {
+      "command": "python3 -B work/f460-firmware/2.0.12/research/2026-11-01/first-pass/collect_first_v1.py --check",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "34965b",
+          "wall_time_seconds": 9.24e-06,
+          "exit_code": 0,
+          "original_token_count": 20,
+          "output": "{\"check\": true, \"outputs\": 13, \"normal_files\": 875, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "command": "python3 -B work/f461-firmware/2.0.11/research/2026-11-01/collect_firstpass_v1.py --check",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "ee3826",
+          "wall_time_seconds": 8.71e-06,
+          "exit_code": 0,
+          "original_token_count": 20,
+          "output": "{\"first_copies\": 16, \"mode\": \"check\", \"original_execution\": 0, \"outputs\": 14}\n"
+        }
+      }
+    },
+    {
+      "command": "python3 -B work/f461-firmware/2.0.11/research/2026-11-01/collect_db_scope_v1.py --check",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "346e9a",
+          "wall_time_seconds": 1.304e-05,
+          "exit_code": 0,
+          "original_token_count": 26,
+          "output": "{\"check\": true, \"outputs\": 1, \"tables_total\": 75, \"tables_noninternal\": 74, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "command": "python3 -B work/f460-f461-comparison/2026-11-01/collect_comparison_v3.py --check",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "596480",
+          "wall_time_seconds": 6.12e-06,
+          "exit_code": 0,
+          "original_token_count": 25,
+          "output": "{\"check\": true, \"outputs\": 8, \"products\": 3, \"catalogue_profiles\": 4, \"new_original_execution\": 0}\n"
+        }
+      }
+    }
+  ],
+  "source_execution": "Host metadata/SQLite/header reproduction only; no original firmware execution or guest replay",
+  "console_scope": "F460 normal_files875 is the original console-only ELF count label; preserved file census and report correctly say5873 regular files"
+}

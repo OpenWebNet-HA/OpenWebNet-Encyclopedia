@@ -1,0 +1,82 @@
+# MH202 run17 — original nonnull core record replacement joined to native parser
+
+One isolated top-level original call now joins **libcoso::add_open_buf_to_msg_list0x2340** to the actual same-build **libopenmsg::buf_to_openmsg0x2704**, its allocator wrapper and field helpers. With the explicitly supplied existing64-byte envelope Q, old owned ASCII body and new owned `*2*0*0##` text, the native core helper appends **the same Q pointer** containing a newly parsed48-byte WHO2/WHAT0/WHERE0/kind1 object. Status+52=1 and ID+60=41 remain unchanged. No parsed field or core record store is injected by the host.
+
+This closes the selected core/parser boundary left by COSO15 under explicit ordinary private primitive/provider assumptions. It does not execute the forward/reverse TR, queue selection, synchronizers, STM, plugin initialization, actual transport or physical correlation. Q/body/status/ID are **fixtures**, not natural queued traffic or hardware captures.
+
+## Supplied storage and exact result
+
+The private fixture contains:
+
+* Q:64 bytes, representation+56=1, type+40=3, direction+12=1, route+48=1, status+52=1 and ID+60=41. Q+0 points to separately owned ASCII `B100120A`. Other metadata words are explicit opaque markers, not asserted valid whole-system state.
+* Separately owned formatted input `*2*0*0##`, representing the previous TR's textual output only. That producer is not run here.
+* A valid private output-list-pointer slot initially0. Existing nonempty-list behavior is outside this case.
+
+Original core0x2364/0x236c initializes its own local parser-output slot to null. Native entry0x2390 invokes the original parser through its actual imported call. At original return site0x2394 the recorded parser r0 is0 and the local slot contains the actual new parsed-object pointer. Thus even the null parser-slot premise now comes from the original core instructions, rather than a host-supplied postparsed object.
+
+The original parsed object is48 bytes and reads back WHO`2`, WHAT`0`, WHERE`0`, DIM=null and parsed kind1. The original record-helper stores are:
+
+| Original core VA | Q offset | Final source value |
+| --- | ---: | --- |
+|0x23c8|40|type2|
+|0x23cc|56|representation3|
+|0x23d0|0|actual new parsed-object pointer|
+|0x23d4|12|direction2|
+|0x23d8|4|metadata2|
+|0x23e4|16|metadata0|
+|0x23e8|8|metadata0|
+|0x23f4|48|numeric WHO2 from actual parsed WHO string|
+
+Those eight words change; every other Q word remains unchanged, including status+52 and ID+60. Eight corresponding4-byte **original-instruction** writes are recorded, with their source PCs. Primitive callbacks write no Q field. The new parsed object and list node occupy different private allocations from Q and its two old text buffers.
+
+Original0x23f0 passes the same r7=Q as g_list_append data; original0x2400 stores the returned head in the supplied output slot. The explicit ordinary single-node GList model allocates `[data=Q,next=0,prev=0]`. The core's final r0 register observation is that list-head address; this is **not presented as a Boolean or return0 API contract**. Its caller previously ignored that register and selected its own local result.
+
+## Actual free order and retained lifetime boundary
+
+The original callsites request two frees in order:
+
+1. `0x2398` frees the newly supplied formatted text after parser return.
+2. `0x23b4` frees Q's old ASCII body on the selected representation1 branch.
+
+The private ordinary g_free model marks those exact owned allocations dead. Native and primitive reads into such a freed allocation abort. Neither dead text is subsequently read in the selected original continuation; parsed WHO/WHAT/WHERE are actual separately allocated copies. Q, its new parsed object/strings and the output node remain live in the private model. This is a finite local ownership demonstration, not OS allocation/reclamation, future callback lifetime, general absence of memory faults or a UAF verdict.
+
+The representation3 old-body branch calling free_open_msg, the NULL-source64-byte allocation/new_id branch and allocation/parser/list/logging failures are not executed. No new64-byte record or new ID is created on the selected original path. The fixture Q64 itself was set up by the host, not by that unexecuted null branch.
+
+## Code/provider mapping and primitives
+
+Three fresh original images are read: core libcoso, pointer parser libopenmsg and packaged GLib data. Core code remains at original VAs; parser code is at private base`0x10000000`; GLib read-only/nonexecuting data is at`0x20000000`. This avoids same-VA collisions between separate ELF images. Source reports and all recorded VAs identify the original image plus original address.
+
+Core's actual parser JUMP_SLOT is`0xbc6c`, named buf_to_openmsg. The harness redirects core PLT0x18c0 to original parser0x2704, then parser PLT0x19a4 to its original new_open_msg0x1c80. Both are original-definition redirects, not parser stubs. Core directly NEEDED libopenmsg.so; the concrete definitions match the fresh same-build bytes. Ordinary packaged lookup/no overrides remains a binding premise, not a live loader/plugin observation.
+
+The original WHO/WHERE/parser/new-object code uses the fresh48-byte pointer/string layout established in run16, not either C++ common130/libopen90 object. It executes the actual character/token classification and field stores. Original GLib ASCII data is used via two explicit setup data relocations: parser GOT0xee78→relocated exported cell0xe50c8, then that cell→original table0x9ed8a plus the private GLib base. The classifier tests mask`0x0008` (bit3). Four original GLib data reads are recorded; no GLib code runs. These two setup writes are separate from instruction/callback counts.
+
+Ordinary private primitive models are strlen, prefix/suffix checks, g_strcmp0 comparison sign, strchr, bounded g_strndup, g_strstr_len with selected length−1, successful g_malloc0(48), nonfatal debug g_log request, private g_free lifetime marking, decimal g_ascii_strtoll for the actual parsed WHO`2`, and the single empty-head GList append described above. Logging has no C++ logger object/registry state here; its original level argument128 and format are recorded, under an explicit normal nonfatal-return premise. It does not model a live custom log handler/fatal configuration.
+
+Original mappings are read/execute-only, GLib data read-only/nonexecuting, private stack/input/heap writable. All primitive/native writes are bounded to private regions. Original PCs are allowlisted; unknown calls, interrupts, invalid/protected accesses and reads of private dead allocations abort. Each top-level call has100,000-hook and100,000-emulator-instruction caps. Strings are capped4,096 bytes; allocations are bounded within a64KiB private heap. No parser, field helper, record-helper body, registry or classifier is replaced. The independently verified Unicorn2.1.4 package is an analysis tool only; no F454 firmware/layout/harness is used.
+
+## Accounting and provenance
+
+| Canonical new entry | Original visits | Ordinary C/GLib primitive callbacks | Original-definition redirects | EXIT | Stops | Code hooks |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Core nonnull-record helper0x2340 |317|24|2|1|0|344|
+
+The317 visits comprise51 core-helper instructions and266 parser/new-object/WHO/WHERE visits. There is **one** top-level entry, one nested parser call and one nested new_open_msg call. Two setup data-relocation writes, three fixture setup allocations and five callback-model allocations are separately recorded. Replay does not add corpus coverage. The saved write arrays contain59 original-memory-write events and9 primitive-write events; memory-observation callbacks are not code hooks.
+
+| Original normal-image path | SHA256 |
+| --- | --- |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+| `/home/bticino/lib/libopenmsg.so` | `7a4793f740c4cb41a774bf06e3af3acf4bd8a7606c5329ac70d7e0e7fd64bcd7` |
+| `/usr/lib/libglib-2.0.so.0.2800.7` | `029c2a7913131a84c46958d9ed445cb8a79dd1c8abc61116321badb7ad2735c0` |
+
+`input-hashes.json` pins10 original/research inputs. `original-spans.json` records five original spans with VAs/file offsets/raw hashes;23 instruction words and selected symbol/relocation/NEEDED lines are checked. The collector produces14 deterministic source/saved-array evidence outputs; the native harness produces results/tool identities. The author manifest also pins report/scripts and exact preparation history, excluding itself/future peer review.
+
+One harness preparation stopped before emu_start because its memory-write hook import was missing; its exact draft/hash is retained in `development-before-hook-import/`, original visits0. A static collector preparation rejected a guessed relocation-address prefix; the correct core JUMP_SLOT is0xbc6c. Its exact draft/hash is retained in `development-before-linkage-assert/`; a subsequent whitespace syntax fix also preceded output production. These preparations changed no native result, source interpretation or prior dossier. All earlier images/reports/sources remain unchanged.
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run17/collect_evidence.py --check
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run17/emulate_core_inplace.py --check
+```
+
+Both pass. Collector original execution is0. The harness executes only the isolated selected code/private model: no target OS/process/syscall, network/device, TR/synchronizer/STM, authentication/handshake or closed caller-framing branch runs.
+
+The remaining question is whether actual runtime queue/body/ID/provider/registry state supplies this fixture-equivalent input and what subsequent callbacks/lifetimes do. A same-pointer native core/parser result does not establish a natural causal exchange or physical automation receipt.

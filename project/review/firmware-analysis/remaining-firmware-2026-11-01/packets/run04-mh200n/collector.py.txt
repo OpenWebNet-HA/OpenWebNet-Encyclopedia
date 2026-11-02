@@ -1,0 +1,194 @@
+#!/usr/bin/env python3
+"""Static original-byte evidence for one MH200N third-token copy request."""
+import sys
+sys.dont_write_bytecode = True
+import argparse
+import hashlib
+import json
+import re
+import struct
+import subprocess
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = next(p for p in HERE.parents if (p / 'work/mh200n-firmware').is_dir())
+BASE = Path('work/mh200n-firmware/1.1.8')
+GUARDS = {
+    0xa2a8: 0xe3a00000, 0xa2ac: 0xe59f1110, 0xa2b0: 0xebfffaa0,
+    0xa2b4: 0xe3500000, 0xa2b8: 0x03a00003, 0xa2bc: 0x0a000039,
+    0xa2c0: 0xe1a01000, 0xa2c4: 0xe59f00fc, 0xa2c8: 0xebfffa79,
+    0xa3a8: 0xe28ddb01, 0xa3ac: 0xe8bd81f0,
+    0xa3c4: 0x0000e488, 0xa3c8: 0x00018090,
+}
+SPANS = [('third-token-and-selected-copy-request', 0xa2a8, 0xa2cc),
+         ('selected-return-epilogue', 0xa3a8, 0xa3b0),
+         ('selected-literal-pool', 0xa3c4, 0xa3cc),
+         ('strtok-PLT', 0x8d38, 0x8d44), ('strcpy-PLT', 0x8cb4, 0x8cc0)]
+
+
+def sha(b):
+    return hashlib.sha256(b).hexdigest()
+
+
+def enc(x):
+    return (json.dumps(x, indent=2, sort_keys=True) + '\n').encode()
+
+
+def exclusive(p, b):
+    p.parent.mkdir(parents=True, exist_ok=True)
+    with p.open('xb') as f:
+        f.write(b)
+
+
+def build():
+    pins = {}
+
+    def read(p):
+        p = Path(p)
+        f = ROOT / p
+        assert not p.is_absolute() and '..' not in p.parts
+        assert f.is_file() and not f.is_symlink() and ROOT in f.resolve().parents
+        b = f.read_bytes()
+        pins[str(p)] = {'path': str(p), 'bytes': len(b), 'sha256': sha(b)}
+        return b
+
+    manifest = json.loads(read(BASE / 'analysis/normal-regular-files.json'))
+    original = BASE / 'analysis/rootfs/bin/bt_start'
+    b = read(original)
+    assert len(b) == 36080 == manifest['bin/bt_start']['bytes']
+    assert sha(b) == manifest['bin/bt_start']['sha256'] == '63c0b0a9b6f67e6564f23f5ffcf18c3716bc27dc9b0b03009324af0fa0a21d48'
+    assert b[:8] == bytes.fromhex('7f454c4601010161')
+    h = struct.unpack_from('<HHIIIIIHHHHHH', b, 16)
+    assert h[0] == 2 and h[1] == 40 and h[6] == 0x202 and h[8] == 32
+    ph = [struct.unpack_from('<8I', b, h[4] + i * h[8]) for i in range(h[9])]
+    loads = [{'offset': s[1], 'VA': s[2], 'file_bytes': s[4], 'memory_bytes': s[5], 'flags': s[6]} for s in ph if s[0] == 1]
+
+    def off(va, size=4):
+        xs = [s['offset'] + va - s['VA'] for s in loads if s['VA'] <= va and va + size <= s['VA'] + s['file_bytes']]
+        assert len(xs) == 1, hex(va)
+        return xs[0]
+
+    def word(va):
+        return struct.unpack_from('<I', b, off(va))[0]
+
+    def branch(va, link=True):
+        w = word(va)
+        assert w & 0x0f000000 == (0x0b000000 if link else 0x0a000000)
+        n = w & 0xffffff
+        if n & (1 << 23):
+            n -= 1 << 24
+        return va + 8 + n * 4
+
+    def pool(va):
+        w = word(va)
+        assert w & 0x0f7f0000 == 0x051f0000
+        return va + 8 + (w & 0xfff) * (1 if w & (1 << 23) else -1)
+
+    for va, w in GUARDS.items():
+        assert word(va) == w, hex(va)
+    assert branch(0xa2b0) == 0x8d38 and branch(0xa2c8) == 0x8cb4
+    assert branch(0xa2bc, False) == 0xa3a8
+    assert pool(0xa2ac) == 0xa3c4 and pool(0xa2c4) == 0xa3c8
+    assert b[off(0xe488, 2):off(0xe488, 2) + 2] == b'*\0'
+    destination = 0x18090
+    containing = [s for s in loads if s['VA'] <= destination < s['VA'] + s['file_bytes']]
+    assert len(containing) == 1 and containing[0]['flags'] == 6
+    sh = [struct.unpack_from('<10I', b, h[5] + i * h[10]) for i in range(h[11])]
+    names = b[sh[h[12]][4]:sh[h[12]][4] + sh[h[12]][5]]
+    sections = []
+    for s in sh:
+        if s[3] <= destination < s[3] + s[5] and s[2] & 2:
+            name = names[s[0]:].split(b'\0', 1)[0].decode('ascii')
+            sections.append({'name': name, 'VA': hex(s[3]), 'bytes': s[5], 'flags': s[2], 'type': s[1]})
+    assert len(sections) == 1 and sections[0]['name'] == '.data' and sections[0]['flags'] == 3
+    rel = subprocess.check_output(['readelf', '-rW', str(ROOT / original)], text=True)
+    imports = []
+    for name, plt, slot in [('strtok', 0x8d38, 0x18798), ('strcpy', 0x8cb4, 0x1876c)]:
+        x, y, z = [word(plt + i) for i in [0, 4, 8]]
+        assert x == 0xe28fc600 and y == 0xe28cca0f and z & 0xfffff000 == 0xe5bcf000
+        assert plt + 8 + 0xf000 + (z & 0xfff) == slot
+        rows = [l.strip() for l in rel.splitlines() if 'R_ARM_JUMP_SLOT' in l and re.search(r'\b' + name + r'@GLIBC_', l)]
+        assert len(rows) == 1 and int(rows[0].split()[0], 16) == slot
+        imports.append({'name': name, 'PLT_VA': hex(plt), 'GOT_slot': hex(slot), 'PLT_words': [hex(x), hex(y), hex(z)], 'original_relocation': rows[0]})
+    spans = []
+    for label, start, end in SPANS:
+        o = off(start, end - start)
+        raw = b[o:o + end - start]
+        asm = subprocess.check_output(['objdump', '-d', '-m', 'arm', f'--start-address={start}', f'--stop-address={end}', str(ROOT / original)], text=True)
+        spans.append({'label': label, 'start_VA': hex(start), 'end_exclusive_VA': hex(end), 'file_offset': hex(o), 'bytes_hex': raw.hex(), 'sha256': sha(raw), 'host_disassembly': asm})
+    for n in ['REPORT.md', 'SOURCE.json', 'ARGUMENT_FLOW.json']:
+        read(BASE / 'research/2026-11-01-night03-consumer' / n)
+    source = {'original': pins[str(original)], 'header52_hex': b[:52].hex(), 'PT_LOAD': loads,
+              'spans': spans, 'guards': [{'VA': hex(v), 'word': hex(w)} for v, w in sorted(GUARDS.items())],
+              'direct_calls': [{'VA': '0xa2b0', 'target': '0x8d38'}, {'VA': '0xa2c8', 'target': '0x8cb4'}],
+              'selected_NULL_branch': {'VA': '0xa2bc', 'target': '0xa3a8', 'local_return_word': 3},
+              'delimiter': {'pool': '0xa3c4', 'VA': '0xe488', 'file_offset': hex(off(0xe488, 2)), 'exact_hex': '2a00'},
+              'copy_destination': {'pool': '0xa3c8', 'VA': hex(destination), 'ELF_file_offset': hex(off(destination)), 'containing_PT_LOAD': containing[0], 'containing_section': sections[0], 'static_provenance_probe': {'start_VA': hex(destination), 'end_exclusive_VA': hex(destination + 4), 'file_offset': hex(off(destination)), 'bytes': 4, 'sha256': sha(b[off(destination):off(destination) + 4]), 'scope': 'Four-byte provenance probe only; content omitted, no object extent inferred'}, 'capacity_or_live_object_identity': 'not established; no destination data exported'},
+              'imports': imports}
+    flow = {'scope': 'One subsequent selected token-to-compiled-destination request, not a complete resource grammar',
+            'inherited': 'Prior own-file0xa3ec caller passes pathname to0xa1dc; saved descriptor and same1024-byte read buffer feed prior first and second strtok requests. This packet begins only on the second-nonnull continuation0xa2a8.',
+            'third_request': {'VA': '0xa2b0', 'API': 'strtok', 'R0': 0, 'R1': 'compiled * delimiter via0xa3c4'},
+            'NULL_branch': {'test': 'CMP R0,0 at0xa2b4', 'assignment': 'MOVEQ R0,3 at0xa2b8', 'branch': 'BEQ0xa2bc to0xa3a8', 'meaning': 'local machine return only'},
+            'nonnull_request': {'VA': '0xa2c8', 'API': 'strcpy', 'R0_destination': 'compiled0x18090 via0xa3c8', 'R1_source': 'same nonnull third strtok machine return copied at0xa2c0'},
+            'premises': ['Natural caller/earlier admission and selected second-nonnull continuation', 'Valid provided pathname/output addresses, descriptor and usable terminated read data', 'Appropriate strtok state, effective imports, ordinary ARM32 ABI/C semantics and normal returns', 'Writable sufficiently large destination and appropriate source/destination non-overlap', 'No relevant mutation, aliasing or intervening provider side effects invalidating the selected chain'],
+            'limits': ['Third ordinal is conditional on ordinary continuation semantics of prior own-file requests', 'No explicit length/type/content test appears between selected nonnull token and strcpy request', 'ELF writable section membership does not prove a destination array capacity or live object', 'No suppliedR1/R2 output-word store in this bounded span; compiled destination has a distinct role', 'Token identity/meaning/content, full format, later fields, final success/cleanup, copy/install/startup remain unproved']}
+    report = '''# MH200N 1.1.8 night04 — one subsequent token-to-destination request
+
+The new bounded result is the actual continuation **0xa2a8..0xa2cc** of original local resource consumer0xa1dc: a third tokenizer request selects local return3 onNULL; a nonnull returned token is passed to an imported string-copy request with compiled destination0x18090. This is one field request, without assigning a semantic field name, complete resource grammar or installation meaning. No resource content, destination data, private configuration or credentials are exported.
+
+## Original source and admission
+
+Original normal `/bin/bt_start` is36080 bytes, SHA256 `63c0b0a9b6f67e6564f23f5ffcf18c3716bc27dc9b0b03009324af0fa0a21d48`. Fresh original ELF32 little-endian ARM EXEC/machine40/flags0x202 and its PT_LOAD mapping support the selected addresses. No MHS/MH202/F454/F453AV layout, normal-to-recovery behavior or provider implementation is borrowed.
+
+The unchanged night03 packet is explicitly inherited: own-file caller0xa3ec passes its provided pathname to0xa1dc at0xa424; the selected consumer retains the open machine return, requests read into the same1024-byte stack buffer and performs its first two strtok requests. This packet starts **only on the prior second-nonnull continuation0xa2a8** and does not repeat prefix, marker or cell coverage. Actual natural main/caller admission, selected pathname, no invalidating mutation/aliases, valid provided addresses, valid descriptor, usable terminated data, normal diagnostic/provider returns and callee-save ABI remain premises. The prior zeroing/read request does not guarantee a terminated C string or valid resource.
+
+## Third request and local NULL return
+
+0xa2a8 setsR0=0;0xa2ac loadsR1 via pool0xa3c4 to exact two-byte delimiter `*`/2a00 at0xe488.0xa2b0 requests actual strtok import0x8d38. Under ordinary continuation semantics and the inherited tokenizer state this is the third token request. Its returned machine word is tested against0 at0xa2b4. MOVEQ R0,3 at0xa2b8 does not change the comparison flags, so BEQ0xa2bc selects0xa3a8 onNULL, producing local numeric3 through the inherited1024-byte stack-restoring epilogue. This numeric word is not a protocol status, OS error, child exit or product mode.
+
+## Selected nonnull token and compiled destination
+
+On the selected nonnull branch,0xa2c0 copies the same tokenizer return intoR1.0xa2c4 loadsR0 through pool0xa3c8, whose exact original word is0x18090.0xa2c8 requests actual strcpy import0x8cb4 with **destinationR0=0x18090, sourceR1=same returned token**. The original PLT words and JUMP_SLOT metadata identify both imports; effective runtime binding and provider bodies remain opaque.
+
+The destination lies within the original writable file-backed PT_LOAD and `.data` section. A four-byte original-file provenance probe at0x18090 is identified by exact mapping/length/hash with its contents omitted; this probe does not assign an object extent. These establish only the compiled address and section membership, **not a destination array size, live object identity, lifetime or capacity**. No destination bytes are copied into evidence. No explicit token length/type/content test occurs between the selected nonnull return and this copy request. Valid terminated token/source, writable sufficiently large live destination, appropriate non-overlap, ordinary C/ARM32/provider semantics and normal returns remain premises. An imported request does not prove an actual copy, accepted resource or safe runtime behavior. No filename role, overflow or install behavior is inferred. The caller-suppliedR1/R2 output addresses retained by the inherited entry have a separate role; this selected span contains no store through those addresses.
+
+The packet stops immediately after the strcpy request. Later tokenizer requests, semantic field names, complete validation/grammar, caller-output values, final result/cleanup, application-file copy/install, current partition/overlay and startup outcome remain unexamined. This narrow result does not supply a complete resource or current configuration.
+
+## Evidence and reproduction
+
+SOURCE.json holds five exact original spans,13 fixed words, two BL targets, one selected NULL branch, two PC-relative pools, delimiter bytes, destination membership metadata and two actual original imports. ARGUMENT_FLOW.json keeps token/source/destination/local-return namespaces and inherited premises separate. INPUTS.json pins the original file, its unchanged extraction manifest and three inherited packet members. Earlier sources, completed artifacts, ledgers and source manifest stay unchanged.
+
+`python3 -B collect_fields_v1.py --check` performs deterministic host static reads, readelf/disassembly and exact byte/hash verification only. Initial generation refuses existing outputs and immediately saves exact first copies of the collector and all five generated outputs; its index is precomputed and excludes itself. No prior collector, original/vendor/native/helper/emulator/targetOS/device/network/bus/SQL code, model/fixture, mount, flash or physical operation is executed. Closed receiving/output/transport/authentication/session/framing/MQTT/libjel and equivalent bodies remain opaque. New original execution0; no database recovered or uploaded; inherited archive remains one encrypted F450 support container and zero plaintext databases. The MHS340 code-hook-visits/360 hooks and separate F454/MH202 ledgers are not replayed or reset.
+'''
+    out = {'SOURCE.json': enc(source), 'ARGUMENT_FLOW.json': enc(flow), 'INPUTS.json': enc({'files': sorted(pins.values(), key=lambda x: x['path'])}), 'REPORT.md': report.encode()}
+    out['OUTPUT_MANIFEST.json'] = enc({'scope': 'Generated members excluding manifest itself', 'files': {n: {'bytes': len(v), 'sha256': sha(v)} for n, v in sorted(out.items())}})
+    return out
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--check', action='store_true')
+    a = ap.parse_args()
+    names = ['SOURCE.json', 'ARGUMENT_FLOW.json', 'INPUTS.json', 'REPORT.md', 'OUTPUT_MANIFEST.json']
+    if not a.check:
+        assert not any((HERE / n).exists() for n in names) and not (HERE / 'first-candidate').exists()
+    out = build()
+    if a.check:
+        for n, b in out.items():
+            assert (HERE / n).read_bytes() == b, n
+        for x in json.loads((HERE / 'first-candidate/INDEX.json').read_text())['files']:
+            b = (HERE / 'first-candidate' / x['copy']).read_bytes()
+            assert len(b) == x['bytes'] and sha(b) == x['sha256'] and b == (HERE / x['copy']).read_bytes()
+    else:
+        for n, b in out.items():
+            exclusive(HERE / n, b)
+        copies = {**out, 'collect_fields_v1.py': Path(__file__).read_bytes()}
+        idx = {'scope': 'Exact first outputs/collector; precomputed index excludes itself', 'files': [{'copy': n, 'bytes': len(b), 'sha256': sha(b)} for n, b in sorted(copies.items())]}
+        for n, b in copies.items():
+            exclusive(HERE / 'first-candidate' / n, b)
+        exclusive(HERE / 'first-candidate/INDEX.json', enc(idx))
+    print(json.dumps({'status': 'PASS', 'outputs': len(out), 'spans': len(SPANS), 'guards': len(GUARDS), 'original_execution': 0}))
+
+
+if __name__ == '__main__':
+    main()

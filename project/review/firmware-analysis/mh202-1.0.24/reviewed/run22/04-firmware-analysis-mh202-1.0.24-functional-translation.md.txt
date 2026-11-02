@@ -1,0 +1,70 @@
+# MH202 1.0.24 functional translation
+
+MH2021.0.24 contains distinct sound and alarm translation plugins with their own internal routing criteria and message formats. The selected paths below are static implementation evidence for the exact [firmware profile](mh202-1.0.24.md). The [auxiliary record-copy test](mh202-1.0.24-record-and-script-lifecycle.md#auxiliary-field-records-use-a-command-directed-copy) separately executes original parser and helper code. Internal bodies, generated OPEN candidates and physical observations remain different evidence classes.
+
+| Namespace | Selected source boundary | Generated candidate | Evidence scope |
+| --- | --- | --- | --- |
+|WHO22|Supplied parsed kind2, WHERE1 and null selectors|Internal ASCII `95008F9F`|Static query branch and brief-envelope wrapper|
+|WHO22|Separate supplied brief body `90008F00`|`*22*1#1#0*1#1##`|Static reverse format and text/list helper|
+|WHO5|Separate supplied brief body `00004209`, opcode text42 and status text09|`*5*27*##`|Static ordinary status branch and conditional same-record conversion|
+
+These synthetic cases are not captured serial frames or a causal query/reply sequence. Original parser acceptance, active plugin/provider state and physical behavior are not established by the two static translation reports.
+
+## Native parsing of the generated candidates
+
+Two fresh isolated sessions execute the original same-build pointer parser on the exact generated strings, starting with null output slots and no supplied parsed fields. Both return `0` and construct parsed kind `1` objects under explicit ordinary string, allocation and list models.
+
+| Supplied text | Native parsed representation |
+| --- | --- |
+|`*5*27*##`|WHO5, WHAT27 and a NULL WHERE pointer; no parameter lists|
+|`*22*1#1#0*1#1##`|WHO22, base WHAT1 plus ordered parameters `1`, `0`; base WHERE1 plus selector20 `1`, selector24 NULL|
+
+The alarm's literal empty field is not replaced with `0`, `1` or an allocated empty string. The sound fields are decomposed without discarding their parameters. Coincident object addresses across sessions refer to separate private mappings. Input strings remain unchanged.
+
+This closes local parser construction for those two supplied candidates, while leaving plugin invocation, raw SCS admission and physical meaning separate. In this parser-only corpus, list storage follows statically audited original GLib data/next/prev stores; that append body is not executed. The later serialization corpus below executes a different original GLib traversal. The two entries contribute `652` original visits, `45` declared primitives, `2` redirects and `2` return boundaries (`701` hooks), with four table-data setup relocations counted separately. See the [generated-candidate parser report](../../project/review/firmware-analysis/mh202-1.0.24/run21-protocol-report.txt) and [independent isolation review](../../project/review/firmware-analysis/mh202-1.0.24/run21-protocol-review.txt).
+
+## Same object serialization preserves both strings
+
+Two later fresh sessions run each parser and then the original serializer on the same actual object, without reseeding fields. Both return `0` and reproduce the exact input text: `*5*27*##` and `*22*1#1#0*1#1##`. The full `48`-byte source objects and list readbacks remain unchanged.
+
+For the alarm object, original serializer code selects an explicit empty-string literal for NULL WHERE. The test therefore does not invent `%s` handling for a NULL pointer or normalize a target number. For sound parameters, original packaged GLib `g_list_foreach` invokes the original serializer callback twice. That callback requests reallocations and bounded string appends; ordinary allocation/string/free models remain explicit. The resulting text preserves both ordered parameters and the WHERE selector.
+
+The four entries include the two original parser preparations. They record `894` original visits, `75` declared primitives, `3` redirects and `4` return boundaries (`976` hooks). Serializer-only visits are `83` and `159`; original GLib traversal contributes `18` visits and its two parameter callbacks `52`, already included in the total. These are not all newly discovered PCs. Strict private-region guards do not constitute a per-object memory-safety proof. No core/plugin/STM, live publication or physical path executes. See the [same-object serializer report](../../project/review/firmware-analysis/mh202-1.0.24/run22-protocol-report.txt) and [independent isolation review](../../project/review/firmware-analysis/mh202-1.0.24/run22-protocol-review.txt).
+
+## Sound query and reverse text
+
+Actual multimedia translation registration has reverse criterion `8` and forward criterion `22`; its callback chooses the selected conversions through direction pairs. Internal criterion `8` is not `WHO 8`. On one coherent parsed `WHO 22`, kind `2`, simple `WHERE 1` case, the candidate address helper leaves both selectors null. The original query-format branch produces `95008F9F`, wrapped as type `3`, representation `1`, SCS routing `8`.
+
+A separately supplied brief body `90008F00` follows the selected character/type mapping. It constructs the complete WHAT text `1#1#0` and WHERE text `1#1`, then passes `*22*1#1#0*1#1##` to the text/list helper with routing `22`. That helper does not run the OPEN parser. Do not flatten the parameterized fields to WHAT1/WHERE1 or use this candidate to replace the published tagged-address grammar.
+
+The forward allocation/helper stores copy the source ID but do not initialize status offset `52` in the selected body. The reverse output copies status and ID from its own input. These are local field-copy facts, not complete initialization, correlation or memory-safety conclusions. No volume, sound-source or ON/OFF meaning is assigned from these synthetic character values. See the [sound translation report](../../project/review/firmware-analysis/mh202-1.0.24/run20-sound-report.txt), [independent source review](../../project/review/firmware-analysis/mh202-1.0.24/run20-sound-review.txt) and [WHO22 reference](../../functional/who-22-sound-diffusion/).
+
+## Multimedia query state and separate receipts
+
+The actual multimedia STM has a selected application path for a coherent parsed kind2/WHERE1 query. Under source-derived ordinary-enabled and source/utility-disabled flags, it writes envelope metadata4/8 to `1`, appends the same record, stores its ID at private offset `300` and computes a pending byte at private offset `296`. Those are members of a `320`-byte private context, distinct from envelope and parsed-object fields.
+
+The finite case supplies all fifteen checked status bytes as `1` and deadline words as zero. That gives pending1 and a `manage_timeout` return before source creation. It does not establish that initialized runtime queries always have no timeout: any checked status byte `9`, other deadlines or later state can change the path.
+
+A separately supplied receipt must match the saved ID and nonzero pending flag. Matching status1 clears pending without the selected NACK or timer-destruction calls. Matching status2 clears pending, requests a local NACK and conditionally destroys/unrefs the stored source. ID mismatch does not take those changes. These local receipts are not physical sound acknowledgements.
+
+A distinct parsed-kind4/matching-DIM route may request a timer with literal `1300`; it is not the selected kind2 query path. Its callback chooses a local receipt from pending state and calls a stored callback pointer. Actual timer firing, complete pending/deadline producers, callback consumers and ownership remain open. See the [multimedia state report](../../project/review/firmware-analysis/mh202-1.0.24/run21-sound-report.txt) and [independent current-source review](../../project/review/firmware-analysis/mh202-1.0.24/run21-sound-review.txt).
+
+## Alarm status and the published command vocabulary
+
+The alarm translator registers reverse source criterion `4` and parsed-output criterion `5`. These routing axes do not identify `WHO 4` and `WHO 5` as one system. A selected type3/representation1 record is split into four two-character slices. The synthetic body `00004209` avoids the separate special-prefix branch; opcode text `42` and status text `09` select literal `27`. The fixed format constructs `*5*27*##` and passes it with the existing record to the core parser/conversion helper.
+
+The [published WHO5 vocabulary](../../functional/who-5-alarm/what.md) already labels `WHAT 27` as Stop programming. Preserve that label. This incoming-status software selection alone does not prove that physical programming stopped or make status `09` a universal programming-event value.
+
+The candidate has a literal empty WHERE field. It is not normalized to `0` or `1`, identified as a published central target, or conflated with distinct published and touchscreen query forms. The later parser/serializer cases above preserve the NULL member and exact empty textual field. Core/publication consumers and physical target meaning remain separate, unexecuted boundaries. Under normal parser/provider/list completion, the existing-record core path would replace its body with a parsed object and preserve status/ID; a prior WHO2 helper test is not WHO5 execution evidence. See the [alarm status report](../../project/review/firmware-analysis/mh202-1.0.24/run20-alarm-report.txt), [independent source review](../../project/review/firmware-analysis/mh202-1.0.24/run20-alarm-review.txt) and [reference-boundary reconciliation](../../project/review/firmware-analysis/mh202-1.0.24/run20-reference-boundaries.txt).
+
+## Conditional post decoded alarm routing
+
+A later static producer trace begins with a supplied decoded category and the same synthetic body. Its classifier yields record type9 for `00004209`, while the earlier translation example explicitly supplied type3. Both fit that translator's local type guard; the new result does not rewrite the old fixture or validate the body as a real SCS message.
+
+For the selected criterion4 record, a field descriptor value at SL+56 equal to `2` permits an indirect delivery callback; supplied value `1` skips it. Descriptor SL+56 is not the record's representation field at offset56. A later non-transport initialization trace supplies a conditional callback binding. Main installs `field_receive` at manager+36; registration passes manager+32 to the field initializer. Its private state stores that tuple and its descriptor back-pointer. If the callback receives that same private state, its two-word load makes the target `field_receive`. Declared `scs_field_bus` and `scsai_field_bus` carry values1 and2 respectively. Actual activation and same-userdata delivery remain unobserved, so this does not complete the raw-event path. See the [post-decoded routing report](../../project/review/firmware-analysis/mh202-1.0.24/run21-alarm-report.txt) and [independent source review](../../project/review/firmware-analysis/mh202-1.0.24/run21-alarm-review.txt).
+
+The packaged `SCSAIEnable=1` setting controls optional parameter reads in the selected initializer; both descriptor-registration requests remain in the subsequent common path. It is not evidence of a connected or ready field source. See the [registration and callback report](../../project/review/firmware-analysis/mh202-1.0.24/run22-alarm-report.txt) and [independent source review](../../project/review/firmware-analysis/mh202-1.0.24/run22-alarm-review.txt).
+
+## Remaining boundaries
+
+The translation and STM/routing reports remain static. The separate parser corpus above executes only the two exact candidate parses. Active multimedia STM/synchronizer behavior, upstream alarm routing/admission, core/publication handling of the parsed candidates, optional address forms, complete ownership/error paths and physical effects remain open. Missing external assets and full runtime/provider limits remain in the [coverage record](../../project/review/firmware-analysis/mh202-1.0.24/).

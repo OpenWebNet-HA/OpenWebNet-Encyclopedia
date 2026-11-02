@@ -1,0 +1,22 @@
+# Independent MHS policy qualification and retained-context review
+
+PASS — narrow documentary qualification of inherited evidence and finite project context. Zero new functional path, zero previously unseen original code bytes and no correction of a prior claim are approved. This is not a configured scene trace or complete admission/schema proof.
+
+| Current relative file | Bytes | SHA256 |
+| --- | ---: | --- |
+| admission/mhs/POLICY_QUALIFICATION.json | 4285 | `f22a71791231fd6153586124c8dcfcfdaf6f135e46f59cd64c13d4d9c448c54a` |
+| admission/mhs/NOTE.md | 1308 | `9c839d7371ce7b0c52b3dffc30e35b6e9f25b1950e735373983a0eb3d0ce7463` |
+| admission/mhs/policy-first-candidate/INDEX.json | 439 | `15b84c9cf86bc49dd172de93610671eca1d1b8d5a9aab03e0da2ea56b4f060ea` |
+| admission/retained-project-context/CONTEXT.json | 2118 | `8f39c1f62f8720e76c8bb42acbabfa1f7b66b17cb6a09d5c62709ba43c3eb48a` |
+
+I independently verified all five qualification source pins and both retained installer-context report pins. Original ELF32 little-endian program headers map the selected b5992..b5a5c interval wholly into the executable equal-VA/file-offset PT_LOAD. Its 202 original bytes match the declared hash; the two older covering intervals match their own hashes. Eighty already-retained instruction lines in those files agree with original bytes. This is an identity/interpretation check of inherited evidence, not new source coverage or a new collector/guard matrix. The policy immediate first copies/index match their current originals.
+
+The retained instruction boundary supports b5992 as CMP following the BLX at b598e; b5990 is inside that earlier 32-bit instruction. The note correctly treats the initial exploratory misalignment as unpromoted and does not invent an earlier generated packet, failed canonical run or missing terminal hash.
+
+The earlier scheduler report explicitly declined complete JSON Schema/all-category validation and a guarantee of file loading. It did not claim that original category membership or whole-parser name requirements had been established. The new note therefore supplies a caution without rewriting that historical report or manufacturing a correction. The retained b599e import is the non-const member access operator before the later isMember requests. Under ordinary mutating-access premises, the latter cannot alone establish a required field in the original unmodified input. The numeric receiver-word5 leg has the local membership checks and SAME-root/SAME-receiver constructor handoff, without a local name-presence check in that bound. This does not prove name optional, accepted whole documents, public category labels, provider behavior or a complete parser policy. External branches/string decoding/provider bodies remain opaque. No new body was expanded to complete the argument.
+
+The selected root sources directory currently has zero direct entries; that observed local directory is not the user's global asset inventory. The parent-reported human answer is an availability statement, not a global absence proof. Exact pinned installer reports classify MHPrj/PTDB as manufacturer templates: the relevant instance/association tables are empty while reference/seed data remain. I checked the existing report statements and hashes without querying the databases or running an old collector. The MH202 default-project filename remains another product's already-retained lead; no body inspection, grammar/identity transfer or commissioned-data inference follows. The context contains sanitized classifications and identities rather than full private configuration or runtime values.
+
+The asset-stage proposals and subsequent source authorization remain distinct historical phases. Stopping the duplicate MHS source packet is consistent with zero new bytes/path. A separately reviewed F460 filesystem admission would be a different layer and cannot turn this caution or default-template context into a genuine configured trace. This review makes no finding about that pending F460 packet or any generic loader/provider.
+
+All verification was read-only host metadata/hash/ELF and retained-report inspection. Only this new review and its exact first copy/index were written. No original/vendor/native/emulator/model/fixture/JSON/SQL/provider/target/runtime/physical execution, source/repository/remote edits, new schedule or archive action occurred. Prior original-execution ledgers, closed routes and immutable evidence histories remain unchanged. Future integration/gates are not certified here.

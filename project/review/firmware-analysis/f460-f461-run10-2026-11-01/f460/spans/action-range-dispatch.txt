@@ -1,0 +1,31 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000f86b0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x80b00>:
+   f86b0:	a94dd6d3 	ldp	x19, x21, [x22, #216]
+   f86b4:	eb1302bf 	cmp	x21, x19
+   f86b8:	54000c20 	b.eq	f883c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x80c8c>  // b.none
+   f86bc:	a90e63f7 	stp	x23, x24, [sp, #224]
+   f86c0:	9103e2d8 	add	x24, x22, #0xf8
+   f86c4:	14000004 	b	f86d4 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x80b24>
+   f86c8:	91004273 	add	x19, x19, #0x10
+   f86cc:	eb1302bf 	cmp	x21, x19
+   f86d0:	54000100 	b.eq	f86f0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x80b40>  // b.none
+   f86d4:	f9400260 	ldr	x0, [x19]
+   f86d8:	f9400001 	ldr	x1, [x0]
+   f86dc:	f9400021 	ldr	x1, [x1]
+   f86e0:	d63f0020 	blr	x1
+   f86e4:	08dfff00 	ldarb	w0, [x24]
+   f86e8:	72001c1f 	tst	w0, #0xff
+   f86ec:	54fffee0 	b.eq	f86c8 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x80b18>  // b.none
+   f86f0:	a94dded3 	ldp	x19, x23, [x22, #216]
+   f86f4:	cb1302e0 	sub	x0, x23, x19
+   f86f8:	9346fc15 	asr	x21, x0, #6
+   f86fc:	9344fc00 	asr	x0, x0, #4
+   f8700:	f10002bf 	cmp	x21, #0x0
+   f8704:	540008ed 	b.le	f8820 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x80c70>
+   f8708:	8b151a75 	add	x21, x19, x21, lsl #6
+   f870c:	14000010 	b	f874c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x80b9c>

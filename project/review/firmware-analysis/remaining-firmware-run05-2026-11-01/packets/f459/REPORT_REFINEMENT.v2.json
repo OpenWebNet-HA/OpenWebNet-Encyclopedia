@@ -1,0 +1,19 @@
+{
+  "old_report": {
+    "source": "work/f459-firmware/2.1.5/research/2026-11-01-night05-namespace/REPORT.md",
+    "snapshot": "work/remaining-firmware-investigation/2026-11-01-run05/integration/before-namespace-report-v2/REPORT.md",
+    "bytes": 4311,
+    "sha256": "a88088bf8c2cd0908fb77ac57110c9de0c106f67e0fa940dab3ff17642cfa5cf"
+  },
+  "new_report": {
+    "path": "work/f459-firmware/2.1.5/research/2026-11-01-night05-namespace/REPORT.v2.md",
+    "bytes": 4759,
+    "sha256": "35b284912fb9bec53ad4276f8a8afcf79b7ea3df65a1dc4858f2460c32b6b385"
+  },
+  "reason": "Reviewer corrected command label v1\u2192v2 only; v1 is retained parser-failing code, v2 successful canonical collector",
+  "canonical_outputs_unchanged": true,
+  "canonical_manifest_reports_old_REPORT_md": true,
+  "independent_current_report_required": true,
+  "source_guards_results_unchanged": true,
+  "exact_parent_presnapshot": "work/remaining-firmware-investigation/2026-11-01-run05/integration/before-namespace-report-v2"
+}

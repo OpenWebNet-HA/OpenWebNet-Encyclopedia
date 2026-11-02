@@ -1,0 +1,62 @@
+[
+  {
+    "guard": "string length at+8 !=0",
+    "key": "id",
+    "raw_offset": 4,
+    "value": "Json string from original std::string"
+  },
+  {
+    "guard": "assignment reached unconditionally on normal path",
+    "key": "type",
+    "raw_offset": 28,
+    "value": "local enum0..23 mapped string, otherwise empty string; BN3L is12"
+  },
+  {
+    "guard": "u32 !=0",
+    "key": "delay",
+    "raw_offset": 32,
+    "value": "Json unsigned integer"
+  },
+  {
+    "guard": "u32 !=0",
+    "key": "duration",
+    "raw_offset": 36,
+    "value": "Json unsigned integer"
+  },
+  {
+    "guard": "assignment reached unconditionally on normal path",
+    "key": "status",
+    "raw_offset": 40,
+    "value": "u32(raw+1)<=2 selects noStatus/on/off; otherwise empty string"
+  },
+  {
+    "guard": "u32(raw+1)!=0, equivalently raw !=0xffffffff",
+    "key": "brightness",
+    "raw_offset": 44,
+    "value": "Json signed integer"
+  },
+  {
+    "guard": "u32(raw+1)!=0, equivalently raw !=0xffffffff",
+    "key": "saturation",
+    "raw_offset": 48,
+    "value": "Json signed integer"
+  },
+  {
+    "guard": "u32(raw+1)!=0, equivalently raw !=0xffffffff",
+    "key": "hue",
+    "raw_offset": 52,
+    "value": "Json signed integer"
+  },
+  {
+    "guard": "u32(raw+1)!=0, equivalently raw !=0xffffffff",
+    "key": "temperature",
+    "raw_offset": 56,
+    "value": "Json signed integer"
+  },
+  {
+    "guard": "u32(raw+1)!=0, equivalently raw !=0xffffffff",
+    "key": "speed",
+    "raw_offset": 60,
+    "value": "Json signed integer"
+  }
+]

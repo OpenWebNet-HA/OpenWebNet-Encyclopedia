@@ -1,0 +1,111 @@
+{
+  "checkpoint": "run21",
+  "status": "three independent current source/isolation reviews passed; earlier multimedia draft-history integrity limited, documentary integration separate; overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run21/REPORT.md",
+      "source_sha256": "4b266b673700b9cb0115ab81bd08aae21902149ac76664c32043b69d492fdef3",
+      "published": "run21-protocol-report.txt",
+      "published_sha256": "4b266b673700b9cb0115ab81bd08aae21902149ac76664c32043b69d492fdef3"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run21/protocol-review.md",
+      "source_sha256": "7a908700456813262f6fd494e4f773d407a8d90d5156070681dc111358a0a791",
+      "published": "run21-protocol-review.txt",
+      "published_sha256": "7a908700456813262f6fd494e4f773d407a8d90d5156070681dc111358a0a791"
+    },
+    {
+      "role": "report",
+      "area": "sound",
+      "research_path": "work/mh202-firmware/research/2026-10-30/sound/run21/REPORT.md",
+      "source_sha256": "7a620c417174980119e9573c914dbe7730823697661cb975a20708e8e127aea6",
+      "published": "run21-sound-report.txt",
+      "published_sha256": "7a620c417174980119e9573c914dbe7730823697661cb975a20708e8e127aea6"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "sound",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run21/sound-review.md",
+      "source_sha256": "087023ecd094dea55e9494555c74ce3a1188b1013b5e5fbe94bcd5654ada0f9d",
+      "published": "run21-sound-review.txt",
+      "published_sha256": "087023ecd094dea55e9494555c74ce3a1188b1013b5e5fbe94bcd5654ada0f9d"
+    },
+    {
+      "role": "report",
+      "area": "alarm",
+      "research_path": "work/mh202-firmware/research/2026-10-30/alarm/run21/REPORT.md",
+      "source_sha256": "7d7d27de1854e897b3761034265f7ee2dc4179edbc12eb31f4b85d9c8728c870",
+      "published": "run21-alarm-report.txt",
+      "published_sha256": "7d7d27de1854e897b3761034265f7ee2dc4179edbc12eb31f4b85d9c8728c870"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "alarm",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run21/alarm-review.md",
+      "source_sha256": "99c80fcc4f3dab07eea00528b725a712598a320e37c86c5f4e167fa30fb00297",
+      "published": "run21-alarm-review.txt",
+      "published_sha256": "99c80fcc4f3dab07eea00528b725a712598a320e37c86c5f4e167fa30fb00297"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run21/collect_evidence.py",
+      "sha256": "51e95b39068127847ef7d1c10f2067ea75cda9d00a964a5bc9f79b6cb3f6feb2",
+      "method": "static original and saved-parser arrays"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run21/emulate_generated_candidates.py",
+      "sha256": "11447ab3a9157d414e31b1e2ad268f1f2b9a7c07bc30aec098dfe0c40280c4cb",
+      "method": "two fresh original COSO48 candidate parses; explicit C/GLib/list models, no targetOS"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/sound/run21/collect_evidence.py",
+      "sha256": "6e0d435df598cb7586c82967b565af9cd2d3a4fcef8b16b5daa5b8acc1251ec3",
+      "method": "static original/finitehost evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/alarm/run21/collect_provenance.py",
+      "sha256": "7f870a1fa46a1ab3c5d85331dba87c667372a7b2cf24e17cf5e8b85309cae31f",
+      "method": "static post-decoded record/registry evidence only"
+    }
+  ],
+  "canonical_execution": {
+    "new_corpus": {
+      "top_level_entries": 2,
+      "original_instruction_visits": 652,
+      "primitive_callbacks": 45,
+      "linker_redirect_callbacks": 2,
+      "exit_boundaries": 2,
+      "stop_boundaries": 0,
+      "code_hook_visits": 701,
+      "setup_data_relocation_writes": 4,
+      "private_sessions": 2
+    },
+    "cumulative": {
+      "corpora": 13,
+      "top_level_entries": 64,
+      "original_instruction_visits": 30687,
+      "primitive_callbacks": 3065,
+      "linker_redirect_callbacks": 125,
+      "exit_boundaries": 20,
+      "selector_read_stop_boundaries": 2,
+      "code_hook_visits": 33899,
+      "firmware_processes": 0,
+      "target_OS_calls": 0
+    },
+    "count_scope": "Current two parser sessions only; earlier12corpora frozen and verification replays not accumulated. Sound/alarm additions0."
+  },
+  "historical_integrity_limit": {
+    "area": "sound/run21",
+    "affected": "Earlier generated descriptor JSON/output-manifest/collector draft were overwritten during raw-label neutralization; exact earlier bytes and independent hashes unavailable, no reconstruction supplied",
+    "current_evidence": "Final source/report/collector/effects independently checked against original bytes; announced pre-clarification report and author-manifest actually preserved",
+    "does_not_prove": "Full intermediate-draft historical integrity",
+    "record": "sound/run21/REPORT.md author preparation and provenance note"
+  }
+}

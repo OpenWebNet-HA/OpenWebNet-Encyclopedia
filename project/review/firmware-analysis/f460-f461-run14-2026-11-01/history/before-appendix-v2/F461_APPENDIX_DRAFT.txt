@@ -1,0 +1,8 @@
+## F461: module admission and handle recording before initialization
+
+The selected module-loader path uses the library directory from the same supplied manager holder. After its support and directory gates, it requests names with prefix `lib` and suffix `.so`, constructs a path and requests a module handle. That handle must pass both `init_plugin` and `stop_plugin` symbol-result checks. A failed symbol check requests module closure and continues under normal provider returns; the stop function itself is not invoked here.
+
+For the selected successful lookup path, a new sixteen-byte path/handle pair is appended to the holder's list before requesting the initializer with the separate configuration directory. The bounded continuation does not explicitly test the initializer's returned machine value before another helper and enumeration. This does not establish its full return ABI or a global absence of validation.
+
+Normal traversal can return local0 after skipping names or encountering per-entry failures, so that number is not evidence any module initialized. Other return paths depend on provider and diagnostic behavior. This adds admission, retention-order and local-return evidence beyond the earlier directory-argument trace; actual activation, module ABI, readiness, ownership and boot/DTB/auxiliary-core selection remain open. Loader and initializer implementations were not executed or expanded.
+

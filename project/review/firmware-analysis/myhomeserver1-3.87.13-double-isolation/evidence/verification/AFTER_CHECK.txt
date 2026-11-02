@@ -1,0 +1,19 @@
+# Post-run analysis-tool identity check
+
+**PASS.** At 2026-11-01T03:22:32.025615+00:00, all **63** current analysis-tool paths, sizes, nanosecond mtimes and SHA256 hashes exactly match the immutable BEFORE inventory. No tool path was added or removed. The harness's `disabled-pycache-never-created` path remains absent. This check read files only and did **not** replay a guest or import the analysis package.
+
+The earlier verification packet remains historical static work with zero guest execution. The separately root-approved canonical experiment is now COMPLETE and is **not** relabeled zero: its eight saved entries account for **340 original code-hook visits + 12 linker redirects + 8 EXIT callbacks + 0 guard stops = 360 code hooks**, with **4 setup data relocations**, **0 C primitives** and **24 FP/control setup writes**. These are saved-result ledger checks, not another execution or additional accumulated coverage. No FAILED_ATTEMPT file exists at this checkpoint.
+
+I checked every saved per-entry accounting sum and all **10 exact first-results members**. This after-state identity check does not independently prove arbitrary scalar/JSON semantics, effective target binding or full firmware behavior. Canonical helper results and their private fixture limits remain separate from unchanged-tool evidence.
+
+BEFORE inventory SHA256: `3ebab93891ce85f986507232376fc1cbc0f0d4e12a85a3f9774444962e739b7e`. Original provider source is `/usr/lib/libjsoncpp.so.1.9.5`, SHA256 `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36`, pinned by the exact source preflight. The full post-run tool list and every canonical source/result/attempt pin are in `TOOL_TREE_AFTER.json`.
+
+Selected canonical pins:
+
+- `harness/isolate_double_v3.py`: `1ef53f7e04a20cb43c37dfb1cae965bb119bcda167db9b372b58b02bf1cb4a15`
+- `harness/SOURCE_PREFLIGHT.json`: `dcc9dffa77e22c8a2ca0ffd1ec5eaed52f6f730bef03d1a5519cf639ebcebad4`
+- `harness/RUN_STARTED.json`: `b547c202bb3e673a5e04601584f026c7760a0e645219855e763123070030216b`
+- `harness/RESULTS.json`: `450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525`
+- `harness/first-results/INDEX.json`: `3479c6bae64d42b3764ac646927669f157f32a4034e95235b45a9b701f71845a`
+
+The existing verification v2 static `--check` was also rerun successfully (13 outputs, all 63 tool files, 41 RECORD hashes); that host check executed no guest instructions. This report captures the observed after-state only and does not claim future tool immutability. All earlier reports, collectors, inventories and first copies remain unchanged.

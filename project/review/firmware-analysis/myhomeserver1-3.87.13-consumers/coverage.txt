@@ -1,0 +1,14 @@
+# MyHOMEServer1 consumer-continuation coverage
+
+Counts are exact selected method/input scope, not whole-firmware coverage or a global percentage.
+
+| Area | Positive source scope | Unclosed boundary |
+| --- | --- | --- |
+| Catalogue | Two-handle setup/caller, separate stat/open/prepare/step/column-conversion reader and a separate registered query-string initializer;10source spans/17guards/3PICjoins | Natural caller activation, SQL producer/semantic columns, eligibility/fallback, error/full handle lifetime, effective SQLite provider |
+| Scheduler | Setting→getter→loader→selectedfiles→JsonCppparse→sameobject/rootconstructor→three collection factories;17spans/28PIC/10directcalls/11guards/five exidx boundaries | Factory element grammar, runner initialization, enabled executiongate, scheduling/cancellation, command handoff and physical action |
+| Packaged scene assets | Both image regular-file manifests contain0entries under the literal configuredprefix | Live files, symlink/mount/current configured state and missingextra contents are not reconstructed |
+| C JSON data helper | Fresh20/32layouts, local result construction/predicates;10spans/18guards/5PIC/eight resolved-node hostcases | Parser acceptance/lookup tree/caller interpretation, full ABI/lifetime/provider closure, serialization, all I/O |
+| Reproduction | Three exclusive current collectors reproduce16+27+16=59outputs including manifests | Not original helper/process execution; historical source attempts retained separately |
+| Review | Current source/byte/history and final documentary/mechanical checks | Not broader Device/full-source/oracle/physical approval |
+
+Current original instructions, target SQL statements, vendor scripts/processes, services, network/bus, emulation and physical operations are0. Earlier F454/MH202 execution ledgers are unchanged and not replayed/reset. Ordinary imports, object memory, parser/provider completion and original configured state remain explicit premises. No closed authentication/session/framing route or equivalent investigation is reopened.

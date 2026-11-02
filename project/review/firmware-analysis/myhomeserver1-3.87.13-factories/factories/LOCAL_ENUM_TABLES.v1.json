@@ -1,0 +1,538 @@
+[
+  {
+    "add_pc_va": "0x2ea20",
+    "base_pool_va": "0x2f630",
+    "family": "triggers",
+    "got_base": "0x1659a4",
+    "got_slot_va": "0x166978",
+    "rows": [
+      {
+        "index": 0,
+        "length": 4,
+        "name": "TIME",
+        "name_va": "0x115a54",
+        "row_va": "0x160450"
+      },
+      {
+        "index": 1,
+        "length": 4,
+        "name": "BNIL",
+        "name_va": "0x115a4c",
+        "row_va": "0x160458"
+      },
+      {
+        "index": 2,
+        "length": 7,
+        "name": "WEATHER",
+        "name_va": "0x115a44",
+        "row_va": "0x160460"
+      },
+      {
+        "index": 3,
+        "length": 4,
+        "name": "BNLD",
+        "name_va": "0x115a3c",
+        "row_va": "0x160468"
+      },
+      {
+        "index": 4,
+        "length": 4,
+        "name": "BNAB",
+        "name_va": "0x115a34",
+        "row_va": "0x160470"
+      },
+      {
+        "index": 5,
+        "length": 4,
+        "name": "BNAS",
+        "name_va": "0x115a2c",
+        "row_va": "0x160478"
+      },
+      {
+        "index": 6,
+        "length": 4,
+        "name": "BNMS",
+        "name_va": "0x115a24",
+        "row_va": "0x160480"
+      },
+      {
+        "index": 7,
+        "length": 4,
+        "name": "BNCS",
+        "name_va": "0x115a1c",
+        "row_va": "0x160488"
+      },
+      {
+        "index": 8,
+        "length": 4,
+        "name": "BNLO",
+        "name_va": "0x115a14",
+        "row_va": "0x160490"
+      },
+      {
+        "index": 9,
+        "length": 4,
+        "name": "BN3L",
+        "name_va": "0x115a0c",
+        "row_va": "0x160498"
+      },
+      {
+        "index": 10,
+        "length": 4,
+        "name": "BN3P",
+        "name_va": "0x115a04",
+        "row_va": "0x1604a0"
+      },
+      {
+        "index": 11,
+        "length": 4,
+        "name": "BNTH",
+        "name_va": "0x1159fc",
+        "row_va": "0x1604a8"
+      },
+      {
+        "index": 12,
+        "length": 4,
+        "name": "BNFC",
+        "name_va": "0x1159f4",
+        "row_va": "0x1604b0"
+      },
+      {
+        "index": 13,
+        "length": 4,
+        "name": "BNTR",
+        "name_va": "0x1159ec",
+        "row_va": "0x1604b8"
+      },
+      {
+        "index": 14,
+        "length": 4,
+        "name": "BNXM",
+        "name_va": "0x1159e4",
+        "row_va": "0x1604c0"
+      },
+      {
+        "index": 15,
+        "length": 8,
+        "name": "TWILIGHT",
+        "name_va": "0x1159d8",
+        "row_va": "0x1604c8"
+      },
+      {
+        "index": 16,
+        "length": 5,
+        "name": "ALERT",
+        "name_va": "0x1159d0",
+        "row_va": "0x1604d0"
+      },
+      {
+        "index": 17,
+        "length": 13,
+        "name": "BNCUPARTITION",
+        "name_va": "0x1159c0",
+        "row_va": "0x1604d8"
+      },
+      {
+        "index": 18,
+        "length": 9,
+        "name": "BNCUSCENE",
+        "name_va": "0x1159b4",
+        "row_va": "0x1604e0"
+      },
+      {
+        "index": 19,
+        "length": 4,
+        "name": "BNSE",
+        "name_va": "0x1159ac",
+        "row_va": "0x1604e8"
+      },
+      {
+        "index": 20,
+        "length": 4,
+        "name": "BNSO",
+        "name_va": "0x1159a4",
+        "row_va": "0x1604f0"
+      },
+      {
+        "index": 21,
+        "length": 5,
+        "name": "BNILG",
+        "name_va": "0x11599c",
+        "row_va": "0x1604f8"
+      },
+      {
+        "index": 22,
+        "length": 5,
+        "name": "BN3LG",
+        "name_va": "0x115994",
+        "row_va": "0x160500"
+      },
+      {
+        "index": 23,
+        "length": 5,
+        "name": "BNLDG",
+        "name_va": "0x11598c",
+        "row_va": "0x160508"
+      }
+    ],
+    "scope": "Local enum declarations, not exhaustive runtime support or public WHO/type namespace.",
+    "slot_offset_pool_va": "0x2f640",
+    "slot_relocation": "R_ARM_RELATIVE",
+    "table_va": "0x160450"
+  },
+  {
+    "add_pc_va": "0x2fa70",
+    "base_pool_va": "0x306a0",
+    "family": "conditions",
+    "got_base": "0x1659a4",
+    "got_slot_va": "0x166b68",
+    "rows": [
+      {
+        "index": 0,
+        "length": 4,
+        "name": "BNIL",
+        "name_va": "0x115bc8",
+        "row_va": "0x1605b0"
+      },
+      {
+        "index": 1,
+        "length": 4,
+        "name": "TIME",
+        "name_va": "0x115bc0",
+        "row_va": "0x1605b8"
+      },
+      {
+        "index": 2,
+        "length": 4,
+        "name": "BNLD",
+        "name_va": "0x115bb8",
+        "row_va": "0x1605c0"
+      },
+      {
+        "index": 3,
+        "length": 4,
+        "name": "BNAB",
+        "name_va": "0x115bb0",
+        "row_va": "0x1605c8"
+      },
+      {
+        "index": 4,
+        "length": 4,
+        "name": "BNAS",
+        "name_va": "0x115ba8",
+        "row_va": "0x1605d0"
+      },
+      {
+        "index": 5,
+        "length": 4,
+        "name": "BNMS",
+        "name_va": "0x115ba0",
+        "row_va": "0x1605d8"
+      },
+      {
+        "index": 6,
+        "length": 4,
+        "name": "BNCS",
+        "name_va": "0x115b98",
+        "row_va": "0x1605e0"
+      },
+      {
+        "index": 7,
+        "length": 4,
+        "name": "BNLO",
+        "name_va": "0x115b90",
+        "row_va": "0x1605e8"
+      },
+      {
+        "index": 8,
+        "length": 7,
+        "name": "WEATHER",
+        "name_va": "0x115b88",
+        "row_va": "0x1605f0"
+      },
+      {
+        "index": 9,
+        "length": 4,
+        "name": "BN3L",
+        "name_va": "0x115b80",
+        "row_va": "0x1605f8"
+      },
+      {
+        "index": 10,
+        "length": 4,
+        "name": "BN3P",
+        "name_va": "0x115b78",
+        "row_va": "0x160600"
+      },
+      {
+        "index": 11,
+        "length": 4,
+        "name": "BNTH",
+        "name_va": "0x115b70",
+        "row_va": "0x160608"
+      },
+      {
+        "index": 12,
+        "length": 4,
+        "name": "BNFC",
+        "name_va": "0x115b68",
+        "row_va": "0x160610"
+      },
+      {
+        "index": 13,
+        "length": 4,
+        "name": "BNTR",
+        "name_va": "0x115b60",
+        "row_va": "0x160618"
+      },
+      {
+        "index": 14,
+        "length": 4,
+        "name": "BNXM",
+        "name_va": "0x115b58",
+        "row_va": "0x160620"
+      },
+      {
+        "index": 15,
+        "length": 8,
+        "name": "TWILIGHT",
+        "name_va": "0x115b4c",
+        "row_va": "0x160628"
+      },
+      {
+        "index": 16,
+        "length": 13,
+        "name": "BNCUPARTITION",
+        "name_va": "0x115b3c",
+        "row_va": "0x160630"
+      },
+      {
+        "index": 17,
+        "length": 9,
+        "name": "BNCUSCENE",
+        "name_va": "0x115b30",
+        "row_va": "0x160638"
+      },
+      {
+        "index": 18,
+        "length": 4,
+        "name": "BNSE",
+        "name_va": "0x115b28",
+        "row_va": "0x160640"
+      },
+      {
+        "index": 19,
+        "length": 4,
+        "name": "BNSO",
+        "name_va": "0x115b20",
+        "row_va": "0x160648"
+      },
+      {
+        "index": 20,
+        "length": 5,
+        "name": "BNILG",
+        "name_va": "0x115b18",
+        "row_va": "0x160650"
+      },
+      {
+        "index": 21,
+        "length": 5,
+        "name": "BN3LG",
+        "name_va": "0x115b10",
+        "row_va": "0x160658"
+      },
+      {
+        "index": 22,
+        "length": 5,
+        "name": "BNLDG",
+        "name_va": "0x115b08",
+        "row_va": "0x160660"
+      }
+    ],
+    "scope": "Local enum declarations, not exhaustive runtime support or public WHO/type namespace.",
+    "slot_offset_pool_va": "0x306b0",
+    "slot_relocation": "R_ARM_RELATIVE",
+    "table_va": "0x1605b0"
+  },
+  {
+    "add_pc_va": "0x30cd0",
+    "base_pool_va": "0x31958",
+    "family": "actions",
+    "got_base": "0x1659a4",
+    "got_slot_va": "0x166650",
+    "rows": [
+      {
+        "index": 0,
+        "length": 4,
+        "name": "BNIL",
+        "name_va": "0x115d58",
+        "row_va": "0x160710"
+      },
+      {
+        "index": 1,
+        "length": 4,
+        "name": "BNLD",
+        "name_va": "0x115d50",
+        "row_va": "0x160718"
+      },
+      {
+        "index": 2,
+        "length": 4,
+        "name": "BNAB",
+        "name_va": "0x115d48",
+        "row_va": "0x160720"
+      },
+      {
+        "index": 3,
+        "length": 4,
+        "name": "BNAS",
+        "name_va": "0x115d40",
+        "row_va": "0x160728"
+      },
+      {
+        "index": 4,
+        "length": 4,
+        "name": "BNMS",
+        "name_va": "0x115d38",
+        "row_va": "0x160730"
+      },
+      {
+        "index": 5,
+        "length": 4,
+        "name": "BNCS",
+        "name_va": "0x115d30",
+        "row_va": "0x160738"
+      },
+      {
+        "index": 6,
+        "length": 4,
+        "name": "BNLO",
+        "name_va": "0x115d28",
+        "row_va": "0x160740"
+      },
+      {
+        "index": 7,
+        "length": 4,
+        "name": "TIME",
+        "name_va": "0x115d20",
+        "row_va": "0x160748"
+      },
+      {
+        "index": 8,
+        "length": 4,
+        "name": "MAIL",
+        "name_va": "0x115d18",
+        "row_va": "0x160750"
+      },
+      {
+        "index": 9,
+        "length": 4,
+        "name": "PUSH",
+        "name_va": "0x115d10",
+        "row_va": "0x160758"
+      },
+      {
+        "index": 10,
+        "length": 5,
+        "name": "SLEEP",
+        "name_va": "0x115d08",
+        "row_va": "0x160760"
+      },
+      {
+        "index": 11,
+        "length": 8,
+        "name": "SCENARIO",
+        "name_va": "0x115cfc",
+        "row_va": "0x160768"
+      },
+      {
+        "index": 12,
+        "length": 4,
+        "name": "BN3L",
+        "name_va": "0x115cf4",
+        "row_va": "0x160770"
+      },
+      {
+        "index": 13,
+        "length": 4,
+        "name": "BN3P",
+        "name_va": "0x115cec",
+        "row_va": "0x160778"
+      },
+      {
+        "index": 14,
+        "length": 4,
+        "name": "BNFC",
+        "name_va": "0x115ce4",
+        "row_va": "0x160780"
+      },
+      {
+        "index": 15,
+        "length": 4,
+        "name": "BNTH",
+        "name_va": "0x115cdc",
+        "row_va": "0x160788"
+      },
+      {
+        "index": 16,
+        "length": 4,
+        "name": "BNTR",
+        "name_va": "0x115cd4",
+        "row_va": "0x160790"
+      },
+      {
+        "index": 17,
+        "length": 5,
+        "name": "ALERT",
+        "name_va": "0x115ccc",
+        "row_va": "0x160798"
+      },
+      {
+        "index": 18,
+        "length": 13,
+        "name": "BNCUPARTITION",
+        "name_va": "0x115cbc",
+        "row_va": "0x1607a0"
+      },
+      {
+        "index": 19,
+        "length": 9,
+        "name": "BNCUSCENE",
+        "name_va": "0x115cb0",
+        "row_va": "0x1607a8"
+      },
+      {
+        "index": 20,
+        "length": 4,
+        "name": "BNSO",
+        "name_va": "0x115ca8",
+        "row_va": "0x1607b0"
+      },
+      {
+        "index": 21,
+        "length": 5,
+        "name": "BN3LG",
+        "name_va": "0x115ca0",
+        "row_va": "0x1607b8"
+      },
+      {
+        "index": 22,
+        "length": 5,
+        "name": "BNILG",
+        "name_va": "0x115c98",
+        "row_va": "0x1607c0"
+      },
+      {
+        "index": 23,
+        "length": 5,
+        "name": "BNLDG",
+        "name_va": "0x115c90",
+        "row_va": "0x1607c8"
+      }
+    ],
+    "scope": "Local enum declarations, not exhaustive runtime support or public WHO/type namespace.",
+    "slot_offset_pool_va": "0x31968",
+    "slot_relocation": "R_ARM_RELATIVE",
+    "table_va": "0x160710"
+  }
+]

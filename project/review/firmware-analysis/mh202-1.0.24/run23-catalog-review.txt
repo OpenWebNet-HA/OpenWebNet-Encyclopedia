@@ -1,0 +1,58 @@
+# Independent run23 verification catalog v2 review
+
+**PASS for navigation/reproducibility and bounded provenance labels. No material author correction requested.** This is not a fresh semantic audit of all underlying firmware findings, new firmware testing, full draft-history authentication or a coverage percentage. No original ARM/vendor/parser/JavaScript/PHP/native harness, target process, syscall, network or device execution is performed. Original instructions/helper calls/primitive hooks/test runs added by this review are0. Only the two host catalog `--check` programs and independent read-only hash/link/JSON checks ran; v1's expected failure is identified below.
+
+## Exact reviewed candidate and history pins
+
+Paths in this table are relative to reconciliation/run23/.
+
+| Artifact | SHA256 |
+|---|---|
+|`build_catalog_v2.py`|`c427fe1ce244d3ee51583a457b1820d2cab94a4c5d186befd0d028941b546ccf`|
+|`candidate-v2/VERIFICATION_CATALOG.json`|`3ad31180caa077713dda4a8d89679e7c398547cf1dbcc6fbba54cd7bd5312bfe`|
+|`candidate-v2/VERIFICATION_CATALOG.md`|`0711ad6b0409b359d748ae778fe60243031730eb533aa9be58f8b46fe579c790`|
+|`candidate-v2/RUN22_FINDINGS_SUPPLEMENT.json`|`746fdd8e794566319ab33465530d575420620075582afab9672ed1bc6eb2e2de`|
+|`candidate-v2/RUN22_FINDINGS_SUPPLEMENT.md`|`1b6eac7693cde0afd4244b85062434d6ae1f5128f0d0e76c74cd2db5f62fda7e`|
+|`candidate-v2/SOURCE_PINS.json`|`6dd5789afcc7d9382df3d10cc66ed2389df1fc3c37d85e79d4413f52a6566af4`|
+|`candidate-v2/output-manifest.json`|`27f3763a315ef4babeeebfbfec3921959bb9d4713f99aca82009da2ac8b23ae3`|
+|`candidate-v2/initial-generated-v2/SNAPSHOT_INDEX.json`|`f6554089c91eb71aac5953645b8ba93934e049f1cad949fbe8403dff10ed1380`|
+|`VERSION_HISTORY.md`|`e8ae35ca4b38968ddb5b45065f2685f755e0bf8e32dc82e8e9fa5224e54fe397`|
+|`build_catalog_v1.py`|`85d9ed550d3aa762651c5ef1a46f3aea09082847ac1de2ac0df693fd89cd32ae`|
+|`initial-generated-v1/SNAPSHOT_INDEX.json`|`e3348e194d46b6e8172fcf55fceb458996bd7d69046a73b71885edc82e3ed74f`|
+|`V1_FIRST_CHECK_FAILURE.txt`|`13436aaf80c43b7b8bd0df9ba6d086b68449d9928ee5496fdbdc2dfb7d1dea75`|
+
+## Reproduction, inputs and navigation
+
+The unchanged **build_catalog_v2.py --check** succeeds with **22 checkpoints,809 unique source inputs,19 outputs,14 canonical corpora,24 frozen base rows and2 linked supplement rows**, original execution/tests added0. Its reconstruction compares exact bytes with `read_bytes()`, not normalized text or merely equivalent JSON.
+
+Independent host checks verified every809 input's current SHA256 and byte size,18 manifest-member hashes plus manifest as the19th output, and generator identity. Every22 saved checkpoint's recorded scope and cumulative-count fields match its original final-checkpoint record; missing historical values remain null rather than becoming0. All14 canonical saved-result files match their pins. All **28 Markdown navigation links** in the current catalog/supplement resolve to actual intended files.
+
+Each saved historical document pin resolves to actual retained bytes with its recorded hash. All13 checkpoint22 document copies match both their recorded document hash and selected stable reviewed snapshot. Their source directories are **8 reviewed/run22,2 run20,2 run10 and1 run19**, because the generator uses the first retained matching hash. These are13 documents *pinned by checkpoint22*, not a claim that all13 underlying source files were first created in run22. Candidate v2 treats the13 local frozen copies as outputs; its809 source-input map contains no candidate-v2 output path.
+
+The snapshot-source scan explicitly admits only reviewed run1..22 directories. Later run23+ snapshot additions or edits to current mutable repository prose are not substituted into these document pins. Changes to a historical source that is already pinned remain expected integrity failures, not permission to silently refresh a frozen catalog.
+
+## Counts and inheritance remain bounded
+
+Current checkpoint22 counts are faithfully distinct: **14 corpora,68 top-level entries,31581 original instruction visits,3140 modeled primitive callbacks,128 definition redirects,24 EXIT boundaries and2 selector-stop boundaries**, summing to34875 hooks. The2 stops are not counted as extra EXITs. Setup writes, replays, target process execution and physical behavior are separate; target process/OS-call counts remain0 in the saved current record. This review validates catalog correspondence to those saved counts, not new execution of the corpora.
+
+The **31 repository tests and210 Device checks** remain inherited run1 evidence, with run2's explicit rerun=false records. The catalog adds no tests and does not close pending present Device gates. Historical per-checkpoint subtotals are not summed across checkpoints as though each were a new distinct corpus.
+
+Historical validation scopes are preserved literally: checkpoints **11 and12 begin with the old label Run10**, and checkpoint **15 begins Run14**. I independently compared those saved strings with their source validations. They are inherited recorded metadata labels, **not new firmware scope statements authored or corrected by this catalog**. No old validation was rewritten, and this review does not resolve their historical naming beyond exact preservation.
+
+## Frozen24 plus linked2 supplement
+
+The through21 base remains its original24 rows and source identities. The two reviewed22 supplement rows point back to specific base IDs and pin exact report/review bytes,1-based locator lines and excerpts. I separately verified both supplement report hashes/locators/excerpts and independent-review hashes.26 combined navigation rows do not mean26 firmware features, complete support, analysis coverage or a semantic re-audit.
+
+The serializer addition remains the two exact WHO5-empty-WHERE/WHO22-parameterized object roundtrips under explicit private models; it does not promote parser/serializer behavior to bus admission, plugin/core/STM/publication or physical semantics. The callback addition remains the static manager/private-state initialization join conditioned on actual same-private userdata activation. It preserves active descriptor/provider/source and raw-admission boundaries, including the excluded transport/session/authentication/framing internals. Historical through21 gaps remain historical and are narrowed by links rather than overwritten.
+
+The explicit sound21 unavailable intermediate descriptor-key draft history is retained. Present source PASS and actually announced snapshots do not authenticate those missing earlier bytes. Neither catalog version nor this review reconstructs them.
+
+## Versioning, first failure and overwrite guard
+
+Both first-generation snapshot indices verify **20 exact files each**. Every v1 snapshot member is byte-identical to its retained original v1 file; every v2 member is byte-identical to current v2 outputs/the separately named v2 generator. This includes all13 frozen document copies. No v1 generator/output/snapshot is replaced by v2.
+
+I ran unchanged **build_catalog_v1.py --check** read-only. It fails at the same line89 `AssertionError: SOURCE_PINS.json` shown by the retained first-failure transcription. The v1 code explains this: generation initially read matching current document bytes outside its tracked `read()` helper, whereas replay tracked the now-generated local document copies as new source inputs. This is a metadata reproducibility failure. It does not constitute changed firmware evidence or a successful v1 check. The retained failure text is accurately described as a later transcription of the recorded terminal result, not a contemporaneous on-disk log.
+
+V2 is separately named and writes a separate candidate directory, using stable historical source snapshots consistently instead. The stated version history matches the two source implementations and retained bytes. V2's generation branch asserts every output destination is absent before writing, uses exclusive file creation and a new snapshot directory; the review inspects this refusal guard rather than attempting generation. Generator refusal/current exact snapshots are not a claim of filesystem-enforced immutability against arbitrary manual edits.
+
+No author file, index, old validation, repository document or snapshot was changed by this review. Only this NEW review is written. The result is a reproducible, honestly bounded historical navigation catalog v2; no new native coverage, complete runtime/physical proof or unavailable-history certification is implied.

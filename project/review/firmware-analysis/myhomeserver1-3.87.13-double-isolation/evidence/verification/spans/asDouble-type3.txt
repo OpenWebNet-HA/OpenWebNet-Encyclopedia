@@ -1,0 +1,9 @@
+
+/usr/lib/libjsoncpp.so.1.9.5:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0001724e <_ZNK4Json5Value8asDoubleEv@@Base+0x8a>:
+   1724e:	ed94 0b00 	vldr	d0, [r4]
+   17252:	e7d4      	b.n	171fe <_ZNK4Json5Value8asDoubleEv@@Base+0x3a>

@@ -1,0 +1,61 @@
+# F461 2.0.11: verified extraction and bounded platform/startup first pass
+
+The actual encrypted package identifies **F4612.0.11**, XML3.1 and object model**5.0.134**. Its packaged main userspace is AArch64, with an ARM64 Linux Image and Chess DIG-2/i.MX8M Mini device-tree targets. The selected startup chain has17 normal-stack process declarations, including matrix_mx and bt_drover_mx, rather than importing the older MyHOMEServer1 scheduler model. Its embedded catalogue bytes equal F460's examined catalogue but differ from MyHOMEServer1's. These are exact build/artifact/source-declaration results; no installed gateway, original program, script, service, bus or Physical Device was executed.
+
+Curated OWN-DEV-0208 supplies the separate third-party-integration/app role. Shared installation documents, names and reusable catalogue Objects do not give F461 the F460 resident-app role, F454 dedicated alarm port or MH202 script scheduler. Product feature/application availability remains distinct from packaged declarations.
+
+## Provenance, extraction and package actions
+
+Canonical `F461_020011.fwz` is138644991 bytes, SHA256`cb6f3e9d875c14f74a0791d7f3f420ce9d4babadb4459c1250c6cba7e741af2b`. Root supplied a verified canonical-cache copy; this pass independently rechecked its exact size/hash before host extraction. No upload or source-manifest mutation was performed. Packaging-key derivation used only the exact curated commercial identity; key values and packaged credentials/private-key material are not exported.
+
+There are4 encrypted outer ZIP members, unlike the older six-member MyHOMEServer1 wrapper: Image.zip signature wrapper, normal ext4-gzip signature wrapper, recovery ext4-gzip signature wrapper and fwz.xml. All flat member paths/types were validated before extraction. Nested ZIP CRCs, gzip trailer/CRC and ext filesystem geometry were checked. Signature blobs are present; these integrity checks are **not cryptographic authenticity verification**. No archive/script/vendor code was executed.
+
+Actual extracted `fwz.xml` lines3–16 supply name/version/schema/object model and firmware provider`btesuv3`. Lines17–22 declare the recovery action; lines23–26 request action2 then action1 for status4. Both actions reference the Image wrapper. This682-byte manifest contains no extra*.xtz reference; that does not imply a globally absent extra/configuration system. The startup script separately references extra95 persistent feature paths.
+
+| Image | Bytes | SHA256 | Extracted regular files | Metadata-only symlinks |
+| --- | ---: | --- | ---: | ---: |
+|Normal|1073741824|`3674680fbe5c9db24c266c4323e7100c1050e9be02fa5f8e11adeb44871e4d69`|5853|1768|
+|Recovery|268435456|`7de562cc6e33fcc6409696d124026586cf80d42ead305b4b10d568741e403d76`|6133|1644|
+
+Regular contents and sizes/SHA256 were verified; file backing is read-only and directory trees0555. No host symlink, hardlink or special node was materialized; no image was mounted. ImageVFS resolves original-image links through metadata, rejects root escape/cycles, checks backing regular-file size/hash and never trusts a host symlink. Normal/recovery have5285 same-path equal regular files,10 changed,558 normal-only and838 recovery-only. Counts/composition do not establish identical activation or behavior.
+
+## Platform and architecture
+
+The raw Image SHA256 is`f249b7bb544db7743a5b76d5927c5a154204f7c90a946ce08f5177bd46431a94`,14434312 bytes. Original offset56 has the ARM64 Image magic. The original banner at file offset0x8e00c8 reports Linux5.10.35+g59ec3f0ef418+p0, GCC11.5.0 and Binutils2.38.20220708. Its embedded2011 timestamp is retained as metadata, not product/build/deployment chronology. The declared Image-size field14811136 and file size are separately retained; no equality/corruption claim is imposed.
+
+The nested kernel bundle contains six DTBs: chess_dig2_car0..4 and chess_mfg, plus a separately named hygw_cortex-m.bin and Image.md5. All exact sizes/hashes are in PLATFORM.json/package-image-identities.json. The selected car0 root has model`Bticino Chess Board DIG-2 CAR-0`, compatible`fsl,imx8mm-chess`/`fsl,imx8mm` and four cpu nodes compatible`arm,cortex-a53`. These are packaged candidate board targets, not a hardware probe or proof of which DTB a Physical Device selects. No electrical/SCS-port mapping is inferred.
+
+All5853/6133 original regular files were read through manifest SHA verification before magic census. Normal has876 ELF files:866 ELF64/machine183,8 ELF32/machine40 and2 ELF32/machine164. Recovery has745:735/8/2 respectively. The12 selected main vendor programs are AArch64; other packaged ELF machines are not automatically live userspace processes. No old ARM32/Thumb ABI, object layout or helper fixture is reused.
+
+## Concrete startup source and configuration declarations
+
+`/etc/inittab` line5 selects runlevel5, line9 requests rcS and line27 requests rc5 handling. rcS line32 calls rc S; rc iterates startup entries and requests their start methods. Original metadata links include rcS/S50setup_m4.sh and rc5/S98-bt_daemon-apps.sh, with DBus and Redis declarations earlier in runlevel5. These are source requests, not successful services/readiness.
+
+- `/etc/default/volatiles/00_core` line71 declares `/var/tmp/stack_open.xml` pointing at the packaged stack XML. `/etc/fstab` line8 declares writable synchronous/journalled ext4 extra storage at `/dev/mmcblk0p7`; live partition content/geometry is not observed.
+- `setup_m4.sh` line4 requests imx_rpmsg_tty; its restart path names remoteproc0 and mx_cortex-m.elf. Neither that script nor an M4 image was executed, and the default start branch is not equated with the restart sequence.
+- `bt_daemon-apps.sh` lines63–76 waits/checks extra storage and has a repair/mount/reboot request path. Lines22–28 compare the packaged version text with a persistent marker. Lines32–60 build a licensing/USB filesystem under explicit conditions. Nonempty user-lib contents select the reduced XML at lines37–40. These source effects were not applied to the host or a target.
+- The wrapper exports an explicit library search path with the user library first (line85), waits for `/dev/ttyRPMSG30` (line88), changes to `/home/bticino` (line90) and requests `bin/bt_daemon &` (line91). No readiness timeout guarantee, child success or effective dynamic binding follows. Lines79–81 separately remove a named extra95 netcom_native feature marker; this alone is not a complete feature/permission or protocol policy.
+- Stack XMLs in both images declare17 processes normally and16 in the reduced file; normal_status is literal4, and per-process working_mode values remain separate metadata. The reduced declarations omit bt_eliot_v2. The selected lists contain openserver, scsserver, bt_device, coso, matrix_mx, bt_drover_mx.sh, backup/gateway/smart-home managers and others. No scheduling_manager declaration appears in these selected lists, and its older exact program path is not among the extracted regular files. This is a bounded packaging/declaration statement, not absent scenario capability.
+- The declared Drover shell wrapper lines7–8 changes into bt_drover_mx and requests `./bt_drover_mx bt_drover_mx.conf`. No implementation of that program/configuration, third-party protocol, authentication/session/framing or downstream transport is inspected.
+
+The fresh daemon's internal XML consumer, working-mode predicate and argument-selection functions have **not** been traced. The positive joins here are init/script path declarations and the selected wrapper/configuration chain; old MyHOMEServer1 consumer semantics are not assigned to this AArch64 program. All exact selected original line numbers/hashes are in STARTUP_LINES.json and process fields in STACK_DECLARATIONS.json.
+
+## Components, schema and database identity
+
+Selected ELF header/entry/dependency metadata are retained in COMPONENTS.json. For example, bt_daemon has entryVA0x7780/SHA`b1a3f99cb78c97cd0aa98616c8074f56c8fd34fb10d2500138ea74ed5ed54c4e`; matrix_mx entryVA0x40d40/SHA`4b50d95910061226fc531b296f4f0cfaaa951001c175e35d379987e20720ddad`; Drover entryVA0x17600/SHA`3b5d7541133ae6fe4f7822b7c45a8dd414b96019f56c1daf62761ee6a608149c`. Linked entries are ELF metadata, not observed runtime pointers or a proved main-function route.
+
+Matrix declares JsonCpp SONAME25, SQLite, GLib, LCM and other dependencies; Drover declares JsonCpp25, OpenSSL3 and libmosquitto; legacy OPEN/COSO/device components coexist. This establishes packaged component/import identities only. Provider closure, actual symbol binding, source functions and any receiving/transport/MQTT/libjel/authentication/session/framing bodies remain opaque. JSON configuration output exposes top-level key names/types only, not credential/private configuration values.
+
+Signature scanning of every regular file, rather than extensions, finds one SQLite database per image: `/home/bticino/matrix_mx/MHCatalogue.db`,2633728 bytes/SHA`bd2ff4d326692c85bc4eb3f86504d615758da97dc832389fac523734574833e9`. Normal/recovery and the exact F460 file share those bytes. MyHOMEServer1's earlier catalogue has a different identity. No other SQLite-header or Redis-signature file was found in the defined regular-file scan; arbitrary encrypted/container formats and runtime databases are not excluded.
+
+`DB_SCOPE.json` clarifies scope without altering the first14 outputs: the DB has**75 total tables and75 indexes**, including SQLite's internal sqlite_sequence table. The initial DATABASE_SCHEMAS.json query deliberately filters sqlite_% and therefore records**74 noninternal tables**, their columns/PK/row counts and definition hashes. These are different query scopes, not disagreeing catalogue bytes. Connections used read-only/immutable/query_only/trusted_schemaOFF; stored values/defaults/expressions were not evaluated or exported. No device/item-support, configured state or universal migration algorithm is inferred from the catalogue inventory.
+
+EXACT_COMPARISONS.json compares selected same paths against saved F460/MyHOMEServer1 regular-file manifests. No selected program is byte-identical across those same-path comparisons where a counterpart exists; some counterpart paths are absent. Equal catalogue bytes do not establish equal consumers, feature policy or hardware. The first pass does not transplant MyHOMEServer1's compiled scheduler schemas or F460's user-management behavior.
+
+## Reproduction, preservation and next evidence
+
+Run `python3 -B collect_firstpass_v1.py --check` and `python3 -B collect_db_scope_v1.py --check` in this folder for read-only host reproduction. Both pass. The first collector's14 outputs/16 exact first copies remain immutable; the supplemental DB scope has its own exclusive generation/two first copies. This first report is separately frozen. No canonical failed generation, overwritten candidate or fabricated earlier history exists. Extractor paths, archive/member hashes, image metadata, original VFS manifests and selected code/dependency/schema facts remain reproducible. Credential/key/private contents are excluded.
+
+Ranked next work: (1) actual fresh daemon XML/working-mode/launch consumers and Drover local non-transport ownership, with configured-role/provider prerequisites; (2) catalogue reader SQL/selection/fallback and a source-scoped comparison with the distinct MyHOMEServer1 profile; (3) actual board/DTB/M4 selection and update/recovery authenticity/install checks, with no device writes; (4) genuine configured data and controlled product-specific corroboration under separate scope. Missing/runtime extra contents and actual services remain unknown; shared names are leads only.
+
+This bounded first pass adds zero original/vendor/native/helper/target execution, mounts, network/bus/device/flash activity, semantic fixtures or runtime processes. Earlier F454/MH202/MyHOMEServer1 ledgers are unchanged. Wider Device/source gates and coverage remain incomplete. No encyclopedia/source registry edits, staging, commits, publication or automation were performed by this product author.

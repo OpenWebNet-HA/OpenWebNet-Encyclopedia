@@ -1,0 +1,22 @@
+{
+  "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md": {
+    "sha256": "89f0a1cd681924ec8bf6b093c4c39d3d037b14cd416547b8111bffecd2eb5323",
+    "size": 39923
+  },
+  "normal:/usr/lib/liblghal.so.1.0.0": {
+    "sha256": "c0f9c41de5c3380efa69a9ccecb9a3fd5ef558c151150197cc366199f1a81863",
+    "size": 247928
+  },
+  "recovery:/usr/lib/liblghal.so.1.0.0": {
+    "sha256": "c0f9c41de5c3380efa69a9ccecb9a3fd5ef558c151150197cc366199f1a81863",
+    "size": 247928
+  },
+  "work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/REPORT.md": {
+    "sha256": "1599bdd53dd4f3a9f20091f141338dfd22249fd0fb7b3ab0e900108a992f11ae",
+    "size": 6813
+  },
+  "work/f461-firmware/2.0.11/research/2026-11-01/image_vfs.py": {
+    "sha256": "6c54cac0515e0c74409e802fd8f4bf7a23caa2fff876287333917f598f72106a",
+    "size": 5602
+  }
+}

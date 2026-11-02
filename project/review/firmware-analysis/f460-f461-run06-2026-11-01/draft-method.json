@@ -1,0 +1,15 @@
+{
+  "scope": "Prepared source-scoped insertion and current summary/ranking updates; independent documentary review required",
+  "anchor": "## Evidence status and next questions\n",
+  "appendix": "ANALYSIS_APPENDIX_DRAFT.md",
+  "substitutions": [
+    {
+      "before": "The positive additions include F460's wait/completion, catalogue SQL/reader and indirect selector/parameter-owner paths, plus F461's matcher/callback, field/packed-route and selected payload/output-record contracts.",
+      "after": "The positive additions include F460's wait/completion, catalogue/selector and local state-trigger factory/admission paths, plus F461's matcher/field/route, selected output-record and address-shape/prefix contracts."
+    },
+    {
+      "before": "The next useful source work is actual scene/factory admission, root parameter provenance and complete catalogue selection for F460, and main/config selection, natural local message producers, distinct converter/address/diagnostic paths and later output ownership for F461.",
+      "after": "The next useful source work is broader receiver/scene ownership and admission, root parameter provenance and complete catalogue selection for F460, and main/config selection, natural message producers, remaining address/suffix and diagnostic paths, and later output ownership for F461."
+    }
+  ]
+}

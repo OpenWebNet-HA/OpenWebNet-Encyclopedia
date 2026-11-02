@@ -1,0 +1,43 @@
+# Consumer continuation integration review
+
+PASS for current documentary consistency, with final mechanical assembly explicitly pending. No semantic or wording correction requested. Scope is the new consumer reference, two added crosslink paragraphs, capsule navigation and current synthesis/coverage/ranking. This is not a fresh audit of the complete older reference pages or whole firmware.
+
+This reviewer independently source-reviewed the C JSON provider and scheduler in PROVIDERS_SECOND_REVIEW.md and SCHEDULER_SOURCE_REVIEW.md. Catalogue findings were compared documentarily with authoritative REPORT.v2.md and the independent CATALOGUE_SOURCE_REVIEW.md. I did not perform a new catalogue source audit or original/vendor/native/SQL execution for this integration review.
+
+## Consistency and boundaries
+
+- Catalogue setup opens the same absolute path into two context slots +556/+560 and supplies a local tested result. The separate reader uses its own stack handles, SQL from its own object+36 and selected result columns 13/14 into +20/+24. First-step 101 and loop-back 100 are source comparisons, not observed rows. The separate two-column initializer is not substituted for the missing reader query. Natural activation, SQL producer, eligibility, field names, complete handle lifetime and runtime binding remain unresolved.
+- The scheduler chain is supported from setting member storage through the string-return getter, loader, selected files, file stream/JsonCpp parse and same local root/incoming object constructor, then three distinct member factories. Exact exclusion spelling is retained. Enabled defaults to true at +65 on the selected missing-member branch; later execution gating, runner initialization, factory schemas, timing and action handoff are explicitly open. Zero packaged regular files below the configured prefix is not a live filesystem or service-absence result. No MH202 .spt or state layout is transferred.
+- C libjsonmsg message/root allocations are 20/32 bytes, separate from C OPEN56 and C++ JsonCpp. Kind2/type20/value1 construction and stored-word ACK reading differ from the selected kind0 response predicate. These are local helper contracts with selected lookup/provider premises, not accepted input, actual caller semantics, transport delivery or physical success.
+- The aggregate is 16+27+16 = 59 deterministic outputs including manifests. All new original instructions, target SQL, vendor/runtime/service, emulation and physical operations are zero. Eight resolved-node host cases are not parser/lookup executions or firmware state fixtures. Missing assets, effective providers, lifetime/unwind/concurrency and wider Device gates remain open.
+- The v1 catalogue assertion-encoding failure is retained as a pre-output failure; authoritative v2 is separate. Source and first-candidate histories are not replaced with reconstruction claims. The first-pass page's older untraced statement remains within that historical first-pass scope, beside the new explicitly bounded continuation link.
+
+## Identity and navigation checks
+
+Verified all seven frozen document snapshots against current exact bytes and sizes. Verified all 67 SOURCE_EXPORTS pairs against their original local source bytes and published exact copies, including every recorded size/SHA-256. Parent SOURCE_CHECKS.json contains three successful static reproductions; this review does not relabel those as new independent execution. My two earlier source reviews independently reproduced the provider and scheduler --checks.
+
+The reviewed seven documents contain 35 currently resolving local links and no fragment references. Seven capsule README targets are deliberately future assembly targets: catalogue-source-review.txt, scheduler-source-review.txt, providers-source-review.txt, providers-second-review.txt, integration-review.txt, integration-second-review.txt and validation.json. Their future bytes and final strict ESG/identity validation are not certified here. Parent must create actual review copies and actual validation before strict final checks, without placeholders or exemptions.
+
+Reviewed SHA-256 pins:
+
+| Current document | SHA-256 |
+| --- | --- |
+| OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md | bb6e757b2caac6d39b8501abd2b5861030e40aca8bc3b61cf7da0b7f2a8b2911 |
+| OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md | ee2ac5108fec4dca958afa73832cc874f43aebb9e1e6f4ffa5d5c4ecaab4d381 |
+| OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md | 5c60cbbf8796612b1efaa80392d77cf067b1ec647ca802dae72f91b673da2dac |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-consumers/README.md | 26de95b34cfcec1552fbe99ef645bc56aa75e9d9bd40b41466a86a72063e53ed |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/SYNTHESIS.md | 3f0982b54b2cd1973c083620891311db23f28dafffe24e617186d70b6801bd24 |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/COVERAGE.md | 14f68a093f38427f75ac6c16cd08bed8ca2fef402429f55e4954753723b47799 |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/RANKED_REMAINING_QUESTIONS.md | d3cf75eb44d90a55f3ac1a9f3084287b453f7f07315878b5dd841d59c76db633 |
+
+Additional exact pins:
+
+| Record | SHA-256 |
+| --- | --- |
+| integration/review-candidate/INDEX.json | 3a1cc5ccd9b463de0d44d7ff23cc0e94a44844b61c1d466bba5dc6f6718fc220 |
+| capsule SOURCE_EXPORTS.json | b112fa8355415edb68740f0ea777d076de3cd07f841b1a428a52ec1b98f45e9a |
+| SOURCE_CHECKS.json | afab095b4fb92e2ee655741e93fe57a7ec6c6bbe67aea516ea306aeb14a8e81a |
+| reviews/PROVIDERS_SECOND_REVIEW.md | 6bc4a7ba043abf4c132a1e64d08cdb8ecb838e859226875b5bc1fb467ddadc0f |
+| reviews/SCHEDULER_SOURCE_REVIEW.md | e83d452ec93694ed7d61c830d8f057480b3407f66fca42307cd87f743b492f87 |
+
+No author, source, archive, prior dossier or repository document was edited. This new review is the only output of the final documentary task.

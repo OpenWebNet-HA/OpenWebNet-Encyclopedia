@@ -1,0 +1,270 @@
+{
+  "PT_LOAD": [
+    [
+      1,
+      5,
+      0,
+      0,
+      0,
+      27804,
+      27804,
+      65536
+    ],
+    [
+      1,
+      6,
+      27848,
+      93384,
+      93384,
+      2328,
+      2432,
+      65536
+    ]
+  ],
+  "definition": [
+    "122: 00000000000056f0   428 FUNC    GLOBAL DEFAULT   13 register_plugins"
+  ],
+  "dependency_requests": [
+    "0x0000000000000001 (NEEDED)             Shared library: [libglib-2.0.so.0]",
+    "0x0000000000000001 (NEEDED)             Shared library: [libgmodule-2.0.so.0]"
+  ],
+  "execution": {
+    "fixtures": 0,
+    "models": 0,
+    "original": 0,
+    "provider": 0,
+    "target_IO": 0
+  },
+  "guards": {
+    "0x32f4": "0xaa1403e0",
+    "0x56fc": "0xaa0003f6",
+    "0x5700": "0xa9057fff",
+    "0x5708": "0x34000800",
+    "0x570c": "0xf9400ac0",
+    "0x5710": "0xd2800002",
+    "0x5714": "0x52800001",
+    "0x571c": "0xf9400400",
+    "0x5724": "0xaa0003f4",
+    "0x5728": "0xb4000b40",
+    "0x574c": "0xaa0003f3",
+    "0x5750": "0xb40004c0",
+    "0x5758": "0x34ffff40",
+    "0x5768": "0xaa1303e1",
+    "0x576c": "0xd2800002",
+    "0x5770": "0x34fffe80",
+    "0x5774": "0xf9400ac0",
+    "0x5778": "0xf9400400",
+    "0x5780": "0xaa0003f8",
+    "0x5784": "0x52800061",
+    "0x578c": "0xaa0003f3",
+    "0x5790": "0xb40006e0",
+    "0x5798": "0x910143e2",
+    "0x57a4": "0x34000120",
+    "0x57a8": "0x910163e2",
+    "0x57c0": "0xd2800200",
+    "0x57c4": "0x35000361",
+    "0x57f4": "0x52800000",
+    "0x5808": "0x52800081",
+    "0x5820": "0x52800020",
+    "0x5838": "0xf9400ad9",
+    "0x5844": "0xa9004c38",
+    "0x5850": "0xf9402be1",
+    "0x5854": "0xf9000320",
+    "0x5858": "0xf9400840",
+    "0x585c": "0xd63f0020",
+    "0x5890": "0x12800000"
+  },
+  "image": "/home/bticino/bin/coso",
+  "imports": [
+    {
+      "PLT": "0x2d00",
+      "call": "0x5704",
+      "relocation": "0000000000017208  0000004700000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_module_supported + 0",
+      "slot": "0x17208"
+    },
+    {
+      "PLT": "0x2eb0",
+      "call": "0x5720",
+      "relocation": "00000000000172e0  0000006200000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_dir_open + 0",
+      "slot": "0x172e0"
+    },
+    {
+      "PLT": "0x2960",
+      "call": "0x5744",
+      "relocation": "0000000000017038  0000000a00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_dir_read_name + 0",
+      "slot": "0x17038"
+    },
+    {
+      "PLT": "0x2c70",
+      "call": "0x5754",
+      "relocation": "00000000000171c0  0000003e00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_str_has_prefix + 0",
+      "slot": "0x171c0"
+    },
+    {
+      "PLT": "0x2e20",
+      "call": "0x5764",
+      "relocation": "0000000000017298  0000005900000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_str_has_suffix + 0",
+      "slot": "0x17298"
+    },
+    {
+      "PLT": "0x2d30",
+      "call": "0x577c",
+      "relocation": "0000000000017220  0000004a00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_build_filename + 0",
+      "slot": "0x17220"
+    },
+    {
+      "PLT": "0x2d70",
+      "call": "0x5788",
+      "relocation": "0000000000017240  0000004e00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_module_open + 0",
+      "slot": "0x17240"
+    },
+    {
+      "PLT": "0x2c00",
+      "call": "0x57a0",
+      "relocation": "0000000000017188  0000003700000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_module_symbol + 0",
+      "slot": "0x17188"
+    },
+    {
+      "PLT": "0x2c00",
+      "call": "0x57b8",
+      "relocation": "0000000000017188  0000003700000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_module_symbol + 0",
+      "slot": "0x17188"
+    },
+    {
+      "PLT": "0x2a30",
+      "call": "0x57cc",
+      "relocation": "00000000000170a0  0000001700000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_module_close + 0",
+      "slot": "0x170a0"
+    },
+    {
+      "PLT": "0x2950",
+      "call": "0x57ec",
+      "relocation": "0000000000017030  0000000900000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_dir_close + 0",
+      "slot": "0x17030"
+    },
+    {
+      "PLT": "0x2ea0",
+      "call": "0x581c",
+      "relocation": "00000000000172d8  0000006100000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_log + 0",
+      "slot": "0x172d8"
+    },
+    {
+      "PLT": "0x2aa0",
+      "call": "0x5834",
+      "relocation": "00000000000170d8  0000001f00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_malloc + 0",
+      "slot": "0x170d8"
+    },
+    {
+      "PLT": "0x2c40",
+      "call": "0x5848",
+      "relocation": "00000000000171a8  0000003b00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_list_append + 0",
+      "slot": "0x171a8"
+    },
+    {
+      "PLT": "0x2dd0",
+      "call": "0x5860",
+      "relocation": "0000000000017270  0000005400000402 R_AARCH64_JUMP_SLOT    0000000000000000 update_log_type + 0",
+      "slot": "0x17270"
+    },
+    {
+      "PLT": "0x2dc0",
+      "call": "0x586c",
+      "relocation": "0000000000017268  0000005300000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_module_error + 0",
+      "slot": "0x17268"
+    }
+  ],
+  "literal_joins": [
+    {
+      "ADD": "0x5730",
+      "ADRP": "0x572c",
+      "target": "0x62e0",
+      "value": "lib"
+    },
+    {
+      "ADD": "0x573c",
+      "ADRP": "0x5738",
+      "target": "0x62e8",
+      "value": ".so"
+    },
+    {
+      "ADD": "0x579c",
+      "ADRP": "0x5794",
+      "target": "0x62f0",
+      "value": "init_plugin"
+    },
+    {
+      "ADD": "0x57b4",
+      "ADRP": "0x57b0",
+      "target": "0x62b8",
+      "value": "stop_plugin"
+    }
+  ],
+  "scope": {
+    "filters": "name prefixlib and suffix.so; notlibplug-specific or a format/security proof",
+    "initializer_boundary": "BLR585c bodyclosed, returnedmachinevalue not tested beforeupdate_log_type/loop continuation",
+    "provided_owner": "X0savedX22; P=[owner16], LibDir=[P8], moduleentrylistP0, ConfigDir=[P16]",
+    "retention": "new16byteentry(path,modulehandle) appendedP0 BEFORE initfunctionrequest",
+    "returns": "unsupported branch1 only ifnumericflag4diagnosticreturns; directoryNULL low32\u22121; normaltraversal0 regardlessselectedentryskip/failure",
+    "symbols": "both init_plugin and stop_plugin lookups must return nonzero beforeselectedentryappend/init; stopfunctionnotinvokedhere",
+    "unclosed": "actualboot/DTB/auxcoreselection, runtimefiles/modules/binding/readiness/lifetime/security outcomes"
+  },
+  "sha256": "2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197",
+  "spans": [
+    {
+      "bytes_hex": "fd7bbaa9fd030091f55b02a9f60300aaff7f05a97ff5ff9700080034c00a40f9020080d201008052f35301a9000440f9e4f5ff97f40300aa400b00b4",
+      "end_VA_exclusive": "0x572c",
+      "name": "support-and-directory",
+      "sha256": "1d79a44fff88f6f69ada6e93fea84615740a11f50d861515efecb9893bdafc5e",
+      "start_VA": "0x56f0"
+    },
+    {
+      "bytes_hex": "150000b0b5820b91f76303a9170000b0f7a20b91e00314aa87f4ff97e10315aaf30300aac00400b447f5ff9740ffff34e10317aae00313aaaff5ff97e10313aa020080d280feff34c00a40f9000440f96df5ff97f80300aa610080527af5ff97",
+      "end_VA_exclusive": "0x578c",
+      "name": "filename-filters-and-open",
+      "sha256": "70c5b7e8d7b9338d5f798611ea86b4fd37317bdf8806b5afc35e47d96dc26ed0",
+      "start_VA": "0x572c"
+    },
+    {
+      "bytes_hex": "f30300aae00600b4010000b0e243019121c00b9118f5ff9720010034e2630191e00313aa010000b021e00a9112f5ff97e103002a000280d261030035e00313aa99f4ff97",
+      "end_VA_exclusive": "0x57d0",
+      "name": "symbol-gates",
+      "sha256": "453bede171f406e10972fb7c66aee40cf645ce09645e21d2c1ee5babd3af1bb6",
+      "start_VA": "0x578c"
+    },
+    {
+      "bytes_hex": "e00314aa63f4ff97e10315aaf30300aaa0fbffb51f2003d5e00314aa59f4ff97f35341a900008052f76343a9f55b42a9fd7bc6a8c0035fd6",
+      "end_VA_exclusive": "0x5808",
+      "name": "iteration-and-normal-return",
+      "sha256": "ac05d90a829a96bca26e5896f0b0184d2d14d966d9b9386aeba157c0b1eebc01",
+      "start_VA": "0x57d0"
+    },
+    {
+      "bytes_hex": "81008052020000b0000000904220099100002591a1f5ff9720008052f55b42a9fd7bc6a8c0035fd6",
+      "end_VA_exclusive": "0x5830",
+      "name": "unsupported-diagnostic-return",
+      "sha256": "5b5ee53b5237fb3c462d833d1864d9eebfaa5ea7d9a58cb9a9a28df9d6ee231b",
+      "start_VA": "0x5808"
+    },
+    {
+      "bytes_hex": "f92300f99bf4ff97d90a40f9e10300aa200340f9384c00a9fef4ff97c20a40f9e12b40f9200300f9400840f920003fd65cf5ff97f92340f9b6ffff17",
+      "end_VA_exclusive": "0x586c",
+      "name": "entry-store-and-initializer-boundary",
+      "sha256": "9c8a191845b62764b9fa8f5ee3473fef6b57367ccf4fa83e5d332ffbd606e6a1",
+      "start_VA": "0x5830"
+    },
+    {
+      "bytes_hex": "55f5ff97e30300aa020000b00000009042c00a91000025910102805286f5ff97adffff1700008012f35341a9d9ffff17",
+      "end_VA_exclusive": "0x589c",
+      "name": "module-open-and-directory-failure",
+      "sha256": "df600ec829f5fcb9da01ccb6ba5bfad8a998a73a9ff5c32ea4588402bc637052",
+      "start_VA": "0x586c"
+    },
+    {
+      "bytes_hex": "e00314aafe080094a00d0035",
+      "end_VA_exclusive": "0x3300",
+      "name": "actual-main-call",
+      "sha256": "adf5c8453b0513a426d59aa333c5efd15fe62bcb2f9bdfcd8e7434767883b4a6",
+      "start_VA": "0x32f4"
+    }
+  ]
+}

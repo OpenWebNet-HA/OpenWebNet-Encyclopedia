@@ -1,0 +1,40 @@
+# Independent source review: selected local ID/status record producer
+
+PASS, no correction requested. This independently checks the record packet against original scheduler bytes and metadata. I authored the complementary routing report; that route is source-aware context, not independent corroboration of natural traffic. This review checks the distinct record construction/map/lookup source. Original instructions, native helpers, JsonCpp objects, callbacks, target APIs and semantic host fixtures executed0. Author artifacts remain unchanged.
+
+## Reproduction and exact identities
+
+Read-only `python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/collect_record_v1.py --check` passed23 outputs. Independently parsing ELF program headers reproduced19 original span hashes,16 byte guards,9 literal/PIC joins,5 GOT targets,3 RTTI identities,7 direct-call targets and the selected case-zero TBH arithmetic. All4 input hashes/sizes,22 non-manifest output members and25 exact first-candidate copies (23 outputs plus report/collector) match current bytes. No generated output or author file was changed.
+
+| Artifact in `record/` | SHA256 |
+| --- | --- |
+| `REPORT.md` | `a6fafe145b644cb64258399b90a73990b57a930166952b5b45c4139840fc45f6` |
+| `collect_record_v1.py` | `f852cc5b18dd6ade2391668fa62fd0530eba2f72d235e8936415d45c483d46ee` |
+| `OUTPUT_MANIFEST.json` | `d503120ac9357e9bb19f946d9ab185758b67a20f7f0631fc98fa0b360ca7b8c4` |
+| `ORIGINAL_SOURCE.json` | `9178144804e130da5da46838666f27b90ee8de47e5615113a089b35a1163cf32` |
+| `FIELD_FLOW.json` | `7aa871a2a8a1857c66a753d384824a81d2982615a2061dbea63739aeca708560` |
+| `first-candidate/INDEX.json` | `6b8322bbdf35f18baeb9541ad8a4582ca271bbe2fb0a18ad23d3f89b74a2b019` |
+
+Original image `/home/bticino/scheduling_manager/scheduling_manager` SHA256 is `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Code/data addresses use fresh PT_LOAD translation; table words and RTTI/GOT pointers are not decoded as ordinary code or inferred from nearby stripped labels.
+
+## Original branch and field contracts
+
+The retained params/id consumers agree with the report: parsed `params` is copied locally, FP denotes current SP+448, and the selected object/member path converts `id` with asString and assigns its result to that ID string. No numeric scene-ID conversion or external parser acceptance is substituted. The stack alias SP+84 denotes SP+584, which is temporary record SP+576 plus8; at `0x552b4` the status assignment destination is therefore the string object, not its character pointer.
+
+Original `0x54274..0x542a2` distinguishes absent lookup and existing discriminator0 from existing nonzero records. Absent or zero takes the Light construction. The local Light vptr is backed by RTTI `15ItemStatusLight`, discriminator+4 is0, string+8 is initialized empty, and five later integer words32..48 initialize to all ones. Conditional status member/asString assignment and optional level/asInt to+32 are retained source operations; absent status leaves that initialized string. No missing-sensor significance, unit or accepted value range follows from these defaults.
+
+The selected allocation requests64 bytes. Original pointer arithmetic identifies control base, embedded record=base+12, discriminator=base+16 and status string=base+20=record+8. The range-construction request at `0x553ca` uses temporary begin/end and the embedded string destination; this is not a surviving pointer alias to temporary characters. Its exceptional/provider behavior remains conditional. The outgoing pair at SP+296 is exactly embedded record/control allocation; integer copies align with record32..48. The allocation owner RTTI is separately recovered, not confused with the embedded Light class.
+
+The getter's pool/GOT source resolves record-map receiver `0x167368` and guard `0x167360`. Its visible first-initialization writes and provider guard/CV/exit requests do not establish initialized live state or readiness. Both selected writer and lookup use that same candidate receiver, so the map join is not based only on same-looking function names.
+
+In writer `0x10eb10`, the stored record pointer is loaded from node+40 and supplied record pointer from the input pair. Existing matching type0 selects TBH entry0 (`0x0167` at base`0x10ebc0`) and reaches `0x10ee8e`. The visible changed-state path assigns supplied record+8 into stored record+8 and copies the later words; same-state checks compare the string and later scalar fields. This is a selected update contract, not a proof that all optional omitted fields preserve existing values or that this helper always returns the value required by routing.
+
+Node construction requests48 bytes with string key pointer/length at16/20, and the normal installed-node continuation stores the record/control pair at40/44 with selected reference-count transitions. In lookup, the same key fields and root+8 are used; the found branch copies40/44 to the returned pair, while no-match writes a zero pair. Retention branches are visible but do not prove complete concurrent object lifetime or arbitrary valid-tree behavior.
+
+The companion route obtains r8/r7 from that lookup pair and passes r8+8 to the separately scoped handler after its route/type/ID premises. For the retained type0 Light record, this is its status string object. The report correctly conditions this conclusion on actual retained Light layout and does not promote every possible returned record to that layout.
+
+## Alternate Load layout and applicability
+
+The existing nonzero-discriminator branch constructs RTTI `14ItemStatusLoad` with discriminator10. Its status storage+20 and byte44 guard differ from Light's+8 string. Original source explicitly initializes those separate fields and the selected copy helper tests the corresponding optional flag. The report correctly refrains from asserting general BNIL compatibility for this alternate object or assigning physical meaning to the shared classifier label, class names or integer10.
+
+The earlier receiving/parser/filter path, actual map contents, normal conversion/allocator/tree returns, exact route return1, valid registry/vector/type state, complete exception/concurrency/lifetime and physical behavior remain premises or unknowns. No external receiver, transport, authentication/session/framing implementation or natural event is established. Source review adds no native corpus or executed instruction count. Current first-candidate integrity is verified; it is not independent proof of every historical development event beyond the retained artifacts.

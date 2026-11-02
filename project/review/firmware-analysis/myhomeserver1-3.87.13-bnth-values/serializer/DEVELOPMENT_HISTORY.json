@@ -1,0 +1,7 @@
+{
+  "canonical_failure": "v1 strict import-row matcher required @version and stopped on actual unversioned JsonCpp symbol before writes; v2 exact-symbol matcher permits end-of-line or explicit version, still exactly one original JUMP_SLOT row",
+  "canonical_generation_failures": 1,
+  "overwritten_candidates": 0,
+  "precollector_host_probe": "One inline read-only Python probe had a mismatched closing parenthesis and stopped at SyntaxError before execution. No source/generated candidate files existed. A new corrected read-only probe established exact PIC keys/table rows. This note is a later disclosure, not a contemporaneously pinned failed-file reconstruction.",
+  "probe_disassembly": "An exploratory disassembly began103b8a within a prior wide instruction; retained canonical span begins valid instruction103b96 instead. No instruction claim derives from the truncated exploratory first halfword."
+}

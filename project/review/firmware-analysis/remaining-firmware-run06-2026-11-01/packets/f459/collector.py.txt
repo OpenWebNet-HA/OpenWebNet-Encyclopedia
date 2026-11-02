@@ -1,0 +1,62 @@
+from pathlib import Path
+import hashlib,json,struct,subprocess,os,argparse
+O=Path(__file__).resolve().parent;W=next(p for p in O.parents if (p/'OpenWebNet-Encyclopedia').is_dir());P=W/'work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libmhshared.so.1';H='4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377'
+def h(b):return hashlib.sha256(b).hexdigest()
+def J(x):return (json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+def build():
+ b=P.read_bytes();assert len(b)==43208 and h(b)==H and b[:6]==b'\x7fELF\x01\x01' and struct.unpack_from('<H',b,18)[0]==40
+ ph=struct.unpack_from('<I',b,28)[0];pe,pn=struct.unpack_from('<HH',b,42);loads=[r for i in range(pn) if (r:=struct.unpack_from('<8I',b,ph+i*pe))[0]==1]
+ def raw(a,n):
+  r=next(r for r in loads if r[2]<=a and a+n<=r[2]+r[4]);z=r[1]+a-r[2];return b[z:z+n]
+ def u(a):return struct.unpack('<I',raw(a,4))[0]
+ def bl(a):
+  w=u(a);assert w>>24==0xeb;v=w&0xffffff;v=v-(1<<24) if v&(1<<23) else v;return a+8+(v<<2)
+ guards={0x6a88:0xe08f7007,0x6a8c:0xe7973003,0x6a90:0xe1a04000,0x6a94:0xe2833008,0x6a98:0xe5900008,0x6a9c:0xe5843000,0x6aa0:0xebffed7e,0x6aa4:0xe5946018,0x6aa8:0xe5960008,0x6aac:0xe3500000,0x6ab0:0x1a000011,0x6ac4:0xe2840010,0x6ac8:0xebffed65,0x6acc:0xe594500c,0x6ad0:0xe5950000,0x6ad4:0xe3500000,0x6ad8:0x1a000017,0x6adc:0xe1a00005,0x6ae0:0xe3a01002,0x6ae4:0xe3a02004,0x6aec:0xe1a00004,0x6af4:0xe1a00004,0x6af8:0xe8bd83f8,0x6bbc:0xe1a04000,0x6bc0:0xebffed7e,0x6bc4:0xe1a00004,0x6bc8:0xebffed79,0x6bcc:0xe1a00004,0x6bd0:0xe8bd8010}
+ for a,v in guards.items():assert u(a)==v,(hex(a),hex(u(a)),hex(v))
+ rel=subprocess.check_output(['readelf','-rW',str(P)],text=True);sym=subprocess.check_output(['readelf','--dyn-syms','--wide',str(P)],text=True)
+ syms={}
+ for n,va,size in [('_ZN8mhSharedD1Ev',0x6a7c,316),('_ZN8mhSharedD2Ev',0x6a7c,316),('_ZN8mhSharedD0Ev',0x6bb8,28)]:
+  row=next(x.strip() for x in sym.splitlines() if x.endswith(' '+n));assert f'{va:08x}' in row and str(size) in row;syms[n]=row
+ got=0x6a88+8+u(0x6ba8);assert got==0x12180 and got+u(0x6bac)==0x122f4
+ vrow=next(x.strip() for x in rel.splitlines() if x.startswith('000122f4 '));assert 'R_ARM_GLOB_DAT' in vrow and vrow.endswith(' _ZTV8mhShared')
+ callback=got+u(0x6bb0);assert callback==0x122fc;crow=next(x.strip() for x in rel.splitlines() if x.startswith('000122fc '));assert 'R_ARM_GLOB_DAT' in crow
+ def imm(w):
+  n=((w>>8)&15)*2;v=w&255;return ((v>>n)|(v<<(32-n)))&0xffffffff if n else v
+ calls=[]
+ defs=[(0x6aa0,0x20a0,0x121bc,'sqlite3_close'),(0x6ac0,0x2268,0x12254,'_ZN9QHashData11free_helperEPFvPNS_4NodeEE'),(0x6ac8,0x2064,0x121a8,'_ZN18QFileSystemWatcherD1Ev'),(0x6ae8,0x216c,0x12200,'_ZN10QArrayData10deallocateEPS_jj'),(0x6af0,0x2358,0x122a4,'_ZN7QObjectD2Ev'),(0x6bc0,0x21c0,0x1221c,'_ZN8mhSharedD1Ev'),(0x6bc8,0x21b4,0x12218,'_ZdlPv@GLIBCXX_3.4')]
+ for a,t,g,n in defs:
+  assert bl(a)==t;x,y,z=[u(t+i*4) for i in range(3)];assert x&0xfffff000==0xe28fc000 and y&0xfffff000==0xe28cc000 and z&0xfffff000==0xe5bcf000 and t+8+imm(x)+imm(y)+(z&4095)==g
+  row=next(x.strip() for x in rel.splitlines() if x.startswith(f'{g:08x} '));assert 'R_ARM_JUMP_SLOT' in row and row.endswith(' '+n);calls.append({'call':hex(a),'targetPLT':hex(t),'GOT':hex(g),'symbol':n,'PLT_bytes_hex':raw(t,12).hex(),'actual_relocation':row})
+ spans=[('D1-selected-normal-requests-and-local-connectors',0x6a7c,0x6b78),('D1-literal-pool-data',0x6ba8,0x6bb8),('D0-entire-exported-body',0x6bb8,0x6bd4)];out={};meta=[]
+ for n,a,e in spans:
+  text=subprocess.check_output(['objdump','-d','-m','arm',f'--start-address={a}',f'--stop-address={e}',str(P)],text=True,env=dict(os.environ,DEBUGINFOD_URLS='')).replace(str(P),'libmhshared.so.1');out['spans/'+n+'.txt']=text.encode();meta.append({'name':n,'start':hex(a),'end_exclusive':hex(e),'bytes_hex':raw(a,e-a).hex(),'sha256':h(raw(a,e-a)),'pool_data_not_executed':a==0x6ba8})
+ pins=[]
+ for p in [P,W/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0198-f459-driver-manager.md',W/'work/f459-firmware/2.1.5/research/2026-11-01-night01-shared-store/SOURCE.json']:
+  z=p.read_bytes();pins.append({'path':str(p.relative_to(W)),'bytes':len(z),'sha256':h(z)})
+ out['INPUT_PINS.json']=J(pins);out['SOURCE.json']=J({'original':pins[0],'ELF_class':32,'machine':40,'PT_LOAD':loads,'symbols':syms,'guards':[{'VA':hex(a),'word':f'{v:08x}'} for a,v in guards.items()],'calls':calls,'spans':meta,'vtable_relocation':vrow,'free_callback_relocation':crow,'indirect_helper_word':f'{u(0x6bb4):08x}','normal_scope':'D1entry through normal selected return/connectors; unwind6b78..6ba8 unexpanded; D0whole28bytes. Indirecthelper/Qt/SQLite/deallocation providerbodies unexpanded.','original_execution':0,'SQL_queries':0,'new_actual_database_bytes':False})
+ out['REPORT.md']='''# F459 selected shared-store teardown requests
+
+Own libmhshared.so.1 is43208bytes/SHA2564d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377, ELF32 little-endian ARM. Fresh dynamic symbols identify D1/D2 at6a7c/316bytes and D0 at6bb8/28bytes. These build-local labels and curated OWN-DEV-0198 supply no F459T/F46/MHS layout or hardware equivalence. This packet follows lifecycle requests rather than another SQL or namespace matrix.
+
+D1 entry saves incoming receiverR4 and reinstalls its own relocated class address point. At6a98 it reads incomingreceiver+8 intoR0;6aa0 requests sqlite3_close via actualPLT20a0/GOT121bc/JUMP_SLOT. The immediately following code loadsreceiver+24 intoR6, then overwritesR0 fromR6+8 before its comparison. It does not retain or branch on the close machine result in this selected continuation. This local fact is not a complete error policy, demonstrated failure or defect claim, and neither the handle nor close success is supplied by an imported request.
+
+Under valid current receiver/member objects, normal intermediate cleanup/provider returns, local helper termination and ordinary ABI/preservation premises, selected D1 paths request QHashData free_helper, then QFileSystemWatcher destructor on SAMEreceiver+16 at6ac8. Later selected paths request representation deallocation and QObject base destruction on SAMEreceiver at6af0 before the normal return. Object-local count/indirect-helper decisions control which auxiliary free requests occur. Their source connectors are retained; indirect helper/provider bodies, atomic/exclusion meaning and complete errors/unwind remain opaque.
+
+The concrete new order is database-close REQUEST before selected watcher-destruction REQUEST in this local normal path, not certified database closure, callback quiescence, a safe thread order, durable commit or complete resource release. The caller could have other earlier teardown; natural last-owner/caller, pending statements, effective provider binding, actual callbacks/threads and concurrent ownership remain unproved. The inherited constructor packet usedreceiver+8 as a connection output field; same-object/unchanged-handle/lifetime is an explicit join premise, not a fresh open/DDL proof.
+
+Entire exported D0 saves the providedreceiver, requests D1 through actualPLT21c0/GOT1221c (candidate definition6a7c under effectivebinding), then passes SAMEsavedreceiver to operator delete(void*) at6bc8 viaPLT21b4/GOT12218. Its later return moves the saved machine address intoR0. This is a source request chain; successful destruction/free, natural invocation, allocation provenance/ownership and safe use/lifetime are not established. Dynamic binding/interposition, exceptions and provider behavior remain premises. No stale-object use or safety conclusion is inferred from a returned numeric address.
+
+SOURCE.json retains29wordguards/7actualcall-PLT-GOTproofs/2GLOB_DATrows/3spans (including poolDATA)/3pins. D1unwind body6b78..6ba8 and all Qt/SQLite/delete/helper/provider implementations remain unexpanded. Raw pool words are data, not executed instructions. No original/vendor/helper/native/emulator/SQLite/targetOS/services/network/bus/runtime/physical execution or DBrecovery/generation/archive occurs. Prior oneencryptedF450supportcontainer/zero plaintextDB and older MHS/F454/MH202 ledgers remain unchanged.
+
+Reproduce python3 collect_teardown_v1.py --check with installed host ARM objdump: readonly original byte/hash/mapping/symbol/import checks only. Initial generation refuses overwrite and immediately saves exact first copies. No full source/Device/runtime/physical approval follows. Confidence high for selected original request/argument/order facts, conditional for complete running-system lifecycle.
+'''.encode()
+ out['OUTPUT_MANIFEST.json']=J({'collector_sha256':h(Path(__file__).read_bytes()),'outputs':{k:{'bytes':len(v),'sha256':h(v)} for k,v in out.items()},'original_execution':0});return out
+ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build()
+if a.check:
+ for n,v in out.items():assert (O/n).read_bytes()==v,n
+else:
+ for n,v in out.items():p=O/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(v)
+ D=O/'first-candidate';D.mkdir();ix={}
+ for n,v in {Path(__file__).name:Path(__file__).read_bytes(),**out}.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(v);ix[n]={'bytes':len(v),'sha256':h(v)}
+ (D/'INDEX.json').open('xb').write(J({'files':ix}))
+print(json.dumps({'check':a.check,'outputs':len(out),'guards':29,'call_proofs':7,'spans':3,'original_execution':0}))

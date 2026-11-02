@@ -1,0 +1,125 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0001d9c8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x564>:
+   1d9c8:	4a41      	ldr	r2, [pc, #260]	@ (1dad0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x66c>)
+   1d9ca:	4b42      	ldr	r3, [pc, #264]	@ (1dad4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x670>)
+   1d9cc:	b5f0      	push	{r4, r5, r6, r7, lr}
+   1d9ce:	b08b      	sub	sp, #44	@ 0x2c
+   1d9d0:	447a      	add	r2, pc
+   1d9d2:	4604      	mov	r4, r0
+   1d9d4:	a801      	add	r0, sp, #4
+   1d9d6:	58d3      	ldr	r3, [r2, r3]
+   1d9d8:	681b      	ldr	r3, [r3, #0]
+   1d9da:	9309      	str	r3, [sp, #36]	@ 0x24
+   1d9dc:	f04f 0300 	mov.w	r3, #0
+   1d9e0:	f7f3 e958 	blx	10c94 <_ZNKSt10filesystem7__cxx114path17_M_find_extensionEv@plt>
+   1d9e4:	e9dd 1501 	ldrd	r1, r5, [sp, #4]
+   1d9e8:	2900      	cmp	r1, #0
+   1d9ea:	bf18      	it	ne
+   1d9ec:	f1b5 3fff 	cmpne.w	r5, #4294967295	@ 0xffffffff
+   1d9f0:	bf14      	ite	ne
+   1d9f2:	2301      	movne	r3, #1
+   1d9f4:	2300      	moveq	r3, #0
+   1d9f6:	d115      	bne.n	1da24 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x5c0>
+   1d9f8:	f104 0208 	add.w	r2, r4, #8
+   1d9fc:	f104 0018 	add.w	r0, r4, #24
+   1da00:	e9c4 2300 	strd	r2, r3, [r4]
+   1da04:	7223      	strb	r3, [r4, #8]
+   1da06:	f7f3 e8c0 	blx	10b88 <_ZNSt10filesystem7__cxx114path5_ListC1Ev@plt>
+   1da0a:	4a33      	ldr	r2, [pc, #204]	@ (1dad8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x674>)
+   1da0c:	4b31      	ldr	r3, [pc, #196]	@ (1dad4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x670>)
+   1da0e:	447a      	add	r2, pc
+   1da10:	58d3      	ldr	r3, [r2, r3]
+   1da12:	681a      	ldr	r2, [r3, #0]
+   1da14:	9b09      	ldr	r3, [sp, #36]	@ 0x24
+   1da16:	405a      	eors	r2, r3
+   1da18:	f04f 0300 	mov.w	r3, #0
+   1da1c:	d136      	bne.n	1da8c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x628>
+   1da1e:	4620      	mov	r0, r4
+   1da20:	b00b      	add	sp, #44	@ 0x2c
+   1da22:	bdf0      	pop	{r4, r5, r6, r7, pc}
+   1da24:	684a      	ldr	r2, [r1, #4]
+   1da26:	4295      	cmp	r5, r2
+   1da28:	d832      	bhi.n	1da90 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x62c>
+   1da2a:	ae05      	add	r6, sp, #20
+   1da2c:	f04f 0300 	mov.w	r3, #0
+   1da30:	9603      	str	r6, [sp, #12]
+   1da32:	a803      	add	r0, sp, #12
+   1da34:	6809      	ldr	r1, [r1, #0]
+   1da36:	440a      	add	r2, r1
+   1da38:	4429      	add	r1, r5
+   1da3a:	f7ff fd13 	bl	1d464 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base>
+   1da3e:	9b03      	ldr	r3, [sp, #12]
+   1da40:	f104 0508 	add.w	r5, r4, #8
+   1da44:	6025      	str	r5, [r4, #0]
+   1da46:	42b3      	cmp	r3, r6
+   1da48:	d019      	beq.n	1da7e <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x61a>
+   1da4a:	9a05      	ldr	r2, [sp, #20]
+   1da4c:	6023      	str	r3, [r4, #0]
+   1da4e:	60a2      	str	r2, [r4, #8]
+   1da50:	9a04      	ldr	r2, [sp, #16]
+   1da52:	f104 0718 	add.w	r7, r4, #24
+   1da56:	2300      	movs	r3, #0
+   1da58:	4638      	mov	r0, r7
+   1da5a:	e9cd 6303 	strd	r6, r3, [sp, #12]
+   1da5e:	6062      	str	r2, [r4, #4]
+   1da60:	f88d 3014 	strb.w	r3, [sp, #20]
+   1da64:	f7f3 e890 	blx	10b88 <_ZNSt10filesystem7__cxx114path5_ListC1Ev@plt>
+   1da68:	4620      	mov	r0, r4
+   1da6a:	f7f3 eaac 	blx	10fc4 <_ZNSt10filesystem7__cxx114path14_M_split_cmptsEv@plt>
+   1da6e:	9803      	ldr	r0, [sp, #12]
+   1da70:	42b0      	cmp	r0, r6
+   1da72:	d0ca      	beq.n	1da0a <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x5a6>
+   1da74:	9905      	ldr	r1, [sp, #20]
+   1da76:	3101      	adds	r1, #1
+   1da78:	f7f3 ea1a 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   1da7c:	e7c5      	b.n	1da0a <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x5a6>
+   1da7e:	4637      	mov	r7, r6
+   1da80:	cf0f      	ldmia	r7!, {r0, r1, r2, r3}
+   1da82:	60a0      	str	r0, [r4, #8]
+   1da84:	6069      	str	r1, [r5, #4]
+   1da86:	60aa      	str	r2, [r5, #8]
+   1da88:	60eb      	str	r3, [r5, #12]
+   1da8a:	e7e1      	b.n	1da50 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x5ec>
+   1da8c:	f7f3 ebac 	blx	111e8 <__stack_chk_fail@plt>
+   1da90:	4912      	ldr	r1, [pc, #72]	@ (1dadc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x678>)
+   1da92:	4613      	mov	r3, r2
+   1da94:	4812      	ldr	r0, [pc, #72]	@ (1dae0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x67c>)
+   1da96:	462a      	mov	r2, r5
+   1da98:	4479      	add	r1, pc
+   1da9a:	4478      	add	r0, pc
+   1da9c:	f7f3 ecfc 	blx	11498 <_ZSt24__throw_out_of_range_fmtPKcz@plt>
+   1daa0:	6820      	ldr	r0, [r4, #0]
+   1daa2:	42a8      	cmp	r0, r5
+   1daa4:	d003      	beq.n	1daae <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x64a>
+   1daa6:	68a1      	ldr	r1, [r4, #8]
+   1daa8:	3101      	adds	r1, #1
+   1daaa:	f7f3 ea02 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   1daae:	9803      	ldr	r0, [sp, #12]
+   1dab0:	42b0      	cmp	r0, r6
+   1dab2:	d003      	beq.n	1dabc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x658>
+   1dab4:	9905      	ldr	r1, [sp, #20]
+   1dab6:	3101      	adds	r1, #1
+   1dab8:	f7f3 e9fa 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   1dabc:	f7f3 eb9a 	blx	111f4 <__cxa_end_cleanup@plt>
+   1dac0:	69a1      	ldr	r1, [r4, #24]
+   1dac2:	2900      	cmp	r1, #0
+   1dac4:	d0ec      	beq.n	1daa0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x63c>
+   1dac6:	4638      	mov	r0, r7
+   1dac8:	f7f3 e858 	blx	10b7c <_ZNKSt10filesystem7__cxx114path5_List13_Impl_deleterclEPNS2_5_ImplE@plt>
+   1dacc:	e7e8      	b.n	1daa0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x63c>
+   1dace:	bf00      	nop
+   1dad0:	7fd0      	ldrb	r0, [r2, #31]
+   1dad2:	0014      	movs	r4, r2
+   1dad4:	06b4      	lsls	r4, r6, #26
+   1dad6:	0000      	movs	r0, r0
+   1dad8:	7f92      	ldrb	r2, [r2, #30]
+   1dada:	0014      	movs	r4, r2
+   1dadc:	696c      	ldr	r4, [r5, #20]
+   1dade:	000f      	movs	r7, r1
+   1dae0:	6982      	ldr	r2, [r0, #24]
+   1dae2:	000f      	movs	r7, r1

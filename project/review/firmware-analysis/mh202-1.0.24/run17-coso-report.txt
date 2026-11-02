@@ -1,0 +1,63 @@
+# MH202 1.0.24 run17 — configured automation synchronizer states and future publication
+
+## Result and method
+
+Fresh original source now provides a concrete producer for synchronizer private+24 device-state records and a later callback/output boundary. Candidate `libautomation::automation_cfg_plant` reads **`/var/tmp/conf.xml`**; its text callback selects the three-element XML name stack **configuratore / impianto / disp***. The automation synchronizer filters the resulting strings by a comma-separated marker`3`, constructs a WHO2/WHAT0 parser candidate, and looks up or creates **52-byte device-state records** keyed by parsed WHERE/selectors. Those state objects are distinct from the64-byte COSO envelope Q and its status/ID fields.
+
+The actual future timer callback is **0x2124**. A state marked at+48 emits an ordinary WHO2 candidate from stored WHAT+16 and display-WHERE+12. Crucially its core helper's source argument is **NULL**, so the candidate output obtains a new record and a local `new_id` assignment rather than copying Q or Q's ID. The callback clears the mark, invokes the supplied completion callback, destroys its source and clears selected private fields. The main's candidate callback is **syn_receive0xb4a0**, whose first list is routed to **send_to_sm_from_field0xb7b8**, not directly to a socket. Actual later transmission/delivery is outside this source join.
+
+All new original/native execution and code hooks are **0**. This is static host reading/disassembly and one finite conditional config-state/timer ledger. It does not run XML/OPEN parsers, original callbacks, timers, GLib, target processes/OS/services or live I/O. It does not infer physical position, timer elapsed time, receipt, causal request/response correlation or an installed configuration.
+
+## Reproduction and provenance
+
+Run `python3 -B work/mh202-firmware/research/2026-10-30/coso/run17/collect_evidence.py --check`. It strictly reproduces22 outputs plus manifest,14 exact original spans,28 word assertions,4 original ELF files,15 safe PIC-resolved literals and1 conditional host ledger. `--check` writes nothing. `input-hashes.json` pins original MH202 COSO executable, libcoso, libplug_automation_syn, libautomation, the verified image accessor and immutable run16 report. `original-spans.json` records VAs/file offsets/raw hashes; `output-manifest.json` pins deterministic evidence. The author snapshot separately pins report/collector/history and excludes itself/later reviews. Original image paths and research-relative paths are used throughout. No F454 firmware/VAs/layout/fixture/harness is imported.
+
+## 1. Actual configuration source and text selection
+
+Candidate **automation_cfg_init0x109c..0x112c** resolves original literal`/var/tmp/conf.xml` and requests open. Its selected descriptor test at **0x10c0..0x10cc is equality to0**, not an exact−1 test; no real descriptor outcome is supplied here. The normal context construction installs start/end/error/passthrough callback pointers. **automation_cfg_plant0x112c..0x1228** replaces the text callback with original **automation_text_plant0xe50**, confirmed by GOT relocation0x96fc. It creates a GLib markup context, reads requested chunks1024, calls parse/end-parse and returns the collected text-list field. Parse-call results are not promoted into successful valid XML; full failures/chunking/termination and actual imported parser behavior remain unexecuted.
+
+Start callback **0xf04..0xf2c** duplicates/appends the element name to the user-data name stack; end callback **0x105c..0x108c** frees/removes the last name. Text callback **0xe50..0xf04** requires stack length3, exact first name`configuratore`, exact second`impianto`, and case-insensitive first four characters`disp` for the third. Under those guards it duplicates the supplied text pointer and appends it to user-data+4. The supplied text-length argument is not used by that displayed duplication path. This is the callback's source relation, not a successful whole-XML parser run or a specification of acceptable arbitrary chunks.
+
+The exact path `/var/tmp/conf.xml` is **absent from this normal packaged image listing**. `bounded-config-presence.json` deliberately checks only that exact image-root path. It does not claim the runtime path is absent, that no alias/generated/persistent configuration exists, or that all archives have been searched. No actual plant strings or private installed-device contents are obtained from this batch.
+
+## 2. Text-list consumer builds actual state objects
+
+Automation initializer **0x3328..0x3448** calls the candidate plant provider, then processes nonnull returned entries. **0x33a8..0x33d0** requests `g_strsplit(text,",",2)` and requires its second token equal original literal`3`; other entries are skipped. The first token is further split by `*` with maximum3 tokens at0x33d4..0x33e4. Its first subtoken is used with original WHO`2` and format **`*%s*0*%s##`** at0x33e8..0x33f4. It calls `buf_to_openmsg` at0x33fc, then lookup/create helper **0x1b4c** with r2=1 and address of private+24 list. The parser return is not tested before subsequent use; coherent successful normal parsed output is an explicit premise.
+
+A separate comparison **0x3418..0x3428** sets state+40=literal1 when the second `*`-split token equals original literal`15`. It is a local state selector, not a physical device model. Actual missing token handling depends on ordinary GLib null/string contracts. This report does not manufacture actual configured entries or a complete generator grammar.
+
+Lookup/create helper **0x1b4c..0x1c90** compares existing state string members0/4/8 against parsed WHERE16/selector20/selector24. A match returns that object. If no match and creation argument is nonzero, **0x1bd8** requests52 zeroed bytes, explicitly clears state20/40/44 and duplicates WHERE into state0. Null selector20, or selector text`3`, gives a duplicated WHERE at display-WHERE12 (**0x1c28..0x1c30**). Other selected selectors are duplicated into state4/8 and display-WHERE12 uses original **`%s#%s#%s`**. The actual object pointer is appended to private+24 and returned. Full allocation/list/error/alias/lifetime contracts remain delegates.
+
+Thus the configuration producer is concrete even though the installed list is unknown: text callback→list entries→marker/address split→parser candidate→state lookup/allocation/list. A record's 52-byte **allocation size** is not Q's envelope **status offset52**. The state identity/display members do not contain an inherited Q request ID.
+
+## 3. Future timer consumes marks and constructs fresh records
+
+The field callback's original scheduling pool0x3214/PIC base0xbc58 identifies local timer function **0x2124**. Run16's selected scheduling path is reused context, not replayed as another state matrix. Timer **0x2124..0x2290** obtains private+24 list and examines each state's **+48 mark** at0x21d4..0x21e0; zero skips that state.
+
+For marked state with **state20=0**, **0x21a4..0x21c0** formats fixed WHO`2`, integer WHAT from state16 and display-WHERE from state12 using **`*%s*%d*%s##`**. It calls `add_open_buf_to_msg_list(text, NULL, &local_output_list)` and clears state48 at **0x21c4**. No original Q pointer or ID is supplied to that call.
+
+A nonzero state20 takes an additional formatting branch **0x21f0..0x222c**, with exact format **`*#%s*%s*%d*%d*%d*%03d*%d##`**, WHO2, fixed DIM10 and selected state fields. It then rejoins the ordinary-output path, which clears the mark. This second branch is retained as source context; the single host ledger selects state20=0 and does not infer value units/meaning or claim complete extended-state support.
+
+Fresh core **0x2340..0x2430** receives NULL source. Therefore it takes **0x239c..0x23a0→0x2418**: `g_malloc0(64)`, `new_id` at0x2424 and store+60. Common code installs the successfully parsed pointer and sets type40=2, representation56=3, direction12=2, metadata4=2/8=0/16=0 and routing48 from parsed WHO. Under ordinary zero-allocation status52 remains0. This is a **fresh ID assignment**, not a copied Q ID; it is not a guarantee of a numerically different/unique ID across counter state, wrap or processes. Parser success/normal field/string/free/list delegates are required; the core helper does not test its parser return.
+
+## 4. Completion callback source and actual consumer boundary
+
+When the local output-list head is nonnull, **0x2234..0x2254** calls private+12 with r0=&local output list, r1=NULL and r2=descriptor+60 manager. Its return is not used as a delivery signal. Original main **0xa5c4..0xa600** installs manager+52 supplied main-context word and manager+56 **syn_receive**, with the latter GOT relocation resolving actual definition **0xb4a0**. Core registration supplies manager+52 to the initializer; initializer **0x3328..0x3334** copies those two words to private+8/+12. This closes the candidate function-pointer/argument provenance under the first-manager/normal effective-provider initialization premises.
+
+Actual **syn_receive0xb4a0..0xb4dc** retains the first list pointer and manager. Its nonnull second-list branch requests `send_list_field`; this timer supplies NULL, so that branch is skipped. Nonnull first-list pointer goes to **send_to_sm_from_field** at0xb4d0 with the manager. It is therefore a later **STM admission/queue boundary**, not direct socket output. Earlier source identifies that function's criterion/callback processing and later output-list handling; this batch does not execute all affected STM/list/publication providers or prove a delivered event.
+
+After the completion call, timer **0x2258..0x2268** requests `g_source_destroy(private+4)`, then clears private20 and private4 and returns0. It does not free the device-state list or envelope output list itself in this selected body. Callback/list ownership, valid source pointer and destruction behavior remain explicit unexecuted contracts; absence of a local free is not a leak, safety, reclamation or complete lifecycle finding.
+
+## One finite conditional producer→timer ledger
+
+`host-config-to-future-output-ledger.json` supplies a complete terminated text callback`11,3` under the three-name XML stack, no previous matching state, normal split/parse/allocation/list delegates, and coherent parsed candidate **`*2*0*11##`**. These are conditional callback inputs, **not a claimed valid full XML or observed installed device**. The initializer's address path produces a52-byte state with display-WHERE`11` and no special selector/mode flag. A later supplied marked state with WHAT16=0, state20=0 and mark48=1 represents the timer's chosen input; it is not declared as the initializer alone setting that mark.
+
+On the hypothetical future timer entry, the same ordinary text is formatted, a fresh64-byte record has status0 and ID from local `new_id`, mark48 clears, and the supplied callback routes its first list toward STM handling. No actual configured parse, field event, elapsed timer, callback/native instruction or physical transaction is run. The state fields are local software values, with no physical position/percentage meaning assigned.
+
+## Confidence and next distinct questions
+
+High confidence static: configuration path/name-stack/text consumer, marker/address parser candidate, actual52-byte lookup/allocation, timer pointer and marked-state output branch, NULL-source/fresh-ID metadata construction, and actual syn_receive→STM argument flow. Conditional: normal parser/providers/initialized state/containers/nonaliasing and actual invocation. Unknown: installed config contents/chunking, all active callback/order effects, runtime source ownership/timing, queue correlation, natural serialization/delivery and physical behavior.
+
+1. Establish effective `/var/tmp/conf.xml` runtime producer/alias and actual plant records if later authorized evidence supplies them, without treating a packaged-path absence as empty installed configuration.
+2. Trace selected generated state publication through actual STM admission/source flags while retaining its fresh ID and the unknown pending request/counter state; no physical or cross-request result follows here.
+3. State20's extended path, future state updates and full cleanup/context/list lifecycle remain distinct unfinished work. No completeness or exhaustive coverage claim is assigned.

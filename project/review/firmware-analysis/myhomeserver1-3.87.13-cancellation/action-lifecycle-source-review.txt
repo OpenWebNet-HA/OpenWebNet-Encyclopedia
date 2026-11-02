@@ -1,0 +1,32 @@
+# Independent operational-duration and second-callable source review
+
+PASS for action-lifecycle/REPORT.md; no correction requested. This review independently checks the original selected constructor/storage/dispatch source, identity and saved outputs. It does not execute original instructions, invoker/manager bodies, target providers, parsers, clocks, threads, callback fixtures or physical actions. No transport, MQTT, libjel, authentication/session/framing or equivalent body was followed. The reviewer authored the separate shared stop-domain ownership report, not this action-lifecycle report. Author and previous files remain unchanged.
+
+Reproduced `collect_duration_v1.py --check`:16 outputs,7 original spans,6 direct BL checks,13 byte guards,4 code-pointer PIC joins,4 relative relocation rows,13 bounded locator candidates and4 input pins. Independently mapped original ELF32 PT_LOAD segments and rehashed all7 original ranges, all13 guards, all4 input identities and all4 pointer PIC computations. Independently inspected SHT_REL records for all4 selected R_ARM_RELATIVE slots and checked the original vtable methods. PREL31 at original exidx entry0x14ec88 independently resolves constructor start0xcf06c; its next entry resolves0xcf5c8. All15 manifest evidence members,17 immediate first copies and separate actual first report copy match current saved bytes/size/hash. This is read-only static reproduction/source audit, not native replay or an extra semantic test corpus.
+
+## Source dataflow and scope
+
+- RTTI and the relocation-backed GOT slot0x166d24 identify the selected compiled class as `16Bn3lActionRunner`, vtable header0x164b14/AP0x164b1c. Its primary methods are Thumb0xcd849/0xcd6f1/0xcd551. This grounds the shared ActionRunner relationship without treating nearby stripped labels, class spelling, WHO numbers or public device semantics as ownership evidence. Full natural class selection/configuration remains outside the batch.
+- Constructor0xcf06c retains the supplied raw object and compiled destination independently. The source raw+32/+36 pair is loaded into d16 at0xcf11c and stored at compiled metadata+84/+88 at0xcf128. The prior raw parser's delay/duration and JsonCpp asUInt interpretation is explicitly inherited from a pinned report; no new accepted JSON or numeric domain is inferred.
+- The constructor supplies the first pair word to0xcd988 at0xcf156. Crucially, it separately loads metadata+88 at0xcf15a and passes that same destination to0xcdaf0 at0xcf15e. The actual setter is STR r1,[r0,#12]; BXLR. This proves a selected original duration-derived producer for operational+12 rather than equating metadata+88 with operational+12 by name. It does not change the distinct selected SLEEP constructor's unchanged operational-duration boundary.
+- The second binding is selected by actual getter0xcdaec reading destination+12 at0xcf2b0. CBNZ0xcf2b6 enters0xcf2f0; zero follows the cleanup/return route. Thus nonzero constructor data and normal return support the local conditional binding, not an installed scene, admitted arbitrary uint or timer activation.
+- First-callable storage0xcd990 is supplied concrete first manager/invoker pointers. On the later nonzero branch, original PIC pools resolve second manager Thumb0xcdb01 and second invoker Thumb0xcf065. Those pointer targets are recorded but their bodies are opaque. The selected constructor span starts0xcf06c and does not include the preceding second-invoker body as an investigated source route.
+- The actual0xcda40 storage helper checks the supplied manager, requests its copy operation with operation2, and under normal return swaps/moves callable data into destination+32/+36 and installs manager/invoker at+40/+44. Existing callable cleanup operation3 and all clone/allocation/error/lifetime effects remain delegated. No successful clone fixture or callback behavior is manufactured.
+- The common execute continuation is correctly narrower than “nonzero duration runs second phase”: first operational+8 must be zero, the first callable must return normally, and the fresh post-callback read of operational+12 must still be nonzero before the second thread request. The nonzero first-wait branch does not automatically chain the second worker. No delayed two-phase schedule is generalized from this constructor.
+- The selected duration worker reads actual operational+12, then its admitted post-wait path checks manager+40 and invokes+44 with data+32; it writes completion byte+4=1 only after callback normal return. Shared stop, wait/provider failure, later mutation, elapsed time and actual callback completion remain separate. Shared stop method0xcd6f0 is not the second-callable storage helper or an immediate invoker cancellation API.
+
+The locator's13 halfword-position BL matches remain explicitly syntactic and bounded to0x11880..0x113fb0. Only the chosen constructor is validated here. Pool coincidences, indirect calls and other code/encoding forms preclude a universal caller or absence claim. The report accurately keeps original/provider/API/scene/host-semantic-model execution0 and does not infer physical stop meaning, interruption, restart/reset, completion guarantees, hangs/leaks or defects.
+
+## Exact reviewed pins
+
+| File relative to action-lifecycle/ | SHA256 |
+| --- | --- |
+| REPORT.md | 8bd31bb61d023eb7113c99ae99d0e3437be617a90f63d0992c322b1c8fbae779 |
+| collect_duration_v1.py | dfbf7331b1e6c8758433cb55fea953c54a93c03fceca8116adbc59d5d8e87938 |
+| OUTPUT_MANIFEST.v1.json | ead6d286c5a9d15987b4ef5ed4239e371faf00e4e1834fbbce06ad55d497da46 |
+| CLASS_IDENTITY.v1.json | 92d8b3880f1d13b17d23b3878f00ebf18f483f68cc305b1107a89338166e144f |
+| CALLABLE_POINTERS.v1.json | 9e6d777c4761a37c14db23bf855b102f7bf85a3fcfb073f9ddfe21bba5b47dfa |
+| first-candidate/SNAPSHOT.json | 80f781182588c3ceae336959d0ebd6999c47511eea5926c0b99a16d3b16d48a0 |
+| report-first-candidate/SNAPSHOT.json | 0db5f32cfa64bc7d442ff7426422dc760f5281e51bf9c61fd80057d1405021f2 |
+
+Original executable SHA2567d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26. The discarded exploratory mid-wide-instruction slice is disclosed as pre-generation history; current aligned source/first copies are verified without pretending to witness missing console chronology. This new review is written exclusively with an immediate first-review exact copy and a precomputed non-self-referencing index. No author correction or new version is needed.

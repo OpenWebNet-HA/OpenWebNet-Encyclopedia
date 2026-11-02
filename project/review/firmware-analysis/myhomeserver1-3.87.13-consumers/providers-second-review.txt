@@ -1,0 +1,27 @@
+# Independent C JSON provider source review
+
+PASS for the bounded static claims in providers/REPORT.md. No correction requested. This is a fresh source-aware review of the selected original provider, not a target-runtime, transport, parser-admission or physical-action test. Original vendor execution: 0.
+
+I reproduced collect_json_provider_v1.py --check: 16 outputs, 10 source spans, 18 byte assertions, five PIC joins and eight resolved-node host cases. Separately mapped the original ELF32 PT_LOAD segments without importing the collector, verified the original library hash, all ten raw span hashes, all 18 instruction ranges and all five literal target calculations. Checked the 17 indexed initial copies against their current source/output bytes and verified the separately saved actual report copy. The index does not purport to contain its own hash or the later report.
+
+Source conclusions checked:
+
+- new_json_msg 0x3bd8 establishes selected 20-byte object / 32-byte root allocations, version pointer at +0 and root at +16; successful ordinary allocator/string returns remain premises.
+- add_node 0x36e0 and add_val_bool_node 0x39ec establish the selected node kind +0, type +8, payload +16, child list +24 and parent +28. The Boolean builder supplies kind 2/type 20 and stores the input word, without a normalization instruction in this path.
+- generate_json_ack 0x3f70 tests the identifier/constructor result, duplicates the identifier to object+12 and requests result=1 through the Boolean builder. Its return is local construction status; the child-builder result is not checked. This establishes neither delivery nor action success.
+- is_json_response 0x5450 returns 1 only for a selected result node whose kind is 0. is_json_ack 0x54ac delegates to the Boolean reader, whose 0x52c0 path requires kind 2/type 20 and returns the stored +16 word. Therefore the selected generated result node yields response 0/ACK reader 1; a synthetic stored word 7 yields 7, not a normalized true. False, missing and wrong-tag cases can share return 0.
+- The original lookup 0x4824 follows children and can recursively call get_node_by_name. The eight finite host cases deliberately begin after a selected node is resolved; they do not prove complete lookup, duplicate-name policy, JSON acceptance or a top-level-only schema. Error detection is selected-node presence, not a proved error payload contract.
+- Executable dependencies and packaged definitions distinguish C libjsonmsg from C++ JsonCpp and C OPEN objects. Runtime interposition, user-library overrides and ordinary dynamic binding remain open.
+
+Pinned reviewed bytes (SHA-256):
+
+| File under providers/ | SHA-256 |
+| --- | --- |
+| REPORT.md | 653c93560b2a2604ad7973d62e4eabc4d64c41e645e5ece3b4bbd979b4438c9f |
+| collect_json_provider_v1.py | e42d4032a27adb9afd577e9de14573030ea6d83b2eecb73c0206e352bff6e024 |
+| OUTPUT_MANIFEST.json | 692c73f2b0b391ed4da2fc99ef2f9e7daae1a35220f3ba936edeb95a07f9b5f9 |
+| ORIGINAL_SOURCE.json | 2438ee15964d6dfa979bf4c954aea0667f558c2d397131b8c7a891d03ae9b0b7 |
+| RESOLVED_NODE_HOST_CASES.json | 1e2c2e8891deb84d784133563129217bfb396753d714608af1db71973f5dd7ce |
+| first-candidate/INDEX.json | e67efdeae8d8eec41c96349e3f572c00af0804fae4bdd660a190f3af5a09d2aa |
+
+Original /usr/lib/libjsonmsg.so.1.0.0 SHA-256: d78437fdb23fb78ba881dbb22a14570b441a178e31c84244b126a5dfbf7866a7. The report's normal/recovery equality is reproduced by the collector. No author files were edited and no opaque exchange/authentication/session/framing implementation was inspected.

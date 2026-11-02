@@ -1,0 +1,12 @@
+{
+  "prior_code": "collect_namespace_v1.py",
+  "prior_code_bytes": 9715,
+  "prior_code_sha256": "b5e97288b74d96464113b09d462a3c4517b9c11c934b3fe030b3b1b139085f7c",
+  "parent_exact_presnapshot": "work/remaining-firmware-investigation/2026-11-01-run05/integration/before-collector-v2/work/f459-firmware/2.1.5/research/2026-11-01-night05-namespace/collect_namespace_v1.py",
+  "actual_failure": "SyntaxError: bytes can only contain ASCII literal characters",
+  "phase": "Python parse BEFOREbuild/outputgeneration, firstcanonical attempt",
+  "cause": "Unicode arrow in report bytes literal",
+  "v2_change": "Report normal Unicode literal thenUTF8encode; version/report/history references only, all source/hash/word/import guards retained",
+  "source_results_unchanged": "No v1results/reports/generatedoutputs existed to change; no guest/vendor execution/failure",
+  "terminal_history": "Structured observed-error note; not a claimed exact original terminal byte hash"
+}

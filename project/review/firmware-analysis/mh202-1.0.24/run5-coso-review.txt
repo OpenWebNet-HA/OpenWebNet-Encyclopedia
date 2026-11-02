@@ -1,0 +1,40 @@
+# MH202 COSO run5 independent source review
+
+Final disposition: **PASS after material absent-parameter correction**. Static review only; original execution0. The independent source discrepancy below was reported before integration; corrected artifacts were then rechecked. No outstanding correction remains in this scope.
+
+## Final reviewed pins
+
+| File under coso/run5/ | SHA-256 |
+|---|---|
+| REPORT.md | `9b872ed01536f561a8b0f0fe49425e0323a2f1732218428cdea5525da18b111d` |
+| collect_evidence.py | `3af7d3e7680618da1a80139057d09c1751e5b1436664a4a4d2a66706b6f63f85` |
+| host-forward-body-model.json | `e052f52cefe9c9f9bda6d0d2e3c1fa117bb6753cef73fcaeafd2a3b90dba36e7` |
+| output-manifest.json | `010c2e74bff33d1669c63c55141de835189d57f02b36232cd95c562e3027e5ff` |
+
+Final collector `--check` independently reproduced **16 outputs+manifest,8spans,19words,15forward/4reverse finite hostcases**. All16 current output hashes match. Both added absent-parameter40/41 cases now explicitly contain `[17,0,28,255]`; original sentinel and OR word assertions are included. The report table and correction section agree. The five exact pre-review files in `development-before-review/` match `snapshot-sha256.json`, including all four original pins below; the prior descriptor file is also preserved. This retains the initial error history without treating it as current evidence.
+
+## Reviewed pre-correction pins
+
+| File under coso/run5/ | SHA-256 |
+|---|---|
+| REPORT.md | `2211f3f15ef0a214549ccbf18a6cbc79b6b73266925f351fc5c3f76940745c14` |
+| collect_evidence.py | `c865364f615e2f10c41f8460650e244672b0d46eb4a946ba30ea69e65dab2ffb` |
+| host-forward-body-model.json | `ba8fefe9164785c0b36e03f5fc93fe52ed3e6fe629553ac00679a1b546fb4bbb` |
+| output-manifest.json | `911c539f70d2ccecccb472bed7b4f8ddd48325501beef7cbc9cd450f687b4bbe` |
+
+## Material correction
+
+The initial report's WHAT40/41 absent-parameter defaults0x40/0x60 and model's `(param or0)` were inconsistent with the original register flow. In `/home/bticino/libcoso/libplug_scenarios_tr.so`, `g_list_length` result0 at0x1bdc leads to **0x1be0 `mvneq r0,#0`**, hence r0=−1. The parameter-present branch0x1be4 is not taken. WHAT40 reaches0x1ca4 `orr r3,r0,#0x40`, then byte-store0x1ca8; WHAT41 reaches0x1c94 `orr r3,r0,#0x60`, then byte-store0x1c98. Both absent-parameter cases therefore select **low byte0xff**, under the same supplied successful fields/address/context contracts. This is not a public operation/physical meaning claim.
+
+The initial13 finite host cases omitted these two absent-parameter cases, so their passing checks did not verify the prose default. Requested correction was addressed by preserving pre-review bytes/history, correcting report/model and adding no-parameter40/41 fixtures plus original sentinel/OR assertions. Independently checked original byte stores remain in the saved full translator span. WHAT42 absent→0 is different: its original0x1c78..0x1c8c path uses the zero list length and conditional stores.
+
+## Other checks so far
+
+- Reproduced collector `--check`:16outputs+manifest,8spans,15assertedwords,13forward/4reverse hostcases. Independently checked all16output hashes and all8original raw-span hashes against verified ImageVFS reads.
+- Independently read12 additional critical original words covering0x1bdc/1be0/1be4, unsigned command gate/jump table, WHAT40/41 branch targets and OR/byte stores. The discrepancy is source-verified, not a fixture expectation change.
+- Pair(2,1), parsed kind+44=1, first-parameter unsigned1..31 guard, low command domain0..31/opcode0x14, selected40..44/opcode0x1c, selector defaults3/0, brief versus extended body layout agree with original branch/store relationships for the scoped inputs.
+- Reverse selected B8/1C/high-nibble80 branch tests bit1→40/41 and bit0→43/44; original format is WHO0. Both candidate list calls are conditional on supplied decoding/address/format contracts. No WHO17 taskmanager, accepted raw command or physical feedback claim follows.
+- Registration0x1660 and core+36 initializer call0x2044..2058 are distinct from descriptor+40 translator. Private+60 null check and initializer imported config call are scoped correctly.
+- Brief/extended wrappers set+40=3/11,+56=1, copy the reported ten metadata fields through0x2230, and append. Reverse wrapper0x26d8 duplicates supplied text, sets+40/+56=2 and appends. Allocation/copy/list operations and full lifetime/drain remain unexecuted/static boundaries.
+
+No original decoder/address/formatter/container callback executes in these host examples, and no complete parser, dispatcher, scheduler, output lifetime, transport or physical result is established. This review changed only its own review file, not author artifacts or old dossiers.

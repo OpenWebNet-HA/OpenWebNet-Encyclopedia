@@ -1,0 +1,21 @@
+
+/home/bticino/libcoso/libplug_automation_tr.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+000000000000568c <automation_tr_translate@@Base+0x1c5c>:
+    568c:	39400360 	ldrb	w0, [x27]
+    5690:	97fff21c 	bl	1f00 <g_ascii_digit_value@plt>
+    5694:	2a0003e1 	mov	w1, w0
+    5698:	39400760 	ldrb	w0, [x27, #1]
+    569c:	2a0103fb 	mov	w27, w1
+    56a0:	97fff218 	bl	1f00 <g_ascii_digit_value@plt>
+    56a4:	2a0003e3 	mov	w3, w0
+    56a8:	2a1b03e2 	mov	w2, w27
+    56ac:	aa1803e0 	mov	x0, x24
+    56b0:	b0000001 	adrp	x1, 6000 <automation_tr_translate@@Base+0x25d0>
+    56b4:	9100c021 	add	x1, x1, #0x30
+    56b8:	97fff252 	bl	2000 <g_string_append_printf@plt>
+    56bc:	f94043e4 	ldr	x4, [sp, #128]
+    56c0:	17fffb51 	b	4404 <automation_tr_translate@@Base+0x9d4>

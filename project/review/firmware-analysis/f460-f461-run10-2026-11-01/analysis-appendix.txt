@@ -1,0 +1,17 @@
+## F460: action dispatch, marker polling and scene-byte cleanup
+
+The selected compiled action pointer has a new connection to the scene's action range. Under normal helper/preservation premises, the initializer appends its pointer/control-word pair to receiver+216 using sixteen-byte entries. This is distinct from the eight-byte condition pointers at +192. The executor reloads that same action range, requests primary slot0 through an entry's first pointer, then checks a separate scene byte at +248 before continuing dispatch. It can leave this loop before requesting every entry.
+
+On the selected one-entry polling path, the actual helper reads action byte+8. A nonzero marker can reach cleanup. A zero marker instead reaches a wait/recheck path, where a nonzero scene byte+248 can also lead to cleanup without a fresh successful-marker test. Cleanup entry therefore does not certify that every action marker became nonzero. Under normal intervening returns, the later stores clear scene bytes+249 and +248. These are numeric state and ordering facts; their public meanings, full policy and concurrency contract remain unproved.
+
+The earlier wait study already separates an action marker from successful elapsed waiting. The new dispatch/poll connection strengthens neither that marker nor scene cleanup into action success, physical effects, complete ownership or a lifetime guarantee. Action bodies, helper internals, vector growth and wider stop/restart policy remain open.
+
+## F461: typed context to an exact address suffix and local formatter
+
+A fresh supplied-object path selects a string field equal to `4` and a private word different from4. Another supplied string is passed to signed decimal conversion; the low32 bits of its result feed an uppercase hexadecimal formatting request. This conversion-derived context and an explicitly zero local flag reach the suffix block through the selected address-prefix continuation. These premises are separate from the earlier case with a NULL field.
+
+The original conditional-compare instruction supplies NZCV=4, including Z=1, when its first comparison is unequal. Its alternative character `3` requires both a context comparison equal to `F` and a nonzero local flag. On this selected zero-flag path the character is therefore `4`. The same address GString receives the requested suffix format `%s1%s`, using context text, literal1 and that character. This is source and instruction-flag reasoning; no string fixture was generated and no address domain or physical meaning is inferred.
+
+The same GString's data pointer later supplies one argument of a four-string formatter. Its returned pointer is stored through a local output-record pointer. The following `prepare_extscs_frames` import is an opaque call boundary; its body and downstream framing/output behavior remain excluded. Full predecessors, provider binding, conversions, allocation/ownership, remaining components and accepted public grammar stay open.
+
+The [run10 source and review capsule](../../project/review/firmware-analysis/f460-f461-run10-2026-11-01/README.md) retains the original guards, pointer/state and instruction-flag evidence, exact failed/versioned history and independent reviews. Both additions are static source reasoning; no firmware, wait, string fixture, frame preparation or physical operation was executed.

@@ -1,0 +1,47 @@
+# F450 standard/PROD and F455 first-exploration independent source review
+
+**PASS. No correction requested.** This is an independent bounded original-file/header/metadata and preservation review, plus a read-only host collector reproduction. Author files remained unchanged. No firmware/provider/native/target code, script, database query, vendor expression, model/fixture, network/bus/device/OS service or mount was executed. Host hashes, ZIP/XML/header parsing and host readelf are analysis only. Encrypted ZIP entries were not decrypted or opened as plaintext. Parent central database/schema work remains separate.
+
+## Reproduction and original identities
+
+`python3 -B collect_firstpass_v2.py --check` reproduced **10 outputs / 11 exact first copies / 43 input pins**, with3839 regular files per F450 view and337 ELF headers. I independently hashed all43 saved input pins and reread/hash-checked **all3839 regular files in each standard/PROD tree**, confirming equal complete retained regular-content manifests and26,156,366 bytes each. Link/special metadata remains separate; no target link or special node was created or followed. This proves these retained file identities, not installed or runtime equivalence.
+
+The original archive size/hash pins agree. Independent outer ZIP inspection finds **three standard members versus eight PROD**, with exact PROD additions50.xtz/bubl.bin/default_env.img/parts.in/u-boot.bin. No contents of the environment/boot additions were interpreted. The two extracted790-byte fwz.xml files are byte-identical and declare F4502.0.10, model labels1.0.52/2.0.52, firmware/recovery actions and extra_download50.xtz with status4 action order2/1/3. The report correctly preserves the standard package's absent50.xtz versus identical manifest reference as a package-composition distinction, not a runtime missing-file defect or installed policy. Shared extracted payload/image equality is verified by the collector and exact input pins.
+
+I independently decoded the original uImage header: magic0x27051956,1522640-byte declared payload matching file length minus64, OS/architecture/type/compression tuple5/2/2/0 and exact name `Arago/2.6.32.17-davinci1/lago`. These are header facts, not a selected boot kernel, board or hardware observation. No signature/authenticity trust chain is claimed from package CRC/hash integrity.
+
+## Architecture, declarations and local consumer leads
+
+I independently rechecked all**337** retained ELF identities and original class/endian/machine/flag words. The five selected bt_daemon/bacclient/ebacgw/libopen.so.0.0/libopenmsg.so originals are ELF32 little-endian ARM(machine40), raw flags0x5000002. Recording EABI5 here does not license later AArch64 layouts or imply effective provider binding. Selected literal file-offset/PT_LOAD virtual-address mappings were independently recomputed for the three reported XML filename occurrences.
+
+The selected original startup-script lines3/5/6 name the library search path, `/home/bticino` directory request and `bin/bt_daemon &`. I independently checked these original line bytes and the five XML name locators63/68/73/78/83. The declared bacclient/ebacgw/bt_device/scsserver/bt_termo entries and working-mode values remain declarations; configuration selection, actual process creation, loaded modules, provider state and readiness are not inferred. No startup or protocol/delegate body was expanded.
+
+Original BACnetTemplates.xml independently yields rootBACnetTemplates, eightDeviceType,126object elements and only the reported attribute-name set. Original dbfiles_ws.xml has Root_Element/general_info plus **five leaf elements**, supporting the precise v2 count. These are template/metadata structure counts, not configured instances, valid public grammar or a complete support table. No stored values or complete configuration were exported by this review.
+
+Original bacclient/bt_daemon XML literals remain presence-only data/source leads. Independent readelf also confirms ebacgw's declared libsqlite3.so.0 dependency and undefined sqlite3_open symbol. No callsite/SQL ownership, successful opening, schema compatibility, active provider or global database-absence conclusion is added. PROD50.xtz central-directory metadata independently has encrypted50/master.sqlite with declared289792 bytes andCRC3252150069, plus encrypted empty extra.xml. The schema/content remains unknown; neither filename nor encrypted metadata is treated as a parsed database. No key/password/decryption route was attempted.
+
+## F455 standalone applicability
+
+The original F455 manifest declares Basic Gateway1.1.2, model5.0.8, payloadF455_1_1_2.bin and bootloader update mode. I independently checked the301016-byte payload hash, exact first64 bytes and saved little-endian word rendering, selected offset0 magic tests and F455 marker offset299056. The report correctly leaves architecture, vector table, load address, filesystem, executable sections and structured-data grammar **unestablished**. Curated OWN-DEV-0152 supplies product context only. Neither arbitrary numeric header words nor ASCII ARM/version/product markers become an instruction-set or capability proof.
+
+## Frozen history and limits
+
+The stagedv1 collector and the parent's exact one-file pre-v2 snapshot match SHAff5d3ce31f93a01545d811f8976796ea9692e02f504281df7296c54deded8846. Applying exactly the three history-listed textual substitutions recreates currentv2 byte-for-byte: six→five metadata-leaf wording, reproduction filename and explicit history sentence. No source/output guard or firmware interpretation was weakened. This was a staged **unexecuted** v1, not a failed canonical generation; no absent v1 report/output is invented. The later history-writer guessed-path assertion and exploratory SyntaxWarning are explicitly labeled authoring observations/transcriptions, not original-code failures or contemporaneously hash-pinned terminal artifacts. All11 first-copy members match their canonical bytes, sizes and hashes.
+
+This review verifies the packet's selected original/header/declaration/provenance claims. It does not approve whole firmware coverage, startup/overlay/provider closure, security/trust policy, installation, public protocol behavior, physical effects or lifetime safety. Receiving/transport/authentication/session/framing and equivalent closed implementations remained opaque. No older product layouts or execution ledger were transferred; all new original execution remains0.
+
+## Exact reviewed packet/history pins
+
+| Member | Bytes | SHA-256 |
+|---|---:|---|
+| `work/f450-firmware/2.0.10/research/2026-11-01-first-exploration/REPORT.md` | 6862 | `9e525852d8ca2d7ca4f485f10ff8425764da215fdb4a1c51c1987a8aa75d0d78` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-first-exploration/collect_firstpass_v2.py` | 19325 | `c78a270b0ef37047a6a83108128a0638318c224cd323c119a87f727880dd6128` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-first-exploration/OUTPUT_MANIFEST.json` | 1436 | `389ccd014e19cf6c4126df1ddbd8fdbb79bc1b75d63c8e84d931cdc57ffb4e1a` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-first-exploration/INPUTS.json` | 8491 | `343bbfca022396fd097f4dfb6bbd029502ef12f350b88b0e73b040242749f8a0` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-first-exploration/first-candidate/INDEX.json` | 1811 | `6be60a9775d185ddf02420e296cede2c80d397ee8004acf6f8a42b7334218916` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-first-exploration/VERSION_HISTORY.v2.json` | 2080 | `b2469f1a608bcee2010e5e36854c49b743d95e409df00ca605851ef4195d39e0` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-first-exploration/collect_firstpass_v1.py` | 19120 | `ff5d3ce31f93a01545d811f8976796ea9692e02f504281df7296c54deded8846` |
+| `work/remaining-firmware-exploration/2026-11-01/integration/f450-before-v2/INDEX.json` | 513 | `5c0360ada6b08aee9d86b884c0a06ff0acb51287873f18a729b343a804f362cf` |
+| `work/remaining-firmware-exploration/2026-11-01/integration/f450-before-v2/collect_firstpass_v1.py` | 19120 | `ff5d3ce31f93a01545d811f8976796ea9692e02f504281df7296c54deded8846` |
+
+Completed 2026-11-01T18:48:54.777210+00:00. Exact first review bytes are preserved immediately; the index is precomputed and excludes itself.

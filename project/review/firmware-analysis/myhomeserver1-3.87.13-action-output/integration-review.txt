@@ -1,0 +1,43 @@
+# Action-output documentary integration review
+
+PASS, no correction requested. I compared the exact focused reference, overview insertion, capsule and coordination candidates with the frozen callable report and independent source review. This is a bounded documentary/product/method review, informed by my earlier selected action/ownership context, not a fresh original-byte audit of these callable bodies or a whole-firmware semantic review. No source collector, original/vendor/provider code, semantic fixture or CPU replay was executed by this review.
+
+The integration distinguishes the inherited compiled116-byte action from the actual first52-byte and conditional second24-byte captures. The first capture word48 is not the compiled object thread holder48. Capture producers/manager-copy requests, adapters and different body/frame namespaces are accurately represented under ordinary allocation/string/provider/object/lifetime premises. The text does not equate independently captured state, source frame offsets or local class names with a physical operation.
+
+The two selected blocks correctly retain four exact keys, local JSON/method-string argument addresses and the shared relocation-backed receiver source at the 0x5dda0 call boundary. The source describes member/conversion/call requests only. Descriptor 0xd20c0, converter 0xd163c, original guard/merge admission, query freshness, effective binding and complete callback returns remain premises or unopened delegates. Same keys/receiver do not establish equal method/params, paired natural order, delivery, prior-state restoration, a physical stop or command success. Normal-return destruction requests are not acknowledgements. Closed receiving/transport/MQTT/libjel/auth/session/framing bodies are not followed, and unpromoted exploratory prefixes are not presented as findings.
+
+Curated MyHOMEServer1 home-automation/scenario context supplies no public BN3L physical meaning. Missing configured assets, natural activation, owner/error/unwind/concurrency and physical evidence remain open. Wider Device/source approval and old F454/MH202 roles/ledgers/history limits are not broadened. This batch adds zero execution/models/fixtures; the existing MHS ledger remains one corpus/eight entries/340 original code-hook visits/zero C primitives/12 redirects/eight EXIT/zero guard stops/360 hooks, plus four setup relocations. Historical static-zero scopes remain separate. The noon-Paris control deadline and user-authorized reset are local coordination, not firmware evidence or an already completed automation-deletion receipt.
+
+## Preservation and actual completion boundary
+
+Verified all 10 current frozen document pins/copies, all 26 exact SOURCE_EXPORTS source/published pairs, 20 source first-candidate copies, four coordination first copies and the independent source-review first copy. The new reference exactly matches REFERENCE_CANDIDATE. The retained pre-edit overview plus its single declared insertion reconstructs the current overview byte-for-byte. No source/result/history correction or overwrite is implied; exploratory partial disassemblies are explicitly excluded from source proofs by the source packet.
+
+Checked 41 local Markdown link occurrences and one fragment. All 39 existing targets and the fragment resolve. Only the intended later capsule integration-review.txt and validation.json targets await actual assembly. Final protection/identity, strict ESG/ECV/diff and actual control/closure receipts remain parent-owned subsequent gates against actual saved files. This review does not certify future bytes, placeholders or missing-link exemptions.
+
+## Exact current candidate pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-action-output.md` | `641fbc991b13ec0b1fbca991f6d15775d47805bfea40272298c8e80871b2ab3f` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md` | `03dc425c580d209ae4dbd6749e0455ab7e514f3873208b9c3543b0148f4c10d6` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-action-output/README.md` | `98b385b4fd71cb566c9c56239c72afecd77a64a16b98e0dbfbe03d77feb7bffa` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-action-output/SOURCE_EXPORTS.json` | `c2fb7ca3eee62512b9e58e9a36687e6d35d2bb7d14fce8993f6e2c47e33e24f8` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/SYNTHESIS.md` | `d78a9066bdbb9c590e78837d3a62d10fbc5782cc08d0fd2ab61a4abff108977a` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/COVERAGE.md` | `7a0a3faeed735805c5a9f8c95fea7eb0d5bc7bad7a5cafef7195108b125e7322` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/RANKED_REMAINING_QUESTIONS.md` | `c671f55e4c3970ff74c410970f0250727a18989ec37e591fe855ad7ae3366282` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/RUN_LOG.md` | `9b0282644d3bbef878756aad97df8b7d39d666543de009f7baf4a3d70f56393b` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/reviews/callable-source-review.md` | `75adc74bd12e1850e6fe62a496f56ba1c6f74078ff6e7b2b0afdca1a5ab43ab0` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/PARENT_SOURCE_SPOTCHECK.json` | `4e215519ffe88002ba3bb71e129992abfd84cd04063c27ed1b116f6dda1d8c83` |
+
+## Source and preservation pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `callable/REPORT.md` | `0f55aa02fd373acbd1b7ef81f2e85aa71bf7ae27e826663bf91061f1376fb3e7` |
+| `callable/collect_callable_v1.py` | `a93c3890294c69d9f152cf54a8464b7e76e3bef89b85e6be842334be26fd6cba` |
+| `callable/OUTPUT_MANIFEST.json` | `0835f1abbf548fe89d0c31eef3bd321c1bea403ddedcb1c0d6dfb242973ad686` |
+| `callable/first-candidate/INDEX.json` | `4c216ee68a593ce41d926d659e517eb7d9b83cfe533d2bac25ea1fcd52c2e16d` |
+| `REFERENCE_CANDIDATE.md` | `641fbc991b13ec0b1fbca991f6d15775d47805bfea40272298c8e80871b2ab3f` |
+| `integration/DOCUMENT_PATCH.json` | `ddeeaf8763aff8342beb4b5a70eb7dd5ee206f70223cf939988fbbbc28b682f0` |
+| `integration/review-candidate/INDEX.json` | `a3ca7cd16576706b063bd2c61d8d1ec50711e773115971c96f3f2ba470958768` |
+| `SOURCE_CHECKS.json` | `dd4b5977ab5519975b1f7fedd43e2de4765d2a814a3eea00619a7ea5e9fb4e19` |

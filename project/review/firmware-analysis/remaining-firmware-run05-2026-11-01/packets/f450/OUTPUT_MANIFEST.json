@@ -1,0 +1,26 @@
+{
+  "collector_sha256": "e36ee6e00f6c8bbdcd22e58499a1dd32e2ba2ec30bfcaee6e9969d536193bb6d",
+  "files": {
+    "INPUTS.json": {
+      "bytes": 1425,
+      "sha256": "ae633f416e19a6774052bb9ce53f7b45e66768de8973535306855ffa27a2b58d"
+    },
+    "ORIGIN_FLOW.json": {
+      "bytes": 1662,
+      "sha256": "a143f42d5c023dabfd2b2afc07df33ecd091eb4e5fb44878de18fd7013b595c9"
+    },
+    "REPORT.md": {
+      "bytes": 5531,
+      "sha256": "282dd7114ec11c349b4843533bd317e05f54a21a6cb30e196982cb3c1f431b9f"
+    },
+    "SOURCE.json": {
+      "bytes": 3306,
+      "sha256": "269e50edc6ac038c6cd42e21c5bfb32562f0ade369d5edd154568895ce03de00"
+    },
+    "SPANS.json": {
+      "bytes": 7237,
+      "sha256": "668c616db121f09ee61258c69bd28476467ec4d61b376b3e09bd03633a8f574c"
+    }
+  },
+  "scope": "Generated members excluding this manifest"
+}

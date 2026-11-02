@@ -1,0 +1,121 @@
+# MH2021.0.24 platform baseline: boot, recovery, storage and update boundaries
+
+The normal and recovery images share **4400 byte-identical same-path regular files, including all78 packaged regular files under `/home/bticino/bin`, `/home/bticino/lib` and `/home/bticino/libcoso`**. Only three same-path regular files differ; normal has495 additional regular files, recovery has five. Recovery therefore does not contain a separately compiled vendor engine in these directories. Its empty `/home/bticino/sp/Recovery` marker is concrete, but its consumer and exact runtime recovery policy remain untraced in this first pass.
+
+This is a new MH202 baseline, not transferred F454 behavior. None of those78 same-path MH202 vendor files matches the checked F454 normal counterpart hash. Original ARM/JS instructions executed: **0**. All tools were host Python/binutils; no mount, vendor program, device, network, service, flash or remote write occurred. Firmware trees, synced sources and old dossiers remain read-only. No packaged credential value or full credential-bearing update template is retained.
+
+## Identity, reproduction and scope
+
+Archive `MH202_010024.fwz` SHA256 `bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7`. Normal image SHA256 `9db4f008344a74394055ed1c7a4864d80958eb9c9f369242594049e404469017`; recovery `9d1c3f9efc6f3eeb86f6ad22b49f3edc5fcfe765f9a7982fb5195300d305f4e7`. Extraction/provenance checks are inherited from the parent baseline and pinned inputs, not rerun firmware tests.
+
+New MH202 original executable identities:
+
+| Original image file | SHA256 |
+|---|---|
+|`/home/bticino/bin/bt_daemon`|`41a8844318d47cf33571b6d74a7de528dea5118d4c2289f4d666de419d91b1b6`|
+|`/home/bticino/lib/liblghal.so.0.0`|`11e30f59707cde78cc0d0a74d516e7999fcf42bcc77fda8fb88177fac5f0300e`|
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/boot/run1/collect_boot.py
+python3 work/mh202-firmware/research/2026-10-30/boot/run1/collect_boot.py --check
+```
+
+The collector emits60 deterministic evidence files,17 original code spans and9 exact word/table assertions. `--check` regenerates UTF-8 bytes in memory and compares without writing. It uses the shared ImageVFS to verify actual source reads against extraction metadata, compares the complete regular-file metadata, and reads F454 files only to establish/exclude exact identity. It records paths/hashes, selected safe configuration fields, whitelisted literals and component package labels. It does not execute models of the original supervisor/update algorithm.
+
+## Normal versus recovery package
+
+`normal-recovery-comparison.json` is the complete regular-file classification; symlinks are compared separately in the saved init/extra link evidence. The counts are derived from the parent-verified extraction hash inventories rather than rereading all9306 regular files for another full hashing campaign:
+
+| Classification | Count |
+|---|---:|
+|Normal regular files|4898|
+|Recovery regular files|4408|
+|Same path, identical SHA256|4400|
+|Same path, differing SHA256|3|
+|Only normal|495|
+|Only recovery|5|
+
+The three changed paths are `/etc/timestamp`, `/home/bticino/sp/dbfiles_ws.xml`, and `/usr/lib/opkg/status`. Recovery-only paths are the empty marker plus four UPnP XML/SCPD resources under `/home/httpd/html/myhome/upnp` (`KOSCPD.xml`, `devparSCPD.xml`, `pnp.xml.orig`, `pwdSCPD.xml`). This is file presence/identity evidence; no authentication-related content or handler was investigated.
+
+All78 files in the three selected vendor directories are identical normal/recovery. They include scripts as well as ELF files; **78 is not an ELF count**. The same files have zero exact same-path F454 matches. `vendor-component-identities.json` pins each identity and size. This does not rule out identical code fragments or differently named files elsewhere; it prohibits assuming F454 VAs, provider closures, tests or state-machine results apply here.
+
+## Declared boot chain and service configuration
+
+Both images have identical `/etc/inittab`: default runlevel5, system initialization `/etc/init.d/rcS`, then runlevel dispatcher `/etc/init.d/rc 5`. The original image-link metadata supplies runlevel5 `S98-bt_daemon-apps.sh`→`../init.d/bt_daemon-apps.sh`. That six-line script:
+
+- sets `LD_LIBRARY_PATH=/home/bticino/lib:/home/bticino/libcoso`;
+- invokes the local hosts-file helper;
+- changes directory to `/home/bticino`;
+- launches `bin/bt_daemon` in the background.
+
+This is source-declared boot behavior, not successful boot/readiness evidence. Sysinit links also declare module loading, filesystem mounting, volatile population, networking and later boot housekeeping. Normal additionally has runlevel5 `S20ntpd`; recovery lacks that specific link. Full link metadata is saved. The shared daemon script does not establish that all available vendor binaries start.
+
+The identical selected `/home/bticino/cfg/stack_open.xml` fields declare:
+
+| Field | Packaged value |
+|---|---|
+|`extra_mount/enable`|1|
+|`dedrifu/enable`|0|
+|`device_update/type`|1|
+|`extra/enable`, `extra/check`, `extra/lang`|1; `2,4`;2|
+|`normal_status`|4|
+|daemon openserver/scsserver/bt_device `working_mode`|1/1/1|
+|daemon bt_energia/bt_difson/bt_vct/bt_supervisione/coso/bt_taskmanager `working_mode`|0/0/0/0/0/0|
+
+The safe selected XML and original line numbers are in `normal-platform-config.json` and its recovery counterpart. These working-mode numbers are configuration fields, not a new decoded runtime namespace or a claim that COSO cannot later activate. Runtime configuration generation/selection, hardware status overrides, actual launch arguments, child supervision/restarts and readiness remain next questions. No F454 daemon policy was copied into this report.
+
+## Storage, persistence references and board-conditioned HAL behavior
+
+Both fstab files declare root read-only with `noatime,data=journal`; `/dev/mmcblk0p7` mounted at `/home/bticino/cfg/extra` as ext3 with `rw,sync,noatime,errors=continue,data=journal`; `/var/volatile` as tmpfs. The runtime mount and durable physical media behavior were not observed.
+
+Concrete daemon path literals include `/var/tmp/conf.xml`, persistent `/home/bticino/cfg/extra/conf/conf.img` and `conf_copy.img`, and `/var/tmp/flags/FlagXML`. `daemon-path-references.json` contains67 candidate direct ARM PC-relative literal loads, with original words/pools/targets. These are location aids scanned in load segments; their surrounding code must be reviewed before inferring callers or behavior. Eight bounded actual neighborhoods are saved. **The container/header/checksum, fallback selection, write atomicity and FlagXML policy have not yet been reconstructed for MH202.** Paths alone do not transfer F454 persistence semantics.
+
+New original `hal_board!0x9308` caches a classification derived by reading `/proc/cpuinfo`, finding its Hardware line and matching case-insensitive board strings. The saved original code/literal relation includes LAGO→6, BAIA→5, BASI→0 and additional board labels. The packaged uImage name and package architecture labels point to a lago build; they are not an observed physical board classification.
+
+`check_extra!0x5f14` calls this board classifier. A board bitmask (`0x78e`) selects an immediate0 return for one group. Boards0/5/6 instead reach `Device::get_device`, then the recorded argument vector `e2fsck`, `-p`, Device-result field+50, through imported `call` at0x5f90. Other board values take an error return. This is a static filesystem-check delegate boundary: no check was run, and the imported `call` return convention is not assumed to equal raw `system` wait status.
+
+`mount_extra!0x8874` has its own board table. For the board0/6 direct-mount branch0x8bbc, it gets Device fields+50/+200 and calls imported `mount` at0x8bf8 with the original target `/home/bticino/cfg/extra`, option text `data=journal` and flags literal `0xc0ed0410`. Board5 uses a separate command-vector branch. These arguments are saved; Device-result contents and successful mounting are not executed. The whole Device mapping source span is retained for a later exact structure/partition analysis.
+
+## Package actions and distinct normal/recovery installation helpers
+
+`package-actions.json` records the original `fwz.xml`: productMH202, firmware1.0.24, object model5.0.5, provider`btesuv3`. Under status value4 the listed action order is recovery firmware(action2), normal firmware(action1), extra4(action3), extra2(action4). Both firmware actions reference the supplied common `uImage`; their distinct `.ext3.gz` filenames are explicit. This is manifest intent, not a verified runtime transactional/rollback order.
+
+The new `liblghal` exports separate `update_fs_recovery(char*)!0x7c34` and `update_fs(char*)!0x7dd0`. Their board dispatch has three classes:
+
+| Board code | Selected low-level path |
+|---|---|
+|1,2,3,7,8,9,10|UBI command-vector path|
+|0,5,6|Device-result/shell-template path|
+|4 or unsupported/outside table|returns−1|
+
+In the UBI branch, recorded original pointers build `ubiattach /dev/ubi_ctrl -m 3 -d 2 -O 2048` for recovery and `-m 5` for normal. Each then calls `ubiupdatevol /dev/ubi2_0 <incoming path>`, followed by `ubidetach /dev/ubi_ctrl -m 3` or `-m 5`. Calls are at0x7d00/0x7d30/0x7d5c (recovery) and0x7e9c/0x7ecc/0x7ef8 (normal). The first two calls check **exactly−1** and return early on that value. No argv command, shell or filesystem operation executed.
+
+The other branch calls `Device::get_device`, formats a shell template with incoming path plus Device-result field+140 (recovery) or+170 (normal), and calls imported `system` at0x7d90/0x7f2c. The **entire two template literals are withheld**, with pointer location and SHA256 only in `hal-withheld-update-templates.json`, because packaged credential-bearing parameters must not appear in artifacts. No password, command template or full argv is retained. These branches return the delegate result; their callers and interpretation of success/status are not traced here. The report does not assign a wait-status bug or assume the `call` API has `system` semantics.
+
+Low-level helpers are not the complete archive-ingestion/integrity mechanism. Caller authentication, package validation, CRC/hash/signature interpretation, selected board Device fields, recovery-kernel installation, update failure status and rollback policy remain open. In particular ZIP/header/payload checks inherited from provenance establish archive integrity checks, **not cryptographic authorization of the firmware**; no signature-absence conclusion is made from strings or from these selected install helpers.
+
+## What is known about unbundled4.xtz and2.xtz
+
+The manifest references both as `extra_download`, each with check attribute2. Neither archive is in the supplied package. Neither image contains mounted resource directories `/home/bticino/cfg/extra/2` or `/home/bticino/cfg/extra/4` in its image metadata. The separate persistent extra partition is outside these supplied root images.
+
+There is positive consumer context for2: packaged `extra/lang` is2 and normal image symlink `/usr/share/apache2/htdocs/myhome/lang` targets `/home/bticino/cfg/extra/2`. That establishes a language-resource association in this installation layout, not the missing archive's exact contents/version/translation texts.
+
+For generic checked extras, daemon0xe2a0–0xe2a4 formats `/home/bticino/cfg/extra/%s/extra.xml`;0xe314 calls `GetConfigValue` with original keys **`extra`/`dimsum`** and tests whether its destination buffer is empty at0xe348–0xe350. `daemon-extra-descriptor-keys.json` pins the actual pointers. This is an installed-extra descriptor consumer. The dimension sum's algorithm/unit, failure policy and relation to manifest check2 remain untraced; the field name is not a checksum algorithm proof.
+
+For4, this first pass establishes only manifest membership and inclusion in configured checked-extra IDs. **Its actual payload/role is unresolved.** It must not be labelled the scenario database, COSO program, web application or media resources without an actual separate reference. Missing external resources can constrain later engine/UI investigations; they do not establish absence of the bundled scenario engine.
+
+## Platform/component labels
+
+uImage header name is `Arago/2.6.32.17-davinci1/lago`, load/entry0x80008000, payload1522560 bytes. Original header SHA256 is pinned; compression field0 is the uImage header declaration, not a claim that every layer of the kernel payload is uncompressed. The packaged `/etc/version` says Arago2011.09; `/etc/angstrom-version` says Angstrom2011.09, overlay branch `bt-overlay_MAIN-05122011_LAST`, revision3ec5ce5, target arm-none-linux-gnueabi.
+
+Selected **package metadata labels** include kernel2.6.32.17-davinci1-r59.6/lago, libc6 2.8-r12.6, libstdc++6 4.3.3-r12.6, BusyBox1.13.2-r42.4-arago3.6, Apache2.2.14-r3.6, PHP5.2.13-r7.4.6, OpenSSL1.0.0d-r14.0.6 and Dropbear0.51-r7.0.6. These are inventory labels, not executed version probes or a vulnerability assessment. Daemon ELF attributes declare ARM10TDMI/v5T/Thumb-1 compilation metadata; they do not identify the actual CPU at runtime.
+
+## Ranked next questions and confidence
+
+1. Trace actual daemon configuration boot selection, `/sp/Recovery` marker consumer, `normal_status`/working-mode transition and child supervision. Present package equality is strong; runtime mode is not yet proven.
+2. Trace the installed-extra `dimsum` algorithm and check2 policy, then a concrete4 consumer. Do not fetch/unpack unavailable assets or infer their role from the number.
+3. Reconstruct MH202 persistent conf.img primary/mirror schema, checksum/read fallback and writer result ordering; start from these new original references, not F454 VAs.
+4. Trace caller archive validation and update result handling before claiming complete integrity/rollback behavior. Resolve imported `call`, actual Device partition fields and board namespace along the way.
+5. Map kernel/recovery-kernel installation and startup dependencies/launch arguments from current code; package versions alone do not show active services/readiness.
+
+High confidence: complete regular-file metadata comparison, selected component byte identities, source boot declarations, manifest actions/missing assets, safe package labels, whitelisted pointer relations and original low-level HAL branches. Conditional static interpretation: board-classified delegates and their ordinary imported contracts. Unknown: actual boot/state/device filesystem content, runtime processes, full update validation/rollback/persistence semantics and missing4 payload. No native execution or physical behavior is implied by the amount of disassembly.

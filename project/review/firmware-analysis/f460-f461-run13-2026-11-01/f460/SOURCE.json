@@ -1,0 +1,348 @@
+{
+  "binding": "executableDTNEEDEDlibdedrifupdater.so.1 and metadataalias1\u21921.0.0; activebinding/interposition remainsconditional",
+  "candidate_definitions": {
+    "_ZN8Platform16get_working_modeEv": [
+      "74: 0000000000003200   200 FUNC    GLOBAL DEFAULT   12 _ZN8Platform16get_working_modeEv"
+    ],
+    "_ZN8PlatformC1Ei": [
+      "82: 0000000000002fe0   532 FUNC    GLOBAL DEFAULT   12 _ZN8PlatformC1Ei"
+    ]
+  },
+  "contract": {
+    "Platform": "actualprovidedconstructoraddressSP104; selectednormalctorpathstoresnewGStringatobject48",
+    "caller": "samePlatformSP104\u2192getter; returnedW0retainedW19; cmp2diagnosticbranch; W1mode toStatusMachineSP64 next_step request",
+    "getter": "statnegative\u21920; contentsfalse/null\u21920; g_strrstr compiledmarker nonnull\u21922,otherwise1",
+    "limits": "No targetenvfile read; get_running_platform/next_step andallupdate/extraction/flash/mount/reboot/providers opaque",
+    "separate_domains": [
+      "PlatformSP104",
+      "StatusMachineSP64",
+      "mode0/1/2",
+      "XMLstatus4",
+      "recordkind2"
+    ]
+  },
+  "guards": {
+    "exe": [
+      {
+        "VA": "0x288c",
+        "word": "0x910103f4"
+      },
+      {
+        "VA": "0x2890",
+        "word": "0x2a1703e1"
+      },
+      {
+        "VA": "0x2894",
+        "word": "0xaa1403e0"
+      },
+      {
+        "VA": "0x2898",
+        "word": "0x9101a3f5"
+      },
+      {
+        "VA": "0x28a0",
+        "word": "0xaa1503e0"
+      },
+      {
+        "VA": "0x28b8",
+        "word": "0xaa1503e0"
+      },
+      {
+        "VA": "0x28c4",
+        "word": "0x2a0003f3"
+      },
+      {
+        "VA": "0x28c8",
+        "word": "0x7100081f"
+      },
+      {
+        "VA": "0x28d4",
+        "word": "0x7100067f"
+      },
+      {
+        "VA": "0x28f8",
+        "word": "0x2a1303e1"
+      },
+      {
+        "VA": "0x28fc",
+        "word": "0xaa1403e0"
+      }
+    ],
+    "lib": [
+      {
+        "VA": "0x2ff0",
+        "word": "0xaa0003f3"
+      },
+      {
+        "VA": "0x2ff4",
+        "word": "0x2a0103f4"
+      },
+      {
+        "VA": "0x3000",
+        "word": "0xb9000a60"
+      },
+      {
+        "VA": "0x30f4",
+        "word": "0xf9001a60"
+      },
+      {
+        "VA": "0x3220",
+        "word": "0xaa0003f3"
+      },
+      {
+        "VA": "0x3224",
+        "word": "0xf9401800"
+      },
+      {
+        "VA": "0x3234",
+        "word": "0xf9400000"
+      },
+      {
+        "VA": "0x3238",
+        "word": "0xf90003ff"
+      },
+      {
+        "VA": "0x3244",
+        "word": "0xf9401a60"
+      },
+      {
+        "VA": "0x3248",
+        "word": "0x910003e1"
+      },
+      {
+        "VA": "0x324c",
+        "word": "0xd2800003"
+      },
+      {
+        "VA": "0x3250",
+        "word": "0xd2800002"
+      },
+      {
+        "VA": "0x3254",
+        "word": "0xf9400000"
+      },
+      {
+        "VA": "0x3260",
+        "word": "0x52800013"
+      },
+      {
+        "VA": "0x3280",
+        "word": "0x2a1303e0"
+      },
+      {
+        "VA": "0x3294",
+        "word": "0xd65f03c0"
+      },
+      {
+        "VA": "0x3298",
+        "word": "0xf94003e0"
+      },
+      {
+        "VA": "0x32ac",
+        "word": "0xf100001f"
+      },
+      {
+        "VA": "0x32b4",
+        "word": "0x1a9f07f3"
+      },
+      {
+        "VA": "0x32b8",
+        "word": "0x11000673"
+      }
+    ]
+  },
+  "images": {
+    "exe": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          35390,
+          35390,
+          65536
+        ],
+        [
+          1,
+          6,
+          39432,
+          104968,
+          104968,
+          1568,
+          1616,
+          65536
+        ]
+      ],
+      "path": "/home/bticino/bin/dedrifupdater",
+      "sha256": "8f32212bee98b507690f1e22d6b26524c8a13dc20efcc8cc05900ac4142f9753"
+    },
+    "lib": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          23441,
+          23441,
+          65536
+        ],
+        [
+          1,
+          6,
+          27440,
+          92976,
+          92976,
+          1448,
+          1480,
+          65536
+        ]
+      ],
+      "path": "/usr/lib/libdedrifupdater.so.1.0.0",
+      "sha256": "ccd87b29d164976bb5ab626ead466fb1875854bb2fbb036982d4e3eea9e4cc89"
+    }
+  },
+  "imports": [
+    {
+      "PLT": "0x2780",
+      "PLT_bytes": "b00000f011de47f910e23e9120021fd6",
+      "call": "0x28a8",
+      "input": "exe",
+      "relocation": "0000000000019fb8  0000006800000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZN8PlatformC1Ei + 0",
+      "slot": "0x19fb8"
+    },
+    {
+      "PLT": "0x22f0",
+      "PLT_bytes": "b00000f011ba46f910c2359120021fd6",
+      "call": "0x28bc",
+      "input": "exe",
+      "relocation": "0000000000019d70  0000001d00000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZN8Platform16get_working_modeEv + 0",
+      "slot": "0x19d70"
+    },
+    {
+      "PLT": "0x2550",
+      "PLT_bytes": "b00000f0115247f910823a9120021fd6",
+      "call": "0x2900",
+      "input": "exe",
+      "relocation": "0000000000019ea0  0000004300000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZN13StatusMachine9next_stepE11WorkingMode + 0",
+      "slot": "0x19ea0"
+    },
+    {
+      "PLT": "0x2920",
+      "PLT_bytes": "b000009011ce47f910623e9120021fd6",
+      "call": "0x2ff8",
+      "input": "lib",
+      "relocation": "0000000000016f98  0000005400000402 R_AARCH64_JUMP_SLOT    0000000000002af0 _ZN8Platform20get_running_platformEv + 0",
+      "slot": "0x16f98"
+    },
+    {
+      "PLT": "0x25a0",
+      "PLT_bytes": "b000009011ee46f91062379120021fd6",
+      "call": "0x30f0",
+      "input": "lib",
+      "relocation": "0000000000016dd8  0000000500000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_string_new + 0",
+      "slot": "0x16dd8"
+    },
+    {
+      "PLT": "0x26e0",
+      "PLT_bytes": "b0000090113e47f910e2399120021fd6",
+      "call": "0x323c",
+      "input": "lib",
+      "relocation": "0000000000016e78  0000001400000402 R_AARCH64_JUMP_SLOT    0000000000000000 stat@GLIBC_2.33 + 0",
+      "slot": "0x16e78"
+    },
+    {
+      "PLT": "0x2740",
+      "PLT_bytes": "b0000090115647f910a23a9120021fd6",
+      "call": "0x3258",
+      "input": "lib",
+      "relocation": "0000000000016ea8  0000001800000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_file_get_contents + 0",
+      "slot": "0x16ea8"
+    },
+    {
+      "PLT": "0x2730",
+      "PLT_bytes": "b0000090115247f910823a9120021fd6",
+      "call": "0x32a8",
+      "input": "lib",
+      "relocation": "0000000000016ea0  0000001700000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_strrstr + 0",
+      "slot": "0x16ea0"
+    },
+    {
+      "PLT": "0x2770",
+      "PLT_bytes": "b0000090116247f910023b9120021fd6",
+      "call": "0x32bc",
+      "input": "lib",
+      "relocation": "0000000000016ec0  0000001b00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_free + 0",
+      "slot": "0x16ec0"
+    }
+  ],
+  "literal_joins": [
+    {
+      "ADD": "0x30ec",
+      "ADRP": "0x30e8",
+      "target": "0x4ac8",
+      "value": "/var/tmp/dedrifu_env.txt"
+    },
+    {
+      "ADD": "0x32a4",
+      "ADRP": "0x32a0",
+      "target": "0x4c08",
+      "value": "MYRECOVERY=y"
+    }
+  ],
+  "models_fixtures": 0,
+  "new_original_execution": 0,
+  "spans": [
+    {
+      "bytes_hex": "17008052f4030191e103172ae00314aaf5a301910dffff97e00315aae103172ab6ffff97e05b40b91f04007180120054e00315aa",
+      "end_VA_exclusive": "0x28bc",
+      "input": "exe",
+      "name": "actual-local-objects-construction",
+      "sha256": "d1816dc82148a467cfcfed9eae3ced0ad48426b88b3faf3f3c5e180483696dd3",
+      "start_VA": "0x2888"
+    },
+    {
+      "bytes_hex": "e00315aa8dfeff97c1ee47f9f303002a1f080071200040f9800e00547f060071210000b021c01591220000b0424016914200819a210000b021201c911ffeff97e103132ae00314aa14ffff97f303002ac0100035",
+      "end_VA_exclusive": "0x290c",
+      "input": "exe",
+      "name": "mode-result-branch-and-forward",
+      "sha256": "4e6ffca359bf3166d7dc7ed1e1cb85cd7201808ab385b13e5f8152af52cd0d6b",
+      "start_VA": "0x28b8"
+    },
+    {
+      "bytes_hex": "220000b04200169191ffff17",
+      "end_VA_exclusive": "0x2aac",
+      "input": "exe",
+      "name": "mode2-diagnostic-bridge",
+      "sha256": "ab588ebecc8ddcca992f1fd9aaeeb99ed9f2354eaaec5a2db8fe070e85e9fd31",
+      "start_VA": "0x2aa0"
+    },
+    {
+      "bytes_hex": "3f2303d5fd7bbea9fd030091f35301a9f30300aaf403012a4afeff971f080071600a00b928050054",
+      "end_VA_exclusive": "0x3008",
+      "input": "lib",
+      "name": "provided-platform-constructor-prefix",
+      "sha256": "fd303f1a4b890e42c93e9ab3274873ffd6f697550d37bb6d69b1d75d415464f5",
+      "start_VA": "0x2fe0"
+    },
+    {
+      "bytes_hex": "000000b000202b912cfdff97601a00f9",
+      "end_VA_exclusive": "0x30f8",
+      "input": "lib",
+      "name": "selected-constructor-path-field48",
+      "sha256": "59d39be49e14105579bdc6f484aec9fb0dbe5910c3cfe0cf65f6e951980ccfa6",
+      "start_VA": "0x30e8"
+    },
+    {
+      "bytes_hex": "3f2303d5ffc302d1820000f0e1230091fd7b09a9fd43029142d447f9f35300f9f30300aa001840f9430040f9e34700f9030080d2000040f9ff0300f929fdff970001f837601a40f9e1030091030080d2020080d2000040f93afdff97e001003513008052810000f021d447f9e04740f9220040f9000002eb020080d241020054e003132afd7b49a9f35340f9ffc30291bf2303d5c0035fd6e00340f920feffb4010000b02120309122fdff971f0000f1e00340f9f3079f1a730600112dfdff97e9ffff17b3fcff97",
+      "end_VA_exclusive": "0x32c8",
+      "input": "lib",
+      "name": "entire-profile-result-getter",
+      "sha256": "74d6066d63db011993589b7a36367c9baf007b4048457bef2e59a357a2aa1c41",
+      "start_VA": "0x3200"
+    }
+  ]
+}

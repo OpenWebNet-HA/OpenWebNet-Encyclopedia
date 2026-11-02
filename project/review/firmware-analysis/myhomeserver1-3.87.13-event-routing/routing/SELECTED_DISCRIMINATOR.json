@@ -1,0 +1,11 @@
+{
+  "got_base": "0x1659a4",
+  "label": "light",
+  "length": 5,
+  "row": 1,
+  "row_to_code": "exact row1 equality\u21925544e supplies1\u219254daa subtract1\u2192SP8zero",
+  "scope": "Private local class/code, not external accepted method/wire/public WHO/physical meaning",
+  "slot": "0x166098",
+  "source_string": "selected local std::string at SP88 before first dot; earlier construction/filters not closed",
+  "table": "0x160e4c"
+}

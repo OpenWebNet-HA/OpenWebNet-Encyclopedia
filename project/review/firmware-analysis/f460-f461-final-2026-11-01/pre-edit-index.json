@@ -1,0 +1,32 @@
+[
+  {
+    "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+    "snapshot": "f460-f461-deep-analysis.md",
+    "bytes": 43781,
+    "sha256": "3195fb54f4d533cbd6ba01eb8956a9141faa14ff687af4bbf43ed21c8b1e5734"
+  },
+  {
+    "source": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+    "snapshot": "mhcatalogue-source-profiles.md",
+    "bytes": 15603,
+    "sha256": "bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba"
+  },
+  {
+    "source": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0207-f460-myhome-server.md",
+    "snapshot": "own-dev-0207-f460-myhome-server.md",
+    "bytes": 41934,
+    "sha256": "ed4af14a11813ba1fdc53dfbf131a388b2cf8066fc688888e30da7c158579932"
+  },
+  {
+    "source": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md",
+    "snapshot": "own-dev-0208-f461-myhome-server-third-party-integration.md",
+    "bytes": 39923,
+    "sha256": "89f0a1cd681924ec8bf6b093c4c39d3d037b14cd416547b8111bffecd2eb5323"
+  },
+  {
+    "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+    "snapshot": "README.md",
+    "bytes": 11061,
+    "sha256": "33a04d33f248a91c67de7a70e25ec2a54766b793b813efddafe40cde14fc17c0"
+  }
+]

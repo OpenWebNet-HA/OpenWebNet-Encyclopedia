@@ -1,0 +1,29 @@
+# F453AV/MH200N local clock-script contracts
+
+This pass adds one own-script clock admission branch and a separate wrapper-selection comparison. It does not execute Tcl, read a target clock or kernel status, or establish a successful system/RTC operation. Normal/recovery views remain separate original inputs; equal source bytes do not make their environments identical.
+
+## Exact original scope and source identity
+
+Twelve own source occurrences are size/SHA256 checked against four product/view regular-file manifests: each view's `sbin/init`, `etc/init.d/scripts/S10rtc_verify` and `bin/hwtosys.tcl`. Only init lines103..106 are exported; the startup selector is inherited context, not new duplicate coverage. All selected script lines are safe original code/compiled literals, with no runtime/configuration values. `SOURCE_LINES.json` retains exact paths, own hashes and line numbers; `INPUTS.json` pins original manifest/source and actual pre-body scope decisions. Source names/hashes were proposed first, the parent approved the exact bounded selection, then SCOPE.json was saved before the first selected body read. Systohw, options/profile, other init regions and underlying executable/provider bodies were not expanded.
+
+The shared init source is4269B/SHA256`0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb`; shared S10 source is294B/SHA256`0f6e3f123e1ad9cab1fcd00d87ce3617cfd2d5b50db78e457c385582fb983d10`. These identities are separately checked for each F453AV3.0.14 and MH200N1.1.8 normal/recovery view.
+
+## Init selector and local numeric branch
+
+Original init lines103..106 enumerate `lsort [glob -nocomplain /etc/init.d/scripts/S*]` and request `try [list source $n]`. The own packaged S10rtc_verify filename matches that selector. This joins a concrete packaged source candidate to a conditional source-evaluation request, under natural init reachability, runtime filesystem visibility and ordinary try/source binding/normal-return premises. It does not establish successful sourcing, relative order with other components or a complete boot.
+
+S10 lines2..4 request open of compiled `/proc/sys/dev/btweb/rtc_invalid` in mode `r`, then `gets` into `line` and `scan $line %d num`. Line5 tests numeric `num==1`. That selected branch requests the Tcl/extension command `date -s 2000.1.1-00:00:00` at line7; this is a compiled fallback argument, not an observed clock value. The `hwclock --systohc --utc` text at line8 begins with a comment marker and supplies NO clock-operation request. Line13 requests channel close after the selected normal branch continuation.
+
+Valid channel/line/numeric conversion, binding and ordinary returns remain premises. The scan result is not tested in this selected script; invalid/missing input and error paths are not closed. The pathname and diagnostic text do not prove hardware-invalid truth, successful correction, actual time, timezone, RTC writing, clock synchronization, cleanup, readiness or physical behavior. No target `/proc` file or host/target clock was read.
+
+## Separate hwtosys wrapper comparison
+
+F453AV normal/recovery and MH200N recovery each contain the231B wrapper SHA256`ae5d328983802c1540debd016fc10618d4b99654d406ccacca32e4fbdbea1963`. It requests `exec uname -m`, compares the returned string to compiled `armv5tel`, and uses the comparison result as the condition. Under ordinary Tcl comparison semantics, nonzero selects `exec rtc-rw r`; zero selects `exec hwclock --hctosys --utc`. Duplicate assignment of the compiled comparison string is source text, not an additional runtime observation. Comment labels SA1110/PXA255 are not CPU/board/ABI provenance.
+
+MH200N normal instead has a44B wrapper SHA256`fe6a7e98ac58df697f294d4b319a5dfc2bd6c7cc90a4a28a25d5731d4d298ae1`, whose selected entire source directly requests `exec hwclock --hctosys --utc`. Its own source has no uname/compare branch. This is a product/view source difference, not a claim about the installed command, actual platform, command success or hardware. Natural invocation of this wrapper remains OPEN: no caller is established by the approved init slice, and it is NOT joined to the separate init-to-S10 chain.
+
+The official Tcl string manual is API context only: it documents zero for equal strings. It is not an assignment of the exact target interpreter release or effective command binding. Underlying uname/hwclock/rtc-rw/Tcl providers and command resolution remain opaque.
+
+## Reproduction and limitations
+
+Run `python3 -B work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/source-component/collect_clock_v1.py --check` from the workspace. The static host collector verifies original bytes, own manifests, selected exact lines and pre-body scope records; it never sources Tcl or executes a clock/provider command. Exact first copies preserve code/report/output identities. Counts are bounded reach/integrity, not exhaustive source or Device/runtime/physical approval. Existing firmware/native execution ledgers remain unchanged, with no old collector/corpus replay, synthetic models/fixtures, private values, remote writes, repository edits, staging, commit or push.

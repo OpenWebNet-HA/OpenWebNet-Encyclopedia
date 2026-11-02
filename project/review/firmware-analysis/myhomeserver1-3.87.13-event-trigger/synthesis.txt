@@ -1,0 +1,5 @@
+# BNIL local event-trigger source
+
+Selected local BNIL trigger1 has raw44B BnilTrigger schema and a64B compiled inner in76B allocation. Same-return serializer/reparse and original field copies connect enabled/type/operator/status to the compiled object. The selected callback captures a raw scene pointer, is copied into the persistent inner and its owner pair is moved into scene104 trigger vector; this is local publication, not external subscription.
+
+A separate nonvirtual handler ee708 checks enabled48, recognizes exact on/off/noStatus strings, uses local operator2equal/3different against configured60, and then requests the captured callback. Other operatorwords do not take those equality tests. One local dynamiccast/ID-equality caller reaches that handler. Its temporary copied trigger controls are released before ID/handler calls; no whole lifetime, natural repeated firing, transport acceptance or physical function is proved.

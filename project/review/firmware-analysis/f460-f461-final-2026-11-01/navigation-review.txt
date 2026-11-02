@@ -1,0 +1,46 @@
+# Final F460/F461 navigation integrity review
+
+PASS. No author correction requested.
+
+This independent review covers the frozen final navigation package, its documentary identities, report links, saved-status presentation and selected version history. It does not re-audit firmware semantics, all members of the referenced evidence indexes, whole protection inventories, runtime behavior or product capability. The reviewer previously authored F460 packets and F461 source reviews; this is an independent audit of the navigation generator and its claims, not a second independent source review of those packets.
+
+Reviewed UTC: 2026-11-01T17:37:04.499800+00:00.
+
+## Reproduction and independent checks
+
+The permitted read-only command `python3 -B work/f460-f461-comparison/2026-11-01-final/verification/build_navigation_v1.py --check` returned PASS with 15 checkpoints, 30 reports, eight outputs and zero new firmware execution. No old source collector or native/CPU experiment was run.
+
+I read the generator and report, then independently verified all 386 selected documentary input paths against recorded size/SHA-256 and their exact content-addressed retained copies. These are selected documentary inputs, not every file named inside the pinned indexes. All 30 report headings and available first-VA locators match their original one-based lines; all absolute report links in CATALOGUE.md identify the corresponding retained report. One report has no VA locator and is honestly represented by null. The 50 historical mappings have unique logical-path/hash pairs, valid checkpoint references and byte-identical retained destinations. Mutable current reference pages are not silently substituted for a different historical hash.
+
+All seven nonself output-manifest entries match, as do all ten exact first-candidate copies and the pre-capture first-script copy. The index itself is excluded from its own entries. Capture time is recorded as actual capture time, not as a claim of earlier generation. Saved checks remain explicitly historical documentary results; row, report and pin counts are not source coverage counts.
+
+## Selected version and ledger audit
+
+The final row pins current run15 RESEARCH_STATE.v2.json (`cf4de356e900caa93cebfbe39cb2d22079a7aa4e8eaf402f11a221db18df1589`) and EVIDENCE_INDEX.v2.json (`5404603de569afe83163cce60b8d64c9a3cf9965da15cf5b9468d1d3627476a6`, 214 member records). Original RESEARCH_STATE.json (`080ba467a3553d8a21f557f423c73b7162413c83892d1ef8d0c0bf0aee0f1d19`) and original 205-member EVIDENCE_INDEX.json (`d2349cd049143c4471517ed0a0ffb743752a62911524998e6457342ae42eb553`) remain separately pinned with STATE_CORRECTION.v2.json (`c44c971d3a5799b7cf56c766c3fd13bbe865e22654a9714f7437cc4f46c2ded6`). This records a saved coordination-metadata correction, not a fresh assertion about the current branch.
+
+Selected source-report navigation preserves run08 F460 REPORT.v3.md alongside prior versions and result-word refinement; run10 F460 authoritative REPORT.v2.md remains distinct from root v1 REPORT.md, while its historical first-candidate REPORT.md is the documented v2 alias. Run15 F461 authoritative REPORT.v2.md (`dcce7197af2737f165295c51bcb3b51ff07bc3076550daa4732da48e38c3ae70`) is distinct from original REPORT.md (`891728ccd1d024c018cc8362d0399cd5bdc793c0597c696b68560765407735d3`); the unchanged source collector manifest still binds that original report deliberately. The current source peer and refinement navigation does not imply those original canonical bindings were rewritten.
+
+The saved MHS ledger remains separate: one corpus, eight entries, 340 original code-hook visits, zero C primitives, 12 definition redirects, eight EXIT callbacks, zero guard stops and 360 total hooks, plus four setup data relocations. The arithmetic 340+0+12+8=360 agrees. This review only reads saved JSON; it adds no execution and does not reinterpret visits as retired instructions. Unavailable historical MH202 run18/run21 intermediate drafts remain unverified.
+
+## Exact reviewed identities
+
+Paths below are relative to `work/f460-f461-comparison/2026-11-01-final/verification/`.
+
+| File | Bytes | SHA-256 |
+|---|---:|---|
+| `REPORT.md` | 3772 | `64e79871bb0f27aa9371b137247531dcceba162756c664b59128454d685c910c` |
+| `build_navigation_v1.py` | 19665 | `ade3afc1d7e3725cce99cfae43d745c5f5bd5cc73e2676a917882d6c20ef094d` |
+| `CAPTURE.json` | 324689 | `fe2b23785bc0c9c747c4fa20e506d83e182a283b487dd130a30e5f7de6f81253` |
+| `CATALOGUE.json` | 90479 | `bf95392a35a3874945418b1e8e3027c0a9d327434d2129d015d1965cb6b677dd` |
+| `INPUTS.json` | 122471 | `6b4e2345c93993a223bf3ee7d9ce4b795fb8702a02342c9557e601d4ac2a725c` |
+| `HISTORICAL_REFERENCES.json` | 56969 | `c5ae02929c35f4ae039ceda9c32dc31d37091d42bda758536eafa5c62d6ef41b` |
+| `SAVED_CHECKS.json` | 30973 | `eccb429d7e6149124d66070198aa8478a909fa8a5ac2b6f8564a75173983e36d` |
+| `VERSION_NAVIGATION.json` | 85754 | `569c0124684d4803dd274e96836f1ca60d9d67310108ddcf8402c62bc1a1c9df` |
+| `OUTPUT_MANIFEST.json` | 1146 | `0091eb7e2c1c0ecf2972f6134e6502b311ab40e5138d9e80cde790d23b4b1230` |
+| `first-candidate-v1/INDEX.json` | 1610 | `a44fdf6f41e7901212a9aa9ce20a8064af52d06f92ed1b00d0cd721f2a4fe2f4` |
+
+## Review provenance and limits
+
+An initial in-memory reviewer audit assumed every report had a first-VA locator and stopped on the legitimate null entry. The follow-up handled the documented optional locator and completed the independent checks above. No candidate file was changed, no old collector was run, and this is not represented as an author failure. The navigation --check was also run read-only during the earlier review preparation and again at final completion; these are host documentary checks, never accumulated as firmware executions.
+
+The review and its immediate exact first copy are new exclusive files. No source, author output, earlier evidence, reference page or repository file was edited. No original ImageVFS, firmware code, SQLite query, provider, vendor process, emulator, receiving/transport/authentication/session/framing body or physical operation was executed or newly investigated.

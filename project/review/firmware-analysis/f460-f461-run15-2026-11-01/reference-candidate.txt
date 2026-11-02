@@ -1,0 +1,248 @@
+# F460 2.0.12 and F461 2.0.11: deeper firmware analysis
+
+The separate [package comparison](f460-2.0.12-and-f461-2.0.11.md) and [first source-path study](f460-f461-selected-source-paths.md) establish the original builds and their initial code paths. This continuing analysis follows the actual F460 action invoker and F461 translator dispatcher. Findings remain specific to these AArch64 builds and selected paths; they are not exhaustive firmware or Device approval.
+
+[F460](../../devices/definitions/own-dev-0207-f460-myhome-server.md) provides the Home + Project/Home + Control server role, while [F461](../../devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md) serves third-party integration. Their shared platform and catalogue do not transfer functions, hardware, object layouts or public command support. The [run03 review capsule](../../project/review/firmware-analysis/f460-f461-run03-2026-11-01/README.md) retains the original hashes, virtual addresses, raw byte guards, selected disassembly, reproducible collectors and independent reviews.
+
+## F460: SLEEP request units and completion are separate contracts
+
+The original SLEEP callable manager copies its captured 32-bit field, and the actual invoker reads that field. Zero skips the selected wait request. The nonzero route constructs two 64-bit words, the zero-extended captured value followed by zero, and passes the same object as both request and remaining-duration storage to the imported `nanosleep` call. The packaged candidate C library supplies a matching exported entry and a forwarding wrapper; effective binding and successful operating-system behavior remain premises.
+
+Under the ordinary Linux LP64 `timespec` API contract, that request represents the captured value in seconds and zero nanoseconds. This conditional unit interpretation rests on original call/storage evidence and the API/ABI contract. It does not measure elapsed time or execute a timer. The pinned host headers and primary [Linux nanosleep documentation](https://kernel.googlesource.com/pub/scm/docs/man-pages/man-pages/+/refs/tags/man-pages-6.12/man/man2/nanosleep.2) provide semantic context, not original target headers or proof of an installed binding.
+
+The original retry test is numeric: a return of minus one leads to an error-number check, and only error number four retries. Under ordinary Linux/POSIX semantics that is the interrupted-call path, using the supplied remaining duration. Other error results can leave through the invoker's normal return. The complete operating-system delegate and its error production were not examined or exercised.
+
+The common action caller separately clears its completion byte. On the selected path with operational delay zero and a stored callable manager, it invokes the callable. After a normal return, a fresh test of another operational word decides whether to set completion. Consequently, the selected completion flag can follow a normally returning callback even when that callback left through a non-retry wait-error path. It does not itself certify that the requested wait elapsed. Actual scene configuration, full admission, providers, exceptions, ownership and concurrent execution remain open.
+
+## F461: registered descriptor to actual translator call
+
+The outer selected caller is in the original `coso` executable. A startup request supplies a newly allocated manager to `get_plug_m`; the packaged candidate library has a first-owner/getter contract. Composition with earlier registration remains conditional on the same initialized manager and normal descriptor/list objects being used.
+
+The matcher traverses the manager's field-descriptor and translation-descriptor lists. It compares the selected field against the message, tests the translation descriptor's two direction words, selects the corresponding criterion list, and compares a criterion with the message's numeric field. Only the selected equality path reaches the descriptor's translator callback slot.
+
+For the previously examined automation descriptor, a concrete symbolic source case selects its second criterion list and supplies translator arguments `(2,1)`. The actual call passes the same message, an output-list address and the same descriptor. These are conditional source premises, not injected test objects or naturally received traffic. A local converter also obtains the numeric criterion from a supplied parsed object's decimal string; the original parsed-object producer, full grammar and public WHO interpretation remain open.
+
+The callback's returned value controls further local iteration and cleanup. The inspected code permits further descriptor processing; it does not establish global first-match exclusivity. A zero return is not a physical delivery acknowledgment. The later output callable is an opaque boundary in this packet. A separate clock-comparison gate, active configuration, field registration, provider binding, natural message construction, object lifetime and physical output remain unresolved.
+
+## F460: catalogue opening, SQL producer and selected reader
+
+Fresh original `matrix_mx` source connects a selected reader to the literal `/home/bticino/matrix_mx/MHCatalogue.db` path, an opening request and a 15-column SQL producer. A startup template and constructor-supplied substitutions reach the same SQL member consumed by that reader. The original reader obtains columns13 and14 as text and requests decimal conversion into its own destination fields; the SQL identifies those columns as `EN_KEY_OBJECT.slots` and `AS_OBJECT_SYSTEM.id_system`.
+
+This is positive evidence that selected code consumes catalogue metadata, with its own AArch64 object and pointer dataflow. It does not execute a query, reconstruct every final substituted string or establish full Device/Firmware selection, compatibility, fallback or Prototype/RC policy. Successful filesystem, string and SQLite providers, valid rows and actual conversion outcomes remain conditional. A class/query key is not a physical Device identifier.
+
+The [catalogue source profiles](../../internals/mhcatalogue-source-profiles.md#additional-f460f461-profile-and-selected-f460-consumer) now distinguish this build-specific consumer evidence and the shared F460/F461 database profile from the earlier owner-aware MHS/Suite comparison. Identical database bytes do not transfer this F460 binary reader to F461.
+
+## F461: field registration and complete route identity
+
+Original `libplug_scs.so` conditionally registers an actual field descriptor, and the packaged candidate core inserts that same pointer into the manager's field list. This is the list used by the earlier matcher, distinct from its translation-descriptor list. The plugin receives a configuration directory through an original initializer-argument handoff; actual module/config selection and effective provider binding remain premises.
+
+The selected packaged configuration has `SCSEnable=1` and `SCSAIEnable=0`. The original fallback globals start at one for both, so the local registration result depends on whether configuration loading succeeds and which values are used. These safe whitelisted values describe packaged settings, not installed activation, absent capabilities or physical connector roles. The initializer/connect/send/receive implementations remain outside this packet.
+
+The generic local message constructor sets a 64-bit route whose low/high32 words are `(1,0)`. The command-specific wrapper writes the upper word to one, producing `(1,1)`, which matches the selected field descriptor's complete route value. A separate wrapper produces `(1,2)` for another field. Both routes have low word one, so inspecting only that word would merge distinct paths. The matcher separately uses the full route for field matching and its low word for a direction comparison.
+
+Under the earlier same-manager, valid-object/list, due/criterion and provider premises, this constructor result supplies the route and direction needed for the selected translator orientation. Natural command admission, public WHO/dialect interpretation and physical output remain open. The separate SCSAI name/settings do not establish F454-style alarm hardware.
+
+The [run04 source and review capsule](../../project/review/firmware-analysis/f460-f461-run04-2026-11-01/README.md) retains the original build hashes, mappings, code guards, selected spans, safe configuration whitelist and exact source/review/reference history for both additions.
+
+
+## F460: indirect selector and supplied parameter ownership
+
+The selected catalogue constructor is registered as a stored function pointer beside a numeric key. An original range constructor copies that entry into a global registry, preserving its callable data, manager and invoker. The higher caller looks up a supplied key on its selected new-object path and invokes the stored callback through an adapter. Following only direct calls would miss this positive constructor-selection path.
+
+For the selected key89 case, original getters read three 32-bit fields from the same supplied owner object. The adapter dereferences their argument pointers and forwards them to the constructor; the earlier constructor/substitution evidence identifies their roles as `$modobj$`, `$line_modobj$` and `$brand_modobj$`. The constructor separately supplies `$key_object$`=89. These are source-established SQL-placeholder roles, not published Device IDs or observed configuration values.
+
+The normal returned inner/control pair is then stored into an available owner-vector slot. Successful registry initialization, the selected key and cache-miss path, unmodified callables, valid containers/providers and normal returns remain premises. The owner object's semantic type, construction, key-list provenance, actual values, complete SQL selection and lifetime remain open. This closes a local parameter/call-target edge without claiming an installed device selection.
+
+## F461: one typed-object payload and output-record contract
+
+One selected automation converter branch now reaches an exact conditional ASCII normal form: `B1001208`. The derivation uses original literal strings and formatter argument order under the report's exact direction, representation, parsed-kind, scalar/string, null-field, private-selector and normal-provider premises. It is not an accepted raw OPEN command, an executed test vector, four observed bus bytes or a physical actuator interpretation.
+
+The source stores that string in a newly requested 72-byte local record. A candidate local helper assigns output metadata and copies two 16-byte source regions, a status word and the existing 64-bit ID into that record, then appends the same pointer to the caller's list. Unwritten fields are not declared initialized by this proof. The selected helper copies the ID and does not request a new one; this does not establish uniqueness, global ID origin or complete lifetime.
+
+On the selected normal callback return, temporary strings are released while the appended record is retained for the caller. Zero is the local return value, not delivery acknowledgment. Effective binding, allocation/formatting/list behavior, natural input provenance, other branches, later output handling and physical meaning remain unverified.
+
+The [run05 source and review capsule](../../project/review/firmware-analysis/f460-f461-run05-2026-11-01/README.md) preserves both original source paths, hashes, mappings, exact guards, selected spans, first copies and independent reviews. No original code, SQL, semantic model or physical command was executed.
+
+
+## F460: state-trigger construction and local admission
+
+A distinct original scheduler path connects the private raw `BNIL` trigger row to a 56-byte raw class and a 96-byte compiled inner object in a 112-byte aggregate. Its own factory and compiled initializer use separate tables. The selected initializer requests the raw virtual JSON result, reparses the same result and copies enabled/operator/status fields into the fresh compiled layout. Full serializer/value coherence and ordinary JSON/string/provider outcomes remain conditional.
+
+The compiled local handler requires enabled state and recognizes exact `on`, `off` and `noStatus` strings as local integers. Two selected operator words request equality or inequality against the configured status; other numeric operator words can reach the callback path after a recognized state. This is bounded control flow, not a valid external operator list or a physical on/off mapping.
+
+An actual local caller supplies the string under ID and method-identity conditions. Its range/record origin, cast-result validity, pointer lifetime and outer admission remain premises; a cast request is not itself a proven nonnull guard. The callback captures the supplied initializer receiver as a raw pointer and reaches a local handoff whose body was outside the initial trigger packet; the later section below follows that boundary. It does not establish ownership, natural event subscription, a configured scene or successful scene/action execution.
+
+## F461: address shape and selected prefix normalization
+
+The original plugin requests a helper exported by the packaged `libautomation.so.1` candidate, resolved through image-link metadata to its actual regular file. No host symlink is materialized. The helper's selected path excludes several exact strings and a prefix, then uses UTF-8 character count; remaining lengths two or four select a local numeric class. That class is separate from plugin-private selectors, message representations and public protocol values.
+
+An actual caller passes the same supplied parsed-object field to this helper, checks its result, starts a local `D1` string and repeats the character-length check. On the selected length-two path it reads bytes zero and one, delegates their digit conversions and appends the two returned integers in order. The later suffix/context is unexamined, so this establishes prefix normalization only.
+
+UTF-8 character count, byte offsets and ASCII digit validity are different properties. This source path is not a proven complete numeric-address validator, accepted public grammar or physical topology. Valid objects/strings, ordinary providers, actual reaching callers, effective binding and later validation remain scoped premises or gaps; no invalid-input behavior or vulnerability is claimed.
+
+The [run06 source and review capsule](../../project/review/firmware-analysis/f460-f461-run06-2026-11-01/README.md) retains the original identities, mappings, selected instructions, tables, metadata-only alias, first copies and independent source reviews. These additions execute no original code, semantic model, input fixture or device operation.
+
+
+## F460: captured receiver to conditional condition-worker request
+
+The captured receiver now has one positive construction context. Original source requests a 272-byte aggregate whose control-block RTTI names an in-place `SceneRunner`, advances to the inner storage at base+16 and passes that same destination through its constructor to the trigger initializer. The control block's table is not presented as the inner object's primary vtable. This identifies a source construction path; it does not prove every callback receiver came from it or remains alive.
+
+The previously unexamined local handoff tests receiver byte113 and acquire-loads byte249. On the selected nonzero/zero route it changes flags, creates a thread state containing the same raw receiver and requests thread start followed by detach on the normal continuation. The numeric flag labels are retained without assigning public enabled/active/stop meanings. Source writes and API requests do not establish successful thread creation, exclusion, detached completion or owning lifetime.
+
+The installed thread-state table identifies its method, which loads that same receiver and its condition-pointer range. These entries are eight-byte pointers, separate from the trigger's sixteen-byte inner/control pairs. For the selected one-remaining-condition tail, it requests the actual predicate slot and tests the low eight bits of its result. A true result plus normal intermediate returns reaches another local method boundary. The concrete condition, range producer, later method body, complete condition policy, actions, exceptions and lifecycle remain unproved.
+
+## F461: bounded HAL identity getter declarations
+
+Two original HAL getters have conditional compile-time outputs. If the opaque `hal_board` provider returns22, one path requests duplication of the literal `F461` and stores the returned pointer through its supplied output argument. A separate getter, under the same selector premise, requests and stores `134`. These are distinct getter-output contracts; selector22, code134, package object-model/version numbers and public protocol identities are not merged.
+
+The selected process declares imports and a dependency on the packaged HAL candidate, but no permitted diagnostic consumer was established in this packet. An uncertain caller fragment was stopped and excluded before generation; it was not used as a proxy for a closed route. The HAL provider result, effective binding, valid writable output slots, allocation and normal returns remain premises. No diagnostic response, installed board, hardware capability, serial/MAC identity or provisioning value was observed or exported.
+
+The [run07 source and review capsule](../../project/review/firmware-analysis/f460-f461-run07-2026-11-01/README.md) retains original hashes, mappings, selected code/tables/imports, exact first copies and the explicit caller boundary. Both additions are static source reasoning, with no original execution, thread, device query or physical operation.
+
+
+## F460: update-manifest selection into separate staging records
+
+The original updater is byte-identical in the checked normal and recovery images. That identity concerns this file; it does not establish the active boot mode or whole-image behavior. One local parser requests the literal `/tmp/fwz.xml`, conditionally requests an opaque helper when the file test fails, and then requests XML parsing. The helper's return is tested as an X0 value; its type and extraction behavior remain unproved.
+
+Under valid context/node and ordinary libxml returns, the parser follows `actions` → `action` → property `type`. Exact `firmware` and `recovery_firmware` values select different context pointers at +48 and +56. A zero record word permits local initialization to1 or2. Selected `attr` content is passed to string creation and appended into the same chosen record's list at +8. The packaged manifest independently contains corresponding declarations; it is not an observed runtime `/tmp` file. These are staging and filename-list requests, not proof of signature verification, compatibility, installation, partition writes or reboot.
+
+## F461: configuration and status select log-persistence requests
+
+The original daemon is also byte-identical across the two checked images. Its own configuration paths write a receiver byte at +360: the local default clears it; XML `logrotation` text and an alternative key-file integer path can set it. The packaged normal/recovery full and reduced XML files each declare `<logrotation>1</logrotation>`. Only that safe line is retained; source precedence, actual file selection and the current receiver remain premises.
+
+A real local caller passes its same receiver into the selected helper. The helper requests an extras-status string, converts it with decimal `strtol`, and requires the low32 result to equal1 before checking byte+360. A nonzero byte then requests `stat` on `extra/70`. A zero result selects stop-SysLog → load-old-logs → restart requests; any nonzero result selects `mkdir` → restart. It does not test the directory-creation result or establish service readiness. The status producer, logger/HAL/file providers, installed directory and full boot/control flow remain open. The directory number70 is a pathname component, not an inferred asset or public device identifier.
+
+The [run08 source and review capsule](../../project/review/firmware-analysis/f460-f461-run08-2026-11-01/README.md) preserves the selected original source identities, nonsecret configuration lines, independent reviews and exact failed/versioned tooling history. Both additions are static reasoning; no updater, daemon, parser, file/service operation or firmware instruction was executed.
+
+
+## F460: one concrete condition pointer and its complete predicate
+
+Fresh F460 source connects local condition row18, `BNCUSCENE`, to its own raw parser and compiled condition. The selected initializer requests256 bytes and passes the returned base directly to the compiled constructor. It publishes that same pointer into the receiver's condition vector on the available-capacity path, advances the end by eight bytes and clears the source pointer cell. This allocation and pointer representation are separate from the trigger's control/inner pair.
+
+The raw common parser requests `asBool` for `enabled` and stores its returned byte at raw+40. The compiled constructor copies it to its own byte+176. Its installed primary predicate is an entire sixteen-byte body, including BTI: byte load, XOR with1 and return. Under ordinary Boolean construction, successful copy and no mutation, the result is the inverse of that enabled byte. The body performs no target-scene lookup. This statement concerns that complete local predicate; other methods, configuration, class intent and system capabilities remain open.
+
+The previously reviewed worker calls the predicate slot through the same receiver's condition-pointer range. Composition requires successful publication, the same valid class/object state and worker lifetime. It does not establish actual inclusion of this condition, a configured scene's outcome, complete ownership or an unsupported function. The original raw serializer is identified but its value coherence remains unclosed; no MyHOMEServer1 layout or row number is substituted.
+
+## F461: platform-file requests to a cached HAL selector
+
+The actual HAL provider gives the earlier conditional getter selector a local source. Its four-byte cache starts with file-backed bits `ffffffff`; a different cached word takes the direct return path. The uncached path requests CPU-information text and selects a line through a case-insensitive `Hardware` substring check. A separate fallback requests the device-tree model file; a nonnull line from that route reaches the classifier without the earlier marker test.
+
+On one selected classifier path, with preceding comparisons returning no match, a case-insensitive `BEAR` substring match selects22 and writes the same cache word. An original pure-getter call names this same exported `hal_board` definition through its own relocation. Under ordinary providers and effective self-binding, this composes with the previously reviewed selector22 getter branch. It does not establish actual file contents, installed board identity, the selected packaged DTB, auxiliary-core readiness, refresh policy or concurrent cache behavior.
+
+The original HAL bytes match across the two checked images; that is a file-level identity. A later command-based fallback and its literal were excluded. The uncertain process identity consumer remains closed. No host platform file, target service or hardware was queried.
+
+The [run09 source and review capsule](../../project/review/firmware-analysis/f460-f461-run09-2026-11-01/README.md) retains original source mappings, guards, class/cache identities, reproducible collectors and exact first candidates. Both additions are static reasoning; no firmware, file/provider operation or model was executed.
+
+## F460: action dispatch, marker polling and scene-byte cleanup
+
+The selected compiled action pointer has a new connection to the scene's action range. Under normal helper/preservation premises, the initializer appends its pointer/control-word pair to receiver+216 using sixteen-byte entries. This is distinct from the eight-byte condition pointers at +192. The executor reloads that same action range, requests primary slot0 through an entry's first pointer, then checks a separate scene byte at +248 before continuing dispatch. It can leave this loop before requesting every entry.
+
+On the selected one-entry polling path, the actual helper reads action byte+8. A nonzero marker can reach cleanup. A zero marker instead reaches a wait/recheck path, where a nonzero scene byte+248 can also lead to cleanup without a fresh successful-marker test. Cleanup entry therefore does not certify that every action marker became nonzero. Under normal intervening returns, the later stores clear scene bytes+249 and +248. These are numeric state and ordering facts; their public meanings, full policy and concurrency contract remain unproved.
+
+The earlier wait study already separates an action marker from successful elapsed waiting. The new dispatch/poll connection strengthens neither that marker nor scene cleanup into action success, physical effects, complete ownership or a lifetime guarantee. Action bodies, helper internals, vector growth and wider stop/restart policy remain open.
+
+## F461: typed context to an exact address suffix and local formatter
+
+A fresh supplied-object path selects a string field equal to `4` and a private word different from4. Another supplied string is passed to signed decimal conversion; the low32 bits of its result feed an uppercase hexadecimal formatting request. This conversion-derived context and an explicitly zero local flag reach the suffix block through the selected address-prefix continuation. These premises are separate from the earlier case with a NULL field.
+
+The original conditional-compare instruction supplies NZCV=4, including Z=1, when its first comparison is unequal. Its alternative character `3` requires both a context comparison equal to `F` and a nonzero local flag. On this selected zero-flag path the character is therefore `4`. The same address GString receives the requested suffix format `%s1%s`, using context text, literal1 and that character. This is source and instruction-flag reasoning; no string fixture was generated and no address domain or physical meaning is inferred.
+
+The same GString's data pointer later supplies one argument of a four-string formatter. Its returned pointer is stored through a local output-record pointer. The following `prepare_extscs_frames` import is an opaque call boundary; its body and downstream framing/output behavior remain excluded. Full predecessors, provider binding, conversions, allocation/ownership, remaining components and accepted public grammar stay open.
+
+The [run10 source and review capsule](../../project/review/firmware-analysis/f460-f461-run10-2026-11-01/README.md) retains the original guards, pointer/state and instruction-flag evidence, exact failed/versioned history and independent reviews. Both additions are static source reasoning; no firmware, wait, string fixture, frame preparation or physical operation was executed.
+
+## F460: a local control writer with an unresolved caller
+
+Another original local method release-stores1 to its supplied receiver's byte+248. It then traverses that same receiver's +216/+224 range in sixteen-byte entries and requests primary slot+8 through each entry's first pointer. The store precedes these requests on the selected normal path; the virtual bodies and their effects remain opaque.
+
+These offsets match fields consumed by the earlier scene executor, but an incoming caller and receiver-class connection were not qualified. Only if the supplied receiver is that same valid scene object does this writer provide a nonzero value for the earlier scene checks. The source therefore supplies a concrete local writer and subsequent method requests, while the end-to-end scene-control connection remains open. A bounded set of static locator forms found no caller; that is not evidence of global absence, unreachable code or lack of natural callers.
+
+No public cancellation meaning, completed stop, universal restart policy, ownership or concurrency guarantee follows from this candidate connection. The selected action's slot+8 target is identified conditionally and left uninspected.
+
+## F461: main selects configuration pointers before module-registration requests
+
+Original main registers three option destinations for the library directory, configuration filename and plugin-configuration directory, then requests parsing. On the selected continuing path, a null configuration filename receives the relative default `cfg/coso_cfg`; a supplied nonnull pointer bypasses that assignment. The selected successful key-file-load branch requests each directory key only while its corresponding option slot is null. A nonnull option-produced pointer therefore takes local precedence over that file-key request; usable or active settings are not established.
+
+If the plugin-configuration slot remains null, main requests the parent directory of the selected configuration filename. It then passes the two selected directory pointers to the same manager's initializer and requests monitoring and plugin registration. The initializer creates a separate holder and copies the directories into distinct fields: manager+16 holds the pointer, while the copied plugin directory is at the allocated holder+16. The previously reviewed registration source supplies the later conditional directory-argument edge.
+
+Only three safe packaged configuration lines are retained: the group name and its `LibDir` and `PlugCfgDir` declarations. Command-line values, current working directory, runtime file contents, parsing/loading, binding, allocations and normal returns remain premises. This closes a concrete selection/argument/copy connection, not actual module loading, startup readiness or product capabilities.
+
+The [run11 source and review capsule](../../project/review/firmware-analysis/f460-f461-run11-2026-11-01/README.md) retains exact source, locator boundaries, option/configuration guards, first candidates and independent reviews. These additions remain static reasoning; no control method, configuration loader, module or physical operation was executed.
+
+## F460: a selected consumer of the staged filename list
+
+An actual updater wrapper passes its incoming pointer and literal selector3 to a later local consumer. The consumer follows the outer pointer to a context, then record+56 and that record's list at +8. Under valid-node and ordinary GLib returns, it obtains a node's GString text, tests for a dot substring and, on the selected masked-selector path, requests a new GString from that same text.
+
+The earlier XML producer appends strings through that context/record/list shape. Composition still requires the same valid context and stable list; a common constructor/caller and natural parser-to-consumer order have not been established. The producer's record kind2, this wrapper's selector3 and package status4 remain separate namespaces. The substring branch is not a full extension, accepted-path or security policy.
+
+The new trace stops at the local string-construction request, before subsequent command, extraction or update operations. It proves neither the consumer's full output contract nor compatibility, authenticity or installation.
+
+## F461: deferred records to a timer request and same-owner re-entry
+
+The selected not-due path compares record+32 with a clock return plus10 using unsigned64 arithmetic and tracks a local minimum candidate. A nonzero candidate later leads to a fresh clock request, a signed interpretation of the subtraction result, the original division-by1000 instruction sequence and a timeout-source request using the low32 interval bits. The earlier comparison does not establish a positive or nonoverflowing delta across the fresh clock sample.
+
+The packaged clock candidate computes two `gettimeofday` result words as `word0 * 1,000,000 + word1`; microseconds follow only under the ordinary successful AArch64 timeval ABI. The timeout candidate stores the unsigned interval and requests a monotonic clock. One conditional helper branch forms a ready-time request using that clock plus1000 times the stored interval. These are distinct clock/provider contracts, not measured elapsed time or guaranteed dispatch.
+
+The executable registers its actual callback with the same supplied owner pointer, requests source attachment and unreferences its local source. The complete local callback forms the list address at owner+136 and tail-requests the dispatcher again with that owner. Actual activation, binding, source/list lifetime and callback behavior remain premises. The producer of nonzero record+32 is still open; it is distinct from the constructor timestamp at +24. No runtime clock, record or timer was supplied or executed.
+
+The [run12 source and review capsule](../../project/review/firmware-analysis/f460-f461-run12-2026-11-01/README.md) preserves original code/provider hashes, guards, callback relocation, exact first copies and independent reviews. Both additions are static reasoning; no updater, clock, timer, list fixture or physical operation was executed.
+
+## F460: a file/profile result forwarded to a separate state machine
+
+An actual caller constructs a Platform object and requests its working-mode method through the same object pointer. One selected constructor continuation installs a compiled file path into member+48. The platform-selector delegate, that constructor continuation, valid path objects, binding and normal provider returns remain premises.
+
+The complete getter requests file status and contents. A negative status result, failed contents request or null buffer selects0. Otherwise a substring request for compiled marker `MYRECOVERY=y` selects2 for a nonnull match and1 for no match. This is a substring gate, not exact environment-assignment parsing or an observed boot setting. No environment-file content or full boot environment was read by the analysis.
+
+The caller preserves that numeric result and passes it to a separate StatusMachine object's `next_step` request. Its body and later policy remain opaque. Platform fields, state-machine inputs, mode0/1/2, package status4 and staged-record kind2 are separate domains. The trace supplies a profile-result handoff, not active-mode, compatibility, trust or installation evidence.
+
+## F461: deadline provenance remains open after object-role checks
+
+The bounded search did not establish a nonzero message-deadline writer. It did identify why two apparent +32 candidates cannot supply that proof. A registered initializer allocates a plugin-private object through descriptor+88; a selected store writes a returned GList head to that private object's +32. A separate callback first loads a parsed object through its supplied record pointer, then reads the parsed object's +32 as a string. Neither observation establishes a write to the message record's numeric deadline.
+
+The finite query covers direct offset-store forms in two named application-function extents. Its lack of matches is not alias analysis or a claim about bulk stores, callees, other methods, all plugins or whole-image writers. The message deadline producer therefore remains open. No object was forced into a deadline layout, and no timing or capability conclusion follows from these exclusions.
+
+The [run13 source and review capsule](../../project/review/firmware-analysis/f460-f461-run13-2026-11-01/README.md) retains original object/caller/provider evidence, exact bounded-query scope, preserved report refinement and independent reviews. These are static source findings and exclusions; no environment file, profile method, application record or physical operation was executed.
+
+## F460: a concrete numeric condition and its operand order
+
+Fresh F460 source connects its own BNLD condition row2 and raw factory to the final raw class, a same-result JSON reparse request and a200-byte compiled allocation. The constructor uses the allocation base directly. Its own copied fields place enabled at176, operator at184, status-selector at188 and threshold at192. These identities and offsets come from this build, not another firmware's similarly named class.
+
+The selected numeric predicate requires enabled, a suitable nonnull record from an opaque query, the local record string exactly `on` and configured status-selector−1. It then compares the configured threshold with the returned record's word+48. Local numeric codes0/1 perform signed configured-less-than-observed/configured-greater-than-observed comparisons;2/3 perform equality/inequality. Operator names, public grammar, physical meaning, units and actual configured values remain unproved.
+
+The installed predicate slot connects to the previously reviewed condition-pointer consumer under the same valid-object/range/lifetime premises. Query type/readiness/freshness and normal cleanup remain assumptions; raw serializer value coherence is also open. No condition input, query record or numeric fixture was supplied or executed.
+
+## F461: module admission and handle recording before initialization
+
+The selected module-loader path uses the library directory from the same supplied manager holder. After its support and directory gates, it requests names with prefix `lib` and suffix `.so`, constructs a path and requests a module handle. That handle must pass both `init_plugin` and `stop_plugin` symbol-result checks. A failed symbol check requests module closure and continues under normal provider returns; the stop function itself is not invoked here.
+
+For the selected successful lookup path, a new sixteen-byte path/handle pair is appended to the holder's list before requesting the initializer with the separate configuration directory. The bounded continuation does not explicitly test the initializer's returned machine value before another helper and enumeration. This does not establish its full return ABI or a global absence of validation.
+
+Normal traversal can return local0 after skipping names or encountering per-entry failures, so that number is not evidence any module initialized. Other return paths depend on provider and diagnostic behavior. This adds admission, retention-order and local-return evidence beyond the earlier directory-argument trace; actual activation, module ABI, readiness, ownership and boot/DTB/auxiliary-core selection remain open. GModule-provider and plugin-initializer bodies remain opaque; the local loader source was inspected statically.
+
+The [run14 source and review capsule](../../project/review/firmware-analysis/f460-f461-run14-2026-11-01/README.md) retains independent factory/class/predicate and module-admission evidence, exact first candidates and staged-draft history. These are static source results; no numeric condition, query, loader, plugin or physical operation was executed.
+
+## F460: selected numeric serializer and operator spellings
+
+The actual BNLD raw serializer uses its own hidden-result ABI and calls the common condition serializer on the same result. For selected operator words0 through3, the common serializer emits `higher`, `lower`, `equal` and `different`; the original parser independently decodes those spellings back to the same words. Sentinel−1 skips operator emission. These are local condition spellings, not a public protocol or physical-unit mapping.
+
+On the selected raw status−1 branch, the serializer passes raw level+56 to the signed-int JSON constructor and assigns `level` in the same result. That branch has no direct zero or level-sentinel omission test and requests no status assignment. The common result construction supplies its own other fields.
+
+Under ordinary fresh JSON, member/string/move/int/asInt behavior, no extra status member or mutation and normal returns, the inherited reparse carries this selected level to the compiled numeric threshold while preserving status−1 and the chosen operator. This narrows the earlier value-coherence premise; complete JSON/runtime behavior, actual configuration, query-record suitability and physical outcomes remain open.
+
+## F461: monitor registration to a retained module-entry consumer
+
+The main routine requests a directory monitor through the same manager and library-directory holder. On the selected nonnull monitor/cast path, the registration supplies the actual `changed` callback and that same manager as userdata. Valid provider objects, the signal ABI and eventual delivery remain premises.
+
+The selected callback path obtains the holder's entry list, requests a path from the supplied file and checks whether it has the stored entry path as a suffix. A nonzero result and numeric event0 select the retained path/handle entry. This is a delegated suffix relation, not proof of canonical file identity or a complete event policy.
+
+If the stop-symbol lookup succeeds, the callback requests that callable; its body, argument ABI and result remain opaque. Under normal returns the callback then requests list removal, writes the returned head, requests stored-path free, module close and entry free. The stop lookup may also fail and skip the callable before bookkeeping. This is local request ordering, not successful stopping, code unloading, complete ownership, concurrency safety or physical shutdown.
+
+The [final source-batch capsule](../../project/review/firmware-analysis/f460-f461-run15-2026-11-01/README.md) retains original serializer/operator and callback/entry-consumer evidence, exact version histories and independent reviews. These are static source contracts; no JSON fixture, timer/file event, plugin stop, module close or physical operation was executed.
+
+## Evidence status and next questions
+
+The positive additions include F460's wait/completion, catalogue/selector, state-trigger and conditional SceneRunner worker, concrete scalar and numeric condition-predicate/selected serializer, action dispatch/poll and update-manifest staging, selected list-consumer and profile-result paths, plus F461's matcher/field/route, selected output/address-prefix/suffix and bounded HAL getter, platform-selector, main configuration-selection, module-admission/removal, deferred-record and log-persistence selection contracts. A separate local control writer is recorded with its receiver/caller join unresolved. Two plugin-object roles are distinguished without closing F461 deadline provenance. Their numeric fields and offsets belong to different objects and namespaces. Earlier MyHOMEServer1 layouts and physical meanings are not substituted.
+
+The remaining investigations require qualified natural callers, configured records and effective providers rather than further variants of the completed scalar cases. Actual boot/DTB/auxiliary-core selection, the nonzero deadline producer, updater common contexts/order and the local control writer caller/class remain open. Installed configuration/modules, full JSON/XML/SQL behavior, ownership/lifetime/unwind/concurrency and physical observations need separate evidence. Source investigation is now stopped for consolidation and review. Closed receiving, output, transport, authentication, session, framing and equivalent bodies remain closed; excluded process and command-fallback routes are not reopened.
+
+All work here is static host analysis. No new original helper, vendor process, emulator, model, semantic fixture, target OS/service, network/bus or physical execution occurred. Prior MHS/F454/MH202 execution ledgers and historical corrections remain unchanged. Independent source/documentary and repository checks are bounded verification; broader Device/source gates remain pending. Changes remain local and unstaged on `docs/static-firmware-analysis-findings`.

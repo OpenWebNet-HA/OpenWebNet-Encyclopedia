@@ -1,0 +1,25 @@
+# F455 night07: retained provenance admission gap
+
+This packet is an explicit gap/consolidation checkpoint. It adds no new firmware function, byte-format interpretation, original execution or database coverage. The selected retained F455 package/manifest/context does not admit a CPU, ISA, endian mode, ABI, address map or executable entry assignment. No forced disassembly or invented activity substitutes for the missing provenance.
+
+## Exactly selected evidence
+
+The original F455_1_1_2.fwz archive is180196bytes/SHA256 cd99299fc729679b4eade46acda7bd4f5e619a0a9eac34a1f6a3b73b625a18f9. It retains exactly the two previously reviewed encrypted central-directory entries F455_1_1_2.bin and fwz.xml. The legitimately retained payload is301016bytes/SHA256 6d61c308888ccd78f6fb289cf23e672203921a50931b838533a7a315c5d49ccc; original manifest is453bytes/SHA256 5b93f792b5d9ece0a7d26b75847d91df5ebe9b3c0bfbeea29c617e1557d852ad. These identities/entries are inherited package evidence revalidated for this admission checkpoint, not a new extraction, decryption or source discovery.
+
+FIELD_PATHS.json records exactly thirteen original manifest element paths and their attribute names, without exporting a full configuration. This finite schema contains product/release, device/object-model, file-reference and update-mode declarations. Its known Basic Gateway/version1.1.2/model5.0.8/bootloader labels remain packaging facts. They do not identify a processor part, actual hardware revision, target ISA/ABI, load map, a loader algorithm or accepted update. The observation is limited to this exact selected metadata, not all product documentation, companion tools, hardware or all possible payload encodings.
+
+## Inherited candidate and context stay separate
+
+Night02's exact wrapper/XML/CRC evidence, finite96-word candidate arithmetic and generic Arm document comparison stay inherited. This collector does not rerun the earlier collector, repeat its prefix/target bytes or MMIO-shaped counts, decode code, extend the hypothesized vector table or promote its chosen arithmetic base into a loader map. Generic Arm documentation provides comparative semantics; it is not F455-specific manufacturer CPU provenance. A product name/model/update label or a disassembler accepting a chosen architecture supplies no missing target authority.
+
+The read-only curated Device page explicitly retains no installed hardware revision or microcontroller fingerprint for this cluster. It is contextual documentation, not a new binary source or complete hardware search. This packet does not import its feature/protocol/authentication descriptions or infer CPU identity from commercial role. No other product's ELF/layout or closed implementation is used as a substitute.
+
+## Precise next evidence requirement
+
+Admitting an executable interpretation needs a product/image-specific authoritative CPU/core/ISA/endian source, or a genuine original linker/map/debug/loader record tied to these exact bytes/hardware revision, including placement/entry semantics. If such evidence later appears, it can be reviewed before assigning addresses or following code. None was acquired/admitted in this bounded checkpoint. This is a finite documented limit, not a global claim that such a record never existed or cannot be recovered.
+
+F450's denied helper0x2eec4 and equivalent/alternate/proxy routes were not accessed or expanded. No new F450 resource-pointer/alias/argv/producer matrix, key/password guess, original/vendor/helper/native/emulator/model/SQL/targetOS/device/service/network/bus/mount/physical execution, external fetch or remote write occurred. No actual database was recovered/generated/uploaded; cumulative archive remains inherited one encrypted F450 support container and zero plaintext databases. Parent owns public edits/archive changes. Original/synced/completed artifacts, source manifest, prior capsules, older ledgers and Git staging/commits/push remain unchanged.
+
+## Reproduction and preservation
+
+python3 -B collect_admission_v1.py --check revalidates exact source hashes, original ZIP central metadata and XML field-path topology using host readers only. There is no selected code VA/ISA/body to reproduce; those remain unassigned. Initial canonical generation and read-only reproduction passed. The collector and five generated outputs are created exclusively and immediately retained in six exact first copies; index bytes are computed before opening itself. No failed canonical attempt, correction or overwritten output is claimed.

@@ -1,0 +1,58 @@
+{
+  "callee_storage": "C7f0 entryR0 saved atFP-2120",
+  "caller_test": "Selected caller compares importedcall machine result with\u22121; source-only, no error-policy/defect conclusion",
+  "candidate_provider": "Under binding to packaged libutils.so call0x3488, originalR0 is forwarded unmodified to opaque call_nowait@0x349c",
+  "decryption_trials": 0,
+  "direct_caller": "0xf96c savesENTRYR0 C atFP-16; fork numeric0 leg forwardsC at0xf9e8\u21920xc7f0",
+  "execution": {
+    "OS_target_network_bus": 0,
+    "SQL": 0,
+    "models_fixtures": 0,
+    "original_native_vendor_provider": 0
+  },
+  "extra50_association": "OPEN; no mapping fromXMLcheck50 or this providedC+76 to PROD50.xtz is proved",
+  "normal_return": "waitpid is requested with returnedR0, scratch-word address inR1 and0inR2; LDRB[SP+5]returns byte0..255 on normal return, not proved exit/success meaning",
+  "recovered_database": false,
+  "request": "0xdbc4\u2192call@PLT0xa1f4(address0x23e8c)",
+  "selected_gate": "Earlier admission OPEN; providedC+80 is compared with0 and zero skips selected table via0xdc10",
+  "separate_XML_declaration": {
+    "join_to_C_fields": "NOT ESTABLISHED",
+    "path": "work/f450-firmware/2.0.10/analysis/rootfs/home/bticino/cfg/stack_open.xml",
+    "safe_extra_fields": {
+      "check": "50",
+      "enable": "0",
+      "nocheck": null
+    },
+    "selected_lines": [
+      {
+        "line": 51,
+        "text": "<extra>"
+      },
+      {
+        "line": 52,
+        "text": "<enable>0</enable>"
+      },
+      {
+        "line": 53,
+        "text": "<check>50</check>"
+      },
+      {
+        "line": 54,
+        "text": "<nocheck></nocheck>"
+      },
+      {
+        "line": 55,
+        "text": "</extra>"
+      }
+    ],
+    "sha256": "17a56dbaba4a039d41b52c732042bcf301f5df0bb41fbca96529336070f3ade9"
+  },
+  "table_words": [
+    "literal unzip",
+    "literal -d",
+    "literal /var/tmp",
+    "literal -o",
+    "provided word[C+76]",
+    "0"
+  ]
+}

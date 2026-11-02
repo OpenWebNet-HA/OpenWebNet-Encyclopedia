@@ -1,0 +1,80 @@
+# MyHOMEServer1 3.87.13: first static boot and process-configuration ownership
+
+This firmware retains a SysVinit→vendor daemon startup pattern, but its selected configuration declares a substantially newer application set: matrix_mx, smart-home, scheduling, alarm, energy, player, backup and gateway managers alongside the older named OPEN/SCS processes. D-Bus and Redis have actual runlevel startup requests. These are packaged configuration/code relationships, not observed running services or proof that a named manager implements the earlier F454/MH202 behavior.
+
+Original firmware/vendor ARM, scripts, JavaScript, services, target syscalls, network/bus/gateway/flash operations executed **0**. Host analysis only reads verified original-image regular files and symlink metadata, parses XML/JSON/DTB/ELF and runs binutils. No filesystem was mounted and no certificate, CSR, private-key or credential contents were examined/exported. Closed connection/authentication/session/framing delegates remain opaque. This is a bounded first pass; it does not repeat the full file inventory or establish complete boot/update/runtime behavior.
+
+## Inputs and source identities
+
+The parent extraction checkpoint identifies the original183381241-byte `SMARTGW_038713.fwz` as SHA256 `4ca1bcc70c1616270cb4c1f4b3ceb3c01c941797e437c3544d7d3d11b159c603`. Normal/recovery regular-file trees contain5924/5384 files, with symlinks represented only as image metadata. This collector uses the new read-only image VFS and independently checks every selected file's recorded size/SHA. Parent provenance/manifest summaries and existing documentary comparisons were frozen before first generation; later repository edits do not mutate these references.
+
+Principal selected original identities:
+
+| Image path | SHA256 |
+| --- | --- |
+| `/home/bticino/bin/bt_daemon` normal and recovery | `b30f4b7789faaed475f8f6022e2ddb29df1da9c73d48b525fdbfee264fe89d1e` |
+| `/home/bticino/cfg/stack_open.xml` normal and recovery | `2c30a6291f05471133dec393692f66242b31ac74f403501e0511d4d031ad747a` |
+| normal `/etc/init.d/bt_daemon-apps.sh` | `721554b0e6369696023cd1fe403e86d96f6fe7149c53a1ad8017225fd85340d3` |
+| recovery `/etc/init.d/bt_daemon-apps.sh` | `1d31583e6c38c733c75d749f38795de044dc2fb56feb34db06c92041853910fd` |
+
+The recovery script is byte-identical to normal `/etc/init.d/bt_daemon-apps_rec.sh`. This equality is about these selected files, not all normal/recovery behavior. Exact additional selected identities, original paths, XML locators/line ranges, instruction bytes/VA spans and public literal relationships are saved alongside this report.
+
+Canonical OWN-DEV-0199 associates catalogue item2198 with MyHOMEServer1's SCS commissioning and app/project workflows. The manufacturer package identifies firmware3.87.13, XML format3.1 and Object model5.0.67. These are distinct from catalogue firmware IDs and earlier device products. Product identity does not supply F454's dedicated alarm connector topology or MH202's scenario-language implementation.
+
+## Kernel/platform metadata
+
+The original nested uImage SHA is `01f68cf9c301cc72d05c9a0c27fd92237285a86daab5d0d491871bb91b779f1d`; header and payload CRCs are rechecked. Its name is `Linux-5.10.35+gd50c7a7404d5+p0`, ARM image type2, compression field0, load/entry `0x10008000`. Header timestamps and filename dates are retained as metadata, not promoted to an installed/build chronology. This pass does not recover or interpret a full kernel configuration.
+
+The selected normal DTB (`linda.dtb`, SHA `90a86e49465c4098a3045b14dc1b2228c66597b27a2269ba4f65aa2fbf23ec7d`) declares model `BTicino LInDa board`, compatible `bt,linda`/`fsl,imx6dl`, and Cortex-A9-related metadata. A distinct `linda_mfg.dtb` SHA `f71c4a28c157b83f37dfe73b38dd0bc0911c2954de08c72888b0527a82ba2829` is also packaged. DTB/header structure and whitelisted target/serial-alias properties are parsed as data. Actual boot DTB choice, board revision and electrical signals are not observed.
+
+`/etc/issue:10–11` identifies the Linda distribution and Poky4.0.23; `/etc/version` contains text20260309120312. These are packaged labels. The selected daemon is ARM32 EABI5 hard-float PIE with a Thumb entry point, unlike the previously inspected F454 ARMv5/DM365 build. No prior addresses, record layouts, native fixtures or provider results are transferred.
+
+## init→volatile configuration→vendor daemon
+
+Image symlink `/sbin/init` resolves to `/sbin/init.sysvinit`. Original `/etc/inittab:5,9,27` declares default runlevel5, `/etc/init.d/rcS` and `/etc/init.d/rc 5`; rcS:32 delegates to rc S. The rc source enumerates runlevel scripts and requests their start action. These are shell/inittab declarations, not an executed boot.
+
+The rcS link set includes S03populate-volatile.sh and S95-dedrifu_env.sh. `/etc/default/volatiles/00_core:71` declares `/var/tmp/stack_open.xml→/home/bticino/cfg/stack_open.xml`; populate-volatile has an actual link_file request mechanism. This closes the packaged default alias-declaration chain, not proof that a live link exists or its target was parsed successfully. dedrifu_env.sh requests copying `/proc/cmdline` to `/var/tmp/dedrifu_env.txt`; no live command line was read here.
+
+The normal rc5 metadata includes S02dbus-1, S87redis-server, S97-bt-avahi-setup.sh and S98-bt_daemon-apps.sh. D-Bus's script names `/usr/bin/dbus-daemon` and requests `--system`; Redis's script requests `/usr/bin/redis-server`. Their configurations/listener policy and successful service readiness are not examined. No claim is made that every packaged init script runs by default.
+
+Normal bt_daemon-apps.sh:107–114 exports library search order beginning with `/home/bticino/cfg/extra/usbkey_dir/lib`, then `/usr/lib`, vendor lib/libcoso and bt_netatmo/lib; changes directory to `/home/bticino`; and requests `bin/bt_daemon &` **without explicit arguments**. Its start case calls wait_extra, ABI/version/license-media checks, check_native and conditional reboot logic before backgrounding start. `/etc/fstab:3,8` declares read-only root and an ext4 extra path on `/dev/mmcblk1p7` with noauto; wait_extra has a bounded shell-time wait and later filesystem-check/mount/reboot requests. None was executed, and shell errexit/`|| true` details prevent turning the command sequence into guaranteed recovery.
+
+setup_usbkey:55–84 conditionally mounts a license-media file; if its library directory is nonempty it requests replacing the volatile stack alias with stack_open_reduced.xml. This is a concrete source condition for choosing an alternative profile, not evidence the condition is true. The normal start path removes the netcom_native marker under extra95/persistent/features; the recovery counterpart requests converter_0_1, creates that marker, then invokes the same daemon with a different inherited library path. The conversion/migration, storage operations and real startup state remain delegates.
+
+## Fresh original daemon configuration requests
+
+The PIE entry sequence at0x5544..0x556c loads main through GOT slot0x29fa4; the stored Thumb pointer0x3c59 identifies code0x3c58. Fresh main0x3cee..0x3d08 allocates a312-byte record and calls local0xdd8c. Its selected defaults request dereferences the public default-path global to `/var/tmp/stack_open.xml` and calls local0x13e88; that helper requests open and installs GLib markup callbacks before `run_parse_xml` at0x13f30. The text callback is the Thumb pointer0x1216d. File/XML/allocator/import completion is unexecuted and remains conditional.
+
+The same defaults helper tail requests local0x141c0 with `/home/bticino/cfg/bt_daemon`. A separate conditional main path requests parsing `/var/tmp/conf.xml` through local0x13fa0 at0x4152. These files/configuration layers are distinct; the actual persistent producer and all error/precedence paths of conf.xml are not reconstructed here. `/home/bticino/cfg/bt_daemon` separately declares HwWDTtime30 and selected service settings; its values do not establish watchdog cadence or successful operation.
+
+In the original stack text callback, the `stackopen`/`p%d` selected path obtains the latest record; `name` and `path` are duplicated into record+0/+4. The literal `working_mode` at0x166b8 selects `strtol` and record+8 store at0x12854. This is a concrete current-source field origin, not a copied old layout assumption.
+
+The available launch helper at0x116ac reads a supplied list and current working-status text. Its selected predicate0x1172a..0x1173e parses that text and skips a record with +8 zero **only when the parsed status is2**; it also requires record+28 nonzero. The selected XML's `normal_status` is text4. Record working_mode0/1, global status2/4, update status and device role remain separate namespaces; old F454/MH202 meanings of mode4 are not imported.
+
+For a supplied eligible record with selected wrapper flags+36/+40 zero, argument+44 null and scheduling-table index+16 zero, the original builder0x11898..0x118e6 constructs a `nice`, `-n`, decimal(record+20), `path/name`, null vector and requests imported call_nowait, retaining its result at record+12. Alternative scheduler entries name chrt/--fifo/--rr. No call helper implementation, privileged wrapper, command exit convention, successful child creation or whole argument-domain acceptance is claimed. The complete global list/callback activation and natural startup caller state remain first-pass gaps.
+
+## Process declarations and modern service/data ownership
+
+The normal and recovery selected stack XMLs declare the same25 process records. They include openserver/scsserver/bt_device/bt_dbus_manager/fw_manager plus older lighting/temperature/energy/sound/COSO names and the newer manager directories. `process-declarations.json` records every name, relative path, working_mode, exact XML record lines and original-image file resolution. It distinguishes a declaration from a present file, a requested launch and a running service. The reduced profile has23 entries and some different app names; it is not treated as the actual active profile.
+
+The script's `/home/bticino` working directory supplies a concrete base for these relative process paths. Manager config files separately declare watchdog/log paths and state directories: scheduling_manager scenesPath `/home/bticino/cfg/extra/0/scheduling_manager`; alarm_manager dataPath `/home/bticino/cfg/extra/0/alarm_manager/` with alarm/sensor/partition filenames; energy/player/backup managers have their own extra0 paths. These are package declarations, not real scenes, stored alarm sensors, a MH202 .spt scheduler, elapsed polling or an F454 SCSAI lane.
+
+The selected scsserver XML declares `/dev/ttymxc2`, port20001 and bus_type0. It is one configured SCS lane, not a board UART/connector measurement or a global absence claim about other hardware. The separate alarm_manager name/config cannot be used to infer F454's dedicated alarm-bus architecture. Its external field/device behavior remains unexamined.
+
+ELF metadata supplies available dependency requests including libglib/gio/gobject, libcrypto.so.3 and vendor libraries with major version1; the daemon imports call_nowait, XML helpers and HAL Docker/MQTT service functions. The inherited user-library directory precedes these packaged candidates. This batch records dependency requests and selected available library resolution, not a complete live loader closure or a running MQTT/container claim. Redis/D-Bus have the stronger direct init-script join described above.
+
+## Update/recovery boundary and missing assets
+
+The selected XML declares extra_mount enable0 and dedrifu enable0, while fw_manager is a process declaration with working_mode1 and its own config. That config has section spelling `firwareUpdate`, install_time_range1, range_low60/range_high240 and delay fields0; their units and active consumer policy remain unknown. Availability of the dedrifupdater binary does not override those declarations, and disabled flags do not prove there is no update mechanism.
+
+Recovery rc5 includes a patch_uboot script request; its body/flash operations are not investigated or executed here. Root/filesystem partition switching, rollback policy, image installation and signature-verification code are beyond this bounded first pass. The package retains signature blobs; CRC/hash checks are not cryptographic signature verification.
+
+The manifest references **80.xtz,81.xtz,94.xtz,95.xtz**, absent from the downloaded outer archive. Their contents/deployment roles remain unavailable. References in startup code to extra95 directories establish those particular filesystem path uses; they do not reconstruct 95.xtz or prove its exact role. No similarly numbered installer resource is substituted.
+
+## Ranked next gaps and comparison limits
+
+First, close the natural daemon list/global binding, launch eligibility and startup callback order for one selected manager. Second, trace the actual fw_manager install/signature/partition policy without performing writes. Third, resolve current config/state producer paths and the manager-specific storage reader for a genuine nonsecret function; parent-owned catalogue/API analysis is separate. Fourth, obtain the genuinely missing80/81/94/95 assets if available. Hardware/DTB selection and physical SCS topology require their own evidence.
+
+The source-confirmed similarities with F454/MH202 are SysV/vendor-daemon configuration patterns and volatile XML declarations. New architecture, libraries, current Thumb bytes, manager config paths and normal-status value must be assessed independently. No byte identity, inherited native proof, old auth/session/framing result, physical capability or full boot correctness is claimed.
+
+Reproduce with `python3 collect_boot_v1.py --check` in this directory. The exclusive generator refuses existing evidence; successful checks are read-only. Report, collector and outputs are frozen immediately with snapshot membership/hashes calculated before opening the index. Reference capture initially tried a shortened device-page filename that did not exist; the correct original page is separately frozen with its own index before any evidence generation. No existing reference index or first candidate was replaced.

@@ -1,0 +1,56 @@
+[
+  {
+    "add_pc_va": "0x2c6a6",
+    "key": "enabled",
+    "pool_va": "0x2c8d8",
+    "target_va": "0x1143e0"
+  },
+  {
+    "add_pc_va": "0x2c6d0",
+    "key": "id",
+    "pool_va": "0x2c8dc",
+    "target_va": "0x116adc"
+  },
+  {
+    "add_pc_va": "0x2c748",
+    "key": "type",
+    "pool_va": "0x2c8e8",
+    "target_va": "0x115f5c"
+  },
+  {
+    "add_pc_va": "0x2c79a",
+    "key": "operator",
+    "pool_va": "0x2c8f0",
+    "target_va": "0x115198"
+  },
+  {
+    "add_pc_va": "0x2cb30",
+    "key": "status",
+    "pool_va": "0x2cbf0",
+    "target_va": "0x1151ac"
+  },
+  {
+    "add_pc_va": "0x29030",
+    "key": "type",
+    "pool_va": "0x29208",
+    "target_va": "0x115f5c"
+  },
+  {
+    "add_pc_va": "0x2905c",
+    "key": "enabled",
+    "pool_va": "0x2920c",
+    "target_va": "0x1143e0"
+  },
+  {
+    "add_pc_va": "0x29092",
+    "key": "operator",
+    "pool_va": "0x29210",
+    "target_va": "0x115198"
+  },
+  {
+    "add_pc_va": "0x29126",
+    "key": "status",
+    "pool_va": "0x2921c",
+    "target_va": "0x1151ac"
+  }
+]

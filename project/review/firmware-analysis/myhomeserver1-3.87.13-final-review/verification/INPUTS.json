@@ -1,0 +1,208 @@
+{
+  "direct_input_count": 38,
+  "files": [
+    {
+      "bytes": 9258,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/REPORT.RESULTS.md",
+      "sha256": "a18c1a027645fa7cc17e9882d09a49099509b2f33bb6f502f25ce7a2ea018c3f"
+    },
+    {
+      "bytes": 22496,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/RESULTS.json",
+      "sha256": "450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525"
+    },
+    {
+      "bytes": 8007,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/SOURCE_PREFLIGHT.json",
+      "sha256": "dcc9dffa77e22c8a2ca0ffd1ec5eaed52f6f730bef03d1a5519cf639ebcebad4"
+    },
+    {
+      "bytes": 1493,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/first-results/INDEX.json",
+      "sha256": "3479c6bae64d42b3764ac646927669f157f32a4034e95235b45a9b701f71845a"
+    },
+    {
+      "bytes": 17467,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/isolate_double_v3.py",
+      "sha256": "1ef53f7e04a20cb43c37dfb1cae965bb119bcda167db9b372b58b02bf1cb4a15"
+    },
+    {
+      "bytes": 837,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/pre-edit/INDEX.json",
+      "sha256": "bdc6c5f67619b05cb33cb07c5ae9f1583b0999ef756689097690e36a8f2502a9"
+    },
+    {
+      "bytes": 13742,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/pre-edit/myhomeserver1-3.87.13-research-synthesis.md",
+      "sha256": "5a3dec72f1d14ac5c338a38571c809749594e761854e915c8a0decea447bcd52"
+    },
+    {
+      "bytes": 43131,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/pre-edit/own-dev-0199-myhomeserver1-home-automation-server.md",
+      "sha256": "5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855"
+    },
+    {
+      "bytes": 1781,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/COVERAGE.md",
+      "sha256": "7370aa3d8d5f9ee920a3a2057db38593a11e2a9ee0acaee1c6fa57740b214953"
+    },
+    {
+      "bytes": 36229,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/EVIDENCE_INDEX.json",
+      "sha256": "9aa272b2543bded5bd6765473851fdd9897e9abfde504239218b15dbd274a9f2"
+    },
+    {
+      "bytes": 1106,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/FINAL_CHECKS.json",
+      "sha256": "0cf14a0a4286e7a6318fe3105b4a5326acb3fefa68b30c1cb82db73e9c75b11f"
+    },
+    {
+      "bytes": 21781,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/IDENTITY_VALIDATION.json",
+      "sha256": "a3fab6f283cedf711d429c31d61d559c8b98b47d77719976daedfb4f721408f5"
+    },
+    {
+      "bytes": 1694,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/RANKED_REMAINING_QUESTIONS.md",
+      "sha256": "fae549763bd1c6eedc6d415203bc8edbede69b8fdb8148cf5b1bf4ced7341ef1"
+    },
+    {
+      "bytes": 556,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/SOURCE_CHECKS.json",
+      "sha256": "d7f01e2e47bc3cd23e40df856eeb11c662f3e7655388d190f44fa3302d0202ee"
+    },
+    {
+      "bytes": 2348,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/SYNTHESIS.md",
+      "sha256": "c52e709857ccfb71af6359a75bfa520070e16cc4e314e05180b88668b4812667"
+    },
+    {
+      "bytes": 6654,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/reviews/integration-review.md",
+      "sha256": "d8f36719fa63fb926b4f06c19a95427940456d2d9054fcea49838341b0591fae"
+    },
+    {
+      "bytes": 7270,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/reviews/trigger-source-review.md",
+      "sha256": "0f4bd4402aca9d80d5b73af56c5c46cad2e7e112bf69717c45c5c9b23c169229"
+    },
+    {
+      "bytes": 10647,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/REPORT.md",
+      "sha256": "5c07aa082902c7caa80a51213f287a159ea50ff47c91d3f5ace98996da9f3b3c"
+    },
+    {
+      "bytes": 2349,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/COVERAGE.md",
+      "sha256": "2a4fa1f143d3521991e2c3fac4a0e7ec5aa26b2cde52a06f44df2f58f1ceb6c3"
+    },
+    {
+      "bytes": 27577,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/EVIDENCE_INDEX.json",
+      "sha256": "a2c92f2d00c8363989c30dee1ee08f85ce5092011312ee691608bee12aa6879a"
+    },
+    {
+      "bytes": 1068,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/FINAL_CHECKS.json",
+      "sha256": "bd44951d102f666217e05e78df0771e3489ff7c08b2190a92d901826fb78c8f1"
+    },
+    {
+      "bytes": 20543,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/IDENTITY_VALIDATION.json",
+      "sha256": "3ddffca38d14572f0bfbbf5da23a24aeed1458f84f10ba93de4449e212dfa8a5"
+    },
+    {
+      "bytes": 2697,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/RANKED_REMAINING_QUESTIONS.md",
+      "sha256": "3e6ce068c1842af2c57a4bfdd826ad10fc85ef3baa4f0f2bcf5c192c0a1ad388"
+    },
+    {
+      "bytes": 728,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/SOURCE_CHECKS.json",
+      "sha256": "001a9e2e96babc07db5a6014708ba8dc00d7984bc08564ca897b4ed13522079e"
+    },
+    {
+      "bytes": 2669,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/SYNTHESIS.md",
+      "sha256": "15b364ca90900801ef1eb95b098b0e8b8121ae38d7fc8b8e9e46f98c797c6fe4"
+    },
+    {
+      "bytes": 133066,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/CATALOGUE.json",
+      "sha256": "c7c4a1af363f1b8a60980e2281695f5708c240e99383d9239d87371e1088fdca"
+    },
+    {
+      "bytes": 8852,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/CATALOGUE.md",
+      "sha256": "692bdffd1c0f648599a5eecc6ad8bd9b0b4361a0594b2b26cded6d4c863d774e"
+    },
+    {
+      "bytes": 146684,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/INPUTS.json",
+      "sha256": "470397b9d7f8cbc15d01f3451d3da26fb43d96f6b3d339d760d6418eb315d342"
+    },
+    {
+      "bytes": 1454,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/OUTPUT_MANIFEST.json",
+      "sha256": "ab35365ff80e110705975330befd9644bc26db372b4a4986fbe0ddd906edd757"
+    },
+    {
+      "bytes": 3479,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/REPORT.md",
+      "sha256": "41a3481502c1951bf58c7d475518d670fb9acd806c26bd509ce10902be9152f8"
+    },
+    {
+      "bytes": 2819,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/SAVED_CORPUS.json",
+      "sha256": "17f93c8ee2e00f7cfaad49f7d41c40305bb4f24564b7521acc999c866afc6ee9"
+    },
+    {
+      "bytes": 8452,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/VERSION_NAVIGATION.json",
+      "sha256": "2af645d3576ecfc64dcfabca287025a875b8c4ad046d28d4268ba4e81789a39d"
+    },
+    {
+      "bytes": 23383,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/build_navigation_v1.py",
+      "sha256": "d901db90423620f626101a0c412e404b9d65fa7506730cb63eddb66a74cdc656"
+    },
+    {
+      "bytes": 1172,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/first-candidate-v1/INDEX.json",
+      "sha256": "eb99ef1bdf998e0006e68b25ea3eb44e4bdf39b605e8d3f9bc4894f494c6c0b3"
+    },
+    {
+      "bytes": 13242,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/overview/ENCYCLOPEDIA_CANDIDATE.md",
+      "sha256": "5d9426583d60ffe1618b2a82e0bf9bd97426387a6245c7b8e6500bfe09cdc5c1"
+    },
+    {
+      "bytes": 8498,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/reviews/integration-review.md",
+      "sha256": "0c88ba11030856f12bf237cf549c77e0ee453dccd54d9bf028ed80a6700e4d85"
+    },
+    {
+      "bytes": 6940,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/reviews/navigation-review.md",
+      "sha256": "ad61489ba711d6a9de6b103ccb51ea556f3bf280989883d89b6cfda829bc2cc0"
+    },
+    {
+      "bytes": 11701,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/reviews/synthesis-source-review.md",
+      "sha256": "dec06ad8f9dd676731dab1ff55b2c2eaff54276c8de35b11a02f5dcf6d42740c"
+    }
+  ],
+  "indirect_reference_sets": {
+    "numeric142": {
+      "bytes": 36229,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/EVIDENCE_INDEX.json",
+      "sha256": "9aa272b2543bded5bd6765473851fdd9897e9abfde504239218b15dbd274a9f2"
+    },
+    "old614": {
+      "bytes": 146684,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/INPUTS.json",
+      "sha256": "470397b9d7f8cbc15d01f3451d3da26fb43d96f6b3d339d760d6418eb315d342"
+    }
+  },
+  "scope": "Exact direct bytes plus member sets defined by their original pinned indexes; repeated memberships are not distinct coverage."
+}

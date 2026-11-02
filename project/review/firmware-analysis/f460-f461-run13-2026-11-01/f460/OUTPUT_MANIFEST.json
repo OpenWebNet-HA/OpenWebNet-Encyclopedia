@@ -1,0 +1,46 @@
+{
+  "collector_sha256": "fb2ea3f4325e25fbe5484216f6d16ce666c3209dba95fff13299395006bc287f",
+  "counts": {
+    "guards": 31,
+    "imports": 9,
+    "inputs": 6,
+    "literal_joins": 2,
+    "original_execution": 0,
+    "spans": 6
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 1138,
+      "sha256": "6459bda2b02414043f7d13e7d6f3a0f3ceb85cc9c0d8aedbc5c5ae38fcfad697"
+    },
+    "SOURCE.json": {
+      "bytes": 9505,
+      "sha256": "c03be130a631a5f0c036fa1881d97e7f783fae9a76fc78e79013b0726ff7da7f"
+    },
+    "spans/actual-local-objects-construction.txt": {
+      "bytes": 672,
+      "sha256": "44654859ac5c48c24e8467782f421cacf18623dd5ccc5a10bb604534eddc51ff"
+    },
+    "spans/entire-profile-result-getter.txt": {
+      "bytes": 2505,
+      "sha256": "5e36654f11b4042b4fd63bc13838f75e88deb1b3f41b85ac55bb0044e3dadbd2"
+    },
+    "spans/mode-result-branch-and-forward.txt": {
+      "bytes": 1116,
+      "sha256": "e6f96fec9ccaa3b4aff2a123d42e151f5a9ce5cb95db6669d5b7c76a4e1b3489"
+    },
+    "spans/mode2-diagnostic-bridge.txt": {
+      "bytes": 289,
+      "sha256": "ade097a8fe7bea0094d69c8b6d6e411877a8e7d97d1b7d30fedf2dedf3d60090"
+    },
+    "spans/provided-platform-constructor-prefix.txt": {
+      "bytes": 577,
+      "sha256": "0ff1ec8fa9c20d1a81ceb6e1d0e839b3cb12d17b7f001963e234520f3982bb14"
+    },
+    "spans/selected-constructor-path-field48.txt": {
+      "bytes": 371,
+      "sha256": "a5007bc3f908a8a63de5f9e4a479acc07eca57bea6d90783049300dd906d266e"
+    }
+  },
+  "report_sha256": "e54bdfb6f6e196584bb9c97a35d6cf984cc4082d1b3e13ced22875a00250cd78"
+}

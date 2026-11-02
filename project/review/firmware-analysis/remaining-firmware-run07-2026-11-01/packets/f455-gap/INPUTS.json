@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "bytes": 22791,
+      "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0152-f455-basic-gateway.md",
+      "sha256": "89622ff8bc7833f9d02bbb2bb8e765bd739120b6036ff1c72d22ff72efd0430d"
+    },
+    {
+      "bytes": 180196,
+      "path": "work/f455-firmware/1.1.2/F455_1_1_2.fwz",
+      "sha256": "cd99299fc729679b4eade46acda7bd4f5e619a0a9eac34a1f6a3b73b625a18f9"
+    },
+    {
+      "bytes": 301016,
+      "path": "work/f455-firmware/1.1.2/extracted/F455_1_1_2.bin",
+      "sha256": "6d61c308888ccd78f6fb289cf23e672203921a50931b838533a7a315c5d49ccc"
+    },
+    {
+      "bytes": 453,
+      "path": "work/f455-firmware/1.1.2/extracted/fwz.xml",
+      "sha256": "5b93f792b5d9ece0a7d26b75847d91df5ebe9b3c0bfbeea29c617e1557d852ad"
+    },
+    {
+      "bytes": 1322,
+      "path": "work/f455-firmware/1.1.2/research/2026-11-01-night02-format/ARM_CONTEXT.json",
+      "sha256": "480bac5da2b3838921c83b8c4a202db3f44fc98681480a7c6c51ae9de3cfb528"
+    },
+    {
+      "bytes": 1075,
+      "path": "work/f455-firmware/1.1.2/research/2026-11-01-night02-format/PACKAGE_FORMAT.json",
+      "sha256": "d4b63281cc9396b669c20e0a408f385a2da3d5f72788a6398a11f0a9a8017622"
+    },
+    {
+      "bytes": 5859,
+      "path": "work/f455-firmware/1.1.2/research/2026-11-01-night02-format/REPORT.md",
+      "sha256": "f955678a426ff1f4602fc4d481cb7b1b79f23d619c9d3f1cbf5b3a2e0b835a87"
+    }
+  ]
+}

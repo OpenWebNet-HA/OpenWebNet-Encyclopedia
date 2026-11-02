@@ -1,0 +1,50 @@
+
+/home/bticino/libcoso/libcoso.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000002cd0 <new_message_to_scs@@Base>:
+    2cd0:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+    2cd4:	d2800900 	mov	x0, #0x48                  	// #72
+    2cd8:	910003fd 	mov	x29, sp
+    2cdc:	f9000bf3 	str	x19, [sp, #16]
+    2ce0:	97fffcb8 	bl	1fc0 <g_malloc0@plt>
+    2ce4:	d0000001 	adrp	x1, 4000 <intf_ver_at_least@@Base+0x360>
+    2ce8:	fd40b020 	ldr	d0, [x1, #352]
+    2cec:	aa0003f3 	mov	x19, x0
+    2cf0:	52800040 	mov	w0, #0x2                   	// #2
+    2cf4:	fd000660 	str	d0, [x19, #8]
+    2cf8:	b9001260 	str	w0, [x19, #16]
+    2cfc:	b900367f 	str	wzr, [x19, #52]
+    2d00:	97fffce4 	bl	2090 <g_get_real_time@plt>
+    2d04:	52800061 	mov	w1, #0x3                   	// #3
+    2d08:	aa0003e2 	mov	x2, x0
+    2d0c:	aa1303e0 	mov	x0, x19
+    2d10:	f9000e62 	str	x2, [x19, #24]
+    2d14:	b9003a61 	str	w1, [x19, #56]
+    2d18:	f9400bf3 	ldr	x19, [sp, #16]
+    2d1c:	a8c27bfd 	ldp	x29, x30, [sp], #32
+    2d20:	d65f03c0 	ret
+    2d24:	d503201f 	nop
+    2d28:	d503201f 	nop
+    2d2c:	d503201f 	nop
+
+0000000000002d30 <new_message_to_scscmd@@Base>:
+    2d30:	a9bf7bfd 	stp	x29, x30, [sp, #-16]!
+    2d34:	910003fd 	mov	x29, sp
+    2d38:	97fffc76 	bl	1f10 <new_message_to_scs@plt>
+    2d3c:	52800021 	mov	w1, #0x1                   	// #1
+    2d40:	b9000c01 	str	w1, [x0, #12]
+    2d44:	a8c17bfd 	ldp	x29, x30, [sp], #16
+    2d48:	d65f03c0 	ret
+    2d4c:	d503201f 	nop
+
+0000000000002d50 <new_message_to_scsai@@Base>:
+    2d50:	a9bf7bfd 	stp	x29, x30, [sp, #-16]!
+    2d54:	910003fd 	mov	x29, sp
+    2d58:	97fffc6e 	bl	1f10 <new_message_to_scs@plt>
+    2d5c:	52800041 	mov	w1, #0x2                   	// #2
+    2d60:	b9000c01 	str	w1, [x0, #12]
+    2d64:	a8c17bfd 	ldp	x29, x30, [sp], #16
+    2d68:	d65f03c0 	ret

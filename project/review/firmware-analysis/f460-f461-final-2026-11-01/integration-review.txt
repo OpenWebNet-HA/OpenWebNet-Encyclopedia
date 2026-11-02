@@ -1,0 +1,72 @@
+# Final F460/F461 documentary integration review
+
+PASS for the frozen current documentary integration. No correction requested. Actual final validation, strict gates and control/automation closure remain subsequent completion steps; no future receipt or completion state is certified here.
+
+This is an independent documentary comparison of the new knowledge handoff, four applied reference patches, final capsule and coordination summaries against the retained source reports and independent handoff/navigation reviews. Earlier comparison and run15-state-correction checks are source-aware prior work by this reviewer; the other selected firmware conclusions rely on their independently reviewed authoritative reports. This is not a fresh original-byte or all-source semantic audit, recursive protection-index audit, old source-collector replay or native execution. Only host file reads, hashes, exact substitutions and local-reference checks were performed. No author output, original input, old dossier or repository page was edited by this reviewer.
+
+## Findings and scope
+
+The handoff distinguishes F460 2.0.12 and F461 2.0.11 build identities and curated Home + Project/Home + Control versus third-party-integration roles. Shared catalogue, filenames, device-tree bytes and class labels do not transfer product capabilities, F454 hardware, MH202 scripts or MHS layouts. Input hashes identify the examined package; signature/integrity material is not promoted to a proved authenticity/trust chain. Normal/recovery contexts remain separately scoped.
+
+F460 catalogue owner/query-key/SQL roles remain separate from Device IDs, WHO and installed support; shared data does not establish an F461 reader. Scene raw/compiled objects, nonowning captures, eight-byte condition pointers and sixteen-byte action pairs remain distinct. Selected numeric/serializer value coherence requires ordinary fresh JSON/member/int/asInt/provider returns and unchanged objects. Wait completion/cleanup and the unqualified provided-receiver writer are not every-action success, elapsed delay, natural cancellation or ownership guarantees. Update staging/list context/order and profile-result handoffs remain conditional and do not establish installation compatibility, trust or active boot state.
+
+F461 main configuration selection, local admission/retention/monitor/removal and same-owner source joins remain conditional on actual supplied valid objects/providers/lifetime. Symbol results, initializer requests, traversal returns and close/free ordering do not establish module activation, ABI validity, successful unload or safe concurrency. Structured routes/criteria/record categories, typed formatted components and copied IDs are not raw grammar, public WHO support, generated unique identity, delivery or physical topology. Deadline32 provenance/coordinate remains open, distinct from timestamp24/private-list32/parsed-string32; timer requests and candidate clock arithmetic do not establish actual firing or elapsed behavior. HAL/daemon requests do not prove installed board, DTB/auxiliary-core selection, active profile or readiness.
+
+The two Device edits change historical manual/catalogue scope and links only. They explicitly retain uncorroborated installed release/capacity/compatibility/runtime/physical claims and external developer-protocol payloads outside that review. They do not upgrade Device approval or imply a fresh manufacturer/protocol audit. The main/index edits add source-study navigation, and the core catalogue profile is unchanged. Exact old Device/main/index inputs remain available for historical reproduction; current changed pages are not silently substituted into old source collectors.
+
+Navigation counts15 checkpoints/30 authoritative report locators/386 selected documentary identities/50 historical mappings describe saved identities, not coverage percentages, recursive verification of every historical index member or new semantic cases. The exported generator is explicitly not a self-contained public reproduction package without its retained local capture. Report refinements and older canonical report bindings remain separate, including run15 state/index v2 versus original saved205-member index/state. The saved MHS experiment remains1 corpus/8 entries/340 original visits/0 C primitives/12 redirects/8 EXIT/0 stops/360 hooks plus4 setup relocations and separate register writes. No F46 execution or replay accumulation is added, and unavailable MH202 run18/run21 intermediate history remains unverified.
+
+## Exact checks
+
+- All23 current paths match their frozen review-candidate copies, recorded byte lengths and SHA-256 values.
+- All31 SOURCE_EXPORTS entries match both source and capsule bytes, including actual handoff/navigation/state-correction reviews.
+- Four applied reference candidates reconstruct exactly from their retained originals: three substitutions each for Device207/208, one each for detailed-analysis main and firmware-analysis index. Current public bytes equal those candidates. The public handoff equals its unchanged candidate.
+- Five pre-edit originals verify, including unchanged core profile bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba. Eight explicit candidate/history/review indexes verify23 members: five preversions, handoff1, coordination3, navigation first-script1, navigation first-candidate10 and three review first copies. This checks those saved copies, not all386 original input records or every historical index member.
+- Selected current Markdown files contain161 local-reference occurrences:159 resolve now and six heading fragments verify. Only final capsule integration-review.txt and validation.json are pending actual assembly. Current links are checked in their actual public/local contexts; the candidate handoff is interpreted through its identical published copy.
+- Independent handoff and navigation source/identity reviews and parent NAVIGATION_CHECK are existing separate checks. No source collector, navigation generator, SQL payload or CPU experiment was replayed in this documentary review.
+- Future review-copy bytes, final validation, strict ESG/ECV/diff, final branch/control status, automation deletion receipts and index-last ordering are not pre-certified. Actual strict checks remain required after assembly, with no placeholder or exemption.
+
+## Additional preservation pins
+
+| File | SHA-256 |
+| --- | --- |
+| `work/f460-f461-comparison/2026-11-01-final/integration/REFERENCE_PATCH_CANDIDATE.json` | `fc49b7cf7e756a60ec3a3815e651861d42fb37a7b3240a379dd3f83c2fe6a342` |
+| `work/f460-f461-comparison/2026-11-01-final/integration/pre-edit/INDEX.json` | `3d8b28cffdf6911bd222cef37bc301ddb26757ffa47392c80ac10f1e8d679085` |
+| `work/f460-f461-comparison/2026-11-01-final/handoff/first-candidate/INDEX.json` | `ae1bd1906b494abc29bb5b8e8427a98a867909b72b21297b61b1a420326eaee2` |
+| `work/f460-f461-comparison/2026-11-01-final/coordination-first-candidate/INDEX.json` | `00fe346c72edd05b204bcb1b629882903c11c6f3c51cffd2c2e6723f963a09c5` |
+| `work/f460-f461-comparison/2026-11-01-final/verification/first-script/INDEX.json` | `3d60ec3509d2c5442491fb7c19fe7e67fdd0e80173ef26e993b654903223fc0c` |
+| `work/f460-f461-comparison/2026-11-01-final/verification/first-candidate-v1/INDEX.json` | `a44fdf6f41e7901212a9aa9ce20a8064af52d06f92ed1b00d0cd721f2a4fe2f4` |
+| `work/f460-f461-comparison/2026-11-01-final/reviews/handoff-source-review-first/INDEX.json` | `a0bdbfbd8b65c175387712dce6b5fe6aeae84837ca27ce4ce90e931c26c971ab` |
+| `work/f460-f461-comparison/2026-11-01-final/reviews/navigation-review-first-copy/INDEX.json` | `c7854cc54127da0278e07b43e330edde0514cc22f0a7bb3fe1190bc835df98bf` |
+| `work/f460-f461-comparison/2026-11-01-final/reviews/run15-state-correction-review-first-candidate/INDEX.json` | `7564159d984380dea4c617681a8ddd4151a5a5042d7cad5e7ef0408e176b2a3b` |
+| `work/f460-f461-comparison/2026-11-01-final/review-candidate/INDEX.json` | `58eac955d7f6ed009a59e713dcc95f7d36c37313721cc5282134dbfee3834ad6` |
+
+## Frozen current integration pins
+
+| Current file | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-knowledge-handoff.md` | 16284 | `6a61539cd196a2bb691363690811be5c0243db2679952fe6746f1f7860bbc1dc` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md` | 44139 | `7ecc06f5c9a6381697a2372b12dcaf6d56f1a3f074d9f016d5d6b8b7de578f3e` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | 15603 | `bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba` |
+| `OpenWebNet-Encyclopedia/devices/definitions/own-dev-0207-f460-myhome-server.md` | 42538 | `c36fa47758ff05e6e5fbeaf7d4d3549d6fed38e4e032cba299021ee261bf157e` |
+| `OpenWebNet-Encyclopedia/devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md` | 40583 | `ebdedce1537eec88678e418addcd076923a7f6997a659998f6c3affb51e3e259` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md` | 11179 | `aa7c70da0facac0260d00d38de3235ef4c8656874daf0f21c10c23b6e6d0e1f3` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-final-2026-11-01/README.md` | 3927 | `c066106eee5756f51c530da942af3714e4d33153221b69a125da33a93f0fb574` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-final-2026-11-01/SOURCE_EXPORTS.json` | 8479 | `cfc72e635f45d2f617f5a0510fd9596e88348b27f6c89bad09e73ed7e7aa20c3` |
+| `work/f460-f461-comparison/2026-11-01-final/handoff/HANDOFF_CANDIDATE.md` | 16284 | `6a61539cd196a2bb691363690811be5c0243db2679952fe6746f1f7860bbc1dc` |
+| `work/f460-f461-comparison/2026-11-01-final/SYNTHESIS.md` | 2941 | `658eff958e46b195da91dcb24565c04171c2d56830ec964a29b471c3e9b9901b` |
+| `work/f460-f461-comparison/2026-11-01-final/COVERAGE.md` | 3599 | `26126717c05c0fca85207a91c2ecc3a0b39ff8d26011219b7c750b7db0da6977` |
+| `work/f460-f461-comparison/2026-11-01-final/RANKED_REMAINING_QUESTIONS.md` | 2788 | `b9c0ce8b0e589752a49523573352a49681738820e3cc9c01aceb4216d182e8d6` |
+| `work/f460-f461-comparison/2026-11-01-final/NAVIGATION_CHECK.json` | 369 | `8c94f6a1a83db2faba70f9c26fd36ca9e8e0ad0099b4a7fb78650061819788d8` |
+| `work/f460-f461-comparison/2026-11-01-final/integration/DOCUMENT_PATCH.json` | 9235 | `fc49b7cf7e756a60ec3a3815e651861d42fb37a7b3240a379dd3f83c2fe6a342` |
+| `work/f460-f461-comparison/2026-11-01-final/integration/pre-edit/INDEX.json` | 1303 | `3d8b28cffdf6911bd222cef37bc301ddb26757ffa47392c80ac10f1e8d679085` |
+| `work/f460-f461-comparison/2026-11-01-final/verification/REPORT.md` | 3772 | `64e79871bb0f27aa9371b137247531dcceba162756c664b59128454d685c910c` |
+| `work/f460-f461-comparison/2026-11-01-final/verification/OUTPUT_MANIFEST.json` | 1146 | `0091eb7e2c1c0ecf2972f6134e6502b311ab40e5138d9e80cde790d23b4b1230` |
+| `work/f460-f461-comparison/2026-11-01-final/reviews/handoff-source-review.md` | 20009 | `8d2952a3c8c80e7535e0af767579d66708cd86277dc68371bd1adaa9da50bd91` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-final-2026-11-01/handoff-source-review.txt` | 20009 | `8d2952a3c8c80e7535e0af767579d66708cd86277dc68371bd1adaa9da50bd91` |
+| `work/f460-f461-comparison/2026-11-01-final/reviews/navigation-review.md` | 6100 | `17597e7aac279d10ff20cd97dbaba868969336ebc40ca5cbf68b09383a7e677e` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-final-2026-11-01/navigation-review.txt` | 6100 | `17597e7aac279d10ff20cd97dbaba868969336ebc40ca5cbf68b09383a7e677e` |
+| `work/f460-f461-comparison/2026-11-01-final/reviews/run15-state-correction-review.md` | 3270 | `5741fb096b7af9cf58fa7c6cd6bf2dcda4611c3769ee603be50cdea81d1eb89f` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-final-2026-11-01/run15-state-correction-review.txt` | 3270 | `5741fb096b7af9cf58fa7c6cd6bf2dcda4611c3769ee603be50cdea81d1eb89f` |
+
+The bounded source study and present documentary integration are coherent at these reviewed bytes. Wider Device/source/runtime/physical approval and the final mechanical closure proof remain separate.

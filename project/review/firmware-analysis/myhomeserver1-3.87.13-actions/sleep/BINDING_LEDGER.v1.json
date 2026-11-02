@@ -1,0 +1,36 @@
+{
+  "JSON_action_offsets": {
+    "32": "delay",
+    "36": "duration",
+    "40": "seconds"
+  },
+  "callback_capture_word": "unsigned source word read unchanged from captured function data; not runtime object+92 alias after copy",
+  "metadata_runtime_offsets": {
+    "84": "raw delay",
+    "88": "raw duration",
+    "92": "raw seconds"
+  },
+  "operational_offsets": {
+    "12": "zero from selected constructor and move-copy, no duration setter on selected path",
+    "16": "start callable capturing seconds",
+    "24": "start manager",
+    "28": "start invoker",
+    "32": "stop callable data remains initially empty",
+    "40": "stop manager initially0",
+    "44": "stop invoker initially0",
+    "8": "delay copied by cd988"
+  },
+  "original_execution": 0,
+  "retry": "only ret==-1 and errno==4; same request/remainder address reused",
+  "same_object_chain": [
+    "selected initializer index10",
+    "b7590 temporary compiled object",
+    "b444c move prefix into96-byte heap object",
+    "derived vtable reinstall and metadata copy",
+    "runner+128 append"
+  ],
+  "semantic_host_cases": 0,
+  "sleep_request": "if capturedword!=0, two32words[capturedword,0], req and rem same private stack address",
+  "stop_scope": "Selected blocking callback loop contains no explicit shared cancellation flag read or conditional-variable wait. Common stop signaling is separate, not an observed interruption.",
+  "units": "seconds/nanoseconds under ordinary successful packaged libc/Linux nanosleep ABI; first32 signed-extension limits are distinct from JSON asUInt"
+}

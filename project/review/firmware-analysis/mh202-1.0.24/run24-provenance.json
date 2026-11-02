@@ -1,0 +1,72 @@
+{
+  "checkpoint": "run24",
+  "status": "Two independently reviewed static source areas; documentary integration and final verification recorded separately",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "static_conditional_provider_unit_report",
+      "research_path": "work/mh202-firmware/research/2026-10-30/clock/run24/REPORT.md",
+      "source_sha256": "40c7f32abe248b08c1609b37a184bc898bfb6ef709a1501ccf479993a5938fa3",
+      "published": "run24-clock-report.txt",
+      "published_sha256": "40c7f32abe248b08c1609b37a184bc898bfb6ef709a1501ccf479993a5938fa3"
+    },
+    {
+      "role": "independent_source_review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run24/clock-review.md",
+      "source_sha256": "bbf8051d6ffa8061e1dad1e502026158309b09fcba930605751496ba6fe115d6",
+      "published": "run24-clock-review.txt",
+      "published_sha256": "bbf8051d6ffa8061e1dad1e502026158309b09fcba930605751496ba6fe115d6"
+    },
+    {
+      "role": "static_later_configuration_writer_report",
+      "research_path": "work/mh202-firmware/research/2026-10-30/sound/run24/REPORT.md",
+      "source_sha256": "ed6b94b264364f28fc8501775e783c1ab5fb61ac1f65b353c792cfe5a33b9d31",
+      "published": "run24-sound-report.txt",
+      "published_sha256": "ed6b94b264364f28fc8501775e783c1ab5fb61ac1f65b353c792cfe5a33b9d31"
+    },
+    {
+      "role": "independent_source_review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run24/sound-review.md",
+      "source_sha256": "1455dc2d88a5dbc41a2722ece4f8eaa44a7d6d9684704d730303699882bb5403",
+      "published": "run24-sound-review.txt",
+      "published_sha256": "1455dc2d88a5dbc41a2722ece4f8eaa44a7d6d9684704d730303699882bb5403"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/clock/run24/collect_clock_v1.py",
+      "sha256": "3374b6cbbd3b7aee07e5d1e297a02956181c50412805ae16fe79b4ef5f97c79b",
+      "method": "static original source plus explicit semantic/context/host arithmetic, zero original execution"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/sound/run24/collect_enable_v1.py",
+      "sha256": "0bbfa48964900e6ae875caf9e2276e341be1e669a67e22c2a26ce2213a22b9d9",
+      "method": "static original source plus explicit semantic/context/host arithmetic, zero original execution"
+    }
+  ],
+  "new_original_execution": 0,
+  "generated_outputs": {
+    "clock_including_manifest": 14,
+    "sound_including_manifest": 22,
+    "total": 36
+  },
+  "canonical_execution": {
+    "new_corpora": 0,
+    "corpora": 14,
+    "top_level_entries": 68,
+    "original_instruction_visits": 31581,
+    "primitive_callbacks": 3140,
+    "linker_redirect_callbacks": 128,
+    "exit_boundaries": 24,
+    "selector_read_stop_boundaries": 2,
+    "code_hook_visits": 34875,
+    "firmware_processes": 0,
+    "target_OS_calls": 0
+  },
+  "limits": [
+    "Clock units conditional on packaged provider model and ordinary successful Linux ARM32 timeval ABI; host header is semantic context only, not original target layout/header",
+    "Later tenth DIM15 converted value reaches utility260, not proof of actual raw admission/activation/persistence/physical effect",
+    "Earlier frozen report/source/canonical corpora and history limits preserved; no old matrix/native replay as new coverage"
+  ]
+}

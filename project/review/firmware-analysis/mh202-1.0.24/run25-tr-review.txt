@@ -1,0 +1,54 @@
+# Independent MH202 run25 WHO25 translator source review
+
+**PASS for the selected original source/contracts and four independent host examples. No author correction requested.** This review is static original-byte/source inspection plus the unchanged host collector `--check` and independent hash/arithmetic checks. No original translator/parser/core/helper, ARM/native/vendor process, timer, OS/syscall, transport or physical device executes. Original entries/instructions/hooks added by the review are0. Only this NEW review file is written; all author files, snapshots and completed STM candidate remain unchanged.
+
+## Final reviewed pins
+
+Paths in this table are relative to who25/run25-tr/.
+
+| Artifact | SHA256 |
+|---|---|
+|`REPORT.md`|`5764447ab2b1928fe93a0861ef1dad22b973688a7d6e2e393e316313aae7f53b`|
+|`collect_translation_v1.py`|`b0f4eb53aa4ab863eccdcbd727746dc197b6338afa7f6605417f462c7a2148be`|
+|`output-manifest.json`|`8c32aafdc5a30e35c5984150d4d24f023b5320ddd566f04574181b741f6055be`|
+|`initial-generated-v1/SNAPSHOT_INDEX.json`|`519a87e92e135d7d23421880e10d5cf9e1c9b25bfdf101f8e38e5983397b917d`|
+|`selected-envelope-contracts.json`|`a710c0c1da07f7edc35958a94e028fd62618adc12e642614f066f6eee46cc4eb`|
+|`independent-host-selected-ledgers.json`|`147d4d6cc93ce83ef9064cc93af973b88d01b9fb60f2c68d129b3b69bc7c1802`|
+
+## Reproduction and independent evidence checks
+
+The unchanged final collector passes **23 outputs including manifest,15 original spans,50 exact words,9 format pools,4 inputs and4 finite host ledgers**. I independently read all4 inputs through ImageVFS/reference files, checked hashes/sizes, reconstructed PT_LOAD VA mapping and verified all15 raw span hashes/50 words. All9 literal targets/NUL strings and original pool+base arithmetic agree. Selected readelf metadata rows and all raw descriptor words match fresh same-image metadata/bytes. The22 deterministic members plus manifest/report/collector pins verify, and all **25 first-candidate copies** are byte-identical to current author files with matching snapshot hashes.
+
+Generation has an all-destinations-absent guard, exclusive writes and new first-snapshot directory; `--check` compares exact bytes without writes. I did not attempt a non-check generation or change any author artifact. These checks establish present first-candidate identity/generator refusal, not universal filesystem immutability or authentication of every unsaved exploratory action.
+
+## Descriptor, pairs and namespace agreement
+
+Fresh original translator `/home/bticino/libcoso/libplug_trasv_cmd_tr.so` SHA256 **c6e74b3cbe047a0d1bb9b7ae512d25c9516b8212ecb9be7bcb4db35018915770** supplies descriptor0xa4bc and callback0x14a8 through ABS32 relocation0xa4e4. Its selected initialization obtains the descriptor via GOT0xa498, appends **9 to list+52** and **25 to list+56**, then requests register_translation. Callback pair(1,2) is the selected reverse direction and pair(2,1) forward; other displayed pairs return local0.
+
+I retain the axes explicitly: criterion9 is the selected reverse-input/forward-output routing value, while25 is the selected forward-input/reverse-output value. Neither criterion9 nor body/type9 is an OPEN WHO9 assertion. Direction numbers1/2, parsed kinds1/2, envelope body/type40 and representation56 remain separate. Candidate core/libutils definitions/imports/direct dependencies establish available same-build targets, not active loader/provider/descriptor/registry/runtime binding.
+
+## Selected forward command and independent reverse source
+
+For the supplied coherent parsed kind1/WHAT12/WHERE112, representation3 and empty WHAT-parameter list, original0x17f8..0x1874 supplies converted WHAT12 and absent-parameter defaults. The original bit branches0x1874..0x189c select the low-bit family; WHERE first byte1 is required. Decimal suffix12 supplies byte1=0x0c, the source stores low8(WHAT−120)=0x94, and exact WHAT12 jump entry selects0x1918's final zero byte. Thus the source's four-byte candidate is **B1 0C 94 00**, not four emitted physical bus bytes or a serial frame.
+
+The selected ASCII conversion request has length4. Fresh libutils0x2204..0x2274 and its exact **%02X** literal support candidate text B10C9400 under ordinary conversion/allocation/format behavior. The core prepare_briefscs_frames candidate sets type40=3, representation56=1 and criterion48=9; its metadata helper copies selected source fields including ID60. It does not create a fresh ID in this displayed path. g_malloc64 is unzeroed; unspecified fields are not silently assumed0. Actual allocation/list construction/transmission is not executed.
+
+The reverse B10C9400 example is separately supplied with source body/type3 and pair(1,2). The type guard admits3 or9. Its original byte/opcode dispatch selects the WHAT formatter using0x94−0x88=12 and WHERE **1%d** with byte1=12, producing112. Original ***25*%s*%s##** then yields the text candidate `*25*12*112##`. I independently recomputed that arithmetic and inspected the saved guard/format spans. This example was not generated by feeding the forward result to executed reverse code; it is not a naturally paired response, parser acceptance or physical command meaning.
+
+## Distinct kind2 query and reverse address arithmetic
+
+Kind2 selects0x173c and requires WHERE byte0=3. For the supplied decimal suffix12, the selected signed<=98 arithmetic reconstructs quotient/remainder decimal digits into byte0x12. Source stores **B4 00 90 12**, then uses the same requested ASCII/list helper path. The source does not establish exact suffix length, full valid domain or a physical meaning for prefix3; the reviewer does not broaden the chosen positive12 arithmetic into negative/overflow/malformed acceptance claims.
+
+The separate reverse B4009012/bodytype9 example follows B4/opcode90. Original0x1938 selects byte3; the displayed<=0x98 branch decodes its high nibble times10 plus low nibble, returning12. Format **3%d** yields312, and the opcode90 branch uses ***#25*%s##**, yielding `*#25*312##`. The decimal0x0c in the command example and BCD-like0x12 in this query are kept distinct rather than turned into a universal address formula. Both reverse examples remain independently supplied bytes; no original serializer/parser or raw/physical exchange executes.
+
+## Core output metadata, ownership and limits
+
+Fresh core scsmsg_to_openlist0x26d8..0x2764 duplicates supplied text into a newly requested unzeroed64-byte envelope, sets metadata4=2/8=0, type40=2, criterion48=25 and representation56=2, and copies source12/16/24/28/**52/60**. It appends the new pointer to the supplied list. In particular source status/ID are preserved inputs, not zeroed/success defaults. Its text representation is not a successfully parsed pointer object. The source does not initialize every field20/32/36/44 in that helper, and no allocator safety/defect or runtime use outcome is inferred from that bounded observation.
+
+The forward and reverse helpers have different metadata and object ownership contracts. Same-image imports and local return0 are not successful public admission, a wire ACK, complete list lifetime/publication or physical actuation. Additional WHAT families, selectors, complete converter input grammar, effective providers, active contexts, wrapper scheduling and full source-record provenance remain open. Existing ScenarioPlus/CEN/contact/IR/ZigBee labels and oracle/capture evidence are not copied into or revalidated by this review.
+
+## Exploratory note and confidence
+
+The author report discloses a read-only exploratory pool probe that reached a non-string integer before the selected collector existed; it is not a generated evidence result. The final collector uses an explicit finite whitelist of selected string pools, and all current outputs/first snapshots are exact and reproducible. I do not reconstruct or independently authenticate an unsaved exploratory transcript, nor count that probe as a native test or translation result. No current candidate correction was requested.
+
+This PASS is high confidence for the displayed source/dataflow and finite arithmetic under stated coherent parsed/decoded input and normal-helper assumptions. It does not certify full raw grammar, whole WHO25 support/rejection, the natural forward/reverse/STM join, actual timers/delivery, historical oracle correctness or any physical device behavior. The independent WHO25 STM report remains a separate bounded source result, not an automatically executed consumer of these modeled objects.

@@ -1,0 +1,5 @@
+# Bounded coverage
+
+Three static author scopes:22 manually resolved byte72-store receivers; selected action/scene state, candidate thread provider and concrete owner-dispose paths; BN3L raw schema/type dispatch and compiled construction/move/append. Original execution/target providers/threads/clocks/JSON/scenes/network/bus/physical observations0; no semantic host objects/cases supplied. Earlier native corpora unchanged.
+
+Unfinished: complete shared reset aliases, action/scene owner retention/removal after polling, natural callback ordering, all unwind/concurrency; raw serializer coherence, actual configured class/assets and full JSON validation; effective providers, actual runtime and physical outcomes. Wider Device/source gates remain pending. Counts describe reproducible evidence, not firmware coverage.

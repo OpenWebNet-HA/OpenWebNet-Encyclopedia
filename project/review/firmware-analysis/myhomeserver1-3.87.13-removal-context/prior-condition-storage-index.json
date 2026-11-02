@@ -1,0 +1,16 @@
+[
+  {
+    "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/REPORT.md",
+    "snapshot": "prior-removal-report.md",
+    "bytes": 9145,
+    "sha256": "68c32fd66ef0d6c8d310a9e1efde7163a76fd334399a8cb5c025dc4c6eb74659",
+    "exact_quoted_phrase": "Trigger+104/condition+116 controls"
+  },
+  {
+    "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/reviews/integration-review.md",
+    "snapshot": "prior-integration-review.md",
+    "bytes": 7278,
+    "sha256": "e9c4ed148a29dd395014fe799c63ce722eb078d42ae1280c8aa0d6085aed24f6",
+    "exact_quoted_phrase": "trigger/condition handles"
+  }
+]

@@ -1,0 +1,53 @@
+# BNLD local record query: immediate cache return and conditional wait
+
+The BNLD predicate's query `0x10f4a0` first invokes the ordinary local lookup `0x10e3d8`. On a nonnull returned data pointer, it copies the exact record/control pair to its caller's output and returns normally **before examining the query selector or the record discriminator**. A cached record is therefore not locally revalidated for type or refreshed by that selected fast path. This is a bounded source fact, not a claim that the installed cache contains an unsuitable or stale object.
+
+A miss takes a different path. The caller's selector zero reaches a local request-preparation branch and opaque call boundaries. Its normal post-delegate continuation reaches a local mutex/condition-variable wait that tests a response-string length. These relationships do not establish successful request delivery, a fresh response, a particular reconstructed record type, measured waiting time, or a valid physical value.
+
+Source: `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. All VAs are original ELF addresses with fresh PT_LOAD offsets, span hashes, instruction guards and selected calls in `ORIGINAL_SOURCE.json`. Original instructions/helpers/vendor processes/target APIs executed: **0**. Host semantic cases: **0**. Host reads/binutils inspect bytes only.
+
+## Selected caller and output convention
+
+The preceding condition packet establishes the compiled BNLD predicate and its enabled branch. Here the retained fresh caller span `0xf13a6..0xf13d8` loads receiver `0x167368`, passes selector **0** in R2, passes its compiled ID-string object at receiver-of-predicate+108 in R3, and passes output-pair storage at current SP+4 in R0 to `0x10f4a0` at `0xf13b4`. It subsequently tests the first output word at `0xf13b8..0xf13bc`; a zero pointer follows the earlier report's false-result route. The helper's normal R0 is the output-storage pointer, not a query-success Boolean. The accompanying control word is a separate alias.
+
+The helper's arguments are thus `(output pair, local registry receiver, query selector, ID string)`. Selector zero, record discriminator zero, local event code zero, raw condition type two and any public protocol value are separate namespaces. The same registry receiver is positively shared with the prior event-record getter; its ordinary lookup and this larger query remain distinct contracts.
+
+## Nonnull cache result returns without the miss path
+
+`0x10f4a8` saves the selector, `0x10f4aa` retains the supplied ID string, and `0x10f4ce` calls `0x10e3d8` using the supplied registry and ID, with a local pair at SP+184. This lookup's previously reviewed found branch returns the node's pair at +40/+44 with its visible retain; that existing source proof is an input pin, not a new lookup matrix here.
+
+At `0x10f4d2..0x10f4de`, the larger query tests only the pair's first/data word for zero. For nonzero data, `0x10f4e0..0x10f4e2` copies both words into the original caller output. Stack-guard checks and the normal epilogue follow at `0x10f4e6..0x10f506`. No record+4 read, selector test, response-length read, request call, clock call, mutex lock or wait occurs in this retained nonnull branch. There is no local test here that the returned object has `ItemStatusLight` layout or that a particular update preceded the call.
+
+This does not establish global absence of validation, cache freshness policy, correct object type, concurrent lifetime, or behavior of other callers. The prior record producer shows a concrete type-zero Light layout on a separate selected path; it does not turn every cache entry into that type. The caller's later record+8 status and +32 numeric reads remain conditional on suitable object/type/state premises.
+
+## Miss clearing and selected opaque request boundary
+
+For a zero data word, the helper performs conditional local control cleanup (`0x10f50a..0x10f548`). At `0x10f54a..0x10f554`, it loads the character pointer at **registry+96**, writes zero to **registry+100**, and writes a NUL byte at that pointer. The getter source `0x5728c..0x572a8` independently initializes +96 to its inline buffer at +104 and +100 to zero. These slots form the selected response-string pointer/length, not a generically named readiness flag.
+
+The saved selector is examined only after this clearing. Selector 1 goes to `0x10ffbc`, selector 2 to `0x10fe1c`, selector 0 to `0x10fa80`; the other cases and their request semantics are not audited. The selected zero branch copies the supplied ID range through a local helper at `0x10fac2` while preparing local objects. Detailed request content, IDs generated elsewhere in this branch, and payload serialization are deliberately not exported or interpreted.
+
+The retained local handoff at `0x10fd58..0x10fd7a` reaches direct call **`0x5f4a4`** and a conditional indirect call. Both callee implementations remain opaque: no receiving, transport, authentication, session, framing, MQTT or libjel body is followed. Their success, callbacks and side effects are not established. Under their normal returns and normal intervening cleanup, the local continuation at `0x10fdfe..0x10fe18` joins **`0x10f56a`**. This is a conditional source continuation, not a universal selector-zero readiness or success policy.
+
+## Conditional local waiting dependency
+
+The common local continuation forms **registry+72** and requests `pthread_mutex_lock`. A nonzero return branches to the error delegate at `0x110e08`, outside this bounded normal-path analysis. This registry mutex address is unrelated to the shared action-stop domain's offset-72 flag: different receiver and namespace.
+
+After a zero lock return, `0x10f582` requests `steady_clock::now`. The source builds an absolute comparison deadline by adding the original 64-bit literal **`0x00000002540be400` = 10,000,000,000** to that returned count (`0x10f588..0x10f598`). This packet records source counts only; it does not newly prove provider tick units, kernel clock ABI, elapsed time, scheduling or a wall-clock bound.
+
+The immediate test at `0x10f59c` reads **registry+100**, the response-string length. A nonzero value skips the wait into `0x10f6b4`. On zero, the source prepares an absolute wait value using its local division path and requests `pthread_cond_clockwait` at `0x10f5d0` with condition-variable address **registry+24**, mutex address **registry+72**, literal clock argument **1**, and the local absolute-time pair. No condition-variable or clock provider body is executed or expanded.
+
+The return from `pthread_cond_clockwait` is not used as a success Boolean in the retained loop: R0 is overwritten for a new `steady_clock::now` request at `0x10f5d4..0x10f5d6`. The source compares the new count to the deadline. Before-deadline control reaches `0x10f6aa`, reloads response length and repeats the wait only while it is zero. The reached/passed-deadline leg also reloads that length at `0x10f5e6`: a nonzero length still enters response processing. On the zero-length timeout continuation, normal diagnostic/deallocation delegates precede `0x10f698..0x10f6a8`, which zeros both caller output words, requests mutex unlock and returns through the normal epilogue. Full error/exception and logging paths are not exhaustively audited.
+
+Thus the concrete wait dependency is a nonempty response string under this local mutex/CV scheme, not independently proven freshness, requested-ID matching, decoded type or successful physical response. The write/notify producer, effective provider binding, locking discipline, concurrent queries and scheduling remain unclosed here.
+
+## Response-processing boundary and applicability
+
+At `0x10f6b4`, the nonempty-length continuation begins local JSON/stream setup. The retained `0x10f79c` reads `(registry+96, registry+100)` as the character pointer/length used to prepare the stream. At `0x10f812`, the source requests imported `Json::parseFromStream`, and its return is tested at `0x10f816..0x10f818`. This is the chosen stopping boundary. No JSON payload, parser implementation, field-level response interpretation, reconstructed miss-result record type, final validation, callback producer, or later all-error path is inferred from that call. In particular, the query's whole miss path is not equated with `0x10e3d8`.
+
+The curated `OWN-DEV-0199` definition supplies MyHOMEServer1 catalogue item 2198 and home-automation/scenario product context only. It does not establish installed firmware/configuration, the source of the queried state, a public protocol mapping or physical lighting/brightness. Only this exact packaged 3.87.13 executable is analyzed. No F454 or MH202 layout was transferred.
+
+## Reproduction and remaining questions
+
+Run `python3 collect_query_v1.py --check`. The collector validates original ELF identity, PT_LOAD mappings/raw spans, instruction guards, direct local branches, selected PIC/GOT globals, pointer/length aliases and unchanged pinned prior reports. It reproduces all output bytes and exact first-candidate copies without executing firmware. Initial generation refuses existing evidence/snapshot files; first index bytes are computed before opening the index file.
+
+High confidence: selected caller arguments/output convention, direct initial ordinary lookup, nonnull pair fast return before selector/type tests, miss string clearing, selector-zero target, opaque local handoff and conditional normal join, mutex/CV/string-length wait dependencies and raw deadline literal. Conditional: normal delegates, ABI/string/tree invariants, suitable retained record, the prior predicate's configured state, and complete lifetime/locking. Unknown: actual request delivery or response producer, miss-result type and content/error contract, freshness/ID correlation, all alternate selectors, complete provider units/error behavior, measured timing, natural events and physical consequences. No absence, defect, universal readiness, or complete end-to-end query claim follows.

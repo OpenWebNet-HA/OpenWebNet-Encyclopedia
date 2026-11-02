@@ -1,0 +1,258 @@
+{
+  "alias_guards": [
+    {
+      "VA": "0x2b3a6",
+      "bytes": "0646",
+      "meaning": "receiver saved from incomingr0"
+    },
+    {
+      "VA": "0x3134a",
+      "bytes": "4c20",
+      "meaning": "allocation-size76"
+    },
+    {
+      "VA": "0x31356",
+      "bytes": "0446",
+      "meaning": "r4=allocator-returnr0"
+    },
+    {
+      "VA": "0x39064",
+      "bytes": "0446",
+      "meaning": "receiver saved from incomingr0"
+    },
+    {
+      "VA": "0xb2bd4",
+      "bytes": "0446",
+      "meaning": "receiver saved from incomingr0"
+    },
+    {
+      "VA": "0xb3624",
+      "bytes": "0446",
+      "meaning": "receiver saved from incomingr0"
+    },
+    {
+      "VA": "0xb4dfc",
+      "bytes": "0446",
+      "meaning": "receiver saved from incomingr0"
+    },
+    {
+      "VA": "0xc36bc",
+      "bytes": "0446",
+      "meaning": "receiver saved from incomingr0"
+    },
+    {
+      "VA": "0xe4e56",
+      "bytes": "0446",
+      "meaning": "receiver saved from incomingr0"
+    },
+    {
+      "VA": "0xe6154",
+      "bytes": "99ae",
+      "meaning": "ADRr6,currentSP+612"
+    },
+    {
+      "VA": "0xe8580",
+      "bytes": "0446",
+      "meaning": "receiver saved from incomingr0"
+    },
+    {
+      "VA": "0xe88de",
+      "bytes": "0446",
+      "meaning": "receiver saved from incomingr0"
+    },
+    {
+      "VA": "0x1041a0",
+      "bytes": "95ae",
+      "meaning": "ADRr6,currentSP+596"
+    },
+    {
+      "VA": "0x108c26",
+      "bytes": "99ae",
+      "meaning": "ADRr6,currentSP+612"
+    },
+    {
+      "VA": "0x10ab6c",
+      "bytes": "0446",
+      "meaning": "receiver saved from incomingr0"
+    }
+  ],
+  "original_image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+  "spans": [
+    {
+      "end_VA_exclusive": "0x15492",
+      "file_offset": "0x15474",
+      "name": "store-1548e",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "dc5cafe016c798340e58a699353955cc82f64b655a657e6dd491095e627d094a",
+      "start_VA": "0x15474"
+    },
+    {
+      "end_VA_exclusive": "0x2b4d2",
+      "file_offset": "0x2b39c",
+      "name": "store-2b4ce",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "6b8f62dee74b7cc182fcb31c78c7bac973041a3bd18e2b2fe05838e95a7c4b3b",
+      "start_VA": "0x2b39c"
+    },
+    {
+      "end_VA_exclusive": "0x31396",
+      "file_offset": "0x31340",
+      "name": "store-31392",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "d73416b7efe3c7d29c7a32eb2532856c2014b6da768458c559db4d78f6b8ceec",
+      "start_VA": "0x31340"
+    },
+    {
+      "end_VA_exclusive": "0x39300",
+      "file_offset": "0x39048",
+      "name": "store-392fc",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "0ee79f3f7be78fe2216725ae1441207843de21d8dcc2e73695ea7fcce9aeed75",
+      "start_VA": "0x39048"
+    },
+    {
+      "end_VA_exclusive": "0x5d63a",
+      "file_offset": "0x5d636",
+      "name": "store-5d636",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "72864390d06a7d8f0e41dc0f54ef00fa09c9a8302d48bbe52faf06a4458828ab",
+      "start_VA": "0x5d636"
+    },
+    {
+      "end_VA_exclusive": "0x6ad78",
+      "file_offset": "0x6ad74",
+      "name": "store-6ad74",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "bca871039136bfbb34893b5b3874816beb91c0782ae4da5a37c7f434f6a3f847",
+      "start_VA": "0x6ad74"
+    },
+    {
+      "end_VA_exclusive": "0xb2c10",
+      "file_offset": "0xb2bc4",
+      "name": "store-b2c0c",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "e0c4d6e4bcfa7437e9c614dbf1aeb3dd44588896a5b1f37c1a078cbee30c6115",
+      "start_VA": "0xb2bc4"
+    },
+    {
+      "end_VA_exclusive": "0xb3660",
+      "file_offset": "0xb3614",
+      "name": "store-b365c",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "3d5f5f9fc715a145a2c5a0cf4cffc16452eebe0f2d0572ed8e0cc1ec09d4cfc8",
+      "start_VA": "0xb3614"
+    },
+    {
+      "end_VA_exclusive": "0xb4ede",
+      "file_offset": "0xb4de8",
+      "name": "store-b4eda",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "1016e01966c12681ce877ca086e796dbb8a20e9d70150fb4854c760bb22c466a",
+      "start_VA": "0xb4de8"
+    },
+    {
+      "end_VA_exclusive": "0xc379c",
+      "file_offset": "0xc3694",
+      "name": "store-c3798",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "88f1e143f6f31d372681d41b7d64e3ff020cc0d625d080e851020586bb4df3c5",
+      "start_VA": "0xc3694"
+    },
+    {
+      "end_VA_exclusive": "0xc4406",
+      "file_offset": "0xc4402",
+      "name": "store-c4402",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "bca871039136bfbb34893b5b3874816beb91c0782ae4da5a37c7f434f6a3f847",
+      "start_VA": "0xc4402"
+    },
+    {
+      "end_VA_exclusive": "0xcd70a",
+      "file_offset": "0xcd6f0",
+      "name": "store-cd706",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "145f9c5b2a6e1d03267f23050ec079564fbbceea5b8b173b72259ad1cce91bed",
+      "start_VA": "0xcd6f0"
+    },
+    {
+      "end_VA_exclusive": "0xd750c",
+      "file_offset": "0xd7508",
+      "name": "store-d7508",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "72864390d06a7d8f0e41dc0f54ef00fa09c9a8302d48bbe52faf06a4458828ab",
+      "start_VA": "0xd7508"
+    },
+    {
+      "end_VA_exclusive": "0xe4eb8",
+      "file_offset": "0xe4e50",
+      "name": "store-e4eb4",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "f876051a3f2ccebf716dc477e50b2e0f9bd514006d5d50b3f96328f4e8c18dfe",
+      "start_VA": "0xe4e50"
+    },
+    {
+      "end_VA_exclusive": "0xe6190",
+      "file_offset": "0xe6152",
+      "name": "store-e618c",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "b7c4f1a3af46b36c69859d56d8cffdaca9a06b01a639c77b77d04a28ce0a29ba",
+      "start_VA": "0xe6152"
+    },
+    {
+      "end_VA_exclusive": "0xe85f6",
+      "file_offset": "0xe8578",
+      "name": "store-e85f2",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "3c67fe36b6eaaad51d1b8acad9a3290740aab75419d20cc291e3298058397dfa",
+      "start_VA": "0xe8578"
+    },
+    {
+      "end_VA_exclusive": "0xe8c24",
+      "file_offset": "0xe88c4",
+      "name": "store-e8c20",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "97fef9206eef96748af74d7c11614c60bdb3ff08a339baa6c4cb655cac9c952f",
+      "start_VA": "0xe88c4"
+    },
+    {
+      "end_VA_exclusive": "0xf586e",
+      "file_offset": "0xf586a",
+      "name": "store-f586a",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "72864390d06a7d8f0e41dc0f54ef00fa09c9a8302d48bbe52faf06a4458828ab",
+      "start_VA": "0xf586a"
+    },
+    {
+      "end_VA_exclusive": "0x1041de",
+      "file_offset": "0x10419c",
+      "name": "store-1041da",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "1617fe902ba5c95632a3905443adf34628f05259a59b009ffbb06cac58f28f21",
+      "start_VA": "0x10419c"
+    },
+    {
+      "end_VA_exclusive": "0x108064",
+      "file_offset": "0x108060",
+      "name": "store-108060",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "72864390d06a7d8f0e41dc0f54ef00fa09c9a8302d48bbe52faf06a4458828ab",
+      "start_VA": "0x108060"
+    },
+    {
+      "end_VA_exclusive": "0x108c62",
+      "file_offset": "0x108c24",
+      "name": "store-108c5e",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "6c0f2fd37667055c6a08f17de3459906cc2da734ebb7a23b71250ce2d610a05d",
+      "start_VA": "0x108c24"
+    },
+    {
+      "end_VA_exclusive": "0x10abe2",
+      "file_offset": "0x10ab64",
+      "name": "store-10abde",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "62deb4efb570d880c571f8a4953664d7c3ededb13b10dcc84ee3ccb581dfcde5",
+      "start_VA": "0x10ab64"
+    }
+  ]
+}

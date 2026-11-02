@@ -1,0 +1,73 @@
+from pathlib import Path
+from collections import Counter
+import json,hashlib,struct,re,subprocess,xml.etree.ElementTree as ET
+O=Path(__file__).resolve().parent;B=O.parents[1];W=next(x for x in O.parents if (x/'OpenWebNet-Encyclopedia').is_dir());A=B/'analysis'
+def hf(p):
+ with p.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
+def save(p,x):p.open('x').write(json.dumps(x,indent=2)+'\n')
+pins=[]
+def pinned(p):pins.append({'path':str(p.relative_to(W)),'bytes':p.stat().st_size,'sha256':hf(p)})
+def safe_lines(p,predicate):
+ text=p.read_text(errors='replace');return [{'line':i,'text':s} for i,s in enumerate(text.splitlines(),1) if predicate(s)]
+def elfmeta(p):
+ with p.open('rb') as f:h=f.read(64)
+ assert h[:4]==b'\x7fELF';end='<' if h[5]==1 else '>';d=subprocess.run(['readelf','-d',str(p)],capture_output=True,text=True);syms=subprocess.run(['readelf','--dyn-syms','--wide',str(p)],capture_output=True,text=True)
+ return {'path':str(p.relative_to(W)),'sha256':hf(p),'bytes':p.stat().st_size,'first64_hex':h.hex(),'class':h[4],'data_encoding':h[5],'machine':struct.unpack_from(end+'H',h,18)[0],'flags_hex':hex(struct.unpack_from(end+'I',h,36 if h[4]==1 else 48)[0]),'DT_NEEDED':re.findall(r'\(NEEDED\).*?\[([^\]]+)\]',d.stdout),'SONAME':re.findall(r'\(SONAME\).*?\[([^\]]+)\]',d.stdout),'SQLite_symbols':[{'symbol':line.split()[-1],'undefined':bool(re.search(r'\bUND\b',line))} for line in syms.stdout.splitlines() if re.search(r'\b(?:sqlite_open|sqlite_version|sqlite3_open|sqlite3_exec|sqlite3_close|sqlite_exec|sqlite_close)\b',line)],'readelf_returncodes':{'dynamic':d.returncode,'dynsyms':syms.returncode},'symbol_absence_scope':'Selected dynamic symbol output only, not all internal functions/callers/bindings'}
+selected=['home/bticino/drivermanager/bin/bt_driver','home/bticino/drivermanager/bin/bt_drivers','home/bticino/drivermanager/modules/libmhshared.so.1','home/bticino/drivermanager/modules/libsqlite.so.0','home/bticino/drivermanager/modules/libQt5Core.so.5','home/bticino/drivermanager/modules/libQt5Script.so.5','usr/lib/libsqlite3.so.0.8.6','usr/lib/libsqlite.so.0.8.6','home/bticino/bin/coso','home/bticino/bin/bt_daemon','home/bticino/bin/dedrifupdater']
+comparisons=[];elfs=[]
+for rel in selected:
+ present={}
+ for label,root in [('normal',A/'rootfs'),('recovery',A/'recovery')]:
+  p=root/rel
+  if not p.is_file() or p.is_symlink():continue
+  pinned(p);meta=elfmeta(p);meta['component']=label;elfs.append(meta);present[label]={'bytes':p.stat().st_size,'sha256':hf(p)}
+ comparisons.append({'path':rel,'instances':present,'whole_file_equal':present.get('normal')==present.get('recovery') if len(present)==2 else None,'scope':'Packaged byte equality only, not environment/binding/runtime equality'})
+startup={}
+for label,root in [('normal',A/'rootfs'),('recovery',A/'recovery')]:
+ rows=[]
+ for rel,pred in [('etc/inittab',lambda s:'si::sysinit:' in s or re.match(r'^id:[0-6]:initdefault:',s)),('etc/init.d/rcS',lambda s:s.strip().startswith('exec /etc/init.d/rc ')),('etc/init.d/bt_daemon-apps.sh',lambda s:'bt_daemon &' in s or s.strip().startswith('cd ')),('home/bticino/drivermanager/bt_driver',lambda s:re.match(r'^\s*(?:DM_ROOT|BT_DRIVER|LD_LIBRARY_PATH|export LD_LIBRARY_PATH)=',s) or re.match(r'^\s*(?:exec\s+)?(?:\$\{?DM_ROOT\}?/)?bin/bt_driver\b',s))]:
+  p=root/rel
+  if p.is_file() and not p.is_symlink():pinned(p);rows.append({'path':str(p.relative_to(W)),'lines':safe_lines(p,pred)})
+ syms=A/(label+'-symlinks.json');pinned(syms);s=json.loads(syms.read_text());rows.append({'symlink_metadata_source':str(syms.relative_to(W)),'metadata_only_runlevel_aliases':[{'path':k,'target':v} for k,v in s.items() if k.startswith('etc/rc') and any(t in v for t in ['bt_daemon-apps','dedrifu','watchdog'])]});startup[label]=rows
+xmls=[]
+for label,root in [('normal',A/'rootfs'),('recovery',A/'recovery')]:
+ for rel in ['home/bticino/drivermanager/manifest.xml','home/bticino/sp/dbfiles_ws.xml','home/bticino/cfg/stack_open.xml']:
+  p=root/rel
+  if not p.is_file() or p.is_symlink():continue
+  pinned(p);r=ET.parse(p).getroot();row={'component':label,'path':str(p.relative_to(W)),'root_tag':r.tag,'tag_counts':dict(Counter(e.tag for e in r.iter())),'source_line_count':len(p.read_text().splitlines())}
+  if rel.endswith('manifest.xml'):row['safe_version_metadata']=[{'element':e.tag,'text':(e.text or '').strip()} for e in r.iter() if e.tag=='version'];row['scope']='Framework manifest version distinct from outer firmware label; changelog/body and installedstate not inferred'
+  elif rel.endswith('stack_open.xml'):row['declared_client_names']=[e.findtext('name') for e in r.iter() if re.fullmatch(r'client_\d+',e.tag) and e.findtext('name')];row['scope']='Selected declared client names only, other config values not exported; no activation/hardware inference'
+  else:row['scope']='XML metadata tags only, not a relational DB schema or configured rows'
+  xmls.append(row)
+p=A/'rootfs/home/bticino/drivermanager/modules/libmhshared.so.1';data=p.read_bytes();literals=[]
+for m in re.finditer(rb'[ -~]{6,4096}',data):
+ s=m.group().decode('ascii')
+ if s=='/tmp/plugin.shared.sqlite' or re.match(r'^CREATE TABLE shared\s*\(',s):literals.append({'file_offset':m.start(),'literal':s,'raw_bytes_hex':m.group().hex(),'scope':'Original constant only; no instruction/caller/call-argument/order/runtime join proved'})
+role=W/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0198-f459-driver-manager.md';pinned(role);pinned(B/'acquisition.json');pinned(A/'extraction-summary.json')
+result={'artifact_id':'firmware-f459-020105','archive_sha256':json.loads((B/'acquisition.json').read_text())['sha256'],'source_scope':'Fresh F4592.1.5 own ELF32LE ARM headers, selected dependencies/startup/XML metadata and database leads; no original code/body/native execution','selected_ELF':elfs,'normal_recovery_comparison':comparisons,'startup':startup,'xml_metadata':xmls,'shared_store_literals':literals,'product_role_source':str(role.relative_to(W)),'database_lead':'libmhshared imports sqlite3_open and DT_NEEDEDlibsqlite3; separate module libsqlite exports sqlite_open. Literal/tableDDL are source constants, not an extracted populated DB or executed CREATE/open. SQLite2 and3 interfaces not conflated.','original_execution':0,'SQL_schema_or_data_execution':0,'closed_routes':'No authentication/receiving/transport/session/framing/MQTT/libjel bodies examined; names/config tags are not physical roles'}
+save(O/'SOURCE.json',result);save(O/'INPUT_PINS.json',pins)
+report='''# F4592.1.5 first exploration
+
+The retained original archive is identified by acquisition.json/SOURCE.json. Curated OWN-DEV-0198 supplies the Driver Manager role; generic application/library names do not establish physical hardware or installed capability. Normal and recovery images and selected own ELF32 little-endian ARM headers are fresh source evidence, not transferred F454/MHS/F46 layouts.
+
+## Application and startup structure
+
+Normal/recovery contain a separate home/bticino/drivermanager tree with a top-level shell wrapper and a different bin/bt_driver ELF. The latter is a statically linked ELF without section headers in host file/readelf metadata; it is not the wrapper script. Packaged Qt5 and framework modules remain candidate components, not active bindings. manifest.xml's framework version2.1.0 is separate from outer firmware2.1.5. Safe inittab/rcS source requests and daemon startup lines, plus runlevel aliases as metadata, identify selected declared startup structure. Target scripts/services were not run. Complete ordering/arguments/configuration/providers/installation remain open.
+
+## Database and structured-data leads
+
+The selected libmhshared.so.1 has an undefined sqlite3_open symbol and DT_NEEDEDlibsqlite3.so.0. Its original constants include /tmp/plugin.shared.sqlite and CREATE TABLE shared(pluginname,key,value,persistent default0,PRIMARY KEY(pluginname,key)) with original exact DDL lengths/types/offsets/bytes retained in SOURCE.json. These are import and literal evidence only: no code/caller/argument join, actual database creation, persistence behavior, rows or query execution is proved. The schema-looking DDL is not an extracted database schema observation.
+
+A separate packaged modules/libsqlite.so.0 exports sqlite_open and sqlite_version (SQLite legacy interface). It must not be equated with the SQLite3 import/provider just because both filenames contain sqlite. The central datastore scan supplies actual file-header inventory; this packet does not duplicate SQL/schema parsing. dbfiles_ws.xml is an XML metadata artifact, not a SQLite file by name. Full XML contents/config values and private key/cert/credential values are not exported.
+
+## Reproduction and limits
+
+collect_firstpass_v1.py reads verified original regular files, safe selected startup lines, metadata-only links, ELF headers/dynamic symbol tables, whitelisted XML fields and exact two local DB literals. INPUT_PINS.json gives original path/size/SHA256; SOURCE.json gives original header bytes, literal offsets/bytes, namespaced version/tag/client metadata and selected normal/recovery equality. No filename/path absence is a product-capability claim; no provider/runtime/physical/lifetime semantics follow from a declared component.
+
+No vendor/native/target/OS/services/network/bus/mount execution, SQL query or live contact occurred. Closed authentication/receiving/transport/session/framing/MQTT/libjel bodies stay closed. Further work should qualify one local shared-store constructor/consumer and natural configured driver/assets before any runtime or public-protocol claim. This is a first pass, not complete source/Device approval.
+''';(O/'REPORT.md').open('x').write(report)
+outputs=[O/'SOURCE.json',O/'INPUT_PINS.json',O/'REPORT.md'];manifest={'collector_sha256':hf(Path(__file__)),'outputs':{p.name:{'bytes':p.stat().st_size,'sha256':hf(p)} for p in outputs},'original_execution':0};save(O/'OUTPUT_MANIFEST.json',manifest)
+D=O/'first-candidate';D.mkdir();copies={}
+for p in [Path(__file__),*outputs,O/'OUTPUT_MANIFEST.json']:
+ b=p.read_bytes();(D/p.name).open('xb').write(b);copies[p.name]={'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()}
+save(D/'INDEX.json',{'files':copies});print(json.dumps({'firstpass':'PASS','selected_ELF_instances':len(elfs),'input_pins':len(pins),'db_literals':len(literals),'outputs':4,'first_copies':len(copies),'original_execution':0}))

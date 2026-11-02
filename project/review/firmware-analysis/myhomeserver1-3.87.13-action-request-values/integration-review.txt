@@ -1,0 +1,40 @@
+# Selected action-request values documentary review
+
+PASS, no correction requested. I compared the exact public reference, overview insertion, capsule and coordination candidates with the frozen values report and independent original-source review. This is a bounded documentary/product/method comparison, using my earlier action-output review as context, not a fresh original-byte audit, whole-source semantic certification or runtime experiment. I ran no collector, original/provider/UUID/JSON code, semantic fixture or CPU replay.
+
+The promoted constants are correctly source-owned: descriptor version 2.0 and method light.setStatus follow actual construction/assignment requests, not a class-name inference or observed external exchange. The temporary/final descriptor representations, primary virtual method, standalone parameter helper, raw action, compiled runner, captures and parameter records remain distinct. Two UUID request pairs and the later assignment establish source order under normal lock/string/UUID/provider returns, without generating IDs or claiming randomness, uniqueness, correlation, defects or live support. Outer UUID-request-derived id is explicitly separate from the captured target string assigned to params.id.
+
+The selected parameter result is properly tied to actual caller dataflow rather than equal offsets. Source SP148 ID presence, descriptor SP404 presence76 initially zero, out-of-line ID merge to descriptor80/76, concrete SP184/188 to SP516/520 pair copy and actual converter SP480 argument connect the distinct records under valid-object/branch/copy/no-mutation/provider premises. The signed-positive guard belongs to the captured-word caller path; the converter presence36 arm requests the signed int without repeating that guard. No physical speed unit, universal domain, padding meaning, arbitrary record admission, complete payload or second-callable parameter equality/restoration follows.
+
+The integration narrows the previous descriptor/conversion gap without opening output 0x5dda0 or closed receiving/transport/MQTT/libjel/auth/session/framing bodies. It leaves full JSON behavior, other merges/fields, configured assets, effective binding/type/freshness, natural order, lifetime/error/unwind/concurrency, delivery and physical results open. The curated product role is not broadened by the light method spelling. Missing extras80/81/94/95 and wider Device/source gates remain unresolved.
+
+New execution, semantic models/fixtures and replays remain zero. The saved MHS ledger stays one double-provider corpus/eight entries/340 original code-hook visits/zero C primitives/12 definition redirects/eight EXIT/zero stops/360 hooks, plus four setup relocations. Historical source-only scopes and F454/MH202 ledgers/history limits remain distinct. The noon-Paris deadline/new-source cutoff are local coordination limits, not firmware behavior or an already completed deletion receipt.
+
+## Preservation and completion boundary
+
+Verified all 10 current pins and exact frozen candidate copies, all 30 SOURCE_EXPORTS source/published pairs, 23 source first-candidate copies, four coordination copies, source-review copy and reference first copy. The public page exactly matches REFERENCE_CANDIDATE. The preserved overview and one exact insertion reconstruct the current overview byte-for-byte. Current source/output history reports no overwritten candidate or canonical failure; exploratory unrelated pools/functions are not promoted as selected instruction proof. No author/source/prior dossier was edited.
+
+Checked 42 local Markdown link occurrences and one fragment: all 40 existing targets and the fragment resolve. Only the intended later capsule integration-review.txt and validation.json remain pending actual assembly. Final protection/identity, ESG/ECV/diff and actual control/closure receipts remain subsequent parent-owned gates against actual saved artifacts. This review pre-certifies neither future bytes nor placeholders or missing-link exemptions.
+
+## Exact reviewed pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-action-request-values.md` | `c9b66541bd2d45a02188a414363a91254df8ccf61d16a752bbf8c79212f3434c` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md` | `217ab6d2fb2edc99c6befa30677edd9fc44c7d09269ed68d5ca207ed28fa27ae` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-action-request-values/README.md` | `7a50eb5c88f9d72842006a595c657116ca896ea4d3238f6b633a987d50929d0f` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-action-request-values/SOURCE_EXPORTS.json` | `957c046e72652f5e992a449abc1ab97d00e9d55a647278808cbbd17b6fc04df5` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-request-values/SYNTHESIS.md` | `d0b3a867a93f57d179c3fb3f6a3c0859aa286aaf508a2461a6a5fc8221c5cd8a` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-request-values/COVERAGE.md` | `6904eeb8c84fffb392a403a1589c67cb7ce8df0d233c80f1ab6a56625a0659f9` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-request-values/RANKED_REMAINING_QUESTIONS.md` | `7a22a02af2a33636765757e2d72c4858be87e1ad84ce639bfd185eaa28f18dfd` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-request-values/RUN_LOG.md` | `c7eb237fb586e50de5a4779e5b2575f1b5ec23122d70109d82349491ea708130` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-request-values/reviews/values-source-review.md` | `493d170ec0ad6ac4e8da3ddcaee8f6aa06df219bb92013ed7e2aaae955e93217` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-request-values/PARENT_SOURCE_SPOTCHECK.json` | `5e82f002b319a50423e1409008ab7283e490681f6dff2bc2a4567e60a9536ea0` |
+| `values/REPORT.md` | `6a74a40a5c0eababb207f405c944205dc703203486d7698b4a1ac0d7246ecb4c` |
+| `values/collect_values_v1.py` | `ba3beec5e7ed2cc7ac2b13255ab263113b0572b3293e522f87148d1bdc70cb82` |
+| `values/OUTPUT_MANIFEST.json` | `539dfbcb94f669a6e81928b22402f0b6daea4d34995b5c91d66d9e8f1c3d9488` |
+| `values/first-candidate/INDEX.json` | `29843c8079f1e994286cabc268b6b867813c1b5f86017479c2f9bf750d2d4453` |
+| `REFERENCE_CANDIDATE.md` | `c9b66541bd2d45a02188a414363a91254df8ccf61d16a752bbf8c79212f3434c` |
+| `integration/DOCUMENT_PATCH.json` | `113ccf0f68e4d197befec7b7506d368d0948ff3dabc186e29788fd169651ebc4` |
+| `integration/review-candidate/INDEX.json` | `5495f821a1d69a8b36e624614730e8af386019ac8fe7235f70fdec3f1507a079` |
+| `SOURCE_CHECKS.json` | `467d8c13e6cd520e83ba7ff026485c23132fc4fcd6e8039df06e97bdb76ff7c8` |

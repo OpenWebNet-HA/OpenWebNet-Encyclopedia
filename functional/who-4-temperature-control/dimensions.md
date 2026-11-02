@@ -236,3 +236,17 @@ See [Addressing](addressing.md) for zone/probe/actuator forms, [`WHAT` Reference
 ## Evidence basis
 
 Published payloads and page references above come from the [Temperature Control Specification](https://archive.openwebnet-ha.org/sha256/35/68/35685145d0db92e2f45bea1e45bf878b06927cfe5756aeb774436cf7bdc16d89.pdf), version 2.0.0. ScenarioDevices extensions and reported later-device behavior remain separately identified. The same PDF also defines [Temperature Control Fault Diagnostics](../../diagnostics/temperature-control-faults.md) under `WHO 1004`; those are not functional `WHO 4` dimensions.
+
+## F454 2.0.51 implementation boundary
+
+The inspected F454 `2.0.51` temperature backend and packaged web client use conversions that must remain separate from the published wire domains and the historical touchscreen client:
+
+| Selected path or source-derived example | Representation | Interpretation |
+| --- | --- | --- |
+| Short unsigned B5 input `F5..FF` | Integers `501..511`, formatted `0501..0511` | No interval-specific clamp or sentinel translation in this branch; physical meaning unresolved |
+| Selected DIM0 / DIM15-selector-1 backend mappings | Preserve `0501` / `0511` and `1010` / `1501` respectively as JSON strings | The matching event/cache/view path passes the strings to the renderer without sign compensation |
+| Packaged web converter | Drops the first character of a four-character string before decimal formatting | `0501..0511` derive labels `50.1..51.1 °C`; `1010` derives positive `1 °C`, unlike the historical signed converter |
+| Numeric zero from `0000` | Renderer selects a dash label | A display policy, without proof of a missing sensor |
+| Celsius setpoint spinner | Indices `1..71` map to `5..40 °C` in `0.5 °C` steps | Does not widen the DIMENSION 14 write domain |
+
+The short B4/B5 measured-temperature route and signed extended DIMENSION 15 decoder are separate contracts. These examples are static code/dataflow derivations, not browser execution or observed sensor/display results. The [temperature representation reference](../../reverse-engineering/firmware-analysis/f454-2.0.51-follow-up.md#temperature-conversion-and-client-representation) and [backend-to-client mapping](../../reverse-engineering/firmware-analysis/f454-2.0.51-continuation.md#temperature-frame-to-json) retain the source scope and unresolved physical input/alternate-path behavior.

@@ -1,0 +1,508 @@
+{
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/REPORT.md",
+      "published": "catalogue-report.txt",
+      "bytes": 12391,
+      "sha256": "03e91bcd39e0c1c1dc4d0b08145981bcd1ea73556f97e868b0113172b33c835a"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/collect_owner_v1.py",
+      "published": "catalogue/collect_owner_v1.py",
+      "bytes": 12857,
+      "sha256": "8778eed02bac5c29d6901b5a507bb9d0e6b5c8bfef8f174d7f3a468571d6cebf"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/HOST_TEXT_MODEL.json",
+      "published": "catalogue/HOST_TEXT_MODEL.json",
+      "bytes": 768,
+      "sha256": "00b1f9f85eb03681a0069f29792d88d49a75ed5ee984acaafedbe0ca8e19b328"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/INPUTS.json",
+      "published": "catalogue/INPUTS.json",
+      "bytes": 876,
+      "sha256": "80c88c6b1222a49930faf09d0b9d6a2a92aef9a407342dad018f0b48aca8603e"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/METHOD.json",
+      "published": "catalogue/METHOD.json",
+      "bytes": 720,
+      "sha256": "c56417454bac8fbd2ddaaf5d51f99e8209203cb76283b58a9f49cfc6391be718"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/ORIGINAL_SOURCE.json",
+      "published": "catalogue/ORIGINAL_SOURCE.json",
+      "bytes": 11768,
+      "sha256": "4d2fb1f280a135a7019a287a63cb34db4fe51b851f9d1b0d22b8a70a10807605"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/OWNER_ALIAS_LEDGER.json",
+      "published": "catalogue/OWNER_ALIAS_LEDGER.json",
+      "bytes": 2660,
+      "sha256": "0d9254fc8c6e38af6a7316d79026d614379f0844b82d724a7315607234b8071d"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/SQL_TEMPLATE.json",
+      "published": "catalogue/SQL_TEMPLATE.json",
+      "bytes": 3506,
+      "sha256": "f7cbb38253d5a7a2ade9d3211e539a52d5ce9590d157f67dc06b322f62552fa5"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/base-query-copy-and-context.txt",
+      "published": "catalogue/spans/base-query-copy-and-context.txt",
+      "bytes": 1716,
+      "sha256": "216702eeef6029f2da89d94be4d6df6762aa4bde5be9173b981020e9bf5dde17"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/callable-invoker.txt",
+      "published": "catalogue/spans/callable-invoker.txt",
+      "bytes": 1271,
+      "sha256": "aa967d6411506b40d5089c2f253ad63cbf08347bd0867c7cb7cb66970dc43d44"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/context-getter-brand.txt",
+      "published": "catalogue/spans/context-getter-brand.txt",
+      "bytes": 184,
+      "sha256": "05db96823fe7d1a9bace1c8b08a3fb03a215362bec3aa6df323cd0a1b91160c3"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/context-getter-line.txt",
+      "published": "catalogue/spans/context-getter-line.txt",
+      "bytes": 184,
+      "sha256": "b0e38ae5a70f5774fe7df9f84251c35efa2829e5b93b9a8adf71d65582cc2fce"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/context-getter-model.txt",
+      "published": "catalogue/spans/context-getter-model.txt",
+      "bytes": 184,
+      "sha256": "07ebbcfe47031123f221d07b36d9205437fe65dfe99566ef1579e8db28928b27"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/factory-inline-query-results.txt",
+      "published": "catalogue/spans/factory-inline-query-results.txt",
+      "bytes": 2349,
+      "sha256": "aeabaab81fde339af4b353c24868692f23234984dbe937bbb423729fb3ac71e4"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/factory-prologue-and-base-vtable.txt",
+      "published": "catalogue/spans/factory-prologue-and-base-vtable.txt",
+      "bytes": 1873,
+      "sha256": "cedae37d2fcd6c8e66ae9a42cc1221fc5eb472fa168045dc3f8211dd0da46f46"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/initializer-veneer.txt",
+      "published": "catalogue/spans/initializer-veneer.txt",
+      "bytes": 177,
+      "sha256": "84707013c0a1ab4b40396018f151ab572f7c35017c90d6841c07cc8d2c417539"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/natural-callable-invocation.txt",
+      "published": "catalogue/spans/natural-callable-invocation.txt",
+      "bytes": 1011,
+      "sha256": "9db88cbce1a88a5d6b963c1d68bfefe2648b4adc17a82a31d68c43482c287d29"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/natural-registry-lookup.txt",
+      "published": "catalogue/spans/natural-registry-lookup.txt",
+      "bytes": 1079,
+      "sha256": "223417d5c992bc92373159db5dffae4e299c54a6b5f6e24e514925e55747f47c"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/reader-column-alias.txt",
+      "published": "catalogue/spans/reader-column-alias.txt",
+      "bytes": 1401,
+      "sha256": "b558f52f4ecf632c146885800383f41f8fa3a8fda4af95eb244c37b10af49e00"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/replace-brand-modobj.txt",
+      "published": "catalogue/spans/replace-brand-modobj.txt",
+      "bytes": 1619,
+      "sha256": "8fa98f2df987e1075f8db953b8e794410b7869d6454d4d0e751e4599c7a6cd88"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/replace-key-object.txt",
+      "published": "catalogue/spans/replace-key-object.txt",
+      "bytes": 1543,
+      "sha256": "56bb8f430bd180c73e6b1a6bcfce5cecd72883051e87ba62be73c14796ff5980"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/replace-line-modobj.txt",
+      "published": "catalogue/spans/replace-line-modobj.txt",
+      "bytes": 1618,
+      "sha256": "b566554c1ee900ccfe1e80d538d08e4e4444bd6f094a5bfaeac2d9517c25f130"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/replace-modobj.txt",
+      "published": "catalogue/spans/replace-modobj.txt",
+      "bytes": 1500,
+      "sha256": "e38173b731bdc48c95eb93169aba29225f6191b4a0e393d3419556599af9655c"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/signed-decimal-string.txt",
+      "published": "catalogue/spans/signed-decimal-string.txt",
+      "bytes": 4954,
+      "sha256": "62c8cef94512ca7efa28693669a4bb3e33f8e65d8a5afb8bc077209aff5dc6af"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/startup-callable-columns.txt",
+      "published": "catalogue/spans/startup-callable-columns.txt",
+      "bytes": 1158,
+      "sha256": "87e81aa9f93f4229bd59516347f25660f003d0d7bfb149a699d2d1f1ae09a75a"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/startup-key139-record.txt",
+      "published": "catalogue/spans/startup-key139-record.txt",
+      "bytes": 715,
+      "sha256": "672f5a4b267397ada844c856c429dc0a44fd9dab28f2a5db1687083dee0cd00a"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/startup-registry-construction.txt",
+      "published": "catalogue/spans/startup-registry-construction.txt",
+      "bytes": 754,
+      "sha256": "75a70ccaabeced345d442e7a076c2f2bda6926e516c9117c4c446be5a79b1857"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/startup-registry-setup.txt",
+      "published": "catalogue/spans/startup-registry-setup.txt",
+      "bytes": 872,
+      "sha256": "1e154e62c13d83dd5d05053e9d0d9306c0314228b9f92ec6f6e10ef62b241e25"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/startup-template-copy.txt",
+      "published": "catalogue/spans/startup-template-copy.txt",
+      "bytes": 726,
+      "sha256": "b0f516d0e2c79845ec739764cd55e53cdd6d5bfd6e49c3cd8d2fddcba65755fb"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/spans/string-range-copy.txt",
+      "published": "catalogue/spans/string-range-copy.txt",
+      "bytes": 2472,
+      "sha256": "4647351c90210d5ecae01413077103a177283bab9f50ecccebc700ce40ddd7cc"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/OUTPUT_MANIFEST.json",
+      "published": "catalogue/OUTPUT_MANIFEST.json",
+      "bytes": 4374,
+      "sha256": "c8570623c3a8221d70278bafa4b95d7b7fb6225b5ae646686e98150d449a8986"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/REPORT.md",
+      "published": "factories-report.txt",
+      "bytes": 8606,
+      "sha256": "72009ae30fcb92becd998cb75f9fbef0de9d107f53cca4fca18f068c2d95e544"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/collect_factories_v1.py",
+      "published": "factories/collect_factories_v1.py",
+      "bytes": 9390,
+      "sha256": "e2be14b5a977ffd12a02b251d1211de8f72b6c715451e28100d2fc3b49bae504"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/CRITICAL_BYTES.v1.json",
+      "published": "factories/CRITICAL_BYTES.v1.json",
+      "bytes": 721,
+      "sha256": "458c0e6071bce8ae1649e17dc9bdb599e7a343b0250c960adb4bc7f178d5983e"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/DIRECT_CALLS.v1.json",
+      "published": "factories/DIRECT_CALLS.v1.json",
+      "bytes": 549,
+      "sha256": "b1e14a43beee928e5e94e7ef2a1a808d56b622b485d93961839cb8477bc89290"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/INPUTS.v1.json",
+      "published": "factories/INPUTS.v1.json",
+      "bytes": 843,
+      "sha256": "c17952f2b48ca2a8113264588e74394b73a6e43ddbb3949f59459aaac8b1f6ff"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/LOCAL_ENUM_TABLES.v1.json",
+      "published": "factories/LOCAL_ENUM_TABLES.v1.json",
+      "bytes": 11345,
+      "sha256": "e70a44fd256c25708ab3eb191409e8b5c2febb1def52a5905f963bcdc53a94e5"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/METHOD.v1.json",
+      "published": "factories/METHOD.v1.json",
+      "bytes": 765,
+      "sha256": "121668363a73e95546a18280e11b4aa33a3869e048dfc224a90387dcb51c29ec"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/PIC_LITERALS.v1.json",
+      "published": "factories/PIC_LITERALS.v1.json",
+      "bytes": 1192,
+      "sha256": "62055f18a6ffa1caa27fc569bd8bc0e0515e3ded3cc9dfac2ad7c112b6e4fe10"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/PROVIDERS.v1.json",
+      "published": "factories/PROVIDERS.v1.json",
+      "bytes": 1489,
+      "sha256": "a43299aa9f7ccb6dd6eff6597a7bde04eece6097f66091d115b368a30ce56f5b"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/SELECTED_DISPATCH.v1.json",
+      "published": "factories/SELECTED_DISPATCH.v1.json",
+      "bytes": 850,
+      "sha256": "4dd3b3c86ecb016d775b6b15c3f0a4f96358967ca7b577230bb48821b2269235"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/SOURCE_SPANS.v1.json",
+      "published": "factories/SOURCE_SPANS.v1.json",
+      "bytes": 2259,
+      "sha256": "17759a4d4b185f000cdac9e75ea3e05079eaafc53031a3dd23e765393b190ea6"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/VTABLE_IDENTITIES.v1.json",
+      "published": "factories/VTABLE_IDENTITIES.v1.json",
+      "bytes": 881,
+      "sha256": "70573186162f607b006efff6d23194daf19b2bff62a3020d9d03a4c09c8e2667"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/spans/action-cleanup-and-advance.txt",
+      "published": "factories/spans/action-cleanup-and-advance.txt",
+      "bytes": 4491,
+      "sha256": "9085473d960ae5d2af6fee982bf55b5646fbcc40cb2a81ca51cdb4909db15af5"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/spans/action-discrimination.txt",
+      "published": "factories/spans/action-discrimination.txt",
+      "bytes": 6665,
+      "sha256": "90d4dc8f41a88d71cc2380e4b47a6d2e2d294c860d5a251e1494817ae3b242d8"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/spans/action-pools.txt",
+      "published": "factories/spans/action-pools.txt",
+      "bytes": 3592,
+      "sha256": "abbadebf2d45dd77e9ee65d7e9e6da5fb55296507c38df1b0cb4470f0868fbc5"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/spans/base-action-copy.txt",
+      "published": "factories/spans/base-action-copy.txt",
+      "bytes": 5917,
+      "sha256": "3295cf9984981a3f5779d82792e862318f702cedfe4eb6caa084b1fcf969bbe1"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/spans/base-action-json.txt",
+      "published": "factories/spans/base-action-json.txt",
+      "bytes": 9428,
+      "sha256": "53e2d9e1f169217225a0572c934d1ef35fc05204a87b53283980211523b4e9c4"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/spans/condition-discrimination.txt",
+      "published": "factories/spans/condition-discrimination.txt",
+      "bytes": 6805,
+      "sha256": "63e3bd6902500672c082dd5881fce7789da4f27cbbdd5b18bd7dc6f12a2b379e"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/spans/condition-pools.txt",
+      "published": "factories/spans/condition-pools.txt",
+      "bytes": 682,
+      "sha256": "9bebee301ddf55211f2f6676341afb7b3cecb1e03af6f825d5c1d878396c5cd6"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/spans/pointer-vector-append.txt",
+      "published": "factories/spans/pointer-vector-append.txt",
+      "bytes": 1145,
+      "sha256": "384862e39ea7f2617aa1b143d39007c0ccd23909d3a70f5f0ac526e872892548"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/spans/selected-scenario-and-sleep.txt",
+      "published": "factories/spans/selected-scenario-and-sleep.txt",
+      "bytes": 4605,
+      "sha256": "4f6d61f7dbebe2235ccf36a550277b7e556bfc0ced0e2f8e8d0f7ed844c54958"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/spans/trigger-discrimination.txt",
+      "published": "factories/spans/trigger-discrimination.txt",
+      "bytes": 7164,
+      "sha256": "5bc991a63ea02358059c5192f4aab9fe75426bb82bf1f50576b299828afb0673"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/spans/trigger-pools.txt",
+      "published": "factories/spans/trigger-pools.txt",
+      "bytes": 690,
+      "sha256": "fa34e12d1ca3c8e98f7b0c297673f179eb9ecf5d3d2c62476b2e207c05214897"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/factories/OUTPUT_MANIFEST.v1.json",
+      "published": "factories/OUTPUT_MANIFEST.v1.json",
+      "bytes": 3079,
+      "sha256": "d90a9df453acf0a461505977026c85cd7056ab29eb18c471a8c4158a8e1316fa"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/REPORT.md",
+      "published": "runner-report.txt",
+      "bytes": 7311,
+      "sha256": "dc4692b0bbac6d1aa84574ad6aa02b632bb47864d03b644e3c66a9b8a408661e"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/collect_runner_v1.py",
+      "published": "runner/collect_runner_v1.py",
+      "bytes": 6431,
+      "sha256": "39c3f65512cd7bceec704e3242a76d320eb1ad6f903b847f47a4e9cc8a6aef63"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/ACTION_TABLE.v1.json",
+      "published": "runner/ACTION_TABLE.v1.json",
+      "bytes": 180,
+      "sha256": "1cc707756e1968253199baed523ecefd8b8be6b7f51b8fc02c106d9633720361"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/ENABLED_LOCATOR.v1.json",
+      "published": "runner/ENABLED_LOCATOR.v1.json",
+      "bytes": 265,
+      "sha256": "417e6fae91131a544ed93e3e65b3465029f706801739946fdde610c35030f1f1"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/EXIDX.v1.json",
+      "published": "runner/EXIDX.v1.json",
+      "bytes": 288,
+      "sha256": "a1298c3af6d961779a3a478101436c5d9553b6dc4f4419f7837e431dcad7798b"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/INPUTS.v1.json",
+      "published": "runner/INPUTS.v1.json",
+      "bytes": 426,
+      "sha256": "2a5b1cf06374059b196b1b8da2040977c71938708004fdf4129f930f63e91e97"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/METHOD.v1.json",
+      "published": "runner/METHOD.v1.json",
+      "bytes": 651,
+      "sha256": "0c74a5b5e2fb8908e9d53dddee5959345e66795fa8a157c4a943eb9d81633042"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/PIC_POOLS.v1.json",
+      "published": "runner/PIC_POOLS.v1.json",
+      "bytes": 634,
+      "sha256": "699af79c6960ad9383ffe5542a9f07d56df8197030b73fe3464c71f741345713"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/SOURCE_SPANS.v1.json",
+      "published": "runner/SOURCE_SPANS.v1.json",
+      "bytes": 2745,
+      "sha256": "3412b1ddd48fb451eaadc51ef49370c0d046f0a580720752e4d10dcd61e170d6"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/VTABLE_RELOCATIONS.v1.json",
+      "published": "runner/VTABLE_RELOCATIONS.v1.json",
+      "bytes": 593,
+      "sha256": "d00473adbd79de35c50cdc4aec844f60f358d350035a8d96626dac5166f1fe00"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/spans/constructor.txt",
+      "published": "runner/spans/constructor.txt",
+      "bytes": 1302,
+      "sha256": "32f24f8ea5f1cec0daf226d43d69c7ffe3a74e91d9c5cea40271fe69bc400ff6"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/spans/initializer-action-append.txt",
+      "published": "runner/spans/initializer-action-append.txt",
+      "bytes": 3164,
+      "sha256": "25597d69a335107cd8836a1fd8ad87cf3d26dee262aa42ddb688478456181c73"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/spans/initializer-action-dispatch.txt",
+      "published": "runner/spans/initializer-action-dispatch.txt",
+      "bytes": 3780,
+      "sha256": "d44207fafa8ee3a91189d1844e6b1e59c803f7a35ef1e27623020c04debee27e"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/spans/initializer-prefix.txt",
+      "published": "runner/spans/initializer-prefix.txt",
+      "bytes": 4320,
+      "sha256": "722d9d681150dbb522fd06878664a80967d10dec3c41d324f0f4d34b208a3001"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/spans/launch-conditional.txt",
+      "published": "runner/spans/launch-conditional.txt",
+      "bytes": 16811,
+      "sha256": "bedb57c05f04e88b1259d770b4590bf7672cad4b1cd040a21ddc50655e73eb97"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/spans/launch-direct.txt",
+      "published": "runner/spans/launch-direct.txt",
+      "bytes": 16999,
+      "sha256": "d78fa59d5be72debf03d18cbd0fcfa7e707cbd799740474f4bb7c8d2012bcf01"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/spans/stop-request.txt",
+      "published": "runner/spans/stop-request.txt",
+      "bytes": 7511,
+      "sha256": "1d08b986f375b715acd84d133a6ce38536b2789d3ca070e3f0239d09168b2707"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/spans/worker-actions.txt",
+      "published": "runner/spans/worker-actions.txt",
+      "bytes": 33340,
+      "sha256": "e1397bb97af57a83745b5ac5e88a696586f08bd9d15e924e1cdb087ffdbb8598"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/spans/worker-condition-prefix.txt",
+      "published": "runner/spans/worker-condition-prefix.txt",
+      "bytes": 3005,
+      "sha256": "a5d6fdbfef7e36f60dd4d2803b1ddab9a015bc181df55f1302269dc8c31e717b"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/spans/worker-condition-tail.txt",
+      "published": "runner/spans/worker-condition-tail.txt",
+      "bytes": 12667,
+      "sha256": "b8eeee542b5185cea2cb64e8eb4b9af3ff7ee929cebb660ba439cd329c581d59"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/OUTPUT_MANIFEST.v1.json",
+      "published": "runner/OUTPUT_MANIFEST.v1.json",
+      "bytes": 2463,
+      "sha256": "f92416180a6aa48b7d552243b6ea6081560b2c21834e532a00cb5b69d79ba2e8"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/SYNTHESIS.md",
+      "published": "synthesis.txt",
+      "bytes": 1639,
+      "sha256": "cb57f804eec06fa60d8469e7abe8b2b222235e687211b8c65692642355de37f9"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/COVERAGE.md",
+      "published": "coverage.txt",
+      "bytes": 1769,
+      "sha256": "a734a4753873fbdc8f3868740f22a7a720999a983a3bbb7046e905e4e43d0314"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/RANKED_REMAINING_QUESTIONS.md",
+      "published": "remaining-questions.txt",
+      "bytes": 1511,
+      "sha256": "9a14046ffe212dc90fbe8a49093a44b56847cb91d176dcbc090989ffca367448"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/SOURCE_CHECKS.json",
+      "published": "source-checks.json",
+      "bytes": 1340,
+      "sha256": "879d205ae2eddebc7ea118a20cec01513cecf254d40cf471fc5821bb88dc3b4d"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/reviews/CONSULTATION_PREFLIGHT.md",
+      "published": "preflight.txt",
+      "bytes": 3104,
+      "sha256": "8e70cb9a6afa51b80181749496bab862954eba7ad1bc38762a6419a373fa7859"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/reviews/catalogue-source-review.md",
+      "published": "catalogue-source-review.txt",
+      "bytes": 4943,
+      "sha256": "902f3914dcc6a1684f60b5035d2aacdf162fc9a04fb771422920944b116a94a2"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/reviews/factories-source-review.md",
+      "published": "factories-source-review.txt",
+      "bytes": 4334,
+      "sha256": "979d136e497c78afe9f0b46cbbac77d9a38c95b80ff3d00cba1741111cb438c2"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/reviews/runner-source-review.md",
+      "published": "runner-source-review.txt",
+      "bytes": 4895,
+      "sha256": "a3ba1e101e7147c1c86bee383160b1ad7027872fc9a3e0fcccb01683fff2165e"
+    }
+  ]
+}

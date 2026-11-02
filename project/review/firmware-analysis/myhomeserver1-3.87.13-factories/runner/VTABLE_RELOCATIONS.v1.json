@@ -1,0 +1,31 @@
+{
+  "base_va": "0x161de8",
+  "words": [
+    "0x0",
+    "0x164d84",
+    "0xa5651",
+    "0xa5669",
+    "0xa6d19",
+    "0x0",
+    "0x164d90",
+    "0xa5689",
+    "0xa56a1",
+    "0xa6d11"
+  ],
+  "worker_slots": [
+    {
+      "instruction_va": "0xa6d18",
+      "original_thumb_pointer": "0xa6d19",
+      "relocation_entry_va": "0x7f94",
+      "slot_va": "0x161df8",
+      "type": "R_ARM_RELATIVE"
+    },
+    {
+      "instruction_va": "0xa6d10",
+      "original_thumb_pointer": "0xa6d11",
+      "relocation_entry_va": "0x7fb4",
+      "slot_va": "0x161e0c",
+      "type": "R_ARM_RELATIVE"
+    }
+  ]
+}

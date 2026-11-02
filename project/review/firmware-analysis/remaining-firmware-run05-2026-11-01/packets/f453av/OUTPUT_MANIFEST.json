@@ -1,0 +1,21 @@
+{
+  "files": {
+    "INPUTS.json": {
+      "bytes": 2220,
+      "sha256": "b24fb5a230035a989acb5911b0a04f972eb0e67de0cf37ffbf827984e6956e5d"
+    },
+    "RECOVERY_CONTEXT.json": {
+      "bytes": 3269,
+      "sha256": "36ae44e59716de94b932e74e99b089de916c594facee9296676c4f99f701ff21"
+    },
+    "REPORT.md": {
+      "bytes": 5412,
+      "sha256": "fa4ee00fce4f0dda5a3e66754e9e44a00bb0c1455697256b41daa5ff36f913b9"
+    },
+    "SOURCE.json": {
+      "bytes": 5695,
+      "sha256": "25af62ff37b1571acf3925fca094ef32a4648faaa56ae315725be0525358c42c"
+    }
+  },
+  "scope": "Generated members excluding manifest itself"
+}

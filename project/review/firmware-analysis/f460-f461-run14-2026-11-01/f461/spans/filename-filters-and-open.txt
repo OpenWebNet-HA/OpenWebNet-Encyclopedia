@@ -1,0 +1,31 @@
+
+/home/bticino/bin/coso:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+000000000000572c <register_plugins@@Base+0x3c>:
+    572c:	b0000015 	adrp	x21, 6000 <_IO_stdin_used@@Base+0x6e0>
+    5730:	910b82b5 	add	x21, x21, #0x2e0
+    5734:	a90363f7 	stp	x23, x24, [sp, #48]
+    5738:	b0000017 	adrp	x23, 6000 <_IO_stdin_used@@Base+0x6e0>
+    573c:	910ba2f7 	add	x23, x23, #0x2e8
+    5740:	aa1403e0 	mov	x0, x20
+    5744:	97fff487 	bl	2960 <g_dir_read_name@plt>
+    5748:	aa1503e1 	mov	x1, x21
+    574c:	aa0003f3 	mov	x19, x0
+    5750:	b40004c0 	cbz	x0, 57e8 <register_plugins@@Base+0xf8>
+    5754:	97fff547 	bl	2c70 <g_str_has_prefix@plt>
+    5758:	34ffff40 	cbz	w0, 5740 <register_plugins@@Base+0x50>
+    575c:	aa1703e1 	mov	x1, x23
+    5760:	aa1303e0 	mov	x0, x19
+    5764:	97fff5af 	bl	2e20 <g_str_has_suffix@plt>
+    5768:	aa1303e1 	mov	x1, x19
+    576c:	d2800002 	mov	x2, #0x0                   	// #0
+    5770:	34fffe80 	cbz	w0, 5740 <register_plugins@@Base+0x50>
+    5774:	f9400ac0 	ldr	x0, [x22, #16]
+    5778:	f9400400 	ldr	x0, [x0, #8]
+    577c:	97fff56d 	bl	2d30 <g_build_filename@plt>
+    5780:	aa0003f8 	mov	x24, x0
+    5784:	52800061 	mov	w1, #0x3                   	// #3
+    5788:	97fff57a 	bl	2d70 <g_module_open@plt>

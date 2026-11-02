@@ -1,0 +1,74 @@
+{
+  "ACTION_TABLE.v1.json": {
+    "bytes": 180,
+    "sha256": "1cc707756e1968253199baed523ecefd8b8be6b7f51b8fc02c106d9633720361"
+  },
+  "ENABLED_LOCATOR.v1.json": {
+    "bytes": 265,
+    "sha256": "417e6fae91131a544ed93e3e65b3465029f706801739946fdde610c35030f1f1"
+  },
+  "EXIDX.v1.json": {
+    "bytes": 288,
+    "sha256": "a1298c3af6d961779a3a478101436c5d9553b6dc4f4419f7837e431dcad7798b"
+  },
+  "INPUTS.v1.json": {
+    "bytes": 426,
+    "sha256": "2a5b1cf06374059b196b1b8da2040977c71938708004fdf4129f930f63e91e97"
+  },
+  "METHOD.v1.json": {
+    "bytes": 651,
+    "sha256": "0c74a5b5e2fb8908e9d53dddee5959345e66795fa8a157c4a943eb9d81633042"
+  },
+  "PIC_POOLS.v1.json": {
+    "bytes": 634,
+    "sha256": "699af79c6960ad9383ffe5542a9f07d56df8197030b73fe3464c71f741345713"
+  },
+  "SOURCE_SPANS.v1.json": {
+    "bytes": 2745,
+    "sha256": "3412b1ddd48fb451eaadc51ef49370c0d046f0a580720752e4d10dcd61e170d6"
+  },
+  "VTABLE_RELOCATIONS.v1.json": {
+    "bytes": 593,
+    "sha256": "d00473adbd79de35c50cdc4aec844f60f358d350035a8d96626dac5166f1fe00"
+  },
+  "spans/constructor.txt": {
+    "bytes": 1302,
+    "sha256": "32f24f8ea5f1cec0daf226d43d69c7ffe3a74e91d9c5cea40271fe69bc400ff6"
+  },
+  "spans/initializer-action-append.txt": {
+    "bytes": 3164,
+    "sha256": "25597d69a335107cd8836a1fd8ad87cf3d26dee262aa42ddb688478456181c73"
+  },
+  "spans/initializer-action-dispatch.txt": {
+    "bytes": 3780,
+    "sha256": "d44207fafa8ee3a91189d1844e6b1e59c803f7a35ef1e27623020c04debee27e"
+  },
+  "spans/initializer-prefix.txt": {
+    "bytes": 4320,
+    "sha256": "722d9d681150dbb522fd06878664a80967d10dec3c41d324f0f4d34b208a3001"
+  },
+  "spans/launch-conditional.txt": {
+    "bytes": 16811,
+    "sha256": "bedb57c05f04e88b1259d770b4590bf7672cad4b1cd040a21ddc50655e73eb97"
+  },
+  "spans/launch-direct.txt": {
+    "bytes": 16999,
+    "sha256": "d78fa59d5be72debf03d18cbd0fcfa7e707cbd799740474f4bb7c8d2012bcf01"
+  },
+  "spans/stop-request.txt": {
+    "bytes": 7511,
+    "sha256": "1d08b986f375b715acd84d133a6ce38536b2789d3ca070e3f0239d09168b2707"
+  },
+  "spans/worker-actions.txt": {
+    "bytes": 33340,
+    "sha256": "e1397bb97af57a83745b5ac5e88a696586f08bd9d15e924e1cdb087ffdbb8598"
+  },
+  "spans/worker-condition-prefix.txt": {
+    "bytes": 3005,
+    "sha256": "a5d6fdbfef7e36f60dd4d2803b1ddab9a015bc181df55f1302269dc8c31e717b"
+  },
+  "spans/worker-condition-tail.txt": {
+    "bytes": 12667,
+    "sha256": "b8eeee542b5185cea2cb64e8eb4b9af3ff7ee929cebb660ba439cd329c581d59"
+  }
+}

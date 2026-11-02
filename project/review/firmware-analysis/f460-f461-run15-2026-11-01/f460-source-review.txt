@@ -1,0 +1,27 @@
+# F460 run15 independent source review — PASS, conditional serialization only
+
+I independently reviewed the authoritative v2 report/collector, saved source/history and original scheduler bytes. Read-only host `collect_serializer_v2.py --check` passes13 outputs/10 spans/38 guards. No serializer/parser/provider/native/helper/target I/O, finite numeric/string model, fixture or runtime scene executed. No author files were changed. Original `/home/bticino/scheduling_manager/scheduling_manager` SHA256 is `5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62`.
+
+Independent product ImageVFS/PT_LOAD reads confirm all10 raw spans/38 fixed words, the raw-class slot0 relative relocation/RTTI, ten actual imported-call PLT sequences and relocated symbol identities, six key joins, four operator rows and all15 immediate first copies. This is F460's own AArch64 source; no MHS signed-provider experiment, trigger serializer, condition layout, parameter values or native corpus is reused.
+
+The actual virtual-method/result join agrees. Final raw AP0x214078 slot0 points0x48710, RTTI13BnldCondition. Outer method preserves raw thisX0 inX20 and hidden resultX8 inX19, then requests common0x393d0 while retaining the same this/result. The common helper's own register roles differ: rawX21/resultX20. This is an AArch64 hidden-result dataflow, not a Boolean-return or compiled-predicate slot.
+
+The common selected source requests fresh Json::Value(ValueType)0 and assignments for exact id/enabled/type/operator keys. Its operator sentinel-1 skips the selected emission; ordinary raw0..3 selects actual table rows1..4 at0x213910, with exact length/pointer spellings higher/lower/equal/different. I independently checked all four original row bytes. The source then requests std::string-based Json value construction, mutable operator lookup and move assignment. No provider/map/allocation semantics or emitted JSON object was executed.
+
+The independent common parser's original length/byte comparisons and temporary-1 store agree with those raw0/1/2/3 names. Its64-bit initialization starting raw44 puts all-ones at operator48; the selected lexical requests/common store are distinct from a public operator vocabulary. Run14's actual signed numeric orientation remains inherited source evidence: configured threshold<observed for0, >for1, EQ/NEfor2/3. Spellings add neither units nor a physical brightness/trigger-crossing conclusion. Unsupported/default cases and full operator/input grammar are not expanded into support tables.
+
+Outer raw status52==-1 branches directly0x48890. That selected source loads raw56 intoW1, requests exact Json::Value(int), obtains SAME hidden result's mutable level member, moves the temporary into it and destroys the temporary before the retained normal epilogue. Actual names come from PLT/GOT relocations, despite misleading neighboring disassembler labels. There is no selected prior sign/sentinel test of raw56 before C1Ei: zero or-1 are not shown suppressed, but no numeric fixture was supplied. The selected branch requests level rather than a status-member assignment. It does not establish the entire final member set under arbitrary provider/previous-object state.
+
+The report correctly conditions composition with run14's actual same-result reparse: valid fresh JSON/member/assignment/string behavior, no extra status member/mutation, preservation of the selected signed32-bit value by C1Ei/move/asInt, and normal operator asString results are still premises. Under those conditions, selected level reaches raw56 and compiled threshold192 while status52/compiled188 retains-1. This is NOT a universal serialize/parse round trip, complete JsonCpp implementation proof, actual configured scene, query record, predicate occurrence or runtime value. Query/output, ownership/lifetime/concurrency, type suitability, freshness and physical behavior stay open.
+
+History is accurate and independently verified byte-for-byte: ONE staged-unexecuted v1 collector existed; a pre-generation read-only byte precheck caught only the redundant CMP first-byte typo. Parent preserved that exact script before NEWv2. The exact one hex-guard substitution `012d8d52e10cad723f00016b`→`012d8d52e10cad725f00016b`, plus three report-reference roles, reproduces current v2 source. No strict guard was weakened, no old report/output/canonical attempt or terminal artifact was fabricated, and the current15 copies/index agree. No source/report correction is requested.
+
+All receiving/output/transport/authentication/session/framing/MQTT/libjel and equivalent stopped bodies remain closed. This PASS is bounded original-source/provenance/reproducibility agreement with explicit conditional JSON/int contracts, not whole-runtime/provider/security/safety/defect/capability verification. Source investigations stop here; subsequent work is review/consolidation only.
+
+Exact reviewed pins:
+
+- REPORT.v2.md: `346d77b15b08e3da42e1f5aafe3ed1717d4bf20c13eca1929e1b4c8143469420`.
+- collect_serializer_v2.py: `06864c8ee0fdef852243b116a908c0d39e5328903674c239c6a3a97a96f139d4`.
+- OUTPUT_MANIFEST.json: `77e491d1fb8324e14418ac7a28ae3171883eb7d2591d3c45d3744599775799e7`.
+- first-candidate/INDEX.json: `dc2eb4a2b62c363e2463b5cbc16020cbf639b3fe07fb7a50ce200c24689bbcb4`.
+- VERSION_HISTORY.v2.json: `a737be0e05d3041c686bc0639746073e8be77491edf3015ec163d4420dd7f3f4`.

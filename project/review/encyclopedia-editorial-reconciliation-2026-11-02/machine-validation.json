@@ -1,0 +1,25 @@
+{
+  "scope": "Actual unchanged offline complete build/check of the current working projection; no Git commit or release asserted",
+  "build": {
+    "exit_code": 0,
+    "receipt_sha256": "d49f75437c63ad4201ae03ba59d865b95a3e4b80a1b9c9756f27e9551f3eb0ef",
+    "source_or_input_drift": []
+  },
+  "global_check": {
+    "exit_code": 0,
+    "started_UTC": "2026-11-02T12:37:02.141891+00:00",
+    "finished_UTC": "2026-11-02T13:12:22.754137+00:00",
+    "receipt_sha256": "cd734c61e7c42f6ea584d7f26351dfba11bd94f53b891c1ebcadcfb28b6c50c7",
+    "stdout": "Machine KB check passed: deterministic artifacts, manifest, schemas, cross-artifact consistency, references, text hygiene, privacy gates, and Device definition completeness",
+    "stderr_empty": true
+  },
+  "manifest_sha256": "9b9d660bdc614fc075c60b8734251d4f888533f56eca8eeb29373626cca2abd6",
+  "claims": 74728,
+  "retrieval_chunks": 8351,
+  "catalogue_input": {
+    "bytes": 2625536,
+    "sha256": "f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5"
+  },
+  "remote_status": "None published; local fixture statuses are not real GitHub statuses",
+  "gate_and_generator_code": "Unchanged against actual HEAD; two documented test expectations corrected with independent evidence, no gate/schema weakening"
+}

@@ -1,0 +1,48 @@
+# MH202 database-binding source review
+
+PASS for current `REPORT.v3.md`, with the method-header wording refinement verified. This is an independent static source review of the selected consumers and database relations, not successful vendor compilation, runtime UI validation, a complete compiler semantic audit or a physical-product test. No vendor assembly was loaded, reflected, JIT-compiled or evaluated; no vendor/target OS/native/network work occurred.
+
+## Final pins and reproduction
+
+Author root: `work/firmware-next-investigations/2026-10-31/database-binding/`.
+
+| File | SHA256 |
+| --- | --- |
+| REPORT.v3.md | e6e1f0305be2fb69c2ed8ea7fcae6a368c7922a91802cf73781c28c7c24e2b58 |
+| REPORT.v2.md (retained) | 07588f1f803d50840bd970fe428dd9f3b953effe6ae083fc705a78c9e5bd8e9a |
+| collect_binding_v1.py | 744f1454a1bcd7a9e573fdf4bf604e6d2044b04a825ae9456de8303cf2c108eb |
+| explore_static_il_v3.py | d6c113a3315abe1a435968d594ae0b4bfa45132ce90d7a3df16d58908b4a9eab |
+| evidence-v1/methods.json | d2dc5b603f0178fa041b6e8507c74ca81f862f4cbbcdb17e2caef51f5698ae71 |
+| evidence-v1/raw-branch-checks.json | c75069e4a0ffe5c836b9392cdc609a9ba4cb0e60d8160248c3465ebaef43e5e3 |
+| evidence-v1/database-selections.json | ad84795523323420fe25a4a889055dac15c862692a3f83b6de4c59bdac0314b5 |
+| OUTPUT_MANIFEST.v1.json | 06ca5e996d6cf929ca768144b95eb3fa5a3823f0bb31446fcb26b5f0efaaef4d |
+| DEVELOPMENT_HISTORY.json | cd7c97f572de3c228a0e1219140e41bfb198c754b7f6f97514022d97ae44d2bb |
+| first-candidates/SOURCE_SNAPSHOTS.json | 6269224daefaadd1bfb68e94eb868881347cd84a1703e67b7e487f959cc8dd52 |
+| HEADER_WORDING_REFINEMENT.json (retained) | 64c29f5ddaf50b5a0e21ba666fb5715e5cace70570ae9c54c0585af1325bea91 |
+| HEADER_WORDING_REFINEMENT.v2.json | 45ee61757da5d6769dc568685964ecd44efa8a35b521a5c9f8c4518471e687a2 |
+
+Read-only `python3 -B .../database-binding/collect_binding_v1.py --check` passes15 methods,4832 decoded static instructions,361 branch/switch instructions,378 targets,nine host SQL queries and original execution0. The five evidence outputs and declared manifest identities match. All20 actual first-candidate copies still match current retained source files and original declared hashes. The new v3 report and two refinement sidecars are separately versioned; they are not silently substituted into the old20-member snapshot.
+
+Separately from that collector, I read original metadata/ELF-independent PE bytes for the three assemblies, checked all15 TypeDef/MethodDef owners, RVAs, tiny/fat headers and header/code hashes, all4832 instruction ranges, and recomputed all361 control transfers/378 destinations from raw signed displacements. These checks validate source identity and coordinates, not the semantics of every method path. Source identities are the same independently verified recovered Core/DataManager/Class DLLs and database SHA256 `ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29`.
+
+## Critical fresh consumer closure
+
+Core AddAuxFieldWhat06000100/RVA0x1f82c obtains each auxiliary definition, reads GraphicType at IL01ad, subtracts1 and executes the original switch at IL01b4. Raw switch bytes are `450300000005000000e100000039020000`; independent arithmetic yields IL01ca,IL02a6,IL03fe. Graphic3 therefore selects the text branch, not the range branch. At IL0402..040b it takes IdKind from the same definition local13 and calls Core GetTextFieldValues060000a8.
+
+The actual auxiliary materializer060000a3 reads named ID_GRAPHIC_TYPE and ID_KIND fields into their separate properties. DataManager GetTextFieldValues06000028/RVA0x3888 constructs `SELECT * FROM ANA_TEXT WHERE ANA_TEXT.ID_KIND= ` followed by the supplied numeric ID; Core060000a9 copies its REGEXP field through the selected IsDBNull/conversion/property branch. These are actual source calls and properties, rather than a fabricated join selected by matching numbers alone.
+
+Fresh read-only immutable SQLite queries confirm `(ID_FIELD,ID_GRAPHIC_TYPE,ID_KIND)` values `(29,3,2),(30,3,3),(31,3,2)`. All three have CONVERSION_RULE0. Actual ANA_TEXT2 is CountValue and ANA_TEXT3 is ValueStep; both REGEXP strings are `[0-32000]`. Thus the selected consumer relation uses those text rows. ANA_RANGE2/3 temperature/time-labelled records remain true database rows but do not supply these fields through this dispatch. The previous possible Counter temperature/time consumer connection is superseded; this does not modify the earlier frozen reports or prove anything about all other range consumers.
+
+The text path uses VB InStr to require first '[' at position1 and first ']' at full length, removes brackets, splits on '-' and converts two components into locals32/31. `[0-32000]` consequently describes lower0/upper32000 on the supplied rows; this path is not a Regex engine call. Its default-value ToDouble/ValueDouble store and conversion-exception lower-bound fallback agree with the report. The report correctly does not claim executed upper-bound enforcement or full editor validation.
+
+At IL04d8, text handling constructs cAux_Field; it subsequently sets graphic/configurator/field/value/conversion/valuation/condition properties without a selected multiplier setter. Original Class0600017c/RVA0x3b2c stores GraphicType3 and Moltiplicatore1. Its body has a one-byte tiny header and21 code bytes. Getter0600018d/RVA0x3c98 has a12-byte fat header and9 code bytes, reading the same multiplier field. The compiler's own graphic-minus-one switch selects text handling at IL05e7; conversion0 selects IL0604, where ValueDouble and Moltiplicatore are multiplied at IL061e..062b before text replacement. This supports multiplier1 under ordinary construction and unchanged-property premises, not inherited10 from ANA_RANGE2. Saved-project mutation, actual bound object selection and live dependency binding remain unproved.
+
+## Query/materializer scope and history
+
+The six query/materializer methods and GetOpenParameterObject overlap the separately source-reviewed generator chain; they are not extra independent compiler coverage. Selected area flags, SQL fragments, positive Fill-count table addition and normal managerreturn1 agree. Core raw branches IL0036->00d4,0052->00d0,00d2->00dc preserve manager0/local-3 versus normal manager1/missing-table default. Status query uses object/command without an area filter; selected row materialization does not establish provider order, EXTRACTVALUE indexing or natural script acceptance. Host SQL selections are not vendor-driver execution or UI permission tests.
+
+The parent exploratory branch-coordinate inversion is explicitly disclosed as a transcription, not independently hash-pinned historical message bytes. Retained preliminary report materializer RVAs are documented as superseded. During this review I requested per-method header wording: v2 incorrectly generalized12 bytes to the newly added tiny constructor. Parent preserved v2 and made v3 by exactly one sentence substitution. My first request also mistakenly grouped the getter as tiny; I corrected it immediately from saved evidence, and the parent's separate refinement-v2 sidecar preserves/corrects that sidecar error. Original source, collector, evidence, SQL results and counts did not change.
+
+Only this new review was written. New current conclusions remain static consumer/schema relations, conditional on ordinary framework/provider/property behavior. No generated project/frame, actual UI restriction, firmware slot-to-interpreter-variable propagation, deployment/compatibility, runtime result or physical outcome is established.
+
+Review publication note: the exact first review remains at `MH202_DATABASE_BINDING_SOURCE_REVIEW.md`, SHA256 `98af8d3089dfa69771c4a0ce9d268618af292311382d0caf14558493280421f7`. This new review version replaces only its three non-ASCII arrow characters with ASCII arrows and appends this provenance note; source conclusions are unchanged. The original review was not edited or removed.

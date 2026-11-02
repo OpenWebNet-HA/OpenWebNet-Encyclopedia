@@ -1,0 +1,76 @@
+{
+  "files": {
+    "BINDING_LEDGER.v1.json": {
+      "bytes": 1555,
+      "sha256": "392c5be697ee424248b63d66fe8091bc975825a10cda47dde16e7c6c9d6a28f0"
+    },
+    "BYTE_GUARDS.v1.json": {
+      "bytes": 1865,
+      "sha256": "c8a4f407b1ded4582c1cb0a262b6c4850818b23365b2224a7edf68cc3dc7a0a9"
+    },
+    "DIRECT_CALLS.v1.json": {
+      "bytes": 423,
+      "sha256": "46d7294886d1e673d84aeadf1d5b60f6ced8862f84d2d1a4e1d6ea2f9616ddfb"
+    },
+    "INPUTS.v1.json": {
+      "bytes": 1036,
+      "sha256": "fd19e81f63076aa83565ff0ce0515cb6b0a1dfd4b5bb4b30f3743f96a9a3d577"
+    },
+    "METHOD.v1.json": {
+      "bytes": 875,
+      "sha256": "f090903e1fa4da836e1a45a58da8fbdc04ae3f245ca02b698d7cfc7618333c1c"
+    },
+    "PIC_AND_VTABLE.v1.json": {
+      "bytes": 1796,
+      "sha256": "f93cd92ba468c8f5a4015fb7189056a3681c0dea1ff33b24ac2723f470643097"
+    },
+    "PROVIDERS.v1.json": {
+      "bytes": 1152,
+      "sha256": "a07e9f4530d895f448939ef11fce0821b6d1ca9373a248e97947ac99b8fdf728"
+    },
+    "SOURCE_SPANS.v1.json": {
+      "bytes": 2721,
+      "sha256": "f67beaca60c2fc5547ec05f1cf39b2da268234004602a99be7b30fab89699916"
+    },
+    "spans/callable-installation.txt": {
+      "bytes": 3208,
+      "sha256": "9d927663ed5e7153a631e53c4ef31eda06e659e39a0867f1fe1b711e08b71867"
+    },
+    "spans/captured-function-manager.txt": {
+      "bytes": 1176,
+      "sha256": "ea3621a8ea4a49465c472bbe7b90763c195e690a1b95c048993dbad2e2214ceb"
+    },
+    "spans/initializer-got.txt": {
+      "bytes": 2360,
+      "sha256": "db5cdb978882180e1a435c26ea6805ca93ca3d4e3272e104b05cc12e6a3e2f3c"
+    },
+    "spans/initializer-sleep-append.txt": {
+      "bytes": 3164,
+      "sha256": "25597d69a335107cd8836a1fd8ad87cf3d26dee262aa42ddb688478456181c73"
+    },
+    "spans/initializer-sleep-convert.txt": {
+      "bytes": 3780,
+      "sha256": "d44207fafa8ee3a91189d1844e6b1e59c803f7a35ef1e27623020c04debee27e"
+    },
+    "spans/libc-nanosleep32.txt": {
+      "bytes": 1793,
+      "sha256": "18faf8a34e686bf88acf5ac114a1efa6a7a2400b45649e087455773952b8a07e"
+    },
+    "spans/operational-delay-setter.txt": {
+      "bytes": 351,
+      "sha256": "9b5e9370d98015724bf7ee75fc2f8d24f79419391957e81ec2fab46516acffed"
+    },
+    "spans/runner-move-prefix.txt": {
+      "bytes": 2639,
+      "sha256": "bb8c5c81a3745368814c17b5325623a892371985d3c721901c853babcf7e9974"
+    },
+    "spans/sleep-callback.txt": {
+      "bytes": 15194,
+      "sha256": "1b13e8a66de715ca60d6b987b09f6571b3b9f1ed4ee732c8e31ac52de13c1323"
+    },
+    "spans/sleep-constructor.txt": {
+      "bytes": 10062,
+      "sha256": "7023e3bf1d3b597091b5440eb8464bc4efe0a23a0d47eb67f38c852bd1edb13d"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "GOT_slot": "0x165ee4",
+  "PIC": [
+    {
+      "add_pc_va": "0xb75a4",
+      "name": "constructor-GOT",
+      "pool_va": "0xb7734",
+      "target": "0x1659a4",
+      "word": "0xae3fc"
+    },
+    {
+      "add_pc_va": "0xa72f0",
+      "name": "initializer-GOT",
+      "pool_va": "0xa7ef4",
+      "target": "0x1659a4",
+      "word": "0xbe6b0"
+    },
+    {
+      "add_pc_va": "0xb7662",
+      "name": "function-invoker",
+      "pool_va": "0xb7744",
+      "target": "0xb72d5",
+      "word": "0xfffffc6f"
+    },
+    {
+      "add_pc_va": "0xb7668",
+      "name": "function-manager",
+      "pool_va": "0xb7748",
+      "target": "0xb72b1",
+      "word": "0xfffffc45"
+    }
+  ],
+  "RTTI_name": "17SleepActionRunner",
+  "header": "0x164d5c",
+  "relocations": [
+    {
+      "entry_va": "0xc2dc",
+      "slot_va": "0x165ee4",
+      "type": "R_ARM_RELATIVE",
+      "value": "0x164d5c"
+    },
+    {
+      "entry_va": "0xb814",
+      "slot_va": "0x164d60",
+      "type": "R_ARM_RELATIVE",
+      "value": "0x1648a0"
+    },
+    {
+      "entry_va": "0xb81c",
+      "slot_va": "0x164d64",
+      "type": "R_ARM_RELATIVE",
+      "value": "0xcd849"
+    },
+    {
+      "entry_va": "0xb824",
+      "slot_va": "0x164d68",
+      "type": "R_ARM_RELATIVE",
+      "value": "0xcd6f1"
+    },
+    {
+      "entry_va": "0xb82c",
+      "slot_va": "0x164d6c",
+      "type": "R_ARM_RELATIVE",
+      "value": "0xcd551"
+    },
+    {
+      "entry_va": "0xb83c",
+      "slot_va": "0x164d78",
+      "type": "R_ARM_RELATIVE",
+      "value": "0x24c9d"
+    },
+    {
+      "entry_va": "0xb16c",
+      "slot_va": "0x1648a4",
+      "type": "R_ARM_RELATIVE",
+      "value": "0x1342ec"
+    }
+  ],
+  "vtable_words": [
+    "0x0",
+    "0x1648a0",
+    "0xcd849",
+    "0xcd6f1",
+    "0xcd551",
+    "0xffffffcc",
+    "0x1648a0",
+    "0x24c9d"
+  ]
+}

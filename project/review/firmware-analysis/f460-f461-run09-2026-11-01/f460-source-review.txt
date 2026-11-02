@@ -1,0 +1,27 @@
+# F460 run09 independent source review — PASS
+
+I independently reviewed the frozen condition packet's report, collector, source data and original AArch64 bytes. Read-only host `collect_condition_v1.py --check` passed13 outputs/10 spans/35 guards. No original/native/provider/JSON/model/fixture/target I/O executed, and no author file was changed.
+
+Original `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62` was read through the product ImageVFS. I independently remapped all10 retained raw spans and35 exact instruction guards against original PT_LOAD bytes, both class headers/RTTI/method tables, the selected name-table row and jump target, selected PIC/import/source-call proofs and all15 immediate first copies. This is fresh F460 evidence, with no MyHOMEServer1/ARM32 layout transfer.
+
+The following joins agree with the report:
+
+- Raw common parser requests `enabled` and asBool, then stores the low byte at raw40. Local type-string row18 is original `(length9,pointer0x1968e8)` at0x213a80 and exact `BNCUSCENE`; raw type word44 is a condition-table namespace. The selected raw parser installs AP0x212da8/header0x212d98/RTTI `18BncuSceneCondition`; primary slot0 points0x39d50. No trigger or compiled-predicate slot is substituted.
+- The actual initializer retains raw pointerX0 from `[X23]`, reads its word44, bounds it against23 and computes the signed-halfword selected target. Original entry0x1b5978 is0x0177, and0xf9790+4*0x0177=0xf9d6c. The selected branch requests raw slot0 with hidden X8=SP976, then passes that exact JSON-result address to0x10b8b0 at temporarySP6352. This is source dataflow, conditional on class/provider/normal-return and full serializer-coherence premises; it is not an executed accepted JSON round trip.
+- Allocation request256 returns a base pointer retained inX24 and passed unchanged as compiled constructor destination. Source constructorX19/X20 preserve destination/raw source. Actual raw enabled40→compiled176 and pair44/48→180/184 copies, final primaryAP0x217310/secondaryAP0x217338 installations and RTTI `24BncuSceneConditionRunner` agree. No base+16, shared-control pair or borrowed ownership layout is introduced.
+- SAME base pointerX24 is put in source cellSP928 and passed to helper0xf9450 with destinationSAME initializer receiver+192. Its available-capacity path stores ONE eight-byte pointer, advances end by8, clears the source cell and updates end. The later null-cell cleanup guard skips a deleting-destructor request on this selected path. Growth0x10f190 remains opaque. Receiver vector192/200/208 and compiled object's own internal field192 are correctly separate namespaces; no full lifetime, growth, unwind, reference-count or concurrency guarantee follows.
+
+I independently checked the COMPLETE predicate bytes0x128d10..0x128d20: `d503245f 3942c000 52000000 d65f03c0` (BTI, unsigned-byte load from+176, XOR1, RET). Exact machine-level behavior is loaded-byte XOR1. Boolean inversion requires the stated ordinary asBool0/1 construction, successful same-copy, valid receiver and no mutation premises. No configured scene, arbitrary-byte fixture or physical interpretation is supplied. The restricted absence of a target lookup in these16 bytes is correctly not generalized to the class/system or labelled unsupported/defective.
+
+The consumer composition is correctly inherited from reviewed run07 rather than counted as new coverage. I additionally reread original single-pointer call0xf90b4..0xf90d4: pointer→primaryvtable→slot+16, BLR, low-byte return test. With this packet's successful same-pointer publication and valid worker/range/lifetime assumptions, original primary slot+16 can reach0x128d10. This is not actual invocation, thread success or a whole scene policy. No old collector/native corpus was replayed.
+
+All stated remaining boundaries are material: complete raw serializer/parameter coherence, target metadata meaning, allocation/provider effects, vector growth/teardown and runtime composition/order remain unproved. Receiving/transport/authentication/session/framing/MQTT/libjel bodies remain outside this review. No new execution corpus or physical capability claim is added.
+
+Exact reviewed pins:
+
+- REPORT.md: `db8227a6259b29bf1c29cb118dbe462de6c21ae5eb675bdaf07af0674f688a19`.
+- collect_condition_v1.py: `760219b7716c18773cfa5f5d84f49188987e10a8f675639dd22a63285cf1f385`.
+- OUTPUT_MANIFEST.json: `b791d7c5e3cc1ecd5c060a87edee5add6308066d272c7d874fd9ea75c8196676`.
+- first-candidate/INDEX.json: `601004bc1ab41529ee04608c1a9062a8da067fa0d3d91ad06777e07fe8b04117`.
+
+No source or report correction is requested. This bounded source/provenance/reproducibility review does not certify full condition support, installed configuration or runtime outcomes.

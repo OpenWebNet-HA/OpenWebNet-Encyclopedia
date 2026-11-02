@@ -1,0 +1,134 @@
+# MH202 1.0.24: protocol/diagnostics first static batch
+
+**MH202 has a concrete protocol architecture and ABI that must be scoped separately from F454.** The packaged router assigns ordinary lighting/temperature/scenario WHO values to `coso`, while diagnostics use `bt_device`. Native parser classes exported under identical names have different field layouts between MH202 libraries. The diagnostic membership mask also explicitly includes WHO1000, while the ordinary WHO→SCS conversion table has no1000 entry. That is a routing/table distinction, not a claim that WHO1000 is unsupported.
+
+This first batch is **static only**: original ARM/JavaScript execution0, code hooks0, vendor/runtime/loader processes0, live device/bus/network I/O0. Host binutils inspect original bytes; finite Python models transcribe normal static rules. No session/credential/handshake derivation or stopped F454 branch was examined. No original firmware, old dossier, synced source, repository document or shared research state was modified.
+
+## Artifact identity and bounded comparison
+
+Artifact `firmware-mh202-010024`, archive SHA256 `bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7`, package label1.0.24. Original provenance records normal/recovery ext3 identities and missing external4.xtz/2.xtz; this batch does not supply those assets. The shared read-only `ImageVFS` resolves original image symlinks and verifies regular backing bytes before inspection.
+
+| Normal original image path | SHA256 |
+|---|---|
+|`/home/bticino/bin/bt_device`|`65dad019cc15cf5036c04ec7ef23d0f9c2f388324f44692f43af37fd82192f70`|
+|`/home/bticino/bin/openserver`|`5858374ef26a02c10381cb7ffd09cabbf762367ecce090e238cdde81c1ffced4`|
+|`/home/bticino/bin/scsserver`|`8bf4e7ff1d92a6c71a82ac10ba7008fb590246a3638e7db509217a54e9ab2be5`|
+|`/home/bticino/bin/coso`|`6865c2d1d441d25effa31275080ded70ad3538a8a49288e3002ffb196b066175`|
+|`/home/bticino/lib/libdiag.so.0.0`|`72da849b0b589758d1c0ca07bf8922359fd7e28dff8e1c20f481f688815f31fe`|
+|`/home/bticino/lib/libwhere.so.0.0`|`334cf3461e23712a85098e171a1cbcc6c675fedc9a12dd516954adaf7ecbaea5`|
+|`/home/bticino/lib/libopen.so.0.0`|`868eeb717020232c11623224df17bd6b2034fffc2fb80043c39c34b76310fb04`|
+|`/home/bticino/lib/libopenscs.so.0.0`|`b9b1c5f6937c0aea88f416517706b3dd38d46476974f252cd1c6b39aef62127a`|
+|`/home/bticino/lib/libbase.so.0.0`|`5be579cf8ab074e9462e3e5b932343da5b28167cd5afb38cbdcebf7eb8ab9af5`|
+|`/home/bticino/lib/libcommon.so.0.0`|`07b2c6d09e4a1b317bb3b37aff8f7ddd72dcec15e1e7194fde00c4f0ce1ecab5`|
+
+All ten selected files have identical bytes at their corresponding MH202 recovery paths. All ten differ from the corresponding canonical F454 files. `component-comparison.json` records the requested/canonical symlink paths, full normal/recovery/F454 hashes and byte equality. This is a ten-file comparison, not complete image equivalence, identical deployed configuration, or proof that every function behaves differently. No F454 execution result is transferred on filename/class-name equality.
+
+## Packaged WHO and transport routing
+
+Original `/home/bticino/cfg/stack_open.xml:119–166` declares:
+
+| Component | WHO list |
+|---|---|
+|bt_difson|16|
+|bt_energia|3|
+|bt_device|13,1000,1001,1004,1005,1008,1013,1018,1022,1027|
+|bt_vct|6,7|
+|bt_supervisione|18|
+|coso|0,1,2,4,5,9,14,15,22,25,29|
+|bt_taskmanager|17|
+
+These are **packaged router declarations**, not complete support lists or observed active processes. `bt_device` has working_mode1; the other selected client declarations have0. This report does not equate those numbers to device capability or presume runtime replacement/activation behavior. In particular MH202's packaged WHO6/7 route to bt_vct differs from F454's packaged functional WHO8 route; the namespace/table identities below must remain separate.
+
+The same XML declares scsserver port20001 and serial device `/dev/ttyS1` at167–176. `packaged-routing.json` extracts only these selected fields. Actual listening descriptors, serial traffic, bus type semantics and transport dialect acceptance were not executed.
+
+Original `bt_device` directly needs `libdiag.so`, `libwhere.so`, `libopen.so.0`, `libopenscs.so`, `libbase.so` in that order before its remaining dependencies. `libdiag` itself needs libwhere/libopen/libopenscs; libwhere needs libopen. `openserver` and `scsserver` instead list `libcommon.so.0` first. `coso` includes `libopenmsg.so` and `libcoso.so`. The linkage records save exact dependency order, SONAME/RPATH/RUNPATH declarations and selected symbols/relocations with original-path candidates. They are not an executed loader search or final binding proof.
+
+Selected native transport exports survive in **both** libbase and libcommon:
+
+| Helper | libbase VA | libcommon VA |
+|---|---|---|
+|`advanced_receive_from_scs`|0x6c80|0x15b54|
+|`send_frame_toscsserver`|0x7350|0x16250|
+
+bt_device's corresponding jump slots are0x2df04 and0x2dfac; its translator slots are0x2ddb8 (`scs2open`) and0x2e094 (`open2scs`). These establish imported boundaries, not a selected descriptor contract or byte-level SCS grammar. Duplicate transport/parser symbols and runtime interposition require explicit provider assumptions before future joined reasoning or isolated fixtures.
+
+## Decisive normal-frame question: identical class names do not mean compatible objects
+
+Two actual MH202 `openwebnet` implementations expose the same API but different layouts:
+
+| Field/predicate | libopen.so.0.0 original code | libcommon.so.0.0 original code |
+|---|---|---|
+|address-slot stride / first slot|0x9940–0x9948:90-byte stride, first+90|0x24904–0x2490c:130-byte stride, first+130|
+|WHAT|0x9950–0x9954:+450|0x24914–0x24918:+650|
+|WHERE|0x995c:+540|0x24920:+780|
+|DIM|0x9984:+900|0x24948–0x2494c:+1300|
+|kind word|pool0x9a68 gives+0x623c|pool0x24a10 gives+0x1dec|
+|IsMeasureFrame|0x9a50–0x9a64 compares kind4|0x249f8–0x24a0c compares kind4|
+|IsNullFrame|0x9a18–0x9a2c compares kind2|0x249c0–0x249d4 compares kind2|
+
+Thus shared kind numbers2/4 alone do not make object pointers interchangeable. A saved F454 object fixture must not be copied into MH202 merely because the method name or kind matches. Neither total object size nor accepted wire grammar is inferred solely from the kind-word offset. `libopen-getters.txt`, `libcommon-getters.txt` and the two predicate spans pin the original bytes.
+
+`libopen` exports `CreateMsgOpen(char*,int)` at0xb370 and `IsCorrect` at0xad60; libcommon exports them at0x2646c and0x25e38. This batch **does not execute or reconstruct either complete parser**. The decisive result is the observed native field/predicate ABI split and provider-dependent interpretation of an otherwise normal measure object, not a malformed-frame investigation or a wire dialect verdict.
+
+## Diagnostics: membership versus explicit SCS conversion
+
+The stripped helper at bt_device0xd3d0 receives WHO text, calls `atoi`, subtracts1000, checks an unsigned range0..27 and tests mask **0x08442133** loaded from0xd40c. Under normal decimal text its accepted set is:
+
+```text
+1000,1001,1004,1005,1008,1013,1018,1022,1027
+```
+
+The actual caller at0x1e290 extracts WHO, calls this helper at0x1e294, and branches away on false. On the inspected downstream field+28==1 branch,0x1e2d8 calls `OPN_OpenScsDiagTranslator::open2scs`. This is a concrete caller/routing guard, not a declaration that every dimension/address under those WHO values translates successfully. Other helper callers and local branches remain outside this bounded semantic join.
+
+Separately, libopenscs has an init-array word at **0xb30c→0x2410**. That original initializer constructs sixteen `(WHO,SCS system)` pairs at0x2430–0x25f8 and builds the map at0x2608:
+
+| Functional / diagnostic WHO pair | SCS system |
+|---|---:|
+|1 /1001|1|
+|4 /1004|3|
+|8 /1008|6|
+|18 /1018|2|
+|5 /1005|4|
+|22 /1022|8|
+|13 /1013|18|
+|27 /1027|5|
+
+`getScsSys(int)`0x2654–0x26bc performs map find/end and returns−1 on missing; it does not implement `WHO−1000` arithmetic. The exact static map has **no1000 entry**. The ordinary reverse mapper0x2350–0x2404 scans values and, when its boolean diagnostic selector is true, skips WHO keys below1000. With false it can return the first ordinary matching WHO in map order. The sixteen pairs and call VAs are a manual static def-use transcription checked by the collector's literal evidence, not original constructor or std::map execution.
+
+This resolves the narrow question: **diagnostic membership and known WHO/SCS mapping are different tests**. WHO1000 passes the original diagnostic mask but, under successful unchanged initialization and ordinary map semantics, `getScsSys(1000)` has missing→−1 behavior. Do not turn this into a whole-module WHO1000 rejection, a bus-system0 rule, a missing physical feature or a version equivalence claim. Local handling, class-specific translations and complete translator key selection still need their own evidence.
+
+## Five-class translator factory and bounded address rule
+
+The original libdiag factory0x24cb4–0x24fa8 constructs and registers five classes in order, with integer constructor argument0:
+
+1. `OPN_OpenScsDiagGenTr` call0x24dac, registration0x24de0.
+2. `OPN_OpenScsDiagTermoTr`0x24e04, registration0x24e38.
+3. `OPN_OpenScsDiagIdTr`0x24e5c, registration0x24e90.
+4. `OPN_OpenScsKeyObjTr`0x24eb4, registration0x24ef4.
+5. `OPN_OpenScsPptTr`0x24f24, registration0x24f58.
+
+This static normal factory ordering does not settle collisions, exception cleanup, full rule vectors, reachability of every exported method or physical scenario programming. Those questions require distinct class/key evidence, rather than transferring F454's separately tested registry.
+
+One actual WHERE translator has a useful concrete local contract: `OPN_DeviceWhereTransl::scsDest`0x9a38 calls `Extract_dove`/`atoi`, compares unsigned value against4096 at0x9a50, and takes the normal branch only below4096. At0x9a94 it stores the number at native result+4;0x9a98 writes marker byte0xD2 at+0; offsets8/9 become zero. A decimal4095 passes that local guard;4096 takes the exception-construction branch. The finite model covers normal decimal0,1,4095 and the stated upper-bound branch. It is not a full string/address validator or actual exception execution.
+
+The produced native structure is **not serial bytes or the earlier F45419-character address representation**. Which WHO/class selects this translator, how the native structure is serialized and ordinary/advanced/group/interface grammar remain open. No broad address grammar or full frame applicability is claimed from one class method.
+
+## Reproduction, coverage and next queue
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/protocol/run1/collect_evidence.py
+python3 work/mh202-firmware/research/2026-10-30/protocol/run1/collect_evidence.py --check
+```
+
+The collector generates34 files: selected linkage/relocations, exact normal/recovery/F454 comparisons, eleven original spans, twelve exact word assertions, packaged routing, thirteen primary input hashes and finite host static rules. The map/model is expressly not an ARM interpreter. `--check` compares generated bytes without writing. Byte comparisons use image-resolved originals; the normal/recovery equality is independently rechecked by the read-only accessor. Output manifest excludes independent peer review. Original ARM/JS execution and code-hook counts remain0.
+
+Confirmed static: packaged routes, selected dependency/relocation boundaries, native ABI split, diagnostic bitmask and guarded caller, explicit sixteen WHO/SCS entries and missing-value branch, five-class normal factory ordering and the selected device-address guard/structure. Not yet established: runtime symbol binding or provider-specific whole parser behavior; complete SCS envelope/serial forwarding/subscriptions; full WHERE grammar; exact diagnostic key ownership/collisions and representative full translator acceptance; live processes/delivery or physical semantics. No broad complete-coverage claim follows.
+
+Highest-value next questions:
+
+1. Establish effective static candidate binding/closure for bt_device and openserver, especially same-named parser/transport symbols; retain live preload/interposition limits.
+2. Trace WHO1000 local/outer selection and one representative original diagnostic DIM through exact class/key/address dispatch, without treating its missing generic SCS map entry as global rejection.
+3. Reconstruct one ordinary valid parser/address route with its provider's actual layout, then normal serial-envelope conversion; do not import F454 fixtures unchanged.
+4. Follow a concrete COSO translation plugin for its ordinary WHO routes and separately reconcile WHO17 taskmanager control. This batch inventories only the module boundary, not plugin semantics.
+
+This bounded initial batch stops for peer review; it does not expand into session or credential work.

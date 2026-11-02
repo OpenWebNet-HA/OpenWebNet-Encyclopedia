@@ -1,0 +1,34 @@
+# F455 night07 independent provenance-gap review
+
+**PASS as a bounded gap/consolidation checkpoint. ZERO new source coverage and no new CPU/ISA/ABI/load-map/entry assignment. No correction requested.** The checkpoint records that the selected retained original package/XML/context does not provide the product-specific provenance needed to admit an executable interpretation. It does not claim that provenance is absent from all possible documentation, companion tools, hardware or payload encodings.
+
+I read the frozen collector/report/admission/topology/input evidence and ran its permitted read-only reproduction: `python3 -B work/f455-firmware/1.1.2/research/2026-11-01-night07-breadth/collect_admission_v1.py --check`. Actual result PASS, five outputs, six exact first copies, reported new source coverage0, CPU assignment NOT_ADMITTED and original execution0. Independent checks verified seven exact input identities,13 manifest element paths/attribute-name sets, both ZIP central-directory entries, all generated manifest members and six exact first copies. The audit uses host hashing/XML/central-metadata readers only; no encrypted entry was opened/decrypted/extracted and no original byte-prefix arithmetic, disassembler, CPU model or earlier collector was run.
+
+## Selected original scope
+
+The archive180196 bytes/SHA256 cd99299fc729679b4eade46acda7bd4f5e619a0a9eac34a1f6a3b73b625a18f9, retained payload301016 bytes/SHA2566d61c308888ccd78f6fb289cf23e672203921a50931b838533a7a315c5d49ccc and original manifest453 bytes/SHA2565b93f792b5d9ece0a7d26b75847d91df5ebe9b3c0bfbeea29c617e1557d852ad match saved inputs. Central metadata independently lists exactly F455_1_1_2.bin and fwz.xml with their declared sizes, CRC fields and encrypted flag bits. Rechecking those identities/entries is preservation/admission context, not newly recovered bytes, decryption, format coverage or processor evidence.
+
+The exported topology is exactly thirteen original element paths with attribute names. It contains package/device/object-model/file/update declarations, without exporting a full configuration or private values. Basic Gateway/release1.1.2 and bootloader mode are packaging labels; the inherited model label and bootloader field do not by themselves identify a CPU/core, hardware revision, target endian/ABI, placement map, loader algorithm or accepted update. This finite metadata scope supports the admission limit, not a universal negative hardware search or a statement about every possible byte encoding.
+
+## Prior evidence remains inherited
+
+Night02 report/package-format/Arm-context identities are pinned without replaying its wrapper/CRC work,96-word candidate arithmetic, chosen base, vector-like prefix, target-byte or MMIO-shaped comparisons. Generic Arm documentation is comparative context rather than F455-specific manufacturer CPU authority. No prior candidate is upgraded into an actual load map or executable entry. The curated Device page is read-only contextual documentation with no retained installed hardware revision/microcontroller fingerprint for this cluster; it is not used as an implementation oracle or a whole-world absence claim. Product-role/protocol/authentication prose is not imported into the source conclusion.
+
+The report's next-evidence requirement is appropriately concrete: a product/image/hardware-specific authoritative CPU/ISA/endian source or a genuine original linker/map/debug/loader record tied to exact bytes and placement/entry semantics before code interpretation is admitted. No such record was acquired or admitted in this checkpoint. That honest limit is the result; there is no selected code VA, function body, runtime path, recovered database or new functional reach to count.
+
+F450's rejected helper0x2eec4 and alternate/equivalent/proxy routes remain untouched. No native/vendor/helper/emulator/model/SQL/targetstartup/module/OS/device/service/network/bus/mount/flash/physical execution, external fetch, database generation/recovery or remote write/upload occurred. All original/synced/completed artifacts, parent-owned public integration, source manifest, Git staging/commits/publication and older ledgers remain unchanged. MHS340 code-hook-visits/360hooks and separate F454/MH202 ledgers are not replayed/reset. Cumulative archive remains inherited one encrypted F450 support container/zero plaintext databases, controlled by parent.
+
+## Exact frozen reviewed members
+
+Members are relative to `work/f455-firmware/1.1.2/research/2026-11-01-night07-breadth`.
+
+| Member | Bytes | SHA-256 |
+|---|---:|---|
+| `FIELD_PATHS.json` | 1376 | `bc8f2710007d122c58fdc54c5a24eb322029662de7391999f0de0fd0fbe8e516` |
+| `INPUTS.json` | 1401 | `9226a87b68735b064765d3b50503adeb24bc7db237df22405c876c9d1bef9be8` |
+| `OUTPUT_MANIFEST.json` | 711 | `01c7efe3ede414bcf31dda83868667104e635d17d88b85921411f8b1fd082142` |
+| `PROVENANCE_ADMISSION.json` | 2194 | `3a3d51e680823826739e96d8af4fcefe87f4c96f5bf04558626294a52e1e9945` |
+| `REPORT.md` | 4528 | `ad858ca145771896f0c8036be99cd79f2900faa28f38e9cff1eff355aea0af66` |
+| `collect_admission_v1.py` | 11059 | `ce7ae9d595df71e9c2d21a256765b5394940d14ec7e04ccf74d93c2125d2d77c` |
+
+Completed 2026-11-01T22:48:30.701873+00:00. Review and independent audit are each created exclusively with immediate exact first copies and precomputed non-circular indexes. No author edit or correction was required.

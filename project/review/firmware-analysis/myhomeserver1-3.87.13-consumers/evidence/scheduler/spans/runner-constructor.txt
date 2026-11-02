@@ -1,0 +1,29 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000af3d4 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x64660>:
+   af3d4:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+   af3d6:	4604      	mov	r4, r0
+   af3d8:	4615      	mov	r5, r2
+   af3da:	461e      	mov	r6, r3
+   af3dc:	f104 0768 	add.w	r7, r4, #104	@ 0x68
+   af3e0:	f006 fa0c 	bl	b57fc <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6aa88>
+   af3e4:	efc0 0050 	vmov.i32	q8, #0	@ 0x00000000
+   af3e8:	f104 0378 	add.w	r3, r4, #120	@ 0x78
+   af3ec:	efc0 2010 	vmov.i32	d18, #0	@ 0x00000000
+   af3f0:	4632      	mov	r2, r6
+   af3f2:	4629      	mov	r1, r5
+   af3f4:	4620      	mov	r0, r4
+   af3f6:	f947 0a8f 	vst1.32	{d16-d17}, [r7]
+   af3fa:	f943 0a8f 	vst1.32	{d16-d17}, [r3]
+   af3fe:	f104 0388 	add.w	r3, r4, #136	@ 0x88
+   af402:	f943 278f 	vst1.32	{d18}, [r3]
+   af406:	2300      	movs	r3, #0
+   af408:	f8a4 3090 	strh.w	r3, [r4, #144]	@ 0x90
+   af40c:	f884 3092 	strb.w	r3, [r4, #146]	@ 0x92
+   af410:	f7f7 ff56 	bl	a72c0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5c54c>
+   af414:	4620      	mov	r0, r4
+   af416:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}

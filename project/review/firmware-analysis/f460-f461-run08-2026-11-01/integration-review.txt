@@ -1,0 +1,48 @@
+# Run08 documentary integration review
+
+PASS for the current v2 documentary candidate, no remaining correction requested. I compared the public additions, unchanged catalogue profile, capsule and coordination records against authoritative F460 REPORT.v3, F461 REPORT.v2 and completed independent source reviews. This is bounded documentary/product/method comparison, not a fresh original-instruction or whole updater/daemon audit. I ran no collector, vendor/provider/XML/file/service code, emulator, model/fixture or CPU replay.
+
+F460 is correctly limited to local manifest-test/XML-request/action-type selection and separate same-record filename-list staging. Opaque helper0x5140 is only an X0 zero/nonzero gate, with no established pointer type, extraction implementation or origin. Runtime /tmp data is not replaced by the packaged manifest. Context pointers48/56, local initialization codes, XML action IDs/status and actual installation state remain distinct. Attribute text-to-list and cleanup/normal return do not establish authenticity, compatibility, signature/trust verification, file existence, accepted full XML, flashing or reboot. Normal/recovery equality applies to the checked updater file, not whole environments or active boot mode.
+
+F461 keeps default/XML/key-file receiver byte360 producers and source precedence separate from packaged logrotation1. Decimal extras-status low32=1 is not a whole status/decimal-grammar result. Selected stat0 means ordered stop/load/restart requests; nonzero means mkdir/restart without a tested mkdir result. Neither path establishes successful services, log durability/restoration, directory readiness, complete boot flow or a Boolean helper result. Caller receiver identity, effective configuration/providers, current status/directory and error/lifetime/concurrency remain premises. Directory70 and product/physical/public identifiers are not merged.
+
+Both products retain curated roles and fresh AArch64/source-context boundaries. File-integrity observations are not signature authenticity or hardware/readiness proof. Full configuration/secret/runtime identity data and uncertain identity consumer/closed receiving/transport/MQTT/libjel/auth/session/framing bodies remain excluded. All new original/native/helper/model/fixture/SQL/XML/target file/service/OS/network/bus/physical execution is zero. Earlier MHS/F454/MH202 ledgers and history limits stay separate and unchanged; wider Device/source gates remain pending.
+
+## Exact copies and preserved refinements
+
+Verified all16 current v2 pins/copies and all55 SOURCE_EXPORTS.v2 source/export pairs. Verified the earlier16-pin candidate remains intact, all seven before-wording snapshots, nine source/reviewer/version snapshot sets containing39 members, and four coordination first copies in their stated current or historical context. The reversible F461 transcript decodes all eight selected spans to their exact local source bytes, sizes and hashes; this is byte preservation, not execution, a whole firmware export or independent new semantic proof.
+
+The retained pre-edit main, v2 appendix and declared substitutions reconstruct current public bytes. The current profile stays exactly bc9859ac. Original main/draft/method/appendix/patch/capsule/index versions remain preserved before the representation-only full path to extra/70 change. I verified the public delta is exactly that single substitution, with supporting original paths/source unchanged. The disclosed partial inline snapshot assembly error occurred before public edits/index completion, with the existing exact copy checked on resume; no invented script/history identity or guard exemption is implied.
+
+Verified F460 report v3 is exactly its two declared opaque-return wording substitutions from frozen v2. Its old report/collector/outputs/review remain unchanged; historical v2 collector reproduction is not claimed to incorporate v3. F460 Python-token and F461 readelf-token parsing failures happened before generated output writes, with parent pre-edit copies and honest later failure notes retained. No target rejection, overwritten generated candidate or missing MH20218/21 history authenticity is inferred. Early reviewer helper path/index-wrapper assumptions stopped before review writes; corrected checks used actual recorded shapes.
+
+Checked46 local Markdown link occurrences and one fragment: all44 existing targets and the fragment resolve. Only intended later capsule integration-review.txt and validation.json remain pending actual assembly. Final full protection/identity, strict ESG/ECV/diff, actual branch/status and index-last checks remain subsequent parent-owned gates against saved artifacts. No future-byte certification, placeholder or missing-link exemption is endorsed. No author/repository/source/prior dossier was edited.
+
+## Exact current pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md` | `5e655436978dc032f0d4c750e5dfbd56cd17efbda2bd4a135129b1280e7f691a` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | `bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run08-2026-11-01/README.md` | `6d8845bc8065b6ab0755ad71f472f8a28c2aced95a6cbe0f338dd83cb1fda351` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run08-2026-11-01/SOURCE_EXPORTS.v2.json` | `a8a826b46980c5898220f42af852de45fdc27ebd89910a315ec2420d12f61a2b` |
+| `work/f460-f461-comparison/2026-11-01-run08/SYNTHESIS.md` | `7eb2ed85cbe8ef5cf82344a28dd783968a7173ed7a439d02ad4afa10ae569363` |
+| `work/f460-f461-comparison/2026-11-01-run08/COVERAGE.md` | `a832fac766151b48aa5454eb6ed4a4dc7ff11305c5bea8b2d6b5b6570cc0322a` |
+| `work/f460-f461-comparison/2026-11-01-run08/RANKED_REMAINING_QUESTIONS.md` | `7afbf97ac9b95446296c583e3855771db8514b1d698c649fe9bfa83a5a884d1b` |
+| `work/f460-f461-comparison/2026-11-01-run08/SOURCE_CHECKS.json` | `7f211626061a6124a4c5dd45b66f112ecd7d309ef626237b7e9c0a2bab41a5c1` |
+| `work/f460-f461-comparison/2026-11-01-run08/integration/DOCUMENT_PATCH.v2.json` | `58d6cb12761c1798fcc1c434fe99309366f0d477b2873bd26ba2f184b7e92fb1` |
+| `work/f460-f461-comparison/2026-11-01-run08/REFERENCE_DRAFT.v2.md` | `5e655436978dc032f0d4c750e5dfbd56cd17efbda2bd4a135129b1280e7f691a` |
+| `work/f460-f461-comparison/2026-11-01-run08/REFERENCE_DRAFT_METHOD.v2.json` | `ae091becb8c844464d54480e674091dfc2c8fe7afb9e47e7ee6b3c163414e769` |
+| `work/f460-f461-comparison/2026-11-01-run08/ANALYSIS_APPENDIX_DRAFT.v2.md` | `add6ca05a2bcce51a8ee355b413b058490f49ad445cca7a8d67905c421c60f81` |
+| `work/f460-f461-comparison/2026-11-01-run08/reviews/f460-source-review.v2.md` | `4c8432f94a508a12ce3b468c6c1a29cd8dc4179426fd1f0d02770d94f068905f` |
+| `work/f460-f461-comparison/2026-11-01-run08/reviews/f461-source-review.md` | `6e7d0fee0a163584fb18e65243e2ddfb59f20b0d6e6b5a16516f9ee883cef953` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run08-2026-11-01/f460-source-review.txt` | `4c8432f94a508a12ce3b468c6c1a29cd8dc4179426fd1f0d02770d94f068905f` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run08-2026-11-01/f461-source-review.txt` | `6e7d0fee0a163584fb18e65243e2ddfb59f20b0d6e6b5a16516f9ee883cef953` |
+| `review-candidate/INDEX.json` | `dca45ebf96d17309d2438d08e42c07a36c1af42ca6d48e0fdc30f88218f5d41e` |
+| `review-candidate-v2/INDEX.json` | `f6f0db4642f0abd6c867ef5f1e46fd55ca236fdcd63faaf8711c6faf54df0942` |
+| `integration/WORDING_REFINEMENT.v2.json` | `8f97c7549dc8c3449a3496c38c11074688f49ca26f3ed48872ad0e4010f0f5b3` |
+| `integration/before-wording-v2/INDEX.json` | `62ed921ed3a470eb9ecb98cf8308db5eba573f287144d85da82051e5d4cba1ce` |
+| `F461_SPAN_HEX.json` | `7f6a025c4fb4db6e1a50271cb34e1a7f4758aeb4c31b01438aaee99680577a22` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run08-update/REPORT.v3.md` | `8edf41662a72cbdfad04dd09febfe8eb8826ab6d55dddb5b6a2445f38ebf6d4e` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run08-update/RETURN_VALUE_REFINEMENT.v3.json` | `5896d75fea34b22522936410bcebe4ca382fd1bea7b21215ca8649484fe4dfbd` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/REPORT.v2.md` | `88568663f780e22040ffe7fe6f50530fd620e7ae25133f594937ae16f9dff312` |

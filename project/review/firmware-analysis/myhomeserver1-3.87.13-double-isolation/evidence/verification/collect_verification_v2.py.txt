@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+"""Independent original-provider and exact old-tool BEFORE verification; no Unicorn import/guest execution."""
+import sys
+sys.dont_write_bytecode=True
+import pathlib,json,hashlib,struct,re,subprocess,importlib.util,argparse,os,csv,base64,stat
+D=pathlib.Path(__file__).resolve().parent;W=next(x for x in D.parents if(x/'sources').is_dir());R=W/'work/myhomeserver1-firmware/3.87.13/research';V=R/'2026-10-31/image_vfs.py';S='/usr/lib/libjsoncpp.so.1.9.5';T=W/'work/f454-firmware/research/tooling';B=W/'work/mh202-firmware/research/2026-10-30/validation/run27/PARENT_TOOL_TREE_BEFORE.json';H=lambda z:hashlib.sha256(z).hexdigest();J=lambda x:(json.dumps(x,sort_keys=True,indent=2)+'\n').encode()
+sp=importlib.util.spec_from_file_location('verificationvfs',V);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+def build():
+ v=m.ImageVFS();b=v.read_bytes(S);assert H(b)=='5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36';ph=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);segs=[struct.unpack_from('<8I',b,ph+i*sz)for i in range(n)]
+ def off(a,n=1):return next(o+a-va for t,o,va,_,fs,*_ in segs if t==1 and va<=a and a+n<=va+fs)
+ def raw(a,n):return b[off(a,n):off(a,n)+n]
+ def u(a):return struct.unpack('<I',raw(a,4))[0]
+ hp=v.root/v.resolve(S).lstrip('/');env=dict(os.environ,DEBUGINFOD_URLS='');out={};rs=[]
+ for name,a,z in [('C1-double',0x15ce0,0x15d02),('initBasic',0x15ad4,0x15b44),('Comments-move',0x159ec,0x15a22),('type-byte',0x14e3c,0x14e40),('asDouble-prefix',0x171c4,0x171e6),('asDouble-epilogue',0x171fe,0x17216),('asDouble-type3',0x1724e,0x17254)]:
+  t=subprocess.check_output(['objdump','-d','--dwarf=no-follow-links','-M','force-thumb',f'--start-address={a}',f'--stop-address={z}',str(hp)],text=True,env=env).replace(str(hp),S);out['spans/'+name+'.txt']=t.encode();rs.append({'name':name,'start_VA':hex(a),'end_VA_exclusive':hex(z),'file_offset':hex(off(a,z-a)),'raw_sha256':H(raw(a,z-a))})
+ attrs=subprocess.check_output(['readelf','-AW',str(hp)],text=True,env=env);assert'Tag_ABI_VFP_args: VFP registers'in attrs and'Tag_CPU_arch: v7'in attrs;out['PROVIDER_ATTRIBUTES.txt']=attrs.encode()
+ guards=[(0x15cec,'c260'),(0x15cee,'b0ee408b'),(0x15cf6,'84ed008b'),(0x15af8,'2172'),(0x159f4,'0a60'),(0x159fa,'86b1'),(0x14e3c,'007a'),(0x1724e,'94ed000b')]
+ for a,z in guards:assert raw(a,len(bytes.fromhex(z))).hex()==z,hex(a)
+ pic=[]
+ for p,pc,k in [(0x15b48,0x15ae0,0x15b4c),(0x15b50,0x15b30,0x15b4c),(0x17298,0x171cc,0x1729c),(0x172a0,0x17202,0x1729c)]:a=(u(p)+pc+4)&0xffffffff;assert a==0x32a40 and a+u(k)==0x32f98;pic.append({'base_pool':hex(p),'ADD_PC':hex(pc),'base':hex(a),'slot_offset_pool':hex(k),'slot':'0x32f98'})
+ rel=subprocess.check_output(['readelf','-rW',str(hp)],text=True,env=env);rr=[]
+ for a,sym,typ in [(0x32f98,'__stack_chk_guard','R_ARM_GLOB_DAT'),(0x32f54,'_ZN4Json5Value9initBasicENS_9ValueTypeEb','R_ARM_JUMP_SLOT'),(0x32c18,'_ZN4Json5Value8CommentsaSEOS1_','R_ARM_JUMP_SLOT'),(0x32e54,'_ZNK4Json5Value4typeEv','R_ARM_JUMP_SLOT')]:r=next(x.strip()for x in rel.splitlines()if x.startswith(f'{a:08x} '));assert sym in r and typ in r;rr.append(r)
+ tab=raw(0x171e6,6);assert tab.hex()=='37181f343a03'and 0x171e6+2*tab[3]==0x1724e
+ out['PROVIDER_SOURCE.json']=J({'provider_sha256':H(b),'PT_LOAD':[{'offset':hex(o),'VA':hex(va),'filesz':hex(fs),'memsz':hex(ms),'flags':fl}for t,o,va,_,fs,ms,fl,_ in segs if t==1],'spans':rs,'guards':[{'VA':hex(a),'bytes':z}for a,z in guards],'selected_guard_PIC':pic,'selected_relocations':rr,'selected_self_PLT':[{'PLT_VA':hex(a),'bytes':raw(a,12).hex(),'candidate_Thumb_definition':hex(t)}for a,t in [(0xba94,0x15ad5),(0xb074,0x159ed),(0xb768,0x14e3d)]],'type3_TBB':{'VA':'0x171e6','bytes':tab.hex(),'selected':3,'target':'0x1724e'},'scope':'Candidate selfbinding/validconstruction/ABI premises; exact harness private mappings/PC/read/write/IRQ/caps remain separate preflight review.','original_execution':0})
+ baseline=json.loads(B.read_bytes());rows=[]
+ for p in sorted(T.rglob('*')):
+  st=p.lstat();assert not stat.S_ISLNK(st.st_mode),str(p)
+  if stat.S_ISREG(st.st_mode):rows.append({'path':p.relative_to(T).as_posix(),'size':st.st_size,'mtime_ns':st.st_mtime_ns,'sha256':H(p.read_bytes())})
+ rows.sort(key=lambda x:x['path'])
+ assert len(rows)==63 and rows==sorted(baseline['files'],key=lambda x:x['path'])
+ rp=T/'unicorn-2.1.4.dist-info/RECORD';records=[]
+ for name,hs,sz in csv.reader(rp.read_text().splitlines()):
+  p=T/name;assert p.resolve().is_relative_to(T.resolve())and p.is_file();z=p.read_bytes();r={'path':name,'declared_hash':hs,'declared_size':sz,'actual_sha256':H(z),'actual_size':len(z)}
+  if hs:alg,value=hs.split('=',1);assert alg=='sha256'and base64.urlsafe_b64decode(value+'='*((-len(value))%4))==hashlib.sha256(z).digest()and int(sz)==len(z)
+  records.append(r)
+ assert len(records)==63 and sum(bool(x['declared_hash'])for x in records)==41
+ metadata=(T/'unicorn-2.1.4.dist-info/METADATA').read_text();assert'\nName: unicorn\n'in metadata and'\nVersion: 2.1.4\n'in metadata
+ out['TOOL_TREE_BEFORE.json']=J({'scope':'Explicit read-time BEFORE inventory, not a claim of future immutabletoolstate; no package/native import','captured_at_UTC':'2026-11-01 03:10:41 UTC','tool_root':str(T.relative_to(W)),'old_baseline':str(B.relative_to(W)),'old_baseline_sha256':H(B.read_bytes()),'all_paths_sizes_mtimes_hashes_equal_baseline':True,'files':rows})
+ out['PACKAGE_RECORD_VERIFICATION.json']=J({'package':'unicorn','version':'2.1.4','RECORD_sha256':H(rp.read_bytes()),'rows':records,'counts':{'total':63,'hash_size_declared_verified':41,'unhashed':22,'whole_tree_SHA_size_mtime_verified':63},'unhashed_scope':'RECORDitself and21pre-existingpyc; all63independentlycoveredbyfullbaseline','package_imported':False,'guest_execution':0})
+ pins={S:{'sha256':H(b),'bytes':len(b)},'image_accessor':{'path':str(V.relative_to(W)),'sha256':H(V.read_bytes())},'old_tool_baseline':{'path':str(B.relative_to(W)),'sha256':H(B.read_bytes())},'prior_source_provider':{'path':str((R/'2026-11-01-bnth-values/provider/REPORT.md').relative_to(W)),'sha256':H((R/'2026-11-01-bnth-values/provider/REPORT.md').read_bytes())}}
+ out['INPUTS.json']=J(pins);out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(pathlib.Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.v2.md').read_bytes()),'outputs':{n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()},'counts':{'source_spans':len(rs),'guards':len(guards),'canary_PIC_joins':len(pic),'tool_files':len(rows),'RECORD_rows':len(records),'RECORD_hashed':41,'original_execution':0}});return out
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');ck=ap.parse_args().check;out=build()
+ if ck:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  for n,r in json.loads((D/'first-candidate-v2/INDEX.json').read_text()).items():z=(D/n).read_bytes();assert z==(D/'first-candidate-v2'/n).read_bytes()and H(z)==r['sha256']and len(z)==r['bytes'],n
+ else:
+  s=D/'first-candidate-v2';assert not s.exists(),'refuse firstsnapshot overwrite'
+  for n in out:assert not(D/n).exists(),'refuse generatedoverwrite'
+  cp={**out,'REPORT.v2.md':(D/'REPORT.v2.md').read_bytes(),pathlib.Path(__file__).name:pathlib.Path(__file__).read_bytes()};ix=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in cp.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in cp.items():p=s/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (s/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':ck,'outputs':len(out),'tool_files':63,'RECORD_hashed_verified':41,'original_execution':0}))
+if __name__=='__main__':main()

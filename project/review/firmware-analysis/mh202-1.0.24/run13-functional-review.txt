@@ -1,0 +1,49 @@
+# Independent source review — MH202 functional run13
+
+**PASS; no material correction required.** This independent review compares the mixed-separator report, collector and finite saved state ledgers with fresh original MH202 ELF bytes and selected control/data flow. The reviewer did not author this functional batch. No original ARM/PARENTESI/Boolean helper/libc, configured script, target process/OS, action or live I/O executes in this review. Protocol run13's separate native special-comparator-prefix experiments are outside this review and its original-execution0 accounting.
+
+## Checks performed
+
+`python3 -B work/mh202-firmware/research/2026-10-30/functional/run13/collect_evidence.py --check` passes:19 deterministic outputs plus manifest,12 spans,32 asserted words,2 original files and3 finite state ledgers. Saved comparisons use strict bytes. All19 manifest hashes match current evidence.
+
+In a separate read-only host check, I independently mapped original VAs through PT_LOAD entries and verified all12 original byte-span SHA256 values and32 instruction words, rather than relying only on the saved report or hashes of generated text. I independently checked every event's four state bytes in all three finite ledgers against explicit expected states, final normalized buffers and OR/AND finalizer admissions. No original interpreter or Boolean leaf is executed by that check.
+
+## Decisive original relations
+
+1. Separate OR/AND flags at fp−20/fp−19 and shared accumulator/pending bytes at fp−18/fp−17 match the entry stores `0x4178/0x4180/0x4188/0x4190`. The latter two initialize110 (`n`), a sentinel distinct from normalized Boolean0/1.
+2. OR's first-use gate `0x4238..0x4240` checks only OR-seen, and AND's `0x5230..0x5238` checks only AND-seen. The selected first OR/AND constant lanes store directly into the same fp−18 at `0x51c8` and `0x6188`. They do not combine the previous accumulator at those stores or require the other lane's flag0. Thus either first-use lane can replace a value already produced by the other lane under the supplied local states.
+3. Original repeated-AND route `0x59b8..0x59fc` stores its comparison into fp−17, explicitly normalizes both saved values, calls AND at `0x59ec`, stores fp−18 and resets pending to110. Its shared continuation at `0x618c..0x61d0` makes three4-byte zero requests, advances the source cursor and resets the output index without resetting the seen flags. Report scope correctly retains run12's exact reset-footprint/caller-capacity limits instead of asserting complete buffers are cleared.
+4. Original AND provider `0x19a0..0x1a10` uses XOR1 and byte tests, returning1 for the caller's canonical1/1 arguments and0 for the other normalized pairs. The report correctly limits this interpretation to those explicitly normalized0/1 arguments; it does not generalize arbitrary byte values. Static symbols/relocations identify the matching candidate provider without proving live binding.
+5. Delimiter OR guard `0x632c..0x634c` is tested first and requires OR-seen nonzero, accumulator!=110, pending==110. Its admitted selected final comparison stores pending at `0x6acc`; OR at `0x6b00` stores accumulator at `0x6b08` and normalizes output buffers. There is no pending-reset store in this retained final OR path before the AND gate. This differs from the explicit intermediate repeated-lane reset.
+6. Subsequent AND guard `0x6bfc..0x6c1c` requires AND-seen nonzero, accumulator!=110 and pending==110. With pending now a selected0/1 final comparison, branch `0x6c1c→0x748c` skips final AND even if its flag is1. The AND-only control retains pending110 until its own admitted final comparison at `0x7394`, pending store `0x739c`, AND call `0x73d0`, accumulator store `0x73d8` and normalization. This is conditional finalizer suppression, not absence of an AND implementation.
+7. Normalized outputs are the supplied left `0`/`1`, operator `=`, right `1` buffers. They are not a rewritten global source string. Original final normalization uses explicit2-byte copies from the retained literals and follows the separate four-byte reset requests. General precedence, complete recursive/string/time/percent/variable grammar, IIF/copy/action execution and effective global/provider state remain unproved.
+
+## Independent finite-state comparison
+
+Reading states as `(OR_seen, AND_seen, accumulator, pending)`:
+
+| Selected shape | After first separator | After second separator | After OR delimiter gate | After AND delimiter gate |
+| --- | --- | --- | --- | --- |
+| `1=0&2=2|3=0` | `(0,1,0,110)` | `(1,1,1,110)` | `(1,1,1,0)` | unchanged, skipped |
+| `1=1|2=0&3=0` | `(1,0,1,110)` | `(1,1,0,110)` | `(1,1,0,0)` | unchanged, skipped |
+| `1=1&2=2&3=0` | `(0,1,1,110)` | `(0,1,1,110)` | unchanged, skipped | `(0,1,0,0)` |
+
+The saved final left strings1/0/0, operator `=`, right `1`, guard admissions and unchanged selected global source agree. The author model correctly starts after supplied ordinary short-field extraction/comparison results; it is not a native scanner or accepted-DSL model. Both mixed results arise from actual shared-store/guard composition rather than merely applying a conventional Boolean precedence table. Symbolic `TRUE_BODY/FALSE_BODY`, configured acceptance, longer residual-buffer effects, additional/mixed operators, recursion, production faults and physical/action consequences are expressly outside the finding.
+
+## Exact reviewed identities
+
+Research paths are relative to `research/2026-10-30`; image paths refer to originals inside the firmware.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `functional/run13/REPORT.md` | `fd11cdedb3a0071beeb8d0a2679ebd84d4db84019347361d2178db6759704c4d` |
+| `functional/run13/collect_evidence.py` | `5308aedef32b4a91e8df6fc327b18d466321e4e92e7cb3c33ee356ed1b9a27b5` |
+| `functional/run13/output-manifest.json` (19 entries) | `cb8708e50e3190b384a36e797d7f51399fcaafb9836712b56c3e409e4f22d3a1` |
+| `functional/run13/input-hashes.json` | `c28e0879fa78049d80802e25b54ca734cf031f1463d9b3066f48a0c5a322930f` |
+| `functional/run13/original-spans.json` | `ab7823f17a90a5bae67967068366132a7017ab14ced2fd509b24861e653670c2` |
+| `functional/run13/host-mixed-state-ledgers.json` | `3e82129d5359cf693214f7c197271692ee0bd9423df2e0dcbfa481d98b9c3965` |
+| `functional/run13/shared-local-dataflow.json` | `6cc51b0843d6a56870d27874e2e93be8127e9356e515ab7cb5b22c2e4b6abe1d` |
+| `/home/bticino/bin/bt_script` | `f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4` |
+| `/home/bticino/lib/libdomotica.so.0.0` | `5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09` |
+
+The author manifest deliberately excludes the report/reviews; the report is pinned separately here. Only this reviewer-owned file is written. No author evidence, old report, source or original image is modified. No expanded language/runtime/defect claim or correction is requested.

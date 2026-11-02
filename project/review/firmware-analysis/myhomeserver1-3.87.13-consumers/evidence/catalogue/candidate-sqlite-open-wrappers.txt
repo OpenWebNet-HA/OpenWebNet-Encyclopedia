@@ -1,0 +1,15 @@
+
+/usr/lib/libsqlite3.so.0.8.6:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000af3f8:
+   af3f8:	2300      	movs	r3, #0
+   af3fa:	2206      	movs	r2, #6
+   af3fc:	e55a      	b.n	aeeb4
+   af3fe:	bf00      	nop
+
+000af400:
+   af400:	e558      	b.n	aeeb4
+   af402:	bf00      	nop

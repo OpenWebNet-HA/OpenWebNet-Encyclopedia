@@ -1,0 +1,44 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000cd848 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15090>:
+   cd848:	4a47      	ldr	r2, [pc, #284]	@ (cd968 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x151b0>)
+   cd84a:	4b48      	ldr	r3, [pc, #288]	@ (cd96c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x151b4>)
+   cd84c:	b570      	push	{r4, r5, r6, lr}
+   cd84e:	2500      	movs	r5, #0
+   cd850:	447a      	add	r2, pc
+   cd852:	6886      	ldr	r6, [r0, #8]
+   cd854:	b082      	sub	sp, #8
+   cd856:	4604      	mov	r4, r0
+   cd858:	58d3      	ldr	r3, [r2, r3]
+   cd85a:	681b      	ldr	r3, [r3, #0]
+   cd85c:	9301      	str	r3, [sp, #4]
+   cd85e:	f04f 0300 	mov.w	r3, #0
+   cd862:	7105      	strb	r5, [r0, #4]
+   cd864:	b9be      	cbnz	r6, cd896 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x150de>
+   cd866:	6983      	ldr	r3, [r0, #24]
+   cd868:	2b00      	cmp	r3, #0
+   cd86a:	d060      	beq.n	cd92e <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15176>
+   cd86c:	69c3      	ldr	r3, [r0, #28]
+   cd86e:	3010      	adds	r0, #16
+   cd870:	4798      	blx	r3
+   cd872:	68e3      	ldr	r3, [r4, #12]
+   cd874:	2b00      	cmp	r3, #0
+   cd876:	d133      	bne.n	cd8e0 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15128>
+   cd878:	2301      	movs	r3, #1
+   cd87a:	7123      	strb	r3, [r4, #4]
+   cd87c:	4a3c      	ldr	r2, [pc, #240]	@ (cd970 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x151b8>)
+   cd87e:	4b3b      	ldr	r3, [pc, #236]	@ (cd96c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x151b4>)
+   cd880:	447a      	add	r2, pc
+   cd882:	58d3      	ldr	r3, [r2, r3]
+   cd884:	681a      	ldr	r2, [r3, #0]
+   cd886:	9b01      	ldr	r3, [sp, #4]
+   cd888:	405a      	eors	r2, r3
+   cd88a:	f04f 0300 	mov.w	r3, #0
+   cd88e:	d14c      	bne.n	cd92a <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15172>
+   cd890:	2001      	movs	r0, #1
+   cd892:	b002      	add	sp, #8
+   cd894:	bd70      	pop	{r4, r5, r6, pc}

@@ -1,0 +1,11 @@
+# A distinct numeric-event trigger
+
+Fresh original source identifies BNLD as local raw TRIGGER row3, separate from the earlier BNLD CONDITION row2. Its raw BnldTrigger object is48 bytes; its compiled BnldTriggerRunner inner is68 bytes in an80-byte control allocation at base+12. These identities and fields were derived from this firmware, rather than transferred from the BNIL trigger, BNLD condition or BNTH double path.
+
+The selected nonvirtual numeric admission method checks its own enabled byte and compares a supplied signed integer with its configured threshold. Local operator0 requests the stored callback for supplied>threshold, operator1 for supplied<threshold, operator2 for equality and operator3 for inequality. This is admission/callback source, not a Boolean condition predicate, accepted external command or measured device event.
+
+A selected actual local caller narrows the supplied-integer premise: after its type/ID/dispatch premises, compiled status selector60 must be−1, the suitable record's INTEGER field32 must differ from−1, and its status string must be exact on before this numeric handler is called. The field is not the different Thermostat record's double32. Correct record type/ID, active objects, normal providers, configuration, callback capture/ownership and lifetime remain their own premises; no natural event-to-scene transaction is executed.
+
+The current batch adds static source and independent review only. New original visits, guest execution/replay and semantic fixtures are0. The frozen MyHOMEServer1 provider ledger remains1 corpus/8 top-level entries/340 original code-hook visits/0 C primitives/12 definition redirects/8 EXIT/0 stops/360 hooks, with4 data-relocation setup writes separate. Scheduler/process/fullJSON/OS/thread/timer/network/bus/physical execution remains0. Earlier F454/MH202 ledgers and historical source-only zero scopes remain unchanged.
+
+Public units, numeric domain, configured/generator admission, other status/mode/operator branches, crossing/deduplication policy, complete errors/unwind/concurrency and physical meaning remain open. Missing configured extras80/81/94/95 and closed receiving/transport/MQTT/libjel/auth/session/framing boundaries are unchanged. The final reviewed source report defines exact applicability and any remaining callback-construction boundary.

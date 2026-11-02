@@ -1,0 +1,23 @@
+# Independent MH200N run07 application source peer review
+
+Reviewer: f450_archive_analysis. Result: PASS for the permitted original pattern/variadic-argument/same-buffer request contract, with natural outer caller and outcomes open. No correction requested. Full Device/source/runtime/physical approval remains pending.
+
+The frozen collect_application_v1.py --check passed through the existing host ARM-disassembly route: five outputs, five exact original spans, thirty-eight word guards, six first copies and zero original executions. I independently parsed own application bt_taskmanager ELF header/PT_LOAD mappings; decoded the rotated immediates giving FP-1140 at each selected reconstruction; recomputed the four signed call targets and ten PC-relative argument-pool joins; compared all eight literal bytes and all five span bytes/hashes to the original; and verified every input pin and all six first copies. Own identity is159048bytes/SHA256 ad68f9bf43f7f10af122f34d3cb14b7d8c02730c46225a9a6cd1bf3e663072cb, machine40/rawflags0x202. Separate application source is not an installed overlay or another product/recovery semantic transfer.
+
+The first selected formatter request hasR0=FP-1140, R1=compiledformat %s %s%s > %s%s, R2=ls -1 andR3=/root/script/. Exact STR immediates confirm remaining string operands atSP,SP+4,SP+8 are respectively *.*.spt,/var/tmp/bticino/script/,lista. BL0xa938 targets0x9d04. The subsequent pointer reconstruction at0xa93c..0xa948 yields the same FP-1140 and BL0xa94c targets0x9e24. Original PLT/GOT calculation/relocation evidence and an independent readelf query identify sprintf GOT0x36620 and system GOT0x36680. This supports the source argument ordering and same-buffer request under the stated ordinary ARM32 variadic ABI/formatting/normal-return premises.
+
+The second formatter at0xa96c again receives FP-1140, format%s%s and the compiled temporary directory/lista operands. The following reconstruction0xa970..0xa97c again yields the same address;0xa980 supplies compiled r and BL0xa984 targets0x9fa4. Independent readelf confirms fopen GOT0x36700. Thus the literal-to-formatting-to-system request and subsequent listing-path-to-fopen request are supported. No target formatter/system/file provider is executed, and no generated command, listing file, fixture, observed wildcard expansion or matched-file count is used as evidence.
+
+The report correctly distinguishes source requests from actual shell command completion, effective binding, permissions/path state, produced contents, a valid stream, later list consumption or accepted scenario grammar/compiler behavior. It stops immediately after fopen request. Natural outer caller remains explicitly unestablished; a local routine beginning0xa8f0 is an actual caller to the retained imports, without a fabricated boot path/receiver. Valid frame/write capacity/lifetime, ordinary ABI/provider semantics and no invalidating side effects remain premises; frame arithmetic alone does not certify C object extent or runtime safety. First-exploration pattern observation stays inherited; the new argument/buffer/import linkage is distinct coverage.
+
+No closed shell/provider/display/output/receiving/transport/auth/session/framing/MQTT/libjel/JS implementation or denied F450 helper/body/equivalent route is expanded by this peer. Original/vendor/native/helper/emulator/model/SQL/targetOS/device/service/network/bus/mount/physical executions, actual database recovery/generation and remote writes are zero. Current archive remains inherited one encrypted F450 support container/zero plaintext databases, not newly read back or uploaded. Original/synced/completed sources, manifest, public integration and older ledgers remain unchanged. No blocking issue found.
+
+## Frozen reviewed members
+
+- collect_application_v1.py: 16457 bytes, SHA256 e97532d5fbdc84c3523f712ad30a88f59a5ce97f4dacdcbf6534df8592c2ba98
+- REPORT.md: 5280 bytes, SHA256 5e38a4897b40485d2fcfd755a617347e2d7680e8d455c9a539b402483e3dcbb1
+- SOURCE.json: 12516 bytes, SHA256 7e511fa58fb12cc4b0545bd487d735c13b3b62744a1e1541c0dbcb9579cfb305
+- ARGUMENT_FLOW.json: 2300 bytes, SHA256 578681749e14ca6f12c08c5cb40e8455cccd5d98076d7816aec9cf0f6b1b24f1
+- INPUTS.json: 867 bytes, SHA256 8ced51be0220abc4850ef1fd52f68a7980445039b3bf86f8de3b5e884c21ca37
+- OUTPUT_MANIFEST.json: 609 bytes, SHA256 1455aa8146e91293bd2ba2ce7b00b0908ae3148120d8b7459b973fac2caf404e
+- first-candidate/INDEX.json: 1017 bytes, SHA256 fe72f2200443b9e30946ae10500a5a69772cd805c9b178a39882483a03d4e0df

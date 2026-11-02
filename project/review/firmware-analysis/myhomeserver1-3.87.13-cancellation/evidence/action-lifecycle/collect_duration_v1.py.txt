@@ -1,0 +1,60 @@
+#!/usr/bin/env python3
+"""Static operational-duration setter caller/second-callable storage; no invoker-body analysis."""
+import argparse,hashlib,importlib.util,json,re,struct,subprocess,sys
+from pathlib import Path
+sys.dont_write_bytecode=True
+D=Path(__file__).resolve().parent;P=D.parents[2];W=P.parents[2];H=lambda z:hashlib.sha256(z).hexdigest();J=lambda x:(json.dumps(x,sort_keys=True,indent=2)+'\n').encode()
+HELPER=P/'research/2026-10-31/image_vfs.py';sp=importlib.util.spec_from_file_location('duration_vfs',HELPER);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+IMAGE='/home/bticino/scheduling_manager/scheduling_manager';SHA='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26'
+SPANS=[('duration-getter-setter',0xcdaec,0xcdaf4),('selected-constructor',0xcf06c,0xcf5c8),('first-callable-storage',0xcd990,0xcda40),('second-callable-storage',0xcda40,0xcdaec),('execute-inline-first-path',0xcd848,0xcd896),('duration-thread-request',0xcd8e0,0xcd936),('duration-worker',0xcd720,0xcd826)]
+CALLS=[(0xcf156,0xcd988),(0xcf15e,0xcdaf0),(0xcf1ae,0xcdaec),(0xcf290,0xcd990),(0xcf2b0,0xcdaec),(0xcf382,0xcda40)]
+GUARDS=[(0xcdaf0,'c160'),(0xcdaec,'c068'),(0xcf128,'43f98f07'),(0xcf15a,'a16d'),(0xcf15c,'2046'),(0xcf2b6,'d8b9'),(0xcda78,'05f12003'),(0xcda7e,'2835'),(0xcd872,'e368'),(0xcd876,'33d1'),(0xcd7c2,'836a'),(0xcd7c6,'c36a'),(0xcd7d2,'1a71')]
+EXPECTED_HITS=[0xcf15e,0xd4112,0xd7cb4,0xdd756,0xdfb8e,0xe2a3c,0xeb958,0xed908,0xef896,0xf27b2,0xf7f2c,0xf9944,0x10256e]
+def target(raw,pc):
+ a,z=struct.unpack('<HH',raw)
+ if a&0xf800!=0xf000 or z&0xd000!=0xd000:return None
+ s=(a>>10)&1;i1=1-(((z>>13)&1)^s);i2=1-(((z>>11)&1)^s);n=(s<<24)|(i1<<23)|(i2<<22)|((a&1023)<<12)|((z&2047)<<1)
+ return(pc+4+n-((1<<25)if s else 0))&0xffffffff
+def build():
+ v=m.ImageVFS();b=v.read_bytes(IMAGE);assert H(b)==SHA;po=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);loads=[]
+ for i in range(n):
+  q=struct.unpack_from('<8I',b,po+i*sz)
+  if q[0]==1:loads.append((q[2],q[1],q[4]))
+ def at(a,n):
+  for va,o,s in loads:
+   if va<=a and a+n<=va+s:return b[o+a-va:o+a-va+n]
+  raise ValueError(hex(a))
+ w=lambda a:struct.unpack('<I',at(a,4))[0]
+ bp=v.root/IMAGE.lstrip('/');out={};src=[]
+ for name,a,e in SPANS:
+  src.append({'name':name,'start_va':hex(a),'end_va_exclusive':hex(e),'bytes':e-a,'sha256':H(at(a,e-a))});out['spans/'+name+'.txt']=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(bp)],text=True).replace(str(W)+'/', '').encode()
+ hits=[p for p in range(0x11880,0x113fb0-3,2)if target(at(p,4),p)==0xcdaf0];assert hits==EXPECTED_HITS
+ ex=[]
+ for p in range(0x14bfc0,0x14f8f8,8):
+  x=w(p)&0x7fffffff;x=x-(1<<31)if x&(1<<30)else x;ex.append(((p+x)&0xfffffffe,p))
+ a,p=max((a,p)for a,p in ex if a<=0xcf15e);e=next(a2 for a2,p2 in ex if a2>a);assert a==0xcf06c and e==0xcf5c8
+ calls=[]
+ for pc,t in CALLS:assert target(at(pc,4),pc)==t;calls.append({'call_va':hex(pc),'bytes_hex':at(pc,4).hex(),'target_va':hex(t)})
+ guards=[]
+ for a,h in GUARDS:assert at(a,len(bytes.fromhex(h))).hex()==h;guards.append({'va':hex(a),'bytes_hex':h})
+ base=(w(0xcf58c)+0xcf088+4)&0xffffffff;assert base==0x1659a4;slot=(base+w(0xcf598))&0xffffffff;assert slot==0x166d24;h=w(slot);assert h==0x164b14;rt=w(h+4);assert rt==0x164660;np=w(rt+4);assert at(np,20).split(b'\0')[0]==b'16Bn3lActionRunner';assert[w(h+i)for i in [8,12,16]]==[0xcd849,0xcd6f1,0xcd551]
+ rel=subprocess.check_output(['readelf','-rW',str(bp)],text=True);rows=[]
+ for a in [slot,h+8,h+12,h+16]:
+  z=[r for r in rel.splitlines()if re.match('^'+f'{a:08x}'+r'\s',r)];assert len(z)==1 and 'R_ARM_RELATIVE'in z[0];rows+=z
+ ptrs=[]
+ for pool,pc,t in [(0xcf59c,0xcf26e,0xd14a5),(0xcf5a0,0xcf27e,0xcdbf9),(0xcf5a8,0xcf372,0xcf065),(0xcf5ac,0xcf376,0xcdb01)]:assert(w(pool)+pc+4)&0xffffffff==t;ptrs.append({'pool_va':hex(pool),'add_pc_va':hex(pc),'target_thumb_pointer':hex(t),'scope':'Pointer binding only; target invoker/manager body not inspected.'})
+ inputs=[]
+ for p,z in [(bp,b),(HELPER,HELPER.read_bytes())]+[(P/q,(P/q).read_bytes())for q in ['research/2026-10-31-actions/common/REPORT.md','research/2026-10-31-factories/factories/REPORT.md']]:inputs.append({'path':str(p.relative_to(W)),'bytes':len(z),'sha256':H(z)})
+ out.update({'INPUTS.v1.json':J(inputs),'SOURCE_SPANS.v1.json':J(src),'DIRECT_CALLS.v1.json':J(calls),'CRITICAL_BYTES.v1.json':J(guards),'BOUNDED_CALL_LOCATOR.v1.json':J({'range_start_va':'0x11880','range_end_va_exclusive':'0x113fb0','stride_bytes':2,'target_va':'0xcdaf0','syntactic_thumb_BL_candidates':[hex(x)for x in hits],'selected_exidx':{'start_va':'0xcf06c','end_va_exclusive':'0xcf5c8','entry_va':hex(p)}if False else{'start_va':'0xcf06c','end_va_exclusive':'0xcf5c8'},'scope':'Bounded syntactic locator; only selected constructor validated as a caller. No indirect/other-encoding/global-absence claim.'}),'CLASS_IDENTITY.v1.json':J({'got_base':hex(base),'slot_va':hex(slot),'header_va':hex(h),'address_point_va':hex(h+8),'rtti_va':hex(rt),'rtti_name':'16Bn3lActionRunner','primary_methods':['0xcd849','0xcd6f1','0xcd551'],'relocations':rows,'scope':'Selected compiled class ownership, no public product/WHO/physical-family meaning.'}),'CALLABLE_POINTERS.v1.json':J(ptrs),'METHOD.v1.json':J({'original_execution':0,'host_models_or_input_fixtures':0,'target_IO':0,'scope':'Nontransport constructor/storage/getter/setter and shared local dispatch only. Invoker/manager bodies remain opaque; no external send/command/transport/session/auth/framing internals read or executed.','history':'No canonical generation failure or generated candidate overwrite. One exploratory Thumb slice began within a wide instruction; its first bogus decode was discarded before retaining complete instruction-aligned spans.'})})
+ return out
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build();out['OUTPUT_MANIFEST.v1.json']=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()})
+ if a.check:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+ else:
+  assert not any((D/n).exists()for n in out),'refuse overwrite';S=D/'first-candidate';assert not S.exists();copies={**out,Path(__file__).name:Path(__file__).read_bytes()};idx=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in copies.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in copies.items():p=S/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (S/'SNAPSHOT.json').open('xb').write(idx)
+ print(json.dumps({'check':a.check,'outputs':len(out),'spans':len(SPANS),'calls':len(CALLS),'byte_guards':len(GUARDS),'PIC_code_targets':4,'relocations':4,'locator_candidates':13,'inputs':4,'original_execution':0}))
+if __name__=='__main__':main()

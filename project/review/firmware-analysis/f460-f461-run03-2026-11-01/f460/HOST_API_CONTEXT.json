@@ -1,0 +1,49 @@
+{
+  "evidence": [
+    {
+      "HOST_path": "/usr/include/bits/types/struct_timespec.h",
+      "bytes": 877,
+      "scope": "Host semantic API context only; not original target header/layout/ABI proof.",
+      "selected_lines": [
+        {
+          "line": 16,
+          "text": "  __time_t tv_sec;\t\t/* Seconds.  */"
+        },
+        {
+          "line": 21,
+          "text": "  __syscall_slong_t tv_nsec;\t/* Nanoseconds.  */"
+        }
+      ],
+      "sha256": "798e773d0c7f3796033c043910db2b093d1e43116c4b3d2cf3be85f8c4304cf1"
+    },
+    {
+      "HOST_path": "/usr/include/time.h",
+      "bytes": 15326,
+      "scope": "Host semantic API context only; not original target header/layout/ABI proof.",
+      "selected_lines": [
+        {
+          "line": 290,
+          "text": "extern int nanosleep (const struct timespec *__requested_time,"
+        },
+        {
+          "line": 291,
+          "text": "\t\t      struct timespec *__remaining);"
+        }
+      ],
+      "sha256": "e27a0238aa4cbec65b5d3b94dfffa1f127415e1c33d95565a8a4acd8cf935f60"
+    },
+    {
+      "HOST_path": "/usr/include/asm-generic/errno-base.h",
+      "bytes": 1612,
+      "scope": "Host semantic API context only; not original target header/layout/ABI proof.",
+      "selected_lines": [
+        {
+          "line": 8,
+          "text": "#define\tEINTR\t\t 4\t/* Interrupted system call */"
+        }
+      ],
+      "sha256": "2c148e92b8318deeb767fabd60822113e575ee664ff09a1873aed8f7a495793c"
+    }
+  ],
+  "scope": "Not target source/layout. Ordinary Linux/POSIX ABI assumptions are explicit; numeric4 guard in original stands independently."
+}

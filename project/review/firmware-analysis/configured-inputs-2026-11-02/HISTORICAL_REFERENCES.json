@@ -1,0 +1,14 @@
+{
+  "mappings": [
+    {
+      "current_bytes": 12048,
+      "current_sha256": "37cc55da0ba75ed23110589ac89912f573f7ee0ebf559f3ffce154e8eea4a921",
+      "expected_old_sha256": "2a770e16c29599830e1257b890c6b20033e9154aaaec2c2973b3893dc22719dd",
+      "old_bytes": 11635,
+      "original_path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+      "retained_export": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/configured-inputs-2026-11-02/pre-edit/firmware-index.txt",
+      "retained_local": "work/configured-scene-module-investigation/2026-11-02/integration/pre-edit/firmware-index.md"
+    }
+  ],
+  "scope": "One exact historical index mapping, no broad fallback/repinning/old-validator replay"
+}

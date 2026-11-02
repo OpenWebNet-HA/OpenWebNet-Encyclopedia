@@ -1,0 +1,78 @@
+{
+  "ID": {
+    "copy": "54dda\u21924f024",
+    "destination": "current SP448/FP std::string",
+    "member_path": [
+      "params",
+      "id"
+    ],
+    "namespace": "string-keyed record ID, not numeric scene registry ID"
+  },
+  "JSON_provider": "Imported Json member conversion and all earlier parse/filter premises remain conditional; no parser executed",
+  "Light": {
+    "RTTI": "15ItemStatusLight",
+    "allocation_bytes": 64,
+    "control_pair": "SP296=(allocation+12,allocation)",
+    "discriminator": 0,
+    "embedded_record": "allocation+12",
+    "integer_defaults": {
+      "meaning": "not assigned physical units/sentinel semantics",
+      "offsets": [
+        32,
+        36,
+        40,
+        44,
+        48
+      ],
+      "word_hex": "ffffffff"
+    },
+    "level_key": "level",
+    "level_store": "temporary+32",
+    "other_integer_member_semantics": "not selected",
+    "selected_when": "54274 lookup missing OR record+4==0",
+    "status_absent": "initialized empty string",
+    "status_copy": "553ca rangeconstruction destination allocation+20=record+8",
+    "status_key": "status",
+    "status_object": "temporary+8 = SP584 held inSP84",
+    "temporary": "SP576"
+  },
+  "alternate": {
+    "RTTI": "14ItemStatusLoad",
+    "boundary": "not Light+8; no universal BNIL compatibility asserted",
+    "discriminator": 10,
+    "optional_flag": 44,
+    "status_object": 20
+  },
+  "handoff": {
+    "ID": "FP string pointer/length read53a7e",
+    "argument": "53a8c R1=R8+8",
+    "premises": [
+      "companion routing branches and normalcleanup/return conditions",
+      "actual retained object has selected Light layout",
+      "valid tree/string/provider state"
+    ],
+    "record": "52d20 R8=lookuprecord, R7=control",
+    "separate_handler": "53a92\u2192ee708; bodynotinspected"
+  },
+  "map": {
+    "getter": "0x5724c",
+    "install": "10ef90/10efc6",
+    "lookup": "10e3d8 found branch copiesnode40/44 tooutpair,missing writeszero pair",
+    "node_key_string": [
+      16,
+      20
+    ],
+    "node_record_pair": [
+      40,
+      44
+    ],
+    "receiver": "0x167368",
+    "retention": "selected visible control+4 increment; not complete concurrent lifetime proof"
+  },
+  "method": {
+    "host_semantic_cases": 0,
+    "original_execution": 0,
+    "target_calls": 0,
+    "transport_or_auth_implementation_inspection": 0
+  }
+}

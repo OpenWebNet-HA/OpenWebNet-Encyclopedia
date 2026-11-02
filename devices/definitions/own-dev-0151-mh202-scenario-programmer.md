@@ -14,6 +14,7 @@ MH202 runs up to 300 simple or advanced MyHOME scenarios. Scenarios can respond 
 | Item model / `modobj` | `5` | Main association; independent of project ID |
 | Firmware definition | `561` | Catalogue firmware IDs; version/build table below |
 | Declared Modules | `1` | Firmware metadata |
+| Examined Firmware package | `1.0.24` | [Build-specific analysis](../../reverse-engineering/firmware-analysis/mh202-1.0.24.md); distinct from catalogue Firmware `561` |
 | Categories | Scenarios, Gateways and interfaces, Multifunction devices | Source-derived roles |
 
 ## Commercial identities
@@ -42,6 +43,7 @@ These labels describe the retained historical catalogue; they do not establish i
 | `RA00127AB_S_EN.pdf` | English counterpart of manufacturer-linked document | `RA00127AB_S_EN; printed publication date not established` | PDF pp. 4–46: complete scenario function families, trigger/condition/action limits and configuration; worked examples pp. 47–55 unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/da/b0/dab01650cb9227aa85ae8a2569cda582ac7f6b8bdf7621e5059f67adbc9cf128.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/RA00127AB_S_EN.pdf) |
 | `RA00127AB_U_IT.pdf` | Legacy manufacturer technical documentation | `RA00127AB_U_IT; printed publication date not established` | PDF pp. 4–9: Italian setup/control cross-check | [Archived original](https://archive.openwebnet-ha.org/sha256/a2/e4/a2e421e619988f7e50a8e8f8d50c61e9a2d2d3b366e0e66fb563106a43e4eb46.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00127AB_U_IT.pdf) |
 | `RA00127AB_U_EN.pdf` | English counterpart of manufacturer-linked document | `RA00127AB_U_EN; printed publication date not established` | PDF pp. 4–9: setup, controls, network, scenario control and limits | [Archived original](https://archive.openwebnet-ha.org/sha256/31/b4/31b4ec525e26e17a1532e9c2ea9f240c84ec31c51d8d4287af04b03810f5b7e2.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/RA00127AB_U_EN.pdf) |
+| `MH202_010024.fwz` | Manufacturer Firmware package | `1.0.24`; update manifest object model `5.0.5` | Scenario control, script loading and local translation; static source and selected isolated-helper evidence | Private original; `firmware-mh202-010024` in [artifact manifest](../../sources/artifact-manifest.yaml) | [Publisher package page](https://www.homesystems-legrandgroup.com/home/-/productsheets/2482873) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1902`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
@@ -94,6 +96,19 @@ Version/revision/build `-1` retains wildcard or unspecified applicability in the
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
 
+### Examined implementation build
+
+The manufacturer `1.0.24` package is separate from catalogue Firmware `561`; it does not identify an installed release or hardware revision.
+
+| Build-specific subject | Finding | Canonical reference |
+| --- | --- | --- |
+| Scene control | Native `WHO 17` control/status and script loading; file enumeration does not define the public MH202 scene-address range | [`WHO 17`](../../functional/who-17-scenario-management/) |
+| Scenario lifecycle | Saved-active restoration, per-action disablement, interpreter state and software receipts have separate guards | [MH202 scenario processing](../../reverse-engineering/firmware-analysis/mh202-1.0.24-state-and-routing.md) |
+| Script representation | Selected generator and native consumers align filenames, BEGIN/IIF markers and ordinary-delay syntax | [Generated-script relationships](../../reverse-engineering/firmware-analysis/mh202-1.0.24-generated-scenarios.md) |
+| Local translation | Family-specific converters and state machines preserve distinct parser, ID and pending-state namespaces | [MH202 translation](../../reverse-engineering/firmware-analysis/mh202-1.0.24-functional-translation.md) |
+
+These findings derive from inspected source and selected isolated original helpers under recorded dependency models. Actual configured scripts, effective runtime state/providers, complete interpreter behavior and Physical Device outcomes remain unresolved.
+
 ### Parameter and package associations
 
 | Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
@@ -114,7 +129,7 @@ No installed release, hardware revision or microcontroller fingerprint is corrob
 | `561` | `363` | Legrand (key `2`) | `0` | Director | `1902_1.0_LG\xml\DIRECTOR\director.xml` |
 | `561` | `364` | Legrand (key `2`) | `0` | Protocol and other device parameters | `1902_1.0_LG\xml\Protocol\protocol.xml` |
 
-All 15 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+All 15 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. These catalogue paths are associations, not proof that every variant payload has been examined. Separately recovered `1902_1.0_LGG` Director, Protocol and SDC resources have selected identity/structure evidence, and Step1/project-to-Configuration rules connect the enable-controlled panic command to its target leaf. The [resource reference](../../reverse-engineering/firmware-analysis/mh202-1.0.24-scenario-resources.md) records that scope. It does not establish complete BT/LG/LGG equivalence, SVM semantics or execution of every listed parameter/conversion payload.
 
 No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
@@ -275,6 +290,10 @@ The catalogue firmware IP default is `192.168.1.40`; the reusable LAN and public
 | `RA00127AB_U_IT.pdf` | PDF pp. 4–9: Italian setup/control cross-check |
 | `RA00127AB_U_EN.pdf` | PDF pp. 4–9: setup, controls, network, scenario control and limits |
 
+The separately recovered [MH202 ScenarioSuite profile](../../scenario-engine/scenario-suite-database.md) supplies editor rules, area permissions and command/address declarations. Its shipped working tables are empty; it is not an installed scene inventory. Selected manufacturer resource/conversion evidence is scoped to `1902_1.0_LGG`, independently of the catalogue paths above.
+
+The `1.0.24` implementation evidence complements the catalogue and manuals. Its local message, script and lifecycle behavior does not establish a deployed Configuration or close the remaining interpreter, persistence, timing and physical-behavior questions.
+
 ## Evidence limits and open work
 
 Installed firmware, scheduler/time recovery, simultaneous-session behavior and actual execution/diagnostic responses remain uncorroborated.
@@ -292,4 +311,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
+- [MH202 implementation reference](../../reverse-engineering/firmware-analysis/mh202-1.0.24.md)
 - [Semantic review record, 7 October 2026](../../project/review/device-reviews-0151-0160-2026-10-07.md#own-dev-0151)

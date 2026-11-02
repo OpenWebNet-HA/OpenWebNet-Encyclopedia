@@ -1,0 +1,262 @@
+{
+  "configuration_lines": [
+    {
+      "image": "normal",
+      "path": "/home/bticino/cfg/stack_open.xml",
+      "selected_lines": [
+        {
+          "line": 62,
+          "text": "<logrotation>1</logrotation>"
+        }
+      ]
+    },
+    {
+      "image": "normal",
+      "path": "/home/bticino/cfg/stack_open_reduced.xml",
+      "selected_lines": [
+        {
+          "line": 62,
+          "text": "<logrotation>1</logrotation>"
+        }
+      ]
+    },
+    {
+      "image": "recovery",
+      "path": "/home/bticino/cfg/stack_open.xml",
+      "selected_lines": [
+        {
+          "line": 62,
+          "text": "<logrotation>1</logrotation>"
+        }
+      ]
+    },
+    {
+      "image": "recovery",
+      "path": "/home/bticino/cfg/stack_open_reduced.xml",
+      "selected_lines": [
+        {
+          "line": 62,
+          "text": "<logrotation>1</logrotation>"
+        }
+      ]
+    }
+  ],
+  "direct_local_callers": [
+    "0x62c4",
+    "0x63bc",
+    "0x1359c"
+  ],
+  "execution": {
+    "models": 0,
+    "original_instructions": 0,
+    "service_calls": 0,
+    "target_file_calls": 0
+  },
+  "guards": {
+    "0x13464": "0x7100041f",
+    "0x13468": "0x54000281",
+    "0x13470": "0x3945a281",
+    "0x1347c": "0x34000361",
+    "0x134a4": "0x340002c0",
+    "0x134a8": "0x52803fe1",
+    "0x17988": "0x34001460",
+    "0x17c24": "0x35000100",
+    "0x17c28": "0x3905a27f",
+    "0x17c54": "0x34fffea0",
+    "0x17c58": "0x52800020",
+    "0x17c5c": "0x3905a260",
+    "0x19118": "0x3905a27f",
+    "0x195dc": "0x350068c0",
+    "0x1a308": "0x7100001f",
+    "0x1a30c": "0x1a9f07e0",
+    "0x1a310": "0x3905a300",
+    "0x62c0": "0xaa1303e0"
+  },
+  "import_requests": [
+    {
+      "call": "0x13450",
+      "got_slot": "0x31cf0",
+      "plt": "0x57d0",
+      "relocation": "0000000000031cf0  000000ab00000402 R_AARCH64_JUMP_SLOT    0000000000000000 get_mystatus_extras_status + 0",
+      "symbol": "get_mystatus_extras_status"
+    },
+    {
+      "call": "0x13460",
+      "got_slot": "0x31e68",
+      "plt": "0x5ac0",
+      "relocation": "0000000000031e68  000000dd00000402 R_AARCH64_JUMP_SLOT    0000000000000000 strtol@GLIBC_2.17 + 0",
+      "symbol": "strtol"
+    },
+    {
+      "call": "0x134a0",
+      "got_slot": "0x31860",
+      "plt": "0x4eb0",
+      "relocation": "0000000000031860  0000001500000402 R_AARCH64_JUMP_SLOT    0000000000000000 stat@GLIBC_2.33 + 0",
+      "symbol": "stat"
+    },
+    {
+      "call": "0x134b0",
+      "got_slot": "0x31b50",
+      "plt": "0x5490",
+      "relocation": "0000000000031b50  0000007600000402 R_AARCH64_JUMP_SLOT    0000000000000000 mkdir@GLIBC_2.17 + 0",
+      "symbol": "mkdir"
+    },
+    {
+      "call": "0x134b4",
+      "got_slot": "0x318e8",
+      "plt": "0x4fc0",
+      "relocation": "00000000000318e8  0000002800000402 R_AARCH64_JUMP_SLOT    0000000000000000 hal_restart_SysLog + 0",
+      "symbol": "hal_restart_SysLog"
+    },
+    {
+      "call": "0x134fc",
+      "got_slot": "0x31ca8",
+      "plt": "0x5740",
+      "relocation": "0000000000031ca8  000000a100000402 R_AARCH64_JUMP_SLOT    0000000000000000 hal_stop_SysLog_service + 0",
+      "symbol": "hal_stop_SysLog_service"
+    },
+    {
+      "call": "0x13504",
+      "got_slot": "0x31a10",
+      "plt": "0x5210",
+      "relocation": "0000000000031a10  0000004e00000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZN6logger13load_old_logsEv + 0",
+      "symbol": "_ZN6logger13load_old_logsEv"
+    },
+    {
+      "call": "0x13508",
+      "got_slot": "0x318e8",
+      "plt": "0x4fc0",
+      "relocation": "00000000000318e8  0000002800000402 R_AARCH64_JUMP_SLOT    0000000000000000 hal_restart_SysLog + 0",
+      "symbol": "hal_restart_SysLog"
+    },
+    {
+      "call": "0x1a304",
+      "got_slot": "0x319d0",
+      "plt": "0x5190",
+      "relocation": "00000000000319d0  0000004500000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_key_file_get_integer + 0",
+      "symbol": "g_key_file_get_integer"
+    }
+  ],
+  "literals": [
+    {
+      "add": "0x13490",
+      "adrp": "0x1348c",
+      "literal_va": "0x1d4e8",
+      "value": "/home/bticino/cfg/extra/70"
+    },
+    {
+      "add": "0x17980",
+      "adrp": "0x1797c",
+      "literal_va": "0x1ee88",
+      "value": "logrotation"
+    },
+    {
+      "add": "0x195c4",
+      "adrp": "0x195c0",
+      "literal_va": "0x1ee88",
+      "value": "logrotation"
+    },
+    {
+      "add": "0x17c18",
+      "adrp": "0x17c14",
+      "literal_va": "0x1bd70",
+      "value": "0"
+    },
+    {
+      "add": "0x17c48",
+      "adrp": "0x17c44",
+      "literal_va": "0x1e298",
+      "value": ""
+    }
+  ],
+  "loads": [
+    [
+      1,
+      5,
+      0,
+      0,
+      0,
+      134968,
+      134968,
+      65536
+    ],
+    [
+      1,
+      6,
+      136280,
+      201816,
+      201816,
+      3592,
+      4800,
+      65536
+    ]
+  ],
+  "normal_recovery_daemon_identical": true,
+  "scope": "static original byte/dataflow checks only; no original execution",
+  "spans": [
+    {
+      "file_offset": "0x133f0",
+      "name": "logging-selection",
+      "sha256": "290613df827623108675b56ee51483aef425cfd1043c30ff9652bc072c41afd1",
+      "size": 292,
+      "va_end_exclusive": "0x13514",
+      "va_start": "0x133f0"
+    },
+    {
+      "file_offset": "0x17978",
+      "name": "xml-key",
+      "sha256": "ed2e49ecb4703c548d01662cc641e947aa6e9b7c4b360e7c895e44a55e2e7807",
+      "size": 20,
+      "va_end_exclusive": "0x1798c",
+      "va_start": "0x17978"
+    },
+    {
+      "file_offset": "0x17c14",
+      "name": "xml-boolean",
+      "sha256": "2abd92e29b9c5adea27df1f365716eb3846eb05cd82ecca75d3cbbbdff3e3f5c",
+      "size": 76,
+      "va_end_exclusive": "0x17c60",
+      "va_start": "0x17c14"
+    },
+    {
+      "file_offset": "0x190ec",
+      "name": "default-byte",
+      "sha256": "c23e708934a4b9b246a840d6b62907612d06e343bf44988de564fba748b3ffc7",
+      "size": 48,
+      "va_end_exclusive": "0x1911c",
+      "va_start": "0x190ec"
+    },
+    {
+      "file_offset": "0x195bc",
+      "name": "keyfile-key",
+      "sha256": "beaf524709f913272246cd30fc08e2e398fecfef004279d25d22acd40e9bb507",
+      "size": 36,
+      "va_end_exclusive": "0x195e0",
+      "va_start": "0x195bc"
+    },
+    {
+      "file_offset": "0x1a2f4",
+      "name": "keyfile-boolean",
+      "sha256": "982798be0c662c803728763fe506ab95b078762517b56f25290feeb9feb2591f",
+      "size": 36,
+      "va_end_exclusive": "0x1a318",
+      "va_start": "0x1a2f4"
+    },
+    {
+      "file_offset": "0x62b8",
+      "name": "startup-call",
+      "sha256": "ea82839312f651e5e8693cb6d4df07776de787b000aace620bc2fcc0bc9b2a1f",
+      "size": 16,
+      "va_end_exclusive": "0x62c8",
+      "va_start": "0x62b8"
+    },
+    {
+      "file_offset": "0x13594",
+      "name": "local-caller",
+      "sha256": "9a2d60c0416a04730b049ca885d9027726e547fb1828b3f5418a422c4dc45d44",
+      "size": 12,
+      "va_end_exclusive": "0x135a0",
+      "va_start": "0x13594"
+    }
+  ]
+}

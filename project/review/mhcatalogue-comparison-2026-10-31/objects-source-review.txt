@@ -1,0 +1,45 @@
+# Objects and configuration independent source review
+
+PASS for the frozen source-specific correspondence, selected metadata and normalization claims. No author correction requested. Independent source review uses original read-only host SQLite and typed data comparisons, with no vendor/default/condition/conversion expression execution, firmware/native replay, network/device or closed authentication/session/framing work. It is not accepted protocol grammar, active configuration, physical support or complete consumer semantics.
+
+## Exact candidate pins
+
+Paths are relative to objects/ in the current comparison root.
+
+| Artifact | SHA256 |
+| --- | --- |
+| REPORT.md | c312fe9bec13bd8b076f70832ac9ac7fe783327a086cf5facbbb0f835f3ce576 |
+| collect_objects_v1.py | 6e97f2d2a602e717c969c3089a0cbb4aba83e79b9129fb156b8e02e17413afb1 |
+| OUTPUT_MANIFEST.v1.json | 27f22eca8df88212c4ea8a76053d3178068f48002cf1a14060ba6191bf0414ed |
+| CONF_ID_CLASSIFICATION.v1.json | 6b1093a7531f8397da8106663e70a3f85d9a911cca1a13996dcdcb83ed1d61c3 |
+| NORMALIZED_RELATIONSHIPS.v1.json | d0fce81d8dcdd4aacc98052eb35844521f99eabcc8bd233890d17ac2bb08a795 |
+| RAW_DELTA_IDENTITIES.v1.json | 37e6d48156ef183462d192cccadbff06501c62f8eea13211e26ab104c993d304 |
+| collect_selected_ranges_v1.py | db9dad38b087cb1edb58aef1922e29825c1eb69eeb39726fa8219be778a0304a |
+| SELECTED_RANGE_LABELS.v1.json | c1c695a5d5294338fcf91efaf8fbc82a923b94c40e2e6beddf0eeb980c9bba0d |
+| first-candidate/SNAPSHOT.json | b7d0de4b759e9f5b18a2d66d6436c327d057ba55bfe3156180097125594f18fb |
+| selected-ranges-first-candidate/SNAPSHOT.json | d71c297ac086d5a65f1e247c8a3447cc9f2ca5232b6ee9338bbf90b5ffe53d7a |
+| report-first-candidate/SNAPSHOT.json | f95562bba96859cedd987b5318c17ad11c2ccffe27a690b50506e4cfd3aff43a |
+
+Readonly checks reproduce12 main outputs/202 SQL records/20 relationship+10 supporting tables per source and the separate one-output/two-source narrow label query. Both original SHA identities agree with the catalogue source review. All13 indexed main first copies, two narrow first copies and the separately frozen report match current bytes/declared hashes; source/output files were not changed.
+
+## Semantic correspondence checked from originals
+
+I independently rebuilt complete source row bags as part of the separate75-table comparison; the20-table counts and shared-key distinction agree. External Object codes are unique:94 common full Object rows are exactly identical, and the embedded-only code is39. All104 shared item rows are unchanged. Those actual within-pair checks justify the chosen stronger owner anchors; they are not general catalogue ID-stability assumptions.
+
+Separately reconstructed owner contexts from each original's Object code or zero sentinel, firmware item's identity/description/family and complete selected version/revision/slot/status/default tuple, field name and typed idx. There are zero duplicate field contexts in each source. Every one of the68 shared-ID changed EN_CONF rows was independently classified:20 retain context and48 change owner/field. For all48 repurposed IDs the source child-range ID sets are disjoint. They cannot inherit another source's parent/ranges by integer equality.
+
+All114 recorded changed-ID correspondences were independently recovered. Every nonidentity field compares equal WITH SQLite/Python type retained, not only numeric equality or a field-name match. No ambiguous context was forced into a pair. The same-owner20 are exactly1332..1341,1541..1549 and4379. This demonstrates real renumbering while retaining genuine metadata differences.
+
+Independent full parent-context projections of EN_CONF give57 firmware-only/1180 Suite-only rows; equivalent EN_CONF_RANGE projections dropping only declared surrogate/owner IDs give233/3167. Non-ID range contents, including withheld defaults/values, were compared in memory with types, not exported or evaluated. This validates the reported reduction from raw171/1294 fields and355/3289 ranges without dismissing all remaining changes as renumbering. Source filter IDs can have multiple headers; the collector correctly retains the complete header-context list/multiplicity before linking filter ranges rather than inventing global uniqueness.
+
+Actual original row5293 resolves to Suite item1455/F454 versus embedded item1162; same numeric ID is not a changed F454 AID setting. The genuine refinements agree: Object218 G1..G10 retain indices240..249 and change only progressive ordering30..39 to21..30; Object401's nine progressives decrease1 and four conf_type values change empty TEXT to integer0, without inventing type0 meaning; Object130 PROXIMITY_ENABLE changes hidden0 to1, not physical support/enablement.
+
+The four M1541 range rows have different surrogate IDs; paired by selected progressive, non-ID content is unchanged except the exact progressive3 label reversal. I independently checked both safe labels against the original name column. This is not four new modes or executed blade behavior. The narrow probe preserves the main evidence's already-different child IDs and discloses the failed exploratory hypothesis; it does not rewrite old output.
+
+The embedded Object39 source graph independently matches relationship71 to firmware321/item533 and slot71/first_slot0/fixed_ko0, plus collection IDs1..10 and156. Internal IDs, external Object39, item model103, firmware wildcards, system/bus IDs and WHO are separate. Safe A/PL range declarations differ by Object context and do not define universal addressing grammar. The10 zero-result dangling probes are exactly scoped candidate checks, not all relational validation or declared-FK guarantees.
+
+## Applicability, privacy and history
+
+Source omissions of Gateway150, AV216, Scheduler61 and canonical product contexts do not erase documented MyHOMEServer1 capabilities or replace Suite-based Device definitions. New Object39 metadata and114 moved fields are embedded-profile source facts;20 same-owner changes are not automatically runtime/wire changes. No raw default, credential/key or arbitrary filter/condition text was exported by this review; opaque comparison content remains hash-only.
+
+The source report distinguishes the pre-output SQL typo from the later failed exploratory assertion about all20 child-ID sets. Its already-frozen evidence retained the real M1541 difference before the separate narrow probe. Current first candidates remain immutable; I did not certify unavailable console history as preserved exact bytes. Source declarations, normalization assumptions, actual consumer/runtime/physical boundaries and wider Device gates remain explicit. Only this new review was written.

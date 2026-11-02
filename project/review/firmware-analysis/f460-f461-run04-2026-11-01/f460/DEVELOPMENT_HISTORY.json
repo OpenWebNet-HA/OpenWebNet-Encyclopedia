@@ -1,0 +1,16 @@
+{
+  "changes": [
+    "instruction guard exact source-word correction",
+    "remove absent HOST header assertion/claim; retain explicit API assumptions",
+    "python3 reproduction",
+    "new v2 names and first-copy directory",
+    "honest pre-output failure disclosure"
+  ],
+  "new_original_execution": 0,
+  "no_v1_overwrite": true,
+  "parent_pre_v2_snapshot": "work/f460-f461-comparison/2026-11-01-run04/integration/f460-before-v2/INDEX.json",
+  "v1_report_sha256": "44efc5c31720408792806aaef382c024ec630d1a060dd9177a7d7aae50cefae8",
+  "v1_script_sha256": "7570b5dbc79ff9060ce5c9fd39482d87809d9a854e7d4ca6788c7ca5ddab7dec",
+  "v2_report_sha256": "00c18455900a2ac60c25d0ad0d0d19ec12935e264b960c30c321da054b477687",
+  "v2_script_sha256": "ff037c546c43f74feedff5f9b742556d7a951a9c7157b960c48a6b9e855b8fb8"
+}

@@ -1,0 +1,48 @@
+{
+  "files": {
+    "CONF_ID_CLASSIFICATION.v1.json": {
+      "bytes": 83021,
+      "sha256": "6b1093a7531f8397da8106663e70a3f85d9a911cca1a13996dcdcb83ed1d61c3"
+    },
+    "INPUTS.v1.json": {
+      "bytes": 467,
+      "sha256": "d172e377e44d2bb942be5697cc3f511ac92a666b8bbff5364282608f26bfb80b"
+    },
+    "METHOD.v1.json": {
+      "bytes": 601,
+      "sha256": "9534afa8764d69841fa533f7f9b56e055a84f35678d6748fff1e3197197f8f66"
+    },
+    "NORMALIZED_RELATIONSHIPS.v1.json": {
+      "bytes": 56787,
+      "sha256": "d0fce81d8dcdd4aacc98052eb35844521f99eabcc8bd233890d17ac2bb08a795"
+    },
+    "OBJECT_EQUIVALENCE.v1.json": {
+      "bytes": 15797,
+      "sha256": "3d4f22d33762bf2119037adaed577c8847a23f749447bb7964e18589007e1b5e"
+    },
+    "ORPHAN_PROBES.v1.json": {
+      "bytes": 3930,
+      "sha256": "aafaef956d86b2f9f64aeac86ed06fb0027b0080c68f1a4157fa95f35b592911"
+    },
+    "QUERIES.v1.json": {
+      "bytes": 27095,
+      "sha256": "2ee83c33a213db5d7298a2883dda48bc1d1f0828928c9f59823c09668760df8f"
+    },
+    "RAW_DELTA_IDENTITIES.v1.json": {
+      "bytes": 1289577,
+      "sha256": "37e6d48156ef183462d192cccadbff06501c62f8eea13211e26ab104c993d304"
+    },
+    "SAFE_EXAMPLES.v1.json": {
+      "bytes": 41329,
+      "sha256": "09ab89f5c9fa7221e62f8e8d80e7157bb81959f6ddbbc54cf26dc1e349181b2d"
+    },
+    "SCHEMA_AND_KEYS.v1.json": {
+      "bytes": 49554,
+      "sha256": "35a792c01bad66dc2ae223b5e2bdd0329b06a907e238f3254ae84a302788dab7"
+    },
+    "TABLE_COVERAGE.v1.json": {
+      "bytes": 5458,
+      "sha256": "46ca261bf946543c33e97ff9751742855f4c4b22c197bccc6a61df0e3b1a6665"
+    }
+  }
+}

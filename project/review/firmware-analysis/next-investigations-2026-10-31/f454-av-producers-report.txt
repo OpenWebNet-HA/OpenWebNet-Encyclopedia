@@ -1,0 +1,54 @@
+# F454 DIM35 status producer and separate startup state
+
+This static follow-up identifies an actual DIM35 response formatter in `/home/bticino/bin/bt_answering_machine`. Its first status value is the answering-machine object's word at `+0xac`; this is the field at index 4 after the frontend splits the response on `*`. That is a concrete software-schema join, conditional on the API returning this response. It does not establish actual camera readiness or a completed API exchange.
+
+The previous `bt_vct` investigation describes a different process and different state: global `0x2b5f8`, role values, and local ACK/KO behavior. It must not be substituted for the answering-machine object's status words. The packaged role1's transition from initial `−1` to the existing `2` required by its ordinary route remains unresolved. This batch makes no exhaustive writer/alias or archive-wide absence claim.
+
+## Sources and method
+
+Original F454 normal-image bytes were read through the existing image-oriented VFS. No original ARM instructions, JavaScript, vendor processes, target open/read calls, network, services or device operations were executed. Host analysis reads files and runs binutils. The collector exports selected instructions and a whitelisted format string, not packaged credentials, configuration templates or full archive commands. Opaque client-registration and send/exchange delegates were not inspected.
+
+| Original image input | SHA256 |
+| --- | --- |
+| `/home/bticino/bin/bt_answering_machine` | `23e3089f6934a267c0eaa466df32cdb423b15ae7a34cb47da2fc324f6ac7857b` |
+| `/home/bticino/bin/api-arm` | `2248b877bcc4180f0f04ffb1bad71e0efe4607fd06eacf174a2a6a380ea2cb13` |
+| `/home/bticino/bin/bt_vct` | `b9bf0ba4cc212b84be19f8b57c9f57bcc0cd7dfb9d7cdf31af578713f3ecd076` |
+| `/home/httpd/html/myhome/js/views/video/VideoPlayerH264View.js` | `436cd1ff2a6a67d6ffd5f874542953650ae7b6a68790376951a8ad0cc71a3d74` |
+
+`input-hashes.json`, `original-spans.json`, `critical-words.json` and `selected-contracts.json` give the reproducible source identities, offsets and premises. Five prior/documentary references were frozen before analysis under `references-v1/`; their index records their capture sources and exact hashes. The existing product0002 description supplies A/V and dedicated alarm-port context, not a code-to-electrical or camera-availability proof. No fresh manual, specification or hardware verification is claimed.
+
+## Formatter, caller and frontend field
+
+The named `bt_answering_machine_receive_open` at `0x1ebb0` accepts the selected path only for message word0 equal to 1, a coherent parsed object at message `+4`, and ordinary called-helper behavior. Its parsed WHO string is converted at `0x1ec7c`. With the answering-machine object's `+0x1cc` nonzero, WHO8 selects `0x1ed7c`; `0x1ed84` passes the same message to `bt_answering_machine_manage_who_eight` at `0x1cf00`.
+
+For the selected DIM35 branch, this latter function requires a null parsed WHAT pointer (`parsed+8`), non-null DIM text (`parsed+32`) converting to 35, message selector (`+32`) equal to 3, message category (`+28`) different from 2, and the opaque `add_app_client_to_serve` import returning zero. Parsed-kind word `+44` equal to 3 selects the branch at `0x1d03c→0x1d3d8`; dimension indexing selects `0x1d40c→0x1d9bc`. These are postparsed structure premises, not a proof that any arbitrary raw query is admitted.
+
+At `0x1d9bc..0x1d9d8`, the format at original VA `0x232e8` is exactly `*#8**%d*%d*%d*%d##`. Its four integer arguments are 35, own-object `+0xac`, own-object `+0x238`, and own-object `+0x244`, in that order. The selected output is therefore:
+
+```text
+*#8**35*<own+0xac>*<own+0x238>*<own+0x244>##
+```
+
+The function requests `send_msg_to_app_cmd(open_pdata*, text, message+12)` at `0x1d9ec`, then `send_msg_to_app_mon(open_pdata*, text)` at `0x1d9f8`, then frees the text. Sender providers, delivery, ownership beyond these imported calls, and actual recipient selection remain delegated; the extra integer is identified by source offset only.
+
+The original frontend file, lines 194–236, first requests `get_auto_switching_flag`; only a truthy result comparing equal to the string `"0"` calls `requestVDE_IU_Status`. That function requests `get_vde_iu_status`, splits a truthy `response.result` at `*`, takes `responseArray[4]`, and requests `switchOnCamera()` only when that field compares equal to `"0"`. Its own comment contains the example `*#8**35*0*0*0##`. The selected slice checks neither WHO nor dimension explicitly. With the formatter output above returned unchanged, field4 is exactly own-object `+0xac`, not either trailing status word.
+
+The previously documented API query prefix `*#8**35` is retained as frozen evidence, not re-executed. A fresh narrow post-exchange span at `api-arm:0xfbfa8..0xfbfb4` calls `std::string::swap` from the temporary response string into the helper return string. The exchange itself remains opaque and unexamined; this does not prove JSON serialization, routing, actual return content, or a full request/response transaction. `host-format-and-split.json` is one declared host illustration of the format/index correspondence, not a JavaScript or firmware run.
+
+## Concrete state origin and a separate route-enablement producer
+
+The answering-machine's `main` requests `g_malloc0(760)` at `0xd308..0xd314`; under its ordinary successful allocation contract this initially zeroes all three response words and the route word `+0x1cc`. At `0xdbd0` it stores this object in `open_pdata+16`. Other startup/configuration/callback code can intervene, so these initial zeros are not a measurement of the values at query time. The selected code does not establish when the externally configured callback is registered or invoked.
+
+A positive producer of route word `+0x1cc` is now identified. Despite the function name `manage_who_thirteen`, the actual caller compares parsed WHO against literal **1013**, loaded from pool `0x1fa08`. With the route word still zero, `0x1ecb8..0x1ecc0→0x1ed04..0x1ed0c` calls `0x1ea2c`. It is not a public WHO13 claim. The selected callee requires message selector2, message category2, DIM4, own `+0x1cc==0`, and own `+0x30` non-null. It converts at most six supplied value-list entries into own `+0x1b4..+0x1c8`, then writes **1 to `+0x1cc` at `0x1eb4c`**. The loop also reaches that write for an empty list; six valid values or successful physical capability discovery are not implied. Received values are neither printed nor preserved in this report.
+
+This supplies a conditional initial-zero→route-enabled path for the answering-machine object, allowing the ordinary WHO8 branch above under its other premises. It is separate from the DIM35 first value at `+0xac`, and separate again from `bt_vct:0x2b5f8`. No numeric state namespaces are equated.
+
+Concrete first-status writers are also available without guessing their physical meanings. `end_floor(void*)` at `0xfd48..0xfd74` obtains the same object from its argument `+16` and writes 2 to `+0xac`. In `late_stop(void*)`, the selected branch at `0x11738..0x11798` requires `+0x1a0` and `+0x1a8` not equal to 1. If `+0x244` is nonzero, it writes 4 to `+0xac` and takes another branch. Otherwise it writes zero to `+0xac` only when `+0x23c` is zero, then clears `+0x238` and `+0x244`. Caller scheduling, the unselected branches and real timer activity are not established here. A zero in `+0xac` is demonstrably treated by this frontend as permission to request the next camera operation; it is not proof that that operation succeeds or that a physical camera is available.
+
+## Limits and next questions
+
+Confidence is high for the selected original instruction operands, numeric guards, response layout, frontend index and distinct object/state ownership. The cross-process API/frontend exchange, callback registration, incoming raw parser/admission, real initialization completion, sender provider/binding, hardware/electrical associations and physical meanings of the three response values remain conditional or unknown. No prior query/mode matrix was repeated, and no whole-archive negative finding is asserted.
+
+The useful remaining questions are the original scheduling/caller source for the first-status writers; a non-transport registration/configuration source for the answering-machine callback and its initial `+0x30`; and the separate packaged role1 `bt_vct` bootstrap to state2. They should not be conflated with camera presence, answering-machine permission, the product's alarm terminal, or this newly identified DIM35 schema.
+
+Reproduce this static candidate with `python3 collect_producers_v1.py --check` from this directory. Successful checks are read-only; first generation refuses existing outputs and immediately freezes report, collector and generated outputs under `initial-generated-v1/`, with the snapshot index computed before creating its own file. No source or old dossier is modified.

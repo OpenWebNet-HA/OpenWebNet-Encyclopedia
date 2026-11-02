@@ -1,0 +1,91 @@
+# Device Application Databases
+
+Four distinct `systems.sqlite` payloads in the MyHOME Suite 3.5.38 installer describe device-specific application items, properties, behaviours and validation declarations. They are separate from the general ScenarioDevices capability databases and the MH202/MH200N ScenarioSuite rules stores.
+
+This page records database implementation evidence. Stored UI constraints, validator names and behaviour selectors do not establish executed application logic, accepted protocol frames, active Configuration or physical limits.
+
+## Application profiles
+
+| Profile | Configuration role |
+| --- | --- |
+| F454 `1455_2.0_LGG` | Webserver application items, including camera, entrance-panel and alarm editor declarations |
+| MyHOME Screen10 `1768_1.0_BT/LG` | Screen10 application catalogue, version-scoped separately from `1768_2.1` |
+| MyHOME Screen10 `1768_2.1_BT/LG` | Distinct Screen10 application profile |
+| Capacitive Screen10 `1898_2.1_BT/LG` | Closely related `2.1` profile with coordinate-factor and behaviour differences |
+
+The package labels identify source variants. They do not establish a particular installed Firmware or execution of the stored validation rules.
+
+## Shared structure and complete comparisons
+
+All four payloads have identical schemas: eight application tables and the SQLite `sqlite_sequence` bookkeeping table. Five declared child relationships connect properties to items, complex properties/behaviours/property validations to properties, and item validations to items. Their foreign-key checks pass for the shipped data.
+
+| Application data | F454 | Screen10 1.0 | Screen10 2.1 | Screen10C 2.1 |
+| --- | ---: | ---: | ---: | ---: |
+| Items | 211 | 217 | 228 | 228 |
+| Properties | 1416 | 1436 | 1498 | 1498 |
+| Complex-property rows | 2635 | 2770 | 2836 | 2836 |
+| Behaviours | 212 | 194 | 243 | 244 |
+| Item validations | 36 | 41 | 41 | 41 |
+| Property validations | 129 | 124 | 130 | 130 |
+
+All six variant pairs and all nine complete tables were compared. Property and complex-row surrogate IDs shift substantially between variants; changed primary-key rows are not equivalent to changed features. A second comparison retains relation-linked child data while removing only the included generated row/owner identifiers. This bounded normalization preserves duplicate multiplicity and literal parent references; it is not a universal cross-release identity rule.
+
+The fifteen currency rows are identical across variants. Settings include text `MaxItems=600` and `MaxExtraDirectorySize=512`; their consumer and size units remain unresolved. Neither is promoted to a physical memory/capability limit.
+
+## F454 camera and alarm declarations
+
+The F454's documented role remains an AV web server/gateway with a separate alarm connection. Its application database adds concrete editor declarations:
+
+| Source item / property context | Stored declaration | Interpretation boundary |
+| --- | --- | --- |
+| `page.vct` / OnAddNewItem | `maxNrChildren=50` | Page-child catalogue limit, not simultaneous calls |
+| `camera` / OnAddNewItem | `maxNrItems=20`; first-available notation `[1-95]` | Separate from the address-control interval `[0-95]` |
+| `entrancePanel` / OnAddNewItem | `maxNrItems=20`; selected address notation `[0-95]` | Separate item family and editor context |
+| `alarmZone` / add/address properties | Maximum `8`; first-available `#[1-8]`; interval `[1-8]`; format `#{0}` | Catalogue range/format declarations, without an observed zone or bus exchange |
+| `burglarAlarm.scenario` / OnAddNewItem | Maximum `20`, maximum-in-group `8` | Separate from camera count and other unrelated limits20 |
+
+Exact row keys and selected joins are retained in the [source report](../project/review/installer-databases-3.5.38/systems-report.txt). These counts describe specific UI-template fields; they do not establish universal protocol maxima or the device manual's separate blocked-command limit.
+
+Rows name validators such as `ValidateScsTypeAndVde`, `ValidateScsType` and `ValidateDuplicateAddress`. Their names and execution-target metadata are established; their code, precedence and actual validation results were not executed. The `burglar.aux` template also contains hidden-UI metadata, without proving an unsupported hardware function.
+
+The [original video-status formatter](../reverse-engineering/firmware-analysis/f454-2.0.51-av-and-board.md) and alarm software/kernel evidence remain separate sources. This database supplies no dynamic DIM35 status word, initial VDE activation, UART mapping or electrical terminal attribution.
+
+## Retained templates and identifier boundaries
+
+The F454 profile has six direct parent references to missing item IDs and 65 items whose parent chains do not reach a root. The selected direct families are intercom, sound-system and homepage templates. ParentApplicationItemId is not one of the declared foreign keys, so the five declared child relationships can remain clean.
+
+This establishes retained templates outside the stored root hierarchy. It does not establish whether the application displays/exports them, whether their parent context is supplied elsewhere, a software fault or physical feature absence. A real catalogue-reader consumer is still needed.
+
+Advanced-control rows further distinguish static item Cid/Id, a property named `cid` and behaviour targets. For example, the selected advanced open/close address property has SetValue declarations targeting `cid`3018/3017 under named selectors. These are stored assignments requested by UI metadata, without executed predicates or a justified mapping to universal protocol command IDs.
+
+## Touchscreen differences
+
+The two `2.1` screen profiles have identical complete rows in five tables, including items and complex properties. Four ApplicationProperties rows differ in coordinate factors:
+
+| Stored factor | Screen10 1768 | Screen10C 1898 |
+| --- | ---: | ---: |
+| roomXFactor | 1 | 1.25 |
+| roomYFactor | 1 | 1.33 |
+| profileXFactor | 1 | 1.27 |
+| profileYFactor | 1 | 1.34 |
+
+The row descriptions label their screen contexts. This is stored coordinate-transform metadata, without a measured geometry, executed conversion, rounding/unit contract or fresh hardware sensing-technology verification. There are also bounded behaviour-declaration differences; they are not translated into actuator support or a release-wide feature table.
+
+## Evidence and unresolved consumers
+
+The [database comparison](../project/review/installer-databases-3.5.38/systems-report.txt) and [source review](../project/review/installer-databases-3.5.38/systems-source-review.txt) provide complete schemas, row comparisons, exact keys and original identities. The findings above come from read-only database evidence; manufacturer validation expressions and application code were not executed.
+
+The effective catalogue reader and serializer remain unresolved for add-item rules, address controls, disconnected templates, behaviour predicates and coordinate factors. Stored declarations therefore support configuration-data interpretation, without proving actual UI enforcement or physical limits.
+
+## Source variants
+
+Each payload is 344,064 bytes and is privately registered in the [artifact manifest](../sources/artifact-manifest.yaml). BT/LG member aliases are byte-identical within their respective variant.
+
+| Installer device package | Canonical artifact ID suffix after `myhome-suite-3.5.38-` | SHA-256 |
+| --- | --- | --- |
+| `1455_2.0_LGG` - [F454](../devices/definitions/own-dev-0002-audio-video-web-server-gateway.md) | `f454-1455-2.0-lgg-systems` | `fffc43f8d2fb5d05b8240aa4b6d449bcf5bf60339013aba2fb2301a42738e694` |
+| `1768_1.0_BT/LG` - [MyHOME Screen10](../devices/definitions/own-dev-0047-myhome-screen-10.md) | `device-1768-1.0-systems` | `73297a1449df378063b8a2ab23a8f1787a782df9ee6f00f7b2d702e3ec608e93` |
+| `1768_2.1_BT/LG` - separate Screen10 package | `device-1768-2.1-systems` | `e44bbbd25ad849b38e52f58862c9b4e31240a01555115b68e4397584cb85308e` |
+| `1898_2.1_BT/LG` - [capacitive Screen10](../devices/definitions/own-dev-0049-myhome-screen-10-capacitive.md) | `device-1898-2.1-systems` | `ad88777e1b3e2d11dd7efa6c79b080ec57258fdff3596c9c1ac5cc1ad0983214` |
+
+Original paths are `default/resTargetDir4/devices/<package>/db/systems.sqlite`. Package labels, Settings firmware-version text, the separately examined F454 Firmware 2.0.51 and Suite 3.5.38 remain distinct version scopes. No fresh device compatibility or hardware test was performed.

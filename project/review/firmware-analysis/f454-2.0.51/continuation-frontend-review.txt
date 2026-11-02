@@ -1,0 +1,43 @@
+# Static peer review: frontend temperature handoff
+
+Result: **pass within the stated conditional static scope; no correction required**. Reviewed the current frontend report, collector, ten saved collector outputs, and corresponding original packaged source bytes through read-only ImageVFS. No JavaScript, ARM, browser, model/view callback, firmware process or live I/O executed. Only this review file is written.
+
+## Reviewed identities
+
+| Artifact | SHA256 |
+|---|---|
+| `REPORT.md` | `f23f158a7d380bd8e2fddf52b4faf83c36267a38d437cdef1cb36b81ec798689` |
+| `collect_frontend.py` | `6dfd9a65c6e49e47f37b42ff156ee36bffc4ca4ca176e8f18105f553ef3637d2` |
+| `frontend-evidence.json` | `6a35dbc055486b4a2625d8849e0df7388a2fdb58153a4083825eed67a26e81b8` |
+
+Separate backend report pin: `../temperature/REPORT.md`, SHA256 `051da2368efdeb1b97526bfd88c49a1223a51546a24e43195727aafcc3962f9f`. Its ARM mapping conclusions are separate evidence, not re-executed or fully re-reviewed here.
+
+## Independent checks
+
+- Executed only the host Python collector with `Path.write_text` intercepted into an in-memory dictionary. All **ten generated outputs** (nine numbered excerpt files and the JSON evidence) reproduced their current saved **UTF-8 bytes exactly**. No collector output was rewritten. This checks reproducibility of the current collector and output set, not JS behavior.
+- Independently reread all nine original input files and the complete bundle through ImageVFS; every saved SHA256 matches. Also inspected the surrounding original `jquery.myevents.js` branches before the selected excerpt: non-null WHERE dispatch and the lighting/automation-specific alternative precede the ordinary thermal branch. The report correctly constrains its claim to selected nonzero thermal targets and distinguishes literal string WHERE `0` general dispatch.
+- `processEvent` passes the original array to `fireEventBurstFromNetwork`; for a valid burst element, `fireEventBurstInternal` passes that exact element as params. The event-ID conversion changes separate cursor bookkeeping. Neither span writes `actual_temperature`. Non-array event objects have their own direct path; malformed/absent values and transport parsing are outside the selected claim.
+- The thermal-event exception in `fireEvent` selects the individual branch even for an environment-shaped nonzero WHERE. Matching configured object IDs come from source comparisons against object.where or enabled/truthy `where_probe`/`eprobe` fields. The report does not replace source loose equality with a universal address canonicalization rule.
+- The actual selected thermal cache route is the explicit seven-ID branch (`8002/8004/8005/8006/8007/8009/8008`) in `jquery.myobjects.js:153–168`: it looks up the key, reads `params[key]`, and passes the same value to `.set(key,value)`. It does **not** require an intervening `BaseModel.updateStatus` call. The report presents the model-specific handler as additional evidence and correctly leaves other model IDs on their separate `updateStatus`/fallback path. Runtime `.set` callbacks/overrides are not executed or ruled out.
+- Registered view routing passes the same params object after adding `params.uii`; `BaseView.dispatchEvent` selects the source-declared function through `params.eventName`. The report acknowledges the eval boundary and does not claim that it executed. Both controlled-zone and external-probe handlers read `params.actual_temperature` directly before selecting the same renderer. External initial rendering reads the cached same field.
+- The complete original renderer source confirms the separate conversion: a truthy string is sliced with `substr(1,3)`, transformed into decimal text, then converted with `Number`; there is no sign negation in that helper. Celsius rendering tests numeric truthiness; Fahrenheit adds the separate rounded conversion. Accordingly the report correctly makes positive1°C for input string `1010` conditional on this selected handoff and rendering route; it is not an observed negative-reading display defect.
+- The three bounded bundle fragments match the reported burst pass-through, WHERE/object lookup and thermal-cache direct assignment. The bundle hash is checked over the full file. These fragments alone do not certify every readable source module against the bundle; the report limits their claim to these three functions and explicitly leaves loading/execution unobserved. `main.js` contains the cited module aliases.
+
+## Original input pins
+
+| Original image path | SHA256 |
+|---|---|
+| `/home/httpd/html/myhome/js/libs/myhome/jquery.myhomeliveupdate.js` | `a2494f1c835a31793bc212486d6b023f4b771b8391a3ed393935c157b611a86c` |
+| `/home/httpd/html/myhome/js/libs/myEvents/jquery.myevents.js` | `498ce6a45ae4d4ddd8ec78ca4f93b0a06247673d78334af23b0a66411252ce9c` |
+| `/home/httpd/html/myhome/js/libs/myObjects/jquery.myobjects.js` | `fcdefbcc86d1e71a18a1556cb576cb1414598ff6ecf59ef96ade1e28f910c233` |
+| `/home/httpd/html/myhome/js/models/thermo/TemperatureZoneModel.js` | `f10197efdcb43b947df3933211d1947b0f3c075268e606aed166e8efa8c24f49` |
+| `/home/httpd/html/myhome/js/views/base/BaseView.js` | `7a6963cf09dc2709e92a8530870990445324f2ec295bfdc1e0290692132142a4` |
+| `/home/httpd/html/myhome/js/views/objectsPartial/ThermoUnitZoneView.js` | `2f315fd5f5d7248a9d4ed6ade9002645b91f15c35307f52110bc02b47f0763a1` |
+| `/home/httpd/html/myhome/js/views/objectsPartial/ExternalProbeObjectView.js` | `997f9ce3c109a9855c9ee1c04438432f6f10065090914321f4830171672504f3` |
+| `/home/httpd/html/myhome/js/main.js` | `c0d68679c485d4dafa51c7837f6f28b7abc2546b27d28a79a6a33ef0f0c2aa92` |
+| `/home/httpd/html/myhome/js/libs/myhome/jquery.myhomeapi.js` | `0a8a583135b6bbc812b32f5407cde3a790dc72af010667658c2d3fdd0fbd7e13` |
+| `/home/httpd/html/myhome/js/main-built.js` | `270f101d725a949b43f6d1a4db9e94c0b3476d7e257a6f73fde591480e35566c` |
+
+## Limits of this review
+
+This is a bounded document/source and collector reproducibility review. It does not execute JSON parsing, event delivery, Backbone state, registration, eval, DOM rendering, arbitrary callbacks or physical temperature acquisition. Matching object configuration and registered views remain prerequisites. It does not determine the physical validity/sentinel meaning of501..511, expand setpoint domains, or revisit the closed authentication investigation.

@@ -1,0 +1,77 @@
+{
+  "base": {
+    "SCOPED_FINDINGS.json": {
+      "bytes": 29634,
+      "path": "work/mh202-firmware/research/2026-10-30/reconciliation/run22/SCOPED_FINDINGS.json",
+      "sha256": "636c284114ef156012546346854a34dccb40413c8813a2435137ae76f7102eb6"
+    },
+    "SCOPED_FINDINGS.md": {
+      "bytes": 8379,
+      "path": "work/mh202-firmware/research/2026-10-30/reconciliation/run22/SCOPED_FINDINGS.md",
+      "sha256": "51ac5cd6b94064e18e121b519480c7026dd0e4492b54a563b3ba04d59ad1fb85"
+    },
+    "SOURCE_PINS.json": {
+      "bytes": 4213,
+      "path": "work/mh202-firmware/research/2026-10-30/reconciliation/run22/SOURCE_PINS.json",
+      "sha256": "e3173a27f60a327b2f6abf9c849de75882b6da65d2b1e40467199c3aa3e7b796"
+    },
+    "output-manifest.json": {
+      "bytes": 490,
+      "path": "work/mh202-firmware/research/2026-10-30/reconciliation/run22/output-manifest.json",
+      "sha256": "c9df44d877b7e96c175819312294263490fae357afe82a3a5cc5d5fa9ce5a42c"
+    }
+  },
+  "base_checkpoint": 21,
+  "base_rows": 24,
+  "combined_navigation_rows": 26,
+  "rows": [
+    {
+      "area": "Generated-candidate serialization",
+      "bounded_finding": "Exact WHO5 empty-WHERE and WHO22 parameterized actual parser objects serialize back to their supplied strings under explicit private models; original GLib foreach and parameter callbacks execute.",
+      "confidence": "Reviewed bounded source/execution relation; navigation does not independently re-audit semantic findings",
+      "id": "MH22-S01",
+      "independent_review": {
+        "bytes": 7310,
+        "path": "work/mh202-firmware/research/2026-10-30/reviews/run22/protocol-review.md",
+        "sha256": "cca3f4fe735f6bf8655fa92563715daee292d414fe85097f9e3c13e5d4b8985e"
+      },
+      "method": "Original code under private ordinary string/list/realloc/format/free models; source-isolation review",
+      "new_execution_added_by_catalog": 0,
+      "refines_frozen_row": "MH21-13",
+      "remaining": "Selected local roundtrips only. No plugins/core/STM/bus admission/publication/physical meaning or general allocator safety; source object/lifetime guards are bounded.",
+      "report": {
+        "excerpt": "Two fresh private sessions run the original parser and then original **openmsg_to_buf0x1e9c** on the **same actual returned48-byte object**, without reseeding or assuming textual equivalence. Both serializer calls return0 and produce these exact readback strings:",
+        "line": 5,
+        "locator": "Both serializer calls return0",
+        "path": "protocol/run22/REPORT.md",
+        "sha256": "35369bef23a8032dc0553a5dc4c75717f6d79625e7695d463ff50e8e5b73ee49"
+      }
+    },
+    {
+      "area": "Conditional callback initialization",
+      "bounded_finding": "Main manager callback, register_field_bus initializer argument and private tuple stores conditionally identify field_receive and declared SCS/SCSAI descriptor values.",
+      "confidence": "Reviewed bounded source/execution relation; navigation does not independently re-audit semantic findings",
+      "id": "MH22-S02",
+      "independent_review": {
+        "bytes": 7770,
+        "path": "work/mh202-firmware/research/2026-10-30/reviews/run22/alarm-review.md",
+        "sha256": "6d22c5eabc20833b6ba811bf117e738a73178a82f1046372cd97e735f0f1d908"
+      },
+      "method": "Reviewed static original initialization/pointer composition and two finite host ledgers",
+      "new_execution_added_by_catalog": 0,
+      "refines_frozen_row": "MH21-16",
+      "remaining": "Actual same-private userdata activation, active descriptor/provider/source state, raw admission and publication remain unclosed; excluded transport/session/auth/framing internals were not investigated.",
+      "report": {
+        "excerpt": "There is a concrete static initialization chain for run21's previously opaque callback slot. COSO main installs **field_receive at manager+36**. Same-build `register_field_bus` passes **manager+32** to each field descriptor's initializer. The SCS initializer stores that tuple pointer at private-state+0, while plugin allocation has already stored its descriptor at private-state+4. If the later callback receives **that same private state as userdata**, its entry loads the tuple into r9 and the descriptor into SL. The run21 slot **[r9+4] consequently resolves to field_receive** under those explicit premises.",
+        "line": 5,
+        "locator": "same private state as userdata",
+        "path": "alarm/run22/REPORT.md",
+        "sha256": "9d47e1b79578fd6e97765d1392d1d6afdacd078e7ca81b01ad743d4e5748e43a"
+      }
+    }
+  ],
+  "scope": "Only reviewed native serializer and conditional non-transport registration findings added. Old gaps/identities stay historical; no new experiments or full semantic re-audit. Row count is not coverage.",
+  "status": "Linked run22 supplement to immutable24-row THROUGH21 view",
+  "supplement_checkpoint": 22,
+  "supplement_rows": 2
+}

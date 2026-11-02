@@ -8,6 +8,7 @@ It is a reproducible research record, not a second protocol reference. Stable op
 
 | Subject | Page |
 | --- | --- |
+| Build-specific manufacturer Firmware findings and execution boundaries | [Firmware Analysis](firmware-analysis/) |
 | End-to-end investigation workflow and promotion criteria | [Methodology](methodology.md) |
 | Evidence classes, claim-level confidence, negative evidence, and revision drift | [Evidence and Confidence](evidence-and-confidence.md) |
 | Recovering undeclared database relationships without altering source evidence | [Database Relationship Reconstruction](database-relationship-reconstruction.md) |
@@ -145,3 +146,7 @@ The [18 September 2026 documentation review](documentation-review-2026-09-18.md)
 Reverse engineering is successful when uncertainty becomes smaller, explicit, and testable. It does not require assigning a convenient meaning to every value.
 
 A precise unknown with a discriminating experiment is better documentation than an unqualified mapping that happens to fit one capture.
+
+## ScenarioSuite database findings
+
+The [source-specific ScenarioSuite analysis](../scenario-engine/scenario-suite-database.md) adds independently checked scheduler permissions, WHO17 variable declarations and WHO25 address/role evidence from a distinct canonical database. Its documented conflicts and a publisher-verified contact-prefix correction preserve the difference between database declarations, inferred joins, actual compiler behavior and Physical Device observation.

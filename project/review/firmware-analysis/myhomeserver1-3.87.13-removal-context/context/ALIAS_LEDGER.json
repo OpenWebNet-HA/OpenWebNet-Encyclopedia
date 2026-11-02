@@ -1,0 +1,18 @@
+{
+  "ID": [
+    "providedparsedJSON memberparams then scene_id",
+    "asString request3e2c4\u2192assignment3e2cc toobjectSP244=localbaseSP212+32",
+    "3e3bc readsbegin/lengthfromlocalbase+32\u21923e3c2localconstruct3b668 atSP268",
+    "3e3c6 loadsconstructedcharacterpointer\u21923e3c8helper3b4f0",
+    "helperrequestsstrtolbase10/endpointer/errno path; normalr0 storedSP28 at3e3ce",
+    "3e73e loadsSP28 asnumericr1key at3e742"
+  ],
+  "context": [
+    "localdispatcher48834incomingr1\u2192sl at4884a",
+    "selected4894ainstallsr1=sl\u2192call4894e3e1f0",
+    "3e20estoresincomingr1 atcurrentSP20",
+    "3e73cloadsSP20\u21923e740loadscontextword0\u21923e742removalreceiver"
+  ],
+  "main_registry_identity": "Unclosed: incomingr1of48834 producer/capture and itsword0 equalitywithmainSP160 are notproved. No layout/name inference closes it.",
+  "scope": "New local suppliedcontext/whitelistedIDsource chain only; natural eligibility/accepteduseroperation/provider success and fullgrammar notclaimed."
+}

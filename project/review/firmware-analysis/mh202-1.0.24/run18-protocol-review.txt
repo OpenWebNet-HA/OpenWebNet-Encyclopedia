@@ -1,0 +1,63 @@
+# MH202 protocol/run18 independent source, harness and saved-result review
+
+**PASS; no correction requested.** The new experiment follows the original NULL-source allocation branch, original pointer parser and original new_id body. The report correctly distinguishes actual code stores from private allocation/character-table/list/numeric/log/free delegates, and a synthetic counter start from recovered runtime state. It does not claim natural synchronization/STM admission, uniqueness or physical causality.
+
+I reran **only `collect_evidence.py --check`**, reproducing18 source/saved-array outputs with10 inputs, seven spans and35 instruction words. I independently mapped original ELF load segments and verified all seven raw-span hashes and35 words, all10 input hashes, five prior-lineage pins and25 final author-manifest entries. I inspected original new_id/core/parser source, current harness and saved trace/write/result arrays. **I did not import an emulator, run `emulate_core_fresh.py`, execute original instructions or replay any older native corpus.** The parent independently replays the native experiment. Counts below are audited saved counts, not new reviewer coverage.
+
+## Original address and provider checks
+
+Core parser PLT0x18c0/JUMP_SLOT0xbc6c and new_id PLT0x1740/JUMP_SLOT0xbbec agree with retained symbol/relocation/direct-NEEDED metadata. The first redirects to actual same-build libopenmsg0x2704; its allocator-wrapper redirect reaches original0x1c80. The third redirect reaches core new_id0x220c. These are explicit candidate definition bindings, not loader/interposition observations or host replacements of central grammar/ID logic.
+
+The seven-instruction original new_id source at0x220c..0x2228 loads literal0x99b4 and offset0xe4, computes PICbase0xbbd0 from architectural PC0x221c, loads r0 directly from base+offset, increments into r2 and stores r2 at the same address before returning old r0. Arithmetic gives **0xbcb4**, within the original NOBITS `.bss` range0xbcac..0xbcc8. This is a direct scalar address, not a pointer read from a GOT slot. The report's synthetic0x10203040→0x10203041 example follows actual saved instruction execution. It does not derive that start from zero-load state, establish global uniqueness/concurrency or test all wrap inputs.
+
+## NULL-source record, parsed object and writes
+
+- Original core0x2364/0x236c creates its own null parser-output slot; actual nested parser success is observed at0x2394. The native48-byte object has actual WHO2/WHAT0/WHERE0/DIMnull/kind1 from the supplied ordinary text. There is no injected parsed object or kind.
+- Core0x239c/0x23a0 selects NULL-source0x2418. Original0x241c requests g_malloc0(64),0x2420 retains the returned Q,0x2424 calls original new_id and0x2428 stores its prior-counter result at Q+60. The successful zero-allocation is a declared private primitive; Q/status metadata were not a supplied64-byte input fixture in this batch.
+- I checked all nine original four-byte Q writes against exact PCs:0x2428→60 plus0x23c8/cc/d0/d4/d8/e4/e8/f4→40/56/0/12/4/16/8/48. The separate primitive event at0x183c zero-fills64 bytes once. Thus status52=0 and remaining zero words come from the explicit allocation delegate, not an original status52 store. The fresh parsed pointer, type2, representation3, route2 and ID0x10203040 match the saved final16 words.
+- The original counter write is separately recorded once atPC0x2220/address0xbcb4/size4; it is not a Q store or setup callback. The selected parser/object/string/Q/list allocations are distinct. The modeled node contains the same new Q, with null next/prev. Final r0 equals the list-head address and remains a register observation rather than a Boolean or return0 API contract.
+- Original0x2398 requests free of only the formatted input. No prior body exists in this NULL-source case. The private live/dead ledger rejects later reads of that freed allocation. This finite local ownership check is not native OS reclamation, later destruction or asynchronous lifetime proof. Nonempty lists, errors, other representations and full producer/timer/STM contexts remain unexecuted.
+
+## Isolation and explicit primitive premises
+
+The harness separates core0/parser0x10000000/GLib-data0x20000000 mappings and uses only private stack/input/heap for ordinary writable storage. Original code pages are RX; the core0xb000 page is RW and nonexecutable solely to host the original counter. The write guard further restricts original-image writes to the counter's exact four-byte address interval. Saved events confirm one such native counter write and no primitive counter write. The coarse writable page is not unrestricted writable original state under this guard, and it is not writable/executable code.
+
+Two explicit setup data relocations connect parser GOT0xee78 to original GLib cell0xe50c8 and its original table0x9ed8a at the private base. One additional explicit synthetic counter initialization is recorded separately. Original GLib data is read-only/nonexecuting; its read guard admits only the cell and512-byte table. The original mask0x0008/bit index3 classifier executes; no GLib code or replacement classifier runs. Four cell/table reads are recorded.
+
+PC allowlists cover only core helper/new_id and parser/new-object/WHO/WHERE code. Unknown imports/PCs, interrupts, protected/invalid accesses, nonprivate/noncounter writes and dead-allocation reads abort. Per-entry code-hook/instruction limits remain100000; strings/individual allocations are capped4096 bytes, heap64KiB. The private primitive map expressly models normal string/search/copy behavior, successful zero-allocation48/64, nonfatal g_log, owned free ledger, decimal conversion of actual WHO2 and empty-head GList append. It does not replace central parser, core branch or original ID body. Broader parser domains/failures/log handler/allocator/context behavior are not tested or claimed.
+
+The tool package is reused with its RECORD verification, not F454 firmware/layout/harness. The explicitly retained MH202 run17 adaptation lineage matches current prior bytes. Source protections and guard structure agree with the report; this audit is not a whole-emulator security proof or live ABI/loader validation.
+
+## Saved accounting and preparation history
+
+| Category | Audited saved count |
+| --- | ---: |
+| Original core helper |52|
+| Original new_id |7|
+| Original parser/WHO/WHERE/new_open_msg |167 /30 /49 /20|
+| Total original visits |325|
+| C/GLib primitive callbacks |24|
+| Definition redirects |3|
+| EXIT /stops |1 /0|
+| Total code hooks |353|
+
+Every saved PC lies within its image's declared ranges; trace, event and redirect lengths and325+24+3+1=353 arithmetic agree. Nested helper calls are not extra top-level entries. There is one canonical top-level entry, one fixture allocation and six callback-model allocations. Memory arrays contain61 original and10 primitive writes; observer hooks, two setup data relocations and one counter-fixture setup write are not code hooks. Older nonnull corpus/replays are not added to coverage.
+
+I verified retained syntax-draft/NOTE identity through the final manifest and parsed the old Python source without executing it: the line80 syntax error occurs before imports/emulation, consistent with the documented zero-original-visits preparation failure. The finished source/results/caps/counts remain distinct from that history. No failed native run is silently reused as a success in the retained evidence.
+
+## Exact reviewed pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `protocol/run18/REPORT.md` | `35da6bb26bd5951c5764e89f85acecd6cdcad99d62b3ed0dbf72f3c973d49551` |
+| `protocol/run18/collect_evidence.py` | `a09ae4d8fad12a03021aed30eba50f13cf6079928dbcc1d49e3ac5195cf34560` |
+| `protocol/run18/emulate_core_fresh.py` | `aff608d9d0ea3b0eef13988fa0b71530d273631d2fd8f5ac8cae8a6e0c064c3a` |
+| `protocol/run18/joined-results.json` | `1e7b86aaa9e02e6444d00db99965b0027805d5070fb6d4ceef11acb7e25b2d87` |
+| `protocol/run18/counter-original-address-and-contract.json` | `b6bbe0a2ab4b312d5a316f537010fcc5dab234f0fc44a8bbeb68967e619a9710` |
+| `protocol/run18/lineage.json` | `2649bd6caa055d01980be65f751caab7db75f9fd0e7a263de328ec600a6230ae` |
+| `protocol/run18/input-hashes.json` | `0de8ae50e2ee1d5e27861dea1d724170fc27ffee3f6cf3c4f1b7e9757ced75cb` |
+| `protocol/run18/original-spans.json` | `ed808d7ead32fc7128a40a7910d070cab2f6ce90243e1203350f22054cb8451d` |
+| `protocol/run18/critical-words.json` | `43674d0f42f8f663bb1ec41c12da9fd7479165e643c142e6e2f6447ea16b32d4` |
+| `protocol/run18/output-manifest.json` | `c2f24cbc197fb991783c41f133ad897072a6eafc8e14b050b5c7359a6fe76ea9` |
+
+All three original image identities match the report and input manifest. No author artifact, original image, earlier dossier, synced source or repository documentation was edited by this reviewer. Effective providers/runtime counters, actual generated WHERE11 messages, whole callbacks/queues/STM/lifetime and physical correlation remain unresolved.

@@ -1,0 +1,112 @@
+{
+  "checkpoint": "run20",
+  "status": "three independently reviewed source/isolation areas; documentary integration separate, overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run20/REPORT.md",
+      "source_sha256": "fe3e7fd6bc39f606d7aa76b1f2d8c3c4962faeae30ba8fa3ca648db09b48f98b",
+      "published": "run20-protocol-report.txt",
+      "published_sha256": "fe3e7fd6bc39f606d7aa76b1f2d8c3c4962faeae30ba8fa3ca648db09b48f98b"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run20/protocol-review.md",
+      "source_sha256": "801c4b9f0ad798b45caec6cc8b8f116ac33626d4769d8ebc12eb7cd63ec34840",
+      "published": "run20-protocol-review.txt",
+      "published_sha256": "801c4b9f0ad798b45caec6cc8b8f116ac33626d4769d8ebc12eb7cd63ec34840"
+    },
+    {
+      "role": "report",
+      "area": "sound",
+      "research_path": "work/mh202-firmware/research/2026-10-30/sound/run20/REPORT.md",
+      "source_sha256": "81440e9833acb835626e2036923e2614db5bdf341ad03b5cf877e585a50d1e33",
+      "published": "run20-sound-report.txt",
+      "published_sha256": "81440e9833acb835626e2036923e2614db5bdf341ad03b5cf877e585a50d1e33"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "sound",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run20/sound-review.md",
+      "source_sha256": "ed3dadb4056e4b24c9dbfc2dcdaaea2704ad48af47887e65e69ae400aaa18a6e",
+      "published": "run20-sound-review.txt",
+      "published_sha256": "ed3dadb4056e4b24c9dbfc2dcdaaea2704ad48af47887e65e69ae400aaa18a6e"
+    },
+    {
+      "role": "report",
+      "area": "alarm",
+      "research_path": "work/mh202-firmware/research/2026-10-30/alarm/run20/REPORT.md",
+      "source_sha256": "714cdee435dfd5ae59faeb01c5deb972b9041390e79f6dc278e96c3fbbc422bf",
+      "published": "run20-alarm-report.txt",
+      "published_sha256": "714cdee435dfd5ae59faeb01c5deb972b9041390e79f6dc278e96c3fbbc422bf"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "alarm",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run20/alarm-review.md",
+      "source_sha256": "b385875d15b012465d2eba736533e1a16ae8fc99a58122104fbcd382afed7329",
+      "published": "run20-alarm-review.txt",
+      "published_sha256": "b385875d15b012465d2eba736533e1a16ae8fc99a58122104fbcd382afed7329"
+    },
+    {
+      "role": "read_only_reference_reconciliation_with_frozen_primary_pages",
+      "area": "references",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run20/REFERENCE_BOUNDARIES.md",
+      "source_sha256": "6b90dde90948be134c2092d93f6fbbd8f84c7114e614acdb5b19997ac4034e26",
+      "published": "run20-reference-boundaries.txt",
+      "published_sha256": "6b90dde90948be134c2092d93f6fbbd8f84c7114e614acdb5b19997ac4034e26"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run20/collect_evidence.py",
+      "sha256": "3f0195cad82a943b7a67f088234c0ce54e2a26aa2cda1d43c8ba47664fc196b4",
+      "method": "static original/saved native arrays/source consumer continuation"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run20/emulate_selector4.py",
+      "sha256": "49a291e14d9ce8e72769a6545d3b8799e1edfb9a17a8fbe9a9dffa55bc4dc3c9",
+      "method": "isolated original parser\u2192same-object selectorcopy with explicit C/GLib/clock/counter/private bindings"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/sound/run20/collect_evidence.py",
+      "sha256": "f0eb68766f46b7b6888f1589d897632948ac8407805645b8d00dadc3ecf7f7d9",
+      "method": "static original/finitehost evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/alarm/run20/collect_alarm.py",
+      "sha256": "224565604545bd3181ca17d813a95407d8fa8bbeacec6204a681506c5d43166f",
+      "method": "static original/finitehost evidence"
+    }
+  ],
+  "canonical_execution": {
+    "new_corpus": {
+      "top_level_entries": 2,
+      "original_instruction_visits": 383,
+      "primitive_callbacks": 29,
+      "linker_redirect_callbacks": 5,
+      "exit_boundaries": 2,
+      "stop_boundaries": 0,
+      "code_hook_visits": 419,
+      "setup_data_relocation_writes": 2,
+      "counter_fixture_setup_writes": 1
+    },
+    "cumulative": {
+      "corpora": 12,
+      "top_level_entries": 62,
+      "original_instruction_visits": 30035,
+      "primitive_callbacks": 3020,
+      "linker_redirect_callbacks": 123,
+      "exit_boundaries": 18,
+      "selector_read_stop_boundaries": 2,
+      "code_hook_visits": 33198,
+      "firmware_processes": 0,
+      "target_OS_calls": 0
+    },
+    "count_scope": "Two current native entries; sound/alarm new execution0. Earlier11corpora frozen; verification replays not accumulated. Data/counter setup and synthetic clock primitive are separate categories."
+  }
+}

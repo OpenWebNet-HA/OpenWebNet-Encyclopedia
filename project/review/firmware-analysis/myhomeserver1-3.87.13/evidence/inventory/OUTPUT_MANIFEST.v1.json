@@ -1,0 +1,64 @@
+{
+  "outputs": [
+    {
+      "path": "INPUTS.json",
+      "sha256": "ed5863d77e2a5fb08abe4fd484a3d79e3a9dbece460afee6580927d07a18ff42",
+      "size": 5672
+    },
+    {
+      "path": "METHOD.json",
+      "sha256": "2219ffe287c2825936326e7071d6475d2f022b79f37fe3e5f3768b7b6a80577e",
+      "size": 478
+    },
+    {
+      "path": "catalogue-comparison.json",
+      "sha256": "96efd34ea7a2a8532d47ae8faf35ed3920a088b87e9172140c5ae46a38d312f8",
+      "size": 4086
+    },
+    {
+      "path": "embedded-catalogue-summary.json",
+      "sha256": "3dba155c5d2dc5c104dc11b3ad14c911541d44c1459ec475f80cad5bc6a31253",
+      "size": 38012
+    },
+    {
+      "path": "header-census.json",
+      "sha256": "0d8c7b31fe78d7d1de7562deb3074b0865467c0af8cd8a7302eec3eb7720b648",
+      "size": 1388
+    },
+    {
+      "path": "image-file-comparison.json",
+      "sha256": "d64608f7300cc1e4914ac6537d0785e6d14a3fc4345f771b8b91d17c2cbefa6c",
+      "size": 123
+    },
+    {
+      "path": "installer-catalogue-summary.json",
+      "sha256": "78be16f65ee52b685e1748f722a56cabce7dc5bf82e8366ede4dde2437daa2c6",
+      "size": 38052
+    },
+    {
+      "path": "normal-elf-headers.json",
+      "sha256": "361d5e1e479a894d8b33afa585f9b589f9c74b4e7145a5a560cfb9d3754457e4",
+      "size": 290729
+    },
+    {
+      "path": "older-same-path-comparison.json",
+      "sha256": "7295a2d94a58b8fa0bf242d8b26ae3b71eb7cf7168e4386e508ea8874221c2de",
+      "size": 1664
+    },
+    {
+      "path": "recovery-elf-headers.json",
+      "sha256": "10f8320be457d8b82aae983d0114bb6f8346d8d95c2ff93cadd1ce2b63346c93",
+      "size": 250933
+    },
+    {
+      "path": "selected-applications.json",
+      "sha256": "79aace174a7fa01df7323156f62da2c3201ccfe104daa11103b235eb271c71a8",
+      "size": 7295
+    },
+    {
+      "path": "selected-json-key-shapes.json",
+      "sha256": "c4e50e6ab8c69b3bb29c323d173942796982d28691428e5f1dd1eb6150064a5c",
+      "size": 3841
+    }
+  ]
+}

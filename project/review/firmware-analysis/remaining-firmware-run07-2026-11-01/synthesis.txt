@@ -1,0 +1,11 @@
+# Overnight run07 application, watcher and provenance-gap checkpoint
+
+Two new bounded source packets add MH200N separate-application pattern/listing-file requests and F459 watcher/connection/own-dispatch requests. A third packet is explicitly F455 provenance admission/gap consolidation with ZEROnew source coverage, not another firmware function or repeated vector interpretation.
+
+MH200N exact variadic argument/stack/same-buffer flow supports selected formatting/system/fopen requests, not command execution, current file contents/counts, script grammar/compiler or installed overlay. Natural outercaller, buffer capacity/lifetime, shell/provider/file outcomes remain premises. F459 receiver-owned watcher/pathadd/namedconnection requests distinguish returned handle storage from sender/receiver; separate ownmode/indexdispatch targets a same-object callback candidate. Object preservation/binding/Qt name-resolution/metadata/event/lifetime premises remain; actualevents/queryfreshness/connection success/quiescence and callbackbody unproved/unexpanded.
+
+F455 original metadata and inherited context are revalidated only as an admission record: selected labels lack admitted CPU/linker/loader/hardware provenance. No new code VA/ISA/prefix arithmetic, globalabsenceclaim, decryption or forcedarchitecture. Existing F450deniedhelper/body/equivalent routes remainclosed, no retry/proxy or newrejection.
+
+Current overview adds these separate classifications after exact old-page snapshot; new run07capsule and precise expectedhash historical mapping retain priorcapsules/firmwareREADME/Devicepages unchanged. No source-manifest edit/staging/commit/push/publication. Firstgenerations/checks pass with exactfirstcopies and independent peers; root preliminary decimal-address probe read an adjacent unpromotedQtcleanup span, then correcthexexport used, no candidate/sourceclaim basedonprobe or fabricatedhistory.
+
+No original/vendor/helper/native/emulator/SQLite/targetOS/runtime/physical execution, actualdatabase recovery/generation or newR2upload/readback. Actual archive remains one original encrypted F450SUPPORT/zero plaintextDB, priorreceipt retained. Older ledgers/versioned histories/MH20218/21 missingdraft limits unchanged.

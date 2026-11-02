@@ -1,0 +1,31 @@
+{
+  "purpose": "Reference reconciliation read before run20 integration; supplemental source pins not part of run19 final validation. Original run19 SOURCE_SNAPSHOTS index unchanged.",
+  "checked_at": "2026-10-31T00:52:03.431831+00:00",
+  "files": [
+    {
+      "source": "functional/who-5-alarm/README.md",
+      "source_sha256": "5304dd537066076a3bf59ff2fc9947386d77111f5ee98842f83ee5fff5a61a63",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/reference-01-who-5-alarm-README.md.txt"
+    },
+    {
+      "source": "functional/who-5-alarm/what.md",
+      "source_sha256": "8ee92e45243a827ee095139c9a0019294ce4643f6beae7d08b46992048c47e7b",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/reference-02-who-5-alarm-what.md.txt"
+    },
+    {
+      "source": "functional/who-5-alarm/protocol.md",
+      "source_sha256": "0c7d0b6da0de684234a1aed1326d5ea4f69118da191e73e853a53c1d31632073",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/reference-03-who-5-alarm-protocol.md.txt"
+    },
+    {
+      "source": "functional/who-5-alarm/addressing.md",
+      "source_sha256": "13011a07d36a2fdf99d0026301aec9f0ad8b6f0b9e7953df066f2e0b5ed9efaf",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/reference-04-who-5-alarm-addressing.md.txt"
+    },
+    {
+      "source": "functional/who-22-sound-diffusion/README.md",
+      "source_sha256": "4d99236f786819aa123791945c25cfedf62cc23ac06ecc9177e469b34031bb94",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/reference-05-who-22-sound-diffusion-README.md.txt"
+    }
+  ]
+}

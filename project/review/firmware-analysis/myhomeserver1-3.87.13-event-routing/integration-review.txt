@@ -1,0 +1,51 @@
+# Local event routing and BNLD: documentary integration review
+
+Verdict: PASS for the frozen current integration and existing exact exports. No correction requested. This review is source-aware of my independent BNLD-condition audit. Routing and record claims are independently compared documentarily with their authoritative source reports and peer source reviews; I do not represent that comparison as a fresh original-byte audit of those areas, whole-encyclopedia review, native replay or complete transaction/runtime proof. No source, author, repository or previous review file was edited.
+
+## Essential source-to-summary checks
+
+The human page keeps the first-dot prefix classifier, row1 light, resulting local code0, separate nonempty params.id condition, two event-code dispatch tables and DIFFERENT raw-trigger relative-pointer table distinct. It retains actual record-processing return1 and selected normal cleanup, valid registry/vector/type/provider and preceding parse/filter/string provenance as material premises. Raw4-byte trigger entries and compiled8-byte handles correlate by index rather than identical layout. No private label or equal integer becomes a public WHO mapping or physical function.
+
+The selected record proof is appropriately limited to absent or existing-discriminator0 Light construction and its map/query relation. ItemStatusLight status+8, level+32, control allocation64 with embedded record+12, node key16/20 and record/control40/44 are accurately summarized. The alternate ItemStatusLoad discriminator10/status+20 is explicitly a different layout. The summary does not assume every lookup result is a Light record, prove universal producer return1 or silently combine incompatible record paths. Valid map/provider/type/ownership and the selected route premises remain required for the handler+8 relation.
+
+The BNLD condition is separate from BNIL: condition-local row2, raw48 and compiled152 bytes, enabled28->132, type/operator32/36->136/140 and status/level40/44->144/148 agree with my source review. PRESENT status chooses string processing and level minus-one; only ABSENT status chooses level conversion. The raw serializer/value contract and condition operator-name decoding remain open despite the selected same-storage reparse request.
+
+The selected condition predicate returns1 when disabled and0 on its null-data route, subject to normal cleanup/guard premises. Same global receiver0x167368 does not make query0x10f4a0 equivalent to event lookup0x10e3d8. Status comparison2/3 and other-word false behavior, on-only numeric route, signed TBB order configured<observed, configured>observed, equality and inequality are accurate. No physical brightness, admitted scalar range, unset-level policy or scene/action consequence is inferred.
+
+The typed/ID handler boundary remains conditional. Temporary copied controls are released before later receiver use; current evidence establishes neither complete lifetime adequacy nor a UAF/leak. Product OWN-DEV-0199 provides the documented home-automation/scenario context only. There is no raw traffic acceptance, external subscription, configured natural event, coherent event->condition->action transaction, public protocol support, physical outcome or full Device/source approval claim. Earlier native ledgers and closed transport/authentication/session/framing/equivalent boundaries remain unchanged.
+
+The previous event-trigger page receives the scoped continuation link; its prior supplied-event and lifetime limits are not silently rewritten. Current synthesis, coverage, ranked questions and bounded log preserve serializer/query/type/readiness, assets80/81/94/95, owner/removal/unwind/concurrency, positive shared reset and physical gaps. Historical first-generation review-required wording in the log is read as that checkpoint, not as a claim that the now-existing reviewed source files are absent. Prior MH202 unavailable intermediate histories remain explicitly unverified.
+
+## Identity and references
+
+All8 current documents match their exact frozen candidates, lengths and hashes. All74 SOURCE_EXPORTS pairs match local source and published bytes, declared sizes and SHA256. Saved parent read-only checks record25 routing,23 record and12 condition outputs,60 total, with original execution0. This review adds no execution corpus or whole-source replay.
+
+There are29 local Markdown link occurrences and0 fragments. All27 existing targets resolve; only capsule integration-review.txt and validation.json await actual assembly. This review certifies neither future bytes nor present artifacts at those paths. Parent must create their actual exact files and complete strict identity/ESG/ECV/diff/link checks with them present; no placeholder or missing-target exemption is permitted.
+
+## Exact frozen current document pins
+
+| Workspace-relative file | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-routing.md` | `3459f6f31691b5bcc0bba3bd7b61c423c94a5ba4af0affa92cb44beaf128d5e8` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-trigger.md` | `68524eb6514d4663ca9d0cec87a47cb70ffc5d6797b054c76f53907c01a68e89` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-event-routing/README.md` | `d0b1818337a66caf1c30ad6cece485ece75ab9d365063be76036132f8ca6c2d1` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/SYNTHESIS.md` | `d86ba42ee6f7d7bc57d2167fb29138844bd984b8ce24271fb2a5b487499b1356` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/COVERAGE.md` | `33a684815969c783f314a3e5b1b3eecfe40d3a344b866ad6c999d42cff91a5e1` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/RANKED_REMAINING_QUESTIONS.md` | `81944de4818ddd4d51cc28da3af3a8712a7d88f82e65ab16b589b05bef3c2acb` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/RUN_LOG.md` | `5ddb57f555ba1a6e81c69e7e562d97b190a24a09494d30f9b662f2b1ab7ca54e` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-event-routing/SOURCE_EXPORTS.json` | `1c9fa5b7894adbc57a5c16d2b2dd8a69c780d619ff1f4a7c401e615ade8bf3b8` |
+
+## Source and independent-review applicability pins
+
+Paths are relative to this research batch.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `routing/REPORT.md` | `85ffa994ed3bebf07000cbe3335a13b345c8cc869f73996e5bbc07eb3e608159` |
+| `record/REPORT.md` | `a6fafe145b644cb64258399b90a73990b57a930166952b5b45c4139840fc45f6` |
+| `condition/REPORT.md` | `de7aa84c6c5c0cdfa8421a80e16655cba2f0b6c01a90ea70ead6933f334b2d5c` |
+| `reviews/routing-source-review.md` | `27e7befe155aa2398880de27dfd7553fa9e6db3b0b05b596b886c9ff51603ecd` |
+| `reviews/record-source-review.md` | `d3802e67ec87b4c48e8d5f4794424fe6a33ff10fcae22b91cdace290d3b73687` |
+| `reviews/condition-source-review.md` | `27bbf4a522c35b192e6a774f991e8e6cf9f4a93d59dfd81617f0964cc8cb8137` |
+
+Candidate index SHA256 `2e1a78088341e34be4b8a131a8ed1b3aaa30d448ddc58c4e4cd6b8859f93d6d8`. SOURCE_EXPORTS.json SHA256 `1c9fa5b7894adbc57a5c16d2b2dd8a69c780d619ff1f4a7c401e615ade8bf3b8`.

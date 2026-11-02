@@ -1,0 +1,41 @@
+# MyHOMEServer1 3.87.13: packaged JsonCpp null and unsigned-value contracts
+
+This static supplement narrows two provider premises left by the selected BN3L serializer/reparse analysis. In the packaged candidate, a missing object-member lookup on the retained map-end path produces the null singleton, and type0 `asUInt` returns0 without reading the value union. An unsigned32 Json value constructor stores the input low word with high word0/type2; the selected type2 conversion accepts that high word and reads the same low word. These are original candidate-source contracts, not an executed JSON roundtrip or effective live-loader binding.
+
+Original provider `/usr/lib/libjsoncpp.so.1.9.5` SHA256 `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36`; original scheduler `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. The scheduler declares NEEDED `libjsoncpp.so.25`; the candidate declares that SONAME and the metadata-only ImageVFS reads that alias to the same hash. Nine original symbol definitions, fresh PT_LOAD mappings, nine exact original source spans,17 byte guards and one selected TBB table are pinned. No ELF load, target ABI/provider/JSON/parser/tree/allocator/clock/thread/network/bus/physical instruction executes.
+
+## Type and null-singleton source
+
+Original `Value::type` at0x14e3c is `ldrb r0,[r0,#8]; bx lr`. Candidate initBasic at0x15ad4 stores the supplied type byte to object+8 at0x15af8, along with separate flags/comments/offset handling. The ValueType constructor at0x15b54 retains that supplied type and requests initBasic. Its type0 path bypasses the table for types1..7 and returns; no value-union zero is assumed from that branch.
+
+`nullSingleton` at0x15bc8 computes one static guard/object base. On its selected initialization path, the earlier guard bit was zero, r4 retains0, and0x15bf0 supplies r1=r4=0 to the ValueType constructor. It returns the object at that same static base+8; the preinitialized path returns that object directly. Actual guard synchronization, constructor/import success, exit registration, initialized live memory and provider binding remain premises. This is not an observed process singleton or runtime fixture.
+
+## Missing member reaches that null value under tree premises
+
+Const key access0x17f48 computes the key end using strlen, calls candidate find and returns a nonzero result directly. If find returns0, its tail branch0x17f66 requests nullSingleton.
+
+Candidate find0x17e74 accepts its selected type0/object-type7 routes. In the object route it requests the internal ordered-tree lookup, compares its returned iterator with map+4 at0x17ebe..0x17ec2, then either selects value at node+24 or sets local r4=0 on the equal/end path at0x17ecc. After normal cleanup it returns that r4. A type0 route also retains zero for return. The key wrapper, tree/comparator, map invariants, allocations, cleanup and other types/error paths remain unexecuted delegates. In particular an arbitrary malformed pointer or input is not assumed to satisfy the map/end relation.
+
+Thus, under valid object/tree and ordinary successful candidate semantics, an omitted serializer member can yield the candidate null value on that selected missing-member path. This is source-backed conditional lookup behavior, not a complete JSON-object implementation or validation rule.
+
+## Null asUInt returns0 without a union-word read
+
+`asUInt` entry0x16aac asks type(), retaining its returned type in r0. The original TBB at0x16ad2 has data base0x16ad6 and exact bytes `0a 03 1a 30 ab 18`. Type0 therefore selects0x16aea directly, rather than the word load at0x16ae8. The selected normal cleanup/return retains r0=0. The zero result comes from the type value, not from invented initialized union contents.
+
+This narrows the zero-delay/duration omission premise: under the missing-member/null route above and normal providers, the reparser's candidate asUInt produces0. It does not establish the behavior of every null/wrong type/overflow/exception or actual deployed provider. No API or native helper was run.
+
+## Unsigned constructor and selected readback
+
+Candidate unsigned constructor0x15c68 saves supplied input r1 in r5, requests initBasic with type2, then stores low=r5 and high=0 at0x15c7c. Its signed-int overload and string/assignment/move implementations are separate; no value-union/layout assumptions are imported from older firmware.
+
+For type2, the same asUInt TBB selects0x16b0a and requests isUInt. The candidate predicate0x155dc routes type2 to0x1561c, loads the high word, and computes `clz(high)>>5`: high0 yields1. Back in asUInt, nonzero acceptance reaches0x16ae8, which reads the low word. Consequently an unchanged ordinary unsigned32 value constructed on this selected route has a source path back to that same low word.
+
+This closes a conditional scalar representation link for nonzero duration/delay emitted through the original unsigned overload. Full emitted-object→key-assignment→map-find→reparse preservation still depends on ordinary successful object/string/assignment/tree semantics, no intervening mutation and the actual candidate binding. No complete serializer/parser runtime, configured scene, arbitrary JSON grammar, physical command or timing outcome is claimed.
+
+## Reproduction and limits
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/collect_values_v1.py --check`
+
+The collector emits17 deterministic files including manifest, immediately preserves those plus code in first-candidate, and refuses overwrite. This report is separately frozen before independent review. First generation succeeded without failed output/assertion or guard change. Original execution, supplied JsonCpp objects and semantic host cases are0; table-target arithmetic and raw-byte reproduction are host evidence decoding only. Earlier execution ledgers remain unchanged.
+
+Confidence is high for the selected candidate bytes, type/tag/dataflow, branch table and normal-return scalar contracts. Effective loader/interposition/guard/provider state, complete allocation/string/assignment/map/error behavior, original serialization/reparse execution, installed scenes and physical observation remain open. Wider Device/source approval gates are unchanged; closed transport/session/authentication/framing investigations are untouched.

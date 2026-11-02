@@ -1,0 +1,155 @@
+{
+  "classification": "Manufacturer defaults only; selected structural admission, no configured scene/accepted grammar/runtime proof",
+  "inputs": [
+    {
+      "path": "work/mh202-firmware/research/2026-10-31-scenario-artifacts/acquisition/selected-files-v2/default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project/0/project.xml",
+      "bytes": 2478,
+      "sha256": "f35cb7d428bcbfafcb87e4dcb3ac1867010e533edfd546bb93a7b812ea33f85f",
+      "provenance": "Retained manufacturer installer defaultProject, not a commissioned project/export",
+      "format": "XML structure only",
+      "root_tag": "configuratore",
+      "element_tag_counts": {
+        "configuratore": 1,
+        "ver_xml": 1,
+        "creator_sw": 1,
+        "name": 1,
+        "ver_sw": 1,
+        "setup": 1,
+        "generale": 1,
+        "modello": 1,
+        "nome": 1,
+        "language": 1,
+        "clock": 1,
+        "master": 1,
+        "dateformat": 1,
+        "fuso": 1,
+        "fuso_txt": 1,
+        "lightsave": 1,
+        "updfrequency": 1,
+        "geographic_coordinates": 1,
+        "enabling": 2,
+        "value": 1,
+        "coordinates": 1,
+        "latitude": 1,
+        "longitude": 1,
+        "ethernet": 1,
+        "lan": 1,
+        "mode": 1,
+        "addressip": 1,
+        "netmask": 1,
+        "router": 1,
+        "dnspri": 1,
+        "dnssec": 1,
+        "scs": 1,
+        "coordinate_scs": 1,
+        "ack_scs": 1,
+        "scs_addr": 1,
+        "mylevel": 1,
+        "diag_addr": 1,
+        "sicurezza": 1,
+        "pwd_open": 1,
+        "remoteaccess": 1,
+        "aux_enabled": 1,
+        "aux": 1,
+        "addr_spia_enabled": 1,
+        "addr_spia": 1,
+        "panicKey": 1,
+        "command": 1,
+        "action": 1,
+        "open": 1,
+        "objectID": 1,
+        "commandID": 1,
+        "panic": 1,
+        "keyobjects": 1,
+        "num": 1,
+        "ko1": 1,
+        "id": 1,
+        "sysaddress": 1,
+        "servizi": 1,
+        "abil_centrale_domotica": 1,
+        "abil_pagine_web": 1,
+        "pagine_web": 1,
+        "to_sessione": 1,
+        "utenti": 1,
+        "admin": 1,
+        "login": 2,
+        "password": 2,
+        "user": 1,
+        "dynamic_leaves": 1,
+        "interfaces": 1,
+        "actuators": 1,
+        "sensors": 1
+      },
+      "attribute_names": [
+        "isValid"
+      ],
+      "leaf_values_exported": false
+    },
+    {
+      "path": "work/mh202-firmware/research/2026-10-31-scenario-artifacts/acquisition/selected-files-v2/default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project.prj",
+      "bytes": 1874,
+      "sha256": "ae42c6ee1fe61b471908aa3ecc4ca86d764bb7799a491dc7f5cac26b41357f61",
+      "provenance": "Retained manufacturer installer defaultProject, not a commissioned project/export",
+      "format": "ZIP central directory only",
+      "entries": [
+        {
+          "name": "0.xtz",
+          "encrypted_flag": true,
+          "uncompressed_size": 1442
+        },
+        {
+          "name": "4.xtz",
+          "encrypted_flag": true,
+          "uncompressed_size": 411
+        }
+      ]
+    },
+    {
+      "path": "work/mh202-firmware/research/2026-10-31-scenario-artifacts/acquisition/selected-files-v2/default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project/4.xtz",
+      "bytes": 411,
+      "sha256": "52bdf696af41356f4330fa0cf34b6ede7bfcd512969de1ac1290cd3e34779a16",
+      "provenance": "Retained manufacturer installer defaultProject, not a commissioned project/export",
+      "format": "ZIP central directory only",
+      "entries": [
+        {
+          "name": "4/",
+          "encrypted_flag": false,
+          "uncompressed_size": 0
+        },
+        {
+          "name": "4/extra.xml",
+          "encrypted_flag": true,
+          "uncompressed_size": 177
+        }
+      ]
+    },
+    {
+      "path": "work/mh202-firmware/research/2026-10-31-scenario-artifacts/acquisition/selected-files-v2/default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project/0.xtz",
+      "bytes": 1442,
+      "sha256": "847a9b0c69787044a5496722503b227e3cad2cc23bf84211f6635a30b906cb01",
+      "provenance": "Retained manufacturer installer defaultProject, not a commissioned project/export",
+      "format": "ZIP central directory only",
+      "entries": [
+        {
+          "name": "0/",
+          "encrypted_flag": false,
+          "uncompressed_size": 0
+        },
+        {
+          "name": "0/extra.xml",
+          "encrypted_flag": true,
+          "uncompressed_size": 163
+        },
+        {
+          "name": "0/project.xml",
+          "encrypted_flag": true,
+          "uncompressed_size": 2478
+        }
+      ]
+    }
+  ],
+  "new_original_vendor_CLR_native_guest_execution": 0,
+  "new_SQL_queries": 0,
+  "decryption_or_password_trials": 0,
+  "no_global_absence_claim": true
+}

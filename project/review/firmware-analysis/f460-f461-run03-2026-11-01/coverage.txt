@@ -1,0 +1,9 @@
+# Run03 coverage and boundaries
+
+| Evidence area | Selected examined reach | Open boundary |
+| --- | --- | --- |
+| F460 callable and caller | Manager/storage clone, actual invoker, same request/rem storage, numeric retry guard, candidate nanosleep/errno/TLS wrapper, selected inline caller marker | Effective binding, ordinary target API/ABI, valid objects, preamble exceptions, complete worker/scene/poll policy, natural configuration, timing/error/ownership/concurrency |
+| F461 translation dispatch | First-owner manager getter, original manager/field/translation list relationships, direction/criterion guards, callback arguments/results, bounded decimal criterion producer | Actual same-manager activation, field registration, original parsed-object producer, full dialect/WHO, due-field provenance, selected output callable, providers/lifetime |
+| API context | Three directly pinned HOST headers and short primary Linux man-page context | Not original target headers, installed loader/provider or operating-system evidence |
+
+F460 has15 deterministic outputs/10 selected spans/35 exact instruction guards/17 first copies. F461 has18 outputs/9 spans/31 guards/20 first copies. Counts describe bounded reach/integrity, not coverage percentages or executed semantic cases. All new original/native/helper/emulator/model/fixture/target process/OS/service/network/bus/physical execution is zero. Prior MHS one-corpus/eight-entry/340-original-code-hook-visit ledger, plus separate F454/MH202 ledgers, remain unchanged. Full Device/source gates remain pending.

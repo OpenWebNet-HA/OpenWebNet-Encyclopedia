@@ -1,0 +1,54 @@
+# Run27 through26 draft documentary review
+
+PASS. The one literal-rendering refinement requested during review is addressed and independently verified. This is documentary/source-aware review of the exact draft, not final morning completion, a new full raw-firmware audit or native replay. Only this NEW review file is written. All draft/root/author/branch and older evidence remain read-only. No original/native/vendor/parser, target OS/syscall, PHP/JavaScript, service, network/device, oracle or physical operation runs.
+
+## Exact draft and addressed refinement
+
+Reviewed FINAL_DRAFT.through26.md SHA256: `e1ba480d93b1a0c60105c85a5f0ab6e8bfa94db8bfa066c421baa1cf2f1ae301`.
+
+Parent preserved initial draft9b7e77ce2e9f23e143c33cfdb4326107137080b4914fd4452068e7c5b0d987fe as FINAL_DRAFT.initial-before-format-fix.txt. I independently confirmed current bytes equal that exact retained draft with one change only: the bare CEN-example text `*15*05#2*12##` is wrapped in backticks so Markdown preserves delimiters. No other byte, source statement, count or reference changed. The parent-owned format-refinement record pins this delta. Initial draft-lineage-and-pins.json retains its original draft identity and73 read-time reference records rather than silently updating history. I edited no draft.
+
+Root MORNING_REPORT remains frozen at ad21bd70deb3c1b21eec6d52f86d473162b3ede66b7cb6ed1164193c3fc7ab44. The relocated through26 draft does not overwrite it. A NEW FINAL_REPORT.md still needs later reviewed additions, final verification and task/automation closure.
+
+## References, counts and inherited evidence
+
+All73 local Markdown reference occurrences resolve; none has a fragment. The73 ordered target/hash/size records agree with inspected targets at review time. The original55 citations retain physical destinations after relocation except one verification citation intentionally advances from checkpoint22 to26; the later historical checkpoint22 reference remains. Added source/context/navigation citations are separate. Mutable coordination links may advance after read-time pins without rewriting historical source identities.
+
+Validated checkpoint26 supports14 corpora/68 top entries/31581 original visits/3140 declared primitives/128 redirects/24 return boundaries/2 selector-read stops=34875 hooks. The draft explicitly labels this the THROUGH26 subtotal, not upcoming native27 evidence. Setup writes and replays do not accumulate; counts are not a coverage percentage or test-quality metric. All23..26 additions remain static/host-only. No pending native27 or unreviewed WHO29 result is imported.
+
+Inherited summaries were compared against the previous reviewed draft and relevant cited reports/current references, with source-aware familiarity in earlier interpreter/state/helper reviews. This is not a repeat of every original-byte, native corpus, external specification/oracle or physical audit. Static source, finite host ledgers and actual helper execution under private models remain separate, and no whole runtime/physical result is inferred.
+
+## Added23..26 findings and context table
+
+Sound23 supports the saved ENTRYclock+600 writer, helper-before-store order and same-deadline/state strictly-later restoring branch, with equality excluded. Clock24 supports conditional600-microsecond arithmetic only under candidate packaged-provider and ordinary successful Linux ARM32 timeval premises. It is not measured timing, monotonicity, observed ABI success, physical effect or a defect. Host UAPI is a labeled semantic reference; selected original instructions supply two-word layout evidence. Sound24 independently supplies the later tenth DIM15 converted-value store to private260, missing/NULL0 and no Boolean normalization. Earlier initial utility0 stays true for its separate callsite. Complete valid shortened configurations and natural enablement remain unproved.
+
+WHO25 candidates remain independent source/host constructions, not causal roundtrips, parser acceptance, complete domains or physical events. Its24-byte query/ID/timer policy includes bounded mismatch forwarding/rearm; local ACK/NACK and selector4 requests are not physical correlation. ScenarioPlus/CEN+/contact/IR/ZigBee and prior oracle/capture scopes remain separate. WHO14's8-byte pending/ID receipt/clear/ordinary-field decision is not a universal admission or whole-framework timeout policy. WHO15's selected no-allocation initializer/body observations do not mean no whole-process state; its formatter/padding, local predicates and supplied address/configuration/providers do not expand public values, raw grammar or timing.
+
+All seven context rows are directly supported by their cited reports: lighting44, automation60, thermo68, multimedia320, WHO25 24, WHO14 8 and no private allocation by the selected WHO15 initializer. They are selected own storage contracts, not interchangeable offsets, active live contexts, exhaustive schemas or complete registry proof. Automation receipt/query axes and thermo status-ID/data flags retain their distinct scopes; neither establishes physical success.
+
+The frozen through21 guide and through22 catalog/supplement remain navigation rather than semantic re-audit or coverage. Historical18/21 missing generated drafts remain unavailable/unverified; present source PASS and actual later snapshots do not authenticate those bytes. Wider Device/source gates, configured scripts/IPC, actual bindings/context/selectors/queue lifetime, concurrency and physical corroboration stay open. The stopped authentication/framing route remains closed. This draft does not close the overnight task.
+
+## Reviewed pins
+
+Paths are research-relative.
+
+| Artifact | SHA-256 |
+|---|---|
+| `reconciliation/run27/FINAL_DRAFT.through26.md` | `e1ba480d93b1a0c60105c85a5f0ab6e8bfa94db8bfa066c421baa1cf2f1ae301` |
+| `reconciliation/run27/FINAL_DRAFT.initial-before-format-fix.txt` | `9b7e77ce2e9f23e143c33cfdb4326107137080b4914fd4452068e7c5b0d987fe` |
+| `reconciliation/run27/draft-lineage-and-pins.json` | `2045eecf204743030058d4ce659dc36e7b73d969cea6f44e2bde23f90bd6e75c` |
+| `reconciliation/run27/draft-format-refinement.json` | `0c9ccfb4dfd748134b04e5f8b753ee79ba9b61cc21add734aff7d5460f70a33f` |
+| `MORNING_REPORT.md` | `ad21bd70deb3c1b21eec6d52f86d473162b3ede66b7cb6ed1164193c3fc7ab44` |
+| `validation/run26/final-checkpoint.json` | `e319c0e8ef8cb9115913a956cb6929e3aad7f2729086de7e60295140f2874e6c` |
+| `sound/run23/REPORT.md` | `bbc268a6a786661cfccc02fa286bddd3e135326ff640f8184877e5366d3539ba` |
+| `clock/run24/REPORT.md` | `40c7f32abe248b08c1609b37a184bc898bfb6ef709a1501ccf479993a5938fa3` |
+| `sound/run24/REPORT.md` | `ed6b94b264364f28fc8501775e783c1ab5fb61ac1f65b353c792cfe5a33b9d31` |
+| `coso/run12/REPORT.md` | `fb9e5775b71ea822eff0b0bb5c8df7577a100b3e1373cf9001fa75ce9082ccc3` |
+| `coso/run14/REPORT.md` | `73fa582bb2d2f316200099498f3fa6b04e542595a5c78b1ef31829cceeef04e6` |
+| `thermo/run16/REPORT.md` | `f260264e351c0fe0616160644a675ae525fd637295872fb1b21c945f0158c436` |
+| `sound/run21/REPORT.md` | `7a620c417174980119e9573c914dbe7730823697661cb975a20708e8e127aea6` |
+| `who25/run25-stm/REPORT.md` | `22e23d353a1ef956a69a4c2c80f7e510124872af602be0b545e06dcca3cd06b5` |
+| `who14/run26/REPORT.md` | `e76adbf02e3531cebf52b54be84041601a07d7ed53cd3d83218da6ebe7531a15` |
+| `who15/run26/REPORT.md` | `b5150e300259ddca55b0c5239549ef8f31579ab208cdd0a6e5d4a9dfdd8c5e86` |
+
+This PASS applies to the exact draft/refinement identities above. Later additions and final morning completion require their own evidence and verification.

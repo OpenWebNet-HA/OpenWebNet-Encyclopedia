@@ -1,0 +1,229 @@
+{
+  "PT_LOAD": [
+    [
+      1,
+      5,
+      0,
+      0,
+      0,
+      239876,
+      239876,
+      65536
+    ],
+    [
+      1,
+      6,
+      241416,
+      306952,
+      306952,
+      4488,
+      4752,
+      65536
+    ]
+  ],
+  "cache": {
+    "VA": "0x4c020",
+    "initial_file_bytes_hex": "ffffffff",
+    "meaning": "local cached selector only, not hardware/model ID",
+    "selected_match_numeric22": "0x255d8",
+    "selected_store": "0x252c8",
+    "width_bytes": 4
+  },
+  "excluded_boundary": {
+    "reason": "later command-based fallback; body and command literal not exported or interpreted",
+    "start": "0x253a0"
+  },
+  "execution": {
+    "models": 0,
+    "original": 0,
+    "provider": 0,
+    "target_IO": 0
+  },
+  "guards": {
+    "0x251d4": "0xb94022b3",
+    "0x251e4": "0xa900ffff",
+    "0x251e8": "0x3100067f",
+    "0x251ec": "0x540001e0",
+    "0x2520c": "0x2a1303e0",
+    "0x25224": "0xd65f03c0",
+    "0x25248": "0xb4000da0",
+    "0x2526c": "0xb5000100",
+    "0x2527c": "0x52800142",
+    "0x25284": "0xb100041f",
+    "0x25288": "0x54fffec1",
+    "0x25294": "0xf94007f4",
+    "0x25298": "0xb4000674",
+    "0x252ac": "0xb4000560",
+    "0x252c8": "0xb90022b3",
+    "0x252d8": "0x17ffffc6",
+    "0x25360": "0xf90007ff",
+    "0x25378": "0xb4000100",
+    "0x25384": "0x52800142",
+    "0x2539c": "0xb5fff8b4",
+    "0x255d4": "0xb4000060",
+    "0x255d8": "0x528002d3",
+    "0x255dc": "0x17ffff3b"
+  },
+  "image_path": "/usr/lib/liblghal.so.1.0.0",
+  "imports": [
+    {
+      "PLT": "0xa900",
+      "call": "0x25240",
+      "name": "fopen@GLIBC_2.17",
+      "relocation": "000000000004bcd8  0000006700000402 R_AARCH64_JUMP_SLOT    0000000000000000 fopen@GLIBC_2.17 + 0",
+      "slot": "0x4bcd8"
+    },
+    {
+      "PLT": "0xacf0",
+      "call": "0x25268",
+      "name": "strcasestr@GLIBC_2.17",
+      "relocation": "000000000004bed0  0000008600000402 R_AARCH64_JUMP_SLOT    0000000000000000 strcasestr@GLIBC_2.17 + 0",
+      "slot": "0x4bed0"
+    },
+    {
+      "PLT": "0xa7e0",
+      "call": "0x25280",
+      "name": "__getdelim@GLIBC_2.17",
+      "relocation": "000000000004bc48  0000005d00000402 R_AARCH64_JUMP_SLOT    0000000000000000 __getdelim@GLIBC_2.17 + 0",
+      "slot": "0x4bc48"
+    },
+    {
+      "PLT": "0x9e40",
+      "call": "0x25290",
+      "name": "fclose@GLIBC_2.17",
+      "relocation": "000000000004b778  0000001900000402 R_AARCH64_JUMP_SLOT    0000000000000000 fclose@GLIBC_2.17 + 0",
+      "slot": "0x4b778"
+    },
+    {
+      "PLT": "0x9fc0",
+      "call": "0x252d0",
+      "name": "free@GLIBC_2.17",
+      "relocation": "000000000004b838  0000002300000402 R_AARCH64_JUMP_SLOT    0000000000000000 free@GLIBC_2.17 + 0",
+      "slot": "0x4b838"
+    },
+    {
+      "PLT": "0xa900",
+      "call": "0x25370",
+      "name": "fopen@GLIBC_2.17",
+      "relocation": "000000000004bcd8  0000006700000402 R_AARCH64_JUMP_SLOT    0000000000000000 fopen@GLIBC_2.17 + 0",
+      "slot": "0x4bcd8"
+    },
+    {
+      "PLT": "0xa7e0",
+      "call": "0x2538c",
+      "name": "__getdelim@GLIBC_2.17",
+      "relocation": "000000000004bc48  0000005d00000402 R_AARCH64_JUMP_SLOT    0000000000000000 __getdelim@GLIBC_2.17 + 0",
+      "slot": "0x4bc48"
+    },
+    {
+      "PLT": "0x9e40",
+      "call": "0x25394",
+      "name": "fclose@GLIBC_2.17",
+      "relocation": "000000000004b778  0000001900000402 R_AARCH64_JUMP_SLOT    0000000000000000 fclose@GLIBC_2.17 + 0",
+      "slot": "0x4b778"
+    },
+    {
+      "PLT": "0xacf0",
+      "call": "0x255d0",
+      "name": "strcasestr@GLIBC_2.17",
+      "relocation": "000000000004bed0  0000008600000402 R_AARCH64_JUMP_SLOT    0000000000000000 strcasestr@GLIBC_2.17 + 0",
+      "slot": "0x4bed0"
+    },
+    {
+      "PLT": "0xa0d0",
+      "call": "0xe474",
+      "name": "hal_board",
+      "relocation": "000000000004b8c0  0000018300000402 R_AARCH64_JUMP_SLOT    00000000000251b0 hal_board + 0",
+      "slot": "0x4b8c0"
+    }
+  ],
+  "inherited_getter_scope": "run07 pure getter branch22 only, no uncertain bt_device consumer",
+  "literal_joins": [
+    {
+      "ADD": "0x2522c",
+      "ADRP": "0x25228",
+      "literal": "/proc/cpuinfo",
+      "target": "0x2d950"
+    },
+    {
+      "ADD": "0x2523c",
+      "ADRP": "0x25238",
+      "literal": "r",
+      "target": "0x2d948"
+    },
+    {
+      "ADD": "0x25250",
+      "ADRP": "0x2524c",
+      "literal": "Hardware",
+      "target": "0x2d988"
+    },
+    {
+      "ADD": "0x2536c",
+      "ADRP": "0x25368",
+      "literal": "/sys/firmware/devicetree/base/model",
+      "target": "0x33370"
+    },
+    {
+      "ADD": "0x255c8",
+      "ADRP": "0x255c4",
+      "literal": "BEAR",
+      "target": "0x33460"
+    }
+  ],
+  "normal_recovery_bytes_equal": true,
+  "sha256": "c0f9c41de5c3380efa69a9ccecb9a3fd5ef558c151150197cc366199f1a81863",
+  "spans": [
+    {
+      "bytes_hex": "3f2303d5ff8301d1200100d0fd7b02a9fd83009100ac47f9f35303a9f55b04a9350100f0b32240b9010040f9e10f00f9010080d2ffff00a97f060031e0010054200100d000ac47f9e20f40f9010040f9420001eb010080d2810e0054e003132afd7b42a9f35343a9f55b44a9ff830191bf2303d5c0035fd6",
+      "end_VA_exclusive": "0x25228",
+      "name": "cache-prefix-and-return",
+      "sha256": "1bb08a00fcf8c788c4fa3b48da59e2fa0af7d5ea22920ed13461cef8acfa01ac",
+      "start_VA": "0x251b0"
+    },
+    {
+      "bytes_hex": "5400009094422591e00314aaf76305a95800009001232591b095ff97f30300aaa00d00b45400009094222691f7430091f623009105000014e00740f9e10314aaa296ff97000100b5e30313aae10317aae00316aa420180525895ff971f0400b1c1feff54e00313aaec92ff97f40740f9740600b44100009021202691e00314aa9296ff97600500b4",
+      "end_VA_exclusive": "0x252b0",
+      "name": "cpuinfo-read-and-marker-gate",
+      "sha256": "e6a7e8009ee311e4bf6df090e8828bb1b8466a1b3abff7a7eb4fa550cf380e69",
+      "start_VA": "0x25228"
+    },
+    {
+      "bytes_hex": "610000d021a00e91e00314aa130080528c96ff97c00000b4b32200b9e00314aa3c93ff97f76345a9c6ffff17610000d021c00e91e00314aa330080528196ff97c0feffb5610000d021e00e91e00314aa530080527b96ff9700feffb5610000d021000f91e00314aa730080527596ff9740fdffb5610000d021200f91e00314aa930080526f96ff9780fcffb5610000d021400f91e00314aa6a96ff97a00400b4b3008052ddffff17",
+      "end_VA_exclusive": "0x25358",
+      "name": "classification-prefix-and-cache-store",
+      "sha256": "117931e4af30e44d721ed41264841d72957f8255847a95496fa9328ec91a7033",
+      "start_VA": "0x252b0"
+    },
+    {
+      "bytes_hex": "e00314aa1993ff97ff0700f901232591600000d000c00d916495ff97f30300aa000100b4e30300aae143009142018052e02300911595ff97e00313aaab92ff97f40740f9b4f8ffb5",
+      "end_VA_exclusive": "0x253a0",
+      "name": "device-tree-fallback-only",
+      "sha256": "908b0a9fea711c20b61aea22a234f91069878fa86aa5ddbcaf0b0d844ba969d9",
+      "start_VA": "0x25358"
+    },
+    {
+      "bytes_hex": "610000d021600f91e00314aa4196ff97800100b4d3008052b4ffff17200100d0e30314aa420000908100805200d847f942402a91000040f99e95ff979effff17610000d021800f91e00314aa3196ff97600000b453018052a4ffff17610000d021a00f91e00314aa2a96ff97600000b4330180529dffff17610000d021c00f91e00314aa2396ff97600000b4f300805296ffff17610000d021e00f91e00314aa1c96ff97600000b4730180528fffff17610000d021201091e00314aa1596ff97600000b4b301805288ffff17610000d021401091e00314aa0e96ff97600000b41301805281ffff17610000d021601091e00314aa0796ff97600000b4930180527affff17610000d021801091e00314aa0096ff97600000b4d301805273ffff17610000d021a01091e00314aaf995ff97600000b4f30180526cffff17610000d021c01091e00314aaf295ff97600000b41302805265ffff17610000d021e01091e00314aaeb95ff97600000b4930280525effff17610000d021001191e00314aae495ff97600000b43302805257ffff17610000d021201191e00314aadd95ff97600000b45302805250ffff17610000d021401191e00314aad695ff97600000b47302805249ffff17610000d021601191e00314aacf95ff97600000b4b302805242ffff17610000d021801191e00314aac895ff97600000b4d30280523bffff17",
+      "end_VA_exclusive": "0x255e0",
+      "name": "selected-label-path",
+      "sha256": "ae42a54dc26d2daf4d63570e58ef059b9af14f4872730a80848230bad7364edd",
+      "start_VA": "0x253e0"
+    },
+    {
+      "bytes_hex": "200100d0e30314aa420000908100805200d847f942402a91000040f99e95ff979effff17",
+      "end_VA_exclusive": "0x25420",
+      "name": "fallback-open-failure-bridge",
+      "sha256": "b963c6b82cd8af7f0abc88055d807ba5c1d9d1b65d9c1ed2d6af70ca9de69ff6",
+      "start_VA": "0x253fc"
+    },
+    {
+      "bytes_hex": "3f2303d5ff0307d1e10100b0fd7b19a9fd43069121ac47f9f3531aa9f4c30591f55b1ba9f50300aa200040f9e0c700f9000080d217efff97",
+      "end_VA_exclusive": "0xe478",
+      "name": "pure-getter-call-only",
+      "sha256": "f3a301db921859b12bb19371eb492321f070bdaae3122b874ee40891d4a3dc38",
+      "start_VA": "0xe440"
+    }
+  ],
+  "symbol": [
+    "387: 00000000000251b0  1316 FUNC    GLOBAL DEFAULT   12 hal_board"
+  ]
+}

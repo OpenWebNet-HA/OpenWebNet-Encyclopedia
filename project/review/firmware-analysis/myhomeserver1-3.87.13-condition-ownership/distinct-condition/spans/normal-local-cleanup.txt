@@ -1,0 +1,36 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00103d6e:
+  103d6e:	2d00      	cmp	r5, #0
+  103d70:	d094      	beq.n	103c9c
+  103d72:	f8df 3bb4 	ldr.w	r3, [pc, #2996]	@ 104928
+  103d76:	f85a 7003 	ldr.w	r7, [sl, r3]
+  103d7a:	783b      	ldrb	r3, [r7, #0]
+  103d7c:	2b00      	cmp	r3, #0
+  103d7e:	f000 8598 	beq.w	1048b2
+  103d82:	686b      	ldr	r3, [r5, #4]
+  103d84:	1e5a      	subs	r2, r3, #1
+  103d86:	606a      	str	r2, [r5, #4]
+  103d88:	2b01      	cmp	r3, #1
+  103d8a:	d187      	bne.n	103c9c
+  103d8c:	682b      	ldr	r3, [r5, #0]
+  103d8e:	4628      	mov	r0, r5
+  103d90:	689b      	ldr	r3, [r3, #8]
+  103d92:	4798      	blx	r3
+  103d94:	783b      	ldrb	r3, [r7, #0]
+  103d96:	2b00      	cmp	r3, #0
+  103d98:	f001 8223 	beq.w	1051e2
+  103d9c:	68ab      	ldr	r3, [r5, #8]
+  103d9e:	1e5a      	subs	r2, r3, #1
+  103da0:	60aa      	str	r2, [r5, #8]
+  103da2:	2b01      	cmp	r3, #1
+  103da4:	f47f af7a 	bne.w	103c9c
+  103da8:	682b      	ldr	r3, [r5, #0]
+  103daa:	4628      	mov	r0, r5
+  103dac:	68db      	ldr	r3, [r3, #12]
+  103dae:	4798      	blx	r3
+  103db0:	e774      	b.n	103c9c

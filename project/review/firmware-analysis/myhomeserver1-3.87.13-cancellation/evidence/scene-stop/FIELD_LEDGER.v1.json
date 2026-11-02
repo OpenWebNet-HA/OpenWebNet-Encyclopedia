@@ -1,0 +1,19 @@
+{
+  "action_completion4": {
+    "reader": "0xcd97c directly called by polling",
+    "scope": "Separate from scene stop/active; no completion store in selected scene clear."
+  },
+  "normal_return": "Logging, C++/JSON/provider cleanup and live object/range assumptions explicit; exceptions/unwind/concurrency not closed.",
+  "scene_active145": {
+    "cleanup": "0xa6aa0=0",
+    "launch_guard": "0xa5dd6!=0 bypasses request",
+    "launch_set": "0xa5dee=1"
+  },
+  "scene_stop144": {
+    "action_dispatch_read": "0xa68b6",
+    "clear": "0xa6aac=0 on selected normal cleanup",
+    "poll_read_after_sleep": "0xa693a, nonzero branch0xa6942\u21920xa6994",
+    "set": "0xa615e=1"
+  },
+  "stop_virtual": "same compiled action vector128/132; slot+4 call0xa6176; known common/SLEEP/SCENARIO mapping inherited, not every derived class"
+}

@@ -1,0 +1,103 @@
+#!/usr/bin/env python3
+"""Read PE/CLI metadata and four declared original IL bodies; never execute CLR."""
+import argparse, hashlib, json, pathlib, sys
+sys.dont_write_bytecode = True
+O = pathlib.Path(__file__).resolve().parent
+W = next(p for p in O.parents if (p/'AGENTS.md').is_file())
+T = W/'work/firmware-next-investigations/2026-10-31/tooling'
+sys.path.insert(0, str(T/'python'))
+import dnfile
+from dncil.cil.body.reader import read_method_body_from_bytes
+from dncil.clr.token import Token, StringToken
+D = W/'work/mh202-firmware/research/2026-10-31-scenario-artifacts/acquisition/selected-files-v2/default/targetDir'
+H = lambda b: hashlib.sha256(b).hexdigest()
+J = lambda x: (json.dumps(x, indent=2, sort_keys=True, ensure_ascii=True)+'\n').encode()
+EXPECTED = {'Core': (1021440,'7b7269a14652472fc471568430364a038f02a8c881cb5c9db089a7683e38307b'),
+            'Class': (51200,'3a9ef4d3c41889d5990ce1977b4782580d9b6bed7f2a3a28ab4693d091dc3afb')}
+SELECT = {'Core': [(0x8d,0x8e98),(0x8e,0x8ecc)], 'Class': [(0x215,0x4b54),(0x220,0x4c3c)]}
+
+def build():
+    inputs = {}; methods = []; links = []; assemblies = {}
+    def pin(p):
+        b=p.read_bytes(); inputs[str(p.relative_to(W))]={'bytes':len(b),'sha256':H(b)}; return b
+    for d in json.loads(pin(T/'INSTALLED_FILES.json')):
+        b=pin(T/d['path']); assert len(b)==d['bytes'] and H(b)==d['sha256']
+    pin(T/'SOURCE_PINS.json'); pin(O/'SCOPE_AUTHORIZATION.json')
+    for part in SELECT:
+        p=D/f'Bticino.ScenarioSuite.{part}.dll'; raw=pin(p)
+        assert (len(raw),H(raw))==EXPECTED[part]
+        pe=dnfile.dnPE(data=raw); md=pe.net.mdtables
+        owners={x.row_index:str(t.TypeNamespace)+'.'+str(t.TypeName) for t in md.TypeDef.rows for x in t.MethodList}
+        fields={x.row_index:str(t.TypeNamespace)+'.'+str(t.TypeName) for t in md.TypeDef.rows for x in t.FieldList}
+        def typename(r):
+            if hasattr(r,'TypeName'): return str(r.TypeNamespace)+'.'+str(r.TypeName)
+            return 'TypeSpec(signature:'+bytes(r.Signature.value).hex()+')'
+        def resolve(t):
+            if isinstance(t,StringToken): return {'token':f'0x{t.value:08x}','text':pe.net.user_strings.get(t.rid).value}
+            r=md.tables[t.table].rows[t.rid-1]; z={'token':f'0x{t.value:08x}','table':md.tables[t.table].name}
+            if t.table==6: z['name']=owners[t.rid]+'::'+str(r.Name)
+            elif t.table==4: z['name']=fields[t.rid]+'::'+str(r.Name)
+            elif t.table==10:
+                z['name']=typename(r.Class.row)+'::'+str(r.Name)
+                z['class_table']=r.Class.table.name; z['class_row']=r.Class.row_index
+                if hasattr(r.Class.row,'Signature'): z['class_signature_hex']=bytes(r.Class.row.Signature.value).hex()
+            else: z['name']=typename(r)
+            if hasattr(r,'Signature'): z['signature_hex']=bytes(r.Signature.value).hex()
+            return z
+        ar=md.Assembly.rows[0]
+        assemblies[part]={'bytes':len(raw),'sha256':H(raw),'assembly_name':str(ar.Name),'version':[ar.MajorVersion,ar.MinorVersion,ar.BuildNumber,ar.RevisionNumber]}
+        for rid,rva in SELECT[part]:
+            m=md.MethodDef.rows[rid-1]; assert m.Rva==rva
+            off=pe.get_offset_from_rva(rva); b=read_method_body_from_bytes(raw[off:off+65536]); assert raw[off:off+b.size]==b.raw_bytes
+            ins=[]
+            for i in b.instructions:
+                row={'il_offset':i.offset-b.header_size,'body_offset':i.offset,'op':i.opcode.name,'bytes_hex':(i.opcode_bytes+i.operand_bytes).hex()}
+                q=i.operand
+                if isinstance(q,Token): row['operand']=resolve(q)
+                elif isinstance(q,list): row['operand']={'body_targets':q,'il_targets':[v-b.header_size for v in q]}
+                elif isinstance(q,int) and i.opcode.operand_type.name in ('InlineBrTarget','ShortInlineBrTarget'):
+                    row['operand']={'body_target':q,'il_target':q-b.header_size}
+                elif q is not None: row['operand']=q if isinstance(q,(str,int,float)) else {'index':q.index,'kind':type(q).__name__}
+                ins.append(row)
+            eh=[{k:(resolve(v) if isinstance(v,Token) else v) for k,v in vars(e).items() if isinstance(v,(int,str,Token)) or v is None} for e in b.exception_handlers]
+            methods.append({'assembly':part,'token':f'0x{0x06000000|rid:08x}','name':owners[rid]+'::'+str(m.Name),'rva':rva,'file_offset':off,'header_bytes':b.header_size,'IL_code_bytes':b.code_size,'body_bytes':b.size,'body_sha256':H(b.raw_bytes),'body_hex':b.raw_bytes.hex(),'signature_hex':m.Signature.value.hex(),'parameters':[{'sequence':x.row.Sequence,'name':str(x.row.Name)} for x in m.ParamList],'exception_regions_dncil_body_coordinates':eh,'instructions':ins})
+        if part=='Core':
+            for tok in [0x0a000110,0x0a000124,0x0a000125]: links.append({'assembly':part,**resolve(Token(tok))})
+            assert str(md.TypeRef.rows[86].TypeNamespace)== 'System.Collections.ObjectModel' and str(md.TypeRef.rows[86].TypeName)=='Collection`1'
+            assert md.TypeRef.rows[11].TypeName.value=='cScenario'
+            assert md.TypeSpec.rows[54].Signature.value.hex()=='1512815d011231'
+            assert str(md.TypeRef.rows[53].TypeNamespace)=='System.Collections.ObjectModel' and str(md.TypeRef.rows[53].TypeName)=='ObservableCollection`1'
+            assert md.MemberRef.rows[291].Signature.value.hex()=='2000151280d9011231'
+            links.append({'assembly':part,'getter_return_TypeRef54':'System.Collections.ObjectModel.ObservableCollection`1', 'getter_signature_hex':'2000151280d9011231', 'generic_TypeSpec_row':55,'signature_hex':'1512815d011231','decoded_selected_identity':'GENERICINST CLASS TypeRef87 System.Collections.ObjectModel.Collection`1, one CLASS TypeRef12 Bticino.ScenarioSuite.Class.cScenario','not_runtime_binding':True})
+        else:
+            links.extend({'assembly':part,**resolve(Token(t))} for t in [0x0a00004b,0x0400011d])
+            assert str(md.TypeRef.rows[20].TypeNamespace)=='System.Collections.ObjectModel' and str(md.TypeRef.rows[20].TypeName)=='ObservableCollection`1'
+            assert md.TypeDef.rows[48].TypeName.value=='cScenario'
+            assert md.TypeSpec.rows[21].Signature.value.hex()=='151255011280c4'
+            links.append({'assembly':part,'generic_TypeSpec_row':22,'signature_hex':'151255011280c4','decoded_selected_identity':'GENERICINST CLASS TypeRef21 System.Collections.ObjectModel.ObservableCollection`1, one CLASS TypeDef49 Bticino.ScenarioSuite.Class.cScenario','not_runtime_binding':True})
+    def guard(part,token,offset,op,operand=None):
+        m=next(x for x in methods if x['assembly']==part and x['token']==token)
+        i=next(x for x in m['instructions'] if x['il_offset']==offset); assert i['op']==op
+        if operand is not None: assert i['operand']['token']==operand
+    for v in [('Core','0x0600008d',0x17,'callvirt','0x0600008e'),('Core','0x0600008e',0xc5,'newobj','0x0a000110'),('Core','0x0600008e',0xca,'stind.ref',None),('Core','0x0600008e',0x25b,'callvirt','0x0a000113'),('Core','0x0600008e',0x260,'isinst','0x0100000c'),('Core','0x0600008e',0x28c,'callvirt','0x0a000124'),('Core','0x0600008e',0x293,'callvirt','0x0a000125'),('Class','0x06000215',0x17,'stfld','0x0400011d'),('Class','0x06000220',1,'ldfld','0x0400011d')]: guard(*v)
+    inherited=W/'work/mh202-firmware/research/2026-10-31-generator-chain/METHODS.v1.json'
+    old=json.loads(pin(inherited)); compileall=next(x for x in old['selected_methods'] if x['assembly']=='Core' and x['token']=='0x060000c8')
+    inherited_data={'classification':'INHERITED evidence only, not re-decoded or new coverage','path':str(inherited.relative_to(W)),'method_token':'0x060000c8','method_body_sha256':compileall['body_sha256'],'parameters':compileall['parameters'],'collection_calls':[x for x in compileall['instructions'] if isinstance(x.get('operand'),dict) and any(n in x['operand'].get('name','') for n in ['get_ScenariosCollection','GetEnumerator','get_Current'])],'pipeline_premise':'Caller passes the output collection from this loader to the inherited CompileAll without replacing/mutating it; actual caller is not proved here.'}
+    out={'METHODS.v2.json':J({'assemblies':assemblies,'methods':methods,'offset_rule':'IL offsets exclude header; dncil branch body targets normalized independently in each operand; raw body and instruction bytes retained.'}),'METADATA_LINKS.v2.json':J(links),'INHERITED_COMPILEALL.v2.json':J(inherited_data),'INPUTS.v2.json':J(inputs)}
+    out['OUTPUT_MANIFEST.v2.json']=J({'collector_sha256':H(pathlib.Path(__file__).read_bytes()),'report_sha256':H((O/'REPORT.v2.md').read_bytes()),'outputs':{n:{'bytes':len(b),'sha256':H(b)} for n,b in out.items()},'new_methods':4,'new_vendor_CLR_native_execution':0,'new_project_SQL_XML_provider_execution':0,'new_fixtures_models':0})
+    return out
+
+def main():
+    a=argparse.ArgumentParser(); a.add_argument('--check',action='store_true'); args=a.parse_args(); out=build()
+    if args.check:
+        for n,b in out.items(): assert (O/n).read_bytes()==b,n
+    else:
+        first=O/'first-candidate-v2'; assert not first.exists() and all(not(O/n).exists() for n in out)
+        for n,b in out.items():
+            with (O/n).open('xb') as f: f.write(b)
+        first.mkdir(); names=['REPORT.v2.md','collect_loader_v2.py','SCOPE_AUTHORIZATION.json']+list(out)
+        for n in names:
+            with (first/n).open('xb') as f: f.write((O/n).read_bytes())
+        with (first/'SNAPSHOT_INDEX.json').open('xb') as f: f.write(J({n:{'bytes':(O/n).stat().st_size,'sha256':H((O/n).read_bytes())} for n in names}))
+    print(json.dumps({'check':args.check,'outputs':len(out),'new_methods':4,'new_vendor_execution':0}))
+if __name__=='__main__': main()

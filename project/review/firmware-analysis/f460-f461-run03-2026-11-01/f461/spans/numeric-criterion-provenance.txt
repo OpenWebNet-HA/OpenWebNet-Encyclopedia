@@ -1,0 +1,22 @@
+
+/home/bticino/libcoso/libcoso.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000003088 <new_openmsg_from_openmsg@@Base+0x158>:
+    3088:	b9406aa3 	ldr	w3, [x21, #104]
+    308c:	52800060 	mov	w0, #0x3                   	// #3
+    3090:	b9002ac3 	str	w3, [x22, #40]
+    3094:	52800142 	mov	w2, #0xa                   	// #10
+    3098:	b9003ac0 	str	w0, [x22, #56]
+    309c:	d2800001 	mov	x1, #0x0                   	// #0
+    30a0:	f94002a0 	ldr	x0, [x21]
+    30a4:	b9006a63 	str	w3, [x19, #104]
+    30a8:	f90012df 	str	xzr, [x22, #32]
+    30ac:	97fffbc1 	bl	1fb0 <strtol@plt>
+    30b0:	b90032c0 	str	w0, [x22, #48]
+    30b4:	97fffb73 	bl	1e80 <new_id@plt>
+    30b8:	a94153f3 	ldp	x19, x20, [sp, #16]
+    30bc:	f90022c0 	str	x0, [x22, #64]
+    30c0:	aa1603e0 	mov	x0, x22

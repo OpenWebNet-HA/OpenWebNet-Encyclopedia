@@ -1,0 +1,19 @@
+{
+  "old_report_sha256": "5bfd1872d9d6c25460459fa7cf3927eb0f2f6acacfd1d05dcd8f7b3544826c44",
+  "new_report": "REPORT.v2.md",
+  "new_report_sha256": "73b59a730aea8720c0a174a4731bcaf5978ba21c655c55750f1db4e11414e254",
+  "substitutions": [
+    {
+      "before": "and kernel header/packaged checksum evidence.",
+      "after": "and packaged kernel-header evidence. F460 additionally checks the packaged Image.md5; F461 retains that file without an MD5-verification claim."
+    },
+    {
+      "before": "hygW Cortex-M payload",
+      "after": "hygw_cortex-m.bin payload"
+    }
+  ],
+  "reason": "Parent checked independent extraction-method distinction: F460 verifies packaged MD5, F461 does not claim that check; correct exact auxiliary payload spelling. All archive/image/hash/DB comparisons and counts unchanged.",
+  "pre_v2_exact_snapshot": "report-pre-v2",
+  "source_outputs_changed": false,
+  "history": "V1/reportfirstcopy untouched; exact root copy before separate v2"
+}

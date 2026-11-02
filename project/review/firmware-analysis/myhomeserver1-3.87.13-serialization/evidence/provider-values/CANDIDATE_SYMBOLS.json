@@ -1,0 +1,19 @@
+{
+  "alias_read_sha256": "5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36",
+  "definitions": [
+    "130: 00015b55   116 FUNC    GLOBAL DEFAULT   11 _ZN4Json5ValueC1ENS_9ValueTypeE",
+    "223: 00015c69    38 FUNC    GLOBAL DEFAULT   11 _ZN4Json5ValueC1Ej",
+    "236: 00014e3d     4 FUNC    GLOBAL DEFAULT   11 _ZNK4Json5Value4typeEv",
+    "241: 00017e75   212 FUNC    GLOBAL DEFAULT   11 _ZNK4Json5Value4findEPKcS2_",
+    "291: 000155dd   152 FUNC    GLOBAL DEFAULT   11 _ZNK4Json5Value6isUIntEv",
+    "299: 00016aad   624 FUNC    GLOBAL DEFAULT   11 _ZNK4Json5Value6asUIntEv",
+    "433: 00015ad5   128 FUNC    GLOBAL DEFAULT   11 _ZN4Json5Value9initBasicENS_9ValueTypeEb",
+    "456: 00015bc9   120 FUNC    GLOBAL DEFAULT   11 _ZN4Json5Value13nullSingletonEv",
+    "524: 00017f49    34 FUNC    GLOBAL DEFAULT   11 _ZNK4Json5ValueixEPKc"
+  ],
+  "effective_live_binding": "Unobserved; not executedloader/interposition proof.",
+  "provider": "/usr/lib/libjsoncpp.so.1.9.5",
+  "provider_sha256": "5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36",
+  "scheduler_needed": "libjsoncpp.so.25",
+  "soname": "libjsoncpp.so.25"
+}

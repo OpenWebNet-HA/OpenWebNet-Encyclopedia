@@ -1,0 +1,11 @@
+{
+  "bytes": 14016,
+  "collector": "collect_origin_v1.py",
+  "correction_rule": "Await parent exact snapshot; retain v1 unchanged and use new v2 only",
+  "failure": "AssertionError at build line25: incorrectly negative ln operand string guard; original script correctly has intended source/destination operands",
+  "original_execution": 0,
+  "outputs_written": 0,
+  "sha256": "d9e4e6567d333f5104fc5184b66f7cf4213963f6f5c69f72bfaf4d1f1a54de61",
+  "source_issue": false,
+  "status": "FAILED_BEFORE_OUTPUTS"
+}

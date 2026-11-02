@@ -1,0 +1,17 @@
+
+/home/bticino/bin/bt_daemon:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00004138 <sowing@@Base-0x1960>:
+    4138:	f895 302c 	ldrb.w	r3, [r5, #44]	@ 0x2c
+    413c:	2b00      	cmp	r3, #0
+    413e:	f040 82c6 	bne.w	46ce <hal_drop_system_cache@plt+0xa82>
+    4142:	6bab      	ldr	r3, [r5, #56]	@ 0x38
+    4144:	2b01      	cmp	r3, #1
+    4146:	f000 8112 	beq.w	436e <hal_drop_system_cache@plt+0x722>
+    414a:	f8df 0978 	ldr.w	r0, [pc, #2424]	@ 4ac4 <hal_drop_system_cache@plt+0xe78>
+    414e:	4629      	mov	r1, r5
+    4150:	4478      	add	r0, pc
+    4152:	f00f ff25 	bl	13fa0 <harvest_str_shielded@@Base+0xafb8>

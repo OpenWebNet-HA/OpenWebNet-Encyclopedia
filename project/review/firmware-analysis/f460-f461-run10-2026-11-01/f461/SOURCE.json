@@ -1,0 +1,256 @@
+{
+  "PT_LOAD": [
+    [
+      1,
+      5,
+      0,
+      0,
+      0,
+      27368,
+      27368,
+      65536
+    ],
+    [
+      1,
+      6,
+      31456,
+      96992,
+      96992,
+      1864,
+      1872,
+      65536
+    ]
+  ],
+  "execution": {
+    "fixtures": 0,
+    "models": 0,
+    "original": 0,
+    "target_IO": 0
+  },
+  "flags": {
+    "CCMP_VA": "0x4428",
+    "CSEL_VA": "0x443c",
+    "NE_value": "literal3",
+    "condition": "NE",
+    "false_NZCV": 4,
+    "false_Z": 1,
+    "otherwise": "literal4",
+    "selected_prior_store_W20": "0x40a8 constant0",
+    "true_compare": "W20 minus0",
+    "word": "0x7a400a84"
+  },
+  "guards": {
+    "0x3b8c": "0xb9403a63",
+    "0x3b98": "0x71000c7f",
+    "0x3ba0": "0xf9400260",
+    "0x3ba4": "0xf9004fe0",
+    "0x3ba8": "0xb9406803",
+    "0x400c": "0xb9400762",
+    "0x4018": "0xb9006be2",
+    "0x4024": "0xf9404fe1",
+    "0x4028": "0xf940103b",
+    "0x402c": "0xa9435037",
+    "0x4060": "0x35003c80",
+    "0x4068": "0x7100105f",
+    "0x406c": "0x54006480",
+    "0x4078": "0xaa1403e0",
+    "0x4084": "0x2a0003e1",
+    "0x4090": "0xaa0003f9",
+    "0x40a8": "0x52800014",
+    "0x416c": "0xf9400317",
+    "0x4180": "0xaa1703e1",
+    "0x4198": "0xf90002a0",
+    "0x41a0": "0x910283e0",
+    "0x4404": "0xf100033f",
+    "0x4414": "0x9a99037b",
+    "0x4418": "0xaa1903e0",
+    "0x4420": "0x7100001f",
+    "0x4424": "0xf9403be0",
+    "0x4428": "0x7a400a84",
+    "0x442c": "0xaa1b03e2",
+    "0x4430": "0x9103e003",
+    "0x443c": "0x9a831003",
+    "0x4440": "0xaa1803e0",
+    "0x4450": "0x17ffff3a",
+    "0x56bc": "0xf94043e4",
+    "0x56c0": "0x17fffb51"
+  },
+  "image": "/home/bticino/libcoso/libplug_automation_tr.so",
+  "imports": [
+    {
+      "PLT": "0x2040",
+      "boundary_only": false,
+      "call": "0x405c",
+      "relocation": "0000000000018178  0000003400000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_strcmp0 + 0",
+      "slot": "0x18178"
+    },
+    {
+      "PLT": "0x1ff0",
+      "boundary_only": false,
+      "call": "0x407c",
+      "relocation": "0000000000018150  0000002e00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_ascii_strtoll + 0",
+      "slot": "0x18150"
+    },
+    {
+      "PLT": "0x1e20",
+      "boundary_only": false,
+      "call": "0x408c",
+      "relocation": "0000000000018068  0000001000000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_strdup_printf + 0",
+      "slot": "0x18068"
+    },
+    {
+      "PLT": "0x1df0",
+      "boundary_only": false,
+      "call": "0x4098",
+      "relocation": "0000000000018050  0000000d00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_strdup + 0",
+      "slot": "0x18050"
+    },
+    {
+      "PLT": "0x1df0",
+      "boundary_only": false,
+      "call": "0x40ac",
+      "relocation": "0000000000018050  0000000d00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_strdup + 0",
+      "slot": "0x18050"
+    },
+    {
+      "PLT": "0x1df0",
+      "boundary_only": false,
+      "call": "0x40b8",
+      "relocation": "0000000000018050  0000000d00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_strdup + 0",
+      "slot": "0x18050"
+    },
+    {
+      "PLT": "0x1fe0",
+      "boundary_only": false,
+      "call": "0x40c4",
+      "relocation": "0000000000018148  0000002d00000402 R_AARCH64_JUMP_SLOT    0000000000000000 automation_get_where_type + 0",
+      "slot": "0x18148"
+    },
+    {
+      "PLT": "0x2040",
+      "boundary_only": false,
+      "call": "0x441c",
+      "relocation": "0000000000018178  0000003400000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_strcmp0 + 0",
+      "slot": "0x18178"
+    },
+    {
+      "PLT": "0x2000",
+      "boundary_only": false,
+      "call": "0x444c",
+      "relocation": "0000000000018158  0000002f00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_string_append_printf + 0",
+      "slot": "0x18158"
+    },
+    {
+      "PLT": "0x1e20",
+      "boundary_only": false,
+      "call": "0x4190",
+      "relocation": "0000000000018068  0000001000000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_strdup_printf + 0",
+      "slot": "0x18068"
+    },
+    {
+      "PLT": "0x1d50",
+      "boundary_only": true,
+      "call": "0x41a8",
+      "relocation": "0000000000018000  0000000300000402 R_AARCH64_JUMP_SLOT    0000000000000000 prepare_extscs_frames + 0",
+      "slot": "0x18000"
+    }
+  ],
+  "literal_joins": [
+    {
+      "ADD": "0x4058",
+      "ADDword": "0x9103e021",
+      "ADRP": "0x3ff8",
+      "literal_VA": "0x60f8",
+      "value": "4"
+    },
+    {
+      "ADD": "0x4088",
+      "ADDword": "0x91182040",
+      "ADRP": "0x4080",
+      "literal_VA": "0x6608",
+      "value": "%X"
+    },
+    {
+      "ADD": "0x440c",
+      "ADDword": "0x9100e37b",
+      "ADRP": "0x4408",
+      "literal_VA": "0x6038",
+      "value": "0"
+    },
+    {
+      "ADD": "0x4410",
+      "ADDword": "0x9108a081",
+      "ADRP": "0x43c8",
+      "literal_VA": "0x6228",
+      "value": "F"
+    },
+    {
+      "ADD": "0x4438",
+      "ADDword": "0x91072000",
+      "ADRP": "0x4434",
+      "literal_VA": "0x61c8",
+      "value": "3"
+    },
+    {
+      "ADD": "0x4448",
+      "ADDword": "0x911b4021",
+      "ADRP": "0x4444",
+      "literal_VA": "0x66d0",
+      "value": "%s1%s"
+    },
+    {
+      "ADD": "0x418c",
+      "ADDword": "0x911c2000",
+      "ADRP": "0x4188",
+      "literal_VA": "0x6708",
+      "value": "%s%s%s%s"
+    }
+  ],
+  "opaque_boundary": "0x41a8 prepare_extscs_frames body closed; no raw/frame/delivery claims",
+  "premises": "local caller reached with valid same objects, prior normal provider returns; prefix path retains W20=0, source/provided object fields and actual routing/parser acceptance unobserved",
+  "sha256": "d7d361798ccec65843bd41c9ad7b8897645a334b0cd08121d372949f78eac277",
+  "spans": [
+    {
+      "bytes_hex": "633a40b97f080071404000547f0c0071613e0054600240f9e04f00f9036840b97f0c007120600054c81900547f040071e04a00547f08007181440054",
+      "end_VA_exclusive": "0x3bc8",
+      "name": "record-to-provided-parsed-object",
+      "sha256": "d33514921e4081ce6e8ca39ef54ea5fa6675afdbe56e47ae83ac85daa64438ba",
+      "start_VA": "0x3b8c"
+    },
+    {
+      "bytes_hex": "e14f40f93b1040f9375043a954f7ff9703431f910110805263a0029122233091f80300aaa042309155f7ff97e13b40f9e00317aa21e00391f9f7ff97803c0035e26b40b95f1000718064005442018052010080d2e00314aaddf7ff97020000d0e103002a4020189165f7ff97f90300aae00319aa56f7ff97e10300aae00319aae13700f91400805251f7ff97f70300aae00319aa4ef7ff97e03f00f9e0031baac7f7ff97",
+      "end_VA_exclusive": "0x40c8",
+      "name": "provided-string-context",
+      "sha256": "a10e009d4ce49fe8d56956076ed1031a9fd9eee50e2ed79f2404611d2fed4d86",
+      "start_VA": "0x4024"
+    },
+    {
+      "bytes_hex": "e44340f951fbff17",
+      "end_VA_exclusive": "0x56c4",
+      "name": "inherited-prefix-return-connector",
+      "sha256": "ae403d0dd91d8a0e0bbb443d5fac89f234a7d9c5d7e6403580da8bd28c4bedfc",
+      "start_VA": "0x56bc"
+    },
+    {
+      "bytes_hex": "3f0300f11b0000d07be3009181a008917b03999ae00319aa09f7ff971f000071e03b40f9840a407ae2031baa03e00391000000d0002007910310839ae00318aa010000d021401b91edf6ff973affff17",
+      "end_VA_exclusive": "0x4454",
+      "name": "suffix-selection-and-append",
+      "sha256": "b36fffa99ce8cb9d8c7852c27f0f35c07075dd1b343334fef9c1710cfca4baab",
+      "start_VA": "0x4404"
+    },
+    {
+      "bytes_hex": "790000b4e00319aa58f7ff97770000b4e00317aa55f7ff97e03740f9600000b4e03740f951f7ff97e03f40f9400000b44ef7ff97170340f9974800b4",
+      "end_VA_exclusive": "0x4174",
+      "name": "local-free-to-address-component",
+      "sha256": "bda4e975e2b870e94088e944ee8eb982bd8f2ae9f0ceced648b634f5133f9321",
+      "start_VA": "0x4138"
+    },
+    {
+      "bytes_hex": "f55340f9e30316aae2031caae10317aae4031aaa000000d000201c9124f7ff97e23340f9a00200f9e10313aae083029123008052eaf6ff97",
+      "end_VA_exclusive": "0x41ac",
+      "name": "formatter-return-store-boundary",
+      "sha256": "d808ba10a8a6fe9db4b23a3a805b67c839090b4bfd6b658700a12d625d55807d",
+      "start_VA": "0x4174"
+    }
+  ]
+}

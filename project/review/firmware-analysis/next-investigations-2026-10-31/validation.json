@@ -1,0 +1,179 @@
+{
+  "result": "PASS",
+  "scope": "Exact source/export/first-candidate/prior-dossier/branch identity checks; not full semantic coverage, runtime or wider Device approval.",
+  "timestamp_UTC": "2026-10-31T12:56:42.601505+00:00",
+  "export_pairs": 16,
+  "collectors": 5,
+  "source_check_sha256": "ddb31fc03648dbb6cc05ae33108d5ce1644407968f9b6067afec3763e47f3435",
+  "original_firmware_archives": [
+    {
+      "path": "work/f454-firmware/F454_020051.fwz",
+      "bytes": 74448014,
+      "sha256": "15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3"
+    },
+    {
+      "path": "work/mh202-firmware/MH202_010024.fwz",
+      "bytes": 37111681,
+      "sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7"
+    }
+  ],
+  "source_manifest_unchanged": true,
+  "first_candidate_indexes": [
+    {
+      "index": "work/f454-firmware/research/2026-10-31-av-producers/initial-generated-v1/SNAPSHOT_INDEX.json",
+      "sha256": "0f26a1df1ddd1bc78ba4e5590d490350be6929b14e988dc7948679bdae0fa98f",
+      "files": 24
+    },
+    {
+      "index": "work/f454-firmware/research/2026-10-31-alarm-board/initial-generated-v1/SNAPSHOT_INDEX.json",
+      "sha256": "7f25c9a38cb6f7591390f2c75c1b9d99ba30cbd3fd111abc7300afb3a2d2805d",
+      "files": 24
+    },
+    {
+      "index": "work/mh202-firmware/research/2026-10-31-generator-chain/initial-generated-v1/SNAPSHOT_INDEX.json",
+      "sha256": "ba58e7b3f3a260afb1cdf238be9d2c57f9a80028d60a4b24335d10b7b653a4b1",
+      "files": 6
+    },
+    {
+      "index": "work/mh202-firmware/research/2026-10-31-generated-lifecycle/initial-generated-v1/SNAPSHOT_INDEX.json",
+      "sha256": "94633087cb52c6efc91daf234b519d775c32191fe1bdebf14cff34ed30b5bedf",
+      "files": 16
+    },
+    {
+      "index": "work/firmware-next-investigations/2026-10-31/database-binding/first-candidates/SOURCE_SNAPSHOTS.json",
+      "sha256": "6269224daefaadd1bfb68e94eb868881347cd84a1703e67b7e487f959cc8dd52",
+      "files": 20
+    },
+    {
+      "index": "work/firmware-next-investigations/2026-10-31/pre-edit-documents/SOURCE_SNAPSHOTS.json",
+      "sha256": "246f8a12c3cfbc6ff652fef9e6c684206eb501801a2cde3169ca1c663a3298a5",
+      "files": 9
+    },
+    {
+      "index": "work/firmware-next-investigations/2026-10-31/initial-reference-candidates/SOURCE_SNAPSHOTS.json",
+      "sha256": "390539dbe15f9ea5b90e7cf776728f6a4d9e5f9e4b0f456ed9cd767baa401735",
+      "files": 12
+    }
+  ],
+  "protected_dossiers": [
+    {
+      "root": "work/f454-firmware/research/2026-10-29",
+      "files": 1917,
+      "index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-targeted",
+      "files": 107,
+      "index_sha256": "ddb83866292f70631b968b91f07e08fbc79415b5e1762cf3699f8e326eacff79"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-targeted-2",
+      "files": 130,
+      "index_sha256": "2dc3f9e3541478eff304d1d9bb368d02504c39cc3d5d8d3aec7ca96650032d82"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-final-pass",
+      "files": 83,
+      "index_sha256": "bf27345d8ce8d1e4e9277ad9346c62fcfde1f0b33bb20783ae5e66963ad100f2"
+    },
+    {
+      "root": "work/mh202-firmware/research/2026-10-30",
+      "files": 2904,
+      "index_sha256": "c65b6ab0961d6ba4ec7e19471c16993be0470b7d5eac3bbd1f93ad78aaeaf8f0"
+    },
+    {
+      "root": "work/firmware-product-followup/2026-10-31",
+      "files": 330,
+      "index_sha256": "624c42bcff5bd7b014dae7686648b3f3019be7956dd90de93c253dab7f891be7"
+    },
+    {
+      "root": "work/artifact-conservation/2026-10-31",
+      "files": 91,
+      "index_sha256": "5fa10c935d988778c9ce909e73e1b04f5635c034fd749a5ed96a8a5bcd323ed4"
+    },
+    {
+      "root": "work/mh202-firmware/research/2026-10-31-database-analysis",
+      "files": 128,
+      "index_sha256": "6292be5148fb4590c4b7e7229af6efe75eb547c79e755113369d24cfff37b828"
+    }
+  ],
+  "protected_files": 5690,
+  "current_document_pins": [
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-product-paths.md",
+      "bytes": 6586,
+      "sha256": "84316d465c6135bad1dd75669313b83d708de23ecc68ae9c467f1c01e3e44d8a"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-scenario-resources.md",
+      "bytes": 6727,
+      "sha256": "84ea1599c1f6dd494f679d6faf8ed3df4b8a2894a5110703f8b7e6f5cfca073f"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-record-and-script-lifecycle.md",
+      "bytes": 15389,
+      "sha256": "4ac3074e73d4f2dd62d6c641725f4a1a9160c0c4c1ec1da654d85713124cc29c"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/README.md",
+      "bytes": 9945,
+      "sha256": "d7a71f3fdd842353cb2b46cfa87006b9bcefd659b314c349a9290e645f632b31"
+    },
+    {
+      "path": "scenario-engine/scenario-suite-database.md",
+      "bytes": 10275,
+      "sha256": "da0c2e3892823211d8384a6f71b7889f4c39198920f966248fa08c4c19061233"
+    },
+    {
+      "path": "scenario-engine/README.md",
+      "bytes": 7521,
+      "sha256": "c122e78ccc7b5abd7873fe38feb04ae15b199a7c4bea8fa40236c5feb39f25e6"
+    },
+    {
+      "path": "scenario-engine/open-questions.md",
+      "bytes": 4801,
+      "sha256": "2a60ee5bebaed07696a94cd601092f5caba82e7a46e331707c1efa21be5fb7a7"
+    },
+    {
+      "path": "scenario-engine/sources-and-identifiers.md",
+      "bytes": 6039,
+      "sha256": "888c136f1a550e6de53fcab1e98057782f967a4a79555e5bb96554cb0cb8718f"
+    },
+    {
+      "path": "functional/who-17-scenario-management/README.md",
+      "bytes": 14005,
+      "sha256": "bf2f1470c2547bdec0c406dcd9dfcd1b35f4f23a9194ae3ef3adb7362a127397"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-av-and-board.md",
+      "bytes": 6714,
+      "sha256": "06f26f11b101ffdd54f0987178a149361e36b04ec0870fcddce18e2d6e1f667f"
+    },
+    {
+      "path": "scenario-engine/scenario-suite-generator.md",
+      "bytes": 8543,
+      "sha256": "2d13975a4167754c4b6c411b1febd671cbd95df62659bafe3e98d666f358314b"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-generated-scenarios.md",
+      "bytes": 6542,
+      "sha256": "9abcb0bb59764d90bf9a9737ee2f9b595c77e23a2122b8e78748228acd55b991"
+    },
+    {
+      "path": "project/review/firmware-analysis/next-investigations-2026-10-31/README.md",
+      "bytes": 5044,
+      "sha256": "6f605dcab07d74c37fa4342d81668f1c3129e9c58d11aef93215f500c0ecc33b"
+    }
+  ],
+  "new_original_execution": 0,
+  "new_native_corpora": 0,
+  "old_MH202_native_corpora": "Fifteen historical corpora unchanged, not rerun or accumulated.",
+  "branch": "docs/static-firmware-analysis-findings",
+  "staged": false,
+  "committed": false,
+  "published": false,
+  "Git_status": " M device-model/firmware.md\n M devices/definitions/own-dev-0002-audio-video-web-server-gateway.md\n M devices/definitions/own-dev-0151-mh202-scenario-programmer.md\n M devices/work-queue.yaml\n M diagnostics/dim1-device-identity.md\n M functional/who-14-special-commands/README.md\n M functional/who-15-cen/README.md\n M functional/who-17-scenario-management/README.md\n M functional/who-18-energy-management/dimensions.md\n M functional/who-22-sound-diffusion/README.md\n M functional/who-25-transversal/README.md\n M functional/who-25-transversal/cen-plus.md\n M functional/who-25-transversal/dry-contact-ir.md\n M functional/who-4-temperature-control/dimensions.md\n M functional/who-5-alarm/README.md\n M functional/who-8-video-door-entry-telephony/README.md\n M functional/who-9-auxiliaries/README.md\n M project/review/who25-gateway-compatibility.md\n M reverse-engineering/README.md\n M scenario-engine/README.md\n M scenario-engine/open-questions.md\n M scenario-engine/sources-and-identifiers.md\n M sources/artifact-manifest.yaml\n?? project/review/firmware-analysis/\n?? project/review/scenario-suite-database-1.0.53/\n?? reverse-engineering/firmware-analysis/\n?? scenario-engine/scenario-suite-database.md\n?? scenario-engine/scenario-suite-generator.md\n",
+  "wider_Device_gates": "Pending, unchanged",
+  "integration_review_sha256": "4cdeaeafda9c9dfc28b50a0ed4f8636ff82e742e69c72894e4b600f848321cce",
+  "required_final_mechanical_checks": "postwrite-checks.json; run strict ECV/ESG after this actual validation file and review copy exist, then pin both in completion-identities.json."
+}

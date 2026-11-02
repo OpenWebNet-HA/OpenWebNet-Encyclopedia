@@ -1,0 +1,8 @@
+# Independent reverse lighting source review
+
+PASS. Parent reproduced collect_reverse_lighting.py --check:14outputs/8spans/23words/5inputs/5formats/4hostcases, ownoriginal0. Reviewed original helper-to-caller source, branch/format identities and WHAT argument position. B8 chooses body[1]/preservedflag0, direct11 chooses body[0]/flag1. Both selected address11 prints decimal11, but nonzero flag selects literal1000# as the WHAT prefix in the fixedWHO1 format. The texts remain conditional decoded-body/primitive/provider/list candidates; original converter/parser, STM, native code and physical response are not claimed. Historicalrun10 suppliedflag0 remains correctly scoped and unchanged. No globalWHO1000 confusion or fulladdress-domain/publicsupport enumeration.
+
+Exact author identities:
+- `coso/run11/REPORT.md` SHA256 `d0225ba1a97e61c66510515bf5f00bb755180c379c22ad9fbbb894f1920c9e67`
+- `coso/run11/collect_reverse_lighting.py` SHA256 `f11c59d411311af70a535d47291540a5762abbc8f037ef41bf8cbcba440df60f`
+- `coso/run11/output-manifest.json` SHA256 `08e0677bfe55d86d7fc81f5ab14e2f90a8a31ccc409a96b715aefa2d92554427`

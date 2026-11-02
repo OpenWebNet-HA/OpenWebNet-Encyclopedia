@@ -1,0 +1,68 @@
+# Isolated original JsonCpp double constructor/readback: canonical results
+
+One root-executed, separately approved canonical run completed all four finite synthetic input cases. Each original `Json::Value(double)` constructor was followed by original `asDouble()` on the SAME constructor-produced private object, without field reseeding. The returned 64-bit double representation equaled the supplied representation for positive zero, negative zero, negative one and one-and-a-quarter. This is one eight-entry private helper corpus, not a full JSON serializer/member-assignment/reparse experiment or a firmware process run.
+
+The root ran the exact frozen v3 harness once after both root and independent source-containment preflight PASS. This report's author performed only host saved-result/hash/source-ledger checks and did not execute another guest or replay. Root approval, run marker, every top-level attempt and immediate result snapshots are retained. No canonical guest failure or retry occurred.
+
+## Actual source and finite result
+
+Original candidate `/usr/lib/libjsoncpp.so.1.9.5` SHA256 `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36`. Fresh original PT_LOAD/symbol/BLX/PLT/GOT/code identities are bound by `SOURCE_PREFLIGHT.json`. The selected original constructor, initBasic, empty Comments assignment, type helper, type3 branch and asDouble normal epilogue executed within the isolated engine; no central field/classifier/value-return stub supplied their effects.
+
+| Synthetic label | Input and returned readback bits |
+| --- | --- |
+| positive zero | `0000000000000000` |
+| negative zero | `8000000000000000` |
+| negative one | `bff0000000000000` |
+| one-and-a-quarter | `3ff4000000000000` |
+
+Each fresh caller storage region contained 24 zero bytes before original construction. Saved constructor writes produce tag byte+8 equal3, comments word+12 zero and double bits at object+0. The same object address remained in its private instance for readback, with no intervening object write/reseed. Before readback D0 received a different finite register poison; actual original type helper `0x14e3c` and double load `0x1724e` appear in each readback PC trace. The readback object bytes remain identical to constructor output and its write trace contains no object-field store. The integer-bit checks require no host floating computation.
+
+These results narrow the original constructor/asDouble provider premise for these four supplied bit patterns. They do not establish arbitrary doubles, exceptional floating behavior, textual formatting, JSON map/member presence, move assignment of Json::Value objects, serializer/reparse, a complete BNTH condition, accepted input grammar, a natural configured scene, physical units/range or device behavior.
+
+## Exact canonical accounting
+
+| Case | Top-level entry | Original code-hook visits | Definition redirects | EXIT callbacks | Code-hook steps |
+| --- | --- | ---: | ---: | ---: | ---: |
+| positive-zero | constructor | 56 | 2 | 1 | 59 |
+| positive-zero | asDouble | 29 | 1 | 1 | 31 |
+| negative-zero | constructor | 56 | 2 | 1 | 59 |
+| negative-zero | asDouble | 29 | 1 | 1 | 31 |
+| negative-one | constructor | 56 | 2 | 1 | 59 |
+| negative-one | asDouble | 29 | 1 | 1 | 31 |
+| one-point-two-five | constructor | 56 | 2 | 1 | 59 |
+| one-point-two-five | asDouble | 29 | 1 | 1 | 31 |
+
+Totals: **8 top-level entries, 340 original code-hook visits, 12 linker-definition redirect callbacks, 8 EXIT callbacks, 0 code guard-stop callbacks = 360 code-hook steps**. C/GLib/string/allocator primitive callbacks: **0**. Constructor/initBasic/Comments/type nested calls are not counted as extra top-level entries. A code-hook visit is not a measurement of retired instructions; diverted PLT entries and private EXIT placeholders are not counted as original instruction visits.
+
+Setup is separate: **4 synthetic data relocations**, one private canary-GOT pointer per case; **24 FP/control register writes**, comprising CPACR/FPEXC/FPSCR/D8 setup per case (16 writes) and D0 setup at each of eight entries (8 writes). The harness's R0/SP/LR setup is three host register writes per entry, 24 separately derived writes, outside that FP field and outside original/redirect/EXIT counters. Private storage initialization, image loading and return-placeholder setup are host fixture work, not guest execution or C primitives.
+
+No guest timeout, unknown state, memory/IRQ/invalid-instruction trap, unbalanced return or missing EXIT occurred. Every successful entry returned through the intercepted private Thumb EXIT within the frozen caps. Verification and this report's saved-result checks add no original visits to the canonical corpus. No former MH202/F454 corpus or earlier static packet is included in these totals.
+
+## Binding, setup and containment limits
+
+Actual original bytes are used, but the experiment supplies a private candidate binding: three intercepted ARM PLT entries redirect to their actual same-image Thumb definitions. These callbacks preserve execution of the original nested implementations; they do not prove live loader/interposition behavior. The sole selected synthetic GOT relocation points the original stack-canary checks to a fixed read-only private cell. It is not a target runtime secret or an observed target provider.
+
+The original image pages were final RX/RO after setup; guest writes were restricted to exact 24-byte object storage and 64KiB stack. Original PC, size and Thumb mode were checked against 85 statically derived addresses; PLT boundaries required ARM/size4 and EXIT Thumb/size2. Embedded TBB data/literal pools were not guest PCs. Private stack read initialization and actual PT_LOAD read extents were guarded; unknown/protected/unmapped memory, IRQ, invalid instruction, nonempty Comments/error/other-type paths and limits would stop. Caps remained 5000 original visits per entry, engine count10000, timeout1 second and host wall2 seconds. The private code was neither an original target process nor an OS/service/network/bus invocation.
+
+The analysis engine was Cortex-A15 with explicit CPACR/FPEXC/FPSCR/D8 host setup. Candidate ABI, empty Comments initialization and this synthetic storage/canary/register environment remain scope premises. No destructor, allocation/free provider, nonempty comment path, error/unwind or complete C++ lifetime was executed. No transport/authentication/session/framing/MQTT/libjel implementation or F454 firmware/layout/harness was imported. The historical F454-named directory supplied only the verified host Unicorn 2.1.4 analysis package.
+
+## Preservation and verification
+
+All 63 current analysis-tool file hashes/sizes remain identical to the frozen preflight pins after the run. The 41 RECORD-hashed members and source-only cache-prefix policy remain as reviewed; no tool source was changed. Exact unexecuted v1/v2 drafts, plans/history and parent pre-edit snapshots remain unchanged. Their preflight design refinements are preserved, not failed guest runs or overwritten canonical evidence.
+
+The run marker binds approval SHA256 `ffda236a0eeb4b8bfef5404d73ec84c32e6f93f5c6c98cb1983107615a6bd57f`. Approval names independent preflight review SHA256 `2efa4cef0980458c03412c661103518f0f18a2b0b7e85b5f7518890437c149f6` and root review SHA256 `175c0f6f84ceaf7349209542c5dfbb4e7a1affc858001e209d71f28f78fde6c6`, each for the exact frozen harness/preflight. Independent reviewer preflight executed zero guest instructions. The root's canonical execution is credited separately here.
+
+I checked all eight saved entries' byte/readback/unchanged-object/trace and accounting assertions, all ten immediate first-result copies and their index, approval/run-marker identity and the unchanged tool pins using host reads only. `isolate_double_v3.py --check` remains a STATIC preflight reproduction command; it does not replay or validate guest execution by running the corpus. Explicit run refuses an existing RUN_STARTED marker and must not be reused for an author replay. Any separately authorized future verification would require a separate ledger and cannot accumulate into these coverage counts.
+
+| Frozen artifact | SHA256 |
+| --- | --- |
+| `isolate_double_v3.py` | `1ef53f7e04a20cb43c37dfb1cae965bb119bcda167db9b372b58b02bf1cb4a15` |
+| `REPORT.PLAN.v3.md` | `bf9d23f03b1d2b8423652381d47894c61633a4245a20fc99d441199a55b83826` |
+| `SOURCE_PREFLIGHT.json` | `dcc9dffa77e22c8a2ca0ffd1ec5eaed52f6f730bef03d1a5519cf639ebcebad4` |
+| `TOOL_PINS.json` | `a413baf37e5dda914980653987c352a1672b777d1637ead66993f8cb2f081097` |
+| `RUN_STARTED.json` | `b547c202bb3e673a5e04601584f026c7760a0e645219855e763123070030216b` |
+| `RESULTS.json` | `450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525` |
+| `first-preflight-v3/INDEX.json` | `0ba153181696e31658c818ba4482e3df8fed5e1310903d56950f59c39fe768f0` |
+| `first-results/INDEX.json` | `3479c6bae64d42b3764ac646927669f157f32a4034e95235b45a9b701f71845a` |
+
+This report and its immediate first copy are new immutable outputs. The canonical harness, plans, approvals, attempt/result JSON and earlier source packets were not edited. The demonstrated result is limited to these four same-object original constructor/readback paths under the recorded private environment.

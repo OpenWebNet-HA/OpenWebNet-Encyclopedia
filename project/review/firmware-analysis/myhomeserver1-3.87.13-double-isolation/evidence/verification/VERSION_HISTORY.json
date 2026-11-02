@@ -1,0 +1,28 @@
+{
+  "authoritative": "REPORT.v2.md",
+  "change": "Rows.sort(key=relativepathstring) before exactlistcomparison; strict63path/size/mtime/hash and41RECORDhashchecksunchanged. Versionedreport/collector/firstsnapshot names.",
+  "failed_v1": {
+    "REPORT.md": {
+      "bytes": 6095,
+      "sha256": "2817bb8ec288fbc505d53499c5f9c6cfe92c7d391bac2e50787487ad66d82086"
+    },
+    "collect_verification_v1.py": {
+      "bytes": 7634,
+      "sha256": "2c1fd246930a29878f59984dcd01d2c260268bb6178721a14a329e8beab9c39b"
+    },
+    "development-first-failure-v1/FAILURE.json": {
+      "bytes": 617,
+      "sha256": "602ff83f4e23ff26a88df976a779f79af4dcfbe50e4bed6c63d2a4ccb75fd37b"
+    },
+    "development-first-failure-v1/INDEX.json": {
+      "bytes": 388,
+      "sha256": "c8d60b5760e23fa6e7c404920534e0ce27c4ce912b41286a23fbc68044c5f637"
+    }
+  },
+  "generated_v1_outputs": 0,
+  "original_execution": 0,
+  "parent_pre_v2_snapshot": {
+    "path": "../integration/pre-v2-verification/INDEX.json",
+    "sha256": "104e2febc266a794fe2c464a0630a8d1bb6db6de8cd4f57e110881a6bfcb8905"
+  }
+}

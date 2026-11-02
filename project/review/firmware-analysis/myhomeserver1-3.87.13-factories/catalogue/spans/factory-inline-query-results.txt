@@ -1,0 +1,65 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b99aa:
+   b99aa:	2300      	movs	r3, #0
+   b99ac:	4629      	mov	r1, r5
+   b99ae:	4648      	mov	r0, r9
+   b99b0:	9303      	str	r3, [sp, #12]
+   b99b2:	f756 e826 	blx	fa00 <stat@plt>
+   b99b6:	4603      	mov	r3, r0
+   b99b8:	2800      	cmp	r0, #0
+   b99ba:	d13a      	bne.n	b9a32
+   b99bc:	4652      	mov	r2, sl
+   b99be:	4648      	mov	r0, r9
+   b99c0:	a903      	add	r1, sp, #12
+   b99c2:	f757 e87a 	blx	10ab8 <sqlite3_open_v2@plt>
+   b99c6:	bba0      	cbnz	r0, b9a32
+   b99c8:	f8dd 900c 	ldr.w	r9, [sp, #12]
+   b99cc:	f1b9 0f00 	cmp.w	r9, #0
+   b99d0:	d02f      	beq.n	b9a32
+   b99d2:	9000      	str	r0, [sp, #0]
+   b99d4:	462b      	mov	r3, r5
+   b99d6:	9004      	str	r0, [sp, #16]
+   b99d8:	f04f 32ff 	mov.w	r2, #4294967295	@ 0xffffffff
+   b99dc:	6b21      	ldr	r1, [r4, #48]	@ 0x30
+   b99de:	4648      	mov	r0, r9
+   b99e0:	f756 ecea 	blx	103b8 <sqlite3_prepare_v2@plt>
+   b99e4:	bb10      	cbnz	r0, b9a2c
+   b99e6:	9804      	ldr	r0, [sp, #16]
+   b99e8:	f756 e8f8 	blx	fbdc <sqlite3_step@plt+0x4>
+   b99ec:	2865      	cmp	r0, #101	@ 0x65
+   b99ee:	9d04      	ldr	r5, [sp, #16]
+   b99f0:	d019      	beq.n	b9a26
+   b99f2:	b1dd      	cbz	r5, b9a2c
+   b99f4:	210d      	movs	r1, #13
+   b99f6:	4628      	mov	r0, r5
+   b99f8:	f755 effc 	blx	f9f4 <sqlite3_column_text@plt>
+   b99fc:	2100      	movs	r1, #0
+   b99fe:	220a      	movs	r2, #10
+   b9a00:	f756 ef26 	blx	10850 <strtol@plt>
+   b9a04:	210e      	movs	r1, #14
+   b9a06:	4603      	mov	r3, r0
+   b9a08:	4628      	mov	r0, r5
+   b9a0a:	6223      	str	r3, [r4, #32]
+   b9a0c:	f755 eff2 	blx	f9f4 <sqlite3_column_text@plt>
+   b9a10:	220a      	movs	r2, #10
+   b9a12:	2100      	movs	r1, #0
+   b9a14:	f756 ef1c 	blx	10850 <strtol@plt>
+   b9a18:	4603      	mov	r3, r0
+   b9a1a:	4628      	mov	r0, r5
+   b9a1c:	6263      	str	r3, [r4, #36]	@ 0x24
+   b9a1e:	f756 e8de 	blx	fbdc <sqlite3_step@plt+0x4>
+   b9a22:	2864      	cmp	r0, #100	@ 0x64
+   b9a24:	d0e6      	beq.n	b99f4
+   b9a26:	4628      	mov	r0, r5
+   b9a28:	f756 ecea 	blx	10400 <sqlite3_finalize@plt>
+   b9a2c:	4648      	mov	r0, r9
+   b9a2e:	f756 ef3c 	blx	108a8 <sqlite3_close@plt+0x4>
+   b9a32:	4a19      	ldr	r2, [pc, #100]	@ (b9a98)
+   b9a34:	4b13      	ldr	r3, [pc, #76]	@ (b9a84)
+   b9a36:	Address 0xb9a36 is out of bounds.
+

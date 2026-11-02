@@ -1,0 +1,21 @@
+# MH202 run17 interpreter lifecycle independent source review
+
+PASS. Parent independently audited original GOTO/caller/outer-advance source, pointer/global relations and finite host compositions; static --check reproduces14 outputs. No original interpreter/helper/file/sleep/IPC or physical execution occurs in this review or author area.
+
+Report SHA256: `d178923e423d0d2cd089805e9d8553ac849ac1eb4565504a1713db94e1bd03f0`.
+
+Collector SHA256: `86859787a50fe576d09e2bd9a1d313d00d1f5b1e7deeae492cdcb8d2003b0b53`.
+
+Manifest SHA256: `8ffd894cdde9746adaaeb53ce2a40482fbd63d83c7f369534e6ceed56763b9bf`.
+
+Separate ImageVFS reads/ELF PT_LOAD mapping independently check all7 inputs, 7 rawspan hashes/offsets, 25 original words, GOTO prefix and three PIC/GOT relations, and all16 final manifest entries. Provider binding is conditional, not executed.
+
+## Selected semantic checks
+
+- Narrow immediate-offset gate query finds known set1/read sites only. It cannot prove no clear/alias/callee write, a restart requirement or a real NOBITS reset. R/Pproducer remains unresolved; the new GOTO path is a distinct interpreter question, not an equivalent auth/session/framing investigation.
+- Caller compares prefixGOTO, accumulates from index4 until percent using actualctoi(digit0..9, otherwise0), then calls GOTO(int). Selected helper return is not tested as success. Complete validDSL/termination/overflow/node-generation semantics remain open.
+- Original candidate inizio/esegui/sleep_executed imports and GOT relations match executable definitions under the earlier ordinary exec-first plan. GOTO first stores head into sharedesegui. Target=head retainshead; target=successor leaves predecessor. Separate loop advancement loads node+8 before next fseek, so the selected synthetic head/next cases yield different final pointers.
+- Head branch signedcounter<=999 requests the source arithmetic(1000-counter)*1000 throughusleep, then resets sleep_executed. Counter1200 bypassesextra request but still resets. Initialusleep100 and allotherAPI returns remain delegates; no measuredtiming or universal pacing is inferred. This reset is not commandgate reset.
+- Selected node uses word0target/word4fileoffset/word8next are original access relations, not a recovered public label ontology or proof about actual configuredhead/sentinel. No invalid-target crash/hang, skipped useraction or whole-loop termination is claimed.
+
+No source correction was required. Four finite host rows are source/pointer arithmetic, not native runtime tests. Actual configuredsource, listconstruction/headpolicy, globals/provider lifetime, complete action/control/child/IPC lifecycle, physicaleffects and wider Device gates remain open. New author/reviewer native counts are0; project corpus totals are tracked separately.

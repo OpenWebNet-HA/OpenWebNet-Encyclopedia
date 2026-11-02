@@ -1,0 +1,24 @@
+{
+  "status": "ACTUAL_DELETE_ACKNOWLEDGED_FINAL_WORKFLOW_CHECKS_PENDING",
+  "automation_id": "remaining-firmware-and-database-overnight-investigation",
+  "automation_deleted": true,
+  "actual_tool_deleteStatus": "deleted",
+  "deleted_UTC": "2026-11-02T00:24:40.565676+00:00",
+  "actual_delete_response": {
+    "path": "work/remaining-firmware-investigation/2026-11-02-final/AUTOMATION_DELETE.response.json",
+    "bytes": 473,
+    "sha256": "72a2b1365c087891d1c67f564a3e34d0f4a4d2923c407d2f89fde80d588fe7d1"
+  },
+  "control_snapshot": {
+    "path": "work/remaining-firmware-investigation/2026-11-02-final/closure-action-snapshot/CONTROL.json",
+    "bytes": 3709,
+    "sha256": "29091bb6c72b2e290a471abbe0d988b9dff92f958b23b1f7175ea42d4f815975"
+  },
+  "source_work": "Stopped early at current qualified limits; unresolved gaps/no exhaustive source claim",
+  "predelete_reviews_and_identity_validation_saved": true,
+  "final_strict_checks": "Pending actual results, not certified here",
+  "new_R2_objects": 0,
+  "this_investigation_plaintext_database_objects": 0,
+  "this_investigation_encrypted_support_objects": 1,
+  "scope": "Actual workflow closure of SAME overnight heartbeat; not a firmware capability/runtime/physical finding"
+}

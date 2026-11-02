@@ -1,0 +1,34 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b6580 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b80c>:
+   b6580:	6883      	ldr	r3, [r0, #8]
+   b6582:	b1c3      	cbz	r3, b65b6 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b842>
+   b6584:	f100 0c04 	add.w	ip, r0, #4
+   b6588:	b510      	push	{r4, lr}
+   b658a:	46e6      	mov	lr, ip
+   b658c:	691a      	ldr	r2, [r3, #16]
+   b658e:	e9d3 0402 	ldrd	r0, r4, [r3, #8]
+   b6592:	4291      	cmp	r1, r2
+   b6594:	bf96      	itet	ls
+   b6596:	469e      	movls	lr, r3
+   b6598:	4623      	movhi	r3, r4
+   b659a:	4603      	movls	r3, r0
+   b659c:	2b00      	cmp	r3, #0
+   b659e:	d1f5      	bne.n	b658c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b818>
+   b65a0:	45f4      	cmp	ip, lr
+   b65a2:	bf08      	it	eq
+   b65a4:	4618      	moveq	r0, r3
+   b65a6:	d005      	beq.n	b65b4 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b840>
+   b65a8:	f8de 0010 	ldr.w	r0, [lr, #16]
+   b65ac:	4288      	cmp	r0, r1
+   b65ae:	bf8c      	ite	hi
+   b65b0:	2000      	movhi	r0, #0
+   b65b2:	2001      	movls	r0, #1
+   b65b4:	bd10      	pop	{r4, pc}
+   b65b6:	4618      	mov	r0, r3
+   b65b8:	4770      	bx	lr
+   b65ba:	bf00      	nop

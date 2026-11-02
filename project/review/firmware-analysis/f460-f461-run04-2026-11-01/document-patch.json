@@ -1,0 +1,27 @@
+{
+  "scope": "Exact retained reference versions; selected-source integration only",
+  "patches": [
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "snapshot": "f460-f461-deep-analysis.md",
+      "before_bytes": 6300,
+      "before_sha256": "6df016d9d20c97cd01f43b31b0587d27e935ee9fe09ed4ecc2117a27bd12904f",
+      "candidate": "REFERENCE_DRAFT.v2.md",
+      "mode": "replace-reviewed-candidate",
+      "after_bytes": 9811,
+      "after_sha256": "f8c18480c7aa608a06a973c3e6b8d956b461b49201018276b1bcb75011157608"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+      "snapshot": "mhcatalogue-source-profiles.md",
+      "before_bytes": 11962,
+      "before_sha256": "643f65b12698dffef8858d451290f69c7a517ed239c13e80dd27d3322298aa69",
+      "candidate": "PROFILE_APPENDIX_DRAFT.md",
+      "mode": "append",
+      "after_bytes": 14351,
+      "after_sha256": "ed74e4da897e9c500b4fe9333a3a89ae5dc3a2a849469ed756ae7d2b99d52ce3"
+    }
+  ],
+  "main_reproduction": "REFERENCE_DRAFT_METHOD.v2.json",
+  "summary_refinement": "WORDING_REFINEMENT.json"
+}

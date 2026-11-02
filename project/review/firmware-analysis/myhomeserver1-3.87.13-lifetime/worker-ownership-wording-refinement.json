@@ -1,0 +1,22 @@
+{
+  "authoritative_report": {
+    "path": "REPORT.v2.md",
+    "sha256": "a065946b921909290bf1a88ea5ce9064b0487c5f99625a6d72e7b460cd45af92"
+  },
+  "changes": [
+    {
+      "new": "After either a zero state slot or a normal return from that residual state's deleting destructor (0xcd8c4 to0xcd8c6 or0xcd90e to0xcd910), it records/replaces the separate thread holder at action+48, checks any old holder's word and requests detach on the new holder.",
+      "old": "Otherwise it records/replaces the separate thread holder at action+48, checks any old holder's word and requests detach on the new holder."
+    },
+    {
+      "new": "This closes the source state-to-worker-to-state-delete relation under ordinary successful binding and normal return; the captured action pointer resides in state+4, distinct from the action's completion byte at action+4, and this relation does not establish an owning reference to that captured action.",
+      "old": "This closes the source state-to-worker-to-state-delete relation under ordinary successful binding and normal return, rather than an owning reference to action+4's target."
+    }
+  ],
+  "old_report": {
+    "path": "REPORT.md",
+    "sha256": "eacb97617f64a572adba1ea615e459a8b4d1cbb37842fa4620677fdd78ab3c23"
+  },
+  "parent_preservation": "../integration/ownership-pre-refinement/INDEX.json",
+  "scope": "Two parent-authorized prose precision refinements only; original source, collector, outputs, execution counts and first snapshots unchanged."
+}

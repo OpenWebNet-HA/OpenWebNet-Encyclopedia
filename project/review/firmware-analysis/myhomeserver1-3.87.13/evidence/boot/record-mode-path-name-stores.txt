@@ -1,0 +1,22 @@
+
+/home/bticino/bin/bt_daemon:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0001284c <harvest_str_shielded@@Base+0x9864>:
+   1284c:	220a      	movs	r2, #10
+   1284e:	4638      	mov	r0, r7
+   12850:	f7f1 e90a 	blx	3a68 <strtol@plt>
+   12854:	60a0      	str	r0, [r4, #8]
+   12856:	e4cb      	b.n	121f0 <harvest_str_shielded@@Base+0x9208>
+   12858:	4631      	mov	r1, r6
+   1285a:	4638      	mov	r0, r7
+   1285c:	f7f0 ef24 	blx	36a8 <strndup@plt>
+   12860:	6060      	str	r0, [r4, #4]
+   12862:	e4c5      	b.n	121f0 <harvest_str_shielded@@Base+0x9208>
+   12864:	4631      	mov	r1, r6
+   12866:	4638      	mov	r0, r7
+   12868:	f7f0 ef1e 	blx	36a8 <strndup@plt>
+   1286c:	6020      	str	r0, [r4, #0]
+   1286e:	e4bf      	b.n	121f0 <harvest_str_shielded@@Base+0x9208>

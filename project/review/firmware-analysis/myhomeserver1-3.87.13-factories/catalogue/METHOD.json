@@ -1,0 +1,26 @@
+{
+  "SQL_execution": 0,
+  "counts": {
+    "GOT_chains": 4,
+    "PIC_joins": 12,
+    "SQL_columns": 15,
+    "file_byte_assertions": 19,
+    "host_text_cases": 1,
+    "input_pins": 5,
+    "selected_relocations": 7,
+    "source_spans": 22
+  },
+  "host_operations": [
+    "original image byte reads",
+    "readelf/objdump",
+    "PT_LOAD mapping",
+    "explicit file-byte assertions",
+    "relocation/PIC data references",
+    "SQL SELECT-list textual split",
+    "finite plain-text replacement model"
+  ],
+  "original_JSON_execution": 0,
+  "reference_scope": "Earlier selected reader source report preserved, no old output altered",
+  "transport_session_auth_framing_inspected": false,
+  "vendor_or_original_execution": 0
+}

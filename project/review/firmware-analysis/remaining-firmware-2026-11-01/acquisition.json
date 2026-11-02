@@ -1,0 +1,226 @@
+{
+  "completed_UTC": "2026-11-01T18:30:36.654636+00:00",
+  "status": "PRIMARY_FIRMWARE_EXTRACTION_COMPLETE_WITH_ONE_ANCILLARY_ENCRYPTED_ARCHIVE",
+  "packages": [
+    {
+      "artifact_id": "firmware-f450-020010",
+      "product": "F450",
+      "version": "2.0.10",
+      "directory": "work/f450-firmware/2.0.10",
+      "archive": "work/f450-firmware/2.0.10/F450_020010.fwz",
+      "archive_bytes": 13265378,
+      "archive_sha256": "9e625012d3e8629bea15d608f7c1de160e971499a39f3fd86f0c68103da8b9da",
+      "components": [
+        {
+          "label": "normal",
+          "path": "work/f450-firmware/2.0.10/analysis/rootfs",
+          "image_sha256": "92aa546baf4c330b842e6e0f0336acd264787a944c9b27838c5aacdd04ff1f10",
+          "regular_files": 3839,
+          "regular_bytes": 26156366,
+          "symlink_metadata": 439,
+          "hardlink_metadata": 0,
+          "special_metadata": 95,
+          "all_regular_sizes_SHA256_verified": true,
+          "host_links_or_special_nodes_created": 0,
+          "readonly": true
+        }
+      ],
+      "standalone_binary": false,
+      "remaining_encrypted_auxiliary": [],
+      "status": "PRIMARY_FIRMWARE_EXTRACTED"
+    },
+    {
+      "artifact_id": "firmware-f450-020010-prod",
+      "product": "F450",
+      "version": "2.0.10-PROD",
+      "directory": "work/f450-firmware/2.0.10-PROD",
+      "archive": "work/f450-firmware/2.0.10-PROD/F450_020010-PROD.fwz",
+      "archive_bytes": 13444140,
+      "archive_sha256": "27c5640916f980be2c16fd14ed7818d8b361e69b439e7a774bd4e90e57b9b96f",
+      "components": [
+        {
+          "label": "normal",
+          "path": "work/f450-firmware/2.0.10-PROD/analysis/rootfs",
+          "image_sha256": "92aa546baf4c330b842e6e0f0336acd264787a944c9b27838c5aacdd04ff1f10",
+          "regular_files": 3839,
+          "regular_bytes": 26156366,
+          "symlink_metadata": 439,
+          "hardlink_metadata": 0,
+          "special_metadata": 95,
+          "all_regular_sizes_SHA256_verified": true,
+          "host_links_or_special_nodes_created": 0,
+          "readonly": true
+        }
+      ],
+      "standalone_binary": false,
+      "remaining_encrypted_auxiliary": [
+        "extracted/50.xtz"
+      ],
+      "status": "PRIMARY_FIRMWARE_EXTRACTED"
+    },
+    {
+      "artifact_id": "firmware-f453av-030014",
+      "product": "F453AV",
+      "version": "3.0.14",
+      "directory": "work/f453av-firmware/3.0.14",
+      "archive": "work/f453av-firmware/3.0.14/WS_10DIN_030014.fwz",
+      "archive_bytes": 16243980,
+      "archive_sha256": "673d7ab2802fc324802bb8f59c50e018850e8c724e923e0bd7cbc8b5cca86d4a",
+      "components": [
+        {
+          "label": "normal",
+          "path": "work/f453av-firmware/3.0.14/analysis/rootfs",
+          "image_sha256": "22ec8baaad95e1117c2dd77f9d023c2124f6ef60c9bbfb93a14897a458fea769",
+          "regular_files": 342,
+          "regular_bytes": 32385921,
+          "symlink_metadata": 35,
+          "hardlink_metadata": 0,
+          "special_metadata": 170,
+          "all_regular_sizes_SHA256_verified": true,
+          "host_links_or_special_nodes_created": 0,
+          "readonly": true
+        },
+        {
+          "label": "recovery",
+          "path": "work/f453av-firmware/3.0.14/analysis/recovery",
+          "image_sha256": "ed5897736769f2fadbf3c7668ae4b58728346c769d165647c59989320f0db729",
+          "regular_files": 222,
+          "regular_bytes": 28756354,
+          "symlink_metadata": 49,
+          "hardlink_metadata": 0,
+          "special_metadata": 130,
+          "all_regular_sizes_SHA256_verified": true,
+          "host_links_or_special_nodes_created": 0,
+          "readonly": true
+        },
+        {
+          "label": "separate_application_bundle",
+          "path": "work/f453av-firmware/3.0.14/analysis/application",
+          "regular_files": 532,
+          "link_special_metadata": 31,
+          "all_regular_sizes_SHA256_verified": true,
+          "readonly": true,
+          "composition": "Kept separate; no assumption that overlay was installed"
+        }
+      ],
+      "standalone_binary": false,
+      "remaining_encrypted_auxiliary": [],
+      "status": "PRIMARY_FIRMWARE_EXTRACTED"
+    },
+    {
+      "artifact_id": "firmware-f455-1-1-2",
+      "product": "F455",
+      "version": "1.1.2",
+      "directory": "work/f455-firmware/1.1.2",
+      "archive": "work/f455-firmware/1.1.2/F455_1_1_2.fwz",
+      "archive_bytes": 180196,
+      "archive_sha256": "cd99299fc729679b4eade46acda7bd4f5e619a0a9eac34a1f6a3b73b625a18f9",
+      "components": [],
+      "standalone_binary": true,
+      "remaining_encrypted_auxiliary": [],
+      "status": "PRIMARY_FIRMWARE_EXTRACTED"
+    },
+    {
+      "artifact_id": "firmware-f459-020105",
+      "product": "F459",
+      "version": "2.1.5",
+      "directory": "work/f459-firmware/2.1.5",
+      "archive": "work/f459-firmware/2.1.5/F459_020105.fwz",
+      "archive_bytes": 114774253,
+      "archive_sha256": "1d9539d6a9e500032438936d1ce28e7cbddef9788c5712d50c9a60586718f6d3",
+      "components": [
+        {
+          "label": "normal",
+          "path": "work/f459-firmware/2.1.5/analysis/rootfs",
+          "image_sha256": "838ffcc8e0093f690c3710698b6cc33a1b35fb2273fe61917ea16c5fd22ace3a",
+          "regular_files": 3971,
+          "regular_bytes": 137394483,
+          "symlink_metadata": 1618,
+          "hardlink_metadata": 0,
+          "special_metadata": 59,
+          "all_regular_sizes_SHA256_verified": true,
+          "host_links_or_special_nodes_created": 0,
+          "readonly": true
+        },
+        {
+          "label": "recovery",
+          "path": "work/f459-firmware/2.1.5/analysis/recovery",
+          "image_sha256": "9f44e4d5cf57d8d20828c463f3448a0c2cdf5f9b54b162b97556b751d8d93296",
+          "regular_files": 2654,
+          "regular_bytes": 60920570,
+          "symlink_metadata": 1539,
+          "hardlink_metadata": 0,
+          "special_metadata": 59,
+          "all_regular_sizes_SHA256_verified": true,
+          "host_links_or_special_nodes_created": 0,
+          "readonly": true
+        }
+      ],
+      "standalone_binary": false,
+      "remaining_encrypted_auxiliary": [],
+      "status": "PRIMARY_FIRMWARE_EXTRACTED"
+    },
+    {
+      "artifact_id": "firmware-mh200n-010108",
+      "product": "MH200N",
+      "version": "1.1.8",
+      "directory": "work/mh200n-firmware/1.1.8",
+      "archive": "work/mh200n-firmware/1.1.8/scheduler_010108.fwz",
+      "archive_bytes": 10064107,
+      "archive_sha256": "e32d3404302f3619bbbb564ae50554ab81ac6ef818b6e5a2290142a5e2ab5fb3",
+      "components": [
+        {
+          "label": "normal",
+          "path": "work/mh200n-firmware/1.1.8/analysis/rootfs",
+          "image_sha256": "7781a063546704e9786c0320aa961bd8a674228f645624ece347e525df7f46e7",
+          "regular_files": 267,
+          "regular_bytes": 24819892,
+          "symlink_metadata": 29,
+          "hardlink_metadata": 0,
+          "special_metadata": 124,
+          "all_regular_sizes_SHA256_verified": true,
+          "host_links_or_special_nodes_created": 0,
+          "readonly": true
+        },
+        {
+          "label": "recovery",
+          "path": "work/mh200n-firmware/1.1.8/analysis/recovery",
+          "image_sha256": "906f75e2a9a491193d93fa4f084024f7ee66ebeafa86621ef77d65ea7d8f81e6",
+          "regular_files": 225,
+          "regular_bytes": 25517683,
+          "symlink_metadata": 51,
+          "hardlink_metadata": 0,
+          "special_metadata": 130,
+          "all_regular_sizes_SHA256_verified": true,
+          "host_links_or_special_nodes_created": 0,
+          "readonly": true
+        },
+        {
+          "label": "separate_application_bundle",
+          "path": "work/mh200n-firmware/1.1.8/analysis/application",
+          "regular_files": 197,
+          "link_special_metadata": 31,
+          "all_regular_sizes_SHA256_verified": true,
+          "readonly": true,
+          "composition": "Kept separate; no assumption that overlay was installed"
+        }
+      ],
+      "standalone_binary": false,
+      "remaining_encrypted_auxiliary": [],
+      "status": "PRIMARY_FIRMWARE_EXTRACTED"
+    }
+  ],
+  "packages_downloaded_verified": 6,
+  "filesystem_trees": 8,
+  "regular_files_in_filesystem_and_separate_application_trees": 16088,
+  "separate_legacy_application_bundles": 2,
+  "source": "Canonical private R2 originals, copied from existing authenticated archive-server cache after remote and local size/SHA256 checks",
+  "fresh_R2_API_GET": false,
+  "remaining_limit": "F450 PROD extracted/50.xtz is retained encrypted; this is an ancillary configuration/database archive, not the main firmware filesystem. No accepted known packaging identifier was found.",
+  "vendor_code_execution": 0,
+  "mounts": 0,
+  "host_symlink_hardlink_special_creation": 0,
+  "cryptographic_signature_authenticity_verification": "Not performed; CRC/hash integrity is not a trust-chain proof",
+  "repository_source_manifest_unchanged": true,
+  "staging_commits_publication_remote_writes": false
+}

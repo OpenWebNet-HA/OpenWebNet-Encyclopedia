@@ -1,0 +1,33 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a13a0:
+   a13a0:	f8da b400 	ldr.w	fp, [sl, #1024]	@ 0x400
+   a13a4:	4630      	mov	r0, r6
+   a13a6:	4659      	mov	r1, fp
+   a13a8:	f76f eada 	blx	10960 <__aeabi_uidivmod@plt>
+   a13ac:	460b      	mov	r3, r1
+   a13ae:	f8da 13fc 	ldr.w	r1, [sl, #1020]	@ 0x3fc
+   a13b2:	f851 1023 	ldr.w	r1, [r1, r3, lsl #2]
+   a13b6:	2900      	cmp	r1, #0
+   a13b8:	d0ce      	beq.n	a1358
+   a13ba:	680f      	ldr	r7, [r1, #0]
+   a13bc:	9402      	str	r4, [sp, #8]
+   a13be:	465c      	mov	r4, fp
+   a13c0:	46b3      	mov	fp, r6
+   a13c2:	f8d7 8004 	ldr.w	r8, [r7, #4]
+   a13c6:	4646      	mov	r6, r8
+   a13c8:	4698      	mov	r8, r3
+   a13ca:	45b3      	cmp	fp, r6
+   a13cc:	d018      	beq.n	a1400
+   a13ce:	683f      	ldr	r7, [r7, #0]
+   a13d0:	b137      	cbz	r7, a13e0
+   a13d2:	687e      	ldr	r6, [r7, #4]
+   a13d4:	4621      	mov	r1, r4
+   a13d6:	4630      	mov	r0, r6
+   a13d8:	f76f eac2 	blx	10960 <__aeabi_uidivmod@plt>
+   a13dc:	4588      	cmp	r8, r1
+   a13de:	d0f4      	beq.n	a13ca

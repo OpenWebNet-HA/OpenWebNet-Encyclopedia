@@ -1,0 +1,38 @@
+{
+  "collector_sha256": "08f7ae006babd3c5c7a7a17ec37fdd3dafbd8bb67fae24bf4f2fa98f73e73169",
+  "counts": {
+    "branches": 6,
+    "guards": 21,
+    "imports": 2,
+    "inputs": 6,
+    "original_execution": 0,
+    "spans": 4
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 1164,
+      "sha256": "8d4ed2ad1b891b5a9fb300d4cd144a56137ca53c3919da79716f2758635b5677"
+    },
+    "SOURCE.json": {
+      "bytes": 5614,
+      "sha256": "167ea6033b0f15eab89cd9becf53b50ce3b99f8101e02fbd9f293db07489eff1"
+    },
+    "spans/normal-string-cleanup-to-writer.txt": {
+      "bytes": 943,
+      "sha256": "4c94fb05d33d5cddc3e0facc7d71d190b6da2eb5c6b2808ac29f1775de6b53ac"
+    },
+    "spans/positive-writer-action-requests-normal-return.txt": {
+      "bytes": 1503,
+      "sha256": "965b89d8e8e11997da6ca70ab04181e134fe559db2a5359dd2053c0791852841"
+    },
+    "spans/provided-receiver-entry.txt": {
+      "bytes": 1143,
+      "sha256": "4baeed260d5503df6e4befd357b88974ff008ab308201afb9aec6c1de8e0d19e"
+    },
+    "spans/selected-diagnostic-prefix.txt": {
+      "bytes": 1954,
+      "sha256": "2e5cd64d26fb02dc6b6850787d1b13a567bb231556800008f92bad39dfb47b63"
+    }
+  },
+  "report_sha256": "c378a24d9bda1856de09e9be59047b53f68909aa418cb3ab584ea74dceb6d650"
+}

@@ -1,0 +1,103 @@
+# MH2021.0.24 run18 — original NULL-source allocation and native ID assignment
+
+## Result and scope
+
+One new original `libcoso::add_open_buf_to_msg_list` entry at **0x2340** receives a NULL source envelope and owned synthetic text `*2*0*0##`. It calls the same-build original pointer-string parser and creates a **fresh64-byte envelope** via ordinary private zero-allocation. It then executes the actual original **new_id0x220c** body, stores its returned prior counter at envelope+60, and appends the envelope to a modeled empty GList. Native parsed48-byte output has WHO`2`, WHAT`0`, WHERE`0`, DIMNULL and kind1. Status+52 remains0 under the explicit zero-allocation delegate.
+
+The original counter at image VA**0xbcb4** is supplied private synthetic runtime state `0x10203040`. Actual original instructions return that prior value and store `0x10203041` to the counter. This verifies the selected native ID path rather than replacing it with a primitive. The initial number is not recovered runtime state, and the result does not establish uniqueness, wrap behavior for other fixtures, queue correlation or physical causality.
+
+New canonical accounting: **1top-level entry,325 original instruction visits,24 ordinary C/GLib primitive callbacks,3 definition redirects,1 EXIT boundary,0 stop boundaries =353 code-hook callbacks**. Two data-relocation setup writes and one synthetic counter setup write are separate. Nested parser/new_open_msg/new_id calls are not additional top-level entries. No target OS, firmware process, live network/device, synchronization callback, timer, STM or physical output is run. This does not execute the whole COSO17 producer/timer route or its different WHERE11 candidate.
+
+## Reproduction, immutable inputs and lineage
+
+Run these from the workspace root:
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run18/collect_evidence.py --check
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run18/emulate_core_fresh.py --check
+```
+
+The first command performs host reads/binutils and saved-array consistency checks only: **18outputs,10inputs,7spans,35critical words**. The second independently reruns this one bounded CPU corpus and compares both outputs byte-for-byte; reruns do not add coverage/counts. `output-manifest.json` pins current author artifacts and preserved failed-draft bytes, excluding itself/later independent reviews. `input-hashes.json`, `original-spans.json`, `lineage.json` and `verified-tool-package.json` provide exact originals/VA offsets/tool identities and read-only input lineage. All paths are image paths or research-relative paths.
+
+The new harness is an explicit copy/adaptation of MH202-only `protocol/run17/emulate_core_inplace.py`. Run17's existing-Q experiment is not rerun or accumulated as new coverage. COSO17's static NULL-source future-output finding supplies the new question; no natural timer or captured envelope is supplied. No F454 firmware, VAs, layout, fixture or harness is imported. The existing independently installed Unicorn2.1.4 analysis package is reused after verifying every digest-bearing RECORD member; its package location is a tool path only. All earlier research/source/image files remain unchanged.
+
+## Exact original provider and counter path
+
+Original normal-image inputs:
+
+| Image file | SHA-256 |
+|---|---|
+| `/home/bticino/lib/libopenmsg.so` | `7a4793f740c4cb41a774bf06e3af3acf4bd8a7606c5329ac70d7e0e7fd64bcd7` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+| `/usr/lib/libglib-2.0.so.0.2800.7` | `029c2a7913131a84c46958d9ed445cb8a79dd1c8abc61116321badb7ad2735c0` |
+
+Core `libcoso.so` directly NEEDEDs `libopenmsg.so`. Its imported parser JUMP_SLOT0xbc6c is redirected to the candidate original parser definition0x2704 in a separate private mapping. The parser's new_open_msg PLT0x19a4 redirects to its own original definition0x1c80. Core new_id PLT0x1740/JUMP_SLOT0xbbec names the same-image original definition0x220c, so that PLT redirects to core0x220c. This is explicit same-build candidate binding, not an executed target loader or proof against live interposition/overrides.
+
+The decisive original control/dataflow is:
+
+| VA in libcoso | Original effect |
+|---|---|
+| 0x2364/0x236c | Initialize parser output slotNULL on its own private stack |
+| 0x2390 | Call actual pointer-string parser |
+| 0x2398 | Request free of owned formatted input |
+| 0x239c/0x23a0 | NULLsource test branches to0x2418 |
+| 0x2418/0x241c | Request zeroed64-byte allocation; returned pointer becomes Q at0x2420 |
+| 0x2424 | Call original new_id through its PLT |
+| 0x2214 | Form PICbase0xbbd0 using PC0x221c +pool0x99b4 |
+| 0x2218 | Load prior32-bit counter from `[0xbbd0 + 0xe4]` =0xbcb4 into r0 |
+| 0x221c/0x2220 | Add1 to r0 into r2; store r2 back to0xbcb4 |
+| 0x2224 | Return prior value in r0 |
+| 0x2428 | Store returned r0 to Q+60 |
+| 0x242c | Rejoin common parsed/meta stores at0x23b8 |
+| 0x23fc/0x2400 | Append Q and write returned listhead into caller's output slot |
+
+Counter0xbcb4 lies in `.bss`0xbcac..0xbcc8. The offset0xe4 is a direct scalar address offset, not a GOT-cell pointer dereference. The newly retained section/pool evidence and original7-instruction counter body establish this precisely. The private counter page is readable/writable and **nonexecutable**; the memory-write guard permits only the exact counter4-byte range outside private stack/input/heap. Other original-image data writes abort. The runtime initial counter is intentionally synthetic, despite the packaged NOBITS section's initial image-load state.
+
+## Actual returned objects and lifetime boundary
+
+The only fixture allocation is owned text9bytes at0x05000000. No Q or parsed fields are preseeded. Parser0x2704 actually initializes its new48-byte object at0x05000010 through original new_open_msg0x1c80 and original WHO0x23b0/WHERE0x2488 helpers. The core's output slot is observedNULL at parser entry. At the actual return to0x2394, parser r0=0 and the slot contains0x05000010. Fields are read back from that object after native execution, rather than supplied as state fixtures.
+
+Core requests a fresh64-byte Q at0x05000058. Native Q writes are nine4-byte stores at offsets **0,4,8,12,16,40,48,56,60**. Returned words are:
+
+| Offset | Value/source |
+|---|---|
+| 0 | Actual native parsed-object pointer0x05000010 |
+| 4/8/12/16 | 2 /0 /2 /0, original common metadata stores |
+| 40 | Type2 |
+| 48 | Routing2 from ordinary decimal conversion of actual parsed WHO`2` |
+| 52 | 0, private zero-allocation result; no native status store |
+| 56 | Representation3 |
+| 60 | `0x10203040`, actual native new_id return |
+
+Remaining words stay zero. The original counter store at0x2220 is recorded separately from Q writes. The modeled list append returns a12-byte node0x05000098 `[Q,0,0]`; output slot and observed helper r0 equal that node. This r0 observation is not promoted into a Boolean or return0 API contract.
+
+Original g_free callsite0x2398 frees only the supplied owned text. The private allocation-dead ledger rejects subsequent native/primitive reads of it. Parsed object/three strings/Q/listnode remain live in that ledger at stop. No previous Q body exists or is freed. This checks selected ownership handoff only; later object destruction/queue cleanup/async retention and actual host free behavior are not executed.
+
+## Isolation and delegates
+
+Fresh mappings: original corebase0, parserbase0x10000000, original GLib data base0x20000000, private stack0x02000000, input0x04000000, heap0x05000000 and EXIT0x03000000. Original code pages are read/execute, original GLib data read-only/nonexecutable, core counter data page read/write/nonexecutable. Original PC allowlists cover only corehelper/new_id and parser/new_open/WHO/WHERE bodies. Unknown PC/import, interrupt, protected/invalid access, out-of-private write or dead-allocation read aborts.
+
+The actual original GLib ASCII table is used by data only: parserGOT0xee78→relocated cell0xe50c8→originaltable0x9ed8a. Those two data relocations are setup writes, not callbacks/native instructions. The parser's original mask0x0008(bit-index3) tests use that table; no replacement classifier or parsed-kind injection is present. Four table/cell reads are recorded.
+
+Ordinary private models cover string length/comparison/prefix/suffix/search/duplication, zero-allocation48/64, nonfatal logging, owned-buffer free ledger, decimal WHO conversion and empty-list append. They do not replace the core helper, grammar, allocation-call branches or new_id body. Allocations are bounded to4096bytes each/64KiBheap; C-string reads4096bytes; selected input is8ASCIIbytes. Per-top-entry original-PC hook and emulator instruction caps are100000; no cap is weakened. All modeled calls return to original LR, and all original-definition redirects are separately counted.
+
+## Accounting and honest coverage
+
+| Category | Count |
+|---|---:|
+| Original corehelper visits | 52 |
+| Original new_id visits | 7 |
+| Original pointer-parser visits | 167 |
+| Original WHO helper visits | 30 |
+| Original WHERE helper visits | 49 |
+| Original new_open_msg visits | 20 |
+| Total original visits | 325 |
+| Ordinary C/GLib primitive callbacks | 24 |
+| Definition redirects | 3 |
+| EXIT boundaries | 1 |
+| Stop-before-read boundaries | 0 |
+| Total code-hook callbacks | 353 |
+
+There are1fixture and6callback-model allocations,61original memory-write events plus10primitive-write events. Setup includes2data relocations and1counter fixture write; ordinary ELF mapping/input/output-slot/stack preparation is not executed firmware or callbacks. The single entry is canonical; collector/reproduction reruns are verification, not additional calls. The initial adapted draft had a missing space (`sourceptrand`) and failed Python parsing before imports/emulation. Exact draft/NOTE are preserved under `development-before-syntax-fix/`; zero original visits/results preceded that correction. No native guard/cap/result was weakened or silently discarded.
+
+High confidence **executed under explicit private premises**: this selected original NULL-source allocation/parser/new_id/list path and exact readbacks. Static high confidence: original counter address/branch/section and candidate provider relocations. Unknown: runtime counter/provider overrides, initialized real contexts, nonempty lists/allocation failure, other input modes/wrap/concurrency, whole timers/registry/STM/publication, physical transaction/causality. A future distinct question is the actual generated record's admitted STM processing with its fresh-ID/status0 metadata and original callback state; this result alone does not close that later route.

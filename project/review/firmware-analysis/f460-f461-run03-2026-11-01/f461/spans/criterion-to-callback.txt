@@ -1,0 +1,38 @@
+
+/home/bticino/bin/coso:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000003ffc <send_list_field@@Base+0x20c>:
+    3ffc:	b9405321 	ldr	w1, [x25, #80]
+    4000:	6b18003f 	cmp	w1, w24
+    4004:	54fffa41 	b.ne	3f4c <send_list_field@@Base+0x15c>  // b.any
+    4008:	f94026c0 	ldr	x0, [x22, #72]
+    400c:	2a1703f8 	mov	w24, w23
+    4010:	2a0103f7 	mov	w23, w1
+    4014:	97fffb67 	bl	2db0 <g_list_first@plt>
+    4018:	aa0003fb 	mov	x27, x0
+    401c:	b4fffa20 	cbz	x0, 3f60 <send_list_field@@Base+0x170>
+    4020:	f9400360 	ldr	x0, [x27]
+    4024:	aa1603e4 	mov	x4, x22
+    4028:	b940338c 	ldr	w12, [x28, #48]
+    402c:	aa1503e3 	mov	x3, x21
+    4030:	aa1c03e2 	mov	x2, x28
+    4034:	2a1703e1 	mov	w1, w23
+    4038:	6b00019f 	cmp	w12, w0
+    403c:	54000141 	b.ne	4064 <send_list_field@@Base+0x274>  // b.any
+    4040:	f9401ecc 	ldr	x12, [x22, #56]
+    4044:	2a1803e0 	mov	w0, w24
+    4048:	d63f0180 	blr	x12
+    404c:	350000c0 	cbnz	w0, 4064 <send_list_field@@Base+0x274>
+    4050:	f9400673 	ldr	x19, [x19, #8]
+    4054:	b4fff8f3 	cbz	x19, 3f70 <send_list_field@@Base+0x180>
+    4058:	52800020 	mov	w0, #0x1                   	// #1
+    405c:	b9006fe0 	str	w0, [sp, #108]
+    4060:	17ffffb6 	b	3f38 <send_list_field@@Base+0x148>
+    4064:	f940077b 	ldr	x27, [x27, #8]
+    4068:	b5fffddb 	cbnz	x27, 4020 <send_list_field@@Base+0x230>
+    406c:	17ffffbd 	b	3f60 <send_list_field@@Base+0x170>
+    4070:	f9402ac0 	ldr	x0, [x22, #80]
+    4074:	17ffffe8 	b	4014 <send_list_field@@Base+0x224>

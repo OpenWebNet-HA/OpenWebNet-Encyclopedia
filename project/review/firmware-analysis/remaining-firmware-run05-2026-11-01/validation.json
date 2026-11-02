@@ -1,0 +1,166 @@
+{
+  "status": "PASS",
+  "scope": "Exact current source/current-vs-canonical report/versioned-code/history/review/reference/export identities and215prior indexedmembers; not fullsemantic/indexrecursive/source/Device/runtimeapproval or oldcollector/native replay",
+  "source_packets": [
+    {
+      "product": "F450",
+      "root": "work/f450-firmware/2.0.10/research/2026-11-01-night05-config-origin",
+      "report": {
+        "path": "work/f450-firmware/2.0.10/research/2026-11-01-night05-config-origin/REPORT.md",
+        "bytes": 5531,
+        "sha256": "282dd7114ec11c349b4843533bd317e05f54a21a6cb30e196982cb3c1f431b9f"
+      },
+      "canonical_report": {
+        "path": "work/f450-firmware/2.0.10/research/2026-11-01-night05-config-origin/REPORT.md",
+        "bytes": 5531,
+        "sha256": "282dd7114ec11c349b4843533bd317e05f54a21a6cb30e196982cb3c1f431b9f"
+      },
+      "collector": {
+        "path": "work/f450-firmware/2.0.10/research/2026-11-01-night05-config-origin/collect_origin_v2.py",
+        "bytes": 14205,
+        "sha256": "e36ee6e00f6c8bbdcd22e58499a1dd32e2ba2ec30bfcaee6e9969d536193bb6d"
+      },
+      "manifest": {
+        "path": "work/f450-firmware/2.0.10/research/2026-11-01-night05-config-origin/OUTPUT_MANIFEST.json",
+        "bytes": 828,
+        "sha256": "8567c6ba5cf5956564506672cc865c631135a8299323d04167a8529ea5ff8456"
+      },
+      "outputs": 6,
+      "firstcopies": 7
+    },
+    {
+      "product": "F453AV",
+      "root": "work/f453av-firmware/3.0.14/research/2026-11-01-night05-recovery",
+      "report": {
+        "path": "work/f453av-firmware/3.0.14/research/2026-11-01-night05-recovery/REPORT.md",
+        "bytes": 5412,
+        "sha256": "fa4ee00fce4f0dda5a3e66754e9e44a00bb0c1455697256b41daa5ff36f913b9"
+      },
+      "canonical_report": {
+        "path": "work/f453av-firmware/3.0.14/research/2026-11-01-night05-recovery/REPORT.md",
+        "bytes": 5412,
+        "sha256": "fa4ee00fce4f0dda5a3e66754e9e44a00bb0c1455697256b41daa5ff36f913b9"
+      },
+      "collector": {
+        "path": "work/f453av-firmware/3.0.14/research/2026-11-01-night05-recovery/collect_recovery_v1.py",
+        "bytes": 17171,
+        "sha256": "83459d1cb00b38f65942654d581d1b172ac189ccb5de3d876007c10623ab6707"
+      },
+      "manifest": {
+        "path": "work/f453av-firmware/3.0.14/research/2026-11-01-night05-recovery/OUTPUT_MANIFEST.json",
+        "bytes": 614,
+        "sha256": "39cbd39f370306fda69ce242977ee25676b9c3e9136107efe92ced7b6a27b2c4"
+      },
+      "outputs": 5,
+      "firstcopies": 6
+    },
+    {
+      "product": "F459",
+      "root": "work/f459-firmware/2.1.5/research/2026-11-01-night05-namespace",
+      "report": {
+        "path": "work/f459-firmware/2.1.5/research/2026-11-01-night05-namespace/REPORT.v2.md",
+        "bytes": 4759,
+        "sha256": "35b284912fb9bec53ad4276f8a8afcf79b7ea3df65a1dc4858f2460c32b6b385"
+      },
+      "canonical_report": {
+        "path": "work/f459-firmware/2.1.5/research/2026-11-01-night05-namespace/REPORT.md",
+        "bytes": 4311,
+        "sha256": "a88088bf8c2cd0908fb77ac57110c9de0c106f67e0fa940dab3ff17642cfa5cf"
+      },
+      "collector": {
+        "path": "work/f459-firmware/2.1.5/research/2026-11-01-night05-namespace/collect_namespace_v2.py",
+        "bytes": 10127,
+        "sha256": "69626d04c787f4c41dae4c538e4039e03c8a664a5704c322ee6f1d468c0dfa86"
+      },
+      "manifest": {
+        "path": "work/f459-firmware/2.1.5/research/2026-11-01-night05-namespace/OUTPUT_MANIFEST.json",
+        "bytes": 1030,
+        "sha256": "e1bef86a6912159ada65b250bc3de3af484cf39dd48d2aebb3ef87272064242c"
+      },
+      "outputs": 7,
+      "firstcopies": 8,
+      "report_mapping": {
+        "path": "work/f459-firmware/2.1.5/research/2026-11-01-night05-namespace/REPORT_REFINEMENT.v2.json",
+        "bytes": 996,
+        "sha256": "7b8dee28815e1bd502fefb4a7ec24ab5392cd655b64967648aee2962d30c1945"
+      }
+    }
+  ],
+  "source_outputs": 18,
+  "source_firstcopies": 21,
+  "authoritative_report_only_versions": 1,
+  "reviews": {
+    "f450-source-review": {
+      "path": "work/remaining-firmware-investigation/2026-11-01-run05/reviews/f450-source-review.md",
+      "bytes": 7378,
+      "sha256": "3a7a44f19a66cd949c67373cd059d71ceeb0735dcbab8a95771ac8dac0064223"
+    },
+    "f453av-source-review": {
+      "path": "work/remaining-firmware-investigation/2026-11-01-run05/reviews/f453av-source-review.md",
+      "bytes": 4149,
+      "sha256": "58d5c09a1ec374ad5f4e07a3193210f2233a67a03b865b59be864262a0571b48"
+    },
+    "f459-source-review": {
+      "path": "work/remaining-firmware-investigation/2026-11-01-run05/reviews/f459-source-review.md",
+      "bytes": 8875,
+      "sha256": "2a84224d29aa723baed73ae75f3aaee1a01fabc32d207493bebfbf68abbacd20"
+    },
+    "integration-review": {
+      "path": "work/remaining-firmware-investigation/2026-11-01-run05/reviews/integration-review.md",
+      "bytes": 11939,
+      "sha256": "4626bce5e9418c1a9d264018e888f9561dc95fc091fbcef963ed87e1eff95e55"
+    }
+  },
+  "exact_selected_exports": 27,
+  "first_documentary_copies": 8,
+  "exact_historical_reference_mappings": 1,
+  "prior_index": {
+    "path": "work/remaining-firmware-investigation/2026-11-01-run04/EVIDENCE_INDEX.json",
+    "bytes": 53450,
+    "sha256": "ef2a40f34260dd225d951336cc18c8c0b75c90505b468afb5982b0d2900142b6"
+  },
+  "prior_indexed_members_verified": 215,
+  "archive_index": {
+    "path": "work/remaining-firmware-investigation/2026-11-01-run05/R2_ARCHIVE_INDEX.json",
+    "bytes": 1119,
+    "sha256": "133c94eb95859e111df0c1b6c005636ce8ee13ce164e3576fae85e70256f0719"
+  },
+  "actual_prior_archive_receipt": {
+    "path": "work/remaining-firmware-investigation/2026-11-01-run01/archive/R2_RECEIPT.json",
+    "bytes": 235,
+    "sha256": "072092bb105685ab2aa0395cde439b431ac6a016037b501a06d2faf509b07793"
+  },
+  "new_R2_objects": 0,
+  "cumulative_encrypted_support_objects": 1,
+  "cumulative_plaintext_database_objects": 0,
+  "source_manifest_unchanged": true,
+  "new_original_helper_SQLite_runtime_physical_execution": 0,
+  "prior_MHS_ledger": {
+    "corpora": 1,
+    "top_level_entries": 8,
+    "original_code_hook_visits": 340,
+    "C_primitives": 0,
+    "definition_redirects": 12,
+    "EXIT": 8,
+    "guard_stops": 0,
+    "total_hooks": 360,
+    "data_relocation_setups": 4,
+    "FP_control_host_register_writes": 24,
+    "R0_SP_LR_host_register_writes": 24
+  },
+  "prior_F454_MH202_ledgers": "Separate unchanged, no CPUreplay",
+  "repository_integration": {
+    "page": {
+      "path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f450-f453av-f455-f459-mh200n.md",
+      "bytes": 15860,
+      "sha256": "e4ad3be093335e6c9e5d3acd72dfd5dc01fbf31d93ed5670f0f206d70f5bf471"
+    },
+    "capsule": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/remaining-firmware-run05-2026-11-01",
+    "prior_run04_capsule_unchanged": true,
+    "Device_pages_unchanged": true,
+    "firmware_index_unchanged": true
+  },
+  "staged": false,
+  "committed": false,
+  "Git_published": false
+}

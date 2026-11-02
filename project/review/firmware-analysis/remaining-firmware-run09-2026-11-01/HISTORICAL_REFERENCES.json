@@ -1,0 +1,25 @@
+{
+  "mappings": [
+    {
+      "current_bytes": 22592,
+      "current_sha256": "a7fc32f8063e19a678f6024942f97bde2a7118679360e0c063988fd3ba95411b",
+      "expected_old_sha256": "f6a1ac4f89c1342a18f267ae434e205c30dfdf2de157ed0de599dcc8b832e445",
+      "old_bytes": 22194,
+      "original_path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f450-f453av-f455-f459-mh200n.md",
+      "reason": "Reviewed database handoff navigation and separate zero-new-functional admission checkpoint",
+      "retained_export": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/pre-edit/overview.txt",
+      "retained_local": "work/remaining-firmware-investigation/2026-11-01-run09/integration/pre-edit/overview.md"
+    },
+    {
+      "current_bytes": 11620,
+      "current_sha256": "a4c84175a4a81c917b7d2fba567a8b203a1b43408fbbbf37279872d97ca0a9e9",
+      "expected_old_sha256": "ce01c4d35f26e5c798d1b2f179a9457ca9b8adea3e752c49dc695a35b92f748e",
+      "old_bytes": 11560,
+      "original_path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+      "reason": "Reviewed database handoff navigation and separate zero-new-functional admission checkpoint",
+      "retained_export": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/pre-edit/firmware-index.txt",
+      "retained_local": "work/remaining-firmware-investigation/2026-11-01-run09/integration/pre-edit/firmware-index.md"
+    }
+  ],
+  "scope": "Two exact expected-old-hash historical mappings; no broad fallback, silent repinning or old validator replay on changed inputs"
+}

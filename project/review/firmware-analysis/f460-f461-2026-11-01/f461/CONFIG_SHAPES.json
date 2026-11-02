@@ -1,0 +1,48 @@
+[
+  {
+    "path": "home/bticino/backup_manager/config.json",
+    "sha256": "ea64a15c8c53a350cd2cd1ca75d4b84148b4c6226572bce7c9579c24e473c1b3",
+    "top_level_keys": [
+      "HTTPport",
+      "HTTPtimeout",
+      "backupSaveFolder",
+      "certPath",
+      "dataPath",
+      "encryptedPW",
+      "logFile",
+      "logLevel",
+      "processToBackup",
+      "processToClean",
+      "wdtEnabled",
+      "wdtFile",
+      "wdtTimeout"
+    ],
+    "top_level_kind": "dict"
+  },
+  {
+    "path": "home/bticino/gateway_manager/config.json",
+    "sha256": "a014e57a366d788398a2413ba989828370d67d8201f93594801ec26f6846eeee",
+    "top_level_keys": [
+      "decommissioningLedTime",
+      "dhcpEnabled",
+      "logFile",
+      "logLevel",
+      "newLedSupport",
+      "wdtEnabled",
+      "wdtFile",
+      "wdtTimeout"
+    ],
+    "top_level_kind": "dict"
+  },
+  {
+    "path": "home/bticino/matrix_mx/config.json",
+    "sha256": "dd7f445f1b445f49f3729feef7248e9cdb30a74a61fadf8081badc3f51e77d94",
+    "top_level_keys": [
+      "Application Parameters",
+      "Communication",
+      "General Parameters",
+      "Watchdog settings"
+    ],
+    "top_level_kind": "dict"
+  }
+]

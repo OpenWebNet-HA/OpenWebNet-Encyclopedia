@@ -1,0 +1,46 @@
+# F450 night06 independent permitted-caller resource review
+
+**PASS within the permitted caller scope. No author correction requested.** The positive source contract is a direct local caller supplying two compiled path pointers to opaque local0x2eec4 and routing the returned machine word through a numerical gate. It proves no helper implementation, XML parser request, actual file selection/reading, consumed templates, schema, activation, archive input or recovered database.
+
+I read the frozen v2 collector/report/source/spans/resource-flow/boundary/input evidence and ran its permitted read-only reproduction: `python3 -B work/f450-firmware/2.0.10/research/2026-11-01-night06-resource-consumer/collect_resource_v2.py --check`. Actual result PASS, seven outputs, eight exact first copies, seven permitted spans,22 guards, original execution0. Independent checks verified three input identities, original own ELF/PT_LOADs, all seven spans/22 original words, six branch targets, two argument-pool joins, two safe path literals, two actual PLT/GOT/JUMP_SLOT proofs, packaged asset identity/root, generated manifest and eight first copies. Every instruction/span lookup in the independent audit rejects overlap with the excluded0x2eec4..0x2efc0 interval; the helper was not decoded, selected/exported, retried or examined by an equivalent route. Whole-file hashing remains provenance only.
+
+## Actual arguments and qualified direct caller
+
+Original normal-image bacclient is518608 bytes/SHA256 e5bd026f22d56f40b697b55d1f0865aed4bbeb2aafbeafc1b1d53e6ca9fe1ec4. Fresh own ELF32 little-endian ARM EXEC/machine40/raw flags0x5000002 and PT_LOAD mapping support these addresses. The normal manifest pins this binary and the separate packaged asset. No other-product or recovery semantic transfer is used.
+
+BL0xb9a0 independently decodes to local0x45354; the immediately following branch targets0xb9d4. This selected direct call edge is not a complete outer-caller or natural startup proof. Local0x45354's pool load0x4535c selects0x453b0→0x7b738, the exact compiled `/var/tmp/conf.xml` literal. Its0x45360 load selects0x453b4→0x7b74c, the exact compiled `cfg/BACnetTemplates.xml` literal. MOV0x45364/0x45368 pass those words asR0/R1; BL0x4536c decodes to0x2eec4. These positional source arguments are the positive resource-pointer request. Valid stack/mappings, natural caller reach and expected ARM32 call/normal-return conventions remain premises. No argument is dereferenced as a file, given semantic ownership or promoted to an actual read/parse request, since the receiving helper remains opaque.
+
+## Exact returned-word gate
+
+The helper's returnedR0 is copied toR3 and compared with0 at0x45374. MOVNE R3,0/MOVEQ R3,1 followed by AND255 yields1 exactly on original zero and0 on original nonzero. The subsequent comparison and BEQ0x45388 select the local pop/return0x453ac on original nonzero. Original zero reaches an imported logger request, then MVN R0,0 supplies32-bit0xffffffff to the actual exit import at0x453a8, subject to normal diagnostic/provider behavior. Original PLT instruction arithmetic and actual relocation rows independently corroborate logger and exit metadata, without their bodies.
+
+This is a local numerical request/gate only. The reviewer assigns no success/failure meaning to the helper result, no parser errors, no observed exit or exit-status policy, no valid XML/templates and no complete error handling. Effective binding, normal opaque helper/logger return, exit-provider behavior, ownership and earlier/later admission remain unproved.
+
+## Asset, refusal and history limits
+
+The separate packaged home/bticino/cfg/BACnetTemplates.xml identity is8503 bytes/SHA256 b837e1f86167dfdbf814f0e562c9c2b7349d603939c4945eb3937efc8477ea04; independent XML parsing confirms only safe root tag BACnetTemplates. No full XML, node/property values or configuration bodies are exported. A matching relative suffix does not prove CWD, live path composition, selected file bytes or consumption. dbfiles_ws, archive input, extra50/key/extraction and actual database bytes remain unresolved.
+
+TOOL_BOUNDARY.json preserves the observed automatic approval-review refusal: static disassembly of the helper body was rejected because it lay outside the authorized closed receiving/helper scope, while described as read-only/low intrinsic risk. I do not reinterpret that refusal as permission or a tool malfunction. Parent notified the human; safe caller-only evidence continues, and this review does not reopen the helper or offer another body-inspection route. No approval ID, historical terminal file/hash or helper output is invented.
+
+The old collector and first inaccurate FAILED_V1.json are unchanged and match both exact entries in the parent's before-f450-v2 snapshot index. NEW FAILED_V1.v2.json explicitly corrects the old note's reversed cause: the conf pathname length includingNUL is18, and the template pathname length includingNUL is24, rather than the old template guard23. The author record states first v1 generation and chained check failed before outputs; I never reran failed v1. v2 derives selected span lengths from the exact literal bytes and checks18/24; its source VA/hash/content guards and original request contract remain intact. Actual successful v2 output/firstcopy checks passed, with no generated overwrite.
+
+My first inline independent audit completed source/caller checks but then stopped before review-output writes on a guessed nested snapshot filename. No reviewer script/file existed from that inline attempt. The completed audit uses the exact flat snapshot paths from the actual parent INDEX and passes. Its immediate first-copy record preserves this narrow reviewer-tool history without inventing earlier on-disk artifacts or hashes. No author correction was needed.
+
+All original/synced/completed evidence, parent-owned public integration/source manifest, Git staging/commits/publication and prior ledgers remain unchanged. No original/vendor/native/helper/emulator/model/SQL/targetstartup/module/OS/device/service/network/bus/mount/flash/physical execution, extraction/decryption, actual database generation/recovery or remote write/upload occurred. Cumulative archive remains inherited one encrypted F450 support container/zero plaintext databases, parent controlled. Closed receiving/output/transport/authentication/session/framing/MQTT/libjel/JS and provider implementations stay opaque. MHS340 code-hook-visits/360hooks and separate F454/MH202 ledgers remain unchanged.
+
+## Exact frozen reviewed members
+
+Paths are relative to `work/f450-firmware/2.0.10/research/2026-11-01-night06-resource-consumer`.
+
+| Member | Bytes | SHA-256 |
+|---|---:|---|
+| `INPUTS.json` | 635 | `9d332ebf5d7d5951d16b8a275989d493bf0de3b9963cb8cb2fbe02565e727c0f` |
+| `OUTPUT_MANIFEST.json` | 968 | `a4109ac8e7069372da8d3569513371dcc9143a5419fae1c1f0a26744d3ae9a8d` |
+| `REPORT.md` | 5214 | `5361f580155de4d0f169c27af4d79ef5c95f6472d1ae991ae3ac84f80dbe81dc` |
+| `RESOURCE_FLOW.json` | 1302 | `2ad11498f21632f26ed401919c08708001e1cb23cce49eb4f70ef82ff54a33e2` |
+| `SOURCE.json` | 3639 | `8f6c2fe8241a01a02e0023831911a9145a986f3b06ca01108ac1f81b98fbc3df` |
+| `SPANS.json` | 1933 | `38e767c3ae7d8f70b103cb34f15e351e56f8f98ac7a73ebd30838e766562df35` |
+| `TOOL_BOUNDARY.json` | 1318 | `70b86f65076f5c535c034685c6dc36dc3d429e4fc098306da5dd5982a06ecba0` |
+| `collect_resource_v2.py` | 14196 | `c24f85db1a0cf860c2251e6767f818c8a6f2787ecb5f220966c7a0e6ce131b09` |
+
+Completed 2026-11-01T22:20:03.710033+00:00. This review and independent audit are each created exclusively with immediate exact first copies and precomputed non-circular indexes. No author file was edited by the reviewer.

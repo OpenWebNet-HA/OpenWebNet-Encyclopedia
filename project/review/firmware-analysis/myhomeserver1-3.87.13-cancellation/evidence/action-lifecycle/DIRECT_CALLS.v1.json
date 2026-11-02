@@ -1,0 +1,32 @@
+[
+  {
+    "bytes_hex": "fef717fc",
+    "call_va": "0xcf156",
+    "target_va": "0xcd988"
+  },
+  {
+    "bytes_hex": "fef7c7fc",
+    "call_va": "0xcf15e",
+    "target_va": "0xcdaf0"
+  },
+  {
+    "bytes_hex": "fef79dfc",
+    "call_va": "0xcf1ae",
+    "target_va": "0xcdaec"
+  },
+  {
+    "bytes_hex": "fef77efb",
+    "call_va": "0xcf290",
+    "target_va": "0xcd990"
+  },
+  {
+    "bytes_hex": "fef71cfc",
+    "call_va": "0xcf2b0",
+    "target_va": "0xcdaec"
+  },
+  {
+    "bytes_hex": "fef75dfb",
+    "call_va": "0xcf382",
+    "target_va": "0xcda40"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "index_va": "0x14e2a0",
+    "next_exidx_start": "0xa60a8",
+    "start": "0xa5db0"
+  },
+  {
+    "index_va": "0x14e2b8",
+    "next_exidx_start": "0xa6508",
+    "start": "0xa6210"
+  },
+  {
+    "index_va": "0x14e308",
+    "next_exidx_start": "0xaf364",
+    "start": "0xa72c0"
+  }
+]

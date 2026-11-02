@@ -1,0 +1,47 @@
+# Independent source review — MH202 COSO run16
+
+**PASS after one precise source-origin wording correction.** I independently reviewed the automation synchronizer registration/selected Q-preservation report and collector against original source bytes. I did not author this COSO batch. This review performs no original ARM/plugin/parser/libc/list/timer or target/runtime execution. Its native/callback/corpus additions are0, separate from the protocol run16 parser experiments.
+
+## Checks and reproduction
+
+`python3 -B work/mh202-firmware/research/2026-10-30/coso/run16/collect_evidence.py --check` passes20 outputs plus manifest,12 spans,31 asserted words,6 original files,5 PIC literals and1 finite state ledger. All20 output hashes match. I separately verified all27 current author-manifest entries, including final report and retained history, and both exact pre-review snapshot identities.
+
+Separately from the collector, I read all six fresh image files, checked their byte lengths/whole-file SHA256 values, independently mapped the four ELF inputs through PT_LOAD and verified all12 raw span hashes and31 words. The two configuration inputs were read only for the selected safe lines. I independently resolved all5 original loader/WHERE literal pools. Fresh readelf confirms descriptor relocations `0xbd60→0x32d8` initializer, `0xbd64→0x2290` field callback and `0xbd68→0x1dec` application callback. The fixed host ledger agrees with the exact selected source stores: Q/status1/ID41 retained, separate state16 changes2→0 and state48 changes0→literal1, state24 remains99, callback return0. No original callback is executed by those host checks.
+
+## Decisive source audit
+
+* Main's76-byte zero-allocation request and core get_plug_m first-install guard support only the declared fresh-manager premise. Core register_synoptic first unregisters by the selected descriptor+8 comparison/removal contract, then prepends at manager+28. It saves manager at descriptor+60 and calls nonnull initializer+36 with descriptor and manager+52. Initializer result is not tested before the local register return0. None of this observes a live instance or guarantees unique arbitrary registry entries.
+* The retained complete register_plugins function uses actual directory enumeration, prefix **`lib`**, suffix `.so`, module open and required stop/init symbols before its initializer call. Its explicit call list contains no sorting call. The report correctly avoids alphabetical order or a complete effective registry claim. Under the selected ordinary registration/list contracts, prepending reverses successful registration order; indirect initializer effects, actual enumeration/provider success and later changes remain open.
+* Automation init's selected successful guard/version/provider continuation appends criteria2 and14 and calls register_synoptic. The64-byte descriptor's actual callback+40 is `automation_syn_syndata_from_field 0x2290`. Its initializer requests28-byte private storage when absent, stores owner/callback words, clears private16 and asks automation_cfg_plant for device-state configuration. Packaged LogLev0 is not promoted to enablement, actual plant contents, state count or initialized runtime proof.
+* The run15 outer synchronizer foreach iterates manager+28, matches record route+48 against descriptor criterion+52 and calls descriptor+40. Thus coherent Q route2 has one actual candidate callback, while the loop can still call other matching descriptors. This batch closes a specific eligible callback's source path, not the entire previous empty-or-preserving-registry boundary.
+* In callback0x2290, Q representation3 takes `0x22dc→0x23ec`, reading Q+0 directly. It bypasses representation2's parser/free/replace stores at `0x23bc..0x23e8`. With supplied ordinary WHERE0, candidate libautomation classifier0x132c's original equality with literal0 returns1. WHO2 avoids the WHO14 path. Declared private16=0 and parsedkind1 select ordinary WHAT handling; WHAT0 passes its unsigned0..2 test and WHERE type1 selects the general-device-state loop0x2648.
+* The loop loads r4 from each device-state list node at0x2668. This replaces its earlier working role; stores through r4 here target a distinct supplied state object, not Q. Helper0x1c90 receives type1/parsed/state and returns1 immediately for selector20 null without a state/parsed-pointer store. Given supplied state40=44=20=0, `0x26a0` stores WHAT0 to state16 and `0x26ac` stores **literal1** to state48. State20=0 suppresses its optional state24 store. The selected loop reaches scheduling flag1 and then kind1 skips measure-kind processing.
+* The source requests timer1000, optional old-source destruction, callback setup/attach and private+4 source storage. It does not retain Q as the state pointer or directly write Q body/representation/status52/ID60 on this selected representation3 branch. These are source requests to opaque ordinary providers, not scheduled/elapsed callback execution. Distinct nonaliasing private/state/Q/parsed storage and unchanged imported behavior are real premises; a future timer, other contexts/branches or synchronizers can have different effects.
+
+The fixed host case's unchanged Q is therefore a scoped direct-store/source-contract result. It is not a complete memory-impact/lifetime guarantee or proof of unchanged Q through every registered plugin. Full active registry/order, actual configured state producer, parser/provider state, natural queued body/ID causality, publications, device/bus/physical acknowledgment remain unclosed.
+
+## Corrections and preserved history
+
+The reviewer requested replacing the ambiguous statement that state48 constant1 “comes from parsed kind” with exact **literal1 on the parsed-kind1 branch**. Original0x2660 is `mov fp,#1`;0x26ac stores fp. It is not a copy of the parsed-kind field or Q pointer. Earlier paragraph/model already used constant1, so no state outcome, collector, source or execution counter changed.
+
+The author preserved exact pre-review report SHA `43bdc4d7d8988190c5ad5ab4398f068dea737a0d8eeb8137341dfa016bc909ce` and previous author manifest in `development-before-review/`, with verified SNAPSHOT.json. Final report SHA is `6a346be2480e3f9476d55115b6f9ab87809142b2e51315f55234717909fb761a`.
+
+I also compared initial `development-before-assert/collect_evidence.py` with the final collector. The only differences replace expected loader prefix `libplug_` with actual `lib`, both in the literal assertion and recorded filter contract. The failed assertion precedes the file-output loop, so its report of stopping before generated outputs is supported. That draft's exact hash is pinned below; no old report/source or native result was silently rewritten.
+
+## Exact final pins
+
+Research paths are relative to `research/2026-10-30`. Complete original/configuration identities are transitively pinned in the verified input-hashes artifact.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `coso/run16/REPORT.md` | `6a346be2480e3f9476d55115b6f9ab87809142b2e51315f55234717909fb761a` |
+| `coso/run16/collect_evidence.py` | `58fefb6e48b904985de212d2fadddea0cb7a63ad6a849b78fb5be64733fb779a` |
+| `coso/run16/author-manifest.json` (27 entries) | `c6a9d0d4db46f8516f3a1668ac2ca31ac05e38023f35d048563097735d70270c` |
+| `coso/run16/output-manifest.json` (20 entries) | `51911666c76fe3c87b7ff3bbe10bebe5abfea6b808a6b59b9396bd3b35a82e4e` |
+| `coso/run16/input-hashes.json` | `c4109d2c07d8eeb32e3ecd08486183a1246f7e0caaa4cdbb2fb44243bae6581e` |
+| `coso/run16/original-spans.json` | `0e40d242d3579fff0ab26f2259b763b5f72f91ab72c271984fdf1be00bb5b5db` |
+| `coso/run16/host-selected-synchronizer-ledger.json` | `ba22fd0f979b3a1a61525ae8f153cfdf6cdaee91646ff80466f7d30666ac106a` |
+| `coso/run16/descriptor-relocations.json` | `adc663be9b528aa0aabfb31827b765c691b04296af0d3b1120227df0db65997e` |
+| `coso/run16/development-before-assert/collect_evidence.py` | `3a1f3e68c7570505fc3c53aa49342fcd0e4bcf303eee54fcc3bae2ec99b353a2` |
+
+Only this reviewer-owned file is written. Author evidence/history, synced sources, previous dossiers and original images remain unchanged. No further correction, new native count or expanded runtime/physical claim is requested.

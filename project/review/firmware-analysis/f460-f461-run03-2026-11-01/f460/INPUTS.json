@@ -1,0 +1,36 @@
+{
+  "/home/bticino/scheduling_manager/scheduling_manager": {
+    "bytes": 2161128,
+    "resolved": "/home/bticino/scheduling_manager/scheduling_manager",
+    "sha256": "5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62"
+  },
+  "/lib/libc.so.6": {
+    "bytes": 1634112,
+    "resolved": "/lib/libc.so.6",
+    "sha256": "e918bb2e904dae5cec4a203741a4379bad4ed05199b69dacd87d7a7a83d01e09"
+  },
+  "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0207-f460-myhome-server.md": {
+    "bytes": 41934,
+    "sha256": "ed4af14a11813ba1fdc53dfbf131a388b2cf8066fc688888e30da7c158579932"
+  },
+  "work/f460-f461-comparison/2026-11-01-depth/reviews/f460-source-review.md": {
+    "bytes": 3546,
+    "sha256": "99245aee7920799ad5c5aac57df6bfc7c4ffb7ce4b7049fbe1e59ae50f93223c"
+  },
+  "work/f460-f461-comparison/2026-11-01-run03/API_CONTEXT.json": {
+    "bytes": 1006,
+    "sha256": "b75b754c30d156502255e5ae7d54b2df1f27005e88765df2e0633aa559889a3e"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/REPORT.md": {
+    "bytes": 5142,
+    "sha256": "4caa7e282a04f4a514803b4da93c875e5da20b6ccd4ccae14542d855726eb68a"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/SOURCE.json": {
+    "bytes": 7819,
+    "sha256": "0c05dff028e0d0eac220832c9ec78fe3af213ccda1417a406ce92805de6158c7"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01/image_vfs.py": {
+    "bytes": 5602,
+    "sha256": "32e453cb6af0e2daafb8325d7b5115c3c13883e57d279d347aa8ea4baa3e3838"
+  }
+}

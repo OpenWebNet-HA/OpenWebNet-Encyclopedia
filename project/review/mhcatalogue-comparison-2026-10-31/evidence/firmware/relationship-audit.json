@@ -1,0 +1,258 @@
+{
+  "firmware": [
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_item",
+      "source_table": "EN_FIRMWARE",
+      "target_column": "id_item",
+      "target_table": "EN_ITEM"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_status",
+      "source_table": "EN_FIRMWARE",
+      "target_column": "id",
+      "target_table": "EN_STATUS"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_firmware",
+      "source_table": "EN_BUILDS",
+      "target_column": "id_firmware",
+      "target_table": "EN_FIRMWARE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_firmware",
+      "source_table": "AS_FW_PACKAGE",
+      "target_column": "id_firmware",
+      "target_table": "EN_FIRMWARE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_package",
+      "source_table": "AS_FW_PACKAGE",
+      "target_column": "id_package",
+      "target_table": "EN_PACKAGE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_firmware",
+      "source_table": "AS_FIRMWARE_CONFIG_MODE",
+      "target_column": "id_firmware",
+      "target_table": "EN_FIRMWARE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_config_mode",
+      "source_table": "AS_FIRMWARE_CONFIG_MODE",
+      "target_column": "id_config_mode",
+      "target_table": "EN_CONFIG_MODE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_firmware",
+      "source_table": "AS_FIRMWARE_PARAMETERS",
+      "target_column": "id_firmware",
+      "target_table": "EN_FIRMWARE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_parameters",
+      "source_table": "AS_FIRMWARE_PARAMETERS",
+      "target_column": "id_parameters",
+      "target_table": "EN_PARAMETERS"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "type",
+      "source_table": "EN_PARAMETERS",
+      "target_column": "id_parameters_type",
+      "target_table": "EN_PARAMETERS_TYPE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_firmware",
+      "source_table": "AS_CONNECTION_FIRMWARE",
+      "target_column": "id_firmware",
+      "target_table": "EN_FIRMWARE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_connection",
+      "source_table": "AS_CONNECTION_FIRMWARE",
+      "target_column": "id_connection",
+      "target_table": "EN_CONNECTION"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_package",
+      "source_table": "AS_LANGUAGE_PACKAGE",
+      "target_column": "id_package",
+      "target_table": "EN_PACKAGE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_item",
+      "source_table": "EN_DEVICE",
+      "target_column": "id_item",
+      "target_table": "EN_ITEM"
+    }
+  ],
+  "suite": [
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_item",
+      "source_table": "EN_FIRMWARE",
+      "target_column": "id_item",
+      "target_table": "EN_ITEM"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_status",
+      "source_table": "EN_FIRMWARE",
+      "target_column": "id",
+      "target_table": "EN_STATUS"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_firmware",
+      "source_table": "EN_BUILDS",
+      "target_column": "id_firmware",
+      "target_table": "EN_FIRMWARE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_firmware",
+      "source_table": "AS_FW_PACKAGE",
+      "target_column": "id_firmware",
+      "target_table": "EN_FIRMWARE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_package",
+      "source_table": "AS_FW_PACKAGE",
+      "target_column": "id_package",
+      "target_table": "EN_PACKAGE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_firmware",
+      "source_table": "AS_FIRMWARE_CONFIG_MODE",
+      "target_column": "id_firmware",
+      "target_table": "EN_FIRMWARE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_config_mode",
+      "source_table": "AS_FIRMWARE_CONFIG_MODE",
+      "target_column": "id_config_mode",
+      "target_table": "EN_CONFIG_MODE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_firmware",
+      "source_table": "AS_FIRMWARE_PARAMETERS",
+      "target_column": "id_firmware",
+      "target_table": "EN_FIRMWARE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_parameters",
+      "source_table": "AS_FIRMWARE_PARAMETERS",
+      "target_column": "id_parameters",
+      "target_table": "EN_PARAMETERS"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "type",
+      "source_table": "EN_PARAMETERS",
+      "target_column": "id_parameters_type",
+      "target_table": "EN_PARAMETERS_TYPE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_firmware",
+      "source_table": "AS_CONNECTION_FIRMWARE",
+      "target_column": "id_firmware",
+      "target_table": "EN_FIRMWARE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_connection",
+      "source_table": "AS_CONNECTION_FIRMWARE",
+      "target_column": "id_connection",
+      "target_table": "EN_CONNECTION"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_package",
+      "source_table": "AS_LANGUAGE_PACKAGE",
+      "target_column": "id_package",
+      "target_table": "EN_PACKAGE"
+    },
+    {
+      "dangling_count": 0,
+      "dangling_values": [],
+      "null_source_values": 0,
+      "source_column": "id_item",
+      "source_table": "EN_DEVICE",
+      "target_column": "id_item",
+      "target_table": "EN_ITEM"
+    }
+  ]
+}

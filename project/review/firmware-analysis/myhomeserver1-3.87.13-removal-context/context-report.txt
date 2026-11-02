@@ -1,0 +1,51 @@
+# MyHOMEServer1 3.87.13: local removal context and scene_id producer
+
+The original scheduler closes two previously supplied local arguments of the selected removal call at `0x3e742`: its receiver is word0 of the original local dispatcher's incoming context pointer, and its numeric key is produced from the exact parsed member `params.scene_id` through a local decimal-conversion helper. This is new local source dataflow, beyond the earlier pair-clear/release/erase report. The dispatcher context's natural producer and equality with startup main's numeric-scene container remain unproved.
+
+This is static original source only. Original/native/provider/vendor/target execution, semantic host fixtures and target I/O are zero; host analysis reads original files and invokes host disassembly. No actual configured scene, user request, accepted external grammar, removal after polling, last-owner state, complete lifetime/concurrency result or physical effect is established.
+
+## Identity and inherited scope
+
+Original image `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. The collector derives file offsets from this ELF's own PT_LOAD records and retains exact original Thumb bytes, linked VAs and separate PIC-key calculations. Nearby stripped-symbol labels are not semantic evidence.
+
+Inherited read-only reports are `2026-11-01-owner-removal/removal/REPORT.md`, `2026-10-31-startup/startup/REPORT.md` and `2026-10-31-startup/registry/REPORT.md`, under this image's research directory. They establish the selected numeric first-tree removal, startup's local scene-container construction and its loader/SCENARIO aliases. Their owner-count, erase, action-vector, thread and polling paths are not rerun or reclassified as new coverage. Curated OWN-DEV-0199 provides product/scenario context only; no public operation is assigned from an internal routine's address.
+
+## Context pointer survives the selected local calls
+
+At local dispatcher entry `0x48834`, incoming r1 is copied into sl at `0x4884a`. The retained selected branch supplies r1=sl at `0x4894a` and calls `0x3e1f0` at `0x4894e`. Under ordinary ABI/register and selected-path premises, this is the original incoming context pointer rather than a newly inferred object.
+
+At `0x3e20e`, entry `0x3e1f0` stores that incoming r1 into its current frame SP+20. The selected removal call reloads it at `0x3e73c`, loads receiver word0 at `0x3e740`, and invokes original numeric removal routine `0xb6b5c` at `0x3e742`. The composed local alias is therefore:
+
+`dispatcher incoming r1 -> sl -> selected call r1 -> callee SP+20 -> context word0 -> removal receiver`.
+
+This closes local argument storage and forwarding, not the context's natural construction. The producer/capture of incoming r1 at `0x48834` is the stopping boundary. No receiving-shaped outer body is followed, and layout similarity does not prove that its word0 equals startup main SP+160. A provided valid context, selected branch eligibility, object lifetime, intervening provider behavior and normal local dataflow remain material premises. There is no new proof that this call occurs after the scene completion poll or for any particular external operation.
+
+## Exact scene_id member to numeric key
+
+The fresh original PIC calculations resolve pool `0x3ebe4` relative to PC `0x3e2b0` to `0x116144`, exact literal `params`; pool `0x3ebe8` relative to PC `0x3e2ba` resolves to `0x116138`, exact literal `scene_id`. These are the whitelisted member names retained here. Earlier event-cache evidence's separate `params.id` string namespace is not substituted for this local numeric removal key.
+
+Given the provided successfully parsed JSON value and normal member/conversion-provider behavior, `0x3e2b2` requests the `params` member, `0x3e2bc` its `scene_id` member, and `0x3e2c4` requests `asString`. The assignment at `0x3e2cc` targets the local string at current SP+244, equivalently local base SP+212 plus32. No JSON parsing/body implementation is inspected; the imported parse operation remains opaque.
+
+At `0x3e3bc`, the source reads that local string's pointer/length pair from base+32. It computes the end pointer and calls local range-construction helper `0x3b668` at `0x3e3c2`, with destination SP+268. At `0x3e3c6` it loads the resulting character pointer, and at `0x3e3c8` it calls helper `0x3b4f0`. The normal returned numeric r0 is stored to SP+28 at `0x3e3ce`; the selected removal call reloads exactly that slot as r1 at `0x3e73e`.
+
+SP+28 had an earlier unrelated temporary store at `0x3e35a`. The numeric result replaces it; the initial temporary is not claimed to have been a scene identifier. The retained frame-store query distinguishes these writes rather than carrying an assumed ID through the entire frame.
+
+## Decimal request and visible error checks
+
+Helper `0x3b4f0..0x3b564` obtains an errno-location pointer, saves its old value and supplies zero before its conversion request. At `0x3b512` it supplies base10; at `0x3b514` it supplies an end-pointer slot; `0x3b518` calls the imported `strtol` provider. The source compares returned end pointer to the original start at `0x3b51e`, requests an invalid-argument provider on equality, and compares errno with34 at `0x3b524` before its out-of-range request. Its normal errno-zero path restores the saved errno value.
+
+Those are original visible requests/checks, not an executed conversion contract. Full-consumption policy, allowed signs, overflow/error outcomes, partial text, JSON type conversion, exceptions/unwind and complete accepted numeric domain remain unproved. The selected normal result is only a source-produced 32-bit key passed to the inherited unsigned-key tree operation. No arbitrary input text or numeric fixture is supplied.
+
+## Bounded consistency checks and history
+
+The collector retains seven original code spans,14 exact byte guards, two PIC literal resolutions, four decoded direct BL targets and five input hashes. A separate filtered query over `0x3e1f0..0x3e744` records six selected fixed SP-store forms for offsets16/20/24/28, including the context save and numeric overwrite. This is a bounded encoding/source consistency query, not proof that no indirect alias, called provider, exceptional path or other stack manipulation can affect those slots.
+
+An exploratory parent message, before this area's collector/report/generated outputs existed, initially inferred `params.id` from the earlier event-cache context. The exact PIC lookup then established `params.scene_id`. `DEVELOPMENT_HISTORY.json` records that pre-output source/message refinement. No old authored context report was overwritten, no unavailable historical bytes or independent old hash are claimed, and the completed owner-removal report's supplied-numeric-ID scope remains correct. The frozen current candidate's bytes and provenance, rather than a reconstructed earlier draft, are the reproducible record.
+
+## Reproduction and remaining questions
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-removal-context/context/collect_context_v1.py --check`
+
+First generation refuses existing outputs and immediately snapshots all deterministic outputs, report and collector; index bytes are computed before opening the index. Read-only check compares exact bytes. No original source or earlier dossier is modified.
+
+Confidence is high for the retained local pointer forwarding, exact `params.scene_id` keys, local string/result-slot dataflow and selected direct-call targets. Highest remaining question is the actual producer/capture of dispatcher incoming r1 and its receiver word0's identity with startup's numeric-scene registry. Selected branch eligibility and valid provider/object/state premises remain separate. The current source closes neither natural removal-after-poll behavior nor complete scene/action ownership, cancellation, safety, runtime support or physical behavior. Transport, session, authentication, framing, MQTT/libjel and opaque receiving/parsing implementations remain outside this investigation.

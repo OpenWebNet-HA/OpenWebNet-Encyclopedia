@@ -1,0 +1,27 @@
+{
+  "/home/bticino/scheduling_manager/scheduling_manager": {
+    "bytes": 2161128,
+    "resolved": "/home/bticino/scheduling_manager/scheduling_manager",
+    "sha256": "5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62"
+  },
+  "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0207-f460-myhome-server.md": {
+    "bytes": 41934,
+    "sha256": "ed4af14a11813ba1fdc53dfbf131a388b2cf8066fc688888e30da7c158579932"
+  },
+  "work/f460-f461-comparison/2026-11-01-run06/reviews/f460-source-review.md": {
+    "bytes": 5045,
+    "sha256": "9138708c663f0bf3f90c53165aca508abb3ea55ea4d24bb5c8d6565bfeb4e738"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01-run06-trigger/REPORT.md": {
+    "bytes": 8740,
+    "sha256": "06435e577532e42b000a89b5cb7125faea507da85d8a79f791e9aae6f120157f"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01-run06-trigger/SOURCE.json": {
+    "bytes": 19732,
+    "sha256": "0d6c9d1b70750c8cea171badf7eda8ccfe940f9d02b186f1e9fc2275c57a24bc"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01/image_vfs.py": {
+    "bytes": 5602,
+    "sha256": "32e453cb6af0e2daafb8325d7b5115c3c13883e57d279d347aa8ea4baa3e3838"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "scope": "Targeted static-only follow-up, 30 October 2026, on docs/static-firmware-analysis-findings. Original completed overnight dossier/index unchanged.",
+  "archive": {
+    "artifact_id": "firmware-f454-020051",
+    "filename": "F454_020051.fwz",
+    "version": "2.0.51",
+    "bytes": 74448014,
+    "sha256": "15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3",
+    "redistribution": "private-archive-only",
+    "manifest": "sources/artifact-manifest.yaml"
+  },
+  "methods": [
+    "Original configuration and ELF instruction/literal inspection",
+    "Static packaged JavaScript inspection",
+    "Host-only arithmetic/string derivation"
+  ],
+  "original_firmware_or_javascript_instructions_executed": 0,
+  "reports": [
+    {
+      "id": "identity",
+      "research_report": "work/f454-firmware/research/2026-10-30-targeted/identity/REPORT.md",
+      "report_sha256": "2d587cfa155c7f8b03adbdf6b8a9490afedc646573e4edbd454e2aa410556f2c",
+      "published_report": "targeted-identity-report.txt",
+      "published_sha256": "2d587cfa155c7f8b03adbdf6b8a9490afedc646573e4edbd454e2aa410556f2c",
+      "normalization": "Exact report bytes.",
+      "collectors": [
+        {
+          "research_file": "work/f454-firmware/research/2026-10-30-targeted/identity/collect_identity.py",
+          "sha256": "6346d5b77198ae8d0aa8eb4db80b4f42720dd9432661176c3e225bb5308efc6a"
+        }
+      ]
+    },
+    {
+      "id": "temperature",
+      "research_report": "work/f454-firmware/research/2026-10-30-targeted/temperature/REPORT.md",
+      "report_sha256": "dad594cce5b8aaf9a3ac54cb09f4077e0e4997aa08bf765b98e04f85ad9f8375",
+      "published_report": "targeted-temperature-report.txt",
+      "published_sha256": "dad594cce5b8aaf9a3ac54cb09f4077e0e4997aa08bf765b98e04f85ad9f8375",
+      "normalization": "Exact report bytes.",
+      "collectors": [
+        {
+          "research_file": "work/f454-firmware/research/2026-10-30-targeted/temperature/collect_evidence.py",
+          "sha256": "1a607c509595d83c133523322cfc7c1fad368d2cd65f29984b42d34f7a863517"
+        },
+        {
+          "research_file": "work/f454-firmware/research/2026-10-30-targeted/temperature/model_range.py",
+          "sha256": "279a4802e310a0bc2e84921142ad175c7128abe6942b02409411ef3d61a1c62c"
+        }
+      ]
+    },
+    {
+      "id": "energy",
+      "research_report": "work/f454-firmware/research/2026-10-30-targeted/energy/REPORT.md",
+      "report_sha256": "dd3893b974652e9937c9e1a45d51957ec93044ba6288c2e1adb54ffea47f6adc",
+      "published_report": "targeted-energy-report.txt",
+      "published_sha256": "dd3893b974652e9937c9e1a45d51957ec93044ba6288c2e1adb54ffea47f6adc",
+      "normalization": "Exact report bytes.",
+      "collectors": [
+        {
+          "research_file": "work/f454-firmware/research/2026-10-30-targeted/energy/collect_evidence.py",
+          "sha256": "b120202dd1f86b6b372190dfd586cffc17a839f17d16d46f7a788c27589c6ab8"
+        }
+      ]
+    },
+    {
+      "id": "media",
+      "research_report": "work/f454-firmware/research/2026-10-30-targeted/media/REPORT.md",
+      "report_sha256": "fd6bceb57bb4cdb6fd09eb749c67e045dcca6c017cfc9ce6523b8093cc8bace2",
+      "published_report": "targeted-media-report.txt",
+      "published_sha256": "fd6bceb57bb4cdb6fd09eb749c67e045dcca6c017cfc9ce6523b8093cc8bace2",
+      "normalization": "Exact report bytes.",
+      "collectors": [
+        {
+          "research_file": "work/f454-firmware/research/2026-10-30-targeted/media/collect_static.py",
+          "sha256": "aae22e6294be6ee61bc1ef376bddf687c9781e5cea73a1b78cee56fe9efd619d"
+        }
+      ]
+    }
+  ],
+  "derived_evidence": [
+    {
+      "research_file": "work/f454-firmware/research/2026-10-30-targeted/identity/identity-evidence.json",
+      "published_file": "targeted-identity-evidence.json",
+      "sha256": "e8a3895655e34cf90a1f7ec2dcbedaf48fbafd4f9eb7f2cb879d96ece8cd7ae2",
+      "interpretation": "Static/host-derived evidence only, not original ARM/JavaScript or Physical Device execution."
+    },
+    {
+      "research_file": "work/f454-firmware/research/2026-10-30-targeted/temperature/range-model.json",
+      "published_file": "targeted-temperature-model.json",
+      "sha256": "f1052b2bde43e036b685e36fac281f84bfc439d195aab11831e2b5e4a277fc12",
+      "interpretation": "Static/host-derived evidence only, not original ARM/JavaScript or Physical Device execution."
+    },
+    {
+      "research_file": "work/f454-firmware/research/2026-10-30-targeted/energy/host-consistency.json",
+      "published_file": "targeted-energy-model.json",
+      "sha256": "4c74ea1659090abc944770b510864cc348051d859a95ecfa448a3fab4c748290",
+      "interpretation": "Static/host-derived evidence only, not original ARM/JavaScript or Physical Device execution."
+    }
+  ],
+  "reproduction_limit": "Full collectors, original images, spans and dependencies remain in the separate local targeted dossier. Published reports preserve exact paths/hashes/method boundaries; they do not supply a runnable Firmware environment. The prior local canonical temperature reference was snapshotted before promotion for exact read-only replay."
+}

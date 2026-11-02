@@ -1,0 +1,212 @@
+#!/usr/bin/env python3
+"""Static taskmanager pattern/list-path request contract; no command execution."""
+import sys
+sys.dont_write_bytecode = True
+import argparse
+import hashlib
+import json
+import re
+import struct
+import subprocess
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = next(p for p in HERE.parents if (p / 'work/mh200n-firmware').is_dir())
+BASE = Path('work/mh200n-firmware/1.1.8')
+GUARDS = {
+    0xa8f0: 0xe1a0c00d, 0xa8f4: 0xe92dd800, 0xa8f8: 0xe24cb004,
+    0xa8fc: 0xe24dde47, 0xa900: 0xe24dd004, 0xa904: 0xe24b2e46,
+    0xa908: 0xe242200c, 0xa90c: 0xe2422008, 0xa910: 0xe59f315c,
+    0xa914: 0xe58d3000, 0xa918: 0xe59f3158, 0xa91c: 0xe58d3004,
+    0xa920: 0xe59f3154, 0xa924: 0xe58d3008, 0xa928: 0xe1a00002,
+    0xa92c: 0xe59f114c, 0xa930: 0xe59f214c, 0xa934: 0xe59f314c,
+    0xa938: 0xebfffcf1, 0xa93c: 0xe24b3e46, 0xa940: 0xe243300c,
+    0xa944: 0xe2433008, 0xa948: 0xe1a00003, 0xa94c: 0xebfffd34,
+    0xa950: 0xe24b3e46, 0xa954: 0xe243300c, 0xa958: 0xe2433008,
+    0xa95c: 0xe1a00003, 0xa960: 0xe59f1124, 0xa964: 0xe59f210c,
+    0xa968: 0xe59f310c, 0xa96c: 0xebfffce4, 0xa970: 0xe24b3e46,
+    0xa974: 0xe243300c, 0xa978: 0xe2433008, 0xa97c: 0xe1a00003,
+    0xa980: 0xe59f1108, 0xa984: 0xebfffd86,
+}
+LITERALS = [(0x2b8a8, '*.*.spt'), (0x2b8b0, '/var/tmp/bticino/script/'),
+            (0x2b8cc, 'lista'), (0x2b8d4, '%s %s%s > %s%s'),
+            (0x2b8e4, 'ls -1'), (0x2b5d8, '/root/script/'),
+            (0x2b8ec, '%s%s'), (0x2b8f4, 'r')]
+POOLS = {0xa910: (0xaa74, 0x2b8a8), 0xa918: (0xaa78, 0x2b8b0),
+         0xa920: (0xaa7c, 0x2b8cc), 0xa92c: (0xaa80, 0x2b8d4),
+         0xa930: (0xaa84, 0x2b8e4), 0xa934: (0xaa88, 0x2b5d8),
+         0xa960: (0xaa8c, 0x2b8ec), 0xa964: (0xaa78, 0x2b8b0),
+         0xa968: (0xaa7c, 0x2b8cc), 0xa980: (0xaa90, 0x2b8f4)}
+SPANS = [('new-local-pattern-list-path-caller', 0xa8f0, 0xa988),
+         ('exact-safe-argument-pools', 0xaa74, 0xaa94),
+         ('sprintf-PLT', 0x9d04, 0x9d10), ('system-PLT', 0x9e24, 0x9e30),
+         ('fopen-PLT', 0x9fa4, 0x9fb0)]
+
+
+def sha(b):
+    return hashlib.sha256(b).hexdigest()
+
+
+def enc(x):
+    return (json.dumps(x, indent=2, sort_keys=True) + '\n').encode()
+
+
+def exclusive(p, b):
+    p.parent.mkdir(parents=True, exist_ok=True)
+    with p.open('xb') as f:
+        f.write(b)
+
+
+def build():
+    pins = {}
+
+    def read(p):
+        p = Path(p)
+        f = ROOT / p
+        assert not p.is_absolute() and '..' not in p.parts
+        assert f.is_file() and not f.is_symlink() and ROOT in f.resolve().parents
+        b = f.read_bytes()
+        pins[str(p)] = {'path': str(p), 'bytes': len(b), 'sha256': sha(b)}
+        return b
+
+    manifest = json.loads(read(BASE / 'analysis/application-regular-files.json'))
+    original = BASE / 'analysis/application/home/bticino/bin/bt_taskmanager'
+    b = read(original)
+    assert len(b) == manifest['home/bticino/bin/bt_taskmanager']['bytes'] == 159048
+    assert sha(b) == manifest['home/bticino/bin/bt_taskmanager']['sha256'] == 'ad68f9bf43f7f10af122f34d3cb14b7d8c02730c46225a9a6cd1bf3e663072cb'
+    assert b[:8] == bytes.fromhex('7f454c4601010161')
+    h = struct.unpack_from('<HHIIIIIHHHHHH', b, 16)
+    assert h[0:2] == (2, 40) and h[6] == 0x202 and h[8] == 32
+    ph = [struct.unpack_from('<8I', b, h[4] + i * h[8]) for i in range(h[9])]
+    loads = [{'offset': s[1], 'VA': s[2], 'file_bytes': s[4], 'memory_bytes': s[5], 'flags': s[6]} for s in ph if s[0] == 1]
+
+    def off(a, n=4):
+        xs = [s['offset'] + a - s['VA'] for s in loads if s['VA'] <= a and a + n <= s['VA'] + s['file_bytes']]
+        assert len(xs) == 1, hex(a)
+        return xs[0]
+
+    def word(a):
+        return struct.unpack_from('<I', b, off(a))[0]
+
+    def branch(a):
+        v = word(a)
+        assert v & 0xff000000 == 0xeb000000
+        n = v & 0xffffff
+        if n & (1 << 23):
+            n -= 1 << 24
+        return a + 8 + n * 4
+
+    for a, v in GUARDS.items():
+        assert word(a) == v, hex(a)
+    calls = {0xa938: 0x9d04, 0xa94c: 0x9e24, 0xa96c: 0x9d04, 0xa984: 0x9fa4}
+    for a, t in calls.items():
+        assert branch(a) == t
+    joins = []
+    for a, (p, v) in POOLS.items():
+        x = word(a)
+        assert x & 0x0f7f0000 == 0x051f0000
+        assert a + 8 + (x & 4095) * (1 if x & (1 << 23) else -1) == p and word(p) == v
+        joins.append({'instruction_VA': hex(a), 'pool_VA': hex(p), 'pool_word': hex(v)})
+    literals = []
+    for a, text in LITERALS:
+        raw = text.encode('ascii') + b'\0'
+        assert b[off(a, len(raw)):off(a, len(raw)) + len(raw)] == raw
+        literals.append({'VA': hex(a), 'file_offset': hex(off(a, len(raw))), 'text': text, 'NUL_bytes_hex': raw.hex()})
+    rel = subprocess.check_output(['readelf', '-rW', str(ROOT / original)], text=True)
+
+    def immediate(v):
+        n = v & 255
+        r = ((v >> 8) & 15) * 2
+        return ((n >> r) | (n << (32 - r))) & 0xffffffff if r else n
+
+    imports = []
+    for name, a, slot in [('sprintf', 0x9d04, 0x36620), ('system', 0x9e24, 0x36680), ('fopen', 0x9fa4, 0x36700)]:
+        u, v, z = [word(a + i) for i in (0, 4, 8)]
+        assert u & 0xfffff000 == 0xe28fc000 and v & 0xfffff000 == 0xe28cc000 and z & 0xfffff000 == 0xe5bcf000
+        assert a + 8 + immediate(u) + immediate(v) + (z & 4095) == slot
+        rows = [x.strip() for x in rel.splitlines() if 'R_ARM_JUMP_SLOT' in x and re.search(r'\b' + name + r'@GLIBC_', x)]
+        assert len(rows) == 1 and int(rows[0].split()[0], 16) == slot
+        imports.append({'name': name, 'PLT_VA': hex(a), 'GOT_slot': hex(slot), 'words': [hex(u), hex(v), hex(z)], 'original_relocation': rows[0]})
+    spans = []
+    for label, a, z in SPANS:
+        o = off(a, z - a)
+        raw = b[o:o + z - a]
+        asm = subprocess.check_output(['objdump', '-d', '-m', 'arm', f'--start-address={a}', f'--stop-address={z}', str(ROOT / original)], text=True)
+        spans.append({'label': label, 'start_VA': hex(a), 'end_exclusive_VA': hex(z), 'file_offset': hex(o), 'bytes_hex': raw.hex(), 'sha256': sha(raw), 'host_disassembly': asm})
+    prior = BASE / 'research/2026-11-01-first-exploration'
+    leads = json.loads(read(prior / 'DATA_FILE_LEADS.json'))
+    lead = [x for x in leads if x['product'] == 'MH200N'][0]['literal_leads']
+    assert any(x['literal'] == '*.*.spt' and x['sha256'] == sha(b) and x['file_offset'] == off(0x2b8a8) for x in lead)
+    read(prior / 'REPORT.md')
+    source = {'component': 'Separate MH200N application bundle, NOT an installed overlay', 'original': pins[str(original)],
+              'header52_hex': b[:52].hex(), 'raw_flags': hex(h[6]), 'PT_LOAD': loads,
+              'spans': spans, 'word_guards': [{'VA': hex(a), 'word': hex(v)} for a, v in sorted(GUARDS.items())],
+              'pool_joins': joins, 'safe_literals': literals, 'imports': imports,
+              'direct_calls': [{'VA': hex(a), 'target': hex(t)} for a, t in calls.items()],
+              'outer_caller': 'NOT ESTABLISHED; selected local routine0xa8f0 is the actual caller to imported formatting/system/file requests; no boot or natural reach claim'}
+    flow = {'scope': 'One exact pattern/list-path request contract in own application taskmanager; no listing or enumeration executed',
+            'buffer': 'Each selected construction yields the same local address FP-1140; valid frame/write capacity/lifetime and ordinary ABI remain premises',
+            'first_sprintf': {'VA': '0xa938', 'R0': 'local buffer FP-1140', 'R1_format': '%s %s%s > %s%s', 'R2_string1': 'ls -1', 'R3_string2': '/root/script/', 'SP_string3': '*.*.spt', 'SP_plus4_string4': '/var/tmp/bticino/script/', 'SP_plus8_string5': 'lista'},
+            'system_request': {'VA': '0xa94c', 'R0': 'same local buffer after first formatter request', 'semantics': 'Provider/shell interpretation, command completion, wildcard expansion, listing output and status remain unproved'},
+            'second_sprintf': {'VA': '0xa96c', 'R0': 'same local buffer FP-1140', 'R1_format': '%s%s', 'R2': '/var/tmp/bticino/script/', 'R3': 'lista'},
+            'fopen_request': {'VA': '0xa984', 'R0': 'same buffer after second formatter request', 'R1_mode': 'compiled r', 'path_under_ordinary_formatting': '/var/tmp/bticino/script/lista'},
+            'premises': ['Natural outer-caller/local-routine admission not established', 'Valid stack/frame, local writable capacity/lifetime and ordinary ARM32 variadic register/stack convention', 'Ordinary formatting/termination semantics, effective imports and normal provider returns without invalidating state', 'Actual shell/file-provider behavior, current paths/data/permissions and prior command completion/content remain open'],
+            'limits': ['First-pass pattern literal only is inherited; new coverage is argument/stack/buffer/import request linkage', 'No actual shell/ls/system/fopen/provider execution, file generation/reading or target path access', 'No matched-file count, list contents, filename grammar, valid scenario/compiler/parser or accepted script established', 'No later line-reader/token/schema/whole-function/error/cleanup claim', 'No installed overlay, natural startup, current configuration, hardware or protocol capability inferred', 'Closed receiving/output/transport/auth/session/framing/MQTT/libjel/JS and equivalent denied helper bodies remain opaque']}
+    report = '''# MH200N 1.1.8 night07 — application pattern and listing-path request contract
+
+The genuinely new result connects the separate application's taskmanager `*.*.spt` literal to **actual local formatting/system requests and a following listing-path fopen request**. Exact register/stack operands and the same local buffer are retained. The initial pattern-presence observation is inherited from first exploration; this packet does not execute a listing, establish matched files/counts, scenario grammar, script acceptance/compiler, natural caller reach or an installed application overlay.
+
+## Own application source and caller boundary
+
+Original separate-bundle `home/bticino/bin/bt_taskmanager` is159048 bytes/SHA256 ad68f9bf43f7f10af122f34d3cb14b7d8c02730c46225a9a6cd1bf3e663072cb, checked against the own application regular-file manifest. Fresh original ELF32 little-endian ARM EXEC/machine40/raw flags0x202 and PT_LOAD mapping support this local source. No MH202/MHS/F454 grammar/layout or normal/recovery semantic transfer is used. A separately packaged application is not asserted to be installed, active or copied over the normal/recovery image.
+
+The selected local routine starts0xa8f0 and is the actual caller to the requests below. Its natural outer caller remains **not established**; no forced receiver/object, boot path or reachability is invented. Source frame setup and repeated arithmetic yield local pointerFP-1140. Expected frame/ARM32 variadic ABI, valid writable capacity/lifetime and normal provider returns remain premises; frame arithmetic alone does not establish an exact C array type or whole-function safety.
+
+## Fixed pattern arguments to same-buffer request
+
+Before sprintf0xa938, R0 is that local buffer and R1 is exact compiled format `%s %s%s > %s%s`. R2 supplies `ls -1` and R3 supplies `/root/script/`. Exact STR instructions at0xa914/0xa91c/0xa924 supply the remaining variadic words atSP/SP+4/SP+8: `*.*.spt`, `/var/tmp/bticino/script/`, `lista`. This ordering follows original instructions and expected own ARM32 register/stack calling convention, not a borrowed script model. All eight safe literals and ten PC-relative joins are independently byte guarded.
+
+After normal formatting return,0xa93c..0xa948 reconstruct the same buffer address and0xa94c requests actual system import with that pointer. Under ordinary formatting/provider semantics the compiled operands describe a shell listing request of the `/root/script/` pattern into the temporary listing path. This is conditional interpretation of fixed arguments, not a generated command/fixture, original execution or observed shell/wildcard/listing outcome. No command is submitted by the collector or review, no shell body is inspected, and no original/host target path is accessed through this request. Actual command binding/completion, current directory contents, pattern expansion, produced bytes/status and provider semantics remain open.
+
+## Following listing-path file request
+
+0xa950..0xa95c reconstruct the SAME local buffer pointer. The next sprintf0xa96c receives compiled `%s%s` with `/var/tmp/bticino/script/` and `lista` inR2/R3. Under ordinary formatting this names `/var/tmp/bticino/script/lista`.0xa970..0xa97c again reconstruct that same pointer;0xa980 supplies compiled mode `r`;0xa984 requests actual fopen import. The argument/dataflow edge is exact, but does not prove the previous command produced a file, the selected pathname resolves to one, a stream opens, any list is read or consumed, or that file names identify valid scenarios. The packet stops immediately after this request, before returned-stream handling, line readers, tokens, schema or later application behavior.
+
+## Evidence and preservation
+
+SOURCE.json retains five exact original spans,38 fixed words, ten argument-pool joins, eight safe NUL literals, four direct calls and three actual original PLT/GOT/JUMP_SLOT proofs for sprintf/system/fopen. ARGUMENT_FLOW.json separates argument positions, current same-buffer contents, ordinary provider/ABI interpretation and natural-caller/file outcomes. INPUTS.json pins own original binary/manifest and two immutable first-exploration members. Earlier scenario-file lead counts/headers/process declarations are not repeated as new coverage.
+
+Reproduce `python3 -B collect_application_v1.py --check`: deterministic host static byte/hash/ELF parsing, readelf and bounded ARM disassembly only. Initial generation refuses existing outputs and immediately freezes exact first copies of collector/all five outputs with a precomputed non-circular index. No old collector, vendor/native/helper/emulator/SQL/targetstartup/OS/device/service/network/bus/mount, model/fixture, shell/command/system/fopen or physical execution occurs. No private/full configuration or display/output/receiving/transport/authentication/session/framing/MQTT/libjel/JS/provider body or equivalent denied F450 helper is expanded. New original execution0; database recovery/generation0; remote writes0. Parent alone owns public/repository/archival changes. Originals/synced/completed histories and MHS340 code-hook-visits/360 hooks plus separate F454/MH202 ledgers remain unchanged; cumulative archive remains inherited one encrypted F450 support container/zero plaintext databases.
+'''
+    out = {'SOURCE.json': enc(source), 'ARGUMENT_FLOW.json': enc(flow), 'INPUTS.json': enc({'files': sorted(pins.values(), key=lambda x: x['path'])}), 'REPORT.md': report.encode()}
+    out['OUTPUT_MANIFEST.json'] = enc({'scope': 'Generated members excluding this manifest', 'files': {n: {'bytes': len(v), 'sha256': sha(v)} for n, v in sorted(out.items())}})
+    return out
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--check', action='store_true')
+    a = ap.parse_args()
+    names = ['SOURCE.json', 'ARGUMENT_FLOW.json', 'INPUTS.json', 'REPORT.md', 'OUTPUT_MANIFEST.json']
+    if not a.check:
+        assert not any((HERE / n).exists() for n in names) and not (HERE / 'first-candidate').exists()
+    out = build()
+    if a.check:
+        for n, b in out.items():
+            assert (HERE / n).read_bytes() == b, n
+        for x in json.loads((HERE / 'first-candidate/INDEX.json').read_bytes())['files']:
+            b = (HERE / 'first-candidate' / x['copy']).read_bytes()
+            assert len(b) == x['bytes'] and sha(b) == x['sha256'] and b == (HERE / x['copy']).read_bytes()
+    else:
+        for n, b in out.items():
+            exclusive(HERE / n, b)
+        copies = {**out, 'collect_application_v1.py': Path(__file__).read_bytes()}
+        ix = {'scope': 'Immediate exact first outputs and collector; precomputed index excludes itself', 'files': [{'copy': n, 'bytes': len(b), 'sha256': sha(b)} for n, b in sorted(copies.items())]}
+        for n, b in copies.items():
+            exclusive(HERE / 'first-candidate' / n, b)
+        exclusive(HERE / 'first-candidate/INDEX.json', enc(ix))
+    print(json.dumps({'status': 'PASS', 'outputs': len(out), 'spans': len(SPANS), 'guards': len(GUARDS), 'original_execution': 0, 'new_coverage': 'own application pattern/stack/samebuffer request contract; outercaller open'}))
+
+
+if __name__ == '__main__':
+    main()

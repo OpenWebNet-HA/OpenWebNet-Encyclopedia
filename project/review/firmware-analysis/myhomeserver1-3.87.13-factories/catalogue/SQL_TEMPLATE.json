@@ -1,0 +1,71 @@
+{
+  "SQL": "SELECT DISTINCT EN_DEVICE.id_item, EN_CONF.conf_name, EN_CONF.idx, EN_CONF.id_conf, EN_CONF_RANGE.id_conf_range, EN_CONF_DATA_TYPE.id_conf_data_type, EN_CONF_RANGE.value, EN_CONF_RANGE.'default', EN_CONF_RANGE.'min_value', EN_CONF_RANGE.'max_value', EN_CONF_RANGE.'step', EN_CONF.hidden, AS_OBJECT_FIRMWARE.id_object_firmware, EN_KEY_OBJECT.slots, AS_OBJECT_SYSTEM.id_system FROM EN_DEVICE JOIN EN_ITEM ON EN_DEVICE.id_item=EN_ITEM.id_item JOIN AS_ITEM_SYSTEM ON EN_ITEM.id_item=AS_ITEM_SYSTEM.id_item JOIN EN_SYSTEM ON AS_ITEM_SYSTEM.id_system=EN_SYSTEM.id_system JOIN EN_OBJECT_ITEM_FAMILY ON EN_ITEM.id_family=EN_OBJECT_ITEM_FAMILY.id_family JOIN EN_FIRMWARE ON EN_ITEM.id_item=EN_FIRMWARE.id_item JOIN AS_OBJECT_FIRMWARE ON EN_FIRMWARE.id_firmware=AS_OBJECT_FIRMWARE.id_firmware JOIN EN_KEY_OBJECT ON AS_OBJECT_FIRMWARE.id_key_object=EN_KEY_OBJECT.id_key_object JOIN EN_CONF ON EN_KEY_OBJECT.id_key_object=EN_CONF.id_key_object JOIN EN_CONF_RANGE ON EN_CONF.id_conf=EN_CONF_RANGE.id_conf JOIN EN_CONF_DATA_TYPE ON EN_CONF.id_conf_data_type=EN_CONF_DATA_TYPE.id_conf_data_type JOIN EN_LINE ON EN_DEVICE.id_line=EN_LINE.id_line JOIN EN_BRAND ON EN_DEVICE.id_brand=EN_BRAND.id_brand JOIN AS_OBJECT_SYSTEM ON EN_KEY_OBJECT.id_key_object=AS_OBJECT_SYSTEM.id_key_object WHERE EN_CONF.read_only <> 1 AND AS_ITEM_SYSTEM.modobj=$modobj$ AND EN_LINE.line_modobj=$line_modobj$ AND EN_BRAND.brand_modobj=$brand_modobj$ AND EN_KEY_OBJECT.key_object=$key_object$ AND EN_CONF.id_conf NOT IN (     SELECT EN_FILTER.id_conf FROM EN_FILTER WHERE EN_FILTER.id_conf=EN_CONF.id_conf     AND EN_FILTER.id_object_firmware=AS_OBJECT_FIRMWARE.id_object_firmware     AND EN_FILTER.whole_range=1) AND EN_CONF_RANGE.value NOT IN (     SELECT EN_FILTER_RANGE.range     FROM EN_FILTER_RANGE     JOIN EN_FILTER ON EN_FILTER_RANGE.id_filter=EN_FILTER.id_filter     WHERE EN_FILTER.id_conf=EN_CONF.id_conf     AND EN_FILTER.id_object_firmware=AS_OBJECT_FIRMWARE.id_object_firmware     AND EN_FILTER.whole_range = 0) ORDER BY EN_CONF.idx",
+  "bytes_excluding_NUL": 2007,
+  "columns_zero_based": [
+    {
+      "expression": "EN_DEVICE.id_item",
+      "index": 0
+    },
+    {
+      "expression": "EN_CONF.conf_name",
+      "index": 1
+    },
+    {
+      "expression": "EN_CONF.idx",
+      "index": 2
+    },
+    {
+      "expression": "EN_CONF.id_conf",
+      "index": 3
+    },
+    {
+      "expression": "EN_CONF_RANGE.id_conf_range",
+      "index": 4
+    },
+    {
+      "expression": "EN_CONF_DATA_TYPE.id_conf_data_type",
+      "index": 5
+    },
+    {
+      "expression": "EN_CONF_RANGE.value",
+      "index": 6
+    },
+    {
+      "expression": "EN_CONF_RANGE.'default'",
+      "index": 7
+    },
+    {
+      "expression": "EN_CONF_RANGE.'min_value'",
+      "index": 8
+    },
+    {
+      "expression": "EN_CONF_RANGE.'max_value'",
+      "index": 9
+    },
+    {
+      "expression": "EN_CONF_RANGE.'step'",
+      "index": 10
+    },
+    {
+      "expression": "EN_CONF.hidden",
+      "index": 11
+    },
+    {
+      "expression": "AS_OBJECT_FIRMWARE.id_object_firmware",
+      "index": 12
+    },
+    {
+      "expression": "EN_KEY_OBJECT.slots",
+      "index": 13
+    },
+    {
+      "expression": "AS_OBJECT_SYSTEM.id_system",
+      "index": 14
+    }
+  ],
+  "file_offset": "0x1c4f70",
+  "original_VA": "0x1c4f70",
+  "privacy": "Only original SQL schema/column/predicate text, never returned data/default/config values",
+  "sha256_UTF8": "b8f5ad7c0d551851c629a35419105f60f0e9d0b07f11604eea6f5ef398ee334e",
+  "statement_execution": 0
+}

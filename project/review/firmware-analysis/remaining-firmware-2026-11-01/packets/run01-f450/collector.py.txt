@@ -1,0 +1,117 @@
+#!/usr/bin/env python3
+"""Static F450 archive gap and one original local database request; no decryption/SQL/target execution."""
+from pathlib import Path
+import argparse,hashlib,json,re,struct,subprocess,zipfile
+O=Path(__file__).resolve().parent;W=O.parents[4]
+T=W/'work/f450-firmware/2.0.10/analysis/rootfs'
+E=T/'home/bticino/bin/ebacgw';L=T/'home/bticino/lib/liblghal.so.0.0'
+A=W/'work/f450-firmware/2.0.10-PROD/extracted/50.xtz'
+def sha(b):return hashlib.sha256(b).hexdigest()
+def js(x):return(json.dumps(x,sort_keys=True,indent=2)+'\n').encode()
+def build():
+ pins=[]
+ def read(p):
+  assert p.is_file()and not p.is_symlink();b=p.read_bytes();pins.append({'path':str(p.relative_to(W)),'bytes':len(b),'sha256':sha(b)});return b
+ b=read(E);hal=read(L);arc=read(A)
+ read(W/'work/f450-firmware/2.0.10/research/2026-11-01-first-exploration/REPORT.md')
+ host=read(O/'HOST_DISASSEMBLY.json');hostdata=json.loads(host)
+ assert all(x['exit_code']==0 for x in hostdata['actual_tool_results'])
+ assert sha(arc)=='824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8'
+ assert b[:6]==b'\x7fELF\x01\x01'and hal[:6]==b'\x7fELF\x01\x01'
+ hdr=struct.unpack_from('<HHIIIIIHHHHHH',b,16);assert hdr[0]==2 and hdr[1]==40 and hdr[6]==0x5000002
+ ph=[struct.unpack_from('<8I',b,hdr[4]+i*hdr[8])for i in range(hdr[9])]
+ loads=[{'offset':x[1],'VA':hex(x[2]),'file_bytes':x[4],'memory_bytes':x[5],'flags':x[6]}for x in ph if x[0]==1]
+ def off(va,n=4):
+  rows=[x[1]+va-x[2]for x in ph if x[0]==1 and x[2]<=va and va+n<=x[2]+x[4]];assert len(rows)==1;return rows[0]
+ def word(va):return struct.unpack_from('<I',b,off(va))[0]
+ def string(va):
+  at=off(va,1);return b[at:b.index(b'\0',at)]
+ guards={0xa618:0xe59f0880,0xa61c:0xebfffe19,0xa620:0xe1a03000,0xa62c:0xe2033cff,0xa630:0xe1a03443,0xa640:0xeb0015f5,0xa644:0xe59f385c,0xa648:0xe1a00003,0xa64c:0xeb001598,0xa654:0xe3530000,0xa668:0x0a000005,0xfcb4:0xe92d4800,0xfcb8:0xe28db004,0xfcc0:0xe50b0010,0xfd8c:0xe51b0010,0xfd90:0xe59f1078,0xfd94:0xebffe8e9,0xfd9c:0xe3530000,0xfdb0:0x0a000005,0xfdc0:0xe3e03000,0xfdcc:0xe59f303c,0xfdd0:0xe5932000,0xfde0:0xe59f1030,0xfdec:0xebffe870,0xfdf0:0xe3a03000,0xfdf8:0xe51b3014,0xfdfc:0xe1a00003,0xfe04:0xe8bd8800}
+ for va,w in guards.items():assert word(va)==w,hex(va)
+ def target(va,link):
+  w=word(va);assert(w&0x0f000000)==(0x0b000000 if link else 0x0a000000)
+  x=w&0xffffff;x=x-(1<<24)if x&(1<<23)else x;return(va+8+4*x)&0xffffffff
+ calls={0xa61c:0x9e88,0xa640:0xfe1c,0xa64c:0xfcb4,0xfd94:0xa140,0xfdec:0x9fb4}
+ for va,dest in calls.items():assert target(va,True)==dest
+ assert target(0xa668,False)==0xa684 and target(0xfdb0,False)==0xfdcc
+ assert 0xa618+8+(word(0xa618)&0xfff)==0xaea0 and word(0xaea0)==0x7a444
+ assert 0xa644+8+(word(0xa644)&0xfff)==0xaea8 and word(0xaea8)==0x7a4ac
+ assert 0xfd90+8+(word(0xfd90)&0xfff)==0xfe10 and word(0xfe10)==0xc1f8c
+ command=string(0x7a444);filename=string(0x7a4ac)
+ assert command==b'cp /home/bticino/cfg/extra/50/master.sqlite /var/tmp/db/master.sqlite'
+ assert filename==b'/var/tmp/db/master.sqlite'
+ # Export only exact whitelisted nonsecret path/command literals. No other
+ # rodata/SQL/error strings, keys or command/provider bodies are exported.
+ literals=[{'VA':hex(va),'file_offset':hex(off(va,1)),'bytes':len(s),'text':s.decode(),'sha256':sha(s)}for va,s in [(0x7a444,command),(0x7a4ac,filename)]]
+ spans=[]
+ for label,start,end in [('selected-copy-and-helper-call',0xa618,0xa66c),('helper-filename-preservation-prefix',0xfcb4,0xfd94),('opening-result-and-normal-return',0xfd8c,0xfe08),('caller-literal-pools',0xaea0,0xaeac),('handle-slot-pool',0xfe10,0xfe14)]:
+  data=b[off(start,end-start):off(start,end-start)+end-start]
+  spans.append({'label':label,'VA':hex(start),'end_exclusive':hex(end),'file_offset':hex(off(start,end-start)),'bytes':len(data),'sha256':sha(data),'words':[{'VA':hex(v),'word':f'{word(v):08x}'}for v in range(start,end,4)]})
+ symbols=subprocess.check_output(['readelf','--dyn-syms','-W',str(E)],text=True)
+ reloc=subprocess.check_output(['readelf','-rW',str(E)],text=True)
+ dyn=subprocess.check_output(['readelf','-dW',str(E)],text=True)
+ symrows=[x.strip()for x in symbols.splitlines()if re.search(r'\b(?:system|sqlite3_open|sqlite3_exec)(?:@[^ ]+)?(?:\s+\([0-9]+\))?$',x)]
+ relrows=[x.strip()for x in reloc.splitlines()if 'R_ARM_JUMP_SLOT'in x and re.search(r'\b(?:system|sqlite3_open|sqlite3_exec)(?:@|\b)',x)]
+ assert len(symrows)==3 and len(relrows)==3
+ needed=re.findall(r'\(NEEDED\).*?\[(.*?)\]',dyn);assert'libsqlite3.so.0'in needed and'libc.so.6'in needed
+ for va in [0x9e88,0xa140,0x9fb4]:
+  data=b[off(va,12):off(va,12)+12];spans.append({'label':'import-PLT-stub','VA':hex(va),'bytes':12,'file_offset':hex(off(va,12)),'hex':data.hex(),'sha256':sha(data)})
+ with zipfile.ZipFile(A)as z:members=[{'name':x.filename,'declared_bytes':x.file_size,'CRC32':f'{x.CRC:08x}','encrypted':bool(x.flag_bits&1)}for x in z.infolist()]
+ assert any(x=={'name':'50/master.sqlite','declared_bytes':289792,'CRC32':'52150069','encrypted':True}for x in members)
+ # Bounded original-symbol/literal discovery only; no update/mount body or
+ # opaque system/extraction provider is expanded into a recovery claim.
+ hs=subprocess.check_output(['readelf','--dyn-syms','-W',str(L)],text=True)
+ names=['_Z11mount_extrav','_Z18update_fs_recoveryPc','_Z9update_fsPc']
+ selected_hal=[s.strip()for s in hs.splitlines()if any(s.rstrip().endswith(n)for n in names)]
+ unzip=hal[0xf896:hal.index(b'\0',0xf896)];assert b'unzip'in unzip and b'-P'not in unzip
+ archive={'archive':{'path':str(A.relative_to(W)),'bytes':len(arc),'sha256':sha(arc)},'members':members,'content_recovered':False,'decryption_or_password_trials':0,'producer_gap':'No qualified local source-derived packaging input for this encrypted archive is established by this bounded packet. No global absence claim.','bounded_discovery':{'liblghal_source':{'path':str(L.relative_to(W)),'sha256':sha(hal)},'selected_symbol_declarations':selected_hal,'unzip_literal':{'VA':'0xf896','bytes':len(unzip),'sha256':sha(unzip),'keyword':'unzip','password_option_present':False},'candidate_literal_pools':['0x7c38','0x7dd8'],'local_references':['0x7bdc','0x7d7c'],'scope':'Exploratory read-only pointer/symbol locator only; update_fs/recovery functions are not qualified50.xtz producers, no mount/extraction/install body inspected as a recovery route.'}}
+ source={'source':{'path':str(E.relative_to(W)),'bytes':len(b),'sha256':sha(b)},'ELF':{'class':32,'byte_order':'little','type':hdr[0],'machine':hdr[1],'flags':hex(hdr[6]),'PT_LOAD':loads},'guards':[{'VA':hex(a),'word':f'{v:08x}'}for a,v in sorted(guards.items())],'calls':[{'VA':hex(a),'target':hex(v)}for a,v in sorted(calls.items())],'safe_literals':literals,'global_handle_output_slot':'0xc1f8c','helper_entry':'0xfcb4','execution':{'firmware_native_vendor_provider':0,'models_fixtures':0,'SQL_queries':0,'target_OS_network_bus':0,'decryption_trials':0},'limits':'Selected local block reached, valid runtime mappings/stack/callee ABI and ordinary binding/normal returns are premises. No actual system/copy/SQLite/provider call executes.'}
+ report='''# F450 night01: encrypted archive gap and original local database consumer
+
+The encrypted PROD `50.xtz` remains unrecovered. This packet instead closes one new positive original source edge: ebacgw requests copying `/home/bticino/cfg/extra/50/master.sqlite` to `/var/tmp/db/master.sqlite`, then passes the SAME destination literal through a local helper to sqlite3_open. This is a local source request, not proof that the encrypted archive was extracted, its database installed, the copy succeeded, or any database opened.
+
+## Source and bounded archive investigation
+
+Exact archive SHA256 is `824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8`. Central metadata still declares encrypted `50/master.sqlite`,289792bytes,CRC32 52150069 and an encrypted zero-byte extra.xml. No member contents, database header or schema is recovered; no candidate password, key guess, brute force, decryption trial or synthetic database is used. No key material is exported.
+
+A bounded symbol/literal query found liblghal's unzip keyword at0xf896 and reference candidates in named update_fs/recovery functions; these do not qualify an input to this particular50.xtz. The mount_extra symbol is likewise not proof of an archive decoder. Their filesystem/update/provider bodies are not expanded into a recovery claim. This is a bounded gap, not an assertion that the firmware or companion software has no legitimate packaging input. The next useful source question is actual extraction/installation into cfg/extra/50, or a genuine producer, not further guessing.
+
+## New original copy-to-opening join
+
+The exact original file is `analysis/rootfs/home/bticino/bin/ebacgw` under F4502.0.10, ELF32 little-endian ARM EXEC, own flags0x5000002. SOURCE.json pins its full hash, fresh PT_LOAD mapping and28 exact word guards; SPANS.json records eight selected original code/data/PLT spans. No MHS/MH202/F454 layout or API body is reused.
+
+At0xa618, PC-relative pool0xaea0 resolves original literal0x7a444/fileoffset0x72444: the exact69-byte cp command above. BL0xa61c requests imported system via stub0x9e88. After its numeric return is saved, masked0xff00 and arithmetic-shifted8 for an opaque local diagnostic request,0xa644 loads pool0xaea8→0x7a4ac/fileoffset0x724ac, the exact destination path. MOV0xa648 passes that pointer asR0; BL0xa64c enters original helper0xfcb4. Within this selected block there is no copy-result branch before that opening request. Prior reachability, actual shell/copy behavior and diagnostic normal return remain premises; no surrounding whole-startup policy is inferred.
+
+Helper0xfcb4 saves entryR0 atFP-16 (0xfcc0). Its retained prefix includes local initialization and an imported mutex-initialization request; no direct overwrite of that filename slot intervenes. At0xfd8c it reloads the filename intoR0;0xfd90 resolves pool0xfe10→address0xc1f8c intoR1;0xfd94 requests sqlite3_open via actual import stub0xa140. Under the ordinary C ABI this supplies filename and global output-handle storage. Global storage is not a record layout or a proved live handle.
+
+The original numeric sqlite3_open result is compared with0. Nonzero takes a diagnostic request, stores−1 and returns it normally; zero branches0xfdcc, reloads the global output handle and requests sqlite3_exec0xfdec with a separate compiled SQL pointer. That SQL literal and provider body are not inspected/exported/executed here. On its normal return the helper stores0 and returns it; that local result does not prove the SQL request succeeded. The outer comparison0xa668 sends helper-result0 to0xa684; the alternate continuation is left outside this packet. This is source control/dataflow, not actual database contents, compatibility or runtime outcome.
+
+## Applicability and unresolved composition
+
+The shared suffix `50/master.sqlite` and this exact source path give a concrete relationship to pursue; they do not equate arbitrary same-named files or prove the retained encrypted bytes ever populated the source path. Package standard/PROD equality and their different outer composition remain inherited first-pass findings, not repeated coverage. A missing plaintext database in a bounded file survey does not invalidate this runtime-copy request or prove global database absence. No row/private configuration/default/credential values are read or emitted.
+
+DT_NEEDED and selected original import/relocation rows identify libsqlite3.so.0/libc.so.6 requests and system/sqlite3_open/sqlite3_exec stubs. Actual loader binding, provider implementations, permissions, file validity, concurrency, successful copying/opening/query execution and natural invocation remain unclosed. System/output/receiving/transport/authentication/session/framing/MQTT/libjel and equivalent closed delegates remain opaque; no target OS call is made.
+
+Reproduce the raw-word/pointer/branch/identity checks with `python3 -B collect_archive_v1.py --check`. The collector uses host readelf/byte parsing and ZIP central metadata only; it does not run objdump, source vendor code or decrypt the archive. HOST_DISASSEMBLY.json retains actual separately authorized host objdump tool results for two exact spans; host disassembly reads bytes and is not guest execution. Initial default eu-objdump attempts could not disassemble ARM, while a parent-provided host ARM disassembler succeeded; no original instructions ran and no generated candidate was overwritten. All canonical outputs, collector and host tool record are immediately frozen in exact first copies with an index computed before opening itself. No failed canonical generation is claimed.
+
+All new original/native/vendor/provider/model/fixture/SQL/target OS/network/bus/decryption execution counts are0. No raw database is created or recovered and nothing is uploaded by this author. Old sources, extraction trees, dossiers, ledgers, source manifest and repository remain unchanged. Parent alone controls any future genuine database archive operation.
+'''
+ out={'SOURCE.json':js(source),'SPANS.json':js(spans),'IMPORTS.json':js({'DT_NEEDED':needed,'selected_symbol_rows':symrows,'selected_relocation_rows':relrows,'scope':'Declarations and original import stubs only; no provider or live binding proof'}),'ARCHIVE_METADATA.json':js(archive),'INPUTS.json':js({'files':sorted(pins,key=lambda x:x['path'])}),'REPORT.md':report.encode()}
+ out['OUTPUT_MANIFEST.json']=js({'collector_sha256':sha(Path(__file__).read_bytes()),'files':{n:{'bytes':len(v),'sha256':sha(v)}for n,v in sorted(out.items())},'scope':'Canonical generated files excluding this manifest itself'})
+ return out
+def main():
+ p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');a=p.parse_args();out=build()
+ if a.check:
+  for n,b in out.items():assert(O/n).read_bytes()==b,n
+  rows=json.loads((O/'first-candidate/INDEX.json').read_text())['files'];assert len(rows)==9
+  for x in rows:
+   b=(O/'first-candidate'/x['copy']).read_bytes();assert sha(b)==x['sha256']and len(b)==x['bytes'];assert b==(O/x['copy']).read_bytes()
+ else:
+  assert not(O/'first-candidate').exists()and all(not(O/n).exists()for n in out)
+  for n,b in out.items():(O/n).open('xb').write(b)
+  d=O/'first-candidate';d.mkdir();rows=[]
+  for n,b in sorted({**out,Path(__file__).name:Path(__file__).read_bytes(),'HOST_DISASSEMBLY.json':(O/'HOST_DISASSEMBLY.json').read_bytes()}.items()):
+   (d/n).open('xb').write(b);rows.append({'copy':n,'bytes':len(b),'sha256':sha(b)})
+  index=js({'scope':'Exact first outputs/collector/actual host disassembly record; index excluded and bytes computed before opening index','files':rows});(d/'INDEX.json').open('xb').write(index)
+ print(json.dumps({'status':'PASS','outputs':len(out),'source_spans':8,'word_guards':28,'first_copies':9,'original_execution':0,'recovered_database':False,'decryption_trials':0}))
+if __name__=='__main__':main()

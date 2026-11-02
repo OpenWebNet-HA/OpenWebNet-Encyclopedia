@@ -1,0 +1,37 @@
+# Independent source review: packaged JsonCpp null and unsigned-value contracts
+
+PASS; no correction requested. This review independently compares the provider-values report/collector with the packaged original JsonCpp bytes and metadata. It is source-aware of the separate serializer report that I authored, but the provider findings below were checked directly. No original instruction, JsonCpp object, native helper, vendor process, target API or semantic fixture was executed. No author file was edited.
+
+## Exact reviewed identities and reproduction
+
+Read-only `python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/collect_values_v1.py --check` passed:17 outputs,9 spans,17 guards,9 candidate definitions. Independently derived ELF PT_LOAD mappings reproduced all9 span hashes and17 original-byte guards. The17 outputs include a manifest that pins16 non-manifest outputs. All18 first-candidate copies (17 outputs plus collector), the separately frozen report and their two indexes match current bytes; all3 input file hashes/sizes match.
+
+| Artifact relative to this batch | SHA256 |
+| --- | --- |
+| `provider-values/REPORT.md` | `a713e56e7f84600d721210ac32c3bac7ae0ae3fea23c866f630189021b31e6ec` |
+| `provider-values/collect_values_v1.py` | `470c52c285193ed316be5cf1a88eb89d0829ad4c736792ad1ba31949001b2dc2` |
+| `provider-values/OUTPUT_MANIFEST.json` | `b78fdf2c9dc0d9d2820b9da0f7295336f3ebbd312d759f73d00b9f0a3ac1ffea` |
+| `provider-values/SOURCE_SPANS.json` | `b28cfe70cdd4a2b349d8605b7a5f8a41868b5d0f850c75d2a769a03d5b683a0f` |
+| `provider-values/VALUE_LEDGER.json` | `f41abf6b4e5cb11b05f4140281a708bd1cc550d8edaccfb43b00c2297c768ab9` |
+| `provider-values/first-candidate/INDEX.json` | `ce0f7216aa0f9eee434eb1b4e017403df06c9bc34ba413f770cb925ab9ae6118` |
+| `provider-values/report-first-candidate/INDEX.json` | `559909f587200a4b7fc0592fbfce696ee8dff7618997e680fde734e69fb404a4` |
+
+Original `/usr/lib/libjsoncpp.so.1.9.5` is SHA256 `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36`; scheduler is SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. NEEDED `libjsoncpp.so.25`, the candidate SONAME and VFS alias hash substantiate the packaged candidate relationship. They do not resolve actual loader order/interposition or successful runtime binding. The nine reported Thumb definitions align with their source entries; their pointer low bit is not treated as an instruction address.
+
+## Original control/dataflow checked
+
+The original type getter reads byte+8. initBasic writes the supplied tag there at `0x15af8`; its comments/flags calls remain ordinary-provider premises. The ValueType constructor's subtract1/unsigned comparison sends type0 directly to its normal return at `0x15b8a`, bypassing the types1..7 TBB. There is no need to assume a zeroed value union for the selected null conversion.
+
+In nullSingleton, `ANDS r4,#1` at `0x15bd8` makes r4 exactly0 on the initialization branch; after normal guard-acquire, `0x15bf0` supplies that0 as the constructor's type argument. Independently resolving the four pertinent original pool+PC references gives the same guard base `0x33018`, object `0x33020` (base+8) on construction and return paths. These addresses are linked candidate source identities, not observed initialized live memory. Guard synchronization, constructor/exit-registration success and prior initialization remain conditional as the report states.
+
+The const-key wrapper calls strlen then find; a nonzero result returns directly, while zero reaches the tail request for nullSingleton at `0x17f66`. For find's selected object route, the returned iterator is compared with the original map pointer+4 at `0x17ebe..0x17ec2`. The equality-conditioned assignment at `0x17ecc` sets r4=0; after normal cleanup the function returns r4. The type0 route separately obtains0 and returns it. The report correctly retains map/tree/key/comparator/cleanup and valid-object premises instead of claiming a complete lookup implementation.
+
+The asUInt TBB data bytes `0a031a30ab18` at `0x16ad6` independently yield type0 target `0x16aea` and type2 target `0x16b0a`. The type0 target bypasses union load `0x16ae8`; r0 still contains the type getter's0 through the selected normal cleanup/return. This directly supports the selected null-asUInt zero result without introducing object-field fixtures.
+
+The unsigned constructor preserves the supplied r1 in r5, requests initBasic type2, then stores r5 and zero as low/high words at `0x15c7c`. For type2, isUInt follows its original `0x155f6..0x155f8` branch to high-word load `0x1561c`; CLZ(high)>>5 produces1 for high0. asUInt's nonzero predicate branch returns to the low-word read at `0x16ae8`. Normal ABI/provider preservation and no intervening mutation therefore support the stated scalar representation link. Signed, string, assignment and other error/overflow paths are correctly kept outside this closure.
+
+## What this narrows, and what remains open
+
+The source supports two additional conditional premises for the authored serializer route: selected missing-member/end lookup can supply a type0 singleton whose asUInt returns0, and an unchanged selected unsigned32 Json value can read back its low word. This narrows the omitted zero-delay/duration and emitted unsigned-value questions. It does not close actual result-object key assignment, member insertion, complete tree semantics, string/asString behavior, arbitrary malformed inputs, runtime loader binding, allocator/unwind behavior or an executed end-to-end JSON roundtrip.
+
+The report and value ledger preserve these distinctions and do not infer installed scenes, timer/callback outcomes, cancellation/restart safety, physical commands or product support. No new native corpus or execution-accounting increment is justified. The frozen current bytes and source are verified; this review does not independently prove every historical development event merely from a first-generation-success statement.

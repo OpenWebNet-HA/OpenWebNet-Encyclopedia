@@ -1,0 +1,155 @@
+{
+  "scope": "Exact bounded numeric-trigger source/report/review/reference-history exports; no original binary",
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/INPUTS.json",
+      "published": "evidence/trigger/INPUTS.json",
+      "sha256": "7ccc19d69da107ed941a0d76975c545c097b82807c439ce013068b8f28b775e2",
+      "bytes": 1409
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/NUMERIC_CONTRACT.json",
+      "published": "evidence/trigger/NUMERIC_CONTRACT.json",
+      "sha256": "89213d11b604e0ff9c1f824c6ab0bbfa84b9dbc18c70f31d989ab083c6c46b81",
+      "bytes": 3020
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/ORIGINAL_SOURCE.json",
+      "published": "evidence/trigger/ORIGINAL_SOURCE.json",
+      "sha256": "8f5364b48f352dedcee1bc59b54de98c993ff12f65a3720bd0941c869ca913a0",
+      "bytes": 9221
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/OUTPUT_MANIFEST.json",
+      "published": "evidence/trigger/OUTPUT_MANIFEST.json",
+      "sha256": "f57e01b315f2ebaecf55efba583b9fcf9459c41f8ba84ea6e04d92f5d8d9f31e",
+      "bytes": 3016
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/REPORT.md",
+      "published": "evidence/trigger/REPORT.txt",
+      "sha256": "5c07aa082902c7caa80a51213f287a159ea50ff47c91d3f5ace98996da9f3b3c",
+      "bytes": 10647
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/collect_trigger_v1.py",
+      "published": "evidence/trigger/collect_trigger_v1.py.txt",
+      "sha256": "c10653cb265171a5f46a04d22d6142e94f6e55a7eea8bb3168b330ee511404b8",
+      "bytes": 10557
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/spans/compiled-callback-copy.txt",
+      "published": "evidence/trigger/spans/compiled-callback-copy.txt",
+      "sha256": "7f630d739b69b4b9b8917e77f5ea00eea89b3e43f0caae0030319a79fd5c9a88",
+      "bytes": 1466
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/spans/compiled-field-copies.txt",
+      "published": "evidence/trigger/spans/compiled-field-copies.txt",
+      "sha256": "fe1e6c03c9f91b67c7a92bb5d0a65df36ade1d15e86c07147a6bb9bc27247d81",
+      "bytes": 674
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/spans/initializer-capture.txt",
+      "published": "evidence/trigger/spans/initializer-capture.txt",
+      "sha256": "3315143e6f35ae5d3fa893a879fe9c382611b94d119c5c3cd461a80d6901247d",
+      "bytes": 920
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/spans/initializer-virtual-reparse.txt",
+      "published": "evidence/trigger/spans/initializer-virtual-reparse.txt",
+      "sha256": "e7f2620ce2ebe32f94512a673f07749982cb2436900cb96b11f93347a277f52a",
+      "bytes": 868
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/spans/local-raw-trigger-dispatch.txt",
+      "published": "evidence/trigger/spans/local-raw-trigger-dispatch.txt",
+      "sha256": "f59c1b95807d75eae8914fc8ca5b70343f14a4f373d113e9be6d0adebf536dfb",
+      "bytes": 1125
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/spans/numeric-admission-handler.txt",
+      "published": "evidence/trigger/spans/numeric-admission-handler.txt",
+      "sha256": "40cf98e8101928ee5d73f47d795b89ca4e67d349a2b5d512a266bd0560cf694d",
+      "bytes": 1573
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/spans/numeric-local-guards-and-call.txt",
+      "published": "evidence/trigger/spans/numeric-local-guards-and-call.txt",
+      "sha256": "be8459e04c25e20d8b584c01c8016d28000ed5a875f9b3c8734b3d17976ee8d3",
+      "bytes": 636
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/spans/persistent-object-publication.txt",
+      "published": "evidence/trigger/spans/persistent-object-publication.txt",
+      "sha256": "817e3d0b76d561d2c6c53cb18f0516413abdf151b98a9d2c1d41ec095874d25e",
+      "bytes": 1725
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/spans/primary-fire-method.txt",
+      "published": "evidence/trigger/spans/primary-fire-method.txt",
+      "sha256": "7adcc73141742016b39144f4c76627486a864f52d1be4d8000f8ee8117576999",
+      "bytes": 407
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/spans/raw-numeric-presence.txt",
+      "published": "evidence/trigger/spans/raw-numeric-presence.txt",
+      "sha256": "c7c2738b614b67d950ac3231b38d00298a15f8712851e9c541457e7d8853ae51",
+      "bytes": 3140
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/spans/raw-selected-factory.txt",
+      "published": "evidence/trigger/spans/raw-selected-factory.txt",
+      "sha256": "b845267fe2d81891f79b6e6fd899b46953e244b3cdcfafd5cb1ef8a2d8dbf6ba",
+      "bytes": 948
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/spans/scene-callback-wrapper.txt",
+      "published": "evidence/trigger/spans/scene-callback-wrapper.txt",
+      "sha256": "f40de36060aef042554d6cd5eb17d683cf8821da30fe71cbf45d3d463dbb9064",
+      "bytes": 198
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/spans/scene-capture-manager.txt",
+      "published": "evidence/trigger/spans/scene-capture-manager.txt",
+      "sha256": "b87df852ba660a1707c1fd1cfcb8a1a5ee8833a3ce0ca6353b7f316c2ead8cad",
+      "bytes": 674
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/spans/selected-local-recipient.txt",
+      "published": "evidence/trigger/spans/selected-local-recipient.txt",
+      "sha256": "aa5612c1ef9cd7933acd4c7a37a683925b18b4ee6994ea93a38127de03a99042",
+      "bytes": 1717
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/reviews/trigger-source-review.md",
+      "published": "trigger-source-review.txt",
+      "sha256": "0f4bd4402aca9d80d5b73af56c5c46cad2e7e112bf69717c45c5c9b23c169229",
+      "bytes": 7270
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/integration/pre-edit/myhomeserver1-3.87.13-event-trigger.md",
+      "published": "historical-bnil-page.txt",
+      "sha256": "68524eb6514d4663ca9d0cec87a47cb70ffc5d6797b054c76f53907c01a68e89",
+      "bytes": 5795
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/integration/pre-edit/myhomeserver1-3.87.13-research-synthesis.md",
+      "published": "historical-synthesis-page.txt",
+      "sha256": "5d9426583d60ffe1618b2a82e0bf9bd97426387a6245c7b8e6500bfe09cdc5c1",
+      "bytes": 13242
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/integration/DOCUMENT_PATCH.json",
+      "published": "document-patch.json",
+      "sha256": "4e16607b472ca6a835f183b8cb4d23881bf1ab0a9579035f4bfcbbf6293f557e",
+      "bytes": 6153
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/SOURCE_CHECKS.json",
+      "published": "source-checks.json",
+      "sha256": "d7f01e2e47bc3cd23e40df856eeb11c662f3e7655388d190f44fa3302d0202ee",
+      "bytes": 556
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "ELF_class": 64,
+  "PT_LOAD": [
+    [
+      1,
+      5,
+      0,
+      0,
+      0,
+      2106758,
+      2106758,
+      65536
+    ],
+    [
+      1,
+      6,
+      2107680,
+      2173216,
+      2173216,
+      51288,
+      58200,
+      65536
+    ]
+  ],
+  "fixed_guards": [
+    {
+      "VA": "0x10fe74",
+      "word": "aa0003f3"
+    },
+    {
+      "VA": "0x10fe9c",
+      "word": "aa0103f5"
+    },
+    {
+      "VA": "0x10ff0c",
+      "word": "a9400821"
+    },
+    {
+      "VA": "0x10ff1c",
+      "word": "8b020022"
+    },
+    {
+      "VA": "0x10ff20",
+      "word": "97ff9bd0"
+    },
+    {
+      "VA": "0x10ff38",
+      "word": "aa1403e0"
+    },
+    {
+      "VA": "0x10ff3c",
+      "word": "97fc4f59"
+    },
+    {
+      "VA": "0x10ff44",
+      "word": "11000400"
+    },
+    {
+      "VA": "0x10ff48",
+      "word": "12001c18"
+    },
+    {
+      "VA": "0x10ff70",
+      "word": "7100071f"
+    },
+    {
+      "VA": "0x10ff74",
+      "word": "54002849"
+    },
+    {
+      "VA": "0x10ff78",
+      "word": "910763f9"
+    },
+    {
+      "VA": "0x10ff80",
+      "word": "aa1903e0"
+    },
+    {
+      "VA": "0x10ff84",
+      "word": "97fc4f13"
+    },
+    {
+      "VA": "0x10ffd0",
+      "word": "97fc5190"
+    },
+    {
+      "VA": "0x10ffd8",
+      "word": "aa1703e0"
+    },
+    {
+      "VA": "0x10fff0",
+      "word": "97fc50d8"
+    },
+    {
+      "VA": "0x10fff4",
+      "word": "aa1703e1"
+    },
+    {
+      "VA": "0x10fff8",
+      "word": "aa1903e0"
+    },
+    {
+      "VA": "0x10fffc",
+      "word": "97fc5185"
+    },
+    {
+      "VA": "0x110000",
+      "word": "f94002a1"
+    },
+    {
+      "VA": "0x110004",
+      "word": "aa1703e0"
+    },
+    {
+      "VA": "0x110008",
+      "word": "52800102"
+    },
+    {
+      "VA": "0x11000c",
+      "word": "97fc5085"
+    },
+    {
+      "VA": "0x110010",
+      "word": "aa0003e2"
+    },
+    {
+      "VA": "0x110014",
+      "word": "f9406be0"
+    },
+    {
+      "VA": "0x110018",
+      "word": "f85e8001"
+    },
+    {
+      "VA": "0x11001c",
+      "word": "8b010280"
+    },
+    {
+      "VA": "0x110020",
+      "word": "b4000922"
+    },
+    {
+      "VA": "0x110024",
+      "word": "52800001"
+    },
+    {
+      "VA": "0x110028",
+      "word": "97fc5286"
+    },
+    {
+      "VA": "0x11002c",
+      "word": "9100e3f5"
+    },
+    {
+      "VA": "0x110030",
+      "word": "52800001"
+    },
+    {
+      "VA": "0x110034",
+      "word": "aa1503e0"
+    },
+    {
+      "VA": "0x110038",
+      "word": "97fc4f3e"
+    },
+    {
+      "VA": "0x11003c",
+      "word": "910183fb"
+    },
+    {
+      "VA": "0x110040",
+      "word": "aa1b03e0"
+    },
+    {
+      "VA": "0x110044",
+      "word": "97fc52e7"
+    },
+    {
+      "VA": "0x110048",
+      "word": "910283fc"
+    },
+    {
+      "VA": "0x11004c",
+      "word": "910243e3"
+    },
+    {
+      "VA": "0x110050",
+      "word": "aa1503e2"
+    },
+    {
+      "VA": "0x110054",
+      "word": "aa1403e1"
+    },
+    {
+      "VA": "0x110058",
+      "word": "aa1b03e0"
+    },
+    {
+      "VA": "0x11005c",
+      "word": "a9097ffc"
+    }
+  ],
+  "import_call_proofs": [
+    {
+      "GOT": "0x21e430",
+      "PLT": "0x23b80",
+      "PLT_bytes_hex": "d00f00f0111a42f910c2109120021fd6",
+      "actual_relocation": "000000000021e430  0000001e00000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNSt10filesystem7__cxx114path5_ListC1Ev@GLIBCXX_3.4.26 + 0",
+      "call": "0x10ff2c",
+      "symbol": "_ZNSt10filesystem7__cxx114path5_ListC1Ev"
+    },
+    {
+      "GOT": "0x21e6f8",
+      "PLT": "0x24110",
+      "PLT_bytes_hex": "d00f00d0117e43f910e21b9120021fd6",
+      "actual_relocation": "000000000021e6f8  0000007f00000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNSt10filesystem7__cxx114path14_M_split_cmptsEv@GLIBCXX_3.4.26 + 0",
+      "call": "0x10ff34",
+      "symbol": "_ZNSt10filesystem7__cxx114path14_M_split_cmptsEv"
+    },
+    {
+      "GOT": "0x21e4c0",
+      "PLT": "0x23ca0",
+      "PLT_bytes_hex": "d00f00f0116242f91002139120021fd6",
+      "actual_relocation": "000000000021e4c0  0000003200000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNSt10filesystem6statusERKNS_7__cxx114pathE@GLIBCXX_3.4.26 + 0",
+      "call": "0x10ff3c",
+      "symbol": "_ZNSt10filesystem6statusERKNS_7__cxx114pathE"
+    },
+    {
+      "GOT": "0x21e458",
+      "PLT": "0x23bd0",
+      "PLT_bytes_hex": "d00f00f0112e42f91062119120021fd6",
+      "actual_relocation": "000000000021e458  0000002300000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNSt8ios_baseC2Ev@GLIBCXX_3.4 + 0",
+      "call": "0x10ff84",
+      "symbol": "_ZNSt8ios_baseC2Ev"
+    },
+    {
+      "GOT": "0x21e978",
+      "PLT": "0x24610",
+      "PLT_bytes_hex": "d00f00d011be44f910e2259120021fd6",
+      "actual_relocation": "000000000021e978  000000de00000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNSt9basic_iosIcSt11char_traitsIcEE4initEPSt15basic_streambufIcS1_E@GLIBCXX_3.4 + 0",
+      "call": "0x10ffd0",
+      "symbol": "_ZNSt9basic_iosIcSt11char_traitsIcEE4initEPSt15basic_streambufIcS1_E"
+    },
+    {
+      "GOT": "0x21e818",
+      "PLT": "0x24350",
+      "PLT_bytes_hex": "d00f00d0110e44f91062209120021fd6",
+      "actual_relocation": "000000000021e818  000000ab00000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNSt13basic_filebufIcSt11char_traitsIcEEC1Ev@GLIBCXX_3.4 + 0",
+      "call": "0x10fff0",
+      "symbol": "_ZNSt13basic_filebufIcSt11char_traitsIcEEC1Ev"
+    },
+    {
+      "GOT": "0x21e978",
+      "PLT": "0x24610",
+      "PLT_bytes_hex": "d00f00d011be44f910e2259120021fd6",
+      "actual_relocation": "000000000021e978  000000de00000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNSt9basic_iosIcSt11char_traitsIcEE4initEPSt15basic_streambufIcS1_E@GLIBCXX_3.4 + 0",
+      "call": "0x10fffc",
+      "symbol": "_ZNSt9basic_iosIcSt11char_traitsIcEE4initEPSt15basic_streambufIcS1_E"
+    },
+    {
+      "GOT": "0x21e780",
+      "PLT": "0x24220",
+      "PLT_bytes_hex": "d00f00d011c243f910021e9120021fd6",
+      "actual_relocation": "000000000021e780  0000009100000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNSt13basic_filebufIcSt11char_traitsIcEE4openEPKcSt13_Ios_Openmode@GLIBCXX_3.4 + 0",
+      "call": "0x11000c",
+      "symbol": "_ZNSt13basic_filebufIcSt11char_traitsIcEE4openEPKcSt13_Ios_Openmode"
+    },
+    {
+      "GOT": "0x21eb90",
+      "PLT": "0x24a40",
+      "PLT_bytes_hex": "d00f00d011ca45f910422e9120021fd6",
+      "actual_relocation": "000000000021eb90  0000012800000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNSt9basic_iosIcSt11char_traitsIcEE5clearESt12_Ios_Iostate@GLIBCXX_3.4 + 0",
+      "call": "0x110028",
+      "symbol": "_ZNSt9basic_iosIcSt11char_traitsIcEE5clearESt12_Ios_Iostate"
+    },
+    {
+      "GOT": "0x21e508",
+      "PLT": "0x23d30",
+      "PLT_bytes_hex": "d00f00f0118642f91022149120021fd6",
+      "actual_relocation": "000000000021e508  0000003b00000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZN4Json5ValueC1ENS_9ValueTypeE + 0",
+      "call": "0x110038",
+      "symbol": "_ZN4Json5ValueC1ENS_9ValueTypeE"
+    },
+    {
+      "GOT": "0x21ec60",
+      "PLT": "0x24be0",
+      "PLT_bytes_hex": "d00f00d0113246f91082319120021fd6",
+      "actual_relocation": "000000000021ec60  0000014800000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZN4Json17CharReaderBuilderC1Ev + 0",
+      "call": "0x110044",
+      "symbol": "_ZN4Json17CharReaderBuilderC1Ev"
+    }
+  ],
+  "imported_table_proofs": [
+    {
+      "GOT": "0x21efe0",
+      "actual_relocation": "000000000021efe0  0000015e00000401 R_AARCH64_GLOB_DAT     0000000000000000 _ZTTSt14basic_ifstreamIcSt11char_traitsIcEE@GLIBCXX_3.4 + 0",
+      "binding": "Candidate imported table under ordinary ABI/binding premises, not observed live pointers",
+      "symbol": "_ZTTSt14basic_ifstreamIcSt11char_traitsIcEE"
+    },
+    {
+      "GOT": "0x21ee70",
+      "actual_relocation": "000000000021ee70  0000009f00000401 R_AARCH64_GLOB_DAT     0000000000000000 _ZTVSt14basic_ifstreamIcSt11char_traitsIcEE@GLIBCXX_3.4 + 0",
+      "binding": "Candidate imported table under ordinary ABI/binding premises, not observed live pointers",
+      "symbol": "_ZTVSt14basic_ifstreamIcSt11char_traitsIcEE"
+    }
+  ],
+  "inherited_constructor_context": {
+    "actual_call_VA": "0x105760",
+    "role": "Same provided destinationX0/sourceX1, selected existing SceneRunner caller; constructor/type/owner facts inherited only",
+    "span": {
+      "bytes_hex": "3f2303d5fd7bbda9fd030091f35301a9f30300aaf40302aaf55b02a9f50303aac02900940004004f63a202917ff2017976a202917fea0339e20315aae10314aae00313aa600000ad600001ad60828e3c4ccfff97f35341a9f55b42a9fd7bc3a8bf2303d5c0035fd6",
+      "end_VA_exclusive": "0x1057a8",
+      "name": "owner-constructor",
+      "sha256": "b8c9e1e6d40ac264747e73903f3c7cf664307155ca69573105f79f4f3409e894",
+      "start_VA": "0x105740"
+    },
+    "target": "0x10fe60"
+  },
+  "machine": 183,
+  "models_fixtures_SQL_target_IO": 0,
+  "new_code_spans": [
+    {
+      "bytes": 512,
+      "bytes_hex": "3f2303d5fd7bbaa9620800f0fd030091f35301a9f30300aa04800191f55b02a90340019106200291f76303a905e0019101e6072ff96b04a9fa0300aaf50301aa0004004ffb7305a9ffc30bd142bc46f9f4430391e40b00f9f7830391e31300f9400040f9e07701f9000080d2600200ad02208052600a803de00314aa400f833c5f0b00f9e60f00f9e51700f97f4a00b9647e05a97f82013962e20079663e00f97f4200f97f220239614e00fd210840a97f4201797f8a0239f76b00f92200028bd09bff97f6c30391e00316aa154ffc97e00314aa7750fc97e00314aa594ffc97e17b40f900040011181c0012610000b4e00316aa074ffc97e06b40f91f0017eb80000054e17340f921040091e950fc971f07007149280054f9630791760800f0e00319aa134ffc97600800f0ff7305790004004fff5b01f900f047f9010080d2c29646f9e00316ad188040a942400091f86b00f9e00700f903835ef8e2ef00f9806a23f8ff6f00f900835ef88002008b9051fc97610800f0e00317aa213847f92260009121000191e26b00f9e1ef00f9d850fc97e10317aae00319aa8551fc97a10240f9e00317aa020180528550fc97e20300aae06b40f901805ef88002018b220900b4010080528652fc97f5e3009101008052e00315aa3e4ffc97fb830191e0031baae752fc97fc830291e3430291e20315aae10314aae0031baafc7f09a9",
+      "end_exclusive": "0x110060",
+      "sha256": "08a0383cc5d37e4fc68c343ed78a728395fde571645bac4946d8547102711078",
+      "start": "0x10fe60"
+    }
+  ],
+  "original": {
+    "bytes": 2161128,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager",
+    "role": "Own immutable original ELF",
+    "sha256": "5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62"
+  },
+  "original_execution": 0,
+  "procedural_defect_preserved": "No authorization file existed before display; inline wrong105768 precheck failed and nexttool incorrectly continued; prior parent static authorization existed, actual post-read decision before canonical report/code",
+  "reader_setup": {
+    "CharReaderBuilder": "SP+0x60=96decimal",
+    "JsonValue": "SP+0x38=56decimal, constructor with numeric0",
+    "argument_registers_at_end": {
+      "X0": "SP+0x60 builder",
+      "X1": "SP+0xd0=208decimal stream candidate",
+      "X2": "SP+0x38 value; X21 has been repurposed from earlier source role",
+      "X3": "SP+0x90=144decimal error-string storage"
+    },
+    "no_instruction_at_or_after_0x110060_retained": true,
+    "parser_call_or_result_in_scope": false
+  },
+  "source_argument": {
+    "filebuf_open_call": "0x11000c",
+    "filebuf_open_mode": "numeric8 only, no complete mode/provider semantics",
+    "filebuf_open_path_pointer": "0x110000:[X21]\u2192X1",
+    "filebuf_open_this": "SP+0xe0=224decimal",
+    "first_pointer_and_word_pair": "0x10ff0c",
+    "incomingX1_saved_toX21": "0x10fe9c",
+    "local_path_range_request": "0x10ff20\u21920xf6e60 bodyopaque",
+    "result_nonzero_continuation": "clear numeric0 request then JsonValue/CharReaderBuilder construction",
+    "result_zero_branch": "0x110020\u21920x110144, targetbodyopaque"
+  },
+  "status_gate": {
+    "formula": "((low32_result+1)&0xff)",
+    "no_filetype_enum_interpretation": true,
+    "request": "0x10ff3c",
+    "unsigned_le1_branch": "0x10ff74\u21920x11047c, bodyopaque"
+  },
+  "storage_reuse": "SP+0xd0 used for temporary path then stream candidate; no same unchanged semantic object inferred"
+}

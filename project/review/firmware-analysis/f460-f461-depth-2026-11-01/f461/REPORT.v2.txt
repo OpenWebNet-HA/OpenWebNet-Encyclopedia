@@ -1,0 +1,36 @@
+# F461 2.0.11: original automation translation registration and local admission
+
+This new static packet closes a concrete packaged plugin-to-registry request and its own direction/representation gates. It does not establish a running plugin, accepted wire grammar, physical automation behavior or a public WHO support table. Device0208 documents F461 third-party integration; that role does not assign electrical or command meaning to the numeric fields below.
+
+## Exact source and mapping
+
+Both originals are ELF64 little-endian AArch64 shared objects. Addresses below are link-time VAs, not runtime addresses. SOURCE.json records fresh PT_LOAD mappings and selected raw instruction words; seven complete selected disassembly spans and original relocation/dynamic/symbol metadata accompany it. No F454, MH202 or MHS32 layout was reused.
+
+- `/home/bticino/libcoso/libplug_automation_tr.so` SHA256 `d7d361798ccec65843bd41c9ad7b8897645a334b0cd08121d372949f78eac277`.
+- `/home/bticino/libcoso/libcoso.so` SHA256 `572bca218965a040393361bea4044b0d55519b4f2146ef69c9aa18d4aa6ef690`.
+
+## Descriptor to concrete registry request
+
+Plugin `init_plugin`0x2150 preserves its input pointer and uses an already-initialized word at0x1822c to return0 early. The selected remaining path requests a16-byte zero allocation at0x2200. ADRP0x21f8 plus LDR0x2208 reaches GOT0x17fc8; its GLOB_DAT relocation names `automation_tr` at0x18190. The new private pointer is stored to that descriptor+88 at0x221c.
+
+Initial descriptor words0..20 are `[0,1,0,1,1,68]`. The path writes word+8=6, pointer+24, word+40=2, zeros list slots+72/+80, requests append of pointer-valued integers1 and2 respectively, and calls imported `register_translation` at0x22a8 with the same descriptor pointer. These numeric fields are not renamed public WHO or message types without the full dispatcher consumer. ABS64 relocations at0x181c0 and0x181c8 bind descriptor+48 to `automation_tr_init`0x38b0 and descriptor+56 to `automation_tr_translate`0x3a30.
+
+The packaged libcoso candidate defines `register_translation`0x2870: it obtains a manager via get_plug_m(0), requests unregister of the supplied descriptor, prepends that same pointer to manager+32, stores a newly obtained manager to descriptor+96, loads descriptor+48, conditionally calls it with the descriptor and returns0. This positively explains the initializer callback slot. Effective dynamic binding/interposition, list/provider allocation success and actual loading remain premises; the plugin's DT_NEEDED metadata does not directly name libcoso. The translation callback address is established by relocation, while the outer actual indirect translator caller remains untraced.
+
+Initializer0x38b0 reads descriptor+88, allocating/storing a private16-byte block if null at0x3a1c..3a2c. It initializes private word+4=3 and pointer+8=NULL, then delegates `automation_cfg_position`; a nonnull result can override those fields via a copied integer and duplicated string. Configuration/helper output and later operating state were not executed.
+
+## Own local direction and representation gates
+
+At translator0x3a30 the supplied arguments are captured as axisA=W0, axisB=W1, record=X2 and descriptor=X4. Its original code admits only selected axis pairs `(1,2)` (0x3a8c→0x3ad8→0x3aec→0x3cb8) or `(2,1)` (0x3a94→0x3b30→0x3b44). Other axis values take a log/return1 route. This is actual local source control flow; no semantic input fixtures or target execution were used.
+
+On the selected `(1,2)` path, record word+40 equal4 branches separately0x4340. Otherwise word+56 must equal1 (0x3cf4..3cfc); unequal branches0x4380. Word+40 equal11 takes another branch0x41c0. The remaining selected word+40 values3 or9 pass the CMP/CCMP/NE gate0x3d0c..3d14. The source then reads the pointer at record+0 and requests four two-character duplications at pointer offsets0,2,4,6 (0x3d18..3d5c). This establishes a concrete preexisting-record→local byte-slice handoff. It does not prove pointer validity, string length/encoding, an accepted bus frame, output delivery or the meaning of category3/9. The subsequent parsing/formatting branches are outside this bounded packet.
+
+The opposite `(2,1)` path separately checks record word+56 for2/3, and if3 reads a parsed-object pointer from record+0 then word+104 (0x3b8c..3bc4). This is fresh layout evidence only, not a transferred parser/type enum or command matrix. No whole converter support or serialization claim follows.
+
+## Reproduction and limits
+
+Run `python3 -B work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/collect_routing_v2.py --check`. The collector uses the verified F461 ImageVFS, maps original segments, asserts16 exact instruction words and descriptor fields/relocation names, and recreates host binutils metadata and seven selected spans. First generation refuses overwrite and immediately snapshots report, collector and every output using a precomputed index. Host-only source analysis: original instructions executed0, vendor/target process0, semantic fixtures/models0. No configuration credential values or raw private data are exported. No authentication, session, framing, receiving, transport, MQTT or libjel body was examined.
+
+Next gaps are the actual libcoso indirect translation caller and criteria interpretation, natural record construction/admission, configuration helper provenance, and selected output serialization. Runtime activation, provider binding and physical/public meaning remain unclosed. These gaps do not negate the positive descriptor and local guard joins above.
+
+The v1 collector stopped before outputs on an incorrectly resolved workspace parent; FAILURE_HISTORY.json and exact development-v1 copies preserve that failure. The new v2 fixes only that host path and authoritative version references. All original guards and source conclusions are unchanged.

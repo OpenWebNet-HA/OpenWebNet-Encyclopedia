@@ -1,0 +1,25 @@
+{
+  "files": [
+    {
+      "source": "work/remaining-firmware-investigation/2026-11-01-run06/reviews/integration-review.md",
+      "export": "project/review/firmware-analysis/remaining-firmware-run06-2026-11-01/integration-review.txt",
+      "bytes": 12767,
+      "sha256": "07da06fda272312d29917e983d9c8fcfbcf9f613f3720960533a40a9999857b5",
+      "role": "Actual completed review/currentidentity/strictchecks gate"
+    },
+    {
+      "source": "work/remaining-firmware-investigation/2026-11-01-run06/VALIDATION.json",
+      "export": "project/review/firmware-analysis/remaining-firmware-run06-2026-11-01/validation.json",
+      "bytes": 7130,
+      "sha256": "b67fb42c903f78589def1758b485ddd94c8129193939d76f11e95ad9223c90e1",
+      "role": "Actual completed review/currentidentity/strictchecks gate"
+    },
+    {
+      "source": "work/remaining-firmware-investigation/2026-11-01-run06/FINAL_CHECKS.json",
+      "export": "project/review/firmware-analysis/remaining-firmware-run06-2026-11-01/checks.json",
+      "bytes": 1011,
+      "sha256": "bf60a9a9c5cb43d3f3469519c4a5f140f4ae7cf57b765304048b86e7101b0872",
+      "role": "Actual completed review/currentidentity/strictchecks gate"
+    }
+  ]
+}

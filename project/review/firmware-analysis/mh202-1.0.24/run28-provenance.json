@@ -1,0 +1,138 @@
+{
+  "checkpoint": "run28",
+  "status": "Two bounded static source areas, later-navigation and independentreviews; documentary/finalvalidation recordedseparately",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "reviewed static GSource and ownWHO25 reference/caller contract",
+      "research_path": "work/mh202-firmware/research/2026-10-30/who25/run28-source/REPORT.md",
+      "source_sha256": "d3c4f4f85dbd6b5417ddf0173b537491babdb411da6821c3780f2832e006217e",
+      "published": "run28-source-ownership-report.txt",
+      "published_sha256": "d3c4f4f85dbd6b5417ddf0173b537491babdb411da6821c3780f2832e006217e"
+    },
+    {
+      "role": "independent originalsource/host-only review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run28/source-ownership-review.md",
+      "source_sha256": "2dcc2aaa20236b5fda6fd5fbf78961e387c5158c104dade12e8a978b7c8d7fc1",
+      "published": "run28-source-ownership-review.txt",
+      "published_sha256": "2dcc2aaa20236b5fda6fd5fbf78961e387c5158c104dade12e8a978b7c8d7fc1"
+    },
+    {
+      "role": "reviewed static localpath/descriptor/readAPI boundary; R-P unresolved",
+      "research_path": "work/mh202-firmware/research/2026-10-30/lifecycle/run28/REPORT.v2.md",
+      "source_sha256": "59a19126dfca9f0ff909b04f7e70af1f9df5ec2f09f368b70c93942fb0d81d5c",
+      "published": "run28-fifo-report.txt",
+      "published_sha256": "59a19126dfca9f0ff909b04f7e70af1f9df5ec2f09f368b70c93942fb0d81d5c"
+    },
+    {
+      "role": "exacttwo wording substitutions, firstcandidate unchanged",
+      "research_path": "work/mh202-firmware/research/2026-10-30/lifecycle/run28/WORDING_REFINEMENT.md",
+      "source_sha256": "15c0350d69c0d835114651ec70c1a6b5a2f97caea8634c89d7c8a5a806d6cc46",
+      "published": "run28-fifo-wording-refinement.txt",
+      "published_sha256": "15c0350d69c0d835114651ec70c1a6b5a2f97caea8634c89d7c8a5a806d6cc46"
+    },
+    {
+      "role": "independent originalsource/host-only review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run28/fifo-review.md",
+      "source_sha256": "282d65fa08f982d0688f800d63bdae273a5e2535e0886cb31085596137b31690",
+      "published": "run28-fifo-review.txt",
+      "published_sha256": "282d65fa08f982d0688f800d63bdae273a5e2535e0886cb31085596137b31690"
+    },
+    {
+      "role": "9bounded navigationrows23..27; new28source excluded",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run28/candidate-v3/LATER_FINDINGS.md",
+      "source_sha256": "dad01efec97fce3645a644a29347d652b243d305429d1bbe49fa9d3c040bf347",
+      "published": "run28-later-findings.txt",
+      "published_sha256": "dad01efec97fce3645a644a29347d652b243d305429d1bbe49fa9d3c040bf347"
+    },
+    {
+      "role": "savedvalidation metadata23..27, not newtests or semanticaudit",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run28/candidate-v3/VERIFICATION_EXTENSION.md",
+      "source_sha256": "47e6cc03475f9fb90265f0054c53eff3252fa98d183ddafe9aaef341297ef2a9",
+      "published": "run28-verification-extension.txt",
+      "published_sha256": "47e6cc03475f9fb90265f0054c53eff3252fa98d183ddafe9aaef341297ef2a9"
+    },
+    {
+      "role": "independent413pins/15links/3version preservation review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run28/navigation-review.md",
+      "source_sha256": "d0b1cf4bf79cb5b319aa743ed39ad22b523d25a5aca2e7dcbf8c2cb431e76a9b",
+      "published": "run28-navigation-review.txt",
+      "published_sha256": "d0b1cf4bf79cb5b319aa743ed39ad22b523d25a5aca2e7dcbf8c2cb431e76a9b"
+    },
+    {
+      "role": "readtime finalassembly requirements through27, not finalcompletion",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run28/morning-preflight.md",
+      "source_sha256": "1ab464da9423b4f8ca0adcdac1d7caf6c2817b3f2853b58c6a052559b1775e16",
+      "published": "run28-morning-preflight.txt",
+      "published_sha256": "1ab464da9423b4f8ca0adcdac1d7caf6c2817b3f2853b58c6a052559b1775e16"
+    },
+    {
+      "role": "preservedv1wording/v2linkdepth/currentv3 correction history",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run28/VERSION_HISTORY.v3.json",
+      "source_sha256": "e67821f3436b511b54dffc6e571be5d128558237dd076760f4a6bef6c65b4f95",
+      "published": "run28-navigation-history.json",
+      "published_sha256": "e67821f3436b511b54dffc6e571be5d128558237dd076760f4a6bef6c65b4f95"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/who25/run28-source/collect_source_v1.py",
+      "sha256": "8a2bfa7302f87a7ecd0b84be56e6f6e61dc6f3c877d639b11b2a3a397c9d2717",
+      "method": "static hostsource or savedhashnavigation; originalexecution0"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/lifecycle/run28/collect_fifo_v1.py",
+      "sha256": "1525af71d5f58d6759044032cc2db378e6b3b235c8d5f520f61204540c00b0ec",
+      "method": "static hostsource or savedhashnavigation; originalexecution0"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run28/build_later_navigation_v3.py",
+      "sha256": "767cc62cd95b76a98f13d1ee04d5eb668506c1ef1d30d7304f93dc5e0c12c294",
+      "method": "static hostsource or savedhashnavigation; originalexecution0"
+    }
+  ],
+  "new_original_execution": 0,
+  "generated_outputs": {
+    "source_ownership_including_manifest": 27,
+    "FIFO_including_manifest": 14,
+    "current_navigation_v3_including_manifest": 6,
+    "total": 47,
+    "historical_navigation_candidates": "v1/v2 separatelypreserved, not countedagain as currentcoverage"
+  },
+  "host_source_ledgers": 7,
+  "canonical_execution": {
+    "corpora": 15,
+    "top_level_entries": 71,
+    "original_instruction_visits": 31961,
+    "primitive_callbacks": 3165,
+    "linker_redirect_callbacks": 132,
+    "exit_boundaries": 27,
+    "selector_read_stop_boundaries": 2,
+    "code_hook_visits": 35287,
+    "firmware_processes": 0,
+    "target_OS_calls": 0
+  },
+  "navigation": {
+    "through_checkpoint": 27,
+    "new28findings_excluded": true,
+    "rows": 9,
+    "inputs": 413,
+    "saved_checkpoints": [
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "candidate": "reconciliation/run28/candidate-v3",
+    "scope": "Supplement24through21+2run22; rowcounts notcoverage or semanticreaudit"
+  },
+  "limits": [
+    "GSourceclosedarithmetic notwholeframeworklifetime/leak/scheduling/physicalproof",
+    "FIFOlocalpath/open-global/readAPIrequest only; noresponsepayload/framing/thirdpartydelegateinspection or globalR-Pabsence",
+    "Original15corpora unchanged and not replayed; targetprocessOS0",
+    "Prior18/21missingintermediatehistory stillunverified; newfirstcandidates/versionhistory preserved",
+    "WiderDevice/sourcegatespending; tooling31tests/Device210checksinheritedrun1"
+  ]
+}

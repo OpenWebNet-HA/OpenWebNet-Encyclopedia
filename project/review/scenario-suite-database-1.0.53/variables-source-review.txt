@@ -1,0 +1,49 @@
+# WHO17 database variables: independent source review
+
+PASS within the stated static catalogue/source-comparison scope; no correction requested. I reproduced the read-only collector and independently queried the exact original database, checked raw base rows/joins/ordered address sets, schema/PK metadata, frozen references and all first copies. This is current SQL/source evidence review, not execution of a vendor generator/UI, target parser/firmware process or actual scenario. No original/native execution, network/device work, database writes or old corpus replay occurred. Only this NEW review is written.
+
+## Reproduction and source checks
+
+`python3 -B work/mh202-firmware/research/2026-10-31-database-analysis/variables/collect_variables_v1.py --check` passes5 outputs/17 exact queries/28 selected schemas/828 returned rows/original_execution0. The source is the2542592-byte canonical SuiteDB, SHA256ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29 before/after. Absolute mode=ro/immutable URI and query_only/trusted_schema settings are explicit; no vendor/extension execution or query-side mutation is used.
+
+I separately reran every saved SQL statement against that source and compared complete row values/order/counts, and checked each selected table's PRAGMA columns/FK metadata. All28 selected tables have no declared FKs; the equality joins remain analyst relations, not enforced application contracts. All4 input identity records,2 frozen reference bytes and7 actual initial report/collector/output copies match their hashes/current files. The snapshot index excludes itself and was computed before opening its output. Manifest/source/report hashes match. Both frozen references also match the actual original WHO17 page and completed functional/run19 report at review time; future canonical edits need not silently repin them.
+
+## Independently corroborated database rows
+
+Own base-record queries confirm objects66 Counter and67 Boolean, family16, and composite associations(66,17)/(67,17) to ANA_CHI17 whose separate OPEN_CHI text is17. This establishes an explicit local-ID-to-stored-WHO relation, not a universal equation of IDs. The12 command associations1501..1512,8 compile PKs579..585/623 and3 status PKs65..67 match the report. Area IDs/labels are raw database evidence, not the old ScenarioDevices CategoryFlag enum or proven scheduling behavior.
+
+Counter command618's OnlyIf declaration6 and commands619/620/621 action fragments #6*%cv%, #8*1*%cvs%, #8*0*%cvs% are preserved separately from Boolean622/623 event/state7*1/7*0 and624/625 actions #7*1/#7*0. All8 selected compile rows literally order #ID_CHI,ID_DOVE,ID_COSA; no vendor substitution/complete generated frame is claimed. Boolean622/623 associations include area4, while their compile COND_OK_AREA values are0 and status CUSTOM_VALUTATION is1. The report retains that tension and the unknown separate evaluation route rather than inferring either universal OnlyIf support or absence.
+
+I independently checked all6 object/area address lists as exact raw strings1..128 in ID_DOVE order, not only converted min/max endpoints. Each list has128 rows; Counter appears in areas4/5 and Boolean3/4/5/6. The raw IDs8535..8662 and8663..8790 are not those transmitted strings. Selected GESTIONE_CUSTOM differences and shared WHEREtype23 label/REGEXP text remain metadata, not an executed validator or full address grammar. Scoped misses for candidate parameter-owner IDs88/89, exception and extension queries do not prove global absence; identical ID_ASS names do not establish ownership.
+
+Status rows literally request dimension strings6/7 via type2 and declare EXTRACTVALUE/reply dimensions6/7/parameter string1, with the separate custom-valuation flags. I independently reread these tuples. Parameter1 has no established index base or executed function semantics. No selected DIM8 status declaration is observed, without promoting that scoped absence into unsupported protocol behavior.
+
+Auxiliary field associations64/61/62/63 and raw condition pairs agree: field31 offers=,<,>,<=,>= while29/30 offer only=. Their ID_KIND equality joins lead to range2 If temperature(-50,500,step5,multiplier10,granularity1) or range3 Time within(1,240,step1,multiplier1,granularity2), while all three graphic types are3/text and conversion discriminator0. This is correctly presented as a raw joined declaration/tension, NOT proof that this text-control consumer actually applies ANA_RANGE, temperature/time units, scaling, UI validation or firmware limits. Without the actual discriminator/consumer path, a suspicious numeric join cannot become a confirmed counter-domain defect. That caveat is essential to promotion and is present.
+
+## Firmware/reference comparison and limits
+
+The frozen run19 source report supplies previously reviewed static evidence for selected1..128 slots, word0x1b928 versus byte0x1bb28, DIM6 precheck store/unsigned response guard, DIM7 guarded byte write and DIM8 directional/clamped DIM6 response. The database addresses/direction/Boolean labels provide strong new catalogue context for those selected handlers, not an executed Suite-to-firmware roundtrip or new original instructions. I previously authored/reviewed that area; the inherited-source comparison is source-aware rather than an independent new firmware audit. Query sentinels/unnormalized reads/local return codes and output-helper boundaries remain preserved.
+
+Canonical WHO17 WHAT1..4 scene availability/execution and the300-file loader are distinct from these indexed slots. DIM7 is not automatically WHAT3/4 availability, named interpreter records are not manager variables, and a UI label does not establish configured runtime/physical behavior. Suite/package/catalogue/firmware version scopes stay separate. The exact field/rule/status consumers, parameter indexing, text-range interpretation and Boolean OnlyIf path remain the useful gaps. No full grammar, live state, physical outcome or broad public support conclusion is approved.
+
+No author/database/repository/old dossier file was edited. The final report appropriately reports early unsaved exploratory SQL mistakes without claiming preserved output history for them; actual first saved candidates are verified. This PASS does not certify unavailable earlier histories outside this candidate.
+
+## Exact reviewed identities
+
+Paths are relative to variables/ unless qualified.
+
+| Artifact | SHA256 |
+|---|---|
+|REPORT.md|d092247c9b31a99f7b5499af59e55e505d0b33479c442fd36d9618cf4a55ee88|
+|collect_variables_v1.py|7cf33829fb7821d1154f1e9558bf5cc06162d27ce063c2dc6b8b2587179cf160|
+|SQL_RESULTS.v1.json|23825daad4facf48b5c1d63c658aae006d7781f19f735c6fd36fd783ce5159dc|
+|SCHEMA.v1.json|ba8bea8f1a1b4e31c1887a15d905298f9d111e61776862aa768cd0f4df733763|
+|INPUTS.v1.json|da66b2ddf85102e26bd12e50999e18fd643d939e363b0652bf4d84a5390bec1e|
+|COMPARISON_REFERENCES.v1.json|e7fea7fa2eea7aad490617ee24b2a5dc96001fed9701df79d876ae691f9c804a|
+|OUTPUT_MANIFEST.v1.json|9e3bbf3513dff0d904b37a6a156309e8334fb510db2d430d07593f9339d26e2d|
+|initial-generated-v1/SNAPSHOT_INDEX.json|1952f42948c60730bdbc8ac422f4890b92ca57990317da0f782f460fa4c5d896|
+|reference-inputs/SOURCE_IDENTITIES.json|009901f3da263e5fc89c28fc2eaf371f91900b106a737421824e9c1e90cb0d1c|
+|reference-inputs/canonical-who17.md|f9825e4dd40ef229a422df501ecaa44378b912833a3c45d3f7d3e8ad796b9402|
+|reference-inputs/mh202-functional-run19.md|bd6ee8b3150d5ce7c277903be38f38a03ed7073b6309614128147b621e53d030|
+
+Complete saved query strings/rows and original PK metadata are in the pinned SQL_RESULTS/SCHEMA artifacts. Reproduction above executes them read-only; the independent additional base-row/status/range/address queries corroborate their exact selected claims without inferring unexamined consumers.

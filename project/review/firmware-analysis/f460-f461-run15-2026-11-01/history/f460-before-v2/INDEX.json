@@ -1,0 +1,11 @@
+{
+  "scope": "Exact single staged-unexecuted collector before requested literal-hex/version correction; no report/output/canonicalattempt existed",
+  "files": [
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/collect_serializer_v1.py",
+      "snapshot": "work/f460-f461-comparison/2026-11-01-run15/integration/f460-before-v2/collect_serializer_v1.py",
+      "bytes": 8410,
+      "sha256": "f8b9a8c7488ac2176669593344d8cf59aec159e90a53ead6bedefb26d09537b3"
+    }
+  ]
+}

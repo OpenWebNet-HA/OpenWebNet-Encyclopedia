@@ -1,0 +1,57 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0003b4f0:
+   3b4f0:	4a1c      	ldr	r2, [pc, #112]	@ (3b564)
+   3b4f2:	4b1d      	ldr	r3, [pc, #116]	@ (3b568)
+   3b4f4:	b570      	push	{r4, r5, r6, lr}
+   3b4f6:	b082      	sub	sp, #8
+   3b4f8:	447a      	add	r2, pc
+   3b4fa:	4605      	mov	r5, r0
+   3b4fc:	58d3      	ldr	r3, [r2, r3]
+   3b4fe:	681b      	ldr	r3, [r3, #0]
+   3b500:	9301      	str	r3, [sp, #4]
+   3b502:	f04f 0300 	mov.w	r3, #0
+   3b506:	f7d6 e8c2 	blx	1168c <__errno_location@plt>
+   3b50a:	2300      	movs	r3, #0
+   3b50c:	6806      	ldr	r6, [r0, #0]
+   3b50e:	4604      	mov	r4, r0
+   3b510:	6003      	str	r3, [r0, #0]
+   3b512:	220a      	movs	r2, #10
+   3b514:	4669      	mov	r1, sp
+   3b516:	4628      	mov	r0, r5
+   3b518:	f7d5 eb42 	blx	10ba0 <strtol@plt>
+   3b51c:	9b00      	ldr	r3, [sp, #0]
+   3b51e:	429d      	cmp	r5, r3
+   3b520:	d015      	beq.n	3b54e
+   3b522:	6823      	ldr	r3, [r4, #0]
+   3b524:	2b22      	cmp	r3, #34	@ 0x22
+   3b526:	d00e      	beq.n	3b546
+   3b528:	b15b      	cbz	r3, 3b542
+   3b52a:	4a10      	ldr	r2, [pc, #64]	@ (3b56c)
+   3b52c:	4b0e      	ldr	r3, [pc, #56]	@ (3b568)
+   3b52e:	447a      	add	r2, pc
+   3b530:	58d3      	ldr	r3, [r2, r3]
+   3b532:	681a      	ldr	r2, [r3, #0]
+   3b534:	9b01      	ldr	r3, [sp, #4]
+   3b536:	405a      	eors	r2, r3
+   3b538:	f04f 0300 	mov.w	r3, #0
+   3b53c:	d10b      	bne.n	3b556
+   3b53e:	b002      	add	sp, #8
+   3b540:	bd70      	pop	{r4, r5, r6, pc}
+   3b542:	6026      	str	r6, [r4, #0]
+   3b544:	e7f1      	b.n	3b52a
+   3b546:	480a      	ldr	r0, [pc, #40]	@ (3b570)
+   3b548:	4478      	add	r0, pc
+   3b54a:	f7d5 ef76 	blx	11438 <_ZSt20__throw_out_of_rangePKc@plt>
+   3b54e:	4809      	ldr	r0, [pc, #36]	@ (3b574)
+   3b550:	4478      	add	r0, pc
+   3b552:	f7d5 ec46 	blx	10de0 <_ZSt24__throw_invalid_argumentPKc@plt>
+   3b556:	f7d5 ee48 	blx	111e8 <__stack_chk_fail@plt>
+   3b55a:	6823      	ldr	r3, [r4, #0]
+   3b55c:	b903      	cbnz	r3, 3b560
+   3b55e:	6026      	str	r6, [r4, #0]
+   3b560:	f7d5 ee48 	blx	111f4 <__cxa_end_cleanup@plt>

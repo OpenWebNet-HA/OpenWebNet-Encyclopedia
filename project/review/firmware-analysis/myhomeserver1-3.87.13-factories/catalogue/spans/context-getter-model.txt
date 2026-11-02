@@ -1,0 +1,9 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0010017c:
+  10017c:	6cc0      	ldr	r0, [r0, #76]	@ 0x4c
+  10017e:	4770      	bx	lr

@@ -1,0 +1,271 @@
+{
+  "files": [
+    {
+      "bytes": 9836,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/mhs-assets/collector.py.txt",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "5d24915043fe124967bd4ec39d866eef516f50d53c8fff6d691822d3b309f9a5",
+      "source": "work/configured-scene-module-investigation/2026-11-02/admission/mhs/collect_admission_v1.py"
+    },
+    {
+      "bytes": 3500,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/mhs-assets/REPORT.txt",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "191e7c46fc321fcad96850d04022f12fbdda6fa462aead336536669e2dabd777",
+      "source": "work/configured-scene-module-investigation/2026-11-02/admission/mhs/REPORT.md"
+    },
+    {
+      "bytes": 1990,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/mhs-assets/INPUTS.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "b5ec11f24449f816df0ff73a2db2862a0cbcf31055526d61b984693dcf0b12fa",
+      "source": "work/configured-scene-module-investigation/2026-11-02/admission/mhs/INPUTS.json"
+    },
+    {
+      "bytes": 2997,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/mhs-assets/ADMISSION.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "f9960fa9a98f1216e36d39c40263158e83c0bc30f228b4c0218d90c04c9b467f",
+      "source": "work/configured-scene-module-investigation/2026-11-02/admission/mhs/ADMISSION.json"
+    },
+    {
+      "bytes": 687,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/mhs-assets/OUTPUT_MANIFEST.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "f55767566028c23ac10b0658b1936988e73c5d494ff2dec699771e660f6916c8",
+      "source": "work/configured-scene-module-investigation/2026-11-02/admission/mhs/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 9870,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f46-assets/collector.py.txt",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "bc1c514948d61dada67ea718a27b8f84d1cc36415f7cac53483e2ee98d99202c",
+      "source": "work/configured-scene-module-investigation/2026-11-02/admission/f46/collect_admission_v1.py"
+    },
+    {
+      "bytes": 2971,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f46-assets/REPORT.txt",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "e32dbc59066ef8ffecd875632ab9490ac2ed384987efd885a813a4820dc7568d",
+      "source": "work/configured-scene-module-investigation/2026-11-02/admission/f46/REPORT.md"
+    },
+    {
+      "bytes": 10927,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f46-assets/INPUT_PINS.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "89c342c4b9aec3f7ff4a2eca8fbede75c36dc12c2ce15b9f6c31a4a0cdf9e413",
+      "source": "work/configured-scene-module-investigation/2026-11-02/admission/f46/INPUT_PINS.json"
+    },
+    {
+      "bytes": 26200,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f46-assets/ASSET_ADMISSION.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "bc3effb54795af6d1743e991e2d33a705d07a704acb5d13b9a92f5614c2a77fe",
+      "source": "work/configured-scene-module-investigation/2026-11-02/admission/f46/ASSET_ADMISSION.json"
+    },
+    {
+      "bytes": 597,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f46-assets/OUTPUT_MANIFEST.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "7efa56536d8972addb48dc01dab3d4609c1358956e1ec4fd59f1b2bd88175b5a",
+      "source": "work/configured-scene-module-investigation/2026-11-02/admission/f46/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 12836,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-filesystem/collector.py.txt",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "fc897bf53c543b598df8fa5093cf95e88fc190bcc5beff77582a23fc41f4f80e",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission/collect_filesystem_v1.py"
+    },
+    {
+      "bytes": 5083,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-filesystem/REPORT.txt",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "69e004bdab8f0bd2a58af69dee1d1b94c294089f108e432bb12ebdf03900d523",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission/REPORT.v2.md"
+    },
+    {
+      "bytes": 4630,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-filesystem/canonical-REPORT.txt",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "cfb0b3b7778fb732dac7f78f65c85c46a48323f461be36d92cc5e2b006e97b65",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission/REPORT.md"
+    },
+    {
+      "bytes": 1092,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-filesystem/INPUT_PINS.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "676f1f6838b13d497ac31abb4a3b9f2ac985a5e47e7fd0e05e36b096c009c4bb",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission/INPUT_PINS.json"
+    },
+    {
+      "bytes": 8870,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-filesystem/SOURCE.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "1129addfdde8a5049b6ab433c0f3af7418a0109cf28a7f863d6551a60e45bff4",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission/SOURCE.json"
+    },
+    {
+      "bytes": 966,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-filesystem/INHERITED_CONTEXT.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "4b6c00e6f9ce79459a8d7bf96dca95258fbf7454cf0898890cf4eaffecaa477f",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission/INHERITED_CONTEXT.json"
+    },
+    {
+      "bytes": 1095,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-filesystem/OUTPUT_MANIFEST.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "8124925c0b08354b09536202373ec24beb601c39b04c000bbe0a342f727df2b4",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 765,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-filesystem/REPORT_VERSION_MAPPING.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "f68202b3c727e4dcfdc868c6ab7cdab67082573a908222f7b5ed005e18f7fc26",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission/REPORT_VERSION_MAPPING.json"
+    },
+    {
+      "bytes": 15398,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-input/collector.py.txt",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "d3c2f57fc9e30e9c7c506efb2813c63e4fc1a63d8c94e3e9dbe58725e5fb6910",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-input-producer/collect_input_v1.py"
+    },
+    {
+      "bytes": 6279,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-input/REPORT.txt",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "3cb67adf71f4a4e8fde4ddc3eae8367e8fc4169519179c8a09685ee9c2eaaa8a",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-input-producer/REPORT.md"
+    },
+    {
+      "bytes": 1721,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-input/INPUT_PINS.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "e3eec55f30a1789d61cc3cbdb705d3f8436f08e9475e3052323cbd73ea4754a0",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-input-producer/INPUT_PINS.json"
+    },
+    {
+      "bytes": 11942,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-input/SOURCE.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "6e7d4d9544c5a94839929d93e7913c0ca4192664ccdb938081ece1edf3ed9b7e",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-input-producer/SOURCE.json"
+    },
+    {
+      "bytes": 925,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-input/OUTPUT_MANIFEST.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "248ac8fb16e91f547165bceaeeafa90ac5beaaa930df8f89a121e520a70ab4db",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-input-producer/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 1907,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-input/PREPARATION_HISTORY.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "47c763a29a29837201c5f530842446a01b68a6cdce8b6667c17dc2a62b53dbde",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-input-producer/PREPARATION_HISTORY.json"
+    },
+    {
+      "bytes": 1034,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-input/POSTREAD_SCOPE.json",
+      "role": "Exact selected identity; admission is metadata only, source reports retain conditional scope/current-versus-canonical roles",
+      "sha256": "22221d7dd8aa47986af0083a12abcbe0b113852f79be4c233527d0308154c9d6",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-input-producer/POSTREAD_SCOPE.json"
+    },
+    {
+      "bytes": 4285,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/mhs-policy-qualification.json",
+      "role": "Admission/policy/qualification/history only, zero additional functional code coverage",
+      "sha256": "f22a71791231fd6153586124c8dcfcfdaf6f135e46f59cd64c13d4d9c448c54a",
+      "source": "work/configured-scene-module-investigation/2026-11-02/admission/mhs/POLICY_QUALIFICATION.json"
+    },
+    {
+      "bytes": 1308,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/mhs-policy-note.txt",
+      "role": "Admission/policy/qualification/history only, zero additional functional code coverage",
+      "sha256": "9c839d7371ce7b0c52b3dffc30e35b6e9f25b1950e735373983a0eb3d0ce7463",
+      "source": "work/configured-scene-module-investigation/2026-11-02/admission/mhs/NOTE.md"
+    },
+    {
+      "bytes": 2118,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/retained-project-context.json",
+      "role": "Admission/policy/qualification/history only, zero additional functional code coverage",
+      "sha256": "8f39c1f62f8720e76c8bb42acbabfa1f7b66b17cb6a09d5c62709ba43c3eb48a",
+      "source": "work/configured-scene-module-investigation/2026-11-02/admission/retained-project-context/CONTEXT.json"
+    },
+    {
+      "bytes": 1867,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/range-helper-boundary.json",
+      "role": "Admission/policy/qualification/history only, zero additional functional code coverage",
+      "sha256": "7c39497be8d113d3f59184ae9e94ee3757306f831dd7203463e7ab4dbdaecc5d",
+      "source": "work/configured-scene-module-investigation/2026-11-02/source/f460-file-scene-producer/QUALIFICATION_BOUNDARY.json"
+    },
+    {
+      "bytes": 1307,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/producer-postread-decision.json",
+      "role": "Admission/policy/qualification/history only, zero additional functional code coverage",
+      "sha256": "500afb708dc04322421dfa927cc369600e14a4b76a4448868ac64f688b0eb3c3",
+      "source": "work/configured-scene-module-investigation/2026-11-02/PRODUCER_POSTREAD_DECISION.json"
+    },
+    {
+      "bytes": 6071,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/reviews/asset-admission-review.txt",
+      "role": "Actual independent selected admission/source review",
+      "sha256": "1c1609dd7098065d3df95d6abc712d62d1e580a28f00e5d07213f6470f77e8a5",
+      "source": "work/configured-scene-module-investigation/2026-11-02/reviews/asset-admission-review.md"
+    },
+    {
+      "bytes": 4532,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/reviews/policy-context-review.txt",
+      "role": "Actual independent selected admission/source review",
+      "sha256": "bae8318d26dfc349fdcd70305a150c8063636d2c113f946ee03d8bb95273b534",
+      "source": "work/configured-scene-module-investigation/2026-11-02/reviews/policy-context-review.md"
+    },
+    {
+      "bytes": 6727,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/reviews/f460-source-review.txt",
+      "role": "Actual independent selected admission/source review",
+      "sha256": "a68545006d382119e29cfb63706eb3aabeb077795e6c5cc0c5bf9b27a442c74b",
+      "source": "work/configured-scene-module-investigation/2026-11-02/reviews/f460-source-review.md"
+    },
+    {
+      "bytes": 7757,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/reviews/f460-producer-review.txt",
+      "role": "Actual independent selected admission/source review",
+      "sha256": "6dd67e3b7b3068a72ee88d69b09233c67223e8988486027c8776d1a1881ca0ad",
+      "source": "work/configured-scene-module-investigation/2026-11-02/reviews/f460-producer-review.md"
+    },
+    {
+      "bytes": 7955,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/synthesis.txt",
+      "role": "Current documentary synthesis/coverage/gaps",
+      "sha256": "3316877d519219639d1161e3d988d821cee2049c28fa31bfb28601bc3e78216a",
+      "source": "work/configured-scene-module-investigation/2026-11-02/SYNTHESIS.md"
+    },
+    {
+      "bytes": 1362,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/coverage.txt",
+      "role": "Current documentary synthesis/coverage/gaps",
+      "sha256": "e1c232a5f9c061d7f6e9e03b8c3ce92aa8fc2e7c963c74afb66a0e21512686ab",
+      "source": "work/configured-scene-module-investigation/2026-11-02/COVERAGE.md"
+    },
+    {
+      "bytes": 1041,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/remaining-questions.txt",
+      "role": "Current documentary synthesis/coverage/gaps",
+      "sha256": "ba36fe4a68c7720af637751717a0ce6f469945b502a1d3c6a4029f662e173502",
+      "source": "work/configured-scene-module-investigation/2026-11-02/RANKED_REMAINING_QUESTIONS.md"
+    },
+    {
+      "bytes": 11635,
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/pre-edit/firmware-index.txt",
+      "role": "Exact firmware index input retained BEFORE edit",
+      "sha256": "2a770e16c29599830e1257b890c6b20033e9154aaaec2c2973b3893dc22719dd",
+      "source": "work/configured-scene-module-investigation/2026-11-02/integration/pre-edit/firmware-index.md"
+    }
+  ],
+  "scope": "Current-v2 exact selected source/history/documentary exports; source facts/code/results unchanged, v1 export manifest remains historical"
+}

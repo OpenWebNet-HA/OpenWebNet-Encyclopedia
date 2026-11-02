@@ -1,0 +1,73 @@
+{
+  "collector_sha256": "2aa19f62d551f01efff27004fb822c76042f3e8a8a17f748cd92f5adad9c7478",
+  "counts": {
+    "TLS_joins": 2,
+    "branches": 5,
+    "guards": 35,
+    "host_semantic_headers": 3,
+    "import_proofs": 2,
+    "inputs": 8,
+    "original_execution": 0,
+    "provider_definitions": 3,
+    "spans": 10
+  },
+  "outputs": {
+    "CONTRACT.json": {
+      "bytes": 1018,
+      "sha256": "d5c52f455905ae851e627dab9e59f1d9fdfc5e206ca66a8a3ed4ce0fb83c5c5c"
+    },
+    "HOST_API_CONTEXT.json": {
+      "bytes": 1627,
+      "sha256": "cb3da4f2ca5301b84c53e6e6f793748703319f7674e98f4ca2eba70081a8feb0"
+    },
+    "INPUTS.json": {
+      "bytes": 1493,
+      "sha256": "68690d922896a96c1226c727e874650e94b065a679168c4f7a4bc403ff467ed3"
+    },
+    "SOURCE.json": {
+      "bytes": 8831,
+      "sha256": "f01faef603836a72f32ddb4105b607859530654a9e7e98d76e0125fd12b426c9"
+    },
+    "spans/callable-storage.txt": {
+      "bytes": 2361,
+      "sha256": "df1c9b86c5680681dd18fcf34af8e9330c318dfd86544664bcd2f9ccfc001c10"
+    },
+    "spans/common-inline-marker.txt": {
+      "bytes": 1869,
+      "sha256": "1873844028b8631f32bea2e4c4d4f8cb2d6c69513bb9ed01d12984f7b218c4ff"
+    },
+    "spans/errno-location.txt": {
+      "bytes": 366,
+      "sha256": "cdf2d84701cbaa34054b16094b5c62a01b201e82ea61e99d2eb9563961bf3b17"
+    },
+    "spans/inherited-constructor-binding.txt": {
+      "bytes": 935,
+      "sha256": "bd784479c30b711377aca6d55fc05b8bcb69c965fb39e129071c33850ff965dc"
+    },
+    "spans/invoker-prefix.txt": {
+      "bytes": 966,
+      "sha256": "0b73e1664fd348db914f06d14469419902952123b4e0b5d801090d40be8d8e3f"
+    },
+    "spans/manager.txt": {
+      "bytes": 1267,
+      "sha256": "8e20a184e848914d36c193a8598d9fe8f1a66f7fb9fb70a1609ad9223b475172"
+    },
+    "spans/marker-accessors.txt": {
+      "bytes": 386,
+      "sha256": "93cb6d08137f55c9f48d7133bb970893c8bc272e12ebdcdf416b81d75ca53622"
+    },
+    "spans/nanosleep-wrapper.txt": {
+      "bytes": 936,
+      "sha256": "6bfb32835ac6f865e7150843305834efe33a6fa8f9a8ba95a81b0c00294b96f7"
+    },
+    "spans/prewait-boundary.txt": {
+      "bytes": 1575,
+      "sha256": "044d68ee803ad2c5747ea1daace6acf912eaf30a92f77cedae07491bde1d933e"
+    },
+    "spans/timing-loop-and-return.txt": {
+      "bytes": 1749,
+      "sha256": "bb8907ff4baab1d1384e25e7a6f0b80cd4ea260cfc98442bdb414e0ff1e2ce49"
+    }
+  },
+  "report_sha256": "ee7c55b26c5587121bdd27347e602d7cc9f5c3105a407d68f84294c19949d521"
+}

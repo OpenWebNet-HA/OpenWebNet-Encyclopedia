@@ -1,0 +1,71 @@
+{
+  "status": "QUALIFICATION_OF_INHERITED_PROOF_NO_NEW_SOURCE_PACKET",
+  "new_functional_source_coverage": 0,
+  "previously_unseen_original_code_bytes": 0,
+  "new_natural_configured_path": false,
+  "prior_report_correction": false,
+  "source_pins": [
+    {
+      "path": "work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager",
+      "bytes": 1406680,
+      "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26"
+    },
+    {
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/REPORT.md",
+      "bytes": 12724,
+      "sha256": "d41cdc4417f72070792d1e45b1930787fd5e5511c61907ce166b2f231f0c5f12"
+    },
+    {
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/SOURCE_SPANS.v1.json",
+      "bytes": 4845,
+      "sha256": "1dfeedf4e1e465a83fbdc3332278289429f61d37b6972f713711cc2a8408bf4b"
+    },
+    {
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/file-constructor-prefix.txt",
+      "bytes": 7395,
+      "sha256": "8bb96af066b8a465b67fdc3189cbaae024cddaee2d7c943957df1c44ea395d7f"
+    },
+    {
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/file-schema-guards.txt",
+      "bytes": 5959,
+      "sha256": "af38ff5e723b069df1972d3573c81fef025bca1192ef3d5e18bf9bb478a9080a"
+    }
+  ],
+  "selected_slice": {
+    "start_VA": "0xb5992",
+    "end_exclusive_VA": "0xb5a5c",
+    "bytes": 202,
+    "sha256": "2e0089519fd5fb262112277514fe9f826adefae3bbde1bdbf8cbfaa4ab061ed3",
+    "mapping": "Own ELF RX PT_LOAD equal VA/file offset, as independently established by prior source packet; original selected slice wholly covered by two retained spans",
+    "inherited_covering_spans": [
+      {
+        "bytes": 412,
+        "end_va_exclusive": "0xb5998",
+        "name": "file-constructor-prefix",
+        "original_image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+        "sha256": "73189ef3b9b44a5e9c571725f235ffdc261ab4cebb78fb8bfd35de694da29f81",
+        "start_va": "0xb57fc"
+      },
+      {
+        "bytes": 234,
+        "end_va_exclusive": "0xb5a82",
+        "name": "file-schema-guards",
+        "original_image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+        "sha256": "4f517ce58ed299c222e327ca950c51383ac73420bf5a1ea34818ae8f60d04594",
+        "start_va": "0xb5998"
+      }
+    ]
+  },
+  "existing_report_scope": "The prior report already disclaimed a complete JSON Schema/all-category admission proof and made no original-category-required or whole-parser-name-required claim. This note corrects no prior source claim.",
+  "offline_schema_caution": [
+    "The inherited selected category access is the non-const Json::Value::operator[] request; later category isMember checks are post-lookup. Under ordinary mutating-access API premises, such postlookup membership alone cannot establish that the original input document required category. Provider implementation remains opaque.",
+    "Selected numeric receiver-word5 leg locally checks id/category and passes SAME root/SAME receiver to31e34, with no name-presence check on that bounded leg. This does NOT establish that name is optional or that a whole input would be accepted.",
+    "Numeric4/5 remain private values. String/category decoding, word4 alternative and ordinary-success external branches are outside the selected bound, so no public category labels, complete admission policy or rejection outcome is inferred."
+  ],
+  "history": "Exploratory objdump initially began atb5990, the second halfword of a prior BLX and therefore unpromoted misaligned output. Alignedb5992 was identified through retained original instruction boundaries. No generated source candidate, failed canonical generation or missing terminal hash is invented.",
+  "root_direction": "Parent explicitly stopped duplicate source packet after exact prior wording comparison; retain this narrow schema caution and asset admission only.",
+  "new_collector_or_guard_matrix_generated": false,
+  "new_original_helper_native_emulator_model_fixture_JSON_SQL_target_runtime_physical_execution": 0,
+  "old_collectors_replayed": false,
+  "repository_or_remote_writes": false
+}

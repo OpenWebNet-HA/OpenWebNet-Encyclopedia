@@ -1,0 +1,65 @@
+[
+  {
+    "bytes": 4,
+    "end_va_exclusive": "0x14e40",
+    "name": "type-byte",
+    "sha256": "3d60dc05dc4c24756d2ca8efc142ade6c166e93868c74098bb3f0c5e00e4a925",
+    "start_va": "0x14e3c"
+  },
+  {
+    "bytes": 116,
+    "end_va_exclusive": "0x15b48",
+    "name": "basic-tag-write",
+    "sha256": "1722e2a99b3513696d4000327fd88e0a659f2e0539130425078497465778c847",
+    "start_va": "0x15ad4"
+  },
+  {
+    "bytes": 112,
+    "end_va_exclusive": "0x15bc4",
+    "name": "value-type-constructor",
+    "sha256": "3cd35db6353241ad4b07356ab28c0f19665d92c15085221ae8db7739693ec53d",
+    "start_va": "0x15b54"
+  },
+  {
+    "bytes": 92,
+    "end_va_exclusive": "0x15c24",
+    "name": "null-singleton",
+    "sha256": "8d3e518f2caaf0623804a0cb69f8a52ce687774fbffede5cfc48d2607179b91d",
+    "start_va": "0x15bc8"
+  },
+  {
+    "bytes": 26,
+    "end_va_exclusive": "0x15c82",
+    "name": "unsigned-constructor",
+    "sha256": "43d4293ae1c5eb820575d3e7bf315657c830904d1b4cc3bdeed590873699f2c9",
+    "start_va": "0x15c68"
+  },
+  {
+    "bytes": 74,
+    "end_va_exclusive": "0x15626",
+    "name": "unsigned-predicate",
+    "sha256": "fce7f98a05f368519492ee56bae1d37f4306ef5baa20f093186c9924023e65ca",
+    "start_va": "0x155dc"
+  },
+  {
+    "bytes": 104,
+    "end_va_exclusive": "0x16b14",
+    "name": "unsigned-conversion-prefix",
+    "sha256": "01891979d28b42a9fbf9bf9e02b4eea0ae50c9d437f9a76f50a322fae4c96525",
+    "start_va": "0x16aac"
+  },
+  {
+    "bytes": 124,
+    "end_va_exclusive": "0x17ef0",
+    "name": "find-normal-paths",
+    "sha256": "f823c759802c56f5d880407cbce467cef5a9bac9da1d77b28b7ed2d56e7db176",
+    "start_va": "0x17e74"
+  },
+  {
+    "bytes": 34,
+    "end_va_exclusive": "0x17f6a",
+    "name": "const-key-access",
+    "sha256": "1512bd21c61dff088d19c29758162ce83f0c5e58c01bdab1e388d8c4739ce266",
+    "start_va": "0x17f48"
+  }
+]

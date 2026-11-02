@@ -1,0 +1,54 @@
+# Removal context and BNCUSCENE: documentary integration review
+
+Verdict: PASS for the current frozen integration and exact existing exports. No correction requested. This review is source-aware of my independent BNCUSCENE/publication/consumer and storage-refinement audit. Local removal-context claims are compared documentarily against their authoritative report and independent root original-byte review/checker, not presented as my fresh complete source audit of that area. No author, source, repository, earlier report or review file was edited; no vendor/native/provider/JSON/strtol/target process or semantic scene fixture was executed.
+
+## Source-to-summary assessment
+
+The serialization page correctly narrows local removal argument provenance: dispatcher incoming r1 survives the selected local call frames, context word0 supplies the removal receiver, and exact params.scene_id supplies a string/decimal normal result that replaces the earlier SP+28 temporary. This is distinct from the event-cache params.id namespace. The context's natural producer/capture and equality to startup main's scene registry remain OPEN, rather than inferred from shared layouts or completed earlier registry proof. Opaque receiving-shaped bodies are not used to fill that gap.
+
+The decimal helper is summarized as original base10 strtol request plus visible end==start and errno34 checks. Actual conversion, full consumption, signs/partial text/domain, parse/provider/error/unwind and external grammar remain unproved. No actual user request, natural removal after polling, last-owner count or full receiver lifetime follows from the new local argument source.
+
+The BNCUSCENE section accurately reports its own row17, raw88 and compiled192-byte identities, separate base/derived id/name members, raw-enabled28 to compiled132 and primary third-slot predicate+8. Original method0xc83d8 is exactly byte132 XOR1 and return. Under ordinary constructed Boolean0/1 and a valid selected same-scene object, disabled returns nonzero1 while enabled returns zero0. The generic consumer treats zero as a failing predicate. These are concrete local source facts, not an installed/configured instance, accepted product configuration, all-condition/scene outcome, unsupported-feature conclusion, bug or physical effect. Intended feature meaning, complete serializer/value coherence, other methods/mutations and provider/lifetime behavior remain open.
+
+The page/refinement correctly separates selected scene116 four-byte compiled pointers from scene104 trigger and scene128 action eight-byte pointer/control records. One-word append/load/store, sourcezero/end+4 and actual consumer pointee/slot+8 establish that selected representation. They do not establish absent condition ownership, complete growth/destructor/alias/error policy or lifetime safety/failure. The earlier numeric-registry pair-clear/control-release/dispose/erase result is unchanged. Exact old broad label/quote files are retained and explicitly qualified, not silently edited or retrospectively re-certified.
+
+Current capsule/synthesis/coverage/ranking keep configured extras80/81/94/95, effective provider/readiness, context identity, reset/owner/query gaps, full errors/unwind/concurrency and physical observation distinct. Curated OWN-DEV-0199 supplies product role only. All new original execution and semantic cases remain0; wider Device/source gates and previous ledgers remain pending/unchanged. No closed receiving/transport/authentication/session/framing/equivalent body is expanded.
+
+## Identity, preservation and local references
+
+All9 frozen documents match current bytes, sizes and SHA256 pins. All51 SOURCE_EXPORTS pairs match local sources and published bytes/metadata. Context19 and condition21 immediate first-copy rows match originals/indexes. Saved parent read-only checks record17 context plus19 condition outputs,36 total. This review adds no native corpus or full-source replay.
+
+Both previous human-page snapshots match their recorded hashes. Independently applying DOCUMENT_PATCH's two exact section insertions reproduces current pages byte-for-byte; their previous text otherwise stays unchanged. Both old owner-removal report/review phrase snapshots match unchanged originals and exact quote identities. The context's pre-output exploratory params.id-to-scene_id correction is disclosed without authenticating an unavailable old draft/hash; earlier immutable versioned failures and MH202 missing-history limits remain scoped as before.
+
+There are35 local Markdown link occurrences and0 fragments. All33 existing targets resolve. Only capsule integration-review.txt and validation.json await actual assembly. Their future bytes/existence and final strict checks are not certified here. Parent must create the exact actual files before strict link/identity/ESG/ECV/diff gates, with no placeholder, exemption or loosened guard. Coordination-log references to subsequent receipts are treated as checkpoint sequencing, not premature final completion.
+
+## Exact current document pins
+
+| Workspace-relative file | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md` | `d1b6bef0431a19332a85dab89d9ee889a13732e77ca23b1287a37537393deb24` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-routing.md` | `8a438087be67ca228d7c6c6b3a006ff0ccfb5bb02499973ab671f27b845b05b5` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-removal-context/README.md` | `2e7b939fae818925747725f911708e1b1666b9caf23638d7828dfb9cb6c46eff` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-removal-context/SYNTHESIS.md` | `b449a5eefa24aab99214ebf5c8a6f0ce56f958e43a856d638404b325bc9533d2` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-removal-context/COVERAGE.md` | `22435c0f3efdfeb66ec5d9501de1a6e9934c306d2461cdbc8bd548bf98a1d472` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-removal-context/RANKED_REMAINING_QUESTIONS.md` | `8da60a0807721f825973616c4f0247492d06e51f30d2b7592463c5fcf5e4e08c` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-removal-context/RUN_LOG.md` | `69d9e05d4ded7a94d7e2ce1ef2cd6c0dc4effaec82e0cf4af7b1bf0a83120e85` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-removal-context/SOURCE_EXPORTS.json` | `f55a4a1e41b48404f973fd628d7275256ae9060f63a1a325014be769e0a57dc5` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-removal-context/CONDITION_STORAGE_REFINEMENT.md` | `77345c3139bf9eadaf34be646b105ca55eeb45d7e5da6094e98a5bdc7b3f0418` |
+
+## Source, review and retained-history applicability pins
+
+Paths below are relative to this research batch.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `context/REPORT.md` | `bbc23551b48f2e8b89e7c5af5c4c5fd392164705bd1573ec25156c98ba494c93` |
+| `scene-condition/REPORT.md` | `92c64b715c2747ced59b18ca4ddbeb28f811a1f6651683a7d2c4aee656c035c8` |
+| `reviews/context-source-review.md` | `b1f7a726d9b06168f3e4e5d18508549cf77aef094cd3f9bcd3a54c077b4480a0` |
+| `reviews/scene-condition-source-review.md` | `9fd99e4653095d0c88c064bbacf1ab1e8436a46831da1070cd071d46d4e3c615` |
+| `CONDITION_STORAGE_REFINEMENT.md` | `77345c3139bf9eadaf34be646b105ca55eeb45d7e5da6094e98a5bdc7b3f0418` |
+| `integration/condition-storage-prior/INDEX.json` | `c75027842abd4d03bf7067d784f6235056ffac243c85ded6d29d3bc1aee6c75e` |
+| `integration/pre-edit/INDEX.json` | `8a8364353e670c5a37e91a53c82ba87cbfd04f32935f761afba17c174d445eea` |
+| `integration/DOCUMENT_PATCH.json` | `401aa1f0a638b2efe93f1e7aef18f71aea9e0478dbc11864c15c5c52130d3fda` |
+
+Frozen current index SHA256 `48ed940964da9080a213c39b14bf85d2eb4f1663c1b605b3db3daf51f49f36b9`. SOURCE_EXPORTS.json SHA256 `f55a4a1e41b48404f973fd628d7275256ae9060f63a1a325014be769e0a57dc5`.

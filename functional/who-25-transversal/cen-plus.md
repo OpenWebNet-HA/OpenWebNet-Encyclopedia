@@ -154,3 +154,7 @@ The v1 rows are preserved as historical recording facts. Their response/output c
 ## Other `WHO 25` functions
 
 `WHO 25` also carries dry-contact and IR functions using `WHAT 31` and `32`. Those operations use different parameters and `WHERE` grammars and are documented in [Dry Contact and IR](dry-contact-ir.md).
+
+## ScenarioSuite catalogue corroboration
+
+The [separate ScenarioSuite database](../../scenario-engine/scenario-suite-database.md#who-25-address-profiles-and-command-context) maps its CENPLUS editor Object to `WHO 25` and lists all 2,048 addresses formed by literal prefix `2` and `0..2047`. This corroborates the published concatenation model; it does not establish an active editor, configured virtual Object, gateway delivery or physical effect. Its selected command/area associations are narrower than the complete public CEN+ operation family.

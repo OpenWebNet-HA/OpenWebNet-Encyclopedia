@@ -1,0 +1,24 @@
+# F461 run10 independent suffix-source review
+
+PASS. No author correction requested. Author files were not changed. This is a bounded static original-source and artifact audit plus host `--check`, with no original/provider/native/target execution, semantic fixture or model.
+
+Authoritative area: `work/f461-firmware/2.0.11/research/2026-11-01-run10-address/`. Current pins:
+
+- `REPORT.md`: `289215b4a715abf4b148af32327883fd1246a8282a6535f7a061d50f4f89589a`.
+- `collect_suffix_v1.py`: `53d41ed7b62929925f949bc69fd616aaeb8a876c04fe3e329ba011267938e803`.
+- `SOURCE.json`: `a7ae58f185f7ca03420e73fcd6cba895ccced67de2413220ea77d1fa7ba45858`.
+- `INPUTS.json`: `31313b24e93eb5cc69232f0346a8de1990b018926b3709fd60cedb63d1f7ee0d`.
+- `OUTPUT_MANIFEST.json`: `5c0927aaa629c8e5d8e581ff1e4c62d6b016efbe33b47327b212c48d5647459a`.
+- `first-candidate/INDEX.json`: `650c5fbc36ba7bb66420c2c62f678779740eca83e314879ced6bba4ebb87375f`.
+
+The read-only collector replay passes: nine outputs, six spans,34 guards, seven safe PIC/literal joins,11 actual import proofs, six input pins and11 exact first copies. Independently reading original `/home/bticino/libcoso/libplug_automation_tr.so` gives SHA256 `d7d361798ccec65843bd41c9ad7b8897645a334b0cd08121d372949f78eac277`. Fresh ELF64/AArch64 PT_LOAD mapping reproduces all six span hashes/hex,34 words, seven literals and11 BL/PLT/JUMP_SLOT rows. Output-manifest and all11 first-copy identities match. This selected source check is not a whole translator or historical exploratory-completeness audit.
+
+The provided-object accesses and selected path are coherent with the report's premises: saved parsed pointerSP152 is reloaded at0x4024, its pointer32 goes to X27 and pointers48/56 to X23/X20; the pointer48 string comparison with literal4 and private-word-not4 guard are distinct from run05's NULL-pointer48 path. The signed conversion request uses pointer56, base10 and NULL end pointer; MOV W1,W0 forwards only its low32 bits to the `%X` formatter. No full-string/range validation or semantic address meaning follows. The explicit W20=0 at0x40a8 is retained across the selected ordinary-ABI callee returns. I also checked the local helper-return4 route through0x43c4, saved page baseSP128, length2 prefix branch and connector0x56bc..0x56c0: it returns to0x4404 without another W20 store. UTF-8 character length and delegated byte digit conversion remain different operations, not ASCII/address validity proof.
+
+The flag analysis is independently verified from words, not inherited from the author's earlier exploratory lead. Word0x7a400a84 at0x4428 encodes `CCMP W20,#0,#4,EQ`: when preceding comparison is unequal its literal NZCV4 sets Z=1; when equal it compares W20 against0. Word0x9a831003 at0x443c encodes CSEL conditionNE, selecting the alternative literal3 only when NE. Thus alternate3 requires context comparison equal-to-F AND W20 nonzero. On the selected earlier W20=0 path, final4 is source-consistent. This is symbolic instruction decoding, not executed flags, finite test inputs or a universal product rule. The nullable display fallback pointer and X25 actually passed to comparison are explicitly separate; no NULL-provider behavior is inferred.
+
+The same X24 GString receives `%s1%s`; under ordinary successful imported formatting and pointer-lifetime premises its data pointer at0x416c becomes X1 of `%s%s%s%s` at0x4190, whose returned pointer is stored at0x4198. Other formatter components are not resolved here. The next named call0x41a8 is an opaque boundary ONLY; no `prepare_extscs_frames` body, raw acceptance, receiving, transport, authentication, session, framing, MQTT/libjel or equivalent stopped route was expanded. No local return/store is called delivery, ACK, publication or actual physical addressing.
+
+The report honestly identifies a pre-file exploratory CCMP correction: initial message reasoning was corrected before report/collector/output generation, with no invented earlier candidate bytes or historical hash. Current first-candidate preservation is verified; unavailable exploratory artifacts are not certified. All previous dossiers remain unchanged.
+
+Actual routing/parser acceptance, valid source objects and local predecessors, provider binding/normal return and variadic behavior, remaining string components, ownership/lifetime and runtime outcomes remain conditional. No configured raw text, full output grammar, public WHO, physical support, security or defect conclusion is established. New source execution is zero and all existing execution ledgers remain unchanged.

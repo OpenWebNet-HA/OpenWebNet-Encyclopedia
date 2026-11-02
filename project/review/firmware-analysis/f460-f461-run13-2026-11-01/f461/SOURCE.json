@@ -1,0 +1,278 @@
+{
+  "PT_LOAD": {
+    "automation": [
+      [
+        1,
+        5,
+        0,
+        0,
+        0,
+        16940,
+        16940,
+        65536
+      ],
+      [
+        1,
+        6,
+        19168,
+        84704,
+        84704,
+        1800,
+        1808,
+        65536
+      ]
+    ],
+    "aux": [
+      [
+        1,
+        5,
+        0,
+        0,
+        0,
+        10200,
+        10200,
+        65536
+      ],
+      [
+        1,
+        6,
+        10976,
+        76512,
+        76512,
+        1728,
+        1736,
+        65536
+      ]
+    ],
+    "core": [
+      [
+        1,
+        5,
+        0,
+        0,
+        0,
+        19020,
+        19020,
+        65536
+      ],
+      [
+        1,
+        6,
+        19216,
+        84752,
+        84752,
+        1616,
+        1648,
+        65536
+      ]
+    ]
+  },
+  "bounded_queries": [
+    {
+      "definition_rows": [
+        "80: 0000000000002fb0  2112 FUNC    GLOBAL DEFAULT   11 automation_stm_gest_status_from_appli"
+      ],
+      "end_exclusive": "0x37f0",
+      "function": "automation_stm_gest_status_from_appli",
+      "input": "automation",
+      "limits": "not alias/bulk/pair-offset/general-callee/whole-image writer analysis; no global absence or untouched-record assertion",
+      "matches": [],
+      "query": "rendered STR*/STP with direct non-SP [Xn,#32] operand in these two symbol extents only",
+      "size": 2112,
+      "source_bytes_sha256": "dc07507dd0a0d59443a2de11e20907792f39d744fc9280f51e8c1fe1e024af06",
+      "start_VA": "0x2fb0"
+    },
+    {
+      "definition_rows": [
+        "42: 0000000000001f50   356 FUNC    GLOBAL DEFAULT   11 aux_stm_gest_status_from_appli"
+      ],
+      "end_exclusive": "0x20b4",
+      "function": "aux_stm_gest_status_from_appli",
+      "input": "aux",
+      "limits": "not alias/bulk/pair-offset/general-callee/whole-image writer analysis; no global absence or untouched-record assertion",
+      "matches": [],
+      "query": "rendered STR*/STP with direct non-SP [Xn,#32] operand in these two symbol extents only",
+      "size": 356,
+      "source_bytes_sha256": "4bbc93235abfe8f28fd6afe0d66eb3de4c033a30fe042c95e9c8265e90918330",
+      "start_VA": "0x1f50"
+    }
+  ],
+  "descriptor": {
+    "GOT": "0000000000014fb8  0000005600000401 R_AARCH64_GLOB_DAT     0000000000015150 automation_stm + 0",
+    "VA": "0x15150",
+    "application_slot64": "0000000000015190  0000005000000101 R_AARCH64_ABS64        0000000000002fb0 automation_stm_gest_status_from_appli + 0",
+    "bytes": 104,
+    "initializer_slot48": "0000000000015180  0000003800000101 R_AARCH64_ABS64        00000000000023e0 automation_stm_init + 0",
+    "private_slot88_initial_file_bytes": "0000000000000000"
+  },
+  "execution": {
+    "fixtures": 0,
+    "models": 0,
+    "original": 0,
+    "provider": 0,
+    "target_IO": 0
+  },
+  "guards": {
+    "automation": {
+      "0x200c": "0xf947de95",
+      "0x203c": "0xaa1503e0",
+      "0x23f4": "0xaa0003f3",
+      "0x2428": "0xf9402e75",
+      "0x242c": "0xb4003a95",
+      "0x243c": "0xf90002b3",
+      "0x25d0": "0xaa0003f9",
+      "0x25e4": "0xf94012a0",
+      "0x25e8": "0xf9000323",
+      "0x25ec": "0xaa1903e1",
+      "0x25f4": "0xf90012a0",
+      "0x2b7c": "0xd2800e00",
+      "0x2b84": "0xaa0003f5",
+      "0x2b88": "0xf9002e60",
+      "0x2b8c": "0x17fffe29",
+      "0x2fc8": "0xf9400033",
+      "0x2fe0": "0xa90603e2",
+      "0x2ff4": "0xaa0103f7",
+      "0x300c": "0xf9402c98",
+      "0x30e8": "0xf94033f4",
+      "0x30ec": "0xaa1703e1",
+      "0x30f8": "0xf9000280"
+    },
+    "aux": {
+      "0x1f60": "0xf9400036",
+      "0x1f68": "0xf9402c13",
+      "0x1f6c": "0xf94012c0",
+      "0x1f74": "0xaa0103f4",
+      "0x1f78": "0xd2800001",
+      "0x1f84": "0x52800142"
+    },
+    "core": {
+      "0x27c0": "0xf9401a62",
+      "0x27c4": "0xf9003260",
+      "0x27c8": "0xb4000082",
+      "0x27cc": "0x91014001",
+      "0x27d0": "0xaa1303e0",
+      "0x27d4": "0xd63f0040"
+    }
+  },
+  "imports": [
+    {
+      "PLT": "0x1cc0",
+      "call": "0x2044",
+      "input": "automation",
+      "relocation": "0000000000015090  0000001500000402 R_AARCH64_JUMP_SLOT    0000000000000000 register_state_machine + 0",
+      "slot": "0x15090"
+    },
+    {
+      "PLT": "0x1f80",
+      "call": "0x27bc",
+      "input": "core",
+      "relocation": "00000000000150a0  0000002c00000402 R_AARCH64_JUMP_SLOT    00000000000025a0 get_plug_m + 0",
+      "slot": "0x150a0"
+    },
+    {
+      "PLT": "0x1d90",
+      "call": "0x2b80",
+      "input": "automation",
+      "relocation": "00000000000150f8  0000002200000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_malloc0 + 0",
+      "slot": "0x150f8"
+    },
+    {
+      "PLT": "0x1c00",
+      "call": "0x25f0",
+      "input": "automation",
+      "relocation": "0000000000015030  0000000900000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_list_append + 0",
+      "slot": "0x15030"
+    },
+    {
+      "PLT": "0x1c00",
+      "call": "0x30f4",
+      "input": "automation",
+      "relocation": "0000000000015030  0000000900000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_list_append + 0",
+      "slot": "0x15030"
+    },
+    {
+      "PLT": "0x1970",
+      "call": "0x1f88",
+      "input": "aux",
+      "relocation": "0000000000013030  0000000900000402 R_AARCH64_JUMP_SLOT    0000000000000000 strtol@GLIBC_2.17 + 0",
+      "slot": "0x13030"
+    }
+  ],
+  "nonzero_record_deadline32_producer": "OPEN",
+  "paths": {
+    "automation": "/home/bticino/libcoso/libplug_automation_stm.so",
+    "aux": "/home/bticino/libcoso/libplug_aux_stm.so",
+    "core": "/home/bticino/libcoso/libcoso.so"
+  },
+  "positive_exclusions": {
+    "context": "register sameD init48\u2192providedD88 null branch alloc112\u2192D88=P\u2192g_list_append result storedP32",
+    "nested_string": "aux Q argX1; parsed=[Q], parsed32 supplied tostrtol, not Q32 numericdeadline",
+    "provided_record_append": "automationQ argX1 retainedX23; sameQ to g_list_append, no deadline producer asserted"
+  },
+  "spans": [
+    {
+      "bytes_hex": "95de47f9020000b042c02391e400805263008052410080d2a02a40f9a40a00b9a20e00f9a32a00b9f3feff97e10300aae00315aaa12a00f91fffff97",
+      "end_VA_exclusive": "0x2048",
+      "input": "automation",
+      "name": "actual-descriptor-registration",
+      "sha256": "df7fccf05835a253a4e9501218bfb6e2233217b87da7fd4a9574ee8b2cdde852",
+      "start_VA": "0x200c"
+    },
+    {
+      "bytes_hex": "000080d2f1fdff97621a40f9603200f9820000b401400191e00313aa40003fd600008052f35341a9fd7bc2a8c0035fd6",
+      "end_VA_exclusive": "0x27e8",
+      "input": "core",
+      "name": "same-descriptor-initializer-request",
+      "sha256": "8c3442b538d300b0c8a454f412c9f987702904ab6b0b4a9066b71a246da52a22",
+      "start_VA": "0x27b8"
+    },
+    {
+      "bytes_hex": "f30300aaf40301aa63c00091020000b0000000b0422020910040209101108052f55b02a9f76303a9f96b04a9fb7305a9effdff97752e40f9953a00b4800240f9a00a00f9800640f9b30200f9a00e00f9",
+      "end_VA_exclusive": "0x2444",
+      "input": "automation",
+      "name": "private-context-entry",
+      "sha256": "66b5927eafca08faec5c7b0e08b0816398e2e3c79beb78bcb3c3210ad59078f7",
+      "start_VA": "0x23f4"
+    },
+    {
+      "bytes_hex": "000e80d284fcff97f50300aa602e00f929feff17",
+      "end_VA_exclusive": "0x2b90",
+      "input": "automation",
+      "name": "private-null-allocation",
+      "sha256": "fe5aa1191bd11c18dddd44414d24bbd1e2128fd2a303db9a4b8082553da2da78",
+      "start_VA": "0x2b7c"
+    },
+    {
+      "bytes_hex": "000380d2f1fdff97f90300aa01008052e00314aaa5fdff97e30300aaa01240f9230300f9e10319aa84fdff97a01200f9",
+      "end_VA_exclusive": "0x25f8",
+      "input": "automation",
+      "name": "private-list-return-store",
+      "sha256": "6d304d3b3f4a306e71e9d2789a52b4a93f8f80a469de7c6f9c7881ef0d12857c",
+      "start_VA": "0x25c8"
+    },
+    {
+      "bytes_hex": "fd7bb7a9e40300aafd030091f35301a9000000b014a03a91330040f9f55b02a9f96b04a91a0000b055432091fb7305a9e20306a9000000b01b202091e2031baaf76303a9f70301aa01108052e03b00f9e00315aae33f00f983c20191982c40f9f4faff97",
+      "end_VA_exclusive": "0x3014",
+      "input": "automation",
+      "name": "application-object-preservation",
+      "sha256": "134dfd1df5bcd55f177b92b87f94838af964c221b0d71ba25db83407cd1b3ec0",
+      "start_VA": "0x2fb0"
+    },
+    {
+      "bytes_hex": "f43340f9e10317aa800240f9c3faff97800200f9",
+      "end_VA_exclusive": "0x30fc",
+      "input": "automation",
+      "name": "same-provided-record-append",
+      "sha256": "e5165d72c7bc987ed723d187eaebb6916b261f7891a94dae47bca4540a5a30be",
+      "start_VA": "0x30e8"
+    },
+    {
+      "bytes_hex": "fd7bbca9fd030091f55b02a9f50303aa360040f9f35301a9132c40f9c01240f9a00200b4f40301aa010080d2f71b00f9f70302aa420180527afeff97",
+      "end_VA_exclusive": "0x1f8c",
+      "input": "aux",
+      "name": "aux-nested-parsed-string",
+      "sha256": "06b3f405ec478908fad43982253bc7fa7f9fd1a5c5a955848ce8068fe0139e8b",
+      "start_VA": "0x1f50"
+    }
+  ]
+}

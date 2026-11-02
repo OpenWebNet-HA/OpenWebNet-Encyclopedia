@@ -1,0 +1,12 @@
+{
+  "scope": "Report-only precision, no changed source/code/results/counts",
+  "old_report": "REPORT.md",
+  "old_sha256": "653c93560b2a2604ad7973d62e4eabc4d64c41e645e5ece3b4bbd979b4438c9f",
+  "new_report": "REPORT.v2.md",
+  "new_sha256": "a15c6eddf21993e7b5f41372c747412fce771471632429b4da2896ac5c4b13da",
+  "exact_old_sentence": "that fixture is not an accepted JSON object or an ABI-valid application Boolean.",
+  "exact_new_sentence": "that fixture does not establish parser-produced data or an application Boolean ABI contract; no claim that a nonzero integer is invalid follows.",
+  "reason": "The raw-word guard model proves a stored return value, not a C Boolean prototype/validity rule. Explicitly avoid implying nonzero integer7 is invalid.",
+  "collector_and_all16_outputs_unchanged": true,
+  "old_first_candidate_untouched": true
+}

@@ -1,0 +1,43 @@
+
+
+
+Disassembly of section .text:
+
+00005518 <is_json_error@@Base>:
+    5518:	4a10      	ldr	r2, [pc, #64]	@ (555c <is_json_error@@Base+0x44>)
+    551a:	4b11      	ldr	r3, [pc, #68]	@ (5560 <is_json_error@@Base+0x48>)
+    551c:	b500      	push	{lr}
+    551e:	b083      	sub	sp, #12
+    5520:	447a      	add	r2, pc
+    5522:	58d3      	ldr	r3, [r2, r3]
+    5524:	681b      	ldr	r3, [r3, #0]
+    5526:	9301      	str	r3, [sp, #4]
+    5528:	f04f 0300 	mov.w	r3, #0
+    552c:	b138      	cbz	r0, 553e <is_json_error@@Base+0x26>
+    552e:	490d      	ldr	r1, [pc, #52]	@ (5564 <is_json_error@@Base+0x4c>)
+    5530:	6900      	ldr	r0, [r0, #16]
+    5532:	4479      	add	r1, pc
+    5534:	f7fc ed70 	blx	2018 <get_node_by_name@plt>
+    5538:	3800      	subs	r0, #0
+    553a:	bf18      	it	ne
+    553c:	2001      	movne	r0, #1
+    553e:	4a0a      	ldr	r2, [pc, #40]	@ (5568 <is_json_error@@Base+0x50>)
+    5540:	4b07      	ldr	r3, [pc, #28]	@ (5560 <is_json_error@@Base+0x48>)
+    5542:	447a      	add	r2, pc
+    5544:	58d3      	ldr	r3, [r2, r3]
+    5546:	681a      	ldr	r2, [r3, #0]
+    5548:	9b01      	ldr	r3, [sp, #4]
+    554a:	405a      	eors	r2, r3
+    554c:	f04f 0300 	mov.w	r3, #0
+    5550:	d102      	bne.n	5558 <is_json_error@@Base+0x40>
+    5552:	b003      	add	sp, #12
+    5554:	f85d fb04 	ldr.w	pc, [sp], #4
+    5558:	f7fc edf2 	blx	2140 <__stack_chk_fail@plt>
+    555c:	193c      	adds	r4, r7, r4
+    555e:	0001      	movs	r1, r0
+    5560:	0178      	lsls	r0, r7, #5
+    5562:	0000      	movs	r0, r0
+    5564:	0c5e      	lsrs	r6, r3, #17
+    5566:	0000      	movs	r0, r0
+    5568:	191a      	adds	r2, r3, r4
+    556a:	0001      	movs	r1, r0

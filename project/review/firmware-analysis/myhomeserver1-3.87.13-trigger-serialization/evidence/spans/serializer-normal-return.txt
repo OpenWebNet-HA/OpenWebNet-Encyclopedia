@@ -1,0 +1,20 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00028352:
+   28352:	4a3b      	ldr	r2, [pc, #236]	@ (28440)
+   28354:	4b37      	ldr	r3, [pc, #220]	@ (28434)
+   28356:	447a      	add	r2, pc
+   28358:	58d3      	ldr	r3, [r2, r3]
+   2835a:	681a      	ldr	r2, [r3, #0]
+   2835c:	9b0d      	ldr	r3, [sp, #52]	@ 0x34
+   2835e:	405a      	eors	r2, r3
+   28360:	f04f 0300 	mov.w	r3, #0
+   28364:	d13f      	bne.n	283e6
+   28366:	4620      	mov	r0, r4
+   28368:	b00f      	add	sp, #60	@ 0x3c
+   2836a:	Address 0x2836a is out of bounds.
+

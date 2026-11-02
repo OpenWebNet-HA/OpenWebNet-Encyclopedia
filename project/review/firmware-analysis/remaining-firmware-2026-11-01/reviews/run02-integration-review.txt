@@ -1,0 +1,46 @@
+# Overnight run02 documentary integration review
+
+PASS. No correction requested. This is an independent documentary comparison of the frozen report/synthesis/coverage/ranking/archive-inheritance files with three authoritative source packets and actual source-peer reviews. F459 source is source-aware from this reviewer's preceding bounded original-byte review. F453AV/F455 findings are compared with their independent peers and reports, not freshly re-audited original payloads here. No author, original, repository or prior-candidate bytes were changed. No source collector/native/SQL/decryption/remote/old-corpus replay was performed for this documentary review.
+
+## Findings and limits
+
+F453AV is correctly limited to its OWN normal-image init/script/module-request chain. The five-line normal bt_fb.tcl requests fork/insmod/wait under ordinary interpreter/provider conventions; it does not prove actual child replacement, successful module load, readiness or a dependency with separately forked bt_start. ARM relocatable module/header and kernel-version metadata are not a running-kernel or hardware observation. The differing recovery script is explicitly left separate despite equal init/insmod/module bytes. MH200N marker behavior, F454 AV hardware and installed overlay semantics are not transferred.
+
+F455 retains an opaque payload and a finite96-word arithmetic FORMAT CANDIDATE. The explicitly hypothetical numeric base, odd low bits/in-file relations and generic official Arm vector/Thumb convention do not establish actual CPU, endian mode, ISA/ABI, address map, vector extent, entry/reset behavior, physical memory or manufacturer/part. The official M0+ document is context, not F455 target provenance or a full vector-table match. No disassembler or code execution was forced. The candidate states the unresolved target boundary clearly and does not turn raw numeric constants into MMIO or a capability result.
+
+F459's three string encoding-request chains, decimal supplied-integer fourth argument, four quoted SQL placeholders and middle sqlite3_exec use own ARM32 receiver/stack/provider premises. persistent is an original field name, not proof of a Boolean domain, durable storage, accepted values or transaction success. A later END request precedes a test of the retained MIDDLE exec result, not END's result. Full error/cleanup/unwind/caller/lifetime/concurrency and active database/schema/rows remain open. No Qt or SQLite function was executed and no synthetic database was made from the SQL.
+
+The current static zero is not a reset of earlier MHS/F454/MH202 ledgers. One public official-document retrieval is disclosed separately from target network/vendor execution; this reviewer made no new request. Full Device/source/runtime/physical approval remains pending. Closed receiving/output/transport/authentication/session/framing/MQTT/libjel routes stay unexpanded. The scoped next questions do not promote completed selected guards into full support or installed-state conclusions.
+
+## Archive inheritance
+
+The current R2_ARCHIVE_INDEX is byte-identical to run01, at SHA256133c94eb95859e111df0c1b6c005636ce8ee13ce164e3576fae85e70256f0719. ARCHIVE_INHERITANCE explicitly resolves its relative object references against run01 and pins the actual prior receipt. Its plan/receipt/descriptor files exist at that base; receipt SHA/size/key agree with the index's sole object. The saved status is cumulative ONE encrypted supporting container and ZERO plaintext database objects, with ZERO new objects/uploads or new network verification in run02. This is not a new remote readback performed by this reviewer. The encrypted container is not relabeled as plaintext master.sqlite, and source SQL is not treated as a recovered vendor DB. Candidate-only registry status remains inherited, not an applied registration.
+
+## Exact checks
+
+- The six first-synthesis-candidate members equal current report, synthesis, coverage, ranking, archive index and inheritance bytes, recorded lengths and hashes. Report and synthesis intentionally have identical bytes.
+- Seven explicit source/synthesis/review first-copy indexes verify32 members: synthesis6, F4599, F453AV7, F4557 and three source-peer copies. This checks retained bytes, not a fresh semantic audit of every input named by them.
+- Actual peer identities match their announced hashes. The original source reports and selected claims agree with those reviews; no source correction or current candidate change is reported or required.
+- Archive index/inherited receipt/relative-base identity and classification cross-checks pass. No archive action was replayed.
+- The work-only report contains no Markdown links or fragment anchors; no future public review/validation target is represented as already present. Later checkpoint identity/control/closure checks remain separate actual work.
+
+## Exact read-time pins
+
+| File | SHA-256 |
+| --- | --- |
+| `work/remaining-firmware-investigation/2026-11-01-run02/REPORT_CANDIDATE.md` | `a7a35f25b1c447907aa45ed527ec9ff0ac431f13281f36567cc82543bd60b721` |
+| `work/remaining-firmware-investigation/2026-11-01-run02/SYNTHESIS.md` | `a7a35f25b1c447907aa45ed527ec9ff0ac431f13281f36567cc82543bd60b721` |
+| `work/remaining-firmware-investigation/2026-11-01-run02/COVERAGE.md` | `09baedeeb8fa2b88da5b66f78e0ad14eae9266a1cc5b93084b7cc15bf65c7d6a` |
+| `work/remaining-firmware-investigation/2026-11-01-run02/RANKED_REMAINING_QUESTIONS.md` | `697d76c371a591db1a2f1dedae7ebcfd7b74f29caef32f0da0bfeb841be35dfa` |
+| `work/remaining-firmware-investigation/2026-11-01-run02/R2_ARCHIVE_INDEX.json` | `133c94eb95859e111df0c1b6c005636ce8ee13ce164e3576fae85e70256f0719` |
+| `work/remaining-firmware-investigation/2026-11-01-run02/ARCHIVE_INHERITANCE.json` | `309dcbe1c64c59a6311aa6478eb1dceef32941c174c65eb3f561e2733f72e022` |
+| `work/remaining-firmware-investigation/2026-11-01-run02/first-synthesis-candidate/INDEX.json` | `d678a26af13353a341e30795ce998a24e9a107a8e974edf0d00ca7d2a8a48b86` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-night02-shared-write/REPORT.md` | `b58d3b1d6f76e58f13bd5d4e737be9fa213fe0183bb9b0b5c829f71dbf78ca9b` |
+| `work/f453av-firmware/3.0.14/research/2026-11-01-night02-resources/REPORT.md` | `30aa6c495f788ef11feb91381cf0347ca25c09dc8b1bc6bedf69a8e6996f363e` |
+| `work/f455-firmware/1.1.2/research/2026-11-01-night02-format/REPORT.md` | `f955678a426ff1f4602fc4d481cb7b1b79f23d619c9d3f1cbf5b3a2e0b835a87` |
+| `work/remaining-firmware-investigation/2026-11-01-run02/reviews/f459-source-review.md` | `071181d45e6ed4f5834e481bca7315a8dc935ced19bb988d68cbbf98caef559b` |
+| `work/remaining-firmware-investigation/2026-11-01-run02/reviews/f453av-source-review.md` | `69cbb11868232760c9b5c11f20bae7721107911464e5e9e93c16aae395437fa5` |
+| `work/remaining-firmware-investigation/2026-11-01-run02/reviews/f455-source-review.md` | `8efd075469d7f18ed96a282400eb90558e771169c3009fb039179c196a8675e4` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/archive/R2_RECEIPT.json` | `072092bb105685ab2aa0395cde439b431ac6a016037b501a06d2faf509b07793` |
+
+Current documentary PASS is bounded to these bytes and their source/archive premises. The finite continuation and later actual checkpoints remain separate from this review.

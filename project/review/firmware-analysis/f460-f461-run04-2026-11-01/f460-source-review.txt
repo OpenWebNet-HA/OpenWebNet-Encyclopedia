@@ -1,0 +1,27 @@
+# Independent F460 run04 catalogue consumer source review
+
+PASS on authoritative REPORT.v2.md and collect_catalogue_v2.py, with the preserved v1 pre-output failure explicitly retained. No source-result correction requested. I authored F461 field ownership separately; this review independently inspects original F460 matrix_mx bytes, own AArch64 layouts and source-backed SQL/reader joins. Equal catalogue files do not establish an equal F461 reader.
+
+Verified original matrix SHA16d92b02ffe89819f6947d93efa76a0f24f8b590a43d3e5d8fdc7226ec68a4ff and fresh PT_LOAD mapping, all7 span bytes/hashes,29 guarded words and15 listed direct calls. Selected ADRP/ADD source establishes compiled template28be38→global31a200, and the common constructor independently reads that same global pointer/length into its string at inner40. The supplied selector words8/12/16/20 and source placeholder replacements remain conditional helper requests, not executed SQL or evaluated expressions.
+
+Constructor112fd0 requests88 bytes and retains base/control while post-index STR113040 advances its inner pointer by16. LiteralW1=89 is supplied to112060; it is a key-object selector, not DeviceID/WHO by numeric equality. Original header3103a0/AP3103b0 and relative RTTI/name pointers establish13kobj_value_89 and actual primary methodfa970. As additional corroboration of the reported allocation request, PLT21000's original LDR loads slot3172e0, whose JUMP_SLOT is _Znwm@GLIBCXX_3.4 despite the printed neighboring stat label. No allocator/provider execution occurred.
+
+Independently compared the entire saved compiled template against the original bounded C string. Its15 zero-based projections actually place EN_KEY_OBJECT.slots at13 and AS_OBJECT_SYSTEM.id_system at14. Reader source loads inner40 SQL, requests the literal catalogue path and candidate sqlite3_open_v2 flags1/prepare length−1; the actual8 selected BL/PLT/GOT relocation proofs agree. The original column13/strtol result stores low32 at inner24, followed by column14 result at inner28. Constructor corresponding stores use the same advanced inner pointer, not base/control offsets. Repeated numeric100 step results return to the loop and can overwrite these words; no uniqueness or selected final-row content is established.
+
+The first step compares101 rather than positively requiring100 before first selected column access; null-column text/full string/range validation are not established on this bounded path. That is a source boundary, not a demonstrated runtime error, defect or corrupt database. Numeric SQLite1/100/101 meanings are explicitly ordinary API premises; there is no claimed original target header or executed SQL/provider. Normal finalize/close requests and constructor publication even on selected stat/open early returns do not constitute a complete resource/error audit or runtime readiness proof.
+
+Read-only host collector --check passes11 outputs. Independently verified5 input pins (including catalogue bytes without opening SQLite),13 exact v2 first copies, and both parent-preserved v1 report/script copies and their unchanged current originals. The old handwritten f9000abf guard at1120d0 disagreed with actual f9000ebf and stopped before output writes; v2 enforces the exact original word. Removed HOST sqlite-header claim/absent header, launcher spelling, new filenames and later-transcribed failure history are disclosed honestly. No v1 success, contemporaneous full terminal capture or overwritten generated result is certified.
+
+Original/vendor/provider/native/SQL/target execution, semantic fixtures/models and physical evidence added by this review:0. Effective binding, actual caller parameters/selected objects, normal string substitution, SQL validity/results, installed catalogue compatibility, cross-product ID semantics, runtime selection and physical behavior remain open. No receiving, transport, MQTT, libjel, authentication, session or framing body was examined. Author files are unchanged.
+
+## Exact reviewed pins
+
+- `REPORT.v2.md`: `00c18455900a2ac60c25d0ad0d0d19ec12935e264b960c30c321da054b477687`
+- `collect_catalogue_v2.py`: `ff037c546c43f74feedff5f9b742556d7a951a9c7157b960c48a6b9e855b8fb8`
+- `SOURCE.json`: `0d5d09c2236bfb302baa56bf131cdaee3e381941d12dd90a1c163d46a09991b4`
+- `SQL_TEMPLATE.json`: `0a45b6936dc0a9f7ccfb1fefa3a4e1e61c1439579e67d39bc9f987a2a8ec00d3`
+- `INPUTS.json`: `3363eaa51c64071de34088db0c50e0fcb23d07301a93d7216bb341cca5b817ed`
+- `OUTPUT_MANIFEST.json`: `16ac15101aee46628240747f93fabfbd52694ee1c02013cb88298ed1249e5984`
+- `DEVELOPMENT_HISTORY.json`: `43cc2df3a7fe0ff0fccc7b81b724d5131744aefdbf29dd9b30e3fb765b5e3662`
+- `FIRST_GENERATION_FAILURE.json`: `7f751d47bbfa6947196b3ef5a803747059b5fac0f7459aa7b53d050f51f49426`
+- `first-candidate-v2/INDEX.json`: `46441479bf3d7414eebb7d03f89e3d6f6d7cdf1f75a4bccd09141248fec7e94d`

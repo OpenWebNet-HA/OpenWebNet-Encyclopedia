@@ -1,0 +1,11 @@
+{
+  "scope": "Parent preliminary appendix wording before any public candidate or current-document pins existed; no source/result correction",
+  "old_file": "work/f460-f461-comparison/2026-11-01-run14/F461_APPENDIX_DRAFT.md",
+  "new_file": "work/f460-f461-comparison/2026-11-01-run14/F461_APPENDIX_DRAFT.v2.md",
+  "old_sha256": "f3215d9b2cecc5364e10ed153541a848ce4a4656113a963eab56b3e964ea0658",
+  "new_sha256": "1401dc3071b0bbb2d5765bf07e1bba4df850e7616531e9245cf0c0448ffc68fd",
+  "old": "Loader and initializer implementations were not executed or expanded.",
+  "new": "GModule-provider and plugin-initializer bodies remain opaque; the local loader source was inspected statically.",
+  "reason": "Initial generic loader wording could wrongly imply register_plugins source was not inspected. Only GModule-provider/initializer bodies remain opaque.",
+  "exact_presnapshot_index": "work/f460-f461-comparison/2026-11-01-run14/integration/before-appendix-v2/INDEX.json"
+}

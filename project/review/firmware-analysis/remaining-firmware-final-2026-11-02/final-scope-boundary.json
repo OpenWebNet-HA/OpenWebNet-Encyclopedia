@@ -1,0 +1,60 @@
+{
+  "archive_context": "Inherited one encrypted F450 supporting container and zero plaintext databases; no archive action by this author.",
+  "denied_F450_helper_or_equivalents_accessed": false,
+  "finite_qualification_route": [
+    "Previously retained normal/recovery/application regular-file manifests were checked for script-name candidates using update/recover/rearm/upgrade/reboot and Tcl/shell/XML suffixes; this was path discovery only, not a complete implementation search.",
+    "Only the selected original normal bin/bt_rearm.tcl body was read after own manifest/hash/size qualification. Its observed role was a device-output helper; no device value or source excerpt is retained in this note.",
+    "A targeted lookup of the previously retained normal sbin/init source for file/source-selection sites identified options/filesystem and already-reviewed source/application-loop context. No options/configuration file, boot environment, updater or provider body was opened or expanded."
+  ],
+  "limits": [
+    "Not a global absence claim about update mechanisms, all original files, companion tools, other documentation or hardware.",
+    "No application overlay, actual boot/update/install/flash/reboot/mount, device meaning, successful output or runtime outcome established.",
+    "Filename labels and previously reviewed package/header/entry/marker/module metadata are not new functional evidence.",
+    "No full/private configuration, boot-environment values, credentials/keys/identifiers or source-body/device-value excerpts exported."
+  ],
+  "new_collector_generated": false,
+  "new_functional_coverage": 0,
+  "new_original_vendor_native_helper_emulator_model_fixture_SQL_target_OS_device_service_network_bus_mount_flash_physical_execution": 0,
+  "new_source_packet_generated": false,
+  "parent_direction": "STOP new investigations; final-only early consolidation. Root owns final handoff/review/public records/archive and automation deletion.",
+  "preservation": "Originals/synced/completed packets/firstcopies/source manifest and older ledgers unchanged; no staging/commit/push/publication.",
+  "product": "F453AV3.0.14",
+  "provider_body_disassembly_or_alternate_routes": false,
+  "qualification_result": "No genuinely distinct permitted update/recovery-file/manifest-selection or safe nontransport component contract was qualified by this finite route. The selected device-output helper is NOT a qualified update contract; its body/provider/hardware semantics are not promoted into new coverage.",
+  "recovered_or_generated_database": false,
+  "remote_writes": 0,
+  "saved_UTC": "2026-11-02T00:16:57.816961+00:00",
+  "selected_original_identities": [
+    {
+      "bytes": 88118,
+      "path": "work/f453av-firmware/3.0.14/analysis/normal-regular-files.json",
+      "role": "Previously selected original manifest metadata",
+      "sha256": "ff08fcc12cd10c4720101f951e8a96e2a665fe44a86cde5750ae32e1b4b6f536"
+    },
+    {
+      "bytes": 55359,
+      "path": "work/f453av-firmware/3.0.14/analysis/recovery-regular-files.json",
+      "role": "Previously selected original manifest metadata",
+      "sha256": "4e93d6d001272cb7a68bc6c72b2162b1bb0caca9efe25175a75469ef2a1b73b2"
+    },
+    {
+      "bytes": 175124,
+      "path": "work/f453av-firmware/3.0.14/analysis/application-regular-files.json",
+      "role": "Previously selected original manifest metadata",
+      "sha256": "e42fa8bb995359192b37a7000e74f114c036900c18c9dcffe7e3473050365664"
+    },
+    {
+      "bytes": 80,
+      "path": "work/f453av-firmware/3.0.14/analysis/rootfs/bin/bt_rearm.tcl",
+      "role": "Previously selected original script identity only; no body excerpt exported",
+      "sha256": "ae15e521827e4d63fe2039a4668f66a2313cf34fb52758950a959e197b7da3c4"
+    },
+    {
+      "bytes": 4269,
+      "path": "work/f453av-firmware/3.0.14/analysis/rootfs/sbin/init",
+      "role": "Previously selected original script identity only; no body excerpt exported",
+      "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb"
+    }
+  ],
+  "status": "FINAL_ONLY_FINITE_SCOPE_BOUNDARY"
+}

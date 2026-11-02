@@ -1,0 +1,93 @@
+{
+  "files": [
+    {
+      "ELF_magic_only_context": true,
+      "bytes": 465144,
+      "code_disassembly_or_interpretation": false,
+      "leading_magic4_hex": "7f454c46",
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/usr/lib/libsqlite.so.0.8.6",
+      "sha256": "0ac41c8033cbb95818728e6d1b3caae36a2f0f60458076bde51545f06c123e7f"
+    },
+    {
+      "ELF_magic_only_context": true,
+      "bytes": 332448,
+      "code_disassembly_or_interpretation": false,
+      "leading_magic4_hex": "7f454c46",
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libsqlite.so.0",
+      "sha256": "41ad4d4901fdeeee8c8c6df96700c650aa06aafa665583b1102ff4cfb692c1c5"
+    },
+    {
+      "ELF_magic_only_context": true,
+      "bytes": 332448,
+      "code_disassembly_or_interpretation": false,
+      "leading_magic4_hex": "7f454c46",
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/home/bticino/drivermanager/modules/libsqlite.so.0",
+      "sha256": "41ad4d4901fdeeee8c8c6df96700c650aa06aafa665583b1102ff4cfb692c1c5"
+    },
+    {
+      "ELF_magic_only_context": true,
+      "bytes": 444240,
+      "code_disassembly_or_interpretation": false,
+      "leading_magic4_hex": "7f454c46",
+      "path": "work/f450-firmware/2.0.10/analysis/rootfs/usr/lib/libsqlite3.so.0.8.6",
+      "sha256": "4455735fadbdb779e8c5657bbe652732621cf0597443853a31f37155244a1618"
+    },
+    {
+      "ELF_magic_only_context": true,
+      "bytes": 444240,
+      "code_disassembly_or_interpretation": false,
+      "leading_magic4_hex": "7f454c46",
+      "path": "work/f450-firmware/2.0.10-PROD/analysis/rootfs/usr/lib/libsqlite3.so.0.8.6",
+      "sha256": "4455735fadbdb779e8c5657bbe652732621cf0597443853a31f37155244a1618"
+    },
+    {
+      "ELF_magic_only_context": true,
+      "bytes": 8400740,
+      "code_disassembly_or_interpretation": false,
+      "leading_magic4_hex": "7f454c46",
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/usr/bin/php",
+      "sha256": "5eff57a7f76d063f176ddb143a6ab87144d1d85e996457a140fe1b5f0ba1fd8e"
+    },
+    {
+      "ELF_magic_only_context": true,
+      "bytes": 642844,
+      "code_disassembly_or_interpretation": false,
+      "leading_magic4_hex": "7f454c46",
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/usr/lib/libsqlite3.so.0.8.6",
+      "sha256": "70ba0c1d58d889afc27128ade475df01b45eb1284ab7434a90cf076c48d2c42f"
+    },
+    {
+      "ELF_magic_only_context": true,
+      "bytes": 465144,
+      "code_disassembly_or_interpretation": false,
+      "leading_magic4_hex": "7f454c46",
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/usr/lib/libsqlite.so.0.8.6",
+      "sha256": "7603e689e63c24fbe571a38bc9fcc0c1d54bf308e61efe34a15bc506c53a6f7b"
+    },
+    {
+      "ELF_magic_only_context": true,
+      "bytes": 39700,
+      "code_disassembly_or_interpretation": false,
+      "leading_magic4_hex": "7f454c46",
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/usr/lib/libgdbm.so.4.0.0",
+      "sha256": "98cadb3c9a39895b65704119452b6fa28a128bc4b48b49854fee486709ad8257"
+    },
+    {
+      "ELF_magic_only_context": true,
+      "bytes": 8383256,
+      "code_disassembly_or_interpretation": false,
+      "leading_magic4_hex": "7f454c46",
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/usr/sbin/php-fpm",
+      "sha256": "a6b45f0737893a9ee19165199f328dff3295500051343b046921aa6beb711bf9"
+    },
+    {
+      "ELF_magic_only_context": true,
+      "bytes": 642844,
+      "code_disassembly_or_interpretation": false,
+      "leading_magic4_hex": "7f454c46",
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/usr/lib/libsqlite3.so.0.8.6",
+      "sha256": "f296a868542be50e3858d2e7b2b9a53fd3b44c76127f94581f2a4bcb9a1af2c7"
+    }
+  ],
+  "scope": "Exact first4bytes only; ELF context is not an absence or embedded-database proof. No code/body decoding. Candidate offsets/header qualification remain canonicalv1."
+}

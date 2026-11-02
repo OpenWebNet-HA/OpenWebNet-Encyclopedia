@@ -1,0 +1,146 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b57fc <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6aa88>:
+   b57fc:	efc0 0050 	vmov.i32	q8, #0	@ 0x00000000
+   b5800:	4602      	mov	r2, r0
+   b5802:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   b5806:	2300      	movs	r3, #0
+   b5808:	b0ef      	sub	sp, #444	@ 0x1bc
+   b580a:	460f      	mov	r7, r1
+   b580c:	f100 0130 	add.w	r1, r0, #48	@ 0x30
+   b5810:	ac26      	add	r4, sp, #152	@ 0x98
+   b5812:	f942 0a8d 	vst1.32	{d16-d17}, [r2]!
+   b5816:	f10d 08a0 	add.w	r8, sp, #160	@ 0xa0
+   b581a:	9106      	str	r1, [sp, #24]
+   b581c:	4605      	mov	r5, r0
+   b581e:	f942 0a8f 	vst1.32	{d16-d17}, [r2]
+   b5822:	f44f 7280 	mov.w	r2, #256	@ 0x100
+   b5826:	e9c0 3109 	strd	r3, r1, [r0, #36]	@ 0x24
+   b582a:	f8a0 2040 	strh.w	r2, [r0, #64]	@ 0x40
+   b582e:	f100 024c 	add.w	r2, r0, #76	@ 0x4c
+   b5832:	f8df 14e8 	ldr.w	r1, [pc, #1256]	@ b5d1c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6afa8>
+   b5836:	6442      	str	r2, [r0, #68]	@ 0x44
+   b5838:	9207      	str	r2, [sp, #28]
+   b583a:	f8df 24e4 	ldr.w	r2, [pc, #1252]	@ b5d20 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6afac>
+   b583e:	4479      	add	r1, pc
+   b5840:	f880 3030 	strb.w	r3, [r0, #48]	@ 0x30
+   b5844:	f880 304c 	strb.w	r3, [r0, #76]	@ 0x4c
+   b5848:	62c3      	str	r3, [r0, #44]	@ 0x2c
+   b584a:	6483      	str	r3, [r0, #72]	@ 0x48
+   b584c:	6203      	str	r3, [r0, #32]
+   b584e:	588a      	ldr	r2, [r1, r2]
+   b5850:	ffc7 2e30 	vmov.i64	d18, #0xffffffff00000000
+   b5854:	f8df 64cc 	ldr.w	r6, [pc, #1228]	@ b5d24 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6afb0>
+   b5858:	6812      	ldr	r2, [r2, #0]
+   b585a:	926d      	str	r2, [sp, #436]	@ 0x1b4
+   b585c:	f04f 0200 	mov.w	r2, #0
+   b5860:	f100 025c 	add.w	r2, r0, #92	@ 0x5c
+   b5864:	f8c4 8000 	str.w	r8, [r4]
+   b5868:	f942 278f 	vst1.32	{d18}, [r2]
+   b586c:	447e      	add	r6, pc
+   b586e:	e9d7 1200 	ldrd	r1, r2, [r7]
+   b5872:	f8a0 3064 	strh.w	r3, [r0, #100]	@ 0x64
+   b5876:	f880 3066 	strb.w	r3, [r0, #102]	@ 0x66
+   b587a:	4620      	mov	r0, r4
+   b587c:	440a      	add	r2, r1
+   b587e:	f7f0 f833 	bl	a58e8 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5ab74>
+   b5882:	f10d 0ab0 	add.w	sl, sp, #176	@ 0xb0
+   b5886:	4650      	mov	r0, sl
+   b5888:	f75b e97e 	blx	10b88 <_ZNSt10filesystem7__cxx114path5_ListC1Ev@plt>
+   b588c:	4620      	mov	r0, r4
+   b588e:	f75b eb9a 	blx	10fc4 <_ZNSt10filesystem7__cxx114path14_M_split_cmptsEv@plt>
+   b5892:	f10d 0928 	add.w	r9, sp, #40	@ 0x28
+   b5896:	4621      	mov	r1, r4
+   b5898:	4648      	mov	r0, r9
+   b589a:	f75b e9d2 	blx	10c40 <_ZNSt10filesystem6statusERKNS_7__cxx114pathE@plt>
+   b589e:	f899 9000 	ldrb.w	r9, [r9]
+   b58a2:	69a1      	ldr	r1, [r4, #24]
+   b58a4:	f109 0901 	add.w	r9, r9, #1
+   b58a8:	fa5f f989 	uxtb.w	r9, r9
+   b58ac:	b111      	cbz	r1, b58b4 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6ab40>
+   b58ae:	4650      	mov	r0, sl
+   b58b0:	f75b e964 	blx	10b7c <_ZNKSt10filesystem7__cxx114path5_List13_Impl_deleterclEPNS2_5_ImplE@plt>
+   b58b4:	6820      	ldr	r0, [r4, #0]
+   b58b6:	4540      	cmp	r0, r8
+   b58b8:	d003      	beq.n	b58c2 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6ab4e>
+   b58ba:	68a1      	ldr	r1, [r4, #8]
+   b58bc:	3101      	adds	r1, #1
+   b58be:	f75b eaf8 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   b58c2:	f1b9 0f01 	cmp.w	r9, #1
+   b58c6:	f240 81a5 	bls.w	b5c14 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6aea0>
+   b58ca:	f50d 7a94 	add.w	sl, sp, #296	@ 0x128
+   b58ce:	4650      	mov	r0, sl
+   b58d0:	f75b e98c 	blx	10bec <_ZNSt8ios_baseC2Ev@plt>
+   b58d4:	f8df 3450 	ldr.w	r3, [pc, #1104]	@ b5d28 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6afb4>
+   b58d8:	2100      	movs	r1, #0
+   b58da:	efc0 0050 	vmov.i32	q8, #0	@ 0x00000000
+   b58de:	58f2      	ldr	r2, [r6, r3]
+   b58e0:	f8df 3448 	ldr.w	r3, [pc, #1096]	@ b5d2c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6afb8>
+   b58e4:	edcd 0b68 	vstr	d16, [sp, #416]	@ 0x1a0
+   b58e8:	edcd 1b6a 	vstr	d17, [sp, #424]	@ 0x1a8
+   b58ec:	9204      	str	r2, [sp, #16]
+   b58ee:	3208      	adds	r2, #8
+   b58f0:	f8a4 1104 	strh.w	r1, [r4, #260]	@ 0x104
+   b58f4:	f8c4 2090 	str.w	r2, [r4, #144]	@ 0x90
+   b58f8:	f8c4 1100 	str.w	r1, [r4, #256]	@ 0x100
+   b58fc:	58f3      	ldr	r3, [r6, r3]
+   b58fe:	685a      	ldr	r2, [r3, #4]
+   b5900:	6898      	ldr	r0, [r3, #8]
+   b5902:	f852 3c0c 	ldr.w	r3, [r2, #-12]
+   b5906:	9002      	str	r0, [sp, #8]
+   b5908:	6022      	str	r2, [r4, #0]
+   b590a:	50e0      	str	r0, [r4, r3]
+   b590c:	6061      	str	r1, [r4, #4]
+   b590e:	f852 0c0c 	ldr.w	r0, [r2, #-12]
+   b5912:	9201      	str	r2, [sp, #4]
+   b5914:	4420      	add	r0, r4
+   b5916:	f75b ed30 	blx	11378 <_ZNSt9basic_iosIcSt11char_traitsIcEE4initEPSt15basic_streambufIcS1_E@plt>
+   b591a:	f8df 3414 	ldr.w	r3, [pc, #1044]	@ b5d30 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6afbc>
+   b591e:	4640      	mov	r0, r8
+   b5920:	58f2      	ldr	r2, [r6, r3]
+   b5922:	f102 030c 	add.w	r3, r2, #12
+   b5926:	9205      	str	r2, [sp, #20]
+   b5928:	6023      	str	r3, [r4, #0]
+   b592a:	f102 0320 	add.w	r3, r2, #32
+   b592e:	f8c4 3090 	str.w	r3, [r4, #144]	@ 0x90
+   b5932:	f75b ec1e 	blx	11170 <_ZNSt13basic_filebufIcSt11char_traitsIcEEC1Ev@plt>
+   b5936:	4641      	mov	r1, r8
+   b5938:	4650      	mov	r0, sl
+   b593a:	f75b ed1e 	blx	11378 <_ZNSt9basic_iosIcSt11char_traitsIcEE4initEPSt15basic_streambufIcS1_E@plt>
+   b593e:	6839      	ldr	r1, [r7, #0]
+   b5940:	2208      	movs	r2, #8
+   b5942:	4640      	mov	r0, r8
+   b5944:	f75b eba0 	blx	11088 <_ZNSt13basic_filebufIcSt11char_traitsIcEE4openEPKcSt13_Ios_Openmode@plt>
+   b5948:	6823      	ldr	r3, [r4, #0]
+   b594a:	f853 3c0c 	ldr.w	r3, [r3, #-12]
+   b594e:	4423      	add	r3, r4
+   b5950:	2800      	cmp	r0, #0
+   b5952:	d06a      	beq.n	b5a2a <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6acb6>
+   b5954:	4618      	mov	r0, r3
+   b5956:	2100      	movs	r1, #0
+   b5958:	f75b ee5a 	blx	11610 <_ZNSt9basic_iosIcSt11char_traitsIcEE5clearESt12_Ios_Iostate@plt>
+   b595c:	af0c      	add	r7, sp, #48	@ 0x30
+   b595e:	2100      	movs	r1, #0
+   b5960:	4638      	mov	r0, r7
+   b5962:	f75b e9b0 	blx	10cc4 <_ZN4Json5ValueC1ENS_9ValueTypeE@plt>
+   b5966:	f10d 0b48 	add.w	fp, sp, #72	@ 0x48
+   b596a:	4658      	mov	r0, fp
+   b596c:	f75b eefc 	blx	11768 <_ZN4Json17CharReaderBuilderC1Ev@plt>
+   b5970:	f10d 0968 	add.w	r9, sp, #104	@ 0x68
+   b5974:	2300      	movs	r3, #0
+   b5976:	f8c9 3004 	str.w	r3, [r9, #4]
+   b597a:	463a      	mov	r2, r7
+   b597c:	f889 3008 	strb.w	r3, [r9, #8]
+   b5980:	ab1c      	add	r3, sp, #112	@ 0x70
+   b5982:	9303      	str	r3, [sp, #12]
+   b5984:	4621      	mov	r1, r4
+   b5986:	f8c9 3000 	str.w	r3, [r9]
+   b598a:	4658      	mov	r0, fp
+   b598c:	464b      	mov	r3, r9
+   b598e:	f75b e8c6 	blx	10b1c <_ZN4Json15parseFromStreamERKNS_10CharReader7FactoryERSiPNS_5ValueEPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@plt>
+   b5992:	2800      	cmp	r0, #0
+   b5994:	f000 81b1 	beq.w	b5cfa <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6af86>

@@ -1,0 +1,106 @@
+{
+  "checkpoint": "run14",
+  "status": "three independently source-reviewed static areas; integration review separate, overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run14/REPORT.md",
+      "source_sha256": "7865c526e571dac9a14ecaa5bf37e2cd06fb732246f9139dd3f07df3349c7f5b",
+      "published": "run14-protocol-report.txt",
+      "published_sha256": "7865c526e571dac9a14ecaa5bf37e2cd06fb732246f9139dd3f07df3349c7f5b"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run14/protocol-review.md",
+      "source_sha256": "ae61bc6cd1694af7ba1124e1d9431f406d25d3266ef0c3938c12a0fceb7b33cf",
+      "published": "run14-protocol-review.txt",
+      "published_sha256": "ae61bc6cd1694af7ba1124e1d9431f406d25d3266ef0c3938c12a0fceb7b33cf"
+    },
+    {
+      "role": "report",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run14/REPORT.md",
+      "source_sha256": "73fa582bb2d2f316200099498f3fa6b04e542595a5c78b1ef31829cceeef04e6",
+      "published": "run14-coso-report.txt",
+      "published_sha256": "73fa582bb2d2f316200099498f3fa6b04e542595a5c78b1ef31829cceeef04e6"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run14/coso-review.md",
+      "source_sha256": "41068cd430f84dec537292f73d721047d59613901e1ad634803969a6689c434d",
+      "published": "run14-coso-review.txt",
+      "published_sha256": "41068cd430f84dec537292f73d721047d59613901e1ad634803969a6689c434d"
+    },
+    {
+      "role": "report",
+      "area": "thermo",
+      "research_path": "work/mh202-firmware/research/2026-10-30/thermo/run14/REPORT.md",
+      "source_sha256": "d438f0e99f660adc5a67b2cf83f2e1f8ea57dd865d3d483320a921be4a4b62cb",
+      "published": "run14-thermo-report.txt",
+      "published_sha256": "d438f0e99f660adc5a67b2cf83f2e1f8ea57dd865d3d483320a921be4a4b62cb"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "thermo",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run14/thermo-review.md",
+      "source_sha256": "7fcc43e5c26a6885c831593fe19f9b742efb47c3714c44f3a9dc230d890a8938",
+      "published": "run14-thermo-review.txt",
+      "published_sha256": "7fcc43e5c26a6885c831593fe19f9b742efb47c3714c44f3a9dc230d890a8938"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run14/collect_evidence.py",
+      "sha256": "6eaf0d9cd05d92eaebd061b6446adf406571786cf19acbda7a563a4a166c4f97",
+      "method": "static original source/finite host evidence; new original execution0"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run14/collect_evidence.py",
+      "sha256": "44eb6462730375ba32b448d9fd33c5fdfed23bede70d2ba156edf25e56c99578",
+      "method": "static original source/finite host evidence; new original execution0"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/thermo/run14/collect_thermo.py",
+      "sha256": "daa8037c090240c4d892dc0d8542956840f91ad3117d88d29b8c864bb704c278",
+      "method": "static original source/finite host evidence; new original execution0"
+    }
+  ],
+  "canonical_execution": {
+    "new_original_execution": 0,
+    "new_calls": 0,
+    "new_primitives": 0,
+    "new_redirects": 0,
+    "new_EXIT": 0,
+    "new_selector_stops": 0,
+    "new_hooks": 0,
+    "cumulative": {
+      "corpora": 8,
+      "top_level_entries": 55,
+      "original_instruction_visits": 28379,
+      "primitive_callbacks": 2897,
+      "linker_redirect_callbacks": 111,
+      "exit_boundaries": 11,
+      "selector_read_stop_boundaries": 2,
+      "code_hook_visits": 31400,
+      "firmware_processes": 0,
+      "target_OS_calls": 0
+    },
+    "count_scope": "Eight prior canonical corpora remain frozen; run14 static0 does not reset or add to totals. Saved native endpoint readback is compared, not replayed as new execution."
+  },
+  "history": {
+    "run13_snapshots": "reviewed/run13/SOURCE_SNAPSHOTS.json",
+    "earlier_artifacts_unchanged": true,
+    "source_correction": "None; selected dataflow/control contracts refine remaining gaps without changing older scoped claims"
+  },
+  "limits": [
+    "Diagnostic output alias/borrowed lifetime/enum/class Boolean channels are static normal-path evidence, not native registry/raw\u2192builder execution or parser validity",
+    "Automation ordinary receipt pending/ID and query/timer flags remain distinct; admission/parser/status/key/lifetime and physical results unresolved",
+    "WHO4 raw200/501 formatting has no physical units, scale, signedness, error/reserved meaning or F454 equivalence; coarse text screen is not full parser",
+    "Missing assets/liveproviders/runtime/physical/widerDevice gates remain pending"
+  ]
+}

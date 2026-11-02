@@ -1,0 +1,39 @@
+
+work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/libcoso/libplug_automation_tr.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000038b0 <automation_tr_init@@Base>:
+    38b0:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+    38b4:	f0000003 	adrp	x3, 6000 <automation_tr_translate@@Base+0x25d0>
+    38b8:	911f4063 	add	x3, x3, #0x7d0
+    38bc:	910003fd 	mov	x29, sp
+    38c0:	a90153f3 	stp	x19, x20, [sp, #16]
+    38c4:	aa0003f4 	mov	x20, x0
+    38c8:	9100c063 	add	x3, x3, #0x30
+    38cc:	d0000002 	adrp	x2, 5000 <automation_tr_translate@@Base+0x15d0>
+    38d0:	91302042 	add	x2, x2, #0xc08
+    38d4:	52801001 	mov	w1, #0x80                  	// #128
+    38d8:	f90013f5 	str	x21, [sp, #32]
+    38dc:	d0000015 	adrp	x21, 5000 <automation_tr_translate@@Base+0x15d0>
+    38e0:	913042a0 	add	x0, x21, #0xc10
+    38e4:	97fff92f 	bl	1da0 <g_log@plt>
+    38e8:	f9402e93 	ldr	x19, [x20, #88]
+    38ec:	b4000993 	cbz	x19, 3a1c <automation_tr_init@@Base+0x16c>
+    38f0:	52800060 	mov	w0, #0x3                   	// #3
+    38f4:	b9000660 	str	w0, [x19, #4]
+    38f8:	f900067f 	str	xzr, [x19, #8]
+    38fc:	97fff97d 	bl	1ef0 <automation_cfg_position@plt>
+    3900:	aa0003f4 	mov	x20, x0
+    3904:	b4000160 	cbz	x0, 3930 <automation_tr_init@@Base+0x80>
+    3908:	b9400001 	ldr	w1, [x0]
+    390c:	f9400400 	ldr	x0, [x0, #8]
+    3910:	b9000661 	str	w1, [x19, #4]
+    3914:	b40000a0 	cbz	x0, 3928 <automation_tr_init@@Base+0x78>
+    3918:	97fff936 	bl	1df0 <g_strdup@plt>
+    391c:	f9000660 	str	x0, [x19, #8]
+    3920:	f9400680 	ldr	x0, [x20, #8]
+    3924:	97fff95f 	bl	1ea0 <g_free@plt>
+    3928:	aa1403e0 	mov	x0, x20
+    392c:	97fff95d 	bl	1ea0 <g_free@plt>

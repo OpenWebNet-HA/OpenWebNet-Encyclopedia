@@ -1,0 +1,16 @@
+{
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/reviews/integration-review.md",
+      "published": "historical-integration-review-v1.txt",
+      "sha256": "4d9fa153c1afe79f1b2f858376bc7326dc1324b4c1e0637c72f7ae6f8c1cb62e",
+      "bytes": 6991
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/reviews/integration-review.v2.md",
+      "published": "integration-review.txt",
+      "sha256": "9600ddbcd79a8d0d68c8607974731a82c058056db2c8f35568f824697220642c",
+      "bytes": 6617
+    }
+  ]
+}

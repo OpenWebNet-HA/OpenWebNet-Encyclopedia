@@ -1,0 +1,42 @@
+
+/home/bticino/libcoso/libcoso.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000003a00 <prepare_scs_from_open@@Base>:
+    3a00:	aa0003e2 	mov	x2, x0
+    3a04:	52800000 	mov	w0, #0x0                   	// #0
+    3a08:	3cc08021 	ldur	q1, [x1, #8]
+    3a0c:	f9400042 	ldr	x2, [x2]
+    3a10:	3cc18020 	ldur	q0, [x1, #24]
+    3a14:	3c808041 	stur	q1, [x2, #8]
+    3a18:	b9402c23 	ldr	w3, [x1, #44]
+    3a1c:	3c818040 	stur	q0, [x2, #24]
+    3a20:	f9402021 	ldr	x1, [x1, #64]
+    3a24:	b9002c43 	str	w3, [x2, #44]
+    3a28:	f9002041 	str	x1, [x2, #64]
+    3a2c:	d65f03c0 	ret
+
+0000000000003a30 <prepare_briefscs_frames@@Base>:
+    3a30:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+    3a34:	52800065 	mov	w5, #0x3                   	// #3
+    3a38:	52800024 	mov	w4, #0x1                   	// #1
+    3a3c:	910003fd 	mov	x29, sp
+    3a40:	a90153f3 	stp	x19, x20, [sp, #16]
+    3a44:	aa0203f3 	mov	x19, x2
+    3a48:	aa0003f4 	mov	x20, x0
+    3a4c:	f9400002 	ldr	x2, [x0]
+    3a50:	b9002845 	str	w5, [x2, #40]
+    3a54:	b9003043 	str	w3, [x2, #48]
+    3a58:	b9003844 	str	w4, [x2, #56]
+    3a5c:	97fff951 	bl	1fa0 <prepare_scs_from_open@plt>
+    3a60:	f9400281 	ldr	x1, [x20]
+    3a64:	f9400260 	ldr	x0, [x19]
+    3a68:	97fff94a 	bl	1f90 <g_list_append@plt>
+    3a6c:	aa0003e1 	mov	x1, x0
+    3a70:	f9000261 	str	x1, [x19]
+    3a74:	52800000 	mov	w0, #0x0                   	// #0
+    3a78:	a94153f3 	ldp	x19, x20, [sp, #16]
+    3a7c:	a8c27bfd 	ldp	x29, x30, [sp], #32
+    3a80:	d65f03c0 	ret

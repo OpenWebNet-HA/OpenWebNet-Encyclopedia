@@ -1,0 +1,91 @@
+# Scenario SuiteDB: scheduler areas, alarm permissions and timing metadata
+
+The genuine Suite3.5.38 `1902_1.0_LGG` database corroborates the documented separation of Start, Only If, Stop and Action. In particular, its alarm objects expose event/condition placements rather than alarm arming actions. It also has concrete custom timing forms, sunrise/sunset versus day/night associations, repeat/restart fields and CEN panic eligibility. **Per-object permission flags and per-rule compilation flags sometimes disagree; this report preserves both levels and does not invent consumer precedence.**
+
+This is hardened read-only SQLite analysis, not vendor execution, a working UI/compiler, generated `.spt` syntax, installed MH202 state or a physical test. All original/native/vendor/target-process/network/device execution0. Original/earlier dossiers and repository pages remain unchanged.
+
+## Exact input and reproducibility
+
+Input is the original selected installer resource:
+
+`default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_2/Scen_SuiteDB_ENG.db`
+
+under the previously verified scenario-artifacts acquisition tree. SHA256 **`ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29`** is checked before connecting; exact database bytes are compared again after queries. No database copy is edited. Connection uses a resolved file URI with `mode=ro&immutable=1`, `uri=True`, `PRAGMA query_only=ON`, and `PRAGMA trusted_schema=OFF`; no extensions are loaded. Queries are SELECT/PRAGMA metadata only.
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-31-database-analysis/scheduler/collect_scheduler_v1.py --check
+```
+
+`scheduler-evidence.json` records every exact SQL statement/parameter, selected columns, full returned rows/counts, selected table schemas/PKs, explicit join logic, source hashes and fixed report references. It contains the complete ASS_OBJ_AREE permission join, selected alarm/time associations and rule flags, differing flag-row PKs, time form/range metadata and empty TMP counts. It does not execute database-provided functions, transformations, Suite assemblies, firmware or a scenario.
+
+The first report/collector/evidence/manifest are exclusively generated and immediately copied. Snapshot membership and hashes are computed **before opening SNAPSHOT_INDEX.json**, so it cannot include itself. Existing outputs cannot be overwritten; check mode only compares reconstructed bytes. Pre-output exploratory queries corrected column/order names after schema inspection; no generated candidate or database was modified.
+
+## Applicability and exact namespace boundaries
+
+This is an installed-resource database from Suite3.5.38's device package1902_1.0_LGG, not the earlier four-table ScenarioDevices databases, canonical MHCatalogue.db, or firmware1.0.24's runtime storage. Object IDs below are **SuiteDB primary keys**, not WHO, module slots, firmware IDs or physical addresses. Catalogue family/area activation metadata does not establish runtime activation. Shared column names are not proof of declared relationships; every source join is explicit SQL. Selected schemas declare no foreign keys.
+
+The original extracted resource's version/package labels do not prove compatibility with every MH202 release. The frozen artifact report and existing OWN-DEV-0151/manual reconciliation are separately pinned. Comparisons below use those reviewed sources; no fresh primary-PDF or catalogue reconstruction occurs here.
+
+## Complete object/area permission evidence
+
+ANA_AREA has nine rows. Its literal labels include ID3 WHEN IT HAPPENS, ID4 ONLY IF, ID5 EXECUTE, ID6 Stop if it happens, ID7 TRIGGER ENABLE, ID8 TRIGGER DISABLE and ID9 PANIC KEY. IDs1/2 are FAMILIES/OBJECTS. This supports the Start/OnlyIf/Action/Stop terminology correspondence; the report does not assign invented area IDs to COND_KO or ACT_ELSE columns.
+
+ANA_OGGETTI has63 objects, ANA_FAMIGLIA16 families and ASS_OBJ_AREE64 rows keyed by ID_OBJ. The **complete permission-led join** returns all64 rows with family label/ATTIVA where available:63 match actual objects, none of the63 objects lacks a permission row, and extra permission PK0 has no matching ANA_OGGETTI object. PK0 has COND_OK1/ACT1 but is not silently invented as a normal object. Its intended placeholder/consumer use is unknown.
+
+All nine object-level columns are retained: TRIGGER, COND_OK, COND_KO, ACT, ACT_ELSE, TRIGGERSTOP, TRIGGERENABLE, TRIGGERDISABLE, PANICKEY. Family activation remains separate: the database marks Load control family7 and Lighting family13 ATTIVA0; object rows/permissions in a family cannot alone establish visible/active support. The full machine-readable join is the support for completeness here; this prose selects a few relevant rows rather than presenting a universal functional-support table.
+
+Only object7 CEN and object52 CEN PLUS have nonzero object-level PANICKEY/TRIGGERENABLE/TRIGGERDISABLE, each1. This is exact metadata eligibility within this table, not a proof of the only possible runtime panic producers or accepted raw button grammar. It agrees with documented configured CEN control/panic roles at the level of source intent.
+
+## Alarm39 and Engage Disengage54
+
+| SuiteDB object PK | Object-level flags equal1 | Object-level action flags |
+|---|---|---|
+|39 Alarm, family6 Burglar alarm|TRIGGER, COND_OK, TRIGGERSTOP|ACT0, ACT_ELSE0|
+|54 Engage Disengage, family6|TRIGGER, TRIGGERSTOP|COND_OK0, ACT0, ACT_ELSE0|
+
+ASS_OBJ_COSA reinforces those placements. Object39 has18 associations: six event kinds in each area3/4/6, **none in area5**. The six source ANA_COSA PKs238..243 label Burglar alarm, Tampering, Technical, Antipanic, System battery fault and Battery unloads; their stored OPEN_COSA strings are15,16,12,17,`4*`,`10*`. These are original catalogue tokens, not newly validated complete wire frames or electrical source classifications.
+
+Object54 has four associations: Engage PK539/token8 and Disengage PK540/token9 in Start3 and Stop6, with no OnlyIf4 or Action5 association. Those names are incoming event selections in these rows; they are **not commands for MH202 to arm/disarm an alarm**. This corroborates OWN-DEV-0151's explicit manual prohibition at the metadata/association level, with the actual UI/compiler/firmware consumers still unclosed.
+
+There is a material cross-level difference: ANA_OPEN_RULE_COMPILE PKs231..236, object39/COSA238..243, have ACT_AREA1 even though object39 ACT0 and its associations lack Action5. In contrast, object54 rules506/507 have ACT_AREA0 and COND_OK_AREA0, agreeing with its narrower placements. A permissive generic compile-rule flag cannot override the object/association evidence by assumption. Conversely, the report does not claim which UI/compiler layer wins or that an attempted configuration is impossible. Both original levels and their PKs remain in evidence.
+
+## Timing and calendar metadata
+
+The selected associations are specific:
+
+* Object8 Hour: Timetable COSA55 in Start3, OnlyIf4 and Stop6; object ACT0. Object23 Hour and day: Date Hour COSA120 in Start3/Stop6. Object70 Days: the same COSA120 only in OnlyIf4. Sharing COSA120 does not merge their object or area roles.
+* Object9 Delay: Seconds/Minutes/Hours COSA33/34/35, tokens `s`/`m`/`h`, only Action5. Object45 Random delay: COSA314/315/316, same unit-token family, only Action5. Delay9 ACT_ELSE1 and Random delay45 ACT_ELSE0 remain distinct object flags; no separate ELSE area ID is manufactured.
+* Object61 Astronomic clock: Sunrise COSA601/token26 and Sunset602/token27 in Start3/Stop6; Day603/token`3*1` and Night604/token`3*0` in OnlyIf4. Compile rules571/572 distinguish the event side, while614/615 distinguish OnlyIf. These are source tokens and association roles, not observed sunrise calculations or accepted raw WHO frames.
+
+The UI-composition metadata is more concrete than labels alone. Hour Start/Stop uses field-group8 TimePicker, Hour OnlyIf uses group10 Hour_From_To, Delay uses group9 Delay, Random delay group7 random_delay, Hour and day group6 hour_&_day, and Days uses groups11 Weekly_plan plus12 Yearly_plan. Exact ANA_OBJECT_COMPOSITION PKs and group joins are recorded. The relevant selected time/alarm objects have no ASS_KEYOBJ_OBJ→ANA_PARAMETER rows, and the selected time/alarm COSAs have no ASS_COSA_AUX_FIELDS rows. Thus generic parameter tables must not be silently joined by unrelated ID_ASS equality; these custom forms' actual consumer/export code remains unknown.
+
+ASS_RES_TIME has12 rows encoding combinations of single-hour/range/neither, all-week/weekly-plan, and always/date-period flags. Rows1..4 use resource ID28;5..12 use27. **These resource IDs are not object28 Camera or object27 Door lock.** The actual resource/consumer relationship is not inferred from matching numbers. They express selectable combinations in this source, not a demonstrated schedule or calendar evaluation.
+
+Selected ANA_RANGE→ANA_GRANULARITY joins give:
+
+| Range PK | Label | MIN..MAX / STEP | Source granularity |
+|---|---|---|---|
+|3|Time within|1..240 /1|Seconds|
+|6|Time within|1..921599 /1|Seconds|
+|7|Time|1..86399 /1|Seconds|
+|9|Hours|0..24 /1|Integer|
+|14|Extended hours|0..255 /1|Integer|
+|15/16|Minutes/Seconds|0..59 /1|Integer|
+
+Selected auxiliary field PK4/8/9 identifies Time mm:ss / hh:mm:ss forms; PK32/33/34 identifies ExtHour/Minutes/Seconds. The extended maximum921599 is arithmetically255h59m59s, but no compiler conversion/default/range enforcement is established from that equality. Other, differently labelled auxiliary fields reuse some of these ID_KIND values; all such selected reuse rows are retained. Do **not** assign seconds to volume/preset/device metadata merely because an ID_KIND join reaches a time-labelled range. Likewise range7 MIN1 does not prove that midnight can never be scheduled by another form/path.
+
+Labels reinforce source intent, not working validation: ANA_LABELS91 Execute at device restart;1081 weekly-plan days missing;1082/1083 beginning/end date required;1084 invalid period;1085 delay required;1531 missing delay;1532 missing trigger activation time;1534 wrong OnlyIf time;1735 nonexistent day in current month. Labels1541..1543 describe a four-minute form; they do not constrain all delay objects globally. Exact IDs/strings are in the JSON.
+
+## Repeat/restart, panic and prior firmware reconciliation
+
+TMP_SCENARI schema has PK ID_SCENARIO and fields SCEN_NAME, USER_DESCRIPTION, REPEAT, RESTART, SPT_PATH. All24 TMP tables are empty in this manufacturer resource, including scenario/Start/OnlyIf/Action/Panic tables. Therefore these fields show available storage concepts, **not configured scenarios, enabled defaults, working restart behavior or a generated SPT path**. No default value for REPEAT/RESTART is invented from an empty schema.
+
+The existing manual reconciliation documents explicit repeat/restart options, configured panic blocking until power cycle and completed/delayed action qualifications. The prior firmware report functional/run2 independently identified `$RESTART=SI` as a saved-running restoration condition and a configured panic-frame→gate set1→stop iteration. Lifecycle/run17 retained the unresolved gate-clear policy and explicitly rejected an absence/reset inference from its bounded query. The database's panic label/eligibility does not resolve that runtime reset gap or prove the power-cycle behavior.
+
+Prior SLEEP source evidence in functional/run4 has selected m/h/ms conversion/delegate paths, while functional/run5's CHKTIME compares selected local hour/minute and functional/run9's CHKDATE uses UTC calendar fields under their libc/provider premises. Functional/run10 showed numeric time/date results are not automatically Boolean OnlyIf semantics. The new database timing/calendar labels corroborate the documented feature categories; **no source join links these exact database form values to the original emitted helper arguments or a full `.spt` compiler**. No claim equates calendar label strings, wildcards, timezone/DST/astronomical controls with actual deployed scheduling.
+
+## Confidence and unclosed consumers
+
+High confidence: exact database identity/unchanged bytes; complete64-row permission/family join and orphan0; selected alarm/time associations/PKs; per-object versus per-rule differences; form/range/label metadata; empty TMP counts. Moderate source corroboration: documented placement categories and prohibition on alarm arming are consistent with selected object/association data. Unknown: actual Suite filter precedence, enabled UI, method-to-rule/parameter/default handling, generated script syntax, compatibility with firmware1.0.24, installed project, real scheduler/panic recovery and physical outcome.
+
+The next useful join is an actual Suite consumer/generator method reading these levels in order. It must preserve conflicts and custom-form ownership rather than flattening the database into a support matrix. This bounded report does not supply that compiler or a whole-product runtime claim.

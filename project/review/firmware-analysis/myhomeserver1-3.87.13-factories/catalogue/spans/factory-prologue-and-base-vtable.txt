@@ -1,0 +1,52 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b9934:
+   b9934:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+   b9938:	4691      	mov	r9, r2
+   b993a:	4a51      	ldr	r2, [pc, #324]	@ (b9a80)
+   b993c:	461d      	mov	r5, r3
+   b993e:	b09c      	sub	sp, #112	@ 0x70
+   b9940:	4606      	mov	r6, r0
+   b9942:	4b50      	ldr	r3, [pc, #320]	@ (b9a84)
+   b9944:	2048      	movs	r0, #72	@ 0x48
+   b9946:	447a      	add	r2, pc
+   b9948:	f8df 813c 	ldr.w	r8, [pc, #316]	@ b9a88
+   b994c:	460f      	mov	r7, r1
+   b994e:	58d3      	ldr	r3, [r2, r3]
+   b9950:	44f8      	add	r8, pc
+   b9952:	681b      	ldr	r3, [r3, #0]
+   b9954:	931b      	str	r3, [sp, #108]	@ 0x6c
+   b9956:	f04f 0300 	mov.w	r3, #0
+   b995a:	f756 eba8 	blx	100ac <_Znwj@plt>
+   b995e:	494b      	ldr	r1, [pc, #300]	@ (b9a8c)
+   b9960:	4604      	mov	r4, r0
+   b9962:	efc0 0011 	vmov.i32	d16, #1	@ 0x00000001
+   b9966:	3004      	adds	r0, #4
+   b9968:	463a      	mov	r2, r7
+   b996a:	4627      	mov	r7, r4
+   b996c:	464b      	mov	r3, r9
+   b996e:	f940 078f 	vst1.32	{d16}, [r0]
+   b9972:	f858 1001 	ldr.w	r1, [r8, r1]
+   b9976:	9500      	str	r5, [sp, #0]
+   b9978:	3108      	adds	r1, #8
+   b997a:	f847 1b0c 	str.w	r1, [r7], #12
+   b997e:	218b      	movs	r1, #139	@ 0x8b
+   b9980:	4638      	mov	r0, r7
+   b9982:	f7ff fc15 	bl	b91b0
+   b9986:	4b42      	ldr	r3, [pc, #264]	@ (b9a90)
+   b9988:	ad04      	add	r5, sp, #16
+   b998a:	f8df 9108 	ldr.w	r9, [pc, #264]	@ b9a94
+   b998e:	2258      	movs	r2, #88	@ 0x58
+   b9990:	2100      	movs	r1, #0
+   b9992:	f04f 0a01 	mov.w	sl, #1
+   b9996:	f858 3003 	ldr.w	r3, [r8, r3]
+   b999a:	4628      	mov	r0, r5
+   b999c:	44f9      	add	r9, pc
+   b999e:	f884 a028 	strb.w	sl, [r4, #40]	@ 0x28
+   b99a2:	3308      	adds	r3, #8
+   b99a4:	60e3      	str	r3, [r4, #12]
+   b99a6:	f756 ee44 	blx	10630 <memset@plt>

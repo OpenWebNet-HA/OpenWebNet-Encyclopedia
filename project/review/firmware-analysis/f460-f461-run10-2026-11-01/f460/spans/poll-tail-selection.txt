@@ -1,0 +1,16 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000f8818 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x80c68>:
+   f8818:	cb1302e0 	sub	x0, x23, x19
+   f881c:	9344fc00 	asr	x0, x0, #4
+   f8820:	f100081f 	cmp	x0, #0x2
+   f8824:	54001020 	b.eq	f8a28 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x80e78>  // b.none
+   f8828:	f1000c1f 	cmp	x0, #0x3
+   f882c:	54000f40 	b.eq	f8a14 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x80e64>  // b.none
+   f8830:	f100041f 	cmp	x0, #0x1
+   f8834:	54001040 	b.eq	f8a3c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x80e8c>  // b.none
+   f8838:	a94e63f7 	ldp	x23, x24, [sp, #224]

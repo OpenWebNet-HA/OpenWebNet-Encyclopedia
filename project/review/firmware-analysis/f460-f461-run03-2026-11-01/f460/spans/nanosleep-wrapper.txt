@@ -1,0 +1,25 @@
+
+/lib/libc.so.6:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000b97c0 <__nanosleep@@GLIBC_2.17>:
+   b97c0:	d503233f 	paciasp
+   b97c4:	a9bf7bfd 	stp	x29, x30, [sp, #-16]!
+   b97c8:	aa0003e2 	mov	x2, x0
+   b97cc:	910003fd 	mov	x29, sp
+   b97d0:	aa0103e3 	mov	x3, x1
+   b97d4:	52800000 	mov	w0, #0x0                   	// #0
+   b97d8:	52800001 	mov	w1, #0x0                   	// #0
+   b97dc:	97ffebf1 	bl	b47a0 <clock_nanosleep@@GLIBC_2.17>
+   b97e0:	35000080 	cbnz	w0, b97f0 <__nanosleep@@GLIBC_2.17+0x30>
+   b97e4:	a8c17bfd 	ldp	x29, x30, [sp], #16
+   b97e8:	d50323bf 	autiasp
+   b97ec:	d65f03c0 	ret
+   b97f0:	b0000701 	adrp	x1, 19a000 <sys_sigabbrev@GLIBC_2.17+0x68>
+   b97f4:	f946f021 	ldr	x1, [x1, #3552]
+   b97f8:	d53bd042 	mrs	x2, tpidr_el0
+   b97fc:	b8216840 	str	w0, [x2, x1]
+   b9800:	12800000 	mov	w0, #0xffffffff            	// #-1
+   b9804:	17fffff8 	b	b97e4 <__nanosleep@@GLIBC_2.17+0x24>

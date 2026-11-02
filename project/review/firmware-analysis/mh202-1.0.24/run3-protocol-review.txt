@@ -1,0 +1,45 @@
+# Independent review — MH202 protocol run3
+
+**PASS for the report's bounded static refinement and conditional caller join.** No material correction requested. The author confirmed the reviewed bytes stable. This is not full parser verification, final registry-owner proof, an observed transmission or a physical-device compatibility result.
+
+I read the report and collector, ran its host-only `--check`, inspected the decisive original instruction/relocation spans, and independently verified saved spans and words against hash-checked original-image bytes using a separate ELF segment-to-file mapping. The check passes26 generated outputs, nine inputs, nineteen original spans, twenty-six exact words and four selected relocations. All28 producer-manifest identities also match current bytes. Original ARM, loader, JavaScript, PHP, vendor/runtime execution and code hooks remain zero. No images, sources or authored artifacts were modified.
+
+## WHO1000 map and null return
+
+The initializer instructions at `0x4eb0..0x4ed0` construct the WHO1000 key with pointer zero: immediate1000 is stored as key, subtraction of1000 yields the zero pointer temporary, and the pair constructor receives those addresses. The destination lies inside the17-pair half-open range consumed at `0x4ee0`. Initializer/lookup PIC computations identify the same global map at `0x13808`; the original init-array entry identifies the initializer. The report correctly conditions this result on successful ordinary construction, rather than calling it observed initialized memory.
+
+`getScsAddr` at `0x5228` has two distinct paths. Failure to find the key reaches the exception construction/throw at `0x52e0..0x530c`. A present null stored translator pointer compares equal at `0x52a0` and branches at `0x52a4` directly to `0x5310`. The virtual call and the three-word store to the structure-return destination are skipped. Thus a normal WHO1000 null-map lookup is not the missing-key error and does not produce zero-filled address bytes. The host JSON preserves unknown return-storage contents.
+
+This is a WHO-to-translator map, distinct from the generic WHO-to-SCS-system map previously examined. No broader address acceptance follows from this selected present-null branch.
+
+## General's selected field use
+
+General still calls `getScsAddr` before its WHO branch and initially reads the marker byte from `SP+372`. The candidate `libopen` normal predicate compares kind with3; under the explicit kind4 premise the marker-adjustment path is skipped. The WHO1000 compare selects the fixed-header branch. That branch does not use the marker byte in r4 or the generic address word from `SP+376` to construct its header; the latter word's load is confined to the generic branch.
+
+The report therefore correctly narrows run2's prerequisite: inside this specific initialized libwhere call there is no ordinary WHERE1-to-native-address conversion. It does not claim that the complete raw parser or earlier address/interface normalization accepts WHERE1, nor that all return fields are initialized or safe for other callers/kinds. Reusing the earlier selected suffix/header result as a conditional candidate is clearly identified.
+
+## Registry and consumer joins
+
+The saved relocation and original factory instructions connect the first two OPEN keygen entries, the General C1 constructor and the selected registration call. General `getManagedKeys` enumerates its map keys; `initManagedFrames` calls the getter through the vtable, obtains outer `map[key]`, then assigns the class smart pointer. This establishes a mechanism through which General's existing `R0P0` enters the registry under ordinary completed initialization. It does not establish final ownership: a later assignment to the same key can replace it, and the report expressly leaves other classes' full key sets/collisions unresolved.
+
+The selected outer method invokes keygen, registry lookup and the class virtual translator. A nonzero class result is followed by response-type storage and outer Boolean result1. The response enum and Boolean result are kept separate. The report does not claim that its selected registration evidence closes every earlier branch, exception, rule-selection or factory condition.
+
+The original bt_device caller tests its diagnostic membership/context conditions before invoking the outer translator. Its nonzero-return route accesses vector element0, copies that string and compares its length with18. I additionally inspected the intervening original `0x1e56c..0x1e644` continuation, beyond the short saved selector span: on ordinary C++/logging completion the length-not-greater-than18 path reaches the assignment r6=0; its exception edges remain outside the normal completion premise. The conditional11-character candidate therefore has the reported selected flag.
+
+The import-call arguments at `0x1e744..0x1e770` agree: copied first string in r1, caller descriptor in r2, r6 in r3 and zero as the stack fifth argument. The immediate zero-return branch requests close/reset. This is a concrete conditional import boundary, not an observed send, envelope, UART traffic, all-elements iteration or complete response-collector trace. Actual caller state, a nonempty vector, original full-parser success, final registry selection and runtime provider binding are retained prerequisites.
+
+## Exact reviewed pins
+
+Paths below are relative to `protocol/run3/`.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `40ece988cc53e03be936c10c9e81380e2d483a2188d27b80d9d2a8cfaba7cadc` |
+| `collect_evidence.py` | `cbd2d77f226d3c5732df0c74c987d5b91b2f18cb52ccd75f4924836f5826b178` |
+| `output-manifest.json` | `bccf852a0f66065b6f66ce01385c799f9201b4137348cae8de1869acd32b0fd6` |
+| `where-map-identity.json` | `a628275e29b790dac1cf5ae6141c6889273f4294e6f7220b08e2d73556c6a0f2` |
+| `outer-registration-dataflow.json` | `79acff556efbf4153a0ac80ddc4d58bbdcbf1b6a56ae2fb2c788c4f01263f4ea` |
+| `host-static-refinement.json` | `62959d9d710d22fb172268bfa7ac3a6dbf4a00817462aa04aa59819c68e02154` |
+| `input-hashes.json` | `a0a6a898aafbdd0adec07f4516076c07c5d83a373afde13dc0479948e827ef90` |
+
+This review is tied to those current bytes. It independently checks the listed source branches, map identity/dataflow and provenance assertions; it does not certify all diagnostic classes, full firmware semantics, the recovery runtime or an executable hardware result. The ranked remaining questions are consistent with the unresolved parser, final registry-owner and later collector/transport boundaries.

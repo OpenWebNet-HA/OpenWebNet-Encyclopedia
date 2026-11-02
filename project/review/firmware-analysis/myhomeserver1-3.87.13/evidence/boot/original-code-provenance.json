@@ -1,0 +1,196 @@
+{
+  "asserted_Thumb_bytes": [
+    {
+      "bytes_hex": "4ff49c70",
+      "va": "0x3cf2"
+    },
+    {
+      "bytes_hex": "0af046f8",
+      "va": "0x3cfc"
+    },
+    {
+      "bytes_hex": "eff734ed",
+      "va": "0x13f30"
+    },
+    {
+      "bytes_hex": "a060",
+      "va": "0x12854"
+    },
+    {
+      "bytes_hex": "6060",
+      "va": "0x12860"
+    },
+    {
+      "bytes_hex": "2060",
+      "va": "0x1286c"
+    },
+    {
+      "bytes_hex": "0238",
+      "va": "0x11734"
+    },
+    {
+      "bytes_hex": "ab68",
+      "va": "0x1173a"
+    },
+    {
+      "bytes_hex": "002b",
+      "va": "0x1173c"
+    },
+    {
+      "bytes_hex": "f1f7d8ef",
+      "va": "0x118e2"
+    }
+  ],
+  "default_stack_path": "/var/tmp/stack_open.xml",
+  "default_stack_pointer_chain": [
+    "0x29bd8",
+    "0x29ffc",
+    "0x2a150",
+    "0x185a8"
+  ],
+  "main_GOT": {
+    "base": "0x29bd8",
+    "slot": "0x29fa4",
+    "stored_Thumb_pointer": "0x3c59"
+  },
+  "public_literals": [
+    {
+      "PC_add_va": "0xddca",
+      "pool_va": "0xddf0",
+      "target_va": "0x16dd0",
+      "text": "/home/bticino/cfg/bt_daemon"
+    },
+    {
+      "PC_add_va": "0x4150",
+      "pool_va": "0x4ac4",
+      "target_va": "0x15274",
+      "text": "/var/tmp/conf.xml"
+    },
+    {
+      "PC_add_va": "0x126de",
+      "pool_va": "0x12e74",
+      "target_va": "0x18930",
+      "text": "stackopen"
+    },
+    {
+      "PC_add_va": "0x126fa",
+      "pool_va": "0x12e78",
+      "target_va": "0x1893c",
+      "text": "p%d"
+    },
+    {
+      "PC_add_va": "0x1272a",
+      "pool_va": "0x12e7c",
+      "target_va": "0x15794",
+      "text": "name"
+    },
+    {
+      "PC_add_va": "0x1273c",
+      "pool_va": "0x12e80",
+      "target_va": "0x18940",
+      "text": "path"
+    },
+    {
+      "PC_add_va": "0x1274e",
+      "pool_va": "0x12e84",
+      "target_va": "0x166b8",
+      "text": "working_mode"
+    },
+    {
+      "PC_add_va": "0x11714",
+      "pool_va": "0x11a30",
+      "target_va": "0x1617c",
+      "text": "%d"
+    },
+    {
+      "PC_add_va": "0x118c6",
+      "pool_va": "0x11a6c",
+      "target_va": "0x15f3c",
+      "text": "%s/%s"
+    }
+  ],
+  "scheduling_table": {
+    "selected_strings": [
+      "nice",
+      "chrt",
+      "chrt",
+      "-n",
+      "--fifo",
+      "--rr"
+    ],
+    "va": "0x2a154"
+  },
+  "scope": "Current source requests only. No ARM execution; nearest disassembler labels are not function identities. PIE load bias/runtime providers unobserved.",
+  "spans": [
+    {
+      "end_va_exclusive": "0x556c",
+      "file_offset": "0x5544",
+      "image": "/home/bticino/bin/bt_daemon",
+      "sha256": "7ade9b9d6513208832017907a939bd5778bbe63e6b73fc6703f3a514583c9978",
+      "start_va": "0x5544"
+    },
+    {
+      "end_va_exclusive": "0x3d08",
+      "file_offset": "0x3cee",
+      "image": "/home/bticino/bin/bt_daemon",
+      "sha256": "e9a41876e0713be0b87e07be7f8ea4f9bc0ff7984fc28f72ddd62fe7f5094392",
+      "start_va": "0x3cee"
+    },
+    {
+      "end_va_exclusive": "0xddb2",
+      "file_offset": "0xdd8c",
+      "image": "/home/bticino/bin/bt_daemon",
+      "sha256": "788851acdadb36124e02f0370d8dba2fb3fd96d6f8fb84aec5cd92298773a091",
+      "start_va": "0xdd8c"
+    },
+    {
+      "end_va_exclusive": "0xddd6",
+      "file_offset": "0xddc6",
+      "image": "/home/bticino/bin/bt_daemon",
+      "sha256": "242a4a0f79332bae34560576ce477cb2ee6cba77fa46f287c2e2d2da04064d2d",
+      "start_va": "0xddc6"
+    },
+    {
+      "end_va_exclusive": "0x13f34",
+      "file_offset": "0x13e88",
+      "image": "/home/bticino/bin/bt_daemon",
+      "sha256": "a4a3270ec93c00692493e67aee564e745d3a28c12dce7da4e4811cf1063637dc",
+      "start_va": "0x13e88"
+    },
+    {
+      "end_va_exclusive": "0x1275a",
+      "file_offset": "0x126d8",
+      "image": "/home/bticino/bin/bt_daemon",
+      "sha256": "d20dc9eab728d5327acc88ea7fa943d79f2600b0d8d057160f679da929d4d1e4",
+      "start_va": "0x126d8"
+    },
+    {
+      "end_va_exclusive": "0x12870",
+      "file_offset": "0x1284c",
+      "image": "/home/bticino/bin/bt_daemon",
+      "sha256": "9b32d40f68f60f35e836bae1c3b8d43fa32cb3aae575fa919de00c8edc391aef",
+      "start_va": "0x1284c"
+    },
+    {
+      "end_va_exclusive": "0x1174a",
+      "file_offset": "0x116ac",
+      "image": "/home/bticino/bin/bt_daemon",
+      "sha256": "bc3478795302786c21bc770216d273abf16fd3598760a082c13a2435b86856a0",
+      "start_va": "0x116ac"
+    },
+    {
+      "end_va_exclusive": "0x118e8",
+      "file_offset": "0x11898",
+      "image": "/home/bticino/bin/bt_daemon",
+      "sha256": "3d47bd3658f2aecbc38e1be5b57f7b9cdf7048106a00d917962468c64c5b2a0b",
+      "start_va": "0x11898"
+    },
+    {
+      "end_va_exclusive": "0x4156",
+      "file_offset": "0x4138",
+      "image": "/home/bticino/bin/bt_daemon",
+      "sha256": "b08378f7c1b148f642c8330c0730563e30782919df79124a5fd18204958a9891",
+      "start_va": "0x4138"
+    }
+  ]
+}

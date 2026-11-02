@@ -1,0 +1,25 @@
+# F450/F459 embedded database format admission
+
+This pass scans complete selected original regular-file payloads at every byte offset for SQLite3/SQLite2 and finite BDB/GDBM/LMDB signatures. It goes beyond the earlier offset-zero file-prefix census. It is a byte/format admission study, not a SQL/runtime/provider study.
+
+## Reviewed source scope
+
+F4502.0.10 standard and PROD normal views and F459 archive020105/local2.1.5 normal/recovery views are resolved from the original acquisition summary and exact regular-file manifests. Each occurrence is size/SHA-256 verified, then identical payload bytes share one scan with multiple provenance. The separate F450PROD50.xtz is an auxiliary container, never an assumed installed overlay.
+
+Current bounded results: 14303 regular file occurrences verified; 6888 distinct regular payloads scanned. There are 7 exact SQLite3 signature hits and 41 finite alternate-format magic hits; 0 SQLite3 headers pass the selected conservative admission. No actual database object is recovered or promoted by this collector. Individual exact offsets and header failure reasons are in CANDIDATES.json; file aliases are in SOURCES.json. Counts describe finite byte reach/integrity, not full firmware semantic coverage or global absence.
+
+## Header and format limits
+
+SQLite3 admission requires a complete100-byte header, ordinary selected read/writeversions1/2, an allowed power-of-two page size (raw1 represents65536), fixed fractions64/32/32, valid usable bytes, reserved-expansion zeros and an available first page with admitted B-tree type. These are conservative local gates, not a full page/tree/schema/checksum verifier. The header pagecount can be stale: it is only current under the nonzero count plus matching change-counter/version-valid-for rule. A stale or mismatched count is not used here to reject a candidate. See [official SQLite file format](https://sqlite.org/fileformat.html), sections1.3.1–1.3.7. A magic literal in a binary is not an embedded database.
+
+SQLite2/BDB/GDBM/LMDB signatures remain unparsed leads. No modern SQLite parser was forced onto a legacy format, and a four-byte word does not establish database type, page layout or extent. Alternate-format completeness remains open. No SQL, schema, row/count query, repair, transformation, synthetic DB, key/password trial, private configuration export or vendor/helper/native process ran.
+
+## Containers, archive and interpretation
+
+Actual PK-leading containers are read only through their central directories and capped unencrypted members with CRC verification. No encrypted member is opened, no archive is extracted into a filesystem, and nested bodies beyond the declared depth are not expanded. Caps and per-member outcomes are explicit in ARCHIVES.json. Other compressed/encrypted/fragmented/custom formats, runtime-created and configured stores remain outside this finite result.
+
+Previously source-proven F450 copy/open and F459 SQLite API requests remain inherited evidence only. They do not supply a packaged plaintext database, accepted schema/rows, successful persistence or effective runtime binding. The previously archived50.xtz remains an original encrypted SUPPORT container; this pass performs no upload/readback and does not relabel it as a plaintext database. Parent owns any newly justified archival action; no automatically generated candidate becomes vendor-original DB bytes.
+
+## Reproduction
+
+Run `python3 -B work/sequential-firmware-priorities/2026-11-02/stage2-databases/source-format/collect_formats_v1.py --check` from the workspace. It revalidates own archive/manifest/file bytes and repeats only this static signature/header/container scan. Originals and all earlier reports/collectors remain unchanged. No earlier collector, native corpus or configured fixture is replayed. New output is exclusive with immediate exact first copies. Important candidates and source-to-prose claims require independent review before promotion. Full Device/source/runtime/physical gates remain pending.

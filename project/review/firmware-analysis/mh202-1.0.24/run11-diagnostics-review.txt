@@ -1,0 +1,29 @@
+# MH202 run11 diagnostic output/no-data policy — independent source review
+
+**PASS. No correction requested.** Review is static original-source and finite-model verification; original ARM/parser/libc, target process, OS and I/O execution remain0. Only application result-slot stores and collector branches were examined. Socket/accept/authorization/handshake/framing implementations remain opaque and were not inspected.
+
+I reproduced `python3 -B diagnostics/run11/collect_output_policy.py --check`:19 outputs,13 original spans,21 listed word assertions,3 input identities,7 return cases and6 zero-select fixture states. A separate reviewer checker freshly read the exact original through MH202 ImageVFS, independently mapped ELF32 load segments and verified all13 raw span hashes,21 listed words,3 source/research input hashes,4 GOT/relocation rows and19 output-manifest entries. It also independently checked five additional predicated-finish instruction words and the seven result cases against their ARM flag arithmetic. No author artifact changed.
+
+## Critical source verification
+
+- Original pool/PIC arithmetic and `R_ARM_GLOB_DAT` rows distinguish monitor object`0x2e51c` from command object`0x2e520`. The first diagnostic-family array-forward at`0x10a24` loads the monitor slot before the later request DIM/WHERE correlation; the selected qualified forward`0x10df0` loads the command slot. The separate mode10 branch also uses command. This is conditional decoded/family-qualified caller dataflow, not every incoming object or proof that a write succeeds or has a recipient.
+- The displayed application setup saves config+12 server-result into SP+32 and config+16 result into SP+36. Selected application calls use SP+32/36 and store their returned client values into command`0x20d74`/monitor`0x20e24` respectively. These result/store relations identify distinct slots without deriving port/peer/authorization behavior from opaque helpers. Connectedness, effective configuration and complete lifetimes remain open.
+- Initial source stores timeout counter1 at SP+48, accepted count0 at SP+52 and r7=1. Timeval requests0/500000; reset/increment at`0xfadc..0xfb00` occurs on the displayed zero-select retry path. Guards compare counter>11 and signed r7>5. With only the explicitly constructed zero outcomes, the sixth reaches finish before another increment. This is a branch fixture, not a3-second deadline: mutable select timeout, other descriptors, normal calls and scheduling remain separate.
+- The finish sequence's **predicated** comparisons accept modes1/5,4/8 and10. For other modes, `rsbs r3,r2,#1` plus `movcc r3,#0` yields nonzero only for requested DIM0 among the relevant integer inputs; `cmp accepted,#0`/`movle` clears it unless signed accepted count>0. Thus mode8/count0→0 and other-mode/DIM0/count1→0 agree with the original control flow. Return0 is a local source result, not affirmative diagnostic data or physical ACK.
+- Negative select errno4 branches directly to the context gate without these timeout increments/reset. Other negative return flow reaches normal logging/destructor cleanup and−1. The context+28!=1 branch similarly follows its normal cleanup to−1. I inspected the short application cleanup/control spans to confirm the joins; exceptions or nonreturning delegates are not modeled.
+- The no-data return is separate from the inherited run6 received-timestamp elapsed>5 path, whose timestamp is taken before receive and can follow an unqualified object. The original caller's OPEN-OK choice remains an inherited source boundary rather than a newly emitted/delivered message. No fixed wall-clock, successful response collection, active service, accepted raw frame or hardware outcome is promoted.
+
+## Exact reviewed pins
+
+Paths are relative to `diagnostics/run11/`:
+
+| Artifact | SHA256 |
+|---|---|
+|`REPORT.md`|`8f865cbea3c0baf7537c0d7b75957129e3e4111582b544e50efbd1cb6382cb84`|
+|`collect_output_policy.py`|`2d0af267e3d0bfbf82ca09a02b175041244303866ac4e23111afe79e6f773864`|
+|`output-manifest.json`|`a510f624a0dae5f188135ec837da57e0e3f0c1b82a850d5c9e13b80889e92cd5`|
+|`descriptor-relocation-identities.json`|`f016cb4518f9722e64564f0fffd99eda18c35f78a3affe994f5a3a1e0deb7539`|
+|`host-no-data-decision-model.json`|`757950104ed44246bbbd07c2f4361ff9edb6b6ce1a44bbb296828f7196c438f3`|
+|`original-spans.json`|`4c4ae7ed7ba13d78cc50abb7bda496e04c3a2b7cade79cd82dc28f9906c533b3`|
+
+Reviewer wrote only `reviews/run11/diagnostics-review.md`. Original images, tools, old dossiers, repository documents and author evidence remain unchanged.

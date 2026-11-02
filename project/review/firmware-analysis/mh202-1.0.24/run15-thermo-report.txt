@@ -1,0 +1,53 @@
+# MH2021.0.24 run15 — selected ordinary WHO4 DIM0 request builder
+
+## Result and scope
+
+For one coherent supplied COSO parsed request — WHO text4, parsed kind3, DIM text0, WHERE text1, selector+20=null, input record representation3 — the original selected source path constructs **ASCII body `99013000`**, requests **prepare_briefscs_frames** with routing argument3, and takes its local normal return0. The source-backed candidate destination words are `[0xd1,1,0]`; the selected body components are header`99`, brief address`0130`, request code`00`.
+
+This is original static control/data flow and one finite host transcription, **not an executed parser/serializer/library, accepted raw input, sent frame or observed response**. It does not assign physical units, request success, address class, error/sentinel/setpoint domain or scalar501 meaning. The prior reverse-scalar report remains a separate software contract, not a demonstrated round trip.
+
+Original ARM/vendor/parser/JS/PHP execution, original instructions executed, emulator hooks and live I/O are all **0**. Host tools read verified original bytes, disassemble/check metadata and compute the selected ordinary-format example. No original process, target OS/device/network/framing, auth/HTTP route or credentials are involved. Earlier outputs, firmware and repository files remain unchanged.
+
+## Original identities and reproduction
+
+| Original normal-image path | SHA256 |
+|---|---|
+| `/home/bticino/libcoso/libplug_thermo_tr.so` | `5e2da864f01b19f4f14dde76e11786234b36c97f4f6778966d6a32f597d1452b` |
+| `/home/bticino/lib/libthermo.so` | `a84ac5be4d01eaadceafa4bbc54bee58e6794bf144398d64bb54c1f944686ff2` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+
+`python3 work/mh202-firmware/research/2026-10-30/thermo/run15/collect_thermo_query.py --check` strictly reproduces20 outputs:13 original spans,25 asserted words,8 safe literals, provider/layout metadata and1 host case. All5 inputs are pinned: three original files, VFS and immutable thermo/run14 report. `original-spans.json` records exact original VAs/file offsets/byte hashes. Separate author manifest pins report/collector/evidence and excludes itself/later reviews. No F454 code/layout/fixture/native harness is reused.
+
+## 1. Actual forward entry and parser/serializer premises
+
+The already identified WHO4 descriptor and separate routing criteria3/4 from run14 remain conditional registration/admission evidence. Fresh direction span **thermo_tr_translate0x7940..0x79a4** shows selected pair(2,1) tailcalls **thermo_open2scs** through PLT at0x79a0. This does not observe a loaded plugin or a complete incoming grammar.
+
+Forward entry **0x1f20** reads input record+56. Value3 supplies record+0 as the parsed pointer; value2 invokes buf_to_openmsg/free/replace through a separate delegate path; other displayed values return1. The host case uses coherent supplied representation3 and COSO/libopenmsg fields: WHERE+16=`1`, selector+20=null, DIM+32=`0`, kind+44=3. WHO4 is an outer parsed routing premise, not a new hard-coded check at this entry. These are not the common130/libopen90 native object layouts studied in the independent protocol work.
+
+Even for an already parsed object, the original calls **openmsg_to_buf at0x1f94** and branches on its result at0x1f98..0x1f9c. The selected continuation requires **return0**; nonzero takes logging/free/return1 at0x218c..0x21b4. The temporary serialization buffer is logged/freed on the selected zero path. Neither serializer nor logging/allocation is executed here; the zero result is an explicit delegate premise, not a supplied accepted raw command.
+
+Then **scsDest at0x1fd0** obtains a candidate12-byte destination structure from the parsed object. The selected kind3 comparison at0x1ff4/0x1ffc branches to DIM-request handling0x2d38. Because serializer r4 is0 and kind!=1, original0x1fe4/0x1fe8 also initializes the request-code list to null and the selected extended/brief flag r6=0. This source relation, not a guessed private configuration default, selects the later brief output path.
+
+## 2. Exact candidate address producer
+
+Same-build candidate **libthermo::scsDest0x1dac..0x1fd0** requests g_malloc0(12), initializes word+8=0 and examines parsed WHERE/selector. Its exact public prefix/equality strings are `#`, `0`, `00`. Supplied WHERE`1` matches none; selector+20=null and length1 take **0x1ef8..0x1f30**. It writes word+0=0xd1, decimal-converts WHERE with g_ascii_strtoll(base10), stores low result1 at+4, and returns the structure. Under successful ordinary allocation/numeric/string delegates the result is therefore **[0xd1,1,0]**. No physical device class or validity is attached to these numeric words.
+
+The DIM-request branch **0x2d38..0x2d80** computes two separate strings from destination word+4: low8bits and high nibble `(word>>8)&15`. Exact brief format **`%02X3%01X`** gives **`0130`**. Exact extended-address format **`%02X%01X303`** gives `010303`; this second string is computed in source but unused in the selected brief output. Distinguishing them avoids concatenating the wrong body length. Wider/special address branches and selectors are not modeled as a support/domain table.
+
+## 3. DIM0 code, body construction and list wrapper
+
+Parsed DIM text+32 is converted at0x2d84..0x2d90, followed by the unsigned64/table guards. Our exact ordinary0 selects **0x2de8→0x313c**. This branch checks whether parsed WHERE starts with exact literal **`00`**. Supplied`1` does not; conditional0x3154 supplies code integer0 and goes to0x2e70. A nonzero prefix result takes a different error route; the single host case does not claim a complete DIM/address domain.
+
+Original **0x2e70..0x2e94** sets header register fp=0x99, formats the code with exact **`%02X`** into string **`00`**, and appends that code pointer to the local list. The routine returns to common kind dispatch, which allocates a64-byte zeroed output record at0x2014..0x2024. The selected r6=0 from the serializer/kind relation branches to the brief loop0x229c. The DIM0 code list is nonempty under ordinary append semantics; no null-list fallback is silently supplied by the host model.
+
+At **0x22b0..0x22cc**, exact original format **`%02X%s%s`** receives header0x99, brief-address text0130 and code00. This produces eight ASCII characters **`99013000`**. Host-decoded values `[0x99,0x01,0x30,0x00]` in the model are a convenience for comparison, not actual original output bytes or serial framing. The ASCII body is stored at the output record+0.
+
+Original call **0x22e0** requests **prepare_briefscs_frames**, with explicit r3=3 at0x22d8. Same-build candidate core **0x2a04..0x2a44** sets type+40=3, representation+56=1 and routing field+48=3, invokes **prepare_scs_from_open0x2230**, and appends the record to the supplied list. Source metadata copies include+4/+8/+12/+16/+24/+28/+32/+36/+44/+60; routing+48 is separately set to3, not copied as WHO4. This joins the input WHO4 routing axis to the selected SCS-family3 output axis without treating either numeric3 as a physical endpoint or conflating parsed kind3 with record type3.
+
+For the single code node, original0x230c..0x2314 reaches normal cleanup, frees the temporary strings/destination and returns literal0 at0x20a8. That is a local routine return on selected delegates, not observed transport/physical success. Additional code nodes/extended requests and their scheduling are not a new matrix in this batch.
+
+## Boundaries and next question
+
+Confirmed static: actual direction/entry path, parsed representation/serializer gate, source-derived r6 brief flag, candidate destination prefix/address producer, DIM0/WHERE guard, distinct brief/extended format strings, nonempty single code list, header/body construction and core routing/type/metadata/list boundary. Host-only:1 finite supplied-field/ordinary-delegate calculation. Conditional: initialized descriptor/admission, coherent parsed object, serializer return0, candidate same-build providers and successful allocation/numeric/string/list completion. Unknown: raw parser acceptance, effective live import binding/interposition, general address/DIM domains, transport framing/publication, actual request/response ownership, STM state/timeouts or physical behavior.
+
+The direct dependency/provider metadata was already pinned in run14; fresh selected symbol definitions/imports are retained here without repeating a whole component inventory or claiming a complete loader closure. The prior reverse source also formats WHO4/DIM0 values, but no physical exchange or correlation is demonstrated. A useful next distinct step is actual thermo STM query ownership/status routing for this selected request, rather than replaying the scalar cases or inferring units from them.

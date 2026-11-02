@@ -1,0 +1,85 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00031950 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11d20>:
+   31950:	4cd8      	ldr	r4, [pc, #864]	@ (31cb4 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x12084>)
+   31952:	0013      	movs	r3, r2
+   31954:	06b4      	lsls	r4, r6, #26
+   31956:	0000      	movs	r0, r0
+   31958:	4cd0      	ldr	r4, [pc, #832]	@ (31c9c <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1206c>)
+   3195a:	0013      	movs	r3, r2
+   3195c:	5266      	strh	r6, [r4, r1]
+   3195e:	000e      	movs	r6, r1
+   31960:	44ae      	add	lr, r5
+   31962:	000e      	movs	r6, r1
+   31964:	452a      	cmp	r2, r5
+   31966:	000e      	movs	r6, r1
+   31968:	0cac      	lsrs	r4, r5, #18
+   3196a:	0000      	movs	r0, r0
+   3196c:	11f0      	asrs	r0, r6, #7
+   3196e:	0000      	movs	r0, r0
+   31970:	0c38      	lsrs	r0, r7, #16
+   31972:	0000      	movs	r0, r0
+   31974:	14a8      	asrs	r0, r5, #18
+   31976:	0000      	movs	r0, r0
+   31978:	4b2a      	ldr	r3, [pc, #168]	@ (31a24 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11df4>)
+   3197a:	0013      	movs	r3, r2
+   3197c:	0ce8      	lsrs	r0, r5, #19
+   3197e:	0000      	movs	r0, r0
+   31980:	0668      	lsls	r0, r5, #25
+   31982:	0000      	movs	r0, r0
+   31984:	0524      	lsls	r4, r4, #20
+   31986:	0000      	movs	r0, r0
+   31988:	4226      	tst	r6, r4
+   3198a:	000e      	movs	r6, r1
+   3198c:	0870      	lsrs	r0, r6, #1
+   3198e:	0000      	movs	r0, r0
+   31990:	42ee      	cmn	r6, r5
+   31992:	000e      	movs	r6, r1
+   31994:	06b0      	lsls	r0, r6, #26
+   31996:	0000      	movs	r0, r0
+   31998:	424a      	negs	r2, r1
+   3199a:	000e      	movs	r6, r1
+   3199c:	40dc      	lsrs	r4, r3
+   3199e:	000e      	movs	r6, r1
+   319a0:	0a24      	lsrs	r4, r4, #8
+   319a2:	0000      	movs	r0, r0
+   319a4:	410c      	asrs	r4, r1
+   319a6:	000e      	movs	r6, r1
+   319a8:	0efc      	lsrs	r4, r7, #27
+   319aa:	0000      	movs	r0, r0
+   319ac:	3fc4      	subs	r7, #196	@ 0xc4
+   319ae:	000e      	movs	r6, r1
+   319b0:	0e88      	lsrs	r0, r1, #26
+   319b2:	0000      	movs	r0, r0
+   319b4:	3f90      	subs	r7, #144	@ 0x90
+   319b6:	000e      	movs	r6, r1
+   319b8:	3f3a      	subs	r7, #58	@ 0x3a
+   319ba:	000e      	movs	r6, r1
+   319bc:	3f38      	subs	r7, #56	@ 0x38
+   319be:	000e      	movs	r6, r1
+   319c0:	4028      	ands	r0, r5
+   319c2:	000e      	movs	r6, r1
+   319c4:	0fec      	lsrs	r4, r5, #31
+   319c6:	0000      	movs	r0, r0
+   319c8:	3ebe      	subs	r6, #190	@ 0xbe
+   319ca:	000e      	movs	r6, r1
+   319cc:	3fae      	subs	r7, #174	@ 0xae
+   319ce:	000e      	movs	r6, r1
+   319d0:	063c      	lsls	r4, r7, #24
+   319d2:	0000      	movs	r0, r0
+   319d4:	1514      	asrs	r4, r2, #20
+   319d6:	0000      	movs	r0, r0
+   319d8:	155c      	asrs	r4, r3, #21
+   319da:	0000      	movs	r0, r0
+   319dc:	3e90      	subs	r6, #144	@ 0x90
+   319de:	000e      	movs	r6, r1
+   319e0:	0b78      	lsrs	r0, r7, #13
+   319e2:	0000      	movs	r0, r0
+   319e4:	3e2c      	subs	r6, #44	@ 0x2c
+   319e6:	000e      	movs	r6, r1
+   319e8:	0660      	lsls	r0, r4, #25
+	...

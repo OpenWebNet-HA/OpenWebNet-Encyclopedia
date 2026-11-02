@@ -1,0 +1,55 @@
+# F450 night03 independent supplied-resource handoff source review
+
+**PASS. No correction requested.** The positive result is the selected provided-object/fork-result leg, local argument-table construction and conditional packaged-wrapper request contract. It does **not** establish the provided field's archive identity, XML50-to-field mapping, extraction, decryption, process launch/completion or recovered database. All author candidates and original sources remained unchanged.
+
+Read-only `collect_resource_v1.py --check` reproduced six outputs/nine spans/40 word guards/seven exact first copies. I independently verified two original ELF identities, all nine source/data/PLT span bytes,40 guards, eight pool joins, the selected call/branch targets, four actual PLT/GOT/relocation relationships, four input pins/seven copies and safe XML fields. Host objdump/readelf/hash parsing only read original bytes. No original/vendor/provider/native/emulator code, process/fork/unzip/wait/target OS/device/network/bus/mount, SQL, semantic model/fixture or decryption/key trial was executed.
+
+## Qualified incoming object and selected admission
+
+The original F450 bt_daemon hash85e7ca65b4d1c4e8ab23a93ac532aea568dd06272fefb1b1be928eeba18f3d73 and packaged libutils.so are independently mapped ELF32 little-endian ARM, own flags0x5000002. Source labels are original addresses/definitions, not nearest disassembly symbols or transferred MHS/MH202/F454 types.
+
+Original0xf96c stores incomingR0 C atFP−16. Its fork request0xf984 has a signed-negative leg distinct from the selected0xf9c0/0xf9c8 numeric-zero test. Only that selected zero path reloads the same saved C intoR0 at0xf9e4 and calls0xc7f0 at0xf9e8 after normal diagnostics. Nonzero bypasses the call. This is no observed child process, actual activation or full natural outer caller. The callee prologue'sFP−2120 saved pointer and later0xdb4c load compose only under the selected same-frame/source, no relevant intervening mutation and normal ABI/provider premises. Constructor/type, actual contents, prior admission and lifetime remain unproved.
+
+On the selected later block, providedC+80 is compared with0; zero branches0xdc10 and skips this request construction. Nonzero reaches the original table stores. I independently checked the constant pool addresses and literal bytes: at0x23e8c the six32-bit words are supplied in order **[`unzip`, `-d`, `/var/tmp`, `-o`, provided[C+76], NULL]**.0xdbc0 passes this table pointer asR0 and0xdbc4 requests the actual call import. C+76 is not dereferenced as an assumed string, given an archive path, populated with a secret or replaced by a fixture. Writable mapped storage, actual valid C and no relevant alias/mutation remain prerequisites; the source does not qualify whole ownership or concurrency.
+
+## Candidate provider and exact result boundary
+
+The original executable declares libutils.so. Its candidate `call` definition is0x3488 with48-byte extent, independently checked as the complete retained tiny wrapper. Under actual binding to that definition, instructions before0x349c do not overwrite providedR0; the wrapper requests opaque call_nowait with that pointer. No call_nowait body or process implementation was expanded.
+
+Source initializes the scratch word atSP+4 to0. After normal call_nowait return, waitpid is requested using returnedR0, the scratch address inR1 and0 inR2. LDRB at0x34ac readsSP+5 for the normal returned machine value. The byte range0..255 follows this instruction, not a certified child exit code, wait outcome, command launch, successful extraction or error policy. In particular, the packet does not convert normal return into a recovered database. The executable's separate CMN against−1 remains a source guard, not a defect/unreachable-code or global failure-handling claim. Provider effects, legitimate status meaning, lifetime and earlier/later natural flow are unclosed.
+
+Independent original PLT instruction arithmetic and R_ARM_JUMP_SLOT rows agree:
+
+| Original stub | Decoded GOT slot | Name |
+|---|---|---|
+|bt_daemon0xa1f4|0x23860|call|
+|bt_daemon0xa56c|0x23988|fork|
+|libutils.so0x1804|0xc1b0|call_nowait|
+|libutils.so0x1888|0xc1dc|waitpid|
+
+These are original request/provider-candidate identities, not active self-binding/interposition or successful OS calls. Normal callees/stack preservation and valid ABI remain premises.
+
+## Archive declaration and recovered-data limits
+
+The exact on-disk XML lines51–55 independently agree with extra/enable0/check50/empty nocheck. This is a whitelisted declaration, not an active setting or a proved producer of C+76/C+80. An equal numeric50/path fragment cannot substitute for actual source identity. No separate literal password option is in this selected six-word table; the unknown provided word and other sources remain unresolved. This does not prove absence of a key elsewhere, identify a decoder/algorithm or license guesses. The other discovered unzip site was not conflated with this request or reopened by the review.
+
+The prior encrypted50.xtz metadata and night01 copy-to-SQLite source request remain **separate inherited evidence**. Neither the new table nor XML50 proves the original encrypted bytes populated a runtime source path, that this request can decode them or that a genuine database exists to query/upload. No raw data, credentials, key/private configuration or adjacent payload was exported. Parent alone controls any later genuine database archival operation; no database is created, synthesized or recovered here.
+
+## Preservation and scope
+
+The four input pins and seven first copies exactly match their saved canonical sizes/hashes/bytes. The first index excludes itself and is precomputed. No canonical failure, overwritten generated candidate or invented prior artifact is claimed. The packet adds one source-level pointer/argument/wrapper contract, not header inventory, an installed plugin/object, public protocol support, physical effect or whole startup/update policy. Old source trees/reports/ledgers and repositories remain unchanged. Closed output/receiving/transport/authentication/session/framing/MQTT/libjel and equivalent implementations remain opaque. All new original execution remains0.
+
+## Exact frozen review inputs
+
+| Member | Bytes | SHA-256 |
+|---|---:|---|
+| `work/f450-firmware/2.0.10/research/2026-11-01-night03-resource/REPORT.md` | 5648 | `fb73ae57a898efca61b10dede7029744b3d85fd267eae1900f5b190f9a07b797` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night03-resource/collect_resource_v1.py` | 14748 | `ac1907c687a32dccca777b74718e1624b681492dcd1f7b7b80b1750697d5f6e3` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night03-resource/OUTPUT_MANIFEST.json` | 838 | `d16ef0c952905f1dd3eaf39ceba6dd6f581c0e25e9c657cee4f18c5272dc0932` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night03-resource/SOURCE.json` | 6026 | `e8c8ccea0c0e372fc6a37717e1b9bed857c9102166e13bcf0dc8a4d3999ee1b7` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night03-resource/SPANS.json` | 3135 | `d4e565914cc570fccb1d1b378f2d97b4e137104104ac88940117fe68d6729676` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night03-resource/POINTER_FLOW.json` | 1946 | `8940d0edb73c17d530512ff4b75ab87345125beb2cadf6a527aa940c68c9620e` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night03-resource/INPUTS.json` | 856 | `28d17ce4827abd7765b89e4c5588873f389c58234149961f9e699d4b3e64d1cc` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night03-resource/first-candidate/INDEX.json` | 1168 | `519c8cb9b7165d82399cae46006f3ddff12281fae87442a08d13e4ef3132e833` |
+
+Completed 2026-11-01T20:53:34.729053+00:00. Exact first review bytes are preserved immediately with a precomputed non-circular index.

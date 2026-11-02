@@ -1,0 +1,25 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b72b0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c53c>:
+   b72b0:	b14a      	cbz	r2, b72c6 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c552>
+   b72b2:	2a01      	cmp	r2, #1
+   b72b4:	bf08      	it	eq
+   b72b6:	6001      	streq	r1, [r0, #0]
+   b72b8:	d003      	beq.n	b72c2 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c54e>
+   b72ba:	2a02      	cmp	r2, #2
+   b72bc:	bf04      	itt	eq
+   b72be:	680b      	ldreq	r3, [r1, #0]
+   b72c0:	6003      	streq	r3, [r0, #0]
+   b72c2:	2000      	movs	r0, #0
+   b72c4:	4770      	bx	lr
+   b72c6:	4b02      	ldr	r3, [pc, #8]	@ (b72d0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c55c>)
+   b72c8:	447b      	add	r3, pc
+   b72ca:	6003      	str	r3, [r0, #0]
+   b72cc:	2000      	movs	r0, #0
+   b72ce:	4770      	bx	lr
+   b72d0:	dad0      	bge.n	b7274 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c500>
+   b72d2:	000a      	movs	r2, r1

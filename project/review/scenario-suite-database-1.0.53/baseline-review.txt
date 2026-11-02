@@ -1,0 +1,97 @@
+# MH202 ScenarioSuite database baseline: independent schema/namespace preflight
+
+PASS for exact-source/schema/count preparation. This is a read-only SQL metadata/integrity and canonical-policy comparison, not a complete new database-semantic audit, compiler discovery, installed-project review or firmware/vendor/native execution. Parent owns addressing/implicit-join integrity, another author owns scheduler/areas/alarm/timing and another variables. I queried this exact immutable source independently and wrote only this NEW review; prior dossiers/database/repository/author artifacts remain unchanged. No remote upload, inventory expansion, vendor evaluation or permissions are needed.
+
+## Exact source and metadata
+
+The canonical artifact is `myhome-suite-3.5.38-mh202-1902-lgg-scen-suite-db-eng`, registered in the repository artifact manifest. Its exact installer member is `default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_2/Scen_SuiteDB_ENG.db`. The existing extracted local source is2542592 bytes, SHA256 `ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29`, before and after queries. All SQL used SQLite URI `mode=ro&immutable=1`; no writes or vendor code ran.
+
+| Direct SQL fact | Result |
+|---|---:|
+|sqlite_master tables|79|
+|ANA_OGGETTI editor definitions|63|
+|ANA_FAMIGLIA rows|16|
+|ANA_OPEN_RULE_COMPILE rows|608|
+|ANA_STATUS_REQUEST_COMPILE rows|67|
+|TMP_ tables / aggregate rows|24 /0|
+|ANA_VERSIONE_DB|1 /0 /53|
+|DB_CONFIG language|English|
+|sqlite_master indexes|89|
+|Declared FK entries over all79 tables|0|
+|Tables with declared primary-key columns|59|
+|Tables without declared PK|20|
+|Composite declared PKs|9|
+|Indexes from PK origin / explicit creation origin|58 /31|
+|Explicit creation indexes marked unique|0|
+|Tables/views/triggers beyond tables and indexes|No views or triggers|
+
+`PRAGMA integrity_check` returns one `ok`. `PRAGMA foreign_key_check` returns no rows because there are NO declared foreign keys: it does not verify any expected implicit object/action/area/address joins. Structural integrity is not semantic/relational completeness. The 31 explicitly created indexes are nonunique, including the misleadingly named `PrimaryKey`; names do not establish constraints. One INTEGER primary-key table has no separate PK index, explaining59 PK tables versus58 PK-origin indexes. Many PK columns have no explicit NOT NULL flag (66 such column declarations); that metadata is reported separately, not evidence of actual NULL rows or a product bug.
+
+The schema-plus-DDL fingerprint from JSON-encoding `SELECT type,name,tbl_name,sql FROM sqlite_master ORDER BY type,name` with ensure_ascii=True and separators(',',':') is `91824d4c37cb4a889ba07622205f4e0e8dd35bfa3e772b9c9f147a4db31ae8bd`. DDL comments/line endings are part of that exact fingerprint.
+
+## Keys and join-integrity obligations
+
+The declared composite keys are:
+
+- ANA_KEYCONF `(ID_ASS,KEY_CONF,KEY_VALUE)`;
+- ANA_PARAMETER `(ID_ASS,ORDER)`;
+- ANA_VERSIONE_DB `(VERSION,RELEASE,BUILD)`;
+- ASS_CONV_OSX_AUX_FIELDS `(ID_ASS,ID_CONVERSION_OSX)`;
+- ASS_OBJ_CHI `(ID_OBJ,ID_CHI)`;
+- ASS_OBJ_DOVE `(ID_OBJ,ID_DOVE,ID_AREA)`;
+- ASS_RULE_OPEN_DOVE `(ID_DOVE,ID_OPEN_EXT)`;
+- ASS_TYPE_CONF `(ID_WHERE_TYPE,ID_CONF)`;
+- TMP_OPE_OK `(ID_OPE,ID1,ID2)`.
+
+Area is therefore part of some association identity. Do not collapse address rows across areas or mistake the number of association rows for distinct commands/addresses. Quoted ORDER is a column, not a proven runtime precedence policy. Twenty tables have no declared PK, including ASS_COMBO_VALUES, ASS_FIELD_CONDITION, ASS_KEYOBJ_OBJ, ASS_OBJ_COSA_FIELDS_EXCEPTIONS, ASS_OBJ_RULE_OPEN and DB_CONFIG plus14 TMP auxiliary/configuration tables. Preserve duplicates/nullability and check expected cardinality before treating any as a one-to-one mapping. No additional application constraints are enforced by declared triggers in this file. This is not a UI performance, integrity-defect or runtime-support verdict.
+
+Authors should use exact local PKs and explicit selected columns, show NULL/sentinel treatment, keep unmatched rows via LEFT JOIN/anti-join counts, and distinguish raw rows from distinct semantic combinations. Any expected relationship is an inferred/schema-name association until supported by its data/code/reference context: same column spelling alone is not a declared FK. In particular ID_ASS has different owners; repeated ID_KIND/ID_FIELD/ID_COMP names need context. ANA_OBJECT_COMPOSITION.ID_OBJ_FIELDS_GROUPS is declared TEXT, so do not silently cast/split it into one integer foreign key. Parent's detailed joins must test those obligations rather than treating the empty foreign_key_check as a pass certificate.
+
+## Namespace and source-policy cautions
+
+The existing scenario-engine/database-model and internals/scenario-capability-loading pages describe TWO DIFFERENT small four-table ScenarioDevices.sqlite revisions, whose hashes are2ce7ffe.../cd3b9b6.... Their declared ObjectSystems -> DeviceObjects -> Commands -> Parameters FKs, CategoryFlag enum interpretations, ObjectMatchingId and local keys are not this79-table database. This source should get its own clearly named schema/evidence scope, not be inserted into the old model by renaming tables or equating integers. Their hierarchy-by-FK examples are inapplicable here without a new established mapping.
+
+ANA_OGGETTI.ID_OBJ, ANA_FAMIGLIA.ID_FAMIGLIA, ANA_CHI.ID_CHI, ANA_COSA.ID_COSA, ANA_DOVE.ID_DOVE, area IDs and all conversion/request/field/discriminator IDs are local to this source. Stored OPEN_CHI/OPEN_COSA/OPEN_DOVE and OPEN_FIELD_n text are a different layer; an ID is not automatically a WHO/WHAT/WHERE or a ready wire frame. Catalogue key_object/Module slots, old ScenarioDevices ObjectId/FamilyId, firmware record offsets and these editor IDs also remain separate. Matching names, counts or source-language labels do not bridge them. Existing source policy requires a literal/provenanced mapping, explicit correlation or independently observed behavior, and functional grammar validation for any rendered frame. Symbolic/absent templates and CUSTOM paths must not be invented as literal frames.
+
+The 24 empty TMP tables include a defined scenario-instance shape with SCEN_NAME/REPEAT/RESTART/SPT_PATH and stage/condition/action associations. That narrows known schema availability beyond the two old four-table catalogues, but there is NO configured instance in these shipped working tables. Empty tables do not prove no product feature or no generator; schemas do not prove runtime evaluation order, actual file generation or a full Start/OnlyIf/Stop/Action graph. DBversion1.0.53, Suite3.5.38, package1902_1.0_LGG, catalogue1.0.0 and firmware1.0.24 remain distinct applicability scopes. MH202's documented alarm reaction/condition role must not be turned into arm/disarm or local alarm-panel support from a database name.
+
+## Additional requested WHO25 cross-check, still ambiguous externally
+
+At parent's explicit request I independently joined ASS_OBJ_CHI to ANA_CHI: objects51/52/53 (Scenario PLUS/CEN PLUS/Contact) use CHI14 with stored OPEN_CHI text25. Exact raw ANA_DOVE text sets are type20 = decimal prefix1 concatenated with1..255 (255 rows); type21 = prefix2 concatenated with0..2047 (2048); type22 = prefix3 concatenated with0..201 (202). There is no implied standalone prefix entry. Contact53's ASS_OBJ_DOVE gives exactly prefix3 concatenated with1..201 in each of areas3/4/6; ID_DOVE7795 has stored30/type22 and no Contact53 association. These are direct database row facts, not a universal public address grammar.
+
+Parent is independently checking the original manufacturer WHO25 PDF against the current canonical unprefixed contact range. A different profile, missing prefix or application transformation is not settled by this preflight. No reference correction or product/public support inference is approved from numeric resemblance alone. Keep the ambiguity open pending primary-source reconciliation and authors' explicit scope.
+
+## Reproducible read-only checks
+
+The essential metadata statements were:
+
+```sql
+SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;
+SELECT type,count(*) FROM sqlite_master GROUP BY type ORDER BY type;
+SELECT count(*) FROM ANA_OGGETTI;
+SELECT count(*) FROM ANA_FAMIGLIA;
+SELECT count(*) FROM ANA_OPEN_RULE_COMPILE;
+SELECT count(*) FROM ANA_STATUS_REQUEST_COMPILE;
+SELECT VERSION,RELEASE,BUILD FROM ANA_VERSIONE_DB;
+PRAGMA integrity_check;
+PRAGMA foreign_key_check;
+```
+
+For EACH table returned by the first query I executed quoted `SELECT count(*)`, `PRAGMA table_info`, `PRAGMA foreign_key_list` and `PRAGMA index_list`. Aggregate TMP counts use only names beginning TMP_. Index origin/unique fields come from PRAGMA index_list, not index names. Source SHA was checked before/after. These queries are host metadata/data reads, not an application/compiler simulation. No author result is being independently approved before its candidate is reviewed.
+
+## Exact read-time source and canonical-policy pins
+
+Paths are workspace-relative. The registered-source/policy documents may later change through authorized integration; these hashes identify this preflight's actual read time.
+
+| Reference | SHA256 |
+|---|---|
+|OpenWebNet-Encyclopedia/sources/artifact-manifest.yaml|01b67e8006e447169451bc8977a18edeb8c7c51f63c8f9c4d550d47b2eef89e0|
+|OpenWebNet-Encyclopedia/scenario-engine/sources-and-identifiers.md|1db842b69622bc25da637f8b061943d350c7ba8cf1df0cd48890a010351c0327|
+|OpenWebNet-Encyclopedia/scenario-engine/database-model.md|01e07437031f88624553acdff2509d20a778e565473579f003d469bd6fc5cce3|
+|OpenWebNet-Encyclopedia/scenario-engine/capability-resolution.md|8b7e65c53d453c6610861109fc10110f1ba46f47823b1d83e6e89a5fc9696b63|
+|OpenWebNet-Encyclopedia/scenario-engine/categories-and-matching.md|061fa94df2699ca238d914259decfc8de70dbc1dd93a309748d01a4a31ae33e7|
+|OpenWebNet-Encyclopedia/scenario-engine/parameters.md|6062f079c88ae3b3864e9a1508497d95ba32535903f9166b7a0778d06cf32935|
+|OpenWebNet-Encyclopedia/scenario-engine/frame-templates.md|afed7f1d84eaa535c0643579d7c42756499ade493249630c9d5ea822ddaef1bb|
+|OpenWebNet-Encyclopedia/internals/scenario-capability-loading.md|e9daa380eeaa002c4abc82ca3d97467ff173582686eee754fc3669e627ca162b|
+|OpenWebNet-Encyclopedia/devices/definitions/own-dev-0151-mh202-scenario-programmer.md|74f961aa3aaafb99003d1677304a6d971a42c871950796707712d1c66f50bbb9|
+|work/mh202-firmware/research/2026-10-31-scenario-artifacts/acquisition/selected-files-v2/default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_2/Scen_SuiteDB_ENG.db|ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29|

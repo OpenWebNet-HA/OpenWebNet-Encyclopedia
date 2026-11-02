@@ -1,0 +1,61 @@
+from pathlib import Path
+import hashlib,json,struct,subprocess,os,argparse
+O=Path(__file__).resolve().parent;W=next(p for p in O.parents if (p/'OpenWebNet-Encyclopedia').is_dir());P=W/'work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libmhshared.so.1';H='4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377'
+def h(b):return hashlib.sha256(b).hexdigest()
+def J(x):return (json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+def build():
+ b=P.read_bytes();assert len(b)==43208 and h(b)==H and b[:6]==b'\x7fELF\x01\x01' and struct.unpack_from('<H',b,18)[0]==40
+ ph=struct.unpack_from('<I',b,28)[0];pe,pn=struct.unpack_from('<HH',b,42);loads=[r for i in range(pn) if (r:=struct.unpack_from('<8I',b,ph+i*pe))[0]==1]
+ def raw(a,n):
+  r=next(r for r in loads if r[2]<=a and a+n<=r[2]+r[4]);z=r[1]+a-r[2];return b[z:z+n]
+ def u(a):return struct.unpack('<I',raw(a,4))[0]
+ def branch(a):
+  w=u(a);v=w&0xffffff;v=v-(1<<24) if v&(1<<23) else v;return a+8+(v<<2)
+ guards={0x5560:0xe1a09000,0x5880:0xe289b010,0x5884:0xe28d0030,0x5888:0xe1a0100b,0x5898:0xe598300c,0x589c:0xe5982008,0x58a4:0xe58d300c,0x58a8:0xe58d2010,0x58bc:0xe59d300c,0x58c0:0xe59d2010,0x58c4:0xe1530002,0x58c8:0x0a000069,0x5a78:0xe3a01019,0x5a7c:0xe08f0000,0x5a84:0xe58d0034,0x5a88:0xe28d1034,0x5a8c:0xe1a0000b,0x5a94:0xe59d4034,0x5a98:0xe5940000,0x5ab4:0xe3a02000,0x5ab8:0xe08f0000,0x5abc:0xe88d0005,0x5ac4:0xe1a0100b,0x5ac8:0xe1a03009,0x5acc:0xe28d0038,0x5ad0:0xe08f2002,0x5ad8:0xe28d0038,0x7ed8:0xe1a07000,0x7edc:0xe1a05001,0x7ee8:0xe2504000,0x7eec:0xba000004,0x7ef0:0xe3550000,0x7ef8:0xe3540008,0x7efc:0xda000009,0x7f28:0xe1a00007,0x7f2c:0xe1a01005,0x7f30:0xe1a03006,0x7f34:0xe1a02004,0x74c0:0xe3510000,0x74d0:0xe1a06000,0x74dc:0xe3520008,0x74e0:0x908ff102,0x7508:0xea000202}
+ for a,v in guards.items():assert u(a)==v,(hex(a),hex(u(a)),hex(v))
+ assert branch(0x58c8)==0x5a74 and branch(0x7508)==0x7d18 and branch(0x7f38)==0x74bc
+ literals=[]
+ for ins,pool,a,text in [(0x5a7c,0x5ef8,0x90b4,'/tmp/plugin.shared.sqlite'),(0x5ab8,0x5efc,0x90e8,'1_onChange()'),(0x5ad0,0x5f00,0x90d0,'2fileChanged(QString)')]:
+  expected=text.encode()+b'\0';assert ins+8+u(pool)==a and raw(a,len(expected))==expected;literals.append({'instruction':hex(ins),'pool':hex(pool),'pool_word':f'{u(pool):08x}','VA':hex(a),'text':text,'bytes_hex':expected.hex()})
+ rel=subprocess.check_output(['readelf','-rW',str(P)],text=True);sym=subprocess.check_output(['readelf','--dyn-syms','--wide',str(P)],text=True);symbols={}
+ for n,va,size in [('_ZN8mhShared7monitorE7QStringS0_',0x5558,2480),('_ZN8mhShared11qt_metacallEN11QMetaObject4CallEiPPv',0x7ed4,108),('_ZN8mhShared9_onChangeEv',0x5f08,2232)]:
+  row=next(x.strip() for x in sym.splitlines() if x.endswith(' '+n));assert f'{va:08x}' in row and str(size) in row;symbols[n]=row
+ def imm(w):
+  n=((w>>8)&15)*2;v=w&255;return ((v>>n)|(v<<(32-n)))&0xffffffff if n else v
+ calls=[]
+ for a,t,g,n in [(0x588c,0x2124,0x121e8,'_ZNK18QFileSystemWatcher5filesEv'),(0x5a80,0x210c,0x121e0,'_ZN7QString16fromAscii_helperEPKci'),(0x5a90,0x2238,0x12244,'_ZN18QFileSystemWatcher7addPathERK7QString'),(0x5ad4,0x22b0,0x1226c,'_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE'),(0x5adc,0x23a0,0x122bc,'_ZN11QMetaObject10ConnectionD1Ev'),(0x5da0,0x216c,0x12200,'_ZN10QArrayData10deallocateEPS_jj'),(0x7ee4,0x2058,0x121a4,'_ZN7QObject11qt_metacallEN11QMetaObject4CallEiPPv'),(0x7d18,0x2130,0x121ec,'_ZN8mhShared9_onChangeEv')]:
+  assert u(a)>>24==0xeb and branch(a)==t;x,y,z=[u(t+i*4) for i in range(3)];assert x&0xfffff000==0xe28fc000 and y&0xfffff000==0xe28cc000 and z&0xfffff000==0xe5bcf000 and t+8+imm(x)+imm(y)+(z&4095)==g
+  row=next(x.strip() for x in rel.splitlines() if x.startswith(f'{g:08x} '));assert 'R_ARM_JUMP_SLOT' in row and row.endswith(' '+n);calls.append({'call':hex(a),'targetPLT':hex(t),'GOT':hex(g),'symbol':n,'PLT_bytes_hex':raw(t,12).hex(),'actual_relocation':row})
+ spans=[('monitor-entry-context',0x5558,0x556c),('same-receiver-watcher-and-list-gate',0x5880,0x58cc),('selected-add-and-connection-requests',0x5a74,0x5ae0),('local-temporary-connector',0x5d6c,0x5da8),('own-meta-call-dispatch',0x7ed4,0x7f40),('local-mode-and-index-selector',0x74bc,0x750c),('selected-index8-call',0x7d18,0x7d20)];out={};meta=[]
+ for n,a,e in spans:
+  txt=subprocess.check_output(['objdump','-d','-m','arm',f'--start-address={a}',f'--stop-address={e}',str(P)],text=True,env=dict(os.environ,DEBUGINFOD_URLS='')).replace(str(P),'libmhshared.so.1');out['spans/'+n+'.txt']=txt.encode();meta.append({'name':n,'start':hex(a),'end_exclusive':hex(e),'bytes_hex':raw(a,e-a).hex(),'sha256':h(raw(a,e-a))})
+ pins=[]
+ for p in [P,W/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0198-f459-driver-manager.md',W/'work/f459-firmware/2.1.5/research/2026-11-01-night06-teardown/SOURCE.json']:
+  z=p.read_bytes();pins.append({'path':str(p.relative_to(W)),'bytes':len(z),'sha256':h(z)})
+ out['INPUT_PINS.json']=J(pins);out['SOURCE.json']=J({'original':pins[0],'ELF_class':32,'machine':40,'PT_LOAD':loads,'symbols':symbols,'guards':[{'VA':hex(a),'word':f'{v:08x}'} for a,v in guards.items()],'literals':literals,'calls':calls,'spans':meta,'connect_argument_words':{'R0':'SP+56 returnedConnection storage under ordinary result ABI','R1':'selectedwatcher FP=providedreceiverR9+16','R2':'compiled2fileChanged(QString)','R3':'SAMEprovidedreceiverR9','stack0':'compiled1_onChange()','stack4':'numeric0'},'callback_body':'5f08..67c0 unexpanded','original_execution':0,'actual_SQLite_queries':0,'new_DB':False})
+ out['REPORT.md']='''# F459 selected file-watcher registration and local callback request
+
+Own43208-byte ARM ELF32 libmhshared.so.1 SHA2564d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377 exports monitor(QString,QString)5558/2480bytes and qt_metacall7ed4/108bytes. The constructor contains no proved watcher registration in its earlier inspected normal path; this packet locates a new selected registration in monitor instead. Curated OWN-DEV-0198 supplies role context only, no cross-product layouts or observed shutdown/event behavior.
+
+Entry5560 saves incomingreceiver inR9. Under valid object/provider/ABI, preceding normalcalls, no invalidating register/object change and natural admission premises,5880 formsFP=R9+16;588c requests QFileSystemWatcher::files with resultstorageSP48 and SAMEwatcherR1. Two words from the returned list representation are retained atSP12/SP16. The selected equality test58c4/58c8 reaches5a74. Container validity/layout, other list/refcount branches, full earlier monitoring/hash policy and the natural outercaller remain unclosed. This source equality gate is not a universal deduplication/first-watch/once-only contract.
+
+At5a7c the original pool derives /tmp/plugin.shared.sqlite intoR0; fromAscii_helper requests a25-character QString storedSP52.5a90 requests addPath(SAMEwatcher,thatlocalQString). Its machine result is overwritten by the later temporary-representation load before the following comparison. Selected normal temporary cleanup reaches5ab0; this is not a retained add-success test or proof that any file exists/is watched. No SQLite content, file or event is read by this analysis.
+
+The connection request has an important result-pointer distinction:5acc gives R0=SP56, and immediately after the call5adc passes SAMEstorage to actual QMetaObject::Connection destructor. Under ordinary ARM32/Qt result ABI this is returned-handle storage, NOTthe sender. Actual source arguments are R1=SAMEwatcherFP, R2=compiled2fileChanged(QString), R3=SAMEprovidedreceiverR9, stack0=compiled1_onChange(), stack4=numeric0. BL5ad4/PLT22b0/GOT1226c identifies QObject::connect by actual relocation. Handle destruction does not establish disconnect, failed/successful connection, delivery or callback quiescence; provider bodies and name-resolution semantics remain premises. These encoded Qt names/numericmode are not public protocol identifiers.
+
+Separately, own qt_metacall preserves its suppliedreceiverR7, calls QObject base and admits only a nonnegative adjustedID into its selected mode0/id<=8 path. It forwards SAMEreceiver/mode/adjustedID/argument-array to localhelper74bc. That helper saves SAMEreceiver and, for mode0/index8, selects branch-tableword7508→7d18, whose actual PLT request is mhShared::_onChange (candidate definition5f08 under binding). R0 remains that suppliedreceiver on the selected straight branch. This proves a conditional same-object local callback REQUESTtarget, not an executed signal or full Qt metadata name-to-index resolution. CallbackBODY5f08..67c0 remains unexpanded; no new SQL/encoding/query/hash matrix or raw receiving/output/transport/auth/session/framing/MQTT/libjel body is inspected.
+
+The registration and dispatch edges compose only under ordinary Qt ABI/binding/name-resolution, valid unchanged objects, proper event/metadata admission and lifetime premises. Actual notifications, query freshness, contents, natural callback ordering, connectiontype semantics, ownership and concurrency remain unresolved. The earlier teardown packet is inherited context only; close-before-watcher requests do not become proven callback safety. No original/vendor/helper/native/emulator/SQLite/targetOS/services/network/bus/runtime/physical execution occurs; no database recovered/generated/archived or R2readback. PrioroneencryptedSupport/zeroplaintext and oldledgers unchanged.
+
+SOURCE.json retains exact own header/mappings/symbols, fixedwords,7selectedspans,3literal/pooljoins,8actualPLT/GOTcallproofs and3inputpins. Reproduce python3 collect_watcher_v1.py --check using hostARMobjdump; no vendorprocess runs. First generation refuses overwrite and immediately retains exact firstcopies. A preliminary decimal-address lookup read an adjacent unpromoted Qt-cleanup span; correct exportedhexaddress was then used, no candidate/output failure or sourceclaim was based on that probe. Fullsource/Device/runtime/physicalapproval stayspending. Confidence high for selected original request/argument/branch facts, conditional for effective runtime composition.
+'''.encode()
+ out['OUTPUT_MANIFEST.json']=J({'collector_sha256':h(Path(__file__).read_bytes()),'outputs':{k:{'bytes':len(v),'sha256':h(v)} for k,v in out.items()},'original_execution':0});return out
+ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build()
+if a.check:
+ for n,v in out.items():assert (O/n).read_bytes()==v,n
+else:
+ for n,v in out.items():p=O/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(v)
+ D=O/'first-candidate';D.mkdir();ix={}
+ for n,v in {Path(__file__).name:Path(__file__).read_bytes(),**out}.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(v);ix[n]={'bytes':len(v),'sha256':h(v)}
+ (D/'INDEX.json').open('xb').write(J({'files':ix}))
+print(json.dumps({'check':a.check,'outputs':len(out),'call_proofs':8,'spans':7,'original_execution':0}))

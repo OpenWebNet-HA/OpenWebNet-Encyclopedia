@@ -1,0 +1,87 @@
+# MH202 1.0.24 record and script lifecycle
+
+MH2021.0.24 creates fresh COSO messages and routes generated state through a different path from queued commands. Its embedded script interpreter also builds a concrete BEGIN head node, which explains the selected GOTO continuation. These findings apply to the exact archive identified in the [firmware profile](mh202-1.0.24.md); the earlier [state and routing analysis](mh202-1.0.24-state-and-routing.md) supplies the surrounding dispatcher and interpreter context.
+
+| Path | Evidence | Established scope |
+| --- | --- | --- |
+| Fresh message and ID assignment | Original ARM helper, parser and ID routine in private emulated memory | One NULL-source allocation path with explicit string, allocator, list and provider models |
+| Generated message to monitor output | Static original control flow and conditional ownership ledgers | Selected idle automation context and normal callback/container returns |
+| Script list and GOTO head | Static original construction and execution branches | First BEGIN marker, subsequent node insertion and selected file-offset continuation |
+
+## Fresh message allocation and ID assignment
+
+Original core helper `add_open_buf_to_msg_list` at `0x2340` parses the supplied synthetic text `*2*0*0##` with the actual same-build pointer-string parser. Its NULL-source branch requests a zeroed `64`-byte envelope and calls original `new_id` at `0x220c`. The parser independently creates a `48`-byte object containing `WHO 2`, `WHAT 0`, `WHERE 0` and parsed kind `1`. No envelope or parsed fields are preseeded.
+
+The ID routine reads the local counter at image VA `0xbcb4`, stores counter plus one and returns the prior value. With explicitly supplied private counter `0x10203040`, original instructions store `0x10203041` and assign the prior value to envelope offset `60`. Envelope status at offset `52` remains zero under the declared zero-allocation model. This establishes selected assignment behavior; it does not establish runtime counter contents, global uniqueness or concurrency policy.
+
+The fresh envelope enters a modeled empty list. The observed helper return register contains that list head, so it is not treated as Boolean success. The test frees the owned input text through an explicit private lifetime ledger; parsed strings, envelope and output node remain live at the stop. Later destruction and nonempty-list behavior are separate boundaries. See the [fresh message and ID source report](../../project/review/firmware-analysis/mh202-1.0.24/run18-protocol-report.txt) and [independent isolation review](../../project/review/firmware-analysis/mh202-1.0.24/run18-protocol-review.txt).
+
+This single corpus records `325` original instruction visits, `24` declared primitive callbacks, `3` original-definition redirects and `1` return boundary, totaling `353` code-hook visits. Two GLib table-data relocations and one synthetic counter setup write are setup operations. The existing-record corpus remains a distinct experiment; neither executes a natural timer or physical transaction.
+
+## Generated messages through an idle automation context
+
+The [configured synchronizer](mh202-1.0.24-state-and-routing.md#configured-synchronizer-state-and-later-software-output) can generate a fresh ordinary `WHO 2` record for its stored destination. The selected static continuation supplies a coherent `WHERE 11`, parsed kind `1` record, one matching STM descriptor and an automation context with query-active and receipt-pending fields both zero. This is a separate source composition from the native `WHERE 0` allocation test above.
+
+Actual `syn_receive` routes the first list into `send_to_sm_from_field`. The criterion-`2` dispatcher invokes the automation field callback at `0x1c0c`, rather than its application-command callback. On the selected idle path, that callback writes envelope metadata offset `8` to `3` and appends the same record pointer to its OPEN output list. It bypasses the saved-ID and status comparisons and makes no local receipt or new pending-command request on this route.
+
+The outer dispatcher finds the same pointer in the OPEN queue and retains it, while the input list nodes are freed separately. `send_msgs2open` admits representation `3`; metadata `3` selects the monitor list and skips the command-list and copy branches. This establishes a conditional software publication path, not a received bus acknowledgement or a statement about active subscribers.
+
+## Monitor send and cleanup boundaries
+
+For each supplied monitor recipient, the selected callback requests `openmsg_to_buf` serialization, then reaches the `g_socket_send` import with the resulting text. Those providers and recipients remain delegates; no connection or delivery is executed.
+
+After the recipient traversal returns normally, the record callback requests `free_message` even when the supplied recipient list is empty. Parsed-object destruction, envelope release and list-node cleanup are separate source calls. This is normal-return call order, not proof of reclamation, asynchronous ownership or cleanup after an exception. See the [generated-record ownership report](../../project/review/firmware-analysis/mh202-1.0.24/run18-coso-report.txt) and [independent source review](../../project/review/firmware-analysis/mh202-1.0.24/run18-coso-review.txt).
+
+## The script head is the BEGIN entry
+
+Main requests a `12`-byte node and stores it in `inizio` before calling the scanner at `0x94d0`. The scanner reads a label token with `%s`, converts it with `atoi`, captures `ftell` plus one, and reads the remainder of the line. Before the list has started, the first remainder beginning with exact six bytes ` BEGIN` fills the existing head's label and offset and sets the started state.
+
+After that marker, each later non-comment record appends a new node and stores the previous node's next pointer. A later BEGIN is another entry. Construction continues to EOF and can include END and records following it; execution handles its `END` prefix separately. The selected complete builder does not explicitly initialize the final next pointer. That bounded write observation does not establish actual allocator contents or invalid-script behavior.
+
+The scanner's EOF branch returns `1` independently of whether BEGIN was found. Its nonzero return therefore must not be described as complete script validation. For ordinary supplied label and single-space separation, the stored offset points at the statement after the label; actual separators, configured script bodies and stdio outcomes remain conditions.
+
+The [earlier GOTO helper](mh202-1.0.24-state-and-routing.md#interpreter-goto-changes-node-selection-not-the-command-gate) leaves the current pointer at the head for a head match and at the predecessor for a later match. The ordinary interpreter tail advances once before reading the selected file offset. With the concrete BEGIN head now established, targeting that head can lead to the first appended statement; the earlier arbitrary node examples do not prove a skipped first action. See the [script construction report](../../project/review/firmware-analysis/mh202-1.0.24/run18-lifecycle-report.txt) and [independent source review](../../project/review/firmware-analysis/mh202-1.0.24/run18-lifecycle-review.txt).
+
+## WHO17 manager slots and local result codes
+
+The selected MH202 dimension handlers use manager-wide indexed storage rather than the scene record found by the ordinary scenario lookup. Numeric WHERE `1..128` selects a word slot for DIM6 and DIM8, or a byte slot for DIM7. This is the local dimension-handler bound, not a universal scene-address domain.
+
+| Selected branch | Local storage effect | Result construction |
+| --- | --- | --- |
+| Measure-predicate DIM6 | Reads the word slot | Formats the stored integer unless it is `-1` |
+| Measure-predicate DIM7 | Reads the unsigned byte | Formats that byte without read-side normalization |
+| Write-predicate DIM6 | Stores the converted integer before its unsigned `<=32000` response check | Admitted values format DIM6; the failing range branch returns local `3` without undoing that store |
+| Write-predicate DIM7 | Checks converted value `0..1` before storing its normalized byte | Formats DIM7 |
+| Write-predicate DIM8 | Requires direction `0..1` and amount `0..32000`, applies 32-bit addition/subtraction and signed clamps | Stores the resulting word and formats DIM6 |
+
+These are postparsed branch contracts under candidate provider assumptions. The selected measure paths have slot/DIM guards; the value-count and command-gate checks belong to the write paths. The finite arithmetic examples constrain the previous word and amount to avoid overflow. A synthetic converted DIM6 value `32001` demonstrates the store-before-response-check order; it is not evidence of an accepted raw command or a device incident.
+
+The common formatter is `*#17*%d*%d*%d##`. It requests local publication selectors `0` and `1`, ignores their returns and then returns its own code `2`. Rejection code `3` and completion code `2` are local control values; their wire ACK/KO interpretation is unproved. The selected channel code reaches an existing-descriptor send import without establishing delivery or recipient roles. See the [direct slot report](../../project/review/firmware-analysis/mh202-1.0.24/run19-functional-report.txt) and [independent source review](../../project/review/firmware-analysis/mh202-1.0.24/run19-functional-review.txt).
+
+## Event caches and interpreter variables are separate
+
+A separate WHO17 event callback maintains word caches for DIM6 and DIM7. It indexes those caches by numeric WHERE directly, while the command arrays use WHERE minus one. A requested initializer zeros each selected cache region over `512` bytes; it does not initialize the command arrays or interpreter variables.
+
+When a supplied measure value differs from its cached value, the callback stores the new value before checking readiness. Nonzero readiness then permits the trigger-matcher call; an equal value returns before that check. These are source request and branch orders under valid object/cache/provider assumptions, not an executed event loop or a complete range policy.
+
+| Storage domain | Selected representation | Index or key |
+| --- | --- | --- |
+| Manager commands | Separate word and byte arrays | Numeric WHERE minus one |
+| WHO17 events | Separate word caches | Numeric WHERE directly |
+| Interpreter numeric expressions | Allocated eight-byte name/value records | String lookup, such as `001` |
+
+A matching number does not make these one variable. The selected sources establish no automatic command-to-event-to-interpreter propagation; explicit configured scripts or later callbacks remain possible and unresolved. See the [storage and event-cache report](../../project/review/firmware-analysis/mh202-1.0.24/run19-lifecycle-report.txt), [independent review](../../project/review/firmware-analysis/mh202-1.0.24/run19-lifecycle-review.txt) and [preserved metadata refinement](../../project/review/firmware-analysis/mh202-1.0.24/run19-lifecycle-stride-history.txt).
+
+## Auxiliary field records use a command directed copy
+
+The auxiliary field caller's `new_openmsg_from_openmsg(4, parsed)` selects original `new_message_to_opencmd`, then the base OPEN-message constructor. Selector `4` sets envelope metadata offset `8` to `4`; it does not select parsed kind `4` or an ACK.
+
+A new isolated test parses supplied `*9*3*5##` through the actual same-build COSO pointer parser. The helper consumes that same unchanged `48`-byte object and creates a distinct `64`-byte envelope and parsed copy. Under explicit string-duplication/allocation models, the new WHO/WHAT/WHERE strings have separate addresses and retain `9`, `3` and `5`. Parsed kind `1` is retained and also copied to envelope type offset `40`. Status offset `52` is explicitly zero; original `new_id` assigns the supplied prior local counter. Timestamp words use a fixed synthetic clock primitive. No input envelope ID or status is copied because the input is the parsed object, not a `64`-byte envelope.
+
+The two-entry parser/helper corpus records `383` original visits, `29` declared primitive callbacks, `5` original-definition redirects and `2` return boundaries (`419` hooks). The returned pointer is the new envelope, not a list head or Boolean success. Source optional lists are null in this case; nonempty lists and complete destruction remain separate boundaries.
+
+The later output classifier is a static continuation: returned metadata `4` selects the command list and skips the monitor branch. The original field record's metadata `3` selects the monitor list. These are distinct records, not one record whose state is reinterpreted. Actual STM invocation, queue traversal, serialization, socket delivery and physical actuation are unexecuted. See the [native selector and copy report](../../project/review/firmware-analysis/mh202-1.0.24/run20-protocol-report.txt) and [independent isolation review](../../project/review/firmware-analysis/mh202-1.0.24/run20-protocol-review.txt).
+
+## Evidence limits
+
+Missing `4.xtz` and configured script bodies prevent checking the actual generated label and marker convention. Effective providers, active contexts, natural timers, recipients, full memory lifetime and physical behavior remain unresolved. The command-gate clear and dedicated IPC R/P producers are separate open questions. The [review capsule](../../project/review/firmware-analysis/mh202-1.0.24/) preserves reproducible inputs and the evolving overnight coverage record.

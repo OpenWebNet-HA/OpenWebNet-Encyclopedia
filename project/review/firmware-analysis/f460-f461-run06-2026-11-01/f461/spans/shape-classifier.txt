@@ -1,0 +1,77 @@
+
+/home/bticino/lib/libautomation.so.1.1.0:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000001c10 <automation_get_where_type@@Base>:
+    1c10:	d503233f 	paciasp
+    1c14:	d100c3ff 	sub	sp, sp, #0x30
+    1c18:	b0000082 	adrp	x2, 12000 <automation_cfg_plant@@Base+0x10040>
+    1c1c:	b0000001 	adrp	x1, 2000 <automation_cfg_plant@@Base+0x40>
+    1c20:	9106a021 	add	x1, x1, #0x1a8
+    1c24:	a9017bfd 	stp	x29, x30, [sp, #16]
+    1c28:	910043fd 	add	x29, sp, #0x10
+    1c2c:	f947f042 	ldr	x2, [x2, #4064]
+    1c30:	f90013f3 	str	x19, [sp, #32]
+    1c34:	aa0003f3 	mov	x19, x0
+    1c38:	f9400043 	ldr	x3, [x2]
+    1c3c:	f90007e3 	str	x3, [sp, #8]
+    1c40:	d2800003 	mov	x3, #0x0                   	// #0
+    1c44:	97fffd03 	bl	1050 <g_strcmp0@plt>
+    1c48:	52800022 	mov	w2, #0x1                   	// #1
+    1c4c:	350001c0 	cbnz	w0, 1c84 <automation_get_where_type@@Base+0x74>
+    1c50:	b0000081 	adrp	x1, 12000 <automation_cfg_plant@@Base+0x10040>
+    1c54:	f947f021 	ldr	x1, [x1, #4064]
+    1c58:	f94007e0 	ldr	x0, [sp, #8]
+    1c5c:	f9400023 	ldr	x3, [x1]
+    1c60:	eb030000 	subs	x0, x0, x3
+    1c64:	d2800003 	mov	x3, #0x0                   	// #0
+    1c68:	540005e1 	b.ne	1d24 <automation_get_where_type@@Base+0x114>  // b.any
+    1c6c:	2a0203e0 	mov	w0, w2
+    1c70:	a9417bfd 	ldp	x29, x30, [sp, #16]
+    1c74:	f94013f3 	ldr	x19, [sp, #32]
+    1c78:	9100c3ff 	add	sp, sp, #0x30
+    1c7c:	d50323bf 	autiasp
+    1c80:	d65f03c0 	ret
+    1c84:	d2800022 	mov	x2, #0x1                   	// #1
+    1c88:	aa1303e0 	mov	x0, x19
+    1c8c:	b0000001 	adrp	x1, 2000 <automation_cfg_plant@@Base+0x40>
+    1c90:	91078021 	add	x1, x1, #0x1e0
+    1c94:	97fffcd3 	bl	fe0 <g_ascii_strncasecmp@plt>
+    1c98:	52800062 	mov	w2, #0x3                   	// #3
+    1c9c:	34fffda0 	cbz	w0, 1c50 <automation_get_where_type@@Base+0x40>
+    1ca0:	b0000001 	adrp	x1, 2000 <automation_cfg_plant@@Base+0x40>
+    1ca4:	9107a021 	add	x1, x1, #0x1e8
+    1ca8:	aa1303e0 	mov	x0, x19
+    1cac:	97fffce9 	bl	1050 <g_strcmp0@plt>
+    1cb0:	34000200 	cbz	w0, 1cf0 <automation_get_where_type@@Base+0xe0>
+    1cb4:	b0000001 	adrp	x1, 2000 <automation_cfg_plant@@Base+0x40>
+    1cb8:	9107c021 	add	x1, x1, #0x1f0
+    1cbc:	aa1303e0 	mov	x0, x19
+    1cc0:	97fffce4 	bl	1050 <g_strcmp0@plt>
+    1cc4:	34000160 	cbz	w0, 1cf0 <automation_get_where_type@@Base+0xe0>
+    1cc8:	aa1303e0 	mov	x0, x19
+    1ccc:	92800001 	mov	x1, #0xffffffffffffffff    	// #-1
+    1cd0:	97fffcd8 	bl	1030 <g_utf8_strlen@plt>
+    1cd4:	f100041f 	cmp	x0, #0x1
+    1cd8:	54000100 	b.eq	1cf8 <automation_get_where_type@@Base+0xe8>  // b.none
+    1cdc:	d1000800 	sub	x0, x0, #0x2
+    1ce0:	52800082 	mov	w2, #0x4                   	// #4
+    1ce4:	f27ef81f 	tst	x0, #0xfffffffffffffffd
+    1ce8:	5a9f0042 	csinv	w2, w2, wzr, eq	// eq = none
+    1cec:	17ffffd9 	b	1c50 <automation_get_where_type@@Base+0x40>
+    1cf0:	52800042 	mov	w2, #0x2                   	// #2
+    1cf4:	17ffffd7 	b	1c50 <automation_get_where_type@@Base+0x40>
+    1cf8:	aa0003e2 	mov	x2, x0
+    1cfc:	b0000001 	adrp	x1, 2000 <automation_cfg_plant@@Base+0x40>
+    1d00:	aa1303e0 	mov	x0, x19
+    1d04:	9107e021 	add	x1, x1, #0x1f8
+    1d08:	97fffcb6 	bl	fe0 <g_ascii_strncasecmp@plt>
+    1d0c:	7100001f 	cmp	w0, #0x0
+    1d10:	54ffff0d 	b.le	1cf0 <automation_get_where_type@@Base+0xe0>
+    1d14:	aa1303e0 	mov	x0, x19
+    1d18:	92800001 	mov	x1, #0xffffffffffffffff    	// #-1
+    1d1c:	97fffcc5 	bl	1030 <g_utf8_strlen@plt>
+    1d20:	17ffffef 	b	1cdc <automation_get_where_type@@Base+0xcc>
+    1d24:	97fffcd3 	bl	1070 <__stack_chk_fail@plt>

@@ -1,0 +1,10 @@
+{
+  "status": "FAILED_BEFORE_OUTPUTS",
+  "collector": "collect_loader_v1.py",
+  "observed_error": "AssertionError at line66: md.TypeRef.rows[86].TypeName.value == List`1",
+  "phase": "Core metadata shape guard, after four-method source parse loop had begun; no output writing reached",
+  "check_executed": false,
+  "source_behavior_change": false,
+  "terminal_receipt": "Actual tool exit1 was observed; this is a later-transcribed failure note, not a saved original terminal transcript",
+  "new_vendor_execution": 0
+}

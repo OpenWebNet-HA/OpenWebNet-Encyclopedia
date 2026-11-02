@@ -1,0 +1,36 @@
+{
+  "collector_sha256": "fc897bf53c543b598df8fa5093cf95e88fc190bcc5beff77582a23fc41f4f80e",
+  "counts": {
+    "compiled_literal_ranges": 2,
+    "fixed_guards": 44,
+    "import_callsite_proofs": 6,
+    "inherited_construction_spans": 1,
+    "local_requests": 5,
+    "new_code_bytes": 512,
+    "new_code_spans": 1,
+    "original_execution": 0,
+    "unique_import_symbols": 5
+  },
+  "outputs": {
+    "INHERITED_CONTEXT.json": {
+      "bytes": 966,
+      "sha256": "4b6c00e6f9ce79459a8d7bf96dca95258fbf7454cf0898890cf4eaffecaa477f"
+    },
+    "INPUT_PINS.json": {
+      "bytes": 1092,
+      "sha256": "676f1f6838b13d497ac31abb4a3b9f2ac985a5e47e7fd0e05e36b096c009c4bb"
+    },
+    "REPORT.md": {
+      "bytes": 4630,
+      "sha256": "cfb0b3b7778fb732dac7f78f65c85c46a48323f461be36d92cc5e2b006e97b65"
+    },
+    "SOURCE.json": {
+      "bytes": 8870,
+      "sha256": "1129addfdde8a5049b6ab433c0f3af7418a0109cf28a7f863d6551a60e45bff4"
+    },
+    "spans/local-filesystem-admission.txt": {
+      "bytes": 6477,
+      "sha256": "d0ba75d1216a4bf0e9fe2ca84acb227211961b2bef89d6e0c1643541b1d9c249"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "originals": {
+    "HAL": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          239876,
+          239876,
+          65536
+        ],
+        [
+          1,
+          6,
+          241416,
+          306952,
+          306952,
+          4488,
+          4752,
+          65536
+        ]
+      ],
+      "bytes": 247928,
+      "requested_image_path": "/usr/lib/liblghal.so.1",
+      "resolved_image_path": "/usr/lib/liblghal.so.1.0.0",
+      "sha256": "c0f9c41de5c3380efa69a9ccecb9a3fd5ef558c151150197cc366199f1a81863"
+    },
+    "device": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          179926,
+          179926,
+          65536
+        ],
+        [
+          1,
+          6,
+          180888,
+          246424,
+          246424,
+          3568,
+          31472,
+          65536
+        ]
+      ],
+      "bytes": 186616,
+      "requested_image_path": "/home/bticino/bin/bt_device",
+      "resolved_image_path": "/home/bticino/bin/bt_device",
+      "sha256": "6b8f20afc427fa4647f7de9d4101e265073565ecd5113d8ab5535385e312faad"
+    }
+  },
+  "references": {
+    "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md": {
+      "bytes": 39923,
+      "sha256": "89f0a1cd681924ec8bf6b093c4c39d3d037b14cd416547b8111bffecd2eb5323"
+    },
+    "work/f461-firmware/2.0.11/analysis/normal-symlinks.json": {
+      "bytes": 142861,
+      "sha256": "a6c0efe9a99158a93014fee307e9690fbbac8ef642d40d14d24ca760db4077bf"
+    },
+    "work/f461-firmware/2.0.11/research/2026-11-01/REPORT.v2.md": {
+      "bytes": 12048,
+      "sha256": "187877260da89ef432021b971268f83854641a72b73e4d7c8d4d02b035b1dd16"
+    },
+    "work/f461-firmware/2.0.11/research/2026-11-01/image_vfs.py": {
+      "bytes": 5602,
+      "sha256": "6c54cac0515e0c74409e802fd8f4bf7a23caa2fff876287333917f598f72106a"
+    }
+  }
+}

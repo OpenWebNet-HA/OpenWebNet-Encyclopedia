@@ -1,0 +1,59 @@
+# MyHOMEServer1 3.87.13: executable startup to TIME service and scene loader
+
+This bounded static batch closes the executable entry → main → selected startup time-service construction → same service/container/path loader-argument chain. On the retained normal path, main supplies a literal nonzero flag to `TimeTriggersService`, so the constructor requests its thread-start branch. It then passes the same service inner pointer and same local scene container to loader `0x17630`. This establishes original startup source reachability under normal ABI/provider/delegate returns, not an observed boot, actual settings parse, successful thread, installed scenes or active service.
+
+Original instructions, emulation, vendor processes, target I/O/clock/parser/thread/network calls executed: **0**. Host static tools read original files; four finite host branch examples do not execute original helpers. No logger/private values, full configuration, post-load handler or transport/authentication/session/framing body is investigated.
+
+## Source identity and reproducibility
+
+Original image executable `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. `INPUTS.json` also pins the packaged scheduler configuration and metadata-only ImageVFS/regular/symlink inventories. The collector exports only one whitelisted noncredential configuration value, `scenesPath`. It does not reproduce arbitrary configuration values.
+
+`ORIGINAL_SOURCE.json` records original PT_LOAD-derived offsets, VA ranges/raw hashes, instruction-byte guards, safe PIC literals, RTTI and original relative-relocation slots. Linked Thumb pointers retain bit0; code addresses clear it. No live PIE bias or nearby stripped template label is substituted for function identity.
+
+Reproduce with `python3 collect_startup_v1.py --check` from this directory. Generation refuses existing outputs and immediately copies the report, collector and generated outputs into `first-candidate/`, computing its non-self-referencing index before opening that index. No previous area, repository file or original input is changed.
+
+## 1. Actual ELF entry requests main
+
+ELF `e_entry` is Thumb pointer `0x17229`, code at `0x17228`. The entry's ADR base `0x17254` plus original pool word at that address produces GOT `0x1659a4`. The pool at `0x17258` selects GOT slot `0x166198`, whose stored value is Thumb `0x130a1`; its original relocation is `R_ARM_RELATIVE`. Instruction `0x17248` loads that value into r0 and `0x1724c` requests imported `__libc_start_main`.
+
+Consequently code `0x130a0` is the entry-supplied main function under ordinary successful ELF relocation and libc startup conventions. This is stronger than naming an arbitrary region main, but is still a delegated startup request. Dynamic binding, process launch, libc body/return and actual runtime state are not executed or proved.
+
+## 2. Selected settings path and zero-return continuation
+
+Main builds its settings object at its stable local SP+336 and calls constructor `0x1dae4`. Its argc test at `0x13142..0x13152` selects argv[1] when argc>1; otherwise the exact safe literal is `./scheduling_manager/config.json` at VA `0x114210`. The path is converted to a C++ string and passed with that same settings object to `0x32b8c` at `0x1316a`.
+
+The selected settings reader requests filesystem/file-buffer operations and `Json::parseFromStream`; those are opaque providers, not executed parsing. Importantly, main tests its return at `0x13182`, but zero branches to diagnostic `0x1370a` and then `0x13716` branches back to `0x13188`. **A zero settings-loader return is not a process-exit or time-service-construction gate in this selected main path.** Exceptions, diagnostic/provider failures and other nonreturning effects remain outside the normal-return premise; zero does not prove a usable settings object or accepted configuration either.
+
+On the selected parse-success assignment path, exact key `scenesPath` is resolved at `0x32eec`, requested as a string at `0x32efa` and assigned to settings string field+60, with normal heap/short-copy alternatives retaining that destination. Getter `0x32ae4` reads pointer/length at+60/+64 and constructs a result copy. Main calls it at `0x1333e` and uses that copied string as loader r0.
+
+The selected constructor default at `0x1db24..0x1db30` and the packaged `/home/bticino/scheduling_manager/config.json` both supply `/home/bticino/cfg/extra/0/scheduling_manager`. This equality corroborates a declared packaged/default path, not the actual argv path, working directory, loaded configuration, directory existence/content or installed scene population. No launcher/working-directory expansion is undertaken in this batch.
+
+## 3. Same local container, service allocation and supplied thread flag
+
+At `0x13288`, r4 becomes main SP+160. The following source initializes selected local container/tree fields. The semantic container/registry layout is the separate author's scope; this batch preserves its concrete pointer identity. Under normal EABI callee-preservation, r4 remains that same pointer at loader handoff `0x13346`.
+
+Main requests112 bytes at `0x13298/0x132b6`. It retains the allocation/control base in r9 and derives inner=base+16 by the post-index vptr store at `0x132d2`; r0 becomes that inner pointer at `0x132d6`. The selected control vtable request resolves via GOT `0x166234` to header `0x15fd40`, whose RTTI names `St23_Sp_counted_ptr_inplaceI19TimeTriggersServiceSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE`. This supports actual class ownership, not complete lifetime correctness.
+
+Instruction `0x132c8` sets r1=1 before the call `0x132d8 → 0xb94f0`. That constructor saves incoming r1 in r5 at `0xb94f6`, initializes service fields/condition variable, and tests r5 at `0xb9534`. Nonzero reaches `0xb9550`: it requests thread-holder/state allocations, stores the same service receiver in state+4 at `0xb9566`, installs the state vptr and requests `std::thread::_M_start_thread` at `0xb9574`. Thus the prior service report's nonzero-constructor-flag premise is now closed at this particular startup caller. Successful allocations, provider initialization/thread start, service lifetime and running worker remain conditional; nothing is booted or scheduled here.
+
+At `0x132e0`, main stores the pair `(inner pointer, allocation/control base)` at main SP+88/+92. The later pre-loader guard/global/helper calls are retained only as opaque normal-return boundaries. Their internals, registry ownership, external behavior and post-load handlers are not inspected.
+
+## 4. Exact loader argument handoff
+
+The selected original call sequence is:
+
+| Instruction | Argument provenance |
+| --- | --- |
+|`0x1333e → 0x32ae4`|r0 result object at main SP+304, r1 same settings object; reads settings+60 into a string copy|
+|`0x13342`|r2 loaded from main SP+88 word0, exactly the constructed service inner pointer|
+|`0x13346`|r1=r4, exactly the same local container at main SP+160|
+|`0x13348`|r0=r8, the fresh copied scenes-path string|
+|`0x1334a → 0x17630`|passes that path/container/service tuple|
+
+Loader prefix `0x17634..0x1764c` preserves path in fp and stores the supplied container and service pointers at loader SP+4 and SP+20 respectively. These are different stack frames from main: main SP+88 and loader SP+20 are not the same address or a global offset. The handoff closes same-object argument provenance; registry insertion, accepted directory/scene data and subsequent compiled-object population remain the complementary registry source scope.
+
+## Applicability, limits and next questions
+
+Confidence is high for original entry/main pointer identity, exact literal/field/getter dataflow, supplied flag1, class/control RTTI and same-pointer loader arguments. This does not transfer an F454/MH202 layout, provide configured scenes, establish successful provider/file/parser/thread behavior or demonstrate commissioning, automation or physical device effects.
+
+The meaningful new closure is one natural executable startup caller for the previously conditional TIME service and scene loader; it is not a complete process startup analysis. Complementary work can connect the loader's preserved container/service arguments to actual scene insertion and trigger compilation. Remaining boundaries include active startup invocation/configuration, parser errors/default state, directory contents, dynamic providers, ownership/concurrency, queue/timing/timezone and physical observations. Closed authentication/session/framing/equivalent work remains closed.

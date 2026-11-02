@@ -11,6 +11,9 @@ MyHOME Suite separates product capability, protocol workflows, scenario-editor v
 | `OpenQuery.txt` | named SQL statements intended to assemble selected `OPEN.db` structures | application control flow beyond those queries or semantics absent from the selected columns |
 | ScenarioDevices files | scenario-editor Object Systems, Device Objects, Commands, Parameters, categories, matching IDs, and action templates | installed Device identity, catalogue Object equality, or persisted user scenarios |
 | `rules.db3` | linked-property validation for selected Temperature Control Objects | a general Object registry or universal validation engine |
+| ScenarioSuite profiles | selected scheduler-editor rules, fields, status declarations and actual generator source paths | universal same-name profile equivalence or executed scenarios |
+| Device-specific `systems.sqlite` | application items, properties, behaviours and validation declarations | executed predicates, physical maxima or active Configuration |
+| `MHPrj.db` / `PTDB.db` templates | declared project/Object/Device and spatial/host persistence structures | a populated user project, current installation or cross-file ID equivalence |
 | Public OpenWebNet PDFs | published frame grammar and functional `WHO` semantics | MyHOME Suite management state machines or catalogue hierarchy |
 | Observed traffic | actual ordering, values, repetition, and Device behavior | behavior of unobserved products or versions |
 | MyHOME Suite UI | displayed labels, visibility, editability, and workflow behavior | wire encoding without a database or capture correlation |
@@ -41,7 +44,7 @@ The complete identifier policy is maintained in [Sources and Identifier Boundari
 
 The preserved databases are principally capability and workflow registries. They describe what MyHOME Suite knows how to offer or send.
 
-Installed state comes from diagnostic traffic, a loaded project, UI observations, or another persistence source not yet preserved.
+Installed state comes from diagnostic traffic, a genuine loaded project or UI observations. The [project/plant templates](project-and-plant-templates.md) provide schema and seed data, with instance tables empty; they do not supply current installed state.
 
 | Question | Correct evidence |
 | --- | --- |

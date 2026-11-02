@@ -1,0 +1,41 @@
+{
+  "accessor:image_vfs.py": {
+    "bytes": 5611,
+    "sha256": "890e3526e2fc29c630cb45dad15d91fecb6b32007c0be04e5af28c85a48f1ae4"
+  },
+  "metadata:normal-regular-files.json": {
+    "bytes": 1597459,
+    "sha256": "066ba8668cbce4b10a2d4f06167eb20b74817abfae3ac683f67af1a7c5c6b580"
+  },
+  "metadata:normal-symlinks.json": {
+    "bytes": 149018,
+    "sha256": "49fa9efbe8f3abc7fc289b6d50cbae9e4cefc1bf1caceecadb67351bc2f581dd"
+  },
+  "normal:/home/bticino/matrix_mx/MHCatalogue.db": {
+    "bytes": 2233344,
+    "resolved_image_path": "/home/bticino/matrix_mx/MHCatalogue.db",
+    "sha256": "79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb"
+  },
+  "normal:/home/bticino/matrix_mx/matrix_mx": {
+    "bytes": 2094580,
+    "resolved_image_path": "/home/bticino/matrix_mx/matrix_mx",
+    "sha256": "96348136c2a0ebe859c689eb6246e3889e5154fdb63ffd5f3fc76975ac596717"
+  },
+  "normal:/usr/lib/libsqlite3.so.0.8.6": {
+    "bytes": 808344,
+    "resolved_image_path": "/usr/lib/libsqlite3.so.0.8.6",
+    "sha256": "66bd87b6acaeed42d6a6a9115a0a7ad261a731aa0a963703d3a20b39278cabd6"
+  },
+  "reference:firmware-graph.md": {
+    "bytes": 13204,
+    "sha256": "d70cd72edbf7460ac94907fd8a0116c889c48e4c1d7a223884760f869eeaa2bc"
+  },
+  "reference:first-pass-inventory.md": {
+    "bytes": 8641,
+    "sha256": "3f78472f276680b6903ae9c5c15eb6ace7753b28870975c49cb016d26f373fb7"
+  },
+  "references:INDEX.json": {
+    "bytes": 460,
+    "sha256": "acef2a1d18a67bdd8c6b4cd9c3c5670931e20a403ddc1a20a2ccd151322ee458"
+  }
+}

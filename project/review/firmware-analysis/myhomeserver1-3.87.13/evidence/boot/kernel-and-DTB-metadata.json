@@ -1,0 +1,214 @@
+{
+  "DTBs": {
+    "linda.dtb": {
+      "bytes": 39641,
+      "properties": [
+        {
+          "bytes": 20,
+          "file_offset": "0x6c",
+          "node": "/",
+          "property": "model",
+          "strings": [
+            "BTicino LInDa board"
+          ]
+        },
+        {
+          "bytes": 20,
+          "file_offset": "0x8c",
+          "node": "/",
+          "property": "compatible",
+          "strings": [
+            "bt,linda",
+            "fsl,imx6dl"
+          ]
+        },
+        {
+          "bytes": 49,
+          "file_offset": "0x3e0",
+          "node": "/aliases",
+          "property": "serial0",
+          "strings": [
+            "/soc/bus@2000000/spba-bus@2000000/serial@2020000"
+          ]
+        },
+        {
+          "bytes": 32,
+          "file_offset": "0x420",
+          "node": "/aliases",
+          "property": "serial1",
+          "strings": [
+            "/soc/bus@2100000/serial@21e8000"
+          ]
+        },
+        {
+          "bytes": 32,
+          "file_offset": "0x44c",
+          "node": "/aliases",
+          "property": "serial2",
+          "strings": [
+            "/soc/bus@2100000/serial@21ec000"
+          ]
+        },
+        {
+          "bytes": 32,
+          "file_offset": "0x478",
+          "node": "/aliases",
+          "property": "serial3",
+          "strings": [
+            "/soc/bus@2100000/serial@21f0000"
+          ]
+        },
+        {
+          "bytes": 32,
+          "file_offset": "0x4a4",
+          "node": "/aliases",
+          "property": "serial4",
+          "strings": [
+            "/soc/bus@2100000/serial@21f4000"
+          ]
+        },
+        {
+          "bytes": 18,
+          "file_offset": "0xae4",
+          "node": "/pmu",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a9-pmu"
+          ]
+        },
+        {
+          "bytes": 14,
+          "file_offset": "0x89f8",
+          "node": "/cpus/cpu@0",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a9"
+          ]
+        },
+        {
+          "bytes": 14,
+          "file_offset": "0x8bb8",
+          "node": "/cpus/cpu@1",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a9"
+          ]
+        }
+      ],
+      "sha256": "90a86e49465c4098a3045b14dc1b2228c66597b27a2269ba4f65aa2fbf23ec7d"
+    },
+    "linda_mfg.dtb": {
+      "bytes": 39181,
+      "properties": [
+        {
+          "bytes": 20,
+          "file_offset": "0x6c",
+          "node": "/",
+          "property": "model",
+          "strings": [
+            "BTicino LInDa board"
+          ]
+        },
+        {
+          "bytes": 20,
+          "file_offset": "0x8c",
+          "node": "/",
+          "property": "compatible",
+          "strings": [
+            "bt,linda",
+            "fsl,imx6dl"
+          ]
+        },
+        {
+          "bytes": 49,
+          "file_offset": "0x3e0",
+          "node": "/aliases",
+          "property": "serial0",
+          "strings": [
+            "/soc/bus@2000000/spba-bus@2000000/serial@2020000"
+          ]
+        },
+        {
+          "bytes": 32,
+          "file_offset": "0x420",
+          "node": "/aliases",
+          "property": "serial1",
+          "strings": [
+            "/soc/bus@2100000/serial@21e8000"
+          ]
+        },
+        {
+          "bytes": 32,
+          "file_offset": "0x44c",
+          "node": "/aliases",
+          "property": "serial2",
+          "strings": [
+            "/soc/bus@2100000/serial@21ec000"
+          ]
+        },
+        {
+          "bytes": 32,
+          "file_offset": "0x478",
+          "node": "/aliases",
+          "property": "serial3",
+          "strings": [
+            "/soc/bus@2100000/serial@21f0000"
+          ]
+        },
+        {
+          "bytes": 32,
+          "file_offset": "0x4a4",
+          "node": "/aliases",
+          "property": "serial4",
+          "strings": [
+            "/soc/bus@2100000/serial@21f4000"
+          ]
+        },
+        {
+          "bytes": 18,
+          "file_offset": "0xae4",
+          "node": "/pmu",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a9-pmu"
+          ]
+        },
+        {
+          "bytes": 14,
+          "file_offset": "0x89e8",
+          "node": "/cpus/cpu@0",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a9"
+          ]
+        },
+        {
+          "bytes": 14,
+          "file_offset": "0x8ba8",
+          "node": "/cpus/cpu@1",
+          "property": "compatible",
+          "strings": [
+            "arm,cortex-a9"
+          ]
+        }
+      ],
+      "sha256": "f71c4a28c157b83f37dfe73b38dd0bc0911c2954de08c72888b0527a82ba2829"
+    }
+  },
+  "scope": "Packaged metadata; no actual DTB selection, live hardware or full kernel-config claim.",
+  "uImage": {
+    "OS": 5,
+    "arch": 2,
+    "bytes": 4877496,
+    "compression": 0,
+    "entry": "0x10008000",
+    "header_crc_checked": true,
+    "load": "0x10008000",
+    "name": "Linux-5.10.35+gd50c7a7404d5+p0",
+    "payload_bytes": 4877432,
+    "payload_crc_checked": true,
+    "sha256": "01f68cf9c301cc72d05c9a0c27fd92237285a86daab5d0d491871bb91b779f1d",
+    "timestamp_raw": 1302044400,
+    "type": 2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "original_image_path": "/home/bticino/scheduling_manager/config.json",
+  "original_regular_prefix_counts": {
+    "normal": 0,
+    "recovery": 0
+  },
+  "other_values": "withheld",
+  "scenesPath_only": "/home/bticino/cfg/extra/0/scheduling_manager",
+  "scope": "Zero packaged regular files under this literal prefix, not a live filesystem/directory/service absence or full path-resolution proof."
+}

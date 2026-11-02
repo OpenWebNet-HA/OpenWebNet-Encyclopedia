@@ -1,0 +1,19 @@
+# MyHOMEServer1 3.87.13 BNLD Trigger Serialization
+
+This continuation closes one selected source boundary in the [BNLD numeric trigger](myhomeserver1-3.87.13-event-trigger.md#bnld-numeric-trigger): its actual raw virtual serializer and the same-result constructor request. It applies to the original scheduler SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. The [review capsule](../../project/review/firmware-analysis/myhomeserver1-3.87.13-trigger-serialization/README.md) retains exact source, ABI/relocation/branch evidence and independent review. No original instructions, provider implementation or configured scene are executed here.
+
+## Actual trigger method and selected value
+
+Final raw BnldTrigger header0x160304, address point0x16030c, has slot+8 at0x160314 containing Thumb0x282e5. The selected method begins at0x282e4 and receives its JSON result destination in r0 and raw object in r1. It calls its own trigger base helper0x23394. The different BNLD condition serializer0x28178 is not substituted for this method.
+
+The derived method tests raw status40. Exact status−1 selects the arm at0x283c4, which unconditionally loads signed level44 and requests Json::Value(int), exact member level and move assignment into the original destination. There is no local level-value comparison omitting zero,−1 or another source word on this arm. That is an emission-request fact, not proof that every numeric input is accepted or has a physical meaning.
+
+The trigger base begins with a fresh ValueType0 request and normally requests only id, type, enabled and optional operator. Under ordinary valid fresh-value/member/provider behavior, it contributes no status member to preempt the selected numeric reparse. Complete JSON storage, assignment, conversion, allocation and error behavior remain premises.
+
+## Same-result reparse and its limit
+
+The initializer passes its actual JSON destination at SP+592 to the raw virtual call at0xa8dc6. After normal return, it supplies that same destination to trigger constructor0x2cc00 at0xa8dd2. On the absent-status route, this constructor initializes status/level to−1, reads level through asInt, stores the converted word and retains status−1. The positive-value conditional status store writes−1 again; it is not a status0 override.
+
+With ordinary matching signed-integer construction/readback and valid member/copy/provider behavior, the selected structural path can therefore retain the constructor-reachable numeric threshold/status pair before the previously traced compiled copies. This is narrower than a lossless or universal JSON roundtrip: member presence, malformed/other-type input, exceptional values, live binding and actual configured admission are not established. The earlier isolated double helper is not evidence that this integer provider or full JSON operation was executed.
+
+The selected caller's ID/status/on/value guards, callback capture and lifetime premises remain those of the numeric-trigger packet. Crossing/deduplication, units/domain and physical behavior remain open. This continuation adds zero execution/replay/semantic fixtures; the separate MyHOMEServer1 scalar-provider ledger remains one corpus/eight entries/340 original code-hook visits/zero C primitives/12 redirects/eight EXIT=360 hooks, with four setup data relocations separate. Wider Device/source gates and closed opaque investigation boundaries are unchanged.

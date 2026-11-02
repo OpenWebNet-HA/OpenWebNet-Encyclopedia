@@ -1,0 +1,58 @@
+# F454 AV mutable-state source review
+
+PASS for the conditional static assignment findings; no required author correction found. This is an independent source/collector review of another agent's candidate. I did not execute original firmware or replay earlier native corpora, and did not edit author files. A particularly important predecessor condition is made explicit below: the selected role1 WHAT37 writer is not a demonstrated bootstrap from startup global -1.
+
+## Verification performed
+
+`collect_state_v1.py --check` passed: 23 outputs, 14 original source spans, 27 critical instruction words, 6 input identities, 12 direct-pointer literal candidates, 20 literal-load encoding candidates and 2 finite host assignment illustrations. New original execution and native replays are both zero. This replay rereads source files and runs host binutils; it does not execute imported/vendor code or reach a device.
+
+Independently read the original normal-image `/home/bticino/bin/bt_vct` through ImageVFS, decoded ELF PT_LOAD mappings, rehashed all 14 source spans and verified all 27 critical words. Verified the four concrete global literal pools `0xdb3c`, `0x10160`, `0x15460`, `0x1d9e8` all contain `0x2b5f8`. Independently checked component buffer pools at `0xc028`, `0xc118`, `0xc148` contain `0x2b6a1`, first-parameter pool `0xc02c` contains `0x2b6bf`, and delimiter pool `0xc024` resolves to `#`. Also independently decoded all four whitelisted role5 configuration-key/path pools.
+
+Read source spans and additional predecessor/register context listed below. All 25 immediate first-candidate copies match their snapshot index and current candidate bytes. The generator's reproduced manifest/current report identities match. No independent hardware, public PDF, live provider, lifecycle or field-origin verification is claimed.
+
+## Findings and exact conditions
+
+The selected WHAT helpers do not conflate a base command and its parameter. `0xc044` clears seven 30-byte temporary buffers and tail-calls the splitter for nonempty input. Its splitter copies the first `#` token into the base slot, advances from the original input by token length plus one, requires the following substring to begin with an ASCII digit, and copies its next token into the first-parameter slot. Base getter `0xc0f0` returns atoi of `0x2b6a1` or -1 for empty; first-parameter getter `0xc11c` returns atoi of base+30 or -1 for empty. This relies on compatible input strings and ordinary strtok/copy/atoi contracts; it is not a full or malformed raw-input grammar assessment.
+
+In the role1 caller, `0x14554..0x14558` calls first-parameter getter and retains its result in r5. `0x14574..0x1457c` calls base getter and retains its result in ip, including explicit stack save/reloads across clobbering calls. The selected normal-dispatch route preserves r5 into WHAT37 branch `0x15d24`. Destination conversion at `0x15d44` must return other than -1 before the selected stores. Comparisons at `0x15d58`, `0x15d6c`, `0x15d7c` admit only first parameters 1, 2, 3 to the shared local store at `0x15d9c`, which writes r5 to the global. Other local parameter cases branch away from this store. This is a valid conditional static writer finding.
+
+The original predecessor gives a stronger concrete limitation than merely assuming normal dispatch: on the selected WHO8 normal path, `0x14624..0x14644` diverts write/measure frames, and `0x14648..0x14654` requires the existing global value to equal 2. The later WHAT37 special cases do not bypass that earlier guard. Thus this role1 branch does not by itself prove how a startup -1 role1 first reaches 2, or how an arbitrary deployed device becomes available. The author already conditions its finding on earlier admission and reaching normal dispatch, so this is an explicit source-review premise rather than a correction to a claimed unconditional route. Other initializations, roles, aliases and unexamined callbacks remain outside the finding.
+
+Role2 is a distinct caller. Its first WHAT parameter is retained in r8 at `0xf280`, base WHAT in ip at `0xf2a4`, with stack reloads across calls. The intervening `0xf310..0xf36c` computes an admission flag, and `0xf3f8..0xf408` requires WHO8 and the flag low bit before reaching the selected WHAT37 dispatch. Under that route and destination-helper result not -1, selected parameter 1 stores at `0xf940`, 2 at `0xf9c0`, and 0 at `0xf9ec`. These do not define a universal command acceptance table, shared role1 policy or physical-state meaning.
+
+Constructor `0xdad4` pushes two words, loads the caller's fifth ABI argument from new SP+8 and writes it to the global at `0xdaf4`. The selected configuration-role2 and configuration-role1 startup paths pass stack argument -1. Configuration+32's selector is not thereby the same object/namespace as any constructor record field or the global. Role5 is selected separately by the comparison at `0x1d870`. Its preceding `0x1d878..0x1d888` initializes the 128-byte output buffer before the imported getter, but does not prove arbitrary provider behavior or all errors preserve empty text. The actual nonempty and empty branches both call the constructor with fifth argument -1 and then override global to 1 at `0x1d910` or `0x1d954`. The configured atoi result or default 24 is stored at record+32, a different location and quantity.
+
+The two host ledgers supply already selected branch premises and describe assignments only. They do not exercise original parsers, destinations, allocation, callbacks, imports or natural startup. The single-ELF aligned-word/encoding query is appropriately described as a bounded candidate search, not all-writer or all-alias analysis.
+
+## Product and unresolved boundaries
+
+No new assignment is linked to frontend DIM35 result index4 or to its response formatter. The global is not equated to camera readiness, answering-machine permission, physical call state, role selector, factory `vde_enabled`, discovery `feature_vde` or WHO7 board profile. The existing reviewed device-document synthesis is an inherited scope reference, not a new primary-PDF/hardware check. The candidate does not establish live initial/final state, all writers, attached camera/recording availability, a complete field-origin update, a wire admission contract, or a deployed role1 boot transition. No external provider or closed authentication/session/framing implementation was examined.
+
+## Additional original context pins
+
+All addresses refer to the same bt_vct SHA256 `b9bf0ba4cc212b84be19f8b57c9f57bcc0cd7dfb9d7cdf31af578713f3ecd076`. End addresses are exclusive. These are additional read-only reviewer source ranges; they are not newly executed coverage or author-output mutations.
+
+| VA interval | File offset | SHA256 |
+| --- | --- | --- |
+| `0x145bc..0x147cc` | `0xc5bc` | `d1936df4060d54764a0f5d09a89cfdc232b10c1a1be5bf399f05afc43d6d26d4` |
+| `0xf2d0..0xf3f0` | `0x72d0` | `3c5da300bf2c4b16c21f28f4adf19a905c3fddb94b67726db08800899e957d62` |
+| `0x1d870..0x1d88c` | `0x15870` | `00e3aed89c862e444856350b2c7b195ef554011b77a4f3e78d78d5147d844de2` |
+| `0xbc84..0xbcac` | `0x3c84` | `b59478f42be05cfba936c5e9fc4878f4fe7921b4ea3ec45df0fdc7975ca43a68` |
+
+## Exact reviewed candidate pins
+
+Paths below are relative to `work/f454-firmware/research/2026-10-31-av-state/`.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `e6953786782cd9c79a21c1554c2e674483bba9aa9cf21f7b18941c339490939d` |
+| `collect_state_v1.py` | `45efeddc019ff15c22e50d493f837e31450d7382c9b423b950629def428044ac` |
+| `output-manifest.json` | `48a5882337a296fc968828cad0fc1c58857ad6fc19e6a00fcbf60cca0830111a` |
+| `original-spans.json` | `5fce787d66011690aba45976d5a3c08a947e09d8427f8b2f4aa6bb3ceced7d74` |
+| `critical-words.json` | `d3d50df14fdaf15363309b78d441e14519e01c248383953f23a13fe5963f1f17` |
+| `input-hashes.json` | `bef968e639d6bd7cd25950a8c79dbcfbeb7bf68d9df96a305297b3063bbc9d01` |
+| `selected-writer-contract.json` | `46e1f42fe0ebe905255ebf94b24f114943bad08f61e651f238c4d846f764bbc8` |
+| `host-selected-assignment-ledger.json` | `13d17ef98fc697c0f98ff2a1199a43b41305fc5e80408db1489865393ff0d35d` |
+| `bounded-direct-global-reference-query.json` | `e9cb5badd1509e2fd05aba7883294f8814f470e9a50a098ad0ece37f0d6e0c11` |
+| `whitelisted-startup-keys-and-component-slots.json` | `de6bbb3bab53a08357749c28f8445450a3b6d328d45d429244a0fe8d78423711` |
+| `initial-generated-v1/SNAPSHOT_INDEX.json` | `97299b677d49f5f8070c107f8d8bcf6773b7eaefdbf15e0c0dc68f416c82602d` |

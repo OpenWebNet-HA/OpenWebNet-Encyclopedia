@@ -1,0 +1,15 @@
+{
+  "command": "python3 -B work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/collect_gate_v1.py",
+  "exit_code": 1,
+  "failed_guard": "bl(0x100060) expected BL but original instruction is MOV X0,X1; actual call0x100064",
+  "files_before_this_note": {
+    "REPORT.md": "3f58a87e373e600a08479a7268a87b7e0af596cbd4da43bb6a46d2d7c67ed2fe",
+    "collect_gate_v1.py": "e8a9f9a51b8316ce32e9e0ae4206ea57c94797cd5bc864bed7cfe1739a0b96d0"
+  },
+  "original_execution": 0,
+  "outputs_written": false,
+  "proposed_new_version": "Correct callsite to0x100064 with strict BL/target guard retained; preserve v1 bytes. No firmware interpretation changed.",
+  "record_type": "Later transcription of observed terminal failure, not a contemporaneously saved terminal file",
+  "source_spans_generated_in_memory_only": true,
+  "terminal_tail": "File collect_gate_v1.py line32: expected call tuple (0x100060,0x40630); bl line20 AArch64 BL opcode assertion raised AssertionError"
+}

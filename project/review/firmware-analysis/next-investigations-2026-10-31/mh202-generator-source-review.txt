@@ -1,0 +1,42 @@
+# MH202 generator chain source review
+
+PASS for the bounded static method-ownership and writer-path claims in the current candidate. No author correction requested. This is an author-independent source/containment review using original recovered PE/CLI bytes and selected dataflow, not a complete compiler semantic audit, successful generation test, CLR-binding test or firmware/runtime compatibility result. No vendor assembly loading, reflection evaluation, managed/native vendor execution, target process/OS, network or device work occurred.
+
+## Exact reviewed candidate
+
+Root: `work/mh202-firmware/research/2026-10-31-generator-chain/`.
+
+| File | SHA256 |
+| --- | --- |
+| REPORT.md | fce8268ea4f7f01e8823189c51d24a7816fe7288b942501c5ada371729d372d4 |
+| collect_chain_v1.py | 78fd218bb00a47ad4d4971769f0c8f745c85ad61a4ec45a29fc86800a69b2cbe |
+| METHODS.v1.json | 8f25010b5386ca348e9c613602b07d75d12ed0126649ad457129bcf2fc54a964 |
+| CALLS.v1.json | c191a522b80ef7564ee438c195816c2984a03108527fb679f6a96f8c00ef4ec0 |
+| INPUTS.v1.json | 0964c52097d7971e789654f3136a53e623406f48101cbd025ab094abf643988f |
+| OUTPUT_MANIFEST.v1.json | 9c488d768dac5a91326c8671e7e6c8ec2de98ae7a02126995d252713d27e9b5c |
+| initial-generated-v1/SNAPSHOT_INDEX.json | ba58e7b3f3a260afb1cdf238be9d2c57f9a80028d60a4b24335d10b7b653a4b1 |
+
+The six snapshot members match both current source files and exact initial copies. Snapshot index membership is computed before opening its file, so it has no circular self-hash entry. Collector generation refuses existing outputs/snapshot directories; the read-only `--check` branch compares regenerated host evidence and does not rewrite the candidate. I did not alter candidate files. No historical authenticity is inferred for unsaved exploratory console commands; the report distinguishes those from the complete saved evidence.
+
+## Reproduction and independent original checks
+
+`python3 -B work/mh202-firmware/research/2026-10-31-generator-chain/collect_chain_v1.py --check` passed: four outputs, ten selected methods, 9770 decoded IL instructions, 1972 static call/newobj entries and65 pinned inputs. Decoded instructions are not executed instructions or a new emulation corpus. Existing global native counts do not change.
+
+Independently from the collector, I parsed the original Core/DataManager metadata and checked TypeDef MethodList ownership against all ten selected MethodDef tokens, names/RVAs and raw fat-method headers. Every selected instruction's byte range matches the original DLL, covers the original code extent contiguously and agrees with the body hash. Manual signed-displacement arithmetic verifies657 ordinary relative branch targets; raw switch counts/displacements verify70 switch targets. All targets select decoded instruction starts. All1972 raw call/newobj operand tokens match saved token values and existing metadata rows. These broad byte/target checks validate evidence identity and coordinates; they are not a semantic proof of every instruction or exception path. Selected call signatures/owners and argument/control-flow slices below were read separately.
+
+Original DLL identities are those independently checked in `SOURCE_TOOL_PREFLIGHT.md`: Core SHA256 `7b7269a14652472fc471568430364a038f02a8c881cb5c9db089a7683e38307b`, DataManager `c52f483e0a5abbd5ca0ada6214afd0125fbe895005ea1e775c087c6b491e3492`. The collector also pins OSJConverter/Class without promoting separate method reconstruction from those inputs. It invokes host dnfile/dncil parsing, not a vendor method interpreter or CLR loader. The pinned host tool tree was independently verified in that preflight; this review used Python `-B`.
+
+## Critical source conclusions
+
+* DataManager06000030 at RVA0x4690 owns the seven area selectors3..9, SQL literals and catalogue connection field. IL001c subtracts3 before the switch; the cases select start/condition/action/stop/enable/disable/panic flag names. IL00c8..0112 constructs the object/flag/command filter. IL0169 calls the referenced adapter Fill; IL018b..0198 adds the named table only when its returned count is greater than0. The selected normal tail returns1. This is method-level filtering/provider use, not live provider success or complete UI permission precedence.
+* Core060000bd at RVA0xe408 calls the manager at IL002a. The boolean selection sequence `0,cgt.un,neg` is followed by comparison with-1. Direct original raw bytes at IL0036 `4099000000` calculate targetIL00d4; IL0052 `2c7c` targetsIL00d0; IL00d2 `2b08` targetsIL00dc. Thus manager0 reaches local return-3, whereas the selected normal manager1/missing named-table route sets fallback1 and reaches default constructionIL00f8. Header size12 is excluded from report IL coordinates; dncil's stored body-relative branch target includes it. There is no branch-direction inversion in the final report.
+* Core06000021 at RVA0x61ec calls06000022 at IL0092 and060000bd at IL00b8 using command object/command/area properties. Its successful local result0 path enumerates returned rules, constructs OPEN_FIELD_n property names, inspects their values, substitutes ID_CHI/ID_COSA/ID_DOVE and concatenates fields before selected `*`/`##` wrapping and MakeOpen assignment. Reflection API names are source call operands only; no reflection was executed. Additional object-specific branches prevent treating this as a universal escaping/format contract.
+* Core0600001f calls the status consumer at IL05b3. The original EXTRACTVALUE format at IL1947 and actual argument-array stores select ReplyDimension via06000060 at IL197b and ReplyPar via06000062 at IL1986. This establishes declaration-to-template source ownership. It does not establish the firmware reply parameter indexing convention, returned status or a real condition evaluation.
+* Core060000c8 at RVA0xfba0 reads the supplied scenario ID and uses two actual Path.Combine calls: IL016c..017d builds OutputFolder/ID.spt, then IL0187..0199 builds that directory/ID.spt. The selected action/control branch passes this local pathname as CompileScenario's FileSPT argument at IL027c..0287. The compiler later loads argument3, false and `new StreamWriter` at IL3a41..3a43, iterates the line list, applies selected placeholder replacements, calls WriteLine at IL3b6b and Close at IL3b8d. The caller can instead skip compilation, or delete script output/write an error file following nonzero compile result or empty Execute list. Writer API ownership is proven; successful filesystem output is not.
+* CompileAll separately constructs the script XML nodes. The scenario sequence counter names `scenario_n`, while the scenario object's actual ID supplies name `ID.spt` and id fields. UserDescription/Name supply description/scen_name. IL057e..0589 combines OutputFolder with info.xml and IL05a3 calls referenced XmlDocument.Save after a selected existing-file deletion branch. This is an actual index-writer source join, not mere reuse of an info.xml literal or a claim that a deployed file was observed.
+
+## Bounds retained
+
+The report correctly separates ordinary fallback field order from actual Counter/Boolean template rows, custom/configuration/auxiliary consumers, generic/provider linkage and full source-language behavior. No synthetic scenario, SQL row object, accepted script or generated frame was inserted or claimed. Static source corresponds to available Suite/package resources; DB1.0.53, catalogue build1.0.0, Suite/package version and MH202 firmware1.0.24 remain distinct. The nested writer pathname is compatible in shape with the earlier numbered firmware loader contract, but packaging, transfer, selected installation and execution remain unjoined.
+
+Unavailable configured extra4/user scripts are not recovered by this method graph. Full custom-range semantics, Boolean OnlyIf precedence, EXTRACTVALUE indexing, all error paths, complete compiler grammar, actual XML/text bytes and firmware/physical behavior remain open. Current source is a substantive method-level closure without a whole-compiler or product-support verdict.

@@ -1,0 +1,17 @@
+{
+  "UTC": "2026-11-02T08:20:15.277640+00:00",
+  "current_document_pins": 5,
+  "exact_selected_exports": 20,
+  "original_execution": 0,
+  "prior_index_retained": {
+    "bytes": 12048,
+    "sha256": "37cc55da0ba75ed23110589ac89912f573f7ee0ebf559f3ffce154e8eea4a921",
+    "snapshot": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/integration-pre-edit/OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+    "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md"
+  },
+  "source_review_scope": "Selected original bytes and semantic limits; not full Device/runtime/physical approval",
+  "source_reviews": [
+    "work/sequential-firmware-priorities/2026-11-02/reviews/stage1-mh202-source-review.md"
+  ],
+  "status": "PASS"
+}

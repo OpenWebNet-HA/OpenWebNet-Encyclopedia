@@ -1,0 +1,7 @@
+# Run06 dual-analysis synthesis
+
+F460 now has one fresh state-trigger source chain: rawBNIL row/factory/class and a separate compiled initializer/table connect56B raw to96B compiled inner in112B aggregate, selected fields and same-JSON-return/reparse requests. Local handler checks enabled/exactstate strings/operator words before requesting storedcallback; an actual localcaller has ID/method checks under valid-cast/record/range premises. It captures only the supplied initializer receiver as a raw pointer; handofff7650 body, receiver semantic class, natural events and complete ownership/scene execution remain open.
+
+F461 now joins the candidate libautomation metadata-resolved helper to the actual same parsed-field caller and one D1 prefix branch. RemainingUTF8characterlength2/4 yields classifier4 under selected exclusions; repeatedlength2 then reads bytes0/1 and appends delegateddigit results. Character count, byte offsets and ASCII/domain validity differ; full suffix/output/grammar, other categories and physical meaning remain unproved.
+
+Both source first generations and parent static reconstruction pass, with independent cross-source review. Public main gains scoped functional/address source findings; core catalogue profile remains unchanged. No original/vendor/helper/native/model/fixture/SQL/runtime/physical execution added; earlier ledgers/history unchanged.

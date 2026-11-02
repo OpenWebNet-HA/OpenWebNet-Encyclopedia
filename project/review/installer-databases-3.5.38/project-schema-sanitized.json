@@ -1,0 +1,1614 @@
+[
+  {
+    "database": "MHPrj.db",
+    "table": "DB_INFO",
+    "original_create_SQL_sha256": "1f7ef9893c6205dc94a108e2e377abd425bb6fe87bbaf497adf432edb0c1b7aa",
+    "columns": [
+      {
+        "name": "param",
+        "type": "TEXT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "value",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 2
+      }
+    ],
+    "declared_foreign_keys": [],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_DB_INFO_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "param"
+          ],
+          [
+            1,
+            1,
+            "value"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_AREA_TYPE",
+    "original_create_SQL_sha256": "1ec276cd91360c4ae4794ef3a9fec5185f6698573ada3b9327b926aa4b4e954f",
+    "columns": [
+      {
+        "name": "id_rt_area_type",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "type",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_AREA_TYPE_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "id_rt_area_type"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_AS_AREA_DEVICE_CODE",
+    "original_create_SQL_sha256": "82529199a82c74224272e51cea3453886326a24a18563b1a30565fcb74803f0d",
+    "columns": [
+      {
+        "name": "id_rt_area",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "id_rt_device",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 2
+      },
+      {
+        "name": "code_type",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 3
+      },
+      {
+        "name": "code_value",
+        "type": "TEXT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "RT_DEVICE",
+        "id_rt_device",
+        "id_rt_device",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ],
+      [
+        1,
+        0,
+        "RT_AS_AREA_TYPE",
+        "id_rt_area",
+        "id_rt_area",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_AS_AREA_DEVICE_CODE_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "id_rt_area"
+          ],
+          [
+            1,
+            1,
+            "id_rt_device"
+          ],
+          [
+            2,
+            2,
+            "code_type"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_AS_AREA_TYPE",
+    "original_create_SQL_sha256": "7c2de2a47ceaeb4d24b67e42edd152850ed4876c5ed018728d223605e106470c",
+    "columns": [
+      {
+        "name": "id_rt_area",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "id_rt_area_type",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "checked",
+        "type": "INT",
+        "notnull": 1,
+        "default": "0",
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "RT_AREA_TYPE",
+        "id_rt_area_type",
+        "id_rt_area_type",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_AS_AREA_TYPE_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "id_rt_area"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_AS_BUSSES_AREA_TYPE",
+    "original_create_SQL_sha256": "5406d3830666cf8761831599039b348130267df34d0c6d39f64b7c535de3f765",
+    "columns": [
+      {
+        "name": "id_rt_area_type",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "id_bus",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 2
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "RT_BUS",
+        "id_bus",
+        "id_bus",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ],
+      [
+        1,
+        0,
+        "RT_AREA_TYPE",
+        "id_rt_area_type",
+        "id_rt_area_type",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_AS_BUSSES_AREA_TYPE_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "id_rt_area_type"
+          ],
+          [
+            1,
+            1,
+            "id_bus"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_AS_BUS_INTERFACE",
+    "original_create_SQL_sha256": "7a9239c4fc8b8036d21604e19d0ebe2d338bb691fa5499c5c835d40fb988a5f9",
+    "columns": [
+      {
+        "name": "id_rt_object",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "id_bus_out",
+        "type": "INT",
+        "notnull": 1,
+        "default": "0",
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "RT_OBJECT",
+        "id_rt_object",
+        "id_rt_object",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_AS_BUS_INTERFACE_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "id_rt_object"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_AS_KO_DEVICE",
+    "original_create_SQL_sha256": "40de3694f7356702ed5dc5b2057170f4aaa42b7efc7d4287b0929c302ca970af",
+    "columns": [
+      {
+        "name": "id_rt_device",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "id_rt_object",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 2
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "RT_DEVICE",
+        "id_rt_device",
+        "id_rt_device",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ],
+      [
+        1,
+        0,
+        "RT_OBJECT",
+        "id_rt_object",
+        "id_rt_object",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_AS_KO_DEVICE_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "id_rt_device"
+          ],
+          [
+            1,
+            1,
+            "id_rt_object"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_BUS",
+    "original_create_SQL_sha256": "60fa980f3a7e9c5ed7e32773330344b140dbe86f8a1ea0cbdd981b707b3a891b",
+    "columns": [
+      {
+        "name": "id_bus",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "bus_type",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "descr",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "level",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "interface_address",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": "NULL",
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_BUS_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "id_bus"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_COLLECTION_BOX",
+    "original_create_SQL_sha256": "b2d0dff8575648da6ce5215797d53492ac566659657388da2f9433869c6cbcdf",
+    "columns": [
+      {
+        "name": "id_box",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "box_type",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "box_descr",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "id_room",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "RT_COLLECTION_ROOM",
+        "id_room",
+        "id_room",
+        "CASCADE",
+        "SET NULL",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_COLLECTION_BOX_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "id_box"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_COLLECTION_OBJECTS",
+    "original_create_SQL_sha256": "6a0a2602f42a3fc149d6cdcb86ce418c82bbbb20ebe3358e852ce1e994c31bbd",
+    "columns": [
+      {
+        "name": "id_collection",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "collection_type",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "descr",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "key_conf_collection",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "key_value_collection",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "id_system",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "RT_SYSTEM",
+        "id_system",
+        "id_system",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_COLLECTION_OBJECTS_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "id_collection"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_COLLECTION_ROOM",
+    "original_create_SQL_sha256": "72356f1ea8f146776ba99d01118d2c3b5eaa095fae52fa96acb8aef925610ead",
+    "columns": [
+      {
+        "name": "id_room",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "room_type",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "room_user_descr",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "room_floor",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "fixed_row",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "id_rt_area_type",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "RT_AREA_TYPE",
+        "id_rt_area_type",
+        "id_rt_area_type",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_COLLECTION_ROOM_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "id_room"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_DEVICE",
+    "original_create_SQL_sha256": "75eaf47e71f518ceb39c2049c05a631a9fc8442c6b437db3b5e655ab65c80c19",
+    "columns": [
+      {
+        "name": "id_rt_device",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "id_device",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "user_descr",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "id_system",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "id_box",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "config_mode",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "firmware_v",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "firmware_r",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "RT_COLLECTION_BOX",
+        "id_box",
+        "id_box",
+        "CASCADE",
+        "SET NULL",
+        "NONE"
+      ],
+      [
+        1,
+        0,
+        "RT_SYSTEM",
+        "id_system",
+        "id_system",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_DEVICE_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "id_rt_device"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_DEVICE_CONF",
+    "original_create_SQL_sha256": "3a3976277ea33564965559bd01c547b2f8d240fa1e2d16e9e325d9b10d6506ce",
+    "columns": [
+      {
+        "name": "item_conf",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "item_value",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "id_rt_device",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 2
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "RT_DEVICE",
+        "id_rt_device",
+        "id_rt_device",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_DEVICE_CONF_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "item_conf"
+          ],
+          [
+            1,
+            2,
+            "id_rt_device"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_DEVICE_STATE",
+    "original_create_SQL_sha256": "d37b1686524b78208b8cc715aeb2353d8557677ca4f1e94a4ea75ffff6de3a9e",
+    "columns": [
+      {
+        "name": "id_rt_device",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "id_rt_area",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "device_status",
+        "type": "INT",
+        "notnull": 1,
+        "default": "1",
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "RT_AS_AREA_TYPE",
+        "id_rt_area",
+        "id_rt_area",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ],
+      [
+        1,
+        0,
+        "RT_DEVICE",
+        "id_rt_device",
+        "id_rt_device",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_DEVICE_STATE_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "id_rt_device"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_OBJECT",
+    "original_create_SQL_sha256": "25b5bf520ad79917a3e1127e5d4bc341f34a8e063a4d76f46fd3595e7c60664c",
+    "columns": [
+      {
+        "name": "id_rt_object",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "key_object",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "user_descr",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "id_collection",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "id_room",
+        "type": "INT",
+        "notnull": 0,
+        "default": "1",
+        "primary_key_position": 0
+      },
+      {
+        "name": "slot",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "disable",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "RT_COLLECTION_OBJECTS",
+        "id_collection",
+        "id_collection",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ],
+      [
+        1,
+        0,
+        "RT_COLLECTION_ROOM",
+        "id_room",
+        "id_room",
+        "CASCADE",
+        "SET DEFAULT",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_OBJECT_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "id_rt_object"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_OBJECT_CONF",
+    "original_create_SQL_sha256": "af93ffb67ebedcaf466070d212bbc6a184dfcce8b208202dbb01e8fcef57dd9b",
+    "columns": [
+      {
+        "name": "key_conf",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "key_value",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "id_rt_object",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 2
+      },
+      {
+        "name": "visible",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "hidden",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "RT_OBJECT",
+        "id_rt_object",
+        "id_rt_object",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_OBJECT_CONF_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "key_conf"
+          ],
+          [
+            1,
+            2,
+            "id_rt_object"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_OBJECT_STATE",
+    "original_create_SQL_sha256": "d7085b76273bf555a7205e2949d47abcba349e8dc62b0cf6de0a46eca4370c57",
+    "columns": [
+      {
+        "name": "id_rt_object",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "id_rt_area",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "object_status",
+        "type": "INT",
+        "notnull": 1,
+        "default": "1",
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "RT_AS_AREA_TYPE",
+        "id_rt_area",
+        "id_rt_area",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ],
+      [
+        1,
+        0,
+        "RT_OBJECT",
+        "id_rt_object",
+        "id_rt_object",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_OBJECT_STATE_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "id_rt_object"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_PROJECT",
+    "original_create_SQL_sha256": "bc8ad0539c47596afb890162fc1f282d18e61b5cfe4188c137e7d00efa8d78c1",
+    "columns": [
+      {
+        "name": "project_guid",
+        "type": "GUID",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      }
+    ],
+    "declared_foreign_keys": [],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_PROJECT_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "project_guid"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "MHPrj.db",
+    "table": "RT_SYSTEM",
+    "original_create_SQL_sha256": "b1eeab51450fe07e57e6755a0edc94f7848932e31b93955150bbac159a69692c",
+    "columns": [
+      {
+        "name": "id_system",
+        "type": "INT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "descr",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "system_type",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "id_bus",
+        "type": "INT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "RT_BUS",
+        "id_bus",
+        "id_bus",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_RT_SYSTEM_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "id_system"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "PTDB.db",
+    "table": "AS_AREA_HOST",
+    "original_create_SQL_sha256": "9a009d3ddcd3a655d52af0f84a08d3042e287ee006b64238fce9e6d330d711a6",
+    "columns": [
+      {
+        "name": "area_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "host_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 2
+      },
+      {
+        "name": "progressive",
+        "type": "INTEGER",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 3
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "EN_HOST",
+        "host_id",
+        "id",
+        "NO ACTION",
+        "NO ACTION",
+        "NONE"
+      ],
+      [
+        1,
+        0,
+        "EN_AREA",
+        "area_id",
+        "id",
+        "NO ACTION",
+        "NO ACTION",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_AS_AREA_HOST_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "area_id"
+          ],
+          [
+            1,
+            1,
+            "host_id"
+          ],
+          [
+            2,
+            2,
+            "progressive"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "PTDB.db",
+    "table": "AS_AREA_RELATIONSHIP",
+    "original_create_SQL_sha256": "96287716a5aae46a979f6c207c37069dd07e59cf152fca8103e22ab54a0fd515",
+    "columns": [
+      {
+        "name": "parent_area_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "child_area_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 2
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "EN_AREA",
+        "child_area_id",
+        "id",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ],
+      [
+        1,
+        0,
+        "EN_AREA",
+        "parent_area_id",
+        "id",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_AS_AREA_RELATIONSHIP_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "parent_area_id"
+          ],
+          [
+            1,
+            1,
+            "child_area_id"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "PTDB.db",
+    "table": "EN_AREA",
+    "original_create_SQL_sha256": "b8928acb47a44058f99d4870fce206053cf4782c5855e020bc7cffa50cf5680c",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "key",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "area_type_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "hosts_in_count",
+        "type": "INTEGER",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "area_type_category_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "category",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [
+      [
+        0,
+        0,
+        "EN_AREA_TYPE_CATEGORY",
+        "area_type_category_id",
+        "id",
+        "NO ACTION",
+        "NO ACTION",
+        "NONE"
+      ],
+      [
+        1,
+        0,
+        "EN_AREA_TYPE",
+        "area_type_id",
+        "id",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "indexes": []
+  },
+  {
+    "database": "PTDB.db",
+    "table": "EN_AREA_TYPE",
+    "original_create_SQL_sha256": "47259f0bf1e8de3d577add4c566ad43304d550efb4c0f4b1da91fb5e1cbd91a6",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [],
+    "indexes": []
+  },
+  {
+    "database": "PTDB.db",
+    "table": "EN_AREA_TYPE_CATEGORY",
+    "original_create_SQL_sha256": "9237b4c78baa749fda9827b34a74d88a1685a9b1c0ce09f87801772ad2dd182d",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [],
+    "indexes": []
+  },
+  {
+    "database": "PTDB.db",
+    "table": "EN_HOST",
+    "original_create_SQL_sha256": "0e4154a5f4e5eea2dd78a4e28df764e8f9187d6c5928c42793ed0c5b73deb551",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "fc",
+        "type": "INTEGER",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "uc",
+        "type": "INTEGER",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "na",
+        "type": "varchar(255)",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "port",
+        "type": "INTEGER",
+        "notnull": 1,
+        "default": "20000",
+        "primary_key_position": 0
+      },
+      {
+        "name": "pwd",
+        "type": "varchar(255)",
+        "notnull": 1,
+        "default": "[credential default withheld]",
+        "primary_key_position": 0
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "id_device",
+        "type": "varchar(50)",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "subnet_mask",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "router_ip",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "mac",
+        "type": "TEXT",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "add_type",
+        "type": "INTEGER",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [],
+    "indexes": []
+  },
+  {
+    "database": "PTDB.db",
+    "table": "EN_PLANT_INFO",
+    "original_create_SQL_sha256": "6c946a19f121a4d2a8cc1655bf526e7bb1c5b8bee0b9db160c44ed34abfb9b38",
+    "columns": [
+      {
+        "name": "key",
+        "type": "TEXT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 1
+      },
+      {
+        "name": "value",
+        "type": "TEXT",
+        "notnull": 1,
+        "default": null,
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [],
+    "indexes": [
+      {
+        "name": "sqlite_autoindex_EN_PLANT_INFO_1",
+        "unique": 1,
+        "origin": "pk",
+        "columns": [
+          [
+            0,
+            0,
+            "key"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "database": "PTDB.db",
+    "table": "sqlite_sequence",
+    "original_create_SQL_sha256": "4cb1eaf14467f226196148cb5688569660cb290d414bae4c1c450b149b62befd",
+    "columns": [
+      {
+        "name": "name",
+        "type": "",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      },
+      {
+        "name": "seq",
+        "type": "",
+        "notnull": 0,
+        "default": null,
+        "primary_key_position": 0
+      }
+    ],
+    "declared_foreign_keys": [],
+    "indexes": []
+  }
+]

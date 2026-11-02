@@ -1,0 +1,41 @@
+# MH202 boot run1 independent static review
+
+**PASS within the report's initial platform scope. No material correction required.** Independently reproduced `boot/run1/collect_boot.py --check`: 60 deterministic outputs, 17 original spans, 67 direct literal-reference candidates, zero original instructions executed; metadata counts 4400 identical / 3 changed / 495 normal-only / 5 recovery-only match. No original code, shell template, mount/check, network/service or device ran.
+
+## Critical checks
+
+- Regular-file classification accurately describes comparison of parent-verified extraction hashes, rather than a newly repeated full-image hashing run. Selected source reads are verified by ImageVFS. The 78 selected vendor regular files match normal/recovery, with zero exact checked same-path F454 matches; scripts are included and 78 is not an ELF count.
+- Original inittab, init links, daemon startup script, fstab and selected stack fields agree. Library search paths, background daemon launch, p7 extra mount and tmpfs are declarations; actual startup and durable storage behavior remain untested. Working_mode numbers remain separate from decoded runtime policy.
+- Original hal_board caches its classification, reads `/proc/cpuinfo`, finds the Hardware substring and compares board names case-insensitively. Original pointer/branch evidence supports BASI→0, BAIA→5 and LAGO→6. The report correctly distinguishes a lago package label from an observed runtime classifier input.
+- check_extra uses unsigned board range and mask 0x78e for immediate zero return, then mask 0x61 to select 0/5/6. The latter branch builds `e2fsck`, `-p`, Device-result+50 and a null terminator before imported call 0x5f90. Its return convention is not equated to system wait status.
+- mount_extra's original jump table selects board 0/6→0x8bbc; two Device output buffers provide +50/+200, with target/option pointers and literal 0xc0ed0410 passed to mount 0x8bf8. Board5 has its separate path. Device::get_device preserves the caller output pointer and at 0x49b8..0x49dc copies 236 bytes from the hal_board-indexed table into it. Thus the report's narrow “Device-result field” wording is justified; concrete runtime partition strings and successful mounts are not established.
+- update_fs_recovery / update_fs select UBI for 1/2/3/7/8/9/10, Device/template for 0/5/6, and −1 for 4/outside. Recovery argv uses `-m 3`, normal uses `-m 5`; common volume `/dev/ubi2_0`, incoming path placement and detach pointers match whitelisted evidence. The four guards at 0x7d04, 0x7d34, 0x7ea0 and 0x7ed0 are `cmn r0,#1` followed by equal→return: **exactly −1**, not arbitrary nonzero. The third delegate result returns without a new success interpretation. No transactional update or rollback conclusion follows.
+- Separate template paths pass incoming input and Device +140/+170 into sprintf before system 0x7d90/0x7f2c. Review inspected instruction arguments and hashed-only template metadata without printing either withheld template or retaining credential values.
+- Daemon 0xe2a0..0xe2a4 formats `/home/bticino/cfg/extra/%s/extra.xml`; 0xe314 calls GetConfigValue with exact `extra`/`dimsum` pointers, then 0xe348..0xe350 tests the first output byte. The sum algorithm/unit and manifest check2 relationship remain unresolved.
+
+## Cross-area reconciliation for canonical integration
+
+Boot's extra4-role uncertainty is an accurate **historical initial platform-pass boundary**. The separately reviewed functional run1 loader now proves an actual **extra/4 scenario-script consumer** at bt_taskmanager 0xce44..0xce64 using `%s%d.spt/%d.spt`, followed by trigger bindings and interpreter command construction. Parent web evidence independently joins extra/4/info.xml. Canonical synthesis should combine those positive consumers while retaining missing4.xtz contents, mounted persistent data and runtime behavior as open questions. Do not rewrite the historical boot report, equate a consumer path with complete archive contents, or infer absent engine functionality from absent external assets.
+
+The original manifest extras, language-resource2 link, empty root-image extra directory and separate persistent partition are compatible with the newly established extra4 consumer.
+
+## Exact reviewed pins
+
+Hashes and independently verified producer-manifest count follow. This reviewer wrote only this file; producer artifacts remain unchanged.
+
+All 63 producer-manifest entries match. Paths below are relative to `boot/run1/`.
+
+| Artifact | SHA256 |
+|---|---|
+| `REPORT.md` | `6035e497fcf4c8373ec84ae18ef2a2ff034ee4d8f49c16afac6d8c2199b1a4de` |
+| `collect_boot.py` | `d003e3875f50fc92f883bc007072902f90d2e447b4ce839273a8d0864a21be70` |
+| `output-manifest.json` | `71f5841779ae1f6908b276a364df68df2e0dbd45e7be452f87bf9713918bff2e` |
+| `input-hashes.json` | `e27fd3eba8271369211468b4568f8621e5cd22bc0dd428f21a0fe02664084e68` |
+| `original-spans.json` | `7aba938971639ad8b95db86b134bb23528b2380eae2b52b7759921fe30deeb83` |
+| `critical-words.json` | `a37a1b3cc29155a357c042f4ee8281ab7ae86af8d66f55408dafcebe9ec72064` |
+| `normal-recovery-comparison.json` | `b009eba7207f14fbdfaedc6e5efa234ddda789e4a7280dfbc4e200cb79378cff` |
+| `vendor-component-identities.json` | `682840dda2225c4258a0c67b4f806c7679b38fba544f2f72d6d8fcd1a158b118` |
+| `package-actions.json` | `be6c2489f43f3b48f141c5b839b73d045e2003e32a917767221ba5c482d41032` |
+| `hal-withheld-update-templates.json` | `fc4821144ae598f8adff48688999488a9d8af3ddf4858a9afec91e251a025613` |
+
+Functional reconciliation pin: `functional/run1/REPORT.md` SHA256 `4bd567b9a05afe7a728895966aabbcc2d6c20929b9ffa12d1524fe7f7b0061f6`.

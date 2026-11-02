@@ -1,0 +1,37 @@
+[
+  {
+    "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0138-open-bacnet-gateway.md",
+    "snapshot": "work/remaining-firmware-investigation/2026-11-01-run04/integration/device-role-context/own-dev-0138-open-bacnet-gateway.md",
+    "bytes": 27279,
+    "sha256": "e410bf069b55333dbd626706d3dc333b076a6a6fba63a52a2de78e9d9ee0f15c",
+    "scope": "Read-only curated role context; no Device edit or full review upgrade"
+  },
+  {
+    "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0089-webserver-audio-video-din.md",
+    "snapshot": "work/remaining-firmware-investigation/2026-11-01-run04/integration/device-role-context/own-dev-0089-webserver-audio-video-din.md",
+    "bytes": 22283,
+    "sha256": "3440020c733174c7bf29f81500c5b7543ec799b623de94e14c88bf651ea191c4",
+    "scope": "Read-only curated role context; no Device edit or full review upgrade"
+  },
+  {
+    "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0152-f455-basic-gateway.md",
+    "snapshot": "work/remaining-firmware-investigation/2026-11-01-run04/integration/device-role-context/own-dev-0152-f455-basic-gateway.md",
+    "bytes": 22791,
+    "sha256": "89622ff8bc7833f9d02bbb2bb8e765bd739120b6036ff1c72d22ff72efd0430d",
+    "scope": "Read-only curated role context; no Device edit or full review upgrade"
+  },
+  {
+    "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0198-f459-driver-manager.md",
+    "snapshot": "work/remaining-firmware-investigation/2026-11-01-run04/integration/device-role-context/own-dev-0198-f459-driver-manager.md",
+    "bytes": 30310,
+    "sha256": "b105f62875ebcba11d1989971a7674cee9b677a8010b49cfadee6a7bfff81423",
+    "scope": "Read-only curated role context; no Device edit or full review upgrade"
+  },
+  {
+    "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0131-mh200n-scenario-programmer.md",
+    "snapshot": "work/remaining-firmware-investigation/2026-11-01-run04/integration/device-role-context/own-dev-0131-mh200n-scenario-programmer.md",
+    "bytes": 25558,
+    "sha256": "2c8d3344a4331aefdb03fde54c1a6c6deca8063725700c0f5d5888e7f91cecd7",
+    "scope": "Read-only curated role context; no Device edit or full review upgrade"
+  }
+]

@@ -1,0 +1,51 @@
+# F460 2.0.12 run03: SLEEP callable, timing request and caller marker
+
+The original stored SLEEP callable reads its copied32-bit word, forms a two64-bit-word request `[zeroExtendedWord,0]` and asks imported nanosleep to use the same local object as requested and remaining storage. Return−1 retries only when the subsequently read errno word equals4. A selected common caller path marks byte8 after a normal callable return, independently of whether the sleep delegate reported a different error. This is a concrete static request/return contract; it is not a measured wait, actual callback run, completion guarantee or physical effect.
+
+Original scheduler `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62`. Candidate packaged provider `/lib/libc.so.6` SHA256 `e918bb2e904dae5cec4a203741a4379bad4ed05199b69dacd87d7a7a83d01e09`. Both are fresh ELF64 little-endian AArch64 objects. VAs are linked source addresses, not runtime pointers. No old ARM32 fields/harnesses are transferred. Curated Device0207 supplies product context, not timing or command semantics.
+
+## Actual stored data and adapter contract
+
+The reviewed deep-scheduler packet establishes raw field52 `seconds`→compiled field148→temporary callable dataSP8, manager0x1125f0 and invoker0x112640, passed to storage helper0x1303f0. Those schema/construction facts are inherited, not a repeated factory test. Here the actual manager/storage implementations narrow the stored-data premise.
+
+Manager0x1125f0 operation2 takes the source callable-storage pointer inX1, loads only its word0 at0x112630 and stores that32-bit word into destinationX0 at0x112634. Other selected manager operations return locally; this is not a heap52/24-byte capture layout from another action. No allocation/deallocation is requested by this manager's retained body.
+
+Storage helper0x1303f0 saves the destination action inX19 and initializes a local temporary. If input manager+16 is nonnull,0x13043c supplies operation2 and0x130440 invokes it. It then copies the cloned data pair into action+24/+32 and transfers manager/invoker from input+16/+24 into action+40/+48 at0x130450. Old manager presence can request operation3 cleanup. These are source copy/swap requests under normal ABI/manager returns, not a whole object-lifetime or heap-safety proof.
+
+Invoker0x112640 loads the data word at `[X0]` intoW19 and retains the storage pointer inX20. Its formatting/diagnostic preamble has string/helper requests that are not expanded here. The selected timing core at0x112880 reloadsW0 from the same storage pointer; the captured word remains conditional on valid storage and no incompatible intervening mutation. No arbitrary parsed/action fixture is injected.
+
+## Timing request and selected return loop
+
+Original0x112880..0x112890 loads32 bits intoW0 (zero-extending intoX0), skips the sleep request if zero, otherwise storesX0 andXZR atSP8/SP16. There is no multiplication of that selected word in this request construction. X19 holdsSP8. At0x1128a4/0x1128a8 bothX1 andX0 receiveX19, so request and remaining pointers alias the same two-word local object. BL0x1128ac goes to actual PLT0x24140/GOT0x21e710, whose original JUMP_SLOT names `nanosleep@GLIBC_2.17`.
+
+CMN0x1128b0 tests returnW0 for−1. Any other return takes the normal epilogue. Only−1 takes0x112894, calling actual PLT0x245a0/GOT0x21e940 for `__errno_location@GLIBC_2.17`, then reading its word and comparing4 at0x11289c. Equality reaches the next request with the same local storage; inequality exits normally. The source therefore does not promote a normal invoker return into successful sleeping. No syscall, signal interruption, retry or elapsed interval was executed.
+
+The epilogue0x1128b8..0x1128ec checks the normal stack canary and returns. Callback return bits are not used as a Boolean success result by the selected common caller; its next instruction instead reloads another action field. Preamble exceptions, cancellation, canary failure and other unwind behavior are outside this normal-return result.
+
+## Packaged provider and separate API meaning
+
+Scheduler DT_NEEDED directly includes libc.so.6. Fresh ImageVFS resolves the candidate `/lib/libc.so.6`; its exported weak `nanosleep@@GLIBC_2.17` is0xb97c0, `__errno_location@@GLIBC_2.17` is0x2b700 and clock_nanosleep is0xb47a0. These matching declarations are a packaged candidate, not effective process loader/interposition proof.
+
+The actual nanosleep wrapper at0xb97c8..0xb97dc moves request/rem intoX2/X3, setsW0=0 andW1=0 and directly requests clock_nanosleep0xb47a0. Its body beyond that boundary is not inspected. A nonzero wrapper result is written to thread-local errno via original TLS relocation slot0x19ade0; the wrapper then returns−1. The original errno-location helper uses that same slot and thread-pointer register to form its result. Dynamic TLS state and underlying OS/provider effects remain conditional.
+
+The image contains no time/timespec headers in the extracted regular-file set. Pinned HOST headers provide semantic context only: host struct_timespec.h labels tv_sec as seconds and tv_nsec as nanoseconds, time.h declares requested/remaining timespec pointers, and host asm-generic errno-base.h labels EINTR=4. These are not original F460 target headers or a target-layout proof. The fresh original code itself establishes the actual two64-bit request words and provider call.
+
+Under the ordinary Linux/POSIX LP64 timespec and errno ABI, candidate binding and normal provider interpretation, this requests the supplied UInt32 number of seconds with zero nanoseconds; code4 is EINTR and the same-object retry can use provider-supplied remaining data. This conditional unit interpretation comes from the API contract plus original stores, not the JSON spelling alone. Actual alias handling, accepted values, signal/cancellation state, rounding, scheduling, drift and elapsed behavior are untested. No claim that every UInt32 is accepted or that the interval is exact follows.
+
+Parent API_CONTEXT.json separately pins the fetched Linux man-pages6.12 nanosleep source URL/blob and short line paraphrases. It is parent-provided API context, not an original target source archive or a locally replayed network fetch. The primary tagged source is [Linux man-pages nanosleep.2](https://kernel.googlesource.com/pub/scm/docs/man-pages/man-pages/+/refs/tags/man-pages-6.12/man/man2/nanosleep.2); the packet does not infer target execution or layout from it.
+
+## Concrete common caller and marker scope
+
+Fresh original `17SleepActionRunner` primary AP0x21cc50 still points to0x1301e0 by R_AARCH64_RELATIVE. On that common method's selected inline path, action operational word12 is zero; byte8 is cleared at0x130210. Nonnull manager40 permits invoker48 at0x130228 with argument action+24. This source path can therefore call the stored SLEEP invoker with its actual cloned data, under the inherited binding and valid-object premise.
+
+After the callback returns normally,0x13022c reloads current action word16. Zero selects0x130234..0x130238, which writes byte8=1. The normal method epilogue returnsW0=1 at0x130258. Nonzero word12 or word16 takes separate worker-request paths, not audited as a scheduling matrix here. Getter0x1303a4 reads byte8 and setter0x1303b4 writes it, but a whole scene-facing completion/poll policy is not reconstructed.
+
+Thus the selected caller's byte8 marker is conditional on this path and fresh post-callback state. The invoker's non-EINTR error exit can still return normally into it, so marker1 is not independent proof that a delay elapsed or a provider request succeeded. These fresh offsets are not MHS completion4/delay8/duration12. No actual wait, thread worker, restart/stop/cancellation or completion event was observed.
+
+## Reproduction and preservation
+
+`python3 -B work/f460-firmware/2.0.12/research/2026-11-01-run03-sleep-invoker/collect_sleep_v1.py --check`
+
+The collector maps original PT_LOADs, records exact selected code spans/guards/branches/import stubs/versions/TLS source and host-only semantic excerpts, and preserves source pins. It never calls original code or a native emulator. First generation is exclusive; all outputs/report/collector are immediately copied exactly with a precomputed index. --check is read-only. No generated candidate failed or was overwritten. An exploratory libc objdump invocation emitted a separate-debug CRC warning; no debug data was used, and the collector explicitly disables separate-debug following.
+
+Confidence is high for the bounded original request/copy/control-flow contracts. Effective binding, valid objects, helper/provider returns, target ordinary ABI/TLS/errno semantics, natural scene admission, lifetime/concurrency and real timing remain explicit premises. No receiving/transport/MQTT/libjel/authentication/session/framing body was followed. New original/provider/vendor/native/OS execution, models and input fixtures are0; previous product ledgers remain unchanged.

@@ -54,7 +54,7 @@ This page records Scenario Engine semantics that are not yet established strongl
 
 ## Execution model
 
-The databases describe capabilities but do not obviously store complete user-authored scenario graphs. Further work should identify:
+The two ScenarioDevices databases describe capabilities but do not obviously store complete user-authored scenario graphs. Further work should identify:
 
 - where scenario instances are persisted;
 - how triggers, conditions, and actions are ordered;
@@ -63,17 +63,10 @@ The databases describe capabilities but do not obviously store complete user-aut
 - how actions are scheduled and errors handled;
 - whether the engine retries, serializes, or parallelizes actions.
 
-## Investigation method
+## ScenarioSuite consumer questions
 
-For each hypothesis:
+The separate [ScenarioSuite source](scenario-suite-database.md) supplies empty working schemas and catalogue declarations. The [original generator analysis](scenario-suite-generator.md) identifies area filtering, missing-rule fallback, field-type dispatch, reply-template use and `.spt`/`info.xml` writers. The [selected firmware joins](../reverse-engineering/firmware-analysis/mh202-1.0.24-generated-scenarios.md) align basename/BEGIN/IIF and ordinary-delay syntax. Remaining questions are actual UI precedence, a genuine configured export, complete accepted expressions/reply indexing, deployment, slot-to-script-variable propagation and Stop/panic/restart/gate recovery. Static writers and matching source formats do not resolve live behavior.
 
-1. query both ScenarioDevices revisions;
-2. preserve file and row provenance;
-3. compare resource keys, parents, frames, and parameters;
-4. correlate with the functional protocol reference;
-5. inspect other preserved MyHOME_Suite support files where available;
-6. compare with observed UI behavior or execution;
-7. record counterexamples;
-8. promote the interpretation only when it explains all relevant rows.
+## Server scene processors
 
-Implementation labels are evidence, not automatically public protocol terminology.
+The [server scene model](server-scene-processing.md) has source-established loader, record, runner and callback relationships for named builds. Remaining questions concern genuine configured inputs, complete parser policy, the natural caller/owner joins, action-versus-scene completion, shared cancellation, errors and concurrent lifetime. These are separate questions from MH202's embedded script language and public WHO 17 scene control.

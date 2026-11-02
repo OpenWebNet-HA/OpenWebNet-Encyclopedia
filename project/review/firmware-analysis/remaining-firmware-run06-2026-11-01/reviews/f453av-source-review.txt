@@ -1,0 +1,25 @@
+# Independent F453AV run06 source peer review
+
+Reviewer: f450_archive_analysis. Result: PASS for one own-recovery file-request result gate and compiled path-cell assignment. No correction requested. Full Device/source/runtime/physical approval remains pending.
+
+The frozen collect_resource_v1.py --check passed through the existing permitted host ARM-disassembly route: five outputs, six exact source spans, twenty-three guards, six exact first copies and zero original executions. I independently parsed the own original recovery ELF header/PT_LOAD mappings, recomputed the three selected PC-relative pools, signed open-call/equal-branch targets and PLT/GOT arithmetic, compared all six span bytes/hashes to the original, and independently verified every input pin and all six first copies. Original bt_start identity remains37956bytes/SHA256 f5a4f002e212e97e5f3e40fc4ed067237ad0095642bdec0b2c8792fa22a2fbd9, machine40/entry0x8f6c/rawflags0x2; no other product or normal-image ABI/layout is transferred.
+
+At0xb99c the original MOV supplies currentR5 asR1. The earlier single instruction0xb8d0 setsR5=0, but no uninterrupted zero-state proof is claimed: current zero requires the stated natural intervening-flow, callee-save/normal-provider-return/no-invalidating-change premises. At0xb9a0 the original pool0xc8b8 supplies /NO_APP_COPY intoR0; BL0xb9a4 resolves ownPLT0x8e6c. Stub arithmetic yields GOT0x18ed4, and an independent readelf query confirms the exact open@GLIBC_2.0 R_ARM_JUMP_SLOT row at that slot. A provider request is not an observed open, valid descriptor or file/device access.
+
+CMN R0,1 at0xb9a8 has equality exactly for32-bitreturned0xffffffff. The MOV/LDR/ADD instructions beforeBEQ0xb9bc do not replace those comparison flags. The branch target recomputes to0xb9e4; selected non-equality therefore falls through toward the store, provided opaque0xb9c4 returns normally. Any other machine word follows that numeric leg; the report correctly withholds open-success/errno/marker-truth meaning and a whole-error-policy conclusion.
+
+The selected post-request loads independently resolve0xb9c8→0xc8c0→0xf0e4 and0xb9cc→0xc8c4→0x188bc. STR R2,[R3] at0xb9d0 supplies exactly one four-byte pointer assignment. The destination lies in the own writable file-backed load; original initializer0xe43c and its /dev/mtd6 literal are file metadata, not live pre-state, equal-leg preservation or later ownership. The assigned /dev/mtd5 name does not establish hardware/partition identity, installation, application-copy behavior or recovery success. Later cell consumption, alternative branches, complete main and all provider bodies stay outside the claim.
+
+The prior night05 candidate-main/entry evidence is explicitly inherited and pinned. This review does not replay its collector or promote script/header/main nomination into actual startup. Natural recovery/image/environment/path/loader/provider admission, valid context/state and writable storage remain premises. No display/output/receiving/transport/auth/session/framing/MQTT/libjel body or proxy is used to interpret resource names. The source packet provides one new local resource assignment, with semantic meaning and actual activation open.
+
+This peer used only static host readers/readelf/disassembly. Original/vendor/native/helper/emulator/model/SQL/targetOS/device/service/network/bus/physical executions, mounts/flashes, actual DB recovery/generation and remote writes are zero. Inherited one encrypted F450 support container/zero plaintext databases is not a new archive operation. Original/synced/completed files, source manifest, public integration and older ledgers remain unchanged. No blocking issue found.
+
+## Frozen reviewed members
+
+- collect_resource_v1.py: 16200 bytes, SHA256 55b822cfe7c1b06d6e3135a315297651b3204d83c98d5787929a8cc3cdc1efb1
+- REPORT.md: 5457 bytes, SHA256 6a24e5a23f32b2ac847612e5fadc6f68e78b85df8cb6a92f61dd9eccc2442eba
+- SOURCE.json: 8671 bytes, SHA256 29dc793f576b880f858de119e105ebb3dfd84454e943bf9bbef6829a63bfb815
+- ARGUMENT_FLOW.json: 2092 bytes, SHA256 0672c4e6e005b2a27bf9954ef7d0cb667b32c55f6d1268def24d77713258220a
+- INPUTS.json: 834 bytes, SHA256 9815ad2882b6f21b437ba52e4b77509c92e2279d8b29dd1f30d032dabb5dd3ca
+- OUTPUT_MANIFEST.json: 608 bytes, SHA256 ff492d8a526bc2eaf5399a7a5cf207450dae532ffa8d5591c5a1967596b966d7
+- first-candidate/INDEX.json: 1013 bytes, SHA256 55ad542f5ef3dd0abd38a27ff9ff4389162a7dcf088bfdac3412ba24c71a8c29

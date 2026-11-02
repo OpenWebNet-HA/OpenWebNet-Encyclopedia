@@ -1,0 +1,97 @@
+# MH202 1.0.24 — WHO1000 null WHERE registration and conditional vector handoff
+
+**The selected WHERE precondition is now narrower than run2 could establish:** original `libwhere` initialization explicitly registers WHO1000 with a **null translator pointer**. Its lookup distinguishes that present-null value from a missing map key: the former returns without calling an address translator or writing the return structure; the latter takes an exception path. On the selected kind4/WHO1000 General branch, the returned address fields do not contribute to the fixed header. Therefore the earlier conditional candidate `$048C000100` does not require a successful ordinary WHERE1→native-address conversion **inside this selected libwhere call**.
+
+This does not prove the whole raw parser accepts `*#1000*1*0##`, establish the final all-class registry owner, observe a send, or demonstrate device support. A further original caller now shows where the first returned vector element would be copied and passed to the transport import, under its own explicit state/result prerequisites. All results remain static.
+
+Only this run3 directory was written. Original images, synced sources, completed reports and repository documents remain read-only. No original ARM, loader, PHP, JavaScript, vendor helper/process, emulator, network, device or service ran. Original instruction and hook counts are0. Image paths below refer to the firmware's own root; evidence filenames are relative to this report.
+
+## Original identities and inherited scope
+
+The normal-image files are verified by the shared read-only ImageVFS. Exact original SHA256:
+
+| Image object | SHA256 |
+| --- | --- |
+| `/home/bticino/lib/libwhere.so.0.0` | `334cf3461e23712a85098e171a1cbcc6c675fedc9a12dd516954adaf7ecbaea5` |
+| `/home/bticino/lib/libdiag.so.0.0` | `72da849b0b589758d1c0ca07bf8922359fd7e28dff8e1c20f481f688815f31fe` |
+| `/home/bticino/bin/bt_device` | `65dad019cc15cf5036c04ec7ef23d0f9c2f388324f44692f43af37fd82192f70` |
+| `/home/bticino/lib/libopen.so.0.0` | `868eeb717020232c11623224df17bd6b2034fffc2fb80043c39c34b76310fb04` |
+
+Run2's conditional bt_device provider scope is reused, with its report and closure hashes pinned in `input-hashes.json`; it was not reinventoried here. The selected parser candidate remains `libopen`, not the other process's `libcommon` layout. That is a packaged dependency/symbol model, not observed effective binding. The selected run2 DIM0 suffix/key data are reused explicitly rather than counted as newly executed outputs. No F454 implementation assumptions are imported.
+
+## 1. The original WHO1000 map value is null, not an ordinary translator
+
+`where-map-identity.json` supplies exact original pointer arithmetic and `where-WHO1000-null-pair-and-range.txt` preserves the decisive instructions.
+
+- Original `.init_array` word at `0x13230` is `0x4ba8`, the initializer entry. This is an ELF initialization declaration, not an observed initialized process.
+- Initializer PIC calculation at `0x4bb4` uses PC`0x4bbc` plus pool`0x501c` to obtain base`0x134e8`; pool`0x5020=0x278` gives global translator/pair base`0x13760`.
+- At `0x4eb0`, r3 becomes1000. The code stores it to the key temporary at `0x4ec0`, subtracts1000 at `0x4ec8` to obtain0, and stores that zero to the pointer temporary at `0x4ecc`. Pair-constructor call`0x4ed0` writes the last pair at global base+160, address`0x13800`.
+- Map construction`0x4ee0` consumes the half-open pair range `[base+32,base+168)`, with8-byte pairs:17 entries. The WHO1000/null pair is inside that range. The resulting WHO map itself is at base+168=`0x13808`.
+- `getScsAddr`'s independently computed PIC base (`0x5254 + pool0x531c`) is also`0x134e8`; its pool`0x5320` and +168 identify the **same map**, not a different conversion table.
+
+Under ordinary successful pair/map construction, this proves the selected initialized mapping `WHO1000→NULL`. This is **not** the separate16-entry WHO→SCS-system map from run1, and does not convert WHO1000 into a generic SCS system. Other translators' full maps and address matrices are not repeated here.
+
+## 2. Present-null and missing-key paths differ
+
+`where-lookup-and-null-return.txt` preserves `getScsAddr` `0x5228..0x5330`. It obtains the decimal WHO from the parsed object's imported getter, finds the key and checks against map.end. A missing key goes to `0x52e0` and constructs/throws an exception.
+
+A present key obtains the stored translator pointer. `0x52a0` compares it with0; `0x52a4` branches on equality directly to `0x5310`. That tail returns the original structure-return destination pointer in r0 and unwinds. The virtual translator call at `0x52d0` and the three-word copy into the caller's destination at `0x52d4..0x52d8` are skipped.
+
+Thus the selected WHO1000 route neither calls `DeviceWhere::scsDest` nor validates WHERE1 using that translator. It does **not** synthesize an all-zero native address or write any return-structure bytes on this branch. The saved host model deliberately leaves those bytes unspecified. This is exact selected code/dataflow under initialized-map/imported-container assumptions; no original map or exception path was run.
+
+In General `open2scs`, `0x191b0` still calls `getScsAddr` before the WHO-specific header branch. The caller loads a marker byte from its return storage at `SP+372` (`0x191b8`), whose value is not established by the null branch. The candidate `libopen::IsNormalFrame` at `0x9a34` compares kind with3 (`0x9a3c`); for the selected kind4 measure assumption it is false, so `0x191c4` skips the normal-frame marker-adjustment block.
+
+The subsequent WHO1000 test at `0x19208/0x1920c` selects the fixed header branch at `0x1924c`. The marker byte loaded into r4 is not used by that selected header construction. The address word at `SP+376` is loaded only by the generic header branch (`0x1921c`), which WHO1000 skips. This def-use distinction matters: the null branch leaves return storage untouched, while this particular caller path does not use its address data to form the output. No general conclusion about other kinds/callers follows.
+
+**Refinement to run2:** successful initialized map lookup is now justified statically for WHO1000, and it deliberately avoids ordinary address translation. Whole raw-parser/address-normalization acceptance before reaching General, provider binding, full class selection and ordinary container/string completion remain separate. Run2 is preserved unchanged; its unresolved WHERE call has been refined, not retrospectively represented as a previously executed success.
+
+## 3. The selected General key can be registered into the outer registry
+
+This batch also connects some previously separate registry components without claiming a full all-class collision result.
+
+Original outer constructor `0x24cb4` initializes its keygen vectors. Its member table is PIC-resolved to`0x382e8`; relocations identify the first two OPEN-rule entries as `openKeyGen` `0x23f8c` and `openKeyGen_id_rule` `0x24550`, pushed at`0x24d08/0x24d2c` into vector this+24. Their direct rule order is therefore static evidence, not a guessed rule name.
+
+The factory calls General's C1 constructor through PLT`0x145c4` at`0x24dac`. Jump-slot`0x38c38` identifies the actual same-build C1 target`0x1a6e4`, the constructor containing run2's `R0P0` map entry. It then passes the General smart pointer to `initManagedFrames` at`0x24de0`.
+
+The General vtable relocation at`0x38248` identifies `getManagedKeys` `0x14d5c`; this method iterates its map at this+8 and pushes each key into a temporary vector. `initManagedFrames` `0x24c0c` calls the class's key getter through vtable+8, walks that vector, obtains outer `map[key]` at`0x24c54`, and assigns the class smart pointer at`0x24c5c`. Therefore General's existing `R0P0` can enter the outer registry under ordinary completed construction.
+
+This assignment structure would replace an earlier value if another class later registers the same key. Run1 established the factory's subsequent classes, but this batch does **not** reconstruct their complete key sets or eliminate all later `R0P0` collisions. Consequently final registry ownership remains a retained boundary; the report does not turn the first General registration into unconditional final class selection.
+
+For the ordinary first-rule case, outer `open2scs` constructs the input string and invokes a keygen at`0x234f8`, looks up its returned key via `getTranslator` at`0x235e8`, then calls the selected class's virtual `open2scs` at`0x23744` with the original parsed object and output vector. On a nonzero class result it obtains/stores that class's response type at this+48 and sets its own return result1 (`0x23768..0x23770`). Its boolean success and General's response-type0 remain different namespaces. Missing-registry/exception fallbacks were inspected only as static context, not executed or represented by injected returns.
+
+## 4. Original bt_device consumes the first vector element at a concrete import boundary
+
+The selected caller `device-outer-translator-call.txt` tests the diagnostic WHO membership and a context field+28 equal1, constructs the vector and calls the outer translator at`0x1e2d8`. A zero outer result takes another route; a nonzero result reaches`0x1e500`. The existence/value of that context and a successful nonempty vector are not runtime observations.
+
+The reached code accesses **vector element0** at`0x1e548`, copies its C string into a local buffer at`0x1e558`, and compares its length with18 at`0x1e564`. With the conditional run2 candidate `$048C000100` (11ASCII characters), the short branch sets r6=0 at`0x1e644`.
+
+At the original `send_frame_toscsserver` import call`0x1e770`:
+
+| ARM argument | Selected original source |
+| --- | --- |
+| r0 | Existing caller string/pointer selected through its PIC data; no new client identity is inferred |
+| r1 | Local copy of vector element0; conditionally `$048C000100` |
+| r2 | Existing descriptor value loaded through the caller global; no live descriptor is assumed |
+| r3 | Length-selected flag,0 for the conditional11-character candidate |
+| stack fifth argument |0 stored at`0x1e758` |
+
+Run2's candidate provider for this import is `libbase`; this run stops at the actual import call and its immediate zero-result close/reset branch. It does not execute that library, produce an envelope, validate a socket result, observe actual transmission, or trace the complete later response collector. It also does not claim all vector elements are sent: the concrete inspected access is index0.
+
+This is a meaningful new caller/dataflow join but remains conditional on the unclosed parser/final-registry/caller-state prerequisites. The local candidate must still not be described as an accepted or actually sent frame.
+
+## Reproduction and exact coverage
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/protocol/run3/collect_evidence.py --check
+```
+
+The read-only check regenerates and strictly byte-compares26 outputs from9 pinned inputs:4 original ELF files, shared accessor and archive provenance, plus3 completed run2 artifacts. It preserves19 bounded original-code spans with VA/file-offset/range hashes, checks26 exact original words and4 selected relocation records, and verifies the selected initializer/lookup pointer identity. The small JSON host reconstruction is explicit about ordinary map/string contracts, unknown return bytes and synthetic pre-parsed fields. It does not interpret original instructions or run a parser/library/loader. Original execution and hooks are0/0.
+
+`output-manifest.json` pins the authored report, collector and generated evidence, excluding itself and future peer reviews. Prior dossiers and indexes were not changed. This is targeted normal-image analysis, not exhaustive firmware or recovery-runtime coverage.
+
+## Remaining questions
+
+1. Complete later-class key registration/collision analysis specifically for `R0P0`, then establish the final outer owner under explicit initialization assumptions. Do not repeat the full generic dependency/WHO maps.
+2. Statically trace the complete ordinary WHO1000/kind4 raw-parser path and its initial address/interface normalizers. A present-null libwhere translator does not decide the earlier parser's field eligibility.
+3. Follow the relevant bt_device response-type0 and collector/correlation continuation after the selected import boundary; keep boolean translator result, response enum and transport return namespaces separate.
+4. Only after these joins are closed should any actual internal transport/serial/physical-support question be assigned. No execution or physical oracle exists in this static checkpoint.

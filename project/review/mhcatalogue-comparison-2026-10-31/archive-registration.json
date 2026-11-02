@@ -1,0 +1,14 @@
+{
+  "status": "CANONICAL_ARCHIVE_REGISTRATION_COMPLETE",
+  "artifact_id": "myhomeserver1-3.87.13-mhcatalogue",
+  "database_sha256": "79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb",
+  "size": 2233344,
+  "old_commit": "974eced66cf40fdc5b5dc3417357244db710d848",
+  "commit": "604c06833ffc9a07f36a2fda9733f3a1f69ec310",
+  "old_entries_unchanged": 839,
+  "new_records": 1,
+  "manifest_sha256": "dbfcbfe9a32f4c0a482fd2e0e299d1e0790a7f5dcbba260e828a8c19ab289315",
+  "scope": "Only canonical sources/artifact-manifest.yaml committed/pushed to main. No vendor binary or research branch published. Local synced manifest untouched.",
+  "manifest_check": "artifact manifest validation passed: 840 artifacts; documentation=790, firmware=10, reference-data=14, software-installer=1, support-data=25",
+  "registry_worktree_clean": true
+}

@@ -1,0 +1,43 @@
+{
+  "scope": "Root retained-project context, no new source coverage or database query",
+  "human_answer": {
+    "question": "Configured installation or saved project/export available?",
+    "answer": "No configured installation/export",
+    "source": "Direct human reply in this chat,2026-11-02",
+    "meaning": "User availability statement, not a global absence claim"
+  },
+  "root_sources_directory": {
+    "path": "sources",
+    "direct_entries_observed": 0
+  },
+  "reviewed_installer_context": {
+    "inputs": [
+      {
+        "path": "OpenWebNet-Encyclopedia/internals/project-and-plant-templates.md",
+        "bytes": 5737,
+        "sha256": "fe7ac8c0083a1f70c0ca918eec944228642bf91277dbd6a24c826d6ea52fdbbd"
+      },
+      {
+        "path": "work/installer-database-analysis/2026-10-31/project-templates/REPORT.md",
+        "bytes": 7641,
+        "sha256": "595c1169811d27506e7ab3a2cfe9c9775c0d10f1356961a3b0649d4d06d4fd24"
+      }
+    ],
+    "classification": "Manufacturer SQLite templates, not populated commissioned project",
+    "retained_findings": "MHPrj RT_PROJECT/RT_DEVICE/RT_OBJECT/config/state/association/bus/system tables empty; PTDB area/host/associations empty. Seed/reference rows and declared structure do not supply configured MHS/F46 scenes.",
+    "new_SQL_queries": 0
+  },
+  "other_project_lead": {
+    "path": "work/mh202-firmware/research/2026-10-31-scenario-artifacts/acquisition/selected-files-v2/default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project.prj",
+    "classification": "Previously retained MH202 manufacturer-default project, separate product; not transferred to MHS/F460/F461",
+    "new_body_inspection": false
+  },
+  "limits": [
+    "Finite selected retained inventory/context only, no global absence or fresh R2 search",
+    "No original vendor/helper/runtime/model/fixture/SQL/target/network/bus execution",
+    "No raw/private configuration/IDs/credentials/keys exported",
+    "Old completed collectors/reports remain immutable; no replay on changed references"
+  ],
+  "new_functional_source_coverage": 0,
+  "saved_UTC": "2026-11-02T05:43:10.491921+00:00"
+}

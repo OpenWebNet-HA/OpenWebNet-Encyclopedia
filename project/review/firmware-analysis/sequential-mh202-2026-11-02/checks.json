@@ -1,0 +1,36 @@
+{
+  "UTC": "2026-11-02T08:20:15.275828+00:00",
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "project/review/checks/check_esg.py",
+        "."
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "STATS human_pages=419 support_pages=199 objective_failures=0 review_candidates=7040\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "project/review/checks/check_ecv.py",
+        "."
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "STATS human_pages=419 objective_failures=0 review_candidates=15\n"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "scope": "Actual mechanical repository gates; review candidates are not semantic approval"
+}

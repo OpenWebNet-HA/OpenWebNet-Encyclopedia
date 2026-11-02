@@ -1,0 +1,321 @@
+{
+  "PT_LOAD": [
+    {
+      "VA": 32768,
+      "file_bytes": 32900,
+      "flags": 5,
+      "memory_bytes": 32900,
+      "offset": 0
+    },
+    {
+      "VA": 98436,
+      "file_bytes": 1864,
+      "flags": 6,
+      "memory_bytes": 1960,
+      "offset": 32900
+    }
+  ],
+  "delimiter": {
+    "VA": "0xe488",
+    "display": "*",
+    "exact_hex": "2a00",
+    "file_offset": "0x6488",
+    "pool": "0xa3c4"
+  },
+  "direct_calls": [
+    {
+      "VA": "0xa224",
+      "target": "0x8b4c"
+    },
+    {
+      "VA": "0xa238",
+      "target": "0x8bd0"
+    },
+    {
+      "VA": "0xa248",
+      "target": "0x8c00"
+    },
+    {
+      "VA": "0xa280",
+      "target": "0x8d38"
+    },
+    {
+      "VA": "0xa298",
+      "target": "0x8d38"
+    },
+    {
+      "VA": "0xa424",
+      "target": "0xa1dc"
+    }
+  ],
+  "guards": [
+    {
+      "VA": "0xa1dc",
+      "word": "0xe92d41f0"
+    },
+    {
+      "VA": "0xa1e4",
+      "word": "0xe1a04000"
+    },
+    {
+      "VA": "0xa1e8",
+      "word": "0xe1a08001"
+    },
+    {
+      "VA": "0xa1ec",
+      "word": "0xe1a07002"
+    },
+    {
+      "VA": "0xa1f8",
+      "word": "0xe24ddb01"
+    },
+    {
+      "VA": "0xa21c",
+      "word": "0xe1a00004"
+    },
+    {
+      "VA": "0xa220",
+      "word": "0xe3a01000"
+    },
+    {
+      "VA": "0xa224",
+      "word": "0xebfffa48"
+    },
+    {
+      "VA": "0xa228",
+      "word": "0xe3a01000"
+    },
+    {
+      "VA": "0xa22c",
+      "word": "0xe1a06000"
+    },
+    {
+      "VA": "0xa230",
+      "word": "0xe3a02b01"
+    },
+    {
+      "VA": "0xa234",
+      "word": "0xe1a0000d"
+    },
+    {
+      "VA": "0xa238",
+      "word": "0xebfffa64"
+    },
+    {
+      "VA": "0xa23c",
+      "word": "0xe1a00006"
+    },
+    {
+      "VA": "0xa240",
+      "word": "0xe1a0100d"
+    },
+    {
+      "VA": "0xa244",
+      "word": "0xe3a02b01"
+    },
+    {
+      "VA": "0xa248",
+      "word": "0xebfffa6c"
+    },
+    {
+      "VA": "0xa254",
+      "word": "0xe1a0400d"
+    },
+    {
+      "VA": "0xa278",
+      "word": "0xe1a00004"
+    },
+    {
+      "VA": "0xa27c",
+      "word": "0xe59f1140"
+    },
+    {
+      "VA": "0xa280",
+      "word": "0xebfffaac"
+    },
+    {
+      "VA": "0xa284",
+      "word": "0xe3500000"
+    },
+    {
+      "VA": "0xa288",
+      "word": "0x2800001"
+    },
+    {
+      "VA": "0xa28c",
+      "word": "0xa000045"
+    },
+    {
+      "VA": "0xa290",
+      "word": "0xe3a00000"
+    },
+    {
+      "VA": "0xa294",
+      "word": "0xe59f1128"
+    },
+    {
+      "VA": "0xa298",
+      "word": "0xebfffaa6"
+    },
+    {
+      "VA": "0xa29c",
+      "word": "0xe3500000"
+    },
+    {
+      "VA": "0xa2a0",
+      "word": "0x2800002"
+    },
+    {
+      "VA": "0xa2a4",
+      "word": "0xa00003f"
+    },
+    {
+      "VA": "0xa3a8",
+      "word": "0xe28ddb01"
+    },
+    {
+      "VA": "0xa3ac",
+      "word": "0xe8bd81f0"
+    },
+    {
+      "VA": "0xa424",
+      "word": "0xebffff6c"
+    }
+  ],
+  "header52_hex": "7f454c460101016100000000000000000200280001000000c88d0000340000000889000002020000340020000600280019001800",
+  "imports": [
+    {
+      "GOT_slot": "0x186f4",
+      "PLT_VA": "0x8b4c",
+      "PLT_words": [
+        "0xe28fc600",
+        "0xe28cca0f",
+        "0xe5bcfba0"
+      ],
+      "name": "open",
+      "original_relocation": "000186f4  00000416 R_ARM_JUMP_SLOT        00008b4c   open@GLIBC_2.0"
+    },
+    {
+      "GOT_slot": "0x18720",
+      "PLT_VA": "0x8bd0",
+      "PLT_words": [
+        "0xe28fc600",
+        "0xe28cca0f",
+        "0xe5bcfb48"
+      ],
+      "name": "memset",
+      "original_relocation": "00018720  00001016 R_ARM_JUMP_SLOT        00008bd0   memset@GLIBC_2.0"
+    },
+    {
+      "GOT_slot": "0x18730",
+      "PLT_VA": "0x8c00",
+      "PLT_words": [
+        "0xe28fc600",
+        "0xe28cca0f",
+        "0xe5bcfb28"
+      ],
+      "name": "read",
+      "original_relocation": "00018730  00001416 R_ARM_JUMP_SLOT        00008c00   read@GLIBC_2.0"
+    },
+    {
+      "GOT_slot": "0x18798",
+      "PLT_VA": "0x8d38",
+      "PLT_words": [
+        "0xe28fc600",
+        "0xe28cca0f",
+        "0xe5bcfa58"
+      ],
+      "name": "strtok",
+      "original_relocation": "00018798  00003016 R_ARM_JUMP_SLOT        00008d38   strtok@GLIBC_2.0"
+    }
+  ],
+  "original": {
+    "bytes": 36080,
+    "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/bin/bt_start",
+    "sha256": "63c0b0a9b6f67e6564f23f5ffcf18c3716bc27dc9b0b03009324af0fa0a21d48"
+  },
+  "selected_return_branch_targets": [
+    {
+      "VA": "0xa28c",
+      "target": "0xa3a8"
+    },
+    {
+      "VA": "0xa2a4",
+      "target": "0xa3a8"
+    }
+  ],
+  "spans": [
+    {
+      "bytes_hex": "f0412de9c8519fe50040a0e10180a0e10270a0e1003095e5010053e301db4de2060000daac319fe5000093e5a8319fe5a8119fe5002093e50430a0e1bdfaffeb0400a0e10010a0e348faffeb0010a0e30060a0e1012ba0e30d00a0e164faffeb0600a0e10d10a0e1012ba0e36cfaffeb003095e5010053e30d40a0e1060000da50319fe5000093e54c319fe550119fe5002093e50030dde5a6faffeb0400a0e140119fe5acfaffeb000050e3010080024500000a0000a0e328119fe5a6faffeb000050e3020080023f00000a",
+      "end_exclusive_VA": "0xa2a8",
+      "file_offset": "0x21dc",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/rootfs/bin/bt_start:     file format elf32-littlearm\n\n\nDisassembly of section .text:\n\n0000a1dc <.text+0x1414>:\n    a1dc:\te92d41f0 \tpush\t{r4, r5, r6, r7, r8, lr}\n    a1e0:\te59f51c8 \tldr\tr5, [pc, #456]\t@ a3b0 <exit@plt+0x15f4>\n    a1e4:\te1a04000 \tmov\tr4, r0\n    a1e8:\te1a08001 \tmov\tr8, r1\n    a1ec:\te1a07002 \tmov\tr7, r2\n    a1f0:\te5953000 \tldr\tr3, [r5]\n    a1f4:\te3530001 \tcmp\tr3, #1\n    a1f8:\te24ddb01 \tsub\tsp, sp, #1024\t@ 0x400\n    a1fc:\tda000006 \tble\ta21c <exit@plt+0x1460>\n    a200:\te59f31ac \tldr\tr3, [pc, #428]\t@ a3b4 <exit@plt+0x15f8>\n    a204:\te5930000 \tldr\tr0, [r3]\n    a208:\te59f31a8 \tldr\tr3, [pc, #424]\t@ a3b8 <exit@plt+0x15fc>\n    a20c:\te59f11a8 \tldr\tr1, [pc, #424]\t@ a3bc <exit@plt+0x1600>\n    a210:\te5932000 \tldr\tr2, [r3]\n    a214:\te1a03004 \tmov\tr3, r4\n    a218:\tebfffabd \tbl\t8d14 <fprintf@plt>\n    a21c:\te1a00004 \tmov\tr0, r4\n    a220:\te3a01000 \tmov\tr1, #0\n    a224:\tebfffa48 \tbl\t8b4c <open@plt>\n    a228:\te3a01000 \tmov\tr1, #0\n    a22c:\te1a06000 \tmov\tr6, r0\n    a230:\te3a02b01 \tmov\tr2, #1024\t@ 0x400\n    a234:\te1a0000d \tmov\tr0, sp\n    a238:\tebfffa64 \tbl\t8bd0 <memset@plt>\n    a23c:\te1a00006 \tmov\tr0, r6\n    a240:\te1a0100d \tmov\tr1, sp\n    a244:\te3a02b01 \tmov\tr2, #1024\t@ 0x400\n    a248:\tebfffa6c \tbl\t8c00 <read@plt>\n    a24c:\te5953000 \tldr\tr3, [r5]\n    a250:\te3530001 \tcmp\tr3, #1\n    a254:\te1a0400d \tmov\tr4, sp\n    a258:\tda000006 \tble\ta278 <exit@plt+0x14bc>\n    a25c:\te59f3150 \tldr\tr3, [pc, #336]\t@ a3b4 <exit@plt+0x15f8>\n    a260:\te5930000 \tldr\tr0, [r3]\n    a264:\te59f314c \tldr\tr3, [pc, #332]\t@ a3b8 <exit@plt+0x15fc>\n    a268:\te59f1150 \tldr\tr1, [pc, #336]\t@ a3c0 <exit@plt+0x1604>\n    a26c:\te5932000 \tldr\tr2, [r3]\n    a270:\te5dd3000 \tldrb\tr3, [sp]\n    a274:\tebfffaa6 \tbl\t8d14 <fprintf@plt>\n    a278:\te1a00004 \tmov\tr0, r4\n    a27c:\te59f1140 \tldr\tr1, [pc, #320]\t@ a3c4 <exit@plt+0x1608>\n    a280:\tebfffaac \tbl\t8d38 <strtok@plt>\n    a284:\te3500000 \tcmp\tr0, #0\n    a288:\t02800001 \taddeq\tr0, r0, #1\n    a28c:\t0a000045 \tbeq\ta3a8 <exit@plt+0x15ec>\n    a290:\te3a00000 \tmov\tr0, #0\n    a294:\te59f1128 \tldr\tr1, [pc, #296]\t@ a3c4 <exit@plt+0x1608>\n    a298:\tebfffaa6 \tbl\t8d38 <strtok@plt>\n    a29c:\te3500000 \tcmp\tr0, #0\n    a2a0:\t02800002 \taddeq\tr0, r0, #2\n    a2a4:\t0a00003f \tbeq\ta3a8 <exit@plt+0x15ec>\n",
+      "label": "new-consumer-prefix",
+      "sha256": "f635241eb854f9165879c068ed11e46246ff1c44f7304e3ae22bf5ae65354d40",
+      "start_VA": "0xa1dc"
+    },
+    {
+      "bytes_hex": "01db8de2f081bde8",
+      "end_exclusive_VA": "0xa3b0",
+      "file_offset": "0x23a8",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/rootfs/bin/bt_start:     file format elf32-littlearm\n\n\nDisassembly of section .text:\n\n0000a3a8 <.text+0x15e0>:\n    a3a8:\te28ddb01 \tadd\tsp, sp, #1024\t@ 0x400\n    a3ac:\te8bd81f0 \tpop\t{r4, r5, r6, r7, r8, pc}\n",
+      "label": "selected-return-epilogue",
+      "sha256": "6fa55503d75833ab1b27bec4d73442cfe0008801699099f734d815a0ef02bae1",
+      "start_VA": "0xa3a8"
+    },
+    {
+      "bytes_hex": "88e40000",
+      "end_exclusive_VA": "0xa3c8",
+      "file_offset": "0x23c4",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/rootfs/bin/bt_start:     file format elf32-littlearm\n\n\nDisassembly of section .text:\n\n0000a3c4 <.text+0x15fc>:\n    a3c4:\t0000e488 \tandeq\tlr, r0, r8, lsl #9\n",
+      "label": "delimiter-pool",
+      "sha256": "5e450881b7451226afc1ed723dd33bbcccf13088ba1927e8fd3e0c41363d778d",
+      "start_VA": "0xa3c4"
+    },
+    {
+      "bytes_hex": "f04f2de90030a0e30340a0e101d84de210d04de210208de2042042e210908de20210a0e1089049e204208de50920a0e1003081e5003089e56cffffeb040050e18200001a",
+      "end_exclusive_VA": "0xa430",
+      "file_offset": "0x23ec",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/rootfs/bin/bt_start:     file format elf32-littlearm\n\n\nDisassembly of section .text:\n\n0000a3ec <.text+0x1624>:\n    a3ec:\te92d4ff0 \tpush\t{r4, r5, r6, r7, r8, r9, sl, fp, lr}\n    a3f0:\te3a03000 \tmov\tr3, #0\n    a3f4:\te1a04003 \tmov\tr4, r3\n    a3f8:\te24dd801 \tsub\tsp, sp, #65536\t@ 0x10000\n    a3fc:\te24dd010 \tsub\tsp, sp, #16\n    a400:\te28d2010 \tadd\tr2, sp, #16\n    a404:\te2422004 \tsub\tr2, r2, #4\n    a408:\te28d9010 \tadd\tr9, sp, #16\n    a40c:\te1a01002 \tmov\tr1, r2\n    a410:\te2499008 \tsub\tr9, r9, #8\n    a414:\te58d2004 \tstr\tr2, [sp, #4]\n    a418:\te1a02009 \tmov\tr2, r9\n    a41c:\te5813000 \tstr\tr3, [r1]\n    a420:\te5893000 \tstr\tr3, [r9]\n    a424:\tebffff6c \tbl\ta1dc <exit@plt+0x1420>\n    a428:\te1500004 \tcmp\tr0, r4\n    a42c:\t1a000082 \tbne\ta63c <exit@plt+0x1880>\n",
+      "label": "inherited-local-caller-context",
+      "sha256": "19d9e0768ec25dc3bec58e9805598772ab27d2de53e57d1b6242a4102ea560f6",
+      "start_VA": "0xa3ec"
+    },
+    {
+      "bytes_hex": "00c68fe20fca8ce2a0fbbce5",
+      "end_exclusive_VA": "0x8b58",
+      "file_offset": "0xb4c",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/rootfs/bin/bt_start:     file format elf32-littlearm\n\n\nDisassembly of section .plt:\n\n00008b4c <open@plt>:\n    8b4c:\te28fc600 \tadd\tip, pc, #0, 12\n    8b50:\te28cca0f \tadd\tip, ip, #61440\t@ 0xf000\n    8b54:\te5bcfba0 \tldr\tpc, [ip, #2976]!\t@ 0xba0\n",
+      "label": "open-PLT",
+      "sha256": "4b17331b19760e6199934947752403f2cf5b6fb90efb4df9e5885ecdba388775",
+      "start_VA": "0x8b4c"
+    },
+    {
+      "bytes_hex": "00c68fe20fca8ce248fbbce5",
+      "end_exclusive_VA": "0x8bdc",
+      "file_offset": "0xbd0",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/rootfs/bin/bt_start:     file format elf32-littlearm\n\n\nDisassembly of section .plt:\n\n00008bd0 <memset@plt>:\n    8bd0:\te28fc600 \tadd\tip, pc, #0, 12\n    8bd4:\te28cca0f \tadd\tip, ip, #61440\t@ 0xf000\n    8bd8:\te5bcfb48 \tldr\tpc, [ip, #2888]!\t@ 0xb48\n",
+      "label": "memset-PLT",
+      "sha256": "9f407f45f77d54116b97badbde3710493dcfd7a609b5de5e8825ca5608157f67",
+      "start_VA": "0x8bd0"
+    },
+    {
+      "bytes_hex": "00c68fe20fca8ce228fbbce5",
+      "end_exclusive_VA": "0x8c0c",
+      "file_offset": "0xc00",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/rootfs/bin/bt_start:     file format elf32-littlearm\n\n\nDisassembly of section .plt:\n\n00008c00 <read@plt>:\n    8c00:\te28fc600 \tadd\tip, pc, #0, 12\n    8c04:\te28cca0f \tadd\tip, ip, #61440\t@ 0xf000\n    8c08:\te5bcfb28 \tldr\tpc, [ip, #2856]!\t@ 0xb28\n",
+      "label": "read-PLT",
+      "sha256": "d1126d39b24101cf79bd8075cfdb30e299fd16bd79909205b1a1ce22c4b74bb3",
+      "start_VA": "0x8c00"
+    },
+    {
+      "bytes_hex": "00c68fe20fca8ce258fabce5",
+      "end_exclusive_VA": "0x8d44",
+      "file_offset": "0xd38",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/rootfs/bin/bt_start:     file format elf32-littlearm\n\n\nDisassembly of section .plt:\n\n00008d38 <strtok@plt>:\n    8d38:\te28fc600 \tadd\tip, pc, #0, 12\n    8d3c:\te28cca0f \tadd\tip, ip, #61440\t@ 0xf000\n    8d40:\te5bcfa58 \tldr\tpc, [ip, #2648]!\t@ 0xa58\n",
+      "label": "strtok-PLT",
+      "sha256": "9ca8459083523e1cbfa6142c09955febed4b67c970fb2df7d0bc0a456580051f",
+      "start_VA": "0x8d38"
+    }
+  ]
+}

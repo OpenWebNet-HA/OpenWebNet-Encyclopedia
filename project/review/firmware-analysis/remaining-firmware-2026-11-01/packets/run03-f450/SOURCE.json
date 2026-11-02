@@ -1,0 +1,297 @@
+{
+  "DT_NEEDED": [
+    "liblghal.so.0",
+    "libcommon.so.0",
+    "libapplogger.so",
+    "libutils.so",
+    "libssl.so.1.0.0",
+    "libcrypto.so.1.0.0",
+    "libexpat.so.1",
+    "librt.so.1",
+    "libglib-2.0.so.0",
+    "libgmodule-2.0.so.0",
+    "libgio-2.0.so.0",
+    "libgobject-2.0.so.0",
+    "libgthread-2.0.so.0",
+    "libz.so.1",
+    "libstdc++.so.6",
+    "libm.so.6",
+    "libgcc_s.so.1",
+    "libc.so.6"
+  ],
+  "candidate_call_definition": "71: 00003488    48 FUNC    GLOBAL DEFAULT   10 call",
+  "guard_words": {
+    "bt_daemon": [
+      {
+        "VA": "0xf96c",
+        "word": "0xe92d4800"
+      },
+      {
+        "VA": "0xf978",
+        "word": "0xe50b0010"
+      },
+      {
+        "VA": "0xf984",
+        "word": "0xebffeaf8"
+      },
+      {
+        "VA": "0xf994",
+        "word": "0xe3530000"
+      },
+      {
+        "VA": "0xf998",
+        "word": "0xaa000008"
+      },
+      {
+        "VA": "0xf9c0",
+        "word": "0xe51b3008"
+      },
+      {
+        "VA": "0xf9c4",
+        "word": "0xe3530000"
+      },
+      {
+        "VA": "0xf9c8",
+        "word": "0x1a000007"
+      },
+      {
+        "VA": "0xf9e4",
+        "word": "0xe51b0010"
+      },
+      {
+        "VA": "0xf9e8",
+        "word": "0xebfff380"
+      },
+      {
+        "VA": "0xc7f0",
+        "word": "0xe92d4870"
+      },
+      {
+        "VA": "0xc800",
+        "word": "0xe50b0848"
+      },
+      {
+        "VA": "0xdb4c",
+        "word": "0xe51b3848"
+      },
+      {
+        "VA": "0xdb50",
+        "word": "0xe5933050"
+      },
+      {
+        "VA": "0xdb54",
+        "word": "0xe3530000"
+      },
+      {
+        "VA": "0xdb58",
+        "word": "0xa00002c"
+      },
+      {
+        "VA": "0xdb74",
+        "word": "0xe51f254c"
+      },
+      {
+        "VA": "0xdb7c",
+        "word": "0xe5832000"
+      },
+      {
+        "VA": "0xdb88",
+        "word": "0xe5832004"
+      },
+      {
+        "VA": "0xdb94",
+        "word": "0xe5832008"
+      },
+      {
+        "VA": "0xdba0",
+        "word": "0xe583200c"
+      },
+      {
+        "VA": "0xdba4",
+        "word": "0xe51b3848"
+      },
+      {
+        "VA": "0xdba8",
+        "word": "0xe593204c"
+      },
+      {
+        "VA": "0xdbb0",
+        "word": "0xe5832010"
+      },
+      {
+        "VA": "0xdbb8",
+        "word": "0xe3a03000"
+      },
+      {
+        "VA": "0xdbbc",
+        "word": "0xe5823014"
+      },
+      {
+        "VA": "0xdbc0",
+        "word": "0xe51f0588"
+      },
+      {
+        "VA": "0xdbc4",
+        "word": "0xebfff18a"
+      },
+      {
+        "VA": "0xdbd4",
+        "word": "0xe3730001"
+      },
+      {
+        "VA": "0xdbd8",
+        "word": "0x1a000020"
+      }
+    ],
+    "libutils.so": [
+      {
+        "VA": "0x3488",
+        "word": "0xe92d4030"
+      },
+      {
+        "VA": "0x3490",
+        "word": "0xe3a05000"
+      },
+      {
+        "VA": "0x3494",
+        "word": "0xe28d4008"
+      },
+      {
+        "VA": "0x3498",
+        "word": "0xe5245004"
+      },
+      {
+        "VA": "0x349c",
+        "word": "0xebfff8d8"
+      },
+      {
+        "VA": "0x34a0",
+        "word": "0xe1a01004"
+      },
+      {
+        "VA": "0x34a4",
+        "word": "0xe1a02005"
+      },
+      {
+        "VA": "0x34a8",
+        "word": "0xebfff8f6"
+      },
+      {
+        "VA": "0x34ac",
+        "word": "0xe5dd0005"
+      },
+      {
+        "VA": "0x34b4",
+        "word": "0xe8bd8030"
+      }
+    ]
+  },
+  "images": [
+    {
+      "ELF32_LE_machine": 40,
+      "bytes": 83040,
+      "flags": "0x5000002",
+      "path": "work/f450-firmware/2.0.10/analysis/rootfs/home/bticino/bin/bt_daemon",
+      "sha256": "85e7ca65b4d1c4e8ab23a93ac532aea568dd06272fefb1b1be928eeba18f3d73"
+    },
+    {
+      "ELF32_LE_machine": 40,
+      "bytes": 18456,
+      "flags": "0x5000002",
+      "path": "work/f450-firmware/2.0.10/analysis/rootfs/home/bticino/lib/libutils.so",
+      "sha256": "c0dcde6c59fa4996410e13ca4c092a59183baa1260a68ce2a636442492ef1de7"
+    }
+  ],
+  "imports": [
+    {
+      "GOT_slot": "0x23860",
+      "PLT": "0xa1f4",
+      "image": "bt_daemon",
+      "name": "call",
+      "relocation": "00023860  00000816 R_ARM_JUMP_SLOT        0000a1f4   call"
+    },
+    {
+      "GOT_slot": "0x23988",
+      "PLT": "0xa56c",
+      "image": "bt_daemon",
+      "name": "fork",
+      "relocation": "00023988  00006116 R_ARM_JUMP_SLOT        0000a56c   fork@GLIBC_2.4"
+    },
+    {
+      "GOT_slot": "0xc1b0",
+      "PLT": "0x1804",
+      "image": "libutils.so",
+      "name": "call_nowait",
+      "relocation": "0000c1b0  00002816 R_ARM_JUMP_SLOT        000033d8   call_nowait"
+    },
+    {
+      "GOT_slot": "0xc1dc",
+      "PLT": "0x1888",
+      "image": "libutils.so",
+      "name": "waitpid",
+      "relocation": "0000c1dc  00003d16 R_ARM_JUMP_SLOT        00000000   waitpid@GLIBC_2.4"
+    }
+  ],
+  "limits": "Valid supplied C/mappings and ordinary callee-save/call binding/normal returns remain premises. No original process/provider instruction executes.",
+  "literal_pool_joins": [
+    {
+      "instruction": "0xdb74",
+      "pool": "0xd630"
+    },
+    {
+      "instruction": "0xdb78",
+      "pool": "0xd640"
+    },
+    {
+      "instruction": "0xdb80",
+      "pool": "0xd634"
+    },
+    {
+      "instruction": "0xdb8c",
+      "pool": "0xd638"
+    },
+    {
+      "instruction": "0xdb98",
+      "pool": "0xd63c"
+    },
+    {
+      "instruction": "0xdbac",
+      "pool": "0xd640"
+    },
+    {
+      "instruction": "0xdbb4",
+      "pool": "0xd640"
+    },
+    {
+      "instruction": "0xdbc0",
+      "pool": "0xd640"
+    }
+  ],
+  "request_table": "0x23e8c",
+  "safe_literals": [
+    {
+      "VA": "0x189c0",
+      "bytes_with_NUL": "756e7a697000",
+      "pool": "0xd630",
+      "text": "unzip"
+    },
+    {
+      "VA": "0x189c8",
+      "bytes_with_NUL": "2d6400",
+      "pool": "0xd634",
+      "text": "-d"
+    },
+    {
+      "VA": "0x189cc",
+      "bytes_with_NUL": "2f7661722f746d7000",
+      "pool": "0xd638",
+      "text": "/var/tmp"
+    },
+    {
+      "VA": "0x189d8",
+      "bytes_with_NUL": "2d6f00",
+      "pool": "0xd63c",
+      "text": "-o"
+    }
+  ]
+}

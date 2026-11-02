@@ -1,0 +1,45 @@
+# MyHOMEServer1 3.87.13: BNIL local callback capture and trigger-vector handoff
+
+The selected BNIL initializer supplies a callback capturing the same scene pointer used by the scene initializer, copies that callback into a concrete `BnilTriggerRunner`, and moves the resulting inner/control handle into the scene's compiled trigger vector at+104. The runner's primary callable-forwarding method reaches the captured scene-launch wrapper when called under valid callable/provider premises. This closes a **local capture/publication** route; it does not establish an external event-service registration, subscription, dispatcher, delivery, readiness or physical role for the name BNIL.
+
+Original instructions, native helpers, vendor processes, target OS/network/I/O, callbacks, scenes and semantic host models executed: **0**. Original images and previous research are read-only. No MQTT/libjel/transport/authentication/session/framing or equivalent implementation is followed. Raw schema and the separate nonvirtual event-admission handler are complementary author scopes, not re-investigated here.
+
+## Identity and reproduction
+
+Original image path `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. `INPUTS.json` pins this original object, reviewed ImageVFS and earlier startup/scene-registry/callback-context reports. Fresh ELF32 PT_LOAD mapping handles the distinct RW offset; linked VAs and Thumb pointer bit0 are not observed live runtime addresses.
+
+`ORIGINAL_SOURCE.json` retains ten exact original ranges,17 instruction-byte guards, six direct branch joins, three code-pointer PIC joins, two RTTI identities/two GOT chains and five selected relative relocations. Code, vtable/pool data and nearby stripped labels are kept separate. Reproduce with `python3 collect_registration_v1.py --check` from this directory. Generation refuses existing outputs and immediately preserves report/collector/outputs with a snapshot index computed before opening it. No previous file or generated candidate is overwritten.
+
+## 1. Exact scene-pointer callable
+
+Initializer `0xa72c0` saves its incoming scene pointer at initializer SP+4. In the selected BNIL branch, `0xa8f40/0xa8f42` reads that same word and places it in the callable data at initializer SP+3912; a following store zeros the other data word. Original pools `0xa9698` and `0xa969c`, added at `0xa8f34` and `0xa8f38`, resolve to invoker Thumb `0xa60a9` and manager Thumb `0xa56c1` respectively. The caller installs those pointers at the callable manager/invoker positions before `0xa8f52 → 0xb43d8` copies it into the temporary base wrapper.
+
+Manager code `0xa56c0..0xa56e4` is retained completely. Its operation2 path copies exactly the first source word into the destination; operation3 falls through return0 without a local captured-receiver release. This is a raw captured scene pointer, not an inferred scene/control pair or strong scene reference. Other owners can exist elsewhere; no whole lifetime or missing-owner conclusion follows from this local representation.
+
+The copy helper `0xb43d8` zero-initializes the destination callable, checks its source manager, requests operation2 and copies the source manager/invoker pair on normal return. Its error cleanup is an opaque manager request, not executed. Constructor `0xee5ac` similarly requests the supplied manager's operation2 for its callable data and stores the manager/invoker at compiled inner+12/+16. Its callback data begins inner+4. Allocation, callable validity, normal copy/ABI returns and object lifetime remain prerequisites.
+
+## 2. Persistent runner and concrete local owner
+
+The selected compiled temporary is then copied into a76-byte allocation requested at `0xa8fd4/0xa8fda`. The allocation/control base is r7; the runner inner pointer becomes base+12 at `0xa9000`, and its callable data destination is base+16=inner+4. The call `0xa900c → 0xb43d8` copies from the temporary runner's callable, preserving the same captured scene pointer under normal manager-copy semantics. Control count words at base+4/+8 are initialized1/1; they are not scene state, raw fields or service pointers.
+
+Original GOT slot `0x1665d8` resolves the selected allocation owner's header `0x161b9c` and exact RTTI `St23_Sp_counted_ptr_inplaceI17BnilTriggerRunnerSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE`. Final runner GOT slot `0x166400` and constructor PIC independently resolve header `0x1625ac`, RTTI `17BnilTriggerRunner`, primary address point `0x1625b4`.
+
+The original primary slots are Thumb `0xee59d`, `0xee7b5`, `0xee869`. The latter two are destructor entries, **not** an event-admission handler. The separate nonvirtual code at `0xee708` belongs to the parent admission investigation and is not retained or interpreted as a virtual slot here. No role or service is inferred from class spelling or address proximity.
+
+## 3. Scene+104 append is not service registration
+
+At `0xa8fd2..0xa8fd6`, the caller derives the same scene pointer+104 and retains that vector-header address in sl. At `0xa9034`, it stores the pair `(inner pointer, allocation/control base)` in the local temporary at initializer SP+592. The call `0xa9044 → 0xa56e4` receives r0=&scene+104 and r1=&that pair.
+
+The retained available-capacity body of `0xa56e4` moves the exact8-byte pair to the old vector end, zeroes both source words at `0xa5706`, and advances end by8. Consequently the selected normal cleanup at `0xa9048` sees a zero source control and skips its conditional release call. The full-capacity branch beginning `0xa5712`, allocation/unwind and all subsequent ownership behavior remain outside this batch; no successful append is observed.
+
+This helper is a local compiled-trigger handle append. It is not an external service registration, messaging subscription, bus callback binding or an event-delivery request. The earlier startup/registry report establishes a scoped scene-construction-to-container-insertion route; composing that provenance still does not establish an external dispatcher addressing this BNIL runner or a naturally configured trigger.
+
+## 4. Primary callable boundary
+
+Primary entry `0xee59c` reads manager at inner+12. If nonzero, it reads invoker at+16, advances receiver to callable data+4 and tailcalls it; zero requests the bad-function-call provider. The exact captured invoker `0xa60a8` reads the scene pointer from its data word and tailcalls `0xa5db0`, the previously scoped scene launch entry. No callback or launch is executed, and `0xa5db0` remains the prior report's separately bounded enabled/active/thread policy.
+
+This method is a callable-forwarding entry, not proof that any event was admitted or that an external service calls it. Event payload grammar, handler interpretation, active registration and delivery must not be inferred from the callback pointer's existence.
+
+## Remaining source boundary
+
+Confidence is high for original scene-pointer capture, manager-copy contract, persistent runner/control identity, local vector destination and conditional callback target. Full raw-schema admission, external service/dispatcher registration and natural identity, configured BNIL artifacts, full-capacity append, complete ownership/error/unwind/concurrency, actual providers/activation and physical effects remain unresolved. The concrete result is local callback capture and publication; the requested external registration route remains unclosed rather than renamed into existence.

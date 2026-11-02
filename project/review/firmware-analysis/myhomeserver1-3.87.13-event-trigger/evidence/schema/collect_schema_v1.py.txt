@@ -1,0 +1,60 @@
+#!/usr/bin/env python3
+"""BNIL trigger original schema/construction only; no handler implementation or execution."""
+import argparse,hashlib,importlib.util,json,re,struct,subprocess,sys
+from pathlib import Path
+sys.dont_write_bytecode=True
+D=Path(__file__).resolve().parent;P=D.parents[2];W=P.parents[2];H=lambda b:hashlib.sha256(b).hexdigest();J=lambda x:(json.dumps(x,sort_keys=True,indent=2)+'\n').encode()
+V=P/'research/2026-10-31/image_vfs.py';s=importlib.util.spec_from_file_location('bnil_schema_vfs',V);m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+IMAGE='/home/bticino/scheduling_manager/scheduling_manager';SHA='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26'
+SPANS=[('raw-factory-selection',0x2ea5c,0x2eac0),('raw-factory-bnil',0x2f4a2,0x2f4da),('base-raw-constructor',0x2c678,0x2c8c8),('base-bnil-constructor',0x2cb04,0x2cbe0),('raw-serializer',0x28fdc,0x291fc),('initializer-trigger-selection',0xa731e,0xa732e),('initializer-bnil',0xa8f1c,0xa9048),('compiled-constructor',0xee5ac,0xee6e8),('schema-copy',0x2df3c,0x2dff0)]
+GUARDS=[(0x2eab4,'013c'),(0x2eab6,'162c'),(0x2f4ac,'2c20'),(0x2f4ce,'ab62'),(0x2c6cc,'3077'),(0x2c784,'3462'),(0x2c81a,'7362'),(0x2cb32,'a262'),(0x2cb98,'a362'),(0xa7322,'1b6a'),(0xa8f60,'9b68'),(0xa8f62,'9847'),(0xa8fd4,'4c20'),(0xa9000,'48f80c3b'),(0xa9034,'c4e90087'),(0xa902a,'bb64'),(0xee65e,'84f83020'),(0xee67c,'e163'),(0x2dfa0,'2277')]
+KEYS=[(0x2c8d8,0x2c6a6,'enabled'),(0x2c8dc,0x2c6d0,'id'),(0x2c8e8,0x2c748,'type'),(0x2c8f0,0x2c79a,'operator'),(0x2cbf0,0x2cb30,'status'),(0x29208,0x29030,'type'),(0x2920c,0x2905c,'enabled'),(0x29210,0x29092,'operator'),(0x2921c,0x29126,'status')]
+def bl(z,pc):
+ a,b=struct.unpack('<HH',z);assert a&0xf800==0xf000 and b&0xd000==0xd000;s=a>>10&1;i=1-((b>>13&1)^s);j=1-((b>>11&1)^s);x=(s<<24)|(i<<23)|(j<<22)|((a&1023)<<12)|((b&2047)<<1);return(pc+4+x-((1<<25)if s else 0))&0xffffffff
+def build():
+ v=m.ImageVFS();b=v.read_bytes(IMAGE);assert H(b)==SHA;po=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);L=[struct.unpack_from('<8I',b,po+i*sz)for i in range(n)]
+ def off(a,z):return next(o+a-va for t,o,va,_,fs,*_ in L if t==1 and va<=a and a+z<=va+fs)
+ def at(a,z):o=off(a,z);return b[o:o+z]
+ def w(a):return struct.unpack('<I',at(a,4))[0]
+ def txt(a):return at(a,128).split(b'\0')[0].decode('ascii')
+ bp=v.root/IMAGE.lstrip('/');out={};spans=[]
+ for name,a,e in SPANS:
+  spans.append({'name':name,'start_va':hex(a),'end_va_exclusive':hex(e),'file_offset':hex(off(a,e-a)),'sha256':H(at(a,e-a))})
+  z=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(bp)],text=True).replace(str(bp),IMAGE);z=re.sub(r' <([^>]+)>',lambda q:q[0]if'@plt'in q[1]else'',z);out['spans/'+name+'.txt']=z.encode()
+ for a,z in GUARDS:assert at(a,len(bytes.fromhex(z))).hex()==z
+ base=(w(0x2cbe8)+0x2cb16+4)&0xffffffff;assert base==0x1659a4
+ k=[]
+ for p,pc,expected in KEYS:
+  a=(w(p)+pc+4)&0xffffffff;assert txt(a)==expected;k.append({'pool_va':hex(p),'add_pc_va':hex(pc),'target_va':hex(a),'key':expected})
+ classes=[];relvas=[]
+ for p,name,expect in [(0x2cbec,'15BaseBnilTrigger',0x160298),(0x2f6ec,'11BnilTrigger',0x1602b4),(0xa96a8,'17BnilTriggerRunner',0x1625ac),(0xa96a4,'St23_Sp_counted_ptr_inplaceI17BnilTriggerRunnerSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE',0x161b9c)]:
+  slot=(base+w(p))&0xffffffff;h=w(slot);assert h==expect;rt=w(h+4);np=w(rt+4);assert txt(np)==name;classes.append({'pool_va':hex(p),'slot_va':hex(slot),'header_va':hex(h),'address_point_va':hex(h+8),'rtti_va':hex(rt),'rtti_name':name,'first_three_methods_thumb':[hex(w(h+i))for i in [8,12,16]]});relvas.extend([slot,h+4,h+8,h+12,h+16,rt+4])
+ assert w(0x1602b4+16)==0x28fdd and w(0x1625ac+8)==0xee59d
+ assert(w(0xee6fc)+0xee66a+4)&0xffffffff==0x1625ac
+ tt=w((base+w(0x2f640))&0xffffffff);assert tt==0x160450 and w(tt+8)==4 and txt(w(tt+12))=='BNIL'
+ assert 0x2eac0+2*struct.unpack('<H',at(0x2eac0,2))[0]==0x2f4a2;assert 0xa732e+2*struct.unpack('<H',at(0xa7330,2))[0]==0xa8f1c
+ assert txt(w((base+w(0x2cbf8))&0xffffffff))=='noStatus'
+ ops=[]
+ for p,name,value in [(0x2c8f8,'noOperator',-1),(0x2c8fc,'higher',0),(0x2c904,'lower',1),(0x2c908,'equal',2),(0x2c900,'different',3)]:slot=(base+w(p))&0xffffffff;assert txt(w(slot))==name;ops.append({'pool_va':hex(p),'slot_va':hex(slot),'text':name,'stored_operator':value})
+ calls=[]
+ for pc,t in [(0x2f4a6,0x2cb04),(0x2f4c0,0x2df3c),(0x2f4d2,0x2e84c),(0x2cb20,0x2c678),(0xa8f6e,0x2cb04),(0xa8f86,0xee5ac),(0xa900c,0xb43d8),(0xa901a,0x2df3c),(0xa9044,0xa56e4)]:assert bl(at(pc,4),pc)==t;calls.append({'pc':hex(pc),'bytes':at(pc,4).hex(),'target':hex(t)})
+ rel=subprocess.check_output(['readelf','-rW',str(bp)],text=True);rs=[]
+ for a in sorted(set(relvas)):
+  r=[x for x in rel.splitlines()if re.match('^'+f'{a:08x}'+r'\s',x)];assert len(r)==1 and'R_ARM_RELATIVE'in r[0];rs+=r
+ inputs=[{'path':str(p.relative_to(W)),'sha256':H(z),'bytes':len(z)}for p,z in [(bp,b),(V,V.read_bytes())]]
+ data=[]
+ for a,e,scope in [(0x2eac0,0x2eaee,'raw decrement-index TBH data'),(0xa732e,0xa735e,'compiled direct-index TBH data'),(0x2c8c8,0x2c90c,'base constructor pools'),(0x2cbe0,0x2cc00,'derived constructor pools'),(0x291fc,0x29230,'serializer pools'),(0xee6e8,0xee708,'compiled constructor pools')]:data.append({'start_va':hex(a),'end_va_exclusive':hex(e),'sha256':H(at(a,e-a)),'scope':scope})
+ out.update({'INPUTS.json':J(inputs),'SOURCE_SPANS.json':J(spans),'BYTE_GUARDS.json':J([{'va':hex(a),'bytes':z}for a,z in GUARDS]),'KEYS.json':J(k),'CLASS_IDENTITY.json':J({'classes':classes,'relocations':rs,'compiled_primary_method':'Thumb0xee59d; pointer only, implementation not analyzed','raw_serializer':'Thumb0x28fdd','type_table':hex(tt),'type_row':1,'type_text':'BNIL'}),'OPERATORS.json':J(ops),'DIRECT_CALLS.json':J(calls),'DATA_SPANS.json':J(data),'LAYOUT.json':J({'raw_object_bytes':44,'raw':{'id_string':4,'enabled_byte':28,'type_word':32,'operator_word':36,'status_word':40},'compiled_inner_extent_bytes':64,'compiled':{'callable_storage_and_manager_invoker':[4,8,12,16],'schema_secondary_vptr':20,'id_string':24,'enabled_byte':48,'type_word':52,'operator_word':56,'status_word':60},'allocation':{'bytes':76,'control_base_offset':0,'inner_offset':12,'secondary_schema_offset':32,'outgoing_pair':'inner pointer/control allocation pointer','append_target':'scene+104 via0xa56e4'},'scope':'Source layout on selected successful normal paths only; no object fixtures/lifetime/handler/physical meaning.'}),'METHOD.json':J({'original_execution':0,'semantic_models_or_fixtures':0,'target_IO':0,'scope':'Local raw factory/base+derived schema/serializer and compiled constructor/move/append; callback/handler/registration/provider implementations remain separate.','history':'First canonical generation exclusive; source probes only before report. No generated candidate overwritten.','unclosed':['JsonCpp/string/allocation/clone/vector success','complete parser validation/configured scene','actual handler/callback/registration behavior','runtime binding/unwind/lifetime/physical observations']})})
+ return out
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build();out['OUTPUT_MANIFEST.json']=J({'outputs':{n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()},'collector_sha256':H(Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes())})
+ if a.check:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  for n,p in json.loads((D/'first-candidate/INDEX.json').read_bytes()).items():z=(D/n).read_bytes();assert z==(D/'first-candidate'/n).read_bytes()and H(z)==p['sha256']and len(z)==p['bytes']
+ else:
+  S=D/'first-candidate';assert not S.exists();assert not any((D/n).exists()for n in out);copies={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),Path(__file__).name:Path(__file__).read_bytes()};ix=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in copies.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in copies.items():p=S/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (S/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':a.check,'outputs':len(out),'spans':len(SPANS),'guards':len(GUARDS),'keys':len(KEYS),'calls':9,'classes':4,'inputs':2,'original_execution':0}))
+if __name__=='__main__':main()

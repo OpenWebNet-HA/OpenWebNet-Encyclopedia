@@ -1,0 +1,14 @@
+{
+  "actual_recovered_DB_objects": 0,
+  "alloffset_SQLite3_hits": 7,
+  "alloffset_alternate_magic_hits": 41,
+  "new_archive_uploads": 0,
+  "package_views": 3,
+  "plain_zip_member_bytes_scanned": 0,
+  "plausible_SQLite3_headers": 0,
+  "regular_bytes_identity_checked": 250627785,
+  "regular_files_identity_checked": 14303,
+  "unique_regular_bytes_scanned": 193955589,
+  "unique_regular_payloads_scanned": 6888,
+  "vendor_SQLite_queries_decryptions": 0
+}

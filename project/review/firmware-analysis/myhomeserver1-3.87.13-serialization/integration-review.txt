@@ -1,0 +1,50 @@
+# Serialization integration: independent documentary review
+
+Verdict: PASS for the frozen current integration, subject to later mechanical assembly of the two explicitly pending capsule files. No source or wording correction requested. This is source-aware of my separate vector-ownership audit and an independent documentary comparison of serializer/provider claims with their reports and independent source reviews. It is not a fresh raw-source re-audit of those other areas, a complete encyclopedia audit, native replay or a whole-runtime/lifetime/physical assessment. No author, original, repository or earlier review file was edited.
+
+## Source-to-summary assessment
+
+The new human page, capsule, synthesis, coverage and ranked questions preserve the reviewed boundaries:
+
+- BN3L serialization is sparse: nonempty id, always-assigned local type/status, omitted zero delay/duration, and numeric fields omitted only for the minus-one bit pattern. Status minus-one explicitly emits noStatus. This is not JSON member-presence identity, universal external grammar, a numeric-domain validator or a physical-state observation. The selected local enum12 and raw64/compiled116 object layouts stay distinct.
+- The initializer's same returned JSON storage reaches the raw reparser and then compiled construction. The stated nonzero-duration storage relation is conditional on ordinary successful object/string/assignment/conversion semantics. The page does not promote this source alias into an executed roundtrip or a configured scene.
+- The declared SONAME, resolved packaged candidate and exact candidate hash support candidate-provider applicability, not effective live binding. Missing-member/tree-end to null, selected type0 asUInt returning0, and constructed unsigned32 low-word readback are narrow source contracts. Actual tree/key insertion, assignment, signed/string/error behavior, object validity and runtime provider state remain open.
+- The selected SLEEP control count sequence and normal/full-capacity eight-byte pair transfer establish a retained compiled-vector owner. They do not turn the separate worker's raw receiver into an owning capture or prove last-owner ordering, receiver lifetime adequacy, a safe/unsafe interleaving or a UAF/leak. Allocation/delete and exception/unwind semantics remain conditional. Existing owner-teardown/polling work is not represented as new execution.
+
+The prior lifetime page keeps its original serializer-opaque and next-question statements explicitly scoped to that historical batch, then adds a link identifying what this continuation narrows. Its retained source history is not silently rewritten. All new method/execution wording remains static0; prior execution ledgers and wider Device/source gates are unchanged. The ranked distinct-trigger, concrete removal/last-owner, needed provider and positive reset-owner questions follow the remaining source gaps.
+
+The failed vector v1 exact-boundary assertion is kept as a pre-output failure. Current v2 distinguishes direct growth entry0xb509c from the grouped exidx interval0xb4fd4..0xb51f4. The root37-file snapshot is honestly described as captured after v2 existed, not root preservation before that correction. The source audit independently checked those current identities; no missing earlier bytes or historical execution are certified.
+
+## Identity, links and pending mechanical completion
+
+All8 current documents match their frozen candidate copies, sizes and SHA256 pins. All60 SOURCE_EXPORTS pairs match the original local report/code/evidence/review/history bytes, declared lengths and hashes. The saved parent source checks record successful read-only reproduction of14 serializer,17 provider and12 vector outputs (43 total). This review inspects those saved results and does not claim a new full replay or execution corpus.
+
+The current Markdown references contain29 local link occurrences, with0 fragments. All27 existing targets resolve. Only the capsule's integration-review.txt and validation.json are pending actual assembly. This review neither certifies future bytes nor treats their temporary absence as an exemption: parent must create the actual exact review copy and validation record, then complete strict repository/link/identity checks with those files present. No placeholder or guard relaxation is authorized by this review.
+
+## Exact current document pins
+
+| Workspace-relative file | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md` | `f45e764793f742393c69c7988759e146f48e03d9fdfbc23f01978d61b3cbe332` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-lifetime.md` | `2618b7d557e60d4953044a8eaa75d4a2e42b0e276e64dc18a0787b98c7216dc4` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-serialization/README.md` | `f210d8a466e186c15d482193ae6f7aeb52c4f90c5666e14e7f7cd1fdfe44fd71` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-serialization/SOURCE_EXPORTS.json` | `7800f3db24781a16ee09fab89602af6992b74ce7676560b2107f4bdc9792cdbb` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-serialization/synthesis.txt` | `ce8a5c8cdd716aac04dbe87f3f5b04f3c21dbc1c0c39a2b28c95c9eee06bb183` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-serialization/coverage.txt` | `7e811759634709eb37d9d41a2d3dca19d9c5a4530b7e6003d141dcf2dd85343b` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-serialization/remaining-questions.txt` | `142d66bd25692d6beae932c16e0505804b96f4f702d5592930877cbbc5048d70` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-serialization/source-checks.json` | `5053ef6834ac4b1d601779bfaeeae32e8bdeb137b07dc9b3fdf2a707d5ced9ed` |
+
+## Source/review applicability pins
+
+Paths are relative to this research batch.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `serializer/REPORT.md` | `9764cd1a79d78665b802ec3393e7261d247aca9bf4a0d165cd58feb7eb5bdfd8` |
+| `provider-values/REPORT.md` | `a713e56e7f84600d721210ac32c3bac7ae0ae3fea23c866f630189021b31e6ec` |
+| `vector-ownership/REPORT.v2.md` | `60323fc53eed456b2a0b6a648e9bbf8e5a7158ee6180cd58534e249aa150c5f0` |
+| `reviews/serializer-source-review.md` | `d0d3c805f957f077723885a1d6433d3ccab372bb982086aa36f2928be8c3f638` |
+| `reviews/provider-values-source-review.md` | `8f57eea1427813b7eff59cc5ce4237bd3ef823bb44bc0223d2a05c09f7168dfd` |
+| `reviews/vector-ownership-source-review.md` | `98da00ffb704cb92f3b5a0467f4b21d2e2c8cff0b3e9a15059cdfaef93d1dd91` |
+
+Frozen candidate index SHA256 `c93990b135e5c200add8c5ceebed9fe7ec7f75f54d793720ce6cadd657b4dd2f`. SOURCE_EXPORTS.json SHA256 `7800f3db24781a16ee09fab89602af6992b74ce7676560b2107f4bdc9792cdbb`.

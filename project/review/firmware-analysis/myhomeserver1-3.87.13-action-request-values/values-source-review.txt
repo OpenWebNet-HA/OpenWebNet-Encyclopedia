@@ -1,0 +1,42 @@
+# Independent source review: action request constants and selected params
+
+PASS, no correction requested. I independently reviewed the frozen report/collector, original source/data mappings, selected contract, caller merge and preserved first copies. Only the new host collector's read-only `--check` was run. No original/native/vendor/UUID/mutex/string/JsonCpp/target API execution, semantic model/fixture or CPU replay was added. The saved MyHOMEServer1 ledger remains1 corpus/8 entries/340 original code-hook visits/0 C primitives/12 redirects/8 EXIT/0 guard stops/360 hooks, plus4 relocation setups.
+
+## Identity and reproducibility
+
+Original image `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`, was read through ImageVFS. I independently derived its PT_LOAD mappings and checked17 raw-span hashes,39 guards,19 BLX→ARM-PLT→JUMP_SLOT/name proofs,9 selected local branch/call targets,4 literal PICs,2 class/RTTI chains with6 relative-relocation records,2 GOT-base calculations and all7 input identities. Exact import declarations are candidate bindings, not live provider resolution.
+
+The new host collector passes21 outputs. Every manifest member and all23 immediate first-candidate copies match current bytes, size and SHA256. The existing action-output packet and source review are inherited inputs, not rerun source collectors. No old file or author artifact was modified and no failed canonical run or overwritten candidate is reported or invented. Selected retained windows use complete original instruction boundaries.
+
+## Descriptor and outer-ID source
+
+Actual constructor`0xd20c0` retains destination in R4, initially installs relocation-backed `14JsonRpcRequest` and later `18LightSetStatusBean`. The separately recovered primary virtual method at Thumb`0xd197d` is not the standalone params helper and its body remains unopened. Neither class name is used as a public support or physical-light assertion.
+
+The exact version literal at`0x116134` is `2.0`, with three-character inline-string stores at descriptor+4/+8/+12 and explicit termination. The exact method literal at`0x1361d4` is `light.setStatus`; its source copies the fifteen characters into a temporary and requests assignment into descriptor string+28. That is the same method-string subobject used by the earlier request assembly/handoff. Normal object/string/assignment/provider returns remain premises; no generated request bytes or external protocol acceptance was observed.
+
+The selected normal constructor contains two mutex-qualified UUID-generation/unparse request pairs. The first writes through descriptor string+52; the second unparse uses a temporary36-character string whose assignment subsequently targets the same descriptor+52. I checked that source ordering and field alias, without executing the UUID/mutex libraries, fabricating IDs or claiming randomness, uniqueness, correlation or a defect. The local nonzero lock paths request the imported system-error throw; their exception/unwind/provider behavior is not audited. The UUID-sourced outer descriptor ID remains distinct from the captured configured ID that becomes params.id.
+
+## Two selected parameter fields and actual caller merge
+
+The standalone helper`0xd163c` receives hidden JsonCpp result storage in R0 and optional-field input in R1, retained in R6/R4. It requests a new enum0 JsonCpp value. Nonzero input presence byte0 selects a string construction from input+4 and assignment under exact key `id`. Nonzero presence byte36 selects the signed word at input+40, `Json::Value(int)` and assignment under exact key `speed`. The selected converter arm does not apply the caller's signed-positive condition again. These are source field/argument contracts; other parameter/status-table arms, full JSON/provider semantics and physical speed units/domain remain open.
+
+The positive source join is an actual merge between distinct objects, not equal-offset substitution:
+
+- Inherited first-body source record is SP148; its ID presence is set1 under the selected normal string path. I independently confirmed the preceding `MOV R1,#1` at`0xcf724` as well as the saved byte store. Captured word0 is tested signed>0, and only that admitted path writes record40 and presence36=1. No runtime threshold/value fixture is supplied.
+- Descriptor construction at SP404 writes its own presence76=0. The selected merge guard therefore reaches`0xd05ac`; source presence1 selects the copied string at descriptor80, length84, termination and presence76=1. The retained zero/single/short/long string branches are conditional on valid storage and normal string-create/memcpy returns. Their provider implementations remain opaque.
+- Actual params source is SP480=descriptor+76. Consequently descriptor80 is that input's string+4 and descriptor76 is its presence0. At`0xcf7f0..0xcf7f8`, the concrete eight-byte copy moves SP184/188 (source-record+36/+40) into SP516/520 (params-input+36/+40). The converter tests only the presence byte within the copied first word. It does not infer semantic significance for copied padding.
+- The unchanged call arguments at`0xcf900..0xcf904` pass this actual SP480 object to the helper. Under the explicit selected-path/normal-provider/no-mutation premises, the captured ID reaches its id assignment and the signed-positive captured word reaches the speed constructor request. The earlier SP148 record is never treated as identical to SP480.
+
+This closes the selected constants/field-origin gap but not complete payload validity, original scene configuration, all status/merge semantics, second-callable params equality or restoration, effective lifetime/concurrency, delivery or a physical action. The second callsite may use the same descriptor constructor under normal returns, without a claim that it has the same parameter values. Output`0x5dda0` and all receiving/transport/MQTT/libjel/authentication/session/framing bodies remain unopened. PASS is bounded to this exact source packet and its preserved identities, not whole-runtime or universal command support.
+
+## Frozen reviewed identities
+
+| File | Bytes | SHA256 |
+| --- | ---: | --- |
+| `values/REPORT.md` | 9887 | `6a74a40a5c0eababb207f405c944205dc703203486d7698b4a1ac0d7246ecb4c` |
+| `values/collect_values_v1.py` | 12168 | `ba3beec5e7ed2cc7ac2b13255ab263113b0572b3293e522f87148d1bdc70cb82` |
+| `values/ORIGINAL_SOURCE.json` | 15634 | `0529c9d80ea85c2de726b7fb12d5aecbb0ad02d6b929ef0b9d3db9c0748b658e` |
+| `values/SELECTED_CONTRACT.json` | 2183 | `8e7e9bf397e30f88bf4e230627f46dec08144a6df77ed25f86b9d16936ee2ea0` |
+| `values/INPUTS.json` | 1650 | `a50e52794d3a220f0fbe5598b3bd3e7b32937b6784b6b41023dff3f571951e89` |
+| `values/OUTPUT_MANIFEST.json` | 3546 | `539dfbcb94f669a6e81928b22402f0b6daea4d34995b5c91d66d9e8f1c3d9488` |
+| `values/first-candidate/INDEX.json` | 3297 | `29843c8079f1e994286cabc268b6b867813c1b5f86017479c2f9bf750d2d4453` |

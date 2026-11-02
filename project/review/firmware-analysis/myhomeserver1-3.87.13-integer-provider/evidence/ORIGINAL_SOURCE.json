@@ -1,0 +1,208 @@
+{
+  "candidate_self_binding_calls": [
+    {
+      "ARM_PLT": "0xba94",
+      "ARM_PLT_bytes": "00c68fe227ca8ce2b8f4bce5",
+      "call_VA": "0x15c4c",
+      "call_bytes": "f5f722ef",
+      "definition_Thumb": "0x15ad5",
+      "original_relocation": "00032f54  0001b116 R_ARM_JUMP_SLOT        00015ad5   _ZN4Json5Value9initBasicENS_9ValueTypeEb",
+      "slot": "0x32f54",
+      "symbol": "_ZN4Json5Value9initBasicENS_9ValueTypeEb"
+    },
+    {
+      "ARM_PLT": "0xb768",
+      "ARM_PLT_bytes": "00c68fe227ca8ce2e4f6bce5",
+      "call_VA": "0x16848",
+      "call_bytes": "f4f78eef",
+      "definition_Thumb": "0x14e3d",
+      "original_relocation": "00032e54  0000ec16 R_ARM_JUMP_SLOT        00014e3d   _ZNK4Json5Value4typeEv",
+      "slot": "0x32e54",
+      "symbol": "_ZNK4Json5Value4typeEv"
+    },
+    {
+      "ARM_PLT": "0xadfc",
+      "ARM_PLT_bytes": "00c68fe227ca8ce244fdbce5",
+      "call_VA": "0x1687c",
+      "call_bytes": "f4f7beea",
+      "definition_Thumb": "0x15519",
+      "original_relocation": "00032b48  00009b16 R_ARM_JUMP_SLOT        00015519   _ZNK4Json5Value5isIntEv",
+      "slot": "0x32b48",
+      "symbol": "_ZNK4Json5Value5isIntEv"
+    },
+    {
+      "ARM_PLT": "0xb768",
+      "ARM_PLT_bytes": "00c68fe227ca8ce2e4f6bce5",
+      "call_VA": "0x1552e",
+      "call_bytes": "f6f71ce9",
+      "definition_Thumb": "0x14e3d",
+      "original_relocation": "00032e54  0000ec16 R_ARM_JUMP_SLOT        00014e3d   _ZNK4Json5Value4typeEv",
+      "slot": "0x32e54",
+      "symbol": "_ZNK4Json5Value4typeEv"
+    }
+  ],
+  "data_scope": "TBB bytes are data, not instructions. No other type-arm/error/body inspection is claimed.",
+  "definitions": [
+    "222: 00015c41    38 FUNC    GLOBAL DEFAULT   11 _ZN4Json5ValueC1Ei",
+    "317: 00015c41    38 FUNC    GLOBAL DEFAULT   11 _ZN4Json5ValueC2Ei",
+    "433: 00015ad5   128 FUNC    GLOBAL DEFAULT   11 _ZN4Json5Value9initBasicENS_9ValueTypeEb",
+    "236: 00014e3d     4 FUNC    GLOBAL DEFAULT   11 _ZNK4Json5Value4typeEv",
+    "536: 0001682d   640 FUNC    GLOBAL DEFAULT   11 _ZNK4Json5Value5asIntEv",
+    "155: 00015519   196 FUNC    GLOBAL DEFAULT   11 _ZNK4Json5Value5isIntEv"
+  ],
+  "guards": [
+    {
+      "VA": "0x15c40",
+      "bytes": "0022"
+    },
+    {
+      "VA": "0x15c44",
+      "bytes": "0d46"
+    },
+    {
+      "VA": "0x15c46",
+      "bytes": "c260"
+    },
+    {
+      "VA": "0x15c48",
+      "bytes": "0121"
+    },
+    {
+      "VA": "0x15c50",
+      "bytes": "eb17"
+    },
+    {
+      "VA": "0x15c54",
+      "bytes": "c4e90053"
+    },
+    {
+      "VA": "0x15af8",
+      "bytes": "2172"
+    },
+    {
+      "VA": "0x14e3c",
+      "bytes": "007a"
+    },
+    {
+      "VA": "0x16852",
+      "bytes": "dfe800f0"
+    },
+    {
+      "VA": "0x16880",
+      "bytes": "0028"
+    },
+    {
+      "VA": "0x16886",
+      "bytes": "2068"
+    },
+    {
+      "VA": "0x15532",
+      "bytes": "0228"
+    },
+    {
+      "VA": "0x15536",
+      "bytes": "0328"
+    },
+    {
+      "VA": "0x1553a",
+      "bytes": "0128"
+    },
+    {
+      "VA": "0x1553c",
+      "bytes": "16d0"
+    },
+    {
+      "VA": "0x1556c",
+      "bytes": "d4e90030"
+    },
+    {
+      "VA": "0x15570",
+      "bytes": "13f10043"
+    },
+    {
+      "VA": "0x15574",
+      "bytes": "40f10000"
+    },
+    {
+      "VA": "0x15578",
+      "bytes": "b0fa80f0"
+    },
+    {
+      "VA": "0x1557c",
+      "bytes": "4009"
+    }
+  ],
+  "image": "/usr/lib/libjsoncpp.so.1.9.5",
+  "selected_asInt_TBB": {
+    "base": "0x16856",
+    "bytes": "ad121a30af03",
+    "constructor_tag": 1,
+    "entry_byte": "0x12",
+    "target": "0x1687a"
+  },
+  "spans": [
+    {
+      "end_VA_exclusive": "0x15c5a",
+      "file_offset": "0x15c40",
+      "name": "signed-int-constructor-normal",
+      "sha256": "362c7b5d1fd841a128145fa00c5a8ca16ff809a031037cb8939cce2a6a073133",
+      "start_VA": "0x15c40"
+    },
+    {
+      "end_VA_exclusive": "0x15b02",
+      "file_offset": "0x15ad4",
+      "name": "basic-tag-prefix",
+      "sha256": "5b96b521d48a6115516fa58aefd92620b69e72124dc8374ba7c2b10242b0b2ea",
+      "start_VA": "0x15ad4"
+    },
+    {
+      "end_VA_exclusive": "0x14e40",
+      "file_offset": "0x14e3c",
+      "name": "type-byte",
+      "sha256": "3d60dc05dc4c24756d2ca8efc142ade6c166e93868c74098bb3f0c5e00e4a925",
+      "start_VA": "0x14e3c"
+    },
+    {
+      "end_VA_exclusive": "0x16856",
+      "file_offset": "0x1682c",
+      "name": "asInt-prefix",
+      "sha256": "79de556ca37a21b6ed85134ecfb838cd3e45c180b4b990e62690141669636e31",
+      "start_VA": "0x1682c"
+    },
+    {
+      "end_VA_exclusive": "0x1688a",
+      "file_offset": "0x1687a",
+      "name": "asInt-type1",
+      "sha256": "44b42f1228a2528db8231fc77f507e093b96ed22cffe026d733910f10859a051",
+      "start_VA": "0x1687a"
+    },
+    {
+      "end_VA_exclusive": "0x1687a",
+      "file_offset": "0x1685e",
+      "name": "asInt-normal-return",
+      "sha256": "e515b1b8c0570e69dc51d00f5216b326a650c0ea7fc46555776a0583648caf34",
+      "start_VA": "0x1685e"
+    },
+    {
+      "end_VA_exclusive": "0x1553e",
+      "file_offset": "0x15518",
+      "name": "isInt-type-selection",
+      "sha256": "213d1a8612c10aa86434521ba8e136a6ec3365918be09e52a8158b92b214bc3e",
+      "start_VA": "0x15518"
+    },
+    {
+      "end_VA_exclusive": "0x15580",
+      "file_offset": "0x1556c",
+      "name": "isInt-signed-range",
+      "sha256": "48fa98a25f02c0b7e942eb90bc50dbd5970c6c6623d49e3998f0a6de7e63e7d7",
+      "start_VA": "0x1556c"
+    },
+    {
+      "end_VA_exclusive": "0x15558",
+      "file_offset": "0x15540",
+      "name": "isInt-normal-return",
+      "sha256": "a87108edaa0e42457620ad5efadd94942ce7982a993150df52ef8444cae28269",
+      "start_VA": "0x15540"
+    }
+  ]
+}

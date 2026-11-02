@@ -1,0 +1,53 @@
+{
+  "scope": "Exact reversible hexadecimal representation of eight selected original source spans; no guest execution. Original binary spans stay in local research only.",
+  "files": [
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/spans/default-byte.bin",
+      "bytes": 48,
+      "sha256": "c23e708934a4b9b246a840d6b62907612d06e343bf44988de564fba748b3ffc7",
+      "hex": "f30301aa430040f9e30700f9030080d2210080522300c0d2340080d266ca00796652009161b60039050180527fa20539"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/spans/keyfile-boolean.bin",
+      "bytes": 36,
+      "sha256": "982798be0c662c803728763fe506ab95b078762517b56f25290feeb9feb2591f",
+      "hex": "e20314aae10315aae0031aaa030080d2a3abff971f000071e0079f1a00a30539b3fcff17"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/spans/keyfile-key.bin",
+      "bytes": 36,
+      "sha256": "beaf524709f913272246cd30fc08e2e398fecfef004279d25d22acd40e9bb507",
+      "hex": "75c20491340000b094223a91e10315aae20314aae0031aaa030080d272b1ff97c0680035"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/spans/local-caller.bin",
+      "bytes": 12,
+      "sha256": "9a2d60c0416a04730b049ca885d9027726e547fb1828b3f5418a422c4dc45d44",
+      "hex": "ff130179e41709a995ffff97"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/spans/logging-selection.bin",
+      "bytes": 292,
+      "sha256": "290613df827623108675b56ee51483aef425cfd1043c30ff9652bc072c41afd1",
+      "hex": "3f2303d5ffc306d1e20000d0e16302910004004ffd7b19a9fd43069142f047f9f3531aa9f3230291430040f9e3c700f9030080d2f40300aae00313aa200000ad200001ad200002ad200003ad200004adffff08a9200005ad200006ad2038803de0c8ff97e00313aa42018052010080d298c9ff971f04007181020054f30000d081a2453973ba47f9600240f961030034420000d04240139101028052540000d094a213915fc9ff97e1230091e00314aa84c6ff97c0020034e13f8052e00314aaf8c7ff97c3c6ff97e00000d000f047f9e2c740f9010040f9420001eb010080d201020054fd7b59a9f3535aa9ffc30691bf2303d5c0035fd6420000d0422014910102805247c9ff97f0ffff1791c8ff97600240f943c7ff97aec6ff97ebffff1754c9ff97"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/spans/startup-call.bin",
+      "bytes": 16,
+      "sha256": "ea82839312f651e5e8693cb6d4df07776de787b000aace620bc2fcc0bc9b2a1f",
+      "hex": "60ca40f9e1fcff97e00313aa4b340094"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/spans/xml-boolean.bin",
+      "bytes": 76,
+      "sha256": "2abd92e29b9c5adea27df1f365716eb3846eb05cd82ecca75d3cbbbdff3e3f5c",
+      "hex": "2100009021c03591e00316aad0b6ff97000100357fa205398dfcff17e10315aae00316aadab5ff97601a00f988fcff17210000f021600a91e00316aac4b6ff97a0feff342000805260a20539"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/spans/xml-key.bin",
+      "bytes": 20,
+      "sha256": "ed2e49ecb4703c548d01662cc641e947aa6e9b7c4b360e7c895e44a55e2e7807",
+      "hex": "810240f9200000f000203a9177b7ff9760140034"
+    }
+  ]
+}

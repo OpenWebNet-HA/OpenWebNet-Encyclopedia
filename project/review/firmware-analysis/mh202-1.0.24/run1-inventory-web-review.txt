@@ -1,0 +1,37 @@
+# Independent static review: MH202 inventory and web run1
+
+Result: **pass within the reports’ declared static/package scopes; no required corrections**. Reviewed both reports/collectors, regenerated evidence read-only, inspected original metadata/source and independently crosschecked ELF section extraction with host readelf. Only this review file is written. No ARM, JavaScript, PHP parser/evaluator, vendor helper, browser, server, network, session or device operation executed.
+
+## Current reviewed pins
+
+| Artifact | SHA256 |
+|---|---|
+| `inventory/REPORT.md` | `eeb9499ddefb70825866dff78865ba2fa26828daf87d8e37e1203d3bb7a30205` |
+| `inventory/collect_inventory.py` | `5f050aab83dcb71836e2286fc7f19c6683fcd46ab7e5b228892dd82cdc46943f` |
+| `inventory/selected-components.json` | `7d132b8406637e0cb3a1109c1f16b6271218378c35bb2f2e0a49a0cc860f83e1` |
+| `inventory/inputs.json` | `720fdfe8ed0fc6e1176b1a7a9349d13cdcc7e6b77d7a6055c76c17967e376f53` |
+| `web/run1/REPORT.md` | `c7e4d114ff1676841968f09839db39c1966bcb492791f6562fd2a352607a728b` |
+| `web/run1/collect_evidence.py` | `a1f3a5d534fae32b272ee5409361b7a551c22c93293589d299c1a67a035ae419` |
+| `web/run1/inputs.json` | `d72f49adc295481ac35b3fb7630a3231a299716491a0852c9e7cdd340743ce4f` |
+
+## Inventory verification
+
+- Ran current `inventory/collect_inventory.py --check`:5 generated JSON outputs,16 selected original ELFs,123 packaged web regular files. Repeated the check through host runpy without writing. All selected MH202 bytes are checked by ImageVFS; historical F454 bytes are checked against their retained size/hash before comparison.
+- Independently used host `readelf -SW` for **all16 MH202 .text sections** and **all14 existing same-path F454 counterparts**, deriving their current file offsets, sizes and SHA256 separately from the collector’s section-table parser. They agree with saved section hashes; all14 pairs differ in .text SHA256. All14 F454 full-file identity records were also checked against current retained bytes. The two missing matching paths remain missing comparisons, not inferred absent device functions.
+- The report’s complete metadata counts agree with the independent platform comparison:4898/4408 regular files,4400 identical common paths,3 changed,495 normal-only,5 recovery-only. The comparison concerns regular-file SHA256, not symlink/device metadata, whole image identity, deployment or behavior. The stated MH202↔F454 totals sum consistently to both retained manifest sizes.
+- Confirmed ELF32/little-endian header parsing and machine40 output for the selected files. Exact whole-file and section inequality appropriately prevents automatic reuse of F454 VAs/tests/behavior; it does not prove every function differs. No such stronger semantic claim appears. The report explicitly confines web123 to packaged regular files and normal/recovery scopes to their own comparisons.
+
+## Web/source verification
+
+- Current `web/run1/collect_evidence.py --check` passes:12 outputs from8 verified original normal-image inputs. Repeated its host-only byte comparison through runpy. The Latin1 decode/UTF-8 evidence encoding preserves source character values without silently repairing non-UTF8 comments; no PHP syntax/lint/eval is run. Safe constant extraction is an explicit allowlist, not a configuration/credential dump.
+- Read original index/cache extraction: configura.php19 reads fileInfo; loop20 enumerates scenario_1..scenario_300; name-empty branch29 breaks immediately, while id/description/scen_name populate the |@| record. Cache output starts with filemtime; cache selection55–79 can regenerate on absence or modification-time mismatch. These source operations are not asserted to succeed on unavailable installed XML.
+- Supervision row field2 is the configured XML **id**, not the UI enumeration index. Source WHO17 text construction is *17*ACTION*ID##; it does not establish a universal1..300 wire-ID domain. Crosschecked the native loader’s saved original branch span: failed fopen at0xce6c takes0xd160, increment/compare0xd164–0xd16c continues the numeric1..300 search across gaps. This supports the report’s distinction between the two loops; the two300 limits do not make identity/gap semantics interchangeable.
+- Source consumer query is *#17*0##. Supervision/checkstatus remove the final two characters, split on*, accept selected WHO17/positiveID and separate WHAT1/2 execution from WHAT3/4 availability slots. Checkstatus170–173 writes two independent positions. This is a source-level branch interpretation, not a complete raw parser, captured response or proven final ACK handling. Browser icons/action toggles agree with opposite-action semantics and are not confused with current wire state.
+- Read the browser’s source timer declaration and setTimeout, and its action callback149–179. The callback computes opposite action1↔2/3↔4 and source-defined GET parameters before calling checkstatus.php. Read the selected checkstatus101–117 gate as an external outcome boundary only: no authorization/session implementation was examined, executed or inferred bypassed. Runtime requests, DOM, eval and callbacks remain outside scope.
+- The normal image link points myhome/lang to extra/2. Config fileInfo points to extra/4/info.xml; native loader has a separate actual extra/4 script consumer. These are positive installed-resource associations, while the **contents/layout of unbundled2.xtz/4.xtz and updater installation mapping remain unknown**. The report correctly separates missing root-image descendants from the separately mounted persistent partition; it does not turn those omissions into a device-capability absence claim.
+- Independently inspected script.php34: the source retains `file_get_contents(.home.` before the quoted extra/4 path expression. The report explicitly preserves that malformed-looking source and makes no PHP validity, successful rendering, live selection or repaired-expression claim. The direct constant/index/native references carry the stronger path evidence.
+- Packaged Apache/PHP declarations are accurately labelled settings only. They do not establish active listeners, module ABI/serving, short-tag interpretation, exposed services or browser behavior. Port20000 is recorded as a constant without treating it as an observed connection.
+
+## Review limits
+
+This is independent source/metadata and reproducibility review, not a native or server test. It does not certify MyparseInfo on real configured XML, index/cache correctness under live failures, full status delivery, PHP feasibility, authentication/transport, actual scenario execution or missing archive contents. No closed F454 authentication investigation or old CPU test matrix was reopened. Both reports retain those boundaries and are suitable for scoped integration.

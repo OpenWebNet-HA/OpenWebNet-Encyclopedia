@@ -1,0 +1,19 @@
+{
+  "/home/bticino/scheduling_manager/scheduling_manager": {
+    "bytes": 2161128,
+    "resolved": "/home/bticino/scheduling_manager/scheduling_manager",
+    "sha256": "5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62"
+  },
+  "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0207-f460-myhome-server.md": {
+    "bytes": 41934,
+    "sha256": "ed4af14a11813ba1fdc53dfbf131a388b2cf8066fc688888e30da7c158579932"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/REPORT.md": {
+    "bytes": 5142,
+    "sha256": "4caa7e282a04f4a514803b4da93c875e5da20b6ccd4ccae14542d855726eb68a"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01/image_vfs.py": {
+    "bytes": 5602,
+    "sha256": "32e453cb6af0e2daafb8325d7b5115c3c13883e57d279d347aa8ea4baa3e3838"
+  }
+}

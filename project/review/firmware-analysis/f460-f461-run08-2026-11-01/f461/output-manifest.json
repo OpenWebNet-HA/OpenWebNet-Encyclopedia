@@ -1,0 +1,54 @@
+{
+  "collector": {
+    "path": "collect_boot_v2.py",
+    "sha256": "8796e3b7c83b89fa1cbe01e00b9a69ae770f645310eabaf2ebc2306d99e3738c",
+    "size": 6259
+  },
+  "files": {
+    "EVIDENCE.json": {
+      "sha256": "2a917cc08d153d62efbc4e94f5af7280ca150101cd7ea3db45a2338012e973ff",
+      "size": 6831
+    },
+    "INPUTS.json": {
+      "sha256": "82c677e878b99025be86c4774a75fda0155dcb30165f747ad1c489d5b8a4f4b3",
+      "size": 1269
+    },
+    "spans/default-byte.bin": {
+      "sha256": "c23e708934a4b9b246a840d6b62907612d06e343bf44988de564fba748b3ffc7",
+      "size": 48
+    },
+    "spans/keyfile-boolean.bin": {
+      "sha256": "982798be0c662c803728763fe506ab95b078762517b56f25290feeb9feb2591f",
+      "size": 36
+    },
+    "spans/keyfile-key.bin": {
+      "sha256": "beaf524709f913272246cd30fc08e2e398fecfef004279d25d22acd40e9bb507",
+      "size": 36
+    },
+    "spans/local-caller.bin": {
+      "sha256": "9a2d60c0416a04730b049ca885d9027726e547fb1828b3f5418a422c4dc45d44",
+      "size": 12
+    },
+    "spans/logging-selection.bin": {
+      "sha256": "290613df827623108675b56ee51483aef425cfd1043c30ff9652bc072c41afd1",
+      "size": 292
+    },
+    "spans/startup-call.bin": {
+      "sha256": "ea82839312f651e5e8693cb6d4df07776de787b000aace620bc2fcc0bc9b2a1f",
+      "size": 16
+    },
+    "spans/xml-boolean.bin": {
+      "sha256": "2abd92e29b9c5adea27df1f365716eb3846eb05cd82ecca75d3cbbbdff3e3f5c",
+      "size": 76
+    },
+    "spans/xml-key.bin": {
+      "sha256": "ed2e49ecb4703c548d01662cc641e947aa6e9b7c4b360e7c895e44a55e2e7807",
+      "size": 20
+    }
+  },
+  "report": {
+    "path": "REPORT.v2.md",
+    "sha256": "88568663f780e22040ffe7fe6f50530fd620e7ae25133f594937ae16f9dff312",
+    "size": 6993
+  }
+}

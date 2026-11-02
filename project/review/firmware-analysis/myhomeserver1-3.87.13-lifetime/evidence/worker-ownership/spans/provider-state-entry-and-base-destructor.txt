@@ -1,0 +1,27 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/usr/lib/libstdc++.so.6.0.29:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0009b1f8 <_ZNKSt10error_code23default_error_conditionEv@@GLIBCXX_3.4.11+0x14>:
+   9b1f8:	6803      	ldr	r3, [r0, #0]
+   9b1fa:	b510      	push	{r4, lr}
+   9b1fc:	4604      	mov	r4, r0
+   9b1fe:	689b      	ldr	r3, [r3, #8]
+   9b200:	4798      	blx	r3
+   9b202:	6823      	ldr	r3, [r4, #0]
+   9b204:	4620      	mov	r0, r4
+   9b206:	685b      	ldr	r3, [r3, #4]
+   9b208:	4798      	blx	r3
+   9b20a:	2000      	movs	r0, #0
+   9b20c:	bd10      	pop	{r4, pc}
+   9b20e:	6823      	ldr	r3, [r4, #0]
+   9b210:	4620      	mov	r0, r4
+   9b212:	685b      	ldr	r3, [r3, #4]
+   9b214:	4798      	blx	r3
+   9b216:	f7df e804 	blx	7a220 <__cxa_end_cleanup@plt>
+   9b21a:	bf00      	nop
+
+0009b21c <_ZNSt6thread6_StateD1Ev@@GLIBCXX_3.4.22>:
+   9b21c:	4770      	bx	lr

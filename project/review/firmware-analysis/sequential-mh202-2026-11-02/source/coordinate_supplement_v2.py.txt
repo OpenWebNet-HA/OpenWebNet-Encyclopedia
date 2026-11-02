@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+"""Clarify existing saved EH metadata only; no original assembly or method decoding."""
+import argparse, hashlib, json, pathlib, struct
+O=pathlib.Path(__file__).resolve().parent
+H=lambda b:hashlib.sha256(b).hexdigest()
+J=lambda x:(json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+def build():
+    names=['REPORT.v2.md','REPORT.v3.md','REPORT.v4.md','collect_loader_v2.py','METHODS.v2.json','OUTPUT_MANIFEST.v2.json','coordinate_supplement_v1.py','COORDINATE_SUPPLEMENT_FAILED_V1.json']
+    pins={n:{'bytes':(O/n).stat().st_size,'sha256':H((O/n).read_bytes())} for n in names}
+    assert pins['REPORT.v2.md']['sha256']=='64f80a2aa474b587cdb3352bc4b2a6946a29113c9c629f487b967c56175d26c5'
+    old=json.loads((O/'OUTPUT_MANIFEST.v2.json').read_text())
+    assert old['report_sha256']==pins['REPORT.v2.md']['sha256']
+    assert old['collector_sha256']==pins['collect_loader_v2.py']['sha256']
+    assert old['outputs']['METHODS.v2.json']==pins['METHODS.v2.json']
+    saved=json.loads((O/'METHODS.v2.json').read_text())
+    m=next(x for x in saved['methods'] if x['assembly']=='Core' and x['token']=='0x0600008e')
+    raw=bytes.fromhex(m['body_hex']); assert H(raw)==m['body_sha256']
+    start=(m['header_bytes']+m['IL_code_bytes']+3)&~3
+    assert start==940 and raw[start:start+4].hex()=='417c0000'
+    expected=[(0,252,25,277,22,0x01000050),(0,599,25,624,22,0x01000050),(2,756,47,803,12,0),(0,699,121,820,15,0x01000050),(0,2,866,868,55,0x01000050)]
+    rows=[]
+    for i,values in enumerate(expected):
+        b=raw[start+4+i*24:start+4+(i+1)*24]
+        assert struct.unpack('<6I',b)==values
+        flags,ts,tl,hs,hl,ct=values
+        oldrow=m['exception_regions_dncil_body_coordinates'][i]
+        assert (oldrow['try_start'],oldrow['try_end'],oldrow['handler_start'],oldrow['handler_end'])==(ts,ts+tl,hs,hs+hl)
+        rows.append({'raw_clause_hex':b.hex(),'flags':flags,'try_IL_start':ts,'try_length':tl,'try_IL_end_exclusive':ts+tl,'handler_IL_start':hs,'handler_length':hl,'handler_IL_end_exclusive':hs+hl,'catch_token_or_union_value':hex(ct)})
+    return J({'classification':'Report-only coordinate clarification; no new source coverage','supplement_v1_history':'V1 host tuple guard used fourth try length104 instead of actual121; failed before outputs. Exact failed tool/reportv3/failure and parent snapshots retained. V2 changes that one tuple and new version paths/pins only.','parent_supplement_pre_correction_snapshot':'../parent-before-coordinate-supplement-correction/INDEX.json','current_authoritative_report':'REPORT.v4.md','historical_canonical_report':'REPORT.v2.md','historical_check_role':'collect_loader_v2.py --check pins historical REPORT.v2.md and unchanged canonical v2 outputs, not current REPORT.v4.md','parent_pre_correction_snapshot':'../parent-before-coordinate-clarification/INDEX.json','exact_old_current_identities':pins,'historical_misnamed_field':'exception_regions_dncil_body_coordinates','correction':'EH clause starts are direct code-relative IL coordinates, with exclusive ends=start+length; no header subtraction. Instruction branches remain separately normalized from dncil body-relative targets.','saved_method_body_sha256':m['body_sha256'],'fat_EH_section_body_offset':start,'fat_EH_header_hex':'417c0000','clauses':rows,'original_method_or_provider_reads':0,'new_vendor_execution':0,'supplement_tool_sha256':H(pathlib.Path(__file__).read_bytes())})
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();b=build();p=O/'COORDINATE_MAPPING.v2.json'
+    if a.check:assert p.read_bytes()==b
+    else:
+        with p.open('xb') as f:f.write(b)
+        d=O/'report-v4-firstcopy';d.mkdir();names=['REPORT.v4.md','COORDINATE_MAPPING.v2.json','coordinate_supplement_v2.py']
+        for n in names:
+            with (d/n).open('xb') as f:f.write((O/n).read_bytes())
+        with (d/'SNAPSHOT_INDEX.json').open('xb') as f:f.write(J({n:{'bytes':(O/n).stat().st_size,'sha256':H((O/n).read_bytes())} for n in names}))
+    print(json.dumps({'check':a.check,'source':'unchanged saved body bytes only','clauses':5,'new_source_coverage':0,'current_report_sha256':H((O/'REPORT.v4.md').read_bytes())}))
+if __name__=='__main__':main()

@@ -1,0 +1,293 @@
+{
+  "scope": "Exact sanitized source/collector/output/reference copies; no whole original binaries or full configuration",
+  "files": [
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/FIRST_GENERATION_FAILURE.json",
+      "export": "f460/FIRST_GENERATION_FAILURE.json",
+      "bytes": 971,
+      "sha256": "472673527a560370a5336fcb90c93c73c6094b1db88479e7778dd58dedafa9ed"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/INPUTS.json",
+      "export": "f460/INPUTS.json",
+      "bytes": 1343,
+      "sha256": "4aecd9633b7eae16a167768678b93eb423016db48f99a32f09ef41ea4bc31afe"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/OUTPUT_MANIFEST.json",
+      "export": "f460/OUTPUT_MANIFEST.json",
+      "bytes": 2155,
+      "sha256": "9684a17f943d774f21ca19b4e43e946e485814b478d6284709a46bfcaf03b2e1"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/REPORT.md",
+      "export": "f460/REPORT.txt",
+      "bytes": 7736,
+      "sha256": "3f58a87e373e600a08479a7268a87b7e0af596cbd4da43bb6a46d2d7c67ed2fe"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/REPORT.v2.md",
+      "export": "f460/REPORT.v2.txt",
+      "bytes": 8497,
+      "sha256": "0e960fe9a386c15467227feb382366becd285b324e59eed7eb5c01d0f386df64"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/SOURCE.json",
+      "export": "f460/SOURCE.json",
+      "bytes": 9516,
+      "sha256": "3c21d4bac36b598e592805735fd5b57b251bf247c74c932a3b217ef4ba7b9610"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/VERSION_HISTORY.v2.json",
+      "export": "f460/VERSION_HISTORY.v2.json",
+      "bytes": 1059,
+      "sha256": "d1bc91ed8e577972a3c98669ab1742a61f184784a5b8058a82c99c3e87d7f055"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/collect_gate_v1.py",
+      "export": "f460/collect_gate_v1.py",
+      "bytes": 7318,
+      "sha256": "e8a9f9a51b8316ce32e9e0ae4206ea57c94797cd5bc864bed7cfe1739a0b96d0"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/collect_gate_v2.py",
+      "export": "f460/collect_gate_v2.py",
+      "bytes": 7324,
+      "sha256": "2c15c188e6171d8eaa1b071f713ebd23f0f7e8b35f2bf5e7f77b1d623ad3dd76"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/history-v2-first-copy/FIRST_GENERATION_FAILURE.json",
+      "export": "f460/history-v2-first-copy/FIRST_GENERATION_FAILURE.json",
+      "bytes": 971,
+      "sha256": "472673527a560370a5336fcb90c93c73c6094b1db88479e7778dd58dedafa9ed"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/history-v2-first-copy/INDEX.json",
+      "export": "f460/history-v2-first-copy/INDEX.json",
+      "bytes": 280,
+      "sha256": "3aeda9dba1b44afb70d2f82200a5a6f4cdb97e98df02000765d5ac132b5f383b"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/history-v2-first-copy/VERSION_HISTORY.v2.json",
+      "export": "f460/history-v2-first-copy/VERSION_HISTORY.v2.json",
+      "bytes": 1059,
+      "sha256": "d1bc91ed8e577972a3c98669ab1742a61f184784a5b8058a82c99c3e87d7f055"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/spans/action-range-dispatch.txt",
+      "export": "f460/spans/action-range-dispatch.txt",
+      "bytes": 1561,
+      "sha256": "3d8688bec5737f193dee96d5a694d39be4f15b9bd2222a5fa60a3a9a303a8765"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/spans/entire-marker-getter.txt",
+      "export": "f460/spans/entire-marker-getter.txt",
+      "bytes": 274,
+      "sha256": "3aa0ee7437db344ae4bcff388a2ca888c1053038b990ec8f49e05ad0ed526c1e"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/spans/false-marker-wait-and-recheck.txt",
+      "export": "f460/spans/false-marker-wait-and-recheck.txt",
+      "bytes": 1834,
+      "sha256": "cb85e816d86df653ce243c5de14fc0d632e8b7b8543480d148d73cd9187954a8"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/spans/initializer-receiver.txt",
+      "export": "f460/spans/initializer-receiver.txt",
+      "bytes": 720,
+      "sha256": "906d8ebd71ad457acb6c38e3774b1e039dd3e8b1328c9d2a726b618dd553a318"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/spans/normal-scene-flags-and-return.txt",
+      "export": "f460/spans/normal-scene-flags-and-return.txt",
+      "bytes": 1092,
+      "sha256": "7768b61b200e8b3c20025f8e095135d228a0cedf40c8344ada792388e4615a08"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/spans/one-entry-marker-tail.txt",
+      "export": "f460/spans/one-entry-marker-tail.txt",
+      "bytes": 584,
+      "sha256": "816dbd227f9c1a8f19bd1980dc9c51f150c0efd20d2da567f5146b534f69e97f"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/spans/pair-vector-append.txt",
+      "export": "f460/spans/pair-vector-append.txt",
+      "bytes": 860,
+      "sha256": "1dc31b325406724d5eeda2a7e1ca1a9e56bcc68bc94aa9333d22715b03d7d39e"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/spans/poll-tail-selection.txt",
+      "export": "f460/spans/poll-tail-selection.txt",
+      "bytes": 791,
+      "sha256": "a2a790b88469c356eac0f97308db215fec492f1fece53f87b79dd7978b3b0c3e"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/spans/same-local-receiver.txt",
+      "export": "f460/spans/same-local-receiver.txt",
+      "bytes": 974,
+      "sha256": "70969c1614adc118728c64464534762ef6fc88f9f8984c6a06f95de742de731c"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/spans/selected-action-handle-publication.txt",
+      "export": "f460/spans/selected-action-handle-publication.txt",
+      "bytes": 1446,
+      "sha256": "e6f80ecb20f5484f8fd22d481e1c30a134d6ff77e1f9eca3d7f5b1eeaa9a9fc3"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/INPUTS.json",
+      "export": "f461/INPUTS.json",
+      "bytes": 1104,
+      "sha256": "31313b24e93eb5cc69232f0346a8de1990b018926b3709fd60cedb63d1f7ee0d"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/OUTPUT_MANIFEST.json",
+      "export": "f461/OUTPUT_MANIFEST.json",
+      "bytes": 1414,
+      "sha256": "5c0927aaa629c8e5d8e581ff1e4c62d6b016efbe33b47327b212c48d5647459a"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/REPORT.md",
+      "export": "f461/REPORT.txt",
+      "bytes": 7848,
+      "sha256": "289215b4a715abf4b148af32327883fd1246a8282a6535f7a061d50f4f89589a"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/SOURCE.json",
+      "export": "f461/SOURCE.json",
+      "bytes": 7856,
+      "sha256": "a7ae58f185f7ca03420e73fcd6cba895ccced67de2413220ea77d1fa7ba45858"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/collect_suffix_v1.py",
+      "export": "f461/collect_suffix_v1.py",
+      "bytes": 6613,
+      "sha256": "53d41ed7b62929925f949bc69fd616aaeb8a876c04fe3e329ba011267938e803"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/spans/formatter-return-store-boundary.txt",
+      "export": "f461/spans/formatter-return-store-boundary.txt",
+      "bytes": 760,
+      "sha256": "f4097d27a8fd6206693432925dc6665a6940c2528edd86054da58906a13c67b5"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/spans/inherited-prefix-return-connector.txt",
+      "export": "f461/spans/inherited-prefix-return-connector.txt",
+      "bytes": 279,
+      "sha256": "99234ca038b88f94b448634720f665e73b6575c58abc1f1f7a93a624fc790304"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/spans/local-free-to-address-component.txt",
+      "export": "f461/spans/local-free-to-address-component.txt",
+      "bytes": 913,
+      "sha256": "6e83cdf13a5a3f852ab2b3861ecfa82505c261b769f3365a5be84aac890f5d72"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/spans/provided-string-context.txt",
+      "export": "f461/spans/provided-string-context.txt",
+      "bytes": 1951,
+      "sha256": "999f105368975c59308fa922982df031f7c2fc1e141d22193f30fe8fd8202389"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/spans/record-to-provided-parsed-object.txt",
+      "export": "f461/spans/record-to-provided-parsed-object.txt",
+      "bytes": 963,
+      "sha256": "938c916883a479e879892acb3cf7ee5239c301c6d8b53f18bb1ba2e9e4989270"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/spans/suffix-selection-and-append.txt",
+      "export": "f461/spans/suffix-selection-and-append.txt",
+      "bytes": 1123,
+      "sha256": "fb647e356d7cb78d47310487a32c5d131cada179e643ddc4863724375ffee0c0"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run10/PLAN.json",
+      "export": "plan.json",
+      "bytes": 869,
+      "sha256": "3262557267b40d50c8897b9b56ef9e513f39641d0b0eb03f91c4380249784d46"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run10/PRIOR_PROTECTION.json",
+      "export": "prior-protection.json",
+      "bytes": 404,
+      "sha256": "47a2b4da9c9ed566b5d55de4bfbed000837aef3111fc14bdb2c9bcfed76f030e"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run10/SOURCE_CHECKS.json",
+      "export": "source-checks.json",
+      "bytes": 478,
+      "sha256": "4dc3545636c89523582da9264deebb3f5351cd28f0d1fc04b9420462cf8c70e6"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run10/integration/DOCUMENT_PATCH.json",
+      "export": "document-patch.json",
+      "bytes": 791,
+      "sha256": "dbb75ef87dff74fd12cb9f40bd08ca252e38c23c9a34ff967812499ba134be2e"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run10/integration/pre-edit/INDEX.json",
+      "export": "pre-edit-index.json",
+      "bytes": 507,
+      "sha256": "fc45d1389ba72052207c723e4f3e1b8857b71517d645298ea676aea15a7ea3ba"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run10/integration/pre-edit/f460-f461-deep-analysis.md",
+      "export": "historical-analysis.txt",
+      "bytes": 25490,
+      "sha256": "006c251d87960b34142b5bfa5bd478f1c5cdb02cbf495a0153295357b5548414"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run10/integration/pre-edit/mhcatalogue-source-profiles.md",
+      "export": "unchanged-profile.txt",
+      "bytes": 15603,
+      "sha256": "bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run10/REFERENCE_DRAFT.md",
+      "export": "reference-candidate.txt",
+      "bytes": 28872,
+      "sha256": "a96ca9d01a24312b305b3e2c11da24d79a28d1fb7618db7d3ffd61a2271896c9"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run10/REFERENCE_DRAFT_METHOD.json",
+      "export": "draft-method.json",
+      "bytes": 2701,
+      "sha256": "2abd1c4b4dd02e4b883e62d36ed3186646d90cddd1fa565d73959d896468904b"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run10/ANALYSIS_APPENDIX_DRAFT.md",
+      "export": "analysis-appendix.txt",
+      "bytes": 3351,
+      "sha256": "ffdfca8fe4be071b7fa2dbbcc3b3763d249ed5960de1ac2f16eaf4344c83d117"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run10/integration/f460-before-v2/FIRST_GENERATION_FAILURE.json",
+      "export": "history/f460-before-v2/FIRST_GENERATION_FAILURE.json",
+      "bytes": 971,
+      "sha256": "472673527a560370a5336fcb90c93c73c6094b1db88479e7778dd58dedafa9ed"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run10/integration/f460-before-v2/INDEX.json",
+      "export": "history/f460-before-v2/INDEX.json",
+      "bytes": 957,
+      "sha256": "43b4f3b88ae8e0026296381f3700d59fda2f10c392621f7ad4336b93b55e5420"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run10/integration/f460-before-v2/REPORT.md",
+      "export": "history/f460-before-v2/REPORT.txt",
+      "bytes": 7736,
+      "sha256": "3f58a87e373e600a08479a7268a87b7e0af596cbd4da43bb6a46d2d7c67ed2fe"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run10/integration/f460-before-v2/collect_gate_v1.py",
+      "export": "history/f460-before-v2/collect_gate_v1.py",
+      "bytes": 7318,
+      "sha256": "e8a9f9a51b8316ce32e9e0ae4206ea57c94797cd5bc864bed7cfe1739a0b96d0"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run10/EXPLORATORY_LEAD_HISTORY.json",
+      "export": "exploratory-lead-history.json",
+      "bytes": 955,
+      "sha256": "dd2322fbe14224c0bdc7bf83754454400a186598ef7e97c98dd3ad39569df074"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b6480 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b70c>:
+   b6480:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+   b6482:	4d39      	ldr	r5, [pc, #228]	@ (b6568 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b7f4>)
+   b6484:	447d      	add	r5, pc
+   b6486:	b361      	cbz	r1, b64e2 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b76e>
+   b6488:	2902      	cmp	r1, #2
+   b648a:	6886      	ldr	r6, [r0, #8]
+   b648c:	f100 0e04 	add.w	lr, r0, #4
+   b6490:	bf18      	it	ne
+   b6492:	f44f 4000 	movne.w	r0, #32768	@ 0x8000
+   b6496:	d028      	beq.n	b64ea <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b776>
+   b6498:	b336      	cbz	r6, b64e8 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b774>
+   b649a:	46f4      	mov	ip, lr
+   b649c:	4633      	mov	r3, r6
+   b649e:	691a      	ldr	r2, [r3, #16]
+   b64a0:	e9d3 1402 	ldrd	r1, r4, [r3, #8]
+   b64a4:	4282      	cmp	r2, r0
+   b64a6:	d307      	bcc.n	b64b8 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b744>
+   b64a8:	469c      	mov	ip, r3
+   b64aa:	b141      	cbz	r1, b64be <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b74a>
+   b64ac:	460b      	mov	r3, r1
+   b64ae:	691a      	ldr	r2, [r3, #16]
+   b64b0:	e9d3 1402 	ldrd	r1, r4, [r3, #8]
+   b64b4:	4282      	cmp	r2, r0
+   b64b6:	d2f7      	bcs.n	b64a8 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b734>
+   b64b8:	b10c      	cbz	r4, b64be <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b74a>
+   b64ba:	4623      	mov	r3, r4
+   b64bc:	e7ef      	b.n	b649e <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b72a>
+   b64be:	45f4      	cmp	ip, lr
+   b64c0:	d012      	beq.n	b64e8 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b774>
+   b64c2:	f8dc 3010 	ldr.w	r3, [ip, #16]
+   b64c6:	4283      	cmp	r3, r0
+   b64c8:	d80e      	bhi.n	b64e8 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b774>
+   b64ca:	3001      	adds	r0, #1
+   b64cc:	1c43      	adds	r3, r0, #1
+   b64ce:	d1e3      	bne.n	b6498 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b724>
+   b64d0:	2008      	movs	r0, #8
+   b64d2:	f75a ec10 	blx	10cf4 <__cxa_allocate_exception@plt>
+   b64d6:	4925      	ldr	r1, [pc, #148]	@ (b656c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b7f8>)
+   b64d8:	4604      	mov	r4, r0
+   b64da:	4479      	add	r1, pc
+   b64dc:	f75b e98c 	blx	117f8 <_ZNSt16invalid_argumentC1EPKc@plt>
+   b64e0:	e02b      	b.n	b653a <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b7c6>
+   b64e2:	2a03      	cmp	r2, #3
+   b64e4:	4610      	mov	r0, r2
+   b64e6:	d82f      	bhi.n	b6548 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b7d4>
+   b64e8:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+   b64ea:	2014      	movs	r0, #20
+   b64ec:	f647 77ff 	movw	r7, #32767	@ 0x7fff
+   b64f0:	2e00      	cmp	r6, #0
+   b64f2:	d0f9      	beq.n	b64e8 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b774>
+   b64f4:	46f4      	mov	ip, lr
+   b64f6:	4633      	mov	r3, r6
+   b64f8:	691a      	ldr	r2, [r3, #16]
+   b64fa:	e9d3 1402 	ldrd	r1, r4, [r3, #8]
+   b64fe:	4282      	cmp	r2, r0
+   b6500:	d307      	bcc.n	b6512 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b79e>
+   b6502:	469c      	mov	ip, r3
+   b6504:	b141      	cbz	r1, b6518 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b7a4>
+   b6506:	460b      	mov	r3, r1
+   b6508:	691a      	ldr	r2, [r3, #16]
+   b650a:	e9d3 1402 	ldrd	r1, r4, [r3, #8]
+   b650e:	4282      	cmp	r2, r0
+   b6510:	d2f7      	bcs.n	b6502 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b78e>
+   b6512:	b10c      	cbz	r4, b6518 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b7a4>
+   b6514:	4623      	mov	r3, r4
+   b6516:	e7ef      	b.n	b64f8 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b784>
+   b6518:	45e6      	cmp	lr, ip
+   b651a:	d0e5      	beq.n	b64e8 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b774>
+   b651c:	f8dc 3010 	ldr.w	r3, [ip, #16]
+   b6520:	4283      	cmp	r3, r0
+   b6522:	d8e1      	bhi.n	b64e8 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b774>
+   b6524:	3001      	adds	r0, #1
+   b6526:	42b8      	cmp	r0, r7
+   b6528:	d1e2      	bne.n	b64f0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b77c>
+   b652a:	2008      	movs	r0, #8
+   b652c:	f75a ebe2 	blx	10cf4 <__cxa_allocate_exception@plt>
+   b6530:	490f      	ldr	r1, [pc, #60]	@ (b6570 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b7fc>)
+   b6532:	4604      	mov	r4, r0
+   b6534:	4479      	add	r1, pc
+   b6536:	f75b e960 	blx	117f8 <_ZNSt16invalid_argumentC1EPKc@plt>
+   b653a:	4a0e      	ldr	r2, [pc, #56]	@ (b6574 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6b800>)

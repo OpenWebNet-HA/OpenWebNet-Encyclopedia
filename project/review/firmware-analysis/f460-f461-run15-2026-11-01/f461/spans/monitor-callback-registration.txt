@@ -1,0 +1,33 @@
+
+/home/bticino/bin/coso:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000058a0 <init_dir_monitoring@@Base>:
+    58a0:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+    58a4:	910003fd 	mov	x29, sp
+    58a8:	f9000bf3 	str	x19, [sp, #16]
+    58ac:	aa0003f3 	mov	x19, x0
+    58b0:	f9400800 	ldr	x0, [x0, #16]
+    58b4:	f9400400 	ldr	x0, [x0, #8]
+    58b8:	97fff55e 	bl	2e30 <g_file_new_for_path@plt>
+    58bc:	d2800003 	mov	x3, #0x0                   	// #0
+    58c0:	d2800002 	mov	x2, #0x0                   	// #0
+    58c4:	52800001 	mov	w1, #0x0                   	// #0
+    58c8:	97fff4ae 	bl	2b80 <g_file_monitor_directory@plt>
+    58cc:	b4000160 	cbz	x0, 58f8 <init_dir_monitoring@@Base+0x58>
+    58d0:	d2800a01 	mov	x1, #0x50                  	// #80
+    58d4:	97fff4f7 	bl	2cb0 <g_type_check_instance_cast@plt>
+    58d8:	90000002 	adrp	x2, 5000 <init_socketd@@Base+0x60>
+    58dc:	b0000001 	adrp	x1, 6000 <_IO_stdin_used@@Base+0x6e0>
+    58e0:	aa1303e3 	mov	x3, x19
+    58e4:	910d4042 	add	x2, x2, #0x350
+    58e8:	910c8021 	add	x1, x1, #0x320
+    58ec:	52800005 	mov	w5, #0x0                   	// #0
+    58f0:	d2800004 	mov	x4, #0x0                   	// #0
+    58f4:	97fff4e7 	bl	2c90 <g_signal_connect_data@plt>
+    58f8:	52800000 	mov	w0, #0x0                   	// #0
+    58fc:	f9400bf3 	ldr	x19, [sp, #16]
+    5900:	a8c27bfd 	ldp	x29, x30, [sp], #32
+    5904:	d65f03c0 	ret

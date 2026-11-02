@@ -1,0 +1,39 @@
+# Independent stage 3 legacy clock-script source review and candidate preflight
+
+PASS for the selected original script/caller contracts and current PAGE_CANDIDATE.v2. No actual clock, device, architecture, successful synchronization, complete boot or natural wrapper invocation is established. Final public integration and later checks are not certified by this source preflight.
+
+| Reviewed file | Bytes | SHA256 |
+| --- | ---: | --- |
+| REPORT.md | 5153 | `0a442a9f32dc8dc639b5e64caa9c262a9437cd3338d682775b964abd5c5080e4` |
+| collect_clock_v1.py | 12130 | `65693bd2c7026595f1ad3a5951140892267187953a6cf768b8450932558684a4` |
+| OUTPUT_MANIFEST.json | 818 | `fe98da8caa2780d049a3cf96a28248f7db5ee374308717dc8c20cf574f0e0418` |
+| SOURCE_LINES.json | 16888 | `01c839d42ce1dac0903d45024854fe19e346a1bf7ec0a8fda48014e5772b1623` |
+| SCOPE.json | 4406 | `e930d8767cd3c9fb40cc47e1fd18a9e449c249dbe4d335f15afa72a3840ddcd0` |
+| SOURCE_SELECTION_DECISION.json | 1332 | `cc0c8c28c94c55df7e4e327caf6d2a1f50e6c5c1dfe06367e8c1c435e1179b5e` |
+| PAGE_CANDIDATE.v2.md | 3893 | `1d0287e85a7a1548c87afaa7c232654dcdceb5a4cb9c6e62fd3a588aa37ce7bd` |
+
+## Independent original-source and copy checks
+
+Actual new collect_clock_v1.py --check passed5outputs/12own source occurrences/originalexecution0. I independently checked all19input pins, collector/output identities,7canonical immediate copies and2separate API-context/validation copies. Each of the12own script occurrences agrees with its own product/view regular-file manifest and retained size/SHA, rather than transferring a shared filename/hash across products. Four views have4unique whole-file hashes; their112selected line occurrences are exact. These are integrity/reach counts, not12independent new functions or full semantic coverage.
+
+Only original init lines103..106 were interpreted from init. They contain the comment, sorted S*glob loop and literal `try [list source $n]`. The own packaged S10 filename matches that path selector. This is a conditional local source-request join under actual init reachability/runtime directory visibility and ordinary try/source binding/normal-return premises. It supplies no full init admission, component-order/readiness or successful script-evaluation proof. The selector is inherited context, not new duplicate functional coverage.
+
+Each own S10 script matches exact294B/hash and line2open-r→line3gets→line4scan%d→line5num==1. The selected branch's line7is a `date` command request with compiled arguments, not a shell execution observed by this analysis or a proved successful date-provider call. Line8begins with the Tcl comment marker and provides no hwclock request. Line13close follows only the ordinary selected control continuation; scan return is not tested locally, and valid channel/line/num/namespace/provider/normal-return premises are correctly retained. Neither proc pathname, diagnostic strings nor compiled fallback date demonstrates target invalidity, actual current time, timezone, RTC writing or synchronization. No target proc file or clock was accessed.
+
+For F453AVnormal/recovery and MH200Nrecovery, exact231B hwtosys text requests uname-m, compares its response to compiled armv5tel, then nonzero comparison selects rtc-rw-r and zero selects hwclock--hctosys--utc. MH200Nnormal's distinct44B source directly requests the latter without that branch. No wrapper caller occurs in the approved init slice; the report/current candidate correctly keep this contract SEPARATE from the init→S10 chain. No underlying helper/Tcl/options/profile/systohw body or unrelated caller was inspected to complete it.
+
+The [official Tcl8.4 string manual](https://www.tcl-lang.org/man/tcl8.4/TclCmd/string.htm) supports equality→zero and inequality→nonzero only as ordinary API context. It neither pins the target ettcl release/effective command binding nor proves an observed uname response. SA1110/PXA255 comments and armv5tel compiled comparison operand do not provide authoritative CPU/part/board/ABI provenance. Matching normal/recovery bytes do not establish equal environments or installed overlays.
+
+## Scope, applicability and documentary history
+
+The actual exact-path parent decision and author's SCOPE record are preserved/pinned before selected-body generation; the parent confirms these preceded the approved reads. SCOPE's body_read:false entries are historical pre-read declarations, not a present claim that the now-retained sources remain unread. No new source beyond the12occurrences was admitted; previously proposed systohw metadata remains unselected. I did not expand qualification/provider bodies.
+
+Both curated Device context files still match their exact hashes. Current candidate retains F453AVaudio/video-webserver and MH200Nscenario-programmer roles separately and does not transfer hardware/functionality from shared scripts. Own build/view distinctions and provider/configuration/runtime limitations are explicit. No full private configuration, credentials, runtime identifiers or target clock values are exported; selected constants are original safe source operands, not captured live data.
+
+An unpublished root draft initially misquoted the init request as eager source substitution. Parent retained its exact original before NEW PAGE_CANDIDATE.v2 and DOCUMENTARY_PREPARATION_HISTORY. I verified that snapshot and reviewed only the current corrected literal. Canonical source/report/code/results stayed unchanged; no failed generation, original execution or missing historical hash is invented.
+
+## Candidate disposition and limits
+
+Current PAGE_CANDIDATE.v2 accurately distinguishes the startup-selected numeric request, comment-only clock line, separate natural-caller-open wrapper and own normal/recovery source difference. It does not claim actual command success, clock validity, architecture, full boot, hardware behavior or a completed configured trace. Source confidence is high for exact bytes/lines/branch/request order; natural reachability, file values, command resolution/provider behavior, complete errors/cleanup/lifetime/concurrency and physical outcomes remain open.
+
+Its planned evidence-capsule/validation/check links still require actual integration/results. This preflight does not certify their future existence/PASS, stage closure or full Device/source/runtime gates. Existing execution ledgers and closed routes/F450helper denial remain unchanged. No old collector/native corpus was replayed, and no script/Tcl/vendor/native/helper/emulator/model/fixture/targetOS/service/network/bus/physical execution or source/repository/remote edit occurred. Public API documentation access is separate from target/network contact. Only this new review and immediate exact copy/index were written.

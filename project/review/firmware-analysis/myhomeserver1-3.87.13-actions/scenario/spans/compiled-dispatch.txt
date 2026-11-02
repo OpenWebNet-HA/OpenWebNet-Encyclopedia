@@ -1,0 +1,36 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a75f0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5c87c>:
+   a75f0:	f85b 1b04 	ldr.w	r1, [fp], #4
+   a75f4:	69cb      	ldr	r3, [r1, #28]
+   a75f6:	2b17      	cmp	r3, #23
+   a75f8:	f200 80d1 	bhi.w	a779e <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5ca2a>
+   a75fc:	e8df f013 	tbh	[pc, r3, lsl #1]
+   a7600:	290a      	cmp	r1, #10
+   a7602:	2487      	movs	r4, #135	@ 0x87
+   a7604:	23e5      	movs	r3, #229	@ 0xe5
+   a7606:	271d      	movs	r7, #29
+   a7608:	267b      	movs	r6, #123	@ 0x7b
+   a760a:	2286      	movs	r2, #134	@ 0x86
+   a760c:	21ae      	movs	r1, #174	@ 0xae
+   a760e:	00cf      	lsls	r7, r1, #3
+   a7610:	2842      	cmp	r0, #66	@ 0x42
+   a7612:	27bb      	movs	r7, #187	@ 0xbb
+   a7614:	0018      	movs	r0, r3
+   a7616:	2328      	movs	r3, #40	@ 0x28
+   a7618:	25cc      	movs	r5, #204	@ 0xcc
+   a761a:	2542      	movs	r5, #66	@ 0x42
+   a761c:	20ef      	movs	r0, #239	@ 0xef
+   a761e:	204b      	movs	r0, #75	@ 0x4b
+   a7620:	1f9b      	subs	r3, r3, #6
+   a7622:	1eea      	subs	r2, r5, #3
+   a7624:	1e6c      	subs	r4, r5, #1
+   a7626:	1dc6      	adds	r6, r0, #7
+   a7628:	1d13      	adds	r3, r2, #4
+   a762a:	1c54      	adds	r4, r2, #1
+   a762c:	1b70      	subs	r0, r6, r5
+   a762e:	1ab6      	subs	r6, r6, r2

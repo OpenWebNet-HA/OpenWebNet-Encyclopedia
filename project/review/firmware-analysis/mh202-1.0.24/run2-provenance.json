@@ -1,0 +1,121 @@
+{
+  "checkpoint": "run2",
+  "status": "reviewed_selected_static_joins; overnight research active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "method": "Original static bytes and explicit host models; zero original ARM/PHP/JavaScript execution",
+  "exports": [
+    {
+      "role": "report",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run2/REPORT.md",
+      "source_sha256": "aa786a3363ee95abbd221d1c8af471e20211a86af7bbbfa32404688bfc2346c4",
+      "published": "run2-functional-report.txt",
+      "published_sha256": "aa786a3363ee95abbd221d1c8af471e20211a86af7bbbfa32404688bfc2346c4",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "role": "report",
+      "area": "interpreter",
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run2-interpreter/REPORT.md",
+      "source_sha256": "15040bc8a3a8e066796839c0f772cacc83141271eaa81adf7455d59d68a75386",
+      "published": "run2-interpreter-report.txt",
+      "published_sha256": "15040bc8a3a8e066796839c0f772cacc83141271eaa81adf7455d59d68a75386",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run2/REPORT.md",
+      "source_sha256": "9e2685f9d7c98fe93d3409619fcde3f26c04debb0d9eca1242d6814310801893",
+      "published": "run2-protocol-report.txt",
+      "published_sha256": "9e2685f9d7c98fe93d3409619fcde3f26c04debb0d9eca1242d6814310801893",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "role": "report",
+      "area": "boot",
+      "research_path": "work/mh202-firmware/research/2026-10-30/boot/run2/REPORT.md",
+      "source_sha256": "b9af05b1b82de9a057a70ec090e1651d4901cb61307dde882f60c3eec006027e",
+      "published": "run2-boot-report.txt",
+      "published_sha256": "b9af05b1b82de9a057a70ec090e1651d4901cb61307dde882f60c3eec006027e",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run2/functional-review.md",
+      "source_sha256": "8d46bb53fcacd8abc11aa76231966ee00827c0e7d8fc6883cc00b60fcd8833b8",
+      "published": "run2-functional-review.txt",
+      "published_sha256": "8d46bb53fcacd8abc11aa76231966ee00827c0e7d8fc6883cc00b60fcd8833b8",
+      "normalization": "Local workspace prefix removed if present; no review content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "interpreter",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run2/interpreter-review.md",
+      "source_sha256": "f7884849e9366eeeacb59358a4302902db9b023322ff1112dace8c1d0933fba1",
+      "published": "run2-interpreter-review.txt",
+      "published_sha256": "f7884849e9366eeeacb59358a4302902db9b023322ff1112dace8c1d0933fba1",
+      "normalization": "Local workspace prefix removed if present; no review content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run2/protocol-review.md",
+      "source_sha256": "9739964e5e554ff62ddf450d88de95962e997cb8fd41a31ec19a73b91fd2283d",
+      "published": "run2-protocol-review.txt",
+      "published_sha256": "9739964e5e554ff62ddf450d88de95962e997cb8fd41a31ec19a73b91fd2283d",
+      "normalization": "Local workspace prefix removed if present; no review content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "boot",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run2/boot-review.md",
+      "source_sha256": "cf88adff7285f2a4dd66c2589e9cc2e5115dc94ea46de290e36e42b6cc9c3acd",
+      "published": "run2-boot-review.txt",
+      "published_sha256": "cf88adff7285f2a4dd66c2589e9cc2e5115dc94ea46de290e36e42b6cc9c3acd",
+      "normalization": "Local workspace prefix removed if present; no review content changed"
+    },
+    {
+      "role": "pre-promotion-correction",
+      "area": "interpreter",
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run2-interpreter/CORRECTIONS.md",
+      "source_sha256": "44615bc97101d385016dbdf705589a2f8df9f717ba0b2288fa079280544fe835",
+      "published": "run2-interpreter-correction.txt",
+      "published_sha256": "44615bc97101d385016dbdf705589a2f8df9f717ba0b2288fa079280544fe835",
+      "normalization": "none"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run2/collect_evidence.py",
+      "sha256": "c7ada1949d1cca15fe46e2d40db78689dbed4e3a1dfb336120c646bd82cc2303"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run2-interpreter/collect_evidence.py",
+      "sha256": "b1727ff39ac0157a5535e1f8a13bdf43bc0047d9488af68854d8a4ca506ee629"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run2/collect_evidence.py",
+      "sha256": "7044d421057e0a609f077006424ce4cd986f4743a46e2d3e0494344996443ddd"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/boot/run2/collect_boot_mode.py",
+      "sha256": "8957f0b3a3921660843c5fde876b655cd2e8c7e5b48b51582a0dec83b369a13f"
+    }
+  ],
+  "history": {
+    "run1_reviewed_document_snapshots": "reviewed/run1/SOURCE_SNAPSHOTS.json",
+    "source_reports_unchanged": true,
+    "initial_interpreter_token_assumption": "Caught by literal assertion before model/evidence output; exact draft retained in research, correction exported"
+  },
+  "limits": [
+    "No live loader/process/parser/physical outcome",
+    "WHO1000 parser/class/WHERE and publication preconditions remain",
+    "IIF grammar/global binding/overlapping-copy result remain unexecuted",
+    "Startup env/status/call_nowait delegates and source/runtime XML remain conditional",
+    "Full Device source gates pending"
+  ],
+  "reproduction_limit": "Full original image/spans/collectors remain in separate local dossier; these documentary excerpts are not a self-contained firmware runtime"
+}

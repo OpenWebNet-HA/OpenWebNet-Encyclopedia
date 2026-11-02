@@ -1,0 +1,434 @@
+[
+  {
+    "NO_APP_COPY_marker": {
+      "identity": {
+        "bytes": 0,
+        "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/NO_APP_COPY",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "present_in_regular_manifest": true
+    },
+    "component": "normal",
+    "product": "MH200N",
+    "safe_source_lines": [
+      {
+        "lines": [
+          {
+            "line": 21,
+            "text": "try {source /etc/init.d/options}"
+          },
+          {
+            "line": 103,
+            "text": "# Run scripts in /etc/init.d/scripts    "
+          },
+          {
+            "line": 104,
+            "text": "foreach n [lsort [glob -nocomplain /etc/init.d/scripts/S*]] {"
+          },
+          {
+            "line": 105,
+            "text": "    try [list source $n]"
+          },
+          {
+            "line": 106,
+            "text": "}"
+          },
+          {
+            "line": 120,
+            "text": "# Run user applications in /etc/applications"
+          },
+          {
+            "line": 121,
+            "text": "foreach n [lsort [glob -nocomplain /etc/applications/*]] {"
+          },
+          {
+            "line": 122,
+            "text": "    if ![file isfile $n] continue; # skip directories"
+          },
+          {
+            "line": 123,
+            "text": "    if ![sys_fork] {"
+          },
+          {
+            "line": 124,
+            "text": "\tcatch {unset pid}"
+          },
+          {
+            "line": 125,
+            "text": "        newcmdname [file tail $n]"
+          },
+          {
+            "line": 126,
+            "text": "        source $n; exit"
+          },
+          {
+            "line": 127,
+            "text": "    } else {"
+          }
+        ],
+        "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/sbin/init",
+        "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb"
+      },
+      {
+        "lines": [
+          {
+            "line": 1,
+            "text": "after 4000"
+          },
+          {
+            "line": 2,
+            "text": "sys_exec /bin/bt_start"
+          }
+        ],
+        "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/etc/applications/bt_start.tcl",
+        "sha256": "761a56466caab5185a0f94a5fbedbe72939694b34c4a86bf2475a5f25d8eceb2"
+      },
+      {
+        "lines": [
+          {
+            "line": 1,
+            "text": "puts \"Create tmpfs\""
+          },
+          {
+            "line": 2,
+            "text": "exec mount -t tmpfs -o size=14000000 none /home"
+          }
+        ],
+        "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/etc/init.d/scripts/S10tmpfs",
+        "sha256": "23f0a07f9703df6820c4f722f90d3f2c0c773be6e114be081a18517229e1e268"
+      },
+      {
+        "lines": [
+          {
+            "line": 1,
+            "text": "#!/bin/bash"
+          },
+          {
+            "line": 4,
+            "text": "cd /home/bticino"
+          },
+          {
+            "line": 5,
+            "text": "bin/bt_processi"
+          }
+        ],
+        "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/bin/bt_processi.sh",
+        "sha256": "06ce566224e0cfa771cc22795c503a8a6f6e828b99bb4cafb4c8a9dabfdf9a75"
+      },
+      {
+        "lines": [
+          {
+            "line": 1,
+            "text": "cp -a /home/var/tmp_vuota /home/var/tmp"
+          }
+        ],
+        "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/bin/cp_tmp.tcl",
+        "sha256": "340441183cb948d294a4d176e1fb4d34aee1ca88f15edd0f4817bf02445dbd77"
+      }
+    ],
+    "scope": "Source requests only; /bin/bt_start body and composition/loading remain unexamined"
+  },
+  {
+    "NO_APP_COPY_marker": {
+      "present_in_regular_manifest": false
+    },
+    "component": "recovery",
+    "product": "MH200N",
+    "safe_source_lines": [
+      {
+        "lines": [
+          {
+            "line": 21,
+            "text": "try {source /etc/init.d/options}"
+          },
+          {
+            "line": 103,
+            "text": "# Run scripts in /etc/init.d/scripts    "
+          },
+          {
+            "line": 104,
+            "text": "foreach n [lsort [glob -nocomplain /etc/init.d/scripts/S*]] {"
+          },
+          {
+            "line": 105,
+            "text": "    try [list source $n]"
+          },
+          {
+            "line": 106,
+            "text": "}"
+          },
+          {
+            "line": 120,
+            "text": "# Run user applications in /etc/applications"
+          },
+          {
+            "line": 121,
+            "text": "foreach n [lsort [glob -nocomplain /etc/applications/*]] {"
+          },
+          {
+            "line": 122,
+            "text": "    if ![file isfile $n] continue; # skip directories"
+          },
+          {
+            "line": 123,
+            "text": "    if ![sys_fork] {"
+          },
+          {
+            "line": 124,
+            "text": "\tcatch {unset pid}"
+          },
+          {
+            "line": 125,
+            "text": "        newcmdname [file tail $n]"
+          },
+          {
+            "line": 126,
+            "text": "        source $n; exit"
+          },
+          {
+            "line": 127,
+            "text": "    } else {"
+          }
+        ],
+        "path": "work/mh200n-firmware/1.1.8/analysis/recovery/sbin/init",
+        "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb"
+      },
+      {
+        "lines": [
+          {
+            "line": 3,
+            "text": "sys_exec /bin/bt_start"
+          }
+        ],
+        "path": "work/mh200n-firmware/1.1.8/analysis/recovery/etc/applications/bt_start.tcl",
+        "sha256": "1029a6e6ed6ea12650c63b8d1f73cd7d9730865cd26c3341a6e94cbce993c9a2"
+      }
+    ],
+    "scope": "Source requests only; /bin/bt_start body and composition/loading remain unexamined"
+  },
+  {
+    "NO_APP_COPY_marker": {
+      "identity": {
+        "bytes": 0,
+        "path": "work/f453av-firmware/3.0.14/analysis/rootfs/NO_APP_COPY",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "present_in_regular_manifest": true
+    },
+    "component": "normal",
+    "product": "F453AV",
+    "safe_source_lines": [
+      {
+        "lines": [
+          {
+            "line": 21,
+            "text": "try {source /etc/init.d/options}"
+          },
+          {
+            "line": 103,
+            "text": "# Run scripts in /etc/init.d/scripts    "
+          },
+          {
+            "line": 104,
+            "text": "foreach n [lsort [glob -nocomplain /etc/init.d/scripts/S*]] {"
+          },
+          {
+            "line": 105,
+            "text": "    try [list source $n]"
+          },
+          {
+            "line": 106,
+            "text": "}"
+          },
+          {
+            "line": 120,
+            "text": "# Run user applications in /etc/applications"
+          },
+          {
+            "line": 121,
+            "text": "foreach n [lsort [glob -nocomplain /etc/applications/*]] {"
+          },
+          {
+            "line": 122,
+            "text": "    if ![file isfile $n] continue; # skip directories"
+          },
+          {
+            "line": 123,
+            "text": "    if ![sys_fork] {"
+          },
+          {
+            "line": 124,
+            "text": "\tcatch {unset pid}"
+          },
+          {
+            "line": 125,
+            "text": "        newcmdname [file tail $n]"
+          },
+          {
+            "line": 126,
+            "text": "        source $n; exit"
+          },
+          {
+            "line": 127,
+            "text": "    } else {"
+          }
+        ],
+        "path": "work/f453av-firmware/3.0.14/analysis/rootfs/sbin/init",
+        "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb"
+      },
+      {
+        "lines": [
+          {
+            "line": 3,
+            "text": "sys_exec /bin/bt_start"
+          }
+        ],
+        "path": "work/f453av-firmware/3.0.14/analysis/rootfs/etc/applications/bt_start.tcl",
+        "sha256": "1029a6e6ed6ea12650c63b8d1f73cd7d9730865cd26c3341a6e94cbce993c9a2"
+      },
+      {
+        "lines": [
+          {
+            "line": 1,
+            "text": "if ![sys_fork] {"
+          },
+          {
+            "line": 2,
+            "text": "        sys_exec /bin/start_apache"
+          },
+          {
+            "line": 3,
+            "text": "}"
+          },
+          {
+            "line": 4,
+            "text": "sys_wait"
+          }
+        ],
+        "path": "work/f453av-firmware/3.0.14/analysis/rootfs/etc/init.d/scripts/S60apache",
+        "sha256": "180f95bbfc1f326660cd55f10238d9e59a2eb4f6c73554a84fe35e1b6dfeb81a"
+      },
+      {
+        "lines": [
+          {
+            "line": 1,
+            "text": "#!/bin/sh"
+          },
+          {
+            "line": 2,
+            "text": "LD_LIBRARY_PATH=/lib /usr/sbin/apache"
+          }
+        ],
+        "path": "work/f453av-firmware/3.0.14/analysis/rootfs/bin/start_apache",
+        "sha256": "aa21381939d33f564f2ca27caae7e565e41c6986e40a9a3b9ac0a196a8028509"
+      },
+      {
+        "lines": [
+          {
+            "line": 1,
+            "text": "#!/bin/bash"
+          },
+          {
+            "line": 4,
+            "text": "cd /home/bticino"
+          },
+          {
+            "line": 5,
+            "text": "bin/bt_processi"
+          }
+        ],
+        "path": "work/f453av-firmware/3.0.14/analysis/rootfs/bin/bt_processi.sh",
+        "sha256": "06ce566224e0cfa771cc22795c503a8a6f6e828b99bb4cafb4c8a9dabfdf9a75"
+      },
+      {
+        "lines": [
+          {
+            "line": 1,
+            "text": "cp -a /home/var/tmp_vuota /home/var/tmp"
+          }
+        ],
+        "path": "work/f453av-firmware/3.0.14/analysis/rootfs/bin/cp_tmp.tcl",
+        "sha256": "340441183cb948d294a4d176e1fb4d34aee1ca88f15edd0f4817bf02445dbd77"
+      }
+    ],
+    "scope": "Source requests only; /bin/bt_start body and composition/loading remain unexamined"
+  },
+  {
+    "NO_APP_COPY_marker": {
+      "present_in_regular_manifest": false
+    },
+    "component": "recovery",
+    "product": "F453AV",
+    "safe_source_lines": [
+      {
+        "lines": [
+          {
+            "line": 21,
+            "text": "try {source /etc/init.d/options}"
+          },
+          {
+            "line": 103,
+            "text": "# Run scripts in /etc/init.d/scripts    "
+          },
+          {
+            "line": 104,
+            "text": "foreach n [lsort [glob -nocomplain /etc/init.d/scripts/S*]] {"
+          },
+          {
+            "line": 105,
+            "text": "    try [list source $n]"
+          },
+          {
+            "line": 106,
+            "text": "}"
+          },
+          {
+            "line": 120,
+            "text": "# Run user applications in /etc/applications"
+          },
+          {
+            "line": 121,
+            "text": "foreach n [lsort [glob -nocomplain /etc/applications/*]] {"
+          },
+          {
+            "line": 122,
+            "text": "    if ![file isfile $n] continue; # skip directories"
+          },
+          {
+            "line": 123,
+            "text": "    if ![sys_fork] {"
+          },
+          {
+            "line": 124,
+            "text": "\tcatch {unset pid}"
+          },
+          {
+            "line": 125,
+            "text": "        newcmdname [file tail $n]"
+          },
+          {
+            "line": 126,
+            "text": "        source $n; exit"
+          },
+          {
+            "line": 127,
+            "text": "    } else {"
+          }
+        ],
+        "path": "work/f453av-firmware/3.0.14/analysis/recovery/sbin/init",
+        "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb"
+      },
+      {
+        "lines": [
+          {
+            "line": 3,
+            "text": "sys_exec /bin/bt_start"
+          }
+        ],
+        "path": "work/f453av-firmware/3.0.14/analysis/recovery/etc/applications/bt_start.tcl",
+        "sha256": "1029a6e6ed6ea12650c63b8d1f73cd7d9730865cd26c3341a6e94cbce993c9a2"
+      }
+    ],
+    "scope": "Source requests only; /bin/bt_start body and composition/loading remain unexamined"
+  }
+]

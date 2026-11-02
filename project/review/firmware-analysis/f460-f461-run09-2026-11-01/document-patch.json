@@ -1,0 +1,17 @@
+{
+  "scope": "Concrete F460 condition producer/predicate and F461 platform-selector provenance; catalogue profile unchanged",
+  "patches": [
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "snapshot": "f460-f461-deep-analysis.md",
+      "before_bytes": 22093,
+      "before_sha256": "5e655436978dc032f0d4c750e5dfbd56cd17efbda2bd4a135129b1280e7f691a",
+      "candidate": "REFERENCE_DRAFT.md",
+      "mode": "replace-reviewed-candidate",
+      "after_bytes": 25490,
+      "after_sha256": "006c251d87960b34142b5bfa5bd478f1c5cdb02cbf495a0153295357b5548414"
+    }
+  ],
+  "main_reproduction": "REFERENCE_DRAFT_METHOD.json",
+  "unchanged_profile_sha256": "bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba"
+}

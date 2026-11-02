@@ -1,0 +1,33 @@
+[
+  {
+    "case": "forward-postparsed",
+    "premises": {
+      "WHAT_text": "3",
+      "WHERE_text": "5",
+      "envelope_representation_at_56": 3,
+      "parsed_kind_at_52": 1,
+      "successful_decimal_conversion": true
+    },
+    "reconstruction": {
+      "ASCII_hex": "B0009B50",
+      "bytes_hex": "b0009b50",
+      "handoff_criterion": 9
+    },
+    "scope": "Host reconstruction of selected literal/shift path, not original execution or parser acceptance."
+  },
+  {
+    "case": "independent-reverse",
+    "premises": {
+      "ASCII_hex": "B0009C52",
+      "envelope_type_at_40": 3,
+      "successful_hex_conversion": true
+    },
+    "reconstruction": {
+      "WHAT": 7,
+      "WHERE": 5,
+      "candidate_OPEN": "*9*7*5##",
+      "handoff_criterion": 9
+    },
+    "scope": "Separate source-selected reverse example, not a captured frame or roundtrip."
+  }
+]

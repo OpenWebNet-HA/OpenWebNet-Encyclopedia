@@ -1,0 +1,46 @@
+# JsonCpp double isolation: frozen pre-execution plan
+
+This packet prepares four narrowly isolated constructor/readback cases for the actual MyHOMEServer1 JsonCpp provider. It does not execute original instructions during static preflight. Guest execution is prohibited until root and an independent reviewer both approve the exact frozen harness and source preflight; the explicit run mode additionally requires a separately created root approval file binding both SHA256 values.
+
+Original `/usr/lib/libjsoncpp.so.1.9.5`, SHA256 `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36`. The plan derives fresh PT_LOAD mappings, actual definitions, original source spans, BLX instructions, ARM PLT slot arithmetic and relocations through this MyHOMEServer1 image's read-only ImageVFS. It imports no F454 firmware, harness, object layout or authentication logic. The only reused component is the previously verified read-only Unicorn 2.1.4 host analysis package stored under the historical tooling directory.
+
+## Planned normal helper chain
+
+The four explicitly synthetic finite bit-pattern inputs are positive zero `0000000000000000`, negative zero `8000000000000000`, negative one `bff0000000000000` and one-and-a-quarter `3ff4000000000000`. Each case has a fresh private instance and exactly two top-level entries:
+
+1. Original `Json::Value(double)` at Thumb `0x15ce1` consumes D0 and constructs a 24-byte object in fresh zeroed caller storage.
+2. Original `asDouble()` at Thumb `0x171c5` consumes the SAME actual constructor-produced object, with no object field writes/reseed between calls. Its actual original `type()` definition executes as a nested helper.
+
+There are eight planned top-level entries, not extra entries for nested `initBasic`, Comments move assignment or `type`. No C/GLib/string/allocator primitive model replaces original behavior. This is not full JSON map/member creation, move assignment between Json::Value objects, serializer/reparse, decimal formatting, a scene predicate or physical-value validation.
+
+Original constructor `0x15ce0..0x15d02` explicitly zeros object+12, preserves D0 in D8, calls original `initBasic(type3,allocated0)` and stores the double into object+0. The permitted `initBasic` prefix writes the tag/flag and supplies its real zero Comments temporary; original Comments assignment moves that zero and takes its old-null branch. Only those normal code addresses are admitted. Nonempty Comments disposal, error and all other type branches stop rather than receiving fallback stubs.
+
+`asDouble` requests original `type`, uses the original TBB data at `0x171e6` and its type3 entry to instruction `0x1724e`, loads D0 directly from object+0 and follows the normal canary epilogue. TBB bytes `0x171e6..0x171ec`, literal pools and other RX image data are NOT whitelisted guest instruction PCs. The case checks integer bit patterns without host floating-point computation or numeric-domain assumptions.
+
+## Mapping, setup and containment
+
+The candidate image is loaded at private base `0x41000000`. Its original first PT_LOAD is RX VA0..`0x21bd4`; its data PT_LOAD is VA`0x3277c` with filesz2184/memsz2256. Both derive from the original program headers. After host loading/setup, image code pages are RX and data pages read-only; image writes trap.
+
+The sole selected data relocation supplies GOT `0x32f98`, original `__stack_chk_guard@GLIBC_2.4`, with a pointer to a four-byte synthetic read-only private canary at `0x52000000`. The source proves all selected canary PIC paths reach this slot. This is explicit test setup, not an original target runtime canary or a claim that the whole library has no other relocations.
+
+Three PLT entries are intercepted BEFORE their ARM instructions execute and redirected to their actual same-image Thumb definitions: `0xba94 -> 0x15ad5` (`initBasic`), `0xb074 -> 0x159ed` (Comments assignment), and `0xb768 -> 0x14e3d` (`type`). Original call bytes, PLT arithmetic and exact JUMP_SLOT rows are checked. Redirect callbacks are counted separately from original instruction visits. Effective live loader/interposition remains outside this private binding choice.
+
+Each case has a private 24-byte object at `0x50000000`, a 64KiB stack at `0x51000000`, and a private return boundary at `0x53000000`. Guest writes are permitted only within the exact object extent or stack; image/canary/code/padding writes stop. Private reads must address bytes previously initialized by host setup or an allowed guest write. Image data reads must remain within actual PT_LOAD extents, not mapped-page padding. Unknown/protected/unmapped accesses, IRQ, invalid instructions, unknown PC/size/mode and unexpected nonempty/error paths stop. The private EXIT boundary is intercepted before executing its placeholder instruction and must be reached in Thumb mode with balanced stack.
+
+The analysis CPU is explicitly Cortex-A15 with host register setup CPACR=`0x00f00000`, FPEXC=`0x40000000`, FPSCR=0 and D8=0. D0 receives the supplied integer bit pattern for constructor; before readback, D0 receives a distinct finite register poison `405edd2f1a9fbe77`, so source execution must actually load the object. These are counted host FP/register setup operations, not guest instructions or parsed-field injection. Only R0/SP/LR and the D0 register are set for the second top-level call; the object and its lifetime remain unchanged in that same private instance.
+
+Per-entry limits are 5000 original code-hook visits, engine count10000, engine timeout1 second and a two-second host wall bound. Counts are code-hook visits, not proof of retired instructions. A count/timeout return without normal EXIT is failure. Unknowns are never handled by loosening a guard or forcing return/object state.
+
+## Tool, history and execution gate
+
+Tool RECORD SHA256 is fixed to `a6aaee9cc319e3b1a9b65c0d6487a1a11e344a79189835b10585d11dde4ff121`. All 41 hashed RECORD members are independently checked against digest/size; the unchanged tree's 63 file identities are pinned. The 22 unhashed rows include RECORD and21 cached pyc files. Before importing the analysis package in explicit run mode, `sys.pycache_prefix` points at an asserted-absent local path and bytecode writing is disabled, avoiding those unhashed caches. Static preflight does not import Unicorn or call `emu_start`.
+
+The initial draft used an A5 storage fixture and hardcoded the documented write-event integer. Root preserved that exact unexecuted draft before authorizing NEW v2. V2 adopts explicitly requested zeroed caller storage, imports the actual write-event constant, strengthens static BLX/PLT arithmetic checks and return-stack/mode assertions, and preserves both versions/history. No preflight or guest failure occurred before this frozen plan. `DRAFT_HISTORY.json` pins the original draft and root snapshot; no unavailable historical artifact is reconstructed.
+
+Static generation: `python3 -B isolate_double_v2.py --preflight`. It refuses existing generated outputs/snapshot and immediately copies source preflight, tool pins, this plan, both harness versions and draft history. Its snapshot-index bytes are computed before opening the index. `python3 -B isolate_double_v2.py --check` reproduces only static outputs and exact first copies; neither mode can execute original instructions.
+
+Explicit execution additionally requires `--run --approval PATH`. Root must create that JSON only after both reviews pass, with `approved:true`, `scope:"MHS_JSONCPP_DOUBLE_ONLY"`, `independent_preflight_pass:true`, and the exact frozen `harness_sha256` and `preflight_sha256`. The harness validates both hashes, then refuses a pre-existing RUN_STARTED marker. This prevents accidental preflight/replay from executing a guest.
+
+Every attempted original call is accounted separately as original code-hook visits, linker redirects, EXIT and guard stops; data relocations and FP setup remain separate. Each successful top-level attempt is immediately saved exclusively. Any failure freezes FAILED_ATTEMPT with completed and failed traces/counts and stops without retry, even if no complete corpus exists. It cannot be described as execution zero after any guest instructions ran. Root snapshot/version review is required before any new attempt. Verification replays are separate and never accumulated into canonical coverage.
+
+Pending reviews/authorization are a source-containment checkpoint, not a claim that the planned cases have run. Even a later successful corpus establishes only these finite private helper results under the stated binding/setup; it will not prove arbitrary JSON roundtrip, provider/OS behavior, natural application execution or physical semantics.

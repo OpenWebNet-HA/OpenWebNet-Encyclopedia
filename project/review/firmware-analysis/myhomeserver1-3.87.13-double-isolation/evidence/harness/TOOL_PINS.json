@@ -1,0 +1,284 @@
+{
+  "RECORD_sha256": "a6aaee9cc319e3b1a9b65c0d6487a1a11e344a79189835b10585d11dde4ff121",
+  "all63file_pins": {
+    "unicorn-2.1.4.dist-info/INSTALLER": {
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    "unicorn-2.1.4.dist-info/METADATA": {
+      "bytes": 4246,
+      "sha256": "ce96de4160dc06c1bbcf35074cb542c9f296219f740aa0f34606f8837650c2e8"
+    },
+    "unicorn-2.1.4.dist-info/RECORD": {
+      "bytes": 4666,
+      "sha256": "a6aaee9cc319e3b1a9b65c0d6487a1a11e344a79189835b10585d11dde4ff121"
+    },
+    "unicorn-2.1.4.dist-info/REQUESTED": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "unicorn-2.1.4.dist-info/WHEEL": {
+      "bytes": 148,
+      "sha256": "aff9a6f0c94636672ace5c2e50b7d8db7cabbfbd1a1929d58d9af031c6a65273"
+    },
+    "unicorn-2.1.4.dist-info/top_level.txt": {
+      "bytes": 8,
+      "sha256": "ec0c03f370a783d55b68e240432c15850ec60ac7b8aa1cbb20eafec6dd512b71"
+    },
+    "unicorn/__init__.py": {
+      "bytes": 301,
+      "sha256": "9ad32123bca674cf205c308fd4d0d2a4db877c9dc2afac4feab7c84c8cf7043b"
+    },
+    "unicorn/__pycache__/__init__.cpython-313.pyc": {
+      "bytes": 592,
+      "sha256": "ada0964ddf759ce9296ba70b4e33dfb7a385ec6d3a17dd42eb68d28d2421216b"
+    },
+    "unicorn/__pycache__/arm64_const.cpython-313.pyc": {
+      "bytes": 10470,
+      "sha256": "0b5d07bf5b8cee7dd8c5008c381e29dae1304f20e1f4e3e7bcda817d3b0c45bb"
+    },
+    "unicorn/__pycache__/arm_const.cpython-313.pyc": {
+      "bytes": 5802,
+      "sha256": "a55d6fb9f2e3bdec5972ca46fa370bfd8b544674748765378309760d963d1d74"
+    },
+    "unicorn/__pycache__/m68k_const.cpython-313.pyc": {
+      "bytes": 1590,
+      "sha256": "d000fd98cceb1eee324ed97919351ab17b02512bd5531e9c17d4935570581881"
+    },
+    "unicorn/__pycache__/mips_const.cpython-313.pyc": {
+      "bytes": 6707,
+      "sha256": "b878f2d507caade861905ce0c49cd0538a2436c07461b771823ed7d9b305bdb2"
+    },
+    "unicorn/__pycache__/ppc_const.cpython-313.pyc": {
+      "bytes": 14430,
+      "sha256": "4909af81a3a8ba681aa8ce2583c9ba9915cd215117fba42d4fdab8ef3036f471"
+    },
+    "unicorn/__pycache__/riscv_const.cpython-313.pyc": {
+      "bytes": 9391,
+      "sha256": "aca34524a808a38ad486fbe932c0dd9a44bde931c16e6f24bd1ef4c75d1c5f11"
+    },
+    "unicorn/__pycache__/s390x_const.cpython-313.pyc": {
+      "bytes": 5247,
+      "sha256": "2d680989b321d384a9d50ad543360981e3f256370ce33dc12947eefc2e862ab0"
+    },
+    "unicorn/__pycache__/sparc_const.cpython-313.pyc": {
+      "bytes": 4469,
+      "sha256": "676cec4b02470b90843a33739c9395317fec618b1f2e35d49bb5014bfb29869d"
+    },
+    "unicorn/__pycache__/tricore_const.cpython-313.pyc": {
+      "bytes": 4360,
+      "sha256": "04b626528d8a932bb5699ed422da5d82f65d3559848db161e87523a2cbf9c08c"
+    },
+    "unicorn/__pycache__/unicorn.cpython-313.pyc": {
+      "bytes": 538,
+      "sha256": "f020bc97ede6ebca9a889d3e8a510814086979cd4424eb55739203577d2b91a5"
+    },
+    "unicorn/__pycache__/unicorn_const.cpython-313.pyc": {
+      "bytes": 4213,
+      "sha256": "59308d09ccd9e0420fad1c1f480de0ec84227f3a9c3597e2d58bd5f036e8054f"
+    },
+    "unicorn/__pycache__/unicorn_py2.cpython-313.pyc": {
+      "bytes": 58532,
+      "sha256": "57bb3408db6b51b5b8bec30143e44bbc84e42e302e665a6699fa5feab7e154d8"
+    },
+    "unicorn/__pycache__/x86_const.cpython-313.pyc": {
+      "bytes": 59249,
+      "sha256": "c8787d448f939e2c63ba44836fe5adcff6a1e899d6134c6704c57244d23b5e7e"
+    },
+    "unicorn/arm64_const.py": {
+      "bytes": 7540,
+      "sha256": "92f91a2b0a36cd34deee16db4f8da4ac0c9ae35c3ea1089296e5ef9d170a5be9"
+    },
+    "unicorn/arm_const.py": {
+      "bytes": 4091,
+      "sha256": "44fdb7a9f7a9d8c62be07fefaf21e20060813b2a503b6228e378e6bbff7f7b41"
+    },
+    "unicorn/include/unicorn/arm.h": {
+      "bytes": 5379,
+      "sha256": "de68a0b8f91035baa32cf76fdbd677a16dac433e93c75b084ecd0eeef67be7de"
+    },
+    "unicorn/include/unicorn/arm64.h": {
+      "bytes": 8969,
+      "sha256": "7fc1a00cfe6234ea8859026e4e27cb625e4cecedbc95a06bec9c694137831981"
+    },
+    "unicorn/include/unicorn/m68k.h": {
+      "bytes": 1548,
+      "sha256": "1511ee296557a3de03f71e25b1378761dc7213bfb2f5b2df7aa2d3ef8722b449"
+    },
+    "unicorn/include/unicorn/mips.h": {
+      "bytes": 6464,
+      "sha256": "f6a8d3a5056330a7431954cfe19ec1b4927fa0e8f0a9d83ceac8aeeb98a2a030"
+    },
+    "unicorn/include/unicorn/platform.h": {
+      "bytes": 6813,
+      "sha256": "10ec4c482940d039fcbbf2f7e5791d3dc3f991f0a3c5b16e22f378ae1829fdde"
+    },
+    "unicorn/include/unicorn/ppc.h": {
+      "bytes": 10791,
+      "sha256": "2645d9f4448ab0c1ff28d2096262335d53a9479f210567d546cd76de85dbd530"
+    },
+    "unicorn/include/unicorn/riscv.h": {
+      "bytes": 9603,
+      "sha256": "c2efc0644c236feca3f17e2957a28149498b9f6e06772ced7e11204797fd0327"
+    },
+    "unicorn/include/unicorn/s390x.h": {
+      "bytes": 4318,
+      "sha256": "43ba5d9eed2495ae129da50a8e3f59902d05dc4601bfad12d2b3f4454953d0b4"
+    },
+    "unicorn/include/unicorn/sparc.h": {
+      "bytes": 4054,
+      "sha256": "f30427a1738b7bc9c46dd00cee2097ae375f95ad8db9c386f3d61a14574b3624"
+    },
+    "unicorn/include/unicorn/tricore.h": {
+      "bytes": 3973,
+      "sha256": "053f337160ab3b0cb29bc564e301950fed4c2f93bde50918a3d428b85d0a3f45"
+    },
+    "unicorn/include/unicorn/unicorn.h": {
+      "bytes": 52576,
+      "sha256": "66fdf8f39df34e507a163eb550549669cec3399c2103b8dc84bc4131f600e55a"
+    },
+    "unicorn/include/unicorn/x86.h": {
+      "bytes": 40041,
+      "sha256": "6b01b368f4d1bd0e0ac93a6107cd2edb3b5abfef578f94bf82a00e0ae34ed76f"
+    },
+    "unicorn/lib/libunicorn.a": {
+      "bytes": 32931518,
+      "sha256": "bb556269ec90752e3b3ded2f3fc6a397427ca73e30ca4818d3cfb05621b5e210"
+    },
+    "unicorn/lib/libunicorn.so.2": {
+      "bytes": 24507432,
+      "sha256": "ddb196ec82b52e502c18e4a34478bf7b9f61c83c2ebaa95c74d8ded45a95da9c"
+    },
+    "unicorn/m68k_const.py": {
+      "bytes": 1092,
+      "sha256": "7503e32454751bf66bdf1fcb19dd847537bcf6a5538e18125d8f53d8d448fed9"
+    },
+    "unicorn/mips_const.py": {
+      "bytes": 4923,
+      "sha256": "3a04993d82610ea5f492af2d74fa79d849224a044ac0448281033ee331b58dac"
+    },
+    "unicorn/ppc_const.py": {
+      "bytes": 10476,
+      "sha256": "154aaa45f947dab3e488e58e74ad99a09c8d772766c561ff92ecb85cdedd61af"
+    },
+    "unicorn/py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "unicorn/riscv_const.py": {
+      "bytes": 6984,
+      "sha256": "278e10baf05cfb7c8675475081ae7f2d2037616c79cb907d51963aa2c5b490e4"
+    },
+    "unicorn/s390x_const.py": {
+      "bytes": 3922,
+      "sha256": "54d7026dd70b5bfca1d02e00e7a58d652eaa974b9ea980ba49ed4b80911b9fde"
+    },
+    "unicorn/sparc_const.py": {
+      "bytes": 3246,
+      "sha256": "bcdb0491b6e42c647b104ee53d61610504a97831302dd5280fd2123e05572e95"
+    },
+    "unicorn/tricore_const.py": {
+      "bytes": 3075,
+      "sha256": "1b6005a147d77a3fc1ab5c81fc878eeac3b9bb0b68d518e4a4226830d1356c4c"
+    },
+    "unicorn/unicorn.py": {
+      "bytes": 307,
+      "sha256": "e823b17649d0610c6f52b665902ac9dc46962785feebcac8465a0d7c477f25b7"
+    },
+    "unicorn/unicorn_const.py": {
+      "bytes": 3109,
+      "sha256": "556c6a27336dc6dd3e0d49348951bde17e1b0f69166f2217773e6b3a7199f45d"
+    },
+    "unicorn/unicorn_py2.py": {
+      "bytes": 38617,
+      "sha256": "66e2555d679e4f56a0117c2b8de0895a0a138fa3827e3a8a3621255e348d145a"
+    },
+    "unicorn/unicorn_py3/__init__.py": {
+      "bytes": 23,
+      "sha256": "ee70d3a7de9ea545406d727436ee835f9d644aeb7428f0e4f1510f9190b28726"
+    },
+    "unicorn/unicorn_py3/__pycache__/__init__.cpython-313.pyc": {
+      "bytes": 193,
+      "sha256": "2adeea0014b88bfd3cfe43cdddc13308d33e7d891f34352fba6e171d20a12e68"
+    },
+    "unicorn/unicorn_py3/__pycache__/unicorn.cpython-313.pyc": {
+      "bytes": 72390,
+      "sha256": "ec7b62a09b5429221f48bf808161b2f3ed11b080aa3c746f60b3ea5a3ab6e9b7"
+    },
+    "unicorn/unicorn_py3/arch/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "unicorn/unicorn_py3/arch/__pycache__/__init__.cpython-313.pyc": {
+      "bytes": 169,
+      "sha256": "ca440a0a653dc93d9c9a24bb7a7370dddd9e67f377fce1ff83c131d42eef319d"
+    },
+    "unicorn/unicorn_py3/arch/__pycache__/arm.cpython-313.pyc": {
+      "bytes": 5593,
+      "sha256": "f1ce39788656b9da2a80564bed36209dbeacc5635707b4f52d28f7dc446c9388"
+    },
+    "unicorn/unicorn_py3/arch/__pycache__/arm64.cpython-313.pyc": {
+      "bytes": 8144,
+      "sha256": "8df0aafd2e8b4c720ee74cbcf90205894e9c4d050f4259776dd6f70d8b6c305a"
+    },
+    "unicorn/unicorn_py3/arch/__pycache__/intel.cpython-313.pyc": {
+      "bytes": 9758,
+      "sha256": "a5080f275bb3c52a8707cce0f8e6f9f02dee2f4c1b21e9a4c1fdcaa9db2ed2f6"
+    },
+    "unicorn/unicorn_py3/arch/__pycache__/types.cpython-313.pyc": {
+      "bytes": 5785,
+      "sha256": "d66e1492a069aafcb0d04730730474cea141f1bb6e12adcbab9720f86617cd13"
+    },
+    "unicorn/unicorn_py3/arch/arm.py": {
+      "bytes": 3998,
+      "sha256": "c28693f90d8681c091f0ff92caed0a290350a969ea0a38343bb843a26b726711"
+    },
+    "unicorn/unicorn_py3/arch/arm64.py": {
+      "bytes": 4891,
+      "sha256": "62963378864bae452f7cd2a784ddcd64ab6bdc8a6a69e033d48e8faaab0b2515"
+    },
+    "unicorn/unicorn_py3/arch/intel.py": {
+      "bytes": 5283,
+      "sha256": "8a04281923b5f4dd65ce5f122e222bd86df3e8efc7eae99086e0d372fd7a1a75"
+    },
+    "unicorn/unicorn_py3/arch/types.py": {
+      "bytes": 2665,
+      "sha256": "2e103854e371ef576680073f44ead45b8177a73c450a6125e609b7c54e0bc844"
+    },
+    "unicorn/unicorn_py3/unicorn.py": {
+      "bytes": 52722,
+      "sha256": "62ffe84341f4288e309040e06555b81798031817d32fd19a945e250813f872f0"
+    },
+    "unicorn/x86_const.py": {
+      "bytes": 39977,
+      "sha256": "3b33c55b97503ab25e8ed8bbe576c1cee693f495df6785b04adc1c8ab47a79c4"
+    }
+  },
+  "import_policy": "sys.pycache_prefix points to absent local directory, dont_write_bytecode=True; existing21unhashedpyc never imported; verified package source/native analysis runtime only.",
+  "root": "work/f454-firmware/research/tooling",
+  "unhashed_RECORD_rows": [
+    "unicorn-2.1.4.dist-info/RECORD",
+    "unicorn/__pycache__/__init__.cpython-313.pyc",
+    "unicorn/__pycache__/arm64_const.cpython-313.pyc",
+    "unicorn/__pycache__/arm_const.cpython-313.pyc",
+    "unicorn/__pycache__/m68k_const.cpython-313.pyc",
+    "unicorn/__pycache__/mips_const.cpython-313.pyc",
+    "unicorn/__pycache__/ppc_const.cpython-313.pyc",
+    "unicorn/__pycache__/riscv_const.cpython-313.pyc",
+    "unicorn/__pycache__/s390x_const.cpython-313.pyc",
+    "unicorn/__pycache__/sparc_const.cpython-313.pyc",
+    "unicorn/__pycache__/tricore_const.cpython-313.pyc",
+    "unicorn/__pycache__/unicorn.cpython-313.pyc",
+    "unicorn/__pycache__/unicorn_const.cpython-313.pyc",
+    "unicorn/__pycache__/unicorn_py2.cpython-313.pyc",
+    "unicorn/__pycache__/x86_const.cpython-313.pyc",
+    "unicorn/unicorn_py3/__pycache__/__init__.cpython-313.pyc",
+    "unicorn/unicorn_py3/__pycache__/unicorn.cpython-313.pyc",
+    "unicorn/unicorn_py3/arch/__pycache__/__init__.cpython-313.pyc",
+    "unicorn/unicorn_py3/arch/__pycache__/arm.cpython-313.pyc",
+    "unicorn/unicorn_py3/arch/__pycache__/arm64.cpython-313.pyc",
+    "unicorn/unicorn_py3/arch/__pycache__/intel.cpython-313.pyc",
+    "unicorn/unicorn_py3/arch/__pycache__/types.cpython-313.pyc"
+  ],
+  "verified_RECORD_hashes": 41
+}

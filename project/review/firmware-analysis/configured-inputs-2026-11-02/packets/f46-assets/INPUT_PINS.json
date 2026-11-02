@@ -1,0 +1,230 @@
+[
+  {
+    "bytes": 1585093,
+    "path": "work/f460-firmware/2.0.12/analysis/normal-regular-files.json",
+    "role": "Immutable own extracted regular-file manifest, targeted path admission only",
+    "sha256": "f6dabc979c931bad293824fd3ba0d787ce2c6e67e74428d2cefe15955590f8d1"
+  },
+  {
+    "bytes": 1669481,
+    "path": "work/f460-firmware/2.0.12/analysis/recovery-regular-files.json",
+    "role": "Immutable own extracted regular-file manifest, targeted path admission only",
+    "sha256": "b77c4cbce635515bae3754d502404c9afb2b920061d019fdb4c98c20f92f6a54"
+  },
+  {
+    "bytes": 243,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/scheduling_manager/config.json",
+    "role": "Packaged scheduler settings, no configured scene content",
+    "sha256": "bc83cdfcb72a743d66583428042d4db74b5e24c84ca111f1ae409b3e9cf3b9cf"
+  },
+  {
+    "bytes": 333,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/cfg/coso_cfg",
+    "role": "Packaged COSO settings; no active argv/cwd/config selection observed",
+    "sha256": "7d4f87e391dc416a7f227bfed9fb24d1df5606952f705cd6884087677c0d583f"
+  },
+  {
+    "bytes": 71,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/cfg/coso_plugins/automation_stm",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "a543a5dfe5ede98fe686924441a86a096968332dddb607ab967961c5d9809931"
+  },
+  {
+    "bytes": 70,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/cfg/coso_plugins/automation_tr",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "3742c1a1e3b2f6ab67b803a69dc566527b2ce853d81f32c1fb52dac1a598653a"
+  },
+  {
+    "bytes": 64,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/cfg/coso_plugins/aux_stm",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "7e6a76f322256647df849f4fefe53df46646761482074f5bea820fcd66136225"
+  },
+  {
+    "bytes": 63,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/cfg/coso_plugins/aux_tr",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "53907aae9974cda79960e68defdec658488142a21c733fd083a28a7f41daf990"
+  },
+  {
+    "bytes": 62,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/cfg/coso_plugins/debug",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "f3f69f5d0f13c5c8ce329f41de0c60ebdf081e04d8e2c7a196800828cb4c1ce4"
+  },
+  {
+    "bytes": 157,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/cfg/coso_plugins/scs_cmd",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "22d9ae840fbbc5f1313a13ad135a8c1dad2f6b91aac0ddcf0db83bdee0c99eb2"
+  },
+  {
+    "bytes": 243,
+    "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/scheduling_manager/config.json",
+    "role": "Packaged scheduler settings, no configured scene content",
+    "sha256": "bc83cdfcb72a743d66583428042d4db74b5e24c84ca111f1ae409b3e9cf3b9cf"
+  },
+  {
+    "bytes": 333,
+    "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/cfg/coso_cfg",
+    "role": "Packaged COSO settings; no active argv/cwd/config selection observed",
+    "sha256": "7d4f87e391dc416a7f227bfed9fb24d1df5606952f705cd6884087677c0d583f"
+  },
+  {
+    "bytes": 71,
+    "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/cfg/coso_plugins/automation_stm",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "a543a5dfe5ede98fe686924441a86a096968332dddb607ab967961c5d9809931"
+  },
+  {
+    "bytes": 70,
+    "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/cfg/coso_plugins/automation_tr",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "3742c1a1e3b2f6ab67b803a69dc566527b2ce853d81f32c1fb52dac1a598653a"
+  },
+  {
+    "bytes": 64,
+    "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/cfg/coso_plugins/aux_stm",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "7e6a76f322256647df849f4fefe53df46646761482074f5bea820fcd66136225"
+  },
+  {
+    "bytes": 63,
+    "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/cfg/coso_plugins/aux_tr",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "53907aae9974cda79960e68defdec658488142a21c733fd083a28a7f41daf990"
+  },
+  {
+    "bytes": 62,
+    "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/cfg/coso_plugins/debug",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "f3f69f5d0f13c5c8ce329f41de0c60ebdf081e04d8e2c7a196800828cb4c1ce4"
+  },
+  {
+    "bytes": 157,
+    "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/cfg/coso_plugins/scs_cmd",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "22d9ae840fbbc5f1313a13ad135a8c1dad2f6b91aac0ddcf0db83bdee0c99eb2"
+  },
+  {
+    "bytes": 1579278,
+    "path": "work/f461-firmware/2.0.11/analysis/normal-regular-files.json",
+    "role": "Immutable own extracted regular-file manifest, targeted path admission only",
+    "sha256": "e9b1782e6dcf1d2e15f6b9724360131a6f5d47a7e8049426f6a5dc77c93dc9bc"
+  },
+  {
+    "bytes": 1656725,
+    "path": "work/f461-firmware/2.0.11/analysis/recovery-regular-files.json",
+    "role": "Immutable own extracted regular-file manifest, targeted path admission only",
+    "sha256": "6ed53aa65f551b846b7d3c81e897d13ac7ca45a09298523abfcb2b31a7aaa853"
+  },
+  {
+    "bytes": 333,
+    "path": "work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/cfg/coso_cfg",
+    "role": "Packaged COSO settings; no active argv/cwd/config selection observed",
+    "sha256": "7d4f87e391dc416a7f227bfed9fb24d1df5606952f705cd6884087677c0d583f"
+  },
+  {
+    "bytes": 71,
+    "path": "work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/cfg/coso_plugins/automation_stm",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "a543a5dfe5ede98fe686924441a86a096968332dddb607ab967961c5d9809931"
+  },
+  {
+    "bytes": 70,
+    "path": "work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/cfg/coso_plugins/automation_tr",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "3742c1a1e3b2f6ab67b803a69dc566527b2ce853d81f32c1fb52dac1a598653a"
+  },
+  {
+    "bytes": 64,
+    "path": "work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/cfg/coso_plugins/aux_stm",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "7e6a76f322256647df849f4fefe53df46646761482074f5bea820fcd66136225"
+  },
+  {
+    "bytes": 63,
+    "path": "work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/cfg/coso_plugins/aux_tr",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "53907aae9974cda79960e68defdec658488142a21c733fd083a28a7f41daf990"
+  },
+  {
+    "bytes": 62,
+    "path": "work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/cfg/coso_plugins/debug",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "f3f69f5d0f13c5c8ce329f41de0c60ebdf081e04d8e2c7a196800828cb4c1ce4"
+  },
+  {
+    "bytes": 157,
+    "path": "work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/cfg/coso_plugins/scs_cmd",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "22d9ae840fbbc5f1313a13ad135a8c1dad2f6b91aac0ddcf0db83bdee0c99eb2"
+  },
+  {
+    "bytes": 333,
+    "path": "work/f461-firmware/2.0.11/analysis/recovery/home/bticino/cfg/coso_cfg",
+    "role": "Packaged COSO settings; no active argv/cwd/config selection observed",
+    "sha256": "7d4f87e391dc416a7f227bfed9fb24d1df5606952f705cd6884087677c0d583f"
+  },
+  {
+    "bytes": 71,
+    "path": "work/f461-firmware/2.0.11/analysis/recovery/home/bticino/cfg/coso_plugins/automation_stm",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "a543a5dfe5ede98fe686924441a86a096968332dddb607ab967961c5d9809931"
+  },
+  {
+    "bytes": 70,
+    "path": "work/f461-firmware/2.0.11/analysis/recovery/home/bticino/cfg/coso_plugins/automation_tr",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "3742c1a1e3b2f6ab67b803a69dc566527b2ce853d81f32c1fb52dac1a598653a"
+  },
+  {
+    "bytes": 64,
+    "path": "work/f461-firmware/2.0.11/analysis/recovery/home/bticino/cfg/coso_plugins/aux_stm",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "7e6a76f322256647df849f4fefe53df46646761482074f5bea820fcd66136225"
+  },
+  {
+    "bytes": 63,
+    "path": "work/f461-firmware/2.0.11/analysis/recovery/home/bticino/cfg/coso_plugins/aux_tr",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "53907aae9974cda79960e68defdec658488142a21c733fd083a28a7f41daf990"
+  },
+  {
+    "bytes": 62,
+    "path": "work/f461-firmware/2.0.11/analysis/recovery/home/bticino/cfg/coso_plugins/debug",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "f3f69f5d0f13c5c8ce329f41de0c60ebdf081e04d8e2c7a196800828cb4c1ce4"
+  },
+  {
+    "bytes": 157,
+    "path": "work/f461-firmware/2.0.11/analysis/recovery/home/bticino/cfg/coso_plugins/scs_cmd",
+    "role": "Packaged plugin settings, no initialized instance or commissioned record",
+    "sha256": "22d9ae840fbbc5f1313a13ad135a8c1dad2f6b91aac0ddcf0db83bdee0c99eb2"
+  },
+  {
+    "bytes": 7328,
+    "path": "work/f460-firmware/2.0.12/research/2026-11-01/first-pass/REPORT.md",
+    "role": "Inherited packaged scene-prefix/configuration context, not new coverage",
+    "sha256": "c7a2949ed3f49a14fa611561795c68f3f166d980326719d61029975069263945"
+  },
+  {
+    "bytes": 12048,
+    "path": "work/f461-firmware/2.0.11/research/2026-11-01/REPORT.md",
+    "role": "Inherited product/packaged module context, not new coverage",
+    "sha256": "3265846866f7cebb4d3a91f6c4fd3c64ad111ff72c617b980faa0b3282927c2f"
+  },
+  {
+    "bytes": 8030,
+    "path": "work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/REPORT.md",
+    "role": "Inherited selected SceneRunner caller/constructor edge; not replayed",
+    "sha256": "578653ad15a4c18b203d9917867f32384d017894875e88054043fae29ff46557"
+  },
+  {
+    "bytes": 7609,
+    "path": "work/f461-firmware/2.0.11/research/2026-11-01-run14-boot-selection/REPORT.md",
+    "role": "Inherited local loader/initializer boundary, no provider/initializer expansion",
+    "sha256": "85438c26d5c27d9259e8970633318f3f3ea495fee5444865b75219ff59009e64"
+  }
+]

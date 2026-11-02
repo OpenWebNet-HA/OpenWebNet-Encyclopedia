@@ -1,0 +1,388 @@
+{
+  "files": {
+    "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md": {
+      "bytes": 39923,
+      "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md",
+      "sha256": "89f0a1cd681924ec8bf6b093c4c39d3d037b14cd416547b8111bffecd2eb5323"
+    },
+    "normal:/etc/default/volatiles/00_core": {
+      "bytes": 2802,
+      "image": "normal",
+      "path": "/etc/default/volatiles/00_core",
+      "sha256": "9bdd59b4adc07dbbe6964cf5930c53d150b54086aabb8ef3c6901d4547c8486b"
+    },
+    "normal:/etc/fstab": {
+      "bytes": 623,
+      "image": "normal",
+      "path": "/etc/fstab",
+      "sha256": "9ce26153f06360ff59bc22896e2e3026998d54e852c9ffa5ac12a3756f0aa784"
+    },
+    "normal:/etc/init.d/bt_daemon-apps.sh": {
+      "bytes": 3599,
+      "image": "normal",
+      "path": "/etc/init.d/bt_daemon-apps.sh",
+      "sha256": "39cfb97523c78c0bc61334f8ff1fea9da7d9a49353c561e56f3fb234fba3ff2e"
+    },
+    "normal:/etc/init.d/dedrifu_env.sh": {
+      "bytes": 55,
+      "image": "normal",
+      "path": "/etc/init.d/dedrifu_env.sh",
+      "sha256": "4eb13580b3d0bcce2dd36af1dcd3337dbcef5436f967ad3b0d999abdd52e9041"
+    },
+    "normal:/etc/init.d/rc": {
+      "bytes": 4457,
+      "image": "normal",
+      "path": "/etc/init.d/rc",
+      "sha256": "fe3ec65c290c93066484033f332e035e498d6e9e6487de52a16c12d11979f466"
+    },
+    "normal:/etc/init.d/rcS": {
+      "bytes": 525,
+      "image": "normal",
+      "path": "/etc/init.d/rcS",
+      "sha256": "19ce896144ff4c85b826fe3cd5f940ff5d41ec19b6bb56f2966215da7888c7be"
+    },
+    "normal:/etc/init.d/setup_m4.sh": {
+      "bytes": 510,
+      "image": "normal",
+      "path": "/etc/init.d/setup_m4.sh",
+      "sha256": "ed40f3f69f3c79af4e74cb30aa83396437b3251fdfec111be16159c6db7d967d"
+    },
+    "normal:/etc/inittab": {
+      "bytes": 1121,
+      "image": "normal",
+      "path": "/etc/inittab",
+      "sha256": "ad8d0055883f6261da2373e782dfe94c59723438f1bdf1103f31722ebd5a4bce"
+    },
+    "normal:/etc/issue": {
+      "bytes": 1184,
+      "image": "normal",
+      "path": "/etc/issue",
+      "sha256": "73bf252da837c1e47614a08fbab0f524e5b4dcd6092c61b5a7e62a40b048b8e4"
+    },
+    "normal:/etc/version": {
+      "bytes": 15,
+      "image": "normal",
+      "path": "/etc/version",
+      "sha256": "dd298f750a4ce5e7732bd58e23d204811d3deac613f4f217d2b0bed31a975ce9"
+    },
+    "normal:/home/bticino/backup_manager/backup_manager": {
+      "bytes": 978280,
+      "image": "normal",
+      "path": "/home/bticino/backup_manager/backup_manager",
+      "sha256": "1f8047a49f4aafc90f5916c3186587316175d68d250f35f17261ceded5fe5b5f"
+    },
+    "normal:/home/bticino/bin/bt_daemon": {
+      "bytes": 141968,
+      "image": "normal",
+      "path": "/home/bticino/bin/bt_daemon",
+      "sha256": "b1a3f99cb78c97cd0aa98616c8074f56c8fd34fb10d2500138ea74ed5ed54c4e"
+    },
+    "normal:/home/bticino/bin/bt_device": {
+      "bytes": 186616,
+      "image": "normal",
+      "path": "/home/bticino/bin/bt_device",
+      "sha256": "6b8f20afc427fa4647f7de9d4101e265073565ecd5113d8ab5535385e312faad"
+    },
+    "normal:/home/bticino/bin/coso": {
+      "bytes": 32168,
+      "image": "normal",
+      "path": "/home/bticino/bin/coso",
+      "sha256": "2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197"
+    },
+    "normal:/home/bticino/bin/dedrifupdater": {
+      "bytes": 43088,
+      "image": "normal",
+      "path": "/home/bticino/bin/dedrifupdater",
+      "sha256": "5e7af98b4621ce693f9386b3497926225f85d7a280d9458360e2000fa608fdc7"
+    },
+    "normal:/home/bticino/bin/fw_manager": {
+      "bytes": 47080,
+      "image": "normal",
+      "path": "/home/bticino/bin/fw_manager",
+      "sha256": "f65fe9084e8ccc7e27b56cb2305b4cf7f1efe7f14ed628f2f01296e1257a1dd3"
+    },
+    "normal:/home/bticino/bin/openserver": {
+      "bytes": 133872,
+      "image": "normal",
+      "path": "/home/bticino/bin/openserver",
+      "sha256": "1ecabc82832aa3d341692ef5e4a426b1bc5804d2b2019520f3665358f1e33428"
+    },
+    "normal:/home/bticino/bin/scsserver": {
+      "bytes": 39024,
+      "image": "normal",
+      "path": "/home/bticino/bin/scsserver",
+      "sha256": "bcc42a6e97007eeaec5e2327dd313fa0c7b3fe03a66505ce3760e45194a45f83"
+    },
+    "normal:/home/bticino/bt_drover_mx/bt_drover_mx": {
+      "bytes": 1034592,
+      "image": "normal",
+      "path": "/home/bticino/bt_drover_mx/bt_drover_mx",
+      "sha256": "3b5d7541133ae6fe4f7822b7c45a8dd414b96019f56c1daf62761ee6a608149c"
+    },
+    "normal:/home/bticino/bt_drover_mx/bt_drover_mx.sh": {
+      "bytes": 232,
+      "image": "normal",
+      "path": "/home/bticino/bt_drover_mx/bt_drover_mx.sh",
+      "sha256": "1c50567aca7f85a9ee10a4c0d1d3298b397e86d2dd47141282c955dafe226c37"
+    },
+    "normal:/home/bticino/bt_smart_home_manager/bt_smart_home_manager": {
+      "bytes": 649384,
+      "image": "normal",
+      "path": "/home/bticino/bt_smart_home_manager/bt_smart_home_manager",
+      "sha256": "c9e76bb3be850730f53d6e63b82dd2502864555c44b85be3554e2a05372448e8"
+    },
+    "normal:/home/bticino/cfg/stack_open.xml": {
+      "bytes": 5197,
+      "image": "normal",
+      "path": "/home/bticino/cfg/stack_open.xml",
+      "sha256": "bc9e8f64e44f562d53b08398b4c0d7be7393d8c17a30aa76f350422789c44d3d"
+    },
+    "normal:/home/bticino/cfg/stack_open_reduced.xml": {
+      "bytes": 5198,
+      "image": "normal",
+      "path": "/home/bticino/cfg/stack_open_reduced.xml",
+      "sha256": "f58632cef544dd507a9218f563b507b2525147f972b1408430314af28728a5e2"
+    },
+    "normal:/home/bticino/gateway_manager/gateway_manager": {
+      "bytes": 190664,
+      "image": "normal",
+      "path": "/home/bticino/gateway_manager/gateway_manager",
+      "sha256": "7e00f53a1aeabf5abd4cbf8e63fa3b53d524bbb77342dbb2173fe4604f3bfe93"
+    },
+    "normal:/home/bticino/matrix_mx/matrix_mx": {
+      "bytes": 3180736,
+      "image": "normal",
+      "path": "/home/bticino/matrix_mx/matrix_mx",
+      "sha256": "4b50d95910061226fc531b296f4f0cfaaa951001c175e35d379987e20720ddad"
+    },
+    "normal:/home/bticino/sp/dbfiles_ws.xml": {
+      "bytes": 432,
+      "image": "normal",
+      "path": "/home/bticino/sp/dbfiles_ws.xml",
+      "sha256": "b6fabbedab91845acc5f4506af2b82b9d63f6e4bd253c87f5cf4d37e02f7bef1"
+    },
+    "recovery:/etc/issue": {
+      "bytes": 1184,
+      "image": "recovery",
+      "path": "/etc/issue",
+      "sha256": "73bf252da837c1e47614a08fbab0f524e5b4dcd6092c61b5a7e62a40b048b8e4"
+    },
+    "recovery:/etc/version": {
+      "bytes": 15,
+      "image": "recovery",
+      "path": "/etc/version",
+      "sha256": "fa188ae1519f3f0fd8efa837a2fc0c231323eb9edda6307448f48a8080fad670"
+    },
+    "recovery:/home/bticino/backup_manager/backup_manager": {
+      "bytes": 978280,
+      "image": "recovery",
+      "path": "/home/bticino/backup_manager/backup_manager",
+      "sha256": "1f8047a49f4aafc90f5916c3186587316175d68d250f35f17261ceded5fe5b5f"
+    },
+    "recovery:/home/bticino/bin/bt_daemon": {
+      "bytes": 141968,
+      "image": "recovery",
+      "path": "/home/bticino/bin/bt_daemon",
+      "sha256": "b1a3f99cb78c97cd0aa98616c8074f56c8fd34fb10d2500138ea74ed5ed54c4e"
+    },
+    "recovery:/home/bticino/bin/bt_device": {
+      "bytes": 186616,
+      "image": "recovery",
+      "path": "/home/bticino/bin/bt_device",
+      "sha256": "6b8f20afc427fa4647f7de9d4101e265073565ecd5113d8ab5535385e312faad"
+    },
+    "recovery:/home/bticino/bin/coso": {
+      "bytes": 32168,
+      "image": "recovery",
+      "path": "/home/bticino/bin/coso",
+      "sha256": "2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197"
+    },
+    "recovery:/home/bticino/bin/dedrifupdater": {
+      "bytes": 43088,
+      "image": "recovery",
+      "path": "/home/bticino/bin/dedrifupdater",
+      "sha256": "5e7af98b4621ce693f9386b3497926225f85d7a280d9458360e2000fa608fdc7"
+    },
+    "recovery:/home/bticino/bin/fw_manager": {
+      "bytes": 47080,
+      "image": "recovery",
+      "path": "/home/bticino/bin/fw_manager",
+      "sha256": "f65fe9084e8ccc7e27b56cb2305b4cf7f1efe7f14ed628f2f01296e1257a1dd3"
+    },
+    "recovery:/home/bticino/bin/openserver": {
+      "bytes": 133872,
+      "image": "recovery",
+      "path": "/home/bticino/bin/openserver",
+      "sha256": "1ecabc82832aa3d341692ef5e4a426b1bc5804d2b2019520f3665358f1e33428"
+    },
+    "recovery:/home/bticino/bin/scsserver": {
+      "bytes": 39024,
+      "image": "recovery",
+      "path": "/home/bticino/bin/scsserver",
+      "sha256": "bcc42a6e97007eeaec5e2327dd313fa0c7b3fe03a66505ce3760e45194a45f83"
+    },
+    "recovery:/home/bticino/bt_drover_mx/bt_drover_mx": {
+      "bytes": 1034592,
+      "image": "recovery",
+      "path": "/home/bticino/bt_drover_mx/bt_drover_mx",
+      "sha256": "3b5d7541133ae6fe4f7822b7c45a8dd414b96019f56c1daf62761ee6a608149c"
+    },
+    "recovery:/home/bticino/bt_smart_home_manager/bt_smart_home_manager": {
+      "bytes": 649384,
+      "image": "recovery",
+      "path": "/home/bticino/bt_smart_home_manager/bt_smart_home_manager",
+      "sha256": "c9e76bb3be850730f53d6e63b82dd2502864555c44b85be3554e2a05372448e8"
+    },
+    "recovery:/home/bticino/cfg/stack_open.xml": {
+      "bytes": 5197,
+      "image": "recovery",
+      "path": "/home/bticino/cfg/stack_open.xml",
+      "sha256": "bc9e8f64e44f562d53b08398b4c0d7be7393d8c17a30aa76f350422789c44d3d"
+    },
+    "recovery:/home/bticino/cfg/stack_open_reduced.xml": {
+      "bytes": 5198,
+      "image": "recovery",
+      "path": "/home/bticino/cfg/stack_open_reduced.xml",
+      "sha256": "f58632cef544dd507a9218f563b507b2525147f972b1408430314af28728a5e2"
+    },
+    "recovery:/home/bticino/gateway_manager/gateway_manager": {
+      "bytes": 190664,
+      "image": "recovery",
+      "path": "/home/bticino/gateway_manager/gateway_manager",
+      "sha256": "7e00f53a1aeabf5abd4cbf8e63fa3b53d524bbb77342dbb2173fe4604f3bfe93"
+    },
+    "recovery:/home/bticino/matrix_mx/matrix_mx": {
+      "bytes": 3180736,
+      "image": "recovery",
+      "path": "/home/bticino/matrix_mx/matrix_mx",
+      "sha256": "4b50d95910061226fc531b296f4f0cfaaa951001c175e35d379987e20720ddad"
+    },
+    "recovery:/home/bticino/sp/dbfiles_ws.xml": {
+      "bytes": 463,
+      "image": "recovery",
+      "path": "/home/bticino/sp/dbfiles_ws.xml",
+      "sha256": "07c8fad8e2a35adb6f3f0808c3cd3f6c7a100232e7e7dd7da0e677b51443dd88"
+    },
+    "work/f460-firmware/2.0.12/analysis/normal-regular-files.json": {
+      "bytes": 1585093,
+      "path": "work/f460-firmware/2.0.12/analysis/normal-regular-files.json",
+      "sha256": "f6dabc979c931bad293824fd3ba0d787ce2c6e67e74428d2cefe15955590f8d1"
+    },
+    "work/f461-firmware/2.0.11/analysis/extraction-summary.json": {
+      "bytes": 818,
+      "path": "work/f461-firmware/2.0.11/analysis/extraction-summary.json",
+      "sha256": "f0edf782d66affc3d978c8583ac5324ec4c7fb89f707b38b9a8dceeec74a7b72"
+    },
+    "work/f461-firmware/2.0.11/analysis/normal-hardlinks.json": {
+      "bytes": 3,
+      "path": "work/f461-firmware/2.0.11/analysis/normal-hardlinks.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "work/f461-firmware/2.0.11/analysis/normal-image-listing.txt": {
+      "bytes": 2760091,
+      "path": "work/f461-firmware/2.0.11/analysis/normal-image-listing.txt",
+      "sha256": "356e741fb16f93cdc4469c8b58dcf1f9b5418d832dd6859e0e4cdfbb234b8530"
+    },
+    "work/f461-firmware/2.0.11/analysis/normal-regular-files.json": {
+      "bytes": 1579278,
+      "path": "work/f461-firmware/2.0.11/analysis/normal-regular-files.json",
+      "sha256": "e9b1782e6dcf1d2e15f6b9724360131a6f5d47a7e8049426f6a5dc77c93dc9bc"
+    },
+    "work/f461-firmware/2.0.11/analysis/normal-special-nodes.json": {
+      "bytes": 3,
+      "path": "work/f461-firmware/2.0.11/analysis/normal-special-nodes.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "work/f461-firmware/2.0.11/analysis/normal-symlinks.json": {
+      "bytes": 142861,
+      "path": "work/f461-firmware/2.0.11/analysis/normal-symlinks.json",
+      "sha256": "a6c0efe9a99158a93014fee307e9690fbbac8ef642d40d14d24ca760db4077bf"
+    },
+    "work/f461-firmware/2.0.11/analysis/recovery-hardlinks.json": {
+      "bytes": 3,
+      "path": "work/f461-firmware/2.0.11/analysis/recovery-hardlinks.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "work/f461-firmware/2.0.11/analysis/recovery-image-listing.txt": {
+      "bytes": 2794691,
+      "path": "work/f461-firmware/2.0.11/analysis/recovery-image-listing.txt",
+      "sha256": "d64844b45a851249e86ae95ef9d786326d1fb470fae5e2e344d81094863748ae"
+    },
+    "work/f461-firmware/2.0.11/analysis/recovery-regular-files.json": {
+      "bytes": 1656725,
+      "path": "work/f461-firmware/2.0.11/analysis/recovery-regular-files.json",
+      "sha256": "6ed53aa65f551b846b7d3c81e897d13ac7ca45a09298523abfcb2b31a7aaa853"
+    },
+    "work/f461-firmware/2.0.11/analysis/recovery-special-nodes.json": {
+      "bytes": 3,
+      "path": "work/f461-firmware/2.0.11/analysis/recovery-special-nodes.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "work/f461-firmware/2.0.11/analysis/recovery-symlinks.json": {
+      "bytes": 134475,
+      "path": "work/f461-firmware/2.0.11/analysis/recovery-symlinks.json",
+      "sha256": "414fdcb8e1fc921e7c7350cb7783d57c0e8a3e0e92a1c03d270f8fee5734b7ed"
+    },
+    "work/f461-firmware/2.0.11/extract_v1.py": {
+      "bytes": 6596,
+      "path": "work/f461-firmware/2.0.11/extract_v1.py",
+      "sha256": "655831dd7a723452b8b56f506ecfbb973238fda8b2fa44da9ddd0bea4638ba4d"
+    },
+    "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/Image": {
+      "bytes": 14434312,
+      "path": "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/Image",
+      "sha256": "f249b7bb544db7743a5b76d5927c5a154204f7c90a946ce08f5177bd46431a94"
+    },
+    "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_dig2_car0.dtb": {
+      "bytes": 39164,
+      "path": "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_dig2_car0.dtb",
+      "sha256": "ba3074579a434c3150c8af2185e270955666d98b0cf8038d72fea0d99897b848"
+    },
+    "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_dig2_car1.dtb": {
+      "bytes": 39164,
+      "path": "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_dig2_car1.dtb",
+      "sha256": "50f363f083e586a7dc80b7106f1fb432b87e4348d6c00cd77cc7224801931923"
+    },
+    "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_dig2_car2.dtb": {
+      "bytes": 39164,
+      "path": "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_dig2_car2.dtb",
+      "sha256": "1359a9f571bd1abaf220cf4e61f88ecebdb513b5cc1d677378ab6125b095e62c"
+    },
+    "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_dig2_car3.dtb": {
+      "bytes": 39164,
+      "path": "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_dig2_car3.dtb",
+      "sha256": "b119d8de7e0e3e7da12ea0932c23caf4f9b033f965f7ab27b66fc74883a46bac"
+    },
+    "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_dig2_car4.dtb": {
+      "bytes": 39247,
+      "path": "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_dig2_car4.dtb",
+      "sha256": "1ca50d33072f493c3da01b79b8dd33e589dd7a289c324e00af8755f17630ce4b"
+    },
+    "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_mfg.dtb": {
+      "bytes": 46174,
+      "path": "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_mfg.dtb",
+      "sha256": "5ad562855b03cbd68cededd2af9e70a8e646ef6e633c9e82a136fa5b921b1a89"
+    },
+    "work/f461-firmware/2.0.11/extracted/fwz.xml": {
+      "bytes": 682,
+      "path": "work/f461-firmware/2.0.11/extracted/fwz.xml",
+      "sha256": "bec9032c20b4fd306f9240caf6819b0e03bfebb6b4c8fb2133b9ff0402b2ecf1"
+    },
+    "work/f461-firmware/2.0.11/package-image-identities.json": {
+      "bytes": 6804,
+      "path": "work/f461-firmware/2.0.11/package-image-identities.json",
+      "sha256": "4c8f3223198462275c4feef426362d08519b03e179ed4bec9cfd2384aafe461a"
+    },
+    "work/f461-firmware/2.0.11/research/2026-11-01/image_vfs.py": {
+      "bytes": 5602,
+      "path": "work/f461-firmware/2.0.11/research/2026-11-01/image_vfs.py",
+      "sha256": "6c54cac0515e0c74409e802fd8f4bf7a23caa2fff876287333917f598f72106a"
+    },
+    "work/myhomeserver1-firmware/3.87.13/analysis/normal-regular-files.json": {
+      "bytes": 1597459,
+      "path": "work/myhomeserver1-firmware/3.87.13/analysis/normal-regular-files.json",
+      "sha256": "066ba8668cbce4b10a2d4f06167eb20b74817abfae3ac683f67af1a7c5c6b580"
+    }
+  },
+  "scope": "Exact selected input bytes; entire regular-file manifests separately pin magic-census source identities. No credentials/config values exported beyond explicit public startup/version/path whitelist."
+}

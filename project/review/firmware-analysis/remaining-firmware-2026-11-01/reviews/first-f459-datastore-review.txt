@@ -1,0 +1,51 @@
+# F459 and central datastore source review
+
+PASS for the current bounded first-exploration results. No author correction requested. This independent source/artifact audit uses host regular-file reads, header parsing, static readelf metadata, safe selected XML/startup metadata and archive central directories. No original/vendor/native instructions, provider/service/OS/network/bus/mount operation, SQLite connection/query, semantic fixture, decryption or closed transport/authentication/session/framing route was executed or inspected. No author/source/repository output was edited.
+
+## F459 source identity and positive evidence
+
+The retained F459_020105.fwz is114,774,253 bytes with SHA256 1d9539d6a9e500032438936d1ce28e7cbddef9788c5712d50c9a60586718f6d3. Independently hashing the archive agrees with acquisition.json, acquisition SUMMARY and the canonical manifest hash. These establish examined input identity, not authenticity/trust or installed release. Curated OWN-DEV-0198 supplies the Driver Manager role only; no F454/MHS/F46 object or physical role is transferred.
+
+All41 F459 input pins verify against original regular-file bytes and size. All22 selected normal/recovery ELF instances have independently checked ELF32 little-endian ARM headers. Static readelf dynamic/symbol results reproduce the saved selected dependencies and SQLite import/export rows. The top-level drivermanager/bt_driver shell wrapper and bin/bt_driver ELF are distinct files. The latter has section-header offset0 and no dynamic/interpreter program segment in its selected header table, consistent with its static metadata; that is not runtime behavior. Framework manifest2.1.0 remains distinct from outer firmware2.1.5. Selected XML tag/count/version/client metadata, safe startup line numbers/text and saved normal/recovery equality comparisons agree; scripts and full configuration values were not evaluated or exported.
+
+libmhshared.so.1 imports undefined sqlite3_open and declares libsqlite3.so.0. The original two safe constants independently match exact file offsets:37044/25 bytes for the shared-store path and37200/143 bytes for the shared-table DDL. The latter includes source types/default/key text, not observed database schema. No instruction/caller, filename-to-call argument, successful open/create, executed DDL, rows or persistence/lifetime policy is established. The separate packaged module exporting sqlite_open/sqlite_version uses the legacy API and is not the sqlite3_open import merely by name. dbfiles_ws.xml is XML metadata, not a relational database identified by filename.
+
+## Central header and archive inventory
+
+All13 central input pins verify. I independently re-read first64 bytes at offset0 of all16,088 recorded regular files in ten component roots: eight filesystem views and two separate legacy application bundles, across six package records. F455 has zero filesystem components here; its opaque standalone binary is not evidence of a scanned filesystem or database absence. File sizes/no-live-symlink checks, selected signature classification and every recorded ELF-header count agree.
+
+Exactly zero files start with SQLite3 magic in that bounded universe. Exactly one recorded database-extension/signature candidate is F453AV application Thumbs.db,85,504 bytes, with OLE compound magic d0cf11e0a1b11ae1. This is not a SQLite catalogue/schema; streams/pictures were not parsed. All301 structured-path entries match their source sizes/hashes. These are path/type leads, not configuration values or installed data. The one in-tree ZIP directory is MH200N img.zip with eight GIF-name members; metadata was checked without opening payloads.
+
+Auxiliary ZIP directory hashes/member sizes/flags/CRCs also agree. F450 PROD50.xtz declares encrypted50/master.sqlite,289,792 bytes, CRC52150069, beside extra.xml. This is a filename/encryption/central-directory lead only: plaintext header/schema/rows remain unexamined. No password, decryption or forced format conversion was attempted. Signature detection is limited to selected known offset-zero forms; embedded offsets, encryption, runtime-created stores and missing installed assets are not excluded.
+
+No SQLite connection or schema/count/data query ran: sqlmeta is conditional on a SQLite3-positive candidate and none exists. Its source contains mode=ro/immutable, query_only, trusted_schema OFF, extension disabling, bounded progress handling and a regular-table-only count path; views/virtual tables are excluded from that count path. This audit does NOT treat this unexercised helper, raw schema/default export policy or SQLite2/BDB/GDBM/LMDB handling as a tested or approved future parser/privacy contract. Any future positive database requires its own source/schema/default/privacy review before exercising/exporting it. The current report accurately preserves this boundary.
+
+## Preservation and method scope
+
+The F459 first-candidate index verifies5 exact members and central first-candidate verifies7, including collector/report/results/history; original files equal those copies. Both current manifests and selected source identities agree. Central v1 fails Python syntax parsing before execution; current v2 is exactly one inserted space changing else48 to else 48 and parses successfully. No source guard was weakened, old v1 remains exact and no prior scan/output is claimed. No collector was run wholesale by this reviewer because its generator writes exclusively; reconstruction was independent bounded reads instead.
+
+A reviewer in-memory header-audit draft initially repeated that spacing typo and stopped at Python parse time, before reads or outputs. The corrected in-memory audit completed the stated checks. No author or review candidate was generated/overwritten by that draft, and no contemporaneous historical script artifact is claimed.
+
+The resulting claims support a first header/datastore-lead survey and local F459 import/literal metadata only. They establish neither absence of databases in the firmware generally nor a usable populated database, effective provider, application activation, public protocol, physical capability or complete Device/source approval. Earlier research and execution ledgers remain unchanged.
+
+## Exact reviewed pins
+
+| File | SHA-256 |
+| --- | --- |
+| `work/f459-firmware/2.1.5/research/2026-11-01-first-exploration/REPORT.md` | `855e0f3016343bc4b8ab387a7f0ded5265c0dd67e67630e179b41bfb29863e8f` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-first-exploration/collect_firstpass_v1.py` | `e8d3adabafd6fd8793f121484cbb6f10016b1f7bb966481ac9d0c58fd7dd4553` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-first-exploration/SOURCE.json` | `f65ed2f8c11ec515571cd0487254bbc1ac41ad9dc10c03676cd50360c39ee5e4` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-first-exploration/INPUT_PINS.json` | `cf51daa61a2ae71e7a4746da78c8e792a76108e30ae822bd9087282c46e709d9` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-first-exploration/OUTPUT_MANIFEST.json` | `f807503ca136b4610f8a1733723fd36301f58ad9e76c6d125b4bcedc7649d64f` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-first-exploration/first-candidate/INDEX.json` | `855825a6404b715a1c0be7c86adbe9472080a130687fd8d2a77a7d303e83e75c` |
+| `work/remaining-firmware-exploration/2026-11-01/DATASTORE_REPORT.md` | `12b20af312682aa8ed5aad402dfa2bc94337b90d0375806da07d88a8e1e2e804` |
+| `work/remaining-firmware-exploration/2026-11-01/collect_datastores_v1.py` | `587a08bff8ea9fb7aadf85d683a32f0107b3abffdcd5e5a828168ea0292a87e6` |
+| `work/remaining-firmware-exploration/2026-11-01/collect_datastores_v2.py` | `0b255306691a3fb7c36ff8f9fb3ab1a0ecabb75dbe721f37fc91f13b07311a51` |
+| `work/remaining-firmware-exploration/2026-11-01/DATASTORE_TOOL_HISTORY.json` | `460cd120460dce7ecf7adbab75f47254cb4d0cc6efd5d14c9ee7dbe1c6868d57` |
+| `work/remaining-firmware-exploration/2026-11-01/DATASTORES.json` | `eb2629e80f037b0c2f297d2a036357999ef7b8e9013abe0c28a365ed49c8fce6` |
+| `work/remaining-firmware-exploration/2026-11-01/INPUT_PINS.json` | `c048de6c0bce441832edc76635dfde1cf4153d1f22dcbfd5c415a03f07c7f2de` |
+| `work/remaining-firmware-exploration/2026-11-01/SCAN_SUMMARY.json` | `1d4f7170644b40b29ea3a54644a56fd73daab2df9d1eacd02591f96036d81c14` |
+| `work/remaining-firmware-exploration/2026-11-01/DATASTORE_OVERVIEW.json` | `4f2370ea5a9d133d1850026aed45d7a84684888088a15d0efcc07664851afafe` |
+| `work/remaining-firmware-exploration/2026-11-01/datastore-first-candidate/INDEX.json` | `48526e4e70443e7caea9bf27c1452bb232575a29c990bd356f865c9fee34c72f` |
+
+PASS is limited to the available exact sources, safe bounded observations and preservation scope above. No current author correction or expanded source investigation is required.

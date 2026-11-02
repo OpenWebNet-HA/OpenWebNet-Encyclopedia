@@ -1,0 +1,107 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000fa970 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x57190>:
+   fa970:	d503233f 	paciasp
+   fa974:	d10303ff 	sub	sp, sp, #0xc0
+   fa978:	b00010e2 	adrp	x2, 317000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1c0070>
+   fa97c:	910023e1 	add	x1, sp, #0x8
+   fa980:	4f000400 	movi	v0.4s, #0x0
+   fa984:	a9097bfd 	stp	x29, x30, [sp, #144]
+   fa988:	910243fd 	add	x29, sp, #0x90
+   fa98c:	f947dc42 	ldr	x2, [x2, #4024]
+   fa990:	a90a53f3 	stp	x19, x20, [sp, #160]
+   fa994:	aa0003f4 	mov	x20, x0
+   fa998:	d0000cd3 	adrp	x19, 294000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x13d070>
+   fa99c:	91174273 	add	x19, x19, #0x5d0
+   fa9a0:	f9400040 	ldr	x0, [x2]
+   fa9a4:	f90047e0 	str	x0, [sp, #136]
+   fa9a8:	d2800000 	mov	x0, #0x0                   	// #0
+   fa9ac:	f90003ff 	str	xzr, [sp]
+   fa9b0:	aa1303e0 	mov	x0, x19
+   fa9b4:	ad000020 	stp	q0, q0, [x1]
+   fa9b8:	ad010020 	stp	q0, q0, [x1, #32]
+   fa9bc:	ad020020 	stp	q0, q0, [x1, #64]
+   fa9c0:	ad030020 	stp	q0, q0, [x1, #96]
+   fa9c4:	97fc9957 	bl	20f20 <strtof@plt+0x10>
+   fa9c8:	350007a0 	cbnz	w0, faabc <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x572dc>
+   fa9cc:	a90b5bf5 	stp	x21, x22, [sp, #176]
+   fa9d0:	910003f6 	mov	x22, sp
+   fa9d4:	aa1303e0 	mov	x0, x19
+   fa9d8:	aa1603e1 	mov	x1, x22
+   fa9dc:	d2800003 	mov	x3, #0x0                   	// #0
+   fa9e0:	52800022 	mov	w2, #0x1                   	// #1
+   fa9e4:	97fc9ec7 	bl	22500 <_ZNSt18condition_variableC1Ev@plt>
+   fa9e8:	35000680 	cbnz	w0, faab8 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x572d8>
+   fa9ec:	f94003f5 	ldr	x21, [sp]
+   fa9f0:	b4000655 	cbz	x21, faab8 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x572d8>
+   fa9f4:	f9401681 	ldr	x1, [x20, #40]
+   fa9f8:	aa1603e3 	mov	x3, x22
+   fa9fc:	aa1503e0 	mov	x0, x21
+   faa00:	d2800004 	mov	x4, #0x0                   	// #0
+   faa04:	12800002 	mov	w2, #0xffffffff            	// #-1
+   faa08:	f90003ff 	str	xzr, [sp]
+   faa0c:	97fc9c71 	bl	21bd0 <_ZNK4Json5Value5asIntEv@plt>
+   faa10:	35000380 	cbnz	w0, faa80 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x572a0>
+   faa14:	f94003e0 	ldr	x0, [sp]
+   faa18:	97fc99da 	bl	21180 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7replaceEmmPKcm@plt>
+   faa1c:	7101941f 	cmp	w0, #0x65
+   faa20:	54000660 	b.eq	faaec <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x5730c>  // b.none
+   faa24:	f94003f3 	ldr	x19, [sp]
+   faa28:	b40002d3 	cbz	x19, faa80 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x572a0>
+   faa2c:	d503201f 	nop
+   faa30:	528001a1 	mov	w1, #0xd                   	// #13
+   faa34:	aa1303e0 	mov	x0, x19
+   faa38:	97fc9936 	bl	20f10 <strtof@plt>
+   faa3c:	52800142 	mov	w2, #0xa                   	// #10
+   faa40:	d2800001 	mov	x1, #0x0                   	// #0
+   faa44:	97fc9e47 	bl	22360 <g_list_free_full@plt+0x10>
+   faa48:	b9001a80 	str	w0, [x20, #24]
+   faa4c:	528001c1 	mov	w1, #0xe                   	// #14
+   faa50:	aa1303e0 	mov	x0, x19
+   faa54:	97fc992f 	bl	20f10 <strtof@plt>
+   faa58:	52800142 	mov	w2, #0xa                   	// #10
+   faa5c:	d2800001 	mov	x1, #0x0                   	// #0
+   faa60:	97fc9e40 	bl	22360 <g_list_free_full@plt+0x10>
+   faa64:	b9001e80 	str	w0, [x20, #28]
+   faa68:	aa1303e0 	mov	x0, x19
+   faa6c:	97fc99c5 	bl	21180 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7replaceEmmPKcm@plt>
+   faa70:	7101901f 	cmp	w0, #0x64
+   faa74:	54fffde0 	b.eq	faa30 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x57250>  // b.none
+   faa78:	aa1303e0 	mov	x0, x19
+   faa7c:	97fc9c79 	bl	21c60 <_ZNK4Json5Value5emptyEv@plt>
+   faa80:	b00010e0 	adrp	x0, 317000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1c0070>
+   faa84:	f947dc00 	ldr	x0, [x0, #4024]
+   faa88:	f94047e2 	ldr	x2, [sp, #136]
+   faa8c:	f9400001 	ldr	x1, [x0]
+   faa90:	eb010042 	subs	x2, x2, x1
+   faa94:	d2800001 	mov	x1, #0x0                   	// #0
+   faa98:	54000321 	b.ne	faafc <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x5731c>  // b.any
+   faa9c:	aa1503e0 	mov	x0, x21
+   faaa0:	a9497bfd 	ldp	x29, x30, [sp, #144]
+   faaa4:	a94a53f3 	ldp	x19, x20, [sp, #160]
+   faaa8:	a94b5bf5 	ldp	x21, x22, [sp, #176]
+   faaac:	910303ff 	add	sp, sp, #0xc0
+   faab0:	d50323bf 	autiasp
+   faab4:	17fc9deb 	b	22260 <_ZN4Json5Value5beginEv@plt>
+   faab8:	a94b5bf5 	ldp	x21, x22, [sp, #176]
+   faabc:	b00010e0 	adrp	x0, 317000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1c0070>
+   faac0:	f947dc00 	ldr	x0, [x0, #4024]
+   faac4:	f94047e2 	ldr	x2, [sp, #136]
+   faac8:	f9400001 	ldr	x1, [x0]
+   faacc:	eb010042 	subs	x2, x2, x1
+   faad0:	d2800001 	mov	x1, #0x0                   	// #0
+   faad4:	54000121 	b.ne	faaf8 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x57318>  // b.any
+   faad8:	a9497bfd 	ldp	x29, x30, [sp, #144]
+   faadc:	a94a53f3 	ldp	x19, x20, [sp, #160]
+   faae0:	910303ff 	add	sp, sp, #0xc0
+   faae4:	d50323bf 	autiasp
+   faae8:	d65f03c0 	ret
+   faaec:	f94003e0 	ldr	x0, [sp]
+   faaf0:	97fc9c5c 	bl	21c60 <_ZNK4Json5Value5emptyEv@plt>
+   faaf4:	17ffffe3 	b	faa80 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x572a0>
+   faaf8:	a90b5bf5 	stp	x21, x22, [sp, #176]
+   faafc:	97fc9dfd 	bl	222f0 <_ZNK4Json17ValueIteratorBase7isEqualERKS0_@plt>

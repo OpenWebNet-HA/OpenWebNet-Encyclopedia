@@ -1,0 +1,137 @@
+[
+  {
+    "key_paths_only": [
+      "/Application Parameters",
+      "/Application Parameters/ConnectionAlwaysEnabled",
+      "/Application Parameters/ManageIssac",
+      "/Communication",
+      "/Communication/ChnName",
+      "/Communication/Id",
+      "/Communication/Name",
+      "/General Parameters",
+      "/General Parameters/LogLev",
+      "/General Parameters/LogTime",
+      "/General Parameters/Logfile",
+      "/Watchdog settings",
+      "/Watchdog settings/WDTfile",
+      "/Watchdog settings/WDTtime"
+    ],
+    "path": "home/bticino/matrix_mx/config.json",
+    "sha256": "95b9bc9a702cc0124d3ed6f35b3ac81c42062ae7c1accc85da27922d97363b8b",
+    "size": 399,
+    "values": "withheld; keys are structural evidence only"
+  },
+  {
+    "key_paths_only": [
+      "/logFile",
+      "/logLevel",
+      "/scenesPath",
+      "/wdtEnabled",
+      "/wdtFile",
+      "/wdtTimeout"
+    ],
+    "path": "home/bticino/scheduling_manager/config.json",
+    "sha256": "bc83cdfcb72a743d66583428042d4db74b5e24c84ca111f1ae409b3e9cf3b9cf",
+    "size": 243,
+    "values": "withheld; keys are structural evidence only"
+  },
+  {
+    "key_paths_only": [
+      "/alarmConfigFile",
+      "/dataPath",
+      "/logFile",
+      "/logLevel",
+      "/partitionsIdsFile",
+      "/pollingTime",
+      "/sensorsIdsFile",
+      "/traceCom",
+      "/wdtEnabled",
+      "/wdtFile",
+      "/wdtTimeout"
+    ],
+    "path": "home/bticino/alarm_manager/config.json",
+    "sha256": "670aba4a8c2810ec8c42547e39224046098be06b281c37dffc3cbf8568333418",
+    "size": 394,
+    "values": "withheld; keys are structural evidence only"
+  },
+  {
+    "key_paths_only": [
+      "/HTTPport",
+      "/HTTPtimeout",
+      "/backupSaveFolder",
+      "/certPath",
+      "/dataPath",
+      "/encryptedPW",
+      "/logFile",
+      "/logLevel",
+      "/processToBackup",
+      "/processToBackup/alarm_manager",
+      "/processToBackup/bt_ext_light",
+      "/processToBackup/bt_mail_sender",
+      "/processToBackup/bt_thermo_manager",
+      "/processToBackup/matrix_mx",
+      "/processToBackup/player_manager",
+      "/processToBackup/scheduling_manager",
+      "/processToClean",
+      "/processToClean/bt_netatmo.sh",
+      "/processToClean/scheduling_manager",
+      "/wdtEnabled",
+      "/wdtFile",
+      "/wdtTimeout"
+    ],
+    "path": "home/bticino/backup_manager/config.json",
+    "sha256": "996a7a6656aa9a7aefde545a8d86ff40ba1a70e86eda44d1108a8174e4236245",
+    "size": 1906,
+    "values": "withheld; keys are structural evidence only"
+  },
+  {
+    "key_paths_only": [
+      "/dhcpEnabled",
+      "/logFile",
+      "/logLevel",
+      "/newLedSupport",
+      "/wdtEnabled",
+      "/wdtFile",
+      "/wdtTimeout"
+    ],
+    "path": "home/bticino/gateway_manager/config.json",
+    "sha256": "f400f796578f4ed8e9f157615879bc541e27b98b207c65ce543d4752c69e046d",
+    "size": 211,
+    "values": "withheld; keys are structural evidence only"
+  },
+  {
+    "key_paths_only": [
+      "/dataPath",
+      "/logFile",
+      "/logLevel",
+      "/openserverParams",
+      "/openserverParams/ChnName",
+      "/openserverParams/GetRetries",
+      "/openserverParams/Id",
+      "/openserverParams/Name",
+      "/wdtEnabled",
+      "/wdtFile",
+      "/wdtTimeout"
+    ],
+    "path": "home/bticino/energy_manager/config.json",
+    "sha256": "fa9380d0820b4271d90c5f287d6166b218add7bd7dc0621841d4788f689e9226",
+    "size": 344,
+    "values": "withheld; keys are structural evidence only"
+  },
+  {
+    "key_paths_only": [
+      "/dataPath",
+      "/logFile",
+      "/logLevel",
+      "/oldNuvoPath",
+      "/oldSonosFile",
+      "/wdtEnabled",
+      "/wdtFile",
+      "/wdtTimeout"
+    ],
+    "path": "home/bticino/player_manager/config.json",
+    "sha256": "3c2461d82665e3a7c1837136c1f6f40cd4255e5e0073f7b5fb1480ea75fc5b17",
+    "size": 356,
+    "values": "withheld; keys are structural evidence only"
+  }
+]

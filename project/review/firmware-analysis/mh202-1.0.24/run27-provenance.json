@@ -1,0 +1,139 @@
+{
+  "checkpoint": "run27",
+  "status": "One original helper/object/STM corpus and static WHO29 owner/read boundary, independently reviewed; documentary/final gates recorded separately",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "corrected_native_report",
+      "research_path": "work/mh202-firmware/research/2026-10-30/who25/run27-native/REPORT.v2.md",
+      "source_sha256": "437cb8bb3777594d10b27bbc76a10a7b944431b1e918f28db51e89eaae50416a",
+      "published": "run27-native-report.txt",
+      "published_sha256": "437cb8bb3777594d10b27bbc76a10a7b944431b1e918f28db51e89eaae50416a"
+    },
+    {
+      "role": "exact_first_report_identity_error_and_separate_correction",
+      "research_path": "work/mh202-firmware/research/2026-10-30/who25/run27-native/SOURCE_IDENTITY_REFINEMENT.md",
+      "source_sha256": "cceba8f83a6b808192c848b1a5e131733970ce323dd603328d075a0ad12e4ccd",
+      "published": "run27-native-identity-refinement.txt",
+      "published_sha256": "cceba8f83a6b808192c848b1a5e131733970ce323dd603328d075a0ad12e4ccd"
+    },
+    {
+      "role": "independent_source_isolation_audit_without_native_replay",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run27/native-review.md",
+      "source_sha256": "187e879f6fe2ff617239169b2ccbd672e6753b75864298520c806ebc04a49852",
+      "published": "run27-native-review.txt",
+      "published_sha256": "187e879f6fe2ff617239169b2ccbd672e6753b75864298520c806ebc04a49852"
+    },
+    {
+      "role": "static_positive_WHO29_owner_and_getter_boundary",
+      "research_path": "work/mh202-firmware/research/2026-10-30/routing/run27/REPORT.md",
+      "source_sha256": "b28b2d23d05d5edb25ba0fa70886c98b50fbcdcf9b370d3dcdfe268dd34e9712",
+      "published": "run27-owner-report.txt",
+      "published_sha256": "b28b2d23d05d5edb25ba0fa70886c98b50fbcdcf9b370d3dcdfe268dd34e9712"
+    },
+    {
+      "role": "independent_source_review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run27/owner-review.md",
+      "source_sha256": "66ec88c1ae2a86d1f506cb9e8c770884ff8eeafb1fd24a99641ca82673168544",
+      "published": "run27-owner-review.txt",
+      "published_sha256": "66ec88c1ae2a86d1f506cb9e8c770884ff8eeafb1fd24a99641ca82673168544"
+    },
+    {
+      "role": "frozen_synthesis_through26_not_current27_or_final_completion",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run27/FINAL_DRAFT.through26.md",
+      "source_sha256": "e1ba480d93b1a0c60105c85a5f0ab6e8bfa94db8bfa066c421baa1cf2f1ae301",
+      "published": "run27-draft-through26.txt",
+      "published_sha256": "e1ba480d93b1a0c60105c85a5f0ab6e8bfa94db8bfa066c421baa1cf2f1ae301"
+    },
+    {
+      "role": "documentary_source_synthesis_review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run27/draft-review.md",
+      "source_sha256": "2dadce659ffec11bfa1048bfcf08706860638ecce50c06904267a582d39ba014",
+      "published": "run27-draft-review.txt",
+      "published_sha256": "2dadce659ffec11bfa1048bfcf08706860638ecce50c06904267a582d39ba014"
+    },
+    {
+      "role": "pre_execution_parent_containment_review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/validation/run27/PARENT_NATIVE_PREFLIGHT.json",
+      "source_sha256": "cc205addda97bb8e1ecd59cabe9aa09421048d7d69c709f404495a49c3a41af4",
+      "published": "run27-parent-preflight.json",
+      "published_sha256": "cc205addda97bb8e1ecd59cabe9aa09421048d7d69c709f404495a49c3a41af4"
+    },
+    {
+      "role": "earlier_independent_native_byte_replay_not_added_to_corpus",
+      "research_path": "work/mh202-firmware/research/2026-10-30/validation/run27/parent-native-replay.json",
+      "source_sha256": "407d102e61533b4ee9efa3d5caf3624890cb3d5688cf92b584fca2544c24ab98",
+      "published": "run27-parent-replay.json",
+      "published_sha256": "407d102e61533b4ee9efa3d5caf3624890cb3d5688cf92b584fca2544c24ab98"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/who25/run27-native/collect_join_v1.py",
+      "sha256": "3c7a08cab78ad49aee94a8fae31f8425e078a58986f5c59e33270f521ff93f3a",
+      "method": "static source/saved-evidence reconstruction only"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/who25/run27-native/emulate_query_stm_v1.py",
+      "sha256": "a01175bf586005b229cbf255ebe6f2a2fed33ce4d1eb73d1e0e8215c54138b4a",
+      "method": "originalprivateCPU+explicitAPIprimitives"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/routing/run27/collect_owner_v1.py",
+      "sha256": "354bcb9a88b2ac7846986dcc3f62c12186073b01182c235931bdb824ac53a088",
+      "method": "static source/saved-evidence reconstruction only"
+    }
+  ],
+  "new_original_execution": 380,
+  "generated_outputs": {
+    "native_static_collection_including_manifest": 17,
+    "native_saved_result_and_tool_proof": 2,
+    "WHO29_including_manifest": 22,
+    "total": 41
+  },
+  "canonical_execution": {
+    "new_corpora": 1,
+    "corpora": 15,
+    "top_level_entries": 71,
+    "original_instruction_visits": 31961,
+    "primitive_callbacks": 3165,
+    "linker_redirect_callbacks": 132,
+    "exit_boundaries": 27,
+    "selector_read_stop_boundaries": 2,
+    "code_hook_visits": 35287,
+    "firmware_processes": 0,
+    "target_OS_calls": 0
+  },
+  "new_corpus": {
+    "top_level_entries": 3,
+    "original_instruction_visits": 380,
+    "primitive_callbacks": 25,
+    "linker_redirect_callbacks": 4,
+    "exit_boundaries": 3,
+    "stop_boundaries": 0,
+    "code_hook_visits": 412,
+    "setup_data_relocations": 6,
+    "counter_seed_writes": 1,
+    "tuple_callback": 0,
+    "timer_and_context": "opaqueunmappedmodels, no realtimer/callback/registry/I/O"
+  },
+  "draft_scope": {
+    "through_checkpoint": 26,
+    "sha256": "e1ba480d93b1a0c60105c85a5f0ab6e8bfa94db8bfa066c421baa1cf2f1ae301",
+    "ledger_is_historical_through26": true,
+    "root_MORNING_REPORT_unchanged": true,
+    "final_edition_requires_NEW": "FINAL_REPORT.md"
+  },
+  "identity_refinement": {
+    "wrong_first_report_sha256": "58dc06a82a9a21a50ad60e3b9b5a513d120652c74945d38c924cfad7fb9436e3",
+    "current_report_version": "REPORT.v2.md",
+    "only_change": "Multimedia hash in original WHO25STM table row replaced by actualcorrectWHO25STM hash; no code/results/count changes, v1not overwritten"
+  },
+  "limits": [
+    "Manual original-object handoff and syntheticcounter/tuple/API models, not natural registry/loader/runtime/physical transaction",
+    "CurrentWHO29getter0 supplied, constructor rawarguments stop at delegate; no currentloggerstate/otherdebugcommands/publicWHO29spec/accessroute claim",
+    "Native successful--check replay earlier confirmed, not rerun by final validator; verification never accumulates a new corpus",
+    "Old14canonicalcorp and draftthrough26/frozenMORNINGthrough22/historylimits retained"
+  ]
+}

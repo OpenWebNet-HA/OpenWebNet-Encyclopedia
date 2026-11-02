@@ -1,0 +1,31 @@
+# Independent source review: MH202 generated lifecycle syntax
+
+Result: PASS for the bounded static source joins and reproducibility. No material correction requested to the frozen candidate. This is an independent original-byte/source review, not successful scenario compilation, native parser execution, full grammar validation or a live lifecycle test.
+
+Reviewed candidate: `work/mh202-firmware/research/2026-10-31-generated-lifecycle/`.
+
+| File | SHA256 |
+| --- | --- |
+| REPORT.md | `42466947a14493cfdc310844fd34652d0c40c0149cf58ab7a09cb9c7a9f068a9` |
+| collect_lifecycle_v1.py | `94327c49680884e4e8643c5b01164dfa411fab138c2265259aae5e0d7f68620f` |
+| OUTPUT_MANIFEST.v1.json | `fc808f5d3e3b1418ba57f9230b8b0348c3c970c32d9b84893f0503ff5c940eb7` |
+| PRODUCER_SLICES.v1.json | `830505c5c133fe34aeb2f276ba454f11146cad8cbd02454d2c4f32ababbe4c99` |
+| PREDICATE_METHODS.v1.json | `d9872fd23ab7865b7b73235aedc4d0c33369bfb158cbe93a6193ea1522774728` |
+| NATIVE_SOURCE.v1.json | `fa6111b9fcab69c8cc089a58b3cfb48f52298d282e7406fc958b72340dea32a0` |
+| initial-generated-v1/SNAPSHOT_INDEX.json | `94633087cb52c6efc91daf234b519d775c32191fe1bdebf14cff34ed30b5bedf` |
+
+I ran the collector's read-only `--check`: PASS14 outputs,8 native source spans,8 asserted words,13 public syntax/pool relationships,68 input identities and6 fresh predicates. Independently, I checked all68 input hashes/sizes, all8 span offsets/hashes and words, all13 pool targets (including the library PIC calculation),13 evidence members plus manifest/report/collector identities, and all16 exact first-candidate copies. The snapshot index excludes itself and was precomputed before opening its output. Generation checks for existing evidence and the first-snapshot directory before writing; successful check only compares bytes. The collector executes host Python static parsers/binutils; neither vendor CLR instructions nor ARM/JavaScript/script code is invoked.
+
+I independently matched all5473 recorded producer instructions' bytes against the original Core method's file offsets and12-byte header, its complete body hash, and the full Core assembly identity. These are source-byte comparisons, not executed instruction counts or a semantic review of every instruction. Fresh host metadata parsing also checked the6 predicate bodies, their actual `get_TypeCommandSupport` target, and9 MethodSpecs resolving to `System.Linq.Enumerable.Where/Select/Count`. All359 producer user-string operands agree with the original managed user-string heap. Core tokens remain assembly-local. Suite/package, catalogue/database and firmware applicability remain distinct.
+
+The selected source joins agree with the report:
+
+- Header template `{0} {1}="{2}"` supplies a single blank after the numeric label. `$NOMESCRIPT` takes `Path.GetFileName(FileSPT)`. The taskmanager's five-byte `$NOME` comparison and interpreter's twelve-byte leading-blank ` $NOMESCRIPT` comparison are separate, compatible prefix consumers under the stated ordinary basename/copy/format premises. The taskmanager's nested ID.spt/ID.spt format is a path-shape join, not proof of export/installation or acceptance outside its selected numeric loop.
+- Actual collection getters and tags distinguish Start3, Stop6, OnlyIf4 and Execute5. Empty selected Start/Stop source branches supply SEMPRE/MAI before BEGIN; they do not equate Stop, END, disable or panic. BEGIN precedes OnlyIf construction, and the original native scanner's leading-blank marker and ftell+1 agree with the selected one-space producer template under normal stdio premises.
+- The final OnlyIf aggregate's true target is the next label and false target begins as `%REP_ACT%`; reset/action construction follows. The repeat branch's stored BEGIN label, optional repeat-GOTO label, END label and later placeholder replacement agree with the selected original IL. Full expression precedence, truth, GOTO lifetime and runtime repeat semantics remain unproved.
+- Ordinary CUSTOM/object9 delay source reads ORAFROM/ORAFROMMULTI and maps1/60/3600 to s/m/h. Its `SLEEP(amount%,"unit")` format agrees with the native index6 decimal cursor, percent terminator, percent-comma-quote skip and quoted-unit copy before the imported helper call. The selected library source's m/h arithmetic is60/3600; s retains the amount. Runtime provider binding, overflow, malformed inputs, cancellation and elapsed time remain outside this review. SLEEPRANDOM is not promoted from an inspected literal to a completed native join.
+- The final library pool handling is correct: pool3e04 is a relative value, added to the base computed from3acc+8+pool3e00. An earlier staged collector I viewed treated it as direct; both author and reviewer identified that before the frozen candidate. The author states the staged refinement occurred before first execution/output generation; the final collector includes the prologue and exact PIC proof. I do not certify an unretained staged draft's bytes as part of the16 frozen first copies.
+
+Original MH202 inputs independently read through ImageVFS were taskmanager SHA`ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e`, bt_script SHA`f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4`, and libdomotica SHA`5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09`. Core.dll SHA`7b7269a14652472fc471568430364a038f02a8c881cb5c9db089a7683e38307b` and CompileScenario body SHA`c4b37d9963aaae5f70e28e60be3db81228cbcb5d164852845a908272af90ec4e` match the candidate evidence.
+
+The report correctly leaves a genuine configured compiler input/output, successful full native parser acceptance, provider/global/state binding, file installation, full stop/pause/panic/restart recovery and physical behavior unresolved. No author file or earlier dossier was edited. New original execution/native replay/target I/O/network activity is0. One review-only inline Python check initially had a syntax typo before running; the corrected read-only check passed and produced no firmware or candidate mutation.

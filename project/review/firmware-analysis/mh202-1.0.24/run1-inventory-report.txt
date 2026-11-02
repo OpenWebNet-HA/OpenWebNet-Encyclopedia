@@ -1,0 +1,40 @@
+# MH202 initial verified inventory and F454 comparison
+
+This is host-only original-byte and metadata analysis. No firmware, script, original ARM/JavaScript or vendor helper was executed. Identity is firmware-mh202-010024, MH2021.0.24, archive SHA256 bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7. See the read-only parent provenance and extraction records for original ZIP/gzip/uImage checks.
+
+## Original image structure
+
+Normal image contains4898regular files and recovery4408. Symlinks493/459 and special entries95/95 are retained as metadata, never host links/devices. Original images retain the complete underlying filesystems. The shared image accessor resolves link targets within the image and verifies backing file sizes/hashes before reads.
+
+Normal versus recovery regular-file comparison:4400same-path/full-hash matches,3changed common paths,495normal-only and5recovery-only. Changed common paths are etc/timestamp,home/bticino/sp/dbfiles_ws.xml,usr/lib/opkg/status. The recovery-only set contains the Recovery marker plus four UPnP XML files. These counts concern regular files; they do not prove identical deployments, configuration, behavior or all metadata.
+
+Normal MH202 versus the retained F454 normal manifest:248same-path/full-hash matches,630different at common paths,4020MH202-only and2212F454-only. Different tree structure and names do not establish missing product capability. The comparison is to the precise previously retained F454 artifact, not a product-generation rule.
+
+## Selected executable/code identity
+
+Sixteen selected MH202 inputs are ELF32 little-endian ARM(machine40). The14with matching-path F454 counterparts differ in both full-file and .text SHA256. The two selected taskmanager/script files have no matching path in that retained F454 manifest. File/code inequality does not mean every function differs; it means no behavioral result is transferred merely by filename. Exact source hashes, original .text VAs and sizes are in selected-components.json.
+
+| Image path | MH202bytes | F454same file | F454same.text |
+| --- | ---: | --- | --- |
+| `/home/bticino/bin/bt_daemon` | 81584 | False | False |
+| `/home/bticino/bin/bt_taskmanager` | 40180 | no matching path | no matching path |
+| `/home/bticino/bin/bt_script` | 14884 | no matching path | no matching path |
+| `/home/bticino/bin/coso` | 28600 | False | False |
+| `/home/bticino/bin/openserver` | 45680 | False | False |
+| `/home/bticino/bin/scsserver` | 28208 | False | False |
+| `/home/bticino/bin/bt_device` | 125936 | False | False |
+| `/home/bticino/bin/bt_supervisione` | 48804 | False | False |
+| `/home/bticino/bin/bt_vct` | 43904 | False | False |
+| `/home/bticino/lib/libcommon.so.0.0` | 198668 | False | False |
+| `/home/bticino/lib/libopen.so.0.0` | 75216 | False | False |
+| `/home/bticino/lib/libbase.so.0.0` | 36504 | False | False |
+| `/home/bticino/lib/libdiag.so.0.0` | 234660 | False | False |
+| `/home/bticino/lib/libwhere.so.0.0` | 48728 | False | False |
+| `/home/bticino/lib/libopenscs.so.0.0` | 14984 | False | False |
+| `/home/bticino/lib/liblghal.so.0.0` | 69032 | False | False |
+
+## Web packaging and reproducibility
+
+The regular inventory has123files under usr/share/apache2/htdocs, with selected PHP and browser source beneath myhome. This is source packaging; configured Apache serving, PHP evaluation, installed scenario data and actual HTTP behavior remain separate.
+
+Run `python3 work/mh202-firmware/research/2026-10-30/inventory/collect_inventory.py --check`. The collector reproduces5JSONoutputs and validates every selected original ELF through ImageVFS. It reads and hashes prior F454 bytes only for the explicit comparisons. No completed dossier or original tree changes. Inputs.json pins both MH202 manifests, the F454 comparison manifest and accessor. Exact hashes provide identity, not independent semantic verification. Further component versions, runtime/provider binding, full boot/update behavior and functional semantics belong to separate reports.

@@ -1,0 +1,50 @@
+
+work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/libcoso/libplug_automation_tr.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000003cb8 <automation_tr_translate@@Base+0x288>:
+    3cb8:	aa1403e0 	mov	x0, x20
+    3cbc:	f0000002 	adrp	x2, 6000 <automation_tr_translate@@Base+0x25d0>
+    3cc0:	91120042 	add	x2, x2, #0x480
+    3cc4:	52800801 	mov	w1, #0x40                  	// #64
+    3cc8:	97fff836 	bl	1da0 <g_log@plt>
+    3ccc:	b9402a60 	ldr	w0, [x19, #40]
+    3cd0:	7100101f 	cmp	w0, #0x4
+    3cd4:	54003360 	b.eq	4340 <automation_tr_translate@@Base+0x910>  // b.none
+    3cd8:	f9402f84 	ldr	x4, [x28, #88]
+    3cdc:	910182e3 	add	x3, x23, #0x60
+    3ce0:	aa1603e2 	mov	x2, x22
+    3ce4:	aa1403e0 	mov	x0, x20
+    3ce8:	52801001 	mov	w1, #0x80                  	// #128
+    3cec:	f9003fe4 	str	x4, [sp, #120]
+    3cf0:	97fff82c 	bl	1da0 <g_log@plt>
+    3cf4:	b9403a63 	ldr	w3, [x19, #56]
+    3cf8:	7100047f 	cmp	w3, #0x1
+    3cfc:	54003421 	b.ne	4380 <automation_tr_translate@@Base+0x950>  // b.any
+    3d00:	b9402a63 	ldr	w3, [x19, #40]
+    3d04:	71002c7f 	cmp	w3, #0xb
+    3d08:	540025c0 	b.eq	41c0 <automation_tr_translate@@Base+0x790>  // b.none
+    3d0c:	71000c7f 	cmp	w3, #0x3
+    3d10:	7a491864 	ccmp	w3, #0x9, #0x4, ne	// ne = any
+    3d14:	54005fa1 	b.ne	4908 <automation_tr_translate@@Base+0xed8>  // b.any
+    3d18:	f9400260 	ldr	x0, [x19]
+    3d1c:	d2800041 	mov	x1, #0x2                   	// #2
+    3d20:	97fff810 	bl	1d60 <g_strndup@plt>
+    3d24:	aa0003fa 	mov	x26, x0
+    3d28:	f9400262 	ldr	x2, [x19]
+    3d2c:	d2800041 	mov	x1, #0x2                   	// #2
+    3d30:	8b010040 	add	x0, x2, x1
+    3d34:	97fff80b 	bl	1d60 <g_strndup@plt>
+    3d38:	f90037e0 	str	x0, [sp, #104]
+    3d3c:	f9400262 	ldr	x2, [x19]
+    3d40:	d2800041 	mov	x1, #0x2                   	// #2
+    3d44:	91001040 	add	x0, x2, #0x4
+    3d48:	97fff806 	bl	1d60 <g_strndup@plt>
+    3d4c:	aa0003fb 	mov	x27, x0
+    3d50:	f9400262 	ldr	x2, [x19]
+    3d54:	d2800041 	mov	x1, #0x2                   	// #2
+    3d58:	91001840 	add	x0, x2, #0x6
+    3d5c:	97fff801 	bl	1d60 <g_strndup@plt>
+    3d60:	b9402a79 	ldr	w25, [x19, #40]

@@ -1,0 +1,46 @@
+# Catalogue comparison independent source review
+
+PASS for the frozen complete-table/commercial comparison and current supplement. No author correction requested. This is independent original database/host-data review, not vendor catalogue execution, a complete consumer semantic audit, query-plan measurement, migration, runtime/physical support test or fresh remote archival check. Original databases were opened only through immutable read-only SQLite with query_only ON/trusted_schema OFF. No extension, stored expression, firmware, network/device or authentication/session/framing route ran.
+
+## Exact reviewed pins
+
+Paths are relative to catalogue/ in the current comparison root.
+
+| Artifact | SHA256 |
+| --- | --- |
+| REPORT.md | 4d34c288a3bc577cec4c4a758d54841a1af539026e2535136dc686e1bb003bd5 |
+| compare_catalogues_v2.py | 5f157e799e1e3d0153a4457dfc0b8e4e1f816b70477643f8ea167d0e5cb7c00e |
+| OUTPUT_MANIFEST.json | a16f55a178fec0298dc161ee1d43ac554175895bdd7b1d7feb1afbb80ce37fea |
+| SUMMARY.json | c02f4edaf04ec2eb14c27dcfee99150b576a04a4fa2498aebd8ab83e0a481a91 |
+| ALL_TABLE_DIFFERENCES.json | 00610905ec8a865c114461d4d26f70e448e57339a6494f4e4a433d71b36e38b6 |
+| DECLARED_PK_DIFFERENCE_LEDGER.json | e0b0737f2d9f7b3364e1551d487b6d63184e6f1ecf0c326231e9d22f88cb8765 |
+| COMMERCIAL_ENTITY_MATCHES.json | 9754c29eb03b877edfb79dcc4319ef6a998988ffa93b9b0ebff98d8dd45f869b |
+| collect_supplement_v2.py | 575b3f0f6cf4428d422d94c3ce2fed2ab95f0c9485a0e6a4a5b75fa5d1984299 |
+| SUPPLEMENT_MANIFEST.v2.json | b43bbc78574a24274d2ebe5bea695f16fc700434299e87f020b65b606cb0c66d |
+| DEVELOPMENT_HISTORY.json | b07ea6bcb15a4b803af09eadc70093662aa55e7f1dc500b2b1dc512abb0f3481 |
+| SUPPLEMENT_PRECISION_HISTORY.json | c9575409e5052267dd1bc87139324f305a02b9a30e0262e92b67a76cfe2adca1 |
+| initial-generated-v2/INDEX.json | 161a916d2c01868f42af5545cffe7ab0cef3e7852f7af53ac82cb1b0f84ae11d |
+| supplement-first-v1/INDEX.json | a5a8ff5a16691783c9f6530772c5063071197322ab24fdb2e89a5da546ace924 |
+| supplement-first-v2/INDEX.json | 8a30dca30dfa95c6667034c54511629a8fb1e6dbc685b79201256c3295c7d923 |
+
+Both current --checks pass14 comparison outputs and6 supplemental outputs. Inputs are the exact2233344-byte embedded79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb and2625536-byte Suitef0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5. Independent complete integrity/FK checks pass. Input hashes and privacy-preserving collectors were inspected; source checks write no candidate.
+
+## Independent complete comparison
+
+I separately read every row of every75 table in each source, using a distinct type-tagged tuple/Counter comparison retaining NULL, numeric/text distinctions and duplicate multiplicity. All table counts, complete-bag equality/difference and one-source counts agree:42 equal,33 different;13 differing embedded subsets and20 tables with embedded-only rows. The whole embedded source is not a strict row subset.
+
+For every declared key I independently built typed-key groups, checked uniqueness and NULL occurrence, and compared shared-key complete rows/changed columns. Only EN_CONF changes shared-key full rows:68. Changed-column frequencies agree, including their overlaps; these are not68 changed functions. RIF_MH_COLLECTION_OBJECTS has exactly one NULL-bearing composite key in each source and no duplicate typed key group. NULL is retained as a literal audit value, without importing SQL equality semantics or inventing an owner relation.
+
+Independent sqlite_master comparison confirms147 embedded versus146 Suite objects. Every146 shared object is exact; the only addition is EN_CONF_INDEX. Its original index metadata is nonunique/nonpartial and columns(id_conf,id_key_object). All75 stored table definitions/column declarations are equal. Full schema equality must therefore not be inferred from equal table definitions. The index is not a measured performance improvement or identified consumer. Page/version/freelist metadata is source data, without established export chronology, pruning algorithm or migration outcome.
+
+The literal commercial anchor(code,id_brand,id_line) is unique/nonempty in both originals. Independent maps confirm330 common keys with complete row equality,331 embedded versus541 Suite records, one embedded-only and211 Suite-only. Shared items/full rows agree; the extra commercial record belongs to item533, rather than the similarly named retained4672N product. Selected energy-actuator associations in the supplement provide separate item/model/Object/system/bus IDs; no WHO/physical equivalence is inferred. Missing F454/MH200N/MH202/MyHOMEServer1 self-contexts are source-profile omissions, not product incompatibility or absent functionality.
+
+Three actual declared FK rows remain distinct from13 reconstructed candidate-join audits. I independently checked the important typed exclusions: empty TEXT family values1 embedded/6 Suite, four unmatched bus7 rows in AS_BUS_SYSTEM, and Suite's additional two bus7 AS_BUS_ITEM rows. These are scoped unmatched candidate values, not declared-FK violations or proven application defects. Broad unchanged RIF/TMP rows do not become an observed installed inventory.
+
+## Preservation and scope
+
+Verified all17 indexed first successful comparison source/evidence copies and both supplement snapshots(7 v1 and8 v2 members) against their current retained bytes. The report's separately present actual copy also matches, without claiming it is a member of the17-entry index. The premature first-candidate is code-only as disclosed. The original non-NULL-key assumption failed before output writes; v2 retains uniqueness checks while explicitly auditing the real NULL rows. I did not execute the failed draft or create historical output for it.
+
+The four supplemental data outputs are byte-identical between v1 and v2. New method-key wording clarifies selected safe values versus unrestricted raw values; original outputs remain retained. Reports expose whitelisted manufacturer labels/associations and hashes, not arbitrary condition/configuration/default/state values. No expression was evaluated.
+
+Equal IDs are substantiated only where this exact source pair proves unchanged rows/owners. Complete row comparison does not establish all consumer intent, effective UI/validation, released hardware, runtime binding or physical capability. Catalogue content and database metadata do not supersede source-scoped Device definitions or public protocol evidence. Object/configuration and firmware/package semantics belong to their separately reviewed areas. Only this new review file was written.

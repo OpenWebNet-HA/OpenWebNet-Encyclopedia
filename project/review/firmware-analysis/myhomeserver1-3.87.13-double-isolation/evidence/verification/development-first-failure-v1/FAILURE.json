@@ -1,0 +1,16 @@
+{
+  "attempts": [
+    "normalgeneration failedorderingassert",
+    "--check failedsameorderingassert"
+  ],
+  "cause": "Pathcomponent sorting differs from relative POSIX string sorting; two identical63-file dictionaries were compared as differently ordered lists",
+  "independent_diagnostic": {
+    "baseline_files": 63,
+    "current_files": 63,
+    "guest_execution": 0,
+    "path_size_mtime_sha_maps_equal": true,
+    "tool_mutation": false
+  },
+  "resolution": "NEWv2 normalize rowsby relative pathstring before exactcomparison; all individual assertions retained",
+  "stage": "before any generated output write"
+}

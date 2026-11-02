@@ -1,0 +1,7 @@
+{
+  "bytes_hex": "0a031a30ab18",
+  "scope": "Original TBB bytes are data, not instructions; selected null/unsigned paths only.",
+  "type0_target": "0x16aea",
+  "type2_target": "0x16b0a",
+  "va": "0x16ad6"
+}

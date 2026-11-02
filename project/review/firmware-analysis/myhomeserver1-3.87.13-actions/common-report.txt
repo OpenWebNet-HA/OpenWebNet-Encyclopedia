@@ -1,0 +1,81 @@
+# Shared compiled ActionRunner execute, stop and completion contracts
+
+The selected compiled action methods use **a per-action completion byte and a separate shared stop domain**. Execution chooses an inline callback, a first-wait thread, or a second-wait thread from two operational words. Both waits use the same global condition variable/mutex/stop flag and the same 64-bit scaling arithmetic. These are exact compiled source contracts, not observed timers, successful threads, complete cancellation or a universal interpretation of JSON `duration`.
+
+Original ARM/Thumb/vendor, timer/thread/provider, SQL/JSON, target-process, network/bus and physical execution are all0. The finite host cases model only selected branch/integer arithmetic. Derived SLEEP and SCENARIO callback bodies remain opaque here; other agents examine those distinct paths.
+
+## Original objects and method ownership
+
+Original scheduler image path `/home/bticino/scheduling_manager/scheduling_manager`, SHA-256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Original candidate clock provider `/usr/lib/libstdc++.so.6.0.29` is separately hashed in [INPUTS.json](INPUTS.json). Original files and previous reports are unchanged. Actual PT_LOAD mapping distinguishes code and RW data offsets; VAs below are linked addresses, not live PIE addresses.
+
+| Original primary vtable | Address point | RTTI name | Three stored Thumb methods |
+| --- | --- | --- | --- |
+| Header `0x162128` | `0x162130` | `12ActionRunner` | `0xcd849`, `0xcd6f1`, `0xcd551` |
+| Header `0x164d5c` | `0x164d64` | `17SleepActionRunner` | same three pointers |
+
+Selected original relative relocations and typeinfo/name pointers independently confirm those attachments. The instruction entries are `0xcd848`, `0xcd6f0`, `0xcd550`. The third body is literally `bx lr`; **it is not the completion getter**. The separate getter at `0xcd97c` reads byte+4. A selected existing action-worker caller at `0xa6908` calls that getter and tests the return. That is source evidence that the byte is polled, not proof of eventual completion.
+
+## Fields: operational controls are not copied JSON metadata
+
+| Selected compiled object field | Source role |
+| --- | --- |
+| byte+4 | Completion value; execute writes0, selected callback-return paths write1 |
+| word+8 | First operational wait control, read by execute/first worker; setter `0xcd988` |
+| word+12 | Second operational wait control, read by inline-followup/second worker; setter `0xcdaf0` |
+| +16 / +24 / +28 | First callable data / manager-presence / invoker |
+| +32 / +40 / +44 | Second callable data / manager-presence / invoker |
+| +48 | Thread-holder pointer |
+
+The selected base move helper `0xb444c` copies the actual operational8/12 pair, completion byte and callable/thread state; it does not replace those words with JSON metadata. The narrow SLEEP corroboration is explicit: source `0xb75a6..0xb75ce` zeroes operational8/12, while `0xb762c..0xb763c` copies parsed delay/duration into separate metadata84/88. Its delay word is passed through `0xb7652 -> 0xcd988`, which stores operational8 only. Metadata88 must not be silently substituted for operational12. This batch does not establish all derived constructors or later setters; the separate SLEEP author report owns the complete selected constructor/callback path.
+
+## Execute dispatch and completion writes
+
+At `0xcd848`, execute loads word8 and writes completion byte4=0. Under ordinary callable/allocation/thread API returns:
+
+| Operational state | Selected source path |
+| --- | --- |
+| word8=0, word12=0 | Require first callable manager+24, call invoker+28 with data+16 inline, then write completion1 |
+| word8=0, word12 nonzero | First callable inline; allocate/request the second-wait thread, store holder+48 and detach; no inline completion1 |
+| word8 nonzero | Allocate/request the first-wait thread, store holder+48 and detach; no inline completion1 |
+
+The normal local execute return is1. It does not prove thread creation/run, callback success, an accepted scene or physical delivery. Missing required callable requests `__throw_bad_function_call`; inspected thread/cleanup paths also contain provider/terminate/unwind boundaries. The source does not test already-active state or the shared stop flag before the inline first callback in this method. No complete reentrancy, failure or lifetime contract follows.
+
+The two thread-state address points are `0x162108` and `0x16211c`. Their relocation-backed worker slots+8 hold Thumb `0xcd5c5` and `0xcd721`; state+4 stores the action pointer. The first worker loads action word8, waits, invokes the first callable and then writes completion1. Its local path does **not** request the second-wait worker afterwards. The second worker loads word12, waits, invokes the second callable and writes completion1. Thus the two operational words do not imply an automatic first-wait→second-wait chain on every execute branch.
+
+Completion1 is written only after the selected callback returns normally. No shared-stop recheck exists between that callback's return and the local completion store in these inspected paths. A callback that has already been entered remains an opaque running delegate here; a stop request is not proof of its immediate interruption.
+
+## Shared stop domain and before/during-wait guards
+
+All six selected direct PIC references resolve to global base **`0x1677b8`**. The inspected initializer at `0x15474`, stored `.init_array` Thumb pointer`0x15475`, requests a condition-variable constructor at that base, clears mutex-related words starting+48, and explicitly stores stop byte+72=0 at `0x1548e`. This is initialization source, not observed current state.
+
+Both workers and stop method use that same base: condition-variable argument+0, mutex argument+48, stop byte+72 (absolute linked address`0x167800`). Stop method `0xcd6f0` does not use its incoming action receiver. It locks the shared mutex, writes shared stop1, requests `notify_all`, then unlocks. Lock failure requests a system-error throw. It does not locally invoke the action-specific second callable, set a per-action completion byte, or reset that shared flag.
+
+The wait guards establish these selected outcomes under normal delegated returns:
+
+- A nonzero shared flag after lock/deadline construction takes an unlock/return path without callback or completion1 write.
+- After a wait return, the worker refreshes its clock. Before the deadline, shared flag0 loops to the same absolute wait; a nonzero flag exits by unlocking.
+- At/past the deadline, it reads/saves the shared flag, unlocks and invokes the phase callback only if that saved value is0. A nonzero saved flag suppresses both callback and completion1 store on that path.
+- Once a callback is entered, no source here interrupts its internals. The subsequent completion1 write is not guarded by another stop read.
+
+The global address correspondence is positive source evidence for a shared domain among these selected methods, not an observed cross-action cancellation result. The direct-literal references and startup store do not prove that no other indirect alias, code form, later reset or separate control domain exists. In particular, this report does not infer a permanently latched runtime state, deadlock/hang, universal cancellation policy or defect from a local absence.
+
+## Exact arithmetic, API arguments and conditional units
+
+Both workers implement the same sequence at `0xcd5f8..0xcd654` and `0xcd754..0xcd7b0`:
+
+1. Request `std::chrono::_V2::steady_clock::now` into a two-word local value.
+2. Multiply the loaded unsigned32 operational word by low/high constant words`0xf8475800`/`0x0000000d`: **60,000,000,000**, using UMULL/MLA. Add to the clock value with ADDS/ADC; low64 arithmetic is preserved, not an unbounded mathematical integer.
+3. If the shared flag permits waiting, divide the signed64 deadline by literal **1,000,000,000** at pools`0xcd6d0`/`0xcd828` through `__aeabi_ldivmod`. Store the low32 quotient and low32 remainder as the two-word time argument.
+4. Request `pthread_cond_clockwait(condition_base,mutex_base,1,&time_words)`, ignore its returned code, refresh steady_clock and perform the signed deadline/flag tests described above.
+
+Ignoring the wait return does not establish that any actual API error occurs or define all outcomes: errors, spurious wakeups, provider behavior and scheduling remain unexecuted. The source compares an absolute deadline rather than decrementing the original operational word in these inspected workers.
+
+The separately packaged candidate `steady_clock::now` body at `0x959cc..0x959f6` requests `clock_gettime(1,stack)` and computes a signed64 value from two32-bit words as `word0 * 1,000,000,000 + word1`. It does not check the delegated clock return in this span. Under **ordinary successful Linux clock_gettime seconds/nanoseconds semantics and effective same-build provider binding**, that value is nanosecond ticks; the common factor is then60 seconds per operational word unit. This is a conditional unit derivation from API premise plus original conversion/arithmetic, not units guessed from a field name or measured elapsed timing. It is not a universal unit rule for every JSON field or derived callback. Target API ABI/provider success, clock epoch, low-word time packing and actual waits remain explicit boundaries; no host timespec layout is injected.
+
+[HOST_MODELS.json](HOST_MODELS.json) illustrates six execute branches, five preselected wait guards and four integer arithmetic fixtures. The max-word example is deliberately synthetic and demonstrates modulo64/low-word behavior only. It is not claimed to be admitted input, a valid timer or an actual overflow/physical fault. No OS waits, concurrency ordering, callbacks or original helper execution are modeled.
+
+## Evidence, preservation and remaining questions
+
+Reproduce with `python3 -B collect_common_v1.py --check`. The collector reads verified image bytes and selected metadata, uses host binutils, derives fresh PT_LOAD/PIC/relocation/typeinfo/initializer relationships, and checks explicit little-endian Thumb halfwords. [ORIGINAL_SOURCE.json](ORIGINAL_SOURCE.json), [FIELD_AND_BRANCH_LEDGER.json](FIELD_AND_BRANCH_LEDGER.json) and the provider/input manifests retain exact original locators and conditional contracts. Outputs are exclusive; report/collector/outputs receive immediate exact first copies with the snapshot index computed before opening itself. No earlier dossier or generated candidate is overwritten.
+
+The new closure is the shared compiled execute/stop/completion/wait contract and the operational-versus-metadata distinction. Remaining questions are actual derived-callable effects/ownership, naturally populated operational12 and later setters/resets, complete thread/exception/cancellation lifecycle, effective clock/pthread bindings and concurrency, and runtime/physical observation. No transport/authentication/session/framing, MQTT/libjel implementation or broader Device approval is inferred or reopened.

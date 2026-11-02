@@ -1,0 +1,72 @@
+from pathlib import Path
+import hashlib,json,struct,subprocess,os,argparse
+O=Path(__file__).resolve().parent;W=next(p for p in O.parents if (p/'OpenWebNet-Encyclopedia').is_dir())
+P=W/'work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libmhshared.so.1'
+H='4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377'
+def h(b):return hashlib.sha256(b).hexdigest()
+def j(x):return (json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+def build():
+ b=P.read_bytes();assert h(b)==H and len(b)==43208 and b[:6]==b'\x7fELF\x01\x01' and struct.unpack_from('<H',b,18)[0]==40
+ ph=struct.unpack_from('<I',b,28)[0];pe,pn=struct.unpack_from('<HH',b,42);loads=[r for i in range(pn) if (r:=struct.unpack_from('<8I',b,ph+i*pe))[0]==1]
+ def raw(a,n):
+  r=next(x for x in loads if x[2]<=a and a+n<=x[2]+x[4]);z=r[1]+a-r[2];return b[z:z+n]
+ def u(a):return struct.unpack('<I',raw(a,4))[0]
+ def s(a):
+  out=bytearray()
+  for i in range(512):
+   c=raw(a+i,1)
+   if c==b'\0':return out.decode('ascii')
+   out+=c
+  raise AssertionError('string bound')
+ def branch(a):
+  v=u(a)&0xffffff;v=v-(1<<24) if v&(1<<23) else v;return a+8+(v<<2)
+ guards={0x3ff8:0xe1a07000,0x4004:0xe1a04001,0x400c:0xe3a0103f,0x4010:0xe08f0000,0x4014:0xe1a06002,0x4018:0xe5945008,0x401c:0xe58d3024,0x4028:0xe284100c,0x4038:0xe1a00002,0x4048:0xe28d1030,0x408c:0xe58d0038,0x4090:0xe1a01006,0x40ac:0xe1a01009,0x40fc:0xe58d0044,0x4104:0xe1a00002,0x4108:0xe1a01004,0x410c:0xe3a02002,0x4118:0xe58d6050,0x411c:0xe58dc054,0x4138:0xe1a00005,0x4140:0xe3e02000,0x4144:0xe0831001,0x4148:0xe28d3024,0x414c:0xe58d3000,0x4150:0xe28d3028,0x4278:0xe59d0028,0x4280:0xe3500064,0x4284:0xe59d0028,0x4288:0x0a0000b2,0x4294:0xe3a01000,0x4298:0xe08f0000,0x42a0:0xe5870000,0x4558:0xe3a01000,0x4560:0xe3e02000,0x4564:0xe1a01000,0x4568:0xe1a00008,0x4570:0xe28d0050,0x4574:0xe1a01008,0x4580:0xe593200c,0x4584:0xe5931004,0x4588:0xe0930002,0x45a0:0xe58d0048,0x45e0:0xe59d0028,0x45e8:0xe59d4048,0x45ec:0xe5874000}
+ for a,v in guards.items():assert u(a)==v,(hex(a),hex(u(a)),hex(v))
+ assert branch(0x4288)==0x4558
+ sqlva=0x4010+8+u(0x4838);emptyva=0x4298+8+u(0x483c)
+ assert sqlva==0x8ff0 and s(sqlva)=="SELECT value FROM shared where pluginname = '%1' and key = '%2'" and emptyva==0x90f4 and s(emptyva)==''
+ rel=subprocess.check_output(['readelf','-rW',str(P)],text=True);sym=subprocess.check_output(['readelf','--dyn-syms','--wide',str(P)],text=True);selected=[x.strip() for x in sym.splitlines() if '_ZN8mhShared4readE7QString' in x];assert any('00003ff4' in x and '2128' in x for x in selected)
+ def imm(w):
+  v=w&255;n=((w>>8)&15)*2;return ((v>>n)|(v<<(32-n)))&0xffffffff if n else v
+ defs=[(0x4020,0x210c,0x121e0,'_ZN7QString16fromAscii_helperEPKci'),(0x403c,0x219c,0x12210,'_ZNK7QString8toLatin1Ev'),(0x4054,0x20e8,0x121d4,'_ZNK10QByteArray8toBase64Ev'),(0x4084,0x210c,0x121e0,'_ZN7QString16fromAscii_helperEPKci'),(0x40a0,0x219c,0x12210,'_ZNK7QString8toLatin1Ev'),(0x40bc,0x20e8,0x121d4,'_ZNK10QByteArray8toBase64Ev'),(0x40e4,0x210c,0x121e0,'_ZN7QString16fromAscii_helperEPKci'),(0x4120,0x2160,0x121fc,'_ZNK7QString8multiArgEiPPKS_'),(0x4130,0x219c,0x12210,'_ZNK7QString8toLatin1Ev'),(0x4154,0x21f0,0x1222c,'sqlite3_prepare'),(0x427c,0x228c,0x12260,'sqlite3_step'),(0x428c,0x231c,0x12290,'sqlite3_finalize'),(0x429c,0x210c,0x121e0,'_ZN7QString16fromAscii_helperEPKci'),(0x455c,0x21a8,0x12214,'sqlite3_column_text'),(0x456c,0x2394,0x122b8,'_ZN10QByteArrayC1EPKci'),(0x4578,0x20c4,0x121c8,'_ZN10QByteArray10fromBase64ERKS_'),(0x4598,0x210c,0x121e0,'_ZN7QString16fromAscii_helperEPKci'),(0x45e4,0x231c,0x12290,'sqlite3_finalize')]
+ calls=[]
+ for a,t,g,n in defs:
+  assert u(a)>>24==0xeb and branch(a)==t
+  x,y,z=[u(t+i*4) for i in range(3)];assert x&0xfffff000==0xe28fc000 and y&0xfffff000==0xe28cc000 and z&0xfffff000==0xe5bcf000 and t+8+imm(x)+imm(y)+(z&4095)==g
+  row=next(x.strip() for x in rel.splitlines() if x.startswith(f'{g:08x} '));assert 'R_ARM_JUMP_SLOT' in row and row.endswith(' '+n)
+  calls.append({'call_VA':hex(a),'word':f'{u(a):08x}','target_PLT':hex(t),'GOT':hex(g),'relocation':row,'PLT_bytes_hex':raw(t,12).hex(),'symbol':n})
+ spans=[('entry-query-preparation',0x3ff4,0x4158),('selected-step-and-empty-output',0x4278,0x42b0),('query-local-string-connectors',0x4500,0x4558),('selected-column-and-decode',0x4558,0x45a4),('selected-finalize-and-output-store',0x45e0,0x45f0),('decoded-string-connector',0x464c,0x467c),('null-string-connectors',0x4778,0x4790)]
+ out={};meta=[]
+ for n,a,e in spans:
+  txt=subprocess.check_output(['objdump','-d','-m','arm',f'--start-address={a}',f'--stop-address={e}',str(P)],text=True,env=dict(os.environ,DEBUGINFOD_URLS='')).replace(str(P),'libmhshared.so.1')
+  out['spans/'+n+'.txt']=txt.encode();meta.append({'name':n,'start':hex(a),'end_exclusive':hex(e),'sha256':h(raw(a,e-a)),'bytes_hex':raw(a,e-a).hex()})
+ pins=[]
+ for p in [P,W/'work/f459-firmware/2.1.5/acquisition.json',W/'work/f459-firmware/2.1.5/analysis/normal-regular-files.json']:
+  z=p.read_bytes();pins.append({'path':str(p.relative_to(W)),'bytes':len(z),'sha256':h(z)})
+ out['INPUT_PINS.json']=j(pins)
+ out['SOURCE.json']=j({'original':pins[0],'ELF_class':32,'machine':40,'PT_LOAD':loads,'selected_symbol':selected,'guards':[{'VA':hex(a),'word':f'{v:08x}'} for a,v in guards.items()],'calls':calls,'spans':meta,'literals':[{'VA':hex(sqlva),'text':s(sqlva),'bytes_hex':raw(sqlva,64).hex()},{'VA':hex(emptyva),'text':'','bytes_hex':'00'}],'pool':[{'VA':hex(a),'word':f'{u(a):08x}'} for a in [0x4838,0x483c]],'original_execution':0,'host_SQLite_queries':0,'actual_database_recovered':False})
+ out['REPORT.md']=b'''# F459 selected shared-store read request and result gate
+
+Own libmhshared.so.1 is43208bytes/SHA2564d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377, ARM ELF32 with fresh PT_LOAD and symbol proof. Export read(QString) is3ff4/2128bytes. Entry saves incomingR0 as output-pointerR7, incomingR1 as receiverR4, incomingR2 as provided key-pointerR6. This result-producing entry differs from the earlier write entry: offsets are not applied to the incoming output pointer. Receiver+8 supplies captured handleR5 and receiver+12 supplies the selected first string.
+
+The exact63-byte SELECT literal at8ff0 names value FROM shared and two quoted pluginname/key placeholders. Selected normal conversion requests take receiver+12 and supplied key through Latin1/Base64/ASCII into two QString arguments. Under ordinary valid unchanged Qt objects, ABI, binding/allocation/normalreturns and local connector/register preservation premises, multiArg(count2) and toLatin1 produce the sqlite3_prepare query pointer. At4154 the actual imported prepare receives captured handleR5, querydataR1, numeric length-1R2, statement outputSP40 inR3 and tail-outputSP36 on stack (initializedzero earlier). Prepare's machine return is not tested in the immediately retained continuation; later cleanup/provider/error paths are not a full admission proof.
+
+A separately selected normal continuation loads SAME local statementSP40 for sqlite3_step427c. Exact machine result100 selects4558; other results in this local branch request finalize and fromAscii_helper(emptyliteral,length0), storing that returned QString representation through ORIGINAL supplied outputR7. This is a numeric source gate, not an executed ROW/error classification or assurance that the statement exists or is valid. No complete cleanup/error/unwind policy is inferred across the unpromoted intervening Qt cleanup region.
+
+At4558 result100 path supplies column index0 to actual sqlite3_column_text. Its returned pointer goes directly to QByteArray(char const*,int) with length-1, then fromBase64. The selected decoded buffer data/length feed fromAscii_helper and localQStringSP72. After ordinary normal cleanup/provider/preservation premises,45e4 requests finalize and45ec stores that local representation through SAME outputR7. No explicit returned-column-pointer null check intervenes between column_text and QByteArray request in this selected span; validpointer/provider behavior remains a premise, not a defect or universal safety claim. Full return/refcount/lifetime, malformed data, invalid Unicode/Latin1 conversion and lossless roundtrip are not proved.
+
+This adds a selected lookup/prepare/step/column0/decode/output contract, not another write-encoding inventory or a natural read caller. The earlier write and constructor packets are inherited source context only. Actual SQL preparation/rows/DB bytes, active installed schema, natural inputs/type/ID/freshness, effective Qt/SQLite binding, allocation, complete errors/concurrency/durability and physical outcomes remain open. No database bytes were recovered/generated, no schema was executed and no synthetic DB is eligible for archive.
+
+SOURCE.json retains45instructionguards/18actualBL-PLT-GOTproofs/7selectedspans/2literals/3inputpins. Reproduce static collector --check using host ARM objdump. Original/vendor/helper/native/emulator/SQLite/targetOS/network/bus/runtime/physical execution0. Closed receiving/output-transport/auth/session/framing/MQTT/libjel implementations stay opaque. Output-pointer stores described here are local structured-object operations, not the closed external-output route. Confidence high for selected original request/dataflow facts, conditional for running-system applicability. First generation and exact first copies are immutable.
+'''
+ out['OUTPUT_MANIFEST.json']=j({'collector_sha256':h(Path(__file__).read_bytes()),'outputs':{k:{'bytes':len(v),'sha256':h(v)} for k,v in out.items()},'original_execution':0})
+ return out
+ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build()
+if a.check:
+ for n,v in out.items():assert (O/n).read_bytes()==v,n
+else:
+ for n,v in out.items():p=O/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(v)
+ D=O/'first-candidate';D.mkdir();idx={}
+ for n,v in {Path(__file__).name:Path(__file__).read_bytes(),**out}.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(v);idx[n]={'bytes':len(v),'sha256':h(v)}
+ (D/'INDEX.json').open('xb').write(j({'files':idx}))
+print(json.dumps({'check':a.check,'outputs':len(out),'guards':45,'calls':18,'spans':7,'original_execution':0}))

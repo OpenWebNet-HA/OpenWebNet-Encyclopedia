@@ -1,0 +1,20 @@
+# Independent F461 run06 source review
+
+PASS; no source correction requested. Host static replay and independent original-byte/artifact audit only; no vendor, native, provider, string fixture or runtime execution.
+
+Reproduced `python3 -B work/f461-firmware/2.0.11/research/2026-11-01-run06-address/collect_address_v1.py --check`:14 outputs/5 spans/16 first copies. Separately read both original resolved regular ELF byte streams and checked their hashes, fresh ELF64 PT_LOAD offsets, every saved span hash, all15 helper and19 plugin instruction words, six original safe literals and nine original BL/relocation rows. All13 non-self output-manifest members and16 current/first-copy identities match. The original normal-symlinks metadata independently records libautomation.so -> libautomation.so.1 -> libautomation.so.1.1.0; this is image metadata, not a created host link. Actual plugin dependency/import and packaged exported helper definition agree; effective binding remains conditional.
+
+The report accurately restricts helper0x1c10 to the selected remaining path after earlier comparisons. Original0x1cdc subtracts2 from the delegated64-bit length; TST mask0xfffffffffffffffd and CSINV preserve numeric4 only for the tested equality, otherwise all-one W2. For ordinary nonnegative character counts the selected equality gives2 or4; this is symbolic source algebra, not an executed sample matrix. The original return moves W2 to W0 after normal canary checking. The earlier one-character branch and other returns are not promoted into a complete address-support grammar.
+
+Original plugin0x4028 loads the same provided parsed object's pointer+32 into X27; helper call0x40c4 uses that pointer. Classifier4 reaches the checked0x43c4 path, writes D1 through a supplied local GString and repeats g_utf8_strlen on the same pointer. The selected repeated length2 branch reaches0x568c. Subsequent actual LDRB instructions read bytes0 and1, not two abstract UTF-8 characters. The original first conversion result is saved across the second conversion and restored as W2, with second result W3 and format%d%d. This supports only the conditional ordered prefix. The next branch to0x4404 and its suffix/context remain explicitly unclosed.
+
+Character length, byte offsets, decimal-digit validation, classifier numeric4, private selector offset4 and public protocol namespaces are correctly kept distinct. No concrete runtime string, full output frame, ASCII assumption, raw command acceptance, physical topology, WHO identity or end-to-end delivery is inferred. Candidate provider/string/GString semantics, selected branch/object validity and lifetime remain premises. Exploratory wrong host-alias/revision probes are disclosed without fabricated target execution; the first generated packet is preserved exactly. No author files were changed.
+
+Exact reviewed pins:
+
+- `work/f461-firmware/2.0.11/research/2026-11-01-run06-address/REPORT.md`: `d8be70c3da862cfe82c367b1537beb6918ceaada5c5200cda2910b6ec049f52c`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run06-address/collect_address_v1.py`: `de9a8dd63e8e6755109c5bde1a5053542cbcfffe0884046bf6fa71636eb65a31`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run06-address/SOURCE.json`: `c6269441d7d2e1942c0abe35e0e6ff08ae91333da46318f25bf265c595f831b0`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run06-address/INPUTS.json`: `ab188393268424c530d6e25bb26e41426e51b9d111629b2309b17c557b56f081`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run06-address/OUTPUT_MANIFEST.json`: `12cebeff190019c38d5a635751fc9cb70d2085df3296dc16fba8319aaa5dc5e6`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run06-address/first-candidate/INDEX.json`: `08b509f7ea441eb16d7339df885027c6aebe25e66b2ecff84032c0a8694c2900`.

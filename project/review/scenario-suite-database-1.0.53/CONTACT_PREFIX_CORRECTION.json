@@ -1,0 +1,43 @@
+{
+  "source_artifact": "document-sha256-122d9c1a43e1610a",
+  "source_sha256": "122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927",
+  "source_page": 4,
+  "source_method": "Original manufacturerPDF fullpage visual and text inspection, independent reviewer agreement; exact database joins independently checked",
+  "database_sha256": "ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29",
+  "correction": "Restore literalprefix3 to both published drycontactWHEREforms. WHERE339 fits the notation; this does not establish a configured target, compatibility or accepted transaction.",
+  "preserved": "All rawcapturebytes, NACKtimings, oracle results and completed local dossiers unchanged; exact preedit documents retained.",
+  "edits": [
+    {
+      "path": "functional/who-25-transversal/dry-contact-ir.md",
+      "old": "| `1..201` | Automation dry-contact interfaces",
+      "new": "| `3[1..201]` | Automation dry-contact interfaces"
+    },
+    {
+      "path": "functional/who-25-transversal/dry-contact-ir.md",
+      "old": "| `[1-9][1-9]` | Alarm dry-contact interfaces",
+      "new": "| `3[1-9][1-9]` | Alarm dry-contact interfaces"
+    },
+    {
+      "path": "functional/who-25-transversal/dry-contact-ir.md",
+      "old": "`WHERE 339` is outside the published address forms above",
+      "new": "`WHERE 339` fits the published prefix-`3` forms above, but no compatible target was configured"
+    },
+    {
+      "path": "project/review/who25-gateway-compatibility.md",
+      "old": "The dry-contact WHERE 339 probe is outside the published address forms, and the remaining unconfigured probes establish only literal socket responses, not valid-target or capability tests.",
+      "new": "The dry-contact WHERE339 string fits the published prefix3 address forms; no compatible contact/IR interface was configured. These unconfigured probes establish only literal socket responses, not valid-target or capability tests."
+    }
+  ],
+  "changed_document_identities": [
+    {
+      "path": "functional/who-25-transversal/dry-contact-ir.md",
+      "before_sha256": "1c0a04bae56ba9312392632fbbe8b8ca5ad81e1e7d0ed9c561cb936b180b86e9",
+      "after_sha256": "e3524907abe49823f78cd729d655f330f79851ada6f1cca1b5f7e7015c63ed3b"
+    },
+    {
+      "path": "project/review/who25-gateway-compatibility.md",
+      "before_sha256": "021e839b7549a6474cbae4fa89486dbf67202b1acb17b314a92448959c58c6f2",
+      "after_sha256": "1ab5d3c5b8d0e44a99d20c1b3fd2c35f7a9da152b1bb8644717f98dd2c3e4d86"
+    }
+  ]
+}

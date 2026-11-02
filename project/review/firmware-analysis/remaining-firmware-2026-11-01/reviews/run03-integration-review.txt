@@ -1,0 +1,54 @@
+# Run03 final documentary integration review — PASS
+
+Reviewer: /root/evidence_reviewer, reviewer/read-only for research/repository. New review files only. CompletedUTC 2026-11-01T20:55:04.606866+00:00. No candidate wording change or source correction requested. This checks the current combined documentary claims and preservation/classification, not all-source, Device, runtime or physical approval.
+
+## Current frozen review inputs
+
+Root `work/remaining-firmware-investigation/2026-11-01-run03`:
+
+- `REPORT_CANDIDATE.md` — 4656 bytes, SHA256 `6673ae361d4b785076e89d68b91ad8907b33e60ea44db19e65191402bacd706f`.
+- `SYNTHESIS.md` — 4656 bytes, SHA256 `6673ae361d4b785076e89d68b91ad8907b33e60ea44db19e65191402bacd706f`.
+- `COVERAGE.md` — 1358 bytes, SHA256 `fab695c5cf5394ef7e856b161ff38f3334f659124a60b832553a38b9c7c6b91c`.
+- `RANKED_REMAINING_QUESTIONS.md` — 1425 bytes, SHA256 `b7c86893af29f9051ffbbdf6a132a33bd44d61afed56bd6b2cbcffc30d21ab15`.
+- `R2_ARCHIVE_INDEX.json` — 1119 bytes, SHA256 `133c94eb95859e111df0c1b6c005636ce8ee13ce164e3576fae85e70256f0719`.
+- `ARCHIVE_INHERITANCE.json` — 802 bytes, SHA256 `23cbe447c4d3da9c6ba8ae1a0f95367962d2df394ec14bd2aef3da84545b212a`.
+- `AGENT_ROLE_TRANSITION.json` — 923 bytes, SHA256 `c7e87e1f26ecad2355305067ada3d129c867cde1cc2d5ee03811928eaa19bc8c`.
+- `AGENT_ROLE_HANDOFF.json` — 701 bytes, SHA256 `46479475ec5797d1ff71bab65e03b2eeba62641c5beac7c5c1d9eb6d7a72183e`.
+- `first-synthesis-candidate/INDEX.json` — 2266 bytes, SHA256 `ba098a4d337eb733ccd0c33cdddf8425ec8de9b82b812fb497350ad6dfb26e2d`.
+- `reviews/f450-source-review.md` — 7733 bytes, SHA256 `0eb3ecb747ca2c68defa15adc1d6155dfd58fd6d32683ec3755149839eb76f7c`.
+- `reviews/mh200n-source-review.md` — 5190 bytes, SHA256 `53300c1c050364e780f102a9ee5df1e430387878368f217afd614e0f8d67f20b`.
+- `reviews/f459-source-review.md` — 6664 bytes, SHA256 `975e1c6ead54bfa947658c2b78d61b87b17f07f699ed16e093b7e31563157348`.
+
+The seven initial current synthesis/archive/role-transition members exactly match their immediate first-synthesis snapshots and recorded sizes/hashes; REPORT_CANDIDATE and SYNTHESIS are byte-identical. AGENT_ROLE_HANDOFF is separately current-pinned documentary coordination, not a fabricated earlier first candidate. It records actual replacement names/readiness; the original transition records earlier intent. There is no unsupported claim that an unavailable direct-rename operation occurred. The requested functional names are implemented by replacement assignments, with old authors finishing their current immutable work and no duplicate source study claimed.
+
+## Actual source and peer evidence now present
+
+All three source packets and actual independent reviews are saved and match their announced exact hashes. This final review was withheld until the F450 packet and F450/MH200N peers actually existed; preliminary comments were not presented as their final approval.
+
+| Product/source packet | Frozen report SHA256 | Actual source review SHA256 |
+|---|---|---|
+|F450 night03-resource|fb73ae57a898efca61b10dede7029744b3d85fd267eae1900f5b190f9a07b797|0eb3ecb747ca2c68defa15adc1d6155dfd58fd6d32683ec3755149839eb76f7c|
+|MH200N night03-consumer|34bb0640bb51ed6d100587cce098de847b359839120532e2b32cf18f505d263e|53300c1c050364e780f102a9ee5df1e430387878368f217afd614e0f8d67f20b|
+|F459 night03-shared-read|641a116874bc640fcb6ba09bc14406ff4c6f716f9371374a652ca5840668c1a9|975e1c6ead54bfa947658c2b78d61b87b17f07f699ed16e093b7e31563157348|
+
+I checked every current output-manifest identity and all25author first copies across6+5+11=22outputs. I checked each of the three source reviews' exact immediate first copy/index. The source reviewers independently checked original bytes/ABI/PLT-GOT and relevant premises; I independently reviewed root F459 source earlier. These selected integrity/reach counts are not semantic coverage percentages, inventories of all functions or full-source approval. No older source/native corpus is replayed or accumulated as new execution.
+
+## Claim and applicability review
+
+**F450:** The current combined candidate is supported by the actual provided-context/fork-result branch, context+80 selected admission, exact six-word argument construction and candidate libutils wrapper evidence. It retains `unzip`, `-d`, `/var/tmp`, `-o`, supplied[C+76], NULL as request arguments. It does not turn an unknown pointer into a known archive string or claim XML check50 populates those fields. Effective binding, callee returns, valid unchanged context/stack/aliases, unknown earlier admission and natural invocation remain premises. The candidate wrapper's forwarding/wait/status-byte source is conditional; call_nowait/process bodies remain opaque. Packaging extra/check50/enable0 declarations are separate. Consequently the prose correctly avoids a recovered50.xtz decoder, password/key contract, successful launch/extraction or plaintext master.sqlite claim. No inference from a missing literal password option to absent keys elsewhere is promoted.
+
+**MH200N:** Combined prose accurately states SAME provided pathname→open0→saved machine return/read same1024-byte zeroed stack buffer→selected '*' token-presence gates and local1/2 returns. It does not certify the descriptor or read outcome. A full1024-byte read could replace the zeroed region, so usable terminated data is explicitly a premise, not guaranteed by memset. The supplied buffer/delimiter/tokenizer continuation are distinct from full resource grammar or runtime contents. First/secondNULL results and selected epilogue do not prove later field content, successful return, copy/install, active partition or application readiness. The earlier marker/cell/caller link is properly inherited, not repeated new coverage or transferred F453AV behavior.
+
+**F459:** The candidate preserves its own result-producing entry roles: incoming output pointerR0, receiverR1 and keyR2. It accurately summarizes exact query/prepare statement and tail cells, separately selected step result100, selected column0/QByteArray/Base64decode/ASCII/local output store, and the other selected result branch's empty representation. Local structured output-pointer stores are not an entry into the closed external-output/transport route. The prose leaves the intervening cleanup composition, valid unchanged objects, ABI, binding, allocation/normal returns, statement/column-pointer validity, full return/refcount/error/unwind/concurrency and natural caller explicit. It does not claim successful SQL, actual rows/file/schema, lossless arbitrary roundtrip, freshness or durable state. Full method/provider bodies were not substituted by names.
+
+Current COVERAGE and ranked gaps agree with these bounded findings, retain independent F453AV recovery and F455 CPU/loader provenance questions, and do not recycle completed vector/encoding tables or infer absence of databases from first-pass offset0 magic misses. Curated product-role context is not upgraded into installed capability or physical proof.
+
+## Archive and preservation review
+
+Current R2_ARCHIVE_INDEX is exactly the inherited run02 index SHA256133c94eb95859e111df0c1b6c005636ce8ee13ce164e3576fae85e70256f0719. ARCHIVE_INHERITANCE correctly resolves its unchanged relative object references against run01 and pins actual run01/archive/R2_RECEIPT.json SHA256072092bb105685ab2aa0395cde439b431ac6a016037b501a06d2faf509b07793. I read that saved actual receipt: ok/uploaded,72774bytes and SHA256824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8. The cumulative claim is ONE original encrypted SUPPORTcontainer and ZERO recovered plaintext DBobjects, with ZERO new run03objects/uploads/readbacks. No reviewer remote/network replay occurred; an earlier helper full-readback receipt is not claimed as a fresh independent network verification. Source SQL/request strings and declared filenames are not treated as actual recovered databases, and no synthetic DB was generated from DDL or archived as vendor original.
+
+No review action changed canonical source manifests, original images/archives, extracted trees, synced source files, completed packets or first candidates. No Git staging/commit/push/publication was performed. The parent's planned current validation/checkpoint/automation/evidence-index closure still needs its own actual saved outputs; this review does not certify future receipts or mark the overnight task complete. The current finite overnight work remains authorized until08Paris2Nov, with source-stop/final-consolidation safeguards retained.
+
+All new original/vendor/helper/native/emulator/SQL/targetOS/services/network/bus/runtime/physical execution remains0. Host static reads/disassembly and the earlier authorized R2 archival host write are distinct. MHSonecorpus/eightentries/340originalcode-hookvisits/360hooks and separate F454/MH202 ledgers remain separate unchanged; no static-zero reset or previous-corpus replay. Closed receiving/output-transport/auth/session/framing/MQTT/libjel and equivalent bodies remain opaque. No credentials/privatekeys/fullconfiguration/resource token contents/runtime values were exposed.
+
+**Final decision: PASS, no documentary correction requested.** Current claims are reviewable as bounded original source reasoning, with archive class/premises and unresolved gaps visible. Full Device/source/runtime/physical approval and exhaustive coverage remain pending. This review is exclusive and immediately copied exactly; the first-copy index is computed before its own file is opened.

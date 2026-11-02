@@ -1,0 +1,9 @@
+# Ranked next questions
+
+1. Find actual reset/owner aliases of the shared action-wait stop flag and follow interrupted-action completion/restart paths, keeping per-scene145/144 separate from the global action-stop domain.
+2. Trace one concrete non-time event trigger/condition through current-firmware registration and callback ownership, stopping at opaque transport delegates; no older-firmware layout/meaning transfer.
+3. Close selected startup readiness/load-order/registry lifetime and later mutation, including the fact that trigger construction precedes map insertion and the time-service thread request precedes file loading. Do not infer a race or no-side-effect atomic load from source order alone.
+4. Trace another derived action's actual operational-duration writer/second callback, or complete bounded category/key/file-rewrite policy if product documentation makes it valuable. Local numeric category2 and direct-range guards are not public ID-domain declarations.
+5. Seek actual nonsecret configured scene artifacts and independent observations only in future authorized scope. Actual boot/API/thread/clock/provider and physical outcomes are not supplied by these source joins.
+
+The executable main caller, literal service flag, same-object loader/initializer contexts and selected registry payload/duplicate path are now source-closed within their normal-return premises. Avoid repeating them as new runtime or semantic coverage.

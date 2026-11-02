@@ -1,0 +1,78 @@
+{
+  "SQL_execution": 0,
+  "allocation_request_bytes": 72,
+  "base_constructor": "0xb91b0",
+  "base_input_arguments": [
+    "inner",
+    "key139",
+    "modobj",
+    "line_modobj",
+    "brand_modobj"
+  ],
+  "class_RTTI": "14kobj_value_139",
+  "factory_entry": "0xb9934",
+  "inner_fields": {
+    "12": "brand_modobj",
+    "16": "key139",
+    "20": "last selected converted EN_KEY_OBJECT.slots",
+    "24": "last selected converted AS_OBJECT_SYSTEM.id_system",
+    "36": "SQL string pointer",
+    "4": "modobj",
+    "40": "SQL length",
+    "44": "SQL inline/capacity storage",
+    "8": "line_modobj"
+  },
+  "method0_stored_Thumb_pointer": "0xa8c01",
+  "natural_walker": {
+    "conditionality": "Requires normal initializer/container/callable completion, selected139 entry retained without interposition/later mutation, current key139 and successful allocation/string/provider delegates; not runtime activation.",
+    "context_value_sources": {
+      "brand_modobj": "current context+84 via1001d0",
+      "line_modobj": "current context+80 via1001b4",
+      "modobj": "current context+76 via10017c"
+    },
+    "current_integer_keys": "vector-like current range through word[input+0] offsets12/16; actual producer not traced",
+    "entry": "0xa1320",
+    "indirect_call": "a143c\u2192selected invokera2a14\u2192storedfactoryb9934",
+    "lookup_requires": "matching current integer key, present registry entry, nonempty selected callable",
+    "registry_base_PC_join": "0xa1354 target210720 plus1020"
+  },
+  "not_established": [
+    "all registry keys/collision/later mutation policy",
+    "natural source of context numeric values or integer-key list",
+    "complete device/Firmware/version eligibility",
+    "later uses of slots/systemID after selected stores",
+    "query success or actual row ordering/cardinality",
+    "complete shared ownership/destructor/exception behavior"
+  ],
+  "original_execution": 0,
+  "outer_to_inner": {
+    "outer32": "inner20 slots",
+    "outer36": "inner24 systemID",
+    "outer48": "inner36 SQL"
+  },
+  "replacement_field_offsets": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "replacement_order": [
+    "$modobj$",
+    "$line_modobj$",
+    "$brand_modobj$",
+    "$key_object$"
+  ],
+  "returned_pair": "inner=allocation+12 plus shared ownership/control pointer allocation",
+  "selected_registry_record": {
+    "factory_Thumb_pointer": "0xb9935",
+    "factory_data_offset": 904,
+    "invoker_Thumb_pointer": "0xa2a15",
+    "invoker_offset": 916,
+    "key": 139,
+    "manager_offset": 912,
+    "relative_to_stack_array_base": 900
+  },
+  "startup_registry": "0x210b1c",
+  "template_global": "0x210720",
+  "vtable_address_point": "0x20a880"
+}

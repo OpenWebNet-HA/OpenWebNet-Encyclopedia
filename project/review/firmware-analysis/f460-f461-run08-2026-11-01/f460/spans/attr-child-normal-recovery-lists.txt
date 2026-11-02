@@ -1,0 +1,53 @@
+
+/home/bticino/bin/dedrifupdater:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000005bd8 <.text+0x3418>:
+    5bd8:	f9401ab5 	ldr	x21, [x21, #48]
+    5bdc:	b4fff495 	cbz	x21, 5a6c <_ZN8PlatformC1Ei@plt+0x2fe4>
+    5be0:	f9400aa0 	ldr	x0, [x21, #16]
+    5be4:	aa1703e1 	mov	x1, x23
+    5be8:	97fff256 	bl	2540 <__errno_location@plt+0x10>
+    5bec:	35ffff60 	cbnz	w0, 5bd8 <_ZN8PlatformC1Ei@plt+0x3150>
+    5bf0:	f9400ea0 	ldr	x0, [x21, #24]
+    5bf4:	f9402800 	ldr	x0, [x0, #80]
+    5bf8:	b4ffff00 	cbz	x0, 5bd8 <_ZN8PlatformC1Ei@plt+0x3150>
+    5bfc:	7100067f 	cmp	w19, #0x1
+    5c00:	54000320 	b.eq	5c64 <_ZN8PlatformC1Ei@plt+0x31dc>  // b.none
+    5c04:	71000a7f 	cmp	w19, #0x2
+    5c08:	54fffcc1 	b.ne	5ba0 <_ZN8PlatformC1Ei@plt+0x3118>  // b.any
+    5c0c:	f94002c1 	ldr	x1, [x22]
+    5c10:	f9401c21 	ldr	x1, [x1, #56]
+    5c14:	f9400438 	ldr	x24, [x1, #8]
+    5c18:	97fff1c6 	bl	2330 <umount_kernel_recovery@plt+0x10>
+    5c1c:	f94002c2 	ldr	x2, [x22]
+    5c20:	aa0003e1 	mov	x1, x0
+    5c24:	aa1803e0 	mov	x0, x24
+    5c28:	f9401c58 	ldr	x24, [x2, #56]
+    5c2c:	97fff239 	bl	2510 <update_kernel_recovery@plt+0x10>
+    5c30:	f9000700 	str	x0, [x24, #8]
+    5c34:	17ffffe9 	b	5bd8 <_ZN8PlatformC1Ei@plt+0x3150>
+    5c38:	f94002c1 	ldr	x1, [x22]
+    5c3c:	f9402421 	ldr	x1, [x1, #72]
+    5c40:	f9400438 	ldr	x24, [x1, #8]
+    5c44:	97fff1bb 	bl	2330 <umount_kernel_recovery@plt+0x10>
+    5c48:	f94002c2 	ldr	x2, [x22]
+    5c4c:	aa0003e1 	mov	x1, x0
+    5c50:	aa1803e0 	mov	x0, x24
+    5c54:	f9402458 	ldr	x24, [x2, #72]
+    5c58:	97fff22e 	bl	2510 <update_kernel_recovery@plt+0x10>
+    5c5c:	f9000700 	str	x0, [x24, #8]
+    5c60:	17ffffde 	b	5bd8 <_ZN8PlatformC1Ei@plt+0x3150>
+    5c64:	f94002c1 	ldr	x1, [x22]
+    5c68:	f9401821 	ldr	x1, [x1, #48]
+    5c6c:	f9400438 	ldr	x24, [x1, #8]
+    5c70:	97fff1b0 	bl	2330 <umount_kernel_recovery@plt+0x10>
+    5c74:	f94002c2 	ldr	x2, [x22]
+    5c78:	aa0003e1 	mov	x1, x0
+    5c7c:	aa1803e0 	mov	x0, x24
+    5c80:	f9401858 	ldr	x24, [x2, #48]
+    5c84:	97fff223 	bl	2510 <update_kernel_recovery@plt+0x10>
+    5c88:	f9000700 	str	x0, [x24, #8]
+    5c8c:	17ffffd3 	b	5bd8 <_ZN8PlatformC1Ei@plt+0x3150>

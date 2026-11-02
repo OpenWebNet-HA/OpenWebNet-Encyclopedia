@@ -1,0 +1,83 @@
+# Firmware Analysis
+
+This section records build-specific implementation findings recovered from manufacturer Firmware packages. It distinguishes static inspection from bounded execution of original helpers, complete process execution and Physical Device observations. The section is designed to retain separate evidence for multiple products and releases.
+
+## Reference
+
+| Firmware | Artifact identity | Methods incorporated | Coverage |
+| --- | --- | --- | --- |
+| [F454 2.0.51](f454-2.0.51.md) | `firmware-f454-020051`; SHA-256 recorded in the analysis | Static inspection and selected original ARM helper execution | Initial curated integration, [targeted static follow-up](f454-2.0.51-follow-up.md), [dataflow continuation](f454-2.0.51-continuation.md) and [final static pass](f454-2.0.51-final-pass.md); broader reconciliation remains open |
+| [MH202 1.0.24](mh202-1.0.24.md) | `firmware-mh202-010024`; exact SHA-256 recorded in the analysis | Static inspection and fifteen bounded original ARM corpora, including selected stopped prefixes | Completed bounded overnight examination through28; reviewed scenario/routing/translation/web/platform findings and final synthesis, with incomplete runtime/physical coverage |
+| [MyHOMEServer1 3.87.13](myhomeserver1-3.87.13.md) | Original `SMARTGW_038713.fwz`; exact SHA-256 recorded in the analysis | First static pass, read-only SQLite and explicit host arithmetic | Startup/application composition, distinct embedded catalogue, fresh parser layout and selected registration/translation; runtime and wider Device review remain open |
+| [F460 2.0.12 and F461 2.0.11](f460-2.0.12-and-f461-2.0.11.md) | Existing canonical firmware-f460-020012 /firmware-f461-020011, exactSHA/size in the analysis | Parallel safe static extraction, fresh AArch64/boot/DB metadata and read-only source-profile comparison | Separate product declarations, shared catalogue and changed selected binaries; no firmware execution or runtime/physical approval |
+| [F460/F461 source analysis](f460-f461-deep-analysis.md) and [knowledge handoff](f460-f461-knowledge-handoff.md) | Original AArch64 F460 2.0.12 / F461 2.0.11, independently checked build identities | Selected catalogue/scene/condition/serializer/update and configuration/module/translation/platform/clock source contracts | Fifteen saved checkpoints with scoped navigation; conditional providers/objects, no firmware execution or complete runtime/physical/Device approval |
+| [F450, F453AV, F455, F459 and MH200N](f450-f453av-f455-f459-mh200n.md) | Six retained packages; exact identities in the analysis | Static extraction, bounded source/format/database-request evidence and one private encrypted support-container archive | Ongoing reviewed investigation; no recovered plaintext database, Firmware execution or full Device/runtime/physical approval |
+
+## Evidence record
+
+Each analysis identifies the exact archive, applicable Device, original file hashes, implementation paths or virtual addresses, examination method and retained evidence. A new release receives its own entry even when filenames or shared functions match an existing release. Whole-file equality, matching code sections and observed runtime equivalence are different claims.
+
+The [review capsules](../../project/review/firmware-analysis/) retain selected analysis excerpts and fingerprints. Original manufacturer packages remain subject to their existing archive/redistribution policy. An excerpt or a hash identifies the basis of a finding; it is not automatically a self-contained execution harness.
+
+| Method | Documentable result | Required boundary |
+| --- | --- | --- |
+| Static artifact inspection | Contents, configured values and inspected code branches | Deployment, reachability and real service activation remain separate |
+| Bounded original-helper execution | Results of the identified instructions with recorded fixtures | Preserve provider, memory, I/O, state and continuation primitives |
+| Complete runtime execution | Results under the recorded startup and dependency environment | Emulator/peripheral and scheduling assumptions remain visible |
+| Physical Device observation | Captured behavior of the identified Device and Configuration | Do not generalize across products, releases or installations |
+
+## Promotion into reference pages
+
+Firmware analyses preserve implementation evidence and unresolved boundaries. Stable operational semantics belong in the applicable Protocol, Functional Reference, Diagnostics or Programming page. Device-specific build composition, applicability, exceptions and revision evidence belong in the Device definition. These destinations should link back to the applicable analysis rather than duplicate a generic implementation description.
+
+The [Evidence and Confidence policy](../evidence-and-confidence.md) governs promotion. A successful parser, local acknowledgement, recorded write or normal return must not be promoted to physical actuation, delivery or durable installation without evidence for that layer. Reused setup and several reports about the same code are not independent corroboration.
+
+## Remaining work
+
+The first F454 entry incorporates selected findings, not the whole research dossier. Further integration should reconcile the remaining claim groups against existing canonical pages and existing hardware/oracle evidence. Future packages should reuse this evidence structure while retaining their own artifact and runtime scope.
+
+The MH202 continuation now also records a second isolated original helper (packaged copy routine), selected COSO feedback/key-to-pending-state joins, diagnostic WHO/WHERE and final-builder boundaries, and marker/watchdog request policy. These remain build-specific software evidence; complete runtime and physical behavior are unproved.
+
+The later MH202 batch adds UTC calendar comparison, an executed normalizer body with supplied parser fields, prepared diagnostic suffix helpers and a concrete application marker producer. Whole parser/runtime/physical boundaries remain open.
+
+The MH202 continuation further joins numeric-record condition/action prefixes, executes a full selected normal builder/parser-object path, narrows special DIM1 constructor write ownership and adds selected lighting translation. These remain scoped implementation evidence.
+
+The latest MH202 continuation links native common parsing to ordinary normalization, separates IIF operand extraction from line rewriting, identifies diagnostic output/no-data policy and narrows reverse lighting WHAT-prefix construction.
+
+The MH202 component audit distinguishes packaged PHP CLI5.2.13 from Apache module5.1.6 and preserves normal/recovery path identities; later native bracket/level normalization, selected logical folding and lighting pending-state evidence retain their runtime limits.
+
+The next MH202 continuation executes selected special-parser prefixes only up to the first unresolved selector read, maps mixed logical-state ownership and adds distinct WHO2 translation. Configured grammar, full comparator outcomes, runtime ownership and physical behavior remain open.
+
+A further static MH202 continuation joins diagnostic output-reference/return ownership, automation ordinary receipt versus query/timer state and selected WHO4 scalar formatting. It adds no native execution or physical meaning to raw formatted values.
+
+The subsequent static MH202 batch separates decoder-array/caller-object ownership, preserves an explicit diagnostic-qualification correction, joins conditional same-record automation feedback and adds one WHO4 DIM0 request builder. These refinements add no native or physical observations.
+
+The next MH202 batch executes the distinct COSO pointer parser and a query serializer on its actual returned object. Static continuations identify one actual synchronizer callback and separate thermo feedback/timeout flags, retaining provider, scheduling and physical limits.
+
+A further MH202 corpus executes the original nonnull record helper together with the real pointer parser. Static continuations trace configuration-generated synchronizer state/output and interpreter GOTO node selection; those remain distinct from physical exchange and gate-reset policy.
+
+The [MH202 record and script lifecycle](mh202-1.0.24-record-and-script-lifecycle.md) covers fresh message IDs, conditional monitor routing and BEGIN-head construction.
+
+A static [WHO17 slot and event-storage continuation](mh202-1.0.24-record-and-script-lifecycle.md#who17-manager-slots-and-local-result-codes) separates direct manager arrays, event caches and interpreter variables; no new native corpus is counted.
+
+[MH202 sound and alarm translation](mh202-1.0.24-functional-translation.md) adds scoped functional evidence alongside the separate native auxiliary-copy helper.
+
+Two [exact generated-candidate parser cases](mh202-1.0.24-functional-translation.md#native-parsing-of-the-generated-candidates) preserve NULL and parameter-list distinctions without asserting a complete runtime path.
+
+The MH202 continuation now traces one conditional utility deadline writer/restoring consumer and retains a reviewed morning draft plus a saved-checkpoint verification catalog. These add static/source-navigation evidence without new original execution or physical timing claims.
+
+A later MH202 source refinement ties the utility arithmetic unit to a conditional clock-provider ABI and identifies a separate configuration writer. It does not add original execution, measured timing or physical activation.
+
+The MH202 WHO25 continuation adds selected transversal translation and fresh private query-state evidence, retaining published-variant, parser, ID/timer and physical boundaries. It adds no native corpus.
+
+The MH202 WHO14/WHO15 continuation adds build-specific special-command/CEN source paths, preserving separate private-state and published-meaning boundaries. No native corpus is added.
+
+The MH202 continuation adds one manually joined original query/STM corpus and a separate static WHO29 packaged-owner/query boundary. Natural runtime, actual timers, raw admission and physical behavior remain unobserved.
+
+The [MH202 final synthesis](../../project/review/firmware-analysis/mh202-1.0.24/final-report.txt) and [coverage](../../project/review/firmware-analysis/mh202-1.0.24/final-coverage.txt) complete the bounded overnight record while retaining source/runtime/physical and wider Device gaps. Each later Firmware package still requires its own exact input and layout evidence.
+
+## Product-specific follow-up
+
+The subsequent [F454 alarm/AV paths](f454-2.0.51-product-paths.md) and [MH202 scenario resources](mh202-1.0.24-scenario-resources.md) use documented product purposes to select new source questions. Separate alarm software ownership, AV assignment sources, genuine manufacturer resources and a panic-Configuration declaration are implementation evidence with electrical, configured-script, runtime and physical boundaries retained. The [joint review capsule](../../project/review/firmware-analysis/product-followup-2026-10-31/) preserves exact reports and source reviews.
+
+The next [F454 video/board continuation](f454-2.0.51-av-and-board.md) identifies the actual status formatter and narrows conditional serial attribution. The [ScenarioSuite generator](../../scenario-engine/scenario-suite-generator.md) and [MH202 generated-script consumers](mh202-1.0.24-generated-scenarios.md) connect selected original producer/consumer paths. These source-only additions retain runtime, electrical and wider Device review boundaries.

@@ -1,0 +1,45 @@
+
+/home/bticino/libcoso/libplug_automation_tr.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000049c0 <automation_tr_translate@@Base+0xf90>:
+    49c0:	d0000001 	adrp	x1, 6000 <automation_tr_translate@@Base+0x25d0>
+    49c4:	d0000000 	adrp	x0, 6000 <automation_tr_translate@@Base+0x25d0>
+    49c8:	91138021 	add	x1, x1, #0x4e0
+    49cc:	911c6000 	add	x0, x0, #0x718
+    49d0:	97fff514 	bl	1e20 <g_strdup_printf@plt>
+    49d4:	aa0003f7 	mov	x23, x0
+    49d8:	f9404fe1 	ldr	x1, [sp, #152]
+    49dc:	b4ff9417 	cbz	x23, 3c5c <automation_tr_translate@@Base+0x22c>
+    49e0:	f9401820 	ldr	x0, [x1, #48]
+    49e4:	b40000a0 	cbz	x0, 49f8 <automation_tr_translate@@Base+0xfc8>
+    49e8:	d0000001 	adrp	x1, 6000 <automation_tr_translate@@Base+0x25d0>
+    49ec:	91072021 	add	x1, x1, #0x1c8
+    49f0:	97fff594 	bl	2040 <g_strcmp0@plt>
+    49f4:	35000b80 	cbnz	w0, 4b64 <automation_tr_translate@@Base+0x1134>
+    49f8:	f94053f5 	ldr	x21, [sp, #160]
+    49fc:	aa1a03e3 	mov	x3, x26
+    4a00:	aa1603e2 	mov	x2, x22
+    4a04:	aa1703e1 	mov	x1, x23
+    4a08:	d0000000 	adrp	x0, 6000 <automation_tr_translate@@Base+0x25d0>
+    4a0c:	911d4000 	add	x0, x0, #0x750
+    4a10:	97fff504 	bl	1e20 <g_strdup_printf@plt>
+    4a14:	f90002a0 	str	x0, [x21]
+    4a18:	d0000001 	adrp	x1, 6000 <automation_tr_translate@@Base+0x25d0>
+    4a1c:	aa1703e0 	mov	x0, x23
+    4a20:	911d0021 	add	x1, x1, #0x740
+    4a24:	d2800022 	mov	x2, #0x1                   	// #1
+    4a28:	97fff4f6 	bl	1e00 <g_ascii_strncasecmp@plt>
+    4a2c:	35000160 	cbnz	w0, 4a58 <automation_tr_translate@@Base+0x1028>
+    4a30:	b9400760 	ldr	w0, [x27, #4]
+    4a34:	7100101f 	cmp	w0, #0x4
+    4a38:	54000380 	b.eq	4aa8 <automation_tr_translate@@Base+0x1078>  // b.none
+    4a3c:	f94033e2 	ldr	x2, [sp, #96]
+    4a40:	aa1303e1 	mov	x1, x19
+    4a44:	910283e0 	add	x0, sp, #0xa0
+    4a48:	52800023 	mov	w3, #0x1                   	// #1
+    4a4c:	d280001c 	mov	x28, #0x0                   	// #0
+    4a50:	97fff548 	bl	1f70 <prepare_briefscs_frames@plt>
+    4a54:	17fffdd7 	b	41b0 <automation_tr_translate@@Base+0x780>

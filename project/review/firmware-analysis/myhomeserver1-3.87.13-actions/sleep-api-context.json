@@ -1,0 +1,8 @@
+{
+  "source": "Linux man-pages project, nanosleep(2)",
+  "url": "https://man7.org/linux/man-pages/man2/nanosleep.2.html",
+  "consulted_date": "2026-10-31",
+  "bounded_paraphrase": "The documented API uses seconds and nanoseconds in a timespec interval. An interrupted call returns minus one with EINTR and can supply a remaining interval for another call. Actual scheduling can exceed the requested interval.",
+  "scope": "External API semantic context only; not an original target header, executed provider/kernel, firmware observation, valid-input test or measured timing.",
+  "retrieval_note": "Initial Open Group Issue8 page request returned HTTP403; Linux man-pages maintainer documentation was then consulted. No firmware execution or closed route was involved."
+}

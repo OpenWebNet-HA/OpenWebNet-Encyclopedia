@@ -1,0 +1,34 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000313b4 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11784>:
+   313b4:	4631      	mov	r1, r6
+   313b6:	4640      	mov	r0, r8
+   313b8:	f7f9 fe7c 	bl	2b0b4 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xb484>
+   313bc:	f8df 3614 	ldr.w	r3, [pc, #1556]	@ 319d4 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11da4>
+   313c0:	2040      	movs	r0, #64	@ 0x40
+   313c2:	f859 4003 	ldr.w	r4, [r9, r3]
+   313c6:	9b02      	ldr	r3, [sp, #8]
+   313c8:	f103 0518 	add.w	r5, r3, #24
+   313cc:	f104 0308 	add.w	r3, r4, #8
+   313d0:	931e      	str	r3, [sp, #120]	@ 0x78
+   313d2:	f7df eb54 	blx	10a7c <_Znwj@plt>
+   313d6:	4641      	mov	r1, r8
+   313d8:	4606      	mov	r6, r0
+   313da:	f7fc fee7 	bl	2e1ac <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xe57c>
+   313de:	e9dd 232c 	ldrd	r2, r3, [sp, #176]	@ 0xb0
+   313e2:	f106 0128 	add.w	r1, r6, #40	@ 0x28
+   313e6:	eddd 0b28 	vldr	d16, [sp, #160]	@ 0xa0
+   313ea:	eddd 1b2a 	vldr	d17, [sp, #168]	@ 0xa8
+   313ee:	3408      	adds	r4, #8
+   313f0:	4628      	mov	r0, r5
+   313f2:	9614      	str	r6, [sp, #80]	@ 0x50
+   313f4:	f941 0a8f 	vst1.32	{d16-d17}, [r1]
+   313f8:	a914      	add	r1, sp, #80	@ 0x50
+   313fa:	e9c6 230e 	strd	r2, r3, [r6, #56]	@ 0x38
+   313fe:	6034      	str	r4, [r6, #0]
+   31400:	f7ff fc44 	bl	30c8c <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1105c>
+   31404:	e516      	b.n	30e34 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11204>

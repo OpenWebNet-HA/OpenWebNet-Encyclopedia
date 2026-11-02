@@ -1,0 +1,64 @@
+# MyHOMEServer1 3.87.13: manual receivers for the22 byte+72 store candidates
+
+This batch resolves receiver provenance for all22 byte-store candidates retained by the previous shared-stop-domain query. Nine address the current stack (six directly, three through an explicit SP-derived register); one writes a fresh76-byte allocation on its selected normal path. Two remain the independently established shared-global initializer0/set1 stores. The remaining ten retain a caller-supplied destination object, several using byte+72 as an inline string character/terminator. Their complete caller aliases remain unresolved: these local object layouts are not a universal proof that no caller could supply the shared-domain address.
+
+No new reset of shared flag `0x167800` is established. This is a positive source-backed reduction of candidate ambiguity, **not** global absence, permanent-latch, defect, cancellation/restart or physical behavior evidence. Original instructions, native helpers, target process/OS/network/I/O, provider execution and semantic host models: **0**. Closed transport/authentication/session/framing/equivalent routes remain untouched.
+
+## Scope, identity and preservation
+
+Original image path `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. The exact22 prior candidate VAs/operands are pinned from `2026-10-31-cancellation/stop-domain/BOUNDED_QUERIES.json`. This collector checks that its manual row set equals that frozen set; it does not run the old full-disassembly syntax search again. Original inputs, previous reports, synced sources and repository files remain read-only.
+
+`SOURCE_EVIDENCE.json` pins22 instruction-aligned original ranges with PT_LOAD-derived file offsets/raw hashes and15 receiver-alias byte guards. `RECEIVER_LEDGER.json` retains every store, its original bytes/operand, selected receiver origin, exception-index interval and applicability boundary. Exception-index intervals are not automatically treated as exact source function boundaries: the startup initializer lies inside a larger grouped interval. No nearest stripped-symbol label supplies a class identity.
+
+Run `python3 collect_alias_v1.py --check` from this directory for read-only byte reproduction. First generation refuses existing outputs and immediately copies report/collector/outputs with an index computed before opening that index. An unexecuted pre-generation collector draft was preserved before correcting a numeric conditional-spacing typo; no output/report existed at that correction and no generated candidate was overwritten.
+
+## Current-frame receivers: nine candidates
+
+Six stores encode `[sp,#72]` directly at `0x5d636`, `0x6ad74`, `0xc4402`, `0xd7508`, `0xf586a` and `0x108060`. For the ordinary valid target stack/frame premise, these are current-frame bytes, not the static BSS stop flag. This statement does not depend on guessing the source-level purpose of the temporary data or following any callee/provider.
+
+Three superficially object-looking `[r6,#72]` stores instead have a nearby explicit SP-derived receiver:
+
+| Store | Original receiver assignment | Effective selected byte |
+| --- | --- | --- |
+|`0xe618c`|`0xe6154`: r6=SP+612|current SP+684|
+|`0x1041da`|`0x1041a0`: r6=SP+596|current SP+668|
+|`0x108c5e`|`0x108c26`: r6=SP+612|current SP+684|
+
+The retained source runs from those aligned local constructions through the stores. r3 is locally set0, and adjacent initialization writes address other fields of the same stack temporary. No intervening receiver reassignment converts r6 to the shared global in these selected spans. The offsets refer to each function's then-current SP, not a single common stack or scene/global offset. Valid-stack/EABI premises are explicit; no actual stack address or execution is supplied.
+
+## A fresh allocation receiver: one candidate
+
+The `0x31392` store uses r4, assigned from the allocator's returned r0 at `0x31356`. Original `0x3134a` supplies allocation size76; `0x31350` requests `operator new`. The selected source copies base/string/pair metadata into that returned object, then loads a byte from current SP+192 at `0x3137c` and stores it to allocation+72 at `0x31392`.
+
+Under ordinary successful fresh C++ allocation and normal callee-preserving returns, this is a byte in the fresh object rather than the shared BSS flag. No successful allocator fixture, returned address, object value or actual lifetime is fabricated. Abnormal provider/interposition behavior and arbitrary invalid pointer execution remain outside that premise. This exclusion concerns this concrete allocation-to-store path only, not every call to the copied raw object's constructor.
+
+## Ten caller-supplied destination objects
+
+Each of these retained spans explicitly saves incoming r0 in a callee-preserved register, which remains the store receiver through the selected local path:
+
+| Store | Receiver save | Source-backed local use |
+| --- | --- | --- |
+|`0x2b4ce`|`0x2b3a6`: r6=r0|JsonCpp `asBool` result to supplied object+72|
+|`0x392fc`|`0x39064`: r4=r0|low8 bits of JsonCpp `asUInt` result to supplied object+72|
+|`0xb2c0c`|`0xb2bd4`: r4=r0|zero inline-string terminator; object+64 points to object+72, length+68=0|
+|`0xb365c`|`0xb3624`: r4=r0|independently derived matching empty inline-string construction|
+|`0xb4eda`|`0xb4dfc`: r4=r0|selected one-character copy into inline string at object+72|
+|`0xc3798`|`0xc36bc`: r4=r0|selected one-character inline-string copy|
+|`0xe4eb4`|`0xe4e56`: r4=r0|selected one-character string initialization; pointer+64/length+68|
+|`0xe85f2`|`0xe8580`: r4=r0|selected one-character string initialization|
+|`0xe8c20`|`0xe88de`: r4=r0|selected one-character inline-string copy, length+68|
+|`0x10abde`|`0x10ab6c`: r4=r0|selected one-character string initialization|
+
+These are concrete receiver and neighboring-field facts; no JsonCpp keys/private configuration values, public command meanings or provider bodies are exported. Normal ABI/callee returns are prerequisites for retaining the supplied receiver. The inline-string cases explain why an unrelated object layout can have a byte store at the same numeric offset as the shared flag.
+
+Complete natural caller identity is **not** closed for these ten functions. Their entry r0 is an external input to the inspected local source. The batch therefore classifies them as caller-supplied object stores, rather than promoting them into proved shared resets or declaring them globally incapable of aliasing `0x1677b8`. Their source-level type names and complete construction/clone lifetimes are not inferred or needed for this bounded result.
+
+## The two known global stores stay distinct
+
+`0x1548e` remains the original initializer's zero store and `0xcd706` the shared stop helper's set1. The previous independent source review already resolves their PC-derived receiver to `0x1677b8`; they are retained here solely to reconcile all22 original candidates. They are not counted as newly discovered reset behavior. Process/DSO exit CV ownership remains the previous report's separate conditional source finding.
+
+## What this does and does not close
+
+The exact finite classification is2 known globals +9 stack stores +1 fresh-allocation destination +10 caller-supplied objects =22. It is not a full writer count or whole-firmware alias result. In particular the prior747 wider STR/STRD candidates, arbitrary arithmetic/indirect/bulk/provider writes, external mutation and complete process reinitialization remain unresolved. No full negative scan is substituted for those missing premises.
+
+Useful next work is a concrete caller chain for one remaining supplied receiver or an independently identified owner/reset API, keeping shared flag, per-scene stop/active and per-action completion namespaces separate. Actual runtime addresses, configured scenes, normal provider success, concurrency, timing, cancellation/relaunch consequences and physical observations remain unproved. Confidence is high in the retained local receiver origins; universal alias/reset conclusions are intentionally not assigned.

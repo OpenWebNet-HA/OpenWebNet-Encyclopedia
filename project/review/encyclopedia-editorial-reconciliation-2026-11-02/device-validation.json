@@ -1,0 +1,97 @@
+{
+  "scope": "Actual local tests plus independent semantic review for current description; no remote CI status, publication or physical test",
+  "checks": [
+    {
+      "check": "device-current-review",
+      "argv": [
+        "python3",
+        "-B",
+        "devices/tools/check-device-definitions.py"
+      ],
+      "exit_code": 0,
+      "actual_private_record_sha256": "9d188bbc4572c0616e9855b23bce26c8fc2a93fed021d885afa5e769c7ee4590"
+    },
+    {
+      "check": "queue-pre-acceptance",
+      "argv": [
+        "python3",
+        "-B",
+        "devices/tools/build-device-work-queue.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "actual_private_record_sha256": "2bf6aa73e34318a3025a0a898f583378a120d276cf7717e793674b51c072a711"
+    },
+    {
+      "check": "device-tests-pre-acceptance",
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "devices/tools/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "actual_private_record_sha256": "b87e9f5377c4d3dad15bf3238ed2314d0f3c1cc189e003312ad4970cd17afef1"
+    },
+    {
+      "check": "esg-before-acceptance-v2",
+      "argv": [
+        "python3",
+        "-B",
+        "project/review/checks/check_esg.py",
+        "."
+      ],
+      "exit_code": 0,
+      "actual_private_record_sha256": "598a3b4b07b327ade7e1567d6c7717017a53fe81c9d38604e4e2c609a8a21f97"
+    },
+    {
+      "check": "ecv-before-acceptance-v2",
+      "argv": [
+        "python3",
+        "-B",
+        "project/review/checks/check_ecv.py",
+        "."
+      ],
+      "exit_code": 0,
+      "actual_private_record_sha256": "c5e19a2b98e8548fd7f02ba18c135e58802403bd59af6bb79714cf95d18f9d3a"
+    },
+    {
+      "check": "artifact-registry",
+      "argv": [
+        "python3",
+        "-B",
+        "project/review/checks/check_artifact_manifest.py"
+      ],
+      "exit_code": 0,
+      "actual_private_record_sha256": "fe106db5dc8cf219e182fc4d38904b2b55980cab9d51975886543f96f7095f9d"
+    },
+    {
+      "check": "diff-current-review",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "actual_private_record_sha256": "dadb1906efc05887675c0df6d8ccd0dfccc8d33ea0054afe4fc7b52bbd069a60"
+    }
+  ],
+  "post_review_representation": [
+    {
+      "path": "devices/definitions/own-dev-0002-audio-video-web-server-gateway.md",
+      "semantic_review_sha256": "62d39d1e30f76ff2df4d55e61d55e83ba262c0e27ba98bf05948510ae05a2663",
+      "current_sha256": "3d64e07b49c36c0c1850152ce1427acd2eb20146adef26a5b9e8f85f476f65ff",
+      "post_review_delta": "Inline literal formatting only; no claim or source change"
+    },
+    {
+      "path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "semantic_review_sha256": "f24f8f981d7e9e54832bf27b1a96f205da7b361440212b7bec68b194899af2a5",
+      "current_sha256": "93e1d8a5e56b9a57b1c422e28ad51307a633798a6d70fefbb7357c0eb6b4157e",
+      "post_review_delta": "Inline literal formatting only; no claim or source change"
+    }
+  ]
+}

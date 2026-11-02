@@ -1,0 +1,65 @@
+[
+  {
+    "bytes": 160,
+    "end_va_exclusive": "0xee7a8",
+    "name": "local-state-handler",
+    "sha256": "2610c7e3e4140e21367f9f55e8e2c50e8a58f065eeb71a00f2f7da590052d282",
+    "start_va": "0xee708"
+  },
+  {
+    "bytes": 16,
+    "end_va_exclusive": "0xee5ac",
+    "name": "default-fire",
+    "sha256": "d26ab52e8e0588448e20b1f45cc7ac754966b9466edf3da14d5e480b8295b977",
+    "start_va": "0xee59c"
+  },
+  {
+    "bytes": 134,
+    "end_va_exclusive": "0x53aa0",
+    "name": "selected-local-dispatch",
+    "sha256": "e40d22b283addbe687a68289070f63a1f54a5865a0439dad75070dcd807191f9",
+    "start_va": "0x53a1a"
+  },
+  {
+    "bytes": 58,
+    "end_va_exclusive": "0x519a2",
+    "name": "caller-got-prefix",
+    "sha256": "dd950dd8a8a5a3c8651007f2ea2a05e378729ce9bfa7052fbaf7b71ab497631b",
+    "start_va": "0x51968"
+  },
+  {
+    "bytes": 4,
+    "end_va_exclusive": "0x22650",
+    "name": "id-getter",
+    "sha256": "eea00f3392bbbf5ec7ea83e049192860f6e231d5978f598abaafbf0076ca004d",
+    "start_va": "0x2264c"
+  },
+  {
+    "bytes": 36,
+    "end_va_exclusive": "0x4f024",
+    "name": "string-equality",
+    "sha256": "6b029eb6bd537e48f6da0825c56724647943ac3ff8d3c57815f7042a111dd738",
+    "start_va": "0x4f000"
+  },
+  {
+    "bytes": 180,
+    "end_va_exclusive": "0xa65bc",
+    "name": "trigger-handle-copy",
+    "sha256": "96e796378e6b0fda3fac637aaaf910c4842016c737f7433707e95e49b3e606b8",
+    "start_va": "0xa6508"
+  },
+  {
+    "bytes": 172,
+    "end_va_exclusive": "0x57450",
+    "name": "temporary-copy-release",
+    "sha256": "1f24da8ce34fe562cdad7054910ae749af78d163d57a71b2dc20b48333f5f153",
+    "start_va": "0x573a4"
+  },
+  {
+    "bytes": 8,
+    "end_va_exclusive": "0xa60b0",
+    "name": "captured-scene-wrapper",
+    "sha256": "cb8cef26b2f4119bede95225f9fea0dd952eac6197f33ebba8a5aaa01fd6fab2",
+    "start_va": "0xa60a8"
+  }
+]

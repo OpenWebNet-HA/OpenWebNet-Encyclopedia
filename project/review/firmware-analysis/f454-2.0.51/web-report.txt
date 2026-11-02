@@ -1,0 +1,17 @@
+# Web API run 2: callback boundaries, token-gate coverage and raw transport
+
+29 October 2026. Static examination only. The examined `api-arm` SHA-256 is `2248b877bcc4180f0f04ffb1bad71e0efe4607fd06eacf174a2a6a380ea2cb13`. No API requests were sent and no vendor process was started.
+
+## From names to bounded callbacks
+
+The previous pass recovered 273 distinct RPC method names and one stored callback pointer per binding. This pass decoded the original ELF's `.ARM.exidx` table, including signed PREL31 function references. It contains 929 sorted unique unwind starts. **All 273 callback pointers match exact unwind starts**, and all 273 handlers are distinct.
+
+`map_handler_gates.py` uses the next unwind start to bound each callback code region, decodes ARM BL instructions directly from ELF bytes and records calls to the shared token-validation helper at `0x12b34`. Every detected token-call address is independently checked against the existing ObjDump listing. The resulting matrix, including all direct calls and original virtual addresses, is `handler-gates.json`.
+
+Results:
+
+- 260 registered handlers contain a direct call to the shared token-validation helper.
+- 13 do not contain that direct call in the bounded region.
+
+This is a **call-presence matrix, not a complete authorization proof**. A direct call is not automatically a dominance proof; a handler without it can use other checks or delegated validation. Runtime activation, installed settings, callback-adapter argument conversion and per-profile permissions require separate tracing.
+

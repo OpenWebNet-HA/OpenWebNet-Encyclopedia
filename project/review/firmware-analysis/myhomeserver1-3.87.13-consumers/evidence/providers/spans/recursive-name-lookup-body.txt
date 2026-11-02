@@ -1,0 +1,76 @@
+
+
+
+Disassembly of section .text:
+
+00004824 <get_node_by_name_and_type_sens@@Base>:
+    4824:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+    4828:	2900      	cmp	r1, #0
+    482a:	bf18      	it	ne
+    482c:	2800      	cmpne	r0, #0
+    482e:	4d23      	ldr	r5, [pc, #140]	@ (48bc <get_node_by_name_and_type_sens@@Base+0x98>)
+    4830:	b082      	sub	sp, #8
+    4832:	4c23      	ldr	r4, [pc, #140]	@ (48c0 <get_node_by_name_and_type_sens@@Base+0x9c>)
+    4834:	447d      	add	r5, pc
+    4836:	592c      	ldr	r4, [r5, r4]
+    4838:	6824      	ldr	r4, [r4, #0]
+    483a:	9401      	str	r4, [sp, #4]
+    483c:	f04f 0400 	mov.w	r4, #0
+    4840:	d038      	beq.n	48b4 <get_node_by_name_and_type_sens@@Base+0x90>
+    4842:	6980      	ldr	r0, [r0, #24]
+    4844:	4690      	mov	r8, r2
+    4846:	461f      	mov	r7, r3
+    4848:	460e      	mov	r6, r1
+    484a:	f7fd ed3e 	blx	22c8 <g_list_first@plt>
+    484e:	4605      	mov	r5, r0
+    4850:	b9a0      	cbnz	r0, 487c <get_node_by_name_and_type_sens@@Base+0x58>
+    4852:	e02f      	b.n	48b4 <get_node_by_name_and_type_sens@@Base+0x90>
+    4854:	4630      	mov	r0, r6
+    4856:	f7fd ecf2 	blx	223c <g_strcmp0@plt>
+    485a:	b928      	cbnz	r0, 4868 <get_node_by_name_and_type_sens@@Base+0x44>
+    485c:	f1b8 0f04 	cmp.w	r8, #4
+    4860:	d01a      	beq.n	4898 <get_node_by_name_and_type_sens@@Base+0x74>
+    4862:	68a3      	ldr	r3, [r4, #8]
+    4864:	4543      	cmp	r3, r8
+    4866:	d017      	beq.n	4898 <get_node_by_name_and_type_sens@@Base+0x74>
+    4868:	69a3      	ldr	r3, [r4, #24]
+    486a:	b12b      	cbz	r3, 4878 <get_node_by_name_and_type_sens@@Base+0x54>
+    486c:	4620      	mov	r0, r4
+    486e:	4631      	mov	r1, r6
+    4870:	f7fd ebd2 	blx	2018 <get_node_by_name@plt>
+    4874:	4604      	mov	r4, r0
+    4876:	b978      	cbnz	r0, 4898 <get_node_by_name_and_type_sens@@Base+0x74>
+    4878:	686d      	ldr	r5, [r5, #4]
+    487a:	b1dd      	cbz	r5, 48b4 <get_node_by_name_and_type_sens@@Base+0x90>
+    487c:	682c      	ldr	r4, [r5, #0]
+    487e:	6861      	ldr	r1, [r4, #4]
+    4880:	2f00      	cmp	r7, #0
+    4882:	d1e7      	bne.n	4854 <get_node_by_name_and_type_sens@@Base+0x30>
+    4884:	f44f 7200 	mov.w	r2, #512	@ 0x200
+    4888:	4630      	mov	r0, r6
+    488a:	f7fd ec54 	blx	2134 <g_ascii_strncasecmp@plt>
+    488e:	2800      	cmp	r0, #0
+    4890:	d1ea      	bne.n	4868 <get_node_by_name_and_type_sens@@Base+0x44>
+    4892:	f1b8 0f04 	cmp.w	r8, #4
+    4896:	d1e4      	bne.n	4862 <get_node_by_name_and_type_sens@@Base+0x3e>
+    4898:	4a0a      	ldr	r2, [pc, #40]	@ (48c4 <get_node_by_name_and_type_sens@@Base+0xa0>)
+    489a:	4b09      	ldr	r3, [pc, #36]	@ (48c0 <get_node_by_name_and_type_sens@@Base+0x9c>)
+    489c:	447a      	add	r2, pc
+    489e:	58d3      	ldr	r3, [r2, r3]
+    48a0:	681a      	ldr	r2, [r3, #0]
+    48a2:	9b01      	ldr	r3, [sp, #4]
+    48a4:	405a      	eors	r2, r3
+    48a6:	f04f 0300 	mov.w	r3, #0
+    48aa:	d105      	bne.n	48b8 <get_node_by_name_and_type_sens@@Base+0x94>
+    48ac:	4620      	mov	r0, r4
+    48ae:	b002      	add	sp, #8
+    48b0:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
+    48b4:	2400      	movs	r4, #0
+    48b6:	e7ef      	b.n	4898 <get_node_by_name_and_type_sens@@Base+0x74>
+    48b8:	f7fd ec42 	blx	2140 <__stack_chk_fail@plt>
+    48bc:	2628      	movs	r6, #40	@ 0x28
+    48be:	0001      	movs	r1, r0
+    48c0:	0178      	lsls	r0, r7, #5
+    48c2:	0000      	movs	r0, r0
+    48c4:	25c0      	movs	r5, #192	@ 0xc0
+    48c6:	0001      	movs	r1, r0

@@ -1,0 +1,126 @@
+#!/usr/bin/env python3
+"""Selected same-scene raw condition-pointer deletion, static original source only."""
+import sys
+sys.dont_write_bytecode = True
+import argparse, hashlib, importlib.util, json, os, re, struct, subprocess
+from pathlib import Path
+D = Path(__file__).resolve().parent
+W = next(p for p in D.parents if (p/'sources').is_dir())
+R = W/'work/myhomeserver1-firmware/3.87.13/research'
+V = R/'2026-10-31/image_vfs.py'
+S = '/home/bticino/scheduling_manager/scheduling_manager'
+SHA = '7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26'
+H = lambda z: hashlib.sha256(z).hexdigest()
+J = lambda x: (json.dumps(x, sort_keys=True, indent=2)+'\n').encode()
+sp = importlib.util.spec_from_file_location('condition_teardown_vfs', V)
+m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
+SPANS = [
+ ('scene-receiver-alias',0xa5a3c,0xa5a4a),
+ ('inherited-action-tail-into-condition',0xa5b2e,0xa5b46),
+ ('condition-pointer-loop-and-storage',0xa5b46,0xa5b78),
+ ('condition-null-leg',0xa5cf6,0xa5d00),
+ ('selected-condition-publication',0xa79fc,0xa7a24),
+ ('condition-four-byte-append',0xa7264,0xa727e),
+ ('selected-compiled-header-install',0xc8514,0xc8522),
+ ('selected-deleting-destructor',0xc864c,0xc86dc),
+]
+DATA = [('compiled-primary-header',0x161fb0,0x161fc4),
+        ('constructor-header-pool',0xc8638,0xc863c),
+        ('destructor-pools',0xc86dc,0xc86f0)]
+GUARDS = [
+ (0xa5a40,'0546'),(0xa5b46,'d5e91d46'),(0xa5b4c,'0ad0'),
+ (0xa5b4e,'54f8040b'),(0xa5b52,'0028'),(0xa5b54,'00f0cf80'),
+ (0xa5b58,'0368'),(0xa5b5a,'5b68'),(0xa5b5c,'9847'),
+ (0xa5b5e,'a642'),(0xa5b60,'f5d1'),(0xa5b62,'6e6f'),
+ (0xa5b64,'26b1'),(0xa5b66,'e96f'),(0xa5b6a,'891b'),
+ (0xa5cf6,'a642'),(0xa5cf8,'7ff429af'),(0xa5cfc,'6e6f'),
+ (0xc864e,'0446'),(0xc865a,'d0f8a800'),(0xc8668,'04f1b003'),
+ (0xc867a,'d4f89000'),(0xc8696,'e06e'),(0xc86b2,'206d'),
+ (0xc86c8,'04f10800'),(0xc86d0,'2046'),(0xc86d2,'c021'),
+ (0xc86d8,'2046'),(0xa7a02,'03f17407'),(0xa7a1e,'3e60'),
+ (0xa7272,'43f8040b'),(0xa7276,'0a60')]
+
+def build():
+ v=m.ImageVFS(); b=v.read_bytes(S); assert H(b)==SHA
+ ph=struct.unpack_from('<I',b,28)[0]; es,n=struct.unpack_from('<HH',b,42)
+ loads=[struct.unpack_from('<8I',b,ph+i*es) for i in range(n)]
+ def off(a,z=1): return next(o+a-va for t,o,va,_,fs,*_ in loads if t==1 and va<=a and a+z<=va+fs)
+ def raw(a,z): o=off(a,z); return b[o:o+z]
+ def u(a): return struct.unpack('<I',raw(a,4))[0]
+ def text(a): o=off(a); e=b.index(0,o); assert e-o<128; return b[o:e].decode('ascii')
+ def call(pc,target,blx=False):
+  x,y=struct.unpack('<HH',raw(pc,4)); assert x&0xf800==0xf000
+  s=x>>10&1; i1=1-((y>>13&1)^s); i2=1-((y>>11&1)^s)
+  d=s<<24|i1<<23|i2<<22|(x&1023)<<12|(y&2047)<<1
+  if s: d-=1<<25
+  got=((pc+4)&~3 if blx else pc+4)+d
+  assert got&0xffffffff==target,(hex(pc),hex(got),hex(target))
+  return {'call_VA':hex(pc),'bytes':raw(pc,4).hex(),'target':hex(target),'kind':'Thumb BLX immediate to ARM' if blx else 'Thumb BL'}
+ hp=v.root/v.resolve(S).lstrip('/'); env=dict(os.environ,DEBUGINFOD_URLS=''); out={}; spans=[]
+ for name,a,e in SPANS:
+  t=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(hp)],text=True,env=env).replace(str(hp),S)
+  t=re.sub(r' <([^>]+)>',lambda q:q[0] if '@plt' in q[1] else '',t)
+  out['spans/'+name+'.txt']=t.encode()
+  spans.append({'name':name,'start_VA':hex(a),'end_VA_exclusive':hex(e),'file_offset':hex(off(a,e-a)),'sha256':H(raw(a,e-a))})
+ for a,z in GUARDS: assert raw(a,len(bytes.fromhex(z))).hex()==z,hex(a)
+ data=[{'name':name,'start_VA':hex(a),'end_VA_exclusive':hex(e),'file_offset':hex(off(a,e-a)),'raw_hex':raw(a,e-a).hex(),'sha256':H(raw(a,e-a))} for name,a,e in DATA]
+ h=(u(0xc8638)+0xc8514+4)&0xffffffff
+ assert h==0x161fb0 and u(h)==0 and [u(h+x) for x in [8,12,16]]==[0xc86f1,0xc864d,0xc83d9]
+ rt=u(h+4); name=text(u(rt+4)); assert name=='24BncuSceneConditionRunner'
+ assert (u(0xc86dc)+0xc8656+4)&0xffffffff==h
+ # Decode ARM PLT's rotated immediates to its actual jump-slot address.
+ def imm(w):
+  r=((w>>8)&15)*2; v=w&255
+  return ((v>>r)|(v<<(32-r)))&0xffffffff if r else v
+ plt=[]
+ for pc,slot,symbol in [(0x10eb0,0x165b20,'_ZdlPvj'),(0x11738,0x165df0,'_ZNSt18condition_variableD1Ev')]:
+  a,c,d=[u(pc+i) for i in [0,4,8]]
+  assert a&0xfffff000==0xe28fc000 and c&0xfffff000==0xe28cc000 and d&0xfffff000==0xe5bcf000
+  got=pc+8+imm(a)+imm(c)+(d&0xfff); assert got==slot
+  plt.append({'ARM_entry_VA':hex(pc),'raw_hex':raw(pc,12).hex(),'sha256':H(raw(pc,12)),'jump_slot':hex(slot),'symbol':symbol,'scope':'Imported request/candidate binding only; definition and live API behavior unexecuted.'})
+ calls=[call(0xa7a14,0xc83e4),call(0xa7a20,0xa7264),call(0xa5b6c,0x10eb0,True),call(0xc8676,0x10eb0,True),call(0xc868c,0x10eb0,True),call(0xc86a8,0x10eb0,True),call(0xc86c4,0x10eb0,True),call(0xc86cc,0x11738,True),call(0xc86d4,0x10eb0,True)]
+ rel=subprocess.check_output(['readelf','-rW',str(hp)],text=True,env=env); relrows=[]
+ for a in [h+4,h+8,h+12,h+16,0x165b20,0x165df0]:
+  t=next(x.strip() for x in rel.splitlines() if x.startswith(f'{a:08x} '))
+  assert ('R_ARM_RELATIVE' in t) if a<h+20 else ('R_ARM_JUMP_SLOT' in t)
+  if a==0x165b20: assert '_ZdlPvj@CXXABI_1.3.9' in t
+  if a==0x165df0: assert '_ZNSt18condition_variableD1Ev@GLIBCXX_3.4.11' in t
+  relrows.append(t)
+ pins={S:{'sha256':H(b),'bytes':len(b)}}
+ for p,k in [(V,'image_accessor'),(R/'2026-11-01-removal-context/scene-condition/REPORT.md','selected_condition_construction_and_predicate'),(R/'2026-10-31-lifetime/worker-ownership/REPORT.v2.md','inherited_scene_cleanup'),(W/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md','curated_product_context')]:
+  z=p.read_bytes(); pins[k]={'path':str(p.relative_to(W)),'sha256':H(z),'bytes':len(z)}
+ out['INPUTS.json']=J(pins)
+ out['ORIGINAL_SOURCE.json']=J({'image':S,'code_spans':spans,'data_spans':data,'byte_guards':[{'VA':hex(a),'bytes':z} for a,z in GUARDS],'direct_requests':calls,'primary_vtable':{'header':hex(h),'address_point':hex(h+8),'RTTI':hex(rt),'name':name,'slots_Thumb':[hex(u(h+i)) for i in [8,12,16]],'selected_deleting_slot':hex(h+12),'target_instruction':'0xc864c'},'destructor_header_PIC':{'pool':'0xc86dc','add_PC':'0xc8656','header':hex(h)},'import_PLT_proofs':plt,'relocations':relrows})
+ out['TEARDOWN_CONTRACT.json']=J({
+  'same_scene_publication':'a7a02 scene+116; a7a14 constructs selected192B primary object; a7a1e retains R6; a7a20→a7264 moves ONE4B pointer and zeros source temporary',
+  'loop':'a5a40 saves scene receiverR5; a5b46 loads scene116/120; a5b4e postincrements4 and keeps unchanged pointeeR0; nonnull→vptr+4→a5b5c',
+  'empty':'begin==end skips element callbacks; nonnull storage still follows conditional capacity-minus-begin deallocation',
+  'null':'a5b54→a5cf6 compares advanced cursor; nonfinal loops, final reloads scene116 then a5b64',
+  'normal_element_return':'a5b5e compares advanced cursor/end; loops or reloads begin at a5b62',
+  'vector_storage':'nonnull begin→r0=begin,r1=scene124−begin→sized-delete requesta5b6c, after normal element callbacks; no selected slotzeroing claim',
+  'selected_object':'when this valid pointee has actual BNCUSCENE primaryAP161fb8, slot+4 stored Thumbc864d requests instructionc864c, NOT predicate+8 c83d8',
+  'deleting_body_order':['conditionally release derived name string168 unless pointer==self176, sizeword176+1','conditionally release derived ID string144 unless pointer==self152, sizeword152+1','conditionally release base ID string108 unless pointer==self116, sizeword116+1','conditionally release base string80 unless pointer==self88, sizeword88+1','request condition_variableD1 at self8 (c86cc)','after normal return request sized-delete self192 (c86d4)'],
+  'namespaces':'scene+116 raw4B compiled-condition pointers; scene+104 triggers and+128 actions are distinct8B pointer/control ranges. condition self+116 here is its own string inline buffer, not scene116 vector.',
+  'ordering':'Inherited normal source action128 cleanup→newcondition116 element/delete-storage→trigger104 storage cleanup. No actual join/completion or complete lifetime claim.',
+  'unclosed':['valid scene/vector/object/current-vptr and string/allocator invariants','normal provider/deallocation/CV behavior and all exception/unwind/concurrent paths','natural disposal activation, polling/removal ordering, other aliases/owners and whole lifetime','no physical/safety/UAF/leak/absence or cancellation conclusion'],
+  'method':{'original_execution':0,'native_provider_target_calls':0,'host_semantic_fixtures':0,'host_activity':'Read/hash/disassemble original files only.'}})
+ out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes()),'outputs':{n:{'sha256':H(z),'bytes':len(z)} for n,z in out.items()},'counts':{'code_spans':len(SPANS),'data_spans':len(DATA),'byte_guards':len(GUARDS),'direct_requests':len(calls),'relative_and_import_relocations':len(relrows),'import_PLT_proofs':len(plt),'input_pins':len(pins),'original_execution':0}})
+ return out
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');ck=ap.parse_args().check
+ out=build()
+ if ck:
+  for n,z in out.items(): assert (D/n).read_bytes()==z,n
+  for n,p in json.loads((D/'first-candidate/INDEX.json').read_bytes()).items():
+   z=(D/n).read_bytes();assert z==(D/'first-candidate'/n).read_bytes() and H(z)==p['sha256'] and len(z)==p['bytes'],n
+ else:
+  C=D/'first-candidate';assert not C.exists(),'refuse snapshot overwrite'
+  for n in out: assert not (D/n).exists(),'refuse generated overwrite'
+  copies={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),Path(__file__).name:Path(__file__).read_bytes()}
+  index=J({n:{'sha256':H(z),'bytes':len(z)} for n,z in copies.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in copies.items():p=C/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (C/'INDEX.json').open('xb').write(index)
+ print(json.dumps({'check':ck,'outputs':len(out),'code_spans':len(SPANS),'data_spans':len(DATA),'byte_guards':len(GUARDS),'original_execution':0}))
+if __name__=='__main__':main()

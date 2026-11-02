@@ -1,0 +1,41 @@
+{
+  "scope": "Inheritance of ACTUAL earlier upload receipt and local exact supporting container; no fresh upload or network readback",
+  "new_uploads": 0,
+  "new_network_readbacks": 0,
+  "plaintext_DB_objects_preexisting_in_this_investigation": 0,
+  "encrypted_support_objects_preexisting_in_this_investigation": 1,
+  "actual_receipt": {
+    "path": "work/remaining-firmware-investigation/2026-11-01-run01/archive/R2_RECEIPT.json",
+    "bytes": 235,
+    "sha256": "072092bb105685ab2aa0395cde439b431ac6a016037b501a06d2faf509b07793"
+  },
+  "object": {
+    "path": "work/f450-firmware/2.0.10-PROD/extracted/50.xtz",
+    "bytes": 72774,
+    "sha256": "824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8",
+    "private_bucket": "openwebnet-data",
+    "object_key": "sha256/82/4b/824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8",
+    "classification": "Original encrypted support container, not recovered plaintext database",
+    "entries": [
+      {
+        "name": "50/",
+        "uncompressed_bytes": 0,
+        "encrypted": false,
+        "CRC32": "00000000"
+      },
+      {
+        "name": "50/extra.xml",
+        "uncompressed_bytes": 0,
+        "encrypted": true,
+        "CRC32": "00000000"
+      },
+      {
+        "name": "50/master.sqlite",
+        "uncompressed_bytes": 289792,
+        "encrypted": true,
+        "CRC32": "52150069"
+      }
+    ]
+  },
+  "source_manifest_edit": false
+}

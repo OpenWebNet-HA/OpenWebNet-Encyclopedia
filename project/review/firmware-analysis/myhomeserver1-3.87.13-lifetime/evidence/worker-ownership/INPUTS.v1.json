@@ -1,0 +1,32 @@
+[
+  {
+    "bytes": 1406680,
+    "path": "work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager",
+    "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26"
+  },
+  {
+    "bytes": 1390264,
+    "path": "work/myhomeserver1-firmware/3.87.13/analysis/rootfs/usr/lib/libstdc++.so.6.0.29",
+    "sha256": "02d98c9486577d7be0b3fb71b5f0c0b6c090b72554c83640cb525cb3a3c1549a"
+  },
+  {
+    "bytes": 5611,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/image_vfs.py",
+    "sha256": "890e3526e2fc29c630cb45dad15d91fecb6b32007c0be04e5af28c85a48f1ae4"
+  },
+  {
+    "bytes": 11046,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/REPORT.md",
+    "sha256": "3ac86206587e25f07db979bfec8a46ec0d401f658784e6d15fcb2d7d80676e0d"
+  },
+  {
+    "bytes": 7311,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/REPORT.md",
+    "sha256": "dc4692b0bbac6d1aa84574ad6aa02b632bb47864d03b644e3c66a9b8a408661e"
+  },
+  {
+    "bytes": 8963,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/registry/REPORT.md",
+    "sha256": "bf0b87c8b304c8a3e417d261fea2a5cf9212c12c46d64061f9d0fa4eb1af19df"
+  }
+]

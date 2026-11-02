@@ -1,0 +1,476 @@
+{
+  "MH200N1331": {
+    "all_command317_associations": {
+      "rows": [
+        {
+          "CUSTOM": 0,
+          "DESCRI_COSA": "Dimmer ON",
+          "ID_AREA": 3,
+          "ID_ASS": 1340,
+          "ID_COSA": 317,
+          "ID_OBJ": 43,
+          "OPEN_COSA": "1",
+          "ORDINE": 2
+        },
+        {
+          "CUSTOM": 0,
+          "DESCRI_COSA": "Dimmer ON",
+          "ID_AREA": 6,
+          "ID_ASS": 1341,
+          "ID_COSA": 317,
+          "ID_OBJ": 43,
+          "OPEN_COSA": "1",
+          "ORDINE": 2
+        }
+      ],
+      "sql": "SELECT a.*,w.DESCRI_COSA,w.OPEN_COSA FROM ASS_OBJ_COSA a JOIN ANA_COSA w USING(ID_COSA) WHERE a.ID_COSA=317 ORDER BY a.ID_ASS"
+    },
+    "all_command317_compile_rows": {
+      "rows": [
+        {
+          "ACT_AREA": 0,
+          "COND_OK_AREA": 0,
+          "ID": 284,
+          "ID_COSA": 317,
+          "ID_OBJ": 43,
+          "OPEN_FIELD_1": "#1",
+          "OPEN_FIELD_10": "",
+          "OPEN_FIELD_2": "ID_DOVE",
+          "OPEN_FIELD_3": "1",
+          "OPEN_FIELD_4": "[101-200]*",
+          "OPEN_FIELD_5": "",
+          "OPEN_FIELD_6": "",
+          "OPEN_FIELD_7": "",
+          "OPEN_FIELD_8": "",
+          "OPEN_FIELD_9": "",
+          "PANIC_KEY": 0,
+          "TRIGGER_DISABLE": 0,
+          "TRIGGER_ENABLE": 0,
+          "TRIGGER_START_AREA": 1,
+          "TRIGGER_STOP_AREA": 1
+        }
+      ],
+      "sql": "SELECT * FROM ANA_OPEN_RULE_COMPILE WHERE ID_COSA=317 ORDER BY ID"
+    },
+    "both_family_rows": {
+      "rows": [
+        {
+          "ATTIVA": 0,
+          "DESCRI_FAM": "Lighting",
+          "FUNCT_OBJ": null,
+          "ID_FAMIGLIA": 13,
+          "ID_TXT": "ANA_FAMIGLIA.Lighting",
+          "ID_TXT_TOOLTIP": "ANA_FAMIGLIA.TOOLTIP.Lighting",
+          "IMG_FAM": "impianto_illuminotecnica.gif",
+          "ORDINE": 13,
+          "TOOLTIP": "Lighting family"
+        },
+        {
+          "ATTIVA": 1,
+          "DESCRI_FAM": "Sensors",
+          "FUNCT_OBJ": "",
+          "ID_FAMIGLIA": 15,
+          "ID_TXT": "ANA_FAMIGLIA.Sensors",
+          "ID_TXT_TOOLTIP": "ANA_FAMIGLIA.TOOLTIP.Sensors",
+          "IMG_FAM": "sensor_16.png",
+          "ORDINE": 15,
+          "TOOLTIP": "Sensors family"
+        }
+      ],
+      "sql": "SELECT * FROM ANA_FAMIGLIA WHERE ID_FAMIGLIA IN(13,15) ORDER BY ID_FAMIGLIA"
+    },
+    "changed_sensor_objects_who": {
+      "rows": [
+        {
+          "DESCRI_CHI": "ON/OFF",
+          "ID_CHI": 1,
+          "ID_OBJ": 59,
+          "OPEN_CHI": "1"
+        },
+        {
+          "DESCRI_CHI": "ON/OFF",
+          "ID_CHI": 1,
+          "ID_OBJ": 62,
+          "OPEN_CHI": "1"
+        },
+        {
+          "DESCRI_CHI": "ON/OFF",
+          "ID_CHI": 1,
+          "ID_OBJ": 63,
+          "OPEN_CHI": "1"
+        },
+        {
+          "DESCRI_CHI": "ON/OFF",
+          "ID_CHI": 1,
+          "ID_OBJ": 64,
+          "OPEN_CHI": "1"
+        },
+        {
+          "DESCRI_CHI": "ON/OFF",
+          "ID_CHI": 1,
+          "ID_OBJ": 65,
+          "OPEN_CHI": "1"
+        },
+        {
+          "DESCRI_CHI": "ON/OFF",
+          "ID_CHI": 1,
+          "ID_OBJ": 69,
+          "OPEN_CHI": "1"
+        }
+      ],
+      "sql": "SELECT a.*,w.DESCRI_CHI,w.OPEN_CHI FROM ASS_OBJ_CHI a JOIN ANA_CHI w USING(ID_CHI) WHERE a.ID_OBJ IN(59,62,63,64,65,69) ORDER BY a.ID_OBJ,a.ID_CHI"
+    },
+    "complete_two_family_members": {
+      "rows": [
+        {
+          "DESCRI_OBJ": "Zone",
+          "ID_FAMIGLIA": 13,
+          "ID_OBJ": 50,
+          "ORDINE": 1
+        },
+        {
+          "DESCRI_OBJ": "Presence sensor",
+          "ID_FAMIGLIA": 13,
+          "ID_OBJ": 69,
+          "ORDINE": 2
+        },
+        {
+          "DESCRI_OBJ": "Movement sensor",
+          "ID_FAMIGLIA": 15,
+          "ID_OBJ": 59,
+          "ORDINE": 1
+        },
+        {
+          "DESCRI_OBJ": "Lighting sensor",
+          "ID_FAMIGLIA": 15,
+          "ID_OBJ": 62,
+          "ORDINE": 2
+        },
+        {
+          "DESCRI_OBJ": "Twilight sensor",
+          "ID_FAMIGLIA": 15,
+          "ID_OBJ": 63,
+          "ORDINE": 3
+        },
+        {
+          "DESCRI_OBJ": "Rain sensor",
+          "ID_FAMIGLIA": 15,
+          "ID_OBJ": 64,
+          "ORDINE": 4
+        },
+        {
+          "DESCRI_OBJ": "Wind sensor",
+          "ID_FAMIGLIA": 15,
+          "ID_OBJ": 65,
+          "ORDINE": 5
+        }
+      ],
+      "sql": "SELECT ID_OBJ,DESCRI_OBJ,ORDINE,ID_FAMIGLIA FROM ANA_OGGETTI WHERE ID_FAMIGLIA IN(13,15) ORDER BY ID_FAMIGLIA,ORDINE,ID_OBJ"
+    },
+    "dimmer_all_status_rules": {
+      "rows": [
+        {
+          "CUSTOM_REQUEST": 0,
+          "CUSTOM_VALUTATION": 0,
+          "ID_COMP": 36,
+          "ID_COSA": 633,
+          "ID_OBJ": 43,
+          "ID_REQ_TYPE": 2,
+          "REPLY_DIMENSION": "0",
+          "REPLY_FUNCTION": "FINDDIMMERON",
+          "REPLY_PAR": "0",
+          "REQUEST_DIMENSION": "1"
+        },
+        {
+          "CUSTOM_REQUEST": 0,
+          "CUSTOM_VALUTATION": 1,
+          "ID_COMP": 37,
+          "ID_COSA": 632,
+          "ID_OBJ": 43,
+          "ID_REQ_TYPE": 2,
+          "REPLY_DIMENSION": "1",
+          "REPLY_FUNCTION": "EXTRACTVALUE",
+          "REPLY_PAR": "1",
+          "REQUEST_DIMENSION": "1"
+        },
+        {
+          "CUSTOM_REQUEST": 0,
+          "CUSTOM_VALUTATION": 0,
+          "ID_COMP": 38,
+          "ID_COSA": 566,
+          "ID_OBJ": 43,
+          "ID_REQ_TYPE": 2,
+          "REPLY_DIMENSION": "1",
+          "REPLY_FUNCTION": "EXTRACTVALUE",
+          "REPLY_PAR": "1",
+          "REQUEST_DIMENSION": "1"
+        }
+      ],
+      "sql": "SELECT * FROM ANA_STATUS_REQUEST_COMPILE WHERE ID_OBJ=43 ORDER BY ID_COMP"
+    },
+    "dimmer_object": {
+      "rows": [
+        {
+          "DESCRI_OBJ": "Dimmer100",
+          "FUNCT_OBJ": null,
+          "ID_FAMIGLIA": 1,
+          "ID_OBJ": 43,
+          "ID_RES": 790,
+          "ID_TXT": "ANA_OGGETTI.Dimmer100",
+          "ID_TXT_TOOLTIP": "ANA_OGGETTI.TOOLTIP.Dimmer100",
+          "ORDINE": 8,
+          "TOOLTIP": "Dimmer 100 levels"
+        }
+      ],
+      "sql": "SELECT * FROM ANA_OGGETTI WHERE ID_OBJ=43"
+    },
+    "dimmer_who": {
+      "rows": [
+        {
+          "DESCRI_CHI": "ON/OFF",
+          "ID_CHI": 1,
+          "ID_OBJ": 43,
+          "OPEN_CHI": "1"
+        }
+      ],
+      "sql": "SELECT a.*,w.DESCRI_CHI,w.OPEN_CHI FROM ASS_OBJ_CHI a JOIN ANA_CHI w USING(ID_CHI) WHERE a.ID_OBJ=43"
+    }
+  },
+  "MH202_common": {
+    "all_command317_associations": {
+      "rows": [
+        {
+          "CUSTOM": 0,
+          "DESCRI_COSA": "Dimmer ON",
+          "ID_AREA": 3,
+          "ID_ASS": 1340,
+          "ID_COSA": 317,
+          "ID_OBJ": 43,
+          "OPEN_COSA": "4",
+          "ORDINE": 2
+        },
+        {
+          "CUSTOM": 0,
+          "DESCRI_COSA": "Dimmer ON",
+          "ID_AREA": 6,
+          "ID_ASS": 1341,
+          "ID_COSA": 317,
+          "ID_OBJ": 43,
+          "OPEN_COSA": "4",
+          "ORDINE": 2
+        }
+      ],
+      "sql": "SELECT a.*,w.DESCRI_COSA,w.OPEN_COSA FROM ASS_OBJ_COSA a JOIN ANA_COSA w USING(ID_COSA) WHERE a.ID_COSA=317 ORDER BY a.ID_ASS"
+    },
+    "all_command317_compile_rows": {
+      "rows": [
+        {
+          "ACT_AREA": 0,
+          "COND_OK_AREA": 0,
+          "ID": 284,
+          "ID_COSA": 317,
+          "ID_OBJ": 43,
+          "OPEN_FIELD_1": "#1",
+          "OPEN_FIELD_10": "",
+          "OPEN_FIELD_2": "ID_DOVE",
+          "OPEN_FIELD_3": "4",
+          "OPEN_FIELD_4": "[101-200]*",
+          "OPEN_FIELD_5": "",
+          "OPEN_FIELD_6": "",
+          "OPEN_FIELD_7": "",
+          "OPEN_FIELD_8": "",
+          "OPEN_FIELD_9": "",
+          "PANIC_KEY": 0,
+          "TRIGGER_DISABLE": 0,
+          "TRIGGER_ENABLE": 0,
+          "TRIGGER_START_AREA": 1,
+          "TRIGGER_STOP_AREA": 1
+        }
+      ],
+      "sql": "SELECT * FROM ANA_OPEN_RULE_COMPILE WHERE ID_COSA=317 ORDER BY ID"
+    },
+    "both_family_rows": {
+      "rows": [
+        {
+          "ATTIVA": 0,
+          "DESCRI_FAM": "Lighting",
+          "FUNCT_OBJ": null,
+          "ID_FAMIGLIA": 13,
+          "ID_TXT": "ANA_FAMIGLIA.Lighting",
+          "ID_TXT_TOOLTIP": "ANA_FAMIGLIA.TOOLTIP.Lighting",
+          "IMG_FAM": "impianto_illuminotecnica.gif",
+          "ORDINE": 13,
+          "TOOLTIP": "Lighting family"
+        },
+        {
+          "ATTIVA": 1,
+          "DESCRI_FAM": "Sensors",
+          "FUNCT_OBJ": "",
+          "ID_FAMIGLIA": 15,
+          "ID_TXT": "ANA_FAMIGLIA.Sensors",
+          "ID_TXT_TOOLTIP": "ANA_FAMIGLIA.TOOLTIP.Sensors",
+          "IMG_FAM": "sensor_16.png",
+          "ORDINE": 15,
+          "TOOLTIP": "Sensors family"
+        }
+      ],
+      "sql": "SELECT * FROM ANA_FAMIGLIA WHERE ID_FAMIGLIA IN(13,15) ORDER BY ID_FAMIGLIA"
+    },
+    "changed_sensor_objects_who": {
+      "rows": [
+        {
+          "DESCRI_CHI": "ON/OFF",
+          "ID_CHI": 1,
+          "ID_OBJ": 59,
+          "OPEN_CHI": "1"
+        },
+        {
+          "DESCRI_CHI": "ON/OFF",
+          "ID_CHI": 1,
+          "ID_OBJ": 62,
+          "OPEN_CHI": "1"
+        },
+        {
+          "DESCRI_CHI": "ON/OFF",
+          "ID_CHI": 1,
+          "ID_OBJ": 63,
+          "OPEN_CHI": "1"
+        },
+        {
+          "DESCRI_CHI": "ON/OFF",
+          "ID_CHI": 1,
+          "ID_OBJ": 64,
+          "OPEN_CHI": "1"
+        },
+        {
+          "DESCRI_CHI": "ON/OFF",
+          "ID_CHI": 1,
+          "ID_OBJ": 65,
+          "OPEN_CHI": "1"
+        },
+        {
+          "DESCRI_CHI": "ON/OFF",
+          "ID_CHI": 1,
+          "ID_OBJ": 69,
+          "OPEN_CHI": "1"
+        }
+      ],
+      "sql": "SELECT a.*,w.DESCRI_CHI,w.OPEN_CHI FROM ASS_OBJ_CHI a JOIN ANA_CHI w USING(ID_CHI) WHERE a.ID_OBJ IN(59,62,63,64,65,69) ORDER BY a.ID_OBJ,a.ID_CHI"
+    },
+    "complete_two_family_members": {
+      "rows": [
+        {
+          "DESCRI_OBJ": "Zone",
+          "ID_FAMIGLIA": 13,
+          "ID_OBJ": 50,
+          "ORDINE": 1
+        },
+        {
+          "DESCRI_OBJ": "Presence sensor",
+          "ID_FAMIGLIA": 15,
+          "ID_OBJ": 69,
+          "ORDINE": 1
+        },
+        {
+          "DESCRI_OBJ": "Movement sensor",
+          "ID_FAMIGLIA": 15,
+          "ID_OBJ": 59,
+          "ORDINE": 2
+        },
+        {
+          "DESCRI_OBJ": "Lighting sensor",
+          "ID_FAMIGLIA": 15,
+          "ID_OBJ": 62,
+          "ORDINE": 3
+        },
+        {
+          "DESCRI_OBJ": "Twilight sensor",
+          "ID_FAMIGLIA": 15,
+          "ID_OBJ": 63,
+          "ORDINE": 4
+        },
+        {
+          "DESCRI_OBJ": "Rain sensor",
+          "ID_FAMIGLIA": 15,
+          "ID_OBJ": 64,
+          "ORDINE": 5
+        },
+        {
+          "DESCRI_OBJ": "Wind sensor",
+          "ID_FAMIGLIA": 15,
+          "ID_OBJ": 65,
+          "ORDINE": 6
+        }
+      ],
+      "sql": "SELECT ID_OBJ,DESCRI_OBJ,ORDINE,ID_FAMIGLIA FROM ANA_OGGETTI WHERE ID_FAMIGLIA IN(13,15) ORDER BY ID_FAMIGLIA,ORDINE,ID_OBJ"
+    },
+    "dimmer_all_status_rules": {
+      "rows": [
+        {
+          "CUSTOM_REQUEST": 0,
+          "CUSTOM_VALUTATION": 0,
+          "ID_COMP": 36,
+          "ID_COSA": 633,
+          "ID_OBJ": 43,
+          "ID_REQ_TYPE": 2,
+          "REPLY_DIMENSION": "0",
+          "REPLY_FUNCTION": "FINDDIMMERON",
+          "REPLY_PAR": "0",
+          "REQUEST_DIMENSION": "1"
+        },
+        {
+          "CUSTOM_REQUEST": 0,
+          "CUSTOM_VALUTATION": 1,
+          "ID_COMP": 37,
+          "ID_COSA": 632,
+          "ID_OBJ": 43,
+          "ID_REQ_TYPE": 2,
+          "REPLY_DIMENSION": "1",
+          "REPLY_FUNCTION": "EXTRACTVALUE",
+          "REPLY_PAR": "1",
+          "REQUEST_DIMENSION": "1"
+        },
+        {
+          "CUSTOM_REQUEST": 0,
+          "CUSTOM_VALUTATION": 0,
+          "ID_COMP": 38,
+          "ID_COSA": 566,
+          "ID_OBJ": 43,
+          "ID_REQ_TYPE": 2,
+          "REPLY_DIMENSION": "1",
+          "REPLY_FUNCTION": "EXTRACTVALUE",
+          "REPLY_PAR": "1",
+          "REQUEST_DIMENSION": "1"
+        }
+      ],
+      "sql": "SELECT * FROM ANA_STATUS_REQUEST_COMPILE WHERE ID_OBJ=43 ORDER BY ID_COMP"
+    },
+    "dimmer_object": {
+      "rows": [
+        {
+          "DESCRI_OBJ": "Dimmer100",
+          "FUNCT_OBJ": null,
+          "ID_FAMIGLIA": 1,
+          "ID_OBJ": 43,
+          "ID_RES": 790,
+          "ID_TXT": "ANA_OGGETTI.Dimmer100",
+          "ID_TXT_TOOLTIP": "ANA_OGGETTI.TOOLTIP.Dimmer100",
+          "ORDINE": 8,
+          "TOOLTIP": "Dimmer 100 levels"
+        }
+      ],
+      "sql": "SELECT * FROM ANA_OGGETTI WHERE ID_OBJ=43"
+    },
+    "dimmer_who": {
+      "rows": [
+        {
+          "DESCRI_CHI": "ON/OFF",
+          "ID_CHI": 1,
+          "ID_OBJ": 43,
+          "OPEN_CHI": "1"
+        }
+      ],
+      "sql": "SELECT a.*,w.DESCRI_CHI,w.OPEN_CHI FROM ASS_OBJ_CHI a JOIN ANA_CHI w USING(ID_CHI) WHERE a.ID_OBJ=43"
+    }
+  }
+}

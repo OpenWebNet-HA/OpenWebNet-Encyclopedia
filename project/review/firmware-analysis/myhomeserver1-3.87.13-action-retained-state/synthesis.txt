@@ -1,0 +1,5 @@
+# Final selected retained-state source and resumed synthesis
+
+Original first/second PICjoins resolve G167808. A selected nonnull queryresult string+8 is assigned toG+24; three words36/40/44 copy toG48/52/56 without property interpretation. Second exacton branch→localstatus0/presence1→actualSP600+28/32→selectedstatus table index1/on requests a matchingstatusstring. Provider/type/ID/freshness/naturalorder/nointerference/lifetime remain premises; no physicalrestoration/rollback or defect claim.
+
+The resumed source chain now connects captures/localhandoff,2.0/light.setStatus/outer-vs-targetID/selectedID-speed merge, and one retainedstatus relation. FINAL_REPORT.md and updated publichandoff consolidate practical scope and rankeddecisiveevidence. No further source work. Newexecution/models/fixtures/replays0; MHS1/8/340visits/0C/12redirect/8EXIT/0stops/360hooks+4setup preserved; fullJSON/scheduler/runtime/physical0. All old ledgers/historylimits remain scoped. Save finalreview/strictchecks/deletionreceipt/control/index before11UTC/noonParis.

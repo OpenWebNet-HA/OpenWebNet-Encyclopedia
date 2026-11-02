@@ -1,0 +1,47 @@
+{
+  "scope": "Exact run11 reviewed bytes before run12 component version refinement",
+  "review": "../../run11-integration-review.md",
+  "review_sha256": "d5e9fac5b43242fbb6b179ce1dc92bc0c546047b2906e9996d4753bb6aaebcf3",
+  "files": [
+    {
+      "source_path": "reverse-engineering/firmware-analysis/mh202-1.0.24.md",
+      "source_sha256": "91dcf480be952da385083bbee71d86a10d1bfc0d0227f5501494a0df0875ef6e",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt"
+    },
+    {
+      "source_path": "reverse-engineering/firmware-analysis/mh202-1.0.24-state-and-routing.md",
+      "source_sha256": "e1b36aa85552269d8a9c7021ec56fea589ae37a9b47901835b157c91740b373b",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt"
+    },
+    {
+      "source_path": "reverse-engineering/firmware-analysis/README.md",
+      "source_sha256": "08fe1ade33943dd143f551e72ebecae39e83aec61783b8f27172419b9006a39f",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/reverse-engineering__firmware-analysis__README.md.txt"
+    },
+    {
+      "source_path": "project/review/firmware-analysis/README.md",
+      "source_sha256": "06ee9030fa08aab8d61c47ac61739600e8dd8d43e57304141cead6a4a0219efa",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/project__review__firmware-analysis__README.md.txt"
+    },
+    {
+      "source_path": "project/review/firmware-analysis/mh202-1.0.24/README.md",
+      "source_sha256": "b353bc957016a87f5b6ce9a1c82bdf82dd1b78adb2b220dbcaf20d01da071136",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/project__review__firmware-analysis__mh202-1.0.24__README.md.txt"
+    },
+    {
+      "source_path": "functional/who-17-scenario-management/README.md",
+      "source_sha256": "f183e98041edc4917389db6dd292b30bad04524b6fce74b7b33f5093fde04e37",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/functional__who-17-scenario-management__README.md.txt"
+    },
+    {
+      "source_path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "source_sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt"
+    },
+    {
+      "source_path": "devices/work-queue.yaml",
+      "source_sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/devices__work-queue.yaml.txt"
+    }
+  ]
+}

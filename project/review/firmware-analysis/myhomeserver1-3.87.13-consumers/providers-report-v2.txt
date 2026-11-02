@@ -1,0 +1,52 @@
+# MyHOMEServer1: fresh JSON data objects and local receipt boundaries
+
+The catalogue-facing C JSON provider and the scene loader's C++ JsonCpp family require separate data models. The inspected C provider also distinguishes a generated Boolean result from its broader named response predicate. These are current-source data-helper contracts, not accepted external input, transport framing, a caller's successful action, an OpenWebNet ACK or physical delivery.
+
+## Exact source and scope
+
+Original image path usr/lib/libjsonmsg.so.1 resolves through metadata to usr/lib/libjsonmsg.so.1.0.0,29936bytes, SHA-256 `d78437fdb23fb78ba881dbb22a14570b441a178e31c84244b126a5dfbf7866a7`. Original normal/recovery bytes match. The original inputs, symlink resolution and ELF bytes are read through the previously frozen ImageVFS; that helper is metadata-only and never invokes image code. No older firmware layouts or harnesses are used.
+
+matrix_mx directly declares libjsonmsg.so.1 among its dependencies. scheduling_manager's selected direct family instead declares libjsoncpp.so.25 and imports Json::Value/parseFromStream methods. The C provider itself declares JSON-GLib/GObject/GLib dependencies. These are original dependency/symbol declarations, not full transitive absence, effective loader binding or active service proof. The actual scene constructor/reader belongs to the separate scheduler report, not this C layout. Likewise the earlier libopenmsg C OPEN object is56bytes and is not this object.
+
+Only static C data allocation, node construction, lookup-return guards and local receipt creation were examined here. No libjel/MQTT connection, session, authentication or transport-framing implementation was investigated. Vendor/original instructions, parser execution, services, target OS, network/bus and physical operations remain0. The eight host cases explicitly start after an assumed successful selected lookup and do not execute a JSON parser or original helper.
+
+## Fresh allocation and node fields
+
+Original new_json_msg at Thumb instruction VA0x3bd8..0x3c48 tests a supplied output-slot pointer. A null output slot selects local return1. Under ordinary allocator/string-copy completion, source0x3bf0..0x3c16 requests zeroed20bytes, writes the returned object to the output slot, duplicates exact literal2.0 into object+0, requests a separate zeroed32-byte root node and stores that root pointer at object+16. Root word0 is explicitly0. Other words are zero under the allocator premise. This is a fresh current layout, not an old C OPEN object or a C++ Json::Value structure.
+
+Original add_node at0x36e0..0x3798 requests32bytes. It stores the supplied node-kind word at+0, a duplicated name at+4 and a supplied value-type word at+8. Selected branches store scalar/string/two-word data at+16, child list at+24 and parent at+28. These are source fields and selected branches, not a complete public ABI or lifetime/refcount proof.
+
+The selected Boolean wrapper add_val_bool_node at0x39ec..0x3a3c supplies kind2 and value type20 to that helper. Its low input value word is preserved into node+16 on the selected type20 branch. There is no normalization to0/1 in these inspected stores. The constant labels remain in their C JSON node namespace and are not C OPEN parsed kinds or application command statuses.
+
+## Local acknowledgement construction
+
+generate_json_ack at0x3f70..0x3fdc requires the supplied identifier pointer, requests new_json_msg through its declared PLT binding and tests that helper's local return. The selected normal path duplicates the identifier into new object+12, obtains its root at+16, and requests add_val_bool_node(root,"result",1). Its own local return remains0 from the constructor result; the node helper's return is not tested. The normal provider/allocator/lookup assumptions remain real prerequisites. The helper neither sends a message nor examines a bus or action outcome.
+
+Exact Thumb PIC arithmetic joins the result literal: PC-add instruction0x3fc0, pool0x3fd8 word0x2100, targetVA0x60c4. The default2.0 literal uses instruction0x3bfc/pool0x3c40 word0x2438/target0x6038. Code symbol export values have Thumb low bits; instruction addresses in this report clear that bit. All pools and original bytes are pinned in ORIGINAL_SOURCE.json.
+
+## Response, acknowledgement and error predicates differ
+
+The selected result-node reader path is a composition of current original definitions under ordinary effective binding:
+
+| Helper / original VAs | Selected predicate or return |
+| --- | --- |
+| is_json_response0x5450..0x54ac | Requires non-NULL message, a selected node named result and that node's word0 equal0; returns1 only on that branch |
+| is_json_ack0x54ac..0x5518 | Delegates to the Boolean value reader for result; it is not an alias for is_json_response |
+| get_val_bool_node0x5324..0x5368 → get_val_bool_node_sens0x52c0..0x5324 | Selected found-node branch requires word0=2 and word8=20, then returns word16; absent/wrong-kind/type selects0 |
+| is_json_error0x5518..0x556c | Returns presence/nonpresence of the selected error node; the selected branch does not prove a valid error schema or failure cause |
+
+The normal generated Boolean result node has kind2/type20/value1 under the builder assumptions. If the selected result lookup returns that node, is_json_ack returns1 while is_json_response returns0. A synthetic noncanonical stored Boolean payload7 returns7 on the same value-reader leaf; that fixture does not establish parser-produced data or an application Boolean ABI contract; no claim that a nonzero integer is invalid follows. False, missing and wrong-kind cases can all produce0, so local return alone does not identify a complete failure reason.
+
+The current selected lookup request is not assumed to mean a strictly top-level JSON member. get_node_by_name supplies an any-type selector4 to its declared helper; the inspected helper body0x4824..0x48c8 walks the child list and can recurse. Its exact comparison branch depends on the supplied sensitivity selector. The host models therefore take the returned node as a premise instead of inventing a complete input grammar, duplicate-key policy or accepted data tree. Dynamic binding, actual GLib lists and parser/caller state remain unexecuted.
+
+## Evidence and reproduction
+
+collect_json_provider_v1.py generates16outputs including its manifest: four selected ELF dependency/source identities, ten disassembly spans,18exact byte assertions,five public PIC literal joins and eight explicitly synthetic resolved-node guard cases. It disables external debug-link following in host objdump. Initial generation refuses existing output files; --check compares freshly derived bytes without writing. Seventeen immediate first copies preserve collector and all16outputs, with snapshot index calculated before creating itself; this report is separately frozen on publication.
+
+Reproduce with host Python only:
+
+```
+python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/collect_json_provider_v1.py --check
+```
+
+Confidence is high for current code identities, allocation sizes, direct declarations, exact literal/field stores and the selected predicate composition. Complete C API, actual caller use, imported-provider order, allocation/error/unwind paths, object ownership, original JSON acceptance/serialization and all delivery/physical effects remain open. No code defect, physical acknowledgement or standards-conformance conclusion follows from this bounded data-helper source.

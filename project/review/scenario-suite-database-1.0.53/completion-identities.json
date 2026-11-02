@@ -1,0 +1,173 @@
+{
+  "scope": "Final capsuleidentity after exact review/validation exports; no vendorbinaries",
+  "result": "PASS",
+  "files": [
+    {
+      "path": "CONTACT_PREFIX_CORRECTION.json",
+      "bytes": 2515,
+      "sha256": "9a7983277d086e61b631dca85b30089281228948a2770a89f45c3eb23a9356ca"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3339,
+      "sha256": "9cef9dfb6315280341ecc4d1fb20827252d467ba103dadef9aa106cbfd915ba9"
+    },
+    {
+      "path": "addressing-development-history.json",
+      "bytes": 571,
+      "sha256": "795716c8f2492b707ce54434d750b82fe2c6e048b46946deb8474cd2ce0a8b54"
+    },
+    {
+      "path": "addressing-report.txt",
+      "bytes": 7882,
+      "sha256": "4584ccd771a7e941c038c491bc2c4a3ad3c77027429ccd9d4df8d7df614caac0"
+    },
+    {
+      "path": "addressing-source-review.txt",
+      "bytes": 7490,
+      "sha256": "f3cde28e4062cb056953bb9e644980a748eb68f53da382012aa18b3c4e28234b"
+    },
+    {
+      "path": "baseline-review.txt",
+      "bytes": 10654,
+      "sha256": "1dfc37e924c5b4d308125600defdbf8f5f1d0f00091b14357773fc843af24af0"
+    },
+    {
+      "path": "integration-review.txt",
+      "bytes": 10926,
+      "sha256": "5699bc0328ba5d33abe97a3a94ffec1aa5835755c8b77443ddf71c508f64ac58"
+    },
+    {
+      "path": "pre-edit-documents/01-scenario-engine__README.md.txt",
+      "bytes": 6507,
+      "sha256": "0e83160fed92382fb52350d5a49f53fbccd04f11896b1f80a29b9abfb417c920"
+    },
+    {
+      "path": "pre-edit-documents/02-scenario-engine__sources-and-identifiers.md.txt",
+      "bytes": 4860,
+      "sha256": "1db842b69622bc25da637f8b061943d350c7ba8cf1df0cd48890a010351c0327"
+    },
+    {
+      "path": "pre-edit-documents/03-scenario-engine__open-questions.md.txt",
+      "bytes": 3992,
+      "sha256": "a5664b07d7de42fa30067e7f6871a2c836dc43a76d561392d85b8bd02fc30c72"
+    },
+    {
+      "path": "pre-edit-documents/04-functional__who-17-scenario-management__README.md.txt",
+      "bytes": 13161,
+      "sha256": "f9825e4dd40ef229a422df501ecaa44378b912833a3c45d3f7d3e8ad796b9402"
+    },
+    {
+      "path": "pre-edit-documents/05-functional__who-25-transversal__README.md.txt",
+      "bytes": 6687,
+      "sha256": "2820e158d641d7c47c7c1e19be457df347f093d1a440acc7455ac22c332237a2"
+    },
+    {
+      "path": "pre-edit-documents/06-functional__who-25-transversal__cen-plus.md.txt",
+      "bytes": 13853,
+      "sha256": "86f2d687f90e84d0991f8d99915e0146858fa8b817c99ca553e5ea25919d681d"
+    },
+    {
+      "path": "pre-edit-documents/07-functional__who-25-transversal__dry-contact-ir.md.txt",
+      "bytes": 4656,
+      "sha256": "1c0a04bae56ba9312392632fbbe8b8ca5ad81e1e7d0ed9c561cb936b180b86e9"
+    },
+    {
+      "path": "pre-edit-documents/08-project__review__who25-gateway-compatibility.md.txt",
+      "bytes": 9761,
+      "sha256": "021e839b7549a6474cbae4fa89486dbf67202b1acb17b314a92448959c58c6f2"
+    },
+    {
+      "path": "pre-edit-documents/09-reverse-engineering__README.md.txt",
+      "bytes": 9107,
+      "sha256": "7e4ac3bf373177fda08721aa3a1da629cd7829a7c150a434b2b713d3bed35c92"
+    },
+    {
+      "path": "pre-edit-documents/SOURCE_SNAPSHOTS.json",
+      "bytes": 1928,
+      "sha256": "43785ac3cadc6c8c30cd7a0deb09229296d762a6ae17e0d22a67f8002ecff2ec"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 3895,
+      "sha256": "a62d44bcb73c946348183019223dc1c3ac2fb00de445535c06e8ca44ef379f66"
+    },
+    {
+      "path": "scheduler-report.txt",
+      "bytes": 12988,
+      "sha256": "08082d7321d3ed4ec5e3ecb903d973ee1a28a9b296bf1101941ffd52a3a344e8"
+    },
+    {
+      "path": "scheduler-source-review.txt",
+      "bytes": 8341,
+      "sha256": "5817428a561ca799d10a1775f1341557b38ed954a922408a9ff620c06959b445"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 7261,
+      "sha256": "13c292800c703080a455fe0377dbacfc3e1c6a4580f57626f0c5714a2bf8d329"
+    },
+    {
+      "path": "variables-report.txt",
+      "bytes": 11487,
+      "sha256": "d092247c9b31a99f7b5499af59e55e505d0b33479c442fd36d9618cf4a55ee88"
+    },
+    {
+      "path": "variables-source-review.txt",
+      "bytes": 7776,
+      "sha256": "abce9a514dc6e647848c0e2917f9c1af84bc81be76756183d543cf984930e37c"
+    },
+    {
+      "path": "who25-source-review.txt",
+      "bytes": 8488,
+      "sha256": "c2c944999f93c23e4f702738fb76ac55d8211657baca759cc731a3f9d9127e10"
+    }
+  ],
+  "current_reference_pins": [
+    {
+      "path": "scenario-engine/README.md",
+      "sha256": "6eb9c3e98fad2153072b1d80cd12394a478bd7acc6871e1c13c5769a028bdd03"
+    },
+    {
+      "path": "scenario-engine/sources-and-identifiers.md",
+      "sha256": "e01f111251fb5aea17424967bdfc02e844782c48114d77ef18a69390821def39"
+    },
+    {
+      "path": "scenario-engine/open-questions.md",
+      "sha256": "fd9dcd78d4976cf3b68a88d7016b0ed67aa24e25454e016b09ea1e1e27e053fa"
+    },
+    {
+      "path": "functional/who-17-scenario-management/README.md",
+      "sha256": "566fb6a2f90c22636a67f3c22114ac313ee0267dabbca3deb07624e928b16e81"
+    },
+    {
+      "path": "functional/who-25-transversal/README.md",
+      "sha256": "5a9428be472d8d3d8a09bd36897bc71b131fe4d28de628cf2191b843ad27a51d"
+    },
+    {
+      "path": "functional/who-25-transversal/cen-plus.md",
+      "sha256": "6d13fc46a98533dc0d0a69459a2a730011c043f69b0c029b4664c6367f307f67"
+    },
+    {
+      "path": "functional/who-25-transversal/dry-contact-ir.md",
+      "sha256": "e3524907abe49823f78cd729d655f330f79851ada6f1cca1b5f7e7015c63ed3b"
+    },
+    {
+      "path": "project/review/who25-gateway-compatibility.md",
+      "sha256": "1ab5d3c5b8d0e44a99d20c1b3fd2c35f7a9da152b1bb8644717f98dd2c3e4d86"
+    },
+    {
+      "path": "reverse-engineering/README.md",
+      "sha256": "e3338b7eef3cdb19108350797ff6ee50e5984cf0df9f794465cbd410a64290ca"
+    },
+    {
+      "path": "scenario-engine/scenario-suite-database.md",
+      "sha256": "9364ef33a962be871c6e5339534fa83141b22c234c76cca2b24bc58f2351e2fc"
+    },
+    {
+      "path": "project/review/scenario-suite-database-1.0.53/README.md",
+      "sha256": "9cef9dfb6315280341ecc4d1fb20827252d467ba103dadef9aa106cbfd915ba9"
+    }
+  ],
+  "new_original_execution": 0
+}

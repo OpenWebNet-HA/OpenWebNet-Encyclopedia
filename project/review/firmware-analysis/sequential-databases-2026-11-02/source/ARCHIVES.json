@@ -1,0 +1,44 @@
+{
+  "archives": [
+    {
+      "bytes": 72774,
+      "central_directory_and_selected_plain_members": [
+        {
+          "CRC32": "00000000",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "encrypted": false,
+          "index": 0,
+          "name": "50/",
+          "payload_status": "DIRECTORY_METADATA_ONLY"
+        },
+        {
+          "CRC32": "00000000",
+          "bytes": 0,
+          "compressed_bytes": 12,
+          "encrypted": true,
+          "index": 1,
+          "name": "50/extra.xml",
+          "payload_status": "ENCRYPTED_NOT_OPENED"
+        },
+        {
+          "CRC32": "52150069",
+          "bytes": 289792,
+          "compressed_bytes": 72450,
+          "encrypted": true,
+          "index": 2,
+          "name": "50/master.sqlite",
+          "payload_status": "ENCRYPTED_NOT_OPENED"
+        }
+      ],
+      "sha256": "824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8",
+      "source_id": "auxiliary:824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8"
+    }
+  ],
+  "limits": {
+    "archive_depth": 1,
+    "plain_member_bytes": 33554432,
+    "plain_total_bytes": 134217728,
+    "zip_members": 1024
+  }
+}

@@ -1,0 +1,56 @@
+# MyHOMEServer1 3.87.13: compiled SCENARIO action and local target route
+
+The selected `SCENARIO` action has a concrete compiled class and an action-specific callback. Its captured `sceneId` is checked against a supplied local registry, the corresponding two-word handle is retrieved, and a normal live-handle branch calls the previously identified condition-checking scene launch entry0xa5db0. This is original static construction/callback dataflow, not an emitted or executed scene, populated runtime registry, successful target launch or physical result.
+
+Original image path: `/home/bticino/scheduling_manager/scheduling_manager`; SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. VAs are original linked ELF VAs, without an observed PIE load bias. `INPUTS.v1.json` also pins the read-only VFS helper and two preceding factory/runner reports. No source or prior dossier was changed.
+
+## Raw action to a distinct compiled object
+
+The preceding factory report established local enum11=`SCENARIO`, its44-byte JSON action, the `sceneId` unsigned field at+40 and the scene action vector at+24. Those inherited results are not new execution or a new type-discovery claim here.
+
+The original initializer reads action+28 at0xa75f4 and uses TBH0xa75fc/base0xa7600. Its index11 entry at0xa7616 is0x2328, selecting0xabc50. This branch calls the raw action's vtable slot0 to obtain JSON, calls original base parser0x2af90, reads the exact `sceneId` key at0xabc86, converts through JsonCpp `asUInt` at0xabc8a and stores it in a local action object's+40 at0xabc92. PIC pool0xac7b8 plusPC0xabc7e+4 resolves to the original `sceneId` string0x1152b0. The raw-class serializer's corresponding field load0x25020 and exact key resolution0x25110/0x2502c are retained independently; no serializer or parser was executed.
+
+It then calls constructor0x113a88 with the local action and a context pointer loaded from initializer stack+24 (0xabc96..0xabc9c). The initializer prologue preserves incoming r1/r2 at stack+20/+24; this report calls the latter the supplied registry/context, not an inferred runtime singleton or a configured project. The constructor's resulting object is copied into a100-byte allocation (0xabca0), and the selected copy retains its additional context+96 at0xabcea. The original stores at0xabcf0/0xabcf6 install the derived primary and secondary vtable address points before the pointer is handed to runner+128 through0xa7288 at0xabd32.
+
+This compiled object is distinct from the44-byte raw JSON action:
+
+| Compiled field / source | Original proof |
+|---|---|
+|Local action enum+80|Constructor0x113b2e..0x113b34 copies raw base+28.|
+|Raw delay/duration pair at compiled+84/+88|0x113b22..0x113b3a copies raw+32/+36. Names do not prove timing units here.|
+|sceneId at compiled+92|Raw+40 load0x113b3e, store0x113b40.|
+|Supplied registry/context pointer at+96|Incoming r2 preserved at stack+4, restored0x113b26, store0x113b46; outer copy0xabce2..0xabcea.|
+|JSON/base subobject at+52|Secondary vptr stored0x113b50 and restored0xabcf6. This differs from the complete object's primary runtime vptr.|
+
+## Original class identity and callback installation
+
+Both pool0xac7bc and constructor pool0x113c40 resolve through GOTbase0x1659a4 and slot0x16610c to original vtable header0x164d3c. `VTABLE.v1.json` verifies the header, RTTI0x164880 with exact name `20ScenarioActionRunner`, original relative relocations and these address points:
+
+| Address point | Selected original Thumb method pointers | Scope |
+|---|---|---|
+|Primary0x164d44|0xcd849,0xcd6f1,0xcd551|Shared runtime methods; their internal execution/stop/completion contract is a separate investigation, not inferred here.|
+|Secondary0x164d58|0x24fa5|Raw/base JSON serializer subobject, offset-to-top−52. It is not the primary execution method.|
+
+Constructor0x113b52 calls0xcd988, whose original two instructions store the supplied word at object+8 and return. The constructor subsequently prepares a captured pair: compiled+92 at local stack+20 (0x113b5e), compiled+96 at local stack+24 (0x113b62). PIC targets recover invoker Thumb0x113c55 and functor manager Thumb0x113a5d at0x113b66/0x113b6c, then0x113b70 calls0xcd990 to install that callable. The retained original manager0x113a5c copies the pair's two words for its copy operation; the retained0xcd990 code invokes that operation and transfers callable data into the object's+16 area. These are source assignments and ordinary normal-return storage semantics, not evidence of a naturally invoked callback or a substituted callable.
+
+## Captured ID to local target launch
+
+The action-specific invoker is instruction0x113c54. Its first captured word is the uint scene ID and its second word is the supplied registry/context pointer. Number-to-string/log construction in its prefix does not change that pair. The selected target route is:
+
+1. At0x113d9c, `ldrd r1,r0,[r5]` supplies ID and context to0xb6580 at0x113da0. That original helper traverses a tree rooted at context+8, comparing node key+16 with the requested uint using unsigned conditions. Under a valid ordered-tree invariant, its lower-bound candidate plus final comparison yields1 for an equal key,0 for no matching key. The report does not supply a tree or prove live map population, ordering, concurrency or key uniqueness.
+2. At0x113da4, the original CBNZ branches on a nonzero result to0x113df2; a zero result falls through to the callback cleanup/return path0x113da6. The nonzero path then reaches0x113df2, passing context and ID to original retrieval helper0xb69fc at0x113df8, with output at stack+12. That helper independently searches the same key layout, copies the node's two-word value+20/+24 and performs reference bookkeeping on the second word. Its no-key path calls an out-of-range provider; catch/unwind and error outcomes are not executed or generalized here.
+3. The callback checks the returned second word at stack+16, then its+4 count and attempts reference acquisition. On the normal live-control-block branch,0x113e9e loads the first retrieved word from stack+12, and0x113e2c calls0xa5db0 with it. Other selected paths can reach the same callee with zero at0x113e68; this is retained source, not a claim of valid state or a firmware defect. A correct, nonnull retrieved scene pointer and ordinary lifetime/provider premises are required for the useful target-launch interpretation.
+
+The called entry is the earlier runner report's condition-checking launch0xa5db0, rather than direct action launch0xa6210. Its enabled/active checks and worker correspondence are inherited bounded static results; successful launch, satisfied conditions and completed actions remain unproved. No selected invoker path has been interpreted as a target stop call. This statement is limited to this captured callback and does not prove a program-wide absence of scene-stop functionality.
+
+## Reproduction, integrity and remaining limits
+
+From the workspace root:
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/collect_scenario_v1.py --check`
+
+The collector emits20 outputs including its manifest, with11 exact original Thumb2 spans, four PIC targets (two safe `sceneId` literals and two code pointers), ten direct BL target checks,15 critical instruction-byte guards, five relative-relocation rows and four input pins. Fresh PT_LOAD translation is used for RW vtable data. All20 outputs plus collector were copied immediately to `first-candidate/`; its21-member index was computed before opening the index. This first report is separately preserved byte-for-byte in `report-first-candidate/`. No generated candidate was overwritten and no first canonical generation failed.
+
+Original instructions executed0; native top entries0; C/GLib/provider callbacks0; redirects0; EXIT/stop callbacks0; supplied scene/tree fixtures0; host semantic models0. Only host static file reads, Python and binutils were used. JsonCpp conversion, allocation/copy exceptions, effective provider binding and callable activation are unexecuted delegates; no stored expression or vendor code was evaluated. Nearest exported-template annotations and literal/TBH pool data are not adopted as actual source function identities or executable instructions.
+
+The highest remaining boundaries are (1) original producer/population and object identity of the supplied registry/context and its value handles; (2) common action-runner dispatch and scheduling/cancellation semantics, investigated separately; (3) target scene state, enabled gate, condition results and thread success; (4) error/expired-handle/concurrent mutation behavior. This selected local route does not establish configured scene existence, supported numeric ID domains, recursive-scene policy, timing, actual start/stop effects, transport/bus admission, physical behavior or whole-device approval.

@@ -1,0 +1,35 @@
+# MH202 run9 functional independent static source review — PASS
+
+No corrections requested. Reviewer authored the separate protocol/run9 prepared-object suffix-helper work, not this CHKDATE finding. This review writes only its own file; author artifacts/originals and earlier dossiers remain unchanged.
+
+## Reproduction and source checks
+
+`python3 -B work/mh202-firmware/research/2026-10-30/functional/run9/collect_evidence.py --check` passed11 generated outputs plus manifest,3 original spans,37 exact words,2 original inputs,8 selector/format identities and12 finite host date cases. Independently parsed the original ELF PT_LOAD mappings via ImageVFS without importing the author collector and recomputed all3 byte-span offsets/hashes and37 word values, both input hashes, all11 manifest entries and8 source string target bytes. Independently recalculated the12 date results with a different host split-field reconstruction and checked reached component order/early returns.
+
+Inspected the original caller extraction/call/store, complete selected helper, time/gmtime calls, year/month/day defaults/scans/comparisons and return tails. This functional batch/review executes0 original ARM/vendor/library/parser/interpreter/JS/PHP instructions and0 emulated callbacks or I/O. The separate protocol native leaf corpus and historical comparator/copy corpora are not attributed to this CHKDATE work.
+
+## Semantics reviewed
+
+- bt_script0x9ce8..0x9da0 uses an8-byte `=CHKDATE` prefix; the selected branch extracts argument strings through actual strchr/copy/token calls and calls exact imported CHKDATE at0x9d98. It then branches to0xa480 and stores r0 at the selected numeric-record+4. Numeric-record base/index/current line are caller context, not a proven variable id or composed IIF/action.
+- The source requests overlapping suffix copies and a10-byte local first-argument copy, whose strtok return is unused. The report's candidate is explicitly a hypothetical suffix/token relationship, not executed strcpy/caller/global state or a complete accepted DSL statement. Earlier standalone primitive examples do not certify this new caller.
+- Original libdomotica CHKDATE0x2078..0x2718 matches exact SYSDATE and otherwise reaches−1. Actual0x2108/0x2114 call time then gmtime on the local time pointer; the displayed source uses returned struct offsets+20/+16/+12 without an intervening clock/null success check. Current year+1900/month+1 and comparison inverses agree. UTC-calendar interpretation is conditional on ordinary selected libc ABI/provider success, distinct from prior CHKTIME localtime evidence; no installed timezone/scheduling result is claimed.
+- Year scan counts through the seventh star, month through the sixth, day through the fifth. Exact next-byte `#` for omitted year and `*` for omitted month/day preserve the current formatted component. Nonempty year reads4bytes; month/day2. The model correctly restricts ordinary complete readable delimiters/digits and supplies current2026-10-30 instead of reading the host clock. It neither emulates original atoi/sprintf nor defines malformed/overflow/calendar-domain behavior.
+- Year→month→day signed comparisons return2 when current is earlier,1 when current is later and0 for equality; mismatch returns before the lower scans. The12 host cases and extraction reach sets agree. Selector−1 is a separate numeric result, not Boolean condition semantics.
+
+The complete selected helper supports the report's bounded absence statements about weekday/hour/leap-year/date-range/timezone-setting logic in that body; this does not exclude upstream validation or other consumers. Literal A/B/C/D prefix fields are dummy scan scaffolding, not valid OPEN/date/DSL format. Actual configured extra/4 source, caller tokenization execution, stored value→specific condition/action, natural clock/provider state and physical scheduling remain open. No runtime or physical claim is promoted.
+
+## Exact pins
+
+Paths below are relative to `functional/run9/`. The manifest transitively pins all11 generated outputs, excludes report/reviews, and is separately pinned alongside the report/collector.
+
+| File | SHA256 |
+|---|---|
+| `REPORT.md` | `4e371d4c794dbf9585045c368d37d45dbedfeaf57f7361bf811dbdf4bc560f7f` |
+| `collect_evidence.py` | `6aa51949dcebc236f3930288c2b4784e3b7c7c57f432307273755de1c777f379` |
+| `output-manifest.json` | `9f3c26245146563341c49d33ac009e2a7640923b17ad44682a299120686d2d1f` |
+| `input-hashes.json` | `2b0a52ad273f9e0af2bb74ffbd7fc0e24864b36cc93ea797d76539444737db6e` |
+| `original-spans.json` | `3c1dd9dd06c003b9450d407581586d8cc0c6eb61b6c2b86b9a279604031263b4` |
+| `critical-words.json` | `6c6abe632c1a5e8bb96b945137d2c9f902008f4c6cfdc5f1221dd3406e24f29c` |
+| `safe-selector-and-formats.json` | `6eab99d627f4487cc7131a629d881fc47b29f90b69ed608f4cec3ad385f61746` |
+| `host-date-comparison-model.json` | `e3f64b04a09e9c902ca748f69f0ba50692746bbd999bd4d74bbd9845eab52e64` |
+| `hypothetical-caller-argument-model.json` | `0d517aea644ac2781259b72e9df39df6761fb1e9d41e15fa1405cdcf50ccbbeb` |

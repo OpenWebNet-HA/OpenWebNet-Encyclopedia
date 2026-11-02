@@ -1,0 +1,9 @@
+# Ranked next source questions
+
+1. Find actual writers/callers of the operational duration setter0xcdaf0 in other derived actions, and match each to its own JSON/conversion/callback path. Do not substitute metadata+88 or generalize SLEEP's zero operational duration to all action types.
+2. Identify the natural producer/population and object identity of the registry/context supplied to SCENARIO, including target-handle and recursion policy. Do not infer installed scenes from a captured numeric ID.
+3. Trace the owner/reset/alias lifecycle of the shared stop flag and complete the scene worker's cancellation/completion handling under normal paths. The current bounded references are not a global absence/reset proof or an observed hang/cross-scene stop.
+4. Follow one concrete trigger/condition class through factory, compiled registration and predicate callback, using fresh current object layouts and configured-input boundaries.
+5. Resolve actual scene assets, provider/kernel/ABI success, full exception/lifetime/concurrency and physical observations only in separately authorized future work. Missing bundled extras cannot be filled by fabricated manufacturer fixtures.
+
+Already completed selected construction/capture/virtual-method/units arithmetic and conditional registry-launch joins should not be rerun as new coverage. Original runtime tests, live gateway/bus access and closed authentication/session/framing routes are not part of this source-only continuation.

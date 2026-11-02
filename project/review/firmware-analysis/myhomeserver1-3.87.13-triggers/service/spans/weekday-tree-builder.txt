@@ -1,0 +1,98 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b891c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x164>:
+   b891c:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+   b8920:	eb01 08c2 	add.w	r8, r1, r2, lsl #3
+   b8924:	b082      	sub	sp, #8
+   b8926:	4588      	cmp	r8, r1
+   b8928:	f04f 0600 	mov.w	r6, #0
+   b892c:	f100 0904 	add.w	r9, r0, #4
+   b8930:	ab02      	add	r3, sp, #8
+   b8932:	4607      	mov	r7, r0
+   b8934:	e903 0006 	stmdb	r3, {r1, r2}
+   b8938:	e9c0 6601 	strd	r6, r6, [r0, #4]
+   b893c:	f8c0 900c 	str.w	r9, [r0, #12]
+   b8940:	e9c0 9604 	strd	r9, r6, [r0, #16]
+   b8944:	d04b      	beq.n	b89de <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x226>
+   b8946:	460d      	mov	r5, r1
+   b8948:	3508      	adds	r5, #8
+   b894a:	b326      	cbz	r6, b8996 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1de>
+   b894c:	693c      	ldr	r4, [r7, #16]
+   b894e:	f855 3c08 	ldr.w	r3, [r5, #-8]
+   b8952:	6922      	ldr	r2, [r4, #16]
+   b8954:	429a      	cmp	r2, r3
+   b8956:	d21e      	bcs.n	b8996 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1de>
+   b8958:	45a1      	cmp	r9, r4
+   b895a:	bf08      	it	eq
+   b895c:	f04f 0a01 	moveq.w	sl, #1
+   b8960:	d133      	bne.n	b89ca <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x212>
+   b8962:	2018      	movs	r0, #24
+   b8964:	f758 e88a 	blx	10a7c <_Znwj@plt>
+   b8968:	4606      	mov	r6, r0
+   b896a:	e915 0003 	ldmdb	r5, {r0, r1}
+   b896e:	f106 0c10 	add.w	ip, r6, #16
+   b8972:	464b      	mov	r3, r9
+   b8974:	4622      	mov	r2, r4
+   b8976:	e88c 0003 	stmia.w	ip, {r0, r1}
+   b897a:	4631      	mov	r1, r6
+   b897c:	4650      	mov	r0, sl
+   b897e:	f758 e8ba 	blx	10af4 <_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_@plt>
+   b8982:	697e      	ldr	r6, [r7, #20]
+   b8984:	3601      	adds	r6, #1
+   b8986:	617e      	str	r6, [r7, #20]
+   b8988:	45a8      	cmp	r8, r5
+   b898a:	f105 0308 	add.w	r3, r5, #8
+   b898e:	d026      	beq.n	b89de <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x226>
+   b8990:	461d      	mov	r5, r3
+   b8992:	2e00      	cmp	r6, #0
+   b8994:	d1da      	bne.n	b894c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x194>
+   b8996:	68bc      	ldr	r4, [r7, #8]
+   b8998:	b32c      	cbz	r4, b89e6 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x22e>
+   b899a:	f855 0c08 	ldr.w	r0, [r5, #-8]
+   b899e:	e000      	b.n	b89a2 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1ea>
+   b89a0:	461c      	mov	r4, r3
+   b89a2:	6922      	ldr	r2, [r4, #16]
+   b89a4:	e9d4 3102 	ldrd	r3, r1, [r4, #8]
+   b89a8:	4290      	cmp	r0, r2
+   b89aa:	bf2a      	itet	cs
+   b89ac:	460b      	movcs	r3, r1
+   b89ae:	2101      	movcc	r1, #1
+   b89b0:	2100      	movcs	r1, #0
+   b89b2:	2b00      	cmp	r3, #0
+   b89b4:	d1f4      	bne.n	b89a0 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1e8>
+   b89b6:	b9b9      	cbnz	r1, b89e8 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x230>
+   b89b8:	4290      	cmp	r0, r2
+   b89ba:	d9e5      	bls.n	b8988 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1d0>
+   b89bc:	2c00      	cmp	r4, #0
+   b89be:	d0e3      	beq.n	b8988 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1d0>
+   b89c0:	45a1      	cmp	r9, r4
+   b89c2:	bf08      	it	eq
+   b89c4:	f04f 0a01 	moveq.w	sl, #1
+   b89c8:	d0cb      	beq.n	b8962 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1aa>
+   b89ca:	f855 2c08 	ldr.w	r2, [r5, #-8]
+   b89ce:	6923      	ldr	r3, [r4, #16]
+   b89d0:	429a      	cmp	r2, r3
+   b89d2:	bf2c      	ite	cs
+   b89d4:	f04f 0a00 	movcs.w	sl, #0
+   b89d8:	f04f 0a01 	movcc.w	sl, #1
+   b89dc:	e7c1      	b.n	b8962 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1aa>
+   b89de:	4638      	mov	r0, r7
+   b89e0:	b002      	add	sp, #8
+   b89e2:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
+   b89e6:	464c      	mov	r4, r9
+   b89e8:	68fb      	ldr	r3, [r7, #12]
+   b89ea:	42a3      	cmp	r3, r4
+   b89ec:	d0b4      	beq.n	b8958 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1a0>
+   b89ee:	4620      	mov	r0, r4
+   b89f0:	f758 ebca 	blx	11188 <_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base@plt>
+   b89f4:	6902      	ldr	r2, [r0, #16]
+   b89f6:	f855 0c08 	ldr.w	r0, [r5, #-8]
+   b89fa:	e7dd      	b.n	b89b8 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x200>
+   b89fc:	68b8      	ldr	r0, [r7, #8]
+   b89fe:	f7ff f8cd 	bl	b7b9c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6ce28>
+   b8a02:	f758 ebf8 	blx	111f4 <__cxa_end_cleanup@plt>
+   b8a06:	bf00      	nop

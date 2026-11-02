@@ -1,0 +1,20 @@
+# F460/F461 coverage and limits
+
+This is a bounded study of F460 2.0.12 and F461 2.0.11. Fifteen saved checkpoint rows and thirty report locators support navigation; they are not coverage percentages, a complete-source audit or installed capability counts.
+
+| Area | Reviewed selected reach | Open boundary |
+| --- | --- | --- |
+| Original packages/platform | Exact archives, normal/recovery identities, selected app/component/database/profile differences | Authenticity/trust chain, installed release/hardware, actual boot/DTB/auxiliary-core selection |
+| F460 catalogue | Concrete SQL/reader/columns, key89 callable selection, supplied same-owner parameter forwarding | Root owner semantics/configuration/key-list, complete rows/selection/fallback, provider/error behavior; no F461 reader transfer |
+| F460 scenes | Raw/compiled trigger and condition identities, one receiver construction/worker request path, condition pointers versus action control pairs | Configured inclusion, all serializers/grammar/provider paths, owning capture, natural invocation and lifetime |
+| F460 numeric condition | Selected suitable-record signed predicate and actual own raw serializer/operator parser/value route | Full JSON/int/asInt/move/error semantics, query type/ID/freshness, natural records, units/physical meaning |
+| F460 action state | Selected SLEEP wait/error/marker, dispatch/poll/cleanup, positive provided-receiver writer | Writer caller/class join, every-action success, measured timing, natural cancellation, errors/unwind/concurrency |
+| F460 updater | Manifest action staging, selected list consumer, numeric working-mode result/state-machine request | Common context/order, complete extraction/state policy/compatibility/signature/trust/installation |
+| F461 configuration/modules | Main option/key-file directory selection, local loader gates/retention, monitor/userdata/removal requests | Active arguments/cwd/files/modules, effective provider and stop ABI/body/result, actual unload/readiness/concurrent lifetime |
+| F461 routing/translation | Same-manager matcher/field/TR, complete packed routes, typed-object output/prefix/suffix and copied ID | Raw OPEN admission, full address grammar/public WHO/units, natural record/criterion, later closed output/frame/transport paths |
+| F461 clocks | Selected due/defer/callback and candidate GLib arithmetic/API boundaries | Nonzero message deadline32 producer/clock coordinate, real binding/OS/timer behavior/failure/lifetime |
+| F461 platform/daemon | Safe HAL cache/selector/getter and log-persistence selection requests | Actual board/identity/profile/readiness, excluded process/command routes, installed assets/runtime/physical outcomes |
+
+Final consolidation adds no binary/source packet, original/helper/native/provider/emulator/model/semantic fixture/SQL/JSON/XML/file-service/timer/target/runtime/physical execution. Earlier baseline HOST extraction/SQLite work is distinct from target execution. Parent final navigation --check reads documentary identities only; it does not rerun source collectors or validate every historical indexed member.
+
+The inherited MHS ledger remains1corpus/8top-level entries/340original code-hook visits/0Cprimitives/12redirects/8EXIT/0stops/360hooks;4data relocation setups and24FP/control+24R0/SP/LR host writes separate. Four finite double/SAME-object cases only. F454/MH202 ledgers remain separate with no replay accumulation. Wider Device/source review and runtime/physical corroboration remain pending. Closed routes remain closed; no credentials/private/full configuration/bootenv values exported.

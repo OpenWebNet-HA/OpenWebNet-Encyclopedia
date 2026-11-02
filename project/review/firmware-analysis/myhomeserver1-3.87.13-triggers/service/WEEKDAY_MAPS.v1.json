@@ -1,0 +1,42 @@
+{
+  "conditional_character_order": "Under ordinary tm_wday0Sunday and rawbits6..0, sevencharacter days is Monday through Sunday",
+  "firstpair": "Original zero STRD into stack24; sixdoubleword poolcopies follow; allocation/treeinsertion delegated normalreturns",
+  "initializer14_map": "0x1674f8",
+  "initializer15_map": "0x167510",
+  "limits": "No actualinitialization, targetheader/live timezone/ABI or tree mutation/concurrency proof.",
+  "node_pair_store": "b8976 stores original key/value at new24byte node16/20",
+  "pairs": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      6,
+      1
+    ]
+  ],
+  "sixpair_literals": [
+    "0x14750",
+    "0x14840"
+  ]
+}

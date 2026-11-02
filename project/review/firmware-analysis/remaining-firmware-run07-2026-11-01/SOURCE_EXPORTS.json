@@ -1,0 +1,205 @@
+{
+  "files": [
+    {
+      "bytes": 5280,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/mh200n/REPORT.txt",
+      "role": "Exact current source report/collector/output identity",
+      "sha256": "5e38a4897b40485d2fcfd755a617347e2d7680e8d455c9a539b402483e3dcbb1",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night07-application/REPORT.md"
+    },
+    {
+      "bytes": 16457,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/mh200n/collector.py.txt",
+      "role": "Exact current source report/collector/output identity",
+      "sha256": "e97532d5fbdc84c3523f712ad30a88f59a5ce97f4dacdcbf6534df8592c2ba98",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night07-application/collect_application_v1.py"
+    },
+    {
+      "bytes": 609,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/mh200n/OUTPUT_MANIFEST.json",
+      "role": "Exact current source report/collector/output identity",
+      "sha256": "1455aa8146e91293bd2ba2ce7b00b0908ae3148120d8b7459b973fac2caf404e",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night07-application/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 12516,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/mh200n/SOURCE.json",
+      "role": "Selected source/input/dataflow or provenance-admission metadata",
+      "sha256": "7e511fa58fb12cc4b0545bd487d735c13b3b62744a1e1541c0dbcb9579cfb305",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night07-application/SOURCE.json"
+    },
+    {
+      "bytes": 867,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/mh200n/INPUTS.json",
+      "role": "Selected source/input/dataflow or provenance-admission metadata",
+      "sha256": "8ced51be0220abc4850ef1fd52f68a7980445039b3bf86f8de3b5e884c21ca37",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night07-application/INPUTS.json"
+    },
+    {
+      "bytes": 2300,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/mh200n/ARGUMENT_FLOW.json",
+      "role": "Selected source/input/dataflow or provenance-admission metadata",
+      "sha256": "578681749e14ca6f12c08c5cb40e8455cccd5d98076d7816aec9cf0f6b1b24f1",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night07-application/ARGUMENT_FLOW.json"
+    },
+    {
+      "bytes": 4520,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/f459/REPORT.txt",
+      "role": "Exact current source report/collector/output identity",
+      "sha256": "901fd74d2d0f097eb2bdc2c1099c4a32f9d54285984318b9048e4e79c17e41b4",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night07-watcher/REPORT.md"
+    },
+    {
+      "bytes": 10895,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/f459/collector.py.txt",
+      "role": "Exact current source report/collector/output identity",
+      "sha256": "1b2d28451f0fa216a932a1bc201849cabe4b512e039f44824b4f396c036c14bf",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night07-watcher/collect_watcher_v1.py"
+    },
+    {
+      "bytes": 1638,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/f459/OUTPUT_MANIFEST.json",
+      "role": "Exact current source report/collector/output identity",
+      "sha256": "67ecca7d0cc97d7ccf7d76991ac4e5af05bc6f74b2f9e0dd7ecb9edbe6112923",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night07-watcher/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 9661,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/f459/SOURCE.json",
+      "role": "Selected source/input/dataflow or provenance-admission metadata",
+      "sha256": "af21885ba7d74f5bf909c84750061ba70e52a9d05f176ef6a473749c5f69fd59",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night07-watcher/SOURCE.json"
+    },
+    {
+      "bytes": 624,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/f459/INPUT_PINS.json",
+      "role": "Selected source/input/dataflow or provenance-admission metadata",
+      "sha256": "fef125fc58bb51af525d18e50f94380ca98b8adfe9dfbf7ea15610e6562db964",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night07-watcher/INPUT_PINS.json"
+    },
+    {
+      "bytes": 4528,
+      "classification": "gap_admission_ZERO_new_source_coverage",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/f455-gap/REPORT.txt",
+      "role": "Exact provenance admission record; no new code interpretation",
+      "sha256": "ad858ca145771896f0c8036be99cd79f2900faa28f38e9cff1eff355aea0af66",
+      "source": "work/f455-firmware/1.1.2/research/2026-11-01-night07-breadth/REPORT.md"
+    },
+    {
+      "bytes": 11059,
+      "classification": "gap_admission_ZERO_new_source_coverage",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/f455-gap/collector.py.txt",
+      "role": "Exact provenance admission record; no new code interpretation",
+      "sha256": "ce7ae9d595df71e9c2d21a256765b5394940d14ec7e04ccf74d93c2125d2d77c",
+      "source": "work/f455-firmware/1.1.2/research/2026-11-01-night07-breadth/collect_admission_v1.py"
+    },
+    {
+      "bytes": 711,
+      "classification": "gap_admission_ZERO_new_source_coverage",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/f455-gap/OUTPUT_MANIFEST.json",
+      "role": "Exact provenance admission record; no new code interpretation",
+      "sha256": "01c7efe3ede414bcf31dda83868667104e635d17d88b85921411f8b1fd082142",
+      "source": "work/f455-firmware/1.1.2/research/2026-11-01-night07-breadth/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 1401,
+      "classification": "gap_admission_ZERO_new_source_coverage",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/f455-gap/INPUTS.json",
+      "role": "Selected source/input/dataflow or provenance-admission metadata",
+      "sha256": "9226a87b68735b064765d3b50503adeb24bc7db237df22405c876c9d1bef9be8",
+      "source": "work/f455-firmware/1.1.2/research/2026-11-01-night07-breadth/INPUTS.json"
+    },
+    {
+      "bytes": 1376,
+      "classification": "gap_admission_ZERO_new_source_coverage",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/f455-gap/FIELD_PATHS.json",
+      "role": "Selected source/input/dataflow or provenance-admission metadata",
+      "sha256": "bc8f2710007d122c58fdc54c5a24eb322029662de7391999f0de0fd0fbe8e516",
+      "source": "work/f455-firmware/1.1.2/research/2026-11-01-night07-breadth/FIELD_PATHS.json"
+    },
+    {
+      "bytes": 4517,
+      "classification": "review",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/reviews/mh200n-source-review.txt",
+      "role": "Actual independent source or separately classified gap review",
+      "sha256": "cbeaf0f35b7a9c150ff95dd5593a05e163ddd8c50657a2facf0efdcf68ce70bc",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run07/reviews/mh200n-source-review.md"
+    },
+    {
+      "bytes": 7950,
+      "classification": "review",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/reviews/f459-source-review.txt",
+      "role": "Actual independent source or separately classified gap review",
+      "sha256": "890b10b6780c31948cc4556847517227a4a7b281c19a5b47987ccb79ad77f20c",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run07/reviews/f459-source-review.md"
+    },
+    {
+      "bytes": 5385,
+      "classification": "review",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/reviews/f455-gap-review.txt",
+      "role": "Actual independent source or separately classified gap review",
+      "sha256": "9d894eb93474bafd1e528cbc4b9c7594b2c0fd0f71ed7882aa620e0e3a2c226d",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run07/reviews/f455-gap-review.md"
+    },
+    {
+      "bytes": 1119,
+      "classification": "archive_documentary_copy",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/archive-index.json",
+      "role": "Unchanged cumulative actual status",
+      "sha256": "133c94eb95859e111df0c1b6c005636ce8ee13ce164e3576fae85e70256f0719",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run07/R2_ARCHIVE_INDEX.json"
+    },
+    {
+      "bytes": 235,
+      "classification": "archive_documentary_copy",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/archive-receipt.json",
+      "role": "Actual prior receipt, no new network replay",
+      "sha256": "072092bb105685ab2aa0395cde439b431ac6a016037b501a06d2faf509b07793",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run01/archive/R2_RECEIPT.json"
+    },
+    {
+      "bytes": 18203,
+      "classification": "historical_reference",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/pre-edit/overview.txt",
+      "role": "Exact previous reviewed public input",
+      "sha256": "caa2cdfd7b2c16860e1e7d9d26f61e5a633d1a509b07bf9e8cac67c28b079b95",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run07/integration/pre-edit/overview.md"
+    },
+    {
+      "bytes": 2232,
+      "classification": "documentary",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/synthesis.txt",
+      "role": "Current selected documentary scope/gaps",
+      "sha256": "25aa79e676c6b36ad106a9b1383015a50f127831f97a511d4307b551241aada0",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run07/SYNTHESIS.md"
+    },
+    {
+      "bytes": 1297,
+      "classification": "documentary",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/coverage.txt",
+      "role": "Current selected documentary scope/gaps",
+      "sha256": "62a1bd17ef9f8e449a6213983237a85170a89de32fb4b18c1f92990324facf31",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run07/COVERAGE.md"
+    },
+    {
+      "bytes": 1425,
+      "classification": "documentary",
+      "export": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/remaining-questions.txt",
+      "role": "Current selected documentary scope/gaps",
+      "sha256": "baff14fea432f65b57c50cefd798ad1476b1efea0b13f56f273051ad9fcac02d",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run07/RANKED_REMAINING_QUESTIONS.md"
+    }
+  ],
+  "scope": "Two new source packets and separately classified zero-new-source gap, exact selected exports only; no exhaustive/fullruntime reproduction"
+}

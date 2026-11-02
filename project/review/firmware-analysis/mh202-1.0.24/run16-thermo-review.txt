@@ -1,0 +1,22 @@
+# MH202 run16 thermo query independent source review
+
+PASS. Parent independently audited source/control/dataflow, literal/table evidence and finite sequence expectations, then replayed static --check:30 outputs reproduce. This is static review, not original STM/callback/timer/GLib/parser or physical execution.
+
+Report SHA256: `f260264e351c0fe0616160644a675ae525fd637295872fb1b21c945f0158c436`.
+
+Collector SHA256: `562b7008194af5a1b8934eae1893ae17cf83a5ab0a9cd8a6dadecf9306ce177f`.
+
+Manifest SHA256: `f6f8f599b2e55a4e62a78853528794dae83d52a3f69b801f703173294d72b6e9`.
+
+Separate ImageVFS reads and independent ELF PT_LOAD reconstruction verify all5 input hashes, 21 source span hashes/VA offsets, 34 words, 4 literal targets, original timer pool arithmetic and all32 manifest entries. No native corpus additions occur in this author/review area; project cumulative execution is recorded separately.
+
+## Selected semantic checks
+
+- Descriptor dbe4 binds init24cc/field2724/app3288. Candidate68-byte context and callback/main-context stores are distinct from automation60/light44 layouts. Selected parsedWHO4/kind3/DIM0/WHERE1/nullselectors/emptyvalues and serializer/delegate results are explicit premises.
+- Candidate recognition helper classifies selected WHERE1 into localcategory0. The source six-row mixed table has category0/kind3 DIM12, while DIM0/kind3 belongs tocategory5; selected initialized table therefore has no category0/DIM0 mixed entry. Mutation/laterconfiguration remains unclosed.
+- Ordinary selected request appends samepointer, stores state2/copies/pending, selects context+20 timer argument2000/callback4a78, then saves requestID. No successful scheduling, measured time, concurrency/lifetime or timer-before-ID race outcome is asserted.
+- Source state2 matchingID/status1 sets privateflag56. A DIFFERENT-ID kind4 record with exact WHERE/DIM match forwards samepointer and setsflag60. Either arrival order can complete selected ACK/reset; status2 in this state follows cleanup rather than importing state1NACK behavior. PrivateID52, recordstatus52 and state/parsedkind namespaces are kept distinct.
+- Actual callback4a78 chooses receipt from privateflag56 only, notflag60. Selected status1-only pending can therefore request localACK on timer even without the response flag; response-only can requestNACK. This is software flag/queue policy, not measured sensor success or hardware failure. Supplied completion/helper/list/provider behavior remains conditional.
+- Reset retains context/mixed-list and clears selected state/ID/flags while conditionally destroying/unrefing sources/freeing copies. Already-destroyed source and caller-owned lifetime remain bounded; no cleanup-safety or whole-runtime claim.
+
+No source correction was required. Eight finite host sequences are source transcriptions, not native runs or full query/mixed/state support. No units, raw501 classification, F454 semantics or physical correspondence is imported. Actual parser/framework/translator/field-source/transport progression and wider Device gates remain open.

@@ -1,0 +1,80 @@
+from pathlib import Path
+import hashlib,json,struct,subprocess,os,argparse
+O=Path(__file__).resolve().parent
+W=next(p for p in O.parents if (p/'OpenWebNet-Encyclopedia').is_dir())
+P=W/'work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libmhshared.so.1'
+H='4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377'
+def h(b):return hashlib.sha256(b).hexdigest()
+def j(x):return (json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+def build():
+ b=P.read_bytes();assert h(b)==H and len(b)==43208 and b[:6]==b'\x7fELF\x01\x01' and struct.unpack_from('<H',b,18)[0]==40
+ ph=struct.unpack_from('<I',b,28)[0];pe,pn=struct.unpack_from('<HH',b,42)
+ loads=[r for i in range(pn) if (r:=struct.unpack_from('<8I',b,ph+i*pe))[0]==1]
+ def raw(a,n):
+  r=next(x for x in loads if x[2]<=a and a+n<=x[2]+x[4]);z=r[1]+a-r[2];return b[z:z+n]
+ def u(a):return struct.unpack('<I',raw(a,4))[0]
+ def s(a):
+  out=bytearray()
+  for i in range(512):
+   c=raw(a+i,1)
+   if c==b'\0':return out.decode('ascii')
+   out+=c
+  raise AssertionError('string bound')
+ def branch(a):
+  v=u(a)&0xffffff;v=v-(1<<24) if v&(1<<23) else v;return a+8+(v<<2)
+ guard={0x32a0:0xe1a07000,0x32b8:0xe1a08002,0x32c0:0xe1a05001,0x32d0:0xe5970008,0x32d4:0xe08f1001,0x32dc:0xe1a0a003,0x32f0:0xe3a01053,0x32f4:0xe08f0000,0x32f8:0xe5976008,0x3304:0xe287100c,0x3314:0xe1a00003,0x3324:0xe28d1048,0x335c:0xe58d0050,0x3360:0xe1a01005,0x3380:0xe28d1054,0x33c0:0xe58d005c,0x33c4:0xe1a01008,0x33e4:0xe1a01009,0x3430:0xe58d0068,0x3438:0xe1a00002,0x343c:0xe1a0100a,0x3440:0xe3a0200a,0x3474:0xe1a0000c,0x3484:0xe58dc084,0x3488:0xe1a01004,0x3490:0xe28d3078,0x3494:0xe3a02004,0x3498:0xe58d5078,0x349c:0xe58d807c,0x34a0:0xe58dc080,0x34c4:0xe1a00006,0x34c8:0xe0831001,0x34cc:0xe59d300c,0x34d0:0xe58d3000,0x34d4:0xe1a03002,0x34e0:0xe58d003c,0x368c:0xe5970008,0x3698:0xe08f1001,0x36a0:0xe59d003c,0x36a8:0xe3500000,0x36ac:0x0a00016d}
+ for a,v in guard.items():assert u(a)==v,(hex(a),hex(u(a)),hex(v))
+ strings=[]
+ for ins,pool,expected,a in [(0x32d4,0x3fd8,'BEGIN;',0x8f54),(0x32f4,0x3fdc,"REPLACE INTO shared (pluginname,key,value,persistent) values ('%1','%2','%3','%4');",0x8f5c),(0x3698,0x3fe0,'END;',0x8fb0)]:
+  assert ins+8+u(pool)==a and s(a)==expected;strings.append({'instruction':hex(ins),'pool':hex(pool),'VA':hex(a),'text':expected,'bytes_hex':raw(a,len(expected)+1).hex()})
+ rel=subprocess.check_output(['readelf','-rW',str(P)],text=True)
+ sym=subprocess.check_output(['readelf','--dyn-syms','--wide',str(P)],text=True)
+ selected=[x.strip() for x in sym.splitlines() if '_ZN8mhShared5writeE7QStringS0_i' in x];assert any('0000329c' in x and '3416' in x for x in selected)
+ def imm(w):
+  v=w&255;n=((w>>8)&15)*2;return ((v>>n)|(v<<(32-n)))&0xffffffff if n else v
+ call_defs=[(0x32e8,0x2274,0x12258,'sqlite3_exec'),(0x32fc,0x210c,0x121e0,'_ZN7QString16fromAscii_helperEPKci'),(0x3318,0x219c,0x12210,'_ZNK7QString8toLatin1Ev'),(0x3330,0x20e8,0x121d4,'_ZNK10QByteArray8toBase64Ev'),(0x3354,0x210c,0x121e0,'_ZN7QString16fromAscii_helperEPKci'),(0x3374,0x219c,0x12210,'_ZNK7QString8toLatin1Ev'),(0x3390,0x20e8,0x121d4,'_ZNK10QByteArray8toBase64Ev'),(0x33b8,0x210c,0x121e0,'_ZN7QString16fromAscii_helperEPKci'),(0x33d8,0x219c,0x12210,'_ZNK7QString8toLatin1Ev'),(0x33f8,0x20e8,0x121d4,'_ZNK10QByteArray8toBase64Ev'),(0x3424,0x210c,0x121e0,'_ZN7QString16fromAscii_helperEPKci'),(0x3454,0x23e8,0x122d4,'_ZN7QString6numberEii'),(0x34a4,0x2160,0x121fc,'_ZNK7QString8multiArgEiPPKS_'),(0x34b4,0x219c,0x12210,'_ZNK7QString8toLatin1Ev'),(0x34d8,0x2274,0x12258,'sqlite3_exec'),(0x369c,0x2274,0x12258,'sqlite3_exec')]
+ calls=[]
+ for a,t,g,n in call_defs:
+  assert u(a)>>24==0xeb and branch(a)==t
+  x,y,z=[u(t+i*4) for i in range(3)];assert x&0xfffff000==0xe28fc000 and y&0xfffff000==0xe28cc000 and z&0xfffff000==0xe5bcf000
+  assert t+8+imm(x)+imm(y)+(z&4095)==g
+  row=next(x.strip() for x in rel.splitlines() if x.startswith(f'{g:08x} '));assert 'R_ARM_JUMP_SLOT' in row and row.endswith(' '+n)
+  calls.append({'call_VA':hex(a),'word':f'{u(a):08x}','target_PLT':hex(t),'GOT':hex(g),'relocation':row,'PLT_bytes_hex':raw(t,12).hex(),'symbol':n})
+ assert branch(0x36ac)==0x3c68
+ gotbase=0x32ac+8+u(0x3fd0);assert gotbase==0x12180 and gotbase+u(0x3fd4)==0x12300
+ err=next(x.strip() for x in rel.splitlines() if x.startswith('00012300 '));assert err.endswith(' zErrorMessage')
+ spans=[('entry-three-encoded-fields-and-query',0x329c,0x34e4),('normal-later-exec-and-retained-result-test',0x3680,0x36b0),('nonempty-string-local-connectors',0x3b9c,0x3c2c),('null-local-connectors',0x3ec0,0x3ed8)]
+ out={};meta=[]
+ for n,a,e in spans:
+  text=subprocess.check_output(['objdump','-d','-m','arm',f'--start-address={a}',f'--stop-address={e}',str(P)],text=True,env=dict(os.environ,DEBUGINFOD_URLS='')).replace(str(P),'libmhshared.so.1')
+  out['spans/'+n+'.txt']=text.encode();meta.append({'name':n,'start':hex(a),'end_exclusive':hex(e),'sha256':h(raw(a,e-a)),'bytes_hex':raw(a,e-a).hex()})
+ pins=[]
+ for p in [P,W/'work/f459-firmware/2.1.5/acquisition.json',W/'work/f459-firmware/2.1.5/analysis/normal-regular-files.json']:
+  q=p.read_bytes();pins.append({'path':str(p.relative_to(W)),'bytes':len(q),'sha256':h(q)})
+ out['INPUT_PINS.json']=j(pins)
+ out['SOURCE.json']=j({'original':pins[0],'ELF_class':32,'machine':40,'PT_LOAD':loads,'selected_symbol':selected,'guards':[{'VA':hex(a),'word':f'{v:08x}'} for a,v in guard.items()],'calls':calls,'spans':meta,'strings':strings,'zErrorMessage_relocation':err,'original_execution':0,'host_SQLite_queries':0,'database_recovered_or_generated':False})
+ out['REPORT.md']=b'''# F459 selected shared-store write request
+
+The own packaged libmhshared.so.1 (43208 bytes, SHA256 4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377) exports mhShared::write(QString,QString,int) at329c/3416bytes. This packet is a bounded static selection, not the entire method or a natural caller. ELF32 ARM/PT_LOAD, exact instructions and actual PLT/GOT relocations are checked afresh.
+
+Entry329c saves SAME receiverR7, first and second provided QString pointersR5/R8, supplied integerR10. The selected normal path requests BEGIN; through sqlite3_exec using receiver+8. Its result is not tested in this selected prefix. The exact83-byte SQL template at8f5c is REPLACE INTO shared(pluginname,key,value,persistent), with four quoted placeholders in that order (exact spacing/bytes in SOURCE.json). The method captures receiver+8 as R6 at32f8.
+
+Receiver+12, first provided QString and second provided QString each pass through actual imported toLatin1, toBase64 and fromAscii_helper requests in order. These supply local QString objectsSP80/SP92/SP104. Under ordinary valid unchanged Qt objects, ABI, provider binding, successful allocation, normal local connector/callee returns and preserved registers, the selected dataflow supplies those three objects in that order to multiArg. This is an encoding request, not encryption, validation, universal lossless conversion or proof of particular data. No string values were provided or executed.
+
+The supplied integerR10 reaches QString::number(int,int) with radix10 at3454 and hidden resultSP108. The four-pointer arraySP120..132 holds SP80/SP92/SP104/SP108; multiArg receives count4. The resulting QStringSP112 passes toLatin1; its data pointer is sqlite3_exec R1 at34d8, with SAME captured handleR6 inR0, nullR2/R3 and the actual zErrorMessage global-pointer stack argument. The returned machine value is retained atSP60 (34e0). Thus the fourth SQL field has supplied integer decimal provenance under the stated ordinary premises. This does not establish valid SQL, accepted values, persistence durability, a successful write, or an active installed schema.
+
+A separate selected later normal fragment3680..36b0 requests END; using a fresh receiver+8 load. It then loads the EARLIER middle exec resultSP60 and branches on exact zero to3c68. The intervening cleanup/refcount/provider paths, subsequent diagnostics, full return contract, unwind, transaction atomicity, errors, ownership and concurrency are not closed. The existence/order of these request sites is not successful BEGIN/REPLACE/END or database commit. No natural invocation or connection binding is proved; the earlier constructor packet is inherited context only.
+
+SOURCE.json records41 instruction guards,16 actual call/PLT/GOT proofs,4 selected spans including local string connectors,3 original SQL literals and exact input pins. Reproduce collector --check with host ARM objdump. Original/vendor/helper/SQLite/target/runtime/physical execution is ZERO. No database bytes were recovered or created, no synthetic DB was generated from SQL, and no new object is eligible for database archiving from this packet. Closed transport/receiving/output/authentication/session/framing/MQTT/libjel bodies remain unexpanded. Confidence is high for the selected original request/dataflow facts; applicability to running hardware remains conditional.
+'''
+ out['OUTPUT_MANIFEST.json']=j({'collector_sha256':h(Path(__file__).read_bytes()),'outputs':{k:{'bytes':len(v),'sha256':h(v)} for k,v in out.items()},'original_execution':0})
+ return out
+ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build()
+if a.check:
+ for n,v in out.items():assert (O/n).read_bytes()==v,n
+else:
+ for n,v in out.items():p=O/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(v)
+ D=O/'first-candidate';D.mkdir();idx={}
+ for n,v in {Path(__file__).name:Path(__file__).read_bytes(),**out}.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(v);idx[n]={'bytes':len(v),'sha256':h(v)}
+ (D/'INDEX.json').open('xb').write(j({'files':idx}))
+print(json.dumps({'check':a.check,'outputs':len(out),'guards':41,'calls':16,'spans':4,'original_execution':0}))

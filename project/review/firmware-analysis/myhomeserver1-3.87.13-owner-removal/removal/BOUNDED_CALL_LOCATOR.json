@@ -1,0 +1,16 @@
+{
+  "end_va_exclusive": "0x113fb0",
+  "scope": "No indirect/otherencoding/globalcallerabsence claim; other candidates not promoted.",
+  "selected_semantic_caller": "0x3e742",
+  "start_va": "0x11880",
+  "stride": 2,
+  "syntactic_BL_candidates": [
+    "0x2203c",
+    "0x3e742",
+    "0x403d8",
+    "0x43962",
+    "0x44b16",
+    "0x47a2a"
+  ],
+  "target": "0xb6b5c"
+}

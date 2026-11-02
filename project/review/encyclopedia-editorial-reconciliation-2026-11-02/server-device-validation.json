@@ -1,0 +1,108 @@
+{
+  "scope": "Actual local eighth-check validation; semantic review retains its original pending-at-review status, resolved here, not silently changed",
+  "checks": [
+    {
+      "check": "server-device-current",
+      "argv": [
+        "python3",
+        "-B",
+        "devices/tools/check-device-definitions.py"
+      ],
+      "exit_code": 0,
+      "private_receipt_sha256": "9d188bbc4572c0616e9855b23bce26c8fc2a93fed021d885afa5e769c7ee4590"
+    },
+    {
+      "check": "server-device-queue-ready",
+      "argv": [
+        "python3",
+        "-B",
+        "devices/tools/build-device-work-queue.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "private_receipt_sha256": "2bf6aa73e34318a3025a0a898f583378a120d276cf7717e793674b51c072a711"
+    },
+    {
+      "check": "server-device-regressions",
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "devices/tools/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "private_receipt_sha256": "9a8631103d06a9a9899b887860fd35b783d00883204d930e8b347d09b4edde1f"
+    },
+    {
+      "check": "esg-human-final",
+      "argv": [
+        "python3",
+        "-B",
+        "project/review/checks/check_esg.py",
+        "."
+      ],
+      "exit_code": 0,
+      "private_receipt_sha256": "d9f06508e69b61d4bb0300fe457e8418787e8469c5c27c7587243e1696ade506"
+    },
+    {
+      "check": "ecv-human-final",
+      "argv": [
+        "python3",
+        "-B",
+        "project/review/checks/check_ecv.py",
+        "."
+      ],
+      "exit_code": 0,
+      "private_receipt_sha256": "f2db204d388fad392a0bec51b130abf604658a841f0f1bffba7146196ac5407a"
+    },
+    {
+      "check": "artifact-registry",
+      "argv": [
+        "python3",
+        "-B",
+        "project/review/checks/check_artifact_manifest.py"
+      ],
+      "exit_code": 0,
+      "private_receipt_sha256": "fe106db5dc8cf219e182fc4d38904b2b55980cab9d51975886543f96f7095f9d"
+    },
+    {
+      "check": "server-device-diff",
+      "argv": [
+        "python3",
+        "-c",
+        "import subprocess,sys;sys.exit(subprocess.run([\"git\",\"diff\",\"--check\"]).returncode)"
+      ],
+      "exit_code": 0,
+      "private_receipt_sha256": "fd907c40b61866f20721c10b5e4e6428557ddf7fa81b686602fcc0ea9f935d91"
+    }
+  ],
+  "devices": [
+    {
+      "device": "OWN-DEV-0199",
+      "item": "2198",
+      "hardware_corroboration": "pending",
+      "state": "reviewed",
+      "eight_checks": "complete"
+    },
+    {
+      "device": "OWN-DEV-0207",
+      "item": "2288",
+      "hardware_corroboration": "pending",
+      "state": "reviewed",
+      "eight_checks": "complete"
+    },
+    {
+      "device": "OWN-DEV-0208",
+      "item": "2293",
+      "hardware_corroboration": "pending",
+      "state": "reviewed",
+      "eight_checks": "complete"
+    }
+  ],
+  "current_page_hashes_match_semantic_review": true,
+  "remote_status": "No actual GitHub status published; aaaa test status is fixture output"
+}

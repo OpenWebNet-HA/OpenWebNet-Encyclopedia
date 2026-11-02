@@ -1,0 +1,30 @@
+[
+  {
+    "end_va_exclusive": "0x27c14",
+    "file_offset": "0x279a4",
+    "name": "raw-serializer",
+    "sha256": "5c2f53fb1b9854cdfc5d9425e7cd834ec825956d56d206d7c087bbd197773bc0",
+    "start_va": "0x279a4"
+  },
+  {
+    "end_va_exclusive": "0xac1dc",
+    "file_offset": "0xac198",
+    "name": "same-json-reparse",
+    "sha256": "e215c8b9e6767dfb6540ab0674ff508988a0c1f5e9bcb23e12841ab41e0fb2df",
+    "start_va": "0xac198"
+  },
+  {
+    "end_va_exclusive": "0x2b33c",
+    "file_offset": "0x2b0b4",
+    "name": "raw-constructor",
+    "sha256": "9ae09f661767bbf8855ef5a14892a25980d525eec752e13a45b2429f21eee74f",
+    "start_va": "0x2b0b4"
+  },
+  {
+    "end_va_exclusive": "0xcf164",
+    "file_offset": "0xcf06c",
+    "name": "compiled-duration-prefix",
+    "sha256": "aa275c6eaada9bf856ba3ede2a5da13a8f3472d2f248ad9119ec28918e644062",
+    "start_va": "0xcf06c"
+  }
+]

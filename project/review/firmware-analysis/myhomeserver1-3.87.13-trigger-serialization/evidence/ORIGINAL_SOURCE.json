@@ -1,0 +1,246 @@
+{
+  "calls": [
+    {
+      "BLX": false,
+      "VA": "0x282fe",
+      "bytes": "fbf749f8",
+      "target": "0x23394"
+    },
+    {
+      "BLX": true,
+      "VA": "0x283ca",
+      "bytes": "e8f704ed",
+      "target": "0x10dd4"
+    },
+    {
+      "BLX": true,
+      "VA": "0x283d4",
+      "bytes": "e8f74cec",
+      "target": "0x10c70"
+    },
+    {
+      "BLX": true,
+      "VA": "0x283da",
+      "bytes": "e8f75cef",
+      "target": "0x11294"
+    },
+    {
+      "BLX": false,
+      "VA": "0xa8dd2",
+      "bytes": "83f715ff",
+      "target": "0x2cc00"
+    },
+    {
+      "BLX": true,
+      "VA": "0x2cca6",
+      "bytes": "e4f7eceb",
+      "target": "0x11480"
+    }
+  ],
+  "data": [
+    {
+      "VA": "0x160304",
+      "bytes": 20,
+      "raw_hex": "00000000d4301600692b0200992b0200e5820200",
+      "sha256": "8e436f44f6805dce5a3638c3d12f9633d41668acb04ba6546e73173ac5a729d6"
+    }
+  ],
+  "guards": [
+    {
+      "VA": "0x282ec",
+      "bytes": "0e46"
+    },
+    {
+      "VA": "0x282f2",
+      "bytes": "0446"
+    },
+    {
+      "VA": "0x28302",
+      "bytes": "b36a"
+    },
+    {
+      "VA": "0x28306",
+      "bytes": "591c"
+    },
+    {
+      "VA": "0x2830a",
+      "bytes": "5bd0"
+    },
+    {
+      "VA": "0x283c6",
+      "bytes": "f16a"
+    },
+    {
+      "VA": "0x283c8",
+      "bytes": "2846"
+    },
+    {
+      "VA": "0x283d0",
+      "bytes": "2046"
+    },
+    {
+      "VA": "0x283d8",
+      "bytes": "2946"
+    },
+    {
+      "VA": "0x233a2",
+      "bytes": "0021"
+    },
+    {
+      "VA": "0x233a4",
+      "bytes": "0646"
+    },
+    {
+      "VA": "0x233b8",
+      "bytes": "ab68"
+    },
+    {
+      "VA": "0x23406",
+      "bytes": "297f"
+    },
+    {
+      "VA": "0xa8dc4",
+      "bytes": "9b68"
+    },
+    {
+      "VA": "0xa8dc6",
+      "bytes": "9847"
+    },
+    {
+      "VA": "0xa8dcc",
+      "bytes": "2146"
+    },
+    {
+      "VA": "0x2cc9e",
+      "bytes": "46f98f07"
+    },
+    {
+      "VA": "0x2ccac",
+      "bytes": "e062"
+    },
+    {
+      "VA": "0x2ccb0",
+      "bytes": "4ff0ff33"
+    },
+    {
+      "VA": "0x2ccb4",
+      "bytes": "a362"
+    }
+  ],
+  "image": "/home/bticino/scheduling_manager/scheduling_manager",
+  "import_declarations": [
+    "00165ad8  00005516 R_ARM_JUMP_SLOT        00000000   _ZN4Json5ValueC1Ei",
+    "00165d0c  0000f816 R_ARM_JUMP_SLOT        00000000   _ZNK4Json5Value5asIntEv",
+    "00165c68  0000c716 R_ARM_JUMP_SLOT        00000000   _ZN4Json5ValueaSEOS0_"
+  ],
+  "keys": [
+    {
+      "ADD_PC": "0x283d2",
+      "key": "level",
+      "literal": "0x115278",
+      "pool": "0x28448"
+    },
+    {
+      "ADD_PC": "0x233e6",
+      "key": "type",
+      "literal": "0x115f5c",
+      "pool": "0x23510"
+    },
+    {
+      "ADD_PC": "0x23412",
+      "key": "enabled",
+      "literal": "0x1143e0",
+      "pool": "0x23514"
+    },
+    {
+      "ADD_PC": "0x23448",
+      "key": "operator",
+      "literal": "0x115198",
+      "pool": "0x23518"
+    },
+    {
+      "ADD_PC": "0x234ba",
+      "key": "id",
+      "literal": "0x116adc",
+      "pool": "0x23528"
+    },
+    {
+      "ADD_PC": "0x2cc2e",
+      "key": "status",
+      "literal": "0x1151ac",
+      "pool": "0x2cd34"
+    },
+    {
+      "ADD_PC": "0x2cc9c",
+      "key": "level",
+      "literal": "0x115278",
+      "pool": "0x2cd40"
+    }
+  ],
+  "raw_class": {
+    "AP": "0x16030c",
+    "GOT_slot": "0x165f04",
+    "RTTI": "0x1630d4",
+    "Thumb_method": "0x282e5",
+    "actual_method": "0x282e4",
+    "header": "0x160304",
+    "name": "11BnldTrigger",
+    "selected_slot_plus8": "0x160314"
+  },
+  "relative_relocations": [
+    "00160308  00000017 R_ARM_RELATIVE",
+    "00160314  00000017 R_ARM_RELATIVE",
+    "00165f04  00000017 R_ARM_RELATIVE"
+  ],
+  "spans": [
+    {
+      "end_VA_exclusive": "0x2830c",
+      "file_offset": "0x282e4",
+      "name": "serializer-status-selection",
+      "sha256": "a4a72194cba49f57a44021751a0ec15b088df1dec9f498fae3ecc7a43b33a447",
+      "start_VA": "0x282e4"
+    },
+    {
+      "end_VA_exclusive": "0x283e6",
+      "file_offset": "0x283c4",
+      "name": "numeric-level-arm",
+      "sha256": "3ad96d3fccec33a624c3fb2dd897dcf96a818215f89e6b14740cb02eb588f889",
+      "start_VA": "0x283c4"
+    },
+    {
+      "end_VA_exclusive": "0x2836c",
+      "file_offset": "0x28352",
+      "name": "serializer-normal-return",
+      "sha256": "f3e9682b179672997c3eb51b694b4ee97a1cebd0ceab1b927bb9952dd94e0336",
+      "start_VA": "0x28352"
+    },
+    {
+      "end_VA_exclusive": "0x234ce",
+      "file_offset": "0x23394",
+      "name": "trigger-base-normal-members",
+      "sha256": "8ef63bb37770d34660c5c1b805d23aa6db7a8b7ecb81821b5ad3e5dd650594ee",
+      "start_VA": "0x23394"
+    },
+    {
+      "end_VA_exclusive": "0xa8dd6",
+      "file_offset": "0xa8dba",
+      "name": "same-JSON-reparse",
+      "sha256": "8bad2b75906f1c4c1c36d1d9e7be4241345e97aa984696cefdd5ba3a0c378163",
+      "start_VA": "0xa8dba"
+    },
+    {
+      "end_VA_exclusive": "0x2cc40",
+      "file_offset": "0x2cc22",
+      "name": "constructor-status-guard",
+      "sha256": "1f07e8f39120d2d8179d2a168cae54dfe7d621e407c6289a29ecc51d51c223a9",
+      "start_VA": "0x2cc22"
+    },
+    {
+      "end_VA_exclusive": "0x2ccb8",
+      "file_offset": "0x2cc94",
+      "name": "constructor-numeric-word",
+      "sha256": "8973315ff459d3d1efd4e81038c157371ce843289a805f9cbd4cb3c82273ea87",
+      "start_VA": "0x2cc94"
+    }
+  ]
+}

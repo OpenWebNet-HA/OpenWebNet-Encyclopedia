@@ -1,0 +1,26 @@
+{
+  "collector_sha256": "1b95488ba324321d2e6d49cfd27014bf5324152ec0a076bdb7f0c211de3bf5d5",
+  "original_execution": 0,
+  "outputs": {
+    "INPUT_PINS.json": {
+      "bytes": 573,
+      "sha256": "42df579fccaaf07c0d2d2e252986d50eb94c520f7e694c57f37885c6d17b42ed"
+    },
+    "REPORT.md": {
+      "bytes": 2339,
+      "sha256": "2e2a56a80412660e7a2992593510fcb2bc61095e59c4bd162aac9d03607d4847"
+    },
+    "SOURCE.json": {
+      "bytes": 5446,
+      "sha256": "083dd69b4fd6c23e03476530ac3f912b487b9c34743a741b1c4769cb89f5227c"
+    },
+    "spans/constructor-prefix.txt": {
+      "bytes": 1711,
+      "sha256": "31c886b547c764a2b209d538ada2b4c7ede1334930c4c0beb0ac952e4e1786a3"
+    },
+    "spans/selected-following-requests.txt": {
+      "bytes": 796,
+      "sha256": "50f4427555217011dc540d2d6105a6bdda807969ff585e35c9315b3bb5399e6a"
+    }
+  }
+}

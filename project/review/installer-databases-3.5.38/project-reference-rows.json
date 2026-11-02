@@ -1,0 +1,181 @@
+{
+  "DB_INFO": [
+    [
+      "DATA_B",
+      0
+    ],
+    [
+      "DATA_R",
+      4
+    ],
+    [
+      "DATA_V",
+      4
+    ],
+    [
+      "R",
+      0
+    ],
+    [
+      "V",
+      7
+    ]
+  ],
+  "seed_room_integer_fields": {
+    "columns": [
+      "id_room",
+      "room_type",
+      "room_floor",
+      "fixed_row",
+      "id_rt_area_type"
+    ],
+    "rows": [
+      [
+        1,
+        19,
+        9,
+        1,
+        null
+      ]
+    ]
+  },
+  "area_types": [
+    [
+      1,
+      "District"
+    ],
+    [
+      2,
+      "Building"
+    ],
+    [
+      3,
+      "Raiser"
+    ],
+    [
+      4,
+      "Floor"
+    ],
+    [
+      5,
+      "Indoor/Apartment"
+    ],
+    [
+      6,
+      "Common Areas"
+    ],
+    [
+      7,
+      "Technical Areas"
+    ],
+    [
+      8,
+      "Hotel Room"
+    ]
+  ],
+  "area_categories": [
+    [
+      1,
+      "Single room"
+    ],
+    [
+      2,
+      "Twin room"
+    ],
+    [
+      3,
+      "Double room"
+    ],
+    [
+      4,
+      "Triple room"
+    ],
+    [
+      5,
+      "Quadruple room"
+    ],
+    [
+      6,
+      "Suite"
+    ]
+  ],
+  "plant_metadata_keys": [
+    {
+      "key": " state_province\r\n",
+      "value_class": "empty"
+    },
+    {
+      "key": "address",
+      "value_class": "empty"
+    },
+    {
+      "key": "city",
+      "value_class": "empty"
+    },
+    {
+      "key": "country",
+      "value_class": "empty"
+    },
+    {
+      "key": "customer",
+      "value_class": "empty"
+    },
+    {
+      "key": "db_key",
+      "value_class": "populated manufacturer default; value withheld"
+    },
+    {
+      "key": "db_lastmod",
+      "value_class": "empty"
+    },
+    {
+      "key": "db_name",
+      "value_class": "populated manufacturer default; value withheld"
+    },
+    {
+      "key": "db_ver",
+      "value_class": "populated manufacturer default; value withheld"
+    },
+    {
+      "key": "email",
+      "value_class": "empty"
+    },
+    {
+      "key": "ip_hosts",
+      "value_class": "populated manufacturer default; value withheld"
+    },
+    {
+      "key": "ip_server",
+      "value_class": "populated manufacturer default; value withheld"
+    },
+    {
+      "key": "ip_v4_first",
+      "value_class": "populated manufacturer default; value withheld"
+    },
+    {
+      "key": "na_type",
+      "value_class": "populated manufacturer default; value withheld"
+    },
+    {
+      "key": "password",
+      "value_class": "populated manufacturer default; value withheld"
+    },
+    {
+      "key": "project_name",
+      "value_class": "empty"
+    },
+    {
+      "key": "subnet_mask",
+      "value_class": "populated manufacturer default; value withheld"
+    },
+    {
+      "key": "telephone",
+      "value_class": "empty"
+    }
+  ],
+  "declared_template_db_version": [
+    [
+      "2.0"
+    ]
+  ]
+}

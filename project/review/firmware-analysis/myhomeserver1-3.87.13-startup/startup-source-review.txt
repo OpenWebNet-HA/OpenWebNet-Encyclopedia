@@ -1,0 +1,28 @@
+# Independent executable-startup source review
+
+PASS for startup/REPORT.md, no correction requested. This reviewer independently checked the selected original entry/main/settings/service/loader argument chain. No original/vendor/parser/thread/process, target I/O, service, timing or physical execution occurred, and no author artifact was edited.
+
+Reproduced collect_startup_v1.py --check: 20 outputs. Independently mapped the original scheduler ELF32 PT_LOAD ranges and checked all 13 raw span hashes, 20 file-byte guards, three safe PIC literal joins, both relative relocation records, entry/GOT/main pointer chain and service-control RTTI. Checked four finite host branch cases against the original argc/settings-return branches, and all 22 report/collector/output first copies against the current bytes and precomputed index. These are static reproduction/cases, not synthetic process, settings, service or scene execution.
+
+Source conclusions verified:
+
+- Actual e_entry is Thumb17229. Entry code17228 obtains GOT1659a4, loads slot166198 storing main Thumb130a1 and supplies it in r0 to __libc_start_main. Relocation and ordinary libc startup semantics are premises, not an observed process or effective provider binding.
+- Main selects argv[1] for argc>1 or the exact relative default. Its same settings object has the traced scenesPath storage/getter relationship. Original loader-result zero test13184 branches to diagnostic1370a, whose normal continuation13716 returns to13188. That branch is not an exit or a settings-success-only service-construction gate. A zero result still does not establish usable settings or override exceptions/nonreturning delegates.
+- The selected default setting and whitelisted packaged path are equal. This is declaration/source agreement, not an observed current working directory, actual argv/input parse, directory contents or installed scenes.
+- Main creates the local container at stable SP160 and requests112-byte service allocation. It derives inner=allocation+16, supplies literal r1=1 to b94f0 and saves (inner,control) at SP88/SP92. Original constructor preserves that flag, takes its nonzero branch and requests thread creation with the same service pointer in state+4. This resolves that prior caller-flag premise on this particular normal startup path, not actual thread creation, running worker, lifetime or readiness.
+- Under ordinary EABI callee preservation and normal selected delegate returns, r4 remains the same SP160 container. Loader handoff13342/13346/13348 reads the same service inner pointer from SP88, that container and the fresh getter-produced path string. Loader17630 separately preserves the passed path and saves its incoming container/service in its own SP4/SP20. Main and loader stack frames are not conflated.
+
+Pre-loader global/container/helper calls remain opaque normal-return boundaries. Container semantics, actual registration/population, filesystem/parser/provider success, later handler behavior, settings error/default state, full ownership/concurrency/timezone and all physical outcomes remain open. No old firmware object layout or missing scene was supplied. Source reachability does not imply successful boot, active service or device commissioning.
+
+Reviewed SHA-256 pins relative to startup/:
+
+| File | SHA-256 |
+| --- | --- |
+| REPORT.md | 534a49a90aa4f6058322b12cd466ce10bd2f28c776cf667a3ea764779ee0bc0b |
+| collect_startup_v1.py | 3187332a451ec2e08e774c5ad0560fe3e443a509ebf9be8af940bca0e4722b41 |
+| OUTPUT_MANIFEST.json | df321a0983fd6bf6650ecda061cdb8b5d304e831e28f416246f26d936cabab7e |
+| ORIGINAL_SOURCE.json | c7fe6498f2297f029db3839c68d5254d68ca2785feb99a1ec86fa8677cf523a4 |
+| ARGUMENT_LEDGER.json | 4ac814d2182ed99bf3e1e3abb7cc6f1d1d02f498e72f78b09637d180a59188df |
+| first-candidate/INDEX.json | ba3ee83aae6182937b862553437a21c60c24ea4b1e8e27b83c6e475e53b80c7b |
+
+Original scheduler SHA-256: 7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26. This new ASCII review is exclusively created and immediately frozen as an exact first-review copy with its non-self-referencing index, before announcing its hash. No earlier candidate was overwritten.

@@ -1,0 +1,60 @@
+# Original double-helper corpus: documentary integration review
+
+Verdict: PASS for authoritative current review-candidate-v2 after the requested opening execution-scope correction. This is source-aware of my frozen helper source/harness/saved-trace audit, not another CPU replay, whole-source review or physical assessment. No original/helper/provider/vendor instruction or Unicorn import was executed by this reviewer; root's canonical run remains credited separately. No author, repository, source or prior review file was edited.
+
+## Canonical result and scope
+
+The page/capsule/synthesis/coverage accurately retain one MyHOMEServer1 corpus:4 finite synthetic cases,8 top-level entries,340 original code-hook visits,0 C primitives,12 actual-definition redirects,8 EXIT,0 guard stops=360 hook callbacks. Each constructor has56 visits and readback29. Nested original helpers are not extra entries; diverted PLT/private EXIT instructions are not original visits. Four canary data relocations,24 FP/control setup writes, call-register/storage/image setup remain separate. No verification replay is accumulated.
+
+The saved four patterns preserve positivezero, negativezero, negativeone and1.25 bits. Readback consumes the SAME original-constructed24-byte object without field reseeding; its D0 poison and actual load/type traces distinguish it from a register/host-value substitute. Original constructor/initBasic/empty Comments/type/type3 source executes under explicit candidate-self-binding, valid storage/hard-float/FP/canary premises. Full JSON member/map/move-assignment/serializer/reparse, arbitrary/exceptional values, destructors/nonempty Comments/errors/unwind and actual configured BNTH/scene remain unproved.
+
+Root/independent preflight approvals and their exact hashes precede the run through the pinned approval gate. Tool identity/source containment is not installed loader/OS behavior. All63 tool path/size/mtime/SHA and41 RECORD-hashed identities are checked before/after; no F454 firmware/layout/harness is reused. Scheduler processes, target OS/services/thread/timer/network/bus and physical execution remain0. Wider Device/source gates, previous F454/MH202 ledgers and opaque closed boundaries stay unchanged.
+
+## Required wording and preserved history
+
+The initial ten-document candidate retained a blanket opening 'all findings static/execution zero' sentence that contradicted the new current corpus. Parent preserved that exact page/candidate, then applied ONLY the recorded historical-scope substitution. Independently applying WORDING_REFINEMENT reproduces the current page exactly; all9 other previous documents are unchanged. Current v2 adds the refinement as its eleventh pin. No integration review existed before this correction.
+
+Unexecuted harness drafts, verification-v1 ordering failure and separate successors retain exact source/candidates without weakened guest guards or overwritten results. The validator-v1 AST/scaffold error was pre-execution; its exact retained source/history and separate successors are metadata/mechanical work, not failed guest attempts. The later inline pin-assembly error is disclosed as transcription after page/history writes and before pin generation, without invented historical file authentication. This review verifies current pins and retained bytes, not unavailable earlier terminal/probe bytes or every development event. Canonical source/results/counts remain unchanged.
+
+## Identities and pending strict completion
+
+All11 current frozen pins match exact copies, sizes and hashes. All51 SOURCE_EXPORTS pairs match local and published bytes/metadata. The prior source audit verified9 preflight,10 result,1 result-report and2 after-check copies, individual attempts and approval binding; this documentary review does not repeat CPU execution or add coverage.
+
+There are30 local Markdown link occurrences and0 fragments;28 existing targets resolve. Only capsule integration-review.txt and validation.json await actual assembly. Their future bytes/existence and final strict gates are not certified here. Parent must create actual exact files and run strict link/identity/ESG/ECV/diff checks with them present, without placeholders or exemptions. This PASS concerns bounded current integration, not premature final mechanical completion.
+
+## Exact current v2 pins
+
+| Workspace-relative file | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md` | `69f408a664e4331c2d756285e3498ca7bbb777ae9d7c1a3a50d33951394df13a` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-double-isolation/README.md` | `a99715b6a5aaa368c4f020fd27abbddaeae80280393870e6b96ae5dc112b0132` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-double-isolation/SOURCE_EXPORTS.json` | `13b47882838d62827a48742c4bcb2d53fbb58a015393e0d81415659bb6af33ba` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-double-isolation/synthesis.txt` | `734ddacae1fe36a42e22b052e25589c697455ad1831e8faedf72dc5874b5d125` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-double-isolation/coverage.txt` | `8a2bbc2752d67d6ede4065bac2c56bc36087a313185e9698c0588ff440c9a6f2` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-double-isolation/remaining-questions.txt` | `7a441e3a6140374ebb01be619ba6a4c6bbca6e7706e559117fd7128941cf87d4` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/SYNTHESIS.md` | `734ddacae1fe36a42e22b052e25589c697455ad1831e8faedf72dc5874b5d125` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/COVERAGE.md` | `8a2bbc2752d67d6ede4065bac2c56bc36087a313185e9698c0588ff440c9a6f2` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/RANKED_REMAINING_QUESTIONS.md` | `7a441e3a6140374ebb01be619ba6a4c6bbca6e7706e559117fd7128941cf87d4` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/RUN_LOG.md` | `32bf4ebd3f68944ebbd0b3d8223d08a7c66a2e0748106be4091f94ac80c317e1` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/integration/WORDING_REFINEMENT.json` | `716d58ec3647767e3388850552fd9603eb2a580e756e0e7f186135458b09397e` |
+
+## Source/review/history applicability pins
+
+Paths below are relative to this research batch.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `harness/REPORT.RESULTS.md` | `a18c1a027645fa7cc17e9882d09a49099509b2f33bb6f502f25ce7a2ea018c3f` |
+| `harness/isolate_double_v3.py` | `1ef53f7e04a20cb43c37dfb1cae965bb119bcda167db9b372b58b02bf1cb4a15` |
+| `harness/RESULTS.json` | `450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525` |
+| `reviews/helper-source-review.md` | `23302b26b59edb5a761eee05ff514b1867ab64d82f316c27d6500d68036de46f` |
+| `reviews/isolation-preflight.md` | `2efa4cef0980458c03412c661103518f0f18a2b0b7e85b5f7518890437c149f6` |
+| `verification/REPORT.v2.md` | `0f5bad12227b48e30646918853d56dbbce5641d91d4c385b51d1648c3f55f45f` |
+| `verification/AFTER_CHECK.md` | `f30f6bad356e0c710abab706c524c5b0d7e09795a1ffe4331b8b51e5efb9f7bf` |
+| `EXECUTION_APPROVAL.json` | `ffda236a0eeb4b8bfef5404d73ec84c32e6f93f5c6c98cb1983107615a6bd57f` |
+| `integration/review-candidate/INDEX.json` | `b72e89c34842266050a7268b74a2d2d185c618fd83373d3a6dd20e843314f32f` |
+| `integration/WORDING_REFINEMENT.json` | `716d58ec3647767e3388850552fd9603eb2a580e756e0e7f186135458b09397e` |
+| `integration/ASSEMBLY_HISTORY.json` | `065d9e4c7eb0075c32bee81a0d5185d83b8061126b4169bda53ff3ad753843e9` |
+| `integration/pre-v2-validator/HISTORY.json` | `f5addbfa1409cc447c73bf43ef4794e12732bc8bebceb68abd44ce658def700c` |
+
+Current v2 index SHA256 `57c6ff05ce41e4a1577538d1e2095c80a8ad4d82eab9424a8915be0c0d33d24f`. SOURCE_EXPORTS.json SHA256 `13b47882838d62827a48742c4bcb2d53fbb58a015393e0d81415659bb6af33ba`.

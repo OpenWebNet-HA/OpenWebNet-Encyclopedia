@@ -1,0 +1,9 @@
+{
+  "SQLite": "Host query-only immutable reads; hashes/rowcounts only; no guest SQLite execution",
+  "earlier_MHS_F454_MH202_native_ledgers": "Unchanged, separate",
+  "image_view": "Existing verified host ImageVFS parser reused with each own product manifests; no transferred firmware ABI/layout",
+  "inventory_counts": "Structural reach/integrity, not coverage percentage or semantic capability approval",
+  "original_vendor_execution": 0,
+  "sensitive_data": "No packaged credentials/privatekeys/config rows exported",
+  "whole_process_services_OS_peripherals_network_bus_physical_execution": 0
+}

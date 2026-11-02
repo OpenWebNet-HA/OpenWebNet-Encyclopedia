@@ -1,0 +1,36 @@
+# Independent source review: bounded reset-receiver aliases
+
+PASS, no source correction requested. This is an independent static source/collector review of `reset-alias/`, not a native replay or a whole-firmware reset audit. Original instructions, target APIs, vendor processes, thread execution and semantic host models executed: 0. Author files were not changed.
+
+## Reproduction and independently checked identities
+
+Read-only `python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime/reset-alias/collect_alias_v1.py --check` passed: 27 outputs. The manifest pins 26 non-manifest outputs, the collector and report; its immediate first-candidate index pins 29 exact copies (27 outputs plus report and collector). All those copies and manifest members match. I independently verified all five input hashes/sizes and the preserved pre-generation draft hash.
+
+| Current artifact | SHA256 |
+| --- | --- |
+| `reset-alias/REPORT.md` | `7b2ae0004d18f99a200af2c4d383716786f1e70d75a06ef88f85059bc517702f` |
+| `reset-alias/collect_alias_v1.py` | `d3bb1bf7ae79dc59d337c25f348560f908bb8202a1125d2eaa331880ff7d3f38` |
+| `reset-alias/OUTPUT_MANIFEST.json` | `a93b8b11ccee820772aa001d8a17f4ed28bd9caa1b9df83e0020c9e3c7a31e84` |
+| `reset-alias/SOURCE_EVIDENCE.json` | `e5b4ce408de56d72477646825f96fb45ea6ae02fad618bc2e6e4e8d71a4ef7d7` |
+| `reset-alias/RECEIVER_LEDGER.json` | `23f0af62b5d1c3ba9ce1186a37ed581475ffdca7bd14d399e011873eb4ac9bf1` |
+| `reset-alias/first-candidate/INDEX.json` | `8a7fb244333c61d4725ca917e7f9aeee67d937c8815c6884e8d6b3f3e9494c92` |
+
+The original `/home/bticino/scheduling_manager/scheduling_manager` is SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Independently parsing its ELF program headers, I reproduced all 22 source-span hashes, 15 alias guards, 22 store bytes and exception-index intervals. I compared the exact store set with the frozen predecessor `BOUNDED_QUERIES.json` (SHA256 `21fc8415c1f27b9e6015a3dbb4aaf34604c724ab69f1bea68252513bbf9fb35a`), rather than treating a newly scanned subset as that predecessor. The exception-index intervals are correctly described as intervals, not automatically exact source-function boundaries.
+
+## Source findings and scope
+
+The finite 22-row classification agrees with the original bytes: two inherited known-global stores, six direct current-SP stores, three SP-derived stores, one fresh-allocation destination and ten caller-supplied destinations. This is 2 + 9 + 1 + 10, not a writer census.
+
+The three indirect stack assignments at `0xe6154`, `0x1041a0` and `0x108c26` establish r6 as then-current SP+612, SP+596 and SP+612, respectively. The retained paths keep that receiver through their byte+72 stores, giving effective SP+684/SP+668/SP+684; r3 is locally zero. No common stack address across functions is assumed. The six direct forms likewise use the actual current SP operand.
+
+The allocation path supplies size76 at `0x3134a`, requests `operator new` at `0x31350`, saves returned r0 to r4 at `0x31356`, loads the byte from SP+192 at `0x3137c` and stores to r4+72 at `0x31392`. Excluding this selected receiver from static BSS requires ordinary successful fresh allocation and normal ABI-preserving returns. No actual returned address or lifetime is established.
+
+For all ten supplied destinations, the inspected entry-to-store source saves incoming r0 into the reported callee-preserved receiver and does not locally replace that receiver before the selected store. The `asBool`/`asUInt` result stores remain conversion-source facts, not shared-flag assignments or inferred command semantics. The inline-string interpretations agree with neighboring pointer/length/character operations. In particular, I additionally inspected the immediately adjacent original `0xb2c10` store: it records sl to object+64 after the zero terminator at `0xb2c0c`, with sl previously formed as object+72 at `0xb2bde`. This supports the report's local string-layout statement without claiming that pointer store lies inside its shorter retained span.
+
+The two global stores are explicitly inherited from the previous positive PIC proof: initializer zero at `0x1548e` and stop-helper one at `0xcd706`, receiver base `0x1677b8`, flag `0x167800`. They are not new reset discoveries. Ten complete natural caller aliases remain unresolved. Valid-stack/fresh-allocation/normal-ABI premises are material; source-local layouts do not establish that every possible supplied receiver excludes the shared domain.
+
+## Preservation and unresolved boundary
+
+The actual preserved draft hashes correctly against its HISTORY record. The report explicitly describes an unexecuted pre-generation spacing refinement and says that no generated candidate existed then. File inspection confirms the preserved draft and current first-candidate identities; it is not independent historical evidence of every possible prior process execution. No generated candidate correction was requested by this review.
+
+The positive local classification does not resolve the predecessor's 747 wider STR/STRD candidates, arbitrary indirect/bulk/provider writes, external mutation, process/DSO reinitialization, concurrency or configured runtime behavior. No new reset, universal absence of reset, permanent latch, cancellation/restart outcome, leak, use-after-free or physical consequence is proved. No closed-route or transport implementation was inspected.

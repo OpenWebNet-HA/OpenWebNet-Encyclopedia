@@ -1,0 +1,53 @@
+
+
+
+Disassembly of section .text:
+
+000054ac <is_json_ack@@Base>:
+    54ac:	4a15      	ldr	r2, [pc, #84]	@ (5504 <is_json_ack@@Base+0x58>)
+    54ae:	4b16      	ldr	r3, [pc, #88]	@ (5508 <is_json_ack@@Base+0x5c>)
+    54b0:	b500      	push	{lr}
+    54b2:	b083      	sub	sp, #12
+    54b4:	447a      	add	r2, pc
+    54b6:	58d3      	ldr	r3, [r2, r3]
+    54b8:	681b      	ldr	r3, [r3, #0]
+    54ba:	9301      	str	r3, [sp, #4]
+    54bc:	f04f 0300 	mov.w	r3, #0
+    54c0:	b188      	cbz	r0, 54e6 <is_json_ack@@Base+0x3a>
+    54c2:	4912      	ldr	r1, [pc, #72]	@ (550c <is_json_ack@@Base+0x60>)
+    54c4:	4a10      	ldr	r2, [pc, #64]	@ (5508 <is_json_ack@@Base+0x5c>)
+    54c6:	4479      	add	r1, pc
+    54c8:	588a      	ldr	r2, [r1, r2]
+    54ca:	6811      	ldr	r1, [r2, #0]
+    54cc:	9a01      	ldr	r2, [sp, #4]
+    54ce:	4051      	eors	r1, r2
+    54d0:	f04f 0200 	mov.w	r2, #0
+    54d4:	d114      	bne.n	5500 <is_json_ack@@Base+0x54>
+    54d6:	490e      	ldr	r1, [pc, #56]	@ (5510 <is_json_ack@@Base+0x64>)
+    54d8:	6900      	ldr	r0, [r0, #16]
+    54da:	4479      	add	r1, pc
+    54dc:	b003      	add	sp, #12
+    54de:	f85d eb04 	ldr.w	lr, [sp], #4
+    54e2:	f7fc bed5 	b.w	2290 <get_val_bool_node@plt>
+    54e6:	4a0b      	ldr	r2, [pc, #44]	@ (5514 <is_json_ack@@Base+0x68>)
+    54e8:	4b07      	ldr	r3, [pc, #28]	@ (5508 <is_json_ack@@Base+0x5c>)
+    54ea:	447a      	add	r2, pc
+    54ec:	58d3      	ldr	r3, [r2, r3]
+    54ee:	681a      	ldr	r2, [r3, #0]
+    54f0:	9b01      	ldr	r3, [sp, #4]
+    54f2:	405a      	eors	r2, r3
+    54f4:	f04f 0300 	mov.w	r3, #0
+    54f8:	d102      	bne.n	5500 <is_json_ack@@Base+0x54>
+    54fa:	b003      	add	sp, #12
+    54fc:	f85d fb04 	ldr.w	pc, [sp], #4
+    5500:	f7fc ee1e 	blx	2140 <__stack_chk_fail@plt>
+    5504:	19a8      	adds	r0, r5, r6
+    5506:	0001      	movs	r1, r0
+    5508:	0178      	lsls	r0, r7, #5
+    550a:	0000      	movs	r0, r0
+    550c:	1996      	adds	r6, r2, r6
+    550e:	0001      	movs	r1, r0
+    5510:	0be6      	lsrs	r6, r4, #15
+    5512:	0000      	movs	r0, r0
+    5514:	1972      	adds	r2, r6, r5
+    5516:	0001      	movs	r1, r0

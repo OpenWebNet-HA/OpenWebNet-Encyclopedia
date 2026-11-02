@@ -1,0 +1,272 @@
+{
+  "scope": "Four product-specific bounded static follow-ups; no new original/native/vendor execution or physical observations; wider Device gates pending.",
+  "branch": "docs/static-firmware-analysis-findings",
+  "artifacts": [
+    {
+      "id": "firmware-f454-020051",
+      "sha256": "15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3"
+    },
+    {
+      "id": "firmware-mh202-010024",
+      "sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7"
+    },
+    {
+      "id": "myhome-suite-3.5.38-installer",
+      "sha256": "707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b",
+      "bytes": 599437936,
+      "vendor_execution": false,
+      "new_Authenticode_verification": false
+    }
+  ],
+  "exports": [
+    {
+      "source": "work/f454-firmware/research/2026-10-31-alarm-ownership/REPORT.md",
+      "published": "f454-alarm-report.txt",
+      "sha256": "e6f2e97d0cbffed85110360d4218730650d3a59439263ff86f2942b933183617",
+      "bytes": 11715,
+      "transform": "None"
+    },
+    {
+      "source": "work/f454-firmware/research/2026-10-31-av-state/REPORT.md",
+      "published": "f454-av-report.txt",
+      "sha256": "e6953786782cd9c79a21c1554c2e674483bba9aa9cf21f7b18941c339490939d",
+      "bytes": 9924,
+      "transform": "None"
+    },
+    {
+      "source": "work/mh202-firmware/research/2026-10-31-scenario-artifacts/REPORT.md",
+      "published": "mh202-resources-report.txt",
+      "sha256": "15ce268fc91529c5d7c55aacb2fd74be7da5d513277257eadf7ab12498d39c80",
+      "bytes": 7269,
+      "transform": "None"
+    },
+    {
+      "source": "work/mh202-firmware/research/2026-10-31-scenario-artifacts/REPORT.v2.md",
+      "published": "mh202-resources-report.v2.txt",
+      "sha256": "615445c3437ccd30b7d52bccdd41d86ee02200f0c6d3b147efc634deb0663c3d",
+      "bytes": 7463,
+      "transform": "None"
+    },
+    {
+      "source": "work/mh202-firmware/research/2026-10-31-scenario-lifecycle/REPORT.md",
+      "published": "mh202-lifecycle-report.txt",
+      "sha256": "e99fa8b024697b17c5b7b4777f0ae0dc196a9d8e97699e1f4844f7d5f563961f",
+      "bytes": 6537,
+      "transform": "None"
+    },
+    {
+      "source": "work/firmware-product-followup/2026-10-31/PRODUCT_SCOPE_REVIEW.md",
+      "published": "product-scope-review.txt",
+      "sha256": "867898ecefe59fcf292cbc7a3a6008abccc6e0e0fb68932659d8d079c62fe1c5",
+      "bytes": 8867,
+      "transform": "None"
+    },
+    {
+      "source": "work/firmware-product-followup/2026-10-31/F454_ALARM_SOURCE_REVIEW.md",
+      "published": "f454-alarm-source-review.txt",
+      "sha256": "6eeeb172d92c7175d854d90c70ae47dd2058b6f1d557235ae4ed951124ecc6c3",
+      "bytes": 10377,
+      "transform": "None"
+    },
+    {
+      "source": "work/firmware-product-followup/2026-10-31/F454_AV_SOURCE_REVIEW.md",
+      "published": "f454-av-source-review.txt",
+      "sha256": "9f47cedef44ae88750c163b71bda6c9805b1385016fc1bf8560801a90ed1aa30",
+      "bytes": 8467,
+      "transform": "None"
+    },
+    {
+      "source": "work/firmware-product-followup/2026-10-31/MH202_LIFECYCLE_SOURCE_REVIEW.md",
+      "published": "mh202-lifecycle-source-review.txt",
+      "sha256": "b201620b1b1a08c963bf3b7ba54f63bfc682d1cf53acaaae2921a954864fe850",
+      "bytes": 6914,
+      "transform": "None"
+    },
+    {
+      "source": "work/firmware-product-followup/2026-10-31/MH202_RESOURCES_SOURCE_REVIEW.md",
+      "published": "mh202-resources-source-review.txt",
+      "sha256": "7faf522e98a39d24ebe95f570c7c8d3739d5e6591530cf35b884537bd5bcc296",
+      "bytes": 10925,
+      "transform": "None"
+    },
+    {
+      "source": "work/firmware-product-followup/2026-10-31/MH202_RESOURCES_APPLICABILITY_REVIEW.md",
+      "published": "mh202-resources-applicability-review.txt",
+      "sha256": "bdb828e26302942d1d4e1b6ab4feedcd614b53ee4ee7f82ec46e5df8719058ec",
+      "bytes": 6473,
+      "transform": "None"
+    }
+  ],
+  "collectors": [
+    {
+      "path": "work/f454-firmware/research/2026-10-31-alarm-ownership/collect_ownership_v1.py",
+      "sha256": "7db3284611d11cf1d5f1993daf8a9842b57902d44daa4305dda70cf13b08a69b",
+      "method": "Host/static read-only --check; resource collector reproduces historical reportv1, currentv2 separately reviewed"
+    },
+    {
+      "path": "work/f454-firmware/research/2026-10-31-av-state/collect_state_v1.py",
+      "sha256": "45efeddc019ff15c22e50d493f837e31450d7382c9b423b950629def428044ac",
+      "method": "Host/static read-only --check; resource collector reproduces historical reportv1, currentv2 separately reviewed"
+    },
+    {
+      "path": "work/mh202-firmware/research/2026-10-31-scenario-artifacts/collect_artifacts_v1.py",
+      "sha256": "0b199603a76b0709928a7ed7803995107b461cba9d76562ad572921db9fb71c6",
+      "method": "Host/static read-only --check; resource collector reproduces historical reportv1, currentv2 separately reviewed"
+    },
+    {
+      "path": "work/mh202-firmware/research/2026-10-31-scenario-lifecycle/collect_panic_join_v1.py",
+      "sha256": "6d555254724543f9f21b8eaf5367ca09d7a2341eebcbba8172570f73628ef3db",
+      "method": "Host/static read-only --check; resource collector reproduces historical reportv1, currentv2 separately reviewed"
+    }
+  ],
+  "capsule_inputs_before_final_review": [
+    {
+      "path": "README.md",
+      "bytes": 3757,
+      "sha256": "a2fbb12869541fceefc5843a3defee420440523047cb914ca32a36a865c0f3bc"
+    },
+    {
+      "path": "extraction-version-history.json",
+      "bytes": 612,
+      "sha256": "9f168181fc3d3d20c22f224c12a40ec1aecfe70e43876d636d77e9a705c89d17"
+    },
+    {
+      "path": "f454-alarm-report.txt",
+      "bytes": 11715,
+      "sha256": "e6f2e97d0cbffed85110360d4218730650d3a59439263ff86f2942b933183617"
+    },
+    {
+      "path": "f454-alarm-source-review.txt",
+      "bytes": 10377,
+      "sha256": "6eeeb172d92c7175d854d90c70ae47dd2058b6f1d557235ae4ed951124ecc6c3"
+    },
+    {
+      "path": "f454-av-report.txt",
+      "bytes": 9924,
+      "sha256": "e6953786782cd9c79a21c1554c2e674483bba9aa9cf21f7b18941c339490939d"
+    },
+    {
+      "path": "f454-av-source-review.txt",
+      "bytes": 8467,
+      "sha256": "9f47cedef44ae88750c163b71bda6c9805b1385016fc1bf8560801a90ed1aa30"
+    },
+    {
+      "path": "initial-exports.json",
+      "bytes": 1799,
+      "sha256": "266ba24072a739422511ab72e82c7072f637923b35c1be4a02f6254eb87133f0"
+    },
+    {
+      "path": "mh202-lifecycle-report.txt",
+      "bytes": 6537,
+      "sha256": "e99fa8b024697b17c5b7b4777f0ae0dc196a9d8e97699e1f4844f7d5f563961f"
+    },
+    {
+      "path": "mh202-lifecycle-source-review.txt",
+      "bytes": 6914,
+      "sha256": "b201620b1b1a08c963bf3b7ba54f63bfc682d1cf53acaaae2921a954864fe850"
+    },
+    {
+      "path": "mh202-resources-applicability-review.txt",
+      "bytes": 6473,
+      "sha256": "bdb828e26302942d1d4e1b6ab4feedcd614b53ee4ee7f82ec46e5df8719058ec"
+    },
+    {
+      "path": "mh202-resources-chronology-refinement.json",
+      "bytes": 1404,
+      "sha256": "5a31ecea29da909f4f1cc3da8ab6a9326a5717d516d5f37cfacf1e066e553cf6"
+    },
+    {
+      "path": "mh202-resources-report.txt",
+      "bytes": 7269,
+      "sha256": "15ce268fc91529c5d7c55aacb2fd74be7da5d513277257eadf7ab12498d39c80"
+    },
+    {
+      "path": "mh202-resources-report.v2.txt",
+      "bytes": 7463,
+      "sha256": "615445c3437ccd30b7d52bccdd41d86ee02200f0c6d3b147efc634deb0663c3d"
+    },
+    {
+      "path": "mh202-resources-source-review.txt",
+      "bytes": 10925,
+      "sha256": "7faf522e98a39d24ebe95f570c7c8d3739d5e6591530cf35b884537bd5bcc296"
+    },
+    {
+      "path": "pre-edit-documents/01-reverse-engineering__firmware-analysis__f454-2.0.51.md.txt",
+      "bytes": 9342,
+      "sha256": "f100f0a173d18ba43cb9ffde1f6a05b760d43c8d6d96ab04120ba67a3085a3b8"
+    },
+    {
+      "path": "pre-edit-documents/02-reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt",
+      "bytes": 20849,
+      "sha256": "4656b8f9e6e412fb6ecfc52fce29c31e77cf6158a037470b3904b66fdadd3169"
+    },
+    {
+      "path": "pre-edit-documents/03-reverse-engineering__firmware-analysis__README.md.txt",
+      "bytes": 8889,
+      "sha256": "774a4dfeb26aacca02d30b1566a2ec2a39f4de0160dabaac6e105e561ff8fdce"
+    },
+    {
+      "path": "pre-edit-documents/04-project__review__firmware-analysis__README.md.txt",
+      "bytes": 6378,
+      "sha256": "48fdf6b94072f689205c82bee7ab396195e06350a361cbdb9e1abdf1b8a198b6"
+    },
+    {
+      "path": "pre-edit-documents/05-project__review__firmware-analysis__f454-2.0.51__README.md.txt",
+      "bytes": 5370,
+      "sha256": "ff631e7da999b8ecaa6e008e84361875a6f6f7f5f2196781e43329b921dc5ff7"
+    },
+    {
+      "path": "pre-edit-documents/06-project__review__firmware-analysis__mh202-1.0.24__README.md.txt",
+      "bytes": 37786,
+      "sha256": "e038eb78d6a94732a06c110ef317b181e3ffff9448cfc801eaab4c1d87cc5e57"
+    },
+    {
+      "path": "pre-edit-documents/07-functional__who-5-alarm__README.md.txt",
+      "bytes": 3005,
+      "sha256": "b4dd242f30c4c9dde1e4e04772eb7c39e74cd503b2e3cc241186701ac9f4abe3"
+    },
+    {
+      "path": "pre-edit-documents/08-functional__who-17-scenario-management__README.md.txt",
+      "bytes": 13161,
+      "sha256": "f9825e4dd40ef229a422df501ecaa44378b912833a3c45d3f7d3e8ad796b9402"
+    },
+    {
+      "path": "pre-edit-documents/09-devices__definitions__own-dev-0002-audio-video-web-server-gateway.md.txt",
+      "bytes": 33863,
+      "sha256": "f300b28ca0f358b73dff111ee47f1a911c71f8b949ecc979726a2b5ec5459af9"
+    },
+    {
+      "path": "pre-edit-documents/10-devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt",
+      "bytes": 27314,
+      "sha256": "74f961aa3aaafb99003d1677304a6d971a42c871950796707712d1c66f50bbb9"
+    },
+    {
+      "path": "pre-edit-documents/SOURCE_SNAPSHOTS.json",
+      "bytes": 2586,
+      "sha256": "39b6d52018e3daa54241c84af2f6b5c65f5fce44ffc1d34a0ba5f182bf0cf31b"
+    },
+    {
+      "path": "product-scope-review.txt",
+      "bytes": 8867,
+      "sha256": "867898ecefe59fcf292cbc7a3a6008abccc6e0e0fb68932659d8d079c62fe1c5"
+    },
+    {
+      "path": "reference-refinement-history.json",
+      "bytes": 897,
+      "sha256": "ea16f576fc2959396e52868227573b147f7cc2348c2d03a0b3e5e5d0e14b24ef"
+    },
+    {
+      "path": "selected-file-identities.json",
+      "bytes": 10468,
+      "sha256": "9e9bb6d5a1822454abf8f80658310c600210464c73e0f84ac0b70449e81a6b5e"
+    },
+    {
+      "path": "selected-page-proof.json",
+      "bytes": 8150,
+      "sha256": "5a858c5c6f845d9835164beb5cc8e6e583a7d63d6eb314faca8919064fca89c6"
+    }
+  ],
+  "source_review_independence": "Other-agent source/isolation reviews inspect current original bytes/results; resource applicability reviewer authored F454 AV and is not its source reviewer. Lifecycle reviewer discovered related Suite resources and explicitly distinguishes that knowledge from independent Firmware source checking. Final integration review is separate documentary/source-aware review, not a complete fresh semantic audit.",
+  "history": "Exact first reports/results/snapshots preserved. Resource chronology v1 error corrected only in NEWv2/reportrefinement; rejected format/MD5 hypotheses retained. Initial reference pages preserved before explicit role1 predecessor/path-display/link refinements. Prior overnight missing intermediate histories remain unverified.",
+  "reproduction_limit": "No original firmware/installer/assemblies or full runtime dependencies in Git. Source identities/static output reproduction are not physical or full-source review closure."
+}

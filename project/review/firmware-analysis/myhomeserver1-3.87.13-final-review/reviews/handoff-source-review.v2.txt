@@ -1,0 +1,26 @@
+# Independent documentary source review: handoff v2 precision
+
+PASS for authoritative HANDOFF_CANDIDATE.v2.md and the exact reproduction-context addition. The prior v1 review and its first copy remain untouched. Its source-to-summary, product-role, gap and two-reference-delta review stands within the scope and read-time identities recorded there; this is a narrow v2 followup rather than a new full review or firmware analysis.
+
+Independently verified that VERSION_HISTORY.json reconstructs the complete current candidate from the exact preserved v1 by its single declared paragraph substitution. No other candidate content changed. The addition correctly states that the frozen numeric-trigger collector, like the17-row navigation guide, pins the old Device0199 context version. Its actual line48 includes that source path/product-context key; its saved INPUTS.json expects SHA2565940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855. The retained pre-edit Device bytes have that hash and the saved43131-byte size.
+
+The newer working Device is intentionally different. Exact reproduction of those historical outputs therefore needs the retained input; the text does not silently repin the old collectors or claim that their direct checks pass against changed current documents. The context record explicitly marks post-change direct execution false. I did not execute either collector, manufacture a failure, replay the CPU experiment or change its source/results/counts. REFERENCE_PATCHES.json retains the exact bytes already reviewed in v1, and the two scoped reference edits make no new physical capability, installed-state or wider approval claim.
+
+Original/native/guest/provider/target execution and semantic fixtures added: zero. The cumulative saved MyHOMEServer1 ledger remains1 corpus/8 entries/340 original visits/0 C/12 redirects/8 EXIT/360 hooks, with4 data-relocation setups separate. The inline review-helper pre-output shape error remains honestly documented in the prior review/failure note; this v2 is a parent-announced documentary clarification, not a hidden correction of that saved review.
+
+The final-review capsule link and future review/export/validation copies remain PENDING mechanical completion at this review scope. The separately authored verification supplement has not been source-audited by this review; parent final checks must use actual completed artifacts. No placeholders, exemptions or future-byte certification are implied. No author/source/repository files were edited.
+
+## Exact v2 and retained identities
+
+| File | Bytes | SHA256 |
+| --- | ---: | --- |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/handoff/HANDOFF_CANDIDATE.md` | 9861 | `0d313e41b4214ce228d7d0a3e0f1a783090a15738c7e7ed105e6dd0e05438ad8` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/handoff/HANDOFF_CANDIDATE.v2.md` | 10164 | `4487454c6cb76efb3850b8ccdd30e9f01414eefccf5acbf84f8ff725cfc018e6` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/handoff/VERSION_HISTORY.json` | 1384 | `423d6c935310ca971d314afdf2a1ec0f84cac8c229d367450749ba5a0e33d5e0` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/REPRODUCTION_CONTEXT.json` | 983 | `606222d730932b7ac9ac0df6255e2b96d11098d6be805332a67f29d7bf46abcd` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/collect_trigger_v1.py` | 10557 | `c10653cb265171a5f46a04d22d6142e94f6e55a7eea8bb3168b330ee511404b8` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/INPUTS.json` | 1409 | `7ccc19d69da107ed941a0d76975c545c097b82807c439ce013068b8f28b775e2` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/pre-edit/own-dev-0199-myhomeserver1-home-automation-server.md` | 43131 | `5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/REFERENCE_PATCHES.json` | 2563 | `cc59e26dcfc01bf147b40d35a68ee9e0397a4f829a86664e992f3042b73902ad` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/reviews/handoff-source-review.md` | 9547 | `df841bdffee48a75aacc7c4287bea686427b5ad9409da09dd9214c4ab2224683` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/handoff/first-candidate/INDEX.json` | 136 | `7498bbbdfa3fb644da9d8a9230a55291d233a05f33b93a647f8859ffcff38fd8` |

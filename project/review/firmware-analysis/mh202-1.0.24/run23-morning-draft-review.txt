@@ -1,0 +1,59 @@
+# MH202 morning draft through22 - read-only documentary review
+
+PASS for bounded documentary/source synthesis. The one small method-wording refinement requested during review is addressed and independently verified below. No material unsupported result or wrong citation path was found. This is a review of the exact draft bytes identified here, not approval of a final morning edition, whole firmware examination or completed overnight task.
+
+Reviewed MORNING_REPORT.md SHA-256: `ad21bd70deb3c1b21eec6d52f86d473162b3ede66b7cb6ed1164193c3fc7ab44` (63 lines). This review pins these bytes; it does not make the working draft immutable or authenticate later edits. Parent should retain an exact copy before any refinement, and the final edition needs its own final verification. The only reviewer write is this NEW review file; no draft, source report, author evidence, branch document or prior review was edited.
+
+## Addressed wording refinement and exact history
+
+The initial scheduler paragraph said: "Native status renderers keep availability and execution/control state separate." The cited functional/run1 report is static original-source evidence. Parent retained initial draft SHA256 `8fa7a9637f42f8b3e352d4ad3d6ff2d17d209d445a04f0f2183df22ddf8bccab` at validation/run23/MORNING_REPORT.initial-checkpoint22.txt, then changed the sentence to: "Original status-renderer code keeps availability and execution/control state separate." I independently confirmed the current draft equals that exact retained draft with precisely this one sentence substitution and no other byte changes. This method-label clarification does not change source conclusions or counts. This reviewer made no root-draft edit.
+
+The first review candidate SHA256 `95cb7ced33be8563fd3c5ab0a56dc4422710e30fb2dfc43838c3e676262f40b7` is preserved exactly by parent at validation/run23/morning-draft-review.first-candidate.txt before this current review update. I checked that actual snapshot against the earlier current review bytes and hash. The final review pins the corrected frozen draft, while preserving the exact earlier draft/review history.
+
+## Claims, citations and limits checked
+
+This is a documentary audit against cited final reports/current reference pages, with source-aware familiarity in earlier scenario/interpreter work and independently reviewed protocol20/21/22 corpora. It is not a fresh raw-firmware semantic re-audit of every inherited claim, native replay or replication of all historical test matrices. Reports have different methods, and current citations retain those boundaries.
+
+- Inventory and boot1 support the exact archive identity, missing2/4 extras, normal/recovery images and scoped comparisons. The report does not fabricate configured scripts or transfer F454 layouts from filenames.
+- Functional1/web1 support WHO17 ownership, separate COSO WHO0, loader1..300 with failed-open continuation, PHP gap rule and XML id distinction. Functional2/3 and lifecycle6 support conditional restoration, separate readiness/command gate and finite FIFO/control observations without child-liveness or universal panic-clear claims.
+- Functional9/10/13 and lifecycle17/18 support string-key numeric storage/IIF, gmtime versus localtime source/API distinction, bounded mixed-state behavior, BEGIN source head and outer GOTO advance. No complete configured DSL/Only-if/precedence/action or observed clock discrepancy is inferred. Functional3/4 retain OWRITE-only disabled guarding and return-use boundaries. Functional19/lifecycle19 keep command arrays, changed event caches and interpreter heap records separate; local2/3 are not wire ACK/KO.
+- Protocol1/16/20 distinguish common130/libopen90 address slots from COSO48 pointer objects and64-byte envelopes, and selector4 output metadata from parsed kind/receipt. Protocol11/12/13 preserve actual ordinary parser/normalizer/bracket execution versus stopped special-selector prefixes. The canary is not production initialization. Diagnostics11/protocol15 retain local no-data/qualification boundaries and the omitted-predecessor correction without reinterpreting old finite outcomes or asserting physical success.
+- Thermo14/16 support unclassified raw200/501 values and separate status-ID/data flags without units/signed physical meaning or measurement success. COSO19 and protocol20 support a static auxiliary body versus the separately executed actual parsed-object copy, with no causal natural exchange or physical command guarantee.
+- Protocol21/22 directly support the exact WHO5 NULL-WHERE and WHO22 parameter/selector parses and same-object serialization. Original GLib foreach/parameter callbacks execute only in the later selected serialization corpus; ordinary allocation/string/list/free models stay explicit. These are local helper roundtrips, not plugin/core/STM/queue/raw admission or physical alarm/sound evidence. Published WHAT27 vocabulary remains separate.
+- Alarm22 supports conditional first-manager tuple/private-userdata/callback composition, distinct descriptor values and config request versus activation. The draft leaves actual activation/same-userdata admission open and does not enter excluded source/connection/session/framing bodies.
+- Boot2/7/9 and boot4/5/6 support configuration/provider/marker requests, exact copy operands and unsigned-byte helper versus minus-one caller tests without boot/readiness/durability/storage-damage claims. Inventory12 directly supports PHP CLI5.2.13 versus module5.1.6, GLib release versus SONAME and selected recovery-path scope, not running services/full SBOM/vulnerability assessment.
+
+All55 local Markdown reference occurrences resolve; there are no fragments in this draft. No nonexistent path or incorrect target report was found. Cited source-report content was inspected for the higher-risk summaries above; identity/navigation checks do not independently prove every underlying firmware interpretation.
+
+## Counts and history
+
+Checkpoint22 completed verification and current execution ledger support FOURTEEN canonical corpora/68 top entries/31581 original visits/3140 declared primitives/128 original-definition redirects/24 return boundaries/2 selector-read stops=34875 hooks. Setup writes and verification replays are separate. These totals include reused code visits and are not coverage percentages or independent test-quality measures. Original target process/OS, PHP/JS, service/gateway/bus operations remain0. This documentary review adds0 original execution and does not replay old corpora.
+
+The frozen24-row/28-report guide stops at validated21 and does not silently include run22 additions or certify all prior semantics. Current coverage, ranked questions and later reports retain precedence. Run18 and sound21 missing earlier generated drafts remain explicitly unavailable/unverifiable; actual announced-byte snapshots do not restore them. No provenance omission is reconstructed, relabeled as retained history or newly raised as an unchanged alert here.
+
+The draft appropriately says the examination remains active, wider Device/source gates pending, tooling31/Device210 checks inherited, stopped authentication/framing branch closed, and automation closure/final morning verification still required. A future final edition must account for later reviewed batches and final saved deliverables; this review does not mark that work complete.
+
+## Supporting current pins
+
+Paths are research-relative except the indicated repository page. These pins support this exact draft review; mutable coordination artifacts may legitimately advance later.
+
+| Artifact | SHA-256 |
+|---|---|
+| `validation/run22/final-checkpoint.json` | `06a447aea6319586e0c17c2cf0d35cd2e7837cbac8351161702d3a3e8ce13f8b` |
+| `protocol/run21/REPORT.md` | `4b266b673700b9cb0115ab81bd08aae21902149ac76664c32043b69d492fdef3` |
+| `protocol/run22/REPORT.md` | `35369bef23a8032dc0553a5dc4c75717f6d79625e7695d463ff50e8e5b73ee49` |
+| `reviews/run22/protocol-review.md` | `cca3f4fe735f6bf8655fa92563715daee292d414fe85097f9e3c13e5d4b8985e` |
+| `alarm/run22/REPORT.md` | `9d47e1b79578fd6e97765d1392d1d6afdacd078e7ca81b01ad743d4e5748e43a` |
+| `reviews/run22/alarm-review.md` | `6d22c5eabc20833b6ba811bf117e738a73178a82f1046372cd97e735f0f1d908` |
+| `reconciliation/run22/SCOPED_FINDINGS.md` | `51ac5cd6b94064e18e121b519480c7026dd0e4492b54a563b3ba04d59ad1fb85` |
+| `reconciliation/run22/SOURCE_PINS.json` | `e3173a27f60a327b2f6abf9c849de75882b6da65d2b1e40467199c3aa3e7b796` |
+| `coso/run18/NAMESPACE_REFINEMENT.md` | `96f0af7e2adf1b4d0f969a14034055107e42fc4eec3d7bf9b8938a29f102c8bf` |
+| `sound/run21/REPORT.md` | `7a620c417174980119e9573c914dbe7730823697661cb975a20708e8e127aea6` |
+| `inventory/run12/REPORT.md` | `2302cebc0f001a2e66232c0d6e9e93d7748a3df7230af1a24d22cd6755edafad` |
+| `functional/run9/REPORT.md` | `4e371d4c794dbf9585045c368d37d45dbedfeaf57f7361bf811dbdf4bc560f7f` |
+| `thermo/run14/REPORT.md` | `d438f0e99f660adc5a67b2cf83f2e1f8ea57dd865d3d483320a921be4a4b62cb` |
+| `validation/run23/MORNING_REPORT.initial-checkpoint22.txt` | `8fa7a9637f42f8b3e352d4ad3d6ff2d17d209d445a04f0f2183df22ddf8bccab` |
+| `validation/run23/morning-draft-wording-refinement.json` | `b5c14d478d45ec42115c4fe15da5d749ffd071edc3ea2d39d415ec4008018bc4` |
+| `validation/run23/morning-draft-review.first-candidate.txt` | `95cb7ced33be8563fd3c5ab0a56dc4422710e30fb2dfc43838c3e676262f40b7` |
+
+The corrected frozen draft source pin above is authoritative for this review. A NEW FINAL_REPORT.md will require its own later review; no final morning completion is claimed here.

@@ -1,0 +1,963 @@
+{
+  "created_UTC": "2026-11-02T13:20:37.402344+00:00",
+  "scope": "Current editorial review records, admitted reader-reference identities, Machine KB surfaces/inputs and explicit representation/storage/test/source-registry boundaries. Original entire branch-delta snapshots and intermediate histories are preserved/audited privately; this is integrity, not firmware semantic coverage.",
+  "self_excluded": true,
+  "full_machine_check": "PASS; exact current manifest and unchanged required checker",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 1306,
+      "sha256": "804693f23c863058dca852cbf33055416d6fd2f0c2fbbdb2a1dc8659231e18f1"
+    },
+    {
+      "path": "device-model/firmware.md",
+      "bytes": 8580,
+      "sha256": "e6602aed3cd14aef5537f91019ce07b76fdbf8038862b536c77fd58e9b64c393"
+    },
+    {
+      "path": "devices/definitions/own-dev-0002-audio-video-web-server-gateway.md",
+      "bytes": 33691,
+      "sha256": "3d64e07b49c36c0c1850152ce1427acd2eb20146adef26a5b9e8f85f476f65ff"
+    },
+    {
+      "path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "bytes": 28121,
+      "sha256": "93e1d8a5e56b9a57b1c422e28ad51307a633798a6d70fefbb7357c0eb6b4157e"
+    },
+    {
+      "path": "devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md",
+      "bytes": 43421,
+      "sha256": "5024a42759f659fae292987096f0d6ef7efff9a85a7ccf783e5884f36920410e"
+    },
+    {
+      "path": "devices/definitions/own-dev-0207-f460-myhome-server.md",
+      "bytes": 42453,
+      "sha256": "8a168f0333cdc6d675ba0fbec04c587070e748fcb5ac75f41a37861830eea851"
+    },
+    {
+      "path": "devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md",
+      "bytes": 40510,
+      "sha256": "6db979580b7bd8a801c7b76ae9e1e0d2bc502503a44453f7b60169b2de3b7124"
+    },
+    {
+      "path": "devices/work-queue.yaml",
+      "bytes": 376495,
+      "sha256": "10ac817c9a174bcdf45b2006d1583654d455bbed6e8e741d8a5272f6b96245aa"
+    },
+    {
+      "path": "diagnostics/dim1-device-identity.md",
+      "bytes": 7263,
+      "sha256": "8f92aeb2f9b7f513a6f553e12a367ea45db537fbda5349eef01bc4d4eee3f03c"
+    },
+    {
+      "path": "functional/who-14-special-commands/README.md",
+      "bytes": 3164,
+      "sha256": "ba302a4a07ed953585c772c193ddfc3bb3a039b61bfb916b82718eb8507587f0"
+    },
+    {
+      "path": "functional/who-15-cen/README.md",
+      "bytes": 6820,
+      "sha256": "55891b19e3e4809ce6cd8152fa8b8c21863133c717a8e634f0daf08fee09c772"
+    },
+    {
+      "path": "functional/who-17-scenario-management/README.md",
+      "bytes": 8907,
+      "sha256": "7f524ca29b51233e7fc4489960e026d29f67cf0ef4840364c83c5733a00c0ef6"
+    },
+    {
+      "path": "functional/who-18-energy-management/dimensions.md",
+      "bytes": 21628,
+      "sha256": "a78fc84113d4b1c40b3778b50082f33eb3c72a5248a7f1ae0c5559b749513033"
+    },
+    {
+      "path": "functional/who-22-sound-diffusion/README.md",
+      "bytes": 38988,
+      "sha256": "b2982d25c362e4da835aa5a8fc5be94238be048eb9a472d79ba16c2ac88dd9be"
+    },
+    {
+      "path": "functional/who-25-transversal/README.md",
+      "bytes": 6023,
+      "sha256": "52d675a9fa8d8a089250b1b8c3f6a414cb4a1e07f9db7d8a5a659de54ffd553b"
+    },
+    {
+      "path": "functional/who-25-transversal/cen-plus.md",
+      "bytes": 14402,
+      "sha256": "cc701b744ea62ecb8b9e4bdea8c1d4b5612b615646fadfa6a518bb5d28bbeab7"
+    },
+    {
+      "path": "functional/who-25-transversal/dry-contact-ir.md",
+      "bytes": 5825,
+      "sha256": "709a9f890b0bd6b9d88748aa2eabed323c565aa866f55fd345fab8f808c47d6a"
+    },
+    {
+      "path": "functional/who-4-temperature-control/dimensions.md",
+      "bytes": 19815,
+      "sha256": "55a807e2c12f6f9e5d684dcf122868bddeb196300ab766e96088b059745810a2"
+    },
+    {
+      "path": "functional/who-5-alarm/README.md",
+      "bytes": 2401,
+      "sha256": "111d813e0602109dcd44aa5a45d9ee7968552320cbd203ac09ec6d442597c178"
+    },
+    {
+      "path": "functional/who-8-video-door-entry-telephony/README.md",
+      "bytes": 16996,
+      "sha256": "410f91833350051f3b041197be5d346f4e6e07c16466c9e56944c53a3f63bc86"
+    },
+    {
+      "path": "functional/who-9-auxiliaries/README.md",
+      "bytes": 4304,
+      "sha256": "7ad86d2f6cc58cb93b51ac79e2b51642c0d58d9b4e49d3b009b1c43e456772f3"
+    },
+    {
+      "path": "internals/README.md",
+      "bytes": 5216,
+      "sha256": "970f67711f67d9b59456a09fb8384753c46a63f0d6c662e9c8001c41205fe691"
+    },
+    {
+      "path": "internals/data-store-responsibilities.md",
+      "bytes": 5410,
+      "sha256": "7c229da9ff89ccc9f523e01842567308f41194aa5872e9788237925afdf14e6c"
+    },
+    {
+      "path": "internals/device-application-databases.md",
+      "bytes": 8505,
+      "sha256": "2f2c484df82cef59ce337193bd19e0882689e0668ed054a47ef7496595c2cb33"
+    },
+    {
+      "path": "internals/implementation-boundaries.md",
+      "bytes": 4807,
+      "sha256": "068fa71b4a071f2bcfa3f71e4a064d52fc26fde00bae7b5707b1190bce41ecec"
+    },
+    {
+      "path": "internals/installation-and-source-layout.md",
+      "bytes": 5693,
+      "sha256": "4cd284419c54dbb7bfa6cff3fa836c33b33b8c1cd8068aa1848e8b971551fd6c"
+    },
+    {
+      "path": "internals/mhcatalogue-source-profiles.md",
+      "bytes": 14285,
+      "sha256": "62c2172851236bcf50d50d78e90bfa342ac4526a955c4d6546ea42e3e33a15b4"
+    },
+    {
+      "path": "internals/project-and-plant-templates.md",
+      "bytes": 5766,
+      "sha256": "eba36ba1f651435f45a9ed4a945ed39fe8d49ea604891ff5d55459f154572da8"
+    },
+    {
+      "path": "knowledge/CONSUMING.md",
+      "bytes": 11191,
+      "sha256": "3bd88615f2fe48a395f7023e48a53ccdbe5f75a055c66d66620d2cd548f7fd58"
+    },
+    {
+      "path": "knowledge/README.md",
+      "bytes": 4349,
+      "sha256": "d650a0f3eb84a972d7973ec7482ae6b51f8f2b033b306f352fb8a68d77a5edf8"
+    },
+    {
+      "path": "knowledge/claims/README.md",
+      "bytes": 2357,
+      "sha256": "6e5e17fd8d169f7fa8d2cbac809e8ed8d6e0dccd70bbc7b0de15ca26284a2e20"
+    },
+    {
+      "path": "knowledge/claims/claims.jsonl",
+      "bytes": 138878341,
+      "sha256": "7dd9601efcb957a901f0743031528e6bded38d4fc6e52f8ba3d25e44dbe05f5d"
+    },
+    {
+      "path": "knowledge/id-registry.json",
+      "bytes": 9628488,
+      "sha256": "0c2f92ce85233e998fe73cc9aca00103b8fae33c0ed79ab280957fbf7505b7fd"
+    },
+    {
+      "path": "knowledge/inputs/README.md",
+      "bytes": 5862,
+      "sha256": "222f9bc72e6e9b269b607cb6d9e65c088d7e7d864b5bdf27137ab0f58e5cf9ef"
+    },
+    {
+      "path": "knowledge/inputs/canonical-sources.jsonl",
+      "bytes": 70684,
+      "sha256": "4ee94f534d777136c8c1422bb33ab22462462971342c0bfeb759f4ec3761b580"
+    },
+    {
+      "path": "knowledge/inputs/chunk-identities.json",
+      "bytes": 451320,
+      "sha256": "ef95c5fe44fabe89f84ebe00aa6094137fb842ad41ab6420db1ee721d51f1f42"
+    },
+    {
+      "path": "knowledge/inputs/claim-context.json",
+      "bytes": 38142262,
+      "sha256": "bb934ed6c6d236aa912480b13c65b4757afb86397f93c5d85182520c53dd4d45"
+    },
+    {
+      "path": "knowledge/inputs/claim-coverage.json",
+      "bytes": 2390006,
+      "sha256": "01848e09d69c6e3f5112b3e6fe61ad4ef1f29f18902540b4ac3ce7be658ed072"
+    },
+    {
+      "path": "knowledge/inputs/claim-records.json",
+      "bytes": 110105715,
+      "sha256": "c13720e5eb87e1d498ef1cc3afb558e5408788f18ecd3eab6a5f0f84b0963170"
+    },
+    {
+      "path": "knowledge/inputs/device-sources.json",
+      "bytes": 33315,
+      "sha256": "ab2bc5a39638324e6d88ce1227a7687a73c5a8c27b7c1bcd7175aa5025e39e09"
+    },
+    {
+      "path": "knowledge/inputs/device-supplements.json",
+      "bytes": 706,
+      "sha256": "b3702c5f246110de823cd5d5846848d2758dc8e526b75779a0d8b130bdc9637d"
+    },
+    {
+      "path": "knowledge/inputs/device-unit-review.json",
+      "bytes": 18014620,
+      "sha256": "d1e482d6f551a093b7e630bd6e9a0758363f198b26e5cc644fe4a950051a3915"
+    },
+    {
+      "path": "knowledge/inputs/evidence-reviews.json",
+      "bytes": 700673,
+      "sha256": "167a7f7b312c84f0057cc44206548ff785973c75711ca0b9b05e3ca6a6363d0b"
+    },
+    {
+      "path": "knowledge/inputs/id-registry.json",
+      "bytes": 9628488,
+      "sha256": "0c2f92ce85233e998fe73cc9aca00103b8fae33c0ed79ab280957fbf7505b7fd"
+    },
+    {
+      "path": "knowledge/inputs/identities.json",
+      "bytes": 599081,
+      "sha256": "c41ffa8331cd5c6de7e8efd13f3ac2252555f82f44a494fd2df936eedd236c59"
+    },
+    {
+      "path": "knowledge/inputs/reference-records.json",
+      "bytes": 26235222,
+      "sha256": "05d158128991f8e82a9f6994a3783739b1706d0511db8365fd4f74481e668ce3"
+    },
+    {
+      "path": "knowledge/llm/README.md",
+      "bytes": 658,
+      "sha256": "8600115be358488012fec8d9eb68145e65129ec38cd3e1e8a5be7f52f63746fe"
+    },
+    {
+      "path": "knowledge/llm/llm-corpus.md",
+      "bytes": 10849467,
+      "sha256": "dc190cef710d4381d1092d5613e570da62756780737cb79a8e2b0e80d6e5a221"
+    },
+    {
+      "path": "knowledge/manifest.json",
+      "bytes": 5170,
+      "sha256": "9b9d660bdc614fc075c60b8734251d4f888533f56eca8eeb29373626cca2abd6"
+    },
+    {
+      "path": "knowledge/policy/README.md",
+      "bytes": 347,
+      "sha256": "3b3745700f23d2f676a915423029b2c609f552dd86762a74a3859c1e196d6242"
+    },
+    {
+      "path": "knowledge/policy/privacy.md",
+      "bytes": 6863,
+      "sha256": "0f5e5232102a82eb9944a72e93a5b282c6cb6aa1a77f3719df2505cd55a20115"
+    },
+    {
+      "path": "knowledge/reference/README.md",
+      "bytes": 1332,
+      "sha256": "bbc20120504605d95da7f37606b1528b34ee4a394eb2b15422cb001932f329f9"
+    },
+    {
+      "path": "knowledge/reference/cautions.jsonl",
+      "bytes": 442654,
+      "sha256": "9b35181cd091ca9e41cf6bbc7fc55539cbd71899037ffc5a003c1272d84830bc"
+    },
+    {
+      "path": "knowledge/reference/entities.jsonl",
+      "bytes": 19826913,
+      "sha256": "9d7ea9a06b770ac67eefd2f82e249a1a79402eeb750c129192aef93efa6d1b98"
+    },
+    {
+      "path": "knowledge/reference/glossary.jsonl",
+      "bytes": 10150,
+      "sha256": "b88b81b0467f683894162fe212545f59ae0ab0a07648f8b5c89119bc048eab28"
+    },
+    {
+      "path": "knowledge/reference/namespaces.jsonl",
+      "bytes": 30759,
+      "sha256": "41099e7af93a243df92c7a2433e825d2cc0f11ca9ced4094517915b2c4fb06d0"
+    },
+    {
+      "path": "knowledge/reference/questions.jsonl",
+      "bytes": 4068051,
+      "sha256": "cfb5a68fb5dfed3e27e9acf761215e559c6735b79d1424aa4d4b33926df6e2a9"
+    },
+    {
+      "path": "knowledge/reference/relationships.jsonl",
+      "bytes": 20202064,
+      "sha256": "658c6dddf6523beba867607fd27b5112543e540bc5861432742e5bb73f1af12f"
+    },
+    {
+      "path": "knowledge/reference/sources.jsonl",
+      "bytes": 1395553,
+      "sha256": "ff49ec530458bf168f8b4f787a24b1b576a456dc99ceaba731a4238c9c43ebf8"
+    },
+    {
+      "path": "knowledge/retrieval/README.md",
+      "bytes": 1098,
+      "sha256": "17fd383469852f776686354ffffe350050f4f5d0105ac697bca93924ef496a19"
+    },
+    {
+      "path": "knowledge/retrieval/chunks.jsonl",
+      "bytes": 19546449,
+      "sha256": "619988559c55eb1ef449dd515fcbc74a06828f2684009a326f74ab6a99866054"
+    },
+    {
+      "path": "knowledge/tests/fixtures/invalid-source-manifest.jsonl",
+      "bytes": 135,
+      "sha256": "20e5d0b5718a2f6636870b0c763cc8b620814de05db798228c1b3ff97b208fb2"
+    },
+    {
+      "path": "knowledge/tests/fixtures/ir/device-model/example.md",
+      "bytes": 87,
+      "sha256": "4161ea211ecbe61bfea65804af723ec52bcc4e82efdf7cb1915eb7a3d82c0b60"
+    },
+    {
+      "path": "knowledge/tests/fixtures/ir/diagnostics/example.md",
+      "bytes": 146,
+      "sha256": "ae81e7165d90f6ada7626f0b87ac96ede1444e865a2f9844a8b10f146b68a4a2"
+    },
+    {
+      "path": "knowledge/tests/fixtures/ir/functional/example.md",
+      "bytes": 119,
+      "sha256": "8092045f53dfc472374cdbd1802bf1441e7119480e2fb56a1de66bd9b8b3c304"
+    },
+    {
+      "path": "knowledge/tests/fixtures/ir/guides/example.md",
+      "bytes": 158,
+      "sha256": "d0f699052c375bd0fceaeedd3bd001d68d5a11307de158fe54b928b242ee8c8e"
+    },
+    {
+      "path": "knowledge/tests/fixtures/ir/internals/example.md",
+      "bytes": 154,
+      "sha256": "6eb8c04ddf2578493b1f4e4b8b9ae0c71b96c990fa6dc9c2ca2f97e4ed4e8478"
+    },
+    {
+      "path": "knowledge/tests/fixtures/ir/programming/example.md",
+      "bytes": 141,
+      "sha256": "271f1c580b4ed6795fb83da80ad36467a1a965b553f4fdfb5775adf57608a47c"
+    },
+    {
+      "path": "knowledge/tests/fixtures/ir/protocol/example.md",
+      "bytes": 239,
+      "sha256": "398622670a18bdbeb65eb3c3af84ea780a1c9da3a629c7bfa7924b2e4cdcb82b"
+    },
+    {
+      "path": "knowledge/tests/fixtures/ir/reverse-engineering/example.md",
+      "bytes": 159,
+      "sha256": "3236a2f9a91d20da12dfc2276169ee0bd190d34a212e3103948f37e1a8e202f6"
+    },
+    {
+      "path": "knowledge/tests/fixtures/ir/scenario-engine/example.md",
+      "bytes": 184,
+      "sha256": "57bc18ff4f38834720cc8eeb3987b0cc0de1d28d9a7d0d8cb060b65aabda71d3"
+    },
+    {
+      "path": "knowledge/tests/fixtures/prohibited-capture-manifest.jsonl",
+      "bytes": 146,
+      "sha256": "13d39b1bce40103e4ab4faccf809a3f210791bdd1c5e6c402d88e8febf38d1b8"
+    },
+    {
+      "path": "knowledge/tests/fixtures/valid-public-source-manifest.jsonl",
+      "bytes": 168,
+      "sha256": "2860be6eb427164b2301733c7683d5eb76ba8bc8e497395e7ee64d8eb7eeaf4e"
+    },
+    {
+      "path": "knowledge/tests/test_branch_id_migration.py",
+      "bytes": 3659,
+      "sha256": "e8b956685c6bcef5c10673d2f7f4d431c0ce91de9d9eccc2c5dcbb36087b7f93"
+    },
+    {
+      "path": "knowledge/tests/test_build_infrastructure.py",
+      "bytes": 5631,
+      "sha256": "46c34a84315d7929ae6e58fe58f5ac9e18dd965939e16f11b88e131e17cb8ef2"
+    },
+    {
+      "path": "knowledge/tests/test_claim_framework.py",
+      "bytes": 18831,
+      "sha256": "b1efb98a8e9ef3d5e4c7c272dccea8fd726c384cfe3308b1d138b5456819923a"
+    },
+    {
+      "path": "knowledge/tests/test_device_expansion_batch_eleven.py",
+      "bytes": 4006,
+      "sha256": "bfac7886950d79a37c0d7ee600f8cc8ed5dd600e1b0f3500fef3d09dbef53895"
+    },
+    {
+      "path": "knowledge/tests/test_device_expansion_batch_fourteen.py",
+      "bytes": 4305,
+      "sha256": "b885c4e140f4115d1ad379484ddf11ae5a967c9bcbf97860c83c4112e5b68c48"
+    },
+    {
+      "path": "knowledge/tests/test_device_expansion_batch_nine.py",
+      "bytes": 3253,
+      "sha256": "d958fb12e3186b154fd87ab51fd31a97a0f5ca1034d87dce05ad8e642c95f6b8"
+    },
+    {
+      "path": "knowledge/tests/test_device_expansion_batch_ten.py",
+      "bytes": 4313,
+      "sha256": "1359191cce0918aa44f626d10c893508ab6d0a6da9624fcf0ffae69698b12aa8"
+    },
+    {
+      "path": "knowledge/tests/test_device_expansion_batch_thirteen.py",
+      "bytes": 4778,
+      "sha256": "46b33ab3cd6eb695250f7f9b8629dab16493e30e1bccfded0060fd2a41d635c6"
+    },
+    {
+      "path": "knowledge/tests/test_device_expansion_batch_twelve.py",
+      "bytes": 2054,
+      "sha256": "8eeab2fae54e58a00de90c506cf34157b609d1c876dccf9c34edeedd7568cc20"
+    },
+    {
+      "path": "knowledge/tests/test_device_expansion_eighth_batch.py",
+      "bytes": 4787,
+      "sha256": "0d18f3e0e9220c1abf60090ee4c02cb84699fcaff71a8be5df2dd2413da355ff"
+    },
+    {
+      "path": "knowledge/tests/test_device_expansion_fifth_batch.py",
+      "bytes": 5368,
+      "sha256": "3f05d78e59385e0444e391d753cef2a6f9d12de6957af1c67155e400fe6375e0"
+    },
+    {
+      "path": "knowledge/tests/test_device_expansion_fourth_batch.py",
+      "bytes": 5112,
+      "sha256": "ccdd39ace43ca8c4a5be2b17c33f627f7d1014171b39ef7f46d04af2303abb86"
+    },
+    {
+      "path": "knowledge/tests/test_device_expansion_second_batch.py",
+      "bytes": 6355,
+      "sha256": "9bc66add1cb37573a9c5665ed0ffb70b5dbda230f596ccac11f9a6f46ab7071c"
+    },
+    {
+      "path": "knowledge/tests/test_device_expansion_semantics.py",
+      "bytes": 5984,
+      "sha256": "3bbe5fc58bc8110d38d0609b25f798cefa373a77f994bed4360dc8215c0f0219"
+    },
+    {
+      "path": "knowledge/tests/test_device_expansion_seventh_batch.py",
+      "bytes": 5650,
+      "sha256": "015cca6d524bac2fc90142c170b940ebc5f7bfd2be47b9fe0c8a02e0f3d542e5"
+    },
+    {
+      "path": "knowledge/tests/test_device_expansion_sixth_batch.py",
+      "bytes": 7288,
+      "sha256": "c7006d80e5091533cb717aa7289929a4802ba90c1c1737086de7abc09d321aca"
+    },
+    {
+      "path": "knowledge/tests/test_device_expansion_third_batch.py",
+      "bytes": 4346,
+      "sha256": "38144b8d517891ba69107323cd67e981445cd8bf63585cd35250b97dc9ce9f3b"
+    },
+    {
+      "path": "knowledge/tests/test_device_ingestion.py",
+      "bytes": 9837,
+      "sha256": "4c253f1215e802d78a483af5286d58896642ad5f5cd5206bcdf472152eb7b742"
+    },
+    {
+      "path": "knowledge/tests/test_device_pilot_semantics.py",
+      "bytes": 5240,
+      "sha256": "de9b282f1e9dc6c94c2a46e3ea6b02732a588819d9b49acc510a42a627ef2d3d"
+    },
+    {
+      "path": "knowledge/tests/test_device_supplements.py",
+      "bytes": 4020,
+      "sha256": "a0fcd86a6ea61f567b7285b1726a15e7702d9c317b729a8f522d25f8f27dff48"
+    },
+    {
+      "path": "knowledge/tests/test_factory_credential_preparation.py",
+      "bytes": 4273,
+      "sha256": "ece7ae5fe4d4b4c059079652668a2c0c84d71157ff686299eb9384b31c736b0e"
+    },
+    {
+      "path": "knowledge/tests/test_id_lifecycle.py",
+      "bytes": 2034,
+      "sha256": "dffcc6c0ccd9e8b443289b269a8c1001215ddcf11eea9feecb3a36cca5d98289"
+    },
+    {
+      "path": "knowledge/tests/test_ir_pipeline.py",
+      "bytes": 4067,
+      "sha256": "c6ff532124c4f9c63082590e5c66b9579e5597c5b4e0a55fa521ce1bb6575f4d"
+    },
+    {
+      "path": "knowledge/tests/test_large_files.py",
+      "bytes": 2343,
+      "sha256": "0ed7c412206c43dfc2d5e81a63b7a0a0ecab87653abeccf9371df1321e08e86d"
+    },
+    {
+      "path": "knowledge/tests/test_original_evidence.py",
+      "bytes": 15693,
+      "sha256": "2629e45edde3990ad96ac6e28e111e71f2f8eea55572714f8ad87a7092eac8f2"
+    },
+    {
+      "path": "knowledge/tests/test_phase12_consistency.py",
+      "bytes": 4616,
+      "sha256": "75d785e1734efcb59895440980a8f5ac42d4f306971842d2159de3ae93df1381"
+    },
+    {
+      "path": "knowledge/tests/test_privacy_pipeline.py",
+      "bytes": 19664,
+      "sha256": "b37f7aa7a11f6884807e4b79d27890b3ea7406915b5b0999569432a1359f2afa"
+    },
+    {
+      "path": "knowledge/tests/test_reference_registries.py",
+      "bytes": 5281,
+      "sha256": "e2c4b1fa497d72b79d7574b1357931b9b44301a21764b0b5d5f382db8d98ddf3"
+    },
+    {
+      "path": "knowledge/tests/test_text_hygiene.py",
+      "bytes": 3180,
+      "sha256": "e494b6b949d3018ee373c4746e6e5f70fa482c9058346ea98a3d70574646a6fb"
+    },
+    {
+      "path": "knowledge/tests/test_who25_gateway_compatibility.py",
+      "bytes": 11640,
+      "sha256": "b24d7e434d8831ac6de2d2aaf15be1ec899c2b1b15ee126970c3ecb6a53cf0e1"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/README.md",
+      "bytes": 5949,
+      "sha256": "b76e9881d4a01a721256f0bce4ec3736c9c97f7e622c746697314e813af8e861"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/device-acceptance.md",
+      "bytes": 2488,
+      "sha256": "2c67c569c11bf29340c67988cd44ed2397df552bcaa56b30783c5e59617cca3a"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/device-semantic-identities.json",
+      "bytes": 2958,
+      "sha256": "51bf064538c88b3fc71aef5b6743aa7daeefada3be18aed30d36149a35ef3681"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/device-semantic-review.txt",
+      "bytes": 11363,
+      "sha256": "27644503b33685407cbce64ef2725ae7372d377e75314c82d47eecf3ccdaba66"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/device-validation.json",
+      "bytes": 3043,
+      "sha256": "3b556b2a299628d0e9b8f82c81a2ced92e85c83e6f5b0aaf8ed9e6bc994996cf"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/export-representations.json",
+      "bytes": 8346,
+      "sha256": "d535d6ac9c4761c1af633cd412777253139ffda3f20b5ac2e27f17dad549c400"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/impact-review.json",
+      "bytes": 713,
+      "sha256": "1fa459f9e2c7854f562fe4d64823d96038483c2180103771a6ce5155b5e31b43"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/machine-kb-review-identity.json",
+      "bytes": 1290,
+      "sha256": "36e41d805e0e15ef069aaedb3ee52a96278c8ec1a72360ad46f422824779a31d"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/machine-kb-semantic-review.txt",
+      "bytes": 7538,
+      "sha256": "e3a22e22b4325905e645bff199ae0aeb5e1888702aca85d548230bc75b5a0e19"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/machine-validation.json",
+      "bytes": 1268,
+      "sha256": "0b178833428400c3ee709c4abc1f7d8752d8f0cdccaaa5d653004304b04d680c"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/reference-identities.json",
+      "bytes": 34874,
+      "sha256": "5a02162c2e38bc53425f413d2138c1ff8e38e0dc451c7fc2a6527472234e3b98"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/semantic-review-exports.json",
+      "bytes": 4250,
+      "sha256": "6b12f9ff072093394ae0edc0fc8d6d8bf5196abdc8018552c2ef99c22b0ac6cf"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/semantic-reviews/catalogue-review-status-addendum.v1.md.txt",
+      "bytes": 1457,
+      "sha256": "fb9e1b23e943b1544a4f3417c12ad0ebb61de159a93b0f8148e8543b4e7f8c98"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/semantic-reviews/final-disposition-by-mh202.v1.md.txt",
+      "bytes": 6762,
+      "sha256": "8fe39cfb160b8f498732e4bcad30a628564c9cb45f44f91169913103ac960db9"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/semantic-reviews/final-disposition-fa2-addendum.v2.md.txt",
+      "bytes": 1421,
+      "sha256": "14502a43259182db4ec3f08370212608eabda96435e5ca70e918ab9b380b234e"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/semantic-reviews/gateway-by-mhs.v2.md.txt",
+      "bytes": 4335,
+      "sha256": "2cdc2da181fdb44e36b6a98aabc8aa68040365420e0ef3b7a7da4ae8e3567bd9"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/semantic-reviews/mh202-by-gateway.v2.md.txt",
+      "bytes": 2697,
+      "sha256": "3f7c4b339187e06789fec98df631a63dcd058511e97b7c3c4f79ce9d2c9cda9a"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/semantic-reviews/mhs-by-mh202.v2.md.txt",
+      "bytes": 1193,
+      "sha256": "dbf97a4255f32a5185eb2ee17485c8c9ef8077d2155719af303b3264fbd3d196"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/semantic-reviews/root-canonical-by-mh202.v2.md.txt",
+      "bytes": 1700,
+      "sha256": "96996b6c1a44621e0559dbdf8e4ed293074d369a387fc8cb907a00b3c3de609c"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/server-device-acceptance.md",
+      "bytes": 2286,
+      "sha256": "d48ee065ebbba611bb0eb4f5c4846c8ff8dabb8b22504f66a11222bffc1f9a1f"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/server-device-semantic-identities.json",
+      "bytes": 12947,
+      "sha256": "0ddfebbca4097d5d904e7cdea586b503895a497052fd8901e3a519e655b04a48"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/server-device-semantic-review.txt",
+      "bytes": 12794,
+      "sha256": "3f870f59994e48ae0f573725198a3fdef8307e70112c190b3063148883e4d755"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/server-device-validation.json",
+      "bytes": 2968,
+      "sha256": "d46a8ec1a3e24bd7bf7ef4a67bca9d5123ebefd58980ecd725a0a7399cbfe9db"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/validation.json",
+      "bytes": 6375,
+      "sha256": "f9f75cd90783d8c64ff09d317820ada36834d6662ac136cd8201e8c932f99eb2"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/working-state.json",
+      "bytes": 1341,
+      "sha256": "60cc4c310f301ddf2dcef07740509e9b370c1f57bc42b7da0e1a35b448d2f40f"
+    },
+    {
+      "path": "project/review/firmware-analysis/README.md",
+      "bytes": 6197,
+      "sha256": "92b509c9ddd09130390b74ff37d06e5836a8cf1fe1925532af114c76e820dc1c"
+    },
+    {
+      "path": "project/review/firmware-analysis/f454-2.0.51/first-targeted-reviewed/diagnostics__dim1-device-identity.md.txt",
+      "bytes": 7263,
+      "sha256": "8f92aeb2f9b7f513a6f553e12a367ea45db537fbda5349eef01bc4d4eee3f03c"
+    },
+    {
+      "path": "project/review/firmware-analysis/f460-f461-final-2026-11-01/verification/CATALOGUE.txt",
+      "bytes": 5125,
+      "sha256": "3233b3db875cfb94ad9d672d231c88534310a57117fadb6124dff39351848935"
+    },
+    {
+      "path": "project/review/firmware-analysis/f460-f461-run04-2026-11-01/README.md",
+      "bytes": 3769,
+      "sha256": "53c0b282b9d0c5f00328cdd379cb072ed7256386a56cfded5a59b4d9c5e4542d"
+    },
+    {
+      "path": "project/review/firmware-analysis/f460-f461-run05-2026-11-01/README.md",
+      "bytes": 2901,
+      "sha256": "f81d847a250250484e2c336407b0ab546226c5e0e5bc719ee6e2a387d0c63fc5"
+    },
+    {
+      "path": "project/review/firmware-analysis/myhomeserver1-3.87.13-final-review/verification/NAVIGATION.txt",
+      "bytes": 2062,
+      "sha256": "ed95619247107fe5317512290e5d31b7ba0dd8fe2865ea05c249e4e5d4acc789"
+    },
+    {
+      "path": "project/review/firmware-analysis/myhomeserver1-3.87.13-synthesis/navigation/CATALOGUE.txt",
+      "bytes": 7866,
+      "sha256": "72ab3fa3d0bc9d29ae93f74dbe42ee012d5756127286ca65a5b6280916559d27"
+    },
+    {
+      "path": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run01-mh200n/SOURCE.json",
+      "bytes": 16246,
+      "sha256": "6a7a05184cd960665f40862a1396beb1bad28609731e3362b3f81a42f128a355"
+    },
+    {
+      "path": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-mh200n/SOURCE.json",
+      "bytes": 12500,
+      "sha256": "c5bb62d7446137e701ba6d17093abad7632ff7a38cce92279378cae8313df34d"
+    },
+    {
+      "path": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run04-mh200n/SOURCE.json",
+      "bytes": 6508,
+      "sha256": "5340382b2d1f5b93d21fc28159cac3ff03abdfd80d873bbe9cfb2a49c889af58"
+    },
+    {
+      "path": "project/review/firmware-analysis/remaining-firmware-run05-2026-11-01/packets/f453av/SOURCE.json",
+      "bytes": 5521,
+      "sha256": "693edc73978c53e102d13899d51eefe7204c368b7701f4eb6a1dbe4caed80b43"
+    },
+    {
+      "path": "project/review/firmware-analysis/remaining-firmware-run06-2026-11-01/packets/f453av/SOURCE.json",
+      "bytes": 8323,
+      "sha256": "09100dd1f94cc8c4fecc21ca9b2f6b759c0f1ef0117d031792f5a525ed8d1fc6"
+    },
+    {
+      "path": "project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/mh200n/SOURCE.json",
+      "bytes": 12226,
+      "sha256": "6ba7bbb99132c9f02db2720ba156c49d78028401d4000b88620efcfb17830600"
+    },
+    {
+      "path": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/mh200n/SOURCE.json",
+      "bytes": 10519,
+      "sha256": "ca484f645a674803652d8ae16193d3a2804fb4002266e4cb035d90566ea7dcf6"
+    },
+    {
+      "path": "reverse-engineering/README.md",
+      "bytes": 9587,
+      "sha256": "e3338b7eef3cdb19108350797ff6ee50e5984cf0df9f794465cbd410a64290ca"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/README.md",
+      "bytes": 4652,
+      "sha256": "db88cc50db05900c003bc1de9689eef4c9271218ecbd3a2b5e27d6cdcfafe82b"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f450-f453av-f455-f459-mh200n.md",
+      "bytes": 12827,
+      "sha256": "4b23d2ffa8073913591f898fb0dd2104c24aa2879f2a9b7b56b3700595a5ea19"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f450-f459-database-byte-followup.md",
+      "bytes": 3205,
+      "sha256": "72c49970399a4c5eab765cb70c635ffb86a73fabfd470b38366ddb60512aadbb"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f453av-mh200n-clock-script-contracts.md",
+      "bytes": 1262,
+      "sha256": "0386dc22194feb4620eee5a37cc6df17539e409a450c8c277b4f3f260485be12"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-av-and-board.md",
+      "bytes": 4982,
+      "sha256": "2c8cf6b75f25177a21f5027014ea16b20b056dcebda2ca5afdca5ce58b53397c"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-continuation.md",
+      "bytes": 7295,
+      "sha256": "95a4123e8141210009d36c4212cce3bc5dd99f853b570fd35fe1380636965042"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-final-pass.md",
+      "bytes": 4300,
+      "sha256": "a4ff78e63fc98b143e979ea36e723c31c550faa3c0c0b73d7dc4bd2f894e0ece"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-follow-up.md",
+      "bytes": 7136,
+      "sha256": "842b0e779270af0383f8a85d4db7b4102c7d4003e4ff959d6a9cb8171c5f058f"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-product-paths.md",
+      "bytes": 4473,
+      "sha256": "48045fa2ce4695a32e050dce7cad44cd62c7060cddca235ee2b817c3880b1a80"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51.md",
+      "bytes": 7070,
+      "sha256": "ad7e4d46fd1cc77e754ea78ac6dd3e4cd5a52de26c929a4bc5cf1cea74b32724"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f460-2.0.12-and-f461-2.0.11.md",
+      "bytes": 4502,
+      "sha256": "8d4d9dbaa2d2858cf492806be8e6c3bccba5855c7a4a1369077cb599c00021db"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "bytes": 22397,
+      "sha256": "13fab5ab2c09f3df6b8e8633272f9a6930134699ba2377cd9001258bb670b860"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f460-f461-knowledge-handoff.md",
+      "bytes": 6814,
+      "sha256": "7dc3a116a6e72ed2bf00fc55208e5f64752b3214b9484122998a5547dab3cf00"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f460-f461-selected-source-paths.md",
+      "bytes": 3335,
+      "sha256": "35531c4e897178e79ac85dc20cd7055e8cee5ffa2fdaac9aeb0b1b19a2822a66"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-functional-translation.md",
+      "bytes": 15498,
+      "sha256": "434229c828d36d1f86c752f8ae1b1cc4d91d5316c9abeab4614ffb9e3bdd77fd"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-generated-scenarios.md",
+      "bytes": 6196,
+      "sha256": "283709a6b6ac84c387bedcda97089e78a7b2a6b0c3fcb2df2477f8ff65af100b"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-record-and-script-lifecycle.md",
+      "bytes": 14585,
+      "sha256": "f7ac29e77f292d7f9f269e026fb028fb4ab828d26235be09d014f8689679d680"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-scenario-resources.md",
+      "bytes": 4426,
+      "sha256": "ba2ba2ccae89966035050fec3b8e6ffeb94baeacd4eaa9939cc3aa7aa5013051"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-state-and-routing.md",
+      "bytes": 30552,
+      "sha256": "238ed5d1054ae03f5183c77ec2cb86cfd21f51d99e31119ae2b4d1d9a01065d5"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24.md",
+      "bytes": 8630,
+      "sha256": "5244280cd12060c3bb5729e200d76a81f8e78a3b20a6181589be038bb3281973"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-project-scenario-loader.md",
+      "bytes": 3392,
+      "sha256": "1661309cad928988ccbfc24e9136e738f3fa435260312e66ea2d0a955c082319"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-action-output.md",
+      "bytes": 3723,
+      "sha256": "b660a012b15fb47c2f270b7d2d58720103865aed9f8045d7e59b5ff73296c18a"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-action-request-values.md",
+      "bytes": 3977,
+      "sha256": "e0ed5b26b4b50e21f09a41fd88b3ad9d7e6eb15c93f739f4c8fb3448e762aca4"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-action-retained-state.md",
+      "bytes": 3220,
+      "sha256": "3b2e34e450e41966522b51f3aaeb7c9f931fb706816bf9f8ef1b92b9a516e5b0"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-actions.md",
+      "bytes": 6706,
+      "sha256": "8e91216417e268ab3ca1a88429ab3eb730a3034b1b8d147959e021e3dad4f460"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-cancellation.md",
+      "bytes": 4127,
+      "sha256": "6bd07fb2f37176de05861724cec51b3157f9aacff7e0e93c7c68f28eae75e361"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md",
+      "bytes": 6321,
+      "sha256": "5897494f52a61b34972296de44e6e2b2e3a9a7e2194402337a6de85cd00d0e8c"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-routing.md",
+      "bytes": 10200,
+      "sha256": "67b8741f60ebd9ea402ac2da848bcf3be683c5059b0d538b7d3e213eb7e5a773"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-trigger.md",
+      "bytes": 6327,
+      "sha256": "c0756339fb2907761f56eb6f2599fbdff0f77ef8f9dee088eb13c8a43b336ee8"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-factories.md",
+      "bytes": 5243,
+      "sha256": "be472ad317e93ea150385d358e41002896d28088c987cd517129083900cc19d9"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-knowledge-handoff.md",
+      "bytes": 5957,
+      "sha256": "0222b0fcac58082d63b8325079754fb89e9a5dfccfc58726e2f97efd32f77ff5"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-lifetime.md",
+      "bytes": 4065,
+      "sha256": "dacf4eaefa6893eefc902678903123dc2498728327b7c6f9249973e4f98d85ec"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+      "bytes": 9944,
+      "sha256": "4530a90eb547893c7f96c3ff9e728e9d640012ad1ad7e85e12ed0e112480a7b5"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md",
+      "bytes": 8989,
+      "sha256": "49b961e7054601b69eb77a30d88f160233e3db548001182886ec3f349c5a2d08"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-startup.md",
+      "bytes": 5030,
+      "sha256": "53c88d0335af496e008018d0529ddbebcd3ebbf72f485deb960ab04aab8d0870"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-time-scenarios.md",
+      "bytes": 5236,
+      "sha256": "a0c7ba879d09569bddcb8a111e63a873a637166e21a22371f3bcd36e58253604"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-trigger-serialization.md",
+      "bytes": 3769,
+      "sha256": "10fa86874164ac2366f003bb715790a2d986eaa065462200111318438f710b57"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "bytes": 8303,
+      "sha256": "8d6e2deaca3a24da5d5428754efa7c2027ff036033ab7de8a177631bea435eee"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-f460-f461-input-admission.md",
+      "bytes": 4759,
+      "sha256": "c5cad42569d5e3ee89dc77ed930bd0ffad2b3e7666a8fba0dcebc75ccc752629"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/remaining-firmware-database-handoff.md",
+      "bytes": 5795,
+      "sha256": "85d876e19e0717880770eb3e394d7a50e2138b492cb132e034f24365592ddaf5"
+    },
+    {
+      "path": "scenario-engine/README.md",
+      "bytes": 8501,
+      "sha256": "09ffb45931c4a889f51ab45cfd197468f75950ff2ecf5a3bca2c1bd1e38e4248"
+    },
+    {
+      "path": "scenario-engine/open-questions.md",
+      "bytes": 4724,
+      "sha256": "4cfd5ddf089337b0497a67f5110381a2aa72641f14f86fe72a3107292e439e20"
+    },
+    {
+      "path": "scenario-engine/scenario-suite-database.md",
+      "bytes": 9929,
+      "sha256": "4b73517042f7615e67218c9ff353fee467f3ef05df063b52158fd80a0a298c8e"
+    },
+    {
+      "path": "scenario-engine/scenario-suite-generator.md",
+      "bytes": 7879,
+      "sha256": "c765bffa9b4acf5b663bbf12233fab1e1044c71f73c1134c934c9ed37db64231"
+    },
+    {
+      "path": "scenario-engine/scenario-suite-variants.md",
+      "bytes": 6104,
+      "sha256": "de477cc2c82359818d6486a1b6d87a0ff70e1c80584004271a50f83449bbead8"
+    },
+    {
+      "path": "scenario-engine/server-scene-processing.md",
+      "bytes": 6445,
+      "sha256": "6244922718434d71e094d70c52b2c394f5dfa7c4d69fff9fc772d17596ad4491"
+    },
+    {
+      "path": "scenario-engine/sources-and-identifiers.md",
+      "bytes": 6585,
+      "sha256": "7b0ad59ba2ea36a8b35270426846aa5fad3c0e901ddfa31b1caac7cdca255e4c"
+    },
+    {
+      "path": "sources/artifact-manifest.yaml",
+      "bytes": 893450,
+      "sha256": "dff0aac04bdb06c9ea298845d8666dce293818e65b03ae5882c3ab0aed883a05"
+    }
+  ]
+}

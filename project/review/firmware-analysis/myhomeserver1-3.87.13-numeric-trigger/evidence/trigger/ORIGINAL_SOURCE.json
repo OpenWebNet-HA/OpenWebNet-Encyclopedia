@@ -1,0 +1,402 @@
+{
+  "calls": [
+    {
+      "VA": "0x2f41a",
+      "bytes": "fdf7f1fb",
+      "target": "0x2cc00"
+    },
+    {
+      "VA": "0x2cc1e",
+      "bytes": "fff72bfd",
+      "target": "0x2c678"
+    },
+    {
+      "VA": "0xa8dd2",
+      "bytes": "83f715ff",
+      "target": "0x2cc00"
+    },
+    {
+      "VA": "0xa8dea",
+      "bytes": "4bf047fd",
+      "target": "0xf487c"
+    },
+    {
+      "VA": "0xa8eb0",
+      "bytes": "fcf718fc",
+      "target": "0xa56e4"
+    },
+    {
+      "VA": "0x53994",
+      "bytes": "52f0b8fd",
+      "target": "0xa6508"
+    },
+    {
+      "VA": "0x539cc",
+      "bytes": "03f0eafc",
+      "target": "0x573a4"
+    },
+    {
+      "VA": "0x539f4",
+      "bytes": "fbf704fb",
+      "target": "0x4f000"
+    },
+    {
+      "VA": "0x54c34",
+      "bytes": "9ff024ff",
+      "target": "0xf4a80"
+    },
+    {
+      "VA": "0xa60aa",
+      "bytes": "fff781be",
+      "target": "0xa5db0"
+    }
+  ],
+  "capture_targets": [
+    {
+      "ADD_PC": "0xa8d98",
+      "Thumb_target": "0xa60a9",
+      "pool": "0xa9684"
+    },
+    {
+      "ADD_PC": "0xa8d9c",
+      "Thumb_target": "0xa56c1",
+      "pool": "0xa9688"
+    }
+  ],
+  "cast_types": [
+    {
+      "name": "17BnldTriggerRunner",
+      "pool": "0x53eec",
+      "slot": "0x1664d4",
+      "typeinfo": "0x165520"
+    },
+    {
+      "name": "13TriggerRunner",
+      "pool": "0x53ec8",
+      "slot": "0x165e8c",
+      "typeinfo": "0x16335c"
+    }
+  ],
+  "classes": [
+    {
+      "AP": "0x1602f4",
+      "GOT_slot": "0x166b90",
+      "RTTI": "0x1630c8",
+      "header": "0x1602ec",
+      "name": "15BaseBnldTrigger",
+      "pool": "0x2cd30",
+      "primary_slots_Thumb": [
+        "0x22a99",
+        "0x22ac9",
+        "0x282e5"
+      ]
+    },
+    {
+      "AP": "0x16030c",
+      "GOT_slot": "0x165f04",
+      "RTTI": "0x1630d4",
+      "header": "0x160304",
+      "name": "11BnldTrigger",
+      "pool": "0x2f6e4",
+      "primary_slots_Thumb": [
+        "0x22b69",
+        "0x22b99",
+        "0x282e5"
+      ]
+    },
+    {
+      "AP": "0x162664",
+      "GOT_slot": "0x1664c0",
+      "RTTI": "0x165520",
+      "header": "0x16265c",
+      "name": "17BnldTriggerRunner",
+      "pool": "0xa9694",
+      "primary_slots_Thumb": [
+        "0xf486d",
+        "0xf4ad9",
+        "0xf4b8d"
+      ]
+    }
+  ],
+  "code_spans": [
+    {
+      "end_VA_exclusive": "0x2f452",
+      "file_offset": "0x2f416",
+      "name": "raw-selected-factory",
+      "sha256": "87096bb4cc75cd46a5bff2566c0925638934bf689b14bdae3aec75864411266c",
+      "start_VA": "0x2f416"
+    },
+    {
+      "end_VA_exclusive": "0x2ccb8",
+      "file_offset": "0x2cc00",
+      "name": "raw-numeric-presence",
+      "sha256": "7d50114e5f98561671aa12bc459fd5a680be34a2f93af13e75689463f8199f91",
+      "start_VA": "0x2cc00"
+    },
+    {
+      "end_VA_exclusive": "0xa8dba",
+      "file_offset": "0xa8d80",
+      "name": "initializer-capture",
+      "sha256": "8fbbb88be398900cfa10cfdc16dfd0a5f5ca5e0a488c5cc4c9754a9636ac0a43",
+      "start_VA": "0xa8d80"
+    },
+    {
+      "end_VA_exclusive": "0xa8dee",
+      "file_offset": "0xa8dba",
+      "name": "initializer-virtual-reparse",
+      "sha256": "bac0042ab7c5b66153918b458b72498d1ffffbd510cd9c109977618dd5473226",
+      "start_VA": "0xa8dba"
+    },
+    {
+      "end_VA_exclusive": "0xf48da",
+      "file_offset": "0xf487c",
+      "name": "compiled-callback-copy",
+      "sha256": "0e5246e0ce593abc9d017ff7b5697e48df6030fc0fbbc8bff4fcff998c1c210e",
+      "start_VA": "0xf487c"
+    },
+    {
+      "end_VA_exclusive": "0xf4946",
+      "file_offset": "0xf4920",
+      "name": "compiled-field-copies",
+      "sha256": "ee5ab6cf69e6d94afed9dbfbdcb8ffb5b7478a78a833273787471ab2c117b079",
+      "start_VA": "0xf4920"
+    },
+    {
+      "end_VA_exclusive": "0xa8eb4",
+      "file_offset": "0xa8e36",
+      "name": "persistent-object-publication",
+      "sha256": "b1cccd88dd700601c78f12189f99f0be06869175c97d1d6820c2a396b2c96440",
+      "start_VA": "0xa8e36"
+    },
+    {
+      "end_VA_exclusive": "0xf487c",
+      "file_offset": "0xf486c",
+      "name": "primary-fire-method",
+      "sha256": "42e61718303cdff15dd000e395da2f853f243d55ca186ab6ad0a2cca38380fed",
+      "start_VA": "0xf486c"
+    },
+    {
+      "end_VA_exclusive": "0xf4ad4",
+      "file_offset": "0xf4a80",
+      "name": "numeric-admission-handler",
+      "sha256": "0cff80946302e650b02e7b22a8224b3f1fe4240d8d3f1a310e98f45d36d69367",
+      "start_VA": "0xf4a80"
+    },
+    {
+      "end_VA_exclusive": "0x53a10",
+      "file_offset": "0x5398c",
+      "name": "selected-local-recipient",
+      "sha256": "3c23836e51698699f76c33eff5b9a7bdbcdbb9862d5f0a6eb3f2da8a5628fe59",
+      "start_VA": "0x5398c"
+    },
+    {
+      "end_VA_exclusive": "0x54c38",
+      "file_offset": "0x54c0e",
+      "name": "numeric-local-guards-and-call",
+      "sha256": "a92fd560cee279331a34bb3bf1f5aa514d00390e080dce32ce3908bfdd527ea6",
+      "start_VA": "0x54c0e"
+    },
+    {
+      "end_VA_exclusive": "0xa56e0",
+      "file_offset": "0xa56c0",
+      "name": "scene-capture-manager",
+      "sha256": "b38d21cc3eca59b22ca8cbdee79479712ca3c11be04d15c7339f9ea3ac1628db",
+      "start_VA": "0xa56c0"
+    },
+    {
+      "end_VA_exclusive": "0xa60ae",
+      "file_offset": "0xa60a8",
+      "name": "scene-callback-wrapper",
+      "sha256": "cd233fe5c11721c1f34b51ef22bf227bb15d4e3604169a9ed25d7c6c01cea00e",
+      "start_VA": "0xa60a8"
+    },
+    {
+      "end_VA_exclusive": "0x52d5c",
+      "file_offset": "0x52d10",
+      "name": "local-raw-trigger-dispatch",
+      "sha256": "62676338ee48d85f45116980ff6e097a0e1a5dc7a3c824745c4381986a0f832b",
+      "start_VA": "0x52d10"
+    }
+  ],
+  "guards": [
+    {
+      "VA": "0x2f420",
+      "bytes": "3020"
+    },
+    {
+      "VA": "0x2cc32",
+      "bytes": "46f8283b"
+    },
+    {
+      "VA": "0x2cc3e",
+      "bytes": "48b3"
+    },
+    {
+      "VA": "0x2ccaa",
+      "bytes": "0028"
+    },
+    {
+      "VA": "0x2ccac",
+      "bytes": "e062"
+    },
+    {
+      "VA": "0xa8da6",
+      "bytes": "3260"
+    },
+    {
+      "VA": "0xa8dd2",
+      "bytes": "83f715ff"
+    },
+    {
+      "VA": "0xa8e38",
+      "bytes": "5020"
+    },
+    {
+      "VA": "0xa8e52",
+      "bytes": "00f11009"
+    },
+    {
+      "VA": "0xa8ea0",
+      "bytes": "c4e90087"
+    },
+    {
+      "VA": "0xf48c4",
+      "bytes": "0222"
+    },
+    {
+      "VA": "0xf492a",
+      "bytes": "317f"
+    },
+    {
+      "VA": "0xf4932",
+      "bytes": "84f83010"
+    },
+    {
+      "VA": "0xf4936",
+      "bytes": "42f98f0a"
+    },
+    {
+      "VA": "0xf4a80",
+      "bytes": "90f83030"
+    },
+    {
+      "VA": "0xf4a86",
+      "bytes": "836b"
+    },
+    {
+      "VA": "0xf4a92",
+      "bytes": "036c"
+    },
+    {
+      "VA": "0xf4a94",
+      "bytes": "9942"
+    },
+    {
+      "VA": "0xf4a96",
+      "bytes": "0edd"
+    },
+    {
+      "VA": "0xf4ac6",
+      "bytes": "8b42"
+    },
+    {
+      "VA": "0xf4ac8",
+      "bytes": "e6dc"
+    },
+    {
+      "VA": "0x539fe",
+      "bytes": "eb6b"
+    },
+    {
+      "VA": "0x54c0e",
+      "bytes": "d8f82010"
+    },
+    {
+      "VA": "0x54c18",
+      "bytes": "d8e90232"
+    },
+    {
+      "VA": "0x54c1c",
+      "bytes": "022a"
+    },
+    {
+      "VA": "0x54c24",
+      "bytes": "6f2a"
+    },
+    {
+      "VA": "0x54c2c",
+      "bytes": "6e2b"
+    }
+  ],
+  "image": "/home/bticino/scheduling_manager/scheduling_manager",
+  "keys": [
+    {
+      "ADD_PC": "0x2cc2e",
+      "key": "status",
+      "literal_VA": "0x1151ac",
+      "pool": "0x2cd34"
+    },
+    {
+      "ADD_PC": "0x2cc44",
+      "key": "status",
+      "literal_VA": "0x1151ac",
+      "pool": "0x2cd38"
+    },
+    {
+      "ADD_PC": "0x2cc9c",
+      "key": "level",
+      "literal_VA": "0x115278",
+      "pool": "0x2cd40"
+    }
+  ],
+  "relative_relocations": [
+    "001602f0  00000017 R_ARM_RELATIVE",
+    "001602f4  00000017 R_ARM_RELATIVE",
+    "001602f8  00000017 R_ARM_RELATIVE",
+    "001602fc  00000017 R_ARM_RELATIVE",
+    "00160308  00000017 R_ARM_RELATIVE",
+    "0016030c  00000017 R_ARM_RELATIVE",
+    "00160310  00000017 R_ARM_RELATIVE",
+    "00160314  00000017 R_ARM_RELATIVE",
+    "00162660  00000017 R_ARM_RELATIVE",
+    "00162664  00000017 R_ARM_RELATIVE",
+    "00162668  00000017 R_ARM_RELATIVE",
+    "0016266c  00000017 R_ARM_RELATIVE",
+    "00165e8c  00000017 R_ARM_RELATIVE",
+    "00165f04  00000017 R_ARM_RELATIVE",
+    "001664c0  00000017 R_ARM_RELATIVE",
+    "001664d4  00000017 R_ARM_RELATIVE",
+    "00166b90  00000017 R_ARM_RELATIVE"
+  ],
+  "tables": [
+    {
+      "base": "0x2eac0",
+      "entry_bytes": 2,
+      "index": 2,
+      "raw_value": "0x4ab",
+      "scope": "Distinct rawdecrement/directcompiled/localrelativepointer indices; row3 notconditionrow2 orprotocolcode",
+      "target": "0x2f416"
+    },
+    {
+      "base": "0xa732e",
+      "entry_bytes": 2,
+      "index": 3,
+      "raw_value": "0xd29",
+      "scope": "Distinct rawdecrement/directcompiled/localrelativepointer indices; row3 notconditionrow2 orprotocolcode",
+      "target": "0xa8d80"
+    },
+    {
+      "base": "0x52d5c",
+      "entry_bytes": 4,
+      "index": 2,
+      "raw_value": "0xc31",
+      "scope": "Distinct rawdecrement/directcompiled/localrelativepointer indices; row3 notconditionrow2 orprotocolcode",
+      "target": "0x5398d"
+    }
+  ],
+  "type_row": {
+    "label": "BNLD",
+    "row": 3,
+    "table": "0x160450"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "scope": "Parent independent successful byte-for-byte native and static --check; canonical counts only, replay not accumulated",
+  "pins": [
+    {
+      "path": "who25/run27-native/REPORT.md",
+      "sha256": "58dc06a82a9a21a50ad60e3b9b5a513d120652c74945d38c924cfad7fb9436e3"
+    },
+    {
+      "path": "who25/run27-native/emulate_query_stm_v1.py",
+      "sha256": "a01175bf586005b229cbf255ebe6f2a2fed33ce4d1eb73d1e0e8215c54138b4a"
+    },
+    {
+      "path": "who25/run27-native/collect_join_v1.py",
+      "sha256": "3c7a08cab78ad49aee94a8fae31f8425e078a58986f5c59e33270f521ff93f3a"
+    },
+    {
+      "path": "who25/run27-native/joined-results.json",
+      "sha256": "3217b91dadba033cd3320a7c7b7412adf0ce89356b91e59bea41a5b4e6a67404"
+    },
+    {
+      "path": "who25/run27-native/output-manifest.json",
+      "sha256": "3683717151b887c70e80eda7557082db9ac1edb04a7cb3b46564edf87172f071"
+    }
+  ],
+  "tool_tree_files": 63,
+  "tool_paths_sizes_mtimes_hashes_unchanged": true,
+  "canonical_counts": {
+    "top_level_entries": 3,
+    "original_instruction_visits": 380,
+    "primitive_callbacks": 25,
+    "linker_redirect_callbacks": 4,
+    "exit_boundaries": 3,
+    "stop_boundaries": 0,
+    "code_hook_steps": 412
+  },
+  "target_OS_calls": 0,
+  "firmware_processes": 0
+}

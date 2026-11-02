@@ -1,0 +1,29 @@
+{
+  "scope": "Independent source/model reviews, not Firmware execution or full Device acceptance.",
+  "reviews": [
+    {
+      "area": "identity",
+      "research_review": "work/f454-firmware/research/2026-10-30-targeted/identity/review.md",
+      "source_sha256": "f04412d6cb9dbfded1ecbd43de346f1e9972de1240547b4cd3a0b89d59498de4",
+      "published": "targeted-identity-review.txt",
+      "published_sha256": "f04412d6cb9dbfded1ecbd43de346f1e9972de1240547b4cd3a0b89d59498de4",
+      "normalization": "Local workspace prefix removed if present; no finding content changed."
+    },
+    {
+      "area": "temperature",
+      "research_review": "work/f454-firmware/research/2026-10-30-targeted/temperature/review.md",
+      "source_sha256": "fae393b71b2a789abbc3deb8a4de123fc303c23fd59c8a284bdb0a43b1f96a47",
+      "published": "targeted-temperature-review.txt",
+      "published_sha256": "fae393b71b2a789abbc3deb8a4de123fc303c23fd59c8a284bdb0a43b1f96a47",
+      "normalization": "Local workspace prefix removed if present; no finding content changed."
+    },
+    {
+      "area": "energy",
+      "research_review": "work/f454-firmware/research/2026-10-30-targeted/energy/review.md",
+      "source_sha256": "584baffc59e679e08a434ac860491be3b108a9331ca83f6ef38e959b9e293975",
+      "published": "targeted-energy-review.txt",
+      "published_sha256": "584baffc59e679e08a434ac860491be3b108a9331ca83f6ef38e959b9e293975",
+      "normalization": "Local workspace prefix removed if present; no finding content changed."
+    }
+  ]
+}

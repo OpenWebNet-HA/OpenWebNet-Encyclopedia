@@ -1,0 +1,65 @@
+[
+  {
+    "end_va_exclusive": "0x2eac0",
+    "file_offset": "0x2ea5c",
+    "name": "raw-factory-selection",
+    "sha256": "ab91fc9db5df784a9f81acc83178d82ddfebd0bb88409ef7564c62e2dc4eba9a",
+    "start_va": "0x2ea5c"
+  },
+  {
+    "end_va_exclusive": "0x2f4da",
+    "file_offset": "0x2f4a2",
+    "name": "raw-factory-bnil",
+    "sha256": "7558db288c048064ac5dad716fe877a14a5f3007fc9af96bae7c6bc4aad6d685",
+    "start_va": "0x2f4a2"
+  },
+  {
+    "end_va_exclusive": "0x2c8c8",
+    "file_offset": "0x2c678",
+    "name": "base-raw-constructor",
+    "sha256": "751649a84149da78f93f8e432c35e04c5fbb274a048f30adf38274a9d720e0b3",
+    "start_va": "0x2c678"
+  },
+  {
+    "end_va_exclusive": "0x2cbe0",
+    "file_offset": "0x2cb04",
+    "name": "base-bnil-constructor",
+    "sha256": "76495d1551d7e52583b8ff5dbfbd8fbccb4e9430ce6e4031901f9cae65aa5239",
+    "start_va": "0x2cb04"
+  },
+  {
+    "end_va_exclusive": "0x291fc",
+    "file_offset": "0x28fdc",
+    "name": "raw-serializer",
+    "sha256": "f37b28bd52d2253529fd09fe8a0fb923022faca282c25ad47c07ffd1449140ce",
+    "start_va": "0x28fdc"
+  },
+  {
+    "end_va_exclusive": "0xa732e",
+    "file_offset": "0xa731e",
+    "name": "initializer-trigger-selection",
+    "sha256": "41e12e52db8acc5488f6022b95ff635d21398d998093292d345b6e9ac192d097",
+    "start_va": "0xa731e"
+  },
+  {
+    "end_va_exclusive": "0xa9048",
+    "file_offset": "0xa8f1c",
+    "name": "initializer-bnil",
+    "sha256": "b9cc3f87287b7c34599792995c28fb86e6139144812e3413cca4b0e2c1e8d8ed",
+    "start_va": "0xa8f1c"
+  },
+  {
+    "end_va_exclusive": "0xee6e8",
+    "file_offset": "0xee5ac",
+    "name": "compiled-constructor",
+    "sha256": "c3c66e589b992b626e9560ccfbab5a80ea0e2271cc63915939469e6889fe24f6",
+    "start_va": "0xee5ac"
+  },
+  {
+    "end_va_exclusive": "0x2dff0",
+    "file_offset": "0x2df3c",
+    "name": "schema-copy",
+    "sha256": "e1f993ecb7ba69f30ebbf7f0cb4e6eeafd4655af3a229ca9745a1e394558c86f",
+    "start_va": "0x2df3c"
+  }
+]

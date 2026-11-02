@@ -1,0 +1,41 @@
+{
+  "preliminary_report": {
+    "path": "REPORT.md",
+    "bytes": 7400,
+    "sha256": "f9909f42f6b4420c73cbe6eeaa5935650d1344fc0c2afc42299d759774e2991a"
+  },
+  "RVA_corrections": [
+    {
+      "assembly": "Core",
+      "token": "060000be",
+      "old_draft": "e5f4",
+      "verified": "e618"
+    },
+    {
+      "assembly": "Core",
+      "token": "060000c2",
+      "old_draft": "f0c4",
+      "verified": "f0dc"
+    }
+  ],
+  "coordinate_interpretation": {
+    "old_parent_message_transcription": "Manager0 requests default; normal1/missing table returns -3.",
+    "status": "Incorrect exploratory message before any promotion; transcription is not an independently preserved historical message hash.",
+    "corrected": "Manager0 returns -3; normal manager1 with NULL named table requests default.",
+    "independent_check": "Peer recomputed raw branch deltas; parent raw-byte check agrees; all selected branches are now independently normalized."
+  },
+  "early_explorations": [
+    {
+      "script": "explore_static_il.py",
+      "output": "exploratory-il.json",
+      "failure": "dncil Argument JSON serialization; empty redirected output"
+    },
+    {
+      "script": "explore_static_il_v2.py",
+      "output": "exploratory-il.v2.json",
+      "failure": "list.index method mistaken for argument/local index; empty redirected output"
+    }
+  ],
+  "new_consumer_refinement": "Earlier Counter ANA_RANGE equality joins retained as historical candidate facts; original GraphicType3 dispatcher selects ANA_TEXT2/3 instead.",
+  "vendor_execution": 0
+}

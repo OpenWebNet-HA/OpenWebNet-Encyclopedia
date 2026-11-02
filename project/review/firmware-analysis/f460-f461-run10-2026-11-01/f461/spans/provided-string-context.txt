@@ -1,0 +1,48 @@
+
+/home/bticino/libcoso/libplug_automation_tr.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000004024 <automation_tr_translate@@Base+0x5f4>:
+    4024:	f9404fe1 	ldr	x1, [sp, #152]
+    4028:	f940103b 	ldr	x27, [x1, #32]
+    402c:	a9435037 	ldp	x23, x20, [x1, #48]
+    4030:	97fff754 	bl	1d80 <g_string_new@plt>
+    4034:	911f4303 	add	x3, x24, #0x7d0
+    4038:	52801001 	mov	w1, #0x80                  	// #128
+    403c:	9102a063 	add	x3, x3, #0xa8
+    4040:	91302322 	add	x2, x25, #0xc08
+    4044:	aa0003f8 	mov	x24, x0
+    4048:	913042a0 	add	x0, x21, #0xc10
+    404c:	97fff755 	bl	1da0 <g_log@plt>
+    4050:	f9403be1 	ldr	x1, [sp, #112]
+    4054:	aa1703e0 	mov	x0, x23
+    4058:	9103e021 	add	x1, x1, #0xf8
+    405c:	97fff7f9 	bl	2040 <g_strcmp0@plt>
+    4060:	35003c80 	cbnz	w0, 47f0 <automation_tr_translate@@Base+0xdc0>
+    4064:	b9406be2 	ldr	w2, [sp, #104]
+    4068:	7100105f 	cmp	w2, #0x4
+    406c:	54006480 	b.eq	4cfc <automation_tr_translate@@Base+0x12cc>  // b.none
+    4070:	52800142 	mov	w2, #0xa                   	// #10
+    4074:	d2800001 	mov	x1, #0x0                   	// #0
+    4078:	aa1403e0 	mov	x0, x20
+    407c:	97fff7dd 	bl	1ff0 <g_ascii_strtoll@plt>
+    4080:	d0000002 	adrp	x2, 6000 <automation_tr_translate@@Base+0x25d0>
+    4084:	2a0003e1 	mov	w1, w0
+    4088:	91182040 	add	x0, x2, #0x608
+    408c:	97fff765 	bl	1e20 <g_strdup_printf@plt>
+    4090:	aa0003f9 	mov	x25, x0
+    4094:	aa1903e0 	mov	x0, x25
+    4098:	97fff756 	bl	1df0 <g_strdup@plt>
+    409c:	aa0003e1 	mov	x1, x0
+    40a0:	aa1903e0 	mov	x0, x25
+    40a4:	f90037e1 	str	x1, [sp, #104]
+    40a8:	52800014 	mov	w20, #0x0                   	// #0
+    40ac:	97fff751 	bl	1df0 <g_strdup@plt>
+    40b0:	aa0003f7 	mov	x23, x0
+    40b4:	aa1903e0 	mov	x0, x25
+    40b8:	97fff74e 	bl	1df0 <g_strdup@plt>
+    40bc:	f9003fe0 	str	x0, [sp, #120]
+    40c0:	aa1b03e0 	mov	x0, x27
+    40c4:	97fff7c7 	bl	1fe0 <automation_get_where_type@plt>

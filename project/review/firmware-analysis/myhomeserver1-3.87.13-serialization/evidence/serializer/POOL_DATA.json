@@ -1,0 +1,26 @@
+[
+  {
+    "end_va_exclusive": "0x27c54",
+    "file_offset": "0x27c14",
+    "sha256": "08db14c4614c804c6849e5e90a0275f17e57a999cae0562a314a171d66b937b1",
+    "start_va": "0x27c14",
+    "words": [
+      "0x13dff2",
+      "0x6b4",
+      "0x13dfd6",
+      "0xee560",
+      "0xe9c",
+      "0xed74c",
+      "0x13df02",
+      "0xcac",
+      "0xed766",
+      "0xed750",
+      "0xed73a",
+      "0xed6a0",
+      "0xed71e",
+      "0xed710",
+      "0xed6ea",
+      "0xeef1c"
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+# Independent source review: BNTH selected serializer and same-object reparse
+
+Result: **PASS; no correction requested.**
+
+I reviewed authoritative `serializer/REPORT.v2.md`, `collect_values_v2.py`, saved source/contract outputs and actual version history, and reproduced the static collector with `--check`. I separately read original executable bytes through ImageVFS and re-derived PT_LOAD-based checks. I authored the earlier BNTH predicate and the separate local record-producer packet; this review independently audits the serializer author's source and same-JSON join, and does not self-certify a whole predicate/producer/physical pipeline. No original/native/vendor/JsonCpp/target code, float fixture, transport/authentication/session/framing implementation or live input was executed.
+
+## Checks completed
+
+- Read-only reproduction passed **11 outputs**, with **6 original code spans, 27 byte guards, 13 PIC keys, 10 decoded call requests, 2 separate data spans, 5 relative relocations, 5 import declarations and 4 input pins**. Original execution and semantic host fixtures are zero.
+- Independently checked all six raw-span hashes, all 27 instruction guards, all 13 literal resolutions and both separate raw-data hashes against current original bytes. Verified actual raw header `0x160118`, its first Thumb method `0x23c3d`, selected TBB bytes `20 2b 36 42 4e 03`, and selected index-two target `0x23cce`.
+- Verified all generated-member hashes and **17 exact v2 first-candidate copies**, including the retained failed-v1 report/collector/failure disclosure and version history. Independently verified the parent's three pre-v2 snapshot files and index hash, and the old source files remain byte-identical. No author files were edited.
+
+## Source and semantic boundary review
+
+The direct raw constructor and final factory both select the same GOT slot/header, so the first virtual method is the actual selected raw BNTH serializer, not a neighboring or temporary class. Entry retains the raw receiver in R5 and the JSON destination in R4; `0x23c54` calls the common base helper with those original arguments before reading raw+40.
+
+The common helper requests ValueType0 construction directly into the destination, then requests only the base `id` (if nonempty), `enabled`, `type` and eligible `operator` members. Source bounds and exact key pools support this member-set statement. The selected row-eleven type is `BNTH`; the operator-word-two table indexing includes its explicit plus-one and selects row three `equal`. These local rows are not public protocol dimensions or new physical vocabulary.
+
+The derived selector-two TBB arm reads the exact raw+56 double into D0, requests `Json::Value(double)`, selects `setpoint` and branches to shared move assignment/temporary destruction. It contains no numeric/sentinel/zero comparison. Selector-zero `mode` and selector-one `status` are separate arms; the chosen selector-two source does not fall through them. Under ordinary successful fresh-JSON/member/assignment semantics, the base output and this arm therefore establish the absence of earlier-priority `mode`/`status` members, rather than silently assuming that absence.
+
+The actual initializer sets R4 to SP+592 for the raw virtual call, then passes unchanged R4 as R1 to original constructor `0x2c050` at `0xa7e44`. R9 identifies a separate reparsed raw destination. The constructor's presence ordering and selected stores match: mode first, otherwise status, otherwise present setpoint -> imported `asDouble`, raw+40 selector two and raw+56 D0 store. The same reparsed temporary then reaches compiled constructor `0x103b08`; retained aligned copies move the selector-containing pair to compiled+144 and the double pair to compiled+160.
+
+This is a structural same-JSON/source chain under normal provider/object premises. It is not executed parsing or a proof that every arbitrary double preserves its bit pattern across all JsonCpp implementations, exceptional/invalid states, errors or interposition. The author correctly retains those limitations, complete optional grammar/default/operator boundaries, actual configuration/lifetime/concurrency and physical meaning. The separate root provider supplement, if promoted, remains independent evidence and was not folded into this review.
+
+## Preserved development limitations
+
+The strict first canonical v1 generation stopped before outputs because its exact import matcher required an @version suffix although the original JsonCpp JUMP_SLOT names are unversioned. The v2 matcher still requires exactly one JUMP_SLOT and the exact mangled symbol, accepting only line end or an explicit version suffix; it does not weaken class/source or call evidence. V1 remains preserved, not rewritten into a successful candidate. The failure disclosure is explicitly a later traceback transcription, not contemporaneously saved stderr.
+
+The separately disclosed pre-collector inline SyntaxError and misaligned exploratory disassembly do not have independently pinned failed-file artifacts. The report honestly says so, and the retained compiled-copy source starts at aligned `0x103b96`. I do not certify missing historical probe bytes or invent them. No promoted source statement depends on those exploratory failures.
+
+## Exact reviewed pins
+
+- `REPORT.v2.md`: `57cf16095f0da61eddf81d3b0133f30ab8b6848ec9f2fc1f74dea8001924c97d`
+- `collect_values_v2.py`: `e6bd23219c93fd466942cdc91e98c98a289a1800061bbab27436117a131eda9d`
+- `OUTPUT_MANIFEST.json`: `7b9d18538084483d7fce0a5827160b044c1ef6071ec42fc691c9f48938901ee4`
+- `first-candidate-v2/INDEX.json`: `9c0c7ad719e49abdd2ec583eb5d0c32ad005b1f591ff7ddf91a8d1335bd00435`
+- `VERSION_HISTORY.json`: `f6575cf96a442b331865c14b3b631407d99241c6e0ac5a32ddf28b46397966ab`
+- `FIRST_GENERATION_FAILURE.json`: `9d5b58f4b7ee73615e60b527a350bdc0d61fc8c78702b5d69927483da6ec2480`

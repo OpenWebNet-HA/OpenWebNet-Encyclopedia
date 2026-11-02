@@ -1,0 +1,40 @@
+{
+  "hits": [
+    {
+      "VA": "0xa7a06",
+      "mnemonic": "bl",
+      "target": "0xb2bc4"
+    }
+  ],
+  "limits": [
+    "linearcode/data ambiguity handledonlyforpositivehit",
+    "indirectcallers/thunks/entryaliases/computedtargets unclosed",
+    "no747widerstoreor22rowmatrixrerun/reclassification",
+    "no completewriter/resetabsence/permanentlatch/defect/runtimeclaim"
+  ],
+  "method": "Host objdump -d force-thumb linear rendering; exact numeric direct BL/BLX/B.W target0xb2bc4. Positive hit independently decoded from originalbytes.",
+  "method_counts": {
+    "host_semantic_cases": 0,
+    "original_execution": 0
+  },
+  "selected_receiver": {
+    "caller": "0xa7a06",
+    "constructor_saved_receiver": "b2bd4 R4=R0",
+    "effective_selected_byte": "current SP4352",
+    "exclusion": "Only this actualselectedcaller path, not allcallers/aliases ofconstructor",
+    "input_R0": "current SP4256+24 = SP4280",
+    "premises": [
+      "ordinary validstack distinctfromstaticBSS",
+      "opaquevirtualcall/basehelper normalreturns andABI callee-preservation"
+    ],
+    "selected_store": "b2c0c byte0 atreceiver+72"
+  },
+  "shared_domain": {
+    "base": "0x1677b8",
+    "flag": "0x167800",
+    "known_startup_zero": "0x1548e inheritedonly",
+    "known_stop_one": "0xcd706 inheritedonly",
+    "new_positive_reset": "UNRESOLVED"
+  },
+  "target": "0xb2bc4"
+}

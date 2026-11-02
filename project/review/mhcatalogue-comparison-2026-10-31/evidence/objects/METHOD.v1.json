@@ -1,0 +1,8 @@
+{
+  "configuration_defaults_exported": false,
+  "exploratory_history": "One pre-output ad hoc SELECT lacked whitespace after BETWEEN and raised SQLite syntax error near between1332. No evidence outputs or database changes occurred; corrected host query preceded canonical collector.",
+  "original_execution": 0,
+  "row_digest_method": "SHA256 of typed ordered full row; digests and changed keys rather than raw configuration/range/filter/condition values.",
+  "sources": "Complete20 selected relationship tables plus10 owner/dictionary tables from each source.",
+  "stored_expression_evaluation": 0
+}

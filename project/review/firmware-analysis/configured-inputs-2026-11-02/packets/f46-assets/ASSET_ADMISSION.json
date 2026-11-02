@@ -1,0 +1,721 @@
+{
+  "actual_commissioned_export_admitted": false,
+  "assets": [
+    {
+      "classification": "PACKAGED_MANAGER_SETTINGS_NOT_SCENE_EXPORT",
+      "configured_scene_admitted": false,
+      "identity": {
+        "bytes": 243,
+        "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/scheduling_manager/config.json",
+        "role": "Packaged scheduler settings, no configured scene content",
+        "sha256": "bc83cdfcb72a743d66583428042d4db74b5e24c84ca111f1ae409b3e9cf3b9cf"
+      },
+      "packaged_regular_files_under_own_declared_prefix": 0,
+      "product": "F460",
+      "top_level_key_types": {
+        "logFile": "str",
+        "logLevel": "int",
+        "scenesPath": "str",
+        "wdtEnabled": "bool",
+        "wdtFile": "str",
+        "wdtTimeout": "int"
+      },
+      "view": "normal",
+      "whitelisted_source_selector": {
+        "key": "scenesPath",
+        "prefix": "home/bticino/cfg/extra/0/scheduling_manager/",
+        "reason": "Compiled packaged asset location already retained in prior reviewed report, not a live private value"
+      }
+    },
+    {
+      "classification": "PACKAGED_MANAGER_DEFAULT_SETTINGS_NOT_ACTIVE_CONFIGURATION",
+      "configured_instance_admitted": false,
+      "group_keys": {
+        "Communication Settings": [
+          "PortCommand",
+          "PortMonitor"
+        ],
+        "General Parameters": [
+          "ApplicationName",
+          "LogLev",
+          "Logfile",
+          "Logtype"
+        ],
+        "Plugins settings": [
+          "LibDir",
+          "PlugCfgDir"
+        ],
+        "Watchdog settings": [
+          "WDTfile",
+          "WDTtime"
+        ]
+      },
+      "identity": {
+        "bytes": 333,
+        "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/cfg/coso_cfg",
+        "role": "Packaged COSO settings; no active argv/cwd/config selection observed",
+        "sha256": "7d4f87e391dc416a7f227bfed9fb24d1df5606952f705cd6884087677c0d583f"
+      },
+      "leaf_values_exported": false,
+      "product": "F460",
+      "view": "normal"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 71,
+        "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/cfg/coso_plugins/automation_stm",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "a543a5dfe5ede98fe686924441a86a096968332dddb607ab967961c5d9809931"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "automation_stm",
+      "product": "F460",
+      "view": "normal"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 70,
+        "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/cfg/coso_plugins/automation_tr",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "3742c1a1e3b2f6ab67b803a69dc566527b2ce853d81f32c1fb52dac1a598653a"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "automation_tr",
+      "product": "F460",
+      "view": "normal"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 64,
+        "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/cfg/coso_plugins/aux_stm",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "7e6a76f322256647df849f4fefe53df46646761482074f5bea820fcd66136225"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "aux_stm",
+      "product": "F460",
+      "view": "normal"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 63,
+        "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/cfg/coso_plugins/aux_tr",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "53907aae9974cda79960e68defdec658488142a21c733fd083a28a7f41daf990"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "aux_tr",
+      "product": "F460",
+      "view": "normal"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 62,
+        "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/cfg/coso_plugins/debug",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "f3f69f5d0f13c5c8ce329f41de0c60ebdf081e04d8e2c7a196800828cb4c1ce4"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "debug",
+      "product": "F460",
+      "view": "normal"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "Communication Settings": [
+          "SCSAIEnable",
+          "SCSEnable",
+          "SCSidClient",
+          "SCSserverPort"
+        ],
+        "General Parameters": [
+          "SCSLogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 157,
+        "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/cfg/coso_plugins/scs_cmd",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "22d9ae840fbbc5f1313a13ad135a8c1dad2f6b91aac0ddcf0db83bdee0c99eb2"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "scs_cmd",
+      "product": "F460",
+      "view": "normal"
+    },
+    {
+      "classification": "PACKAGED_MANAGER_SETTINGS_NOT_SCENE_EXPORT",
+      "configured_scene_admitted": false,
+      "identity": {
+        "bytes": 243,
+        "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/scheduling_manager/config.json",
+        "role": "Packaged scheduler settings, no configured scene content",
+        "sha256": "bc83cdfcb72a743d66583428042d4db74b5e24c84ca111f1ae409b3e9cf3b9cf"
+      },
+      "packaged_regular_files_under_own_declared_prefix": 0,
+      "product": "F460",
+      "top_level_key_types": {
+        "logFile": "str",
+        "logLevel": "int",
+        "scenesPath": "str",
+        "wdtEnabled": "bool",
+        "wdtFile": "str",
+        "wdtTimeout": "int"
+      },
+      "view": "recovery",
+      "whitelisted_source_selector": {
+        "key": "scenesPath",
+        "prefix": "home/bticino/cfg/extra/0/scheduling_manager/",
+        "reason": "Compiled packaged asset location already retained in prior reviewed report, not a live private value"
+      }
+    },
+    {
+      "classification": "PACKAGED_MANAGER_DEFAULT_SETTINGS_NOT_ACTIVE_CONFIGURATION",
+      "configured_instance_admitted": false,
+      "group_keys": {
+        "Communication Settings": [
+          "PortCommand",
+          "PortMonitor"
+        ],
+        "General Parameters": [
+          "ApplicationName",
+          "LogLev",
+          "Logfile",
+          "Logtype"
+        ],
+        "Plugins settings": [
+          "LibDir",
+          "PlugCfgDir"
+        ],
+        "Watchdog settings": [
+          "WDTfile",
+          "WDTtime"
+        ]
+      },
+      "identity": {
+        "bytes": 333,
+        "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/cfg/coso_cfg",
+        "role": "Packaged COSO settings; no active argv/cwd/config selection observed",
+        "sha256": "7d4f87e391dc416a7f227bfed9fb24d1df5606952f705cd6884087677c0d583f"
+      },
+      "leaf_values_exported": false,
+      "product": "F460",
+      "view": "recovery"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 71,
+        "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/cfg/coso_plugins/automation_stm",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "a543a5dfe5ede98fe686924441a86a096968332dddb607ab967961c5d9809931"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "automation_stm",
+      "product": "F460",
+      "view": "recovery"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 70,
+        "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/cfg/coso_plugins/automation_tr",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "3742c1a1e3b2f6ab67b803a69dc566527b2ce853d81f32c1fb52dac1a598653a"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "automation_tr",
+      "product": "F460",
+      "view": "recovery"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 64,
+        "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/cfg/coso_plugins/aux_stm",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "7e6a76f322256647df849f4fefe53df46646761482074f5bea820fcd66136225"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "aux_stm",
+      "product": "F460",
+      "view": "recovery"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 63,
+        "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/cfg/coso_plugins/aux_tr",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "53907aae9974cda79960e68defdec658488142a21c733fd083a28a7f41daf990"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "aux_tr",
+      "product": "F460",
+      "view": "recovery"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 62,
+        "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/cfg/coso_plugins/debug",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "f3f69f5d0f13c5c8ce329f41de0c60ebdf081e04d8e2c7a196800828cb4c1ce4"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "debug",
+      "product": "F460",
+      "view": "recovery"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "Communication Settings": [
+          "SCSAIEnable",
+          "SCSEnable",
+          "SCSidClient",
+          "SCSserverPort"
+        ],
+        "General Parameters": [
+          "SCSLogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 157,
+        "path": "work/f460-firmware/2.0.12/analysis/recovery/home/bticino/cfg/coso_plugins/scs_cmd",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "22d9ae840fbbc5f1313a13ad135a8c1dad2f6b91aac0ddcf0db83bdee0c99eb2"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "scs_cmd",
+      "product": "F460",
+      "view": "recovery"
+    },
+    {
+      "classification": "PACKAGED_MANAGER_DEFAULT_SETTINGS_NOT_ACTIVE_CONFIGURATION",
+      "configured_instance_admitted": false,
+      "group_keys": {
+        "Communication Settings": [
+          "PortCommand",
+          "PortMonitor"
+        ],
+        "General Parameters": [
+          "ApplicationName",
+          "LogLev",
+          "Logfile",
+          "Logtype"
+        ],
+        "Plugins settings": [
+          "LibDir",
+          "PlugCfgDir"
+        ],
+        "Watchdog settings": [
+          "WDTfile",
+          "WDTtime"
+        ]
+      },
+      "identity": {
+        "bytes": 333,
+        "path": "work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/cfg/coso_cfg",
+        "role": "Packaged COSO settings; no active argv/cwd/config selection observed",
+        "sha256": "7d4f87e391dc416a7f227bfed9fb24d1df5606952f705cd6884087677c0d583f"
+      },
+      "leaf_values_exported": false,
+      "product": "F461",
+      "view": "normal"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 71,
+        "path": "work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/cfg/coso_plugins/automation_stm",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "a543a5dfe5ede98fe686924441a86a096968332dddb607ab967961c5d9809931"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "automation_stm",
+      "product": "F461",
+      "view": "normal"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 70,
+        "path": "work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/cfg/coso_plugins/automation_tr",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "3742c1a1e3b2f6ab67b803a69dc566527b2ce853d81f32c1fb52dac1a598653a"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "automation_tr",
+      "product": "F461",
+      "view": "normal"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 64,
+        "path": "work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/cfg/coso_plugins/aux_stm",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "7e6a76f322256647df849f4fefe53df46646761482074f5bea820fcd66136225"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "aux_stm",
+      "product": "F461",
+      "view": "normal"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 63,
+        "path": "work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/cfg/coso_plugins/aux_tr",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "53907aae9974cda79960e68defdec658488142a21c733fd083a28a7f41daf990"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "aux_tr",
+      "product": "F461",
+      "view": "normal"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 62,
+        "path": "work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/cfg/coso_plugins/debug",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "f3f69f5d0f13c5c8ce329f41de0c60ebdf081e04d8e2c7a196800828cb4c1ce4"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "debug",
+      "product": "F461",
+      "view": "normal"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "Communication Settings": [
+          "SCSAIEnable",
+          "SCSEnable",
+          "SCSidClient",
+          "SCSserverPort"
+        ],
+        "General Parameters": [
+          "SCSLogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 157,
+        "path": "work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/cfg/coso_plugins/scs_cmd",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "22d9ae840fbbc5f1313a13ad135a8c1dad2f6b91aac0ddcf0db83bdee0c99eb2"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "scs_cmd",
+      "product": "F461",
+      "view": "normal"
+    },
+    {
+      "classification": "PACKAGED_MANAGER_DEFAULT_SETTINGS_NOT_ACTIVE_CONFIGURATION",
+      "configured_instance_admitted": false,
+      "group_keys": {
+        "Communication Settings": [
+          "PortCommand",
+          "PortMonitor"
+        ],
+        "General Parameters": [
+          "ApplicationName",
+          "LogLev",
+          "Logfile",
+          "Logtype"
+        ],
+        "Plugins settings": [
+          "LibDir",
+          "PlugCfgDir"
+        ],
+        "Watchdog settings": [
+          "WDTfile",
+          "WDTtime"
+        ]
+      },
+      "identity": {
+        "bytes": 333,
+        "path": "work/f461-firmware/2.0.11/analysis/recovery/home/bticino/cfg/coso_cfg",
+        "role": "Packaged COSO settings; no active argv/cwd/config selection observed",
+        "sha256": "7d4f87e391dc416a7f227bfed9fb24d1df5606952f705cd6884087677c0d583f"
+      },
+      "leaf_values_exported": false,
+      "product": "F461",
+      "view": "recovery"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 71,
+        "path": "work/f461-firmware/2.0.11/analysis/recovery/home/bticino/cfg/coso_plugins/automation_stm",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "a543a5dfe5ede98fe686924441a86a096968332dddb607ab967961c5d9809931"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "automation_stm",
+      "product": "F461",
+      "view": "recovery"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 70,
+        "path": "work/f461-firmware/2.0.11/analysis/recovery/home/bticino/cfg/coso_plugins/automation_tr",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "3742c1a1e3b2f6ab67b803a69dc566527b2ce853d81f32c1fb52dac1a598653a"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "automation_tr",
+      "product": "F461",
+      "view": "recovery"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 64,
+        "path": "work/f461-firmware/2.0.11/analysis/recovery/home/bticino/cfg/coso_plugins/aux_stm",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "7e6a76f322256647df849f4fefe53df46646761482074f5bea820fcd66136225"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "aux_stm",
+      "product": "F461",
+      "view": "recovery"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 63,
+        "path": "work/f461-firmware/2.0.11/analysis/recovery/home/bticino/cfg/coso_plugins/aux_tr",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "53907aae9974cda79960e68defdec658488142a21c733fd083a28a7f41daf990"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "aux_tr",
+      "product": "F461",
+      "view": "recovery"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "General Parameters": [
+          "LogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 62,
+        "path": "work/f461-firmware/2.0.11/analysis/recovery/home/bticino/cfg/coso_plugins/debug",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "f3f69f5d0f13c5c8ce329f41de0c60ebdf081e04d8e2c7a196800828cb4c1ce4"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "debug",
+      "product": "F461",
+      "view": "recovery"
+    },
+    {
+      "classification": "PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT",
+      "group_keys": {
+        "Communication Settings": [
+          "SCSAIEnable",
+          "SCSEnable",
+          "SCSidClient",
+          "SCSserverPort"
+        ],
+        "General Parameters": [
+          "SCSLogLev"
+        ]
+      },
+      "identity": {
+        "bytes": 157,
+        "path": "work/f461-firmware/2.0.11/analysis/recovery/home/bticino/cfg/coso_plugins/scs_cmd",
+        "role": "Packaged plugin settings, no initialized instance or commissioned record",
+        "sha256": "22d9ae840fbbc5f1313a13ad135a8c1dad2f6b91aac0ddcf0db83bdee0c99eb2"
+      },
+      "leaf_values_exported": false,
+      "natural_instance_or_input_record_admitted": false,
+      "plugin_file_label": "scs_cmd",
+      "product": "F461",
+      "view": "recovery"
+    }
+  ],
+  "classification": "ASSET_ADMISSION_ONLY_ZERO_NEW_FUNCTIONAL_SOURCE_COVERAGE",
+  "limits": [
+    "F460 own selected scene-prefix count0 is inherited packaging scope, not runtime/global absence.",
+    "F461 selected plugin files are packaged settings, not deployed module records or proof of active settings.",
+    "Normal/recovery matching bytes do not establish same environment or installed overlay.",
+    "No private leaf values/full config, identities, credentials/keys are exported.",
+    "No provider/initializer/receiving/output/transport/auth/session/framing/MQTT/libjel/excluded bodies followed."
+  ],
+  "manufacturer_scene_example_admitted": false,
+  "models_fixtures_SQL_target_IO": 0,
+  "new_binary_body_source_coverage": 0,
+  "original_execution": 0,
+  "products": [
+    "F4602.0.12",
+    "F4612.0.11"
+  ],
+  "scopes": [
+    {
+      "product": "F460",
+      "scope": "Exact retained coso_cfg/coso_plugins path set; no all-files semantic inventory, active-state inference or missing-resource reconstruction",
+      "targeted_plugin_setting_paths": 6,
+      "view": "normal"
+    },
+    {
+      "product": "F460",
+      "scope": "Exact retained coso_cfg/coso_plugins path set; no all-files semantic inventory, active-state inference or missing-resource reconstruction",
+      "targeted_plugin_setting_paths": 6,
+      "view": "recovery"
+    },
+    {
+      "product": "F461",
+      "scope": "Exact retained coso_cfg/coso_plugins path set; no all-files semantic inventory, active-state inference or missing-resource reconstruction",
+      "targeted_plugin_setting_paths": 6,
+      "view": "normal"
+    },
+    {
+      "product": "F461",
+      "scope": "Exact retained coso_cfg/coso_plugins path set; no all-files semantic inventory, active-state inference or missing-resource reconstruction",
+      "targeted_plugin_setting_paths": 6,
+      "view": "recovery"
+    }
+  ],
+  "status": "NO_COMMISSIONED_ASSET_ADMITTED_IN_TARGETED_RETAINED_SCOPE",
+  "strongest_proposed_next_scope": {
+    "inherited_positive_edge": "Original caller2cc20..2cc90 supplies same inner SceneRunner storage to105740, then initializerf94c0 under prior parse/success/source premises",
+    "known_SHA256": "5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62",
+    "new_question": "Qualify the preceding local parse-success gate and supplied source/configuration argument feeding2cc20, not repeat constructor/conditions/waits",
+    "not_performed": true,
+    "original_program": "home/bticino/scheduling_manager/scheduling_manager",
+    "product": "F4602.0.12",
+    "proposed_boundary": "Only direct preceding local argument/admission slice; stop imported JSON/parser/provider semantics and any closed output/receiving/transport/auth path. Parent approval of concrete static span required before following."
+  }
+}

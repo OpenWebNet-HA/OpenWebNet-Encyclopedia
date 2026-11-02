@@ -1,0 +1,13 @@
+{
+  "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+  "snapshot": "myhomeserver1-3.87.13-research-synthesis.md",
+  "before_sha256": "5a3dec72f1d14ac5c338a38571c809749594e761854e915c8a0decea447bcd52",
+  "after_sha256": "060d6bf14627853d85dc6cf701afcae2aec884f62da519d29428067c953cb982",
+  "substitutions": [
+    {
+      "old": "## Product and build scope\n",
+      "new": "The [knowledge handoff](myhomeserver1-3.87.13-knowledge-handoff.md) explains practical effects for catalogue/scenario tooling, product-role boundaries and the next decisive evidence.\n\n## Product and build scope\n"
+    }
+  ],
+  "scope": "Navigation to reviewed handoff only; exact previous overview retained for numeric142 resolver"
+}

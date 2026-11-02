@@ -1,0 +1,83 @@
+{
+  "scope": "Exact reference-page inputs for synthesis, before any current page edit; not full-source approval",
+  "files": [
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-actions.md",
+      "snapshot": "00-myhomeserver1-3.87.13-actions.md",
+      "bytes": 8688,
+      "sha256": "489e4f7bd56b212139f7ade028cefaa26b2b6062cb3d9ee32eb4c454b3a52fe9"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-cancellation.md",
+      "snapshot": "01-myhomeserver1-3.87.13-cancellation.md",
+      "bytes": 5498,
+      "sha256": "361effbac491faf6daa0dd91da9d67ee76b39321afca2a5e760a6648df92a3ab"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md",
+      "snapshot": "02-myhomeserver1-3.87.13-consumers.md",
+      "bytes": 9295,
+      "sha256": "0306fe7a480c2111933b39fbe22a39ba7b3483264c48110c2dd3025cafb2c492"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-routing.md",
+      "snapshot": "03-myhomeserver1-3.87.13-event-routing.md",
+      "bytes": 13946,
+      "sha256": "c7e309cf81b4a32110db37f441a820d04d08ece7554c07a38833bc8c72205409"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-trigger.md",
+      "snapshot": "04-myhomeserver1-3.87.13-event-trigger.md",
+      "bytes": 5795,
+      "sha256": "68524eb6514d4663ca9d0cec87a47cb70ffc5d6797b054c76f53907c01a68e89"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-factories.md",
+      "snapshot": "05-myhomeserver1-3.87.13-factories.md",
+      "bytes": 7654,
+      "sha256": "f670582ed8e8dc49065215dde6f64f59b9ab4f34462b6546a0b509f715b77388"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-lifetime.md",
+      "snapshot": "06-myhomeserver1-3.87.13-lifetime.md",
+      "bytes": 5482,
+      "sha256": "2618b7d557e60d4953044a8eaa75d4a2e42b0e276e64dc18a0787b98c7216dc4"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md",
+      "snapshot": "07-myhomeserver1-3.87.13-serialization.md",
+      "bytes": 14164,
+      "sha256": "69f408a664e4331c2d756285e3498ca7bbb777ae9d7c1a3a50d33951394df13a"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-startup.md",
+      "snapshot": "08-myhomeserver1-3.87.13-startup.md",
+      "bytes": 6720,
+      "sha256": "3650604c30ff0268e5d0743efb05a27dbec327a09c195a9bc92b5cd09977d0ed"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-time-scenarios.md",
+      "snapshot": "09-myhomeserver1-3.87.13-time-scenarios.md",
+      "bytes": 6966,
+      "sha256": "fe129d97448d6e09bffe82c6b536bb252890f306580c7b8224690c330a07aefa"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "snapshot": "10-myhomeserver1-3.87.13.md",
+      "bytes": 11224,
+      "sha256": "23629011fc6f1afd56e837d5d0a65e62952c02c051573bea534ffd4a9535d848"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md",
+      "snapshot": "11-own-dev-0199-myhomeserver1-home-automation-server.md",
+      "bytes": 43131,
+      "sha256": "5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+      "snapshot": "12-mhcatalogue-source-profiles.md",
+      "bytes": 11611,
+      "sha256": "59affbd225571e554a49ad784619912a1521ff5b00c80bf5ea28094540b942b9"
+    }
+  ]
+}

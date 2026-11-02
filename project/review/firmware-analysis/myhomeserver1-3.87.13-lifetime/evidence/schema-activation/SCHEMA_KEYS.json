@@ -1,0 +1,62 @@
+[
+  {
+    "add_pc": "0x2b0e0",
+    "literal": "id",
+    "literal_va": "0x116adc",
+    "pool_va": "0x2b34c"
+  },
+  {
+    "add_pc": "0x2b0fe",
+    "literal": "delay",
+    "literal_va": "0x115288",
+    "pool_va": "0x2b350"
+  },
+  {
+    "add_pc": "0x2b10e",
+    "literal": "duration",
+    "literal_va": "0x115290",
+    "pool_va": "0x2b354"
+  },
+  {
+    "add_pc": "0x2b11e",
+    "literal": "type",
+    "literal_va": "0x115f5c",
+    "pool_va": "0x2b358"
+  },
+  {
+    "add_pc": "0x2b186",
+    "literal": "status",
+    "literal_va": "0x1151ac",
+    "pool_va": "0x2b364"
+  },
+  {
+    "add_pc": "0x2b1de",
+    "literal": "brightness",
+    "literal_va": "0x115240",
+    "pool_va": "0x2b36c"
+  },
+  {
+    "add_pc": "0x2b202",
+    "literal": "saturation",
+    "literal_va": "0x11524c",
+    "pool_va": "0x2b374"
+  },
+  {
+    "add_pc": "0x2b226",
+    "literal": "hue",
+    "literal_va": "0x115258",
+    "pool_va": "0x2b37c"
+  },
+  {
+    "add_pc": "0x2b24a",
+    "literal": "temperature",
+    "literal_va": "0x1151e0",
+    "pool_va": "0x2b384"
+  },
+  {
+    "add_pc": "0x2b26e",
+    "literal": "speed",
+    "literal_va": "0x115280",
+    "pool_va": "0x2b38c"
+  }
+]

@@ -1,0 +1,27 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+000000000010ddd0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x96220>:
+  10ddd0:	d503245f 	bti	c
+  10ddd4:	f9400823 	ldr	x3, [x1, #16]
+  10ddd8:	a9007c1f 	stp	xzr, xzr, [x0]
+  10dddc:	a9017c1f 	stp	xzr, xzr, [x0, #16]
+  10dde0:	b40001e3 	cbz	x3, 10de1c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x9626c>
+  10dde4:	d503233f 	paciasp
+  10dde8:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  10ddec:	52800042 	mov	w2, #0x2                   	// #2
+  10ddf0:	910003fd 	mov	x29, sp
+  10ddf4:	a90153f3 	stp	x19, x20, [sp, #16]
+  10ddf8:	aa0103f4 	mov	x20, x1
+  10ddfc:	aa0003f3 	mov	x19, x0
+  10de00:	d63f0060 	blr	x3
+  10de04:	3dc00680 	ldr	q0, [x20, #16]
+  10de08:	3d800660 	str	q0, [x19, #16]
+  10de0c:	a94153f3 	ldp	x19, x20, [sp, #16]
+  10de10:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  10de14:	d50323bf 	autiasp
+  10de18:	d65f03c0 	ret
+  10de1c:	d65f03c0 	ret

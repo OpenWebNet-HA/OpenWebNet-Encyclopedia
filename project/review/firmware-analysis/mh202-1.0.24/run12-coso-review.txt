@@ -1,0 +1,10 @@
+# Independent lighting STM source review
+
+PASS. Parent reproduced collect_lighting_stm.py --check:19outputs/12spans/30words/5inputs/4callbackrelocations/2receiptliterals/6hostcases, ownoriginal0. Reviewed actual descriptor callback offsets distinctfromTR,44bytecontext/reset, ordinaryrequestpendingID/kind/WHERE/timer argument and selectedfield/timeout receipt branches.
+
+MatchingID/status1→state2→ordinarykind1completion and status2→NACK/reset are bounded source paths, not universalcorrelation. Author explicitly notes IDmismatch also reachesordinarycompletion if otherwiseadmitted; outer callbackrouting/ownership/key producers remainunknown, so no cross-request effect/defect is claimed. Timer1000 is an API request, not observeddeadline. Core receipts/lists are construction boundaries, not physicalstate/ACKdelivery. Busy pending reset, actualtimerlifetime and completioncallback remain delegates. No acceptance of fullrawcommands or fullopcode/support matrix follows.
+
+Exact author identities:
+- `coso/run12/REPORT.md` SHA256 `fb9e5775b71ea822eff0b0bb5c8df7577a100b3e1373cf9001fa75ce9082ccc3`
+- `coso/run12/collect_lighting_stm.py` SHA256 `30fa5c313bf99745f635da8efa513fa5d9f4c34756b8a444363bb6626bcd0226`
+- `coso/run12/output-manifest.json` SHA256 `382e18269efe6ef90d68c9d8bc35f89612d22e903ffffba7702d076a1d6dab6e`

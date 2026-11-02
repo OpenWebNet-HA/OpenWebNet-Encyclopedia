@@ -1,0 +1,29 @@
+{
+  "scope": "Exact original reports and input review; later independent reviews recorded separately",
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/inventory/REPORT.md",
+      "published": "inventory-report.txt",
+      "bytes": 8641,
+      "sha256": "3f78472f276680b6903ae9c5c15eb6ace7753b28870975c49cb016d26f373fb7"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/protocol/REPORT.v2.md",
+      "published": "protocol-report.txt",
+      "bytes": 14234,
+      "sha256": "b07a9d0fcb645f42c347a47075997dbee23a202a18e797d57825da82d2a7a97d"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/boot/REPORT.md",
+      "published": "boot-report.txt",
+      "bytes": 14224,
+      "sha256": "1a6b4c49e70da30a687196fca6189bcd590d00479e4ad7302749092b29cb469c"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/reviews/INPUT_AND_ROLE_PREFLIGHT.md",
+      "published": "input-and-role-review.txt",
+      "bytes": 7601,
+      "sha256": "eae14e98d6bc51289709b49d6ecbbaba77bef925448b647ec585fe18c251853f"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "actual_exit_code": 0,
+  "canonical_outputs": 5,
+  "command": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/source-component/collect_clock_v1.py --check",
+  "exact_first_copies": 7,
+  "original_execution": 0,
+  "source_hashes_views": "Own12selectedsourceoccurrences checked independently by canonical reproduction",
+  "status": "PASS"
+}

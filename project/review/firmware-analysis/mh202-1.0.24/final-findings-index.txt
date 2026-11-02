@@ -1,0 +1,14 @@
+# MH202 final scoped findings navigation through validated28
+
+This is navigation, not exhaustive firmware coverage, a fresh semantic re-audit or closure of every Device gate. The unchanged predecessor guides retain35rows; only2reviewed28rows are added here, for37navigationrows.
+
+- [Frozen24-row guide through21](../run22/SCOPED_FINDINGS.md), exact JSON identity/index in FINAL_FINDINGS.json.
+- [Separate2-row run22 supplement](../run23/candidate-v2/RUN22_FINDINGS_SUPPLEMENT.md), exact JSON identity/index in FINAL_FINDINGS.json.
+- [Frozen9-row later23..27 guide](../run28/candidate-v3/LATER_FINDINGS.md), exact JSON identity/index in FINAL_FINDINGS.json.
+
+| Row | Finding | Source | Remaining boundary |
+| --- | --- | --- | --- |
+| MH28-01 | Packaged new/attach/destroy/unref update the actual GSource reference counter through distinct paths; WHO25 reset/rearm operates on its separate private source pointer, while framework dispatch also changes references. | [Report](../../who25/run28-source/REPORT.md), line44; [review](../../reviews/run28/source-ownership-review.md) | Closed arithmetic ledgers do not prove actual retained reference, leak, lifetime, timer/clock behavior, natural registry invocation or physical outcome. |
+| MH28-02 | Selected script pathname options flow to the complete two-open/global-store wrapper and one read-descriptor/count API boundary; bounded exact R/P query leaves producer unresolved. | [Report](../../lifecycle/run28/REPORT.v2.md), line18; [review](../../reviews/run28/fifo-review.md) | No actual target open/read, live binding, filesystem/FIFO success, complete payload/cleanup or R/P producer/absence proof; separate0x8c90 remains opaque. |
+
+FIFO uses authoritative REPORT.v2 with its explicit wording refinement; native27 uses its corrected source-identity report through the predecessor row. Earlier18/21 unavailable draft history remains unverified. Row indices/canonical hashes preserve predecessor fields rather than rewriting claims. No native or test execution is added.

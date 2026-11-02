@@ -1,0 +1,7 @@
+# Run03 dual-analysis synthesis
+
+F460 now has an original stored-data/manager/invoker connection to a two-64-bit-word nanosleep request, numeric error-four retry loop, candidate C-library/TLS contract and a distinct common caller's conditional completion marker. Ordinary Linux LP64 API semantics support conditional seconds units, while host headers and tagged Linux documentation remain semantic context, not original target headers or measured timing. A normal non-retry error return can still reach the selected marker; it is not elapsed-success proof.
+
+F461 now has the original executable's descriptor direction/criterion matcher, the actual same-message/same-descriptor indirect callback and the conditional same-manager connection to earlier registration. A decimal-string-to-criterion producer narrows one premise without proving public WHO, raw grammar, natural input, actual output or global first-match exclusivity. Field/translation objects and their numeric namespaces remain separate.
+
+These are static source findings with independent cross-source review and reproducible host collectors. New original/helper/native/model/fixture/runtime/physical execution remains zero. Earlier ledgers, first candidates and correction histories are unchanged.

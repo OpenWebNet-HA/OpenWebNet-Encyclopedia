@@ -1,0 +1,95 @@
+# MH202 1.0.24 Firmware Analysis
+
+This examination records build-specific MH202 implementation evidence for [OWN-DEV-0151](../../devices/definitions/own-dev-0151-mh202-scenario-programmer.md). The current checkpoint includes the initial static batch and selected state/routing continuations; the overnight examination remains in progress. Findings are added as they are reviewed, with gaps retained explicitly. The current evidence also includes selected original ARM code in eleven memory-only emulation corpora, including two prefixes stopped before a selector read. No firmware process, target OS call, PHP/JavaScript, service, gateway or bus operation has run.
+
+## Artifact and method
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Registered artifact | `firmware-mh202-010024` | Read-only [artifact manifest](../../sources/artifact-manifest.yaml) |
+| Filename / package label | `MH202_010024.fwz` / `1.0.24` | Archive registration and extracted `fwz.xml` |
+| Archive size | `37111681` bytes | Verified download |
+| Archive SHA-256 | `bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7` | Exact registered identity |
+| Manifest object-model version | `5.0.5` | Package declaration; distinct from catalogue `modobj` and Firmware ID |
+| Supplied payloads | Normal/recovery ext3 images, shared `uImage`, update manifest | Four ZIP members; ZIP/gzip/uImage integrity checks passed |
+| External actions | `4.xtz`, `2.xtz` | Referenced by update manifest, absent from this ZIP |
+| Applicable evidence | Static inspection plus isolated comparator, copy, normalizer-body, prepared-suffix and normal builder/parser-object and common-parser/normalizer, bracket/level, special-entry-prefix, COSO pointer-parser/serializer, in-place core-record and fresh-record/native-ID corpora | Eleven canonical corpora: `60` top-level entries, including two stopped prefixes; `29652` original instruction visits, `2991` declared primitive callbacks, `118` original-definition redirects, `16` return boundaries and `2` selector-read stop boundaries; target process/OS calls `0` |
+| Distribution policy | Private original | Published excerpts/provenance retain no vendor binaries or packaged credential values |
+
+The [review capsule](../../project/review/firmware-analysis/mh202-1.0.24/) retains report, original-file and collector identities. Raw Firmware images and the larger reproducibility dossier remain separate. Package identity is not an installed release or hardware-revision observation. Catalogue Firmware `561` retains its own `1.0.0` tuple and applicability.
+
+## Build composition and comparison
+
+Paths below beginning `home/` are relative to the original image root. The normal image has `4898` regular files and recovery `4408`. Their same-path hashes match for `4400` files; only three shared regular paths differ. All `78` regular files under the selected vendor `bin`, `lib` and `libcoso` directories match normal/recovery. That count includes scripts and is not an ELF count. Recovery has a concrete `home/bticino/sp/Recovery` marker; its runtime consumer remains to be traced.
+
+Sixteen selected MH202 executables/libraries are ELF32 little-endian ARM. All fourteen with matching-path F454 counterparts differ in both complete-file and `.text` hashes. Similar filenames and exported classes therefore do not authorize reuse of F454 addresses or object fixtures; inequality also does not mean that every function differs. See the [inventory report](../../project/review/firmware-analysis/mh202-1.0.24/run1-inventory-report.txt).
+
+| Component metadata | Packaged label | Limit |
+| --- | --- | --- |
+| Kernel header | `Arago/2.6.32.17-davinci1/lago` | Header declaration, not a booted kernel or physical board probe |
+| libc / libstdc++ | `2.8-r12.6` / `4.3.3-r12.6` | Package metadata |
+| Apache / PHP CLI | `2.2.14-r3.6` / `5.2.13-r7.4.6` | Normal packaged Apache and command-line PHP; no version process ran |
+| Apache PHP module | `5.1.6-r3.6` | Distinct module package and original no-argument version-function literal; not an active-service observation |
+| GLib | `2.28.7-r2.6` | Matching original version objects `2/28/7`; SONAME `2.0` is separate ABI metadata |
+| OpenSSL | `1.0.0d-r14.0.6` | Package label, separate from ABI/implementation behavior |
+
+The [component audit](../../project/review/firmware-analysis/mh202-1.0.24/run12-inventory-report.txt) finds `218` normal and `203` recovery package records, with identical version labels for the `203` shared names. The bundled PHP CLI and Apache module are distinct implementations (`5.2.13` and `5.1.6`), independently supported by their original version-function references. Recovery's requested `usr/sbin/httpd` resolves to `bin/busybox`, while normal uses the Apache binary. These are file/package facts, with no claim of active services or universal capability absence.
+
+## Scenario engine and WHO 17
+
+Original `bt_taskmanager` has a WHO 17 post-parser dispatcher at `0xa72c`, with its ordinary `WHAT` jump table at `0xa7dc..0xa7e8`. These are original ELF virtual addresses, scoped to the exact file hash in the [functional report](../../project/review/firmware-analysis/mh202-1.0.24/run1-functional-report.txt).
+
+| `WHAT` | Selected native operation | Retained boundary |
+| ---: | --- | --- |
+| `1` | Launch helper `0xd4f8` | Existing record, nonzero WHERE and additional state/global guards apply |
+| `2` | Stop helper `0xd47c` | Selected record or general-WHERE iteration; PID/FIFO policy is separate |
+| `3` | Enable helper `0xd2f4` | Changes the record's disabled marker |
+| `4` | Disable helper `0xd258` | Changes the record's disabled marker |
+
+Two native renderers format `*17*%d*%d##`: `0xcad0` chooses availability `3/4` from record offset `+52`, while `0xcb04` chooses execution/control `2/1` from `+60`. Nonzero control state includes a stop-request state; it must not automatically become proof of a physically running script. Complete publisher/subscription/transport ownership remains open.
+
+The loader at `0xce14..0xd198` searches numeric files `1..300` using `home/bticino/cfg/extra/4/<number>.spt/<number>.spt`, continuing across failed opens. It binds `$TRIGGERSTART`, `$TRIGGERSTOP`, `$TRIGGERENABLE` and `$TRIGGERDISABLE` to four actual callbacks. Launch constructs a `bt_script` command and two FIFO paths. These are concrete loader/call sites, not successful process creation, a complete script grammar or a proven trigger matcher.
+
+The first batch located `$RESTART`, `SEMPRE`, a global command gate and interpreter operations. The [state/routing continuation](mh202-1.0.24-state-and-routing.md) adds concrete event/callback, configured panic-frame, FIFO/PID, saved-state restoration and partial `IIF` joins. Their names do not yet establish the complete manual-described only-if/restart/panic lifecycle. The absent configured `.spt` bodies are an explicit evidence gap. Selected COSO scenario translation now has [body/list evidence](mh202-1.0.24-state-and-routing.md#coso-scenario-translation-is-separate-from-scheduling), while its state/application/timer paths remain separate from this WHO 17 scheduler.
+
+## PHP scenario index and state consumer
+
+The packaged Apache configuration points to `/usr/share/apache2/htdocs/myhome` and loads PHP5; these are source declarations. Selected PHP sources build WHO 17 ordinary commands and general query `*#17*0##`. The status consumer keeps execution `1/2` and availability `3/4` as two independent fields, matching the native vocabulary. Session, transport, PHP evaluation and actual browser behavior remain unexecuted.
+
+`lib/configura.php:20..29` scans `scenario_1..scenario_300` in `extra/4/info.xml` but stops at the first empty name. It preserves each record's separate XML `id`; that ID becomes command WHERE. This UI enumeration is not a universal MH202 WHERE range and differs from the native loader's gap handling. A separate script-source view contains an unrepaired source expression whose successful parsing/rendering is unproved. See the [web report](../../project/review/firmware-analysis/mh202-1.0.24/run1-web-report.txt).
+
+## Routing, parser layouts and diagnostics
+
+Packaged `stack_open.xml` assigns WHO `0,1,2,4,5,9,14,15,22,25,29` to `coso`, WHO `17` to `bt_taskmanager`, and WHO `6,7` to `bt_vct`. Diagnostics use `bt_device`; declarations and working-mode fields are not observed active services or complete support lists.
+
+| Native parser implementation | Address-slot stride | WHERE / DIM offset | Kind-word offset |
+| --- | ---: | --- | --- |
+| MH202 `libopen.so.0.0` | `90` bytes | `+540` / `+900` | `+0x623c` |
+| MH202 `libcommon.so.0.0` | `130` bytes | `+780` / `+1300` | `+0x1dec` |
+| MH202 COSO `libopenmsg.so` | Pointer/string fields in a `48`-byte object | `+16` / `+32` | `+44` |
+
+The two C++ predicate implementations compare kind `4` for a measure frame, but their objects are not interchangeable. Selected native COSO calls instead produce kind `1` for an ordinary command and kind `3` for a DIM query; those pointer objects are a third representation. The COSO plugin paths use a separate parsed representation and kind vocabulary. Dependency/symbol evidence identifies candidate providers; final runtime binding and complete parser grammar remain separate.
+
+The native diagnostic mask includes WHO `1000`. The separately initialized sixteen-entry WHO-to-SCS map has eight ordinary/diagnostic pairs and no `1000` entry; its missing-value path returns `-1`. This distinguishes membership from generic conversion, and does not prove global rejection or absence of local WHO 1000 handling. The five-class translator factory and a bounded device-address translator provide further concrete paths. See the [protocol report](../../project/review/firmware-analysis/mh202-1.0.24/run1-protocol-report.txt).
+
+## Boot, storage, update and external assets
+
+The declared runlevel5 daemon script sets vendor library paths and starts `bt_daemon`. Both images declare a writable extra partition at `home/bticino/cfg/extra`; the supplied root images do not contain its mounted contents. The language link targets `extra/2`, while independent native/PHP consumers use `extra/4` for scripts and their index. These establish resource consumers, not the exact content/version/layout of the missing `.xtz` archives.
+
+New MH202 HAL code has board-conditioned UBI command-vector paths and distinct Device/shell-template paths for normal/recovery installation. The inspected delegates and their exact `-1` checks do not establish complete package validation, rollback, durable installation or cryptographic authorization. Credential-bearing template text is withheld from reports. The continuation now records a bounded configuration container/checksum/copy/writer contract; complete persistence/recovery, marker/mode transitions and update callers remain open. See the [platform report](../../project/review/firmware-analysis/mh202-1.0.24/run1-boot-report.txt).
+
+## Further state and routing
+
+The [reviewed continuation](mh202-1.0.24-state-and-routing.md) also records distinct action-return consumers, numeric clock comparison, selected timing delegates, COSO scenario-body/list translation, saved-state file policy and configuration-copy/default-fallback paths with explicit failure/runtime limits. It additionally identifies an action-specific disabled-marker check, selected trigger rules, WHO `1000` null-WHERE handling and conditional vector handoff, plus startup XML alias/status-writer policy. It also narrows candidate process providers and a WHO `1000` General header exception, plus the daemon's process-environment selector, runtime XML field binding and conditional child-launch filter. Later refinements distinguish initial-query readiness from the command gate, scenario STM pending/timer and actual dispatcher/key/callback paths, diagnostic qualification/selected DIM1 decoding, runtime XML-to-service fields, and the daemon helper's unsigned-byte return versus exact-minus-one checks. Actual loader binding, complete parser/WHERE/class acceptance, copy readback, configured resources and child readiness remain separate boundaries.
+
+The next static continuation makes diagnostic output-object ownership and separate return channels explicit, distinguishes automation ordinary receipt tracking from query/timer state, and maps a selected WHO4 scalar formatter. These joins do not add original execution, raw-input acceptance, physical temperature units or complete command support. See the [further implementation boundaries](mh202-1.0.24-state-and-routing.md#diagnostic-output-object-and-result-channels).
+
+The [collector/feedback continuation](mh202-1.0.24-state-and-routing.md#decoder-array-and-collector-object-ownership) distinguishes decoder-array storage from caller-object reparsing, corrects an incomplete diagnostic qualification list, and joins conditional automation feedback identity and a selected WHO4 request body. These remain static source contracts with explicit parser, synchronizer, provider and physical limits.
+
+## Coverage and next work
+
+The reviewed batches cover scenario dispatch/loading, selected event/control-state joins, partial interpreter behavior, web consumers, native provider/routing boundaries and platform composition. Eleven isolated original-code corpora supplement static evidence; it does not establish complete parser grammar, firmware runtime or physical behavior. No percentage or exhaustive-coverage claim is assigned. Next priorities include production selector provenance, configured mixed expressions and actions, upstream diagnostic conversion, status/FIFO/PID lifecycle, COSO state ownership and further temperature-control breadth. Missing assets and actual hardware/runtime corroboration remain explicit.
+
+The overnight process maintains separate reports, peer reviews, coverage, ranked gaps and reproducible checks. Device source reconciliation stays review-ready until the new package has been reconciled across the applicable reference pages; narrow mechanical or source-review success does not automatically close every Device gate.
+
+The [record and script lifecycle](mh202-1.0.24-record-and-script-lifecycle.md) distinguishes fresh ID assignment, conditional monitor publication and the interpreter's concrete BEGIN head.

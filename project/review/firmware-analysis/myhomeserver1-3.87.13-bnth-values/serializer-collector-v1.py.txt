@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+"""BNTH selector2 serializer -> same-JSON reparse, static source only."""
+import sys
+sys.dont_write_bytecode=True
+import argparse,hashlib,importlib.util,json,os,re,struct,subprocess
+from pathlib import Path
+D=Path(__file__).resolve().parent;W=next(x for x in D.parents if(x/'sources').is_dir());R=W/'work/myhomeserver1-firmware/3.87.13/research';V=R/'2026-10-31/image_vfs.py';S='/home/bticino/scheduling_manager/scheduling_manager'
+H=lambda b:hashlib.sha256(b).hexdigest();J=lambda x:(json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+sp=importlib.util.spec_from_file_location('bnth_value_vfs',V);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+SPANS=[('base-serializer',0x23aac,0x23c14),('derived-serializer-prefix',0x23c3c,0x23c62),('derived-serializer-arms-and-return',0x23c68,0x23d14),('reparse-selected-presence',0x2c050,0x2c118),('same-JSON-initializer',0xa7e28,0xa7e56),('compiled-value-copies',0x103b96,0x103bca)]
+GUARDS=[(0x23c42,'0d46'),(0x23c48,'0446'),(0x23c58,'ab6a'),(0x23c5a,'052b'),(0x23c5e,'dfe803f0'),(0x23cd0,'95ed0e0b'),(0x23ce4,'cae7'),(0x23c7c,'3146'),(0x23aba,'0021'),(0x23ad2,'ab68'),(0x23af6,'297f'),(0x23b14,'2b6a'),(0x23b58,'6b6a'),(0x2c070,'43f82c2b'),(0x2c090,'58b1'),(0x2c0b4,'58b1'),(0x2c0d8,'88b9'),(0x2c10c,'0223'),(0x2c110,'a362'),(0x2c112,'84ed0e0b'),(0xa7e2a,'94ac'),(0xa7e3c,'2146'),(0xa7e3e,'4846'),(0x103b9c,'d5ed0a1b'),(0x103ba6,'c4ed241b'),(0x103bb2,'d5e90e01'),(0x103bba,'c4e92801')]
+
+def build():
+ v=m.ImageVFS();b=v.read_bytes(S);assert H(b)=='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26'
+ ph=struct.unpack_from('<I',b,28)[0];es,n=struct.unpack_from('<HH',b,42);L=[struct.unpack_from('<8I',b,ph+i*es)for i in range(n)]
+ def off(a,z=1):return next(o+a-va for t,o,va,_,fs,*_ in L if t==1 and va<=a and a+z<=va+fs)
+ def raw(a,z):o=off(a,z);return b[o:o+z]
+ def u(a):return struct.unpack('<I',raw(a,4))[0]
+ def txt(a):o=off(a);e=b.index(0,o);assert e-o<128;return b[o:e].decode('ascii')
+ hp=v.root/v.resolve(S).lstrip('/');env=dict(os.environ,DEBUGINFOD_URLS='');out={};rows=[]
+ for name,a,e in SPANS:
+  t=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(hp)],text=True,env=env).replace(str(hp),S);t=re.sub(r' <([^>]+)>',lambda q:q[0]if'@plt'in q[1]else'',t);out['spans/'+name+'.txt']=t.encode();rows.append({'name':name,'start_VA':hex(a),'end_VA_exclusive':hex(e),'file_offset':hex(off(a,e-a)),'sha256':H(raw(a,e-a))})
+ for a,z in GUARDS:assert raw(a,len(bytes.fromhex(z))).hex()==z,hex(a)
+ def call(pc,target,blx=False):
+  a,c=struct.unpack('<HH',raw(pc,4));assert a&0xf800==0xf000;s=a>>10&1;i=1-((c>>13&1)^s);j=1-((c>>11&1)^s);d=s<<24|i<<23|j<<22|(a&1023)<<12|(c&2047)<<1
+  if s:d-=1<<25
+  assert((((pc+4)&~3)if blx else pc+4)+d)&0xffffffff==target,hex(pc)
+  return{'VA':hex(pc),'target':hex(target),'bytes':raw(pc,4).hex(),'BLX_to_ARM':blx}
+ calls=[call(a,t,x)for a,t,x in [(0x23c54,0x23aac,False),(0x23cd6,0x1142c,True),(0x23ce0,0x10c70,True),(0x23c7e,0x11294,True),(0xa7e44,0x2c050,False),(0xa7e52,0x103b08,False),(0x2c108,0x10ed4,True),(0x2c08c,0x110a0,True),(0x2c0b0,0x110a0,True),(0x2c0d4,0x110a0,True)]]
+ keys=[]
+ for p,pc,k in [(0x23d44,0x23cb0,'mode'),(0x23d48,0x23cc6,'status'),(0x23d4c,0x23cde,'setpoint'),(0x23c20,0x23ae4,'id'),(0x23c24,0x23b02,'enabled'),(0x23c28,0x23b38,'type'),(0x23c2c,0x23b7c,'operator'),(0x2c184,0x2c06c,'mode'),(0x2c188,0x2c096,'mode'),(0x2c18c,0x2c0ae,'status'),(0x2c190,0x2c0ba,'status'),(0x2c194,0x2c0d2,'setpoint'),(0x2c1a0,0x2c102,'setpoint')]:
+  a=(u(p)+pc+4)&0xffffffff;assert txt(a)==k;keys.append({'pool':hex(p),'pool_word':hex(u(p)),'ADD_PC':hex(pc),'literal_VA':hex(a),'key':k})
+ base=(u(0x2c17c)+0x2c05e+4)&0xffffffff;rs=base+u(0x2c180);h=u(rs);rt=u(h+4);assert(base,rs,h)==(0x1659a4,0x166a24,0x160118);assert txt(u(rt+4))=='13BnthCondition'and u(h+8)==0x23c3d
+ assert base+u(0x30704)==rs
+ table=raw(0x23c62,6);assert table.hex()=='202b36424e03'and 0x23c62+2*table[2]==0x23cce
+ bbase=(u(0x23c1c)+0x23ad4+4)&0xffffffff;assert bbase==base
+ tslot=bbase+u(0x23c34);tt=u(tslot);assert tt==0x1605b0;assert u(tt+11*8)==4 and txt(u(tt+11*8+4))=='BNTH'
+ oslot=bbase+u(0x23c38);ot=u(oslot);assert u(ot+3*8)==5 and txt(u(ot+3*8+4))=='equal'
+ rel=subprocess.check_output(['readelf','-rW',str(hp)],text=True,env=env);rr=[]
+ for a in [rs,h+4,h+8,tslot,oslot]:
+  r=next(x.strip()for x in rel.splitlines()if x.startswith(f'{a:08x} '));assert'R_ARM_RELATIVE'in r;rr.append(r)
+ imports=[]
+ for symbol in ['_ZN4Json5ValueC1Ed','_ZNK4Json5Value8asDoubleEv','_ZN4Json5ValueaSEOS0_','_ZN4Json5ValueixEPKc','_ZNK4Json5Value8isMemberEPKc']:
+  r=[x.strip()for x in rel.splitlines()if'R_ARM_JUMP_SLOT'in x and re.search(r'\s'+re.escape(symbol)+r'@',x)];assert len(r)==1,symbol;imports.extend(r)
+ pins={S:{'sha256':H(b),'bytes':len(b)}}
+ for p,k in [(V,'image_accessor'),(R/'2026-11-01-condition-ownership/distinct-condition/REPORT.md','inherited_BNTH_selected_condition'),(W/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md','curated_product_context')]:z=p.read_bytes();pins[k]={'path':str(p.relative_to(W)),'sha256':H(z),'bytes':len(z)}
+ out['INPUTS.json']=J(pins)
+ out['ORIGINAL_SOURCE.json']=J({'image':S,'code_spans':rows,'guards':[{'VA':hex(a),'bytes':z}for a,z in GUARDS],'direct_calls':calls,'PIC_keys':keys,'raw_identity':{'constructor_GOT_base':hex(base),'slot':hex(rs),'header':hex(h),'RTTI':hex(rt),'name':'13BnthCondition','primary_AP':hex(h+8),'first_Thumb_method':hex(u(h+8)),'constructor_and_final_factory_header':'same actual GOT slot; not an inferred temporary class'},'separate_data':[{'name':'raw_header_and_first_method','VA':hex(h),'raw_hex':raw(h,12).hex(),'sha256':H(raw(h,12))},{'name':'selector_TBB','VA':'0x23c62','raw_hex':table.hex(),'sha256':H(table)}],'selected_TBB':{'base':'0x23c62','selector':2,'entry_byte':hex(table[2]),'target':'0x23cce'},'base_tables':{'type_slot':hex(tslot),'type_table':hex(tt),'type_row':11,'type_name':'BNTH','operator_slot':hex(oslot),'operator_table':hex(ot),'selected_operator_row_for_word2':3,'selected_name':'equal'},'relative_relocations':rr,'import_declarations':imports})
+ out['VALUE_CONTRACT.json']=J({'raw_selector':{'offset':40,'selected':2,'source_double_offset':56,'distinct_mode_offset':44,'distinct_status_offset':48},'serializer':{'entry':'0x23c3c','JSON_destination':'incomingr0→r4','raw_receiver':'incomingr1→r5','base':'0x23aac starts freshJsonValueType0; ID ifnonempty, enabled, type, operator unless−1','selected':'raw40==2→TBB23c62 row2→23cce; rawdouble56→D0→JsonValue(double)→exactsetpoint key→moveassignment','suppression':'No value/sentinel/zero test in selected setpoint arm; no suppliednumericfixture','other_presence':'Selectedderivedarm doesnotrequestmode/status; under ordinaryfreshJSON/base/member/assignment semantics neither exists to preempt reparse'},'same_JSON_join':{'destination':'initializerSP592 (r4) at a7e2a','raw_virtual':'a7e28 vptr→slot0 at a7e36→a7e38','reparse':'unchangedr4→r1 a7e3c→a7e44 2c050','reparsed_temporary':'SP4280 (r9)','compiled':'a7e52 consumes same reparsedtemporary; raw40→compiled144 and raw56→compiled160'},'reparse_order':'modepresent→selector0/asInt; else statuspresent→selector1/asBool; else setpointpresent→selector2/asDouble/raw56; later optionalpaths notpromoted','conditional_coherence':'Validrawobject/currentvptr, normal freshJSON/type/string/key/assignment/asDouble/allocation/copy semantics; structural same-object/source chain, not executed fullJSONroundtrip','not_claimed':['numericdomain/units/physicalmeaning or naturalconfiguredscene','alloptionalfield/default/operatorcontracts','bitwise/floatingexceptional/formatting/valuepreservation acrossproviders without ordinarypremises','wholepredicate/cache/consumer/lifetime or actualoperation'],'method':{'original_execution':0,'semantic_host_fixtures':0,'target_IO':0}})
+ out['DEVELOPMENT_HISTORY.json']=J({'canonical_generation_failures':0,'precollector_host_probe':'One inline read-only Python probe had a mismatched closing parenthesis and stopped at SyntaxError before execution. No source/generated candidate files existed. A new corrected read-only probe established exact PIC keys/table rows. This note is a later disclosure, not a contemporaneously pinned failed-file reconstruction.','probe_disassembly':'An exploratory disassembly began103b8a within a prior wide instruction; retained canonical span begins valid instruction103b96 instead. No instruction claim derives from the truncated exploratory first halfword.','overwritten_candidates':0})
+ out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes()),'outputs':{n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()},'counts':{'code_spans':len(SPANS),'byte_guards':len(GUARDS),'direct_calls':len(calls),'PIC_keys':len(keys),'separate_data_spans':2,'relative_relocations':len(rr),'import_declarations':len(imports),'inputs':len(pins),'original_execution':0}})
+ return out
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');ck=ap.parse_args().check;out=build()
+ if ck:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  for n,p in json.loads((D/'first-candidate/INDEX.json').read_bytes()).items():z=(D/n).read_bytes();assert z==(D/'first-candidate'/n).read_bytes()and H(z)==p['sha256']and len(z)==p['bytes'],n
+ else:
+  C=D/'first-candidate';assert not C.exists(),'refuse snapshot overwrite'
+  for n in out:assert not(D/n).exists(),'refuse generated overwrite'
+  cp={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),Path(__file__).name:Path(__file__).read_bytes()};ix=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in cp.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in cp.items():p=C/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (C/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':ck,'outputs':len(out),'code_spans':len(SPANS),'byte_guards':len(GUARDS),'original_execution':0}))
+if __name__=='__main__':main()

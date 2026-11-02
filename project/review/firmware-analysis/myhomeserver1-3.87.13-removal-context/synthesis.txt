@@ -1,0 +1,9 @@
+# Local removal arguments and a distinct BNCUSCENE condition
+
+Original local source now follows dispatcher incoming context through selected frames to the removal receiver's word0, and params.scene_id through string/decimal requests to the numeric removal key. This is distinct from event-cache params.id. Dispatcher-context origin/main-registry identity, actual provider/branch eligibility and natural removal timing remain open; no opaque receiving/transport/auth/session/framing body is expanded.
+
+Fresh row17 BNCUSCENE maps raw88B to compiled192B with its own fields/vtable. The entire actual predicate reads enabled132 XOR1. Ordinary Boolean0/1 therefore returns nonzero when disabled and zero when enabled; the same compiled pointer reaches the generic slot+8 condition consumer, where zero fails. This is a concrete local implementation fact, not configured admission, intended support, an executed condition/scene, a defect or physical behavior. Other methods/mutations and serializer coherence remain unclosed.
+
+A scoped correction preserves exact old report/review phrases that grouped conditions with controls/handles: selected scene116 entries are4-byte pointers, separate from trigger/action8-byte pointer/control records. This peripheral label refinement leaves the old numeric-owner removal proof unchanged and does not imply absent condition ownership. See CONDITION_STORAGE_REFINEMENT.md and exact prior snapshots.
+
+Original scheduler SHA2567d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26 with original ImageVFS/PT_LOAD/byte/table/RTTI/relocation evidence. All original/native/provider/JSON/strtol/OS/clock/thread/network/bus/physical execution0; semantic fixtures0; prior native ledgers unchanged. Curated OWN-DEV-0199 supplies product context only.

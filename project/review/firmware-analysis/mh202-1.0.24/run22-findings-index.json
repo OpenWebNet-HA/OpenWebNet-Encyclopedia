@@ -1,0 +1,381 @@
+{
+  "status": "FROZEN through validated checkpoint21; later findings require a linked supplement, not rewriting old source identities",
+  "scope": "Navigation/source-pin reconstruction, not a new firmware experiment or independent semantic re-audit of every old claim. Row count is not coverage.",
+  "checkpoint": 21,
+  "original_execution_added": 0,
+  "target_OS_calls_added": 0,
+  "source_report_count": 28,
+  "rows": [
+    {
+      "id": "MH21-01",
+      "area": "Identity",
+      "bounded_finding": "The supplied archive and extracted image identities are pinned; they are not installed-device observations.",
+      "method": "inventory metadata",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "inventory/REPORT.md",
+      "report_sha256": "eeb9499ddefb70825866dff78865ba2fa26828daf87d8e37e1203d3bb7a30205",
+      "locator_text": "SHA",
+      "report_line": 3,
+      "report_excerpt": "This is host-only original-byte and metadata analysis. No firmware, script, original ARM/JavaScript or vendor helper was executed. Identity is firmware-mh202-010024, MH2021.0.24, archive SHA256 bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7. See the read-only parent provenance and extraction records for original ZIP/gzip/uImage checks.",
+      "remaining": "Installed runtime/configuration and external assets remain separate.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-02",
+      "area": "Scenario ownership",
+      "bounded_finding": "Taskmanager owns WHO17 script loading; numeric1..300 loader traversal does not define a universal scene address range.",
+      "method": "static original source",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "functional/run1/REPORT.md",
+      "report_sha256": "4bd567b9a05afe7a728895966aabbcc2d6c20929b9ffa12d1524fe7f7b0061f6",
+      "locator_text": "1..300",
+      "report_line": 101,
+      "report_excerpt": "**High confidence:** actual extra/4 path consumer, numeric1..300 loop, directive→callback bindings, WHO17 normal WHAT1–4 dispatch, two state renderers, command construction and direct stop branches. **Moderate/composed static evidence:** field names such as disabled/execution, inferred from several original loads/stores and formatted statuses. **Unresolved:** parser acceptance, event matching order, full only-if/restart/panic lifecycle, child PID/FD events, actual `.spt` scripts, timer units/semantics, COSO scenario translation and any real execution or physical delivery.",
+      "remaining": "Configured extra4 bodies, actual launches and physical scenes are unavailable.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-03",
+      "area": "Web index",
+      "bounded_finding": "The PHP scenario index uses a gap rule distinct from native loading and sends a separate XML scene ID.",
+      "method": "static PHP/source inspection",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "web/run1/REPORT.md",
+      "report_sha256": "c7e4d114ff1676841968f09839db39c1966bcb492791f6562fd2a352607a728b",
+      "locator_text": "300",
+      "report_line": 26,
+      "report_excerpt": "Original myhome/lib/config.php defines fileInfo as /home/bticino/cfg/extra/4/info.xml and the selected transport port constant20000. Path/constant lines alone do not connect that port or identify a live endpoint. Original lib/configura.php:19 reads fileInfo. Lines20..29 enumerate scenario_1 through scenario_300, extract name,id,description,scen_name with MyparseInfo, and stop at the first empty name. They append a |@|-separated cache record; lines32..35 prefix it with filemtime(fileInfo). The cache reader55..79 uses its selected temporary file and regenerates on modification-time mismatch or absence.",
+      "remaining": "No PHP/service/runtime data or browser behavior executed.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-04",
+      "area": "Restoration",
+      "bounded_finding": "RESTART gates saved-active restoration before the separate always-start pass, not universal EOF rerun.",
+      "method": "static original source",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "functional/run2/REPORT.md",
+      "report_sha256": "aa786a3363ee95abbd221d1c8af471e20211a86af7bbbfa32404688bfc2346c4",
+      "locator_text": "RESTART",
+      "report_line": 26,
+      "report_excerpt": "## Disabled, restart and always are separate controls",
+      "remaining": "Complete panic reset/readiness/child scheduling and configured scripts remain open.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-05",
+      "area": "Action guard",
+      "bounded_finding": "Selected OWRITE checks a runtime DISABLED marker before its F request; its integer return is not delivery success.",
+      "method": "static original source",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "functional/run3/REPORT.md",
+      "report_sha256": "cc8be66fd56d256880c6724987208b86eb7da2ca939212bdb8121f53fa7dca00",
+      "locator_text": "OWRITE",
+      "report_line": 3,
+      "report_excerpt": "The selected original **OWRITE** implementation checks a runtime `DISABLED` pathname and returns1 before constructing an OPEN request when the stat call returns0. This closes a concrete action-level marker consumer; it does **not** turn taskmanager's disabled state into demonstrated suppression of start events, all script commands, or a manual-level Only if stage.",
+      "remaining": "Task names/global binding, all-action suppression and actual IPC delivery remain conditional.",
+      "related_history_or_refinements": [
+        {
+          "path": "functional/run4/REPORT.md",
+          "sha256": "b0a188a9cb2000b1480700d37ccde2e1e071b8e49874ae2be3f7801a8f9eaa4f"
+        }
+      ]
+    },
+    {
+      "id": "MH21-06",
+      "area": "Numeric variables",
+      "bounded_finding": "Canonical key001 and key1 are distinct in selected named numeric-record lookup; manager slots are not automatically those records.",
+      "method": "static original source",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "functional/run10/REPORT.md",
+      "report_sha256": "3cb3a737cea3b41b8687d0808894f5627787fb5447c1139216f32ce5cd3fb414",
+      "locator_text": "001",
+      "report_line": 9,
+      "report_excerpt": "There is a concrete text-identity qualification. The executable's assignment parses a decimal ID after `$V`, then formats the key with `%.3d`. The selected library `IIF` branch removes `$V` and looks up the remaining operand text directly. For ordinary supplied ID1, the assignment key is `001`; an IIF operand supplied as `$V001` can address that same key under the shared-global/provider premises, while text `$V1` queries a distinct name `1`. No claim establishes which spelling a missing configured generator actually emits or how the full operand parser transforms it.",
+      "remaining": "Full source/global/capacity contract and actual condition/action remain open.",
+      "related_history_or_refinements": [
+        {
+          "path": "lifecycle/run19/REPORT.md",
+          "sha256": "336f4b21b0d7157c385b621c13ddeec2ce9cae60da99fe738fcc86eb635f8022"
+        }
+      ]
+    },
+    {
+      "id": "MH21-07",
+      "area": "Logical folding",
+      "bounded_finding": "Selected mixed separators share an accumulator/pending state; finite ledgers are not a complete configured precedence specification.",
+      "method": "static original source plus finite host ledgers",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "functional/run13/REPORT.md",
+      "report_sha256": "fd11cdedb3a0071beeb8d0a2679ebd84d4db84019347361d2178db6759704c4d",
+      "locator_text": "accumulator",
+      "report_line": 3,
+      "report_excerpt": "**Bounded static dataflow and finite state ledgers; original execution **0**.** This pass maps a meaningful shared-state boundary beyond the previously reviewed ordinary scanner, OR pair and one recursive call. OR and AND have separate seen flags but share the same two comparison bytes. On selected first-use paths, either operator writes its current comparison directly into that shared accumulator. Delimiter finalization checks OR first and can leave the shared pending byte set, which suppresses the subsequent AND finalizer. These are exact selected store/guard effects, not a complete language precedence rule, accepted configured mixed expression, running-script fault or physical/action consequence.",
+      "remaining": "Full mixed grammar, actual scripts and resulting actions are unexecuted.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-08",
+      "area": "Script head",
+      "bounded_finding": "The first matching BEGIN source entry fills the allocated head; construction EOF and execution END are distinct.",
+      "method": "static original source",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "lifecycle/run18/REPORT.md",
+      "report_sha256": "36e21937207c5474435c5ae52efa4478c02988267525e8a92f8a0f48fbf13076",
+      "locator_text": "BEGIN",
+      "report_line": 1,
+      "report_excerpt": "# MH202 run18 — original script node construction, BEGIN head and execution END",
+      "remaining": "Tail storage, actual extra4 labels and invalid-script runtime outcomes remain unknown.",
+      "related_history_or_refinements": [
+        {
+          "path": "lifecycle/run17/REPORT.md",
+          "sha256": "d178923e423d0d2cd089805e9d8553ac849ac1eb4565504a1713db94e1bd03f0"
+        }
+      ]
+    },
+    {
+      "id": "MH21-09",
+      "area": "Direct slots",
+      "bounded_finding": "WHO17 DIM6 stores before its response-range check; DIM7 checks before storing and DIM8 emits adjusted DIM6.",
+      "method": "static original source",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "functional/run19/REPORT.md",
+      "report_sha256": "bd6ee8b3150d5ce7c277903be38f38a03ed7073b6309614128147b621e53d030",
+      "locator_text": "0xaa58",
+      "report_line": 42,
+      "report_excerpt": "**DIM6:** converted r0 is written at **0xaa58** to base+4*WHERE+0x278, equal to the selected word slot. Only afterward does **0xaa5c** use the unsigned<=32000 condition from0xaa4c to reach response formatting. Otherwise it returns local3. The host boundary example writes32001, then takes local3 with no formatted publication. Negative converted words also fail that unsigned guard after the store, but this batch adds no malformed-input/impact matrix or actual frame acceptance claim. The bounded fact is store-before-guard ordering, not an observed defect or physical state effect.",
+      "remaining": "Postparsed slot1..128/local2-3 are not universal scene bounds or wire ACK/KO.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-10",
+      "area": "Event caches",
+      "bounded_finding": "WHO17 changed event-cache values store before readiness gates the matcher; separate command and interpreter layouts remain distinct.",
+      "method": "static original source",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "lifecycle/run19/REPORT.md",
+      "report_sha256": "336f4b21b0d7157c385b621c13ddeec2ce9cae60da99fe738fcc86eb635f8022",
+      "locator_text": "0xde10",
+      "report_line": 50,
+      "report_excerpt": "The handler compares that cached word with the new atoi value at0xde04. Equality returns immediately. On a difference, **0xde10 stores the new value before the readiness test**. It then loads global0x1b4d4, reads its supplied object's field+4 and returns if that is zero (`0xde14..0xde20`). With nonzero field+4 it loads the separate script-record-list global0x1b4d0, passes the original object's full-frame string at+0x19ec, and tailcalls actual matcher0xc608 (`0xde24..0xde38`).",
+      "remaining": "No natural command-event-script propagation, raw admission or complete range policy proved.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-11",
+      "area": "COSO parser",
+      "bounded_finding": "The pointer-string parser uses48-byte objects, distinct from C++common130/libopen90 and64-byte envelopes.",
+      "method": "original code under explicit private models",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "protocol/run16/REPORT.md",
+      "report_sha256": "5304eb2d0038900b37c34498f33dce37fc83df630445899355c76a267991c024",
+      "locator_text": "0x2704",
+      "report_line": 3,
+      "report_excerpt": "Three strict private CPU entries now narrow the explicit parser/serializer premises in COSO15 and thermo15. The same-build candidate is **libopenmsg.so**, with original `buf_to_openmsg` at `0x2704`, not either previously studied C++ parser class. Its actual48-byte pointer/string object, original allocator wrapper and field helpers run; no classifier or parsed field is supplied by the host. The WHO4 query's **actual returned object** is then passed unchanged to original `openmsg_to_buf`.",
+      "remaining": "Original loader/full runtime and general parser grammar are not established.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-12",
+      "area": "Record copying",
+      "bounded_finding": "Selector4 chooses command-side metadata4 and a separate parsed copy, not parsed kind4 or an ACK.",
+      "method": "original parser/helper under private C/GLib/clock/counter models",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "protocol/run20/REPORT.md",
+      "report_sha256": "fe3e7fd6bc39f606d7aa76b1f2d8c3c4962faeae30ba8fa3ca648db09b48f98b",
+      "locator_text": "0x2fa4",
+      "report_line": 30,
+      "report_excerpt": "At0x2fa4 the selector is decremented. **Selector4 table entry0x2fc8→0x3178** calls new_message_to_opencmd through PLT0x1860. Original definition **0x2c78..0x2c8c** invokes new_message_to_open0x2b5c and stores literal4 to envelope+8. Definition **0x2b5c..0x2b9c** requests zero-allocation64, explicitly sets metadata4=2/status52=0, calls g_get_real_time, stores its low/high words at24/28 and representation56=3. The clock import is an ordinary supplied primitive, not original time-provider execution.",
+      "remaining": "Optional lists null; queue/recipient/publication and physical command remain unexecuted.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-13",
+      "area": "Generated parsing",
+      "bounded_finding": "The two exact alarm/sound strings parse as kind1; empty WHO5 WHERE is NULL and WHO22 parameters/selectors are preserved.",
+      "method": "original parser under private string/allocation/list models",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "protocol/run21/REPORT.md",
+      "report_sha256": "4b266b673700b9cb0115ab81bd08aae21902149ac76664c32043b69d492fdef3",
+      "locator_text": "*5*27*##",
+      "report_line": 9,
+      "report_excerpt": "| `*5*27*##` |0 /1|WHO5,WHAT27,WHERE pointerNULL; no parameter lists|",
+      "remaining": "Parser construction does not prove upstream bus admission, serializer behavior or physical meaning.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-14",
+      "area": "Auxiliary translation",
+      "bounded_finding": "Selected WHO9 WHAT3/WHERE5 produces internalB0009B50 and a separately supplied reverse candidate.",
+      "method": "static original source plus finite host model",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "coso/run19/REPORT.md",
+      "report_sha256": "59ef9ce56f6344b6ce9ea1ea9fff36ddfe8283e6968bac0a4075cd7810633e05",
+      "locator_text": "B0009B50",
+      "report_line": 5,
+      "report_excerpt": "The normal image packages actual **libplug_aux_tr.so** and **libplug_aux_stm.so** providers. Their original registration appends numeric criterion9, and the translation descriptor points to original `aux_tr_translate`0x1ab0. A selected ordinary source-contract path for parsed WHO9/WHAT3/WHERE5/kind1 produces four internal bytes **B0 00 9B 50**, converted to ASCII **`B0009B50`**. The reverse translator's selected opcode/low-nibble path reconstructs **`*9*3*5##`**. These are internal translator candidates, not serial wire bytes, captured traffic or observed hardware response.",
+      "remaining": "No physicalWHAT3 meaning, natural inverse exchange or complete address domain.",
+      "related_history_or_refinements": [
+        {
+          "path": "protocol/run20/REPORT.md",
+          "sha256": "fe3e7fd6bc39f606d7aa76b1f2d8c3c4962faeae30ba8fa3ca648db09b48f98b"
+        }
+      ]
+    },
+    {
+      "id": "MH21-15",
+      "area": "Multimedia state",
+      "bounded_finding": "Selected multimedia query copies ID and computes pending; separate receipts and kind4 timer have distinct guards.",
+      "method": "static original source plus supplied state ledgers",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "sound/run21/REPORT.md",
+      "report_sha256": "7a620c417174980119e9573c914dbe7730823697661cb975a20708e8e127aea6",
+      "locator_text": "0xfc04",
+      "report_line": 15,
+      "report_excerpt": "Original initializer0x1d24 allocates **320 zeroed bytes** when descriptor+56 is NULL at0x1fa8..0x1fb8. Its source descriptor is **0x1ab24**, independently resolved from PIC base0x1a9dc and pool0x1fe0. Original ABS32 relocations install sm_init0xfb0c at descriptor+36, gest_status_from_field0xcde4 at+40, and gest_status_from_openserver0xfc04 at+44. Numeric descriptor words+32=3 and+48=2 are retained as raw distinct descriptor fields. Initializer0x1e5c..0x1e88 appends criteria22 and8 to descriptor+52 and requests register_state_machine. Successful allocation/config/registration and active registry/order are premises.",
+      "remaining": "All-zero deadlines are a premise, not universal absence of query timeout; history limit retained.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-16",
+      "area": "Alarm routing",
+      "bounded_finding": "Post-decoded criterion4 delivery depends on a descriptor value; actual callback slot/activation was unresolved through21.",
+      "method": "static post-decoded source",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "alarm/run21/REPORT.md",
+      "report_sha256": "7d7d27de1854e897b3761034265f7ee2dc4179edbc12eb31f4b85d9c8728c870",
+      "locator_text": "0x2988",
+      "report_line": 49,
+      "report_excerpt": "| Supplied SL+56 | Original path | Callback at0x2988 |",
+      "remaining": "No transport/session/framing investigation, real raw admission or physical alarm event.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-17",
+      "area": "Temperature receipt",
+      "bounded_finding": "Selected thermo query has distinct ID/status and data flags; timeout receipt is not proof of a measurement.",
+      "method": "static original source",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "thermo/run16/REPORT.md",
+      "report_sha256": "f260264e351c0fe0616160644a675ae525fd637295872fb1b21c945f0158c436",
+      "locator_text": "2000",
+      "report_line": 3,
+      "report_excerpt": "**Fresh static source; original execution0.** The selected postparsed WHO4/kind3/DIM0/WHERE`1` request from thermo/run15 has an actual thermo state-machine route. Under ordinary initialization and candidate helper contracts, it appends the input request to the field list, stores private state2, copies WHERE/DIM, saves the request record's ID, and requests a timer with argument2000. A matching-ID status1 event and a separate matching WHERE/DIM kind4 response set different flags; receiving both queues a local ACK and resets this context. The selected timer instead chooses ACK/NACK from the status1 flag alone. It is not a physical measurement-success indicator.",
+      "remaining": "Units, raw501 meaning, outer admission and timer/physical behavior remain open.",
+      "related_history_or_refinements": [
+        {
+          "path": "thermo/run14/REPORT.md",
+          "sha256": "d438f0e99f660adc5a67b2cf83f2e1f8ea57dd865d3d483320a921be4a4b62cb"
+        }
+      ]
+    },
+    {
+      "id": "MH21-18",
+      "area": "Diagnostic factory",
+      "bounded_finding": "Selected normal factory has104 distinct keys and General retains R0P0 under normal construction assumptions.",
+      "method": "static original source",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "protocol/run4/REPORT.md",
+      "report_sha256": "abb25a5c162dc988447fc0b1bc756c65d9209c07d7bc58eee73748fa7faef5b5",
+      "locator_text": "104",
+      "report_line": 3,
+      "report_excerpt": "**The normal completed factory leaves `R0P0` owned by General.** All five actual class C1 constructors contribute104 literal map-key assignments, and all104 keys are distinct. Thus the later classes do not overwrite General's selected key under the stated same-build/ordinary-container/no-later-mutation assumptions. This closes the specific final-owner gap retained in run3, without executing a factory or proving raw-parser acceptance.",
+      "remaining": "Native registry/streams, accepted raw input and hardware identity remain unproved.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-19",
+      "area": "Collector correction",
+      "bounded_finding": "Run15 preserves the omitted predecessor adding matchingDIM1..8/18 early shortcut before WHERE in the applicable collector flow.",
+      "method": "independently reviewed source-scope correction",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "protocol/run15/REFINEMENT.md",
+      "report_sha256": "57c4d70d5d10dd3a72a3dc2ad2f98ae97d41aff3f19b45947f37c1afd74cd80a",
+      "locator_text": "0x10bfc",
+      "report_line": 14,
+      "report_excerpt": "0x10bfc e2453001  sub   r3,r5,#1",
+      "remaining": "Not global mode/WHO/raw acceptance; original run6 manifest and finite outcomes remain unchanged.",
+      "related_history_or_refinements": [
+        {
+          "path": "protocol/run6/REPORT.md",
+          "sha256": "0389b36c43fa8da6156f3974dd98bf21893029167b5d0678c64216af19976bfa"
+        }
+      ]
+    },
+    {
+      "id": "MH21-20",
+      "area": "Special selector",
+      "bounded_finding": "Two original parser/comparator prefixes stop before first specialDIM1 selector read; untouched private canary is not firmware initialization.",
+      "method": "original stopped prefixes under private models",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "protocol/run13/REPORT.md",
+      "report_sha256": "e708d11afe6a77b54f536ebc18d2fa49552370205639aef6a568977cd6660adb",
+      "locator_text": "0xca48",
+      "report_line": 3,
+      "report_excerpt": "Two bounded native-entry experiments close a specific boundary left by `triggers/run10`: for the selected short WHO13 measurement inputs, both original common130 constructors and complete normal parser paths execute, but neither their writes nor the surrounding selected taskmanager instructions write the six-word selector region. Execution stops **before** original taskmanager instruction `0xca48` can read its first selector word. No selector value, comparison outcome, comparator return, hit, defect or physical behavior is inferred.",
+      "remaining": "No selector verdict, production stack history, defect or physical behavior inferred.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-21",
+      "area": "Copy operands",
+      "bounded_finding": "Selected configuration branch requests primary-to-primary after unlinking mirror; operands are not silently repaired into an intended mirror copy.",
+      "method": "independently reviewed static original source",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "boot/run4/REPORT.md",
+      "report_sha256": "9ee0cf019a36fdd04faa00a4d47a7bdbe053ed4f0cd5862660b40f8972697d9e",
+      "locator_text": "0x10984",
+      "report_line": 13,
+      "report_excerpt": "| Primary | `/home/bticino/cfg/extra/conf/conf.img` | Main pool `0x10984→0x193bc`; writer pool `0xbd98→0x17c40` |",
+      "remaining": "No actual storage damage/repair, real copy result or durability observation.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-22",
+      "area": "Process helper",
+      "bounded_finding": "Conditional packaged call returns an unsigned byte; selected exact-minus-one guards do not reject ordinary positive exit-byte results.",
+      "method": "static provider/source closure",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "boot/run6/REPORT.md",
+      "report_sha256": "f0c2b3215c01ecaf58dc07f27eaa1bd5b0f8dfa8b8550ea04d26a28f7ae2785a",
+      "locator_text": "0x236c",
+      "report_line": 18,
+      "report_excerpt": "| `call` | `0x236c` |48bytes|",
+      "remaining": "Not live binding, successful child/file transfer or a device failure claim.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-23",
+      "area": "Components",
+      "bounded_finding": "This package distinguishes PHP CLI5.2.13 from Apache module5.1.6; version evidence is build-specific.",
+      "method": "package/file/version-function static joins",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "inventory/run12/REPORT.md",
+      "report_sha256": "2302cebc0f001a2e66232c0d6e9e93d7748a3df7230af1a24d22cd6755edafad",
+      "locator_text": "5.2.13",
+      "report_line": 3,
+      "report_excerpt": "The original package declarations contain218 normal-image records and203 recovery records, with203 shared names and no shared version-label changes. Twelve selected actual binaries add byte identities and source version evidence. A material refinement is **PHP CLI5.2.13 versus the bundled Apache PHP module5.1.6**: the separate package labels and each original no-argument phpversion code path agree. No PHP process or module was run.",
+      "remaining": "No running interpreter/module or current vulnerability/SBOM certification.",
+      "related_history_or_refinements": []
+    },
+    {
+      "id": "MH21-24",
+      "area": "History integrity",
+      "bounded_finding": "Current sound21 source passes independent checks, while overwritten intermediate label drafts remain unavailable and unauthenticated.",
+      "method": "explicit provenance limit",
+      "confidence": "High for bounded reported source/execution relation; applicability and remaining boundary explicit",
+      "report": "sound/run21/REPORT.md",
+      "report_sha256": "7a620c417174980119e9573c914dbe7730823697661cb975a20708e8e127aea6",
+      "locator_text": "Author preparation and provenance note",
+      "report_line": 53,
+      "report_excerpt": "Author preparation and provenance note: before report publication, two raw descriptor JSON key labels were refined from kind/axes wording to neutral descriptor-word offsets. That refinement overwrote the generated descriptor JSON, deterministic output-manifest and collector draft. Their exact prior bytes were not preserved at the time and no independently pinned prior hash is available. This is an explicit draft-history omission; no historical authenticity is claimed for any reconstruction, and no reconstruction is supplied. Source bytes, finite outcomes and execution counts did not change. The actual announced report/author-manifest bytes preceding this clarification are preserved in history-before-provenance-clarification, which does not recover those earlier label drafts. No earlier completed dossier changed. Exact current outputs/report/method and this actual snapshot are pinned by the author manifest.",
+      "remaining": "Actual announced report snapshots do not recover missing earlier drafts; no full-history certification.",
+      "related_history_or_refinements": [
+        {
+          "path": "coso/run18/NAMESPACE_REFINEMENT.md",
+          "sha256": "96f0af7e2adf1b4d0f969a14034055107e42fc4eec3d7bf9b8938a29f102c8bf"
+        }
+      ]
+    }
+  ]
+}

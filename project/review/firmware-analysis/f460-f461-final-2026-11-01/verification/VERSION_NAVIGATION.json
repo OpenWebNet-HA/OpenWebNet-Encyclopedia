@@ -1,0 +1,1614 @@
+{
+  "packets": [
+    {
+      "authoritative_report": {
+        "bytes": 7328,
+        "copy": "source-inputs/c7a2949ed3f49a14fa611561795c68f3f166d980326719d61029975069263945.bin",
+        "path": "work/f460-firmware/2.0.12/research/2026-11-01/first-pass/REPORT.md",
+        "sha256": "c7a2949ed3f49a14fa611561795c68f3f166d980326719d61029975069263945"
+      },
+      "checkpoint": "2026-11-01",
+      "reported_packet": {
+        "product": "F460",
+        "report": "REPORT.md",
+        "root": "work/f460-firmware/2.0.12/research/2026-11-01/first-pass"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 2094,
+          "copy": "source-inputs/45e25271e23e59d0924ca3ba64e0c352fc68fe7ca6de9f70f4841c7fca4712a9.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01/first-pass/OUTPUT_MANIFEST.json",
+          "sha256": "45e25271e23e59d0924ca3ba64e0c352fc68fe7ca6de9f70f4841c7fca4712a9"
+        },
+        {
+          "bytes": 7328,
+          "copy": "source-inputs/c7a2949ed3f49a14fa611561795c68f3f166d980326719d61029975069263945.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01/first-pass/REPORT.md",
+          "sha256": "c7a2949ed3f49a14fa611561795c68f3f166d980326719d61029975069263945"
+        },
+        {
+          "bytes": 19111,
+          "copy": "source-inputs/6d683761d400f35202495a9648af9a355833c358f5f09f3bd235dc3bd6a6f030.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01/first-pass/collect_first_v1.py",
+          "sha256": "6d683761d400f35202495a9648af9a355833c358f5f09f3bd235dc3bd6a6f030"
+        },
+        {
+          "bytes": 1859,
+          "copy": "source-inputs/5781c18870f1129c3d07d84e116fa6d77a0d1abdd2e383516792ca815a073a70.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01/first-pass/first-candidate/INDEX.json",
+          "sha256": "5781c18870f1129c3d07d84e116fa6d77a0d1abdd2e383516792ca815a073a70"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 12048,
+        "copy": "source-inputs/187877260da89ef432021b971268f83854641a72b73e4d7c8d4d02b035b1dd16.bin",
+        "path": "work/f461-firmware/2.0.11/research/2026-11-01/REPORT.v2.md",
+        "sha256": "187877260da89ef432021b971268f83854641a72b73e4d7c8d4d02b035b1dd16"
+      },
+      "checkpoint": "2026-11-01",
+      "reported_packet": {
+        "product": "F461",
+        "report": "REPORT.v2.md",
+        "root": "work/f461-firmware/2.0.11/research/2026-11-01"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 1345,
+          "copy": "source-inputs/191fa7c13aa0ef0df29f106fba9152003964b9d9d8bdbcf558d49fb19bc75c1c.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01/DB_SCOPE.json",
+          "sha256": "191fa7c13aa0ef0df29f106fba9152003964b9d9d8bdbcf558d49fb19bc75c1c"
+        },
+        {
+          "bytes": 832,
+          "copy": "source-inputs/4a34b715636f1df1c362d5754efc78e778dc278b33406674692cce3a1e8687d8.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01/LOCATOR_REFINEMENT.json",
+          "sha256": "4a34b715636f1df1c362d5754efc78e778dc278b33406674692cce3a1e8687d8"
+        },
+        {
+          "bytes": 1453,
+          "copy": "source-inputs/0403589b1aa9206a4943e2f8bbe1ea5337b85dd8b051ed235766d7658395e8ad.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01/LOCATOR_REFINEMENT.v2.json",
+          "sha256": "0403589b1aa9206a4943e2f8bbe1ea5337b85dd8b051ed235766d7658395e8ad"
+        },
+        {
+          "bytes": 2090,
+          "copy": "source-inputs/9654f7ac4a4a9ca736477d55c8e44fd269a7b448d9fe6b2e8f79fb8fc3fbb357.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01/OUTPUT_MANIFEST.json",
+          "sha256": "9654f7ac4a4a9ca736477d55c8e44fd269a7b448d9fe6b2e8f79fb8fc3fbb357"
+        },
+        {
+          "bytes": 12048,
+          "copy": "source-inputs/3265846866f7cebb4d3a91f6c4fd3c64ad111ff72c617b980faa0b3282927c2f.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01/REPORT.md",
+          "sha256": "3265846866f7cebb4d3a91f6c4fd3c64ad111ff72c617b980faa0b3282927c2f"
+        },
+        {
+          "bytes": 12048,
+          "copy": "source-inputs/187877260da89ef432021b971268f83854641a72b73e4d7c8d4d02b035b1dd16.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01/REPORT.v2.md",
+          "sha256": "187877260da89ef432021b971268f83854641a72b73e4d7c8d4d02b035b1dd16"
+        },
+        {
+          "bytes": 2672,
+          "copy": "source-inputs/2ff33a5d303e3fac71abe5d4939681eb17dfa4b10d8eb10df4d559fcb01878cf.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01/collect_db_scope_v1.py",
+          "sha256": "2ff33a5d303e3fac71abe5d4939681eb17dfa4b10d8eb10df4d559fcb01878cf"
+        },
+        {
+          "bytes": 12695,
+          "copy": "source-inputs/a5e0e12bad2b1b3fada8f5bec8d83fcc2a762781450ef74095d85551e6e715cf.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01/collect_firstpass_v1.py",
+          "sha256": "a5e0e12bad2b1b3fada8f5bec8d83fcc2a762781450ef74095d85551e6e715cf"
+        },
+        {
+          "bytes": 264,
+          "copy": "source-inputs/e5c306a60fed71c0a1cd99758f7744d1c39d20d55cc3eb26db0a3737523509a7.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01/db-scope-first-candidate/INDEX.json",
+          "sha256": "e5c306a60fed71c0a1cd99758f7744d1c39d20d55cc3eb26db0a3737523509a7"
+        },
+        {
+          "bytes": 2099,
+          "copy": "source-inputs/6346465950733980d479af7ec91e3f6dc01ac8fbdcc9d22a69e1a12ea1bd9058.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01/first-candidate/INDEX.json",
+          "sha256": "6346465950733980d479af7ec91e3f6dc01ac8fbdcc9d22a69e1a12ea1bd9058"
+        },
+        {
+          "bytes": 142,
+          "copy": "source-inputs/1cb21bdae1ea2f1c77443954d3828a0a41ec650c638cbe48be33ba3f683b33d8.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01/locator-metadata-v2-first-candidate/INDEX.json",
+          "sha256": "1cb21bdae1ea2f1c77443954d3828a0a41ec650c638cbe48be33ba3f683b33d8"
+        },
+        {
+          "bytes": 387,
+          "copy": "source-inputs/12ae53314691f3fd194ecf48e176d84da9288965f056e326d589b4a5398fcc08.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01/report-first-candidate/INDEX.json",
+          "sha256": "12ae53314691f3fd194ecf48e176d84da9288965f056e326d589b4a5398fcc08"
+        },
+        {
+          "bytes": 264,
+          "copy": "source-inputs/f92719d38ef4660d437a463e85b43ed8dde44fe9b3d3e7479f273383f73181db.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01/report-v2-first-candidate/INDEX.json",
+          "sha256": "f92719d38ef4660d437a463e85b43ed8dde44fe9b3d3e7479f273383f73181db"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 5142,
+        "copy": "source-inputs/4caa7e282a04f4a514803b4da93c875e5da20b6ccd4ccae14542d855726eb68a.bin",
+        "path": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/REPORT.md",
+        "sha256": "4caa7e282a04f4a514803b4da93c875e5da20b6ccd4ccae14542d855726eb68a"
+      },
+      "checkpoint": "2026-11-01-depth",
+      "reported_packet": {
+        "first_copies": 12,
+        "outputs_including_manifest": 11,
+        "product": "F460",
+        "report": "REPORT.md",
+        "report_sha256": "4caa7e282a04f4a514803b4da93c875e5da20b6ccd4ccae14542d855726eb68a",
+        "root": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 1792,
+          "copy": "source-inputs/f8872ead2440c2af39e299d4aba9c337f0085f103f36af4f53e5f7444c22c5a6.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/OUTPUT_MANIFEST.json",
+          "sha256": "f8872ead2440c2af39e299d4aba9c337f0085f103f36af4f53e5f7444c22c5a6"
+        },
+        {
+          "bytes": 5142,
+          "copy": "source-inputs/4caa7e282a04f4a514803b4da93c875e5da20b6ccd4ccae14542d855726eb68a.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/REPORT.md",
+          "sha256": "4caa7e282a04f4a514803b4da93c875e5da20b6ccd4ccae14542d855726eb68a"
+        },
+        {
+          "bytes": 12385,
+          "copy": "source-inputs/4501da8d1278a9091b2d9cf21fd59dd20dc04ffd7f5c62125a87469659f03a81.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/collect_scheduler_v1.py",
+          "sha256": "4501da8d1278a9091b2d9cf21fd59dd20dc04ffd7f5c62125a87469659f03a81"
+        },
+        {
+          "bytes": 1690,
+          "copy": "source-inputs/c7300c8d773ed334f96c6f3a412448291c83345cb0c9d4c312c2f3df7f22b281.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/first-candidate/INDEX.json",
+          "sha256": "c7300c8d773ed334f96c6f3a412448291c83345cb0c9d4c312c2f3df7f22b281"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 5869,
+        "copy": "source-inputs/b26581f9a9292aec707562863ba43e7dfc8dcbca1bb6d51e2037295304ca72ec.bin",
+        "path": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/REPORT.v2.md",
+        "sha256": "b26581f9a9292aec707562863ba43e7dfc8dcbca1bb6d51e2037295304ca72ec"
+      },
+      "checkpoint": "2026-11-01-depth",
+      "reported_packet": {
+        "first_copies": 18,
+        "outputs_including_manifest": 16,
+        "product": "F461",
+        "report": "REPORT.v2.md",
+        "report_sha256": "b26581f9a9292aec707562863ba43e7dfc8dcbca1bb6d51e2037295304ca72ec",
+        "root": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 688,
+          "copy": "source-inputs/da28c16538f0d40ac3c1230f852adccb9f2630f51b9750e3b09ac3b3300502f0.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/FAILURE_HISTORY.json",
+          "sha256": "da28c16538f0d40ac3c1230f852adccb9f2630f51b9750e3b09ac3b3300502f0"
+        },
+        {
+          "bytes": 2216,
+          "copy": "source-inputs/429aaba2dceacb8e8653314386d7f728dc20c7b6b1e07332f3ecdecd69b82fbb.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/OUTPUT_MANIFEST.json",
+          "sha256": "429aaba2dceacb8e8653314386d7f728dc20c7b6b1e07332f3ecdecd69b82fbb"
+        },
+        {
+          "bytes": 5574,
+          "copy": "source-inputs/1c720100e1ae34a73c0a74f2a29d0639beca80eaa4dff202a67ce666da9d572f.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/REPORT.md",
+          "sha256": "1c720100e1ae34a73c0a74f2a29d0639beca80eaa4dff202a67ce666da9d572f"
+        },
+        {
+          "bytes": 5869,
+          "copy": "source-inputs/b26581f9a9292aec707562863ba43e7dfc8dcbca1bb6d51e2037295304ca72ec.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/REPORT.v2.md",
+          "sha256": "b26581f9a9292aec707562863ba43e7dfc8dcbca1bb6d51e2037295304ca72ec"
+        },
+        {
+          "bytes": 4237,
+          "copy": "source-inputs/535470653b103b5b25e84d2ba282e9342d9c513100707f50a0ae1f2f23428d78.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/collect_routing_v1.py",
+          "sha256": "535470653b103b5b25e84d2ba282e9342d9c513100707f50a0ae1f2f23428d78"
+        },
+        {
+          "bytes": 4243,
+          "copy": "source-inputs/474531e88c04267e8b9f901e1e055cb07e6119dd9895543ca485423ea55ecd20.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/collect_routing_v2.py",
+          "sha256": "474531e88c04267e8b9f901e1e055cb07e6119dd9895543ca485423ea55ecd20"
+        },
+        {
+          "bytes": 259,
+          "copy": "source-inputs/fe0215a10814ff1a57f7646d15eb616f2e08f8ccba669efca4208f0924ed1b3c.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/development-v1/INDEX.json",
+          "sha256": "fe0215a10814ff1a57f7646d15eb616f2e08f8ccba669efca4208f0924ed1b3c"
+        },
+        {
+          "bytes": 2292,
+          "copy": "source-inputs/c9f3d3f6b883027b4a261bf529bc2549f619590d36ad15dfb865c085b658fd54.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/first-candidate/INDEX.json",
+          "sha256": "c9f3d3f6b883027b4a261bf529bc2549f619590d36ad15dfb865c085b658fd54"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 9034,
+        "copy": "source-inputs/ee7c55b26c5587121bdd27347e602d7cc9f5c3105a407d68f84294c19949d521.bin",
+        "path": "work/f460-firmware/2.0.12/research/2026-11-01-run03-sleep-invoker/REPORT.md",
+        "sha256": "ee7c55b26c5587121bdd27347e602d7cc9f5c3105a407d68f84294c19949d521"
+      },
+      "checkpoint": "2026-11-01-run03",
+      "reported_packet": {
+        "first_copies": 17,
+        "outputs_including_manifest": 15,
+        "product": "F460",
+        "report": "REPORT.md",
+        "report_sha256": "ee7c55b26c5587121bdd27347e602d7cc9f5c3105a407d68f84294c19949d521",
+        "root": "work/f460-firmware/2.0.12/research/2026-11-01-run03-sleep-invoker"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 2440,
+          "copy": "source-inputs/4a900a0a8bfac13b8517abd145efdf9d576fa030dc70df9081123f3eb3d8a2bc.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run03-sleep-invoker/OUTPUT_MANIFEST.json",
+          "sha256": "4a900a0a8bfac13b8517abd145efdf9d576fa030dc70df9081123f3eb3d8a2bc"
+        },
+        {
+          "bytes": 9034,
+          "copy": "source-inputs/ee7c55b26c5587121bdd27347e602d7cc9f5c3105a407d68f84294c19949d521.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run03-sleep-invoker/REPORT.md",
+          "sha256": "ee7c55b26c5587121bdd27347e602d7cc9f5c3105a407d68f84294c19949d521"
+        },
+        {
+          "bytes": 10506,
+          "copy": "source-inputs/2aa19f62d551f01efff27004fb822c76042f3e8a8a17f748cd92f5adad9c7478.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run03-sleep-invoker/collect_sleep_v1.py",
+          "sha256": "2aa19f62d551f01efff27004fb822c76042f3e8a8a17f748cd92f5adad9c7478"
+        },
+        {
+          "bytes": 2295,
+          "copy": "source-inputs/58f0654591aa046845bfdf28a52509b7d1fd50743cfc35a5320b97fccb109eed.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run03-sleep-invoker/first-candidate/INDEX.json",
+          "sha256": "58f0654591aa046845bfdf28a52509b7d1fd50743cfc35a5320b97fccb109eed"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 9896,
+        "copy": "source-inputs/a89d70211c3f6eecb92f620d9e1aecdc52c2c1a06dbff99cdcc89b139b0f6c19.bin",
+        "path": "work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/REPORT.md",
+        "sha256": "a89d70211c3f6eecb92f620d9e1aecdc52c2c1a06dbff99cdcc89b139b0f6c19"
+      },
+      "checkpoint": "2026-11-01-run03",
+      "reported_packet": {
+        "first_copies": 20,
+        "outputs_including_manifest": 18,
+        "product": "F461",
+        "report": "REPORT.md",
+        "report_sha256": "a89d70211c3f6eecb92f620d9e1aecdc52c2c1a06dbff99cdcc89b139b0f6c19",
+        "root": "work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 2805,
+          "copy": "source-inputs/424d8bbc9d1e90968dfcbe000ca6861a20927b43ca55af328485719e003b6dd7.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/OUTPUT_MANIFEST.json",
+          "sha256": "424d8bbc9d1e90968dfcbe000ca6861a20927b43ca55af328485719e003b6dd7"
+        },
+        {
+          "bytes": 9896,
+          "copy": "source-inputs/a89d70211c3f6eecb92f620d9e1aecdc52c2c1a06dbff99cdcc89b139b0f6c19.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/REPORT.md",
+          "sha256": "a89d70211c3f6eecb92f620d9e1aecdc52c2c1a06dbff99cdcc89b139b0f6c19"
+        },
+        {
+          "bytes": 6475,
+          "copy": "source-inputs/2b856f965333e23066d83d82f8a1ae7d77fa969e7a66c3dbd658f09393d1b627.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/collect_dispatch_v1.py",
+          "sha256": "2b856f965333e23066d83d82f8a1ae7d77fa969e7a66c3dbd658f09393d1b627"
+        },
+        {
+          "bytes": 2719,
+          "copy": "source-inputs/2c4f1c31c751677ce644c0697c49a98e1e51d6ed8f1e4f92d3188409c92b1d04.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/first-candidate/INDEX.json",
+          "sha256": "2c4f1c31c751677ce644c0697c49a98e1e51d6ed8f1e4f92d3188409c92b1d04"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 6764,
+        "copy": "source-inputs/00c18455900a2ac60c25d0ad0d0d19ec12935e264b960c30c321da054b477687.bin",
+        "path": "work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/REPORT.v2.md",
+        "sha256": "00c18455900a2ac60c25d0ad0d0d19ec12935e264b960c30c321da054b477687"
+      },
+      "checkpoint": "2026-11-01-run04",
+      "reported_packet": {
+        "first_copies": 13,
+        "outputs_including_manifest": 11,
+        "product": "F460",
+        "report": "REPORT.v2.md",
+        "report_sha256": "00c18455900a2ac60c25d0ad0d0d19ec12935e264b960c30c321da054b477687",
+        "root": "work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue",
+        "snapshot": "first-candidate-v2"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 805,
+          "copy": "source-inputs/43cc2df3a7fe0ff0fccc7b81b724d5131744aefdbf29dd9b30e3fb765b5e3662.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/DEVELOPMENT_HISTORY.json",
+          "sha256": "43cc2df3a7fe0ff0fccc7b81b724d5131744aefdbf29dd9b30e3fb765b5e3662"
+        },
+        {
+          "bytes": 597,
+          "copy": "source-inputs/7f751d47bbfa6947196b3ef5a803747059b5fac0f7459aa7b53d050f51f49426.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/FIRST_GENERATION_FAILURE.json",
+          "sha256": "7f751d47bbfa6947196b3ef5a803747059b5fac0f7459aa7b53d050f51f49426"
+        },
+        {
+          "bytes": 1816,
+          "copy": "source-inputs/16ac15101aee46628240747f93fabfbd52694ee1c02013cb88298ed1249e5984.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/OUTPUT_MANIFEST.json",
+          "sha256": "16ac15101aee46628240747f93fabfbd52694ee1c02013cb88298ed1249e5984"
+        },
+        {
+          "bytes": 6324,
+          "copy": "source-inputs/44efc5c31720408792806aaef382c024ec630d1a060dd9177a7d7aae50cefae8.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/REPORT.md",
+          "sha256": "44efc5c31720408792806aaef382c024ec630d1a060dd9177a7d7aae50cefae8"
+        },
+        {
+          "bytes": 6764,
+          "copy": "source-inputs/00c18455900a2ac60c25d0ad0d0d19ec12935e264b960c30c321da054b477687.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/REPORT.v2.md",
+          "sha256": "00c18455900a2ac60c25d0ad0d0d19ec12935e264b960c30c321da054b477687"
+        },
+        {
+          "bytes": 8414,
+          "copy": "source-inputs/7570b5dbc79ff9060ce5c9fd39482d87809d9a854e7d4ca6788c7ca5ddab7dec.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/collect_catalogue_v1.py",
+          "sha256": "7570b5dbc79ff9060ce5c9fd39482d87809d9a854e7d4ca6788c7ca5ddab7dec"
+        },
+        {
+          "bytes": 7949,
+          "copy": "source-inputs/ff037c546c43f74feedff5f9b742556d7a951a9c7157b960c48a6b9e855b8fb8.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/collect_catalogue_v2.py",
+          "sha256": "ff037c546c43f74feedff5f9b742556d7a951a9c7157b960c48a6b9e855b8fb8"
+        },
+        {
+          "bytes": 1757,
+          "copy": "source-inputs/46441479bf3d7414eebb7d03f89e3d6f6d7cdf1f75a4bccd09141248fec7e94d.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/first-candidate-v2/INDEX.json",
+          "sha256": "46441479bf3d7414eebb7d03f89e3d6f6d7cdf1f75a4bccd09141248fec7e94d"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 9454,
+        "copy": "source-inputs/91a541f322d8126f3dc8c5e64547242ebedecbb8c3d6b959e9494ffe2ee2ff3f.bin",
+        "path": "work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/REPORT.md",
+        "sha256": "91a541f322d8126f3dc8c5e64547242ebedecbb8c3d6b959e9494ffe2ee2ff3f"
+      },
+      "checkpoint": "2026-11-01-run04",
+      "reported_packet": {
+        "first_copies": 23,
+        "outputs_including_manifest": 21,
+        "product": "F461",
+        "report": "REPORT.md",
+        "report_sha256": "91a541f322d8126f3dc8c5e64547242ebedecbb8c3d6b959e9494ffe2ee2ff3f",
+        "root": "work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 3274,
+          "copy": "source-inputs/c8ea0aefd8fa39af8aee84af02aa6005632a623b7fae705be386f7967fac9358.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/OUTPUT_MANIFEST.json",
+          "sha256": "c8ea0aefd8fa39af8aee84af02aa6005632a623b7fae705be386f7967fac9358"
+        },
+        {
+          "bytes": 9454,
+          "copy": "source-inputs/91a541f322d8126f3dc8c5e64547242ebedecbb8c3d6b959e9494ffe2ee2ff3f.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/REPORT.md",
+          "sha256": "91a541f322d8126f3dc8c5e64547242ebedecbb8c3d6b959e9494ffe2ee2ff3f"
+        },
+        {
+          "bytes": 8677,
+          "copy": "source-inputs/1f2825c7b7207879acd413aefac96d2a1e4b141f85b2a25f8f40c40cde7cbc81.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/collect_field_v1.py",
+          "sha256": "1f2825c7b7207879acd413aefac96d2a1e4b141f85b2a25f8f40c40cde7cbc81"
+        },
+        {
+          "bytes": 3156,
+          "copy": "source-inputs/57baa9185654f7bd9e7f4990dd0bdde3625eb50be7ed83467354a3b32bb01835.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/first-candidate/INDEX.json",
+          "sha256": "57baa9185654f7bd9e7f4990dd0bdde3625eb50be7ed83467354a3b32bb01835"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 7108,
+        "copy": "source-inputs/3c6d2d502e1322c7279f3fe259e4e30a9348858add5b656ed332a08ebdf7bdfb.bin",
+        "path": "work/f460-firmware/2.0.12/research/2026-11-01-run05-selector/REPORT.md",
+        "sha256": "3c6d2d502e1322c7279f3fe259e4e30a9348858add5b656ed332a08ebdf7bdfb"
+      },
+      "checkpoint": "2026-11-01-run05",
+      "reported_packet": {
+        "first_copies": 18,
+        "outputs_including_manifest": 16,
+        "product": "F460",
+        "report": "REPORT.md",
+        "report_sha256": "3c6d2d502e1322c7279f3fe259e4e30a9348858add5b656ed332a08ebdf7bdfb",
+        "root": "work/f460-firmware/2.0.12/research/2026-11-01-run05-selector",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 2633,
+          "copy": "source-inputs/d9fa2aee3ef2c6b9b70b9bd29a7efa92e1709d2ab1e64ec2ae731d7e1b7c9033.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run05-selector/OUTPUT_MANIFEST.json",
+          "sha256": "d9fa2aee3ef2c6b9b70b9bd29a7efa92e1709d2ab1e64ec2ae731d7e1b7c9033"
+        },
+        {
+          "bytes": 7108,
+          "copy": "source-inputs/3c6d2d502e1322c7279f3fe259e4e30a9348858add5b656ed332a08ebdf7bdfb.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run05-selector/REPORT.md",
+          "sha256": "3c6d2d502e1322c7279f3fe259e4e30a9348858add5b656ed332a08ebdf7bdfb"
+        },
+        {
+          "bytes": 7106,
+          "copy": "source-inputs/051bfd97e70c7e18566420437168b9dc5314ead1512b551d7a78802170800b90.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run05-selector/collect_selector_v1.py",
+          "sha256": "051bfd97e70c7e18566420437168b9dc5314ead1512b551d7a78802170800b90"
+        },
+        {
+          "bytes": 2546,
+          "copy": "source-inputs/909ba88eeb009f583a36068823cbaa05f1c716e0dbbf1289635e5af445afca03.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run05-selector/first-candidate/INDEX.json",
+          "sha256": "909ba88eeb009f583a36068823cbaa05f1c716e0dbbf1289635e5af445afca03"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 8532,
+        "copy": "source-inputs/295e1e82d037adfaa3e6846fa3de579232dc5cbaefdd88734a7d294877b19631.bin",
+        "path": "work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/REPORT.md",
+        "sha256": "295e1e82d037adfaa3e6846fa3de579232dc5cbaefdd88734a7d294877b19631"
+      },
+      "checkpoint": "2026-11-01-run05",
+      "reported_packet": {
+        "first_copies": 19,
+        "outputs_including_manifest": 17,
+        "product": "F461",
+        "report": "REPORT.md",
+        "report_sha256": "295e1e82d037adfaa3e6846fa3de579232dc5cbaefdd88734a7d294877b19631",
+        "root": "work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 2695,
+          "copy": "source-inputs/4e96138df8901194844787f42f333552cb76951091a2a36806d696d914948980.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/OUTPUT_MANIFEST.json",
+          "sha256": "4e96138df8901194844787f42f333552cb76951091a2a36806d696d914948980"
+        },
+        {
+          "bytes": 8532,
+          "copy": "source-inputs/295e1e82d037adfaa3e6846fa3de579232dc5cbaefdd88734a7d294877b19631.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/REPORT.md",
+          "sha256": "295e1e82d037adfaa3e6846fa3de579232dc5cbaefdd88734a7d294877b19631"
+        },
+        {
+          "bytes": 7717,
+          "copy": "source-inputs/f189fad5d7f6af37f3a1d2b06ca37c5620399f258d7640c6ce40865aa3c4b2ed.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/collect_output_v1.py",
+          "sha256": "f189fad5d7f6af37f3a1d2b06ca37c5620399f258d7640c6ce40865aa3c4b2ed"
+        },
+        {
+          "bytes": 2585,
+          "copy": "source-inputs/11a4956485b946576a3579d417014f545c195255012eeadae82539c9ff295714.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/first-candidate/INDEX.json",
+          "sha256": "11a4956485b946576a3579d417014f545c195255012eeadae82539c9ff295714"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 8740,
+        "copy": "source-inputs/06435e577532e42b000a89b5cb7125faea507da85d8a79f791e9aae6f120157f.bin",
+        "path": "work/f460-firmware/2.0.12/research/2026-11-01-run06-trigger/REPORT.md",
+        "sha256": "06435e577532e42b000a89b5cb7125faea507da85d8a79f791e9aae6f120157f"
+      },
+      "checkpoint": "2026-11-01-run06",
+      "reported_packet": {
+        "first_copies": 23,
+        "outputs_including_manifest": 21,
+        "product": "F460",
+        "report": "REPORT.md",
+        "report_sha256": "06435e577532e42b000a89b5cb7125faea507da85d8a79f791e9aae6f120157f",
+        "root": "work/f460-firmware/2.0.12/research/2026-11-01-run06-trigger",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 3423,
+          "copy": "source-inputs/b6206fafa8eaa76a9a9ed96c51cc953b39d27560266c88629339b1c92f6a1e49.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run06-trigger/OUTPUT_MANIFEST.json",
+          "sha256": "b6206fafa8eaa76a9a9ed96c51cc953b39d27560266c88629339b1c92f6a1e49"
+        },
+        {
+          "bytes": 8740,
+          "copy": "source-inputs/06435e577532e42b000a89b5cb7125faea507da85d8a79f791e9aae6f120157f.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run06-trigger/REPORT.md",
+          "sha256": "06435e577532e42b000a89b5cb7125faea507da85d8a79f791e9aae6f120157f"
+        },
+        {
+          "bytes": 9217,
+          "copy": "source-inputs/c26356cf414b3258695bee028bf5e29d12d03bac9d9ecb140526b693558ab8de.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run06-trigger/collect_trigger_v1.py",
+          "sha256": "c26356cf414b3258695bee028bf5e29d12d03bac9d9ecb140526b693558ab8de"
+        },
+        {
+          "bytes": 3250,
+          "copy": "source-inputs/444ba5ca6430aadbbd9724497b8a84393b991bb22643ea1043d0a84b9eb0cb83.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run06-trigger/first-candidate/INDEX.json",
+          "sha256": "444ba5ca6430aadbbd9724497b8a84393b991bb22643ea1043d0a84b9eb0cb83"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 7350,
+        "copy": "source-inputs/d8be70c3da862cfe82c367b1537beb6918ceaada5c5200cda2910b6ec049f52c.bin",
+        "path": "work/f461-firmware/2.0.11/research/2026-11-01-run06-address/REPORT.md",
+        "sha256": "d8be70c3da862cfe82c367b1537beb6918ceaada5c5200cda2910b6ec049f52c"
+      },
+      "checkpoint": "2026-11-01-run06",
+      "reported_packet": {
+        "first_copies": 16,
+        "outputs_including_manifest": 14,
+        "product": "F461",
+        "report": "REPORT.md",
+        "report_sha256": "d8be70c3da862cfe82c367b1537beb6918ceaada5c5200cda2910b6ec049f52c",
+        "root": "work/f461-firmware/2.0.11/research/2026-11-01-run06-address",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 2232,
+          "copy": "source-inputs/12cebeff190019c38d5a635751fc9cb70d2085df3296dc16fba8319aaa5dc5e6.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run06-address/OUTPUT_MANIFEST.json",
+          "sha256": "12cebeff190019c38d5a635751fc9cb70d2085df3296dc16fba8319aaa5dc5e6"
+        },
+        {
+          "bytes": 7350,
+          "copy": "source-inputs/d8be70c3da862cfe82c367b1537beb6918ceaada5c5200cda2910b6ec049f52c.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run06-address/REPORT.md",
+          "sha256": "d8be70c3da862cfe82c367b1537beb6918ceaada5c5200cda2910b6ec049f52c"
+        },
+        {
+          "bytes": 7708,
+          "copy": "source-inputs/de9a8dd63e8e6755109c5bde1a5053542cbcfffe0884046bf6fa71636eb65a31.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run06-address/collect_address_v1.py",
+          "sha256": "de9a8dd63e8e6755109c5bde1a5053542cbcfffe0884046bf6fa71636eb65a31"
+        },
+        {
+          "bytes": 2170,
+          "copy": "source-inputs/08b509f7ea441eb16d7339df885027c6aebe25e66b2ecff84032c0a8694c2900.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run06-address/first-candidate/INDEX.json",
+          "sha256": "08b509f7ea441eb16d7339df885027c6aebe25e66b2ecff84032c0a8694c2900"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 8030,
+        "copy": "source-inputs/578653ad15a4c18b203d9917867f32384d017894875e88054043fae29ff46557.bin",
+        "path": "work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/REPORT.md",
+        "sha256": "578653ad15a4c18b203d9917867f32384d017894875e88054043fae29ff46557"
+      },
+      "checkpoint": "2026-11-01-run07",
+      "reported_packet": {
+        "first_copies": 14,
+        "outputs_including_manifest": 12,
+        "product": "F460",
+        "report": "REPORT.md",
+        "report_sha256": "578653ad15a4c18b203d9917867f32384d017894875e88054043fae29ff46557",
+        "root": "work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 2056,
+          "copy": "source-inputs/117ad99be19f9aff643c16bd0ca7d2c7d2f094c7f69815dab22c9c271b8a6ff4.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/OUTPUT_MANIFEST.json",
+          "sha256": "117ad99be19f9aff643c16bd0ca7d2c7d2f094c7f69815dab22c9c271b8a6ff4"
+        },
+        {
+          "bytes": 8030,
+          "copy": "source-inputs/578653ad15a4c18b203d9917867f32384d017894875e88054043fae29ff46557.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/REPORT.md",
+          "sha256": "578653ad15a4c18b203d9917867f32384d017894875e88054043fae29ff46557"
+        },
+        {
+          "bytes": 8774,
+          "copy": "source-inputs/898e268ac4c187ec7a708e2fe5031f07ce9b36fa9e64b7a8494a690ddb985a5a.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/collect_receiver_v1.py",
+          "sha256": "898e268ac4c187ec7a708e2fe5031f07ce9b36fa9e64b7a8494a690ddb985a5a"
+        },
+        {
+          "bytes": 1967,
+          "copy": "source-inputs/a48fa0135460766f323779bcd5babfecbdfdca1e799c56c5a15587dc90084a17.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/first-candidate/INDEX.json",
+          "sha256": "a48fa0135460766f323779bcd5babfecbdfdca1e799c56c5a15587dc90084a17"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 6813,
+        "copy": "source-inputs/1599bdd53dd4f3a9f20091f141338dfd22249fd0fb7b3ab0e900108a992f11ae.bin",
+        "path": "work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/REPORT.md",
+        "sha256": "1599bdd53dd4f3a9f20091f141338dfd22249fd0fb7b3ab0e900108a992f11ae"
+      },
+      "checkpoint": "2026-11-01-run07",
+      "reported_packet": {
+        "first_copies": 12,
+        "outputs_including_manifest": 10,
+        "product": "F461",
+        "report": "REPORT.md",
+        "report_sha256": "1599bdd53dd4f3a9f20091f141338dfd22249fd0fb7b3ab0e900108a992f11ae",
+        "root": "work/f461-firmware/2.0.11/research/2026-11-01-run07-identity",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 1641,
+          "copy": "source-inputs/1f2f8ecb2e2f78cd5a403427963698967ae71456721a92dd8110501f8e0e0aa2.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/OUTPUT_MANIFEST.json",
+          "sha256": "1f2f8ecb2e2f78cd5a403427963698967ae71456721a92dd8110501f8e0e0aa2"
+        },
+        {
+          "bytes": 6813,
+          "copy": "source-inputs/1599bdd53dd4f3a9f20091f141338dfd22249fd0fb7b3ab0e900108a992f11ae.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/REPORT.md",
+          "sha256": "1599bdd53dd4f3a9f20091f141338dfd22249fd0fb7b3ab0e900108a992f11ae"
+        },
+        {
+          "bytes": 7452,
+          "copy": "source-inputs/3c446b200568f9734bc4fba4bde420a61db958fa6b70ce36adb717b3bd43848f.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/collect_identity_v1.py",
+          "sha256": "3c446b200568f9734bc4fba4bde420a61db958fa6b70ce36adb717b3bd43848f"
+        },
+        {
+          "bytes": 1651,
+          "copy": "source-inputs/18517f1d944ccea1579f003a3523f796bd2e0041ec6ee6c0f43078304731c437.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/first-candidate/INDEX.json",
+          "sha256": "18517f1d944ccea1579f003a3523f796bd2e0041ec6ee6c0f43078304731c437"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 8249,
+        "copy": "source-inputs/8edf41662a72cbdfad04dd09febfe8eb8826ab6d55dddb5b6a2445f38ebf6d4e.bin",
+        "path": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/REPORT.v3.md",
+        "sha256": "8edf41662a72cbdfad04dd09febfe8eb8826ab6d55dddb5b6a2445f38ebf6d4e"
+      },
+      "checkpoint": "2026-11-01-run08",
+      "reported_packet": {
+        "first_copies": 13,
+        "outputs_including_manifest": 11,
+        "product": "F460",
+        "report": "REPORT.v3.md",
+        "report_sha256": "8edf41662a72cbdfad04dd09febfe8eb8826ab6d55dddb5b6a2445f38ebf6d4e",
+        "root": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update",
+        "snapshot": "first-candidate-v2"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 782,
+          "copy": "source-inputs/034a9cc9d8d17176536f0457047c8ae229cee9eccab67d7a5b6505660a056652.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/DEVELOPMENT_HISTORY.json",
+          "sha256": "034a9cc9d8d17176536f0457047c8ae229cee9eccab67d7a5b6505660a056652"
+        },
+        {
+          "bytes": 430,
+          "copy": "source-inputs/fbb666e6902be7694c2d487b58748e6ed8c1fac0f7e99f2b67973ac4419e4fe7.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/FIRST_GENERATION_FAILURE.json",
+          "sha256": "fbb666e6902be7694c2d487b58748e6ed8c1fac0f7e99f2b67973ac4419e4fe7"
+        },
+        {
+          "bytes": 1881,
+          "copy": "source-inputs/e013fefb190316b2c41c0f8cc88877b7a266e52a9038190456fa72c3c1492e11.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/OUTPUT_MANIFEST.json",
+          "sha256": "e013fefb190316b2c41c0f8cc88877b7a266e52a9038190456fa72c3c1492e11"
+        },
+        {
+          "bytes": 7729,
+          "copy": "source-inputs/cee75d144a076d862b771d91133dca0fb1e892fc3170d29ded555bb58a5afecf.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/REPORT.md",
+          "sha256": "cee75d144a076d862b771d91133dca0fb1e892fc3170d29ded555bb58a5afecf"
+        },
+        {
+          "bytes": 8248,
+          "copy": "source-inputs/8a46eb35e26d98eef19e44c9730445a8cee86f0b87866337fd304faf5262c93f.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/REPORT.v2.md",
+          "sha256": "8a46eb35e26d98eef19e44c9730445a8cee86f0b87866337fd304faf5262c93f"
+        },
+        {
+          "bytes": 8249,
+          "copy": "source-inputs/8edf41662a72cbdfad04dd09febfe8eb8826ab6d55dddb5b6a2445f38ebf6d4e.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/REPORT.v3.md",
+          "sha256": "8edf41662a72cbdfad04dd09febfe8eb8826ab6d55dddb5b6a2445f38ebf6d4e"
+        },
+        {
+          "bytes": 946,
+          "copy": "source-inputs/5896d75fea34b22522936410bcebe4ca382fd1bea7b21215ca8649484fe4dfbd.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/RETURN_VALUE_REFINEMENT.v3.json",
+          "sha256": "5896d75fea34b22522936410bcebe4ca382fd1bea7b21215ca8649484fe4dfbd"
+        },
+        {
+          "bytes": 8886,
+          "copy": "source-inputs/f7185cd42fea9765bbc889e9053432917922452bf1f52db9bf13a4f74eaaff02.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/collect_update_v1.py",
+          "sha256": "f7185cd42fea9765bbc889e9053432917922452bf1f52db9bf13a4f74eaaff02"
+        },
+        {
+          "bytes": 8899,
+          "copy": "source-inputs/4cf6d6b32b5c9855589b879b488c7828683c6ca545f824b49d0f434512e12c1a.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/collect_update_v2.py",
+          "sha256": "4cf6d6b32b5c9855589b879b488c7828683c6ca545f824b49d0f434512e12c1a"
+        },
+        {
+          "bytes": 1813,
+          "copy": "source-inputs/613cbc9ad8f6ed9832fe75072b17f36fefa9661e982a8298b11b237030a2d732.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/first-candidate-v2/INDEX.json",
+          "sha256": "613cbc9ad8f6ed9832fe75072b17f36fefa9661e982a8298b11b237030a2d732"
+        },
+        {
+          "bytes": 271,
+          "copy": "source-inputs/b6bc543fd2d05025066c5fde79316d15276b6df09f44de1d3de72b34238f3476.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/report-v3-first-copy/INDEX.json",
+          "sha256": "b6bc543fd2d05025066c5fde79316d15276b6df09f44de1d3de72b34238f3476"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 6993,
+        "copy": "source-inputs/88568663f780e22040ffe7fe6f50530fd620e7ae25133f594937ae16f9dff312.bin",
+        "path": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/REPORT.v2.md",
+        "sha256": "88568663f780e22040ffe7fe6f50530fd620e7ae25133f594937ae16f9dff312"
+      },
+      "checkpoint": "2026-11-01-run08",
+      "reported_packet": {
+        "first_copies": 13,
+        "outputs_including_manifest": 11,
+        "product": "F461",
+        "report": "REPORT.v2.md",
+        "report_sha256": "88568663f780e22040ffe7fe6f50530fd620e7ae25133f594937ae16f9dff312",
+        "root": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot",
+        "snapshot": "first-candidate-v2"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 742,
+          "copy": "source-inputs/c03d57f1e621b893a79f3f79878739c222d9d3e8b4e96cff924926eb17134190.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/DEVELOPMENT_HISTORY.json",
+          "sha256": "c03d57f1e621b893a79f3f79878739c222d9d3e8b4e96cff924926eb17134190"
+        },
+        {
+          "bytes": 543,
+          "copy": "source-inputs/a5c9e7ab249e4477325c2ba04f2c5f1825bba9565643bb94d32e726a620c7bdd.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/FIRST_FAILURE.json",
+          "sha256": "a5c9e7ab249e4477325c2ba04f2c5f1825bba9565643bb94d32e726a620c7bdd"
+        },
+        {
+          "bytes": 6574,
+          "copy": "source-inputs/7a4fdc98c06f7dcf5239bbe5032db962ba26e424ac012fe29ca0e7dfcd5db6a5.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/REPORT.md",
+          "sha256": "7a4fdc98c06f7dcf5239bbe5032db962ba26e424ac012fe29ca0e7dfcd5db6a5"
+        },
+        {
+          "bytes": 6993,
+          "copy": "source-inputs/88568663f780e22040ffe7fe6f50530fd620e7ae25133f594937ae16f9dff312.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/REPORT.v2.md",
+          "sha256": "88568663f780e22040ffe7fe6f50530fd620e7ae25133f594937ae16f9dff312"
+        },
+        {
+          "bytes": 6217,
+          "copy": "source-inputs/e1005c31a6a940074eff48652bf97aa9e5607291103fb6f7dbb502a741ebf8d8.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/collect_boot_v1.py",
+          "sha256": "e1005c31a6a940074eff48652bf97aa9e5607291103fb6f7dbb502a741ebf8d8"
+        },
+        {
+          "bytes": 6259,
+          "copy": "source-inputs/8796e3b7c83b89fa1cbe01e00b9a69ae770f645310eabaf2ebc2306d99e3738c.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/collect_boot_v2.py",
+          "sha256": "8796e3b7c83b89fa1cbe01e00b9a69ae770f645310eabaf2ebc2306d99e3738c"
+        },
+        {
+          "bytes": 1816,
+          "copy": "source-inputs/f17476243a5792e00b2d74db2423657273fec528d46a1ed921b866e4a95acf39.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/first-candidate-v2/INDEX.json",
+          "sha256": "f17476243a5792e00b2d74db2423657273fec528d46a1ed921b866e4a95acf39"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 8247,
+        "copy": "source-inputs/db8227a6259b29bf1c29cb118dbe462de6c21ae5eb675bdaf07af0674f688a19.bin",
+        "path": "work/f460-firmware/2.0.12/research/2026-11-01-run09-condition/REPORT.md",
+        "sha256": "db8227a6259b29bf1c29cb118dbe462de6c21ae5eb675bdaf07af0674f688a19"
+      },
+      "checkpoint": "2026-11-01-run09",
+      "reported_packet": {
+        "first_copies": 15,
+        "outputs_including_manifest": 13,
+        "product": "F460",
+        "report": "REPORT.md",
+        "report_sha256": "db8227a6259b29bf1c29cb118dbe462de6c21ae5eb675bdaf07af0674f688a19",
+        "root": "work/f460-firmware/2.0.12/research/2026-11-01-run09-condition",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 2237,
+          "copy": "source-inputs/b791d7c5e3cc1ecd5c060a87edee5add6308066d272c7d874fd9ea75c8196676.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run09-condition/OUTPUT_MANIFEST.json",
+          "sha256": "b791d7c5e3cc1ecd5c060a87edee5add6308066d272c7d874fd9ea75c8196676"
+        },
+        {
+          "bytes": 8247,
+          "copy": "source-inputs/db8227a6259b29bf1c29cb118dbe462de6c21ae5eb675bdaf07af0674f688a19.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run09-condition/REPORT.md",
+          "sha256": "db8227a6259b29bf1c29cb118dbe462de6c21ae5eb675bdaf07af0674f688a19"
+        },
+        {
+          "bytes": 8380,
+          "copy": "source-inputs/760219b7716c18773cfa5f5d84f49188987e10a8f675639dd22a63285cf1f385.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run09-condition/collect_condition_v1.py",
+          "sha256": "760219b7716c18773cfa5f5d84f49188987e10a8f675639dd22a63285cf1f385"
+        },
+        {
+          "bytes": 2155,
+          "copy": "source-inputs/601004bc1ab41529ee04608c1a9062a8da067fa0d3d91ad06777e07fe8b04117.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run09-condition/first-candidate/INDEX.json",
+          "sha256": "601004bc1ab41529ee04608c1a9062a8da067fa0d3d91ad06777e07fe8b04117"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 7295,
+        "copy": "source-inputs/f8ee2fabea6b81b234fef657fca5314a206f2a785c2a0d312eb6597ae3774d3b.bin",
+        "path": "work/f461-firmware/2.0.11/research/2026-11-01-run09-platform/REPORT.md",
+        "sha256": "f8ee2fabea6b81b234fef657fca5314a206f2a785c2a0d312eb6597ae3774d3b"
+      },
+      "checkpoint": "2026-11-01-run09",
+      "reported_packet": {
+        "first_copies": 12,
+        "outputs_including_manifest": 10,
+        "product": "F461",
+        "report": "REPORT.md",
+        "report_sha256": "f8ee2fabea6b81b234fef657fca5314a206f2a785c2a0d312eb6597ae3774d3b",
+        "root": "work/f461-firmware/2.0.11/research/2026-11-01-run09-platform",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 1548,
+          "copy": "source-inputs/906480c7334507583ee6bb3cf29ac637325c130b553acbc6c36d2226bdc94c3a.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run09-platform/OUTPUT_MANIFEST.json",
+          "sha256": "906480c7334507583ee6bb3cf29ac637325c130b553acbc6c36d2226bdc94c3a"
+        },
+        {
+          "bytes": 7295,
+          "copy": "source-inputs/f8ee2fabea6b81b234fef657fca5314a206f2a785c2a0d312eb6597ae3774d3b.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run09-platform/REPORT.md",
+          "sha256": "f8ee2fabea6b81b234fef657fca5314a206f2a785c2a0d312eb6597ae3774d3b"
+        },
+        {
+          "bytes": 6594,
+          "copy": "source-inputs/13dd29ca6003daa0a58a9e88ae4db173a6aba4253fb97ebfa316e4cfcd51663a.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run09-platform/collect_platform_v1.py",
+          "sha256": "13dd29ca6003daa0a58a9e88ae4db173a6aba4253fb97ebfa316e4cfcd51663a"
+        },
+        {
+          "bytes": 1780,
+          "copy": "source-inputs/7a7af54f43c94963911d5c5acf50be5d31abddaf89119f3b19f99096f7271a07.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run09-platform/first-candidate/INDEX.json",
+          "sha256": "7a7af54f43c94963911d5c5acf50be5d31abddaf89119f3b19f99096f7271a07"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 8497,
+        "copy": "source-inputs/0e960fe9a386c15467227feb382366becd285b324e59eed7eb5c01d0f386df64.bin",
+        "path": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/REPORT.v2.md",
+        "sha256": "0e960fe9a386c15467227feb382366becd285b324e59eed7eb5c01d0f386df64"
+      },
+      "checkpoint": "2026-11-01-run10",
+      "reported_packet": {
+        "first_copies": 15,
+        "outputs_including_manifest": 13,
+        "product": "F460",
+        "report": "REPORT.v2.md",
+        "report_sha256": "0e960fe9a386c15467227feb382366becd285b324e59eed7eb5c01d0f386df64",
+        "report_snapshot_alias": "REPORT.md maps REPORT.v2.md only",
+        "root": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 971,
+          "copy": "source-inputs/472673527a560370a5336fcb90c93c73c6094b1db88479e7778dd58dedafa9ed.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/FIRST_GENERATION_FAILURE.json",
+          "sha256": "472673527a560370a5336fcb90c93c73c6094b1db88479e7778dd58dedafa9ed"
+        },
+        {
+          "bytes": 2155,
+          "copy": "source-inputs/9684a17f943d774f21ca19b4e43e946e485814b478d6284709a46bfcaf03b2e1.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/OUTPUT_MANIFEST.json",
+          "sha256": "9684a17f943d774f21ca19b4e43e946e485814b478d6284709a46bfcaf03b2e1"
+        },
+        {
+          "bytes": 7736,
+          "copy": "source-inputs/3f58a87e373e600a08479a7268a87b7e0af596cbd4da43bb6a46d2d7c67ed2fe.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/REPORT.md",
+          "sha256": "3f58a87e373e600a08479a7268a87b7e0af596cbd4da43bb6a46d2d7c67ed2fe"
+        },
+        {
+          "bytes": 8497,
+          "copy": "source-inputs/0e960fe9a386c15467227feb382366becd285b324e59eed7eb5c01d0f386df64.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/REPORT.v2.md",
+          "sha256": "0e960fe9a386c15467227feb382366becd285b324e59eed7eb5c01d0f386df64"
+        },
+        {
+          "bytes": 1059,
+          "copy": "source-inputs/d1bc91ed8e577972a3c98669ab1742a61f184784a5b8058a82c99c3e87d7f055.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/VERSION_HISTORY.v2.json",
+          "sha256": "d1bc91ed8e577972a3c98669ab1742a61f184784a5b8058a82c99c3e87d7f055"
+        },
+        {
+          "bytes": 7318,
+          "copy": "source-inputs/e8a9f9a51b8316ce32e9e0ae4206ea57c94797cd5bc864bed7cfe1739a0b96d0.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/collect_gate_v1.py",
+          "sha256": "e8a9f9a51b8316ce32e9e0ae4206ea57c94797cd5bc864bed7cfe1739a0b96d0"
+        },
+        {
+          "bytes": 7324,
+          "copy": "source-inputs/2c15c188e6171d8eaa1b071f713ebd23f0f7e8b35f2bf5e7f77b1d623ad3dd76.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/collect_gate_v2.py",
+          "sha256": "2c15c188e6171d8eaa1b071f713ebd23f0f7e8b35f2bf5e7f77b1d623ad3dd76"
+        },
+        {
+          "bytes": 2091,
+          "copy": "source-inputs/a3d9d09e715497caba4a903e85cf689c15bafb0a63b1f791642e5ece9180a27a.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/first-candidate/INDEX.json",
+          "sha256": "a3d9d09e715497caba4a903e85cf689c15bafb0a63b1f791642e5ece9180a27a"
+        },
+        {
+          "bytes": 280,
+          "copy": "source-inputs/3aeda9dba1b44afb70d2f82200a5a6f4cdb97e98df02000765d5ac132b5f383b.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/history-v2-first-copy/INDEX.json",
+          "sha256": "3aeda9dba1b44afb70d2f82200a5a6f4cdb97e98df02000765d5ac132b5f383b"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 7848,
+        "copy": "source-inputs/289215b4a715abf4b148af32327883fd1246a8282a6535f7a061d50f4f89589a.bin",
+        "path": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/REPORT.md",
+        "sha256": "289215b4a715abf4b148af32327883fd1246a8282a6535f7a061d50f4f89589a"
+      },
+      "checkpoint": "2026-11-01-run10",
+      "reported_packet": {
+        "first_copies": 11,
+        "outputs_including_manifest": 9,
+        "product": "F461",
+        "report": "REPORT.md",
+        "report_sha256": "289215b4a715abf4b148af32327883fd1246a8282a6535f7a061d50f4f89589a",
+        "report_snapshot_alias": "same filename",
+        "root": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 1414,
+          "copy": "source-inputs/5c0927aaa629c8e5d8e581ff1e4c62d6b016efbe33b47327b212c48d5647459a.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/OUTPUT_MANIFEST.json",
+          "sha256": "5c0927aaa629c8e5d8e581ff1e4c62d6b016efbe33b47327b212c48d5647459a"
+        },
+        {
+          "bytes": 7848,
+          "copy": "source-inputs/289215b4a715abf4b148af32327883fd1246a8282a6535f7a061d50f4f89589a.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/REPORT.md",
+          "sha256": "289215b4a715abf4b148af32327883fd1246a8282a6535f7a061d50f4f89589a"
+        },
+        {
+          "bytes": 6613,
+          "copy": "source-inputs/53d41ed7b62929925f949bc69fd616aaeb8a876c04fe3e329ba011267938e803.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/collect_suffix_v1.py",
+          "sha256": "53d41ed7b62929925f949bc69fd616aaeb8a876c04fe3e329ba011267938e803"
+        },
+        {
+          "bytes": 1644,
+          "copy": "source-inputs/650c5fbc36ba7bb66420c2c62f678779740eca83e314879ced6bba4ebb87375f.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/first-candidate/INDEX.json",
+          "sha256": "650c5fbc36ba7bb66420c2c62f678779740eca83e314879ced6bba4ebb87375f"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 6474,
+        "copy": "source-inputs/c378a24d9bda1856de09e9be59047b53f68909aa418cb3ab584ea74dceb6d650.bin",
+        "path": "work/f460-firmware/2.0.12/research/2026-11-01-run11-scene-control/REPORT.md",
+        "sha256": "c378a24d9bda1856de09e9be59047b53f68909aa418cb3ab584ea74dceb6d650"
+      },
+      "checkpoint": "2026-11-01-run11",
+      "reported_packet": {
+        "first_copies": 9,
+        "outputs_including_manifest": 7,
+        "product": "F460",
+        "report": "REPORT.md",
+        "report_sha256": "c378a24d9bda1856de09e9be59047b53f68909aa418cb3ab584ea74dceb6d650",
+        "root": "work/f460-firmware/2.0.12/research/2026-11-01-run11-scene-control",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 1246,
+          "copy": "source-inputs/f1ebb95753bcbc34d5c0c4a748500af0a6f177b25482f402b0ccc133dc10d1cc.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run11-scene-control/OUTPUT_MANIFEST.json",
+          "sha256": "f1ebb95753bcbc34d5c0c4a748500af0a6f177b25482f402b0ccc133dc10d1cc"
+        },
+        {
+          "bytes": 6474,
+          "copy": "source-inputs/c378a24d9bda1856de09e9be59047b53f68909aa418cb3ab584ea74dceb6d650.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run11-scene-control/REPORT.md",
+          "sha256": "c378a24d9bda1856de09e9be59047b53f68909aa418cb3ab584ea74dceb6d650"
+        },
+        {
+          "bytes": 7267,
+          "copy": "source-inputs/08f7ae006babd3c5c7a7a17ec37fdd3dafbd8bb67fae24bf4f2fa98f73e73169.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run11-scene-control/collect_control_v1.py",
+          "sha256": "08f7ae006babd3c5c7a7a17ec37fdd3dafbd8bb67fae24bf4f2fa98f73e73169"
+        },
+        {
+          "bytes": 1256,
+          "copy": "source-inputs/43e849f123c3f4aa57e5580f5d2934297cc012587e93b3981f07993d0e6dca30.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run11-scene-control/first-candidate/INDEX.json",
+          "sha256": "43e849f123c3f4aa57e5580f5d2934297cc012587e93b3981f07993d0e6dca30"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 7731,
+        "copy": "source-inputs/034b07713342adc93dab60818a90d92b724ad10d6047581124972ae17a358595.bin",
+        "path": "work/f461-firmware/2.0.11/research/2026-11-01-run11-config-selection/REPORT.md",
+        "sha256": "034b07713342adc93dab60818a90d92b724ad10d6047581124972ae17a358595"
+      },
+      "checkpoint": "2026-11-01-run11",
+      "reported_packet": {
+        "first_copies": 14,
+        "outputs_including_manifest": 12,
+        "product": "F461",
+        "report": "REPORT.md",
+        "report_sha256": "034b07713342adc93dab60818a90d92b724ad10d6047581124972ae17a358595",
+        "root": "work/f461-firmware/2.0.11/research/2026-11-01-run11-config-selection",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 1863,
+          "copy": "source-inputs/ab52040b80bb50b44e4d8ae5b3d396bdd0705a5da35f95b51e64d85fa6ca8397.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run11-config-selection/OUTPUT_MANIFEST.json",
+          "sha256": "ab52040b80bb50b44e4d8ae5b3d396bdd0705a5da35f95b51e64d85fa6ca8397"
+        },
+        {
+          "bytes": 7731,
+          "copy": "source-inputs/034b07713342adc93dab60818a90d92b724ad10d6047581124972ae17a358595.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run11-config-selection/REPORT.md",
+          "sha256": "034b07713342adc93dab60818a90d92b724ad10d6047581124972ae17a358595"
+        },
+        {
+          "bytes": 7951,
+          "copy": "source-inputs/68ea48c841f49afa664549c55ab9bde8bfb315fce739ed747133f26901989283.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run11-config-selection/collect_selection_v1.py",
+          "sha256": "68ea48c841f49afa664549c55ab9bde8bfb315fce739ed747133f26901989283"
+        },
+        {
+          "bytes": 2096,
+          "copy": "source-inputs/9d9e8bbf9bb29d5a9c38f4198415d7a1de15143a5f8a0d553de9c2cf10babff1.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run11-config-selection/first-candidate/INDEX.json",
+          "sha256": "9d9e8bbf9bb29d5a9c38f4198415d7a1de15143a5f8a0d553de9c2cf10babff1"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 6241,
+        "copy": "source-inputs/d288575f22d4e76b0c257ce2cbfad0dd2424efc59f5fa20e92ac310f5675a620.bin",
+        "path": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/REPORT.md",
+        "sha256": "d288575f22d4e76b0c257ce2cbfad0dd2424efc59f5fa20e92ac310f5675a620"
+      },
+      "checkpoint": "2026-11-01-run12",
+      "reported_packet": {
+        "first_copies": 9,
+        "outputs_including_manifest": 7,
+        "product": "F460",
+        "report": "REPORT.md",
+        "report_sha256": "d288575f22d4e76b0c257ce2cbfad0dd2424efc59f5fa20e92ac310f5675a620",
+        "root": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 1270,
+          "copy": "source-inputs/9181f651e3c97453c06506fd3209814a935005b3ea72f3788b098cab260fdff8.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/OUTPUT_MANIFEST.json",
+          "sha256": "9181f651e3c97453c06506fd3209814a935005b3ea72f3788b098cab260fdff8"
+        },
+        {
+          "bytes": 6241,
+          "copy": "source-inputs/d288575f22d4e76b0c257ce2cbfad0dd2424efc59f5fa20e92ac310f5675a620.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/REPORT.md",
+          "sha256": "d288575f22d4e76b0c257ce2cbfad0dd2424efc59f5fa20e92ac310f5675a620"
+        },
+        {
+          "bytes": 6997,
+          "copy": "source-inputs/5abef98d606c834b4edc39adc25e906fc65e19e7e9e5f1ece9a36892c9a41eba.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/collect_consumer_v1.py",
+          "sha256": "5abef98d606c834b4edc39adc25e906fc65e19e7e9e5f1ece9a36892c9a41eba"
+        },
+        {
+          "bytes": 1257,
+          "copy": "source-inputs/8a4372ce6b9752247deea606a6130e111b732ce7b7b1fe132061e933a8768771.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/first-candidate/INDEX.json",
+          "sha256": "8a4372ce6b9752247deea606a6130e111b732ce7b7b1fe132061e933a8768771"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 8843,
+        "copy": "source-inputs/0e13cbfe063217d9234b916774616ee5233a2a5892ba7ffdb3dd19aa3fb3ec04.bin",
+        "path": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/REPORT.md",
+        "sha256": "0e13cbfe063217d9234b916774616ee5233a2a5892ba7ffdb3dd19aa3fb3ec04"
+      },
+      "checkpoint": "2026-11-01-run12",
+      "reported_packet": {
+        "first_copies": 14,
+        "outputs_including_manifest": 12,
+        "product": "F461",
+        "report": "REPORT.md",
+        "report_sha256": "0e13cbfe063217d9234b916774616ee5233a2a5892ba7ffdb3dd19aa3fb3ec04",
+        "root": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 1884,
+          "copy": "source-inputs/31965f34cf57816dedd8176bae37c5d692500ed2a23eef8fd01358860420a23f.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/OUTPUT_MANIFEST.json",
+          "sha256": "31965f34cf57816dedd8176bae37c5d692500ed2a23eef8fd01358860420a23f"
+        },
+        {
+          "bytes": 8843,
+          "copy": "source-inputs/0e13cbfe063217d9234b916774616ee5233a2a5892ba7ffdb3dd19aa3fb3ec04.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/REPORT.md",
+          "sha256": "0e13cbfe063217d9234b916774616ee5233a2a5892ba7ffdb3dd19aa3fb3ec04"
+        },
+        {
+          "bytes": 8157,
+          "copy": "source-inputs/fa5bc0aff7145ef719557399b839a375b6580014ef2583e1e88c64a675afc726.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/collect_clock_v1.py",
+          "sha256": "fa5bc0aff7145ef719557399b839a375b6580014ef2583e1e88c64a675afc726"
+        },
+        {
+          "bytes": 2113,
+          "copy": "source-inputs/ae84b8945b7bfd3cd59abcc18faf8cd3369c681bffed630e879337e88cd780a5.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/first-candidate/INDEX.json",
+          "sha256": "ae84b8945b7bfd3cd59abcc18faf8cd3369c681bffed630e879337e88cd780a5"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 6981,
+        "copy": "source-inputs/e54bdfb6f6e196584bb9c97a35d6cf984cc4082d1b3e13ced22875a00250cd78.bin",
+        "path": "work/f460-firmware/2.0.12/research/2026-11-01-run13-compatibility/REPORT.md",
+        "sha256": "e54bdfb6f6e196584bb9c97a35d6cf984cc4082d1b3e13ced22875a00250cd78"
+      },
+      "checkpoint": "2026-11-01-run13",
+      "reported_packet": {
+        "canonical_report_sha256": "e54bdfb6f6e196584bb9c97a35d6cf984cc4082d1b3e13ced22875a00250cd78",
+        "first_copies": 11,
+        "outputs_including_manifest": 9,
+        "product": "F460",
+        "report": "REPORT.md",
+        "report_sha256": "e54bdfb6f6e196584bb9c97a35d6cf984cc4082d1b3e13ced22875a00250cd78",
+        "root": "work/f460-firmware/2.0.12/research/2026-11-01-run13-compatibility",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 1568,
+          "copy": "source-inputs/129cfc06e685dc099bec1ab7c287f5b896c04698bdb552bf3e5e60134d2dda29.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run13-compatibility/OUTPUT_MANIFEST.json",
+          "sha256": "129cfc06e685dc099bec1ab7c287f5b896c04698bdb552bf3e5e60134d2dda29"
+        },
+        {
+          "bytes": 6981,
+          "copy": "source-inputs/e54bdfb6f6e196584bb9c97a35d6cf984cc4082d1b3e13ced22875a00250cd78.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run13-compatibility/REPORT.md",
+          "sha256": "e54bdfb6f6e196584bb9c97a35d6cf984cc4082d1b3e13ced22875a00250cd78"
+        },
+        {
+          "bytes": 8000,
+          "copy": "source-inputs/fb2ea3f4325e25fbe5484216f6d16ce666c3209dba95fff13299395006bc287f.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run13-compatibility/collect_profile_v1.py",
+          "sha256": "fb2ea3f4325e25fbe5484216f6d16ce666c3209dba95fff13299395006bc287f"
+        },
+        {
+          "bytes": 1557,
+          "copy": "source-inputs/2c30ec5cffd508e77509dfa546e224110175ab4e0fa9ade937d590f2665c9091.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run13-compatibility/first-candidate/INDEX.json",
+          "sha256": "2c30ec5cffd508e77509dfa546e224110175ab4e0fa9ade937d590f2665c9091"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 7447,
+        "copy": "source-inputs/2b36473953ba35ff6e06d418a8a78d83eddb435d29ee48258748371f2980816c.bin",
+        "path": "work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/REPORT.v2.md",
+        "sha256": "2b36473953ba35ff6e06d418a8a78d83eddb435d29ee48258748371f2980816c"
+      },
+      "checkpoint": "2026-11-01-run13",
+      "reported_packet": {
+        "canonical_report_sha256": "f24311c51db4c9290b8586ce4841a69cbc016defa69bf628f9ba00c3fc5e1ce2",
+        "first_copies": 13,
+        "outputs_including_manifest": 11,
+        "product": "F461",
+        "report": "REPORT.v2.md",
+        "report_sha256": "2b36473953ba35ff6e06d418a8a78d83eddb435d29ee48258748371f2980816c",
+        "root": "work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 1711,
+          "copy": "source-inputs/fca1061545d61ec217bc0d29def671a76128bee2aa6dc984f7e6ba7b865fa666.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/OUTPUT_MANIFEST.json",
+          "sha256": "fca1061545d61ec217bc0d29def671a76128bee2aa6dc984f7e6ba7b865fa666"
+        },
+        {
+          "bytes": 7433,
+          "copy": "source-inputs/f24311c51db4c9290b8586ce4841a69cbc016defa69bf628f9ba00c3fc5e1ce2.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/REPORT.md",
+          "sha256": "f24311c51db4c9290b8586ce4841a69cbc016defa69bf628f9ba00c3fc5e1ce2"
+        },
+        {
+          "bytes": 7447,
+          "copy": "source-inputs/2b36473953ba35ff6e06d418a8a78d83eddb435d29ee48258748371f2980816c.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/REPORT.v2.md",
+          "sha256": "2b36473953ba35ff6e06d418a8a78d83eddb435d29ee48258748371f2980816c"
+        },
+        {
+          "bytes": 774,
+          "copy": "source-inputs/89deb7a6ddf9937df7673d389c4bd5eb40e538ac59285cce1c764b783372f010.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/WORDING_REFINEMENT.v2.json",
+          "sha256": "89deb7a6ddf9937df7673d389c4bd5eb40e538ac59285cce1c764b783372f010"
+        },
+        {
+          "bytes": 7842,
+          "copy": "source-inputs/0a539491391faf33ab259a13208de92773471a7a73671d5359a6bafc4bc25eb4.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/collect_gap_v1.py",
+          "sha256": "0a539491391faf33ab259a13208de92773471a7a73671d5359a6bafc4bc25eb4"
+        },
+        {
+          "bytes": 1938,
+          "copy": "source-inputs/241d211c49d9527bc8f499ae1f615d0b466ea2c929d2f6496d6c459401efad48.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/first-candidate/INDEX.json",
+          "sha256": "241d211c49d9527bc8f499ae1f615d0b466ea2c929d2f6496d6c459401efad48"
+        },
+        {
+          "bytes": 297,
+          "copy": "source-inputs/b098947cb561f3fd15c89002a474b7eba32174ea7a98f28ca52e9979532d8c9e.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/report-v2-first/INDEX.json",
+          "sha256": "b098947cb561f3fd15c89002a474b7eba32174ea7a98f28ca52e9979532d8c9e"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 8499,
+        "copy": "source-inputs/72c63ccc002bc723808670dc7835b7732b3362e1277a7cb2004a531031fab59f.bin",
+        "path": "work/f460-firmware/2.0.12/research/2026-11-01-run14-numeric/REPORT.v2.md",
+        "sha256": "72c63ccc002bc723808670dc7835b7732b3362e1277a7cb2004a531031fab59f"
+      },
+      "checkpoint": "2026-11-01-run14",
+      "reported_packet": {
+        "first_copies": 15,
+        "outputs_including_manifest": 13,
+        "product": "F460",
+        "report": "REPORT.v2.md",
+        "report_sha256": "72c63ccc002bc723808670dc7835b7732b3362e1277a7cb2004a531031fab59f",
+        "root": "work/f460-firmware/2.0.12/research/2026-11-01-run14-numeric",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 2230,
+          "copy": "source-inputs/0fdb473f5b6c9b29cc583bfa174e1c3c3ebc03521170b6257b0b86fb3c578d11.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run14-numeric/OUTPUT_MANIFEST.json",
+          "sha256": "0fdb473f5b6c9b29cc583bfa174e1c3c3ebc03521170b6257b0b86fb3c578d11"
+        },
+        {
+          "bytes": 8499,
+          "copy": "source-inputs/72c63ccc002bc723808670dc7835b7732b3362e1277a7cb2004a531031fab59f.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run14-numeric/REPORT.v2.md",
+          "sha256": "72c63ccc002bc723808670dc7835b7732b3362e1277a7cb2004a531031fab59f"
+        },
+        {
+          "bytes": 1146,
+          "copy": "source-inputs/3108bd353dfae623d2989e9d579afe888aafd2b71d2ca86b17fc41c9125a1641.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run14-numeric/VERSION_HISTORY.v2.json",
+          "sha256": "3108bd353dfae623d2989e9d579afe888aafd2b71d2ca86b17fc41c9125a1641"
+        },
+        {
+          "bytes": 8812,
+          "copy": "source-inputs/06075404b12899c0f304a3cdfa32de70a64aef1d896a11a5d1b28f70f9fca2c0.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run14-numeric/collect_numeric_v1.py",
+          "sha256": "06075404b12899c0f304a3cdfa32de70a64aef1d896a11a5d1b28f70f9fca2c0"
+        },
+        {
+          "bytes": 8821,
+          "copy": "source-inputs/00a0f3456765e89eb97390a55784a20b4ff2c65eef89227895075cc47c78f463.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run14-numeric/collect_numeric_v2.py",
+          "sha256": "00a0f3456765e89eb97390a55784a20b4ff2c65eef89227895075cc47c78f463"
+        },
+        {
+          "bytes": 2173,
+          "copy": "source-inputs/bc0e16b4bc571531c9eb71b86895cc0699da99de71ae5be0857b3a1f447d69e8.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run14-numeric/first-candidate/INDEX.json",
+          "sha256": "bc0e16b4bc571531c9eb71b86895cc0699da99de71ae5be0857b3a1f447d69e8"
+        },
+        {
+          "bytes": 164,
+          "copy": "source-inputs/04afc7e2a7db021e10d9f81c71223284a5881206d047729b07f79e3fb249f80b.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run14-numeric/history-v2-first/INDEX.json",
+          "sha256": "04afc7e2a7db021e10d9f81c71223284a5881206d047729b07f79e3fb249f80b"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 7609,
+        "copy": "source-inputs/85438c26d5c27d9259e8970633318f3f3ea495fee5444865b75219ff59009e64.bin",
+        "path": "work/f461-firmware/2.0.11/research/2026-11-01-run14-boot-selection/REPORT.md",
+        "sha256": "85438c26d5c27d9259e8970633318f3f3ea495fee5444865b75219ff59009e64"
+      },
+      "checkpoint": "2026-11-01-run14",
+      "reported_packet": {
+        "first_copies": 13,
+        "outputs_including_manifest": 11,
+        "product": "F461",
+        "report": "REPORT.md",
+        "report_sha256": "85438c26d5c27d9259e8970633318f3f3ea495fee5444865b75219ff59009e64",
+        "root": "work/f461-firmware/2.0.11/research/2026-11-01-run14-boot-selection",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 1693,
+          "copy": "source-inputs/14aae1e3a98f67e2c189dab6851e841908c7c5c6073096cb072c3eb7899f8820.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run14-boot-selection/OUTPUT_MANIFEST.json",
+          "sha256": "14aae1e3a98f67e2c189dab6851e841908c7c5c6073096cb072c3eb7899f8820"
+        },
+        {
+          "bytes": 7609,
+          "copy": "source-inputs/85438c26d5c27d9259e8970633318f3f3ea495fee5444865b75219ff59009e64.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run14-boot-selection/REPORT.md",
+          "sha256": "85438c26d5c27d9259e8970633318f3f3ea495fee5444865b75219ff59009e64"
+        },
+        {
+          "bytes": 7405,
+          "copy": "source-inputs/3155c9f76cfc9c34cb0b1af2fb638d64f0c667a5add3ab9337dcc97bd64943b2.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run14-boot-selection/collect_modules_v1.py",
+          "sha256": "3155c9f76cfc9c34cb0b1af2fb638d64f0c667a5add3ab9337dcc97bd64943b2"
+        },
+        {
+          "bytes": 1924,
+          "copy": "source-inputs/7fbf0162854c552c06c75f69e6f2825c56ddb2aad28fe5fe50215c012cea2ff9.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run14-boot-selection/first-candidate/INDEX.json",
+          "sha256": "7fbf0162854c552c06c75f69e6f2825c56ddb2aad28fe5fe50215c012cea2ff9"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 7653,
+        "copy": "source-inputs/346d77b15b08e3da42e1f5aafe3ed1717d4bf20c13eca1929e1b4c8143469420.bin",
+        "path": "work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/REPORT.v2.md",
+        "sha256": "346d77b15b08e3da42e1f5aafe3ed1717d4bf20c13eca1929e1b4c8143469420"
+      },
+      "checkpoint": "2026-11-01-run15",
+      "reported_packet": {
+        "canonical_report": "REPORT.v2.md",
+        "canonical_report_sha256": "346d77b15b08e3da42e1f5aafe3ed1717d4bf20c13eca1929e1b4c8143469420",
+        "first_copies": 15,
+        "outputs_including_manifest": 13,
+        "product": "F460",
+        "report": "REPORT.v2.md",
+        "report_sha256": "346d77b15b08e3da42e1f5aafe3ed1717d4bf20c13eca1929e1b4c8143469420",
+        "root": "work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 2194,
+          "copy": "source-inputs/77e491d1fb8324e14418ac7a28ae3171883eb7d2591d3c45d3744599775799e7.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/OUTPUT_MANIFEST.json",
+          "sha256": "77e491d1fb8324e14418ac7a28ae3171883eb7d2591d3c45d3744599775799e7"
+        },
+        {
+          "bytes": 7653,
+          "copy": "source-inputs/346d77b15b08e3da42e1f5aafe3ed1717d4bf20c13eca1929e1b4c8143469420.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/REPORT.v2.md",
+          "sha256": "346d77b15b08e3da42e1f5aafe3ed1717d4bf20c13eca1929e1b4c8143469420"
+        },
+        {
+          "bytes": 1185,
+          "copy": "source-inputs/a737be0e05d3041c686bc0639746073e8be77491edf3015ec163d4420dd7f3f4.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/VERSION_HISTORY.v2.json",
+          "sha256": "a737be0e05d3041c686bc0639746073e8be77491edf3015ec163d4420dd7f3f4"
+        },
+        {
+          "bytes": 8410,
+          "copy": "source-inputs/f8b9a8c7488ac2176669593344d8cf59aec159e90a53ead6bedefb26d09537b3.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/collect_serializer_v1.py",
+          "sha256": "f8b9a8c7488ac2176669593344d8cf59aec159e90a53ead6bedefb26d09537b3"
+        },
+        {
+          "bytes": 8419,
+          "copy": "source-inputs/06864c8ee0fdef852243b116a908c0d39e5328903674c239c6a3a97a96f139d4.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/collect_serializer_v2.py",
+          "sha256": "06864c8ee0fdef852243b116a908c0d39e5328903674c239c6a3a97a96f139d4"
+        },
+        {
+          "bytes": 2131,
+          "copy": "source-inputs/dc2eb4a2b62c363e2463b5cbc16020cbf639b3fe07fb7a50ce200c24689bbcb4.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/first-candidate/INDEX.json",
+          "sha256": "dc2eb4a2b62c363e2463b5cbc16020cbf639b3fe07fb7a50ce200c24689bbcb4"
+        },
+        {
+          "bytes": 164,
+          "copy": "source-inputs/8707c498f7cc1d442326267ccd4fe11816f78516f29a56e263e1d42d7546ce74.bin",
+          "path": "work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/history-v2-first/INDEX.json",
+          "sha256": "8707c498f7cc1d442326267ccd4fe11816f78516f29a56e263e1d42d7546ce74"
+        }
+      ]
+    },
+    {
+      "authoritative_report": {
+        "bytes": 7463,
+        "copy": "source-inputs/dcce7197af2737f165295c51bcb3b51ff07bc3076550daa4732da48e38c3ae70.bin",
+        "path": "work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/REPORT.v2.md",
+        "sha256": "dcce7197af2737f165295c51bcb3b51ff07bc3076550daa4732da48e38c3ae70"
+      },
+      "checkpoint": "2026-11-01-run15",
+      "reported_packet": {
+        "canonical_report": "REPORT.md",
+        "canonical_report_sha256": "891728ccd1d024c018cc8362d0399cd5bdc793c0597c696b68560765407735d3",
+        "first_copies": 11,
+        "outputs_including_manifest": 9,
+        "product": "F461",
+        "report": "REPORT.v2.md",
+        "report_sha256": "dcce7197af2737f165295c51bcb3b51ff07bc3076550daa4732da48e38c3ae70",
+        "root": "work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal",
+        "snapshot": "first-candidate"
+      },
+      "scope": "Saved report/version identities; collector scripts are read as data, never executed. A report-only refinement does not alter the older collector binding.",
+      "version_history_and_control_pins": [
+        {
+          "bytes": 1401,
+          "copy": "source-inputs/efd02f55889d6aef0fd2d065e18f22c2cac655360da5b58ad9f576fb16f22ee3.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/OUTPUT_MANIFEST.json",
+          "sha256": "efd02f55889d6aef0fd2d065e18f22c2cac655360da5b58ad9f576fb16f22ee3"
+        },
+        {
+          "bytes": 7415,
+          "copy": "source-inputs/891728ccd1d024c018cc8362d0399cd5bdc793c0597c696b68560765407735d3.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/REPORT.md",
+          "sha256": "891728ccd1d024c018cc8362d0399cd5bdc793c0597c696b68560765407735d3"
+        },
+        {
+          "bytes": 7463,
+          "copy": "source-inputs/dcce7197af2737f165295c51bcb3b51ff07bc3076550daa4732da48e38c3ae70.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/REPORT.v2.md",
+          "sha256": "dcce7197af2737f165295c51bcb3b51ff07bc3076550daa4732da48e38c3ae70"
+        },
+        {
+          "bytes": 966,
+          "copy": "source-inputs/bde209563f58d1e8e09374221068cda6d40e1c3b4e146508013417fcc3be7b70.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/WORDING_REFINEMENT.v2.json",
+          "sha256": "bde209563f58d1e8e09374221068cda6d40e1c3b4e146508013417fcc3be7b70"
+        },
+        {
+          "bytes": 6797,
+          "copy": "source-inputs/bcde12a10d6d8b83f9305d076c53d9018573abbca18b54c595d4688a0e3a1435.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/collect_removal_v1.py",
+          "sha256": "bcde12a10d6d8b83f9305d076c53d9018573abbca18b54c595d4688a0e3a1435"
+        },
+        {
+          "bytes": 1632,
+          "copy": "source-inputs/e31251141b8b686fcf2aad0de39fbc05d14e0158bbd2902f73c1a7cf6a5d79df.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/first-candidate/INDEX.json",
+          "sha256": "e31251141b8b686fcf2aad0de39fbc05d14e0158bbd2902f73c1a7cf6a5d79df"
+        },
+        {
+          "bytes": 297,
+          "copy": "source-inputs/915ed0cb6f7876955355018b587b61e4312124819bc1ff51c31df0de027af70d.bin",
+          "path": "work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/report-v2-first/INDEX.json",
+          "sha256": "915ed0cb6f7876955355018b587b61e4312124819bc1ff51c31df0de027af70d"
+        }
+      ]
+    }
+  ]
+}

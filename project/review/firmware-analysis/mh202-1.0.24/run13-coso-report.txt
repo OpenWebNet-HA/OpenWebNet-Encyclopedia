@@ -1,0 +1,66 @@
+# MH2021.0.24 run13 — selected WHO2 automation command and reverse status routes
+
+## Result and execution boundary
+
+Fresh MH202 automation TR code has a concrete selected normal command→ASCII body→core output-record route. For supplied parsed kind1/WHO2, WHERE`0`, absent selector+20 and private config word3:
+
+| Supplied WHAT | Conditional ASCII body | Host-decoded byte values | Selected wrapper |
+|---|---|---|---|
+|`0`|`B100120A`|`B1 00 12 0A`|prepare_briefscs_frames|
+|`1`|`B1001208`|`B1 00 12 08`|prepare_briefscs_frames|
+
+A distinct selected reverse input, source type3/representation1 with ASCII body **`B8111208`** and private config word3, constructs WHERE`11`, WHAT`1`, WHO`2`, then requests parser/list handling of **`*2*1*11##`**. It is not claimed as a response to either forward example: the address/source forms differ and none is a capture or executed exchange.
+
+These are original static branches/literals with finite host models, **not native generated frames, accepted raw commands, runtime plugin admission or physical automation motion**. No public supported-command table is inferred. Original ARM/vendor/parser/JS/PHP execution, original instructions executed, emulator hooks and live I/O are all **0**. No original process, OS/device/network operation, authentication/HTTP/template route or credential material is investigated. Earlier reports, firmware and repository files remain unchanged.
+
+## Original identities and reproduction
+
+| Original normal-image path | SHA256 |
+|---|---|
+| `/home/bticino/libcoso/libplug_automation_tr.so` | `76108725f70176f3e9d960f0f96c26359f1893f8b0f34a5c131e930a2751f62b` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+| `/home/bticino/bin/coso` | `6865c2d1d441d25effa31275080ded70ad3538a8a49288e3002ffb196b066175` |
+
+`python3 work/mh202-firmware/research/2026-10-30/coso/run13/collect_automation.py --check` strictly reproduces29 outputs:21 original spans,28 asserted words,15 safe body/status literal assertions, descriptor relocations, import metadata,2 forward and1 reverse host cases. All6 inputs are pinned (three originals, VFS, immutable run10/run12 reports). `original-spans.json` records exact original VAs/file offsets/byte hashes. Separate author manifest pins report/collector/evidence, excluding itself and later reviews. No F454 code/layout/fixture/harness is used.
+
+## 1. Actual descriptor, direction and criteria axes
+
+The original68-byte **automation_tr descriptor0xdb5c** has relocation **0xdb80→automation_tr_init0x4c40** at+36 and **0xdb84→automation_tr_translate0x3174** at+40. Raw direction fields+44/+48 are1/2. Original init_plugin span0x1a48..0x1aa4 clears its criteria lists, appends **numeric1 to+52** at0x1a78..0x1a8c, then **numeric2 to+56** at0x1a88..0x1a98, and requests register_translation at0x1aa0.
+
+These two lists are not both WHO2. Fresh original COSO dispatcher0xb1ac..0xb240 and reverse-orientation0xb370..0xb384 compare descriptor direction fields with record+12/endpoint+52, then selected list entries with record+48. The swapped (2,1) direction uses descriptor+56=2 for the parsed WHO2 route; (1,2) uses+52=1 for the selected reverse SCS routing field. Prior run10 established the source parsed first text field→record+48 conversion; the fresh selected core brief wrapper independently writes reverse-routing field+48=1. Thus identical numeric criteria must not be assigned a global WHO namespace.
+
+Translator **0x3174** checks direction1 with destination2 and direction2 with destination1; displayed other directions take their error/return routes. Selected forward pair(2,1) tailcalls plugin-local helper **0x1c84** at0x34e0, passing the input record, output-list pointer and actual descriptor. The function is stripped and happens to be printed under the nearest init_plugin label; it is identified by entry VA, not mistaken for init_plugin’s body/size. This is actual local call flow, not imported address conversion guessed from F454 names.
+
+The initializer’s selected original spans0x4c74..0x4cf8/0x4d74..0x4d88 allocate8-byte private storage if absent, store its pointer at descriptor+60, set config word0=3 and word+4=null, then call automation_cfg_position. A nonnull configuration result may replace those values; later guards retain3/4 policy. The host cases supply3 as this source-backed default, without asserting a real configured gateway selected it. Imported configuration, registration, allocation and effective live provider loading remain unobserved.
+
+## 2. Selected parsed normal command → body
+
+Helper0x1c84 accepts record+56=3 as a parsed pointer; value2 takes a separate buf_to_openmsg/free/replace route not needed by the host cases. Parsed kind+44 selects a jump table; **kind1→0x2030** loads command text+8 and calls g_ascii_strtoll(base10). The selected unsigned64 comparison/jump-table branch at0x2054..0x206c/0x2324 handles our well-formed0/1 values; no broader integer/text/domain guarantee follows.
+
+The actual literal selections are:
+
+- Opcode string **`12`**, pool0x2c30→0x5208, supplied by0x2030..0x203c.
+- WHAT0→0x2330→0x2854: value string **`0A`**, pool0x2c80→0x520c.
+- WHAT1→0x2334→0x2840: value string **`08`**, pool0x2c7c→0x5210.
+
+For parsed WHERE+16 exactly **`0`**, original comparison0x1fb0..0x1fc4 selects0x21c0. Exact format **`%s00`** and literal **`B1`** construct address prefix`B100`. This path does not need the advanced WHERE type/nibble/string machinery. Selector+20 null (our premise) goes straight to0x2204; present nondefault strings can take other interface paths, outside this batch.
+
+At0x2204..0x2224, exact format **`%s%s%s`** concatenates address prefix, opcode and selected value, yielding the two eight-character bodies above under ordinary string/allocation primitives. They are ASCII hex body text, not a complete UART frame or outer socket envelope. The source tests address prefix against literal`B`; selected`B100` matches that initial character. Private config word0 is compared with4 at0x2248; supplied3 chooses **prepare_briefscs_frames at0x2260**. Config4 can take a different builder route not modeled here.
+
+Core **prepare_briefscs_frames0x2a04..0x2a44** sets output routing field+48 from supplied argument1, type+40=3 and representation+56=1, invokes source metadata copy and appends the pointer to the supplied list. Fresh core **prepare_scs_from_open0x2230..0x2294** retains the selected source field copies; these include source ID+60 and metadata+4/+8/+12/+16/+24/+28/+32/+36/+44. They are record metadata, not physical state updates. Body formatting, heap/list ownership, actual publication/drain/UART and effective imported provider bindings are not executed.
+
+## 3. One original reverse status/address route
+
+Selected translator pair(1,2) requires source record representation+56=1. Source type+40=3 follows the brief body route; source9 and other/extended types have additional paths. Original **0x32ec..0x3340** duplicates four two-character slices from offsets0/2/4/6. For supplied ASCII **`B8111208`**, these are `B8`,`11`,`12`,`08`. These are supplied complete plain ASCII characters for this finite branch, not an executed hex decoder or validated raw frame.
+
+Type3 establishes selected local zero flags; comparison0x3380..0x3394 matches first slice with literal **`B8`**. Original g_ascii_xdigit_value calls read the two address characters. Both are1, so the≤9 comparisons select **0x3ce0**, exact format **`%d%d`**, yielding address string`11` and ordinary branch flag0. That text feeds a GString; nonempty result is required before later status handling. Nondecimal hex/address forms have separate padded/prefix/advanced branches outside this one example.
+
+The original compares third slice with literal **`12`** at0x3584..0x3598, then fourth with **`08`** at0x35bc..0x35d0. Exact decimal format`%d` with argument1 at0x35d4..0x35e0 supplies WHAT text`1`. With selected zero local flags and config word3, the config4 suffix append at0x3d38..0x3d68 is bypassed. Ordinary path0x3634..0x364c passes fixed original WHO string **`2`**, WHAT string`1` and GString address`11` to exact **`*%s*%s*%s##`**, giving candidate`*2*1*11##`.
+
+The result goes to imported **add_open_buf_to_msg_list at0x3658** with original source/list arguments. Same-build core0x23b8..0x2408 shows this is a parser/record/list boundary, not a raw-text broadcast: it consumes the buf_to_openmsg result, uses representation3, numeric routing derived from parsed first field and appends the record. That parse and allocation/list completion are delegates here. No successful parser return/object readback, active STM event, subscriber receipt or physical status is asserted by the host text.
+
+## Confidence and distinct next question
+
+Confirmed static: descriptor callback/direction/list distinctions, actual local forward helper, default private config3, selected postparsed kind/WHAT/address/interface guards, exact ASCII body strings, core metadata/list boundary and selected reverse B8/address/opcode/value→WHO2 format path. Host-only: two command bodies and one reverse text. Conditional: valid coherent parsed inputs, initialized descriptor/private context, string/numeric/container/config imports, dispatch admission and selected same-build providers. Unknown: full raw grammar, runtime ownership/interposition, advanced/address/interface/position domains, all command support, STM state/timer policy, framing/delivery and physical automation behavior.
+
+A useful next distinct step is actual automation STM request/feedback correlation or the position/configuration consumer, preserving separate routing axes and postparser premises. Repeating the lighting tables or expanding these three finite cases into an unsupported whole-WHO2 support matrix would add no proof to the selected joins.

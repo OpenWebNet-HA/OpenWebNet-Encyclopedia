@@ -1,0 +1,61 @@
+{
+  "scope": "Final bounded static F454 pass, before another Firmware; no original ARM/JavaScript execution",
+  "artifact_id": "firmware-f454-020051",
+  "archive_sha256": "15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3",
+  "exports": [
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-final-pass/energy/REPORT.md",
+      "source_sha256": "ba45225e11013186ddcce55f8f307cb1cd7b04dabc2ccdb9b5a6ed0f46123b35",
+      "published": "final-pass-energy-report.txt",
+      "published_sha256": "ba45225e11013186ddcce55f8f307cb1cd7b04dabc2ccdb9b5a6ed0f46123b35",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-final-pass/media/REPORT.md",
+      "source_sha256": "0e39e989b782d8cc89d36bf1e6e01de7df7843b4a9ffe07a883ad0e7f910e237",
+      "published": "final-pass-media-report.txt",
+      "published_sha256": "0e39e989b782d8cc89d36bf1e6e01de7df7843b4a9ffe07a883ad0e7f910e237",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-final-pass/review/energy-review.md",
+      "source_sha256": "b08d10535d2e8fd538578fb10f34d11fb1adc68f8bb0064064e80d7a25876959",
+      "published": "final-pass-energy-review.txt",
+      "published_sha256": "b08d10535d2e8fd538578fb10f34d11fb1adc68f8bb0064064e80d7a25876959",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-final-pass/review/media-review.md",
+      "source_sha256": "0e685d69bddec1b0439fc87dd24471ff0db9b2084edfdd49dc65f59a1c5f9f17",
+      "published": "final-pass-media-review.txt",
+      "published_sha256": "0e685d69bddec1b0439fc87dd24471ff0db9b2084edfdd49dc65f59a1c5f9f17",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-final-pass/energy/host-schema-join.json",
+      "source_sha256": "ab8f22f1fd3a2b4a3e79b1427cb1a0eed994187e86e2425ce18799686223803c",
+      "published": "final-pass-energy-model.json",
+      "published_sha256": "ab8f22f1fd3a2b4a3e79b1427cb1a0eed994187e86e2425ce18799686223803c",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-final-pass/media/host-query-route-model.json",
+      "source_sha256": "81ea19d3ae64656144f46ba5c47960656d936aa4042d992a7dff59ec6dd144ce",
+      "published": "final-pass-media-model.json",
+      "published_sha256": "81ea19d3ae64656144f46ba5c47960656d936aa4042d992a7dff59ec6dd144ce",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-final-pass/energy/collect_evidence.py",
+      "sha256": "691ed70dbfff5e398804552607b26563ce823df43debfa2001aa97c19a4b2b55"
+    },
+    {
+      "research_path": "work/f454-firmware/research/2026-10-30-final-pass/media/collect_evidence.py",
+      "sha256": "1261bb3c9882e434509b2c877c8c037c93d8aa448e2843d44015cf40bc4099f2"
+    }
+  ],
+  "review_history": "The second continuation review pins are preserved in continuation-reviewed/SOURCE_SNAPSHOTS.json; all earlier reports and snapshots stay unchanged",
+  "reproduction_limit": "Original image, static collectors and byte spans remain in the local research dossier. Excerpts do not constitute a self-contained vendor runtime or physical observations."
+}

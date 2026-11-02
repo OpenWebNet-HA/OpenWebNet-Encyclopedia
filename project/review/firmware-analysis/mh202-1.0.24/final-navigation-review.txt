@@ -1,0 +1,48 @@
+# Independent final navigation review
+
+**PASS for reproducibility, exact source navigation and bounded labels; no correction requested.** I independently ran the final generator's host-only `--check`, inspected its source and six saved outputs, and performed separate hash/row/link/snapshot checks. No firmware/source collector, native harness replay, vendor code, original CPU instruction, target process/syscall, repository test or network/device operation was run. This review adds no firmware semantics or coverage.
+
+I authored the underlying FIFO run28 report and separately source-reviewed the timer ownership run28 report. This is therefore a navigation/integrity review, **not a claim of independent semantic re-audit of my own FIFO finding**, nor of all 35 inherited rows. The FIFO row points to the other agent's independent source review and authoritative separately versioned report.
+
+## Exact reviewed bytes
+
+Artifacts are under `reconciliation/final/`:
+
+| Artifact | SHA256 |
+|---|---|
+| build_final_navigation_v1.py | `e326f5933f56730024bc45729aaa6fbf2baa649190f118a6ff016fd25d1845a6` |
+| FINAL_FINDINGS.json | `b3fb1b4e3404fe5622196d0d441538b003876515786a66dd0ff71db02223d58d` |
+| FINAL_FINDINGS.md | `1b091c5621fe7057e209b0876e9dd302b696ca41f43b62c22679c2d19564d2ff` |
+| VERIFICATION_CATALOG.json | `8a3ea4031ffad1adf3798fa2ff3d30781fe0de50eedea3572f56a19c2afec162` |
+| VERIFICATION_CATALOG.md | `40d66ab1d7d08f0a3dfff0e36cd3af53281025a0c39db0245e44be7a806920c9` |
+| SOURCE_PINS.json | `d7df8c00f9ba967f99008677ffd6b62bb8868f2fe338a62d7ec8dc3f74d93914` |
+| output-manifest.json | `21635b3f2b53f75cf85748ffdc51a7310db8398a69d7e7e6797faacf50aa41f3` |
+| initial-generated-v1/SNAPSHOT_INDEX.json | `9a2c0d6de69cd90954bc1ecb8a60fd387108460bd73e459260a93de5cc9382db` |
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/reconciliation/final/build_final_navigation_v1.py --check
+```
+
+This reproduces six exact saved output byte sequences using 319 pinned inputs. Independent checks verified all 319 current input sizes/SHA256 values, five manifest members plus manifest, generator identity, and seven exact immediately retained generator/output copies. The generation branch refuses existing output destinations and uses exclusive writes; check mode only reads and compares bytes. It invokes no subprocess, source collector, original helper or native machinery. No generated final output is its own input.
+
+## Inherited rows and new scope
+
+The three predecessor JSON identities are explicitly fixed. Their 24 + 2 + 9 = **35** original rows retain unique IDs and exact canonical sorted-JSON SHA256 fingerprints with original row indexes. I independently reread each predecessor, checked its whole-file pin and recomputed every row fingerprint. The final guide references those unchanged sources instead of rewriting inherited fields into newly worded semantic claims. This proves the stated inherited-row identity relation, not a fresh semantic validation of all old findings.
+
+Only two reviewed run28 navigation rows are added, giving **37 navigation rows**. Each exact report pin, 1-based heading locator and independent-review pin matches actual saved bytes. The GSource row distinguishes source-count changes from the plugin's separate pointer and retains the closed-ledger/no-leak/lifetime/timing boundary. The FIFO row uses authoritative REPORT.v2.md plus its wording refinement, keeps actual target open/read execution zero, preserves binding/filesystem/payload/cleanup limits, and leaves R/P ownership unresolved with the separate third-party helper opaque. Neither row assigns physical semantics or promotes a bounded query to absence/support proof.
+
+## Checkpoints, exports, results and links
+
+The catalog contains saved checkpoints **1 through 28**, in order. For the 27 predecessor records I independently verified the saved predecessor record index and recomputed its canonical JSON fingerprint. Recorded old scope strings remain verbatim: the run11/run12 records still begin with historical Run10 wording, and run15 with Run14 wording. These are retained historical metadata, not a new firmware-scope claim or a reclassification of original executed helper evidence as static. Missing historical fields remain unknown/null in their inherited source.
+
+Checkpoint28's **16** retained historical document snapshots match their recorded SHA256s and validation-document pins. They are frozen bytes, not mutable current repository pages. All **10** published/research export pairs match the saved identities; I additionally verified exact publication bytes against source bytes with the documented workspace-prefix normalization. Five saved checkpoint28 reviews are pinned. All **36** Markdown links in the two final outputs resolve to actual files; no missing target was excused.
+
+All **15** canonical saved result identities match the already reviewed predecessor extension, with original saved per-corpus scope/count fields retained. The catalog totals are 71 top-level entries, 31,961 original visits, 3,165 primitive callbacks, 132 linker redirects, 27 EXIT boundaries and 2 pre-selector stops, totaling **35,287 hooks**. Setup writes remain separate and verification replays are not accumulated. My separate final identity review independently checked saved subordinate ledger arithmetic; this navigation check performs no replay. The figures do not measure unique code coverage, supported features, full parser admission, runtime behavior or physical tests.
+
+## History and limits
+
+The catalog explicitly retains run18's missing contemporaneous draft fingerprint/reconstruction limit and run21's unavailable overwritten draft bytes. Current source PASS, preserved later snapshots and this reproducibility check do not authenticate those unavailable earlier histories. Corrected native27 source identity and FIFO28 wording versions are linked as refinements, without replacing historical evidence silently.
+
+The saved **31 tooling tests and 210 Device checks** are inherited run1 evidence; none was rerun here. Wider Device acceptance gates remain pending. The final generator excludes mutable current root coordination/current repository documents as direct inputs, instead using validated records, frozen historical snapshots and saved outputs. It is final navigation through validated28, not an exhaustive firmware assessment, all-history authenticity certificate, fresh semantic audit or closure of remaining questions.
+
+Only this NEW review was written. No generator, output, source report, snapshot, repository or root coordination file was changed.

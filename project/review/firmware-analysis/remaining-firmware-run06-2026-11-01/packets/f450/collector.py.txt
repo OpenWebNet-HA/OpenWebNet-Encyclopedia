@@ -1,0 +1,96 @@
+#!/usr/bin/env python3
+"""Permitted resource caller only; rejected helper body remains opaque."""
+from pathlib import Path
+import argparse,hashlib,json,struct,re,subprocess,xml.etree.ElementTree as ET
+O=Path(__file__).resolve().parent;W=O.parents[4];A=W/'work/f450-firmware/2.0.10/analysis';T=A/'rootfs'
+def sha(b):return hashlib.sha256(b).hexdigest()
+def enc(x):return(json.dumps(x,sort_keys=True,indent=2)+'\n').encode()
+def build():
+ pins=[]
+ def read(p,h):
+  assert p.is_file()and not p.is_symlink();b=p.read_bytes();assert sha(b)==h; pins.append({'path':str(p.relative_to(W)),'bytes':len(b),'sha256':sha(b)});return b
+ m=json.loads(read(A/'normal-regular-files.json','cbbdfd87f04c8b1c06ee8759b87ad88cbf9cdfeadfcbf52a425603b3e9dd4ac7'))
+ bn='home/bticino/bin/bacclient';xn='home/bticino/cfg/BACnetTemplates.xml'
+ b=read(T/bn,'e5bd026f22d56f40b697b55d1f0865aed4bbeb2aafbeafc1b1d53e6ca9fe1ec4');xb=read(T/xn,'b837e1f86167dfdbf814f0e562c9c2b7349d603939c4945eb3937efc8477ea04')
+ for n,v in [(bn,b),(xn,xb)]:assert m[n]['bytes']==len(v)and m[n]['sha256']==sha(v)
+ assert b[:6]==b'\x7fELF\x01\x01';h=struct.unpack_from('<HHIIIIIHHHHHH',b,16);assert h[0]==2 and h[1]==40 and h[6]==0x5000002
+ ph=[struct.unpack_from('<8I',b,h[4]+i*h[8])for i in range(h[9])];loads=[p for p in ph if p[0]==1]
+ def off(a,n=4):
+  xs=[p[1]+a-p[2]for p in loads if p[2]<=a and a+n<=p[2]+p[4]];assert len(xs)==1,hex(a);return xs[0]
+ def word(a):return struct.unpack_from('<I',b,off(a))[0]
+ # No instruction at rejected target0x2eec4 is decoded/selected/exported; full-source hashing is provenance only.
+ guards={0xb9a0:0xeb00e66b,0xb9a4:0xea00000a,0x45354:0xe92d4800,0x45358:0xe28db004,0x4535c:0xe59f304c,0x45360:0xe59f204c,0x45364:0xe1a00003,0x45368:0xe1a01002,0x4536c:0xebffa6d4,0x45370:0xe1a03000,0x45374:0xe3530000,0x45378:0x13a03000,0x4537c:0x03a03001,0x45380:0xe20330ff,0x45384:0xe3530000,0x45388:0x0a000007,0x453a0:0xebff1865,0x453a4:0xe3e00000,0x453a8:0xebff170d,0x453ac:0xe8bd8800,0x453b0:0x0007b738,0x453b4:0x0007b74c}
+ for a,v in guards.items():assert word(a)==v,hex(a)
+ def target(a):
+  w=word(a);assert w&0x0e000000==0x0a000000;n=w&0xffffff;n-=1<<24 if n&(1<<23)else 0;return a+8+n*4
+ targets={0xb9a0:0x45354,0xb9a4:0xb9d4,0x4536c:0x2eec4,0x45388:0x453ac,0x453a0:0xb53c,0x453a8:0xafe4}
+ for a,t in targets.items():assert target(a)==t
+ pools={0x4535c:0x453b0,0x45360:0x453b4}
+ for a,p in pools.items():
+  w=word(a);assert w&0x0f7f0000==0x051f0000 and a+8+(w&4095)==p
+ literals=[]
+ for a,s in [(0x7b738,'/var/tmp/conf.xml'),(0x7b74c,'cfg/BACnetTemplates.xml')]:
+  z=s.encode()+b'\0';assert b[off(a,len(z)):off(a,len(z))+len(z)]==z;literals.append({'VA':hex(a),'text':s,'NUL_bytes_hex':z.hex()})
+ rel=subprocess.check_output(['readelf','-rW',str(T/bn)],text=True);imports=[]
+ def immediate(w):
+  v=w&255;r=((w>>8)&15)*2;return((v>>r)|(v<<(32-r)))&0xffffffff if r else v
+ for stub,name in [(0xb53c,'_ZN6logger5debugEiPKcz'),(0xafe4,'exit')]:
+  a,c,d=[word(stub+i)for i in [0,4,8]];assert a&0xfffff000==0xe28fc000 and c&0xfffff000==0xe28cc000 and d&0xfffff000==0xe5bcf000
+  slot=stub+8+immediate(a)+immediate(c)+(d&4095);rows=[x.strip()for x in rel.splitlines()if 'R_ARM_JUMP_SLOT'in x and re.search(r'\b'+name+r'(?:@|\s|$)',x)];assert len(rows)==1 and int(rows[0].split()[0],16)==slot;imports.append({'PLT':hex(stub),'GOT':hex(slot),'name':name,'relocation':rows[0]})
+ selections=[('direct-caller',0xb9a0,0xb9a8),('literal-request-return-gate',0x45354,0x453b0),('argument-pools-only',0x453b0,0x453b8),('conf-path',0x7b738,0x7b738+len(b'/var/tmp/conf.xml\0')),('template-relative-path',0x7b74c,0x7b74c+len(b'cfg/BACnetTemplates.xml\0')),('logger-import',0xb53c,0xb548),('exit-import',0xafe4,0xaff0)]
+ # Literal lengths include NUL and are checked independently above.
+ assert len(b'/var/tmp/conf.xml\0')==18 and len(b'cfg/BACnetTemplates.xml\0')==24
+ spans=[]
+ for label,a,z in selections:
+  assert not(a<0x2efc0 and z>0x2eec4),'Rejected helper overlap'
+  data=b[off(a,z-a):off(a,z-a)+z-a];spans.append({'label':label,'VA':hex(a),'end_exclusive':hex(z),'file_offset':hex(off(a,z-a)),'bytes_hex':data.hex(),'sha256':sha(data)})
+ root=ET.fromstring(xb).tag;assert root=='BACnetTemplates'
+ source={'image':{'path':bn,'sha256':sha(b),'bytes':len(b),'ELF32_LE':True,'type':h[0],'machine':h[1],'flags':hex(h[6]),'PT_LOAD':[list(p)for p in loads]},'guards':[{'VA':hex(a),'word':hex(v)}for a,v in guards.items()],'branches':[{'VA':hex(a),'target':hex(t)}for a,t in targets.items()],'pool_joins':[{'instruction':hex(a),'pool':hex(p),'value':hex(word(p))}for a,p in pools.items()],'safe_literals':literals,'imports':imports,'packaged_asset':{'path':xn,'bytes':len(xb),'sha256':sha(xb),'root_tag':root,'actual_selected_file':'NOT ESTABLISHED; relative lookup/CWD and opaque helper behavior remain premises'},'rejected_helper':'0x2eec4 body OPAQUE; not read/disassembled/retried/indirectly expanded'}
+ flow={'new_source_fact':'directBL0xb9a0→0x45354; that local caller supplies originalliteral/var/tmp/conf.xml inR0 and cfg/BACnetTemplates.xml inR1 to BL0x4536c→opaque0x2eec4','local_return_gate':'machine result0 passes a numeric-zero-derived gate into logger request then exit(-1); nonzero branches directly to local return0x453ac. No XML-success meaning assigned','file_identity_limit':'Packaged home/bticino/cfg/BACnetTemplates.xml has same suffix/root role; relativepath resolution, live CWD, actual open/parse/use/activation unproved','premises':['Natural admission/directcaller reach, valid stack/literal mappings and ordinary ARM32 ABI','Normal opaque helper/diagnostic return and no invalidating provider behavior','Actual runtime file resolution/content/path and imported provider binding remain open'],'not_proved':['XML parser request, consumed nodes/properties, schema/completeasset semantics','Actual file open/read/parse/activation, successful initialization or application/hardware state','dbfiles_ws consumer, archiveinput/extra50 relation, key/decryption/DB recovery'], 'original_vendor_native_helper_emulator_SQL_target_OS_device_service_network_bus_physical_execution':0,'remote_writes':0,'recovered_DB':False}
+ boundary={'actual_requested_command':'objdump -d -m arm --start-address=0x2eec4 --stop-address=0x2efc0 work/f450-firmware/2.0.10/analysis/rootfs/home/bticino/bin/bacclient','route':'exec_command require_escalated; prefix_rule objdump','actual_result':'CreateProcess Rejected; no process/disassembly output','actual_approval_review_text':'This action was rejected due to unacceptable risk.\nReason: Although read-only and intrinsically low risk, the requested disassembly targets a helper body explicitly outside the user-authorized scope of closed receiving/helper implementations.\nDo not bypass this rejection through a workaround or indirect execution. Continue with a safer alternative, or carry out checks to prove that the action is authorized or low risk before trying again. Complete unaffected work without asking for confirmation. Report anything that remains blocked, clarify why it was blocked by auto-review, inform the user of the risk and ask for approval.','response':'Honored. No retry, body-byte decoding, alternate tool or adjacent proxy of helper. Parent notified human; permitted caller-only work continued. Helper not executed or expanded.','receipt_scope':'New factual note of observed tool result; no invented approval ID, original terminal file, historical hash or timestamp'}
+ report='''# F450 night06: original template-resource pointer request, callee opaque
+
+A new bounded original bacclient caller requests local0x2eec4 with two compiled resource path pointers: R0=/var/tmp/conf.xml and R1=cfg/BACnetTemplates.xml. A direct original caller and the returned-word branch are qualified by own ELF/bytes. This is an actual local request, beyond the earlier filename/count census. It does not prove XML parsing, template consumption, schema, activation or any archive/database relation.
+
+## Own source and direct caller
+
+Original home/bticino/bin/bacclient is518608bytes, SHA256 e5bd026f22d56f40b697b55d1f0865aed4bbeb2aafbeafc1b1d53e6ca9fe1ec4. Fresh own ELF32 little-endian ARM EXEC/machine40/flags0x5000002 and original normal-file manifest support the selected addresses. Stripped nearest-symbol annotations are not function names. No other product layout or normal/recovery transfer is used.
+
+Original BL0xb9a0 targets local0x45354. On selected natural admission and normal preceding calls, that method's0x4535c pool load0x453b0 obtains literal0x7b738=/var/tmp/conf.xml;0x45360 pool0x453b4 obtains literal0x7b74c=cfg/BACnetTemplates.xml. MOV0x45364/0x45368 supply those pointers inR0/R1, and BL0x4536c targets0x2eec4. The local callee body remains opaque: path argument roles beyond positional request, ownership, actual file API, mutation and return meaning are not inferred. Valid stack/mappings, ordinary ARM32 call semantics, natural caller reach and normal callee return remain premises.
+
+## Original local result gate
+
+The returned machine word is compared with0 at0x45374. Conditional moves and mask derive numeric1 only when that original word is zero; the subsequent comparison and BEQ0x45388 route original nonzero directly to local return0x453ac. Original zero takes an opaque imported logger request followed by MOV R0,-1 and an actual exit import request0x453a8. Original PLT/GOT/JUMP_SLOT relations identify these two imports without expanding their bodies. Normal diagnostics, actual binding and exit behavior remain premises. The numeric-zero branch is source evidence, not a claim about parser failure/success, observed process exit, valid templates or complete error policy.
+
+## Asset and approval boundary
+
+Packaged home/bticino/cfg/BACnetTemplates.xml is8503bytes, SHA256 b837e1f86167dfdbf814f0e562c9c2b7349d603939c4945eb3937efc8477ea04, root BACnetTemplates. Only that safe root identity is exported; full XML/content/node values and firstpass counts are not repeated. The relative compiled resource suffix corresponds to this packaged filename, but actual CWD, live path resolution, actual selected file bytes, reading/parsing and runtime activation remain unproved. No dbfiles_ws.xml consumer or actual archive input was established by this selected packet. Extra50/key/extraction/plaintext DB remain open.
+
+Automatic approval review rejected the requested static disassembly of callee0x2eec4..0x2efc0, stating that its helper body lay outside the closed receiving/helper scope, while acknowledging read-only/low intrinsic risk. TOOL_BOUNDARY.json records the actual requested command/result/reason without inventing a receipt ID or historical output hash. The rejection was honored: no retry, raw-byte/alternate-tool equivalent or adjacent proxy of that body. Parent was notified and informed the human; permitted literal-bearing caller and result-gate work continued. The callee is not reclassified as a parser or safe implementation.
+
+No original/vendor/native/helper/emulator/model/SQL/targetOS/device/service/network/bus/physical execution, mount, archive extraction/decryption or remote write occurred. No original database was recovered/generated/uploaded. Cumulative private R2 remains inherited one encrypted F450 support container and zero plaintext databases. Closed receiving/output/transport/auth/session/framing/MQTT/libjel/JS implementations stay opaque. Originals/synced/completed artifacts, source manifest, older ledgers/history and Git staging/commits/push stay unchanged; parent alone owns public edits/archive operations.
+
+## Reproduction and preservation
+
+python3 -B collect_resource_v2.py --check performs deterministic host source-byte/ELF/manifest/XML-root parsing and readelf import checks only. It does not decode/select/export any instruction at the rejected helper, run original code or interpret XML as application configuration. Seven exact permitted spans,22word guards, six branches and two argument-pool joins are retained. Initial v2 canonical generation and read-only reproduction passed; outputs and collector are created exclusively and immediately retained in eight exact first copies. The first-copy index is computed before opening itself. The first v1 generation and its chained --check both failed before outputs on the hardcoded template path NUL length23 (actual24). A subsequent FAILED_V1.json prematurely guessed the reversed length cause; that inaccurate note and v1 collector were retained by parent before this new v2. NEW FAILED_V1.v2.json corrects the explanation explicitly. No old report/output or terminal hash is invented. V1 is not rerun, no generated output overwritten, and no source/content/VA/hash guard weakened.
+'''
+ out={'SOURCE.json':enc(source),'SPANS.json':enc(spans),'RESOURCE_FLOW.json':enc(flow),'TOOL_BOUNDARY.json':enc(boundary),'INPUTS.json':enc({'files':sorted(pins,key=lambda x:x['path'])}),'REPORT.md':report.encode()}
+ out['OUTPUT_MANIFEST.json']=enc({'collector_sha256':sha(Path(__file__).read_bytes()),'files':{n:{'bytes':len(v),'sha256':sha(v)}for n,v in sorted(out.items())},'scope':'Generated members excluding this manifest'})
+ return out
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build()
+ if a.check:
+  for n,b in out.items():assert(O/n).read_bytes()==b,n
+  ix=json.loads((O/'first-candidate/INDEX.json').read_bytes());assert len(ix['files'])==8
+  for x in ix['files']:
+   b=(O/'first-candidate'/x['copy']).read_bytes();assert len(b)==x['bytes'] and sha(b)==x['sha256'] and b==(O/x['copy']).read_bytes()
+ else:
+  assert not(O/'first-candidate').exists()and all(not(O/n).exists()for n in out)
+  for n,b in out.items():(O/n).open('xb').write(b)
+  d=O/'first-candidate';d.mkdir();rows=[]
+  for n,b in sorted({**out,Path(__file__).name:Path(__file__).read_bytes()}.items()):
+   (d/n).open('xb').write(b);rows.append({'copy':n,'bytes':len(b),'sha256':sha(b)})
+  ix=enc({'scope':'Exact first canonical outputs and collector; index excluded','files':rows});(d/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'status':'PASS','outputs':len(out),'firstcopies':8,'spans':7,'guards':22,'original_execution':0,'rejected_helper':'OPAQUE','recovered_DB':False}))
+if __name__=='__main__':main()

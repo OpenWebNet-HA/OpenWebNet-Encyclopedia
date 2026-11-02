@@ -1,0 +1,173 @@
+{
+  "result": "PASS",
+  "scope": "Exact-source/output/export/document/history preservation and repository gates for this bounded database analysis; not whole database semantic coverage, vendor runtime or wider Device approval.",
+  "timestamp_UTC": "2026-10-31T11:51:31.288193+00:00",
+  "database_sha256": "ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29",
+  "publisher_source_sha256": "122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927",
+  "export_pairs": 9,
+  "collectors": 3,
+  "author_SQL_queries": 54,
+  "deterministic_outputs": 11,
+  "new_original_execution": 0,
+  "new_native_corpora": 0,
+  "old_dossier_protection": [
+    {
+      "root": "work/f454-firmware/research/2026-10-29",
+      "files": 1917,
+      "index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-targeted",
+      "files": 107,
+      "index_sha256": "ddb83866292f70631b968b91f07e08fbc79415b5e1762cf3699f8e326eacff79"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-targeted-2",
+      "files": 130,
+      "index_sha256": "2dc3f9e3541478eff304d1d9bb368d02504c39cc3d5d8d3aec7ca96650032d82"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-final-pass",
+      "files": 83,
+      "index_sha256": "bf27345d8ce8d1e4e9277ad9346c62fcfde1f0b33bb20783ae5e66963ad100f2"
+    },
+    {
+      "root": "work/mh202-firmware/research/2026-10-30",
+      "files": 2904,
+      "index_sha256": "c65b6ab0961d6ba4ec7e19471c16993be0470b7d5eac3bbd1f93ad78aaeaf8f0"
+    },
+    {
+      "root": "work/firmware-product-followup/2026-10-31",
+      "files": 330,
+      "index_sha256": "624c42bcff5bd7b014dae7686648b3f3019be7956dd90de93c253dab7f891be7"
+    },
+    {
+      "root": "work/artifact-conservation/2026-10-31",
+      "files": 91,
+      "index_sha256": "5fa10c935d988778c9ce909e73e1b04f5635c034fd749a5ed96a8a5bcd323ed4"
+    }
+  ],
+  "protected_files": 5562,
+  "capture_Git_tree_unchanged": true,
+  "source_manifest_unchanged": true,
+  "vendor_binaries_exported": false,
+  "current_document_pins": [
+    {
+      "path": "scenario-engine/README.md",
+      "sha256": "6eb9c3e98fad2153072b1d80cd12394a478bd7acc6871e1c13c5769a028bdd03"
+    },
+    {
+      "path": "scenario-engine/sources-and-identifiers.md",
+      "sha256": "e01f111251fb5aea17424967bdfc02e844782c48114d77ef18a69390821def39"
+    },
+    {
+      "path": "scenario-engine/open-questions.md",
+      "sha256": "fd9dcd78d4976cf3b68a88d7016b0ed67aa24e25454e016b09ea1e1e27e053fa"
+    },
+    {
+      "path": "functional/who-17-scenario-management/README.md",
+      "sha256": "566fb6a2f90c22636a67f3c22114ac313ee0267dabbca3deb07624e928b16e81"
+    },
+    {
+      "path": "functional/who-25-transversal/README.md",
+      "sha256": "5a9428be472d8d3d8a09bd36897bc71b131fe4d28de628cf2191b843ad27a51d"
+    },
+    {
+      "path": "functional/who-25-transversal/cen-plus.md",
+      "sha256": "6d13fc46a98533dc0d0a69459a2a730011c043f69b0c029b4664c6367f307f67"
+    },
+    {
+      "path": "functional/who-25-transversal/dry-contact-ir.md",
+      "sha256": "e3524907abe49823f78cd729d655f330f79851ada6f1cca1b5f7e7015c63ed3b"
+    },
+    {
+      "path": "project/review/who25-gateway-compatibility.md",
+      "sha256": "1ab5d3c5b8d0e44a99d20c1b3fd2c35f7a9da152b1bb8644717f98dd2c3e4d86"
+    },
+    {
+      "path": "reverse-engineering/README.md",
+      "sha256": "e3338b7eef3cdb19108350797ff6ee50e5984cf0df9f794465cbd410a64290ca"
+    },
+    {
+      "path": "scenario-engine/scenario-suite-database.md",
+      "sha256": "9364ef33a962be871c6e5339534fa83141b22c234c76cca2b24bc58f2351e2fc"
+    },
+    {
+      "path": "project/review/scenario-suite-database-1.0.53/README.md",
+      "sha256": "9cef9dfb6315280341ecc4d1fb20827252d467ba103dadef9aa106cbfd915ba9"
+    }
+  ],
+  "mechanical_and_author_checks": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "scheduler",
+        "chunk_id": "46c368",
+        "wall_time_seconds": 1.054e-05,
+        "exit_code": 0,
+        "original_token_count": 279,
+        "output": "{\n  \"TMP_tables\": 24,\n  \"areas\": 9,\n  \"families\": 16,\n  \"matched_objects\": 63,\n  \"native_replays\": 0,\n  \"original_execution\": 0,\n  \"orphan_permissions\": 1,\n  \"outputs\": 2,\n  \"per_level_flag_differences\": [\n    {\n      \"different_rule_rows\": 258,\n      \"object_column\": \"TRIGGER\",\n      \"rule_column\": \"TRIGGER_START_AREA\"\n    },\n    {\n      \"different_rule_rows\": 258,\n      \"object_column\": \"TRIGGERSTOP\",\n      \"rule_column\": \"TRIGGER_STOP_AREA\"\n    },\n    {\n      \"different_rule_rows\": 465,\n      \"object_column\": \"COND_OK\",\n      \"rule_column\": \"COND_OK_AREA\"\n    },\n    {\n      \"different_rule_rows\": 60,\n      \"object_column\": \"ACT\",\n      \"rule_column\": \"ACT_AREA\"\n    },\n    {\n      \"different_rule_rows\": 0,\n      \"object_column\": \"TRIGGERENABLE\",\n      \"rule_column\": \"TRIGGER_ENABLE\"\n    },\n    {\n      \"different_rule_rows\": 0,\n      \"object_column\": \"TRIGGERDISABLE\",\n      \"rule_column\": \"TRIGGER_DISABLE\"\n    },\n    {\n      \"different_rule_rows\": 0,\n      \"object_column\": \"PANICKEY\",\n      \"rule_column\": \"PANIC_KEY\"\n    }\n  ],\n  \"permissions\": 64,\n  \"queries\": 24,\n  \"selected_action_rows\": 40\n}\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "variables",
+        "chunk_id": "d54f5f",
+        "wall_time_seconds": 9.31e-06,
+        "exit_code": 0,
+        "original_token_count": 27,
+        "output": "{\"check\": true, \"outputs\": 5, \"queries\": 17, \"tables\": 28, \"query_rows\": 828, \"new_original_execution\": 0}\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "addressing",
+        "chunk_id": "b5d12a",
+        "wall_time_seconds": 0.020302728,
+        "exit_code": 0,
+        "original_token_count": 33,
+        "output": "{\n  \"address_rows\": 2505,\n  \"association_rows\": 11608,\n  \"inputs\": 8,\n  \"original_execution\": 0,\n  \"outputs\": 4,\n  \"queries\": 13\n}\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "ESG",
+        "chunk_id": "b13c82",
+        "wall_time_seconds": 3.874173912,
+        "exit_code": 0,
+        "original_token_count": 21,
+        "output": "STATS human_pages=387 support_pages=145 objective_failures=0 review_candidates=6868\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "ECV",
+        "chunk_id": "e6e537",
+        "wall_time_seconds": 1.686347018,
+        "exit_code": 0,
+        "original_token_count": 16,
+        "output": "STATS human_pages=387 objective_failures=0 review_candidates=14\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "diff",
+        "chunk_id": "c714c7",
+        "wall_time_seconds": 1.5239e-05,
+        "exit_code": 0,
+        "original_token_count": 0,
+        "output": ""
+      }
+    }
+  ],
+  "branch": "docs/static-firmware-analysis-findings",
+  "staged": false,
+  "published": false,
+  "generated_Machine_KB": "Not regenerated; separate prepublication work",
+  "review_sha256": "5699bc0328ba5d33abe97a3a94ffec1aa5835755c8b77443ddf71c508f64ac58"
+}

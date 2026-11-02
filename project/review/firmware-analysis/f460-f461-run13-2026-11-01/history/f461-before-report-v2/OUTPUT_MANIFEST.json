@@ -1,0 +1,46 @@
+{
+  "collector_sha256": "0a539491391faf33ab259a13208de92773471a7a73671d5359a6bafc4bc25eb4",
+  "outputs": {
+    "INPUTS.json": {
+      "sha256": "e032890747639b097b24800b0b817d9b77cc2b8ff420500a1f427861948a688c",
+      "size": 1025
+    },
+    "SOURCE.json": {
+      "sha256": "91e31a0d3f50ef264f2d6283b7bd4a24c58613d79074622c2bd24d1b77e23356",
+      "size": 8832
+    },
+    "spans/actual-descriptor-registration.txt": {
+      "sha256": "9b3468c9454a3f0a6d2acc19f9164d53cb05d690df78a322e70b157dd277cbf8",
+      "size": 864
+    },
+    "spans/application-object-preservation.txt": {
+      "sha256": "93a72851ad41102347afafb3e9be3271761c0a1217538d69b0919981993cf7bf",
+      "size": 1318
+    },
+    "spans/aux-nested-parsed-string.txt": {
+      "sha256": "653c67566a419b3fcad954ba599c54592fdf6c1a4d88597daaa83967eef97a01",
+      "size": 817
+    },
+    "spans/private-context-entry.txt": {
+      "sha256": "152284f9d96b6d7d66db0a96074018a96ccd12a2416920b616db0962198584bf",
+      "size": 1089
+    },
+    "spans/private-list-return-store.txt": {
+      "sha256": "ad5d68be13f0f6b54a87bf192494b71fc27e3b4a7f48ba69ea5e8e74f055c74c",
+      "size": 669
+    },
+    "spans/private-null-allocation.txt": {
+      "sha256": "1ad6eb453cdf9aea675e1b3a5bf14c419eb52c6f199c4661046156cbca3e9c78",
+      "size": 406
+    },
+    "spans/same-descriptor-initializer-request.txt": {
+      "sha256": "fdb6b78d801c737f341824991887670df3dc5c375953a2c434654bbcbd4bd159",
+      "size": 675
+    },
+    "spans/same-provided-record-append.txt": {
+      "sha256": "16b5309b552fcaa1d07b860a33837cfaaed6023b4e5b022946f7d70af6f87e5f",
+      "size": 376
+    }
+  },
+  "report_sha256": "f24311c51db4c9290b8586ce4841a69cbc016defa69bf628f9ba00c3fc5e1ce2"
+}

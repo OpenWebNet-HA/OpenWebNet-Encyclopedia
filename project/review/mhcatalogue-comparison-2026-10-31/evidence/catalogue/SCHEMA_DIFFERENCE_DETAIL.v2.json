@@ -1,0 +1,35 @@
+{
+  "differences": [
+    {
+      "firmware": {
+        "index_columns": [
+          [
+            0,
+            0,
+            "id_conf"
+          ],
+          [
+            1,
+            1,
+            "id_key_object"
+          ]
+        ],
+        "index_list_row": [
+          0,
+          "EN_CONF_INDEX",
+          0,
+          "c",
+          0
+        ],
+        "sql_sha256": "6b1d899bff3cb719e546d513e1ecb6ac4a66fc3ebfcd688002caf2289b234483",
+        "table": "EN_CONF"
+      },
+      "name": "EN_CONF_INDEX",
+      "suite": null,
+      "type": "index"
+    }
+  ],
+  "runtime_query_plan_or_performance_tested": false,
+  "shared_objects_exact": true,
+  "shared_schema_objects": 146
+}

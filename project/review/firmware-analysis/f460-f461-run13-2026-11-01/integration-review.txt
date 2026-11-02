@@ -1,0 +1,63 @@
+# Run13 documentary integration review
+
+PASS for the frozen current documentary integration. No correction requested. Actual review-copy assembly, actual validation and subsequent strict gates remain pending mechanical completion.
+
+This is an independent documentary comparison of run13 public/capsule/coordination wording against the two authoritative source reports and independent source-peer reviews. Prior product/source familiarity informs role checks. This is not a fresh original-byte semantic audit, complete inherited-claim audit, source-collector replay or native execution. Work here comprised read-only host file reads, hashes, exact reference reconstruction and local-reference checks. No author, original-image or repository bytes were edited.
+
+## Claim and boundary assessment
+
+F460 closes a selected source constructor/getter/result handoff, not a new compatibility verdict. The SAME Platform stack receiver SP104 is used for constructor and getter requests, conditional on the intervening source gate, selected constructor/path continuation, valid objects, binding and normal returns. Member+48 supplies the path object. The complete getter distinguishes a negative32-bit stat result from arbitrary nonzero status, then failed contents request/null buffer, selecting0; successful nonnull contents feed substring logic producing2 for nonnull marker match and1 otherwise. Compiled MYRECOVERY=y is a substring operand, not an observed environment assignment, active boot mode or exact parser. No environment-file contents were read. The saved numeric result is passed to a DISTINCT StatusMachine SP64 next_step request, whose body/outcome remains opaque. Package status4, staged-record kind2, mode0/1/2 and physical/update policy are not equated. Public/capsule summaries preserve these premises and no trust/install/readiness conclusion.
+
+F461 explicitly leaves the NONZERO message deadline+32 producer OPEN. Its new positive evidence identifies descriptor+88 private P112 construction and returned GList head stored to P+32, alongside Q versus nested parsed=[Q]/parsed+32 string conversion roles. Matching offsets do not establish a deadline writer. Compiled zero data does not establish runtime null/reset; normal allocation/returns, registered descriptor/context and lifetime remain premises. The finite direct-store-form query covers only two named function extents and does not exclude aliases, bulk or spanning stores, callees, other functions/plugins or whole-image writers. No untouched-record, dead-code, global absence, installed capability or physical claim is promoted. Timestamp+24 remains distinct.
+
+The authoritative F461 REPORT.v2 is a single scope-sentence clarification acknowledging the retained registration continuation. Its source/evidence/counts are unchanged; old REPORT.md, collector, canonical manifest and first copies deliberately remain bound to v1. The current v2 report and refinement are separately pinned. Exact parent pre-v2 copies are retained, and no missing historical artifact is invented. Device reference snapshots/planning remain local read-only context: current Device pages match those snapshots and are neither edited nor upgraded to approved feature evidence.
+
+Curated F460/F461 roles, namespaces and closed-route exclusions remain intact. No MyHOMEServer1/F454/MH202 layout or physical feature is transferred by name or offset. New original/helper/native/provider/emulator/model/fixture/SQL/JSON/runtime/physical execution remains zero, prior ledgers and MH202 run18/run21 unavailable-intermediate limits unchanged, and full Device/source gates pending.
+
+## Exact audit
+
+- All 16 current paths equal their frozen review-candidate copies, recorded lengths and SHA-256 values.
+- All 40 SOURCE_EXPORTS entries equal source and capsule bytes, including authoritative v2/history and actual source-peer copies.
+- Five source/review first-copy indexes verify 28 members: F460 11, F461 canonical13, F461 v2/refinement2, and one member for each independent source review. The separate parent pre-v2 index verifies three exact v1 report/collector/manifest snapshots.
+- The v1-to-v2 report difference is exactly the one old/new sentence declared in WORDING_REFINEMENT.v2.json. No source finding, code, output or count change is attributed to it.
+- Both pre-edit reference snapshots verify. The single appendix insertion and two declared substitutions reconstruct REFERENCE_DRAFT.md and the public main exactly. The core catalogue profile remains byte-identical at bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba. Both local Device reference snapshots also equal their current source pages.
+- Selected current-context integration Markdown has 33 local-reference occurrences: 31 resolve now and one heading fragment verifies. Only capsule integration-review.txt and validation.json are pending actual assembly. Future bytes and strict ESG/ECV/diff/identity gates are not certified, and no placeholder or exemption is requested.
+- Parent SOURCE_CHECKS and the independent source-peer replays are separate already-recorded checks, not replayed by this reviewer. Current first-generation provenance agrees with saved indexes; the documentary v2 refinement is explicitly retained rather than silently overwritten.
+
+## Source and preservation pins
+
+| File | SHA-256 |
+| --- | --- |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run13-compatibility/REPORT.md` | `e54bdfb6f6e196584bb9c97a35d6cf984cc4082d1b3e13ced22875a00250cd78` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run13-compatibility/collect_profile_v1.py` | `fb2ea3f4325e25fbe5484216f6d16ce666c3209dba95fff13299395006bc287f` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/REPORT.v2.md` | `2b36473953ba35ff6e06d418a8a78d83eddb435d29ee48258748371f2980816c` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/REPORT.md` | `f24311c51db4c9290b8586ce4841a69cbc016defa69bf628f9ba00c3fc5e1ce2` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/collect_gap_v1.py` | `0a539491391faf33ab259a13208de92773471a7a73671d5359a6bafc4bc25eb4` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/WORDING_REFINEMENT.v2.json` | `89deb7a6ddf9937df7673d389c4bd5eb40e538ac59285cce1c764b783372f010` |
+| `work/f460-f461-comparison/2026-11-01-run13/integration/f461-before-report-v2/INDEX.json` | `e9f26900766b10270caf2d70bae93f342879401529f5b1f55f8a37aa2a4e0fc4` |
+| `work/f460-f461-comparison/2026-11-01-run13/integration/device-reference-context/INDEX.json` | `d1dd282e85d67348ec10f74e72b46783040a6b882dfd2b9e3ae10f7a3cdd45ac` |
+| `work/f460-f461-comparison/2026-11-01-run13/integration/pre-edit/INDEX.json` | `0cde06f73a5b462ffc0fa8b7bb61145a49a458f84659bee0eae49e98e555be38` |
+| `work/f460-f461-comparison/2026-11-01-run13/review-candidate/INDEX.json` | `43fc616a531d99e04a60efcc2982de927a85076c3d11b1a63b3d76f2d083f8f1` |
+
+## Frozen current integration pins
+
+| Current file | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md` | 37781 | `17cd0bb5311e1d83c72dc0a7388ac5746b776ea62a180ca0d2e8e7d5f3adae00` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | 15603 | `bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run13-2026-11-01/README.md` | 3478 | `766446987e195db8029387664f485cbb34432ab0164fc83a0c0bc5078d0275d6` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run13-2026-11-01/SOURCE_EXPORTS.json` | 11056 | `615c7efae9721247f7b266e591e3c73b9e69995de57dc65f53be5fb876b5ad00` |
+| `work/f460-f461-comparison/2026-11-01-run13/SYNTHESIS.md` | 1476 | `2fa2db739f332eee9a42965da2a1cf22ee533493dad5fa759f5768e533666a8c` |
+| `work/f460-f461-comparison/2026-11-01-run13/COVERAGE.md` | 1673 | `a3be97657bccb8704edfbc2ec8a24fe7514a17073fee1d8dc438e92d46908098` |
+| `work/f460-f461-comparison/2026-11-01-run13/RANKED_REMAINING_QUESTIONS.md` | 1380 | `2ca63d4dc613da3436013a204728de55d886b7216b6bf372173602c1ba37a3b7` |
+| `work/f460-f461-comparison/2026-11-01-run13/SOURCE_CHECKS.json` | 496 | `8c195ff96412882b9f197310d75f4eaffb6d57488c2fa9b2610a0a03a96fdf28` |
+| `work/f460-f461-comparison/2026-11-01-run13/integration/DOCUMENT_PATCH.json` | 783 | `ce157a26d3d7f877b9d548da5a76e7876e981a9917c60a5f357608c5177b180e` |
+| `work/f460-f461-comparison/2026-11-01-run13/REFERENCE_DRAFT.md` | 37781 | `17cd0bb5311e1d83c72dc0a7388ac5746b776ea62a180ca0d2e8e7d5f3adae00` |
+| `work/f460-f461-comparison/2026-11-01-run13/REFERENCE_DRAFT_METHOD.json` | 3083 | `c894d3056c742df08b05b01cdf4eae04cc217d5011e369c566a72df3537dd2e4` |
+| `work/f460-f461-comparison/2026-11-01-run13/ANALYSIS_APPENDIX_DRAFT.md` | 2571 | `902d20f3d372a0872e5822fc4059011576bbb74aa1211d4ebf869d15e834f7a9` |
+| `work/f460-f461-comparison/2026-11-01-run13/reviews/f460-source-review.md` | 4307 | `ec873f4f59d038ddb80bf0084dcd2308161b4a68c6742a9b66900fd967ba0e8b` |
+| `work/f460-f461-comparison/2026-11-01-run13/reviews/f461-source-review.md` | 5740 | `00202481238b0d9c1678dffe5ececa84cd68762ebedc968451033434db1a5ee9` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run13-2026-11-01/f460-source-review.txt` | 4307 | `ec873f4f59d038ddb80bf0084dcd2308161b4a68c6742a9b66900fd967ba0e8b` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run13-2026-11-01/f461-source-review.txt` | 5740 | `00202481238b0d9c1678dffe5ececa84cd68762ebedc968451033434db1a5ee9` |
+
+Current documentary PASS is bounded to these bytes and claims. Actual validation, review export, strict repository checks and later coordination transitions remain subsequent parent-owned steps.

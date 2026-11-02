@@ -1,0 +1,10 @@
+# Independent COSO lighting run10 source review
+
+PASS. Parent re-ran collect_lighting.py --check:24outputs/17spans/27words/6inputs,2forward+2conditionalreverse host cases; own original execution0. Reviewed descriptor initialization/translator distinction, actual dispatcher criteria and selected body/wrapper/source formatting relations against saved disassembly reproduced from original verified ELFs.
+
+WHO1 link is supported by original fixed reverse format and criteria→parsed first-field route, not plugin naming alone. Selected no-parameter WHAT1/0 stores0/1 respectively; ordinary WHERE11 two-digit nibble packing supplies11/00 under declared primitives. Matching context selectors route the four-byte body to p2p brief wrapper type9, representation1 and metadata/list boundary, without claiming complete UART framing. Reverse candidates depend on supplied decoded status/address conversion; they are distinct from an executed forward-response roundtrip. Effective registration/provider, raw parsing, STM/state/echo/lifetime/outputdrain and hardware remain explicit unknowns. No full supported-command table or extra physical capability is promoted.
+
+Exact source identities:
+- `coso/run10/REPORT.md` SHA256 `63fc28bfb92bd6030becfbad8f35da2e43b58d8294c298196f657f861d84ea32`
+- `coso/run10/collect_lighting.py` SHA256 `314f34a2a54e655e6e20658242aba94cff68a41e1eba3023d6a0ec5b957ae3c6`
+- `coso/run10/output-manifest.json` SHA256 `b320b575f5f8d56b284c68c155ac5a95469e2dad273cd380eab3054a851cea09`

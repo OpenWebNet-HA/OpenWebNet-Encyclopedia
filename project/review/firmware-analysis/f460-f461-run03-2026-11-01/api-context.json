@@ -1,0 +1,15 @@
+{
+  "scope": "Primary API semantic context only; not original target headers/ABI binding, actual OS execution or measured timing. Full firmware inference still requires independently reviewed original call/store/source evidence.",
+  "source": "https://kernel.googlesource.com/pub/scm/docs/man-pages/man-pages/+/refs/tags/man-pages-6.12/man/man2/nanosleep.2",
+  "source_blob": "842dce28b9a1d83c8e36fa43e5d4d78c7e1a4b81",
+  "relevant_lines": {
+    "53-68": "A signal interruption reports EINTR and can provide remaining duration for another request.",
+    "88-95": "Success and errors use distinct return/errno results.",
+    "168-181": "Rounding, scheduling and repeated relative restarts complicate actual elapsed timing."
+  },
+  "external_boundaries": [
+    "Open Group nanosleep page fetch returned403; not used as evidence",
+    "Selected timespec source URL unavailable viawebtool; no target-layout conclusion from it"
+  ],
+  "word_scope": "Short paraphrases only; no full external source mirrored."
+}

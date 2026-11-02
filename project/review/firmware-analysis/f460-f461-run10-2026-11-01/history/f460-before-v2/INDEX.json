@@ -1,0 +1,20 @@
+[
+  {
+    "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/REPORT.md",
+    "snapshot": "work/f460-f461-comparison/2026-11-01-run10/integration/f460-before-v2/REPORT.md",
+    "bytes": 7736,
+    "sha256": "3f58a87e373e600a08479a7268a87b7e0af596cbd4da43bb6a46d2d7c67ed2fe"
+  },
+  {
+    "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/collect_gate_v1.py",
+    "snapshot": "work/f460-f461-comparison/2026-11-01-run10/integration/f460-before-v2/collect_gate_v1.py",
+    "bytes": 7318,
+    "sha256": "e8a9f9a51b8316ce32e9e0ae4206ea57c94797cd5bc864bed7cfe1739a0b96d0"
+  },
+  {
+    "source": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/FIRST_GENERATION_FAILURE.json",
+    "snapshot": "work/f460-f461-comparison/2026-11-01-run10/integration/f460-before-v2/FIRST_GENERATION_FAILURE.json",
+    "bytes": 971,
+    "sha256": "472673527a560370a5336fcb90c93c73c6094b1db88479e7778dd58dedafa9ed"
+  }
+]

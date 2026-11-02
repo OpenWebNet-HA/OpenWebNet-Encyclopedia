@@ -1,0 +1,94 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b71d4 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c460>:
+   b71d4:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   b71d8:	4688      	mov	r8, r1
+   b71da:	688d      	ldr	r5, [r1, #8]
+   b71dc:	b083      	sub	sp, #12
+   b71de:	4681      	mov	r9, r0
+   b71e0:	4693      	mov	fp, r2
+   b71e2:	f101 0a04 	add.w	sl, r1, #4
+   b71e6:	2d00      	cmp	r5, #0
+   b71e8:	d03e      	beq.n	b7268 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c4f4>
+   b71ea:	6817      	ldr	r7, [r2, #0]
+   b71ec:	e000      	b.n	b71f0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c47c>
+   b71ee:	4625      	mov	r5, r4
+   b71f0:	f105 0108 	add.w	r1, r5, #8
+   b71f4:	c952      	ldmia	r1, {r1, r4, r6}
+   b71f6:	42b7      	cmp	r7, r6
+   b71f8:	bf36      	itet	cc
+   b71fa:	460c      	movcc	r4, r1
+   b71fc:	2200      	movcs	r2, #0
+   b71fe:	2201      	movcc	r2, #1
+   b7200:	2c00      	cmp	r4, #0
+   b7202:	d1f4      	bne.n	b71ee <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c47a>
+   b7204:	bb8a      	cbnz	r2, b726a <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c4f6>
+   b7206:	42be      	cmp	r6, r7
+   b7208:	462a      	mov	r2, r5
+   b720a:	d23f      	bcs.n	b728c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c518>
+   b720c:	4615      	mov	r5, r2
+   b720e:	2a00      	cmp	r2, #0
+   b7210:	d03c      	beq.n	b728c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c518>
+   b7212:	4592      	cmp	sl, r2
+   b7214:	bf08      	it	eq
+   b7216:	2601      	moveq	r6, #1
+   b7218:	d141      	bne.n	b729e <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c52a>
+   b721a:	465c      	mov	r4, fp
+   b721c:	201c      	movs	r0, #28
+   b721e:	9201      	str	r2, [sp, #4]
+   b7220:	f759 ec2c 	blx	10a7c <_Znwj@plt>
+   b7224:	f854 1b04 	ldr.w	r1, [r4], #4
+   b7228:	4605      	mov	r5, r0
+   b722a:	efc0 1010 	vmov.i32	d17, #0	@ 0x00000000
+   b722e:	4653      	mov	r3, sl
+   b7230:	9a01      	ldr	r2, [sp, #4]
+   b7232:	4630      	mov	r0, r6
+   b7234:	6129      	str	r1, [r5, #16]
+   b7236:	f105 0114 	add.w	r1, r5, #20
+   b723a:	f964 078f 	vld1.32	{d16}, [r4]
+   b723e:	f944 178f 	vst1.32	{d17}, [r4]
+   b7242:	f941 078f 	vst1.32	{d16}, [r1]
+   b7246:	4629      	mov	r1, r5
+   b7248:	f759 ec54 	blx	10af4 <_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_@plt>
+   b724c:	f8d8 3014 	ldr.w	r3, [r8, #20]
+   b7250:	2201      	movs	r2, #1
+   b7252:	4648      	mov	r0, r9
+   b7254:	f8c9 5000 	str.w	r5, [r9]
+   b7258:	f889 2004 	strb.w	r2, [r9, #4]
+   b725c:	4413      	add	r3, r2
+   b725e:	f8c8 3014 	str.w	r3, [r8, #20]
+   b7262:	b003      	add	sp, #12
+   b7264:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+   b7268:	4655      	mov	r5, sl
+   b726a:	f8d8 300c 	ldr.w	r3, [r8, #12]
+   b726e:	42ab      	cmp	r3, r5
+   b7270:	bf08      	it	eq
+   b7272:	462a      	moveq	r2, r5
+   b7274:	d0cd      	beq.n	b7212 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c49e>
+   b7276:	4628      	mov	r0, r5
+   b7278:	9501      	str	r5, [sp, #4]
+   b727a:	f759 ef86 	blx	11188 <_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base@plt>
+   b727e:	f8db 7000 	ldr.w	r7, [fp]
+   b7282:	4605      	mov	r5, r0
+   b7284:	6906      	ldr	r6, [r0, #16]
+   b7286:	9a01      	ldr	r2, [sp, #4]
+   b7288:	42be      	cmp	r6, r7
+   b728a:	d3bf      	bcc.n	b720c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c498>
+   b728c:	2300      	movs	r3, #0
+   b728e:	4648      	mov	r0, r9
+   b7290:	f8c9 5000 	str.w	r5, [r9]
+   b7294:	f889 3004 	strb.w	r3, [r9, #4]
+   b7298:	b003      	add	sp, #12
+   b729a:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+   b729e:	f8db 6000 	ldr.w	r6, [fp]
+   b72a2:	6913      	ldr	r3, [r2, #16]
+   b72a4:	429e      	cmp	r6, r3
+   b72a6:	bf2c      	ite	cs
+   b72a8:	2600      	movcs	r6, #0
+   b72aa:	2601      	movcc	r6, #1
+   b72ac:	e7b5      	b.n	b721a <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6c4a6>
+   b72ae:	bf00      	nop

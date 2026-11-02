@@ -1,0 +1,1713 @@
+{
+  "identity": {
+    "path": "work/installer-database-audit/2026-10-31/recovered/f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5.bin",
+    "sha256": "f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5",
+    "size": 2625536
+  },
+  "quick_check": "ok",
+  "row_hash_method": "sorted length-prefixed JSON type-tagged rows; complete rows remain private; not a stable-ID semantic comparison",
+  "self_lookup": {
+    "device_name_code_myhomeserver_count": 1,
+    "firmware_item2198_count": 13
+  },
+  "table_count": 75,
+  "tables": {
+    "AS_BUS_INTERFACE": {
+      "columns": [
+        [
+          "id_bus_in",
+          "INT"
+        ],
+        [
+          "id_bus_out",
+          "INT"
+        ],
+        [
+          "id_key_object",
+          "INT"
+        ],
+        [
+          "max_interface",
+          "VARCHAR"
+        ]
+      ],
+      "row_multiset_sha256": "8fdcf60a9ed4d325903b0af177ecab244bb0b81ef6df671d7af759b27cd54035",
+      "rows": 39,
+      "sql_sha256": "070fb53f7ea7fdb1d13cb2a6189154d82da2f4bd9fcfe8b53f2aa59fbf22d318"
+    },
+    "AS_BUS_ITEM": {
+      "columns": [
+        [
+          "id_bus",
+          "INTEGER"
+        ],
+        [
+          "id_item",
+          "INTEGER"
+        ]
+      ],
+      "row_multiset_sha256": "be490de833d79993b5a059513ccf8fa0a89657748664b7dc51295208b8e47e5d",
+      "rows": 499,
+      "sql_sha256": "8abcfce73e9f4c257b31f8105dc788fd9a6fe8b79aac99b8a992fb2233556cf5"
+    },
+    "AS_BUS_SYSTEM": {
+      "columns": [
+        [
+          "id_bus",
+          "INT"
+        ],
+        [
+          "id_system",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "829caf02f28fdac14101b0d983b4e4d8830ae30b10612375fbb1d800106e020c",
+      "rows": 44,
+      "sql_sha256": "513b00911fe28ab17a709f149b134d8c15ba7c3ff10839ed37d92c77768ffe56"
+    },
+    "AS_CONNECTION_FIRMWARE": {
+      "columns": [
+        [
+          "id_connection",
+          "INT"
+        ],
+        [
+          "id_firmware",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "f8862e72ec00f2853afcd2013611426161108e65d9b58d9242899055e27db78f",
+      "rows": 241,
+      "sql_sha256": "84f14b40ccc4a5943a2337c9a07187621d6b4ff9a85b72eaea15aa29ddd71836"
+    },
+    "AS_DEPENDENT_DEVICES": {
+      "columns": [
+        [
+          "id_device_master",
+          "INT"
+        ],
+        [
+          "id_device_dependent",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rows": 0,
+      "sql_sha256": "dd8ec9b67e79b490ff73c9c09c457fbf2802164c75adcdcae2fa70a8e7f5b75b"
+    },
+    "AS_DEVICE_PICTURE": {
+      "columns": [
+        [
+          "id_device",
+          "INT"
+        ],
+        [
+          "id_picture",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "362f85bf3c1b70f409fe1aff8b3292079fb088157e6047938f262c5572b90d8a",
+      "rows": 434,
+      "sql_sha256": "bc8944a74e32db085b4050324d14d8f6f8c16ff608f924292e6193e27de2ac21"
+    },
+    "AS_FIRMWARE_CONFIG_MODE": {
+      "columns": [
+        [
+          "id_firmware",
+          "INT"
+        ],
+        [
+          "id_config_mode",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "e3c2c50821adb443a93c2f4eacaa0441b9e7fb817d8a17be08fd9737aa099cb3",
+      "rows": 540,
+      "sql_sha256": "ad149c975bad63edce944c667fcdb950ea5f531df0d2b96fb21fd4d7481bae85"
+    },
+    "AS_FIRMWARE_PARAMETERS": {
+      "columns": [
+        [
+          "id_firmware",
+          "INT"
+        ],
+        [
+          "id_parameters",
+          "INT"
+        ],
+        [
+          "brand",
+          "INT"
+        ],
+        [
+          "line",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "488018375e9222dd56a191ea8d5a24f9196ad62546cd8eb49ccb8b654dde9c60",
+      "rows": 555,
+      "sql_sha256": "421226be296e3b30f2bcc4145d6cfcff867df0b5ff7d3029927ed35c0c4dd594"
+    },
+    "AS_FIRMWARE_VIRGIN_OBJECT": {
+      "columns": [
+        [
+          "id_virgin_key_object",
+          "INT"
+        ],
+        [
+          "id_firmware",
+          "INT"
+        ],
+        [
+          "id_fw_virgin_object",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "22ca3597c7c33a08067134b6801fcc71e13f7f757991a28a0a4ff7fa4ddd4074",
+      "rows": 75,
+      "sql_sha256": "515c050519e9cf98062c2ce54cc549ec66e8b57f5709e7a5612ce613251b8c18"
+    },
+    "AS_FW_PACKAGE": {
+      "columns": [
+        [
+          "id_firmware",
+          "INT"
+        ],
+        [
+          "id_package",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "e4a59f2d69b859f7a51ef5099d85f4329b7b2477ea02666c6c88700fbc8e4d94",
+      "rows": 35,
+      "sql_sha256": "74139d5a34cba0ad0be9fc13c2cd9a22f531fb3061a5449ce0e3427d54418144"
+    },
+    "AS_HIDDEN_KCONF": {
+      "columns": [
+        [
+          "id_conf_range",
+          "INT"
+        ],
+        [
+          "id_conf",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "333353b217df98ebcb1b62b787c7b55433f62cca4921fb283248c551c6c810b6",
+      "rows": 289,
+      "sql_sha256": "1850898f43b687e0665596fc6e418f9a23e44e7a57811b9fe69c463ddef1407e"
+    },
+    "AS_ICON_KO": {
+      "columns": [
+        [
+          "id",
+          "INT"
+        ],
+        [
+          "id_key_object",
+          "INT"
+        ],
+        [
+          "id_icon",
+          "INT"
+        ],
+        [
+          "subtype",
+          "INT"
+        ],
+        [
+          "modifiable",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "d205d0b9badd1df47e0b3a564db92816a61e985301c3e7de448544e4fb7905e5",
+      "rows": 59,
+      "sql_sha256": "be7df27b51edc335734fe9db9e8f7d94e8e5da1e2eebf377bc30e348d96b809e"
+    },
+    "AS_ITEM_SYSTEM": {
+      "columns": [
+        [
+          "id_item",
+          "INT"
+        ],
+        [
+          "id_system",
+          "INT"
+        ],
+        [
+          "modobj",
+          "INT"
+        ],
+        [
+          "main",
+          "tinyint"
+        ]
+      ],
+      "row_multiset_sha256": "16d52880ef32ac06cb64ad4789d68660ce51eb0bce169b352c789c6d0dcfe6fc",
+      "rows": 223,
+      "sql_sha256": "a423f8286b3de8b7e30fe3178e4b4175dcc8665f9b3017e1b0ecd8b3fc4731b3"
+    },
+    "AS_KO_CMD_KO_DEV": {
+      "columns": [
+        [
+          "key_object_cmd",
+          "INT"
+        ],
+        [
+          "key_object_cmd_desc",
+          "TEXT"
+        ],
+        [
+          "key_object_dev",
+          "INT"
+        ],
+        [
+          "key_object_dev_desc",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "f8739d9db7c09a16a8b7d228d161831d0d69f1462d1452c2d271f318753d1da0",
+      "rows": 21,
+      "sql_sha256": "3d0f6b04c1a5f6a22d23c6d3a96f849834097c423472660924d15c576613d94d"
+    },
+    "AS_LANGUAGE_PACKAGE": {
+      "columns": [
+        [
+          "id",
+          "INT"
+        ],
+        [
+          "code",
+          "char(50)"
+        ],
+        [
+          "direction",
+          "INT"
+        ],
+        [
+          "order",
+          "INT"
+        ],
+        [
+          "id_package",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "7b19cf544739898cdb6ea19bdda71a52c4927bc22f8662e75eea0d0b8c89f877",
+      "rows": 148,
+      "sql_sha256": "cc8ee7735a0264f488a8bf53e1a7b1e486b6cf297a5554cd07b544f8c92f3b19"
+    },
+    "AS_OBJECT_COLLECTION": {
+      "columns": [
+        [
+          "id_key_object",
+          "INT"
+        ],
+        [
+          "id_collection",
+          "INT"
+        ],
+        [
+          "max_device",
+          "VARCHAR"
+        ]
+      ],
+      "row_multiset_sha256": "01f77e39ca34b86bf444f5325b008bdddaa2e2d0dfcf5cad9f8fd7d1008bba45",
+      "rows": 1352,
+      "sql_sha256": "9f89596620de6320c09fcbcff7e5a0689fc8e8273c5efe6b4876fcc160be7c2c"
+    },
+    "AS_OBJECT_FIRMWARE": {
+      "columns": [
+        [
+          "id_object_firmware",
+          "INT"
+        ],
+        [
+          "id_firmware",
+          "INT"
+        ],
+        [
+          "id_key_object",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "369b34ea660743eb1b28991033b877c1e481d19e80150fbac3182d5a9117b959",
+      "rows": 827,
+      "sql_sha256": "191d7acb46f16ae2011be437e00447db3d25bbef0ff375b251da0b281055fdfc"
+    },
+    "AS_OBJECT_FUNCTION": {
+      "columns": [
+        [
+          "id_function",
+          "INT"
+        ],
+        [
+          "id_object",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "dca4a86ab49e548eacffcd8cf1873790e05db9fd5805c99224fb537df1855419",
+      "rows": 4,
+      "sql_sha256": "01896a88105a967c877f7a08c2102ea26d3030a6c9aee30f0e0ec7fcf936df2d"
+    },
+    "AS_OBJECT_SYSTEM": {
+      "columns": [
+        [
+          "id_key_object",
+          "INT"
+        ],
+        [
+          "id_system",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "0853c23e88570d89e7094b2ac7a59df38119e63a2daef13d6903f4cc921854d2",
+      "rows": 251,
+      "sql_sha256": "bdaaf3f46de7301ea6611383595fb7b4b51b1ef85e56f2f8c2c2370dd8a20305"
+    },
+    "AS_OBJECT_VIRGIN_OBJECT": {
+      "columns": [
+        [
+          "id_virgin_key_object",
+          "INT"
+        ],
+        [
+          "id_key_object",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "2318de9f6d07056f8264b384bbf8b2b826f3a944aba3c2be22fe18cca4914439",
+      "rows": 102,
+      "sql_sha256": "72e4b200df7d20630cb09409b53cb31bb40704cb0d9ff71fe36b5a58a88f9dc6"
+    },
+    "AS_SET_RANGE": {
+      "columns": [
+        [
+          "id_unicode_set",
+          "INT"
+        ],
+        [
+          "id_unicode_range",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "c25977e4e7a846abea72bcc4c43833c3d5761530deeb71cdbe1ef9694fec26d6",
+      "rows": 4534,
+      "sql_sha256": "2812f34b20678bd05caf1243a01103dab7d71361bffdfd6d0c4dab972bcf36ab"
+    },
+    "AS_SLOT_CONDITION": {
+      "columns": [
+        [
+          "id_slot",
+          "INT"
+        ],
+        [
+          "id_condition",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "f90aed70040944191697b30e2a71b8feedad929b4a1faa25c5ef3b432616dee3",
+      "rows": 1000,
+      "sql_sha256": "f6cab3ff448ba7d2edb9424fefbfffd0861d07d709750efc7035c584f1b4a9a9"
+    },
+    "CONF_SYMBOL_REF": {
+      "columns": [
+        [
+          "id",
+          "INT"
+        ],
+        [
+          "item_conf_symbol",
+          "TEXT"
+        ],
+        [
+          "ko_conf_sysmbol",
+          "TEXT"
+        ],
+        [
+          "key_system",
+          "TEXT"
+        ],
+        [
+          "slot",
+          "INT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "a965bceb67462154a78e22a8ee976444ead5adc8ebb82468fdaf9e98bf7fa4e3",
+      "rows": 66,
+      "sql_sha256": "adf32aa394f71a70b1a7e21604f4228d8618d11b0ca1a1a0152badd5c0b8c610"
+    },
+    "DB_INFO": {
+      "columns": [
+        [
+          "param",
+          "char(50)"
+        ],
+        [
+          "value",
+          "INTEGER"
+        ]
+      ],
+      "row_multiset_sha256": "ba69bc43bcfcad779c264c0dbfe8e6c502b6e3f8ac7ce5e64c7b7a5194030308",
+      "rows": 7,
+      "sql_sha256": "b81d09801ce2f4f4812fb6e8759fb897420fc3843ebe74bfc450b61dffe8213f"
+    },
+    "EN_AUX_SUBTYPE": {
+      "columns": [
+        [
+          "id_aux_subtype",
+          "INT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "452bf953f106b7a8ef956bfea01650041a4bc2362f81cd6fbf68453486e7654b",
+      "rows": 10,
+      "sql_sha256": "294ae8db92cdeaaa2ded791e9de57cae9d2f36faae90cf1c8a72c11a91eff54d"
+    },
+    "EN_BOX_TYPE": {
+      "columns": [
+        [
+          "id_box_type",
+          "INT"
+        ],
+        [
+          "box_type_descr",
+          "TEXT"
+        ],
+        [
+          "default_value",
+          "boolean"
+        ]
+      ],
+      "row_multiset_sha256": "f2007cb46428e09b452c75acb5ea19efcdf4d886f0cfdfc00fd50b2266249d8c",
+      "rows": 13,
+      "sql_sha256": "c600c50748d653d551e81d72ffc82509a35d94da9140ae14a8d83eb9cb41f765"
+    },
+    "EN_BRAND": {
+      "columns": [
+        [
+          "id_brand",
+          "INT"
+        ],
+        [
+          "brand_name",
+          "TEXT"
+        ],
+        [
+          "brand_modobj",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "ae5cbd5e28993f9a91593e3ccc2387cc0e7cf0706f62d4cee56b46002b5d5172",
+      "rows": 7,
+      "sql_sha256": "6ed0945fed351aa827fbb9dc6f3671eae4b6fa46a17eefb2c107c9e69ddf9e9b"
+    },
+    "EN_BUILDS": {
+      "columns": [
+        [
+          "id_build",
+          "INT"
+        ],
+        [
+          "firmware_b",
+          "INT"
+        ],
+        [
+          "localization_level",
+          "INT"
+        ],
+        [
+          "id_firmware",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "10b381907dc654f9e5931b2dacaf5fe617eac38adea0ef02a615a8d5ee9838b7",
+      "rows": 308,
+      "sql_sha256": "44cdf560e7a0b9cf5ba1fe0223660854af91e20a2774ab995a4de12980151fd9"
+    },
+    "EN_BUS": {
+      "columns": [
+        [
+          "id_bus",
+          "INT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ],
+        [
+          "id_bus_type",
+          "INT"
+        ],
+        [
+          "level_descr",
+          "TEXT"
+        ],
+        [
+          "level",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "2e7153660148f7af63278f0c0708b411bf9c09a078582aff1c14307b6fdbe9b9",
+      "rows": 13,
+      "sql_sha256": "e0f35733a4b11904e2eccb9205eacf1180d6aac2ae99819105fda4e792ee3405"
+    },
+    "EN_BUS_TYPE": {
+      "columns": [
+        [
+          "id_bus_type",
+          "INT"
+        ],
+        [
+          "desc_bus_type",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "76c42844fcd9636d4ee9fa04a4170603feb43b404aa390edc0723e69dbb1a1ad",
+      "rows": 7,
+      "sql_sha256": "f3fae895c8241174a816a356b3d1cfa8b34a1f50ea65af5a161d960b28a13e7f"
+    },
+    "EN_CHAR_ALLOW": {
+      "columns": [
+        [
+          "char",
+          "TEXT"
+        ],
+        [
+          "value",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "649d1686dfc3f32f50253afc44aa17af31a4ecc8a5573de57f0e13c4fb5026f6",
+      "rows": 192,
+      "sql_sha256": "67c92cca9eea4b44cf655299a73870b62bee82f6f02c383d63b19bf47b31d28e"
+    },
+    "EN_COLLECTION": {
+      "columns": [
+        [
+          "id_collection",
+          "INT"
+        ],
+        [
+          "id_system",
+          "INT"
+        ],
+        [
+          "id_collection_type",
+          "INT"
+        ],
+        [
+          "xml_key_conf",
+          "TEXT"
+        ],
+        [
+          "xml_key_value",
+          "TEXT"
+        ],
+        [
+          "collection_desc",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "4f91dee922379cb601b9599adcc58e8ca522b53ded8594e46e821b1066327374",
+      "rows": 177,
+      "sql_sha256": "21cf345be0b85238306bd134e2ae4a1281d4158bf6b3f8d0e0d96b587731709d"
+    },
+    "EN_COLLECTION_TYPE": {
+      "columns": [
+        [
+          "id_collection_type",
+          "INT"
+        ],
+        [
+          "xml_key_collection",
+          "TEXT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "5d1c8f5e2bc9906c5813bfc0a5902ea05aed111f8f9d480bec1da254bb1cfb78",
+      "rows": 22,
+      "sql_sha256": "3013a211dadf0b74280c29df0ac60e6bb95bfea28779da09a3f0df532df5a8f6"
+    },
+    "EN_CONDITION": {
+      "columns": [
+        [
+          "id_condition",
+          "INT"
+        ],
+        [
+          "condition",
+          "VARCHAR"
+        ],
+        [
+          "id_conv_rule",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "6ad121775a2f3b61784ed00674cd32d5cd853d0b138916ade15df7636afaeddd",
+      "rows": 488,
+      "sql_sha256": "93d7e74678046d50de8314ff4c7dd379be4f4dd1107fb7a9fac60834066fe5be"
+    },
+    "EN_CONF": {
+      "columns": [
+        [
+          "id_conf",
+          "INT"
+        ],
+        [
+          "id_key_object",
+          "INT"
+        ],
+        [
+          "id_firmware",
+          "INT"
+        ],
+        [
+          "conf_name",
+          "TEXT"
+        ],
+        [
+          "id_conf_type",
+          "INT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ],
+        [
+          "descr_ext",
+          "TEXT"
+        ],
+        [
+          "hidden",
+          "INT"
+        ],
+        [
+          "idx",
+          "INT"
+        ],
+        [
+          "id_conf_data_type",
+          "INT"
+        ],
+        [
+          "progressive",
+          "INT"
+        ],
+        [
+          "visible",
+          "INT"
+        ],
+        [
+          "read_only",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "722d82036e4f42f891e620901aec18039c787f44f2155323b74aaba41056c6b8",
+      "rows": 2883,
+      "sql_sha256": "490cd08cd11686dc80a04d8dc521ba67f863a62833441350083fd96c7d626ae8"
+    },
+    "EN_CONFIG_MODE": {
+      "columns": [
+        [
+          "id_config_mode",
+          "INT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ],
+        [
+          "config_mode",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "b977c61091c4c4b806735ce3525e3f2cdf6cab618ae24811e1f840c965a759fe",
+      "rows": 4,
+      "sql_sha256": "641fcc1487dc3bcd15fe6ae4cc2517b6578264ac5527888c6ca221e47e056ca2"
+    },
+    "EN_CONF_DATA_TYPE": {
+      "columns": [
+        [
+          "id_conf_data_type",
+          "INT"
+        ],
+        [
+          "data_type",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "fb4b3bdad603e2581a3b9557cfe6bb764c2e714ca5dcb44ca500af37a3d65cca",
+      "rows": 6,
+      "sql_sha256": "10fe73ec64d8cde31999cf1ba7a8f22a03f9c23e95ab0d933cc1a65f13c51466"
+    },
+    "EN_CONF_RANGE": {
+      "columns": [
+        [
+          "id_conf_range",
+          "INT"
+        ],
+        [
+          "value",
+          "TEXT"
+        ],
+        [
+          "name",
+          "TEXT"
+        ],
+        [
+          "descr_ext",
+          "TEXT"
+        ],
+        [
+          "default",
+          "VARCHAR"
+        ],
+        [
+          "progressive",
+          "INT"
+        ],
+        [
+          "id_conf",
+          "INT"
+        ],
+        [
+          "digit",
+          "INT"
+        ],
+        [
+          "step",
+          "INT"
+        ],
+        [
+          "min_value",
+          "INT"
+        ],
+        [
+          "max_value",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "99f87b3c20ac530893b3526b0465c55f76b36a951301f2116b2611bc376013f4",
+      "rows": 14346,
+      "sql_sha256": "a247b1fbc143a073178bd51eb5ce4edf8febb46680843a80831d03dc7c4d6930"
+    },
+    "EN_CONF_TYPE": {
+      "columns": [
+        [
+          "id_conf_type",
+          "INT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "5e98f177ac366a40d8c9b69f22f6bb64cf81a9d0de39d7262411e0836186779e",
+      "rows": 4,
+      "sql_sha256": "bc66a82495b645c46995ea1b124331510f90eb1f13b500c31ef3072a516a6d99"
+    },
+    "EN_CONNECTION": {
+      "columns": [
+        [
+          "id_connection",
+          "INT"
+        ],
+        [
+          "modality_connection",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "32fea347bf813d409f3500d952efd6fc533d2511d9e7d80ff4cbe2b7bada1817",
+      "rows": 4,
+      "sql_sha256": "063445278d84baff9e21652951a2e1b13eb34475862133e808d016b4153dda10"
+    },
+    "EN_CONV_RULE": {
+      "columns": [
+        [
+          "id_conv_rule",
+          "INT"
+        ],
+        [
+          "item_conf",
+          "TEXT"
+        ],
+        [
+          "item_conf_value",
+          "TEXT"
+        ],
+        [
+          "object_conf",
+          "TEXT"
+        ],
+        [
+          "object_conf_value",
+          "TEXT"
+        ],
+        [
+          "always_true",
+          "INT"
+        ],
+        [
+          "jump_id_conv_rule",
+          "INT"
+        ],
+        [
+          "id",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "78b7c95d596072648cb1bf248b626dd213c474df30f70b66ee1193334108d1c4",
+      "rows": 7899,
+      "sql_sha256": "ddcfdc88afe3c0305a7d4f2ed2b9cffb5fce7ae9bec8b9c44a5ae7fc005b9879"
+    },
+    "EN_DEVICE": {
+      "columns": [
+        [
+          "id_device",
+          "INT"
+        ],
+        [
+          "code",
+          "TEXT"
+        ],
+        [
+          "name",
+          "TEXT"
+        ],
+        [
+          "id_brand",
+          "INT"
+        ],
+        [
+          "id_line",
+          "INT"
+        ],
+        [
+          "visible",
+          "INT"
+        ],
+        [
+          "id_item",
+          "INT"
+        ],
+        [
+          "visibility_type",
+          "TEXT"
+        ],
+        [
+          "dependent",
+          "INT"
+        ],
+        [
+          "is_gateway",
+          "INT"
+        ],
+        [
+          "descr",
+          "VARCHAR"
+        ]
+      ],
+      "row_multiset_sha256": "d4c4780a88608a07c31fd3456cfd35f23d2f6e40ab3e9600ede4ed579ff03334",
+      "rows": 541,
+      "sql_sha256": "39c1327d4fd6bd3dc529232d8ec7b756b0f7db65e3d00fd5246fdcb8e826b6ec"
+    },
+    "EN_FILE": {
+      "columns": [
+        [
+          "id_extra",
+          "char(50)"
+        ],
+        [
+          "filename",
+          "char(50)"
+        ],
+        [
+          "version",
+          "INT"
+        ],
+        [
+          "release",
+          "INT"
+        ],
+        [
+          "build",
+          "INT"
+        ],
+        [
+          "id_package",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "40d597d1ed1d864da786b72bebfdabc96d68375ff04a394f733d2ebe798155bb",
+      "rows": 73,
+      "sql_sha256": "6ea6e05e472c221d5a24f2ca943d8068284cf89841ed978c7166933070b26374"
+    },
+    "EN_FILTER": {
+      "columns": [
+        [
+          "id_filter",
+          "INT"
+        ],
+        [
+          "id_object_firmware",
+          "INT"
+        ],
+        [
+          "note",
+          "TEXT"
+        ],
+        [
+          "whole_range",
+          "INT"
+        ],
+        [
+          "id_conf",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "53d0189f5d56b5d377056f060da7e105ec73f21e5e6c78a910fd75279f5c65f9",
+      "rows": 1909,
+      "sql_sha256": "ab51e256c1946b6414478bfd3c0d949777e5a1b1ceb369296f9d7669a2680394"
+    },
+    "EN_FILTER_RANGE": {
+      "columns": [
+        [
+          "id_filter",
+          "INT"
+        ],
+        [
+          "range",
+          "TEXT"
+        ],
+        [
+          "note",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "5f32b6c5c1b9fe5f0def1d18ff0a4f52689189257647e73ec33c66a5007a3311",
+      "rows": 6152,
+      "sql_sha256": "355e50cc964fc22c5c1b89408af5d8564406bd2d2c887a948eb9a3b362405619"
+    },
+    "EN_FIRMWARE": {
+      "columns": [
+        [
+          "id_firmware",
+          "INT"
+        ],
+        [
+          "id_item",
+          "INT"
+        ],
+        [
+          "firmware_V",
+          "INT"
+        ],
+        [
+          "firmware_R",
+          "INT"
+        ],
+        [
+          "slots",
+          "INT"
+        ],
+        [
+          "id_status",
+          "INT"
+        ],
+        [
+          "FW_default",
+          "tinyint"
+        ]
+      ],
+      "row_multiset_sha256": "489f3edbcdede74bb2c9fc5964d405d4c5fef314e0f73848ea2bea5a4cc1e89e",
+      "rows": 311,
+      "sql_sha256": "a2e5e18a2b51b65e24f6a410240aff0474ac9d4d59d0635542f64c142cd1074c"
+    },
+    "EN_FLOOR_TYPE": {
+      "columns": [
+        [
+          "id_floor",
+          "INT"
+        ],
+        [
+          "floor",
+          "TEXT"
+        ],
+        [
+          "floor_default",
+          "boolean"
+        ]
+      ],
+      "row_multiset_sha256": "33ff6e6bad6dc8fd2a86d3d6a34df04325c74367a6d0b9a23e9dd47662336dac",
+      "rows": 33,
+      "sql_sha256": "69a1a65ccd462e8f49c532336da630a7ad3c9d62952ad807a589e691313a5687"
+    },
+    "EN_ICON": {
+      "columns": [
+        [
+          "id_icon",
+          "INT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ],
+        [
+          "icon_file",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "e748663ad073a7ebe4b214b84dda0b18e99117c91f9603ec4f29df21fcb67868",
+      "rows": 24,
+      "sql_sha256": "f677c8e59cade28492a43dec9f2280ce0130eb2b5cf626eee16a0bc13bec01fd"
+    },
+    "EN_ITEM": {
+      "columns": [
+        [
+          "id_item",
+          "INT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ],
+        [
+          "id_family",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "ead77a671f36ed631770e8886da96da4000f250a331e9ee601b59d27b1426f37",
+      "rows": 210,
+      "sql_sha256": "b6cb7a4c1327b3cca2fd5a93fef587c353dafdfed1ecd33f9f9eed3b0e7e4501"
+    },
+    "EN_KEY_OBJECT": {
+      "columns": [
+        [
+          "id_key_object",
+          "INT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ],
+        [
+          "slots",
+          "TEXT"
+        ],
+        [
+          "visible",
+          "INT"
+        ],
+        [
+          "id_family",
+          "INT"
+        ],
+        [
+          "key_object",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "9b261e642531468a69a6ed06034e4b085725b9474a726e56c05b56a887291147",
+      "rows": 158,
+      "sql_sha256": "f437cb01a9e965fbf276c83f915743aaff6b379d3d09bdaff3cf40f8dc73f9ad"
+    },
+    "EN_LABELS": {
+      "columns": [
+        [
+          "id",
+          "INT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "1602835bf11c9ace201b0202f18cf5210e8f192f96c5aad89bf8b6ecf39a20ed",
+      "rows": 310,
+      "sql_sha256": "6c9adbd8caae54689d29e97b3e3ea2820d4c0a931e2b4ecee14d4908884cfee6"
+    },
+    "EN_LANGUAGE": {
+      "columns": [
+        [
+          "code",
+          "char(50)"
+        ],
+        [
+          "name",
+          "char(50)"
+        ],
+        [
+          "defPackageL1",
+          "INT"
+        ],
+        [
+          "defPackageL2",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "9581d4f15dab404abae287d71af5f029e7921fac76983c5692c7b8a5968a9b95",
+      "rows": 35,
+      "sql_sha256": "c7c280dfae608985e33a830ee335ff7bea37808411038c1fa89cbec7a8e61eb4"
+    },
+    "EN_LINE": {
+      "columns": [
+        [
+          "id_line",
+          "INT"
+        ],
+        [
+          "line_name",
+          "VARCHAR"
+        ],
+        [
+          "line_modobj",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "ea5d144d763274f4a211797e24c89bde817143417d9ab89457786cb2f06e148f",
+      "rows": 19,
+      "sql_sha256": "2096018ae598943d0e9899e96adbfb27a7b3ac9c2645175b8edb703dd1d1169a"
+    },
+    "EN_OBJECT_ITEM_FAMILY": {
+      "columns": [
+        [
+          "id_family",
+          "INT"
+        ],
+        [
+          "family_name",
+          "TEXT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ],
+        [
+          "progressive",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "18e95205cac5eb5c837c4da01a90fc7f292a4f3d0a11522fb4bdf40d77f6d57a",
+      "rows": 33,
+      "sql_sha256": "011b04428bb48794745d77b2f7f59949a89cb823d7a287ae2ce18ede2bfe1b96"
+    },
+    "EN_PACKAGE": {
+      "columns": [
+        [
+          "id_package",
+          "INT"
+        ],
+        [
+          "name",
+          "char(50)"
+        ],
+        [
+          "GL",
+          "INT"
+        ],
+        [
+          "version",
+          "INT"
+        ],
+        [
+          "release",
+          "INT"
+        ],
+        [
+          "build",
+          "INT"
+        ],
+        [
+          "id_unicode_set",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "0c691cbb987eac33c23765fcb656be9d9b907fb8d38a661e10c880e6ca1ed2a6",
+      "rows": 50,
+      "sql_sha256": "b36ade55b95137da91b30ec3d1f07dffcbef61410df41d6341ab904d7e2eefc1"
+    },
+    "EN_PARAMETERS": {
+      "columns": [
+        [
+          "id_parameters",
+          "INT"
+        ],
+        [
+          "path",
+          "TEXT"
+        ],
+        [
+          "type",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "9caa250941d1e4dfb4dd9d8847ae24edf8fe7abb4de4b69fcf45d7ef6e1236af",
+      "rows": 537,
+      "sql_sha256": "e50d40a6db7dbe0b781f5d7355ab1a2888d7245b82882935fe75c11bf8dd4218"
+    },
+    "EN_PARAMETERS_TYPE": {
+      "columns": [
+        [
+          "id_parameters_type",
+          "INT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "e412dd5d9831da3e38ce2492166b4bb69268d269b9d9675ba02b6958353c4d64",
+      "rows": 8,
+      "sql_sha256": "07bbd99d26a0d59676766f7eaa18983f5c95c404f14c12d0d556ee14d92649dc"
+    },
+    "EN_PHY_TO_ADV_TRANS": {
+      "columns": [
+        [
+          "id_en_phy_to_adv_trans",
+          "int(11)"
+        ],
+        [
+          "id_firmware",
+          "int(11)"
+        ],
+        [
+          "trans_data",
+          "int(50)"
+        ],
+        [
+          "description",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "78d963e92a0a5ab00e8437cdcccd2114adc71cbefd2cc857400a993c8edb760d",
+      "rows": 3,
+      "sql_sha256": "f87e552562ef6332d6595bd43f338516a08c14673519b4f1c2fca1e4b378e82e"
+    },
+    "EN_PICTURE": {
+      "columns": [
+        [
+          "id_picture",
+          "INT"
+        ],
+        [
+          "picture_file",
+          "TEXT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "f10e6878fb2e28c7afd32c0a98f25f87cf9e215b265bce8442043c11e4107def",
+      "rows": 26,
+      "sql_sha256": "79477c2e788d71c9c7648202ac574b33eb69408c4fdbc85687990c44e4df7a06"
+    },
+    "EN_ROOM_TYPE": {
+      "columns": [
+        [
+          "id_room_type",
+          "INT"
+        ],
+        [
+          "room_type_descr",
+          "TEXT"
+        ],
+        [
+          "default_value",
+          "boolean"
+        ]
+      ],
+      "row_multiset_sha256": "ae25ff26c83f722f2949164337bf75da51467b9879110376fac30dbb0dfd1b2b",
+      "rows": 26,
+      "sql_sha256": "aef7b4bfd0769b25311f81730f5ebcb3434df300e0d7806b87316ceee990421e"
+    },
+    "EN_SLOTS": {
+      "columns": [
+        [
+          "id_slot",
+          "INT"
+        ],
+        [
+          "first_slot",
+          "INT"
+        ],
+        [
+          "fixed_ko",
+          "BOOL"
+        ],
+        [
+          "id_object_firmware",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "841714dfbc84dbe9e370dfa38530dfdcf2540eac920a0cf69932e93090ac7473",
+      "rows": 1725,
+      "sql_sha256": "95a97ca6a411624ea13d3becccabdee2f3a89d031f1a438d0cc8789ebf292e3b"
+    },
+    "EN_SLOT_KO_VIRGIN": {
+      "columns": [
+        [
+          "id_slot_ko_virgin",
+          "INT"
+        ],
+        [
+          "id_fw_virgin",
+          "INT"
+        ],
+        [
+          "slots",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "a39ffc3105af3ece1fe17de50776ff1cccee8c58e5800508b91285ce2d70dcad",
+      "rows": 169,
+      "sql_sha256": "65a34647d327744309e169887d9c476d62f3beb0f6a169eceb1fd03201e61fab"
+    },
+    "EN_SPECIAL_FUNCTION": {
+      "columns": [
+        [
+          "id_function",
+          "INT"
+        ],
+        [
+          "function",
+          "TEXT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "619a09390bedac417ff3d4634181803c2a107a8dd5f779682c7266455c82e79f",
+      "rows": 2,
+      "sql_sha256": "c53fd3c428df343333ec2482326d320d887ad15f4baff98b85b0737db968ac39"
+    },
+    "EN_STATUS": {
+      "columns": [
+        [
+          "id",
+          "int(10)"
+        ],
+        [
+          "name",
+          "varchar(50)"
+        ],
+        [
+          "description",
+          "varchar(255)"
+        ]
+      ],
+      "row_multiset_sha256": "17204c3a2f03525c2b0d2a66c048fd2eb0fda1183476e819e304c0a782e3c396",
+      "rows": 7,
+      "sql_sha256": "2aeaa8d5b7fb1c18bdafb7b1669581021035c6c3c333f652d3f6311fac16994f"
+    },
+    "EN_SW_INIT": {
+      "columns": [
+        [
+          "param",
+          "TEXT"
+        ],
+        [
+          "value",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "24f97aacc45111399c5ee99247c61e4b310ccf12772f271959327c28c08b046d",
+      "rows": 3,
+      "sql_sha256": "9645e02b0a4d32e2728678f1ae91cb7a6367076e605767c63780b0a41767d8cd"
+    },
+    "EN_SYSTEM": {
+      "columns": [
+        [
+          "id_system",
+          "INT"
+        ],
+        [
+          "name",
+          "TEXT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ],
+        [
+          "xml_key_system",
+          "TEXT"
+        ],
+        [
+          "sys_modobj",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "7a26903a34e41ec765f20653a75d3ac7b88b9d06d94c1a1603ea3e5a3a91c691",
+      "rows": 30,
+      "sql_sha256": "e93193070c1d0185da9876040a4155ac2b20b0bf92e9212c18d7342495efb317"
+    },
+    "EN_UNICODE_RANGE": {
+      "columns": [
+        [
+          "id_unicode_range",
+          "INT"
+        ],
+        [
+          "Min",
+          "char(50)"
+        ],
+        [
+          "Max",
+          "char(50)"
+        ]
+      ],
+      "row_multiset_sha256": "aebed15613cf5fef2608b0084fbecafd36ca0f9a016bd5b27e0d486f5841beff",
+      "rows": 4531,
+      "sql_sha256": "22cbf5ba5775bd97fb34f3df6317a1da26ac7695e36328cbb85ade4f00f2c383"
+    },
+    "EN_UNICODE_SET": {
+      "columns": [
+        [
+          "id_unicode_set",
+          "INT"
+        ],
+        [
+          "notes",
+          "char(50)"
+        ]
+      ],
+      "row_multiset_sha256": "5581cb52a680355d83afd808cd71e0ffcbcef7ae2e279d01c70ee1179a34f91d",
+      "rows": 5,
+      "sql_sha256": "c583ebc28af89d5ac9f422ad2df6b237f1813e222f77656dff454131f2219126"
+    },
+    "EN_VIRGIN_OBJECT": {
+      "columns": [
+        [
+          "id_virgin_key_object",
+          "INT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ],
+        [
+          "virgin_key_object",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "4e4552b60e1021eaeb3186c4fbaf56cd02b1cfb6665389a4eb9efaabbcb096aa",
+      "rows": 18,
+      "sql_sha256": "9e7017c13c44930f0b3115388f9204197995e37eba5f070331937cbd9f3544cf"
+    },
+    "MACRO_TASKS": {
+      "columns": [
+        [
+          "key_object",
+          "INT"
+        ],
+        [
+          "ko_descr",
+          "TEXT"
+        ],
+        [
+          "id_bus_type",
+          "INT"
+        ],
+        [
+          "bus_type_descr",
+          "TEXT"
+        ],
+        [
+          "id_system",
+          "INT"
+        ],
+        [
+          "system_descr",
+          "TEXT"
+        ],
+        [
+          "collection",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "732f3dd707a55703ed4fb0338b294a9d96962bf1bfa50745e68416d5696dcb72",
+      "rows": 16,
+      "sql_sha256": "b31c41bde95f4f9a86773df4a73971a5605994b962144378063e6e1b56fbf1c2"
+    },
+    "RIF_ANA_GROUP": {
+      "columns": [
+        [
+          "id_group",
+          "INT"
+        ],
+        [
+          "id_apartment",
+          "INT"
+        ],
+        [
+          "id_bus",
+          "INT"
+        ],
+        [
+          "id_system",
+          "INT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ],
+        [
+          "group_number",
+          "INT"
+        ],
+        [
+          "is_light_zone",
+          "INT"
+        ],
+        [
+          "color",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "d511218f31864a028a800c29d047f4102eb26b60acbb55fa5d3c945f29613884",
+      "rows": 256,
+      "sql_sha256": "fd1d6a1bc5acadd1ff10c1ee026f1704b5c89e84cbc6030edcf78c7e0c47a934"
+    },
+    "RIF_MH_COLLECTION_OBJECTS": {
+      "columns": [
+        [
+          "id_collection",
+          "INT"
+        ],
+        [
+          "collection_type",
+          "TEXT"
+        ],
+        [
+          "key_conf_collection",
+          "TEXT"
+        ],
+        [
+          "key_value_collection",
+          "TEXT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ],
+        [
+          "id_apartment",
+          "INT"
+        ],
+        [
+          "id_bus",
+          "INT"
+        ],
+        [
+          "id_system",
+          "INT"
+        ],
+        [
+          "progressive",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "67a41f04586c2f4fd439b751369d2fcf334f6a8a9eeddca8d9fcabb66b3be9b0",
+      "rows": 189,
+      "sql_sha256": "f42606b93a10571a5ef858fb6211a186b2c09bf9a792761a5d5f25d956c2ef8d"
+    },
+    "RIF_MH_OBJECT": {
+      "columns": [
+        [
+          "id_object",
+          "INT"
+        ],
+        [
+          "key_object",
+          "INT"
+        ],
+        [
+          "descr",
+          "TEXT"
+        ],
+        [
+          "id_apartment",
+          "INT"
+        ],
+        [
+          "id_bus",
+          "INT"
+        ],
+        [
+          "id_system",
+          "INT"
+        ],
+        [
+          "id_collection",
+          "INT"
+        ],
+        [
+          "progressive",
+          "INT"
+        ],
+        [
+          "esistenza",
+          "INT"
+        ],
+        [
+          "id_group",
+          "INT"
+        ],
+        [
+          "SysAddress",
+          "TEXT"
+        ]
+      ],
+      "row_multiset_sha256": "7b7109ce48cd8c3e8ec1733cfe7f97784cba83ba028aa24dccd0c164a00dc8d7",
+      "rows": 2001,
+      "sql_sha256": "ee05a7d679267c729bafd6ed3ea0fc7697e0cddbebb7d8c5a031ff84a3b77523"
+    },
+    "TMP_ID": {
+      "columns": [
+        [
+          "id",
+          "INT"
+        ]
+      ],
+      "row_multiset_sha256": "202e8db084b3ea58569d4b5be786da36ff92bda1205bf21f0475cce98930d3d2",
+      "rows": 2000,
+      "sql_sha256": "9c319dd41dcaeb61b929d078e01eddeea9b13bbc54b7536e0a965d1fcba12d3a"
+    },
+    "sqlite_sequence": {
+      "columns": [
+        [
+          "name",
+          ""
+        ],
+        [
+          "seq",
+          ""
+        ]
+      ],
+      "row_multiset_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rows": 0,
+      "sql_sha256": "4cb1eaf14467f226196148cb5688569660cb290d414bae4c1c450b149b62befd"
+    }
+  },
+  "whitelisted_DB_INFO": {
+    "DATA_B": 0,
+    "DATA_R": 4,
+    "DATA_V": 4,
+    "R": 0,
+    "V": 3,
+    "export_date": 20260520
+  }
+}

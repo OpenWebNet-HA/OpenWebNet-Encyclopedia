@@ -1,0 +1,203 @@
+{
+  "scope": "Exact sanitized source/collector/output/reference copies; no whole original binaries or full configuration",
+  "files": [
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/INPUTS.json",
+      "export": "f460/INPUTS.json",
+      "bytes": 1320,
+      "sha256": "21b260315c1415da535bf50cb7947854c0e5df8717297633ae2f382e184b91c6"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/OUTPUT_MANIFEST.json",
+      "export": "f460/OUTPUT_MANIFEST.json",
+      "bytes": 1270,
+      "sha256": "9181f651e3c97453c06506fd3209814a935005b3ea72f3788b098cab260fdff8"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/REPORT.md",
+      "export": "f460/REPORT.txt",
+      "bytes": 6241,
+      "sha256": "d288575f22d4e76b0c257ce2cbfad0dd2424efc59f5fa20e92ac310f5675a620"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/SOURCE.json",
+      "export": "f460/SOURCE.json",
+      "bytes": 6616,
+      "sha256": "bec002bfef1a2a4ccbde2d86ec21e25251538c4f7e79a72ea36328465e671929"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/collect_consumer_v1.py",
+      "export": "f460/collect_consumer_v1.py",
+      "bytes": 6997,
+      "sha256": "5abef98d606c834b4edc39adc25e906fc65e19e7e9e5f1ece9a36892c9a41eba"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/spans/consumer-context-list-source.txt",
+      "export": "f460/spans/consumer-context-list-source.txt",
+      "bytes": 1500,
+      "sha256": "782d866a3110698a0fcc1a15b213f4b7b8fdce9850934176508f111249a58aac"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/spans/list-text-substring-and-copy-request.txt",
+      "export": "f460/spans/list-text-substring-and-copy-request.txt",
+      "bytes": 1118,
+      "sha256": "7e8e6807dd125828d71f04cb3c404a4724f3e6157708ebe21547bb730ffe9494"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/spans/other-list-source-branch-only.txt",
+      "export": "f460/spans/other-list-source-branch-only.txt",
+      "bytes": 344,
+      "sha256": "32ee7e6dce79966f4e5dac981a461acd8c9c089ce81a3cf9da6f9b53a4aa55b6"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/spans/same-wrapper-context-and-selector.txt",
+      "export": "f460/spans/same-wrapper-context-and-selector.txt",
+      "bytes": 874,
+      "sha256": "7d59e61d4fae8c7a57cf3e629f326b3e2f8f56ef229dfa28179fed00b3058437"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/INPUTS.json",
+      "export": "f461/INPUTS.json",
+      "bytes": 1058,
+      "sha256": "75867ce52d815f1fff9c1ee40694c7b7929a8e2b6c7e2594f669ad7722ef9bb6"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/OUTPUT_MANIFEST.json",
+      "export": "f461/OUTPUT_MANIFEST.json",
+      "bytes": 1884,
+      "sha256": "31965f34cf57816dedd8176bae37c5d692500ed2a23eef8fd01358860420a23f"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/REPORT.md",
+      "export": "f461/REPORT.txt",
+      "bytes": 8843,
+      "sha256": "0e13cbfe063217d9234b916774616ee5233a2a5892ba7ffdb3dd19aa3fb3ec04"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/SOURCE.json",
+      "export": "f461/SOURCE.json",
+      "bytes": 9052,
+      "sha256": "640efb1c7df2adef38b5142345a6eb06cff58fadfe35ed65c8b7e93d6a2daad5"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/collect_clock_v1.py",
+      "export": "f461/collect_clock_v1.py",
+      "bytes": 8157,
+      "sha256": "fa5bc0aff7145ef719557399b839a375b6580014ef2583e1e88c64a675afc726"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/spans/candidate-interval-field-request.txt",
+      "export": "f461/spans/candidate-interval-field-request.txt",
+      "bytes": 985,
+      "sha256": "56bb07e892cd6b11c336c70894f0c5ab530dd0170bf09d9786afaa20b6d067ee"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/spans/candidate-ready-helper-factor1000.txt",
+      "export": "f461/spans/candidate-ready-helper-factor1000.txt",
+      "bytes": 510,
+      "sha256": "d13d6751287749fa90bfd41f34c248a28d95da1398b3e340d493e85785f41d34"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/spans/candidate-ready-helper-flag-gate.txt",
+      "export": "f461/spans/candidate-ready-helper-flag-gate.txt",
+      "bytes": 485,
+      "sha256": "c1fb8fa7a10ebb97c11e8d6928021d6f2c3ded058209d4e88f8e35503d805026"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/spans/candidate-realtime-provider.txt",
+      "export": "f461/spans/candidate-realtime-provider.txt",
+      "bytes": 1396,
+      "sha256": "864aa73c72fd8fb633b7cfe49c239e70c58a47874c49d169a116392faab00393"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/spans/local-min-initialization.txt",
+      "export": "f461/spans/local-min-initialization.txt",
+      "bytes": 568,
+      "sha256": "9b8fb22d89cba9f707931e62535f885316321cc9c8941460421c11e9f6ba9bb1"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/spans/provided-owner-and-list.txt",
+      "export": "f461/spans/provided-owner-and-list.txt",
+      "bytes": 517,
+      "sha256": "98a3c83da2a046082ea229dadf14dbe3c3d1cc21e42f839003a118b87430ca8e"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/spans/same-data-callback-reentry.txt",
+      "export": "f461/spans/same-data-callback-reentry.txt",
+      "bytes": 316,
+      "sha256": "81c6a76597de0ab71faca10c073869b756efcd8a6ff4a9d1b05ec0f9ddc5317c"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/spans/signed-delta-source-requests-return.txt",
+      "export": "f461/spans/signed-delta-source-requests-return.txt",
+      "bytes": 1523,
+      "sha256": "a2e5ee5623c7ccd3cbdbf8196460e7010da4eca5dc717dfc84f3caed305c9fa5"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/spans/unsigned-due-min-and-branch.txt",
+      "export": "f461/spans/unsigned-due-min-and-branch.txt",
+      "bytes": 1242,
+      "sha256": "e0d9ed304daec021f4c36ff021dd018038bf8a7d9919b548c43632c26180893e"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run12/PLAN.json",
+      "export": "plan.json",
+      "bytes": 781,
+      "sha256": "37eb1ecfa11de2c8d749158bb67262c00fbb9956ef2e15af9af4ac2e8b7ae6ef"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run12/PRIOR_PROTECTION.json",
+      "export": "prior-protection.json",
+      "bytes": 398,
+      "sha256": "77b7bae8c6be2895fdf769aded6e9522959146e267dc676bdb3dff2a0782dd5f"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run12/SOURCE_CHECKS.json",
+      "export": "source-checks.json",
+      "bytes": 488,
+      "sha256": "f18eb1164dbca36a7740d0eba4c0b2aa2e4797231ff552ea5837112f678b5a0c"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run12/integration/DOCUMENT_PATCH.json",
+      "export": "document-patch.json",
+      "bytes": 773,
+      "sha256": "e47e2586bf1add2b71ba14177cdb7df2afc515b40a63745e2e1fd7247191457e"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run12/integration/pre-edit/INDEX.json",
+      "export": "pre-edit-index.json",
+      "bytes": 507,
+      "sha256": "54d015ab921442c7b1069213834e695c0092684bc4522ade1b028fe812890aac"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run12/integration/pre-edit/f460-f461-deep-analysis.md",
+      "export": "historical-analysis.txt",
+      "bytes": 32126,
+      "sha256": "478e81003ae6f419f1c3ccee6e108f4ddf554d2020fefdb12ba82b326db463a6"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run12/integration/pre-edit/mhcatalogue-source-profiles.md",
+      "export": "unchanged-profile.txt",
+      "bytes": 15603,
+      "sha256": "bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run12/REFERENCE_DRAFT.md",
+      "export": "reference-candidate.txt",
+      "bytes": 35131,
+      "sha256": "71ac65fa4ddd6934f01ec8d1f07e132f7b1e61635673e39eb840e4668d38a7d5"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run12/REFERENCE_DRAFT_METHOD.json",
+      "export": "draft-method.json",
+      "bytes": 2962,
+      "sha256": "2eb6adadbb8de04585457b8df915c97426a3c32aead297f781ddc3ce81828c51"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run12/ANALYSIS_APPENDIX_DRAFT.md",
+      "export": "analysis-appendix.txt",
+      "bytes": 2961,
+      "sha256": "781501062586d16ab259594ed93131e4c655206e8d15927443b5ff67118412e5"
+    }
+  ]
+}

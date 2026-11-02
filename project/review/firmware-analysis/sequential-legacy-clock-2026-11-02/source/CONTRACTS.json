@@ -1,0 +1,43 @@
+{
+  "S10_local_branch": {
+    "commented_not_requested": "hwclock --systohc --utc",
+    "compiled_date_argument": "2000.1.1-00:00:00",
+    "flow": "open r -> gets channel line -> scan line %d num -> if num==1 -> date -s compiled literal -> close request",
+    "limits": [
+      "No hardware-flag truth or actual invalid RTC established",
+      "No completed reset, correct time, timezone, RTC write or synchronization established",
+      "Errors/cleanup/lifetime/wholeboot/readiness not closed"
+    ],
+    "path_literal": "/proc/sys/dev/btweb/rtc_invalid",
+    "premises": [
+      "Valid open channel and readable ordinary line",
+      "Numeric scan supplies num; no scan result guard in selected script",
+      "Natural admission, ordinary Tcl/extension command binding and normal returns",
+      "No target proc file or current time was read"
+    ],
+    "source_lines": [
+      2,
+      13
+    ]
+  },
+  "hwtosys_wrapper": {
+    "F453AV_normal_recovery_and_MH200N_recovery": "exec uname -m; string compare against compiled armv5tel -> nonzero requests exec rtc-rw r; zero requests exec hwclock --hctosys --utc under ordinary Tcl comparison/conditional semantics",
+    "MH200N_normal": "Direct exec hwclock --hctosys --utc, no uname/compare branch in own44B script",
+    "comments_not_provenance": [
+      "SA1110",
+      "PXA255"
+    ],
+    "natural_caller": "OPEN: not joined to init/S10; no broader caller search performed",
+    "provider_bodies": "uname/rtc-rw/hwclock/Tcl/command resolution opaque; no native or script execution"
+  },
+  "init_to_S10": {
+    "coverage": "Inherited init selector context plus NEW S10 local branch; no application ordering or successful source guarantee",
+    "join": "Own packaged S10rtc_verify matches selected prefix; evaluation requires natural init reachability, runtime directory visibility, ordinary try/source binding and normal returns",
+    "request": "try [list source $n]",
+    "selector": "sorted glob /etc/init.d/scripts/S*",
+    "source_lines": [
+      103,
+      106
+    ]
+  }
+}

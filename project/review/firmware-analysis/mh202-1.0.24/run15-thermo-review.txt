@@ -1,0 +1,22 @@
+# MH202 run15 WHO4 query independent source review
+
+PASS. Parent independently audited selected original source spans, control/data relations and literal arithmetic, then replayed the static collector --check:20 outputs reproduce. This is source/finite-model review, not native parser/serializer/converter or device execution.
+
+Report SHA256: `cf3f9d141f09a2720fdfa1522fc891dcd7adcaa451cab762e3ab0b8866eb9de0`.
+
+Collector SHA256: `fab7ebe26237ddd1ad5c12bda6ddcd9408709170016e38fab9803a36f1500c11`.
+
+Manifest SHA256: `942c74e2994e66ea73f0a76c996efb5772076781d1ef19f987af52cc3414e556`.
+
+Separate ImageVFS reads and ELF PT_LOAD offset reconstruction verify all5 input hashes, 13 original span hashes/offsets, 25 words, 8 safe literal targets and all22 manifest entries. Canonical native corpus additions are0; prior eight-corpus totals do not change.
+
+## Semantic audit
+
+- Actual pair2→1 reaches forward converter1f20. Selected parsed representation3/kind3/DIM0/WHERE1/nullselector and serializerreturn0 are explicit premises. Serializer result is tested; no original serializer/parser result is supplied as an observed accepted command.
+- Candidate libthermo scsDest1dac allocates12bytes, short ordinary WHERE1 with nullselector writes typewordD1/address1/extra0. Source prefix/string/numeric/allocation completion and live binding are conditional; no physical address class/domain follows.
+- Original DIM-request address formats distinguish brief0130 from computed but unused extended010303. DIM0 jump and WHERE-notprefix00 guard lead to requestcode00/header99. Source-derived r6=0 follows serializer/kind relation; it is not a guessed private default.
+- Selected code list is nonempty by declared ordinary append semantics. Original formatter%02X%s%s combines99/0130/00 into ASCII99013000; host-decoded four bytes are not serial framing or executed output.
+- Core brief helper sets type3/representation1/routing3 and copies selected source metadata before list insertion. ParsedWHO4, parsedkind3, recordtype3 and SCSrouting3 remain separate namespaces. Local return0 is a control-flow result under delegates, not successful transport or physical effect.
+- Prior reverse200/501 text is a separate source contract. No causal exchange, units/scale/signedness/reserved meaning, supported-value domain, F454 equivalence or actual thermoSTM/query completion is claimed.
+
+No source correction was required. The source/model join is reproducible under stated parsed/provider/primitive premises; raw grammar, effective live bindings, general address/DIM behavior, ownership/lifetime, transport/runtime/physical and wider Device gates remain open.

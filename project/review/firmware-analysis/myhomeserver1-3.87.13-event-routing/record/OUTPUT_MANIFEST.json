@@ -1,0 +1,106 @@
+{
+  "collector_sha256": "f852cc5b18dd6ade2391668fa62fd0530eba2f72d235e8936415d45c483d46ee",
+  "counts": {
+    "GOT_chains": 5,
+    "RTTI": 3,
+    "direct_calls": 7,
+    "guards": 16,
+    "inputs": 4,
+    "keys": 9,
+    "original_execution": 0,
+    "relocations": 5,
+    "spans": 19,
+    "type_tables": 1
+  },
+  "outputs": {
+    "FIELD_FLOW.json": {
+      "bytes": 2340,
+      "sha256": "7aa871a2a8a1857c66a753d384824a81d2982615a2061dbea63739aeca708560"
+    },
+    "INPUTS.json": {
+      "bytes": 560,
+      "sha256": "7c1ef1bc214df48bcf47528eb370b15748790717c2f43b9312425a496f7bb2e8"
+    },
+    "ORIGINAL_SOURCE.json": {
+      "bytes": 10513,
+      "sha256": "9178144804e130da5da46838666f27b90ee8de47e5615113a089b35a1163cf32"
+    },
+    "spans/alternate-load-init.txt": {
+      "bytes": 2613,
+      "sha256": "2aac513bd11901efd8d20b070e0267402f75c161c6d3a11efc80f2a756054dd2"
+    },
+    "spans/alternate-load-status-init.txt": {
+      "bytes": 403,
+      "sha256": "ce86e129089a392cdd344a1e0f247c23a533a0cf5aeb55fc2ccdbf332676dfd1"
+    },
+    "spans/handler-id-state-handoff.txt": {
+      "bytes": 692,
+      "sha256": "e3110ba8da4d283ecd943e640fb6d1b73c5de5ee72ddaac42d8b1ffa08048865"
+    },
+    "spans/light-init-status-level.txt": {
+      "bytes": 2554,
+      "sha256": "8621ce23eb1730e90b746d40a1af2fba35c53fd952be983909e516df13afdd1f"
+    },
+    "spans/light-map-equal-state-tests.txt": {
+      "bytes": 939,
+      "sha256": "b64ba2725e5414f9c2ce1282d451a9b9e0f15044b531d03f03b3ff5027c78068"
+    },
+    "spans/light-map-update.txt": {
+      "bytes": 861,
+      "sha256": "fa79eaf9a9cf5d39a3e9c78b88f19952e124f76910dbd10680df38d0aa8ab6ce"
+    },
+    "spans/light-owned-record-copy.txt": {
+      "bytes": 2165,
+      "sha256": "c54ccb52f721dd2e14932afe7d1326dbf920ac3bad5d1b3d6d43febc71871eae"
+    },
+    "spans/load-record-copy-prefix.txt": {
+      "bytes": 2488,
+      "sha256": "57b1b0a2338e846d8af58eb30e049b0333b980e3811448340675232b89448041"
+    },
+    "spans/lookup-record-pair.txt": {
+      "bytes": 2928,
+      "sha256": "4512f4f620db3665ea56ad5fbc6f81f89ce6c69f2e0d069d97eba6f35fc175f6"
+    },
+    "spans/map-insert-delegate.txt": {
+      "bytes": 1088,
+      "sha256": "0a21c65fcda445ab533fe13c4b6dc6ad7707c168d5049738d9a18071fe15aa4a"
+    },
+    "spans/map-installed-pair.txt": {
+      "bytes": 1159,
+      "sha256": "8345f03ea528b25be004f95c97d63d2f9a3851d7db64d69f0dc3388aa7f4598d"
+    },
+    "spans/map-node-construction.txt": {
+      "bytes": 1388,
+      "sha256": "5b710bc6222acfbf44619edd8b2c64fd3c876284db9ce6df8620656932524dfd"
+    },
+    "spans/map-search-and-type-table.txt": {
+      "bytes": 2993,
+      "sha256": "8e02ca8946cf20c3fa31620c8a3bdae15f079eb3124d22bf09260331ddb22e82"
+    },
+    "spans/optional-id-copy.txt": {
+      "bytes": 1039,
+      "sha256": "6876a8207e31413950185ff2aaf28eea74f2c876306772599b7c7a69a5bc2c20"
+    },
+    "spans/params-and-id-initialization.txt": {
+      "bytes": 930,
+      "sha256": "553928325c8a642c2aa234a717e60eab3e558b26507d76a41949f4171d0abe5b"
+    },
+    "spans/record-type-selection.txt": {
+      "bytes": 770,
+      "sha256": "182ddcc9af94f5f506a6b403982d92f10fa1e5dff34efd984ce34b6b129c8c27"
+    },
+    "spans/route-lookup-handoff.txt": {
+      "bytes": 402,
+      "sha256": "e0fa5c0123bb3fdd8540981a19ed52009a09c7d541cb1773c5c872245322bc01"
+    },
+    "spans/singleton-getter.txt": {
+      "bytes": 1937,
+      "sha256": "e253d36fdb3ef371b785a1cdb4164fc7b0350e47c212b8f9f5b07e30666fa203"
+    },
+    "spans/temporary-record-stack-alias.txt": {
+      "bytes": 1135,
+      "sha256": "14e896354303f65c7245f2e963dd4b69fdbf59e53c97838ac57e39d5b0f28b23"
+    }
+  },
+  "report_sha256": "a6fafe145b644cb64258399b90a73990b57a930166952b5b45c4139840fc45f6"
+}

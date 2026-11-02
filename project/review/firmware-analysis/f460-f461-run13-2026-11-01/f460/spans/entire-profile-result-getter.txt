@@ -1,0 +1,57 @@
+
+/usr/lib/libdedrifupdater.so.1.0.0:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000003200 <_ZN8Platform16get_working_modeEv@@Base>:
+    3200:	d503233f 	paciasp
+    3204:	d102c3ff 	sub	sp, sp, #0xb0
+    3208:	f0000082 	adrp	x2, 16000 <status_machine_check_one_instance@@Base+0x11760>
+    320c:	910023e1 	add	x1, sp, #0x8
+    3210:	a9097bfd 	stp	x29, x30, [sp, #144]
+    3214:	910243fd 	add	x29, sp, #0x90
+    3218:	f947d442 	ldr	x2, [x2, #4008]
+    321c:	f90053f3 	str	x19, [sp, #160]
+    3220:	aa0003f3 	mov	x19, x0
+    3224:	f9401800 	ldr	x0, [x0, #48]
+    3228:	f9400043 	ldr	x3, [x2]
+    322c:	f90047e3 	str	x3, [sp, #136]
+    3230:	d2800003 	mov	x3, #0x0                   	// #0
+    3234:	f9400000 	ldr	x0, [x0]
+    3238:	f90003ff 	str	xzr, [sp]
+    323c:	97fffd29 	bl	26e0 <stat@plt>
+    3240:	37f80100 	tbnz	w0, #31, 3260 <_ZN8Platform16get_working_modeEv@@Base+0x60>
+    3244:	f9401a60 	ldr	x0, [x19, #48]
+    3248:	910003e1 	mov	x1, sp
+    324c:	d2800003 	mov	x3, #0x0                   	// #0
+    3250:	d2800002 	mov	x2, #0x0                   	// #0
+    3254:	f9400000 	ldr	x0, [x0]
+    3258:	97fffd3a 	bl	2740 <g_file_get_contents@plt>
+    325c:	350001e0 	cbnz	w0, 3298 <_ZN8Platform16get_working_modeEv@@Base+0x98>
+    3260:	52800013 	mov	w19, #0x0                   	// #0
+    3264:	f0000081 	adrp	x1, 16000 <status_machine_check_one_instance@@Base+0x11760>
+    3268:	f947d421 	ldr	x1, [x1, #4008]
+    326c:	f94047e0 	ldr	x0, [sp, #136]
+    3270:	f9400022 	ldr	x2, [x1]
+    3274:	eb020000 	subs	x0, x0, x2
+    3278:	d2800002 	mov	x2, #0x0                   	// #0
+    327c:	54000241 	b.ne	32c4 <_ZN8Platform16get_working_modeEv@@Base+0xc4>  // b.any
+    3280:	2a1303e0 	mov	w0, w19
+    3284:	a9497bfd 	ldp	x29, x30, [sp, #144]
+    3288:	f94053f3 	ldr	x19, [sp, #160]
+    328c:	9102c3ff 	add	sp, sp, #0xb0
+    3290:	d50323bf 	autiasp
+    3294:	d65f03c0 	ret
+    3298:	f94003e0 	ldr	x0, [sp]
+    329c:	b4fffe20 	cbz	x0, 3260 <_ZN8Platform16get_working_modeEv@@Base+0x60>
+    32a0:	b0000001 	adrp	x1, 4000 <_ZN13StatusMachine9next_stepE11WorkingMode@@Base+0x100>
+    32a4:	91302021 	add	x1, x1, #0xc08
+    32a8:	97fffd22 	bl	2730 <g_strrstr@plt>
+    32ac:	f100001f 	cmp	x0, #0x0
+    32b0:	f94003e0 	ldr	x0, [sp]
+    32b4:	1a9f07f3 	cset	w19, ne	// ne = any
+    32b8:	11000673 	add	w19, w19, #0x1
+    32bc:	97fffd2d 	bl	2770 <g_free@plt>
+    32c0:	17ffffe9 	b	3264 <_ZN8Platform16get_working_modeEv@@Base+0x64>
+    32c4:	97fffcb3 	bl	2590 <__stack_chk_fail@plt>

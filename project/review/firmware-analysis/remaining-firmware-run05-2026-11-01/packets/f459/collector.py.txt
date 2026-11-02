@@ -1,0 +1,63 @@
+from pathlib import Path
+import hashlib,json,struct,subprocess,os,argparse
+O=Path(__file__).resolve().parent;W=next(p for p in O.parents if (p/'OpenWebNet-Encyclopedia').is_dir());P=W/'work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libmhshared.so.1';H='4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377'
+def h(b):return hashlib.sha256(b).hexdigest()
+def J(x):return (json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+def build():
+ b=P.read_bytes();assert len(b)==43208 and h(b)==H and b[:6]==b'\x7fELF\x01\x01' and struct.unpack_from('<H',b,18)[0]==40
+ ph=struct.unpack_from('<I',b,28)[0];pe,pn=struct.unpack_from('<HH',b,42);loads=[r for i in range(pn) if (r:=struct.unpack_from('<8I',b,ph+i*pe))[0]==1]
+ def raw(a,n):
+  r=next(r for r in loads if r[2]<=a and a+n<=r[2]+r[4]);z=r[1]+a-r[2];return b[z:z+n]
+ def u(a):return struct.unpack('<I',raw(a,4))[0]
+ def bl(a):
+  w=u(a);assert w>>24==0xeb;v=w&0xffffff;v=v-(1<<24) if v&(1<<23) else v;return a+8+(v<<2)
+ guards={0x67cc:0xe1a04000,0x67d4:0xe59f2270,0x67d8:0xe08f5005,0x67dc:0xe7952002,0x67e0:0xe59f3268,0x67e4:0xe2822008,0x67e8:0xe284a010,0x67ec:0xe5842000,0x67f0:0xe7953003,0x67f4:0xe584300c,0x67f8:0xe1a0000a,0x67fc:0xe3a01000,0x6804:0xe59f2248,0x6808:0xe59f3248,0x680c:0xe7952002,0x6810:0xe5842018,0x6814:0xe795b003,0x6818:0xe284900c,0x681c:0xe59b1000,0x6820:0xe1a00009,0x6824:0xe2811018,0x6828:0xebffee88}
+ for a,v in guards.items():assert u(a)==v,(hex(a),hex(u(a)),hex(v))
+ got=0x67d8+8+u(0x6a48);assert got==0x12180
+ rel=subprocess.check_output(['readelf','-rW',str(P)],text=True);sym=subprocess.check_output(['readelf','--dyn-syms','--wide',str(P)],text=True);dynamic=subprocess.check_output(['readelf','-dW',str(P)],text=True)
+ selected=[s.strip() for s in sym.splitlines() if '_ZN8mhSharedC1EP7QObject' in s];assert any('000067c0' in s and '700' in s for s in selected)
+ globals=[]
+ for pool,slot,name in [(0x6a4c,0x122f4,'_ZTV8mhShared'),(0x6a50,0x122f0,'_ZN10QArrayData11shared_nullE'),(0x6a54,0x1230c,'_ZN9QHashData11shared_nullE'),(0x6a58,0x12310,'_ZN9bt_global10global_setE')]:
+  assert got+u(pool)==slot;row=next(x.strip() for x in rel.splitlines() if x.startswith(f'{slot:08x} '));assert 'R_ARM_GLOB_DAT' in row and row.endswith(' '+name);globals.append({'pool':hex(pool),'word':f'{u(pool):08x}','GOT':hex(slot),'symbol':name,'actual_relocation':row})
+ def imm(w):
+  n=((w>>8)&15)*2;v=w&255;return ((v>>n)|(v<<(32-n)))&0xffffffff if n else v
+ calls=[]
+ for a,t,g,name,role in [(0x67d0,0x2280,0x1225c,'_ZN7QObjectC2EPS_','Normal-return prerequisite only'),(0x6800,0x22f8,0x12284,'_ZN18QFileSystemWatcherC1EP7QObject','Normal-return prerequisite only'),(0x6828,0x2250,0x1224c,'_ZN7QStringaSERKS_','Selected assignment request')]:
+  assert bl(a)==t;x,y,z=[u(t+i*4) for i in range(3)];assert x&0xfffff000==0xe28fc000 and y&0xfffff000==0xe28cc000 and z&0xfffff000==0xe5bcf000 and t+8+imm(x)+imm(y)+(z&4095)==g
+  row=next(x.strip() for x in rel.splitlines() if x.startswith(f'{g:08x} '));assert 'R_ARM_JUMP_SLOT' in row and row.endswith(' '+name);calls.append({'call':hex(a),'targetPLT':hex(t),'GOT':hex(g),'symbol':name,'PLT_bytes':raw(t,12).hex(),'actual_relocation':row,'role':role})
+ spans=[('new-constructor-namespace-source',0x67c0,0x682c,False),('inherited-write-first-string-operand',0x3300,0x331c,True),('inherited-read-first-string-operand',0x4024,0x4040,True)];out={};meta=[]
+ for name,a,e,inherited in spans:
+  text=subprocess.check_output(['objdump','-d','-m','arm',f'--start-address={a}',f'--stop-address={e}',str(P)],text=True,env=dict(os.environ,DEBUGINFOD_URLS='')).replace(str(P),'libmhshared.so.1');out['spans/'+name+'.txt']=text.encode();meta.append({'name':name,'start':hex(a),'end_exclusive':hex(e),'bytes_hex':raw(a,e-a).hex(),'sha256':h(raw(a,e-a)),'inherited_context_not_new_coverage':inherited})
+ pins=[]
+ for p in [P,W/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0198-f459-driver-manager.md',W/'work/f459-firmware/2.1.5/research/2026-11-01-night02-shared-write/SOURCE.json',W/'work/f459-firmware/2.1.5/research/2026-11-01-night03-shared-read/SOURCE.json']:
+  x=p.read_bytes();pins.append({'path':str(p.relative_to(W)),'bytes':len(x),'sha256':h(x)})
+ out['INPUT_PINS.json']=J(pins)
+ out['SOURCE.json']=J({'original':pins[0],'ELF_class':32,'machine':40,'PT_LOAD':loads,'constructor_symbol':selected,'guards':[{'VA':hex(a),'word':f'{v:08x}'} for a,v in guards.items()],'globals':globals,'calls':calls,'spans':meta,'needed_declarations':[x.strip() for x in dynamic.splitlines() if '(NEEDED)' in x],'new_source_span_count':1,'inherited_operand_spans':2,'source_contract':'IncomingthisR4; relocationglobal_setslot->externalglobaladdress->loadedpointerP->P+24R1; SAMEreceiver+12R0->QStringassignmentrequest. No supplied/runtime/global contents read.','original_execution':0,'SQL_queries':0,'new_actual_database_bytes':False})
+ out['REPORT.md']='''# F459 selected shared-store namespace initialization
+
+This packet adds one positive original constructor source edge for the first string used by the earlier selected shared-store queries. It does not inspect another SQL method, recover a DB or establish a natural runtime caller. The own43208-byte ARM ELF32 libmhshared.so.1 SHA2564d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377 exports C1constructor67c0/700bytes. Curated OWN-DEV-0198 supplies Driver Manager product context only; no F459T/F46/MHS layout or capability transfer.
+
+Entry67cc saves incoming receiver inR4. Under ordinary successful construction/ABI/callee-save/validobject/provider premises, the local prefix installs its relocated class address point and initializes a receiver+12 representation from imported QArrayData::shared_null. A separate watcher constructor request and another field initialization intervene; their bodies, complete Qt object invariants and error/unwind behavior remain opaque. These are normal-return prerequisites, not lifetime/allocation proof.
+
+Fresh original pool6a58 and GOTbase12180 derive slot12310. Its actual R_ARM_GLOB_DAT relocation is bt_global::global_set, an unresolved external data symbol in this image. At6814 the source loads that relocated ADDRESS intoFP;681c loads the word stored at that address intoR1, called P here;6824 adds24. At6818/6820 R0 is SAMEsavedreceiverR4+12. Actual BL6828→PLT2250/GOT1224c requests QString::operator=(QString const&) with destinationreceiver+12 and sourceP+24. No runtime global data, string content or private value was read or supplied by this analysis.
+
+This identifies the original source of the constructor's selected local string assignment under effective symbol binding, valid initialized global pointer P and QString at P+24, valid destination, ordinary copy-provider behavior and normal returns. The definition/producer/type/lifetime of P, meaning/value of its+24 field, assignment success, later mutation/aliases and the natural constructor caller remain OPEN. A symbol name does not prove that the field is an installed driver/plugin name or unique identity.
+
+Earlier independently reviewed write/read packets already use receiver+12 as the first string for the SQL pluginname placeholder. Their tiny operand spans are retained ONLY as inherited context, not new encoding/table coverage. Under SAMEobject/normalcopy/noinvalidatingmutation/provider premises, the new assignment supplies that selected query namespace from a field of the externally supplied process-global object. This is a conditional dataflow join, not proof of actual plugin identity, configured namespace, cross-process isolation, scope/uniqueness, safe lifetime, successful SQL or durability. Other objects at offset24 are not equated by numeric offsets.
+
+The inspected constructor prefix stops682c, before the inherited DB-open/DDL requests. No SQL/provider/global-initializer/transport/receiving/output/authentication/session/framing/MQTT/libjel bodies are expanded. Source reasoning adds22wordguards/4GLOB_DATproofs/3actualBL-PLT-GOTproofs/oneNEWspan plus2inheritedoperandspans/4pins. Raw pool words are data, not instructions. No vendor/helper/native/emulator/SQLite/targetOS/network/bus/runtime/physical execution occurs; no actual DB recovered/generated/archived or syntheticDB created. Current cumulative archive remains prior one encrypted support container/zero plaintext, with no new network action.
+
+Run collect_namespace_v1.py --check on the host ARM tool route for deterministic readonly byte/hash/mapping/import checks. Original images/completed reports/firstcopies/registry remain read-only; canonical generation refuses overwrite and immediately saves exact first copies. Full Device/source/runtime/physical approval is pending. Confidence high for selected original argument/relocation facts; running-system applicability remains conditional.
+Version history: exact v1 and parent snapshot remain retained. Its first canonical attempt stopped at Python parsing before outputs because a report bytes literal contained Unicode. NEWv2 encodes report text as UTF8; source/hash/word/import guards remain unchanged. No v1 report/result or vendor failure is invented. VERSION_HISTORY.v2.json and PREPARATION_HISTORY.json retain observed host-tool limits.
+'''.encode()
+ out['OUTPUT_MANIFEST.json']=J({'collector_sha256':h(Path(__file__).read_bytes()),'outputs':{k:{'bytes':len(v),'sha256':h(v)} for k,v in out.items()},'original_execution':0})
+ return out
+ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build()
+if a.check:
+ for n,v in out.items():assert (O/n).read_bytes()==v,n
+else:
+ for n,v in out.items():p=O/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(v)
+ D=O/'first-candidate';D.mkdir();ix={}
+ for n,v in {Path(__file__).name:Path(__file__).read_bytes(),**out}.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(v);ix[n]={'bytes':len(v),'sha256':h(v)}
+ (D/'INDEX.json').open('xb').write(J({'files':ix}))
+print(json.dumps({'check':a.check,'outputs':len(out),'guards':22,'global_relocations':4,'call_proofs':3,'new_source_spans':1,'inherited_operand_spans':2,'original_execution':0}))

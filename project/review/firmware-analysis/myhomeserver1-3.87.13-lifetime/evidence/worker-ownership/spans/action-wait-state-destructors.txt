@@ -1,0 +1,57 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000cd554 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x14d9c>:
+   cd554:	4b04      	ldr	r3, [pc, #16]	@ (cd568 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x14db0>)
+   cd556:	b510      	push	{r4, lr}
+   cd558:	4604      	mov	r4, r0
+   cd55a:	447b      	add	r3, pc
+   cd55c:	3308      	adds	r3, #8
+   cd55e:	6003      	str	r3, [r0, #0]
+   cd560:	f743 ebb6 	blx	10cd0 <_ZNSt6thread6_StateD2Ev@plt>
+   cd564:	4620      	mov	r0, r4
+   cd566:	bd10      	pop	{r4, pc}
+   cd568:	4ba2      	ldr	r3, [pc, #648]	@ (cd7f4 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1503c>)
+   cd56a:	0009      	movs	r1, r1
+   cd56c:	4b06      	ldr	r3, [pc, #24]	@ (cd588 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x14dd0>)
+   cd56e:	b510      	push	{r4, lr}
+   cd570:	4604      	mov	r4, r0
+   cd572:	447b      	add	r3, pc
+   cd574:	3308      	adds	r3, #8
+   cd576:	6003      	str	r3, [r0, #0]
+   cd578:	f743 ebaa 	blx	10cd0 <_ZNSt6thread6_StateD2Ev@plt>
+   cd57c:	4620      	mov	r0, r4
+   cd57e:	2108      	movs	r1, #8
+   cd580:	f743 ec96 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   cd584:	4620      	mov	r0, r4
+   cd586:	bd10      	pop	{r4, pc}
+   cd588:	4b8a      	ldr	r3, [pc, #552]	@ (cd7b4 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x14ffc>)
+   cd58a:	0009      	movs	r1, r1
+   cd58c:	4b04      	ldr	r3, [pc, #16]	@ (cd5a0 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x14de8>)
+   cd58e:	b510      	push	{r4, lr}
+   cd590:	4604      	mov	r4, r0
+   cd592:	447b      	add	r3, pc
+   cd594:	331c      	adds	r3, #28
+   cd596:	6003      	str	r3, [r0, #0]
+   cd598:	f743 eb9a 	blx	10cd0 <_ZNSt6thread6_StateD2Ev@plt>
+   cd59c:	4620      	mov	r0, r4
+   cd59e:	bd10      	pop	{r4, pc}
+   cd5a0:	4b6a      	ldr	r3, [pc, #424]	@ (cd74c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x14f94>)
+   cd5a2:	0009      	movs	r1, r1
+   cd5a4:	4b06      	ldr	r3, [pc, #24]	@ (cd5c0 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x14e08>)
+   cd5a6:	b510      	push	{r4, lr}
+   cd5a8:	4604      	mov	r4, r0
+   cd5aa:	447b      	add	r3, pc
+   cd5ac:	331c      	adds	r3, #28
+   cd5ae:	6003      	str	r3, [r0, #0]
+   cd5b0:	f743 eb8e 	blx	10cd0 <_ZNSt6thread6_StateD2Ev@plt>
+   cd5b4:	4620      	mov	r0, r4
+   cd5b6:	2108      	movs	r1, #8
+   cd5b8:	f743 ec7a 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   cd5bc:	4620      	mov	r0, r4
+   cd5be:	bd10      	pop	{r4, pc}
+   cd5c0:	4b52      	ldr	r3, [pc, #328]	@ (cd70c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x14f54>)
+   cd5c2:	0009      	movs	r1, r1

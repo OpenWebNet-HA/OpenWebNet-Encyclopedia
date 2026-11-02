@@ -1,0 +1,50 @@
+# MHCatalogue comparison source preflight
+
+This is an early read-only source/matching consultation, not the completed all-table semantic comparison. No author output, original database, repository page or earlier dossier was edited. Only host hashing and immutable read-only SQLite/schema/count queries were used; no vendor expression, conversion, regex, CLR/firmware process, network/device or closed authentication/session/framing work occurred.
+
+## Exact sources and structural baseline
+
+| Source | Bytes | SHA256 |
+| --- | ---: | --- |
+| work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/matrix_mx/MHCatalogue.db | 2233344 | 79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb |
+| work/installer-database-audit/2026-10-31/recovered/f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5.bin | 2625536 | f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5 |
+
+Fresh hashes/sizes and readonly quick_check agree. Connections used absolute mode=ro&immutable=1 URIs, query_only ON and trusted_schema OFF. Fresh table-name/original CREATE-text hashes agree for all75 tables, without exporting raw DDL/defaults. Earlier first-pass comparison reports42 equal/33 different row multisets; this consultation does not repeat or promote that as a fresh complete semantic audit.
+
+Both sources declare exactly three FK rows: AS_CONNECTION_FIRMWARE references EN_FIRMWARE and EN_CONNECTION with NO ACTION; EN_PHY_TO_ADV_TRANS references EN_FIRMWARE with RESTRICT. Most other catalogue ownership relations are reconstructed. ScenarioSuite's unrelated79-table zero-FK observation must not transfer to these catalogues. Integrity checks and matching schemas do not establish every implicit relationship or actual application enforcement.
+
+## Strongest bounded matching anchors
+
+Fresh EN_DEVICE aggregate queries count331 embedded rows and541 Suite rows. In each source exact `(code,id_brand,id_line)` has zero duplicate groups, zero missing/empty code rows and zero multiple-item ambiguity per key. EN_BRAND/EN_LINE are among the prior complete equal-row tables, making literal branded commercial identity a stronger within-pair anchor than assuming id_device/id_item stability. This uniqueness is an observed property of these two sources, not a declared universal natural-key contract or proof of stable semantics for every matched record.
+
+Keep exact text/case/leading zeroes and SQLite storage types. Different branded SKUs can share an item; descriptive labels and family placeholders can be reused. EN_DEVICE.code is not EN_LANGUAGE.code. A stronger item match should retain its complete commercial alias set, main/nonmain AS_ITEM_SYSTEM associations, external modobj/system context and relationship bundle, while reporting conflicts or unmatched records explicitly.
+
+Firmware comparison should carry resolved item/commercial ownership plus V/R, build/localization, status/default, declared slot count and Object alternatives. Explicit-1 version components, no EN_BUILDS row, Deprecated status and default flag remain different states. Same numeric id_firmware, id_key_object or child-association key alone does not prove semantic equality across versions.
+
+For Object/configuration comparison preserve internal id_key_object versus external key_object; Virgin Object key space; AS_OBJECT_FIRMWARE owner; Device-local first_slot; slot conditions and configuration/filter/conversion context. Multiple EN_SLOTS alternatives are not extra Modules. EN_CONF's Object-scope(id_firmware0) versus firmware-scope(id_key_object0) ownership makes0 a not-applicable discriminator, not automatically an orphan. idx is context-local, and condition/filter values must not be evaluated with partial inputs. Duplicate rows in tables without appropriate unique keys remain multisets.
+
+## High-value query cautions for author areas
+
+Before interpreting additions/removals, separate raw PK event counts from stable-owner semantic matches and explicitly quantify reused/moved IDs. Match firmware/Object/configuration bundles after ownership is resolved, not merely labels. Retain build/status/default/localization and empty-versus-NULL differences. Test parent coverage with per-table sentinel/type policy; do not treat every zero/-1 or same-name column as a mandatory FK.
+
+Check AS_OBJECT_VIRGIN_OBJECT, AS_SLOT_CONDITION, AS_OBJECT_COLLECTION and hidden configuration/filter associations in complete owner context. AS_FW_PACKAGE emptiness or removal does not prove a package never existed; code/resources may be supplied elsewhere. Visibility, hidden/read-only flags, rule applicability, capability and installed state are separate. Support rows retained for an absent commercial item or an absent root relation do not by themselves show a runtime error or hardware absence.
+
+The embedded catalogue's previously scoped item2198/MyHOMEServer1 self-lookups are empty. Therefore the firmware-bundled catalogue is not presumed a complete current self-capability database or an authoritative replacement for the archived Suite profile. Its literal export_date is metadata, not established chronology. Equal schemas and version tuples do not establish an upgrade path.
+
+## Canonical reference and destination scope
+
+The consulted reference identities at read time are:
+
+| Reference, repository-relative | SHA256 |
+| --- | --- |
+| internals/catalogue-resolution.md | 4fe14e19d9b4e7937d32c22bcbff5ce973e7a25718e7a5cb6daa0b2cae22fd17 |
+| internals/validation-layers.md | 0c1084d1e205e5d753acfd2b049412981f995526857c718b12398f8752fe1373 |
+| devices/definitions/own-dev-0002-audio-video-web-server-gateway.md | f300b28ca0f358b73dff111ee47f1a911c71f8b949ecc979726a2b5ec5459af9 |
+| devices/definitions/own-dev-0151-mh202-scenario-programmer.md | 74f961aa3aaafb99003d1677304a6d971a42c871950796707712d1c66f50bbb9 |
+| devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md | 5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855 |
+
+These references preserve distinct product roles and source scopes: F454/item1455, MH202/item1902 and MyHOMEServer1/item2198 are catalogue/project associations, not universal diagnostic IDs. Reusable Object216 labels do not transfer electrical AV/alarm architecture, and missing embedded records do not cancel separately documented functions. No manufacturer manual/capture/oracle/physical claim was freshly reverified in this consultation.
+
+A source-profile comparison page under internals, linked from catalogue-resolution/validation context, installation/source layout and the build-specific MyHOMEServer1 embedded-catalogue section, is an appropriate destination. Keep existing Device definitions' exact Suite-source applicability and public functional semantics. Deeper source differences may narrow earlier implementation statements, but should not silently replace all canonical product data with the embedded subset or turn catalogue omissions into unsupported-device verdicts.
+
+Ready for independent review of frozen author candidates. This preflight makes no complete comparison/coverage, runtime/provider, effective UI or physical outcome claim.

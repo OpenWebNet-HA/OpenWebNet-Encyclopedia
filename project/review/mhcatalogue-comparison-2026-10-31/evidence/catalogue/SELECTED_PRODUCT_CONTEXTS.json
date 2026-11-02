@@ -1,0 +1,502 @@
+[
+  {
+    "bus_items": [
+      {
+        "id_bus": 1,
+        "id_item": 533
+      },
+      {
+        "id_bus": 2,
+        "id_item": 533
+      }
+    ],
+    "commercials": [
+      {
+        "code": "L/N/NT4672",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 533,
+        "id_item": 533,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "Energy control actuator",
+        "visibility_type": "",
+        "visible": 1
+      }
+    ],
+    "firmware_definitions": [
+      {
+        "FW_default": 1,
+        "firmware_R": -1,
+        "firmware_V": -1,
+        "id_firmware": 321,
+        "id_item": 533,
+        "id_status": 1,
+        "slots": 1
+      }
+    ],
+    "item": {
+      "descr": "Energy control actuator",
+      "id_family": 12,
+      "id_item": 533
+    },
+    "item_id": 533,
+    "item_systems": [
+      {
+        "id_item": 533,
+        "id_system": 1,
+        "main": 1,
+        "modobj": 103
+      },
+      {
+        "id_item": 533,
+        "id_system": 7,
+        "main": 1,
+        "modobj": 103
+      }
+    ],
+    "source": "firmware"
+  },
+  {
+    "bus_items": [],
+    "commercials": [],
+    "firmware_definitions": [],
+    "item": null,
+    "item_id": 1331,
+    "item_systems": [],
+    "source": "firmware"
+  },
+  {
+    "bus_items": [],
+    "commercials": [],
+    "firmware_definitions": [],
+    "item": null,
+    "item_id": 1455,
+    "item_systems": [],
+    "source": "firmware"
+  },
+  {
+    "bus_items": [],
+    "commercials": [],
+    "firmware_definitions": [],
+    "item": null,
+    "item_id": 1902,
+    "item_systems": [],
+    "source": "firmware"
+  },
+  {
+    "bus_items": [],
+    "commercials": [],
+    "firmware_definitions": [],
+    "item": null,
+    "item_id": 2198,
+    "item_systems": [],
+    "source": "firmware"
+  },
+  {
+    "bus_items": [],
+    "commercials": [],
+    "firmware_definitions": [],
+    "item": null,
+    "item_id": 533,
+    "item_systems": [],
+    "source": "suite"
+  },
+  {
+    "bus_items": [
+      {
+        "id_bus": 1,
+        "id_item": 1331
+      },
+      {
+        "id_bus": 11,
+        "id_item": 1331
+      },
+      {
+        "id_bus": 12,
+        "id_item": 1331
+      },
+      {
+        "id_bus": 16,
+        "id_item": 1331
+      },
+      {
+        "id_bus": 19,
+        "id_item": 1331
+      }
+    ],
+    "commercials": [
+      {
+        "code": "003565",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1790,
+        "id_item": 1331,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Scenario programmer",
+        "visibility_type": "",
+        "visible": 1
+      },
+      {
+        "code": "MH200N",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1331,
+        "id_item": 1331,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Scenario programmer",
+        "visibility_type": "",
+        "visible": 1
+      }
+    ],
+    "firmware_definitions": [
+      {
+        "FW_default": 1,
+        "firmware_R": 0,
+        "firmware_V": 1,
+        "id_firmware": 73,
+        "id_item": 1331,
+        "id_status": 0,
+        "slots": 2
+      }
+    ],
+    "item": {
+      "descr": "Scenario programmer",
+      "id_family": 19,
+      "id_item": 1331
+    },
+    "item_id": 1331,
+    "item_systems": [
+      {
+        "id_item": 1331,
+        "id_system": 26,
+        "main": 1,
+        "modobj": 44
+      }
+    ],
+    "source": "suite"
+  },
+  {
+    "bus_items": [
+      {
+        "id_bus": 1,
+        "id_item": 1455
+      },
+      {
+        "id_bus": 11,
+        "id_item": 1455
+      },
+      {
+        "id_bus": 12,
+        "id_item": 1455
+      },
+      {
+        "id_bus": 16,
+        "id_item": 1455
+      },
+      {
+        "id_bus": 19,
+        "id_item": 1455
+      }
+    ],
+    "commercials": [
+      {
+        "code": "003598",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 1572,
+        "id_item": 1455,
+        "id_line": 5,
+        "is_gateway": 1,
+        "name": "Web Server A/V Bus",
+        "visibility_type": "",
+        "visible": 1
+      },
+      {
+        "code": "F454",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 1455,
+        "id_item": 1455,
+        "id_line": 5,
+        "is_gateway": 1,
+        "name": "Web Server A/V Bus",
+        "visibility_type": "EDC",
+        "visible": 1
+      }
+    ],
+    "firmware_definitions": [
+      {
+        "FW_default": 1,
+        "firmware_R": 0,
+        "firmware_V": 2,
+        "id_firmware": 101,
+        "id_item": 1455,
+        "id_status": 0,
+        "slots": 2
+      },
+      {
+        "FW_default": 0,
+        "firmware_R": 0,
+        "firmware_V": 1,
+        "id_firmware": 6,
+        "id_item": 1455,
+        "id_status": 0,
+        "slots": 2
+      }
+    ],
+    "item": {
+      "descr": "Web Server A/V Bus",
+      "id_family": 8,
+      "id_item": 1455
+    },
+    "item_id": 1455,
+    "item_systems": [
+      {
+        "id_item": 1455,
+        "id_system": 26,
+        "main": 1,
+        "modobj": 51
+      }
+    ],
+    "source": "suite"
+  },
+  {
+    "bus_items": [
+      {
+        "id_bus": 1,
+        "id_item": 1902
+      },
+      {
+        "id_bus": 11,
+        "id_item": 1902
+      },
+      {
+        "id_bus": 12,
+        "id_item": 1902
+      },
+      {
+        "id_bus": 16,
+        "id_item": 1902
+      },
+      {
+        "id_bus": 19,
+        "id_item": 1902
+      }
+    ],
+    "commercials": [
+      {
+        "code": "003535",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 2362,
+        "id_item": 1902,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Scenario programmer",
+        "visibility_type": "",
+        "visible": 1
+      },
+      {
+        "code": "MH202",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 2222,
+        "id_item": 1902,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Scenario programmer",
+        "visibility_type": "",
+        "visible": 1
+      }
+    ],
+    "firmware_definitions": [
+      {
+        "FW_default": 1,
+        "firmware_R": 0,
+        "firmware_V": 1,
+        "id_firmware": 561,
+        "id_item": 1902,
+        "id_status": 0,
+        "slots": 1
+      }
+    ],
+    "item": {
+      "descr": "Scenario programmer",
+      "id_family": 19,
+      "id_item": 1902
+    },
+    "item_id": 1902,
+    "item_systems": [
+      {
+        "id_item": 1902,
+        "id_system": 26,
+        "main": 1,
+        "modobj": 5
+      }
+    ],
+    "source": "suite"
+  },
+  {
+    "bus_items": [
+      {
+        "id_bus": 1,
+        "id_item": 2198
+      },
+      {
+        "id_bus": 19,
+        "id_item": 2198
+      }
+    ],
+    "commercials": [
+      {
+        "code": "MyHomeServer1",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 2552,
+        "id_item": 2198,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "MyHomeServer",
+        "visibility_type": "",
+        "visible": 1
+      }
+    ],
+    "firmware_definitions": [
+      {
+        "FW_default": 0,
+        "firmware_R": 0,
+        "firmware_V": 1,
+        "id_firmware": 729,
+        "id_item": 2198,
+        "id_status": 0,
+        "slots": 2
+      },
+      {
+        "FW_default": 0,
+        "firmware_R": 1,
+        "firmware_V": 1,
+        "id_firmware": 812,
+        "id_item": 2198,
+        "id_status": 0,
+        "slots": 2
+      },
+      {
+        "FW_default": 0,
+        "firmware_R": 2,
+        "firmware_V": 1,
+        "id_firmware": 813,
+        "id_item": 2198,
+        "id_status": 0,
+        "slots": 2
+      },
+      {
+        "FW_default": 0,
+        "firmware_R": 0,
+        "firmware_V": 2,
+        "id_firmware": 814,
+        "id_item": 2198,
+        "id_status": 0,
+        "slots": 2
+      },
+      {
+        "FW_default": 0,
+        "firmware_R": 1,
+        "firmware_V": 2,
+        "id_firmware": 815,
+        "id_item": 2198,
+        "id_status": 0,
+        "slots": 2
+      },
+      {
+        "FW_default": 0,
+        "firmware_R": 2,
+        "firmware_V": 2,
+        "id_firmware": 816,
+        "id_item": 2198,
+        "id_status": 0,
+        "slots": 2
+      },
+      {
+        "FW_default": 0,
+        "firmware_R": 14,
+        "firmware_V": 2,
+        "id_firmware": 817,
+        "id_item": 2198,
+        "id_status": 0,
+        "slots": 2
+      },
+      {
+        "FW_default": 0,
+        "firmware_R": 20,
+        "firmware_V": 2,
+        "id_firmware": 818,
+        "id_item": 2198,
+        "id_status": 0,
+        "slots": 2
+      },
+      {
+        "FW_default": 0,
+        "firmware_R": 30,
+        "firmware_V": 2,
+        "id_firmware": 821,
+        "id_item": 2198,
+        "id_status": 0,
+        "slots": 2
+      },
+      {
+        "FW_default": 0,
+        "firmware_R": 31,
+        "firmware_V": 2,
+        "id_firmware": 825,
+        "id_item": 2198,
+        "id_status": 0,
+        "slots": 2
+      },
+      {
+        "FW_default": 0,
+        "firmware_R": 32,
+        "firmware_V": 2,
+        "id_firmware": 831,
+        "id_item": 2198,
+        "id_status": 0,
+        "slots": 2
+      },
+      {
+        "FW_default": 0,
+        "firmware_R": 0,
+        "firmware_V": 3,
+        "id_firmware": 836,
+        "id_item": 2198,
+        "id_status": 0,
+        "slots": 2
+      },
+      {
+        "FW_default": 0,
+        "firmware_R": 60,
+        "firmware_V": 2,
+        "id_firmware": 839,
+        "id_item": 2198,
+        "id_status": 0,
+        "slots": 2
+      }
+    ],
+    "item": {
+      "descr": "MyHomeServer",
+      "id_family": 8,
+      "id_item": 2198
+    },
+    "item_id": 2198,
+    "item_systems": [
+      {
+        "id_item": 2198,
+        "id_system": 26,
+        "main": 1,
+        "modobj": 67
+      }
+    ],
+    "source": "suite"
+  }
+]

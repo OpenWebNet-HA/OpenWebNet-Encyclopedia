@@ -1,0 +1,9 @@
+# Remaining questions at closure
+
+1. Obtain actual unmodified original database bytes or separately qualify original format-bearing assets. Encrypted50.xtz/SQL/library/path metadata are not plaintext DBs; never synthesize vendor originals from DDL or guess keys/passwords.
+2. Qualify natural configuration/assets/callers/providers and product-specific ABI/object/lifetime premises before composing local contracts into deployed behavior. MH200N's finite query does not prove absence; F459 metadata does not prove a callback/event/freshness/durability.
+3. Obtain authoritative F455 product/image-linked CPU/loader/linker/debug/hardware provenance before assigning ISA/base/entry. Generic patterns and labels are insufficient.
+4. Any future F453AV update/component study needs a newly qualified permitted original script/caller/branch. The final device-output helper was not an update contract and remains unexpanded. Closed F450 helper/receiving/output/transport/auth/session/framing/MQTT/libjel/equivalent routes stay closed, no retries/proxies.
+5. Full JSON/XML/SQL behavior, actual data/type/ID/freshness, errors/unwind/ownership/concurrency/runtime and physical evidence remain unfinished. This finite study is not exhaustive; additional safe qualified evidence may exist outside the selected paths.
+
+No work is scheduled after actual automation closure. Resume only with a new human-authorized scope and the exact retained source/reference versions; do not replay old collectors against changed references or reset older ledgers.

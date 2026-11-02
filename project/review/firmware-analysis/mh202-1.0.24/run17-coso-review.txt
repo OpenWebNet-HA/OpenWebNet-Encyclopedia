@@ -1,0 +1,67 @@
+# MH202 run17 COSO configuration/timer source review
+
+**PASS — no correction requested.** This is independent static source and finite-ledger review of `coso/run17`, not native execution or an observation of an installed configuration/publication. The reviewer authored the separate protocol run17 experiment; that experiment is not used as corroboration of this different NULL-source timer branch. Only this review file was written by this review.
+
+## Reproduction and independent checks
+
+Reproduced `python3 -B work/mh202-firmware/research/2026-10-30/coso/run17/collect_evidence.py --check` successfully: 22 deterministic outputs plus manifest, 14 spans, 28 original words, four original ELFs, 15 resolved literals, one conditional config→timer ledger. The checker compares bytes and writes nothing. In a separate host script, reread all four original ELFs through ImageVFS, independently mapped PT_LOAD VAs to file offsets, checked each raw span hash and critical word, and checked all 15 literal byte strings including terminating NUL. All 22 output-manifest members and 25 author-manifest members match current bytes. The accessor and prior COSO16 report hashes also match. The exact key `var/tmp/conf.xml` is absent from the normal ImageVFS listing.
+
+Independently inspected the retained disassembly's actual calls, arguments, branches and field stores; this review did not rely only on saved hashes. Recomputed the finite `11,3` example and compared the before/after mark, candidate, NULL helper source, and final envelope fields. Original ARM/JS/vendor-process execution, primitive callbacks, code hooks and native replay by this review are all **0**. Source statements and the conditional host ledger remain separate.
+
+## Original source agreement
+
+- `libautomation.so` 0x109c..0x112c resolves `/var/tmp/conf.xml`; the actual descriptor guard is `cmp r0,#0`/`beq`, not an exact−1 check. 0x112c..0x1228 installs the text callback via the 0x96fc relocation, requests 1024-byte reads and calls markup parse/end-parse. These are call sites; neither XML validity nor parser failure handling is executed. At 0xe50..0xef0 the callback tests exactly three name-stack entries, exact `configuratore` and `impianto`, and a case-insensitive four-character `disp` prefix. It duplicates the supplied pointer, not a length-bounded text slice. Start/end callbacks maintain the name stack under imported string/list contracts.
+- `libplug_automation_syn.so` 0x33a8..0x33d0 splits at comma with maximum2 and filters second token equal `3`; 0x33d4..0x340c splits the first token by `*`, builds `*%s*0*%s##` with WHO2 and calls the parser before lookup/create with creation flag1. No parser-return test is inserted by the report. The exact state+40 literal1 store at 0x3428 is conditional on the separate `15` token comparison.
+- Helper 0x1b4c compares state0/4/8 against parsed16/20/24. After no match with creation enabled it requests **52 bytes** at 0x1bd8, clears20/40/44, duplicates address and constructs display address under the selected null/`3` selector branch. This allocation size is separate from **64-byte Q status offset52**. No saved Q ID is sourced into this device-state object.
+- The scheduling pool arithmetic resolves timer **0x2124**, rather than assuming a nearby exported symbol. Its selected loop uses state+48 as a mark. The ordinary branch reads WHAT16/display-WHERE12, formats `*%s*%d*%s##`, explicitly sets **r1=NULL** at 0x21b8 before core helper0x21c0, and clears mark at0x21c4. Nonzero state20 constructs the additional DIM10 body and then branches to the ordinary body; the finite ledger appropriately does not model its semantics.
+- Core0x239c..0x23a0 selects the NULL-source branch0x2418: zero-allocation64, actual `new_id` call0x2424, store+60, then common parsed/meta stores. `new_id` 0x220c..0x2224 loads and returns the prior counter while storing incremented counter. Therefore “fresh assignment” is accurate and the report correctly avoids numerical uniqueness/difference. Status52=0 follows the ordinary zero-allocation premise; it is not an explicit status store or a native observed value in this batch.
+- The installed candidate callback is `syn_receive`0xb4a0 from the main's relocation-backed manager+56 assignment. Register/init supplies the adjacent manager+52 context/+56 callback into synchronizer private+8/+12. Timer0x2240..0x2254 passes `&output_list`, NULL and descriptor+60 manager. At0xb4b0 the NULL second argument skips `send_list_field`; the first pointer reaches `send_to_sm_from_field`0xb7b8 at0xb4d0. This establishes the selected STM/list admission boundary, not direct socket delivery, actual callback invocation or a physical response.
+- Timer0x2258..0x2270 calls source destruction, clears private20/private4 and returns0. The report appropriately makes no leak/safety/full reclamation finding from the absence of local list/state frees. The source fields, imported container behavior and nonaliasing/initialized pointers remain premises.
+
+## Host ledger and remaining limits
+
+The complete terminated callback text `11,3`, name stack, successful coherent parser output, empty/no-matching state list and ordinary imports are explicit synthetic premises. Its generated candidate is `*2*0*11##`; this batch does not demonstrate full configured-XML acceptance. The future timer's mark48=1 and WHAT16=0 are separately supplied later state, not values claimed to be set by initialization alone. Conditional output is a fresh64-byte envelope with type40=2, repr56=3, direction12=2, metadata4=2/8=0/16=0, route48=2, zero-allocation status52=0 and ID from the local call. Only changed48 is cleared in the selected state ledger.
+
+The report retains effective-provider/initialized manager, parser-success, string/list/allocation/nonaliasing, active-registry/order, callback timing/lifetime and installed-configuration boundaries. Exact packaged-path absence is not runtime or archive-global absence. No original Q pointer/ID is supplied to the selected helper call, but no physical causality, guaranteed counter uniqueness, real timer execution, delivered output or global runtime behavior follows. No completeness claim is warranted. No material source/result/accounting contradiction was found.
+
+## Exact reviewed pins
+
+Paths below are relative to `work/mh202-firmware/research/2026-10-30/`. Author manifest excludes itself and later reviews; this review does not alter it or create a provenance cycle.
+
+| Artifact in `coso/run17/` | SHA-256 |
+|---|---|
+| `REPORT.md` | `00cddc41451d6553b7986c50a2d6585e60113fc7ef1bb963c9c84cc583142138` |
+| `STM-list-caller-publication-boundary.txt` | `28121ea41f6d07b7fc173ce099994e79c20c9093ebf8cdba1a8011112285905b` |
+| `actual-callback-provider-joins.json` | `60c66fe67bbb86db54c9305356eb66203a4890ae024411c03205c8aeef26b7a8` |
+| `actual-syn-receive-install.txt` | `15b7500533d886bf3e72724a12611b5317e4debb443ba4d1c2a1230b4eb8558e` |
+| `bounded-config-presence.json` | `761cea47344fd7b4cb4bfb9afe14c74507043c15c6c4f9aa376ac308ea3816c3` |
+| `collect_evidence.py` | `729aa0956c0cfc0e0830d691519d5b56433fb9b99ba17dec114a19998c7350b6` |
+| `config-and-publication-safe-literals.json` | `dab826a9f3edcbbb78ad51c0f7287e038e1984f05b254b0aa3e28df45580c4c9` |
+| `configuration-end-element.txt` | `0927b5a846f8a7bcde071223bc2d1e7796b980cb30ddf34d74cb713261e54d76` |
+| `configuration-open-and-parser-callbacks.txt` | `311a7c6ed5243ef7c8719be729bbbf586cd7245e2fbe142f5b723f7a9fdc0fe3` |
+| `configured-plant-to-device-state.txt` | `1d3d5f0264afc08034e656b5b63dd1d2baa9e7c609a4a6dc646705cd722f4481` |
+| `critical-words.json` | `0f3e85ea2f067462330c9823c761e6b682c5bb65964635d12eb183e3f25129cc` |
+| `device-state-lookup-or-create.txt` | `d4d110336a7cb3473c17412367863656802c5c7b3bc9b3c560f33abc1b4072da` |
+| `fresh-ID-assignment-helper.txt` | `74cfb9d7160089b40207d415926697a67839c71ed90a1c26e606d4ddafbae63e` |
+| `fresh-publication-record-constructor.txt` | `7a43a8294eb7aa44b27b6919d6780c3bdbc545c68e4e9538299c48e822eeca9c` |
+| `future-timer-complete-body.txt` | `07ad37029ec88343945f301614f605032f91b8522f44c1154636c6a7ca832690` |
+| `host-config-to-future-output-ledger.json` | `fd4eb63b587178926401affcd5a64df8329b83de24774cdfbfb26c131b45359e` |
+| `initializer-supplied-context-callback.txt` | `3fdf09bad633df02ba265225f8cdb6ac7b31b04aefeb339d129e78a64bf21516` |
+| `input-hashes.json` | `e66369ee4767b450d50861e2f5adbc08fc54c1b58017c04588520ec5992e2d0e` |
+| `original-spans.json` | `e4e761907818386f86e63b8e1d6a06a8787f9350d0eb0bf75d388c37bc98e378` |
+| `output-manifest.json` | `7009a2906a89e180a7cc2dc5b7c1a4fe0309a80ed41a80f8c8233640e1830f0b` |
+| `plant-text-and-start-element.txt` | `02e8436997b67d5ea120deac742ed6a53a37bfe0c81d19643ab26112f5043cf9` |
+| `state-producer-field-contract.json` | `3a6c7543bb5fa7db8445dcca8c0e84d34afdc4ef879df669b123136cbdeccb04` |
+| `syn-receive-target-and-argument-routing.txt` | `e916ba5bbbe0627dccf59ad33854670229cd69c87960f5847227677be5cdea64` |
+| `synoptic-callback-provider-args.txt` | `60973a099fc0ad2c6f442fee13f261af337daa8953648991f964276494aaaec4` |
+| `timer-source-callback-install.txt` | `6de0b4666838a8aa4451c94e5bc861cb040c4c71f2e14d4e7df5a23563bdd09a` |
+| `author-manifest.json` | `482de3856d11440735c29d50d804261bcdfdb878d1cdbbc9cccd40967dc5dd45` |
+
+| Original normal-image file | SHA-256 |
+|---|---|
+| `/home/bticino/bin/coso` | `6865c2d1d441d25effa31275080ded70ad3538a8a49288e3002ffb196b066175` |
+| `/home/bticino/lib/libautomation.so` | `6a968fa9b568027aeb3f428828290639d49d71723501961c715e7a9adaaca365` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+| `/home/bticino/libcoso/libplug_automation_syn.so` | `377bedc9c0b05166559d8947a40c03b483b0cab7b8ea9606a3377c2b7accb28b` |
+
+Accessor `image_vfs.py`: `67fbac9a1508655bd69ac15dacf1b98679def8c62fad344c4b3c01c3ba2219a3`. Prior `coso/run16/REPORT.md`: `6a346be2480e3f9476d55115b6f9ab87809142b2e51315f55234717909fb761a`.

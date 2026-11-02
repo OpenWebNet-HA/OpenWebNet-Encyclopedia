@@ -1,0 +1,25 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000027d30 <_ZNKSt5ctypeIcE8do_widenEc@@Base-0x1a810>:
+   27d30:	d503233f 	paciasp
+   27d34:	a9ba7bfd 	stp	x29, x30, [sp, #-96]!
+   27d38:	90001782 	adrp	x2, 317000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1c0070>
+   27d3c:	910003fd 	mov	x29, sp
+   27d40:	a90153f3 	stp	x19, x20, [sp, #16]
+   27d44:	90001321 	adrp	x1, 28b000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x134070>
+   27d48:	9108e021 	add	x1, x1, #0x238
+   27d4c:	a9025bf5 	stp	x21, x22, [sp, #32]
+   27d50:	f0001796 	adrp	x22, 31a000 <app_logger@@Base+0x1e90>
+   27d54:	910802d3 	add	x19, x22, #0x200
+   27d58:	a90363f7 	stp	x23, x24, [sp, #48]
+   27d5c:	90001798 	adrp	x24, 317000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1c0070>
+   27d60:	b0001797 	adrp	x23, 318000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1c1070>
+   27d64:	910022f5 	add	x21, x23, #0x8
+   27d68:	a9046bf9 	stp	x25, x26, [sp, #64]
+   27d6c:	91010279 	add	x25, x19, #0x40
+   27d70:	f9002bfb 	str	x27, [sp, #80]
+   27d74:	d12083ff 	sub	sp, sp, #0x820

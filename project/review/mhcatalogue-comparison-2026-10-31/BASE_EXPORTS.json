@@ -1,0 +1,191 @@
+{
+  "scope": "Exact source reports and selected safe evidence; raw originals/defaults/expressions not published",
+  "exports": [
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/ALL_TABLE_DIFFERENCES.json",
+      "published": "evidence/catalogue/ALL_TABLE_DIFFERENCES.json",
+      "size": 65109,
+      "sha256": "00610905ec8a865c114461d4d26f70e448e57339a6494f4e4a433d71b36e38b6"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/SUMMARY.json",
+      "published": "evidence/catalogue/SUMMARY.json",
+      "size": 1511,
+      "sha256": "c02f4edaf04ec2eb14c27dcfee99150b576a04a4fa2498aebd8ab83e0a481a91"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/INPUTS.json",
+      "published": "evidence/catalogue/INPUTS.json",
+      "size": 618,
+      "sha256": "f62abe8504ba9b0bb9282af279fd9af679d1126cc84a71a41aa212dd4012e4f1"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/SCHEMA.json",
+      "published": "evidence/catalogue/SCHEMA.json",
+      "size": 61396,
+      "sha256": "1ede786b469e66935a3dcd57440ea74a4cc2ef81a1e61284861e8c0fbc02dcb1"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/METADATA_AND_INTEGRITY.json",
+      "published": "evidence/catalogue/METADATA_AND_INTEGRITY.json",
+      "size": 1652,
+      "sha256": "954931478d16a0e5bd95b3a7185e617a43cb689353e810930446a86adc539e4a"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/DECLARED_PK_DIFFERENCE_LEDGER.json",
+      "published": "evidence/catalogue/DECLARED_PK_DIFFERENCE_LEDGER.json",
+      "size": 903560,
+      "sha256": "e0b0737f2d9f7b3364e1551d487b6d63184e6f1ecf0c326231e9d22f88cb8765"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/NONKEY_BAG_DIFFERENCE_LEDGER.json",
+      "published": "evidence/catalogue/NONKEY_BAG_DIFFERENCE_LEDGER.json",
+      "size": 255362,
+      "sha256": "ce4752cc84f6ad434f2989d0d28a87e2aa9826a297bf576d357991fc7112a668"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/COMMERCIAL_ENTITY_MATCHES.json",
+      "published": "evidence/catalogue/COMMERCIAL_ENTITY_MATCHES.json",
+      "size": 157162,
+      "sha256": "9754c29eb03b877edfb79dcc4319ef6a998988ffa93b9b0ebff98d8dd45f869b"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/ITEM_FAMILY_PROFILES.json",
+      "published": "evidence/catalogue/ITEM_FAMILY_PROFILES.json",
+      "size": 3139,
+      "sha256": "bb6443e557dd1a4aa60435abd45f1c9139161bb2e1b92f161cc3ad498364b1ba"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/SELECTED_PRODUCT_CONTEXTS.json",
+      "published": "evidence/catalogue/SELECTED_PRODUCT_CONTEXTS.json",
+      "size": 9679,
+      "sha256": "bd06613fee6fa206bc09afdb1dd3eb09ca591cfe85980f3727a298c1bd638b6f"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/DEVICE_RELATIONSHIP_AUDIT.json",
+      "published": "evidence/catalogue/DEVICE_RELATIONSHIP_AUDIT.json",
+      "size": 12298,
+      "sha256": "3902eb823feb02f40bc750878c42a162f2a010088a80e29aed545e848a0113f9"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/SCHEMA_DIFFERENCE_DETAIL.v2.json",
+      "published": "evidence/catalogue/SCHEMA_DIFFERENCE_DETAIL.v2.json",
+      "size": 692,
+      "sha256": "a5c9cfb07f292a63ce5e4f7aeef92ff5253039398d93aad8066d51260bdd6ad7"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/DECLARED_FOREIGN_KEYS.v2.json",
+      "published": "evidence/catalogue/DECLARED_FOREIGN_KEYS.v2.json",
+      "size": 1476,
+      "sha256": "35a355241ddf02fab9e010aaac8769b37c2c213713f1861c976d581bff9fd675"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/ENERGY_ACTUATOR_CONTEXT.v2.json",
+      "published": "evidence/catalogue/ENERGY_ACTUATOR_CONTEXT.v2.json",
+      "size": 2909,
+      "sha256": "f3761d5e64771e6d2a8c83399a3841cf8fc4296383e59f21cbbe250e432e92c9"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/DEVELOPMENT_HISTORY.json",
+      "published": "evidence/catalogue/DEVELOPMENT_HISTORY.json",
+      "size": 995,
+      "sha256": "b07ea6bcb15a4b803af09eadc70093662aa55e7f1dc500b2b1dc512abb0f3481"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/SUPPLEMENT_PRECISION_HISTORY.json",
+      "published": "evidence/catalogue/SUPPLEMENT_PRECISION_HISTORY.json",
+      "size": 600,
+      "sha256": "c9575409e5052267dd1bc87139324f305a02b9a30e0262e92b67a76cfe2adca1"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/firmware/table-comparison.json",
+      "published": "evidence/firmware/table-comparison.json",
+      "size": 88723,
+      "sha256": "5071e65248a86b65830996e9002a947616a1e15e9bf4e58b368e90e5efb2beee"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/firmware/shared-firmware-graph.json",
+      "published": "evidence/firmware/shared-firmware-graph.json",
+      "size": 33745,
+      "sha256": "16ec766ca44f189f0d8bb6cfa7295ed493383eda65eb133a59993ed13c75a843"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/firmware/firmware-contexts.json",
+      "published": "evidence/firmware/firmware-contexts.json",
+      "size": 141837,
+      "sha256": "97216f491ddff5cfa073fed1d94b33493a4d66989bcc3ef9cc022ad1868c74e4"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/firmware/resources-and-associations.json",
+      "published": "evidence/firmware/resources-and-associations.json",
+      "size": 96733,
+      "sha256": "26452f0f16b05839880341230ee5bdaefaf300b824bcef6114aa1f59179b8109"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/firmware/canonical-products.json",
+      "published": "evidence/firmware/canonical-products.json",
+      "size": 24209,
+      "sha256": "6dce86be0c4887ea851bac7d8b05cbe968c101e6ecc21ec368f45a0b464d9a1c"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/firmware/relationship-audit.json",
+      "published": "evidence/firmware/relationship-audit.json",
+      "size": 7138,
+      "sha256": "cd0dac132d0c46cb22e23efc178570de5b8ff95ccf791dd0bd91b6280bb445ef"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/firmware/output-manifest.json",
+      "published": "evidence/firmware/output-manifest.json",
+      "size": 1784,
+      "sha256": "b78e80495f8b1518559e391b7b6ab5e41a6b83822f709eb904efa61eb59e4b47"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/catalogue/REPORT.md",
+      "published": "catalogue-report.txt",
+      "size": 10344,
+      "sha256": "4d34c288a3bc577cec4c4a758d54841a1af539026e2535136dc686e1bb003bd5"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/objects/REPORT.md",
+      "published": "objects-report.txt",
+      "size": 14501,
+      "sha256": "c312fe9bec13bd8b076f70832ac9ac7fe783327a086cf5facbbb0f835f3ce576"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/firmware/REPORT.md",
+      "published": "firmware-report.txt",
+      "size": 13204,
+      "sha256": "d70cd72edbf7460ac94907fd8a0116c889c48e4c1d7a223884760f869eeaa2bc"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/SYNTHESIS.md",
+      "published": "synthesis.txt",
+      "size": 3132,
+      "sha256": "16f8ec39d5e091f32d9cf85948f54113de0d1cd5eba0cecce38eabc6f993aa52"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/COVERAGE.md",
+      "published": "coverage.txt",
+      "size": 2206,
+      "sha256": "dd14f64dda9e307825a0b9999e6499ca997b66d3e705bfd23a2b2f8e46b0bb83"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/RANKED_REMAINING_QUESTIONS.md",
+      "published": "remaining-questions.txt",
+      "size": 1264,
+      "sha256": "f5584dc3fcf7e14ab1426f6e455a7a87ee4b38e2b80ee931a6a7f70fd711cf0a"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/reviews/SOURCE_COMPARISON_PREFLIGHT.md",
+      "published": "source-preflight.txt",
+      "size": 7124,
+      "sha256": "6e4fbbcfb53d5a3a8bb503050788c9f323bc943404b8a36650d7b51d6751bcaa"
+    },
+    {
+      "source": "work/myhomeserver1-database-conservation/2026-10-31/REGISTRY_COMPLETE.json",
+      "published": "archive-registration.json",
+      "size": 842,
+      "sha256": "768c826706c3f655cb5a2f0f528da0487a5f35d380118eebb55f2604fe516ef4"
+    }
+  ]
+}

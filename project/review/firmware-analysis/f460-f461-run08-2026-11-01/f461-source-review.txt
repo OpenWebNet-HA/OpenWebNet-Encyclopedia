@@ -1,0 +1,22 @@
+# Independent F461 run08 source review
+
+PASS; no author correction requested. This is a static original-source/configuration/artifact review, not target service/file/provider execution or a semantic model.
+
+Reproduced `python3 -B work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/collect_boot_v2.py --check`:11 outputs,8 spans,18 guards,5 literal joins,9 import-call proofs and6 image-file inputs. Independently derived the normal original ELF PT_LOAD map, checked all8 saved span bytes/hashes and18 words, all5 safe literal byte strings, all6 original normal/recovery file hashes, three actual direct-call branch words and all9 original relocation rows. All10 non-self manifest files and13 current/first-copy identities match. Exact3 retained v1 files match both current historical bytes and actual parent before-v2 snapshot; the sole relocation-row-filter correction is disclosed without changing source guards. Failure JSON/report describe the first generation and attempted check as pre-output host failures, with later-transcription scope retained.
+
+Original source supports separate configuration producers and gate namespaces: selected default-prefix destination+360=0; selected XML logrotation branch maps supplied exact0 or empty text to0 and other supplied text to1; selected optional key-file integer becomes!=0 at the same destination-relative offset. The whitelisted packaged XML lines62=1 in normal/recovery full/reduced files are declarations, not proved selected runtime configuration or parser precedence. Full receiver construction and source selection remain premises.
+
+Selected helper0x133f0 requests extras-status text, ignores its machine return and parses the local buffer via strtol(NULL,10). Original CMP W0,#1 tests only the low32 bits and does not establish complete decimal syntax, range or status meaning. On equal1 and nonzero receiver byte360, exact-path stat determines the local branch. Return0 requests stop-SysLog, loaded-logger load_old_logs, restart-SysLog in that order; any nonzero stat return requests mkdir with numeric0x1ff then restart, without testing mkdir's result. Service/delegate return values and readiness are not checked in this selected source. Normal epilogue does not certify a helper Boolean outcome or successful directory/service/log operation.
+
+Actual selected startup-prefix0x62c0/0x62c4 passes the same receiver to the helper, with additional direct calls0x63bc/0x1359c verified. Their temporal occurrence, full configuration parser, provider bodies and surrounding control-flow success remain open. Requested imports are not evidence that the service ran, logs were restored, a directory exists or either image booted. Logging configuration byte360, decimal extras-status lowword1, path70 and product/physical/public protocol namespaces remain distinct. No arbitrary configuration/private values, receiving/auth/session/framing/MQTT/libjel body or original/native/OS operation was inspected/executed. All author bytes remain unchanged.
+
+Exact reviewed pins:
+
+- `work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/REPORT.v2.md`: `88568663f780e22040ffe7fe6f50530fd620e7ae25133f594937ae16f9dff312`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/collect_boot_v2.py`: `8796e3b7c83b89fa1cbe01e00b9a69ae770f645310eabaf2ebc2306d99e3738c`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/EVIDENCE.json`: `2a917cc08d153d62efbc4e94f5af7280ca150101cd7ea3db45a2338012e973ff`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/INPUTS.json`: `82c677e878b99025be86c4774a75fda0155dcb30165f747ad1c489d5b8a4f4b3`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/output-manifest.json`: `59389e90d9f1b8b23615399204e02e074efb07c9819325a89bd957eccb1f7f93`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/first-candidate-v2/INDEX.json`: `f17476243a5792e00b2d74db2423657273fec528d46a1ed921b866e4a95acf39`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/DEVELOPMENT_HISTORY.json`: `c03d57f1e621b893a79f3f79878739c222d9d3e8b4e96cff924926eb17134190`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/FIRST_FAILURE.json`: `a5c9e7ab249e4477325c2ba04f2c5f1825bba9565643bb94d32e726a620c7bdd`.

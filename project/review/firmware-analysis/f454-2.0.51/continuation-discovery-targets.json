@@ -1,0 +1,44 @@
+[
+  {
+    "index": 0,
+    "pointer_va": "0x21c08",
+    "string_va": "0x19570",
+    "text": "urn:schemas-bticino-it:device:interface:1"
+  },
+  {
+    "index": 1,
+    "pointer_va": "0x21c0c",
+    "string_va": "0x19544",
+    "text": "urn:schemas-bticino-it:device:switchboard:1"
+  },
+  {
+    "index": 2,
+    "pointer_va": "0x21c10",
+    "string_va": "0x19510",
+    "text": "urn:schemas-bticino-it:device:vde_internalunit:1"
+  },
+  {
+    "index": 3,
+    "pointer_va": "0x21c14",
+    "string_va": "0x194e0",
+    "text": "urn:schemas-bticino-it:device:vde_AlarmLogger:1"
+  },
+  {
+    "index": 4,
+    "pointer_va": "0x21c18",
+    "string_va": "0x194b8",
+    "text": "urn:schemas-bticino-it:device:vde_Svr:1"
+  },
+  {
+    "index": 5,
+    "pointer_va": "0x21c1c",
+    "string_va": "0x19484",
+    "text": "urn:schemas-bticino-it:device:vde_externalunit:1"
+  },
+  {
+    "index": 6,
+    "pointer_va": "0x21c20",
+    "string_va": "0x19458",
+    "text": "urn:schemas-bticino-it:device:vde_generic:1"
+  }
+]

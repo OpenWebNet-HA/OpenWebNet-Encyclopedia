@@ -1,0 +1,66 @@
+{
+  "collector_sha256": "474531e88c04267e8b9f901e1e055cb07e6119dd9895543ca485423ea55ecd20",
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 1266,
+      "sha256": "60a819e20a1d7fcfa1b2c91e12c10314ce730cf746b70f07b9e87aaa9168a911"
+    },
+    "SOURCE.json": {
+      "bytes": 1899,
+      "sha256": "2462ad6cf61c12cff71dd8a7d7e9de11d0b472ca6e809689d450051b26566680"
+    },
+    "core-dynamic.txt": {
+      "bytes": 2046,
+      "sha256": "6b17590bea57feca1705db5c53c4464a03530e4bc3332801b5e1571541377d06"
+    },
+    "core-relocations.txt": {
+      "bytes": 7841,
+      "sha256": "b84cd46e900d90c0ce6488379ebe5bba80fb333cc0b802eb34f6ee2593f95476"
+    },
+    "core-symbols.txt": {
+      "bytes": 8048,
+      "sha256": "7c4ae57ed7c22d009a937d7c3493f9a44d8ad96276f3af95746b04ea12c1c6d5"
+    },
+    "plugin-dynamic.txt": {
+      "bytes": 2268,
+      "sha256": "f18bb3b60d7778343b7e5748a6041552f472322c4084e3ce009afae1af630c05"
+    },
+    "plugin-relocations.txt": {
+      "bytes": 9160,
+      "sha256": "ce250d3ddf38c8b3d0b5330245e6cfff875fda351cb3088d6f916f25785b7a84"
+    },
+    "plugin-symbols.txt": {
+      "bytes": 7285,
+      "sha256": "608515ddf74cf57ed6380f84fdf47ae4999de9e2d5e96152da78443d6df85362"
+    },
+    "span-1.txt": {
+      "bytes": 1298,
+      "sha256": "e17904cd98aab6f2c2066e15979d03e24896a5cf19e34b4bfdfd5b08969f7a3f"
+    },
+    "span-2.txt": {
+      "bytes": 2262,
+      "sha256": "4214f9464298dae8ea6d7594d8447f826d2ea5880e3ec6fccc30b882342a8660"
+    },
+    "span-3.txt": {
+      "bytes": 1676,
+      "sha256": "c0a145298c9f72e26688e0e872b7ba3ce4bccf8768d3ec63988bc6fae79c1389"
+    },
+    "span-4.txt": {
+      "bytes": 3758,
+      "sha256": "d506d4a3b1e2573670434542b771a8c47795864797ec150db4085378edeb120f"
+    },
+    "span-5.txt": {
+      "bytes": 1115,
+      "sha256": "5f83cf5828323e186de39cc58754b53218f624d6b94d4ec6b327c3214e024477"
+    },
+    "span-6.txt": {
+      "bytes": 2154,
+      "sha256": "1d1667a39857fa50e6253fadf751af6c56deaaa5574531cdfa7e3e0ae67ff047"
+    },
+    "span-7.txt": {
+      "bytes": 1652,
+      "sha256": "1f4f6f23e86c94e99e8be56a8d9d5380948feebe00a34f8f093b0abc7d903ff1"
+    }
+  },
+  "report_sha256": "b26581f9a9292aec707562863ba43e7dfc8dcbca1bb6d51e2037295304ca72ec"
+}

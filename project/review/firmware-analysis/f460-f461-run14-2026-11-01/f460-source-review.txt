@@ -1,0 +1,32 @@
+# F460 run14 independent source review — PASS, selected numeric/provider boundaries retained
+
+I independently reviewed authoritative REPORT.v2.md, collector, source/history and fresh original scheduler bytes. Read-only host `collect_numeric_v2.py --check` passes13 outputs/10 spans/45 guards. No firmware/native/provider/JSON/helper/target I/O, model, fixture or runtime query executed; no author files were edited. Original `/home/bticino/scheduling_manager/scheduling_manager` SHA256 is `5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62`.
+
+Independent product ImageVFS/PT_LOAD reads confirm all10 raw spans/45 exact words, three raw/base/compiled RTTI/AP groups and selected method relocations, both switch entries/targets, four actual PLT proofs, local call/PIC claims and all15 immediate first copies. No MyHOMEServer1/ARM32 object layout, prior trigger operator mapping or physical meaning is transferred.
+
+The selected original factory/construction joins agree. Own condition row2 at0x213980 is exactly length4/pointer0x196980 to BNLD. Raw factory decrements row2 to index1; signed halfword0x030f at0x196d76 with base0x50f7c selects0x51bb8. Final raw AP0x214078/RTTI13BnldCondition is distinct from temporary baseAP0x214058/17BaseBnldCondition. The selected raw allocation request is64 bytes, with opaque base/copy helper and explicit final AP/status-level copy; no full successful JSON construction is inferred.
+
+The separate initializer table entry0x1b5958=0x0389/base0xf9790 selects0xfa5b4. Raw virtual slot0 returns into hidden X8=SP976, and the SAME address is passed to0x4aa60 before200-byte allocation/constructor0x161c40. Returned allocation itself, not+16, is the constructor/publication pointer. The final AP0x217f80/19BnldConditionRunner has actual slot+16=0x161880. Raw40→compiled176 and raw44..59→compiled180..195 are actual byte/vector copies, yielding separate type180/operator184/status188/threshold192 fields. Full raw serializer0x48710, arbitrary JsonCpp semantics and value coherence remain premises.
+
+For completeness I independently read two small original bridges outside the retained ten-span set, without editing that set:
+
+- **0x161c58..0x161c68**, bytes `f30300aaf55b03a9f60300aaf50301aa`, SHA256 `cc07373fb542215f48c15aefc585404df80fc843cdba1722aafb1e86928d420e`: constructor destinationX0 is preserved asX19 and sourceX1 asX21. This supports the direction of the later field copy.
+- **0x161950..0x161968**, bytes `c10241a9600100b41f2000f1400f00541f0800f1c0110054`, SHA256 `bf774606c448e7e5548634c3b1fc91f5808ef9e4cc6de73cace86e9037ce4800`: returned record+16/+24 supplies pointer/length, and exact length2 selects0x161b9c. Valid readable string storage is a premise, not a separately proved nonnull-pointer guard. Original halfword comparison there is0x6e6f, exact local on spelling. This is not an observed physical state or record-class/type/freshness proof.
+
+The raw numeric branch is correctly bounded: initial raw52/56 are all-ones; selected missing-status path requests level/asInt and stores raw56. Positive signed result causes raw52=-1 to be written AGAIN. It does not write zero or exclude positive thresholds from the selected numeric status-sentinel route. Operator-name vocabulary/provider arbitrary ranges/presence alternatives remain open.
+
+The actual signed operand orientation is supported by original CMP/CSET instructions: configured threshold at this192 is W0; observed returned-record48 is W1. Operator0 yields threshold<observed (signed LT),1 yields threshold>observed (signed GT),2 EQ,3 NE. Other operator values take this selected numeric false route; that is not a universal public operator/support grammar. Selected numeric prerequisites include enabled nonzero, suitable valid opaque-query record, exact on string/length2, configured status188==-1 and valid observed word48. No supplied threshold/observed fixture, units, brightness domain, threshold crossing/dedup or scene-start result is invented. Disabled-byte shortcut and returned local W20 remain conditional on normal ABI/provider/ownership-cleanup returns. Query18def0 and its type/producer/lifetime, other branches and whole class methods remain opaque.
+
+Condition publication/helper and worker slot16 consumption are inherited same-pointer/scene/range/normal-return/lifetime premises, not newly executed or repeated whole ownership proof. Source does not establish active configured scenes, successful queries, full serializer coherence, actual callback/predicate invocation or physical action. Receiving/output/transport/authentication/session/framing/MQTT/libjel and equivalent stopped routes stay closed.
+
+History was independently verified: v1 was ONE staged-unexecuted collector only, preserved by the parent before v2; no v1 report/output/canonical run is invented. Exactly three literal-pointer occurrences1968f8→196980 and three report-reference roles changed. Two inherited earlier-report path strings remain unchanged. A transient read-only reviewer count initially included those two inherited paths; the precise role-based diff was then verified, with no source/candidate mutation or firmware experiment. Strict original pointer/string guards remain. Current source/history/15firstcopies and the parent pre-edit index agree.
+
+Exact reviewed pins:
+
+- REPORT.v2.md: `72c63ccc002bc723808670dc7835b7732b3362e1277a7cb2004a531031fab59f`.
+- collect_numeric_v2.py: `00a0f3456765e89eb97390a55784a20b4ff2c65eef89227895075cc47c78f463`.
+- OUTPUT_MANIFEST.json: `0fdb473f5b6c9b29cc583bfa174e1c3c3ebc03521170b6257b0b86fb3c578d11`.
+- first-candidate/INDEX.json: `bc0e16b4bc571531c9eb71b86895cc0699da99de71ae5be0857b3a1f447d69e8`.
+- VERSION_HISTORY.v2.json: `3108bd353dfae623d2989e9d579afe888aafd2b71d2ca86b17fc41c9125a1641`.
+
+PASS is bounded original-source/provenance/reproducibility agreement, not public capability, complete parameter domain, security/safety/defect or runtime verification. No correction is requested.

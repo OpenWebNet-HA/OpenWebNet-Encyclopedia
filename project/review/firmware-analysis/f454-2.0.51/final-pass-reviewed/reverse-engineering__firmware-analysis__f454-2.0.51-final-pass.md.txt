@@ -1,0 +1,34 @@
+# F454 2.0.51 Final Static Pass
+
+This final bounded pass follows the two remaining joins selected in the [dataflow continuation](f454-2.0.51-continuation.md): the old energy-history consumer and the WHO 8 DIM35 status route. It uses the same private archive, SHA-256 `15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3`. Original-byte inspection, disassembly and explicitly reconstructed host examples add no original ARM or JavaScript execution, browser activity, gateway traffic or physical observations.
+
+The [evidence and review record](../../project/review/firmware-analysis/f454-2.0.51/final-pass-provenance.json) retains source identities, exact locators and independent checks. Earlier report bytes and their review snapshots remain preserved.
+
+## Old energy frame to consumer
+
+The selected `api-arm` DIM56 and DIM510 mappers preserve the dimension/date text in JSON `date` and the record identifier plus following values in string `extraValues`. They select `getHourlyConsumptionValuesOldDevice` or `getDailyConsumptionValuesOldDevice`. The packaged `ConsumptionProductionFamilyModel.js` maps those event names to dedicated old-device handlers. This is a concrete schema join to the [per-record producer](f454-2.0.51-continuation.md#old-format-energy-producer), separate from newer DIM511..514 and the direct-DH candidate.
+
+| Consumer | Selected source behavior |
+| --- | --- |
+| DIM56 hourly | Match the selected UI month/day. Record1 uses the second payload value; records2..8 place three values each; record9 places two values and a totalizer high byte; record10 adds the second payload value as the low contribution |
+| DIM510 daily | Match the selected UI month. Cases1..21 reconstruct high/low byte pairs, carrying partial pairs across records; there is no case22 |
+
+These are F454 web-client rules, not replacements for the [historical touchscreen decoder](../../functional/who-18-energy-management/dimensions.md#legacy-graph-values-and-unavailable-data). The selected F454 daily pair decoder zeroes individual `255` byte values before arithmetic. Hourly scalar fields have similar replacements; the record9 totalizer high byte is a separate unnormalized field. The touchscreen's paired-value rule only zeroes the complete `255*255` pair. Neither policy establishes a universal wire sentinel or physical measurement unit.
+
+The F454 hourly array starts with 24 zeros. The selected record sequence writes index0 and indices2..24, leaving index1 at its initial zero and extending the array to 25 elements. That zero is initialization state, not a received zero measurement. The daily handler's explicit cases and byte reads also prevent treating every shortened terminal record as a complete sample: a one-value terminal record21 does not supply all three values that case21 reads; a separate record22 has no case in this handler.
+
+The old handlers have no year gate. The daily model and graphic view also use different date-selector classes, so a model update is not itself proof of a visible graphic update. The host reconstructions illustrate these source consequences under declared record counts, selected dates and ordered delivery. They do not establish actual stream lengths, calendar-dependent termination, live data loss, missing-packet recovery, browser rendering or a physical Firmware defect. The producer's terminal widths are now linked to a concrete consumer, but full producer/consumer compatibility still needs actual traffic and runtime state. See the [consumer report](../../project/review/firmware-analysis/f454-2.0.51/final-pass-energy-report.txt) and [host examples](../../project/review/firmware-analysis/f454-2.0.51/final-pass-energy-model.json).
+
+## WHO 8 DIM35 ordinary role route
+
+The original ordinary parser's inspected branches classify initial query `*#8**35##` as a measure request with WHO `8`, empty WHERE and DIM `35`. The selected `bt_vct` receive/caller route can reach the packaged role1 handler. Empty WHERE takes its local branch rather than the addressed IP delegate.
+
+The handler has a state gate before the previously inspected acknowledgement tail. For the selected WHO 8 measure request, mutable global modes1..3 retain the local acceptance flag; other values with absent WHAT clear it and lead to the rejection path. The selected role constructor initializes this global to `-1`, but subsequent state changes remain a runtime boundary. These branches identify conditional ACK/KO outcomes on this ordinary role1 route; they do not recover a DIM35 status-field formatter.
+
+This closes a specific parser/empty-WHERE/role/state link, rather than proving that the camera API receives only an acknowledgement or rejection in every Configuration. Actual routing, another role or component, state transitions and the genuine status response producer remain unresolved. The frontend's split-field-index4 test is therefore still a client condition without an established response-field schema. Factory `communication/vde_enabled`, discovery selection and media activation remain separate questions. See the [routing report](../../project/review/firmware-analysis/f454-2.0.51/final-pass-media-report.txt).
+
+## Stop point and next Firmware
+
+The selected final pass is complete at this scope. The archive still contains analyzable paths, but the remaining F454 questions increasingly require missing assets, actual process state, captured traffic or hardware corroboration. Unresolved items include the real DIM35 status producer, factory VDE activation, longer-DH publication, old-history physical record counts and the broader dossier-to-reference reconciliation. No complete-coverage or no-further-findings claim is made.
+
+A different Firmware should receive its own artifact fingerprint and Device/build applicability record. Compare original files and selected code/data paths before reusing these findings; filenames, shared symbols and similar source text alone do not establish behavioral equivalence. Keep the F454 temperature representation, old-history byte/sentinel rules and VDE role/configuration distinctions as explicit comparison questions. No next package is selected by this report.

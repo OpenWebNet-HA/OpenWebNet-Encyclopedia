@@ -1,0 +1,20 @@
+# MyHOMEServer1 3.87.13 first-pass synthesis
+
+The first pass establishes a layered current implementation, not a renamed F454 or MH202. Product applicability comes from OWN-DEV-0199, not shared labels. Original execution is zero throughout this pass.
+
+## Findings
+
+1. A newer ARM32 hard-float/Thumb userspace and Linda/i.MX6DL kernel/device-tree metadata coexist with legacy named OPEN/SCS processes. Actual SysV startup declarations lead to a vendor daemon; original configuration-reader/record/conditional-launch source is traced. Normal/recovery scripts differ even where the daemon/stack XML match.
+2. The selected stack declares25 processes, including matrix_mx and separate scheduling, alarm, energy, player, backup, gateway and smart-home managers. Actual extra0 storage path declarations make these useful next targets; names alone are not functional ownership proof. Redis and D-Bus have direct runlevel-start requests, not observed readiness.
+3. A whole regular-file prefix and selected-extension census finds MHCatalogue.db, identical between images but distinct from the archived installer version. All75 stored table definitions match the installer;42 row multisets match and33 differ. Selected self-lookups are empty, so it cannot be presumed the device's own complete current-capability catalogue. matrix_mx's exact literal and SQLite imports identify a concrete consumer lead, not a completed database-open dataflow.
+4. Fresh original libopenmsg requests56bytes and discriminator+52, distinct from MH20248/+44. C++ and C parser/provider families remain separate. Original plugin initializers/register/callback relocations and selected auxiliary arithmetic/formatting are traced; synthetic examples are not accepted frames, natural transactions or physical effects.
+
+## What the prior work helped avoid
+
+The database search covers both complete regular-file inventories instead of only .db names or old vendor directories. Modern managers outside bin are included. Fresh ABI/object/provider evidence replaces old layouts. Process configuration is joined to original reader/launch code without treating numeric mode values as universal. Missing extras80/81/94/95, live overrides and product hardware boundaries remain explicit.
+
+## Evidence and limits
+
+Author areas: inventory/REPORT.md, boot/REPORT.md, protocol/REPORT.v2.md. Exact first candidates and protocol report-only correction history remain intact. Independent input/source/documentary reviews are retained under reviews. This is a first bounded static pass, not complete Firmware, command-support or Device review. No original ARM/Thumb, vendor script, JS, CLR, target OS, loader, service, gateway, networking or bus code runs. SQLite runs only on the host with immutable/read-only/query-only connections. CRC/hash validation does not establish manufacturer-signature verification. Raw original archives/images remain private local preserved inputs, not Git payloads.
+
+The encyclopedia integration belongs in reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md with exact source review capsule. No published functional command semantics are broadened. Earlier stopped authentication/session/framing work and equivalent routes remain closed.

@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+"""Typed local Thermostat record32 producer/update/BNTH read; no original execution."""
+import sys
+sys.dont_write_bytecode=True
+import pathlib,json,hashlib,struct,re,subprocess,importlib.util,argparse,os
+D=pathlib.Path(__file__).resolve().parent;W=next(x for x in D.parents if(x/'sources').is_dir());R=W/'work/myhomeserver1-firmware/3.87.13/research';V=R/'2026-10-31/image_vfs.py';S='/home/bticino/scheduling_manager/scheduling_manager';H=lambda z:hashlib.sha256(z).hexdigest();J=lambda x:(json.dumps(x,sort_keys=True,indent=2)+'\n').encode()
+sp=importlib.util.spec_from_file_location('recordvaluevfs',V);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+def build():
+ v=m.ImageVFS();b=v.read_bytes(S);assert H(b)=='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26';ph=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);segs=[struct.unpack_from('<8I',b,ph+i*sz)for i in range(n)]
+ def off(a,n=1):return next(o+a-va for t,o,va,_,fs,*_ in segs if t==1 and va<=a and a+n<=va+fs)
+ def raw(a,n):return b[off(a,n):off(a,n)+n]
+ def u(a):return struct.unpack('<I',raw(a,4))[0]
+ def txt(a):o=off(a);z=b.index(0,o);assert z-o<128;return b[o:z].decode()
+ hp=v.root/v.resolve(S).lstrip('/');env=dict(os.environ,DEBUGINFOD_URLS='');out={};rs=[]
+ spans=[('params-copy',0x52322,0x52358),('id-member-copy',0x54db2,0x54df4),('selected-setpoint-conversion',0x53b96,0x53bba),('missing-setpoint-default',0x5517c,0x55184),('typed-construction-registry-handoff',0x53c22,0x53ca2),('map-type-dispatch',0x10eba6,0x10ebd6),('typed-update-read-compare',0x10ed46,0x10edda),('typed-update-copy',0x10edda,0x10ee0e),('typed-change-guard',0x10f0d6,0x10f108),('generic-stored-pair',0x10ef86,0x10efca),('bnth-cached-control-present',0x103d1e,0x103d2c),('bnth-cached-control-zero',0x104898,0x1048ae),('lookup-stored-pair',0x10e442,0x10e450)]
+ for name,a,z in spans:
+  t=subprocess.check_output(['objdump','-d','--dwarf=no-follow-links','-M','force-thumb',f'--start-address={a}',f'--stop-address={z}',str(hp)],text=True,env=env).replace(str(hp),S);t=re.sub(r' <([^>]+)>',lambda q:q[0]if'@plt'in q[1]else'',t);out['spans/'+name+'.txt']=t.encode();rs.append({'name':name,'start_VA':hex(a),'end_VA_exclusive':hex(z),'file_offset':hex(off(a,z-a)),'raw_sha256':H(raw(a,z-a))})
+ guards=[(0x53bb2,'bdf790e9'),(0x53bb6,'b0ee409b'),(0x53c28,'5820'),(0x53c3e,'0321'),(0x53c70,'03f11002'),(0x53c7c,'83ed0c9b'),(0x53c8c,'4b93'),(0x53c8e,'baf03fff'),(0x5517c,'80ef309e'),(0x10ed4c,'d6ed081b'),(0x10edfc,'c4ed081b'),(0x103d20,'93ed089b'),(0x10489c,'93ed089b')]
+ for a,z in guards:assert raw(a,len(bytes.fromhex(z))).hex()==z,hex(a)
+ def branch(a,t):
+  x=struct.unpack('<H',raw(a,2))[0]
+  if a==0x10ee0c:
+   assert x==0xe75c and t==0x10ecc8
+   d=(x&0x7ff)<<1;d=d-0x1000 if d&0x800 else d
+   assert(a+4+d)&0xffffffff==t
+   return{'VA':hex(a),'target':hex(t),'bytes':raw(a,2).hex(),'encoding':'selected exact Thumb16 B.n'}
+  x,y=struct.unpack('<HH',raw(a,4));assert x&0xf800==0xf000;s=x>>10&1;i1=1-((y>>13&1)^s);i2=1-((y>>11&1)^s);d=s<<24|i1<<23|i2<<22|(x&1023)<<12|(y&2047)<<1;assert(a+4+d-((1<<25)if s else 0))&0xffffffff==t;return{'VA':hex(a),'target':hex(t),'bytes':raw(a,4).hex(),'encoding':'retained Thumb32 decoder'}
+ calls=[branch(a,t)for a,t in [(0x53c22,0x5724c),(0x53c8e,0x10eb10),(0x55180,0x53bba),(0x10ee0c,0x10ecc8)]]
+ keys=[]
+ for p,pc,s in [(0x525dc,0x52326,'params'),(0x54ef4,0x54db6,'id'),(0x54ef8,0x54dc6,'id'),(0x53f1c,0x53b9a,'setpoint'),(0x53f20,0x53bac,'setpoint')]:a=(u(p)+pc+4)&0xffffffff;assert txt(a)==s;keys.append({'pool':hex(p),'ADD_PC':hex(pc),'literal_VA':hex(a),'text':s})
+ base=(u(0x572bc)+0x57252+4)&0xffffffff;assert base==0x1659a4
+ chains=[]
+ for p,slot,t in [(0x572c4,0x166bf8,0x167368),(0x53f40,0x166c80,0x160cf8),(0x53f3c,0x166878,0x160d88)]:assert base+u(p)==slot and u(slot)==t;chains.append({'pool':hex(p),'GOT_slot':hex(slot),'addend':hex(t)})
+ types=[]
+ for h,s in [(0x160cf8,'20ItemStatusThermostat'),(0x160d88,'St23_Sp_counted_ptr_inplaceI20ItemStatusThermostatSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE')]:rt=u(h+4);nm=u(rt+4);assert txt(nm)==s;types.append({'header':hex(h),'RTTI':hex(rt),'name_pointer':hex(nm),'name':s})
+ tables=[]
+ for a,j,n,t in [(0x52374,3,0xbef,0x53b52),(0x10ebc0,3,0xc3,0x10ed46)]:x=int.from_bytes(raw(a+j*2,2),'little');assert x==n and a+2*x==t;tables.append({'base':hex(a),'index':j,'value':hex(x),'target':hex(t),'scope':'Eventcode3 andrecordtype3 are separate namespaces'})
+ rel=subprocess.check_output(['readelf','-rW',str(hp)],text=True,env=env);rr=[]
+ for a in [0x166bf8,0x166c80,0x166878]:t=next(x.strip()for x in rel.splitlines()if x.startswith(f'{a:08x} '));assert'R_ARM_RELATIVE'in t;rr.append(t)
+ pins={S:{'sha256':H(b),'bytes':len(b)}}
+ for p,k in [(V,'image_accessor'),(R/'2026-11-01-event-routing/record/REPORT.md','prior_generic_record_registry'),(R/'2026-11-01-condition-ownership/distinct-condition/REPORT.md','prior_bnTH_selected_predicate'),(W/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md','curated_product_context')]:z=p.read_bytes();pins[k]={'path':str(p.relative_to(W)),'sha256':H(z),'bytes':len(z)}
+ out['ORIGINAL_SOURCE.json']=J({'image':S,'spans':rs,'guards':[{'VA':hex(a),'bytes':z}for a,z in guards],'branches':calls,'keys':keys,'GOT_base':hex(base),'GOT_chains':chains,'types':types,'tables':tables,'relative_relocations':rr})
+ out['TYPED_VALUE_FLOW.json']=J({'local_JSON':{'container':'params','key':'setpoint','ID':'params.id→FPstring','present':'asDouble53bb2→D9','absent':'5517c D9allzerobits→construction','grammar/filter/provider':'unexecutedpremises; noacceptedrawinputclaim'},'producer':{'allocation_bytes':88,'control':'allocationbase','record':'allocation+16','RTTI':'20ItemStatusThermostat','record_discriminator':3,'selected_value_store':'53c7c D9→allocation48=record32','other_value':'D8→allocation64=record48,notselected','pair':'SP296=(record,control)','call':'53c8e10eb10(registry167368,FPid,pair)'},'stored_value':{'newnode':'normalgenericinstallpair→node40/44','existing':'matchingdiscriminator3→10ed46','read':'incoming32→D17,old32→D19','changed_double_guard':'10f0e0VCMP;NE→10edda','copy':'10edfcD17→old32','boundaries':'allotherpolicy/return/error/provider/locking/lifetime notclosed'},'consumer':{'registry':'same167368','lookup':'prior10e3d8foundpairnode40/44','cached_value':'103d20or10489c record32→D9','selected_BNTH_compare':'prior own160vsD9 EQpath','required':['matchingID','actualsuitableretainedtypedrecord','normalproviders/tree/control/lifetime','predicateguardconditions'],'not_established':['freshness','naturalrecordsource','physicalunits/range','allreturnedrecordtypes']},'method_counts':{'original_execution':0,'semantic_fixtures':0,'target_calls':0,'closed_provider_bodies_inspected':0}})
+ out['INPUTS.json']=J(pins);out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(pathlib.Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.v2.md').read_bytes()),'outputs':{n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()},'counts':{'spans':len(spans),'guards':len(guards),'branches':len(calls),'keys':len(keys),'GOT_chains':len(chains),'types':len(types),'tables':len(tables),'relocations':len(rr),'inputs':len(pins),'original_execution':0}});return out
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');ck=ap.parse_args().check;out=build()
+ if ck:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  for n,r in json.loads((D/'first-candidate-v2/INDEX.json').read_text()).items():z=(D/n).read_bytes();assert z==(D/'first-candidate-v2'/n).read_bytes()and H(z)==r['sha256']and len(z)==r['bytes'],n
+ else:
+  s=D/'first-candidate-v2';assert not s.exists(),'refuse firstsnapshot overwrite'
+  for n in out:assert not(D/n).exists(),'refuse generatedoverwrite'
+  cp={**out,'REPORT.v2.md':(D/'REPORT.v2.md').read_bytes(),pathlib.Path(__file__).name:pathlib.Path(__file__).read_bytes()};ix=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in cp.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in cp.items():p=s/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (s/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':ck,'outputs':len(out),'original_execution':0}))
+if __name__=='__main__':main()

@@ -1,0 +1,126 @@
+{
+  "checkpoint": "run16",
+  "status": "three independently source-reviewed areas including actualCOSO pointer-parser/serializer corpus; integration review separate, overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run16/REPORT.md",
+      "source_sha256": "5304eb2d0038900b37c34498f33dce37fc83df630445899355c76a267991c024",
+      "published": "run16-protocol-report.txt",
+      "published_sha256": "5304eb2d0038900b37c34498f33dce37fc83df630445899355c76a267991c024"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run16/protocol-review.md",
+      "source_sha256": "af0443af35e01767f01da7ee7834fedb2478b945cfd0f7a30867fcf1362a804b",
+      "published": "run16-protocol-review.txt",
+      "published_sha256": "af0443af35e01767f01da7ee7834fedb2478b945cfd0f7a30867fcf1362a804b"
+    },
+    {
+      "role": "report",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run16/REPORT.md",
+      "source_sha256": "6a346be2480e3f9476d55115b6f9ab87809142b2e51315f55234717909fb761a",
+      "published": "run16-coso-report.txt",
+      "published_sha256": "6a346be2480e3f9476d55115b6f9ab87809142b2e51315f55234717909fb761a"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run16/coso-review.md",
+      "source_sha256": "d5263fb687d0006b2ddc9e85a91b3445653d875a21f879ffbb06ea7c85a396c5",
+      "published": "run16-coso-review.txt",
+      "published_sha256": "d5263fb687d0006b2ddc9e85a91b3445653d875a21f879ffbb06ea7c85a396c5"
+    },
+    {
+      "role": "report",
+      "area": "thermo",
+      "research_path": "work/mh202-firmware/research/2026-10-30/thermo/run16/REPORT.md",
+      "source_sha256": "f260264e351c0fe0616160644a675ae525fd637295872fb1b21c945f0158c436",
+      "published": "run16-thermo-report.txt",
+      "published_sha256": "f260264e351c0fe0616160644a675ae525fd637295872fb1b21c945f0158c436"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "thermo",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run16/thermo-review.md",
+      "source_sha256": "ccf23e68c1e0cfb2c65250eacb988e4c9b8cb2aab3527e0227c744d2bdd04714",
+      "published": "run16-thermo-review.txt",
+      "published_sha256": "ccf23e68c1e0cfb2c65250eacb988e4c9b8cb2aab3527e0227c744d2bdd04714"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run16/collect_evidence.py",
+      "sha256": "f24adda6a5ae8c308f3a5cc931fba015b0e39b4c7caacee192a7bbc069d42e55",
+      "method": "static original/finitehost evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run16/emulate_pointer_parser.py",
+      "sha256": "54ab357c2a4c62f61ffb0fd192b799f2e9624c037851582b9ee9f6b8ef3281cc",
+      "method": "isolated original48-byteCOSO parser/serializer with declaredprimitive/data-binding models"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run16/collect_evidence.py",
+      "sha256": "58fefb6e48b904985de212d2fadddea0cb7a63ad6a849b78fb5be64733fb779a",
+      "method": "static original/finitehost evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/thermo/run16/collect_thermo_stm.py",
+      "sha256": "562b7008194af5a1b8934eae1893ae17cf83a5ab0a9cd8a6dadecf9306ce177f",
+      "method": "static original/finitehost evidence"
+    }
+  ],
+  "canonical_execution": {
+    "new_corpus": {
+      "top_level_entries": 3,
+      "parser_calls": 2,
+      "serializer_calls": 1,
+      "original_instruction_visits": 631,
+      "primitive_callbacks": 46,
+      "linker_redirect_callbacks": 2,
+      "exit_boundaries": 3,
+      "stop_boundaries": 0,
+      "code_hook_visits": 682,
+      "private_sessions": 2,
+      "setup_data_relocation_writes": 4
+    },
+    "cumulative": {
+      "corpora": 9,
+      "top_level_entries": 58,
+      "original_instruction_visits": 29010,
+      "primitive_callbacks": 2943,
+      "linker_redirect_callbacks": 113,
+      "exit_boundaries": 14,
+      "selector_read_stop_boundaries": 2,
+      "code_hook_visits": 32082,
+      "firmware_processes": 0,
+      "target_OS_calls": 0
+    },
+    "count_scope": "Canonical named corpora only; table setupwrites not callbacks; nestednew_Open nottopentries; verifierreplays notaccumulated"
+  },
+  "history": {
+    "run15_snapshots": "reviewed/run15/SOURCE_SNAPSHOTS.json",
+    "earlier_artifacts_unchanged": true,
+    "protocol_mask_precision": {
+      "research_path": "protocol/run16/development-before-mask-wording/snapshot-sha256.json",
+      "sha256": "e7be642fc72daf52481c2086f3ff571bac3cda9e40c8661e4bd71646245059b3"
+    },
+    "coso_literal_origin": {
+      "research_path": "coso/run16/development-before-review/SNAPSHOT.json",
+      "sha256": "871cbc8d92fb5c709a3d676d753d93c0341c502a4a6dbca57e1e144b9e6a3e67"
+    },
+    "scope": "Mask0x0008(bit-index3) and state48literal1 origin wording refined with exactolderbytes; nativeharness/results/models/counts unchanged. Initialcollector syntax/loaderliteral assertions stoppedpreoutputs, draftspreserved."
+  },
+  "limits": [
+    "Nativefields/classification/serializer for two synthetic ordinary strings under explicit C/GLib+source-auditedcleanup/data-binding models, no parsedfield/centralgrammarstub; not fullruntime/rawgateway/physical support",
+    "OriginalGLibtabledata only, no GLibcode/actualloader; dynamicprovider/registry/interposition unknown",
+    "One eligibleautomation callback preserves selectedQ under distinctnormalstorage/imports, not wholeactive registry/order/othercallbacks",
+    "Thermo state2feedback/timeoutflags are staticsoftware receipt policy, not validmeasurement/timing/delivery/hardware results",
+    "Missingassets/liveproviders/runtime/physical/widerDevicegates remain open"
+  ]
+}

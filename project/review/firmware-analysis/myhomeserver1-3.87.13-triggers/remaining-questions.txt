@@ -1,0 +1,9 @@
+# Ranked next joins
+
+1. Establish the natural constructor/population and identity of TimeTriggersService and ScenesContainer supplied to the scene loader, including actual enabled startup arguments. Do not equate stored class names with active services.
+2. Close selected queue ordering/rebuild/expired-handle and clock-change/catch-up ownership around the proved firing path. Fixed deadline increments and ordinary API units are not measured DST or scheduling behavior.
+3. Trace shared action-stop reset/owner aliases or a concrete operational-duration writer in another derived action, preserving separate scene145/144 versus shared action-stop domains.
+4. Select one non-time event trigger/condition class with actual current-firmware registration and callback source, stopping at opaque transport delegates. Do not transfer MH202 scripts or F454 bus/AV semantics.
+5. Resolve actual nonsecret configured scene assets and independent provider/runtime/physical observations only within future authorized scope. Missing bundled extras cannot be replaced by invented manufacturer fixtures.
+
+The selected TIME schema, registered weekday maps, conditional time-service callback and concrete condition-to-action caller are now source-closed within stated premises. Do not repeat those tables/cases as new semantic coverage or claim a complete installed end-to-end scenario.

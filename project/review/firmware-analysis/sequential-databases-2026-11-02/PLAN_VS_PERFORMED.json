@@ -1,0 +1,7 @@
+{
+  "actual_performed": "All alternate-format signatures remained UNPARSED. No alternate-format header/layout/parser/extent validation occurred. Current source/public report explicitly retains that limit.",
+  "additional_functional_coverage": 0,
+  "canonical_scope_code_results_reports_unchanged": true,
+  "classification": "Unfulfilled scope-plan phrase, not an actual performed-work claim",
+  "scope_phrase": "source-format/SCOPE.json BDB/GDBM/LMDB candidates receive conservative header checks"
+}

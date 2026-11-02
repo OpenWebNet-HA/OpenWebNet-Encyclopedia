@@ -1,0 +1,19 @@
+{
+  "run": "05",
+  "scope": "F460 catalogue-selector parameter owner/caller and F461 selected structured translator output/address/helper contract",
+  "authors": {
+    "F460": "firmware_protocol",
+    "F461": "firmware_boot"
+  },
+  "reviewer": "firmware_functional reviewer/read-only",
+  "prior_batch": "work/f460-f461-comparison/2026-11-01-run04",
+  "prior_index": {
+    "path": "work/f460-f461-comparison/2026-11-01-run04/EVIDENCE_INDEX.json",
+    "bytes": 48323,
+    "sha256": "a6e38143d7f9def0a681b44b806c6b1cadf1d985f802a20540d2a5d367c66a3a"
+  },
+  "deadline_UTC": "2026-11-01T19:00:00Z",
+  "final_only_UTC": "2026-11-01T18:15:00Z",
+  "new_original_execution": 0,
+  "user_summary_each_run": true
+}

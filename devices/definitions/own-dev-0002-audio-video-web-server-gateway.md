@@ -2,7 +2,7 @@
 
 ## Summary
 
-The F454 is a MyHOME audio/video web server and OpenWebNet gateway. It brings configured home controls and video-door-entry functions into a web interface, with Ethernet access and separate SCS connections for automation and audio/video systems.
+The F454 is a MyHOME audio/video web server and OpenWebNet gateway. It brings configured home controls and video-door-entry functions into a web interface, with Ethernet access and documented `SCS AV` and `SCS AI` connections for their respective video-door-entry/automation and burglar-alarm roles.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -14,6 +14,7 @@ The F454 is a MyHOME audio/video web server and OpenWebNet gateway. It brings co
 | Item model / `modobj` | `51` | Implementation evidence |
 | Catalogue brand / line | `BRAND = 5`; `LINE = 0` | Implementation evidence |
 | Firmware definition | `1.0.37`, `2.0.1` | Implementation evidence |
+| Examined Firmware package | `2.0.51` | [Build-specific analysis](../../reverse-engineering/firmware-analysis/f454-2.0.51.md); distinct from catalogue capability records |
 | Declared Modules | `2` | Implementation evidence |
 | Categories | Gateway, Interface, Audio / Video | Catalogue + vendor documentation |
 
@@ -38,7 +39,7 @@ F453 and F453AV are predecessor products named by vendor documentation. They are
 | `O1755G_U_EN` | Earlier English user manual revision | No dated imprint established in the inspected original | Whole Device-specific document, PDF pp. 1-50; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/f1/d4/f1d437d369f5a217c4094128c8841f3d2171381ba0f321f0dfa52e30177e2460.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1755G_U_EN.pdf) |
 | `O1755G_S_EN` | Earlier English software manual revision | No dated imprint established in the inspected original | Whole Device-specific document, PDF pp. 1-46; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/bc/d6/bcd66d983153fc8911022f52c6dd78605fb9533846e5bca05b46c4ac118a8bea.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1755G_S_EN.pdf) |
 | `O1754C` | Additional instruction-sheet revision | No dated imprint established in the inspected original | Whole Device-specific document, PDF pp. 1-2; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/8b/e3/8be3d653dbd0cf01cb4ac1de7976100c355719a5851cc6e0ed03c07d4a6856ff.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1754C.pdf) |
-| `F454_020051.fwz` | Firmware package | `2.0.51`; release 08/05/2017 | Firmware binary; privately archived, payload not inspected in this review | Private archive; `firmware-f454-020051` in [artifact manifest](../../sources/artifact-manifest.yaml) | [Vendor archive](https://www.homesystems-legrandgroup.com/home/-/productsheets/2463476) |
+| `F454_020051.fwz` | Firmware package | `2.0.51`; release 08/05/2017 | Private original; selected payload paths now examined in the [Firmware analysis](../../reverse-engineering/firmware-analysis/f454-2.0.51.md) | Private archive; `firmware-f454-020051` in [artifact manifest](../../sources/artifact-manifest.yaml) | [Vendor archive](https://www.homesystems-legrandgroup.com/home/-/productsheets/2463476) |
 
 Language variants should be retained separately when their bytes or content differ.
 
@@ -92,6 +93,19 @@ These are software applicability associations, not an inventory of physical port
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+### Examined 2.0.51 implementation
+
+The registered `F454_020051.fwz` package provides implementation evidence for build `2.0.51`, separately from the historical catalogue Firmware definitions above. Its source paths and isolated original-helper results do not identify a Physical Device's installed release or active Configuration.
+
+| Build-specific subject | Finding | Applicability |
+| --- | --- | --- |
+| Target and image context | Kernel targets TI DaVinci DM365/BASI with ARMv5 userspace; normal/recovery views retain shared application code within different filesystem compositions | Packaged build data, not a hardware probe or identical runtime activation |
+| Configuration storage | Root image and writable extra/configuration storage are separate | Packaged layout and HAL consumers; installed persistent content remains unavailable |
+| Diagnostic identity | The selected builder reads cached/persistent `N_CONF`; packaged `mynconfdiag=15` and a conditional setter path supply a concrete declaration | Matches the observed value without establishing its meaning or a physical-configurator count |
+| Functional processing | Selected temperature/energy representations and `WHO 8` role/UI/status paths have different consumers | Build-specific software behavior, not additional hardware capabilities or guaranteed physical output |
+
+See the [F454 implementation reference](../../reverse-engineering/firmware-analysis/f454-2.0.51.md), [temperature and energy dataflow](../../reverse-engineering/firmware-analysis/f454-2.0.51-continuation.md), [old-energy consumers](../../reverse-engineering/firmware-analysis/f454-2.0.51-final-pass.md) and [video-status/serial attribution](../../reverse-engineering/firmware-analysis/f454-2.0.51-av-and-board.md). The alarm connector's documented role and conditional software serial-node attribution remain distinct; a Linux node name does not establish electrical wiring.
 
 ### Parameter and package associations
 
@@ -324,20 +338,24 @@ All eight identified English PDF revisions are accounted for. Earlier G user/sof
 
 G software p. 10 offers DHCP but also says a static address is needed for correct operation. H software p. 11 offers both without that extra sentence; no universal static-IP requirement is inferred. J user pp. 19/69 specifically limits dynamic-IP MyHOME_Web operation to OPEN-password authentication. Product manuals describe historical services; their continued availability is not established here.
 
-The `F454_020051.fwz` package was already registered with SHA-256 `15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3`; see the manifest for its authoritative full fingerprint and private-archive-only status. The package payload has not been inspected and no claim is derived from it. The catalogue's parameter XML associations are now fully listed, with their unexamined payloads explicitly bounded.
+The installer application profile `1455_2.0_LGG/db/systems.sqlite` separately declares camera, entrance-panel and alarm editor templates, address constraints and validation selectors. Those [application database declarations](../../internals/device-application-databases.md#f454-camera-and-alarm-declarations) are configuration-software evidence, without executed UI validation or additional physical-capability limits. The installer package label does not identify installed Firmware `2.0.51` or replace the catalogue alternatives above.
+
+The registered `2.0.51` package and its [implementation reference](../../reverse-engineering/firmware-analysis/f454-2.0.51.md) have a different evidential role from catalogue capability records and manufacturer product documentation. The package does not establish a mapping to every historical catalogue Firmware alternative. Catalogue parameter XML paths are listed above, with their inner payloads still unexamined.
 
 The technical and instruction-sheet connector legends are retained literally. A bus label or catalogue association is not proof of an interchangeable wiring topology.
 
 ## Evidence limits and open work
 
 - Referenced catalogue parameter XML payloads are not retained in this extraction; their inner schemas, defaults and programming semantics remain unexamined.
-- The registered `2.0.51` firmware original is private-archive-only and its contents were not inspected. No public redistribution or payload-level equivalence is asserted.
+- The registered `2.0.51` original remains private-archive-only. The installation's persistent/optional extra assets, complete runtime, physical delivery and catalogue-to-installed-version correspondence remain unresolved. No public redistribution or cross-release equivalence is asserted.
 - Non-English manual variants have not been incorporated; no claim is made that the English revision set exhausts regional material.
 - Gateway `N_CONF=15` and `WHO 13 DIMENSION 40=4*0` remain observed values with unresolved semantics.
 - Selection of catalogue capability records for installed firmware outside `1.0.37` / `2.0.1` remains unestablished. Historical portal/e-mail services are not certified currently available.
 
 ## Sources
 
+- [F454 application database profile](../../internals/device-application-databases.md)
+- [F454 2.0.51 Firmware analysis](../../reverse-engineering/firmware-analysis/f454-2.0.51.md)
 - [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
 - [Identify an OpenWebNet Gateway](../../guides/identify-openwebnet-gateway.md)

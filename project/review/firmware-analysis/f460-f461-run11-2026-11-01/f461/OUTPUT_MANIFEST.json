@@ -1,0 +1,50 @@
+{
+  "collector_sha256": "68ea48c841f49afa664549c55ab9bde8bfb315fce739ed747133f26901989283",
+  "outputs": {
+    "INPUTS.json": {
+      "sha256": "8bc2598f6c843ecbb8f295b4ba89ffaf70d4765985eb6ac4268f6a66573ae32e",
+      "size": 1032
+    },
+    "SOURCE.json": {
+      "sha256": "e91b387a96cf93afbbcf05db02f701c421499c0bb40e33bb251834e6dbce757c",
+      "size": 10344
+    },
+    "spans/default-main-config-path.txt": {
+      "sha256": "94908cd9e21ef706876f3104b312cef64e1828aa2f226750110dcdc50b1ea6b8",
+      "size": 365
+    },
+    "spans/directory-main-handoff.txt": {
+      "sha256": "63122a46c2325b293aaabd8f36ef41305356eca2b8752468d29edbc52d238a95",
+      "size": 682
+    },
+    "spans/directory-presence-tests.txt": {
+      "sha256": "1ae9e711a190a5b7b27f6a6568eda8adecdb71e68565471a2812b662c095c91d",
+      "size": 313
+    },
+    "spans/library-and-config-key-readers.txt": {
+      "sha256": "f4abd648e5d625ecb648edac777722ed2c46e4dad48fab79dd8b0bc0571d0b2c",
+      "size": 989
+    },
+    "spans/manager-and-option-destinations.txt": {
+      "sha256": "cbdd73101a12a6fb3668a647cb419dbf3f95a6082d676de4946f9d434f3c6568",
+      "size": 2023
+    },
+    "spans/parent-directory-fallback.txt": {
+      "sha256": "48de71a0a24673c5a646e9b9463f7185b70aa470fb3239b04655b3b032b61e54",
+      "size": 707
+    },
+    "spans/plugin-data-copy-and-fallback.txt": {
+      "sha256": "76461e34a3950cef7629e940bbc903e8114ff8846693b06f5fb270eac71601d8",
+      "size": 1948
+    },
+    "spans/selected-main-config-file-gate.txt": {
+      "sha256": "cb7bebbf1f2ea4c2405d3e228066dd0de6639a432692436c9ab43d5019859b7f",
+      "size": 261
+    },
+    "spans/selected-main-file-load.txt": {
+      "sha256": "a4ac3c960650e8d9fca7bda6572cfb01e56359349dfadf167e059e210a6053da",
+      "size": 479
+    }
+  },
+  "report_sha256": "034b07713342adc93dab60818a90d92b724ad10d6047581124972ae17a358595"
+}

@@ -1,0 +1,14 @@
+## F460: update-manifest selection into separate staging records
+
+The original updater is byte-identical in the checked normal and recovery images. That identity concerns this file; it does not establish the active boot mode or whole-image behavior. One local parser requests the literal `/tmp/fwz.xml`, conditionally requests an opaque helper when the file test fails, and then requests XML parsing. The helper's return is tested as an X0 value; its type and extraction behavior remain unproved.
+
+Under valid context/node and ordinary libxml returns, the parser follows `actions` → `action` → property `type`. Exact `firmware` and `recovery_firmware` values select different context pointers at +48 and +56. A zero record word permits local initialization to1 or2. Selected `attr` content is passed to string creation and appended into the same chosen record's list at +8. The packaged manifest independently contains corresponding declarations; it is not an observed runtime `/tmp` file. These are staging and filename-list requests, not proof of signature verification, compatibility, installation, partition writes or reboot.
+
+## F461: configuration and status select log-persistence requests
+
+The original daemon is also byte-identical across the two checked images. Its own configuration paths write a receiver byte at +360: the local default clears it; XML `logrotation` text and an alternative key-file integer path can set it. The packaged normal/recovery full and reduced XML files each declare `<logrotation>1</logrotation>`. Only that safe line is retained; source precedence, actual file selection and the current receiver remain premises.
+
+A real local caller passes its same receiver into the selected helper. The helper requests an extras-status string, converts it with decimal `strtol`, and requires the low32 result to equal1 before checking byte+360. A nonzero byte then requests `stat` on `extra/70`. A zero result selects stop-SysLog → load-old-logs → restart requests; any nonzero result selects `mkdir` → restart. It does not test the directory-creation result or establish service readiness. The status producer, logger/HAL/file providers, installed directory and full boot/control flow remain open. The directory number70 is a pathname component, not an inferred asset or public device identifier.
+
+The [run08 source and review capsule](../../project/review/firmware-analysis/f460-f461-run08-2026-11-01/README.md) preserves the selected original source identities, nonsecret configuration lines, independent reviews and exact failed/versioned tooling history. Both additions are static reasoning; no updater, daemon, parser, file/service operation or firmware instruction was executed.
+

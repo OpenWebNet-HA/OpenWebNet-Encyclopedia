@@ -1,0 +1,27 @@
+# MH200N 1.1.8 night04 — one subsequent token-to-destination request
+
+The new bounded result is the actual continuation **0xa2a8..0xa2cc** of original local resource consumer0xa1dc: a third tokenizer request selects local return3 onNULL; a nonnull returned token is passed to an imported string-copy request with compiled destination0x18090. This is one field request, without assigning a semantic field name, complete resource grammar or installation meaning. No resource content, destination data, private configuration or credentials are exported.
+
+## Original source and admission
+
+Original normal `/bin/bt_start` is36080 bytes, SHA256 `63c0b0a9b6f67e6564f23f5ffcf18c3716bc27dc9b0b03009324af0fa0a21d48`. Fresh original ELF32 little-endian ARM EXEC/machine40/flags0x202 and its PT_LOAD mapping support the selected addresses. No MHS/MH202/F454/F453AV layout, normal-to-recovery behavior or provider implementation is borrowed.
+
+The unchanged night03 packet is explicitly inherited: own-file caller0xa3ec passes its provided pathname to0xa1dc at0xa424; the selected consumer retains the open machine return, requests read into the same1024-byte stack buffer and performs its first two strtok requests. This packet starts **only on the prior second-nonnull continuation0xa2a8** and does not repeat prefix, marker or cell coverage. Actual natural main/caller admission, selected pathname, no invalidating mutation/aliases, valid provided addresses, valid descriptor, usable terminated data, normal diagnostic/provider returns and callee-save ABI remain premises. The prior zeroing/read request does not guarantee a terminated C string or valid resource.
+
+## Third request and local NULL return
+
+0xa2a8 setsR0=0;0xa2ac loadsR1 via pool0xa3c4 to exact two-byte delimiter `*`/2a00 at0xe488.0xa2b0 requests actual strtok import0x8d38. Under ordinary continuation semantics and the inherited tokenizer state this is the third token request. Its returned machine word is tested against0 at0xa2b4. MOVEQ R0,3 at0xa2b8 does not change the comparison flags, so BEQ0xa2bc selects0xa3a8 onNULL, producing local numeric3 through the inherited1024-byte stack-restoring epilogue. This numeric word is not a protocol status, OS error, child exit or product mode.
+
+## Selected nonnull token and compiled destination
+
+On the selected nonnull branch,0xa2c0 copies the same tokenizer return intoR1.0xa2c4 loadsR0 through pool0xa3c8, whose exact original word is0x18090.0xa2c8 requests actual strcpy import0x8cb4 with **destinationR0=0x18090, sourceR1=same returned token**. The original PLT words and JUMP_SLOT metadata identify both imports; effective runtime binding and provider bodies remain opaque.
+
+The destination lies within the original writable file-backed PT_LOAD and `.data` section. A four-byte original-file provenance probe at0x18090 is identified by exact mapping/length/hash with its contents omitted; this probe does not assign an object extent. These establish only the compiled address and section membership, **not a destination array size, live object identity, lifetime or capacity**. No destination bytes are copied into evidence. No explicit token length/type/content test occurs between the selected nonnull return and this copy request. Valid terminated token/source, writable sufficiently large live destination, appropriate non-overlap, ordinary C/ARM32/provider semantics and normal returns remain premises. An imported request does not prove an actual copy, accepted resource or safe runtime behavior. No filename role, overflow or install behavior is inferred. The caller-suppliedR1/R2 output addresses retained by the inherited entry have a separate role; this selected span contains no store through those addresses.
+
+The packet stops immediately after the strcpy request. Later tokenizer requests, semantic field names, complete validation/grammar, caller-output values, final result/cleanup, application-file copy/install, current partition/overlay and startup outcome remain unexamined. This narrow result does not supply a complete resource or current configuration.
+
+## Evidence and reproduction
+
+SOURCE.json holds five exact original spans,13 fixed words, two BL targets, one selected NULL branch, two PC-relative pools, delimiter bytes, destination membership metadata and two actual original imports. ARGUMENT_FLOW.json keeps token/source/destination/local-return namespaces and inherited premises separate. INPUTS.json pins the original file, its unchanged extraction manifest and three inherited packet members. Earlier sources, completed artifacts, ledgers and source manifest stay unchanged.
+
+`python3 -B collect_fields_v1.py --check` performs deterministic host static reads, readelf/disassembly and exact byte/hash verification only. Initial generation refuses existing outputs and immediately saves exact first copies of the collector and all five generated outputs; its index is precomputed and excludes itself. No prior collector, original/vendor/native/helper/emulator/targetOS/device/network/bus/SQL code, model/fixture, mount, flash or physical operation is executed. Closed receiving/output/transport/authentication/session/framing/MQTT/libjel and equivalent bodies remain opaque. New original execution0; no database recovered or uploaded; inherited archive remains one encrypted F450 support container and zero plaintext databases. The MHS340 code-hook-visits/360 hooks and separate F454/MH202 ledgers are not replayed or reset.

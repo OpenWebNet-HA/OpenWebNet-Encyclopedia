@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+"""Static candidate JsonCpp(double)/type3 source only; no native execution."""
+import sys
+sys.dont_write_bytecode=True
+from pathlib import Path
+import json,hashlib,struct,importlib.util,subprocess,re,os,argparse
+D=Path(__file__).resolve().parent;W=next(p for p in D.parents if(p/'sources').is_dir());P=W/'work/myhomeserver1-firmware/3.87.13';V=P/'research/2026-10-31/image_vfs.py';LIB='/usr/lib/libjsoncpp.so.1.9.5';S='/home/bticino/scheduling_manager/scheduling_manager';H=lambda b:hashlib.sha256(b).hexdigest();J=lambda x:(json.dumps(x,indent=2,sort_keys=True)+'\n').encode();sp=importlib.util.spec_from_file_location('double_provider_vfs',V);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+def build():
+ v=m.ImageVFS();b=v.read_bytes(LIB);s=v.read_bytes(S);assert H(b)=='5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36'and H(s)=='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26';assert v.read_bytes('/usr/lib/libjsoncpp.so.25')==b;ph=struct.unpack_from('<I',b,28)[0];z,n=struct.unpack_from('<HH',b,42);segs=[struct.unpack_from('<8I',b,ph+i*z)for i in range(n)]
+ def off(a,n):return next(o+a-va for t,o,va,_,fs,*_ in segs if t==1 and va<=a and a+n<=va+fs)
+ def raw(a,n):o=off(a,n);return b[o:o+n]
+ def u(a):return int.from_bytes(raw(a,4),'little')
+ hp=v.root/v.resolve(LIB).lstrip('/');hs=v.root/v.resolve(S).lstrip('/');env=dict(os.environ,DEBUGINFOD_URLS='');out={};rows=[]
+ spans=[('double-normal-constructor',0x15ce0,0x15d02),('basic-initialization',0x15ad4,0x15b44),('comments-move-assignment',0x159ec,0x15a22),('type-byte',0x14e3c,0x14e40),('asDouble-prefix',0x171c4,0x171e6),('asDouble-type3-load',0x1724e,0x17254),('asDouble-normal-epilogue',0x171fe,0x17216)]
+ for name,a,e in spans:
+  t=subprocess.check_output(['objdump','-d','--dwarf=no-follow-links','-M','force-thumb',f'--start-address={a}',f'--stop-address={e}',str(hp)],text=True,env=env).replace(str(hp),LIB);out['spans/'+name+'.txt']=t.encode();rows.append({'name':name,'image':LIB,'start_VA':hex(a),'end_VA_exclusive':hex(e),'file_offset':hex(off(a,e-a)),'raw_sha256':H(raw(a,e-a))})
+ guards=[(0x15ce0,'0022'),(0x15ce4,'0321'),(0x15cec,'c260'),(0x15cee,'b0ee408b'),(0x15cf6,'84ed008b'),(0x15af8,'2172'),(0x159f4,'0a60'),(0x159fa,'86b1'),(0x14e3c,'007a'),(0x1724e,'94ed000b')]
+ for a,h in guards:assert raw(a,len(bytes.fromhex(h))).hex()==h,hex(a)
+ tb=raw(0x171e6,6);assert tb.hex()=='37181f343a03'and 0x171e6+2*tb[3]==0x1724e
+ symbols=subprocess.check_output(['readelf','-sW',str(hp)],text=True,env=env);sy=[]
+ for name,a in [('_ZN4Json5ValueC1Ed',0x15ce1),('_ZN4Json5ValueC2Ed',0x15ce1),('_ZN4Json5Value9initBasicENS_9ValueTypeEb',0x15ad5),('_ZN4Json5Value8CommentsaSEOS1_',0x159ed),('_ZNK4Json5Value4typeEv',0x14e3d),('_ZNK4Json5Value8asDoubleEv',0x171c5)]:
+  rr=[l.strip()for l in symbols.splitlines()if l.split()and l.split()[-1]==name];assert len(rr)==1 and int(rr[0].split()[1],16)==a;sy.append({'name':name,'Thumb_value':hex(a),'original_row':rr[0]})
+ rel=subprocess.check_output(['readelf','-rW',str(hp)],text=True,env=env);sr=subprocess.check_output(['readelf','-rW',str(hs)],text=True,env=env);plt=[]
+ def rotimm(w):r=((w>>8)&15)*2;v=w&255;return((v>>r)|(v<<(32-r)))&0xffffffff if r else v
+ def blx(a,target):
+  i,j=struct.unpack('<HH',raw(a,4));sg=(i>>10)&1;i1=1-(((j>>13)&1)^sg);i2=1-(((j>>11)&1)^sg);im=(sg<<24)|(i1<<23)|(i2<<22)|((i&1023)<<12)|((j&2047)<<1);assert j&0xd000==0xc000;assert(((a+4)&~3)+im-((1<<25)if sg else 0))&0xffffffff==target
+ for call,a,slot,name in [(0x15cf2,0xba94,0x32f54,'_ZN4Json5Value9initBasicENS_9ValueTypeEb'),(0x15afe,0xb074,0x32c18,'_ZN4Json5Value8CommentsaSEOS1_'),(0x171da,0xb768,0x32e54,'_ZNK4Json5Value4typeEv')]:
+  blx(call,a);i,j,k=struct.unpack('<III',raw(a,12));assert i&0xfffff000==0xe28fc000 and j&0xfffff000==0xe28cc000 and k&0xfffff000==0xe5bcf000;calc=(a+8+rotimm(i)+rotimm(j)+(k&4095))&0xffffffff;assert calc==slot;rr=[l.strip()for l in rel.splitlines()if l.startswith(f'{slot:08x} ')and'R_ARM_JUMP_SLOT'in l and l.split()[-1]==name];assert len(rr)==1;plt.append({'call_VA':hex(call),'call_bytes':raw(call,4).hex(),'PLT_VA':hex(a),'ARM_PLT_bytes':raw(a,12).hex(),'jump_slot':hex(slot),'symbol':name,'relocation':rr[0]})
+ imports=[]
+ for name in ['_ZN4Json5ValueC1Ed','_ZNK4Json5Value8asDoubleEv']:
+  rr=[l.strip()for l in sr.splitlines()if'R_ARM_JUMP_SLOT'in l and l.split()[-1]==name];assert len(rr)==1;imports.extend(rr)
+ dyn=subprocess.check_output(['readelf','-dW',str(hs)],text=True,env=env);ldyn=subprocess.check_output(['readelf','-dW',str(hp)],text=True,env=env);assert'libjsoncpp.so.25'in dyn and'libjsoncpp.so.25'in ldyn
+ out['ORIGINAL_SOURCE.json']=J({'provider':{'path':LIB,'sha256':H(b)},'scheduler':{'path':S,'sha256':H(s)},'spans':rows,'guards':[{'VA':hex(a),'bytes':h}for a,h in guards],'symbols':sy,'PLT_self_definition_requests':plt,'scheduler_imports':imports,'type3_TBB':{'base':'0x171e6','bytes':tb.hex(),'index':3,'target':'0x1724e'},'SONAME_alias':'libjsoncpp.so.25 metadata-resolves to candidate bytes'})
+ pins={}
+ for p in [V,P/'research/2026-11-01-serialization/provider-values/REPORT.md']:
+  z=p.read_bytes();pins[str(p.relative_to(W))]={'bytes':len(z),'sha256':H(z)}
+ out['INPUTS.json']=J(pins);out['CONTRACT.json']=J({'constructor':'D0 preserved in D8 then stored object0 after type3initBasic','comments':'constructor explicitly zeros object12; selectedmove source0/old0 bypassesnonnull disposal','readback':'type() readsbyte8; type3TBB→VLDR D0object0→normalepilogue withoutnumericconversion','premises':['validconstructedobject/storage','ordinaryARMhardfloatABI','selectedcandidatePLT/selfbindingandnormalcanary/providerreturns','nointerveningmutation'],'not_proved':['wholeJSONcreation/memberassignment/map/reparse','runtimebinding/interposition','allcomments/flags/errors/unwind','actualconfiguredsetpoint/domain/units/physicalbehavior'],'original_execution':0,'semantic_fixtures':0})
+ out['OUTPUT_MANIFEST.json']=J({'outputs':{n:{'bytes':len(z),'sha256':H(z)}for n,z in out.items()},'collector_sha256':H(Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes()),'counts':{'code_spans':len(spans),'guards':len(guards),'symbols':len(sy),'PLT_proofs':len(plt),'scheduler_imports':len(imports),'original_execution':0}});return out
+
+def main():
+ p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');ck=p.parse_args().check;out=build();C=D/'first-candidate'
+ if ck:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  for n,r in json.loads((C/'INDEX.json').read_text()).items():z=(C/n).read_bytes();assert z==(D/n).read_bytes()and H(z)==r['sha256']and len(z)==r['bytes'],n
+ else:
+  assert not C.exists();assert all(not(D/n).exists()for n in out);cp={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),Path(__file__).name:Path(__file__).read_bytes()};ix=J({n:{'bytes':len(z),'sha256':H(z)}for n,z in cp.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in cp.items():p=C/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (C/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':ck,'outputs':len(out),'original_execution':0}))
+if __name__=='__main__':main()

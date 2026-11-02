@@ -1,0 +1,58 @@
+{
+  "collector_sha256": "c106c24f779a7ecb4a7b5aff086d32e3fec8737689c06d54c2fcb15df11803a4",
+  "counts": {
+    "guards": 21,
+    "keys": 3,
+    "original_execution": 0,
+    "spans": 8,
+    "tables": 3,
+    "types": 2
+  },
+  "outputs": {
+    "CONTRACT.json": {
+      "bytes": 1113,
+      "sha256": "1e86cae0de48f88b9620a1e39681824f89fd7a76e9be51a2cc81451b4b3e0f8b"
+    },
+    "INPUTS.json": {
+      "bytes": 561,
+      "sha256": "e06c88902ee31abb0666efca382f049974d65209b19ea616ea274915aaca1055"
+    },
+    "ORIGINAL_SOURCE.json": {
+      "bytes": 4750,
+      "sha256": "639e7dc0cfb329b984e35681e9f2d0fff7ecdd98fe315d95d19f9b3f0091dbf5"
+    },
+    "spans/common-base-prefix.txt": {
+      "bytes": 1581,
+      "sha256": "5f3646cd23640e2537f0cf2220bfeb9abd1246fecb6a536047f71387a6ce93ea"
+    },
+    "spans/compiled-constructor.txt": {
+      "bytes": 4695,
+      "sha256": "4ce522f452bf2b0e864602ceb90de0ee1bee5b9ce805e7d6323f452f7422bf28"
+    },
+    "spans/compiled-dispatch-prefix.txt": {
+      "bytes": 316,
+      "sha256": "d01aee532d6f96026d976aec6d42e8fa8f52ddc97c8f81055fe5a5b3cfed1402"
+    },
+    "spans/compiled-initializer.txt": {
+      "bytes": 1124,
+      "sha256": "d7143fae65be447bdba40acb4e40f9ba89f92a87bc5fd46ee7fdec4ef4c91126"
+    },
+    "spans/predicate-prefix.txt": {
+      "bytes": 9079,
+      "sha256": "8f23ad6b41bc3475acc36871257cc1a75b281dc6a85f03374ddbe7106f251195"
+    },
+    "spans/predicate-tail.txt": {
+      "bytes": 1268,
+      "sha256": "c3941a0a391ec0172858ba4586d32cf3d8cf6ea38a8a68c55cd4463eea632e88"
+    },
+    "spans/raw-constructor.txt": {
+      "bytes": 4924,
+      "sha256": "ce764b57c5c5ffdb9dd5235e998e6f367be029b05dbdd8f260e547cb743d48fc"
+    },
+    "spans/raw-factory.txt": {
+      "bytes": 1050,
+      "sha256": "fe46e059b8cc2ed839b05b11078d9b577761bcb711ad39f2e8bcba02346df391"
+    }
+  },
+  "report_sha256": "de7aa84c6c5c0cdfa8421a80e16655cba2f0b6c01a90ea70ead6933f334b2d5c"
+}

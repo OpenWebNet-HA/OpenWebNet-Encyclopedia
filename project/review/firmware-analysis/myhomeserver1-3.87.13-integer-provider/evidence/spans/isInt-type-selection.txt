@@ -1,0 +1,24 @@
+
+/usr/lib/libjsoncpp.so.1.9.5:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00015518 <_ZNK4Json5Value5isIntEv@@Base>:
+   15518:	4a2d      	ldr	r2, [pc, #180]	@ (155d0 <_ZNK4Json5Value5isIntEv@@Base+0xb8>)
+   1551a:	4b2e      	ldr	r3, [pc, #184]	@ (155d4 <_ZNK4Json5Value5isIntEv@@Base+0xbc>)
+   1551c:	b510      	push	{r4, lr}
+   1551e:	b084      	sub	sp, #16
+   15520:	447a      	add	r2, pc
+   15522:	4604      	mov	r4, r0
+   15524:	58d3      	ldr	r3, [r2, r3]
+   15526:	681b      	ldr	r3, [r3, #0]
+   15528:	9303      	str	r3, [sp, #12]
+   1552a:	f04f 0300 	mov.w	r3, #0
+   1552e:	f7f6 e91c 	blx	b768 <_ZNK4Json5Value4typeEv@plt>
+   15532:	2802      	cmp	r0, #2
+   15534:	d010      	beq.n	15558 <_ZNK4Json5Value5isIntEv@@Base+0x40>
+   15536:	2803      	cmp	r0, #3
+   15538:	d022      	beq.n	15580 <_ZNK4Json5Value5isIntEv@@Base+0x68>
+   1553a:	2801      	cmp	r0, #1
+   1553c:	d016      	beq.n	1556c <_ZNK4Json5Value5isIntEv@@Base+0x54>

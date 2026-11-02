@@ -1,0 +1,9 @@
+# Ranked remaining questions after run03
+
+1. F460 actual scene/factory admission, raw and compiled object ownership and a justified caller of the common action execute method. Keep selected callback return, action completion byte8, scene state, shared flags and physical completion separate. Do not repeat the proven SLEEP scalar/request loop as new coverage.
+2. F461 selected field descriptor registration/configuration and the natural local message+8/+16 producers. These are the next ownership/route premises before public command mapping. Follow only justified local structured-object paths and stop at closed receiving/transport/auth/session/framing delegates.
+3. F460 actual catalogue opening/reader/query/selection and configured scene assets. Identical catalogue bytes across F460/F461 remain metadata, not installed capability evidence.
+4. F461 one selected translator output construction and actual parsed/address/diagnostic identity helper, using its own layouts and original input objects. Decimal criterion provenance alone is not a complete WHO/dialect contract.
+5. Actual profile/board/auxiliary-core/local IPC selection, update/recovery/static component contracts, and distinct functional trigger/condition breadth where original source justifies it.
+
+Effective binding/full JSON/provider semantics, natural data/readiness/freshness, timing, complete errors/unwind/lifetime/concurrency and physical observations remain open. No live contact, firmware execution, model/fixture replay or source-manifest mutation is authorized by this static batch. Closed branches remain closed.

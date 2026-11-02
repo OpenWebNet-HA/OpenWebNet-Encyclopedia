@@ -1,0 +1,100 @@
+# Product-specific firmware follow-up: final documentary integration review
+
+PASS for the exact9 current reference documents, capsule provenance/exports and3 local summary documents pinned below, with the disclosed initial reference-index bookkeeping correction. I read the two new product pages, six old navigation appendages, joint capsule, current author reports/designated source reviews and retained refinements. F454 alarm and MH202 resource/extraction areas are source-aware because I independently source-reviewed them earlier. F454 AV and MH202 lifecycle promotion are documentary comparisons to their designated independent source reviews, not a new independent discovery or full fresh binary-semantic audit. No new firmware/native/vendor execution, target OS/network/device operation, live publisher verification or old native replay is added here. Only this NEW review is written.
+
+## Product-driven findings and applicability
+
+The F454 page preserves the documented appliance role while separating literal SCS AV/SCS AI legends, two catalogue Modules/Objects, software lanes, descriptors, raw classes, WHO values, client IDs and ports. The original alias/basename/XML device-pointer/open request and conditional COSOAI registration establish positive software ownership. Neither ttyS2 numbering nor descriptor34/source4/WHO5 makes an electrical terminal mapping, natural decoded-origin admission, active registration or hardware capture. The old synthetic anti-panic result and recorded send retain their private-fixture boundaries.
+
+AV assignments are now described as selected writers of one mutable word, not a complete status producer or physical mode table. The source review's crucial role1 existing-global2 predecessor is explicit; that WHAT37 branch does not establish initial -1 ->2 activation. Base WHAT and first parameter, role2 admission, role5 startup/global1 and separate max_der record32 remain distinct. DIM35 frontend field4, factory enable, discovery, role selector and camera/answering-machine availability are still unjoined. The page does not transfer role5 behavior to a deployed role1 device.
+
+The MH202 page correctly treats recovered manufacturer defaults and shared ScenarioSuite assemblies as new genuine resource availability, not installed/generated scenario scripts. Twenty-five selected files/21 verified pages are provenance scope, not25 independent functions or all catalogue paths. The source review independently reconstructed the original counted index/pages/file bytes; the applicability reviewer accurately distinguishes its collector/hash/schema role from that extraction proof. Suite3.5.38, package1902_1.0_LGG, catalogue1.0.0 and firmware1.0.24 are separate namespaces. No complete generator method/grammar, configured .spt/info.xml pair, full compatibility or identity with the separate firmware4.xtz/2.xtz downloads is established. The bounded top-level/central-directory negatives do not include opaque/encrypted/nested content or dynamic output. No vendor installation/.NET/Tcl evaluation, ZIP password/decryption or fresh Authenticode verification is claimed.
+
+Panic P50/P51/P52 declarations and the enable-controlled single copy rule are joined to the exact firmware configuration leaf/getter/full-string comparison/command gate under explicit conversion/export/load/version/parser/provider premises. A declaration is not an executed converter; skipped copying does not prove whole-converter target clearing. Leading-zero byte inequality is not a false-trigger or physical-address conclusion. Fresh-process NOBITS zeroing is not complete power-cycle behavior. Ordinary Stop, panic, readiness, RESTART and full Start/OnlyIf/delayed Action remain separate/open. MH202 alarm reaction-only documentation is preserved; it does not acquire alarm arming/disarming or F454 dedicated physical-interface capabilities from matching translator names.
+
+## Histories and source-review roles
+
+Authoritative resource REPORT.v2 and its chronology refinement are promoted alongside immutable v1/report/collector/results. The inventory capture actually followed acquisition and excluded the entire new acquisition/output tree. Current prose states that scope, while the v1 collector intentionally reproduces historical v1. The earlier applicability review pins v1 and retains its earlier terminology; it is not substituted for the final current chronology/source review. No extraction result or source claim changed. Failed container/assumed-MD5 attempts remain separate from successful decoded-size/CRC validation.
+
+The two initial new reference pages are retained before role1 admission/path-display/spacing refinements. Their before/after hashes agree. The later MH202 primary-source link-only change to reportv2 is separately retained locally; its refinement and current page are pinned below rather than treating the earlier history's intermediate after-hash as final current bytes. Ten pre-edit repository snapshots match their hashes. Six old navigation pages are exact appendages to their saved old bytes; the WHO5/WHO17/Device0002/Device0151 references among those ten remain unchanged. In particular the mutable reference inputs used by immutable F454 ownership collectorv1 still match its original pins, resolving the earlier integration-time reproducibility warning for this batch.
+
+This review discovered an initial reference-index self-entry bug: its SNAPSHOT_INDEX.json entry is the empty-file SHA256, not the final index's hash. Parent retained the original index/two page files and added NEW INITIAL_REFERENCE_INDEX_REFINEMENT.json with an exact capsule copy. I independently checked its actual original-index hash, both correct page hashes and the retained invalid self-entry. The assembler's create-before-enumerate ordering explains the empty self-entry. Only two real first-page snapshots are verified; the invalid third/circular entry is not silently ignored, rehashed into history or called valid. No page/source semantics changed. The separate sidecar is additional to the provenance's earlier captured input/export lists and is pinned explicitly here; the parent post-review check must retain that honest scope.
+
+New current first copies/refinements do not authenticate unavailable older run18/sound21 intermediate histories. The capsule and local reports preserve those omissions. Related resource knowledge/source authorship and independent review roles are stated rather than multiplied into independent corroboration. Original vendor binaries/images/assemblies stay in private analysis storage; the capsule contains only derived md/txt/json, not a runnable firmware or redistributed installer/resource payload.
+
+## Checks and final disposition
+
+Independent host checks verify11 exact listed research/export byte pairs,4 method hashes, all captured provenance input pins,10 pre-edit snapshots and the current9-document pins. I separately rehashed every listed file and index in all5 protected completed dossiers:5141 file identities remain unchanged. This is preservation, not a fresh semantic re-audit of those dossiers. The three new local summary hashes are also pinned. All517 local reference occurrences across the9 current references and3 local summaries resolve, including20 heading fragments. The previously absent local state file now exists with an explicit documentary-review-pending status; no report edit was needed. Live external links were not revalidated in this review.
+
+Parent VALIDATION.json records PASS for the4 read-only collectors and69 deterministic outputs (31+23+4+11),11 exact export pairs,3 archive identity checks, protected5141 files, correct branch/empty staging and ESG/ECV/diff. I read/pin that actual record rather than claiming to have rerun every final gate here. Counts are integrity/reproduction, not instruction coverage, fresh native experiments or wider Device closure. Earlier F454 results and MH202's15 canonical corpora remain unchanged; this follow-up adds0 native corpora/replays. The final metadata-sidecar/review export and postwrite ESG/hash check remain parent-owned completion steps, not pre-certified by this review.
+
+The local summary/ranking coherently prioritizes a genuine .spt/info.xml generator contract, actual AV response/initial activation, electrical alarm attribution, complete scenario lifecycle and runtime/physical corroboration. No repeated ordinary matrix or stopped authentication/session/framing equivalent is proposed. No commit/staging/publishing, live contact or automation restart is claimed. The actual pending coordination state will be preserved before its announced completion transition; this review pins its read-time bytes, not a future receipt.
+
+No further source or reference wording refinement is requested. PASS applies to the exact promoted bytes, disclosed version/index limitations and documentary/source-aware scope described above, with wider Device/runtime/physical gates still open.
+
+## Exact9 current reference pins
+
+Paths are repository-relative.
+
+| Reference | SHA256 |
+|---|---|
+|reverse-engineering/firmware-analysis/f454-2.0.51-product-paths.md|45929c59b9501a7c7b2e15bdae163d2a744b24f572060c2d6a368b74e889f9a2|
+|reverse-engineering/firmware-analysis/mh202-1.0.24-scenario-resources.md|ac2e0e3ac2fa1cc8427295dbfac739c08bc28e1e41393d090b562f4ded9e2eb4|
+|reverse-engineering/firmware-analysis/f454-2.0.51.md|b509a968644fa93b9234f66e123e00be0e80af472c4e6c294c0f50da5396de0b|
+|reverse-engineering/firmware-analysis/mh202-1.0.24.md|2b7eb6a1cc0420f847c6b7922e9b958cb3f78849bc64ce7267cadc914f36ea0a|
+|reverse-engineering/firmware-analysis/README.md|fcfd9abe33afd850b95f35a65b3c2952ce7c8c8a5d42288e00e2f9d5b11c49d6|
+|project/review/firmware-analysis/README.md|956b8e4a5127f0c63f47f54d517bc13819a46a2a5e2bb1d47882be7386bf539b|
+|project/review/firmware-analysis/f454-2.0.51/README.md|bc92e2fa60da8fec9057c47c4359c1c8eb541ce31aac50de654c98c620af042f|
+|project/review/firmware-analysis/mh202-1.0.24/README.md|7871c88bb83d2b89abeb344b2d5bae900d971506cc17a2a145bb73f958750377|
+|project/review/firmware-analysis/product-followup-2026-10-31/README.md|a2fbb12869541fceefc5843a3defee420440523047cb914ca32a36a865c0f3bc|
+
+## Exact3 local summaries and current records
+
+Paths are relative to work/firmware-product-followup/2026-10-31.
+
+| Artifact | SHA256 |
+|---|---|
+|REPORT.md|88f905a4c8b9431bc4be2e1d00bf5c3e7234cd1b657a518537d51c485d801294|
+|COVERAGE.md|31a2c1c5ad688a1840557f6e971b4abcc9e278271da8005ac2716ea1fc61d29d|
+|REMAINING_QUESTIONS.md|aebf6a5b9921618561424e64d8a4ecde5fbb086421c5d662015e402a7d8ae564|
+|VALIDATION.json|abf65e69cbef76fd24b05b3874f873395dc997615fd8ae9a448e487e446899bf|
+|RESEARCH_STATE.json|6a09bba45eb9c3768f7e609446590052a33effd8613af2588d04f9cb8d0e0ff4|
+|PROTECTED_COMPLETED_DOSSIERS.json|db9458f9e1e0d383de5e12961f651d9dc5e4954122fe49d12b890ee561918362|
+|initial-reference-v1/SNAPSHOT_INDEX.json|bf6c3da0ce343115c4a35ddfd2a1e3e8140114638ae251d89f88611aa13f2fe7|
+|reference-refinement-v2/HISTORY.json|ea16f576fc2959396e52868227573b147f7cc2348c2d03a0b3e5e5d0e14b24ef|
+|mh202-reference-before-v2-report-link.txt|99bc3f5389f52f3df7ac2e17b1715fdb2f047ed6489af1efe8bd320775062971|
+|mh202-reference-report-link-refinement.json|16efc4c320f3cfbc63de0edd19c910ad7c8bbc14e83f80401be26ec9cdec1ba1|
+|INITIAL_REFERENCE_INDEX_REFINEMENT.json|fd5d106969c8aeb856cc24b502987ba54d76f006257419a9521fead3018e32bf|
+
+## Exact capsule provenance, exports and retained metadata
+
+| Capsule-relative artifact | SHA256 |
+|---|---|
+|provenance.json|b75b502515d72dd9afd0f9c5d42f3f02d88e846c7406291615b6bc03dd5dc27e|
+|f454-alarm-report.txt|e6f2e97d0cbffed85110360d4218730650d3a59439263ff86f2942b933183617|
+|f454-av-report.txt|e6953786782cd9c79a21c1554c2e674483bba9aa9cf21f7b18941c339490939d|
+|mh202-resources-report.txt|15ce268fc91529c5d7c55aacb2fd74be7da5d513277257eadf7ab12498d39c80|
+|mh202-resources-report.v2.txt|615445c3437ccd30b7d52bccdd41d86ee02200f0c6d3b147efc634deb0663c3d|
+|mh202-lifecycle-report.txt|e99fa8b024697b17c5b7b4777f0ae0dc196a9d8e97699e1f4844f7d5f563961f|
+|product-scope-review.txt|867898ecefe59fcf292cbc7a3a6008abccc6e0e0fb68932659d8d079c62fe1c5|
+|f454-alarm-source-review.txt|6eeeb172d92c7175d854d90c70ae47dd2058b6f1d557235ae4ed951124ecc6c3|
+|f454-av-source-review.txt|9f47cedef44ae88750c163b71bda6c9805b1385016fc1bf8560801a90ed1aa30|
+|mh202-lifecycle-source-review.txt|b201620b1b1a08c963bf3b7ba54f63bfc682d1cf53acaaae2921a954864fe850|
+|mh202-resources-source-review.txt|7faf522e98a39d24ebe95f570c7c8d3739d5e6591530cf35b884537bd5bcc296|
+|mh202-resources-applicability-review.txt|bdb828e26302942d1d4e1b6ab4feedcd614b53ee4ee7f82ec46e5df8719058ec|
+|pre-edit-documents/SOURCE_SNAPSHOTS.json|39b6d52018e3daa54241c84af2f6b5c65f5fce44ffc1d34a0ba5f182bf0cf31b|
+|reference-refinement-history.json|ea16f576fc2959396e52868227573b147f7cc2348c2d03a0b3e5e5d0e14b24ef|
+|extraction-version-history.json|9f168181fc3d3d20c22f224c12a40ec1aecfe70e43876d636d77e9a705c89d17|
+|mh202-resources-chronology-refinement.json|5a31ecea29da909f4f1cc3da8ab6a9326a5717d516d5f37cfacf1e066e553cf6|
+|initial-reference-index-refinement.json|fd5d106969c8aeb856cc24b502987ba54d76f006257419a9521fead3018e32bf|
+
+## Exact static method identities
+
+| Workspace-relative path | SHA256 |
+|---|---|
+|work/f454-firmware/research/2026-10-31-alarm-ownership/collect_ownership_v1.py|7db3284611d11cf1d5f1993daf8a9842b57902d44daa4305dda70cf13b08a69b|
+|work/f454-firmware/research/2026-10-31-av-state/collect_state_v1.py|45efeddc019ff15c22e50d493f837e31450d7382c9b423b950629def428044ac|
+|work/mh202-firmware/research/2026-10-31-scenario-artifacts/collect_artifacts_v1.py|0b199603a76b0709928a7ed7803995107b461cba9d76562ad572921db9fb71c6|
+|work/mh202-firmware/research/2026-10-31-scenario-lifecycle/collect_panic_join_v1.py|6d555254724543f9f21b8eaf5367ca09d7a2341eebcbba8172570f73628ef3db|
+
+The pending-to-complete state transition and final post-review checks are not assigned fabricated future hashes. The announced pending state is a read-time pin; the final finisher must preserve it before changing coordination status.

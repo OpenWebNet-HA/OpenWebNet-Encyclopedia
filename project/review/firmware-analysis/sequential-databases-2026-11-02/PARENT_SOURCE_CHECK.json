@@ -1,0 +1,10 @@
+{
+  "actual_exit_code": 0,
+  "canonical_outputs": 7,
+  "command": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/source-format/collect_formats_v1.py --check",
+  "first_copies": 9,
+  "new_DB_recovered": 0,
+  "new_R2_upload": 0,
+  "scope": "All selected original input identities and new finite format-scan reproduction; no oldcollector/SQL/vendor execution",
+  "status": "PASS"
+}

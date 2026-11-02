@@ -1,0 +1,13 @@
+# MyHOMEServer1 3.87.13 ranked remaining questions
+
+These are concrete follow-ups to this completed first pass; they have not been executed or silently authorized as an overnight task.
+
+| Rank | Investigative step | Starting evidence | Useful closure |
+| --- | --- | --- | --- |
+|1|Trace matrix_mx catalogue literal→path→SQLite open→selected prepared queries; then compare changed catalogue entities by stable relationships|matrix_mx literalVA0x1cce04, SQLite imports, embedded75-table source|Establish actual catalogue purpose and meaningful differences, rather than infer self-capabilities|
+|2|Trace scheduling_manager scene-path reader and scene schema→trigger/action/state→actual command provider|XML process record, config scenesPath underextra0, fresh ELF/imports|Identify this product's genuine scheduler and persistence/lifecycle; do not transfer MH202 .spt semantics|
+|3|Close one fresh COSO normal parser/provider→outer criteria dispatch→STM→publication path|libopenmsg56/+52; actualaux/automation descriptors and direction callback|A coherent bounded source chain; only consider isolated original execution once all fixture/provider boundaries are justified|
+|4|Trace alarm_manager actual data readers, provider handoff and selected bus route|extra0 alarm/sensor/partition file declarations; selectedscsserverttymxc2/bus_type0|Distinguish home alarm integration from F454 dedicated-bus architecture without inferring electrical topology|
+|5|Trace backup_manager and fw_manager noncredential persistence/install/signature/partition consumers|extra0 data declarations and current process/config startup evidence|Bounded durability/update/recovery policy, with no write/flash/live execution|
+
+Cross-cutting prerequisites: genuinely missing extras80/81/94/95; configured state/actual profile/provider search overrides; exact current address and parser namespaces; input provenance and independent review before promotion. Physical delivery/timing/concurrency and whole-runtime behavior remain separate evidence layers. No stopped authentication/session/framing investigation or equivalent route is reopened.

@@ -1,0 +1,20 @@
+[
+  {
+    "source": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/REPORT.md",
+    "snapshot": "work/f460-f461-comparison/2026-11-01-run08/integration/f461-before-v2/REPORT.md",
+    "bytes": 6574,
+    "sha256": "7a4fdc98c06f7dcf5239bbe5032db962ba26e424ac012fe29ca0e7dfcd5db6a5"
+  },
+  {
+    "source": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/collect_boot_v1.py",
+    "snapshot": "work/f460-f461-comparison/2026-11-01-run08/integration/f461-before-v2/collect_boot_v1.py",
+    "bytes": 6217,
+    "sha256": "e1005c31a6a940074eff48652bf97aa9e5607291103fb6f7dbb502a741ebf8d8"
+  },
+  {
+    "source": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/FIRST_FAILURE.json",
+    "snapshot": "work/f460-f461-comparison/2026-11-01-run08/integration/f461-before-v2/FIRST_FAILURE.json",
+    "bytes": 543,
+    "sha256": "a5c9e7ab249e4477325c2ba04f2c5f1825bba9565643bb94d32e726a620c7bdd"
+  }
+]

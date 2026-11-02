@@ -1,0 +1,293 @@
+{
+  "ABI": "AArch64 X0this/X1source; virtualJsonreturn X8; UInt result W0. Candidate imports only; no target/provider execution.",
+  "ADRP_ADD_pairs": [
+    {
+      "ADD": "0x530c8",
+      "ADRP": "0x530c4",
+      "bytes": "f80d00f0/02c33391",
+      "target": "0x212cf0"
+    },
+    {
+      "ADD": "0xfff60",
+      "ADRP": "0xfff5c",
+      "bytes": "820800f0/42c03391",
+      "target": "0x212cf0"
+    },
+    {
+      "ADD": "0xfffec",
+      "ADRP": "0xfffe8",
+      "bytes": "e00800b0/04403191",
+      "target": "0x21cc50"
+    },
+    {
+      "ADD": "0x112af8",
+      "ADRP": "0x112af4",
+      "bytes": "430800d0/63403191",
+      "target": "0x21cc50"
+    },
+    {
+      "ADD": "0x530d0",
+      "ADRP": "0x530cc",
+      "bytes": "010a00d0/21e01c91",
+      "target": "0x195738"
+    },
+    {
+      "ADD": "0xfff68",
+      "ADRP": "0xfff64",
+      "bytes": "a10400d0/21e01c91",
+      "target": "0x195738"
+    },
+    {
+      "ADD": "0x37f54",
+      "ADRP": "0x37f50",
+      "bytes": "e10a00d0/21e01c91",
+      "target": "0x195738"
+    },
+    {
+      "ADD": "0x37ec4",
+      "ADRP": "0x37ec0",
+      "bytes": "e10e0090/21c02f91",
+      "target": "0x213bf0"
+    }
+  ],
+  "classes": [
+    {
+      "AP": "0x212cf0",
+      "RTTI": "0x218aa0",
+      "header": "0x212ce0",
+      "name": "11SleepAction",
+      "primary": "0x37e60",
+      "relocations": [
+        "0000000000212ce8  0000000000000403 R_AARCH64_RELATIVE                        218aa0",
+        "0000000000218aa8  0000000000000403 R_AARCH64_RELATIVE                        195d78",
+        "0000000000212cf0  0000000000000403 R_AARCH64_RELATIVE                        37e60"
+      ]
+    },
+    {
+      "AP": "0x21cc50",
+      "RTTI": "0x21c290",
+      "header": "0x21cc40",
+      "name": "17SleepActionRunner",
+      "primary": "0x1301e0",
+      "relocations": [
+        "000000000021cc48  0000000000000403 R_AARCH64_RELATIVE                        21c290",
+        "000000000021c298  0000000000000403 R_AARCH64_RELATIVE                        1b6078",
+        "000000000021cc50  0000000000000403 R_AARCH64_RELATIVE                        1301e0"
+      ]
+    }
+  ],
+  "direct_BL": [
+    {
+      "VA": "0x530c0",
+      "bytes": "84d9ff97",
+      "target": "0x496d0"
+    },
+    {
+      "VA": "0x53100",
+      "bytes": "84edff97",
+      "target": "0x4e710"
+    },
+    {
+      "VA": "0x53120",
+      "bytes": "50fdff97",
+      "target": "0x52660"
+    },
+    {
+      "VA": "0xfff58",
+      "bytes": "de25fd97",
+      "target": "0x496d0"
+    },
+    {
+      "VA": "0xfff90",
+      "bytes": "a84a0094",
+      "target": "0x112a30"
+    },
+    {
+      "VA": "0xfffa4",
+      "bytes": "d3370094",
+      "target": "0x10def0"
+    },
+    {
+      "VA": "0x112b64",
+      "bytes": "23760094",
+      "target": "0x1303f0"
+    }
+  ],
+  "guards": [
+    {
+      "VA": "0x37e88",
+      "bytes": "f50308aa"
+    },
+    {
+      "VA": "0x37f44",
+      "bytes": "813640b9"
+    },
+    {
+      "VA": "0x530ec",
+      "bytes": "000780d2"
+    },
+    {
+      "VA": "0x5310c",
+      "bytes": "b80200f9"
+    },
+    {
+      "VA": "0x53114",
+      "bytes": "a23600b9"
+    },
+    {
+      "VA": "0xfff3c",
+      "bytes": "e80315aa"
+    },
+    {
+      "VA": "0xfff4c",
+      "bytes": "20003fd6"
+    },
+    {
+      "VA": "0xfff50",
+      "bytes": "e10315aa"
+    },
+    {
+      "VA": "0xfff8c",
+      "bytes": "e27f05b9"
+    },
+    {
+      "VA": "0xfff94",
+      "bytes": "001380d2"
+    },
+    {
+      "VA": "0xffff8",
+      "bytes": "640200f9"
+    },
+    {
+      "VA": "0x112a54",
+      "bytes": "f30300aa"
+    },
+    {
+      "VA": "0x112a58",
+      "bytes": "f40301aa"
+    },
+    {
+      "VA": "0x112b24",
+      "bytes": "843640b9"
+    },
+    {
+      "VA": "0x112b28",
+      "bytes": "a43600b9"
+    },
+    {
+      "VA": "0x112b5c",
+      "bytes": "e40b00b9"
+    }
+  ],
+  "image": "/home/bticino/scheduling_manager/scheduling_manager",
+  "import_binding_proofs": [
+    {
+      "PLT": "0x24a50",
+      "PLT_bytes": "d00f00d011ce45f910622e9120021fd6",
+      "call": "0x530dc",
+      "original_relocation": "000000000021eb98  0000012900000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNK4Json5ValueixEPKc + 0",
+      "slot": "0x21eb98"
+    },
+    {
+      "PLT": "0x23e00",
+      "PLT_bytes": "d00f00f011ba42f910c2159120021fd6",
+      "call": "0x530e0",
+      "original_relocation": "000000000021e570  0000004900000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNK4Json5Value6asUIntEv + 0",
+      "slot": "0x21e570"
+    },
+    {
+      "PLT": "0x24a50",
+      "PLT_bytes": "d00f00d011ce45f910622e9120021fd6",
+      "call": "0xfff74",
+      "original_relocation": "000000000021eb98  0000012900000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNK4Json5ValueixEPKc + 0",
+      "slot": "0x21eb98"
+    },
+    {
+      "PLT": "0x23e00",
+      "PLT_bytes": "d00f00f011ba42f910c2159120021fd6",
+      "call": "0xfff78",
+      "original_relocation": "000000000021e570  0000004900000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZNK4Json5Value6asUIntEv + 0",
+      "slot": "0x21e570"
+    },
+    {
+      "PLT": "0x23cb0",
+      "PLT_bytes": "d00f00f0116642f91022139120021fd6",
+      "call": "0x37f4c",
+      "original_relocation": "000000000021e4c8  0000003300000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZN4Json5ValueC1Ej + 0",
+      "slot": "0x21e4c8"
+    },
+    {
+      "PLT": "0x23ce0",
+      "PLT_bytes": "d00f00f0117242f91082139120021fd6",
+      "call": "0x37f5c",
+      "original_relocation": "000000000021e4e0  0000003600000402 R_AARCH64_JUMP_SLOT    0000000000000000 _ZN4Json5ValueixEPKc + 0",
+      "slot": "0x21e4e0"
+    }
+  ],
+  "limits": [
+    "outer switch/class-selection premise",
+    "baseparser496d0/copy4e710/move10def0/storage1303f0 remain opaque",
+    "no callback invocation/timing unit/physical meaning/wholeJSON validity or runtime ownership claim",
+    "objdump nearest PLT symbols are not accepted as actual imports; original PLT/GOT/rela checked"
+  ],
+  "name_table": {
+    "base": "0x213bf0",
+    "length": 5,
+    "literal": "SLEEP",
+    "pointer": "0x196ad0",
+    "row_VA": "0x213c90",
+    "scope": "table row position, not integer5/WHO/kind/completefactory-dispatch proof",
+    "selected_row": 10
+  },
+  "spans": [
+    {
+      "end_VA_exclusive": "0x53128",
+      "file_offset": "0x530b4",
+      "name": "raw-selected-construction",
+      "sha256": "ed1aed5d025895c17f1e60b0b30b3240eb521e5c13f472e7046af07e92c1390a",
+      "start_VA": "0x530b4"
+    },
+    {
+      "end_VA_exclusive": "0x37ed8",
+      "file_offset": "0x37e60",
+      "name": "raw-serializer-result-type-prefix",
+      "sha256": "f8c01f381d998efce2279028c72fc43442518c2185d2bfda3af64ad5590fb71c",
+      "start_VA": "0x37e60"
+    },
+    {
+      "end_VA_exclusive": "0x37f70",
+      "file_offset": "0x37f34",
+      "name": "raw-serializer-seconds",
+      "sha256": "f4cb7f8c130b2943af9e8a0c8698b660d779c9f5a2d3b5f56cb79c264be722b5",
+      "start_VA": "0x37f34"
+    },
+    {
+      "end_VA_exclusive": "0xfffa8",
+      "file_offset": "0xfff2c",
+      "name": "initializer-serializer-reparse",
+      "sha256": "5f6d254f8fedd63b16bd5ad657cde263be7b7913dcf96d35806dc4025759b07d",
+      "start_VA": "0xfff2c"
+    },
+    {
+      "end_VA_exclusive": "0x10000c",
+      "file_offset": "0xfffe4",
+      "name": "initializer-final-class",
+      "sha256": "a4390c7a5e95156379e894e4d08424a9d2e5ea9e551f9604a503ccb68f6c5578",
+      "start_VA": "0xfffe4"
+    },
+    {
+      "end_VA_exclusive": "0x112ac0",
+      "file_offset": "0x112a30",
+      "name": "compiled-constructor-prefix",
+      "sha256": "a6619e699f48938c11de05a419c63161bda2b1d8a580fb3f8b7664da23ff8833",
+      "start_VA": "0x112a30"
+    },
+    {
+      "end_VA_exclusive": "0x112b68",
+      "file_offset": "0x112af0",
+      "name": "compiled-seconds-and-callable",
+      "sha256": "1d4cb82a72deac62adad5c9a851c7d30789de993961f4e4c3ad6fc2fc84c9c89",
+      "start_VA": "0x112af0"
+    }
+  ]
+}

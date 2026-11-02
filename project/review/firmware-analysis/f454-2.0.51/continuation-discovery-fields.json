@@ -1,0 +1,27 @@
+{
+  "base_va": "0x21ce8",
+  "feature_vde": {
+    "va": "0x21d28",
+    "offset": 64,
+    "decimal_store_va": "0xc174",
+    "compare_one_va": "0xc188",
+    "count_add7_va": "0xc198",
+    "missing_node_store_zero_va": "0xc524"
+  },
+  "search_type_count": {
+    "va": "0x21d20",
+    "offset": 56,
+    "consumer_loop_compare_va": "0x13e94"
+  },
+  "search_type_pointer_array": {
+    "va": "0x21d24",
+    "offset": 60,
+    "builder_store_va": "0x15f10",
+    "search_load_va": "0x13ee0"
+  },
+  "default_builder_vde_test_va": "0x15f14",
+  "detection_feature_gate_va": "0xef28",
+  "detection_isCDP_va": "0xf010",
+  "detection_parseDeviceUpdate_va": "0xf054",
+  "limits": "Static field identity and conditional uses only; no process launch, parser, library binding, discovery packet, peer classification or service readiness observed."
+}

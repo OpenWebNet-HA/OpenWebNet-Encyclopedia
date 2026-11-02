@@ -1,0 +1,82 @@
+{
+  "BNLD_row": 2,
+  "address_point": "0x1600c0",
+  "condition_type_table": "0x1605b0",
+  "final_initializer_GOT_slot": "0x1660f8",
+  "first_method_Thumb": "0x28179",
+  "name": "13BnldCondition",
+  "operator_rows": [
+    {
+      "decoder_GOT": "0x166ae8",
+      "decoder_pool": "0x2ba50",
+      "serializer_table_row": 0,
+      "serializer_text": "noOperator",
+      "stored_raw_operator": -1
+    },
+    {
+      "decoder_GOT": "0x165e70",
+      "decoder_pool": "0x2ba54",
+      "serializer_table_row": 1,
+      "serializer_text": "higher",
+      "stored_raw_operator": 0
+    },
+    {
+      "decoder_GOT": "0x1663f8",
+      "decoder_pool": "0x2ba5c",
+      "serializer_table_row": 2,
+      "serializer_text": "lower",
+      "stored_raw_operator": 1
+    },
+    {
+      "decoder_GOT": "0x166304",
+      "decoder_pool": "0x2ba60",
+      "serializer_table_row": 3,
+      "serializer_text": "equal",
+      "stored_raw_operator": 2
+    },
+    {
+      "decoder_GOT": "0x166274",
+      "decoder_pool": "0x2ba58",
+      "serializer_table_row": 4,
+      "serializer_text": "different",
+      "stored_raw_operator": 3
+    }
+  ],
+  "operator_table": "0x160588",
+  "raw_header": "0x1600b8",
+  "relocations": [
+    "001600bc  00000017 R_ARM_RELATIVE        ",
+    "001600c0  00000017 R_ARM_RELATIVE        ",
+    "00162f8c  00000017 R_ARM_RELATIVE        ",
+    "0016618c  00000017 R_ARM_RELATIVE        ",
+    "00166b68  00000017 R_ARM_RELATIVE        ",
+    "00165e5c  00000017 R_ARM_RELATIVE        ",
+    "00166840  00000017 R_ARM_RELATIVE        ",
+    "001600ac  00000017 R_ARM_RELATIVE        ",
+    "001600b0  00000017 R_ARM_RELATIVE        ",
+    "00162f80  00000017 R_ARM_RELATIVE        ",
+    "001660f8  00000017 R_ARM_RELATIVE        "
+  ],
+  "rtti": "0x162f88",
+  "status_rows": [
+    {
+      "name": "noStatus",
+      "stored_status": -1,
+      "table_row": 0
+    },
+    {
+      "name": "on",
+      "stored_status": 0,
+      "table_row": 1
+    },
+    {
+      "name": "off",
+      "stored_status": 1,
+      "table_row": 2
+    }
+  ],
+  "status_table": "0x1607d0",
+  "temporary_constructor_GOT_slot": "0x16618c",
+  "temporary_constructor_RTTI": "17BaseBnldCondition",
+  "temporary_constructor_header": "0x1600a8"
+}

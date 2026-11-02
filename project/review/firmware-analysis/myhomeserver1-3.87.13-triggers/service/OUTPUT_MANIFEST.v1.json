@@ -1,0 +1,84 @@
+{
+  "files": {
+    "INPUTS.v1.json": {
+      "bytes": 1053,
+      "sha256": "77a042d6349162661c9f39eab538021f48965422759ee798707a8c78ce7dc43d"
+    },
+    "METHOD.v1.json": {
+      "bytes": 827,
+      "sha256": "167bbe210dd5633791cf4e3c812388fc2d55d9a6ed88be98750617488282eb4b"
+    },
+    "PIC_RELOC_EXIDX.v1.json": {
+      "bytes": 2515,
+      "sha256": "295fc8d8f2202d9b5ddf0f1668773ef21909ac60649c8551c0b36c2c2954397a"
+    },
+    "PROVIDERS.v1.json": {
+      "bytes": 756,
+      "sha256": "56d1d92e260a9bd97e14fb03aad86b148205ba6c87c0faa70cd21d355f334b21"
+    },
+    "SERVICE_LEDGER.v1.json": {
+      "bytes": 1488,
+      "sha256": "1083818f6bb489b1f983ea16c5f69a83e7f0f0b358fa139a138446325d863930"
+    },
+    "SOURCE_SPANS.v1.json": {
+      "bytes": 3542,
+      "sha256": "d7fe3b2dfba4facded7ed435d805a00eda3b9a0f8412dbda1a267f572af70d63"
+    },
+    "WEEKDAY_MAPS.v1.json": {
+      "bytes": 805,
+      "sha256": "3897e95775ed8e417d677a48ef1f93d177c841b7547bd1407658757dec59f6bd"
+    },
+    "spans/callback-copy-helper.txt": {
+      "bytes": 2626,
+      "sha256": "133f91ef19542f0839d611ce8e778fffd4316dbd774aeb95d40839da62efc4dc"
+    },
+    "spans/condition-worker.txt": {
+      "bytes": 18998,
+      "sha256": "0a8e4fc2777ec5129ab4869fbfc2b829f82360f8bc0b2e0cbb38def0fd485943"
+    },
+    "spans/deadline-accessors.txt": {
+      "bytes": 468,
+      "sha256": "db7ffe048c75cc2998189ab7ed88f4e562c6edeaafb0ddbe43d92106b5360b0d"
+    },
+    "spans/deadline-preparation.txt": {
+      "bytes": 12430,
+      "sha256": "6b0f1f2ba534b86286740f05bf1ecb2424108e96ae33838bb9f422536c50a0bd"
+    },
+    "spans/scene-start-wrapper.txt": {
+      "bytes": 428,
+      "sha256": "82822bc508125bbfc3b9d111925750b63a462290d226c3a154cc887b5867a97d"
+    },
+    "spans/service-constructor.txt": {
+      "bytes": 6600,
+      "sha256": "37bb07dc40349009193d0b9b8f31c5089d8cdaf374b948e0071089292f31e46f"
+    },
+    "spans/service-register.txt": {
+      "bytes": 2712,
+      "sha256": "0a38d97700fb86252c6152b240056257ff7b1724bfd30983e3a72f7d64093f45"
+    },
+    "spans/service-worker.txt": {
+      "bytes": 33709,
+      "sha256": "0bc008e90a1b14c4d850ace559f847ca3259d938fedc5438f1484349397380a9"
+    },
+    "spans/system-clock-provider.txt": {
+      "bytes": 848,
+      "sha256": "5e17db51f7104ae1f9ab98f41384db2c741e06867c34d937deafda13ce2b9e56"
+    },
+    "spans/time-fire.txt": {
+      "bytes": 4405,
+      "sha256": "e0986936443b534cf8c69bab640694ef5e9bd3666dc5bd1b3aed9006bca143fb"
+    },
+    "spans/time-registration-handoff.txt": {
+      "bytes": 10098,
+      "sha256": "ed6fb67f25142d6a41ce4a7ae4dcecd23a767ec6ee65be87a3258f459fb3bd5a"
+    },
+    "spans/weekday-initializers.txt": {
+      "bytes": 8579,
+      "sha256": "afcb0ee11494da02a168cad137d6e861d4205e931775b60e5c8d14b891d30b5c"
+    },
+    "spans/weekday-tree-builder.txt": {
+      "bytes": 4355,
+      "sha256": "403a813da98abf602d4713692c2b06a00d97e474e7122d7d28be9f31fa192fba"
+    }
+  }
+}

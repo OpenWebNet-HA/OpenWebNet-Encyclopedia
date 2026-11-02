@@ -1,0 +1,52 @@
+
+/home/bticino/bin/coso:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000002f68 <main@@Base+0x68>:
+    2f68:	b00000b3 	adrp	x19, 17000 <g_free@Base>
+    2f6c:	910c4273 	add	x19, x19, #0x310
+    2f70:	97ffff14 	bl	2bc0 <signal@plt>
+    2f74:	d2801200 	mov	x0, #0x90                  	// #144
+    2f78:	97ffff66 	bl	2d10 <g_malloc0@plt>
+    2f7c:	aa0003f4 	mov	x20, x0
+    2f80:	97ffff2c 	bl	2c30 <get_plug_m@plt>
+    2f84:	9101a3e3 	add	x3, sp, #0x68
+    2f88:	9100128c 	add	x12, x20, #0x4
+    2f8c:	9101c3eb 	add	x11, sp, #0x70
+    2f90:	9101b3ea 	add	x10, sp, #0x6c
+    2f94:	910243e9 	add	x9, sp, #0x90
+    2f98:	9101e3e8 	add	x8, sp, #0x78
+    2f9c:	910203e7 	add	x7, sp, #0x80
+    2fa0:	9102c3e6 	add	x6, sp, #0xb0
+    2fa4:	910223e5 	add	x5, sp, #0x88
+    2fa8:	910263e4 	add	x4, sp, #0x98
+    2fac:	910283e2 	add	x2, sp, #0xa0
+    2fb0:	9102a3e1 	add	x1, sp, #0xa8
+    2fb4:	f9000e6b 	str	x11, [x19, #24]
+    2fb8:	f0000000 	adrp	x0, 5000 <init_socketd@@Base+0x60>
+    2fbc:	91258000 	add	x0, x0, #0x960
+    2fc0:	f900266a 	str	x10, [x19, #72]
+    2fc4:	f9003e69 	str	x9, [x19, #120]
+    2fc8:	f9005668 	str	x8, [x19, #168]
+    2fcc:	f9006e67 	str	x7, [x19, #216]
+    2fd0:	f9008666 	str	x6, [x19, #264]
+    2fd4:	f9009e74 	str	x20, [x19, #312]
+    2fd8:	f900b66c 	str	x12, [x19, #360]
+    2fdc:	f900ce65 	str	x5, [x19, #408]
+    2fe0:	f900e664 	str	x4, [x19, #456]
+    2fe4:	f900fe63 	str	x3, [x19, #504]
+    2fe8:	f9011662 	str	x2, [x19, #552]
+    2fec:	f9012e61 	str	x1, [x19, #600]
+    2ff0:	97ffff6c 	bl	2da0 <g_option_context_new@plt>
+    2ff4:	aa0003f6 	mov	x22, x0
+    2ff8:	aa1303e1 	mov	x1, x19
+    2ffc:	d2800002 	mov	x2, #0x0                   	// #0
+    3000:	97fffeb0 	bl	2ac0 <g_option_context_add_main_entries@plt>
+    3004:	aa1603e0 	mov	x0, x22
+    3008:	9102e3e3 	add	x3, sp, #0xb8
+    300c:	910143e2 	add	x2, sp, #0x50
+    3010:	910173e1 	add	x1, sp, #0x5c
+    3014:	97fffee3 	bl	2ba0 <g_option_context_parse@plt>
+    3018:	34002640 	cbz	w0, 34e0 <main@@Base+0x5e0>

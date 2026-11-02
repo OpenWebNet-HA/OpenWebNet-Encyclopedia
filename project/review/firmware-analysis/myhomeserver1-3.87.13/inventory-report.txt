@@ -1,0 +1,61 @@
+# MyHOMEServer1 3.87.13: structural and embedded-data first pass
+
+This build packages a newer application layer alongside the familiar named OpenWebNet/SCS core. The full regular-file prefix census also finds an actual embedded MHCatalogue.db in both images. It is not the same database as the MyHOME Suite 3.5.38 catalogue already archived. These are structural/source findings; no firmware code, loader, service, target syscall, JS, CLR or bus operation was executed.
+
+## Inputs and method
+
+The original official package is SMARTGW_038713.fwz, 183381241 bytes, SHA-256 `4ca1bcc70c1616270cb4c1f4b3ceb3c01c941797e437c3544d7d3d11b159c603`, downloaded from `https://assets.legrand.com/pim/AUTRE/SMARTGW_038713.fwz`. The original normal ext4 image is SHA-256 `0a7ded1eeeff8a6c888903f02a28879b91259067fc4222839d604094035ef273`; recovery is `3d8d5ee888d80e94a0479352342dafc306239bf9ef269581d12a5894b96b4400`. Download/extraction provenance and byte manifests were retained before this pass. Manufacturer signature blobs exist but cryptographic verification is not established.
+
+`collect_inventory_v1.py` verifies all original extracted regular bytes through metadata-only ImageVFS and reads ELF headers. Host readelf inspects eight selected applications without loading them. SQLite connections use immutable read-only URI mode and query_only=ON; quick_check returns ok. No image files are written. `--check` regenerates in memory and compares saved output bytes. Initial generation refuses overwrite; first-candidate retains exact first outputs and collector. INPUTS.json pins selected originals, both full manifests, helper, archive/images and the older catalogue. The full census is not a whole semantic review or a scan for every conceivable embedded database format.
+
+## Image structure and architecture
+
+| Image | Regular files | ELF prefix | SQLite3 prefix | Other |
+| --- | ---: | ---: | ---: | ---: |
+| Normal | 5924 | 858 | 1 | 5065 |
+| Recovery | 5384 | 740 | 1 | 4643 |
+
+The scan checks ELF, SQLite3, Redis RDB and ZIP local-header prefixes for every regular file; the latter two have zero matches. The selected database-extension set (.db/.sqlite/.sqlite3/.mdb/.sdf/.db3/.rdb) yields the same catalogue path only. This does not exclude other databases in containers, differently encoded application state, or runtime-created data. Redis software presence does not require a packaged Redis dump.
+
+Of 5378 shared regular paths, 5368 have identical bytes and ten differ; 546 paths are normal-only and six recovery-only. A shared core therefore coexists with different complete image composition. This is path/byte identity, not runtime equivalence. `older-same-path-comparison.json` separately compares bt_daemon, coso and scsserver with F454/MH202 manifests; none of those six comparisons has identical bytes. Filename reuse does not transfer old behavior or layouts.
+
+The selected matrix_mx ELF is ARM32 little-endian ET_DYN, EABI5 hard-float flags 0x05000400, entry 0x29f11 and interpreter /lib/ld-linux-armhf.so.3. Its SHA-256 is `96348136c2a0ebe859c689eb6246e3889e5154fdb63ffd5f3fc76975ac596717`. The entry's low bit is a Thumb indication, not a byte-aligned instruction address. The eight selected modern application headers and DT_NEEDED lists are recorded separately; this is not an assertion that all 1598 ELF files have one executable ABI. In particular, kernel/module ELF roles differ from userspace processes. Old firmware ARM calling conventions and parser objects must not be reused by name.
+
+## Modern application layer and database lead
+
+Selected original image paths are image-relative:
+
+| Application path | SHA-256 |
+| --- | --- |
+| home/bticino/matrix_mx/matrix_mx | `96348136c2a0ebe859c689eb6246e3889e5154fdb63ffd5f3fc76975ac596717` |
+| home/bticino/scheduling_manager/scheduling_manager | `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26` |
+| home/bticino/alarm_manager/alarm_manager | `98c650f981deba683774f144770e410239e69ca13481614de246c3d155f4a1b7` |
+| home/bticino/backup_manager/backup_manager | `10fae76eb25fe260798f47804e842b1f6ebf8d00974d2748222d98e652b559dd` |
+| home/bticino/gateway_manager/gateway_manager | `c55f525ad9b6587a72cbc2a7abbfdda568ad30c45ea1d0e2c170700abe264250` |
+| home/bticino/energy_manager/energy_manager | `81edea2bd56b85a6244523ac4745b3b30cfc47a247c6aad7fe51d0982812748f` |
+| home/bticino/player_manager/player_manager | `960838e5f53a972172ff54df7ddeb5eb5f58b06952459c2b2b544bcca03ccf1d` |
+| home/bticino/bt_smart_home_manager/bt_smart_home_manager | `e6757ffaf4079d91254716ec6e9d0c288b43e0d1ad7914b3b44c972dbe4214a6` |
+
+Presence and declared dependencies establish implementation candidates, not ownership of all similarly named product features. matrix_mx directly declares libsqlite3.so.0, libopenmsg.so.1, libjsonmsg.so.1, libjel.so.1 and liblcm.so.1 among other dependencies. Its dynamic symbol table imports sqlite3_open/open_v2/prepare_v2/step/exec and column/binding/finalization functions. Exact literal MHCatalogue.db is at file offset and ELF VA 0x1cce04. The named adjacent database, SQLite imports and literal make matrix_mx the high-value candidate consumer. The actual reference-to-path-construction-to-sqlite3_open call chain is not yet traced; this report does not claim an observed database read or active scenario owner.
+
+Selected JSON output retains key paths only, with all values withheld. For matrix_mx these include Communication/Id, Name and ChnName, plus application settings; this is configuration structure, not an executed channel topology. Names such as scheduling_manager and alarm_manager require original callback/configuration and dataflow evidence before assigning scheduler semantics or dedicated alarm-bus hardware. The separate boot report joins these applications to actual packaged process declarations and the selected daemon path, under explicit startup/provider premises.
+
+## The embedded catalogue is a distinct data source
+
+`home/bticino/matrix_mx/MHCatalogue.db` is 2233344 bytes, SHA-256 `79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb`, identical in normal/recovery. It has 75 tables. Its whitelisted DB_INFO data version is DATA_V=4, DATA_R=4, DATA_B=0; export_date is the literal integer 20240327. That value is metadata, not independently established build or export time.
+
+The archived installer catalogue is 2625536 bytes, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Both databases have the same 75 table names and exact stored CREATE TABLE text for every table. Forty-two table row multisets match and 33 differ. Full typed-row hashes and per-table counts are saved without exporting raw table contents. The comparison does not treat equal integer IDs as stable semantic identity across versions, and equal row multisets do not erase the different whole-file identity.
+
+The firmware catalogue contains no EN_DEVICE row whose code/name matches myhomeserver, and no EN_FIRMWARE row for item2198. AS_FW_PACKAGE has zero rows and EN_BUILDS has104. These exact bounded lookups demonstrate that the bundled catalogue is not automatically a self-description of this firmware's current Device capabilities. They do not prove absent device support, explain all consumer purposes, or override the canonical Device definition. Existing installer records, canonical archived catalogue and this new embedded variant must remain separately identified.
+
+## Applicability, confidence and next questions
+
+High confidence: exact bytes, manifests/header fields, declared dependencies/imports, selected literal, table/schema/count/digest comparisons and the explicitly stated lookup results. Static first-pass evidence only: no original helper execution, complete runtime, delivery, persistence, physical function or security finding. Original archive/images and the embedded database are locally preserved with hashes; this task does not register or upload them to canonical storage.
+
+The next useful investigations are actual matrix_mx SQLite path/query consumers; actual scheduling_manager scene schema/trigger/action/state ownership; alarm_manager-to-selected bus/provider routing without inheriting F454 electrical topology; and runtime-created storage/backup contracts. Determine fresh message/provider layouts before any isolated execution. Missing update extras80/81/94/95 and configured/live state remain explicit input gaps. F454 authentication/session/framing work and equivalents remain closed and were not inspected.
+
+Reproduce with host Python only:
+
+```
+python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31/inventory/collect_inventory_v1.py --check
+```

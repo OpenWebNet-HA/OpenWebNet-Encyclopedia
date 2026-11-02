@@ -1,0 +1,10 @@
+{
+  "insert_receiver": "loaderSP+4\u2192b6ea8r0; first tree rooted receiver+8",
+  "key": "sceneobject+36 loadedb6ebe\u2192payloadword0\u2192node+16",
+  "loader_container": "incomingr1\u2192loaderSP+4\u2192af3d4r3\u2192a72c0r2\u2192initializerSP+24\u2192SCENARIOconstructorr2\u2192compiled96/capturedpairsecondword",
+  "loader_service": "incomingr2\u2192loaderSP+20\u2192af3d4r2\u2192a72c0r1\u2192initializerSP+20; distinct from captured registry",
+  "reader_join": "SCENARIO suppliedcontext to b6580/b69fc uses same first-tree root+8/nodekey+16/value+20/+24",
+  "scope": "Original normal-return static aliases, not naturally populated/live registry, thread safety or activation.",
+  "startup_container": "entry SP+160; passed r1 to17630",
+  "value": "two-word handle(pointer=160Ballocation+12,allocation/controlbase)\u2192node+20/+24"
+}

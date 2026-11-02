@@ -1,0 +1,9 @@
+# BNTH configured and cached value sources
+
+Three source areas narrow both sides of the earlier comparison. Actual BNTH serializer selector2 emits raw double56 into setpoint without local zero/sentinel suppression; fresh baseJSON contains id/enabled/type/operator. Same-result reparse can retain selector2/setpoint under ordinary JSON/member/assignment/provider premises, but is not executed as a full roundtrip.
+
+A selected local event-code3 producer constructs a separate ItemStatusThermostat/control with embeddedrecord+16 and discriminator3, setpoint asDouble/defaultzero→record+32, and pair/ID handoff to registry167368. New-pair installation and a matching-type changed-double update positively join that source to the earlier cachedrecord+32 consumer under suitable same-ID/type/provider/lifetime premises. Natural traffic/updates/freshness/physical units or thermostat support remain unproved.
+
+The exact packaged JsonCpp double constructor/type3asDouble candidate supplies a scalar source contract: D0→D8→union/type3, emptyComments normal path, then union→D0 without numeric conversion. Internal symbols/BLX/PLT/relocations, candidate hash and alias are verified; actual binding, object/member/map/assignment/reparse/error behavior remain separate.
+
+All original/native/vendor/provider/JSON/floatingoperation/OS/network/bus/physical execution0; semantic fixtures0; no native harness. SchedulerSHA7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26 and providerSHA5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36 define exact applicability. Curated device role only; no F454/MH202 layout/physical inference. Closed receiving/transport/MQTT/libjel/auth/session/framing bodies remain opaque.

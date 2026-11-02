@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "bytes": 1597459,
+      "path": "work/myhomeserver1-firmware/3.87.13/analysis/normal-regular-files.json",
+      "sha256": "066ba8668cbce4b10a2d4f06167eb20b74817abfae3ac683f67af1a7c5c6b580"
+    },
+    {
+      "bytes": 243,
+      "path": "work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/config.json",
+      "sha256": "bc83cdfcb72a743d66583428042d4db74b5e24c84ca111f1ae409b3e9cf3b9cf"
+    },
+    {
+      "bytes": 1406680,
+      "path": "work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26"
+    },
+    {
+      "bytes": 1456305,
+      "path": "work/myhomeserver1-firmware/3.87.13/analysis/recovery-regular-files.json",
+      "sha256": "b68235ee11ca690097c49c449136ab0106505eaec2ef4a6f30fd3281d3513a19"
+    },
+    {
+      "bytes": 243,
+      "path": "work/myhomeserver1-firmware/3.87.13/analysis/recovery/home/bticino/scheduling_manager/config.json",
+      "sha256": "bc83cdfcb72a743d66583428042d4db74b5e24c84ca111f1ae409b3e9cf3b9cf"
+    },
+    {
+      "bytes": 1406680,
+      "path": "work/myhomeserver1-firmware/3.87.13/analysis/recovery/home/bticino/scheduling_manager/scheduling_manager",
+      "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26"
+    },
+    {
+      "bytes": 1040,
+      "path": "work/myhomeserver1-firmware/3.87.13/archive-listing.json",
+      "sha256": "ffa7672de6662e213cfc2d028ac74e9b7682f07038d7d55e89b4e178d195ade6"
+    },
+    {
+      "bytes": 643,
+      "path": "work/myhomeserver1-firmware/3.87.13/update-manifest-summary.json",
+      "sha256": "e92bc4e0e299d74b80ac712d8cba696b7d3443915af11a6b51d051f92c8865c2"
+    },
+    {
+      "bytes": 12724,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/REPORT.md",
+      "sha256": "d41cdc4417f72070792d1e45b1930787fd5e5511c61907ce166b2f231f0c5f12"
+    }
+  ]
+}

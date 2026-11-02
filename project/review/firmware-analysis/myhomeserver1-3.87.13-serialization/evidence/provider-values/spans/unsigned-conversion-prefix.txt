@@ -1,0 +1,48 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/usr/lib/libjsoncpp.so.1.9.5:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00016aac <_ZNK4Json5Value6asUIntEv@@Base>:
+   16aac:	4a8e      	ldr	r2, [pc, #568]	@ (16ce8 <_ZNK4Json5Value6asUIntEv@@Base+0x23c>)
+   16aae:	4b8f      	ldr	r3, [pc, #572]	@ (16cec <_ZNK4Json5Value6asUIntEv@@Base+0x240>)
+   16ab0:	e92d 43f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, lr}
+   16ab4:	b0bf      	sub	sp, #252	@ 0xfc
+   16ab6:	447a      	add	r2, pc
+   16ab8:	4d8d      	ldr	r5, [pc, #564]	@ (16cf0 <_ZNK4Json5Value6asUIntEv@@Base+0x244>)
+   16aba:	4604      	mov	r4, r0
+   16abc:	58d3      	ldr	r3, [r2, r3]
+   16abe:	447d      	add	r5, pc
+   16ac0:	681b      	ldr	r3, [r3, #0]
+   16ac2:	933d      	str	r3, [sp, #244]	@ 0xf4
+   16ac4:	f04f 0300 	mov.w	r3, #0
+   16ac8:	f7f4 ee4e 	blx	b768 <_ZNK4Json5Value4typeEv@plt>
+   16acc:	2805      	cmp	r0, #5
+   16ace:	f200 80ad 	bhi.w	16c2c <_ZNK4Json5Value6asUIntEv@@Base+0x180>
+   16ad2:	e8df f000 	tbb	[pc, r0]
+   16ad6:	030a      	lsls	r2, r1, #12
+   16ad8:	301a      	adds	r0, #26
+   16ada:	18ab      	adds	r3, r5, r2
+   16adc:	4620      	mov	r0, r4
+   16ade:	f7f4 ecf2 	blx	b4c4 <_ZNK4Json5Value6isUIntEv@plt>
+   16ae2:	2800      	cmp	r0, #0
+   16ae4:	f000 80bf 	beq.w	16c66 <_ZNK4Json5Value6asUIntEv@@Base+0x1ba>
+   16ae8:	6820      	ldr	r0, [r4, #0]
+   16aea:	4a82      	ldr	r2, [pc, #520]	@ (16cf4 <_ZNK4Json5Value6asUIntEv@@Base+0x248>)
+   16aec:	4b7f      	ldr	r3, [pc, #508]	@ (16cec <_ZNK4Json5Value6asUIntEv@@Base+0x240>)
+   16aee:	447a      	add	r2, pc
+   16af0:	58d3      	ldr	r3, [r2, r3]
+   16af2:	681a      	ldr	r2, [r3, #0]
+   16af4:	9b3d      	ldr	r3, [sp, #244]	@ 0xf4
+   16af6:	405a      	eors	r2, r3
+   16af8:	f04f 0300 	mov.w	r3, #0
+   16afc:	f040 80b1 	bne.w	16c62 <_ZNK4Json5Value6asUIntEv@@Base+0x1b6>
+   16b00:	b03f      	add	sp, #252	@ 0xfc
+   16b02:	e8bd 83f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, pc}
+   16b06:	7820      	ldrb	r0, [r4, #0]
+   16b08:	e7ef      	b.n	16aea <_ZNK4Json5Value6asUIntEv@@Base+0x3e>
+   16b0a:	4620      	mov	r0, r4
+   16b0c:	f7f4 ecda 	blx	b4c4 <_ZNK4Json5Value6isUIntEv@plt>
+   16b10:	2800      	cmp	r0, #0
+   16b12:	d1e9      	bne.n	16ae8 <_ZNK4Json5Value6asUIntEv@@Base+0x3c>

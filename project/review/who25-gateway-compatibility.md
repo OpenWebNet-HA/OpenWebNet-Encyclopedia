@@ -63,4 +63,8 @@ Source inspection is the examination method, with public_capture provenance and 
 | `*25*31#1*339##` | 39.486 |
 | `*25*32#1*33##` | 14.686 |
 
-The WHAT 31/32 labels preserve the published ON/OFF meanings. The CEN+ virtual Objects are 1 for WHERE 21 and 33 for WHERE 233. The dry-contact WHERE 339 probe is outside the published address forms, and the remaining unconfigured probes establish only literal socket responses, not valid-target or capability tests. No unsupported namespace-wide, immediate-NACK, event-suppression or all-firmware assertion is added.
+The WHAT 31/32 labels preserve the published ON/OFF meanings. The CEN+ virtual Objects are 1 for WHERE 21 and 33 for WHERE 233. The dry-contact WHERE339 string fits the published prefix3 address forms; no compatible contact/IR interface was configured. These unconfigured probes establish only literal socket responses, not valid-target or capability tests. No unsupported namespace-wide, immediate-NACK, event-suppression or all-firmware assertion is added.
+
+## Contact-address notation correction
+
+The original WHO25 specification page4 includes prefix3 in both dry-contact WHERE forms. A [source recheck prompted by ScenarioSuite data](scenario-suite-database-1.0.53/CONTACT_PREFIX_CORRECTION.json) corrects the earlier outside-published-forms classification of339. The exact prior review is retained in that capsule's pre-edit snapshots. No capture bytes, measured timings, gateway/oracle results, missing-interface premise or hardware-observation boundary changed.

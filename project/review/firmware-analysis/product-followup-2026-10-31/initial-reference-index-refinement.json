@@ -1,0 +1,16 @@
+{
+  "scope": "Explicit correction of initial parent reference-index bookkeeping; original index and two original pages retained unchanged. No source or reference-page semantics changed.",
+  "original_index_path": "initial-reference-v1/SNAPSHOT_INDEX.json",
+  "original_index_actual_sha256": "bf6c3da0ce343115c4a35ddfd2a1e3e8140114638ae251d89f88611aa13f2fe7",
+  "invalid_self_entry": {
+    "name": "SNAPSHOT_INDEX.json",
+    "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "Index file had been opened before directory enumeration and was accidentally included while still empty; its self-entry is invalid, not a third verified snapshot."
+  },
+  "valid_first_page_entries": {
+    "f454-2.0.51-product-paths.md": "8e18ea5163bb36545652da05e19627b86c379afee84b70af65c1f73b7681c85e",
+    "mh202-1.0.24-scenario-resources.md": "1a80b233880c84ef56aca5bc8d1e6244b10e747a4e00a335d365da1d9ad53922"
+  },
+  "valid_first_page_count": 2,
+  "no_original_index_overwrite": true
+}

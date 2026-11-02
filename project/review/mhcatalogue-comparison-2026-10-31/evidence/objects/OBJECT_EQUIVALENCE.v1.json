@@ -1,0 +1,700 @@
+{
+  "firmware_count": 95,
+  "firmware_only": [
+    {
+      "descr": "Actuator Control Item Loads",
+      "id_family": 12,
+      "id_key_object": 39,
+      "key_object": 39,
+      "slots": "1",
+      "visible": 1
+    }
+  ],
+  "same_item_ID_anchor_check": {
+    "same_key_changed_item_rows": 0,
+    "shared_complete_item_rows_equal": 104
+  },
+  "shared_complete_rows_equal": 94,
+  "suite_count": 158,
+  "suite_only": [
+    {
+      "descr": "Burglar alarm 4 zones control unit",
+      "id_family": 10,
+      "id_key_object": 11,
+      "key_object": 11,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "AI Control Unit With Communicator Pstn",
+      "id_family": 10,
+      "id_key_object": 13,
+      "key_object": 13,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "AI Control Unit With Communicator Gsm",
+      "id_family": 10,
+      "id_key_object": 14,
+      "key_object": 14,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Actuator for sensors",
+      "id_family": 2,
+      "id_key_object": 479,
+      "key_object": 16,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Automation actuator",
+      "id_family": 2,
+      "id_key_object": 490,
+      "key_object": 29,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Colors Touch Screen",
+      "id_family": 105,
+      "id_key_object": 32,
+      "key_object": 32,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Temperature control 99 zones control unit",
+      "id_family": 11,
+      "id_key_object": 35,
+      "key_object": 35,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Display module",
+      "id_family": 20,
+      "id_key_object": 530,
+      "key_object": 51,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Web Server Audio / Video 2 Wires (F453AV)",
+      "id_family": 8,
+      "id_key_object": 56,
+      "key_object": 56,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Scenario scheduler",
+      "id_family": 5,
+      "id_key_object": 61,
+      "key_object": 61,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "IP interface (2 wires/IP and D2009/IP)",
+      "id_family": 100,
+      "id_key_object": 92,
+      "key_object": 92,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Hotel room manager",
+      "id_family": 8,
+      "id_key_object": 556,
+      "key_object": 98,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "2 wires interface PABX",
+      "id_family": 20,
+      "id_key_object": 101,
+      "key_object": 101,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Measurement data visualization",
+      "id_family": 1,
+      "id_key_object": 606,
+      "key_object": 104,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Energy display settings",
+      "id_family": 1,
+      "id_key_object": 608,
+      "key_object": 106,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Local Display",
+      "id_family": 105,
+      "id_key_object": 618,
+      "key_object": 108,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Management Center 2Wires",
+      "id_family": 20,
+      "id_key_object": 620,
+      "key_object": 115,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Inductive loop module",
+      "id_family": 26,
+      "id_key_object": 621,
+      "key_object": 122,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Radio interface for sensors (measurer T)",
+      "id_family": 27,
+      "id_key_object": 124,
+      "key_object": 124,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Local portable programmer",
+      "id_family": 105,
+      "id_key_object": 622,
+      "key_object": 126,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Lighting manager",
+      "id_family": 8,
+      "id_key_object": 127,
+      "key_object": 127,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "N&D wide angle camera",
+      "id_family": 20,
+      "id_key_object": 623,
+      "key_object": 129,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "CLASSE300 V13E/M",
+      "id_family": 105,
+      "id_key_object": 628,
+      "key_object": 132,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Burglar Alarm central unit with communicator PSTN with internal contact",
+      "id_family": 10,
+      "id_key_object": 627,
+      "key_object": 133,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Driver Manager",
+      "id_family": 8,
+      "id_key_object": 642,
+      "key_object": 142,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Gateway Open SCS",
+      "id_family": 8,
+      "id_key_object": 150,
+      "key_object": 150,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Telephonic Internal Unit",
+      "id_family": 26,
+      "id_key_object": 475,
+      "key_object": 153,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Internal Unit",
+      "id_family": 26,
+      "id_key_object": 154,
+      "key_object": 154,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "External unit",
+      "id_family": 20,
+      "id_key_object": 155,
+      "key_object": 155,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Phonic source",
+      "id_family": 25,
+      "id_key_object": 161,
+      "key_object": 161,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Room controller",
+      "id_family": 23,
+      "id_key_object": 167,
+      "key_object": 167,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Shutter control (3 slots)",
+      "id_family": 1,
+      "id_key_object": 665,
+      "key_object": 174,
+      "slots": "3",
+      "visible": 1
+    },
+    {
+      "descr": "Stop&Go",
+      "id_family": 100,
+      "id_key_object": 175,
+      "key_object": 175,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Stop&Go Btest",
+      "id_family": 100,
+      "id_key_object": 176,
+      "key_object": 176,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Stop&Go Plus",
+      "id_family": 100,
+      "id_key_object": 452,
+      "key_object": 177,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Enhanced Webserver",
+      "id_family": 8,
+      "id_key_object": 178,
+      "key_object": 178,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Gateway SCS-ZigBee",
+      "id_family": 100,
+      "id_key_object": 465,
+      "key_object": 193,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Daylight cell",
+      "id_family": 5,
+      "id_key_object": 467,
+      "key_object": 194,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "IR self-learning split control",
+      "id_family": 100,
+      "id_key_object": 471,
+      "key_object": 195,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "IR complete split control",
+      "id_family": 2,
+      "id_key_object": 472,
+      "key_object": 196,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Pulse output sensor interface",
+      "id_family": 12,
+      "id_key_object": 481,
+      "key_object": 204,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Enhanced Web Server Audio/Video 2 Wires (F454)",
+      "id_family": 8,
+      "id_key_object": 512,
+      "key_object": 216,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Energy Data Logger",
+      "id_family": 8,
+      "id_key_object": 528,
+      "key_object": 219,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Gateway OPEN-BACNET",
+      "id_family": 100,
+      "id_key_object": 531,
+      "key_object": 220,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Access control unit (one gate Vigik)",
+      "id_family": 101,
+      "id_key_object": 547,
+      "key_object": 222,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Basic gateway GPRS",
+      "id_family": 8,
+      "id_key_object": 552,
+      "key_object": 227,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Basic Gateway",
+      "id_family": 8,
+      "id_key_object": 619,
+      "key_object": 229,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Gateway XOpen SCS",
+      "id_family": 8,
+      "id_key_object": 551,
+      "key_object": 250,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Call Push button",
+      "id_family": 1,
+      "id_key_object": 420,
+      "key_object": 420,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Addressed autoswitch control",
+      "id_family": 1,
+      "id_key_object": 422,
+      "key_object": 422,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Relais Actuat Command(AA)",
+      "id_family": 1,
+      "id_key_object": 423,
+      "key_object": 423,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Intercom control",
+      "id_family": 1,
+      "id_key_object": 424,
+      "key_object": 424,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Telephonic Call",
+      "id_family": 1,
+      "id_key_object": 425,
+      "key_object": 425,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Paging button",
+      "id_family": 1,
+      "id_key_object": 429,
+      "key_object": 429,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Scenario module control - local display",
+      "id_family": 1,
+      "id_key_object": 617,
+      "key_object": 433,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Switchboard call push button",
+      "id_family": 1,
+      "id_key_object": 497,
+      "key_object": 465,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Keypad as Sfera video door entry module",
+      "id_family": 1,
+      "id_key_object": 515,
+      "key_object": 480,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Keypad as Sfera access control module",
+      "id_family": 101,
+      "id_key_object": 516,
+      "key_object": 481,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Transponder reader as Sfera VDE module",
+      "id_family": 1,
+      "id_key_object": 517,
+      "key_object": 482,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Proximity reader as Sfera access conrol module",
+      "id_family": 101,
+      "id_key_object": 518,
+      "key_object": 483,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "Hotel indicator",
+      "id_family": 101,
+      "id_key_object": 554,
+      "key_object": 488,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "DO NOT DISTURB/MAKE UP ROOM control",
+      "id_family": 101,
+      "id_key_object": 555,
+      "key_object": 489,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "DNS server",
+      "id_family": 8,
+      "id_key_object": 611,
+      "key_object": 99988,
+      "slots": "1",
+      "visible": 1
+    },
+    {
+      "descr": "DHCP server",
+      "id_family": 8,
+      "id_key_object": 609,
+      "key_object": 99989,
+      "slots": "1",
+      "visible": 1
+    }
+  ],
+  "unique_external_codes": true,
+  "virgin_objects": {
+    "firmware": [
+      {
+        "descr": "Automation double command virgin ",
+        "id_virgin_key_object": 500,
+        "virgin_key_object": 500
+      },
+      {
+        "descr": "Special double command virgin",
+        "id_virgin_key_object": 501,
+        "virgin_key_object": 501
+      },
+      {
+        "descr": "Scene double command virgin",
+        "id_virgin_key_object": 502,
+        "virgin_key_object": 502
+      },
+      {
+        "descr": "Automation relay virgin",
+        "id_virgin_key_object": 510,
+        "virgin_key_object": 510
+      },
+      {
+        "descr": "Contact interface single virgin",
+        "id_virgin_key_object": 512,
+        "virgin_key_object": 512
+      },
+      {
+        "descr": "Badge command virgin",
+        "id_virgin_key_object": 514,
+        "virgin_key_object": 514
+      },
+      {
+        "descr": "Daylight and motion sensor virgin",
+        "id_virgin_key_object": 515,
+        "virgin_key_object": 515
+      },
+      {
+        "descr": "Thermoregulation relay virgin",
+        "id_virgin_key_object": 519,
+        "virgin_key_object": 519
+      },
+      {
+        "descr": "Soft-Touch command virgin",
+        "id_virgin_key_object": 521,
+        "virgin_key_object": 521
+      },
+      {
+        "descr": "Interface_SCS_SCS_virgin",
+        "id_virgin_key_object": 524,
+        "virgin_key_object": 525
+      },
+      {
+        "descr": "Thermoregulation fan coil actuator with 0-10V valve virgin",
+        "id_virgin_key_object": 528,
+        "virgin_key_object": 504
+      },
+      {
+        "descr": "Thermoregulation probe virgin",
+        "id_virgin_key_object": 529,
+        "virgin_key_object": 508
+      },
+      {
+        "descr": "Thermostat virgin",
+        "id_virgin_key_object": 530,
+        "virgin_key_object": 509
+      },
+      {
+        "descr": "Dimmer actuator virgin",
+        "id_virgin_key_object": 532,
+        "virgin_key_object": 528
+      }
+    ],
+    "suite": [
+      {
+        "descr": "Automation double command virgin ",
+        "id_virgin_key_object": 500,
+        "virgin_key_object": 500
+      },
+      {
+        "descr": "Special double command virgin",
+        "id_virgin_key_object": 501,
+        "virgin_key_object": 501
+      },
+      {
+        "descr": "Scene double command virgin",
+        "id_virgin_key_object": 502,
+        "virgin_key_object": 502
+      },
+      {
+        "descr": "Internal unit virgin pushbuttons",
+        "id_virgin_key_object": 505,
+        "virgin_key_object": 505
+      },
+      {
+        "descr": "Automation relay virgin",
+        "id_virgin_key_object": 510,
+        "virgin_key_object": 510
+      },
+      {
+        "descr": "Contact interface single virgin",
+        "id_virgin_key_object": 512,
+        "virgin_key_object": 512
+      },
+      {
+        "descr": "Badge command virgin",
+        "id_virgin_key_object": 514,
+        "virgin_key_object": 514
+      },
+      {
+        "descr": "Daylight and motion sensor virgin",
+        "id_virgin_key_object": 515,
+        "virgin_key_object": 515
+      },
+      {
+        "descr": "Daylight sensor virgin",
+        "id_virgin_key_object": 516,
+        "virgin_key_object": 516
+      },
+      {
+        "descr": "Thermoregulation relay virgin",
+        "id_virgin_key_object": 519,
+        "virgin_key_object": 519
+      },
+      {
+        "descr": "Soft-Touch command virgin",
+        "id_virgin_key_object": 521,
+        "virgin_key_object": 521
+      },
+      {
+        "descr": "IR split control virgin",
+        "id_virgin_key_object": 522,
+        "virgin_key_object": 522
+      },
+      {
+        "descr": "Interface_SCS_SCS_virgin",
+        "id_virgin_key_object": 524,
+        "virgin_key_object": 525
+      },
+      {
+        "descr": "Thermoregulation fan coil actuator with 0-10V valve virgin",
+        "id_virgin_key_object": 528,
+        "virgin_key_object": 504
+      },
+      {
+        "descr": "Thermoregulation probe virgin",
+        "id_virgin_key_object": 529,
+        "virgin_key_object": 508
+      },
+      {
+        "descr": "Thermostat virgin",
+        "id_virgin_key_object": 530,
+        "virgin_key_object": 509
+      },
+      {
+        "descr": "Energy data display virgin",
+        "id_virgin_key_object": 531,
+        "virgin_key_object": 524
+      },
+      {
+        "descr": "Dimmer actuator virgin",
+        "id_virgin_key_object": 532,
+        "virgin_key_object": 528
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+# Ranked remaining questions after run12
+
+1. F460 one justified nonsecret version/compatibility/integrity-result gate or original boot/profile selection beyond package declarations. Keep extraction/flash/mount/install/reboot opaque; no trust/authenticity assertion without an established chain and no key/private-value export. Do not repeat staged-list/substring cases.
+2. F461 one concrete local nonzero messageword32 producer with a permitted caller, or actual boot/DTB/auxiliary-core selection if a safe source is justified. No broad all-writer census, timing fixtures or opaque receiving/output/transport expansions. Current defer/provider arithmetic is inherited only.
+3. F460 writer caller/receiverclass/naturalinvocation and updater commoncontext/parser-consumer order remain unqualified. Matching fields or failed finite locators are not closure. Actual ownership/lifetime edges remain separate questions.
+4. Installed configuration/modules/DTB/auxiliarycore/readiness, catalogue key/fullSQL selection, actual scenes/assets, effective fullJSON/XML/providers, naturaltype/ID/time/freshness, full errors/unwind/concurrency and physical observations remain open.
+
+No forcedobjects, global absence/capability/security/defect/safety conclusions, invented assets, old native replay or private exports. Exact histories and unavailable MH20218/21 intermediates remain scoped/protected. No staging/commit/publication/remote/device writes; all closed routes and excluded process/command fallbacks stay closed.

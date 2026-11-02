@@ -1,0 +1,36 @@
+{
+  "missing_manifest_assets": [
+    "80.xtz",
+    "81.xtz",
+    "94.xtz",
+    "95.xtz"
+  ],
+  "modern_direct_service_requests": [
+    "D-Bus init --system",
+    "Redis init redis-server"
+  ],
+  "native_replays": 0,
+  "network": 0,
+  "new_original_execution": 0,
+  "selected_SCS_declaration": {
+    "bus_type": "0",
+    "device": "/dev/ttymxc2",
+    "meaning": "XML namespace only; no connector/electrical/actual UART proof"
+  },
+  "selected_manager_state_base": "/home/bticino/cfg/extra/0",
+  "source_chain": [
+    "SysVinit/inittab default5\u2192rcS andrc5 declarations",
+    "volatile stack alias declaration\u2192verified defaults parser open argument",
+    "vendor script cd/home/bticino\u2192daemon(noexplicitargs)",
+    "current XML selected fields\u2192record0/4/8 stores",
+    "available conditional mode2/record8 filter\u2192nice/chrt argument builder\u2192opaque call_nowait"
+  ],
+  "unclosed": [
+    "actual global process-list/callback activation and readiness",
+    "natural runtime library binding and child API contracts",
+    "config/persistent precedence and producers",
+    "fw_manager install/signature/rollback policy",
+    "missing assets actual contents/deployment",
+    "hardware/DTB selection and physical field mapping"
+  ]
+}

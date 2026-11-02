@@ -1,0 +1,57 @@
+# MH2021.0.24 run11 — concrete reverse lighting address/status join
+
+## Result and scope
+
+This batch resolves the supplied reverse-address result/flag premise in run10 for two explicit normal decoded body forms. Under the selected brief-status opcode0x12 path, the original same-build address helper gives the **same WHERE11** but a **different numeric flag**, which changes the caller’s WHAT text:
+
+| Private decoded body bytes | Address byte used | Flag | Conditional OPEN candidate |
+|---|---:|---:|---|
+|`B8 11 12 00`|body[1]=0x11|0|`*1*1*11##`|
+|`B8 11 12 01`|body[1]=0x11|0|`*1*0*11##`|
+|`11 00 12 00`|body[0]=0x11|1|`*1*1000#1*11##`|
+|`11 00 12 01`|body[0]=0x11|1|`*1*1000#0*11##`|
+
+The `1000#` substring is a prefix **inside the WHAT field**, while WHO remains1. It is not WHO1000. These are private decoded-body host models under explicit original branch/import/format assumptions, not captured traffic, accepted original-parser results, an observed echo or evidence of physical device state. Run10 deliberately supplied flag0 in its reverse model; this narrows that condition prospectively without rewriting its historical report.
+
+Original ARM/vendor/parser/JS/PHP execution, original instructions executed, emulator hooks and live I/O are all **0** in this batch. Host tools only read verified image bytes, disassemble/check source metadata and compute four finite cases. No original process, OS/device/network operation, credential/authentication or HTTP/template route is investigated. Earlier images/research/repository files remain read-only.
+
+## Identity and reproduction
+
+| Original normal-image path | SHA256 |
+|---|---|
+| `/home/bticino/lib/liblights.so` | `8213ad1cb44db31606550935cf6e68712b3e28c5446fe1dadbffcbda26d9717e` |
+| `/home/bticino/libcoso/libplug_lights_tr.so` | `4a3b3aa2f949b4e1ac69f9ac869403f7a8ee699aca499660d34f2be9a1693fc8` |
+
+`python3 work/mh202-firmware/research/2026-10-30/coso/run11/collect_reverse_lighting.py --check` strictly reproduces14 outputs:8 original spans,23 asserted original words,5 explicit public format literals, the reverse-helper contract and4 host cases with provenance. All5 inputs are pinned: both originals, accessor, immutable run10 report and its saved host model. `original-spans.json` records original VAs/file offsets/byte hashes. Separate author manifest pins report/collector/evidence, excluding itself and later reviews. No old firmware fixtures or native harness are imported.
+
+## 1. Exact reverse-address source and flag production
+
+Original **liblights::lighting_address_scs2open0x1b28..0x1c2c** receives a decoded byte pointer, destination text pointer and an output-word pointer. It first clears destination[0] at0x1b30 and stores output flag0 at0x1b34. It then reads the first decoded byte, subtracts0xb1 and switches across an unsigned0..7 range. This dispatch is actual instruction/data flow, not a guessed meaning from a function or plugin name.
+
+For first byte **0xb8**, jump-table entry **0x1b78→0x1b8c** loads body[1] and tailcalls **lighting_address_scs2open_singlechar0x1ac0**. No subsequent flag1 store occurs on this branch, so the initialized flag stays0. For selected first byte **0x11**, the unsigned switch-range test falls outside0xb1..0xb8 and takes **0x1b7c**. This calls that same formatter using the **first byte**, then stores flag1 at0x1b80/0x1b84. The second byte is not the selected address source for that direct form.
+
+Other switch entries distinguish B1/B3/B5 and default entries, but this bounded batch does not publish a complete tag/address-domain matrix or give the numeric output flag a protocol-enumeration name. It is sufficient to establish that these two selected source forms differ even when they print the same address.
+
+## 2. Actual byte-to-text arithmetic
+
+The helper **0x1ac0..0x1b28** extracts low nibble with AND15 and high part with logical right shift4. If low nibble>9 **or high part==10**, it selects original format `%02d%02d` through pool0x1b24→0x1f90. Otherwise it selects `%d%d` through pool0x1b20→0x1f9c. It tailcalls g_sprintf; it does not simply print hexadecimal ASCII.
+
+Both selected forms supply numeric address0x11, so high1/low1 select `%d%d` and ordinary formatting yields **`11`**. The special padded branch is source context, not executed firmware or an assertion of all valid physical addresses. The host model uses the original selected arithmetic; library formatting/provider completion remains a premise. No numeric units, device classes or group/broadcast support are inferred from the branch shapes.
+
+## 3. Join into the original status caller
+
+The selected **lights_translate pair(1,2)** brief route was established in run10. Fresh retained caller **0x192c..0x1998** shows source type+40 of3 or9 entering this route, private context+12=0 selecting its displayed decoder call, imported ascii_hex_frame_to_array called with count8, and the subsequent first-byte high-nibble≤0xb and opcode switch. These are needed preconditions; neither actual input framing nor converter acceptance/execution is shown. The table’s four-byte bodies are private successful-decoder-result hypotheses, not raw inputs passed to an original decoder. Both selected first bytes0xb8 and0x11 satisfy the displayed high-nibble check.
+
+Opcode0x12 takes **0x1994→0x1c84**. The selected value low nibble0 goes **0x1c9c→0x1d4c**, setting numeric WHAT1; low nibble1 goes **0x1ca0→0x1d40**, setting numeric WHAT0. This reuses the original status continuation rather than repeating the complete command/opcode matrix. The selected branches also set local status word0; no whole application return-policy or state transition is inferred from it.
+
+The common continuation at **0x1a88..0x1aa4** calls imported lighting_address_scs2open with the decoded body, its output text buffer and output flag pointer. It requires a nonempty output string. Our candidate same-image definition above now supplies **both** concrete text11 and flag0/1 under its ordinary primitive contract. Effective live symbol binding/interposition is not observed or established by a new full closure model.
+
+At **0x1ab4..0x1abc**, nonzero address output flag branches to **0x283c**. That branch selects exact original literal **`1000#`**, pool0x2684→0x31a4, as the first text argument of the shared format. Zero flag instead selects the exact empty string through pool0x26c8→0x322c. Both then use original format **`*1*%s%d*%s%s##`**, pool0x265c→0x31ac, with the numeric WHAT, converted WHERE and selected empty suffix. These exact argument positions establish that the prefix belongs to WHAT, not WHO or WHERE.
+
+For the chosen local flags, source formatting at0x1adc produces the table’s four texts under ordinary g_strdup_printf semantics. The selected continuation records no extra command-monitor strings in this branch and reaches **scsmsg_to_openlist at0x1b74** with the actual original output/source/list arguments. Prior run10/run5 bounded that core metadata/list helper; this pass closes the producer→address/flag→format dependency rather than redoing list-wrapper matrices. It does not prove successful allocation, parser acceptance, subscriber receipt, output draining or state-machine effects.
+
+## Boundaries and remaining questions
+
+Confirmed static: B8 uses body[1] and flag0; direct first byte0x11 uses body[0] then flag1; byte-to-decimal address formatting; the caller’s numeric flag selects empty or1000# WHAT prefix; fixed WHO1, opcode12/value0/1 and list-construction call under stated premises. Host-only: four private decoded-body calculations/texts. Not established: raw converter/parser acceptance, effective runtime import owner, natural frame origin, actual marker meaning, complete address/tag/domain grammar, original library/translator execution, complete application return/state/echo/timer policy, transport or physical state.
+
+The direct bytes overlap a forward candidate in run10, but this does **not** assert a naturally received echo, round trip or physical acknowledgement. No STM behavior is claimed. A distinct next task can trace the actual lighting STM’s request/feedback key/state consumer now that selected address and WHAT-prefix metadata are concrete. It should preserve the separate source forms and avoid interpreting a matching address alone as identical event semantics.

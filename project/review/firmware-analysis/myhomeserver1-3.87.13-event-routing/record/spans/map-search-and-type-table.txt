@@ -1,0 +1,85 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0010eb10:
+  10eb10:	f8df 3970 	ldr.w	r3, [pc, #2416]	@ 10f484
+  10eb14:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+  10eb18:	b08f      	sub	sp, #60	@ 0x3c
+  10eb1a:	9200      	str	r2, [sp, #0]
+  10eb1c:	4681      	mov	r9, r0
+  10eb1e:	447b      	add	r3, pc
+  10eb20:	f100 0b04 	add.w	fp, r0, #4
+  10eb24:	f8df 2960 	ldr.w	r2, [pc, #2400]	@ 10f488
+  10eb28:	e9cd 3101 	strd	r3, r1, [sp, #4]
+  10eb2c:	f8df 395c 	ldr.w	r3, [pc, #2396]	@ 10f48c
+  10eb30:	447a      	add	r2, pc
+  10eb32:	6886      	ldr	r6, [r0, #8]
+  10eb34:	58d3      	ldr	r3, [r2, r3]
+  10eb36:	681b      	ldr	r3, [r3, #0]
+  10eb38:	930d      	str	r3, [sp, #52]	@ 0x34
+  10eb3a:	f04f 0300 	mov.w	r3, #0
+  10eb3e:	2e00      	cmp	r6, #0
+  10eb40:	f000 81be 	beq.w	10eec0
+  10eb44:	e9d1 7a00 	ldrd	r7, sl, [r1]
+  10eb48:	46d8      	mov	r8, fp
+  10eb4a:	4634      	mov	r4, r6
+  10eb4c:	e9d4 0504 	ldrd	r0, r5, [r4, #16]
+  10eb50:	4555      	cmp	r5, sl
+  10eb52:	462a      	mov	r2, r5
+  10eb54:	bf28      	it	cs
+  10eb56:	4652      	movcs	r2, sl
+  10eb58:	b11a      	cbz	r2, 10eb62
+  10eb5a:	4639      	mov	r1, r7
+  10eb5c:	f702 edc2 	blx	116e4 <memcmp@plt>
+  10eb60:	b908      	cbnz	r0, 10eb66
+  10eb62:	eba5 000a 	sub.w	r0, r5, sl
+  10eb66:	2800      	cmp	r0, #0
+  10eb68:	e9d4 3202 	ldrd	r3, r2, [r4, #8]
+  10eb6c:	db03      	blt.n	10eb76
+  10eb6e:	b13b      	cbz	r3, 10eb80
+  10eb70:	46a0      	mov	r8, r4
+  10eb72:	461c      	mov	r4, r3
+  10eb74:	e7ea      	b.n	10eb4c
+  10eb76:	b112      	cbz	r2, 10eb7e
+  10eb78:	4613      	mov	r3, r2
+  10eb7a:	461c      	mov	r4, r3
+  10eb7c:	e7e6      	b.n	10eb4c
+  10eb7e:	4644      	mov	r4, r8
+  10eb80:	45a3      	cmp	fp, r4
+  10eb82:	f000 8222 	beq.w	10efca
+  10eb86:	e9d4 1504 	ldrd	r1, r5, [r4, #16]
+  10eb8a:	4652      	mov	r2, sl
+  10eb8c:	45aa      	cmp	sl, r5
+  10eb8e:	bf28      	it	cs
+  10eb90:	462a      	movcs	r2, r5
+  10eb92:	b11a      	cbz	r2, 10eb9c
+  10eb94:	4638      	mov	r0, r7
+  10eb96:	f702 eda6 	blx	116e4 <memcmp@plt>
+  10eb9a:	b908      	cbnz	r0, 10eba0
+  10eb9c:	ebaa 0005 	sub.w	r0, sl, r5
+  10eba0:	2800      	cmp	r0, #0
+  10eba2:	f2c0 8212 	blt.w	10efca
+  10eba6:	9b00      	ldr	r3, [sp, #0]
+  10eba8:	6aa4      	ldr	r4, [r4, #40]	@ 0x28
+  10ebaa:	681e      	ldr	r6, [r3, #0]
+  10ebac:	6865      	ldr	r5, [r4, #4]
+  10ebae:	6877      	ldr	r7, [r6, #4]
+  10ebb0:	42bd      	cmp	r5, r7
+  10ebb2:	f040 8371 	bne.w	10f298
+  10ebb6:	2d0a      	cmp	r5, #10
+  10ebb8:	f200 836e 	bhi.w	10f298
+  10ebbc:	e8df f015 	tbh	[pc, r5, lsl #1]
+  10ebc0:	0167      	lsls	r7, r4, #5
+  10ebc2:	0155      	lsls	r5, r2, #5
+  10ebc4:	0127      	lsls	r7, r4, #4
+  10ebc6:	00c3      	lsls	r3, r0, #3
+  10ebc8:	00b3      	lsls	r3, r6, #2
+  10ebca:	0095      	lsls	r5, r2, #2
+  10ebcc:	007d      	lsls	r5, r7, #1
+  10ebce:	009e      	lsls	r6, r3, #2
+  10ebd0:	0048      	lsls	r0, r1, #1
+  10ebd2:	0036      	movs	r6, r6
+  10ebd4:	000b      	movs	r3, r1

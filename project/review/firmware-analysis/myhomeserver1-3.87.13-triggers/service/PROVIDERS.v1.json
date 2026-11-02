@@ -1,0 +1,13 @@
+{
+  "/home/bticino/scheduling_manager/scheduling_manager": [
+    "10: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt6chrono3_V212system_clock3nowEv@GLIBCXX_3.4.19 (6)",
+    "13: 00000000     0 FUNC    GLOBAL DEFAULT  UND localtime_r@GLIBC_2.4 (2)",
+    "75: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_cond_timedwait@GLIBC_2.4 (2)",
+    "152: 00000000     0 FUNC    GLOBAL DEFAULT  UND localtime@GLIBC_2.4 (2)",
+    "328: 00000000     0 FUNC    GLOBAL DEFAULT  UND mktime@GLIBC_2.4 (2)"
+  ],
+  "/usr/lib/libstdc++.so.6.0.29": [
+    "1522: 000959a1    42 FUNC    GLOBAL DEFAULT   12 _ZNSt6chrono3_V212system_clock3nowEv@@GLIBCXX_3.4.19",
+    "3999: 0007db25    42 FUNC    GLOBAL DEFAULT   12 _ZNSt6chrono12system_clock3nowEv@@GLIBCXX_3.4.11"
+  ]
+}

@@ -1,0 +1,23 @@
+# MH202 1.0.24 Review Evidence
+
+This capsule supports the [MH202 Firmware analysis](../../../../reverse-engineering/firmware-analysis/mh202-1.0.24.md). The examination is in progress; initial reports and source reviews cover selected static paths only. Exact original images, the read-only filesystem accessor, full disassembly and reproducible collectors remain in the separate local research dossier.
+
+## Initial checkpoint
+
+| Report | Scope |
+| --- | --- |
+| [Inventory](run1-inventory-report.txt) | Original regular-file and selected executable/code identities |
+| [Scenario engine](run1-functional-report.txt) | WHO17 control, extra/4 loader, callbacks and interpreter launch boundary |
+| [Protocol](run1-protocol-report.txt) | Configured routing, provider/layout differences and selected diagnostics |
+| [Platform](run1-boot-report.txt) | Boot/storage/update declarations and original HAL branches |
+| [Web](run1-web-report.txt) | Packaged PHP/browser command, index and state consumers |
+
+The [provenance record](run1-provenance.json) pins report/collector/source-review identities. Independent reviews cover [functional paths](run1-functional-review.txt), [protocol](run1-protocol-review.txt), [platform](run1-boot-review.txt) and [inventory/web](run1-inventory-web-review.txt). These are source reviews and host reproduction, not a complete process or hardware oracle.
+
+## Limits and history
+
+No original ARM/PHP/JavaScript or service ran in this checkpoint. Packaged credential-bearing templates are withheld. The original manufacturer archive is private-archive-only and is not copied into this capsule. Missing2.xtz/4.xtz and mounted persistent data remain unexamined; distinct code consumers establish extra2 language and extra4 script associations, not exact missing archive contents.
+
+The Device remains review-ready for wider source reconciliation. Later batches retain separate evidence/review identities; source snapshots preserve prior review pins before changing reviewed documentation. Existing F454 evidence and its completed reviews remain separate.
+
+The [run1 integration review](run1-integration-review.md) and [checkpoint validation](run1-validation.json) record the promoted wording, current document identities and repository checks.

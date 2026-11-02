@@ -1,0 +1,29 @@
+# Independent runner source review
+
+PASS for the bounded static findings in `runner/REPORT.md`; no author correction requested. This is an independent source/collector review, not execution or replay of original firmware. My separate factory authorship supplied context, but the runner claims were checked against original scheduler bytes rather than accepted from that report or consultation.
+
+The read-only command `python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/collect_runner_v1.py --check` reproduced19 outputs. A separate host script parsed fresh ELF PT_LOAD entries and independently verified the original scheduler SHA,10 raw span hashes, ten selected instruction-byte guards, four PIC calculations, both worker-slot values and original relative-relocation entries, and all three exidx starts. All18 manifest members and20 first-snapshot members match their declared sizes/hashes and current originals. The separately frozen report also matches exactly. These counts are integrity/navigation checks, not firmware coverage or newly executed instructions.
+
+## Source findings checked
+
+- Original constructor0xaf3d4 retains the object across0xb57fc, zeros+104..146 and calls0xa72c0 at0xaf410 with that same object and saved incoming arguments. Exidx identifies the full initializer0xa72c0..0xaf364, so the report correctly avoids treating its short prefix as a complete function. The additional original condition-vector load0xa74e6 uses+12/+16; it is separate from trigger+0/+4 and action+24/+28.
+- Launch reads0xa5dbc and0xa621c load scene+65; the zero branches bypass their selected thread-allocation/request routes. Active reads+145, stores+145=1/+144=0, state+4 runner storage, thread request and detach are present in the retained original paths. The report correctly says requests, not successful thread execution, and does not turn DMB into a concurrency guarantee or a whole-program enabled policy.
+- Original relocation-backed address points0x161df0 and0x161e04 have different worker slots+8: Thumb0xa6d19 and0xa6d11. The second entry loads state+4 and tailcalls0xa6734. The first accesses runner+116/+120, tests selected pointee slot+8 results and has a normal tailcall continuation at0xa6f8c. These are distinct state objects and callback paths, with original standard-library activation left open.
+- At0xa75f4 the source reads raw action+28, bounds the local index by23 and dispatches through TBH0xa75fc/base0xa7600. Index10 contains0x18 and selects0xa7630. That branch calls the input object's virtual serializer, reparses via0x2af90, stores the converted uint at its local+40, calls0xb7590, allocates96 bytes/copies through0xb444c and hands the selected pointer to append0xa7288 with runner+128. The report confines this to conversion/append and does not silently substitute a raw action serializer for a compiled runtime virtual method.
+- Worker0xa6734 loads compiled range+128/+132. The source uses the8-byte entry stride, pointee vtable+0 at0xa68b0 and only afterwards cancellation byte+144 at0xa68b6. The separate0xa60b0 path writes+144=1 and calls the same range's pointee slot+4 at0xa6176. Completion stores zero at+145/+144 are present. Reported cancellation is therefore appropriately limited; immediate interruption or individual method effects are not established.
+
+The selected enabled locator is deliberately one exact opcode encoding over a bounded text range. Its four hits cannot establish no other reads or universal gates; the report preserves that limit. Raw table/pool data, Thumb function pointers and stripped nearest-template annotations are also kept distinct.
+
+## Applicability and provenance
+
+Original image path `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. The review makes no natural callback, provider binding, complete initializer/CFG, configured scene, lifetime, actual clock/timing, target I/O, transport, physical or whole Device approval claim. Original execution and scene fixtures remain0. Optional action-specific consultation has not been appended to or counted as new evidence in the immutable author batch.
+
+Exact reviewed author pins:
+
+- `runner/REPORT.md`: `dc4692b0bbac6d1aa84574ad6aa02b632bb47864d03b644e3c66a9b8a408661e`
+- `runner/collect_runner_v1.py`: `39c3f65512cd7bceec704e3242a76d320eb1ad6f903b847f47a4e9cc8a6aef63`
+- `runner/OUTPUT_MANIFEST.v1.json`: `f92416180a6aa48b7d552243b6ea6081560b2c21834e532a00cb5b69d79ba2e8`
+- `runner/first-candidate/SNAPSHOT.json`: `1fbc16460b6ee12a3cd9bf2a3b2a865e239d782234ff794bd7a83a82b56412a6`
+- `runner/report-first-candidate/SNAPSHOT.json`: `8f5bbd98581f99d2feb4b5f86918cc4009f0fb8f034b17f32fadf96c0a5fc28f`
+
+All author files remained unchanged. This first review and its immediate snapshot were created exclusively; the snapshot index was computed before opening it.

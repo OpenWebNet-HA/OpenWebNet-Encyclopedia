@@ -1,0 +1,108 @@
+{
+  "classification": "Report-only coordinate clarification; no new source coverage",
+  "clauses": [
+    {
+      "catch_token_or_union_value": "0x1000050",
+      "flags": 0,
+      "handler_IL_end_exclusive": 299,
+      "handler_IL_start": 277,
+      "handler_length": 22,
+      "raw_clause_hex": "00000000fc00000019000000150100001600000050000001",
+      "try_IL_end_exclusive": 277,
+      "try_IL_start": 252,
+      "try_length": 25
+    },
+    {
+      "catch_token_or_union_value": "0x1000050",
+      "flags": 0,
+      "handler_IL_end_exclusive": 646,
+      "handler_IL_start": 624,
+      "handler_length": 22,
+      "raw_clause_hex": "000000005702000019000000700200001600000050000001",
+      "try_IL_end_exclusive": 624,
+      "try_IL_start": 599,
+      "try_length": 25
+    },
+    {
+      "catch_token_or_union_value": "0x0",
+      "flags": 2,
+      "handler_IL_end_exclusive": 815,
+      "handler_IL_start": 803,
+      "handler_length": 12,
+      "raw_clause_hex": "02000000f40200002f000000230300000c00000000000000",
+      "try_IL_end_exclusive": 803,
+      "try_IL_start": 756,
+      "try_length": 47
+    },
+    {
+      "catch_token_or_union_value": "0x1000050",
+      "flags": 0,
+      "handler_IL_end_exclusive": 835,
+      "handler_IL_start": 820,
+      "handler_length": 15,
+      "raw_clause_hex": "00000000bb02000079000000340300000f00000050000001",
+      "try_IL_end_exclusive": 820,
+      "try_IL_start": 699,
+      "try_length": 121
+    },
+    {
+      "catch_token_or_union_value": "0x1000050",
+      "flags": 0,
+      "handler_IL_end_exclusive": 923,
+      "handler_IL_start": 868,
+      "handler_length": 55,
+      "raw_clause_hex": "000000000200000062030000640300003700000050000001",
+      "try_IL_end_exclusive": 868,
+      "try_IL_start": 2,
+      "try_length": 866
+    }
+  ],
+  "correction": "EH clause starts are direct code-relative IL coordinates, with exclusive ends=start+length; no header subtraction. Instruction branches remain separately normalized from dncil body-relative targets.",
+  "current_authoritative_report": "REPORT.v4.md",
+  "exact_old_current_identities": {
+    "COORDINATE_SUPPLEMENT_FAILED_V1.json": {
+      "bytes": 459,
+      "sha256": "99bc914896a86ab0afe293a1c46afc6449dbf77448f0a690726f490fbce2830b"
+    },
+    "METHODS.v2.json": {
+      "bytes": 96552,
+      "sha256": "63875d7a17c048fbe7b6488e5401d46a88b3a681556744849f44b8962567d232"
+    },
+    "OUTPUT_MANIFEST.v2.json": {
+      "bytes": 899,
+      "sha256": "fd54b5274d1a38438ba8a0d7dfe812de20e5ef97ea9ec241caa82038051a7c23"
+    },
+    "REPORT.v2.md": {
+      "bytes": 10271,
+      "sha256": "64f80a2aa474b587cdb3352bc4b2a6946a29113c9c629f487b967c56175d26c5"
+    },
+    "REPORT.v3.md": {
+      "bytes": 12118,
+      "sha256": "04ac7a3a0c69ad632d0bb04c673f767e74c711a2ebacdee4029891161752fe4b"
+    },
+    "REPORT.v4.md": {
+      "bytes": 12490,
+      "sha256": "706ce09abc8c6c4eb776ef6eb8bfcb2dc959ef142437f8dce67b9e85d5fc4af9"
+    },
+    "collect_loader_v2.py": {
+      "bytes": 9723,
+      "sha256": "c442941c5e362b6540549f8baadd786b106ade105da291d4d606ae9dc005d4db"
+    },
+    "coordinate_supplement_v1.py": {
+      "bytes": 3804,
+      "sha256": "b61420c0372b9b2c3856a5122ccc9faa39727de879bc0d3f09083d22f760df25"
+    }
+  },
+  "fat_EH_header_hex": "417c0000",
+  "fat_EH_section_body_offset": 940,
+  "historical_canonical_report": "REPORT.v2.md",
+  "historical_check_role": "collect_loader_v2.py --check pins historical REPORT.v2.md and unchanged canonical v2 outputs, not current REPORT.v4.md",
+  "historical_misnamed_field": "exception_regions_dncil_body_coordinates",
+  "new_vendor_execution": 0,
+  "original_method_or_provider_reads": 0,
+  "parent_pre_correction_snapshot": "../parent-before-coordinate-clarification/INDEX.json",
+  "parent_supplement_pre_correction_snapshot": "../parent-before-coordinate-supplement-correction/INDEX.json",
+  "saved_method_body_sha256": "9c1df09de0ca348acd48d0c29912387fceeae052a6c78edacfe5f28d7e1c3d4c",
+  "supplement_tool_sha256": "cfc2b42c350651b830fadd056b7315a95d978576a49170d6015636cd9406a65e",
+  "supplement_v1_history": "V1 host tuple guard used fourth try length104 instead of actual121; failed before outputs. Exact failed tool/reportv3/failure and parent snapshots retained. V2 changes that one tuple and new version paths/pins only."
+}

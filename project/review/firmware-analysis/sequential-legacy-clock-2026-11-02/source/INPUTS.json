@@ -1,0 +1,97 @@
+[
+  {
+    "bytes": 4406,
+    "path": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/source-component/SCOPE.json",
+    "sha256": "e930d8767cd3c9fb40cc47e1fd18a9e449c249dbe4d335f15afa72a3840ddcd0"
+  },
+  {
+    "bytes": 1332,
+    "path": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/SOURCE_SELECTION_DECISION.json",
+    "sha256": "cc0c8c28c94c55df7e4e327caf6d2a1f50e6c5c1dfe06367e8c1c435e1179b5e"
+  },
+  {
+    "bytes": 8956,
+    "path": "work/remaining-firmware-acquisition/2026-11-01/SUMMARY.json",
+    "sha256": "3f10719c9f06c5851295946a3ca08944edbe94a85f305f11dc30752c04d4bfe4"
+  },
+  {
+    "bytes": 88118,
+    "path": "work/f453av-firmware/3.0.14/analysis/normal-regular-files.json",
+    "sha256": "ff08fcc12cd10c4720101f951e8a96e2a665fe44a86cde5750ae32e1b4b6f536"
+  },
+  {
+    "bytes": 55359,
+    "path": "work/f453av-firmware/3.0.14/analysis/recovery-regular-files.json",
+    "sha256": "4e93d6d001272cb7a68bc6c72b2162b1bb0caca9efe25175a75469ef2a1b73b2"
+  },
+  {
+    "bytes": 68903,
+    "path": "work/mh200n-firmware/1.1.8/analysis/normal-regular-files.json",
+    "sha256": "6101dd823e9c3ab8a6d3f749883761c1bfd131723ac519cdb5a30d81efc515d6"
+  },
+  {
+    "bytes": 55965,
+    "path": "work/mh200n-firmware/1.1.8/analysis/recovery-regular-files.json",
+    "sha256": "62f7ea40dab671ae9de193e023692956d7a2d52b69155b28cd6c881b6e581404"
+  },
+  {
+    "bytes": 4269,
+    "path": "work/f453av-firmware/3.0.14/analysis/rootfs/sbin/init",
+    "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb"
+  },
+  {
+    "bytes": 294,
+    "path": "work/f453av-firmware/3.0.14/analysis/rootfs/etc/init.d/scripts/S10rtc_verify",
+    "sha256": "0f6e3f123e1ad9cab1fcd00d87ce3617cfd2d5b50db78e457c385582fb983d10"
+  },
+  {
+    "bytes": 231,
+    "path": "work/f453av-firmware/3.0.14/analysis/rootfs/bin/hwtosys.tcl",
+    "sha256": "ae5d328983802c1540debd016fc10618d4b99654d406ccacca32e4fbdbea1963"
+  },
+  {
+    "bytes": 4269,
+    "path": "work/f453av-firmware/3.0.14/analysis/recovery/sbin/init",
+    "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb"
+  },
+  {
+    "bytes": 294,
+    "path": "work/f453av-firmware/3.0.14/analysis/recovery/etc/init.d/scripts/S10rtc_verify",
+    "sha256": "0f6e3f123e1ad9cab1fcd00d87ce3617cfd2d5b50db78e457c385582fb983d10"
+  },
+  {
+    "bytes": 231,
+    "path": "work/f453av-firmware/3.0.14/analysis/recovery/bin/hwtosys.tcl",
+    "sha256": "ae5d328983802c1540debd016fc10618d4b99654d406ccacca32e4fbdbea1963"
+  },
+  {
+    "bytes": 4269,
+    "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/sbin/init",
+    "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb"
+  },
+  {
+    "bytes": 294,
+    "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/etc/init.d/scripts/S10rtc_verify",
+    "sha256": "0f6e3f123e1ad9cab1fcd00d87ce3617cfd2d5b50db78e457c385582fb983d10"
+  },
+  {
+    "bytes": 44,
+    "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/bin/hwtosys.tcl",
+    "sha256": "fe6a7e98ac58df697f294d4b319a5dfc2bd6c7cc90a4a28a25d5731d4d298ae1"
+  },
+  {
+    "bytes": 4269,
+    "path": "work/mh200n-firmware/1.1.8/analysis/recovery/sbin/init",
+    "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb"
+  },
+  {
+    "bytes": 294,
+    "path": "work/mh200n-firmware/1.1.8/analysis/recovery/etc/init.d/scripts/S10rtc_verify",
+    "sha256": "0f6e3f123e1ad9cab1fcd00d87ce3617cfd2d5b50db78e457c385582fb983d10"
+  },
+  {
+    "bytes": 231,
+    "path": "work/mh200n-firmware/1.1.8/analysis/recovery/bin/hwtosys.tcl",
+    "sha256": "ae5d328983802c1540debd016fc10618d4b99654d406ccacca32e4fbdbea1963"
+  }
+]

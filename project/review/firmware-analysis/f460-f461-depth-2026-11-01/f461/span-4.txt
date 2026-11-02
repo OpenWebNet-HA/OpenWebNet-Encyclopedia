@@ -1,0 +1,84 @@
+
+work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/libcoso/libplug_automation_tr.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000003a30 <automation_tr_translate@@Base>:
+    3a30:	a9b57bfd 	stp	x29, x30, [sp, #-176]!
+    3a34:	910003fd 	mov	x29, sp
+    3a38:	a90153f3 	stp	x19, x20, [sp, #16]
+    3a3c:	aa0203f3 	mov	x19, x2
+    3a40:	a9025bf5 	stp	x21, x22, [sp, #32]
+    3a44:	d0000015 	adrp	x21, 5000 <automation_tr_translate@@Base+0x15d0>
+    3a48:	913042b4 	add	x20, x21, #0xc10
+    3a4c:	a90363f7 	stp	x23, x24, [sp, #48]
+    3a50:	f0000018 	adrp	x24, 6000 <automation_tr_translate@@Base+0x25d0>
+    3a54:	911f4317 	add	x23, x24, #0x7d0
+    3a58:	a9046bf9 	stp	x25, x26, [sp, #64]
+    3a5c:	d0000019 	adrp	x25, 5000 <automation_tr_translate@@Base+0x15d0>
+    3a60:	91302336 	add	x22, x25, #0xc08
+    3a64:	2a0003fa 	mov	w26, w0
+    3a68:	aa1603e2 	mov	x2, x22
+    3a6c:	aa1403e0 	mov	x0, x20
+    3a70:	a90573fb 	stp	x27, x28, [sp, #80]
+    3a74:	2a0103fb 	mov	w27, w1
+    3a78:	aa0403fc 	mov	x28, x4
+    3a7c:	52801001 	mov	w1, #0x80                  	// #128
+    3a80:	f90033e3 	str	x3, [sp, #96]
+    3a84:	910122e3 	add	x3, x23, #0x48
+    3a88:	97fff8c6 	bl	1da0 <g_log@plt>
+    3a8c:	7100075f 	cmp	w26, #0x1
+    3a90:	54000240 	b.eq	3ad8 <automation_tr_translate@@Base+0xa8>  // b.none
+    3a94:	71000b5f 	cmp	w26, #0x2
+    3a98:	540004c0 	b.eq	3b30 <automation_tr_translate@@Base+0x100>  // b.none
+    3a9c:	f0000002 	adrp	x2, 6000 <automation_tr_translate@@Base+0x25d0>
+    3aa0:	2a1a03e3 	mov	w3, w26
+    3aa4:	aa1403e0 	mov	x0, x20
+    3aa8:	911ea042 	add	x2, x2, #0x7a8
+    3aac:	52800801 	mov	w1, #0x40                  	// #64
+    3ab0:	52800037 	mov	w23, #0x1                   	// #1
+    3ab4:	97fff8bb 	bl	1da0 <g_log@plt>
+    3ab8:	2a1703e0 	mov	w0, w23
+    3abc:	a94153f3 	ldp	x19, x20, [sp, #16]
+    3ac0:	a9425bf5 	ldp	x21, x22, [sp, #32]
+    3ac4:	a94363f7 	ldp	x23, x24, [sp, #48]
+    3ac8:	a9446bf9 	ldp	x25, x26, [sp, #64]
+    3acc:	a94573fb 	ldp	x27, x28, [sp, #80]
+    3ad0:	a8cb7bfd 	ldp	x29, x30, [sp], #176
+    3ad4:	d65f03c0 	ret
+    3ad8:	aa1403e0 	mov	x0, x20
+    3adc:	f0000002 	adrp	x2, 6000 <automation_tr_translate@@Base+0x25d0>
+    3ae0:	9111a042 	add	x2, x2, #0x468
+    3ae4:	52800801 	mov	w1, #0x40                  	// #64
+    3ae8:	97fff8ae 	bl	1da0 <g_log@plt>
+    3aec:	71000b7f 	cmp	w27, #0x2
+    3af0:	54000e40 	b.eq	3cb8 <automation_tr_translate@@Base+0x288>  // b.none
+    3af4:	2a1b03e3 	mov	w3, w27
+    3af8:	913042a0 	add	x0, x21, #0xc10
+    3afc:	52800801 	mov	w1, #0x40                  	// #64
+    3b00:	52800037 	mov	w23, #0x1                   	// #1
+    3b04:	f0000002 	adrp	x2, 6000 <automation_tr_translate@@Base+0x25d0>
+    3b08:	91154042 	add	x2, x2, #0x550
+    3b0c:	97fff8a5 	bl	1da0 <g_log@plt>
+    3b10:	2a1703e0 	mov	w0, w23
+    3b14:	a94153f3 	ldp	x19, x20, [sp, #16]
+    3b18:	a9425bf5 	ldp	x21, x22, [sp, #32]
+    3b1c:	a94363f7 	ldp	x23, x24, [sp, #48]
+    3b20:	a9446bf9 	ldp	x25, x26, [sp, #64]
+    3b24:	a94573fb 	ldp	x27, x28, [sp, #80]
+    3b28:	a8cb7bfd 	ldp	x29, x30, [sp], #176
+    3b2c:	d65f03c0 	ret
+    3b30:	aa1403e0 	mov	x0, x20
+    3b34:	f0000002 	adrp	x2, 6000 <automation_tr_translate@@Base+0x25d0>
+    3b38:	9115e042 	add	x2, x2, #0x578
+    3b3c:	52800801 	mov	w1, #0x40                  	// #64
+    3b40:	97fff898 	bl	1da0 <g_log@plt>
+    3b44:	7100077f 	cmp	w27, #0x1
+    3b48:	54fffd61 	b.ne	3af4 <automation_tr_translate@@Base+0xc4>  // b.any
+    3b4c:	f0000002 	adrp	x2, 6000 <automation_tr_translate@@Base+0x25d0>
+    3b50:	91164042 	add	x2, x2, #0x590
+    3b54:	52800801 	mov	w1, #0x40                  	// #64
+    3b58:	aa1403e0 	mov	x0, x20
+    3b5c:	97fff891 	bl	1da0 <g_log@plt>
+    3b60:	f9004fff 	str	xzr, [sp, #152]

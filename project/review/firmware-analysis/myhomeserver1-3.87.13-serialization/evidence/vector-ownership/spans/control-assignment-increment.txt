@@ -1,0 +1,87 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a5980:
+   a5980:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+   a5982:	6805      	ldr	r5, [r0, #0]
+   a5984:	4b2b      	ldr	r3, [pc, #172]	@ (a5a34)
+   a5986:	428d      	cmp	r5, r1
+   a5988:	447b      	add	r3, pc
+   a598a:	d011      	beq.n	a59b0
+   a598c:	4606      	mov	r6, r0
+   a598e:	460c      	mov	r4, r1
+   a5990:	b1e1      	cbz	r1, a59cc
+   a5992:	4a29      	ldr	r2, [pc, #164]	@ (a5a38)
+   a5994:	589f      	ldr	r7, [r3, r2]
+   a5996:	783a      	ldrb	r2, [r7, #0]
+   a5998:	b15a      	cbz	r2, a59b2
+   a599a:	684b      	ldr	r3, [r1, #4]
+   a599c:	3301      	adds	r3, #1
+   a599e:	604b      	str	r3, [r1, #4]
+   a59a0:	b12d      	cbz	r5, a59ae
+   a59a2:	686b      	ldr	r3, [r5, #4]
+   a59a4:	2b01      	cmp	r3, #1
+   a59a6:	f103 32ff 	add.w	r2, r3, #4294967295	@ 0xffffffff
+   a59aa:	606a      	str	r2, [r5, #4]
+   a59ac:	d023      	beq.n	a59f6
+   a59ae:	6034      	str	r4, [r6, #0]
+   a59b0:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+   a59b2:	1d0a      	adds	r2, r1, #4
+   a59b4:	f3bf 8f5b 	dmb	ish
+   a59b8:	e852 0f00 	ldrex	r0, [r2]
+   a59bc:	3001      	adds	r0, #1
+   a59be:	e842 0100 	strex	r1, r0, [r2]
+   a59c2:	2900      	cmp	r1, #0
+   a59c4:	d1f8      	bne.n	a59b8
+   a59c6:	f3bf 8f5b 	dmb	ish
+   a59ca:	6835      	ldr	r5, [r6, #0]
+   a59cc:	2d00      	cmp	r5, #0
+   a59ce:	d0ee      	beq.n	a59ae
+   a59d0:	4a19      	ldr	r2, [pc, #100]	@ (a5a38)
+   a59d2:	589f      	ldr	r7, [r3, r2]
+   a59d4:	783b      	ldrb	r3, [r7, #0]
+   a59d6:	2b00      	cmp	r3, #0
+   a59d8:	d1e3      	bne.n	a59a2
+   a59da:	1d2a      	adds	r2, r5, #4
+   a59dc:	f3bf 8f5b 	dmb	ish
+   a59e0:	e852 3f00 	ldrex	r3, [r2]
+   a59e4:	1e59      	subs	r1, r3, #1
+   a59e6:	e842 1000 	strex	r0, r1, [r2]
+   a59ea:	2800      	cmp	r0, #0
+   a59ec:	d1f8      	bne.n	a59e0
+   a59ee:	2b01      	cmp	r3, #1
+   a59f0:	f3bf 8f5b 	dmb	ish
+   a59f4:	d1db      	bne.n	a59ae
+   a59f6:	682b      	ldr	r3, [r5, #0]
+   a59f8:	4628      	mov	r0, r5
+   a59fa:	689b      	ldr	r3, [r3, #8]
+   a59fc:	4798      	blx	r3
+   a59fe:	783b      	ldrb	r3, [r7, #0]
+   a5a00:	b14b      	cbz	r3, a5a16
+   a5a02:	68ab      	ldr	r3, [r5, #8]
+   a5a04:	1e5a      	subs	r2, r3, #1
+   a5a06:	60aa      	str	r2, [r5, #8]
+   a5a08:	2b01      	cmp	r3, #1
+   a5a0a:	d1d0      	bne.n	a59ae
+   a5a0c:	682b      	ldr	r3, [r5, #0]
+   a5a0e:	4628      	mov	r0, r5
+   a5a10:	68db      	ldr	r3, [r3, #12]
+   a5a12:	4798      	blx	r3
+   a5a14:	e7cb      	b.n	a59ae
+   a5a16:	f105 0208 	add.w	r2, r5, #8
+   a5a1a:	f3bf 8f5b 	dmb	ish
+   a5a1e:	e852 3f00 	ldrex	r3, [r2]
+   a5a22:	1e59      	subs	r1, r3, #1
+   a5a24:	e842 1000 	strex	r0, r1, [r2]
+   a5a28:	2800      	cmp	r0, #0
+   a5a2a:	d1f8      	bne.n	a5a1e
+   a5a2c:	f3bf 8f5b 	dmb	ish
+   a5a30:	e7ea      	b.n	a5a08
+   a5a32:	bf00      	nop
+   a5a34:	0018      	movs	r0, r3
+   a5a36:	000c      	movs	r4, r1
+   a5a38:	0eec      	lsrs	r4, r5, #27
+	...

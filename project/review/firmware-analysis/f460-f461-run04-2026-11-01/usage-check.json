@@ -1,0 +1,20 @@
+{
+  "ordinaryUsageAllowed": true,
+  "windowDurationMins": 10080,
+  "usedPercent": 5,
+  "resetsAt": 1794127426,
+  "observations": [
+    {
+      "resetsAt": 1794127427,
+      "usedPercent": 5,
+      "ordinaryUsageAllowed": true
+    },
+    {
+      "resetsAt": 1794127426,
+      "usedPercent": 5,
+      "ordinaryUsageAllowed": true
+    }
+  ],
+  "interpretation": "Initial endpoint differed by one second; immediate reread confirms original reset endpoint with same duration/percentage and ordinary usage allowed. No reset or paid action taken.",
+  "observed_UTC": "2026-11-01T11:33:55.359344+00:00"
+}

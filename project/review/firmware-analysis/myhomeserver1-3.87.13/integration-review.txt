@@ -1,0 +1,50 @@
+# MyHOMEServer1 first-pass integration review
+
+PASS for the current frozen six-document candidate and its bounded source synthesis. No documentary correction requested. I independently reviewed input/extraction identity, boot and protocol source; those comparisons are source-aware. Inventory/catalogue claims were independently compared as documentary synthesis against the final report and its two separate source reviews, without repeating their complete SQL/prefix comparison as new semantic work. This is not a full product/source/runtime audit, native replay or final mechanical-completion certification.
+
+## Exact reviewed candidate
+
+The six current documents equal their actual frozen copies in integration/review-candidate. INDEX.json SHA256 is `ac68aa2dc4871db212e8edaa9def9071a601402f272c11e0e79f631b918e870a`.
+
+| Document, workspace-relative | SHA256 |
+| --- | --- |
+| OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md | 0581a52f32a95f4cae419693fe8d20b4ecf272f5e195f40070b00e166aea173f |
+| OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md | 312d54e3264bad9ddc1226ecebd93880359ae3f992265d8667d92fd9f81722fb |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13/README.md | e0ba2c545915090cf872fae542650c6fafd6f0c3c6599acfcb2da56e9074daac |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31/SYNTHESIS.md | 6e745a8d2490558970863d2e3bb96cde37c7e9cbcaf37d93bc8e24ade90bc645 |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31/COVERAGE.md | 569d62500da242b3cf5c6da69ef8038f2841a9fd1137bf93c1574dd213b725ee |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31/RANKED_REMAINING_QUESTIONS.md | e8a73171bf9e2211b09ff16a5d935debe25e545c94fd8cde4a39f2650fd8608c |
+
+Capsule exact-export manifests:
+
+| Manifest | SHA256 | Verified pairs |
+| --- | --- | ---: |
+| source-exports.json | 981a0177940ddaec22bb6fb21b8a0b17426f0b5c8cb0fbde09527a30ac830f3f | 4 |
+| evidence-exports.json | c6259ff4e7788c5fab9ba729f2e588ff2d511149d5f2f8fe314bcfd44064a79c | 45 |
+
+All49 declared pairs (four report/input-review exports and45 selected evidence exports) match original source bytes, sizes and SHA256. These are identity checks, not49 independent behavioral proofs. The current boot/protocol reviews and their separate immutable histories are pinned in their new source review files; actual later review/validation assembly belongs to parent completion. No original binaries or raw database tables are supplied as those exports.
+
+## Essential consistency checks
+
+* Original SMARTGW3.87.13 archive/image identities,5924 normal/5384 recovery regulars, symlink-metadata policy and zero original execution agree with the independent input review. File arithmetic is consistent:5378 shared+546 normal-only=5924;5378 shared+6 recovery-only=5384;5368 shared equal+10 differing=5378.858+740 ELF headers are structural inventory, not a uniform process ABI or semantic coverage percentage.
+* Product2198/OWN-DEV-0199 is treated as a Home+Project/SCS-Ethernet home-automation server with source-scoped scenario functions. Reused catalogue Object216 labels do not transfer F454 audiovisual/dedicated alarm wiring, and scenario names do not transfer MH202 taskmanager,300-script loader, parser layout or execution evidence. Package Object model5.0.67 is not an executed diagnostic identity reply. No newest-release, observed installation or physical-function claim appears.
+* Startup composition separates actual SysV/runlevel/volatile-link declarations, original default-path/configuration/record/conditional-launch code and unobserved natural runtime state. Mode0/1, global status2 versus packaged normal_status4, route/role/update numbers and old-product semantics remain separate. Library search overrides, reduced-profile selection, eligibility/list activation, imported call_nowait outcomes and service readiness remain open. Redis/D-Bus have genuine packaged init requests; this does not prove a running listener, MQTT/container process or live persistence.
+* Manager directories/configured extra0 scene/alarm/sensor/partition paths are useful distinct implementation candidates, not actual owner/schema/lifecycle closure or a dedicated F454 SCSAI bus. Selected /dev/ttymxc2/bus_type0 and Linda/i.MX6DL/DTB data remain software/package metadata with unobserved electrical/boot selection. Missing80/81/94/95 assets and untraced update/signature/partition policy are retained rather than filled with installer or older firmware substitutes.
+* The catalogue source is2233344bytes/SHA79fc...1edb, distinct from the2625536byte installer catalogue f0c9...fe8e5. Both75-table structures match while42 row bags match and33 differ. Catalogue version/export_date are metadata; empty scoped self-lookups do not establish unsupported product functions or a complete self-capability description. matrix_mx's SQLite imports and exact catalogue literal identify a concrete consumer lead, with path construction/open/query dataflow still untraced. No stable semantic ID mapping is inferred merely from matching integers.
+* Current C++ and C OPEN families are separated by actual dependencies/definitions, not live binding. New56-byte C object/discriminator52 stores are original current source, distinct from the historical MH20248/+44 pointer parser and from C++ object layout. Selected COSO initialization/descriptor relocations and auxiliary local branches are source facts. Registration criteria, WHO, callback axes, envelope representation and parser kinds remain separate namespaces; synthetic auxiliary examples are not accepted frames, natural roundtrips, STM completion, publication or physical effects. The complete seven-file libcoso-directory scope does not locate or rule out the product's scenario implementation.
+
+The source-derived ranking is coherent: actual matrix catalogue reader/query relationships; genuine scheduling_manager storage/trigger/action/lifecycle; one fresh coherent COSO route; alarm/backup/persistence ownership. It explicitly withholds overnight authorization/new execution and preserves the closed authentication/session/framing boundary. Earlier F454/MH202 native corpora are not replayed, accumulated or represented as new coverage.
+
+## Preserved first candidates and review scope
+
+Boot source review verifies22 first copies and current source predicates/PIC byte checks. Protocol source review verifies23 source/output/collector copies, actual old report and new v2/refinement copies, with exactly disclosed directory/provider-count/line-locator substitutions. Inputs, collector outputs and host cases are unchanged by that report-only correction. Inventory's final report and two independent source reviews retain their own exact coverage and caveats. This integration review does not authenticate unavailable historical drafts or convert hashes into a complete semantic proof.
+
+Signature blobs and CRC/hash consistency remain separate from cryptographic manufacturer verification. Source bytes/configuration declarations do not establish accepted inputs, actual provider/global/state binding, data durability, timing, object lifetime, concurrency, installation, electrical topology or physical outcomes. No security exploit, auth finding, complete support table, public command-semantics change or wider Device-gate closure is claimed.
+
+## Links and final-completion boundary
+
+Independently checked inline local links across all six frozen documents:42 existing targets resolve and two supplied heading fragments match. Exactly two expected forward capsule targets were still absent at review time: integration-review.txt and validation.json. They belong to completion assembly after this review, not a source-review blocker or already-passed mechanical result. All other checked targets resolve.
+
+Strict final ESG/ECV, exact final review exports, validation identities, protected-file/branch checks and actual completion records remain the parent's pending final step. No placeholder, missing-link exemption or future-check success is certified by this review. References in the coverage/capsule to the review/mechanical layer describe the intended completed checkpoint; this review's exact read-time status remains explicit here.
+
+Only this new file was written. Original/archive/images/extracted trees, author evidence, frozen documents, earlier dossiers and repository pages were left unchanged. No vendor/ARM/Thumb/JS/CLR process, original loader, target OS/I/O, service, network/bus/gateway or emulation executed during this documentary review. ASCII punctuation and one final newline were checked before exclusive creation.

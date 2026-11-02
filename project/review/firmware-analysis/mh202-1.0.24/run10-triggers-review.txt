@@ -1,0 +1,30 @@
+# MH202 run10 special-selector ownership — independent source review
+
+**PASS. No correction requested.** This is static source/interval verification; no original constructor, parser, comparator, libc, target process or OS operation executed. Existing canonical emulation totals are unaffected.
+
+I reproduced `python3 -B triggers/run10/collect_selector_ownership.py --check`:11 outputs,5 spans,13 listed word assertions,6 input identities and **114** reset-write intervals. The four additional reset-pool word assertions also pass in that collector. A separate reviewer script freshly read the original ELFs through MH202 ImageVFS, independently mapped their ELF32 load segments and rechecked all5 raw span hashes,13 listed instruction words,6 source/research input hashes and11 output-manifest entries. Original report and collector files were not altered.
+
+## Critical original-source checks
+
+- Independently decoded ARM rotated immediates at taskmanager`0xc8e4/0xc8e8`, second-object setup`0xc8f0/0xc8f4/0xc8f8`, and selector base`0xca40/0xca44`. These give local-frame15376, object bases0/7676 and selector15352, with saved registers beginning15376. Selector six words occupy the half-open range15352..15376. The decoded conditional branch at`0xc978` targets`0xcac4`, whose branch`0xcac8` targets`0xca40`; cursor r5 is0 before the first selector read`0xca48`. DIM1 has no intervening explicit local selector store on this route. This does not establish the stack's prior bytes.
+- Checked the complete saved original libcommon reset against its raw-byte hash and source register flow. Its raw clear is+6636 length1024; eleven field clears start0,130,...,1300, each length130;40 value clears start1430 with stride130. Scalar writes are kind+7660 word, length+6632 word, flag+7664 byte, count+7672 word and metadata+7668 word. The normal displayed reset's maximum exclusive end is7676. This is57 write intervals per object, **114 total**, not117. The byte flag and untouched gaps are not incorrectly expanded into whole-object zero fill.
+- Applying those source operations to the actual two bases makes the first maximum end7676 and second15352. All selected reset writes end at or before the selector start; equality of half-open endpoints is not overlap. This proves the selected reset writes do not initialize the selector array under the stated object/provider/memset contracts. It does not prove the complete parsers leave it unchanged: actual CreateMsgOpen calls`0xc940/0xc960`, delegated writes/aliases and provider overrides remain unclosed.
+- Candidate C1 constructor is libcommon`0x24bf0`; its call`0x24bf8` goes through reset PLT`0x9c84` and returns the original object pointer. Metadata shows taskmanager's first direct DT_NEEDED common, then open, and the taskmanager C1 import plus same-named definitions in both libraries. This supports the report's conditional ordinary packaged lookup model. It is not a complete dependency closure, interposition/init proof or observed effective binding.
+- Checked accessor`0x24954..0x24968`: `(index+index*64)*2 +1430 + object`, i.e. object+1430+130×index. The five-instruction selected leaf has no local index guard. No invalid-index execution, accepted-parser bounds verdict or comparator result follows from that local formula.
+
+The report appropriately leaves eventual DIM1 selector contents and comparison result unknown. It does not convert stack storage into NOBITS/zero-filled data, supply a selector fixture, equate this with match-all behavior, or claim a memory defect, exploitation, physical failure or complete accepted-input semantics. The earlier DIM0/22 and bracket corpora are not repeated as new work. Closed authentication/framing work remains excluded.
+
+## Exact reviewed artifact pins
+
+Paths below are relative to `triggers/run10/`:
+
+| Artifact | SHA256 |
+|---|---|
+| `REPORT.md` | `778801130a8a6188111f34caa734c540197c35ed47499d155c220f9349f41153` |
+| `collect_selector_ownership.py` | `5119b1507ae692e3e55b875fc3ea4bba9f7bedf8fb0ddf53286cbdc8126de9df` |
+| `output-manifest.json` | `f31bc035f11f3fd057aac374710a93c698d57939cf2aa1943c7c1c854fd81df9` |
+| `host-stack-write-coverage.json` | `1a07f3bed3bd8aca811fb81ea8b916deb0e0edd08a40a3f3b57b9f1d955c0396` |
+| `original-spans.json` | `5c4980021a5e83359df05bc6b007be7e1bf65d4f774595a5dec64bc0b280743e` |
+| `conditional-provider-metadata.json` | `4e3ac0031e1b6956e7a5ee473495c65d84e1def96a45a4c7f07710f1162cdbfa` |
+
+Reviewer wrote only `reviews/run10/triggers-review.md`; no author, historical dossier, tool, repository or original-image file changed.

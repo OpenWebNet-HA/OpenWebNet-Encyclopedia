@@ -1,0 +1,68 @@
+# MyHOMEServer1 3.87.13: BNTH selected serializer and same-JSON reparse
+
+The actual raw BNTH virtual serializer has a selected selector2 arm that loads its double at raw+56, requests a JsonCpp double value, and assigns it to the exact key `setpoint`. It does not apply a sentinel, zero or other value test on that arm. In the selected initializer, the exact JSON destination of this virtual call is then supplied to the original BNTH constructor. Under normal fresh-JSON/member/assignment/conversion semantics, the selected output has no earlier-priority `mode` or `status` member, so its `setpoint` member reaches the constructor's selector2/double+56 stores and the inherited compiled+160 copy.
+
+This closes a structural source and same-object reparse precondition of the previous BNTH condition report. It is not executed JSON, an actual configured scene, a proven arbitrary-double roundtrip, accepted external grammar or physical semantics. Original/native/provider/vendor/target execution and semantic host fixtures are zero. Host analysis reads, hashes and disassembles files only; no receiving, transport, session, authentication, framing, MQTT or libjel implementation is inspected.
+
+## Original identity and inherited question
+
+Original `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Fresh ELF PT_LOAD records supply original linked VAs and byte offsets. Code spans, the TBB data, vtable words and PIC literal words remain separate. Names from neighboring stripped symbols are not method identity.
+
+Read-only `2026-11-01-condition-ownership/distinct-condition/REPORT.md` established local condition row11 `BNTH`, raw80-byte and compiled184-byte construction, selected setpoint selector2 copies, actual predicate/cache/equality source and four-byte scene-condition publication. Those predicate, table, cached-record and generic consumer paths are inherited, not rerun as new coverage. The outstanding serializer/reparse coherence premise is the new scope here. Curated OWN-DEV-0199 supplies product/scenario context only and establishes neither physical units nor an installed condition.
+
+## Exact raw class and first virtual method
+
+Final raw header `0x160118`, address point `0x160120`, has exact RTTI `13BnthCondition`. Its first method word contains Thumb pointer `0x23c3d`, hence instruction entry `0x23c3c`. The direct constructor `0x2c050` independently resolves GOT base `0x1659a4` and slot `0x166a24` to this same header, adding8 before its store at `0x2c070`. The final factory's corresponding GOT operand resolves to the same slot. This selected constructor and final raw class therefore agree; no different temporary class is invented from a neighboring constructor.
+
+At serializer entry `0x23c3c`, incoming r1 is retained in r5 as the raw receiver and incoming r0 in r4 as the JSON destination. `0x23c54` invokes common base helper `0x23aac` before the derived selector dispatch. This is not the compiled BNTH predicate interface or a C JSON message object.
+
+## Selector2 supplies the setpoint double without value suppression
+
+The derived method loads its own raw word+40 at `0x23c58`, unsigned-bounds it by5 and uses a TBB with data base `0x23c62`. Its six original bytes are `20 2b 36 42 4e 03`; selected index2 contains `0x36`, reaching `0x23cce`. Local selector numbers are not public protocol dimensions or a physical mode enumeration.
+
+The selected arm performs:
+
+- `0x23cd0`: load raw double+56 into D0;
+- `0x23cd6`: request imported `Json::Value(double)` for its stack temporary;
+- `0x23cde`: resolve exact key `setpoint` through original PIC pool `0x23d4c`, literal `0x1151b4`;
+- `0x23ce0`: request destination member access with that key;
+- `0x23ce4`: branch to shared assignment at `0x23c7c..0x23c84`, which requests move assignment and temporary destruction.
+
+The selected arm has no comparison of the double with a zero/sentinel or domain boundary. It requests assignment whenever the selected selector2 source path reaches it. No numerical fixture is supplied; this is not an assertion about representability, exceptional values, validation, formatting or arbitrary provider results. In particular the constructor's initial double default does not become an omission rule in this serializer arm.
+
+The distinct selector0 and selector1 arms request `mode` and `status` respectively, using raw+44 and raw+48 with integer JSON constructors. Their key literals are independently pinned to `0x1151a4` and `0x1151ac`. They are separate dispatch arms, not additional members emitted by the selected selector2 leg. Full alternative-selector/domain behavior is outside the chosen coherence claim.
+
+## Fresh common-base output gives the presence precondition
+
+Base helper `0x23aac` starts by requesting a new `Json::Value` of ValueType0 in the supplied destination (`0x23aba..0x23ace`). Its normal source then requests these members:
+
+| Member | Source / selected omission |
+| --- | --- |
+| `id` | raw string+4, only when its length word+8 is nonzero |
+| `enabled` | raw byte+28 through a Boolean JSON value |
+| `type` | raw type+32 through the local name table |
+| `operator` | raw word+36, omitted for word−1; otherwise its own name-table path |
+
+The exact key PIC resolutions are retained. The type-table slot `0x166b68` resolves to `0x1605b0`; row11 is exact `BNTH`. The operator-table slot `0x165e5c` resolves to `0x160588`; the row for operator-word2 is exact `equal`. These rows narrow ordinary base-value preservation for the inherited chosen condition; the full vocabulary/default behavior is not reclassified as new coverage.
+
+Under valid raw object and ordinary fresh ValueType0/member/assignment/string semantics, this base helper introduces neither `mode` nor `status`. The derived selector2 arm adds `setpoint` to that same destination. This is the precise source basis for absence of earlier-priority members at reparse. It is not a claim that unexecuted JsonCpp providers, arbitrary prior/corrupt JSON storage, allocation failure or exceptions necessarily satisfy that premise.
+
+## Same JSON object reaches original constructor and compiled copy
+
+Selected initializer `0xa7e28` obtains the raw object's own vptr and slot0. At `0xa7e2a` it sets r4 to current SP+592, supplies that destination as r0 and invokes the virtual method at `0xa7e38`. Given the valid selected raw BNTH interface, this is the method independently identified above.
+
+After a normal return, `0xa7e3c` supplies unchanged r4 as r1, `0xa7e3e` supplies a separate raw temporary destination in r9 (SP+4280), and `0xa7e44` calls original constructor `0x2c050`. No intervening alternate JSON object is substituted in this selected source. The constructor checks member presence in its own order: present `mode` takes selector0/asInt and returns; otherwise present `status` takes selector1/asBool and returns; otherwise present `setpoint` reaches `0x2c0fe..0x2c116`, requesting `asDouble`, storing selector2 at raw+40 and the returned D0 at raw+56.
+
+Thus the ordinary fresh selected serializer output supplies the missing presence precondition rather than merely assuming it. Provider success, genuine member absence and double-conversion semantics remain conditional. This static path does not prove a bitwise identity for all doubles, numeric range/units or any observed parser outcome.
+
+At `0xa7e52`, compiled constructor `0x103b08` consumes that same reparsed temporary. The narrowed recheck at `0x103b9c..0x103ba6` copies the raw selector-containing word pair into compiled+144; `0x103bb2..0x103bba` copies raw+56/+60 to compiled+160/+164. The earlier selected predicate and its comparison semantics are inherited and not repeated here. Actual scene membership, cache producer/type/freshness, worker invocation and physical result remain open.
+
+## Preservation, reproduction and limits
+
+The collector emits six original code spans,27 byte guards,13 exact PIC keys, ten decoded direct call requests, two separate data spans, five relative relocations, five import declarations and four input pins. These are source consistency checks, not tests of vendor code or JSON behavior.
+
+Before any collector/report/generated candidate existed, one inline read-only Python probe had a mismatched closing parenthesis and stopped at SyntaxError; a new corrected probe established the keys/table rows. An exploratory disassembly also began within a previous wide instruction; the retained compiled-copy span begins at the independently aligned `0x103b96`. `DEVELOPMENT_HISTORY.json` discloses both pre-collector limitations without inventing an independently pinned failed-file reconstruction. No generated candidate was overwritten.
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/collect_values_v1.py --check`
+
+First generation refuses existing outputs/snapshot and immediately copies deterministic outputs, report and collector; index bytes are calculated before opening the index. Read-only check compares exact bytes. Confidence is high for exact class/method, selected dispatch, double-to-key source, base-member set and same-JSON constructor/copy aliases. All provider/value/error/unwind/lifetime/concurrency behavior, configured assets, complete optional grammar and physical applicability remain unresolved or explicitly conditional.

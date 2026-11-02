@@ -1,0 +1,43 @@
+# MH200N/F453AV first-exploration independent source review
+
+PASS. No author correction requested.
+
+Reviewed UTC: 2026-11-01T18:48:28.524964+00:00. The authoritative consolidated packet is the MH200N research directory; the F453AV report is an identity-pinned pointer to that packet, not another corpus or another review.
+
+## Reproduction and independent source checks
+
+I read the full collector, consolidated report, F453AV pointer and generated evidence, then ran only the permitted read-only reproduction:
+
+`python3 -B work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration/collect_first_v1.py --check`
+
+It returned PASS, two products, nine outputs, zero original execution. Independently, all845 selected source-input paths matched their retained size/SHA-256, all output-manifest members matched, and all ten exact first-candidate copies matched their root bytes. The F453AV pointer and its own first-copy/index matched, including the four consolidated-file pins. This verifies the packet's selected inputs; it is not an independent assertion about every extracted regular file or the complete acquisition process.
+
+Fresh original checks covered all795 manifest-backed ELF entries across the six component views and eleven selected full headers/dynamic-dependency lists. Raw ELF32 little-endian/machine40/header bytes, entry words and flags agree; host readelf independently reproduced the selected DT_NEEDED order. Selected MH200N flags0x202 and F453AV flags0x2 remain raw legacy header distinctions, with no transferred AArch64, modern ABI/layout or same-name behavior inference. Interpreter and dependency names are requests, not proved providers or successful launches.
+
+All73 retained safe text lines match their original one-based locations. The four normal/recovery init files are identical. Original lines104-106 sort/source the S* script list;121-126 enumerate regular application entries, branch through a fork request and source in the selected child path. The specific bt_start requests, separate bt_processi wrapper, MH200N tmpfs request and F453AV Apache-wrapper request agree with the report. No init/helper/provider/server body was executed. The missing natural boot/application-copy/bt_start-body composition is explicitly OPEN; no installed overlay or live process was inferred from these scripts.
+
+I independently parsed only the whitelisted version/process XML fields and checked their saved values, process counts and client-name declarations. Normal/recovery/application manifest counts267/225/197 for MH200N and342/222/532 for F453AV agree. Manifest path/hash comparisons agree with COMPARISONS.json. Each view remains separate. F453AV scsai is positively retained as metadata target scsserver, materialized=false; it is neither a separate observed executable nor proof of an installed alias or electrical bus role. The zero-byte normal NO_APP_COPY markers do not establish their consumer or policy.
+
+Both bt_processi metadata-file literals and MH200N's exact NUL-terminated *.*.spt literal match the original file/hash/offsets. These are consumer-search leads, not actual file-read, parser, compiler, generator or accepted-script proofs. Application dbfiles_ws.xml version labels and Info_Rel.txt fields remain declarations; KERNEL_BTPXA2.3.8 is not promoted to an observed running Linux kernel version. Named art.xml codes remain distinct from public WHO, project Device IDs and runtime identity.
+
+## Boundaries and findings
+
+The source supports a meaningful first distinction: MH200N retains taskmanager/script application components, while the separate F453AV application retains audio/video components and an scsai metadata alias. This does not transfer earlier MH202/F454 layouts, scenario grammar, alarm/electrical meaning or physical capabilities. Curated product roles are context, not binary capability or installed-state oracles.
+
+Database/schema work is assigned to the parent's separate survey. This packet executes no SQL, evaluates no vendor expressions and makes no complete-database-absence claim. Name-only extensions, XML metadata and executable string literals remain bounded leads. The existing package extraction/CRC provenance is separate from this review, and neither CRC nor matching hashes constitutes cryptographic authenticity or a trusted installed update chain.
+
+No target/vendor/native/provider/emulator, original helper, script, operating-system service, network/bus/physical operation, old source collector or previous corpus was executed or replayed. Closed receiving/transport/authentication/session/framing/MQTT/libjel routes remain opaque. All author outputs and original inputs remain unchanged. This review adds no source packet or execution count, and does not establish whole runtime, readiness, concurrency, lifetime safety or full Device approval.
+
+## Exact identities
+
+| File | Bytes | SHA-256 |
+|---|---:|---|
+| `work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration/REPORT.md` | 8091 | `77c1b90bf0d3fe2d4a651d26f5f93dad728b04ebf8c3e7f0efd60c94b402f778` |
+| `work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration/collect_first_v1.py` | 24271 | `95b71f2d7ae8ba6a4c4a8d6cb065189777442914c359045b56e8fa22d3bbefe4` |
+| `work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration/OUTPUT_MANIFEST.json` | 1274 | `6e2308ce9a2c96260500460af396f2175d101214a33da4b253396f71685583a7` |
+| `work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration/INPUTS.json` | 173818 | `91426086fe65869cc2f71fbd6c7a017c462cbc862be666a558ea4fa938b85da2` |
+| `work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration/first-candidate/INDEX.json` | 1593 | `a3a287534c6259b064adc42db87a023c2e0aa4dc1225b8689db5807630abd5e4` |
+| `work/f453av-firmware/3.0.14/research/2026-11-01-first-exploration/REPORT.md` | 1398 | `a74ba36bad16c357b88ee58e58916e1f632e965111734f50fb85621f7ac0e01b` |
+| `work/f453av-firmware/3.0.14/research/2026-11-01-first-exploration/first-pointer/INDEX.json` | 254 | `7f0f2fadac39f61e03d2746d81b6c2f7972aa7087b2d5efb0b57f153ae420905` |
+
+This new review is exclusively created with an immediate exact first copy. Its index excludes itself and was computed before opening the index file. No correction or rewrite of an earlier review was required.

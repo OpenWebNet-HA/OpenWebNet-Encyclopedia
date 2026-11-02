@@ -145,12 +145,16 @@ class Who25GatewayCompatibilityTests(unittest.TestCase):
         self.assertEqual(1, len(sources))
         self.assertIn('no explicit final', projection['window_limit'])
 
-    def test_incoming_events_and_invalid_contact_target_are_not_generalized(self):
+    def test_no_target_contact_probe_does_not_define_address_grammar(self):
         c = next(c for c in self.local if c['id'] == 'ownkb:claim:c074156')
         self.assertIn('incoming WHO 25 event handling remains untested', c['statement'])
         text = (ROOT / 'functional/who-25-transversal/dry-contact-ir.md').read_text()
         self.assertIn('WHERE 339', text)
-        self.assertIn('outside the published address forms', text)
+        self.assertIn('`3[1..201]`', text)
+        self.assertIn('`3[1-9][1-9]`', text)
+        self.assertIn('`WHERE 339` fits the published prefix-`3` forms', text)
+        self.assertIn('no compatible target was configured', text)
+        self.assertIn('none of the replies alone establishes a valid configured Device response or a gateway-wide rejection rule', text)
         self.assertIn('31 for ON/detection and 32 for OFF/no detection', text)
         for c in self.local:
             if 'public_capture' in {p['evidence_class'] for p in c['provenance']}:

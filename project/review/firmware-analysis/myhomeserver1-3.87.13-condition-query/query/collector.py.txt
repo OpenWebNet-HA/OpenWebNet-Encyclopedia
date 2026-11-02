@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+"""Static BNLD query fast return and conditional local wait; no request/provider execution."""
+import sys
+sys.dont_write_bytecode=True
+import pathlib,json,hashlib,struct,re,subprocess,importlib.util,argparse,os
+D=pathlib.Path(__file__).resolve().parent;W=next(x for x in D.parents if(x/'sources').is_dir());R=W/'work/myhomeserver1-firmware/3.87.13/research';V=R/'2026-10-31/image_vfs.py';S='/home/bticino/scheduling_manager/scheduling_manager';H=lambda b:hashlib.sha256(b).hexdigest();J=lambda x:(json.dumps(x,sort_keys=True,indent=2)+'\n').encode()
+sp=importlib.util.spec_from_file_location('queryvfs',V);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+def build():
+ v=m.ImageVFS();b=v.read_bytes(S);assert H(b)=='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26';ph=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);segs=[struct.unpack_from('<8I',b,ph+i*sz)for i in range(n)]
+ def off(a,n=1):return next(o+a-va for t,o,va,_,fs,*_ in segs if t==1 and va<=a and a+n<=va+fs)
+ def raw(a,n):return b[off(a,n):off(a,n)+n]
+ def u(a):return struct.unpack('<I',raw(a,4))[0]
+ hp=v.root/v.resolve(S).lstrip('/');env=dict(os.environ,DEBUGINFOD_URLS='');out={};rs=[]
+ spans=[('bnld-query-caller',0xf13a6,0xf13d8),('query-fast-return',0x10f4a0,0x10f50a),('miss-control-cleanup',0x10f50a,0x10f54a),('miss-clear-and-selectors',0x10f54a,0x10f56a),('selector-zero-prefix',0x10fa80,0x10fac6),('opaque-handoff-callsite',0x10fd58,0x10fd7c),('normal-cleanup-wait-join',0x10fdfe,0x10fe1c),('local-wait',0x10f56a,0x10f5f0),('wait-length-recheck',0x10f6aa,0x10f6c6),('zero-output-normal-tail',0x10f698,0x10f6aa),('response-string-alias',0x10f794,0x10f7c0),('imported-parse-boundary',0x10f7f8,0x10f81c),('getter-string-initialization',0x5728c,0x572ac)]
+ for name,a,z in spans:
+  t=subprocess.check_output(['objdump','-d','--dwarf=no-follow-links','-M','force-thumb',f'--start-address={a}',f'--stop-address={z}',str(hp)],text=True,env=env).replace(str(hp),S);t=re.sub(r' <([^>]+)>',lambda q:q[0]if'@plt'in q[1]else'',t);out['spans/'+name+'.txt']=t.encode();rs.append({'name':name,'start_VA':hex(a),'end_VA_exclusive':hex(z),'file_offset':hex(off(a,z-a)),'raw_sha256':H(raw(a,z-a))})
+ guards=[(0x10f4ce,'fef783ff'),(0x10f4de,'a2b1'),(0x10f4e2,'c6e90023'),(0x10f550,'c9f86430'),(0x10f564,'002a'),(0x10f56a,'09f14808'),(0x10f588,'4ff46443'),(0x10f590,'c5f20b43'),(0x10f598,'47f10207'),(0x10f5c2,'0122'),(0x10f5d0,'01f78aeb'),(0x10f5d4,'2846'),(0x10f6aa,'d9f86420'),(0x10f6b0,'86d0'),(0x10f69e,'43f98f07'),(0x10fe18,'fff7a7bb'),(0x10f79c,'d9e91865'),(0x10f812,'01f784e9')]
+ for a,s in guards:assert raw(a,len(bytes.fromhex(s))).hex()==s,hex(a)
+ def branch(a,t):
+  x,y=struct.unpack('<HH',raw(a,4));assert x&0xf800==0xf000;s=(x>>10)&1;i1=1-(((y>>13)&1)^s);i2=1-(((y>>11)&1)^s);d=(s<<24)|(i1<<23)|(i2<<22)|((x&1023)<<12)|((y&2047)<<1);assert(a+4+d-((1<<25)if s else 0))&0xffffffff==t;return{'VA':hex(a),'target':hex(t),'bytes':raw(a,4).hex()}
+ branches=[branch(a,t)for a,t in [(0xf13b4,0x10f4a0),(0x10f4ce,0x10e3d8),(0x10fac2,0x10da24),(0x10fd6c,0x5f4a4),(0x10fe18,0x10f56a)]]
+ bases=[]
+ for pool,pc in [(0xf1614,0xf1362),(0x572bc,0x57252)]:a=(u(pool)+pc+4)&0xffffffff;assert a==0x1659a4;bases.append({'pool':hex(pool),'ADD_PC':hex(pc),'base':hex(a)})
+ slots=[]
+ for pool,slot,target in [(0xf1620,0x166bf8,0x167368),(0x572c4,0x166bf8,0x167368),(0x572c0,0x166894,0x167360)]:assert 0x1659a4+u(pool)==slot and u(slot)==target;slots.append({'pool':hex(pool),'GOT_slot':hex(slot),'addend':hex(target)})
+ rel=subprocess.check_output(['readelf','-rW',str(hp)],text=True,env=env);rr=[]
+ for a in [0x166bf8,0x166894]:t=next(x.strip()for x in rel.splitlines()if x.startswith(f'{a:08x} '));assert'R_ARM_RELATIVE'in t;rr.append(t)
+ # Decode the selected two instruction immediates rather than infer timing from names.
+ def movimm(a):x,y=struct.unpack('<HH',raw(a,4));return((x&15)<<12)|((x>>10&1)<<11)|((y>>12&7)<<8)|(y&255)
+ low=movimm(0x10f590)<<16|58368;assert low==0x540be400;deadline_increment=(2<<32)|low;assert deadline_increment==10_000_000_000
+ pins={S:{'sha256':H(b),'bytes':len(b)}}
+ for p,k in [(V,'image_accessor'),(R/'2026-11-01-event-routing/condition/REPORT.md','prior_bnld_predicate'),(R/'2026-11-01-event-routing/record/REPORT.md','prior_record_lookup_and_layout'),(W/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md','curated_product_context')]:z=p.read_bytes();pins[k]={'path':str(p.relative_to(W)),'sha256':H(z),'bytes':len(z)}
+ out['ORIGINAL_SOURCE.json']=J({'image':S,'spans':rs,'guards':[{'VA':hex(a),'bytes':z}for a,z in guards],'direct_branches':branches,'PIC_bases':bases,'GOT_chains':slots,'relative_relocations':rr,'deadline_increment':{'low_word':hex(low),'high_word':2,'count':deadline_increment,'scope':'Literal count increment only; no newly established tick unit/elapsed-time guarantee'}})
+ out['QUERY_CONTRACT.json']=J({'caller':{'VA':'0xf13b4','output_pair':'predicate SP+4','registry':'0x167368','selector':0,'key':'compiled ID string +108','result_use':'caller reads outputdata word, not helperR0Boolean'},'fast_path':{'first_call':'10f4ce→10e3d8 ordinarylookup','nonnull_test':'10f4de','effect':'copy both pair words10f4e2; normalguard/epilogue','local_type_or_selector_test_before_return':False,'scope':'Only retained nonnull path; no freshness/type/globalvalidation or concurrentlifetime proof'},'miss':{'response_string_pointer':96,'response_string_length':100,'inline_initial_buffer':104,'clear':'length0 and NUL at pointer','selector_zero':'10f564→10fa80','opaque_boundary':['10fd6c→5f4a4','10fd7a indirectcall'],'normal_continuation':'conditionalnormalreturns/cleanup→10fe18→10f56a'},'conditional_wait':{'registry_mutex_offset':72,'registry_CV_offset':24,'dependency':'nonzero response-string length +100','clock_argument_literal':1,'deadline_count_increment':deadline_increment,'wait_call':'pthread_cond_clockwait@10f5d0','wait_return':'not used asBoolean before subsequent steady_clock now','repeat':'beforedeadline and length0; nonzero length proceeds even reached/passeddeadline','zero_output':'selectedtimeout continuation plusnormaldiagnosticdelegates→10f698 zero pair/unlock','parse_stop':'10f812 importedJsonparseFromStream afterselectednonemptystring setup'},'unclosed':['opaque request/provider/callback implementation and delivery','response-string writer/notify producer, IDcorrelation, freshness','wholemiss outputrecordtype and responseinterpretation','allselector/error/exception/provider/lifetime/concurrency contracts','clock/providerunits and actual elapsedwaiting','physicalmeaning/installedconfiguration/natural events'],'method':{'original_instructions':0,'target_calls':0,'host_semantic_cases':0,'external_transport_auth_or_parser_bodies_inspected':0}})
+ out['INPUTS.json']=J(pins)
+ out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(pathlib.Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes()),'outputs':{n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()},'counts':{'spans':len(spans),'guards':len(guards),'branches':len(branches),'PIC_bases':len(bases),'GOT_chains':len(slots),'relocations':len(rr),'inputs':len(pins),'original_execution':0}});return out
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');ck=ap.parse_args().check;out=build()
+ if ck:
+  for n,b in out.items():assert(D/n).read_bytes()==b,n
+  for n,r in json.loads((D/'first-candidate/INDEX.json').read_text()).items():z=(D/'first-candidate'/n).read_bytes();assert z==(D/n).read_bytes()and H(z)==r['sha256']and len(z)==r['bytes'],n
+ else:
+  s=D/'first-candidate';assert not s.exists(),'refuse snapshot overwrite'
+  for n in out:assert not(D/n).exists(),'refuse generated overwrite'
+  cp={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),pathlib.Path(__file__).name:pathlib.Path(__file__).read_bytes()};ix=J({n:{'bytes':len(b),'sha256':H(b)}for n,b in cp.items()})
+  for n,b in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(b)
+  for n,b in cp.items():p=s/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(b)
+  (s/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':ck,'outputs':len(out),'original_execution':0}))
+if __name__=='__main__':main()

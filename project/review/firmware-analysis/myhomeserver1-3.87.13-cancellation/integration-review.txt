@@ -1,0 +1,49 @@
+# Cancellation integration documentary review
+
+PASS for current candidate-v2 documentary consistency, including the preserved wording refinement. No further correction requested. This review covers the new cancellation page, startup continuation link, capsule README/exports and summaries/check record; it does not re-audit the whole prior startup or action references. Scene-stop is source-aware from this reviewer's independent source review. Shared-domain and derived-duration findings are independently compared documentarily with their source reports and peer reviews, not newly re-executed or fully raw-source-audited here.
+
+## Claims and boundaries
+
+- Scene stop144, active145, action completion4 and shared-domain stop72 remain separate objects/state axes. Virtual slot+4 mapping is scoped to examined common/SLEEP/SCENARIO classes. A scene stop request or scene cleanup is not promoted to action-worker completion, a join, shared reset or physical cancellation.
+- Nominal nanosleep(1,0), req/rem alias, return-1/errno4 retry and positive scene-stop exit are summarized as source/API requests. They do not establish a measured polling period, immediate interruption or cancellation deadline. Cleanup can reopen the selected active guard, subject to enabled/state/provider/lifetime premises; successful rerun is unproved.
+- Positive shared-CV exit ownership and explicit startup flag0 producer are distinguished from the bounded additional reset search. Selected CV memset48 does not cover flag72, while downstream destruction/provider effects remain opaque. The text does not claim permanent latch, no reset anywhere, defect or failed restart. Unresolved wide/indirect aliases remain real gaps.
+- Selected Bn3lActionRunner duration metadata->operational12 setter is a concrete source binding, not shared-layout or name inference. Conditional second callable installation and subsequent worker request retain their guards, including zero operational delay, first inline callback normal return and a fresh duration read. Nonzero delay is a separate path; no universal delay-then-duration chain or physical meaning is invented. This does not overwrite the earlier SLEEP-specific metadata/operational distinction.
+- Wider source/Device gates, configured assets, provider activation, lifetime/unwind/concurrency, actual timing and physical behavior remain open. All new original/native/provider/target execution and host scene models remain zero; earlier native ledgers are unchanged.
+
+## Precision correction and preserved bytes
+
+Before publication I requested that the phrase 'under the ordinary verified API binding' distinguish verified packaged layout from unobserved live binding. Parent retained the original page/candidate and made the exact one-phrase substitution to 'under the ordinary nanosleep ABI and the verified packaged-wrapper layout'. I independently verified the complete current page equals the old frozen bytes with exactly that substitution; API_WORDING_HISTORY.json correctly pins both. No source/evidence/count or outcome changed. The other seven original candidate files are byte-identical. There was no integration review file before this correction; this is its exclusive first candidate, not an overwritten review.
+
+The scene-stop collector's stale copied module-docstring limitation is explicitly disclosed in the capsule and source review. Its actual method, spans, checks and report remain authoritative. No author source was silently edited to remove that historical label.
+
+## Identity and mechanical completion
+
+Verified all nine current files in candidate-v2 against their exact frozen size/SHA-256 pins, including the wording history. Verified all55 SOURCE_EXPORTS source/published pairs, byte equality, sizes and hashes. Parent source-check record is saved actual reproduction; this documentary audit does not relabel those checks as a new independent native replay. Source reports and reviews match the summaries with the scopes above.
+
+All24 existing local Markdown links resolve; no fragment links occur in this reviewed set. integration-review.txt and validation.json are the two expected future actual-assembly targets. Their future bytes and final strict identity/ESG/ECV results are not certified here. Parent must assemble real review/validation files and perform strict checks without placeholders or exemptions. No final completion, passed future validator or broader Device approval is claimed by this review.
+
+Current reviewed file pins:
+
+| File | SHA-256 |
+| --- | --- |
+| OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-cancellation.md | 2c23c61974b9307a7af5981111abe0bbc0fc1cda36900d64ac49e5daa7f13925 |
+| OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-startup.md | 3650604c30ff0268e5d0743efb05a27dbec327a09c195a9bc92b5cd09977d0ed |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-cancellation/README.md | dcb076fbf57006eb45064217612d92abfafc93f9b91adb2dd7e0563efabd5a7b |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-cancellation/SOURCE_EXPORTS.json | 4ed88141036d43932e9b6c122194dea18774a6fe199388a9e84067663d78a493 |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-cancellation/synthesis.txt | d753d04956b74d3f04eaf864133a017f8a3a18160fd627913b9fa69312a27214 |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-cancellation/coverage.txt | 318acacd94419bdd992631c899033b61e212cb143dd1bbc65ebeaf0af7460415 |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-cancellation/remaining-questions.txt | e5fef63e2ea310fffade0e3073d40668c3ba5c3978d5cacb9cd6993463607024 |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-cancellation/source-checks.json | 426e27d8eba89ae0b0275c97a360da067340894a8eada816bae4fcef1e4b2c50 |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/API_WORDING_HISTORY.json | 9c2bf9d5cde596824121f5a6e42abd7390c888817fe29a8a5f980fa0360f9419 |
+
+Additional pins:
+
+| Record | SHA-256 |
+| --- | --- |
+| integration/review-candidate/INDEX.json (retained v1) | 3283d3b963de94befee7fcc825392a4056d3de15c7e4c436fa077d740532b818 |
+| integration/review-candidate-v2/INDEX.json | ef5b6e513bd045e4c98e41fc16bcf2bb6b5ef7fbfc72160504d3fb6869dfc04c |
+| reviews/scene-stop-source-review.md | bc47a7bd0d1daf1ad9732f39ee45e07983c11f9be4955813fb7909f276b94686 |
+| reviews/stop-domain-source-review.md | be5d6dcfd491bbe56bde577e2ce4747607fe759d9646cbe550ae2a594a460088 |
+| reviews/action-lifecycle-source-review.md | c059151ef96bb7ce439fb3d21806c2e0fe2624f1e3e02ddc61252cef0da4f1a3 |
+
+No author, old source/review, repository or prior dossier file was edited by this reviewer. This ASCII review is exclusively created and immediately copied as exact first-review bytes with an index computed before opening it; its hash is announced only afterward.

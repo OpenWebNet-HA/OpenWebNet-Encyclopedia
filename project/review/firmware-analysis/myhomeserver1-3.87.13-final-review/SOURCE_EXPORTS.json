@@ -1,0 +1,167 @@
+{
+  "scope": "Exact handoff/verification/reference-history/review exports; no original binary/database or fresh firmware-source proof",
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/verification/INPUTS.json",
+      "published": "verification/INPUTS.json",
+      "sha256": "f3c767d3eadf6a43423e96f94da05875d8b16acbe4568bd0455225feab07121a",
+      "bytes": 9475
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/verification/NAVIGATION.json",
+      "published": "verification/NAVIGATION.json",
+      "sha256": "027b5a22dcf6370653d2ee237e61931fdd67b05515d9dfdcfadb27d325e6f8f4",
+      "bytes": 9157
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/verification/NAVIGATION.md",
+      "published": "verification/NAVIGATION.txt",
+      "sha256": "00055dd385816dded10a70e14a745b1bf47ce8bfd67b73d42a2326568e1f327d",
+      "bytes": 2178
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/verification/OUTPUT_MANIFEST.json",
+      "published": "verification/OUTPUT_MANIFEST.json",
+      "sha256": "23a4e10473200ce6c0b225e2f56d322d2f71910f3d419b465eb86fdbd8bfb687",
+      "bytes": 1298
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/verification/PROTECTED_CHECK.json",
+      "published": "verification/PROTECTED_CHECK.json",
+      "sha256": "fbccf7712d96eb39b46a3a837fce3272394929a0711bbebd60df0a35199bda0f",
+      "bytes": 2218
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/verification/REPORT.md",
+      "published": "verification/REPORT.txt",
+      "sha256": "470c4b236c764b78b50e03ed017371696bf216689e7e8cd2a26ea87abd6aa2e8",
+      "bytes": 3559
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/verification/SAVED_LEDGER.json",
+      "published": "verification/SAVED_LEDGER.json",
+      "sha256": "6527e3cae73791f371fe8c8cf3c71b2292eadb5c3f4ffcb25dd1a12d988d2f60",
+      "bytes": 831
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/verification/SOURCE_IDENTITY.json",
+      "published": "verification/SOURCE_IDENTITY.json",
+      "sha256": "17a7c94754d1b25669ba9549b4676501d1f182ca81f56cb92da2a9bf6f5f7f3b",
+      "bytes": 2768
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/verification/VERSION_HISTORY.json",
+      "published": "verification/VERSION_HISTORY.json",
+      "sha256": "17ade212e01137c25a06b665a4b9b5c30f494dad0fdb1a756583ee65188c7ac1",
+      "bytes": 892
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/verification/build_supplement_v1.py",
+      "published": "verification/build_supplement_v1.py.txt",
+      "sha256": "aa8ec037cfa1a419a8add1613aba15c74d048c77a6bb7414183850ec8edb6d09",
+      "bytes": 14238
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/verification/build_supplement_v2.py",
+      "published": "verification/build_supplement_v2.py.txt",
+      "sha256": "d5a903e05dbfb7988619924de139c2250d84a53389b3089fb604ab5709ec2ea0",
+      "bytes": 14812
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/handoff/HANDOFF_CANDIDATE.md",
+      "published": "handoff/HANDOFF_CANDIDATE.txt",
+      "sha256": "0d313e41b4214ce228d7d0a3e0f1a783090a15738c7e7ed105e6dd0e05438ad8",
+      "bytes": 9861
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/handoff/HANDOFF_CANDIDATE.v2.md",
+      "published": "handoff/HANDOFF_CANDIDATE.v2.txt",
+      "sha256": "4487454c6cb76efb3850b8ccdd30e9f01414eefccf5acbf84f8ff725cfc018e6",
+      "bytes": 10164
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/handoff/VERSION_HISTORY.json",
+      "published": "handoff/VERSION_HISTORY.json",
+      "sha256": "423d6c935310ca971d314afdf2a1ec0f84cac8c229d367450749ba5a0e33d5e0",
+      "bytes": 1384
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/reviews/handoff-source-review.md",
+      "published": "reviews/handoff-source-review.txt",
+      "sha256": "df841bdffee48a75aacc7c4287bea686427b5ad9409da09dd9214c4ab2224683",
+      "bytes": 9547
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/reviews/handoff-source-review.v2.md",
+      "published": "reviews/handoff-source-review.v2.txt",
+      "sha256": "c593b86b9718fe4684ec7e52d692ebae6643ef8924999917c66ad91f43639d6a",
+      "bytes": 4481
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/reviews/review-helper-first-failure.json",
+      "published": "reviews/review-helper-first-failure.json",
+      "sha256": "1e9332a18f627d220c68bb26ab93b6e33ce31a314de61bb73f2dca9861f02ffc",
+      "bytes": 793
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/reviews/verification-review-helper-notes.json",
+      "published": "reviews/verification-review-helper-notes.json",
+      "sha256": "92e1ad786073001a6d3d8a5be196058ee59e6af94e72496a10e24424ccce8f50",
+      "bytes": 1226
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/reviews/verification-review.md",
+      "published": "reviews/verification-review.txt",
+      "sha256": "4ebb622c1e71c4bbeeed7f16704ed161d6ebf80295121b967caf7cddd7f9439c",
+      "bytes": 7730
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/pre-edit/own-dev-0199-myhomeserver1-home-automation-server.md",
+      "published": "historical-device.txt",
+      "sha256": "5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855",
+      "bytes": 43131
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/pre-edit/mhcatalogue-source-profiles.md",
+      "published": "historical-profile.txt",
+      "sha256": "59affbd225571e554a49ad784619912a1521ff5b00c80bf5ea28094540b942b9",
+      "bytes": 11611
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/pre-edit/myhomeserver1-3.87.13-research-synthesis.md",
+      "published": "historical-overview.txt",
+      "sha256": "5a3dec72f1d14ac5c338a38571c809749594e761854e915c8a0decea447bcd52",
+      "bytes": 13742
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/pre-edit/INDEX.json",
+      "published": "historical-reference-index.json",
+      "sha256": "bdc6c5f67619b05cb33cb07c5ae9f1583b0999ef756689097690e36a8f2502a9",
+      "bytes": 837
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/REFERENCE_PATCHES.json",
+      "published": "reference-patches.json",
+      "sha256": "cc59e26dcfc01bf147b40d35a68ee9e0397a4f829a86664e992f3042b73902ad",
+      "bytes": 2563
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/OVERVIEW_LINK_PATCH.json",
+      "published": "overview-link-patch.json",
+      "sha256": "f9ef9799c1f3cf740faab8095564c460c0af53c1f9f88a0ebe58e167551f9c79",
+      "bytes": 779
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/REPRODUCTION_CONTEXT.json",
+      "published": "reproduction-context.json",
+      "sha256": "606222d730932b7ac9ac0df6255e2b96d11098d6be805332a67f29d7bf46abcd",
+      "bytes": 983
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/SOURCE_CHECKS.json",
+      "published": "source-checks.json",
+      "sha256": "6e83fc90c21d11ba4ebe78fde0ff51657bd4c43fc88d2a03328650319b2efba2",
+      "bytes": 740
+    }
+  ]
+}

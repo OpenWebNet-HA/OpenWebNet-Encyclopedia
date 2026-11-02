@@ -1,0 +1,22 @@
+# Independent F460 AArch64 scheduler source review
+
+PASS within the selected raw SleepAction serializer/reparse/compiled-field binding scope. No source correction requested. I authored the separate F461 routing packet; this review independently checks the original F460 scheduler file, segment mappings, selected bytes and fresh 64-bit source relationships. No MHS/F454/MH202 layouts or runtime assumptions are transferred.
+
+The actual original ELF SHA5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62 and fresh PT_LOAD mapping agree. Independently checked all7 span byte hashes,16 instruction guards,7 direct BL targets, selected ADRP/ADD data references, the two raw/compiled RTTI pointer chains and the SLEEP table row10. The length5 is not an enum. Raw primary AP212cf0 slot0 actually contains37e60; the final class is11SleepAction, distinct from17SleepActionRunner at compiled AP21cc50.
+
+Original initializer fff34 builds X21=SP+488, fff3c copies it to X8 before the actual virtual call and fff50 copies the same X21 to X1 for parser496d0. Own temporary raw layout is56 bytes; raw seconds word52 is written atSP1404 and passed as part of that actual temporary to112a30. Original112b00 sets X21=destination+96;112b24 loads source52 and112b28 writes X21+52, giving compiled148. The later reload/store and distinct manager1125f0/invoker112640 pointers agree with the documented binding request to1303f0. Those bodies remain opaque; no callback invocation or timing result was established.
+
+Verified the actual import relocation names and fresh PLT/GOT relationships, including the misleading printed binutils labels. As a small independent corroboration beyond the author's six selected import proofs, serializer37f64 calls244c0, whose PLT loads slot21e8d0: that original JUMP_SLOT is Json::Value::operator=(Json::Value&&), supporting the selected assignment request. This is an imported request under normal provider/binding premises, not execution of JsonCpp or full round-trip validation.
+
+All4 source/input pins and12 exact first-candidate copies agree. Replayed only the host collector --check:11 outputs PASS. No source author files changed. The reported initial out-of-text objdump probe is explicitly retained as a probe limit, not original code execution or a canonical output failure. No failed generated candidate is claimed here.
+
+Outer factory/switch admission, complete JSON validity/conversion/default/exception paths, raw/base/move/storage provider contracts, scene configuration, effective dynamic binding, ownership, actual elapsed time and physical meaning remain open. This review does not certify complete scheduler behavior, any installed scene, delivery or a shared implementation with MHS merely from names. Original/vendor/provider/target/native execution and semantic fixtures/models added by this review:0; existing ledgers unchanged. No receiving, transport, session, authentication, framing, MQTT or libjel implementation was inspected.
+
+## Exact reviewed pins
+
+- `REPORT.md`: `4caa7e282a04f4a514803b4da93c875e5da20b6ccd4ccae14542d855726eb68a`
+- `collect_scheduler_v1.py`: `4501da8d1278a9091b2d9cf21fd59dd20dc04ffd7f5c62125a87469659f03a81`
+- `SOURCE.json`: `0c05dff028e0d0eac220832c9ec78fe3af213ccda1417a406ce92805de6158c7`
+- `INPUTS.json`: `38f4a4900c08f5ffe759d099318f31eaf520ba56ff20e82fb2e77681b6e6d84a`
+- `OUTPUT_MANIFEST.json`: `f8872ead2440c2af39e299d4aba9c337f0085f103f36af4f53e5f7444c22c5a6`
+- `first-candidate/INDEX.json`: `c7300c8d773ed334f96c6f3a412448291c83345cb0c9d4c312c2f3df7f22b281`

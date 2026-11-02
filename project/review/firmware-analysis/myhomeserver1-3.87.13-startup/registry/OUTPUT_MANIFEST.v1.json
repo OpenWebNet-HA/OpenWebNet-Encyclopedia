@@ -1,0 +1,94 @@
+{
+  "ALIASES.v1.json": {
+    "bytes": 837,
+    "sha256": "0be3c995ad89f1dad9d64ce2c64d0f0371883d7499a5a69c363a3705a4fda64d"
+  },
+  "CRITICAL_BYTES.v1.json": {
+    "bytes": 883,
+    "sha256": "56063b2f6a05d473c004cee058265d4b5b377f09c4b81bdae24afaca7a0ff5a8"
+  },
+  "DIRECT_CALLS.v1.json": {
+    "bytes": 732,
+    "sha256": "ff199c1ac6af5644107fe97e1b406808c1e0452a4fc08363f12131c15faadd98"
+  },
+  "INPUTS.v1.json": {
+    "bytes": 847,
+    "sha256": "6ad1f12c02104be0fe4cc7a4274788e6cf7b1931cdf9220ca578782dca73270a"
+  },
+  "METHOD.v1.json": {
+    "bytes": 586,
+    "sha256": "c2708d19e74a99ca43da6b09baccf23b1c5fa3ee20b8ce56eaac1e65bb714509"
+  },
+  "PIC_KEYS.v1.json": {
+    "bytes": 227,
+    "sha256": "c0947de9c138942eb28108d2c2f54ba94504f21b3d92df3b597129a79958c3b9"
+  },
+  "SOURCE_SPANS.v1.json": {
+    "bytes": 3343,
+    "sha256": "21d71fbe09b46a40093809edf2b8a7793d56df8e5aca0c6561f20791146954e2"
+  },
+  "spans/category2-key-reassignment.txt": {
+    "bytes": 962,
+    "sha256": "f8318c6c88e88e921ab45e488651717f9c9509af3c809dc2f2161e4310ec2918"
+  },
+  "spans/category2-key-selector.txt": {
+    "bytes": 5255,
+    "sha256": "ee7856e01ec1fb8668c57c840bd595f2f02bf3dd2cf24de27bddfd3c91f13f2c"
+  },
+  "spans/initializer-context-save.txt": {
+    "bytes": 1464,
+    "sha256": "9b29795d067a7042c0e8f57f5cb02bc354f1c8e5e0cf5fba0a7b78c2b8b9bdfa"
+  },
+  "spans/loader-input-alias.txt": {
+    "bytes": 751,
+    "sha256": "b75a7d7e156bcb1a9052449dc5ac9fd28f1535526c9f113fcab192e1fa2971d3"
+  },
+  "spans/loader-insertion-call.txt": {
+    "bytes": 788,
+    "sha256": "e16c4069d5acaa685ddc396e41f88f3e91c9ca6282168d3370d242d7edb02bdf"
+  },
+  "spans/loader-runner-construct.txt": {
+    "bytes": 1399,
+    "sha256": "f83e04bf835adc67ae6e6b8c17396653623f323db96a8e2d488e9b086bd21f46"
+  },
+  "spans/registry-insert-precheck.txt": {
+    "bytes": 7716,
+    "sha256": "dae15891cb1d6482207134bf02e87316fa0006eab58d96c8a68b7044b1dddad7"
+  },
+  "spans/registry-node-insertion.txt": {
+    "bytes": 4270,
+    "sha256": "a76f66327eb7711dea411c557d7732f20cd9f31f67103f8147d386103ed12906"
+  },
+  "spans/runner-constructor-forwarding.txt": {
+    "bytes": 1302,
+    "sha256": "32f24f8ea5f1cec0daf226d43d69c7ffe3a74e91d9c5cea40271fe69bc400ff6"
+  },
+  "spans/same-registry-key-reader.txt": {
+    "bytes": 1389,
+    "sha256": "b3f400a361fad1bc388425c60899b7baa257e8a04c170f84f9545a776409fbb4"
+  },
+  "spans/same-registry-value-reader.txt": {
+    "bytes": 3123,
+    "sha256": "8845bd992998dfd8808bbfc445d24437b5f743331493023b6b0bc4e0bc2dd8ee"
+  },
+  "spans/scenario-context-argument.txt": {
+    "bytes": 484,
+    "sha256": "c61cc9cf97d8bb52d8524918f5dd7b6681869c54b2da9ccc65e1b9af0da6bac0"
+  },
+  "spans/scenario-context-capture.txt": {
+    "bytes": 4465,
+    "sha256": "f0fb304390f81c4904a50ad38e1c148b0cdd963922c22ae89a4f94032969600d"
+  },
+  "spans/scene-id-conversion.txt": {
+    "bytes": 3046,
+    "sha256": "7fa0699b2b71f4979287f45653daba2e2f30dcff7dd0b1b3ea8a2f8045190774"
+  },
+  "spans/startup-container-headers.txt": {
+    "bytes": 881,
+    "sha256": "f734a001f461113e27f884779117c404b549d1fa9d19f3b31afc77e771371a00"
+  },
+  "spans/startup-loader-call.txt": {
+    "bytes": 639,
+    "sha256": "7ff80b715d0931d42f7a5ea6632db65334a7545b3cab7741f6723db1cf340180"
+  }
+}

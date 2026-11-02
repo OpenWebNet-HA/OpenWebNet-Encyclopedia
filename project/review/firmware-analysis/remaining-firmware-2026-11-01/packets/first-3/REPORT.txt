@@ -1,0 +1,19 @@
+# F4592.1.5 first exploration
+
+The retained original archive is identified by acquisition.json/SOURCE.json. Curated OWN-DEV-0198 supplies the Driver Manager role; generic application/library names do not establish physical hardware or installed capability. Normal and recovery images and selected own ELF32 little-endian ARM headers are fresh source evidence, not transferred F454/MHS/F46 layouts.
+
+## Application and startup structure
+
+Normal/recovery contain a separate home/bticino/drivermanager tree with a top-level shell wrapper and a different bin/bt_driver ELF. The latter is a statically linked ELF without section headers in host file/readelf metadata; it is not the wrapper script. Packaged Qt5 and framework modules remain candidate components, not active bindings. manifest.xml's framework version2.1.0 is separate from outer firmware2.1.5. Safe inittab/rcS source requests and daemon startup lines, plus runlevel aliases as metadata, identify selected declared startup structure. Target scripts/services were not run. Complete ordering/arguments/configuration/providers/installation remain open.
+
+## Database and structured-data leads
+
+The selected libmhshared.so.1 has an undefined sqlite3_open symbol and DT_NEEDEDlibsqlite3.so.0. Its original constants include /tmp/plugin.shared.sqlite and CREATE TABLE shared(pluginname,key,value,persistent default0,PRIMARY KEY(pluginname,key)) with original exact DDL lengths/types/offsets/bytes retained in SOURCE.json. These are import and literal evidence only: no code/caller/argument join, actual database creation, persistence behavior, rows or query execution is proved. The schema-looking DDL is not an extracted database schema observation.
+
+A separate packaged modules/libsqlite.so.0 exports sqlite_open and sqlite_version (SQLite legacy interface). It must not be equated with the SQLite3 import/provider just because both filenames contain sqlite. The central datastore scan supplies actual file-header inventory; this packet does not duplicate SQL/schema parsing. dbfiles_ws.xml is an XML metadata artifact, not a SQLite file by name. Full XML contents/config values and private key/cert/credential values are not exported.
+
+## Reproduction and limits
+
+collect_firstpass_v1.py reads verified original regular files, safe selected startup lines, metadata-only links, ELF headers/dynamic symbol tables, whitelisted XML fields and exact two local DB literals. INPUT_PINS.json gives original path/size/SHA256; SOURCE.json gives original header bytes, literal offsets/bytes, namespaced version/tag/client metadata and selected normal/recovery equality. No filename/path absence is a product-capability claim; no provider/runtime/physical/lifetime semantics follow from a declared component.
+
+No vendor/native/target/OS/services/network/bus/mount execution, SQL query or live contact occurred. Closed authentication/receiving/transport/session/framing/MQTT/libjel bodies stay closed. Further work should qualify one local shared-store constructor/consumer and natural configured driver/assets before any runtime or public-protocol claim. This is a first pass, not complete source/Device approval.

@@ -1,0 +1,165 @@
+{
+  "PT_LOAD": [
+    {
+      "VA": "0x0",
+      "filesz": "0x21bd4",
+      "flags": 5,
+      "memsz": "0x21bd4",
+      "offset": "0x0"
+    },
+    {
+      "VA": "0x3277c",
+      "filesz": "0x888",
+      "flags": 6,
+      "memsz": "0x8d0",
+      "offset": "0x2277c"
+    }
+  ],
+  "guards": [
+    {
+      "VA": "0x15cec",
+      "bytes": "c260"
+    },
+    {
+      "VA": "0x15cee",
+      "bytes": "b0ee408b"
+    },
+    {
+      "VA": "0x15cf6",
+      "bytes": "84ed008b"
+    },
+    {
+      "VA": "0x15af8",
+      "bytes": "2172"
+    },
+    {
+      "VA": "0x159f4",
+      "bytes": "0a60"
+    },
+    {
+      "VA": "0x159fa",
+      "bytes": "86b1"
+    },
+    {
+      "VA": "0x14e3c",
+      "bytes": "007a"
+    },
+    {
+      "VA": "0x1724e",
+      "bytes": "94ed000b"
+    }
+  ],
+  "original_execution": 0,
+  "provider_sha256": "5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36",
+  "scope": "Candidate selfbinding/validconstruction/ABI premises; exact harness private mappings/PC/read/write/IRQ/caps remain separate preflight review.",
+  "selected_guard_PIC": [
+    {
+      "ADD_PC": "0x15ae0",
+      "base": "0x32a40",
+      "base_pool": "0x15b48",
+      "slot": "0x32f98",
+      "slot_offset_pool": "0x15b4c"
+    },
+    {
+      "ADD_PC": "0x15b30",
+      "base": "0x32a40",
+      "base_pool": "0x15b50",
+      "slot": "0x32f98",
+      "slot_offset_pool": "0x15b4c"
+    },
+    {
+      "ADD_PC": "0x171cc",
+      "base": "0x32a40",
+      "base_pool": "0x17298",
+      "slot": "0x32f98",
+      "slot_offset_pool": "0x1729c"
+    },
+    {
+      "ADD_PC": "0x17202",
+      "base": "0x32a40",
+      "base_pool": "0x172a0",
+      "slot": "0x32f98",
+      "slot_offset_pool": "0x1729c"
+    }
+  ],
+  "selected_relocations": [
+    "00032f98  00000e15 R_ARM_GLOB_DAT         00000000   __stack_chk_guard@GLIBC_2.4",
+    "00032f54  0001b116 R_ARM_JUMP_SLOT        00015ad5   _ZN4Json5Value9initBasicENS_9ValueTypeEb",
+    "00032c18  00007416 R_ARM_JUMP_SLOT        000159ed   _ZN4Json5Value8CommentsaSEOS1_",
+    "00032e54  0000ec16 R_ARM_JUMP_SLOT        00014e3d   _ZNK4Json5Value4typeEv"
+  ],
+  "selected_self_PLT": [
+    {
+      "PLT_VA": "0xba94",
+      "bytes": "00c68fe227ca8ce2b8f4bce5",
+      "candidate_Thumb_definition": "0x15ad5"
+    },
+    {
+      "PLT_VA": "0xb074",
+      "bytes": "00c68fe227ca8ce29cfbbce5",
+      "candidate_Thumb_definition": "0x159ed"
+    },
+    {
+      "PLT_VA": "0xb768",
+      "bytes": "00c68fe227ca8ce2e4f6bce5",
+      "candidate_Thumb_definition": "0x14e3d"
+    }
+  ],
+  "spans": [
+    {
+      "end_VA_exclusive": "0x15d02",
+      "file_offset": "0x15ce0",
+      "name": "C1-double",
+      "raw_sha256": "21fde8c432238210ba4c0faed5d3de040ef4c21595233b2668ecb711a67d63cd",
+      "start_VA": "0x15ce0"
+    },
+    {
+      "end_VA_exclusive": "0x15b44",
+      "file_offset": "0x15ad4",
+      "name": "initBasic",
+      "raw_sha256": "bf1a9f32039a4091cf553fddb8d5e0ca91f78f79742ea520d8d7cf3c14da8923",
+      "start_VA": "0x15ad4"
+    },
+    {
+      "end_VA_exclusive": "0x15a22",
+      "file_offset": "0x159ec",
+      "name": "Comments-move",
+      "raw_sha256": "927862de01ed651e92c72649811c89caae96e7836ba559888981395ae05a5b17",
+      "start_VA": "0x159ec"
+    },
+    {
+      "end_VA_exclusive": "0x14e40",
+      "file_offset": "0x14e3c",
+      "name": "type-byte",
+      "raw_sha256": "3d60dc05dc4c24756d2ca8efc142ade6c166e93868c74098bb3f0c5e00e4a925",
+      "start_VA": "0x14e3c"
+    },
+    {
+      "end_VA_exclusive": "0x171e6",
+      "file_offset": "0x171c4",
+      "name": "asDouble-prefix",
+      "raw_sha256": "b2b537e999c0dabba9dc80e46f5bf8b3e32ed79721175f388a56215757a60f45",
+      "start_VA": "0x171c4"
+    },
+    {
+      "end_VA_exclusive": "0x17216",
+      "file_offset": "0x171fe",
+      "name": "asDouble-epilogue",
+      "raw_sha256": "44c4352826ea34c98fed82ab68f054536749e5252d4d077d0c07000ebe1ba741",
+      "start_VA": "0x171fe"
+    },
+    {
+      "end_VA_exclusive": "0x17254",
+      "file_offset": "0x1724e",
+      "name": "asDouble-type3",
+      "raw_sha256": "a692dd57271980779a01504c4176cd4e66b3ad1fdcd6bd132af8318feb61563e",
+      "start_VA": "0x1724e"
+    }
+  ],
+  "type3_TBB": {
+    "VA": "0x171e6",
+    "bytes": "37181f343a03",
+    "selected": 3,
+    "target": "0x1724e"
+  }
+}

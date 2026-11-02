@@ -1,0 +1,48 @@
+{
+  "address_point": "0x15fe98",
+  "first_method_thumb": "0x279a5",
+  "got_base": "0x1659a4",
+  "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+  "raw_header": "0x15fe90",
+  "relative_relocations": [
+    "0015fe94  00000017 R_ARM_RELATIVE        ",
+    "0015fe98  00000017 R_ARM_RELATIVE        ",
+    "00162db0  00000017 R_ARM_RELATIVE        ",
+    "00166650  00000017 R_ARM_RELATIVE        ",
+    "00166840  00000017 R_ARM_RELATIVE        ",
+    "00160774  00000017 R_ARM_RELATIVE        ",
+    "001607d4  00000017 R_ARM_RELATIVE        ",
+    "001607dc  00000017 R_ARM_RELATIVE        ",
+    "001607e4  00000017 R_ARM_RELATIVE        "
+  ],
+  "rtti_name": "10Bn3lAction",
+  "rtti_va": "0x162dac",
+  "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26",
+  "status_rows": [
+    {
+      "length": 8,
+      "raw_signed_value": -1,
+      "row_va": "0x1607d0",
+      "string_va": "0x115d68",
+      "text": "noStatus"
+    },
+    {
+      "length": 2,
+      "raw_signed_value": 0,
+      "row_va": "0x1607d8",
+      "string_va": "0x115d64",
+      "text": "on"
+    },
+    {
+      "length": 3,
+      "raw_signed_value": 1,
+      "row_va": "0x1607e0",
+      "string_va": "0x115d60",
+      "text": "off"
+    }
+  ],
+  "status_slot": "0x166840",
+  "status_table": "0x1607d0",
+  "type_slot": "0x166650",
+  "type_table": "0x160710"
+}

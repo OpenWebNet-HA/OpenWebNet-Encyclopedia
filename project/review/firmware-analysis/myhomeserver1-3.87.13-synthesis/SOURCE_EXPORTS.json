@@ -1,0 +1,95 @@
+{
+  "scope": "Exact synthesis/navigation/review/history exports; inherited report identities are navigation, not new whole-source approval",
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/CATALOGUE.json",
+      "published": "navigation/CATALOGUE.json",
+      "sha256": "c7c4a1af363f1b8a60980e2281695f5708c240e99383d9239d87371e1088fdca",
+      "bytes": 133066
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/CATALOGUE.md",
+      "published": "navigation/CATALOGUE.txt",
+      "sha256": "692bdffd1c0f648599a5eecc6ad8bd9b0b4361a0594b2b26cded6d4c863d774e",
+      "bytes": 8852
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/INPUTS.json",
+      "published": "navigation/INPUTS.json",
+      "sha256": "470397b9d7f8cbc15d01f3451d3da26fb43d96f6b3d339d760d6418eb315d342",
+      "bytes": 146684
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/OUTPUT_MANIFEST.json",
+      "published": "navigation/OUTPUT_MANIFEST.json",
+      "sha256": "ab35365ff80e110705975330befd9644bc26db372b4a4986fbe0ddd906edd757",
+      "bytes": 1454
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/PROTECTED_CHECK.json",
+      "published": "navigation/PROTECTED_CHECK.json",
+      "sha256": "3232b555f3a76076004907b31746b7ed665f8eb6b2158404cf5d57badec77289",
+      "bytes": 468
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/REPORT.md",
+      "published": "navigation/REPORT.txt",
+      "sha256": "41a3481502c1951bf58c7d475518d670fb9acd806c26bd509ce10902be9152f8",
+      "bytes": 3479
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/SAVED_CORPUS.json",
+      "published": "navigation/SAVED_CORPUS.json",
+      "sha256": "17f93c8ee2e00f7cfaad49f7d41c40305bb4f24564b7521acc999c866afc6ee9",
+      "bytes": 2819
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/VERSION_NAVIGATION.json",
+      "published": "navigation/VERSION_NAVIGATION.json",
+      "sha256": "2af645d3576ecfc64dcfabca287025a875b8c4ad046d28d4268ba4e81789a39d",
+      "bytes": 8452
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/build_navigation_v1.py",
+      "published": "navigation/build_navigation_v1.py.txt",
+      "sha256": "d901db90423620f626101a0c412e404b9d65fa7506730cb63eddb66a74cdc656",
+      "bytes": 23383
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/overview/ENCYCLOPEDIA_CANDIDATE.md",
+      "published": "overview-candidate.txt",
+      "sha256": "5d9426583d60ffe1618b2a82e0bf9bd97426387a6245c7b8e6500bfe09cdc5c1",
+      "bytes": 13242
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/overview/input-snapshots/INDEX.json",
+      "published": "overview-inputs.json",
+      "sha256": "40e6b33c384cc564c24b41ceeb05efe1aafd967cdcd172e757e01232f9f0c5dc",
+      "bytes": 3925
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/integration/pre-edit/myhomeserver1-3.87.13.md",
+      "published": "historical-firstpass-page.txt",
+      "sha256": "23629011fc6f1afd56e837d5d0a65e62952c02c051573bea534ffd4a9535d848",
+      "bytes": 11224
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/integration/DOCUMENT_PATCH.json",
+      "published": "main-page-navigation-patch.json",
+      "sha256": "3f53fe16a91c454500c447f9fb12d3b44512792633b35a50294380a0a82b7934",
+      "bytes": 1892
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/reviews/synthesis-source-review.md",
+      "published": "synthesis-source-review.txt",
+      "sha256": "dec06ad8f9dd676731dab1ff55b2c2eaff54276c8de35b11a02f5dcf6d42740c",
+      "bytes": 11701
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/reviews/navigation-review.md",
+      "published": "navigation-review.txt",
+      "sha256": "ad61489ba711d6a9de6b103ccb51ea556f3bf280989883d89b6cfda829bc2cc0",
+      "bytes": 6940
+    }
+  ]
+}

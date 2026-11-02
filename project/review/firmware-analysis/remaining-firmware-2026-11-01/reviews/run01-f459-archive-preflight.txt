@@ -1,0 +1,40 @@
+# Run01 F459 source and encrypted-container archive preflight
+
+PASS for the bounded F459 selected source chain and the exact private support-container candidate described below. No correction requested. This author-independent review performed read-only host source/ELF/ZIP metadata and preservation checks plus the guarded collector --check. It executed no original/vendor/native/provider instructions, SQLite query, target OS/service/network/bus/mount code, decryption, upload or remote operation. No author, original, old dossier or repository file was edited.
+
+## F459 selected constructor source
+
+The permitted host collect_store_v1.py --check returned PASS:6 outputs,19 guards,2 selected spans,3 imported calls,0 original execution and no database recovered. It used the installed native-host ARM objdump without escalation; disassembly and readelf are static host tools, not execution of the original library. Independently mapped ELF32 little-endian ARM libmhshared.so.1 is43,208 bytes/SHA256 4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377. Its exported C1 constructor67c0, two raw span hashes/hex,19 instruction words, literal-pool words, three BL targets/PLT bytes/relocation identities, three input pins and seven exact first copies agree. No MHS/AArch64 layout is transferred.
+
+The constructor saves incoming receiver in R4. Original R1=R4+8 at6830 and PC-relative data at6834 derive path90b4 intoR0 for sqlite3_open request6838 through actualPLT234c/GOT122a0/JUMP_SLOT. This closes the earlier constant-to-open-argument edge under valid receiver, selected normal prelude, binding/provider and normal-return premises. It is not an executed open/create or a natural caller proof.
+
+The selected continuation reloads receiver+8 intoR0 for busy-handler684c and again for exec6870; the exec request receives DDL9150 inR1, zeroR2/R3 and the actual GOT zErrorMessage pointer in its stack argument slot. The raw path/143-byte DDL NUL-terminated bytes match. Selected instructions between the requests introduce no local return-result branch. This means only the selected normal prefix; it does not establish error safety, a valid handle after arbitrary failure, callback behavior, actual DDL execution or full constructor/unwind policy. Source stops6874 before later QFile/permissions/exception behavior. The busy-handler, SQLite/OS/providers and actual caller remain opaque.
+
+The resulting field/default/composite-key text remains source SQL, not recovered schema or database data. No database was created, recovered or synthesized. A database manufactured from this DDL must not be archived as a vendor original. Durability, rows, effective binding, ownership/concurrency and physical behavior remain open; closed receiving/output/transport/authentication/session/framing routes remain excluded.
+
+## Exact archive preflight
+
+UPLOAD_PLAN and descriptor identify support-data/application-zip, private visibility, filename50.xtz,72,774 bytes and SHA256 824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8. The local object is byte-identical to the retained extracted F450 PROD container. Its content-addressed sha256/82/4b key agrees with the digest and descriptor, and the size is below the stated helper limit. This is an original database-NAMED encrypted support container, not plaintext master.sqlite or a usable recovered database.
+
+The retained outer F450 PROD archive independently hashes to27c5640916f980be2c16fd14ed7818d8b361e69b439e7a774bd4e90e57b9b96f. Its50.xtz member is encrypted; metadata declares72,774 bytes/CRC22ffebf2. The retained extracted source's CRC matches that member metadata, and its SHA/size match the preserved extraction candidate and upload object. This reviewer did not decrypt or open the outer encrypted member as plaintext; extraction provenance remains the separately retained acquisition/extraction scope.
+
+The inner ZIP central directory has a directory entry and the two named files: encrypted50/master.sqlite289,792 bytes/CRC52150069 and encrypted empty50/extra.xml. No inner header/schema/rows, password/key, stored value or decrypted payload was read. The descriptor correctly labels the internal database version unknown and preserves private-only redistribution. The source package is not replaced with synthetic SQL-derived data.
+
+This PASS supports the parent's already user-authorized private preservation of exactly this support container through the existing controlled helper. It is not an upload action or a receipt: actual helper outcome, remote object identity/full readback and later archive-completion state remain unperformed by this reviewer and must be evidenced separately. It does not authorize a new public redistribution, source-manifest edit, repository write, or a plaintext-database claim. Existing F459/F450 runtime/provider/configuration/physical limits and prior execution ledgers remain unchanged.
+
+## Exact reviewed pins
+
+| File | SHA-256 |
+| --- | --- |
+| `work/f459-firmware/2.1.5/research/2026-11-01-night01-shared-store/REPORT.md` | `2e2a56a80412660e7a2992593510fcb2bc61095e59c4bd162aac9d03607d4847` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-night01-shared-store/collect_store_v1.py` | `1b95488ba324321d2e6d49cfd27014bf5324152ec0a076bdb7f0c211de3bf5d5` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-night01-shared-store/SOURCE.json` | `083dd69b4fd6c23e03476530ac3f912b487b9c34743a741b1c4769cb89f5227c` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-night01-shared-store/INPUT_PINS.json` | `42df579fccaaf07c0d2d2e252986d50eb94c520f7e694c57f37885c6d17b42ed` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-night01-shared-store/OUTPUT_MANIFEST.json` | `84f9b2d13514461f97d2512e439aad2ec85f02b302cdf90f6fea1b5c8ee75961` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-night01-shared-store/first-candidate/INDEX.json` | `f1b5ccbf81f92b7da8d66b54c6f1e5a5f6c32ffcbc7d15b4725d8e207d3a2116` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/archive/UPLOAD_PLAN.json` | `17031a31dc29e7e7b724775b6986bacc082d6fe742b539cac389da8063e790ce` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/archive/descriptor.json` | `e8fb8bdf44bf5115b663fbf2ba9527f395cd6a543fe1f85d9f007c516f99ca59` |
+| `work/f450-firmware/2.0.10-PROD/extracted/50.xtz` | `824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/archive/objects/824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8` | `824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8` |
+
+Review complete for current source and exact support-container preflight only; remote preservation and later synthesis/closure require their own actual evidence.

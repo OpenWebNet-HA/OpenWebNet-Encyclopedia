@@ -1,0 +1,18 @@
+## F460: state-trigger construction and local admission
+
+A distinct original scheduler path connects the private raw `BNIL` trigger row to a 56-byte raw class and a 96-byte compiled inner object in a 112-byte aggregate. Its own factory and compiled initializer use separate tables. The selected initializer requests the raw virtual JSON result, reparses the same result and copies enabled/operator/status fields into the fresh compiled layout. Full serializer/value coherence and ordinary JSON/string/provider outcomes remain conditional.
+
+The compiled local handler requires enabled state and recognizes exact `on`, `off` and `noStatus` strings as local integers. Two selected operator words request equality or inequality against the configured status; other numeric operator words can reach the callback path after a recognized state. This is bounded control flow, not a valid external operator list or a physical on/off mapping.
+
+An actual local caller supplies the string under ID and method-identity conditions. Its range/record origin, cast-result validity, pointer lifetime and outer admission remain premises; a cast request is not itself a proven nonnull guard. The callback captures the supplied initializer receiver as a raw pointer and reaches a local handoff whose body is outside this packet. It does not establish ownership, natural event subscription, a configured scene or successful scene/action execution.
+
+## F461: address shape and selected prefix normalization
+
+The original plugin requests a helper exported by the packaged `libautomation.so.1` candidate, resolved through image-link metadata to its actual regular file. No host symlink is materialized. The helper's selected path excludes several exact strings and a prefix, then uses UTF-8 character count; remaining lengths two or four select a local numeric class. That class is separate from plugin-private selectors, message representations and public protocol values.
+
+An actual caller passes the same supplied parsed-object field to this helper, checks its result, starts a local `D1` string and repeats the character-length check. On the selected length-two path it reads bytes zero and one, delegates their digit conversions and appends the two returned integers in order. The later suffix/context is unexamined, so this establishes prefix normalization only.
+
+UTF-8 character count, byte offsets and ASCII digit validity are different properties. This source path is not a proven complete numeric-address validator, accepted public grammar or physical topology. Valid objects/strings, ordinary providers, actual reaching callers, effective binding and later validation remain scoped premises or gaps; no invalid-input behavior or vulnerability is claimed.
+
+The [run06 source and review capsule](../../project/review/firmware-analysis/f460-f461-run06-2026-11-01/README.md) retains the original identities, mappings, selected instructions, tables, metadata-only alias, first copies and independent source reviews. These additions execute no original code, semantic model, input fixture or device operation.
+

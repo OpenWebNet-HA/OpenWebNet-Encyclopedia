@@ -1,0 +1,31 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000fa5b4 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x82a04>:
+   fa5b4:	d503249f 	bti	j
+   fa5b8:	f9400001 	ldr	x1, [x0]
+   fa5bc:	910f43f3 	add	x19, sp, #0x3d0
+   fa5c0:	d2831a1e 	mov	x30, #0x18d0                	// #6352
+   fa5c4:	aa1303e8 	mov	x8, x19
+   fa5c8:	8b3e63f5 	add	x21, sp, x30
+   fa5cc:	91030296 	add	x22, x20, #0xc0
+   fa5d0:	f9400021 	ldr	x1, [x1]
+   fa5d4:	d63f0020 	blr	x1
+   fa5d8:	aa1303e1 	mov	x1, x19
+   fa5dc:	aa1503e0 	mov	x0, x21
+   fa5e0:	97fd4120 	bl	4aa60 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x1a6a0>
+   fa5e4:	d00008c1 	adrp	x1, 214000 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0xffc10>
+   fa5e8:	9101e021 	add	x1, x1, #0x78
+   fa5ec:	d2801900 	mov	x0, #0xc8                  	// #200
+   fa5f0:	f90c6be1 	str	x1, [sp, #6352]
+   fa5f4:	97fca743 	bl	24300 <_ZNK4Json5Value8asDoubleEv@plt+0x8>
+   fa5f8:	aa1503e1 	mov	x1, x21
+   fa5fc:	aa0003f5 	mov	x21, x0
+   fa600:	94019d90 	bl	161c40 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x4d850>
+   fa604:	aa1603e0 	mov	x0, x22
+   fa608:	910e83e1 	add	x1, sp, #0x3a0
+   fa60c:	f901d3f5 	str	x21, [sp, #928]
+   fa610:	97fffb90 	bl	f9450 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x818a0>

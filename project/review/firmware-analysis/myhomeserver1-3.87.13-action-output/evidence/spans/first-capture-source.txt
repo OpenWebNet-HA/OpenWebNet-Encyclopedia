@@ -1,0 +1,98 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000cf19c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x169e4>:
+   cf19c:	4620      	mov	r0, r4
+   cf19e:	6e63      	ldr	r3, [r4, #100]	@ 0x64
+   cf1a0:	e9d4 ba17 	ldrd	fp, sl, [r4, #92]	@ 0x5c
+   cf1a4:	9302      	str	r3, [sp, #8]
+   cf1a6:	6ea3      	ldr	r3, [r4, #104]	@ 0x68
+   cf1a8:	9301      	str	r3, [sp, #4]
+   cf1aa:	6ee3      	ldr	r3, [r4, #108]	@ 0x6c
+   cf1ac:	9300      	str	r3, [sp, #0]
+   cf1ae:	f7fe fc9d 	bl	cdaec <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15334>
+   cf1b2:	e9dd 9512 	ldrd	r9, r5, [sp, #72]	@ 0x48
+   cf1b6:	f10d 086c 	add.w	r8, sp, #108	@ 0x6c
+   cf1ba:	6f23      	ldr	r3, [r4, #112]	@ 0x70
+   cf1bc:	4606      	mov	r6, r0
+   cf1be:	f8cd 8064 	str.w	r8, [sp, #100]	@ 0x64
+   cf1c2:	fab9 f289 	clz	r2, r9
+   cf1c6:	9318      	str	r3, [sp, #96]	@ 0x60
+   cf1c8:	426b      	negs	r3, r5
+   cf1ca:	0952      	lsrs	r2, r2, #5
+   cf1cc:	4599      	cmp	r9, r3
+   cf1ce:	bf08      	it	eq
+   cf1d0:	2200      	moveq	r2, #0
+   cf1d2:	2a00      	cmp	r2, #0
+   cf1d4:	f040 815f 	bne.w	cf496 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16cde>
+   cf1d8:	2d0f      	cmp	r5, #15
+   cf1da:	950d      	str	r5, [sp, #52]	@ 0x34
+   cf1dc:	f200 8107 	bhi.w	cf3ee <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16c36>
+   cf1e0:	2d01      	cmp	r5, #1
+   cf1e2:	f040 80e5 	bne.w	cf3b0 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16bf8>
+   cf1e6:	f899 3000 	ldrb.w	r3, [r9]
+   cf1ea:	4642      	mov	r2, r8
+   cf1ec:	f88d 306c 	strb.w	r3, [sp, #108]	@ 0x6c
+   cf1f0:	2300      	movs	r3, #0
+   cf1f2:	951a      	str	r5, [sp, #104]	@ 0x68
+   cf1f4:	5553      	strb	r3, [r2, r5]
+   cf1f6:	2034      	movs	r0, #52	@ 0x34
+   cf1f8:	9a02      	ldr	r2, [sp, #8]
+   cf1fa:	f10d 0938 	add.w	r9, sp, #56	@ 0x38
+   cf1fe:	e9cd ba08 	strd	fp, sl, [sp, #32]
+   cf202:	f10d 0b7c 	add.w	fp, sp, #124	@ 0x7c
+   cf206:	930e      	str	r3, [sp, #56]	@ 0x38
+   cf208:	920a      	str	r2, [sp, #40]	@ 0x28
+   cf20a:	9a01      	ldr	r2, [sp, #4]
+   cf20c:	9311      	str	r3, [sp, #68]	@ 0x44
+   cf20e:	e9cd 330f 	strd	r3, r3, [sp, #60]	@ 0x3c
+   cf212:	920b      	str	r2, [sp, #44]	@ 0x2c
+   cf214:	9a00      	ldr	r2, [sp, #0]
+   cf216:	eddd 0b08 	vldr	d16, [sp, #32]
+   cf21a:	eddd 1b0a 	vldr	d17, [sp, #40]	@ 0x28
+   cf21e:	e9cd 2623 	strd	r2, r6, [sp, #140]	@ 0x8c
+   cf222:	f94b 0a8f 	vst1.32	{d16-d17}, [fp]
+   cf226:	f741 ec2a 	blx	10a7c <_Znwj@plt>
+   cf22a:	e9dd a619 	ldrd	sl, r6, [sp, #100]	@ 0x64
+   cf22e:	4603      	mov	r3, r0
+   cf230:	9a18      	ldr	r2, [sp, #96]	@ 0x60
+   cf232:	4605      	mov	r5, r0
+   cf234:	300c      	adds	r0, #12
+   cf236:	4271      	negs	r1, r6
+   cf238:	f843 2b04 	str.w	r2, [r3], #4
+   cf23c:	faba f28a 	clz	r2, sl
+   cf240:	0952      	lsrs	r2, r2, #5
+   cf242:	458a      	cmp	sl, r1
+   cf244:	bf08      	it	eq
+   cf246:	2200      	moveq	r2, #0
+   cf248:	6068      	str	r0, [r5, #4]
+   cf24a:	2a00      	cmp	r2, #0
+   cf24c:	f040 8127 	bne.w	cf49e <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16ce6>
+   cf250:	2e0f      	cmp	r6, #15
+   cf252:	960d      	str	r6, [sp, #52]	@ 0x34
+   cf254:	f200 80e6 	bhi.w	cf424 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16c6c>
+   cf258:	2e01      	cmp	r6, #1
+   cf25a:	f040 80b5 	bne.w	cf3c8 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16c10>
+   cf25e:	f89a 3000 	ldrb.w	r3, [sl]
+   cf262:	732b      	strb	r3, [r5, #12]
+   cf264:	49cd      	ldr	r1, [pc, #820]	@ (cf59c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16de4>)
+   cf266:	2300      	movs	r3, #0
+   cf268:	60ae      	str	r6, [r5, #8]
+   cf26a:	5583      	strb	r3, [r0, r6]
+   cf26c:	4620      	mov	r0, r4
+   cf26e:	4479      	add	r1, pc
+   cf270:	e9dd 2323 	ldrd	r2, r3, [sp, #140]	@ 0x8c
+   cf274:	9111      	str	r1, [sp, #68]	@ 0x44
+   cf276:	49ca      	ldr	r1, [pc, #808]	@ (cf5a0 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16de8>)
+   cf278:	f96b 0a8f 	vld1.32	{d16-d17}, [fp]
+   cf27c:	950e      	str	r5, [sp, #56]	@ 0x38
+   cf27e:	4479      	add	r1, pc
+   cf280:	9110      	str	r1, [sp, #64]	@ 0x40
+   cf282:	f105 011c 	add.w	r1, r5, #28
+   cf286:	f941 0a8f 	vst1.32	{d16-d17}, [r1]
+   cf28a:	4649      	mov	r1, r9
+   cf28c:	e9c5 230b 	strd	r2, r3, [r5, #44]	@ 0x2c
+   cf290:	f7fe fb7e 	bl	cd990 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x151d8>

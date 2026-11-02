@@ -1,0 +1,57 @@
+[
+  {
+    "bytes": 8956,
+    "path": "work/remaining-firmware-acquisition/2026-11-01/SUMMARY.json",
+    "sha256": "3f10719c9f06c5851295946a3ca08944edbe94a85f305f11dc30752c04d4bfe4"
+  },
+  {
+    "bytes": 1141,
+    "path": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/source-format/SCOPE.json",
+    "sha256": "2ce55c362376d933544b9d7e7522cd3527219c5476c6480154be1df5cd8e2246"
+  },
+  {
+    "bytes": 1184,
+    "path": "work/sequential-firmware-priorities/2026-11-02/stage2-databases/SCOPE_AUTHORIZATION.json",
+    "sha256": "d3d808c2d7221b9ab043a1cab20c665efaf1cbfc9245d913cd47f67fefeb683c"
+  },
+  {
+    "bytes": 13265378,
+    "path": "work/f450-firmware/2.0.10/F450_020010.fwz",
+    "sha256": "9e625012d3e8629bea15d608f7c1de160e971499a39f3fd86f0c68103da8b9da"
+  },
+  {
+    "bytes": 991447,
+    "path": "work/f450-firmware/2.0.10/analysis/normal-regular-files.json",
+    "sha256": "cbbdfd87f04c8b1c06ee8759b87ad88cbf9cdfeadfcbf52a425603b3e9dd4ac7"
+  },
+  {
+    "bytes": 13444140,
+    "path": "work/f450-firmware/2.0.10-PROD/F450_020010-PROD.fwz",
+    "sha256": "27c5640916f980be2c16fd14ed7818d8b361e69b439e7a774bd4e90e57b9b96f"
+  },
+  {
+    "bytes": 991447,
+    "path": "work/f450-firmware/2.0.10-PROD/analysis/normal-regular-files.json",
+    "sha256": "cbbdfd87f04c8b1c06ee8759b87ad88cbf9cdfeadfcbf52a425603b3e9dd4ac7"
+  },
+  {
+    "bytes": 72774,
+    "path": "work/f450-firmware/2.0.10-PROD/extracted/50.xtz",
+    "sha256": "824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8"
+  },
+  {
+    "bytes": 114774253,
+    "path": "work/f459-firmware/2.1.5/F459_020105.fwz",
+    "sha256": "1d9539d6a9e500032438936d1ce28e7cbddef9788c5712d50c9a60586718f6d3"
+  },
+  {
+    "bytes": 1080713,
+    "path": "work/f459-firmware/2.1.5/analysis/normal-regular-files.json",
+    "sha256": "d877a856579807fa3a3c6e50ffc126cce2b9099f7dd166753006857b8263ef67"
+  },
+  {
+    "bytes": 736142,
+    "path": "work/f459-firmware/2.1.5/analysis/recovery-regular-files.json",
+    "sha256": "87cba01e7e598f39ffce20d306d995155bba93840c895012149d709df13bc0da"
+  }
+]

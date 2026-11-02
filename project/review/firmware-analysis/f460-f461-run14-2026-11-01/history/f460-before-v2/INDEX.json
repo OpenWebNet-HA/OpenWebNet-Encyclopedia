@@ -1,0 +1,11 @@
+{
+  "scope": "Exact parent one-file snapshot of staged unexecuted collector before requested v2 pointer correction; no report or outputs existed, no canonical generation attempted",
+  "files": [
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run14-numeric/collect_numeric_v1.py",
+      "snapshot": "work/f460-f461-comparison/2026-11-01-run14/integration/f460-before-v2/collect_numeric_v1.py",
+      "bytes": 8812,
+      "sha256": "06075404b12899c0f304a3cdfa32de70a64aef1d896a11a5d1b28f70f9fca2c0"
+    }
+  ]
+}

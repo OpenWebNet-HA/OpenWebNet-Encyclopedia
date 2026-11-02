@@ -1,0 +1,78 @@
+# MH202 1.0.24 — saved configuration header, checksum and copy policy
+
+This normal-image static pass identifies the MH202 daemon's configuration containers, parser/checksum contract and primary/mirror ordering. It establishes code paths and requested operations, not successful restoration, durable storage or a hardware failure. The relevant original executable is `/home/bticino/bin/bt_daemon`, SHA256 `41a8844318d47cf33571b6d74a7de528dea5118d4c2289f4d666de419d91b1b6` (81584bytes). All addresses below belong to this MH202 build; no F454 addresses, test fixtures or behavior were imported.
+
+Original images, extracted trees, synced files and completed reports remain unchanged. Only this directory was written. Host Python/binutils and a host checksum comparison were used. Original ARM/JavaScript/PHP/vendor execution, original instruction counts, code hooks, live configuration/status/process/service/file operations and mounts/network activity: **zero**. All filesystem and process calls described below are unexecuted delegates. Complete container headers, fixed literal header fields, packaged passwords and archive command arguments are withheld.
+
+## Container and header structure
+
+The exact safe literals resolve these paths (`safe-container-schema.json`):
+
+| Role | Image path | Original pointer evidence |
+| --- | --- | --- |
+| Primary | `/home/bticino/cfg/extra/conf/conf.img` | Main pool `0x10984→0x193bc`; writer pool `0xbd98→0x17c40` |
+| Mirror/copy | `/home/bticino/cfg/extra/conf/conf_copy.img` | Main `0x10970→0x192e0`; writer `0xbdbc→0x17d10` |
+| Temporary payload archive | `/var/tmp/conf.zip` | Main `0x109f4→0x194fc`; writer `0xbd74→0x17bc0` |
+
+Neither named container appears among the packaged normal-image regular files. Their runtime contents, sizes and availability are unknown. This is code-derived schema, not a parsed captured container.
+
+The original header reader at `0x12a38` opens its supplied path; a negative descriptor returns1. It clears a1024-byte buffer, requests a raw1024-byte read at `0x12adc`, then tokenizes that buffer. The raw read's returned count is not tested in this selected routine. Six sequential tokens are required, with missing-token return values1 through6 as coded. The first five token steps use delimiter byte42 (`*`); the sixth uses byte94 (`^`). The earlier tokens are skipped or copied to globals; **this selected reader does not compare their literal contents as a signature**. It is not a complete validation audit of later delegates or other paths.
+
+Token5 is copied to global `0x23818` and later decimal-converted by `strtoul(...,NULL,10)` in the validator. Token6 is copied to `0x2382e`, converted with `atol` at `0x12cf8`, and stored as the payload-length output. The descriptor is wrapped through `fdopen` at `0x12d14` without a seek/reset. Consequently its current position is1024 after a complete raw read; that offset is **conditional on the actual raw read**, whose count was unchecked. The `fdopen` result itself is passed back without a selected null check before the reader's zero return.
+
+The writer's31-byte format at literal `0x17c94` (pool `0xbda4`) has six `*`-separated fields and two `%lu` conversions in fields5 and6. Its complete literal/header text is not exported. At `0xb730..0xb750`, the arguments show those two dynamic fields are checksum and payload size, respectively. A later writer seek explicitly places payload data at offset1024 (`0xb864`, mirror `0xbb6c`). This is a header area plus payload arrangement; it does not imply that1024 bytes of header text are written or padded.
+
+## Validator return contract and checksum
+
+Original validator `0x13894` calls the header reader at `0x138cc`. Nonzero header-reader return yields validator0. Otherwise it passes the returned stream and declared length to checksum helper `0x1353c` at `0x13908`, then closes the stream. An exact `fclose` return−1 yields validator−1. On other close results it parses the stored decimal checksum, compares it with the computed result and returns0 for mismatch or the stored checksum value for equality (`0x13978..0x139b0`).
+
+This is not a Boolean API: zero is both the mismatch/error sentinel and a possible equal stored checksum result. Negative return−1 is a close-error branch, yet startup's selected comparisons described below classify any nonzero return as usable. The checksum helper's own error0 can also overlap numeric data. No actual buffer/error/file fixture was supplied to original code, so these are explicit branch/namespace limits, not measured corruption or exploit claims.
+
+The checksum helper uses a256-word table at `0x1a34c`. A second writer-side helper `0xae9c`, invoked at `0xb64c`, uses a byte-identical1024-byte table at `0x18b14`. Host verification reconstructed all256 entries from polynomial `0x04c11db7`. The selected normal helper starts at zero, folds bytes through the table with a left shift8 and top-byte XOR, folds the **observed processed-byte count** as successive low bytes, then complements the result. This is consistent with the POSIX `cksum` recurrence. Three private synthetic host-model values, including empty input and `123456789`, matched the independent host `cksum` utility; no firmware checksum helper ran.
+
+The original read loop chooses chunks up to65536, adjusts the remaining request while the declared signed length exceeds its accumulated count, stops on nonpositive read and checks `ferror`. The saved pure model covers ordinary complete reads with small nonnegative lengths only. It does not model every signed-length boundary, early EOF, stream offset, actual short reads or error state. There is no separate final exact-observed-count-equals-declared-length comparison in the selected checksum return path: it folds the count it actually processed. This does not by itself establish any malformed input's full acceptance through the surrounding header/stream/archive operations.
+
+## Startup primary/mirror choice and requested repairs
+
+The inspected main path requires config field+40 equal1 and checks the current running-firmware-copy text. The normal-copy1 branch validates the mirror first (`0x102a4`); its zero result sets a mirror-bad flag. The primary is then validated at `0x1035c`. The significant selected comparisons are saved in `startup-mirror-check.txt` and `startup-primary-reconcile.txt`.
+
+| Mirror validator result | Primary result | Requested policy and selected source |
+| --- | --- | --- |
+| Nonzero |0 | Unlink primary, request copy mirror→primary; select mirror for extraction |
+|0 | Nonzero | Unlink mirror, request copy primary→primary; select primary |
+| Nonzero | Same nonzero value | Keep both; select primary |
+| Nonzero | Different nonzero value | Unlink mirror, request copy primary→primary; select primary |
+|0 |0 | Retain selection−1; skip both selected extraction calls |
+
+The nonzero rows describe literal returned numbers, not authenticated/semantically valid configuration. In particular−1 from the close-error path is nonzero. Neither checksum magnitude nor timestamp is used here to choose a newer copy. The primary wins the unequal-nonzero branch.
+
+**Exact operand correction from independent review:** in the selected mirror-repair-looking branch, `0x1046c` requests unlink of the mirror, but both argv source and destination loads at `0x10498` and `0x104a4` use pool `0x10984`, the primary path. The actual request is therefore primary→primary, not primary→mirror. A presumed repair intent or log wording cannot change those operands. By contrast the `0x103d4..0x10408` request has distinct mirror-source and primary-destination pools. The model records this original operand distinction; no copy helper behavior or physical outcome is assumed. The first draft model mislabeled the former request as primary→mirror; it was corrected before finalization in response to independent source review.
+
+Copy requests use imported `call`; their returned values are not tested in the selected repair continuations (`0x10408`, `0x104c0`). Likewise selected extraction calls to `0x12d70` at `0x10538` or `0x10574` have no immediate checked return before the next continuation. No actual copy, archive processing or file change was performed. Full extraction/delegate behavior and later fallback after selection−1 remain unclosed. In particular this report does **not** establish a both-corrupt factory reset, complete startup recovery, or durable repair.
+
+`host-reconcile-model.json` transcribes seven return-value pairs, including0/equal/unequal/−1 cases. The model stops at selected copy/source decisions and keeps the config/running-copy entry conditions explicit. It does not simulate startup, status changes or persistent files.
+
+## Writer order and exact checked failure guards
+
+The selected writer function `0xb1f4` prepares its temporary payload earlier through delegated archive/locking operations, which this batch does not execute or fully validate. Its selected fresh static ordering is:
+
+1. Obtain payload metadata and checksum through the separate helper call at `0xb64c`.
+2. Request unlink of the primary, open it with raw flags66, format/write the header, seek to1024, and copy payload in1024-byte read chunks. Close primary after the loop.
+3. Request unlink/open of the mirror, write the **same formatted header buffer**, seek to1024, and reread/copy the same temporary payload. Close mirror.
+4. Request unlink of `/var/tmp/conf.zip`; the ordinary end stores result0 at `0xbccc`.
+
+The two copies are sequential operations, not an atomic pair. No `fsync`/readback verification occurs inside these selected post-open writer spans; that scoped observation cannot settle filesystem/device durability or unexamined caller/delegate behavior. `open` failures are checked against exact−1 and yield result1. Both header writes and both payload writes test **exact−1**, not equality to requested byte count. Their selected error results are2 (header) and3 (payload). A zero/short-positive write therefore does not enter those particular−1 error branches; the report makes no claim that this occurred physically.
+
+Payload loop continuation requires a positive `fread` result and zero `ferror` before attempting the corresponding write. A read error can exit the loop through the same ordinary continuation as EOF; close/lseek/unlink results in these selected spans are not compared to expected success before proceeding. This is a bounded static guard/order map, not an executed writer error campaign or an audit of every earlier open/lock/archive branch.
+
+## Reproduction and limits
+
+From the workspace root:
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/boot/run4/collect_persistence.py --check
+```
+
+The deterministic host-only collector strictly byte-compares17 outputs: eleven original-code spans with image VAs/file offsets/byte hashes, sixteen exact instruction-word assertions, four pinned inputs, safe schema metadata and pure host checksum/reconciliation models. It verifies table equality and all256 polynomial entries without running original code. `input-hashes.json` pins the executable, shared VFS, original regular-file inventory and prior run3 report; `output-manifest.json` pins authored artifacts and excludes later reviews. Header fields and archive credentials are absent from saved outputs.
+
+Remaining questions, in priority order: establish the enclosing validator/extraction error contract including selection−1 and any genuine factory fallback; map earlier writer archive return/lock handling and later caller policy without exporting secrets; validate the declared-length/short-read limits through further static analysis; establish any required daemon provider closure before assigning semantics to imported locks, process helpers or status functions. Runtime persistence and physical-support conclusions require evidence outside this static checkpoint.

@@ -1,0 +1,10 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a60a8 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b334>:
+   a60a8:	6800      	ldr	r0, [r0, #0]
+   a60aa:	f7ff be81 	b.w	a5db0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b03c>
+   a60ae:	bf00      	nop

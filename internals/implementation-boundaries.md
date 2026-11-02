@@ -1,68 +1,55 @@
 # Implementation Boundaries
 
-This page separates facts directly recoverable from the canonical MyHOME Suite 3.5.38 data from interpretations that need runtime or application-code evidence.
+MyHOME Suite data, application source and Device observations answer different questions. A declared field or frame template can establish an implementation representation without establishing that a particular Physical Device currently supports or executes it.
 
-## Evidence levels
+## Source authority
 
-| Level | Use |
+The [data-store responsibilities](data-store-responsibilities.md) distinguish catalogue capability, management workflows, scenario-editor vocabulary and project persistence. [Evidence and Confidence](../reverse-engineering/evidence-and-confidence.md) defines claim-level confidence and examination methods; neither a source fingerprint nor a passing mechanical check is a semantic verdict.
+
+| Evidence | Appropriate conclusion | Additional evidence required |
+| --- | --- | --- |
+| Database schema and stored rows | Declared keys, values, relationships and source-specific alternatives | Effective consumer precedence and application enforcement |
+| Static application/Firmware path | Inspected branches, arguments and object relationships | Natural caller state, effective dependencies and runtime outcomes |
+| Isolated original helper | Recorded local result for supplied inputs and modeled dependencies | Complete process behavior and Physical Device corroboration |
+| Protocol capture | Behavior of the identified Device, version and Configuration | Generalization to other variants or implementations |
+
+## Established cross-source distinctions
+
+- `OPEN.db` scenarios/sequences describe management communication workflows, not complete user scenes.
+- `DIMENSION 30.KEYO` selects the regular configured Object namespace for an enabled Module (`STATE = 0`) and the Virgin Object namespace for a disabled Module (`STATE = 1`).
+- Addressed-form `N_CONF` is a physical-configurator-position count on corroborated products. The empty-`WHERE` gateway value `15` has separate unresolved semantics.
+- Same-name ScenarioDevices and ScenarioSuite files have source-specific content. Local IDs and version labels are insufficient for a cross-file join.
+- Stored frame templates require contextual address/Parameter validation. Catalogue value domains cannot be replaced with transport maxima.
+- Empty `MHPrj.db` and `PTDB.db` instance tables establish persistence structure, not a configured installation.
+
+These distinctions support interpretation and tooling within the preserved source scope. They do not establish universal MyHOME release or Device support.
+
+## Unresolved consumer behavior
+
+| Question | Remaining evidence need |
 | --- | --- |
-| Established | direct schema, stored value, declared relationship, exact frame, fingerprint, or observed behavior |
-| Implementation-derived | stable meaning recovered from complete data patterns, resource keys, or workflow composition |
-| Inferred | best explanation of a complete pattern without an explicit declaration |
-| Unknown | evidence is absent, conflicting, or supports several explanations |
+| Which ScenarioDevices copy is selected, synchronized or migrated? | Effective file-access/loader behavior and update context |
+| How are database results cached and invalidated? | Corresponding consumer and runtime state |
+| Which component resolves ScenarioDevices resource keys and frame-absent events? | Resource ownership and event-dispatch relationships |
+| How are populated MHPrj/PTDB projects loaded and saved? | Actual persistence consumers and a genuine configured project |
+| How is a populated ScenarioSuite project compiled and deployed? | A natural caller connecting the [XML loader](../reverse-engineering/firmware-analysis/mh202-project-scenario-loader.md) to the [generator](../scenario-engine/scenario-suite-generator.md), plus emitted files and deployment |
+| Which enumerations underlie `WhereType`, `Type` and `OperatorType`? | Application definitions or independently corroborated UI/runtime semantics |
+| How is installed Firmware selected among catalogue alternatives? | Root owner/configuration resolution and complete selection/fallback policy |
+| What do diagnostic dimensions `4` and `5` encode on each product? | Captures with known physical configurator layouts |
+| How are selected management address-rule columns consumed? | Actual query/consumer behavior |
 
-An inference should state both its supporting pattern and the observation that could disprove it.
+## Canonical placement
 
-## Established boundaries
-
-The preserved corpus establishes that MyHOME Suite distributes several independent SQLite stores; `OPEN.db` models systems and workflows; `OpenQuery.txt` names selected reads but is incomplete; `MHCatalogue.db` models capability and contextual constraints; ScenarioDevices models scenario-editor capability rather than complete scenario graphs; and `rules.db3` adds linked-property rules for selected Temperature Control Objects.
-
-## Safe implementation-derived conclusions
-
-The combined evidence supports these conclusions when their scope is retained:
-
-- `OPEN.db` scenarios and sequences form state-machine definitions for MyHOME Suite management workflows;
-- diagnostic/programming `DIMENSION 30.KEYO` uses the regular configured Object namespace for an enabled Module when `STATE = 0` and the Virgin Object namespace for a disabled Module when `STATE = 1`;
-- ordinary addressed-form `N_CONF` represents the number of physical configurator positions on corroborated products; the empty-`WHERE` gateway variant is separate, with observed `N_CONF = 15` outside the ordinary `0..12` range and unresolved exact semantics;
-- the two ScenarioDevices files are distinct revisions whose common semantic content overlaps despite unstable local IDs;
-- literal ScenarioDevices action templates can be rendered only after functional address and Parameter validation;
-- catalogue programming validation is context-sensitive and cannot be reduced to `OPEN.db` transport ranges.
-
-These conclusions do not establish universal support across all MyHOME releases or Devices.
-
-## Runtime questions still open
-
-| Question | Evidence needed |
+| Knowledge | Reference |
 | --- | --- |
-| Which ScenarioDevices copy does MyHOME Suite open, and under what conditions? | file-access trace, decompiled loader, or controlled file substitution |
-| Are Program Files and ProgramData copies synchronized or migrated? | installation/update trace and before/after fingerprints |
-| How are database results cached and invalidated? | process trace or application code |
-| Which component resolves ScenarioDevices resource keys? | resource bundles and call-site analysis |
-| Where are user-authored project and scenario graphs persisted? | controlled project diff or traced save operation |
-| How are frame-absent scenario events mapped to runtime input? | runtime trace and event-dispatch code |
-| What enumerations back `WhereType`, `Type`, and `OperatorType`? | application enum definitions or exhaustive UI/runtime correlation |
-| How is the installed firmware row selected when several catalogue rows match? | controlled Device/version tests or loader code |
-| Are `DIMENSION 4` and `5` values presence flags, raw configurator codes, or another encoding? | captures across known physical configurator layouts |
-| How are the separately selected address-rule columns consumed? | traced query execution and consumer behavior |
+| Shared wire grammar | [Protocol](../protocol/) |
+| Functional WHO semantics | [Functional reference](../functional/) |
+| Device/Firmware/Module/Object model | [Device Model](../device-model/) |
+| Discovery and read-back | [Diagnostics](../diagnostics/) |
+| State-changing workflows | [Programming](../programming/) |
+| End-to-end installation tasks | [Practical Guides](../guides/) |
+| Editor capability and scenario processing | [Scenario Engine](../scenario-engine/) |
+| Application-data roles and source-specific consumers | [MyHOME Suite Internals](README.md) |
+| Method, competing interpretations and source-specific implementation | [Reverse Engineering](../reverse-engineering/) |
 
-## Investigation rules
-
-A future implementation investigation should fingerprint the exact release, monitor file opens and SQLite statements without modifying evidence, make one controlled UI change at a time, diff persistence before and after, correlate traffic by timestamp and semantic path, and record negative evidence.
-
-Private captures can support conclusions but should not be committed because they may contain installation identifiers and network details.
-
-## Documentation placement
-
-| Finding | Section |
-| --- | --- |
-| shared wire grammar | [Protocol](../protocol/) |
-| functional `WHO` semantics | [Functional reference](../functional/) |
-| Device capability hierarchy | [Device Model](../device-model/) |
-| discovery and read-back | [Diagnostics](../diagnostics/) |
-| state-changing workflows | [Programming](../programming/) |
-| complete end-to-end task | [Practical Guides](../guides/) |
-| scenario-editor capability | [Scenario Engine](../scenario-engine/) |
-| application data loading and runtime boundary | MyHOME Suite Internals |
-| method, competing hypotheses, and unresolved research | future `reverse-engineering/` section |
-
-This separation prevents implementation evidence from being repeated as though it were a public protocol guarantee.
+Detailed comparison tables and examination histories remain supporting evidence. Operational conclusions belong in their canonical reference, with the material uncertainty attached to the affected claim.

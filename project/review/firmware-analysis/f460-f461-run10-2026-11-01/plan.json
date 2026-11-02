@@ -1,0 +1,17 @@
+{
+  "started_UTC": "2026-11-01T14:33:09.380088+00:00",
+  "scope": [
+    "F460 localf84d0 nextactiongate or concrete action-domainstate connection",
+    "F461 one unfinished typedaddress/suffix/helper path beyond reviewedprefix"
+  ],
+  "authors": {
+    "F460": "firmware_protocol",
+    "F461": "firmware_boot"
+  },
+  "source_review": "Independent cross-source peers",
+  "documentary_reviewer": "firmware_functional read-only/newreviewfilesonly",
+  "new_execution": 0,
+  "constraints": "Original and completed evidence readonly; immediate exact first copies, parent snapshots before corrections, exclusive versions. No closed output/receiving/transport/auth/session/framing/MQTT/libjel or excluded platformcommand/identityprocess proxies. No runtime/privatevalue/device operations.",
+  "deadline_UTC": "2026-11-01T19:00:00Z",
+  "final_only_UTC": "2026-11-01T18:15:00Z"
+}

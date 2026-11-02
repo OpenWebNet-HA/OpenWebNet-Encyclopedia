@@ -1,0 +1,1554 @@
+{
+  "artifact_id": "firmware-f459-020105",
+  "archive_sha256": "1d9539d6a9e500032438936d1ce28e7cbddef9788c5712d50c9a60586718f6d3",
+  "source_scope": "Fresh F4592.1.5 own ELF32LE ARM headers, selected dependencies/startup/XML metadata and database leads; no original code/body/native execution",
+  "selected_ELF": [
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/bin/bt_driver",
+      "sha256": "3b3224ea624ceaf543f17a0a1ee9d90204b0fb9e1838a3df9d6810626c74fb54",
+      "bytes": 68332,
+      "first64_hex": "7f454c460101010300000000000000000200280001000000a07e0100340000000000000002020005340020000200280000000000010000000000000000800000",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [],
+      "SONAME": [],
+      "SQLite_symbols": [],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "normal"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/home/bticino/drivermanager/bin/bt_driver",
+      "sha256": "3b3224ea624ceaf543f17a0a1ee9d90204b0fb9e1838a3df9d6810626c74fb54",
+      "bytes": 68332,
+      "first64_hex": "7f454c460101010300000000000000000200280001000000a07e0100340000000000000002020005340020000200280000000000010000000000000000800000",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [],
+      "SONAME": [],
+      "SQLite_symbols": [],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "recovery"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/bin/bt_drivers",
+      "sha256": "67ddb4a9d278d1cb7985b8acab3caf61db3de04f0db055e209f76f1787a50024",
+      "bytes": 95288,
+      "first64_hex": "7f454c4601010100000000000000000002002800010000009ce7000034000000b06f01000202000534002000080028001d001c0001000070cc680100cce80100",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libcommon.so.0",
+        "libsqlite3.so.0",
+        "libpthread.so.0",
+        "libexpat.so.1",
+        "libssl.so.1.0.0",
+        "libcrypto.so.1.0.0",
+        "libapplogger.so",
+        "libutils.so",
+        "libglib-2.0.so.0",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "SONAME": [],
+      "SQLite_symbols": [
+        {
+          "symbol": "sqlite3_open",
+          "undefined": true
+        },
+        {
+          "symbol": "sqlite3_close",
+          "undefined": true
+        },
+        {
+          "symbol": "sqlite3_exec",
+          "undefined": true
+        }
+      ],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "normal"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/home/bticino/drivermanager/bin/bt_drivers",
+      "sha256": "67ddb4a9d278d1cb7985b8acab3caf61db3de04f0db055e209f76f1787a50024",
+      "bytes": 95288,
+      "first64_hex": "7f454c4601010100000000000000000002002800010000009ce7000034000000b06f01000202000534002000080028001d001c0001000070cc680100cce80100",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libcommon.so.0",
+        "libsqlite3.so.0",
+        "libpthread.so.0",
+        "libexpat.so.1",
+        "libssl.so.1.0.0",
+        "libcrypto.so.1.0.0",
+        "libapplogger.so",
+        "libutils.so",
+        "libglib-2.0.so.0",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "SONAME": [],
+      "SQLite_symbols": [
+        {
+          "symbol": "sqlite3_open",
+          "undefined": true
+        },
+        {
+          "symbol": "sqlite3_close",
+          "undefined": true
+        },
+        {
+          "symbol": "sqlite3_exec",
+          "undefined": true
+        }
+      ],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "recovery"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libmhshared.so.1",
+      "sha256": "4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377",
+      "bytes": 43208,
+      "first64_hex": "7f454c460101010000000000000000000300280001000000182400003400000068a400000202000534002000060028001c001b0001000070a49e0000a49e0000",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libsqlite3.so.0",
+        "libQt5Core.so.5",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "SONAME": [
+        "libmhshared.so.1"
+      ],
+      "SQLite_symbols": [
+        {
+          "symbol": "sqlite3_close",
+          "undefined": true
+        },
+        {
+          "symbol": "sqlite3_exec",
+          "undefined": true
+        },
+        {
+          "symbol": "sqlite3_open",
+          "undefined": true
+        }
+      ],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "normal"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/home/bticino/drivermanager/modules/libmhshared.so.1",
+      "sha256": "4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377",
+      "bytes": 43208,
+      "first64_hex": "7f454c460101010000000000000000000300280001000000182400003400000068a400000202000534002000060028001c001b0001000070a49e0000a49e0000",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libsqlite3.so.0",
+        "libQt5Core.so.5",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "SONAME": [
+        "libmhshared.so.1"
+      ],
+      "SQLite_symbols": [
+        {
+          "symbol": "sqlite3_close",
+          "undefined": true
+        },
+        {
+          "symbol": "sqlite3_exec",
+          "undefined": true
+        },
+        {
+          "symbol": "sqlite3_open",
+          "undefined": true
+        }
+      ],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "recovery"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libsqlite.so.0",
+      "sha256": "41ad4d4901fdeeee8c8c6df96700c650aa06aafa665583b1102ff4cfb692c1c5",
+      "bytes": 332448,
+      "first64_hex": "7f454c4601010100000000000000000003002800010000005c75000034000000b80e05000200000434002000040028001900180001000070f0ed0400f0ed0400",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x4000002",
+      "DT_NEEDED": [
+        "libpthread.so.0",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "SONAME": [
+        "libsqlite.so.0"
+      ],
+      "SQLite_symbols": [
+        {
+          "symbol": "sqlite_open",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite_exec",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite_version",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite_close",
+          "undefined": false
+        }
+      ],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "normal"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/home/bticino/drivermanager/modules/libsqlite.so.0",
+      "sha256": "41ad4d4901fdeeee8c8c6df96700c650aa06aafa665583b1102ff4cfb692c1c5",
+      "bytes": 332448,
+      "first64_hex": "7f454c4601010100000000000000000003002800010000005c75000034000000b80e05000200000434002000040028001900180001000070f0ed0400f0ed0400",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x4000002",
+      "DT_NEEDED": [
+        "libpthread.so.0",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "SONAME": [
+        "libsqlite.so.0"
+      ],
+      "SQLite_symbols": [
+        {
+          "symbol": "sqlite_open",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite_exec",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite_version",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite_close",
+          "undefined": false
+        }
+      ],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "recovery"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libQt5Core.so.5",
+      "sha256": "bbbf6751c81e4fa2e543c8dbeb4041e95e99ffbf77b00bdc55f0edd38d906b53",
+      "bytes": 4810688,
+      "first64_hex": "7f454c46010101000000000000000000030028000100000020b1050034000000386349000202000534002000070028001d001c00010000707827480078274800",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libpthread.so.0",
+        "libz.so.1",
+        "libdl.so.2",
+        "librt.so.1",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux.so.3"
+      ],
+      "SONAME": [
+        "libQt5Core.so.5"
+      ],
+      "SQLite_symbols": [],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "normal"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/home/bticino/drivermanager/modules/libQt5Core.so.5",
+      "sha256": "bbbf6751c81e4fa2e543c8dbeb4041e95e99ffbf77b00bdc55f0edd38d906b53",
+      "bytes": 4810688,
+      "first64_hex": "7f454c46010101000000000000000000030028000100000020b1050034000000386349000202000534002000070028001d001c00010000707827480078274800",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libpthread.so.0",
+        "libz.so.1",
+        "libdl.so.2",
+        "librt.so.1",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux.so.3"
+      ],
+      "SONAME": [
+        "libQt5Core.so.5"
+      ],
+      "SQLite_symbols": [],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "recovery"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libQt5Script.so.5",
+      "sha256": "c7929ca7398a72a6b9d2cd02473c2f35398a77b1a1b1bbbadda0505525c5496f",
+      "bytes": 1990104,
+      "first64_hex": "7f454c46010101000000000000000000030028000100000034e7010034000000c8591e000202000534002000050028001a001900010000000000000000000000",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libQt5Core.so.5",
+        "libpthread.so.0",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "SONAME": [
+        "libQt5Script.so.5"
+      ],
+      "SQLite_symbols": [],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "normal"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/home/bticino/drivermanager/modules/libQt5Script.so.5",
+      "sha256": "c7929ca7398a72a6b9d2cd02473c2f35398a77b1a1b1bbbadda0505525c5496f",
+      "bytes": 1990104,
+      "first64_hex": "7f454c46010101000000000000000000030028000100000034e7010034000000c8591e000202000534002000050028001a001900010000000000000000000000",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libQt5Core.so.5",
+        "libpthread.so.0",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "SONAME": [
+        "libQt5Script.so.5"
+      ],
+      "SQLite_symbols": [],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "recovery"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/usr/lib/libsqlite3.so.0.8.6",
+      "sha256": "70ba0c1d58d889afc27128ade475df01b45eb1284ab7434a90cf076c48d2c42f",
+      "bytes": 642844,
+      "first64_hex": "7f454c460101010000000000000000000300280001000000f8dfbb44340000006cca09000202000534002000060028001e001d0001000070f8a20900f822c544",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libdl.so.2",
+        "libpthread.so.0",
+        "libc.so.6"
+      ],
+      "SONAME": [
+        "libsqlite3.so.0"
+      ],
+      "SQLite_symbols": [
+        {
+          "symbol": "sqlite3_close",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite3_open",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite3_exec",
+          "undefined": false
+        }
+      ],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "normal"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/usr/lib/libsqlite3.so.0.8.6",
+      "sha256": "f296a868542be50e3858d2e7b2b9a53fd3b44c76127f94581f2a4bcb9a1af2c7",
+      "bytes": 642844,
+      "first64_hex": "7f454c460101010000000000000000000300280001000000f85f104f340000006cca09000202000534002000060028001e001d0001000070f8a20900f8a2194f",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libdl.so.2",
+        "libpthread.so.0",
+        "libc.so.6"
+      ],
+      "SONAME": [
+        "libsqlite3.so.0"
+      ],
+      "SQLite_symbols": [
+        {
+          "symbol": "sqlite3_close",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite3_open",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite3_exec",
+          "undefined": false
+        }
+      ],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "recovery"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/usr/lib/libsqlite.so.0.8.6",
+      "sha256": "0ac41c8033cbb95818728e6d1b3caae36a2f0f60458076bde51545f06c123e7f",
+      "bytes": 465144,
+      "first64_hex": "7f454c460101010000000000000000000300280001000000107a714434000000481407000202000534002000060028001e001d0001000070c4c10600c4c17744",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libc.so.6"
+      ],
+      "SONAME": [
+        "libsqlite.so.0"
+      ],
+      "SQLite_symbols": [
+        {
+          "symbol": "sqlite_exec",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite_close",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite_version",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite_open",
+          "undefined": false
+        }
+      ],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "normal"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/usr/lib/libsqlite.so.0.8.6",
+      "sha256": "7603e689e63c24fbe571a38bc9fcc0c1d54bf308e61efe34a15bc506c53a6f7b",
+      "bytes": 465144,
+      "first64_hex": "7f454c46010101000000000000000000030028000100000010fa0c4f34000000481407000202000534002000060028001e001d0001000070c4c10600c441134f",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libc.so.6"
+      ],
+      "SONAME": [
+        "libsqlite.so.0"
+      ],
+      "SQLite_symbols": [
+        {
+          "symbol": "sqlite_exec",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite_close",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite_version",
+          "undefined": false
+        },
+        {
+          "symbol": "sqlite_open",
+          "undefined": false
+        }
+      ],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "recovery"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/bin/coso",
+      "sha256": "505b3d49b6d922b67194d70c53a6503d13ca18af9e3add9d52d2e5005520399e",
+      "bytes": 27520,
+      "first64_hex": "7f454c4601010100000000000000000002002800010000009cab000034000000f86600000202000534002000080028001d001c0001000070ec5f0000ecdf0000",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libc.so.6",
+        "libglib-2.0.so.0",
+        "libgmodule-2.0.so.0",
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libgthread-2.0.so.0",
+        "libz.so.1",
+        "libxml2.so.2",
+        "libopenmsg.so",
+        "liblog.so",
+        "libutils.so",
+        "libcoso.so",
+        "libgcc_s.so.1"
+      ],
+      "SONAME": [],
+      "SQLite_symbols": [],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "normal"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/home/bticino/bin/coso",
+      "sha256": "505b3d49b6d922b67194d70c53a6503d13ca18af9e3add9d52d2e5005520399e",
+      "bytes": 27520,
+      "first64_hex": "7f454c4601010100000000000000000002002800010000009cab000034000000f86600000202000534002000080028001d001c0001000070ec5f0000ecdf0000",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libc.so.6",
+        "libglib-2.0.so.0",
+        "libgmodule-2.0.so.0",
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libgthread-2.0.so.0",
+        "libz.so.1",
+        "libxml2.so.2",
+        "libopenmsg.so",
+        "liblog.so",
+        "libutils.so",
+        "libcoso.so",
+        "libgcc_s.so.1"
+      ],
+      "SONAME": [],
+      "SQLite_symbols": [],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "recovery"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/bin/bt_daemon",
+      "sha256": "9b3edb368927115773eabb41be37e875367ab3cb0385c7e675260f124b32d3dd",
+      "bytes": 117584,
+      "first64_hex": "7f454c460101010000000000000000000200280001000000d0b7000034000000c8c601000202000534002000080028001d001c0001000070c8b70100c8370200",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "liblghal.so.0",
+        "libcommon.so.0",
+        "libapplogger.so",
+        "libutils.so",
+        "liblgsafe.so",
+        "libssl.so.1.0.0",
+        "libcrypto.so.1.0.0",
+        "libexpat.so.1",
+        "librt.so.1",
+        "libglib-2.0.so.0",
+        "libgmodule-2.0.so.0",
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libgthread-2.0.so.0",
+        "libz.so.1",
+        "libxml2.so.2",
+        "libasound.so.2",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "SONAME": [],
+      "SQLite_symbols": [],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "normal"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/home/bticino/bin/bt_daemon",
+      "sha256": "9b3edb368927115773eabb41be37e875367ab3cb0385c7e675260f124b32d3dd",
+      "bytes": 117584,
+      "first64_hex": "7f454c460101010000000000000000000200280001000000d0b7000034000000c8c601000202000534002000080028001d001c0001000070c8b70100c8370200",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "liblghal.so.0",
+        "libcommon.so.0",
+        "libapplogger.so",
+        "libutils.so",
+        "liblgsafe.so",
+        "libssl.so.1.0.0",
+        "libcrypto.so.1.0.0",
+        "libexpat.so.1",
+        "librt.so.1",
+        "libglib-2.0.so.0",
+        "libgmodule-2.0.so.0",
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libgthread-2.0.so.0",
+        "libz.so.1",
+        "libxml2.so.2",
+        "libasound.so.2",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "SONAME": [],
+      "SQLite_symbols": [],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "recovery"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/bin/dedrifupdater",
+      "sha256": "e2c312c57a991407875f8b97c8a2d498abf343e437a26a26e2f9416b5d0c98af",
+      "bytes": 36720,
+      "first64_hex": "7f454c460101010000000000000000000200280001000000cca2000034000000e88a00000202000534002000080028001d001c0001000070a0850000a0050100",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libasound.so.2",
+        "libglib-2.0.so.0",
+        "libgmodule-2.0.so.0",
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libgthread-2.0.so.0",
+        "libz.so.1",
+        "libxml2.so.2",
+        "liblghal.so.0",
+        "libcommon.so.0",
+        "libssl.so.1.0.0",
+        "libcrypto.so.1.0.0",
+        "libexpat.so.1",
+        "libutils.so",
+        "libapplogger.so",
+        "libdedrifupdater.so",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libc.so.6",
+        "libgcc_s.so.1"
+      ],
+      "SONAME": [],
+      "SQLite_symbols": [],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "normal"
+    },
+    {
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/home/bticino/bin/dedrifupdater",
+      "sha256": "e2c312c57a991407875f8b97c8a2d498abf343e437a26a26e2f9416b5d0c98af",
+      "bytes": 36720,
+      "first64_hex": "7f454c460101010000000000000000000200280001000000cca2000034000000e88a00000202000534002000080028001d001c0001000070a0850000a0050100",
+      "class": 1,
+      "data_encoding": 1,
+      "machine": 40,
+      "flags_hex": "0x5000202",
+      "DT_NEEDED": [
+        "libasound.so.2",
+        "libglib-2.0.so.0",
+        "libgmodule-2.0.so.0",
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libgthread-2.0.so.0",
+        "libz.so.1",
+        "libxml2.so.2",
+        "liblghal.so.0",
+        "libcommon.so.0",
+        "libssl.so.1.0.0",
+        "libcrypto.so.1.0.0",
+        "libexpat.so.1",
+        "libutils.so",
+        "libapplogger.so",
+        "libdedrifupdater.so",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libc.so.6",
+        "libgcc_s.so.1"
+      ],
+      "SONAME": [],
+      "SQLite_symbols": [],
+      "readelf_returncodes": {
+        "dynamic": 0,
+        "dynsyms": 0
+      },
+      "symbol_absence_scope": "Selected dynamic symbol output only, not all internal functions/callers/bindings",
+      "component": "recovery"
+    }
+  ],
+  "normal_recovery_comparison": [
+    {
+      "path": "home/bticino/drivermanager/bin/bt_driver",
+      "instances": {
+        "normal": {
+          "bytes": 68332,
+          "sha256": "3b3224ea624ceaf543f17a0a1ee9d90204b0fb9e1838a3df9d6810626c74fb54"
+        },
+        "recovery": {
+          "bytes": 68332,
+          "sha256": "3b3224ea624ceaf543f17a0a1ee9d90204b0fb9e1838a3df9d6810626c74fb54"
+        }
+      },
+      "whole_file_equal": true,
+      "scope": "Packaged byte equality only, not environment/binding/runtime equality"
+    },
+    {
+      "path": "home/bticino/drivermanager/bin/bt_drivers",
+      "instances": {
+        "normal": {
+          "bytes": 95288,
+          "sha256": "67ddb4a9d278d1cb7985b8acab3caf61db3de04f0db055e209f76f1787a50024"
+        },
+        "recovery": {
+          "bytes": 95288,
+          "sha256": "67ddb4a9d278d1cb7985b8acab3caf61db3de04f0db055e209f76f1787a50024"
+        }
+      },
+      "whole_file_equal": true,
+      "scope": "Packaged byte equality only, not environment/binding/runtime equality"
+    },
+    {
+      "path": "home/bticino/drivermanager/modules/libmhshared.so.1",
+      "instances": {
+        "normal": {
+          "bytes": 43208,
+          "sha256": "4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377"
+        },
+        "recovery": {
+          "bytes": 43208,
+          "sha256": "4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377"
+        }
+      },
+      "whole_file_equal": true,
+      "scope": "Packaged byte equality only, not environment/binding/runtime equality"
+    },
+    {
+      "path": "home/bticino/drivermanager/modules/libsqlite.so.0",
+      "instances": {
+        "normal": {
+          "bytes": 332448,
+          "sha256": "41ad4d4901fdeeee8c8c6df96700c650aa06aafa665583b1102ff4cfb692c1c5"
+        },
+        "recovery": {
+          "bytes": 332448,
+          "sha256": "41ad4d4901fdeeee8c8c6df96700c650aa06aafa665583b1102ff4cfb692c1c5"
+        }
+      },
+      "whole_file_equal": true,
+      "scope": "Packaged byte equality only, not environment/binding/runtime equality"
+    },
+    {
+      "path": "home/bticino/drivermanager/modules/libQt5Core.so.5",
+      "instances": {
+        "normal": {
+          "bytes": 4810688,
+          "sha256": "bbbf6751c81e4fa2e543c8dbeb4041e95e99ffbf77b00bdc55f0edd38d906b53"
+        },
+        "recovery": {
+          "bytes": 4810688,
+          "sha256": "bbbf6751c81e4fa2e543c8dbeb4041e95e99ffbf77b00bdc55f0edd38d906b53"
+        }
+      },
+      "whole_file_equal": true,
+      "scope": "Packaged byte equality only, not environment/binding/runtime equality"
+    },
+    {
+      "path": "home/bticino/drivermanager/modules/libQt5Script.so.5",
+      "instances": {
+        "normal": {
+          "bytes": 1990104,
+          "sha256": "c7929ca7398a72a6b9d2cd02473c2f35398a77b1a1b1bbbadda0505525c5496f"
+        },
+        "recovery": {
+          "bytes": 1990104,
+          "sha256": "c7929ca7398a72a6b9d2cd02473c2f35398a77b1a1b1bbbadda0505525c5496f"
+        }
+      },
+      "whole_file_equal": true,
+      "scope": "Packaged byte equality only, not environment/binding/runtime equality"
+    },
+    {
+      "path": "usr/lib/libsqlite3.so.0.8.6",
+      "instances": {
+        "normal": {
+          "bytes": 642844,
+          "sha256": "70ba0c1d58d889afc27128ade475df01b45eb1284ab7434a90cf076c48d2c42f"
+        },
+        "recovery": {
+          "bytes": 642844,
+          "sha256": "f296a868542be50e3858d2e7b2b9a53fd3b44c76127f94581f2a4bcb9a1af2c7"
+        }
+      },
+      "whole_file_equal": false,
+      "scope": "Packaged byte equality only, not environment/binding/runtime equality"
+    },
+    {
+      "path": "usr/lib/libsqlite.so.0.8.6",
+      "instances": {
+        "normal": {
+          "bytes": 465144,
+          "sha256": "0ac41c8033cbb95818728e6d1b3caae36a2f0f60458076bde51545f06c123e7f"
+        },
+        "recovery": {
+          "bytes": 465144,
+          "sha256": "7603e689e63c24fbe571a38bc9fcc0c1d54bf308e61efe34a15bc506c53a6f7b"
+        }
+      },
+      "whole_file_equal": false,
+      "scope": "Packaged byte equality only, not environment/binding/runtime equality"
+    },
+    {
+      "path": "home/bticino/bin/coso",
+      "instances": {
+        "normal": {
+          "bytes": 27520,
+          "sha256": "505b3d49b6d922b67194d70c53a6503d13ca18af9e3add9d52d2e5005520399e"
+        },
+        "recovery": {
+          "bytes": 27520,
+          "sha256": "505b3d49b6d922b67194d70c53a6503d13ca18af9e3add9d52d2e5005520399e"
+        }
+      },
+      "whole_file_equal": true,
+      "scope": "Packaged byte equality only, not environment/binding/runtime equality"
+    },
+    {
+      "path": "home/bticino/bin/bt_daemon",
+      "instances": {
+        "normal": {
+          "bytes": 117584,
+          "sha256": "9b3edb368927115773eabb41be37e875367ab3cb0385c7e675260f124b32d3dd"
+        },
+        "recovery": {
+          "bytes": 117584,
+          "sha256": "9b3edb368927115773eabb41be37e875367ab3cb0385c7e675260f124b32d3dd"
+        }
+      },
+      "whole_file_equal": true,
+      "scope": "Packaged byte equality only, not environment/binding/runtime equality"
+    },
+    {
+      "path": "home/bticino/bin/dedrifupdater",
+      "instances": {
+        "normal": {
+          "bytes": 36720,
+          "sha256": "e2c312c57a991407875f8b97c8a2d498abf343e437a26a26e2f9416b5d0c98af"
+        },
+        "recovery": {
+          "bytes": 36720,
+          "sha256": "e2c312c57a991407875f8b97c8a2d498abf343e437a26a26e2f9416b5d0c98af"
+        }
+      },
+      "whole_file_equal": true,
+      "scope": "Packaged byte equality only, not environment/binding/runtime equality"
+    }
+  ],
+  "startup": {
+    "normal": [
+      {
+        "path": "work/f459-firmware/2.1.5/analysis/rootfs/etc/inittab",
+        "lines": [
+          {
+            "line": 5,
+            "text": "id:5:initdefault:"
+          },
+          {
+            "line": 9,
+            "text": "si::sysinit:/etc/init.d/rcS"
+          }
+        ]
+      },
+      {
+        "path": "work/f459-firmware/2.1.5/analysis/rootfs/etc/init.d/rcS",
+        "lines": [
+          {
+            "line": 32,
+            "text": "exec /etc/init.d/rc S"
+          }
+        ]
+      },
+      {
+        "path": "work/f459-firmware/2.1.5/analysis/rootfs/etc/init.d/bt_daemon-apps.sh",
+        "lines": [
+          {
+            "line": 5,
+            "text": "cd /home/bticino"
+          },
+          {
+            "line": 6,
+            "text": "bin/bt_daemon &"
+          }
+        ]
+      },
+      {
+        "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/bt_driver",
+        "lines": [
+          {
+            "line": 27,
+            "text": "    export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH_BASE:./modules/"
+          },
+          {
+            "line": 56,
+            "text": "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH_BASE:./modules/"
+          }
+        ]
+      },
+      {
+        "symlink_metadata_source": "work/f459-firmware/2.1.5/analysis/normal-symlinks.json",
+        "metadata_only_runlevel_aliases": [
+          {
+            "path": "etc/rcS.d/S95-dedrifu_env.sh",
+            "target": "../init.d/dedrifu_env.sh"
+          },
+          {
+            "path": "etc/rcS.d/S96-dedrifu.sh",
+            "target": "../init.d/dedrifu.sh"
+          },
+          {
+            "path": "etc/rc4.d/S98-watchdog.sh",
+            "target": "../init.d/watchdog.sh"
+          },
+          {
+            "path": "etc/rc5.d/S98-bt_daemon-apps.sh",
+            "target": "../init.d/bt_daemon-apps.sh"
+          }
+        ]
+      }
+    ],
+    "recovery": [
+      {
+        "path": "work/f459-firmware/2.1.5/analysis/recovery/etc/inittab",
+        "lines": [
+          {
+            "line": 5,
+            "text": "id:5:initdefault:"
+          },
+          {
+            "line": 9,
+            "text": "si::sysinit:/etc/init.d/rcS"
+          }
+        ]
+      },
+      {
+        "path": "work/f459-firmware/2.1.5/analysis/recovery/etc/init.d/rcS",
+        "lines": [
+          {
+            "line": 32,
+            "text": "exec /etc/init.d/rc S"
+          }
+        ]
+      },
+      {
+        "path": "work/f459-firmware/2.1.5/analysis/recovery/etc/init.d/bt_daemon-apps.sh",
+        "lines": [
+          {
+            "line": 5,
+            "text": "cd /home/bticino"
+          },
+          {
+            "line": 6,
+            "text": "bin/bt_daemon &"
+          }
+        ]
+      },
+      {
+        "path": "work/f459-firmware/2.1.5/analysis/recovery/home/bticino/drivermanager/bt_driver",
+        "lines": [
+          {
+            "line": 27,
+            "text": "    export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH_BASE:./modules/"
+          },
+          {
+            "line": 56,
+            "text": "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH_BASE:./modules/"
+          }
+        ]
+      },
+      {
+        "symlink_metadata_source": "work/f459-firmware/2.1.5/analysis/recovery-symlinks.json",
+        "metadata_only_runlevel_aliases": [
+          {
+            "path": "etc/rcS.d/S95-dedrifu_env.sh",
+            "target": "../init.d/dedrifu_env.sh"
+          },
+          {
+            "path": "etc/rcS.d/S96-dedrifu.sh",
+            "target": "../init.d/dedrifu.sh"
+          },
+          {
+            "path": "etc/rc4.d/S98-watchdog.sh",
+            "target": "../init.d/watchdog.sh"
+          },
+          {
+            "path": "etc/rc5.d/S98-bt_daemon-apps.sh",
+            "target": "../init.d/bt_daemon-apps.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "xml_metadata": [
+    {
+      "component": "normal",
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/manifest.xml",
+      "root_tag": "manifest",
+      "tag_counts": {
+        "manifest": 1,
+        "framework": 1,
+        "version": 1,
+        "changelog": 1,
+        "release": 34
+      },
+      "source_line_count": 42,
+      "safe_version_metadata": [
+        {
+          "element": "version",
+          "text": "2.1.0"
+        }
+      ],
+      "scope": "Framework manifest version distinct from outer firmware label; changelog/body and installedstate not inferred"
+    },
+    {
+      "component": "normal",
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/sp/dbfiles_ws.xml",
+      "root_tag": "Root_Element",
+      "tag_counts": {
+        "Root_Element": 1,
+        "general_info": 1,
+        "date": 1,
+        "webserver_type": 1,
+        "ver_webserver": 1,
+        "latest_sp": 1
+      },
+      "source_line_count": 13,
+      "scope": "XML metadata tags only, not a relational DB schema or configured rows"
+    },
+    {
+      "component": "normal",
+      "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/cfg/stack_open.xml",
+      "root_tag": "root",
+      "tag_counts": {
+        "root": 1,
+        "hw": 1,
+        "nvdata": 1,
+        "eeprom": 1,
+        "enable": 10,
+        "device": 4,
+        "mtd": 1,
+        "cfg": 1,
+        "cfgcopy": 1,
+        "cfg_ro": 1,
+        "cfgcopy_ro": 1,
+        "app": 1,
+        "appcopy": 1,
+        "app_ro": 1,
+        "appcopy_ro": 1,
+        "led": 1,
+        "beep": 1,
+        "eth": 1,
+        "sw": 1,
+        "extra_mount": 1,
+        "dedrifu": 1,
+        "abilita_ip": 1,
+        "range_1": 1,
+        "audio_volume": 1,
+        "val_line_out": 1,
+        "val_pcm_vol": 1,
+        "val_rec_gain": 1,
+        "logfile": 2,
+        "wdt": 1,
+        "recovery_enable": 1,
+        "manage_time": 1,
+        "device_update": 1,
+        "type": 1,
+        "path_var": 1,
+        "extra": 1,
+        "check": 1,
+        "nocheck": 1,
+        "security": 1,
+        "ai_enable_capable": 1,
+        "normal_status": 1,
+        "bt_daemon": 1,
+        "logverbosity": 15,
+        "stackopen": 1,
+        "p0": 1,
+        "name": 28,
+        "path": 17,
+        "working_mode": 28,
+        "p1": 1,
+        "p2": 1,
+        "p3": 1,
+        "p4": 1,
+        "p5": 1,
+        "p6": 1,
+        "p7": 1,
+        "p8": 1,
+        "p9": 1,
+        "p10": 1,
+        "p11": 1,
+        "p12": 1,
+        "p13": 1,
+        "p14": 1,
+        "p15": 1,
+        "p16": 1,
+        "id_client": 9,
+        "id_frame": 9,
+        "port_scs": 11,
+        "create_conf_email": 1,
+        "conf_msmtp": 1,
+        "e2_update": 1,
+        "openserver": 1,
+        "port_open": 2,
+        "ssl_port": 1,
+        "ssl_cert": 1,
+        "ssl_key": 1,
+        "max_num_client_up": 3,
+        "hls_needed": 1,
+        "client_01": 1,
+        "time": 11,
+        "chi": 11,
+        "client_02": 1,
+        "client_03": 1,
+        "client_04": 1,
+        "client_05": 1,
+        "client_06": 1,
+        "client_07": 1,
+        "client_08": 1,
+        "client_09": 1,
+        "client_10": 1,
+        "client_11": 1,
+        "scsserver": 1,
+        "port": 13,
+        "bus_type": 2,
+        "has_configurators": 2,
+        "serialchannel": 2,
+        "rts_alim": 2,
+        "scsai": 1,
+        "bt_device": 1,
+        "port_monitor": 11,
+        "time_autodia": 1,
+        "object_model_15_not_managed": 1,
+        "scs_enable": 1,
+        "secure_open_update": 1,
+        "bt_multi": 1,
+        "bt_vct": 1,
+        "id_flgbuf": 1,
+        "id_flgfast": 1,
+        "sendemail": 2,
+        "abil_segreteria": 1,
+        "bt_energia": 1,
+        "bt_luci": 1,
+        "sinottico": 1,
+        "disable_automation": 1,
+        "bt_termo": 1,
+        "bt_difson": 1,
+        "bt_configura": 1,
+        "bt_supervisione": 1,
+        "bt_av_media": 1,
+        "gst_filesink": 1,
+        "gst_afilesink": 1,
+        "aswm_message": 1,
+        "alsa_card": 1,
+        "videodev": 1,
+        "alsa_capture_element": 1,
+        "alsa_playback_element": 1,
+        "crop": 1,
+        "left": 1,
+        "top": 1,
+        "width": 1,
+        "height": 1,
+        "brightness": 1,
+        "min": 5,
+        "max": 5,
+        "delta": 5,
+        "step": 5,
+        "contrast": 1,
+        "saturation": 1,
+        "quality": 1,
+        "sharpness": 1,
+        "latency_time": 1,
+        "buffer_time": 1,
+        "block_size": 1,
+        "latency_time_rec": 1,
+        "buffer_time_rec": 1,
+        "bt_upnp": 1,
+        "upnp_mode": 1,
+        "upnpsearch": 1,
+        "default": 1,
+        "features": 1,
+        "vde": 1,
+        "igd": 1,
+        "coso": 1,
+        "cosoai": 1
+      },
+      "source_line_count": 415,
+      "declared_client_names": [
+        "bt_luci",
+        "bt_difson",
+        "bt_energia",
+        "bt_termo",
+        "bt_device",
+        "bt_vct",
+        "bt_av_media",
+        "bt_supervisione",
+        "coso",
+        "cosoai",
+        "bt_multi"
+      ],
+      "scope": "Selected declared client names only, other config values not exported; no activation/hardware inference"
+    },
+    {
+      "component": "recovery",
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/home/bticino/drivermanager/manifest.xml",
+      "root_tag": "manifest",
+      "tag_counts": {
+        "manifest": 1,
+        "framework": 1,
+        "version": 1,
+        "changelog": 1,
+        "release": 34
+      },
+      "source_line_count": 42,
+      "safe_version_metadata": [
+        {
+          "element": "version",
+          "text": "2.1.0"
+        }
+      ],
+      "scope": "Framework manifest version distinct from outer firmware label; changelog/body and installedstate not inferred"
+    },
+    {
+      "component": "recovery",
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/home/bticino/sp/dbfiles_ws.xml",
+      "root_tag": "Root_Element",
+      "tag_counts": {
+        "Root_Element": 1,
+        "fs_type": 1,
+        "general_info": 1,
+        "date": 1,
+        "webserver_type": 1,
+        "ver_webserver": 1,
+        "latest_sp": 1
+      },
+      "source_line_count": 14,
+      "scope": "XML metadata tags only, not a relational DB schema or configured rows"
+    },
+    {
+      "component": "recovery",
+      "path": "work/f459-firmware/2.1.5/analysis/recovery/home/bticino/cfg/stack_open.xml",
+      "root_tag": "root",
+      "tag_counts": {
+        "root": 1,
+        "hw": 1,
+        "nvdata": 1,
+        "eeprom": 1,
+        "enable": 10,
+        "device": 4,
+        "mtd": 1,
+        "cfg": 1,
+        "cfgcopy": 1,
+        "cfg_ro": 1,
+        "cfgcopy_ro": 1,
+        "app": 1,
+        "appcopy": 1,
+        "app_ro": 1,
+        "appcopy_ro": 1,
+        "led": 1,
+        "beep": 1,
+        "eth": 1,
+        "sw": 1,
+        "extra_mount": 1,
+        "dedrifu": 1,
+        "abilita_ip": 1,
+        "range_1": 1,
+        "audio_volume": 1,
+        "val_line_out": 1,
+        "val_pcm_vol": 1,
+        "val_rec_gain": 1,
+        "logfile": 2,
+        "wdt": 1,
+        "recovery_enable": 1,
+        "manage_time": 1,
+        "device_update": 1,
+        "type": 1,
+        "path_var": 1,
+        "extra": 1,
+        "check": 1,
+        "nocheck": 1,
+        "security": 1,
+        "ai_enable_capable": 1,
+        "normal_status": 1,
+        "bt_daemon": 1,
+        "logverbosity": 15,
+        "stackopen": 1,
+        "p0": 1,
+        "name": 28,
+        "path": 17,
+        "working_mode": 28,
+        "p1": 1,
+        "p2": 1,
+        "p3": 1,
+        "p4": 1,
+        "p5": 1,
+        "p6": 1,
+        "p7": 1,
+        "p8": 1,
+        "p9": 1,
+        "p10": 1,
+        "p11": 1,
+        "p12": 1,
+        "p13": 1,
+        "p14": 1,
+        "p15": 1,
+        "p16": 1,
+        "id_client": 9,
+        "id_frame": 9,
+        "port_scs": 11,
+        "create_conf_email": 1,
+        "conf_msmtp": 1,
+        "e2_update": 1,
+        "openserver": 1,
+        "port_open": 2,
+        "ssl_port": 1,
+        "ssl_cert": 1,
+        "ssl_key": 1,
+        "max_num_client_up": 3,
+        "hls_needed": 1,
+        "client_01": 1,
+        "time": 11,
+        "chi": 11,
+        "client_02": 1,
+        "client_03": 1,
+        "client_04": 1,
+        "client_05": 1,
+        "client_06": 1,
+        "client_07": 1,
+        "client_08": 1,
+        "client_09": 1,
+        "client_10": 1,
+        "client_11": 1,
+        "scsserver": 1,
+        "port": 13,
+        "bus_type": 2,
+        "has_configurators": 2,
+        "serialchannel": 2,
+        "rts_alim": 2,
+        "scsai": 1,
+        "bt_device": 1,
+        "port_monitor": 11,
+        "time_autodia": 1,
+        "object_model_15_not_managed": 1,
+        "scs_enable": 1,
+        "secure_open_update": 1,
+        "bt_multi": 1,
+        "bt_vct": 1,
+        "id_flgbuf": 1,
+        "id_flgfast": 1,
+        "sendemail": 2,
+        "abil_segreteria": 1,
+        "bt_energia": 1,
+        "bt_luci": 1,
+        "sinottico": 1,
+        "disable_automation": 1,
+        "bt_termo": 1,
+        "bt_difson": 1,
+        "bt_configura": 1,
+        "bt_supervisione": 1,
+        "bt_av_media": 1,
+        "gst_filesink": 1,
+        "gst_afilesink": 1,
+        "aswm_message": 1,
+        "alsa_card": 1,
+        "videodev": 1,
+        "alsa_capture_element": 1,
+        "alsa_playback_element": 1,
+        "crop": 1,
+        "left": 1,
+        "top": 1,
+        "width": 1,
+        "height": 1,
+        "brightness": 1,
+        "min": 5,
+        "max": 5,
+        "delta": 5,
+        "step": 5,
+        "contrast": 1,
+        "saturation": 1,
+        "quality": 1,
+        "sharpness": 1,
+        "latency_time": 1,
+        "buffer_time": 1,
+        "block_size": 1,
+        "latency_time_rec": 1,
+        "buffer_time_rec": 1,
+        "bt_upnp": 1,
+        "upnp_mode": 1,
+        "upnpsearch": 1,
+        "default": 1,
+        "features": 1,
+        "vde": 1,
+        "igd": 1,
+        "coso": 1,
+        "cosoai": 1
+      },
+      "source_line_count": 415,
+      "declared_client_names": [
+        "bt_luci",
+        "bt_difson",
+        "bt_energia",
+        "bt_termo",
+        "bt_device",
+        "bt_vct",
+        "bt_av_media",
+        "bt_supervisione",
+        "coso",
+        "cosoai",
+        "bt_multi"
+      ],
+      "scope": "Selected declared client names only, other config values not exported; no activation/hardware inference"
+    }
+  ],
+  "shared_store_literals": [
+    {
+      "file_offset": 37044,
+      "literal": "/tmp/plugin.shared.sqlite",
+      "raw_bytes_hex": "2f746d702f706c7567696e2e7368617265642e73716c697465",
+      "scope": "Original constant only; no instruction/caller/call-argument/order/runtime join proved"
+    },
+    {
+      "file_offset": 37200,
+      "literal": "CREATE TABLE shared (pluginname varchar(90), key varchar(90), value varchar(32768), persistent boolean default 0, PRIMARY KEY (pluginname,key))",
+      "raw_bytes_hex": "435245415445205441424c45207368617265642028706c7567696e6e616d652076617263686172283930292c206b65792076617263686172283930292c2076616c75652076617263686172283332373638292c2070657273697374656e7420626f6f6c65616e2064656661756c7420302c205052494d415259204b45592028706c7567696e6e616d652c6b65792929",
+      "scope": "Original constant only; no instruction/caller/call-argument/order/runtime join proved"
+    }
+  ],
+  "product_role_source": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0198-f459-driver-manager.md",
+  "database_lead": "libmhshared imports sqlite3_open and DT_NEEDEDlibsqlite3; separate module libsqlite exports sqlite_open. Literal/tableDDL are source constants, not an extracted populated DB or executed CREATE/open. SQLite2 and3 interfaces not conflated.",
+  "original_execution": 0,
+  "SQL_schema_or_data_execution": 0,
+  "closed_routes": "No authentication/receiving/transport/session/framing/MQTT/libjel bodies examined; names/config tags are not physical roles"
+}

@@ -1,0 +1,29 @@
+# Independent catalogue SQL-owner source review
+
+PASS for catalogue/REPORT.md and its bounded conditional source join. No correction requested. I independently reviewed original bytes/control/argument aliases and the selected SQL text; this was not execution of SQL, stored expressions, vendor/native code, providers, application startup, transport or physical behavior. All original execution is 0. No author files were edited.
+
+Reproduced collect_owner_v1.py --check: 29 outputs. Independently mapped original matrix_mx PT_LOAD segments, including the different RW file offset, and verified all 22 raw span hashes, 19 halfword/file-byte guards, 12 PIC joins, four GOT value chains, seven selected relative relocations, both relocated data hashes and init_array entry 11. The original SQL text/hash and ordered 15-column list match. All 31 first copies (report, collector, outputs) match current bytes and the non-self-referencing snapshot index. Source limits and the single positive-integer host text-substitution case are appropriately separate from target string/SQLite execution.
+
+Critical source joins verified:
+
+- Vtable address point 0x20a880 stores Thumb a8c01 and points through original RTTI to 14kobj_value_139. Factory 0xb9934 requests 72 bytes and uses allocation+12 as its inner object. It stores the selected class address point there after base construction. It therefore uses allocation+48 for inner+36 SQL, and allocation+32/+36 for inner+20/+24 result fields. Wrapper/control-prefix offsets and inner offsets are not conflated.
+- Factory arguments preserve ordinary values through r7/r9/r5; base call 0xb9982 supplies inner, literal key139, modobj, line_modobj and the stack fifth argument brand_modobj. Base 0xb91b0 stores those fields, zeroes inner+20/+24 and copies the initialized global string into inner+36. Startup index11 -> veneer161c8 -> initializer15464 supplies the same global210720 and actual SQL literal1c4f70. The earlier independent two-column declaration remains separate.
+- Four exact token replacement loops read inner+4/+8/+12/+16 and call the original signed-decimal helper. Their lengths 8/13/14/12 and original string find/replace calls support the source substitutions, subject to ordinary provider completion. Context values are not silently relabeled commercial IDs or external input.
+- The SELECT list is exactly fifteen schema expressions: zero-based 13 is EN_KEY_OBJECT.slots and 14 is AS_OBJECT_SYSTEM.id_system. Both the selected virtual reader and factory's inlined path request text conversion/base10 strtol into corresponding inner fields. Initial step101 versus later repeat100 guards and later-row overwrites remain explicit; no unique row/tie order, query success or error behavior was supplied. Slots and system ID remain catalogue namespaces, not physical capacity or WHO values.
+- Startup registry selected record at array+900 carries key139, factory b9935, manager and invoker a2a15 through actual data references. The caller uses the same registry base210b1c, matches current integer keys and checks callable presence. Original caller 0xa1408..0xa143c and wrapper 0xa2a14 show context+76/+80/+84 values forwarded as dereferenced modobj/line/brand arguments. I additionally inspected the original caller prefix0xa1320..0xa1400 to verify its stack pointer setup and preceding998c0/word420 comparison, without assigning that guard a complete eligibility meaning or following its callee.
+
+The registry/source mapping is positive but conditional on completed initialization, retained entry/key, ordinary container/callable/provider behavior and no later mutation/interposition. Natural key/context producers, actual activation, all admission/version/filter effects, later field users, complete shared ownership/unwind and runtime results remain unresolved. The local text example is not accepted device input or a naturally generated configuration. No missing assets or older firmware layout was invented.
+
+Reviewed SHA-256 pins, relative to catalogue/:
+
+| File | SHA-256 |
+| --- | --- |
+| REPORT.md | 03e91bcd39e0c1c1dc4d0b08145981bcd1ea73556f97e868b0113172b33c835a |
+| collect_owner_v1.py | 8778eed02bac5c29d6901b5a507bb9d0e6b5c8bfef8f174d7f3a468571d6cebf |
+| OUTPUT_MANIFEST.json | c8570623c3a8221d70278bafa4b95d7b7fb6225b5ae646686e98150d449a8986 |
+| ORIGINAL_SOURCE.json | 4d2fb1f280a135a7019a287a63cb34db4fe51b851f9d1b0d22b8a70a10807605 |
+| SQL_TEMPLATE.json | f7cbb38253d5a7a2ade9d3211e539a52d5ce9590d157f67dc06b322f62552fa5 |
+| OWNER_ALIAS_LEDGER.json | 0d9254fc8c6e38af6a7316d79026d614379f0844b82d724a7315607234b8071d |
+| initial-generated-v1/SNAPSHOT_INDEX.json | 4612bf819ede20a9333398688f027ae2e62e9b5fd1403bc6262d21283ed3f292 |
+
+Original matrix_mx SHA-256: 96348136c2a0ebe859c689eb6246e3889e5154fdb63ffd5f3fc76975ac596717. This new ASCII review was exclusively created and frozen immediately by announcing its exact hash. No prior source/review candidate was overwritten.

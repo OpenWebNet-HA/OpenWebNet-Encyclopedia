@@ -1,0 +1,97 @@
+{
+  "collector_sha256": "084389db91846c162c66e92370d3ce3ae8af457a8d8d66e3030496bed2c5a7a6",
+  "counts": {
+    "global_PIC": 3,
+    "guards": 47,
+    "import_call_PLT_proofs": 5,
+    "inputs": 8,
+    "local_targets": 18,
+    "original_execution_additions": 0,
+    "selected_table_relative_relocations": 2,
+    "selected_table_rows": 1,
+    "spans": 17
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 1913,
+      "sha256": "6c5f8c4a2c5ddc8b70ae0ea70b322272aafdc54513a54f64fdf5cab88cc02636"
+    },
+    "ORIGINAL_SOURCE.json": {
+      "bytes": 12065,
+      "sha256": "455045880ae2b1397dd7f59dfc047920fbffbab10eed00ef701102320516e9d4"
+    },
+    "SELECTED_RELATION.json": {
+      "bytes": 2200,
+      "sha256": "6bd6fbcefe52b982b50adf6bc8a7a6be0451e4b98cf9b91e11d77f218839e9b9"
+    },
+    "spans/converter-length-two-copy-path.txt": {
+      "bytes": 649,
+      "sha256": "b8c346df0664bb16c461eb180d0be024f700180056e86c9734278aaedfbe15cf"
+    },
+    "spans/converter-result-source-ABI.txt": {
+      "bytes": 728,
+      "sha256": "970a1fbc3e686fa2b1077903bf0815d265670fb89fe8776b4176a2a5607e3723"
+    },
+    "spans/converter-short-string-branch.txt": {
+      "bytes": 510,
+      "sha256": "a24bb91657d3203dcc41a00145f60f432fc1aa5f11d7ca07b698033c5f09f17a"
+    },
+    "spans/converter-status-copy-rejoin.txt": {
+      "bytes": 435,
+      "sha256": "1cea8fa591853d907d26a51b9abbc1934ea618ffe2a89cfc3d0d462cdd0fc668"
+    },
+    "spans/converter-status-guard-index.txt": {
+      "bytes": 476,
+      "sha256": "7cf283c931a14fd05401ea3d64e85867d5d4c0bd69bbbcaa591dd1cae2e83081"
+    },
+    "spans/converter-status-member-store.txt": {
+      "bytes": 854,
+      "sha256": "b8b8c8783202a60258aa52ac1f37141ef76976257e16527f844171ea519425e3"
+    },
+    "spans/converter-status-table-selection.txt": {
+      "bytes": 828,
+      "sha256": "73b71f5c9cc96b20f11d2ed082ba942ce35babe75cde9f1aa1f2417ca3e3a00f"
+    },
+    "spans/first-capture-query-prefix.txt": {
+      "bytes": 1528,
+      "sha256": "58f91b07ff2dccca752b85eab058d452e4c960a87ec84ae6c3238792693c0cef"
+    },
+    "spans/first-retained-string-word-stores.txt": {
+      "bytes": 889,
+      "sha256": "a8205a2d756f5435478ec64bceb8f5bcd67dc0c7794b532209b4f477d1e0098c"
+    },
+    "spans/first-return-nonnull-guard.txt": {
+      "bytes": 841,
+      "sha256": "9c9bb9568650e646a401c3702fbd736e48c7e94de6a3e8c26020f4bd99d51734"
+    },
+    "spans/second-ID-merge-local.txt": {
+      "bytes": 1503,
+      "sha256": "232fc03f00927f154454cadfa365721ca74c26e0758b74d6d54aad7d13833247"
+    },
+    "spans/second-actual-params-source.txt": {
+      "bytes": 405,
+      "sha256": "68e26969317106f844a8ef899d1b2562e76251b5624184aa30661947a19d557e"
+    },
+    "spans/second-descriptor-merge-guard.txt": {
+      "bytes": 1040,
+      "sha256": "90519e912828aff3abb29be435e90ba05ed9eb92ed08160cb7c415d9944f5c67"
+    },
+    "spans/second-global-string-selection.txt": {
+      "bytes": 977,
+      "sha256": "e99e9902a50988a1487a96696b71122f8c1708550a7331bf04d279a85a6b9bc9"
+    },
+    "spans/second-selected-on-arm.txt": {
+      "bytes": 566,
+      "sha256": "5518b98d0b28f607b44e9b840ff5afc329f7941cef6587bf05f5ffcb6f1db074"
+    },
+    "spans/second-status-pair-copy.txt": {
+      "bytes": 350,
+      "sha256": "13719f5365ec695bd7fe3fd20430845d4d4bf5efcdc469b50766db02a7993984"
+    },
+    "spans/second-status-store-rejoin.txt": {
+      "bytes": 434,
+      "sha256": "cde144e003e9128b5be92350436e9b7c8f06c8934e6483b6411b93ec18f71e69"
+    }
+  },
+  "report_sha256": "fc0f6a13fdde606d950b8f95f3b66c2a899e8f524a0effbbe86b5e1471774075"
+}

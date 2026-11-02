@@ -1,0 +1,86 @@
+{
+  "application_script_all_three_lines": [
+    {
+      "line": 1,
+      "text": "puts \"Sys_Exec Bt_Start\""
+    },
+    {
+      "line": 2,
+      "text": "echo 1 > /proc/sys/kernel/printk"
+    },
+    {
+      "line": 3,
+      "text": "sys_exec /bin/bt_start"
+    }
+  ],
+  "baseline_boundary": "Prior first-exploration packet already records recovery script launch and header entry; new main argument/import handoff not present in its three pinned selected members",
+  "coverage_role": "Inherited recovery script/init/header context; new coverage only the exact ELF entry/import/main-argument edge",
+  "echo_limit": "Line2 is retained as a Tcl command request with literal > argument; helper/command resolution/body/redirection/write semantics are opaque, and successful completion is a premise.",
+  "init_selected_lines": [
+    {
+      "line": 1,
+      "text": "#!/bin/ettclsh"
+    },
+    {
+      "line": 120,
+      "text": "# Run user applications in /etc/applications"
+    },
+    {
+      "line": 121,
+      "text": "foreach n [lsort [glob -nocomplain /etc/applications/*]] {"
+    },
+    {
+      "line": 122,
+      "text": "    if ![file isfile $n] continue; # skip directories"
+    },
+    {
+      "line": 123,
+      "text": "    if ![sys_fork] {"
+    },
+    {
+      "line": 124,
+      "text": "\tcatch {unset pid}"
+    },
+    {
+      "line": 125,
+      "text": "        newcmdname [file tail $n]"
+    },
+    {
+      "line": 126,
+      "text": "        source $n; exit"
+    },
+    {
+      "line": 127,
+      "text": "    } else {"
+    },
+    {
+      "line": 128,
+      "text": "        puts \"   Application: [file tail $n]\""
+    },
+    {
+      "line": 129,
+      "text": "    }"
+    },
+    {
+      "line": 130,
+      "text": "}"
+    }
+  ],
+  "not_proved": [
+    "Recovery actually booted, process created/replaced, candidate main called or successfully returned",
+    "Complete startup/admission/order/readiness/dependencies, installed application overlay, copy/install or live configuration",
+    "Module/display/output/physical behavior, protocol support, database bytes/schema or archive extraction"
+  ],
+  "premises": [
+    "Actual recovery environment/image selection, loader/interpreter availability and effective path composition",
+    "Natural init-loop and child-branch admission, regular-file/provider results, valid interpreter/helper ABI and normal preceding command returns",
+    "sys_exec provider binds requested pathname to this exact ELF and loader reaches declared entry with valid initial ABI/state",
+    "Effective __libc_start_main binding and conventional startup ABI/provider meaning; no provider/main body executed or inferred"
+  ],
+  "recovery_image": {
+    "bytes": 19922944,
+    "provenance": "Own saved extraction records; no mount/re-extraction/runtime selection",
+    "sha256": "ed5897736769f2fadbf3c7668ae4b58728346c769d165647c59989320f0db729"
+  },
+  "selected_chain": "On natural admission of own recovery init applications loop and selected regular script, false sys_fork result requests source; after normal completion of preceding script commands, line3 requests sys_exec /bin/bt_start. If actual helpers/loader select this exact original binary and reach its entry,0x8f84 supplies0xb8c0 inR0 to actual libc-start request0x8f8c."
+}

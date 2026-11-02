@@ -1,0 +1,125 @@
+{
+  "checkpoint": "run1",
+  "status": "reviewed_selected_static_paths; overnight examination active",
+  "artifact": {
+    "id": "firmware-mh202-010024",
+    "filename": "MH202_010024.fwz",
+    "bytes": 37111681,
+    "sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+    "redistribution": "private-archive-only",
+    "version_label": "1.0.24"
+  },
+  "method": "Original-byte/configuration/source and host-only extraction/consistency; original ARM/PHP/JS execution0",
+  "exports": [
+    {
+      "role": "report",
+      "area": "inventory",
+      "research_path": "work/mh202-firmware/research/2026-10-30/inventory/REPORT.md",
+      "source_sha256": "eeb9499ddefb70825866dff78865ba2fa26828daf87d8e37e1203d3bb7a30205",
+      "published": "run1-inventory-report.txt",
+      "published_sha256": "eeb9499ddefb70825866dff78865ba2fa26828daf87d8e37e1203d3bb7a30205",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "role": "report",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run1/REPORT.md",
+      "source_sha256": "4bd567b9a05afe7a728895966aabbcc2d6c20929b9ffa12d1524fe7f7b0061f6",
+      "published": "run1-functional-report.txt",
+      "published_sha256": "4bd567b9a05afe7a728895966aabbcc2d6c20929b9ffa12d1524fe7f7b0061f6",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run1/REPORT.md",
+      "source_sha256": "d446a542be2ea7e67a7b07c249bef85525450b5ecc6288b1025b3f5ec68c52d0",
+      "published": "run1-protocol-report.txt",
+      "published_sha256": "d446a542be2ea7e67a7b07c249bef85525450b5ecc6288b1025b3f5ec68c52d0",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "role": "report",
+      "area": "boot",
+      "research_path": "work/mh202-firmware/research/2026-10-30/boot/run1/REPORT.md",
+      "source_sha256": "6035e497fcf4c8373ec84ae18ef2a2ff034ee4d8f49c16afac6d8c2199b1a4de",
+      "published": "run1-boot-report.txt",
+      "published_sha256": "6035e497fcf4c8373ec84ae18ef2a2ff034ee4d8f49c16afac6d8c2199b1a4de",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "role": "report",
+      "area": "web",
+      "research_path": "work/mh202-firmware/research/2026-10-30/web/run1/REPORT.md",
+      "source_sha256": "c7e4d114ff1676841968f09839db39c1966bcb492791f6562fd2a352607a728b",
+      "published": "run1-web-report.txt",
+      "published_sha256": "c7e4d114ff1676841968f09839db39c1966bcb492791f6562fd2a352607a728b",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run1/functional-review.md",
+      "source_sha256": "0982f8199424a57a70bdcd95788660a4a8f0bf6205dc2636694e2ac601e759e4",
+      "published": "run1-functional-review.txt",
+      "published_sha256": "0982f8199424a57a70bdcd95788660a4a8f0bf6205dc2636694e2ac601e759e4",
+      "normalization": "Local workspace prefix removed if present; no review content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run1/protocol-review.md",
+      "source_sha256": "ccbac031e76843f6446d74ee4e267ac70319abf089979a19447e0c600b956dbb",
+      "published": "run1-protocol-review.txt",
+      "published_sha256": "ccbac031e76843f6446d74ee4e267ac70319abf089979a19447e0c600b956dbb",
+      "normalization": "Local workspace prefix removed if present; no review content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "boot",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run1/boot-review.md",
+      "source_sha256": "46068840e41cd55ec6d7d632ebe3419ac82fb11af0812cc340005b5a0bf801f4",
+      "published": "run1-boot-review.txt",
+      "published_sha256": "46068840e41cd55ec6d7d632ebe3419ac82fb11af0812cc340005b5a0bf801f4",
+      "normalization": "Local workspace prefix removed if present; no review content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "inventory-web",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run1/inventory-web-review.md",
+      "source_sha256": "6d5afb681334f7c10f9c82d8298f54e43e67a0783e47d3fce59d7ee1357ebe62",
+      "published": "run1-inventory-web-review.txt",
+      "published_sha256": "6d5afb681334f7c10f9c82d8298f54e43e67a0783e47d3fce59d7ee1357ebe62",
+      "normalization": "Local workspace prefix removed if present; no review content changed"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/inventory/collect_inventory.py",
+      "sha256": "5f050aab83dcb71836e2286fc7f19c6683fcd46ab7e5b228892dd82cdc46943f"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run1/collect_evidence.py",
+      "sha256": "a12e957b699b2c4b0a0340108d3efaffdf8b64c36bf7de49bc52b66a5c50a559"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run1/collect_evidence.py",
+      "sha256": "f09173adab5475d6066ae21d94b30dbec924e374e26b7addb4223768452a72ff"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/boot/run1/collect_boot.py",
+      "sha256": "d003e3875f50fc92f883bc007072902f90d2e447b4ce839273a8d0864a21be70"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/web/run1/collect_evidence.py",
+      "sha256": "a1f3a5d534fae32b272ee5409361b7a551c22c93293589d299c1a67a035ae419"
+    }
+  ],
+  "limits": [
+    "Missing external assets and actual persistent partition contents",
+    "No deployed runtime/provider/physical behavior observed",
+    "Source review and exact hashes are not original execution",
+    "Device wider source review gates remain pending"
+  ],
+  "history": "Prior F454 reports/indexes unchanged; exact final reviewed document bytes frozen before shared navigation updates"
+}

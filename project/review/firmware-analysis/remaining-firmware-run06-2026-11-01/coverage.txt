@@ -1,0 +1,11 @@
+# Coverage after run06
+
+| Family | New selected reach | Remaining |
+| --- | --- | --- |
+| F450std/PROD | Actual caller supplies two resource-path pointers to opaque localrequest; numerical returngate | Rejected helper body unexamined; actual parser/files/template activation/archiveinput/DB unresolved |
+| F453AV | Own recoverymain file-request−1gate→one compiled path-cell assignment | Currentflags/admission/provider/marker meaning/actual resources/copy/install/hardware |
+| F459 | Selected normal D1close-before-watcher requests; D0same-receiver destructor/delete requestchain | Actualclosure/durability/lastowner/callbackquiescence/binding/completeunwind/concurrency |
+| MH200N | Prior qualified reader/token/copy-request context only | Fullgrammar/fieldmeaning/capacity/actualassets/install |
+| F455 | Prior raw-format candidate only | Authoritative CPU/loader/ISA/ABI/base provenance |
+
+No rejected-body inspection or workarounds, no allmethod/table replay. Neworiginal/vendor/helper/native/emulator/SQL/target/runtime/physical execution0; DBrecovery0/newR2objects0/cumulative1encryptedSupport0plaintext. Prior151run05indexedmembers protected; earlier scoped source/Device/runtimegates remainpending. Currentpage edit has exacthistoricalmapping; oldcapsules unchanged.

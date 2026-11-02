@@ -1,0 +1,38 @@
+[
+  {
+    "bytes": 2161128,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager",
+    "role": "Own immutable original ELF",
+    "sha256": "5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62"
+  },
+  {
+    "bytes": 13261,
+    "path": "work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/SOURCE.json",
+    "role": "Inherited same-receiver constructor105760 request, not new coverage",
+    "sha256": "2b0aaadc55a2e7f62c00cbe8e611d8cc00a09020f4035133fc06224fd0fa6395"
+  },
+  {
+    "bytes": 1907,
+    "path": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-input-producer/PREPARATION_HISTORY.json",
+    "role": "Actual failed pre-read preparation/order disclosure",
+    "sha256": "47c763a29a29837201c5f530842446a01b68a6cdce8b6667c17dc2a62b53dbde"
+  },
+  {
+    "bytes": 1034,
+    "path": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-input-producer/POSTREAD_SCOPE.json",
+    "role": "Honest post-read canonical scope, not retroactive authorization",
+    "sha256": "22221d7dd8aa47986af0083a12abcbe0b113852f79be4c233527d0308154c9d6"
+  },
+  {
+    "bytes": 1307,
+    "path": "work/configured-scene-module-investigation/2026-11-02/PRODUCER_POSTREAD_DECISION.json",
+    "role": "Root actual post-read decision and limitation",
+    "sha256": "500afb708dc04322421dfa927cc369600e14a4b76a4448868ac64f688b0eb3c3"
+  },
+  {
+    "bytes": 523,
+    "path": "work/configured-scene-module-investigation/2026-11-02/parent-before-producer-tooling/INDEX.json",
+    "role": "Exact parent history snapshot before canonical authoring",
+    "sha256": "305d8c089177ab2ee90b38ede542e7795b41f5f779ccee73c2ab6a28498a066e"
+  }
+]

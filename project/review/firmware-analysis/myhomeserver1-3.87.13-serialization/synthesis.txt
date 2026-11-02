@@ -1,0 +1,5 @@
+# Serialization and action-owner transfer
+
+The raw BN3L virtual serializer is now identified and joined to the same-result reparse. It conditionally omits zero delay/duration and numeric−1 while explicitly emitting status−1 as noStatus; field presence therefore is not an identity roundtrip. Candidate packaged JsonCpp source narrows omitted-number/null→asUInt0 and constructedunsigned32→same lowword readback, without executing full JSON/object/string/assignment/map semantics or effective binding.
+
+A concrete SLEEP action/control pair is retained through normal/capacity-growth append into the scene compiled-action vector. Temporary copy/release/sourcezero and raw relocation preserve the selected stored owner under normal vector/provider premises. This owner complements raw worker captures, without proving complete lifetime, safe concurrency or a defect.

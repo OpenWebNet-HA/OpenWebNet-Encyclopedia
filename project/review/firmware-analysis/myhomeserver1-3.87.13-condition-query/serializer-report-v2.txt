@@ -1,0 +1,82 @@
+# MyHOMEServer1 3.87.13: BNLD condition serialization and operator decoding
+
+The actual raw BNLD serializer calls a condition-specific base serializer, then emits either a status string or a signed level value. Its status−1 route always emits level, including level−1; it does not emit the `noStatus` member text on that route. The condition base independently decodes exact operator names to local stored integers. These facts narrow the preceding serializer/operator premises without executing JSON, repeating the predicate table or claiming an accepted scene grammar or physical lighting behavior.
+
+Original instructions, native helpers, JsonCpp/provider/vendor/target execution and semantic host cases are0. Curated OWN-DEV-0199 supplies home-automation/scenario product context only; private BNLD/type/operator integers are not public OPEN WHO/WHAT or observed device state. Original images, earlier reports and repository references remain read-only. No F454 code or transport/authentication/session/framing implementation is inspected.
+
+## Original ownership and same-result caller
+
+Original `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Fresh ELF32 PT_LOAD translation resolves raw header0x1600b8, address point0x1600c0, first virtual method Thumb0x28179 (instruction entry0x28178), RTTI0x162f88/name `13BnldCondition`. The constructor temporarily installs header0x1600a8/AP0x1600b0, RTTI `17BaseBnldCondition`, through GOT0x16618c; it shares the serializer pointer Thumb0x28179. Initializer0xa7d68 reinstalls final header0x1600b8 through its separate pool0xa7f80/GOT0x1660f8. These temporary/final identities are distinct and independently asserted, rather than equated from the shared method pointer. Original relative relocations support these linked pointers; runtime relocation/binding/vtable validity are not observed.
+
+The serializer0x28178 calls original common condition serializer0x23aac at0x28192. It does not use the earlier BNIL trigger serializer or action serializer. Their similar-looking fields are not transferred as proof. Retained code stops at each method's pool boundary; four following data ranges are hashed separately, so literal words are not interpreted as control flow.
+
+At initializer0xa7d40, the supplied raw object's vtable first slot is invoked at0xa7d50 with JSON destination current SP+592 (r4).0xa7d54 passes that same r4 as r1 to raw constructor0x2bd58 at0xa7d5c, with raw destination current SP+4280 (r9). That reparsed object is then passed to compiled constructor0xf1634 at0xa7d74. The selected allocation request is152 bytes and the publication helper0xa7264 receives the scene+116 destination. This batch establishes the same-result input alias and calls; allocation, JSON assignment, publication, compiled predicate and full lifetime remain the earlier report's conditional or separate scopes.
+
+## Base condition emission and decoding
+
+The common condition base serializer0x23aac preserves result/object aliases in r6/r5, constructs an initial Json value with type argument0 and requests these member assignments:
+
+| Key | Raw source | Selected normal emission |
+| --- | --- | --- |
+| `id` | string+4 / length+8 | Emitted as Json string only when length is nonzero |
+| `enabled` | byte+28 | Always assigned through Json Boolean constructor |
+| `type` | word+32 | Always assigned a string; unsigned0..22 selects condition-name table, otherwise empty text |
+| `operator` | word+36 | Omitted iff raw word is−1; otherwise recognized0..3 selects text, outside that domain assigns empty text |
+
+This condition-name bound is22, giving23 rows, rather than the trigger/action table bound23. Original pool/GOT evidence resolves condition table0x1605b0 and row2 length4/text `BNLD`. No table-count or method behavior is imported by analogy.
+
+The common raw condition constructor0x2b7d0 initializes type32=0/operator36=−1, obtains enabled through asBool, handles the optional id string, searches the same condition-name table and parses operator text. Fresh original comparisons, GOT literal identities and assignments establish:
+
+| Exact operator text | Stored raw operator36 | Serializer table row |
+| --- | --- | --- |
+| `noOperator` |−1|0|
+| `higher` |0|1|
+| `lower` |1|2|
+| `equal` |2|3|
+| `different` |3|4|
+
+The decoder checks exact lengths and memcmp results; empty or unmatched text leaves the initialized−1 on the selected normal path. The serializer computes raw+1 and bounds it unsigned by4, but first skips the−1 sentinel entirely. Therefore the table contains `noOperator` without that text being emitted for a normal raw−1 operator. Missing operator/asString behavior, valid objects and ordinary string/JsonCpp/provider returns remain premises. These names supply original schema vocabulary, not a newly executed comparison or physical semantics. The preceding condition report's predicate is distinct evidence and is not repeated here.
+
+## Derived BNLD uses a discriminated status/level representation
+
+Derived raw constructor0x2bd58 first calls that condition base. It initializes status40/level44 to all-ones, then tests presence of exact key `status`. PRESENT status selects its string decoding and forces level44=−1 on the normal path. Exact `on`/`off`/`noStatus` yield status0/1/−1 respectively; unmatched/empty text leaves the initial−1. Only the ABSENT-status branch0x2bdec reads `level` through asInt and stores the signed result to44 at0x2be04. This is an original member-presence branch, not a numeric priority inferred from field names.
+
+The actual derived serializer's first load0x28196 reads status40. It increments it modulo32 and branches on zero at0x2819e:
+
+| Raw status/level condition | Derived output |
+| --- | --- |
+|status40==−1|Emit `level` from raw44 using Json signed-int constructor at0x2825e; no status member added|
+|status40==0|Emit `status` string `on`; no level member added|
+|status40==1|Emit `status` string `off`; no level member added|
+|other status bit pattern|Emit empty status string on the selected bounded-table fallback; no level member added|
+
+There is **no level−1 omission guard** at0x28258..0x28278. Zero, positive and negative signed levels, including−1, all feed the same Json integer request when raw status is−1. Status table0x1607d0 physically contains noStatus/on/off, independently verified from this method's original PIC/GOT reference. Its noStatus row0 is bypassed by this method's earlier−1 branch; its presence alone must not be advertised as an emitted noStatus field here.
+
+All six exact key spellings (`id`, `enabled`, `type`, `operator`, `status`, `level`) are recovered from original pool+PC arithmetic at12 references spanning serializer and constructors. No actual private configuration/default object is exported.
+
+## Narrow value coherence, not universal JSON roundtrip
+
+For a valid object produced by these selected constructors, and ordinary successful JsonCpp/string/member-assignment/reparse behavior, the source supports these narrower relationships:
+
+- Raw status0/1 comes from the present-status branch, whose level is−1. Serializer emits on/off and reparsing selects the same present-status path; the corresponding scalar representation can remain the same.
+- Raw status−1 selects level emission. Its signed raw level is supplied directly to the Json signed-int constructor, then the absent-status reparse path requests asInt. This includes the constructor-produced pair(−1,−1), whether originally obtained from explicit noStatus/unmatched status or absent status with level−1.
+- Original member presence is not preserved: explicit noStatus can serialize as level−1; absent/unmatched operator−1 is omitted; empty id is omitted. Source JSON containing both status and level has already taken the constructor's status-presence path, so the discarded original level must not be treated as retained by serialization.
+- Arbitrarily altered/unconstructed raw states, such as status0 with a non−1 level or out-of-domain status/type values, are outside the constructor-reachable scalar-preservation statement. No universal lossless or validity claim follows from the fallback assignments.
+
+These are static request/alias relationships, not host JSON simulations or native execution. Full candidate provider behavior for string conversion, signed values, member lookup, allocator/assignment/errors, initialized state, runtime binding, configured assets and ownership/unwind remain unclosed. The prior condition report's predicate/operator-use source is preserved unchanged; closing its schema-name provenance does not prove a naturally executed condition, action, query transaction or physical event.
+
+## Reproduction and preservation
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/collect_serializer_v2.py --check`
+
+The collector records five original code spans,17 byte guards,12 key references, four separate data spans, 11 relative relocations, five direct-call targets and three input identities. Exclusive generation refuses existing outputs; all outputs plus report/collector/development disclosure are copied immediately with index bytes computed before opening the index. V2 first copies also retain exact v1 report/code and the later failure disclosure; v1 files are not regenerated or modified.
+
+One separate exploratory host probe had a Python conditional-spacing SyntaxError before any of its body executed or any collector/report/output existed. `development/PROBE_FAILURE.json` records the faulty line, returned error and correction provenance, explicitly transcribed from the tool record without claiming a historically pinned pre-call file. The corrected separate probe used an explicit if block. No source guard was weakened and no generated candidate was overwritten.
+
+Confidence is high for original class/key/name/branch/call/value-source facts and conditional for constructor-reachable coherence. Accepted scene grammar, complete providers/validation, native result, actual record/query type/lifetime, configured values and physical behavior remain unresolved. No new execution corpus or instruction-count increment is justified.
+
+## V2 class-identity refinement and failed v1 preservation
+
+The first v1 generation stopped before writing any generated output because its strict constructor-GOT assertion wrongly expected the final BnldCondition header rather than the temporary BaseBnldCondition header. A queued v1 --check stopped at the same assertion, followed by an index audit that reported FileNotFoundError because no first output existed. No original firmware instruction executed. Root preserved the exact three existing v1 files before allowing the separate v2 collector/report.
+
+`DEVELOPMENT_HISTORY.v2.json` records the failed commands/assertion and later-transcribed terminal details, exact preserved source hashes, and the stronger v2 assertions for both original headers and both GOT slots. It does not invent an independently pinned failure-output file or silently change v1. No completed prior report is declared wrong by this new temporary/final distinction. The v2 operator/serializer behavior is unchanged; only source ownership identity, reproducibility/version references and history disclosure are refined.

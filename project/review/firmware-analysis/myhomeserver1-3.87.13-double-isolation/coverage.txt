@@ -1,0 +1,11 @@
+# Bounded coverage
+
+| Area | New evidence | Remaining boundary |
+| --- | --- | --- |
+|Actual packaged scalar helpers|Four finite D0 constructor→same-object original type3 asDouble results, preserving signedzero bit patterns|Arbitrary/exceptional doubles, full Json::Value lifetime and all other types/errors|
+|Containment and bindings|85 exact permitted original PCs; RX/RO images; strict private memory/mode/size/trap/caps; exact3 self-definition redirects; one selected canary relocation per case|Actual loader/interposition/canary/OS/provider state and complete process behavior|
+|Analysis tooling|All63 prior tool paths/size/mtime/SHA and41 hashed RECORD members before/after; no old caches or F454 code imported|Analysis-tool identity is not firmware behavior|
+
+Canonical MyHOMEServer1 ledger:1corpus/8top-level entries/340 original code-hook visits/0 C primitives/12 linker-definition redirects/8 EXIT/0 guard stops/360 hooks. Four setup data-relocations are separate. Visits are not a retired-instruction metric. No guest failure or verification CPU replay. Original scheduler/process/OS/thread/timer/service/JSON map/member/parser/network/bus/physical execution remains0. Static checks are not additional original coverage. Incomplete coverage has no percentage or exhaustive claim; wider Device/source review gates remain pending.
+
+History: exact v1/v2 harness drafts and original plan/history were retained before NEWv3 strengthened zero-storage, actual hook constants, source arithmetic and boundary mode/size guards. No earlier draft executed. Static verification v1 failed before outputs on Path-component versus POSIX-string ordering; exact failed candidates/root copies retained, NEWv2 compares the same63 whole rows in normalized order. First native canonical run passed all guards with no fallback/weakening. Unavailable MH202run18/run21 intermediate histories remain explicitly unverified; no new missing history.

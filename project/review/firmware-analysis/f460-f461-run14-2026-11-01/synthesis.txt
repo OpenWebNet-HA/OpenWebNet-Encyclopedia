@@ -1,0 +1,7 @@
+# Run14 dual-analysis synthesis
+
+F460 fresh ownBNLD conditionrow2→raw64finalclass/base distinct→sameJSONreparse→compiled200BASE/primarypredicate connection. Ownenabled176/op184/status188/threshold192, suitableopaquequeryrecord status'on'/observed48/status−1 selectedpath, signedcfg<obs for0/cfg>obs1/==2/!=3. No MHSrecord32/field/opname/physical/unit transfer; rawserializer/query/type/freshness/provider/configuredvalue/lifetime/wholepolicy gaps remain.
+
+F461 choosesmodule alternative, notactualbootselector: sameowner/P24librarydir→supported/diropen/nameprefixlib+.so→openflags3→bothinit_plugin/stop_plugin symbolgates→newentry16(path,handle)retainedP0 BEFOREinitrequestP16. Qualifiedlocalreturns/traversal0 do notproveanymoduleinitialized; no explicitlocalinitmachine-resulttest isnotglobalvalidationabsence/knownfailureABI. Providers/diagnosticnormalreturns/modules/activation/lifetime/readiness/physical unobserved.
+
+F460 pre-generation readonlyprecheck corrected stagedv1collector's three wrongliteralpointer occurrences afterexactparentonefilesnapshot; no v1report/output/canonicalattempt existed, no failedgeneration invented. Newcanonicalv2 and firstreportv2 pass; oldunexecutedcode/history retained. Bothsourcepeers/staticchecks/documentarygates separate, no original/native/provider/model/fixture/runtime/deviceexecution. Priorledgers/history unchanged; fullDevice/source gatespending.

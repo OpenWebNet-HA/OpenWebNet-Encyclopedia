@@ -1,0 +1,32 @@
+# Independent source review: constructor-reachable signed integer provider
+
+PASS, no correction requested. This is a static original-byte/provider-contract review and read-only host collector check, not original helper execution or a numeric fixture matrix. Original/native/provider/target API execution, CPU replays and semantic host fixtures added: zero. The MyHOMEServer1 saved ledger remains1 corpus/8 entries/340 original code-hook visits/0 C primitives/12 redirects/8 EXIT=360 hooks, with4 relocation setups separate. The old unsigned/null packet and double corpus are not promoted into signed execution evidence.
+
+## Original identity, ABI and selected source
+
+Independently read `/usr/lib/libjsoncpp.so.1.9.5` through ImageVFS, verified SHA256 `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36`, derived its own PT_LOAD mapping and checked9 raw-span hashes/20 instruction guards. Six actual dynamic definitions distinguish signed C1/C2`0x15c41`, initBasic`0x15ad5`, type`0x14e3d`, asInt`0x1682d` and isInt`0x15519`, with Thumb instruction addresses separated from stored pointers. No old class layout or VFP fixture is transferred.
+
+I independently decoded all4 selected BLX destinations, their original three-word ARM PLT arithmetic, exact JUMP_SLOT symbol and same-library definition values. These substantiate constructor→initBasic, asInt→type, asInt→isInt and isInt→type as candidate call requests. Actual live binding/interposition, valid objects, ordinary ABI, canary and normal provider returns remain conditions.
+
+The report's source relations agree with the original instructions:
+
+- The signed constructor preserves R1 in R5, clears own Comments word12, supplies type1/allocated0, then after normal initBasic return computes `ASR R3,R5,#31` and stores low=input/high=signword at object0/4. The necessary initBasic prefix stores its type argument at byte8, and actual type() reads that byte. Nonempty Comments/destructor/error/unwind paths are not closed by this prefix.
+- The actual asInt TBB at`0x16856` has type1 entry0x12, reaching`0x1687a`. That branch calls isInt; its nonzero result loads object low word into R0 and follows the checked normal canary epilogue. False-range/error and other stored-type arms remain outside the claim.
+- Actual isInt tag1 comparison reaches`0x1556c`. It loads low/high, adds0x80000000 to low with carry, adds that carry to high, and uses CLZ(adjusted-high)>>5. That result is1 exactly when the adjusted high word is0. No host numeric example/matrix or original algebra execution was used in this review.
+- For the constructor's sign-extended signed32 representation, a nonnegative argument has high0 and a low word below0x80000000, so the adjustment leaves high0; a negative argument has high all ones and low at least0x80000000, so the carry wraps adjusted high to0. This is general source algebra under the stated two's-complement/32-bit ABI, not a broadened valid-input/physical-domain test. The constructor-reachable type1 arm therefore returns the original low argument word under normal binding/no-mutation/object/canary/return premises.
+
+This narrows the signed scalar link used by the raw trigger's `Json::Value(int)`/asInt requests. It does not execute or prove full JSON fresh-object/member/map/move-assignment/serialization/reparse, string/default/error semantics, configured thresholds, accepted grammar, natural events, physical units or complete lifetime/concurrency. No receiving/transport/session/authentication/framing/MQTT/libjel body was inspected.
+
+## Reproduction, preservation and exact pins
+
+The new host `--check` passes13 outputs. Independently verified all6 input pins, all manifest members and15 immediate first copies/current counterparts. Current Device0199 context pins the post-qualification `bd64060e1e19f90eecad2808b62327847a0f541ae2fc46239bbda29a5efe5c98` bytes rather than forcing old5940. No old collector was replayed and no author file changed. First-copy index bytes are computed before exclusive index creation; no canonical failure or overwrite is reported or inferred. PASS applies only to this constructor-reachable type1 path and its explicit provider/ABI premises, not a whole provider/type table or product capability audit.
+
+| Frozen file | Bytes | SHA256 |
+| --- | ---: | --- |
+| `provider/REPORT.md` | 5746 | `beff1f9aad24030e988d5507daac8391fc4fe60492c3630a2c10a505a52c6090` |
+| `provider/collect_integer_v1.py` | 7956 | `caa9009edbb70e6fab75fc45c7baaa5502ffc9d2122b6bf0f7cb2343b022aa83` |
+| `provider/ORIGINAL_SOURCE.json` | 5623 | `0a7eee2964b7a7e985a8a1881a2d14208c649af8ee33a35e5819a9a8f82d9fc5` |
+| `provider/SIGNED_CONTRACT.json` | 1503 | `1e3747c5ab2ac652e9fb16de0408f76fc41cecf24bdbdcf869a8e39a3d51937d` |
+| `provider/INPUTS.json` | 1377 | `def464f77e3c02d9dac16021c814689c340976f425d70118c46e5274d2dadabb` |
+| `provider/OUTPUT_MANIFEST.json` | 2102 | `787035b44a1ddffa5c3ddb8ec733f176afa0e7903f8553cb3716d30d08629c64` |
+| `provider/first-candidate/INDEX.json` | 2034 | `95973277c2d87159ccda3ed9a5017dd1828d46a137d4cdf195cad2da03c71256` |

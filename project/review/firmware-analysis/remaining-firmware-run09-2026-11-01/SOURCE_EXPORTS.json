@@ -1,0 +1,133 @@
+{
+  "files": [
+    {
+      "bytes": 4641,
+      "classification": "gap_zero_new_functional_coverage",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/packets/mh200n-gap/REPORT.txt",
+      "role": "Exact finite admission-query record; ZERO new functional source coverage",
+      "sha256": "75343cc62d0efd9a65d4223c12e9c39bb60caf6516ba5a73469d583b9c62760c",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night09-admission/REPORT.md"
+    },
+    {
+      "bytes": 14348,
+      "classification": "gap_zero_new_functional_coverage",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/packets/mh200n-gap/collector.py.txt",
+      "role": "Exact finite admission-query record; ZERO new functional source coverage",
+      "sha256": "38e8236fcc329ae5b9bc49515c4afe2420a761c4cf9b011a5383b0d22906d034",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night09-admission/collect_admission_v1.py"
+    },
+    {
+      "bytes": 1298,
+      "classification": "gap_zero_new_functional_coverage",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/packets/mh200n-gap/INPUTS.json",
+      "role": "Exact finite admission-query record; ZERO new functional source coverage",
+      "sha256": "58f6786f2b448f8178743762f82cea879970b7eb08c389f8c14ef8c129d4f5d7",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night09-admission/INPUTS.json"
+    },
+    {
+      "bytes": 2431,
+      "classification": "gap_zero_new_functional_coverage",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/packets/mh200n-gap/TARGET_LOOKUP.json",
+      "role": "Exact finite admission-query record; ZERO new functional source coverage",
+      "sha256": "ea25e4bea307907140548756d06f832bfb2f8a1e2306da7e68b00913b5ea5bdd",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night09-admission/TARGET_LOOKUP.json"
+    },
+    {
+      "bytes": 1648,
+      "classification": "gap_zero_new_functional_coverage",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/packets/mh200n-gap/ADMISSION_GAP.json",
+      "role": "Exact finite admission-query record; ZERO new functional source coverage",
+      "sha256": "78e0414618f68b0a486d04b9d1874c741e7dd945dda1403bcdbd2a5b0f059cbc",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night09-admission/ADMISSION_GAP.json"
+    },
+    {
+      "bytes": 616,
+      "classification": "gap_zero_new_functional_coverage",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/packets/mh200n-gap/OUTPUT_MANIFEST.json",
+      "role": "Exact finite admission-query record; ZERO new functional source coverage",
+      "sha256": "be26db26a71d8b52ddc6f6f3803619f23003e81cd887998bf8b3b52ae0fd23a5",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night09-admission/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 4488,
+      "classification": "review",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/reviews/mh200n-source-review.txt",
+      "role": "Actual independent gap or documentary preflight review",
+      "sha256": "581f41485be14f24866dd6e7f7319b26561b2af054791f70578be4c406ef7b26",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run09/reviews/mh200n-source-review.md"
+    },
+    {
+      "bytes": 10246,
+      "classification": "review",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/reviews/database-handoff-review.txt",
+      "role": "Actual independent gap or documentary preflight review",
+      "sha256": "42b96f27c2af3f558f7bfabedbac5df225a7791fc9dd3700d4b4fff3271389ea",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run09/reviews/database-handoff-review.md"
+    },
+    {
+      "bytes": 10042,
+      "classification": "documentary",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/database-handoff.txt",
+      "role": "Exact reviewed current handoff, documentary consolidation only",
+      "sha256": "aef872bd6c65190fc42bc3444b02ac34f367ffd22795a3dae0985c76f6427c39",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run09/DATABASE_HANDOFF_CANDIDATE.v2.md"
+    },
+    {
+      "bytes": 22194,
+      "classification": "historical_reference",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/pre-edit/overview.txt",
+      "role": "Exact reference version retained BEFORE edit",
+      "sha256": "f6a1ac4f89c1342a18f267ae434e205c30dfdf2de157ed0de599dcc8b832e445",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run09/integration/pre-edit/overview.md"
+    },
+    {
+      "bytes": 11560,
+      "classification": "historical_reference",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/pre-edit/firmware-index.txt",
+      "role": "Exact reference version retained BEFORE edit",
+      "sha256": "ce01c4d35f26e5c798d1b2f179a9457ca9b8adea3e752c49dc695a35b92f748e",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run09/integration/pre-edit/firmware-index.md"
+    },
+    {
+      "bytes": 1119,
+      "classification": "archive_documentary_copy",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/archive-index.json",
+      "role": "This investigation cumulative actual R2 status only",
+      "sha256": "133c94eb95859e111df0c1b6c005636ce8ee13ce164e3576fae85e70256f0719",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run09/R2_ARCHIVE_INDEX.json"
+    },
+    {
+      "bytes": 235,
+      "classification": "archive_documentary_copy",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/archive-receipt.json",
+      "role": "Exact actual RUN01 receipt, no new upload/readback",
+      "sha256": "072092bb105685ab2aa0395cde439b431ac6a016037b501a06d2faf509b07793",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run01/archive/R2_RECEIPT.json"
+    },
+    {
+      "bytes": 2868,
+      "classification": "documentary",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/synthesis.txt",
+      "role": "Documentary scope/current gaps, no new functional coverage",
+      "sha256": "07c4d9c55aed71ebb7ee5e4485ba1ee758852c43a897c3af559af6d1e0e20f63",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run09/SYNTHESIS.md"
+    },
+    {
+      "bytes": 1200,
+      "classification": "documentary",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/coverage.txt",
+      "role": "Documentary scope/current gaps, no new functional coverage",
+      "sha256": "693a743ed6e175fc3d68b491512cf847e238401932d67dc86a8f28152df38d87",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run09/COVERAGE.md"
+    },
+    {
+      "bytes": 1391,
+      "classification": "documentary",
+      "export": "project/review/firmware-analysis/remaining-firmware-run09-2026-11-01/remaining-questions.txt",
+      "role": "Documentary scope/current gaps, no new functional coverage",
+      "sha256": "d7b97da125c70032d39910e7d7e560b9eec06ba467b608321b810b448d0c0e00",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run09/RANKED_REMAINING_QUESTIONS.md"
+    }
+  ],
+  "scope": "Zero new functional source contracts: finite admission gap plus documentary handoff; exact selected exports only"
+}

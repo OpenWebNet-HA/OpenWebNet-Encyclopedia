@@ -1,0 +1,9 @@
+# Run04 coverage and boundaries
+
+| Area | Selected reach | Open boundary |
+| --- | --- | --- |
+| F460 matrix catalogue | Original global/template/constructor SQL member, actual key89 and own88B aggregate/inner16 layout, literal path/opening/prepare/step and columns13/14→inner24/28 | Ordinary string/SQLite providers, final substituted query, actual selector tuple/caller, rows/null/conversion/error outcomes, full selection/fallback and installed compatibility |
+| F461 field owner/local route | Actual field descriptors and candidate manager24 insertion, configuration globals/boolean calls, module initializer directory argument, base/wrapper message route construction and exact full64 field match | Actual main/config/module/binding selection, natural criterion/content/clock producers, active readiness/output/physical meaning, lifetime/concurrency |
+| Reference applicability | Core catalogue-profile appendix distinguishes shared F46 profile from earlier MHS/Suite ownership comparison; exact pre-edit main/profile versions retained | No stable IDs, F461 consumer or physical support transferred from shared bytes/names |
+
+F460 authoritativev2:11 outputs/7 selected spans/29 guards/10 PIC joins/8 import proofs/15 local targets/13 first copies. F461:21 outputs/11 spans/32 guards/23 first copies and only3 safe configuration whitelist values. Counts are bounded reach/integrity, not coverage percentages or executed cases. Both independent source peers and parent read-only reproductions pass; documentary/strict assembly checks are separate. All new original/native/helper/emulator/model/fixture/SQL/target OS/process/service/network/bus/physical execution is zero. Prior MHS8-entry340-code-hook corpus and separate F454/MH202 ledgers remain unchanged. Full Device/source gates pending.

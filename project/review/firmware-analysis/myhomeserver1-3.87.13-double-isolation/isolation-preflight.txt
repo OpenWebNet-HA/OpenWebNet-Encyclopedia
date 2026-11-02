@@ -1,0 +1,38 @@
+# Independent original JsonCpp helper isolation preflight
+
+**PREFLIGHT PASS for the exact frozen v3 candidate and its finite plan. No guest execution performed.** Execution still requires the root's separately pinned approval file. This is a source/containment decision, not a completed experiment, physical-value validation or runtime Device approval.
+
+Reviewed the entire harness and plan, SOURCE_PREFLIGHT, tool pins, preserved drafts and actual pre-v3 snapshots. Static `isolate_double_v3.py --check` passed **2 outputs / 85 original instruction PCs**. Independent verification v2 `--check` passed **13 outputs**, including all **63** old tool paths/sizes/mtimes/hashes equal to the retained baseline and **41** declared RECORD hashes/sizes. No Unicorn module/native library, guest helper, F454 code, target API/process or floating fixture was executed by the reviewer. At this review checkpoint RUN_STARTED, RESULTS and FAILED_ATTEMPT do not exist.
+
+## Source and binding
+
+Original provider `/usr/lib/libjsoncpp.so.1.9.5`, SHA256 `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36`, was independently read through ImageVFS/PT_LOAD. Its ARMv7/Thumb2/VFP-argument declarations, seven independently retained verification spans and all nine narrower preflight ranges agree. The 85-PC map excludes TBB/literal data, nonnull Comments disposal, errors and other asDouble type bodies.
+
+The original constructor writes comments+12 zero, supplies initBasic type3/allocated0 and stores its D0/D8 scalar into union+0. Actual initBasic and actual Comments move execute on the selected original null-comments branch; actual type() and original type3 asDouble load remain in the allowed source chain. A fresh zeroed 24-byte storage fixture is explicit. Resulting tag/union/comments fields are supplied by original instructions, not a preconstructed parsed object or host semantic substitute.
+
+All three checked BLX/ARM-PLT/JUMP_SLOT requests redirect to actual same-provider definitions: ba94→15ad5, b074→159ed, b768→14e3d. They are counted linker redirects, not original PLT execution or C/GLib/allocator/JSON primitives. Effective installed loader/interposition remains an ordinary candidate-self-binding premise. All four selected canary PIC joins resolve GOT32f98; its private canary setup is the sole required selected-path data relocation, not the library's only GLOB_DAT.
+
+## Containment and finite call plan
+
+- Image mappings derive from actual PT_LOAD offsets/extents. Code pages become RX, data pages read-only after the explicit canary setup. Guest writes cannot change image/canary/code or mapped-page padding.
+- Each allowed original instruction must match exact PC, size and Thumb mode. Intercepted PLT boundaries require **ARM mode/size4**; private EXIT requires **Thumb mode/size2**. Original TBB bytes are read as data only. Unknown PC/import/size/mode, nonempty/error paths, IRQ, invalid instruction or protected/unmapped access stops with no success fallback.
+- Guest stores are limited to the exact 24-byte private object or 64KiB stack. Reads require actual PT_LOAD extent or initialized private bytes. Imported UC_MEM_READ/UC_MEM_WRITE are used, and every other memory-hook event fails. The canary is four initialized read-only bytes. EXIT is intercepted before its placeholder instruction executes.
+- Four fresh instances each have two manual entries: constructor then asDouble on the SAME original-produced object, no field reseeding between calls. Only call registers and a distinct D0 register poison are set for readback. The second call must leave object bytes unchanged, perform no object write and produce the selected integer bit pattern. No full JSON member/map/move/serializer/reparse operation is represented by these calls.
+- The four finite bit-pattern cases and **eight planned entries are not executed coverage counts**. Per-entry original-visit, engine-count, engine-timeout, host-wall, normal-EXIT and balanced-stack checks are present. Counts explicitly mean code-hook visits, not retired instructions. Linker redirects, EXIT/guard boundaries, data relocation and FP/control setup are separate categories.
+- Static preflight/check do not import Unicorn or reach emu_start. Explicit run first reproduces the exact frozen candidate, requires root approval binding harness/preflight hashes and independent-PASS flag, and refuses an existing RUN_STARTED marker. Only then can it import the verified analysis package, with bytecode disabled and an asserted-absent pycache-prefix path. No old firmware/harness is imported.
+- Successful attempted calls are saved immediately/exclusively. Any guest failure retains completed and failed traces/counts and stops without retry; a post-instruction failure cannot be represented as execution zero. This review does not certify future execution results, unavailable pre-guest error outcomes or a security boundary against operators editing local files.
+
+## History and remaining limits
+
+Verified all **9 exact v3 first-preflight copies** and all four exact parent pre-v3 stage files. The actual A5 draft, zero-storage v2, boundary-hardened v3 and their root snapshots/history are retained; no missing historical artifacts or hypothetical guest attempts are invented. An initial inline review-assembly check misread the parent's snapshot wrapper and stopped before writing this review; the final check uses its actual `files` array and verifies each exact file. No candidate or review was overwritten.
+
+This PASS is limited to the exact selected scalar helpers, private storage/CPU/FP/canary setup, candidate binding and finite four-case plan. It establishes no arbitrary-double/NaN/domain guarantee, full JSON roundtrip, destructor/exception/unwind completeness, effective target process/OS behavior, naturally configured scene/cache data, physical units or live hardware. Actual guest outcomes and original counts remain **pending**. Old tool state must be checked after any separately approved later run; the immutable BEFORE inventory is not an after-state.
+
+## Exact reviewed pins
+
+- `isolate_double_v3.py`: `1ef53f7e04a20cb43c37dfb1cae965bb119bcda167db9b372b58b02bf1cb4a15`
+- `REPORT.PLAN.v3.md`: `bf9d23f03b1d2b8423652381d47894c61633a4245a20fc99d441199a55b83826`
+- `SOURCE_PREFLIGHT.json`: `dcc9dffa77e22c8a2ca0ffd1ec5eaed52f6f730bef03d1a5519cf639ebcebad4`
+- `TOOL_PINS.json`: `a413baf37e5dda914980653987c352a1672b777d1637ead66993f8cb2f081097`
+- `first-preflight-v3/INDEX.json`: `0ba153181696e31658c818ba4482e3df8fed5e1310903d56950f59c39fe768f0`
+- `DRAFT_HISTORY.v3.json`: `7bca78358180470b4a8b9a91182cc9c6d7f1fe487a413ab1f6770f08a8920620`

@@ -1,0 +1,45 @@
+{
+  "actual_original_identity": {
+    "constructor_GOT": "0x16618c",
+    "constructor_pool": "0x2be88",
+    "final_RTTI": "13BnldCondition",
+    "final_header": "0x1600b8",
+    "initializer_GOT": "0x1660f8",
+    "initializer_pool": "0xa7f80",
+    "shared_serializer": "Thumb0x28179",
+    "temporary_RTTI": "17BaseBnldCondition",
+    "temporary_header": "0x1600a8"
+  },
+  "failed_commands": [
+    {
+      "command": "collect_serializer_v1.py",
+      "result": "AssertionError at build line28: slot=base+w(0x2be88); assert w(slot)==0x1600b8; before output generation"
+    },
+    {
+      "command": "collect_serializer_v1.py --check",
+      "result": "Same AssertionError before any saved-output checks"
+    },
+    {
+      "command": "queued index verification",
+      "result": "FileNotFoundError for first-candidate/INDEX.json; no canonical v1 generated files existed"
+    }
+  ],
+  "original_execution": 0,
+  "root_exact_snapshot": "../integration/pre-v2-serializer/INDEX.json",
+  "terminal_provenance": "Later transcription from returned tool output, not a contemporaneously saved/pinned terminal file. Exact v1 code/report are independently preserved by root.",
+  "v1_source_pins": {
+    "REPORT.md": {
+      "bytes": 9856,
+      "sha256": "a1e9f778bae5dbd6e7e8a82817dfaa7397c015f26d8e5cf61c4b914cec837f80"
+    },
+    "collect_serializer_v1.py": {
+      "bytes": 7998,
+      "sha256": "4277805852b25acd5ae1567e5c282dd1a2519700fb8311149ec4f9407b3d376f"
+    },
+    "development/PROBE_FAILURE.json": {
+      "bytes": 619,
+      "sha256": "c2f7fe836dda54686f2f6eed7fda2d1266b256f5850bb7e31c0554f7d6bdfc60"
+    }
+  },
+  "v2_change": "Replace mistaken single class equality with strict separate temporary/final identities and additional relocation checks; versioned report/history/repro paths. No sourcebehavior/count/native guard weakening."
+}

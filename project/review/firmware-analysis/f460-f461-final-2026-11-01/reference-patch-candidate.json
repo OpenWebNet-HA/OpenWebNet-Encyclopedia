@@ -1,0 +1,74 @@
+{
+  "scope": "Documentary reference scope/links only; no new firmware-source facts or Device capability/runtime approval",
+  "unchanged_core_profile_sha256": "bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba",
+  "patches": [
+    {
+      "source": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0207-f460-myhome-server.md",
+      "pre_edit": "work/f460-f461-comparison/2026-11-01-final/integration/pre-edit/own-dev-0207-f460-myhome-server.md",
+      "candidate": "work/f460-f461-comparison/2026-11-01-final/integration/reference-candidates/own-dev-0207-f460-myhome-server.md",
+      "before_sha256": "ed4af14a11813ba1fdc53dfbf131a388b2cf8066fc688888e30da7c158579932",
+      "after_sha256": "c36fa47758ff05e6e5fbeaf7d4d3549d6fed38e4e032cba299021ee261bf157e",
+      "substitutions": [
+        {
+          "before": "Installed release / build, production-specific compatibility, actual capacity under the installed version, third-party payload behavior and endpoints remain uncorroborated. Linked firmware packages and external developer-protocol payloads are explicitly pending inspection; a manufacturer link alone does not establish exact runtime operation.",
+          "after": "Installed release / build, production-specific compatibility, actual capacity under the installed version, third-party payload behavior and endpoints remain uncorroborated. This manual/catalogue dossier originally listed the firmware payload as unexamined. A separate [F460 2.0.12 static build study](../../reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md) and [knowledge handoff](../../reverse-engineering/firmware-analysis/f460-f461-knowledge-handoff.md) now document selected retained-package source paths. They do not verify an installed release, runtime behavior, physical capability or full Device approval. External developer-protocol payloads remain pending inspection; a manufacturer link alone does not establish exact runtime operation."
+        },
+        {
+          "before": "| `F460_020012.fwz` | Firmware F460_020012  /  FWZ (151.2 MB) | [Manufacturer link](https://assets.legrand.com/pim/AUTRE/F460_020012.fwz) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |",
+          "after": "| `F460_020012.fwz` | Firmware F460_020012  /  FWZ (151.2 MB) | [Manufacturer link](https://assets.legrand.com/pim/AUTRE/F460_020012.fwz) | Originally inventory-only in this manual/catalogue dossier; separate [F460 2.0.12 static study](../../reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md), without installed/runtime approval |"
+        },
+        {
+          "before": "Historical ST-00001807-EN was found on the manufacturer site; it remains unexamined alongside linked firmware and developer-protocol payloads.",
+          "after": "Historical ST-00001807-EN and external developer-protocol payloads remain outside this manual/catalogue review. The separate retained F460 2.0.12 build is examined at selected static-source scopes in the firmware study linked above."
+        }
+      ]
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md",
+      "pre_edit": "work/f460-f461-comparison/2026-11-01-final/integration/pre-edit/own-dev-0208-f461-myhome-server-third-party-integration.md",
+      "candidate": "work/f460-f461-comparison/2026-11-01-final/integration/reference-candidates/own-dev-0208-f461-myhome-server-third-party-integration.md",
+      "before_sha256": "89f0a1cd681924ec8bf6b093c4c39d3d037b14cd416547b8111bffecd2eb5323",
+      "after_sha256": "ebdedce1537eec88678e418addcd076923a7f6997a659998f6c3affb51e3e259",
+      "substitutions": [
+        {
+          "before": "Installed release / build, production-specific compatibility, actual capacity under the installed version, third-party payload behavior and endpoints remain uncorroborated. Linked firmware packages and external developer-protocol payloads are explicitly pending inspection; a manufacturer link alone does not establish exact runtime operation.",
+          "after": "Installed release / build, production-specific compatibility, actual capacity under the installed version, third-party payload behavior and endpoints remain uncorroborated. This manual/catalogue dossier originally listed the firmware payload as unexamined. A separate [F461 2.0.11 static build study](../../reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md) and [knowledge handoff](../../reverse-engineering/firmware-analysis/f460-f461-knowledge-handoff.md) now document selected retained-package source paths. They do not verify an installed release, runtime behavior, physical capability or full Device approval. External developer-protocol payloads remain pending inspection; a manufacturer link alone does not establish exact runtime operation."
+        },
+        {
+          "before": "| `F461_020011.fwz` | Firmware F461_020011  /  FWZ (132.2 MB) | [Manufacturer link](https://assets.legrand.com/pim/AUTRE/F461_020011.fwz) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |",
+          "after": "| `F461_020011.fwz` | Firmware F461_020011  /  FWZ (132.2 MB) | [Manufacturer link](https://assets.legrand.com/pim/AUTRE/F461_020011.fwz) | Originally inventory-only in this manual/catalogue dossier; separate [F461 2.0.11 static study](../../reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md), without installed/runtime approval |"
+        },
+        {
+          "before": "The developer Local Interoperability specification and linked firmware/XML payloads were not inspected.",
+          "after": "The developer Local Interoperability specification remains outside this manual/catalogue review. Its earlier unexamined firmware/XML status is historical; the separate retained F461 2.0.11 build now has the selected static-source study linked above."
+        }
+      ]
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "pre_edit": "work/f460-f461-comparison/2026-11-01-final/integration/pre-edit/f460-f461-deep-analysis.md",
+      "candidate": "work/f460-f461-comparison/2026-11-01-final/integration/reference-candidates/f460-f461-deep-analysis.md",
+      "before_sha256": "3195fb54f4d533cbd6ba01eb8956a9141faa14ff687af4bbf43ed21c8b1e5734",
+      "after_sha256": "7ecc06f5c9a6381697a2372b12dcaf6d56f1a3f074d9f016d5d6b8b7de578f3e",
+      "substitutions": [
+        {
+          "before": "The separate [package comparison](f460-2.0.12-and-f461-2.0.11.md) and [first source-path study](f460-f461-selected-source-paths.md) establish the original builds and their initial code paths. This continuing analysis follows the actual F460 action invoker and F461 translator dispatcher. Findings remain specific to these AArch64 builds and selected paths; they are not exhaustive firmware or Device approval.",
+          "after": "The separate [package comparison](f460-2.0.12-and-f461-2.0.11.md) and [first source-path study](f460-f461-selected-source-paths.md) establish the original builds and their initial code paths. This continuing analysis follows the actual F460 action invoker and F461 translator dispatcher. Findings remain specific to these AArch64 builds and selected paths; they are not exhaustive firmware or Device approval. The [knowledge handoff](f460-f461-knowledge-handoff.md) consolidates the selected conclusions, practical implications and remaining questions. The [final review and navigation capsule](../../project/review/firmware-analysis/f460-f461-final-2026-11-01/README.md) preserves current and exact historical document identities without replaying source collectors."
+        }
+      ]
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+      "pre_edit": "work/f460-f461-comparison/2026-11-01-final/integration/pre-edit/README.md",
+      "candidate": "work/f460-f461-comparison/2026-11-01-final/integration/reference-candidates/README.md",
+      "before_sha256": "33a04d33f248a91c67de7a70e25ec2a54766b793b813efddafe40cde14fc17c0",
+      "after_sha256": "aa7c70da0facac0260d00d38de3235ef4c8656874daf0f21c10c23b6e6d0e1f3",
+      "substitutions": [
+        {
+          "before": "| [F460/F461 deeper source analysis](f460-f461-deep-analysis.md) | Original AArch64 F460 2.0.12 / F461 2.0.11, independently checked build identities | Selected SLEEP callable/wait/completion and descriptor-matcher/translator source paths | Conditional API/binding/object contracts; no firmware execution, exhaustive coverage or runtime/physical approval |",
+          "after": "| [F460/F461 source analysis](f460-f461-deep-analysis.md) and [knowledge handoff](f460-f461-knowledge-handoff.md) | Original AArch64 F460 2.0.12 / F461 2.0.11, independently checked build identities | Selected catalogue/scene/condition/serializer/update and configuration/module/translation/platform/clock source contracts | Fifteen saved checkpoints with scoped navigation; conditional providers/objects, no firmware execution or complete runtime/physical/Device approval |"
+        }
+      ]
+    }
+  ]
+}

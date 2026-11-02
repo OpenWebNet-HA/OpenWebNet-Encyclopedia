@@ -1,0 +1,38 @@
+[
+  {
+    "end_va_exclusive": "0x2eaee",
+    "scope": "raw decrement-index TBH data",
+    "sha256": "6218d46bb0cc8e173d7a2c18d603dc98f62488c3719282c9157a3495784f07f7",
+    "start_va": "0x2eac0"
+  },
+  {
+    "end_va_exclusive": "0xa735e",
+    "scope": "compiled direct-index TBH data",
+    "sha256": "a97bbd22c3ea67827a3aebf9a6ffc655143147827d5615b77ce6565e7ba10503",
+    "start_va": "0xa732e"
+  },
+  {
+    "end_va_exclusive": "0x2c90c",
+    "scope": "base constructor pools",
+    "sha256": "f60dce8232ec75c594ee09c058dbb5f967ae2b34e72171c87f16eb29fd1c3a72",
+    "start_va": "0x2c8c8"
+  },
+  {
+    "end_va_exclusive": "0x2cc00",
+    "scope": "derived constructor pools",
+    "sha256": "ff9bf8c0de1fce699c17ab19eededd72011ab2000bdb83acd24ee0a128f1d595",
+    "start_va": "0x2cbe0"
+  },
+  {
+    "end_va_exclusive": "0x29230",
+    "scope": "serializer pools",
+    "sha256": "f64c2abefecdd69f14927e71885675da1ca58e53e6f81025b2d60becbd9262a8",
+    "start_va": "0x291fc"
+  },
+  {
+    "end_va_exclusive": "0xee708",
+    "scope": "compiled constructor pools",
+    "sha256": "b2ac998084577a2fc213de8e28f0ce6c040a608c4e5cae9d17e0187fc8bed87a",
+    "start_va": "0xee6e8"
+  }
+]

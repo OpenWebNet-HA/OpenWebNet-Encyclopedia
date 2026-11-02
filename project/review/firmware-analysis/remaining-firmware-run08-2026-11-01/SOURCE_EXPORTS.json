@@ -1,0 +1,181 @@
+{
+  "files": [
+    {
+      "bytes": 6072,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/mh200n/REPORT.txt",
+      "role": "Exact selected current/canonical-report-role source identity",
+      "sha256": "378a0358a0ec443c907f7cc26cc7da6b985b816551bb2acb142b126293c915ba",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night08-list-consumer/REPORT.md"
+    },
+    {
+      "bytes": 17600,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/mh200n/collector.py.txt",
+      "role": "Exact selected current/canonical-report-role source identity",
+      "sha256": "a217ef568601fe33fbe9d1a43982891cec6ef75eb9dde680b3d484a1396deb79",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night08-list-consumer/collect_list_consumer_v2.py"
+    },
+    {
+      "bytes": 10867,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/mh200n/SOURCE.json",
+      "role": "Exact selected current/canonical-report-role source identity",
+      "sha256": "7512c154892a4c6298fa5ff15c92cf0df6463d5f8316eec3b00ffd78119fdcde",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night08-list-consumer/SOURCE.json"
+    },
+    {
+      "bytes": 2374,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/mh200n/ARGUMENT_FLOW.json",
+      "role": "Exact selected current/canonical-report-role source identity",
+      "sha256": "00229aa3c862525857c8a9fe514e58769f025f47c3e609d465de08af2e38f5d8",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night08-list-consumer/ARGUMENT_FLOW.json"
+    },
+    {
+      "bytes": 1083,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/mh200n/INPUTS.json",
+      "role": "Exact selected current/canonical-report-role source identity",
+      "sha256": "738cc67f38c62228acc646692950d3b4807b4b6ac8d31c1e61370ba1ae29508e",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night08-list-consumer/INPUTS.json"
+    },
+    {
+      "bytes": 610,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/mh200n/OUTPUT_MANIFEST.json",
+      "role": "Exact selected current/canonical-report-role source identity",
+      "sha256": "e5da0233bcfe6d430075bdc986bb8bfef9b8b0fde4d4abb26b82e050c8f0e1a2",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night08-list-consumer/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 4658,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/f459/REPORT.txt",
+      "role": "Exact selected current/canonical-report-role source identity",
+      "sha256": "58d1d0e679735953293ba9097d7cf59c6c9360679b9e189c4ccd4a341d870232",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night08-metadata/REPORT.v2.md"
+    },
+    {
+      "bytes": 4286,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/f459/canonical-v1-REPORT.txt",
+      "role": "Exact selected current/canonical-report-role source identity",
+      "sha256": "0bd38bbd4f7f3bf9a38f38895965462c995851dbdedfb8a2c6e37cf3d255f215",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night08-metadata/REPORT.md"
+    },
+    {
+      "bytes": 10083,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/f459/collector.py.txt",
+      "role": "Exact selected current/canonical-report-role source identity",
+      "sha256": "8fd3003c30fb51d6d2b651bd5e104734ffba55e3d90c62060ff6e0bd21eb83a9",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night08-metadata/collect_metadata_v1.py"
+    },
+    {
+      "bytes": 4783,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/f459/METADATA.json",
+      "role": "Exact selected current/canonical-report-role source identity",
+      "sha256": "a5e9bb4d133e7c761c09b5edc6af0a415e39736bb5018c4336c72a0b27b3ed27",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night08-metadata/METADATA.json"
+    },
+    {
+      "bytes": 829,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/f459/INPUT_PINS.json",
+      "role": "Exact selected current/canonical-report-role source identity",
+      "sha256": "5f2d541fc96383d7162552229ab0fbf958e634e4e96def314c11cf8347c40f53",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night08-metadata/INPUT_PINS.json"
+    },
+    {
+      "bytes": 1854,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/f459/FORMAT_CONTEXT.json",
+      "role": "Exact selected current/canonical-report-role source identity",
+      "sha256": "4036ef47f4a6b5bb6feb5e2aa5715d698462b88aa6fb0326e24b8104f9a5ae73",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night08-metadata/FORMAT_CONTEXT.json"
+    },
+    {
+      "bytes": 742,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/f459/OUTPUT_MANIFEST.json",
+      "role": "Exact selected current/canonical-report-role source identity",
+      "sha256": "6f1fc577374f78208b9b4237a5ce31514ee7f3a72396acac5935b4d427de358a",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night08-metadata/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 642,
+      "classification": "new_selected_source",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/packets/f459/REPORT_VERSION_MAPPING.json",
+      "role": "Exact selected current/canonical-report-role source identity",
+      "sha256": "e47a59543baf0c15aac3ac1188dc6dbd7799423b6b260ecdc9b40ae608b47878",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night08-metadata/REPORT_VERSION_MAPPING.json"
+    },
+    {
+      "bytes": 5738,
+      "classification": "review",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/reviews/mh200n-source-review.txt",
+      "role": "Actual independent source review",
+      "sha256": "f4639d9c3d9485946ace955b55a2a67d09b566728279fe42a1f06a6db4b8ef2c",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run08/reviews/mh200n-source-review.md"
+    },
+    {
+      "bytes": 10255,
+      "classification": "review",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/reviews/f459-source-review.txt",
+      "role": "Actual independent source review",
+      "sha256": "c4f8cbd24a5872775994f7b8208109d42518cb00731de5fe159d841f7366f0a1",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run08/reviews/f459-source-review.md"
+    },
+    {
+      "bytes": 1119,
+      "classification": "archive_documentary_copy",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/archive-index.json",
+      "role": "Unchanged cumulative actual archive status",
+      "sha256": "133c94eb95859e111df0c1b6c005636ce8ee13ce164e3576fae85e70256f0719",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run08/R2_ARCHIVE_INDEX.json"
+    },
+    {
+      "bytes": 235,
+      "classification": "archive_documentary_copy",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/archive-receipt.json",
+      "role": "Exact actual prior receipt, no new network replay",
+      "sha256": "072092bb105685ab2aa0395cde439b431ac6a016037b501a06d2faf509b07793",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run01/archive/R2_RECEIPT.json"
+    },
+    {
+      "bytes": 20456,
+      "classification": "historical_reference",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/pre-edit/overview.txt",
+      "role": "Exact prior public input preserved BEFORE edit",
+      "sha256": "282f94d2be12794c9e72ef9dbbe995f860b703615853126ba22c9b435e51b1f2",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run08/integration/pre-edit/overview.md"
+    },
+    {
+      "bytes": 2782,
+      "classification": "documentary",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/synthesis.txt",
+      "role": "Current selected documentary synthesis/coverage/gaps",
+      "sha256": "bf7d9944b85919039d131a91def4203807c059d4b340eb9cfda9a3e1141dbc8a",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run08/SYNTHESIS.md"
+    },
+    {
+      "bytes": 1307,
+      "classification": "documentary",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/coverage.txt",
+      "role": "Current selected documentary synthesis/coverage/gaps",
+      "sha256": "85aec1a6200ffb44d368e8bd0dca3c44f23065e441ae0e70c80c35145d313563",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run08/COVERAGE.md"
+    },
+    {
+      "bytes": 1385,
+      "classification": "documentary",
+      "export": "project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/remaining-questions.txt",
+      "role": "Current selected documentary synthesis/coverage/gaps",
+      "sha256": "716ceeec092b2c6dbb8f9fa14b38a64d8f4653458c8259f448dc739c857031e1",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run08/RANKED_REMAINING_QUESTIONS.md"
+    }
+  ],
+  "scope": "Two selected static source packets, exact selected exports and explicit current/canonical report roles; no exhaustive or self-contained full-runtime claim"
+}

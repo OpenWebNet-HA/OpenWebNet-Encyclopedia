@@ -1,0 +1,36 @@
+# F454 AV producer source review
+
+PASS for the selected static producer/schema and distinct state-origin claims. No author correction requested. This independently checks original ELF/JavaScript source and selected control/dataflow, not all answering-machine behavior, a full request/response transaction, runtime startup or physical camera availability. No original ARM, JavaScript, vendor process, target I/O, authentication/session/framing delegate or network/device work was executed or investigated.
+
+## Reviewed identities
+
+Candidate root: `work/f454-firmware/research/2026-10-31-av-producers/`.
+
+| File | SHA256 |
+| --- | --- |
+| REPORT.md | da05c71acf6c95a78b7e1f779479dece0e5189859be3b2ba1e3af82964ad43de |
+| collect_producers_v1.py | ef1bf2b72dac2cba0ff751eb01c0d1f365c98d72b69a4c75fc8c8adb4a45c62a |
+| input-hashes.json | 1fa401b9c43cb0a44b0cb2f6576da6a4215ecb4a48499c3d447af0f19badc340 |
+| original-spans.json | 2b4fb5a160f93285e9765c592c3da0b1834acc172319f7450cb8970d27150059 |
+| critical-words.json | 936ef50b100ac05e982ccc601eb214595b092fc3b77a56fd4fc61daa96d96f54 |
+| selected-contracts.json | 06b4da17090cc9534e9a2e844f3f009233385b084aa27d42da41a17cd4e091e9 |
+| output-manifest.json | 81a0bd43bcecbe92d5e36bb11d18a79d4c8f447d13669fcff6b88fcf64eca003 |
+| initial-generated-v1/SNAPSHOT_INDEX.json | 0f26a1df1ddd1bc78ba4e5590d490350be6929b14e988dc7948679bdae0fa98f |
+
+The read-only collector `--check` passes22 outputs,14 spans,39 words,five branch targets,11 inputs,seven frontend assertions and one host illustration; all original execution counters remain0. Independently mapped original PT_LOAD file-backed ranges verify all14 span hashes and39 words, decoded signed ARM branch arithmetic verifies the five targets, and raw PC-relative format/WHO literal checks pass. All24 first-copy members match both current source files and their declared original snapshot hashes. The index excludes itself. Generation refuses overwrite; only this new review was written.
+
+## Independent source findings
+
+1. The original answering-machine function0x1cf00 takes message+4 as parsed object, open_pdata+16 as its private object and message+32 as the separate selector. Null parsed WHAT, nonnull dimension converting35, selector3, category other than2, opaque client-registration return0 and parsed kind3 lead through0x1d03c to0x1d3d8 and then indexed dimension35 to0x1d9bc. The earlier receive wrapper at0x1ebb0 requires word0=1 on the selected route; coherent pointers and ordinary serializer/logging/conversion behavior remain premises. Its loaded private object and WHO8 call pass the same source message/open_pdata.
+2. At0x1d9bc..0x1d9d8, the original ARM ABI argument preparation is unambiguous: r1=35,r2=private+0xac,r3=private+0x238,stack[0]=private+0x244. Pool0x1df94 plus PC at0x1d9d4 resolves0x232e8, whose bytes are exactly `*#8**%d*%d*%d*%d##`. The following imports request command publication with message+12, then monitor publication, then g_free of the formatted pointer. This proves selected call order/arguments, not delivery, callee ownership or safety after exceptional behavior.
+3. Original frontend lines194..236 request auto-switching status and, under the truthy/equality gates, request get_vde_iu_status. The selected result is split at `*`, index4 is compared with string0 and then switchOnCamera is requested. For exactly the formatter response, index4 is the first private word+0xac. The frontend slice itself does not check WHO/DIM or prove that this response reaches it. The host formatting/split illustration supplies declared words0,7,9; it is not captured traffic, actual state, ARM or JavaScript execution.
+4. The API narrow span0xfbfa8..0xfbfb0 requests std::string::swap using r5 and sp+20. Existing caller source preserves the incoming return-object pointer in r5 at0xfbf58 and prepares sp+20 as the opaque exchange result location. I did not inspect the exchange implementation. The swap alone does not prove response bytes, JSON serialization, transport routing, registration or a successful transaction.
+5. Original g_malloc0(760) at0xd308..0xd314 and open_pdata+16 store at0xdbd0 establish the selected private allocation/link under normal successful imports. The reported zero-initialization relation is conditional and earlier than any intervening startup/callback effects; it is not query-time state. The private word+0x1cc gates WHO8 separately from response field+0xac.
+6. The route-zero receive branch compares parsed WHO with raw pool0x1fa08 value1013, then calls the misleadingly named manage_who_thirteen at0x1ea2c. That function requires selector2,category2,DIM4,route word0 and private+0x30 nonnull. Its list loop starts counter0 from the tested route word, increments it and stores low return words at+0x1b4 through+0x1c8, stopping at list end or count6. Empty list also reaches the later route-word store1 at0x1eb4c. No six-entry validity, public WHO13 namespace, physical discovery or naturally scheduled initialization follows.
+7. end_floor obtains private through argument+16 and stores2 at+0xac at0xfd6c. In the selected late_stop branch, +0x1a0/+0x1a8 must differ from1; nonzero+0x244 selects status4 and branches away, otherwise +0x23c==0 conditionally stores status0 before clearing+0x238/+0x244. These are software stores with unproved scheduling/physical meanings, not measured timer or camera states.
+
+## Boundaries retained
+
+The schema join belongs to bt_answering_machine private+0xac/+0x238/+0x244, not the separate bt_vct global0x2b5f8. The conditional answering-machine route-zero to route-one producer does not resolve packaged bt_vct role1's initial-1 to required2 bootstrap. Mode, role, factory flag, discovery, answering permission and physical availability remain separate. Product connector legends do not establish electrical origin for these software messages.
+
+Incoming raw parsing/admission, actual callback registration and private+0x30 provenance, API exchange, sender provider/binding, actual recipients and hardware applicability remain open. No matrix was rerun, no full writer/alias inventory was claimed, and existing native-corpus counts remain unchanged. The report is suitable for narrow promotion as an identified conditional status formatter and software-field consumer relation.

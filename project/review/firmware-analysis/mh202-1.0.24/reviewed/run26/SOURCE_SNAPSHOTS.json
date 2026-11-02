@@ -1,0 +1,86 @@
+{
+  "checkpoint": "run26",
+  "validation": "validation/run26/final-checkpoint.json",
+  "files": [
+    {
+      "source": "reverse-engineering/firmware-analysis/mh202-1.0.24.md",
+      "source_sha256": "6eb0c420146bb349765c563c1f29154470fe271aa90bbbd48efbd686c0ac04b6",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/01-firmware-analysis-mh202-1.0.24.md.txt"
+    },
+    {
+      "source": "reverse-engineering/firmware-analysis/mh202-1.0.24-state-and-routing.md",
+      "source_sha256": "b96682c63e6706b297ae1980679a747a679be5fd17f82f0d0eca1d74b56b830c",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/02-firmware-analysis-mh202-1.0.24-state-and-routing.md.txt"
+    },
+    {
+      "source": "reverse-engineering/firmware-analysis/mh202-1.0.24-record-and-script-lifecycle.md",
+      "source_sha256": "5cf11f1059ebd65f9f1f3757f3834d7603a0ef0a46e8590f569823321ede33ab",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/03-firmware-analysis-mh202-1.0.24-record-and-script-lifecycle.md.txt"
+    },
+    {
+      "source": "reverse-engineering/firmware-analysis/mh202-1.0.24-functional-translation.md",
+      "source_sha256": "29a641741da59540c1669fe60d7deb3492ffe0ba0894c330b8ed78423cf7824a",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/04-firmware-analysis-mh202-1.0.24-functional-translation.md.txt"
+    },
+    {
+      "source": "reverse-engineering/firmware-analysis/README.md",
+      "source_sha256": "98faa5e2c45bc39d79be1f223713f09036c0e80102e0a02afcd5e42f0ebf0a88",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/05-firmware-analysis-README.md.txt"
+    },
+    {
+      "source": "project/review/firmware-analysis/README.md",
+      "source_sha256": "fd3c0ed123e005dfacafb2ac77af912e80989193e18cdb89dcb42271c7b8fc44",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/06-firmware-analysis-README.md.txt"
+    },
+    {
+      "source": "project/review/firmware-analysis/mh202-1.0.24/README.md",
+      "source_sha256": "94472362e656ee77b877f5bde15e27422e8c26d62001b4107d50a79089eab7ed",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/07-mh202-1.0.24-README.md.txt"
+    },
+    {
+      "source": "functional/who-17-scenario-management/README.md",
+      "source_sha256": "f9825e4dd40ef229a422df501ecaa44378b912833a3c45d3f7d3e8ad796b9402",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/08-who-17-scenario-management-README.md.txt"
+    },
+    {
+      "source": "functional/who-9-auxiliaries/README.md",
+      "source_sha256": "a1fad1cfa8364af1323922150a7376381703087c016b4b45b2c5f557659d1dbf",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/09-who-9-auxiliaries-README.md.txt"
+    },
+    {
+      "source": "functional/who-22-sound-diffusion/README.md",
+      "source_sha256": "064acf6f2b1655a51c883f9df69cdd10c2218506a742aa569b49b986d608348d",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/10-who-22-sound-diffusion-README.md.txt"
+    },
+    {
+      "source": "functional/who-5-alarm/README.md",
+      "source_sha256": "b4dd242f30c4c9dde1e4e04772eb7c39e74cd503b2e3cc241186701ac9f4abe3",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/11-who-5-alarm-README.md.txt"
+    },
+    {
+      "source": "functional/who-25-transversal/README.md",
+      "source_sha256": "74fbfa3871ca2558aa03cc3be2a1f2c6a5c0d7fddce22122c46c0bfb2cd9c10e",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/12-who-25-transversal-README.md.txt"
+    },
+    {
+      "source": "functional/who-14-special-commands/README.md",
+      "source_sha256": "87a61958e0a39d1ef88fe5b6d413369b6720cdea52a79586652a6a9d2fc6c8e5",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/13-who-14-special-commands-README.md.txt"
+    },
+    {
+      "source": "functional/who-15-cen/README.md",
+      "source_sha256": "128febb454675db4ae37c340f902e5d3d5b2924df5a6c6c825ffd69cd9cb5627",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/14-who-15-cen-README.md.txt"
+    },
+    {
+      "source": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "source_sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/15-definitions-own-dev-0151-mh202-scenario-programmer.md.txt"
+    },
+    {
+      "source": "devices/work-queue.yaml",
+      "source_sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run26/16-devices-work-queue.yaml.txt"
+    }
+  ]
+}

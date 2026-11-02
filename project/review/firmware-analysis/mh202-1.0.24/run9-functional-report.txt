@@ -1,0 +1,66 @@
+# MH2021.0.24 — CHKDATE caller, UTC date fields and numeric return
+
+Bounded static-only calendar investigation. **Own original ARM/vendor/library/parser/interpreter execution, emulation, instruction visits/hooks, target OS/process/I/O/device/network activity:0.** Twelve finite host cases transcribe selected original field/branch relations; they are not executed dates or script statements. Earlier comparator/copy execution corpora remain separate and were not rerun. Originals, prior reports and repository documents stayed read-only.
+
+## Material result
+
+Actual `=CHKDATE` source-prefix handling calls the matching packaged `CHKDATE(char*,char*)` helper and stores its numeric result in a selected numeric record. Exact selector **`SYSDATE`** calls **time→gmtime**, unlike CHKTIME's previously observed time→localtime. Under ordinary libc ABI contracts, this compares the **UTC calendar date**, not local hour/minute.
+
+The helper scans to the **seventh `*` for year**, sixth for month and fifth for day. It compares year→month→day and returns **0 equal,1 current date later,2 earlier**, or−1 for another selector. Empty year followed by `#`, empty month followed by `*`, and empty day followed by `*` preserve the corresponding current component. This is exact selected delimiter/field behavior, not a complete accepted date/OPEN/DSL format or a Boolean scenario condition.
+
+## Provenance and reproduction
+
+Normal-image originals read afresh through verified ImageVFS:
+
+| Original image path | SHA256 |
+|---|---|
+| `/home/bticino/bin/bt_script` | `f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4` |
+| `/home/bticino/lib/libdomotica.so.0.0` | `5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09` |
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/functional/run9/collect_evidence.py --check
+```
+
+Collector checks11 outputs plus manifest,3 exact original spans,37 instruction words,2 original inputs,8 safe selector/format references and12 finite host cases. Input identities additionally pin shared accessor and unchanged CHKTIME/copy context reports. All original spans record VA/file offsets/byte hashes. It uses host reads/binutils/Python only; manifest excludes report/reviews. No F454 code/layout/fixture is imported.
+
+## Actual source caller and integer store
+
+`bt_script`0x9ce8..0x9da0 compares the first8 current-line bytes with exact `=CHKDATE` (pool0xa9a4) at0x9cf4. Zero result selects argument extraction; nonzero moves to the separate CHKTIME branch. This is a prefix selector, not complete statement validation.
+
+The selected caller finds `(`, requests `strcpy(line,found+1)`, copies10 bytes into a cleared local buffer and calls `strtok(buffer,",")` with its returned pointer unused. It finds the first quote in the changed line, requests another suffix copy, tokenizes at quote and requests a copy of the returned token. It then passes the first buffer and changed global line in r0/r1 at **0x9d98**, calling imported `_Z7CHKDATEPcS_` through PLT0x91dc. The selected original library defines that exact symbol at **0x2078**, size1696, ending0x2718.
+
+Before the call, r4 is selected numeric-record base (`Valori_num` plus existing r9 offset). `0x9d9c` branches to **0xa480**, which stores r0 at record+4. This establishes an actual numeric result consumer; it does not prove a particular variable id, composed IIF use, action, complete numeric-variable grammar or deployed `.spt` body.
+
+`hypothetical-caller-argument-model.json` uses current RHS candidate `=CHKDATE(SYSDATE,"*A*B*C*D*30*10*2026##")` solely to illustrate suffix/token relationships. Original caller/string searches/tokenization/global state do not execute. The earlier standalone packaged strcpy corpus narrows that helper for its supplied16 cases; it does not run this caller or certify this candidate. The dummy A/B/C/D prefix is deliberately not a claimed valid OPEN/date/script format. Missing configured extra/4 assets remain an explicit gap.
+
+## Complete selected helper: selector and current date basis
+
+`chkdate-complete-body.txt` saves0x2078..0x2718 including its pool. PIC arithmetic at0x2090 gives base0x12114. Pool0x26ec resolves to exact **SYSDATE at0x92d4**. `strcmp`0x20c4 and branch0x20d0 send another selector to the parameter-error tail, which returns−1 at0x26d0..0x26e4.
+
+For SYSDATE, **0x2108 calls time**, and **0x2114 calls gmtime** with the same local time pointer. No intervening success/null check precedes use of the returned structure pointer. Original loads use structure word+20 (year),+16 (month),+12 (day). Under ordinary selected32-bit libc `struct tm`, these are tm_year,tm_mon,tm_mday. The helper adds1900 to the current year and1 to current month when constructing its defaults; comparisons subtract those offsets from parsed target year/month. No original clock or time conversion executes here, and effective binding/success/ABI remain explicit premises.
+
+The difference from CHKTIME is source-visible: CHKTIME imports localtime, this helper imports gmtime. Ordinary ABI interpretation therefore separates local clock comparison from UTC date comparison. No installed timezone, actual midnight transition, measured discrepancy or scheduling defect is inferred.
+
+## Target scans, omitted-component defaults and returns
+
+For each component the helper first formats the current value as decimal, copies it into a shared comparison string with `%s\n`, and then optionally replaces that default from the supplied target. Exact source formats are `%d`, `%s\n`, `%c%c%c%c\n` and `%c%c\n`.
+
+| Component | Scan and selected omission test | Nonempty extraction and comparison |
+|---|---|---|
+|Year|0x2170..0x21a8 counts while star-count≤6, leaving pointer after seventh `*`; byte `#` at0x21bc/0x21c0 keeps current year|Four consecutive bytes at0x21c4..0x2244; compare tm_year to atoi−1900 at0x2248..0x2294|
+|Month, only if years equal|0x22f4..0x232c counts through sixth `*`; next byte `*` at0x2340/0x2344 keeps current month|Two bytes at0x2348..0x2394; compare tm_mon to atoi−1 at0x2398..0x23dc|
+|Day, only if year/month equal|0x2438..0x2470 counts through fifth `*`; next byte `*` at0x2484/0x2488 keeps current day|Two bytes at0x248c..0x24d8; compare tm_mday to atoi at0x24dc..0x2518|
+
+Each loop increments a byte index while counting literal `*`; it does not stop at NUL or inspect total target length in the selected body. The finite model therefore requires a readable complete delimiter structure, rather than inventing behavior for truncated/malformed inputs. Prefix bytes before the selected positions are not validated by these component scans. This is not evidence that an upstream parser accepts arbitrary prefixes.
+
+Signed less comparisons choose return2, unequal after that choose1, and all equal chooses0. Exact source tails: year earlier/later0x2698/0x2660, month earlier/later0x2628/0x25f0, day earlier/later0x25b8/0x2580, equal0x2548. A mismatch returns before scanning lower components. No weekday, hour/minute/second, date-range, leap-year, interval or timezone-setting logic occurs in this complete selected helper body; validation or interpretation elsewhere remains separate.
+
+## Finite host cases and confidence
+
+`host-date-comparison-model.json` supplies current gmtime date2026-10-30, without reading host time. Cases cover equality, target year2027/2025, month11/09, day31/29, omitted year/month/day separately, all three omitted, and unsupported selector. The ordinary results are0/2/1 as expected from the displayed signed comparisons. It records which component scans are actually reached; for a year mismatch month/day are not modeled as executed.
+
+These12 examples use ordinary digits/readable targets. They do not emulate packaged atoi/sprintf/gmtime or prove original parser/caller execution, full calendar grammar, malformed/overflow behavior, real clock state or a trigger/action. Empty-field defaults are literal byte/delimiter behavior under those premises, not a new public wildcard language.
+
+High confidence: exact prefix/call/store, selector, gmtime reference, delimiter counts/positions, component defaults and three-way return branches. Conditional: provider/ABI/successful clock and ordinary strings/numeric formatting, coherent global line and complete target. Open: configured source syntax, actual caller tokenization, stored-value→specific IIF/action sequence, effective runtime binding and physical scheduling.
+
+Next useful work is a justified actual numeric-variable/condition caller sequence or original configured generator asset; repeating CHKTIME/copy/comparator matrices would not close this gap. A separate bounded original helper experiment could test supplied CHKDATE state later, but none is claimed here. Closed authentication/framing work remains excluded.

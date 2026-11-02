@@ -1,0 +1,61 @@
+# MyHOMEServer1 3.87.13: selected local event-code route to BNIL
+
+This static batch identifies a concrete local classification/dispatch route into the previously recovered BNIL recipient: classifier row1 text `light` produces local event code0; that code selects record-processing and later lookup paths, while raw trigger type1 selects the relative-pointer-table entry for original caller0x53a1a. A nonempty selected ID, successful preceding record processing, valid registry/vector/object state and later ID equality are material premises. These are local code relationships, not accepted wire grammar, natural event traffic, a public WHO mapping, scene execution or physical function.
+
+Original instructions/native helpers/vendor processes/JsonCpp/target APIs executed0. Semantic host models and input fixtures0. Curated OWN-DEV-0199 provides home-automation/scenario product context only; no physical meaning follows from private classifier strings, class names or equal integer values. Original images and earlier reports remain read-only. No receiving/transport/MQTT/libjel/authentication/session/framing implementation is followed.
+
+## Exact source and new versus inherited proof
+
+Original `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Fresh ELF32/PT_LOAD mappings translate linked VAs; relative-pointer/TBH bytes are retained separately from code. No nearest exported-template labels supply source-function identity.
+
+The earlier admission report retained the caller0x53a1a..0x53aa0 and handler0xee708 under supplied event/ID premises. That remains inherited recipient behavior. New evidence here is the preceding local string classifier, ID-object guard, two event-code table selections, a distinct raw-trigger table selection, returned-record alias and loop-index relationship. The whole outer routine0x51968..0x55ed4 is not claimed fully audited, and its earlier input parsing/string construction/filters remain premises.
+
+## Selected classifier row becomes event code0
+
+At0x521e4..0x52204 the selected local std::string at pointer saved in SP+88 is searched for the first dot from position0. The retained source forms a prefix endpoint bounded by the actual string length and constructs the selected prefix. Its complete upstream provenance and all earlier filters are not closed here; no supplied byte string or accepted external method is fabricated.
+
+GOT base0x1659a4 plus pool0x525d8 resolves slot0x166098 and original classifier table0x160e4c. Row1 contains length5 and exact text `light` at0x1176bc. The selected equality helper0x4f20c compares lengths and, when nonempty/equal-length, requests memcmp; it returns1 only on the selected equal path. Its own normal ABI/memcmp behavior remains conditional.
+
+The row1 comparison at0x52236 branches on equality to0x5544e. That stub supplies r3=1, then reaches0x54daa, which subtracts1 and stores the result at current SP+8. Thus the selected classifier label `light` produces local code0. This explicitly distinguishes table row1 from code0; noType row0 must not be equated with this selected code. No mathematical or physical interpretation of the label is necessary.
+
+## ID extraction is a separate guard
+
+Original0x52322..0x52332 copies the parsed JSON `params` member into a local Json value. A separate std::string at current SP+448 (fp) is initialized empty. If the copied value is an object,0x54db2..0x54df0 checks membership of exact key `id`, requests its asString conversion and copies the resulting string into fp. Keys are independently resolved from original PIC pools; successful JsonCpp/string conversion/copy remains a premise rather than provider execution.
+
+At0x52358 the code tests the local event code signed against6. For code0, the following fp+4 length must be nonzero; zero branches to cleanup0x526f2. A valid params object with a successful nonempty id conversion therefore supplies the selected ID premise. This is not a general JSON validity, type-acceptance or wire-admission rule; earlier normal parse/control flow is explicitly assumed.
+
+## First code dispatch and record-processing boundary
+
+The first unsigned code bound is10 at0x5236a. TBH base0x52374 entry0 is0x0f80, reaching0x54274 for selected code0. That branch's actual record construction/mutation is a separate producer investigation, not duplicated here.
+
+Its retained tail0x5430c..0x54344 supplies a selected local handle and ID fp to original0x10eb10 at0x5433c. Return/control flow is material:0x54340 branches to0x527b4, where the returned value is preserved in r5 and compared with1. Exactly the selected value1 reaches0x551b4. After normal local cleanup, the retained zero-source-control leg at0x551c6 branches to0x52864. Other cleanup/control/error branches are not advertised as identical or globally exhausted. The actual0x10eb10 result, producer state and all allocator/owner behavior are unexecuted delegate premises.
+
+This evidence prevents treating classifier code alone as sufficient to reach BNIL. The first record-processing path can prevent later scene traversal. It is not classified as transport, a remote request, a natural state change or a successful update merely because a call exists.
+
+## Second code dispatch obtains the local record
+
+At0x52864..0x52888 a context/container accessor0xb69f8 supplies a tree-like range; selected node+20 gives the scene pointer. The source loads that scene's raw trigger-pointer range, initializes raw index r4=0 and compiled-byte offset sl=0 when nonempty, then reloads the event code from SP+8 at0x5289c. No whole registry population, scene readiness or natural traversal is implied by these reads.
+
+The second TBH at0x528a6 has data base0x528aa; entry0 is0x0233 and reaches0x52d10. This is a separate table from the first code dispatch. At0x52d12 a getter0x5724c supplies context to lookup0x10e3d8 at0x52d1c; r2 is the same ID string fp and r0 addresses a local pair at current SP+152.0x52d20 loads the returned pair into r8/r7. The concrete record producer/provider body is separately owned; here r8 is simply the returned first word and r7 its accompanying control word. Successful valid lookup/object state and selected normal ownership cleanup remain prerequisites. No supplied record layout is silently initialized or reseeded.
+
+The selected r8 record pointer is retained through the following raw-trigger classification and into caller0x53a1a. Its embedded string address r8+8 is passed as the BNIL handler input later. The returned pair and raw trigger are different objects; neither is the scene, the ID string fp, or a parsed Json value by numeric-offset coincidence.
+
+## Raw trigger type1 selects the BNIL recipient
+
+Original0x52d46 reads the current raw trigger's word+32, subtracts1, and applies unsigned bound22. A separate32-bit relative pointer table at0x52d5c is used, not a TBH. Selected raw type1 gives index0; its word0x00000cbf added to table base yields Thumb pointer0x53a1b, hence instruction entry0x53a1a. The source explicitly uses BX, so the pointer's low bit is meaningful metadata, not a second instruction address.
+
+The earlier schema report independently identifies raw trigger row/type1 as BNIL. This composition does not assign event code0 and trigger type1 to a shared namespace. Other table entries and alternate raw types are outside this selected route.
+
+At the inherited recipient, original scene+104 compiled trigger handles are copied via0xa6508, the copied range is checked against raw index r4 and addressed with sl, and a nonzero entry is supplied to dynamic_cast. Valid cast/provider/type state is assumed; the local copied vector is cleaned via0x573a4 before the retained typed pointer is later used. Whole receiver ownership across that cleanup is not proved here.
+
+The selected normal ID-accessor leg supplies the compiled trigger ID to0x4f000 and compares it with the same fp ID. This helper compares lengths, then selected memcmp bytes, returning Boolean equality; nonzero result is required at0x53a86..0x53a88. Only then does0x53a8c supply record string r8+8 to0xee708 at0x53a92. That handler's implementation/result belongs to the preceding admission scope and is not reinterpreted here.
+
+Loop source0x5297e..0x52994 increments raw index by1 and compiled pair offset by8. The raw scene range uses4-byte pointer entries, whereas the copied compiled range uses8-byte pointer/control handles. The source therefore correlates them by index, not identical stride or layout. Correct construction/alignment/counts, valid scene objects and normal returns are premises, not a universal safety or consistency guarantee.
+
+## Reproduction and unresolved boundary
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/collect_routing_v1.py --check`
+
+The exclusive collector records14 code spans,15 instruction guards, three selected dispatch tables/data spans, three key references,11 direct branch joins and three input identities. It refuses generated overwrite and immediately freezes all outputs plus report/collector with index bytes computed before the index is opened. No native execution or semantic fixture is introduced.
+
+Confidence is high for selected original label/code/ID/table/alias/recipient relationships. Earlier input parsing/filters and local string construction, concrete record construction/update/lookup, actual return1, complete provider/registry/vector/type/lifetime/unwind/concurrency, configured events and all external delivery/physical consequences remain open. This batch provides a conditional local route, not an end-to-end natural event, accepted protocol implementation or a full dispatcher catalogue.

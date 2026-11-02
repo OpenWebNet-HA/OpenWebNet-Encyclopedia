@@ -1,0 +1,13 @@
+# Handoff and verification scope
+
+| Area | Current reach | Remaining boundary |
+| --- | --- | --- |
+|Knowledge impact|Existing reviewed catalogue/scenario/state evidence explained for tooling and interpretation|No complete supported-input grammar, installed compatibility, physical capability expansion or new binary finding|
+|Product roles|Current curated F454, MH202 and MyHOMEServer1 roles and current follow-up gaps|No port/WHO/layout equivalence by shared names; manufacturer scopes and runtime remain separate|
+|Reference reconciliation|Historical Device documentation-only scope and selected catalogue-reader closures clarified|Full Device/source review, parameter payloads, installed state and selection/fallback remain pending|
+|Later-checkpoint navigation|Two new rows after immutable17-row guide; saved reviews/validation/index identities|Row/hash counts are not coverage or a new full semantic source audit|
+|Historical reproduction|Exact Device snapshot for old614; exact overview snapshot for numeric142|Old direct commands require original input versions; no current-pass or executed-failure fiction|
+
+All new original visits, guest execution/replay, source-collector replay and semantic fixtures are0. The saved MHS provider ledger stays1 corpus/8 entries/340 original code-hook visits/0 C primitives/12 redirects/8 EXIT/0 stops/360 hooks;4 data-relocation setups separate. No new tool/library import or original image/database analysis occurs here. Earlier execution records are not merged or reset.
+
+Full JSON/configuration/callback/type/ID/provider/error/unwind/lifetime/concurrency and physical gaps remain explicit. Closed receiving/transport/MQTT/libjel/auth/session/framing bodies remain closed. Exact first candidates, unexecuted draft versions, old references and unavailable MH20218/21 intermediate-history limits remain preserved. Current verification scopes do not authenticate missing historical drafts.

@@ -1,0 +1,36 @@
+{
+  "NULL_branch": {
+    "assignment": "MOVEQ R0,3 at0xa2b8",
+    "branch": "BEQ0xa2bc to0xa3a8",
+    "meaning": "local machine return only",
+    "test": "CMP R0,0 at0xa2b4"
+  },
+  "inherited": "Prior own-file0xa3ec caller passes pathname to0xa1dc; saved descriptor and same1024-byte read buffer feed prior first and second strtok requests. This packet begins only on the second-nonnull continuation0xa2a8.",
+  "limits": [
+    "Third ordinal is conditional on ordinary continuation semantics of prior own-file requests",
+    "No explicit length/type/content test appears between selected nonnull token and strcpy request",
+    "ELF writable section membership does not prove a destination array capacity or live object",
+    "No suppliedR1/R2 output-word store in this bounded span; compiled destination has a distinct role",
+    "Token identity/meaning/content, full format, later fields, final success/cleanup, copy/install/startup remain unproved"
+  ],
+  "nonnull_request": {
+    "API": "strcpy",
+    "R0_destination": "compiled0x18090 via0xa3c8",
+    "R1_source": "same nonnull third strtok machine return copied at0xa2c0",
+    "VA": "0xa2c8"
+  },
+  "premises": [
+    "Natural caller/earlier admission and selected second-nonnull continuation",
+    "Valid provided pathname/output addresses, descriptor and usable terminated read data",
+    "Appropriate strtok state, effective imports, ordinary ARM32 ABI/C semantics and normal returns",
+    "Writable sufficiently large destination and appropriate source/destination non-overlap",
+    "No relevant mutation, aliasing or intervening provider side effects invalidating the selected chain"
+  ],
+  "scope": "One subsequent selected token-to-compiled-destination request, not a complete resource grammar",
+  "third_request": {
+    "API": "strtok",
+    "R0": 0,
+    "R1": "compiled * delimiter via0xa3c4",
+    "VA": "0xa2b0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "boundary": "Packaged candidates only; no effective binding/pthread API invocation or lifecycle execution.",
+  "selected_declarations_and_definitions": {
+    "/home/bticino/scheduling_manager/scheduling_manager": [
+      "64: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt6thread6_StateD2Ev@GLIBCXX_3.4.22 (10)",
+      "111: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_detach@GLIBC_2.34 (12)",
+      "147: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_join@GLIBC_2.34 (12)",
+      "153: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@GLIBCXX_3.4.22 (10)",
+      "293: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt6thread4joinEv@GLIBCXX_3.4.11 (17)",
+      "304: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt6thread6detachEv@GLIBCXX_3.4.11 (17)",
+      "320: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_create@GLIBC_2.34 (12)"
+    ],
+    "/usr/lib/libstdc++.so.6.0.29": [
+      "8: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_join@GLIBC_2.34 (50)",
+      "71: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_create@GLIBC_2.34 (50)",
+      "126: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_detach@GLIBC_2.34 (50)",
+      "838: 0009b269    32 FUNC    GLOBAL DEFAULT   12 _ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@@GLIBCXX_3.4.22",
+      "3612: 0009b21d     2 FUNC    GLOBAL DEFAULT   12 _ZNSt6thread6_StateD2Ev@@GLIBCXX_3.4.22",
+      "3941: 0009b235    26 FUNC    GLOBAL DEFAULT   12 _ZNSt6thread4joinEv@@GLIBCXX_3.4.11",
+      "4288: 0009b251    24 FUNC    GLOBAL DEFAULT   12 _ZNSt6thread6detachEv@@GLIBCXX_3.4.11"
+    ]
+  }
+}

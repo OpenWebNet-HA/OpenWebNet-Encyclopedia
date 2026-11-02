@@ -1,0 +1,22 @@
+# Independent local removal-context source review
+
+Verdict: PASS, no correction requested. Root independently read the original local entry, dispatcher forwarding, selected removal argument loads, exact PIC literals and decimal helper. The separate checker check_context_independently_v1.py uses its own ImageVFS/ELF32 PT_LOAD mapper and reproduces the author read-only check. Original/native/provider/JSON/strtol/scene/OS/network/bus/physical execution and semantic fixtures remain0. No opaque receiving/transport/auth/session/framing implementation was followed.
+
+The separate binary check validates scheduler SHA2567d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26,7 raw span hashes,14 byte guards,2 PIC/string identities,4 decoded Thumb direct branches, the bounded frame-query range hash/6 rows and19 exact first copies. Author --check reproduces17 outputs. These counts describe source reproduction, not new native calls or exhaustive alias coverage.
+
+Original0x4884a saves dispatcher incoming r1 in sl. The selected branch0x4894a forwards sl in r1 to0x3e1f0;0x3e20e saves it at that callee's SP+20. Selected0x3e73c/0x3e740 loads that context and its word0 as removal receiver. This closes local pointer forwarding under selected normal paths/ABI/object/provider premises; the producer/capture of dispatcher incoming r1 and equality with startup main SP+160 remain open. No outer receive-shaped body or layout inference supplies that missing identity.
+
+Fresh original PIC arithmetic establishes EXACT params and scene_id, not the separate event-cache params.id field. The selected member/asString/assignment requests supply local stringSP244. Original0x3e3bc reads its pointer/length;0x3e3c2 requests range construction and0x3e3c8 calls the actual decimal helper. Its normal register result replaces an earlier unrelated SP+28 temporary at0x3e3ce; later0x3e73e supplies that word to numeric removal. Root separately read the later0x3e498 store: it is a single SP+24 word, not a doubleword overwriting the numeric SP+28 result. The retained fixed-store query is not a complete indirect/callee/exception stack-alias analysis.
+
+Original decimal helper0x3b4f0 requests errno-location and strtol with base10/end storage. It tests end==start for invalid-argument and errno34 for out-of-range requests, and has a normal errno restoration path. No original provider executes. Full-consumption/sign/partial-text/overflow/error/JSON-conversion/accepted-domain semantics remain unproved, rather than inferred from the library name. The later tree receives a32-bit register key under these normal source premises, not a tested external grammar.
+
+The source report correctly keeps actual branch eligibility, parsed-value validity, string/member/provider behavior, caller context/state/lifetime/concurrency and removal-after-poll/last-owner consequences conditional. Its pre-output exploratory params.id inference was corrected by exact source to params.scene_id before an authored candidate existed; the disclosure neither reconstructs an old file nor authenticates unavailable historical bytes. Prior completed owner-removal source, which only used a supplied numeric ID, is unchanged.
+
+Reviewed SHA256:
+
+| Artifact | SHA256 |
+| --- | --- |
+|context/REPORT.md|bbc23551b48f2e8b89e7c5af5c4c5fd392164705bd1573ec25156c98ba494c93|
+|context/collect_context_v1.py|f8febe2218516c6d16ea994b95726002e50cdefda4a148c60bd992f6e03a3992|
+|context/OUTPUT_MANIFEST.json|4a5149000c6d87dfe23bed73c226b2f75dda71b76599ebed75e6c1cd21809c77|
+|context/first-candidate/INDEX.json|7e67437da4b6ae2876e31028701a5859450636dc9d1c3960cf613926d7fcf449|

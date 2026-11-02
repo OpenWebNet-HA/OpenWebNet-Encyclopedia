@@ -1,0 +1,61 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000d3948:
+   d3948:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+   d394a:	6905      	ldr	r5, [r0, #16]
+   d394c:	4e23      	ldr	r6, [pc, #140]	@ (d39dc)
+   d394e:	f505 770b 	add.w	r7, r5, #556	@ 0x22c
+   d3952:	4639      	mov	r1, r7
+   d3954:	447e      	add	r6, pc
+   d3956:	4630      	mov	r0, r6
+   d3958:	f73c e9ea 	blx	fd30 <sqlite3_open@plt>
+   d395c:	bb48      	cbnz	r0, d39b2
+   d395e:	4920      	ldr	r1, [pc, #128]	@ (d39e0)
+   d3960:	4604      	mov	r4, r0
+   d3962:	4632      	mov	r2, r6
+   d3964:	2002      	movs	r0, #2
+   d3966:	4479      	add	r1, pc
+   d3968:	f7fd f8e4 	bl	d0b34
+   d396c:	f505 710c 	add.w	r1, r5, #560	@ 0x230
+   d3970:	4630      	mov	r0, r6
+   d3972:	f73c e9de 	blx	fd30 <sqlite3_open@plt>
+   d3976:	b940      	cbnz	r0, d398a
+   d3978:	491a      	ldr	r1, [pc, #104]	@ (d39e4)
+   d397a:	2401      	movs	r4, #1
+   d397c:	4632      	mov	r2, r6
+   d397e:	2002      	movs	r0, #2
+   d3980:	4479      	add	r1, pc
+   d3982:	f7fd f8d7 	bl	d0b34
+   d3986:	4620      	mov	r0, r4
+   d3988:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+   d398a:	f8d5 0230 	ldr.w	r0, [r5, #560]	@ 0x230
+   d398e:	f73d e83e 	blx	10a0c <sqlite3_errmsg@plt>
+   d3992:	4915      	ldr	r1, [pc, #84]	@ (d39e8)
+   d3994:	4602      	mov	r2, r0
+   d3996:	2006      	movs	r0, #6
+   d3998:	4479      	add	r1, pc
+   d399a:	f7fd f957 	bl	d0c4c
+   d399e:	f8d5 022c 	ldr.w	r0, [r5, #556]	@ 0x22c
+   d39a2:	f73c ef82 	blx	108a8 <sqlite3_close@plt+0x4>
+   d39a6:	efc0 0010 	vmov.i32	d16, #0	@ 0x00000000
+   d39aa:	4620      	mov	r0, r4
+   d39ac:	f947 078f 	vst1.32	{d16}, [r7]
+   d39b0:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+   d39b2:	f8d5 022c 	ldr.w	r0, [r5, #556]	@ 0x22c
+   d39b6:	f73d e82a 	blx	10a0c <sqlite3_errmsg@plt>
+   d39ba:	490c      	ldr	r1, [pc, #48]	@ (d39ec)
+   d39bc:	4602      	mov	r2, r0
+   d39be:	2006      	movs	r0, #6
+   d39c0:	4479      	add	r1, pc
+   d39c2:	f7fd f943 	bl	d0c4c
+   d39c6:	f8d5 022c 	ldr.w	r0, [r5, #556]	@ 0x22c
+   d39ca:	f73c ef6e 	blx	108a8 <sqlite3_close@plt+0x4>
+   d39ce:	2300      	movs	r3, #0
+   d39d0:	461c      	mov	r4, r3
+   d39d2:	f8c5 322c 	str.w	r3, [r5, #556]	@ 0x22c
+   d39d6:	4620      	mov	r0, r4
+   d39d8:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}

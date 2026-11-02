@@ -1,0 +1,93 @@
+{
+  "collector_sha256": "1f2825c7b7207879acd413aefac96d2a1e4b141f85b2a25f8f40c40cde7cbc81",
+  "counts": {
+    "configuration_whitelisted_values": 3,
+    "guards": 32,
+    "new_original_execution": 0,
+    "originals": 3,
+    "spans": 11
+  },
+  "outputs": {
+    "CONFIG_WHITELIST.json": {
+      "bytes": 755,
+      "sha256": "211b531d83be72a6e57706c7de174f95f2adf60be5e1d3acc28c41ca9b33ddef"
+    },
+    "INPUTS.json": {
+      "bytes": 2644,
+      "sha256": "5e54b029ef9e52cc2b3bfe9e67bc6739dcf855afaefd941f2d8ebb449c9a7f51"
+    },
+    "SOURCE.json": {
+      "bytes": 7851,
+      "sha256": "4506c6a656bd61fc870269c225e5c98ccf73db3d3168c22bc14b782cc6485b14"
+    },
+    "core-dynamic.txt": {
+      "bytes": 2046,
+      "sha256": "6b17590bea57feca1705db5c53c4464a03530e4bc3332801b5e1571541377d06"
+    },
+    "core-relocations.txt": {
+      "bytes": 7841,
+      "sha256": "b84cd46e900d90c0ce6488379ebe5bba80fb333cc0b802eb34f6ee2593f95476"
+    },
+    "exe-dynamic.txt": {
+      "bytes": 2215,
+      "sha256": "43dcadde53a06b12a00c0813f667a7ef66b08bcab7de54d885a63991d7e755ee"
+    },
+    "exe-relocations.txt": {
+      "bytes": 14418,
+      "sha256": "af570b366dcda1128810476e7d264e00b40e3525dd2e905114a09e6d5591ad6d"
+    },
+    "plugin-dynamic.txt": {
+      "bytes": 2190,
+      "sha256": "34c4206be756468f99f1e9590f043a3bf1ea003c2df6f9b3d1083af4dcbc6055"
+    },
+    "plugin-relocations.txt": {
+      "bytes": 10149,
+      "sha256": "89bbf77c0524cf195a79afbb1602fc9a90c3860b977e753b8ff3dd1971156ae6"
+    },
+    "spans/conditional-field-registration.txt": {
+      "bytes": 1358,
+      "sha256": "125bcf0ac86eb595e15351f729bb13c04939e27f9b55acbac2cae31cf8e2c521"
+    },
+    "spans/config-first-boolean.txt": {
+      "bytes": 1988,
+      "sha256": "af4a5d3b74c3ff4d3d7c82973ee4dca32c15e568db24e429e22ac2f79a95deca"
+    },
+    "spans/config-second-boolean.txt": {
+      "bytes": 636,
+      "sha256": "02e338d84f87140513ddc2c64bdec1185888c38ca22409002d1be678411ac712"
+    },
+    "spans/descriptor-private-and-path.txt": {
+      "bytes": 1338,
+      "sha256": "c957a893049b50c6f9289275bc90b0366dad789e0b1658744a8a39d8ef7f8879"
+    },
+    "spans/init-once.txt": {
+      "bytes": 769,
+      "sha256": "9cbc802d33bb3bab947bdada72eb4b8633f9df75f630749f6cec2acf794aacf1"
+    },
+    "spans/initializer-argument-call.txt": {
+      "bytes": 593,
+      "sha256": "493b43133542e235b11fac653e35e31b57dc37268ea17459657800baace37273"
+    },
+    "spans/initializer-symbol-request.txt": {
+      "bytes": 772,
+      "sha256": "fedacee408c4667be0aee757949591962005848473a8a5720ef765545f7379ba"
+    },
+    "spans/intervening-config-return.txt": {
+      "bytes": 1542,
+      "sha256": "33cdaae951779a6918f9e80843bb04ec1e9cd0627f851108a0a789ce25368a12"
+    },
+    "spans/message-route-constructors.txt": {
+      "bytes": 1820,
+      "sha256": "042448ed0296a9babe8be2355d2a866027e34de8309e5872841bd489a2d9c23f"
+    },
+    "spans/plugin-data-owner.txt": {
+      "bytes": 1948,
+      "sha256": "76461e34a3950cef7629e940bbc903e8114ff8846693b06f5fb270eac71601d8"
+    },
+    "spans/register-field-owner.txt": {
+      "bytes": 1644,
+      "sha256": "d80d606e6d3e63e5afa5abff994e255d78c8031bcba0a6f7885cc82886baaddc"
+    }
+  },
+  "report_sha256": "91a541f322d8126f3dc8c5e64547242ebedecbb8c3d6b959e9494ffe2ee2ff3f"
+}

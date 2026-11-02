@@ -1,0 +1,85 @@
+# MyHOMEServer1 3.87.13 Firmware
+
+The first static examination identifies a newer application layer alongside the retained OpenWebNet/SCS core, a distinct embedded catalogue, and changed parser objects. These are build-specific implementation findings. They do not establish active services, accepted commands or Physical Device behavior.
+
+## Reference
+
+| Property | Evidence |
+| --- | --- |
+| Applicable Device | [MyHOMEServer1 home automation server](../../devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md) |
+| Original manufacturer package | [SMARTGW_038713.fwz](https://assets.legrand.com/pim/AUTRE/SMARTGW_038713.fwz), 183381241 bytes |
+| Package SHA-256 | `4ca1bcc70c1616270cb4c1f4b3ceb3c01c941797e437c3544d7d3d11b159c603` |
+| Update declaration | `MyHomeServer1`, Firmware `3.87.13`, XML `3.1`, Object model `5.0.67` |
+| Normal image SHA-256 | `0a7ded1eeeff8a6c888903f02a28879b91259067fc4222839d604094035ef273` |
+| Recovery image SHA-256 | `3d8d5ee888d80e94a0479352342dafc306239bf9ef269581d12a5894b96b4400` |
+| Methods | Verified extraction, static headers/disassembly, read-only SQLite queries and explicit host arithmetic |
+| Original Firmware execution | Zero; no target loader, service, system call, script, gateway or bus execution |
+| Retained evidence | [First-pass review capsule](../../project/review/firmware-analysis/myhomeserver1-3.87.13/README.md) |
+
+The Device definition supplies the product scope: an SCS/Ethernet home automation server with configured scenarios and other home-control functions. A reusable catalogue Object label does not make this an F454 AV gateway. Likewise, scenario functionality does not establish the MH202's taskmanager/script implementation. The package's model declaration remains separate from an executed diagnostic identity response.
+
+## Application structure
+
+The normal image contains 5924 regular files, including 858 ELF objects; recovery contains 5384 regular files and 740 ELF objects. Among 5378 shared regular paths, 5368 have identical bytes and ten differ. The normal image has 546 unique regular paths and recovery has six. These counts describe retained files, not semantic coverage or runtime equivalence.
+
+Selected applications include `matrix_mx`, `scheduling_manager`, `alarm_manager`, `backup_manager`, `gateway_manager`, `energy_manager`, `player_manager` and `bt_smart_home_manager`. They sit outside the older `bin` directory. Their original ELF dependencies and selected JSON key structures are retained in the [structural report](../../project/review/firmware-analysis/myhomeserver1-3.87.13/inventory-report.txt). An application name alone does not prove ownership of an entire product function.
+
+The selected modern applications and the 44 inspected core/provider objects use ARM32 EABI5 hard-float. `matrix_mx` is a Thumb-entry PIE with the ARM hard-float interpreter. This requires fresh calling conventions and object layouts; earlier firmware harnesses cannot be transferred by filename.
+
+## Startup and configured ownership
+
+Original SysVinit metadata selects runlevel5 and the vendor startup script. The normal script sets the library search path, changes directory to the vendor application root and requests `bin/bt_daemon` without explicit arguments. A user-library directory precedes packaged providers. Original daemon code reaches a default stack path, markup parsing and process-field stores; live lookup order and successful startup remain separate questions.
+
+The normal and recovery `stack_open.xml` files are identical and declare 25 processes, including the modern managers. The `working_mode` text callback stores record offset8. The inspected launch helper skips zero-mode records only under its selected global status2 predicate, while the packaged `normal_status` literal is4. These values must not inherit the older firmware's mode semantics. The selected eligible-record path builds a `nice` command and calls a child-launch helper; it is not an observed process launch.
+
+| Packaged declaration | Established scope |
+| --- | --- |
+| `scheduling_manager` scenes path under extra0 | A distinct configured storage location; actual schema, triggers and action engine remain untraced |
+| `alarm_manager` data path and alarm/sensor/partition filenames under extra0 | A separate application data declaration; no dedicated alarm-bus topology follows |
+| `scsserver` device `/dev/ttymxc2`, `bus_type=0` | One selected configured SCS lane; no physical connector or global UART claim |
+| D-Bus and Redis runlevel links and scripts | Actual packaged service-start requests; readiness and active state unobserved |
+| Normal versus recovery wrapper | Recovery requests a converter and creates an extra95 feature marker; normal removes that marker |
+
+Kernel uImage metadata names Linux `5.10.35+gd50c7a7404d5+p0`. The selected normal device tree declares the Linda board, `fsl,imx6dl` compatibility and Cortex-A9 metadata. Actual board revision and boot-tree selection remain unobserved. The [boot and configuration report](../../project/review/firmware-analysis/myhomeserver1-3.87.13/boot-report.txt) retains exact source paths, line ranges, VAs and hashes.
+
+## Embedded catalogue
+
+The complete regular-file prefix scan finds one SQLite3 file in each image at `home/bticino/matrix_mx/MHCatalogue.db`. Both copies are identical. The scan also checks selected database extensions and Redis/ZIP header prefixes; it does not exclude other embedded formats or runtime-created stores.
+
+| Catalogue | Bytes | SHA-256 |
+| --- | ---: | --- |
+| This Firmware's embedded copy | 2233344 | `79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb` |
+| Previously archived MyHOME Suite 3.5.38 copy | 2625536 | `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5` |
+
+Both catalogues contain the same 75 tables with identical stored table definitions. Forty-two table row multisets match and 33 differ. The Firmware copy records `DATA_V=4`, `DATA_R=4`, `DATA_B=0` and literal `export_date=20240327`. This is catalogue metadata, not independently verified build time. Versioned row IDs must not be treated as stable identities merely because integers match.
+
+The later [complete source-profile comparison](../../internals/mhcatalogue-source-profiles.md) resolves retained Firmware subgraphs, embedded-only definitions, reused Configuration IDs and equivalent renumbered fields. It also distinguishes the identical table definitions from one additional embedded index. The original first-pass report remains preserved with its examined scope.
+
+The [catalogue and scene-consumer continuation](myhomeserver1-3.87.13-consumers.md) traces actual compiled catalogue-opening/row-reader paths and the scheduler's directory-to-JsonCpp-factory chain. The later [ownership and factories continuation](myhomeserver1-3.87.13-factories.md) identifies the selected SQL producer/columns, concrete SLEEP/SCENARIO classes and enabled/thread/worker joins. Runtime eligibility, complete execution semantics and physical effects remain unresolved.
+
+The Firmware catalogue has no `EN_DEVICE` code/name containing `myhomeserver` and no `EN_FIRMWARE` row for `id_item=2198`. These bounded lookups prevent treating the catalogue as this build's complete self-capability description; they do not establish absent Device support.
+
+`matrix_mx` declares SQLite dependencies and imports opening, preparation, stepping and binding functions. Its literal `MHCatalogue.db` is at ELF VA/file offset `0x1cce04`, in object SHA-256 `96348136c2a0ebe859c689eb6246e3889e5154fdb63ffd5f3fc76975ac596717`. The later consumer and ownership continuations link the full path, opening requests and selected class139 query, without executing SQL or establishing live eligibility. The [database reference](../../internals/device-application-databases.md) retains the distinction between database evidence and runtime state.
+
+## Separate OPEN implementations
+
+The selected `bt_device` dependency family includes the C++ `libopen`/`libdiag`/`libwhere` providers. `openserver` and COSO instead directly declare the C `libopenmsg` family. Repeated C++ bridge/parser symbols also occur in `libcommon`; declarations and definitions do not establish the actual dynamic lookup result.
+
+In this build's `usr/lib/libopenmsg.so.1.0.0`, SHA-256 `8d1ac556922c280688b0e424737682d9ec2caa83b6783b621677fcdba153c8e1`, original `new_open_msg` instructions at `0x3a24..0x3a78` request a zeroed 56-byte object and initialize the discriminator at offset52. The selected ordinary parser branch writes discriminator1 at `0x3c28..0x3c32`. This differs from the MH202 pointer parser's 48-byte object and discriminator44. It is static source evidence, not a successful parser experiment or a shared C++ layout.
+
+Actual auxiliary and automation plugin initialization reaches registration stores and descriptor callback relocations. Auxiliary criteria contain9 in both directional lists; automation has separate reverse criterion1 and forward criterion2. Numeric criteria, WHO, parser kinds, envelope representation and callback direction are distinct namespaces. Selected original auxiliary code supplies the four-byte body construction and separate reverse WHO9 formatter recorded in the [protocol report](../../project/review/firmware-analysis/myhomeserver1-3.87.13/protocol-report.txt). The two host examples are synthetic and do not form an observed roundtrip.
+
+The complete seven-file `libcoso` directory enumeration contains the core, SCS, debug, auxiliary TR/STM and automation TR/STM files. Other descriptor names exported by a file do not establish an implementation or registration for those features. This directory scope does not locate the product's scenario implementation.
+
+## Evidence limits and next investigations
+
+The first pass establishes original composition, selected startup/registration code, parser allocation changes and a distinct catalogue. Exact source reports and independently checked identities are retained in the review capsule. Whole-process execution, live binding, configured state, delivery, persistence, electrical topology, timer scheduling and physical effects remain unproved. Manufacturer signature blobs were retained but their cryptographic verification is not established. Referenced extras `80.xtz`, `81.xtz`, `94.xtz` and `95.xtz` are absent from this download.
+
+The next useful work is narrowly scoped:
+
+1. Trace `matrix_mx` from the catalogue literal through path construction, opening and selected queries; compare meaningful changed catalogue records without assuming stable IDs.
+2. Trace `scheduling_manager` scenario storage, trigger/action schema and lifecycle, then its actual command handoff. Do not substitute the MH202 script engine.
+3. Close one fresh COSO parser/provider/outer-dispatch-to-STM path before attempting bounded original execution.
+4. Establish `alarm_manager` provider/bus ownership and the backup/persistence contract from actual consumers. Do not inherit F454 alarm wiring or AV roles.
+
+Broader Device review gates remain pending. This first pass does not change published command semantics or claim complete firmware coverage. Earlier stopped authentication/session/framing investigations remain closed.

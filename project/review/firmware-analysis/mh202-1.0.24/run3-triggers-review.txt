@@ -1,0 +1,33 @@
+# MH202 trigger run3 independent static review
+
+**PASS within the declared helper/model scope. No material correction requested.** Independently reproduced `triggers/run3/collect_evidence.py --check`: eight outputs, four original spans,14 original-word assertions,ten ordinary and four special-field host fixtures, original execution0. Collector byte comparison covers its eight generated outputs.
+
+## Source-critical findings verified
+
+- Actual c608 caller passes stored trigger asr0/event asr1, selects special c8e0 only for the event's eight-byte `*#13**22` prefix, and sets hit+8 when the comparison returns0. This reuses the reviewed event route as explicit context, not a repeated runtime test.
+- Ordinary c6dc maintains separate pattern/input cursors. Literal mismatch reaches1. `[!N]` compares event-suffix atoi against the pattern value then skips through closing bracket; ordinary nonnegative well-formed examples agree.
+- The comma branch compares the initial saved value and subsequent atoi values, retaining the match accumulator. The range branch uses signed lower/upper comparisons, inclusive in the selected examples. A single `[N]` reaches closing code with neither comma mode nor initialized range upper bound and selects mismatch. Collector intentionally does not generalize its regular examples to negative/overflow/mixed/malformed patterns.
+- After accepted brackets, c87c..c888 consumes the whole ASCII digit run. Leading-zero example is consistent with numeric conversion and cursor advancement.
+- c8b4 exits on pattern exhaustion; c8c4 only continues when input cursor is below input strlen, otherwise also reaches c8d4 result0. There is no final length-equality check. ABC/AB and AB/ABC illustrate this **local helper** boundary only. Report/model correctly avoid calling either an accepted network frame, valid configured script, live false trigger, defect or parser bypass.
+- Special comparator parses two objects after requiring stored trigger prefix `*#13`. DIM22's original stores produce selectors0,1,5,6,7 followed by−1; DIM0 produces0,1 then−1. The common loop skips null/empty trigger strings, compares selected nonempty fields via strcmp and returns mismatch on differences. Host cases use assumed extracted arrays and preserve field-position scope, not identity/physical meanings.
+- DIM1 branches to the selector loop without the explicit0/22 local stores; the report/model deliberately leave its starting selector state and outcome unestablished. No match-all or uninitialized-memory claim is made.
+- Normalizer nonbracket guard reads WHO1, measure predicate, DIM1 and numeric value0=100 before reaching its selected `*1*0*%s##` formatter; bracket branch has distinct temporary construction and `*1*1*%s##` formatter. Report retains unresolved parser reachability, full mutations and actual configured-pattern transformation. No physical dimmer or valid raw-normalization fixture is inferred from these literals.
+
+## Limits retained
+
+This is host static branch transcription and original-byte inspection, not original parser/comparator/libc execution. Numeric fixtures assume ordinary nonnegative nonoverflow strings; special fields assume valid extracted arrays. Full pattern grammar, DIM1 initialization source, normalizer preservation rules, provider binding, configured assets and physical applicability remain open. No authentication/connection branch or original code ran; no producer artifact changed.
+
+## Exact reviewed pins
+
+Paths below are relative to `triggers/run3/`.
+
+| Artifact | SHA256 |
+|---|---|
+| `REPORT.md` | `2f628d990d2d4ae7c4765cd08692ae8d7734c62fd55e74aa1391f0970cbfa0f9` |
+| `collect_evidence.py` | `f5dcc89ee28434b5e916c84ffb77d3f842e84fb574e3ce716b8ec8f25802348f` |
+| `original-spans.json` | `d6a8eacda7f88ace77bc3d4846fdf8a394fa7a5c4ce7142353c7c1e66078281f` |
+| `input-hashes.json` | `5cf211f4f3a1248b65b50d19c229355fa300907f08cc35fe7462d2843f15b92d` |
+| `critical-words-and-literals.json` | `2bf764b1104e538b8ca02e31f92b62c9982903bab8e4cb6a5709a351b4676767` |
+| `host-selected-models.json` | `1cb0474e4e6e2b1accdaf257c04c2a2dfe69d697295d874feaace059946af580` |
+
+Reviewer wrote only `reviews/run3/triggers-review.md`.

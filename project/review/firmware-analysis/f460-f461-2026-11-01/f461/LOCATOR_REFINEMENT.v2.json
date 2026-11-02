@@ -1,0 +1,24 @@
+{
+  "metadata_history": {
+    "authoritative_metadata": "LOCATOR_REFINEMENT.v2.json",
+    "issue": "Original metadata string guessed a parent directory prefix; replace only that reference with actual read-and-hash-verified paths. Old metadata/v2 report/first snapshots remain unchanged.",
+    "prior_file": "LOCATOR_REFINEMENT.json",
+    "prior_sha256": "4a34b715636f1df1c362d5754efc78e778dc278b33406674692cce3a1e8687d8"
+  },
+  "new_report_sha256": "187877260da89ef432021b971268f83854641a72b73e4d7c8d4d02b035b1dd16",
+  "old_report_and_firstcopies_unchanged": true,
+  "original_report_sha256": "3265846866f7cebb4d3a91f6c4fd3c64ad111ff72c617b980faa0b3282927c2f",
+  "root_pre_correction_snapshot": {
+    "index_path": "work/f460-f461-comparison/2026-11-01/f461-pre-locator-refinement/INDEX.json",
+    "index_sha256": "d22ac8cfaaf8e2b3dc446817c1a5f8f606dc579bd6e10902dc712baf69b0dca3",
+    "path": "work/f460-f461-comparison/2026-11-01/f461-pre-locator-refinement/REPORT.md",
+    "sha256": "3265846866f7cebb4d3a91f6c4fd3c64ad111ff72c617b980faa0b3282927c2f"
+  },
+  "scope": "Report-only XML line locator correction; sourcevalues/actions/collector/14outputs/DBscope unchanged",
+  "substitutions": [
+    {
+      "after": "Lines16\u201319 declare the recovery action; lines20\u201323 request action2 then action1 for status4.",
+      "before": "Lines17\u201322 declare the recovery action; lines23\u201326 request action2 then action1 for status4."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+"""Local removal context aliases and scene_id numeric source; static only."""
+import argparse,hashlib,importlib.util,json,re,struct,subprocess,sys
+from pathlib import Path
+sys.dont_write_bytecode=True
+D=Path(__file__).resolve().parent;P=D.parents[2];W=P.parents[2];H=lambda b:hashlib.sha256(b).hexdigest();J=lambda x:(json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+V=P/'research/2026-10-31/image_vfs.py';sp=importlib.util.spec_from_file_location('context_vfs',V);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+S='/home/bticino/scheduling_manager/scheduling_manager';SHA='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26'
+SPANS=[('local-dispatch-context-save',0x48834,0x4885c),('selected-dispatch-forward',0x48948,0x48954),('selected-entry-context-save',0x3e1f0,0x3e222),('whitelisted-member-source',0x3e2aa,0x3e2d0),('local-id-construction-and-store',0x3e3b6,0x3e3de),('decimal-conversion-helper',0x3b4f0,0x3b564),('selected-removal-arguments',0x3e73c,0x3e74a)]
+GUARDS=[(0x4884a,'8a46'),(0x4894a,'5146'),(0x3e20e,'0591'),(0x3e2c2,'2846'),(0x3e2ca,'3da8'),(0x3e3bc,'d6e90812'),(0x3e3ce,'0790'),(0x3e73c,'059b'),(0x3e73e,'0799'),(0x3e740,'1868'),(0x3b512,'0a22'),(0x3b514,'6946'),(0x3b51e,'9d42'),(0x3b524,'222b')]
+def branch(z,pc):
+ a,b=struct.unpack('<HH',z);assert a&0xf800==0xf000;s=a>>10&1;i=1-((b>>13&1)^s);j=1-((b>>11&1)^s);n=(s<<24)|(i<<23)|(j<<22)|((a&1023)<<12)|((b&2047)<<1);return(pc+4+n-((1<<25)if s else 0))&0xffffffff
+def build():
+ v=m.ImageVFS();b=v.read_bytes(S);assert H(b)==SHA;ph=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);L=[struct.unpack_from('<8I',b,ph+i*sz)for i in range(n)]
+ def off(a,z):return next(o+a-va for t,o,va,_,fs,*_ in L if t==1 and va<=a and a+z<=va+fs)
+ def at(a,z):o=off(a,z);return b[o:o+z]
+ def w(a):return struct.unpack('<I',at(a,4))[0]
+ def txt(a):return at(a,128).split(b'\0')[0].decode('ascii')
+ hp=v.root/S.lstrip('/');out={};spans=[]
+ for name,a,e in SPANS:
+  spans.append({'name':name,'start_va':hex(a),'end_va_exclusive':hex(e),'file_offset':hex(off(a,e-a)),'sha256':H(at(a,e-a))});z=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(hp)],text=True).replace(str(hp),S);z=re.sub(r' <([^>]+)>',lambda q:q[0]if'@plt'in q[1]else'',z);out['spans/'+name+'.txt']=z.encode()
+ for a,z in GUARDS:assert at(a,len(bytes.fromhex(z))).hex()==z,hex(a)
+ keys=[]
+ for p,pc,key in [(0x3ebe4,0x3e2b0,'params'),(0x3ebe8,0x3e2ba,'scene_id')]:a=(w(p)+pc+4)&0xffffffff;assert txt(a)==key;keys.append({'pool_va':hex(p),'pc_va':hex(pc),'literal_va':hex(a),'literal':key})
+ calls=[]
+ for pc,t in [(0x4894e,0x3e1f0),(0x3e3c2,0x3b668),(0x3e3c8,0x3b4f0),(0x3e742,0xb6b5c)]:assert branch(at(pc,4),pc)==t;calls.append({'pc':hex(pc),'bytes':at(pc,4).hex(),'target':hex(t)})
+ # Query only fixed SP stores overlapping the selected two caller slots; not a full alias proof.
+ qstart,qend=0x3e1f0,0x3e744
+ z=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={qstart}',f'--stop-address={qend}',str(hp)],text=True)
+ rows=[re.sub(r' <[^>]+>','',x)for x in z.splitlines()if re.search(r'\b(?:str|strd|vstr)[^\n]*\[sp, #(?:16|20|24|28)\]',x)]
+ expected=['3e20e','3e296','3e350','3e35a','3e3ce','3e498'];assert [re.search(r'^\s*([0-9a-f]+):',x).group(1)for x in rows]==expected
+ paths=[hp,V,P/'research/2026-11-01-owner-removal/removal/REPORT.md',P/'research/2026-10-31-startup/startup/REPORT.md',P/'research/2026-10-31-startup/registry/REPORT.md'];pins=[{'path':str(p.relative_to(W)),'bytes':len(p.read_bytes()),'sha256':H(p.read_bytes())}for p in paths]
+ out.update({'INPUTS.json':J(pins),'SOURCE_SPANS.json':J(spans),'BYTE_GUARDS.json':J([{'va':hex(a),'bytes':z}for a,z in GUARDS]),'PIC_KEYS.json':J(keys),'DIRECT_BRANCHES.json':J(calls),'BOUNDED_FRAME_QUERY.json':J({'start_va':hex(qstart),'end_va_exclusive':hex(qend),'raw_sha256':H(at(qstart,qend-qstart)),'fixed_SP_store_rows':rows,'scope':'Fixed-offset store forms in selected interval only; no arbitrary alias/stack/provider or complete path proof. SP28 earlier3e35a data is replaced by numeric result3e3ce.'}),'ALIAS_LEDGER.json':J({'context':['localdispatcher48834incomingr1→sl at4884a','selected4894ainstallsr1=sl→call4894e3e1f0','3e20estoresincomingr1 atcurrentSP20','3e73cloadsSP20→3e740loadscontextword0→3e742removalreceiver'],'ID':['providedparsedJSON memberparams then scene_id','asString request3e2c4→assignment3e2cc toobjectSP244=localbaseSP212+32','3e3bc readsbegin/lengthfromlocalbase+32→3e3c2localconstruct3b668 atSP268','3e3c6 loadsconstructedcharacterpointer→3e3c8helper3b4f0','helperrequestsstrtolbase10/endpointer/errno path; normalr0 storedSP28 at3e3ce','3e73e loadsSP28 asnumericr1key at3e742'],'main_registry_identity':'Unclosed: incomingr1of48834 producer/capture and itsword0 equalitywithmainSP160 are notproved. No layout/name inference closes it.','scope':'New local suppliedcontext/whitelistedIDsource chain only; natural eligibility/accepteduseroperation/provider success and fullgrammar notclaimed.'}),'DEVELOPMENT_HISTORY.json':J({'stage':'Before currentarea collector/report/output creation','refinement':'An exploratory parent message inferred params.id from earlier eventcache context. Exact original PIC lookup then established params.scene_id. No authored context candidate/report had yet existed or been overwritten.','historical_identity':'This is a transparent message/source refinement, not a reconstructed historical file or independently pinned old artifact.','canonical_failures':0}),'METHOD.json':J({'original_execution':0,'semantic_models_or_fixtures':0,'target_IO':0,'scope':'Only localprovidedcontext aliases and whitelistedscene_id/string/decimalrequest source; importedJSONparse and receiving/transport/auth/session/framing/MQTT/libjel bodies remainopaque.','unclosed':['incomingdispatchercontextproducer/maincontainer equality','selectedbranch eligibility afteropaqueparse/provider/otherlocalsteps','JsonCpp/asString/stringcopy/strtol/error/overflow/partialtext/provider semantics','fullindirectalias/unwind/lifetime/concurrency and actualscene/removal behavior']})})
+ return out
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build();out['OUTPUT_MANIFEST.json']=J({'outputs':{n:{'bytes':len(z),'sha256':H(z)}for n,z in out.items()},'collector_sha256':H(Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes())})
+ if a.check:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  for n,p in json.loads((D/'first-candidate/INDEX.json').read_bytes()).items():z=(D/n).read_bytes();assert z==(D/'first-candidate'/n).read_bytes()and H(z)==p['sha256']and len(z)==p['bytes']
+ else:
+  C=D/'first-candidate';assert not C.exists();assert not any((D/n).exists()for n in out);copies={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),Path(__file__).name:Path(__file__).read_bytes()};ix=J({n:{'bytes':len(z),'sha256':H(z)}for n,z in copies.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in copies.items():p=C/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (C/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':a.check,'outputs':len(out),'spans':len(SPANS),'guards':len(GUARDS),'keys':2,'direct_branches':4,'inputs':5,'original_execution':0}))
+if __name__=='__main__':main()

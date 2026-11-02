@@ -1,0 +1,71 @@
+# Run27 — original monitor callbacks, serialization and recorded subscriber send
+
+## Finding
+
+The exact alarm message at run26's monitor-batch boundary now passes through original monitor callback `coso!0xc12c`, original per-subscriber callback `0xc15c`, and complete original `libopenmsg!openmsg_to_buf!0x2948`. Original instructions serialize the selected parsed WHO5/WHAT17/#5 object into:
+
+```
+*5*17*#5##
+```
+
+Original send call site `0xc1d0` passes these 10 bytes to a record-only `g_socket_send` callback. It returns the requested 10 bytes; original per-subscriber code frees its temporary buffer and returns. The monitor callback then reaches its original `free_message` tail-call import, where execution stops **before message destruction**. No actual GSocket, subscriber, connection, network or device exists in this experiment.
+
+This closes the previous serializer/per-subscriber boundary for one exact staged normal object under an explicit private connection-list fixture. It does not establish real monitoring, physical alarm status or full consumer completion.
+
+## Exact saved source and entry
+
+`source_handoff` in `monitor-results.json` hashes `functional/run26-alarm/consumer-results.json`. The prior producer, state-handler and consumer objects are reconstructed once and each compared for complete dictionary equality with that saved file. The same private message, parsed object, strings and list nodes are carried into the new CPU; no receiver parses an expected text fixture into a replacement object.
+
+Reused setup executes 608 original instructions/670 hooks: run10's selected original constructor/translator/publication/parser plus run26's idle state handler/consumer. This is setup for the saved boundary; no zone, parser bitmap, state or output-consumer matrix is repeated.
+
+The new entry is import `g_list_foreach!0xa034` with the exact saved arguments: monitor head from run26, callback `0xc12c`, userdata `0x165a4`. The original caller LR `0xc46c` is supplied as a staged post-call frame assumption. The saved message is still protocol+56=3 with parsed kind 1 and route+8=3. Earlier normal caller/idle-state limits remain; the complete plugin/framework initialization is not executed.
+
+## Private subscriber justification and callback traversal
+
+The private monitor context at original address `0x165a4` receives a one-node native-layout connection list at offset+4. Its data is a 12-byte private connection record whose first word points to an opaque private memory address. That address is passed through as the GSocket argument but is never treated as a real GObject/GSocket or dereferenced by a vendor socket implementation.
+
+This layout is supported by static original accept-path code: `coso!0xbc00..0xbc28` requests 12 zeroed bytes, stores the accepted socket pointer in word0, then `0xbcb4..0xbcc0` appends the connection record into context+4. The accept, remote-address, event-source and attach functions are not executed here. The fixture provides the minimal record fields consumed by the selected normal callback, not a simulation of successful socket startup.
+
+`g_list_foreach` remains an explicit primitive. It traverses supplied data/next words and schedules the **original** callback with ABI arguments `(node_data,user_data)`. A private continuation PC resumes the saved foreach return after a callback returns. No instruction at this synthetic PC is counted as original code. Outer and inner traversal arguments are recorded independently:
+
+- Original batch foreach invokes `0xc12c(message,monitor_context)`.
+- Original `0xc134..0xc148` reads monitor_context+4 and requests foreach over the one connection, callback `0xc15c`, userdata equal to the same message.
+- The private traversal dispatches actual `0xc15c(connection_record,message)`.
+
+Thus original callback code runs; packaged GLib traversal does not. The final outer traversal remains pending at the message-free boundary described below.
+
+## Original serializer and final send boundary
+
+Original `0xc160..0xc17c` tests message protocol 3. It selects `0xc234..0xc23c`, passing the actual parsed object pointer and the address of a null output-buffer local to `openmsg_to_buf`. PLT `0x9ef0` is redirected to the original provider at private base `0x20000000` plus ELF VA `0x2948`. Original ELF LOAD permissions are retained. No loader/startup is run; this selected provider path needs no guessed full runtime initialization.
+
+The original serializer checks the object's frame kind and optional fields, duplicates its WHO, WHAT and WHERE fields through explicit string primitives, selects the normal-frame formatting route and returns 0 with the newly allocated result. The actual original format is `*%s*%s*%s##`; `g_strdup_printf` is an explicit formatting/storage primitive applied to those actual native call arguments. The helper result is therefore **original serialization control/dataflow under named string primitives**, not original GLib formatting execution or a Python-supplied output frame. No original list-field callback is needed for this selected normal object because its optional argument lists are absent.
+
+Original `0xc240` observes serializer result 0 and a buffer containing `*5*17*#5##`. Original `0xc1ac..0xc1d0` computes its actual length, passes the opaque private socket pointer, buffer, length 10, null cancellable and error-pointer local to `g_socket_send`. That final API is a record-only callback returning 10. Zero actual host/syscalls/network writes are forwarded. Error, short-send and real GSocket behavior are outside this single normal case.
+
+Original `0xc220..0xc22c` requests release of the serializer buffer and returns through the original per-subscriber epilogue. The inner foreach continuation resumes original `0xc14c..0xc154`, which restores its frame and tail-calls `free_message`. The emulator stops at import `0x9e00`, before its first implementation instruction. Captured arguments still contain the exact original message/parsed pointers; outer pending foreach depth is 1.
+
+The final buffer's free request is asserted. Neither the message nor parsed object nor its WHO/WHAT/WHERE string allocations appears in the captured temporary-free requests. These are observed calls with non-reclaiming free primitives, not proof of actual lifetimes, leak absence, ownership correctness or later destruction. The imported free_gchar primitive records its pointed-to temporary allocation and clears the supplied local; its original provider body does not execute. The full outer foreach/monitor list cleanup/consumer return is deliberately not claimed.
+
+## Reproduction and evidence
+
+```
+python3 work/f454-firmware/research/2026-10-29/functional/run27-alarm/emulate_monitor_send.py
+python3 work/f454-firmware/research/2026-10-29/functional/run27-alarm/collect_evidence.py
+```
+
+`input-evidence.json` hashes the original coso, libopenmsg, alarm producer/state libraries, exact run26 results and current/reused scripts. `monitor-results.json` records all foreach arguments, native entries/sites, formatting call, serializer return, recorded send request, temporary free requests and stop arguments. `reproduction-summary.json` is compact output. `original-monitor-callbacks.txt`, `original-open-serializer.txt` and `subscriber-record-provenance-static.txt` retain exact original spans.
+
+Original provider identities include:
+
+- libopenmsg SHA256 `a2ac48da8f1a397cee17ce8708021e8920da181f3a45486d689a7f189275d489`;
+- original coso SHA256 `7259067a648b215ef93ba93ede0037296cffe273a099b72e6c593dcb9057ee89`.
+
+New execution: **129 original instructions (53 coso +76 libopenmsg) + 17 primitive hooks + 1 private continuation hook + 1 provider redirect + 1 free-boundary hook =149 hooks**. Native entry assertions: monitor callback 1, subscriber callback 1, complete serializer 1; original serializer call/return, actual send call site and temporary-buffer cleanup site each execute once. The boundary and synthetic continuation instructions are excluded from original counts.
+
+Including 608 reused setup instructions gives 737 original instructions/819 hooks across stages; the new 129-instruction interval remains separately reported. Each phase is capped 10,000 hook steps/one second. Unknown paths/imports/interrupts fail closed. All original/synced inputs remain read-only; only research outputs are written.
+
+## Final limits and ranked open questions
+
+High confidence: same saved normal alarm object reaches actual original monitor/subscriber callbacks, complete normal serializer and exact 10-byte send-API request under the private one-connection fixture. The selected original route releases its serialized temporary and reaches the original message-free call boundary.
+
+Unresolved: actual serial/internal-envelope producer, real framework/plugin/idle-state selection, subscription/accept readiness, GList/runtime behavior, actual GSocket/error/partial-send semantics, message destruction/full consumer return, concurrency and physical device meaning. A future study can join original `free_message` and parsed-object release, or the complete registered-framework chain, without repeating normal zone/serialization cases. Native investigation ends with this bounded batch for morning consolidation.

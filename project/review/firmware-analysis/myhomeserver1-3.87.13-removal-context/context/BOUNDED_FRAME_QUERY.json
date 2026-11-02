@@ -1,0 +1,14 @@
+{
+  "end_va_exclusive": "0x3e744",
+  "fixed_SP_store_rows": [
+    "   3e20e:\t9105      \tstr\tr1, [sp, #20]",
+    "   3e296:\t9304      \tstr\tr3, [sp, #16]",
+    "   3e350:\t9106      \tstr\tr1, [sp, #24]",
+    "   3e35a:\t9207      \tstr\tr2, [sp, #28]",
+    "   3e3ce:\t9007      \tstr\tr0, [sp, #28]",
+    "   3e498:\t9206      \tstr\tr2, [sp, #24]"
+  ],
+  "raw_sha256": "ba8d38ee8ddbba13078b46dece60f10e0dc477d2d3f4e780d78e444e62e49a0d",
+  "scope": "Fixed-offset store forms in selected interval only; no arbitrary alias/stack/provider or complete path proof. SP28 earlier3e35a data is replaced by numeric result3e3ce.",
+  "start_va": "0x3e1f0"
+}

@@ -1,0 +1,101 @@
+{
+  "different_hash_members": [
+    "Image",
+    "hygw_cortex-m.bin"
+  ],
+  "products": {
+    "F460": {
+      "Image": {
+        "bytes": 14434312,
+        "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/Image",
+        "sha256": "58f870d27c4df42e5287be1a5b762a4fddbe85aa3489605bfcfa2d65237624fc"
+      },
+      "chess_dig2_car0.dtb": {
+        "bytes": 39164,
+        "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/chess_dig2_car0.dtb",
+        "sha256": "ba3074579a434c3150c8af2185e270955666d98b0cf8038d72fea0d99897b848"
+      },
+      "chess_dig2_car1.dtb": {
+        "bytes": 39164,
+        "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/chess_dig2_car1.dtb",
+        "sha256": "50f363f083e586a7dc80b7106f1fb432b87e4348d6c00cd77cc7224801931923"
+      },
+      "chess_dig2_car2.dtb": {
+        "bytes": 39164,
+        "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/chess_dig2_car2.dtb",
+        "sha256": "1359a9f571bd1abaf220cf4e61f88ecebdb513b5cc1d677378ab6125b095e62c"
+      },
+      "chess_dig2_car3.dtb": {
+        "bytes": 39164,
+        "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/chess_dig2_car3.dtb",
+        "sha256": "b119d8de7e0e3e7da12ea0932c23caf4f9b033f965f7ab27b66fc74883a46bac"
+      },
+      "chess_dig2_car4.dtb": {
+        "bytes": 39247,
+        "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/chess_dig2_car4.dtb",
+        "sha256": "1ca50d33072f493c3da01b79b8dd33e589dd7a289c324e00af8755f17630ce4b"
+      },
+      "chess_mfg.dtb": {
+        "bytes": 46174,
+        "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/chess_mfg.dtb",
+        "sha256": "5ad562855b03cbd68cededd2af9e70a8e646ef6e633c9e82a136fa5b921b1a89"
+      },
+      "hygw_cortex-m.bin": {
+        "bytes": 22648,
+        "path": "work/f460-firmware/2.0.12/extracted/nested/Image.zip/hygw_cortex-m.bin",
+        "sha256": "40119bf92d0d959e074b5201f782c1e4aa33b1df1de670175cdfa0bde7986163"
+      }
+    },
+    "F461": {
+      "Image": {
+        "bytes": 14434312,
+        "path": "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/Image",
+        "sha256": "f249b7bb544db7743a5b76d5927c5a154204f7c90a946ce08f5177bd46431a94"
+      },
+      "chess_dig2_car0.dtb": {
+        "bytes": 39164,
+        "path": "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_dig2_car0.dtb",
+        "sha256": "ba3074579a434c3150c8af2185e270955666d98b0cf8038d72fea0d99897b848"
+      },
+      "chess_dig2_car1.dtb": {
+        "bytes": 39164,
+        "path": "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_dig2_car1.dtb",
+        "sha256": "50f363f083e586a7dc80b7106f1fb432b87e4348d6c00cd77cc7224801931923"
+      },
+      "chess_dig2_car2.dtb": {
+        "bytes": 39164,
+        "path": "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_dig2_car2.dtb",
+        "sha256": "1359a9f571bd1abaf220cf4e61f88ecebdb513b5cc1d677378ab6125b095e62c"
+      },
+      "chess_dig2_car3.dtb": {
+        "bytes": 39164,
+        "path": "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_dig2_car3.dtb",
+        "sha256": "b119d8de7e0e3e7da12ea0932c23caf4f9b033f965f7ab27b66fc74883a46bac"
+      },
+      "chess_dig2_car4.dtb": {
+        "bytes": 39247,
+        "path": "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_dig2_car4.dtb",
+        "sha256": "1ca50d33072f493c3da01b79b8dd33e589dd7a289c324e00af8755f17630ce4b"
+      },
+      "chess_mfg.dtb": {
+        "bytes": 46174,
+        "path": "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/chess_mfg.dtb",
+        "sha256": "5ad562855b03cbd68cededd2af9e70a8e646ef6e633c9e82a136fa5b921b1a89"
+      },
+      "hygw_cortex-m.bin": {
+        "bytes": 22648,
+        "path": "work/f461-firmware/2.0.11/extracted/Image.zip.sha256.sig.zip.contents/Image.zip.contents/hygw_cortex-m.bin",
+        "sha256": "bd7726245c447f3563f44fd0c404405c6dd176015e1d586f1454bbd931aee8b3"
+      }
+    }
+  },
+  "same_hash_members": [
+    "chess_dig2_car0.dtb",
+    "chess_dig2_car1.dtb",
+    "chess_dig2_car2.dtb",
+    "chess_dig2_car3.dtb",
+    "chess_dig2_car4.dtb",
+    "chess_mfg.dtb"
+  ],
+  "scope": "Payload bytes only, not deployment/hardware behavior or cryptographic signature verification"
+}

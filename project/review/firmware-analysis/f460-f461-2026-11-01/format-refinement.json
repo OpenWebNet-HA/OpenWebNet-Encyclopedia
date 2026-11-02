@@ -1,0 +1,10 @@
+{
+  "reason": "Parent formatting preflight found a blank line separating the new row from its table before documentary review. Remove that leading LF and add spaces in the visible product labels. No source finding/outcome/count changes.",
+  "old_landing_sha256": "b5fd4954e51a8a9a6ee0ca11c4044f288c36a404567154d3821bef65b3292f01",
+  "new_landing_sha256": "cec905b76f4c95fc3309774a0d453ff7cb0d6d0dfa6f7c2d5714f0a8e2743274",
+  "old_patch_preserved": "integration/DOCUMENT_PATCH.json",
+  "authoritative_patch": "integration/DOCUMENT_PATCH.v2.json",
+  "pre_format_exact_copies": "integration/pre-format",
+  "old_review_candidate_index": "integration/review-candidate/INDEX.json",
+  "source_outputs_changed": false
+}

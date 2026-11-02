@@ -1,0 +1,117 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a8f1c:
+   a8f1c:	f8df 1778 	ldr.w	r1, [pc, #1912]	@ a9698
+   a8f20:	f60d 7648 	addw	r6, sp, #3912	@ 0xf48
+   a8f24:	f8df 2774 	ldr.w	r2, [pc, #1908]	@ a969c
+   a8f28:	f60d 7ac4 	addw	sl, sp, #4036	@ 0xfc4
+   a8f2c:	f8df 3738 	ldr.w	r3, [pc, #1848]	@ a9668
+   a8f30:	f50d 687c 	add.w	r8, sp, #4032	@ 0xfc0
+   a8f34:	4479      	add	r1, pc
+   a8f36:	4650      	mov	r0, sl
+   a8f38:	447a      	add	r2, pc
+   a8f3a:	e9c6 2102 	strd	r2, r1, [r6, #8]
+   a8f3e:	4631      	mov	r1, r6
+   a8f40:	9a01      	ldr	r2, [sp, #4]
+   a8f42:	6032      	str	r2, [r6, #0]
+   a8f44:	2200      	movs	r2, #0
+   a8f46:	6072      	str	r2, [r6, #4]
+   a8f48:	58eb      	ldr	r3, [r5, r3]
+   a8f4a:	9302      	str	r3, [sp, #8]
+   a8f4c:	3308      	adds	r3, #8
+   a8f4e:	f8c8 3000 	str.w	r3, [r8]
+   a8f52:	f00b fa41 	bl	b43d8
+   a8f56:	f85b 1c04 	ldr.w	r1, [fp, #-4]
+   a8f5a:	ac94      	add	r4, sp, #592	@ 0x250
+   a8f5c:	4620      	mov	r0, r4
+   a8f5e:	680b      	ldr	r3, [r1, #0]
+   a8f60:	689b      	ldr	r3, [r3, #8]
+   a8f62:	4798      	blx	r3
+   a8f64:	f50d 5781 	add.w	r7, sp, #4128	@ 0x1020
+   a8f68:	4621      	mov	r1, r4
+   a8f6a:	3718      	adds	r7, #24
+   a8f6c:	4638      	mov	r0, r7
+   a8f6e:	f783 fdc9 	bl	2cb04
+   a8f72:	f8df 372c 	ldr.w	r3, [pc, #1836]	@ a96a0
+   a8f76:	f50d 5085 	add.w	r0, sp, #4256	@ 0x10a0
+   a8f7a:	463a      	mov	r2, r7
+   a8f7c:	4641      	mov	r1, r8
+   a8f7e:	3018      	adds	r0, #24
+   a8f80:	58eb      	ldr	r3, [r5, r3]
+   a8f82:	3308      	adds	r3, #8
+   a8f84:	603b      	str	r3, [r7, #0]
+   a8f86:	f045 fb11 	bl	ee5ac
+   a8f8a:	f8df 36e0 	ldr.w	r3, [pc, #1760]	@ a966c
+   a8f8e:	6878      	ldr	r0, [r7, #4]
+   a8f90:	58eb      	ldr	r3, [r5, r3]
+   a8f92:	9303      	str	r3, [sp, #12]
+   a8f94:	3308      	adds	r3, #8
+   a8f96:	603b      	str	r3, [r7, #0]
+   a8f98:	f50d 5382 	add.w	r3, sp, #4160	@ 0x1040
+   a8f9c:	3304      	adds	r3, #4
+   a8f9e:	4298      	cmp	r0, r3
+   a8fa0:	d003      	beq.n	a8faa
+   a8fa2:	68f9      	ldr	r1, [r7, #12]
+   a8fa4:	3101      	adds	r1, #1
+   a8fa6:	f767 ef84 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   a8faa:	4620      	mov	r0, r4
+   a8fac:	f767 eeb4 	blx	10d18 <_ZN4Json5ValueD1Ev@plt>
+   a8fb0:	9a02      	ldr	r2, [sp, #8]
+   a8fb2:	f8d8 300c 	ldr.w	r3, [r8, #12]
+   a8fb6:	3208      	adds	r2, #8
+   a8fb8:	f8c8 2000 	str.w	r2, [r8]
+   a8fbc:	b11b      	cbz	r3, a8fc6
+   a8fbe:	2203      	movs	r2, #3
+   a8fc0:	4651      	mov	r1, sl
+   a8fc2:	4650      	mov	r0, sl
+   a8fc4:	4798      	blx	r3
+   a8fc6:	68b3      	ldr	r3, [r6, #8]
+   a8fc8:	b11b      	cbz	r3, a8fd2
+   a8fca:	2203      	movs	r2, #3
+   a8fcc:	4631      	mov	r1, r6
+   a8fce:	4630      	mov	r0, r6
+   a8fd0:	4798      	blx	r3
+   a8fd2:	9b01      	ldr	r3, [sp, #4]
+   a8fd4:	204c      	movs	r0, #76	@ 0x4c
+   a8fd6:	f103 0a68 	add.w	sl, r3, #104	@ 0x68
+   a8fda:	f767 ed50 	blx	10a7c <_Znwj@plt>
+   a8fde:	f8df 36c4 	ldr.w	r3, [pc, #1732]	@ a96a4
+   a8fe2:	1d02      	adds	r2, r0, #4
+   a8fe4:	efc0 0011 	vmov.i32	d16, #1	@ 0x00000001
+   a8fe8:	4680      	mov	r8, r0
+   a8fea:	f50d 5685 	add.w	r6, sp, #4256	@ 0x10a0
+   a8fee:	f100 0910 	add.w	r9, r0, #16
+   a8ff2:	361c      	adds	r6, #28
+   a8ff4:	4607      	mov	r7, r0
+   a8ff6:	f942 078f 	vst1.32	{d16}, [r2]
+   a8ffa:	4631      	mov	r1, r6
+   a8ffc:	58eb      	ldr	r3, [r5, r3]
+   a8ffe:	3308      	adds	r3, #8
+   a9000:	f848 3b0c 	str.w	r3, [r8], #12
+   a9004:	9b02      	ldr	r3, [sp, #8]
+   a9006:	3308      	adds	r3, #8
+   a9008:	60c3      	str	r3, [r0, #12]
+   a900a:	4648      	mov	r0, r9
+   a900c:	f00b f9e4 	bl	b43d8
+   a9010:	f50d 5186 	add.w	r1, sp, #4288	@ 0x10c0
+   a9014:	f107 0020 	add.w	r0, r7, #32
+   a9018:	310c      	adds	r1, #12
+   a901a:	f784 ff8f 	bl	2df3c
+   a901e:	f50d 5387 	add.w	r3, sp, #4320	@ 0x10e0
+   a9022:	4650      	mov	r0, sl
+   a9024:	3314      	adds	r3, #20
+   a9026:	4621      	mov	r1, r4
+   a9028:	681b      	ldr	r3, [r3, #0]
+   a902a:	64bb      	str	r3, [r7, #72]	@ 0x48
+   a902c:	f8df 3678 	ldr.w	r3, [pc, #1656]	@ a96a8
+   a9030:	f855 9003 	ldr.w	r9, [r5, r3]
+   a9034:	e9c4 8700 	strd	r8, r7, [r4]
+   a9038:	f109 0308 	add.w	r3, r9, #8
+   a903c:	60fb      	str	r3, [r7, #12]
+   a903e:	f109 031c 	add.w	r3, r9, #28
+   a9042:	623b      	str	r3, [r7, #32]
+   a9044:	f7fc fb4e 	bl	a56e4

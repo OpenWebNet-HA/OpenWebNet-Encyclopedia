@@ -1,0 +1,65 @@
+from pathlib import Path
+import hashlib,json,struct,subprocess,os,argparse
+O=Path(__file__).resolve().parent;W=next(p for p in O.parents if (p/'OpenWebNet-Encyclopedia').is_dir());P=W/'work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libmhshared.so.1'
+def h(b):return hashlib.sha256(b).hexdigest()
+def J(x):return (json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+def build():
+ b=P.read_bytes();assert len(b)==43208 and h(b)=='4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377' and b[:6]==b'\x7fELF\x01\x01' and struct.unpack_from('<H',b,18)[0]==40
+ ph=struct.unpack_from('<I',b,28)[0];pe,pn=struct.unpack_from('<HH',b,42);loads=[r for i in range(pn) if (r:=struct.unpack_from('<8I',b,ph+i*pe))[0]==1]
+ def raw(a,n):
+  r=next(r for r in loads if r[2]<=a and a+n<=r[2]+r[4]);z=r[1]+a-r[2];return b[z:z+n]
+ def u(a):return struct.unpack('<I',raw(a,4))[0]
+ def branch(a):
+  v=u(a)&0xffffff;v=v-(1<<24) if v&(1<<23) else v;return a+8+(v<<2)
+ guards={0x744c:0xe5900004,0x7450:0xe59f301c,0x7454:0xe5902018,0x7458:0xe08f3003,0x745c:0xe3520000,0x7460:0x0a000000,0x7464:0xeaffeb0a,0x7468:0xe59f2008,0x746c:0xe7930002,0x7470:0xe12fff1e}
+ for a,v in guards.items():assert u(a)==v,(hex(a),hex(u(a)))
+ assert branch(0x7460)==0x7468 and branch(0x7464)==0x2094
+ assert 0x7458+8+u(0x7474)==0x12180 and 0x12180+u(0x7478)==0x122e8
+ rel=subprocess.check_output(['readelf','-rW',str(P)],text=True);sym=subprocess.check_output(['readelf','--dyn-syms','--wide',str(P)],text=True)
+ proofs=[]
+ for a,typ,name in [(0x12058,'R_ARM_ABS32','_ZN7QObject16staticMetaObjectE'),(0x1205c,'R_ARM_RELATIVE',None),(0x12060,'R_ARM_RELATIVE',None),(0x12064,'R_ARM_RELATIVE',None),(0x122e8,'R_ARM_GLOB_DAT','_ZN8mhShared16staticMetaObjectE')]:
+  row=next(x.strip() for x in rel.splitlines() if x.startswith(f'{a:08x} '));assert typ in row and (name is None or row.endswith(' '+name));proofs.append({'VA':hex(a),'word':f'{u(a):08x}','actual_relocation':row})
+ symbols={}
+ for name,a,n in [('_ZNK8mhShared10metaObjectEv',0x744c,48),('_ZN8mhShared16staticMetaObjectE',0x12058,24)]:
+  row=next(x.strip() for x in sym.splitlines() if x.endswith(' '+name));assert f'{a:08x}' in row and str(n) in row;symbols[name]=row
+ static=struct.unpack('<6I',raw(0x12058,24));assert static==(0,0x920c,0x9340,0x74bc,0,0)
+ header=struct.unpack('<14I',raw(0x9340,56));assert header==(7,0,0,0,9,14,0,0,0,0,0,0,0,1)
+ index=8;rowVA=0x9340+4*(header[5]+5*index);assert rowVA==0x9418
+ row=struct.unpack('<5I',raw(rowVA,20));assert row==(12,0,95,2,8)
+ stringVA=0x920c+row[0]*16;assert stringVA==0x92cc
+ string=struct.unpack('<4I',raw(stringVA,16));assert string==(0xffffffff,9,0,0x66)
+ dataVA=stringVA+string[3];assert dataVA==0x9332 and raw(dataVA,10)==b'_onChange\x00'
+ assert u(0x9340+4*row[2])==43
+ extents=[('own-static-metaobject',0x12058,24),('own-revision7-header',0x9340,56),('selected-local-method-row8',rowVA,20),('selected-string-record12',stringVA,16),('selected-string-bytes',dataVA,10),('selected-parameter-word',0x94bc,4)]
+ data=[{'name':n,'VA':hex(a),'bytes':z,'bytes_hex':raw(a,z).hex(),'sha256':h(raw(a,z))} for n,a,z in extents]
+ pins=[]
+ for p in [P,O/'FORMAT_CONTEXT.json',W/'work/f459-firmware/2.1.5/research/2026-11-01-night07-watcher/SOURCE.json',W/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0198-f459-driver-manager.md']:
+  q=p.read_bytes();pins.append({'path':str(p.relative_to(W)),'bytes':len(q),'sha256':h(q)})
+ txt=subprocess.check_output(['objdump','-d','-m','arm','--start-address=0x744c','--stop-address=0x747c',str(P)],text=True,env=dict(os.environ,DEBUGINFOD_URLS='')).replace(str(P),'libmhshared.so.1')
+ out={'spans/selected-metaobject-getter.txt':txt.encode(),'INPUT_PINS.json':J(pins),'METADATA.json':J({'original':pins[0],'ELF_class':32,'machine':40,'PT_LOAD':loads,'symbols':symbols,'guards':[{'VA':hex(a),'word':f'{v:08x}'} for a,v in guards.items()],'relocations':proofs,'code_span':{'start':'0x744c','end_exclusive':'0x747c','bytes_hex':raw(0x744c,48).hex(),'sha256':h(raw(0x744c,48))},'data_extents':data,'selected_interpretation':{'context':'Qt5 revision7-compatible format premise, not exact target headers/provider','header_revision':7,'local_method_count':9,'method_data_word_offset':14,'local_index':index,'row_words':row,'name_string_record_index':12,'name':'_onChange','argument_count':0,'raw_other_words_not_public_semantics':[95,2,8],'inherited_static_dispatch_target':'own staticMetaObject field+12→local74bc; inherited run07 mode0/index8 selects PLT request to candidate _onChange','absolute_baseclass_method_index':'not assigned'},'new_code_spans':1,'new_data_extents':6,'original_execution':0,'actual_Qt_provider_or_method_lookup_execution':0,'callback_body':'OPAQUE/UNEXPANDED','actual_SQLite_queries':0,'new_DB':False})}
+ out['REPORT.md']='''# F459 own static callback metadata and conditional getter
+
+Original libmhshared.so.1 is43208B/SHA2564d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377, ARM ELF32. This packet adds ONE own metaObject getter and SIX selected metadata data extents, not another watcher/SQL/callback-body inventory. Curated product role remains context only.
+
+The exported48B getter744c first loads supplied receiver+4, then that pointer+24. Under valid-object/pointer/provider/ABI premises, the zero comparison745c/7460 selects7468, whose GOT calculation uses actual pool7474/7478 to reach122e8. Actual R_ARM_GLOB_DAT there names this image's exported24B staticMetaObject12058. It returns the loaded symbol pointer. The nonzero route instead tail-requests opaque dynamicMetaObject atPLT2094; no dynamic provider body is inspected. Neither path is executed; actual instance class/dynamic state/binding/lifetime is unobserved.
+
+Own staticMetaObject has six original32-bit words0,920c,9340,74bc,0,0. Actual12058 ABS32 relocation names QObject::staticMetaObject;1205c/60/64 are RELATIVE relocations for the own string/data/static-dispatch pointers. A common correct load-bias/binding premise is required; original zero/addend words are not live pointer observations. Own metadata header9340 is revision7, class-name index0, local method count9 and method-data word offset14, with remaining raw header words retained exactly. These are class metadata counts, not supported devices/protocol commands.
+
+With the ordinary Qt5 revision7-compatible table/string format premise, selected local index8 gives9340+4*(14+5*8)=9418. Its original five words are12,0,95,2,8. Name index12 selects original16B record92cc within string data920c; its raw wordsffffffff,9,0,66 and relative offset66 reach9332, whose exact ten bytes are _onChange plus NUL. The row argument count is0. The selected parameter word at9340+4*95 is numeric43; remaining tag/flag/type values stay raw, no public semantics are assigned. This is a bounded selected metadata interpretation, not a full grammar or absolute inherited method index.
+
+FORMAT_CONTEXT.json records selected upstream Qt source URL/line paraphrases: the private header field order and the matcher using method-data plus five times local index, row name and argument count. This is HOST/API documentary context from upstream5.15, not original target headers, exact target release, effective provider or runtime method lookup. Earlier attempted official5.0.0/5.3 retrievals returned unavailable/cache-miss and supplied no source bytes or hashes. The target's own original bytes/relocations are the primary product evidence. Sources: [upstream private header](https://github.com/qt/qtbase/blob/5.15/src/corelib/kernel/qmetaobject_p.h), [upstream matcher](https://github.com/qt/qtbase/blob/5.15/src/corelib/kernel/qmetaobject.cpp).
+
+The NEW selected row narrows the old name/index gap conditionally: this own metadata describes local8 as zero-argument _onChange, and its static-dispatch field points to74bc, the SAME local helper whose mode0/index8 dispatch was independently frozen in RUN07. That earlier dispatch and QObject::connect slot-name request are INHERITED, not new source coverage. Composition still requires actual correct Qt metadata resolution, encoded-name handling, admission, provider binding, valid same objects and lifetime. It does not establish connection success, an event, callback execution/order, database contents/freshness or quiescence. CallbackBODY5f08..67c0 remains OPAQUE; no receiving/output/transport/auth/session/framing/MQTT/libjel/provider body is expanded.
+
+Confidence is high for exact words/addresses/relocations and conditional getter requests; selected semantic row interpretation depends on the stated Qt format premise. No vendor/original/helper/native/emulator/Qt lookup/SQLite/targetOS/runtime/physical execution, fixture/model, recovered/generated database, upload or R2readback. Existing one encrypted SUPPORT/zero plaintext and prior ledgers remain unchanged. Full source/Device/runtime approval remains pending. Reproduce python3 collect_metadata_v1.py --check using host ARM objdump. Fresh generation refuses overwrites and immediately retains exact firstcopies; no canonical generation failure/correction is claimed.
+'''.encode()
+ out['OUTPUT_MANIFEST.json']=J({'collector_sha256':h(Path(__file__).read_bytes()),'outputs':{k:{'bytes':len(v),'sha256':h(v)} for k,v in out.items()},'new_code_spans':1,'new_data_extents':6,'original_execution':0});return out
+ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build()
+if a.check:
+ for n,v in out.items():assert (O/n).read_bytes()==v,n
+else:
+ for n,v in out.items():p=O/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(v)
+ D=O/'first-candidate';D.mkdir();ix={}
+ for n,v in {Path(__file__).name:Path(__file__).read_bytes(),'FORMAT_CONTEXT.json':(O/'FORMAT_CONTEXT.json').read_bytes(),**out}.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(v);ix[n]={'bytes':len(v),'sha256':h(v)}
+ (D/'INDEX.json').open('xb').write(J({'files':ix}))
+print(json.dumps({'check':a.check,'outputs':len(out),'firstcopies':len(out)+2,'guards':10,'new_code_spans':1,'new_data_extents':6,'original_execution':0}))

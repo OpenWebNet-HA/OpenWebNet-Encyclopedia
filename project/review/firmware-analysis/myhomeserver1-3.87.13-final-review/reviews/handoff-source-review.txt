@@ -1,0 +1,53 @@
+# Independent documentary source review: knowledge handoff
+
+PASS for the current candidate and both exact reference-scope substitutions; no substantive correction requested. This compares current curated Device descriptions and reviewed firmware/data followups. It does not reopen binaries, databases, manufacturer originals, collectors, guest execution or closed routes. Several earlier implementation reports were authored by this reviewer; this documentary comparison is not a fresh independent semantic re-audit of that source work. Original/native/target execution, guest replays and semantic fixtures added: zero.
+
+## Knowledge impact and scope
+
+The handoff is a practical source/evidence guide and preserves the following important boundaries:
+
+- Embedded and Suite catalogues remain separate artifact/owner profiles. Matching75 table definitions does not erase the extra embedded index or33 differing row multisets. IDs, NULL/type distinctions and duplicate multiplicity must be retained. An omitted item is not incompatibility or self-capability evidence. The selected path-opening and class139/15-column slots/system-ID owner joins are complete source questions; full selection, fallback and Prototype/RC behavior remain open. No runtime query or compatibility result is invented.
+- MyHOMEServer1 schemas, virtual serialization/reparse requests and compiled paths give grounded tooling leads without complete accepted grammar or a verified scene generator. Raw/compiled fields, trigger/condition/action indices, integer/double record fields, scene state/action completion/shared cancellation, and retained controls/raw captures/detached holders remain distinct. BNLD numeric admission is a conditional local caller/comparison/callback path, not threshold crossing, deduplication or a natural event. BNCUSCENE is a concrete predicate finding without a product-wide defect or unsupported-feature conclusion.
+- The latest F454 AV/board continuation already identifies the frontend DIM35 response producer; the handoff does not repeat this completed gap. Initial role1 activation, full private-state/feature lifecycle and electrical SCS AI attribution remain open. ttyS2/line2 is not DM365 UART2 or connector wiring. Its documented AV/dedicated-alarm roles and installer UI declarations do not establish dynamic state or hardware behavior in another product.
+- MH202 already has actual ScenarioSuite query/field/writer and selected generator/native-script syntax joins; it still lacks a genuine configured export/full accepted lifecycle execution. Default installer resources and absent separately configured2.xtz/4.xtz are not a production export. Alarm reactions do not give it F454 alarm hardware/arming capability, and its script semantics are not transferred to MyHOMEServer1 C++/JSON objects.
+- The one saved MyHOMEServer1 scalar corpus remains8 entries/340 original code-hook visits/0 C primitives/12 redirects/8 EXIT=360 hooks, plus4 relocation setups. Four finite SAME-object constructor/readback cases do not execute full JSON member/map/assignment/serialization/reparse, BNTH or a scene. Visits are not retired instructions. Current synthesis adds no execution; historical static-zero and separate F454/MH202 ledgers retain their scopes.
+
+Next-evidence suggestions correctly emphasize configured inputs/export, effective provider/type/ID/correlation, positive shared reset, natural owner/poll/removal and product-specific state/electrical/lifecycle evidence. They do not close these by repeated tables, inferred units, whole-source absence, a permanent latch, missing ownership or a race/leak/UAF. Wider review gates and MH202 run18/run21 unavailable intermediate-history limits remain explicit.
+
+## Exact reference deltas and history
+
+I independently reconstructed each current reference from its pre-edit bytes and the single declared substitution in REFERENCE_PATCHES.json; no other changes exist. Device0199 now scopes its old non-examination sentence to the documentation/catalogue review, links the separate3.87.13 study and retains installed-state/full-parameter/physical/wider-gate limitations. The catalogue-profile ending now names the completed opening/15-column slots/system-ID joins while retaining full selection/fallback/Prototype/RC uncertainty. Neither edit adds a physical capability or retroactive manufacturer-review approval.
+
+All three pre-edit index members match their saved sizes/SHA256. The old Device0199 file is43131 bytes/SHA2565940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855, exactly the frozen navigation INPUTS.json pin. Its changed current file must not silently replace that pin or be described as passing the historical direct-path check. The handoff correctly calls for an explicit new resolver/supplement. That pending supplement's generator/output is not certified by this review.
+
+## Mechanical and review limits
+
+The exact handoff first-candidate copy/index passes byte/size/hash comparison. From the intended public firmware-analysis location,11 existing link occurrences resolve and the BNLD numeric-trigger anchor is present. The one forward final-review capsule README link is **PENDING mechanical completion**; future review/export/validation bytes are not verified here. Parent final checks must verify actual completed targets, without placeholders or exemptions. Later changed candidates/references require a new version/review.
+
+One inline host review-save helper stopped before output generation because it assumed the pre-edit index was a mapping rather than a list. The actual error/bad expression and preservation limits are recorded in review-helper-first-failure.json. Correct list iteration verified the same three identities; no documentary/source claim, author candidate, native count or prior artifact changed. There was no on-disk failed review draft and none is invented.
+
+The handoff remains local and unstaged/uncommitted, with no publication claim. PASS is limited to this source-to-existing-summary comparison, the exact two-reference delta and current preserved identities; it is not a full encyclopedia/manufacturer/firmware semantic audit.
+
+## Exact reviewed identities
+
+| File | Bytes | SHA256 |
+| --- | ---: | --- |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/handoff/HANDOFF_CANDIDATE.md` | 9861 | `0d313e41b4214ce228d7d0a3e0f1a783090a15738c7e7ed105e6dd0e05438ad8` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/handoff/first-candidate/INDEX.json` | 136 | `7498bbbdfa3fb644da9d8a9230a55291d233a05f33b93a647f8859ffcff38fd8` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/REFERENCE_PATCHES.json` | 2563 | `cc59e26dcfc01bf147b40d35a68ee9e0397a4f829a86664e992f3042b73902ad` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/pre-edit/INDEX.json` | 837 | `bdc6c5f67619b05cb33cb07c5ae9f1583b0999ef756689097690e36a8f2502a9` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/reviews/review-helper-first-failure.json` | 793 | `1e9332a18f627d220c68bb26ab93b6e33ce31a314de61bb73f2dca9861f02ffc` |
+| `OpenWebNet-Encyclopedia/devices/definitions/own-dev-0002-audio-video-web-server-gateway.md` | 33863 | `f300b28ca0f358b73dff111ee47f1a911c71f8b949ecc979726a2b5ec5459af9` |
+| `OpenWebNet-Encyclopedia/devices/definitions/own-dev-0151-mh202-scenario-programmer.md` | 27314 | `74f961aa3aaafb99003d1677304a6d971a42c871950796707712d1c66f50bbb9` |
+| `OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md` | 43560 | `bd64060e1e19f90eecad2808b62327847a0f541ae2fc46239bbda29a5efe5c98` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | 11962 | `643f65b12698dffef8858d451290f69c7a517ed239c13e80dd27d3322298aa69` |
+| `OpenWebNet-Encyclopedia/internals/device-application-databases.md` | 7823 | `d9d6dad3b74a16805ff25dc97f8bc6792dcd66226e158cc8954f32a0efbd9879` |
+| `OpenWebNet-Encyclopedia/scenario-engine/scenario-suite-generator.md` | 8543 | `2d13975a4167754c4b6c411b1febd671cbd95df62659bafe3e98d666f358314b` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md` | 13742 | `5a3dec72f1d14ac5c338a38571c809749594e761854e915c8a0decea447bcd52` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md` | 9295 | `0306fe7a480c2111933b39fbe22a39ba7b3483264c48110c2dd3025cafb2c492` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-factories.md` | 7654 | `f670582ed8e8dc49065215dde6f64f59b9ab4f34462b6546a0b509f715b77388` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-trigger.md` | 9525 | `c8b300d671f145553cf65821c8db2dc8eab1cc3ddc9d950658660ae1fab5527c` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f454-2.0.51-product-paths.md` | 6586 | `84316d465c6135bad1dd75669313b83d708de23ecc68ae9c467f1c01e3e44d8a` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f454-2.0.51-av-and-board.md` | 7003 | `c1cbfa5a7af37642d6e54c23573824541b09b594d0b0f172c1415ce5f277c1ad` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/mh202-1.0.24-scenario-resources.md` | 6727 | `84ea1599c1f6dd494f679d6faf8ed3df4b8a2894a5110703f8b7e6f5cfca073f` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/mh202-1.0.24-generated-scenarios.md` | 6542 | `9abcb0bb59764d90bf9a9737ee2f9b595c77e23a2122b8e78748228acd55b991` |

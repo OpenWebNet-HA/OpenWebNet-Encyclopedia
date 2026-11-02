@@ -1,0 +1,22 @@
+{
+  "collector_sha256": "4f8829acda5536e216240f10889d03c496b340ff899ee3593801a53c661ddc76",
+  "files": {
+    "CANDIDATE_PREFIX.json": {
+      "bytes": 28848,
+      "sha256": "83d8185db63b092241a8a85fcb336cb23c841a295d4009beb5411fc0f11530a5"
+    },
+    "INPUTS.json": {
+      "bytes": 1747,
+      "sha256": "e1df05104658f4a5985f2ae98967feb1b02aff1e802030435aba16ebe20e26fd"
+    },
+    "PACKAGE_FORMAT.json": {
+      "bytes": 1075,
+      "sha256": "d4b63281cc9396b669c20e0a408f385a2da3d5f72788a6398a11f0a9a8017622"
+    },
+    "REPORT.md": {
+      "bytes": 5859,
+      "sha256": "f955678a426ff1f4602fc4d481cb7b1b79f23d619c9d3f1cbf5b3a2e0b835a87"
+    }
+  },
+  "scope": "Generated canonical members excluding this manifest itself"
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "new_sha256": "b30f4b7789faaed475f8f6022e2ddb29df1da9c73d48b525fdbfee264fe89d1e",
+    "older_product": "F454",
+    "older_sha256": "de5ac53dd39ed7ecad94457d65d5dbb1ff0ff7d906e854096e3a3f097efb73c6",
+    "path": "home/bticino/bin/bt_daemon",
+    "same_bytes": false
+  },
+  {
+    "new_sha256": "f470a622df6dd32ded11d347cb198bdc2aa8878423d761066495a1607c2fb095",
+    "older_product": "F454",
+    "older_sha256": "7259067a648b215ef93ba93ede0037296cffe273a099b72e6c593dcb9057ee89",
+    "path": "home/bticino/bin/coso",
+    "same_bytes": false
+  },
+  {
+    "new_sha256": "05f07eaf729afbedf54660d781c11ba05c0d24cf8099ce2064aa0c0f4ca8dc90",
+    "older_product": "F454",
+    "older_sha256": "281bb0eee184420bda73b8cdd3c88b9b14cfd87814b7913c0cfc7b21a1e6f197",
+    "path": "home/bticino/bin/scsserver",
+    "same_bytes": false
+  },
+  {
+    "new_sha256": "b30f4b7789faaed475f8f6022e2ddb29df1da9c73d48b525fdbfee264fe89d1e",
+    "older_product": "MH202",
+    "older_sha256": "41a8844318d47cf33571b6d74a7de528dea5118d4c2289f4d666de419d91b1b6",
+    "path": "home/bticino/bin/bt_daemon",
+    "same_bytes": false
+  },
+  {
+    "new_sha256": "f470a622df6dd32ded11d347cb198bdc2aa8878423d761066495a1607c2fb095",
+    "older_product": "MH202",
+    "older_sha256": "6865c2d1d441d25effa31275080ded70ad3538a8a49288e3002ffb196b066175",
+    "path": "home/bticino/bin/coso",
+    "same_bytes": false
+  },
+  {
+    "new_sha256": "05f07eaf729afbedf54660d781c11ba05c0d24cf8099ce2064aa0c0f4ca8dc90",
+    "older_product": "MH202",
+    "older_sha256": "8bf4e7ff1d92a6c71a82ac10ba7008fb590246a3638e7db509217a54e9ab2be5",
+    "path": "home/bticino/bin/scsserver",
+    "same_bytes": false
+  }
+]

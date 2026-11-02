@@ -1,0 +1,64 @@
+# MH2021.0.24 run19 — auxiliary WHO9 translation and selected state-machine route
+
+## Result and method
+
+The normal image packages actual **libplug_aux_tr.so** and **libplug_aux_stm.so** providers. Their original registration appends numeric criterion9, and the translation descriptor points to original `aux_tr_translate`0x1ab0. A selected ordinary source-contract path for parsed WHO9/WHAT3/WHERE5/kind1 produces four internal bytes **B0 00 9B 50**, converted to ASCII **`B0009B50`**. The reverse translator's selected opcode/low-nibble path reconstructs **`*9*3*5##`**. These are internal translator candidates, not serial wire bytes, captured traffic or observed hardware response.
+
+The selected application STM guards WHERE<=15 and WHAT<=10 using unsigned comparisons after ordinary decimal conversion, forwards the same envelope and requests a local OPEN ACK. Translation's numeric direction selectors, descriptor criterion9, parsed kind1, envelope representation/type and opcode0x9B are **different namespaces**. The local ACK is not physical acknowledgment. Standalone translator code lacks the same numeric WHERE guard, so the STM's address limit is not promoted to universal parser or translator acceptance.
+
+All new original execution, native helper calls, primitive callbacks and code hooks are **0**. This is fresh static original disassembly/relocation/dataflow plus one finite host source-contract composition. No parser/serializer/ARM/JS/vendor process, target OS, service, socket or device is executed. No F454 firmware, address/layout/harness or trigger-normalization case is imported. The whole outer registry/loader/application/transport route remains conditional.
+
+## Reproduction and original identities
+
+Run `python3 -B work/mh202-firmware/research/2026-10-30/coso/run19/collect_evidence.py --check`. It reproduces **19outputs plus manifest,12 original spans,36 original word assertions,fourELFs,two resolved format strings and one selected forward/reverse host ledger**. `--check` writes nothing and compares bytes. `input-hashes.json` pins the verified accessor/original files; `original-spans.json` records exact VAs/file offsets/raw hashes. The author manifest pins report/collector/current evidence, excluding itself/later independent reviews. Paths are image paths or research-relative paths.
+
+| Original normal-image file | SHA-256 |
+|---|---|
+| `/home/bticino/lib/libutils.so` | `53ef706201b13f6966dc6a0ca71bae345e9835e24bced6c557071b797d196e79` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+| `/home/bticino/libcoso/libplug_aux_stm.so` | `c18c8a18903d3e214d91a532fd5ac92fa63c01796b0ec14d3f4f4df7ad2fe5d2` |
+| `/home/bticino/libcoso/libplug_aux_tr.so` | `b61cd2499039b24a523af98b266c8beceea1ec46f44406ba5b00c470fea5e177` |
+
+Both aux plugins directly NEEDED libopenmsg/libutils and import COSO helpers; candidate `libcoso.so` exports prepare_briefscs_frames0x2a04, prepare_scs_from_open0x2230 and scsmsg_to_openlist0x26d8. `libutils.so` exports original hex conversion0x2204/0x2274. This is candidate definition/NEEDED/relocation evidence, not effective live symbol binding or proof that a plugin was loaded/registered. In particular, the plugins do not directly NEEDED libcoso; imported core symbols require the surrounding loader/global namespace, which is not executed here.
+
+## 1. Actual descriptors and direction selector
+
+Translation initializer **0x1510..0x1560** gets descriptor `aux_tr_tr`0xa3a8, sets descriptor kind+32=2, appends literal9 to both criterion lists+52/+56 and calls register_translation. ABS32 relocation **0xa3d0** assigns descriptor callback+40 to **aux_tr_translate0x1ab0**. State-machine initializer **0x14d0..0x1510** gets `aux_stm_sm`0x9fa4, sets descriptor kind+32=3, appends numeric9 to its criterion list+52, then calls register_state_machine. Descriptor relocations **0x9fcc/+40→0x1688** and **0x9fd0/+44→0x1788** identify its field/application callbacks.
+
+Translator **0x1ab0..0x1af4** dispatches argument pair **(1,2)** to scs2open0x191c, **(2,1)** to open2scs0x16d8, and returns0 without selected translation for other pairs. These direction arguments are not the envelope type40 values3/9 or parsed kind44 values. The current report establishes actual registration and local selector behavior, not full outer registry selection/order.
+
+## 2. Selected ordinary application command and address boundary
+
+Original application handler **aux_stm_gest_status_from_appli0x1788..0x1854** obtains the parsed pointer from envelope+0. It converts **parsed WHERE+16** at0x179c..0x17ac and rejects unsigned values>15 at0x17b0..0x17b8. Inside that range it sets envelope+4=1 and envelope+8=1 before parsed-kind branching. Parsed kind1 then converts **parsed WHAT+8**, rejecting unsigned values>10 at0x182c..0x1830. Selected WHAT3/WHERE5 passes these numeric guards, appends the same envelope to the supplied field list0x1834..0x1840, requests queue_ack_to_open0x1848 and returns0.
+
+No original parsed fields are generated/executed here; coherent parsed WHO9/WHAT3/WHERE5/kind1 and actual callback selection are premises. The negative/error guard source is retained without manufacturing accepted malformed strings. `strtol` success/end/error handling and complete decimal grammar are not inferred. Kind2 takes a distinct query/count setup path; it is not merged with this ordinary command.
+
+## 3. Forward translation into brief internal representation
+
+**aux_tr_open2scs0x16d8..0x191c** accepts envelope representation+56=3 as an existing parsed pointer, or representation2 via its imported parser and owned-text conversion to representation3. That parser return is not checked in this selected conversion body. Other representations return1. It then requires **parsed kind+44=1**, separately converts WHAT+8 and WHERE+16 and selects the WHAT0..10 table through an unsigned bound.
+
+For **WHAT3**, actual table entry **0x17a8→0x18c0** writes opcodebyte0x9B and low-nibble byte0. Earlier0x175c..0x176c writes leading bytes0xB0/0x00. **0x1800..0x180c** ORs `(WHERE <<4)` into the final byte and stores the low byte. Supplied WHERE5 therefore gives **B0 00 9B 50**. No same numeric WHERE<=15 guard appears within this standalone selected translator body; the preceding application guard and coherent selected input are distinct premises. No group/interface/advanced-address grammar is established by this integer conversion.
+
+At0x1824 it calls array_to_ascii_hex_frame with bytecount4. The original candidate **libutils0x2204..0x2274** allocates2*n+1 zeroed bytes and uses original **`%02X`** per unsigned byte, so ordinary imports yield the8-character candidate **`B0009B50`**. This is a static source/format conclusion, not an executed codec test or actual serial frame.
+
+The plugin requests **g_malloc(64)**, stores the ASCII pointer in the new envelope's first member and calls prepare_briefscs_frames with routing selector9 at0x1838..0x183c. Candidate core **0x2a04..0x2a44** sets **type40=3,representation56=1,routing48=9**, invokes prepare_scs_from_open and appends the output record. Core **0x2230..0x2294** copies source envelope offsets **4,8,12,16,24,28,32,36,44,60**; offset44 here is envelope metadata, **not parsed kind44**. ID60 is copied, not freshly assigned. This g_malloc path does **not initialize status52** in the inspected stores/copy body. No status0, fully initialized record or memory-safety verdict is inferred. This contrasts the distinct run18 NULL-source zero-allocation path only as a scoped code relation; it is not evidence of a runtime defect.
+
+## 4. Reverse selected status and envelope metadata
+
+**aux_tr_scs2open0x191c..0x1ab0** first requires envelope type40 equal **3or9**. It calls ascii_hex_frame_to_array with **8input characters**. Original candidate codec **libutils0x2274..0x22bc** combines pairs of ordinary hex-digit conversion values into four bytes; this batch supplies coherent valid `B0009B50`, not malformed-length/input acceptance. Translator tests `(byte0 &0xF0)==0xB0`, then opcodebyte2 and the low nibble ofbyte3. The code mask permits different low nibbles in byte0; the selected fixture uses byte0 exactlyB0.
+
+For opcode0x9B/low0, actual table **0x1a44→0x1a90** sets WHAT3. **0x19dc** extracts WHERE by unsigned shift ofbyte3 right4, giving5. Original format pool0x1aac resolves exactly **`*9*%d*%d##`**, so the selected source contract reconstructs **`*9*3*5##`**. The helper call0x19f4 receives that text, supplied output-list address, original input envelope and routing9. Selected translator returns0; mismatches return1. Neither value reports physical acceptance/delivery.
+
+Candidate **scsmsg_to_openlist0x26d8..0x2764** requests g_malloc64 and duplicates the generated text. It sets **type40=2,representation56=2,routing48=9,metadata4=2/8=0**, copies original envelope direction12/metadata16/24/28 and **status52/ID60**, then appends. It does not parse the output here and does not call new_id. Other unspecified slots are not assumed zero. This reverse input is a separately supplied internal status envelope; it is not proved to be the transmitted forward object returned physically, especially since forward status52 was not initialized by the selected helper chain.
+
+## 5. Meaningful field consumer and local counter limits
+
+Actual field handler **0x1688..0x1788** accepts representation3, or nonnull representation2 with imported parse/conversion; it requires **parsed kind1**. It sets the same envelope metadata8=3 and appends it to its OPEN output list. It then requests **new_openmsg_from_openmsg(4, parsed)** at0x1728..0x172c and appends the returned record. That helper's internal clone/format/meaning is left as an imported boundary; this report does not name its selector4 as an ACK, parsedkind or complete response schema.
+
+Private context is **8bytes**, allocated by0x185c..0x186c, with private+0 explicitly−1 and private+4 zero under ordinary g_malloc0. Field0x173c..0x175c increments private+4 and conditionally requests queue_ack_to_open: signed private+0>0, or private+0==0 and incremented count==15. Negative private+0 skips that ACK. This is local counter/source logic, not elapsed time, universal second response, delivered receipt or hardware completion. Descriptor-private+56 is a pointer, distinct from envelope representation+56.
+
+## Finite model, confidence and remaining questions
+
+`host-selected-forward-reverse.json` supplies one coherent ordinary parsed object, source envelope, normal decimal/hex/string/allocation/list delegates and separately supplied reverse input. It records selected WHAT3/WHERE5 source bytes and reverse text, application local ACK call, exact copied metadata and uninitialized-status boundary. No native output or physical capture is claimed. `selected-guards-and-boundaries.json` retains the scoped guards and namespace distinctions.
+
+High confidence static: real plugin/descriptor/function addresses, chosen jump targets/bytes/format, selected application bounds, core output field stores/copies and field counter branches. Conditional: effective providers/outer dispatch, valid parsed object, normal imports/nonaliasing containers and actual invocation. Unknown: installed plugin configuration/registration order, full address/selector grammar, other WHAT/opcode semantic meanings, complete record initialization/destruction, natural forward/reverse transaction, helper-selector4 output interpretation, transport and physical auxiliary behavior. Highest next distinct question: recover the original helper-selector4 builder and actual selected field-output consumer without treating it as an observed query or universal ACK.

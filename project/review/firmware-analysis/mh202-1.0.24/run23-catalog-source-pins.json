@@ -1,0 +1,3245 @@
+{
+  "generator": {
+    "path": "build_catalog_v2.py",
+    "sha256": "c427fe1ce244d3ee51583a457b1820d2cab94a4c5d186befd0d028941b546ccf"
+  },
+  "inputs": {
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run1/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2103,
+      "sha256": "07fc0c29ec4b7bc7af11ea71af3e0590a84a43000c26574a2d9e6750317f915e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run1/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26393,
+      "sha256": "8455d4b23663c5e88f77e655c438513324c726cbd7b133fa28ce445330420d9b"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run1/devices__work-queue.yaml.txt": {
+      "bytes": 370639,
+      "sha256": "285df5222bb01648fc58006455f1b35e2a84ed2be92eacd765ff7f1eafdc4cdf"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run1/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 6634,
+      "sha256": "4367d9cc45fc805f397636c6986bae0808b8d458455914dc5041faceda659dc9"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run1/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 2262,
+      "sha256": "b7863a94c2e80e36105f50fb4b37897385f1db9c2fb1f84270fa6fdcd775c5de"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run1/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 3741,
+      "sha256": "0d08572985f519f93d556edc1421f9420ee48e13306556dbc4c0cfb2b75d55f9"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run1/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 9686,
+      "sha256": "38b07257b6ccc90b87f8b9f997acce5fc079da8bfea1597aff292ee831b45b12"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run10/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2758,
+      "sha256": "88300c633d7097a63f3ee316364e9f3ac1325a7f6f9a32ae762327c729f1c2af"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run10/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26893,
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run10/devices__work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run10/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 10177,
+      "sha256": "347fc0b8759a4f4e49e3823bf4f2879fb22c9907b10799ebead433bbe67da95c"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run10/project__review__firmware-analysis__README.md.txt": {
+      "bytes": 1886,
+      "sha256": "e41ed4496df13c9cb007bd505c1628ee5b5b03c656e3b5647063ae6039d780c1"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run10/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 10871,
+      "sha256": "fba793e7cf35acdc166e513950f33073c72fa34b1aab2abad74cdecfc1c5e13e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run10/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 4634,
+      "sha256": "99e22fdff50c29d4ebb58b61528a4f496494636e32910e4742236a445f6eb90f"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run10/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 47041,
+      "sha256": "f95459fb8727c41b38a5a4f02536778c745455574ffdf3c9b5f60f974e62eb4c"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run10/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 11768,
+      "sha256": "5b2b66f4c47dcc82fe94ac1cb8bdfe0234a8ea13ea0718c90bc001a17888034c"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2775,
+      "sha256": "fca341e280f4820d8575502bbeec3c302f862f74f522f5f2dc4c16f292c9a2b8"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26893,
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/devices__work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 10636,
+      "sha256": "f183e98041edc4917389db6dd292b30bad04524b6fce74b7b33f5093fde04e37"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/project__review__firmware-analysis__README.md.txt": {
+      "bytes": 2124,
+      "sha256": "06ee9030fa08aab8d61c47ac61739600e8dd8d43e57304141cead6a4a0219efa"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 11777,
+      "sha256": "b353bc957016a87f5b6ce9a1c82bdf82dd1b78adb2b220dbcaf20d01da071136"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 4872,
+      "sha256": "08fe1ade33943dd143f551e72ebecae39e83aec61783b8f27172419b9006a39f"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 51208,
+      "sha256": "e1b36aa85552269d8a9c7021ec56fea589ae37a9b47901835b157c91740b373b"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run11/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 11794,
+      "sha256": "91dcf480be952da385083bbee71d86a10d1bfc0d0227f5501494a0df0875ef6e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run12/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2759,
+      "sha256": "d62f045e423d45506e00b6dc068897d8f8f4ca95d16c19ba2d8728c6ade12df8"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run12/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26893,
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run12/devices__work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run12/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 11068,
+      "sha256": "e1e6840f62fdb52c6fd9c6543d08c63df64f4a89f891b09a54dfa711baac92b3"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run12/project__review__firmware-analysis__README.md.txt": {
+      "bytes": 2393,
+      "sha256": "c824350b68c44d43be8dd80a84bbe92c59e23bd484decb6298c4a6259781cae2"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run12/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 12773,
+      "sha256": "4be1acd456644546b8d715ee5eb2ea20671b616f335d83ad4f8e270898ecb9aa"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run12/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 5141,
+      "sha256": "519470a1d5102322bf196fbd4bc674a9339c32a68da7006b19c1b6f8d162d7a8"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run12/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 55114,
+      "sha256": "799153fd474d091170164be62dc88a0e371ba0d5db95dc66e287abe05abfd925"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run12/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 12669,
+      "sha256": "617d7d3c75e8c011740e04e13b44028cbbb00b65f95bee53d359e5f015f9dc97"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run13/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2759,
+      "sha256": "665f69701bc9a16744a6ff88b2b4b145c3085ae3a3abdfdec0f3235c254cbeae"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run13/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26893,
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run13/devices__work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run13/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 11556,
+      "sha256": "01ede93b3a98145dc39584fcd5600161b7f4e9a173bb650d129dd72b99bb788a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run13/project__review__firmware-analysis__README.md.txt": {
+      "bytes": 2679,
+      "sha256": "c0b920c65abce144c997636041c77bde13cdb410f81a6f9aa4cdf8cf9310f15f"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run13/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 13797,
+      "sha256": "b4d4f6d12c3f2b873a36a6dc534d424de4a02a794f6b33bada10ec94d93ceeaa"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run13/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 5459,
+      "sha256": "6d57f6fa331bc0c5b5a64b72e95f1643be6a47b8085461c6e14ce9e18690a122"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run13/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 58354,
+      "sha256": "f054eb10f2f7296734cf037ec3aae5ad0a43ecbf5a21a5167b2fc22c032e317e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run13/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 12823,
+      "sha256": "9e2e170a2f09b73d27c5cf6294b5f5e2dc560cd2192cc1d6a0a883276c955409"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run14/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2759,
+      "sha256": "7c4d6266d8e75d963c7169a6b73ec2b1fafdea835d6b911f289d3e422ed93c8d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run14/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26893,
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run14/devices__work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run14/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 11556,
+      "sha256": "01ede93b3a98145dc39584fcd5600161b7f4e9a173bb650d129dd72b99bb788a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run14/project__review__firmware-analysis__README.md.txt": {
+      "bytes": 2931,
+      "sha256": "540bd2a84b2a396e08082e5ba0a4f12cb04d69b0defc407d48958ddf87370aa2"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run14/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 14789,
+      "sha256": "6a53792964c488c6a4beefd5b41d13f7c9c52a198ca0865edca8fbc409c336b8"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run14/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 5711,
+      "sha256": "882a9137c7087153f30ea2d26b587bc3859bab6b3a88be2e58a53b74ac192608"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run14/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 61692,
+      "sha256": "0df5c0086f0949a2277f389c60d26f8b2b72471008e48102d32e3dd668570ba2"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run14/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 13297,
+      "sha256": "c748ffff9cba78a2f2aa9da4e3a87f532023662ece78f968eb04050a3e9652ac"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run15/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2759,
+      "sha256": "fe6698601a5792d65d014c716987c59651aebe3b2d114eae5d32398b070ea561"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run15/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26893,
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run15/devices__work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run15/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 11556,
+      "sha256": "01ede93b3a98145dc39584fcd5600161b7f4e9a173bb650d129dd72b99bb788a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run15/project__review__firmware-analysis__README.md.txt": {
+      "bytes": 3222,
+      "sha256": "4c7f2811f2f20c742e1f6d37e4a623ccc12852c076567245f69e02f8e6976c46"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run15/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 15895,
+      "sha256": "30efb819add4b125e87db57ca4fe43c53d303d6da72ab09f3fdb76807ca5056e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run15/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 6002,
+      "sha256": "d04e9e764ef538f35bb16e593239da379aa0a1db366475d36f3c93bc01f2a5d9"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run15/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 65764,
+      "sha256": "d35973dca5adce140016f6c011bda47e61ec7648563e6822d90d0549687b0a8c"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run15/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 13724,
+      "sha256": "5afc96f32106502b496ae85dab548b196270a988ce52060fab8265a954c320ad"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run16/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2759,
+      "sha256": "2b855fc9587d6a3e8f2d5b73822d61ce3a3b1aecbb4865040eb00548550de7f2"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run16/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26893,
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run16/devices__work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run16/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 11556,
+      "sha256": "01ede93b3a98145dc39584fcd5600161b7f4e9a173bb650d129dd72b99bb788a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run16/project__review__firmware-analysis__README.md.txt": {
+      "bytes": 3498,
+      "sha256": "c6b1ed069ae83f2cb44f36445210ce1b2b80684128469041ca59fc4645771e3e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run16/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 16916,
+      "sha256": "e5edd8b86b3bdc1fd2b994f4c7f2abdf75c85ff548435bdf0b63f7eca92ca0c9"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run16/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 6278,
+      "sha256": "fd8296455a46b22c8a7af96ccdfe3e53afe45b0adcca3b250946b4e018caa1cc"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run16/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 69671,
+      "sha256": "49e68c45eb0ed0ac43276ced61e748ade4321598cc777cbb40e1e418148f329c"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run16/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 14017,
+      "sha256": "dc2cbc02f6d21277f7e152aed9999eedbd3cb0a6eb44d8d55635c3fa4e56bb8e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run17/01-mh202-1.0.24.md.txt": {
+      "bytes": 14036,
+      "sha256": "78bfe32175dc416b8ccf15e25fae55ae0b1d7bdb8b6c39dfedac98fd0f90eae8"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run17/02-mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 73320,
+      "sha256": "e354576f7f1f50c6ad7fe4f61ced258c6d3796773f3929c105587bf0098b2155"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run17/03-README.md.txt": {
+      "bytes": 6566,
+      "sha256": "56b3fa7ada506fd3a22784d4ea0e093f6052a86ae451012be227b681aa7c7ceb"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run17/04-README.md.txt": {
+      "bytes": 3786,
+      "sha256": "e2a9713e52afe00a473526d4640b13e82dc14381dfa5df401fd28c2f0a4d3367"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run17/05-README.md.txt": {
+      "bytes": 17961,
+      "sha256": "e278184e6dde893f62265c47028d444dbb865ee48717cc216482acd878b98d86"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run17/06-README.md.txt": {
+      "bytes": 11957,
+      "sha256": "fdf1d50005d8ae4442186fd3b7bb9fee69c649695a0877f88043e40b9404c25e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run17/07-own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26893,
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run17/08-work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run17/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2346,
+      "sha256": "f4fff03e9dc7a80918efff65e2dc9deb15addb4a58d41c21e96c30734d37cddd"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run18/01-mh202-1.0.24.md.txt": {
+      "bytes": 14259,
+      "sha256": "1d9e91dd99178d30c230b60b01f991b633998e3d36cb982200d4e725c9aff527"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run18/02-mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 73585,
+      "sha256": "d3d88bbdaf60e114f39ef5970fea4b2ef5f03a1901e046187fe0489d31e2d78a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run18/03-mh202-1.0.24-record-and-script-lifecycle.md.txt": {
+      "bytes": 7794,
+      "sha256": "72195c1fdd2204824cbcf0d24fd47dc82958059ac366fbec2628dd864fc4fe5a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run18/04-README.md.txt": {
+      "bytes": 6738,
+      "sha256": "145074d257868944864f93c51b7ca4cb925339e9b92e0f2deb0c594be65af6a9"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run18/05-README.md.txt": {
+      "bytes": 4005,
+      "sha256": "0c23e7d4c0fca39c50ee99e7edd646075fde5c049176c1d830abbfaed1e2cdbd"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run18/06-README.md.txt": {
+      "bytes": 19318,
+      "sha256": "b33d1e76ba988415ddf23eeb6e1213cfe1fd8f17031fde16ae94eb64f78e57ce"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run18/07-README.md.txt": {
+      "bytes": 12279,
+      "sha256": "3127e1320be240f8daee0354a9cf603d0e348485c222b47ca393725bf878ed06"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run18/08-own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26893,
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run18/09-work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run18/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2683,
+      "sha256": "ae88b137815e61f547cfaa3947c89b1681d0cdf7a87f967cccb3eadb3c56613d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/01-mh202-1.0.24.md.txt": {
+      "bytes": 14842,
+      "sha256": "822e7f8e50aad1b2635ae604d788b86b1de3651341c230bd2b121d1c7235034a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/02-mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 74002,
+      "sha256": "e90412ffa248769e6e8d47e69981190346bf599793b98fdfa5672b675f199c01"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/03-mh202-1.0.24-record-and-script-lifecycle.md.txt": {
+      "bytes": 11615,
+      "sha256": "402f8abc7b48f7082957d3d85ed8800db70ca30ef9c281a6cde3ba0989c57f63"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/04-README.md.txt": {
+      "bytes": 6986,
+      "sha256": "1dd89035145116472030511d6bb6287f1cab2741c0bff83a020b574de5c6e433"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/05-README.md.txt": {
+      "bytes": 4300,
+      "sha256": "29aa47721717649a6d86f6c80832c9aa447cc6c04c1bce9423e11606770e128f"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/06-README.md.txt": {
+      "bytes": 20581,
+      "sha256": "ebcadb13e56015b52ac984750ac615ff53a35a06dcc6d1894489ed0af10ee6c3"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/07-README.md.txt": {
+      "bytes": 13161,
+      "sha256": "f9825e4dd40ef229a422df501ecaa44378b912833a3c45d3f7d3e8ad796b9402"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/08-README.md.txt": {
+      "bytes": 4522,
+      "sha256": "78fb2e8a7125d979ea1cd6ab5c55110c37e0fc022e23683197aec36f4e0aee26"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/09-own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26893,
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/10-work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/REFERENCE_PIN_SUPPLEMENT.json": {
+      "bytes": 1664,
+      "sha256": "38cd60b7c7b7575a0b76d61cf296a68764a4752785ee35be89e0a985cf958d7e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2943,
+      "sha256": "d8ef1b5aab97aa55022328a75b84c2aca5f639e5601401c4e4077530827593f2"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/reference-01-who-5-alarm-README.md.txt": {
+      "bytes": 1527,
+      "sha256": "5304dd537066076a3bf59ff2fc9947386d77111f5ee98842f83ee5fff5a61a63"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/reference-02-who-5-alarm-what.md.txt": {
+      "bytes": 1740,
+      "sha256": "8ee92e45243a827ee095139c9a0019294ce4643f6beae7d08b46992048c47e7b"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/reference-03-who-5-alarm-protocol.md.txt": {
+      "bytes": 5302,
+      "sha256": "0c7d0b6da0de684234a1aed1326d5ea4f69118da191e73e853a53c1d31632073"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/reference-04-who-5-alarm-addressing.md.txt": {
+      "bytes": 2177,
+      "sha256": "13011a07d36a2fdf99d0026301aec9f0ad8b6f0b9e7953df066f2e0b5ed9efaf"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/reference-05-who-22-sound-diffusion-README.md.txt": {
+      "bytes": 38066,
+      "sha256": "4d99236f786819aa123791945c25cfedf62cc23ac06ecc9177e469b34031bb94"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run2/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2455,
+      "sha256": "80f86f68b44f849f3e3e868b2bc3ea4ccd01d2b43e86b0395b5b80efdd648d42"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run2/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26621,
+      "sha256": "3bc83998c9acb1ac04d15b28cc0b8039f4eb9ee750d751cf3fa4425e33ad5a0a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run2/devices__work-queue.yaml.txt": {
+      "bytes": 371006,
+      "sha256": "be71a1b3f92c770040ee1e0dd50c3545a2a5a2d6ee2bd712f0b8357615b77754"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run2/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 7252,
+      "sha256": "6cd44e6702c70f6cff824fb2e88ed469d7396616363e7b1dabc25191b1892c4f"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run2/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 3230,
+      "sha256": "430e8f1f35ad8747af75b9db7f0e6606294eca2b8c0791be7f8d3309406225a6"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run2/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 3741,
+      "sha256": "0d08572985f519f93d556edc1421f9420ee48e13306556dbc4c0cfb2b75d55f9"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run2/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 9231,
+      "sha256": "a7260cb1fd8764ee29b98f7cad586fdd595a3340980578027e5c43b8f039c206"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run2/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 10293,
+      "sha256": "d4259b5b6487782bf0af6d834dd76fe587789ce5d650d32bf9b92b6db89a4c3d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run20/01-firmware-analysis-mh202-1.0.24.md.txt": {
+      "bytes": 15127,
+      "sha256": "55272ac8ca311698d551aca0d649a3cac9f3e6f98461b7a4baca1a00cb58f143"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run20/02-firmware-analysis-mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 74357,
+      "sha256": "7f0433bb4f12bbe5f182ccf2962ebf9ec3e2187fcf63388bff62a321fdec750a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run20/03-firmware-analysis-mh202-1.0.24-record-and-script-lifecycle.md.txt": {
+      "bytes": 13596,
+      "sha256": "5cf11f1059ebd65f9f1f3757f3834d7603a0ef0a46e8590f569823321ede33ab"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run20/04-firmware-analysis-mh202-1.0.24-functional-translation.md.txt": {
+      "bytes": 4913,
+      "sha256": "3dabd6aa3e1bf223ffc629fa300607c2d2cd3259b7eb06440292abee2f2792f0"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run20/05-firmware-analysis-README.md.txt": {
+      "bytes": 7148,
+      "sha256": "166024701f7e029fb881bbf0197ab181aa6eafd1f75465dd370f941ca8ab68b6"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run20/06-firmware-analysis-README.md.txt": {
+      "bytes": 4509,
+      "sha256": "b9704d7f1aca1636a68d3d3fb8addfdb139510529f6b9e36b594d6d948d42ae0"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run20/07-mh202-1.0.24-README.md.txt": {
+      "bytes": 21850,
+      "sha256": "4a5928a112d91078a2d1f59d7ff077c8d3a68fb81c210fea81af094a728a755d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run20/08-who-17-scenario-management-README.md.txt": {
+      "bytes": 13161,
+      "sha256": "f9825e4dd40ef229a422df501ecaa44378b912833a3c45d3f7d3e8ad796b9402"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run20/09-who-9-auxiliaries-README.md.txt": {
+      "bytes": 5068,
+      "sha256": "a1fad1cfa8364af1323922150a7376381703087c016b4b45b2c5f557659d1dbf"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run20/10-who-22-sound-diffusion-README.md.txt": {
+      "bytes": 38713,
+      "sha256": "79f09c9241a0489071c93ad9fdf441b63659da9c47acef38623cd4511d816c3d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run20/11-who-5-alarm-README.md.txt": {
+      "bytes": 2143,
+      "sha256": "d5717c6386af5cc6cb3c04f23bcca04f89022b3801c0507f3b40b3408105a3d6"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run20/12-definitions-own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26893,
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run20/13-devices-work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run20/SOURCE_SNAPSHOTS.json": {
+      "bytes": 4010,
+      "sha256": "0484a2f0b747658d02ced6807f97788830b4835176b25953c9cd24df06d11ade"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run21/01-firmware-analysis-mh202-1.0.24.md.txt": {
+      "bytes": 15418,
+      "sha256": "e0438d2f4aa2e7a454290b93e130a652345dffdf29606928dcc38c3351ee7996"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run21/02-firmware-analysis-mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 74610,
+      "sha256": "e89cc805588d023a14c566344530d8aae6de461c0506b7b97f536ef32ea22ab7"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run21/03-firmware-analysis-mh202-1.0.24-record-and-script-lifecycle.md.txt": {
+      "bytes": 13596,
+      "sha256": "5cf11f1059ebd65f9f1f3757f3834d7603a0ef0a46e8590f569823321ede33ab"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run21/04-firmware-analysis-mh202-1.0.24-functional-translation.md.txt": {
+      "bytes": 9484,
+      "sha256": "b2024357b899207b3450065f7b7c3c9dc189497be702c34d090304eaa48fb89e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run21/05-firmware-analysis-README.md.txt": {
+      "bytes": 7368,
+      "sha256": "d562b2c8cc069bf9e9550267d0c01cd97f73832b5a948690ae0ad3956201783b"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run21/06-firmware-analysis-README.md.txt": {
+      "bytes": 4776,
+      "sha256": "09a894d3f7bebd8d9191462cc10d97c68ed8ade795b315041054aa5619a0b80f"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run21/07-mh202-1.0.24-README.md.txt": {
+      "bytes": 23159,
+      "sha256": "19b5d0cb66ed8571eab9049d076de79759a72e28fac51dcf4c0f65e93a1b9672"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run21/08-who-17-scenario-management-README.md.txt": {
+      "bytes": 13161,
+      "sha256": "f9825e4dd40ef229a422df501ecaa44378b912833a3c45d3f7d3e8ad796b9402"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run21/09-who-9-auxiliaries-README.md.txt": {
+      "bytes": 5068,
+      "sha256": "a1fad1cfa8364af1323922150a7376381703087c016b4b45b2c5f557659d1dbf"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run21/10-who-22-sound-diffusion-README.md.txt": {
+      "bytes": 39311,
+      "sha256": "1e50602d2c742019338395780d84404d52f27bf16a724b3b13b9b45e7195816a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run21/11-who-5-alarm-README.md.txt": {
+      "bytes": 2633,
+      "sha256": "790c2e82c2e0db3f8640debbb00caef0bfb9445b86619dfe829392727f3117fb"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run21/12-definitions-own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26893,
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run21/13-devices-work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run21/SOURCE_SNAPSHOTS.json": {
+      "bytes": 4010,
+      "sha256": "60e7b3c036ae0600c6f1bf3214595cd5fa5a1bc3e191e72e583d44928d454d9e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/01-firmware-analysis-mh202-1.0.24.md.txt": {
+      "bytes": 15950,
+      "sha256": "71684484025c02bf751377bdb821f653d238a06ab42829bcdc6c79c1a7d4326d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/02-firmware-analysis-mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 74794,
+      "sha256": "b96682c63e6706b297ae1980679a747a679be5fd17f82f0d0eca1d74b56b830c"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/03-firmware-analysis-mh202-1.0.24-record-and-script-lifecycle.md.txt": {
+      "bytes": 13596,
+      "sha256": "5cf11f1059ebd65f9f1f3757f3834d7603a0ef0a46e8590f569823321ede33ab"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/04-firmware-analysis-mh202-1.0.24-functional-translation.md.txt": {
+      "bytes": 11973,
+      "sha256": "b513777d8e81688b8154c0842496e4868e09c945f25ffb15db8bbf014b628658"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/05-firmware-analysis-README.md.txt": {
+      "bytes": 7368,
+      "sha256": "f56367fc9139831c00dc5a8106b7935ad6818def4a3fceadb8d8cdcf6ac0b4b0"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/06-firmware-analysis-README.md.txt": {
+      "bytes": 4776,
+      "sha256": "7be5cc000c9ec13b9427236a6f13e69dc5baf9c584cc6243feb178d465fa5826"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/07-mh202-1.0.24-README.md.txt": {
+      "bytes": 24984,
+      "sha256": "f08092b80f46cce112eaa50b9103e23d829f2ded8c460d8fa6867c9df8eba2df"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/08-who-17-scenario-management-README.md.txt": {
+      "bytes": 13161,
+      "sha256": "f9825e4dd40ef229a422df501ecaa44378b912833a3c45d3f7d3e8ad796b9402"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/09-who-9-auxiliaries-README.md.txt": {
+      "bytes": 5068,
+      "sha256": "a1fad1cfa8364af1323922150a7376381703087c016b4b45b2c5f557659d1dbf"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/10-who-22-sound-diffusion-README.md.txt": {
+      "bytes": 39682,
+      "sha256": "064acf6f2b1655a51c883f9df69cdd10c2218506a742aa569b49b986d608348d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/11-who-5-alarm-README.md.txt": {
+      "bytes": 3005,
+      "sha256": "b4dd242f30c4c9dde1e4e04772eb7c39e74cd503b2e3cc241186701ac9f4abe3"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/12-definitions-own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26893,
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/13-devices-work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/SOURCE_SNAPSHOTS.json": {
+      "bytes": 4010,
+      "sha256": "df99cfa29cd056ebed46bfb2a15c431069d0a430e48e97a529dd77703883b033"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run3/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2455,
+      "sha256": "4d7cac3ea263b853d8c0c0055d340fe0c21cbb714d6618525689bd7dbd7c1f22"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run3/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26669,
+      "sha256": "a587419d33e4201025db715e70160b248fb8aeae76f50f5b91cbe655d062dd23"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run3/devices__work-queue.yaml.txt": {
+      "bytes": 371347,
+      "sha256": "417c3c4a4d03775ae28701b7a8a73c2f41548dc39799470ab1beb4e7c4a2b856"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run3/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 7625,
+      "sha256": "95eb2ae111f534ce84e33d41fc2057775cf5bea7cb520e7cbf1d5d5352c02679"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run3/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 4092,
+      "sha256": "a4ed4cc5b72101a9d812f4d950cb8cec485e54e37c74e3b3e717de6d9d0c16f3"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run3/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 3741,
+      "sha256": "0d08572985f519f93d556edc1421f9420ee48e13306556dbc4c0cfb2b75d55f9"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run3/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 13411,
+      "sha256": "3509942a5cb8cd530838705e4ecdc34d39b93685418b9af4587ac043a5b74789"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run3/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 10494,
+      "sha256": "763ce809e4bff87dd3a85d03129fd3b19d110cae4830149e43e868738735bb6d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run4/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2455,
+      "sha256": "965daefed15039ea08c6c16bca0b2dd7e8cfd61bec11305f90f8cecda2479daa"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run4/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26746,
+      "sha256": "14e2407e0aa90ff0e4281819ddd7a40e5488a7cda8db99cf320d5e403f225748"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run4/devices__work-queue.yaml.txt": {
+      "bytes": 371714,
+      "sha256": "39b010da67ecfe933c0d06093ccd3cabb6643e2244c589c12dc1e8358a64260a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run4/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 8215,
+      "sha256": "22e09d78d71615ab250183a74af0a4be3d449f5f6941756cda984e36d62524ed"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run4/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 4979,
+      "sha256": "d843b3d983010067ea5629d9c4b1eddb0edd225920784f5f0e6b346885068a43"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run4/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 3741,
+      "sha256": "0d08572985f519f93d556edc1421f9420ee48e13306556dbc4c0cfb2b75d55f9"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run4/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 18649,
+      "sha256": "9d3cb0d57ace7f1ad60cb2f1421ddb3518253be8fbd8caa3912580533cf794b2"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run4/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 10741,
+      "sha256": "a58296ca58672bb152d591647593578474c25a2e48f54c22f33eb0a4a85b2081"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run5/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2455,
+      "sha256": "2d49e872d15613eda19986e3ada77e0359881d7abf9235a10f0be8ec066c4209"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run5/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26781,
+      "sha256": "f4a784fbb820db18b1e97caed0865cef7580ccec91a0e889d4e05ffefea3e87a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run5/devices__work-queue.yaml.txt": {
+      "bytes": 372124,
+      "sha256": "17563979ec2836eaae9f2038f177fb70e49abd6c2cf2772f28730c958247abfd"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run5/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 8455,
+      "sha256": "539e2b962eb50338110903269418d713b846fe292fc2545ee88eed2b1330fe59"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run5/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 5829,
+      "sha256": "cda2ad79d1cb0af1e72414bd802f5f7ba7a529194c7acce07bb77d18c995a1de"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run5/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 3741,
+      "sha256": "0d08572985f519f93d556edc1421f9420ee48e13306556dbc4c0cfb2b75d55f9"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run5/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 23171,
+      "sha256": "de13dfb568895d4b68bbc9493bf298490ab329d1f755807547f7e14a9c3dd3d5"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run5/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 10970,
+      "sha256": "0ebdd53a25c0f94a87d41962226c01de3640ca1d2fdb7e875818aded5f4fdb00"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run6/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2480,
+      "sha256": "ea42acae2b0534aaa10b492532d844004dec61db449aefab1f63c10532df99af"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run6/VALIDATION_PIN_SUPPLEMENT.json": {
+      "bytes": 607,
+      "sha256": "d68cb11a2758b656275e1bb38f7b49741f751d730f0dab971f617b6f186bb44a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run6/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26839,
+      "sha256": "f94a7b5b281d9f2648a2e8d68745da36d5273fe2715ff106835e9cbf787a4512"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run6/devices__work-queue.yaml.txt": {
+      "bytes": 372517,
+      "sha256": "c796c99b5ef6c86fce0b61d6931e10d900cec265cf1ba22e83a28a1def0e8e5d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run6/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 8683,
+      "sha256": "6d2673093bce1561ecec6f79d10c016cee87349d8e2f304cf51fe41f35a6b04f"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run6/project__review__firmware-analysis__README.md.txt": {
+      "bytes": 1027,
+      "sha256": "653317d0bca414bf4a20fbc3ff75fb8cb6b0ad1d5a23420088d52bde4a869512"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run6/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 6631,
+      "sha256": "aac2ba0fbb4e0898a830f2754237763ab16d1e4a1e3779e78d2d64400efc9532"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run6/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 3741,
+      "sha256": "0d08572985f519f93d556edc1421f9420ee48e13306556dbc4c0cfb2b75d55f9"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run6/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 28340,
+      "sha256": "bab80fcad8987a68e82f00c30b24fe4544273a327d16221474b5d3bf1c075a1f"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run6/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 11274,
+      "sha256": "be50776611c575b2c5a7121dde5ff86487adda7d90bf47e70d20d34879aa1b78"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run7/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2747,
+      "sha256": "a67ce09b8ef063c60cd62eba9fbe943666484c2afe54508eb336f845f10efe7d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run7/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26889,
+      "sha256": "b9d434f7412eccc2787e99152ef26a39d189866ed91fbfa0a1b11b33429ab882"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run7/devices__work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run7/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 8963,
+      "sha256": "f4a36f09ecf70ec202f5d1638df69dc56e003906cadf17ecfe3c1ad942069d0b"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run7/project__review__firmware-analysis__README.md.txt": {
+      "bytes": 1033,
+      "sha256": "e16eb9b3cec81ede923ec45916b85274378710637058f201db42daa55e065777"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run7/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 7636,
+      "sha256": "197ef6b0b6230f9acdcefd610dabd366bbb5a153f99054bab047c9f3f4f19f22"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run7/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 3781,
+      "sha256": "e1ab1a2790d6e95b2cc32c0c8dc9bc966eb425baa703265995e96110a423842c"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run7/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 32906,
+      "sha256": "ee4003e3fe5faa3043a7fffdba984a686edc601a977a360df70902afd2a48aca"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run7/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 11600,
+      "sha256": "01bff053d070a3182e2ea07ed1aa703ea00e10bf5aecbdc9996e5355433a1334"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run8/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2747,
+      "sha256": "ae9c212b458d61affbfe7b0b4f939e28c5b646c3d9ff74bb4dccef900d6db563"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run8/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26904,
+      "sha256": "35999863e4ccedd7714e101e2fc2127874485f19f2ae496af648e923c546d6e3"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run8/devices__work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run8/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 9322,
+      "sha256": "288994117d1f89e311cdf7de6efe1c5ce19f9ac40f2a7743de1ff51af3c1a239"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run8/project__review__firmware-analysis__README.md.txt": {
+      "bytes": 1386,
+      "sha256": "4f288a5b2f6ea8ae31d59d73a3c2719b8fcf2aa2a4c04d53e345a8da35eaffee"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run8/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 8676,
+      "sha256": "eb2af8e7b95c164e65c0c93494f3adce519b663408a1a7cfbaa3ba0f295c61da"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run8/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 4134,
+      "sha256": "c988ba9ff5cb71cd8603358e5884ba39c9b32895085b29a671d3d2246af068fe"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run8/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 37858,
+      "sha256": "bda1cda3d5b332a9e917bcc23f7b1f985330f82d4540fdc56d2c738d23f02945"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run8/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 11612,
+      "sha256": "9fe55e7c76ede121711851ed76568ae14fd840ab6799763f5f98d9c4c2c9782a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run9/SOURCE_SNAPSHOTS.json": {
+      "bytes": 2748,
+      "sha256": "e65bef12e04752540055cc9decbfb1d69042769f177389f89ea52fe40e570cf7"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run9/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt": {
+      "bytes": 26893,
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run9/devices__work-queue.yaml.txt": {
+      "bytes": 372924,
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run9/functional__who-17-scenario-management__README.md.txt": {
+      "bytes": 9832,
+      "sha256": "6a4f129bbc8c97319980b182635b2f43a4fa02d30952e0584b2de8169b521a42"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run9/project__review__firmware-analysis__README.md.txt": {
+      "bytes": 1612,
+      "sha256": "1091623004b8cb2c2ef4364be2b9498a940cbccabd21317868695595c3447400"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run9/project__review__firmware-analysis__mh202-1.0.24__README.md.txt": {
+      "bytes": 9728,
+      "sha256": "cc6f364458ee338bf308b0d3ce6d7857827321ff3fc2d83f8f0357f2b31ae8e3"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run9/reverse-engineering__firmware-analysis__README.md.txt": {
+      "bytes": 4360,
+      "sha256": "47f6857c790ab2b09d2ee97f23f0493f0d54b75e23de1269877c1fda41e8ff47"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run9/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt": {
+      "bytes": 42437,
+      "sha256": "9a858748846ce50a91dac33a6ec50c464fad0e2731990bec40398da21102c4bf"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/reviewed/run9/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt": {
+      "bytes": 11686,
+      "sha256": "bed621e47c4bd6d1edb1c178d63bfb70beafc277d14b535f74cada78936a12b3"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run1-boot-report.txt": {
+      "bytes": 14690,
+      "sha256": "6035e497fcf4c8373ec84ae18ef2a2ff034ee4d8f49c16afac6d8c2199b1a4de"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run1-boot-review.txt": {
+      "bytes": 5657,
+      "sha256": "46068840e41cd55ec6d7d632ebe3419ac82fb11af0812cc340005b5a0bf801f4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run1-functional-report.txt": {
+      "bytes": 14071,
+      "sha256": "4bd567b9a05afe7a728895966aabbcc2d6c20929b9ffa12d1524fe7f7b0061f6"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run1-functional-review.txt": {
+      "bytes": 6651,
+      "sha256": "0982f8199424a57a70bdcd95788660a4a8f0bf6205dc2636694e2ac601e759e4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run1-inventory-report.txt": {
+      "bytes": 4014,
+      "sha256": "eeb9499ddefb70825866dff78865ba2fa26828daf87d8e37e1203d3bb7a30205"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run1-inventory-web-review.txt": {
+      "bytes": 6804,
+      "sha256": "6d5afb681334f7c10f9c82d8298f54e43e67a0783e47d3fce59d7ee1357ebe62"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run1-protocol-report.txt": {
+      "bytes": 12897,
+      "sha256": "d446a542be2ea7e67a7b07c249bef85525450b5ecc6288b1025b3f5ec68c52d0"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run1-protocol-review.txt": {
+      "bytes": 5087,
+      "sha256": "ccbac031e76843f6446d74ee4e267ac70319abf089979a19447e0c600b956dbb"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run1-provenance.json": {
+      "bytes": 6315,
+      "sha256": "32fca5cd49a4bbf14a130684224164866187b166e461a69af06a10a4430af862"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run1-web-report.txt": {
+      "bytes": 7005,
+      "sha256": "c7e4d114ff1676841968f09839db39c1966bcb492791f6562fd2a352607a728b"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run10-coso-report.txt": {
+      "bytes": 10105,
+      "sha256": "63fc28bfb92bd6030becfbad8f35da2e43b58d8294c298196f657f861d84ea32"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run10-coso-review.txt": {
+      "bytes": 1502,
+      "sha256": "bf3ddbd66a1c9900f3935a5c261c37c13ab3744bebe563a253f74ab2f6752e50"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run10-functional-report.txt": {
+      "bytes": 10847,
+      "sha256": "3cb3a737cea3b41b8687d0808894f5627787fb5447c1139216f32ce5cd3fb414"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run10-functional-review.txt": {
+      "bytes": 5686,
+      "sha256": "86e40e211f615f26c494aa9baffc6725171cf7f93ee25f194f8abcbe22fc3830"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run10-protocol-before-wording-refinement.txt": {
+      "bytes": 9901,
+      "sha256": "c8f58bac3d67b6b43cb634c2f58094bca3dd2789a94fd5b51ac4362f7f66e9da"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run10-protocol-report.txt": {
+      "bytes": 10097,
+      "sha256": "dd782d0ccd5329a88862eafc1983fe28a8be56a6a037481482d162fe54589367"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run10-protocol-review.txt": {
+      "bytes": 5979,
+      "sha256": "ae5cfef534a1629c9044a97bd439f35082ecd6c4fd9310e2b9aae80072c9b20d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run10-protocol-wording-refinement.txt": {
+      "bytes": 2246,
+      "sha256": "55500546aa307caf42e3ceb5c7756691a539a7cdeddf364841aeff34a0f3ebbc"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run10-provenance.json": {
+      "bytes": 7515,
+      "sha256": "b3fc2e9e730b2cb5b9931271dbaae739e01e014ea4d9788fb2169ec5baed524e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run10-triggers-report.txt": {
+      "bytes": 5674,
+      "sha256": "778801130a8a6188111f34caa734c540197c35ed47499d155c220f9349f41153"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run10-triggers-review.txt": {
+      "bytes": 4576,
+      "sha256": "fa7a6786ce64009eb79953e64c362fffdd288b66ae75de03d201592acf2f2a43"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run11-coso-report.txt": {
+      "bytes": 8335,
+      "sha256": "d0225ba1a97e61c66510515bf5f00bb755180c379c22ad9fbbb894f1920c9e67"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run11-coso-review.txt": {
+      "bytes": 1120,
+      "sha256": "83a88cf324b339c478213f6aed25b7fac81dac6c085d48cc49eacbf176a30c29"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run11-diagnostics-report.txt": {
+      "bytes": 6445,
+      "sha256": "8f865cbea3c0baf7537c0d7b75957129e3e4111582b544e50efbd1cb6382cb84"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run11-diagnostics-review.txt": {
+      "bytes": 4577,
+      "sha256": "8e12205b5922bab6eedde1a759e1c91c1282fd436b1b05c80e4bc769da66f3f7"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run11-functional-report.txt": {
+      "bytes": 9834,
+      "sha256": "bde5160852a2633b415ec463050b319456fe26f92b60b59746a6466324f397b3"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run11-functional-review.txt": {
+      "bytes": 5263,
+      "sha256": "b7ded752c5890e435a2d6b2b47f1cd766cd108989506e46a43c6809013a29a7e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run11-protocol-report.txt": {
+      "bytes": 11045,
+      "sha256": "b609d52cb82e37d6dedc7906a71b24732713e305f1a7a9b9377a253e61d306d5"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run11-protocol-review.txt": {
+      "bytes": 6672,
+      "sha256": "19ae2e829e5ca8d2d695ed0b96f68e14c191324182bbaea51a5fda552e7ff330"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run11-provenance.json": {
+      "bytes": 6458,
+      "sha256": "6a9015a7eff91e44a7649e6680a20147d7fe2bd17fb569f9719dde4ea11a53ca"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run12-coso-report.txt": {
+      "bytes": 10758,
+      "sha256": "fb9e5775b71ea822eff0b0bb5c8df7577a100b3e1373cf9001fa75ce9082ccc3"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run12-coso-review.txt": {
+      "bytes": 1329,
+      "sha256": "a1d3e35172435216b536ef1850deed169c586c151ca733a1691997df121049b1"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run12-functional-report.txt": {
+      "bytes": 9727,
+      "sha256": "91a006a6359fd8d68b1b69068d819ab9c537afc2a5ecfab77f2eeed89ff9e823"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run12-functional-review.txt": {
+      "bytes": 7467,
+      "sha256": "31936a090b0752abc4b897cf0c3844ab1712ce3f4873683f9ad809b45ae602b9"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run12-inventory-report.txt": {
+      "bytes": 7458,
+      "sha256": "2302cebc0f001a2e66232c0d6e9e93d7748a3df7230af1a24d22cd6755edafad"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run12-inventory-review.txt": {
+      "bytes": 4788,
+      "sha256": "9d383148aeead66e21e6985cb1cc9b9aa8b500a4e84a2d87e1d8bb72bb9e81d5"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run12-protocol-report.txt": {
+      "bytes": 11882,
+      "sha256": "00eb78b0ff647c8d1e6fee74c9c53a25971c9c13495910093992279e3d68fc48"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run12-protocol-review.txt": {
+      "bytes": 7218,
+      "sha256": "90d314467a8c64eaa3d7a6fcf410b5a5b5215abd3aa99e84d3cc4894c9db8373"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run12-provenance.json": {
+      "bytes": 6439,
+      "sha256": "fca6322ca4c9840e29cb867dab4f3c18240692a1088b1c264e5bf19f0e52d500"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run13-coso-report.txt": {
+      "bytes": 9853,
+      "sha256": "fff630872cb31bc442f64c961b22953dedc75327adfb6ccdda1ee168812882fd"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run13-coso-review.txt": {
+      "bytes": 2933,
+      "sha256": "1799db7cc26273fa6e06d139891d43995f4fde6a9b5fe8083892f7cb3d57623a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run13-functional-report.txt": {
+      "bytes": 10090,
+      "sha256": "fd11cdedb3a0071beeb8d0a2679ebd84d4db84019347361d2178db6759704c4d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run13-functional-review.txt": {
+      "bytes": 6894,
+      "sha256": "17153bdb6345856d8e0b81c252c5a3c6fa63d9f7d050053da754bdcd0617b6eb"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run13-protocol-report.txt": {
+      "bytes": 11407,
+      "sha256": "e708d11afe6a77b54f536ebc18d2fa49552370205639aef6a568977cd6660adb"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run13-protocol-review.txt": {
+      "bytes": 7126,
+      "sha256": "1dcaba962d18522ba20b3260dccb4d8b14d8421a47e2c633d151b37e9e1fe23e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run13-provenance.json": {
+      "bytes": 5678,
+      "sha256": "cba8ab2671cea63ff9f1fccbd821270f7d9fa75cebd8101f1358a857c1a1e61f"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run14-coso-report.txt": {
+      "bytes": 10351,
+      "sha256": "73fa582bb2d2f316200099498f3fa6b04e542595a5c78b1ef31829cceeef04e6"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run14-coso-review.txt": {
+      "bytes": 8318,
+      "sha256": "41068cd430f84dec537292f73d721047d59613901e1ad634803969a6689c434d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run14-protocol-report.txt": {
+      "bytes": 11814,
+      "sha256": "7865c526e571dac9a14ecaa5bf37e2cd06fb732246f9139dd3f07df3349c7f5b"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run14-protocol-review.txt": {
+      "bytes": 6114,
+      "sha256": "ae61bc6cd1694af7ba1124e1d9431f406d25d3266ef0c3938c12a0fceb7b33cf"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run14-provenance.json": {
+      "bytes": 5111,
+      "sha256": "f787c6c93b65bcb211a5e9e3f4de5b1f4703c2947f37f913496a39bfc40869ee"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run14-thermo-report.txt": {
+      "bytes": 9272,
+      "sha256": "d438f0e99f660adc5a67b2cf83f2e1f8ea57dd865d3d483320a921be4a4b62cb"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run14-thermo-review.txt": {
+      "bytes": 2813,
+      "sha256": "7fcc43e5c26a6885c831593fe19f9b742efb47c3714c44f3a9dc230d890a8938"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run15-coso-report.txt": {
+      "bytes": 11682,
+      "sha256": "26826089a28b89869ae5ef5a3e4b00ea1ffb2ebda200bea13ecd67357149894d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run15-coso-review.txt": {
+      "bytes": 8187,
+      "sha256": "e5d3189780b2d7a6e963bcd65c0697930b2f39e34c888bb6e10fdeea3f91b25e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run15-protocol-refinement.txt": {
+      "bytes": 3207,
+      "sha256": "57c4d70d5d10dd3a72a3dc2ad2f98ae97d41aff3f19b45947f37c1afd74cd80a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run15-protocol-report.txt": {
+      "bytes": 10568,
+      "sha256": "cc37b4383aa124e7c4141aa825ff1ba8588cd61c3966b8eda35d197a69a0ad77"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run15-protocol-review.txt": {
+      "bytes": 6988,
+      "sha256": "1cd66fef7762d7fd7231a134d95465d19c1bd148858e8cc28b70600f9be25242"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run15-provenance.json": {
+      "bytes": 6243,
+      "sha256": "d5bc5c51f01b03dfd8e950530e8e5ed8dccfe5b4f187c5887e6f503e9c94ca07"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run15-thermo-report.txt": {
+      "bytes": 8817,
+      "sha256": "cf3f9d141f09a2720fdfa1522fc891dcd7adcaa451cab762e3ab0b8866eb9de0"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run15-thermo-review.txt": {
+      "bytes": 2640,
+      "sha256": "a87b813bb57e4e3b38b8c55180eb101fb21c5e2e4df77284aa88673daddf9bb6"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run16-coso-report.txt": {
+      "bytes": 12294,
+      "sha256": "6a346be2480e3f9476d55115b6f9ab87809142b2e51315f55234717909fb761a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run16-coso-review.txt": {
+      "bytes": 8211,
+      "sha256": "d5263fb687d0006b2ddc9e85a91b3445653d875a21f879ffbb06ea7c85a396c5"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run16-protocol-report.txt": {
+      "bytes": 11725,
+      "sha256": "5304eb2d0038900b37c34498f33dce37fc83df630445899355c76a267991c024"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run16-protocol-review.txt": {
+      "bytes": 9916,
+      "sha256": "af0443af35e01767f01da7ee7834fedb2478b945cfd0f7a30867fcf1362a804b"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run16-provenance.json": {
+      "bytes": 6175,
+      "sha256": "3e03ca8222b3d1420570dc83e59419619bdbbcb44b7149f70a91183db72720a7"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run16-thermo-report.txt": {
+      "bytes": 12348,
+      "sha256": "f260264e351c0fe0616160644a675ae525fd637295872fb1b21c945f0158c436"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run16-thermo-review.txt": {
+      "bytes": 3062,
+      "sha256": "ccf23e68c1e0cfb2c65250eacb988e4c9b8cb2aab3527e0227c744d2bdd04714"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run17-coso-report.txt": {
+      "bytes": 12341,
+      "sha256": "00cddc41451d6553b7986c50a2d6585e60113fc7ef1bb963c9c84cc583142138"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run17-coso-review.txt": {
+      "bytes": 9965,
+      "sha256": "2201c32dbe0aa421844c88a56525e3f97259feecca87962579d94e174481d657"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run17-lifecycle-report.txt": {
+      "bytes": 9719,
+      "sha256": "d178923e423d0d2cd089805e9d8553ac849ac1eb4565504a1713db94e1bd03f0"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run17-lifecycle-review.txt": {
+      "bytes": 2782,
+      "sha256": "a7fe1c6abdee643b87f6a90494110f607b005ff2516c1a1c68f34a7e6fd11c1b"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run17-protocol-report.txt": {
+      "bytes": 9871,
+      "sha256": "84220fe09ba11ed5cec0ea46378942cd7c32ed4928766e3ca938aea5d5a71be3"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run17-protocol-review.txt": {
+      "bytes": 8701,
+      "sha256": "013794a3acdba9cefeb4c544e0bbeca44be1749cb313bb39b8a531866a041e40"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run17-provenance.json": {
+      "bytes": 5754,
+      "sha256": "b648696a1fc2a046ddee2bd994e567cab62541b445ca3a448831079bcae0f19f"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run18-coso-namespace-history.txt": {
+      "bytes": 2394,
+      "sha256": "96f0af7e2adf1b4d0f969a14034055107e42fc4eec3d7bf9b8938a29f102c8bf"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run18-coso-report.txt": {
+      "bytes": 12062,
+      "sha256": "580e2695e56a164f19e5638fd06f0bb6b2c04e4bcd61d5fd4bd983b760d701bf"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run18-coso-review.txt": {
+      "bytes": 11032,
+      "sha256": "36b42158cd459fd9e89347dcff2b2d6658344a38658fe939ef58a009c3fb5929"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run18-lifecycle-report.txt": {
+      "bytes": 11583,
+      "sha256": "36e21937207c5474435c5ae52efa4478c02988267525e8a92f8a0f48fbf13076"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run18-lifecycle-review.txt": {
+      "bytes": 2648,
+      "sha256": "5328e56355665e5fbed237d3875851433486703db7735660c35868107869d78c"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run18-protocol-report.txt": {
+      "bytes": 10705,
+      "sha256": "35da6bb26bd5951c5764e89f85acecd6cdcad99d62b3ed0dbf72f3c973d49551"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run18-protocol-review.txt": {
+      "bytes": 9004,
+      "sha256": "dfd5a7726940963e89b6db87f1b5c6da0a0078fca6646460e155803ec9452076"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run18-provenance.json": {
+      "bytes": 5146,
+      "sha256": "f351a6d190ff17ef924002b18eec65f3a3be48d225bfe7ee9fa03f654b0629be"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run19-coso-report.txt": {
+      "bytes": 11674,
+      "sha256": "59ef9ce56f6344b6ce9ea1ea9fff36ddfe8283e6968bac0a4075cd7810633e05"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run19-coso-review.txt": {
+      "bytes": 4704,
+      "sha256": "13dc991592aef52568f7e007129ad0bb6f1164776e80b14204f992b4be334dd7"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run19-functional-report.txt": {
+      "bytes": 10119,
+      "sha256": "bd6ee8b3150d5ce7c277903be38f38a03ed7073b6309614128147b621e53d030"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run19-functional-review.txt": {
+      "bytes": 8376,
+      "sha256": "9330914d1c4d54ce4aceeacf01e6a6bcb47fc440a4e46953e8917c50b9e9d325"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run19-lifecycle-report.txt": {
+      "bytes": 12571,
+      "sha256": "336f4b21b0d7157c385b621c13ddeec2ce9cae60da99fe738fcc86eb635f8022"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run19-lifecycle-review.txt": {
+      "bytes": 3487,
+      "sha256": "c3fa2b7f9dc53f7cef5fc76e45597ac04ddeecd7c93b4b8f1d088d21dcd75370"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run19-lifecycle-stride-history.txt": {
+      "bytes": 1347,
+      "sha256": "9c08c2256d6c53653a06518f95124828ddfb9b3df12157c17ec2bc5eef9e7d07"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run19-provenance.json": {
+      "bytes": 4776,
+      "sha256": "2aed17adce8daf8ebea4f7fa2863be831aa973a5ff45dd189516c564a7cf3fee"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run2-boot-report.txt": {
+      "bytes": 12138,
+      "sha256": "b9af05b1b82de9a057a70ec090e1651d4901cb61307dde882f60c3eec006027e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run2-boot-review.txt": {
+      "bytes": 5603,
+      "sha256": "cf88adff7285f2a4dd66c2589e9cc2e5115dc94ea46de290e36e42b6cc9c3acd"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run2-functional-report.txt": {
+      "bytes": 12700,
+      "sha256": "aa786a3363ee95abbd221d1c8af471e20211a86af7bbbfa32404688bfc2346c4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run2-functional-review.txt": {
+      "bytes": 7511,
+      "sha256": "8d46bb53fcacd8abc11aa76231966ee00827c0e7d8fc6883cc00b60fcd8833b8"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run2-interpreter-correction.txt": {
+      "bytes": 521,
+      "sha256": "44615bc97101d385016dbdf705589a2f8df9f717ba0b2288fa079280544fe835"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run2-interpreter-report.txt": {
+      "bytes": 6536,
+      "sha256": "15040bc8a3a8e066796839c0f772cacc83141271eaa81adf7455d59d68a75386"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run2-interpreter-review.txt": {
+      "bytes": 4504,
+      "sha256": "f7884849e9366eeeacb59358a4302902db9b023322ff1112dace8c1d0933fba1"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run2-protocol-report.txt": {
+      "bytes": 12004,
+      "sha256": "9e2685f9d7c98fe93d3409619fcde3f26c04debb0d9eca1242d6814310801893"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run2-protocol-review.txt": {
+      "bytes": 6048,
+      "sha256": "9739964e5e554ff62ddf450d88de95962e997cb8fd41a31ec19a73b91fd2283d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run2-provenance.json": {
+      "bytes": 6408,
+      "sha256": "445209bf940ba6f9fd8a855440b87695491d8a660ce4a69796046813712640e0"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run20-alarm-report.txt": {
+      "bytes": 10154,
+      "sha256": "714cdee435dfd5ae59faeb01c5deb972b9041390e79f6dc278e96c3fbbc422bf"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run20-alarm-review.txt": {
+      "bytes": 2928,
+      "sha256": "b385875d15b012465d2eba736533e1a16ae8fc99a58122104fbcd382afed7329"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run20-protocol-report.txt": {
+      "bytes": 11646,
+      "sha256": "fe3e7fd6bc39f606d7aa76b1f2d8c3c4962faeae30ba8fa3ca648db09b48f98b"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run20-protocol-review.txt": {
+      "bytes": 6133,
+      "sha256": "801c4b9f0ad798b45caec6cc8b8f116ac33626d4769d8ebc12eb7cd63ec34840"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run20-provenance.json": {
+      "bytes": 5190,
+      "sha256": "5a69e1129cb9141add59c585d83bacc303809d70ef43ea70acdc17e10b790c79"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run20-reference-boundaries.txt": {
+      "bytes": 3108,
+      "sha256": "6b90dde90948be134c2092d93f6fbbd8f84c7114e614acdb5b19997ac4034e26"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run20-sound-report.txt": {
+      "bytes": 8881,
+      "sha256": "81440e9833acb835626e2036923e2614db5bdf341ad03b5cf877e585a50d1e33"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run20-sound-review.txt": {
+      "bytes": 7382,
+      "sha256": "ed3dadb4056e4b24c9dbfc2dcdaaea2704ad48af47887e65e69ae400aaa18a6e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run21-alarm-report.txt": {
+      "bytes": 9238,
+      "sha256": "7d7d27de1854e897b3761034265f7ee2dc4179edbc12eb31f4b85d9c8728c870"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run21-alarm-review.txt": {
+      "bytes": 2794,
+      "sha256": "99c80fcc4f3dab07eea00528b725a712598a320e37c86c5f4e167fa30fb00297"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run21-protocol-report.txt": {
+      "bytes": 9903,
+      "sha256": "4b266b673700b9cb0115ab81bd08aae21902149ac76664c32043b69d492fdef3"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run21-protocol-review.txt": {
+      "bytes": 5926,
+      "sha256": "7a908700456813262f6fd494e4f773d407a8d90d5156070681dc111358a0a791"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run21-provenance.json": {
+      "bytes": 5299,
+      "sha256": "7ec69fc504e074566746fcac3c15377a0bd2df48fbb44b3089301b650ebd1357"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run21-sound-report.txt": {
+      "bytes": 10277,
+      "sha256": "7a620c417174980119e9573c914dbe7730823697661cb975a20708e8e127aea6"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run21-sound-review.txt": {
+      "bytes": 9625,
+      "sha256": "087023ecd094dea55e9494555c74ce3a1188b1013b5e5fbe94bcd5654ada0f9d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run22-alarm-report.txt": {
+      "bytes": 10852,
+      "sha256": "9d47e1b79578fd6e97765d1392d1d6afdacd078e7ca81b01ad743d4e5748e43a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run22-alarm-review.txt": {
+      "bytes": 7770,
+      "sha256": "6d22c5eabc20833b6ba811bf117e738a73178a82f1046372cd97e735f0f1d908"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run22-findings-index-review.txt": {
+      "bytes": 6690,
+      "sha256": "b14a50a48754262ad465981107785abb80558b1006f45a6a8e4e13ca4c9a738d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run22-findings-index.json": {
+      "bytes": 29634,
+      "sha256": "636c284114ef156012546346854a34dccb40413c8813a2435137ae76f7102eb6"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run22-findings-index.txt": {
+      "bytes": 8379,
+      "sha256": "51ac5cd6b94064e18e121b519480c7026dd0e4492b54a563b3ba04d59ad1fb85"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run22-findings-source-pins.json": {
+      "bytes": 4213,
+      "sha256": "e3173a27f60a327b2f6abf9c849de75882b6da65d2b1e40467199c3aa3e7b796"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run22-protocol-report.txt": {
+      "bytes": 10637,
+      "sha256": "35369bef23a8032dc0553a5dc4c75717f6d79625e7695d463ff50e8e5b73ee49"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run22-protocol-review.txt": {
+      "bytes": 7310,
+      "sha256": "cca3f4fe735f6bf8655fa92563715daee292d414fe85097f9e3c13e5d4b8985e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run22-provenance.json": {
+      "bytes": 6185,
+      "sha256": "6c2c798455582fb737959b73ba2d4cf8a4945761dd9ccf5540e8361f6bfa38ca"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run3-boot-report.txt": {
+      "bytes": 10764,
+      "sha256": "4707944b94cce809d6c3beebb47a46ed13ea3f6c2d1b4270250de4b1e58e12c8"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run3-boot-review.txt": {
+      "bytes": 5005,
+      "sha256": "178a842b57b05d9133a92264258e22863c206c667f46b17896382512c99d8bc6"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run3-functional-correction.txt": {
+      "bytes": 421,
+      "sha256": "26dffe698fb1cc16adfac40ab6248e2e8c7a04f1c61563097958e37c4fef4c78"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run3-functional-report.txt": {
+      "bytes": 10993,
+      "sha256": "cc8be66fd56d256880c6724987208b86eb7da2ca939212bdb8121f53fa7dca00"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run3-functional-review.txt": {
+      "bytes": 7574,
+      "sha256": "475c4c5187752b9491fb4cdb452f098a0f477b33dfc8a2d5db32317c8bf5d88e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run3-protocol-report.txt": {
+      "bytes": 12669,
+      "sha256": "40ece988cc53e03be936c10c9e81380e2d483a2188d27b80d9d2a8cfaba7cadc"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run3-protocol-review.txt": {
+      "bytes": 6544,
+      "sha256": "e01ddaf9997adcde56619207412e8c1406125e0873ca4463905810db7b33a8a5"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run3-provenance.json": {
+      "bytes": 6400,
+      "sha256": "2885107857a2143bb7ef8706c9c3e8b1311bffd1473e43642f619d43a87c17f1"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run3-triggers-report.txt": {
+      "bytes": 7143,
+      "sha256": "2f628d990d2d4ae7c4765cd08692ae8d7734c62fd55e74aa1391f0970cbfa0f9"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run3-triggers-review.txt": {
+      "bytes": 4187,
+      "sha256": "c04769756686b21904c6fa18f4b83c8f6a564f4b709587fb88c91d1b308eca90"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run4-boot-correction.txt": {
+      "bytes": 1295,
+      "sha256": "0eca96949c4acaeb295478e47ceeb7be580e81745eb2ecd9797ecef795a215f5"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run4-boot-report.txt": {
+      "bytes": 11911,
+      "sha256": "9ee0cf019a36fdd04faa00a4d47a7bdbe053ed4f0cd5862660b40f8972697d9e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run4-boot-review.txt": {
+      "bytes": 3535,
+      "sha256": "f66f4a206ed217161f162f84bcd958cdf63612b125d5a1a31fd8540e29976e05"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run4-functional-report.txt": {
+      "bytes": 9431,
+      "sha256": "b0a188a9cb2000b1480700d37ccde2e1e071b8e49874ae2be3f7801a8f9eaa4f"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run4-functional-review.txt": {
+      "bytes": 6817,
+      "sha256": "8c2904476fe4e4fe24f2ed0f90ed000a072fc33a475b3bc22f780542bbed423a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run4-lifecycle-report.txt": {
+      "bytes": 4855,
+      "sha256": "c3f8cef9b952e4485e37fba9079ca8825a32caaad7810b803584450ff893e0d8"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run4-lifecycle-review.txt": {
+      "bytes": 3923,
+      "sha256": "5edee00596a168e2130d4cc4a4a39e1f67d7aab02d3645b8a4c0f5bed3f69d97"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run4-protocol-report.txt": {
+      "bytes": 12813,
+      "sha256": "abb25a5c162dc988447fc0b1bc756c65d9209c07d7bc58eee73748fa7faef5b5"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run4-protocol-review.txt": {
+      "bytes": 6007,
+      "sha256": "2889821d7923584d5662ead5fb5bde2995d72dbc85ee6d4d373a797b9544f4a8"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run4-provenance.json": {
+      "bytes": 6761,
+      "sha256": "62f52094eb674e24b0247bae35ea42f21446c8ab4722ce2d694769bc1c62515c"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run5-boot-report.txt": {
+      "bytes": 10875,
+      "sha256": "0ca889b14130dd039b050f1d4f4166ec02d54fa28b5d28d2987f0e6049b54421"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run5-boot-review.txt": {
+      "bytes": 2972,
+      "sha256": "5e51cb0b9f03d787b6eceafe6fd12ab776feb01f8467e41e30ba781bd79e76fb"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run5-coso-report.txt": {
+      "bytes": 8223,
+      "sha256": "9b872ed01536f561a8b0f0fe49425e0323a2f1732218428cdea5525da18b111d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run5-coso-review.txt": {
+      "bytes": 4744,
+      "sha256": "0696c7256f9a26d1dd599eee8bcce8fcf5a2628232de98ccfa636e8cbbf49346"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run5-functional-report.txt": {
+      "bytes": 8148,
+      "sha256": "70ed2298f89a0611e0b6e56a851a9e62904a81e28b1391e499df11d875609a00"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run5-functional-review.txt": {
+      "bytes": 6059,
+      "sha256": "f1912dc66adda6fc029af3c1c3893ed74466e89bbac518e1591f1b628d5baf63"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run5-protocol-report.txt": {
+      "bytes": 9679,
+      "sha256": "31fd8aa084176230fd4facbe0aa8e64f7ba74309257500b90f2aa8ad2337cc4a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run5-protocol-review.txt": {
+      "bytes": 5414,
+      "sha256": "3442136518de9a1a25ed11d217c9fff800cc29f2aaebe60e5b4d54e1165dd8eb"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run5-provenance.json": {
+      "bytes": 6320,
+      "sha256": "c6bd45cbf9a8777ef1051cc5c24ecae4b4ff7f2f1ce57e544c4dcab5e4094ff3"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run6-boot-report.txt": {
+      "bytes": 10328,
+      "sha256": "f0c2b3215c01ecaf58dc07f27eaa1bd5b0f8dfa8b8550ea04d26a28f7ae2785a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run6-boot-review.txt": {
+      "bytes": 2790,
+      "sha256": "81507f08f79b9c60a45ecbaf925ef526d0a24e9d7b21a575877af6b6d7fb7e77"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run6-functional-report.txt": {
+      "bytes": 12117,
+      "sha256": "435709c2c5aee19831d8de311c052675bf86dc5eae2f5650ad28c812ba6533ac"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run6-functional-review.txt": {
+      "bytes": 6096,
+      "sha256": "b1de2f1d1e2a62bf54cb34d1809be3af7a8158c7b21076a8e3eb113c2199eca8"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run6-lifecycle-report.txt": {
+      "bytes": 6525,
+      "sha256": "38bcdd3d720aa85ea95f8a17a727c1bcb4d20864bd71f65460e466d09626fd76"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run6-lifecycle-review.txt": {
+      "bytes": 4895,
+      "sha256": "04a01f91e7cded2688ca515b1b69813c38458b931a1648fe2cb9e6ff595c0cb4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run6-protocol-report.txt": {
+      "bytes": 10821,
+      "sha256": "0389b36c43fa8da6156f3974dd98bf21893029167b5d0678c64216af19976bfa"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run6-protocol-review.txt": {
+      "bytes": 6537,
+      "sha256": "dbe18dee2cb77258fe3873a879254608525d302ea3631360188da32d37e328ca"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run6-provenance.json": {
+      "bytes": 6362,
+      "sha256": "3dc5989c9ebedf60e4c0198bfb970ea2ec548358e00f16801305b8bddfc59c65"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run7-boot-report.txt": {
+      "bytes": 9175,
+      "sha256": "c5e52e89091aca64fcd804fd4151a6248a5fa984c17e0207d71965197c34115d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run7-boot-review.txt": {
+      "bytes": 2652,
+      "sha256": "f2b625791df509815772aa9d13c57ee378ed639807a6c8c4a67a26cb662d54c3"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run7-functional-report.txt": {
+      "bytes": 11716,
+      "sha256": "9f677fb93603e88f3297bb8785bf85fd2f4ba1161bd084d808f17b17e975c218"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run7-functional-review.txt": {
+      "bytes": 5986,
+      "sha256": "4b3131e0e12bb944dd82747bbcf798939a9c79bc3603ea779d2db3e1d37d583e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run7-protocol-report.txt": {
+      "bytes": 11223,
+      "sha256": "c64a332dfca5077368c7d613d436a85001535ecfdb02d33d5cb1606a391bf6a4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run7-protocol-review.txt": {
+      "bytes": 6138,
+      "sha256": "04739c693839f5d2d5c875229699cc748c6abd34daf0504a608e548c44c9bfc0"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run7-provenance.json": {
+      "bytes": 7055,
+      "sha256": "61d50bff9755486a68d8fac9115fc2770980fb9d0f47164b51a9fd0a48fc544e"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run7-triggers-report.txt": {
+      "bytes": 6540,
+      "sha256": "9f66c9ef4ec240da0acab34e5e8d5a38c9f02357e36bee6e7ea754ddc6d3a861"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run7-triggers-review.txt": {
+      "bytes": 5063,
+      "sha256": "6a870c567c027a2dea9840db7e6b62b416a77d6033c35dbc319c456e5c0824e1"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run8-boot-report.txt": {
+      "bytes": 9379,
+      "sha256": "cf709ab806af5a40441066123a01113ac53c91d0a92df05ea7f89ae5e56b86d7"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run8-boot-review.txt": {
+      "bytes": 1379,
+      "sha256": "ea12edcd6ef74d6c424c638dbbd7c6922726cdddba97df8a9588f08f33c76717"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run8-functional-report.txt": {
+      "bytes": 9343,
+      "sha256": "942828ec9273f390d16e5ebe11fab60c8e9be67cf97b9393992549cd403803eb"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run8-functional-review.txt": {
+      "bytes": 5218,
+      "sha256": "0415ac72f1244c17173a972ae4030c63a4e58485a592c4f93f44f873e14214d8"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run8-protocol-report.txt": {
+      "bytes": 10900,
+      "sha256": "aaad509a73f84b0985ca856e90eb41aa015ea55a07e8949033ab16de382d73d7"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run8-protocol-review.txt": {
+      "bytes": 4804,
+      "sha256": "dfadfdbe827be22d24e801c1ebc1fe2748b5cd78be2b33173f9e8c4c7d530d03"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run8-provenance.json": {
+      "bytes": 6857,
+      "sha256": "80dcd80174b20fdea51b0af3b65d0cc3e8d84174267c52e204af915675587a7d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run8-strings-report.txt": {
+      "bytes": 4396,
+      "sha256": "38fec6157b5983588fe230878415e61ddf34f006d8f58227549dce5b71610419"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run8-strings-review.txt": {
+      "bytes": 4813,
+      "sha256": "c02e0fdee6b4a1e2fbd8cf155659a22521ac958f58b9bc02a93f090adc366b3a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run9-boot-report.txt": {
+      "bytes": 9364,
+      "sha256": "6252cfd0328a677e41af4b4210d3ef25c86bb779c6bbad899cf5085ee05b77c2"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run9-boot-review.txt": {
+      "bytes": 1484,
+      "sha256": "ccbb9139ad355177684ee698fd2d5617d6db400933bb9c6224f0182dea8d0aa3"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run9-functional-report.txt": {
+      "bytes": 8791,
+      "sha256": "4e371d4c794dbf9585045c368d37d45dbedfeaf57f7361bf811dbdf4bc560f7f"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run9-functional-review.txt": {
+      "bytes": 5061,
+      "sha256": "c76ad68805cf67b5ac55f36faa4c34e95ec6467b3f5e2d87aa8ee428c6f5858a"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run9-protocol-report.txt": {
+      "bytes": 9540,
+      "sha256": "a64de16441ddefa4b01ed77e9480cc30aa172b7bc46270f97b1147024ba62653"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run9-protocol-review.txt": {
+      "bytes": 4992,
+      "sha256": "151fb4576023a089dc8c761c58a22ff54dc9b7fe8f6da16199e89f45e6b3619d"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run9-provenance.json": {
+      "bytes": 7477,
+      "sha256": "c2479c16f61d2eb0f664ca491e1404b7f45019e641890f9de63fc287e0df4eb3"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run9-triggers-report.txt": {
+      "bytes": 5135,
+      "sha256": "958775cd08e3bc150ab4d58811714e5ede949a27e6480e3c667970caa90e79a4"
+    },
+    "OpenWebNet-Encyclopedia/project/review/firmware-analysis/mh202-1.0.24/run9-triggers-review.txt": {
+      "bytes": 5909,
+      "sha256": "00db817ae3ee540cdf97bf7e86a97e675ed3e008289e807d1356e8dad0c94cd9"
+    },
+    "work/mh202-firmware/research/2026-10-30/alarm/run20/REPORT.md": {
+      "bytes": 10154,
+      "sha256": "714cdee435dfd5ae59faeb01c5deb972b9041390e79f6dc278e96c3fbbc422bf"
+    },
+    "work/mh202-firmware/research/2026-10-30/alarm/run20/collect_alarm.py": {
+      "bytes": 7285,
+      "sha256": "224565604545bd3181ca17d813a95407d8fa8bbeacec6204a681506c5d43166f"
+    },
+    "work/mh202-firmware/research/2026-10-30/alarm/run21/REPORT.md": {
+      "bytes": 9238,
+      "sha256": "7d7d27de1854e897b3761034265f7ee2dc4179edbc12eb31f4b85d9c8728c870"
+    },
+    "work/mh202-firmware/research/2026-10-30/alarm/run21/collect_provenance.py": {
+      "bytes": 6888,
+      "sha256": "7f870a1fa46a1ab3c5d85331dba87c667372a7b2cf24e17cf5e8b85309cae31f"
+    },
+    "work/mh202-firmware/research/2026-10-30/alarm/run22/REPORT.md": {
+      "bytes": 10852,
+      "sha256": "9d47e1b79578fd6e97765d1392d1d6afdacd078e7ca81b01ad743d4e5748e43a"
+    },
+    "work/mh202-firmware/research/2026-10-30/alarm/run22/collect_registration.py": {
+      "bytes": 7888,
+      "sha256": "eecc1e4e7d45ab7e4bef7bb1f1d5e1a768d41f549dee5e71da9d12868998961d"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run1/REPORT.md": {
+      "bytes": 14690,
+      "sha256": "6035e497fcf4c8373ec84ae18ef2a2ff034ee4d8f49c16afac6d8c2199b1a4de"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run1/collect_boot.py": {
+      "bytes": 11401,
+      "sha256": "d003e3875f50fc92f883bc007072902f90d2e447b4ce839273a8d0864a21be70"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run2/REPORT.md": {
+      "bytes": 12138,
+      "sha256": "b9af05b1b82de9a057a70ec090e1651d4901cb61307dde882f60c3eec006027e"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run2/collect_boot_mode.py": {
+      "bytes": 8908,
+      "sha256": "8957f0b3a3921660843c5fde876b655cd2e8c7e5b48b51582a0dec83b369a13f"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run3/REPORT.md": {
+      "bytes": 10764,
+      "sha256": "4707944b94cce809d6c3beebb47a46ed13ea3f6c2d1b4270250de4b1e58e12c8"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run3/collect_startup.py": {
+      "bytes": 6416,
+      "sha256": "91929717b6540838f75061eff6070aae4fe9d49206ba93526c0830266eae899f"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run4/CORRECTIONS.md": {
+      "bytes": 1295,
+      "sha256": "0eca96949c4acaeb295478e47ceeb7be580e81745eb2ecd9797ecef795a215f5"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run4/REPORT.md": {
+      "bytes": 11911,
+      "sha256": "9ee0cf019a36fdd04faa00a4d47a7bdbe053ed4f0cd5862660b40f8972697d9e"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run4/collect_persistence.py": {
+      "bytes": 7090,
+      "sha256": "bf8c461c1915e67106a420fe73482125e2ab0f82423598476b73d62df4b02111"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run5/REPORT.md": {
+      "bytes": 10875,
+      "sha256": "0ca889b14130dd039b050f1d4f4166ec02d54fa28b5d28d2987f0e6049b54421"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run5/collect_restore.py": {
+      "bytes": 7027,
+      "sha256": "1f2e254dc156152ce144904bbf8762695112e25d4d839a96805590f2786c2434"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run6/REPORT.md": {
+      "bytes": 10328,
+      "sha256": "f0c2b3215c01ecaf58dc07f27eaa1bd5b0f8dfa8b8550ea04d26a28f7ae2785a"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run6/collect_process_helpers.py": {
+      "bytes": 9589,
+      "sha256": "877c4b0b332f4968b9fe1017c36b88afff0eff447f2aadf69e17acb421da7f50"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run7/REPORT.md": {
+      "bytes": 9175,
+      "sha256": "c5e52e89091aca64fcd804fd4151a6248a5fa984c17e0207d71965197c34115d"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run7/collect_config_effects.py": {
+      "bytes": 6815,
+      "sha256": "a2565fdabb586159ecbd6992efac73a0e61ac471fe74dc39add2318f8d4f9fb4"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run8/REPORT.md": {
+      "bytes": 9379,
+      "sha256": "cf709ab806af5a40441066123a01113ac53c91d0a92df05ea7f89ae5e56b86d7"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run8/collect_watchdog.py": {
+      "bytes": 6920,
+      "sha256": "b0df984731bb02d59b51638c211c69509880df7f0a6d7ea6c9500138fdf958d4"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run9/REPORT.md": {
+      "bytes": 9364,
+      "sha256": "6252cfd0328a677e41af4b4210d3ef25c86bb779c6bbad899cf5085ee05b77c2"
+    },
+    "work/mh202-firmware/research/2026-10-30/boot/run9/collect_marker.py": {
+      "bytes": 6490,
+      "sha256": "b06387a7a1077ec9c94ddcb4c7580406f122319b26fdfcea8c72722e6bb9a23b"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run10/REPORT.md": {
+      "bytes": 10105,
+      "sha256": "63fc28bfb92bd6030becfbad8f35da2e43b58d8294c298196f657f861d84ea32"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run10/collect_lighting.py": {
+      "bytes": 6353,
+      "sha256": "314f34a2a54e655e6e20658242aba94cff68a41e1eba3023d6a0ec5b957ae3c6"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run11/REPORT.md": {
+      "bytes": 8335,
+      "sha256": "d0225ba1a97e61c66510515bf5f00bb755180c379c22ad9fbbb894f1920c9e67"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run11/collect_reverse_lighting.py": {
+      "bytes": 5534,
+      "sha256": "f11c59d411311af70a535d47291540a5762abbc8f037ef41bf8cbcba440df60f"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run12/REPORT.md": {
+      "bytes": 10758,
+      "sha256": "fb9e5775b71ea822eff0b0bb5c8df7577a100b3e1373cf9001fa75ce9082ccc3"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run12/collect_lighting_stm.py": {
+      "bytes": 7560,
+      "sha256": "30fa5c313bf99745f635da8efa513fa5d9f4c34756b8a444363bb6626bcd0226"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run13/REPORT.md": {
+      "bytes": 9853,
+      "sha256": "fff630872cb31bc442f64c961b22953dedc75327adfb6ccdda1ee168812882fd"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run13/collect_automation.py": {
+      "bytes": 7102,
+      "sha256": "6cd1e24fcd4660a8e0f6f1a7eadd4f1caddca6817ddcac2d239f20abbdf4bee0"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run14/REPORT.md": {
+      "bytes": 10351,
+      "sha256": "73fa582bb2d2f316200099498f3fa6b04e542595a5c78b1ef31829cceeef04e6"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run14/collect_evidence.py": {
+      "bytes": 8656,
+      "sha256": "44eb6462730375ba32b448d9fd33c5fdfed23bede70d2ba156edf25e56c99578"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run15/REPORT.md": {
+      "bytes": 11682,
+      "sha256": "26826089a28b89869ae5ef5a3e4b00ea1ffb2ebda200bea13ecd67357149894d"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run15/collect_evidence.py": {
+      "bytes": 8689,
+      "sha256": "70446fd3fb80a8c38a13709514bb532dbd189b21ef605e815dd6662fb95bcc63"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run16/REPORT.md": {
+      "bytes": 12294,
+      "sha256": "6a346be2480e3f9476d55115b6f9ab87809142b2e51315f55234717909fb761a"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run16/collect_evidence.py": {
+      "bytes": 8456,
+      "sha256": "58fefb6e48b904985de212d2fadddea0cb7a63ad6a849b78fb5be64733fb779a"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run17/REPORT.md": {
+      "bytes": 12341,
+      "sha256": "00cddc41451d6553b7986c50a2d6585e60113fc7ef1bb963c9c84cc583142138"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run17/collect_evidence.py": {
+      "bytes": 9483,
+      "sha256": "729aa0956c0cfc0e0830d691519d5b56433fb9b99ba17dec114a19998c7350b6"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run18/NAMESPACE_REFINEMENT.md": {
+      "bytes": 2394,
+      "sha256": "96f0af7e2adf1b4d0f969a14034055107e42fc4eec3d7bf9b8938a29f102c8bf"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run18/REPORT.md": {
+      "bytes": 12062,
+      "sha256": "580e2695e56a164f19e5638fd06f0bb6b2c04e4bcd61d5fd4bd983b760d701bf"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run18/collect_evidence.py": {
+      "bytes": 8655,
+      "sha256": "9778d1b9088aadcee27e80e8b0f9422788c0ff8b489adda91a081b9c744c92f5"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run19/REPORT.md": {
+      "bytes": 11674,
+      "sha256": "59ef9ce56f6344b6ce9ea1ea9fff36ddfe8283e6968bac0a4075cd7810633e05"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run19/collect_evidence.py": {
+      "bytes": 9297,
+      "sha256": "fab1498ff4366b3b214a69af33a5b0207fbc630a737096693043496788af0b84"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run5/REPORT.md": {
+      "bytes": 8223,
+      "sha256": "9b872ed01536f561a8b0f0fe49425e0323a2f1732218428cdea5525da18b111d"
+    },
+    "work/mh202-firmware/research/2026-10-30/coso/run5/collect_evidence.py": {
+      "bytes": 6014,
+      "sha256": "3af7d3e7680618da1a80139057d09c1751e5b1436664a4a4d2a66706b6f63f85"
+    },
+    "work/mh202-firmware/research/2026-10-30/diagnostics/run11/REPORT.md": {
+      "bytes": 6445,
+      "sha256": "8f865cbea3c0baf7537c0d7b75957129e3e4111582b544e50efbd1cb6382cb84"
+    },
+    "work/mh202-firmware/research/2026-10-30/diagnostics/run11/collect_output_policy.py": {
+      "bytes": 6549,
+      "sha256": "2d0af267e3d0bfbf82ca09a02b175041244303866ac4e23111afe79e6f773864"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run1/REPORT.md": {
+      "bytes": 14071,
+      "sha256": "4bd567b9a05afe7a728895966aabbcc2d6c20929b9ffa12d1524fe7f7b0061f6"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run1/collect_evidence.py": {
+      "bytes": 5438,
+      "sha256": "a12e957b699b2c4b0a0340108d3efaffdf8b64c36bf7de49bc52b66a5c50a559"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run10/REPORT.md": {
+      "bytes": 10847,
+      "sha256": "3cb3a737cea3b41b8687d0808894f5627787fb5447c1139216f32ce5cd3fb414"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run10/collect_evidence.py": {
+      "bytes": 7895,
+      "sha256": "43597beddb95b8b693019da7365bd07f6e1139962d804ffb0791ea3d0003a4ed"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run11/REPORT.md": {
+      "bytes": 9834,
+      "sha256": "bde5160852a2633b415ec463050b319456fe26f92b60b59746a6466324f397b3"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run11/collect_evidence.py": {
+      "bytes": 7135,
+      "sha256": "87c1d2ba646590b74eddbfc9b438b1fc65e1a5a867525be32335d28144a9e57e"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run12/REPORT.md": {
+      "bytes": 9727,
+      "sha256": "91a006a6359fd8d68b1b69068d819ab9c537afc2a5ecfab77f2eeed89ff9e823"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run12/collect_evidence.py": {
+      "bytes": 7794,
+      "sha256": "8566a0d4f2477b84c474735bdc0c3870e064412c4411d1b6058ae57befdb5bc0"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run13/REPORT.md": {
+      "bytes": 10090,
+      "sha256": "fd11cdedb3a0071beeb8d0a2679ebd84d4db84019347361d2178db6759704c4d"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run13/collect_evidence.py": {
+      "bytes": 8335,
+      "sha256": "5308aedef32b4a91e8df6fc327b18d466321e4e92e7cb3c33ee356ed1b9a27b5"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run19/REPORT.md": {
+      "bytes": 10119,
+      "sha256": "bd6ee8b3150d5ce7c277903be38f38a03ed7073b6309614128147b621e53d030"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run19/collect_evidence.py": {
+      "bytes": 8653,
+      "sha256": "d36f31bd86334e6b2b7c45d47733e233946642657966c9f4f26c238d6560e69e"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run2-interpreter/CORRECTIONS.md": {
+      "bytes": 521,
+      "sha256": "44615bc97101d385016dbdf705589a2f8df9f717ba0b2288fa079280544fe835"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run2-interpreter/REPORT.md": {
+      "bytes": 6536,
+      "sha256": "15040bc8a3a8e066796839c0f772cacc83141271eaa81adf7455d59d68a75386"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run2-interpreter/collect_evidence.py": {
+      "bytes": 5483,
+      "sha256": "b1727ff39ac0157a5535e1f8a13bdf43bc0047d9488af68854d8a4ca506ee629"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run2/REPORT.md": {
+      "bytes": 12700,
+      "sha256": "aa786a3363ee95abbd221d1c8af471e20211a86af7bbbfa32404688bfc2346c4"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run2/collect_evidence.py": {
+      "bytes": 4316,
+      "sha256": "c7ada1949d1cca15fe46e2d40db78689dbed4e3a1dfb336120c646bd82cc2303"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run3/CORRECTIONS.md": {
+      "bytes": 421,
+      "sha256": "26dffe698fb1cc16adfac40ab6248e2e8c7a04f1c61563097958e37c4fef4c78"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run3/REPORT.md": {
+      "bytes": 10993,
+      "sha256": "cc8be66fd56d256880c6724987208b86eb7da2ca939212bdb8121f53fa7dca00"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run3/collect_evidence.py": {
+      "bytes": 5440,
+      "sha256": "619295953d587ae2c973fd278c7091fbae3eea8a96c80b98df34fbae2c63f8b9"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run4/REPORT.md": {
+      "bytes": 9431,
+      "sha256": "b0a188a9cb2000b1480700d37ccde2e1e071b8e49874ae2be3f7801a8f9eaa4f"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run4/collect_evidence.py": {
+      "bytes": 6110,
+      "sha256": "64e69381e779d7f7f50cc00161b5a75c3edd9c73a7ac41171fd8b778a3dc7f39"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run5/REPORT.md": {
+      "bytes": 8148,
+      "sha256": "70ed2298f89a0611e0b6e56a851a9e62904a81e28b1391e499df11d875609a00"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run5/collect_evidence.py": {
+      "bytes": 6410,
+      "sha256": "0efc8ef6250645810f84279c199dcf80e0a2c1ca793bb4014fc3c71d0a63584e"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run6/REPORT.md": {
+      "bytes": 12117,
+      "sha256": "435709c2c5aee19831d8de311c052675bf86dc5eae2f5650ad28c812ba6533ac"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run6/collect_evidence.py": {
+      "bytes": 8042,
+      "sha256": "91ed733fcbf77a33f727e0cdab0f4817f164a07d32d05c4e2e2b8a1c97d02212"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run7/REPORT.md": {
+      "bytes": 11716,
+      "sha256": "9f677fb93603e88f3297bb8785bf85fd2f4ba1161bd084d808f17b17e975c218"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run7/collect_evidence.py": {
+      "bytes": 7860,
+      "sha256": "d9089ab8e07785069395db53a31a3111dff99d24d76bef6f77f6a00fc2a1f4fe"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run8/REPORT.md": {
+      "bytes": 9343,
+      "sha256": "942828ec9273f390d16e5ebe11fab60c8e9be67cf97b9393992549cd403803eb"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run8/collect_evidence.py": {
+      "bytes": 6420,
+      "sha256": "2a3badc6f7f0d92250d53e8834d29cbdba1847ed26ab919e6e110e1b370e0ab0"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run9/REPORT.md": {
+      "bytes": 8791,
+      "sha256": "4e371d4c794dbf9585045c368d37d45dbedfeaf57f7361bf811dbdf4bc560f7f"
+    },
+    "work/mh202-firmware/research/2026-10-30/functional/run9/collect_evidence.py": {
+      "bytes": 7636,
+      "sha256": "6aa51949dcebc236f3930288c2b4784e3b7c7c57f432307273755de1c777f379"
+    },
+    "work/mh202-firmware/research/2026-10-30/inventory/REPORT.md": {
+      "bytes": 4014,
+      "sha256": "eeb9499ddefb70825866dff78865ba2fa26828daf87d8e37e1203d3bb7a30205"
+    },
+    "work/mh202-firmware/research/2026-10-30/inventory/collect_inventory.py": {
+      "bytes": 4238,
+      "sha256": "5f050aab83dcb71836e2286fc7f19c6683fcd46ab7e5b228892dd82cdc46943f"
+    },
+    "work/mh202-firmware/research/2026-10-30/inventory/run12/REPORT.md": {
+      "bytes": 7458,
+      "sha256": "2302cebc0f001a2e66232c0d6e9e93d7748a3df7230af1a24d22cd6755edafad"
+    },
+    "work/mh202-firmware/research/2026-10-30/inventory/run12/collect_components.py": {
+      "bytes": 8751,
+      "sha256": "e067994782ad644bbe38c291f85ea09d40087b168cfdd9bed687068e1645cfde"
+    },
+    "work/mh202-firmware/research/2026-10-30/lifecycle/run17/REPORT.md": {
+      "bytes": 9719,
+      "sha256": "d178923e423d0d2cd089805e9d8553ac849ac1eb4565504a1713db94e1bd03f0"
+    },
+    "work/mh202-firmware/research/2026-10-30/lifecycle/run17/collect_lifecycle.py": {
+      "bytes": 7041,
+      "sha256": "86859787a50fe576d09e2bd9a1d313d00d1f5b1e7deeae492cdcb8d2003b0b53"
+    },
+    "work/mh202-firmware/research/2026-10-30/lifecycle/run18/REPORT.md": {
+      "bytes": 11583,
+      "sha256": "36e21937207c5474435c5ae52efa4478c02988267525e8a92f8a0f48fbf13076"
+    },
+    "work/mh202-firmware/research/2026-10-30/lifecycle/run18/collect_nodes.py": {
+      "bytes": 8063,
+      "sha256": "1220d3364b0fca929fe2dc8b97af454645219aed6f03210ec5998e6f8a51ab3d"
+    },
+    "work/mh202-firmware/research/2026-10-30/lifecycle/run19/REPORT.md": {
+      "bytes": 12571,
+      "sha256": "336f4b21b0d7157c385b621c13ddeec2ce9cae60da99fe738fcc86eb635f8022"
+    },
+    "work/mh202-firmware/research/2026-10-30/lifecycle/run19/STRIDE_KEY_REFINEMENT.md": {
+      "bytes": 1347,
+      "sha256": "9c08c2256d6c53653a06518f95124828ddfb9b3df12157c17ec2bc5eef9e7d07"
+    },
+    "work/mh202-firmware/research/2026-10-30/lifecycle/run19/collect_storage.py": {
+      "bytes": 7227,
+      "sha256": "86eea296ba9bee3dfabbbde7d3a5a935ded0e441cab3cc2d355452b1eba9c888"
+    },
+    "work/mh202-firmware/research/2026-10-30/lifecycle/run4/REPORT.md": {
+      "bytes": 4855,
+      "sha256": "c3f8cef9b952e4485e37fba9079ca8825a32caaad7810b803584450ff893e0d8"
+    },
+    "work/mh202-firmware/research/2026-10-30/lifecycle/run4/collect_evidence.py": {
+      "bytes": 4436,
+      "sha256": "c6d48552d73bc70be7c30f80896995cb9b76a498aeabac39b979a87d8c2bd462"
+    },
+    "work/mh202-firmware/research/2026-10-30/lifecycle/run6/REPORT.md": {
+      "bytes": 6525,
+      "sha256": "38bcdd3d720aa85ea95f8a17a727c1bcb4d20864bd71f65460e466d09626fd76"
+    },
+    "work/mh202-firmware/research/2026-10-30/lifecycle/run6/collect_evidence.py": {
+      "bytes": 4810,
+      "sha256": "0e9885aaf6eaf6aaa22c5bb39602b13cf60f8eb01406b2f1e94620c3dc8ff16f"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run1/REPORT.md": {
+      "bytes": 12897,
+      "sha256": "d446a542be2ea7e67a7b07c249bef85525450b5ecc6288b1025b3f5ec68c52d0"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run1/collect_evidence.py": {
+      "bytes": 8158,
+      "sha256": "f09173adab5475d6066ae21d94b30dbec924e374e26b7addb4223768452a72ff"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run10/REPORT.md": {
+      "bytes": 10097,
+      "sha256": "dd782d0ccd5329a88862eafc1983fe28a8be56a6a037481482d162fe54589367"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run10/builder-results.json": {
+      "bytes": 206790,
+      "sha256": "622e35eb432f026d16f548a367c8bfbcfcae850562cc068ee29183f2840a3057"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run10/collect_evidence.py": {
+      "bytes": 5917,
+      "sha256": "3003f9e192c57b20e16a4ab59115df99ba747fc050d5b837c262fa72d8e191e3"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run10/emulate_normal_builder.py": {
+      "bytes": 9694,
+      "sha256": "7a41b303760a2e1a5addf70f6abd99bde746f514f3a50e9145dc442babceb209"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run11/REPORT.md": {
+      "bytes": 11045,
+      "sha256": "b609d52cb82e37d6dedc7906a71b24732713e305f1a7a9b9377a253e61d306d5"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run11/collect_evidence.py": {
+      "bytes": 7172,
+      "sha256": "884db0a9b4e5f766e3efc40dc27f8eaad6c033eb296de831e9d3bb30399ae6a2"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run11/emulate_common_normalizer.py": {
+      "bytes": 11249,
+      "sha256": "a650972f4601dcd1be29e67b2a14a5abccf3236e0ca48ec8f41bbf181678a27a"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run11/normalizer-results.json": {
+      "bytes": 286816,
+      "sha256": "878a4261595e6d35857aa2f8c20faf936a0c230c663f5d41807755a24330ce81"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run12/REPORT.md": {
+      "bytes": 11882,
+      "sha256": "00eb78b0ff647c8d1e6fee74c9c53a25971c9c13495910093992279e3d68fc48"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run12/collect_evidence.py": {
+      "bytes": 9546,
+      "sha256": "8592996442589f2d7f3cf9c3170004a2f58f98e200855af2a210808eb5dffeb8"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run12/emulate_common_normalizer.py": {
+      "bytes": 13177,
+      "sha256": "4815183016d34967bf569b3b997e32a063222f5e9ae4dfd8e9aeecde33c35848"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run12/normalizer-results.json": {
+      "bytes": 454531,
+      "sha256": "b9af7a91306d113e0ea48b492263d24cd7d93e5594dcc7b004512009567d7c55"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run13/REPORT.md": {
+      "bytes": 11407,
+      "sha256": "e708d11afe6a77b54f536ebc18d2fa49552370205639aef6a568977cd6660adb"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run13/collect_evidence.py": {
+      "bytes": 9324,
+      "sha256": "ea25ee1d687fde9e9281fe7060b64850989ec5248202a9604440a70dfe91f868"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run13/emulate_preselector.py": {
+      "bytes": 14416,
+      "sha256": "ef4596f70e66e0c7150559fc1f51e2d752d14b55ece8dacc2652e81e8905a05c"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run13/preselector-results.json": {
+      "bytes": 969535,
+      "sha256": "3fca7f3fd6dec7a049bcd642af09bf4fc47f9578bf921f5a2f7b1c7c582ab0d0"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run14/REPORT.md": {
+      "bytes": 11814,
+      "sha256": "7865c526e571dac9a14ecaa5bf37e2cd06fb732246f9139dd3f07df3349c7f5b"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run14/collect_evidence.py": {
+      "bytes": 10897,
+      "sha256": "6eaf0d9cd05d92eaebd061b6446adf406571786cf19acbda7a563a4a166c4f97"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run15/REFINEMENT.md": {
+      "bytes": 3207,
+      "sha256": "57c4d70d5d10dd3a72a3dc2ad2f98ae97d41aff3f19b45947f37c1afd74cd80a"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run15/REPORT.md": {
+      "bytes": 10568,
+      "sha256": "cc37b4383aa124e7c4141aa825ff1ba8588cd61c3966b8eda35d197a69a0ad77"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run15/collect_evidence.py": {
+      "bytes": 12078,
+      "sha256": "1011a6cfe5ada0780a0ee3caafdffd5fb6d49ad32603ffb56faffc9854a2e35f"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run16/REPORT.md": {
+      "bytes": 11725,
+      "sha256": "5304eb2d0038900b37c34498f33dce37fc83df630445899355c76a267991c024"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run16/collect_evidence.py": {
+      "bytes": 10220,
+      "sha256": "f24adda6a5ae8c308f3a5cc931fba015b0e39b4c7caacee192a7bbc069d42e55"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run16/emulate_pointer_parser.py": {
+      "bytes": 13064,
+      "sha256": "54ab357c2a4c62f61ffb0fd192b799f2e9624c037851582b9ee9f6b8ef3281cc"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run16/parser-results.json": {
+      "bytes": 25093,
+      "sha256": "2a26a10b6321046b278d42cb43c4f1d06d00f066570f9da6bb5e84a459f1aea7"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run17/REPORT.md": {
+      "bytes": 9871,
+      "sha256": "84220fe09ba11ed5cec0ea46378942cd7c32ed4928766e3ca938aea5d5a71be3"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run17/collect_evidence.py": {
+      "bytes": 9155,
+      "sha256": "acd4176e4f257d712ccbdb8555b368da646bdb00cf6ed16d1edd148cb9b1cc0d"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run17/emulate_core_inplace.py": {
+      "bytes": 13509,
+      "sha256": "5fe9e8cdb8ab529720cc6edc6665ac3cde4331c23b6daeed8505822fc86cbec3"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run17/joined-results.json": {
+      "bytes": 33932,
+      "sha256": "8da39446a75a89fcd17fa0c495d02a202d48679e08e1b844b451ec248bc9fb10"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run18/REPORT.md": {
+      "bytes": 10705,
+      "sha256": "35da6bb26bd5951c5764e89f85acecd6cdcad99d62b3ed0dbf72f3c973d49551"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run18/collect_evidence.py": {
+      "bytes": 11252,
+      "sha256": "a09ae4d8fad12a03021aed30eba50f13cf6079928dbcc1d49e3ac5195cf34560"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run18/emulate_core_fresh.py": {
+      "bytes": 13856,
+      "sha256": "aff608d9d0ea3b0eef13988fa0b71530d273631d2fd8f5ac8cae8a6e0c064c3a"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run18/joined-results.json": {
+      "bytes": 34453,
+      "sha256": "1e7b86aaa9e02e6444d00db99965b0027805d5070fb6d4ceef11acb7e25b2d87"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run2/REPORT.md": {
+      "bytes": 12004,
+      "sha256": "9e2685f9d7c98fe93d3409619fcde3f26c04debb0d9eca1242d6814310801893"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run2/collect_evidence.py": {
+      "bytes": 11180,
+      "sha256": "7044d421057e0a609f077006424ce4cd986f4743a46e2d3e0494344996443ddd"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run20/REPORT.md": {
+      "bytes": 11646,
+      "sha256": "fe3e7fd6bc39f606d7aa76b1f2d8c3c4962faeae30ba8fa3ca648db09b48f98b"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run20/collect_evidence.py": {
+      "bytes": 9306,
+      "sha256": "3f0195cad82a943b7a67f088234c0ce54e2a26aa2cda1d43c8ba47664fc196b4"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run20/emulate_selector4.py": {
+      "bytes": 15527,
+      "sha256": "49a291e14d9ce8e72769a6545d3b8799e1edfb9a17a8fbe9a9dffa55bc4dc3c9"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run20/joined-results.json": {
+      "bytes": 43369,
+      "sha256": "3d00d1880895de9c6cb538bcee259e7be095e5e3de64ba69aa504feb4d630019"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run21/REPORT.md": {
+      "bytes": 9903,
+      "sha256": "4b266b673700b9cb0115ab81bd08aae21902149ac76664c32043b69d492fdef3"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run21/collect_evidence.py": {
+      "bytes": 7889,
+      "sha256": "51e95b39068127847ef7d1c10f2067ea75cda9d00a964a5bc9f79b6cb3f6feb2"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run21/emulate_generated_candidates.py": {
+      "bytes": 10884,
+      "sha256": "11447ab3a9157d414e31b1e2ad268f1f2b9a7c07bc30aec098dfe0c40280c4cb"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run21/parser-results.json": {
+      "bytes": 39068,
+      "sha256": "e845e5025efe1085a2435637c7f857984e31fb85205b9d480ee3d2653b65559f"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run22/REPORT.md": {
+      "bytes": 10637,
+      "sha256": "35369bef23a8032dc0553a5dc4c75717f6d79625e7695d463ff50e8e5b73ee49"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run22/collect_evidence_v1.py": {
+      "bytes": 9462,
+      "sha256": "59372af7cf6c46c903247e2b7bc41dbc4fcbadd3b0f7f6f326f75ad6277fd2be"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run22/emulate_serializer_v1.py": {
+      "bytes": 14951,
+      "sha256": "624a7215d57a2b4e6e75b888862a9b5e6076acba3063f06a836606e955d9e71d"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run22/parser-results.json": {
+      "bytes": 115555,
+      "sha256": "9a6104f12213dc1b7aad5ecc8e6668e3bdbdebf86c2505c8d52068126f8f1d17"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run3/REPORT.md": {
+      "bytes": 12669,
+      "sha256": "40ece988cc53e03be936c10c9e81380e2d483a2188d27b80d9d2a8cfaba7cadc"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run3/collect_evidence.py": {
+      "bytes": 8799,
+      "sha256": "cbd2d77f226d3c5732df0c74c987d5b91b2f18cb52ccd75f4924836f5826b178"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run4/REPORT.md": {
+      "bytes": 12813,
+      "sha256": "abb25a5c162dc988447fc0b1bc756c65d9209c07d7bc58eee73748fa7faef5b5"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run4/collect_evidence.py": {
+      "bytes": 9802,
+      "sha256": "8b10b836fb988548fd705c573bb738a09ec71aa88bce9cf52e5a5ce13dd14187"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run5/REPORT.md": {
+      "bytes": 9679,
+      "sha256": "31fd8aa084176230fd4facbe0aa8e64f7ba74309257500b90f2aa8ad2337cc4a"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run5/collect_evidence.py": {
+      "bytes": 8130,
+      "sha256": "40d74c1123de06a7f0e2774fc1ed44d1ff0d0f33728bc5d21b40ed3330dcb225"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run6/REPORT.md": {
+      "bytes": 10821,
+      "sha256": "0389b36c43fa8da6156f3974dd98bf21893029167b5d0678c64216af19976bfa"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run6/collect_evidence.py": {
+      "bytes": 7710,
+      "sha256": "ce17cf7eb5f670e116a3c9f9bd6c3c0aaffc5aeaca308327f647933ea73bbbe2"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run7/REPORT.md": {
+      "bytes": 11223,
+      "sha256": "c64a332dfca5077368c7d613d436a85001535ecfdb02d33d5cb1606a391bf6a4"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run7/collect_evidence.py": {
+      "bytes": 7825,
+      "sha256": "ab8d42af9b69bff4b0ce8b83f7b42a23b547d4b6a97d7c8647b568c7912c445b"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run8/REPORT.md": {
+      "bytes": 10900,
+      "sha256": "aaad509a73f84b0985ca856e90eb41aa015ea55a07e8949033ab16de382d73d7"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run8/collect_evidence.py": {
+      "bytes": 7609,
+      "sha256": "91637f33f182cfa457070d0f82372d8943298a747c4c6de225ad68bbc199f55c"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run9/REPORT.md": {
+      "bytes": 9540,
+      "sha256": "a64de16441ddefa4b01ed77e9480cc30aa172b7bc46270f97b1147024ba62653"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run9/collect_evidence.py": {
+      "bytes": 4079,
+      "sha256": "8863940ae0730088c49b67710461b4d09d15f2cbff47612306c69d9f746bb030"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run9/emulate_normal_suffix_helpers.py": {
+      "bytes": 7006,
+      "sha256": "e71983f69f7b73eb4a79c1c4fc85e701fdd2941c4289bc6b396934d5d693243e"
+    },
+    "work/mh202-firmware/research/2026-10-30/protocol/run9/leaf-results.json": {
+      "bytes": 9227,
+      "sha256": "73cb6347f8ae129ea6898fae690d97d12a08fb0215ad0da594b5d57dbc4f7ce3"
+    },
+    "work/mh202-firmware/research/2026-10-30/reconciliation/run20/REFERENCE_BOUNDARIES.md": {
+      "bytes": 3108,
+      "sha256": "6b90dde90948be134c2092d93f6fbbd8f84c7114e614acdb5b19997ac4034e26"
+    },
+    "work/mh202-firmware/research/2026-10-30/reconciliation/run22/SCOPED_FINDINGS.json": {
+      "bytes": 29634,
+      "sha256": "636c284114ef156012546346854a34dccb40413c8813a2435137ae76f7102eb6"
+    },
+    "work/mh202-firmware/research/2026-10-30/reconciliation/run22/SCOPED_FINDINGS.md": {
+      "bytes": 8379,
+      "sha256": "51ac5cd6b94064e18e121b519480c7026dd0e4492b54a563b3ba04d59ad1fb85"
+    },
+    "work/mh202-firmware/research/2026-10-30/reconciliation/run22/SOURCE_PINS.json": {
+      "bytes": 4213,
+      "sha256": "e3173a27f60a327b2f6abf9c849de75882b6da65d2b1e40467199c3aa3e7b796"
+    },
+    "work/mh202-firmware/research/2026-10-30/reconciliation/run22/build_scoped_findings.py": {
+      "bytes": 11940,
+      "sha256": "ad9bac56cb7f3804cc82ec2feed6efa2898eab2c43fefa08048c03d844071e86"
+    },
+    "work/mh202-firmware/research/2026-10-30/reconciliation/run22/output-manifest.json": {
+      "bytes": 490,
+      "sha256": "c9df44d877b7e96c175819312294263490fae357afe82a3a5cc5d5fa9ce5a42c"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run1/CORRECTIONS.md": {
+      "bytes": 542,
+      "sha256": "f81ff40e6300fda02b4e126dc9c57d08301bc6ce4167f0952218f05e828007a0"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run1/boot-review.md": {
+      "bytes": 5657,
+      "sha256": "46068840e41cd55ec6d7d632ebe3419ac82fb11af0812cc340005b5a0bf801f4"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run1/functional-review.md": {
+      "bytes": 6651,
+      "sha256": "0982f8199424a57a70bdcd95788660a4a8f0bf6205dc2636694e2ac601e759e4"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run1/integration-review.md": {
+      "bytes": 9101,
+      "sha256": "52b69ac4be12f05cf00fb20fc93a6171366bfaec894c99d8adc2d04cc0296ee7"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run1/inventory-web-review.md": {
+      "bytes": 6804,
+      "sha256": "6d5afb681334f7c10f9c82d8298f54e43e67a0783e47d3fce59d7ee1357ebe62"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run1/protocol-review.md": {
+      "bytes": 5087,
+      "sha256": "ccbac031e76843f6446d74ee4e267ac70319abf089979a19447e0c600b956dbb"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run10/coso-review.md": {
+      "bytes": 1502,
+      "sha256": "bf3ddbd66a1c9900f3935a5c261c37c13ab3744bebe563a253f74ab2f6752e50"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run10/functional-review.md": {
+      "bytes": 5686,
+      "sha256": "86e40e211f615f26c494aa9baffc6725171cf7f93ee25f194f8abcbe22fc3830"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run10/integration-review.md": {
+      "bytes": 10398,
+      "sha256": "ffd7b022d0b8062a2677a240bf7931d83c47993486e1ef91c4dbdecf25355455"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run10/protocol-report-before-wording-refinement.md": {
+      "bytes": 9901,
+      "sha256": "c8f58bac3d67b6b43cb634c2f58094bca3dd2789a94fd5b51ac4362f7f66e9da"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run10/protocol-review.md": {
+      "bytes": 5979,
+      "sha256": "ae5cfef534a1629c9044a97bd439f35082ecd6c4fd9310e2b9aae80072c9b20d"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run10/protocol-wording-refinement.md": {
+      "bytes": 2246,
+      "sha256": "55500546aa307caf42e3ceb5c7756691a539a7cdeddf364841aeff34a0f3ebbc"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run10/triggers-review.md": {
+      "bytes": 4576,
+      "sha256": "fa7a6786ce64009eb79953e64c362fffdd288b66ae75de03d201592acf2f2a43"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run11/coso-review.md": {
+      "bytes": 1120,
+      "sha256": "83a88cf324b339c478213f6aed25b7fac81dac6c085d48cc49eacbf176a30c29"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run11/diagnostics-review.md": {
+      "bytes": 4577,
+      "sha256": "8e12205b5922bab6eedde1a759e1c91c1282fd436b1b05c80e4bc769da66f3f7"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run11/functional-review.md": {
+      "bytes": 5263,
+      "sha256": "b7ded752c5890e435a2d6b2b47f1cd766cd108989506e46a43c6809013a29a7e"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run11/integration-review.md": {
+      "bytes": 9654,
+      "sha256": "d5e9fac5b43242fbb6b179ce1dc92bc0c546047b2906e9996d4753bb6aaebcf3"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run11/protocol-review.md": {
+      "bytes": 6672,
+      "sha256": "19ae2e829e5ca8d2d695ed0b96f68e14c191324182bbaea51a5fda552e7ff330"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run12/coso-review.md": {
+      "bytes": 1329,
+      "sha256": "a1d3e35172435216b536ef1850deed169c586c151ca733a1691997df121049b1"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run12/functional-review.md": {
+      "bytes": 7467,
+      "sha256": "31936a090b0752abc4b897cf0c3844ab1712ce3f4873683f9ad809b45ae602b9"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run12/integration-review.md": {
+      "bytes": 10415,
+      "sha256": "8ce71653eb450ac42b503ba3dfd7d383b8d1858aa8885a6f403208fd0b3fc7e6"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run12/inventory-review.md": {
+      "bytes": 4788,
+      "sha256": "9d383148aeead66e21e6985cb1cc9b9aa8b500a4e84a2d87e1d8bb72bb9e81d5"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run12/protocol-review.md": {
+      "bytes": 7218,
+      "sha256": "90d314467a8c64eaa3d7a6fcf410b5a5b5215abd3aa99e84d3cc4894c9db8373"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run13/coso-review.md": {
+      "bytes": 2933,
+      "sha256": "1799db7cc26273fa6e06d139891d43995f4fde6a9b5fe8083892f7cb3d57623a"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run13/functional-review.md": {
+      "bytes": 6894,
+      "sha256": "17153bdb6345856d8e0b81c252c5a3c6fa63d9f7d050053da754bdcd0617b6eb"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run13/integration-review.md": {
+      "bytes": 10189,
+      "sha256": "89f1f8bcf21a13ada9667cae8b30c728ff0294a5d2478df99690628905d83128"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run13/protocol-review.md": {
+      "bytes": 7126,
+      "sha256": "1dcaba962d18522ba20b3260dccb4d8b14d8421a47e2c633d151b37e9e1fe23e"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run14/coso-review.md": {
+      "bytes": 8318,
+      "sha256": "41068cd430f84dec537292f73d721047d59613901e1ad634803969a6689c434d"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run14/integration-review.md": {
+      "bytes": 9803,
+      "sha256": "2b26f12cf73d54275f99a98e9dc146d31da065134177d3bcd39ea2e39fac1eb4"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run14/protocol-review.md": {
+      "bytes": 6114,
+      "sha256": "ae61bc6cd1694af7ba1124e1d9431f406d25d3266ef0c3938c12a0fceb7b33cf"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run14/thermo-review.md": {
+      "bytes": 2813,
+      "sha256": "7fcc43e5c26a6885c831593fe19f9b742efb47c3714c44f3a9dc230d890a8938"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run15/coso-review.md": {
+      "bytes": 8187,
+      "sha256": "e5d3189780b2d7a6e963bcd65c0697930b2f39e34c888bb6e10fdeea3f91b25e"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run15/integration-review.md": {
+      "bytes": 10280,
+      "sha256": "14a38d582fd3518d231ceffd08c47398c3bfa7b33b1d56ff6dec24dcbb54952b"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run15/protocol-review.md": {
+      "bytes": 6988,
+      "sha256": "1cd66fef7762d7fd7231a134d95465d19c1bd148858e8cc28b70600f9be25242"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run15/thermo-review.md": {
+      "bytes": 2640,
+      "sha256": "a87b813bb57e4e3b38b8c55180eb101fb21c5e2e4df77284aa88673daddf9bb6"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run16/coso-review.md": {
+      "bytes": 8211,
+      "sha256": "d5263fb687d0006b2ddc9e85a91b3445653d875a21f879ffbb06ea7c85a396c5"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run16/integration-review.md": {
+      "bytes": 12036,
+      "sha256": "fac87fc5fe32735dfef4d6bf387ca9ec7446dd381b5b9243d08a16e3adbbf93c"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run16/protocol-review.md": {
+      "bytes": 9916,
+      "sha256": "af0443af35e01767f01da7ee7834fedb2478b945cfd0f7a30867fcf1362a804b"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run16/thermo-review.md": {
+      "bytes": 3062,
+      "sha256": "ccf23e68c1e0cfb2c65250eacb988e4c9b8cb2aab3527e0227c744d2bdd04714"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run17/coso-review.md": {
+      "bytes": 9965,
+      "sha256": "2201c32dbe0aa421844c88a56525e3f97259feecca87962579d94e174481d657"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run17/integration-review.md": {
+      "bytes": 11732,
+      "sha256": "198ecb359df9098fdc51bd80bf6b5c9240983aa564a907a13505190c66c08946"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run17/lifecycle-review.md": {
+      "bytes": 2782,
+      "sha256": "a7fe1c6abdee643b87f6a90494110f607b005ff2516c1a1c68f34a7e6fd11c1b"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run17/protocol-review.md": {
+      "bytes": 8701,
+      "sha256": "013794a3acdba9cefeb4c544e0bbeca44be1749cb313bb39b8a531866a041e40"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run18/coso-review.md": {
+      "bytes": 11032,
+      "sha256": "36b42158cd459fd9e89347dcff2b2d6658344a38658fe939ef58a009c3fb5929"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run18/integration-review.md": {
+      "bytes": 11242,
+      "sha256": "0a5a5a9a4c7747988ba735f78118ef5c19ef22f9a80c19b4d2169d22aff44e4d"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run18/lifecycle-review.md": {
+      "bytes": 2648,
+      "sha256": "5328e56355665e5fbed237d3875851433486703db7735660c35868107869d78c"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run18/protocol-review.md": {
+      "bytes": 9004,
+      "sha256": "dfd5a7726940963e89b6db87f1b5c6da0a0078fca6646460e155803ec9452076"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run19/coso-review.md": {
+      "bytes": 4704,
+      "sha256": "13dc991592aef52568f7e007129ad0bb6f1164776e80b14204f992b4be334dd7"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run19/functional-review.md": {
+      "bytes": 8376,
+      "sha256": "9330914d1c4d54ce4aceeacf01e6a6bcb47fc440a4e46953e8917c50b9e9d325"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run19/integration-review.md": {
+      "bytes": 10511,
+      "sha256": "016b10c7e6f0833ad833a5bcc1cfa514702956d31b96b0cfdf1298b527611cb6"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run19/lifecycle-review.md": {
+      "bytes": 3487,
+      "sha256": "c3fa2b7f9dc53f7cef5fc76e45597ac04ddeecd7c93b4b8f1d088d21dcd75370"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run2/boot-review.md": {
+      "bytes": 5603,
+      "sha256": "cf88adff7285f2a4dd66c2589e9cc2e5115dc94ea46de290e36e42b6cc9c3acd"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run2/functional-review.md": {
+      "bytes": 7511,
+      "sha256": "8d46bb53fcacd8abc11aa76231966ee00827c0e7d8fc6883cc00b60fcd8833b8"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run2/integration-review.md": {
+      "bytes": 10493,
+      "sha256": "a1ada9d53f06acd108c0f7541d73f2d5625f58110e154b22c66bfccc1a8bd32b"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run2/interpreter-review.md": {
+      "bytes": 4504,
+      "sha256": "f7884849e9366eeeacb59358a4302902db9b023322ff1112dace8c1d0933fba1"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run2/protocol-review.md": {
+      "bytes": 6048,
+      "sha256": "9739964e5e554ff62ddf450d88de95962e997cb8fd41a31ec19a73b91fd2283d"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run20/alarm-review.md": {
+      "bytes": 2928,
+      "sha256": "b385875d15b012465d2eba736533e1a16ae8fc99a58122104fbcd382afed7329"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run20/integration-review.md": {
+      "bytes": 9880,
+      "sha256": "ee6dc1bcfae87c54219fd7d335233320342bd4152c5593c9eded160c717d18d7"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run20/protocol-review.md": {
+      "bytes": 6133,
+      "sha256": "801c4b9f0ad798b45caec6cc8b8f116ac33626d4769d8ebc12eb7cd63ec34840"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run20/sound-review.md": {
+      "bytes": 7382,
+      "sha256": "ed3dadb4056e4b24c9dbfc2dcdaaea2704ad48af47887e65e69ae400aaa18a6e"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run21/alarm-review.md": {
+      "bytes": 2794,
+      "sha256": "99c80fcc4f3dab07eea00528b725a712598a320e37c86c5f4e167fa30fb00297"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run21/integration-review.md": {
+      "bytes": 10121,
+      "sha256": "c16b91ab5e0b621ec2ab4c6c76bee2a61370fae9258170cb661876491d0f3fa7"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run21/protocol-review.md": {
+      "bytes": 5926,
+      "sha256": "7a908700456813262f6fd494e4f773d407a8d90d5156070681dc111358a0a791"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run21/sound-review.md": {
+      "bytes": 9625,
+      "sha256": "087023ecd094dea55e9494555c74ce3a1188b1013b5e5fbe94bcd5654ada0f9d"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run22/alarm-review.md": {
+      "bytes": 7770,
+      "sha256": "6d22c5eabc20833b6ba811bf117e738a73178a82f1046372cd97e735f0f1d908"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run22/findings-index-review.md": {
+      "bytes": 6690,
+      "sha256": "b14a50a48754262ad465981107785abb80558b1006f45a6a8e4e13ca4c9a738d"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run22/integration-review.md": {
+      "bytes": 11876,
+      "sha256": "d04cbea02115a552f8d9c86f507067ae5987550a61a106e2bc8ec3d3f3a719bf"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run22/protocol-review.md": {
+      "bytes": 7310,
+      "sha256": "cca3f4fe735f6bf8655fa92563715daee292d414fe85097f9e3c13e5d4b8985e"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run3/boot-review.md": {
+      "bytes": 5005,
+      "sha256": "178a842b57b05d9133a92264258e22863c206c667f46b17896382512c99d8bc6"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run3/functional-review.md": {
+      "bytes": 7574,
+      "sha256": "475c4c5187752b9491fb4cdb452f098a0f477b33dfc8a2d5db32317c8bf5d88e"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run3/integration-review.md": {
+      "bytes": 10779,
+      "sha256": "d6568fe8d6c38770bfea3691cbce3abaa425ebaeb38f29a992a22ef90d8bd048"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run3/protocol-review.md": {
+      "bytes": 6544,
+      "sha256": "e01ddaf9997adcde56619207412e8c1406125e0873ca4463905810db7b33a8a5"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run3/triggers-review.md": {
+      "bytes": 4187,
+      "sha256": "c04769756686b21904c6fa18f4b83c8f6a564f4b709587fb88c91d1b308eca90"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run4/boot-review.md": {
+      "bytes": 3535,
+      "sha256": "f66f4a206ed217161f162f84bcd958cdf63612b125d5a1a31fd8540e29976e05"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run4/functional-review.md": {
+      "bytes": 6817,
+      "sha256": "8c2904476fe4e4fe24f2ed0f90ed000a072fc33a475b3bc22f780542bbed423a"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run4/integration-review.md": {
+      "bytes": 6990,
+      "sha256": "a8bd2ac9153cfb93993eb648168649772b5a667dd0a0caebf0b5d63f475cce9f"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run4/lifecycle-review.md": {
+      "bytes": 3923,
+      "sha256": "5edee00596a168e2130d4cc4a4a39e1f67d7aab02d3645b8a4c0f5bed3f69d97"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run4/protocol-review.md": {
+      "bytes": 6007,
+      "sha256": "2889821d7923584d5662ead5fb5bde2995d72dbc85ee6d4d373a797b9544f4a8"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run5/boot-review.md": {
+      "bytes": 2972,
+      "sha256": "5e51cb0b9f03d787b6eceafe6fd12ab776feb01f8467e41e30ba781bd79e76fb"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run5/coso-review.md": {
+      "bytes": 4744,
+      "sha256": "0696c7256f9a26d1dd599eee8bcce8fcf5a2628232de98ccfa636e8cbbf49346"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run5/functional-review.md": {
+      "bytes": 6059,
+      "sha256": "f1912dc66adda6fc029af3c1c3893ed74466e89bbac518e1591f1b628d5baf63"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run5/integration-review.md": {
+      "bytes": 7009,
+      "sha256": "c925d14eb091f40e8e92ab9b1c4f1386ac9c5e1a772d328fb2f617df3e63bb76"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run5/protocol-review.md": {
+      "bytes": 5414,
+      "sha256": "3442136518de9a1a25ed11d217c9fff800cc29f2aaebe60e5b4d54e1165dd8eb"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run6/boot-review.md": {
+      "bytes": 2790,
+      "sha256": "81507f08f79b9c60a45ecbaf925ef526d0a24e9d7b21a575877af6b6d7fb7e77"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run6/functional-review.md": {
+      "bytes": 6096,
+      "sha256": "b1de2f1d1e2a62bf54cb34d1809be3af7a8158c7b21076a8e3eb113c2199eca8"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run6/integration-review.md": {
+      "bytes": 7087,
+      "sha256": "05b72bf145880d70f0e8615993fa228d1289c187571a49c6196706b993cbec1a"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run6/lifecycle-review.md": {
+      "bytes": 4895,
+      "sha256": "04a01f91e7cded2688ca515b1b69813c38458b931a1648fe2cb9e6ff595c0cb4"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run6/protocol-review.md": {
+      "bytes": 6537,
+      "sha256": "dbe18dee2cb77258fe3873a879254608525d302ea3631360188da32d37e328ca"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run7/boot-review.md": {
+      "bytes": 2652,
+      "sha256": "f2b625791df509815772aa9d13c57ee378ed639807a6c8c4a67a26cb662d54c3"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run7/functional-review.md": {
+      "bytes": 5986,
+      "sha256": "4b3131e0e12bb944dd82747bbcf798939a9c79bc3603ea779d2db3e1d37d583e"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run7/integration-review.md": {
+      "bytes": 8280,
+      "sha256": "6298f55336455412a94ea351cc245f963e1105cf9f58d07fedf7e7a6ed050de3"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run7/protocol-review.md": {
+      "bytes": 6138,
+      "sha256": "04739c693839f5d2d5c875229699cc748c6abd34daf0504a608e548c44c9bfc0"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run7/triggers-review.md": {
+      "bytes": 5063,
+      "sha256": "6a870c567c027a2dea9840db7e6b62b416a77d6033c35dbc319c456e5c0824e1"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run8/boot-review.md": {
+      "bytes": 1379,
+      "sha256": "ea12edcd6ef74d6c424c638dbbd7c6922726cdddba97df8a9588f08f33c76717"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run8/functional-review.md": {
+      "bytes": 5218,
+      "sha256": "0415ac72f1244c17173a972ae4030c63a4e58485a592c4f93f44f873e14214d8"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run8/integration-review.md": {
+      "bytes": 8900,
+      "sha256": "42436339526de5ee033115df3c6793349b0d03514f844e2cdaa7100e86e8e764"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run8/protocol-review.md": {
+      "bytes": 4804,
+      "sha256": "dfadfdbe827be22d24e801c1ebc1fe2748b5cd78be2b33173f9e8c4c7d530d03"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run8/strings-review.md": {
+      "bytes": 4813,
+      "sha256": "c02e0fdee6b4a1e2fbd8cf155659a22521ac958f58b9bc02a93f090adc366b3a"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run9/boot-review.md": {
+      "bytes": 1484,
+      "sha256": "ccbb9139ad355177684ee698fd2d5617d6db400933bb9c6224f0182dea8d0aa3"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run9/functional-review.md": {
+      "bytes": 5061,
+      "sha256": "c76ad68805cf67b5ac55f36faa4c34e95ec6467b3f5e2d87aa8ee428c6f5858a"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run9/integration-review.md": {
+      "bytes": 8699,
+      "sha256": "3c31e7baa50f16b5b9d113fee4210d432dc024702b76119e9a56d1a763e6a975"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run9/protocol-review.md": {
+      "bytes": 4992,
+      "sha256": "151fb4576023a089dc8c761c58a22ff54dc9b7fe8f6da16199e89f45e6b3619d"
+    },
+    "work/mh202-firmware/research/2026-10-30/reviews/run9/triggers-review.md": {
+      "bytes": 5909,
+      "sha256": "00db817ae3ee540cdf97bf7e86a97e675ed3e008289e807d1356e8dad0c94cd9"
+    },
+    "work/mh202-firmware/research/2026-10-30/sound/run20/REPORT.md": {
+      "bytes": 8881,
+      "sha256": "81440e9833acb835626e2036923e2614db5bdf341ad03b5cf877e585a50d1e33"
+    },
+    "work/mh202-firmware/research/2026-10-30/sound/run20/collect_evidence.py": {
+      "bytes": 7566,
+      "sha256": "f0eb68766f46b7b6888f1589d897632948ac8407805645b8d00dadc3ecf7f7d9"
+    },
+    "work/mh202-firmware/research/2026-10-30/sound/run21/REPORT.md": {
+      "bytes": 10277,
+      "sha256": "7a620c417174980119e9573c914dbe7730823697661cb975a20708e8e127aea6"
+    },
+    "work/mh202-firmware/research/2026-10-30/sound/run21/collect_evidence.py": {
+      "bytes": 7677,
+      "sha256": "6e0d435df598cb7586c82967b565af9cd2d3a4fcef8b16b5daa5b8acc1251ec3"
+    },
+    "work/mh202-firmware/research/2026-10-30/strings/run8/REPORT.md": {
+      "bytes": 4396,
+      "sha256": "38fec6157b5983588fe230878415e61ddf34f006d8f58227549dce5b71610419"
+    },
+    "work/mh202-firmware/research/2026-10-30/strings/run8/emulate_strcpy.py": {
+      "bytes": 6524,
+      "sha256": "9bdca7466c492f10964244deb59562e0975d6950496e6ec2e32d7d5376a0fc98"
+    },
+    "work/mh202-firmware/research/2026-10-30/strings/run8/execution-results.json": {
+      "bytes": 16243,
+      "sha256": "8c2b6f72a8817fab9d2d6de2b69ff4f23d3a2646450c7c1cca96672a9b792293"
+    },
+    "work/mh202-firmware/research/2026-10-30/thermo/run14/REPORT.md": {
+      "bytes": 9272,
+      "sha256": "d438f0e99f660adc5a67b2cf83f2e1f8ea57dd865d3d483320a921be4a4b62cb"
+    },
+    "work/mh202-firmware/research/2026-10-30/thermo/run14/collect_thermo.py": {
+      "bytes": 6110,
+      "sha256": "daa8037c090240c4d892dc0d8542956840f91ad3117d88d29b8c864bb704c278"
+    },
+    "work/mh202-firmware/research/2026-10-30/thermo/run15/REPORT.md": {
+      "bytes": 8817,
+      "sha256": "cf3f9d141f09a2720fdfa1522fc891dcd7adcaa451cab762e3ab0b8866eb9de0"
+    },
+    "work/mh202-firmware/research/2026-10-30/thermo/run15/collect_thermo_query.py": {
+      "bytes": 6779,
+      "sha256": "fab7ebe26237ddd1ad5c12bda6ddcd9408709170016e38fab9803a36f1500c11"
+    },
+    "work/mh202-firmware/research/2026-10-30/thermo/run16/REPORT.md": {
+      "bytes": 12348,
+      "sha256": "f260264e351c0fe0616160644a675ae525fd637295872fb1b21c945f0158c436"
+    },
+    "work/mh202-firmware/research/2026-10-30/thermo/run16/collect_thermo_stm.py": {
+      "bytes": 10566,
+      "sha256": "562b7008194af5a1b8934eae1893ae17cf83a5ab0a9cd8a6dadecf9306ce177f"
+    },
+    "work/mh202-firmware/research/2026-10-30/triggers/run10/REPORT.md": {
+      "bytes": 5674,
+      "sha256": "778801130a8a6188111f34caa734c540197c35ed47499d155c220f9349f41153"
+    },
+    "work/mh202-firmware/research/2026-10-30/triggers/run10/collect_selector_ownership.py": {
+      "bytes": 6298,
+      "sha256": "5119b1507ae692e3e55b875fc3ea4bba9f7bedf8fb0ddf53286cbdc8126de9df"
+    },
+    "work/mh202-firmware/research/2026-10-30/triggers/run3/REPORT.md": {
+      "bytes": 7143,
+      "sha256": "2f628d990d2d4ae7c4765cd08692ae8d7734c62fd55e74aa1391f0970cbfa0f9"
+    },
+    "work/mh202-firmware/research/2026-10-30/triggers/run3/collect_evidence.py": {
+      "bytes": 5532,
+      "sha256": "f5dcc89ee28434b5e916c84ffb77d3f842e84fb574e3ce716b8ec8f25802348f"
+    },
+    "work/mh202-firmware/research/2026-10-30/triggers/run7/REPORT.md": {
+      "bytes": 6540,
+      "sha256": "9f66c9ef4ec240da0acab34e5e8d5a38c9f02357e36bee6e7ea754ddc6d3a861"
+    },
+    "work/mh202-firmware/research/2026-10-30/triggers/run7/emulate_comparator.py": {
+      "bytes": 7285,
+      "sha256": "2752ac36e164809049fea1958854e04eee7fc61350e5ac215864f91ab76764b4"
+    },
+    "work/mh202-firmware/research/2026-10-30/triggers/run7/execution-results.json": {
+      "bytes": 15199,
+      "sha256": "de4322a1b1563cd424642cf5fb34dd806c0cedf8e34ae8607cabc8d96e9a4a1a"
+    },
+    "work/mh202-firmware/research/2026-10-30/triggers/run9/REPORT.md": {
+      "bytes": 5135,
+      "sha256": "958775cd08e3bc150ab4d58811714e5ede949a27e6480e3c667970caa90e79a4"
+    },
+    "work/mh202-firmware/research/2026-10-30/triggers/run9/emulate_normalizer.py": {
+      "bytes": 11294,
+      "sha256": "abd3cb11b85d3b4df65dece5e21e750a8c9c8b13aa34c684350a4130c78f9f5f"
+    },
+    "work/mh202-firmware/research/2026-10-30/triggers/run9/execution-results.json": {
+      "bytes": 14991,
+      "sha256": "5aaaffe9e23e906048df2f14c1420d2dc778e9d6a64ad21872f2fd670e1f1a99"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run1/checkpoint-validation.json": {
+      "bytes": 3884,
+      "sha256": "9c6f1e47751820bb2f5575ba1a10fa2cff728e72f2690f9e07043243e1fceafd"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run1/device-validation.json": {
+      "bytes": 5689,
+      "sha256": "900a338a5513b8f56c62364e0102f6c5ae8174853dda580b90d9aed2a96a693f"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run1/final-checkpoint.json": {
+      "bytes": 4200,
+      "sha256": "4e341e6a312875b18bf0466f2df012dd1c0bc9d478c5d7cdf20017eb95a2c785"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run1/protected-F454-dossiers.json": {
+      "bytes": 720,
+      "sha256": "795cbe5483ffca73a91de177e049cb77a40b902942e0be5f5720b0f73336148c"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run1/published-provenance.json": {
+      "bytes": 6315,
+      "sha256": "32fca5cd49a4bbf14a130684224164866187b166e461a69af06a10a4430af862"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run1/validate_checkpoint.py": {
+      "bytes": 5201,
+      "sha256": "cc0e936a3e9c0a2fd9406a24c07bea68f0272e09dcabd8efdff0ba0b5dff8376"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run10/final-checkpoint.json": {
+      "bytes": 7243,
+      "sha256": "4adb233fbd313f61c995a8de5a5e3f4bcaca5864374777981f9416c29de1e998"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run10/inherited-checkpoint9-index.json": {
+      "bytes": 162443,
+      "sha256": "c10ce2225c7e03da353a58e27546875fc60cdb5fe51074423f3fbaa3dc49c86b"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run10/validate_checkpoint.py": {
+      "bytes": 8536,
+      "sha256": "1d7c70620f925fad736743ee925aa4308a1f1a74107b4d4c9331bcd4e77b4580"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run11/final-checkpoint.json": {
+      "bytes": 7771,
+      "sha256": "31d30593c8f27022459f07daa3eac7ba105098582cf4c41fab8c9d166b1cc385"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run11/inherited-checkpoint10-index.json": {
+      "bytes": 178841,
+      "sha256": "0d15cb00b50f14e2ab7adf39c5813566d6ee27711fd3729ee7d114ea89e7a4cc"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run11/validate_checkpoint.py": {
+      "bytes": 8568,
+      "sha256": "762ebdb252428761a56e177cd525557da4c6ddb9962b90d42a039e7fbb0db800"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run12/final-checkpoint.json": {
+      "bytes": 8431,
+      "sha256": "78bbc49b0f1981503adfc6c4b9a32a2288700ffa7245e17c37ded38f1e0ab603"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run12/inherited-checkpoint11-index.json": {
+      "bytes": 194396,
+      "sha256": "d72b48123aa9e68dd6260447a05da3aa48b712791b3d3a77651f51988e3c9efe"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run12/validate_checkpoint.py": {
+      "bytes": 8583,
+      "sha256": "f4eaa3c65293cbf42db665e2fc7682015e66ae45d5d3683f342c17ead7ada3c8"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run13/document-preflight.json": {
+      "bytes": 1829,
+      "sha256": "2b05dcc4c270836ff463554dc94e85b3053297a37814aeb793a5bdb40354a18e"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run13/final-checkpoint.json": {
+      "bytes": 8827,
+      "sha256": "1e8307cfeda5a5cbce0c25bfc1e53d44dd62978ad6d60316d474695b70a50b61"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run13/inherited-checkpoint12-index.json": {
+      "bytes": 209702,
+      "sha256": "679df2d3a8b41bb03f9f9dfd55a18d997c8853a80649470f05190aeff31459e4"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run13/validate_checkpoint.py": {
+      "bytes": 9014,
+      "sha256": "7dcc5bd7aaca3f9ba606dccb30b0f609013e360258118ea5402e5bd7cc76ed31"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run14/document-preflight.json": {
+      "bytes": 1622,
+      "sha256": "4b6f3570e869f10d3cd4b7487338e51001dfd5ed9553b5bb6b3dced9f83a828b"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run14/final-checkpoint.json": {
+      "bytes": 8360,
+      "sha256": "7fa4b39d4d18197dd9016a2acc346efe382d5748455307b25694bd58f8825f24"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run14/inherited-checkpoint13-index.json": {
+      "bytes": 224335,
+      "sha256": "65b5e42e6175880a140eb30a319396f77f92fbe7f0075e5c0361747997332988"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run14/validate_checkpoint.py": {
+      "bytes": 8997,
+      "sha256": "c84d6bf7897dafb81b295d7c95dac85256765176ca42ed9cc6c77af019d7b312"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run15/document-preflight.json": {
+      "bytes": 1627,
+      "sha256": "62365b6b85e216c36d8891e08a4300e75277554cbc8ee6fd714186eeaae86c73"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run15/final-checkpoint.json": {
+      "bytes": 8404,
+      "sha256": "fb90a83d66b1d271a703444c273c419f2a266b9c106cf6f7cf115f81ee6f4f0c"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run15/inherited-checkpoint14-index.json": {
+      "bytes": 239322,
+      "sha256": "0483de4e622633dcb0e36c3f88cff668ee00d39cc3a8c3edd5ef1dfac62feb2e"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run15/validate_checkpoint.py": {
+      "bytes": 9012,
+      "sha256": "08c1753f550c3e784def9e9d28e78cb374d08ed8163bc41879df7e36865728a4"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run16/document-preflight.json": {
+      "bytes": 1602,
+      "sha256": "25ce9efd1ba6d3b045f2e5c06cacec66237198841ca523bd5bb9208a825176a0"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run16/final-checkpoint.json": {
+      "bytes": 9660,
+      "sha256": "7e8b162bd4d51f7f77afa993fa45bbe473fd96d3a43b1502376ed2e5bf4469b8"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run16/inherited-checkpoint15-index.json": {
+      "bytes": 255346,
+      "sha256": "165f71bd4c82d33879ddec7675794b93381ae5963abef2d970629e5ae22e70c2"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run16/validate_checkpoint.py": {
+      "bytes": 9839,
+      "sha256": "3b5bbbf494c0640bbec3f0dc9903f31ee1bb5f22394de35aa98b8c6f392f1e89"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run17/document-preflight.json": {
+      "bytes": 1592,
+      "sha256": "a4403f67cc5050f997dbf7b3e3227757b5ebb254280b6ce73fb6e94c87e4eb0e"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run17/final-checkpoint.json": {
+      "bytes": 10371,
+      "sha256": "41e095c31378f3a1bfb5db2ac47db2b42ad8948838dfeb820d2683cf8f461cf4"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run17/inherited-checkpoint16-index.json": {
+      "bytes": 273467,
+      "sha256": "cece7fbc8279e55a4708f8939cbcf607b09a81d66b7fd2a9d55a45a8a6365524"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run17/validate_checkpoint.py": {
+      "bytes": 10582,
+      "sha256": "4ee67eb0e8cf0f5cd457493ed618bc2af07bb48cc0ed91df82f9eef5309fb1b9"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run18/document-preflight.json": {
+      "bytes": 2000,
+      "sha256": "4f6d3889e23cec563424e6b77c34e2c316ecfb12eb99495f8204c25e53029eca"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run18/final-checkpoint.json": {
+      "bytes": 11307,
+      "sha256": "3227a0ec1337d3afa872ed80ca789d20ff41d39cdae4af89402c47cd7ae8aff6"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run18/first-final-validation-attempt.json": {
+      "bytes": 543,
+      "sha256": "6590c45f65f7d5377c8295c675e05324672ad79ed0ddab78188f5766c51d3624"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run18/inherited-checkpoint17-index.json": {
+      "bytes": 286702,
+      "sha256": "0b56b3c66ae09c7c41b3de583ea9fb79b3341effe802edbfc7771a8e834b32fc"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run18/parent-native-replay.json": {
+      "bytes": 1398,
+      "sha256": "d7931d45cfad35d57b261da9fc331ffa542914d6141a3b27270e07197d47d1be"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run18/validate_checkpoint.py": {
+      "bytes": 11433,
+      "sha256": "77fe3efb068b191ab216e08563d749f57c4c542f51a6ca0174a25531307d4aed"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run19/document-preflight.json": {
+      "bytes": 1955,
+      "sha256": "e2fbf8d93cb0eb23e5c137da4a681d3b8d391a4a2862dd0b9c37b2ebd40bd905"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run19/final-checkpoint.json": {
+      "bytes": 10694,
+      "sha256": "8e160d534fb5937cd1b0a631dbe6b82df689937b88b26c9ed8876e8c9ce8126e"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run19/first-final-validation-attempt.json": {
+      "bytes": 248,
+      "sha256": "60bdb26f1f95691ed4c6ddeaff72bb7f641e9162ef7958e6de0622e14265dbc7"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run19/inherited-checkpoint18-index.json": {
+      "bytes": 301022,
+      "sha256": "486889df506141707baf25f58368b2bb6734930dc1ee78dd2c63e7c93c3c939f"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run19/validate_checkpoint.py": {
+      "bytes": 11190,
+      "sha256": "b77931984fbdad2872d3b058aceddd8bd4d438ca85a3ee16a2aee0b3404c4f40"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run2/checkpoint-validation.json": {
+      "bytes": 3899,
+      "sha256": "76c87d766452138eb00e5d1b2d354153d41e51845095213ae700a2b3b637bca5"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run2/final-checkpoint.json": {
+      "bytes": 4474,
+      "sha256": "0f42be7b7e8accc152b97da7c0eea8373d00e82e0174ce95fcbc4f52ceaf45b6"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run2/host-tools.json": {
+      "bytes": 572,
+      "sha256": "a1ba02511bebed2cdaff61e822d8760ae20148df95351c9d926ded6aec33a9fe"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run2/inherited-checkpoint1-index.json": {
+      "bytes": 28895,
+      "sha256": "2dd42b49c799463303698d2fc25f4b2ddec639e6037d04270ae6a56a8a09611d"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run2/published-provenance.json": {
+      "bytes": 6408,
+      "sha256": "445209bf940ba6f9fd8a855440b87695491d8a660ce4a69796046813712640e0"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run2/validate_checkpoint.py": {
+      "bytes": 5861,
+      "sha256": "7e5902c3cdca3cd475af72745cb98fc9a7db4a0b7e2bf821b34b80a67bfb2353"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run20/document-mechanical-preflight.json": {
+      "bytes": 476,
+      "sha256": "d84fb5941ea09fadd7e912a5d6ab1a633f107c0573fa6d33769e36c6a48c3f54"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run20/document-preflight.json": {
+      "bytes": 2488,
+      "sha256": "b6018daabf2ae62a58b12b56037360b907589a24ad0fd3eb0e9c250776a6e5f0"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run20/final-checkpoint.json": {
+      "bytes": 12642,
+      "sha256": "12059ba07d3c02d7acd79eea6c6731a371d537b625525cd49f83716f9b8567bf"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run20/inherited-checkpoint19-index.json": {
+      "bytes": 315739,
+      "sha256": "a652a4adba6b90a32cbd1b1c88a878295f538777c2fc58035be255a4f96f53cf"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run20/parent-native-replay.json": {
+      "bytes": 1483,
+      "sha256": "a6cae6d0a759aa7d05c78589a2561a4e9b4ff778768dcd4917ad1b0cb158172a"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run20/validate_checkpoint.py": {
+      "bytes": 13347,
+      "sha256": "aac6727d0ecfd5f13c5c51b2df9a34cd60c038c8f7d623787f9920601f532a5d"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run21/document-preflight.json": {
+      "bytes": 2540,
+      "sha256": "cd540fabfa8e65093f838c6187f7449c135a88156dc8683d30e2b7189b80d833"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run21/final-checkpoint.json": {
+      "bytes": 13506,
+      "sha256": "44269be2aa7e7be9e678f0ad4dee974969daa0234cecd7c48def7d3f2e633a26"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run21/inherited-checkpoint20-index.json": {
+      "bytes": 331160,
+      "sha256": "e58d530dc88c97b25631f6b1468f18c6d075708fcdc7723642e11dd72732c1bf"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run21/parent-native-replay.json": {
+      "bytes": 1327,
+      "sha256": "6e12259dc8bb86db592d45564ed78cc2b52ef6695a2eb8e2880ef1f0b6993473"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run21/validate_checkpoint.py": {
+      "bytes": 14959,
+      "sha256": "48e219e633e6b4dda39836e3e57de9b96bc8f14338330d7c65aff7004eb7d401"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run22/DEVELOPMENT_NOTES.md": {
+      "bytes": 405,
+      "sha256": "233a87d32e1e99ebadf78e7e744da6d61aa2cbd2288bcd9a064fea72180d98e8"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run22/automation-update-request.json": {
+      "bytes": 8810,
+      "sha256": "00917c9e779be246f88eda221aef4780a8aec53a83cc4cacec9bf35dde3a6e10"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run22/document-preflight.json": {
+      "bytes": 2618,
+      "sha256": "91a64bab11d007fc26a0a64bc26110624225932281a3db5299ff1419b458b2d8"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run22/final-checkpoint.json": {
+      "bytes": 14517,
+      "sha256": "06a447aea6319586e0c17c2cf0d35cd2e7837cbac8351161702d3a3e8ce13f8b"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run22/inherited-checkpoint21-index.json": {
+      "bytes": 343812,
+      "sha256": "b6d0524c7d6df2e233bd0ca0ba8dd87f685fdd0891622c24c8ea7acd110bde0c"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run22/parent-native-replay.json": {
+      "bytes": 1295,
+      "sha256": "17de7cf4e270c6a8c59a2d92f70fb1d201f25fe207b511cb5bf628f8fcc5136c"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run22/validate_checkpoint.before-return-schema-fix.py.txt": {
+      "bytes": 15873,
+      "sha256": "da4f4cddccfc8c16651a8b0db82099c04d2b46b532acb6c9874c49a8c28c5396"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run22/validate_checkpoint.py": {
+      "bytes": 15941,
+      "sha256": "fac0ed2929aeaf71b8799b7f062b0083be000a4cdea1454061a42319f59e2667"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run3/final-checkpoint.json": {
+      "bytes": 3991,
+      "sha256": "44eeae0c8123445f454834fc3f4bd72e90b7d58a67a5c485501aaabe1f40833a"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run3/inherited-checkpoint2-index.json": {
+      "bytes": 49192,
+      "sha256": "833f49c9e9b00bf17745312b9a20715da6ac9ea77cf9e92b720f4a620168e119"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run3/published-provenance.json": {
+      "bytes": 6400,
+      "sha256": "2885107857a2143bb7ef8706c9c3e8b1311bffd1473e43642f619d43a87c17f1"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run3/validate_checkpoint.py": {
+      "bytes": 6086,
+      "sha256": "da2dedb31b5c16d1e2a65122f23d84a649ee6633cf19f022c1c39edbe9d87197"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run4/bundled-tool-probe.json": {
+      "bytes": 450,
+      "sha256": "39c778ec670cea9dde1aeebbdc3a185da4d1fc5885bcfb56997e88405ed3bf9e"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run4/final-checkpoint.json": {
+      "bytes": 3963,
+      "sha256": "df691f1f4214709310d4090f34b5a632131d415bae6fd9b0af2bd19a547d28a6"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run4/independent-boot-operands.json": {
+      "bytes": 823,
+      "sha256": "6e95aee29da4ce2905a615f855e9104cdd926b87cfec2014ba0a93517ee0a32c"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run4/independent-host-cksum.json": {
+      "bytes": 440,
+      "sha256": "f3fdece9ed519535bbe3c1aca0ce5f2928d84d1d09ecc0de911524b20557204a"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run4/inherited-checkpoint3-index.json": {
+      "bytes": 65946,
+      "sha256": "b26b4c12c8c0b1e6bbeffea5e11fe03b1eaf5c4a9b694609d784b32b0eb91fe1"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run4/pre-final-integration-review-copy.txt": {
+      "bytes": 6979,
+      "sha256": "4b3d320e94bf4044bbab5227a209bfb9d1dfe3acbe1d28e466583524afa6607f"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run4/published-provenance.json": {
+      "bytes": 6761,
+      "sha256": "62f52094eb674e24b0247bae35ea42f21446c8ab4722ce2d694769bc1c62515c"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run4/review-copy-checkpoint-note.json": {
+      "bytes": 443,
+      "sha256": "dd99bf3cbde62dd73a5a553ee410ec793de268e85bbfb0e3bd3ffc95400f9a53"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run4/validate_checkpoint.py": {
+      "bytes": 6099,
+      "sha256": "85ec6dcfbf2c684790b68da4d3cae38afc80f88714ebaf1b731f46e8f5c4708f"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run5/final-checkpoint.json": {
+      "bytes": 3939,
+      "sha256": "85ae4e3d4f30781ade86a9f8de261df24138e44fb39704a556601f1e689f6d30"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run5/independent-boot-source.json": {
+      "bytes": 284,
+      "sha256": "a403273b571372196df518a4a16d519eff0464671241bc43ca60c2bc7726ae0e"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run5/inherited-checkpoint4-index.json": {
+      "bytes": 84840,
+      "sha256": "9ab363e5f236bd6b30e68b23654f9fb20589ab0bbbeceded3c127d73f24eedba"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run5/published-provenance.json": {
+      "bytes": 6320,
+      "sha256": "c6bd45cbf9a8777ef1051cc5c24ecae4b4ff7f2f1ce57e544c4dcab5e4094ff3"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run5/validate_checkpoint.py": {
+      "bytes": 6098,
+      "sha256": "70c3d8ad92165fa58f23dd66c87a6fb1dbac03f66c09e7d229743fda382990b9"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run6/final-checkpoint.json": {
+      "bytes": 4030,
+      "sha256": "118c0a218fd4318b1642edb34c671ef7999896b9b8e2933ce6ef6df653ddba35"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run6/independent-helper-source.json": {
+      "bytes": 566,
+      "sha256": "70d0204936346154ebc3251ee8d983935bf6f5f563ed0c8243020a9e0ec9e37f"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run6/inherited-checkpoint5-index.json": {
+      "bytes": 100836,
+      "sha256": "2e780432fb5ede87f8d9d7ed5877dbc2bfa925d05b667372d06bb07455659997"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run6/published-provenance.json": {
+      "bytes": 6362,
+      "sha256": "3dc5989c9ebedf60e4c0198bfb970ea2ec548358e00f16801305b8bddfc59c65"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run6/validate_checkpoint.py": {
+      "bytes": 6119,
+      "sha256": "2a818f00ce52fc3413f7e80ff315f8577a368ac624d5861112d480f423b053df"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run7/final-checkpoint.json": {
+      "bytes": 4370,
+      "sha256": "7753c2f237a487f9449abde1b7f8d8ade3c5d8f944475c07f2f3e41731e56bc0"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run7/independent-boot-source.json": {
+      "bytes": 409,
+      "sha256": "77b88d49a1342e755918ca17c774cf4130b1a80d8ba39ca989680bbc23827cc6"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run7/inherited-checkpoint6-index.json": {
+      "bytes": 119474,
+      "sha256": "e63a01ce1084d7e8ceebce46d7d18b8f85af937416e14ab662d80ac584d3d990"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run7/published-provenance.json": {
+      "bytes": 7055,
+      "sha256": "61d50bff9755486a68d8fac9115fc2770980fb9d0f47164b51a9fd0a48fc544e"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run7/tool-readiness.json": {
+      "bytes": 7037,
+      "sha256": "f1231cba1247b2b570f5b3e4e1b833753f7bca931ecaa7f8ad155f82821f471e"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run7/validate_checkpoint.py": {
+      "bytes": 7023,
+      "sha256": "8c092a74f4d8ad30860986ee42e0ea5b4efed02642f41a45cf135596bc3769e5"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run8/final-checkpoint.json": {
+      "bytes": 4364,
+      "sha256": "80e4d5faea395ed4ffd7e315e7046a9b513690226ed8eab72b4a2c939662bbb4"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run8/inherited-checkpoint7-index.json": {
+      "bytes": 137819,
+      "sha256": "039d8e5b6f9528a5b4d58ab4c2ef085e98bbe83989d8411553c91b6cc6ef99da"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run8/validate_checkpoint.py": {
+      "bytes": 7482,
+      "sha256": "6ceb26393a3327e5287870280508bb2d8950fe6ff9fca6e254b5efc5ef00d660"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run9/final-checkpoint.json": {
+      "bytes": 6198,
+      "sha256": "29c835ed54d31ed23773b25bb3042c0fe1626dd8851280a7ac6f2da22f88d7eb"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run9/inherited-checkpoint8-index.json": {
+      "bytes": 151697,
+      "sha256": "d185ce952e4d72f53ba4e7d6106c76204e993403e3ae75c6217b45adf546427d"
+    },
+    "work/mh202-firmware/research/2026-10-30/validation/run9/validate_checkpoint.py": {
+      "bytes": 8574,
+      "sha256": "f890b944ffc70378bcee3172e3e7dc02e56f6d9eae6bc66bf8216d54f5104b1e"
+    },
+    "work/mh202-firmware/research/2026-10-30/web/run1/REPORT.md": {
+      "bytes": 7005,
+      "sha256": "c7e4d114ff1676841968f09839db39c1966bcb492791f6562fd2a352607a728b"
+    },
+    "work/mh202-firmware/research/2026-10-30/web/run1/collect_evidence.py": {
+      "bytes": 3665,
+      "sha256": "a1f3a5d534fae32b272ee5409361b7a551c22c93293589d299c1a67a035ae419"
+    }
+  },
+  "scope": "Hash/navigation inputs checked during host-only generation; current script files are separately distinguished from historical validated records."
+}

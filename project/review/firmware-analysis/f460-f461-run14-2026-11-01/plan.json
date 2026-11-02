@@ -1,0 +1,17 @@
+{
+  "started_UTC": "2026-11-01T16:33:10.683704+00:00",
+  "scope": [
+    "F460 one distinct numericcondition/trigger/action actualsourcepath",
+    "F461 one actualsafe boot/DTB/auxcore/module-selection sourcepath beyonddeclarations"
+  ],
+  "authors": {
+    "F460": "firmware_protocol",
+    "F461": "firmware_boot"
+  },
+  "source_review": "Independent cross-source peers",
+  "documentary_reviewer": "firmware_functional read-only/newreviewfilesonly",
+  "new_execution": 0,
+  "constraints": "Original/completed/synced/firstcandidates readonly. Immediate exactcopies,parentbeforecorrection,exclusiveversions. No closedroutes/proxies/private/fullcfg/bootenv/keys/native/models/targetruntime/deviceoperations.",
+  "deadline_UTC": "2026-11-01T19:00:00Z",
+  "final_only_UTC": "2026-11-01T18:15:00Z"
+}

@@ -1,0 +1,86 @@
+# MH202 run11 — original libcommon parser joined to taskmanager normalization
+
+Two ordinary no-bracket inputs now run through **the actual taskmanager normalizer and actual libcommon constructor/parser/getters**, with original parsed fields supplying the normalization decision. This closes the supplied-parser-field boundary in the earlier run9 normalizer fixtures for these two cases.
+
+- `*#1*11*1*100##` becomes an original common kind4 object (WHO1, WHERE11, DIM1, value100), then native normalizer returns `*1*0*11##`.
+- `*1*1*11##` becomes an original common kind3 object (WHO1, WHAT1, WHERE11), then native normalizer returns it unchanged.
+
+These are constructed bounded CPU experiments with explicit C primitive and provider models. Neither input is a hardware capture or configured script record. No event matcher/comparator, scenario loader, target OS/process, serial/network I/O or physical device ran. No physical dimmer meaning is assigned to the source formatter's numeric change. The **special comparator's WHO13/DIM1 selector provenance remains open**; ordinary WHO1/DIM1 normalization is a different path.
+
+## Inputs, identities and reproduction
+
+Fresh normal-image bytes verified through shared ImageVFS:
+
+| Original image path | SHA256 |
+|---|---|
+| `/home/bticino/bin/bt_taskmanager` | `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e` |
+| `/home/bticino/lib/libcommon.so.0.0` | `07b2c6d09e4a1b317bb3b37aff8f7ddd72dcec15e1e7194fde00c4f0ce1ecab5` |
+
+The taskmanager identity is recorded without substituting a prior image's hash. All source spans have exact VA/file offset/byte hashes in `original-spans.json`; both whole images are pinned in native results and collector inputs. No F454 code/layout/harness is loaded. The independently verified standalone Unicorn2.1.4 tool package is the only reused analysis dependency; its RECORD/file hashes are saved separately.
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run11/emulate_common_normalizer.py --check
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run11/collect_evidence.py --check
+```
+
+The native harness strictly reproduces two output files. The static collector strictly reproduces18 source/ledger files from9 pinned inputs:11 original spans,15 exact words, direct dependency/import/definition metadata, layout and execution-ledger records. It recounts saved native traces/events but executes no original code itself. The author manifest separately pins report, both scripts and all static/native evidence, excluding itself and later peer review. Earlier reports, source/image files and repository documents remain unchanged.
+
+## Fresh provider/layout boundary
+
+Taskmanager's first direct DT_NEEDED entries are **libcommon.so.0 then libopen.so.0**, and its selected openwebnet call relocations are retained. Under the ordinary packaged/no-override premise, this makes common the concrete selected model provider. This batch does not turn direct NEEDED order into a complete dependency closure, observed loader binding or no-interposition guarantee. Same-named parser definitions must not be joined just by their names.
+
+The actual common definitions establish **130-byte field stride**, WHAT+650, WHERE+780, level+910, interface+1040, DIM+1300, values+1430+130×index, raw length+6632, raw text+6636 and kind+7660. The source getters `0x24900..0x24968` and IsMeasureFrame`0x249f8..0x24a14` are retained; the latter tests kind4. This is the common layout from fresh MH202 bytes, not the90-byte libopen layout used in run10.
+
+Original common CreateMsgOpen(char*,int) is **`0x2646c..0x2650c`**: it calls actual CreateNullMsgOpen through PLT`0x9c84`, copies the raw text, records/trims length, then tailbranches at`0x26504` to original IsCorrect through PLT`0x9864`. Common IsCorrect is`0x25e38..0x26208`; selected normal/measure field assignment, WHO suffix and WHERE/interface helpers are all native definitions in the same image.
+
+Both images have overlapping original VA spaces. The private model therefore maps taskmanager at its original addresses and common at explicit base **`0x10000000`**, preserving common PC-relative instructions/constants. No actual relocation loader or original PLT resolver executes. Explicit provider redirects select the verified common definitions; other provider state and live initialization remain outside the experiment.
+
+## Actual native call chain and observation point
+
+Native taskmanager normalizer entry is **`0xcb38`**. It saves16bytes and allocates7768bytes; its local common object is localSP+12. Constructor call`0xcb54` reaches actual common C1`0x24bf0`; the constructor itself calls native CreateNull. The private stack begins poisoned0xa5, so parsed fields are not supplied by the host.
+
+For both no-bracket inputs, native`0xcb90` calls common CreateMsgOpen. At the original return address **`0xcb94`**, a read-only observation hook records the resulting object before any WHO getter/branch. It injects no fields or result. Readback is:
+
+| Input | Actual parsed kind | WHO | WHAT | WHERE | DIM | value0 | level/interface |
+|---|---:|---|---|---|---|---|---|
+|`*#1*11*1*100##`|4|1|empty|11|1|100|empty/empty|
+|`*1*1*11##`|3|1|1|11|empty|empty|empty/empty|
+
+Taskmanager's original imported getters and IsMeasureFrame are redirected to actual common definitions, not replaced with fixture-return callbacks. Original constructor and destructor bodies execute; the destructor is an actual one-instruction return, not a declared no-op model. The private object fits the ordinary normalizer frame under this verified common layout. This does not address different stack objects in the special comparator.
+
+For the measure case, original source checks WHO1, IsMeasure, DIM1 and atoi(value0)==100 (`0xcb9c..0xcbf0`). Empty level takes`0xcc58`, native getter WHERE11 supplies the literal address formatting, and the source's final formatter at`0xcd9c..0xcda8` uses original `*1*0*%s##`. Its source-level C formatter arguments produce `*1*0*11##`; original code calls the declared private strdup primitive, runs native destructor and returns its pointer. For the kind3 case, native IsMeasure is false, `0xcdf4` supplies the original input to the same native strdup-call/epilogue route, yielding unchanged text.
+
+The input strings are read back unchanged after return. No bracket mutation/parser substitution is needed. Only the ordinary selected level-empty route runs; advanced level/interface and bracket patterns are not expanded into another matrix. The returned patterns have not been fed to another comparator in this batch.
+
+## Native execution and precise ledger
+
+The native original paths include taskmanager normalization, common C1/D1, actual parser/reset/IsCorrect, actual field/suffix helpers and actual getters/predicate. `normalizer-results.json` preserves image-tagged original VA traces, explicit redirects, primitive events, parsed readbacks and output bytes. `execution-ledger.json` independently recounts these saved arrays. Native redirect callbacks do not count as executed original PLT instructions.
+
+| New run11 metric | Measure100 case | Ordinary case | Total |
+|---|---:|---:|---:|
+|Top-level normalizer calls|1|1|2|
+|Original instruction visits|1714|1464|3178|
+|C primitive callbacks|189|157|346|
+|`linker_redirect_callbacks`|15|11|26|
+|Private EXIT boundaries|1|1|2|
+|Code-hook steps|1919|1633|3552|
+
+**3552=3178+346+26+2.** EXIT boundaries2 are separate from primitive callbacks346 and linker redirects26. Per-function/primitive histograms are retained, including the common constructor/reset work; no constructor/getter/parser is silently counted as a primitive. Static collector original execution0. These are new area counts and do not rerun or reset prior corpora.
+
+## Primitive/CPU model and containment
+
+Only C memory/string operations are host-modeled: memset, strcpy, strlen, strcmp, strchr, strtok, strncpy, strcat, ordinary bounded-decimal atoi, selected sprintf formats and private strdup allocation. Full events/histograms are in the ledger/results. Each top-level call requests exactly one strdup; it allocates/copies into a bounded private guest heap. No original libc allocator or host target service is delegated to.
+
+The supported sprintf cases are the selected literal WHERE`11` format with no conversions and exact source `*1*0*%s##`; another format aborts. atoi is limited to the supplied ordinary decimal strings/signed32-bit range. These finite primitive contracts are not whole libc format/overflow models. `cstring` reads are capped4096bytes. The independent strtok scanner checks each scanned byte against a permitted mapped region; it is region-bounded rather than having a4096-byte token-scan cap. No whole-source syntax is inferred from these models.
+
+Both verified original images are read/execute only in private memory; only private stack, input and heap are writable. Explicit callbacks check every destination range and bounded source ranges. Allowed original PCs are the normalizer and fresh common native definitions/getter leaves; an unknown PC, original interrupt or invalid/protected access aborts. Code-hook and emulator instruction caps are100000 per top-level call. Original PLT calls are intercepted before their first instruction and redirected to named same-build native definitions, preserving LR. The final private EXIT hook stops after original top-level return. No target loader, ELF constructors outside these explicit C1 calls, host/target syscall, process or I/O runs.
+
+The unmodeled common dependency state is not manufactured as a live initialized process. This path's selected original functions execute with private object memory and explicit C primitive bindings; actual runtime symbol interposition, global tokenizer/thread behavior and other code paths remain separate.
+
+## Claim scope and remaining question
+
+Confirmed under this bounded execution/model: two actual common parsed objects drive the actual native normalizer decision and final returned pattern. This replaces the earlier supplied-parser-fields boundary only for these two ordinary inputs and provider setup. It does not claim complete accepted trigger/configured DSL grammar, a naturally deployed input, event routing, callback latch, script start/action, manufacturer dimming interpretation or physical effect.
+
+The special DIM1 selector issue from triggers/run10 remains **unresolved**: this batch executes WHO1 normalizer input, not the special WHO13/DIM1 comparator, its selector reads or complete parser write effects in that different frame. No unknown selector bytes are invented, and no uninitialized-memory/defect verdict follows.
+
+A useful next task could separately recover complete common parser writes in the special comparator's exact object/selector frame, or investigate configured trigger source/lifecycle evidence. Repeating the ordinary comparator/range/bracket or factory matrices is unnecessary for this newly closed native parser→normalizer join. Closed authentication/framing work remains excluded.

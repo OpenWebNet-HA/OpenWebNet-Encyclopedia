@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "command": "trigger/collect_trigger_v1.py --check",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "9492b9",
+          "wall_time_seconds": 0.125204354,
+          "exit_code": 0,
+          "original_token_count": 25,
+          "output": "{\"check\": true, \"outputs\": 18, \"code_spans\": 14, \"guards\": 27, \"original_execution_additions\": 0}\n"
+        }
+      }
+    }
+  ],
+  "scope": "Parent readonly static source reproduction; zero original execution additions or CPU replay"
+}

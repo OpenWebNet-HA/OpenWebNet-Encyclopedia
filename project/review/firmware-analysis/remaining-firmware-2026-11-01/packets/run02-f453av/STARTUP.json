@@ -1,0 +1,98 @@
+{
+  "argument_contract": {
+    "callee_path": "/sbin/insmod",
+    "child_condition": "sys_fork result is logically false under normal Tcl semantics",
+    "first_argument": "/lib/modules/2.4.19-rmk7-pxa2-btweb/kernel/drivers/video/tvia5202/tviafb.o",
+    "following_request": "sys_wait after child branch",
+    "status_limit": "No captured/tested sys_wait or sys_exec result in this five-line body; successful replacement/nonreturn remains a provider premise"
+  },
+  "inherited_init_loop_context": {
+    "component": "normal",
+    "lines": [
+      {
+        "line": 1,
+        "text": "#!/bin/ettclsh"
+      },
+      {
+        "line": 120,
+        "text": "# Run user applications in /etc/applications"
+      },
+      {
+        "line": 121,
+        "text": "foreach n [lsort [glob -nocomplain /etc/applications/*]] {"
+      },
+      {
+        "line": 122,
+        "text": "    if ![file isfile $n] continue; # skip directories"
+      },
+      {
+        "line": 123,
+        "text": "    if ![sys_fork] {"
+      },
+      {
+        "line": 124,
+        "text": "\tcatch {unset pid}"
+      },
+      {
+        "line": 125,
+        "text": "        newcmdname [file tail $n]"
+      },
+      {
+        "line": 126,
+        "text": "        source $n; exit"
+      },
+      {
+        "line": 127,
+        "text": "    } else {"
+      },
+      {
+        "line": 128,
+        "text": "        puts \"   Application: [file tail $n]\""
+      },
+      {
+        "line": 129,
+        "text": "    }"
+      },
+      {
+        "line": 130,
+        "text": "}"
+      }
+    ],
+    "path": "work/f453av-firmware/3.0.14/analysis/rootfs/sbin/init",
+    "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb"
+  },
+  "limits": [
+    "No actual startup selection or interpreter execution",
+    "No source body of insmod or module inspected",
+    "No driver loading, device/connector identity, output/physical capability or readiness",
+    "No ordering/completion relation with separately forked bt_start application"
+  ],
+  "new_script_body": {
+    "component": "normal",
+    "lines": [
+      {
+        "line": 1,
+        "text": "puts \"INSMOD TVIA\""
+      },
+      {
+        "line": 2,
+        "text": "if ![sys_fork] {"
+      },
+      {
+        "line": 3,
+        "text": "  sys_exec /sbin/insmod /lib/modules/2.4.19-rmk7-pxa2-btweb/kernel/drivers/video/tvia5202/tviafb.o"
+      },
+      {
+        "line": 4,
+        "text": "}"
+      },
+      {
+        "line": 5,
+        "text": "sys_wait"
+      }
+    ],
+    "path": "work/f453av-firmware/3.0.14/analysis/rootfs/etc/applications/bt_fb.tcl",
+    "sha256": "a16df5cbf1e40029f2385f7cfdce1d6f11c1221ddd3870a8caca979b0daa80b4"
+  },
+  "scope": "Actual normal-image text request under interpreter/fork/exec/file/normal-return premises; no execution"
+}

@@ -1,0 +1,40 @@
+# MyHOMEServer1 first-pass boot source review
+
+PASS for the bounded static startup/configuration ownership claims. No author correction requested. This independently checks current original source/bytes and saved first candidates; it is not an observed boot, target process/service launch, update/flash test, live dependency closure or hardware measurement. No original ARM/Thumb/script/vendor process, target I/O, network/device or closed connection/authentication/session/framing delegate was executed or investigated.
+
+## Exact reviewed pins
+
+Paths below are relative to the current research boot directory.
+
+| Artifact | SHA256 |
+| --- | --- |
+| REPORT.md | 1a6b4c49e70da30a687196fca6189bcd590d00479e4ad7302749092b29cb469c |
+| collect_boot_v1.py | 9cac9146f568f7023015cd47df98e0f4ea552b007eb606962cc75001618459cc |
+| output-manifest.json | c98e9babebe182b5df2b734b3669159705f8e4d4189e8916913055adf6d4774f |
+| original-code-provenance.json | a5bafe021c4639601a55e6f5ae5c46d68edb3b09ec5198240a45db165eaa6535 |
+| process-declarations.json | e4531a8be6d3b64fde15d68f4cf832ee6b7153de9224a2c5b2af57f5ec17f177 |
+| startup-selected-lines.json | 9e0ef26fe9e25393552cd9411f6cec4c0540177730a55c9615227fd7783a7265 |
+| manager-path-declarations.json | 2dffebc4d7fbb5a9747947550b7f160d8f55194f558b3abd3363cc28971cdc1c |
+| kernel-and-DTB-metadata.json | 9528b56458eaa3d482095502808b1b4084103c77a51d76bc94cb77a3f5269908 |
+| input-hashes.json | dd79c1e9f257a3c1724245b5a54382f374ce43fecce4eb6dbdbaff3631ef4e71 |
+| initial-generated-v1/SNAPSHOT_INDEX.json | cd0296c7238240cfe2f02724f04062bb1ca4c7d3e840b0caa96a5274bba18dc0 |
+
+Read-only collector --check passes20 outputs,50 inputs,10 original Thumb spans,10 asserted byte ranges,nine public PIC literals and25 normal/23 reduced process declarations, with original execution0. Separately mapped original daemon PT_LOAD bytes match all10 span hashes and10 byte assertions. All nine PIC targets/string bytes agree under the recorded current Thumb-PC convention. Initial allocation/default path and callback field stores are current source, not inherited offsets from F454/MH202.
+
+## Critical source composition
+
+The declared SysVinit alias, inittab default5/rcS/rc5, selected runlevel symlink metadata and actual populate-volatile link_file mechanism support the static default stack alias chain. The vendor start script changes to /home/bticino and requests bin/bt_daemon without explicit arguments under its earlier storage/license/native checks. The script's extra library directory precedes packaged providers. A declaration/request is not completed startup or active configuration; reduced-profile replacement and recovery marker/converter differences remain conditional. D-Bus --system and Redis init requests are real source joins, without listener/readiness/runtime proof.
+
+Original GOT/main/default pointer and INI requests, parser callback pointer and working_mode/name/path stores agree with the saved source. The selected default path is /var/tmp/stack_open.xml; separate daemon INI and conditional conf.xml layers are not interchangeable. Callback record+0/+4/+8 origins are explicit, while the actual global process-list/callback activation and precedence remain unclosed.
+
+The available launcher reads record+28 eligibility, parses current working-status text and skips record+8 zero only when that status equals2. The report's normal_status4 is an XML declaration, not imported old mode semantics or a live value. The nice argument composition is conditional on the supplied record/state and wrapper/argument/scheduler premises. I additionally read original0x1174a..0x1174e: it loads r6 from record+36, tests zero and branches to0x11898. Thus on the stated zero-wrapper branch r6 is actually0 at the later argv+16 store, supporting the reported NULL terminator. This prevents treating its earlier stack-buffer value as an extra empty argument. The selected call_nowait result store is source behavior, not successful child creation or a proven return convention.
+
+Normal/recovery stack declarations and selected daemon bytes are equal, while the respective launch scripts differ as reported. Modern manager path/config declarations are not a MH202 script engine, a running MQTT/container stack or F454's dedicated SCS AI channel. One selected /dev/ttymxc2/bus_type0 lane remains configuration, not electrical/SoC UART attribution or all-hardware absence.
+
+Kernel uImage/DTB/header identities and whitelisted Linda/i.MX6/Cortex-A9 properties support packaged platform metadata only. The report does not claim an active DTB, full kernel configuration, actual board revision or chronology from timestamps. Update XML/config flags, fw_manager declaration and missing80/81/94/95 assets remain separate. Binary/tool availability and selected disabled flags do not resolve install/signature/partition/rollback policy. CRC/hash checks do not equal cryptographic signature verification.
+
+## History, scope and preservation
+
+All22 actual first-candidate members match both current retained files and declared hashes/sizes. Frozen references and the separately indexed corrected device-page capture remain distinct; the reported initial filename lookup failure is not promoted into a successful old reference capture. Index membership predates opening its own file, and reviewer files are excluded. No report/collector/output was changed by this review.
+
+Source whitelists export public paths, selected settings and code/metadata; no certificate, CSR, key or credential content was examined/exported. Current schema/process identities, requests, flags and candidate providers do not establish runtime success, service readiness, persistent data, full lifecycle, signature validation or physical capability. The next work should close a natural selected manager/list/storage/consumer path with fresh source, not transfer an old product's behavior by names. Only this new review was written.

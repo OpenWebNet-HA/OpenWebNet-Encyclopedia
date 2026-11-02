@@ -1,0 +1,38 @@
+# F459 night02 selected write source review
+
+PASS. No correction requested. This is an independent bounded original-byte/ELF/dataflow and preservation review, including permitted host collect_write_v1.py --check. It performed no original/vendor/native/provider instruction execution, Qt conversion, SQLite query, model/fixture, target OS/service/network/bus operation, database creation, archive upload or closed-route expansion. Author/original/repository files remain unchanged.
+
+## Original identity and reproduction
+
+The read-only collector check passes8 outputs/41 instruction guards/16 actual call proofs/4 spans with original execution0. Independently reading the43,208-byte original libmhshared.so.1 confirms SHA2564d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377 and own ELF32 little-endian ARM/PT_LOAD mappings. The selected exported mhShared::write(QString,QString,int) symbol at329c has size3416. All four retained raw-span hashes/hex,41 words,16 BL destinations/ARM-PLT arithmetic/GOT relocation identities, three NUL-terminated SQL literals and pool-derived addresses match. All three input pins and nine immediate first copies verify.
+
+This is a selected method path, not the whole3416-byte method or a qualified natural caller. Same library identity or constructor context does not establish a live connection, installed schema or unchanged receiver automatically. No other product ABI/layout/provider behavior is transferred.
+
+## Source argument and encoding chain
+
+The entry saves receiverR7, the two supplied QString pointersR5/R8 and supplied integerR10. BEGIN uses receiver+8 through the actual sqlite3_exec import. Its returned machine value is not tested in the selected prefix before subsequent preparation. The next source captures receiver+8 inR6. BEGIN request alone is not proof a transaction began.
+
+The exact83-byte REPLACE template has four QUOTED placeholders for(pluginname,key,value,persistent), in that order. Receiver+12, first supplied QString and second supplied QString each supply a toLatin1 then toBase64 then fromAscii_helper request chain. Normal local pointer/length connectors lead to the three QString locals SP80/SP92/SP104. Source order and pointer roles agree with the report under valid unchanged objects, ordinary Qt/ABI/callee-save, successful allocations, normal provider/connector returns and lifetime premises. No provider body or supplied string was evaluated. These requests do not establish encryption, validation, universal losslessness or specific output bytes.
+
+At3454, QString::number(int,int) receives the retained supplied integer with radix10 and hidden resultSP108. The actual pointer arraySP120/124/128/132 contains SP80/SP92/SP104/SP108; multiArg receives count4 and resultSP112. Its toLatin1 result supplies the pointer assembled into execR1 at34d8; R0 receives the SAME handle captured inR6, R2/R3 are null, and the GOT zErrorMessage pointer is stored as the stack argument. The exec return is stored toSP60 at34e0. This proves conditional decimal-source provenance of the fourth placeholder, not a Boolean persistence domain, valid/accepted SQL, successful write or durability.
+
+The actual PLT/relocation identities distinguish the int overload from similarly named conversions and middle sqlite3_exec from Qt requests; nearest disassembly labels are not relied on. The source visibly overwrites R6 after the middle exec, so the later END fragment correctly uses a FRESH receiver+8 load rather than claiming the captured handle register survived unchanged.
+
+## Later result test and limits
+
+Selected3680..36b0 requests END through the actual exec import, then loads the EARLIER middle-exec result fromSP60 and compares exact zero before branch3c68. This is not a check of END's own returned value. A bounded read of the intervening34e4..3680 instructions found no direct SP60 reference; that is not complete alias, helper, cleanup/refcount, exception/unwind or concurrency analysis. Normal selected paths/callee-save/storage/lifetime still condition the composition. No full return contract or subsequent diagnostic outcome is inferred.
+
+Request sites ordered BEGIN/REPLACE/END and a local exact-zero result branch do not establish successful transaction, commit/rollback, actual file/table/schema, connection binding, every-error behavior, safety or physical effect. No database bytes were recovered/generated, no synthetic database was made from SQL and nothing new is eligible for vendor-database archiving. Source privacy, natural caller, actual values, providers, ownership/lifetime and concurrency remain open; all closed receiving/output/transport/authentication/session/framing/MQTT/libjel bodies remain opaque. Earlier constructor evidence and execution ledgers are inherited separately, without replay accumulation.
+
+## Exact reviewed pins
+
+| File | SHA-256 |
+| --- | --- |
+| `work/f459-firmware/2.1.5/research/2026-11-01-night02-shared-write/REPORT.md` | `b58d3b1d6f76e58f13bd5d4e737be9fa213fe0183bb9b0b5c829f71dbf78ca9b` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-night02-shared-write/collect_write_v1.py` | `f0d76595d54786b7a1d3629d1f85614e90e382e72b9a4bbbaa4a9fb172977068` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-night02-shared-write/SOURCE.json` | `35e9ace8a1bbf4e0c25882057a287688d5ca295aab5758b137b1e6a4453e53e7` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-night02-shared-write/INPUT_PINS.json` | `42df579fccaaf07c0d2d2e252986d50eb94c520f7e694c57f37885c6d17b42ed` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-night02-shared-write/OUTPUT_MANIFEST.json` | `dac4b46f44db688178fe31fb2e9c0e49af673be711cdec0e3588cd6b45696a0f` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-night02-shared-write/first-candidate/INDEX.json` | `4f16b335361186bc95fdde7a79bc06181c423add16d6aae24d8a5d48d337a743` |
+
+This PASS certifies the selected original source/provenance agreement and bounded normal-path interpretation only. No current author correction or expanded source inquiry is required.

@@ -1,0 +1,359 @@
+{
+  "base_message_route_words8": [
+    1,
+    0
+  ],
+  "descriptor_routes": {
+    "scs_field_bus": {
+      "VA": "0x15220",
+      "route_offset80_words": [
+        1,
+        1
+      ]
+    },
+    "scsai_field_bus": {
+      "VA": "0x151b0",
+      "route_offset80_words": [
+        1,
+        2
+      ]
+    }
+  },
+  "fixtures_models": 0,
+  "guards": [
+    {
+      "VA": "0x31dc",
+      "input": "plugin",
+      "word": "0xf947da61"
+    },
+    {
+      "VA": "0x3200",
+      "input": "plugin",
+      "word": "0xf9003035"
+    },
+    {
+      "VA": "0x3218",
+      "input": "plugin",
+      "word": "0xf947d263"
+    },
+    {
+      "VA": "0x323c",
+      "input": "plugin",
+      "word": "0xf9003074"
+    },
+    {
+      "VA": "0x3278",
+      "input": "plugin",
+      "word": "0xf947c662"
+    },
+    {
+      "VA": "0x3280",
+      "input": "plugin",
+      "word": "0x35000b02"
+    },
+    {
+      "VA": "0x3284",
+      "input": "plugin",
+      "word": "0xf947ce62"
+    },
+    {
+      "VA": "0x328c",
+      "input": "plugin",
+      "word": "0x35000820"
+    },
+    {
+      "VA": "0x32d8",
+      "input": "plugin",
+      "word": "0x97fffbce"
+    },
+    {
+      "VA": "0x32e4",
+      "input": "plugin",
+      "word": "0xb9000040"
+    },
+    {
+      "VA": "0x3304",
+      "input": "plugin",
+      "word": "0x97fffbc3"
+    },
+    {
+      "VA": "0x3310",
+      "input": "plugin",
+      "word": "0xb9000020"
+    },
+    {
+      "VA": "0x33c0",
+      "input": "plugin",
+      "word": "0xf947d260"
+    },
+    {
+      "VA": "0x33d8",
+      "input": "plugin",
+      "word": "0x97fffade"
+    },
+    {
+      "VA": "0x3414",
+      "input": "plugin",
+      "word": "0xf947da60"
+    },
+    {
+      "VA": "0x3424",
+      "input": "plugin",
+      "word": "0x97fffacb"
+    },
+    {
+      "VA": "0x2678",
+      "input": "core",
+      "word": "0xf9400e80"
+    },
+    {
+      "VA": "0x2694",
+      "input": "core",
+      "word": "0xf9000e80"
+    },
+    {
+      "VA": "0x26b0",
+      "input": "core",
+      "word": "0xf9401a62"
+    },
+    {
+      "VA": "0x26b4",
+      "input": "core",
+      "word": "0xf9003660"
+    },
+    {
+      "VA": "0x26bc",
+      "input": "core",
+      "word": "0x9100e001"
+    },
+    {
+      "VA": "0x26c4",
+      "input": "core",
+      "word": "0xd63f0040"
+    },
+    {
+      "VA": "0x2cd4",
+      "input": "core",
+      "word": "0xd2800900"
+    },
+    {
+      "VA": "0x2cf4",
+      "input": "core",
+      "word": "0xfd000660"
+    },
+    {
+      "VA": "0x2cf8",
+      "input": "core",
+      "word": "0xb9001260"
+    },
+    {
+      "VA": "0x2d40",
+      "input": "core",
+      "word": "0xb9000c01"
+    },
+    {
+      "VA": "0x2d60",
+      "input": "core",
+      "word": "0xb9000c01"
+    },
+    {
+      "VA": "0x569c",
+      "input": "exe",
+      "word": "0xf9000a61"
+    },
+    {
+      "VA": "0x5798",
+      "input": "exe",
+      "word": "0x910143e2"
+    },
+    {
+      "VA": "0x5850",
+      "input": "exe",
+      "word": "0xf9402be1"
+    },
+    {
+      "VA": "0x5858",
+      "input": "exe",
+      "word": "0xf9400840"
+    },
+    {
+      "VA": "0x585c",
+      "input": "exe",
+      "word": "0xd63f0020"
+    }
+  ],
+  "message_direction_word16": 2,
+  "new_message_to_scsai_store12": 2,
+  "new_message_to_scscmd_store12": 1,
+  "original_execution": 0,
+  "originals": {
+    "core": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          19020,
+          19020,
+          65536
+        ],
+        [
+          1,
+          6,
+          19216,
+          84752,
+          84752,
+          1616,
+          1648,
+          65536
+        ]
+      ],
+      "bytes": 22752,
+      "image_path": "/home/bticino/libcoso/libcoso.so",
+      "sha256": "572bca218965a040393361bea4044b0d55519b4f2146ef69c9aa18d4aa6ef690"
+    },
+    "exe": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          27804,
+          27804,
+          65536
+        ],
+        [
+          1,
+          6,
+          27848,
+          93384,
+          93384,
+          2328,
+          2432,
+          65536
+        ]
+      ],
+      "bytes": 32168,
+      "image_path": "/home/bticino/bin/coso",
+      "sha256": "2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197"
+    },
+    "plugin": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          16428,
+          16428,
+          65536
+        ],
+        [
+          1,
+          6,
+          19136,
+          84672,
+          84672,
+          2096,
+          2536,
+          65536
+        ]
+      ],
+      "bytes": 23152,
+      "image_path": "/home/bticino/libcoso/libplug_scs.so",
+      "sha256": "cb166fdfb540077a48d591dcf2f45748908fe88734256cc8d7c07aa7cdebdc2b"
+    }
+  },
+  "relocation_joins": [
+    "0000000000014fb0  0000004b00000401 R_AARCH64_GLOB_DAT     0000000000015220 scs_field_bus + 0",
+    "0000000000014fa0  0000005900000401 R_AARCH64_GLOB_DAT     00000000000151b0 scsai_field_bus + 0",
+    "0000000000014f88  0000003100000401 R_AARCH64_GLOB_DAT     0000000000015190 scs_enable + 0",
+    "0000000000014f98  0000005d00000401 R_AARCH64_GLOB_DAT     0000000000015194 scsai_enable + 0",
+    "0000000000015250  0000006300000101 R_AARCH64_ABS64        0000000000002780 scs_init + 0",
+    "0000000000015258  0000005700000101 R_AARCH64_ABS64        0000000000003130 scs_send + 0",
+    "00000000000151e0  0000006300000101 R_AARCH64_ABS64        0000000000002780 scs_init + 0",
+    "00000000000151e8  0000005700000101 R_AARCH64_ABS64        0000000000003130 scs_send + 0",
+    "0000000000015020  0000000500000402 R_AARCH64_JUMP_SLOT    0000000000000000 register_field_bus + 0",
+    "0000000000015068  0000003a00000402 R_AARCH64_JUMP_SLOT    0000000000002cd0 new_message_to_scs + 0"
+  ],
+  "safe_literals": {
+    "0x38b8": "scs_cmd",
+    "0x38c0": "%s/%s",
+    "0x38c8": "SCSEnable",
+    "0x38d8": "Communication Settings",
+    "0x3938": "SCSAIEnable"
+  },
+  "spans": [
+    {
+      "VA": "0x3180",
+      "end_exclusive": "0x31b8",
+      "input": "plugin",
+      "sha256": "e81eb1eb7586552c0d1ccfe4786222cbd736a58d6d5d24ac4367dea6921fa30b"
+    },
+    {
+      "VA": "0x31d4",
+      "end_exclusive": "0x3244",
+      "input": "plugin",
+      "sha256": "228f0a38a191720f742ff888f913f2838976de3519148c9d52f9ed6fe13bba0f"
+    },
+    {
+      "VA": "0x3248",
+      "end_exclusive": "0x32ec",
+      "input": "plugin",
+      "sha256": "6e948d8c066f0df9a44369c23f1e61a7d198769d9833cdf2dbe0fcf504f47ff1"
+    },
+    {
+      "VA": "0x32ec",
+      "end_exclusive": "0x3318",
+      "input": "plugin",
+      "sha256": "69916fd8deda42084a39d0162deee4a4cad3d0c9e23d4ca0a8f747670b831b07"
+    },
+    {
+      "VA": "0x33c0",
+      "end_exclusive": "0x342c",
+      "input": "plugin",
+      "sha256": "3ea9213a1724e4bcd6d500837a057365e022b5f4248db313cc8ddc67454afd5d"
+    },
+    {
+      "VA": "0x342c",
+      "end_exclusive": "0x34a4",
+      "input": "plugin",
+      "sha256": "2e032447dad1ec0bc54702dc4f727229f957dab34830e005a11b14aa7bb46035"
+    },
+    {
+      "VA": "0x2650",
+      "end_exclusive": "0x26d8",
+      "input": "core",
+      "sha256": "cf4c1e52872b39bbe8cfa0b65cfe2805033a74a9283dac47b5e5a4cc985caee8"
+    },
+    {
+      "VA": "0x2cd0",
+      "end_exclusive": "0x2d6c",
+      "input": "core",
+      "sha256": "0821c16732dee6542f80a8a8059510de37261b35c68d13b9699b43de4004f310"
+    },
+    {
+      "VA": "0x5640",
+      "end_exclusive": "0x56ec",
+      "input": "exe",
+      "sha256": "6bd28f0a46aec8a583c55567fea8efc3a103db84a232352951f72fc391bbd071"
+    },
+    {
+      "VA": "0x5794",
+      "end_exclusive": "0x57c8",
+      "input": "exe",
+      "sha256": "95ec59222fd57bbaa19dd82bda8e462875804e4cd8cc3eb5baed3305313bf374"
+    },
+    {
+      "VA": "0x5830",
+      "end_exclusive": "0x5860",
+      "input": "exe",
+      "sha256": "010873187bdf35040d9f583fe5382caf197fd7d020c2540fa854f94e4d2823a8"
+    }
+  ]
+}

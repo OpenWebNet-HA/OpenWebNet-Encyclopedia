@@ -1,0 +1,29 @@
+# Independent scene-stop/completion source review
+
+PASS for scene-stop/REPORT.md and its bounded source findings. No substantive correction requested. One nonblocking metadata limitation is recorded below. This reviewer did not author the report/collector. No original instruction, action, parser, provider, thread, clock, sleep, SQL, transport or physical behavior was executed; no scene/action fixture or host behavioral model was supplied. Author files remain unchanged.
+
+Reproduced collect_scene_stop_v1.py --check: 14 outputs, six spans, three calls, 18 byte guards, one poll literal and five source/reference pins. Independently mapped the original scheduler ELF32 PT_LOAD ranges, checked all six raw span hashes, 18 instruction ranges and three Thumb BL targets, and verified exact eight-byte pool words(1,0). All15 indexed initial collector/output copies and separate actual report copy match current bytes. The ordinary nanosleep ABI is inherited from the separately pinned/provider-reviewed source; no provider was executed here.
+
+Original source/control conclusions verified:
+
+- Scene method a60b0 retains receiver r5, supplies1 and stores its stop byte+144 at a615e before traversing compiled action handles+128/+132 and invoking action vtable+4. The selected method does not itself wait for action completion or clear active+145. Previously reviewed common/SLEEP/SCENARIO slot mappings remain inherited class-specific source evidence, not every action type.
+- Worker a6734 retains scene r7. Its dispatch calls action slot0 before its scene144 test. An inline blocking callback must return to reach that check; stop request does not prove immediate interruption.
+- Completion scans call cd97c, whose selected body reads action byte+4. That is a different object/field from scene stop144 and active145. The original poll loads d8 from poola6bf8=(1,0), copies it to SP40 and passes that same address as req/rem to nanosleep. Under ordinary valid 32-bit nanosleep ABI this requests one second/zero nanoseconds, not a measured cadence, latency or cancellation deadline. Only return-1/errno4 retries that same possibly updated storage.
+- At a693a the scene144 read follows the returned wait. Original CBNZ at a6942 takes a6994 when nonzero, bypassing further completion waiting even if action+4 remains zero. Zero takes the completion-rescan route. I additionally inspected short original remainder tails at a6bda..a6bf4/a6c3c to corroborate the complete/empty-range cleanup correspondence; literal-pool bytes between tails are data, not code. This is a selected positive stop exit, not an exhaustive exceptional/range CFG proof.
+- Cleanup after a6994/96 performs original logging/optional delegates before clearing active145 at a6aa0 and stop144 at a6aac. Normal delegate/object/range/lifetime premises matter: these stores neither set action+4 nor join an underlying action worker, and they do not clear the distinct shared action-cancellation domain.
+- Launch a5db0 reads enabled65 and active145; its selected active0 path stores active1 and scene stop0 before requesting a thread. Therefore normal scene cleanup can permit the same local guard again, conditional on enabled/live state and normal providers. It does not prove successful rerun, a safe concurrent restart, shared-cancellation reset, action-worker completion or full object destruction semantics.
+
+Metadata limitation, sent to parent before review publication: collect_scene_stop_v1.py's one-line module docstring still describes a loader/container/scene-ID insertion/captured-context proof. The actual collector code, METHOD, spans, report and output names describe scene stop/completion as reviewed. This stale label does not affect current source/evidence results and is not used as source identity or a claim of registry work. Any cleanup should retain v1 before a separately authorized version; this reviewer changed no author bytes.
+
+Reviewed SHA-256 pins relative to scene-stop/:
+
+| File | SHA-256 |
+| --- | --- |
+| REPORT.md | 7d1a47397dd19a52227a2da0e560b4398e9a7c88a08b319778ac3bc2dcb1619d |
+| collect_scene_stop_v1.py | 09585479aad0a63a3ed94fd1b67269d50654af856719a2a5cb6d226ba274e24f |
+| OUTPUT_MANIFEST.v1.json | 2c89abe2ce2d24ccbbf9c7388f36cda0e9e487dff8c7d7ac4b866c29cbbd3156 |
+| FIELD_LEDGER.v1.json | 76f352a49ebef932463482fdc61aa5a416ea53b3a6091a434a1fb48c6207068c |
+| POLL_LITERAL.v1.json | d3f5c70b7de0fea7d52b395d5142d41e43b352f4f8f47a53d93480f70d1e9129 |
+| first-candidate/SNAPSHOT.json | b91655c4b20f2e883ec74533d5999dfdefaa85c1d228decc03cf119c6e2df430 |
+
+Original scheduler SHA-256: 7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26. Whole cancellation/restart/lifetime/concurrency, shared reset ownership, accepted configured assets and physical behavior remain open. This new ASCII review is exclusively created and immediately frozen as exact first-review bytes with a precomputed non-self-referencing index before announcing its hash.

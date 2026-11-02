@@ -1,0 +1,77 @@
+# MH202 run17 — bounded gate gap and actual interpreter GOTO lifecycle
+
+**Static original source, execution0.** This batch does not close the command-gate clear policy or R/P producer. Its narrow immediate-offset query finds the two already known set1 stores and four reads, which is not a whole-program absence result. With no concrete new producer/clear join established in the bounded pass, the substantive new lifecycle result follows the actual interpreter GOTO caller into its shared current-node mutation, return position, subsequent interpreter advance and file-offset read.
+
+No ARM/vendor instruction, interpreter, script, FIFO, clock/sleep, target syscall, process, live I/O or physical operation is executed. Four host examples transcribe selected pointer positions/arithmetic only. Original firmware, earlier reports, synced sources and repository documentation remain read-only.
+
+## Gate and R/P remain separate unresolved questions
+
+`bounded-gate-encoding-query.json` applies one deliberately narrow query to fresh original `/home/bticino/bin/bt_taskmanager` disassembly: explicit memory operand immediate`#-488` with any base register. It returns six original instruction lines: reads at`0x9ea4/0xa494/0xa7bc/0xa9e4`, stores at`0xa394/0xb304`. Exact words immediately before those stores set r3=1 at`0xa38c/0xb300`. The reviewed common-base relation is `0x1b6ac−488=0x1b4c4`, the same command gate in prior functional2/lifecycle6.
+
+This query does not resolve aliases, block stores, computed offsets, pointers passed to callees, dynamic providers or all possible access encodings. It therefore does **not** prove that the gate cannot be cleared, that a restart is required, or that fresh zero-filled ELF NOBITS is an observed reset. Mode4/panic setting1 and the separate query cursor/readiness reset retain their earlier distinct meanings.
+
+The selected S/F/E producers and receiver-only R/P branches remain inherited functional2/3 context. No dedicated R/P producer is identified here. The prior bounded direct-write-site result must not become a namespace-wide absence conclusion: other objects, computed payloads/calls and configured scripts remain possible. Expanding into session/connection internals was not needed or undertaken to turn that gap into an unsupported answer. The concrete independently available GOTO lifecycle below was chosen instead of another gate setter/readiness model or repeated S/F/E formatting matrix.
+
+## Actual interpreter prefix and target-number caller
+
+In original `/home/bticino/bin/bt_script`, `0xa780..0xa798` compares four bytes of current line text with exact literal`GOTO` (pool`0xaa10`). This is a prefix check, not a full validated DSL production. Selected match initializes index4 and accumulator0 at`0xa7ac/0xa7b0`, reads characters from exported line buffer`0x134a4`, and stops on ASCII`%` (37) at`0xa7d4`.
+
+Each nonterminating character calls imported `ctoi(char)` at`0xa7c0` and updates accumulator as`10×old+returned` (`0xa7b8..0xa7c8`). Actual candidate libdomotica helper`0x18e8..0x1934` returns digit0..9 for an unsigned byte whose subtraction by ASCII48 is at most9, otherwise0. Thus this selected caller is not equivalent to a strict decimal-string validator; it has no local count/terminator-validity check in the retained loop. Arbitrary malformed/unbounded lines, arithmetic overflow and complete preprocessing/DSL syntax are outside this batch.
+
+On the supplied terminating ordinary path, `0xa7dc/0xa7e0` passes that integer to candidate `libdomotica::GOTO(int)0x3518`. The helper's r0 result is not consumed as a success/failure Boolean in the immediate continuation: interpreter`0xa7e4` begins later prefix checks. No original prefix parse/helper call runs in this batch.
+
+## Exact globals and node fields
+
+GOTO's original PIC base is`0x12114` (`0x3538+pool0x3694`). Three original pool/GOT/relocation relations are:
+
+| Symbol | GOTO pool | GOT slot | Candidate executable definition |
+| --- | --- | --- | --- |
+| inizio |0x3698|0x12248|0x138a4|
+| esegui |0x369c|0x12240|0x1392c|
+| sleep_executed |0x36a0|0x12234|0x13934|
+
+The actual library GLOB_DAT rows and executable/global definitions are retained in `selected-symbol-relocations.txt`. The effective shared binding is conditional on the ordinary executable-first/default-visible plan reviewed in functional4, not a new complete loader closure/live binding observation. Separate globals with the same names exist in the library; the relocations are not silently treated as hardwired executable storage.
+
+Selected source node relations are word0=numeric target compared by GOTO, word4=file offset consumed by interpreter fseek, word8=next-node pointer. These names describe direct source uses, not a recovered complete node class, configured list or user-level label ontology.
+
+## GOTO pointer position and selected counter throttle
+
+Original GOTO first requests `usleep(100)` at`0x353c/0x3540`, without checking its result. It then loads shared`inizio` and stores that pointer into shared`esegui` (`0x3544..0x3560`). The first current-node word0 is compared with the requested target at`0x3574..0x3580`.
+
+If the **head word0 equals the target**, it retains esegui=head. The signed compare against literal999 (`0x3594..0x359c`) requests an additional usleep only when the supplied sleep_executed value is not greater than999. The original shift/add arithmetic produces `(1000−sleep_executed)×1000` for the selected nonoverflow nonnegative examples. It then writes sleep_executed=0 at`0x35e0/0x35e4` and returns after logging. No actual delay, unit accuracy, pacing guarantee or completed sleep is measured. The reset is to **sleep_executed**, not taskmanager's command gate or readiness flag.
+
+If the **head word0 differs**, `0x363c..0x365c` compares the **next node's word0** with the requested target. While unequal, `0x3618..0x3638` advances shared esegui to its next pointer and repeats. When the successor matches, it returns retaining **esegui at the matching node's predecessor**. The selected search has no local NULL/cycle guard before those dereferences. This observation is bounded original control flow, not an observed fault, a proof about actual configured lists, or a complete invalid-target policy; the finite examples supply a well-formed reachable list.
+
+These two cases deliberately leave different pointer positions. Calling GOTO does not simply mean “set esegui to the target node” in all branches. Neither branch writes an R/P IPC byte or an established gate-clear request in these retained spans.
+
+## Join to actual interpreter advancement and file offset
+
+Later interpreter tail`0xaa68..0xaaa4` first tests its terminal three-byte prefix; its normal nonterminal continuation loads shared esegui from base`0x13494+0x498=0x1392c`, loads node+8 and stores that successor back to esegui (`0xaa94..0xaa9c`). It then branches to`0x9b2c`.
+
+At`0x9b2c..0x9b50`, the interpreter loads the current node, reads **node+4** as the fseek offset with whence0, and requests fgets into its1024-byte line buffer. Those imported returns and file operations are unexecuted boundaries. The join here assumes the selected GOTO call's ordinary return, consistent shared global binding, valid node storage and reaching this nonterminal continuation after later prefix processing.
+
+Consequently, for supplied labels `[10,20,30]`:
+
+| Supplied target | esegui after GOTO | esegui after ordinary outer next step |
+| --- | --- | --- |
+|10, matching head|node0/word0=10|node1/word0=20|
+|20, matching head's successor|node0/word0=10|node1/word0=20|
+|30, matching next successor|node1/word0=20|node2/word0=30|
+
+This is exact pointer-position composition, not proof that a user-configured GOTO skips a valid action or that the head has a particular semantic role. Node generation, labels/file offsets, preprocessing, missing4.xtz scripts, valid source grammar, loop termination, final callback/child lifecycle and actual physical effects remain separate. `host-selected-pointer-sequences.json` contains those three examples plus the head-target case with counter1200, showing the selected extra-delay request is omitted while the counter still resets. These are not native or file/timer experiments.
+
+## Provenance and reproduction
+
+| Original normal-image path | SHA256 |
+| --- | --- |
+| `/home/bticino/bin/bt_script` |`f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4`|
+| `/home/bticino/lib/libdomotica.so.0.0` |`5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09`|
+| `/home/bticino/bin/bt_taskmanager` |`ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e`|
+
+`input-hashes.json` pins seven inputs: three verified original files, accessor and three immutable context reports. `original-spans.json` pins seven fresh spans with VA/file offset/raw hash; `critical-words.json` asserts25 words. The deterministic collector reproduces14 outputs, three relocated-global relations, the six-line narrow gate encoding query and four finite host cases. Original/native/primitive/linker/EXIT/stop/hooks all0. No F454 evidence/fixtures or unverified component behavior is transferred.
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/lifecycle/run17/collect_lifecycle.py --check
+```
+
+PASS, read-only host/source/model work. No original/synced/prior output or repository documentation is changed. Highest remaining question for this new join is actual node-list creation/head/sentinel policy and its label/file-offset semantics; that should precede any user-level GOTO correctness or termination claim. Actual command-gate clear and a dedicated R/P producer remain explicitly unresolved rather than being inferred from this separate counter reset.

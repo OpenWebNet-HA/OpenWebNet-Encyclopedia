@@ -1,0 +1,11 @@
+# Examined scope and remaining boundaries
+
+| Area | New source joins | Open boundary |
+| --- | --- | --- |
+| TIME trigger | Exact special factory0, raw fields/mask/serializer, compiled constructor/vtables/inner-control aliases, trigger-vector and service handoff | Full accepted JSON/time grammar, actual configured scenes, active service/context |
+| TIME condition | Exact factory1 and compiled200-byte predicate ownership, disabled/day/equal/strict boundary gates, current-date clock-field parsing helper | Provider/parser failures, clock/date/DST/locale semantics outside ordinary successful premises, actual evaluated conditions |
+| Service/caller | Original weekday-map initialization, normal handle append/thread-worker ownership, deadline preparation/due route/rearm, enabled/day callback→scene launch; generic condition conjunction/false cleanup→action caller | Complete queue ordering/rebuild/expired handles, lifecycle/catch-up/reset/concurrency, effective providers, observed firing/timing/physical effects |
+
+Three collectors reproduce61 deterministic outputs:20trigger,20condition,21service. There are13 finite condition host cases; original/runtime execution remains0. Counts describe reproducibility/navigation, not whole-firmware coverage. API documentation is external semantic context, not target headers or runtime observations; raw/current source bytes and provider candidates are independently pinned.
+
+Original inputs, completed reports and prior dossiers remain read-only. One earlier action page receives a continuation link after an exact pre-edit copy. Missing configured assets/extras80/81/94/95, valid scene population, full source/Device gates and physical/product validation remain explicit. Closed authentication/session/framing/equivalent work remains closed.

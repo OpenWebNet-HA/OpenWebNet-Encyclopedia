@@ -1,0 +1,123 @@
+{
+  "/home/bticino/alarm_manager/config.json": {
+    "root_keys": [
+      "logLevel",
+      "logFile",
+      "wdtEnabled",
+      "wdtTimeout",
+      "wdtFile",
+      "dataPath",
+      "alarmConfigFile",
+      "sensorsIdsFile",
+      "partitionsIdsFile",
+      "pollingTime",
+      "traceCom"
+    ],
+    "selected_values": {
+      "alarmConfigFile": "alarm.cfg",
+      "dataPath": "/home/bticino/cfg/extra/0/alarm_manager/",
+      "logFile": "/var/tmp/alarm_manager.log",
+      "partitionsIdsFile": "partitionsId.cfg",
+      "pollingTime": 5,
+      "sensorsIdsFile": "sensorsIds.cfg",
+      "wdtEnabled": true,
+      "wdtFile": "/var/tmp/bticino/bt_wd/alarm_manager",
+      "wdtTimeout": 10
+    }
+  },
+  "/home/bticino/backup_manager/config.json": {
+    "root_keys": [
+      "logLevel",
+      "logFile",
+      "wdtEnabled",
+      "wdtTimeout",
+      "wdtFile",
+      "dataPath",
+      "HTTPport",
+      "HTTPtimeout",
+      "certPath",
+      "encryptedPW",
+      "backupSaveFolder",
+      "processToBackup",
+      "processToClean"
+    ],
+    "selected_values": {
+      "dataPath": "/home/bticino/cfg/extra/0/backup_manager/",
+      "logFile": "/var/tmp/backup_manager.log",
+      "wdtEnabled": true,
+      "wdtFile": "/var/tmp/bticino/bt_wd/backup_manager",
+      "wdtTimeout": 10
+    }
+  },
+  "/home/bticino/energy_manager/config.json": {
+    "root_keys": [
+      "logLevel",
+      "logFile",
+      "wdtEnabled",
+      "wdtTimeout",
+      "wdtFile",
+      "dataPath",
+      "openserverParams"
+    ],
+    "selected_values": {
+      "dataPath": "/home/bticino/cfg/extra/0/energy_manager/",
+      "logFile": "/var/tmp/energy_manager.log",
+      "wdtEnabled": true,
+      "wdtFile": "/var/tmp/bticino/bt_wd/energy_manager",
+      "wdtTimeout": 10
+    }
+  },
+  "/home/bticino/gateway_manager/config.json": {
+    "root_keys": [
+      "logLevel",
+      "logFile",
+      "wdtEnabled",
+      "wdtTimeout",
+      "wdtFile",
+      "dhcpEnabled",
+      "newLedSupport"
+    ],
+    "selected_values": {
+      "logFile": "/var/tmp/gateway_manager.log",
+      "wdtEnabled": true,
+      "wdtFile": "/var/tmp/bticino/bt_wd/gateway_manager",
+      "wdtTimeout": 10
+    }
+  },
+  "/home/bticino/player_manager/config.json": {
+    "root_keys": [
+      "logLevel",
+      "logFile",
+      "dataPath",
+      "oldNuvoPath",
+      "oldSonosFile",
+      "wdtEnabled",
+      "wdtTimeout",
+      "wdtFile"
+    ],
+    "selected_values": {
+      "dataPath": "/home/bticino/cfg/extra/0/player_manager",
+      "logFile": "/var/tmp/player_manager.log",
+      "wdtEnabled": true,
+      "wdtFile": "/var/tmp/bticino/bt_wd/player_manager",
+      "wdtTimeout": 10
+    }
+  },
+  "/home/bticino/scheduling_manager/config.json": {
+    "root_keys": [
+      "logLevel",
+      "logFile",
+      "wdtEnabled",
+      "wdtTimeout",
+      "wdtFile",
+      "scenesPath"
+    ],
+    "selected_values": {
+      "logFile": "/var/tmp/scheduling_manager.log",
+      "scenesPath": "/home/bticino/cfg/extra/0/scheduling_manager",
+      "wdtEnabled": true,
+      "wdtFile": "/var/tmp/bticino/bt_wd/scheduling_manager",
+      "wdtTimeout": 10
+    }
+  }
+}

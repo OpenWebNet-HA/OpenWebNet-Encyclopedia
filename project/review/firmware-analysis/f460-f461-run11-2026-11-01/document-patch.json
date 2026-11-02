@@ -1,0 +1,17 @@
+{
+  "scope": "Candidate local F460 receiver writer with caller gap and actual F461 main config selection; catalogue profile unchanged",
+  "patches": [
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "snapshot": "f460-f461-deep-analysis.md",
+      "before_bytes": 28872,
+      "before_sha256": "a96ca9d01a24312b305b3e2c11da24d79a28d1fb7618db7d3ffd61a2271896c9",
+      "candidate": "REFERENCE_DRAFT.md",
+      "mode": "replace-reviewed-candidate",
+      "after_bytes": 32126,
+      "after_sha256": "478e81003ae6f419f1c3ccee6e108f4ddf554d2020fefdb12ba82b326db463a6"
+    }
+  ],
+  "main_reproduction": "REFERENCE_DRAFT_METHOD.json",
+  "unchanged_profile_sha256": "bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba"
+}

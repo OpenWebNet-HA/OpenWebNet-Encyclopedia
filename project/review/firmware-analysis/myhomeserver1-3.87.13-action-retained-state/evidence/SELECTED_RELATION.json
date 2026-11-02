@@ -1,0 +1,57 @@
+{
+  "conditional_relation": "If selectedproducerwrite precedes selectedconsumerread without incompatible interveningmutation and allobject/provider/binding/branch premises hold, helperrequestsstatusstringon; no naturalorder/freshness/correlation/runtimeorphysicalproof.",
+  "consumer": {
+    "actual_converter_source": "SP600=descriptorSP524+76; copiedpair28/32",
+    "actual_copy": "SP296/SP300\u2192SP628/SP632",
+    "literal_R1_origin": "1atcddac;subtract1atced6c\u21920",
+    "local_record": "SP268:presence28=1/status32=0",
+    "on_branch": "0xced78",
+    "selected_conversion": "source0+1\u2192tableindex1,length2,on; statuskeyassignmentrequest",
+    "selected_guard": "validlength2 and exact byteson",
+    "source": "sameGstring24 pointer/length"
+  },
+  "execution": {
+    "input_fixtures": 0,
+    "new_original": 0,
+    "prior_ledger_unchanged": {
+      "C_primitives": 0,
+      "EXIT": 8,
+      "corpora": 1,
+      "data_setup_relocations": 4,
+      "entries": 8,
+      "hooks": 360,
+      "original_visits": 340,
+      "redirects": 12,
+      "stops": 0
+    },
+    "semantic_models": 0
+  },
+  "limits": [
+    "no broadstate/propertymatrix",
+    "no cachedrecordclass/type/layout transfer",
+    "no naturalfirst-second ordering or samequeuedaction proof",
+    "no wholelifetime/concurrency/initialization/freshness/globalabsence/defect conclusion",
+    "no output/success/physicalrestoration claim"
+  ],
+  "namespaces": [
+    "G is fixed linked localglobal, not per-capture member or proven key-specific record",
+    "firstcaptureID/secondcaptureID/outerUUID remain distinct",
+    "localstatus0 is notOPENWHAT/kind/actionenum",
+    "sharedstopbyte167800 is separate fromG167808; no relationship fromadjacency"
+  ],
+  "producer": {
+    "destination_G": "0x167808",
+    "opaque_query": "0x10f4a0",
+    "premises": [
+      "firstcapture48 nonzero and selected query path reached",
+      "query returns normalpair word0nonnull",
+      "valid returnedrecord string8/readablewords36/40/44 andnormalstringassignmentreturn"
+    ],
+    "tuple": {
+      "record_string8": "G_string24",
+      "record_word36": "G_word48",
+      "record_word40": "G_word52",
+      "record_word44": "G_word56"
+    }
+  }
+}

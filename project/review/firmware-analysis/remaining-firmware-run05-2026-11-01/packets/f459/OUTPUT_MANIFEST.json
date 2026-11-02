@@ -1,0 +1,30 @@
+{
+  "collector_sha256": "69626d04c787f4c41dae4c538e4039e03c8a664a5704c322ee6f1d468c0dfa86",
+  "original_execution": 0,
+  "outputs": {
+    "INPUT_PINS.json": {
+      "bytes": 831,
+      "sha256": "e496475e0b3f321a4dc128562e96e91c1c7d9c1efdcfcb4155d2e1335b68adee"
+    },
+    "REPORT.md": {
+      "bytes": 4311,
+      "sha256": "a88088bf8c2cd0908fb77ac57110c9de0c106f67e0fa940dab3ff17642cfa5cf"
+    },
+    "SOURCE.json": {
+      "bytes": 5883,
+      "sha256": "11f23ff8b471e1407fcfd621f20e72a2f3e1a57b218eae5d8cc46453f234611b"
+    },
+    "spans/inherited-read-first-string-operand.txt": {
+      "bytes": 428,
+      "sha256": "93a7f486e623a85f6abfa5ab19f4b38ecc171b6b6335e731034f904ef35297ac"
+    },
+    "spans/inherited-write-first-string-operand.txt": {
+      "bytes": 440,
+      "sha256": "a418be9f8dead81e8c0460e8100b1000f2a7fda1d179e7274bc80e48a17ef194"
+    },
+    "spans/new-constructor-namespace-source.txt": {
+      "bytes": 1424,
+      "sha256": "c6b0c35b5808ebb85240c5efc9c7897d65664519168f6690dd000ad8ae01cf75"
+    }
+  }
+}

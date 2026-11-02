@@ -1,0 +1,195 @@
+{
+  "branches": [
+    {
+      "VA": "0xb9a0",
+      "target": "0x45354"
+    },
+    {
+      "VA": "0xb9a4",
+      "target": "0xb9d4"
+    },
+    {
+      "VA": "0x4536c",
+      "target": "0x2eec4"
+    },
+    {
+      "VA": "0x45388",
+      "target": "0x453ac"
+    },
+    {
+      "VA": "0x453a0",
+      "target": "0xb53c"
+    },
+    {
+      "VA": "0x453a8",
+      "target": "0xafe4"
+    }
+  ],
+  "guards": [
+    {
+      "VA": "0xb9a0",
+      "word": "0xeb00e66b"
+    },
+    {
+      "VA": "0xb9a4",
+      "word": "0xea00000a"
+    },
+    {
+      "VA": "0x45354",
+      "word": "0xe92d4800"
+    },
+    {
+      "VA": "0x45358",
+      "word": "0xe28db004"
+    },
+    {
+      "VA": "0x4535c",
+      "word": "0xe59f304c"
+    },
+    {
+      "VA": "0x45360",
+      "word": "0xe59f204c"
+    },
+    {
+      "VA": "0x45364",
+      "word": "0xe1a00003"
+    },
+    {
+      "VA": "0x45368",
+      "word": "0xe1a01002"
+    },
+    {
+      "VA": "0x4536c",
+      "word": "0xebffa6d4"
+    },
+    {
+      "VA": "0x45370",
+      "word": "0xe1a03000"
+    },
+    {
+      "VA": "0x45374",
+      "word": "0xe3530000"
+    },
+    {
+      "VA": "0x45378",
+      "word": "0x13a03000"
+    },
+    {
+      "VA": "0x4537c",
+      "word": "0x3a03001"
+    },
+    {
+      "VA": "0x45380",
+      "word": "0xe20330ff"
+    },
+    {
+      "VA": "0x45384",
+      "word": "0xe3530000"
+    },
+    {
+      "VA": "0x45388",
+      "word": "0xa000007"
+    },
+    {
+      "VA": "0x453a0",
+      "word": "0xebff1865"
+    },
+    {
+      "VA": "0x453a4",
+      "word": "0xe3e00000"
+    },
+    {
+      "VA": "0x453a8",
+      "word": "0xebff170d"
+    },
+    {
+      "VA": "0x453ac",
+      "word": "0xe8bd8800"
+    },
+    {
+      "VA": "0x453b0",
+      "word": "0x7b738"
+    },
+    {
+      "VA": "0x453b4",
+      "word": "0x7b74c"
+    }
+  ],
+  "image": {
+    "ELF32_LE": true,
+    "PT_LOAD": [
+      [
+        1,
+        0,
+        32768,
+        32768,
+        502844,
+        502844,
+        5,
+        32768
+      ],
+      [
+        1,
+        503808,
+        569344,
+        569344,
+        13052,
+        419452,
+        6,
+        32768
+      ]
+    ],
+    "bytes": 518608,
+    "flags": "0x5000002",
+    "machine": 40,
+    "path": "home/bticino/bin/bacclient",
+    "sha256": "e5bd026f22d56f40b697b55d1f0865aed4bbeb2aafbeafc1b1d53e6ca9fe1ec4",
+    "type": 2
+  },
+  "imports": [
+    {
+      "GOT": "0x8b438",
+      "PLT": "0xb53c",
+      "name": "_ZN6logger5debugEiPKcz",
+      "relocation": "0008b438  0000ae16 R_ARM_JUMP_SLOT        0000b53c   _ZN6logger5debugEiPKcz"
+    },
+    {
+      "GOT": "0x8b270",
+      "PLT": "0xafe4",
+      "name": "exit",
+      "relocation": "0008b270  00002b16 R_ARM_JUMP_SLOT        0000afe4   exit@GLIBC_2.4"
+    }
+  ],
+  "packaged_asset": {
+    "actual_selected_file": "NOT ESTABLISHED; relative lookup/CWD and opaque helper behavior remain premises",
+    "bytes": 8503,
+    "path": "home/bticino/cfg/BACnetTemplates.xml",
+    "root_tag": "BACnetTemplates",
+    "sha256": "b837e1f86167dfdbf814f0e562c9c2b7349d603939c4945eb3937efc8477ea04"
+  },
+  "pool_joins": [
+    {
+      "instruction": "0x4535c",
+      "pool": "0x453b0",
+      "value": "0x7b738"
+    },
+    {
+      "instruction": "0x45360",
+      "pool": "0x453b4",
+      "value": "0x7b74c"
+    }
+  ],
+  "rejected_helper": "0x2eec4 body OPAQUE; not read/disassembled/retried/indirectly expanded",
+  "safe_literals": [
+    {
+      "NUL_bytes_hex": "2f7661722f746d702f636f6e662e786d6c00",
+      "VA": "0x7b738",
+      "text": "/var/tmp/conf.xml"
+    },
+    {
+      "NUL_bytes_hex": "6366672f4241436e657454656d706c617465732e786d6c00",
+      "VA": "0x7b74c",
+      "text": "cfg/BACnetTemplates.xml"
+    }
+  ]
+}

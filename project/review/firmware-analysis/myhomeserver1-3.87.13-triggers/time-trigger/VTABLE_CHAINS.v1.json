@@ -1,0 +1,62 @@
+[
+  {
+    "chains": [
+      {
+        "got_slot_va": "0x1662d4",
+        "pool_va": "0x2f95c",
+        "relocation": "001662d4  00000017 R_ARM_RELATIVE        "
+      },
+      {
+        "got_slot_va": "0x1662d4",
+        "pool_va": "0xb9078",
+        "relocation": "001662d4  00000017 R_ARM_RELATIVE        "
+      },
+      {
+        "got_slot_va": "0x1662d4",
+        "pool_va": "0xa8b04",
+        "relocation": "001662d4  00000017 R_ARM_RELATIVE        "
+      }
+    ],
+    "header_va": "0x1603dc",
+    "name": "raw-TimeTrigger",
+    "rtti_name": "11TimeTrigger",
+    "rtti_va": "0x163140",
+    "words": [
+      "0x0",
+      "0x163140",
+      "0x230b1",
+      "0x245f5",
+      "0x29af1",
+      "0x2264d",
+      "0x0",
+      "0x16314c",
+      "0x22759",
+      "0x22789"
+    ]
+  },
+  {
+    "chains": [
+      {
+        "got_slot_va": "0x1667e0",
+        "pool_va": "0xa8b08",
+        "relocation": "001667e0  00000017 R_ARM_RELATIVE        "
+      }
+    ],
+    "header_va": "0x161e5c",
+    "name": "compiled-TimeTriggerRunner",
+    "rtti_name": "17TimeTriggerRunner",
+    "rtti_va": "0x164df8",
+    "words": [
+      "0x0",
+      "0x164df8",
+      "0xb8a09",
+      "0xb8be1",
+      "0xb51f5",
+      "0xb52e5",
+      "0xffffffec",
+      "0x164df8",
+      "0xb5269",
+      "0xb5361"
+    ]
+  }
+]

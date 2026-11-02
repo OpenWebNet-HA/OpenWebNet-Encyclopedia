@@ -1,0 +1,46 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/usr/lib/libstdc++.so.6.0.29:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0009b234 <_ZNSt6thread4joinEv@@GLIBCXX_3.4.11>:
+   9b234:	b510      	push	{r4, lr}
+   9b236:	4604      	mov	r4, r0
+   9b238:	6800      	ldr	r0, [r0, #0]
+   9b23a:	b128      	cbz	r0, 9b248 <_ZNSt6thread4joinEv@@GLIBCXX_3.4.11+0x14>
+   9b23c:	2100      	movs	r1, #0
+   9b23e:	f7dd ea08 	blx	78650 <pthread_join@plt>
+   9b242:	b910      	cbnz	r0, 9b24a <_ZNSt6thread4joinEv@@GLIBCXX_3.4.11+0x16>
+   9b244:	6020      	str	r0, [r4, #0]
+   9b246:	bd10      	pop	{r4, pc}
+   9b248:	2016      	movs	r0, #22
+   9b24a:	f7e0 eb4c 	blx	7b8e4 <_ZSt20__throw_system_errori@plt>
+   9b24e:	bf00      	nop
+
+0009b250 <_ZNSt6thread6detachEv@@GLIBCXX_3.4.11>:
+   9b250:	b510      	push	{r4, lr}
+   9b252:	4604      	mov	r4, r0
+   9b254:	6800      	ldr	r0, [r0, #0]
+   9b256:	b120      	cbz	r0, 9b262 <_ZNSt6thread6detachEv@@GLIBCXX_3.4.11+0x12>
+   9b258:	f7df e8c2 	blx	7a3e0 <pthread_detach@plt>
+   9b25c:	b910      	cbnz	r0, 9b264 <_ZNSt6thread6detachEv@@GLIBCXX_3.4.11+0x14>
+   9b25e:	6020      	str	r0, [r4, #0]
+   9b260:	bd10      	pop	{r4, pc}
+   9b262:	2016      	movs	r0, #22
+   9b264:	f7e0 eb3e 	blx	7b8e4 <_ZSt20__throw_system_errori@plt>
+
+0009b268 <_ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@@GLIBCXX_3.4.22>:
+   9b268:	4a06      	ldr	r2, [pc, #24]	@ (9b284 <_ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@@GLIBCXX_3.4.22+0x1c>)
+   9b26a:	b510      	push	{r4, lr}
+   9b26c:	460c      	mov	r4, r1
+   9b26e:	6823      	ldr	r3, [r4, #0]
+   9b270:	2100      	movs	r1, #0
+   9b272:	447a      	add	r2, pc
+   9b274:	f7de eaae 	blx	797d4 <pthread_create@plt>
+   9b278:	b908      	cbnz	r0, 9b27e <_ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@@GLIBCXX_3.4.22+0x16>
+   9b27a:	6020      	str	r0, [r4, #0]
+   9b27c:	bd10      	pop	{r4, pc}
+   9b27e:	f7e0 eb32 	blx	7b8e4 <_ZSt20__throw_system_errori@plt>
+   9b282:	bf00      	nop
+   9b284:	ff83 ffff 			@ <UNDEFINED> instruction: 0xff83ffff

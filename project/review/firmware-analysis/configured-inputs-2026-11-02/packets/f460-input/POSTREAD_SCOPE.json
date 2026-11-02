@@ -1,0 +1,13 @@
+{
+  "status": "HONEST_POSTREAD_CANONICAL_EVIDENCE_SCOPE",
+  "saved_UTC": "2026-11-02T05:51:27.365614+00:00",
+  "pre_read_authorization_file_existed": false,
+  "actual_parent_static_authorization_existed": true,
+  "root_decision": "Parent allows canonical evidence ONLY already-authorized512B10fe60..110060, actual105760call and importPLT/relocation metadata after preserving actual history; NO additional body/neighbor/provider reads",
+  "actual_preparation_history": "PREPARATION_HISTORY.json immutable, wrong105768inlineassert and uncheckednexttoolcall preserved; no clean/backdated preflight claim",
+  "canonical_authoring_started_after_this_record": true,
+  "new_scope_not_performed": "No parsercall/outcome beyondend110060, fullJSON/fileacceptance/actualconfiguredfile, extrahelper/providerbody or additionalbinaryscope",
+  "correct_inherited_call_VA": "0x105760",
+  "correct_target_VA": "0x10fe60",
+  "source_role": "User SceneRunner same-receiver/providedsource file-open caller prefix only, if actual import proofs support"
+}

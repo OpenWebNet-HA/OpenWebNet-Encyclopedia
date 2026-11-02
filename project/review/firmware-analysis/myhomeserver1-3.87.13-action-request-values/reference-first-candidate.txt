@@ -1,0 +1,43 @@
+# MyHOMEServer1 3.87.13 Selected Action Request Values
+
+The [action-request handoff](myhomeserver1-3.87.13-action-output.md) now has a concrete local descriptor contract: its original constructor writes version `2.0` and method `light.setStatus`. The selected first-callable source also connects a captured target ID and a conditionally positive signed speed word through actual copies to `params.id` and `params.speed`. This is implementation evidence for local construction requests, rather than an executed JSON object, complete command generator, supported physical function or successful delivery.
+
+The [review capsule](../../project/review/firmware-analysis/myhomeserver1-3.87.13-action-request-values/README.md) retains original bytes, class/relocation/PIC/ABI evidence, exact first copies, reproduction and independent review. Scheduler image object `home/bticino/scheduling_manager/scheduling_manager` has SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Addresses are linked ELF addresses, without an observed runtime bias. Ordinary valid objects, effective imports and normally returning providers remain premises throughout.
+
+## Descriptor constants and separate identities
+
+Local constructor0xd20c0 first installs the original JsonRpcRequest representation and later the LightSetStatusBean address point0x16215c. Its parameter serializer0xd163c is a separate nonvirtual helper; its primary method pointer is not substituted for that helper. Descriptor, raw64-byte action, compiled116-byte runner, captures and parameter records remain distinct objects.
+
+| Descriptor subobject | Selected normal constructor source |
+| --- | --- |
+|Version string+4|Exact three-character `2.0`, literal0x116134|
+|Method string+28|Exact15-character `light.setStatus`, literal0x1361d4, then string-assignment request|
+|Outer request ID string+52|Imported UUID generation/lower-format conversion and string-assignment requests|
+|Parameter presence byte+76|Initially0; later source-specific merge can populate the parameter subobject|
+
+The source contains two UUID generation/conversion request pairs. Under the selected normal provider returns, the later assignment replaces the earlier outer-ID string. This is an ordering fact, not a UUID observation, uniqueness/randomness proof or defect finding. Mutex error, canary, allocation/string and unwind behavior remain conditional. No UUID value is generated or exported by this research.
+
+The outer request ID and `params.id` have different producers. The former comes from those UUID requests; the latter is copied from the action's captured configured ID string. Equal JSON key spelling at different nesting levels does not merge their identity namespaces.
+
+## The selected parameter fields have actual caller copies
+
+The first callable initially builds a source record at current SP+148. It copies the captured ID string and marks presence byte0. A signed>0 test on capture word0 controls a store into source word40 and presence byte36. These are the selected caller's conditions, not a universal accepted numeric range or physical speed unit.
+
+The descriptor constructed at SP+404 initially has its parameter-presence byte76 clear. Consequently the actual merge takes out-of-line branch0xd05ac. Under the source ID-presence premise and normal string-provider returns, that branch copies the ID into descriptor+80 and marks descriptor76=1 before rejoining0xcf7e4. The following pair copy at0xcf7f0..0xcf7f8 transfers source SP+184/+188 into SP+516/+520.
+
+The actual converter argument at0xcf900..0xcf904 is SP+480, equal to descriptor SP+404+76. Thus those destinations are exactly the converter's presence36/value40, while descriptor+80 is its string+4. This joins separate stack records through original copies and call arguments; it is not an inference from equal offsets.
+
+| Converter input | Selected serializer request |
+| --- | --- |
+|Presence byte0 nonzero|Construct a JSON string from input+4 and assign exact key `id`|
+|Presence byte36 nonzero|Load signed word40, request `Json::Value(int)` and assign exact key `speed`|
+
+The converter does not repeat the caller's positive comparison on its selected speed arm. Full JSON member/map/move/assignment behavior remains a provider premise. Other parameter fields, every merge branch and arbitrary constructed or corrupted records are outside this result. The second callable shares the same descriptor constructor contract under normal returns, but its actual parameter values and equality with the first are not established here.
+
+## Practical scope and remaining questions
+
+Together with the earlier handoff, this gives offline analysis a source-backed local method/version and two specific field producers. A future fixture can distinguish the outer correlation ID from the configured target ID. This does not prove the complete payload or justify sending a generated request to a device. The local output helper0x5dda0 and downstream receiving/transport/MQTT/libjel/authentication/session/framing bodies remain unopened. No public OpenWebNet mapping, physical speed domain, prior-state restoration or natural execution order is assigned.
+
+The next useful questions are the first/second callable's selected local state retention and ID correlation, positive shared-reset ownership, actual configuration/assets and natural owner/poll/removal order. Effective provider/type/freshness, complete errors/unwind/lifetime/concurrency and physical evidence remain open. Missing extras80/81/94/95 cannot be inferred from defaults. The [curated product role](../../devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md) remains separate from private class and method labels.
+
+New execution, semantic fixtures/models and CPU replays are0. MHS remains one original double-provider corpus/eight entries/340 code-hook visits/zero C primitives/12 redirects/eight EXIT/zero stops/360 hooks plus four data-relocation setups. Full JSON/scheduler/process/OS/services/threads/timers/network/bus and physical execution remain0; earlier F454/MH202 ledgers and historical limitations remain separate. Wider Device/source gates remain pending.

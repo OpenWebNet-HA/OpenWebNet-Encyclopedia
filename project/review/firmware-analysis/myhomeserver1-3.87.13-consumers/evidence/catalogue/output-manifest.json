@@ -1,0 +1,74 @@
+{
+  "collector_sha256": "90abf64677172dcee56402ccbe5962a9962200ac2c14de5506be293f479ee601",
+  "counts": {
+    "PIC_literals": 3,
+    "SQL_execution": 0,
+    "Thumb_assertions": 17,
+    "inputs": 9,
+    "original_execution": 0,
+    "original_spans": 10
+  },
+  "outputs": {
+    "METHOD.json": {
+      "bytes": 1134,
+      "sha256": "852651849508c4239db2f34083bae2198a82eff011c328d9e8fc6d8a99cb9478"
+    },
+    "caller-false-result.txt": {
+      "bytes": 175,
+      "sha256": "1d77483da78db3a85da89ed09e709836954451d21cda2a40ae81f3090bb7094e"
+    },
+    "caller-open-and-dependent-setup.txt": {
+      "bytes": 897,
+      "sha256": "84f6d6586780d63885d7d155f3cc7b16f207f22e87cb5e3f346fa5049080aa17"
+    },
+    "candidate-sqlite-open-wrappers.txt": {
+      "bytes": 295,
+      "sha256": "4e9617534336c887b1e888ac2cff35fc92c708e3abf99e3f2dda47c93546340b"
+    },
+    "input-manifest.json": {
+      "bytes": 1510,
+      "sha256": "dba1ea96ec1dc5ec51a263a7d4934a23b11b629c21bc87d57766845e81404503"
+    },
+    "original-source-provenance.json": {
+      "bytes": 5769,
+      "sha256": "35efd45c83964eb25d11be1519aa2432c52a75946c6f039a020d5e614c064f3b"
+    },
+    "ownership-and-controlflow.json": {
+      "bytes": 3532,
+      "sha256": "f351b920b0d259fecb864bc30c312239a4045029786828a06ed3cdba5ef3ad4b"
+    },
+    "reader-finalize-close-error-exits.txt": {
+      "bytes": 1574,
+      "sha256": "569c0a3e955a237474bda9fdc443be41b3560354e5af6111c6bbc446123f7d32"
+    },
+    "reader-path-stat-open-prepare.txt": {
+      "bytes": 1747,
+      "sha256": "42442692151bbbe603d4253592e20712a8366954363a168dd8724a1405e42b86"
+    },
+    "reader-step-column-stores.txt": {
+      "bytes": 1202,
+      "sha256": "c1229d5923c3ebd57547f89da558a5153eb781a1ceeae6c65f3ca8eb505bcc55"
+    },
+    "selected-ELF-and-imports.json": {
+      "bytes": 8412,
+      "sha256": "c309244cd2655b1837d6498e88a0e7146fc275223b90d9aefeace32443643b94"
+    },
+    "selected-static-SQL-constructor-request.txt": {
+      "bytes": 1620,
+      "sha256": "5d4ff9ea7ca34eb3fbdb961315a6586755c3c7d08db7b2e464616e027b0c703e"
+    },
+    "sqlite-close-interworking-PLT.txt": {
+      "bytes": 484,
+      "sha256": "de8f1ba996a6c46b88fe2c9f7de3977adc27894bdab900f8f581e41e7e155264"
+    },
+    "string-copy-helper.txt": {
+      "bytes": 2898,
+      "sha256": "c3ddffc8bd543cb1c41c6ac3c59d06d18817bb316b4caa2dcef3e7f9f139ab92"
+    },
+    "two-handle-catalogue-opener.txt": {
+      "bytes": 2283,
+      "sha256": "77311dc8aae237348a435a4950c35c9538fe391e5495e1f2ba33e3ab26e5a01e"
+    }
+  },
+  "report_sha256": "609c22da91d9f4b1cf2d51dca5fb50fc3665190907fa96bd0cb8f18a1b7708a4"
+}

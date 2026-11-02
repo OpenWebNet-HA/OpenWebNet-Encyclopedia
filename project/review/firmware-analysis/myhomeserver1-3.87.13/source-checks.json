@@ -1,0 +1,44 @@
+{
+  "scope": "Parent host-only reproduction of current first-pass collectors, no vendor execution",
+  "checks": [
+    {
+      "path": "inventory/collect_inventory_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "0012cf",
+          "wall_time_seconds": 3.613018378,
+          "exit_code": 0,
+          "original_token_count": 15,
+          "output": "{\"status\": \"PASS\", \"outputs\": 13, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "path": "boot/collect_boot_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "81230c",
+          "wall_time_seconds": 0.147777857,
+          "exit_code": 0,
+          "original_token_count": 61,
+          "output": "{\n  \"Thumb_byte_assertions\": 10,\n  \"check\": true,\n  \"inputs\": 50,\n  \"native_source_spans\": 10,\n  \"normal_process_declarations\": 25,\n  \"original_execution\": 0,\n  \"outputs\": 20,\n  \"public_PIC_literals\": 9,\n  \"reduced_process_declarations\": 23\n}\n"
+        }
+      }
+    },
+    {
+      "path": "protocol/collect_protocol_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "621a82",
+          "wall_time_seconds": 0.263846309,
+          "exit_code": 0,
+          "original_token_count": 34,
+          "output": "{\"check\": true, \"outputs\": 22, \"inputs\": 97, \"ELFs\": 44, \"spans\": 10, \"critical_words\": 25, \"host_cases\": 2, \"original_execution\": 0}\n"
+        }
+      }
+    }
+  ]
+}

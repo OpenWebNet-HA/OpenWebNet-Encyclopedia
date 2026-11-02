@@ -1,0 +1,34 @@
+# BNLD condition: independent source review
+
+Verdict: PASS; no correction requested. This is an independent original-byte/static source review of the fresh BNLD condition packet and current immutable first candidate. No original/vendor/native/provider instructions, JSON/query/scene objects, semantic host cases, target process/OS/network/bus or physical operation were executed. Author files and original sources remained read-only. This is not a complete serializer/query/accepted-input/provider/lifetime or scene-admission proof.
+
+## Evidence reproduction and source checks
+
+Read-only `python3 -B collect_condition_v1.py --check` reproduced12 outputs. A separate ELF32 PT_LOAD mapper independently checked the original scheduler SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`, all8 raw span hashes,21 instruction guards,2 raw/compiled RTTI/header identities,3 exact key pool/PC joins and all3 raw/compiled/numeric dispatch-table arithmetic relations. The selected query singleton GOT value and4 original relative entries (singleton, both RTTI references and compiled predicate pointer) agree. All14 first-candidate files match their current bytes, lengths and declared hashes. No earlier failed generation or overwritten candidate is evidenced by this packet; historical development events are not independently proved merely from a success statement.
+
+The retained predicate, raw/compiled constructors and initializer spans were read for register/branch semantics rather than relying only on equal collector output. Thumb pointer0xf1351 denotes instruction entry0xf1350, stored in the primary vtable's predicate slot; this is distinct from cleanup methods and the secondary base at compiled+104. Pool and TBB bytes remain data, not additional interpreted instructions.
+
+## Important original contracts verified
+
+- Local condition-table row2 is BNLD. The raw factory's adjusted index and compiled initializer's direct index use different TBH transformations and select0x304f4 and0xa7d40 respectively. They are condition-local indices, not action/trigger numbers or public OPEN support. Raw48-byte BnldCondition and compiled152-byte BnldConditionRunner identities, id108, enabled132 and words136/140/144/148 are separately derived.
+- Raw constructor0x2bd58 initializes status40/level44 to all-one bit patterns. Actual isMember status result chooses the split: nonzero follows string decoding and leaves/resets level44 to minus-one; only zero reaches level-key access/asInt and stores44. Thus explicit noStatus is not equivalent to absent status plus a supplied numeric level. JsonCpp presence/conversion/error behavior remains a valid-object/provider premise, not a default, accepted-domain or safety claim.
+- The initializer invokes the raw serializer, passes the same returned storage to the raw constructor, then constructs the152-byte compiled condition and requests scene+116 publication. The serializer's value contract and full owner/publication behavior remain opaque as stated. The compiled constructor copies enabled28 to132 and raw32/36/40/44 to136/140/144/148; no BNIL schema/operator-name behavior is substituted for this condition.
+- Predicate0xf1350 starts its saved result at1. Disabled enabled132==0 returns that1 through the normal stack-guard epilogue before the record-query branch. The enabled selected singleton leg supplies hidden result storage, singleton0x167368, selector0 and id-string address+108 to0x10f4a0. A null returned data pointer sets result0. Query semantics, record type/readiness, reference-count/provider success and effective binding remain unresolved; helper0x10f4a0 is not equated with the companion's different0x10e3d8 merely because they share a global.
+- Record string+8 recognizes exact on/off/noStatus as local0/1/minus-one. For configured status144 other than minus-one, operator140 code2 performs equality and3 inequality; other words produce0. Unrecognized strings take the fallback minus-one status path. This differs from BNIL trigger fallthrough semantics and is not imported from that earlier handler.
+- With configured status minus-one, only exact recognized on reaches numeric load record+32 and configured level148. Unsigned operator bound3 precedes TBB data160f0802 at0xf15b2. Its original target order is0->0xf15de,1->0xf15d0,2->0xf15c2,3->0xf15b6. CMP/IT signed conditions yield configured<observed, configured>observed, equality and inequality respectively. No table-order guess from linear block order, unit/brightness interpretation, admissible scalar domain or full condition-operator-name mapping is inferred.
+
+The report accurately distinguishes local normal-return result from a completed scene or action. Conditional query/returned-object validity, normal cleanup, all ownership/error/unwind/concurrency paths, missing configured assets and actual provider/physical behavior stay open. No transport/authentication/session/framing or equivalent body was expanded. Curated product role supplies context without assigning a public or physical function to BNLD.
+
+## Exact reviewed pins
+
+Paths below are relative to condition/.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `de7aa84c6c5c0cdfa8421a80e16655cba2f0b6c01a90ea70ead6933f334b2d5c` |
+| `collect_condition_v1.py` | `c106c24f779a7ecb4a7b5aff086d32e3fec8737689c06d54c2fcb15df11803a4` |
+| `OUTPUT_MANIFEST.json` | `e04e10138361a9e8b0d96f1d740bc19e5d31c9229e94065144f8304888a9270c` |
+| `ORIGINAL_SOURCE.json` | `639e7dc0cfb329b984e35681e9f2d0fff7ecdd98fe315d95d19f9b3f0091dbf5` |
+| `CONTRACT.json` | `1e86cae0de48f88b9620a1e39681824f89fd7a76e9be51a2cc81451b4b3e0f8b` |
+| `INPUTS.json` | `e06c88902ee31abb0666efca382f049974d65209b19ea616ea274915aaca1055` |
+| `first-candidate/INDEX.json` | `00e0715e1f3c7a8d848b19a1302ddb856afaee74d2cadd7bbc47b74257db4b57` |

@@ -1,0 +1,60 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/usr/lib/libjsoncpp.so.1.9.5:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00017e74 <_ZNK4Json5Value4findEPKcS2_@@Base>:
+   17e74:	b5f0      	push	{r4, r5, r6, r7, lr}
+   17e76:	4617      	mov	r7, r2
+   17e78:	4a2f      	ldr	r2, [pc, #188]	@ (17f38 <_ZNK4Json5Value4findEPKcS2_@@Base+0xc4>)
+   17e7a:	b0bd      	sub	sp, #244	@ 0xf4
+   17e7c:	4604      	mov	r4, r0
+   17e7e:	460d      	mov	r5, r1
+   17e80:	4b2e      	ldr	r3, [pc, #184]	@ (17f3c <_ZNK4Json5Value4findEPKcS2_@@Base+0xc8>)
+   17e82:	447a      	add	r2, pc
+   17e84:	58d3      	ldr	r3, [r2, r3]
+   17e86:	681b      	ldr	r3, [r3, #0]
+   17e88:	933b      	str	r3, [sp, #236]	@ 0xec
+   17e8a:	f04f 0300 	mov.w	r3, #0
+   17e8e:	f7f3 ec6c 	blx	b768 <_ZNK4Json5Value4typeEv@plt>
+   17e92:	b120      	cbz	r0, 17e9e <_ZNK4Json5Value4findEPKcS2_@@Base+0x2a>
+   17e94:	4620      	mov	r0, r4
+   17e96:	f7f3 ec68 	blx	b768 <_ZNK4Json5Value4typeEv@plt>
+   17e9a:	2807      	cmp	r0, #7
+   17e9c:	d128      	bne.n	17ef0 <_ZNK4Json5Value4findEPKcS2_@@Base+0x7c>
+   17e9e:	4620      	mov	r0, r4
+   17ea0:	f7f3 ec62 	blx	b768 <_ZNK4Json5Value4typeEv@plt>
+   17ea4:	b310      	cbz	r0, 17eec <_ZNK4Json5Value4findEPKcS2_@@Base+0x78>
+   17ea6:	ae01      	add	r6, sp, #4
+   17ea8:	4629      	mov	r1, r5
+   17eaa:	2300      	movs	r3, #0
+   17eac:	1b7a      	subs	r2, r7, r5
+   17eae:	4630      	mov	r0, r6
+   17eb0:	f7f3 e9b0 	blx	b214 <_ZN4Json5Value8CZStringC1EPKcjNS1_17DuplicationPolicyE@plt>
+   17eb4:	6820      	ldr	r0, [r4, #0]
+   17eb6:	4631      	mov	r1, r6
+   17eb8:	f7f3 ee18 	blx	baec <_ZNSt8_Rb_treeIN4Json5Value8CZStringESt4pairIKS2_S1_ESt10_Select1stIS5_ESt4lessIS2_ESaIS5_EE4findERS4_@plt>
+   17ebc:	6823      	ldr	r3, [r4, #0]
+   17ebe:	3304      	adds	r3, #4
+   17ec0:	4298      	cmp	r0, r3
+   17ec2:	bf18      	it	ne
+   17ec4:	f100 0418 	addne.w	r4, r0, #24
+   17ec8:	4630      	mov	r0, r6
+   17eca:	bf08      	it	eq
+   17ecc:	2400      	moveq	r4, #0
+   17ece:	f7f3 eb90 	blx	b5f0 <_ZN4Json5Value8CZStringD1Ev@plt>
+   17ed2:	4a1b      	ldr	r2, [pc, #108]	@ (17f40 <_ZNK4Json5Value4findEPKcS2_@@Base+0xcc>)
+   17ed4:	4b19      	ldr	r3, [pc, #100]	@ (17f3c <_ZNK4Json5Value4findEPKcS2_@@Base+0xc8>)
+   17ed6:	447a      	add	r2, pc
+   17ed8:	58d3      	ldr	r3, [r2, r3]
+   17eda:	681a      	ldr	r2, [r3, #0]
+   17edc:	9b3b      	ldr	r3, [sp, #236]	@ 0xec
+   17ede:	405a      	eors	r2, r3
+   17ee0:	f04f 0300 	mov.w	r3, #0
+   17ee4:	d115      	bne.n	17f12 <_ZNK4Json5Value4findEPKcS2_@@Base+0x9e>
+   17ee6:	4620      	mov	r0, r4
+   17ee8:	b03d      	add	sp, #244	@ 0xf4
+   17eea:	bdf0      	pop	{r4, r5, r6, r7, pc}
+   17eec:	4604      	mov	r4, r0
+   17eee:	e7f0      	b.n	17ed2 <_ZNK4Json5Value4findEPKcS2_@@Base+0x5e>

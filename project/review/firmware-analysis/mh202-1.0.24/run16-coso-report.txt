@@ -1,0 +1,73 @@
+# MH202 1.0.24 run16 — actual automation synchronizer admission and selected record preservation
+
+## Result
+
+The intervening synchronizer from run15 is an actual registered plugin path, not merely an empty-registry premise. Original `libplug_automation_syn.so` appends numeric criteria **2 and14**, then calls `register_synoptic`. The core prepends its descriptor into manager+28, supplies manager+52 to its initializer, and the descriptor's actual +40 relocation identifies **automation_syn_syndata_from_field0x2290**. Therefore the supplied post-TR WHO2/routing2 record Q can select this callback under ordinary successful initialization/provider/registry premises.
+
+For the exact run15 normal candidate — **Q representation3, parsed WHO2/WHAT0/WHERE0/kind1, selector null** — fresh candidate `libautomation` code classifies WHERE`0` as1. The callback follows the general-address ordinary-command path. With distinct, ordinary private/device-state storage, that selected callback reads Q's parsed object and updates **separate synchronizer state/timer storage**; it does not directly store Q's body pointer, representation, status+52 or ID+60, reparse/free Q, or retain Q as the selected state's pointer. A finite one-device ledger demonstrates those separate write targets rather than assuming an empty registry.
+
+This narrows one concrete callback boundary. It does **not** establish the complete active synchronizer registry, callback order, effects of other callbacks, successful live parser/provider setup, natural queue identity/lifetime or physical acknowledgment. **All new original execution and native counters are0.** Static host reads/binutils and one explicit finite source-state ledger only; no vendor process, target OS, timer, service, network/device/bus, PHP/JS or auth/framing route runs.
+
+## Reproduction and input identity
+
+`python3 -B work/mh202-firmware/research/2026-10-30/coso/run16/collect_evidence.py --check` reproduces20 outputs plus manifest,12 exact original spans,31 asserted words,6 original file inputs,5 safe PIC-resolved literals and1 host state ledger. `--check` writes nothing. The host collector uses verified MH202 `image_vfs.py` and ELF PT_LOAD VA/file mapping; no F454 firmware/layout/harness is reused.
+
+`input-hashes.json` pins the original `/home/bticino/bin/coso`, `/home/bticino/libcoso/libcoso.so`, `/home/bticino/libcoso/libplug_automation_syn.so`, `/home/bticino/lib/libautomation.so`, the two selected safe configuration files, accessor and immutable run15 report. `original-spans.json` pins VAs/file offsets/raw span hashes. `output-manifest.json` pins deterministic evidence; the separate author snapshot includes report/method and excludes itself/later reviews. Report paths are original image paths or research-relative.
+
+## 1. Registry storage, producer and order
+
+Main **0xa1e4..0xa1f8** requests a76-byte zeroed manager and passes it to `get_plug_m`. Fresh core **0x1994..0x19bc** installs its supplied pointer only if the saved manager pointer is null. Under the fresh first-manager/ordinary g_malloc0 premise, manager+28 begins null; a previously installed manager or runtime state is not ruled out by executing nothing.
+
+Core **register_synoptic0x1f24..0x1fd0** obtains the manager, calls `unregister_synoptic` with the supplied descriptor, then **0x1f44..0x1f54** performs `g_list_prepend(manager+28,descriptor)` and saves the head. The unregister helper **0x1d84..0x1dec** compares descriptor field+8, removes a matching existing descriptor with `g_list_remove`, and updates manager+28; it is not a complete descriptor/context destructor. New registration order is therefore prepending after that selected removal contract, not append order or a guarantee of unique arbitrary registry entries.
+
+At **0x1f98..0x1fb4**, registration reads descriptor initializer+36, stores its manager pointer at descriptor+60 and, if the initializer is nonnull, calls it with r0=descriptor and r1=manager+52. The initializer's integer result is not tested before registration returns0. These are selected source contracts, not observed successful memory/list/provider initialization.
+
+The packaged `coso_cfg` safe lines18–19 declare `LibDir=/home/bticino/libcoso` and `PlugCfgDir=/home/bticino/cfg/coso_plugins`. Actual **register_plugins0xc9a0..0xcb6c** opens the directory taken from manager's plugin-data field, repeatedly calls `g_dir_read_name`, checks original prefix **`lib`** and suffix **`.so`**, opens candidates, and requires `init_plugin`/`stop_plugin` symbols before calling the initializer at **0xcafc**. Original strings and complete call list are retained. There is **no explicit sorting call in this complete function**. Thus actual directory enumeration/module success determines initialization order; under ordinary list behavior the synchronizer registry reverses successful registration order. No alphabetic order, fixed actual registry or complete configured module set is asserted. Effective configuration parsing/replacement, loader binding, indirect effects and later registry changes remain separate.
+
+## 2. A concrete WHO2 synchronizer registration
+
+Automation plugin **init_plugin0x17dc..0x1a88** has an initialized-state guard and dependency version/release checks. The selected continuation reads its optional log configuration, then **0x18e4..0x1908** appends2 and14 into descriptor+52 and calls `register_synoptic`. The packaged `automation_syn` file's only selected key is `LogLev=0` at line4; it is not an enable/disable or complete state source.
+
+Original relocation rows identify descriptor **automation_syn0xbd3c,64 bytes**:
+
+| Descriptor member | Original callback |
+|---|---|
+| +36 | `automation_syn_init0x32d8` |
+| +40 | `automation_syn_syndata_from_field0x2290` |
+| +44 | `automation_syn_syndata_from_appli0x1dec` |
+
+Initializer **0x32d8..0x3490** requests28 zeroed bytes when descriptor+56 is null (**0x3454..0x3464**), then stores supplied callback/context words at private+8/+12, clears private+16, and stores descriptor at private+0 (**0x3328..0x333c**). It calls `automation_cfg_plant` at0x3340; nonnull plant entries take the retained parsing/device-state construction loop, while null returns normally at0x3448. Actual configured plant contents/provider and device-state records are not supplied by this image-source trace. A previously existing nonnull context does not authorize assuming all other members zero.
+
+The previously located outer callback **0xad70..0xade0** now has a concrete candidate: it reads descriptors from supplied manager+28, compares each descriptor+52 criterion with Q+48 and calls +40 at **0xadc0**, with descriptor/Q as arguments. Numeric routing2 matches this registered criterion2. The loop does not stop after that match, so this one plugin does not establish the whole registry's effects or order.
+
+## 3. Selected normal Q route and actual write ownership
+
+The selected source record from run15 already has representation3 and coherent parsed WHO2/WHAT0/WHERE0/kind1/null selector. At **0x22d4..0x22dc**, representation3 takes **0x23ec..0x23f8**, loading Q+0 directly into a local parsed pointer. It bypasses the separate representation2 **0x23bc..0x23e8** parser/free/replace path. Consequently there is no selected reparse/free of Q's body or representation store here.
+
+Candidate **libautomation::automation_get_where_type0x132c** first compares WHERE with original literal`0`; exact equality returns1 at **0x1344..0x1350**. Literal pool0x140c resolves through PIC base0x968c to original text0x1490. The remaining classification branches are retained as provenance but are not a new supported-address table.
+
+Back in the callback, decimal WHO2 does not take WHO14's special branch. With private flag+16=0 from selected initialization/unchanged state, **0x2394..0x23a0** rejects the query-kind2 case and reaches the normal kind1 test **0x2328..0x2330→0x2484**. WHAT0 is within the unsigned ordinary0..2 guard at **0x24b0..0x24b4**, and WHERE type1 takes **0x24c8..0x24cc→0x2648**.
+
+That branch obtains the private+24 device-state list. It overwrites working r4 with each **device-state pointer**, distinct from Q. For this type1 route, helper **0x1c90** receives type1, the parsed object and that state record. Exact parsed selector+20 null returns1 at **0x1cc0..0x1ccc**; no state/parsed pointer store occurs on this selected helper branch.
+
+The finite ledger chooses one such separate state with members+40=0,+44=0,+20=0. Original **0x269c..0x26ac** stores WHAT0 into state+16 and constant1 into state+48; state+20=0 leaves its+24 unchanged. **0x26dc** sets the local scheduling flag. On loop completion **0x26ec..0x26f0** returns to common kind handling; kind1 skips measure-kind4/5 processing at0x2338..0x2344. Nonzero scheduling flag requests **g_timeout_source_new(1000)** at0x2360..0x2364, saves the returned source at **private+4** and sets/attaches its callback with the private context. Any old private+4 source is passed to `g_source_destroy` first. This is an API argument/source-order relation, not an elapsed-time guarantee or actual callback execution.
+
+The selected direct writes therefore belong to synchronizer device state and private timer storage, **not Q+0/+52/+56/+60**. The input Q pointer is not written as the selected device-state pointer: the state+48 value is literal1 on this parsed-kind1 branch (`mov fp,#1` at0x2660, store at0x26ac), not a copied parsed-kind field or Q. Q's parsed fields are read through normal string/numeric/logging delegates. Under ordinary distinct, nonaliasing storage and candidate import behavior, the selected callback returns0 at **0x2388** with the same Q/body/status/ID intact. This does not prove arbitrary import interposition cannot mutate memory or that other address/WHAT/kind branches have the same effects.
+
+## Confidence and remaining boundary
+
+High confidence static: manager+28 registration/prepend mechanism, unregistration matching field, absence of an explicit sort in retained register_plugins, automation criteria/callback relocations, selected WHERE0 classifier, normal repr3/kind1 path and separate state/timer stores. The host-only ledger is one source-effect transcription, not runtime/native evidence.
+
+Run15's empty-or-preserving synchronizer premise can now be narrowed **for this one actual eligible automation callback and selected normal route**. It cannot be globally removed: active registry/order, other matching plugins or changed criteria, provider binding, actual configured device-state contents, nonaliasing storage and intervening state remain conditional. The future timer and its publications are outside this batch. Broader record ownership/reclamation, natural queue body/ID selection, actual transport, causal correlation and physical automation result remain unknown.
+
+1. Determine other actual successful module registrations/criteria and later registry changes for the effective startup; no exhaustive module-initializer audit is claimed here.
+2. Join the selected synchronizer's configured device-state producer and future timer publication without interpreting state numerics as physical position/receipt.
+3. Preserve the separately assigned COSO parsed-provider/normal-kind question, queue correlation and source/lifetime boundaries; this report does not substitute the large libopen/common object layouts.
+
+## Author-stage correction history
+
+The first collector assertion expected loader prefix`libplug_`; the exact original literal is **`lib`**. The assertion stopped before any output writes. Exact draft is retained in `development-before-assert/collect_evidence.py`; final assertions/contract and this report use`lib`. This matters to candidate filtering and is not silently generalized from filenames. No historical report/source was modified and no original instruction executed.
+
+## Independent-review wording refinement
+
+The source reviewer requested the exact origin of state+48 literal1 be made explicit:0x2660 loads a literal and0x26ac stores it on the parsed-kind1 branch; it is not copied from the parsed kind field. Exact prior report/snapshot bytes and hashes are retained in `development-before-review/`. The earlier constant1 model and callback/Q-preservation finding are unchanged; collector/source/native counts did not change.

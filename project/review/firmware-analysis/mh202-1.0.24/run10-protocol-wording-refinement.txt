@@ -1,0 +1,21 @@
+# Run10 protocol containment-wording refinement
+
+Independent source reviewer requested a documentation precision correction during current run10 author review. The initial sentence broadly said “Strings are bounded to4096bytes.” The actual code caps `cstring` primitive reads at4096bytes; the separate strtok token scanner checks each byte against permitted mapped regions and has no4096-byte scan cap. Selected fixture strings are short. The corrected report now says exactly that.
+
+No harness/collector code, model behavior, caps, native results or execution counts changed for this refinement. The final21-entry author output manifest was refreshed only for the current report hash. The original execution remains7480 instruction visits+838 C primitives+10 linker redirects+2 EXIT boundaries=8330 code-hook steps. Old completed run reports and original inputs were untouched.
+
+## Exact document history
+
+- Initial run10 report SHA256: `c8f58bac3d67b6b43cb634c2f58094bca3dd2789a94fd5b51ac4362f7f66e9da`.
+- Final corrected author report SHA256: `dd782d0ccd5329a88862eafc1983fe28a8be56a6a037481482d162fe54589367`.
+- Final corrected author output-manifest SHA256: `5d767ef069acd0bf3c8460ee98e8acfdb5dfca87fb5b1de7023185788b1e80de`.
+
+`protocol-report-before-wording-refinement.md` beside this note is **reconstructed and hash-verified**, not represented as an independently retained original snapshot. It was reconstructed by reversing the one documented sentence replacement in the final report and then required to match the previously recorded initial report hash above byte-for-byte. The old-byte SHA check passed. Final exports must use the corrected dd782d0c… report; the reconstructed file is historical evidence only.
+
+## Unchanged current code/result pins
+
+- `emulate_normal_builder.py`: `7a41b303760a2e1a5addf70f6abd99bde746f514f3a50e9145dc442babceb209`
+- `collect_evidence.py`: `3003f9e192c57b20e16a4ab59115df99ba747fc050d5b837c262fa72d8e191e3`
+- `builder-results.json`: `622e35eb432f026d16f548a367c8bfbcfcae850562cc068ee29183f2840a3057`
+- `execution-ledger.json`: `b18b64fb65bdac74c896eac96da7cf6a6f3c37b60c29f520433d558d6cfdf60a`
+- `verified-tool-package.json`: `9f9bae4d6be11b8849669aeca2375469304e78ab5697abb89e47d3d73f6ca36a`

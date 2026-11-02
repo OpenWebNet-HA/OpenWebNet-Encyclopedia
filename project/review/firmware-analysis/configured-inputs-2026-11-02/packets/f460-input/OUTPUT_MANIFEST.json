@@ -1,0 +1,31 @@
+{
+  "collector_sha256": "d3c2f57fc9e30e9c7c506efb2813c63e4fc1a63d8c94e3e9dbe58725e5fb6910",
+  "counts": {
+    "fixed_guards": 44,
+    "import_callsite_proofs": 11,
+    "imported_table_relocations": 2,
+    "inherited_constructor_spans": 1,
+    "new_code_bytes": 512,
+    "new_code_spans": 1,
+    "original_execution": 0,
+    "unique_import_symbols": 10
+  },
+  "outputs": {
+    "INPUT_PINS.json": {
+      "bytes": 1721,
+      "sha256": "e3eec55f30a1789d61cc3cbdb705d3f8436f08e9475e3052323cbd73ea4754a0"
+    },
+    "REPORT.md": {
+      "bytes": 6279,
+      "sha256": "3cb67adf71f4a4e8fde4ddc3eae8367e8fc4169519179c8a09685ee9c2eaaa8a"
+    },
+    "SOURCE.json": {
+      "bytes": 11942,
+      "sha256": "6e7d4d9544c5a94839929d93e7913c0ca4192664ccdb938081ece1edf3ed9b7e"
+    },
+    "spans/scene-input-prefix.txt": {
+      "bytes": 6277,
+      "sha256": "2d2d7b82a44e5e2cf9d6bf118a5f8a30f4602dbb63d98dbadfe214587b5d92d6"
+    }
+  }
+}

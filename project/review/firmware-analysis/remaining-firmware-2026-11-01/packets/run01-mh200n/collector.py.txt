@@ -1,0 +1,172 @@
+#!/usr/bin/env python3
+"""Original ARM bytes only. No target/provider/process/OS operations or model execution."""
+import sys
+sys.dont_write_bytecode = True
+import argparse
+import hashlib
+import json
+import re
+import struct
+import subprocess
+from pathlib import Path
+
+HERE=Path(__file__).resolve().parent
+ROOT=next(p for p in HERE.parents if (p/'work/mh200n-firmware').is_dir())
+BASE=Path('work/mh200n-firmware/1.1.8')
+GUARDS={
+ 0x8dc8:0xe3a0b000,0x8dd8:0xe59f0010,0x8de0:0xe59f000c,0x8de8:0xebffff7b,
+ 0xb618:0xe92d4ff0,0xb620:0xe3a04000,0xb6ec:0xe1a01004,0xb6f0:0xe59f0ee0,
+ 0xb6f4:0xebfff514,0xb6f8:0xe3700001,0xb6fc:0xe1a04000,0xb708:0x0a000008,
+ 0xb714:0xe59f2ec4,0xb718:0xe59f3ec4,0xb71c:0xe5832000,
+ 0xb720:0xe59f2ec0,0xb724:0xe59f3ec0,0xb728:0xe5832000,0xb72c:0xea000001,
+ 0xb738:0xe1a00004,0xb73c:0xebfff56e,
+ 0xcba8:0xe51f134c,0xcbac:0xe5910000,0xcbb0:0xebfff60d,0xcbb4:0xe3500000,
+ 0xcbb8:0xe58d0018,0xcbc4:0x1a000003,
+ 0xa3ec:0xe92d4ff0,0xa400:0xe28d2010,0xa410:0xe2499008,
+ 0xa41c:0xe5813000,0xa420:0xe5893000,0xa424:0xebffff6c,
+ 0xa428:0xe1500004,0xa42c:0x1a000082,
+}
+SPAN=[('entry',0x8dc8,0x8dfc),('main-prefix',0xb618,0xb6ec),
+      ('marker-selection',0xb6ec,0xb740),('selected-resource-caller',0xcba8,0xcbe4),
+      ('local-helper-prefix',0xa3ec,0xa430),('open-PLT',0x8b4c,0x8b58),
+      ('close-PLT',0x8cfc,0x8d08),('libc-start-PLT',0x8bdc,0x8be8)]
+
+
+def sha(b):return hashlib.sha256(b).hexdigest()
+def enc(v):return (json.dumps(v,indent=2,sort_keys=True)+'\n').encode()
+def exclusive(p,b):
+ p.parent.mkdir(parents=True,exist_ok=True)
+ with p.open('xb')as f:f.write(b)
+
+
+def build():
+ pins={}
+ def read(p):
+  p=Path(p);assert not p.is_absolute()and '..'not in p.parts
+  f=ROOT/p;assert f.is_file()and not f.is_symlink()and ROOT in f.resolve().parents
+  b=f.read_bytes();pins[str(p)]={'path':str(p),'bytes':len(b),'sha256':sha(b)};return b
+ manifests={n:json.loads(read(BASE/'analysis'/f'{n}-regular-files.json'))for n in ['normal','recovery']}
+ rel='bin/bt_start';paths={n:BASE/'analysis'/d/rel for n,d in [('normal','rootfs'),('recovery','recovery')]}
+ bs={n:read(p)for n,p in paths.items()}
+ for n,b in bs.items():assert len(b)==manifests[n][rel]['bytes']and sha(b)==manifests[n][rel]['sha256']
+ assert bs['normal']==bs['recovery'];b=bs['normal']
+ assert sha(b)=='63c0b0a9b6f67e6564f23f5ffcf18c3716bc27dc9b0b03009324af0fa0a21d48'
+ assert b[:8]==bytes.fromhex('7f454c4601010161')
+ h=struct.unpack_from('<HHIIIIIHHHHHH',b,16);assert h[1]==40 and h[6]==0x202 and h[3]==0x8dc8
+ ph=[struct.unpack_from('<8I',b,h[4]+i*h[8])for i in range(h[9])]
+ loads=[{'file_offset':x[1],'VA':x[2],'file_bytes':x[4],'memory_bytes':x[5],'flags':x[6]}for x in ph if x[0]==1]
+ def off(v,size=1):
+  matches=[s['file_offset']+v-s['VA']for s in loads if s['VA']<=v and v+size<=s['VA']+s['file_bytes']]
+  assert len(matches)==1,hex(v);return matches[0]
+ def word(v):return struct.unpack_from('<I',b,off(v,4))[0]
+ def literal(v,expected):
+  z=expected.encode()+b'\0';o=off(v,len(z));assert b[o:o+len(z)]==z
+  return {'VA':hex(v),'file_offset':hex(o),'bytes_hex':z.hex(),'text':expected}
+ def arm_ldr_pool(v):
+  w=word(v);assert w&0x0f7f0000==0x051f0000
+  return v+8+(w&0xfff)*(1 if w&(1<<23)else -1)
+ def arm_bl(v):
+  w=word(v);assert w&0x0f000000==0x0b000000
+  x=w&0xffffff;x=x-(1<<24)if x&(1<<23)else x
+  return v+8+x*4
+ for v,w in GUARDS.items():assert word(v)==w,(hex(v),hex(word(v)))
+ calls={0x8de8:0x8bdc,0xb6f4:0x8b4c,0xb73c:0x8cfc,0xcbb0:0xa3ec,0xa424:0xa1dc}
+ for a,t in calls.items():assert arm_bl(a)==t
+ pools={0x8de0:0x8df4,0xb6f0:0xc5d8,0xb714:0xc5e0,0xb718:0xc5e4,
+        0xb720:0xc5e8,0xb724:0xc5ec,0xcba8:0xc864}
+ for a,t in pools.items():assert arm_ldr_pool(a)==t
+ assert word(0x8df4)==0xb618
+ assert word(0xc5d8)==0xea90 and word(0xc5e0)==0xeabc and word(0xc5e8)==0xeac8
+ assert word(0xc5e4)==0x180f4 and word(0xc5ec)==word(0xc864)==0x180f0
+ assert word(0x180f0)==0xddc0 and word(0x180f4)==0xddcc
+ literals=[literal(v,t)for v,t in [(0xea90,'/NO_APP_COPY'),(0xeabc,'/dev/mtd5'),(0xeac8,'/dev/mtdr5'),(0xddc0,'/dev/mtdr6'),(0xddcc,'/dev/mtd6')]]
+ reloc=subprocess.check_output(['readelf','-rW',str(ROOT/paths['normal'])],text=True)
+ imports=[]
+ for call,plt,slot,name in [(0x8de8,0x8bdc,0x18724,'__libc_start_main'),(0xb6f4,0x8b4c,0x186f4,'open'),(0xb73c,0x8cfc,0x18784,'close')]:
+  # Decode the exact three-instruction ARM PLT address arithmetic, not nearby labels.
+  x,y,z=[word(plt+i)for i in [0,4,8]]
+  assert x==0xe28fc600 and y==0xe28cca0f and z&0xfffff000==0xe5bcf000
+  actual=plt+8+0xf000+(z&0xfff);assert actual==slot,(name,hex(actual),hex(slot))
+  rows=[l for l in reloc.splitlines()if re.search(r'\bR_ARM_JUMP_SLOT\b',l)and re.search(r'\b'+name+r'@GLIBC_',l)]
+  assert len(rows)==1 and int(rows[0].split()[0],16)==slot
+  imports.append({'call_VA':hex(call),'PLT_VA':hex(plt),'GOT_slot':hex(slot),'relocation':rows[0].strip(),'PLT_words':[hex(x),hex(y),hex(z)]})
+ spans=[]
+ for name,start,end in SPAN:
+  o=off(start,end-start);raw=b[o:o+end-start]
+  asm=subprocess.check_output(['objdump','-d','-m','arm',f'--start-address={start}',f'--stop-address={end}',str(ROOT/paths['normal'])],text=True)
+  spans.append({'name':name,'start_VA':hex(start),'end_exclusive_VA':hex(end),'file_offset':hex(o),'bytes_hex':raw.hex(),'sha256':sha(raw),'host_disassembly':asm})
+ for n,tree in [('normal','rootfs'),('recovery','recovery')]:
+  if 'NO_APP_COPY'in manifests[n]:
+   v=read(BASE/'analysis'/tree/'NO_APP_COPY');assert not v
+ # Inherited startup context is copied as selected safe source lines only, not reinterpreted as new source coverage.
+ prior=read(BASE/'research/2026-11-01-first-exploration/REPORT.md')
+ role=read('OpenWebNet-Encyclopedia/devices/definitions/own-dev-0131-mh200n-scenario-programmer.md')
+ source={'original':pins[str(paths['normal'])],'recovery':pins[str(paths['recovery'])],
+         'header52_hex':b[:52].hex(),'ELF32_ARM_flags':'0x202','entry':hex(h[3]),'PT_LOAD':loads,
+         'spans':spans,'guard_words':[{'VA':hex(v),'word':hex(w)}for v,w in GUARDS.items()],
+         'calls':[{'call_VA':hex(v),'target':hex(t)}for v,t in calls.items()],
+         'literal_pool_joins':[{'instruction':hex(a),'pool':hex(t),'pool_word':hex(word(t))}for a,t in pools.items()],
+         'safe_literals':literals,'imports':imports}
+ flow={'scope':'Selected static pointer-role chain only; no runtime marker/read/device/copy operation',
+       'path_cells':[{'VA':'0x180f0','initial_pointer':'0xddc0','initial_literal':'/dev/mtdr6','selected_pointer':'0xeac8','selected_literal':'/dev/mtdr5'},
+                     {'VA':'0x180f4','initial_pointer':'0xddcc','initial_literal':'/dev/mtd6','selected_pointer':'0xeabc','selected_literal':'/dev/mtd5'}],
+       'marker_call':{'VA':'0xb6f4','path':'/NO_APP_COPY','flags':0,'comparison':'CMN return,1 then BEQ0xb730; non-minus-one stores selected path pointers'},
+       'later_request':{'VA':'0xcbb0','callee':'0xa3ec','r0':'load through SAME cell0x180f0','return_handling':'CMP0/storeSP24 then nonzero branch0xcbd8'},
+       'helper_prefix':{'VA':'0xa424','callee':'0xa1dc','r0':'preserved provided pathname pointer','r1':'addressSP12 initially word0','r2':'addressSP8 initially word0','continuation':'zero result falls through; nonzero branches0xa63c'},
+       'unclosed':['Natural earlier/later main control-flow admission','No relevant mutation/alias writes between path selection and later fragment','Effective imports/callee-save ABI and ordinary provider returns','Bodies0xa1dc and remainder0xa3ec','Actual application copy/installed overlay/boot configuration','Device/partition identity and current filesystem contents']}
+ report='''# MH200N 1.1.8 night01 — marker-controlled resource-path cells and actual local caller
+
+Fresh original source establishes a bounded new join beyond the first exploration: `/bin/bt_start` consumes `/NO_APP_COPY` through an imported open request, conditionally changes two static resource-path pointers, and a later original fragment loads the SAME path-pointer cell into a local helper argument. This is **not actual application copy, installation, partition selection on hardware, or a complete startup policy**. All original/vendor/provider/native/target/OS/network/bus/device operations, mounts, clocks, models, fixtures and SQL are0. Host hashing/readelf/ARM disassembly read original bytes only.
+
+## Source identity and startup applicability
+
+MH200N1.1.8 normal `/bin/bt_start` is36080 bytes/SHA256 `63c0b0a9b6f67e6564f23f5ffcf18c3716bc27dc9b0b03009324af0fa0a21d48`. The recovery file is byte-identical, separately checked against its own regular-file manifest. This proves code equality, not equal configuration, marker presence, helper providers, environments or behavior. The normal image's zero-byte NO_APP_COPY marker is verified; the recovery regular manifest has no such path. This is only retained image metadata, not an observed runtime lookup or universal path-absence claim.
+
+The ELF is freshly mapped ELF32 little-endian ARM machine40, flags0x202. Its entry0x8dc8 loads0xb618 through pool0x8df4 intoR0 and requests actual __libc_start_main@GLIBC_2.0 at0x8de8. Under ordinary runtime-entry ABI/normal returns,0xb618 is the supplied main entry; no target start occurred. First-exploration Tcl source already connects selected application script to `/bin/bt_start`; that inherited text handoff is not new coverage or proof the separate application bundle was copied. Curated OWN-DEV-0131 supplies MH200N scenario-programmer context only. No MH202 script language, MHS layout, F453AV behavior, physical bus or public-protocol meaning is transferred.
+
+## Exact marker request and pointer-cell stores
+
+The selected main prefix sets callee-savedR4=0 at0xb620. Under ordinary preservation across intervening normal calls,0xb6ec supplies that0 asR1.0xb6f0 loads pool0xc5d8→literal0xea90 `/NO_APP_COPY`;0xb6f4 requests actual open@GLIBC_2.0 through its original PLT/JUMP_SLOT. Flags are source numeric0; actual file/provider access mode/outcome is not exercised.
+
+CMN R0,#1 at0xb6f8 tests exact machine return−1. MOV R4,R0 and subsequent LDRs preserve those flags; BEQ0xb708 goes to0xb730 on−1. The other branch, after a normal diagnostic request, loads/stores `/dev/mtd5` through cell**0x180f4** at0xb714..0xb71c, then `/dev/mtdr5` through cell**0x180f0** at0xb720..0xb728. Initially those cells point respectively to `/dev/mtd6` and `/dev/mtdr6`, as exact file-backed data. These are literal pathname/cell identities, not a certified flash map or active partition result.
+
+The−1 branch skips those two selected stores. Both selected continuations reach0xb738/0xb73c, requesting close on the saved machine return. No close-result test, general file-existence test, valid file-descriptor theorem or whole error policy is inferred. In particular, the code's literal marker name is no longer the only evidence: actual source consumes that path and gates these two concrete pointer stores. Other writers/aliases, providers and natural startup selection remain unclosed.
+
+## Same-cell actual caller and opaque helper boundary
+
+A later fragment0xcba8 loads pool0xc864→**SAME0x180f0**, then0xcbac loads the pointer held there intoR0 and0xcbb0 calls local**0xa3ec**. Under normal source execution, the same cell/object and no relevant intervening mutation, this passes the selected `/dev/mtdr5` pointer after the non−1 marker branch, or its separately justified current value. This is a conditional dataflow composition, not a claim that every startup reaches this fragment or that its earlier branch predicates are already closed.
+
+After that call,0xcbb4 comparesR0 with0,0xcbb8 stores it atSP24 and0xcbc4 branches to0xcbd8 on nonzero. Its machine return type/success semantics are not invented. The bounded prefix of0xa3ec preserves the incomingR0 pathname, constructs zeroed local output words atSP12/SP8 and supplies their addresses inR1/R2, then calls local**0xa1dc** at0xa424. It compares the returned machine value with0 and branches to0xa63c on nonzero; only zero falls through. The **0xa1dc body and the rest of0xa3ec remain opaque**. No extraction, archive format/argv/password, source contents, file read, copy, installation or device operation is derived from these calls.
+
+SOURCE.json retains8 exact PT_LOAD-backed code/PLT spans,35 instruction guards,5 direct-call targets,7 pool joins,5 whitelisted pathname literals and3 actual PLT/GOT/JUMP_SLOT identities. POINTER_FLOW.json separates the file-backed path-cell initialization, conditional stores, later supplied argument and unknown helper semantics. Source labels come from actual entry/call/pointer identities; stripped objdump nearest names are not function identities. Imports, valid objects, callee-save ABI, logging normal returns, dynamic binding and no relevant mutation remain premises.
+
+## Preservation, limits and next question
+
+`python3 -B collect_resources_v1.py --check` reproduces host-only output bytes read-only; it never calls firmware, an emulator or a target/provider helper. Initial generation refuses existing outputs and immediately freezes collector/report/results, with the first index computed before opening its own file. No failed canonical generation or generated overwrite occurred. Old first-exploration/source trees and execution ledgers remain unchanged. No original archive, configuration, private identity, credential, key or broad literal table is exported.
+
+The next meaningful gap is the permitted local producer/helper contract needed to connect this exact supplied resource pointer to an actual application-file/copy request, plus natural main admission and immutable current state. That requires its own bounded source task; the current result does not force installation or a successful application-overlay model. F453AV is inherited as a separate first-exploration comparison only; no counterpart behavior is asserted. Output/receiving/transport/authentication/session/framing/MQTT/libjel and equivalent closed implementations stay opaque.
+'''
+ out={'SOURCE.json':enc(source),'POINTER_FLOW.json':enc(flow),'INPUTS.json':enc({'files':sorted(pins.values(),key=lambda x:x['path'])}),'REPORT.md':report.encode()}
+ out['OUTPUT_MANIFEST.json']=enc({'scope':'Generated members excluding this manifest','files':{n:{'bytes':len(v),'sha256':sha(v)}for n,v in sorted(out.items())}})
+ return out
+
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args()
+ names=['SOURCE.json','POINTER_FLOW.json','INPUTS.json','REPORT.md','OUTPUT_MANIFEST.json']
+ if not a.check:assert not any((HERE/n).exists()for n in names)and not(HERE/'first-candidate').exists()
+ out=build()
+ if a.check:
+  for n,b in out.items():assert(HERE/n).read_bytes()==b,n
+  for x in json.loads((HERE/'first-candidate/INDEX.json').read_text())['files']:
+   b=(HERE/'first-candidate'/x['copy']).read_bytes();assert len(b)==x['bytes']and sha(b)==x['sha256']and b==(HERE/x['copy']).read_bytes()
+ else:
+  for n,b in out.items():exclusive(HERE/n,b)
+  copies={**out,'collect_resources_v1.py':Path(__file__).read_bytes()};idx={'scope':'Exact first bytes; index excludes itself','files':[{'copy':n,'bytes':len(b),'sha256':sha(b)}for n,b in sorted(copies.items())]}
+  d=HERE/'first-candidate';d.mkdir()
+  for n,b in copies.items():exclusive(d/n,b)
+  exclusive(d/'INDEX.json',enc(idx))
+ print(json.dumps({'status':'PASS','outputs':len(out),'spans':len(SPAN),'guards':len(GUARDS),'original_execution':0}))
+
+
+if __name__=='__main__':main()

@@ -1,0 +1,55 @@
+# F461 2.0.11 run03: actual local descriptor matcher and translator call
+
+The missing local caller is in `/home/bticino/bin/coso`, not the small registration library. Its original `send_list_field` selects a registered translation descriptor, checks its direction words and numeric criterion lists, then calls that same descriptor's slot+56 with the same message and an output-list address. This closes the prior registration-to-callback source gap conditionally on the same initialized manager, descriptors and fields being supplied. It does not establish running services, accepted raw grammar, a physical bus result or a public WHO support table.
+
+This is fresh AArch64 source analysis. Original/vendor/provider/target execution0; semantic fixtures/models0. Device0208 documents F461 as a third-party-integration server and is product context only. No older product layout, public command meaning or installed state is transferred.
+
+## Original identities and source boundaries
+
+- `/home/bticino/bin/coso` SHA256 `2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197`.
+- `/home/bticino/libcoso/libcoso.so` SHA256 `572bca218965a040393361bea4044b0d55519b4f2146ef69c9aa18d4aa6ef690`.
+- `/home/bticino/libcoso/libplug_automation_tr.so` SHA256 `d7d361798ccec65843bd41c9ad7b8897645a334b0cd08121d372949f78eac277`.
+
+SOURCE.json records all three original ELF64/AArch64 PT_LOAD mappings and nine bounded source spans with file offsets/byte hashes. Each VA below is link-time. The verified ImageVFS checks each original regular file against its extraction metadata. The previous authoritative `2026-11-01-deep-routing/REPORT.v2.md` and SOURCE.json are pinned as inherited registration/translator evidence, not re-counted new behavior. Candidate import bindings and ordinary successful GLib/list/provider operations remain premises.
+
+## Shared manager and actual list identity
+
+The executable's selected startup source0x2f74..0x2f80 requests144 zeroed bytes and passes the returned pointer to imported `get_plug_m`. Its actual0x2c30 PLT loads JUMP_SLOT0x171a0, whose original relocation names `get_plug_m`. DT_NEEDED names `libcoso.so`. In that packaged candidate, `get_plug_m`0x25a0 reads a static pointer at0x15168: a nonnull existing pointer is returned; only a null slot causes the supplied pointer to be stored and returned. Thus the source supports a first-owner/getter contract, not proof that this particular allocation always wins or that no interposition/other initialization occurs.
+
+The previously proven registration routine prepends its supplied descriptor to manager+32. Selected source0x2894..0x28a0/0x28b4 shows the same list store. The new executable matcher loads its supplied third argument fromSP112, then loads that manager's+32 at0x3f28, obtains a list node's data pointer at0x3f38, and eventually calls that same descriptor's+56. Conditional composition requires the startup/registration/matcher references to resolve to the same manager and normal lists; effective live binding, lifetime, configuration and actual callback scheduling are not observed.
+
+The local wrapper `send_list_field_1`0x4170 copies its supplied manager pointer to argumentX2, supplies NULL argumentX1 and tail-branches to `send_list_field`0x3df0 with X0=manager+136. This is one concrete same-object argument handoff, not evidence of actual GLib callback delivery or a complete startup-to-active-service chain.
+
+## Exact selected matcher prerequisites
+
+The routine begins with the list pointer behind X0, returns0 for a zero reported list length, and obtains its first node under ordinary GLib semantics. Its current message is the node's data pointer, retained inX28. Before selection, original0x3e98..0x3ea8 compares the message's unsigned64 word+32 against the returned `g_get_real_time` value plus10; the branch to0x3ef4 takes the unsigned <= relation. The other timing/defer branch is outside this packet. No clock operation was executed, and no elapsed-time guarantee or units are inferred here.
+
+Manager+24 supplies field-descriptor list nodes. At0x3f0c..0x3f1c the candidate field pointer is retained inX25, and its64-bit word+80 must equal the message's64-bit word+8. A field's actual registration/producer and physical role are unclosed. Manager+32 then supplies translation-descriptor list nodes; the current translation descriptor is retained inX22. These are distinct field and translation objects despite both having an offset80.
+
+For each translation descriptor, words+64/+68 are loaded together intoW23/W24 at0x3f40. The message's word+16 is compared with those two words. The first orientation requires descriptor64 == message16 and descriptor68 == field's low32 word80; it takes list pointer descriptor+72 at0x4008. In this orientation the assignments0x400c/0x4010 arrange callbackW0=descriptor64 andW1=field80.
+
+The complementary orientation tests message16 == descriptor68 and field80 == descriptor64 (0x3f4c..0x3f5c), then loads descriptor+80 at0x4070 and joins0x4014. In that orientation W0 remains descriptor68 andW1 remains descriptor64. The two descriptor lists are pointers to criterion lists, whereas the two direction words are integers. No conflation with message representation word+56, descriptor callback pointer+56, field object+80 or public WHO values is justified by equal offsets/numbers.
+
+At0x4014..0x403c a criterion-list node's data is loaded as64 bits, then its low32 is compared against message word+48. Only equality reaches the selected callback. Full upstream field registration, message production and raw input acceptance remain separate premises; this is not an emulated or injected input corpus.
+
+## Concrete automation-descriptor composition
+
+The prior packet proved plugin GOT0x17fc8→`automation_tr` VA0x18190 and its callback relocation at0x181c8→`automation_tr_translate`0x3a30. The original descriptor bytes at0x181d0 encode its direction words64=1 and68=2. The prior initializer's ordinary g_list_append requests put integer-pointer1 in descriptor list+72 and integer-pointer2 in list+80; this packet verifies the same original descriptor identity and those unmodified direction bytes, preserving the prior provider/init premises.
+
+Therefore one bounded source-backed composition is: if the selected message has word16=2 and word48=2, the selected field's low32 word80=1 and its full64 word80 matches message64 word8, the message passes the earlier due test, and the same registered descriptor/list objects exist, the complementary orientation selects descriptor list+80 and calls that descriptor's translator with axes(2,1). These are symbolic source premises, not created runtime objects, semantic fixtures or claimed naturally received values. The first packet independently showed this translator admits axes(2,1); the new evidence closes its actual local caller and criterion selection.
+
+The numeric criterion can have a concrete parsed-object source: candidate libcoso `new_openmsg_from_openmsg`0x3088..0x30b0 loads a string pointer from its supplied parsed object+0, requests `strtol(pointer,NULL,10)` and stores the returned low32 to its output message+48. It also copies supplied parsed word+104 to message+40 and sets representation+56=3. Full converter switch admission, validity, truncation/range/error behavior, the parsed object's own producer and accepted dialect remain open. This supports a decimal-string-derived criterion namespace; it does not, by itself, license a universal public WHO2 support claim.
+
+## Actual call arguments and local result handling
+
+At0x4040 the program loads X12 from the selected translation descriptorX22+56. It calls BLR X12 at0x4048 with W0=selected origin axis, W1=selected destination axis, X2=the same messageX28, X3=the addressSP168 of its local output-list slot, and X4=the same descriptorX22. The output slot was initialized NULL at0x3f24. Fresh AArch64 argument positions and pointer aliases are visible in the instructions; no older ABI/layout is used.
+
+A nonzero returnedW0 takes0x4064 to the next criterion node; a zero return takes0x4050 to the next translation descriptor or the local successful-selection cleanup. When another descriptor exists, zero also sets a local flag atSP108. Thus the source does not impose global first-match exclusivity, and return0 is not a physical delivery acknowledgment. The selected cleanup0x3f70..0x3f94 removes the current input list link and requests free_message; it then obtains the output list and later requests g_list_foreach with the selected field pointer. That later callable/output body is an opaque boundary here. No bus write, networking, framing, authentication, session or receiving implementation is inspected or exercised.
+
+## Reproduction, preservation and next gaps
+
+`python3 -B work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/collect_dispatch_v1.py --check`
+
+The host collector verifies three original AArch64 objects,31 exact instruction guards, nine bounded source spans, the actual get_plug_m PLT/JUMP_SLOT, descriptor relocations and original direction bytes, then reproduces every saved output read-only. Generation refuses overwrite and immediately saves exact collector/report/output copies with the index computed before its file is opened. This packet has no failed canonical generation or overwritten candidates. Earlier packet v1 host-path failure remains historical and unchanged; it is not a new source or firmware failure.
+
+Remaining high-value gaps are the selected field object's actual registration/config source, the exact natural message+8/+16/+48 producers and accepted parsed dialect, dynamic plugin loading/provider binding, and selected translator output construction. Actual scheduling, object lifetime, device behavior and public protocol/physical semantics remain unverified. The positive local descriptor/criteria/call arguments above do not require those broader claims.

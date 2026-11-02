@@ -1,0 +1,43 @@
+{
+  "checks": [
+    {
+      "collector": "catalogue/collect_owner_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "22e2c4",
+          "wall_time_seconds": 0.183777229,
+          "exit_code": 0,
+          "original_token_count": 19,
+          "output": "{\"check\": true, \"outputs\": 29, \"original_execution\": 0, \"SQL_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "collector": "factories/collect_factories_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "96e82f",
+          "wall_time_seconds": 0.119219005,
+          "exit_code": 0,
+          "original_token_count": 46,
+          "output": "{\"check\": true, \"outputs\": 22, \"spans\": 11, \"PIC_literals\": 7, \"factory_tables\": 3, \"selected_branches\": 3, \"direct_calls\": 6, \"byte_guards\": 13, \"inputs\": 4, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "collector": "runner/collect_runner_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "72ee24",
+          "wall_time_seconds": 0.292262848,
+          "exit_code": 0,
+          "original_token_count": 19,
+          "output": "{\"check\": true, \"outputs\": 19, \"original_execution\": 0, \"source_spans\": 10}\n"
+        }
+      }
+    }
+  ]
+}

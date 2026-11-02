@@ -1,0 +1,20 @@
+[
+  {
+    "source": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md",
+    "snapshot": "own-dev-0199-myhomeserver1-home-automation-server.md",
+    "bytes": 43131,
+    "sha256": "5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855"
+  },
+  {
+    "source": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+    "snapshot": "mhcatalogue-source-profiles.md",
+    "bytes": 11611,
+    "sha256": "59affbd225571e554a49ad784619912a1521ff5b00c80bf5ea28094540b942b9"
+  },
+  {
+    "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+    "snapshot": "myhomeserver1-3.87.13-research-synthesis.md",
+    "bytes": 13742,
+    "sha256": "5a3dec72f1d14ac5c338a38571c809749594e761854e915c8a0decea447bcd52"
+  }
+]

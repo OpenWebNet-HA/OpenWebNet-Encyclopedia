@@ -1,0 +1,82 @@
+[
+  {
+    "bytes": 112,
+    "end_exclusive": "0xa7330",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "initializer-got",
+    "sha256": "944825c2f98396893292fb2c9d7690f2d6d8d2542e53f36779b5a76e889500de",
+    "start_va": "0xa72c0"
+  },
+  {
+    "bytes": 178,
+    "end_exclusive": "0xa767a",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "initializer-sleep-convert",
+    "sha256": "15e0f48483c9e7e79d1114f99a450923778942566df2b210b871b0226f74e9e4",
+    "start_va": "0xa75c8"
+  },
+  {
+    "bytes": 152,
+    "end_exclusive": "0xa7712",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "initializer-sleep-append",
+    "sha256": "4e8f7a09c19ca1d649d7bc348aee4ba556aadd663ddc4922a36be81518f761a9",
+    "start_va": "0xa767a"
+  },
+  {
+    "bytes": 456,
+    "end_exclusive": "0xb7758",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "sleep-constructor",
+    "sha256": "af573e9a2a1355cb21f3e23421fd532f27d6cad2fe682e13cac3dc7afeb7c758",
+    "start_va": "0xb7590"
+  },
+  {
+    "bytes": 36,
+    "end_exclusive": "0xb72d4",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "captured-function-manager",
+    "sha256": "d58190d608b6677e9793871b4a5afef66a40f33325be78524c7c7857ed09abe5",
+    "start_va": "0xb72b0"
+  },
+  {
+    "bytes": 700,
+    "end_exclusive": "0xb7590",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "sleep-callback",
+    "sha256": "d5821a3f107a8a7fc6c917be799fa59b61e692e06c2f058c56534a5eb51328f8",
+    "start_va": "0xb72d4"
+  },
+  {
+    "bytes": 8,
+    "end_exclusive": "0xcd990",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "operational-delay-setter",
+    "sha256": "f1917945f90322fe3a7227218c197b0697c9d03d49a2c108dc21546f73f47244",
+    "start_va": "0xcd988"
+  },
+  {
+    "bytes": 172,
+    "end_exclusive": "0xcda3c",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "callable-installation",
+    "sha256": "8531e6814db58f97ed4a5d159cd682fab3c4aee6999edfc2cd8565a991923a03",
+    "start_va": "0xcd990"
+  },
+  {
+    "bytes": 156,
+    "end_exclusive": "0xb44e8",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "runner-move-prefix",
+    "sha256": "6d7c07c1a2ab6328cec572f06580fe68cf7d5a9e41e689eab0f02f06b6c596dd",
+    "start_va": "0xb444c"
+  },
+  {
+    "bytes": 92,
+    "end_exclusive": "0x86130",
+    "image_path": "/lib/libc.so.6",
+    "name": "libc-nanosleep32",
+    "sha256": "13c681c830d3eddd58b6b42e73b091a9b60ca41aa384500a214732c0e691777e",
+    "start_va": "0x860d4"
+  }
+]

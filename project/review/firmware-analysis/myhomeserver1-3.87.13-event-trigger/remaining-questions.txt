@@ -1,0 +1,8 @@
+# Ranked remaining questions
+
+1. Trace the selected local event-record producer/classification just far enough to identify how event ID and the state-string field reach the typed BNIL branch, stopping at opaque transport/session/authentication/framing delegates. The current provided-object premises must not be relabeled accepted wire input.
+2. A second actual event trigger/condition with different source matching semantics (e.g a numeric condition), using fresh layouts and exact enum/handler ownership rather than copying BNIL/TIME behavior.
+3. Natural owner retention/removal across temporary handle-copy cleanup and callback entry, a positive shared-reset owner, configured assets and effective service/provider readiness. Do not repeat current22alias, sparseJSON, null/uint, append, state-token or poll matrices as new coverage.
+4. Full errors/unwind/concurrency and physical observation remain outside current static proof. Curated device functionality and source-review gates remain authoritative for product statements.
+
+Closed authentication/session/framing/equivalent routes remain closed; no unisolated vendor execution or live gateway/bus contact.

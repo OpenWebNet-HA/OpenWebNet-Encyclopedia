@@ -1,0 +1,372 @@
+{
+  "PIC_joins": [
+    {
+      "ADD_PC_VA": "0x2b7fe",
+      "literal": "enabled",
+      "pool_VA": "0x2ba30",
+      "pool_word": "0xe8bde",
+      "target_VA": "0x1143e0"
+    },
+    {
+      "ADD_PC_VA": "0x2b8a0",
+      "literal": "type",
+      "pool_VA": "0x2ba40",
+      "pool_word": "0xea6b8",
+      "target_VA": "0x115f5c"
+    },
+    {
+      "ADD_PC_VA": "0x2c1e0",
+      "literal": "from",
+      "pool_VA": "0x2c2f4",
+      "pool_word": "0xe9088",
+      "target_VA": "0x11526c"
+    },
+    {
+      "ADD_PC_VA": "0x2c1f8",
+      "literal": "to",
+      "pool_VA": "0x2c2f8",
+      "pool_word": "0xe9078",
+      "target_VA": "0x115274"
+    },
+    {
+      "ADD_PC_VA": "0x2c210",
+      "literal": "days",
+      "pool_VA": "0x2c2fc",
+      "pool_word": "0xe9050",
+      "target_VA": "0x115264"
+    },
+    {
+      "ADD_PC_VA": "0x246d2",
+      "literal": "from",
+      "pool_VA": "0x247f8",
+      "pool_word": "0xf0b96",
+      "target_VA": "0x11526c"
+    },
+    {
+      "ADD_PC_VA": "0x246f2",
+      "literal": "to",
+      "pool_VA": "0x247fc",
+      "pool_word": "0xf0b7e",
+      "target_VA": "0x115274"
+    },
+    {
+      "ADD_PC_VA": "0x24782",
+      "literal": "days",
+      "pool_VA": "0x24800",
+      "pool_word": "0xf0ade",
+      "target_VA": "0x115264"
+    },
+    {
+      "ADD_PC_VA": "0xb7f78",
+      "literal": "Fri Apr 16 ",
+      "pool_VA": "0xb865c",
+      "pool_word": "0x7d858",
+      "target_VA": "0x1357d4"
+    },
+    {
+      "ADD_PC_VA": "0xb7f9e",
+      "literal": ":00 2021",
+      "pool_VA": "0xb8660",
+      "pool_word": "0x7d83e",
+      "target_VA": "0x1357e0"
+    },
+    {
+      "ADD_PC_VA": "0xb8202",
+      "literal": "%a %b %d %H:%M:%S %Y",
+      "pool_VA": "0xb8680",
+      "pool_word": "0x7d5b6",
+      "target_VA": "0x1357bc"
+    },
+    {
+      "ADD_PC_VA": "0xb86f4",
+      "literal": null,
+      "pool_VA": "0xb87ac",
+      "pool_word": "0xaee00",
+      "target_VA": "0x1674f8"
+    },
+    {
+      "ADD_PC_VA": "0xb7dd4",
+      "literal": null,
+      "pool_VA": "0xb7efc",
+      "pool_word": "0xaa060",
+      "target_VA": "0x161e38"
+    }
+  ],
+  "condition_factory": {
+    "compiled_branch": "0xa7d86",
+    "decremented_TBH_index": 0,
+    "local_index": 1,
+    "raw_branch": "0x3038e",
+    "table_VA": "0x1605b0",
+    "text": "TIME"
+  },
+  "halfword_assertions": [
+    {
+      "VA": "0x2fb02",
+      "halfwords": [
+        "0x3c01"
+      ]
+    },
+    {
+      "VA": "0x2fb0a",
+      "halfwords": [
+        "0xe8df",
+        "0xf014"
+      ]
+    },
+    {
+      "VA": "0x2c222",
+      "halfwords": [
+        "0x2c06"
+      ]
+    },
+    {
+      "VA": "0x2c278",
+      "halfwords": [
+        "0x2407"
+      ]
+    },
+    {
+      "VA": "0x2c250",
+      "halfwords": [
+        "0x65ac"
+      ]
+    },
+    {
+      "VA": "0xb7d42",
+      "halfwords": [
+        "0xf884",
+        "0x3084"
+      ]
+    },
+    {
+      "VA": "0xb7de6",
+      "halfwords": [
+        "0xf8c4",
+        "0x10c0"
+      ]
+    },
+    {
+      "VA": "0xb86ba",
+      "halfwords": [
+        "0xf890",
+        "0x3084"
+      ]
+    },
+    {
+      "VA": "0xb86be",
+      "halfwords": [
+        "0xb96b"
+      ]
+    },
+    {
+      "VA": "0xb86c0",
+      "halfwords": [
+        "0x2001"
+      ]
+    },
+    {
+      "VA": "0xb86f2",
+      "halfwords": [
+        "0x6980"
+      ]
+    },
+    {
+      "VA": "0xb873e",
+      "halfwords": [
+        "0xf002",
+        "0x21f"
+      ]
+    },
+    {
+      "VA": "0xb8748",
+      "halfwords": [
+        "0xd0bb"
+      ]
+    },
+    {
+      "VA": "0xb8778",
+      "halfwords": [
+        "0xd0a2"
+      ]
+    },
+    {
+      "VA": "0xb8786",
+      "halfwords": [
+        "0x4297"
+      ]
+    },
+    {
+      "VA": "0xb878c",
+      "halfwords": [
+        "0x419d"
+      ]
+    },
+    {
+      "VA": "0xb8790",
+      "halfwords": [
+        "0x2000"
+      ]
+    },
+    {
+      "VA": "0xb80e8",
+      "halfwords": [
+        "0x6093"
+      ]
+    },
+    {
+      "VA": "0xb80ee",
+      "halfwords": [
+        "0xf942",
+        "0x78f"
+      ]
+    },
+    {
+      "VA": "0xb8106",
+      "halfwords": [
+        "0xfb80",
+        "0x303"
+      ]
+    }
+  ],
+  "selected_relocations": [
+    "00160150  00000017 R_ARM_RELATIVE",
+    "00161e40  00000017 R_ARM_RELATIVE",
+    "00161e44  00000017 R_ARM_RELATIVE",
+    "00161e48  00000017 R_ARM_RELATIVE",
+    "00161e54  00000017 R_ARM_RELATIVE"
+  ],
+  "spans": [
+    {
+      "end_VA_exclusive": "0x2fb3a",
+      "file_offset": "0x2fa4c",
+      "name": "raw-factory-discriminator",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "b010bcdee6068c7aa6defcc0fc39d30d145e992f75d4c82c36d25cfc7c3f3596",
+      "start_VA": "0x2fa4c"
+    },
+    {
+      "end_VA_exclusive": "0x30424",
+      "file_offset": "0x3038e",
+      "name": "raw-time-allocation",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "021665a5e2006637d2069d400be68dd64f2f0e2a471b2a42589410436406b377",
+      "start_VA": "0x3038e"
+    },
+    {
+      "end_VA_exclusive": "0x3073c",
+      "file_offset": "0x306a0",
+      "name": "raw-factory-pools",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "e38d7fa1763ae3ad3edeb91d4dbb1ce64101499818bbca6699d8327d2499e7e9",
+      "start_VA": "0x306a0"
+    },
+    {
+      "end_VA_exclusive": "0x2b8de",
+      "file_offset": "0x2b7d0",
+      "name": "base-enabled-enum",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "ee08f1db4c1bf4227e434a1aea9d93a66913bc166bc967460489236b1e4c4dc2",
+      "start_VA": "0x2b7d0"
+    },
+    {
+      "end_VA_exclusive": "0x2ba4c",
+      "file_offset": "0x2ba20",
+      "name": "base-pools",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "3f4f5ec1b4d605702a83c6350fabc80e1b55eca78a92d1dbecbba34841e688e2",
+      "start_VA": "0x2ba20"
+    },
+    {
+      "end_VA_exclusive": "0x2c310",
+      "file_offset": "0x2c1b8",
+      "name": "raw-time-constructor",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "9d14d376292528955976235a28abd437f057a462d3da59c4490af504affa9381",
+      "start_VA": "0x2c1b8"
+    },
+    {
+      "end_VA_exclusive": "0x24808",
+      "file_offset": "0x246a4",
+      "name": "time-serializer",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "1bd4dee12e770ffc1506d80a1077dde70cf9f9c3cf378c0167a76d29a171e986",
+      "start_VA": "0x246a4"
+    },
+    {
+      "end_VA_exclusive": "0xa7544",
+      "file_offset": "0xa74e4",
+      "name": "compiled-condition-dispatch",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "ebd55022cea655938e4bdd6dc9ae2faa386652d7067012de7351b386e377ad06",
+      "start_VA": "0xa74e4"
+    },
+    {
+      "end_VA_exclusive": "0xa7de4",
+      "file_offset": "0xa7d86",
+      "name": "compiled-time-allocation",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "7d5d3a9b67593c7127b2db38fe524ce3901e0a40d25b0b8c4b9f014d1a384ba0",
+      "start_VA": "0xa7d86"
+    },
+    {
+      "end_VA_exclusive": "0xb7f10",
+      "file_offset": "0xb7c94",
+      "name": "compiled-time-constructor",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "0f12be26faf4b3f6b2f8506c0154ef3b5bfabd98871349fd3c8144b096d7900e",
+      "start_VA": "0xb7c94"
+    },
+    {
+      "end_VA_exclusive": "0xb86a4",
+      "file_offset": "0xb7f10",
+      "name": "boundary-helper",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "cd9cebc792f2066217f0c13b4a9f6526f61ea2eeef9f72afc8dbd118f5901f7b",
+      "start_VA": "0xb7f10"
+    },
+    {
+      "end_VA_exclusive": "0xb87b8",
+      "file_offset": "0xb86a4",
+      "name": "time-predicate",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "4063493ebed7d12572cec6892a6add2c28d7fc2616f46b0074f0732ec28751c0",
+      "start_VA": "0xb86a4"
+    },
+    {
+      "end_VA_exclusive": "0x959cc",
+      "file_offset": "0x959a0",
+      "name": "candidate-system-clock-now",
+      "path": "/usr/lib/libstdc++.so.6.0.29",
+      "raw_sha256": "cba1dd2841ddb9a1a16f97d4fc31c6772c64cbe70c638b45a080dc1f7c650afa",
+      "start_VA": "0x959a0"
+    }
+  ],
+  "vtables": [
+    {
+      "RTTI_VA": "0x162ff4",
+      "RTTI_name": "13TimeCondition",
+      "address_point": "0x160150",
+      "header_VA": "0x160148",
+      "methods_Thumb": [
+        "0x246a5",
+        "0x22649"
+      ],
+      "name": "TimeCondition"
+    },
+    {
+      "RTTI_VA": "0x164dd8",
+      "RTTI_name": "19TimeConditionRunner",
+      "address_point": "0x161e40",
+      "header_VA": "0x161e38",
+      "methods_Thumb": [
+        "0xb8861",
+        "0xb87bd",
+        "0xb86a5"
+      ],
+      "name": "TimeConditionRunner"
+    }
+  ],
+  "weekday_map": "0x1674f8",
+  "weekday_map_initialization": "not examined; no weekday-to-bit orientation claim"
+}

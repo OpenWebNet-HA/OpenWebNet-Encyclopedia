@@ -1,0 +1,41 @@
+
+/home/bticino/libcoso/libcoso.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000002650 <register_field_bus@@Base>:
+    2650:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+    2654:	910003fd 	mov	x29, sp
+    2658:	a90153f3 	stp	x19, x20, [sp, #16]
+    265c:	aa0003f3 	mov	x19, x0
+    2660:	d2800000 	mov	x0, #0x0                   	// #0
+    2664:	97fffe47 	bl	1f80 <get_plug_m@plt>
+    2668:	aa0003f4 	mov	x20, x0
+    266c:	aa1303e0 	mov	x0, x19
+    2670:	97fffe08 	bl	1e90 <unregister_field_bus@plt>
+    2674:	aa1303e1 	mov	x1, x19
+    2678:	f9400e80 	ldr	x0, [x20, #24]
+    267c:	97fffe59 	bl	1fe0 <g_list_prepend@plt>
+    2680:	a9419e63 	ldp	x3, x7, [x19, #24]
+    2684:	b0000002 	adrp	x2, 3000 <new_openmsg_from_openmsg@@Base+0xd0>
+    2688:	91338042 	add	x2, x2, #0xce0
+    268c:	b9401666 	ldr	w6, [x19, #20]
+    2690:	29419664 	ldp	w4, w5, [x19, #12]
+    2694:	f9000e80 	str	x0, [x20, #24]
+    2698:	52800801 	mov	w1, #0x40                  	// #64
+    269c:	b0000000 	adrp	x0, 3000 <new_openmsg_from_openmsg@@Base+0xd0>
+    26a0:	91346000 	add	x0, x0, #0xd18
+    26a4:	97fffe73 	bl	2070 <g_log@plt>
+    26a8:	d2800000 	mov	x0, #0x0                   	// #0
+    26ac:	97fffe35 	bl	1f80 <get_plug_m@plt>
+    26b0:	f9401a62 	ldr	x2, [x19, #48]
+    26b4:	f9003660 	str	x0, [x19, #104]
+    26b8:	b4000082 	cbz	x2, 26c8 <register_field_bus@@Base+0x78>
+    26bc:	9100e001 	add	x1, x0, #0x38
+    26c0:	aa1303e0 	mov	x0, x19
+    26c4:	d63f0040 	blr	x2
+    26c8:	52800000 	mov	w0, #0x0                   	// #0
+    26cc:	a94153f3 	ldp	x19, x20, [sp, #16]
+    26d0:	a8c27bfd 	ldp	x29, x30, [sp], #32
+    26d4:	d65f03c0 	ret

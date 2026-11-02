@@ -1,0 +1,31 @@
+{
+  "status": "requested_first_static_pass_complete",
+  "completed_UTC": "2026-10-31T18:09:08.343289+00:00",
+  "firmware": "MyHOMEServer1 3.87.13",
+  "branch": "docs/static-firmware-analysis-findings",
+  "staged": false,
+  "committed": false,
+  "published": false,
+  "encyclopedia_report": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+  "report_sha256": "0581a52f32a95f4cae419693fe8d20b4ecf272f5e195f40070b00e166aea173f",
+  "source_collectors": 3,
+  "deterministic_outputs": 55,
+  "exact_exports": 55,
+  "independent_source_and_documentary_reviews": 6,
+  "preserved_earlier_artifacts": 6272,
+  "original_image_regulars_verified": 11308,
+  "validation_sha256": "1e676270a5954e4d4b66dd0a57b00627bd5260caa759de88afde755fe354e44e",
+  "final_checks_sha256": "8fbadf564a1ccd47315bec03c6d1d13b560e6b7a4a4e4d9d77916501e2c284bc",
+  "final_mechanical_links": "PASS after actual review/validation files saved; all earlier pending targets resolved with no placeholder or exemption",
+  "execution": {
+    "this_pass_original_instructions": 0,
+    "vendor_processes": 0,
+    "target_OS_services_network_bus": 0,
+    "earlier_F454_MH202_ledgers": "Unchanged; not replayed or reset"
+  },
+  "canonical_archive_registration": "Original archive/images/database locally preserved; no new upload or source-registry change in this pass",
+  "coverage": "COVERAGE.md",
+  "remaining_questions": "RANKED_REMAINING_QUESTIONS.md",
+  "wider_Device_review_gates": "Pending, unchanged",
+  "no_overnight_automation_created": true
+}

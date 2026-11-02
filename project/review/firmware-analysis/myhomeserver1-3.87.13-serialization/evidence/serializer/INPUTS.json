@@ -1,0 +1,22 @@
+[
+  {
+    "bytes": 1406680,
+    "path": "work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager",
+    "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26"
+  },
+  {
+    "bytes": 5611,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/image_vfs.py",
+    "sha256": "890e3526e2fc29c630cb45dad15d91fecb6b32007c0be04e5af28c85a48f1ae4"
+  },
+  {
+    "bytes": 7346,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime/schema-activation/REPORT.md",
+    "sha256": "481a0997aeef396372be9146a2e6adf2bfe1f496a50e3a77f7297043f1ea58d3"
+  },
+  {
+    "bytes": 8456,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/REPORT.md",
+    "sha256": "8bd31bb61d023eb7113c99ae99d0e3437be617a90f63d0992c322b1c8fbae779"
+  }
+]

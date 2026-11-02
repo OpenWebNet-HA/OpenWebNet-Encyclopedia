@@ -1,0 +1,14 @@
+{
+  "FAILURE.json": {
+    "bytes": 617,
+    "sha256": "602ff83f4e23ff26a88df976a779f79af4dcfbe50e4bed6c63d2a4ccb75fd37b"
+  },
+  "REPORT.md": {
+    "bytes": 6095,
+    "sha256": "2817bb8ec288fbc505d53499c5f9c6cfe92c7d391bac2e50787487ad66d82086"
+  },
+  "collect_verification_v1.py": {
+    "bytes": 7634,
+    "sha256": "2c1fd246930a29878f59984dcd01d2c260268bb6178721a14a329e8beab9c39b"
+  }
+}

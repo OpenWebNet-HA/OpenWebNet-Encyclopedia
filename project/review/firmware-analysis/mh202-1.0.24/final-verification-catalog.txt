@@ -1,0 +1,40 @@
+# MH202 final verification catalog through validated28
+
+Saved validation/provenance/review/document-byte navigation only. This generator runs no source collector, firmware/native corpus, repository tests or new semantic re-audit. Predecessor catalogs remain unchanged.
+
+| Checkpoint | Saved validation | Recorded scope |
+| --- | --- | --- |
+| 1 | [Record](../../validation/run1/final-checkpoint.json) | Run1 selected static paths; source reviews and exact identity, not runtime/physical proof |
+| 2 | [Record](../../validation/run2/final-checkpoint.json) | Run2 selected static joins; source reviews and exact identity, not runtime/physical proof |
+| 3 | [Record](../../validation/run3/final-checkpoint.json) | Run3 selected static joins; source reviews and exact identity, not runtime/physical proof |
+| 4 | [Record](../../validation/run4/final-checkpoint.json) | Run4 selected static joins; source reviews and exact identity, not runtime/physical proof |
+| 5 | [Record](../../validation/run5/final-checkpoint.json) | Run5 selected static joins; source reviews and exact identity, not runtime/physical proof |
+| 6 | [Record](../../validation/run6/final-checkpoint.json) | Run6 selected static joins; source reviews and exact identity, not runtime/physical proof |
+| 7 | [Record](../../validation/run7/final-checkpoint.json) | Run7 three static areas plus isolated original comparator corpus; not full firmware runtime or physical proof |
+| 8 | [Record](../../validation/run8/final-checkpoint.json) | Run8 three static areas plus isolated original packaged copy corpus; not full firmware runtime or physical proof |
+| 9 | [Record](../../validation/run9/final-checkpoint.json) | Run9 static source, supplied-parser normalizer body, prepared suffix objects; no whole parser/runtime/physical proof |
+| 10 | [Record](../../validation/run10/final-checkpoint.json) | Run10 static source plus full selected normal libopen builder/parser object route under C primitives; no raw diagnostic decoder, runtime or physical proof |
+| 11 | [Record](../../validation/run11/final-checkpoint.json) | Run10 static source plus coherent ordinary taskmanager/common130 native parser-normalizer under C primitives; no specialDIM1/rawdiagnostic/runtime/physical proof |
+| 12 | [Record](../../validation/run12/final-checkpoint.json) | Run10 static source plus native bracket/level common130 normalization plus static logical/lighting/component evidence; no specialDIM1/configured/runtime/physical proof |
+| 13 | [Record](../../validation/run13/final-checkpoint.json) | Run13 special-DIM1 entry prefixes with two native parsers each, stopped before selector consumption; static mixed logical-state and WHO2 translation evidence; no configured/runtime/physical proof |
+| 14 | [Record](../../validation/run14/final-checkpoint.json) | Run14 static diagnostic output-reference/return continuation, automationSTM and selected WHO4 translation; no new original execution or configured/runtime/physical proof |
+| 15 | [Record](../../validation/run15/final-checkpoint.json) | Run14 static diagnostic output-reference/return continuation, automationSTM and selected WHO4 translation; no new original execution or configured/runtime/physical proof |
+| 16 | [Record](../../validation/run16/final-checkpoint.json) | Run16 selected original48-byteCOSO parser/queryserializer with explicit C/GLib/cleanup/data-binding models plus static synchronizer/thermoSTM evidence; no targetOS/fullruntime/physical proof |
+| 17 | [Record](../../validation/run17/final-checkpoint.json) | Run17 selected original COSO in-place record helper and native48-byte parser with explicit C/GLib/free/list/data-binding models, plus static configured synchronizer/timer and interpreter GOTO evidence; no targetOS/fullruntime/physical proof |
+| 18 | [Record](../../validation/run18/final-checkpoint.json) | Run18 selected original NULL-source core/parser/native-ID path with explicit allocator/list/counter state plus static generated-record monitor ownership and script node-construction; no targetOS/fullruntime/physical proof |
+| 19 | [Record](../../validation/run19/final-checkpoint.json) | Run19 static WHO17 manager slots, event-cache/provider correspondence and selected WHO9 translation evidence; no new native corpus or targetOS/fullruntime/physical proof |
+| 20 | [Record](../../validation/run20/final-checkpoint.json) | Run20 original same-object auxiliary parser/selectorcopy with explicit C/GLib/clock/counter models, plus static sound/alarm translation; no targetOS/fullruntime/physical proof |
+| 21 | [Record](../../validation/run21/final-checkpoint.json) | Run21 exact generated alarm/sound candidates through original parser with explicit C/GLib/list models, plus static multimedia receipt state and post-decoded routing; current-source verification does not authenticate missing multimedia drafts; no targetOS/fullruntime/physical proof |
+| 22 | [Record](../../validation/run22/final-checkpoint.json) | Run22 actual parser→same-object serializer with originalGLibtraversal/callbacks and explicit ordinarymodels, static non-transport registration plus frozennavigation; prior missingdraftlimits retained; no targetOS/fullruntime/physical proof |
+| 23 | [Record](../../validation/run23/final-checkpoint.json) | Run23 static multimedia utility deadline producer plus frozen verification/navigation and morning synthesis draft; no original execution added, prior draft limits explicit |
+| 24 | [Record](../../validation/run24/final-checkpoint.json) | Run24 conditional original clock-provider/timeval-unit composition and actual later utility configuration writer; static source only, no new original execution, prior draft limits explicit |
+| 25 | [Record](../../validation/run25/final-checkpoint.json) | Run25 original WHO25 translator/STM source and curated-reference boundary reconciliation; static/finitehost only, no new original execution or physical support claim |
+| 26 | [Record](../../validation/run26/final-checkpoint.json) | Run26 fresh WHO14/WHO15 translator/STM source plus curated-reference boundary reconciliation; static/finitehost only, no new original execution, raw domain or physical claim |
+| 27 | [Record](../../validation/run27/final-checkpoint.json) | Run27 original WHO25 query/core/parser/new_id/initializer/app manual same-object handoff under private API models, static WHO29 owner/read boundary, frozen through26 draft; no actual timer/runtime/physical claim |
+| 28 | [Record](../../validation/run28/final-checkpoint.json) | Run28 bounded static packaged GSource/caller ownership and internal named-FIFO provenance; frozen later23..27 navigation. No new native execution/timer/runtime/physical claim |
+
+The15canonical saved corpora contain71top-level entries, including2stopped prefixes:31961original visits+3165declared primitive callbacks+132definition redirects+27EXIT returns+2selector stops=35287hook steps. Setup writes are separate; verification replays are not accumulated. Target process/OS calls0. Exact15result identities and saved ledger rows are in VERIFICATION_CATALOG.json.
+
+Checkpoint28 document navigation resolves16matching retained snapshot bytes, not mutable current pages. Ten published/research export pairs and five saved review identities are pinned. Historical run10/run14 scope strings remain verbatim; method/corpus evidence determines execution scope.31tooling tests and210Device checks are inherited run1 records, not new tests. Current source PASS does not authenticate missing18/21intermediate history. Wider Device gates remain pending.
+
+[Final findings supplement](FINAL_FINDINGS.md) adds2reviewed28rows;37total navigation rows are not a coverage percentage or exhaustive finding count.

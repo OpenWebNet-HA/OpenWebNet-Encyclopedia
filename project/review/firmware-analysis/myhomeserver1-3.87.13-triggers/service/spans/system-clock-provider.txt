@@ -1,0 +1,24 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/usr/lib/libstdc++.so.6.0.29:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000959a0 <_ZNSt6chrono3_V212system_clock3nowEv@@GLIBCXX_3.4.19>:
+   959a0:	b530      	push	{r4, r5, lr}
+   959a2:	b083      	sub	sp, #12
+   959a4:	4604      	mov	r4, r0
+   959a6:	4669      	mov	r1, sp
+   959a8:	2000      	movs	r0, #0
+   959aa:	f7e3 e8ac 	blx	78b04 <clock_gettime@plt>
+   959ae:	9b01      	ldr	r3, [sp, #4]
+   959b0:	f44f 414a 	mov.w	r1, #51712	@ 0xca00
+   959b4:	9d00      	ldr	r5, [sp, #0]
+   959b6:	f6c3 319a 	movt	r1, #15258	@ 0x3b9a
+   959ba:	4620      	mov	r0, r4
+   959bc:	17da      	asrs	r2, r3, #31
+   959be:	fbc5 3201 	smlal	r3, r2, r5, r1
+   959c2:	e9c4 3200 	strd	r3, r2, [r4]
+   959c6:	b003      	add	sp, #12
+   959c8:	bd30      	pop	{r4, r5, pc}
+   959ca:	bf00      	nop

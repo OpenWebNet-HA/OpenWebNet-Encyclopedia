@@ -1,0 +1,39 @@
+# MyHOMEServer1 3.87.13 Action Request Handoff
+
+Selected BN3L action callables now have a source connection to a local request interface. Their different captures reach two blocks which build objects with `jsonrpc`, `method`, `id` and `params`, then pass those objects to the same helper. This extends the [compiled-action construction](myhomeserver1-3.87.13-actions.md) and [serialization/ownership](myhomeserver1-3.87.13-serialization.md) findings. It establishes selected local requests under stated premises; method values, complete parameters, delivery and physical effects remain unresolved.
+
+The [review capsule](../../project/review/firmware-analysis/myhomeserver1-3.87.13-action-output/README.md) retains original bytes, paths, hashes, linked ELF addresses, immediate first copies, source reproduction and independent reviews. The original scheduler image object `home/bticino/scheduling_manager/scheduling_manager` has SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. No scheduler, callback, JSON operation, target process or physical installation ran in this packet.
+
+## The compiled action and captures are distinct objects
+
+The inherited selected constructor produces a116-byte compiled Bn3lActionRunner. Local action enum12, the raw64-byte object and that compiled object remain separate namespaces. The two callable adapters load the first word of their supplied callable storage and tail-call different bodies; that loaded receiver is a heap capture, rather than the compiled action itself.
+
+| Callable | Original adapter and body | Selected captured storage |
+| --- | --- | --- |
+|First|Instruction0xd14a4 to0xcf5c8|52 bytes: copied ID string at4, compiled word112 at0, compiled words92..108 at28..44 and operational duration at48|
+|Conditional second|Instruction0xcf064 to0xcdd14|24 bytes: copied ID string at0, without the first capture's six-word payload|
+
+The constructor and actual manager operation2 request independent52-byte/24-byte captures and string copies. The first capture's duration48 is separate from the compiled object's thread holder48. Normal allocation/string-copy returns, valid objects, no incompatible mutation and capture lifetime are premises. These source requests do not prove worker completion, safe or unsafe lifetime, or successful restoration.
+
+## Both selected bodies request the same local interface
+
+On the first body's inspected prefix, nonzero capture48 permits a guarded call to the previously studied query0x10f4a0; zero branches past that prefix. The query's success, record type/freshness and a snapshot interpretation remain premises. Later helper0xd20c0 is requested to produce a local descriptor. The second body independently requests that descriptor helper with its own storage. Descriptor production and parameter conversion remain unaudited delegate contracts in this packet.
+
+The selected assembly blocks request JsonCpp string values from descriptor subobjects and assign them under three exact keys. They request a fourth value from helper0xd163c and assign it under `params`.
+
+| Selected callsite | JSON object storage | Method-string argument | Parameter-conversion source |
+| --- | --- | --- | --- |
+|0xcf930 to0x5dda0|Current SP+72|Current SP+432|Current SP+480, temporary result SP+96|
+|0xcdf42 to0x5dda0|Current SP+56|Current SP+552|Current SP+600, temporary result SP+80|
+
+The call ABI supplies the receiver in r0, the method-string address in r1 and the JSON-object address in r2. Both receiver sources resolve through original relative-relocation slot0x1666a4, linked addend0x16711c. This identifies original source addressing, not an observed initialized runtime object or remote endpoint. Original key/PIC joins independently establish `jsonrpc`, `method`, `id`, `params`; their spellings do not establish a version, method value, public command grammar or accepted external exchange.
+
+The selected local0x5dda0 calls are the stopping boundary. Its body and downstream receiving/transport/MQTT/libjel/authentication/session/framing behavior are unopened here. JsonCpp destruction is requested after a normal return, but the first body continues afterward. Neither handoff is a complete callback-return proof or a demonstrated send acknowledgement. Source-equivalent member names and receiver do not establish equal parameters, a causal request pair, natural execution order or rollback.
+
+## What this changes and what remains open
+
+The earlier constructor, serializer and timing findings now connect to a concrete local request call instead of ending at an unknown invoker. This gives offline tooling a precise interface boundary and identifies the next local sources: descriptor values and selected parameter conversion. It does not yet provide a complete command generator or justify assigning a physical lighting operation to the private BN3L class name. [MyHOMEServer1's curated product evidence](../../devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md) retains its own SCS/Ethernet and scenario scope.
+
+Confidence is high for the bounded capture, branch, key and call/receiver facts. Original guards reaching these blocks, effective binding, normal provider/helper returns, valid storage and owner lifetime remain conditional. Actual configured scenes/extras80/81/94/95, complete merge/error/unwind/concurrency behavior, method and parameter meanings, effective providers and physical observations remain open. No full Device/source gate is closed.
+
+All new original execution, CPU replays, semantic models and input fixtures are zero. The cumulative MyHOMEServer1 experiment remains one packaged double-provider corpus, eight top-level entries,340 original code-hook visits, zero C primitives,12 definition redirects, eight EXIT boundaries, zero guard stops and360 hooks, with four data-relocation setups separate. Full JSON/scene/scheduler/OS/thread/network/bus and physical execution remain zero. Earlier F454/MH202 ledgers and preserved history limitations are unchanged.

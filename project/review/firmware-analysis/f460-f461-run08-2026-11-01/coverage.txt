@@ -1,0 +1,10 @@
+# Run08 coverage and boundaries
+
+| Area | Selected source reach | Open boundary |
+| --- | --- | --- |
+| F460 updater | Actual normal/recovery same binary; runtime-file test/XML requests; actions/action/type/attr selection; context48/56 separate record0 kind/record8 list joins; selected cleanup/local result | Actual context/records/runtime file/XML/provider/normal returns; extraction/precheck bodies; later staged-list consumer; version/signature trust chain, compatibility, installation/flash/reboot |
+| F461 daemon | Actual same binary across views; default/XML/keyfile byte360 producers; same-receiver local call; status conversion/low32==1; stat zero/nonzero selects named requests; four exact safe config lines | Configuration source/precedence/current receiver; extras-status producer/meaning; directory/environment; logger/HAL/file providers, results/readiness/full boot/control/ownership |
+
+F460:11 deterministic outputs, seven selected spans,36 instruction guards,10 PIC joins,18 import proofs, three local calls, nine branches, five input pins and13 v2 first copies. F461:11 outputs, eight spans,18 guards, five literal joins, nine import proofs, six input pins and13 first copies. Selected binary spans remain local; a reversible hexadecimal transcript preserves eight F461 spans in the capsule. Counts express bounded reach/integrity, not coverage percentages or executed tests.
+
+All new original/helper/native/emulator/model/fixture/SQL/XML/OS/process/file/service/network/bus/physical execution zero. Earlier MHS one corpus/eight entries/340 original code-hook visits and separate F454/MH202 ledgers unchanged. Full Device/source gates pending. The uncertain F461 identity process consumer and all closed receiving/transport/auth/session/framing/MQTT/libjel routes remain excluded.

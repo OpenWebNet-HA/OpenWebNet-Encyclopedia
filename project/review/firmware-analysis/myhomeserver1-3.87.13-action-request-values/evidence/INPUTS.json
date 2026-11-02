@@ -1,0 +1,36 @@
+{
+  "/home/bticino/scheduling_manager/scheduling_manager": {
+    "bytes": 1406680,
+    "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26"
+  },
+  "current_curated_role": {
+    "bytes": 43560,
+    "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md",
+    "sha256": "bd64060e1e19f90eecad2808b62327847a0f541ae2fc46239bbda29a5efe5c98"
+  },
+  "image_accessor": {
+    "bytes": 5611,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/image_vfs.py",
+    "sha256": "890e3526e2fc29c630cb45dad15d91fecb6b32007c0be04e5af28c85a48f1ae4"
+  },
+  "inherited_callsite_source": {
+    "bytes": 10603,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/callable/ORIGINAL_SOURCE.json",
+    "sha256": "4f4f713a188108c5c6458fb68c6e27da44d6106e759c10cda745166f568042e2"
+  },
+  "inherited_capture_and_request_handoff": {
+    "bytes": 9307,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/callable/REPORT.md",
+    "sha256": "0f55aa02fd373acbd1b7ef81f2e85aa71bf7ae27e826663bf91061f1376fb3e7"
+  },
+  "prior_independent_source_review": {
+    "bytes": 7493,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/reviews/callable-source-review.md",
+    "sha256": "75adc74bd12e1850e6fe62a496f56ba1c6f74078ff6e7b2b0afdca1a5ab43ab0"
+  },
+  "unchanged_saved_native_ledger": {
+    "bytes": 22496,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/RESULTS.json",
+    "sha256": "450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525"
+  }
+}

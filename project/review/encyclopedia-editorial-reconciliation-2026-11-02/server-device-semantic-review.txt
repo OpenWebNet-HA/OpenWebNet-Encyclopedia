@@ -1,0 +1,65 @@
+# MyHOMEServer1, F460 and F461 current Device-description review
+
+**All seven semantic Device checks are complete for each of the three current definitions. Validation is PENDING in this review** and must be completed by the parent's applicable actual checks before recording current all-eight acceptance. This review does not edit queue states or assert full Firmware/source, installed runtime or physical approval.
+
+The reviewer read the full current definitions: OWN-DEV-0199 (458 lines), OWN-DEV-0207 (430 lines) and OWN-DEV-0208 (416 lines), the presentation-profile gate and their prior accepted seven/eight-check ledgers. Exact HEAD and root BASELINE differences were compared. Unchanged material is explicitly reused from the retained 7 October acceptance, rather than falsely claiming a new PDF, catalogue or firmware-body examination. New source-accounting/implication paragraphs were checked against the current separately reviewed MHS and F46 references. Exact current, HEAD, BASELINE and reference identities plus changed line ranges are in device-0199-0207-0208-seven-check-identities.v1.json.
+
+No material correction is required by this semantic review.
+
+## Prior acceptance reuse and fresh scope
+
+The current three-page HEAD diff changes only the firmware-source/evidence status paragraphs, F46 source-inventory rows and related source-scope wording. Every other Device identity, manual revision, commercial record, catalogue table, physical rating, configuration procedure, documented limit, conflict and source attribution remains byte-identical to accepted HEAD. The original editorial BASELINE retains intermediate research-accounting prose; current revisions make that prose direct and durable without changing supported behavior.
+
+Prior acceptance is reused only for those unchanged claims and evidence relations:
+
+- OWN-DEV-0199: project/review/device-reviews-0191-0200-2026-10-07.md#own-dev-0199. The retained AH/AA/AB manuals, 2022 exact sheet, external compatibility context, historical guide and 2024/2025 feature matrices retain their reviewed revision/page scopes. No new manual or measured-installation evidence is claimed.
+- OWN-DEV-0207 and OWN-DEV-0208: project/review/device-reviews-0201-0210-2026-10-07.md#own-dev-0207 and #own-dev-0208. Exact catalogue relationships, 2024/2026 source generations, commercial exports, guide/manual/leaflet scopes and explicitly unresolved source conflicts retain their prior acceptance. External developer protocol documents are not silently added to examined sources.
+
+The fresh review covers each current whole-page arrangement and the modified firmware implications against the applicable source summaries and limits. It is not merely reuse of an unchanged queue label.
+
+## OWN-DEV-0199 — MyHOMEServer1
+
+| Gate | Result | Concrete current-description check |
+| --- | --- | --- |
+| identity_scope | complete | Single MyHomeServer1 commercial record 2552/item2198/modobj67 is preserved. Its 13 catalogue firmware definitions/20 builds remain distinct from retained build3.87.13, app document generations and F460/F461. Reusable F454-labelled Object216/key512 is not an alias or inherited AV/alarm hardware. |
+| claim_evidence | complete | Unchanged physical ratings, catalogue associations/fields, manual capacities and app requirements reuse their accepted source/page relations. The modified evidence paragraph accurately describes separate build-specific embedded-catalogue/scene-processor source evidence and one isolated scalar-provider experiment. The latter is not a whole JSON scene, installed process or physical observation. |
+| source_reconciliation | complete | AH MyHOME_Up versus AA/AB Home+Project/Home+Control, AA versus AB zone additions, USB wording, fixed-IP documentation versus reusable defaults, and later feature/version matrix discrepancies remain explicit. Selected 3.87.13 evidence narrows the old blanket firmware-unexamined status without implying all catalogue releases, parameter payloads or feature-detail pages were reviewed. |
+| information_architecture | complete | Summary explains the Device; document/physical/identity/firmware/Module/Object/Virgin/mode/field/diagnostic/functional tables retain separate roles. Procedures and reconciliation remain prose where relationships matter. New firmware evidence is kept with concrete limits and a source link rather than source addresses or execution accounting. |
+| reader_usefulness | complete | The page explains SCS/Ethernet/app commissioning, manual generations, scenario/room/account limits, later firmware/app prerequisites and practical backup/offline/overwrite boundaries. It does not force one workflow across all catalogue tuples or turn source-owned capabilities into active Modules. |
+| evidence_limits | complete | Installed app/build pairing, service endpoints and integrations, hardware/MCU observations, unexamined detail pages, unavailable exact export/EAN, complete parameter semantics and actual scenes remain concrete gaps. A software scalar experiment does not contradict the absence of Device-specific hardware experiments. |
+| presentation | complete | Full current page follows the Device architecture with structured enumerable facts, source-scoped ranges/defaults/revisions and useful explanatory relationships. Public documentation endpoints/defaults are expressly not private observations. The changed paragraph removes chronology/corpus wording without losing the scalar/static/runtime distinction. |
+| validation | pending | Parent must apply and record actual validation for these current bytes. No validation result is manufactured here. |
+
+## OWN-DEV-0207 — F460
+
+| Gate | Result | Concrete current-description check |
+| --- | --- | --- |
+| identity_scope | complete | F460 commercial2649/item2288/modobj132/firmware840 remains distinct from F4612650/item2293/modobj134/843, MyHOMEServer1 and F454. Commercial EAN scope stays separate from a configured Device identifier. Shared catalogue Object inventory does not merge products. |
+| claim_evidence | complete | Unchanged source-specific ratings, dimensions, compatibility exclusions, app/commissioning roles and capacity tables reuse accepted evidence. Selected build2.0.12 source is correctly added as implementation evidence, not installed release, complete operation or extra physical capability. The row links a bounded source study rather than claiming the complete Firmware is approved. |
+| source_reconciliation | complete | Home+Project installer versus Home+Control resident roles remain explicit. Manual50 versus guide150 installer and feature-page100 user scenarios remain source/role/generation scoped; 175-per-system versus expanded350/525 branch wording, physical-configuration/99-zone exclusions, depth/current differences and historical first-update3.71.11 label remain unresolved where appropriate. F461 is not assigned F460's alarm or Home+Control-disable feature merely from shared text. |
+| information_architecture | complete | Physical/product declarations, publisher classifications, catalogue model, procedures, source conflicts and evidence gaps remain in their proper sections. The firmware-inventory row discloses selected examination and links its scope, while the surrounding paragraph distinguishes it from unexamined externally listed resources. No audit ledger substitutes for explanation. |
+| reader_usefulness | complete | The reader obtains its home-control role, installer/resident split, topology/expansion prerequisites, supply/interface facts, update/backup/account/handover/reset distinctions and configuration compatibility constraints. “Native humidity” is reconciled with external humidity measurement/equipment, not presented as an onboard sensor. |
+| evidence_limits | complete | Installed version/capacity, compatibility by production/branch, third-party endpoint/payload behavior, hardware/MCU fingerprints and physical/runtime corroboration remain unobserved. Historical ST1807, external developer-protocol payloads, detailed UI screens and unrelated listed resources retain their own unexamined scope. Build-specific inspection does not close all source families. |
+| presentation | complete | The current page uses the established Device section architecture and structured tables; the limited-source prose is direct and version-specific. Catalogue V1/R0, reusable FW_VER3.0.0/defaultIP/ports, manufacturer release labels and inspected2.0.12 remain separate. No unnecessary collector, checkpoint or hook ledger remains in the changed explanation. |
+| validation | pending | Parent actual checks must establish the eighth gate for the current identity. |
+
+## OWN-DEV-0208 — F461
+
+| Gate | Result | Concrete current-description check |
+| --- | --- | --- |
+| identity_scope | complete | Exact F4612650/item2293/modobj134/firmware843 and third-party-integration role are preserved. It is an alternative to F460, not a co-installed extension. Reused F460 illustration, shared manual and F454-labelled Object are expressly prevented from creating identity/hardware equivalence. |
+| claim_evidence | complete | Unchanged commercial/catalogue/manual/physical claims reuse accepted evidence. The new build2.0.11 paragraph is consistent with selected configuration/module/translation source requests and conditional providers. It does not claim actual drivers, native protocol payload behavior, live identity, external command admission, successful delivery or installed support. |
+| source_reconciliation | complete | The exact technical descriptions' third-party user app remains primary. The English export's Home+Control/Alexa/Google classification is retained as a conflict, not adopted as native user behavior. Grouped feature24 does not override F460-only body scope; the 2024/2026 copied command-actuator row discrepancy, capacity wording and dimensions remain visible. External Local Interoperability specifications are still unexamined. |
+| information_architecture | complete | Page structure separates physical specifications, publisher classifications, catalogue data, procedures, conflicts and actual evidence status. Source/navigation scopes of shared functional chapters do not become blanket F461 support. New firmware examination status is attached to a specific build and reference rather than replacing the external-source inventory. |
+| reader_usefulness | complete | The page clearly explains Home+Project commissioning plus third-party resident control, coexistence exclusion, configuration compatibility, stated expansion alternatives, update/backup/account transfer and destructive-reset distinctions. F460-only Home+Control/alarm procedures are not transferred. |
+| evidence_limits | complete | Hardware/build/capacity, actual integration drivers/endpoints and protocol payloads, detailed graphic UI screens, linked XML/other resources and configured runtime remain concrete pending evidence. “Selected source paths” does not imply every linked XML, external developer payload or Firmware path was examined. |
+| presentation | complete | Canonical Device organization, source/variant tables, current limitations and unresolved contradictions are readable and linked. Generic catalogue defaults/Objects remain distinct from physical and runtime facts. Current wording removes dossier-history phrasing while preserving the explicit partial-source scope. |
+| validation | pending | Parent records actual applicable current validation separately. No queue edit or full acceptance is made by this reviewer. |
+
+## Cross-product and evidence conclusions
+
+MHS3.87.13's ARM32 scene engine and single narrow scalar experiment are separate from F4602.0.12/F4612.0.11 AArch64 static source. F460's selected catalogue/scene consumer is not an F461 catalogue/scene reader simply because source data matches. F461 configuration/module lifecycle and formatting are source requests rather than a demonstrated active third-party stack. All three descriptions continue to distinguish public/manual product roles from catalogue candidates, implementation evidence and actual Physical Device behavior.
+
+The seven semantic checks are therefore complete for the exact current identities recorded beside this report. Existing accepted evidence is reused expressly where byte-unchanged; new wording has received fresh review. The parent may pair this review with actual current validation to record a new limited-description acceptance. This does not claim comprehensive source coverage, complete external payload review, runtime/physical confirmation or Machine KB approval.
+
+No repository file, source original, queue record or machine data was edited. No new PDF/binary/provider inspection, old collector replay, vendor/helper/native/SQL/runtime/physical execution, staging, commit or push occurred.

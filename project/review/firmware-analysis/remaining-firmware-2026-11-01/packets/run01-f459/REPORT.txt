@@ -1,0 +1,11 @@
+# F459 shared-store constructor: selected original request chain
+
+The own F4592.1.5 packaged libmhshared.so.1 is43208B/SHA4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377. This packet freshly checks ELF32 little-endian ARM, its PT_LOAD mapping and exported C1 constructor67c0; no MHS/AArch64 fields are substituted.
+
+At6834, actual PC-relative literal data derives90b4 (/tmp/plugin.shared.sqlite) intoR0. At6830 R1=SAMEsavedreceiverR4+8;6838 requests sqlite3_open through actualPLT234c/GOT122a0/R_ARM_JUMP_SLOT. Under ordinary validreceiver/prelude/provider/normal-return premises, this closes the earlier literal-to-open argument edge. It does not execute SQLite, prove the caller or establish that a file was opened/created.
+
+The following source readsreceiver+8 intoR0 for busy-handler request684c, and again intoR0 for exec6870. Literal9150 (exactCREATE TABLEshared DDL) derivesR1 at6864; R2/R3zero and the actualGOTzErrorMessagepointer is supplied in the stack argument slot. Fresh selectedPLT/GOTrelocations prove symbols sqlite3_busy_handler andsqlite3_exec, rather than nearest-name annotations. No local return-resultbranch intervenes in the selected normal prefix; this is not a full error/unwind, provider or failure/safety judgment. Prefix stops6874, before laterQFile/permissions and exception policy.
+
+The DDL fieldspluginname/key/value/persistentdefault0 and PK(pluginname,key) are exact original SQL text. This packet proves the selected request argument, not successful CREATE, an installed/current schema, data values, persistence durability, ownership or concurrent behavior. Busy-handler body, SQLite/OS/provider bodies and natural caller remain opaque. Rawliteralpool words are data, not executed instructions.
+
+SOURCE.json/INPUT_PINS.json preserve exactoriginalpath/hash, header/PT_LOAD,19instructionguards,2selectedspans/pool/literalbytes and3actualcall/PLT/GOTrelocations. Reproduce static --check on the installed hostARM objdump; no original/helper/native/targetprocess/OS/network/bus/mount or hostSQL query ran. No actual database bytes were recovered or generated here; do not archive a synthetic database made from this DDL as a vendor original. Separate F450candidate/database recovery remains open. Closed transport/auth/session/framing/receiving/output/MQTT/libjel bodies were not expanded.

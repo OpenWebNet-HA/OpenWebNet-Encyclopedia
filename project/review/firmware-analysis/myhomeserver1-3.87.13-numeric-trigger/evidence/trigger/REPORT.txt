@@ -1,0 +1,72 @@
+# MyHOMEServer1 3.87.13: one BNLD numeric trigger and actual local caller
+
+The original scheduler has a concrete numeric trigger path for its own trigger-table row3, `BNLD`. Its compiled numeric handler receives a 32-bit supplied event integer and compares it with its own configured threshold. The selected actual local caller reaches that handler only after ID matching, a numeric-status selector, a record-value sentinel check and exact status `on`. On the handler's selected admission path, the original captured callback reaches the scene launch boundary. These are new selected source relations, not a schema-only name match or a counterpart inferred from BNLD conditions.
+
+This batch adds **zero original/native/provider/vendor execution, zero semantic host fixtures and zero target I/O**. The prior MyHOMEServer1 ledger remains one corpus/eight entries,340 original code-hook visits,0 C primitives,12 redirects and8 EXIT =360 hooks. No prior native experiment or source collector is replayed. No receiving/transport/authentication/session/framing/MQTT/libjel implementation is followed.
+
+## Original source and distinct identities
+
+Original `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Fresh ImageVFS bytes, ELF PT_LOAD mappings, original Thumb instructions, PIC/GOT/RTTI data and relative relocations establish the following local identities:
+
+| Stage | Actual identity and representation |
+| --- | --- |
+| Raw trigger name table | `0x160450`, row3 exact `BNLD` |
+| Raw factory | Decremented index2 at TBH base `0x2eac0` reaches `0x2f416` |
+| Raw constructor temporary | `15BaseBnldTrigger`, header `0x1602ec` |
+| Final raw object | 48-byte `11BnldTrigger`, header `0x160304`, primary address point `0x16030c` |
+| Compiled initializer | Direct index3 at separate TBH base `0xa732e` reaches `0xa8d80` |
+| Compiled object | `17BnldTriggerRunner`, header `0x16265c`, primary address point `0x162664` |
+| Persistent allocation | 80-byte control aggregate, inner=base+12, compiled inner extent68 bytes |
+| Selected primary method | Thumb `0xf486d`, instruction `0xf486c`, a stored-callback forwarder |
+| Numeric admission method | Separate nonvirtual instruction entry `0xf4a80` |
+
+Raw trigger row3, its decrement index2, compiled direct index3, the earlier BNLD **condition** row2 and local record/event codes are separate namespaces. Primary methods/cleanup slots and the secondary schema interface are not interchangeable. No class layout is copied from BNIL or BNTH merely because a name begins similarly. Curated OWN-DEV-0199 supplies product/scenario role only, without physical brightness, published commands or units.
+
+## Selected numeric schema and compiled copies
+
+Constructor `0x2cc00` first calls original trigger base `0x2c678`. Its own derived words raw+40/+44 are initialized to−1. A present exact `status` member takes the earlier string-conversion branch; that sibling route is not classified in full here. With `status` absent, `0x2cc94..0x2ccb6` accesses exact `level`, requests `asInt` and stores the result at raw+44. It does not first perform a level-presence test on this retained branch. Missing-member conversion, invalid JSON types, defaults and accepted numeric range remain provider/grammar premises. The source's positive-value conditional status store does not establish a physical state.
+
+The raw factory calls that constructor, requests48 bytes, copies its base/derived values, installs the independently verified final `BnldTrigger` header and requests append. In the compiled initializer, the raw object's **slot+8** serializer is requested at `0xa8dc6`; the same JSON destination is supplied to `0x2cc00` at `0xa8dd2`, before the final raw header is reinstalled and temporary compiled constructor `0xf487c` is called. Complete serializer/reparse value coherence, strings/JSON conversions and normal allocation/copy returns remain unexecuted conditions.
+
+Fresh constructor instructions copy raw enabled+28 to compiled+48 and raw type/operator/status/level words+32/+36/+40/+44 into compiled+52/+56/+60/+64. The persistent aggregate copies the schema and derived pair, reinstalls the actual primary/secondary headers, and supplies `(base+12 inner, control base)` through `0xa56e4` to scene+104. This is an eight-byte trigger handle, not a four-byte condition pointer or a Thermostat cached-double object.
+
+## Actual local caller supplies an integer under additional gates
+
+The existing selected local event/cache loop is inherited from the read-only routing report; it retains parsed-local-input, event eligibility, suitable record, provider, vector alignment and owner/lifetime premises. This new class-specific join derives relative32 table base `0x52d5c`, index2, stored `0x0c31`, yielding Thumb `0x5398d` and actual instruction entry `0x5398c` for raw trigger3.
+
+At that recipient the source copies the scene's compiled trigger-handle vector, bounds the selected index, checks a nonnull entry and requests a dynamic cast from actual `13TriggerRunner` RTTI to `17BnldTriggerRunner`. The cast's success/current object type is a premise. The copied vector is released through `0x573a4` before later receiver use, so this source does not establish complete receiver lifetime or concurrent safety.
+
+The retained ID-getter fast leg supplies compiled string+24 to comparison helper `0x4f000` against the supplied local event ID at `0x539f4`; the delegated alternate getter remains opaque. Only a matching selected comparison proceeds. `0x539fe..0x53a02` tests compiled status word+60: only−1 takes this packet's numeric continuation at `0x54c0e`. The non−1 sibling calls a separate string handler and remains outside the selected numeric semantics.
+
+At `0x54c0e` the source reads **record word+32 as an integer into r1**. It rejects the all-one sentinel via value+1 zero test. It then requires record string+8 to have length2 and exact ASCII bytes `on`. After those guards, `0x54c32` supplies the compiled primary pointer in r0 and `0x54c34` calls **`0xf4a80`**, preserving the supplied integer in r1. Field32 here must not be equated with the distinct Thermostat record's double at the same numeric offset. Record type/layout/current value and ID suitability remain explicit; no record producer, raw wire or physical measurement is manufactured.
+
+## Numeric admission has explicit operand orientation
+
+Handler `0xf4a80..0xf4ad4` first requires its own enabled byte+48 to be nonzero, then reads its own operator word+56 and threshold word+64. Its actual source decisions are:
+
+| Operator word | Selected callback admission |
+| --- | --- |
+| 0 | Supplied event integer **greater than** configured threshold, signed32 comparison |
+| 1 | Supplied event integer **less than** configured threshold, signed32 comparison |
+| 2 | Supplied event integer **equal to** configured threshold |
+| 3 | Supplied event integer **different from** configured threshold |
+
+For operator0, `CMP r1,r3` at `0xf4a94` is followed by signed `BLE` to return; for operator1, `CMP r3,r1` at `0xf4ac6` is followed by signed `BGT` to invoke. These orientations come from the actual operands, not the earlier condition predicate or a presumed public operator spelling. Equality/inequality use their own explicit branches. Other operator words reach the callback branch without these threshold comparisons in this local body; this is not a public admissible-operator contract.
+
+The selected method receives one supplied current integer. This does not establish an edge-crossing detector, previous-value/hysteresis/dedup policy or an absence of such policy elsewhere. No arbitrary operator/value fixtures or host semantic matrix were supplied.
+
+## Captured scene callback and stopping boundary
+
+The initializer's own PIC targets are Thumb manager `0xa56c1` and invoker `0xa60a9`. It stores the supplied scene pointer from initializer SP+4 into the callback source tuple, requests the normal callable copy, and `0xf487c` invokes the supplied manager with operation2 before copying manager/invoker fields. Original `0xa56c0` operation2 copies the stored raw pointer. This is callback dataflow, not an owning scene reference, observed subscription or service identity.
+
+When the numeric handler reaches invocation, it compares the actual primary first method with Thumb `0xf486d`. For that known interface it checks manager+12, then tailcalls stored invoker+16 on function storage+4. The actual primary method `0xf486c` has the corresponding stored-callable dispatch. A different virtual primary target is an opaque delegate; a null callable requests an exception rather than a forced success.
+
+The identified scene invoker `0xa60a8` loads the captured scene pointer and tailbranches to original launch boundary `0xa5db0`. Earlier source reports establish that launch's enabled/active and condition/thread premises; they are not repeated or executed here. This closes a selected numeric admission-to-captured-scene request, without proving a configured scene, successful thread/condition/action, active provider, accepted external event or physical effect.
+
+## Reproduction and limits
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/collect_trigger_v1.py --check`
+
+The exclusive collector retains14 code spans,27 byte guards, ten decoded direct calls, three separately resolved class headers, two dynamic-cast typeinfos, three exact member-key PICs, three selected dispatch entries, two captured callback targets and six input pins. Exact current source identities/relocations are in `ORIGINAL_SOURCE.json`; `NUMERIC_CONTRACT.json` separates local selectors, caller gates and operand orientation. First generation refuses existing outputs/snapshots and immediately copies generated evidence, report and collector with index bytes computed before index creation. An exploratory neighboring disassembly ended within a wide instruction; no retained source claim uses that truncated instruction. No generated candidate was overwritten or guest executed.
+
+High confidence is limited to these actual selected source joins and signed branches. Valid parsed/local objects, JSON/copy/allocation/tree/cast/getter/vector/provider returns, matching IDs/types, callback captures/current vtables, full owner retention/unwind/concurrency and natural activation remain conditional. Full optional grammar, range/unit/physical meaning, external event source and whole lifecycle remain open. All original images, source references and earlier completed dossiers stay read-only, and the prior canonical execution ledger is unchanged.

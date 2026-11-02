@@ -1,0 +1,44 @@
+[
+  {
+    "bytes": 648,
+    "end_va_exclusive": "0x2b33c",
+    "name": "raw-bn3l-schema",
+    "sha256": "9ae09f661767bbf8855ef5a14892a25980d525eec752e13a45b2429f21eee74f",
+    "start_va": "0x2b0b4"
+  },
+  {
+    "bytes": 82,
+    "end_va_exclusive": "0x31406",
+    "name": "raw-factory-selected-branch",
+    "sha256": "4a02a18a4febebe2b341ddc9ca2bb0add79eb0ecccd4bbe3389cdfab19c34fe7",
+    "start_va": "0x313b4"
+  },
+  {
+    "bytes": 16,
+    "end_va_exclusive": "0xa7600",
+    "name": "initializer-action-selector",
+    "sha256": "8c2945ed7eb89375603ed5a1ab7dc49d6559e7e935f274488695d53e7250ffe8",
+    "start_va": "0xa75f0"
+  },
+  {
+    "bytes": 350,
+    "end_va_exclusive": "0xac2f6",
+    "name": "compiled-selected-branch",
+    "sha256": "9de058860f874e3145a7f6d153e9314527b6ac70cc06755cd6f96135f5e87d11",
+    "start_va": "0xac198"
+  },
+  {
+    "bytes": 146,
+    "end_va_exclusive": "0xb44de",
+    "name": "common-move",
+    "sha256": "7264b5a58c380d521d0236dba68a1f31127e9188b1956d7f06b3ab244cf4a6b8",
+    "start_va": "0xb444c"
+  },
+  {
+    "bytes": 78,
+    "end_va_exclusive": "0xcf162",
+    "name": "compiled-metadata-to-operational",
+    "sha256": "5ac2956fd4a6cc07a39a5339f08d7f4ec6bda5ac761a51047bc0ae4b58744744",
+    "start_va": "0xcf114"
+  }
+]

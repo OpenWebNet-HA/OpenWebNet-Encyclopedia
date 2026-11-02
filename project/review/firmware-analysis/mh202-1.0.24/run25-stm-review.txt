@@ -1,0 +1,42 @@
+# MH202 WHO25 STM25 independent static source review
+
+PASS. No correction requested. I independently reviewed the original source/control flow, candidate providers and callback arguments, saved finite models, first-candidate integrity and deterministic static reproduction. Original execution and native replay are both zero in this review. All author files, original images and earlier artifacts stayed read-only; this is a new review file.
+
+## Final pinned candidate
+
+| Artifact relative to research 2026-10-30 | SHA256 |
+| --- | --- |
+| who25/run25-stm/REPORT.md | 22e23d353a1ef956a69a4c2c80f7e510124872af602be0b545e06dcca3cd06b5 |
+| who25/run25-stm/collect_stm_v1.py | 7fd7c54ae4caf7e29ffcfffa56792f95a58522d9da9d20e90c3493fcc975b078 |
+| who25/run25-stm/output-manifest.json | 541c33880eaf8680a05698111fee3c201a1261fca229cb7373b429de11988609 |
+| who25/run25-stm/initial-generated-v1/SNAPSHOT_INDEX.json | f7078739aa793c41d666bbf98dccd6c7621373cc93fa6d68d616276aa981b561 |
+
+Original normal-image identities independently match: /home/bticino/libcoso/libplug_trasv_cmd_stm.so SHA2568e656523b5bb4c22196203c7e801e631a3481b529982baa1a9f4a9ca13febe2d; /home/bticino/libcoso/libcoso.so f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97; /home/bticino/bin/coso 6865c2d1d441d25effa31275080ded70ad3538a8a49288e3002ffb196b066175. Paths are absolute within the image, not host paths.
+
+## Reproduction and preservation
+
+The author command `python3 -B work/mh202-firmware/research/2026-10-30/who25/run25-stm/collect_stm_v1.py --check` passes: 20 outputs including manifest, 11 original spans, 35 words, six inputs, eight selected relocation rows and nine finite host cases. Reported original execution/hooks are zero. I independently read the ImageVFS originals, mapped ELF32 PT_LOAD ranges and compared every saved raw span hash and critical word. All six input hashes/lengths, 19 manifest evidence entries, report/collector pins and 22 exact indexed first-candidate copies match. This is current-source plus actual first-copy verification, without reconstructed historical bytes.
+
+I separately recomputed the literal0x0033fc1f mask over integers11..32, confirming the selected local bitset11..15/21..28/31..32. I audited the nine independent ledgers against the original branches, including the initialized idle field case with savedID0xffffffff/sourceNULL. The host cases do not execute target parser, constructor, allocator, GLib list or timer operations and are not a chronological real exchange.
+
+## Original control/dataflow checked
+
+Descriptor0xa3b4 is registered with criterion25, independently from TR25's direction/criterion lists. Relocations identify initializer+36 at0x18cc, field+40 at0x15a4 and application+44 at0x17b4. Core register_state_machine0x2074 prepends the descriptor to manager+24, stores manager at descriptor60, and supplies manager+44 to the initializer. The original initializer requests g_malloc0(24), stores the private pointer at descriptor56, writes owner0 and tuple words16/20, and calls reset. This is a fresh own24-byte context, not a copied other-plugin layout.
+
+Main0xa5b4..0xa600 and GOT16808 identify manager+48's candidate sm_receive0xb564; under the same initialized-manager/provider premise this becomes private20. The timeout's indirect call at0x179c therefore has a justified conditional candidate, not an observed invocation. The original sm_receive body requests OPEN and field delegate consumers; no downstream serialization, transport or physical recipient is established.
+
+The outer application and field callback source compares envelope48 with descriptor52 list entries, and invokes descriptor44/40 with the same supplied envelope plus distinct local field/OPEN list-slot addresses. Coherent parser state, active matching registry and noninterference remain premises. The application source directly dereferences the parsed object and does not itself validate representation or execute a parser in this body.
+
+Application0x17b4 writes envelope4/8=1 before the kind/address checks. Kind2 requires only WHERE first byte ASCII3 at0x1810/0x1814; exact text3 is a chosen finite fixture, not the source's full predicate. The branch appends the same Q to output argument2, saves Q.ID60 at private8, sets state4=1, and requests source_new(1000), callback0x173c with this private userdata, and attach using private16. The source does not prove timing units/schedule and this review does not add them. The no-busy-check/no-prior-destroy observations remain bounded source facts without a leak, concurrency or complete policy claim.
+
+The kind1 path is distinct: converted WHAT unsigned(WHAT-11)<=21 plus the literal bitmask gates selected same-Q append/local ACK/reset, rather than a global public WHO25 capability or physical-family table. Unsupported local branches request NACK/reset under normal helper completion. Source conversion delegates and full grammar remain unexecuted.
+
+Field0x15a4 supports a separate representation2 parser request, while the finite cases use coherent representation3. With idle state0 it marks F.meta8=3 and appends the same F to output argument3. State1 alone compares saved private8 with F.ID60; match/status1 changes state to2 then enters common forwarding, match/status2 resets before requesting NACK and skips that same-F append. A mismatching ID goes to common forwarding with state1 retained; state2 enters common forwarding without the saved-ID comparison. Thus saved ID is not a universal forwarding/admission gate, and a status2 outside the selected matched state1 condition is not universally a NACK.
+
+The common field path marks meta8=3, appends the same F and, when parsed kind44 is not2, separately requests new_openmsg_from_openmsg(selector4,Fparsed) and appends its returned pointer. Selector4 is kept distinct from parsed kind4, status, receipts and envelope metadata. The source then destroys an old nonNULL source, requests a new source with1000, records it, installs callback/private userdata and attaches. Actual constructor output/ownership and timer behavior remain delegate boundaries.
+
+Timeout0x173c initializes two local list slots; state1 requests NACK and state2 ACK, then calls private20 with OPEN-slot/field-slot/descriptor60. Other states skip that receipt/publication branch. It resets only after the callback returns normally. Reset0x1574 stores ID=-1/state0, destroys a nonNULL source and clears source12; there is no unref request in this complete bounded body. This does not establish a process-wide refcount policy or defect. The report correctly distinguishes timeout callback-before-reset from matched field status2 reset-before-NACK order.
+
+## Scope and remaining questions
+
+The fresh static paths and finite source-effect ledgers support the report's conditional local contracts. They do not prove an accepted WHO25 raw message, natural query/feedback correlation, active timer/context, callback completion, universal ID policy, physical acknowledgement, public capability table, or successful output delivery. Existing physical captures/oracle results and family grammars are separate evidence. Effective providers/registry, normal helper/list/ABI completion, owner lifetime and complete cancellation behavior remain open. No author correction, original process, syscall, session/authentication/framing work or native corpus was added by this review.

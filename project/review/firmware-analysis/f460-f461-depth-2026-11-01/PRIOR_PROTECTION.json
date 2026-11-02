@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "prior_checkpoint_index_sha256": "760a66fcae9e1d4eab76f20a00d062b86f57f891045c35e77d7ec2e3c318e701",
+  "prior_checkpoint_members_checked": 307,
+  "scope": "Read-only byte/size check of immediately preceding frozen first-pass checkpoint, not repeated firmware analysis or semantic review."
+}

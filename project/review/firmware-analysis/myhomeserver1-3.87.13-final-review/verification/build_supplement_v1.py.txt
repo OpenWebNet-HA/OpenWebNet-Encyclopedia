@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+"""Two later saved checkpoints; exact historical-reference overrides, no source replay."""
+import sys
+sys.dont_write_bytecode=True
+import argparse,hashlib,json,stat
+from pathlib import Path
+D=Path(__file__).resolve().parent;W=next(p for p in D.parents if(p/'sources').is_dir());R=W/'work/myhomeserver1-firmware/3.87.13/research'
+H=lambda z:hashlib.sha256(z).hexdigest();J=lambda x:(json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+PRE=R/'2026-11-01-final-review/integration/pre-edit'
+DEVICE='OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md'
+OVERVIEW='OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md'
+HIST={DEVICE:{'sha256':'5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855','bytes':43131,'snapshot':'own-dev-0199-myhomeserver1-home-automation-server.md','set':'old614'},OVERVIEW:{'sha256':'5a3dec72f1d14ac5c338a38571c809749594e761854e915c8a0decea447bcd52','bytes':13742,'snapshot':'myhomeserver1-3.87.13-research-synthesis.md','set':'numeric142'}}
+def build():
+ pins={}
+ def rel(p):return p.relative_to(W).as_posix()
+ def read(p,track=True):
+  p=p if isinstance(p,Path)else W/p;assert p.resolve().is_relative_to(W)and stat.S_ISREG(p.lstat().st_mode)and not p.is_symlink()
+  z=p.read_bytes()
+  if track:pins[rel(p)]={'path':rel(p),'sha256':H(z),'bytes':len(z)}
+  return z
+ def pin(p):read(p);return pins[rel(p)]
+ def load(p):return json.loads(read(p))
+ pre=load(PRE/'INDEX.json');assert len(pre)==3
+ for path,x in HIST.items():
+  item=next(a for a in pre if a['source']==path);assert all(item[k]==x[k]for k in ['snapshot','sha256','bytes']);z=read(PRE/x['snapshot']);assert H(z)==x['sha256']and len(z)==x['bytes']
+ def verify_set(label,rows):
+  assert len({x['path']for x in rows})==len(rows);overrides=[];current=0
+  for x in rows:
+   path=x['path']
+   if path in HIST and HIST[path]['set']==label:
+    r=HIST[path];assert x['sha256']==r['sha256']and x['bytes']==r['bytes'];p=PRE/r['snapshot'];z=read(p);overrides.append({'original_path':path,'expected_sha256':x['sha256'],'bytes':x['bytes'],'resolved_snapshot':rel(p)})
+   else:z=read(W/path,False);current+=1
+   assert H(z)==x['sha256']and len(z)==x['bytes'],path
+  assert len(overrides)==1
+  return{'memberships_checked':len(rows),'distinct_paths_in_set':len(rows),'current_path_matches':current,'exact_historical_overrides':overrides,'expected_membership_digest':H(J(rows)),'scope':'Member hashes/sizes only; no old collector/test/CPU/source semantic replay. No generic fallback resolver.'}
+ old=R/'2026-11-01-synthesis/navigation';oldcat=load(old/'CATALOGUE.json');assert len(oldcat['rows'])==oldcat['navigation_rows']==17
+ assert H(read(old/'CATALOGUE.json'))=='c7c4a1af363f1b8a60980e2281695f5708c240e99383d9239d87371e1088fdca'
+ prior=[pin(old/n)for n in ['REPORT.md','build_navigation_v1.py','CATALOGUE.json','CATALOGUE.md','INPUTS.json','OUTPUT_MANIFEST.json','SAVED_CORPUS.json','VERSION_NAVIGATION.json','first-candidate-v1/INDEX.json']]
+ oi=load(old/'INPUTS.json');assert oi['count']==len(oi['files'])==614;oldcheck=verify_set('old614',oi['files'])
+ ni=R/'2026-11-01-numeric-trigger/EVIDENCE_INDEX.json';nb=read(ni);assert H(nb)=='9aa272b2543bded5bd6765473851fdd9897e9abfde504239218b15dbd274a9f2';nr=json.loads(nb)['files'];assert len(nr)==142;numcheck=verify_set('numeric142',nr)
+ specs=[('N18','2026-11-01-synthesis','overview/ENCYCLOPEDIA_CANDIDATE.md','Readable source synthesis and frozen seventeen-row navigation','The strongest result is', ['reviews/synthesis-source-review.md','reviews/navigation-review.md','reviews/integration-review.md'],'Navigation/documentary consolidation only, not new source coverage; earlier report/refinement/provider/lifetime/physical limits remain.'),('N19','2026-11-01-numeric-trigger','trigger/REPORT.md','Selected BNLD numeric trigger and local caller','The original scheduler has a concrete numeric trigger', ['reviews/trigger-source-review.md','reviews/integration-review.md'],'Selected private raw-trigger3/caller/threshold/callback source only; no accepted wire grammar, natural scene, physical semantics, crossing/dedup or whole lifetime claim.')]
+ rows=[]
+ for ident,area,report,title,needle,reviews,bounds in specs:
+  B=R/area;p=B/report;z=read(p);lines=z.decode().splitlines();matches=[(i,s)for i,s in enumerate(lines,1)if needle in s];assert len(matches)==1;i,s=matches[0]
+  saved=[]
+  for n in ['SYNTHESIS.md','COVERAGE.md','RANKED_REMAINING_QUESTIONS.md','SOURCE_CHECKS.json','FINAL_CHECKS.json','IDENTITY_VALIDATION.json','EVIDENCE_INDEX.json']:
+   q=B/n;saved.append(pin(q))
+   if n in ['FINAL_CHECKS.json','IDENTITY_VALIDATION.json']:assert load(q)['status']=='PASS'
+  rows.append({'id':ident,'title':title,'report':pin(p),'line':i,'exact_excerpt':s,'reviews':[pin(B/n)for n in reviews],'saved_checkpoint_files':saved,'bounds':bounds,'original_execution_additions':0})
+  if ident=='N18':assert H(z)=='5d9426583d60ffe1618b2a82e0bf9bd97426387a6245c7b8e6500bfe09cdc5c1'
+  else:assert H(z)=='5c07aa082902c7caa80a51213f287a159ea50ff47c91d3f5ace98996da9f3b3c'
+ B=R/'2026-11-01-double-isolation/harness';result=load(B/'RESULTS.json');assert H(read(B/'RESULTS.json'))=='450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525';assert result['status']=='COMPLETE'and result['top_level_entries']==len(result['attempts'])==8
+ want={'original_code_visits':340,'C_primitive_callbacks':0,'linker_redirect_callbacks':12,'EXIT_callbacks':8,'guard_stop_callbacks':0,'code_hook_steps':360}
+ for k,n in want.items():
+  actual=result['C_primitive_callbacks']if k=='C_primitive_callbacks'else sum(a[k]for a in result['attempts']);assert actual==n
+  if k!='C_primitive_callbacks':assert result['totals'][k]==n
+ assert all(a['original_code_visits']+a['linker_redirect_callbacks']+a['EXIT_callbacks']+a['guard_stop_callbacks']==a['code_hook_steps']for a in result['attempts'])
+ assert result['totals']['setup_data_relocations']==4 and result['setup_FP_register_writes']==24
+ sf=load(B/'SOURCE_PREFLIGHT.json');assert sf['source']['image']=='/usr/lib/libjsoncpp.so.1.9.5'and sf['source']['sha256']=='5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36'
+ for n in ['REPORT.RESULTS.md','isolate_double_v3.py','first-results/INDEX.json']:pin(B/n)
+ ledger={'source_result':pin(B/'RESULTS.json'),'saved_corpora':1,'saved_top_level_entries':8,'counts':want,'data_relocation_setup':4,'FP_control_register_setup':24,'current_supplement_execution_additions':0,'current_supplement_CPU_replays':0,'scope':'Arithmetic and identities of saved results only; original code-hook visits are not retired instructions. Nested calls and historical replays are not new corpus entries.'}
+ identity={'source_scope':'Inherited saved original identities, not fresh original binary/database/firmware source checks','scheduler_image':'/home/bticino/scheduling_manager/scheduling_manager','scheduler_sha256':'7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26','scalar_provider':sf['source']['image'],'provider_sha256':sf['source']['sha256'],'predecessor_catalogue':prior,'historical_reference_policy':'ONLY two exact path+expectedsize+expectedSHA mappings. Old614 Device and numeric142 overview use retained pre-edit bytes; every other613/141 member must match current path. No global pre-edit fallback.'}
+ nav={'scope':'Two later checkpoints omitted from frozen17through-double guide; this supplement does not edit or regenerate it. 17+2 is navigation, not semantic coverage.','predecessor_rows':17,'supplement_rows':2,'combined_navigation_count_only':19,'rows':rows,'old_guide_inputs':oldcheck,'numeric_protected_members':numcheck,'current_task_execution':0}
+ md=['# Two-checkpoint navigation supplement','', 'This adds synthesis and numeric-trigger references after the unchanged seventeen-row guide. Two rows and17+2 are navigation counts, not coverage percentages, fresh source claims or rerun tests.','', '| Row | Scoped checkpoint | Exact report | Limit |','| --- | --- | --- | --- |']
+ for r in rows:md.append(f"| {r['id']} | {r['title']} | [{r['report']['path']}]({W/r['report']['path']}:{r['line']}) | {r['bounds']} |")
+ md+=['','Saved ledger unchanged: **1 corpus,8 entries,340 original code-hook visits,0 C primitives,12 redirects,8 EXIT/0 guard stops,360 hooks**. Four data relocations and24 FP/control setup writes are separate. This supplement executes/replays zero original code.','', 'Frozen old614 inputs are verified as613 current matches plus one exact retained Device0199 version. Numeric142 is141 current matches plus one exact retained overview version. Old documents/indexes/generators are untouched. The old guide direct--check requires its original working-path bytes and is NOT claimed to pass on the corrected Device page; this new verifier validates that exact historical version through the explicit snapshot.','', 'Saved reviews/PASS/validation identities remain historical records, not a fresh full semantic/test audit. Full runtime, physical, provider, concurrency and missing-history limitations remain.']
+ report='''# Final navigation/verification supplement: two later checkpoints
+
+This immutable supplement adds only the completed synthesis and numeric-trigger checkpoints after the frozen seventeen-row through-double guide. It preserves the predecessor identities and historical scopes without regenerating that guide, executing old collectors, importing ImageVFS/Unicorn/original code, opening firmware/database sources or replaying any guest. It adds zero original execution and zero semantic fixtures.
+
+The two rows link exact authoritative reports, unique lines/excerpts, source/documentary reviews and saved source/final/identity/coverage/index records. Saved PASS statuses are records, not new test execution or whole-source corroboration. The current saved helper ledger is one corpus/eight top-level entries,340 original code-hook visits,0 C primitives,12 redirects and8 EXIT/0 guard stops=360 hooks. Counts are recomputed from saved JSON only; four data-relocation and24 FP/control setup writes remain separate. Earlier static reports keep their historical zero scope.
+
+ALL142 members of numeric EVIDENCE_INDEX SHA2569aa272b2543bded5bd6765473851fdd9897e9abfde504239218b15dbd274a9f2 are size/hash checked. The unchanged old guide's614 input memberships are also checked. Exactly two explicit historical path/size/hash mappings are allowed: old614 Device0199 SHA5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855 and numeric142 overview SHA5a3dec72f1d14ac5c338a38571c809749594e761854e915c8a0decea447bcd52. Their original bytes are retained in the root's exact final-review pre-edit snapshot. All other613/141 memberships must match current paths. Counts across sets are not distinct-file counts.
+
+The Device's later documentary-scope correction and overview handoff links do not rewrite old evidence. This verifier intentionally selects their retained historical versions. It does NOT claim the old17 guide's direct--check passes with changed Device working-path bytes: that old command requires restoration of the original document version. No old guide/pin/generator is edited, and no broad guessed hash/global fallback is used. The profile pre-edit copy is not substituted into either set because neither membership set references it. A further mismatch stops generation/check and requires explicit reviewed versioning.
+
+The coordinator reports full prior protection10732=10590+142. This supplement does not freshly re-audit10732 files or turn that coordination count into coverage. Its explicit verified sets and source references are in NAVIGATION.json/PROTECTED_CHECK.json. Old614 and numeric142 member definitions remain in their pinned original indexes rather than being duplicated into a huge new inventory. INPUTS.json lists direct inputs plus these indirect set references.
+
+Run python3 -B build_supplement_v1.py --check here for read-only byte reproduction. Initial generation refuses every existing output/snapshot. All outputs and generator are immediately copied, with index bytes computed before exclusive creation. Nothing in the original images, repositories, source references, old dossiers, execution ledger or older catalogue is modified.
+'''
+ out={'NAVIGATION.json':J(nav),'NAVIGATION.md':('\n'.join(md)+'\n').encode(),'SOURCE_IDENTITY.json':J(identity),'PROTECTED_CHECK.json':J({'old614':oldcheck,'numeric142':numcheck,'numeric_index':pin(ni),'root_preedit_index':pin(PRE/'INDEX.json'),'scope':'Only these size/hash reference checks, not fresh semantic/source/CPU/test audit.'}),'SAVED_LEDGER.json':J(ledger),'REPORT.md':report.encode()}
+ out['INPUTS.json']=J({'direct_input_count':len(pins),'files':[pins[k]for k in sorted(pins)],'indirect_reference_sets':{'old614':pin(old/'INPUTS.json'),'numeric142':pin(ni)},'scope':'Exact direct bytes plus member sets defined by their original pinned indexes; repeated memberships are not distinct coverage.'})
+ out['OUTPUT_MANIFEST.json']=J({'generator':{'path':rel(Path(__file__)),'sha256':H(Path(__file__).read_bytes()),'bytes':len(Path(__file__).read_bytes())},'outputs':{n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()},'scope':'Manifest excludes itself; first-candidate index separately pins it.'})
+ return out,len(pins)
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');ck=ap.parse_args().check;out,n=build();C=D/'first-candidate';cp={**out,Path(__file__).name:Path(__file__).read_bytes()};ix=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in cp.items()})
+ if ck:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  assert(C/'INDEX.json').read_bytes()==ix
+  for n,z in cp.items():assert(C/n).read_bytes()==z,n
+ else:
+  assert not C.exists();assert all(not(D/n).exists()for n in out)
+  for n,z in out.items():(D/n).open('xb').write(z)
+  C.mkdir()
+  for n,z in cp.items():(C/n).open('xb').write(z)
+  (C/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':ck,'outputs':len(out),'direct_input_pins':n,'rows':2,'old_input_memberships':614,'numeric_protected_memberships':142,'historical_overrides':2,'first_copies':len(cp),'original_execution_additions':0,'guest_replays':0}))
+if __name__=='__main__':main()

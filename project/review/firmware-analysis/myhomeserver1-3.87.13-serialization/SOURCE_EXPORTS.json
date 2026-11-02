@@ -1,0 +1,365 @@
+{
+  "scope": "Exact source/report/review/history copies; no vendor binaries or original execution",
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/CRITICAL_BYTES.json",
+      "published": "evidence/serializer/CRITICAL_BYTES.json",
+      "sha256": "b3bb6558d3008831f2da3bc607b3a7a18535736a2e94d38abc0977d9dab45144",
+      "bytes": 1003
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/DIRECT_CALLS.json",
+      "published": "evidence/serializer/DIRECT_CALLS.json",
+      "sha256": "7107b901bc65aff5bfc7c2be84d1920ca9a1d1b87f95b0eccecb3b54c480cca8",
+      "bytes": 240
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/FIELD_RULES.json",
+      "published": "evidence/serializer/FIELD_RULES.json",
+      "sha256": "ad938267f67a4d9d0f8b2732db3d7898d0301a1b4d0e606b0d19f4f75fe19eef",
+      "bytes": 1509
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/IDENTITY.json",
+      "published": "evidence/serializer/IDENTITY.json",
+      "sha256": "c9e0b8572dfd5441482714ea972bbe38f912412d2afe49fce061cbdbd08bb835",
+      "bytes": 1365
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/INPUTS.json",
+      "published": "evidence/serializer/INPUTS.json",
+      "sha256": "9834b8e91cb117e7729b12bce99a75c4f6c1d71de1377354d1131298e0fadcb8",
+      "bytes": 863
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/METHOD.json",
+      "published": "evidence/serializer/METHOD.json",
+      "sha256": "f94e07d02947b16d647e6dab8cb27d4d883e327ccff17ebd006260887a31efba",
+      "bytes": 552
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/PIC_KEYS.json",
+      "published": "evidence/serializer/PIC_KEYS.json",
+      "sha256": "5b3bc37f4b76fa0d4d226739a0830f30f28c86f635fa3add48f7a3e53977c968",
+      "bytes": 1127
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/POOL_DATA.json",
+      "published": "evidence/serializer/POOL_DATA.json",
+      "sha256": "ea229ad3ff86f37614227e711f8745868e0082eb7f70b4f23d74d3a9524615c1",
+      "bytes": 475
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/SOURCE_SPANS.json",
+      "published": "evidence/serializer/SOURCE_SPANS.json",
+      "sha256": "286e1294ea736168055ff3fbe10eb6fefa43f34369bd3285697c7969c28604ef",
+      "bytes": 865
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/spans/compiled-duration-prefix.txt",
+      "published": "evidence/serializer/spans/compiled-duration-prefix.txt",
+      "sha256": "b63f99d3b95e833151fa70d8c380d71d834e0ec7fc242316f3f2abd2884554e5",
+      "bytes": 3591
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/spans/raw-constructor.txt",
+      "published": "evidence/serializer/spans/raw-constructor.txt",
+      "sha256": "ba381d8d65f5b6473aba111965bde28682b800d1a681b2d226bcccf40577b23b",
+      "bytes": 10402
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/spans/raw-serializer.txt",
+      "published": "evidence/serializer/spans/raw-serializer.txt",
+      "sha256": "d83160062b95d6f4f187ea8fc9d197a3a19f3809f86fb1c56970aa12635c7d1f",
+      "bytes": 10186
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/spans/same-json-reparse.txt",
+      "published": "evidence/serializer/spans/same-json-reparse.txt",
+      "sha256": "cd9d32c9f56ab8ada74a41a4bff9676dd53bcd3d730f5c7d98636b4198cbdfb6",
+      "bytes": 1055
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/OUTPUT_MANIFEST.json",
+      "published": "evidence/serializer/OUTPUT_MANIFEST.json",
+      "sha256": "cf3371f04b78cfde27c08cd14f15c1583bd85afb7499f851f9c4f2ddf49e9d77",
+      "bytes": 2010
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/collect_serializer_v1.py",
+      "published": "evidence/serializer/collect_serializer_v1.py.txt",
+      "sha256": "f4baef80658ed0164cd0b40eb4d361c945c6b6ee0c0bf5c179e4ce49069deeeb",
+      "bytes": 7823
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/serializer/REPORT.md",
+      "published": "serializer-report.txt",
+      "sha256": "9764cd1a79d78665b802ec3393e7261d247aca9bf4a0d165cd58feb7eb5bdfd8",
+      "bytes": 9612
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/reviews/serializer-source-review.md",
+      "published": "serializer-source-review.txt",
+      "sha256": "d0d3c805f957f077723885a1d6433d3ccab372bb982086aa36f2928be8c3f638",
+      "bytes": 2168
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/BYTE_GUARDS.json",
+      "published": "evidence/provider-values/BYTE_GUARDS.json",
+      "sha256": "a5a2c9fe867610071e7a237fcdcd71264689627fee0b7591929f7134a04b31f5",
+      "bytes": 937
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/CANDIDATE_SYMBOLS.json",
+      "published": "evidence/provider-values/CANDIDATE_SYMBOLS.json",
+      "sha256": "fdedd6915c29d0f41e7c735f64fed8e4b27dcbdf1369d98874d9d78802704916",
+      "bytes": 1151
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/CONVERSION_TABLE.json",
+      "published": "evidence/provider-values/CONVERSION_TABLE.json",
+      "sha256": "0020b2dd98f52e94677b5130bdd60f7419ed1bc2a6f68a28609673163a46e921",
+      "bytes": 207
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/INPUTS.json",
+      "published": "evidence/provider-values/INPUTS.json",
+      "sha256": "2d932d35cf344435b25d2a919470e2adc9bd5cba5e00cbdf68ba65b6ca65b568",
+      "bytes": 632
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/METHOD.json",
+      "published": "evidence/provider-values/METHOD.json",
+      "sha256": "24707f9b953b5f7843ca0322eb54a9008caf0490d5fa9f83351e8be3ba69d166",
+      "bytes": 430
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/SOURCE_SPANS.json",
+      "published": "evidence/provider-values/SOURCE_SPANS.json",
+      "sha256": "b28cfe70cdd4a2b349d8605b7a5f8a41868b5d0f850c75d2a769a03d5b683a0f",
+      "bytes": 1828
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/VALUE_LEDGER.json",
+      "published": "evidence/provider-values/VALUE_LEDGER.json",
+      "sha256": "f41abf6b4e5cb11b05f4140281a708bd1cc550d8edaccfb43b00c2297c768ab9",
+      "bytes": 822
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/spans/basic-tag-write.txt",
+      "published": "evidence/provider-values/spans/basic-tag-write.txt",
+      "sha256": "62e6911d2104fbaa2d07cf23c2db7fe08002dbcfe6e98d5ca0198c2ef3fcd0ed",
+      "bytes": 2438
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/spans/const-key-access.txt",
+      "published": "evidence/provider-values/spans/const-key-access.txt",
+      "sha256": "6ce78a325f976e2b8ef024018891d200b3d4b64275656b6dbfc327b17dd174a9",
+      "bytes": 765
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/spans/find-normal-paths.txt",
+      "published": "evidence/provider-values/spans/find-normal-paths.txt",
+      "sha256": "371a0a61f3797005c225a03e48602ef4cb65767f4c690e3efbba85f5d1a50ca6",
+      "bytes": 2746
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/spans/null-singleton.txt",
+      "published": "evidence/provider-values/spans/null-singleton.txt",
+      "sha256": "4fc931826ef614b927901746f5a8796687a6f23cd2cf48cf01d7dce980fd313b",
+      "bytes": 2113
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/spans/type-byte.txt",
+      "published": "evidence/provider-values/spans/type-byte.txt",
+      "sha256": "028c54c8926e67580b6241588ab0b6e5e30c76db8f24283e5cfb2bcc78874723",
+      "bytes": 254
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/spans/unsigned-constructor.txt",
+      "published": "evidence/provider-values/spans/unsigned-constructor.txt",
+      "sha256": "f1f648cb754b83f6f213be50c0625688d513643f3f74d1d58d2cd09d82724043",
+      "bytes": 619
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/spans/unsigned-conversion-prefix.txt",
+      "published": "evidence/provider-values/spans/unsigned-conversion-prefix.txt",
+      "sha256": "a0d6d8e9f51ce7baaf3b52e9f30bfd1b93bbe3f1ec0d5a0fceabae00c352d2c6",
+      "bytes": 2233
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/spans/unsigned-predicate.txt",
+      "published": "evidence/provider-values/spans/unsigned-predicate.txt",
+      "sha256": "2412e6cd7cb97067f133043ae88b745f4b3dd5ea0aa12e85195ae7b4d72a5bc2",
+      "bytes": 1752
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/spans/value-type-constructor.txt",
+      "published": "evidence/provider-values/spans/value-type-constructor.txt",
+      "sha256": "820435731288890a7a25dbad060e0eeca12522015ebd5cb49936571f55d52d34",
+      "bytes": 2113
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/OUTPUT_MANIFEST.json",
+      "published": "evidence/provider-values/OUTPUT_MANIFEST.json",
+      "sha256": "b78fdf2c9dc0d9d2820b9da0f7295336f3ebbd312d759f73d00b9f0a3ac1ffea",
+      "bytes": 2165
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/collect_values_v1.py",
+      "published": "evidence/provider-values/collect_values_v1.py.txt",
+      "sha256": "470c52c285193ed316be5cf1a88eb89d0829ad4c736792ad1ba31949001b2dc2",
+      "bytes": 6119
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/provider-values/REPORT.md",
+      "published": "provider-values-report.txt",
+      "sha256": "a713e56e7f84600d721210ac32c3bac7ae0ae3fea23c866f630189021b31e6ec",
+      "bytes": 6434
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/reviews/provider-values-source-review.md",
+      "published": "provider-values-source-review.txt",
+      "sha256": "8f57eea1427813b7eff59cc5ce4237bd3ef823bb44bc0223d2a05c09f7168dfd",
+      "bytes": 6012
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/INPUTS.json",
+      "published": "evidence/vector-ownership/INPUTS.json",
+      "sha256": "9bdc2c7a0b2fa50b1b9981f3c9e9a298ccf577ade52cab6b6206d8b13d3fb74a",
+      "bytes": 704
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/METHOD.json",
+      "published": "evidence/vector-ownership/METHOD.json",
+      "sha256": "7bbcd1a21b2aa5997a8462426e7f7db5779291a4b9d4ba3c5349118ea28b75db",
+      "bytes": 492
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/ORIGINAL_SOURCE.json",
+      "published": "evidence/vector-ownership/ORIGINAL_SOURCE.json",
+      "sha256": "3ea3a8597cc5e86108f7068d547969a7704d72845f2d8e586a43ca2aca585bdf",
+      "bytes": 4813
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/TRANSFER_LEDGER.json",
+      "published": "evidence/vector-ownership/TRANSFER_LEDGER.json",
+      "sha256": "d71933322d55dce0f2397af46213c5cb1d5af36e5f239fe6980dae83813922ac",
+      "bytes": 2742
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/spans/control-assignment-increment.txt",
+      "published": "evidence/vector-ownership/spans/control-assignment-increment.txt",
+      "sha256": "c149a902354e935980677074875d0d133e28d08ee121646f159cfdafd09f9746",
+      "bytes": 2956
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/spans/growth-and-storage-transfer.txt",
+      "published": "evidence/vector-ownership/spans/growth-and-storage-transfer.txt",
+      "sha256": "bd64e1f2a14900bc831eb6892e0eda2f019137dc8a4e827893846ef0ff2f9a16",
+      "bytes": 4730
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/spans/initializer-scene-pointer-save.txt",
+      "published": "evidence/vector-ownership/spans/initializer-scene-pointer-save.txt",
+      "sha256": "46247edfb1296d3b6f4d3fab1a3ac1e549f84804d5e14c5496637ce7d1ffaccc",
+      "bytes": 1105
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/spans/normal-and-full-append.txt",
+      "published": "evidence/vector-ownership/spans/normal-and-full-append.txt",
+      "sha256": "59b3de4a011da8be599f198d5e60f61d98d74332117b73ffe458b0a1641f41dc",
+      "bytes": 886
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/spans/selected-control-dispose-boundary.txt",
+      "published": "evidence/vector-ownership/spans/selected-control-dispose-boundary.txt",
+      "sha256": "8754dabb546d168b6bc2f9d21747b0cd95b6365ef36d36a3227cc8d169651d0c",
+      "bytes": 458
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/spans/selected-sleep-owner-to-append.txt",
+      "published": "evidence/vector-ownership/spans/selected-sleep-owner-to-append.txt",
+      "sha256": "ad24f3f0cc3fd39eba49d2dd6734cfbf555a921ddb2886670644d65375fe98f0",
+      "bytes": 3056
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/spans/temporary-control-release.txt",
+      "published": "evidence/vector-ownership/spans/temporary-control-release.txt",
+      "sha256": "dd61bdb87fb384ebef2eadcd8b4db3eb82120112f731c40623e777a385e37425",
+      "bytes": 1967
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/OUTPUT_MANIFEST.json",
+      "published": "evidence/vector-ownership/OUTPUT_MANIFEST.json",
+      "sha256": "1a7d26fbd871c2e03ab6eb0e81ca22d3d1f198b7a76a4f1f923db3acb5b634d3",
+      "bytes": 2011
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/collect_vector_v2.py",
+      "published": "evidence/vector-ownership/collect_vector_v2.py.txt",
+      "sha256": "667387237443ffd224edb25a929e588157af299ad2bc5bbf657eefeb74a7bae1",
+      "bytes": 9413
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/REPORT.v2.md",
+      "published": "vector-ownership-report-v2.txt",
+      "sha256": "60323fc53eed456b2a0b6a648e9bbf8e5a7158ee6180cd58534e249aa150c5f0",
+      "bytes": 10252
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/reviews/vector-ownership-source-review.md",
+      "published": "vector-ownership-source-review.txt",
+      "sha256": "98da00ffb704cb92f3b5a0467f4b21d2e2c8cff0b3e9a15059cdfaef93d1dd91",
+      "bytes": 5222
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/VERSION_HISTORY.json",
+      "published": "vector-version-history.json",
+      "sha256": "b44c1d270b23032d150480fb49e65885e731b397ae9a024d8c5b32348dd390dd",
+      "bytes": 720
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/REPORT.md",
+      "published": "vector-report-failed-v1.txt",
+      "sha256": "2899d594563f1598d32d0906deb7bede42ed53eb6340fad096b268b636e2b98c",
+      "bytes": 9546
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/collect_vector_v1.py",
+      "published": "vector-collector-failed-v1.py.txt",
+      "sha256": "95f0e170e389622b825b1f0ac9ebbc4b5ce79df34d41a4a3695c03e3ff0e24e2",
+      "bytes": 9282
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/failed-first-v1/FAILURE.json",
+      "published": "vector-failure-v1.json",
+      "sha256": "6c274fc30e7bb9db788bd0659f9e3545f4ccb78fddcf8e8a99fb30a5171d5b8d",
+      "bytes": 510
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/SYNTHESIS.md",
+      "published": "synthesis.txt",
+      "sha256": "ce8a5c8cdd716aac04dbe87f3f5b04f3c21dbc1c0c39a2b28c95c9eee06bb183",
+      "bytes": 871
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/COVERAGE.md",
+      "published": "coverage.txt",
+      "sha256": "7e811759634709eb37d9d41a2d3dca19d9c5a4530b7e6003d141dcf2dd85343b",
+      "bytes": 805
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/RANKED_REMAINING_QUESTIONS.md",
+      "published": "remaining-questions.txt",
+      "sha256": "142d66bd25692d6beae932c16e0505804b96f4f702d5592930877cbbc5048d70",
+      "bytes": 1055
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/SOURCE_CHECKS.json",
+      "published": "source-checks.json",
+      "sha256": "5053ef6834ac4b1d601779bfaeeae32e8bdeb137b07dc9b3fdf2a707d5ced9ed",
+      "bytes": 1313
+    }
+  ]
+}

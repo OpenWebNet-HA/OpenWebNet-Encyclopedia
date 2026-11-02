@@ -1,0 +1,39 @@
+# F460 run15: actual BNLD raw serializer and selected numeric reparse contract
+
+This final bounded source packet identifies the actual F460 BNLD condition serializer, its hidden AArch64 result ABI, selected signed-level emission and the original operator spelling decoder. It narrows run14's supplied JSON/operator premise without claiming a full JSON round trip, emitted scene, accepted public grammar or runtime predicate result. New original/provider/native/target execution, semantic models, fixtures and SQL are0; earlier ledgers remain unchanged.
+
+## Fresh source identity and actual virtual method
+
+Original `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62`, is freshly mapped ELF64 little-endian AArch64. Source proof is PT_LOAD-backed bytes/hex, original instruction guards, key/table data and actual PLT/GOT/JUMP_SLOT names. Curated Device0207 supplies product role only. No MHS condition/trigger serializer, provider/native experiment or field layout is transferred.
+
+The final raw AP0x214078 has original relative slot0→**0x48710**, with RTTI `13BnldCondition`. This is the same final raw class used by the previously reviewed initializer, not its BaseBnld temporary or a trigger. Entry0x4872c preserves raw thisX0 inX20;0x48734 preserves hidden JSON resultX8 inX19. The call0x48748 goes to original common helper0x393d0 with that same raw object/result. The helper saves raw this asX21 and hidden result asX20; these local register meanings differ from the outer method's X20/X19.
+
+## Common result construction and operator emission
+
+The common helper requests original Json::Value(ValueType) with argument0 on the hidden result. Its retained normal source then requests assignments to the exact compiled keys **id, enabled, type, operator**. Pointer/string contents, type table behavior and unrelated value domains are not expanded into new cases. Under ordinary fresh-result construction, valid member/string/assignment APIs, normal helper returns and no relevant mutation, this supplies the common result portion without a status-member request in this helper. The API/body/map/allocator semantics themselves are not executed or fully proven here.
+
+For the selected operator field,0x394f8 reads raw word48; its -1 test skips operator emission. Otherwise the selected raw codes0..3 use index=code+1 into the actual16-byte-entry table0x213910. The checked rows1..4 spell **higher, lower, equal, different**, respectively, with actual original lengths/pointers. The source constructs a string value, obtains result member **operator** and requests move assignment through the actual Json overloads. Unsupported-code/default paths are not promoted into a public operator grammar; the sentinel skip is not an emit-all statement.
+
+The common parser independently starts raw operator48 at-1 through original64-bit initialization0x4a2d0/0x4a2e4. It requests const member operator, then asString with hidden result storage. Its exact case-sensitive length/byte comparisons select higher→temporary1, lower→2, equal→3 and different→4; the common subtraction/store0x4a51c/0x4a520 writes temporary-1 to raw48. Thus the selected serializer spellings correspond to original raw codes0/1/2/3 under ordinary string/member/provider returns. This is source byte decoding, not an executed parser or a spelling imported from other products.
+
+Run14 independently established the selected numeric operand orientation for those raw codes after compilation: configured threshold < observed for0, > for1, == for2, != for3. That predicate/queried-record proof is inherited, not re-audited here; names do not add physical units or a product capability meaning.
+
+## Selected status-1 branch emits level through the same result
+
+Outer serializer0x4874c reads raw word52 and0x48750/0x48754 branches to0x48890 exactly when that word equals-1. The selected block then reads raw word56 as W1 and requests actual **Json::Value(int)** into a local temporary at0x4889c. It obtains mutable member **level** from SAME hidden resultX19 at0x488ac and requests actual move assignment at0x488b4, then destroys the temporary. The symbol identities come from original relocated slots, not misleading nearest disassembly annotations.
+
+There is no selected direct test of level56 sign or a level sentinel before that constructor request: numeric0/-1 are not claimed omitted by this branch. No numeric example is supplied or executed. The selected branch requests level and does not request a status-member assignment; alternate status-string branches remain outside this packet. After normal temporary cleanup it reaches the retained result-return epilogue0x487cc..0x48808, which returns the same hidden result pointer under valid-object/ABI/provider and normal canary premises.
+
+## Conditional composition with the already reviewed reparse
+
+Run14 retains the actual raw virtual-call result passed to parser0x4aa60. Its selected absence-of-status path initializes raw52/56 to-1, reads level through the actual const member/asInt path, stores its word at raw56, and only writes -1 again to raw52 under its positive-level guard. Compiled construction then copies that raw level to threshold192 and status to188. Those old constructor/factory/predicate spans are pinned as inheritance, not replayed or counted as new coverage.
+
+Combining the original source edges is conditional: IF the fresh result is a valid ordinary JSON object with the selected common members, no extra status member or mutation, int construction/move/member/asInt preserve the selected signed32-bit value, and ordinary string/member conversion returns the emitted operator spelling, THEN this selected source chain carries level to the reparsed numeric field and preserves status-selector-1 plus the selected operator code. No JsonCpp map, conversion, assignment, full raw schema or every input/branch has been executed or fully audited. This is narrower than a universal serialize/parse round trip, actual configured scene or runtime query value. Record type/freshness, predicate invocation, ownership/lifetime/concurrency and physical behavior remain open.
+
+## Preservation and read-only reproduction
+
+Use `python3 -B work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/collect_serializer_v2.py --check`. Exclusive generation immediately preserves exact report, collector and generated evidence, with the first-copy index computed before its own file is opened. Check reconstructs and compares read-only; no firmware/provider/helper executes.
+
+Before any report, output or canonical attempt existed, a read-only original-byte precheck caught a mistyped redundant three-instruction hex guard in the staged v1 collector: its CMP first byte3f must be actual5f. Parent preserved the exact ONE staged-unexecuted script. NEWv2 corrects that one byte in the strict hex assertion to **012d8d52e10cad725f00016b**, plus version/report references; all other source/word guards remain. V1 is unchanged. VERSION_HISTORY.v2.json pins the available old/new bytes and parent snapshot. There was no failed canonical generation, overwritten generated candidate, fabricated earlier report or missing historical terminal file claimed.
+
+This closes only selected raw serializer/operator/reparse source premises. Opaque query/output/provider bodies and receiving/transport/MQTT/libjel/auth/session/framing or equivalent stopped routes remain closed. No native experiment, physical, safety, security, defect, whole-runtime or capability conclusion is added. After this final source packet, remaining work is review and consolidation.

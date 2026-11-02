@@ -1,0 +1,63 @@
+[
+  {
+    "assembly": "Core",
+    "class_row": 26,
+    "class_table": "TypeRef",
+    "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::.ctor",
+    "signature_hex": "200001",
+    "table": "MemberRef",
+    "token": "0x0a000110"
+  },
+  {
+    "assembly": "Core",
+    "class_row": 26,
+    "class_table": "TypeRef",
+    "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::get_ScenariosCollection",
+    "signature_hex": "2000151280d9011231",
+    "table": "MemberRef",
+    "token": "0x0a000124"
+  },
+  {
+    "assembly": "Core",
+    "class_row": 55,
+    "class_signature_hex": "1512815d011231",
+    "class_table": "TypeSpec",
+    "name": "TypeSpec(signature:1512815d011231)::Add",
+    "signature_hex": "2001011300",
+    "table": "MemberRef",
+    "token": "0x0a000125"
+  },
+  {
+    "assembly": "Core",
+    "decoded_selected_identity": "GENERICINST CLASS TypeRef87 System.Collections.ObjectModel.Collection`1, one CLASS TypeRef12 Bticino.ScenarioSuite.Class.cScenario",
+    "generic_TypeSpec_row": 55,
+    "getter_return_TypeRef54": "System.Collections.ObjectModel.ObservableCollection`1",
+    "getter_signature_hex": "2000151280d9011231",
+    "not_runtime_binding": true,
+    "signature_hex": "1512815d011231"
+  },
+  {
+    "assembly": "Class",
+    "class_row": 22,
+    "class_signature_hex": "151255011280c4",
+    "class_table": "TypeSpec",
+    "name": "TypeSpec(signature:151255011280c4)::.ctor",
+    "signature_hex": "200001",
+    "table": "MemberRef",
+    "token": "0x0a00004b"
+  },
+  {
+    "assembly": "Class",
+    "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::_ScenariosCollection",
+    "signature_hex": "06151255011280c4",
+    "table": "Field",
+    "token": "0x0400011d"
+  },
+  {
+    "assembly": "Class",
+    "decoded_selected_identity": "GENERICINST CLASS TypeRef21 System.Collections.ObjectModel.ObservableCollection`1, one CLASS TypeDef49 Bticino.ScenarioSuite.Class.cScenario",
+    "generic_TypeSpec_row": 22,
+    "not_runtime_binding": true,
+    "signature_hex": "151255011280c4"
+  }
+]

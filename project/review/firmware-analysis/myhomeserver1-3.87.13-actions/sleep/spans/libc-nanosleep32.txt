@@ -1,0 +1,47 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/lib/libc.so.6:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000860d4 <__nanosleep@@GLIBC_2.4>:
+   860d4:	e9d0 3200 	ldrd	r3, r2, [r0]
+   860d8:	b510      	push	{r4, lr}
+   860da:	b088      	sub	sp, #32
+   860dc:	460c      	mov	r4, r1
+   860de:	9300      	str	r3, [sp, #0]
+   860e0:	17db      	asrs	r3, r3, #31
+   860e2:	9202      	str	r2, [sp, #8]
+   860e4:	9301      	str	r3, [sp, #4]
+   860e6:	460b      	mov	r3, r1
+   860e8:	b101      	cbz	r1, 860ec <__nanosleep@@GLIBC_2.4+0x18>
+   860ea:	ab04      	add	r3, sp, #16
+   860ec:	2100      	movs	r1, #0
+   860ee:	466a      	mov	r2, sp
+   860f0:	4608      	mov	r0, r1
+   860f2:	f7fc fb7f 	bl	827f4 <__clock_nanosleep_time64@@GLIBC_2.34>
+   860f6:	b908      	cbnz	r0, 860fc <__nanosleep@@GLIBC_2.4+0x28>
+   860f8:	b008      	add	sp, #32
+   860fa:	bd10      	pop	{r4, pc}
+   860fc:	1e21      	subs	r1, r4, #0
+   860fe:	4b0b      	ldr	r3, [pc, #44]	@ (8612c <__nanosleep@@GLIBC_2.4+0x58>)
+   86100:	bf18      	it	ne
+   86102:	2101      	movne	r1, #1
+   86104:	2804      	cmp	r0, #4
+   86106:	bf18      	it	ne
+   86108:	2100      	movne	r1, #0
+   8610a:	ee1d 2f70 	mrc	15, 0, r2, cr13, cr0, {3}
+   8610e:	447b      	add	r3, pc
+   86110:	681b      	ldr	r3, [r3, #0]
+   86112:	50d0      	str	r0, [r2, r3]
+   86114:	f04f 30ff 	mov.w	r0, #4294967295	@ 0xffffffff
+   86118:	2900      	cmp	r1, #0
+   8611a:	d0ed      	beq.n	860f8 <__nanosleep@@GLIBC_2.4+0x24>
+   8611c:	9b06      	ldr	r3, [sp, #24]
+   8611e:	f04f 30ff 	mov.w	r0, #4294967295	@ 0xffffffff
+   86122:	9a04      	ldr	r2, [sp, #16]
+   86124:	e9c4 2300 	strd	r2, r3, [r4]
+   86128:	b008      	add	sp, #32
+   8612a:	bd10      	pop	{r4, pc}
+   8612c:	9dc2      	ldr	r5, [sp, #776]	@ 0x308
+   8612e:	0008      	movs	r0, r1

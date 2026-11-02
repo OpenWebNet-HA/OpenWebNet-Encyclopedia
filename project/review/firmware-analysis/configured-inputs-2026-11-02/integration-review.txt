@@ -1,0 +1,38 @@
+# Independent configured-input documentary integration review
+
+PASS — current documentary v2, within the stated finite static scope. No genuine configured export, complete scene/module trace, universal schema/filter, successful parser/provider result or runtime/physical approval is established. This review approves source-to-public representation and current identities; final validation/strict checks have not yet been produced and are not certified here.
+
+## Current exact identities
+
+| File | Bytes | SHA256 |
+| --- | ---: | --- |
+| OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-f460-f461-input-admission.md | 8283 | `f34d48d0f30437a2e91254ae5be5962c8f73556aab9d7deddef2529a62127982` |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/configured-inputs-2026-11-02/README.md | 2144 | `64fcbc539e96340c742512aed552358c34f8467a9f2c0e90334e1413261ecffc` |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/configured-inputs-2026-11-02/SOURCE_EXPORTS.v2.json | 17799 | `afa55ff2aca1cc3d42035381f0bd9c939ef199e41ba60083febaff7600d3f70e` |
+| work/configured-scene-module-investigation/2026-11-02/integration/CURRENT_DOCUMENT_PINS.v2.json | 3347 | `d026fa8b622bfbc64c44908aa763225795a8196e9111eb77cf335eaca964176d` |
+| work/configured-scene-module-investigation/2026-11-02/reviews/f460-source-review.md | 6727 | `a68545006d382119e29cfb63706eb3aabeb077795e6c5cc0c5bf9b27a442c74b` |
+| work/configured-scene-module-investigation/2026-11-02/reviews/f460-producer-review.md | 7757 | `6dd67e3b7b3068a72ee88d69b09233c67223e8988486027c8776d1a1881ca0ad` |
+
+## Source-to-public assessment
+
+The current report, work REPORT_CANDIDATE.v2/SYNTHESIS.v2 and capsule synthesis.v2.txt are byte-identical. Their product/build table and availability statement agree with reviewed admission metadata and the parent-reported direct human answer. The nine admission outputs/eleven immediate first copies remain inventory/classification integrity, not new functional source coverage. Packaged manager/plugin settings and manufacturer templates are separated from commissioned data; MH202 defaults are not transferred into MHS/F46 scenes. F461 contributes no new binary-body study in this pass. Finite retained-prefix/path observations do not become global absence or product-capability conclusions.
+
+My prior asset-admission and policy/context reviews remain applicable. The MHS qualification adds zero unseen bytes and zero natural configured path, and correctly avoids treating post-mutating-lookup membership as an original-input required-field rule or local absence of a name check as whole-parser optionality. It does not retroactively correct a claim the older report did not make. The generic range-helper qualification is a documented STOP with zero additional functional source coverage; no raw-scene/parse contract or neighboring-body interpretation is promoted.
+
+Both fresh F460 packets have actual independent original-byte/import/ABI reviews, whose exact identities are checked above. The authoritative filesystem report v2 differs from canonical REPORT only by stack-offset basis clarification and explicit version role; canonical code/results/first copies remain unchanged. The public text preserves the W28/predecessor and opaque path-producing-helper premises, the out-of-range .json branch and conditional action_schedule.json equality gate. It does not promote an effective full extension filter, basename policy, unchanged semantic object, whole owning function/natural outercaller or successful parse. Same storage across reconstruction is not asserted to mean same value.
+
+The input-prefix report and peer support the retained constructor call105760→10fe60, provided destination/source preservation and actual file-buffer open import request with numeric8, under appropriate object/ABI/provider/normal-return premises. Public wording preserves the local return-word zero gate and stops at JSON reader/value argument setup before any parse call/result. It makes no successful open/read, full file-to-JSON/root publication, accepted scene or natural configuration claim. MHS Thumb and own F460 AArch64 object/layout roles are not interchanged, and the two F460 edges require independent natural-value/caller correlation rather than merely adjacent addresses or reused stack/registers.
+
+The producer preparation defect remains explicit: wrong105768 precheck failed, orchestration continued to the already-authorized bounded display before the promised pre-read record existed, and canonical evidence followed the actual limited postread decision. Exact preparation/history/postread records and peer verdict agree. No clean/backdated preflight, invented saved failed-script/output hash, automatic-review rejection, firmware fault or original execution is claimed. Source-fact verification does not erase this ordering defect.
+
+## Documentary refinement and preservation
+
+I requested one representation correction before PASS: the earlier broad statement that no leaf values were exported conflicted with the deliberately whitelisted previously reviewed packaged selector. Parent preserved seven exact files before making current v2 distinguish private leaf values and explicitly whitelist that selector. Current source claims/code/results are unchanged. Original REPORT_CANDIDATE/SYNTHESIS, capsule synthesis.txt/SOURCE_EXPORTS.json and all nine original documentary first copies remain historical and exact. The current README points to SOURCE_EXPORTS.v2 and explains these roles. Eight exact current-v2 pins plus the unchanged original firmware-index pin cover the current nine documents; the two changed old public paths have exact expected-hash parent snapshots. No broad fallback, repinning or old-validator replay is accepted.
+
+I independently checked all 38 current source/export pairs byte-for-byte, all eight new current pins, all nine retained original first copies, seven exact pre-refinement parent snapshots and ten locked references/closed controls. The prior firmware-index pre-edit identity and its exported copy match the one explicit old/current hash mapping; the current index differs by exactly one contiguous table row for this scoped follow-up. Earlier MHS/F46 handoffs, three Device pages, source manifest and old closed controls match REFERENCE_LOCKS. Their wider approvals and old execution ledgers are not upgraded by this pass.
+
+All nineteen local links from current public analysis/capsule README resolve except the exactly three intentionally pending actual gates: integration-review.txt, validation.json and checks.json. Their link labels do not constitute results. Parent must copy this actual review, produce identity validation and actual strict checks, then resolve those links. This PASS does not anticipate those results, a final evidence index or workflow closure.
+
+## Verification scope
+
+Read-only current reports, prior reviewed context, exact source/export/copy/hash comparisons and local navigation/history checks. No old collector/native replay, binary/provider-body expansion, original/vendor/native/helper/emulator/model/fixture/JSON/SQL/target/service/network/bus/physical execution, remote write, source/repository edit, Git staging/commit/push or new/reopened automation occurred. Only this new review and exact immediate copy/index were written. A reviewer path probe looked for a v2 copy INDEX at an unpromised location and returned FileNotFoundError before any review output; the actual integration/CURRENT_DOCUMENT_PINS.v2.json list was then used successfully. No failed saved script/report or invented hash is claimed. Full source/Device/runtime/physical gates remain pending.

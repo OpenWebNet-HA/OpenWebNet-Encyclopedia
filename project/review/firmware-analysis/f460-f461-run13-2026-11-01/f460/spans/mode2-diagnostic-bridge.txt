@@ -1,0 +1,10 @@
+
+/home/bticino/bin/dedrifupdater:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000002aa0 <.text+0x2e0>:
+    2aa0:	b0000022 	adrp	x2, 7000 <_ZN8PlatformC1Ei@plt+0x4578>
+    2aa4:	91160042 	add	x2, x2, #0x580
+    2aa8:	17ffff91 	b	28ec <clean_kernel@plt+0x14>

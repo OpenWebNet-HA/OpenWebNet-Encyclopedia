@@ -1,0 +1,50 @@
+# Packaged JsonCpp: constructor-reachable signed-int scalar path
+
+Fresh original source narrows the signed scalar-provider premise left by the BNLD trigger serializer: `Json::Value(int)` stores a sign-extended 32-bit argument under its own type1 tag, and constructor-reachable type1 `asInt()` calls the actual range helper before loading the original low word. This is a conditional scalar source relation, not executed provider behavior or a whole JSON member/assignment/serializer/reparse result.
+
+New original/native/provider execution, semantic host fixtures, native replays and target I/O: **0**. The prior MyHOMEServer1 ledger stays one corpus/eight entries,340 original code-hook visits,0 C primitives,12 redirects and8 EXIT=360 hooks, with four data-relocation setup writes separate. The earlier isolated double corpus is not reused as signed-int execution evidence.
+
+## Exact original identity and independent ABI
+
+Original `/usr/lib/libjsoncpp.so.1.9.5` SHA256 `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36`. ImageVFS and this ELF's own PT_LOAD records supply original code/data offsets and hashes. Actual dynamic definitions are:
+
+| Method | Thumb pointer / actual instruction entry |
+| --- | --- |
+| `Json::Value::Value(int)` C1/C2 | `0x15c41` / `0x15c40` |
+| `initBasic` | `0x15ad5` / `0x15ad4` |
+| `type()` | `0x14e3d` / `0x14e3c` |
+| `asInt()` | `0x1682d` / `0x1682c` |
+| `isInt()` | `0x15519` / `0x15518` |
+
+These are actual signed-overload definitions, distinct from the previously inspected null/unsigned constructor/asUInt paths. The fresh selected code uses ordinary ARM32 integer ABI: this in r0, signed-int argument in r1, scalar return in r0. No VFP fixture, old firmware parser layout or executed double harness is transferred.
+
+## Constructor writes its own tag and sign-extended value
+
+`0x15c44` preserves the incoming integer r1 in r5. The constructor zeros its Comments pointer word at object+12, supplies `type=1` in r1 and allocated0 in r2, and calls the original initBasic candidate through its actual PLT. The initBasic source at `0x15af8` writes its type argument to object byte+8; original `type()` is a byte+8 load followed by return.
+
+After a normal initBasic return, `0x15c50` arithmetic-shifts the preserved input by31 to produce its sign word. `0x15c54` stores `(low=r5, high=signword)` at object+0/+4. Thus the selected constructor produces a sign-extended 64-bit stored integer from the signed32 argument. The normal return ends at `0x15c58`; cleanup/unwind tails, nonempty Comments and destructor behavior are not investigated.
+
+## Actual type1 asInt path and required range helper
+
+`asInt` calls the candidate original `type()` at `0x16848`. Its TBB data at `0x16856` contains selected type1 byte `0x12`, reaching `0x1687a`. At `0x1687c` it calls the actual `isInt()` candidate. A nonzero result reaches `0x16886`, which loads object word+0 into r0 and enters the normal stack-canary epilogue. The false-range branch is an opaque error boundary, not a supplied invalid-value experiment.
+
+The range helper likewise calls original `type()` and its own explicit tag1 branch reaches `0x1556c`. That selected body is:
+
+- Load stored low word into r3 and high word into r0.
+- `ADDS` the low word with `0x80000000`, then `ADC` its carry into the high word (`0x15570..0x15574`).
+- `CLZ` the adjusted high word and shift right by5 (`0x15578..0x1557c`). The result is1 exactly when that high word is zero; otherwise0.
+- Rejoin the normal canary/return path.
+
+For a normal valid two's-complement stored64-bit integer, this is the signed32 interval test: adding2^31 must leave the adjusted high word zero. The constructor's sign-extended signed32 representation meets that relation, so the constructor-reachable type1 success arm loads the original argument word. This is source algebra, not executed helper instructions, a host value matrix or a proof of arbitrary input-object admission. No other stored-type arm or error/exception behavior is generalized.
+
+## Candidate binding and limits
+
+Original BLX bytes, ARM PLT arithmetic, JUMP_SLOT names and exact same-library definitions establish four selected call requests: constructor→initBasic, asInt→type, asInt→isInt and isInt→type. Effective live symbol interposition, object validity/no intervening mutation, ordinary ABI, canary and successful delegate returns remain conditions. The helper and argument do not need a new allocator or runtime fixture in this static investigation.
+
+This narrows only the signed scalar constructor/conversion link needed by the earlier trigger serializer. Complete fresh JSON/member presence, map access, move assignment, same-object serializer/reparse, configured scene, threshold domain, public grammar, physical units, all lifetime/concurrency and full error/unwind remain separate. The existing unsigned/null report explicitly left this signed overload separate; neither that report nor the double corpus is silently broadened.
+
+## Reproduction and preservation
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/collect_integer_v1.py --check`
+
+The collector records nine selected code spans,20 byte guards, six exact dynamic definitions, four original BLX/PLT/relocation-to-definition proofs, the selected TBB data and six input pins. It performs host read/hash/disassembly only. Existing outputs/snapshots are refused; all outputs/report/collector are immediately copied with index bytes computed before exclusive creation. Current Device0199 supplies product context only. No original images, earlier dossiers, source/repository files or execution ledger are modified, and no receiving/transport/auth/session/framing/MQTT/libjel body is inspected.

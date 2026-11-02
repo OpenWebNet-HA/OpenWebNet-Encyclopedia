@@ -1,0 +1,28 @@
+{
+  "authoritative_report_sha256": "72c63ccc002bc723808670dc7835b7732b3362e1277a7cb2004a531031fab59f",
+  "new_collector_sha256": "00a0f3456765e89eb97390a55784a20b4ff2c65eef89227895075cc47c78f463",
+  "new_original_execution": 0,
+  "old_collector_sha256": "06075404b12899c0f304a3cdfa32de70a64aef1d896a11a5d1b28f70f9fca2c0",
+  "parent_snapshot": {
+    "path": "work/f460-f461-comparison/2026-11-01-run14/integration/f460-before-v2/INDEX.json",
+    "sha256": "506658e885d4cfe221934bf7debfa508e71a8ca3393c4280e919fd3c0a3eca42"
+  },
+  "pointer_identity_correction": {
+    "actual": "196980",
+    "evidence": "own row213980=(length4,pointer196980) toBNLD",
+    "occurrences": 3,
+    "old": "1968f8",
+    "roles": [
+      "tupleguard",
+      "literalread",
+      "SOURCEname_VAmetadata"
+    ]
+  },
+  "preservation": "All strict source guards retained; v1 immutable; no failed canonical run or fabricated old report/output/terminal bytes",
+  "scope": "Exact staged-unexecuted v1 preserved before NEWv2; no v1 report/output/canonical attempt existed",
+  "version_references": {
+    "new": "REPORT.v2.md",
+    "occurrences": 3,
+    "old": "REPORT.md"
+  }
+}

@@ -1,0 +1,62 @@
+# MH2021.0.24 run6 — selected diagnostic receive qualification and completion
+
+Static-only, bounded continuation of protocol/run4–5. Original execution, original instructions executed, emulator/code hooks, live I/O and ARM/JS/vendor process execution: **all zero**. Eight constructed post-decoder host cases check a source reconstruction; they are neither raw accepted inputs nor hardware captures.
+
+## Result
+
+The original bt_device collector at VA `0xf2dc` has a concrete received-selector **4** route to its decoder and a diagnostic-WHO-qualified array0 branch. In that branch, modes **7 and8** share DIM/WHERE qualification but differ in completion. With normal nonnegative qualified-forward return, mode7 and a nonzero requested DIM returns0 after the first qualifying result. Mode8 continues counting qualifying results unless decoded WHERE is exactly `0` and WHAT exactly `4`, or the selected received-timestamp elapsed check exceeds5. A requested DIM0 in mode7 also takes the counting/continuation path.
+
+This is a local code contract under explicit parser/provider/context premises. It does not close actual input decoding, prior marker selection, physical diagnostic response availability, descriptor binding, or successful output delivery. No raw `$048C000100` or other prior candidate is promoted to accepted/published traffic.
+
+## Original inputs and reproducibility
+
+Firmware image paths refer to the normal MH202 image, resolved and verified through the read-only shared ImageVFS. See `input-hashes.json` for all8 inputs and `original-spans.json` for exact24 VA ranges, original byte offsets/hashes and saved disassembly. Principal originals:
+
+- `/home/bticino/bin/bt_device`: SHA256 `65dad019cc15cf5036c04ec7ef23d0f9c2f388324f44692f43af37fd82192f70`.
+- `/home/bticino/lib/libopen.so.0.0`: SHA256 `868eeb717020232c11623224df17bd6b2034fffc2fb80043c39c34b76310fb04`.
+
+From the project root, run `python3 work/mh202-firmware/research/2026-10-30/protocol/run6/collect_evidence.py --check`. The collector reads originals and earlier reports; invokes host objdump only; reproduces30 output files byte-for-byte; verifies30 critical words,2 original PIC-resolved C strings and8 finite host cases. It never executes original code. `output-manifest.json` additionally pins the report, collector and all generated evidence; it excludes itself and any subsequent peer review.
+
+## Entry, context and decoder boundary
+
+`0xf2dc..0xf308` saves9 registers (36bytes), reserves201828bytes, stores the mode at SP+20, original object at SP+28 and descriptor pointer at SP+32. Thus caller stack arguments at original SP become current SP+201864/+201868/+201872. Their selected uses show requested DIM, requested WHERE and context pointer respectively. `stack-arguments.json` gives the arithmetic. The8 output objects start at SP+60 with stride`0x624c`; array0 raw text at object+`0x5e3c` is SP+24184.
+
+The selected loop checks context+28==1 at `0xf418..0xf428`. A ready descriptor calls imported `advanced_receive_from_scs` at `0xfb70`; its numeric return is saved in register fp at `0xfb74` (fp is not a frame base here). A zero receive return closes and resets the descriptor in `0xfb7c..0xfb90`; that is distinct from successfully decoded data.
+
+For returned selector4, the original comparisons at `0xfd1c`, `0xfec0` and `0x100cc` bypass the special1/7 and99/2 branches. At `0x10574` the first comparison is against5; the conditional second comparison at **`0x10578` is against2**. For4 it leaves a positive result, so the signed `ble` at `0x10584` does not skip the decoder. Reading only the first comparison would incorrectly exclude4. `0x107f8` calls local decoder`0x12588` with array0, received buffer, selector4 and the caller context. The decoder itself tests selector4 at `0x12724` and received-string length19 at `0x12734`; these are necessary selected guards, not a complete parser acceptance proof. Selector3 has a separate decoder branch at `0x141c4`; this batch does not reconstruct it.
+
+Only after decoder returns nonzero (`0x107fc/0x10800`) does `0x10904` reparse array0's raw text into the caller's original object via imported CreateMsgOpen. The collector then extracts array0 WHO and calls local diagnostic membership helper`0xd3d0` at `0x10914`. WHO1000 is included by the previously reviewed mask, but the selected branch is diagnostic-family membership, not equality to the requested WHO. This batch starts its host reconstruction after successful decoder output and diagnostic membership. Getter/provider consistency, required code/data state and normal return through intervening logging/destructors remain premises.
+
+## Qualification after diagnostic membership
+
+There is already a first array-forward helper call at `0x10a24`, before the request-correlated filter below. Its negative result closes/resets that output descriptor, then control continues to mode handling. The qualified forwarding at `0x10df0` uses another global slot. These are source-level output routes; actual descriptors/recipients remain unresolved.
+
+At `0x10a94..0x10ac8`, decoded DIM is extracted and converted by imported atoi; decoded WHERE similarly strips one initial `#` before atoi for numeric comparison. Models deliberately use decimal fixture fields only, without reimplementing the complete imported atoi or OPEN grammar.
+
+For modes7/8 (`0x10c40..0x10c48`), the selected rules are:
+
+1. Decoded DIM30,31,32,62 or64 equal to requested DIM qualifies immediately at `0x10c0c..0x10c38`, before WHERE comparison. This special-DIM shortcut precedes the mode7/8 guard and is not exclusive to those modes.
+2. Otherwise, when decoded DIM equals requested DIM, decoded DIM21/23 requires WHERE to begin `#`, with atoi of its suffix equal to requested numeric WHERE (`0x10c60..0x10ca0`). Other dimensions accept the corresponding hash suffix match, ordinary numeric WHERE match, or exact decoded WHERE`0` plus WHAT`4` (`0x10ca4..0x10d28`).
+3. When decoded DIM differs, the branch repeats diagnostic membership and qualifies when the **requested DIM is signed0 through8 inclusive**, without a matching decoded DIM or WHERE (`0x10d2c..0x10d64`). The `mvn`/shift and signed compare with8 both matter; this is not an unrestricted wildcard claim.
+
+No selected comparison here requires received WHO to equal the request's WHO. The outer diagnostic membership and decoder premises still apply; no global acceptance or physical cross-device correlation conclusion follows.
+
+## Forwarding, finish, elapsed check and caller ACK boundary
+
+After qualification, DIM23 with requested WHERE0 has a special full-WHERE invio_msg_open call at `0x10d98..0x10dd8`; the8 host examples avoid that additional branch. Common forwarding calls local array helper`0xf038` at `0x10df0`. A negative helper return closes/resets this output descriptor and returns−1 through `0x10dfc..0x10e20/0x11284`. A nonnegative result continues to completion logic.
+
+The helper walks objects with stride`0x624c`, stops when imported IsOKFrame is true, and otherwise calls imported write on raw text (`0xf080..0xf09c`, `0xf174..0xf18c`, `0xf27c..0xf298`). It returns1 on its normal stop/cap path; a negative write goes to its−1 route. It does not check exact byte-count equality here. In the conditional packaged libopen provider, IsOKFrame tests **kind6 at offset`0x623c`** (`0x9ac0..0x9adc`). Thus this loop stop is OPEN-OK, not a generic null sentinel; no libcommon enum is imported. The original loop cap pool is `0xf2cc=0x31260` (=8×`0x624c`). No write or descriptor action was performed in this batch.
+
+At `0x10e24..0x10e4c`, mode8 takes the counting path. Mode7 instead returns0 immediately if requested DIM!=0. Otherwise `0x10e50..0x10e60` increments the count. Exact decoded WHERE`0` and WHAT`4` then return0 (`0x10e64..0x10e98`). Original PIC pools`0x10294/0x10298`, base`0x2dd68`, resolve to strings`0` at`0x2441b` and`4` at`0x229c1`; these are getter-field comparisons, not a reconstructed complete terminal raw frame.
+
+On the selected nonterminal/rejected-result continuation, `0x10e9c..0x10eac` compares the received timestamp (saved before receive at`0xfb44`) minus start timestamp (`0xf40c`) with5, using signed `ble`. At≤5 it cleans up and loops via`0x112b0..0x112e0`. At>5 mode8 follows logging/destructor cleanup to`0x11280` and returns0; mode7 follows−1 to`0x11284`. **This selected mode8 elapsed return does not test the accepted count and can follow a nonqualifying diagnostic object.** It is not a complete5-second deadline specification: select/no-data/error/retry/context paths and scheduling are separate, and the compared timestamp is the one taken before this receive.
+
+`0x11280` sets result0; normal cleanup ultimately returns it through`0x1172c..0x11738`. The already identified caller at`0x1f168..0x1f1a8` chooses Extract_OpenOK for collector return0, Extract_OpenKO otherwise, then calls invio_msg_open. The shared callsite can be reached with mode8 by a direct jump from`0x1efe0` that skips the unrelated adjacent mode2 setup. Caller stack args in the mode8 setup are r6/r7 and context (`0x1efb8..0x1efd8`), matching the collector interpretation above. This proves local ACK choice/call boundary, not remote receipt or physical device acknowledgement.
+
+## Coverage, confidence and next questions
+
+Confirmed by original static words/control flow: selected receive4-to-decoder dispatch, context gate, post-decoder reparse/membership, DIM/WHERE tests, distinct forwarding calls, mode7/8 completion and selected elapsed branches, helper stop kind and caller ACK choice. Eight host consistency cases preserve these predicates without executing ARM or fabricating parser acceptance. Earlier marker and embedded-text alias evidence is inherited read-only; run4's correction remains explicit: same source text alias does not establish successful/coherent second parse or a chosen marker byte.
+
+Conditional provider scope remains the reviewed run2 packaged bt_device dependency closure, no-preload/no-dlopen/no replacement assumptions. Imported transport/getters/parser/write/logging/destructor behavior and actual runtime interposition are not established here. No protocol meaning is assigned to transport selector4 beyond this code path; it is distinct from mode7/8, parser kind6 and diagnostic response enum0.
+
+Highest next questions: recover one justified MH20219-character selector4 input through the full local decoder's actual translator registry without original execution; identify the two output descriptor global slots and their setup/recipient role; separately map select/no-data timeout and context-stop results. Marker prior state remains open but is unnecessary for this conditional comparison of both modes. No evidence here proves a firmware defect, unsupported physical feature, accepted request or published response.

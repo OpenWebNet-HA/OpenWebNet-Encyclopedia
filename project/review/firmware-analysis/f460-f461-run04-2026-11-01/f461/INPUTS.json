@@ -1,0 +1,113 @@
+{
+  "configs": {
+    "home/bticino/cfg/coso_cfg": {
+      "bytes": 333,
+      "sha256": "7d4f87e391dc416a7f227bfed9fb24d1df5606952f705cd6884087677c0d583f"
+    },
+    "home/bticino/cfg/coso_plugins/scs_cmd": {
+      "bytes": 157,
+      "sha256": "22d9ae840fbbc5f1313a13ad135a8c1dad2f6b91aac0ddcf0db83bdee0c99eb2"
+    }
+  },
+  "originals": {
+    "core": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          19020,
+          19020,
+          65536
+        ],
+        [
+          1,
+          6,
+          19216,
+          84752,
+          84752,
+          1616,
+          1648,
+          65536
+        ]
+      ],
+      "bytes": 22752,
+      "image_path": "/home/bticino/libcoso/libcoso.so",
+      "sha256": "572bca218965a040393361bea4044b0d55519b4f2146ef69c9aa18d4aa6ef690"
+    },
+    "exe": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          27804,
+          27804,
+          65536
+        ],
+        [
+          1,
+          6,
+          27848,
+          93384,
+          93384,
+          2328,
+          2432,
+          65536
+        ]
+      ],
+      "bytes": 32168,
+      "image_path": "/home/bticino/bin/coso",
+      "sha256": "2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197"
+    },
+    "plugin": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          16428,
+          16428,
+          65536
+        ],
+        [
+          1,
+          6,
+          19136,
+          84672,
+          84672,
+          2096,
+          2536,
+          65536
+        ]
+      ],
+      "bytes": 23152,
+      "image_path": "/home/bticino/libcoso/libplug_scs.so",
+      "sha256": "cb166fdfb540077a48d591dcf2f45748908fe88734256cc8d7c07aa7cdebdc2b"
+    }
+  },
+  "references": {
+    "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md": {
+      "bytes": 39923,
+      "sha256": "89f0a1cd681924ec8bf6b093c4c39d3d037b14cd416547b8111bffecd2eb5323"
+    },
+    "work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/REPORT.md": {
+      "bytes": 9896,
+      "sha256": "a89d70211c3f6eecb92f620d9e1aecdc52c2c1a06dbff99cdcc89b139b0f6c19"
+    },
+    "work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/SOURCE.json": {
+      "bytes": 4864,
+      "sha256": "2cb9d0b1cab5555b8216adbc22068ea6ae1142c2e2ac9798e32d9d11ab9093a4"
+    },
+    "work/f461-firmware/2.0.11/research/2026-11-01/image_vfs.py": {
+      "bytes": 5602,
+      "sha256": "6c54cac0515e0c74409e802fd8f4bf7a23caa2fff876287333917f598f72106a"
+    }
+  }
+}

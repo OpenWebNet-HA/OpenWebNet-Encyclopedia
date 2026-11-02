@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "prior_batch": "work/f460-f461-comparison/2026-11-01-run03",
+  "prior_index": {
+    "path": "work/f460-f461-comparison/2026-11-01-run03/EVIDENCE_INDEX.json",
+    "bytes": 41592,
+    "sha256": "1d60bb1c8d9d1cd574c58c8e7ed989444a48c333acb3508a99972d08313f1fc0"
+  },
+  "members_checked": 179,
+  "scope": "Exact previous evidence identities, not source/CPU replay"
+}

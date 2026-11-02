@@ -1,0 +1,58 @@
+# Installer database integration documentary review
+
+PASS for the current bounded canonical integration after the exact privacy-wording refinement described below. No remaining correction requested. I source-reviewed the archive conservation and project/plant templates; those comparisons are source-aware. Systems and ScenarioSuite variants are independent documentary comparisons against their separately source-reviewed reports and exact evidence summaries. This is not a fresh semantic re-audit of every source row, a new remote readback or native/vendor execution.
+
+## Current reviewed document identities
+
+Paths are relative to `OpenWebNet-Encyclopedia/`.
+
+| Document | SHA256 |
+| --- | --- |
+| internals/README.md | 5db3e9f6d46dbd7b60b1d8fbae9cc69c9f5bc1c13c17dd0711709df11815d62f |
+| internals/installation-and-source-layout.md | 24227e83c47a1fba42a131825a6a405447b2e70845b46b3d65d246296a312596 |
+| internals/data-store-responsibilities.md | a7d92f854a874fad0628938dfb596664c3baebe3c515945e5917f43e82f08aac |
+| internals/implementation-boundaries.md | b1178a0b885096803eb161167624c86dff066bb2fa2538fb7792a7eae13fb374 |
+| scenario-engine/README.md | b9b0a264dd8e84e8d1161de4a21c4a391f52cc9c2e857413452733734c0baa13 |
+| scenario-engine/scenario-suite-database.md | a1697760814082db62e7cc93b9694d85a044cc10b27f3a49cd080e36a80dbbb9 |
+| reverse-engineering/firmware-analysis/f454-2.0.51-av-and-board.md | c1cbfa5a7af37642d6e54c23573824541b09b594d0b0f172c1415ce5f277c1ad |
+| internals/project-and-plant-templates.md | fe7ac8c0083a1f70c0ca918eec944228642bf91277dbd6a24c826d6ea52fdbbd |
+| internals/device-application-databases.md | d9d6dad3b74a16805ff25dc97f8bc6792dcd66226e158cc8954f32a0efbd9879 |
+| scenario-engine/scenario-suite-variants.md | 2547a50c1efb2e2912b41bb329572a4274c0b98ab55aa1a777776e030afb94ab |
+| project/review/installer-databases-3.5.38/README.md | f3d43e1aaab9585fce0b4bd87f51706aee87f7744e8a381b4e87fc66d3d664d0 |
+
+The capsule `provenance.json` SHA256 is `c07e8b756e4b18417f70a164415d1c23f46d50b784045c9132c9e8727d60e0e2`. All19 declared source/export pairs were independently compared by full bytes/size/SHA256, and all three declared collector hashes match. This binds the authoritative three reports/reviews, archive records, selected safe evidence and preserved source-refinement histories without republishing vendor database binaries.
+
+## Preservation and correction pins
+
+| Local artifact under current analysis root | SHA256 |
+| --- | --- |
+| INTEGRATION_EDITS.json | c441b40b9a8e1bfdf603aefe3c8793d838b4f722d1f5f4084bbfd41166afaa73 |
+| pre-edit-documents/SOURCE_SNAPSHOTS.json | 6bebd14995bb6a4cd27eeea981453596e21aa48ba701a0d143c9db721d41fa9a |
+| initial-reference-candidates/SOURCE_SNAPSHOTS.json | 075bcfdb9ca6892f049326bc0f9b6c5cfa45622a7a75db9464aaed75ee5f3eda |
+| CAPSULE_CHECK_LINK_REFINEMENT.json | b0cc2916ef1e072c1853ff645bd32a88819b2ad828ad15f76975644d311aab7e |
+| privacy-wording-before-refinement/REFINEMENT.json | 49fd4a59a03a75b67bd89c651a86f4594d3db2f95cf33686cb760b2f40565703 |
+| COVERAGE.md | bf2bfa73180075604127dcb9aa0e608e8aa83a4c1a0e0b2734ffce9538521a8c |
+
+Verified all seven exact pre-edit snapshots and11 initial-reference candidates. The capsule's mechanical-link refinement is an exact documented substitution from its first candidate to the subsequently preserved intermediate README. The two later complete pre-privacy copies match their declared before hashes; replacing each recorded sentence once yields exactly the current page/README bytes. No source report, collector, evidence or export changed.
+
+That requested privacy refinement is narrow and now accurate: ordinary structural defaults remain recorded; credential-bearing schema defaults and populated plant network/GUID/identifier/contact values are withheld. The earlier broad wording could imply that every network-related structural default was redacted. It is retained in the snapshots, rather than silently rewritten as historical evidence. No new credential values are exposed by the correction or this review.
+
+## Essential documentary findings
+
+* The installer census remains explicitly scoped to20 indexed database-extension paths and13 unique SQLite payloads, excluding nested opaque/extensionless discovery and29 unparsed trailing index bytes. Aliases do not create duplicate payload records. The seven newly registered payloads and six existing identities remain distinct. My earlier archive review verified all13 local object hashes/headers/quick checks, individual and aggregate saved readback receipts, seven additive descriptors and all832 prior raw manifest blocks unchanged. The current manifest remains SHA256dff0aac04bdb06c9ea298845d8666dce293818e65b03ae5882c3ab0aed883a05. Parent remote checks/commit974eced66cf40fdc5b5dc3417357244db710d848 are attributed to saved archive records; this reviewer did not repeat R2/ACL/Git-host queries.
+* Analysis scope arithmetic is exact: four systems payloads times nine tables=36 instances; two ScenarioSuite payloads times79=158; project/plant19+8=27. Total221 table instances cover eight payloads. Removing the preserved MH20279-table baseline leaves142 instances from seven newly registered payloads. These are structural/comparison inventories, not semantic-coverage percentages or new native corpora. Existing catalogue/OPEN/rules/ScenarioDevices semantics were not broadly re-audited here.
+* Systems documentation matches its source report's all-table/all-six-pair comparison and bounded relation-linked normalization. Surrogate-ID churn is not promoted to feature change. Specific camera/page/entrance/alarm limits remain distinct editor contexts, not physical capacities, universal protocol validators or the separate manual blocked-command count. Named validators, PluginBasedAtt controls and behaviour selectors remain unexecuted. Static Cid/Id, a property named cid, owner IDs and behaviour targets are separated. The six missing-parent references and65 root-unreachable F454 items establish retained templates, not feature absence, an application fault or proof that a reader exposes those templates. Coordinate constants and selected2.1 differences remain stored declarations, not measured geometry or actuator support.
+* ScenarioSuite documentation correctly preserves identical79-table schemas/54406-row profiles and the complete four-table difference partition. Eight same-key updates change nine nonkey cells; the composite VERSION/RELEASE/BUILD key instead yields one removed and one added tuple. Numeric version ordering is not chronology. Command317/rule284 changes a dimension-shaped Start/Stop template field following WHO/WHERE; it is not an ordinary WHAT replacement, global DIM1-to-DIM4 policy or accepted frame. All67 status rows and the selected Dimmer status dimension1 remain unchanged. Presence family/order changes do not prove actual editor visibility or hardware activation. MH202/common source applicability is not generalized to all same-name files.
+* Project templates retain the positive declared local FK graph, independent row/key/slot identities, composite association/configuration keys, and actual seed-room/default/DELETE SET DEFAULT declaration. Constraint existence is not original application enforcement or an executed deletion. Empty runtime-instance tables do not bind project IDs to catalogue/protocol/ScenarioSuite identities or represent an installed system. Spatial area/category labels and metadata versions remain distinct namespaces. PTDB's eight-table count explicitly includes empty sqlite_sequence; the archive noninternal count7 is compatible. Source defaults/reference seeds are not active endpoints, current credentials or user projects.
+
+The seven existing-document edits accurately narrow older no-source statements, add navigation and retain source authority. New evidence is described as installer application data rather than databases bundled into gateway firmware. F454 database metadata remains separate from its dynamic DIM35 producer, initial VDE state and electrical alarm-port attribution. Counter ANA_TEXT consumer refinement is preserved, not reversed by matching range IDs. Wider Device gates, actual readers/serializers, UI enforcement, genuine configured projects/exports, runtime compatibility and physical outcomes remain open.
+
+## History, privacy and verification boundary
+
+Author source reviews retain the failed project zero-FK preflight and failed scenario expected-count assumption before successful evidence generation. The corrected project collector records22+6 actual declared relationships; the corrected scenario comparator retains full composite-key removal/addition. This documentary review does not manufacture successful old output or authenticate unavailable intermediate historical drafts. Existing firmware/source/capture/oracle evidence and native results remain unchanged.
+
+No raw sensitive project CREATE declaration, credential-bearing default or populated private plant value is copied into this review. Published structural hashes/sanitized metadata and whitelisted manufacturer context do not constitute runtime evaluation. No vendor expressions, regexes, CLR/JavaScript/ARM, target services, network/device or native harness was executed for this review.
+
+Independent inline-link check on the11 current documents resolves122 existing local targets and five supplied heading fragments. Exactly two expected future capsule links remain: integration-review.txt and validation.json. The separate postwrite-checks.json path is described inline as an actual final requirement, not replaced by a placeholder or exempted from final checks. Neither future validation nor strict postwrite ESG/ECV completion is certified here. Parent identity/protected-file/branch checks and final mechanical checks remain separate and pending at review time.
+
+Only this new review file was written. No author, source, repository, prior dossier, snapshot or first review version was edited. ASCII punctuation and a single final newline were checked before exclusive creation.

@@ -1,0 +1,44 @@
+{
+  "scope": "Final strict checks after all actual review, reproduction and validation targets exist; no placeholder or link exemptions",
+  "checks": [
+    {
+      "name": "ESG",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "bd5a2e",
+          "wall_time_seconds": 3.904646205,
+          "exit_code": 0,
+          "original_token_count": 21,
+          "output": "STATS human_pages=395 support_pages=149 objective_failures=0 review_candidates=6869\n"
+        }
+      }
+    },
+    {
+      "name": "ECV",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "3ddf6c",
+          "wall_time_seconds": 1.684788189,
+          "exit_code": 0,
+          "original_token_count": 16,
+          "output": "STATS human_pages=395 objective_failures=0 review_candidates=14\n"
+        }
+      }
+    },
+    {
+      "name": "Git_diff",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "d7aa8c",
+          "wall_time_seconds": 0.00001072,
+          "exit_code": 0,
+          "original_token_count": 0,
+          "output": ""
+        }
+      }
+    }
+  ]
+}

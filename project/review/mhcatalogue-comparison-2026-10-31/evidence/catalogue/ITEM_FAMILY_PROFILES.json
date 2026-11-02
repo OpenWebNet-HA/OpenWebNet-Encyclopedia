@@ -1,0 +1,176 @@
+{
+  "firmware": [
+    {
+      "id_family": 1,
+      "item_rows": 24,
+      "name": "Control"
+    },
+    {
+      "id_family": 100,
+      "item_rows": 6,
+      "name": "Other devices"
+    },
+    {
+      "id_family": 102,
+      "item_rows": 3,
+      "name": "Load control actuator"
+    },
+    {
+      "id_family": 11,
+      "item_rows": 3,
+      "name": "Temperature control unit"
+    },
+    {
+      "id_family": 12,
+      "item_rows": 3,
+      "name": "Load control unit"
+    },
+    {
+      "id_family": 19,
+      "item_rows": 1,
+      "name": "Scenarios controller and scheduler"
+    },
+    {
+      "id_family": 2,
+      "item_rows": 34,
+      "name": "Actuator"
+    },
+    {
+      "id_family": 27,
+      "item_rows": 3,
+      "name": "Radio device"
+    },
+    {
+      "id_family": 3,
+      "item_rows": 1,
+      "name": "Bus interface"
+    },
+    {
+      "id_family": 4,
+      "item_rows": 17,
+      "name": "Dimmer"
+    },
+    {
+      "id_family": 5,
+      "item_rows": 5,
+      "name": "Light / Motion detector"
+    },
+    {
+      "id_family": 7,
+      "item_rows": 4,
+      "name": "Probe"
+    },
+    {
+      "id_family": "",
+      "item_rows": 1,
+      "name": null
+    }
+  ],
+  "suite": [
+    {
+      "id_family": 1,
+      "item_rows": 38,
+      "name": "Control"
+    },
+    {
+      "id_family": 10,
+      "item_rows": 4,
+      "name": "Burglar alarm control unit "
+    },
+    {
+      "id_family": 100,
+      "item_rows": 18,
+      "name": "Other devices"
+    },
+    {
+      "id_family": 101,
+      "item_rows": 5,
+      "name": "Access control device"
+    },
+    {
+      "id_family": 102,
+      "item_rows": 3,
+      "name": "Load control actuator"
+    },
+    {
+      "id_family": 11,
+      "item_rows": 4,
+      "name": "Temperature control unit"
+    },
+    {
+      "id_family": 12,
+      "item_rows": 6,
+      "name": "Load control unit"
+    },
+    {
+      "id_family": 14,
+      "item_rows": 3,
+      "name": "Burglar alarm devices"
+    },
+    {
+      "id_family": 19,
+      "item_rows": 4,
+      "name": "Scenarios controller and scheduler"
+    },
+    {
+      "id_family": 2,
+      "item_rows": 36,
+      "name": "Actuator"
+    },
+    {
+      "id_family": 20,
+      "item_rows": 10,
+      "name": "Video door entry system device"
+    },
+    {
+      "id_family": 23,
+      "item_rows": 7,
+      "name": "Room controller"
+    },
+    {
+      "id_family": 25,
+      "item_rows": 1,
+      "name": "Sound system device "
+    },
+    {
+      "id_family": 26,
+      "item_rows": 7,
+      "name": "Video door entry system panel"
+    },
+    {
+      "id_family": 27,
+      "item_rows": 4,
+      "name": "Radio device"
+    },
+    {
+      "id_family": 3,
+      "item_rows": 1,
+      "name": "Bus interface"
+    },
+    {
+      "id_family": 4,
+      "item_rows": 17,
+      "name": "Dimmer"
+    },
+    {
+      "id_family": 5,
+      "item_rows": 15,
+      "name": "Light / Motion detector"
+    },
+    {
+      "id_family": 7,
+      "item_rows": 4,
+      "name": "Probe"
+    },
+    {
+      "id_family": 8,
+      "item_rows": 17,
+      "name": "Network device"
+    },
+    {
+      "id_family": "",
+      "item_rows": 6,
+      "name": null
+    }
+  ]
+}

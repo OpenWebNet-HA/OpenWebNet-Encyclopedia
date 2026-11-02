@@ -1,0 +1,30 @@
+# MH202 run12 component/version evidence — independent source review
+
+**PASS. No author correction requested.** The new evidence materially refines aggregate PHP applicability: the packaged CLI and Apache module have distinct declared and source-backed versions. Initial package-label evidence should remain historically pinned, while a current generic summary should distinguish the two. No vulnerability, incompatibility, active-module or installed-device outcome is established.
+
+I reproduced `python3 -B inventory/run12/collect_components.py --check`:10 outputs,36 image/accessor input identities,218 normal records,203 recovery records,203 shared package names,12 selected binary joins and3 GLib integer objects. Separate reviewer code independently reread all36 inputs through normal/recovery ImageVFS, verified bytes/hashes/resolutions, reconstructed all421 package blocks using safe selected fields and actual line numbering, and compared every recorded Package/Version line. Shared Version/Architecture equality, the15 normal-only names and three Status-only changes agree. No target executable, version function, vendor PHP/JS, module/service, OS/network or HTTP/authentication code executed.
+
+## Critical source and applicability checks
+
+- Independently checked the12 exact normal package file-list memberships, declared versions, resolved normal binary identities and selected recovery resolutions/presence/hashes. The recovery requested `/usr/sbin/httpd` path resolves through image metadata to `/bin/busybox`; it is not a differing Apache executable. Selected missing PHP CLI/module/OpenSSL CLI paths do not establish global absence of HTTP/PHP/TLS capability or a service state. The selected shared core libraries/BusyBox agree byte-for-byte; this is scoped to the selected paths, not every component.
+- Independently mapped both PHP ELF32 PT_LOAD files, checked all four original code-span hashes/offsets and both literal addresses/bytes. CLI `zif_phpversion 0x1ba140` takes the zero-argument branch`0x1ba150→0x1ba248`, loads pool`0x1ba280→0x3136a0` (file`0x30b6a0`), and requests duplication of exact`5.2.13` into the return value. Module `zif_phpversion 0x1c4e74` follows its zero-argument fallthrough`0x1c4eb8`; PIC arithmetic from`0x1c4e8c` PC+8 and pool`0x1c50a8`, then offset pool`0x1c50ac`, gives`0x3626e8` and exact`5.1.6`. Its selected strlen/duplication/result stores agree. Package labels php-cli5.2.13 and modphp5.1.6 independently match these source choices. These are original-byte/static call facts, not `php -v`, evaluated `phpversion`, effective Apache loading or actual runtime versions.
+- Independently checked GLib symbol-object bytes/offsets at`0xd681c/0xd6820/0xd6824` as2/28/7. The2.28.7 release/package relationship is separate from SONAME`libglib-2.0.so.0` ABI naming. Likewise OpenSSL1.0.0d, libc2.8 and libstdc++ package4.3.3/file6.0.10 are not collapsed into their SONAME numbers. Selected empty GCC-comment matches do not assign a compiler version to every binary; public banner evidence retains its own narrower meaning.
+- All10 deterministic output-manifest entries match their current hashes. Safe record/token selection avoids conffile/credential/header/key dumps. The zlib requested-path author correction is documented as a host file-list candidate rejected before canonical outputs, with final source list membership now checked. It is not a modified firmware guard or observed firmware fault. Earlier inventories/review pins are preserved.
+
+Original execution and hooks remain0 for this author/review area. Current global emulation counts belong to separate named corpora and are neither reset nor expanded by these static reads. Remaining limits include package-file accuracy beyond these declarations, runtime/provider loading, actual configurations, recovery boot/services, installed firmware and physical behavior.
+
+## Exact reviewed pins
+
+Paths relative to `inventory/run12/`:
+
+| Artifact | SHA256 |
+|---|---|
+|`REPORT.md`|`2302cebc0f001a2e66232c0d6e9e93d7748a3df7230af1a24d22cd6755edafad`|
+|`collect_components.py`|`e067994782ad644bbe38c291f85ea09d40087b168cfdd9bed687068e1645cfde`|
+|`output-manifest.json`|`e98923fc300b68413d681ffdfe1512549342751a85565882b65c1854d4f83a88`|
+|`distinct-php-version-source.json`|`21bd7979cf66399eb0fba6ba9de400cc93061ff59d3bc6bee5b1131d80cc7a5c`|
+|`selected-package-binary-evidence.json`|`bd68aad778931b84b8a0cdbb1ca020755c5254de8cbe36e3d318ddad0883c72e`|
+|`package-version-records.json`|`6de94fac8700b8e008f9748937bf83b7ee9a7f1cbce9b78b92fd2fae87262a50`|
+|`glib-original-version-objects.json`|`760f092c3e1ad30fb859974c5f609130561357f516849674c752d94355595770`|
+
+Reviewer wrote only `reviews/run12/inventory-review.md`; author/source/tool/repository/previous-dossier files were not changed.

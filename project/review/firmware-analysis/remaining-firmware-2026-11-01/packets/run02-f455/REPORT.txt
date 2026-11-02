@@ -1,0 +1,29 @@
+# F4551.1.2 night02: exact wrapper and vector-shaped raw-format candidate
+
+The original F455 payload remains an opaque standalone binary with **CPU, actual endianness/load map and executable ABI unproved**. New finite byte evidence supports a vector-shaped M-profile/Thumb-compatible format candidate. It does not justify assigning ARM, Cortex-M0+, STM32, a manufacturer/part, hardware role or a function body to this product. No disassembler is forced to an ISA and no original code executes.
+
+## Container and source provenance
+
+Original F455_1_1_2.fwz is180196bytes/SHA256 `cd99299fc729679b4eade46acda7bd4f5e619a0a9eac34a1f6a3b73b625a18f9`. Its central directory has exactly two encrypted entries. The already legitimately extracted F455_1_1_2.bin is301016bytes/SHA256 `6d61c308888ccd78f6fb289cf23e672203921a50931b838533a7a315c5d49ccc`; freshly computed CRC32 d801438a matches the original ZIP and extraction record. Extracted fwz.xml is453bytes/SHA256 `5b93f792b5d9ece0a7d26b75847d91df5ebe9b3c0bfbeea29c617e1557d852ad`, CRC32 4b488fc1 likewise matches. CRC/hash agreement establishes retained-byte integrity, not signature authenticity or a trusted installed update chain. This packet makes no decryption/password/key trial.
+
+Original XML declares Basic Gateway/version1.1.2, model label5.0.8 and file F455_1_1_2.bin; update mode is explicitly bootloader. These are actual packaging/provider labels, not proof of CPU, bootloader behavior, load address, installed version or accepted update. The payload's size is an observed byte count, not inferred flash/RAM capacity. No filesystem or ELF segment layout is invented.
+
+## New finite prefix and address relationships
+
+The exact first384bytes are interpreted as96 little-endian words for this comparison only. Word0 is0x20004178 (divisible by8); word1 is0x080024e9. After word0 there are88 nonzero words, all odd, and seven zero entries at indices7,8,9,10,11,13,14. This is a bounded selected window, **not** a recovered complete vector table, interrupt count, exception assignment or CPU endianness theorem. No physical SRAM/flash region is assigned to these numeric ranges.
+
+With an explicitly hypothesized arithmetic base B=0x08000000, clearing bit0 of every nonzero selected word after word0 yields an in-file offset. B is not supplied by the XML or a genuine loader header and is not established as the actual address map. In particular, word1 maps to fileoffset0x24e8. The actual16bytes there are `0148804701480047410c0008f9240008`; its last two little-endian words are0x08000c41 and0x080024f9, also odd and in-file under the SAME hypothesis. This cross-relation strengthens a format candidate without proving those bytes are instructions, a reset routine, a call chain or an actual runtime entry. No forced Thumb decoding or instruction execution is performed.
+
+The file also contains exact word-aligned occurrences of0xe000ed08/0xe000ed0c/0xe000e010, listed by offset only. They are secondary raw numeric context, not proved register accesses, MMIO use or peripheral identity. Names/nearby products and compiled product labels are not used to choose a target architecture.
+
+## One primary documentary comparison, with explicit limits
+
+[Arm's Cortex-M0+ Devices Generic User Guide, ARM DUI0662B](https://documentation-service.arm.com/static/5f04abc8dbdee951c1cdc9f7), section2.3.4/printed2-18/PDF30, documents an initial stack value followed by a reset vector and low-bit Thumb convention. The exact public PDF is retained with retrieval metadata and SHA256 `09fdd7deebbb2d3df401838d9d199397cc2f6f43a3683b1d3a2d768541795bda`. ARM_CONTEXT.json retains fewer than25 quoted words and marks this as documentary semantic context only. The source's own M0+ exception/interrupt arrangement is not transferred to F455 or claimed to fully match its prefix. Generic pattern compatibility is not original target provenance.
+
+Thus confidence is high for the exact wrapper/XML/CRC and finite byte arithmetic, conditional for a vector-style raw-image interpretation, and unresolved for processor family/part, true ISA/ABI, endian mode, memory mapping, vector extent and actual entry behavior. A genuine linker/map/debug image, target-specific packaging source or authoritative manufacturer CPU/loader metadata is needed before assigning those properties or following code. A disassembler accepting a forced ISA would not supply that evidence.
+
+## Reproduction and unchanged boundaries
+
+`python3 -B collect_format_v1.py --check` reconstructs the selected source identities, original ZIP central metadata/XML declarations, finite96-word arithmetic and exact target bytes read-only. The only network operation was fetching this one public official Arm document as authorized; no product device/service/remote private archive is contacted or changed. No original firmware/vendor/provider/native/emulator helper, forced-ISA tool, model/fixture, target OS, network/bus operation, SQL or data expression executes. No credentials/keys/private configuration/adjacent raw runtime data are exported.
+
+Offset0 lacks only the explicitly tested ELF/ZIP/gzip/SQLite signatures. This limited observation and inherited first-pass fixed-marker misses do not establish global absence of executable code, compression, databases or structured data; the parent's separate datastore work retains its own scope. F450/MHS/MH202/F454 bodies/layouts and earlier helper proofs are not imported. Receiving/transport/authentication/session/framing/MQTT/libjel and equivalent closed implementations remain opaque. No new database is recovered/constructed or uploaded. All earlier artifacts, originals, source manifests and repositories remain unchanged. Initial canonical outputs/script/context are exclusive and immediately copied; their index is computed before its own file is opened. No canonical failure or overwritten candidate occurred.

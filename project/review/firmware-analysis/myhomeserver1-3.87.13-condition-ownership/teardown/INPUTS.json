@@ -1,0 +1,26 @@
+{
+  "/home/bticino/scheduling_manager/scheduling_manager": {
+    "bytes": 1406680,
+    "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26"
+  },
+  "curated_product_context": {
+    "bytes": 43131,
+    "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md",
+    "sha256": "5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855"
+  },
+  "image_accessor": {
+    "bytes": 5611,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/image_vfs.py",
+    "sha256": "890e3526e2fc29c630cb45dad15d91fecb6b32007c0be04e5af28c85a48f1ae4"
+  },
+  "inherited_scene_cleanup": {
+    "bytes": 10058,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime/worker-ownership/REPORT.v2.md",
+    "sha256": "a065946b921909290bf1a88ea5ce9064b0487c5f99625a6d72e7b460cd45af92"
+  },
+  "selected_condition_construction_and_predicate": {
+    "bytes": 8725,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-removal-context/scene-condition/REPORT.md",
+    "sha256": "92c64b715c2747ced59b18ca4ddbeb28f811a1f6651683a7d2c4aee656c035c8"
+  }
+}

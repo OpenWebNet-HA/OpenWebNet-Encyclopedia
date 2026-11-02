@@ -1,0 +1,72 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000cf2f0 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16b38>:
+   cf2f0:	9d13      	ldr	r5, [sp, #76]	@ 0x4c
+   cf2f2:	fab6 f286 	clz	r2, r6
+   cf2f6:	0952      	lsrs	r2, r2, #5
+   cf2f8:	f10d 0868 	add.w	r8, sp, #104	@ 0x68
+   cf2fc:	a818      	add	r0, sp, #96	@ 0x60
+   cf2fe:	f8cd 8060 	str.w	r8, [sp, #96]	@ 0x60
+   cf302:	426b      	negs	r3, r5
+   cf304:	429e      	cmp	r6, r3
+   cf306:	bf08      	it	eq
+   cf308:	2200      	moveq	r2, #0
+   cf30a:	2a00      	cmp	r2, #0
+   cf30c:	f040 80cb 	bne.w	cf4a6 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16cee>
+   cf310:	2d0f      	cmp	r5, #15
+   cf312:	950d      	str	r5, [sp, #52]	@ 0x34
+   cf314:	f200 80ac 	bhi.w	cf470 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16cb8>
+   cf318:	2d01      	cmp	r5, #1
+   cf31a:	f040 8091 	bne.w	cf440 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16c88>
+   cf31e:	7833      	ldrb	r3, [r6, #0]
+   cf320:	4642      	mov	r2, r8
+   cf322:	f88d 3068 	strb.w	r3, [sp, #104]	@ 0x68
+   cf326:	2300      	movs	r3, #0
+   cf328:	9519      	str	r5, [sp, #100]	@ 0x64
+   cf32a:	2018      	movs	r0, #24
+   cf32c:	5553      	strb	r3, [r2, r5]
+   cf32e:	930e      	str	r3, [sp, #56]	@ 0x38
+   cf330:	e9c9 3301 	strd	r3, r3, [r9, #4]
+   cf334:	9311      	str	r3, [sp, #68]	@ 0x44
+   cf336:	f741 eba2 	blx	10a7c <_Znwj@plt>
+   cf33a:	e9dd a618 	ldrd	sl, r6, [sp, #96]	@ 0x60
+   cf33e:	f100 0308 	add.w	r3, r0, #8
+   cf342:	4605      	mov	r5, r0
+   cf344:	6003      	str	r3, [r0, #0]
+   cf346:	4271      	negs	r1, r6
+   cf348:	faba f28a 	clz	r2, sl
+   cf34c:	0952      	lsrs	r2, r2, #5
+   cf34e:	458a      	cmp	sl, r1
+   cf350:	bf08      	it	eq
+   cf352:	2200      	moveq	r2, #0
+   cf354:	2a00      	cmp	r2, #0
+   cf356:	f040 809a 	bne.w	cf48e <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16cd6>
+   cf35a:	2e0f      	cmp	r6, #15
+   cf35c:	960d      	str	r6, [sp, #52]	@ 0x34
+   cf35e:	d878      	bhi.n	cf452 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16c9a>
+   cf360:	2e01      	cmp	r6, #1
+   cf362:	d173      	bne.n	cf44c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16c94>
+   cf364:	f89a 2000 	ldrb.w	r2, [sl]
+   cf368:	7202      	strb	r2, [r0, #8]
+   cf36a:	498f      	ldr	r1, [pc, #572]	@ (cf5a8 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16df0>)
+   cf36c:	2000      	movs	r0, #0
+   cf36e:	4a8f      	ldr	r2, [pc, #572]	@ (cf5ac <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16df4>)
+   cf370:	606e      	str	r6, [r5, #4]
+   cf372:	4479      	add	r1, pc
+   cf374:	5598      	strb	r0, [r3, r6]
+   cf376:	447a      	add	r2, pc
+   cf378:	4620      	mov	r0, r4
+   cf37a:	e9cd 2110 	strd	r2, r1, [sp, #64]	@ 0x40
+   cf37e:	4649      	mov	r1, r9
+   cf380:	950e      	str	r5, [sp, #56]	@ 0x38
+   cf382:	f7fe fb5d 	bl	cda40 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15288>
+   cf386:	9b10      	ldr	r3, [sp, #64]	@ 0x40
+   cf388:	b11b      	cbz	r3, cf392 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x16bda>
+   cf38a:	2203      	movs	r2, #3
+   cf38c:	4649      	mov	r1, r9
+   cf38e:	4648      	mov	r0, r9
+   cf390:	4798      	blx	r3

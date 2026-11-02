@@ -1,0 +1,14 @@
+{
+  "hits": [
+    "0x1d7e6",
+    "0x36ce6",
+    "0xa5dbc",
+    "0xa621c"
+  ],
+  "opcode": "Thumb32 LDRB immediate12=65",
+  "range": [
+    "0x11880",
+    "0x113fb0"
+  ],
+  "scope": "Locator for this one opcode form only, not an absence/full-program access claim."
+}

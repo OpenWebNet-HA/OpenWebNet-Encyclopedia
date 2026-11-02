@@ -1,0 +1,22 @@
+{
+  "FP_control_register_setup": 24,
+  "counts": {
+    "C_primitive_callbacks": 0,
+    "EXIT_callbacks": 8,
+    "code_hook_steps": 360,
+    "guard_stop_callbacks": 0,
+    "linker_redirect_callbacks": 12,
+    "original_code_visits": 340
+  },
+  "current_supplement_CPU_replays": 0,
+  "current_supplement_execution_additions": 0,
+  "data_relocation_setup": 4,
+  "saved_corpora": 1,
+  "saved_top_level_entries": 8,
+  "scope": "Arithmetic and identities of saved results only; original code-hook visits are not retired instructions. Nested calls and historical replays are not new corpus entries.",
+  "source_result": {
+    "bytes": 22496,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/RESULTS.json",
+    "sha256": "450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525"
+  }
+}

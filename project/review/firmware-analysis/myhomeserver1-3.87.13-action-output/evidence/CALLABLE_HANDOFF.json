@@ -1,0 +1,89 @@
+{
+  "adapters": [
+    {
+      "entry": "0xd14a4",
+      "input": "R0 points callable storage",
+      "receiver": "word0 of storage",
+      "tail": "0xcf5c8"
+    },
+    {
+      "entry": "0xcf064",
+      "input": "R0 points callable storage",
+      "receiver": "word0 of storage",
+      "tail": "0xcdd14"
+    }
+  ],
+  "execution": {
+    "input_fixtures": 0,
+    "new_original": 0,
+    "semantic_models": 0,
+    "unchanged_prior": {
+      "C_primitives": 0,
+      "EXIT": 8,
+      "corpora": 1,
+      "data_setup_relocations": 4,
+      "entries": 8,
+      "hooks": 360,
+      "original_visits": 340,
+      "redirects": 12,
+      "stops": 0
+    }
+  },
+  "manager_copy": "operation2 copies into separate52/24-byte captures under normal allocator/string returns; does not prove running lifetime",
+  "object_namespaces": {
+    "compiled_action": "116 bytes, first callable data16/manager24/invoker28; second data32/manager40/invoker44 (inherited)",
+    "first_heap_capture": {
+      "bytes": 52,
+      "string4": "copied ID; length8/inline12",
+      "word0": "compiled112",
+      "word48": "operational duration getter result",
+      "words28_44": "compiled92/96/100/104/108"
+    },
+    "second_heap_capture": {
+      "bytes": 24,
+      "string0": "copied ID; length4/inline8"
+    }
+  },
+  "premises": [
+    "selected blocks actually reached under original preceding guards",
+    "normal valid objects/storage/ABI and allocation/string/JsonCpp/helper returns",
+    "candidate import and relative data binding",
+    "capture/receiver alive and no incompatible mutation"
+  ],
+  "selected_requests": [
+    {
+      "R0": "relative GOT1666a4 linked addend16711c",
+      "R1": "SP432 method string",
+      "R2": "SP72 JsonCpp object",
+      "call": "0xcf930",
+      "members": {
+        "id": "string SP456",
+        "jsonrpc": "string SP408",
+        "method": "string SP432",
+        "params": "opaque d163c result from local record SP480"
+      },
+      "opaque_callee": "0x5dda0"
+    },
+    {
+      "R0": "same relative GOT1666a4 linked addend16711c",
+      "R1": "SP552 method string",
+      "R2": "SP56 JsonCpp object",
+      "call": "0xcdf42",
+      "members": {
+        "id": "string SP576",
+        "jsonrpc": "string SP528",
+        "method": "string SP552",
+        "params": "opaque d163c result from local record SP600"
+      },
+      "opaque_callee": "0x5dda0"
+    }
+  ],
+  "unproved": [
+    "actual descriptor strings and full params",
+    "whole callable path/return or invocation order",
+    "natural configured scene",
+    "send result/downstream/accepted protocol/physical operation",
+    "snapshot restoration/cache freshness",
+    "whole concurrency/ownership/unwind"
+  ]
+}

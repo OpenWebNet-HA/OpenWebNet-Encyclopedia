@@ -1,0 +1,29 @@
+# F461 run13 independent object-role/deadline-gap source review
+
+PASS for authoritative REPORT.v2 and its preserved one-sentence refinement. No author correction requested. This is independent bounded original-byte, metadata and artifact verification with a read-only host collector replay. No original/provider/native/clock/target execution, model, fixture, SQL, target I/O or old CPU corpus replay was performed. Author files were unchanged.
+
+Authoritative area: `work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/`. Exact pins:
+
+- `REPORT.v2.md`: `2b36473953ba35ff6e06d418a8a78d83eddb435d29ee48258748371f2980816c`.
+- `REPORT.md`: `f24311c51db4c9290b8586ce4841a69cbc016defa69bf628f9ba00c3fc5e1ce2`.
+- `collect_gap_v1.py`: `0a539491391faf33ab259a13208de92773471a7a73671d5359a6bafc4bc25eb4`.
+- `SOURCE.json`: `91e31a0d3f50ef264f2d6283b7bd4a24c58613d79074622c2bd24d1b77e23356`.
+- `INPUTS.json`: `e032890747639b097b24800b0b817d9b77cc2b8ff420500a1f427861948a688c`.
+- `OUTPUT_MANIFEST.json`: `fca1061545d61ec217bc0d29def671a76128bee2aa6dc984f7e6ba7b865fa666`.
+- `first-candidate/INDEX.json`: `241d211c49d9527bc8f499ae1f615d0b466ea2c929d2f6496d6c459401efad48`.
+- `WORDING_REFINEMENT.v2.json`: `89deb7a6ddf9937df7673d389c4bd5eb40e538ac59285cce1c764b783372f010`.
+- `report-v2-first/INDEX.json`: `b098947cb561f3fd15c89002a474b7eba32174ea7a98f28ca52e9979532d8c9e`.
+
+The intentionally v1-report-bound collector `--check` passes11 outputs, eight spans,34 guards, six import proofs, two finite function queries, six input pins and13 first copies. Independently reading the three original automation/auxiliary/core ELFs and mapping their own ELF64/AArch64 PT_LOADs reproduces all eight span hashes/hex,34 words and six BL/PLT/relocation rows. The104-byte automation_stm exported OBJECT at0x15150 and its selected initializer/application symbol definitions are original metadata, not names inferred from adjacent functions. Actual GOT/ABS64 rows and initial descriptor+88 zero bytes agree. Output identities and13 first copies match.
+
+The positive initializer origin is source-supported: plugin initialization loads the actual automation_stm descriptor, passes that same pointer to register_state_machine, and candidate core registration preserves incoming X0 as X19 (independently checked0x276c). Its selected continuation loads descriptor+48, conditionally calls it with the same descriptor X0 and returned-manager+80 X1. Active binding, selected earlier normal calls, valid descriptor/manager and successful initialization remain premises. The authoritative prose correctly says this selected registration continuation is retained; it does not claim the entire registration body was untouched or a module actually activated.
+
+Initializer source saves descriptor X19, reads descriptor+88, and its null branch requests112 zeroed bytes and stores returnedP back to that same descriptor slot. P receives descriptor pointer at0 and supplied argument fields at16/24. The selected24-byte entry/string preparation and named g_list_append dataflow store the returned GList head into P+32. This positively identifies the stored value's source role as a private-context list pointer. File-backed zero initialization does not prove runtime null, isolation or reset. It is not a justified producer of a message deadline solely by the matching offset32, and no global nonaliasing or ownership safety is inferred.
+
+The separate automation callback retains its supplied second pointerQ, loads parsed=[Q], reads descriptor private context separately, and the selected append passes sameQ as data. This does not prove Q+32 is unchanged on all paths or by callees. The auxiliary callback's direct parsed=[Q] then parsed+32 pointer, NULL test and strtol request instead establish a nested string role, not the record's numeric deadline32. Conversion/domain/timer/public-family meaning and natural runtime record values remain unproved. These separate pointer origins are the useful new source closure.
+
+I independently reproduced exactly the two named rendered-instruction queries and their source-extent hashes: automation application0x2fb0..0x37f0 and auxiliary application0x1f50..0x20b4. There are no STR*/STP matches with direct non-SP `[Xn,#32]` operands in those extents. This is only the stated locator form. It excludes neither pair/vector/bulk stores spanning32 from other offsets, interior/aliased pointers, callee effects, other functions/plugins/images, nor any runtime mutation. No all-writer census, global absence, dead-code, untouched-record or impossibility conclusion is supported. The nonzero deadline producer remains explicitly OPEN and timestamp24 distinct.
+
+History verification: exact parent pre-v2 index and all three report/collector/manifest snapshots match current immutable v1 bytes. REPORT.v2 equals v1 with precisely the one old/new sentence in WORDING_REFINEMENT.v2.json substituted. Both v2 report/refinement first copies and their index match. The old report, collector, manifest, outputs and original first copies are unchanged; the collector deliberately continues to reproduce v1. This is a prose-scope clarification, with no changed source finding, count or generated evidence. Unavailable exploratory history is not independently certified.
+
+No deadline value, clock arithmetic case, runtime scheduler activation, matcher/output/framing implementation, receiving/transport/authentication/session/MQTT/libjel body, platform command or uncertain bt_device route was used to fill the gap. The report's object/offset namespaces, conditional providers/lifetime and lack of physical, capability, defect, safety or whole-runtime conclusion are consistent with the reviewed evidence. Existing execution ledgers remain unchanged.

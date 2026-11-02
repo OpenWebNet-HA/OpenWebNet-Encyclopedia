@@ -1,0 +1,9 @@
+# Catalogue reference: review-status cleanup
+
+Verdict: **PASS** for the narrow editorial change in internals/mhcatalogue-source-profiles.md. The exact current text differs from the preserved candidate only by removal of the single generic sentence “Wider Device review remains pending.” All other bytes, section order, source relationships and evidence limits are unchanged.
+
+The consumer paragraph still explicitly leaves full Device/Firmware alternative selection, fallback and missing/Prototype/RC policy unresolved. It still denies that database declarations or selected paths establish installed compatibility or complete runtime behavior. F460 owner/configuration/key/query/null/row-selection limits and the absence of an established F461 reader from shared bytes remain present. No protocol, product, runtime or physical assertion has been newly promoted.
+
+The removed sentence described an ambiguous workflow status now superseded by actual limited-description Device acceptance; it supplied no additional technical condition. Removing it does not convert that acceptance into complete Firmware/runtime coverage. Source and snapshot identities match CATALOGUE_REVIEW_STATUS_REFINEMENT.json and are recorded in catalogue-review-status-addendum-identities.v1.json.
+
+No repository edit, new source investigation, collector replay or execution was performed. This addendum does not approve Machine KB curation or its separately reopened source pin.

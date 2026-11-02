@@ -356,3 +356,9 @@ Parameters, identifiers, and allowed-message distinctions come from [`WHO 22` sp
 Archived test examples are inspected expectations, rather than a claim that the complete suite passed. Recorded original-helper executions retain their controlled conditions separately. The client forms, source caches, local feedback, tuning and display conversions are traced in [Sound implementation review](../../project/review/myopencommunity-sound-history-review.md). Retained software revisions do not identify deployed Firmware generations.
 
 See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.
+
+## MH202 implementation evidence
+
+For MH202 Firmware `1.0.24`, a source-derived reverse-translation case constructs `*22*1#1#0*1#1##`. Isolated original-parser and same-object serializer cases preserve base `WHAT 1`, its ordered parameters `1/0`, and base `WHERE 1` with selector `1`. The complete parameterized fields are required; neither the base numbers alone nor this selected parser case expands the published target grammar.
+
+Forward query formatting and reverse translation are separate paths. A local query/receipt state machine uses pending IDs and timer requests, which do not establish a causal physical reply, volume/source state or elapsed timeout. The [MH202 sound translation reference](../../reverse-engineering/firmware-analysis/mh202-1.0.24-functional-translation.md#translation-examples-and-direction) records the internal formats and the source versus isolated-helper evidence for these conclusions.

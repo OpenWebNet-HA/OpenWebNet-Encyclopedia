@@ -1,0 +1,7 @@
+# Lifetime, alias and schema continuation
+
+Selected wait/scene states capture raw receiver pointers and own the small thread-state allocation. Candidate std::thread entry invokes worker then state destructor; successful detach clears a holder word without proving worker completion. Selected scene disposal may join its separate holder before releasing compiled-action handles. Concrete SLEEP disposal instead checks its action holder for zero or requests terminate; this local combination does not establish whole receiver lifetime or a defect.
+
+All22 previous byte72 candidates now have finite receiver provenance:2known globals,9stack,1freshallocation,10caller-supplied objects. No additional shared reset is established; ten caller aliases and wider/indirect writes remain open.
+
+Exact BN3L local action12 has a raw64-byte schema and selected116-byte compiled construction/move/append path. Operational8/12 survives the selected move. Optional status/brightness/saturation/hue/temperature/speed assignments are source facts, not physical support or full accepted grammar; the virtual serializer and callable bodies remain opaque.

@@ -1,0 +1,77 @@
+# MH202 run21 — post-decoded SCS record and conditional alarm routing
+
+## Result
+
+The selected original **post-decoded category1** continuation assigns a concrete type, routing criterion, representation and direction. For the exact historical run20 supplied text `00004209`, the original classifier's source rules produce **type9**, not the type3 that run20 supplied as an explicit fixture. Both types pass the alarm translator's selected reverse guard. This is a new producer-side qualification; the immutable run20 synthetic example remains unchanged.
+
+A second original gate matters before any COSO translation registry match: for the selected criterion4 record, **the descriptor value at SL+56 must equal2 to request the indirect delivery callback**. With the selected other value1, the original branch logs and skips that callback. The actual active descriptor and callback target are not proved here. Consequently, this batch establishes a conditional post-record route, **not upstream admission of this text as a real SCS message**.
+
+All new original ARM/vendor/parser execution, native helper entries, primitive callbacks, hooks and physical observations are **0**. This is host static inspection and two finite source-contract ledgers. No transport, connection, session, authentication or framing internals are investigated; no target OS, socket, device, process or service is executed. The decoded category, valid allocated body/record and ordinary import returns are supplied premises. No F454 layout, fixture or address is used.
+
+## Reproduction and identity
+
+`python3 -B work/mh202-firmware/research/2026-10-30/alarm/run21/collect_provenance.py --check` reproduces17 deterministic evidence outputs:11 original spans,34 exact instruction-word assertions,4 selected relocation rows,5 input identities and2 host cases. `--check` writes nothing. ImageVFS verifies original regular-file bytes and metadata; the collector uses PT_LOAD address mapping rather than assuming VA equals file offset. The final output manifest pins the report, collector and evidence separately.
+
+| Original normal-image input | SHA256 |
+|---|---|
+| `/home/bticino/libcoso/libplug_scs.so` | `07fe8d2b35264df4961e1cc9b648808a6ee5b32754a705b237fb90d0a6a6f6af` |
+| `/home/bticino/bin/coso` | `6865c2d1d441d25effa31275080ded70ad3538a8a49288e3002ffb196b066175` |
+| `/home/bticino/libcoso/libplug_alarm_tr.so` | `47a85dc85bd64a09fd11f6681a7f93f9361a19b042491eca0b7f6fd5ea4354ff` |
+
+`input-hashes.json` additionally pins the accessor and immutable `alarm/run20/REPORT.md`; `original-spans.json` records byte offsets, VA bounds and exact span hashes. Disassembly's nearest exported `scs_init+...` label is **not a function identity** for the stripped continuation; those spans are identified only by exact VA. The actual exported classifier is `get_scs_frame_type0x1980`.
+
+## 1. Supplied decoded category to classified record
+
+The selected dispatch **0x2a60..0x2a84** reads the previously decoded category from stack+60. Equality1 at0x2a74/0x2a78 branches to0x2ec4. Its origin and preceding decoding/admission are outside this pass. The body pointer and allocated record are already supplied; no accepted grammar or minimum natural message size is inferred.
+
+At **0x2ec4..0x2edc**, r4 supplies the body to imported `get_scs_frame_type`; its result is stored at record+40. Body byte4 minus ASCII `'0'` is stored at record+48. The JUMP_SLOT0xb9cc names the same-image classifier definition0x1980; actual loader interposition/runtime binding remains a premise.
+
+The complete classifier **0x1980..0x19b8** is small and explicit. If byte4 is `'4'` or `'1'`, a first byte `'B'` returns3 and other selected first bytes return9. In its other branch, a first byte `'8'` returns9; otherwise it returns3. This is classification, not a grammar/admission validator. For the unchanged eight-character historical example, byte4 is `'4'` and byte0 is `'0'`, so type9 and criterion4 follow. No alternative body is fabricated to obtain type3.
+
+Common continuation **0x2e1c..0x2ec4** requests these stores, then branches back to0x294c:
+
+| Record offset | Selected requested value/source |
+|---|---|
+|+40|classifier result9 for the supplied example|
+|+48|body byte4 minus48 =4|
+|+56|representation1|
+|+12|direction1|
+|+16|value at+56 of the owner reached through r8+4|
+|+52|status3|
+|+60|opaque imported new_id result|
+
+Logging calls in this displayed continuation do not supply an admission decision. Normal returns from those calls and valid objects are explicit premises. The owner value copied to record+16 and SL+56 used by the delivery gate are separately identified references; this report does not infer their aliasing or meaning from equal numeric values.
+
+## 2. Post-record delivery differs by descriptor value
+
+At **0x294c..0x298c**, the original requests a time value and stores the returned words at record+24/+28. After the separate criterion−1 branch, it reads **SL+56**. The selected criterion4 paths are:
+
+| Supplied SL+56 | Original path | Callback at0x2988 |
+|---|---|---|
+|2|0x2970→0x2c60; equality4 at0x2c60/0x2c64→0x297c|requested|
+|1|0x2974/0x2978→0x2d6c; log, then0x2d80→0x298c|skipped|
+
+The requested callback receives r0=[r8+4] and r1=the same record from stack+48; the target is **[r9+4]**, invoked at0x2988. This batch deliberately leaves that table's initialization, effective target and naturally active descriptor unresolved. The skip is a local control-flow fact, not a leak, global suppression, defect, bus failure or hardware behavior claim. No code after the displayed rejoin is needed to infer a delivery result, and none is promoted to one.
+
+## 3. Independently inspected COSO registry consumer
+
+Original executable **field_receive0xb8a8..0xb9cc** is a concrete candidate outer router. Its exported definition and GLOB_DAT relocation0x167f0 are verified, but that relocation alone does **not** prove that the selected SCS indirect slot points to it. If the supplied callback enters this function with the same valid record and owner, the displayed code:
+
+1. Gets the plugin manager from field descriptor+72 and translation registry from manager+20.
+2. Iterates descriptors and compares record+12 with descriptor+44; the selected matching descriptor must additionally have descriptor+48=2.
+3. Iterates that descriptor's+52 criterion list and compares each numeric element with record+48.
+4. On a match calls descriptor+40 with r0=descriptor+44, r1=descriptor+48, r2=same record, r3=&local output-list slot and fifth argument=descriptor.
+
+Status3 selects a logging entry **0xbae0..0xbaf8** that rejoins the ordinary registry scan; it is not the numeric type or direction. Active registry contents/order, other callbacks, containers, imported GLib behavior, return handling, publication and record lifetime beyond this call are not executed or exhaustively reconstructed.
+
+The alarm plugin's original registration **0x174c..0x17a8** appends source criterion4 to descriptor+52 and parsed WHO5 criterion to+56. Its descriptor0xc3cc has direction words+44=1/+48=2, and ABS32 relocation0xc3f4 selects translate0x2230. This supplies an exact **conditional** match for the above record's direction1/criterion4. Alarm **0x2370..0x238c** requires representation1 and admits type9 **or**3. The selected new producer output therefore fits that local guard under the stated callback/registry/context premises.
+
+These namespaces stay separate: body-derived routing criterion4 is not parsed WHO4; output WHO5 is not the SCS record type9; numeric status3 is not representation1 or direction1. This pass does not repeat the opcode42/status09→WHAT27 formatting ledger from run20 or claim it was physically received.
+
+## Scope, confidence and next question
+
+**Confirmed static:** original classifier, category1 continuation and exact metadata stores; two descriptor-dependent criterion4 delivery branches; independently identified field_receive registry predicate/callback arguments; actual alarm registration and type9-or3 guard. **Host-only:** two selected descriptor-value ledgers using the unchanged run20 example. **Conditional:** decoded category1/body validity, allocation/ownership, same-build provider binding, normal imported returns, selected callback target, active manager/registry and initialized alarm context. **Unknown:** natural raw admission/category origin, actual active field selection and table binding, parser/translation/list execution, service readiness and physical meaning/delivery.
+
+The next permissible provenance question is the **non-transport registration/initialization source of callback slot [r9+4] and actual field descriptor identity/value at+56**, starting from existing manager/plugin declarations. It should not expand into connection/session/authentication/framing internals. Without that join, the body is still a supplied static example rather than an admitted real event. No global absence or invalid-input outcome follows from this bounded gap.
+
+One instruction assertion for the category1 branch was corrected before any collector outputs existed (the branch is0x0a000111 at0x2a78). No generated evidence/report or earlier completed artifact was overwritten for that pre-output transcription correction.

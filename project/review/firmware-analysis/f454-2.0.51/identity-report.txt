@@ -1,0 +1,69 @@
+# F454 2.0.51: protocol and diagnostic implementation — first deep pass
+
+Date: 2026-10-29. Scope: static inspection of the firmware already verified as SHA-256 `15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3`. No firmware process was executed, no gateway contacted, and no synced source or original firmware file modified.
+
+## Principal results
+
+1. The gateway identity's second field has a concrete storage path. The local `bt_device` identity builder obtains it through `hal_get_nconfdiag`, which reads a cache or eight ASCII bytes at offset `0x15e` in the HAL-selected persistent device. It does not calculate a physical-configurator count in that path. This narrows the provenance of gateway `N_CONF = 15` without establishing its semantic meaning.
+2. A distinct bus-device identity converter represents `N_CONF` as one hexadecimal nibble and converts that nibble to decimal for the OpenWebNet response. This establishes a transport representation, not that 15 is a count or sentinel.
+3. WHO 13 DIMENSION 15 has an explicit compatibility override: when `object_model_15_not_managed` is enabled, the inspected branch formats `*#13**15*200##`. The packaged configuration enables the flag. This must not be confused with diagnostic DIMENSION 1's catalogue model value.
+4. The SCS/WHO registry has been reconstructed from its initializer. The same SCS system code can map to both normal and diagnostic WHO values; a boolean selector controls reverse lookup.
+5. `libdiag`, `libwhere` and `libopen` contain extensive named translator implementations. Treating `bt_device` or `openserver` as the whole protocol implementation would miss much of the useful code.
+
+## Evidence quality
+
+**Confirmed static behavior** below means the relevant ARM instructions and referenced data were inspected. **Inventory evidence** establishes function names and dependencies only. **Unverified** means neither end-to-end execution nor a device transcript has established the behavior in an actual installation.
+
+ELF virtual addresses are used throughout. Some functions are unnamed; the nearest exported name printed by objdump is not their true name. For example, much of `bt_device` is misleadingly displayed as an offset from `sighandl`; that must not be interpreted as a giant signal handler.
+
+## Reproducible corpus and module map
+
+`collect_protocol.py` inventories regular vendor ELF files under `analysis/rootfs/home/bticino`, excluding symlinks and non-ELFs. It records SHA-256, size, dynamic dependencies, imports, and exported function entries. The first pass found **70 vendor ELF files and 4,073 exported function entries**, including duplicate-address C++ aliases and standard-library template implementations. These are not counts of unique proprietary functions.
+
+Selected targets:
+
+| Target | Bytes | Exported function entries | Assessment |
+|---|---:|---:|---|
+| `bin/bt_device` | 122,940 | 9 | Gateway-local settings/identity and diagnostic dispatch; many internal routines unnamed. |
+| `bin/scsserver` | 27,876 | 2 | Serial/PIC bridge with client routing; internal functions largely unnamed. |
+| `bin/bt_luci` | 275,116 | 112 | Rich lighting implementation; inventory obtained, handlers not yet traced here. |
+| `bin/bt_multi` | 178,448 | 2 | WHO 22 implementation according to stack configuration; deeper tracing pending. |
+| `bin/bt_termo` | 58,892 | 10 | Temperature implementation; deeper tracing pending. |
+| `bin/bt_difson` | 26,804 | 2 | Sound implementation; deeper tracing pending. |
+| `lib/libdiag.so.0.0` | 139,152 | 212 | General diagnostics, ID lookup, key-object transfer and scenario/PPT translators. |
+| `lib/libwhere.so.0.0` | 39,796 | 93 | Address translation; includes `OPN_OpenScsWhere::getScsAddr` at `0x3bf8`. |
+| `lib/libopen.so.0.0` | 64,000 | 209 | Frame parser/classification and construction helpers. |
+| `lib/libopenscs.so.0.0` | 7,564 | 13 | WHO/SCS-system mapping, not the full diagnostic translator. |
+
+`protocol-handler-index.tsv` is a searchable index of exported `OPN_OpenScs`, `openwebnet`, and `new_openwebnet` functions across the inventoried modules. It includes modules not yet manually traced.
+
+## Gateway-local identity and N_CONF provenance
+
+### Identity builder
+
+The unnamed helper at `bt_device` VA **`0xe15c`** selects ordinary or diagnostic identity construction from its argument:
+
+- Diagnostic path calls `hal_get_codediag` at `0xe178`.
+- It formats the returned decimal value using `%d`.
+- At `0xe1cc`, it calls `hal_get_nconfdiag`, converts the returned text with `atoi`, and appends it using `*%d`.
+- It subsequently obtains `hal_get_branddiag` and `hal_get_linediag`, again converting with `atoi` and appending decimal fields.
+- The non-diagnostic branch calls `hal_get_code` and omits the three appended diagnostic fields.
+
+At `0x1f4ac..0x1f4c4`, a caller supplies argument 1 and wraps the result in the literal format `*#1013**1*%s##`. Another caller at `0x10c98..0x10cb0` uses the same helper and format in the SCS-to-OPEN processing region. Incoming conditions and all possible routes into these callers have not been exhaustively reconstructed.
+
+### HAL storage
+
+`liblghal.so.0.0` exports `hal_get_nconfdiag(char**)` at **`0x74cc`**, size 220 bytes. The instructions show:
+
+1. Try to open `/var/tmp/flags/nconfdiag` read-only.
+2. If that fails, call `Device::get_device()` to select the persistent device pathname.
+3. Open the selected device read-only, seek to **`0x15e`**, and read **eight bytes** into a zeroed buffer.
+4. Create the cache file and write the acquired text.
+5. Return a duplicated copy through the caller's output pointer.
+
+The exported setter at **`0x75a8`**, size 352 bytes, compares the existing field, clears/replaces the eight-byte persistent slot, and refreshes the cache when changed. Logs describe the persistent write as `MYNCONFDIAG` in `E2`.
+
+`hal_get_codediag` uses the adjacent persistent offset `0x155`. Brand and line have their own HAL getters and cache paths. The HAL's `Device::get_device()` at `0x561c` selects a board-dependent pathname, so the specific device path should not be guessed solely from these getters.
+
+**Implication:** the repeated gateway field 15 can be provisioned or updated metadata. The inspected builder neither derives a count from filesystem/catalogue fields nor explicitly substitutes a hard-coded 15. This does not exclude a sentinel interpretation; it prevents claiming that interpretation has been proven. The exact factory value and why the product uses it still require provisioning/update tracing or authoritative evidence.
+

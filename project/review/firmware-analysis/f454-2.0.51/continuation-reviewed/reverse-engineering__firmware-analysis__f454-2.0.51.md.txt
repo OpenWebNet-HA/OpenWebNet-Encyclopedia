@@ -1,0 +1,67 @@
+# F454 2.0.51 Firmware Analysis
+
+This analysis concerns the identified BTicino F454 Firmware archive, not every F454 installation or the complete OpenWebNet protocol. It adds selected implementation evidence to the [audio/video web server and gateway definition](../../devices/definitions/own-dev-0002-audio-video-web-server-gateway.md). The archive remains private; analysis reports and derived facts are retained separately.
+
+## Artifact and scope
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Artifact | `firmware-f454-020051`, `F454_020051.fwz` | [Original artifact registration](../../sources/artifact-manifest.yaml) |
+| Version label | `2.0.51` | Artifact registration; distinct from the catalogue's historical `1.0.37` and `2.0.1` capability records |
+| Archive size | `74448014` bytes | Hash-verified archive |
+| Archive SHA-256 | `15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3` | Exact archive identity |
+| Analysis dates | 29-30 October 2026 | Retained analyst reports |
+| Methods | Static inspection; bounded original ARM helper execution with explicit primitives and handoffs | [Evidence capsule and reproduction limits](../../project/review/firmware-analysis/f454-2.0.51/) |
+
+The retained capsule identifies exact report hashes, excerpt line ranges and selected original file hashes. It contains analysis excerpts rather than vendor binaries, a Physical Device capture or a complete firmware-oracle result package. No live gateway, firmware process, service startup or bus was used by this investigation.
+
+## Build composition
+
+The kernel configuration selects TI DaVinci DM365, BASI, ARM926T/ARMv5, ARM EABI and no VFP support. The kernel banner identifies Linux `2.6.32.17-davinci1-c44221b9cd7e82d5ec494320685310d138f4dd07` and GCC `4.8.2`. These are build-target facts, not a new hardware interrogation. Kernel configuration locators include lines `205`, `211`, `233..234`, `277` and `324`; the [platform excerpt](../../project/review/firmware-analysis/f454-2.0.51/platform-report.txt) records the original extraction and checks.
+
+| Surface | Established implementation property | Limit |
+| --- | --- | --- |
+| Normal/recovery images | `3090` and `1024` regular-file paths; all `325` shared ELF pairs with differing file hashes have matching `.text` sections | Path counts are not unique implementations; matching code sections do not prove identical data, binding or runtime behavior |
+| Persistent storage | Root is configured read-only; writable synchronous ext3 on `mmcblk0p7` supplies persistent extra/configuration storage | The package does not contain the installation's persistent partition or live mounts |
+| Configuration state | Packaged defaults, volatile runtime copies and persistent user Configuration have distinct paths | A packaged default does not identify enabled services or installed state |
+| Component metadata | OpenSSL release `1.0.1m` is distinct from the `libssl.so.1.0.0` ABI filename | Versions do not establish vendor patch state, enabled exposure or exploitability |
+
+Evidence: [platform](../../project/review/firmware-analysis/f454-2.0.51/platform-report.txt), [component versions](../../project/review/firmware-analysis/f454-2.0.51/versions-report.txt). Original image symlinks are authoritative; rejected-link placeholders in a working extraction must not be treated as packaged empty files.
+
+## Protocol implementation findings
+
+| Finding | Method and exact implementation scope | Interpretation and limit |
+| --- | --- | --- |
+| Gateway identity `N_CONF` provenance | Static `bt_device` helper `0xe15c`, `liblghal` getter `0x74cc`, persistent offset `0x15e`, eight ASCII bytes | The selected local builder reads cached/persistent metadata rather than calculating a physical-configurator count. Targeted follow-up found a packaged `mynconfdiag=15` declaration and conditional setter linkage; its meaning remains unresolved |
+| Diagnostic class registration | Original `libdiag` outer constructor `0x13bb4`, five constructors and registration under explicit C++ storage primitives | General `55`, Thermo `4`, ID `11`, KeyObj `17`, Ppt `17`: `104` distinct keys without cross-class collisions. This is a registry result, not support for every handler or physical command |
+| Web callback call map | Static `api-arm` callback bounds from `.ARM.exidx`; shared token helper `0x12b34` | `273` registered callbacks; `260` contain a direct helper call and `13` do not. This is neither a complete authorization proof nor an unauthenticated-method verdict |
+
+Evidence: [identity provenance](../../project/review/firmware-analysis/f454-2.0.51/identity-report.txt), [diagnostic factory](../../project/review/firmware-analysis/f454-2.0.51/registry-report.txt), [web callback map](../../project/review/firmware-analysis/f454-2.0.51/web-report.txt). Local client IDs, WHO families, frame kinds, state flags and catalogue identities remain separate namespaces.
+
+## Selected execution boundaries
+
+These are synthetic offline fixtures, not captured traffic or Physical Device behavior.
+
+| Selected path | Original code observed under the recorded fixtures | Boundary |
+| --- | --- | --- |
+| Scenario sender | `bt_luci` sender `0x18058`, call/guard `0x18390..0x183e4`; `libcommon` write/guard `0xc3d8..0xc43c` | Supplied write returns `-1` or `0` trigger close/reset, skip the second write and run both output deleting destructors/free requests, while sender returns `0`. A short-positive return is accepted without tail retry. Descriptor, non-SSL provider and I/O/free operations are fixtures; no delivery or allocator reclamation is established |
+| Alarm publication | `coso` callbacks `0xc12c` and `0xc15c`, `libopenmsg::openmsg_to_buf` at `0x2948`, `coso` send call `0xc1d0` | One staged WHO 5/WHAT 17 object serializes to synthetic `*5*17*#5##` and a recorded ten-byte send request. GLib traversal/string/send primitives and one private connection are supplied. Execution stops before message destruction, not after whole-consumer completion |
+| Configuration markup utility | `libutils` `run_parse_xml` at `0x3d08`, `has_bom` at `0x3880`; daemon caller `0x18644..0x18660` | Original chunk/read guards do not test the supplied markup-result register; the selected caller continues to end-parse/close. Actual GLib parsing, XML validity, a formal aggregate return contract and full daemon result remain unexecuted |
+
+Evidence: [sender policy](../../project/review/firmware-analysis/f454-2.0.51/sender-report.txt), [alarm callbacks](../../project/review/firmware-analysis/f454-2.0.51/alarm-report.txt), [markup utility](../../project/review/firmware-analysis/f454-2.0.51/markup-report.txt). A normal software return or recorded send is not physical success or durable Configuration acceptance.
+
+## Targeted static follow-up
+
+The [subsequent targeted examination](f454-2.0.51-follow-up.md) adds packaged identity declaration/writer evidence, conditional temperature client representation, direct DH candidate lifetime and separated VDE configuration/status controls. The [static dataflow continuation](f454-2.0.51-continuation.md) further joins selected temperature backend/frontend paths, an older energy producer and VDE discovery selection. Both follow-ups add zero original ARM/JavaScript executions and preserve the earlier selected-execution evidence as a separate method.
+
+## Reconciliation and remaining integration
+
+The Device page's earlier statement that the package payload was unexamined is superseded for the incorporated paths. Its catalogue records and official-document release history remain separate evidence; no new catalogue Firmware row is inferred from the archive label.
+
+This first integration does not promote the complete local research dossier. Authentication/session details, functional command matrices, energy history, full web ownership/exception paths, update/recovery transitions and remaining diagnostic routes still need reconciliation against their canonical pages. The existing [WHO 25 gateway comparison](../../project/review/who25-gateway-compatibility.md) is separate firmware-oracle evidence and has not been rerun or replaced here.
+
+Concrete unknowns include persistent `p7`/optional extra assets, production provider initialization, actual subscriptions and transport recovery, allocator/thread behavior, real exception unwinding/HTTP completion, update authenticity/power-loss/durability, WHO 17 attribution, VDE activation, energy units/calendar/provenance and raw temperature values `501..511`. These cannot be closed by assigning convenient meanings to implementation names or synthetic inputs.
+
+## Evidence
+
+The [curated capsule](../../project/review/firmware-analysis/f454-2.0.51/) preserves exact analyst-report excerpt bytes and [machine-readable provenance](../../project/review/firmware-analysis/f454-2.0.51/provenance.json). The full local dossier contains additional scripts, handoffs, disassembly, corrections and tests. It remains necessary for execution reproduction; the excerpts alone are not a runnable environment. The [evidence policy](../evidence-and-confidence.md) applies to every promotion.

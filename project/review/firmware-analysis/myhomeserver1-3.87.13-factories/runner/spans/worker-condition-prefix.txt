@@ -1,0 +1,61 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a6d10 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5bf9c>:
+   a6d10:	6840      	ldr	r0, [r0, #4]
+   a6d12:	f7ff bd0f 	b.w	a6734 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b9c0>
+   a6d16:	bf00      	nop
+   a6d18:	4ad5      	ldr	r2, [pc, #852]	@ (a7070 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5c2fc>)
+   a6d1a:	4bd6      	ldr	r3, [pc, #856]	@ (a7074 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5c300>)
+   a6d1c:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+   a6d20:	b096      	sub	sp, #88	@ 0x58
+   a6d22:	447a      	add	r2, pc
+   a6d24:	4607      	mov	r7, r0
+   a6d26:	58d3      	ldr	r3, [r2, r3]
+   a6d28:	681b      	ldr	r3, [r3, #0]
+   a6d2a:	9315      	str	r3, [sp, #84]	@ 0x54
+   a6d2c:	f04f 0300 	mov.w	r3, #0
+   a6d30:	6843      	ldr	r3, [r0, #4]
+   a6d32:	e9d3 581d 	ldrd	r5, r8, [r3, #116]	@ 0x74
+   a6d36:	eba8 0605 	sub.w	r6, r8, r5
+   a6d3a:	10b3      	asrs	r3, r6, #2
+   a6d3c:	1136      	asrs	r6, r6, #4
+   a6d3e:	2e00      	cmp	r6, #0
+   a6d40:	f340 80ae 	ble.w	a6ea0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5c12c>
+   a6d44:	eb05 1606 	add.w	r6, r5, r6, lsl #4
+   a6d48:	f105 0430 	add.w	r4, r5, #48	@ 0x30
+   a6d4c:	e01c      	b.n	a6d88 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5c014>
+   a6d4e:	f854 0c2c 	ldr.w	r0, [r4, #-44]
+   a6d52:	6803      	ldr	r3, [r0, #0]
+   a6d54:	689b      	ldr	r3, [r3, #8]
+   a6d56:	4798      	blx	r3
+   a6d58:	2800      	cmp	r0, #0
+   a6d5a:	f000 813c 	beq.w	a6fd6 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5c262>
+   a6d5e:	f854 0c28 	ldr.w	r0, [r4, #-40]
+   a6d62:	6803      	ldr	r3, [r0, #0]
+   a6d64:	689b      	ldr	r3, [r3, #8]
+   a6d66:	4798      	blx	r3
+   a6d68:	2800      	cmp	r0, #0
+   a6d6a:	f000 8136 	beq.w	a6fda <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5c266>
+   a6d6e:	f854 0c24 	ldr.w	r0, [r4, #-36]
+   a6d72:	6803      	ldr	r3, [r0, #0]
+   a6d74:	689b      	ldr	r3, [r3, #8]
+   a6d76:	4798      	blx	r3
+   a6d78:	2800      	cmp	r0, #0
+   a6d7a:	f000 8130 	beq.w	a6fde <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5c26a>
+   a6d7e:	3510      	adds	r5, #16
+   a6d80:	3410      	adds	r4, #16
+   a6d82:	42ae      	cmp	r6, r5
+   a6d84:	f000 8089 	beq.w	a6e9a <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5c126>
+   a6d88:	f854 0c30 	ldr.w	r0, [r4, #-48]
+   a6d8c:	f894 f000 	pld	[r4]
+   a6d90:	6803      	ldr	r3, [r0, #0]
+   a6d92:	689b      	ldr	r3, [r3, #8]
+   a6d94:	4798      	blx	r3
+   a6d96:	2800      	cmp	r0, #0
+   a6d98:	d1d9      	bne.n	a6d4e <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5bfda>
+   a6d9a:	687b      	ldr	r3, [r7, #4]
+   a6d9c:	45a8      	cmp	r8, r5

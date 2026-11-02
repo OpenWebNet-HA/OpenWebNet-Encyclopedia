@@ -1,0 +1,39 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000f15b6:
+   f15b6:	f8d4 4094 	ldr.w	r4, [r4, #148]	@ 0x94
+   f15ba:	1a64      	subs	r4, r4, r1
+   f15bc:	bf18      	it	ne
+   f15be:	2401      	movne	r4, #1
+   f15c0:	e725      	b.n	f140e
+   f15c2:	f8d4 4094 	ldr.w	r4, [r4, #148]	@ 0x94
+   f15c6:	1a64      	subs	r4, r4, r1
+   f15c8:	fab4 f484 	clz	r4, r4
+   f15cc:	0964      	lsrs	r4, r4, #5
+   f15ce:	e71e      	b.n	f140e
+   f15d0:	f8d4 4094 	ldr.w	r4, [r4, #148]	@ 0x94
+   f15d4:	428c      	cmp	r4, r1
+   f15d6:	bfd4      	ite	le
+   f15d8:	2400      	movle	r4, #0
+   f15da:	2401      	movgt	r4, #1
+   f15dc:	e717      	b.n	f140e
+   f15de:	f8d4 4094 	ldr.w	r4, [r4, #148]	@ 0x94
+   f15e2:	428c      	cmp	r4, r1
+   f15e4:	bfac      	ite	ge
+   f15e6:	2400      	movge	r4, #0
+   f15e8:	2401      	movlt	r4, #1
+   f15ea:	e710      	b.n	f140e
+   f15ec:	f105 0208 	add.w	r2, r5, #8
+   f15f0:	f3bf 8f5b 	dmb	ish
+   f15f4:	e852 3f00 	ldrex	r3, [r2]
+   f15f8:	1e59      	subs	r1, r3, #1
+   f15fa:	e842 1000 	strex	r0, r1, [r2]
+   f15fe:	2800      	cmp	r0, #0
+   f1600:	d1f8      	bne.n	f15f4
+   f1602:	f3bf 8f5b 	dmb	ish
+   f1606:	e726      	b.n	f1456
+   f1608:	f71f edee 	blx	111e8 <__stack_chk_fail@plt>

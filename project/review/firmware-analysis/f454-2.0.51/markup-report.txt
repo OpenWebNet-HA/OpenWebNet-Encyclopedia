@@ -1,0 +1,77 @@
+# Run27 — run_parse_xml read/markup result flow
+
+The selected original `libutils!run_parse_xml` routine does not branch on the markup-parse callback's return. Its chunk loop instead continues or finishes according to the raw read count and delimiter handling. EOF still reaches a markup call with length0; read−1 reaches a markup call with raw length0xffffffff. A failed seek likewise does not select a different branch in the tested bounded trim path.
+
+A joined original daemon caller slice then demonstrates that a utility r0 observation0 is followed by end_parse, and an end_parse callback0 is followed by close. **No real GLib parser, XML configuration, file or syscall ran.** The utility's formal source-level return contract is unknown; its last r0 must not be promoted to an aggregate XML-validity result.
+
+Nine final private CPU cases are complete and stable. No additional native expansion is planned after this batch.
+
+## Inputs, selected provider and reproduction
+
+| Original normal-image file | SHA256 |
+|---|---|
+|`/home/bticino/lib/libutils.so`|`661f047071dbce0d2f688474b037b35006909489023e7dee67de943f3d797ae2`|
+|`/home/bticino/bin/bt_daemon`|`de5ac53dd39ed7ecad94457d65d5dbb1ff0ff7d906e854096e3a3f097efb73c6`|
+
+```
+python3 collect_evidence.py
+python3 emulate_markup.py
+```
+
+The packaged libutils exports `run_parse_xml` at ELF VA **0x3d08**, size284, and `has_bom` at **0x3880**, size124. bt_daemon directly needs libutils.so. The manifest records that concrete selected provider; no production loader/binding or absence of runtime interposition is claimed. Original code uses a private base0x10000000 in this harness. Its relative branches remain original. Two import redirect types are explicit: libutils has_bom PLT→its original body, and the joined daemon run_parse_xml PLT→the selected original libutils body.
+
+Original ELF permissions and private heap/stack/return storage are retained. Only memset, read, markup parse, lseek and caller end_parse are primitives. Their implementations record arguments and supply fixtures, without forwarding any syscall or invoking GLib. Unknown imports/ranges/interrupts fail closed; per-case cap20000 visits/one second. Payloads are empty, `<x/>`, a UTF8-BOM-plus-`<x/>` sequence and synthetic4096-byte X/delimiter buffers. No actual configuration, archive/header or packaged credential material is used or dumped.
+
+## Original utility control flow
+
+| Original libutils code | Actual dataflow/guard |
+|---|---|
+|`0x3d08–0x3d38`| Save context/descriptor, allocate private4096-byte buffer, zero it and request read(fd,buffer,4096). |
+|`0x3d3c–0x3d58`| Save read result in r4; call actual has_bom; retain its offset in r7 and buffer+offset in r8. |
+|`0x3d4c–0x3d60`| Compare read result with exactly4096. Every other raw result takes the final-chunk path0x3e00. No separate negative-read or zero-read rejection occurs here. |
+|`0x3d64–0x3da8`| A full buffer ending in `>` proceeds as a complete chunk. Otherwise the selected path searches backward for `>`, seeks to the cumulative consumed position and writes a terminating0 into the private buffer. Seek return is not tested before parsing. |
+|`0x3dac–0x3dc4`| Pass context, buffer+initial BOM offset, length r4−offset and null error pointer to g_markup_parse_context_parse. |
+|`0x3dc8–0x3dfc`| Test the internal final-chunk flag, not parse r0. A nonfinal chunk resets/refills the buffer; the next read count determines another full/final chunk. |
+|`0x3e00–0x3e14`| Set final flag, perform the final markup call and execute the original stack/return epilogue. No final explicit aggregate result assignment is present. |
+
+The native BOM helper checks actual EF/BB/BF bytes for offset3 and FE/FF or FF/FE for offset2. The selected UTF8 case executes that original path. Recognizing/skipping a byte prefix does not validate an encoding or an XML document; other BOM paths and multichunk encoding behavior were not expanded.
+
+All observed utility returns leave the last markup callback result in r0. A prior parse0 does not itself stop the native full-chunk loop. This is an observed register/control-flow property, **not a recovered formal success/error API**. Actual markup context state, error propagation or callback side effects may constrain which sequences the real GLib parser can produce.
+
+## Nine original CPU checks
+
+The parse results in this table are explicitly supplied callbacks, not actual XML acceptance results. “r0” means the register at original utility return, or at the joined caller's first instruction after that return.
+
+| Fixture | Actual markup call lengths/results | Final boundary | Original instructions |
+|---|---|---|---:|
+| Initial read0 |0→callback1|Utility epilogue, r0=1|49|
+| Initial read−1 |−1 interpretation/raw0xffffffff→callback0|Utility epilogue, r0=0|49|
+| Short `<x/>`, callback0 |4→0|Utility epilogue, r0=0|49|
+| Same short bytes, callback1 |4→1|Utility epilogue, r0=1|49|
+| Full4096-byte chunk ending `>`, then EOF |4096→0;0→1|Utility epilogue, r0=1|76|
+| Same read sequence, reversed callbacks |4096→1;0→0|Utility epilogue, r0=0|76|
+| Full chunk with final `>` at index4000, seek callback−1, then4 bytes |4001→0;4→1|Utility epilogue, r0=1|557|
+| UTF8 BOM plus `<x/>` |4→1; actual pointed bytes are `<x/>`|Utility epilogue, r0=1|49|
+| Original daemon caller; read−1/parse0/end_parse0 |Utility sees raw length0xffffffff; caller then invokes end_parse |Close import entry with descriptor42, before close body|57|
+
+Totals: **1011 original instructions =1003 libutils +8 daemon**, plus38 primitive hooks,10 original-provider redirects and9 boundary hooks =**1068 visits**. Original instructions exclude intercepted imports, redirects and private stops. The utility's actual epilogue executes in all cases; the standalone cases return to a private sentinel, and the joined case returns naturally into original daemon code before its final deliberate close boundary.
+
+`markup-results.json` saves read sizes/results, safe synthetic prefixes, raw/signed parse lengths, null error-pointer arguments, callback returns, seek requests, r0 observations and exact separate counts. No full private buffer/configuration dump is stored.
+
+The0-then1 parse sequence is intentionally independent callback data. It establishes that the utility itself does not aggregate/guard the first result and that a later callback can overwrite the observed register. It is **not** evidence that a real GLib context can recover from an earlier error and return1 on EOF. Similarly, read−1 reaching a raw length−1 does not establish how GLib interprets it or whether any real file/configuration is accepted. The seek test supplies later reads independently; no real file offset is modeled.
+
+## Actual daemon caller slice and contract limit
+
+The joined CPU case enters original daemon **0x18644** with a declared private context at frame−8 and descriptor42 at frame−16. Context construction and the earlier parser/reset/mutation steps do not run. Original0x1864c invokes the selected original utility through its PLT. On return at0x18650, the harness observes r0=0, then original instructions overwrite it with the context, supply null error pointer and invoke **g_markup_parse_context_end_parse at0x18658**.
+
+That callback returns0. Original0x1865c reloads descriptor42 and0x18660 calls close; execution stops before the close primitive body. Neither returned value was tested in those eight native caller instructions. No actual markup context, XML callback, configuration mutation or descriptor close occurs.
+
+Run25's static wrapper evidence remains relevant: local return byte initialized1 at0x18594 and read at0x18890 is distinct from these helper/markup registers. This batch does not execute that later defaulting/configuration tail or claim that the whole wrapper returns1 for an actual malformed document. It also does not reinterpret the earlier descriptor0 guard as full XML-validity handling.
+
+## Boundaries and final questions
+
+High confidence: the exact read-count/chunk guards, supplied argument lengths, native BOM offset for the selected bytes, unchecked seek continuation, lack of an internal parse-r0 guard and original caller end_parse/close ordering for these fixtures. Source/export/dependency identities are recorded in `input-manifest.json` and `selected-provider-and-imports.txt`; exact original spans are adjacent text files.
+
+Unknown/unexecuted: real GLib markup parsing/error state, source-level return declarations, XML callback mutations, complete daemon parser outcome, actual read/seek errno and OS behavior, delimiter-free full chunks, full BOM/multichunk/encoding cases and process/service effects. No validation bypass, accepted malformed configuration, durability failure or live restart is inferred.
+
+This final bounded batch stops here. Any future real markup/runtime investigation needs a separate justified isolated route and must preserve the distinction between original utility instructions and a callback-supplied parse result. No missing dependency was worked around with real services or configuration.

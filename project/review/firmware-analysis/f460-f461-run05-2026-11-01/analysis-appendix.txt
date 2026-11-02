@@ -1,0 +1,18 @@
+## F460: indirect selector and supplied parameter ownership
+
+The selected catalogue constructor is registered as a stored function pointer beside a numeric key. An original range constructor copies that entry into a global registry, preserving its callable data, manager and invoker. The higher caller looks up a supplied key on its selected new-object path and invokes the stored callback through an adapter. Following only direct calls would miss this positive constructor-selection path.
+
+For the selected key89 case, original getters read three 32-bit fields from the same supplied owner object. The adapter dereferences their argument pointers and forwards them to the constructor; the earlier constructor/substitution evidence identifies their roles as `$modobj$`, `$line_modobj$` and `$brand_modobj$`. The constructor separately supplies `$key_object$`=89. These are source-established SQL-placeholder roles, not published Device IDs or observed configuration values.
+
+The normal returned inner/control pair is then stored into an available owner-vector slot. Successful registry initialization, the selected key and cache-miss path, unmodified callables, valid containers/providers and normal returns remain premises. The owner object's semantic type, construction, key-list provenance, actual values, complete SQL selection and lifetime remain open. This closes a local parameter/call-target edge without claiming an installed device selection.
+
+## F461: one typed-object payload and output-record contract
+
+One selected automation converter branch now reaches an exact conditional ASCII normal form: `B1001208`. The derivation uses original literal strings and formatter argument order under the report's exact direction, representation, parsed-kind, scalar/string, null-field, private-selector and normal-provider premises. It is not an accepted raw OPEN command, an executed test vector, four observed bus bytes or a physical actuator interpretation.
+
+The source stores that string in a newly requested 72-byte local record. A candidate local helper assigns output metadata and copies two 16-byte source regions, a status word and the existing 64-bit ID into that record, then appends the same pointer to the caller's list. Unwritten fields are not declared initialized by this proof. The selected helper copies the ID and does not request a new one; this does not establish uniqueness, global ID origin or complete lifetime.
+
+On the selected normal callback return, temporary strings are released while the appended record is retained for the caller. Zero is the local return value, not delivery acknowledgment. Effective binding, allocation/formatting/list behavior, natural input provenance, other branches, later output handling and physical meaning remain unverified.
+
+The [run05 source and review capsule](../../project/review/firmware-analysis/f460-f461-run05-2026-11-01/README.md) preserves both original source paths, hashes, mappings, exact guards, selected spans, first copies and independent reviews. No original code, SQL, semantic model or physical command was executed.
+

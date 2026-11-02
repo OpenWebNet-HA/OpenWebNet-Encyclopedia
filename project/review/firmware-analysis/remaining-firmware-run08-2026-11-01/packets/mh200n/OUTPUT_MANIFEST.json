@@ -1,0 +1,21 @@
+{
+  "files": {
+    "ARGUMENT_FLOW.json": {
+      "bytes": 2374,
+      "sha256": "00229aa3c862525857c8a9fe514e58769f025f47c3e609d465de08af2e38f5d8"
+    },
+    "INPUTS.json": {
+      "bytes": 1083,
+      "sha256": "738cc67f38c62228acc646692950d3b4807b4b6ac8d31c1e61370ba1ae29508e"
+    },
+    "REPORT.md": {
+      "bytes": 6072,
+      "sha256": "378a0358a0ec443c907f7cc26cc7da6b985b816551bb2acb142b126293c915ba"
+    },
+    "SOURCE.json": {
+      "bytes": 10867,
+      "sha256": "7512c154892a4c6298fa5ff15c92cf0df6463d5f8316eec3b00ffd78119fdcde"
+    }
+  },
+  "scope": "Generated members excluding this manifest"
+}

@@ -1,0 +1,46 @@
+# Independent source review — MH202 COSO run14 automation STM
+
+**PASS; no material correction required.** This review independently compares the automation-specific descriptor, selected application/field callbacks, pending/query state, timer gate and core receipt construction with original MH202 bytes. I did not author this COSO batch. The review executes no original ARM/libc/parser/plugin/helper, timer, target process/OS, service/network/device or action. Its original/native/callback-execution additions are0; host source/state composition is not a runtime exchange.
+
+## Reproducibility and independent checks
+
+`python3 -B work/mh202-firmware/research/2026-10-30/coso/run14/collect_evidence.py --check` passes:21 outputs plus manifest,14 original spans,34 asserted words,2 originals,3 callback relocations,2 receipt literals and the1-request/3-field/1-hypothetical-timer ledgers. Saved outputs compare strictly as bytes; all21 manifest identities match current files.
+
+Separately, I read fresh originals through read-only ImageVFS, independently mapped VAs using ELF PT_LOAD entries, and verified all14 raw span hashes and34 instruction words. Fresh readelf independently confirms descriptor relocations `0xc4d8→0x1fb0`, `0xc4dc→0x1c0c`, `0xc4e0→0x2ec4` with their named callbacks. I inspected the original complete relevant retained branches, core receipt bodies and additional application prologue `0x2ec4..0x2f44`. Both original timeout-pointer pools `0x1f98` and the actual query-setup pool `0x38d0` independently resolve under PICbase `0xc3d4` to stripped local entry `0x390c`. No nearest-symbol label is used as its identity.
+
+The finite host result check independently verifies pending1/ID41 after the declared request, ACK/NACK clear states for matching IDs, unchanged pending/ID for mismatch42, forwarding effects for the supplied kind1 field, and unchanged state for the explicitly hypothetical query-inactive timeout entry. These are fixed source/effect comparisons; no original callback or field producer runs.
+
+## Source and namespace audit
+
+* The actual automation descriptor is64 bytes at `0xc4b4`; its WHO2 registration appends2 to **descriptor+52** before register_state_machine. This is separate from **context+52** receipt pending and **message+52** local field-status metadata. The report does not import lighting STM state numbers/layouts or equate these offset namespaces.
+* Original initialization requests `g_malloc0(60)` at `0x2e80..0x2e8c` only when descriptor+56 private storage is absent (`0x1ff4..0x1ffc`). Stores `0x2004/0x2008/0x200c` establish context+12 callback, +8 attach context and +0 descriptor from supplied arguments. Normal allocation/import/table/owner state is conditional, not observed startup.
+* Fresh application prologue loads record+0 into its parsed pointer and descriptor+56 into private context; no hidden initialization is supplied by the host model. Kind1 jump-table entry selects `0x3054`. Command-list WHAT matching and local parameter helper success are genuinely required, followed by address-list matching. The selected null parsed selector+20 takes `0x2fe8→0x301c`, avoiding the alternate where-type branch. The report supplies these as coherent post-parser/admission premises instead of inventing table contents or proving full configured acceptance.
+* The earlier low-WHAT admission route admits selected decimal0 into address matching. At `0x359c..0x35d0`, normal WHAT0 conversion followed by64-bit subtract1 underflows in the unsigned comparison, so the branch selects `0x361c`; it bypasses the extra formatted-prefix creation. `0x361c..0x3634` appends the original request to the actual supplied field-output list, then `0x3380..0x3390` saves record+60 and sets context+52=1/+56=ID. It returns0. This selected source route neither creates a timeout source nor writes query-active+28. Existing timer/prior state and broader outer eligibility remain separate.
+* The distinct kind3 query route at `0x339c` appends the request, optionally destroys a previous timer, requests timeout1000, configures callback `0x390c`, attaches using context+8 and stores query-active+28=1. Its later branch `0x349c→0x3380` joins the same receipt-pending/ID producer. This establishes two state axes, not a generic ordinary-command deadline or proof of elapsed scheduling.
+* Query-inactive field entry is selected by context+28==0 at `0x1c4c..0x1c54`. Original `0x1cb0..0x1cc8` requires pending nonzero and exact context+56/message+60 equality for the selected local receipt. Message+52 status1/2 selects queue_ACK/NACK calls `0x1f0c/0x1f30`; matching-ID paths then clear context+52 and set ID−1 at `0x1ce4/0x1cf0`. Other displayed status values still reach those clear stores. These local status inputs are not physical endpoint ACK/error meanings.
+* Mismatch instead branches directly to `0x1c80`. Its unsigned parsed-kind screen suppresses append for kinds2/3; selected kind1 sets record+8=3 and appends to the OPEN-output list. Thus this local forwarding need not imply ID-correlated receipt/clear. This is not a whole-manager admission, cross-request defect or delivery guarantee.
+* Original core `queue_nack_to_open 0x2a44` and ACK `0x2ad0` request zero64-byte allocation, timestamp, duplicate the exact `*#*0##`/`*#*1##` literals and append their new record. Type7/6 at+40, final representation2 at+56 and metadata+4=2/+8=4 are separate from incoming local status+52 and parsed kind1. The report correctly scopes these as unexecuted construction/import/list calls, not emitted frames or returned physical receipts.
+* Timeout `0x390c` does make logging/local-list setup requests before its query flag read; the host ledger's empty effects describe the selected pending/context effect, not absence of all source calls. With +28==0, `0x395c` returns without reading/clearing +52/+56. The ordinary route does not naturally schedule this hypothetical entry. Query-active callback/completion at `0x3984`, manager descriptor+60 and subsequent destruction/free stores are source delegates. Separate reset `0x1bac..0x1c0c` clears +4/+28/+32 and saved strings but not pending+52/ID+56 in that body. No universal context lifetime/reset/receipt policy follows.
+
+## Limits retained
+
+The report correctly leaves actual original raw parsing, configured command/parameter/address tables, outer STM eligibility/key/status/ID producers, owner callbacks/global provider binding, list/record lifetime, replacement/busy behavior, timer delivery/cancellation, TR/transport/publication and physical shutter behavior open. Selected source calls and normal-return premises are not promoted to original execution or actual causal request/response. No new native corpus is created and no original-execution totals change.
+
+## Exact reviewed identities
+
+Paths are research-root-relative unless they identify an original firmware image.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `coso/run14/REPORT.md` | `73fa582bb2d2f316200099498f3fa6b04e542595a5c78b1ef31829cceeef04e6` |
+| `coso/run14/collect_evidence.py` | `44eb6462730375ba32b448d9fd33c5fdfed23bede70d2ba156edf25e56c99578` |
+| `coso/run14/output-manifest.json` (21 entries) | `461337648fa58b3329901c93dc18359a972168cd9dc590ce1572041029feb63b` |
+| `coso/run14/input-hashes.json` | `b2d8f63f049dd177c19bc4fa487a3a1956441037caee7798f9f6cb7b98d1f00c` |
+| `coso/run14/original-spans.json` | `5aa5892fdc492269cf1faecdd104772cf27cb3de6ca058af80c53cd468831c43` |
+| `coso/run14/host-ordinary-request-field-ledger.json` | `5261ba652c7288de2ff22b61f92caa4453fd50c775cf807e39f18b5221a96888` |
+| `coso/run14/callback-descriptor-source.json` | `267d78bf167ae9a18749d9c86dd4fd0d2de72a749bb458be3f25ada7fdf3753a` |
+| `coso/run14/core-receipt-literals.json` | `f43dfdea660670d76afd9d49353e96f29e95d113c2b13521f5d20193a5c604f1` |
+| `/home/bticino/libcoso/libplug_automation_stm.so` | `0d8969f4623493fa8a054694a836d958b612e137fe34d89ba1d3ccade7ce43fb` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+
+The author output manifest excludes report/reviews; this file pins the report separately. Only this reviewer-owned file is written; author artifacts, earlier dossiers, synced sources and original images remain unchanged. No correction or broader runtime/physical claim is requested.

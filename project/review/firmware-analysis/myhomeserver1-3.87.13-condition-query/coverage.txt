@@ -1,0 +1,10 @@
+# Bounded coverage
+
+| Area | New source closure | Remaining premises |
+| --- | --- | --- |
+|Condition serializer|Own operator decoder, base emission, status/level branch, same JSON destination/reparse alias, temporary/final RTTI|Ordinary JsonCpp/string/signed/member assignment/errors and actual configured objects; no executed/universal roundtrip|
+|Local query|Initial ordinary lookup, nonnull pair return, selector0opaque handoff/conditional join, string-length mutex/CV dependency|Actual request/response producer, freshness/ID correlation/miss-record type, provider/clock/notify/error/owner/concurrency|
+
+Actual original execution0; semantic host cases0; complete runtime/physical observation0. No full-source/Device approval or coverage percentage. Prior BNLD predicate, BNIL event routing, serializer/lifetime/action dossiers remain inherited separate scopes; no repetition counted as native coverage. Configured extras80/81/94/95, positive shared reset, natural owner removal and effective providers remain open.
+
+Preservation: serializer v1 strict temporary/final-class assertion failed before outputs. Root retained exact3 existing files before exclusive v2. Later-transcribed terminal errors are labeled accordingly; no fabricated historical file hash. V2 independently asserts BOTH identities and preserves all v1 files. Query v1 first generation passed. Earlier MH202 run18/run21 unavailable intermediate histories remain explicitly unverified. Functional agent reviewer/read-only only. Originals/sources/synced/completed dossiers stay read-only.

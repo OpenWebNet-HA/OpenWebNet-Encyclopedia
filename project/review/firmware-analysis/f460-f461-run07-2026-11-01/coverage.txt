@@ -1,0 +1,9 @@
+# Run07 coverage and boundaries
+
+| Area | Selected source reach | Open boundary |
+| --- | --- | --- |
+| F460 receiver/worker | Actual272Ballocation/control RTTI/inner16 constructor→sameinitializer, numericgate/flags, rawstate+8/start/detach requests, statevtable→sameconditionrange and selectedsinglepredicate/low8true→f84d0 | Actualconstructed/retainedinstances, gate113producer/publicmeaning, thread/provider outcomes, owninglifetime/concurrency, concretecondition/rangeproducer/fullpolicy, nextmethod/actions/errors/unwind |
+| F461 HAL getter | ActualnormalHALalias/export/importmetadata, two puregetterbranches underopaqueboard22, compiletimeF461/134 strdup and suppliedoutputslot stores | hal_board body/result/installedboard, validwritableoutput/provider/canaryreturns, allocationnonnull/ownership, permittedactualconsumer/response/physicalidentity |
+| Scope stop | Uncertainbt_deviceconsumercontext was not qualified; caller/serialization body excluded before generation | No retry/workaround for closedauth/receiving/session/framing/transport; no absenceclaim about other consumers |
+
+F460:12 outputs/9 selected spans/39 guards/2 tableidentities/2 PIC joins/5 calls/7 imports/5 branchchecks/6 pins/14 firstcopies. F461:10 outputs/6 HALspans/29 guards/4 getterimportproofs/12 firstcopies. Counts are bounded reach/integrity, not coverage percentages or executed cases. All source is from verified normal-image views; recovery behavior is not transferred. New original/helper/native/emulator/thread/model/fixture/SQL/OS/process/service/network/bus/physical execution zero. Old MHS one-corpus/eight-entry/340-original-code-hook record and separateF454/MH202 ledgers unchanged. Full Device/source gates pending.

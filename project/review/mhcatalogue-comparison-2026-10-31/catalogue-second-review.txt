@@ -1,0 +1,33 @@
+# Second independent source review: complete catalogue comparison
+
+PASS for the frozen source-pair/data and commercial-correspondence claims. No required correction. This is a second source/host-data review, separate from the functional review. I authored the objects-area report, so its conclusions are source-aware context; I did not author this catalogue collector/report and independently compared original rows below. No vendor, firmware, CLR, expression, physical or network execution occurred.
+
+## Exact reviewed pins
+
+All paths in the table are relative to `catalogue/`.
+
+| Artifact | SHA-256 |
+| --- | --- |
+| `REPORT.md` | `4d34c288a3bc577cec4c4a758d54841a1af539026e2535136dc686e1bb003bd5` |
+| `compare_catalogues_v2.py` | `5f157e799e1e3d0153a4457dfc0b8e4e1f816b70477643f8ea167d0e5cb7c00e` |
+| `collect_supplement_v2.py` | `575b3f0f6cf4428d422d94c3ce2fed2ab95f0c9485a0e6a4a5b75fa5d1984299` |
+| `OUTPUT_MANIFEST.json` | `a16f55a178fec0298dc161ee1d43ac554175895bdd7b1d7feb1afbb80ce37fea` |
+| `SUPPLEMENT_MANIFEST.v2.json` | `b43bbc78574a24274d2ebe5bea695f16fc700434299e87f020b65b606cb0c66d` |
+| `DEVELOPMENT_HISTORY.json` | `b07ea6bcb15a4b803af09eadc70093662aa55e7f1dc500b2b1dc512abb0f3481` |
+| `SUPPLEMENT_PRECISION_HISTORY.json` | `c9575409e5052267dd1bc87139324f305a02b9a30e0262e92b67a76cfe2adca1` |
+
+## Checks and source agreement
+
+Unmodified `compare_catalogues_v2.py --check` reproduced14 outputs; `collect_supplement_v2.py --check` reproduced6. I inspected both source collectors, their read-only immutable SQLite connections/query_only/trusted_schema settings, explicit type tags, bag multiplicity, NULL-key audit, declared-key grouping and value-withholding policy. No stored expressions or dynamically loaded extensions are invoked.
+
+I independently opened the exact two original databases, asserted their saved SHA/byte identities and complete integrity/declared-FK checks, then compared all75 original tables as direct type-tagged Python Counter row bags, independently from the author's JSON digest comparison. Complete table counts,42 identical/33 differing partitions and all one-source row counts agree. I also grouped every actual declared primary key independently: zero duplicate key groups; only RIF_MH_COLLECTION_OBJECTS has NULL-bearing key rows, exactly1 per source. Only EN_CONF has changed complete rows under shared typed keys, exactly68. This is literal key census, not SQL NULL equality or presumed semantic ownership. The objects report's20/48 classification is a separate analysis rather than an inference from shared IDs here.
+
+Independent sqlite_master comparison finds146 shared objects with exact SQL/ownership equality and one firmware-only index EN_CONF_INDEX. All75 table definitions match; whole schemas do not. The report correctly distinguishes the nonunique/nonpartial two-column index declaration from an executed query-plan or performance result. Complete column type profiles and declared-FK output are query evidence, not validation of every application's intended join.
+
+For commercial correspondence, I independently checked all EN_DEVICE literal(code,id_brand,id_line) anchors: each is nonempty/unique;330 match and have identical complete device rows and matched item rows. Firmware-only1 and Suite-only211 commercial anchors agree. The retained brand/line row bags match. This supports this exact source pair, not case-folded general product matching, installed state or hardware equivalence. Product533/model103/Object39/system7/WHO remain different namespaces. Selected family omissions and the missing self/server/F454/MH202 contexts are kept as scoped source rows, not incompatibility or physical-interface verdicts.
+
+All17 indexed initial-generated-v2 copies,7 supplement-first-v1 copies and8 supplement-first-v2 copies matched their current corresponding bytes and stored hashes. Original v1 collector SHA matches DEVELOPMENT_HISTORY and its exact premature code-only copy. I inspected the v1 versus v2 treatment: v2 retains duplicate-key guards and audits observed NULLs without inventing SQL joins. The four query-result outputs of supplement v1 and v2 are byte-identical; only separately named method/manifest precision metadata differs. Historical omissions were not reconstructed or disguised as first successful data output. No author/source file changed during review.
+
+## Scope assessment
+
+The report's strongest result is complete structural/typed data comparison, with stronger commercial anchors and explicit source identities. Clean integrity/three declared-reference checks do not validate every inferred relationship; unchanged RIF/TMP rows are not newly captured installation data. The empty-text family and bus7 candidate-join exceptions remain literal unmatched values rather than declared constraint failures or demonstrated defects. Data-version/timestamp labels do not establish chronology. Arbitrary configuration/default/condition/state content is withheld, and full consumer intent, active routing, generated files, migration, frame acceptance and physical support remain unverified. These limits are appropriate for this source-only task.

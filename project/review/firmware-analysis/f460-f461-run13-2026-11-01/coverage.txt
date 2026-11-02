@@ -1,0 +1,10 @@
+# Run13 coverage and boundaries
+
+| Area | Selected original reach | Remaining boundary |
+| --- | --- | --- |
+| F460 profile gate | SamePlatform constructor/getter actualcalls; selectedfield48path; wholeworkingmode negative-stat/read/null/substring0/1/2; retainedresult→separateStatusMachine request | Constructor selector/selectedbranch/binding/validobjects/providers, actualenvcontents/activeprofile, next_stepbody/policy, compatibility/trust/install/physical |
+| F461 deadline gap | Actualdescriptor/initcaller; privateP112 atD88/GListP32 store; Q versusnestedparsed32string roles; twofunctiondirectstore-form boundedquery | NONZEROmessage32producer OPEN; alias/bulk/callee/otherfunction/plugin/globalwriters, naturalcallbacks/configuration/lifetime/physicalbehavior unclosed |
+
+F460:9 deterministic outputs, six spans,31 guards, nine import proofs, two literals, six pins and11 first copies. F461:11 outputs, eight spans,34 guards, six import proofs, two bounded function queries, six pins and13 first copies. F461authoritativeREPORT.v2/one-sentence refinement has separate exactfirstcopy; originalreport/canonicaloutputs remainunchanged. Counts are integrity/selectedreach, not coverage percentages or executed cases.
+
+Neworiginal/helper/native/provider/emulator/model/fixture/SQL/JSON/file/clock/service/OS/network/bus/physicalexecution zero. No environment/fullbootenv/keys/privateconfiguration/runtimevalues read/exported. EarlierMHS onecorpus/eightentries/340codehookvisits and separateF454/MH202 ledgers unchanged. FullDevice/source gatespending. Allclosed output/receiving/transport/auth/session/framing/MQTT/libjel/excludedcommand/process routes remainclosed.

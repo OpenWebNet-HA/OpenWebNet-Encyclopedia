@@ -1,0 +1,52 @@
+from pathlib import Path
+import json,hashlib,configparser,argparse
+O=Path(__file__).resolve().parent;W=next(p for p in O.parents if (p/'OpenWebNet-Encyclopedia').is_dir())
+def H(b):return hashlib.sha256(b).hexdigest()
+def J(x):return (json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+def build():
+ pins=[];assets=[];scopes=[]
+ def pin(p,role):
+  b=p.read_bytes();x={'path':str(p.relative_to(W)),'bytes':len(b),'sha256':H(b),'role':role};pins.append(x);return x
+ def checked(p,meta,role):
+  x=pin(p,role);assert x['bytes']==meta['size'] and x['sha256']==meta['sha256'];return x
+ plugin_names=['automation_stm','automation_tr','aux_stm','aux_tr','debug','scs_cmd']
+ for prod,version in [('f460','2.0.12'),('f461','2.0.11')]:
+  a=W/f'work/{prod}-firmware/{version}/analysis';manifests={}
+  for view in ['normal','recovery']:
+   p=a/f'{view}-regular-files.json';pin(p,'Immutable own extracted regular-file manifest, targeted path admission only');manifests[view]=json.loads(p.read_text())
+  for view,base in [('normal',a/'rootfs'),('recovery',a/'recovery')]:
+   m=manifests[view]
+   if prod=='f460':
+    rel='home/bticino/scheduling_manager/config.json';identity=checked(base/rel,m[rel],'Packaged scheduler settings, no configured scene content');data=json.loads((base/rel).read_text());assert isinstance(data,dict) and set(data)=={'logLevel','logFile','wdtEnabled','wdtTimeout','wdtFile','scenesPath'}
+    prefix=data['scenesPath'].lstrip('/').rstrip('/')+'/';assert prefix=='home/bticino/cfg/extra/0/scheduling_manager/'
+    matches=[n for n in m if n.startswith(prefix)];assert matches==[]
+    assets.append({'product':prod.upper(),'view':view,'identity':identity,'classification':'PACKAGED_MANAGER_SETTINGS_NOT_SCENE_EXPORT','top_level_key_types':{k:type(v).__name__ for k,v in data.items()},'whitelisted_source_selector':{'key':'scenesPath','prefix':prefix,'reason':'Compiled packaged asset location already retained in prior reviewed report, not a live private value'},'packaged_regular_files_under_own_declared_prefix':len(matches),'configured_scene_admitted':False})
+   rel='home/bticino/cfg/coso_cfg';identity=checked(base/rel,m[rel],'Packaged COSO settings; no active argv/cwd/config selection observed');parser=configparser.ConfigParser(interpolation=None);parser.optionxform=str;parser.read_string((base/rel).read_text());assets.append({'product':prod.upper(),'view':view,'identity':identity,'classification':'PACKAGED_MANAGER_DEFAULT_SETTINGS_NOT_ACTIVE_CONFIGURATION','group_keys':{g:sorted(parser[g]) for g in parser.sections()},'leaf_values_exported':False,'configured_instance_admitted':False})
+   expected={f'home/bticino/cfg/coso_plugins/{n}' for n in plugin_names};actual={n for n in m if n.startswith('home/bticino/cfg/coso_plugins/')};assert actual==expected
+   for name in plugin_names:
+    rel='home/bticino/cfg/coso_plugins/'+name;identity=checked(base/rel,m[rel],'Packaged plugin settings, no initialized instance or commissioned record');parser=configparser.ConfigParser(interpolation=None);parser.optionxform=str;parser.read_string((base/rel).read_text());keys={g:sorted(parser[g]) for g in parser.sections()};assets.append({'product':prod.upper(),'view':view,'identity':identity,'classification':'PACKAGED_PLUGIN_SETTINGS_NOT_COMMISSIONED_MODULE_EXPORT','plugin_file_label':name,'group_keys':keys,'leaf_values_exported':False,'natural_instance_or_input_record_admitted':False})
+   scopes.append({'product':prod.upper(),'view':view,'targeted_plugin_setting_paths':len(expected),'scope':'Exact retained coso_cfg/coso_plugins path set; no all-files semantic inventory, active-state inference or missing-resource reconstruction'})
+ for rel,role in [('work/f460-firmware/2.0.12/research/2026-11-01/first-pass/REPORT.md','Inherited packaged scene-prefix/configuration context, not new coverage'),('work/f461-firmware/2.0.11/research/2026-11-01/REPORT.md','Inherited product/packaged module context, not new coverage'),('work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/REPORT.md','Inherited selected SceneRunner caller/constructor edge; not replayed'),('work/f461-firmware/2.0.11/research/2026-11-01-run14-boot-selection/REPORT.md','Inherited local loader/initializer boundary, no provider/initializer expansion')]:pin(W/rel,role)
+ out={'INPUT_PINS.json':J(pins),'ASSET_ADMISSION.json':J({'status':'NO_COMMISSIONED_ASSET_ADMITTED_IN_TARGETED_RETAINED_SCOPE','classification':'ASSET_ADMISSION_ONLY_ZERO_NEW_FUNCTIONAL_SOURCE_COVERAGE','products':['F4602.0.12','F4612.0.11'],'scopes':scopes,'assets':assets,'actual_commissioned_export_admitted':False,'manufacturer_scene_example_admitted':False,'new_binary_body_source_coverage':0,'original_execution':0,'models_fixtures_SQL_target_IO':0,'limits':['F460 own selected scene-prefix count0 is inherited packaging scope, not runtime/global absence.','F461 selected plugin files are packaged settings, not deployed module records or proof of active settings.','Normal/recovery matching bytes do not establish same environment or installed overlay.','No private leaf values/full config, identities, credentials/keys are exported.','No provider/initializer/receiving/output/transport/auth/session/framing/MQTT/libjel/excluded bodies followed.'],'strongest_proposed_next_scope':{'product':'F4602.0.12','original_program':'home/bticino/scheduling_manager/scheduling_manager','known_SHA256':'5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62','inherited_positive_edge':'Original caller2cc20..2cc90 supplies same inner SceneRunner storage to105740, then initializerf94c0 under prior parse/success/source premises','new_question':'Qualify the preceding local parse-success gate and supplied source/configuration argument feeding2cc20, not repeat constructor/conditions/waits','proposed_boundary':'Only direct preceding local argument/admission slice; stop imported JSON/parser/provider semantics and any closed output/receiving/transport/auth path. Parent approval of concrete static span required before following.','not_performed':True}})}
+ out['REPORT.md']='''# F460/F461 configured-asset admission
+
+This is targeted asset admission, not new binary/source functional coverage. No actual commissioned scene/module export or manufacturer scene example is admitted by the selected retained paths. That is a finite scope result, not a global absence claim. No firmware/provider/helper/native/emulator/SQL/model/fixture/target process/network/bus/physical execution occurs.
+
+F4602.0.12 normal and recovery packaged scheduler settings contain six manager-setting keys (logging/watchdog/scenesPath), not raw scene objects. Their own whitelisted scenesPath selector points under cfg/extra/0/scheduling_manager. The respective retained regular-file manifests contain0 files below that exact prefix. This repeats an inherited packaging limit only for admission, not new semantic coverage, runtime absence or a reconstructed live extra partition. An empty configured resource cannot be replaced by a synthetic fixture or a schema.
+
+Both own products/views retain coso_cfg and exactly six selected coso_plugins setting files. Sanitized metadata exports group/key names only. Automation/aux/debug files carry logging settings; the selected SCS file carries logging/communication keys. These are ORIGINAL PACKAGED SETTINGS, not commissioned module instances, accepted records, active arguments/cwd/configuration, successful registration or actual initialized plugins. Even where selected normal/recovery or cross-product bytes match, environment, ownership, ABI and behavior are not transferred. F461 has no selected scheduler-config file at F460's exact path; this is not a global scenario-capability conclusion.
+
+The strongest concrete useful source proposal is F460's previous SceneRunner construction caller2cc20..2cc90. Its supplied source/parse-success admission is still a premise; a new direct preceding local argument/gate slice could narrow that premise without replaying constructor/trigger/condition tables. The binary's known own SHA5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62 and AArch64 layout must be reverified for a new packet. No preceding body is inspected here. Root must qualify/authorize that bounded static scope first. F461 loader/initializer argument facts are inherited; initializer/provider bodies and excluded routes are not reopened as proxies.
+
+INPUT_PINS retains own source path/hash/size and original-manifest agreement for selected assets plus inherited context reports. ASSET_ADMISSION preserves classification, sanitized structures, finite count scopes and a proposed next question. No full/private configuration, leaf values, credentials, keys or runtime identities are exported. All originals/synced/analysis/completed reports/firstcopies remain unchanged; no repository/remote/source-manifest writes. Reproduce python3 collect_admission_v1.py --check. Generation refuses overwrites and preserves exact immediate copies; no failed canonical generation or earlier draft/hash is claimed.
+'''.encode()
+ out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(Path(__file__).read_bytes()),'outputs':{n:{'bytes':len(v),'sha256':H(v)} for n,v in out.items()},'scope':'Targeted asset admission, zero new functional source coverage'});return out
+ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');args=ap.parse_args();out=build()
+if args.check:
+ for n,b in out.items():assert (O/n).read_bytes()==b,n
+else:
+ for n,b in out.items():(O/n).open('xb').write(b)
+ d=O/'first-candidate';d.mkdir();ix={}
+ for n,b in {Path(__file__).name:Path(__file__).read_bytes(),**out}.items():(d/n).open('xb').write(b);ix[n]={'bytes':len(b),'sha256':H(b)}
+ (d/'INDEX.json').open('xb').write(J({'files':ix}))
+print(json.dumps({'check':args.check,'outputs':len(out),'actual_commissioned_asset_admitted':False,'new_functional_source_coverage':0}))

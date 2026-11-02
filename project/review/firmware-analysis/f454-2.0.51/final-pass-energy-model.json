@@ -1,0 +1,1770 @@
+{
+  "method": "three selected finite host reconstructions; no original ARM/JS/framework/transport execution",
+  "producer_rules": "reuse corrected targeted-2 rows0x10/0x14: first two, middle replace three, terminal two/one",
+  "backend_rules": "string-copy schema from original selected mapper; prior independent complete mapper runs remain historical, no new full parser executed",
+  "physical_limit": "no physical production, expected stream length, month/year, units, validity or live loss/display defect claim",
+  "hourly10": {
+    "row": "0x10",
+    "dimension": "56",
+    "synthetic_header": "$18D2A102358A50100A",
+    "declared_data_record_count": 10,
+    "records": [
+      {
+        "identifier": 1,
+        "raw_candidate": "$18D2A10235A9020301",
+        "current_raw_three_bytes": [
+          2,
+          3,
+          1
+        ],
+        "emitted_payload": [
+          3,
+          1
+        ],
+        "parser_input_candidate": "*#18*51*56#10#2*1*3*1##",
+        "conditional_backend_event": {
+          "eventName": "getHourlyConsumptionValuesOldDevice",
+          "eventType": "getHourlyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "56#10#2",
+          "extraValues": "1*3*1",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 2,
+        "raw_candidate": "$18D2A10235A8020304",
+        "current_raw_three_bytes": [
+          2,
+          3,
+          4
+        ],
+        "emitted_payload": [
+          2,
+          3,
+          4
+        ],
+        "parser_input_candidate": "*#18*51*56#10#2*2*2*3*4##",
+        "conditional_backend_event": {
+          "eventName": "getHourlyConsumptionValuesOldDevice",
+          "eventType": "getHourlyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "56#10#2",
+          "extraValues": "2*2*3*4",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 3,
+        "raw_candidate": "$18D2A10235A7050607",
+        "current_raw_three_bytes": [
+          5,
+          6,
+          7
+        ],
+        "emitted_payload": [
+          5,
+          6,
+          7
+        ],
+        "parser_input_candidate": "*#18*51*56#10#2*3*5*6*7##",
+        "conditional_backend_event": {
+          "eventName": "getHourlyConsumptionValuesOldDevice",
+          "eventType": "getHourlyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "56#10#2",
+          "extraValues": "3*5*6*7",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 4,
+        "raw_candidate": "$18D2A10235A608090A",
+        "current_raw_three_bytes": [
+          8,
+          9,
+          10
+        ],
+        "emitted_payload": [
+          8,
+          9,
+          10
+        ],
+        "parser_input_candidate": "*#18*51*56#10#2*4*8*9*10##",
+        "conditional_backend_event": {
+          "eventName": "getHourlyConsumptionValuesOldDevice",
+          "eventType": "getHourlyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "56#10#2",
+          "extraValues": "4*8*9*10",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 5,
+        "raw_candidate": "$18D2A10235A50B0C0D",
+        "current_raw_three_bytes": [
+          11,
+          12,
+          13
+        ],
+        "emitted_payload": [
+          11,
+          12,
+          13
+        ],
+        "parser_input_candidate": "*#18*51*56#10#2*5*11*12*13##",
+        "conditional_backend_event": {
+          "eventName": "getHourlyConsumptionValuesOldDevice",
+          "eventType": "getHourlyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "56#10#2",
+          "extraValues": "5*11*12*13",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 6,
+        "raw_candidate": "$18D2A10235A40E0F10",
+        "current_raw_three_bytes": [
+          14,
+          15,
+          16
+        ],
+        "emitted_payload": [
+          14,
+          15,
+          16
+        ],
+        "parser_input_candidate": "*#18*51*56#10#2*6*14*15*16##",
+        "conditional_backend_event": {
+          "eventName": "getHourlyConsumptionValuesOldDevice",
+          "eventType": "getHourlyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "56#10#2",
+          "extraValues": "6*14*15*16",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 7,
+        "raw_candidate": "$18D2A10235A3111213",
+        "current_raw_three_bytes": [
+          17,
+          18,
+          19
+        ],
+        "emitted_payload": [
+          17,
+          18,
+          19
+        ],
+        "parser_input_candidate": "*#18*51*56#10#2*7*17*18*19##",
+        "conditional_backend_event": {
+          "eventName": "getHourlyConsumptionValuesOldDevice",
+          "eventType": "getHourlyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "56#10#2",
+          "extraValues": "7*17*18*19",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 8,
+        "raw_candidate": "$18D2A10235A2141516",
+        "current_raw_three_bytes": [
+          20,
+          21,
+          22
+        ],
+        "emitted_payload": [
+          20,
+          21,
+          22
+        ],
+        "parser_input_candidate": "*#18*51*56#10#2*8*20*21*22##",
+        "conditional_backend_event": {
+          "eventName": "getHourlyConsumptionValuesOldDevice",
+          "eventType": "getHourlyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "56#10#2",
+          "extraValues": "8*20*21*22",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 9,
+        "raw_candidate": "$18D2A10235A1171803",
+        "current_raw_three_bytes": [
+          23,
+          24,
+          3
+        ],
+        "emitted_payload": [
+          23,
+          24,
+          3
+        ],
+        "parser_input_candidate": "*#18*51*56#10#2*9*23*24*3##",
+        "conditional_backend_event": {
+          "eventName": "getHourlyConsumptionValuesOldDevice",
+          "eventType": "getHourlyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "56#10#2",
+          "extraValues": "9*23*24*3",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 10,
+        "raw_candidate": "$18D2A10235A0FF0400",
+        "current_raw_three_bytes": [
+          255,
+          4,
+          0
+        ],
+        "emitted_payload": [
+          255,
+          4
+        ],
+        "parser_input_candidate": "*#18*51*56#10#2*10*255*4##",
+        "conditional_backend_event": {
+          "eventName": "getHourlyConsumptionValuesOldDevice",
+          "eventType": "getHourlyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "56#10#2",
+          "extraValues": "10*255*4",
+          "who": "18"
+        },
+        "terminal": true
+      }
+    ],
+    "host_consumer": {
+      "precondition": "displayed day2/month10 match event; declared source order1..10; source initializes24 zeros; no year match exists in selected old handler",
+      "trace": [
+        {
+          "identifier": 1,
+          "source_array_writes": {
+            "0": 1
+          },
+          "totalizer_after": null
+        },
+        {
+          "identifier": 2,
+          "source_array_writes": {
+            "2": 2,
+            "3": 3,
+            "4": 4
+          },
+          "totalizer_after": null
+        },
+        {
+          "identifier": 3,
+          "source_array_writes": {
+            "5": 5,
+            "6": 6,
+            "7": 7
+          },
+          "totalizer_after": null
+        },
+        {
+          "identifier": 4,
+          "source_array_writes": {
+            "8": 8,
+            "9": 9,
+            "10": 10
+          },
+          "totalizer_after": null
+        },
+        {
+          "identifier": 5,
+          "source_array_writes": {
+            "11": 11,
+            "12": 12,
+            "13": 13
+          },
+          "totalizer_after": null
+        },
+        {
+          "identifier": 6,
+          "source_array_writes": {
+            "14": 14,
+            "15": 15,
+            "16": 16
+          },
+          "totalizer_after": null
+        },
+        {
+          "identifier": 7,
+          "source_array_writes": {
+            "17": 17,
+            "18": 18,
+            "19": 19
+          },
+          "totalizer_after": null
+        },
+        {
+          "identifier": 8,
+          "source_array_writes": {
+            "20": 20,
+            "21": 21,
+            "22": 22
+          },
+          "totalizer_after": null
+        },
+        {
+          "identifier": 9,
+          "source_array_writes": {
+            "23": 23,
+            "24": 24
+          },
+          "totalizer_after": 768
+        },
+        {
+          "identifier": 10,
+          "source_array_writes": {},
+          "totalizer_after": 772
+        }
+      ],
+      "totalizer": 772,
+      "initial_array_length": 24,
+      "final_array_length": 25,
+      "untouched_initial_indices": [
+        1
+      ],
+      "index1_state": "initial zero remains untouched, not a measured or normalized missing value",
+      "written_indices": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    }
+  },
+  "daily21": {
+    "row": "0x14",
+    "dimension": "510",
+    "synthetic_header": "$18D2A102359550140A",
+    "declared_data_record_count": 21,
+    "records": [
+      {
+        "identifier": 1,
+        "raw_candidate": "$18D2A10235B4000102",
+        "current_raw_three_bytes": [
+          0,
+          1,
+          2
+        ],
+        "emitted_payload": [
+          1,
+          2
+        ],
+        "parser_input_candidate": "*#18*51*510#10*1*1*2##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "1*1*2",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 2,
+        "raw_candidate": "$18D2A10235B3030405",
+        "current_raw_three_bytes": [
+          3,
+          4,
+          5
+        ],
+        "emitted_payload": [
+          3,
+          4,
+          5
+        ],
+        "parser_input_candidate": "*#18*51*510#10*2*3*4*5##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "2*3*4*5",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 3,
+        "raw_candidate": "$18D2A10235B2060708",
+        "current_raw_three_bytes": [
+          6,
+          7,
+          8
+        ],
+        "emitted_payload": [
+          6,
+          7,
+          8
+        ],
+        "parser_input_candidate": "*#18*51*510#10*3*6*7*8##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "3*6*7*8",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 4,
+        "raw_candidate": "$18D2A10235B1090A0B",
+        "current_raw_three_bytes": [
+          9,
+          10,
+          11
+        ],
+        "emitted_payload": [
+          9,
+          10,
+          11
+        ],
+        "parser_input_candidate": "*#18*51*510#10*4*9*10*11##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "4*9*10*11",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 5,
+        "raw_candidate": "$18D2A10235B00C0D0E",
+        "current_raw_three_bytes": [
+          12,
+          13,
+          14
+        ],
+        "emitted_payload": [
+          12,
+          13,
+          14
+        ],
+        "parser_input_candidate": "*#18*51*510#10*5*12*13*14##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "5*12*13*14",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 6,
+        "raw_candidate": "$18D2A10235AF0F1011",
+        "current_raw_three_bytes": [
+          15,
+          16,
+          17
+        ],
+        "emitted_payload": [
+          15,
+          16,
+          17
+        ],
+        "parser_input_candidate": "*#18*51*510#10*6*15*16*17##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "6*15*16*17",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 7,
+        "raw_candidate": "$18D2A10235AE121314",
+        "current_raw_three_bytes": [
+          18,
+          19,
+          20
+        ],
+        "emitted_payload": [
+          18,
+          19,
+          20
+        ],
+        "parser_input_candidate": "*#18*51*510#10*7*18*19*20##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "7*18*19*20",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 8,
+        "raw_candidate": "$18D2A10235AD151617",
+        "current_raw_three_bytes": [
+          21,
+          22,
+          23
+        ],
+        "emitted_payload": [
+          21,
+          22,
+          23
+        ],
+        "parser_input_candidate": "*#18*51*510#10*8*21*22*23##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "8*21*22*23",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 9,
+        "raw_candidate": "$18D2A10235AC18191A",
+        "current_raw_three_bytes": [
+          24,
+          25,
+          26
+        ],
+        "emitted_payload": [
+          24,
+          25,
+          26
+        ],
+        "parser_input_candidate": "*#18*51*510#10*9*24*25*26##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "9*24*25*26",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 10,
+        "raw_candidate": "$18D2A10235AB1B1C1D",
+        "current_raw_three_bytes": [
+          27,
+          28,
+          29
+        ],
+        "emitted_payload": [
+          27,
+          28,
+          29
+        ],
+        "parser_input_candidate": "*#18*51*510#10*10*27*28*29##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "10*27*28*29",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 11,
+        "raw_candidate": "$18D2A10235AA1E1F20",
+        "current_raw_three_bytes": [
+          30,
+          31,
+          32
+        ],
+        "emitted_payload": [
+          30,
+          31,
+          32
+        ],
+        "parser_input_candidate": "*#18*51*510#10*11*30*31*32##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "11*30*31*32",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 12,
+        "raw_candidate": "$18D2A10235A9212223",
+        "current_raw_three_bytes": [
+          33,
+          34,
+          35
+        ],
+        "emitted_payload": [
+          33,
+          34,
+          35
+        ],
+        "parser_input_candidate": "*#18*51*510#10*12*33*34*35##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "12*33*34*35",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 13,
+        "raw_candidate": "$18D2A10235A8242526",
+        "current_raw_three_bytes": [
+          36,
+          37,
+          38
+        ],
+        "emitted_payload": [
+          36,
+          37,
+          38
+        ],
+        "parser_input_candidate": "*#18*51*510#10*13*36*37*38##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "13*36*37*38",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 14,
+        "raw_candidate": "$18D2A10235A7272829",
+        "current_raw_three_bytes": [
+          39,
+          40,
+          41
+        ],
+        "emitted_payload": [
+          39,
+          40,
+          41
+        ],
+        "parser_input_candidate": "*#18*51*510#10*14*39*40*41##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "14*39*40*41",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 15,
+        "raw_candidate": "$18D2A10235A62A2B2C",
+        "current_raw_three_bytes": [
+          42,
+          43,
+          44
+        ],
+        "emitted_payload": [
+          42,
+          43,
+          44
+        ],
+        "parser_input_candidate": "*#18*51*510#10*15*42*43*44##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "15*42*43*44",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 16,
+        "raw_candidate": "$18D2A10235A52D2E2F",
+        "current_raw_three_bytes": [
+          45,
+          46,
+          47
+        ],
+        "emitted_payload": [
+          45,
+          46,
+          47
+        ],
+        "parser_input_candidate": "*#18*51*510#10*16*45*46*47##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "16*45*46*47",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 17,
+        "raw_candidate": "$18D2A10235A4303132",
+        "current_raw_three_bytes": [
+          48,
+          49,
+          50
+        ],
+        "emitted_payload": [
+          48,
+          49,
+          50
+        ],
+        "parser_input_candidate": "*#18*51*510#10*17*48*49*50##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "17*48*49*50",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 18,
+        "raw_candidate": "$18D2A10235A3333435",
+        "current_raw_three_bytes": [
+          51,
+          52,
+          53
+        ],
+        "emitted_payload": [
+          51,
+          52,
+          53
+        ],
+        "parser_input_candidate": "*#18*51*510#10*18*51*52*53##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "18*51*52*53",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 19,
+        "raw_candidate": "$18D2A10235A2363738",
+        "current_raw_three_bytes": [
+          54,
+          55,
+          56
+        ],
+        "emitted_payload": [
+          54,
+          55,
+          56
+        ],
+        "parser_input_candidate": "*#18*51*510#10*19*54*55*56##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "19*54*55*56",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 20,
+        "raw_candidate": "$18D2A10235A1393A3B",
+        "current_raw_three_bytes": [
+          57,
+          58,
+          59
+        ],
+        "emitted_payload": [
+          57,
+          58,
+          59
+        ],
+        "parser_input_candidate": "*#18*51*510#10*20*57*58*59##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "20*57*58*59",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 21,
+        "raw_candidate": "$18D2A10235A03C3D3E",
+        "current_raw_three_bytes": [
+          60,
+          61,
+          62
+        ],
+        "emitted_payload": [
+          60
+        ],
+        "parser_input_candidate": "*#18*51*510#10*21*60##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "21*60",
+          "who": "18"
+        },
+        "terminal": true
+      }
+    ],
+    "host_consumer": {
+      "precondition": "model-displayed day_format month10 equals event; source initial31 zeros; strict event order; no year gate; count is hypothetical, not actual month-dependent device length",
+      "trace": [
+        {
+          "identifier": 1,
+          "source_case_present": true,
+          "source_array_writes": {
+            "0": 258
+          }
+        },
+        {
+          "identifier": 2,
+          "source_case_present": true,
+          "source_array_writes": {
+            "1": 772,
+            "2": 1280
+          }
+        },
+        {
+          "identifier": 3,
+          "source_case_present": true,
+          "source_array_writes": {
+            "2": 1286,
+            "3": 1800
+          }
+        },
+        {
+          "identifier": 4,
+          "source_case_present": true,
+          "source_array_writes": {
+            "4": 2314,
+            "5": 2816
+          }
+        },
+        {
+          "identifier": 5,
+          "source_case_present": true,
+          "source_array_writes": {
+            "5": 2828,
+            "6": 3342
+          }
+        },
+        {
+          "identifier": 6,
+          "source_case_present": true,
+          "source_array_writes": {
+            "7": 3856,
+            "8": 4352
+          }
+        },
+        {
+          "identifier": 7,
+          "source_case_present": true,
+          "source_array_writes": {
+            "8": 4370,
+            "9": 4884
+          }
+        },
+        {
+          "identifier": 8,
+          "source_case_present": true,
+          "source_array_writes": {
+            "10": 5398,
+            "11": 5888
+          }
+        },
+        {
+          "identifier": 9,
+          "source_case_present": true,
+          "source_array_writes": {
+            "11": 5912,
+            "12": 6426
+          }
+        },
+        {
+          "identifier": 10,
+          "source_case_present": true,
+          "source_array_writes": {
+            "13": 6940,
+            "14": 7424
+          }
+        },
+        {
+          "identifier": 11,
+          "source_case_present": true,
+          "source_array_writes": {
+            "14": 7454,
+            "15": 7968
+          }
+        },
+        {
+          "identifier": 12,
+          "source_case_present": true,
+          "source_array_writes": {
+            "16": 8482,
+            "17": 8960
+          }
+        },
+        {
+          "identifier": 13,
+          "source_case_present": true,
+          "source_array_writes": {
+            "17": 8996,
+            "18": 9510
+          }
+        },
+        {
+          "identifier": 14,
+          "source_case_present": true,
+          "source_array_writes": {
+            "19": 10024,
+            "20": 10496
+          }
+        },
+        {
+          "identifier": 15,
+          "source_case_present": true,
+          "source_array_writes": {
+            "20": 10538,
+            "21": 11052
+          }
+        },
+        {
+          "identifier": 16,
+          "source_case_present": true,
+          "source_array_writes": {
+            "22": 11566,
+            "23": 12032
+          }
+        },
+        {
+          "identifier": 17,
+          "source_case_present": true,
+          "source_array_writes": {
+            "23": 12080,
+            "24": 12594
+          }
+        },
+        {
+          "identifier": 18,
+          "source_case_present": true,
+          "source_array_writes": {
+            "25": 13108,
+            "26": 13568
+          }
+        },
+        {
+          "identifier": 19,
+          "source_case_present": true,
+          "source_array_writes": {
+            "26": 13622,
+            "27": 14136
+          }
+        },
+        {
+          "identifier": 20,
+          "source_case_present": true,
+          "source_array_writes": {
+            "28": 14650,
+            "29": 15104
+          }
+        },
+        {
+          "identifier": 21,
+          "source_case_present": true,
+          "source_array_writes": {
+            "29": 15164,
+            "30": "NaN"
+          }
+        }
+      ],
+      "day30_index29": 15164,
+      "day31_index30": "NaN",
+      "NaN_representation": "string marker for source Number(undefined)/nonfinite arithmetic; not wire JSON or executed JS"
+    }
+  },
+  "daily22": {
+    "row": "0x14",
+    "dimension": "510",
+    "synthetic_header": "$18D2A102359650140A",
+    "declared_data_record_count": 22,
+    "records": [
+      {
+        "identifier": 1,
+        "raw_candidate": "$18D2A10235B5000102",
+        "current_raw_three_bytes": [
+          0,
+          1,
+          2
+        ],
+        "emitted_payload": [
+          1,
+          2
+        ],
+        "parser_input_candidate": "*#18*51*510#10*1*1*2##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "1*1*2",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 2,
+        "raw_candidate": "$18D2A10235B4030405",
+        "current_raw_three_bytes": [
+          3,
+          4,
+          5
+        ],
+        "emitted_payload": [
+          3,
+          4,
+          5
+        ],
+        "parser_input_candidate": "*#18*51*510#10*2*3*4*5##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "2*3*4*5",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 3,
+        "raw_candidate": "$18D2A10235B3060708",
+        "current_raw_three_bytes": [
+          6,
+          7,
+          8
+        ],
+        "emitted_payload": [
+          6,
+          7,
+          8
+        ],
+        "parser_input_candidate": "*#18*51*510#10*3*6*7*8##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "3*6*7*8",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 4,
+        "raw_candidate": "$18D2A10235B2090A0B",
+        "current_raw_three_bytes": [
+          9,
+          10,
+          11
+        ],
+        "emitted_payload": [
+          9,
+          10,
+          11
+        ],
+        "parser_input_candidate": "*#18*51*510#10*4*9*10*11##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "4*9*10*11",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 5,
+        "raw_candidate": "$18D2A10235B10C0D0E",
+        "current_raw_three_bytes": [
+          12,
+          13,
+          14
+        ],
+        "emitted_payload": [
+          12,
+          13,
+          14
+        ],
+        "parser_input_candidate": "*#18*51*510#10*5*12*13*14##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "5*12*13*14",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 6,
+        "raw_candidate": "$18D2A10235B00F1011",
+        "current_raw_three_bytes": [
+          15,
+          16,
+          17
+        ],
+        "emitted_payload": [
+          15,
+          16,
+          17
+        ],
+        "parser_input_candidate": "*#18*51*510#10*6*15*16*17##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "6*15*16*17",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 7,
+        "raw_candidate": "$18D2A10235AF121314",
+        "current_raw_three_bytes": [
+          18,
+          19,
+          20
+        ],
+        "emitted_payload": [
+          18,
+          19,
+          20
+        ],
+        "parser_input_candidate": "*#18*51*510#10*7*18*19*20##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "7*18*19*20",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 8,
+        "raw_candidate": "$18D2A10235AE151617",
+        "current_raw_three_bytes": [
+          21,
+          22,
+          23
+        ],
+        "emitted_payload": [
+          21,
+          22,
+          23
+        ],
+        "parser_input_candidate": "*#18*51*510#10*8*21*22*23##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "8*21*22*23",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 9,
+        "raw_candidate": "$18D2A10235AD18191A",
+        "current_raw_three_bytes": [
+          24,
+          25,
+          26
+        ],
+        "emitted_payload": [
+          24,
+          25,
+          26
+        ],
+        "parser_input_candidate": "*#18*51*510#10*9*24*25*26##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "9*24*25*26",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 10,
+        "raw_candidate": "$18D2A10235AC1B1C1D",
+        "current_raw_three_bytes": [
+          27,
+          28,
+          29
+        ],
+        "emitted_payload": [
+          27,
+          28,
+          29
+        ],
+        "parser_input_candidate": "*#18*51*510#10*10*27*28*29##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "10*27*28*29",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 11,
+        "raw_candidate": "$18D2A10235AB1E1F20",
+        "current_raw_three_bytes": [
+          30,
+          31,
+          32
+        ],
+        "emitted_payload": [
+          30,
+          31,
+          32
+        ],
+        "parser_input_candidate": "*#18*51*510#10*11*30*31*32##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "11*30*31*32",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 12,
+        "raw_candidate": "$18D2A10235AA212223",
+        "current_raw_three_bytes": [
+          33,
+          34,
+          35
+        ],
+        "emitted_payload": [
+          33,
+          34,
+          35
+        ],
+        "parser_input_candidate": "*#18*51*510#10*12*33*34*35##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "12*33*34*35",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 13,
+        "raw_candidate": "$18D2A10235A9242526",
+        "current_raw_three_bytes": [
+          36,
+          37,
+          38
+        ],
+        "emitted_payload": [
+          36,
+          37,
+          38
+        ],
+        "parser_input_candidate": "*#18*51*510#10*13*36*37*38##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "13*36*37*38",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 14,
+        "raw_candidate": "$18D2A10235A8272829",
+        "current_raw_three_bytes": [
+          39,
+          40,
+          41
+        ],
+        "emitted_payload": [
+          39,
+          40,
+          41
+        ],
+        "parser_input_candidate": "*#18*51*510#10*14*39*40*41##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "14*39*40*41",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 15,
+        "raw_candidate": "$18D2A10235A72A2B2C",
+        "current_raw_three_bytes": [
+          42,
+          43,
+          44
+        ],
+        "emitted_payload": [
+          42,
+          43,
+          44
+        ],
+        "parser_input_candidate": "*#18*51*510#10*15*42*43*44##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "15*42*43*44",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 16,
+        "raw_candidate": "$18D2A10235A62D2E2F",
+        "current_raw_three_bytes": [
+          45,
+          46,
+          47
+        ],
+        "emitted_payload": [
+          45,
+          46,
+          47
+        ],
+        "parser_input_candidate": "*#18*51*510#10*16*45*46*47##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "16*45*46*47",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 17,
+        "raw_candidate": "$18D2A10235A5303132",
+        "current_raw_three_bytes": [
+          48,
+          49,
+          50
+        ],
+        "emitted_payload": [
+          48,
+          49,
+          50
+        ],
+        "parser_input_candidate": "*#18*51*510#10*17*48*49*50##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "17*48*49*50",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 18,
+        "raw_candidate": "$18D2A10235A4333435",
+        "current_raw_three_bytes": [
+          51,
+          52,
+          53
+        ],
+        "emitted_payload": [
+          51,
+          52,
+          53
+        ],
+        "parser_input_candidate": "*#18*51*510#10*18*51*52*53##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "18*51*52*53",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 19,
+        "raw_candidate": "$18D2A10235A3363738",
+        "current_raw_three_bytes": [
+          54,
+          55,
+          56
+        ],
+        "emitted_payload": [
+          54,
+          55,
+          56
+        ],
+        "parser_input_candidate": "*#18*51*510#10*19*54*55*56##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "19*54*55*56",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 20,
+        "raw_candidate": "$18D2A10235A2393A3B",
+        "current_raw_three_bytes": [
+          57,
+          58,
+          59
+        ],
+        "emitted_payload": [
+          57,
+          58,
+          59
+        ],
+        "parser_input_candidate": "*#18*51*510#10*20*57*58*59##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "20*57*58*59",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 21,
+        "raw_candidate": "$18D2A10235A13C3D3E",
+        "current_raw_three_bytes": [
+          60,
+          61,
+          62
+        ],
+        "emitted_payload": [
+          60,
+          61,
+          62
+        ],
+        "parser_input_candidate": "*#18*51*510#10*21*60*61*62##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "21*60*61*62",
+          "who": "18"
+        },
+        "terminal": false
+      },
+      {
+        "identifier": 22,
+        "raw_candidate": "$18D2A10235A03F4041",
+        "current_raw_three_bytes": [
+          63,
+          64,
+          65
+        ],
+        "emitted_payload": [
+          63
+        ],
+        "parser_input_candidate": "*#18*51*510#10*22*63##",
+        "conditional_backend_event": {
+          "eventName": "getDailyConsumptionValuesOldDevice",
+          "eventType": "getDailyConsumptionValuesOldDevice",
+          "where": "51",
+          "date": "510#10",
+          "extraValues": "22*63",
+          "who": "18"
+        },
+        "terminal": true
+      }
+    ],
+    "host_consumer": {
+      "precondition": "model-displayed day_format month10 equals event; source initial31 zeros; strict event order; no year gate; count is hypothetical, not actual month-dependent device length",
+      "trace": [
+        {
+          "identifier": 1,
+          "source_case_present": true,
+          "source_array_writes": {
+            "0": 258
+          }
+        },
+        {
+          "identifier": 2,
+          "source_case_present": true,
+          "source_array_writes": {
+            "1": 772,
+            "2": 1280
+          }
+        },
+        {
+          "identifier": 3,
+          "source_case_present": true,
+          "source_array_writes": {
+            "2": 1286,
+            "3": 1800
+          }
+        },
+        {
+          "identifier": 4,
+          "source_case_present": true,
+          "source_array_writes": {
+            "4": 2314,
+            "5": 2816
+          }
+        },
+        {
+          "identifier": 5,
+          "source_case_present": true,
+          "source_array_writes": {
+            "5": 2828,
+            "6": 3342
+          }
+        },
+        {
+          "identifier": 6,
+          "source_case_present": true,
+          "source_array_writes": {
+            "7": 3856,
+            "8": 4352
+          }
+        },
+        {
+          "identifier": 7,
+          "source_case_present": true,
+          "source_array_writes": {
+            "8": 4370,
+            "9": 4884
+          }
+        },
+        {
+          "identifier": 8,
+          "source_case_present": true,
+          "source_array_writes": {
+            "10": 5398,
+            "11": 5888
+          }
+        },
+        {
+          "identifier": 9,
+          "source_case_present": true,
+          "source_array_writes": {
+            "11": 5912,
+            "12": 6426
+          }
+        },
+        {
+          "identifier": 10,
+          "source_case_present": true,
+          "source_array_writes": {
+            "13": 6940,
+            "14": 7424
+          }
+        },
+        {
+          "identifier": 11,
+          "source_case_present": true,
+          "source_array_writes": {
+            "14": 7454,
+            "15": 7968
+          }
+        },
+        {
+          "identifier": 12,
+          "source_case_present": true,
+          "source_array_writes": {
+            "16": 8482,
+            "17": 8960
+          }
+        },
+        {
+          "identifier": 13,
+          "source_case_present": true,
+          "source_array_writes": {
+            "17": 8996,
+            "18": 9510
+          }
+        },
+        {
+          "identifier": 14,
+          "source_case_present": true,
+          "source_array_writes": {
+            "19": 10024,
+            "20": 10496
+          }
+        },
+        {
+          "identifier": 15,
+          "source_case_present": true,
+          "source_array_writes": {
+            "20": 10538,
+            "21": 11052
+          }
+        },
+        {
+          "identifier": 16,
+          "source_case_present": true,
+          "source_array_writes": {
+            "22": 11566,
+            "23": 12032
+          }
+        },
+        {
+          "identifier": 17,
+          "source_case_present": true,
+          "source_array_writes": {
+            "23": 12080,
+            "24": 12594
+          }
+        },
+        {
+          "identifier": 18,
+          "source_case_present": true,
+          "source_array_writes": {
+            "25": 13108,
+            "26": 13568
+          }
+        },
+        {
+          "identifier": 19,
+          "source_case_present": true,
+          "source_array_writes": {
+            "26": 13622,
+            "27": 14136
+          }
+        },
+        {
+          "identifier": 20,
+          "source_case_present": true,
+          "source_array_writes": {
+            "28": 14650,
+            "29": 15104
+          }
+        },
+        {
+          "identifier": 21,
+          "source_case_present": true,
+          "source_array_writes": {
+            "29": 15164,
+            "30": 15678
+          }
+        },
+        {
+          "identifier": 22,
+          "source_case_present": false,
+          "source_array_writes": {}
+        }
+      ],
+      "day30_index29": 15164,
+      "day31_index30": 15678,
+      "NaN_representation": "string marker for source Number(undefined)/nonfinite arithmetic; not wire JSON or executed JS"
+    }
+  }
+}

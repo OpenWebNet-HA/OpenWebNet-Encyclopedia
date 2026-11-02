@@ -1,0 +1,41 @@
+# Run03 dual-analysis documentary integration review
+
+PASS, no correction requested. I compared the exact current public page, landing insertion, capsule, coverage/synthesis/ranking and API-context record against both frozen author reports and their completed independent original-source reviews. This is bounded documentary/product/method review, informed by my earlier structural comparison and source-path documentary audits. It is not a new original-byte audit, full semantic verification or native replay. I ran no collector, original/vendor/provider code, model/fixture, clock, OS/service or network/bus/physical operation.
+
+F460 units are now supported conditionally by actual original two-64-bit request stores and the ordinary Linux LP64 nanosleep API contract, not SLEEP/seconds spelling alone. HOST headers and the pinned tagged Linux man-page note are explicitly semantic context, not original target headers, a proof of installed binding or measured elapsed time. Same request/remaining storage, zero bypass, numeric return-minus-one/errno-four retry and the packaged candidate wrapper remain normal object/provider/TLS/ABI premises. Other errors can return normally; the separate selected common-caller marker follows fresh post-return operational-state checks and does not certify a successful or elapsed wait, complete scene or worker completion. Fresh AArch64 action offsets are not older MHS fields.
+
+F461 composition correctly requires the same initialized manager, valid field/translation descriptor lists and ordinary providers. First-owner/getter behavior is not proof that a particular startup allocation wins. Direction words, criterion-node data, message fields, field descriptor identity and translator callback slot remain distinct namespaces. The selected symbolic automation case is source reasoning, not an injected fixture, natural received event or public WHO2 contract. The same-message/output-slot/same-descriptor callback arguments and subsequent return handling close a local source edge without global first-match exclusivity, successful output or physical acknowledgement. Clock comparison, field registration, natural parsed/message producers, complete decimal grammar and actual output remain open.
+
+The page preserves F460 Home + Control versus F461 third-party-integration roles and does not transfer features, layouts or physical meaning through shared catalogue/platform/names. Effective binding, valid/configured objects, full JSON, timing/error/lifetime/unwind/concurrency and runtime/physical behavior remain unproved. Closed receiving/transport/MQTT/libjel/auth/session/framing routes remain closed. All new original/native/emulator/model/fixture/target execution is zero; prior MHS one-corpus/eight-entry/340-code-hook-visit experiment and F454/MH202 ledgers/history limits remain separate and unchanged. Wider Device/source gates remain pending.
+
+## Exact copies, history and completion boundary
+
+Verified all14 current document pins and frozen copies, all43 SOURCE_EXPORTS source/export pairs and four author/reviewer first-copy sets containing39 members. The public page equals REFERENCE_DRAFT and its first copy; the capsule README equals its first copy. The retained pre-edit landing and single DOCUMENT_PATCH insertion reconstruct the current landing byte-for-byte. The new source reports retain their successful immutable first generations; the libc separate-debug warning and reviewer versioned-symbol expectation correction are disclosed tooling observations, not firmware failures or source-output edits. Earlier versioned failures and unavailable MH20218/21 intermediate histories are not retroactively authenticated.
+
+Checked44 local Markdown link occurrences in actual document contexts and two fragments. All42 existing targets and both fragments resolve. Only intended later capsule integration-review.txt and validation.json remain pending actual assembly. Final protection/identity, strict ESG/ECV/diff, current branch/status and index-last checkpoint checks remain parent-owned subsequent gates against actual saved artifacts. This review pre-certifies no future bytes, placeholder or missing-link exemption. No author/repository/source/previous dossier was edited.
+
+## Exact current pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md` | `6df016d9d20c97cd01f43b31b0587d27e935ee9fe09ed4ecc2117a27bd12904f` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md` | `33a04d33f248a91c67de7a70e25ec2a54766b793b813efddafe40cde14fc17c0` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run03-2026-11-01/README.md` | `c08494d76762ccfeb4d81f5bf548c4b9e1633cf29a97f6a5911e994b0bc27ca3` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run03-2026-11-01/SOURCE_EXPORTS.json` | `455ec52700a26cfb7f196aec2c528ad2e994ce2ee4e14aa8447d3077d558e3d9` |
+| `work/f460-f461-comparison/2026-11-01-run03/REFERENCE_DRAFT.md` | `6df016d9d20c97cd01f43b31b0587d27e935ee9fe09ed4ecc2117a27bd12904f` |
+| `work/f460-f461-comparison/2026-11-01-run03/CAPSULE_README.first.md` | `c08494d76762ccfeb4d81f5bf548c4b9e1633cf29a97f6a5911e994b0bc27ca3` |
+| `work/f460-f461-comparison/2026-11-01-run03/COVERAGE.md` | `46916b50062da114cad89993904a69e23eb73e450b386125e3c5ceea7112d796` |
+| `work/f460-f461-comparison/2026-11-01-run03/SYNTHESIS.md` | `3d1afdd4b6845015da43e4280c758aa2ab36d2b45ee7e76c51dfd8955dd3644d` |
+| `work/f460-f461-comparison/2026-11-01-run03/RANKED_REMAINING_QUESTIONS.md` | `a3bae087df0fdf500c29dd1ca18a8d96ef5ca3c6bd566ceb88ceb589bff51deb` |
+| `work/f460-f461-comparison/2026-11-01-run03/SOURCE_CHECKS.json` | `232075a42983bddd7256e26ee7847b6b11ff01deb870f4aa881198f0f6a45b03` |
+| `work/f460-f461-comparison/2026-11-01-run03/API_CONTEXT.json` | `b75b754c30d156502255e5ae7d54b2df1f27005e88765df2e0633aa559889a3e` |
+| `work/f460-f461-comparison/2026-11-01-run03/integration/DOCUMENT_PATCH.json` | `708766539a9090e970e03c1b0746ceaeb967ebf2d012aca41ce1c957a6551821` |
+| `work/f460-f461-comparison/2026-11-01-run03/reviews/f460-source-review.md` | `9fb28914733382eadb8b1021084dffeba11822cf2f34ebed37a325d2b58bc6ee` |
+| `work/f460-f461-comparison/2026-11-01-run03/reviews/f461-source-review.md` | `74ead3147ceade81adb9a1c76806caaaed1cb338eec47d6332e8ba480760407c` |
+| `review-candidate/INDEX.json` | `e7985a6d2f03a406ca111584104a23a4d25b0ce508d2cf7634b92d25f3e3c00a` |
+| `PLAN.json` | `0d9472c1657747f40a203a325d9f9a6b209285c47cacce9b6db4dcf3b082332c` |
+| `PRIOR_PROTECTION.json` | `b976b3f8d4b0776542475a2f641e6ce964b5f8b98c40a16589b476c815301c6c` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run03-sleep-invoker/REPORT.md` | `ee7c55b26c5587121bdd27347e602d7cc9f5c3105a407d68f84294c19949d521` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run03-sleep-invoker/collect_sleep_v1.py` | `2aa19f62d551f01efff27004fb822c76042f3e8a8a17f748cd92f5adad9c7478` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/REPORT.md` | `a89d70211c3f6eecb92f620d9e1aecdc52c2c1a06dbff99cdcc89b139b0f6c19` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/collect_dispatch_v1.py` | `2b856f965333e23066d83d82f8a1ae7d77fa969e7a66c3dbd658f09393d1b627` |

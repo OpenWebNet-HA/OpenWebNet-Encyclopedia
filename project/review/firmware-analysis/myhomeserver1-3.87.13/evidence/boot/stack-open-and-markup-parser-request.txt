@@ -1,0 +1,68 @@
+
+/home/bticino/bin/bt_daemon:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00013e88 <harvest_str_shielded@@Base+0xaea0>:
+   13e88:	2340      	movs	r3, #64	@ 0x40
+   13e8a:	e92d 43f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, lr}
+   13e8e:	620b      	str	r3, [r1, #32]
+   13e90:	f44f 7380 	mov.w	r3, #256	@ 0x100
+   13e94:	2601      	movs	r6, #1
+   13e96:	2500      	movs	r5, #0
+   13e98:	f8a1 3060 	strh.w	r3, [r1, #96]	@ 0x60
+   13e9c:	2308      	movs	r3, #8
+   13e9e:	f8c1 311c 	str.w	r3, [r1, #284]	@ 0x11c
+   13ea2:	460c      	mov	r4, r1
+   13ea4:	f881 602d 	strb.w	r6, [r1, #45]	@ 0x2d
+   13ea8:	f44f 5280 	mov.w	r2, #4096	@ 0x1000
+   13eac:	e9c1 6606 	strd	r6, r6, [r1, #24]
+   13eb0:	b083      	sub	sp, #12
+   13eb2:	614e      	str	r6, [r1, #20]
+   13eb4:	f2c0 0210 	movt	r2, #16
+   13eb8:	e9c1 6610 	strd	r6, r6, [r1, #64]	@ 0x40
+   13ebc:	e9c1 5612 	strd	r5, r6, [r1, #72]	@ 0x48
+   13ec0:	e9c1 6514 	strd	r6, r5, [r1, #80]	@ 0x50
+   13ec4:	e9c1 6516 	strd	r6, r5, [r1, #88]	@ 0x58
+   13ec8:	f881 50fc 	strb.w	r5, [r1, #252]	@ 0xfc
+   13ecc:	f8a1 5120 	strh.w	r5, [r1, #288]	@ 0x120
+   13ed0:	f8c1 5124 	str.w	r5, [r1, #292]	@ 0x124
+   13ed4:	f881 5110 	strb.w	r5, [r1, #272]	@ 0x110
+   13ed8:	f8c1 6128 	str.w	r6, [r1, #296]	@ 0x128
+   13edc:	4928      	ldr	r1, [pc, #160]	@ (13f80 <harvest_str_shielded@@Base+0xaf98>)
+   13ede:	4b29      	ldr	r3, [pc, #164]	@ (13f84 <harvest_str_shielded@@Base+0xaf9c>)
+   13ee0:	f8df 90a4 	ldr.w	r9, [pc, #164]	@ 13f88 <harvest_str_shielded@@Base+0xafa0>
+   13ee4:	4479      	add	r1, pc
+   13ee6:	58cb      	ldr	r3, [r1, r3]
+   13ee8:	4629      	mov	r1, r5
+   13eea:	44f9      	add	r9, pc
+   13eec:	681b      	ldr	r3, [r3, #0]
+   13eee:	9301      	str	r3, [sp, #4]
+   13ef0:	f04f 0300 	mov.w	r3, #0
+   13ef4:	f7ef eba2 	blx	363c <open@plt>
+   13ef8:	1e07      	subs	r7, r0, #0
+   13efa:	bfb8      	it	lt
+   13efc:	4630      	movlt	r0, r6
+   13efe:	db30      	blt.n	13f62 <harvest_str_shielded@@Base+0xaf7a>
+   13f00:	2014      	movs	r0, #20
+   13f02:	f7ef e99c 	blx	323c <g_malloc0@plt>
+   13f06:	4b21      	ldr	r3, [pc, #132]	@ (13f8c <harvest_str_shielded@@Base+0xafa4>)
+   13f08:	4622      	mov	r2, r4
+   13f0a:	4629      	mov	r1, r5
+   13f0c:	f8c4 509c 	str.w	r5, [r4, #156]	@ 0x9c
+   13f10:	e9c0 5503 	strd	r5, r5, [r0, #12]
+   13f14:	4606      	mov	r6, r0
+   13f16:	447b      	add	r3, pc
+   13f18:	6003      	str	r3, [r0, #0]
+   13f1a:	4b1d      	ldr	r3, [pc, #116]	@ (13f90 <harvest_str_shielded@@Base+0xafa8>)
+   13f1c:	447b      	add	r3, pc
+   13f1e:	6043      	str	r3, [r0, #4]
+   13f20:	4b1c      	ldr	r3, [pc, #112]	@ (13f94 <harvest_str_shielded@@Base+0xafac>)
+   13f22:	447b      	add	r3, pc
+   13f24:	6083      	str	r3, [r0, #8]
+   13f26:	462b      	mov	r3, r5
+   13f28:	f7ef ea00 	blx	332c <g_markup_parse_context_new@plt>
+   13f2c:	4639      	mov	r1, r7
+   13f2e:	4680      	mov	r8, r0
+   13f30:	f7ef ed34 	blx	399c <run_parse_xml@plt>

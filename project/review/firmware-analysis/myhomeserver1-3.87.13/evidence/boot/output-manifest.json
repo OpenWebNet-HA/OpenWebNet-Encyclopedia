@@ -1,0 +1,26 @@
+{
+  "collector_sha256": "9cac9146f568f7023015cd47df98e0f4ea552b007eb606962cc75001618459cc",
+  "outputs": {
+    "available-launcher-working-status-filter.txt": "a9fd8b202ee5b406e9038d11bb347ac81a0d97a7a680ece5c479865b2361ba9c",
+    "conditional-conf-XML-request.txt": "a24949407e3e726eb5445f1d4cad9ef0f813dddb5bf2f577be768618b77e20ab",
+    "defaults-daemon-INI-request.txt": "e3dabdf77902f7bfbf20fd9b0c75eddf2b27abb61dae998232497befa64bd1a7",
+    "defaults-stack-path-request.txt": "213c5d60f9192ed7d30357861050d36d0c4b3d5e12b068e61069e58ce2db18d6",
+    "entry-main-request.txt": "b8f80fdb51240e85356afa00e9f551da2da737234b5b279507237b7d97d6f060",
+    "input-hashes.json": "dd79c1e9f257a3c1724245b5a54382f374ce43fecce4eb6dbdbaff3631ef4e71",
+    "kernel-and-DTB-metadata.json": "9528b56458eaa3d482095502808b1b4084103c77a51d76bc94cb77a3f5269908",
+    "main-allocated-config-default-request.txt": "0265ac7225ec2769b368a5cc1f2cd2347fb4c7a64540d21a829985f2c2e5a4b8",
+    "manager-path-declarations.json": "2dffebc4d7fbb5a9747947550b7f160d8f55194f558b3abd3363cc28971cdc1c",
+    "original-code-provenance.json": "a5bafe021c4639601a55e6f5ae5c46d68edb3b09ec5198240a45db165eaa6535",
+    "ownership-and-limits.json": "30fec673b84234147467ad23460d4c08146e4490785cfde56559b2a54485032f",
+    "process-declarations.json": "e4531a8be6d3b64fde15d68f4cf832ee6b7153de9224a2c5b2af57f5ec17f177",
+    "record-mode-path-name-stores.txt": "859e4da49ee8ae856ed5cb4b91a3a58e105a49ccc8b3846bc1e95a3de7b6d21c",
+    "selected-ELF-metadata.json": "ab02c16e469f38baa107553039808f7aea84f4f3691ec09cd85054e35bea74b9",
+    "selected-init-links.json": "14462d4c3b5caf7b4fac670a0c895d2e1e3f2cbaf7d70dd23c428aebee22a512",
+    "selected-nice-argv-and-call-nowait.txt": "a55e9e7873e575715eab33ca3d9b8bdda66b89bd5f3054efd2910d3225ac248f",
+    "stack-open-and-markup-parser-request.txt": "f789208a9a35eced7098d0e43ef926a5ec355e8f368bfb5e89bb158270dfa717",
+    "stackopen-selected-record-field-selectors.txt": "cab94c5f0828f1835789bce68d3133b40d4d7c55e94e5c57f11a029182473e8a",
+    "startup-selected-lines.json": "9e0ef26fe9e25393552cd9411f6cec4c0540177730a55c9615227fd7783a7265"
+  },
+  "report_sha256": "1a6b4c49e70da30a687196fca6189bcd590d00479e4ad7302749092b29cb469c",
+  "scope": "First immutable static boot candidate; independent review excluded"
+}

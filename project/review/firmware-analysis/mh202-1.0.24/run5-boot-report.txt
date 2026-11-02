@@ -1,0 +1,67 @@
+# MH202 1.0.24 — selected payload extraction and default-configuration fallback
+
+This pass follows run4's selected-source continuation into its payload extraction, archive-result gate and negative-selection default restore. A concrete packaged generic default exists, and the code can request copying it into runtime configuration. Several operation returns are ignored or tested only against exact−1, so the code paths do not prove restored contents, successful archive processing, durability or service readiness.
+
+All VAs are from the original MH202 `/home/bticino/bin/bt_daemon`, SHA256 `41a8844318d47cf33571b6d74a7de528dea5118d4c2289f4d666de419d91b1b6` (81584bytes). Image paths refer to the firmware root. Only this run5 directory was written. Original firmware, synced sources, completed reports and repository documents remain unchanged. Methods: host Python/static ELF reads and host objdump decoding. Original ARM/JavaScript/PHP/vendor execution, instruction counts, hooks, process/status/file/socket/device operations and network/mount activity: **zero**. Archive credentials, full archive argv and complete fixed header/marker text are not exported; default XML is recorded as metadata only.
+
+## 1. The selected extraction return is not the caller's selection result
+
+Main's source1 and source0 paths call `0x12d70` at `0x10538` and `0x10574`, respectively. Both pass mode0 and output path `/var/tmp/conf.zip`. Their source-path selection and run4's corrected primary→primary request are inherited context, not rerun as a new copy/checksum matrix.
+
+In mode0, the helper calls header-reader `0x12a38` at `0x12e5c`. A nonzero header-reader result produces normal return−1 (`0x12e78..0x12e88`). This reader/stream/declared-length contract is the same original function mapped in run4; no new header fixture or original helper was executed.
+
+The normal header-success continuation at `0x1313c` uses the declared payload length and opens the supplied destination. Destination `fopen` null goes to original `exit(-1)` at `0x131e8`, which is a process-termination request, **not** the function's normal−1 return. If the destination is available, the selected copying code uses chunks up to65536. Its selected destination `ferror` branch closes streams and returns−1; input or destination `fclose` exact−1 likewise returns−1. The selected ordinary completion returns0 (`0x134b4..0x134d0`).
+
+These are branch/return facts, not proof that exactly the declared byte count was copied. The copying loops and original stdio effects were not executed; short/zero I/O, stream state, lifetime and content semantics remain separate. No full raw-header or complete malformed-container validity model is supplied.
+
+Main does **not** inspect the returned r0 immediately after either extraction call. It separately calls metadata wrapper `0x1794c` for `/var/tmp/conf.zip` at `0x1058c`. The wrapper tail-calls imported `__xstat` with version argument3. A nonzero metadata result sets main's source-selection local to−1 at `0x105c4`; the later negative-selection branch reaches `0x10d44`. A zero metadata result preserves the previous selection value. Thus the staged file's metadata check is not a readback of the extractor's return or a payload-validity check. Existing/stale/truncated runtime files and actual operation outcomes were not observed.
+
+## 2. Archive processing and configuration marker gate are separate operations
+
+On the nonnegative selected route, main later calls imported `call` at `0x107a0` with its archive-processing request. Complete argv/password fields are intentionally withheld. The selected return is stored in a main local, and after intervening locking/close operations it is compared with **exact−1** at `0x1083c`.
+
+The exact−1 path logs and enters a cleanup continuation. Other numbers enter a configuration-file continuation at `0x10878`; no zero-exit-code check is present at that selected comparison. Imported `call`'s effective provider and return convention are not established by this batch. Therefore non−1 is a source-level branch condition, not proof of an external archive utility's successful completion; this report does not reinterpret arbitrary numbers as a host wait status.
+
+Main opens `/var/tmp/conf.xml`, obtains a lock and reads14 bytes into its zeroed local buffer. The content comparison block at `0x10bbc..0x10c34` tests two original fixed forms (one compare starts at buffer+3). Complete fixed marker strings are withheld. Matching either form requests configuration status text1 at `0x10c5c`; setter error logs and rejoins. A mismatch sets the source-selection local to−1. Lock failures have their own cleanup/return paths. No real XML parsing, signature validation, archive invocation, successful status update or marker fixture was run.
+
+This distinguishes three namespaces: helper extraction return, archive helper return, and main's source-selection local. The latter can remain nonnegative despite a negative normal extractor return until the separate metadata/content gates decide otherwise. Conversely negative selection can reach default restore even though the archive helper did not return exact−1. These conditional source branches are not an observed incident sequence.
+
+## 3. Negative selection reaches a real packaged-default restore helper
+
+At `0x10d44`, main tests the source-selection local. A negative value reaches optional directory preparation then calls helper `0x119cc` at `0x10da0`. The selected directory path is `/home/bticino/cfg/extra/conf`; directory metadata/mkdir returns are not interpreted here as successful preparation.
+
+The helper obtains a codename through imported `hal_get_codename`, then constructs its first candidate with the exact safe path format:
+
+```
+/home/bticino/cfg/restore/conf.xml.def.<codename>
+```
+
+Original format pool `0x12040` points to `%s/conf.xml.def.%s`, rooted by pool `0x12044`. The codename value, its provider's return contract and actual resulting runtime pathname are not established in this pass.
+
+It calls the metadata wrapper on this candidate. **Only a nonzero first metadata result** branches at `0x11a48` to the generic candidate `/home/bticino/cfg/restore/conf.xml.def`, constructed through format pool `0x1207c`. A codename-specific candidate that passes the metadata check but later fails its open/lock/copy route does not fall through to the generic candidate in the selected code.
+
+The generic original file exists as a packaged normal regular file:1910bytes, SHA256 in `packaged-restore-metadata.json`. Its XML contents were not exported. The same metadata inventory contains no packaged codename-specific variant under that restore directory; this does not exclude runtime additions or establish the actual codename choice.
+
+For either selected candidate, the routine opens it and obtains a lock. The selected `fopen` result is passed to `fileno` without an intervening null-result guard; ordinary completion is therefore an explicit premise of the subsequent branch model. Lock zero takes the configured copy-request path; nonzero takes failure cleanup and returns Boolean0. Imported locking/destructor behavior and actual lock acquisition were not executed.
+
+The copy request's source is the selected candidate path and destination `/var/tmp/conf.xml`; no archive password is involved in this selected copy request. Original calls `0x11c08` (specific) and `0x11f1c` (generic) compare the opaque helper return with exact−1. Exact−1 yields Boolean0; other values request configuration status1 and return Boolean1. A configuration-status setter error only logs; it does not change that Boolean1. These facts cannot certify the actual copied contents or classify all non−1 values as successful child exits.
+
+`host-fallback-contract-model.json` records six pure host decision cases spanning candidate metadata, lock, exact−1/other opaque copy results and setter error. It models only the stated branch decisions under ordinary open/destructor completion. No original file/process/status effects are performed.
+
+## 4. The caller can request new persistence but does not check it
+
+Main tests helper `0x119cc`'s returned value at `0x10da8`. Nonzero overwrites the source-selection local with1 at `0x10db0..0x10db4`. The following nonnegative branch requests persistence writer `0xb1f4` at `0x10ddc`. Its returned value is not checked before joining `0x10de0`.
+
+A Boolean0 fallback result leaves the preexisting negative selection and skips that writer call. Both ordinary continuations join `0x10de0`, which invokes a further event/configuration routine `0x1556c` at `0x10dec`, then continues into the running-firmware-copy policy. This pass stops at that shared continuation: failure to restore does not itself cause a newly demonstrated fatal stop here, but no successful normal startup is inferred either. The writer's previously mapped order and corrected requested copy operands remain the read-only run4 findings; its caller ignoring a return is not proof of durable persistence.
+
+The new positive fallback result is therefore bounded: the daemon has an actual path to a packaged generic default and may request rebuilding persistent containers afterwards. Whether all required runtime XML, service settings or user configuration become valid is not answered by these calls alone. There is no claim of a complete factory reset or hardware recovery.
+
+## Reproduction, confidence and remaining questions
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/boot/run5/collect_restore.py --check
+```
+
+The deterministic host-only collector strictly compares15 generated outputs: eight original-code spans with image paths/VA ranges/file offsets/byte hashes, twenty-two exact original words, six pinned inputs and six pure host decision cases. `safe-paths.json` exports an explicit whitelist of configuration paths/formats. `packaged-restore-metadata.json` records metadata without XML contents. `input-hashes.json` pins the original executable/default metadata, shared accessor, original regular-file inventory and read-only corrected run4 report/note. `output-manifest.json` pins current artifacts and excludes later reviews. Original instructions/hooks remain0/0.
+
+Confidence is high for the displayed original call/branch/dataflow and safe literal identities; successful external operations, initialized/runtime state and effective imported contracts remain unknown. Next questions: establish a needed daemon provider/`call` return contract before making child-status claims; follow the shared `0x1556c` event/configuration continuation far enough to understand default-restoration effects; bound concrete copying I/O behavior and whether later readback detects it; retain codename and full runtime/default configuration validity as separate questions. No F454 semantics or closed authentication work were reused.

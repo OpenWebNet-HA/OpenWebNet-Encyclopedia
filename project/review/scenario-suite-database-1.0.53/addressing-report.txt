@@ -1,0 +1,51 @@
+# ScenarioSuite WHO25 address and role evidence
+
+The canonical English ScenarioSuite database supplies a separate WHO25 editor catalogue for ScenarioPLUS, CENPLUS and Contact. Exact joins identify the WHO, available addresses and command fragments. The Contact address join led to rechecking the existing publisher specification: its page4 WHERE table explicitly includes prefix3 for both address families. Two current encyclopedia statements omitted/misclassified that prefix and require a scoped correction. No firmware, generator, application, network session or Physical Device was executed.
+
+## Exact sources and methods
+
+Database source: registered artifact `myhome-suite-3.5.38-mh202-1902-lgg-scen-suite-db-eng`, 2542592bytes, SHA256ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29. It was extracted from Suite3.5.38 member default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_2/Scen_SuiteDB_ENG.db; internal version1.0.53 is not Firmware1.0.24.
+
+Published source: registered document-sha256-122d9c1a43e1610a, WHO_25.pdf, 425272bytes, SHA256122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927, version1.0.0/01November2010,13pages. Reacquired exact existing archive bytes, not a new original or registration. Page4 was read in full using original text and a full-page rendering. Its connection/WHAT/parameter/WHERE tables remain separate from page13 gateway availability. No new hardware/oracle interpretation is derived from the availability table.
+
+Host SQLite reads use mode=ro&immutable=1, query_only and trusted_schemaOFF. Exact SQL and row keys/counts are retained. The new set comparisons are finite host checks over stored strings, not original compiler output or accepted traffic. The collector checks DB/PDF hashes, frozen current-reference copies and selected source-render identities; it does not execute a vendor generator. The first web-tool retrieval failed; normal archived-PDF retrieval succeeded with the registered hash. A nonfatal fontcache warning did not prevent a complete readable page4 render; visual review and the original text agree.
+
+## Three WHO25 editor objects and complete stored address sets
+
+ASS_OBJ_CHI maps ID_OBJ51/52/53 to ID_CHI14; ANA_CHI14 has labelPPT and literal OPEN_CHI25. Neither ID_OBJ51/52/53 nor local ID_CHI14 is a WHO. The accompanying ANA_OGGETTI labels are ScenarioPLUS, CENPLUS and Contact.
+
+| Editor object | WHERE type | Exact stored set | Selected object/address associations |
+| --- | --- | --- | --- |
+|51 ScenarioPLUS|20|prefix1 concatenated with decimal1..255;255distinct strings, ID_DOVE5492..5746|255choices each in areas3/5/6|
+|52 CENPLUS|21|prefix2 concatenated with decimal0..2047;2048distinct strings, ID_DOVE5747..7794|2048choices each in areas3/6/7/8/9|
+|53 Contact|22|raw catalogue has prefix3 concatenated with0..201;202distinct strings|201choices each in areas3/4/6, exactly prefix3+1..201|
+
+ANA_WHERE_TYPE20/21/22 stores patterns1[S],2[C],3[c]. Actual ANA_DOVE strings, not merely the patterns, establish the finite sets. They are concatenation forms, not arithmetic ranges over the full resulting decimal number.
+
+Contact catalogue row7795 is labelGeneral/OPEN_DOVE30. It has no Contact53 ASS_OBJ_DOVE association. Raw presence therefore does not establish that the selected Contact editor offers it. The contact choices include row7796=31 and row8023=3201, consistent with the virtual-address published family. They do not independently establish a physical alarm/IR interface profile or expose a configured installation.
+
+The ScenarioPLUS1..255 catalogue is new concrete source-scoped address evidence. It is not a universal public ScenarioPLUS domain, a full gateway-support claim or a causal inverse of earlier translator fixtures. CENPLUS0..2047 corroborates the existing published model; its presence in a selector does not prove actual dispatch or Device support.
+
+## Command fragments and role context
+
+ScenarioPLUS COSA430..434 stores11#%p%,12,13#%ot%#%s%,14#%ot%#%s%,15. Labels are Activate scenario, ScenarioOFF, Increaselevel, Decreaselevel andSTOP. The selected action-area5 associations contain430..433, while434 occurs in Start/Stop areas3/6. An object's general Action permission is not a per-command action list.
+
+CENPLUS COSA435..438 stores21#%b% through24#%b%, with short, start-extended, extended and release-after-extended labels. The observed association rows do not supply all the public rotary-selector operations merely because they share WHO25. Full compiler semantics and placeholder conversion remain unexecuted.
+
+Contact COSA439/440 stores31#1/32#1 for Start/Stop areas3/6;441/442 stores31#0/32#0 for OnlyIf area4. This agrees with published parameter1 event context versus parameter0 requested-state context. It remains a declarative association, not an executed OnlyIf query/evaluation. Complete source rows and IDs are preserved.
+
+Six whole-table relational probes checked all nonNULL relevant keys for selected inferred joins and found no unmatched values: ASS_OBJ_DOVE→ANA_OGGETTI andANA_DOVE; ANA_DOVE→ANA_WHERE_TYPE; ASS_OBJ_CHI→ANA_CHI; ASS_OBJ_COSA→ANA_COSA; ANA_OPEN_RULE_COMPILE→ANA_OGGETTI. The schema declares no foreign keys, so these data-pattern checks are not FK enforcement or proof of intended runtime use. Other relationships, e.g object0 permissions or nonunique ID_ASS, remain outside this six-probe claim.
+
+## Publisher corroboration and correction
+
+WHO_25.pdf page4 has a distinct leading3 cell in BOTH WHERE rows:3 followed by1..201 for Automation dry-contact interfaces and3 followed by two digits1..9 for alarm dry-contact/IR devices. Thus example33 fits the former as contact3;339 fits the latter as3+Z3+N9 and also numerically fits the virtual family as contact39. A fitting string does not identify which product/context exists, prove configuration or establish a successful transaction.
+
+The current dry-contact-ir.md WHERE rows omit that leading3, and its physical-MH200 paragraph says339 is outside the published forms. project/review/who25-gateway-compatibility.md repeats the classification. The source contradicts those claims. The correct change is to restore the prefix and remove the invalid-address explanation, while retaining the exact literal probes, NACK timings, absence of a configured contact/IR interface, healthy positive control and all runtime/physical scope limits. No capture bytes, prior local dossiers or existing oracle results should be rewritten. This does not change WHAT31/32 meanings or establish MH200-wide acceptance/rejection.
+
+Before editing those two current documents, parent preserves their exact bytes/hashes and the exact old statements; a correction record will link the original publisher page and this new database evidence. Existing source snapshots and historical reports remain unchanged. The correction is source-grounded rather than a guessed reconciliation between different database namespaces.
+
+## Confidence and remaining questions
+
+Established for this exact database: joins, literal patterns/fragments, complete three-type string sets, offered Contact choices and selected role associations. Corroborated: CENPLUS address composition and Contact event/request parameter split against their published references. Established publisher correction: page4 has the leading3 and339 fits the stated grammar. Conditional: actual active editor/resource binding, compiler placeholder handling and exported script syntax. Unproved: installed Devices, accepted runtime frames, natural transport/callback lifecycle and physical effects.
+
+Run collect_addressing_v2.py --check for read-only exact output reconstruction. No native replay or firmware instruction count is added. This source profile is a bridge between editor metadata and firmware/specification questions, not a substitute for the original generator or a complete public command-support table.

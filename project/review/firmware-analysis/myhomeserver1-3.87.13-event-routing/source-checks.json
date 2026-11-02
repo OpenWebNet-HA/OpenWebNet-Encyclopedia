@@ -1,0 +1,44 @@
+{
+  "checks": [
+    {
+      "area": "routing",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "b20f3f",
+          "wall_time_seconds": 0.083829712,
+          "exit_code": 0,
+          "original_token_count": 33,
+          "output": "{\"check\": true, \"outputs\": 25, \"spans\": 14, \"guards\": 15, \"selected_tables\": 3, \"calls\": 11, \"inputs\": 3, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "area": "record",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "7c13d1",
+          "wall_time_seconds": 0.153812103,
+          "exit_code": 0,
+          "original_token_count": 14,
+          "output": "{\"check\": true, \"outputs\": 23, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "area": "condition",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "351eb6",
+          "wall_time_seconds": 0.075774605,
+          "exit_code": 0,
+          "original_token_count": 14,
+          "output": "{\"check\": true, \"outputs\": 12, \"original_execution\": 0}\n"
+        }
+      }
+    }
+  ]
+}
+

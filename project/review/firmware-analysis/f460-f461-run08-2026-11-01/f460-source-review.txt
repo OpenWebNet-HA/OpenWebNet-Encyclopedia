@@ -1,0 +1,11 @@
+# F460 run08 independent source review v2 — PASS
+
+Authoritative report: `REPORT.v3.md` SHA256 `8edf41662a72cbdfad04dd09febfe8eb8826ab6d55dddb5b6a2445f38ebf6d4e`. This review supplements and preserves the exact first review `f460-source-review.md` SHA256 `b8dee4c06881329bd92da661758173fa211727a120a880b17831deb8652655fe` and its immediate first copy. The parent preserved the exact prior report/collector/review before the new report-only refinement.
+
+I verified that v3 differs from frozen v2 by exactly the two substitutions recorded in `RETURN_VALUE_REFINEMENT.v3.json` SHA256 `5896d75fea34b22522936410bcebe4ca382fd1bea7b21215ca8649484fe4dfbd`: “returned pointer” becomes “returned X0 value”, and “null extraction/helper result” becomes “zero extraction/helper result”. No original source byte, source outcome, collector, saved output, history or count changed. The v2 static collector deliberately continues to reproduce its historical v2 report pin; that is not a claim that the collector incorporates v3 as an input.
+
+The distinction is correct: original0x56f8 requests opaque helper0x5140, and0x56fc only tests X0 for zero. Its type, allocation or extraction implementation is not established. The actual xmlReadFile request has a separate ordinary API document-pointer return premise; these contracts must not be conflated. I independently read the selected original source, without opening0x5140 or0x4b60 bodies. No firmware/provider/native/helper/model execution or replay occurred.
+
+The first review's seven original spans/36 guards/18 PLT proofs/13 first-copy checks, actual action-record and same-record list join, exact original property-scan bridge supplement and all bounded provider/context/tree/runtime/physical qualifications remain applicable. In particular the independently retained bridge0x5b14..0x5bd8 SHA256 `2dd39ba75709f8da0bbed4ba8ef32ec267aaa2571559dd0a6cac9a481c6b7a28` links property next0x5b80/84 through0x5b88→0x5a64 children, without implying accepted arbitrary XML or list use. The meaningful finding is a conditional local request/selection/staging contract, not installation, authenticity, active boot or readiness.
+
+No further correction is requested. This is a bounded source review with a report precision update, not a whole updater audit or additional firmware test corpus.

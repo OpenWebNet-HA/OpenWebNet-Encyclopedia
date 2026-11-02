@@ -1,0 +1,34 @@
+
+Dynamic section at offset 0x2c78 contains 31 entries:
+  Tag        Type                         Name/Value
+ 0x0000000000000001 (NEEDED)             Shared library: [libglib-2.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libutils.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-aarch64.so.1]
+ 0x000000000000000e (SONAME)             Library soname: [libautomation.so.1]
+ 0x000000000000000c (INIT)               0xf28
+ 0x000000000000000d (FINI)               0x20e4
+ 0x0000000000000019 (INIT_ARRAY)         0x12c68
+ 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)
+ 0x000000000000001a (FINI_ARRAY)         0x12c70
+ 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)
+ 0x000000006ffffef5 (GNU_HASH)           0x280
+ 0x0000000000000005 (STRTAB)             0x738
+ 0x0000000000000006 (SYMTAB)             0x318
+ 0x000000000000000a (STRSZ)              867 (bytes)
+ 0x000000000000000b (SYMENT)             24 (bytes)
+ 0x0000000000000003 (PLTGOT)             0x12ea8
+ 0x0000000000000002 (PLTRELSZ)           624 (bytes)
+ 0x0000000000000014 (PLTREL)             RELA
+ 0x0000000000000017 (JMPREL)             0xcb8
+ 0x0000000000000007 (RELA)               0xb38
+ 0x0000000000000008 (RELASZ)             384 (bytes)
+ 0x0000000000000009 (RELAENT)            24 (bytes)
+ 0x0000000070000001 (AARCH64_BTI_PLT)    
+ 0x0000000000000018 (BIND_NOW)           
+ 0x000000006ffffffb (FLAGS_1)            Flags: NOW
+ 0x000000006ffffffe (VERNEED)            0xaf8
+ 0x000000006fffffff (VERNEEDNUM)         2
+ 0x000000006ffffff0 (VERSYM)             0xa9c
+ 0x000000006ffffff9 (RELACOUNT)          3
+ 0x0000000000000000 (NULL)               0x0

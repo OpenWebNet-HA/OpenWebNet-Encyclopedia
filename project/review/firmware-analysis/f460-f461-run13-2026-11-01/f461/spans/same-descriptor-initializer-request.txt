@@ -1,0 +1,19 @@
+
+/home/bticino/libcoso/libcoso.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000027b8 <register_state_machine@@Base+0x58>:
+    27b8:	d2800000 	mov	x0, #0x0                   	// #0
+    27bc:	97fffdf1 	bl	1f80 <get_plug_m@plt>
+    27c0:	f9401a62 	ldr	x2, [x19, #48]
+    27c4:	f9003260 	str	x0, [x19, #96]
+    27c8:	b4000082 	cbz	x2, 27d8 <register_state_machine@@Base+0x78>
+    27cc:	91014001 	add	x1, x0, #0x50
+    27d0:	aa1303e0 	mov	x0, x19
+    27d4:	d63f0040 	blr	x2
+    27d8:	52800000 	mov	w0, #0x0                   	// #0
+    27dc:	a94153f3 	ldp	x19, x20, [sp, #16]
+    27e0:	a8c27bfd 	ldp	x29, x30, [sp], #32
+    27e4:	d65f03c0 	ret

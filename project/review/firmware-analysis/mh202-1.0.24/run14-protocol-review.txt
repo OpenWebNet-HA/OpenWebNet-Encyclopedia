@@ -1,0 +1,39 @@
+# Independent review — MH202 protocol/run14
+
+**PASS within the selected static normal-path scope; no correction requested.** Reviewed final report/collector, original source spans/words/relocations, ten-step symbolic output alias, borrowed-pointer/lifetime ledger, result-channel analysis and immutable endpoint comparison. Ran only the host static collector; **no native experiment/replay exists in this area or was performed by this reviewer**. The run10 endpoint observations are reused saved results, not new run14 execution. No original ARM/vendor/parser/JS/PHP or live I/O runs in this review.
+
+## Independent reproduction and byte checks
+
+`collect_evidence.py --check` strictly reproduced26 outputs from15 pinned inputs:16 source spans/45 words, selected relocations,10 alias steps and associated ledgers. Independently mapped all three original ELF PT_LOAD files through ImageVFS and checked every retained span hash and instruction word, all28 manifest entries and the endpoint argument/kind/r0 equality against immutable run10 results. Independently recomputed the29 additional four-byte source-address slots (all libdiag) versus run7/run8. The116-byte span-set difference may include pool/data words; it is neither native coverage nor29 newly executed instructions.
+
+## Output ownership and normal lifetimes
+
+Verified source moves preserve D from bt_device decoder r0→SP+20→outer r2→r9→General r3→sl→member r1→r8→composer r2→fp→builder r0. General’s separate raw std::string copy is not an output object copy. Additional targeted disassembly of the outer/deviceModel capture-to-call intervals showed no explicit intermediate r9/r8 reassignment; the decoder’s direct SP+20 references retain its initial stored output pointer. This is selected argument/register/dataflow under ordinary callee preservation, not whole-CFG/alias execution, production pointer trace or proof of arbitrary caller storage capacity. Inherited selected-member zero adjustment and initialized registry/provider/string premises remain conditional.
+
+Composer’s36-byte push+212-byte local reservation explains the vector argument at SP+248. Original vector-size×4 allocation, element string-reference lookup, first-word load and pointer-table store are consistent with borrowed character pointers under this binary’s string ABI. The WHO/WHERE holders and DIM temporary data pointers match the actual builder registers/stack slots. The synchronous builder call precedes normal DIM destruction, pointer-table delete, WHERE/WHO destruction and caller vector cleanup. The pointer table does not deep-copy value characters. This is a concrete normal-path lifetime order, not actual allocation/container execution, an exception/unwind audit or a general safety finding.
+
+## Return channels and decoder consumer
+
+After builder call0x16f14, the source directly branches into cleanup and later returns literal1; it does not branch on builder r0 in that selected continuation. deviceModel cleans up then returns response enum0. General stores that enum at this+32 and returns its own normal Boolean1; outer/decoder separately preserve/test that class result. The report correctly distinguishes these channels from native endpoint kind4 and r0 observations0. Neither0 nor1 from a different layer is promoted to complete validation/physical acceptance.
+
+The DIM1 selected decoder continuation uses D for the DIM getter and logging of D+0x5e3c. The later direct append path computes D+0x624c for the second object, calls CreateMsgOpen through the inherited OPEN-OK literal path, then returns literal1. This does not reparse object0, execute the appended object’s parser here, establish its kind/sentinel or prove collector/output-descriptor/socket publication. Caller output-array storage and all relevant ordinary normal returns remain premises.
+
+The two endpoint C-interface argument sets, kind4 observations and r0=0 observations match immutable run10 exactly. Their equality links scoped contracts; run14 does not execute raw guards/key generation, registry/member dispatch, C++ streams/maps/containers or the full raw→builder chain. Synthetic2629 stays synthetic arithmetic context, not a device identity. This review checks new joins and pinned source/result relations, not every historical registration/key/provider claim or a live loader environment.
+
+## Accounting and boundaries
+
+New area/reviewer original calls/visits, primitive callbacks, linker redirects, EXIT/stop callbacks and code hooks are all **0**. The symbolic ledger is ten finite source-transcription moves, not emulation. Prior native corpus totals do not change. The report explicitly identifies necessary original standard-object/registry/WHO-WHERE initialization and output-descriptor/collector work as still open; it does not replace them with fabricated callback returns to imply a complete experiment.
+
+No source/report correction was needed. Authentication/framing/credentials/physical behavior remain outside scope.
+
+## Exact final reviewed hashes
+
+- `protocol/run14/REPORT.md` SHA256 `7865c526e571dac9a14ecaa5bf37e2cd06fb732246f9139dd3f07df3349c7f5b`.
+- `protocol/run14/collect_evidence.py` SHA256 `6eaf0d9cd05d92eaebd061b6446adf406571786cf19acbda7a563a4a166c4f97`.
+- `protocol/run14/output-manifest.json` SHA256 `1d685dc90088b873f2c0e863e57d329d11f13c2f2f695a2690b6bb4adab15a8e`.
+- `protocol/run14/original-spans.json` SHA256 `d49709590520f5994003b75c20bbc83f5a1f92b7fbdd539cd579d5a27ed9116e`.
+- `protocol/run14/critical-words.json` SHA256 `2d1825edbe35f973cd48a175563cad01850cda284b62ff49efcdf91e12a02709`.
+- `protocol/run14/host-symbolic-alias-ledger.json` SHA256 `59f4f3dea5d6f91e917608ff99c5cffef62fe7338ae2490973745d305f713d70`.
+- `protocol/run14/borrowed-argument-lifetimes.json` SHA256 `1e90a4a75ebeae821c889aeec75903273621cb8f3effbb18374f7c4625fce93d`.
+- `protocol/run14/endpoint-comparison-and-return-channels.json` SHA256 `0b43f10ebddd7bc90fa703640a522f4de10231b694133b4e3ecc2a45bb42e867`.
+- `protocol/run14/inherited-versus-new-scope.json` SHA256 `35efd2e152e97768cd193e797ffc98599f402d10bb3612015f7aca9488cd51d4`.

@@ -1,0 +1,82 @@
+[
+  {
+    "bytes": 68,
+    "end_exclusive": "0xaf418",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "constructor",
+    "sha256": "626619f18f3182f1a0503f5fc34887945c239bb2a42d04ce0cbfb4b6ea711343",
+    "start_va": "0xaf3d4"
+  },
+  {
+    "bytes": 216,
+    "end_exclusive": "0xa7398",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "initializer-prefix",
+    "sha256": "a56ec959f4cdca4aa25d931f1100fb7cbcbc0c17c7fd33db86d09ce03c461ee4",
+    "start_va": "0xa72c0"
+  },
+  {
+    "bytes": 178,
+    "end_exclusive": "0xa767a",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "initializer-action-dispatch",
+    "sha256": "15e0f48483c9e7e79d1114f99a450923778942566df2b210b871b0226f74e9e4",
+    "start_va": "0xa75c8"
+  },
+  {
+    "bytes": 152,
+    "end_exclusive": "0xa7712",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "initializer-action-append",
+    "sha256": "4e8f7a09c19ca1d649d7bc348aee4ba556aadd663ddc4922a36be81518f761a9",
+    "start_va": "0xa767a"
+  },
+  {
+    "bytes": 768,
+    "end_exclusive": "0xa60b0",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "launch-conditional",
+    "sha256": "32a5d434c3fc93b33cf044100b16043932b780658fa793961ca5a7753bae5472",
+    "start_va": "0xa5db0"
+  },
+  {
+    "bytes": 336,
+    "end_exclusive": "0xa6200",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "stop-request",
+    "sha256": "bfa0761472f7fa823d06b08e9d495ef6ef2d71288591bb0a46b26b51b317b78c",
+    "start_va": "0xa60b0"
+  },
+  {
+    "bytes": 760,
+    "end_exclusive": "0xa6508",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "launch-direct",
+    "sha256": "c578b13e8ee23cbc7eec274ff87aeb3f49b7dbc2fc979824381ce55482e9714d",
+    "start_va": "0xa6210"
+  },
+  {
+    "bytes": 1500,
+    "end_exclusive": "0xa6d10",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "worker-actions",
+    "sha256": "a11b46da17b5dd82158d877199dc2877af05568583124f001868a941837f7625",
+    "start_va": "0xa6734"
+  },
+  {
+    "bytes": 142,
+    "end_exclusive": "0xa6d9e",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "worker-condition-prefix",
+    "sha256": "8b0277d236cc4ac749bcc0f018ca2e00abf4119f0c7332cbacba2109fe61540b",
+    "start_va": "0xa6d10"
+  },
+  {
+    "bytes": 614,
+    "end_exclusive": "0xa7100",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "worker-condition-tail",
+    "sha256": "bf504814e47ee5c9d8594e99ef4639027dd63b92d770bc80b86d4dc2a0646f6b",
+    "start_va": "0xa6e9a"
+  }
+]

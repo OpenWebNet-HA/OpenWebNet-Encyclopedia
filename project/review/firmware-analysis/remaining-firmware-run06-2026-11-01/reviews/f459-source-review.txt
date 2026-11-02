@@ -1,0 +1,42 @@
+# F459 run06 teardown request source review — PASS
+
+Reviewer /root/evidence_reviewer, new review files only. CompletedUTC 2026-11-01T22:19:02.554928+00:00. No source/report correction requested. This is a selected original request/argument/order review, not full Device/source/runtime/physical approval or proof of safe object destruction.
+
+## Frozen current identities
+
+Root `work/f459-firmware/2.1.5/research/2026-11-01-night06-teardown`:
+
+- `REPORT.md` — 3753 bytes, SHA256 `68b649309fd779a8265881a22cd9733fdcae041045e2a702426a54c32092f624`.
+- `collect_teardown_v1.py` — 9375 bytes, SHA256 `aa281001f82dccb827a37571aee15a4c8d06d4d38f809b72ab40d8b6f7739d82`.
+- `SOURCE.json` — 6554 bytes, SHA256 `e83abeddb47a07b1fd285d82192692f413f722914f45a1b997a8e3bc919c9d09`.
+- `INPUT_PINS.json` — 628 bytes, SHA256 `ff69abe74c2f7e7a9f712c8a72e6a28bd6b02b6b8a07081cf41457d249830372`.
+- `OUTPUT_MANIFEST.json` — 1018 bytes, SHA256 `44e32d5fded2dfb421ea01a28a9c8bfa011ca81c4882fe5e52c7880045a7b00f`.
+- `first-candidate/INDEX.json` — 1183 bytes, SHA256 `07032c704a2de8c2ae50921dbabcdff65b73c6b1ba4ee0a538679925fc3835ed`.
+
+Original own libmhshared.so.1 is43208bytes/SHA2564d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377. Fresh independent original ELF32 little-endian ARM/machine40/PT_LOAD parsing agrees with the packet. Dynamic symbols identify D1/D2 at6a7c with316byte extent and D0 at6bb8 with28byte extent. Labels describe the exported build-local source, not a natural caller/installed object or another product's lifetime model.
+
+## Independent checks
+
+Actual read-only `collect_teardown_v1.py --check` passes7outputs/29guards/7callproofs/3spans/originalexecution0. Independently from that replay I mapped and compared all29original guard words, all3span byte strings/SHA, all3input pins, every outputmanifest member and8exact first copies. I independently decoded all7ARM BL targets and original12bytePLT stubs, recomputed their rotated-immediate GOT addresses and matched the actual readelf JUMP_SLOT rows/symbols. I recomputed GOTbase12180, vtableGLOB_DAT122f4 and free-callbackGLOB_DAT122fc; exact original poolhelper wordffff0fc0 is retained as data. Actual export rows and full D0extent agree. No provider/helper/global body was inspected or executed; source/import identity does not prove effective binding.
+
+### D1 selected normal chain
+
+At6a90 original `e1a04000` saves incoming receiverR0 inR4. Relocated own vtable address+8 is installed at receiver0. Exact6a98 `e5900008` loads the incomingreceiver+8 word intoR0 before actual sqlite3_close request6aa0→PLT20a0/GOT121bc. The selected postcall instructions6aa4 `e5946018` and6aa8 `e5960008` load receiver24 intoR6 then overwriteR0 fromR6+8;6aac compares that replacement value. There is no intervening store/copy/test of the close machine return in this retained continuation. This is accurately scoped as a local fact, not complete failure handling, evidence of a failed close or a defect claim.
+
+The normal source has conditional auxiliary cleanup: the original zero/negative-one/count/indirect-helper paths can reach QHashData::free_helper6ac0, or skip that particular request and reach6ac4. Exact6ac4 `e2840010` supplies SAMEreceiver+16 before QFileSystemWatcher destructor request6ac8→PLT2064/GOT121a8. Local object-field count and indirect-helper return decisions control the selected continuation. The report correctly leaves valid member objects, normal helper/provider returns/termination, callee-save/ABI, binding, lifetime and excluded errors/unwind as premises. The supplied free callback's actual relocation is metadata; its body is not presumed to quiesce another object or establish safe ordering.
+
+Later selected source loads receiver12 representation;6ae8 requests QArrayData deallocate on one admitted branch, while other retained connectors can bypass it. At6aec `e1a00004` supplies SAMEreceiver to QObject base destructor6af0→PLT2358/GOT122a4. The local normal return follows after moving saved machine receiver address toR0. The report's distinction between selected auxiliary requests and complete release is sound. It does not turn object-local numeric counts or the uninspected indirecthelper into proved atomic exclusion/thread safety.
+
+Thus the concrete local order is **database-close request before watcher-destruction request** under the selected normal path and stated premises. It is not certified closure, callback quiescence, all-thread ordering, commit/durability or resource release. Pending statements, other earlier teardown/callers, allocation origin, natural last owner, actual callbacks/threads, aliases/mutation and concurrent ownership remain open. The earlier constructor's receiver8 connection-output field is inherited context; SAMEobject/unchanged-handle/lifetime composition remains conditional, not repeated open/DDL coverage.
+
+### Entire selected D0 body
+
+The complete28byte exported D0 saves receiverR4 at6bbc, requests D1 at6bc0 through PLT21c0/GOT1221c, restores SAMEreceiverR4 intoR0 at6bc4 and requests operator delete(void*)6bc8→PLT21b4/GOT12218. Its final6bcc move returns that saved machine address before register/PC restoration. Source D1definition6a7c is a candidate under actual binding/interposition, not a forced direct call. The report correctly treats destruction/deletion as requests with normal-return/provider/ABI premises and does not establish original allocation ownership, successful free, caller/lifetime safety or stale-object use from a numeric returned address.
+
+## Boundary and preservation decision
+
+**PASS, no correction requested.** Source request/argument/order claims are supported; runtime applicability remains conditional. D1unwind6b78..6ba8 is explicitly excluded and was not read by this review; all Qt/SQLite/delete/indirect-helper implementations stay opaque. The literal pool span is data, not executed instructions. No complete destructor/error policy, universal safety/concurrency, actual database closure/durability or physical effect is claimed.
+
+The parent's explicit F450helper2eec4 static-body boundary remains closed after its automatic approval rejection. This review did not inspect, retry, alternate-read or use a proxy to that F450 body; only the separately permitted F459 image and the stated pins were used. No additional source investigation was delegated.
+
+Original/vendor/helper/native/emulator/SQLite/targetOS/services/network/bus/runtime/physical execution0. Host Python/readelf/ARMobjdump read frozen bytes only. No actual DB recovered/generated, no syntheticDB, no upload/readback/remote write and no credentials/private values exported. Cumulative archive remains the parent's earlier one encrypted F450support container/zero plaintextDB scope, not a new network verification. Old MHS340originalcode-hookvisits/360hooks and separate F454/MH202 ledgers remain unchanged, with no old corpus replay. Research/source/repository/firstcandidate/registry files were not altered and no staging/commit/push/publication occurred. This exclusive review is immediately copied exactly; the noncircular first-copy index is computed before opening its own file.

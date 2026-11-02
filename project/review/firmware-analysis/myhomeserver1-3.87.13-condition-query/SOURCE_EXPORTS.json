@@ -1,0 +1,286 @@
+{
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/BYTE_GUARDS.json",
+      "published": "serializer/BYTE_GUARDS.json",
+      "sha256": "3e6a489bf9a80cc7698abff6ced4a664c25ea572ed0b8307a481fce5af0ce377",
+      "bytes": 853
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/CLASS_TABLES.json",
+      "published": "serializer/CLASS_TABLES.json",
+      "sha256": "4d3561f8df44f50744df323ca77e7a1ca657bae824b09c5c7c96f5621cbb05d8",
+      "bytes": 2212
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/DATA_SPANS.json",
+      "published": "serializer/DATA_SPANS.json",
+      "sha256": "8aaa7a5329e98426d24da1352e327f01a0f06cc336bd5edb80c8427305ab10f4",
+      "bytes": 611
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/DIRECT_CALLS.json",
+      "published": "serializer/DIRECT_CALLS.json",
+      "sha256": "bb6eedaf42d3af2a8a3a2cc3d86b320bdea12cda8ae281f9c25157decfd097a1",
+      "bytes": 398
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/FIELD_RULES.json",
+      "published": "serializer/FIELD_RULES.json",
+      "sha256": "c4815f3a5c28afd0398580e653904f9cbf0309edc1728ec9eaf412c126136c43",
+      "bytes": 971
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/INPUTS.json",
+      "published": "serializer/INPUTS.json",
+      "sha256": "7ea195ef13a3267acc5d4ac44901bfb71e3d350d154588e8c128fefa2253c0ba",
+      "bytes": 640
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/KEYS.json",
+      "published": "serializer/KEYS.json",
+      "sha256": "b8a79a8f6fc12c1dd1d6c8371c4cf26e282f75f3dac72a27ee03ed36bdc1a72b",
+      "bytes": 1183
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/METHOD.json",
+      "published": "serializer/METHOD.json",
+      "sha256": "3574210a615fecee100ae2f0c61519326728d03fc3a99d2cb58ef46d42df5866",
+      "bytes": 586
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/SOURCE_SPANS.json",
+      "published": "serializer/SOURCE_SPANS.json",
+      "sha256": "3468d8411015718923b42576c9173bdaee8894a06a660830ebc0816a8a7a77c3",
+      "bytes": 1098
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/spans/base-condition-constructor.txt",
+      "published": "serializer/spans/base-condition-constructor.txt",
+      "sha256": "f14e263b72791154822448133c24a1878a36627b66b01a8028e12365bf32ef2c",
+      "bytes": 9488
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/spans/base-condition-serializer.txt",
+      "published": "serializer/spans/base-condition-serializer.txt",
+      "sha256": "193a26f210751fd207b4fd34c471f9b6aa99a91da6eb4b9ee086f2b7dd173f70",
+      "bytes": 5975
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/spans/bnld-constructor.txt",
+      "published": "serializer/spans/bnld-constructor.txt",
+      "sha256": "ce764b57c5c5ffdb9dd5235e998e6f367be029b05dbdd8f260e547cb743d48fc",
+      "bytes": 4924
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/spans/bnld-serializer.txt",
+      "published": "serializer/spans/bnld-serializer.txt",
+      "sha256": "b2a09fb274517520cf03037c353903c513874c33d8e047c26e19f4d3a566820f",
+      "bytes": 5544
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/spans/same-result-initializer.txt",
+      "published": "serializer/spans/same-result-initializer.txt",
+      "sha256": "d7143fae65be447bdba40acb4e40f9ba89f92a87bc5fd46ee7fdec4ef4c91126",
+      "bytes": 1124
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/OUTPUT_MANIFEST.json",
+      "published": "serializer/OUTPUT_MANIFEST.json",
+      "sha256": "7e32cdcb93894cbaf4a2d48e1fc71fd2825e4817d2d798a709096552310b2861",
+      "bytes": 2263
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/collect_serializer_v2.py",
+      "published": "serializer/collector.py.txt",
+      "sha256": "303754b80717c1e5ad422b84a5e218d1bb9fb865e9c52fd12d49763e2d11bc7f",
+      "bytes": 8694
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/REPORT.v2.md",
+      "published": "serializer-report-v2.txt",
+      "sha256": "b96a6bfb2a30d4c20ba50abb6a2243a5cfe378eb5842c469acb3d3baba8f17d5",
+      "bytes": 11349
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/reviews/serializer-source-review.md",
+      "published": "serializer-source-review.txt",
+      "sha256": "a756c583024ebdaa97ede73a7958a9cc59a940c207bd65a912889e650dcb822e",
+      "bytes": 6589
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/INPUTS.json",
+      "published": "query/INPUTS.json",
+      "sha256": "ef617f18a565263bff8ee71e0b671cd2297cc10e98da982c8dc859d90b7c6913",
+      "bytes": 1113
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/ORIGINAL_SOURCE.json",
+      "published": "query/ORIGINAL_SOURCE.json",
+      "sha256": "b1ef2880f09dcc30ac75570c1449921301b9f6a0ed42d0f6b6895f9acf28fc36",
+      "bytes": 5636
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/QUERY_CONTRACT.json",
+      "published": "query/QUERY_CONTRACT.json",
+      "sha256": "c4c627ff7ca6993e254a74390a232a0228d0f3b8f0af28990881ff9380ce57d7",
+      "bytes": 2173
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/spans/bnld-query-caller.txt",
+      "published": "query/spans/bnld-query-caller.txt",
+      "sha256": "325a246d33d519883411d3f71a13ca8e84b42f6f8eab15d8846d08b143b09e37",
+      "bytes": 916
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/spans/getter-string-initialization.txt",
+      "published": "query/spans/getter-string-initialization.txt",
+      "sha256": "16721c863b5e1823c6d6e4dd05d36d93bf3adaad635b9011d257c626529266d8",
+      "bytes": 633
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/spans/imported-parse-boundary.txt",
+      "published": "query/spans/imported-parse-boundary.txt",
+      "sha256": "ae48074a964eaa15a4883d3e67b17072380e35f0941ccf6117c06834c85f60f1",
+      "bytes": 853
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/spans/local-wait.txt",
+      "published": "query/spans/local-wait.txt",
+      "sha256": "46f21d8014af0dd9f63de6c31b75fa153e1b1f177c028b238eb17ce288f36f5b",
+      "bytes": 2047
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/spans/miss-clear-and-selectors.txt",
+      "published": "query/spans/miss-clear-and-selectors.txt",
+      "sha256": "2c35c33e96b0e0125d913dfb3dbb846dcf0bd1c6f890c773519222910630cb40",
+      "bytes": 535
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/spans/miss-control-cleanup.txt",
+      "published": "query/spans/miss-control-cleanup.txt",
+      "sha256": "63e9cfd26056f920bccd96ef2ac41d83e0fa4379cbc5b541137c5ed11bf3e6a6",
+      "bytes": 1166
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/spans/normal-cleanup-wait-join.txt",
+      "published": "query/spans/normal-cleanup-wait-join.txt",
+      "sha256": "585ab47ea37c98bbba7003d5c497fcad7db2c950b84c512bac3925bcf6afc864",
+      "bytes": 537
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/spans/opaque-handoff-callsite.txt",
+      "published": "query/spans/opaque-handoff-callsite.txt",
+      "sha256": "1cfbbdc008118248b6de7813c415cb2c1981b982a42815b8816e8da5e466e71d",
+      "bytes": 707
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/spans/query-fast-return.txt",
+      "published": "query/spans/query-fast-return.txt",
+      "sha256": "f38b72113fd4cf9a9516234567a38c42bb559999bf31610b18aaa7ab12ecdea1",
+      "bytes": 1732
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/spans/response-string-alias.txt",
+      "published": "query/spans/response-string-alias.txt",
+      "sha256": "7ad184f89c8c2e8ab499b45b3ea5d1fa85b7205b95e5c8aba4779a2419c8552b",
+      "bytes": 793
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/spans/selector-zero-prefix.txt",
+      "published": "query/spans/selector-zero-prefix.txt",
+      "sha256": "0efab03a0678e0046c798df6a865d2f914ead936747d3d76c320222fef95e403",
+      "bytes": 1095
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/spans/wait-length-recheck.txt",
+      "published": "query/spans/wait-length-recheck.txt",
+      "sha256": "23ddb754e605cfeec00e687daeed6217225cc55acdf0c9a6f460173e70e3d87a",
+      "bytes": 558
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/spans/zero-output-normal-tail.txt",
+      "published": "query/spans/zero-output-normal-tail.txt",
+      "sha256": "4d7717da0857052fb64ca7169bed0c79e8f92fdd6c4b3ecc84ae6373931a463d",
+      "bytes": 386
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/OUTPUT_MANIFEST.json",
+      "published": "query/OUTPUT_MANIFEST.json",
+      "sha256": "d6be175e895efc68ea04add50a17f517878735bffb7ca850b69c48cbd019ad12",
+      "bytes": 2756
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/collect_query_v1.py",
+      "published": "query/collector.py.txt",
+      "sha256": "927c469a402f4ea6ace789f1dfa4e9b63236dc3afacda1ef444af8d80d39f6da",
+      "bytes": 8293
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/REPORT.md",
+      "published": "query-report.txt",
+      "sha256": "9ce4b06aa2292df9ef10cc0fc983648738d7a4bda51b80ec8adcd7521586f63a",
+      "bytes": 10043
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/reviews/query-source-review.md",
+      "published": "query-source-review.txt",
+      "sha256": "9afc63f6d2d647b7ca3a76fc3d8c536ffaf88132b3df1285c6061554d414cf40",
+      "bytes": 4224
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/REPORT.md",
+      "published": "serializer-report-v1.txt",
+      "sha256": "a1e9f778bae5dbd6e7e8a82817dfaa7397c015f26d8e5cf61c4b914cec837f80",
+      "bytes": 9856
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/collect_serializer_v1.py",
+      "published": "serializer-collector-v1.py.txt",
+      "sha256": "4277805852b25acd5ae1567e5c282dd1a2519700fb8311149ec4f9407b3d376f",
+      "bytes": 7998
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/DEVELOPMENT_HISTORY.v2.json",
+      "published": "serializer-development-history-v2.json",
+      "sha256": "973cc387241c5277b9f884a1355fadbeefa8b90d8f06ce262a3f6fe89092107d",
+      "bytes": 1840
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/development/PROBE_FAILURE.json",
+      "published": "serializer-probe-failure.json",
+      "sha256": "c2f7fe836dda54686f2f6eed7fda2d1266b256f5850bb7e31c0554f7d6bdfc60",
+      "bytes": 619
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/SYNTHESIS.md",
+      "published": "synthesis.txt",
+      "sha256": "6c8ba4e8895f379924ded01562a88de0688dfeb80fd81d86cdcd60c1becffa9c",
+      "bytes": 1546
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/COVERAGE.md",
+      "published": "coverage.txt",
+      "sha256": "cb12df16d0714efe3768ea26b6c6fa10caa6801be8b8ef9074ca8af66dee4fac",
+      "bytes": 1559
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/RANKED_REMAINING_QUESTIONS.md",
+      "published": "remaining-questions.txt",
+      "sha256": "4b4d24d785bbbd97a7495c925dde8d5c625005f6249950225ff0424175df8f4d",
+      "bytes": 1545
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/RUN_LOG.md",
+      "published": "run-log.txt",
+      "sha256": "c96d18431427438dea77a63efdda3c934779b1766f743273d71e30cdc990d7a8",
+      "bytes": 1306
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/SOURCE_CHECKS.json",
+      "published": "source-checks.json",
+      "sha256": "98123482189775dc2a1ea11e75411191d0e9a29014009174f1b98dc0a9981798",
+      "bytes": 835
+    }
+  ]
+}

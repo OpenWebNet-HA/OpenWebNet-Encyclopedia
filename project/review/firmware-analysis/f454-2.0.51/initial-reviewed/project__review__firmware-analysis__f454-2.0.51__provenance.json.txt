@@ -1,0 +1,175 @@
+{
+  "scope": "Initial curated Encyclopedia integration of selected F4542.0.51 findings; not the full local dossier, a firmware redistribution, a hardware observation or a firmware-oracle manifest.",
+  "archive": {
+    "artifact_id": "firmware-f454-020051",
+    "filename": "F454_020051.fwz",
+    "version": "2.0.51",
+    "bytes": 74448014,
+    "sha256": "15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3",
+    "redistribution": "private-archive-only",
+    "manifest": "sources/artifact-manifest.yaml"
+  },
+  "analysis": {
+    "dates": [
+      "2026-10-29",
+      "2026-10-30"
+    ],
+    "methods": [
+      "static artifact/configuration/disassembly inspection",
+      "bounded original ARM helper execution with explicit primitives and handoffs"
+    ],
+    "no_live_gateway_or_firmware_process": true,
+    "research_index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df",
+    "research_index_entries": 1917,
+    "interpretation": "Dossier counts/hashes identify provenance, not coverage or independent experiments."
+  },
+  "reports": [
+    {
+      "id": "platform",
+      "research_report": "boot/REPORT.md",
+      "report_sha256": "16c2ccb6113206b11b71995c986cf0b5312bf2d809af72e77e69fa48e6952ebf",
+      "excerpt": "platform-report.txt",
+      "lines_in_original": {
+        "first": 1,
+        "last": 110
+      },
+      "excerpt_sha256": "446a30d1ab65b5336b7daea331572fe2a1d8b99047028266a8446422da271138",
+      "interpretation": "Exact analyst-report excerpt, not a vendor source file or a new execution result."
+    },
+    {
+      "id": "identity",
+      "research_report": "protocol/report.md",
+      "report_sha256": "78f212cba5956c273a59b276d78e9ded920bfc29dd6caec8a5ceecf0d71a3294",
+      "excerpt": "identity-report.txt",
+      "lines_in_original": {
+        "first": 1,
+        "last": 69
+      },
+      "excerpt_sha256": "816de0cbafb3dcbe1a779aabde5350bced31012b4b25497c9291b66ee65d32c7",
+      "interpretation": "Exact analyst-report excerpt, not a vendor source file or a new execution result."
+    },
+    {
+      "id": "registry",
+      "research_report": "protocol/run22/REPORT.md",
+      "report_sha256": "a8c4aaabc8bf216aff9f099086e40298846656ad1afccb3358194b65873dcad0",
+      "excerpt": "registry-report.txt",
+      "lines_in_original": {
+        "first": 1,
+        "last": 30
+      },
+      "excerpt_sha256": "b9b0621bc8ecc5f9d5a5b5e14c540848b049e46b5cdd99e110f1d73fe921314e",
+      "interpretation": "Exact analyst-report excerpt, not a vendor source file or a new execution result."
+    },
+    {
+      "id": "web",
+      "research_report": "web/run2/REPORT.md",
+      "report_sha256": "a36d1b91bd2097e05a1803c28755fb2a6277e0ab084ca4ccc7e63206f7349748",
+      "excerpt": "web-report.txt",
+      "lines_in_original": {
+        "first": 1,
+        "last": 17
+      },
+      "excerpt_sha256": "4d71733d3f3a3ccc3a85b6824014e29e0d42d77dc147c8e0cade6d5afc8df249",
+      "interpretation": "Exact analyst-report excerpt, not a vendor source file or a new execution result."
+    },
+    {
+      "id": "sender",
+      "research_report": "functional/run25/REPORT.md",
+      "report_sha256": "eed906e4d8a3c07bb579324f433c2fedb88d99f68bfed93b7695b25fb99902a7",
+      "excerpt": "sender-report.txt",
+      "lines_in_original": {
+        "first": 1,
+        "last": 55
+      },
+      "excerpt_sha256": "0b905c703cbfcb029f0e9af99e85fee6965ca0cdce7350890cfd57f014b0641b",
+      "interpretation": "Exact analyst-report excerpt, not a vendor source file or a new execution result."
+    },
+    {
+      "id": "alarm",
+      "research_report": "functional/run27-alarm/REPORT.md",
+      "report_sha256": "bd5778fd14cda76c03846ae54a55359f511a4e94f59cbf0259450e0765dcb92a",
+      "excerpt": "alarm-report.txt",
+      "lines_in_original": {
+        "first": 1,
+        "last": 71
+      },
+      "excerpt_sha256": "bd5778fd14cda76c03846ae54a55359f511a4e94f59cbf0259450e0765dcb92a",
+      "interpretation": "Exact analyst-report excerpt, not a vendor source file or a new execution result."
+    },
+    {
+      "id": "markup",
+      "research_report": "boot/run27/REPORT.md",
+      "report_sha256": "d40a9d84d20c094802405bf5ded90e5eb4f0a4101ba67147c179471831b2c286",
+      "excerpt": "markup-report.txt",
+      "lines_in_original": {
+        "first": 1,
+        "last": 77
+      },
+      "excerpt_sha256": "d40a9d84d20c094802405bf5ded90e5eb4f0a4101ba67147c179471831b2c286",
+      "interpretation": "Exact analyst-report excerpt, not a vendor source file or a new execution result."
+    },
+    {
+      "id": "versions",
+      "research_report": "inventory/run20-versions/REPORT.md",
+      "report_sha256": "8e9baffec64036bc9cb32f6c6ba4d69652437a1443a933e4f9635bd12a24e809",
+      "excerpt": "versions-report.txt",
+      "lines_in_original": {
+        "first": 1,
+        "last": 29
+      },
+      "excerpt_sha256": "2b5699f38cfd55b2eccc3c856e511b6109382c46ac31d1432167fc17b53d07aa",
+      "interpretation": "Exact analyst-report excerpt, not a vendor source file or a new execution result."
+    }
+  ],
+  "selected_original_files": [
+    {
+      "image": "normal",
+      "path": "/home/bticino/bin/bt_device",
+      "bytes": 122940,
+      "sha256": "ce43e480d0603cbde752d646dfcd57f5461057b29c852eb8847529edaaee9343"
+    },
+    {
+      "image": "normal",
+      "path": "/home/bticino/bin/bt_luci",
+      "bytes": 275116,
+      "sha256": "1c9f959acd002fa5c97f0073eda767bade580bd3f2cf242e1e305c631342581c"
+    },
+    {
+      "image": "normal",
+      "path": "/home/bticino/bin/coso",
+      "bytes": 27500,
+      "sha256": "7259067a648b215ef93ba93ede0037296cffe273a099b72e6c593dcb9057ee89"
+    },
+    {
+      "image": "normal",
+      "path": "/home/bticino/bin/api-arm",
+      "bytes": 1327592,
+      "sha256": "2248b877bcc4180f0f04ffb1bad71e0efe4607fd06eacf174a2a6a380ea2cb13"
+    },
+    {
+      "image": "normal",
+      "path": "/home/bticino/lib/liblghal.so.0.0",
+      "bytes": 102884,
+      "sha256": "ed3c3ebd4ad722c25ccf4651edf5665d5dccc21fb6d35774fef6bfaf4878e250"
+    },
+    {
+      "image": "normal",
+      "path": "/home/bticino/lib/libdiag.so.0.0",
+      "bytes": 139152,
+      "sha256": "40856a66c87ea4f811bb27e32752c6adf81609554fbf36a384042c32c56fc3ce"
+    },
+    {
+      "image": "normal",
+      "path": "/home/bticino/lib/libcommon.so.0.0",
+      "bytes": 246436,
+      "sha256": "3890711968ffa0c89136c20e7e73f82b6314513cf3aab0334d9b4843f84a025a"
+    },
+    {
+      "image": "normal",
+      "path": "/home/bticino/lib/libutils.so",
+      "bytes": 21040,
+      "sha256": "661f047071dbce0d2f688474b037b35006909489023e7dee67de943f3d797ae2"
+    }
+  ],
+  "reproduction_limit": "Excerpts preserve reported methods and exact locators; original images, full scripts, saved handoffs and dependencies remain in the local research dossier. This capsule alone cannot reproduce vendor execution. No packaged credentials, private keys, images or binaries are included."
+}

@@ -1,0 +1,484 @@
+{
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/REPORT.md",
+      "published": "sleep-report.txt",
+      "sha256": "399ab5a54cc5682e59b1a5fd166395145c5e6a511590b9344eadb2781a6e0eac",
+      "bytes": 8930
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/collect_sleep_v1.py",
+      "published": "sleep/collect_sleep_v1.py",
+      "sha256": "dcfb342823838c8df65384a3b070ab0fc09c45b3f0599cdc15dfafaae6f1ad2c",
+      "bytes": 8958
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/BINDING_LEDGER.v1.json",
+      "published": "sleep/BINDING_LEDGER.v1.json",
+      "sha256": "392c5be697ee424248b63d66fe8091bc975825a10cda47dde16e7c6c9d6a28f0",
+      "bytes": 1555
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/BYTE_GUARDS.v1.json",
+      "published": "sleep/BYTE_GUARDS.v1.json",
+      "sha256": "c8a4f407b1ded4582c1cb0a262b6c4850818b23365b2224a7edf68cc3dc7a0a9",
+      "bytes": 1865
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/DIRECT_CALLS.v1.json",
+      "published": "sleep/DIRECT_CALLS.v1.json",
+      "sha256": "46d7294886d1e673d84aeadf1d5b60f6ced8862f84d2d1a4e1d6ea2f9616ddfb",
+      "bytes": 423
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/INPUTS.v1.json",
+      "published": "sleep/INPUTS.v1.json",
+      "sha256": "fd19e81f63076aa83565ff0ce0515cb6b0a1dfd4b5bb4b30f3743f96a9a3d577",
+      "bytes": 1036
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/METHOD.v1.json",
+      "published": "sleep/METHOD.v1.json",
+      "sha256": "f090903e1fa4da836e1a45a58da8fbdc04ae3f245ca02b698d7cfc7618333c1c",
+      "bytes": 875
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/PIC_AND_VTABLE.v1.json",
+      "published": "sleep/PIC_AND_VTABLE.v1.json",
+      "sha256": "f93cd92ba468c8f5a4015fb7189056a3681c0dea1ff33b24ac2723f470643097",
+      "bytes": 1796
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/PROVIDERS.v1.json",
+      "published": "sleep/PROVIDERS.v1.json",
+      "sha256": "a07e9f4530d895f448939ef11fce0821b6d1ca9373a248e97947ac99b8fdf728",
+      "bytes": 1152
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/SOURCE_SPANS.v1.json",
+      "published": "sleep/SOURCE_SPANS.v1.json",
+      "sha256": "f67beaca60c2fc5547ec05f1cf39b2da268234004602a99be7b30fab89699916",
+      "bytes": 2721
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/spans/callable-installation.txt",
+      "published": "sleep/spans/callable-installation.txt",
+      "sha256": "9d927663ed5e7153a631e53c4ef31eda06e659e39a0867f1fe1b711e08b71867",
+      "bytes": 3208
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/spans/captured-function-manager.txt",
+      "published": "sleep/spans/captured-function-manager.txt",
+      "sha256": "ea3621a8ea4a49465c472bbe7b90763c195e690a1b95c048993dbad2e2214ceb",
+      "bytes": 1176
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/spans/initializer-got.txt",
+      "published": "sleep/spans/initializer-got.txt",
+      "sha256": "db5cdb978882180e1a435c26ea6805ca93ca3d4e3272e104b05cc12e6a3e2f3c",
+      "bytes": 2360
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/spans/initializer-sleep-append.txt",
+      "published": "sleep/spans/initializer-sleep-append.txt",
+      "sha256": "25597d69a335107cd8836a1fd8ad87cf3d26dee262aa42ddb688478456181c73",
+      "bytes": 3164
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/spans/initializer-sleep-convert.txt",
+      "published": "sleep/spans/initializer-sleep-convert.txt",
+      "sha256": "d44207fafa8ee3a91189d1844e6b1e59c803f7a35ef1e27623020c04debee27e",
+      "bytes": 3780
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/spans/libc-nanosleep32.txt",
+      "published": "sleep/spans/libc-nanosleep32.txt",
+      "sha256": "18faf8a34e686bf88acf5ac114a1efa6a7a2400b45649e087455773952b8a07e",
+      "bytes": 1793
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/spans/operational-delay-setter.txt",
+      "published": "sleep/spans/operational-delay-setter.txt",
+      "sha256": "9b5e9370d98015724bf7ee75fc2f8d24f79419391957e81ec2fab46516acffed",
+      "bytes": 351
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/spans/runner-move-prefix.txt",
+      "published": "sleep/spans/runner-move-prefix.txt",
+      "sha256": "bb8c5c81a3745368814c17b5325623a892371985d3c721901c853babcf7e9974",
+      "bytes": 2639
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/spans/sleep-callback.txt",
+      "published": "sleep/spans/sleep-callback.txt",
+      "sha256": "1b13e8a66de715ca60d6b987b09f6571b3b9f1ed4ee732c8e31ac52de13c1323",
+      "bytes": 15194
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/spans/sleep-constructor.txt",
+      "published": "sleep/spans/sleep-constructor.txt",
+      "sha256": "7023e3bf1d3b597091b5440eb8464bc4efe0a23a0d47eb67f38c852bd1edb13d",
+      "bytes": 10062
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/OUTPUT_MANIFEST.v1.json",
+      "published": "sleep/OUTPUT_MANIFEST.v1.json",
+      "sha256": "b2e10a6efdfeabd22ee064cc15e20e6d9acf5329c8c063e42a9819e6e99bee25",
+      "bytes": 2644
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/REPORT.md",
+      "published": "common-report.txt",
+      "sha256": "3ac86206587e25f07db979bfec8a46ec0d401f658784e6d15fcb2d7d80676e0d",
+      "bytes": 11046
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/collect_common_v1.py",
+      "published": "common/collect_common_v1.py",
+      "sha256": "ded730079e38d56e9087d9d131143c6a9915c58a1e343f8571406529539add79",
+      "bytes": 14886
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/FIELD_AND_BRANCH_LEDGER.json",
+      "published": "common/FIELD_AND_BRANCH_LEDGER.json",
+      "sha256": "f67b37a2db62bcd494b44d011d202ad4661f18078c3bce13d41f30296b53d361",
+      "bytes": 3762
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/HOST_MODELS.json",
+      "published": "common/HOST_MODELS.json",
+      "sha256": "66d4fc12f7383202d26c1c6d57aa46848525a1bca5a9d8999b6f9d7d93e8707e",
+      "bytes": 6042
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/INPUTS.json",
+      "published": "common/INPUTS.json",
+      "sha256": "a3c39dc5ae8df00318cff983ec08bb168a362c081a33057b6b1ee90b738645a2",
+      "bytes": 845
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/METHOD.json",
+      "published": "common/METHOD.json",
+      "sha256": "1bef21f26faaf987b354179f57487727b72db7d4796b0150cc438e9e2d65dcf3",
+      "bytes": 457
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/ORIGINAL_SOURCE.json",
+      "published": "common/ORIGINAL_SOURCE.json",
+      "sha256": "34530c2d07c213c1e020f9454ad98663367d67b385e4c5e084ca22384a027f44",
+      "bytes": 10541
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/PROVIDER_DECLARATIONS.json",
+      "published": "common/PROVIDER_DECLARATIONS.json",
+      "sha256": "45279498c51428b19635c7333b89b65e6c63c775f2071068a26827b50b6414b3",
+      "bytes": 4593
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/base-operational-move.txt",
+      "published": "common/spans/base-operational-move.txt",
+      "sha256": "d9d79e137ed2e8dd4fb527e6db6c0bf0bb8dcf138f66a6d874d84fdef3862231",
+      "bytes": 2064
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/candidate-steady-clock-now.txt",
+      "published": "common/spans/candidate-steady-clock-now.txt",
+      "sha256": "278925c8bdef879e7e3c4409cd8aab9c3228bca5677a93393251aa4dd3489e39",
+      "bytes": 717
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/completion-and-first-wait-accessors.txt",
+      "published": "common/spans/completion-and-first-wait-accessors.txt",
+      "sha256": "72369bac4368d9d7039014bd5ecda237db45a978cdf22cebd80b386d42b93906",
+      "bytes": 391
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/delay-worker-deadline.txt",
+      "published": "common/spans/delay-worker-deadline.txt",
+      "sha256": "92edd4c8230344be9b1b2f4909cbf3f456b98875194bb73012bae25edac9f793",
+      "bytes": 1533
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/delay-worker-wait-and-callback.txt",
+      "published": "common/spans/delay-worker-wait-and-callback.txt",
+      "sha256": "98fb6dedd5350da20669e5ef71d3e2cd3781d0325cfd53cec0c2643f58d48657",
+      "bytes": 2898
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/duration-worker-deadline.txt",
+      "published": "common/spans/duration-worker-deadline.txt",
+      "sha256": "5b61871510b666883e47e7465794f857efa50ed669798e45a7b15bcd6b0e9478",
+      "bytes": 1534
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/duration-worker-wait-and-callback.txt",
+      "published": "common/spans/duration-worker-wait-and-callback.txt",
+      "sha256": "07bff26ffc4071dc1c40b6191c403af952f6a263ab3f15590e783c3de556e1b4",
+      "bytes": 2912
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/execute-delay-thread-request.txt",
+      "published": "common/spans/execute-delay-thread-request.txt",
+      "sha256": "a9dd931ba5c97a0f2c5153fa32ec66c38142d1a7af78c67d79327611b5a2c150",
+      "bytes": 1431
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/execute-duration-thread-request.txt",
+      "published": "common/spans/execute-duration-thread-request.txt",
+      "sha256": "6205efebe036f520361d3fa058e94bc896e9ae2490008e3a08ddcc62723405a9",
+      "bytes": 1610
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/execute-entry-inline-branch.txt",
+      "published": "common/spans/execute-entry-inline-branch.txt",
+      "sha256": "7ad13c7a14dac1a4daf1652565c014370bdd6b675998864040352071107b3bcc",
+      "bytes": 1496
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/primary-third-slot-noop.txt",
+      "published": "common/spans/primary-third-slot-noop.txt",
+      "sha256": "68d01f074224e369b012d757cba70b4c1d05272d714d291d5f93b5bd8551cd5d",
+      "bytes": 181
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/second-wait-accessors.txt",
+      "published": "common/spans/second-wait-accessors.txt",
+      "sha256": "8b0e819d6e6fb600c9b0fc2d2d93d22514488ea4fdac1325027697108edfc25e",
+      "bytes": 261
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/selected-completion-caller.txt",
+      "published": "common/spans/selected-completion-caller.txt",
+      "sha256": "d3e9b63162e314c1b95e6a8f63171ac51d0e3f205c0f55e43e612eb46df44be1",
+      "bytes": 327
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/shared-domain-initializer.txt",
+      "published": "common/spans/shared-domain-initializer.txt",
+      "sha256": "a765e945ec1e8812277b77ff0fa2a78a8f92c13a1d9dcf0c2e643b448a2aa126",
+      "bytes": 1132
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/shared-stop-notify.txt",
+      "published": "common/spans/shared-stop-notify.txt",
+      "sha256": "da80c127e4e6b17c503969a86fa438a2813614f4f3a3c8a4c280cac1918bc0cb",
+      "bytes": 824
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/sleep-metadata-and-first-wait-store.txt",
+      "published": "common/spans/sleep-metadata-and-first-wait-store.txt",
+      "sha256": "1436962a2cdc5f11eb3f66d3b94158f0018e4c48f2c670ecfeb4851a83f164ec",
+      "bytes": 819
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/spans/sleep-operational-zero-prefix.txt",
+      "published": "common/spans/sleep-operational-zero-prefix.txt",
+      "sha256": "cda90a50cd2d21338b03e2e2dbd8e54f194e50c8b872615982f272de78bba5fc",
+      "bytes": 758
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/OUTPUT_MANIFEST.json",
+      "published": "common/OUTPUT_MANIFEST.json",
+      "sha256": "1355a6cdee85c20add380da0b675077587dcbb68d038747a211ae64f9c072e73",
+      "bytes": 3999
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/REPORT.v2.md",
+      "published": "scenario-report-v2.txt",
+      "sha256": "159b9fbdd60e0e8f16256e1deecd6fa6df11a43bba057914d99fb2bfdb2fefd5",
+      "bytes": 8872
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/collect_scenario_v1.py",
+      "published": "scenario/collect_scenario_v1.py",
+      "sha256": "4d6ae667a4fd3615bdbbe40b91786a40fdbf7052a9eeb507f095beae093f81f5",
+      "bytes": 6952
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/CRITICAL_BYTES.v1.json",
+      "published": "scenario/CRITICAL_BYTES.v1.json",
+      "sha256": "2b7284c8d72417b5a0c79eea08562e71d3e2ad9053f7adb61e896cb84ffd848d",
+      "bytes": 836
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/DIRECT_CALLS.v1.json",
+      "published": "scenario/DIRECT_CALLS.v1.json",
+      "sha256": "956961355b5e548e1b9bbd55ec789703b106731a3eac8ec5f59255ac49352d36",
+      "bytes": 920
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/DISPATCH.v1.json",
+      "published": "scenario/DISPATCH.v1.json",
+      "sha256": "66778fff6fddc478aaf5c50c6055ac499914c102af2abff589e985e3198de0a5",
+      "bytes": 211
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/INPUTS.v1.json",
+      "published": "scenario/INPUTS.v1.json",
+      "sha256": "c388ecfef83a94a069ff25f8e735717910eba574560ba1aa75c67d5762940767",
+      "bytes": 843
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/METHOD.v1.json",
+      "published": "scenario/METHOD.v1.json",
+      "sha256": "abe1eb88e153d8519d5f3cc070fe4cbaa55b5a2172834d0194e5ddf4d9d0f6a8",
+      "bytes": 680
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/PIC_TARGETS.v1.json",
+      "published": "scenario/PIC_TARGETS.v1.json",
+      "sha256": "5fa38369c7bf4cb1382b5ca6f9f8a977b63bed58c101d4e9be02c9e30e854088",
+      "bytes": 688
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/SOURCE_SPANS.v1.json",
+      "published": "scenario/SOURCE_SPANS.v1.json",
+      "sha256": "80a873588885b5247536fbd5cb5cbb206bb1be2891c5f7af4e62b8c2efb1216b",
+      "bytes": 2258
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/VTABLE.v1.json",
+      "published": "scenario/VTABLE.v1.json",
+      "sha256": "ab04fb0efabd930a259f0f9c0904122c6da3c45910c21154016422670eccf8f8",
+      "bytes": 645
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/spans/compiled-dispatch.txt",
+      "published": "scenario/spans/compiled-dispatch.txt",
+      "sha256": "a54f5e6c89629f728375be0373c3599af277e4ded5b24d33a71d8571f8731308",
+      "bytes": 1453
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/spans/compiled-pools.txt",
+      "published": "scenario/spans/compiled-pools.txt",
+      "sha256": "79e82494841b2c2d2d2ead6d13d46c177a0a934c22743b708f42c6a2d4dd5d3c",
+      "bytes": 522
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/spans/compiled-scenario.txt",
+      "published": "scenario/spans/compiled-scenario.txt",
+      "sha256": "87d32e138c5aed52bde0164ff22d500d6682b218d8165ea63c7830f253e97dff",
+      "bytes": 4459
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/spans/functor-manager.txt",
+      "published": "scenario/spans/functor-manager.txt",
+      "sha256": "e78d0f4a60b1591de7bd3fe008469f5752107babde2e7e242b086b046e6b9e5b",
+      "bytes": 1037
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/spans/functor-storage.txt",
+      "published": "scenario/spans/functor-storage.txt",
+      "sha256": "656b84429390f8f62204794044a7901170fbde9f1b954f460869a62ba723af81",
+      "bytes": 3334
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/spans/registry-key-predicate.txt",
+      "published": "scenario/spans/registry-key-predicate.txt",
+      "sha256": "b3f400a361fad1bc388425c60899b7baa257e8a04c170f84f9545a776409fbb4",
+      "bytes": 1389
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/spans/registry-value-normal-path.txt",
+      "published": "scenario/spans/registry-value-normal-path.txt",
+      "sha256": "12d084e85d068c8fb4b4c1198fffd23e7ca657cbb522cfab4b21487957eec12f",
+      "bytes": 4552
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/spans/scenario-invoker.txt",
+      "published": "scenario/spans/scenario-invoker.txt",
+      "sha256": "a7959e8d61297ea0906282a4c05ef7eca3cde6c17d5cd817ed643fc792d0e0ee",
+      "bytes": 16395
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/spans/scenario-runner-constructor.txt",
+      "published": "scenario/spans/scenario-runner-constructor.txt",
+      "sha256": "e3e3461a8f873bfad8f159489070630cb2a77a254ae4d244bab088ac3b633cf7",
+      "bytes": 8991
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/spans/serializer-derived-field.txt",
+      "published": "scenario/spans/serializer-derived-field.txt",
+      "sha256": "065d9766003e27189b14a472142643ff57a895f90498d9d2c3c85fe9e4fab565",
+      "bytes": 1528
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/spans/serializer-pools.txt",
+      "published": "scenario/spans/serializer-pools.txt",
+      "sha256": "00216a2a1d61a3bab4012204623a4f0c71bfe1d8f03673b3a6a33d4ae85455d2",
+      "bytes": 1046
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/OUTPUT_MANIFEST.v1.json",
+      "published": "scenario/OUTPUT_MANIFEST.v1.json",
+      "sha256": "3a87f8cc0f522c14595088e8d43cdc9b69e47a821878a209258239aa40acbb8f",
+      "bytes": 2601
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/REPORT.md",
+      "published": "scenario-report-v1.txt",
+      "sha256": "5bdc4d3073d388aae6589d92f838a0de6ea121bc3a0c2a1b9ce16bde934ab39d",
+      "bytes": 8802
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/scenario/BRANCH_WORDING_REFINEMENT.md",
+      "published": "scenario-branch-wording-history.txt",
+      "sha256": "652c226222e0d3447c93f48fbf4236f6ad50308c90eb3beef58e2a5a235de4a0",
+      "bytes": 1443
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/sleep/API_CONTEXT.json",
+      "published": "sleep-api-context.json",
+      "sha256": "2627975631126c2959103846a93b7a0ad22ef968fde055025fb8a091e0056350",
+      "bytes": 771
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/API_SEMANTICS.json",
+      "published": "api-semantics.json",
+      "sha256": "436f9e26960b37a45db70d571e33ff3716f9d663a8fa0976805a2e70649264fc",
+      "bytes": 868
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/SYNTHESIS.md",
+      "published": "synthesis.txt",
+      "sha256": "f208bde1557e2b59d761bfaf31ce537f01045f07d17814f24a37436dd47c9fdd",
+      "bytes": 1828
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/COVERAGE.md",
+      "published": "coverage.txt",
+      "sha256": "d6128c49581b505da77d9220a014907b88181bee5f893eff07a71e87474b2bb5",
+      "bytes": 1837
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/RANKED_REMAINING_QUESTIONS.md",
+      "published": "remaining-questions.txt",
+      "sha256": "aaae9cacb494cd8e72d5d8faad2839baa4c0a73e182f1c09176d1c516da32255",
+      "bytes": 1478
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/SOURCE_CHECKS.json",
+      "published": "source-checks.json",
+      "sha256": "2f79606eaa4c1724bad9fcb735e51e12042d7c671748aec54d7752dd2ca68cc4",
+      "bytes": 1287
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/reviews/sleep-source-review.md",
+      "published": "sleep-source-review.txt",
+      "sha256": "c6c373a8885dc383003c00c0169e8c45209ae6adcf6102311aff70d141583438",
+      "bytes": 5499
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/reviews/common-source-review.md",
+      "published": "common-source-review.txt",
+      "sha256": "966ea8e3869f77a6f4db2122110546828a46b205aeeef85700099853d691ab76",
+      "bytes": 5868
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/reviews/scenario-source-review.md",
+      "published": "scenario-source-review.txt",
+      "sha256": "ac7068e64b66c80fa50f38482d93283f87a5f4355079caad52cf7915eebcfc45",
+      "bytes": 4746
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "authoritative_report": "REPORT.v2.md",
+  "authoritative_collector": "collect_vector_v2.py",
+  "old_report_sha256": "2899d594563f1598d32d0906deb7bede42ed53eb6340fad096b268b636e2b98c",
+  "old_collector_sha256": "95f0e170e389622b825b1f0ac9ebbc4b5ce79df34d41a4a3695c03e3ff0e24e2",
+  "new_report_sha256": "60323fc53eed456b2a0b6a648e9bbf8e5a7158ee6180cd58534e249aa150c5f0",
+  "new_collector_sha256": "667387237443ffd224edb25a929e588157af299ad2bc5bbf657eefeb74a7bae1",
+  "failure_record": "failed-first-v1/FAILURE.json",
+  "first_v1_generated_outputs": 0,
+  "source_precision": "Enclosing exidx grouped interval b4fd4..b51f4; selected original direct-tailcall entry b509c; no firmware-source or semantic outcome change"
+}

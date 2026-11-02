@@ -1,0 +1,16 @@
+
+/home/bticino/libcoso/libcoso.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000025a0 <get_plug_m@@Base>:
+    25a0:	f0000082 	adrp	x2, 15000 <g_free@Base>
+    25a4:	f940b441 	ldr	x1, [x2, #360]
+    25a8:	b4000061 	cbz	x1, 25b4 <get_plug_m@@Base+0x14>
+    25ac:	aa0103e0 	mov	x0, x1
+    25b0:	d65f03c0 	ret
+    25b4:	aa0003e1 	mov	x1, x0
+    25b8:	f900b440 	str	x0, [x2, #360]
+    25bc:	aa0103e0 	mov	x0, x1
+    25c0:	d65f03c0 	ret

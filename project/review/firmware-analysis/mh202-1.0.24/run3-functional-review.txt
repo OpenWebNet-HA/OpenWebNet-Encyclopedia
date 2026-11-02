@@ -1,0 +1,52 @@
+# Independent static review — MH202 functional/run3
+
+**PASS for the stated bounded static claims; no required correction.** I independently read the report, collector, saved original spans and selected original ELF bytes. I reproduced the collector read-only and checked its provenance/output identities. No original ARM, PHP, JavaScript, vendor process, loader, libc/helper, emulator, FIFO, network or device operation ran. Connection setup remained an opaque call boundary; no authentication/session/framing body was investigated.
+
+This is an independent source review of the functional author's work, not a claim of physical corroboration. Only this review file was written. Producer reports/evidence, originals, prior dossiers, synced sources and repository documents were unchanged.
+
+## Reproduction and original-byte checks
+
+Reproduced:
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/functional/run3/collect_evidence.py --check
+```
+
+Result:20 deterministic outputs plus producer manifest,8 original disassembly ranges,11 author instruction assertions, zero original execution/hooks. Independently verified all20 manifest entries and all8 original range hashes using separately parsed ELF load segments and hash-checked ImageVFS bytes. Manually traced the saved code and independently checked20 selected original instruction/data words, including the OWRITE return tail absent from the saved bounded prefix, Script destination, startup global-base identity, stat wrapper and end's positive-result branch. Checked six finite local return-model outcomes and three host string-format candidates; these are host transcriptions, not original libc execution.
+
+Original inputs are `/home/bticino/bin/bt_script` SHA256 `f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4` and `/home/bticino/lib/libdomotica.so.0.0` SHA256 `5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09`. These paths are inside the firmware image.
+
+## Critical joins checked
+
+- **Action-specific marker guard:** Original OWRITE PIC computation gives base`0x12114`. Its format and prefix are `%s%s/DISABLED` and `/var/tmp/bticino/script/`; Script is reached through the recorded GOT relocation. Original call`0x85cc` targets tiny wrapper`0x9188`, which passes the path/stat-output arguments to `__xstat` with version **value3 in the first argument** at`0x9190`, then tailbranches at`0x9194`. The nearest exported connection-function label does not identify that wrapper's operation.
+- **Exact early return:** The result is compared with0 at`0x85d4`. A zero stat result reaches the log path, sets return slot1 at`0x8618/0x861c`, and branches at`0x8620` to`0x89c8`; independent original-word inspection confirms the tail loads that slot and moves it into r0 at`0x89cc`. This occurs before the F formatter/write. A nonzero result reaches`0x8624`; the source does not restrict that continuation to a particular errno or prove that all marker/error cases have the same product meaning. Return1 is not action success.
+- **Names and globals:** Interpreter `strncmp` uses12 at`0x97a4`, and pool`0x9848` points to actual text ` $NOMESCRIPT`, including its leading blank. Quote search, overlapping same-line copy, tokenization and destination pool`0x9850=0x138b8` match the report. This is separate from taskmanager's `$NOME`/record-name field. Library Script/f_wr/f_rd GLOB_DAT slots`0x12230/0x12214/0x12238` and distinct executable declarations are retained as provider/global-binding facts, not observed shared storage. Consistent names, effective binding, actual script text and filesystem visibility remain prerequisites for the composed marker correspondence.
+- **Selected OREAD prefix:** From`0x7fcc` to first write`0x8064`, the displayed straight-line path formats F text and uses f_wr without the OWRITE stat guard. This supports that bounded prefix comparison only. Caller gates, later OREAD behavior, TWRITE/TWRITEI and other commands are not silently folded into an all-action disabled policy.
+- **S/F/E source-to-receiver correspondence:** Startup gets PID, formats `S %d\n` with size31 and writes strlen bytes, excluding NUL. Independent source identity confirms r5's base`0x13494` and f_wr offset`0x494` give`0x13928`. OWRITE's selected continuation and OREAD prefix format `F %s\n` through the recorded library f_wr slot. end formats `E\n`, size15, then strlen/write. These source shapes match the previously reviewed receiver's payload+2 PID/F text and first-byte E branches; they do not establish complete line delivery, valid parsed OPEN text, real descriptors, producer sequencing, successful process creation or physical effects.
+- **end return predicate:** Original`0x8c24/0x8c28` tests signed write-result>0; the positive branch sets1 at`0x8c64`, otherwise0 at`0x8c58`, then the shared tail returns it. It is not a full two-byte-length comparison. The saved −1/0/1/2 examples preserve that local rule without claiming an observed short write/data loss.
+- **R/P search boundary:** The direct BL→write@PLT list contains one site in this executable and six in this library. The report calls R/P a still-unjoined producer route rather than an archive-wide absence/unreachability finding. Computed calls, other providers and configurable/generated text remain outside that finite search. No connection/authentication search was used to fill the gap.
+
+The positive OWRITE finding is a later action-level refinement to the selected taskmanager path's lack of a +52 guard; it does not retroactively prove suppression of start callbacks or every command. Manual Only if equivalence, full disabling policy, actual marker names/assets, copy grammar, dynamic global binding and response/publication ownership remain correctly unresolved.
+
+## Correction history
+
+The exact first draft's literal assertion expects `$NOMESCRIPT` without the blank. That assertion occurs before the final output-write loop, so the documented pre-output failure/correction is consistent with source ordering. Current evidence asserts the exact leading-blank original literal, and both draft and correction note remain available. This is a host transcription correction, not firmware behavior or an executed input test. No original file was changed.
+
+## Exact reviewed pins
+
+Paths are relative to `functional/run3/`.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `cc8be66fd56d256880c6724987208b86eb7da2ca939212bdb8121f53fa7dca00` |
+| `collect_evidence.py` | `619295953d587ae2c973fd278c7091fbae3eea8a96c80b98df34fbae2c63f8b9` |
+| `output-manifest.json` | `b4cbf65a9ccac556e85a4510dfe83db0ec6d668757d1abeacf9bed0a8da7a5f1` |
+| `critical-words.json` | `9ff4b7f0d298633c9decc0c20a28f781bec3cf7816057e802b6cad8d75ef402a` |
+| `input-hashes.json` | `3c82a0c9794a90969b5336b667ef3dfc7685ffa0a2f9a35fdc3848303960c17f` |
+| `host-boundary-model.json` | `41aadc54908af607133c13cb1b64c33ac2dc285bd70eb25d14223ef68f2c6328` |
+| `safe-literal-evidence.json` | `4f1ce05a41a937ae4f0b7374ced81c7dff48c124455b814c5c771ec5b58bd413` |
+| `original-spans.json` | `95e6812726a401e9706d3f981d9eeba9e8cc9acb2e9bc9dbba8ce78e7d90e520` |
+| `CORRECTIONS.md` | `26dffe698fb1cc16adfac40ab6248e2e8c7a04f1c61563097958e37c4fef4c78` |
+| `development-before-literal-check/collect_evidence.py.txt` | `0fdf8dac61305da31b11f92b0e462281a502d54da5cdf37affb1c7e3ad331d9b` |
+
+The producer manifest covers the remaining inspected output identities, and intentionally excludes this review/report. This review applies to these bytes and scopes, not future revisions, a complete interpreter audit or an actual product execution.

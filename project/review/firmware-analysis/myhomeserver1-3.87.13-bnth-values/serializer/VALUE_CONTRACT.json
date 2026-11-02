@@ -1,0 +1,38 @@
+{
+  "conditional_coherence": "Validrawobject/currentvptr, normal freshJSON/type/string/key/assignment/asDouble/allocation/copy semantics; structural same-object/source chain, not executed fullJSONroundtrip",
+  "method": {
+    "original_execution": 0,
+    "semantic_host_fixtures": 0,
+    "target_IO": 0
+  },
+  "not_claimed": [
+    "numericdomain/units/physicalmeaning or naturalconfiguredscene",
+    "alloptionalfield/default/operatorcontracts",
+    "bitwise/floatingexceptional/formatting/valuepreservation acrossproviders without ordinarypremises",
+    "wholepredicate/cache/consumer/lifetime or actualoperation"
+  ],
+  "raw_selector": {
+    "distinct_mode_offset": 44,
+    "distinct_status_offset": 48,
+    "offset": 40,
+    "selected": 2,
+    "source_double_offset": 56
+  },
+  "reparse_order": "modepresent\u2192selector0/asInt; else statuspresent\u2192selector1/asBool; else setpointpresent\u2192selector2/asDouble/raw56; later optionalpaths notpromoted",
+  "same_JSON_join": {
+    "compiled": "a7e52 consumes same reparsedtemporary; raw40\u2192compiled144 and raw56\u2192compiled160",
+    "destination": "initializerSP592 (r4) at a7e2a",
+    "raw_virtual": "a7e28 vptr\u2192slot0 at a7e36\u2192a7e38",
+    "reparse": "unchangedr4\u2192r1 a7e3c\u2192a7e44 2c050",
+    "reparsed_temporary": "SP4280 (r9)"
+  },
+  "serializer": {
+    "JSON_destination": "incomingr0\u2192r4",
+    "base": "0x23aac starts freshJsonValueType0; ID ifnonempty, enabled, type, operator unless\u22121",
+    "entry": "0x23c3c",
+    "other_presence": "Selectedderivedarm doesnotrequestmode/status; under ordinaryfreshJSON/base/member/assignment semantics neither exists to preempt reparse",
+    "raw_receiver": "incomingr1\u2192r5",
+    "selected": "raw40==2\u2192TBB23c62 row2\u219223cce; rawdouble56\u2192D0\u2192JsonValue(double)\u2192exactsetpoint key\u2192moveassignment",
+    "suppression": "No value/sentinel/zero test in selected setpoint arm; no suppliednumericfixture"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "BYTE_GUARDS.json": {
+    "bytes": 767,
+    "sha256": "e5a13ad4348cb7b6f6d17e6f6242be4d6f25f86ba4bf86e8ab63d605c7347bc9"
+  },
+  "DIRECT_CALLS.json": {
+    "bytes": 731,
+    "sha256": "dd8636ead8a79a226e75ca0ab7580dacc4c2fcfacabb0ce5e8a7f76ec58c7b35"
+  },
+  "DISPATCH_AND_IDENTITY.json": {
+    "bytes": 940,
+    "sha256": "4f6233a13fd3afdc62a90166c126bf9c71fcf98a5e550a7eb81d44f4109d477e"
+  },
+  "FIELD_LEDGER.json": {
+    "bytes": 994,
+    "sha256": "f2cd8ba4cd8f5189550c7ecb16055750623a39ed52fcfae6da1555644cc9c7d5"
+  },
+  "INPUTS.json": {
+    "bytes": 856,
+    "sha256": "7090b0ef7d73f34d114d6e9059495b8151840cebbdf81b3f96b04f95df21d4d9"
+  },
+  "METHOD.json": {
+    "bytes": 473,
+    "sha256": "0923df31c4ce66be76103cb1dad7b66c2920b102657480fba5f1a74486c21bc8"
+  },
+  "SCHEMA_KEYS.json": {
+    "bytes": 1147,
+    "sha256": "e8c33473ec3ed7da06bf729584461a43cbaa6ee812ab637591f3ba55cfc9541a"
+  },
+  "SOURCE_SPANS.json": {
+    "bytes": 1252,
+    "sha256": "d74b35b377c514c200334d477b02ce10dc93846e3e5bc9388f15c2ad5cd7235e"
+  },
+  "spans/common-move.txt": {
+    "bytes": 2500,
+    "sha256": "5f4242651b58271a5a08635558c1b09e241045beab84cafbfec56d1d4ab849ff"
+  },
+  "spans/compiled-metadata-to-operational.txt": {
+    "bytes": 1352,
+    "sha256": "adf1b7eb91e50dd14803693122c5238450c79b3539485171773a1a9465981cff"
+  },
+  "spans/compiled-selected-branch.txt": {
+    "bytes": 6776,
+    "sha256": "aa47c925747697771e2eda5b1a52b7a18658a633ad26f6cd31ea3a53fcc2760b"
+  },
+  "spans/initializer-action-selector.txt": {
+    "bytes": 521,
+    "sha256": "3989863fcfe65788d9d931bde7131f57fc4e9f2be4a1c6523af58c77b019750d"
+  },
+  "spans/raw-bn3l-schema.txt": {
+    "bytes": 20659,
+    "sha256": "60d1449a11a197e386f76c362237254a88023a513b0133db69886f239af378f7"
+  },
+  "spans/raw-factory-selected-branch.txt": {
+    "bytes": 2227,
+    "sha256": "55a22897860e26b4abd1953019801e29ec0e5a0f2cf2cfc6ae8625b6bafe3a79"
+  }
+}

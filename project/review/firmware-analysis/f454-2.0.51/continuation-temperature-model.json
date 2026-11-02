@@ -1,0 +1,66 @@
+{
+  "method": "Host Python model only; no original instructions or JavaScript execution",
+  "scope": "Selected ordinary ASCII examples; framework, exceptions, transport and actual input availability remain outside model",
+  "results": [
+    {
+      "input": "*#4*1*0*0501##",
+      "selected_mapper": "dim0",
+      "matched": true,
+      "where_suffix": "1*0*0501##",
+      "temperature_suffix": "0501##",
+      "delimiter_index": 4,
+      "event": {
+        "eventName": "cu_zone_set_actual_temperature",
+        "eventType": "cu_zone_set_actual_temperature",
+        "where": "1",
+        "actual_temperature": "0501",
+        "who": "4"
+      }
+    },
+    {
+      "input": "*#4*1*0*0511##",
+      "selected_mapper": "dim0",
+      "matched": true,
+      "where_suffix": "1*0*0511##",
+      "temperature_suffix": "0511##",
+      "delimiter_index": 4,
+      "event": {
+        "eventName": "cu_zone_set_actual_temperature",
+        "eventType": "cu_zone_set_actual_temperature",
+        "where": "1",
+        "actual_temperature": "0511",
+        "who": "4"
+      }
+    },
+    {
+      "input": "*#4*11*15*1*1010*1111##",
+      "selected_mapper": "dim15",
+      "selector": "1",
+      "event": {
+        "eventName": "cu_zone_set_actual_temperature",
+        "eventType": "cu_zone_set_actual_temperature",
+        "where": "11",
+        "actual_temperature": "1010",
+        "who": "4"
+      }
+    },
+    {
+      "input": "*#4*11*15*1*1501*1111##",
+      "selected_mapper": "dim15",
+      "selector": "1",
+      "event": {
+        "eventName": "cu_zone_set_actual_temperature",
+        "eventType": "cu_zone_set_actual_temperature",
+        "where": "11",
+        "actual_temperature": "1501",
+        "who": "4"
+      }
+    },
+    {
+      "input": "*#4*11*15*2*1010*1111##",
+      "selected_mapper": "dim15",
+      "selector": "2",
+      "temperature_event_selected": false
+    }
+  ]
+}

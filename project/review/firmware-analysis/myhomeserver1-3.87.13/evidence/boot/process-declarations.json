@@ -1,0 +1,982 @@
+{
+  "records": {
+    "normal:/home/bticino/cfg/stack_open.xml": [
+      {
+        "XML_record_lines": [
+          93,
+          98
+        ],
+        "declared_image_path": "/home/bticino/bin/openserver",
+        "name": "openserver",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p0",
+        "resolved_path": "/home/bticino/bin/openserver",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          99,
+          103
+        ],
+        "declared_image_path": "/home/bticino/bin/scsserver",
+        "name": "scsserver",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p1",
+        "resolved_path": "/home/bticino/bin/scsserver",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          104,
+          108
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_luci",
+        "name": "bt_luci",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p2",
+        "resolved_path": "/home/bticino/bin/bt_luci",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          109,
+          113
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_device",
+        "name": "bt_device",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p3",
+        "resolved_path": "/home/bticino/bin/bt_device",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          114,
+          118
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_dbus_manager",
+        "name": "bt_dbus_manager",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p4",
+        "resolved_path": "/home/bticino/bin/bt_dbus_manager",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          119,
+          123
+        ],
+        "declared_image_path": "/home/bticino/bin/coso",
+        "name": "coso",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p5",
+        "resolved_path": "/home/bticino/bin/coso",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          124,
+          128
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_termo",
+        "name": "bt_termo",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p6",
+        "resolved_path": "/home/bticino/bin/bt_termo",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          129,
+          133
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_supervisione",
+        "name": "bt_supervisione",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p7",
+        "resolved_path": "/home/bticino/bin/bt_supervisione",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          134,
+          138
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_multi",
+        "name": "bt_multi",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p8",
+        "resolved_path": "/home/bticino/bin/bt_multi",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          139,
+          143
+        ],
+        "declared_image_path": "/home/bticino/bin/fw_manager",
+        "name": "fw_manager",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p9",
+        "resolved_path": "/home/bticino/bin/fw_manager",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          144,
+          149
+        ],
+        "declared_image_path": "/home/bticino/bt_netatmo/bt_netatmo.sh",
+        "name": "bt_netatmo.sh",
+        "path": "bt_netatmo",
+        "present_regular": true,
+        "record": "p10",
+        "resolved_path": "/home/bticino/bt_netatmo/bt_netatmo.sh",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          150,
+          155
+        ],
+        "declared_image_path": "/home/bticino/bt_drover/bt_drover.sh",
+        "name": "bt_drover.sh",
+        "path": "bt_drover",
+        "present_regular": true,
+        "record": "p11",
+        "resolved_path": "/home/bticino/bt_drover/bt_drover.sh",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          156,
+          160
+        ],
+        "declared_image_path": "/home/bticino/matrix_mx/matrix_mx",
+        "name": "matrix_mx",
+        "path": "matrix_mx",
+        "present_regular": true,
+        "record": "p12",
+        "resolved_path": "/home/bticino/matrix_mx/matrix_mx",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          161,
+          166
+        ],
+        "declared_image_path": "/home/bticino/bt_drover_mx/bt_drover_mx.sh",
+        "name": "bt_drover_mx.sh",
+        "path": "bt_drover_mx",
+        "present_regular": true,
+        "record": "p13",
+        "resolved_path": "/home/bticino/bt_drover_mx/bt_drover_mx.sh",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          167,
+          171
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_thermo_manager",
+        "name": "bt_thermo_manager",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p14",
+        "resolved_path": "/home/bticino/bin/bt_thermo_manager",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          172,
+          176
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_mail_sender",
+        "name": "bt_mail_sender",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p15",
+        "resolved_path": "/home/bticino/bin/bt_mail_sender",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          177,
+          181
+        ],
+        "declared_image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+        "name": "scheduling_manager",
+        "path": "scheduling_manager",
+        "present_regular": true,
+        "record": "p16",
+        "resolved_path": "/home/bticino/scheduling_manager/scheduling_manager",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          182,
+          186
+        ],
+        "declared_image_path": "/home/bticino/bt_smart_home_manager/bt_smart_home_manager",
+        "name": "bt_smart_home_manager",
+        "path": "bt_smart_home_manager",
+        "present_regular": true,
+        "record": "p17",
+        "resolved_path": "/home/bticino/bt_smart_home_manager/bt_smart_home_manager",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          187,
+          191
+        ],
+        "declared_image_path": "/home/bticino/energy_manager/energy_manager",
+        "name": "energy_manager",
+        "path": "energy_manager",
+        "present_regular": true,
+        "record": "p18",
+        "resolved_path": "/home/bticino/energy_manager/energy_manager",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          192,
+          196
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_jdevice",
+        "name": "bt_jdevice",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p19",
+        "resolved_path": "/home/bticino/bin/bt_jdevice",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          197,
+          201
+        ],
+        "declared_image_path": "/home/bticino/player_manager/player_manager",
+        "name": "player_manager",
+        "path": "player_manager",
+        "present_regular": true,
+        "record": "p20",
+        "resolved_path": "/home/bticino/player_manager/player_manager",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          202,
+          206
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_ext_light",
+        "name": "bt_ext_light",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p21",
+        "resolved_path": "/home/bticino/bin/bt_ext_light",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          207,
+          211
+        ],
+        "declared_image_path": "/home/bticino/alarm_manager/alarm_manager",
+        "name": "alarm_manager",
+        "path": "alarm_manager",
+        "present_regular": true,
+        "record": "p22",
+        "resolved_path": "/home/bticino/alarm_manager/alarm_manager",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          212,
+          216
+        ],
+        "declared_image_path": "/home/bticino/backup_manager/backup_manager",
+        "name": "backup_manager",
+        "path": "backup_manager",
+        "present_regular": true,
+        "record": "p23",
+        "resolved_path": "/home/bticino/backup_manager/backup_manager",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          217,
+          221
+        ],
+        "declared_image_path": "/home/bticino/gateway_manager/gateway_manager",
+        "name": "gateway_manager",
+        "path": "gateway_manager",
+        "present_regular": true,
+        "record": "p24",
+        "resolved_path": "/home/bticino/gateway_manager/gateway_manager",
+        "working_mode": "0"
+      }
+    ],
+    "normal:/home/bticino/cfg/stack_open_reduced.xml": [
+      {
+        "XML_record_lines": [
+          92,
+          97
+        ],
+        "declared_image_path": "/home/bticino/bin/openserver",
+        "name": "openserver",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p0",
+        "resolved_path": "/home/bticino/bin/openserver",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          98,
+          103
+        ],
+        "declared_image_path": "/home/bticino/bin/scsserver",
+        "name": "scsserver",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p1",
+        "resolved_path": "/home/bticino/bin/scsserver",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          104,
+          109
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_luci",
+        "name": "bt_luci",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p2",
+        "resolved_path": "/home/bticino/bin/bt_luci",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          110,
+          115
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_device",
+        "name": "bt_device",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p3",
+        "resolved_path": "/home/bticino/bin/bt_device",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          116,
+          120
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_dbus_manager",
+        "name": "bt_dbus_manager",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p4",
+        "resolved_path": "/home/bticino/bin/bt_dbus_manager",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          121,
+          126
+        ],
+        "declared_image_path": "/home/bticino/bin/coso",
+        "name": "coso",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p5",
+        "resolved_path": "/home/bticino/bin/coso",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          127,
+          132
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_termo",
+        "name": "bt_termo",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p6",
+        "resolved_path": "/home/bticino/bin/bt_termo",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          133,
+          138
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_supervisione",
+        "name": "bt_supervisione",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p7",
+        "resolved_path": "/home/bticino/bin/bt_supervisione",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          139,
+          144
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_multi",
+        "name": "bt_multi",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p8",
+        "resolved_path": "/home/bticino/bin/bt_multi",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          145,
+          150
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_upnp_hls",
+        "name": "bt_upnp_hls",
+        "path": "bin",
+        "present_regular": false,
+        "record": "p9",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          151,
+          156
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_eliot",
+        "name": "bt_eliot",
+        "path": "bin",
+        "present_regular": false,
+        "record": "p10",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          157,
+          162
+        ],
+        "declared_image_path": "/home/bticino/bin/SmartToolHLS",
+        "name": "SmartToolHLS",
+        "path": "bin",
+        "present_regular": false,
+        "record": "p11",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          163,
+          167
+        ],
+        "declared_image_path": "/home/bticino/bin/fw_manager",
+        "name": "fw_manager",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p12",
+        "resolved_path": "/home/bticino/bin/fw_manager",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          168,
+          173
+        ],
+        "declared_image_path": "/home/bticino/bt_isaac/isaacbt.sh",
+        "name": "isaacbt.sh",
+        "path": "bt_isaac",
+        "present_regular": false,
+        "record": "p13",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          174,
+          179
+        ],
+        "declared_image_path": "/home/bticino/bt_drover/bt_drover.sh",
+        "name": "bt_drover.sh",
+        "path": "bt_drover",
+        "present_regular": true,
+        "record": "p14",
+        "resolved_path": "/home/bticino/bt_drover/bt_drover.sh",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          180,
+          185
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_thermo_central_unit",
+        "name": "bt_thermo_central_unit",
+        "path": "bin",
+        "present_regular": false,
+        "record": "p15",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          186,
+          191
+        ],
+        "declared_image_path": "/home/bticino/matrix/matrix",
+        "name": "matrix",
+        "path": "matrix",
+        "present_regular": false,
+        "record": "p16",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          192,
+          197
+        ],
+        "declared_image_path": "/home/bticino/matrix_mx/matrix_mx",
+        "name": "matrix_mx",
+        "path": "matrix_mx",
+        "present_regular": true,
+        "record": "p17",
+        "resolved_path": "/home/bticino/matrix_mx/matrix_mx",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          198,
+          203
+        ],
+        "declared_image_path": "/home/bticino/bt_drover_mx/bt_drover_mx.sh",
+        "name": "bt_drover_mx.sh",
+        "path": "bt_drover_mx",
+        "present_regular": true,
+        "record": "p18",
+        "resolved_path": "/home/bticino/bt_drover_mx/bt_drover_mx.sh",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          204,
+          209
+        ],
+        "declared_image_path": "/home/bticino/bt_netatmo/bt_netatmo.sh",
+        "name": "bt_netatmo.sh",
+        "path": "bt_netatmo",
+        "present_regular": true,
+        "record": "p19",
+        "resolved_path": "/home/bticino/bt_netatmo/bt_netatmo.sh",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          210,
+          214
+        ],
+        "declared_image_path": "/home/bticino/bt_thermoregulation_manager/bt_thermoregulation_manager",
+        "name": "bt_thermoregulation_manager",
+        "path": "bt_thermoregulation_manager",
+        "present_regular": false,
+        "record": "p20",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          215,
+          219
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_mail_sender",
+        "name": "bt_mail_sender",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p21",
+        "resolved_path": "/home/bticino/bin/bt_mail_sender",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          220,
+          224
+        ],
+        "declared_image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+        "name": "scheduling_manager",
+        "path": "scheduling_manager",
+        "present_regular": true,
+        "record": "p22",
+        "resolved_path": "/home/bticino/scheduling_manager/scheduling_manager",
+        "working_mode": "0"
+      }
+    ],
+    "recovery:/home/bticino/cfg/stack_open.xml": [
+      {
+        "XML_record_lines": [
+          93,
+          98
+        ],
+        "declared_image_path": "/home/bticino/bin/openserver",
+        "name": "openserver",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p0",
+        "resolved_path": "/home/bticino/bin/openserver",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          99,
+          103
+        ],
+        "declared_image_path": "/home/bticino/bin/scsserver",
+        "name": "scsserver",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p1",
+        "resolved_path": "/home/bticino/bin/scsserver",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          104,
+          108
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_luci",
+        "name": "bt_luci",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p2",
+        "resolved_path": "/home/bticino/bin/bt_luci",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          109,
+          113
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_device",
+        "name": "bt_device",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p3",
+        "resolved_path": "/home/bticino/bin/bt_device",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          114,
+          118
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_dbus_manager",
+        "name": "bt_dbus_manager",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p4",
+        "resolved_path": "/home/bticino/bin/bt_dbus_manager",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          119,
+          123
+        ],
+        "declared_image_path": "/home/bticino/bin/coso",
+        "name": "coso",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p5",
+        "resolved_path": "/home/bticino/bin/coso",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          124,
+          128
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_termo",
+        "name": "bt_termo",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p6",
+        "resolved_path": "/home/bticino/bin/bt_termo",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          129,
+          133
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_supervisione",
+        "name": "bt_supervisione",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p7",
+        "resolved_path": "/home/bticino/bin/bt_supervisione",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          134,
+          138
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_multi",
+        "name": "bt_multi",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p8",
+        "resolved_path": "/home/bticino/bin/bt_multi",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          139,
+          143
+        ],
+        "declared_image_path": "/home/bticino/bin/fw_manager",
+        "name": "fw_manager",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p9",
+        "resolved_path": "/home/bticino/bin/fw_manager",
+        "working_mode": "1"
+      },
+      {
+        "XML_record_lines": [
+          144,
+          149
+        ],
+        "declared_image_path": "/home/bticino/bt_netatmo/bt_netatmo.sh",
+        "name": "bt_netatmo.sh",
+        "path": "bt_netatmo",
+        "present_regular": true,
+        "record": "p10",
+        "resolved_path": "/home/bticino/bt_netatmo/bt_netatmo.sh",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          150,
+          155
+        ],
+        "declared_image_path": "/home/bticino/bt_drover/bt_drover.sh",
+        "name": "bt_drover.sh",
+        "path": "bt_drover",
+        "present_regular": true,
+        "record": "p11",
+        "resolved_path": "/home/bticino/bt_drover/bt_drover.sh",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          156,
+          160
+        ],
+        "declared_image_path": "/home/bticino/matrix_mx/matrix_mx",
+        "name": "matrix_mx",
+        "path": "matrix_mx",
+        "present_regular": true,
+        "record": "p12",
+        "resolved_path": "/home/bticino/matrix_mx/matrix_mx",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          161,
+          166
+        ],
+        "declared_image_path": "/home/bticino/bt_drover_mx/bt_drover_mx.sh",
+        "name": "bt_drover_mx.sh",
+        "path": "bt_drover_mx",
+        "present_regular": true,
+        "record": "p13",
+        "resolved_path": "/home/bticino/bt_drover_mx/bt_drover_mx.sh",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          167,
+          171
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_thermo_manager",
+        "name": "bt_thermo_manager",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p14",
+        "resolved_path": "/home/bticino/bin/bt_thermo_manager",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          172,
+          176
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_mail_sender",
+        "name": "bt_mail_sender",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p15",
+        "resolved_path": "/home/bticino/bin/bt_mail_sender",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          177,
+          181
+        ],
+        "declared_image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+        "name": "scheduling_manager",
+        "path": "scheduling_manager",
+        "present_regular": true,
+        "record": "p16",
+        "resolved_path": "/home/bticino/scheduling_manager/scheduling_manager",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          182,
+          186
+        ],
+        "declared_image_path": "/home/bticino/bt_smart_home_manager/bt_smart_home_manager",
+        "name": "bt_smart_home_manager",
+        "path": "bt_smart_home_manager",
+        "present_regular": true,
+        "record": "p17",
+        "resolved_path": "/home/bticino/bt_smart_home_manager/bt_smart_home_manager",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          187,
+          191
+        ],
+        "declared_image_path": "/home/bticino/energy_manager/energy_manager",
+        "name": "energy_manager",
+        "path": "energy_manager",
+        "present_regular": true,
+        "record": "p18",
+        "resolved_path": "/home/bticino/energy_manager/energy_manager",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          192,
+          196
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_jdevice",
+        "name": "bt_jdevice",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p19",
+        "resolved_path": "/home/bticino/bin/bt_jdevice",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          197,
+          201
+        ],
+        "declared_image_path": "/home/bticino/player_manager/player_manager",
+        "name": "player_manager",
+        "path": "player_manager",
+        "present_regular": true,
+        "record": "p20",
+        "resolved_path": "/home/bticino/player_manager/player_manager",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          202,
+          206
+        ],
+        "declared_image_path": "/home/bticino/bin/bt_ext_light",
+        "name": "bt_ext_light",
+        "path": "bin",
+        "present_regular": true,
+        "record": "p21",
+        "resolved_path": "/home/bticino/bin/bt_ext_light",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          207,
+          211
+        ],
+        "declared_image_path": "/home/bticino/alarm_manager/alarm_manager",
+        "name": "alarm_manager",
+        "path": "alarm_manager",
+        "present_regular": true,
+        "record": "p22",
+        "resolved_path": "/home/bticino/alarm_manager/alarm_manager",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          212,
+          216
+        ],
+        "declared_image_path": "/home/bticino/backup_manager/backup_manager",
+        "name": "backup_manager",
+        "path": "backup_manager",
+        "present_regular": true,
+        "record": "p23",
+        "resolved_path": "/home/bticino/backup_manager/backup_manager",
+        "working_mode": "0"
+      },
+      {
+        "XML_record_lines": [
+          217,
+          221
+        ],
+        "declared_image_path": "/home/bticino/gateway_manager/gateway_manager",
+        "name": "gateway_manager",
+        "path": "gateway_manager",
+        "present_regular": true,
+        "record": "p24",
+        "resolved_path": "/home/bticino/gateway_manager/gateway_manager",
+        "working_mode": "0"
+      }
+    ]
+  },
+  "scope": "Whitelisted original XML declarations/resolution only; no active configuration, startup success or whole-image absence claim.",
+  "selected_XML_values": {
+    "normal:/home/bticino/cfg/stack_open.xml": {
+      "./sw/dedrifu/enable": "0",
+      "./sw/device_update/type": "1",
+      "./sw/extra_mount/enable": "0",
+      "./sw/normal_status": "4",
+      "./sw/scsserver/bus_type": "0",
+      "./sw/scsserver/port": "20001",
+      "./sw/scsserver/serialchannel/device": "/dev/ttymxc2"
+    },
+    "normal:/home/bticino/cfg/stack_open_reduced.xml": {
+      "./sw/dedrifu/enable": "0",
+      "./sw/device_update/type": "1",
+      "./sw/extra_mount/enable": "0",
+      "./sw/normal_status": "4",
+      "./sw/scsserver/bus_type": "0",
+      "./sw/scsserver/port": "20001",
+      "./sw/scsserver/serialchannel/device": "/dev/ttymxc2"
+    },
+    "recovery:/home/bticino/cfg/stack_open.xml": {
+      "./sw/dedrifu/enable": "0",
+      "./sw/device_update/type": "1",
+      "./sw/extra_mount/enable": "0",
+      "./sw/normal_status": "4",
+      "./sw/scsserver/bus_type": "0",
+      "./sw/scsserver/port": "20001",
+      "./sw/scsserver/serialchannel/device": "/dev/ttymxc2"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+# Independent static review — packaged N_CONF declaration
+
+**No material discrepancy found in the reviewed report/collector.** The examined `/art.xml` declares `/root/art1/mynconfdiag` as text15 at line8. Original callback and synchronization code support the stated conditional declaration→slot3→setter-argument linkage. The report correctly distinguishes this new packaged declaration from the meaning of15, a current EEPROM value or an executed provisioning transaction.
+
+## Reviewed identities
+
+| Artifact | SHA256 |
+|---|---|
+|`REPORT.md`|`2d587cfa155c7f8b03adbdf6b8a9490afedc646573e4edbd454e2aa410556f2c`|
+|`collect_identity.py`|`6346d5b77198ae8d0aa8eb4db80b4f42720dd9432661176c3e225bb5308efc6a`|
+|`identity-evidence.json`|`e8a3895655e34cf90a1f7ec2dcbedaf48fbafd4f9eb7f2cb879d96ece8cd7ae2`|
+|Original `/art.xml`|`695d843aff590f632101d4d957d7d59a183abc2710d53b6f0fe6e56ba6b0b1a3`|
+|Original `liblghal.so.0.0`|`ed3c3ebd4ad722c25ccf4651edf5665d5dccc21fb6d35774fef6bfaf4878e250`|
+
+## Independent checks
+
+The collector was evaluated as host-side inspection code with every intended write intercepted into memory. All nine generated span/evidence byte strings equal the existing saved files exactly. Eleven parent-authored input/output/report files retained their hashes before and after this check. No parent file was rewritten; bytecode writing was disabled before importing the read-only image accessor.
+
+Canonical ImageVFS reads independently confirmed the root element is `root`, the direct `art1/mynconfdiag` leaf is15, and the allowlisted leaf occurs at line8. Other XML field values were not printed or included in this review. The collector's six original PC-relative literal assertions and160 retained instruction-word checks pass. Nine additional selected original instruction words were checked independently against the ELF, including argument preservation, array-base construction, generation comparison, leaf store and setter-argument loads.
+
+The static dataflow was also reviewed across the intervening branches:
+
+- Callback0x125d4 retains its text pointer and user-data structure, requires list components `root` and `art1`, and obtains the next leaf component. Its0x126dc comparison recognizes `mynconfdiag`;0x126f4 duplicates the text and0x126f8 stores the returned pointer at output-array+12. This is slot3 of the32-bit pointer array, not EEPROM offset0x15e or a physical count.
+- The read_art_file setup passes a user-data structure whose first word is the caller's output-array pointer. Independently resolved GOT arithmetic selects cell0x1f494 for the text-method slot; the original dynamic relocation names text0x125d4. This supports the callback registration relationship without executing GLib or a parser.
+- configure_device saves its bool argument in r6 at0x86dc. It builds the output-array base atSP+36 and requires the cached/detected generation value1 before the compared-key synchronization branch. A mismatching key selects the initial `/art.xml` load; original0x887c loadsSP+48, exactly base+12, and0x8880 calls hal_set_nconfdiag with that pointer.
+- The matching-key branch reaches0x8948's bool check. Its later route constructs `/art.xml.<codename>`, selects it only when its stat wrapper returns0 and otherwise selects `/art.xml`. The stat wrapper0x128c4 is an actual version3 __xstat adapter. The variant-file override is therefore a real code-level qualification, not an invented lookup order.
+- The update route compares getter text with the slot3 pointer at0x8a98–0x8aa8 and calls the setter on mismatch at0x8ac4–0x8ac8. No successful setter effect or live storage value follows from that static argument path.
+
+## Scope assessment
+
+The report's positive new fact is supported: this archive contains a packaged declaration15 and original conditional writer linkage. It does not establish that every startup selects that file, that the generation/key conditions hold, that XML parsing completes, that a setter succeeds or that an installed device currently contains15. Caller selection, actual code-name variant, storage state, parser and write outcomes remain explicit boundaries.
+
+The text appropriately avoids interpreting15 as a configurator count, all-ones sentinel, universal constant, catalogue Module/slot count or WHO13 compatibility value. The reconciliation preserves the earlier reports as historical observations rather than silently rewriting their prior lack of a recovered default.
+
+No firmware/native helper, callback, original process, EEPROM/file write, service, network/device operation or closed-authentication branch was executed. Host XML parsing, address arithmetic, disassembly inspection and document reproduction are static inspection methods. The only new disk artifact written by this review is this file; parent report/collector/evidence, completed overnight material, original firmware and repository sources remain unchanged.

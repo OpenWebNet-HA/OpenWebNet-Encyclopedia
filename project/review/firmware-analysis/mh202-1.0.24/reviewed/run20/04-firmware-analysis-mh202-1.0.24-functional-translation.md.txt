@@ -1,0 +1,31 @@
+# MH202 1.0.24 functional translation
+
+MH2021.0.24 contains distinct sound and alarm translation plugins with their own internal routing criteria and message formats. The selected paths below are static implementation evidence for the exact [firmware profile](mh202-1.0.24.md). The [auxiliary record-copy test](mh202-1.0.24-record-and-script-lifecycle.md#auxiliary-field-records-use-a-command-directed-copy) separately executes original parser and helper code. Internal bodies, generated OPEN candidates and physical observations remain different evidence classes.
+
+| Namespace | Selected source boundary | Generated candidate | Evidence scope |
+| --- | --- | --- | --- |
+|WHO22|Supplied parsed kind2, WHERE1 and null selectors|Internal ASCII `95008F9F`|Static query branch and brief-envelope wrapper|
+|WHO22|Separate supplied brief body `90008F00`|`*22*1#1#0*1#1##`|Static reverse format and text/list helper|
+|WHO5|Separate supplied brief body `00004209`, opcode text42 and status text09|`*5*27*##`|Static ordinary status branch and conditional same-record conversion|
+
+These synthetic cases are not captured serial frames or a causal query/reply sequence. Original parser acceptance, active plugin/provider state and physical behavior are not established by the two static translation reports.
+
+## Sound query and reverse text
+
+Actual multimedia translation registration has reverse criterion `8` and forward criterion `22`; its callback chooses the selected conversions through direction pairs. Internal criterion `8` is not `WHO 8`. On one coherent parsed `WHO 22`, kind `2`, simple `WHERE 1` case, the candidate address helper leaves both selectors null. The original query-format branch produces `95008F9F`, wrapped as type `3`, representation `1`, SCS routing `8`.
+
+A separately supplied brief body `90008F00` follows the selected character/type mapping. It constructs the complete WHAT text `1#1#0` and WHERE text `1#1`, then passes `*22*1#1#0*1#1##` to the text/list helper with routing `22`. That helper does not run the OPEN parser. Do not flatten the parameterized fields to WHAT1/WHERE1 or use this candidate to replace the published tagged-address grammar.
+
+The forward allocation/helper stores copy the source ID but do not initialize status offset `52` in the selected body. The reverse output copies status and ID from its own input. These are local field-copy facts, not complete initialization, correlation or memory-safety conclusions. No volume, sound-source or ON/OFF meaning is assigned from these synthetic character values. See the [sound translation report](../../project/review/firmware-analysis/mh202-1.0.24/run20-sound-report.txt), [independent source review](../../project/review/firmware-analysis/mh202-1.0.24/run20-sound-review.txt) and [WHO22 reference](../../functional/who-22-sound-diffusion/).
+
+## Alarm status and the published command vocabulary
+
+The alarm translator registers reverse source criterion `4` and parsed-output criterion `5`. These routing axes do not identify `WHO 4` and `WHO 5` as one system. A selected type3/representation1 record is split into four two-character slices. The synthetic body `00004209` avoids the separate special-prefix branch; opcode text `42` and status text `09` select literal `27`. The fixed format constructs `*5*27*##` and passes it with the existing record to the core parser/conversion helper.
+
+The [published WHO5 vocabulary](../../functional/who-5-alarm/what.md) already labels `WHAT 27` as Stop programming. Preserve that label. This incoming-status software selection alone does not prove that physical programming stopped or make status `09` a universal programming-event value.
+
+The candidate has a literal empty WHERE field. It is not normalized to `0` or `1`, identified as a published central target, or conflated with distinct published and touchscreen query forms. Actual same-build acceptance of this empty-WHERE string remains unexecuted. Under normal parser/provider/list completion, the existing-record core path would replace its body with a parsed object and preserve status/ID; a prior WHO2 helper test is not WHO5 execution evidence. See the [alarm status report](../../project/review/firmware-analysis/mh202-1.0.24/run20-alarm-report.txt), [independent source review](../../project/review/firmware-analysis/mh202-1.0.24/run20-alarm-review.txt) and [reference-boundary reconciliation](../../project/review/firmware-analysis/mh202-1.0.24/run20-reference-boundaries.txt).
+
+## Remaining boundaries
+
+The two translation areas add no original instructions or native corpus. Active multimedia STM/synchronizer behavior, upstream alarm routing/admission, generated-candidate parsing, optional address forms, complete ownership/error paths and physical effects remain open. Missing external assets and full runtime/provider limits remain in the [coverage record](../../project/review/firmware-analysis/mh202-1.0.24/).

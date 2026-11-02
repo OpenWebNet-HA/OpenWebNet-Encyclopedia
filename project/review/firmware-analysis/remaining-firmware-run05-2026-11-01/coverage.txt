@@ -1,0 +1,11 @@
+# Coverage after run05
+
+| Family | New selected reach | Remaining |
+| --- | --- | --- |
+| F450std/PROD | Startup alias declaration plus conditional original script request linking temporary/parser and packaged paths | Effective alias/config/db_name/extra50/key/extraction/actualDB, whole startup/providers |
+| F453AV | Own recovery entry/import/candidate-main argument edge | Candidate mainbody, naturalrecovery, full dependency/provider/ordering/hardware |
+| F459 | Constructor externalglobal-address→loadedpointer→sourcefield→receiver-string assignment | Globaldefinition/type/value/lifetime/naturalcaller, actualnamespace/plugin/DB/freshness/durability |
+| MH200N | Inherited reader/token/copy-request contracts | Fullgrammar/fieldmeaning/capacity/actualresources/install |
+| F455 | Inherited finite raw-format candidate | Authoritative CPU/ISA/ABI/base/loader provenance |
+
+Three source packets, not whole-function/product coverage. First prefix-census limits unchanged; new DB0/newR2objects0/cumulative1encryptedSupport0plaintext. Original/vendor/helper/native/emulator/SQLite/target/runtime/physical execution0. Current overview edits have exact historical bytes/mapping; run04capsule immutable. Prior215run04indexedmembers checked without oldcollector/native replay. FullDevice/source/runtimeapproval pending.

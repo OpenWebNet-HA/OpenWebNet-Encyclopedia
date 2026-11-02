@@ -1,0 +1,45 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000112060 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x6e880>:
+  112060:	d503245f 	bti	c
+  112064:	1e270040 	fmov	s0, w2
+  112068:	d503233f 	paciasp
+  11206c:	d10283ff 	sub	sp, sp, #0xa0
+  112070:	b0001022 	adrp	x2, 317000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1c0070>
+  112074:	4e0c1c60 	mov	v0.s[1], w3
+  112078:	90001043 	adrp	x3, 31a000 <app_logger@@Base+0x1e90>
+  11207c:	91080066 	add	x6, x3, #0x200
+  112080:	a9057bfd 	stp	x29, x30, [sp, #80]
+  112084:	910143fd 	add	x29, sp, #0x50
+  112088:	4e141c80 	mov	v0.s[2], w4
+  11208c:	f947dc42 	ldr	x2, [x2, #4024]
+  112090:	a90653f3 	stp	x19, x20, [sp, #96]
+  112094:	a9075bf5 	stp	x21, x22, [sp, #112]
+  112098:	4e1c1c20 	mov	v0.s[3], w1
+  11209c:	aa0003f5 	mov	x21, x0
+  1120a0:	a90863f7 	stp	x23, x24, [sp, #128]
+  1120a4:	f0001000 	adrp	x0, 315000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1be070>
+  1120a8:	910d0000 	add	x0, x0, #0x340
+  1120ac:	f9004bf9 	str	x25, [sp, #144]
+  1120b0:	9100e2b7 	add	x23, x21, #0x38
+  1120b4:	9100a2b3 	add	x19, x21, #0x28
+  1120b8:	9100a3f8 	add	x24, sp, #0x28
+  1120bc:	f9400041 	ldr	x1, [x2]
+  1120c0:	f90027e1 	str	x1, [sp, #72]
+  1120c4:	d2800001 	mov	x1, #0x0                   	// #0
+  1120c8:	f90002a0 	str	x0, [x21]
+  1120cc:	f9410061 	ldr	x1, [x3, #512]
+  1120d0:	f9000ebf 	str	xzr, [x21, #24]
+  1120d4:	f94004c2 	ldr	x2, [x6, #8]
+  1120d8:	390082bf 	strb	wzr, [x21, #32]
+  1120dc:	b90026bf 	str	wzr, [x21, #36]
+  1120e0:	aa1303e0 	mov	x0, x19
+  1120e4:	f90016b7 	str	x23, [x21, #40]
+  1120e8:	8b020022 	add	x2, x1, x2
+  1120ec:	3c8082a0 	stur	q0, [x21, #8]
+  1120f0:	910063f6 	add	x22, sp, #0x18
+  1120f4:	97ff1b87 	bl	d8f10 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x35730>

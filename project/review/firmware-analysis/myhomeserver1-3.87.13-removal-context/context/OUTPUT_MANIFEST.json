@@ -1,0 +1,70 @@
+{
+  "collector_sha256": "f8febe2218516c6d16ea994b95726002e50cdefda4a148c60bd992f6e03a3992",
+  "outputs": {
+    "ALIAS_LEDGER.json": {
+      "bytes": 1003,
+      "sha256": "df98ae90be29211ad1122fccc7a15e4cf226a84f2a0cc04f5695fb659a7e063b"
+    },
+    "BOUNDED_FRAME_QUERY.json": {
+      "bytes": 653,
+      "sha256": "196db81cd2eaf5c139cd652531b89eb524bb0d244ad9fe3fe80c5e96f1eb08f6"
+    },
+    "BYTE_GUARDS.json": {
+      "bytes": 707,
+      "sha256": "8dfa506548fb39a2bbb5dd89e0af06be00341deb8865517a997e706b51410bd6"
+    },
+    "DEVELOPMENT_HISTORY.json": {
+      "bytes": 482,
+      "sha256": "27a249d0ffc7d291dba1374bc2b01a4ab571e90dece8f015237dc38cee8436dc"
+    },
+    "DIRECT_BRANCHES.json": {
+      "bytes": 319,
+      "sha256": "77d3beedb5393d5aca7203d28aba09e94291e49c29d45f536805c099ddab17c0"
+    },
+    "INPUTS.json": {
+      "bytes": 1051,
+      "sha256": "b6efd362bfdaf34de97315b3e0599d8bf25533014249fa415cfa902f2e4150e5"
+    },
+    "METHOD.json": {
+      "bytes": 616,
+      "sha256": "f973faf87a799328f523b46995148afe37822f58b010449f5f765db95ae1c07d"
+    },
+    "PIC_KEYS.json": {
+      "bytes": 231,
+      "sha256": "b030460e1c3ef2666edbb6d3dc08baa882fb703170d6683245fb8dc20a1e3e73"
+    },
+    "SOURCE_SPANS.json": {
+      "bytes": 1575,
+      "sha256": "b529a18ca84f30852d385d35e706c2e42e59c97039614820ff46609577d90c48"
+    },
+    "spans/decimal-conversion-helper.txt": {
+      "bytes": 2110,
+      "sha256": "88e80d90937cc34cb1edc570c5884ec29814eed0603a1cdc053ec6625f75a0df"
+    },
+    "spans/local-dispatch-context-save.txt": {
+      "bytes": 784,
+      "sha256": "35308be749a8f39f61acd987bb6912dd0ebf0108eebf2dd85f5526178fc50242"
+    },
+    "spans/local-id-construction-and-store.txt": {
+      "bytes": 753,
+      "sha256": "3a1a034389a8749d56ee0a99715fa0f6937fda17343729c20ce39e435a1da543"
+    },
+    "spans/selected-dispatch-forward.txt": {
+      "bytes": 286,
+      "sha256": "2e840eb682ce1e161a5737c6e1146b0e1d244a8665bae180cb65edf554c41e2b"
+    },
+    "spans/selected-entry-context-save.txt": {
+      "bytes": 918,
+      "sha256": "77ed604a7f3769d390886096451f99784a564e2757faef1fb17eb02b2cbf6191"
+    },
+    "spans/selected-removal-arguments.txt": {
+      "bytes": 340,
+      "sha256": "19fbd4b624961c2896f1dcb6b5a5200afdba0d509acb5bab7038742803e5ec38"
+    },
+    "spans/whitelisted-member-source.txt": {
+      "bytes": 766,
+      "sha256": "e4ae4ae10a9a74851d9c50745234e57c59ebc1413be5cc59c795405acb58ccf8"
+    }
+  },
+  "report_sha256": "bbc23551b48f2e8b89e7c5af5c4c5fd392164705bd1573ec25156c98ba494c93"
+}

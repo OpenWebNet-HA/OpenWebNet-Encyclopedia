@@ -1,10 +1,10 @@
 # Installation and Source Layout
 
-The canonical MyHOME Suite source set was copied from a version 3.5.38 installation. Original Windows paths are evidence of packaging location; they do not by themselves establish which copy is opened first, whether data is copied or synchronized at runtime, or whether a file is writable during normal use.
+The retained MyHOME Suite `3.5.38` source set combines files from an installation with separately preserved installer resources. Original Windows paths are evidence of packaging location; they do not by themselves establish which copy is opened first, whether data is copied or synchronized at runtime, or whether a file is writable during normal use.
 
 ## Preserved implementation files
 
-| Repository file | Original installation path | Size | SHA-256 |
+| Original file / provenance label | Original installation path | Size | SHA-256 |
 | --- | --- | ---: | --- |
 | `MHCatalogue.db` | `C:\ProgramData\LegrandGroup\MyHOME_Suite_0305\Shared\Db_MHCatalogue\MHCatalogue.db` | 2,625,536 | `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5` |
 | `OPEN.db` | `C:\Program Files (x86)\LegrandGroup\MyHOME_Suite_0305\db\OPEN.db` | 80,896 | `d864a4946b47c3671a74a6844cec4da605cf20b33ac14f49959785778f104051` |
@@ -44,6 +44,23 @@ When comparing releases, identify rows by stable semantic context where possible
 
 ## What installation paths do not prove
 
-The available corpus does not establish database open order, update or synchronization direction, cache invalidation behavior, application-module ownership, transaction boundaries for project edits, or where user-authored project and scenario graphs are persisted.
+The available corpus does not establish database open order, update/synchronization direction, cache invalidation, all application-module ownership or project-edit transaction boundaries. The project templates establish declared persistence structures, and selected ScenarioSuite methods establish script/index writer calls; a genuine configured saved project or traced consumer is still needed for complete persistence behavior.
 
-These remain runtime questions for a future traced or decompiled investigation.
+The packaging layout does not resolve those application runtime policies.
+
+## Installer database census
+
+The decoded index of the registered installer contains 20 database-extension paths representing 13 distinct SQLite payloads. Their source identities and private storage are recorded separately in the [artifact manifest](../sources/artifact-manifest.yaml). Aliases retain the same byte identity; different contents remain separate artifacts.
+
+| Database family | Installer paths | Distinct payloads | Source treatment |
+| --- | ---: | ---: | --- |
+| MHCatalogue | 2 | 1 | Existing catalogue matches its restore alias |
+| OPEN | 1 | 1 | Existing protocol/workflow source |
+| rules | 1 | 1 | Existing linked-property source |
+| ScenarioDevices | 3 | 2 | Existing program-files/programdata variants; restore alias retained |
+| ScenarioSuite | 4 | 2 | [Distinct MH200N and MH202/common profiles](../scenario-engine/scenario-suite-variants.md) |
+| systems | 7 | 4 | [F454 and touchscreen application profiles](device-application-databases.md) |
+| MHPrj | 1 | 1 | [Project template](project-and-plant-templates.md) |
+| PTDB | 1 | 1 | [Plant/spatial template](project-and-plant-templates.md) |
+
+The census covers the decoded installer index and database-like extensions. It does not exhaust opaque/nested archives, extensionless files or the complete container format. The [installer evidence record](../project/review/installer-databases-3.5.38/README.md) retains extraction, integrity and coverage details. These installer files do not become databases bundled inside the separately examined gateway Firmware images.

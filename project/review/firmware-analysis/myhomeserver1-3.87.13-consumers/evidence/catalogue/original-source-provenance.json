@@ -1,0 +1,209 @@
+{
+  "Thumb_byte_assertions": [
+    {
+      "VA": "0xd3958",
+      "bytes_hex": "3cf7eae9"
+    },
+    {
+      "VA": "0xd3972",
+      "bytes_hex": "3cf7dee9"
+    },
+    {
+      "VA": "0xd395c",
+      "bytes_hex": "48bb"
+    },
+    {
+      "VA": "0xd3976",
+      "bytes_hex": "40b9"
+    },
+    {
+      "VA": "0xd39ac",
+      "bytes_hex": "47f98f07"
+    },
+    {
+      "VA": "0xd39d2",
+      "bytes_hex": "c5f82c32"
+    },
+    {
+      "VA": "0x8baa2",
+      "bytes_hex": "47f051ff"
+    },
+    {
+      "VA": "0x8baa6",
+      "bytes_hex": "f8b1"
+    },
+    {
+      "VA": "0xa8c38",
+      "bytes_hex": "0122"
+    },
+    {
+      "VA": "0xa8c56",
+      "bytes_hex": "696a"
+    },
+    {
+      "VA": "0xa8c68",
+      "bytes_hex": "6528"
+    },
+    {
+      "VA": "0xa8c72",
+      "bytes_hex": "0d21"
+    },
+    {
+      "VA": "0xa8c84",
+      "bytes_hex": "0e21"
+    },
+    {
+      "VA": "0xa8c86",
+      "bytes_hex": "6b61"
+    },
+    {
+      "VA": "0xa8c96",
+      "bytes_hex": "a861"
+    },
+    {
+      "VA": "0xa8c9e",
+      "bytes_hex": "6428"
+    },
+    {
+      "VA": "0x108a4",
+      "bytes_hex": "7847fde7"
+    }
+  ],
+  "catalogue_filename_substring": {
+    "VA": "0x1cce04",
+    "file_offset": "0x1cce04",
+    "literal": "MHCatalogue.db"
+  },
+  "initializer_entry": {
+    "entries": 72,
+    "entry_index": 1,
+    "section_VA": "0x209064",
+    "section_file_offset": "0x1f9064",
+    "stored_Thumb_pointer": "0x11139"
+  },
+  "scope": "Original bytes and compiled requests; no ARM execution, native binding or naturally populated object assertion.",
+  "selected_string_object_request": {
+    "call_VA": "0x11168",
+    "copy_helper_VA": "0x2a140",
+    "destination_VA": "0x20f024",
+    "global_base_VA": "0x20f020"
+  },
+  "spans": [
+    {
+      "bytes": 68,
+      "end_VA_exclusive": "0x8bad0",
+      "file_offset": "0x8ba8c",
+      "image_path": "/home/bticino/matrix_mx/matrix_mx",
+      "name": "caller-open-and-dependent-setup",
+      "raw_span_sha256": "3af9effd0c09752f8bde7864db8b70d6975cb43ab7fe967054a7470a4d4c952f",
+      "start_VA": "0x8ba8c"
+    },
+    {
+      "bytes": 4,
+      "end_VA_exclusive": "0x8baec",
+      "file_offset": "0x8bae8",
+      "image_path": "/home/bticino/matrix_mx/matrix_mx",
+      "name": "caller-false-result",
+      "raw_span_sha256": "b883e8b5b4be619071013c083c4fb95ea828984b9246191abd0d199d624b77ba",
+      "start_VA": "0x8bae8"
+    },
+    {
+      "bytes": 146,
+      "end_VA_exclusive": "0xd39da",
+      "file_offset": "0xd3948",
+      "image_path": "/home/bticino/matrix_mx/matrix_mx",
+      "name": "two-handle-catalogue-opener",
+      "raw_span_sha256": "5e323dec4875c40a1c55678454ef10ac1ad24ae984496969d15144879f4cdef7",
+      "start_VA": "0xd3948"
+    },
+    {
+      "bytes": 98,
+      "end_VA_exclusive": "0xa8c62",
+      "file_offset": "0xa8c00",
+      "image_path": "/home/bticino/matrix_mx/matrix_mx",
+      "name": "reader-path-stat-open-prepare",
+      "raw_span_sha256": "aa89b76545307f87ef5bb3a743cb829dc3281753fa53c7021efb20a26d4e1299",
+      "start_VA": "0xa8c00"
+    },
+    {
+      "bytes": 70,
+      "end_VA_exclusive": "0xa8ca8",
+      "file_offset": "0xa8c62",
+      "image_path": "/home/bticino/matrix_mx/matrix_mx",
+      "name": "reader-step-column-stores",
+      "raw_span_sha256": "436b308072c87b93f81807039989c8a2e529b6b05ddfd16ed339b2d968ba0646",
+      "start_VA": "0xa8c62"
+    },
+    {
+      "bytes": 86,
+      "end_VA_exclusive": "0xa8cfe",
+      "file_offset": "0xa8ca8",
+      "image_path": "/home/bticino/matrix_mx/matrix_mx",
+      "name": "reader-finalize-close-error-exits",
+      "raw_span_sha256": "73ee0205c0ad12fe5cfcc976253db27e98e3e51db2ade37c68f6aa5c8ab679a3",
+      "start_VA": "0xa8ca8"
+    },
+    {
+      "bytes": 74,
+      "end_VA_exclusive": "0x11182",
+      "file_offset": "0x11138",
+      "image_path": "/home/bticino/matrix_mx/matrix_mx",
+      "name": "selected-static-SQL-constructor-request",
+      "raw_span_sha256": "4e656e4ad003cb866d70cd465c600290233d7160dcfccbbaf7587113f10b24fc",
+      "start_VA": "0x11138"
+    },
+    {
+      "bytes": 138,
+      "end_VA_exclusive": "0x2a1ca",
+      "file_offset": "0x2a140",
+      "image_path": "/home/bticino/matrix_mx/matrix_mx",
+      "name": "string-copy-helper",
+      "raw_span_sha256": "c8f37f17b51795e01da04220ad1d995308c1978a77d42f75d5d122be6bf6c99a",
+      "start_VA": "0x2a140"
+    },
+    {
+      "bytes": 16,
+      "end_VA_exclusive": "0x108b4",
+      "file_offset": "0x108a4",
+      "image_path": "/home/bticino/matrix_mx/matrix_mx",
+      "name": "sqlite-close-interworking-PLT",
+      "raw_span_sha256": "002faaae4e916d9c39413e3c126e6ce29985fc8a6044d61bc9ac6fa802d4691e",
+      "start_VA": "0x108a4"
+    },
+    {
+      "bytes": 12,
+      "end_VA_exclusive": "0xaf404",
+      "file_offset": "0xaf3f8",
+      "image_path": "/usr/lib/libsqlite3.so.0.8.6",
+      "name": "candidate-sqlite-open-wrappers",
+      "raw_span_sha256": "1c360cd584a4104a0ff41b875126e586e1456183cb7745bfcd1f717c6ea4e36f",
+      "start_VA": "0xaf3f8"
+    }
+  ],
+  "whitelisted_PIC_literals": [
+    {
+      "ADD_PC_VA": "0xd3954",
+      "literal": "/home/bticino/matrix_mx/MHCatalogue.db",
+      "pool_VA": "0xd39dc",
+      "pool_word": "0xf9494",
+      "target_VA": "0x1ccdec",
+      "target_file_offset": "0x1ccdec"
+    },
+    {
+      "ADD_PC_VA": "0xa8c20",
+      "literal": "/home/bticino/matrix_mx/MHCatalogue.db",
+      "pool_VA": "0xa8d08",
+      "pool_word": "0x1241c8",
+      "target_VA": "0x1ccdec",
+      "target_file_offset": "0x1ccdec"
+    },
+    {
+      "ADD_PC_VA": "0x11152",
+      "literal": "SELECT AS_ITEM_SYSTEM.id_item, AS_ITEM_SYSTEM.id_system FROM AS_ITEM_SYSTEM WHERE AS_ITEM_SYSTEM.main=1",
+      "pool_VA": "0x114e8",
+      "pool_word": "0x1b323a",
+      "target_VA": "0x1c4390",
+      "target_file_offset": "0x1c4390"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+# Final editorial disposition audit
+
+This audit classifies every member of the original **3,610-file branch delta** against root's exact BASELINE, current files and the author/cross-review records. No original member is missing. It checks editorial placement, meaningful preservation and remaining material issues; it is not a new semantic audit of every source excerpt or execution trace. Machine KB curation remains **PENDING**, and this audit does not pass it.
+
+## Disposition
+
+| Class | Original-delta files | Editorial treatment |
+| --- | ---: | --- |
+| Reader reference and navigation | 73 | Durable product, protocol, model, data and implementation explanations; chronology is not the organizing principle |
+| Supporting evidence | 3,535 | Exact reports, selected source excerpts, fixtures, reconstruction records, historical variants, reviews and derived proof data; audit chronology is legitimate here |
+| Workflow registry | 1 | devices/work-queue.yaml records review status/history rather than serving as a reader explanation |
+| Read-only source registry | 1 | sources/artifact-manifest.yaml is unchanged; originals and canonical-source identities are not edited to improve prose |
+
+The baseline labeled work-queue.yaml as reader-facing; this audit refines its disposition to workflow registry. Its chronology is appropriate metadata. Current F454/MH202 description acceptance is explicitly limited to the accurately scoped description, with actual validation retained separately; pending physical corroboration is not silently made complete.
+
+Author records account for seventy of the baseline's seventy-four reference/navigation-labelled paths. The four remaining paths were inspected directly: diagnostics/dim1-device-identity.md, internals/installation-and-source-layout.md, reverse-engineering/README.md and devices/work-queue.yaml. The WHO25 supporting review and firmware-evidence landing were also inspected directly. Existing author section mappings and independent reviews supply the larger topic comparisons; this audit does not invent a fresh byte-level firmware or full database re-audit.
+
+## Material findings
+
+### FA1 — unnecessary observed installation identifier: corrected and verified
+
+**diagnostics/dim1-device-identity.md:42** and the historical supporting export **project/review/firmware-analysis/f454-2.0.51/first-targeted-reviewed/diagnostics__dim1-device-identity.md.txt:42** contained an unnecessary real installation identifier. ECV18 requires its removal from the public representations. The model-to-catalogue argument does not need that identifier.
+
+Root corrected both to an explicitly anonymized observed Device label. The independent recheck verifies one changed line only; model `107`, item `1184`, firmware definition `157`, four slots and the SKU examples remain unchanged. The raw identifier is deliberately not repeated in this new report. Both original/current hashes and exact private snapshots match **DEVICE_IDENTIFIER_PRIVACY_REFINEMENT.json**. **Privacy correction PASS.**
+
+### FA2 — public historical-identity mapping: integration pending at this snapshot
+
+**project/review/encyclopedia-editorial-reconciliation-2026-11-02/export-representations.json:5** begins the public mapping list. Its thirteen current entries match their actual public bytes. The newly privacy-projected historical diagnostic export from FA1 is recorded in the private refinement record but is not yet included in that public list at this audit snapshot. Add its original/public hash mapping without republishing the installation identifier or silently repinning old manifests. Root has been notified. This is a traceability integration item, not a remaining leak in the corrected prose.
+
+## Other disposition conclusions
+
+No additional material content-loss or misleading canonical-process finding was identified. The MH202, MHS and gateway section maps distinguish conceptual retention from raw proof/accounting moved behind citations. Prior guard, operator, schema, ID/copy, cancellation, receiver-lifetime and source-applicability corrections have independently reviewed refinements; their old conditional reports remain preserved. Selected source joins correctly replace stale wholly opaque questions without claiming configured runtime, public API or physical closure.
+
+**internals/installation-and-source-layout.md** presents vendor packaging paths as provenance rather than database-open order or runtime priority. Its alias/payload and installer-versus-gateway distinctions remain. Removing commit/extraction chronology and raw container accounting from the main prose does not remove the linked evidence or turn the finite census into exhaustive discovery.
+
+**reverse-engineering/README.md** remains methodological navigation. Its research lifecycle explains evidence/promotion within the dedicated reverse-engineering section; it does not replace protocol/reference pages with chronological work entries. The firmware landing now routes readers by product/topic; **project/review/firmware-analysis/README.md:3** explicitly classifies source/history collections as supporting material, not the Encyclopedia's organizing structure.
+
+**project/review/who25-gateway-compatibility.md** correctly remains a supporting review. Historical v1/v3 harness results, withdrawn capture history, published availability, a contributor-recorded physical capture and the later address correction are distinguished. Its privacy projection preserves observation provenance without claiming it is the byte-identical original. These audit histories need not be rewritten into canonical explanatory prose.
+
+Of the original 3,535 supporting files, 3,521 remain byte-identical at this snapshot. The fourteen changed supporting files consist of the evidence landing, ten host-path representation changes, two explicit navigation README corrections and the one diagnostic privacy projection. Their old bytes remain privately preserved. The public mapping has the thirteen previously integrated changes; FA2 concerns the additional privacy mapping only. No source-registry byte changed.
+
+Exact per-file classifications and baseline/current identities, author/review record fingerprints and the selected newly added canonical/editorial records are in **final-disposition-by-mh202-identities.v1.json**. Newly generated Machine KB, chunk/claim/source curation and generated outputs are a separate representation still in progress; no result here declares them consistent or complete. Whole-branch final validation and publication disposition remain root's responsibility.
+
+No repository edit, new binary/provider investigation, original helper/native/model/SQL execution, old collector replay, staging, commit or push was performed by this audit.

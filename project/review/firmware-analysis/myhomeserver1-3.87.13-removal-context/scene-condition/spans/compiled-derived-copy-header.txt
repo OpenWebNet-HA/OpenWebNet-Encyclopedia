@@ -1,0 +1,70 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000c847a:
+   c847a:	f105 0320 	add.w	r3, r5, #32
+   c847e:	f104 0288 	add.w	r2, r4, #136	@ 0x88
+   c8482:	f104 0b98 	add.w	fp, r4, #152	@ 0x98
+   c8486:	f963 078f 	vld1.32	{d16}, [r3]
+   c848a:	f104 0090 	add.w	r0, r4, #144	@ 0x90
+   c848e:	7f2b      	ldrb	r3, [r5, #28]
+   c8490:	f884 3084 	strb.w	r3, [r4, #132]	@ 0x84
+   c8494:	4b67      	ldr	r3, [pc, #412]	@ (c8634)
+   c8496:	f942 078f 	vst1.32	{d16}, [r2]
+   c849a:	6aee      	ldr	r6, [r5, #44]	@ 0x2c
+   c849c:	58fb      	ldr	r3, [r7, r3]
+   c849e:	f8c4 b090 	str.w	fp, [r4, #144]	@ 0x90
+   c84a2:	6aaf      	ldr	r7, [r5, #40]	@ 0x28
+   c84a4:	3308      	adds	r3, #8
+   c84a6:	66a3      	str	r3, [r4, #104]	@ 0x68
+   c84a8:	4273      	negs	r3, r6
+   c84aa:	fab7 f287 	clz	r2, r7
+   c84ae:	429f      	cmp	r7, r3
+   c84b0:	ea4f 1252 	mov.w	r2, r2, lsr #5
+   c84b4:	bf08      	it	eq
+   c84b6:	2200      	moveq	r2, #0
+   c84b8:	2a00      	cmp	r2, #0
+   c84ba:	f040 8082 	bne.w	c85c2
+   c84be:	2e0f      	cmp	r6, #15
+   c84c0:	9602      	str	r6, [sp, #8]
+   c84c2:	d868      	bhi.n	c8596
+   c84c4:	2e01      	cmp	r6, #1
+   c84c6:	d141      	bne.n	c854c
+   c84c8:	783b      	ldrb	r3, [r7, #0]
+   c84ca:	465a      	mov	r2, fp
+   c84cc:	f884 3098 	strb.w	r3, [r4, #152]	@ 0x98
+   c84d0:	2300      	movs	r3, #0
+   c84d2:	f104 00b0 	add.w	r0, r4, #176	@ 0xb0
+   c84d6:	f8c4 6094 	str.w	r6, [r4, #148]	@ 0x94
+   c84da:	f104 01a8 	add.w	r1, r4, #168	@ 0xa8
+   c84de:	5593      	strb	r3, [r2, r6]
+   c84e0:	f8c4 00a8 	str.w	r0, [r4, #168]	@ 0xa8
+   c84e4:	e9d5 5610 	ldrd	r5, r6, [r5, #64]	@ 0x40
+   c84e8:	4273      	negs	r3, r6
+   c84ea:	fab5 f285 	clz	r2, r5
+   c84ee:	0952      	lsrs	r2, r2, #5
+   c84f0:	429d      	cmp	r5, r3
+   c84f2:	bf08      	it	eq
+   c84f4:	2200      	moveq	r2, #0
+   c84f6:	2a00      	cmp	r2, #0
+   c84f8:	d167      	bne.n	c85ca
+   c84fa:	2e0f      	cmp	r6, #15
+   c84fc:	9602      	str	r6, [sp, #8]
+   c84fe:	d839      	bhi.n	c8574
+   c8500:	2e01      	cmp	r6, #1
+   c8502:	d120      	bne.n	c8546
+   c8504:	782b      	ldrb	r3, [r5, #0]
+   c8506:	f884 30b0 	strb.w	r3, [r4, #176]	@ 0xb0
+   c850a:	4b4b      	ldr	r3, [pc, #300]	@ (c8638)
+   c850c:	2200      	movs	r2, #0
+   c850e:	f8c4 60ac 	str.w	r6, [r4, #172]	@ 0xac
+   c8512:	5582      	strb	r2, [r0, r6]
+   c8514:	447b      	add	r3, pc
+   c8516:	f103 0208 	add.w	r2, r3, #8
+   c851a:	331c      	adds	r3, #28
+   c851c:	6022      	str	r2, [r4, #0]
+   c851e:	4a47      	ldr	r2, [pc, #284]	@ (c863c)
+   c8520:	66a3      	str	r3, [r4, #104]	@ 0x68

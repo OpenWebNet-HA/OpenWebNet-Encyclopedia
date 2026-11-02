@@ -1,0 +1,50 @@
+# MyHOMEServer1 3.87.13 Local Event Trigger
+
+This continuation follows one non-TIME trigger, locally named `BNIL`, through schema, compiled callback storage and a selected event-admission caller. [OWN-DEV-0199](../../devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md) establishes the product's MyHOME home-automation/scenario role; the private spelling does not establish a public bus command or physical device function. All new evidence is static, with original Firmware/provider/event/JSON/thread/network/bus/physical execution zero.
+
+Original image-relative scheduler `home/bticino/scheduling_manager/scheduling_manager` has SHA-256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. The [review capsule](../../project/review/firmware-analysis/myhomeserver1-3.87.13-event-trigger/README.md) retains original paths/VAs, byte/relocation identities, exact versions, independent reviews and limits. This extends the [TIME scenario](myhomeserver1-3.87.13-time-scenarios.md) and [ownership](myhomeserver1-3.87.13-serialization.md) source analyses.
+
+## Schema and object identities
+
+The raw factory matches local trigger row1, decrements it for its own branch table and creates a44-byte `BnilTrigger`. Its constructor temporarily installs `BaseBnilTrigger`; the final raw class and serializer are separately verified. The compiled initializer uses a different direct-index table and constructs a64-byte `BnilTriggerRunner` inside a76-byte allocation/control aggregate.
+
+| Field | Raw object | Compiled inner |
+| --- | --- | --- |
+|id string|+4|+24|
+|enabled byte|+28|+48|
+|local type word|+32|+52|
+|local operator word|+36|+56|
+|configured status word|+40|+60|
+
+The original schema uses `enabled`, `id`, `type`, `operator` and `status`. Local operator names map noOperator/higher/lower/equal/different to−1/0/1/2/3. Status strings noStatus/on/off map to−1/0/1. The raw serializer and same-result reparse are traced, subject to normal JSON/string/provider behavior. These are local stored values, separate from scene enabled/active, action completion and public OPEN namespaces.
+
+## Callback capture and local publication
+
+The selected initializer captures its scene pointer in the callable and copies it into the persistent runner. Its original copy manager copies that raw pointer; no local scene retain/release is inferred from the capture. The runner/control handle is moved into the scene's compiled trigger range at scene+104. This establishes local publication and a callback target, while external event subscription and active delivery remain unresolved.
+
+The compiled primary first method0xee59c invokes the stored callable. The admission handler0xee708 is a separate nonvirtual method; adjacent primary cleanup slots are not that handler. The selected callable reaches wrapper0xa60a8, which passes its captured scene to normal launch0xa5db0. Scene enabled/active, condition-worker and action gates remain further boundaries.
+
+## Selected local admission chain
+
+```mermaid
+flowchart LR
+    A[Supplied local event and ID] --> B[Typed receiver and ID equality]
+    B --> C[Enabled and recognized state string]
+    C --> D[Local operator comparison]
+    D --> E[Captured scene callback request]
+    E --> F[Scene launch and condition gates]
+```
+
+This diagram represents conditional source relations, rather than an observed transaction or accepted wire input.
+
+Handler0xee708 first requires compiled enabled+48 nonzero. It recognizes exact lowercase strings `on`, `off` and `noStatus`, producing local values0,1 and−1. Other selected strings return without its callback request. Operator2 permits the request when that value equals configured+60; operator3 permits it when different. Other operator words reach the selected request without either equality test; no ordered higher/lower comparison is implemented there. Product configuration admission and complete validation remain unproved.
+
+One original local caller casts a trigger receiver to this class, compares its ID string with a supplied ID and then passes an embedded state string into the handler. Upstream event construction, classification, parser and external transport delegates remain outside this proof. No prior-event value is stored locally by the retained handler; that does not establish a system-wide change-detection or deduplication policy.
+
+## Ownership and remaining boundaries
+
+The selected caller first copies the scene's trigger handles into a temporary vector, incrementing nonzero controls. It then releases those copied controls and the temporary buffer before its later ID/handler calls. The source therefore leaves continued receiver lifetime dependent on the scene vector or other owners. Complete owner ordering, errors/unwind and concurrency remain unresolved; neither lifetime adequacy nor a failure is established.
+
+The [schema report](../../project/review/firmware-analysis/myhomeserver1-3.87.13-event-trigger/schema-report.txt), [callback/publication report](../../project/review/firmware-analysis/myhomeserver1-3.87.13-event-trigger/registration-report.txt) and [admission report v2](../../project/review/firmware-analysis/myhomeserver1-3.87.13-event-trigger/admission-report-v2.txt) retain the precise source and scope. Actual subscription, valid configured scenes/extras80/81/94/95, full dispatcher/provider/binding/validation, ownership/concurrency, shared reset and physical effects remain open. Wider Device/source gates and closed authentication/session/framing/equivalent boundaries are unchanged.
+
+The subsequent [local event routing and condition analysis](myhomeserver1-3.87.13-event-routing.md) narrows the upstream classifier, selected record producer and a distinct BNLD condition. It retains the original admission/ownership limits above.

@@ -1,0 +1,83 @@
+# MH202 run22 — non-transport field registration and callback provenance
+
+## Result
+
+There is a concrete static initialization chain for run21's previously opaque callback slot. COSO main installs **field_receive at manager+36**. Same-build `register_field_bus` passes **manager+32** to each field descriptor's initializer. The SCS initializer stores that tuple pointer at private-state+0, while plugin allocation has already stored its descriptor at private-state+4. If the later callback receives **that same private state as userdata**, its entry loads the tuple into r9 and the descriptor into SL. The run21 slot **[r9+4] consequently resolves to field_receive** under those explicit premises.
+
+The two original descriptor declarations also explain the local numeric gate: **scs_field_bus+56=1** and **scsai_field_bus+56=2**. The criterion4 delivery branch found in run21 therefore fits the declared SCSAI descriptor, while the selected ordinary SCS descriptor skips that callback. Both descriptors have an original registration request. This identifies a descriptor and initialization source; it does not prove that either source is active, scheduled or connected on a running device.
+
+The packaged noncredential setting **SCSAIEnable=1**, at `/home/bticino/cfg/coso_plugins/scs_cmd:10`, requests the selected SCSAI configuration branch. That value alone is not an activation or readiness observation. The source's enable boolean gates optional parameter reads; the two registration calls remain in their common subsequent path.
+
+All new original ARM/vendor/parser execution, helper entries, primitive callbacks, hooks, target operations and physical observations are **0**. This pass inspects only manager/plugin initialization, declaration/configuration and callback-entry argument loads. It does not inspect connection/session/authentication/framing implementations, source registration internals or live I/O. No classifier or opcode/status table is rerun, and no original body admission is claimed.
+
+## Reproduction, identity and immutable first candidate
+
+`python3 -B work/mh202-firmware/research/2026-10-30/alarm/run22/collect_registration.py --check` reproduces **20 outputs,10 original spans,21 asserted words,7 input identities,6 selected relocation rows and2 finite host pointer ledgers**. The original bytes are read through ImageVFS and mapped by PT_LOAD. `--check` compares exact bytes without writing. A generation attempt refuses to overwrite any existing collector output; corrections require a new version/history under parent control.
+
+Immediately after the first successful generation, the collector and all20 outputs were copied byte-for-byte into `first-generated-candidate/`, with `snapshot-index.json`. No generated candidate output or collector has subsequently been replaced. The first report is written once, and the author manifest separately pins current report/collector/evidence and that immutable history.
+
+Principal verified normal-image ELF inputs are:
+
+| Original path | SHA256 |
+|---|---|
+| `/home/bticino/bin/coso` | `6865c2d1d441d25effa31275080ded70ad3538a8a49288e3002ffb196b066175` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+| `/home/bticino/libcoso/libplug_scs.so` | `07fe8d2b35264df4961e1cc9b648808a6ee5b32754a705b237fb90d0a6a6f6af` |
+
+`input-hashes.json` also pins the full config bytes without exporting unselected contents, the accessor and immutable alarm/run21 and functional/run7 reports. The only emitted config text is the whitelisted section line6 and enable setting line10. No credential, complete config dump, archive argv or closed branch content is exported.
+
+## 1. Main provides the callback tuple
+
+Fresh original **main0xa1e4..0xa1fc** requests a zeroed76-byte manager and passes it to `get_plug_m`. The same-build helper **0x1994..0x19bc** saves a supplied pointer only if its prior saved pointer is null. Thus the following join assumes this manager is the installed one; a prior different installation is not excluded by executing nothing.
+
+At **main0xa5b4..0xa600**, original PIC base0x16660 plus pool0xaae8 yields GOT0x167f0. Its `field_receive` relocation identifies actual executable definition **0xb8a8**. Main stores its context word at manager+32 and this function pointer at **manager+36**, at0xa5ec/0xa5f4. The adjacent STM/synchronizer callback words are not substituted for this field callback. This rechecks a necessary source from functional/run7, rather than treating its report as runtime evidence.
+
+Effective loader resolution, a normal main path, allocation, context identity and subsequent manager use remain premises. This is a static startup store, not evidence that the function has been called.
+
+## 2. Two declarations and their private states
+
+Original `/home/bticino/libcoso/libplug_scs.so` declares two76-byte descriptors:
+
+| Descriptor | VA | Original+56 | Original initializer+36 |
+|---|---|---|---|
+|scs_field_bus|0xba78|1|ABS32 relocation0xba9c→scs_init0x25ec|
+|scsai_field_bus|0xbac4|2|ABS32 relocation0xbae8→scs_init0x25ec|
+
+Their private+68 and manager+72 words initially contain0. These declaration values are not proof that no runtime code can ever mutate them. The two GOT slots are independently reconstructed from plugin PIC base0xb948 and original pools: slot0xba34→scs_field_bus and slot0xba30→scsai_field_bus.
+
+Plugin initialization **0x1a40..0x1ae4** requests a40-byte private object for each descriptor. At0x1a6c/0x1a70 it stores ordinary private pointer at descriptor+68 and descriptor pointer at private+4;0x1ac0/0x1ac4 do the same for SCSAI. Normal nonnull allocation and absence of intervening mutation are supplied. This establishes an actual descriptor back-pointer rather than a numeric namespace guess.
+
+The common registration continuation **0x1b1c..0x1be4** requests `register_field_bus` first at0x1b70 with ordinary descriptor and then at0x1bc8 with SCSAI descriptor, after setting selected logging/version fields. The calls are not interpreted as successful connected sources. The displayed initializer return is0 and the two registration results are not turned into a verified service result.
+
+## 3. Same-build registration supplies manager+32
+
+Candidate provider `/home/bticino/libcoso/libcoso.so` defines **register_field_bus0x2120..0x21c0**. The SCS plugin and executable declare a libcoso dependency; the selected import JUMP_SLOT0xb9c8 names register_field_bus. This is a same-build provider candidate, not an exhaustive dynamic closure or live binding observation.
+
+The helper obtains the installed manager, requests prior unregistration, prepends the supplied descriptor to **manager+16**, stores the manager at descriptor+72, and reads descriptor+36. When nonnull it calls that initializer with **r0=descriptor and r1=manager+32**, at0x21a8..0x21b0. Its own selected normal return is0; initializer and container effects are delegates, and their successful completion is not established by this return constant.
+
+`scs_init` entry **0x25ec..0x2610** preserves incoming r1 in r6 and loads descriptor+68 into r5. The narrow initializer slice **0x2640..0x264c** writes **private[0]=r6**, then clears private+24. The slice ends before a connection-helper call; that helper and its effects are intentionally opaque and excluded. These stores supply the first word of the tuple used by the later callback.
+
+## 4. Callback entry closes the conditional pointer join
+
+The stripped callback entry **0x2678..0x26a0** copies its supplied r2 userdata to r8, then executes **ldm r8,{r9,SL}** at0x269c. Under the explicit premise that this userdata is the same private object initialized above:
+
+- r9=private[0]=manager+32;
+- SL=private[1]=the corresponding declared descriptor;
+- [r9+4]=manager+36=field_receive;
+- [r8+4]=SL, so the descriptor reference passed to the run21 callback and its SL+56 gate share the same back-pointer under this premise.
+
+This is a complete static pointer composition **from initialization to callback-entry state**, not proof that any outer transport/source registration actually passes that userdata or invokes the callback. Recovering that real activation would cross the deliberately excluded connection/source internals; it stays a boundary rather than being silently filled with a model.
+
+The two finite host ledgers compose the declared ordinary descriptor and SCSAI descriptor separately. Both derive the same field callback candidate; they differ in SL+56 and therefore in run21's already established criterion4 gate. No body classification, real field record, parser, function-pointer invocation or publication runs in these host ledgers.
+
+## 5. Packaged enable setting versus activation
+
+The initializer reconstructs config path format **%s/%s** with basename **scs_cmd** from original pools0x1d78/0x1d7c. Its config-root argument remains the supplied plugin initialization argument. The packaged file under the declared COSO config directory has `[Communication Settings]` at line6 and `SCSAIEnable=1` at line10. Whitelisted original literal pools0x1d98/0x1da8 identify that exact section/key.
+
+At **0x1c88..0x1cb0**, the original requests `g_key_file_get_boolean` with null error output, then nonzero branches to0x1cd0 for optional SCSAI parameter reads; zero takes the other continuation. The common later registration calls for both descriptors are retained. Actual GLib file-load/boolean parsing/error returns, runtime overrides, source registration, readiness and callback scheduling are not observed. A packaged1 is therefore a configuration request, not a claim that a live SCSAI connection exists.
+
+## Confidence and remaining boundary
+
+**Confirmed static:** main callback tuple installation; declared descriptor identities/values/initializer relocations; separate private allocations and descriptor back-pointers; actual registration argument manager+32; initializer tuple store; callback entry's two-word load; exact packaged enable line and its boolean branch. **Host-only:** two supplied-private-state pointer compositions. **Conditional:** normal first manager, selected same-build binding, plugin/config execution, successful allocation/containers/initializers and same private userdata at callback entry. **Unresolved:** actual source activation/userdata installation, live registry and field state, raw category/admission, parsing/translation/publication and physical behavior.
+
+Run21's callback identity gap is now narrowed to a precise **activation premise**, while its descriptor-number gap has a concrete declaration source. This does not upgrade historical supplied `00004209` to a received valid message. Further safe research can investigate a distinct functional consumer or non-transport configuration policy; it need not enter the excluded activation internals merely to force a whole-system join.

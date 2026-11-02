@@ -1,0 +1,10 @@
+# Run11 coverage and boundaries
+
+| Area | Selected source reach | Open boundary |
+| --- | --- | --- |
+| F460 local writer | Suppliedreceiver saved; normalpath release1 at248; same216/224 range16Bstride/firstpointer slot8 requests; conditional selectedactionAP slot8 target; finite locator forms | Incomingcaller/receiverclass/naturalinvocation and same-scene equality UNPROVED; providers/validobjects/normalreturns, virtual effects, lifecycle/concurrency/policy/physical behavior |
+| F461 main selection | Actual3 optionentries/arg destinations/parse request; filename default and selectedload branch; CLI-preserving directory key reads; remainingNULL parentdir; sameM initializer/holder distinctfields and registration requests;3 safe lines | Actualargv/workingdirectory/configfile/values, parsing/loading/binding/allocations/validparent/normalreturns, active modules/readiness/fullstartup/ownership |
+
+F460:7 deterministic outputs, four spans,21 instruction guards, two import proofs, six branch checks, six pins and9 first copies. F461:12 outputs, nine spans,35 guards, three option rows, five PIC joins,11 imports, three local calls, six pins and14 first copies. Counts are bounded reach/integrity, not semantic coverage percentages or executed cases. The F460 caller gap is preserved rather than inferred from layout similarity.
+
+New original/helper/native/emulator/model/fixture/SQL/JSON/file/service/OS/network/bus/physical execution zero. Earlier MHS onecorpus/eightentries/340codehookvisits and separate F454/MH202 ledgers unchanged. Full Device/source gates pending; no fullconfiguration/private values exported. All closed output/receiving/transport/auth/session/framing/MQTT/libjel and excluded platformcommand/uncertainidentity-process routes remain excluded.

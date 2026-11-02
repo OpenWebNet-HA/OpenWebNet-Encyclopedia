@@ -1,0 +1,44 @@
+# F461 run15 — local monitor callback consumes retained module entries
+
+Fresh original source connects a local directory-monitor registration to the supplied manager/holder and one selected retained-entry removal path. The selected source requests a stop-symbol lookup/call, removes its list entry, frees its path, requests module close and frees the entry, in that order under normal returns. This is not proof of event delivery, a successful plugin stop/unload, whole removal policy, lifetime/concurrency safety or physical effects. All original/vendor/native/provider/target execution, runtime directory/file events, models, fixtures, SQL and target I/O added: **0**.
+
+Original `/home/bticino/bin/coso` is ELF64 AArch64, SHA256 `2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197`. SOURCE.json retains fresh PT_LOAD mappings, exact selected code words/text/hex, three PIC joins, two compiled safe literals and actual BL→PLT→JUMP_SLOT import proofs. Curated Device0208 supplies F461 third-party-integration product context only. Prior main configuration and entry creation are pinned as conditional source premises, not replayed inventories/admission matrices or observed activation.
+
+## Actual local registration and distinct object roles
+
+At0x32ec main passes its saved M pointer to **`init_dir_monitoring`0x58a0** at0x32f0. The method preserves M inX19, loads **P=[M+16]**, then **library_directory=[P+8]**, and requests `g_file_new_for_path` at0x58b8. It requests `g_file_monitor_directory` with flags0/cancellableNULL/errorNULL at0x58c8. A NULL result skips the registration block and still reaches the local W0=0 return; this numeric return is not monitor readiness.
+
+For a nonnull monitor result and ordinary valid-provider/GObject premises, it requests a type-check/cast with numeric type80, then `g_signal_connect_data` at0x58f4 with exact literal **`changed`**, callback **0x5350**, userdata **SAME M**, destroy-notifyNULL and flags0. Callback identity is independently derived by actual ADRP/ADD0x58d8/0x58e4. It is not named by the disassembler's nearest preceding exported symbol. No unrelated receiving/output routine is used as a proxy, and no actual signal, monitor or callback is created/executed here.
+
+Under the ordinary GFileMonitor changed-signal ABI, that userdata becomes the callback's provided X4. The original callback0x5350 copies X4 toX5 and loads **P=[X5+16]** intoX22 before its diagnostic request. It separately preserves provided file argumentX1 inX24 and numeric eventW3 inW19. Thus M, plugin-data holderP24, GFile/monitor objects and later entry16 remain distinct namespaces. Actual owner identity, valid objects/cast/provider returns, normal diagnostics and active callback delivery/lifetime are premises, not forced runtime objects.
+
+## Retained entry and exact path/event gates
+
+The selected callback first requires the `g_module_supported` request to return nonzero. Its selected event route is bounded to unsigned numeric event<=2. It obtains the head at **P+0** through `g_list_first`; each node's data becomes an entry pointerX21. A nonmatching path continues by node+8 at0x54d0/0x54d4.
+
+For a candidate entry, the source requests `g_file_get_path(provided_file)` at0x53c8, loads **stored_path=[entry+0]**, and requests **`g_str_has_suffix(returned_file_path,stored_path)`** at0x53d0. This operand orientation is exact. It is a delegated path-suffix relation, not canonical file equality, basename equality, secure path validation or an observed filesystem identity. No path string or event fixture is supplied.
+
+A nonzero suffix result followed by **numeric eventW19==0** selects branch0x53d8→0x5518. This packet deliberately does not label0 as a public deletion/change enum or a complete event-policy table. Other update/reload branches are not interpreted or repeated as new module-admission cases.
+
+Run14 already proved construction of a16-byte entry containing (constructed path pointer,module handle), appended to P+0. Current entry+0/+8 accesses compose with that producer ONLY under the same P/list/entry pointer, normal allocation/provider returns, source lifetime and no relevant mutation premises. The source does not certify that any recorded module is currently active, that an event refers to a particular installed plugin or that all entries are unique.
+
+## Stop lookup, conditional call and local removal ordering
+
+On the selected match/event0 continuation, after normal diagnostic requests:
+
+1. `0x555c` loads **module_handle=[entry+8]**. `0x556c` requests `g_module_symbol(handle,"stop_plugin",&SP72)`, using exact compiled literal at0x62b8.
+2. Only if that request returns nonzero does0x5574 load the returned pointer and0x5578 request it through BLR. Its argument ABI, body, output/provider effects and stop result remain opaque; no invocation arguments or successful stop are invented. A zero lookup result skips the callable request but still reaches the following bookkeeping path.
+3. `0x557c..0x5590` requests `g_list_remove(P_head,entry_pointer)` and writes its returned head to **SAME P+0**.
+4. `0x558c` loads the entry path before the head store at `0x5590`; `0x5594` then requests `g_free(entry_path)` after that store.
+5. `0x5598/0x559c` loads **the SAME entry's module handle** and requests `g_module_close(handle)`.
+6. `0x55a0/0x55a4` requests `g_free(entry_pointer)`, then reaches the normal callback epilogue/RET at0x55b8.
+
+This is exact selected source ordering and pointer-role dataflow. There is no local check of the stop callable's machine return before bookkeeping, and no module-close result test before the final free request. That does not establish a whole-program absence of validation or a full failure/unload contract. Conditional provider/module nonreturns, rejected operations, reference counts, aliases, callbacks/threads inside a plugin, repeated events, concurrency and exception/unwind behavior remain unresolved. No leak, race, UAF, security, defect or complete ownership conclusion follows.
+
+In particular, **a close request is not proof that code was unloaded or all plugin activity stopped**. Neither symbol-lookup success nor normal callback return proves device/field readiness or physical shutdown. The selected stop body, GModule/GFile/GObject/list/free/log providers and other module-event branches are not expanded.
+
+## Reproduction and final source scope
+
+Reproduce with `python3 -B collect_removal_v1.py --check`. The exclusive generator immediately freezes report/collector/outputs; its index bytes are computed before opening the index. Check reconstructs and compares read-only. No canonical failed generation or generated overwrite occurred. All original inputs, previous dossiers, execution ledgers and public documentation remain unchanged by this author.
+
+The positive new closure is local monitor-request/callback pointer → SAME userdata/holder → path-suffix and event0 gates → retained path/handle entry consumer → stop/list/free/close/free requests. Natural event delivery, runtime files/modules, full lifecycle/unload semantics, boot/DTB/auxiliary-core selection and physical effects remain open. No private configuration, keys, serial/MAC, actual runtime values or full boot environment is read or exported. Receiving/output/transport/authentication/session/framing/MQTT/libjel and equivalent stopped routes, frame preparation, the platform command fallback and uncertain bt_device process consumer remain closed.

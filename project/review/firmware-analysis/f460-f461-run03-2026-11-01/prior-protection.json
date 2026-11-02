@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "prior_index_sha256": "1d3869b521522976df8a63bd91116438431a453ce873f06a8fdaee53454b51b5",
+  "prior_index_members": 157,
+  "checked_UTC": "2026-11-01T11:04:30.861383+00:00",
+  "scope": "Exact preceding saved evidence identities only, no source/CPU replay"
+}

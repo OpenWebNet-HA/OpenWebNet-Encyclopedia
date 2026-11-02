@@ -1,0 +1,40 @@
+[
+  {
+    "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-trigger.md",
+    "snapshot": "myhomeserver1-3.87.13-event-trigger.md",
+    "before_sha256": "68524eb6514d4663ca9d0cec87a47cb70ffc5d6797b054c76f53907c01a68e89",
+    "after_sha256": "c8b300d671f145553cf65821c8db2dc8eab1cc3ddc9d950658660ae1fab5527c",
+    "substitutions": [
+      {
+        "old": "# MyHOMEServer1 3.87.13 Local Event Trigger\n",
+        "new": "# MyHOMEServer1 3.87.13 Local Event Triggers\n"
+      },
+      {
+        "old": "## Schema and object identities\n",
+        "new": "The later [BNLD numeric-trigger section](#bnld-numeric-trigger) is a separately derived trigger class and caller; the following initial sections retain their BNIL scope.\n\n## Schema and object identities\n"
+      }
+    ],
+    "append": "\n## BNLD numeric trigger\n\nThe later [numeric-trigger review capsule](../../project/review/firmware-analysis/myhomeserver1-3.87.13-numeric-trigger/README.md) derives a separate actual trigger-table row3, BNLD. It is not the earlier BNLD condition row2. The raw BnldTrigger is48 bytes; the compiled BnldTriggerRunner inner is68 bytes in an80-byte control allocation at base+12. Fresh original RTTI, headers, constructors and dispatch entries establish those identities.\n\nOn the selected raw status-ABSENT path, the constructor requests asInt on exact level. It initializes status40 and level44 to\u22121, then stores the converted level44. Its positive-value conditional store writes status\u22121 again, so that local test does not exclude positive thresholds. Missing-member conversion, accepted types/range and full serializer/reparse remain provider/grammar premises. The compiled initializer requests the raw serializer and reparses the SAME JSON result before copying its own enabled/operator/status/level fields. This is conditional source dataflow, not an executed JSON roundtrip.\n\nOne actual local caller selects this class, requests its dynamic cast, matches its ID and then tests compiled status60. Only status\u22121 enters this packet's numeric leg. It requires a suitable record's INTEGER word32 to differ from\u22121, and its status string at+8 to be exact on. It then supplies that integer to the separate nonvirtual handler0xf4a80. These are local record/object guards, not accepted wire traffic. They do not identify word32 with the different Thermostat record's double32.\n\nThe handler first requires its own enabled48. Its signed comparisons have explicit operand orientation:\n\n| Local operator word | Selected callback request |\n| --- | --- |\n|0|Supplied integer greater than configured threshold64|\n|1|Supplied integer less than configured threshold64|\n|2|Supplied integer equal to configured threshold64|\n|3|Supplied integer different from configured threshold64|\n\nOther operator words reach the callback branch without those threshold comparisons in this local body. That fallthrough does not establish an admitted public operator grammar. The handler receives a single supplied value; event crossing, previous-value, hysteresis and deduplication policy elsewhere remain open. No physical brightness, unit or supported numeric domain is assigned.\n\nThe selected initializer independently supplies its scene pointer to a callable tuple. The original manager's operation2 copies that raw pointer, and the persistent trigger handle enters scene+104. On the retained callable path, numeric admission reaches the stored invoker and scene launch boundary0xa5db0. This adds a conditional numeric admission-to-captured-scene request; it does not retain an owning scene reference or prove configured admission, active subscription, successful threads/conditions/actions or a natural event transaction.\n\nThe selected caller releases its copied trigger controls before later receiver use, leaving the scene vector/other owners and full errors/unwind/concurrency as lifetime premises. Exact source, the independent review and positive-status-store precision are retained in the capsule. This packet is static with zero new original execution/replay/semantic fixtures. The separate MyHOMEServer1 scalar-provider ledger remains one corpus/eight entries/340 original code-hook visits/12 definition redirects/eight EXIT=360 hooks, with zero C primitives and four setup data relocations separate. Wider Device/source gates and closed opaque boundaries are unchanged.\n"
+  },
+  {
+    "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+    "snapshot": "myhomeserver1-3.87.13-research-synthesis.md",
+    "before_sha256": "5d9426583d60ffe1618b2a82e0bf9bd97426387a6245c7b8e6500bfe09cdc5c1",
+    "after_sha256": "5a3dec72f1d14ac5c338a38571c809749594e761854e915c8a0decea447bcd52",
+    "substitutions": [
+      {
+        "old": "The [synthesis review capsule](../../project/review/firmware-analysis/myhomeserver1-3.87.13-synthesis/README.md) supplies a frozen navigation and verification catalog, source-report links, review identities and remaining questions. It adds no new firmware-source investigation or native execution.",
+        "new": "The [synthesis review capsule](../../project/review/firmware-analysis/myhomeserver1-3.87.13-synthesis/README.md) supplies a frozen navigation and verification catalog through the double-isolation checkpoint, source-report links, review identities and remaining questions. That synthesis snapshot added no new firmware-source investigation or native execution. The later BNLD numeric-trigger addition below has its own source/review packet."
+      },
+      {
+        "old": "|[BNLD condition](myhomeserver1-3.87.13-event-routing.md)|",
+        "new": "|[BNLD numeric trigger](myhomeserver1-3.87.13-event-trigger.md#bnld-numeric-trigger)|Own trigger row3, signed integer comparisons and selected caller guards leading to a captured-scene request|Full configured serializer/reparse, suitable record/ID and normal callable/lifetime/provider state, natural delivery and physical meaning|\n|[BNLD condition](myhomeserver1-3.87.13-event-routing.md)|"
+      },
+      {
+        "old": "one distinct numeric/event trigger path",
+        "new": "configured admission and natural delivery for the numeric trigger"
+      }
+    ],
+    "append": ""
+  }
+]

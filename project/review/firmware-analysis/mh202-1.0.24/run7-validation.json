@@ -1,0 +1,115 @@
+{
+  "checked_at": "2026-10-30T18:28:40.192254+00:00",
+  "passed": true,
+  "scope": "Run7 three static areas plus isolated original comparator corpus; not full firmware runtime or physical proof",
+  "original_execution": 1485,
+  "original_execution_scope": "Recorded original instruction visits per canonical13-case corpus; verification replays are not accumulated into this corpus count",
+  "primitive_callbacks": 75,
+  "code_hook_visits": 1560,
+  "original_helper_calls": 13,
+  "firmware_processes": 0,
+  "target_OS_calls": 0,
+  "scripts": [
+    {
+      "script": "functional/run7/collect_evidence.py",
+      "passed": true,
+      "output": "PASS: 27 outputs + manifest; 17 spans, 31 words, 4 original inputs; 5 list/1 postparser/4 metadata host cases; original execution0"
+    },
+    {
+      "script": "triggers/run7/emulate_comparator.py",
+      "passed": true,
+      "output": "{\"helper_calls\": 13, \"original_ARM_instructions\": 1485, \"primitive_callbacks\": 75, \"firmware_processes\": 0}"
+    },
+    {
+      "script": "protocol/run7/collect_evidence.py",
+      "passed": true,
+      "output": "{\n  \"outputs\": 34,\n  \"inputs\": 9,\n  \"spans\": 27,\n  \"critical_words\": 29,\n  \"literals\": 8,\n  \"selected_relocations\": 5,\n  \"host_cases\": 2,\n  \"original_execution\": 0,\n  \"code_hooks\": 0\n}"
+    },
+    {
+      "script": "boot/run7/collect_config_effects.py",
+      "passed": true,
+      "output": "{\n  \"outputs\": 18,\n  \"spans\": 10,\n  \"word_assertions\": 20,\n  \"inputs\": 5,\n  \"host_cases\": 6,\n  \"original_execution\": 0,\n  \"hooks\": 0\n}"
+    }
+  ],
+  "published_exports": 8,
+  "local_links": 177,
+  "preserved_prior_artifacts": 685,
+  "reviewed_prior_document_snapshots": 42,
+  "document_pins": [
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24.md",
+      "sha256": "01bff053d070a3182e2ea07ed1aa703ea00e10bf5aecbdc9996e5355433a1334"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-state-and-routing.md",
+      "sha256": "ee4003e3fe5faa3043a7fffdba984a686edc601a977a360df70902afd2a48aca"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/README.md",
+      "sha256": "e1ab1a2790d6e95b2cc32c0c8dc9bc966eb425baa703265995e96110a423842c"
+    },
+    {
+      "path": "project/review/firmware-analysis/README.md",
+      "sha256": "e16eb9b3cec81ede923ec45916b85274378710637058f201db42daa55e065777"
+    },
+    {
+      "path": "project/review/firmware-analysis/mh202-1.0.24/README.md",
+      "sha256": "197ef6b0b6230f9acdcefd610dabd366bbb5a153f99054bab047c9f3f4f19f22"
+    },
+    {
+      "path": "functional/who-17-scenario-management/README.md",
+      "sha256": "f4a36f09ecf70ec202f5d1638df69dc56e003906cadf17ecfe3c1ad942069d0b"
+    },
+    {
+      "path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "sha256": "b9d434f7412eccc2787e99152ef26a39d189866ed91fbfa0a1b11b33429ab882"
+    },
+    {
+      "path": "devices/work-queue.yaml",
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    }
+  ],
+  "repository_checks": [
+    {
+      "name": "ESG",
+      "exit_code": 0,
+      "output": "STATS human_pages=382 support_pages=121 objective_failures=0 review_candidates=6866"
+    },
+    {
+      "name": "ECV",
+      "exit_code": 0,
+      "output": "STATS human_pages=382 objective_failures=0 review_candidates=14"
+    },
+    {
+      "name": "diff",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "protected_F454_dossiers": [
+    {
+      "dossier": "2026-10-29",
+      "index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df",
+      "files_verified": 1917
+    },
+    {
+      "dossier": "2026-10-30-targeted",
+      "index_sha256": "ddb83866292f70631b968b91f07e08fbc79415b5e1762cf3699f8e326eacff79",
+      "files_verified": 107
+    },
+    {
+      "dossier": "2026-10-30-targeted-2",
+      "index_sha256": "2dc3f9e3541478eff304d1d9bb368d02504c39cc3d5d8d3aec7ca96650032d82",
+      "files_verified": 130
+    },
+    {
+      "dossier": "2026-10-30-final-pass",
+      "index_sha256": "bf27345d8ce8d1e4e9277ad9346c62fcfde1f0b33bb20783ae5e66963ad100f2",
+      "files_verified": 83
+    }
+  ],
+  "sources_changed": false,
+  "branch": "docs/static-firmware-analysis-findings",
+  "commits_or_pushes": false,
+  "overnight_status": "ACTIVE, final consolidation31October07:15Paris; cutoff08:00"
+}

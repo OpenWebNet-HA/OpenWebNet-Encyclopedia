@@ -1,0 +1,469 @@
+{
+  "all_changed_tables": [
+    {
+      "changes": [
+        {
+          "MH200N1331": {
+            "DESCRI_COSA": "Dimmer ON",
+            "ID_COSA": 317,
+            "ID_RES_COSA": 377,
+            "ID_TXT": "ANA_COSA.Dimmer_ON",
+            "OPEN_COSA": "1"
+          },
+          "MH202_common": {
+            "DESCRI_COSA": "Dimmer ON",
+            "ID_COSA": 317,
+            "ID_RES_COSA": 377,
+            "ID_TXT": "ANA_COSA.Dimmer_ON",
+            "OPEN_COSA": "4"
+          },
+          "changed_columns": [
+            {
+              "MH200N1331": "1",
+              "MH202_common": "4",
+              "column": "OPEN_COSA"
+            }
+          ],
+          "primary_key": {
+            "ID_COSA": 317
+          }
+        }
+      ],
+      "row_events": 1,
+      "table": "ANA_COSA"
+    },
+    {
+      "changes": [
+        {
+          "MH200N1331": {
+            "DESCRI_OBJ": "Movement sensor",
+            "FUNCT_OBJ": null,
+            "ID_FAMIGLIA": 15,
+            "ID_OBJ": 59,
+            "ID_RES": 806,
+            "ID_TXT": "ANA_OGGETTI.Movement_sensor",
+            "ID_TXT_TOOLTIP": "ANA_OGGETTI.TOOLTIP.Movement_sensor",
+            "ORDINE": 1,
+            "TOOLTIP": "Movement sensor"
+          },
+          "MH202_common": {
+            "DESCRI_OBJ": "Movement sensor",
+            "FUNCT_OBJ": null,
+            "ID_FAMIGLIA": 15,
+            "ID_OBJ": 59,
+            "ID_RES": 806,
+            "ID_TXT": "ANA_OGGETTI.Movement_sensor",
+            "ID_TXT_TOOLTIP": "ANA_OGGETTI.TOOLTIP.Movement_sensor",
+            "ORDINE": 2,
+            "TOOLTIP": "Movement sensor"
+          },
+          "changed_columns": [
+            {
+              "MH200N1331": 1,
+              "MH202_common": 2,
+              "column": "ORDINE"
+            }
+          ],
+          "primary_key": {
+            "ID_OBJ": 59
+          }
+        },
+        {
+          "MH200N1331": {
+            "DESCRI_OBJ": "Lighting sensor",
+            "FUNCT_OBJ": null,
+            "ID_FAMIGLIA": 15,
+            "ID_OBJ": 62,
+            "ID_RES": 809,
+            "ID_TXT": "ANA_OGGETTI.Lighting_sensor",
+            "ID_TXT_TOOLTIP": "ANA_OGGETTI.TOOLTIP.Lighting_sensor",
+            "ORDINE": 2,
+            "TOOLTIP": "Lighting sensor"
+          },
+          "MH202_common": {
+            "DESCRI_OBJ": "Lighting sensor",
+            "FUNCT_OBJ": null,
+            "ID_FAMIGLIA": 15,
+            "ID_OBJ": 62,
+            "ID_RES": 809,
+            "ID_TXT": "ANA_OGGETTI.Lighting_sensor",
+            "ID_TXT_TOOLTIP": "ANA_OGGETTI.TOOLTIP.Lighting_sensor",
+            "ORDINE": 3,
+            "TOOLTIP": "Lighting sensor"
+          },
+          "changed_columns": [
+            {
+              "MH200N1331": 2,
+              "MH202_common": 3,
+              "column": "ORDINE"
+            }
+          ],
+          "primary_key": {
+            "ID_OBJ": 62
+          }
+        },
+        {
+          "MH200N1331": {
+            "DESCRI_OBJ": "Twilight sensor",
+            "FUNCT_OBJ": null,
+            "ID_FAMIGLIA": 15,
+            "ID_OBJ": 63,
+            "ID_RES": 810,
+            "ID_TXT": "ANA_OGGETTI.Twilight_sensor",
+            "ID_TXT_TOOLTIP": "ANA_OGGETTI.TOOLTIP.Twilight_sensor",
+            "ORDINE": 3,
+            "TOOLTIP": "Twilight sensor"
+          },
+          "MH202_common": {
+            "DESCRI_OBJ": "Twilight sensor",
+            "FUNCT_OBJ": null,
+            "ID_FAMIGLIA": 15,
+            "ID_OBJ": 63,
+            "ID_RES": 810,
+            "ID_TXT": "ANA_OGGETTI.Twilight_sensor",
+            "ID_TXT_TOOLTIP": "ANA_OGGETTI.TOOLTIP.Twilight_sensor",
+            "ORDINE": 4,
+            "TOOLTIP": "Twilight sensor"
+          },
+          "changed_columns": [
+            {
+              "MH200N1331": 3,
+              "MH202_common": 4,
+              "column": "ORDINE"
+            }
+          ],
+          "primary_key": {
+            "ID_OBJ": 63
+          }
+        },
+        {
+          "MH200N1331": {
+            "DESCRI_OBJ": "Rain sensor",
+            "FUNCT_OBJ": null,
+            "ID_FAMIGLIA": 15,
+            "ID_OBJ": 64,
+            "ID_RES": 811,
+            "ID_TXT": "ANA_OGGETTI.Rain_sensor",
+            "ID_TXT_TOOLTIP": "ANA_OGGETTI.TOOLTIP.Rain_sensor",
+            "ORDINE": 4,
+            "TOOLTIP": "Rain sensor"
+          },
+          "MH202_common": {
+            "DESCRI_OBJ": "Rain sensor",
+            "FUNCT_OBJ": null,
+            "ID_FAMIGLIA": 15,
+            "ID_OBJ": 64,
+            "ID_RES": 811,
+            "ID_TXT": "ANA_OGGETTI.Rain_sensor",
+            "ID_TXT_TOOLTIP": "ANA_OGGETTI.TOOLTIP.Rain_sensor",
+            "ORDINE": 5,
+            "TOOLTIP": "Rain sensor"
+          },
+          "changed_columns": [
+            {
+              "MH200N1331": 4,
+              "MH202_common": 5,
+              "column": "ORDINE"
+            }
+          ],
+          "primary_key": {
+            "ID_OBJ": 64
+          }
+        },
+        {
+          "MH200N1331": {
+            "DESCRI_OBJ": "Wind sensor",
+            "FUNCT_OBJ": null,
+            "ID_FAMIGLIA": 15,
+            "ID_OBJ": 65,
+            "ID_RES": 812,
+            "ID_TXT": "ANA_OGGETTI.Wind_sensor",
+            "ID_TXT_TOOLTIP": "ANA_OGGETTI.TOOLTIP.Wind_sensor",
+            "ORDINE": 5,
+            "TOOLTIP": "Wind sensor"
+          },
+          "MH202_common": {
+            "DESCRI_OBJ": "Wind sensor",
+            "FUNCT_OBJ": null,
+            "ID_FAMIGLIA": 15,
+            "ID_OBJ": 65,
+            "ID_RES": 812,
+            "ID_TXT": "ANA_OGGETTI.Wind_sensor",
+            "ID_TXT_TOOLTIP": "ANA_OGGETTI.TOOLTIP.Wind_sensor",
+            "ORDINE": 6,
+            "TOOLTIP": "Wind sensor"
+          },
+          "changed_columns": [
+            {
+              "MH200N1331": 5,
+              "MH202_common": 6,
+              "column": "ORDINE"
+            }
+          ],
+          "primary_key": {
+            "ID_OBJ": 65
+          }
+        },
+        {
+          "MH200N1331": {
+            "DESCRI_OBJ": "Presence sensor",
+            "FUNCT_OBJ": null,
+            "ID_FAMIGLIA": 13,
+            "ID_OBJ": 69,
+            "ID_RES": 806,
+            "ID_TXT": "ANA_OGGETTI.PresenceSensor",
+            "ID_TXT_TOOLTIP": "ANA_OGGETTI.PresenceSensor.Tooltip",
+            "ORDINE": 2,
+            "TOOLTIP": "Presence sensor - Distributed mode"
+          },
+          "MH202_common": {
+            "DESCRI_OBJ": "Presence sensor",
+            "FUNCT_OBJ": null,
+            "ID_FAMIGLIA": 15,
+            "ID_OBJ": 69,
+            "ID_RES": 806,
+            "ID_TXT": "ANA_OGGETTI.PresenceSensor",
+            "ID_TXT_TOOLTIP": "ANA_OGGETTI.PresenceSensor.Tooltip",
+            "ORDINE": 1,
+            "TOOLTIP": "Presence sensor - Distributed mode"
+          },
+          "changed_columns": [
+            {
+              "MH200N1331": 2,
+              "MH202_common": 1,
+              "column": "ORDINE"
+            },
+            {
+              "MH200N1331": 13,
+              "MH202_common": 15,
+              "column": "ID_FAMIGLIA"
+            }
+          ],
+          "primary_key": {
+            "ID_OBJ": 69
+          }
+        }
+      ],
+      "row_events": 6,
+      "table": "ANA_OGGETTI"
+    },
+    {
+      "changes": [
+        {
+          "MH200N1331": {
+            "ACT_AREA": 0,
+            "COND_OK_AREA": 0,
+            "ID": 284,
+            "ID_COSA": 317,
+            "ID_OBJ": 43,
+            "OPEN_FIELD_1": "#1",
+            "OPEN_FIELD_10": "",
+            "OPEN_FIELD_2": "ID_DOVE",
+            "OPEN_FIELD_3": "1",
+            "OPEN_FIELD_4": "[101-200]*",
+            "OPEN_FIELD_5": "",
+            "OPEN_FIELD_6": "",
+            "OPEN_FIELD_7": "",
+            "OPEN_FIELD_8": "",
+            "OPEN_FIELD_9": "",
+            "PANIC_KEY": 0,
+            "TRIGGER_DISABLE": 0,
+            "TRIGGER_ENABLE": 0,
+            "TRIGGER_START_AREA": 1,
+            "TRIGGER_STOP_AREA": 1
+          },
+          "MH202_common": {
+            "ACT_AREA": 0,
+            "COND_OK_AREA": 0,
+            "ID": 284,
+            "ID_COSA": 317,
+            "ID_OBJ": 43,
+            "OPEN_FIELD_1": "#1",
+            "OPEN_FIELD_10": "",
+            "OPEN_FIELD_2": "ID_DOVE",
+            "OPEN_FIELD_3": "4",
+            "OPEN_FIELD_4": "[101-200]*",
+            "OPEN_FIELD_5": "",
+            "OPEN_FIELD_6": "",
+            "OPEN_FIELD_7": "",
+            "OPEN_FIELD_8": "",
+            "OPEN_FIELD_9": "",
+            "PANIC_KEY": 0,
+            "TRIGGER_DISABLE": 0,
+            "TRIGGER_ENABLE": 0,
+            "TRIGGER_START_AREA": 1,
+            "TRIGGER_STOP_AREA": 1
+          },
+          "changed_columns": [
+            {
+              "MH200N1331": "1",
+              "MH202_common": "4",
+              "column": "OPEN_FIELD_3"
+            }
+          ],
+          "primary_key": {
+            "ID": 284
+          }
+        }
+      ],
+      "row_events": 1,
+      "table": "ANA_OPEN_RULE_COMPILE"
+    },
+    {
+      "changes": [
+        {
+          "MH200N1331": null,
+          "MH202_common": {
+            "BUILD": 53,
+            "RELEASE": 0,
+            "VERSION": 1
+          },
+          "changed_columns": [],
+          "primary_key": {
+            "BUILD": 53,
+            "RELEASE": 0,
+            "VERSION": 1
+          }
+        },
+        {
+          "MH200N1331": {
+            "BUILD": 0,
+            "RELEASE": 1,
+            "VERSION": 1
+          },
+          "MH202_common": null,
+          "changed_columns": [],
+          "primary_key": {
+            "BUILD": 0,
+            "RELEASE": 1,
+            "VERSION": 1
+          }
+        }
+      ],
+      "row_events": 2,
+      "table": "ANA_VERSIONE_DB"
+    }
+  ],
+  "equal_tables": [
+    "ANA_AREA",
+    "ANA_AUXILIARIES_FIELDS",
+    "ANA_CHI",
+    "ANA_COMBO",
+    "ANA_COMBO_VALUES",
+    "ANA_CONDITION",
+    "ANA_CONF",
+    "ANA_CONVERSION_TYPE",
+    "ANA_CONV_OSX_AUX_FIELDS",
+    "ANA_DOVE",
+    "ANA_FAMIGLIA",
+    "ANA_FIELD_TYPE",
+    "ANA_GRANULARITY",
+    "ANA_GRAPHIC_TYPE",
+    "ANA_KEYCONF",
+    "ANA_KEYOBJECT",
+    "ANA_LABELS",
+    "ANA_OBJECT_COMPOSITION",
+    "ANA_OBJ_FIELDS_GROUPS",
+    "ANA_OPERATORE",
+    "ANA_PARAMETER",
+    "ANA_PARAMETER_TYPE",
+    "ANA_RANGE",
+    "ANA_REQUEST_TYPE",
+    "ANA_RES",
+    "ANA_RES_OPEN_EXT",
+    "ANA_RES_TYPE",
+    "ANA_RULE_OPEN_EXT",
+    "ANA_STATUS_REQUEST_COMPILE",
+    "ANA_SYSTEM",
+    "ANA_TEXT",
+    "ANA_VALUES",
+    "ANA_WHERE_DEADVALUES",
+    "ANA_WHERE_TYPE",
+    "ASS_COMBO_VALUES",
+    "ASS_CONV_OSX_AUX_FIELDS",
+    "ASS_COSA_AUX_FIELDS",
+    "ASS_FIELD_CONDITION",
+    "ASS_KEYOBJ_OBJ",
+    "ASS_OBJ_AREE",
+    "ASS_OBJ_CHI",
+    "ASS_OBJ_COSA",
+    "ASS_OBJ_COSA_FIELDS_EXCEPTIONS",
+    "ASS_OBJ_DOVE",
+    "ASS_OBJ_RULE_OPEN",
+    "ASS_OBJ_WHERE_TYPE",
+    "ASS_OPEN_EXT_DEAD_VALUE",
+    "ASS_RES_TIME",
+    "ASS_RULE_OPEN_DOVE",
+    "ASS_TYPE_CONF",
+    "DB_CONFIG",
+    "TMP_COLLECION",
+    "TMP_COND_OK",
+    "TMP_COND_OK_AUX_FIELDS",
+    "TMP_COND_OK_WHERE_CONF",
+    "TMP_OPE_OK",
+    "TMP_PANICKEY",
+    "TMP_PANICKEY_AUX_FIELDS",
+    "TMP_PANICKEY_WHERE_CONF",
+    "TMP_SCENARI",
+    "TMP_STEP_ACT",
+    "TMP_STEP_ACT_AUX_FIELDS",
+    "TMP_STEP_ACT_WHERE_CONF",
+    "TMP_TRIGGER",
+    "TMP_TRIGGERSTOP",
+    "TMP_TRIGGER_AUX_FIELDS",
+    "TMP_TRIGGER_DISABLE",
+    "TMP_TRIGGER_DISABLE_AUX_FIELDS",
+    "TMP_TRIGGER_DISABLE_WHERE_CONF",
+    "TMP_TRIGGER_ENABLE",
+    "TMP_TRIGGER_ENABLE_AUX_FIELDS",
+    "TMP_TRIGGER_ENABLE_WHERE_CONF",
+    "TMP_TRIGGER_WHERE_CONF",
+    "TMP_TRIGG_STOP_AUX_FIELDS",
+    "TMP_TRIGG_STOP_WHERE_CONF"
+  ],
+  "method": "Type-tagged value rows sorted with duplicate multiplicity, each canonical row prefixed by its unsigned64 big-endian byte length before SHA256; excludes rowid/storage order. Blob values represented by byte count+SHA256. This codec is distinct from prior inventory codec; only prior counts and changed-table partition compared.",
+  "profiles": {
+    "MH200N1331": {
+      "artifact_id": "myhome-suite-3.5.38-mh200n-1331-1.0-scen-suite-db-eng",
+      "bytes": 2542592,
+      "installer_paths": [
+        "default/resTargetDir4/devices/1331_1.0_BT/xml/Steps/Step_2/Scen_SuiteDB_ENG.db",
+        "default/resTargetDir4/devices/1331_1.0_LG/xml/Steps/Step_2/Scen_SuiteDB_ENG.db"
+      ],
+      "internal_version_rows": [
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "scope": "PLAN preserves acquisition-time registration metadata, not independently replayed remote readback",
+      "sha256": "83b7fa13c224012ebd1561fbc2895deb599b06223eb8e5041f565b7c5b7dbfd8",
+      "source_path": "work/installer-database-audit/2026-10-31/recovered/83b7fa13c224012ebd1561fbc2895deb599b06223eb8e5041f565b7c5b7dbfd8.bin"
+    },
+    "MH202_common": {
+      "artifact_id": "myhome-suite-3.5.38-mh202-1902-lgg-scen-suite-db-eng",
+      "bytes": 2542592,
+      "installer_paths": [
+        "default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_2/Scen_SuiteDB_ENG.db",
+        "default/resTargetDir2/db/Scen_SuiteDB_ENG.db"
+      ],
+      "internal_version_rows": [
+        [
+          1,
+          0,
+          53
+        ]
+      ],
+      "scope": "PLAN preserves acquisition-time registration metadata, not independently replayed remote readback",
+      "sha256": "ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29",
+      "source_path": "work/installer-database-audit/2026-10-31/recovered/ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29.bin"
+    }
+  },
+  "row_additions": 1,
+  "row_removals": 1,
+  "same_key_updated_rows": 8,
+  "source_table_totals": 79,
+  "total_row_events": 10,
+  "updated_cells": 9
+}

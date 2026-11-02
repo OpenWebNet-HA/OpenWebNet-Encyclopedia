@@ -1,0 +1,31 @@
+# MH200N 1.1.8 night01 — marker-controlled resource-path cells and actual local caller
+
+Fresh original source establishes a bounded new join beyond the first exploration: `/bin/bt_start` consumes `/NO_APP_COPY` through an imported open request, conditionally changes two static resource-path pointers, and a later original fragment loads the SAME path-pointer cell into a local helper argument. This is **not actual application copy, installation, partition selection on hardware, or a complete startup policy**. All original/vendor/provider/native/target/OS/network/bus/device operations, mounts, clocks, models, fixtures and SQL are0. Host hashing/readelf/ARM disassembly read original bytes only.
+
+## Source identity and startup applicability
+
+MH200N1.1.8 normal `/bin/bt_start` is36080 bytes/SHA256 `63c0b0a9b6f67e6564f23f5ffcf18c3716bc27dc9b0b03009324af0fa0a21d48`. The recovery file is byte-identical, separately checked against its own regular-file manifest. This proves code equality, not equal configuration, marker presence, helper providers, environments or behavior. The normal image's zero-byte NO_APP_COPY marker is verified; the recovery regular manifest has no such path. This is only retained image metadata, not an observed runtime lookup or universal path-absence claim.
+
+The ELF is freshly mapped ELF32 little-endian ARM machine40, flags0x202. Its entry0x8dc8 loads0xb618 through pool0x8df4 intoR0 and requests actual __libc_start_main@GLIBC_2.0 at0x8de8. Under ordinary runtime-entry ABI/normal returns,0xb618 is the supplied main entry; no target start occurred. First-exploration Tcl source already connects selected application script to `/bin/bt_start`; that inherited text handoff is not new coverage or proof the separate application bundle was copied. Curated OWN-DEV-0131 supplies MH200N scenario-programmer context only. No MH202 script language, MHS layout, F453AV behavior, physical bus or public-protocol meaning is transferred.
+
+## Exact marker request and pointer-cell stores
+
+The selected main prefix sets callee-savedR4=0 at0xb620. Under ordinary preservation across intervening normal calls,0xb6ec supplies that0 asR1.0xb6f0 loads pool0xc5d8→literal0xea90 `/NO_APP_COPY`;0xb6f4 requests actual open@GLIBC_2.0 through its original PLT/JUMP_SLOT. Flags are source numeric0; actual file/provider access mode/outcome is not exercised.
+
+CMN R0,#1 at0xb6f8 tests exact machine return−1. MOV R4,R0 and subsequent LDRs preserve those flags; BEQ0xb708 goes to0xb730 on−1. The other branch, after a normal diagnostic request, loads/stores `/dev/mtd5` through cell**0x180f4** at0xb714..0xb71c, then `/dev/mtdr5` through cell**0x180f0** at0xb720..0xb728. Initially those cells point respectively to `/dev/mtd6` and `/dev/mtdr6`, as exact file-backed data. These are literal pathname/cell identities, not a certified flash map or active partition result.
+
+The−1 branch skips those two selected stores. Both selected continuations reach0xb738/0xb73c, requesting close on the saved machine return. No close-result test, general file-existence test, valid file-descriptor theorem or whole error policy is inferred. In particular, the code's literal marker name is no longer the only evidence: actual source consumes that path and gates these two concrete pointer stores. Other writers/aliases, providers and natural startup selection remain unclosed.
+
+## Same-cell actual caller and opaque helper boundary
+
+A later fragment0xcba8 loads pool0xc864→**SAME0x180f0**, then0xcbac loads the pointer held there intoR0 and0xcbb0 calls local**0xa3ec**. Under normal source execution, the same cell/object and no relevant intervening mutation, this passes the selected `/dev/mtdr5` pointer after the non−1 marker branch, or its separately justified current value. This is a conditional dataflow composition, not a claim that every startup reaches this fragment or that its earlier branch predicates are already closed.
+
+After that call,0xcbb4 comparesR0 with0,0xcbb8 stores it atSP24 and0xcbc4 branches to0xcbd8 on nonzero. Its machine return type/success semantics are not invented. The bounded prefix of0xa3ec preserves the incomingR0 pathname, constructs zeroed local output words atSP12/SP8 and supplies their addresses inR1/R2, then calls local**0xa1dc** at0xa424. It compares the returned machine value with0 and branches to0xa63c on nonzero; only zero falls through. The **0xa1dc body and the rest of0xa3ec remain opaque**. No extraction, archive format/argv/password, source contents, file read, copy, installation or device operation is derived from these calls.
+
+SOURCE.json retains8 exact PT_LOAD-backed code/PLT spans,35 instruction guards,5 direct-call targets,7 pool joins,5 whitelisted pathname literals and3 actual PLT/GOT/JUMP_SLOT identities. POINTER_FLOW.json separates the file-backed path-cell initialization, conditional stores, later supplied argument and unknown helper semantics. Source labels come from actual entry/call/pointer identities; stripped objdump nearest names are not function identities. Imports, valid objects, callee-save ABI, logging normal returns, dynamic binding and no relevant mutation remain premises.
+
+## Preservation, limits and next question
+
+`python3 -B collect_resources_v1.py --check` reproduces host-only output bytes read-only; it never calls firmware, an emulator or a target/provider helper. Initial generation refuses existing outputs and immediately freezes collector/report/results, with the first index computed before opening its own file. No failed canonical generation or generated overwrite occurred. Old first-exploration/source trees and execution ledgers remain unchanged. No original archive, configuration, private identity, credential, key or broad literal table is exported.
+
+The next meaningful gap is the permitted local producer/helper contract needed to connect this exact supplied resource pointer to an actual application-file/copy request, plus natural main admission and immutable current state. That requires its own bounded source task; the current result does not force installation or a successful application-overlay model. F453AV is inherited as a separate first-exploration comparison only; no counterpart behavior is asserted. Output/receiving/transport/authentication/session/framing/MQTT/libjel and equivalent closed implementations stay opaque.

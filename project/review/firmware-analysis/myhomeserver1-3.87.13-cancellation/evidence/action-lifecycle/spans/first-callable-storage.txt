@@ -1,0 +1,77 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000cd990 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x151d8>:
+   cd990:	b5f0      	push	{r4, r5, r6, r7, lr}
+   cd992:	4605      	mov	r5, r0
+   cd994:	4826      	ldr	r0, [pc, #152]	@ (cda30 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15278>)
+   cd996:	b089      	sub	sp, #36	@ 0x24
+   cd998:	2300      	movs	r3, #0
+   cd99a:	ac02      	add	r4, sp, #8
+   cd99c:	4a25      	ldr	r2, [pc, #148]	@ (cda34 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1527c>)
+   cd99e:	4478      	add	r0, pc
+   cd9a0:	688f      	ldr	r7, [r1, #8]
+   cd9a2:	5882      	ldr	r2, [r0, r2]
+   cd9a4:	6812      	ldr	r2, [r2, #0]
+   cd9a6:	9207      	str	r2, [sp, #28]
+   cd9a8:	f04f 0200 	mov.w	r2, #0
+   cd9ac:	9302      	str	r3, [sp, #8]
+   cd9ae:	9305      	str	r3, [sp, #20]
+   cd9b0:	e9c4 3301 	strd	r3, r3, [r4, #4]
+   cd9b4:	b37f      	cbz	r7, cda16 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1525e>
+   cd9b6:	2202      	movs	r2, #2
+   cd9b8:	4620      	mov	r0, r4
+   cd9ba:	460e      	mov	r6, r1
+   cd9bc:	47b8      	blx	r7
+   cd9be:	3608      	adds	r6, #8
+   cd9c0:	f966 178f 	vld1.32	{d17}, [r6]
+   cd9c4:	e894 0003 	ldmia.w	r4, {r0, r1}
+   cd9c8:	f105 0310 	add.w	r3, r5, #16
+   cd9cc:	466a      	mov	r2, sp
+   cd9ce:	3518      	adds	r5, #24
+   cd9d0:	e882 0003 	stmia.w	r2, {r0, r1}
+   cd9d4:	e893 0003 	ldmia.w	r3, {r0, r1}
+   cd9d8:	e884 0003 	stmia.w	r4, {r0, r1}
+   cd9dc:	e892 0003 	ldmia.w	r2, {r0, r1}
+   cd9e0:	e883 0003 	stmia.w	r3, {r0, r1}
+   cd9e4:	f965 078f 	vld1.32	{d16}, [r5]
+   cd9e8:	ee10 3b90 	vmov.32	r3, d16[0]
+   cd9ec:	f945 178f 	vst1.32	{d17}, [r5]
+   cd9f0:	edcd 0b04 	vstr	d16, [sp, #16]
+   cd9f4:	b11b      	cbz	r3, cd9fe <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15246>
+   cd9f6:	2203      	movs	r2, #3
+   cd9f8:	4621      	mov	r1, r4
+   cd9fa:	4620      	mov	r0, r4
+   cd9fc:	4798      	blx	r3
+   cd9fe:	4a0e      	ldr	r2, [pc, #56]	@ (cda38 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15280>)
+   cda00:	4b0c      	ldr	r3, [pc, #48]	@ (cda34 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1527c>)
+   cda02:	447a      	add	r2, pc
+   cda04:	58d3      	ldr	r3, [r2, r3]
+   cda06:	681a      	ldr	r2, [r3, #0]
+   cda08:	9b07      	ldr	r3, [sp, #28]
+   cda0a:	405a      	eors	r2, r3
+   cda0c:	f04f 0300 	mov.w	r3, #0
+   cda10:	d104      	bne.n	cda1c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15264>
+   cda12:	b009      	add	sp, #36	@ 0x24
+   cda14:	bdf0      	pop	{r4, r5, r6, r7, pc}
+   cda16:	efc0 1010 	vmov.i32	d17, #0	@ 0x00000000
+   cda1a:	e7d3      	b.n	cd9c4 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1520c>
+   cda1c:	f743 ebe4 	blx	111e8 <__stack_chk_fail@plt>
+   cda20:	9b04      	ldr	r3, [sp, #16]
+   cda22:	b11b      	cbz	r3, cda2c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15274>
+   cda24:	2203      	movs	r2, #3
+   cda26:	4621      	mov	r1, r4
+   cda28:	4620      	mov	r0, r4
+   cda2a:	4798      	blx	r3
+   cda2c:	f743 ebe2 	blx	111f4 <__cxa_end_cleanup@plt>
+   cda30:	8002      	strh	r2, [r0, #0]
+   cda32:	0009      	movs	r1, r1
+   cda34:	06b4      	lsls	r4, r6, #26
+   cda36:	0000      	movs	r0, r0
+   cda38:	7f9e      	ldrb	r6, [r3, #30]
+   cda3a:	0009      	movs	r1, r1
+   cda3c:	3020      	adds	r0, #32
+   cda3e:	4770      	bx	lr

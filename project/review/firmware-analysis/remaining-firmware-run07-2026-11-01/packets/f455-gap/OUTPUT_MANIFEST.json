@@ -1,0 +1,22 @@
+{
+  "collector_sha256": "ce7ae9d595df71e9c2d21a256765b5394940d14ec7e04ccf74d93c2125d2d77c",
+  "files": {
+    "FIELD_PATHS.json": {
+      "bytes": 1376,
+      "sha256": "bc8f2710007d122c58fdc54c5a24eb322029662de7391999f0de0fd0fbe8e516"
+    },
+    "INPUTS.json": {
+      "bytes": 1401,
+      "sha256": "9226a87b68735b064765d3b50503adeb24bc7db237df22405c876c9d1bef9be8"
+    },
+    "PROVENANCE_ADMISSION.json": {
+      "bytes": 2194,
+      "sha256": "3a3d51e680823826739e96d8af4fcefe87f4c96f5bf04558626294a52e1e9945"
+    },
+    "REPORT.md": {
+      "bytes": 4528,
+      "sha256": "ad858ca145771896f0c8036be99cd79f2900faa28f38e9cff1eff355aea0af66"
+    }
+  },
+  "scope": "Generated members excluding this manifest"
+}

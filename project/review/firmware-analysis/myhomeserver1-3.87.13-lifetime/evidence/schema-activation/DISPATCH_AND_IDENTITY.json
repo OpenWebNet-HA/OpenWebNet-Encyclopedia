@@ -1,0 +1,41 @@
+{
+  "branch_tables": [
+    {
+      "entry_va": "0x30d90",
+      "halfword": "0x31e",
+      "index": 12,
+      "target_va": "0x313b4"
+    },
+    {
+      "entry_va": "0xa7618",
+      "halfword": "0x25cc",
+      "index": 12,
+      "target_va": "0xac198"
+    }
+  ],
+  "exact_type": "BN3L",
+  "local_index": 12,
+  "relocations": [
+    {
+      "header_va": "0x15fe90",
+      "kind": "R_ARM_RELATIVE",
+      "pool_va": "0x319d4",
+      "relocation_va": "0xe19c",
+      "slot_va": "0x166eb8"
+    },
+    {
+      "header_va": "0x164b14",
+      "kind": "R_ARM_RELATIVE",
+      "pool_va": "0xac7e4",
+      "relocation_va": "0xde94",
+      "slot_va": "0x166d24"
+    }
+  ],
+  "row_va": "0x160770",
+  "scope": "Declared local action name and original selected constructors, not WHO/product/physical support or configured activation.",
+  "status_noStatus_literal": {
+    "bytes": "noStatus\\0",
+    "slot_va": "0x166444",
+    "target_va": "0x115d68"
+  }
+}

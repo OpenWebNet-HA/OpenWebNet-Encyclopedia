@@ -1,0 +1,25 @@
+# MH202 run4 independent configuration-persistence source review
+
+PASS for the final corrected static report. Parent reviewed original MH202 daemon code and safe operand paths independently; no original firmware executed. This is source corroboration, not a running storage or recovery test.
+
+## Checks and required correction
+
+Reproduced collect_persistence.py --check:17 deterministic outputs,11 original spans,16 exact word assertions and4 inputs. Read all selected header/validator/checksum/startup/writer spans. Independently resolved original ARM PC-relative loads at0x103e0/0x103ec/0x1046c/0x10498/0x104a4 from verified ELF bytes. The last two both resolve pool0x10984, primary conf.img; the selected earlier unlink resolves mirror conf_copy.img. Parent identified the initial host model's primary-to-mirror label as wrong. Final report/model now record primary-to-primary requested operands after mirror unlink, while mirror-to-primary uses distinct pools. This is not an executed copy or global restore verdict. The correction history openly labels its reconstructed earlier model; it does not falsely claim an untouched snapshot.
+
+Independently read both256-word CRC tables, checked byte equality and regenerated every entry from polynomial0x04c11db7. Three saved private synthetic host cases independently match host cksum. These checks reproduce an ordinary host recurrence, not original stream/error/declared-length behavior. Parent evidence is validation/run4/independent-boot-operands.json and independent-host-cksum.json.
+
+Header reader's1024 raw read has no returned-count branch; token requirements, later length/checksum conversion and fdopen continuation remain explicit. Validator0/error/possible-zero-checksum and -1 fclose return are distinct values; startup checks nonzero rather than Boolean authenticated validity. Selected checksum loop folds observed processed length and does not add final declared-length equality. Host models intentionally exclude malformed/full native acceptance.
+
+Primary precedes mirror in selected writer; exact-1 header/payload write guards do not test full requested length. Imported archive/copy/lock/I/O contracts, earlier preparation and outer fallback remain delegates. Both-zero startup selection skips the selected extraction calls; no factory reset, complete package security, physical corruption, durable recovery or installed-state claim is promoted.
+
+Fixed header fields, credentials, full archive argv and actual packaged payloads are absent from report/export. The author disclosed an exploratory-output issue and tightened artifact export; this review does not repeat its content. No live contact, vendor code, mount, original file write, commit or publishing occurred.
+
+## Final pins
+
+- `boot/run4/REPORT.md` SHA256 `9ee0cf019a36fdd04faa00a4d47a7bdbe053ed4f0cd5862660b40f8972697d9e`
+- `boot/run4/collect_persistence.py` SHA256 `bf8c461c1915e67106a420fe73482125e2ab0f82423598476b73d62df4b02111`
+- `boot/run4/output-manifest.json` SHA256 `e31e1bfe91122c247bf3dfd73ea4cd3fd627184258d74ab879ab22e7eee363ef`
+- `boot/run4/host-reconcile-model.json` SHA256 `1874863dc463847b433a3d3432be77702966f737043307e8ad47dfac39a4c8aa`
+- `boot/run4/CORRECTIONS.md` SHA256 `0eca96949c4acaeb295478e47ceeb7be580e81745eb2ecd9797ecef795a215f5`
+- `validation/run4/independent-boot-operands.json` SHA256 `6e95aee29da4ce2905a615f855e9104cdd926b87cfec2014ba0a93517ee0a32c`
+- `validation/run4/independent-host-cksum.json` SHA256 `f3fdece9ed519535bbe3c1aca0ce5f2928d84d1d09ecc0de911524b20557204a`

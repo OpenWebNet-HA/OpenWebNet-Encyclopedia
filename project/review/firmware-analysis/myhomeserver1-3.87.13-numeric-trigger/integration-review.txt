@@ -1,0 +1,39 @@
+# Numeric-trigger documentary integration review
+
+PASS for the exact current v2 candidate, after one requested ranking-phrase refinement. No remaining documentary correction is requested. This is a bounded product/method and source-to-summary comparison against the frozen author report and independent original-source review. I did not repeat the independent source audit, execute a collector or original/provider/JSON code, run a semantic fixture, or replay the saved helper corpus. My earlier source-aware ownership/provider reviews supply context only; they do not turn this review into a fresh whole-firmware audit.
+
+The public addition accurately distinguishes actual BNLD trigger row3 from condition row2, raw48 from compiled68/control80, the integer record word32 from the Thermostat double32, the admission method from primary callback dispatch, and trigger eight-byte handles from condition four-byte pointers. It preserves the ID/cast/status60=-1/integer32!=-1/exact-on caller gates, enabled48, signed operator orientation and local other-operator fallthrough. The status-absent constructor positive store is correctly described as -1, not 0; full serializer/reparse and configured input remain premises. The copied scene pointer and callable-to-launch boundary are conditional source requests, without an owning capture, active subscription, natural delivery, complete lifetime, physical unit, brightness domain, public grammar or successful scene claim.
+
+Product context remains the curated home-automation/scenario role. Shared spelling does not import F454 or MH202 behavior. The new packet adds zero original execution/replay/semantic fixtures. The separate cumulative helper ledger remains one corpus/eight entries/340 original code-hook visits/zero C primitives/12 definition redirects/eight EXIT/zero stops/360 hooks, with four setup data relocations separate. Historical static-only scopes and the frozen 17-row through-double navigation are not recast as current semantic coverage. Prior MH20218/21 unavailable-history limits, missing configured assets, opaque closed routes and wider Device/source gates remain explicit.
+
+## Identity, history and links
+
+Verified all 12 current v2 document pins and exact candidate copies, all 25 unchanged SOURCE_EXPORTS pairs, 20 source first-candidate copies, the source-review first copy and four coordination first copies. Both original pre-edit page snapshots plus DOCUMENT_PATCH reconstruct the initial additions exactly; DOCUMENT_PATCH.v2 reconstructs the current pages. The original 11-pin candidate remains intact. Exact pre-refinement overview and patch bytes are retained in integration/pre-wording-v2. WORDING_REFINEMENT proves the sole subsequent overview substitution: the now-completed selected path is no longer ranked as unfinished, and its configured-admission/natural-delivery boundary is ranked instead. Both supplemental capsule JSON copies match their source bytes; source/code/results/counts did not change.
+
+Checked 44 local Markdown link occurrences and 3 fragment targets: all 42 existing targets and all fragments resolve. Only the intended future capsule integration-review.txt and validation.json targets remain pending actual assembly. This review does not certify their future bytes, strict ESG/ECV/diff, the complete prior-protection check or final validation. Those remain parent-owned completion checks after the actual review/validation files exist; no placeholder or missing-link exemption is endorsed.
+
+## Exact reviewed pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-trigger.md` | `c8b300d671f145553cf65821c8db2dc8eab1cc3ddc9d950658660ae1fab5527c` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md` | `5a3dec72f1d14ac5c338a38571c809749594e761854e915c8a0decea447bcd52` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-numeric-trigger/README.md` | `9f9ee3b200b8286b1956ebec94550c76f419f00f1e14efd2c7f6fafbc96f31e6` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-numeric-trigger/SOURCE_EXPORTS.json` | `46f218cc86261f876b54532bf3527f32c11a0f3925bbc3a508d5442b8cfd5e42` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-numeric-trigger/synthesis.txt` | `c52e709857ccfb71af6359a75bfa520070e16cc4e314e05180b88668b4812667` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-numeric-trigger/coverage.txt` | `7370aa3d8d5f9ee920a3a2057db38593a11e2a9ee0acaee1c6fa57740b214953` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-numeric-trigger/remaining-questions.txt` | `fae549763bd1c6eedc6d415203bc8edbede69b8fdb8148cf5b1bf4ced7341ef1` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/SYNTHESIS.md` | `c52e709857ccfb71af6359a75bfa520070e16cc4e314e05180b88668b4812667` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/COVERAGE.md` | `7370aa3d8d5f9ee920a3a2057db38593a11e2a9ee0acaee1c6fa57740b214953` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/RANKED_REMAINING_QUESTIONS.md` | `fae549763bd1c6eedc6d415203bc8edbede69b8fdb8148cf5b1bf4ced7341ef1` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/RUN_LOG.md` | `9e447462197c7ab34a4811686dee150b85f7454cd82f1634be17d3533d92b305` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/integration/WORDING_REFINEMENT.json` | `290c14d8f1056f12cc09fdc6786d792084f8cbd850d3c33176b72a14f6184de8` |
+| `trigger/REPORT.md` | `5c07aa082902c7caa80a51213f287a159ea50ff47c91d3f5ace98996da9f3b3c` |
+| `trigger/collect_trigger_v1.py` | `c10653cb265171a5f46a04d22d6142e94f6e55a7eea8bb3168b330ee511404b8` |
+| `trigger/OUTPUT_MANIFEST.json` | `f57e01b315f2ebaecf55efba583b9fcf9459c41f8ba84ea6e04d92f5d8d9f31e` |
+| `reviews/trigger-source-review.md` | `0f4bd4402aca9d80d5b73af56c5c46cad2e7e112bf69717c45c5c9b23c169229` |
+| `integration/review-candidate/INDEX.json` | `93f5220fe9a163272e21c14e5bde635bf0338413316f3ad8fb1639d38cdeea2a` |
+| `integration/review-candidate-v2/INDEX.json` | `cc2e6b0e8c8a57c391308034012a4caea1b6b94dd451169d5b3d0b8de6fdead0` |
+| `integration/DOCUMENT_PATCH.json` | `4e16607b472ca6a835f183b8cb4d23881bf1ab0a9579035f4bfcbbf6293f557e` |
+| `integration/DOCUMENT_PATCH.v2.json` | `76135d81107891f1912541fbbcb575436c67aa1a344f52f8fab3d06b8b486768` |
+| `integration/pre-wording-v2/INDEX.json` | `c457c053076e93ccb8296b189a731e1d4a6f1f8e3e1359f22cfe55250cd83107` |

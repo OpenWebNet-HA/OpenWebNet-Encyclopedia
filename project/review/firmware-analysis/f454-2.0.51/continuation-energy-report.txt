@@ -1,0 +1,129 @@
+# Targeted batch2: distinct WHO18 old-stream producer and publication calls
+
+**A genuinely different producer path exists for old-format DIM56 and DIM510: function selector0x50 with rows0x10 and0x14.** It assembles decimal multi-value buffers, constructs OPEN text, calls the original OPEN parser and conditionally calls `invio_msg_open`. This differs from the direct table7E DH formatter whose local candidate was proved unused in the first targeted batch. It also differs from the newer DIM511–514 history path examined in prior run10/run13.
+
+No separately justified **longer table7E/DH publication route** was established. This bounded investigation therefore narrowed to the explicitly requested alternative: old-format DIM56/510. This is not an absence claim across the archive and does not reinterpret old-stream data as DH401–428. All results below are **static**; two finite Python reconstructions check extracted rules. **Original firmware instructions executed0; original JS evaluations0; code hooks0; actual I/O0.** No prior execution matrix, firmware/helper process, device, authentication branch or original/synced file was used for execution or modified.
+
+## Why the other concrete branches did not close DH publication
+
+The packaged `/home/bticino/cfg/stack_open.xml` client08 assigns WHO18 to `bt_supervisione`; the selected client working-mode value is0. This is configuration, not evidence of a running/enabled client. `packaged-routing.json` records only the selected component fields, without treating the working-mode namespace as a hardware-support statement.
+
+The actual `bt_energy_central_unit` WHO18 route0xaf14–0xb0bc was inspected as a concrete alternative, not inferred from its executable name: source-field3 calls `forward_msg_to_stack_op_cmd` at0xaf44; source-field2 dispatches to existing application forwarding at0xafa0/0xafa8. Its WHO18 comparison is0xb080. The retained message forwarding does not construct a raw longer-DH response in this bounded route. This is consistent with the earlier mediator analysis; it is **reused architectural context**, not a new claim of whole-module coverage or proof that forwarding cannot reach another implementation.
+
+Within `bt_supervisione`, the distinct assembled-response terminal path calls helper0xb490 at0xe1c4 only after the selected FD0x50 branch. Its actual helper dispatch starts by comparing FD with0x50 at0xb514; the other specifically decoded family is0x70 at0xb76c. The generic terminal branch0xe14c accepts FD0 or0x50 and returns through0xc11c for other values at0xe170; special FD0x70/row4 has an earlier route. These inspected gates do not supply a new table7E→DH publication join. They do **not** prove that all possible raw7E paths or other modules have been excluded.
+
+The first targeted report's direct-handler/caller conclusion remains unchanged. This batch does not repeat its17 instruction assertions or use a second rendering of the same cross-reference scan as new research.
+
+## Original identity and collected scope
+
+| Original input | SHA256 |
+|---|---|
+|`/home/bticino/bin/bt_supervisione`|`12c4d6f09d53fe2f1862eea8d1112b9b960f0511b11ac7a3767a22b0daaabfd2`|
+|`/home/bticino/bin/bt_energy_central_unit`|`a814d9da0d216a4ab95f178e36d2351de0eb9da6b2f0ba4f1221238eb885d697`|
+
+`original-spans.json` pins28 selected original byte spans with exact image paths, VAs, file offsets, lengths and SHA256. `critical-words.json` checks30 exact instruction/data words, including row dispatch entries, persistent-buffer writes and both original parser/send pairs. `literal-pointers.json` resolves formats from original pointer pools. The input manifest additionally pins packaged routing and six read-only prior reports, including the first targeted report: nine inputs in total. Proximity disassembly labels are not function identities.
+
+## Header, address, sequence and state
+
+The old stream reaches **0xd6d4** when the ordinary extended receive selection has raw character tuple `235` at offsets8–10. The preceding category4 and shared field-extraction context are retained from the first targeted report; they were not re-executed here. Offsets below are zero-based within the19-character internal raw string, not physical serial bytes.
+
+At0xd6ec–0xd720, raw[11:13] is converted from hex; its upper bits select a record class (`byte >> 5`), and lower five bits supply a countdown (`byte &31`). Class4 selects the header at0xd760; class5 selects following records at0xd900. This record class is separate from the outer receive helper's return category4.
+
+The reverse-WHERE helper0xa914 converts the address composed from raw[7] and raw[5:7]. Its ordinary0xA0-based range uses the original `5%d` literal. The host example raw address `A1` plus high nibble0 yields WHERE`51`. At0xd734–0xd75c and0xce88–0xcebc the code stores/compares an active WHERE marker, with an additional saved-address comparison before switching. The finite models assume no competing address or request. This is not a general concurrent/interleaved-stream proof.
+
+The header records the following fields relative to original context VA0x1b314:
+
+| Offset | Meaning established by code | Initializer |
+|---:|---|---|
+|205|active stream byte|1 at0xd7d8|
+|208|time word|0xd7e8–0xd7f0|
+|780|two-character FD string|copy from raw[13:15] at0xd77c–0xd784|
+|790|two-character row string|copy from raw[15:17] at0xd788–0xd790|
+|800|numeric FD|0xd7ac|
+|804|numeric row|0xd7d0|
+|808|remaining-count state|header low five bits at0xd7dc|
+|812|initial-count copy|0xd7e0|
+|816|accepted data-record counter|0 at0xd7e4|
+|820|persistent text buffer,1,024 bytes|cleared at0xd7ec–0xd800|
+|1844|first numeric metadata field for selected old rows|header raw[17:19] at0xd8b0–0xd8cc|
+|1848|second metadata field / absence marker|−1 at0xd8d0|
+
+FD0x50 plus row0x10..0x14 or row0x16 reaches that metadata initializer through0xd82c–0xd848. These are not the newer rows0x1A–0x1D width/counter setup. On class5, active byte is checked at0xd908; `remaining−1` is stored and compared with the incoming countdown at0xd920–0xd934. A matching record increments the accepted-record counter at0xd94c–0xd958. The duplicate/out-of-order handling is retained in `oldstream-reset-sequence.txt`; the two models cover only descending normal countdowns.
+
+## DIM56/510 and persistent buffer rules
+
+At0xd968–0xd980 the selected FD0x50 rows0x10..0x14 reach0xe544. WHO is set18; the WHERE string is reconstructed; **dimension text is `5%d` with `(numeric row−10)`**, formatted at0xe5a8–0xe5b4. Thus hexadecimal rows10,11,12,13,14 (decimal16..20) give dimension strings **56,57,58,59,510**. This is text concatenation, not the arithmetic mapping used for newer dimensions511–514. Row0x16 has an independent special DIM52 choice.
+
+For the selected rows:
+
+- On accepted data record1, row0x10 additionally takes raw[13:15] as second metadata at0xe85c–0xe874. Row0x14 retains header metadata2=−1. The code takes raw[15:17] and raw[17:19] as two hex bytes, converts each to decimal and **replaces** the persistent buffer with `%d*%d` at0xe6c0–0xe704.
+- On later records, the ordinary row path takes all three bytes raw[13:15], raw[15:17], raw[17:19]. For selected rows0x10/0x14,0xe76c compares row0x19 and0xe770 branches to0xe7f0 on mismatch. This path loads **`%d*%d*%d`** at0xe840 from pool0xe928 and sets the destination to **context+820** at0xe850, then calls `sprintf` through0xdd00. It **replaces** the buffer with the three current decimal values. The `strlen`/end-pointer append path0xe774–0xe7ec and leading-star format0xe9b0 belong specifically to row0x19 and are not used by these two selected rows. Values are individual bytes, not a single24-bit quantity or newly established Wh readings.
+- If the remaining countdown is nonzero,0xe404–0xe420 selects this old-row intermediate path. The formatted frame contains the **current record's decimal buffer**, first metadata, optional nonnegative second metadata, and accepted-record counter. It does not accumulate prior records' scalar values.
+- At countdown0, control goes through0xdd04–0xdd38 to a **separate terminal record rule**. Row0x10 takes0xddc0–0xddf8 and replaces the buffer with the first two current record bytes as `%d*%d`; row0x14 follows the original jump-table entry0xdd5c→0xde00 and replaces it with only the first byte as `%d`. This overwrites the temporary three-current-value buffer. The terminal frame is another selected record representation, not a replay of prior values.
+
+The terminal rule may encode a different record role, but this code alone does not establish it. In particular the first/two/three-byte variants are not assigned date, sample, tariff or physical sentinel semantics here, and the final overwrite is not labelled a defect.
+
+## Actual parser/send calls and completion
+
+The original intermediate formatting uses one of:
+
+```text
+*#WHO*WHERE*DIM#meta1#meta2*recordCounter*buffer##
+*#WHO*WHERE*DIM#meta1*recordCounter*buffer##
+```
+
+Resolved literals are at0x1195a and0x11973. Both intermediate and terminal paths use these same shapes, selected by metadata2>=0.
+
+| Path | Original parser call | Descriptor condition and original send call |
+|---|---|---|
+|nonterminal old-row record|`CreateMsgOpen` at0xe49c|descriptor word !=−1; `invio_msg_open` at0xe4b4|
+|terminal old-row record|`CreateMsgOpen` at0xde9c|descriptor word !=−1; `invio_msg_open` at0xdeb4|
+
+The OPEN object is the caller-provided object preserved in r7, unlike the direct-DH local-only branch which repurposes r7 for its DIM string. Each send takes object wire text at+0x879c. There is **no `IsCorrect` predicate inserted between these parser/send call sites** in the inspected source. The presence of the calls is a static publication route, not newly demonstrated parser acceptance, successful transmission, valid runtime descriptor or device response. A negative send return follows close/reset branches0xe890 or0xe8cc.
+
+For terminal old rows,0xdec0–0xded0 clears active byte205; nonempty dimension leads through0xe3f8–0xe3fc to request-state word1860=0. Shared cleanup0xe4c0 clears separate buffers at0x1b5ec and0x1b60c; it does not erase the persistent data buffer at context+820. Shared return0xcedc sets r5=1. That may allow additional caller processing; this report does not claim exactly-once delivery or audit every later caller action. The direct handler publication calls already distinguish this route from the DH return0 branch.
+
+## Host-only finite consistency reconstruction
+
+`host-oldstream-model.json` contains **two sequences, each one header plus three data records**, and six conditional parser-input strings. These are code-derived normal candidates, not captures or original CPU/parser executions. Their raw prefix `$18` and chosen `D2` header are illustrative; only the described selector/address/count/field rules are modelled. Metadata10/2 are chosen integers, not asserted calendar meanings.
+
+For row0x10/DIM56, the header is `$18D2A102358350100A`. Data countdowns2→1→0 use the following modelled outputs:
+
+| Counter / raw record | Resulting buffer | Conditional parser input |
+|---|---|---|
+|1 / `$18D2A10235A2020A0B`|`10*11`|`*#18*51*56#10#2*1*10*11##`|
+|2 / `$18D2A10235A10C0D0E`|`12*13*14`|`*#18*51*56#10#2*2*12*13*14##`|
+|3 / `$18D2A10235A0030F10`|terminal override `3*15`|`*#18*51*56#10#2*3*3*15##`|
+
+For row0x14/DIM510, the analogous header is `$18D2A102358350140A`; metadata2 stays−1. The first two buffers are identical, and the terminal buffer becomes only`3`:
+
+```text
+*#18*51*510#10*1*10*11##
+*#18*51*510#10*2*12*13*14##
+*#18*51*510#10*3*3##
+```
+
+The model preserves both the transient current-record buffer and terminal replacement. Prior values are not carried into the second record. Neither sequence establishes original backend, web mapper or historical consumer acceptance.
+
+## Separate outgoing request selection
+
+There is also a concrete original request-side selector for these old rows, distinct from the previous DH4xx table lookup. Helper0xeb64 separates dimension text and `#` arguments; these are extracted object fields, not newly accepted wire frames. DIM56 selection0xf56c→0xf9bc requires two nonempty argument strings, converts them with `atoi`, sets request state4 and FD0x50/row0x10. DIM510 compares the original511 literal minus1 at0xf760–0xf768, reaches0xfaa8, requires one nonempty argument, sets FD0x50 and row0x14 through0xfd90. These local checks do not impose independently established calendar ranges.
+
+The request WHERE preprocessing for prefix5 formats the suffix+160 as `5%d` at0xece8–0xed08. Thus model WHERE51 becomes intermediate string5161. The ordinary formatter takes suffix161 and splits it into address bytes at0x10908–0x10948. Original literal0x12030 is `$06D1%02X%01X23%c%02X%02X%02X%02X`. With metadata10/2 the DIM56 host reconstruction is `$06D1A1023350100A02`; DIM510 with metadata10 is `$06D1A1023350140A00`. The original common send is reached through0xffcc–0xffe8. These are **internal query strings**, not serial bytes, observed transactions or proof that the example receive sequence answers these requests.
+
+The number4 in request-state word1860 is independent of receive category4, stream class4 and OPEN object kinds. DIM56/510 alone do not authorize an alias to newer DIM511/513 or their unit/calendar semantics.
+
+## Reproduction and remaining scope
+
+```sh
+python3 work/f454-firmware/research/2026-10-30-targeted-2/energy/collect_evidence.py
+python3 work/f454-firmware/research/2026-10-30-targeted-2/energy/collect_evidence.py --check
+```
+
+The collector reads original bytes, invokes host binutils, and generates36 static/model outputs. It verifies28 span identities,30 exact words, nine input hashes, resolved formats and the two finite selected host models. `--check` compares generated UTF-8 bytes with saved outputs without writing. `output-manifest.json` pins this new batch only; prior reports/indexes/manifests remain untouched. No firmware/JS instruction execution occurred, and none is implicitly counted by the host model.
+
+**Material peer-review correction:** the initial development report/model incorrectly applied the row0x19-only append rule to rows0x10/0x14. Current report and models correct that mistake to per-record replacement. Exact pre-review report, collector, model and supporting manifests/validation are retained under `development-pre-review/`, with their SHA256 in `snapshot-sha256.json`; they are superseded, not current findings. `CORRECTION.md` records the branch evidence and changed example strings. The terminal two-/one-field results and parser/send call sites are unchanged by this correction.
+
+High confidence in the static FD/row selection, countdown/counter storage, decimal first/middle/terminal buffer rules, original parser/send call sites and distinct outgoing old-format query selection. Conditional/model-only: the two complete synthetic sequences and exact resulting text. Unverified: full original parser and event-mapper behavior for these shapes, live descriptors/delivery, actual device production, units/calendars, terminal-field meaning, concurrency and any separate longer-DH7E producer elsewhere.
+
+The highest-value next question is the **actual old-format DIM56/510 consumer schema**—especially the record-counter interpretation and why first, middle and terminal records supply different field counts. That should be answered from a distinct consumer, not by assuming newer511–514 interpretation. A longer-DH7E publication route remains a separate open question; this batch contributes a genuinely different energy route without claiming that gap closed.

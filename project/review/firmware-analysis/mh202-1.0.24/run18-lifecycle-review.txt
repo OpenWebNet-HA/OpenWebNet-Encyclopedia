@@ -1,0 +1,17 @@
+# MH202 script node construction independent source review
+
+PASS without corrections. The parent independently replayed `lifecycle/run18/collect_nodes.py --check`, independently mapped original ELF PT_LOAD ranges and reproduced five raw span hashes, 29 exact instruction words, the safe BEGIN and scanner-format literals, and all14 manifest identities. Original image SHA256 is `f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4`.
+
+The reviewer read the complete scanner0x94d0..0x9820, main allocation/guard/current-node/fseek0x9ae8..0x9b54 and execution END/next branch0xaa68..0xaaa4. Main requests12-byte operator new without an initializing constructor. Scanner atoi/ftell+1/fgets precedes a first-six-byte comparison with ` BEGIN`; equality populates the existing head and sets started. Later non-comment records append node label/offset and the previous next link. The selected complete body has no explicit final-tail next initialization and no END stop after started. EOF result−1 is transformed to return1 independently of started. Execution END takes its separate end-helper path, while ordinary continuation advances next then fseeks the saved offset.
+
+The source closes the earlier head identity: the initialized head is the first matched BEGIN source entry under ordinary scanning/allocation and effective shared-global premises. Earlier arbitrary10/20/30 host nodes remain historical synthetic examples; no skipped-first-action defect follows. Host file cases are finite byte-position/source models, not native parsing or accepted complete scripts. No invented tail-NULL value, valid missing-BEGIN runtime state, invalid-input outcome, allocation/lifetime guarantee or physical behavior is inferred. Command-gate clear and R/P lifecycle remain open.
+
+Original instructions, target OS/process/stdio/allocator, script execution, bus/network and physical observation are all0 in this review. No native emulator replay was performed or needed for this static area. Author and prior artifacts were unchanged. Confidence is high for selected source/operand/guard relations; actual configured extra4 contents and provider/runtime outcomes remain unresolved.
+
+## Reviewed pins
+
+- `REPORT.md`: `36e21937207c5474435c5ae52efa4478c02988267525e8a92f8a0f48fbf13076`
+- `collect_nodes.py`: `1220d3364b0fca929fe2dc8b97af454645219aed6f03210ec5998e6f8a51ab3d`
+- `output-manifest.json`: `a9037b2e3086926a2b71d74c8476be456a007f0e4b8d7319e07798d4f1e2877c`
+- `original-spans.json`: `24b7461c9542ab29d035191e1b394841ac44bbb2d53af3e6fe1ef7e11b18e954`
+- `critical-words.json`: `534e18354c8150a9941c6d136cc6166026ce44706c4570bcd52379d6b6239626`

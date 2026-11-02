@@ -1,0 +1,12 @@
+# Configured-input follow-up coverage
+
+| Work | Evidence class | Remaining |
+| --- | --- | --- |
+| MHS/F46 asset admission | Targeted original inventory/settings metadata; 9 outputs/11 first copies | No genuine commissioned scene/module admitted; no global absence claim |
+| MHS policy note | Qualification of inherited bytes, zero new code/natural path | Complete original-input field requirements and actual configured behavior |
+| F460 filesystem prefix | New selected original argument/path/compare gate source | Natural root caller, W28 producer, path identity, whole filter/loader/JSON behavior |
+| F460 input prefix | New selected constructor argument/file-open/result/setup source | Successful open/read, actual parse call/result, root publication and configured asset |
+| Generic range-helper lead | Stopped qualification, zero additional functional coverage | No raw-scene/file-parse interpretation promoted |
+| F461 | Packaged defaults and inherited module/source context | Commissioned instances/records, active config/binding and natural behavior |
+
+Counts describe integrity/selected reach, not semantic percentages. New original/helper/native/emulator/model/fixture/JSON/SQL/runtime/physical execution0. Earlier MHS340code-hookvisits/360hooks and separate setups/F454/MH202 ledgers unchanged. Full source/Device/runtime/physical approval pending.

@@ -1,0 +1,35 @@
+# F461 run03 translator-dispatch: independent source review
+
+PASS for the bounded original registry-list/matcher/callback and selected criterion-provenance claims. No author correction requested. This is independent static source and host reproduction; no original/vendor/provider/native code or semantic fixture/model was executed. I authored the separate F460 SLEEP packet, whose layouts and timing semantics are not transferred here.
+
+Reproduced `collect_dispatch_v1.py --check`:18 outputs/9 spans/31 guards/20 exact first copies pass. Independently read all three original objects, mapped PT_LOADs, checked each retained raw span hash and31 original instruction-byte guards, all20 snapshot copies and four documentary input pins. Original source digests agree with REPORT/SOURCE. No author files were edited.
+
+## Positive source joins checked
+
+- Fresh executable startup requests144 zeroed bytes and calls get_plug_m through its actual PLT/JUMP_SLOT. I separately verified allocator g_malloc0 at caller0x2f78→PLT0x2d10→slot0x17210 and clock import0x3e9c→PLT0x2ee0→slot0x172f8. Candidate core get_plug_m0x25a0 retains an existing nonnull pointer or stores the supplied pointer only when null. This supports the reported conditional same-manager composition, not guaranteed first allocation ownership or effective interposition.
+- Original register_translation prepends the descriptor to manager32; executable matcher retrieves that list, retains the descriptor inX22 and ultimately loads descriptor56/BLR0x4048. The wrapper manager→argumentX2 and manager+136→X0 handoff agrees. A field descriptor from manager24, a translation descriptor from manager32 and the current message remain distinct objects.
+- Message64-word32 versus clock-return+10 takes the reported unsigned <= branch. This is raw local arithmetic/branch evidence, not a time-unit/elapsed guarantee or a replayed clock.
+- Checked original two orientation branches and register renaming around0x3f40/0x400c/0x4010/0x4070. Descriptor64/68, field80 low32/full64 identity tests, message16/48 and criterion-node data each keep their own namespaces. The complementary automation direction1/2 composition selects its list80 and calls axes(2,1) only under the stated same-manager/list/field/message/due premises. No public WHO or natural input is implied.
+- At the actual call, W0/W1 are selected axes, X2 is the same messageX28, X3 is its local output-list address and X4 is the same descriptorX22. Nonzero callback result advances criterion; zero advances descriptor or cleanup, with a later local flag when more descriptors exist. This is not globally exclusive first success or a physical delivery acknowledgment. Output foreach/callback bodies remain opaque.
+- Independently inspected predecessor source of new_openmsg_from_openmsg0x2f30: X21 saves the supplied parsed object, allocation result supplies messageX22 and selected code copies/duplicates parsed state. The bounded0x3088..0x30b0 path requests decimal strtol with NULL end pointer, stores low32 to message48 and representation3 to56. Its actual BL0x30ac→PLT0x1fb0→slot0x150b8 resolves exact `strtol@GLIBC_2.17`. Full selector admission, complete parsing, range/truncation/error semantics, natural producer and accepted wire grammar remain open.
+
+An auxiliary reviewer import check initially expected the unversioned spelling strtol and failed on the original versioned name. Direct original relocation inspection then verified the exact GLIBC_2.17 name and original PLT; no target code ran, no source guard was weakened and no author/candidate bytes changed. The packet itself retains its successful first generation without a fabricated failure history.
+
+## Limits retained
+
+Descriptor registration/criteria interpretation and parsed numeric provenance are source facts with ordinary provider/list/lifetime/binding prerequisites. The actual field registration/configuration, same live manager, natural message construction, raw dialect, caller scheduling and downstream output remain unproved. The report correctly distinguishes callback slot56 from message representation56 and translation list80 from field80. It does not turn a decimal-string criterion into universal WHO2 support. Receiving/transport/MQTT/libjel/authentication/session/framing bodies were not followed. Original execution/models/fixtures additions remain0; prior product ledgers are unchanged.
+
+## Exact reviewed pins
+
+Relative to `work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/`:
+
+| File | SHA256 |
+| --- | --- |
+| `REPORT.md` | `a89d70211c3f6eecb92f620d9e1aecdc52c2c1a06dbff99cdcc89b139b0f6c19` |
+| `collect_dispatch_v1.py` | `2b856f965333e23066d83d82f8a1ae7d77fa969e7a66c3dbd658f09393d1b627` |
+| `SOURCE.json` | `2cb9d0b1cab5555b8216adbc22068ea6ae1142c2e2ac9798e32d9d11ab9093a4` |
+| `INPUTS.json` | `8ea73ac0a634047a6384db1510404f14685cd28215fa69acac3c19b8cfa89368` |
+| `OUTPUT_MANIFEST.json` | `424d8bbc9d1e90968dfcbe000ca6861a20927b43ca55af328485719e003b6dd7` |
+| `first-candidate/INDEX.json` | `2c4f1c31c751677ce644c0697c49a98e1e51d6ed8f1e4f92d3188409c92b1d04` |
+
+Original executable `/home/bticino/bin/coso` SHA `2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197`; core SHA `572bca218965a040393361bea4044b0d55519b4f2146ef69c9aa18d4aa6ef690`; automation plugin SHA `d7d361798ccec65843bd41c9ad7b8897645a334b0cd08121d372949f78eac277`. PASS is limited to these bounded source claims, not complete functionality, runtime, product/public support or physical validation.

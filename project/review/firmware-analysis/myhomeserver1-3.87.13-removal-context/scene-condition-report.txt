@@ -1,0 +1,59 @@
+# BNCUSCENE: its own compiled condition and selected predicate
+
+The original condition table's **row 17, `BNCUSCENE`**, leads to raw `BncuSceneCondition` and a **192-byte** compiled `BncuSceneConditionRunner`. Its condition-worker predicate is not either of the first two cleanup slots: the actual selected primary vtable **slot+8** points to `0xc83d8`. That entire method reads byte+132, XORs it with one, and returns. With the ordinary 0/1 Boolean output copied from the JSON enabled conversion, it returns **1 when disabled and 0 when enabled**. This bounded method performs no local scene-ID lookup, state comparison, timer or provider call.
+
+This is packaged-source behavior under valid construction/object/ABI premises, not an executed or configured condition, physical feature attribution, unsupported-function declaration or defect finding. The acronym and class names do not establish their intended product meaning. Original instructions/helpers/vendor processes/JSON/provider/target APIs and host semantic cases executed: **0**.
+
+Original `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Linked VAs below have fresh PT_LOAD offsets and raw-span hashes in `ORIGINAL_SOURCE.json`. No F454/MH202 or neighboring BNIL/BNLD/TIME layout was transferred. The prior reset-caller packet supplies only a source lead; this packet adds condition selection, schema/compiled copies, exact vtable ordering and actual consumer dispatch.
+
+## Raw table, factory and selected schema
+
+The exact original condition-name table at `0x1605b0` row 17 contains length 9 and `BNCUSCENE`. The raw factory selects a matching text row through length/byte comparison, then **subtracts one** at `0x2fb02`. Its TBH data base is **`0x2fb0e`**; entry index 16 has value `0x011b`, giving `0x2fd44`. The data base is the instruction's aligned PC+4, not the address of a later selected halfword. This index is a local condition-table row, not a public WHO, action or trigger number.
+
+The selected branch `0x2fd44..0x2fe24` calls the common raw-condition constructor, requests **88 bytes**, copies the base, constructs two derived strings at raw+40 and raw+64, installs the local header `0x16004c`, and requests append through `0x2fa28` to the raw scene's condition-pointer vector at +12. The selected append helper's complete ownership, capacity and exception behavior remains delegated.
+
+Independently, direct constructor `0xb2bc4` calls the same base and installs that header, whose exact RTTI is **`18BncuSceneCondition`**. Its two derived string consumers select JSON keys **`id`** and **`name`** and store strings at +40 and +64. The base also has an ID string at +4 and an enabled byte at +28; its selected source independently reads exact `enabled` through imported `asBool` and writes +28 at `0x2b824`. The base ID and derived ID are separate storage, even though the retained constructor requests the same source key. JSON conversion/invalid-type/default/error behavior is not established by running the provider.
+
+The base's local type-table comparison stores the matched row index to +32 at `0x2b8dc`. The compiled dispatcher reads this raw +32 directly, without the raw factory's decrement. Its TBH data base is **`0xa7516`**; selected index 17 contains `0x026a`, giving **`0xa79ea`**.
+
+## Compiled construction and independent field layout
+
+At `0xa79ea..0xa7a20`, the initializer requests the raw object's virtual serialization, reparses the resulting JSON using `0xb2bc4`, requests **192 bytes**, and calls `0xc83e4` with the new allocation as destination and the reparsed raw object as source. Serializer correctness/value preservation, successful conversion/allocation and all exception paths remain conditions. In particular, the complete serializer's derived-field coherence is not claimed here merely because a virtual call precedes reparse.
+
+The fresh compiled constructor's source establishes:
+
+| Source field | Compiled destination | Selected evidence |
+|---|---|---|
+| raw base ID string +4/+8 | own ID string +108 | `0xc843a..0xc8478` |
+| raw enabled byte +28 | own enabled byte +132 | `0xc848e..0xc8490` |
+| raw type/operator pair +32/+36 | own words +136/+140 | `0xc847a..0xc8496` |
+| raw derived ID string +40/+44 | derived string +144 | `0xc849a..0xc84de` |
+| raw derived name string +64/+68 | derived string +168 | `0xc84e4..0xc8512` |
+
+These are separate members, not a target-scene lookup or a configured target identity inferred from a key. The constructor also requests a condition variable at own+8, initializes its own mutex words +56..+76 and string storage at +80. Those offsets belong to this condition object; they are not the shared action-stop object or the separate event-record registry.
+
+At `0xc8514..0xc8520`, it installs primary header **`0x161fb0`**, address point **`0x161fb8`**, and a secondary base address point at **`0x161fcc`**, corresponding to own+104. RTTI is exactly **`24BncuSceneConditionRunner`**. The three primary slots contain Thumb pointers `0xc86f1`, `0xc864d`, and **`0xc83d9`**. The first two bodies request member/CV cleanup, and the second requests deallocation of 192 bytes. They are not predicate handlers. Secondary slots are a different base interface; their semantics are not transferred to the primary predicate.
+
+## Actual pointer publication and condition-worker call
+
+The compiled allocation is retained in R6. `0xa7a1e` stores that primary object pointer to a temporary; `0xa7a20` passes it to `0xa7264` with destination **the same scene's +116 vector**. The helper's capacity-available branch moves the **unchanged four-byte pointer** into its end, zeros the temporary, and advances end by four (`0xa726e..0xa7278`). Its full-capacity branch is a delegate. This is not an eight-byte pointer/control trigger or action-handle vector.
+
+The actual worker source `0xa6d30..0xa6d48` reads a scene's condition range at +116/+120. On its selected unrolled-loop leg, `0xa6d88` loads a pointee from that range, `0xa6d90..0xa6d92` loads **its own primary vptr and slot+8**, and `0xa6d94` invokes it with that unchanged primary object pointer. Thus when the published BNCUSCENE pointer is the selected valid member of this same scene range, the call reaches original **`0xc83d8`**, not either cleanup body and not a neighboring condition's method.
+
+The entire selected method is exactly:
+
+- `0xc83d8`: load unsigned byte from `[this+132]` into R0;
+- `0xc83dc`: XOR R0 with immediate 1;
+- `0xc83e0`: return.
+
+For the ordinary successful `asBool` 0/1 construction premise, disabled=0 returns 1 and enabled=1 returns 0. More generally the code computes `byte XOR 1`; arbitrary corrupt/non-Boolean bytes are not supplied or classified. ID, derived name/ID, type/operator, CV/mutex and other state are not read by this three-instruction method.
+
+At `0xa6d96..0xa6d98`, a nonzero result continues the aggregate condition loop; zero falls into the failure path. The earlier independently reviewed service/condition-worker packet establishes the complete normal-range conjunction and its false/cleanup versus action-worker continuation; that broader control behavior is inherited, not a new whole-worker re-audit here. This packet positively binds the exact BNCUSCENE object and predicate to that existing consumer contract. It does not establish an actual configured instance, worker invocation, all-condition result, action execution or scene readiness.
+
+## Boundaries and reproduction
+
+High confidence: exact row/index distinction, selected raw and compiled identities, allocation sizes, independent field-copy offsets, vtable ordering, pointer-vector publication and actual same-interface slot+8 invocation, plus the method's local XOR result. Unclosed: intended feature meaning, configured assets, complete serializer/reparse coherence and all other class methods, external mutation/providers, construction/lifetime/unwind/concurrency, actual aggregate execution and physical effects. There is no transport, receiving, session, authentication, framing, MQTT or libjel implementation inspection.
+
+The curated `OWN-DEV-0199` definition is retained only for item 2198 and home-automation/scenario product context. It supplies no installed behavior or new physical interpretation of `BNCUSCENE`.
+
+`python3 collect_scene_condition_v1.py --check` verifies original identity/PT_LOAD spans, instruction guards, selected keys and PIC/GOT/RTTI/vtable/relocation joins, raw and compiled TBH targets, pinned prior reports, unchanged output bytes and exact first-candidate copies. Generation refuses existing outputs/snapshot paths. First index bytes are computed before opening that index. No original code is executed.

@@ -1,0 +1,55 @@
+{
+  "caller": {
+    "VA": "0xf13b4",
+    "key": "compiled ID string +108",
+    "output_pair": "predicate SP+4",
+    "registry": "0x167368",
+    "result_use": "caller reads outputdata word, not helperR0Boolean",
+    "selector": 0
+  },
+  "conditional_wait": {
+    "clock_argument_literal": 1,
+    "deadline_count_increment": 10000000000,
+    "dependency": "nonzero response-string length +100",
+    "parse_stop": "10f812 importedJsonparseFromStream afterselectednonemptystring setup",
+    "registry_CV_offset": 24,
+    "registry_mutex_offset": 72,
+    "repeat": "beforedeadline and length0; nonzero length proceeds even reached/passeddeadline",
+    "wait_call": "pthread_cond_clockwait@10f5d0",
+    "wait_return": "not used asBoolean before subsequent steady_clock now",
+    "zero_output": "selectedtimeout continuation plusnormaldiagnosticdelegates\u219210f698 zero pair/unlock"
+  },
+  "fast_path": {
+    "effect": "copy both pair words10f4e2; normalguard/epilogue",
+    "first_call": "10f4ce\u219210e3d8 ordinarylookup",
+    "local_type_or_selector_test_before_return": false,
+    "nonnull_test": "10f4de",
+    "scope": "Only retained nonnull path; no freshness/type/globalvalidation or concurrentlifetime proof"
+  },
+  "method": {
+    "external_transport_auth_or_parser_bodies_inspected": 0,
+    "host_semantic_cases": 0,
+    "original_instructions": 0,
+    "target_calls": 0
+  },
+  "miss": {
+    "clear": "length0 and NUL at pointer",
+    "inline_initial_buffer": 104,
+    "normal_continuation": "conditionalnormalreturns/cleanup\u219210fe18\u219210f56a",
+    "opaque_boundary": [
+      "10fd6c\u21925f4a4",
+      "10fd7a indirectcall"
+    ],
+    "response_string_length": 100,
+    "response_string_pointer": 96,
+    "selector_zero": "10f564\u219210fa80"
+  },
+  "unclosed": [
+    "opaque request/provider/callback implementation and delivery",
+    "response-string writer/notify producer, IDcorrelation, freshness",
+    "wholemiss outputrecordtype and responseinterpretation",
+    "allselector/error/exception/provider/lifetime/concurrency contracts",
+    "clock/providerunits and actual elapsedwaiting",
+    "physicalmeaning/installedconfiguration/natural events"
+  ]
+}

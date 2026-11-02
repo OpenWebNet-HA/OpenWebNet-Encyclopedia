@@ -1,0 +1,354 @@
+[
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_item",
+    "source_profile": "firmware",
+    "source_rows": 331,
+    "source_table": "EN_DEVICE",
+    "target_column": "id_item",
+    "target_table": "EN_ITEM",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_brand",
+    "source_profile": "firmware",
+    "source_rows": 331,
+    "source_table": "EN_DEVICE",
+    "target_column": "id_brand",
+    "target_table": "EN_BRAND",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_line",
+    "source_profile": "firmware",
+    "source_rows": 331,
+    "source_table": "EN_DEVICE",
+    "target_column": "id_line",
+    "target_table": "EN_LINE",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_family",
+    "source_profile": "firmware",
+    "source_rows": 105,
+    "source_table": "EN_ITEM",
+    "target_column": "id_family",
+    "target_table": "EN_OBJECT_ITEM_FAMILY",
+    "unmatched_nonNULL_rows": 1,
+    "unmatched_values": [
+      {
+        "rows": 1,
+        "value": [
+          "str",
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_bus",
+    "source_profile": "firmware",
+    "source_rows": 201,
+    "source_table": "AS_BUS_ITEM",
+    "target_column": "id_bus",
+    "target_table": "EN_BUS",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_item",
+    "source_profile": "firmware",
+    "source_rows": 201,
+    "source_table": "AS_BUS_ITEM",
+    "target_column": "id_item",
+    "target_table": "EN_ITEM",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_item",
+    "source_profile": "firmware",
+    "source_rows": 113,
+    "source_table": "AS_ITEM_SYSTEM",
+    "target_column": "id_item",
+    "target_table": "EN_ITEM",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_system",
+    "source_profile": "firmware",
+    "source_rows": 113,
+    "source_table": "AS_ITEM_SYSTEM",
+    "target_column": "id_system",
+    "target_table": "EN_SYSTEM",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_device",
+    "source_profile": "firmware",
+    "source_rows": 274,
+    "source_table": "AS_DEVICE_PICTURE",
+    "target_column": "id_device",
+    "target_table": "EN_DEVICE",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_picture",
+    "source_profile": "firmware",
+    "source_rows": 274,
+    "source_table": "AS_DEVICE_PICTURE",
+    "target_column": "id_picture",
+    "target_table": "EN_PICTURE",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_bus_type",
+    "source_profile": "firmware",
+    "source_rows": 13,
+    "source_table": "EN_BUS",
+    "target_column": "id_bus_type",
+    "target_table": "EN_BUS_TYPE",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_bus",
+    "source_profile": "firmware",
+    "source_rows": 44,
+    "source_table": "AS_BUS_SYSTEM",
+    "target_column": "id_bus",
+    "target_table": "EN_BUS",
+    "unmatched_nonNULL_rows": 4,
+    "unmatched_values": [
+      {
+        "rows": 4,
+        "value": [
+          "int",
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_system",
+    "source_profile": "firmware",
+    "source_rows": 44,
+    "source_table": "AS_BUS_SYSTEM",
+    "target_column": "id_system",
+    "target_table": "EN_SYSTEM",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_item",
+    "source_profile": "suite",
+    "source_rows": 541,
+    "source_table": "EN_DEVICE",
+    "target_column": "id_item",
+    "target_table": "EN_ITEM",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_brand",
+    "source_profile": "suite",
+    "source_rows": 541,
+    "source_table": "EN_DEVICE",
+    "target_column": "id_brand",
+    "target_table": "EN_BRAND",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_line",
+    "source_profile": "suite",
+    "source_rows": 541,
+    "source_table": "EN_DEVICE",
+    "target_column": "id_line",
+    "target_table": "EN_LINE",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_family",
+    "source_profile": "suite",
+    "source_rows": 210,
+    "source_table": "EN_ITEM",
+    "target_column": "id_family",
+    "target_table": "EN_OBJECT_ITEM_FAMILY",
+    "unmatched_nonNULL_rows": 6,
+    "unmatched_values": [
+      {
+        "rows": 6,
+        "value": [
+          "str",
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_bus",
+    "source_profile": "suite",
+    "source_rows": 499,
+    "source_table": "AS_BUS_ITEM",
+    "target_column": "id_bus",
+    "target_table": "EN_BUS",
+    "unmatched_nonNULL_rows": 2,
+    "unmatched_values": [
+      {
+        "rows": 2,
+        "value": [
+          "int",
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_item",
+    "source_profile": "suite",
+    "source_rows": 499,
+    "source_table": "AS_BUS_ITEM",
+    "target_column": "id_item",
+    "target_table": "EN_ITEM",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_item",
+    "source_profile": "suite",
+    "source_rows": 223,
+    "source_table": "AS_ITEM_SYSTEM",
+    "target_column": "id_item",
+    "target_table": "EN_ITEM",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_system",
+    "source_profile": "suite",
+    "source_rows": 223,
+    "source_table": "AS_ITEM_SYSTEM",
+    "target_column": "id_system",
+    "target_table": "EN_SYSTEM",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_device",
+    "source_profile": "suite",
+    "source_rows": 434,
+    "source_table": "AS_DEVICE_PICTURE",
+    "target_column": "id_device",
+    "target_table": "EN_DEVICE",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_picture",
+    "source_profile": "suite",
+    "source_rows": 434,
+    "source_table": "AS_DEVICE_PICTURE",
+    "target_column": "id_picture",
+    "target_table": "EN_PICTURE",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_bus_type",
+    "source_profile": "suite",
+    "source_rows": 13,
+    "source_table": "EN_BUS",
+    "target_column": "id_bus_type",
+    "target_table": "EN_BUS_TYPE",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_bus",
+    "source_profile": "suite",
+    "source_rows": 44,
+    "source_table": "AS_BUS_SYSTEM",
+    "target_column": "id_bus",
+    "target_table": "EN_BUS",
+    "unmatched_nonNULL_rows": 4,
+    "unmatched_values": [
+      {
+        "rows": 4,
+        "value": [
+          "int",
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "NULL_rows": 0,
+    "relationship_status": "candidate join supported by schema naming, parent-key uniqueness and observed values; not an automatic declared constraint or protocol identity",
+    "source_column": "id_system",
+    "source_profile": "suite",
+    "source_rows": 44,
+    "source_table": "AS_BUS_SYSTEM",
+    "target_column": "id_system",
+    "target_table": "EN_SYSTEM",
+    "unmatched_nonNULL_rows": 0,
+    "unmatched_values": []
+  }
+]

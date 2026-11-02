@@ -1,0 +1,23 @@
+# MH202 1.0.24: exact packaged strcpy helper, run8
+
+The selected packaged libc helper completes all 16 supplied shrinking-suffix, identity and disjoint-copy calls with the expected string, original destination return pointer and preserved r4/r5/SP. This narrows the earlier unknown about the actual compiled copy routine. It does not execute the interpreter or establish a portable overlapping-copy contract, valid script grammar or a physical action.
+
+## Original evidence
+
+Image-relative `lib/libc.so.6` resolves through immutable image metadata to `lib/libc-2.8.so`, SHA256 `99013ec5ea7c647c8b3fbc6786c6efcf5b93343c4250bd3ef364c93c074e4cf8`. The original dynamic symbol `strcpy@@GLIBC_2.4` is an ordinary ARM FUNC, VA `0x70ad0`, size240, end-exclusive `0x70bc0`; PT_LOAD-derived file offset `0x70ad0`, exact function SHA256 `7fb2a14b24b87f76462eaf618f0f6967ea3a70feb32f18c6c2a19fbbed671f79`. Its body contains no imported helper calls. The code at `0x70adc` selects a byte-copy loop at `0x70bac` when source/destination alignments differ; aligned paths also use original halfword/word loads and byte termination.
+
+Earlier static callers are preserved in functional/run2-interpreter/REPORT.md (IIF `0x74a0` and comma-prefix removal) and functional/run5/REPORT.md (bt_script `0x9df0`, `0x9e24`, `0x9e3c`). Their destination is the current line and their source can be a later suffix or the same token pointer. This batch supplies analogous bounded arguments directly to libc. It does not call those original sites, execute strchr/strtok, bind the global line, or validate the hypothetical CHKTIME source candidate. The library selected here is original MH202 libc; its effective runtime binding is still conditional.
+
+## Reproduction and execution boundaries
+
+Run `python3 -B work/mh202-firmware/research/2026-10-30/strings/run8/emulate_strcpy.py --check` from the workspace. The script validates the original ELF hash and maps only its240-byte leaf with RX protection after loading. Each call has fresh private RW strings/stack, a return sentinel, a100000-instruction limit and one-second emulator limit. Unknown PCs, interrupts and invalid memory reject the call. No target syscall, process, file, socket, bus, loader or service exists in this harness. No F454 firmware, layouts or harness is imported; the previously verified read-only Unicorn2.1.4 analysis package is reused, with41 declared package hashes checked before import and bytecode writes disabled.
+
+The canonical16-case corpus records **1280 original ARM instruction visits, zero primitive callbacks and1280 code-hook visits**. Verification replays do not add to this corpus. Firmware processes, target OS calls and original interpreter/parser calls remain0. Prior run7 comparator corpus remains separate:1485 original visits and75 explicit primitive callbacks. The cumulative two-corpus total is2765 original visits,75 callbacks,2840 code-hook visits and29 helper calls; this is not full firmware execution.
+
+## Fixtures and confidence
+
+Twelve suffix cases use base alignments0..3 and source offsets1,4,11. Additional cases cover identity, empty suffix and two disjoint controls. Each requires the exact expected NUL-terminated output, destination pointer return and callee-saved register/stack preservation. All return normally without a guard violation. Padding beyond the original NUL is deliberately mapped and supplied: original word prefetch is allowed within this private buffer. These tests do not assess unallocated boundaries, missing terminators, destination-after-source overlap, portability, all lengths, concurrency or target memory safety.
+
+Confidence is high for these exact original instructions under these supplied arguments and emulator semantics. Confidence is conditional for selecting this libc at runtime, and no full interpreter or deployed-script claim follows. The run5 report/model remains immutable; its historical actual-copy uncertainty is narrowed here for this corpus, while tokenization, global state, complete DSL acceptance and missing extra/4 assets remain unresolved.
+
+`execution-results.json` records every fixture, original visited VA set and ordered trace hash. `isolation-and-provenance.json` records image/code/tool/accessor provenance and guards. `output-manifest.json` pins deterministic outputs. This report is separate from the output manifest to preserve source review identities.

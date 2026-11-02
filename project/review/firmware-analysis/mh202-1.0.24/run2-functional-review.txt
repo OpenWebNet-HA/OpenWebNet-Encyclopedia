@@ -1,0 +1,46 @@
+# Independent static peer review — MH202 functional/run2
+
+**PASS for the report's scoped static claims. No required correction.** This review independently compares the functional author's report, collector, original firmware bytes and bounded disassembly. It does not corroborate runtime execution, parser acceptance, successful process creation, script actions or physical effects. I authored the separate protocol track, not this functional source finding. Original ARM/JS/PHP/loader/vendor execution, emulation, hooks and live I/O remain zero.
+
+Reviewed source report: `functional/run2/REPORT.md`. Source image: `/home/bticino/bin/bt_taskmanager`, SHA256 `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e`. Paths beginning `/home/bticino` in this review are firmware-image paths.
+
+## Reproduction and independent checks
+
+Reproduced the author's read-only command:
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/functional/run2/collect_evidence.py --check
+```
+
+It passes17 saved static outputs plus their manifest,11 original disassembly spans and14 instruction/table-word assertions. The collector uses verified ImageVFS bytes, host ELF parsing and host `objdump`; its six-case model is a local Python rule transcription. It does not import or run an original helper.
+
+Separately parsed original ELF load segments and verified all11 saved span-byte hashes and all17 hashes covered by the producer manifest. Independently checked28 additional selected original words,5 direct branch destinations, the original WHO9 table pair, and all6 saved host-model expected matcher/store outcomes. Additional original spans `0xb5f8..0xb644`, `0xd6d0..0xd754`, `0xa2bc..0xa36c` and `0xd838..0xd850` were inspected through host disassembly in memory; no additional source outputs were written. Branch destinations include restoration `0xb4a8→0xac4c`, always pass `0xb4ac→0xa6dc`, WHO9 matcher `0xdd7c→0xc608`, event dispatch `0xa424→0xd850`, and start callback tailbranch `0xd6f0→0xd4f8`.
+
+## Critical original-code findings checked
+
+- **Table and cache route:** original table words at `0x195f0/0x195f4` give WHO9/event callback`0xdd10`. `0xd898..0xd8c8` compares extracted numeric WHO, reads matching table+4, tests null and calls it. The local WHO9 unsigned `WHERE−1<=9` guard is `0xdd30/0xdd38`; equal cached/new WHAT exits at `0xdd4c`. The object+4 gate exits at `0xdd60`; previous−1 skips matcher via `0xdd68`; the new WHAT store is `0xdd88`. The six-case model preserves that a zero gate prevents even the cache update. This is conditional post-parser/list-state behavior.
+- **Actual matcher/latch/callback join:** `0xc61c` compares eight bytes of the `*#13**22` prefix. Original pointer words `0xc690=0xc8e0` and `0xc694=0xc6dc` select the two comparators. `0xc664` writes hit1 only on comparator0. The clear loop writes0 at trigger+8 (`0xc6b4`); outer event handling invokes it before `0xd850`. The later callback walk checks hit+8, obtains callback+12, clears hit and calls it at `0xa464` with the script record in r1. The selected walk has no record+52 suppression check. This does not exclude downstream interpreter or lifecycle gates, establish the full comparator language, or guarantee callback completion/list stability in a live process.
+- **Configured panic setter:** `0xb084..0xb0bc` supplies the `configuratore/setup/sicurezza/panic` config components and destination `0x1b528` to `GetConfigValue`. Original literal pool strings agree with the saved evidence. `0xa380` compares the original full-frame string; on equality `0xa394` writes1 at `0x1b6ac−0x1e8=0x1b4c4` and the original stop iteration follows. `0xa494..0xa49c` consults that same global before ordinary matching. Exact installed config, full raw parser eligibility, gate clearing and product panic policy remain unresolved. The earlier WHO9 processing in outer `0xa2bc..0xa36c` is not silently treated as globally suppressed by this later gate.
+- **Distinct state axes and automatic passes:** helper`0xb5f8` returns boolean(record+60), and `0xb608` stores r1 to+60. Restore reads the per-ID byte with unsigned ID−1<300, handles255, checks numeric mask2 for disable, mask1 plus record+48 for launch. Saved-state construction reads record+52 separately at`0xad08`. Always pass checks +60 zero then +56 nonzero. Main-loop order is restore then always at`0xb4a8/0xb4ac`, behind readiness helper returning object+4 and once flag r8. This is saved-running restoration plus a separate always-start pass; no universal EOF restart or physical running-child assertion follows.
+- **FIFO/PID handoff:** original jump table maps E/F/P/R/S to`0x9e74/0x9e94/0x9e68/0x9e60/0x9e18`. S records previous+60, stores2, parses payload+2 into record+192 and conditionally cleans up for previous0/5; R/P store2/3. F requires length>2 and the gate clear, invokes original parser then selector4 helper, and stores4/active association on a nonnegative result. E invokes cleanup and conditionally clears the association. Read size1 at`0xbd44`, record+196/+200 staging at`0xbe44/0xbe58`, NUL store at`0xbe68`, caller handoff/free/reset at`0xb4dc..0xb500`, and PID-versus-getpid/kill/cleanup at`0xbe1c..0xbe3c` match the report. Neither these call sites nor the numeric control states prove actual FIFO delivery, child liveness, allocation success or a complete message/error protocol.
+
+## Scope retained
+
+The callback table, taskmanager script records and COSO plugin callbacks remain separate namespaces. The report does not infer taskmanager runtime behavior from COSO registration, or equate script ID, loader filename number and UI position. It keeps record+52 disabled state separate from +60 execution/control nonzero, and leaves interpreter `DISABLED`/conditions to the separate interpreter source investigation. There is no claim that disabled scripts necessarily execute actions, no complete panic lifecycle claim, no successful `kill`/`write`/launch claim, and no unseen +52 gate invented for the reviewed taskmanager walk.
+
+Complete trigger normalization/bracket/special-comparator grammar, original provider binding/raw transport, actual missing scenario bodies, config defaults, readiness lifecycle, queue correlation and publication ownership remain correctly open. The absence of a local guard in a bounded original path is not a global absence proof.
+
+## Exact reviewed artifact pins
+
+| Artifact relative to `functional/run2/` | SHA256 |
+| --- | --- |
+| `REPORT.md` | `aa786a3363ee95abbd221d1c8af471e20211a86af7bbbfa32404688bfc2346c4` |
+| `collect_evidence.py` | `c7ada1949d1cca15fe46e2d40db78689dbed4e3a1dfb336120c646bd82cc2303` |
+| `output-manifest.json` | `b838a770ad9ac9fb8f985838c6f2e0825bc2afa019b711c2b83c541797b9e7db` |
+| `original-spans.json` | `f52a5beca90e6d1e8d8d696945692780de73973266a4b23cad423068706f177f` |
+| `host-static-model.json` | `d79d8ac20df858b2b1e0fea4bbd37fbeaecdb27f8dbbdf0984693d727458ee85` |
+| `who-callback-table.json` | `954a443e1ceddf5fa65f618d4a63785bb99548b434d6288e8ca3a964755d80d2` |
+| `selected-literals.json` | `d0d50d6eb1ec224351b039746033272c8f2af33abe35c4882abb22951c221c27` |
+| `inputs.json` | `747d17ad803818c78fc9a84065f1c9718143b429a46bbe7648a542ebfeabf84b` |
+
+The pinned producer manifest covers the other inspected output bytes. This independent review is intentionally outside that manifest to avoid a self-invalidating review cycle. No source report, collector, original image, previous dossier, synced source or repository document was edited during review.

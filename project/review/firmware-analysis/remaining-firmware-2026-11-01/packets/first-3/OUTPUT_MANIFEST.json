@@ -1,0 +1,18 @@
+{
+  "collector_sha256": "e8d3adabafd6fd8793f121484cbb6f10016b1f7bb966481ac9d0c58fd7dd4553",
+  "outputs": {
+    "SOURCE.json": {
+      "bytes": 46782,
+      "sha256": "f65ed2f8c11ec515571cd0487254bbc1ac41ad9dc10c03676cd50360c39ee5e4"
+    },
+    "INPUT_PINS.json": {
+      "bytes": 8167,
+      "sha256": "cf51daa61a2ae71e7a4746da78c8e792a76108e30ae822bd9087282c46e709d9"
+    },
+    "REPORT.md": {
+      "bytes": 3158,
+      "sha256": "855e0f3016343bc4b8ab387a7f0ded5265c0dd67e67630e179b41bfb29863e8f"
+    }
+  },
+  "original_execution": 0
+}

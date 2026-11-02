@@ -1,0 +1,84 @@
+{
+  "module": {
+    "bytes": 143523,
+    "class": 32,
+    "component": "normal",
+    "endian": "little",
+    "entry_word": "0x0",
+    "flags": "0x200",
+    "header52_hex": "7f454c4601010161000000000000000001002800010000000000000000000000b06c01000002000034000000000028000d000a00",
+    "machine": 40,
+    "modinfo_kernel_version": {
+      "bytes_including_NUL": 44,
+      "exact_hex": "6b65726e656c5f76657273696f6e3d322e342e31392d726d6b372d707861322d62747765622d325f335f3800",
+      "field": "kernel_version",
+      "file_offset": 77600,
+      "scope": "Original .modinfo literal only; neither directory label nor this declaration proves the booted kernel or module ABI acceptance",
+      "section": {
+        "address_word": "0x0",
+        "bytes": 144,
+        "entry_size": 0,
+        "file_offset": 77600,
+        "link": 0,
+        "name": ".modinfo",
+        "type": 1
+      },
+      "value": "2.4.19-rmk7-pxa2-btweb-2_3_8"
+    },
+    "path": "work/f453av-firmware/3.0.14/analysis/rootfs/lib/modules/2.4.19-rmk7-pxa2-btweb/kernel/drivers/video/tvia5202/tviafb.o",
+    "program_header_count": 0,
+    "selected_symbols": [
+      {
+        "binding": 1,
+        "name": "cleanup_module",
+        "section_index": 1,
+        "size": 100,
+        "symbol_file_offset": 133904,
+        "type": 2,
+        "value_word": "0x7500"
+      },
+      {
+        "binding": 1,
+        "name": "init_module",
+        "section_index": 1,
+        "size": 1828,
+        "symbol_file_offset": 134304,
+        "type": 2,
+        "value_word": "0x6ddc"
+      }
+    ],
+    "sha256": "7fc425cc40afba681917e5bbdb836fedba7fe4747efbbc6fd298d2d287f45066",
+    "type": 1
+  },
+  "program_ELF_headers": [
+    {
+      "bytes": 249896,
+      "class": 32,
+      "component": "normal",
+      "endian": "little",
+      "entry_word": "0xa8cc",
+      "flags": "0x2",
+      "header52_hex": "7f454c460101016100000000000000000200280001000000cca800003400000018cc03000200000034002000060028001a001900",
+      "machine": 40,
+      "path": "work/f453av-firmware/3.0.14/analysis/rootfs/bin/ettclsh",
+      "program_header_count": 6,
+      "sha256": "b99e2354a939eed2fb18a888e1b636680fe0dbbfae91497b3f95126f68bb6024",
+      "type": 2
+    },
+    {
+      "bytes": 96972,
+      "class": 32,
+      "component": "normal",
+      "endian": "little",
+      "entry_word": "0x990c",
+      "flags": "0x2",
+      "header52_hex": "7f454c4601010161000000000000000002002800010000000c99000034000000bc7601000200000034002000060028001a001900",
+      "machine": 40,
+      "path": "work/f453av-firmware/3.0.14/analysis/rootfs/sbin/insmod",
+      "program_header_count": 6,
+      "sha256": "26f1bbdf39a42fcf310190c1d5e3bc66de896b6bdb61033e24c6d5acb5c3859c",
+      "type": 2
+    }
+  ],
+  "scope": "Headers/one whitelisted metadata field/two symbol declarations only, no code bodies"
+}

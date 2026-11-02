@@ -1,0 +1,9 @@
+# Selected descriptor and parameter coverage
+
+| Question | New source reach | Open boundary |
+| --- | --- | --- |
+|Descriptor identity/constants|Own original classes/RTTI,2.0/light.setStatus and distinct strings|Normal providers/binding/canary/error/unwind, actual object/configuration|
+|Outer request ID|Two UUID request pairs, later assignment replaces earlier string|Actual UUID, success, uniqueness/randomness and runtime correlation|
+|TargetID/speed params|Actual out-of-line IDmerge and8Bpresence/valuecopy into actualSP480 converter argument; two serializer arms|Other fields/merges, full JSON/member/move/assignment, numeric/physical domain|
+
+21 deterministic outputs,17 spans,39 guards,19 import/PLT checks,9 local branches/calls,4 literal PIC joins,2 class identities,6 relative relocations,2 GOT bases,7 input pins and23 exact first copies. Counts are source/integrity navigation, not coverage percentages or full source approval. Fullruntime, configured scene, delivery/physical and lifetime/concurrency remain unproved. Ledger unchanged; no native corpus or replay.

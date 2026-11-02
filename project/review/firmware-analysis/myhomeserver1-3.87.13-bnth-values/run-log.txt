@@ -1,0 +1,7 @@
+# BNTH-values batch log
+
+- Initial usage91% used/9% remaining in the original weekly window; previous condition-ownership checkpoint complete. No reset/paid credit action.
+- Three fresh static source packets: BNTH serializer/sameJSON reparse, typed local setpoint record/map/consumer, candidate JsonCpp double/tag/readback. Original execution0 and semantic fixtures0; no native harness.
+- Serializer and record first strict collectors stopped before generated outputs on metadata/encoding assumptions. Root exact pre-v2 snapshots retained3 serializer files and6 record files before NEWv2 versions. Old bytes and honest failure history remain; corrected collectors enforce actual unique symbol/end/version and actual16-bit branch target while retaining previous guards. No firmware outcome correction or missing history.
+- Provider v1 first generation passed. Independent source peer reviews assess each current packet; documentary review precedes strict identity/ESG/ECV/diff validation.
+- Two exact current reference-page pre-edit snapshots retained before additions. All older sources/dossiers/history remain immutable, including prior BNCUSCENE/storage finding (not repeated as alert). Exact receipts/checkpoint/control saved, index last; local branch uncommitted/unstaged.

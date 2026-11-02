@@ -1,0 +1,15 @@
+{
+  "stage": "First generator build, before any generated outputs or first-candidate directory",
+  "failure": "assert(st,en)==(0xb509c,0xb51f4) failed for original exidx enclosing interval",
+  "preserved": {
+    "REPORT.md": {
+      "bytes": 9546,
+      "sha256": "2899d594563f1598d32d0906deb7bede42ed53eb6340fad096b268b636e2b98c"
+    },
+    "collect_vector_v1.py": {
+      "bytes": 9282,
+      "sha256": "95f0e170e389622b825b1f0ac9ebbc4b5ce79df34d41a4a3695c03e3ff0e24e2"
+    }
+  },
+  "generated_outputs": 0
+}

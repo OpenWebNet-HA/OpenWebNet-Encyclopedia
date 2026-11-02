@@ -1,0 +1,39 @@
+# F450 night05 independent startup-alias source review
+
+**PASS. No author correction requested.** The new positive source relation is the packaged volatile-definition record and selected population-script branch that conditionally request a symlink with target `/home/bticino/cfg/stack_open.xml` and link pathname `/var/tmp/stack_open.xml`. That pathname matches the daemon's original parser-path initializer. This does not establish an actual link, boot ordering, effective configuration, db_name text, extra50 association, extraction or database recovery.
+
+I read all frozen author collector/report/source/span/flow/input evidence and ran only the successful v2's permitted read-only reproduction: `python3 -B work/f450-firmware/2.0.10/research/2026-11-01-night05-config-origin/collect_origin_v2.py --check`. Actual result PASS, six outputs, seven exact first copies, three binary spans and five script spans. No original shell/script/helper/eval/sed/OS operation was executed. My independent audit re-read seven original input identities, checked original regular/symlink manifest records, all selected line texts/hashes, three byte spans/nine words, own ELF/PT_LOAD mapping, the pool/global/path/call joins, whitelist-only XML facts, generated manifest and seven exact first copies.
+
+## Conditional source chain
+
+Original symlink metadata names `etc/rcS.d/S37populate-volatile.sh`→`../init.d/populate-volatile.sh`. It remains metadata; no host symlink or target runlevel invocation is materialized or observed. The packaged script line3 sources `/etc/default/rcS`; lines5/7 define the configuration directory and core basename. Original rcS line27 has VOLATILE_ENABLE_CACHE=no. Under unchanged effective shell values and selected admission, the final cache condition's yes test is false, so the config-file loop is selected. That does not prove a particular live environment, provider success, directory contents or script invocation. Selection of the exact 00_core basename takes check_requirements' early return atline63; no complete other-file/user/group handling is claimed.
+
+Original00_core line82 contains exactly six simple fields: `l root root 0777 /var/tmp/stack_open.xml /home/bticino/cfg/stack_open.xml`. I checked that record against the original source bytes and saved export. Under ordinary shell/grep/read/sed/eval interpretation of this selected simple record, line117's assignment text gives type=l, TNAME=the temporary pathname and TLTARGET=the packaged target pathname. The two trailing variable assignments in that command need no invented values or private configuration. This is source interpretation only; the collector and review never send original text to a shell, sed, eval or helper.
+
+The type-l leg assigns TSOURCE=TLTARGET, checks whether TNAME is already a symlink and otherwise backgrounds link_file(TSOURCE,TNAME). The selected function's separate existing-destination test can bypass creation; its constructed command again tests existence or symlink before the request `ln -s source destination`. Thus the selected requested operand order is target/home configuration first, temporary link pathname second. An already existing symlink is skipped even if it points elsewhere. Existing files, effective tool binding, command outcomes, writable paths, races, asynchronous completion and natural startup sequencing remain open. The l leg continues before the later record handling; its0777/root/root fields do not by themselves establish a permission/owner change request for the link. No filesystem check or link creation actually occurs during this analysis.
+
+Own daemon ELF32 little-endian ARM EXEC/machine40/raw flags0x5000002 and PT_LOAD mapping independently support the selected forwarder. The PC-relative load0x12918 selects pool0x12934→global0x23a74; its exact original initializer is0x19ee8, whose safe NUL-terminated literal is `/var/tmp/stack_open.xml`. The selected forwarder loads that pathname intoR0, preserves the supplied owner forR1 and BL0x12928 decodes to0x15744. This is the already qualified local loader handoff used to join the new alias declaration. Writable initialization does not prove unchanged live contents, valid owner, natural admission or successful parser operation; the earlier callback producers remain inherited rather than new coverage.
+
+## Configuration, history and preservation
+
+Independent XML parsing verified only root, zero fullip_addressbook nodes and the separate safe extra enable0/check50/empty nocheck declaration. No complete XML, runtime values, db_name/db_compressed text, key/password, received configuration or adjacent private values are exported. A conditional packaged alias request is not proof that a live file matches the package or that extra50 supplies the prior archive field. No second unzip site, closed receiving/output/transport/authentication/session/framing/MQTT/libjel body or proxy was expanded.
+
+The author honestly records one initial v1 collector failure before outputs on an incorrect negative escaped-string assertion. I verified the unchanged v1's exact bytes/size/SHA256 against FAILED_V1.json and the parent's actual `integration/before-collector-v2` snapshot. I did not rerun that failed v1 or invent historical output bytes. Diff inspection confirms new v2 replaces those guard lines with the exact positive source-line assertion and updates the report's reproduction/history paragraph. v2 generated outputs and immediately saved exact first copies; its read-only reproduction passed. No prior generated report/output was overwritten, and no further correction is requested by this review.
+
+All original/synced/completed evidence, parent-owned public integration, canonical source manifest, Git staging/commits/publication and older ledgers remain unchanged. Host byte/ELF/XML/text readers are separate from original execution. No original/vendor/native/helper/emulator/model/SQL/targetstartup/module/OS/device/service/network/bus/mount/flash/physical execution, decryption or remote write/upload occurred. Recovered/generated databases0; cumulative inherited archive one encrypted F450 support container/zero plaintext databases, controlled by parent. Earlier MHS340 code-hook-visits/360hooks and separate F454/MH202 ledgers remain unchanged.
+
+## Frozen reviewed identities
+
+Members are relative to `work/f450-firmware/2.0.10/research/2026-11-01-night05-config-origin`.
+
+| Member | Bytes | SHA-256 |
+|---|---:|---|
+| `INPUTS.json` | 1425 | `ae633f416e19a6774052bb9ce53f7b45e66768de8973535306855ffa27a2b58d` |
+| `ORIGIN_FLOW.json` | 1662 | `a143f42d5c023dabfd2b2afc07df33ecd091eb4e5fb44878de18fd7013b595c9` |
+| `OUTPUT_MANIFEST.json` | 828 | `8567c6ba5cf5956564506672cc865c631135a8299323d04167a8529ea5ff8456` |
+| `REPORT.md` | 5531 | `282dd7114ec11c349b4843533bd317e05f54a21a6cb30e196982cb3c1f431b9f` |
+| `SOURCE.json` | 3306 | `269e50edc6ac038c6cd42e21c5bfb32562f0ade369d5edd154568895ce03de00` |
+| `SPANS.json` | 7237 | `668c616db121f09ee61258c69bd28476467ec4d61b376b3e09bd03633a8f574c` |
+| `collect_origin_v2.py` | 14205 | `e36ee6e00f6c8bbdcd22e58499a1dd32e2ba2ec30bfcaee6e9969d536193bb6d` |
+
+Completed 2026-11-01T21:48:31.340146+00:00. This exclusive review is immediately preserved exactly with a precomputed non-circular first-copy index. Its independent audit has a separate immediate exact first copy/index. No author edit is made by the reviewer.

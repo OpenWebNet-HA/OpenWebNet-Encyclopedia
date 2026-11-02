@@ -1,0 +1,29 @@
+# Independent SCENARIO action source review
+
+PASS for authoritative scenario/REPORT.v2.md. No further correction requested. This is an independent source/argument/ownership review of the selected compiled action and callback, not a scene, registry, weak-handle, launch, provider, thread, transport or physical execution. Original execution is 0; author and prior artifacts were not edited.
+
+Reproduced collect_scenario_v1.py --check: 20 unchanged outputs, 11 source spans, four PIC targets, ten direct calls, 15 byte guards, five relative relocations and four direct source pins. Independently mapped the original scheduler ELF32 PT_LOAD segments, verified all 11 raw span hashes, 15 byte ranges, four PIC targets/literals, ten Thumb BL targets, selected TBH, relocated vtable words/typeinfo and five relocation rows. Verified all 21 indexed first copies plus actual separate v1/v2 report copies. The original executable SHA-256 is 7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26.
+
+Source/control findings verified:
+
+- Raw action enum11 at +28 selects branch 0xabc50. It obtains JSON through the raw object's virtual slot, parses selected base fields and sceneId through the original JSON delegates, then invokes 0x113a88 with the local action and supplied initializer context. The derived compiled object is distinct from its 44-byte raw action: allocation 100, metadata +80/+84/+88, captured ID +92 and context +96. The secondary JSON subobject at +52 and its negative offset-to-top differ from the primary runtime address point.
+- RTTI 20ScenarioActionRunner, primary shared method pointers and secondary serializer pointer are original relocated data. They support class/subobject identity without assuming primary slot 0 is this action-specific callback. The constructor installs a separate captured callable; original manager copies its two-word pair and cd990 transfers callable data into the object's +16 area under normal returns.
+- At 0x113d9c the captured context/ID are supplied to b6580. The original tree traversal is a lower-bound/equality predicate only under a valid ordered-tree premise. No actual tree, population, uniqueness, mutex or lifetime invariant was supplied.
+- Original bytes 28 bb at 0x113da4 decode CBNZ r0,0x113df2. Nonzero takes retrieval; zero falls through to cleanup0x113da6. This is exactly the corrected v2 wording. The original v1 report's incorrect branch-direction description remains preserved, while its already stated zero-cleanup/nonzero-retrieval outcome and all source outputs are unchanged. I verified that the entire report difference is exactly the disclosed single substitution in BRANCH_WORDING_REFINEMENT.md.
+- Retrieval b69fc searches the same unsigned key layout, copies node+20/+24 and performs second-word reference bookkeeping. Its no-key out-of-range path is a delegated error boundary, not a tested outcome. Callback weak-control-block acquisition has explicit nonnull/count/atomic-loop branches. The selected ordinary live branch loads the first handle word at 0x113e9e and jumps to the a5db0 call at 0x113e2c. Other source paths call that same entry with zero; the report preserves those without asserting a valid scene, success or defect.
+- The target is the previously source-reviewed condition-checking launch a5db0, not direct action launch a6210. A nonnull correct target, normal provider/ownership behavior and later enabled/active/condition/thread completion remain premises. The callback's local route is not a target-stop command or a program-wide proof that stops do not exist.
+
+No full accepted JSON grammar, scene ID domain, recursive-scene policy, registry producer, callback activation, elapsed timing, immediate cancellation, command delivery or physical behavior follows. Historical source reports are used only with their stated scope. No stopped authentication/session/framing implementation was consulted.
+
+Reviewed SHA-256 pins relative to scenario/:
+
+| File | SHA-256 |
+| --- | --- |
+| REPORT.v2.md | 159b9fbdd60e0e8f16256e1deecd6fa6df11a43bba057914d99fb2bfdb2fefd5 |
+| REPORT.md (retained v1) | 5bdc4d3073d388aae6589d92f838a0de6ea121bc3a0c2a1b9ce16bde934ab39d |
+| BRANCH_WORDING_REFINEMENT.md | 652c226222e0d3447c93f48fbf4236f6ad50308c90eb3beef58e2a5a235de4a0 |
+| collect_scenario_v1.py | 4d6ae667a4fd3615bdbbe40b91786a40fdbf7052a9eeb507f095beae093f81f5 |
+| OUTPUT_MANIFEST.v1.json | 3a87f8cc0f522c14595088e8d43cdc9b69e47a821878a209258239aa40acbb8f |
+| first-candidate/SNAPSHOT.json | 7c87e2233c7146421bd6fc61e4ef11ef5b159691ef1eda057780d0e5af0793a9 |
+
+This review is exclusively created, immediately copied as exact first-review bytes with a non-self-referencing index, and announced with its hash. No earlier review candidate was overwritten.

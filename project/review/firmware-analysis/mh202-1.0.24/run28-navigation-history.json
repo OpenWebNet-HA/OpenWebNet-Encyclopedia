@@ -1,0 +1,8 @@
+{
+  "scope": "Parent pre-promotion link-depth correction after moving v2outputs onefolderdeeper; no source/count/semantic change",
+  "v1": "All initial files and snapshot preserved; ambiguous unchangedQ standalone word refined",
+  "v2": "All files and snapshot preserved; integrity reproduction passed but parent detected markdown report/validation links onelevelshort before linkreview/promotion",
+  "v2_manifest_sha256": "4c268ca54831079026406f4ce93848ecb7abc89c3ed42de12ef2f9547d0ccb1e",
+  "v3_generator_sha256": "767cc62cd95b76a98f13d1ee04d5eb668506c1ef1d30d7304f93dc5e0c12c294",
+  "current_authoritative_candidate": "candidate-v3"
+}

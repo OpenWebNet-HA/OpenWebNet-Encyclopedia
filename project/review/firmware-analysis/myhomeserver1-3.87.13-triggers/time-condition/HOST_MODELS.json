@@ -1,0 +1,121 @@
+{
+  "clock_calls": 0,
+  "days_prefix_cases": [
+    {
+      "result": {
+        "mask": 0
+      },
+      "synthetic_string": ""
+    },
+    {
+      "result": {
+        "mask": 1
+      },
+      "synthetic_string": "1"
+    },
+    {
+      "result": {
+        "mask": 64
+      },
+      "synthetic_string": "1000000"
+    },
+    {
+      "result": {
+        "mask": 64
+      },
+      "synthetic_string": "10000001"
+    },
+    {
+      "result": {
+        "mask": 0
+      },
+      "synthetic_string": "0000000X"
+    },
+    {
+      "result": {
+        "delegate": "invalid_argument request"
+      },
+      "synthetic_string": "01X"
+    }
+  ],
+  "original_execution": 0,
+  "predicate_cases": [
+    {
+      "return": 1,
+      "scope": "pure selected branch model; not time parsing, actual date, accepted scene or execution",
+      "synthetic": {
+        "day_bit": false,
+        "enabled": 0,
+        "from": 10,
+        "now": 15,
+        "to": 20
+      }
+    },
+    {
+      "return": 0,
+      "scope": "pure selected branch model; not time parsing, actual date, accepted scene or execution",
+      "synthetic": {
+        "day_bit": false,
+        "enabled": 1,
+        "from": 10,
+        "now": 15,
+        "to": 20
+      }
+    },
+    {
+      "return": 1,
+      "scope": "pure selected branch model; not time parsing, actual date, accepted scene or execution",
+      "synthetic": {
+        "day_bit": true,
+        "enabled": 1,
+        "from": 10,
+        "now": 999,
+        "to": 10
+      }
+    },
+    {
+      "return": 0,
+      "scope": "pure selected branch model; not time parsing, actual date, accepted scene or execution",
+      "synthetic": {
+        "day_bit": true,
+        "enabled": 1,
+        "from": 10,
+        "now": 10,
+        "to": 20
+      }
+    },
+    {
+      "return": 1,
+      "scope": "pure selected branch model; not time parsing, actual date, accepted scene or execution",
+      "synthetic": {
+        "day_bit": true,
+        "enabled": 1,
+        "from": 10,
+        "now": 11,
+        "to": 20
+      }
+    },
+    {
+      "return": 0,
+      "scope": "pure selected branch model; not time parsing, actual date, accepted scene or execution",
+      "synthetic": {
+        "day_bit": true,
+        "enabled": 1,
+        "from": 10,
+        "now": 20,
+        "to": 20
+      }
+    },
+    {
+      "return": 0,
+      "scope": "pure selected branch model; not time parsing, actual date, accepted scene or execution",
+      "synthetic": {
+        "day_bit": true,
+        "enabled": 1,
+        "from": 20,
+        "now": 15,
+        "to": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+# Targeted static followup: direct DH candidate lifetime and selectors
+
+Scope: the packaged F454 2.0.51 `bt_supervisione` ELF, SHA256 `12c4d6f09d53fe2f1862eea8d1112b9b960f0511b11ac7a3767a22b0daaabfd2`. This is a static code and dataflow examination. **No original firmware instructions, vendor processes, CPU helpers, network/serial/device operations or authentication code were executed.** Host Python reconstructs one normal candidate solely to check the extracted constants and field positions. All original firmware and the completed 2026-10-29 dossier were read-only.
+
+## Finding
+
+For the specific normal direct-DH path at **0xc254–0xc2e4**, the complete OPEN-looking text is a local C-array candidate that has **no continuing consumer in the inspected handler or its actual direct caller**. It is not handed to an OPEN parser, copied into the caller's output object/state, returned as a pointer, or sent. The final `sprintf` at **0xc2e0** is followed immediately by a branch to **0xe8e0**, which returns **r5=0** and releases the stack frame. The actual caller at **0xa0e4** responds to that zero at **0xa0ec** by returning to its receive loop, skipping its correlation and output/send path.
+
+This closes the earlier narrow question about a hidden caller/output-parameter consumer for this normal branch. It does **not** establish a firmware defect, intent, physical DH support/absence, that all energy paths discard replies, or that no other implementation exists. The distinct continuous-history publication paths established in run10/run13 remain separate and valid within their prior boundaries.
+
+## Evidence and lifetime
+
+Addresses are original ELF VAs. Proximity labels such as `g_strcmp0@plt+offset` are not function identities. `bt_supervisione-unwind.txt` retains original function-boundary evidence; `original-spans.json` pins 16 byte spans with file offsets and SHA256. The complete helper span 0xab34–0xb184 is included, without re-running its earlier value matrix.
+
+| Stage | Original evidence | Consequence |
+|---|---|---|
+| Entry 0xb8ec | 36 bytes of saved registers, 1,500 bytes of locals. r0 is saved into r7 at 0xb908; r3 into r6 at 0xb914. | r7 initially denotes caller OPEN output; r6 initially denotes caller descriptor pointer. |
+| Input selection 0xba00 onward | r1 is checked only for a nonempty first byte here. Actual field extraction reads context 0x1b314 +4, buffer VA0x1b318. | The input text and the global buffer must not be treated as unrelated arbitrary fixtures in a claimed complete flow. The actual caller supplies the same buffer. |
+| Successful comparison 0xc248–0xc250 | `subs r5,r0,#0` retains successful `strcmp` result zero. | This zero is the later function return, under conventional preserved-register ABI semantics. |
+| Payload 0xc278–0xc288 | Concatenates two local two-character hex fields into handler SP+472. | This path supplies only two value bytes to the helper, independently of longer forms supported by the generic helper. |
+| Converter arguments 0xc29c–0xc2bc | r7 becomes SP+164 (DIM); r6 becomes SP+216 (VALUE); fifth argument is SP+472 payload. | The original caller output-object and descriptor pointers are no longer those live registers; the helper receives local output buffers. |
+| Final format 0xc2c8–0xc2e0 | Formats `*#%s*%s*%s*%s##` into SP+472 with WHO18, WHERE0, converted DIM/VALUE. | No caller OPEN object is the destination. The candidate address itself is not returned. |
+| Tail 0xc2e4→0xe8e0 | `mov r0,r5`; release1,500 local bytes; restore saved registers/return. | No post-format read or global/output escape on this normal tail. Bytes can remain in dead stack storage; they are not erased or destroyed as a C++ object. |
+| Caller 0xa0c8–0xa0ec | Initializes its own SP+184 OPEN object via `CreateNullMsgOpen`; calls handler; on zero branches to0x9d7c. | No fallback consumer of the candidate or its character-count return. |
+| Skipped caller path 0xa0f0–0xa13c | Object-flag test, expected DIM comparison and expected WHERE comparison precede output branch0xa638. | The direct-DH zero return prevents even reaching those tests. No enum meaning is inferred for the flag from its offset alone. |
+| Send/destruction | Actual output-object text send at0xa6b0; optional OPEN-OK at0xa6e4. Main-exit destructor0xa730 targets caller SP+184. | Neither the send nor that destructor consumes the local C-array candidate. |
+
+`call-crossrefs.json` finds one direct ARM `BL` to raw handler0xb8ec, at0xa0e4, and one to converter0xab34, at0xc2bc. There are no aligned file words equal to absolute handler VA0xb8ec. This is a bounded static cross-reference result, not proof against every indirect entry, dynamic lookup or external code injection. The conclusion concerns this actual call path under normal imported C functions and the ARM ABI; it does not infer arbitrary interposed-library behavior.
+
+## Normal receive qualification and field provenance
+
+The actual receive caller0xa080–0xa0a4 clears the global buffer, passes that buffer to `advanced_receive_from_scs@plt`0x9954 and passes its returned integer unchanged as raw-handler r2. Main permits values greater than2 into the raw handler; the selected DH branch specifically requires **4** at0xba18.
+
+`libcommon.so.0.0` is the executable's first direct `DT_NEEDED` entry; its candidate provider `advanced_receive_from_scs` at **0x15b5c** is captured separately, SHA256 `3890711968ffa0c89136c20e7e73f82b6314513cf3aab0334d9b4843f84a025a`. This provider attribution is static and conditional on ordinary packaged loading without overrides; duplicate provider caveats from the earlier loader work remain. No host loader or vendor loader was run.
+
+In this original provider, seven bytes are read at0x15bc8. Decimal mode from header positions1–2 is selected at0x15c40–0x15c54; mode2 uses decimal subtype from positions4–5 at0x15c64 onward. **Subtype2** selects0x15d88: a20-byte body read, copy into the caller's buffer, byte19 forced to NUL at0x15db8, then helper return4 at0x15dcc. This maps transport-wrapper selection to the application's category4. It is not OPEN kind4, SCS physical operation4, or history state4. Header delimiters and successful actual I/O were not validated in this batch; the code's read checks are zero/nonzero, not newly asserted full-read guarantees.
+
+Once category4 and nonempty text hold, the direct-DH normal path requires:
+
+| Raw zero-based field | Required value | Guard VA |
+|---|---|---|
+| raw[8] | `2` |0xba74|
+| raw[9] | `3` |0xba98 /0xbae8|
+| raw[10] | `4`, after bypassing the `1`/`2`/`3` alternatives |0xbaec /0xbecc /0xc1e4 /0xc1f8|
+| raw[3:5] | `D2` or `DC` |0xc210–0xc234|
+| raw[7] | `F` |0xc238|
+| raw[5:7] | `A2` |0xc240–0xc250|
+
+Table and row are raw[11:13] and[13:15]; the two value bytes are raw[15:17] and[17:19]. This corrects the common risk of attributing a nearby `00` address literal or another branch's format to the DH selector: the actual gate here is `A2`.
+
+The collector's **host-only reconstruction** uses `$18D2A2F2347E120BB8`, which satisfies these extracted fields and selects table7E/row12. The ELF's entry at0x10ed8 maps that pair to DIM402, scalar enum4, metadata unit `W`; the existing scalar instructions0xac54–0xac74 interpret `0BB8` as hex3000 with no scaling. Its local candidate is `*#18*0*402*3000##`. The prefix `$18` is illustrative and not validated by these DH guards. The wrapper example `*02*02*$18D2A2F2347E120BB8#` is a consistency reconstruction, **not a capture, original parser execution, accepted frame or publication**. It does not expand the previous 26-fixture execution results.
+
+## Outgoing query and retained request state
+
+A separate original OPEN handler starts0xec04 and has a direct caller0xa3b0. Main copies its request object at0xa390–0xa3a0, passes the copy to that handler and destroys the copy at0xa3c0. Static code supports a concrete outgoing 4xx DH request route, even though the incoming direct-DH branch does not publish:
+
+1. WHERE is extracted at0xec2c and undergoes first-character dispatch0xec54–0xec88 and suffix checks. The dispatch includes a rejecting entry for prefix2; it is not unrestricted1–9 acceptance. Literal WHERE`0` takes the default rejection path0x1076c. Prefix5 with suffix1 is an example that passes its local upper-bound check at0xecf0, but full original OPEN parser acceptance was not executed.
+2. WHO must compare equal to literal `18` at0xee24–0xee38. The specific route requires `IsNormalFrame` false at0xee40–0xee48 and `IsMeasureFrame` true at0xf350–0xf35c. These are static object predicates, not a new classification claim for a supplied wire request.
+3. DIM begins`4` at0xf394–0xf3a4 and must match the exact table string via helper0xaa9c called0xf3cc. The helper scans table0x10ec0, stride24, compares the dimension pointer at+12 and returns numeric table/row words at+16/+20. Missing match goes to rejection0x1076c.
+4. Actual selected literal word0xfc8c points to **0x11fde**, `$06D1A2F233%02X%02X0000`. Formatting0xf3d8–0xf3f0 gives the host reconstruction `$06D1A2F2337E120000` for DIM402. The neighboring `$06D2000233...` literal at0xfcac belongs to a different route and must not replace this one.
+5. The query is stored in context+4, state2 is written at context+1860, then0xffe8 calls `send_frame_toscsserver` with client ID, query pointer, SCS descriptor, fourth argument1 and stack argument0. This is an internal formatted request, not established serial bytes. No send occurred here. The handler returns2 at0x10004 even when the static send-result-zero close/reset branch is taken; return2 alone cannot prove delivery.
+6. Main tests handler return2 at0xa3d8–0xa3dc and stores expected DIM at caller SP+44, original request WHERE in the fixed buffer referenced by0xa780, and time at context+1876. Later incoming correlation0xa10c–0xa13c compares those expected strings only after a nonzero raw-handler return. The DH return0 bypasses it.
+
+The outgoing selector `D1 A2 F233` and incoming selected `D2/DC A2 F234` are concrete original code constants. Their pairing as a real device query/reply transaction remains unobserved. The output candidate's hardcoded WHERE0 differs from the nonzero-prefix request preprocessing; since the candidate never enters the caller's output object, no actual correlation failure caused by that difference is asserted.
+
+## Reproduction, checks and remaining questions
+
+Run only this new collector from the workspace; do not rerun the old dossier generators:
+
+```sh
+python3 work/f454-firmware/research/2026-10-30-targeted/energy/collect_evidence.py
+python3 work/f454-firmware/research/2026-10-30-targeted/energy/collect_evidence.py --check
+```
+
+The collector generates28 static evidence files, pins16 original spans and checks17 exact instruction words; eight input hashes cover the two original ELFs, prior run9/run10/run13 reports, prior SYNTHESIS/COVERAGE and read-only ImageVFS implementation. It verifies those reference documents again after collection. `--check` compares generated bytes without writing. **Original instructions executed:0; code hooks:0.** `dataflow.json` records the manually reviewed control/data relationships. `output-manifest.json` pins this batch's report, collector and outputs; it is not a modification of the completed dossier's manifest.
+
+Confirmed statically: the selected local candidate's lifetime, handler return0, actual direct caller's loop branch, output/destructor separation, exact DH field guards, outgoing query table lookup/format/send call, request correlation state and conditional libcommon category4 mapping. Host reconstructed only: one DIM402 query/raw/candidate example. Prior isolated executions remain prior evidence, not new whole-handler tests. Unverified: process/runtime binding, I/O delivery, physical device replies, wider-field DH assembly/reachability, alternative producers, branch intent and why this branch formats without using the result.
+
+The highest remaining question is whether any **separate producer/consumer** implements publication or assembly for longer DH table values; the sole direct call to the existing generic converter does not establish it. A future investigation should pursue a genuinely different route or external transaction evidence, not re-run the same local formatter and describe it as published. The static `F233` query versus `F234` receive association and the unused WHERE0 candidate should remain explicit unresolved semantics until supported independently.

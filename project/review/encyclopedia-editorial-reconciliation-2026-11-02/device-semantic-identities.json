@@ -1,0 +1,77 @@
+{
+  "role": "Exact current semantic-review references; prior v1 retained",
+  "files": [
+    {
+      "path": "devices/definitions/own-dev-0002-audio-video-web-server-gateway.md",
+      "sha256": "62d39d1e30f76ff2df4d55e61d55e83ba262c0e27ba98bf05948510ae05a2663",
+      "size": 33689,
+      "HEAD_sha256": "9cc86a7115e7d94b62df657a720111879a3d1b6c2ccfea9a6809ec1100139373"
+    },
+    {
+      "path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "sha256": "f24f8f981d7e9e54832bf27b1a96f205da7b361440212b7bec68b194899af2a5",
+      "size": 28117,
+      "HEAD_sha256": "cffb383fa63038f61340c1c56ad24d8385e7e941c7309df3c45db23dd4101412"
+    },
+    {
+      "path": "devices/contributing/device-definition-presentation-profile.md",
+      "sha256": "9b44c117a3c4b4bb53e44d291d3e4a2195108d0e9f933e9b7fb08f7d5fbbe6f6",
+      "size": 18709
+    },
+    {
+      "path": "project/encyclopedia-core-values.md",
+      "sha256": "c52811071734ed1e58eb54e14b84968755688e241073757636ece4aa4f1ab16c",
+      "size": 7479
+    },
+    {
+      "path": "project/encyclopedia-style-guide.md",
+      "sha256": "38a14e5377cc2aefdccd1f87542bf0fe73aea14d6c9e3a14c94a617430c3b281",
+      "size": 12027
+    },
+    {
+      "path": "reverse-engineering/evidence-and-confidence.md",
+      "sha256": "62c1531632a64a7b17895f54ce6ae7b26382d6e731a0f37222c25e01d6ec3b36",
+      "size": 10675
+    },
+    {
+      "path": "project/review/device-reviews-0001-0010-2026-10-05.md",
+      "sha256": "f365bca4dad572139d61c79030ae8bc98940598d37a1a5f090486fa178a81776",
+      "size": 18949
+    },
+    {
+      "path": "project/review/device-reviews-0151-0160-2026-10-07.md",
+      "sha256": "8a730dd3b8ac15007c6c68674dc5da9ab9c9ba054dfe9d4f23878a1da1581bf2",
+      "size": 61721
+    },
+    {
+      "path": "internals/device-application-databases.md",
+      "sha256": "2f2c484df82cef59ce337193bd19e0882689e0668ed054a47ef7496595c2cb33",
+      "size": 8505
+    },
+    {
+      "path": "scenario-engine/scenario-suite-database.md",
+      "sha256": "4b73517042f7615e67218c9ff353fee467f3ef05df063b52158fd80a0a298c8e",
+      "size": 9929
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-scenario-resources.md",
+      "sha256": "ba2ba2ccae89966035050fec3b8e6ffeb94baeacd4eaa9939cc3aa7aa5013051",
+      "size": 4426
+    },
+    {
+      "path": "project/review/firmware-analysis/product-followup-2026-10-31/mh202-resources-report.v2.txt",
+      "sha256": "615445c3437ccd30b7d52bccdd41d86ee02200f0c6d3b147efc634deb0663c3d",
+      "size": 7463
+    },
+    {
+      "path": "project/review/firmware-analysis/product-followup-2026-10-31/mh202-lifecycle-report.txt",
+      "sha256": "e99fa8b024697b17c5b7b4777f0ae0dc196a9d8e97699e1f4844f7d5f563961f",
+      "size": 6537
+    },
+    {
+      "path": "project/review/installer-databases-3.5.38/systems-report.txt",
+      "sha256": "ca046a1f5f6764935455040a09c3e2f7c8221ba466a448e89fe811168e922e5b",
+      "size": 16279
+    }
+  ]
+}

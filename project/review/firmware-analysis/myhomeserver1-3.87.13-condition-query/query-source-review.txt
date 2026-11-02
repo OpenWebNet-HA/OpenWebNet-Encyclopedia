@@ -1,0 +1,24 @@
+# Independent local query source review
+
+Verdict: PASS, no correction requested. Root independently read original Thumb code and reproduced the immutable author packet using a separate ImageVFS/ELF32 PT_LOAD mapper. This is static source review, not original query/provider/clock/condition-variable/JSON/scene/physical execution. No opaque request/transport/authentication/session/framing delegate body was inspected.
+
+The independent check validates the original scheduler SHA2567d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26,13 raw span hashes,18 instruction guards,2 PIC bases,3 GOT chains,5 decoded Thumb direct branches and19 exact first copies. The author's read-only --check reproduces17 deterministic outputs. The separate review checker is retained as check_query_independently_v1.py. Original source disassembly, rather than only equality of generated files, was read for the important branches below.
+
+- Original caller0xf13aa..0xf13b4 passes selector0, compiled id+108, global0x167368 and output pair at SP+4. The output data/control pair and helper's normal returned output-storage pointer are separate from Boolean success.
+- Helper0x10f4a0 calls actual local lookup0x10e3d8 before examining its saved selector. Nonnull data at0x10f4de selects exact pair stores0x10f4e2 then normal stack-guard epilogue. No record+4 discriminator, response length, selector, clock or request check is present on that bounded hit leg. This does not establish global absence of type validation, actual unsuitable/stale cache contents or a defect. The predicate's later record+8/+32 reads retain valid-type/provider/lifetime premises.
+- Miss code0x10f54a..0x10f554 clears registry length+100 and the byte through pointer+96. Getter0x5728c..0x572a8 initializes that pointer to inline+104 and length0. The later pointer/length load0x10f79c corroborates response-string storage, not a generic readiness flag.
+- Selector0 branches to0x10fa80. Original local callsites0x10fd6c and0x10fd7a are opaque boundaries; success, request/response content and delivery are unproved. Under normal delegates and intervening cleanup,0x10fe02/0x10fe0c/0x10fe18 can reach common wait0x10f56a. This is not a universal selector-zero outcome.
+- Common continuation requests mutex lock on registry+72; zero return permits the clock/wait leg. This receiver's mutex is distinct from action-domain offset72. It builds the literal count increment0x00000002540be400, not a newly established time unit or measured deadline. Nonzero response length bypasses waiting. Zero length supplies registry+24 condition variable, registry+72 mutex and clock argument1 to the imported wait API; R0 from that call is overwritten before a fresh clock request, not tested as a positive response Boolean.
+- Original before-deadline branch0x10f6aa rechecks length and repeats only while zero. Reached/passed deadline also rechecks length; nonempty still selects response processing. Selected normal zero-result tail0x10f698 clears both output words, requests unlock and returns. Error delegates, all diagnostic/unwind paths and scheduling remain outside complete review.
+- Response path reads pointer/length and requests imported parseFromStream at0x10f812, with its Boolean branch visible. Parser implementation, payload/field interpretation, reconstructed miss-record type, response write/notify producer and correlation remain open. No cache hit/miss layout equivalence is claimed.
+
+The current report correctly preserves actual provider/string/tree/control validity, locking/concurrency/lifetime, effective binding and physical limits, and curated OWN-DEV-0199 product context. This closes local fast-return and conditional response-string wait source, not an accepted event-to-scene exchange or full-source/Device approval.
+
+Reviewed SHA256 pins:
+
+| Artifact | SHA256 |
+| --- | --- |
+|query/REPORT.md|9ce4b06aa2292df9ef10cc0fc983648738d7a4bda51b80ec8adcd7521586f63a|
+|query/collect_query_v1.py|927c469a402f4ea6ace789f1dfa4e9b63236dc3afacda1ef444af8d80d39f6da|
+|query/OUTPUT_MANIFEST.json|d6be175e895efc68ea04add50a17f517878735bffb7ca850b69c48cbd019ad12|
+|query/first-candidate/INDEX.json|1cc4817b1618126b175820a6859173959c889a0e486e94fcde66b35885e9e8ca|

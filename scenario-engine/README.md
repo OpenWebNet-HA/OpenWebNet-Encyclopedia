@@ -1,6 +1,6 @@
 # Scenario Engine
 
-The Scenario Engine section documents the capability model used by MyHOME_Suite to expose triggers, conditions, and actions and to associate them with OpenWebNet command templates.
+The Scenario Engine section explains how triggers, conditions and actions are represented and connected to OpenWebNet operations. It covers distinct editor models and source-specific execution pipelines; a shared term does not establish a common database schema or runtime.
 
 It is distinct from:
 
@@ -8,7 +8,7 @@ It is distinct from:
 - diagnostic and programming scenarios in `OPEN.db`, which describe MyHOME_Suite communication sequences;
 - the configuration of scenario-capable Physical Devices.
 
-The canonical sources for this section are the two ScenarioDevices databases preserved under [`sources/`](../sources/myhome-suite/3.5.38/databases/):
+The four-table ScenarioDevices capability model documented below uses two databases preserved under [`sources/`](../sources/myhome-suite/3.5.38/databases/):
 
 - [`ScenarioDevices-program-files.sqlite`](../sources/myhome-suite/3.5.38/databases/);
 - [`ScenarioDevices-programdata.sqlite`](../sources/myhome-suite/3.5.38/databases/).
@@ -26,11 +26,15 @@ The canonical sources for this section are the two ScenarioDevices databases pre
 | Correlations with functional OpenWebNet namespaces | [Functional Correlations](functional-correlations.md) |
 | Functional/category coverage and source-revision delta | [Capability Coverage](capability-coverage.md) |
 | Established action pipeline and runtime boundaries | [Execution Model](execution-model.md) |
+| MH202/MH200N rule-based editor model | [ScenarioSuite Database](scenario-suite-database.md) |
+| Rule selection, field resolution and script generation | [ScenarioSuite Generator](scenario-suite-generator.md) |
+| Same-name MH200N/MH202 database profiles | [ScenarioSuite Variants](scenario-suite-variants.md) |
+| Server-side JSON-facing scenes, runners and completion state | [Server Scene Processing](server-scene-processing.md) |
 | Evidence limits and questions requiring further investigation | [Open Questions](open-questions.md) |
 
 ## Canonical hierarchy
 
-Both databases use the same principal hierarchy:
+The two ScenarioDevices databases use the same principal hierarchy:
 
 **Object System → Device Object → Command → Parameter**
 
@@ -113,3 +117,15 @@ Still partially interpreted or unknown:
 - how MyHOME_Suite selects, synchronizes, or prioritizes the two source files.
 
 Unknown values remain unknown until database correlations, application behavior, public documentation, or observed execution establishes their semantics.
+
+## Distinct execution models
+
+| Model | Source and role | Boundary |
+| --- | --- | --- |
+| ScenarioDevices | Four-table capability hierarchy and command templates described above | No complete persisted scenario graph or established runtime source-selection policy |
+| ScenarioSuite | [Rule database](scenario-suite-database.md) and [manufacturer generator](scenario-suite-generator.md) for the MH202/MH200N editor family | Local IDs, field kinds and database versions are separate from ScenarioDevices and Firmware identities |
+| Server scene processors | [JSON-facing records and compiled runners](server-scene-processing.md) in named MyHOMEServer1/F460 builds | Similar class names do not establish matching layouts, public command routes or deployed scene behavior |
+
+For ScenarioSuite, selected rules, script/index writers and MH202 consumers align concrete filename, marker and ordinary-delay syntax. A real caller carrying a populated loader output into compilation, emitted project files and successful deployment remain unresolved. The [project XML loader](../reverse-engineering/firmware-analysis/mh202-project-scenario-loader.md) explains the typed collection path; manufacturer defaults are not a configured installation.
+
+The [MH200N/MH202 profile comparison](scenario-suite-variants.md) records exact differences between same-name rule stores. Version numbering alone does not establish interchangeability or a migration path.

@@ -1,0 +1,5 @@
+# Bounded coverage
+
+Three static areas: scene stop/completion polling/relaunch guard; shared CV ownership and bounded reset-reference forms; one original operational-duration producer and conditional second-callable binding. Three collectors reproduce only bytes/disassembly/source metadata, with no original execution or supplied scene objects. Earlier execution corpora remain unchanged.
+
+Unfinished: shared flag reset/wider aliases; actual configured classes/scenes; action completion/worker lifetime after cancellation; full unwind/ownership, active callbacks/providers and concurrency; actual clocks/threads/timers/services; physical outcomes. Wider Device/source gates remain pending. Counts are evidence navigation, not firmware coverage percentages.

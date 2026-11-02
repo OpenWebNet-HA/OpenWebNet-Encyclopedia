@@ -1,0 +1,79 @@
+# MH202 1.0.24 run12 — native level/interface and bracket normalization
+
+This bounded experiment closes the supplied-parser-field boundary for three selected taskmanager normalizer inputs. Original MH202 taskmanager code at `0xcb38` invokes the real same-build `libcommon` constructor, parser, predicate/getters and destructor. A level/interface measurement preserves `11#1#2` in the normalized address. Two bracket expressions are mutated and rewritten to ordinary temporary frames, which the original common parser then accepts. No parser fields or predicate returns are injected.
+
+This is a private CPU experiment with explicit C primitive models and selected provider redirects. It is not a configured trigger match, scene execution, observed gateway transaction, or a verdict on the separate special-DIM1 selector. The common parser receives the rewritten ordinary temporary text for bracket cases; it does **not** receive or validate the original bracket expression.
+
+## Exact inputs and native results
+
+All inputs are synthetic, selected from the ordinary branch forms already described with supplied fields in `triggers/run9/REPORT.md`. They are not captures or packaged configured triggers. The previous two plain run11 inputs were not rerun as this new corpus.
+
+| Mutable input to original taskmanager normalizer | Text passed to original common `CreateMsgOpen` | Parsed kind / WHERE / level / interface | Native returned pattern |
+| --- | --- | --- | --- |
+| `*#1*11#1#2*1*100##` | `*#1*11#1#2*1*100##` | `4` / `11` / `1` / `2` | `*1*0*11#1#2##` |
+| `*1*[1,2]*11##` | `*1*1*11##` | `3` / `11` / empty / empty | `*1*1*11##` |
+| `*1*[1,2]*11#1#2##` | `*1*1*11#1#2##` | `3` / `11` / `1` / `2` | `*1*1*11#1#2##` |
+
+WHO is `1` in all three parsed objects. The measurement parses DIM `1` and first value `100`; the two temporary ordinary frames parse WHAT `1`. Native `IsCorrect` and its native field/suffix helpers run inside `CreateMsgOpen`, with common's 130-byte field layout, rather than the distinct libopen 90-byte layout. These selected resulting kind values are observed after parsing; no wider grammar/range claim follows.
+
+The first source string is unchanged. In each bracket case, exactly original input byte offset `3`, the first `[` (`0x5b`), becomes NUL (`0x00`), so the source's resulting C string is `*1*`. Every remaining byte through the original trailing NUL is retained unchanged, including the suffix after `]`. `normalizer-results.json` preserves the full after-bytes, changed offsets, actual parser input/length/caller return address, parsed field snapshots, original-PC trace and callbacks. There is one original `CreateMsgOpen` invocation per case, not an initial bracket parse followed by another parse.
+
+## Original control/data flow
+
+All addresses below are original ELF VAs, not the private relocation used by the experiment. The selected taskmanager helper is stripped; `0xcb38` identifies its actual entry without assigning a nearest-symbol name.
+
+* Constructor call `0xcb54` resolves explicitly to common C1 `0x24bf0`. The normalizer allocates a 7,768-byte local frame after its 16-byte register push, with the common object at local SP+12. Original C1 and parser reset both call `CreateNullMsgOpen` at `0x24aa0`.
+* Nonbracket input is parsed by taskmanager call `0xcb90` into common `CreateMsgOpen` at `0x2646c`; the recorded native return site is `0xcb94`. Original checks require the selected WHO1 measurement, DIM1 and value100 before this output path. The nonempty native level result at `0xcc00..0xcc10` selects getters WHERE at `0xcc14`, level at `0xcc24`, interface at `0xcc34`. The third string pointer is placed at `[SP]` by `0xcc38` for the variadic formatting call at `0xcc50`. Format `%s#%s#%s` reconstructs `11#1#2`; final format `*1*0*%s##` is used at `0xcda8`.
+* The bracket branch locates the first `[` at `0xcb60`, scans to the first digit and requires its parsed integer equal `1` at `0xcca0`, then finds the first `]` at `0xccb0`. At `0xccec` the original `strb r3,[r6]` writes NUL to the first `[`. `0xccf0` selects the text after the found `]`; original call `0xccf8` formats `%s1%s`, using the now-terminated source prefix and that suffix.
+* Original call `0xcd14` passes the temporary buffer and its measured length to common `CreateMsgOpen`; `0xcd18` is the recorded native return site. The bracket bytes `1,2` are not interpreted as a set by this selected function. The literal `1` inserted by `%s1%s` supplies the temporary WHAT. This result does not establish how another comparison layer evaluates the bracket list.
+* The native level getter at `0xcd20`, nonempty test `0xcd24..0xcd34`, and getters `0xcd38/0xcd48/0xcd58` select the level/interface branch for the third case. The address format call at `0xcd74` again reconstructs `%s#%s#%s`. The second case takes the empty-level branch at `0xcd7c..0xcd8c` with literal WHERE `11`.
+* The bracket final format is `*1*1*%s##` at `0xcd94/0xcda8`. All successful selected paths call modeled `strdup` at original callsite `0xcdb0`, execute the original common D1 via `0xcde0`, and return the duplicated output pointer. The final formatting is not followed by another parser invocation in this helper. For bracket cases the temporary and final output bytes happen to agree; that does not turn the list syntax into common parser input.
+
+Literal-pool evidence is checked at taskmanager `0xcdfc → 0x109b4` (`%s#%s#%s`), `0xce00 → 0x10519` (`*1*0*%s##`), `0xce0c → 0x109d2` (`%s1%s`) and `0xce10 → 0x1050f` (`*1*1*%s##`). Common's original getters return object+780 WHERE at `0x24920`, object+910 level at `0x24928..0x24930`, and object+1040 interface at `0x24934..0x24938`. Native WHO/WHERE suffix helpers are `0x25010` and `0x252bc`; the latter's additional level/interface path now executes from actual parsed text.
+
+## Method, limits and provider premise
+
+The MH202-only run11 harness is a read-only methodological input, extended in new files for these three inputs. Its actual two ELF images are freshly read from `ImageVFS('normal')`. Taskmanager is mapped at original addresses and common at private base `0x10000000` to prevent address collisions. Direct taskmanager NEEDED ordering from run11 is common before open; this experiment explicitly chooses the same-build common definitions. No live loader, symbol interposition/environment, target operating system or complete production binding is claimed.
+
+Original native code includes the constructor, `CreateNullMsgOpen`, `CreateMsgOpen`, `IsCorrect`, ordinary/measurement field parsing, WHO/WHERE suffix parsing, the getters/predicate actually used and D1. Parsed state is created by that code. The host supplies only private writable input/stack/heap, initial registers, explicitly redirected native definitions and finite C primitive models. It does not inject parsed fields or substitute the parser, getters, predicate, constructor or destructor. The common object uses actual field stride130, raw text offset6636 and kind offset7660.
+
+C primitives are `memset`, `strcpy`, `strlen`, comparison-sign `strcmp`, `strchr`, `strtok`, exact selected `strncpy`, `strcat`, decimal `atoi`, finite allowlisted `sprintf`, and private heap-copy `strdup`. Formatting is limited to literal `11` and the four exact formats above; the third `%s` is read using the original ARM variadic stack argument. `cstring` reads are capped at4,096 bytes; `strtok` advances only through permitted readable regions, rather than using the same per-scan4,096 cap. Write helpers restrict destinations to the private stack/input/heap. These are models of ordinary C behavior for the selected short inputs, not original libc or allocator execution.
+
+The emulator has a100,000-hook and100,000-emulator-instruction cap per top-level call; strict original-PC allowlists; read/execute-only original mappings; separate private writable regions; and traps for unknown calls, interrupts and unmapped/protected accesses. Native exception cleanup PCs `0xcdbc..0xcdd4` are excluded, rather than faking throw/unwind behavior. Every selected call returns normally. The independently distributed Unicorn2.1.4 analysis tool package is verified against every digest-bearing RECORD entry. Its historical storage under the F454 tooling directory does not supply any F454 firmware, object layout or harness code.
+
+No comparator, configuration loader, event callback, task state, FIFO, scene action, physical address assignment or output transport is executed. This shows selected parser/normalizer behavior under the stated providers and primitives, not actual configured trigger acceptance or whether a resulting pattern matches another event. In particular, ordinary DIM1 here is not the separate WHO13 special-DIM1 frame/selector from `triggers/run10`.
+
+## Execution ledger and new coverage
+
+Counters separate original instruction visits, diverted primitive PLT callbacks, redirects to original definitions, and the private EXIT boundary. A code-hook total is not exclusively executed original instructions. Visits count repeats, not unique instructions.
+
+| New top-level call | Original visits | C primitive callbacks | Native-definition redirects | EXIT | Code-hook total |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Measurement + level/interface | 1,832 | 201 | 17 | 1 | 2,051 |
+| Bracket + plain address | 1,506 | 162 | 11 | 1 | 1,680 |
+| Bracket + level/interface | 1,684 | 184 | 13 | 1 | 1,882 |
+| **Run12 only, three calls** | **5,022** | **547** | **41** | **3** | **5,613** |
+
+The new corpus visits858 unique original PCs;143 were not visited by run11's two plain calls, comprising57 common and86 taskmanager PCs. `new-PC-coverage.json` lists them exactly. This is a bounded trace-set difference, not exhaustive branch coverage. Run12 totals include repeated constructor/parser/getter setup. Host collector runs and native reproducibility replays do not add independent corpus coverage.
+
+## Provenance and reproduction
+
+Original normal-image inputs:
+
+| Image path | SHA256 |
+| --- | --- |
+| `/home/bticino/bin/bt_taskmanager` | `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e` |
+| `/home/bticino/lib/libcommon.so.0.0` | `07b2c6d09e4a1b317bb3b37aff8f7ddd72dcec15e1e7194fde00c4f0ce1ecab5` |
+
+Image paths refer to files within the firmware, not this host. The accessor resolves the packaged common SONAME symlink to the regular file above. `input-hashes.json` pins11 image/research inputs. `original-spans.json` pins11 ELF byte spans/file offsets; `critical-words.json` asserts31 original words, and `format-pools.json` asserts4 pool targets/strings. The collector produces18 deterministic evidence files, with no original execution. The separate native harness produces the results and verified-tool package ledger. `output-manifest.json` pins finished author artifacts and excludes itself and future peer review to avoid a review/provenance cycle.
+
+Run from the workspace root:
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run12/collect_evidence.py --check
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run12/emulate_common_normalizer.py --check
+```
+
+The first command reproduces host disassembly, raw-word/pool assertions and saved-array recounts. The second independently repeats the three isolated native calls and strictly compares both saved outputs byte-for-byte. Earlier reports/images/accessor/setup files remain read-only. No original process, target syscall, network/device or JS/PHP execution occurs.
+
+Highest remaining question: join the native returned pattern and separately retained bracket conditions into the actual taskmanager comparison/callback path for a fully coherent configured trigger. Address/interface domain breadth and live provider binding remain outside these three examples. The special-DIM1 selector provenance remains a separate unresolved question.

@@ -1,0 +1,112 @@
+{
+  "checkpoint": "run18",
+  "status": "three independently source-reviewed areas including fresh core/parser/nativeID; documentary integration recorded separately, overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run18/REPORT.md",
+      "source_sha256": "35da6bb26bd5951c5764e89f85acecd6cdcad99d62b3ed0dbf72f3c973d49551",
+      "published": "run18-protocol-report.txt",
+      "published_sha256": "35da6bb26bd5951c5764e89f85acecd6cdcad99d62b3ed0dbf72f3c973d49551"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run18/protocol-review.md",
+      "source_sha256": "dfd5a7726940963e89b6db87f1b5c6da0a0078fca6646460e155803ec9452076",
+      "published": "run18-protocol-review.txt",
+      "published_sha256": "dfd5a7726940963e89b6db87f1b5c6da0a0078fca6646460e155803ec9452076"
+    },
+    {
+      "role": "report",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run18/REPORT.md",
+      "source_sha256": "580e2695e56a164f19e5638fd06f0bb6b2c04e4bcd61d5fd4bd983b760d701bf",
+      "published": "run18-coso-report.txt",
+      "published_sha256": "580e2695e56a164f19e5638fd06f0bb6b2c04e4bcd61d5fd4bd983b760d701bf"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run18/coso-review.md",
+      "source_sha256": "36b42158cd459fd9e89347dcff2b2d6658344a38658fe939ef58a009c3fb5929",
+      "published": "run18-coso-review.txt",
+      "published_sha256": "36b42158cd459fd9e89347dcff2b2d6658344a38658fe939ef58a009c3fb5929"
+    },
+    {
+      "role": "report",
+      "area": "lifecycle",
+      "research_path": "work/mh202-firmware/research/2026-10-30/lifecycle/run18/REPORT.md",
+      "source_sha256": "36e21937207c5474435c5ae52efa4478c02988267525e8a92f8a0f48fbf13076",
+      "published": "run18-lifecycle-report.txt",
+      "published_sha256": "36e21937207c5474435c5ae52efa4478c02988267525e8a92f8a0f48fbf13076"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "lifecycle",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run18/lifecycle-review.md",
+      "source_sha256": "5328e56355665e5fbed237d3875851433486703db7735660c35868107869d78c",
+      "published": "run18-lifecycle-review.txt",
+      "published_sha256": "5328e56355665e5fbed237d3875851433486703db7735660c35868107869d78c"
+    },
+    {
+      "role": "current_author_namespace_provenance_refinement",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run18/NAMESPACE_REFINEMENT.md",
+      "source_sha256": "96f0af7e2adf1b4d0f969a14034055107e42fc4eec3d7bf9b8938a29f102c8bf",
+      "published": "run18-coso-namespace-history.txt",
+      "published_sha256": "96f0af7e2adf1b4d0f969a14034055107e42fc4eec3d7bf9b8938a29f102c8bf"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run18/collect_evidence.py",
+      "sha256": "a09ae4d8fad12a03021aed30eba50f13cf6079928dbcc1d49e3ac5195cf34560",
+      "method": "static original/finitehost evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run18/emulate_core_fresh.py",
+      "sha256": "aff608d9d0ea3b0eef13988fa0b71530d273631d2fd8f5ac8cae8a6e0c064c3a",
+      "method": "isolated original NULLsource core/native48parser/nativeID with private zeroalloc/list/counterstate and definition bindings"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run18/collect_evidence.py",
+      "sha256": "9778d1b9088aadcee27e80e8b0f9422788c0ff8b489adda91a081b9c744c92f5",
+      "method": "static original/finitehost evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/lifecycle/run18/collect_nodes.py",
+      "sha256": "1220d3364b0fca929fe2dc8b97af454645219aed6f03210ec5998e6f8a51ab3d",
+      "method": "static original/finitehost evidence"
+    }
+  ],
+  "canonical_execution": {
+    "new_corpus": {
+      "top_level_entries": 1,
+      "original_instruction_visits": 325,
+      "primitive_callbacks": 24,
+      "linker_redirect_callbacks": 3,
+      "exit_boundaries": 1,
+      "stop_boundaries": 0,
+      "code_hook_visits": 353,
+      "setup_data_relocation_writes": 2,
+      "counter_fixture_setup_writes": 1
+    },
+    "cumulative": {
+      "corpora": 11,
+      "top_level_entries": 60,
+      "original_instruction_visits": 29652,
+      "primitive_callbacks": 2991,
+      "linker_redirect_callbacks": 118,
+      "exit_boundaries": 16,
+      "selector_read_stop_boundaries": 2,
+      "code_hook_visits": 32779,
+      "firmware_processes": 0,
+      "target_OS_calls": 0
+    },
+    "count_scope": "Canonical corpora only; independent verifier replays do not accumulate. Setup/data/counter fixtures separate from code callbacks."
+  }
+}

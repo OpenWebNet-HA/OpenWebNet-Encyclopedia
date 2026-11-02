@@ -1,0 +1,166 @@
+{
+  "result": "PASS",
+  "scope": "Canonical archive/export/source/first-candidate/history/branch identity validation; not whole application semantics/runtime or wider Device approval.",
+  "timestamp_UTC": "2026-10-31T16:47:16.165081+00:00",
+  "canonical_archive_commit": "974eced66cf40fdc5b5dc3417357244db710d848",
+  "archived_readback_payloads": 13,
+  "new_registry_records": 7,
+  "old_registry_blocks_unchanged": 832,
+  "canonical_manifest_sha256": "dff0aac04bdb06c9ea298845d8666dce293818e65b03ae5882c3ab0aed883a05",
+  "exact_exports": 19,
+  "collectors": 3,
+  "source_checks_sha256": "26bfe17d8540cfcd50175fa808bb9b7bf7c1f3432587073c27dca9d2b145facd",
+  "snapshot_indexes": [
+    {
+      "index": "work/installer-database-analysis/2026-10-31/systems/initial-generated-v1/SNAPSHOT_INDEX.json",
+      "sha256": "505689a7777658c57b0d2179a686875368ed7ac1607fc6ec77593f70cf63077c",
+      "rows": 13
+    },
+    {
+      "index": "work/installer-database-analysis/2026-10-31/scenario-variants/initial-generated-v2/SNAPSHOT_INDEX.json",
+      "sha256": "eb1dd806eaa775f3712421c3e2691957ca23ec22f59325005a0ad1b24c93fb82",
+      "rows": 8
+    },
+    {
+      "index": "work/installer-database-analysis/2026-10-31/project-templates/first-candidates/SOURCE_SNAPSHOTS.json",
+      "sha256": "cfa3ac2dbe22f898189bd7e7a673ec9192ba1637e5bf08489883aeefaba233c0",
+      "rows": 12
+    },
+    {
+      "index": "work/installer-database-analysis/2026-10-31/pre-edit-documents/SOURCE_SNAPSHOTS.json",
+      "sha256": "6bebd14995bb6a4cd27eeea981453596e21aa48ba701a0d143c9db721d41fa9a",
+      "rows": 7
+    },
+    {
+      "index": "work/installer-database-analysis/2026-10-31/initial-reference-candidates/SOURCE_SNAPSHOTS.json",
+      "sha256": "075bcfdb9ca6892f049326bc0f9b6c5cfa45622a7a75db9464aaed75ee5f3eda",
+      "rows": 11
+    }
+  ],
+  "snapshot_rows": 51,
+  "protected_dossiers": [
+    {
+      "root": "work/f454-firmware/research/2026-10-29",
+      "files": 1917,
+      "index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-targeted",
+      "files": 107,
+      "index_sha256": "ddb83866292f70631b968b91f07e08fbc79415b5e1762cf3699f8e326eacff79"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-targeted-2",
+      "files": 130,
+      "index_sha256": "2dc3f9e3541478eff304d1d9bb368d02504c39cc3d5d8d3aec7ca96650032d82"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-final-pass",
+      "files": 83,
+      "index_sha256": "bf27345d8ce8d1e4e9277ad9346c62fcfde1f0b33bb20783ae5e66963ad100f2"
+    },
+    {
+      "root": "work/mh202-firmware/research/2026-10-30",
+      "files": 2904,
+      "index_sha256": "c65b6ab0961d6ba4ec7e19471c16993be0470b7d5eac3bbd1f93ad78aaeaf8f0"
+    },
+    {
+      "root": "work/firmware-product-followup/2026-10-31",
+      "files": 330,
+      "index_sha256": "624c42bcff5bd7b014dae7686648b3f3019be7956dd90de93c253dab7f891be7"
+    },
+    {
+      "root": "work/artifact-conservation/2026-10-31",
+      "files": 91,
+      "index_sha256": "5fa10c935d988778c9ce909e73e1b04f5635c034fd749a5ed96a8a5bcd323ed4"
+    },
+    {
+      "root": "work/mh202-firmware/research/2026-10-31-database-analysis",
+      "files": 128,
+      "index_sha256": "6292be5148fb4590c4b7e7229af6efe75eb547c79e755113369d24cfff37b828"
+    },
+    {
+      "root": "work/firmware-next-investigations/2026-10-31",
+      "files": 354,
+      "index_sha256": "47235b5e1fd5748bddb239b5f538cc87b7361c9c8cbb9d09dac530b9d0f08782"
+    },
+    {
+      "root": "work/installer-database-audit/2026-10-31",
+      "files": 18,
+      "index_sha256": "812a8e16432596609936272a46af2d942b1f4bf4fa141a0fa564018197ffe0b8"
+    },
+    {
+      "root": "work/installer-database-conservation/2026-10-31",
+      "files": 44,
+      "index_sha256": "627d109115fa8b8a0ab90ab2d644ccceba329187bd650c380c343424ed93e719"
+    }
+  ],
+  "protected_files": 6106,
+  "current_document_pins": [
+    {
+      "path": "internals/README.md",
+      "bytes": 5064,
+      "sha256": "5db3e9f6d46dbd7b60b1d8fbae9cc69c9f5bc1c13c17dd0711709df11815d62f"
+    },
+    {
+      "path": "internals/installation-and-source-layout.md",
+      "bytes": 5859,
+      "sha256": "24227e83c47a1fba42a131825a6a405447b2e70845b46b3d65d246296a312596"
+    },
+    {
+      "path": "internals/data-store-responsibilities.md",
+      "bytes": 5414,
+      "sha256": "a7d92f854a874fad0628938dfb596664c3baebe3c515945e5917f43e82f08aac"
+    },
+    {
+      "path": "internals/implementation-boundaries.md",
+      "bytes": 5705,
+      "sha256": "b1178a0b885096803eb161167624c86dff066bb2fa2538fb7792a7eae13fb374"
+    },
+    {
+      "path": "scenario-engine/README.md",
+      "bytes": 7832,
+      "sha256": "b9b0a264dd8e84e8d1161de4a21c4a391f52cc9c2e857413452733734c0baa13"
+    },
+    {
+      "path": "scenario-engine/scenario-suite-database.md",
+      "bytes": 10710,
+      "sha256": "a1697760814082db62e7cc93b9694d85a044cc10b27f3a49cd080e36a80dbbb9"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-av-and-board.md",
+      "bytes": 7003,
+      "sha256": "c1cbfa5a7af37642d6e54c23573824541b09b594d0b0f172c1415ce5f277c1ad"
+    },
+    {
+      "path": "internals/project-and-plant-templates.md",
+      "bytes": 5737,
+      "sha256": "fe7ac8c0083a1f70c0ca918eec944228642bf91277dbd6a24c826d6ea52fdbbd"
+    },
+    {
+      "path": "internals/device-application-databases.md",
+      "bytes": 7823,
+      "sha256": "d9d6dad3b74a16805ff25dc97f8bc6792dcd66226e158cc8954f32a0efbd9879"
+    },
+    {
+      "path": "scenario-engine/scenario-suite-variants.md",
+      "bytes": 6064,
+      "sha256": "2547a50c1efb2e2912b41bb329572a4274c0b98ab55aa1a777776e030afb94ab"
+    },
+    {
+      "path": "project/review/installer-databases-3.5.38/README.md",
+      "bytes": 5110,
+      "sha256": "f3d43e1aaab9585fce0b4bd87f51706aee87f7744e8a381b4e87fc66d3d664d0"
+    }
+  ],
+  "new_original_vendor_execution": 0,
+  "structural_scope": "All7newpayloads plus1existing baseline;221table instances,142fromnewpayloads. Not complete semantic interpretation.",
+  "branch": "docs/static-firmware-analysis-findings",
+  "analysis_staged": false,
+  "analysis_committed": false,
+  "analysis_published": false,
+  "Git_status": " M device-model/firmware.md\n M devices/definitions/own-dev-0002-audio-video-web-server-gateway.md\n M devices/definitions/own-dev-0151-mh202-scenario-programmer.md\n M devices/work-queue.yaml\n M diagnostics/dim1-device-identity.md\n M functional/who-14-special-commands/README.md\n M functional/who-15-cen/README.md\n M functional/who-17-scenario-management/README.md\n M functional/who-18-energy-management/dimensions.md\n M functional/who-22-sound-diffusion/README.md\n M functional/who-25-transversal/README.md\n M functional/who-25-transversal/cen-plus.md\n M functional/who-25-transversal/dry-contact-ir.md\n M functional/who-4-temperature-control/dimensions.md\n M functional/who-5-alarm/README.md\n M functional/who-8-video-door-entry-telephony/README.md\n M functional/who-9-auxiliaries/README.md\n M internals/README.md\n M internals/data-store-responsibilities.md\n M internals/implementation-boundaries.md\n M internals/installation-and-source-layout.md\n M project/review/who25-gateway-compatibility.md\n M reverse-engineering/README.md\n M scenario-engine/README.md\n M scenario-engine/open-questions.md\n M scenario-engine/sources-and-identifiers.md\n M sources/artifact-manifest.yaml\n?? internals/device-application-databases.md\n?? internals/project-and-plant-templates.md\n?? project/review/firmware-analysis/\n?? project/review/installer-databases-3.5.38/\n?? project/review/scenario-suite-database-1.0.53/\n?? reverse-engineering/firmware-analysis/\n?? scenario-engine/scenario-suite-database.md\n?? scenario-engine/scenario-suite-generator.md\n?? scenario-engine/scenario-suite-variants.md\n",
+  "wider_Device_gates": "Pending, unchanged",
+  "integration_review_sha256": "3e8a776e5dc1b76c397df3b3254e1c7e87c8e6085f77f7f3e7952bc3dbbb5a5b",
+  "required_final_mechanical_checks": "postwrite-checks.json must record strict ECV/ESG/Git success after these actual validation/review files exist; completion record pins that proof separately."
+}

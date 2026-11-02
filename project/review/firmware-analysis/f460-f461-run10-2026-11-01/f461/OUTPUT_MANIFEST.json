@@ -1,0 +1,38 @@
+{
+  "collector_sha256": "53d41ed7b62929925f949bc69fd616aaeb8a876c04fe3e329ba011267938e803",
+  "outputs": {
+    "INPUTS.json": {
+      "sha256": "31313b24e93eb5cc69232f0346a8de1990b018926b3709fd60cedb63d1f7ee0d",
+      "size": 1104
+    },
+    "SOURCE.json": {
+      "sha256": "a7ae58f185f7ca03420e73fcd6cba895ccced67de2413220ea77d1fa7ba45858",
+      "size": 7856
+    },
+    "spans/formatter-return-store-boundary.txt": {
+      "sha256": "f4097d27a8fd6206693432925dc6665a6940c2528edd86054da58906a13c67b5",
+      "size": 760
+    },
+    "spans/inherited-prefix-return-connector.txt": {
+      "sha256": "99234ca038b88f94b448634720f665e73b6575c58abc1f1f7a93a624fc790304",
+      "size": 279
+    },
+    "spans/local-free-to-address-component.txt": {
+      "sha256": "6e83cdf13a5a3f852ab2b3861ecfa82505c261b769f3365a5be84aac890f5d72",
+      "size": 913
+    },
+    "spans/provided-string-context.txt": {
+      "sha256": "999f105368975c59308fa922982df031f7c2fc1e141d22193f30fe8fd8202389",
+      "size": 1951
+    },
+    "spans/record-to-provided-parsed-object.txt": {
+      "sha256": "938c916883a479e879892acb3cf7ee5239c301c6d8b53f18bb1ba2e9e4989270",
+      "size": 963
+    },
+    "spans/suffix-selection-and-append.txt": {
+      "sha256": "fb647e356d7cb78d47310487a32c5d131cada179e643ddc4863724375ffee0c0",
+      "size": 1123
+    }
+  },
+  "report_sha256": "289215b4a715abf4b148af32327883fd1246a8282a6535f7a061d50f4f89589a"
+}

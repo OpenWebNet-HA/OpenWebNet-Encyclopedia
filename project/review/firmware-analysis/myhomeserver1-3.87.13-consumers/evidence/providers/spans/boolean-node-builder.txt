@@ -1,0 +1,42 @@
+
+
+
+Disassembly of section .text:
+
+000039ec <add_val_bool_node@@Base>:
+    39ec:	b530      	push	{r4, r5, lr}
+    39ee:	4614      	mov	r4, r2
+    39f0:	b087      	sub	sp, #28
+    39f2:	2300      	movs	r3, #0
+    39f4:	2514      	movs	r5, #20
+    39f6:	460a      	mov	r2, r1
+    39f8:	9400      	str	r4, [sp, #0]
+    39fa:	2102      	movs	r1, #2
+    39fc:	4c0c      	ldr	r4, [pc, #48]	@ (3a30 <add_val_bool_node@@Base+0x44>)
+    39fe:	9301      	str	r3, [sp, #4]
+    3a00:	4b0c      	ldr	r3, [pc, #48]	@ (3a34 <add_val_bool_node@@Base+0x48>)
+    3a02:	447c      	add	r4, pc
+    3a04:	9502      	str	r5, [sp, #8]
+    3a06:	58e3      	ldr	r3, [r4, r3]
+    3a08:	681b      	ldr	r3, [r3, #0]
+    3a0a:	9305      	str	r3, [sp, #20]
+    3a0c:	f04f 0300 	mov.w	r3, #0
+    3a10:	f7fe ec20 	blx	2254 <add_node@plt>
+    3a14:	4a08      	ldr	r2, [pc, #32]	@ (3a38 <add_val_bool_node@@Base+0x4c>)
+    3a16:	4b07      	ldr	r3, [pc, #28]	@ (3a34 <add_val_bool_node@@Base+0x48>)
+    3a18:	447a      	add	r2, pc
+    3a1a:	58d3      	ldr	r3, [r2, r3]
+    3a1c:	681a      	ldr	r2, [r3, #0]
+    3a1e:	9b05      	ldr	r3, [sp, #20]
+    3a20:	405a      	eors	r2, r3
+    3a22:	f04f 0300 	mov.w	r3, #0
+    3a26:	d101      	bne.n	3a2c <add_val_bool_node@@Base+0x40>
+    3a28:	b007      	add	sp, #28
+    3a2a:	bd30      	pop	{r4, r5, pc}
+    3a2c:	f7fe eb88 	blx	2140 <__stack_chk_fail@plt>
+    3a30:	345a      	adds	r4, #90	@ 0x5a
+    3a32:	0001      	movs	r1, r0
+    3a34:	0178      	lsls	r0, r7, #5
+    3a36:	0000      	movs	r0, r0
+    3a38:	3444      	adds	r4, #68	@ 0x44
+    3a3a:	0001      	movs	r1, r0

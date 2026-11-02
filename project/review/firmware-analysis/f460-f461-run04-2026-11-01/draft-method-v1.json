@@ -1,0 +1,9 @@
+{
+  "scope": "Prepared documentary candidate only; source peers and integration review still required before promotion",
+  "insertion_anchor": "## Evidence status and next questions\n",
+  "appendix": "ANALYSIS_APPENDIX_DRAFT.md",
+  "substitution": {
+    "before": "The next useful source work is actual scene/factory admission and catalogue selection for F460, and field registration, natural local message producers and selected translator output construction for F461.",
+    "after": "The next useful source work is actual scene/factory admission and complete catalogue selection for F460, and main/config selection, natural local message producers and selected translator output construction for F461."
+  }
+}

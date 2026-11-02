@@ -1,0 +1,41 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000cd5c4:
+   cd5c4:	4a44      	ldr	r2, [pc, #272]	@ (cd6d8)
+   cd5c6:	4b45      	ldr	r3, [pc, #276]	@ (cd6dc)
+   cd5c8:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   cd5cc:	b089      	sub	sp, #36	@ 0x24
+   cd5ce:	447a      	add	r2, pc
+   cd5d0:	9001      	str	r0, [sp, #4]
+   cd5d2:	58d3      	ldr	r3, [r2, r3]
+   cd5d4:	4c42      	ldr	r4, [pc, #264]	@ (cd6e0)
+   cd5d6:	681b      	ldr	r3, [r3, #0]
+   cd5d8:	9307      	str	r3, [sp, #28]
+   cd5da:	f04f 0300 	mov.w	r3, #0
+   cd5de:	6843      	ldr	r3, [r0, #4]
+   cd5e0:	447c      	add	r4, pc
+   cd5e2:	f104 0530 	add.w	r5, r4, #48	@ 0x30
+   cd5e6:	4628      	mov	r0, r5
+   cd5e8:	689f      	ldr	r7, [r3, #8]
+   cd5ea:	f743 ea5a 	blx	10aa0 <pthread_mutex_lock@plt>
+   cd5ee:	2800      	cmp	r0, #0
+   cd5f0:	d167      	bne.n	cd6c2
+   cd5f2:	f10d 0a08 	add.w	sl, sp, #8
+   cd5f6:	4650      	mov	r0, sl
+   cd5f8:	f743 eea6 	blx	11348 <_ZNSt6chrono3_V212steady_clock3nowEv@plt>
+   cd5fc:	f44f 43b0 	mov.w	r3, #22528	@ 0x5800
+   cd600:	220d      	movs	r2, #13
+   cd602:	f6cf 0347 	movt	r3, #63559	@ 0xf847
+   cd606:	fba7 3603 	umull	r3, r6, r7, r3
+   cd60a:	fb02 6607 	mla	r6, r2, r7, r6
+   cd60e:	9f02      	ldr	r7, [sp, #8]
+   cd610:	9a03      	ldr	r2, [sp, #12]
+   cd612:	18ff      	adds	r7, r7, r3
+   cd614:	f894 3048 	ldrb.w	r3, [r4, #72]	@ 0x48
+   cd618:	eb46 0602 	adc.w	r6, r6, r2
+   cd61c:	2b00      	cmp	r3, #0
+   cd61e:	d13c      	bne.n	cd69a

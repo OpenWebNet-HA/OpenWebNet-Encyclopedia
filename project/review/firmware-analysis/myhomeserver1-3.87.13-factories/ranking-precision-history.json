@@ -1,0 +1,10 @@
+{
+  "scope": "Documentary count precision only; no firmware/source/output/effect change",
+  "old_file": "RANKED_REMAINING_QUESTIONS.md",
+  "old_sha256": "9a14046ffe212dc90fbe8a49093a44b56847cb91d176dcbc090989ffca367448",
+  "new_file": "RANKED_REMAINING_QUESTIONS.v2.md",
+  "new_sha256": "5a50b8418c74a33806defe2db5840adb29c7d9349e6a9261e5cda6bb69c05c5a",
+  "exact_old_sentence": "Full23-type initializer and configured scene grammar remain unreviewed.",
+  "exact_new_sentence": "The full initializer and configured scene grammar remain unreviewed.",
+  "reason": "Action bound23 is indices0..23; full initializer type set is unexamined. Remove unsupported full-type count. Original ranking and published export remain unchanged."
+}

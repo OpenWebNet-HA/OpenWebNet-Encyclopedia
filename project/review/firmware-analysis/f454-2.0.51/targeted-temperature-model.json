@@ -1,0 +1,231 @@
+{
+  "scope": "host models only, derived from saved static original instruction/source spans; not vendor execution or full ECMAScript equivalence",
+  "new_original_instruction_count": 0,
+  "original_JS_evaluations": 0,
+  "frontend_precondition": "actual_temperature reaches the inspected converter as exactly this four-digit decimal string; backend event mapping and live DOM execution not established",
+  "rows": [
+    {
+      "Q": 501,
+      "B5_XX": "F5",
+      "DIM0_scalar_text": "0501",
+      "conditional_frontend": {
+        "numeric_value": "50.1",
+        "render_C_default_dot": "50.1°C",
+        "render_F": "122°F"
+      },
+      "DIM15_positive_word": "01F5",
+      "DIM15_positive_scalar_text": "0501",
+      "DIM15_signbit_word": "81F5",
+      "DIM15_negative_scalar_text": "1501",
+      "within_local_documented_DIM0_status_range": false,
+      "within_local_documented_DIM14_write_domain": false,
+      "meaning": "raw/unclassified beyond documented DIM0 domain; numeric display is source behavior, not sensor semantics"
+    },
+    {
+      "Q": 502,
+      "B5_XX": "F6",
+      "DIM0_scalar_text": "0502",
+      "conditional_frontend": {
+        "numeric_value": "50.2",
+        "render_C_default_dot": "50.2°C",
+        "render_F": "122°F"
+      },
+      "DIM15_positive_word": "01F6",
+      "DIM15_positive_scalar_text": "0502",
+      "DIM15_signbit_word": "81F6",
+      "DIM15_negative_scalar_text": "1502",
+      "within_local_documented_DIM0_status_range": false,
+      "within_local_documented_DIM14_write_domain": false,
+      "meaning": "raw/unclassified beyond documented DIM0 domain; numeric display is source behavior, not sensor semantics"
+    },
+    {
+      "Q": 503,
+      "B5_XX": "F7",
+      "DIM0_scalar_text": "0503",
+      "conditional_frontend": {
+        "numeric_value": "50.3",
+        "render_C_default_dot": "50.3°C",
+        "render_F": "123°F"
+      },
+      "DIM15_positive_word": "01F7",
+      "DIM15_positive_scalar_text": "0503",
+      "DIM15_signbit_word": "81F7",
+      "DIM15_negative_scalar_text": "1503",
+      "within_local_documented_DIM0_status_range": false,
+      "within_local_documented_DIM14_write_domain": false,
+      "meaning": "raw/unclassified beyond documented DIM0 domain; numeric display is source behavior, not sensor semantics"
+    },
+    {
+      "Q": 504,
+      "B5_XX": "F8",
+      "DIM0_scalar_text": "0504",
+      "conditional_frontend": {
+        "numeric_value": "50.4",
+        "render_C_default_dot": "50.4°C",
+        "render_F": "123°F"
+      },
+      "DIM15_positive_word": "01F8",
+      "DIM15_positive_scalar_text": "0504",
+      "DIM15_signbit_word": "81F8",
+      "DIM15_negative_scalar_text": "1504",
+      "within_local_documented_DIM0_status_range": false,
+      "within_local_documented_DIM14_write_domain": false,
+      "meaning": "raw/unclassified beyond documented DIM0 domain; numeric display is source behavior, not sensor semantics"
+    },
+    {
+      "Q": 505,
+      "B5_XX": "F9",
+      "DIM0_scalar_text": "0505",
+      "conditional_frontend": {
+        "numeric_value": "50.5",
+        "render_C_default_dot": "50.5°C",
+        "render_F": "123°F"
+      },
+      "DIM15_positive_word": "01F9",
+      "DIM15_positive_scalar_text": "0505",
+      "DIM15_signbit_word": "81F9",
+      "DIM15_negative_scalar_text": "1505",
+      "within_local_documented_DIM0_status_range": false,
+      "within_local_documented_DIM14_write_domain": false,
+      "meaning": "raw/unclassified beyond documented DIM0 domain; numeric display is source behavior, not sensor semantics"
+    },
+    {
+      "Q": 506,
+      "B5_XX": "FA",
+      "DIM0_scalar_text": "0506",
+      "conditional_frontend": {
+        "numeric_value": "50.6",
+        "render_C_default_dot": "50.6°C",
+        "render_F": "123°F"
+      },
+      "DIM15_positive_word": "01FA",
+      "DIM15_positive_scalar_text": "0506",
+      "DIM15_signbit_word": "81FA",
+      "DIM15_negative_scalar_text": "1506",
+      "within_local_documented_DIM0_status_range": false,
+      "within_local_documented_DIM14_write_domain": false,
+      "meaning": "raw/unclassified beyond documented DIM0 domain; numeric display is source behavior, not sensor semantics"
+    },
+    {
+      "Q": 507,
+      "B5_XX": "FB",
+      "DIM0_scalar_text": "0507",
+      "conditional_frontend": {
+        "numeric_value": "50.7",
+        "render_C_default_dot": "50.7°C",
+        "render_F": "123°F"
+      },
+      "DIM15_positive_word": "01FB",
+      "DIM15_positive_scalar_text": "0507",
+      "DIM15_signbit_word": "81FB",
+      "DIM15_negative_scalar_text": "1507",
+      "within_local_documented_DIM0_status_range": false,
+      "within_local_documented_DIM14_write_domain": false,
+      "meaning": "raw/unclassified beyond documented DIM0 domain; numeric display is source behavior, not sensor semantics"
+    },
+    {
+      "Q": 508,
+      "B5_XX": "FC",
+      "DIM0_scalar_text": "0508",
+      "conditional_frontend": {
+        "numeric_value": "50.8",
+        "render_C_default_dot": "50.8°C",
+        "render_F": "123°F"
+      },
+      "DIM15_positive_word": "01FC",
+      "DIM15_positive_scalar_text": "0508",
+      "DIM15_signbit_word": "81FC",
+      "DIM15_negative_scalar_text": "1508",
+      "within_local_documented_DIM0_status_range": false,
+      "within_local_documented_DIM14_write_domain": false,
+      "meaning": "raw/unclassified beyond documented DIM0 domain; numeric display is source behavior, not sensor semantics"
+    },
+    {
+      "Q": 509,
+      "B5_XX": "FD",
+      "DIM0_scalar_text": "0509",
+      "conditional_frontend": {
+        "numeric_value": "50.9",
+        "render_C_default_dot": "50.9°C",
+        "render_F": "124°F"
+      },
+      "DIM15_positive_word": "01FD",
+      "DIM15_positive_scalar_text": "0509",
+      "DIM15_signbit_word": "81FD",
+      "DIM15_negative_scalar_text": "1509",
+      "within_local_documented_DIM0_status_range": false,
+      "within_local_documented_DIM14_write_domain": false,
+      "meaning": "raw/unclassified beyond documented DIM0 domain; numeric display is source behavior, not sensor semantics"
+    },
+    {
+      "Q": 510,
+      "B5_XX": "FE",
+      "DIM0_scalar_text": "0510",
+      "conditional_frontend": {
+        "numeric_value": "51",
+        "render_C_default_dot": "51°C",
+        "render_F": "124°F"
+      },
+      "DIM15_positive_word": "01FE",
+      "DIM15_positive_scalar_text": "0510",
+      "DIM15_signbit_word": "81FE",
+      "DIM15_negative_scalar_text": "1510",
+      "within_local_documented_DIM0_status_range": false,
+      "within_local_documented_DIM14_write_domain": false,
+      "meaning": "raw/unclassified beyond documented DIM0 domain; numeric display is source behavior, not sensor semantics"
+    },
+    {
+      "Q": 511,
+      "B5_XX": "FF",
+      "DIM0_scalar_text": "0511",
+      "conditional_frontend": {
+        "numeric_value": "51.1",
+        "render_C_default_dot": "51.1°C",
+        "render_F": "124°F"
+      },
+      "DIM15_positive_word": "01FF",
+      "DIM15_positive_scalar_text": "0511",
+      "DIM15_signbit_word": "81FF",
+      "DIM15_negative_scalar_text": "1511",
+      "within_local_documented_DIM0_status_range": false,
+      "within_local_documented_DIM14_write_domain": false,
+      "meaning": "raw/unclassified beyond documented DIM0 domain; numeric display is source behavior, not sensor semantics"
+    }
+  ],
+  "controls": {
+    "0000": {
+      "numeric_value": "0",
+      "render_C_default_dot": "-°C",
+      "render_F": "-°F"
+    },
+    "0250": {
+      "numeric_value": "25",
+      "render_C_default_dot": "25°C",
+      "render_F": "77°F"
+    },
+    "0500": {
+      "numeric_value": "50",
+      "render_C_default_dot": "50°C",
+      "render_F": "122°F"
+    },
+    "1010": {
+      "numeric_value": "1",
+      "render_C_default_dot": "1°C",
+      "render_F": "34°F"
+    }
+  },
+  "Celsius_setpoint_spinner": {
+    "index_min": 1,
+    "index_max": 71,
+    "source_formula": "0.5*index+4.5",
+    "display_min": 5,
+    "display_max": 40,
+    "display_step": 0.5
+  },
+  "Fahrenheit_spinner_source_bounds": {
+    "min": 38,
+    "max": 95,
+    "scope": "UI source defaults only; do not treat as physical/backend acceptance or equivalence with Celsius domain"
+  },
+  "units_scope": "°C/°F are labels explicitly emitted by frontend; physical DIM0 range/unit meaning is independently supplied by local documentation, not this model"
+}

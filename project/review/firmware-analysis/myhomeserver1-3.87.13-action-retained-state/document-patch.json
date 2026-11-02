@@ -1,0 +1,11 @@
+{
+  "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+  "snapshot": "myhomeserver1-3.87.13-research-synthesis.md",
+  "before_sha256": "217ab6d2fb2edc99c6befa30677edd9fc44c7d09269ed68d5ca207ed28fa27ae",
+  "after_sha256": "4e2cf1f6d26e9b04debbd14a8e0e5fac1f61e87826850bfdce853f4547196c76",
+  "operation": "insert-before-exact-anchor",
+  "anchor": "## Timing, cancellation and lifetime answer different questions\n",
+  "insert": "The [selected retained-state continuation](myhomeserver1-3.87.13-action-retained-state.md) proves that a first-query-returned string and the second callable's selected `on` branch use the same linked global storage. A concrete pair copy and original table join connect that branch to a `status` string `on` parameter request. This is conditional local dataflow, with record type/ID/freshness, natural ordering, intervening mutation, lifetime and physical restoration still unproved. No further source investigation follows this final packet; the noon-bounded continuation ends with review, integration and saving.\n\n",
+  "new_page": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-action-retained-state.md",
+  "new_page_sha256": "b3686b6cf85ce9f02e038ca7687bf8e98ea4aa4ea7b6a1bdfb87216748404c68"
+}

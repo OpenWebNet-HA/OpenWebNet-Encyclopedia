@@ -1,0 +1,13 @@
+
+/home/bticino/bin/bt_daemon:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0000ddc6 <harvest_str_shielded@@Base+0x4dde>:
+    ddc6:	480a      	ldr	r0, [pc, #40]	@ (ddf0 <harvest_str_shielded@@Base+0x4e08>)
+    ddc8:	4621      	mov	r1, r4
+    ddca:	4478      	add	r0, pc
+    ddcc:	b002      	add	sp, #8
+    ddce:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+    ddd2:	f006 b9f5 	b.w	141c0 <harvest_str_shielded@@Base+0xb1d8>

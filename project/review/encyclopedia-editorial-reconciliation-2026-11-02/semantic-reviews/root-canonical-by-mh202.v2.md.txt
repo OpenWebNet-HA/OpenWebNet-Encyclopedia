@@ -1,0 +1,9 @@
+# Canonical reference cross-review: ANA_TEXT namespace correction
+
+Verdict: **PASS — the required namespace correction is closed.** This addendum is a narrow documentation recheck; the original conditional report and pins remain unchanged.
+
+The WHO17 indexed-storage section now explicitly identifies `ANA_TEXT.ID_KIND = 2` as CountValue and `ANA_TEXT.ID_KIND = 3` as ValueStep. They are selectors within ANA_TEXT rather than tables called ANA_TEXT2 or ANA_TEXT3. Both retain stored range `[0-32000]`, and the text preserves the distinction from earlier temperature/time-labelled range candidates, actual UI enforcement, Boolean OnlyIf precedence and runtime propagation. The corresponding generator reference already states the same table/selector relationship.
+
+Root retained exact pre-correction bytes and a refinement record. Comparison with that snapshot shows the namespace correction plus the explicit anchor update from `counter-and-boolean-operations-in-who17` to `counter-and-boolean-operations-in-who-17` and one blank-line change. These navigation/format changes alter no numeric domain or source conclusion. The current corrected statement satisfies the sole required finding in root-canonical-by-mh202.md.
+
+Current WHO17 and preservation-record identities are in root-canonical-by-mh202-pins.v2.json. That file also distinguishes earlier reviewed pages which remain byte-identical from subsequently changed root files, whose current hashes are observations only. This narrow addendum does not claim to re-review later F454/functional/navigation edits or replace their separately assigned reviews. No repository edit, binary/provider investigation or old collector/execution occurred.

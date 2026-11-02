@@ -1,0 +1,66 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00058190:
+   58190:	4a45      	ldr	r2, [pc, #276]	@ (582a8)
+   58192:	e92d 43f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, lr}
+   58196:	461d      	mov	r5, r3
+   58198:	4b44      	ldr	r3, [pc, #272]	@ (582ac)
+   5819a:	b083      	sub	sp, #12
+   5819c:	447a      	add	r2, pc
+   5819e:	4606      	mov	r6, r0
+   581a0:	203c      	movs	r0, #60	@ 0x3c
+   581a2:	460f      	mov	r7, r1
+   581a4:	58d3      	ldr	r3, [r2, r3]
+   581a6:	681b      	ldr	r3, [r3, #0]
+   581a8:	9301      	str	r3, [sp, #4]
+   581aa:	f04f 0300 	mov.w	r3, #0
+   581ae:	f7b8 ec66 	blx	10a7c <_Znwj@plt>
+   581b2:	4b3f      	ldr	r3, [pc, #252]	@ (582b0)
+   581b4:	1d01      	adds	r1, r0, #4
+   581b6:	4a3f      	ldr	r2, [pc, #252]	@ (582b4)
+   581b8:	4604      	mov	r4, r0
+   581ba:	efc0 0011 	vmov.i32	d16, #1	@ 0x00000001
+   581be:	46a0      	mov	r8, r4
+   581c0:	447b      	add	r3, pc
+   581c2:	f941 078f 	vst1.32	{d16}, [r1]
+   581c6:	589a      	ldr	r2, [r3, r2]
+   581c8:	6869      	ldr	r1, [r5, #4]
+   581ca:	f102 0008 	add.w	r0, r2, #8
+   581ce:	4a3a      	ldr	r2, [pc, #232]	@ (582b8)
+   581d0:	f848 0b0c 	str.w	r0, [r8], #12
+   581d4:	6121      	str	r1, [r4, #16]
+   581d6:	8929      	ldrh	r1, [r5, #8]
+   581d8:	589b      	ldr	r3, [r3, r2]
+   581da:	f895 202c 	ldrb.w	r2, [r5, #44]	@ 0x2c
+   581de:	82a1      	strh	r1, [r4, #20]
+   581e0:	8969      	ldrh	r1, [r5, #10]
+   581e2:	3308      	adds	r3, #8
+   581e4:	60e3      	str	r3, [r4, #12]
+   581e6:	f105 030c 	add.w	r3, r5, #12
+   581ea:	82e1      	strh	r1, [r4, #22]
+   581ec:	e893 0003 	ldmia.w	r3, {r0, r1}
+   581f0:	f104 0318 	add.w	r3, r4, #24
+   581f4:	e883 0003 	stmia.w	r3, {r0, r1}
+   581f8:	2300      	movs	r3, #0
+   581fa:	f884 3038 	strb.w	r3, [r4, #56]	@ 0x38
+   581fe:	b982      	cbnz	r2, 58222
+   58200:	4a2e      	ldr	r2, [pc, #184]	@ (582bc)
+   58202:	4b2a      	ldr	r3, [pc, #168]	@ (582ac)
+   58204:	6034      	str	r4, [r6, #0]
+   58206:	447a      	add	r2, pc
+   58208:	f8c7 8000 	str.w	r8, [r7]
+   5820c:	58d3      	ldr	r3, [r2, r3]
+   5820e:	681a      	ldr	r2, [r3, #0]
+   58210:	9b01      	ldr	r3, [sp, #4]
+   58212:	405a      	eors	r2, r3
+   58214:	f04f 0300 	mov.w	r3, #0
+   58218:	d13a      	bne.n	58290
+   5821a:	4630      	mov	r0, r6
+   5821c:	b003      	add	sp, #12
+   5821e:	e8bd 83f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, pc}
+   58222:	e9d5 5905 	ldrd	r5, r9, [r5, #20]
+   58226:	f104 0028 	add.w	r0, r4, #40	@ 0x28

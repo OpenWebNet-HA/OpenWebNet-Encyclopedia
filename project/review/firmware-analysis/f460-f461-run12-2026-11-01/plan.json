@@ -1,0 +1,17 @@
+{
+  "started_UTC": "2026-11-01T15:33:07.617821+00:00",
+  "scope": [
+    "F460 one actual updater staging-list consumer or nonsecret compatibilitygate",
+    "F461 one typed clock-word32 producer/deferpath connection"
+  ],
+  "authors": {
+    "F460": "firmware_protocol",
+    "F461": "firmware_boot"
+  },
+  "source_review": "Independent cross-source peers",
+  "documentary_reviewer": "firmware_functional read-only/newreviewfilesonly",
+  "new_execution": 0,
+  "constraints": "Original/synced/completed/first candidates readonly. Immediateexactcopies; parentbeforecorrection, exclusiveversions. No closedroutes/proxies/keys/privatevalues/fullconfig/native/model/target/runtime/device operations.",
+  "deadline_UTC": "2026-11-01T19:00:00Z",
+  "final_only_UTC": "2026-11-01T18:15:00Z"
+}

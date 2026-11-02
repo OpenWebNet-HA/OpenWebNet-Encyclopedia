@@ -1,0 +1,78 @@
+# Targeted static followup: factory VDE enablement and nearby consumers
+
+The factory `configuratore/setup/vdes/communication/vde_enabled` consumer and activation effect remain **unresolved**. This batch narrows the gap with actual generic XML lookup implementations, two concrete neighboring VDES consumers, and a separate packaged camera availability path. None establishes that changing the factory flag starts/stops WHO7, WHO8, discovery, or a media service.
+
+This is static-only work. There are **zero new executed firmware instructions**, zero original-helper fixtures, and no process, browser, service, device, socket or host syscall forwarding. Host Python reads verified original image files and invokes host `objdump`/`readelf`. All writes are in this new targeted directory; the completed 2026-10-29 dossier and originals remain read-only. No authentication investigation was resumed.
+
+## Original generic lookup and a concrete VDES consumer
+
+`GetConfigValue` is exported by two inspected original libraries, rather than by the assumed generic configuration library name:
+
+| Provider | Original function | SHA256 |
+|---|---|---|
+| `/home/bticino/lib/libcommon.so.0.0` | `0xc89c`, size1536 | `3890711968ffa0c89136c20e7e73f82b6314513cf3aab0334d9b4843f84a025a` |
+| `/home/bticino/lib/libopen.so.0.0` | `0x5d50`, size924 | `18ecb5a825cfa3566760934dc42635d8a8ef28d200e5c3cd220d3819fa6a84ab` |
+
+Both receive a file path and caller-supplied XML path components. They select depth from the components, create an Expat parser, install element/character callbacks, parse file data, copy the accumulated text into the caller output, and distinguish a nonempty result from an empty result. These are actual code paths, not evidence of any particular flag reader. The APIs treat the **single-space string `" "`** as an unused component, not an empty C string: original libcommon literal pool`0xce4c` plus ADD`0xcaac` and libopen pool`0x60ac` plus ADD`0x5e24` resolve to that value. The libcommon character callback separately compares normalized components to `""` at `0xb64c`; that internal comparison must not be mistaken for the public unused-component convention. `generic-sentinel-literals.json` independently decodes all three references.
+
+In libcommon, `0xcac0–0xcc08` performs component copying/depth selection; `0xcc50–0xcc88` installs the XML callbacks; `0xccb8–0xcce8` reads/parses; `0xcd10–0xcd54` copies the result and returns0 for nonempty output or3 for empty output. The file-lock and error paths make it inappropriate to replace the whole function with an assumed dictionary lookup. The actual `startElement` callback at `0xb318` compares names with `strcasecmp` and sets successive flags (`0xb34c–0xb420`); the character callback `0xb5c0` checks depth/flags and appends selected text (`0xb614–0xb7a8`). Relocations identify the original callback symbols. Libopen's separate body installs callbacks at `0x5dec–0x5e28`, selects depth at `0x5e2c–0x5f5c`, and copies/returns at `0x604c–0x606c`. No actual Expat execution occurred here, and complete XML grammar/edge-case equivalence is not claimed.
+
+Original `/home/bticino/lib/libbt_upnp.so.2.0` (SHA256 `13d8f14d99dd600f64fc8b40737e67bdcbbe5b3debea0a40a67d6cccc869730b`) contains a concrete caller→lookup→object-setting path:
+
+| Caller | XML path supplied to `GetConfigValue` | Actual subsequent branch/action |
+|---|---|---|
+| `device_pi::get_configuration`, `0x15cbc` | `configuratore/setup/vdes/guardunits/item`, call`0x15d84` | Return0 → `atoi` at`0x15da8` → `Set_CDP_addr` at`0x15db8`; otherwise setter receives−1 at`0x15dc8`. |
+| Same function | `configuratore/setup/vdes/alarmlogger/enabled`, call`0x15e1c` | Compares output with literal`"1"` at`0x15e30`; unequal → `Set_AlarmLogger_addr(-1)` at`0x15eb8`. This call's return code is not the tested condition. |
+| Same, enabled output exactly`"1"` | `configuratore/setup/vdes/alarmlogger/address`, call`0x15e90` | `atoi` at`0x15e98` → `Set_AlarmLogger_addr` at`0x15ea8`; no separate return-code test between read and conversion. |
+| `device_webSrv::get_configuration`, `0x17e04` | Corresponding three VDES paths, calls`0x17ed4`, `0x17f6c`, `0x17fe0` | Corresponding CDP setter at`0x17f08`/−1`0x17f18`, enabled string comparison`0x17f80`, alarm address setter`0x17ff8`/−1`0x18008`. |
+
+These are siblings of `communication`, not readers of its `vde_enabled` child. Selected original PC-relative pool words and ADD instructions are independently decoded in `resolved-caller-literals.json`, including `guardunits`, `item`, `alarmlogger`, `enabled`, `address`, the literal`"1"`, and the single-space unused sixth component. The caller's `r0` is the provided configuration file path, rather than an embedded fixed filename; this batch does not establish every caller's concrete runtime filename or whether these PI/WebSrv objects are instantiated for F454 startup.
+
+The plugin imports `GetConfigValue`; both providers exist. Its direct dependency list alone does **not** determine which provider will bind in an actual host process. Saved `*-linkage.json` records the original imports/exports/dependencies. No dynamic binding, plugin loading or object initialization is claimed. In particular, one cannot compose the plugin caller with an arbitrary provider fixture and then describe the result as observed startup behavior.
+
+## Actual packaged camera availability gate
+
+The image contains a frontend outside `/home/bticino`: `/home/httpd/html/myhome/js/views/video/VideoPlayerH264View.js` (SHA256 `436cd1ff2a6a67d6ffd5f874542953650ae7b6a68790376951a8ad0cc71a3d74`). Its readable original lines194–241 provide a positive availability path:
+
+1. `get_auto_switching_flag` result string`"0"` allows `requestVDE_IU_Status`; a different truthy result displays unavailable.
+2. `get_vde_iu_status` returns a string that the frontend splits on`*`.
+3. Split field index4 equal to`"0"` allows `switchOnCamera`; another value displays unavailable. Empty/missing responses and loosely checked array lengths are not reinterpreted as successful enablement.
+
+The corresponding original API post-gate code at`0x3da54–0x3daec` constructs the helper object via`0xf9160`, calls`0xfbf44` at`0x3da98`, wraps the returned string as JSON, and returns it. In the actual builder`0xfbf44`, `0xfbf64–0xfbf70` appends **exactly seven literal bytes `*#8**35`**, followed by a separate global `std::string` append at`0xfbf78–0xfbf7c`, then calls common exchange`0x8aa84` at`0xfbfa4` with register`r3=1` and stack word0. `api-status-prefix.json` pins the seven bytes to original literal VA`0x1336fc` through pool`0xfc110`. The global second append's construction/lifetime and the complete resulting wire frame are outside this bounded trace. The disassembler's nearest exported `_Rb_tree` label is misleading for these stripped helpers; the VAs and instruction dataflow are the identifiers used here.
+
+This establishes a WHO8 dimension35 status-query prefix behind the camera UI's availability decision. It does not establish that the result is a direct factory-flag read, that a camera physically operates, or that the packaged frontend is live-served unchanged. The neighboring `telecamera.php` in the image is a packaged404 page, not a discovered PHP configuration consumer (`telecamera-packaged-404.txt`). No JavaScript, PHP or API handler executed.
+
+## Keep the independent controls separate
+
+The preceding completed reports were read and hashed, not rerun or changed:
+
+| Control | Existing exact evidence | What remains distinct |
+|---|---|---|
+| Factory `communication/vde_enabled` | Default0 at `conf.xml.def:109`; allowlisted VDES subtree saved here. | No reader→activation effect established. Default XML is not live configuration. |
+| WHO8 role | run10-vde: XML `device` → config+32 at`0x1ead0–0x1eaec`; packaged1 selects record/handler`0x143f0`. | Role/device selection is not the factory enable flag. |
+| WHO7 board profile | run25-vde: constructor`0x24d38` stores `hal_board` result into app+12; later gate`0x25298`. | Board capability table is not service startup or factory enablement. |
+| Media endpoints/sinks | run26-media: child`0x227e4`→base`0xe7a0`; default ports3050/3051; separate XML filesink/afilesink fields. | No original GStreamer/service startup was executed; ports/configured sinks are not observed listeners or recordings. |
+| UPnP discovery | Separate stack section`bt_upnp`, `<vde>0</vde>` at line433, saved excerpt. | This batch does not recover that discovery leaf's actual consumer; do not promote it to a process-wide disable. |
+| Process launch/groups | boot/run3: process active field+28 and group-enable`0x14250`; mode0 eligible in normal gateway mode; explicit GUI/web/mediaclient group controls. | Launch eligibility and group flags do not establish a factory VDE leaf consumer or active runtime service. |
+| Camera UI availability | Original frontend lines194–241 and original WHO8/DIM35 query prefix above. | A state/status gate, with no established connection to factory XML. |
+
+## New bounded negative evidence and next questions
+
+This collector searches **new scopes outside the previously scanned vendor executable tree**, using canonical regular image files and verifying backing-file hashes. The exact, case-sensitive bytes `vde_enabled` occur in none of the679 packaged frontend files (10,248,582 bytes),1,950 `/usr/` files (103,845,327 bytes), or194 `/etc/` files (351,303 bytes). Per-file manifests and manifest hashes are saved. This does not inspect decompressed archive interiors, constructed/split field names, runtime replacement content, external configuration tools or content absent from this firmware. It is not proof the flag is unused, and the earlier global vendor scan is not counted as new evidence.
+
+Ranked remaining boundaries:
+
+1. Find a caller that actually supplies `communication/vde_enabled` (or a structurally equivalent configuration selector), including an external configuration producer if absent from this image. Trace its result to an activation/state change. The generic APIs and sibling paths here do not close that join.
+2. Recover actual plugin host/load order and PI/WebSrv instantiation, then resolve `GetConfigValue` binding and concrete configuration filepath before assigning the sibling effects to this device's startup.
+3. Trace the independent discovery `bt_upnp/vde` callback and service startup checks; retain the distinction from WHO7 board capability and WHO8 role.
+4. Trace WHO8 dimension35's response producer and global suffix initialization if a complete camera status interchange is needed; this would answer UI/status semantics rather than factory-enable semantics.
+
+## Reproduction and evidence
+
+Run host-only collector:
+
+```sh
+python3 work/f454-firmware/research/2026-10-30-targeted/media/collect_static.py
+```
+
+`input-evidence.json` pins14 original/inherited inputs. `output-manifest.json` hashes the collector, exact original spans, decoded literals, linkage records, allowlisted configuration/frontend excerpts and scoped search manifests; it excludes itself and this report. The report's provenance is provided by the parent consolidation. The image reader checks original regular-file metadata/hashes and rejects extracted symlink backing; it is imported with bytecode writes disabled. No old inventories, CPU matrices or completed dossier files were regenerated. Confidence is high for the exact static paths and literal bytes, moderate for their intended naming-level roles, and unresolved for the factory enable flag's actual controlling consumer and physical activation.

@@ -1,0 +1,41 @@
+{
+  "/home/bticino/scheduling_manager/scheduling_manager": {
+    "bytes": 1406680,
+    "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26"
+  },
+  "image_accessor": {
+    "bytes": 5611,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/image_vfs.py",
+    "sha256": "890e3526e2fc29c630cb45dad15d91fecb6b32007c0be04e5af28c85a48f1ae4"
+  },
+  "inherited_callable_review": {
+    "bytes": 7493,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/reviews/callable-source-review.md",
+    "sha256": "75adc74bd12e1850e6fe62a496f56ba1c6f74078ff6e7b2b0afdca1a5ab43ab0"
+  },
+  "inherited_capture_and_callsite": {
+    "bytes": 9307,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/callable/REPORT.md",
+    "sha256": "0f55aa02fd373acbd1b7ef81f2e85aa71bf7ae27e826663bf91061f1376fb3e7"
+  },
+  "inherited_descriptor_and_converter": {
+    "bytes": 9887,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-request-values/values/REPORT.md",
+    "sha256": "6a74a40a5c0eababb207f405c944205dc703203486d7698b4a1ac0d7246ecb4c"
+  },
+  "inherited_values_review": {
+    "bytes": 6962,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-request-values/reviews/values-source-review.md",
+    "sha256": "493d170ec0ad6ac4e8da3ddcaee8f6aa06df219bb92013ed7e2aaae955e93217"
+  },
+  "inherited_values_source": {
+    "bytes": 15634,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-request-values/values/ORIGINAL_SOURCE.json",
+    "sha256": "0529c9d80ea85c2de726b7fb12d5aecbb0ad02d6b929ef0b9d3db9c0748b658e"
+  },
+  "unchanged_saved_native_ledger": {
+    "bytes": 22496,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/RESULTS.json",
+    "sha256": "450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525"
+  }
+}

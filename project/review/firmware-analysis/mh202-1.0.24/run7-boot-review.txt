@@ -1,0 +1,19 @@
+# MH202 run7 independent runtime-XML/service source review
+
+PASS for the selected static author area; no correction. Parent reproduced collect_config_effects.py --check:18 outputs,10 spans/20 words,5 inputs and6 nonempty-chunk host cases. Independently re-mapped all10 original byte ranges/offsets/hashes, checked20 words and decoded the three original callback pointers. Host XML read exports only the two whitelisted publicflag identities/presence; genericweb1 and absentSDK leaf match, nootherXML/content/credential values emitted. See validation/run7/independent-boot-source.json.
+
+Read parser driver and callback root/setup/services traversal, selected first-byteBoolean stores, caller ordering and ordinarychild consumers. Callbackuserdata is the same supplied existing config object; start/end manage element names at+160, selected text writes bytes180/181. Nonempty firstchar ASCII0 alone selects0; noBooleanword/textaccumulation/length validation isinvented. Hostfalse/whitespace/chunk examples are not actualGLibsegmentation or malformedXML acceptance.
+
+The reader's descriptor0 guard, unchecked read-to-parse argument/parseBoolean/endparseBoolean and ordinaryreturn0 match source. Main ignores this return. Ordinarychild web180 gate passesSDK181 tohal_configHttpd; laterweb180 reacheshal_restartHttpd. Zero-web alone is not sufficientforstopHTTP. Calls/fieldreads and outputserviceeffects remain separate. No actualparse, HALconfiguration/restart, listener, SDKfeature or restoredvalidity/readiness proved.
+
+Source interpretation of0x1556c uses callbacktable/dataflow, not nearest event_handler label. MissingpackagedSDK leaf doesnotforce existingbyte181zero. Provider/success/chunk/list/error/lifetime/caller effects remain explicit. This review area's original execution0 is separate from parent's new isolated comparator corpus; no cross-area universalzero claim.
+
+Oldreports/sourcefiles unchanged. No vendorprocess/GLib/PHP/JS, services/device/network/mount, originalfilewrites, commits orpublishing occurred. Fixedarchive/header/password/fullargv never needed.
+
+## Final pins
+
+- `boot/run7/REPORT.md` SHA256 `c5e52e89091aca64fcd804fd4151a6248a5fa984c17e0207d71965197c34115d`
+- `boot/run7/collect_config_effects.py` SHA256 `a2565fdabb586159ecbd6992efac73a0e61ac471fe74dc39add2318f8d4f9fb4`
+- `boot/run7/output-manifest.json` SHA256 `f5aa36ace38ed507ac4b4000bd74a9010d432c72d22d60462dd33d8bccc72b9c`
+- `boot/run7/host-text-chunk-model.json` SHA256 `70647dfae5c7185b74e9d8f0f0bbd32eeb1c0319dec4205abf85a5e859fffc83`
+- `validation/run7/independent-boot-source.json` SHA256 `77b88d49a1342e755918ca17c774cf4130b1a80d8ba39ca989680bbc23827cc6`

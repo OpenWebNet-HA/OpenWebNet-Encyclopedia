@@ -1,0 +1,63 @@
+{
+  "collector_sha256": "2c15c188e6171d8eaa1b071f713ebd23f0f7e8b35f2bf5e7f77b1d623ad3dd76",
+  "counts": {
+    "branches": 9,
+    "guards": 44,
+    "imports": 3,
+    "inputs": 7,
+    "local_calls": 4,
+    "original_execution": 0,
+    "spans": 10
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 1343,
+      "sha256": "4aecd9633b7eae16a167768678b93eb423016db48f99a32f09ef41ea4bc31afe"
+    },
+    "SOURCE.json": {
+      "bytes": 9516,
+      "sha256": "3c21d4bac36b598e592805735fd5b57b251bf247c74c932a3b217ef4ba7b9610"
+    },
+    "spans/action-range-dispatch.txt": {
+      "bytes": 1561,
+      "sha256": "3d8688bec5737f193dee96d5a694d39be4f15b9bd2222a5fa60a3a9a303a8765"
+    },
+    "spans/entire-marker-getter.txt": {
+      "bytes": 274,
+      "sha256": "3aa0ee7437db344ae4bcff388a2ca888c1053038b990ec8f49e05ad0ed526c1e"
+    },
+    "spans/false-marker-wait-and-recheck.txt": {
+      "bytes": 1834,
+      "sha256": "cb85e816d86df653ce243c5de14fc0d632e8b7b8543480d148d73cd9187954a8"
+    },
+    "spans/initializer-receiver.txt": {
+      "bytes": 720,
+      "sha256": "906d8ebd71ad457acb6c38e3774b1e039dd3e8b1328c9d2a726b618dd553a318"
+    },
+    "spans/normal-scene-flags-and-return.txt": {
+      "bytes": 1092,
+      "sha256": "7768b61b200e8b3c20025f8e095135d228a0cedf40c8344ada792388e4615a08"
+    },
+    "spans/one-entry-marker-tail.txt": {
+      "bytes": 584,
+      "sha256": "816dbd227f9c1a8f19bd1980dc9c51f150c0efd20d2da567f5146b534f69e97f"
+    },
+    "spans/pair-vector-append.txt": {
+      "bytes": 860,
+      "sha256": "1dc31b325406724d5eeda2a7e1ca1a9e56bcc68bc94aa9333d22715b03d7d39e"
+    },
+    "spans/poll-tail-selection.txt": {
+      "bytes": 791,
+      "sha256": "a2a790b88469c356eac0f97308db215fec492f1fece53f87b79dd7978b3b0c3e"
+    },
+    "spans/same-local-receiver.txt": {
+      "bytes": 974,
+      "sha256": "70969c1614adc118728c64464534762ef6fc88f9f8984c6a06f95de742de731c"
+    },
+    "spans/selected-action-handle-publication.txt": {
+      "bytes": 1446,
+      "sha256": "e6f80ecb20f5484f8fd22d481e1c30a134d6ff77e1f9eca3d7f5b1eeaa9a9fc3"
+    }
+  },
+  "report_sha256": "0e960fe9a386c15467227feb382366becd285b324e59eed7eb5c01d0f386df64"
+}

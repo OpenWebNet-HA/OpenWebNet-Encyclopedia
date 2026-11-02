@@ -1,0 +1,8 @@
+# Remaining evidence needed
+
+1. Genuine MHS/F460 scene export or attributed manufacturer generator asset; F461 commissioned module configuration/records. User has no configured installation/export available; do not manufacture one from settings or templates.
+2. Independently qualified original parser-call/result/root-publication and natural caller/asset joins. The F460 prefixes establish requests/gates only and stop before parsing; further work needs a fresh bounded scope.
+3. Complete branch-sensitive original-input policy before any validator/generator claim. MHS postlookup membership and F460 local path comparisons are not a complete schema/filter.
+4. Effective providers, actual values/type/ID/freshness, errors/unwind/ownership/concurrency/runtime and physical behavior remain open. Closed implementation routes remain closed.
+
+This finite pass created no recurring automation and did not reopen old tasks. Existing completed controls/reports/first candidates stay immutable; no old collector replay or implicit Device approval.

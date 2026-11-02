@@ -1,0 +1,13 @@
+{
+  "collector": {
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/collect_json_provider_v1.py",
+    "sha256": "e42d4032a27adb9afd577e9de14573030ea6d83b2eecb73c0206e352bff6e024",
+    "size": 7112
+  },
+  "lookup_provider_memory_lifetime_runtime": "unclosed",
+  "network_bus_services": 0,
+  "original_execution": 0,
+  "scope": "Fresh C JSON object and software receipt data helpers only, separate from JsonCpp scene classes and OPEN/SCS objects",
+  "stored_or_received_JSON_execution": 0,
+  "transport_auth_session_framing_inspected": false
+}

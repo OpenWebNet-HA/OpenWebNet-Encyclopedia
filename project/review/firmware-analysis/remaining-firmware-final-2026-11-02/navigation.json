@@ -1,0 +1,385 @@
+{
+  "checkpoints": [
+    {
+      "checkpoint": "acquisition",
+      "files": [
+        {
+          "bytes": 8956,
+          "path": "work/remaining-firmware-acquisition/2026-11-01/SUMMARY.json",
+          "sha256": "3f10719c9f06c5851295946a3ca08944edbe94a85f305f11dc30752c04d4bfe4"
+        }
+      ],
+      "role": "Frozen checkpoint navigation/identity only; historical validation applies to exact then-pinned inputs, no collector rerun/current fullsource approval"
+    },
+    {
+      "checkpoint": "first-exploration",
+      "files": [
+        {
+          "bytes": 6790,
+          "path": "work/remaining-firmware-exploration/2026-11-01/RESEARCH_STATE.json",
+          "sha256": "df9fe4ad87435819cbb1d8894a38abf44800a2d5fd7ed6ae9cc6f5894899f42d"
+        },
+        {
+          "bytes": 8564,
+          "path": "work/remaining-firmware-exploration/2026-11-01/REPORT.md",
+          "sha256": "e3513837f66ee0d8eaa9a109c4438b5e5cda21bd23c521e343527c0afca3f228"
+        },
+        {
+          "bytes": 2557,
+          "path": "work/remaining-firmware-exploration/2026-11-01/COVERAGE.md",
+          "sha256": "33c7f50305d9dc7909a6eabb3f6133b133fa16536efd08f7cc5d2704794bcc02"
+        },
+        {
+          "bytes": 1906,
+          "path": "work/remaining-firmware-exploration/2026-11-01/RANKED_REMAINING_QUESTIONS.md",
+          "sha256": "c9369fde265686a0492c9ac2e7487d6763c2cc7f6290d9a0636c7ec0bbec1f1a"
+        },
+        {
+          "bytes": 4693,
+          "path": "work/remaining-firmware-exploration/2026-11-01/VALIDATION.json",
+          "sha256": "fd4c1907ddcddf8c9d491c89a71acbf1a0d4f3b61e6cd46e6af51e10a8fbe71c"
+        },
+        {
+          "bytes": 24143,
+          "path": "work/remaining-firmware-exploration/2026-11-01/EVIDENCE_INDEX.json",
+          "sha256": "b7876def62f63337d539610c536ccf45dbf39f783b8a1207920cfffeb7b1d750"
+        }
+      ],
+      "role": "Frozen checkpoint navigation/identity only; historical validation applies to exact then-pinned inputs, no collector rerun/current fullsource approval"
+    },
+    {
+      "checkpoint": "run01",
+      "files": [
+        {
+          "bytes": 8823,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run01/RESEARCH_STATE.json",
+          "sha256": "e3fa87a3c60d26e440f3281a260750ba52cb04f4656acc653b48a79465238f60"
+        },
+        {
+          "bytes": 2226,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run01/SYNTHESIS.md",
+          "sha256": "60cf43f5d8349cec6f5596852fe519cf0f74085640ff43d5cc46679ba5c7f937"
+        },
+        {
+          "bytes": 1876,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run01/COVERAGE.md",
+          "sha256": "1fd757a7e8afb68fa6980ce3926c7e8440d6f8f6d26208db3907e0eff45a2a9d"
+        },
+        {
+          "bytes": 2221,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run01/RANKED_REMAINING_QUESTIONS.md",
+          "sha256": "9f64a1a4670a1d701e446e9c37e602a3b7824f1221d71444d53eb01a8f296425"
+        },
+        {
+          "bytes": 5411,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run01/VALIDATION.json",
+          "sha256": "8d914454091d2c286ef690f04a812c797edfd1c57393b2d97af07163ea45669b"
+        },
+        {
+          "bytes": 21510,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run01/EVIDENCE_INDEX.json",
+          "sha256": "243ad4ec75b43667719dbdee101c7fb824cf210472876a6e784602615408178c"
+        }
+      ],
+      "role": "Frozen checkpoint navigation/identity only; historical validation applies to exact then-pinned inputs, no collector rerun/current fullsource approval"
+    },
+    {
+      "checkpoint": "run02",
+      "files": [
+        {
+          "bytes": 8729,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run02/RESEARCH_STATE.json",
+          "sha256": "e99555792f0a0e5d7b81df4789fd996513174867cd842836f736317dbab5ad4e"
+        },
+        {
+          "bytes": 3976,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run02/SYNTHESIS.md",
+          "sha256": "a7a35f25b1c447907aa45ed527ec9ff0ac431f13281f36567cc82543bd60b721"
+        },
+        {
+          "bytes": 1360,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run02/COVERAGE.md",
+          "sha256": "09baedeeb8fa2b88da5b66f78e0ad14eae9266a1cc5b93084b7cc15bf65c7d6a"
+        },
+        {
+          "bytes": 1333,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run02/RANKED_REMAINING_QUESTIONS.md",
+          "sha256": "697d76c371a591db1a2f1dedae7ebcfd7b74f29caef32f0da0bfeb841be35dfa"
+        },
+        {
+          "bytes": 5321,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run02/VALIDATION.json",
+          "sha256": "b34e075f05043d04863301fe4d6a4c879dea6d27d82e80f94cad327b0eeb78a0"
+        },
+        {
+          "bytes": 19858,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run02/EVIDENCE_INDEX.json",
+          "sha256": "43e8d22d40b56783df18a44f87135158c08d2c8b55094a4e1ff1b098f3949e83"
+        }
+      ],
+      "role": "Frozen checkpoint navigation/identity only; historical validation applies to exact then-pinned inputs, no collector rerun/current fullsource approval"
+    },
+    {
+      "checkpoint": "run03",
+      "files": [
+        {
+          "bytes": 9288,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run03/RESEARCH_STATE.json",
+          "sha256": "a75d450594fa45704bce0a33e8c04ec9744c8628286486bf655b6c92ae31de53"
+        },
+        {
+          "bytes": 4656,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run03/SYNTHESIS.md",
+          "sha256": "6673ae361d4b785076e89d68b91ad8907b33e60ea44db19e65191402bacd706f"
+        },
+        {
+          "bytes": 1358,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run03/COVERAGE.md",
+          "sha256": "fab695c5cf5394ef7e856b161ff38f3334f659124a60b832553a38b9c7c6b91c"
+        },
+        {
+          "bytes": 1425,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run03/RANKED_REMAINING_QUESTIONS.md",
+          "sha256": "b7c86893af29f9051ffbbdf6a132a33bd44d61afed56bd6b2cbcffc30d21ab15"
+        },
+        {
+          "bytes": 5324,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run03/VALIDATION.json",
+          "sha256": "d21600fd372fd83d75f265fa9084a27042b38716c7053d8a750a9c12a5fd8c74"
+        },
+        {
+          "bytes": 21451,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run03/EVIDENCE_INDEX.json",
+          "sha256": "8df0bab4008fd62978fdcb12463492dacbc129eb554cd628cd5afd5329b2b6cc"
+        }
+      ],
+      "role": "Frozen checkpoint navigation/identity only; historical validation applies to exact then-pinned inputs, no collector rerun/current fullsource approval"
+    },
+    {
+      "checkpoint": "run04",
+      "files": [
+        {
+          "bytes": 8939,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run04/RESEARCH_STATE.json",
+          "sha256": "e6446ebe6af563dc0f8819e446cc52bd87a02818d855fc99c589e8c48d2d8a84"
+        },
+        {
+          "bytes": 1957,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run04/SYNTHESIS.md",
+          "sha256": "d4d84a04040483d0b0b4309e7b0110110a8df3bc261914df02546b1c946aa0cf"
+        },
+        {
+          "bytes": 1390,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run04/COVERAGE.md",
+          "sha256": "ec19c5b6bd040615400fa9b64088ae5e2bfe7ae7fe62be524268a88cbac36445"
+        },
+        {
+          "bytes": 1416,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run04/RANKED_REMAINING_QUESTIONS.md",
+          "sha256": "3d207d3e4eac0ad95065bb214b3540e72e80e9ded3b8e6df6d3d434aa9c79e26"
+        },
+        {
+          "bytes": 6883,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run04/VALIDATION.json",
+          "sha256": "1f06bdc44985f9bf5fe6c7eaeb72016375fb966c25ac6d01d5c5346fa1897b33"
+        },
+        {
+          "bytes": 53450,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run04/EVIDENCE_INDEX.json",
+          "sha256": "ef2a40f34260dd225d951336cc18c8c0b75c90505b468afb5982b0d2900142b6"
+        }
+      ],
+      "role": "Frozen checkpoint navigation/identity only; historical validation applies to exact then-pinned inputs, no collector rerun/current fullsource approval"
+    },
+    {
+      "checkpoint": "run05",
+      "files": [
+        {
+          "bytes": 10847,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run05/RESEARCH_STATE.json",
+          "sha256": "9c46da3cc87dd0cc4a40813619661b42071330655504e3d6edb5746c6c529121"
+        },
+        {
+          "bytes": 2313,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run05/SYNTHESIS.md",
+          "sha256": "634acd2c2145dcaaf58f471d8d4fa43b69450a71caedd6ca958bdded093a99ba"
+        },
+        {
+          "bytes": 1323,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run05/COVERAGE.md",
+          "sha256": "72679485dbdecffe615c42e2223095c205126a16719ca3a8064f41b754d1e6fc"
+        },
+        {
+          "bytes": 1472,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run05/RANKED_REMAINING_QUESTIONS.md",
+          "sha256": "5f152b168cafafc3ebc78c8b21364024c6e08ed70868f401276f5b28438f177b"
+        },
+        {
+          "bytes": 6994,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run05/VALIDATION.json",
+          "sha256": "02baa01b52dc1e35dc26e191fbf2a72cf763b0b48604a614269c00ec1f5f3cec"
+        },
+        {
+          "bytes": 36016,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run05/EVIDENCE_INDEX.json",
+          "sha256": "a44f13e95b188e71549b12ef3b26a57c22ee80bbe592825555471c616ab56cb0"
+        }
+      ],
+      "role": "Frozen checkpoint navigation/identity only; historical validation applies to exact then-pinned inputs, no collector rerun/current fullsource approval"
+    },
+    {
+      "checkpoint": "run06",
+      "files": [
+        {
+          "bytes": 10957,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run06/RESEARCH_STATE.json",
+          "sha256": "c4f6132f85b2018b326b3fec94bdd92ffeba3277aceb3ad5ef8440ab6cf1e2b7"
+        },
+        {
+          "bytes": 2278,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run06/SYNTHESIS.md",
+          "sha256": "3bdf972206147bd66a889322dc3f91d7359e9693d9f6744870feb74b31827f1f"
+        },
+        {
+          "bytes": 1279,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run06/COVERAGE.md",
+          "sha256": "7817a937c773d24916f7c155c9b69896c6cc1c26abaaa20803c2306a6f39a1ac"
+        },
+        {
+          "bytes": 1331,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run06/RANKED_REMAINING_QUESTIONS.md",
+          "sha256": "7858207e8f40fff4684db0078732fd4d2cd0141c76891763d9a12fa28f1a0072"
+        },
+        {
+          "bytes": 7130,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run06/VALIDATION.json",
+          "sha256": "b67fb42c903f78589def1758b485ddd94c8129193939d76f11e95ad9223c90e1"
+        },
+        {
+          "bytes": 34342,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run06/EVIDENCE_INDEX.json",
+          "sha256": "4f3fa22ad30934adc7cc417316437df96e2453a2009dae81939ef6e62057be1c"
+        }
+      ],
+      "role": "Frozen checkpoint navigation/identity only; historical validation applies to exact then-pinned inputs, no collector rerun/current fullsource approval"
+    },
+    {
+      "checkpoint": "run07",
+      "files": [
+        {
+          "bytes": 10372,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run07/RESEARCH_STATE.json",
+          "sha256": "06b60702dafbfc1a75fc94d709a28eb9775b8383a6fc9733e889098a33fec3ca"
+        },
+        {
+          "bytes": 2232,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run07/SYNTHESIS.md",
+          "sha256": "25aa79e676c6b36ad106a9b1383015a50f127831f97a511d4307b551241aada0"
+        },
+        {
+          "bytes": 1297,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run07/COVERAGE.md",
+          "sha256": "62a1bd17ef9f8e449a6213983237a85170a89de32fb4b18c1f92990324facf31"
+        },
+        {
+          "bytes": 1425,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run07/RANKED_REMAINING_QUESTIONS.md",
+          "sha256": "baff14fea432f65b57c50cefd798ad1476b1efea0b13f56f273051ad9fcac02d"
+        },
+        {
+          "bytes": 6632,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run07/VALIDATION.json",
+          "sha256": "c5e05a312eed8a4f907ffae3f7bc8455efa3b874d55aadac4cbc9a53299bf5d8"
+        },
+        {
+          "bytes": 32326,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run07/EVIDENCE_INDEX.json",
+          "sha256": "1fd1e3c62b68908fd06a20d72524399688530ab2d53eeb9db50beff8626e156a"
+        }
+      ],
+      "role": "Frozen checkpoint navigation/identity only; historical validation applies to exact then-pinned inputs, no collector rerun/current fullsource approval"
+    },
+    {
+      "checkpoint": "run08",
+      "files": [
+        {
+          "bytes": 9977,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run08/RESEARCH_STATE.json",
+          "sha256": "3fc2b90c7649d035e82fee3d84280f9e3859d771a3b7249c823c153302e0e4e1"
+        },
+        {
+          "bytes": 2782,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run08/SYNTHESIS.md",
+          "sha256": "bf7d9944b85919039d131a91def4203807c059d4b340eb9cfda9a3e1141dbc8a"
+        },
+        {
+          "bytes": 1307,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run08/COVERAGE.md",
+          "sha256": "85aec1a6200ffb44d368e8bd0dca3c44f23065e441ae0e70c80c35145d313563"
+        },
+        {
+          "bytes": 1385,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run08/RANKED_REMAINING_QUESTIONS.md",
+          "sha256": "716ceeec092b2c6dbb8f9fa14b38a64d8f4653458c8259f448dc739c857031e1"
+        },
+        {
+          "bytes": 6538,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run08/VALIDATION.json",
+          "sha256": "3e9c085a8368a74915f8babfa84049732dbdc7b61f1f8f5c916e500da3349bee"
+        },
+        {
+          "bytes": 30131,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run08/EVIDENCE_INDEX.json",
+          "sha256": "f7eca903996f73dba0352d0e047ae5d1278b5472aa05df5ffa7d438ab34341a8"
+        }
+      ],
+      "role": "Frozen checkpoint navigation/identity only; historical validation applies to exact then-pinned inputs, no collector rerun/current fullsource approval"
+    },
+    {
+      "checkpoint": "run09",
+      "files": [
+        {
+          "bytes": 8964,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run09/RESEARCH_STATE.json",
+          "sha256": "de25949326e46eff4475e23784001e4b0b2ee569a5b49a82185f625b6106a9b3"
+        },
+        {
+          "bytes": 2868,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run09/SYNTHESIS.md",
+          "sha256": "07c4d9c55aed71ebb7ee5e4485ba1ee758852c43a897c3af559af6d1e0e20f63"
+        },
+        {
+          "bytes": 1200,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run09/COVERAGE.md",
+          "sha256": "693a743ed6e175fc3d68b491512cf847e238401932d67dc86a8f28152df38d87"
+        },
+        {
+          "bytes": 1391,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run09/RANKED_REMAINING_QUESTIONS.md",
+          "sha256": "d7b97da125c70032d39910e7d7e560b9eec06ba467b608321b810b448d0c0e00"
+        },
+        {
+          "bytes": 5680,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run09/VALIDATION.json",
+          "sha256": "3d75614e8d27e61a38559c9182a18e0f1d09395ff3304021d7b5953cf4546453"
+        },
+        {
+          "bytes": 22201,
+          "path": "work/remaining-firmware-investigation/2026-11-01-run09/EVIDENCE_INDEX.json",
+          "sha256": "da44b3ffe24b0dfc5c547c305450b0e041cd7bd0dbf096b88df74aa8d7efae26"
+        }
+      ],
+      "role": "Frozen checkpoint navigation/identity only; historical validation applies to exact then-pinned inputs, no collector rerun/current fullsource approval"
+    }
+  ],
+  "current_report_roles": [
+    "Run05F459 collectorv2 retains canonical REPORT.md, separate REPORT.v2 corrects command label.",
+    "Run08F459 collectorv1 retains canonical REPORT.md, separate REPORT.v2 clarifies hexadecimal0x66/decimal102.",
+    "Run09 handoff candidatev1 retained before scope-only v2; reviewed v2 is the original public handoff version."
+  ],
+  "historical_limits": [
+    "Run03 index has a stale Run02 scope STRING only, noted in Run04, identities were not rewritten.",
+    "Earlier failed/versioned tools/reports/first copies and unavailable MH202run18/run21 intermediate histories remain scoped, not reconstructed."
+  ],
+  "scope": "Selected frozen acquisition/first-exploration/runs01..09 navigation; no new source coverage, no whole-corpus/native replay or implicit current revalidation of changed references"
+}

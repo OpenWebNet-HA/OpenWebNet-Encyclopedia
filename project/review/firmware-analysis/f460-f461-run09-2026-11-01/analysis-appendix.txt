@@ -1,0 +1,17 @@
+## F460: one concrete condition pointer and its complete predicate
+
+Fresh F460 source connects local condition row18, `BNCUSCENE`, to its own raw parser and compiled condition. The selected initializer requests256 bytes and passes the returned base directly to the compiled constructor. It publishes that same pointer into the receiver's condition vector on the available-capacity path, advances the end by eight bytes and clears the source pointer cell. This allocation and pointer representation are separate from the trigger's control/inner pair.
+
+The raw common parser requests `asBool` for `enabled` and stores its returned byte at raw+40. The compiled constructor copies it to its own byte+176. Its installed primary predicate is an entire sixteen-byte body, including BTI: byte load, XOR with1 and return. Under ordinary Boolean construction, successful copy and no mutation, the result is the inverse of that enabled byte. The body performs no target-scene lookup. This statement concerns that complete local predicate; other methods, configuration, class intent and system capabilities remain open.
+
+The previously reviewed worker calls the predicate slot through the same receiver's condition-pointer range. Composition requires successful publication, the same valid class/object state and worker lifetime. It does not establish actual inclusion of this condition, a configured scene's outcome, complete ownership or an unsupported function. The original raw serializer is identified but its value coherence remains unclosed; no MyHOMEServer1 layout or row number is substituted.
+
+## F461: platform-file requests to a cached HAL selector
+
+The actual HAL provider gives the earlier conditional getter selector a local source. Its four-byte cache starts with file-backed bits `ffffffff`; a different cached word takes the direct return path. The uncached path requests CPU-information text and selects a line through a case-insensitive `Hardware` substring check. A separate fallback requests the device-tree model file; a nonnull line from that route reaches the classifier without the earlier marker test.
+
+On one selected classifier path, with preceding comparisons returning no match, a case-insensitive `BEAR` substring match selects22 and writes the same cache word. An original pure-getter call names this same exported `hal_board` definition through its own relocation. Under ordinary providers and effective self-binding, this composes with the previously reviewed selector22 getter branch. It does not establish actual file contents, installed board identity, the selected packaged DTB, auxiliary-core readiness, refresh policy or concurrent cache behavior.
+
+The original HAL bytes match across the two checked images; that is a file-level identity. A later command-based fallback and its literal were excluded. The uncertain process identity consumer remains closed. No host platform file, target service or hardware was queried.
+
+The [run09 source and review capsule](../../project/review/firmware-analysis/f460-f461-run09-2026-11-01/README.md) retains original source mappings, guards, class/cache identities, reproducible collectors and exact first candidates. Both additions are static reasoning; no firmware, file/provider operation or model was executed.

@@ -1,0 +1,9 @@
+{
+  "status": "FAILED_BEFORE_OUTPUTS",
+  "script": "coordinate_supplement_v1.py",
+  "syntax": "PASS",
+  "actual_failure": "AssertionError at raw struct.unpack(<6I,clause)==expected tuple; no output or firstcopy directory generated; cause not yet qualified",
+  "new_original_assembly_reads": 0,
+  "source": "unchanged saved METHODS.v2 body_hex only",
+  "note": "Later-transcribed actual tool failure, not saved original terminal transcript; --check not run"
+}

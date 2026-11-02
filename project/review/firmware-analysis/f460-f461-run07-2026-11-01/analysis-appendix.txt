@@ -1,0 +1,16 @@
+## F460: captured receiver to conditional condition-worker request
+
+The captured receiver now has one positive construction context. Original source requests a 272-byte aggregate whose control-block RTTI names an in-place `SceneRunner`, advances to the inner storage at base+16 and passes that same destination through its constructor to the trigger initializer. The control block's table is not presented as the inner object's primary vtable. This identifies a source construction path; it does not prove every callback receiver came from it or remains alive.
+
+The previously unexamined local handoff tests receiver byte113 and acquire-loads byte249. On the selected nonzero/zero route it changes flags, creates a thread state containing the same raw receiver and requests thread start followed by detach on the normal continuation. The numeric flag labels are retained without assigning public enabled/active/stop meanings. Source writes and API requests do not establish successful thread creation, exclusion, detached completion or owning lifetime.
+
+The installed thread-state table identifies its method, which loads that same receiver and its condition-pointer range. These entries are eight-byte pointers, separate from the trigger's sixteen-byte inner/control pairs. For the selected one-remaining-condition tail, it requests the actual predicate slot and tests the low eight bits of its result. A true result plus normal intermediate returns reaches another local method boundary. The concrete condition, range producer, later method body, complete condition policy, actions, exceptions and lifecycle remain unproved.
+
+## F461: bounded HAL identity getter declarations
+
+Two original HAL getters have conditional compile-time outputs. If the opaque `hal_board` provider returns22, one path requests duplication of the literal `F461` and stores the returned pointer through its supplied output argument. A separate getter, under the same selector premise, requests and stores `134`. These are distinct getter-output contracts; selector22, code134, package object-model/version numbers and public protocol identities are not merged.
+
+The selected process declares imports and a dependency on the packaged HAL candidate, but no permitted diagnostic consumer was established in this packet. An uncertain caller fragment was stopped and excluded before generation; it was not used as a proxy for a closed route. The HAL provider result, effective binding, valid writable output slots, allocation and normal returns remain premises. No diagnostic response, installed board, hardware capability, serial/MAC identity or provisioning value was observed or exported.
+
+The [run07 source and review capsule](../../project/review/firmware-analysis/f460-f461-run07-2026-11-01/README.md) retains original hashes, mappings, selected code/tables/imports, exact first copies and the explicit caller boundary. Both additions are static source reasoning, with no original execution, thread, device query or physical operation.
+

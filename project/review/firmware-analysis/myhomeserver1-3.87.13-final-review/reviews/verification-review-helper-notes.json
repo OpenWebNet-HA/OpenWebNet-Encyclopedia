@@ -1,0 +1,20 @@
+{
+  "author_v2_check": "PASS first requested read-only invocation after overview update:8outputs38directpins2rows614+142memberships2historicaloverrides11copies; execution0/replay0",
+  "independent_inline_audit_corrections": [
+    {
+      "author_defect": false,
+      "cause": "Reviewer used suffix matching rather than exact original path for historical overview override",
+      "error": "AssertionError on a same-basename numeric member",
+      "resolution": "Exact workspace-relative path equality, matching author strict resolver; all614+142 memberships pass"
+    },
+    {
+      "author_defect": false,
+      "cause": "Reviewer treated wrapped root snapshot index as a bare filename map",
+      "error": "FileNotFoundError for snapshot/scope",
+      "resolution": "Use actual files member; exact one-file root snapshot comparison passes"
+    }
+  ],
+  "original_execution": 0,
+  "preservation_limit": "These helpers were inline tool inputs, not saved on-disk drafts. Actual failures remain in conversation; this note does not invent original script hashes/files. All failures preceded review-output writes.",
+  "scope": "Independent inline host audit bookkeeping; no author output/generated review/source/native effect"
+}

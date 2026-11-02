@@ -1,0 +1,56 @@
+# Overnight run01 documentary integration and archive review
+
+PASS. No refinement requested. This independent documentary review compares the five frozen synthesis/archive outputs with three authoritative source packets and their actual source-peer reviews, plus the saved parent upload/transfer receipts and candidate-only registration artifacts. F459/archive input identity is source-aware from this reviewer's preceding preflight. F450 and MH200N source findings are compared with their independent source reviews; they are not freshly re-audited binaries here. No collector/native replay, SQL query, decryption, remote connection, upload or readback was performed by this reviewer. No author/original/old-dossier/repository bytes were edited.
+
+## Source-to-summary assessment
+
+F450 is accurately described as an original local copy-command request followed, on the selected normal continuation, by the SAME destination filename through a saved helper argument to sqlite3_open with separate global output storage. Copy-result normalization/diagnostics are not a successful-copy gate; a helper result or selected exec request is not proof of a valid schema, successful query, installed file or archive recovery. The actual encrypted50.xtz relationship remains a candidate to qualify, not an established plaintext-to-runtime identity. Provider, reachability and normal-return premises, bounded discovery limits and opaque delegates remain explicit.
+
+F459's own ARM32 selected constructor connects path90b4/R0 and receiver+8/R1 to the opening request, then reloads receiver+8 and original DDL for selected busy-handler/exec requests. This narrows the prior import/literal gap without claiming an actual file, schema, rows, durable persistence, natural constructor caller or complete error/lifetime policy. No synthetic database was generated or archived. That prohibition remains clear despite the source-level CREATE text.
+
+MH200N is accurately bounded to the actual marker/open/exact-minus1 branch, two file-backed pathname-cell stores and later SAME-cell helper argument under normal path/no-relevant-mutation premises. Normal/recovery code equality is not equal marker/environment state. Resource names, concrete cells and a local helper call do not establish application copying, active partition/overlay, startup success or hardware behavior. F453AV/F455 remain distinct queued source breadth rather than transferred or recounted results. No MHS/F454/MH202 layout, grammar, physical role or ledger transfer occurs.
+
+All current firmware/provider/native/semantic-model/fixture/target OS/network/bus/physical execution remains zero. The explicitly authorized host private-archive workflow is distinguished from target network operations, and previous MHS/F454/MH202 ledgers and missing MH202 intermediate-history limits remain unchanged. This batch is not full Device/source/runtime approval or exhaustive coverage. Closed receiving/output/transport/authentication/session/framing/MQTT/libjel routes remain closed.
+
+## Actual archive receipt and registration scope
+
+The retained R2_RECEIPT reports ok=true/status=uploaded,72,774 bytes, SHA256824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8 and the expected sha256/82/4b content key. The local object/source, plan, private support-data descriptor, transfer-after hash/size and cumulative archive-index row agree. TRANSFER_RECEIPT records fresh-only reference staging and attributes full remote size/SHA readback to the configured helper before its ok JSON. Static upload-script inspection confirms local identity checks, before/after staging checks, guarded helper invocation and receipt matching. These are actual saved parent observations, not a network/readback independently performed by this reviewer. No remote upload or readback was replayed.
+
+The archive index correctly records ONE encrypted supporting container and ZERO newly recovered plaintext database objects. Internal master.sqlite remains encrypted/unrecovered; header/schema/rows/version unknown. Exact outer/member/CRC/source identity comes from the already independently reviewed preflight, not a new decryption. Private preservation is not a public redistribution or a usable-database claim.
+
+The registration candidate is one additive descriptor entry under work only. Its entire before-manifest equals the current canonical repository source manifest. The candidate differs only by one insertion of the support-data descriptor; no old records change, no duplicate ID is added, and the saved patch reproduces that exact insertion. The candidate is not an applied registration or Git/source-manifest mutation. Descriptor source-parent/hash/classification and private visibility remain accurate. Existing source files were not changed by the fresh hidden staging workflow as recorded; this review does not expand that observation into a fresh audit of every remote path.
+
+## Exact checks and limits
+
+- The five first-synthesis-candidate files equal their current originals, recorded lengths and hashes.
+- Seven explicit source/synthesis/review first-copy indexes verify30 members: current synthesis/archive5, F4509, F4597, MH200N6 and three source reviews. This verifies saved bytes, not all referenced originals or unavailable historical intermediates.
+- The local72774-byte object matches the expected digest; actual upload/transfer/descriptor/index fields cross-match exactly. Canonical before-manifest equality, one-addition candidate-only registration and patch reproduction pass.
+- This work-only candidate has no Markdown links or fragment anchors to validate. Its local archive receipt/plan/descriptor references are present.
+- No further author correction, new source investigation, broad previous protection replay or completed preflight edit was needed. Final checkpoint identity/control/index receipts and any later automation closure are separate actual completion work; they are not pre-certified by this PASS.
+
+## Exact reviewed pins
+
+| File | SHA-256 |
+| --- | --- |
+| `work/remaining-firmware-investigation/2026-11-01-run01/REPORT_CANDIDATE.md` | `7ed263188baee9f06223e57711a935ae5dcf3973a3655608e17fcd2731b74ba0` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/SYNTHESIS.md` | `60cf43f5d8349cec6f5596852fe519cf0f74085640ff43d5cc46679ba5c7f937` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/COVERAGE.md` | `1fd757a7e8afb68fa6980ce3926c7e8440d6f8f6d26208db3907e0eff45a2a9d` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/RANKED_REMAINING_QUESTIONS.md` | `9f64a1a4670a1d701e446e9c37e602a3b7824f1221d71444d53eb01a8f296425` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/R2_ARCHIVE_INDEX.json` | `133c94eb95859e111df0c1b6c005636ce8ee13ce164e3576fae85e70256f0719` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/first-synthesis-candidate/INDEX.json` | `6b0bc5ec6d504963951f4642c53bbb7a46f23797583fce3f9d7a6247a67756db` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/REPORT.md` | `3e25a7de747b22c77afed6eff8f8751e8b0e050a23a9708703dde67e2dbef2d2` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-night01-shared-store/REPORT.md` | `2e2a56a80412660e7a2992593510fcb2bc61095e59c4bd162aac9d03607d4847` |
+| `work/mh200n-firmware/1.1.8/research/2026-11-01-night01-resources/REPORT.md` | `908ed410d6954c8080c0a50821ca1cbbd5e7c2533b7b4320893aebc4d6004f4c` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/reviews/f450-source-review.md` | `6f32834cfd953515e4663861a7df5f10b91984b73bccf4ce2fbaca86643a1d30` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/reviews/f459-archive-preflight.md` | `3d1061b33341a61966f877e865b70686471d5dd5a039c9cd44d0be85dfb919f0` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/reviews/mh200n-source-review.md` | `1177369efbd4ff4ec4597cb37a67b9317f2feae0979328ea84f034f7537341d3` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/archive/R2_RECEIPT.json` | `072092bb105685ab2aa0395cde439b431ac6a016037b501a06d2faf509b07793` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/archive/TRANSFER_RECEIPT.json` | `4d5d40d7a72d51bdcbf3e1365ee2a5b73625cc2689a8cbcc197877eba6426b95` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/archive/upload_container_v1.py` | `55e97a855b4743e787ca3fca67b53475945aaaccd109d2d964e0699464bde831` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/archive/descriptor.json` | `e8fb8bdf44bf5115b663fbf2ba9527f395cd6a543fe1f85d9f007c516f99ca59` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/archive/UPLOAD_PLAN.json` | `17031a31dc29e7e7b724775b6986bacc082d6fe742b539cac389da8063e790ce` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/archive/artifact-manifest.before.yaml` | `dff0aac04bdb06c9ea298845d8666dce293818e65b03ae5882c3ab0aed883a05` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/archive/artifact-manifest.candidate.yaml` | `53a228ca7cb82247252a4f24ef81c3c51489e44f9dbe6260e78620be0a65bb19` |
+| `work/remaining-firmware-investigation/2026-11-01-run01/archive/registration-candidate.patch` | `6bf1eaf528f618912477f9a8d8df0e022397bbad8939fc15b2da37e02a25f632` |
+
+Current source summaries and exact recorded archive status are coherent at these bytes. The finite continuation remains active; future source/recovery/archive outcomes and final closure require their own evidence.

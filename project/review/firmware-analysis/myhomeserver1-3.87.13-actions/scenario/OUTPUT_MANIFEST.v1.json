@@ -1,0 +1,78 @@
+{
+  "CRITICAL_BYTES.v1.json": {
+    "bytes": 836,
+    "sha256": "2b7284c8d72417b5a0c79eea08562e71d3e2ad9053f7adb61e896cb84ffd848d"
+  },
+  "DIRECT_CALLS.v1.json": {
+    "bytes": 920,
+    "sha256": "956961355b5e548e1b9bbd55ec789703b106731a3eac8ec5f59255ac49352d36"
+  },
+  "DISPATCH.v1.json": {
+    "bytes": 211,
+    "sha256": "66778fff6fddc478aaf5c50c6055ac499914c102af2abff589e985e3198de0a5"
+  },
+  "INPUTS.v1.json": {
+    "bytes": 843,
+    "sha256": "c388ecfef83a94a069ff25f8e735717910eba574560ba1aa75c67d5762940767"
+  },
+  "METHOD.v1.json": {
+    "bytes": 680,
+    "sha256": "abe1eb88e153d8519d5f3cc070fe4cbaa55b5a2172834d0194e5ddf4d9d0f6a8"
+  },
+  "PIC_TARGETS.v1.json": {
+    "bytes": 688,
+    "sha256": "5fa38369c7bf4cb1382b5ca6f9f8a977b63bed58c101d4e9be02c9e30e854088"
+  },
+  "SOURCE_SPANS.v1.json": {
+    "bytes": 2258,
+    "sha256": "80a873588885b5247536fbd5cb5cbb206bb1be2891c5f7af4e62b8c2efb1216b"
+  },
+  "VTABLE.v1.json": {
+    "bytes": 645,
+    "sha256": "ab04fb0efabd930a259f0f9c0904122c6da3c45910c21154016422670eccf8f8"
+  },
+  "spans/compiled-dispatch.txt": {
+    "bytes": 1453,
+    "sha256": "a54f5e6c89629f728375be0373c3599af277e4ded5b24d33a71d8571f8731308"
+  },
+  "spans/compiled-pools.txt": {
+    "bytes": 522,
+    "sha256": "79e82494841b2c2d2d2ead6d13d46c177a0a934c22743b708f42c6a2d4dd5d3c"
+  },
+  "spans/compiled-scenario.txt": {
+    "bytes": 4459,
+    "sha256": "87d32e138c5aed52bde0164ff22d500d6682b218d8165ea63c7830f253e97dff"
+  },
+  "spans/functor-manager.txt": {
+    "bytes": 1037,
+    "sha256": "e78d0f4a60b1591de7bd3fe008469f5752107babde2e7e242b086b046e6b9e5b"
+  },
+  "spans/functor-storage.txt": {
+    "bytes": 3334,
+    "sha256": "656b84429390f8f62204794044a7901170fbde9f1b954f460869a62ba723af81"
+  },
+  "spans/registry-key-predicate.txt": {
+    "bytes": 1389,
+    "sha256": "b3f400a361fad1bc388425c60899b7baa257e8a04c170f84f9545a776409fbb4"
+  },
+  "spans/registry-value-normal-path.txt": {
+    "bytes": 4552,
+    "sha256": "12d084e85d068c8fb4b4c1198fffd23e7ca657cbb522cfab4b21487957eec12f"
+  },
+  "spans/scenario-invoker.txt": {
+    "bytes": 16395,
+    "sha256": "a7959e8d61297ea0906282a4c05ef7eca3cde6c17d5cd817ed643fc792d0e0ee"
+  },
+  "spans/scenario-runner-constructor.txt": {
+    "bytes": 8991,
+    "sha256": "e3e3461a8f873bfad8f159489070630cb2a77a254ae4d244bab088ac3b633cf7"
+  },
+  "spans/serializer-derived-field.txt": {
+    "bytes": 1528,
+    "sha256": "065d9766003e27189b14a472142643ff57a895f90498d9d2c3c85fe9e4fab565"
+  },
+  "spans/serializer-pools.txt": {
+    "bytes": 1046,
+    "sha256": "00216a2a1d61a3bab4012204623a4f0c71bfe1d8f03673b3a6a33d4ae85455d2"
+  }
+}

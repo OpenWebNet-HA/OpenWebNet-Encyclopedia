@@ -1,0 +1,44 @@
+[
+  {
+    "research_path": "work/f454-firmware/research/2026-10-31-alarm-ownership/REPORT.md",
+    "published": "f454-alarm-report.txt",
+    "bytes": 11715,
+    "sha256": "e6f2e97d0cbffed85110360d4218730650d3a59439263ff86f2942b933183617",
+    "transformation": "None; exact full report bytes"
+  },
+  {
+    "research_path": "work/f454-firmware/research/2026-10-31-av-state/REPORT.md",
+    "published": "f454-av-report.txt",
+    "bytes": 9924,
+    "sha256": "e6953786782cd9c79a21c1554c2e674483bba9aa9cf21f7b18941c339490939d",
+    "transformation": "None; exact full report bytes"
+  },
+  {
+    "research_path": "work/mh202-firmware/research/2026-10-31-scenario-artifacts/REPORT.md",
+    "published": "mh202-resources-report.txt",
+    "bytes": 7269,
+    "sha256": "15ce268fc91529c5d7c55aacb2fd74be7da5d513277257eadf7ab12498d39c80",
+    "transformation": "None; exact full report bytes"
+  },
+  {
+    "research_path": "work/mh202-firmware/research/2026-10-31-scenario-lifecycle/REPORT.md",
+    "published": "mh202-lifecycle-report.txt",
+    "bytes": 6537,
+    "sha256": "e99fa8b024697b17c5b7b4777f0ae0dc196a9d8e97699e1f4844f7d5f563961f",
+    "transformation": "None; exact full report bytes"
+  },
+  {
+    "research_path": "work/firmware-product-followup/2026-10-31/PRODUCT_SCOPE_REVIEW.md",
+    "published": "product-scope-review.txt",
+    "bytes": 8867,
+    "sha256": "867898ecefe59fcf292cbc7a3a6008abccc6e0e0fb68932659d8d079c62fe1c5",
+    "transformation": "None; exact full report bytes"
+  },
+  {
+    "research_path": "work/firmware-product-followup/2026-10-31/F454_ALARM_SOURCE_REVIEW.md",
+    "published": "f454-alarm-source-review.txt",
+    "bytes": 10377,
+    "sha256": "6eeeb172d92c7175d854d90c70ae47dd2058b6f1d557235ae4ed951124ecc6c3",
+    "transformation": "None; exact full report bytes"
+  }
+]

@@ -1,0 +1,62 @@
+# MyHOMEServer1 3.87.13: selected worker-state ownership and holder teardown
+
+The selected action-wait and scene-worker thread states store a single raw receiver pointer at state+4. Their local destructors destroy/delete the8-byte state, without locally retaining or releasing that receiver. Separately, selected scene teardown can request joining its own thread holder before releasing compiled-action handles; selected SLEEP-action disposal handles its own different holder without a local join. These positive contracts do not establish a whole lifetime, a race, a leak, use-after-free, cancellation correctness or any physical outcome.
+
+All original instructions/native helpers/vendor processes/target thread, clock, OS or I/O APIs executed0. No object/scene/concurrency fixture or semantic host model was supplied. Previous completed reports and original image trees are read-only.
+
+## Exact original source scope
+
+Scheduler image `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`; candidate C++ provider `/usr/lib/libstdc++.so.6.0.29`, SHA256 `02d98c9486577d7be0b3fb71b5f0c0b6c090b72554c83640cb525cb3a3c1549a`. VAs are original linked addresses, with fresh PT_LOAD translation for code and RW vtables. Dynamic declarations/definitions and original relative relocations are retained; effective live binding and provider execution remain unobserved.
+
+Inherited common-action and runner reports establish selected execution, completion and polling source. This batch does not repeat their timing matrices or equate a worker's normal return with receiver destruction. The new scope is capture/deleting-state/owner-dispose and holder cleanup source.
+
+##1. Action-wait states contain the raw action receiver
+
+The shared execute path requests a4-byte thread holder and an8-byte state for either wait phase. At0xcd8aa and0xcd8f4, it stores the same action pointer r4 directly to state+4. The other state word is a vptr, installed at0xcd8b4/0xcd8fe. The selected local construction has no two-word action/control handle, receiver reference-count increment or extra owning capture. This describes that capture only; an owning action handle may be retained elsewhere.
+
+Original relocation-backed state vtable layouts are:
+
+|State|Address point|Nondeleting destructor|Deleting destructor|Worker|
+|---|---|---|---|---|
+|First wait|0x162108|Thumb0xcd555|Thumb0xcd56d|Thumb0xcd5c5|
+|Second wait|0x16211c|Thumb0xcd58d|Thumb0xcd5a5|Thumb0xcd721|
+
+The four destructor bodies0xcd554..0xcd5c4 set the state vptr, request imported `std::thread::_StateD2`, and return; the deleting variants additionally request sized delete8. They do not load/release state+4 in the retained full local bodies. The separately packaged `_StateD2` candidate at instruction0x9b21c is literally BXLR, so its selected definition supplies no hidden receiver release. This remains candidate-binding/normal-provider source, not execution or a proof that every possible interposed provider behaves identically.
+
+The execute caller passes a pointer to its state unique-owner slot into `_M_start_thread` (0xcd8b8/0xcd902). If that slot remains nonzero after the request, the caller invokes the state's vtable+4 destructor on it. Otherwise it records/replaces the separate thread holder at action+48, checks any old holder's word and requests detach on the new holder. These are source cleanup/request paths with unclosed thread/allocation/exception outcomes.
+
+##2. Candidate provider owns the state, not an inferred action handle
+
+The actual packaged unique-state `_M_start_thread` candidate0x9b268 loads the state from the supplied slot and requests `pthread_create`, passing that state as its argument. Original PIC pool0x9b284 plusPC0x9b272+4 resolves to Thumb0x9b1f9, the requested entry. On an API return0 it clears the supplied unique slot at0x9b27a; nonzero requests a system-error throw. The pthread implementation and successful transfer/run are not executed or assumed as observed facts.
+
+Candidate entry0x9b1f8 retains the state pointer, invokes state-vtable+8 at0x9b200, then invokes its vtable+4 at0x9b208 after a normal worker return. Its retained cleanup tail also requests that deleting destructor. This closes the source state-to-worker-to-state-delete relation under ordinary successful binding and normal return, rather than an owning reference to action+4's target. Full unwind and OS lifetime remain open.
+
+Candidate detach0x9b250 requests `pthread_detach` and clears the holder's word only on return0; join0x9b234 similarly requests `pthread_join` and clears it only on return0. Other outcomes request a throw. In particular, a zero holder word can arise from successful detach without any source claim that the worker has completed. No host pthread/thread representation is injected.
+
+##3. Scene worker states and scene-holder teardown
+
+The selected scene launch similarly allocates8 bytes, stores the scene pointer at state+4 (0xa5e14) and its state vptr, requests thread start, stores the4-byte holder at scene+140 and requests detach. Its two state address points0x161df0/0x161e04 select destructor pairs Thumb0xa5651/0xa5669 and0xa5689/0xa56a1, respectively. Those original bodies request the same base StateD2; deleting variants request delete8. Their local state ownership is distinct from the scene's external owner/control pair. No scene retain/release is inferred from the raw pointer alone.
+
+A positive owner-dispose chain reaches scene teardown: the loader's original owner GOTslot0x166c2c points to vtable header0x15fd24; its dispose slot atheader+16 is Thumb0x1a049. Entry0x1a048 adds12 to the owner receiver and tailcalls0xa5a3c, matching the earlier loader's allocation+12 scene object. This is a selected virtual disposal entry, not proof it is invoked when polling exits or that its owner count naturally reaches zero.
+
+Teardown0xa5a3c loads scene+140. If the holder is nonnull and its word is nonzero,0xa5ccc requests join before the selected compiled-range cleanup. After ordinary return it eventually reloads the holder; a still-nonzero word reaches terminate0xa5d9c, while a zero word permits sized delete4 at0xa5acc. Null or already-zero holder paths differ, and normal successful detach can explain the latter without implying a join or worker completion.
+
+Only after that selected holder handling does it traverse compiled action entries from scene+128/+132 in8-byte strides (0xa5ad0 onward). Each entry's second word is the control/owner pointer. The retained source decrements its strong-count word and on a selected last-count path invokes control-vtable+8 at0xa5b0a; additional weak-count release can invoke slot+12. It then requests deletion of the vector storage. These are owner-release requests and conditional last-owner disposal, not guaranteed action destruction or proof of no other owners.
+
+The raw scene/action definitions, compiled action handle range, scene thread holder+140 and action thread holder+48 are different objects/axes. No equal-number or nearest-symbol join is used.
+
+##4. A concrete compiled-action dispose path checks action+48
+
+The selected SLEEP initializer's shared-owner construction resolves pool0xa7f50 through GOTslot0x1669c4 to control vtable header0x1619dc. Dispose slotheader+16 is Thumb0xb0b61. Entry0xb0b60 loads its concrete action pointer from owner+12, so this is a positive compiled-action owner relation rather than a guessed destructor based on address proximity.
+
+In that disposal,0xb0b90 loads action+48. If null, it proceeds; if nonnull, it reads the holder's word at0xb0b9a. Zero permits sized delete4 at0xb0ba0; nonzero requests terminate at0xb0bce. It then requests manager operation3 on the second callable at+32/+40 and first callable at+16/+24, and requests sized delete96 for this selected action at0xb0bc8. Those manager/deallocation bodies remain opaque. No local join is requested in this retained dispose body. The temporary owner cleanup0xb44e8 has the corresponding action+48 check/delete/terminate and callable cleanup pattern.
+
+This positive teardown behavior is deliberately kept alongside the raw wait-state capture. A successfully detached holder can be zero before a worker finishes, while a scene's compiled vector or other owners may still keep the action alive. The available local paths do not resolve every ordering/owner or establish any unsafe interleaving. They also do not prove a leak, universally missing join, successful cancellation, immediate interruption, future restart safety or a physical effect.
+
+## Reproduction, preservation and open boundary
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime/worker-ownership/collect_ownership_v1.py --check`
+
+The collector emits19 files including its manifest, pins six inputs and retains12 raw original spans,12 critical instruction guards, two thread-state vtable groups, two original owner-dispose chains and16 corresponding relative relocations. It also verifies the provider entry PIC target and base-StateD2 BXLR. All19 outputs plus collector were copied immediately to `first-candidate/`; its20-member index was computed before opening it. This first report is separately frozen in `report-first-candidate/`. No generated candidate failed or was overwritten.
+
+Original/native/provider/callback/redirect/EXIT/stop execution0; host semantic models/scene fixtures0. Positive source ownership/dataflow and API requests are the only results. Remaining gaps are full owner retention/removal paths, caller ordering after completion polling, successful pthread/provider semantics, all error/unwind paths and actual concurrency. The worker state's raw capture and state deletion are established locally; adequate whole receiver lifetime, or its failure, is not.

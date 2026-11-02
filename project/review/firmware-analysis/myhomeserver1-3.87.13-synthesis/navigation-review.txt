@@ -1,0 +1,44 @@
+# Independent navigation and saved-evidence review
+
+PASS, no correction requested for the frozen navigation candidate. This review covers exact document/result identities, references, report locators, authoritative-version choices and bounded saved-accounting checks. It is not a new semantic source audit, complete command/firmware coverage claim, fresh validation of old tests, original-source investigation or CPU replay. No author/repository/source artifact was edited.
+
+## Reproduction and integrity
+
+Read `navigation/REPORT.md`, the complete generator, catalogue JSON/Markdown, saved-corpus/protection/version records and manifests. Reproduced the generator's read-only host `--check`: **8 outputs,17 navigation rows,614 input pins,9 exact first copies,228 protected members and8 saved entries**. No original/guest/vendor/provider library was imported or executed. The generator reads saved documents and result files only, including the isolated harness as bytes rather than importing it.
+
+Independently verified all614 current input paths, sizes and SHA256 values, with no duplicate path keys or self-output dependencies. All17 report needles occur on exactly one actual line and match their recorded full excerpts/line numbers. Checked439 structured report/capsule/checkpoint/review/related/history file references for existence and all17 Markdown report links for existing files and valid lines in their intended local context. Reported VAs remain excerpt navigation, not freshly proven instruction targets. The catalogue's original local absolute report links are suitable for this local artifact; intended encyclopedia presentation/navigation is handled separately by the coordinator.
+
+Independently checked all9 exact first-candidate copies against their index. The generator computes index bytes before exclusive creation and excludes the output manifest from its own member list, avoiding an identity cycle. Existing outputs/snapshots are refused. The protected index SHA256 is `b6133496c1f9ab0989c832bcdb741727457acc9585e4ec91c37ae5f5ecab2867`; all228 distinct saved member bytes/sizes/hashes agree. This is the scope of that prior protected set, not a claim that every historical dossier is covered by228 rows.
+
+## Version, row and source boundaries
+
+The17 rows are one scoped topic per completed root, explicitly excluding this synthesis batch and allowance-continuation. They are neither semantic claim counts nor coverage percentages. N02 retains the historical catalogue-opening/reader SQL gap and N03 separately links the later class139/15-column SQL ownership closure. Selected authoritative v2 reports are correctly chosen for catalogue reader, worker ownership, vector ownership, BNIL admission and typed BNTH record. Other related serializer/refinement/history documents remain separately pinned rather than replacing the old source files. Prior-row links point only to earlier numbered rows and do not create a cycle.
+
+The bounds preserve important namespaces: action/trigger shared eight-byte pairs versus four-byte condition pointees; scene flags versus shared stop; metadata versus operational duration; Light versus Load versus Thermostat record layouts; event `params.id` versus removal `params.scene_id`; local/private selectors versus protocol/physical meaning. The chosen BNCUSCENE row does not turn its XOR predicate into an unsupported-function finding, and the latest typed-record row retains type/ID/provider/freshness premises. Original source reports and their independent reviews retain authority; this review does not certify every source assertion anew.
+
+Several packets were authored by this cataloguer or reviewer. The navigation report honestly discloses that authorship and does not label saved review hashes as new independent semantic corroboration. Saved validation files are pinned as historical records; none of their original test commands/CPU corpora were rerun here. Current source accuracy does not authenticate unavailable historical draft bytes. The overview's row/hash/coverage limits align with this catalogue's bounded role.
+
+## Saved execution accounting
+
+The saved canonical result identity is `450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525`. The catalogue checks exactly one saved corpus/eight entries,340 original code-hook visits,0 C primitives,12 actual-definition redirects,8 EXIT/0 guard stops and360 hooks. Its four synthetic data relocations and24 FP/control setup writes remain separate. The current navigation task has zero guest execution and zero replay; visits are not measured retired instructions and nested calls are not extra entries.
+
+The generator verifies per-attempt sums, eight attempt files, ten original first-result members and four finite same-object constructor/readback pairs using saved bytes. BEFORE/AFTER tool records match63 saved path/size/mtime/hash entries. This is comparison of those saved observations, not a new live-tool inventory or import. Earlier static-only reports preserve historical zero-execution scopes; F454 and MH202 ledgers are not mixed in. Full JSON member/map/assignment/reparse, scheduler scenes, target process/OS/thread/timer/network/bus and physical behavior remain unexecuted by this corpus.
+
+## Reproduction limit and exact pins
+
+The recipe intentionally pins current Device0199 and17 existing capsule README files among its614 inputs. Their bytes must remain unchanged for this exact checkpoint's future `--check`; a later edit would be detected rather than silently normalized. This is a dependency/integrity property, not a present mismatch. Mutable coordination artifacts are not used to infer firmware behavior. Future versioned navigation can preserve older source bytes if those documents need changes.
+
+No required correction or unsupported scope promotion was found. Exact reviewed artifact identities:
+
+| Artifact | SHA256 |
+| --- | --- |
+| `navigation/REPORT.md` | `41a3481502c1951bf58c7d475518d670fb9acd806c26bd509ce10902be9152f8` |
+| `navigation/build_navigation_v1.py` | `d901db90423620f626101a0c412e404b9d65fa7506730cb63eddb66a74cdc656` |
+| `navigation/CATALOGUE.json` | `c7c4a1af363f1b8a60980e2281695f5708c240e99383d9239d87371e1088fdca` |
+| `navigation/CATALOGUE.md` | `692bdffd1c0f648599a5eecc6ad8bd9b0b4361a0594b2b26cded6d4c863d774e` |
+| `navigation/INPUTS.json` | `470397b9d7f8cbc15d01f3451d3da26fb43d96f6b3d339d760d6418eb315d342` |
+| `navigation/SAVED_CORPUS.json` | `17f93c8ee2e00f7cfaad49f7d41c40305bb4f24564b7521acc999c866afc6ee9` |
+| `navigation/PROTECTED_CHECK.json` | `3232b555f3a76076004907b31746b7ed665f8eb6b2158404cf5d57badec77289` |
+| `navigation/VERSION_NAVIGATION.json` | `2af645d3576ecfc64dcfabca287025a875b8c4ad046d28d4268ba4e81789a39d` |
+| `navigation/OUTPUT_MANIFEST.json` | `ab35365ff80e110705975330befd9644bc26db372b4a4986fbe0ddd906edd757` |
+| `navigation/first-candidate-v1/INDEX.json` | `eb99ef1bdf998e0006e68b25ea3eb44e4bdf39b605e8d3f9bc4894f494c6c0b3` |

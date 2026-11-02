@@ -1,0 +1,111 @@
+{
+  "collector_sha256": "ded730079e38d56e9087d9d131143c6a9915c58a1e343f8571406529539add79",
+  "counts": {
+    "PIC": 8,
+    "halfword_assertions": 20,
+    "host_arithmetic_cases": 4,
+    "host_execute_cases": 6,
+    "host_wait_cases": 5,
+    "inputs": 5,
+    "original_execution": 0,
+    "primary_vtables": 2,
+    "relocations": 8,
+    "spans": 17,
+    "thread_worker_slots": 2
+  },
+  "outputs": {
+    "FIELD_AND_BRANCH_LEDGER.json": {
+      "bytes": 3762,
+      "sha256": "f67b37a2db62bcd494b44d011d202ad4661f18078c3bce13d41f30296b53d361"
+    },
+    "HOST_MODELS.json": {
+      "bytes": 6042,
+      "sha256": "66d4fc12f7383202d26c1c6d57aa46848525a1bca5a9d8999b6f9d7d93e8707e"
+    },
+    "INPUTS.json": {
+      "bytes": 845,
+      "sha256": "a3c39dc5ae8df00318cff983ec08bb168a362c081a33057b6b1ee90b738645a2"
+    },
+    "METHOD.json": {
+      "bytes": 457,
+      "sha256": "1bef21f26faaf987b354179f57487727b72db7d4796b0150cc438e9e2d65dcf3"
+    },
+    "ORIGINAL_SOURCE.json": {
+      "bytes": 10541,
+      "sha256": "34530c2d07c213c1e020f9454ad98663367d67b385e4c5e084ca22384a027f44"
+    },
+    "PROVIDER_DECLARATIONS.json": {
+      "bytes": 4593,
+      "sha256": "45279498c51428b19635c7333b89b65e6c63c775f2071068a26827b50b6414b3"
+    },
+    "spans/base-operational-move.txt": {
+      "bytes": 2064,
+      "sha256": "d9d79e137ed2e8dd4fb527e6db6c0bf0bb8dcf138f66a6d874d84fdef3862231"
+    },
+    "spans/candidate-steady-clock-now.txt": {
+      "bytes": 717,
+      "sha256": "278925c8bdef879e7e3c4409cd8aab9c3228bca5677a93393251aa4dd3489e39"
+    },
+    "spans/completion-and-first-wait-accessors.txt": {
+      "bytes": 391,
+      "sha256": "72369bac4368d9d7039014bd5ecda237db45a978cdf22cebd80b386d42b93906"
+    },
+    "spans/delay-worker-deadline.txt": {
+      "bytes": 1533,
+      "sha256": "92edd4c8230344be9b1b2f4909cbf3f456b98875194bb73012bae25edac9f793"
+    },
+    "spans/delay-worker-wait-and-callback.txt": {
+      "bytes": 2898,
+      "sha256": "98fb6dedd5350da20669e5ef71d3e2cd3781d0325cfd53cec0c2643f58d48657"
+    },
+    "spans/duration-worker-deadline.txt": {
+      "bytes": 1534,
+      "sha256": "5b61871510b666883e47e7465794f857efa50ed669798e45a7b15bcd6b0e9478"
+    },
+    "spans/duration-worker-wait-and-callback.txt": {
+      "bytes": 2912,
+      "sha256": "07bff26ffc4071dc1c40b6191c403af952f6a263ab3f15590e783c3de556e1b4"
+    },
+    "spans/execute-delay-thread-request.txt": {
+      "bytes": 1431,
+      "sha256": "a9dd931ba5c97a0f2c5153fa32ec66c38142d1a7af78c67d79327611b5a2c150"
+    },
+    "spans/execute-duration-thread-request.txt": {
+      "bytes": 1610,
+      "sha256": "6205efebe036f520361d3fa058e94bc896e9ae2490008e3a08ddcc62723405a9"
+    },
+    "spans/execute-entry-inline-branch.txt": {
+      "bytes": 1496,
+      "sha256": "7ad13c7a14dac1a4daf1652565c014370bdd6b675998864040352071107b3bcc"
+    },
+    "spans/primary-third-slot-noop.txt": {
+      "bytes": 181,
+      "sha256": "68d01f074224e369b012d757cba70b4c1d05272d714d291d5f93b5bd8551cd5d"
+    },
+    "spans/second-wait-accessors.txt": {
+      "bytes": 261,
+      "sha256": "8b0e819d6e6fb600c9b0fc2d2d93d22514488ea4fdac1325027697108edfc25e"
+    },
+    "spans/selected-completion-caller.txt": {
+      "bytes": 327,
+      "sha256": "d3e9b63162e314c1b95e6a8f63171ac51d0e3f205c0f55e43e612eb46df44be1"
+    },
+    "spans/shared-domain-initializer.txt": {
+      "bytes": 1132,
+      "sha256": "a765e945ec1e8812277b77ff0fa2a78a8f92c13a1d9dcf0c2e643b448a2aa126"
+    },
+    "spans/shared-stop-notify.txt": {
+      "bytes": 824,
+      "sha256": "da80c127e4e6b17c503969a86fa438a2813614f4f3a3c8a4c280cac1918bc0cb"
+    },
+    "spans/sleep-metadata-and-first-wait-store.txt": {
+      "bytes": 819,
+      "sha256": "1436962a2cdc5f11eb3f66d3b94158f0018e4c48f2c670ecfeb4851a83f164ec"
+    },
+    "spans/sleep-operational-zero-prefix.txt": {
+      "bytes": 758,
+      "sha256": "cda90a50cd2d21338b03e2e2dbd8e54f194e50c8b872615982f272de78bba5fc"
+    }
+  },
+  "report_sha256": "3ac86206587e25f07db979bfec8a46ec0d401f658784e6d15fcb2d7d80676e0d"
+}

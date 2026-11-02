@@ -1,0 +1,51 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000286f4 <_ZNKSt5ctypeIcE8do_widenEc@@Base-0x19e4c>:
+   286f4:	b906dbf3 	str	w19, [sp, #1752]
+   286f8:	a9007d81 	stp	x1, xzr, [x12]
+   286fc:	aa1403e1 	mov	x1, x20
+   28700:	a9012189 	stp	x9, x8, [x12, #16]
+   28704:	d000074c 	adrp	x12, 112000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x6e820>
+   28708:	911d418c 	add	x12, x12, #0x750
+   2870c:	b90703f2 	str	w18, [sp, #1792]
+   28710:	a9007da6 	stp	x6, xzr, [x13]
+   28714:	910023e6 	add	x6, sp, #0x8
+   28718:	a90121a9 	stp	x9, x8, [x13, #16]
+   2871c:	d000074d 	adrp	x13, 112000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x6e820>
+   28720:	9125c1ad 	add	x13, x13, #0x970
+   28724:	b9072bf1 	str	w17, [sp, #1832]
+   28728:	911f83f1 	add	x17, sp, #0x7e0
+   2872c:	a9007dcf 	stp	x15, xzr, [x14]
+   28730:	911da3ef 	add	x15, sp, #0x768
+   28734:	a90121c9 	stp	x9, x8, [x14, #16]
+   28738:	f00007ee 	adrp	x14, 127000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x83820>
+   2873c:	913a81ce 	add	x14, x14, #0xea0
+   28740:	b90753f0 	str	w16, [sp, #1872]
+   28744:	911ee3f0 	add	x16, sp, #0x7b8
+   28748:	f903b3ff 	str	xzr, [sp, #1888]
+   2874c:	a90021e9 	stp	x9, x8, [x15]
+   28750:	a90225ff 	stp	xzr, x9, [x15, #32]
+   28754:	5280156f 	mov	w15, #0xab                  	// #171
+   28758:	f903cfe8 	str	x8, [sp, #1944]
+   2875c:	f903dbff 	str	xzr, [sp, #1968]
+   28760:	a9002209 	stp	x9, x8, [x16]
+   28764:	a901fe0b 	stp	x11, xzr, [x16, #24]
+   28768:	52801550 	mov	w16, #0xaa                  	// #170
+   2876c:	a9002229 	stp	x9, x8, [x17]
+   28770:	a902263f 	stp	xzr, x9, [x17, #32]
+   28774:	52801531 	mov	w17, #0xa9                  	// #169
+   28778:	f903afee 	str	x14, [sp, #1880]
+   2877c:	52801bae 	mov	w14, #0xdd                  	// #221
+   28780:	b9077bf1 	str	w17, [sp, #1912]
+   28784:	f903c3ed 	str	x13, [sp, #1920]
+   28788:	b907a3f0 	str	w16, [sp, #1952]
+   2878c:	f903d7ec 	str	x12, [sp, #1960]
+   28790:	b907cbef 	str	w15, [sp, #1992]
+   28794:	b907f3ee 	str	w14, [sp, #2032]
+   28798:	f903ffea 	str	x10, [sp, #2040]
+   2879c:	f9040be8 	str	x8, [sp, #2064]
+   287a0:	94041ccc 	bl	12fad0 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x8c2f0>

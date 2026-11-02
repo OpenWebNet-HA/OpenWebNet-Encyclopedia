@@ -1,0 +1,16 @@
+{
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/RANKED_REMAINING_QUESTIONS.v2.md",
+      "published": "remaining-questions-v2.txt",
+      "sha256": "5a50b8418c74a33806defe2db5840adb29c7d9349e6a9261e5cda6bb69c05c5a",
+      "bytes": 1508
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/RANKING_PRECISION_HISTORY.json",
+      "published": "ranking-precision-history.json",
+      "sha256": "3d280aaf3df97223cfc7b1cbdc96a4d47e537670edf1113adcdc90fd6fd0387f",
+      "bytes": 731
+    }
+  ]
+}

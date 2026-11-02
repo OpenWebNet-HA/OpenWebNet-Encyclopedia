@@ -1,0 +1,42 @@
+{
+  "collector_sha256": "c78a270b0ef37047a6a83108128a0638318c224cd323c119a87f727880dd6128",
+  "files": {
+    "ELF_HEADERS.json": {
+      "bytes": 205589,
+      "sha256": "6bc81481dc34b65f19d9dfa55dd7624f1fb5ee0899c1508969fc4f8ddd8b77d2"
+    },
+    "F450_COMPARISON.json": {
+      "bytes": 1634,
+      "sha256": "685806399a20de45516f9bf71492a29b146131cc634f6f2d41c88f123eed254f"
+    },
+    "F455_HEADER.json": {
+      "bytes": 1027,
+      "sha256": "bdd7f6369a44eac615319123508854b6e5c3d2bbe74905d9bac85764bb613a51"
+    },
+    "INPUTS.json": {
+      "bytes": 8491,
+      "sha256": "343bbfca022396fd097f4dfb6bbd029502ef12f350b88b0e73b040242749f8a0"
+    },
+    "PACKAGE_SOURCE.json": {
+      "bytes": 6624,
+      "sha256": "254b00328ecffdee11771a24b0f6007b340665fbbe31f184ed08b7f0979d5ad7"
+    },
+    "REPORT.md": {
+      "bytes": 6862,
+      "sha256": "9e525852d8ca2d7ca4f485f10ff8425764da215fdb4a1c51c1987a8aa75d0d78"
+    },
+    "SELECTED_COMPONENTS.json": {
+      "bytes": 8137,
+      "sha256": "9495b4d5100cc4384a6674b18af969d49683d51b85129146e4932d7cada4a3a3"
+    },
+    "STARTUP_SAFE.json": {
+      "bytes": 1667,
+      "sha256": "251005d0a28cf31896f49190ea1a248689c0f9972b5cc2984cf3773cb0d24649"
+    },
+    "STRUCTURED_LEADS.json": {
+      "bytes": 1896,
+      "sha256": "ddfad2b5e640dcd1587dca1380c263dbc4474ae642c81d18e075a7f3a81d7d3c"
+    }
+  },
+  "scope": "Generated files excluding this manifest itself; originals unchanged"
+}

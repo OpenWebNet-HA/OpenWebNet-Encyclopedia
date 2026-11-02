@@ -1,0 +1,93 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b8a08 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x250>:
+   b8a08:	4a2c      	ldr	r2, [pc, #176]	@ (b8abc <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x304>)
+   b8a0a:	4b2d      	ldr	r3, [pc, #180]	@ (b8ac0 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x308>)
+   b8a0c:	b530      	push	{r4, r5, lr}
+   b8a0e:	b083      	sub	sp, #12
+   b8a10:	447a      	add	r2, pc
+   b8a12:	58d3      	ldr	r3, [r2, r3]
+   b8a14:	681b      	ldr	r3, [r3, #0]
+   b8a16:	9301      	str	r3, [sp, #4]
+   b8a18:	f04f 0300 	mov.w	r3, #0
+   b8a1c:	f890 3030 	ldrb.w	r3, [r0, #48]	@ 0x30
+   b8a20:	b95b      	cbnz	r3, b8a3a <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x282>
+   b8a22:	4a28      	ldr	r2, [pc, #160]	@ (b8ac4 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x30c>)
+   b8a24:	4b26      	ldr	r3, [pc, #152]	@ (b8ac0 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x308>)
+   b8a26:	447a      	add	r2, pc
+   b8a28:	58d3      	ldr	r3, [r2, r3]
+   b8a2a:	681a      	ldr	r2, [r3, #0]
+   b8a2c:	9b01      	ldr	r3, [sp, #4]
+   b8a2e:	405a      	eors	r2, r3
+   b8a30:	f04f 0300 	mov.w	r3, #0
+   b8a34:	d13e      	bne.n	b8ab4 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x2fc>
+   b8a36:	b003      	add	sp, #12
+   b8a38:	bd30      	pop	{r4, r5, pc}
+   b8a3a:	4605      	mov	r5, r0
+   b8a3c:	2000      	movs	r0, #0
+   b8a3e:	f758 ee02 	blx	11644 <time@plt>
+   b8a42:	4603      	mov	r3, r0
+   b8a44:	4668      	mov	r0, sp
+   b8a46:	9300      	str	r3, [sp, #0]
+   b8a48:	f758 eb30 	blx	110ac <localtime@plt>
+   b8a4c:	f8df c078 	ldr.w	ip, [pc, #120]	@ b8ac8 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x310>
+   b8a50:	6980      	ldr	r0, [r0, #24]
+   b8a52:	44fc      	add	ip, pc
+   b8a54:	f8dc 3008 	ldr.w	r3, [ip, #8]
+   b8a58:	b343      	cbz	r3, b8aac <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x2f4>
+   b8a5a:	f10c 0c04 	add.w	ip, ip, #4
+   b8a5e:	691a      	ldr	r2, [r3, #16]
+   b8a60:	e9d3 4102 	ldrd	r4, r1, [r3, #8]
+   b8a64:	4290      	cmp	r0, r2
+   b8a66:	d906      	bls.n	b8a76 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x2be>
+   b8a68:	b149      	cbz	r1, b8a7e <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x2c6>
+   b8a6a:	460b      	mov	r3, r1
+   b8a6c:	691a      	ldr	r2, [r3, #16]
+   b8a6e:	e9d3 4102 	ldrd	r4, r1, [r3, #8]
+   b8a72:	4290      	cmp	r0, r2
+   b8a74:	d8f8      	bhi.n	b8a68 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x2b0>
+   b8a76:	b11c      	cbz	r4, b8a80 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x2c8>
+   b8a78:	469c      	mov	ip, r3
+   b8a7a:	4623      	mov	r3, r4
+   b8a7c:	e7ef      	b.n	b8a5e <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x2a6>
+   b8a7e:	4663      	mov	r3, ip
+   b8a80:	4a12      	ldr	r2, [pc, #72]	@ (b8acc <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x314>)
+   b8a82:	447a      	add	r2, pc
+   b8a84:	3204      	adds	r2, #4
+   b8a86:	4293      	cmp	r3, r2
+   b8a88:	d010      	beq.n	b8aac <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x2f4>
+   b8a8a:	691a      	ldr	r2, [r3, #16]
+   b8a8c:	4290      	cmp	r0, r2
+   b8a8e:	d30d      	bcc.n	b8aac <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x2f4>
+   b8a90:	695a      	ldr	r2, [r3, #20]
+   b8a92:	2301      	movs	r3, #1
+   b8a94:	6d69      	ldr	r1, [r5, #84]	@ 0x54
+   b8a96:	f002 021f 	and.w	r2, r2, #31
+   b8a9a:	4093      	lsls	r3, r2
+   b8a9c:	420b      	tst	r3, r1
+   b8a9e:	d0c0      	beq.n	b8a22 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x26a>
+   b8aa0:	68eb      	ldr	r3, [r5, #12]
+   b8aa2:	b14b      	cbz	r3, b8ab8 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x300>
+   b8aa4:	692b      	ldr	r3, [r5, #16]
+   b8aa6:	1d28      	adds	r0, r5, #4
+   b8aa8:	4798      	blx	r3
+   b8aaa:	e7ba      	b.n	b8a22 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x26a>
+   b8aac:	4808      	ldr	r0, [pc, #32]	@ (b8ad0 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x318>)
+   b8aae:	4478      	add	r0, pc
+   b8ab0:	f758 ecc2 	blx	11438 <_ZSt20__throw_out_of_rangePKc@plt>
+   b8ab4:	f758 eb98 	blx	111e8 <__stack_chk_fail@plt>
+   b8ab8:	f758 e8bc 	blx	10c34 <_ZSt25__throw_bad_function_callv@plt>
+   b8abc:	cf90      	ldmia	r7, {r4, r7}
+   b8abe:	000a      	movs	r2, r1
+   b8ac0:	06b4      	lsls	r4, r6, #26
+   b8ac2:	0000      	movs	r0, r0
+   b8ac4:	cf7a      	ldmia	r7!, {r1, r3, r4, r5, r6}
+   b8ac6:	000a      	movs	r2, r1
+   b8ac8:	eaba 000a 			@ <UNDEFINED> instruction: 0xeaba000a
+   b8acc:	ea8a 000a 	eor.w	r0, sl, sl
+   b8ad0:	e192      	b.n	b8df8 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x640>
+   b8ad2:	0005      	movs	r5, r0

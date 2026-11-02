@@ -1,0 +1,35 @@
+
+/usr/lib/libglib-2.0.so.0.7200.3:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000570e0 <g_get_real_time@@Base>:
+   570e0:	d503233f 	paciasp
+   570e4:	d100c3ff 	sub	sp, sp, #0x30
+   570e8:	f00007c2 	adrp	x2, 152000 <glib_major_version@@Base+0x36af8>
+   570ec:	d2800001 	mov	x1, #0x0                   	// #0
+   570f0:	910023e0 	add	x0, sp, #0x8
+   570f4:	a9027bfd 	stp	x29, x30, [sp, #32]
+   570f8:	910083fd 	add	x29, sp, #0x20
+   570fc:	f947c442 	ldr	x2, [x2, #3976]
+   57100:	f9400043 	ldr	x3, [x2]
+   57104:	f9000fe3 	str	x3, [sp, #24]
+   57108:	d2800003 	mov	x3, #0x0                   	// #0
+   5710c:	97ff17e9 	bl	1d0b0 <gettimeofday@plt>
+   57110:	a9408be0 	ldp	x0, x2, [sp, #8]
+   57114:	f00007c1 	adrp	x1, 152000 <glib_major_version@@Base+0x36af8>
+   57118:	d2884803 	mov	x3, #0x4240                	// #16960
+   5711c:	f2a001e3 	movk	x3, #0xf, lsl #16
+   57120:	f947c421 	ldr	x1, [x1, #3976]
+   57124:	9b030800 	madd	x0, x0, x3, x2
+   57128:	f9400fe3 	ldr	x3, [sp, #24]
+   5712c:	f9400022 	ldr	x2, [x1]
+   57130:	eb020063 	subs	x3, x3, x2
+   57134:	d2800002 	mov	x2, #0x0                   	// #0
+   57138:	540000a1 	b.ne	5714c <g_get_real_time@@Base+0x6c>  // b.any
+   5713c:	a9427bfd 	ldp	x29, x30, [sp, #32]
+   57140:	9100c3ff 	add	sp, sp, #0x30
+   57144:	d50323bf 	autiasp
+   57148:	d65f03c0 	ret
+   5714c:	97ff1835 	bl	1d220 <__stack_chk_fail@plt>

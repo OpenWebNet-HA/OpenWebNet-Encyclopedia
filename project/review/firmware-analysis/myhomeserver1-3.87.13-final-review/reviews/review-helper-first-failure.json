@@ -1,0 +1,10 @@
+{
+  "actual_bad_expression": "for name,q in pre.items():",
+  "actual_error": "AttributeError: 'list' object has no attribute 'items'",
+  "actual_index_representation": "list of records with source/snapshot/bytes/sha256",
+  "correction": "iterate records and use record snapshot; no changed documentary claims or source evidence",
+  "location": "inline Python review helper pre-edit-index loop, before review output writes",
+  "original_execution": 0,
+  "scope": "Review-output preparation only; no generated review/candidate/source changed",
+  "source_preservation_limit": "Original helper was inline tool input, not a disk source file. Full original tool call remains in conversation; this file records the actual failed expression/error rather than claiming an unavailable on-disk draft."
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "end_va_exclusive": "0x3e74e",
+    "file_offset": "0x3e73c",
+    "name": "selected-local-caller",
+    "sha256": "7a02248a3955329f3d2ca019f4d5122681fbb19a68bc75d3035614314bb6c89c",
+    "start_va": "0x3e73c"
+  },
+  {
+    "end_va_exclusive": "0xb6c5a",
+    "file_offset": "0xb6b5c",
+    "name": "matched-owner-removal",
+    "sha256": "6290e9d153e3341af1329d3e8395fd0428ad23d8b07a0879b7ec360b7d5508af",
+    "start_va": "0xb6b5c"
+  },
+  {
+    "end_va_exclusive": "0xb6474",
+    "file_offset": "0xb6324",
+    "name": "keyed-tree-erase",
+    "sha256": "0c796e66e1e38ef79bb1b78cb8454e6dc20df58b983aa2a546e5303b74632f1f",
+    "start_va": "0xb6324"
+  },
+  {
+    "end_va_exclusive": "0x1a050",
+    "file_offset": "0x1a048",
+    "name": "selected-scene-owner-dispose",
+    "sha256": "0a1ce36f5a0a86018db3d17689e16d03729f4c47b856f726fa4eaafaea16451c",
+    "start_va": "0x1a048"
+  }
+]

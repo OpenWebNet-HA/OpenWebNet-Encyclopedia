@@ -1,0 +1,9 @@
+# Parallel F460/F461 first-pass synthesis
+
+Existingcanonical R2 originals were recovered fromverifiedarchivecache withoutpublisherredownload/upload/manifestchange. ActualXMLconfirmsF4602.0.12/model5.0.132 andF4612.0.11/model5.0.134. Bothsafeext4treesreadonly, symlinks/specialsmetadataonly, no mounts/firmwareexecution.
+
+FreshmainappsareAArch64 versusMHSARM32. F46normalcommon5823paths5757equal/66different;8selectedcommoncore/appsALLdifferentbytes. F460includesfive applicationpaths absentatF461exactpaths, stackdeclarations25/17; no runningservices orfeatureabsence inferred. Kernel+MCUpayloaddiffer,6DTBsmatch; no identicalboard/runtimeclaim.
+
+BothcatalogueDBsbyteidentical bd2ff4d326692c85bc4eb3f86504d615758da97dc832389fac523734574833e9/2633728B despiteapplicationdifferences.75totaltables includes1SQLiteinternal;74noninternalqueryscoperetained.75SQLdefscompareequalwithMHS/Suite;23rowmultisetsdifferfromMHS,33fromSuite. No stableIDsemantics/capabilityoracle orrawrowvalues.
+
+Comparisonv3eightoutputs/ninefirstcopies plusseparateREPORT.v2history. Parentv1AST/v2pathassumptionfailedbeforeoutputs, exactoldbytespreserved; v3actualpaths/provenancepins/trusted_schemaOFF no weakenedguards. F461reportlocatorv2/newmetadatahistory andF460consolelabelscope remaintransparent. Neworiginalexecution/models/fixtures0; oldledgersunchanged. BroaderDevice/runtime/physicalcoveragepending.

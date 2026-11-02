@@ -1,0 +1,10 @@
+{
+  "initBasic": "stores supplied typebyte to+8 at15af8",
+  "missing_member": "find tree end==map+4 sets localreturn0; constkeyaccess zero tailcalls nullSingleton; tree/key/comparator/allocator internals unexecuted",
+  "nullSingleton": "ordinary successful guard-false initialization uses supplied type0; returns samebase+8; effective initialized state/API guards remainpremises",
+  "null_asUInt": "type0 retained r0=0, TBB entry0 directly selects cleanup16aea; no loadfromunionword",
+  "scope": "Selected candidate source contracts, not actual JsonCpp roundtrip, complete invalidinput grammar or physical behavior.",
+  "type": "ldrb object+8",
+  "unsigned_asUInt": "type2\u2192isUInt; highword0 yields1 throughCLZ/LSR; accepted branchloads lowword at16ae8",
+  "unsigned_constructor": "type2, lowwordinputr1, highword0"
+}

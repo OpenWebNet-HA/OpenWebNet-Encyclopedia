@@ -1,0 +1,7 @@
+{
+  "initial_result": "First script stopped at source lookup with StopIteration before SQL or generated outputs. Original script/report retained.",
+  "changes": "NEWv2 corrects workspace parent depth3\u21924 and repro/report identity names only; no semantic/source query or guard changes.",
+  "old_collector_sha256": "aabfb066dd44cce72049d7b07e91b5c0392a7ac8a388c0fdc3b66229c898f9d8",
+  "new_collector_sha256": "28ac0e0d88e1a5cea3a4a6d7897caa25564687c6e94e46f8f271e7f64a4da038",
+  "new_report_sha256": "4584ccd771a7e941c038c491bc2c4a3ad3c77027429ccd9d4df8d7df614caac0"
+}

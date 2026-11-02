@@ -1,0 +1,70 @@
+{
+  "scope": "Parent host-only read-only reproduction of five current comparison collectors, no original/vendor/stored-expression execution",
+  "checks": [
+    {
+      "path": "catalogue/compare_catalogues_v2.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "e0f43b",
+          "wall_time_seconds": 2.617632364,
+          "exit_code": 0,
+          "original_token_count": 18,
+          "output": "{\"status\": \"PASS\", \"outputs\": 14, \"tables\": 75, \"vendor_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "path": "catalogue/collect_supplement_v2.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "fc3da0",
+          "wall_time_seconds": 0.138763418,
+          "exit_code": 0,
+          "original_token_count": 14,
+          "output": "{\"status\": \"PASS\", \"outputs\": 6, \"vendor_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "path": "firmware/collect_firmware_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "6f9068",
+          "wall_time_seconds": 0.02594532,
+          "exit_code": 0,
+          "original_token_count": 47,
+          "output": "{\"check\": \"PASS\", \"outputs\": 9, \"tables\": 16, \"shared_firmware\": 114, \"shared_items\": 104, \"relation_types\": 5, \"endpoint_relationships\": 14, \"first_copies\": 11, \"native_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "path": "objects/collect_objects_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "fd4a81",
+          "wall_time_seconds": 1.551683956,
+          "exit_code": 0,
+          "original_token_count": 50,
+          "output": "{\"check\": true, \"outputs\": 12, \"source_tables_each\": 30, \"covered_relationship_tables\": 20, \"queries\": 202, \"same_ID_conf_changes\": 68, \"same_context\": 20, \"repurposed\": 48, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "path": "objects/collect_selected_ranges_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "f6ecc1",
+          "wall_time_seconds": 0.00000923,
+          "exit_code": 0,
+          "original_token_count": 24,
+          "output": "{\"check\": true, \"outputs\": 1, \"SQL\": 1, \"sources\": 2, \"rows_each\": 4, \"original_execution\": 0}\n"
+        }
+      }
+    }
+  ]
+}

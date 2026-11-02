@@ -1,0 +1,309 @@
+{
+  "PT_LOAD": [
+    {
+      "VA": 32768,
+      "file_bytes": 154668,
+      "flags": 5,
+      "memory_bytes": 154668,
+      "offset": 0
+    },
+    {
+      "VA": 221184,
+      "file_bytes": 2024,
+      "flags": 6,
+      "memory_bytes": 12252,
+      "offset": 155648
+    }
+  ],
+  "component": "Own MH200N separate application bundle; not an installed overlay",
+  "direct_calls": [
+    {
+      "VA": "0xa9d8",
+      "target": "0x9e54"
+    },
+    {
+      "VA": "0xa9f0",
+      "target": "0x9f80"
+    },
+    {
+      "VA": "0xaa30",
+      "target": "0x9d04"
+    }
+  ],
+  "header52_hex": "7f454c46010101610000000000000000020028000100000050a2000034000000386902000202000034002000060028001a001900",
+  "imports": [
+    {
+      "GOT_slot": "0x36690",
+      "PLT_VA": "0x9e54",
+      "name": "fgets",
+      "original_relocation": "00036690  00002416 R_ARM_JUMP_SLOT        00009e54   fgets@GLIBC_2.0",
+      "words": [
+        "0xe28fc600",
+        "0xe28cca2c",
+        "0xe5bcf834"
+      ]
+    },
+    {
+      "GOT_slot": "0x366f4",
+      "PLT_VA": "0x9f80",
+      "name": "strlen",
+      "original_relocation": "000366f4  00004416 R_ARM_JUMP_SLOT        00009f80   strlen@GLIBC_2.0",
+      "words": [
+        "0xe28fc600",
+        "0xe28cca2c",
+        "0xe5bcf76c"
+      ]
+    },
+    {
+      "GOT_slot": "0x36620",
+      "PLT_VA": "0x9d04",
+      "name": "sprintf",
+      "original_relocation": "00036620  00000416 R_ARM_JUMP_SLOT        00009d04   sprintf@GLIBC_2.0",
+      "words": [
+        "0xe28fc600",
+        "0xe28cca2c",
+        "0xe5bcf914"
+      ]
+    }
+  ],
+  "mapping_role": "Own ELF32 LE ARM EXEC/rawflags0x202 verified for mapping only; prior formatting/system/fopen context inherited, not new coverage",
+  "original": {
+    "bytes": 159048,
+    "path": "work/mh200n-firmware/1.1.8/analysis/application/home/bticino/bin/bt_taskmanager",
+    "sha256": "ad68f9bf43f7f10af122f34d3cb14b7d8c02730c46225a9a6cd1bf3e663072cb"
+  },
+  "pool_joins": [
+    {
+      "instruction_VA": "0xaa24",
+      "pool_VA": "0xaaa4",
+      "pool_word": "0x2b918"
+    },
+    {
+      "instruction_VA": "0xaa28",
+      "pool_VA": "0xaaa8",
+      "pool_word": "0x2b928"
+    }
+  ],
+  "safe_literals": [
+    {
+      "NUL_bytes_hex": "726d202d6620257325732e7a697000",
+      "VA": "0x2b918",
+      "file_offset": "0x23918",
+      "role": "Compiled formatter argument only, never a submitted command or live pathname",
+      "text": "rm -f %s%s.zip"
+    },
+    {
+      "NUL_bytes_hex": "2f686f6d652f62746963696e6f2f7363726970742f00",
+      "VA": "0x2b928",
+      "file_offset": "0x23928",
+      "role": "Compiled formatter argument only, never a submitted command or live pathname",
+      "text": "/home/bticino/script/"
+    }
+  ],
+  "selected_branches": [
+    {
+      "VA": "0xa998",
+      "target": "0xa9c8"
+    },
+    {
+      "VA": "0xa9e4",
+      "target": "0xaa5c"
+    }
+  ],
+  "spans": [
+    {
+      "bytes_hex": "0030a0e110300be510301be5000053e30a00001a",
+      "end_exclusive_VA": "0xa99c",
+      "file_offset": "0x2988",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/application/home/bticino/bin/bt_taskmanager:     file format elf32-littlearm\n\n\nDisassembly of section .text:\n\n0000a988 <.text+0x738>:\n    a988:\te1a03000 \tmov\tr3, r0\n    a98c:\te50b3010 \tstr\tr3, [fp, #-16]\n    a990:\te51b3010 \tldr\tr3, [fp, #-16]\n    a994:\te3530000 \tcmp\tr3, #0\n    a998:\t1a00000a \tbne\ta9c8 <Leggi_path_var@plt+0x784>\n",
+      "label": "new-retained-stream-and-selected-admission",
+      "sha256": "d003f7b504c6198e0c37399aa320e8a4c41323a951d69c89b6c3dd4342fc9dea",
+      "start_VA": "0xa988"
+    },
+    {
+      "bytes_hex": "74304be20300a0e15010a0e310201be51dfdffeb0030a0e1000053e31c00000a74304be20300a0e162fdffeb0030a0e16820e0e30c104be2033081e0022083e00030a0e30030c2e5463e4be20c3043e2083043e274c04be20300a0e178109fe578209fe50c30a0e1b3fcffeb",
+      "end_exclusive_VA": "0xaa34",
+      "file_offset": "0x29c8",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/application/home/bticino/bin/bt_taskmanager:     file format elf32-littlearm\n\n\nDisassembly of section .text:\n\n0000a9c8 <.text+0x778>:\n    a9c8:\te24b3074 \tsub\tr3, fp, #116\t@ 0x74\n    a9cc:\te1a00003 \tmov\tr0, r3\n    a9d0:\te3a01050 \tmov\tr1, #80\t@ 0x50\n    a9d4:\te51b2010 \tldr\tr2, [fp, #-16]\n    a9d8:\tebfffd1d \tbl\t9e54 <fgets@plt>\n    a9dc:\te1a03000 \tmov\tr3, r0\n    a9e0:\te3530000 \tcmp\tr3, #0\n    a9e4:\t0a00001c \tbeq\taa5c <Leggi_path_var@plt+0x818>\n    a9e8:\te24b3074 \tsub\tr3, fp, #116\t@ 0x74\n    a9ec:\te1a00003 \tmov\tr0, r3\n    a9f0:\tebfffd62 \tbl\t9f80 <strlen@plt>\n    a9f4:\te1a03000 \tmov\tr3, r0\n    a9f8:\te3e02068 \tmvn\tr2, #104\t@ 0x68\n    a9fc:\te24b100c \tsub\tr1, fp, #12\n    aa00:\te0813003 \tadd\tr3, r1, r3\n    aa04:\te0832002 \tadd\tr2, r3, r2\n    aa08:\te3a03000 \tmov\tr3, #0\n    aa0c:\te5c23000 \tstrb\tr3, [r2]\n    aa10:\te24b3e46 \tsub\tr3, fp, #1120\t@ 0x460\n    aa14:\te243300c \tsub\tr3, r3, #12\n    aa18:\te2433008 \tsub\tr3, r3, #8\n    aa1c:\te24bc074 \tsub\tip, fp, #116\t@ 0x74\n    aa20:\te1a00003 \tmov\tr0, r3\n    aa24:\te59f1078 \tldr\tr1, [pc, #120]\t@ aaa4 <Leggi_path_var@plt+0x860>\n    aa28:\te59f2078 \tldr\tr2, [pc, #120]\t@ aaa8 <Leggi_path_var@plt+0x864>\n    aa2c:\te1a0300c \tmov\tr3, ip\n    aa30:\tebfffcb3 \tbl\t9d04 <sprintf@plt>\n",
+      "label": "new-read-line-byte-store-and-first-format",
+      "sha256": "a4e9c56ff36ad41d6139a94d6590d33766a38dbf17893f19e9831f3d8fd39a94",
+      "start_VA": "0xa9c8"
+    },
+    {
+      "bytes_hex": "18b9020028b90200",
+      "end_exclusive_VA": "0xaaac",
+      "file_offset": "0x2aa4",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/application/home/bticino/bin/bt_taskmanager:     file format elf32-littlearm\n\n\nDisassembly of section .text:\n\n0000aaa4 <.text+0x854>:\n    aaa4:\t0002b918 \tandeq\tfp, r2, r8, lsl r9\n    aaa8:\t0002b928 \tandeq\tfp, r2, r8, lsr #18\n",
+      "label": "selected-safe-format-and-prefix-pools",
+      "sha256": "c5fc0f46eb8a437981eb07a36e72113c9f235c08e9bfc7f18c8830053443a05d",
+      "start_VA": "0xaaa4"
+    },
+    {
+      "bytes_hex": "00c68fe22cca8ce234f8bce5",
+      "end_exclusive_VA": "0x9e60",
+      "file_offset": "0x1e54",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/application/home/bticino/bin/bt_taskmanager:     file format elf32-littlearm\n\n\nDisassembly of section .plt:\n\n00009e54 <fgets@plt>:\n    9e54:\te28fc600 \tadd\tip, pc, #0, 12\n    9e58:\te28cca2c \tadd\tip, ip, #44, 20\t@ 0x2c000\n    9e5c:\te5bcf834 \tldr\tpc, [ip, #2100]!\t@ 0x834\n",
+      "label": "fgets-PLT",
+      "sha256": "02f81e6e303437ae0fb14d675bf5a2327eda740a16f731c10a21d3fda01c1337",
+      "start_VA": "0x9e54"
+    },
+    {
+      "bytes_hex": "00c68fe22cca8ce26cf7bce5",
+      "end_exclusive_VA": "0x9f8c",
+      "file_offset": "0x1f80",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/application/home/bticino/bin/bt_taskmanager:     file format elf32-littlearm\n\n\nDisassembly of section .plt:\n\n00009f80 <strlen@plt>:\n    9f80:\te28fc600 \tadd\tip, pc, #0, 12\n    9f84:\te28cca2c \tadd\tip, ip, #44, 20\t@ 0x2c000\n    9f88:\te5bcf76c \tldr\tpc, [ip, #1900]!\t@ 0x76c\n",
+      "label": "strlen-PLT",
+      "sha256": "9f2cabec2559a3231df4d534623ae779e50bde4646267049fd27805fc877900c",
+      "start_VA": "0x9f80"
+    },
+    {
+      "bytes_hex": "00c68fe22cca8ce214f9bce5",
+      "end_exclusive_VA": "0x9d10",
+      "file_offset": "0x1d04",
+      "host_disassembly": "\n${WORKSPACE}/work/mh200n-firmware/1.1.8/analysis/application/home/bticino/bin/bt_taskmanager:     file format elf32-littlearm\n\n\nDisassembly of section .plt:\n\n00009d04 <sprintf@plt>:\n    9d04:\te28fc600 \tadd\tip, pc, #0, 12\n    9d08:\te28cca2c \tadd\tip, ip, #44, 20\t@ 0x2c000\n    9d0c:\te5bcf914 \tldr\tpc, [ip, #2324]!\t@ 0x914\n",
+      "label": "sprintf-PLT",
+      "sha256": "7d881449bf07f47f9d692aa3ddd0c546f8d14ff68308018c445dc4840f0113c7",
+      "start_VA": "0x9d04"
+    }
+  ],
+  "stop": "Immediately after first filename sprintf0xaa30; no later formatting/system/cleanup/provider body covered",
+  "store_address_algebra": {
+    "FP_base": "FP-12",
+    "L": "ordinary strlen return for that line",
+    "MVN_R2_104_signed": -105,
+    "line_buffer": "FP-116",
+    "premise": "Valid nonempty terminated line and writable last-byte address; not a newline test",
+    "selected_STRB_address": "(FP-12)+L-105=(FP-116)+L-1",
+    "stored_byte": 0
+  },
+  "word_guards": [
+    {
+      "VA": "0xa988",
+      "word": "0xe1a03000"
+    },
+    {
+      "VA": "0xa98c",
+      "word": "0xe50b3010"
+    },
+    {
+      "VA": "0xa990",
+      "word": "0xe51b3010"
+    },
+    {
+      "VA": "0xa994",
+      "word": "0xe3530000"
+    },
+    {
+      "VA": "0xa998",
+      "word": "0x1a00000a"
+    },
+    {
+      "VA": "0xa9c8",
+      "word": "0xe24b3074"
+    },
+    {
+      "VA": "0xa9cc",
+      "word": "0xe1a00003"
+    },
+    {
+      "VA": "0xa9d0",
+      "word": "0xe3a01050"
+    },
+    {
+      "VA": "0xa9d4",
+      "word": "0xe51b2010"
+    },
+    {
+      "VA": "0xa9d8",
+      "word": "0xebfffd1d"
+    },
+    {
+      "VA": "0xa9dc",
+      "word": "0xe1a03000"
+    },
+    {
+      "VA": "0xa9e0",
+      "word": "0xe3530000"
+    },
+    {
+      "VA": "0xa9e4",
+      "word": "0xa00001c"
+    },
+    {
+      "VA": "0xa9e8",
+      "word": "0xe24b3074"
+    },
+    {
+      "VA": "0xa9ec",
+      "word": "0xe1a00003"
+    },
+    {
+      "VA": "0xa9f0",
+      "word": "0xebfffd62"
+    },
+    {
+      "VA": "0xa9f4",
+      "word": "0xe1a03000"
+    },
+    {
+      "VA": "0xa9f8",
+      "word": "0xe3e02068"
+    },
+    {
+      "VA": "0xa9fc",
+      "word": "0xe24b100c"
+    },
+    {
+      "VA": "0xaa00",
+      "word": "0xe0813003"
+    },
+    {
+      "VA": "0xaa04",
+      "word": "0xe0832002"
+    },
+    {
+      "VA": "0xaa08",
+      "word": "0xe3a03000"
+    },
+    {
+      "VA": "0xaa0c",
+      "word": "0xe5c23000"
+    },
+    {
+      "VA": "0xaa10",
+      "word": "0xe24b3e46"
+    },
+    {
+      "VA": "0xaa14",
+      "word": "0xe243300c"
+    },
+    {
+      "VA": "0xaa18",
+      "word": "0xe2433008"
+    },
+    {
+      "VA": "0xaa1c",
+      "word": "0xe24bc074"
+    },
+    {
+      "VA": "0xaa20",
+      "word": "0xe1a00003"
+    },
+    {
+      "VA": "0xaa24",
+      "word": "0xe59f1078"
+    },
+    {
+      "VA": "0xaa28",
+      "word": "0xe59f2078"
+    },
+    {
+      "VA": "0xaa2c",
+      "word": "0xe1a0300c"
+    },
+    {
+      "VA": "0xaa30",
+      "word": "0xebfffcb3"
+    }
+  ]
+}

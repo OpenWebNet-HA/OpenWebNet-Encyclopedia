@@ -39,7 +39,7 @@ Use `EN_DEVICE.name` as the standard MyHOME_Suite-facing description after resol
 
 ## Corroborated example
 
-The observed Device `00C58E91` (`12947089` decimal) reported model value `107`. In the canonical catalogue:
+An observed Device (installation identifier anonymized) reported model value `107`. In the canonical catalogue:
 
 - `AS_ITEM_SYSTEM.modobj = 107` resolves to item `1184`;
 - `EN_ITEM.descr` is “Flush mounted actuator and free control”;
@@ -81,6 +81,8 @@ Treat this as a distinct frame variant. Do not repair the empty field or silentl
 The addressed-form ranges and the physical-configurator interpretation of `N_CONF` above must not be imposed automatically on this gateway variant. First-hand MH202 and F454 gateway identity captures return payloads `5*15*5*0` and `51*15*5*0` respectively: the observed second-field value `15` and `BRAND = 5` are outside the ordinary addressed-form ranges. These observations establish that those ranges are not valid constraints for the gateway form. They do not, by themselves, establish that gateway-variant `N_CONF` has the ordinary addressed Device field's physical-configurator semantics.
 
 Numerically, `15` is `0xF`; viewed in four bits, it is `1111`, an all-ones pattern. Its repeated use in both observed gateway tuples is therefore consistent with a reserved or sentinel value, but no canonical source currently establishes that interpretation or the sentinel's meaning. The evidence does not justify presenting gateway `N_CONF = 15` as a literal count of fifteen physical configurator positions, nor as a proven encoding of “zero configurators” or “not applicable”. Preserve the raw value and its unresolved semantics.
+
+A static examination of the exact F454 `2.0.51` package adds a concrete declaration: `/art.xml:8` contains `/root/art1/mynconfdiag` with text `15`. The original parser maps that leaf to a result slot passed to `hal_set_nconfdiag` on conditional initialization/synchronization paths. Variant-file selection, caller/generation conditions and current persistent contents remain separate. This establishes packaged identity metadata matching the observed field, not why the value was chosen or a count of fifteen physical configurators. See [F454 identity declaration and writer scope](../reverse-engineering/firmware-analysis/f454-2.0.51-follow-up.md#packaged-identity-declaration).
 
 For gateway catalogue identification, preserve the returned `N_CONF` value but resolve `OBJECT_MODEL`, `BRAND`, and `LINE` through their established catalogue correlations in the applicable system context.
 

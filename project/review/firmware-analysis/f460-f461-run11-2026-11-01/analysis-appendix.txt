@@ -1,0 +1,17 @@
+## F460: a local control writer with an unresolved caller
+
+Another original local method release-stores1 to its supplied receiver's byte+248. It then traverses that same receiver's +216/+224 range in sixteen-byte entries and requests primary slot+8 through each entry's first pointer. The store precedes these requests on the selected normal path; the virtual bodies and their effects remain opaque.
+
+These offsets match fields consumed by the earlier scene executor, but an incoming caller and receiver-class connection were not qualified. Only if the supplied receiver is that same valid scene object does this writer provide a nonzero value for the earlier scene checks. The source therefore supplies a concrete local writer and subsequent method requests, while the end-to-end scene-control connection remains open. A bounded set of static locator forms found no caller; that is not evidence of global absence, unreachable code or lack of natural callers.
+
+No public cancellation meaning, completed stop, universal restart policy, ownership or concurrency guarantee follows from this candidate connection. The selected action's slot+8 target is identified conditionally and left uninspected.
+
+## F461: main selects configuration pointers before module-registration requests
+
+Original main registers three option destinations for the library directory, configuration filename and plugin-configuration directory, then requests parsing. On the selected continuing path, a null configuration filename receives the relative default `cfg/coso_cfg`; a supplied nonnull pointer bypasses that assignment. The selected successful key-file-load branch requests each directory key only while its corresponding option slot is null. A nonnull option-produced pointer therefore takes local precedence over that file-key request; usable or active settings are not established.
+
+If the plugin-configuration slot remains null, main requests the parent directory of the selected configuration filename. It then passes the two selected directory pointers to the same manager's initializer and requests monitoring and plugin registration. The initializer creates a separate holder and copies the directories into distinct fields: manager+16 holds the pointer, while the copied plugin directory is at the allocated holder+16. The previously reviewed registration source supplies the later conditional directory-argument edge.
+
+Only three safe packaged configuration lines are retained: the group name and its `LibDir` and `PlugCfgDir` declarations. Command-line values, current working directory, runtime file contents, parsing/loading, binding, allocations and normal returns remain premises. This closes a concrete selection/argument/copy connection, not actual module loading, startup readiness or product capabilities.
+
+The [run11 source and review capsule](../../project/review/firmware-analysis/f460-f461-run11-2026-11-01/README.md) retains exact source, locator boundaries, option/configuration guards, first candidates and independent reviews. These additions remain static reasoning; no control method, configuration loader, module or physical operation was executed.

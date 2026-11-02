@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+"""Manual receiver provenance for the frozen22 byte72 candidate stores; static only."""
+import sys
+sys.dont_write_bytecode=True
+import pathlib,struct,json,hashlib,subprocess,re,importlib.util,argparse,os
+D=pathlib.Path(__file__).resolve().parent;W=next(x for x in D.parents if(x/'sources').is_dir());R=W/'work/myhomeserver1-firmware/3.87.13/research';V=R/'2026-10-31/image_vfs.py';Q=R/'2026-10-31-cancellation/stop-domain/BOUNDED_QUERIES.json';H=lambda b:hashlib.sha256(b).hexdigest();J=lambda x:(json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+spec=importlib.util.spec_from_file_location('aliasvfs',V);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+S='/home/bticino/scheduling_manager/scheduling_manager'
+# Evidence span starts are instruction-aligned. Retained supplied-register spans show the local receiver from entry through the store; no external callee bodies.
+ROWS=[(0x1548e,0x15474,'known-global-init0',None),(0x2b4ce,0x2b39c,'supplied-object-r0',0x2b3a6),(0x31392,0x31340,'fresh-allocation-result',0x31356),(0x392fc,0x39048,'supplied-object-r0',0x39064),(0x5d636,0x5d636,'direct-stack',None),(0x6ad74,0x6ad74,'direct-stack',None),(0xb2c0c,0xb2bc4,'supplied-object-r0',0xb2bd4),(0xb365c,0xb3614,'supplied-object-r0',0xb3624),(0xb4eda,0xb4de8,'supplied-object-r0',0xb4dfc),(0xc3798,0xc3694,'supplied-object-r0',0xc36bc),(0xc4402,0xc4402,'direct-stack',None),(0xcd706,0xcd6f0,'known-global-set1',None),(0xd7508,0xd7508,'direct-stack',None),(0xe4eb4,0xe4e50,'supplied-object-r0',0xe4e56),(0xe618c,0xe6152,'computed-stack',0xe6154),(0xe85f2,0xe8578,'supplied-object-r0',0xe8580),(0xe8c20,0xe88c4,'supplied-object-r0',0xe88de),(0xf586a,0xf586a,'direct-stack',None),(0x1041da,0x10419c,'computed-stack',0x1041a0),(0x108060,0x108060,'direct-stack',None),(0x108c5e,0x108c24,'computed-stack',0x108c26),(0x10abde,0x10ab64,'supplied-object-r0',0x10ab6c)]
+
+def build():
+ v=m.ImageVFS();b=v.read_bytes(S);assert H(b)=='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26';po=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);segs=[struct.unpack_from('<8I',b,po+i*sz)for i in range(n)]
+ def off(a,z=1):return next(o+a-va for t,o,va,_,fs,*_ in segs if t==1 and va<=a and a+z<=va+fs)
+ def raw(a,z):return b[off(a,z):off(a,z)+z]
+ def w(a):return struct.unpack('<I',raw(a,4))[0]
+ queries=json.loads(Q.read_text());old=queries['byte_stores_immediate72'];assert{int(x['VA'],16)for x in old}=={x[0]for x in ROWS};out={};records=[];ledger=[];guards=[];env=dict(os.environ,DEBUGINFOD_URLS='');host=v.root/v.resolve(S).lstrip('/')
+ ex=[]
+ for p in range(0x14bfc0,0x14f8f8,8):
+  y=w(p)&0x7fffffff;y=y-(1<<31)if y&(1<<30)else y;ex.append(((p+y)&0xfffffffe,p))
+ for a,start,kind,alias in ROWS:
+  end=a+4;name=f'store-{a:x}';s=subprocess.check_output(['objdump','-d','--dwarf=no-follow-links','-M','force-thumb',f'--start-address={start}',f'--stop-address={end}',str(host)],text=True,env=env).replace(str(host),S);s=re.sub(r' <([^>]+)>',lambda q:q[0]if'@plt'in q[1]else'',s);out['spans/'+name+'.txt']=s.encode();records.append({'name':name,'start_VA':hex(start),'end_VA_exclusive':hex(end),'path':S,'file_offset':hex(off(start,end-start)),'raw_sha256':H(raw(start,end-start))})
+  previous=next(x for x in old if int(x['VA'],16)==a);rec={'store_VA':hex(a),'instruction_bytes':raw(a,4).hex(),'prior_operand':previous['operand'],'receiver_kind':kind,'alias_instruction_VA':hex(alias)if alias else None,'receiver_boundary':'ordinary valid stack/current frame, separate from BSS'if kind in ['direct-stack','computed-stack']else('ordinary allocator success/fresh valid object and normal ABI returns, separate from BSS'if kind=='fresh-allocation-result'else('supplied r0 object retained in callee-saved register; caller identity not resolved globally'if kind=='supplied-object-r0'else'previous independently reviewed exact global PIC join'))}
+  region,p=max((q,p)for q,p in ex if q<=a);next_start=next(q for q,p in ex if q>region);rec['enclosing_exidx_region']={'start_VA':hex(region),'end_VA_exclusive':hex(next_start),'entry_VA':hex(p),'boundary':'Exception-index interval only; not automatically one source function, especially init group.'};ledger.append(rec)
+  assert re.search(r'\b'+f'{a:x}'+r':[^\n]*\bstrb(?:\.w)?\s+[^\n]*#72\]',s),hex(a)
+  if kind=='supplied-object-r0':
+   expected='0646'if a==0x2b4ce else'0446';assert raw(alias,2).hex()==expected;guards.append({'VA':hex(alias),'bytes':expected,'meaning':'receiver saved from incomingr0'})
+  elif kind=='computed-stack':
+   value=596 if a==0x1041da else 612;expected='95ae'if value==596 else'99ae';assert raw(alias,2).hex()==expected;rec['SP_base_offset']=value;rec['SP_effective_store_offset']=value+72;guards.append({'VA':hex(alias),'bytes':expected,'meaning':f'ADRr6,currentSP+{value}'})
+  elif kind=='fresh-allocation-result':
+   assert raw(0x3134a,2).hex()=='4c20'and raw(alias,2).hex()=='0446';rec.update({'allocation_size':76,'allocation_call_VA':'0x31350','return_save_VA':'0x31356','loaded_byte_source':'currentSP+192 at3137c'});guards.extend([{'VA':'0x3134a','bytes':'4c20','meaning':'allocation-size76'},{'VA':'0x31356','bytes':'0446','meaning':'r4=allocator-returnr0'}])
+ counts={k:sum(x['receiver_kind']==k for x in ledger)for k in sorted({x[2]for x in ROWS})};assert counts=={'computed-stack':3,'direct-stack':6,'fresh-allocation-result':1,'known-global-init0':1,'known-global-set1':1,'supplied-object-r0':10}
+ # Narrow supporting local string layouts; values are source offsets, not runtime state or public semantics.
+ notes={'0xb2c0c':'r3=0; caller-suppliedobject+64 points toobject+72 and+68 length0; byte+72 is inline string terminator on this construction path.','0xb365c':'same selected empty inline-string construction shape, independently derived entry receiver.','0xb4eda':'one-character copy toobject+72 with string fieldobject+64/length+68; source byte from supplied source object.','0xc3798':'one-character inline string copy toobject+72; supplied destination receiver.','0xe4eb4':'selected one-character string initialization, pointerobject+64=object+72, length+68=1.','0xe85f2':'selected one-character string initialization, same source-local field shape; object receiver remains incomingr0.','0xe8c20':'selected one-character copy toobject+72, lengthobject+68; incoming destination object.','0x10abde':'selected one-character string initialization; incoming destination object.','0x2b4ce':'JsonCppasBool return stored toincomingobject+72; no key literal exported or provider/caller body followed.','0x392fc':'low8bits ofJsonCppasUInt return stored toincomingobject+72; no key literal exported or provider/caller body followed.'}
+ pins={S:{'sha256':H(b),'bytes':len(b)}}
+ for p,label in [(V,'image_accessor'),(Q,'frozen_prior_candidate_query'),(R/'2026-10-31-cancellation/stop-domain/REPORT.md','prior_stop_report'),(R/'2026-10-31/../2026-10-31-actions/common/REPORT.md','prior_common_report')]:z=p.read_bytes();pins[label]={'sha256':H(z),'bytes':len(z)}
+ out['SOURCE_EVIDENCE.json']=J({'spans':records,'alias_guards':guards,'original_image_path':S});out['RECEIVER_LEDGER.json']=J({'rows':ledger,'counts':counts,'local_string_or_conversion_notes':notes,'positive_reduction':'9 current-stack stores and1 fresh-allocation destination under ordinary premises;2 prior exact global stores;10 incoming receiver objects whose full caller aliases remain open.','reset_conclusion':'No newly established write toglobal167800; no global absence/permanent-latch/defect claim.','unclosed':['all callers/indirectaliases of10suppliedreceiver functions','747widerstore candidates from priorquery','arbitrary computed/provider/bulk writes and complete reinitialization lifetime','actual runtime addresses/configuration/stop/reset behavior']});out['INPUTS.json']=J(pins);out['METHOD.json']=J({'original_execution':0,'native_helpers':0,'target_IO_clock_process_network':0,'host_semantic_models':0,'method':'Manual original receiver dataflow for exact frozen22 candidates, file-byte guards/PT_LOAD/exidx bounds and host disassembly only; no repeat fullsyntaxscan.','boundaries':'Normal valid-stack/allocator/EABI and valid input-object premises; no external provider/caller bodies or closedroutes. No new credentials/privateconfig literals.'});out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(pathlib.Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes()),'outputs':{n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()},'counts':{'spans':len(records),'receiver_rows':len(ledger),'alias_guards':len(guards),'inputs':len(pins),'original_execution':0}});return out
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');check=ap.parse_args().check;out=build()
+ if check:
+  for n,b in out.items():assert(D/n).read_bytes()==b,n
+  for n,r in json.loads((D/'first-candidate/INDEX.json').read_text()).items():z=(D/'first-candidate'/n).read_bytes();assert z==(D/n).read_bytes()and H(z)==r['sha256']and len(z)==r['bytes']
+ else:
+  s=D/'first-candidate';assert not s.exists(),'refuse snapshot overwrite'
+  for n in out:assert not(D/n).exists(),'refuse generated overwrite'
+  cp={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),pathlib.Path(__file__).name:pathlib.Path(__file__).read_bytes()};ix=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in cp.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in cp.items():p=s/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (s/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':check,'outputs':len(out),'original_execution':0}))
+if __name__=='__main__':main()

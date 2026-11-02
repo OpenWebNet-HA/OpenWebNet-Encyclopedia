@@ -1,0 +1,26 @@
+{
+  "/home/bticino/scheduling_manager/scheduling_manager": {
+    "bytes": 1406680,
+    "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26"
+  },
+  "curated_product_context": {
+    "bytes": 43131,
+    "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md",
+    "sha256": "5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855"
+  },
+  "image_accessor": {
+    "bytes": 5611,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/image_vfs.py",
+    "sha256": "890e3526e2fc29c630cb45dad15d91fecb6b32007c0be04e5af28c85a48f1ae4"
+  },
+  "prior_complete_condition_worker": {
+    "bytes": 11216,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-triggers/service/REPORT.md",
+    "sha256": "570893c1ad74814836d268da94f09e95748b36f56dd44d37bf271d1a09188550"
+  },
+  "prior_reset_caller_lead": {
+    "bytes": 5679,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/reset/REPORT.md",
+    "sha256": "2ba2740c2dd49d5cb9a40c265c0effc083c30d2fe172c053b21ee7d2ab63fdbd"
+  }
+}

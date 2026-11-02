@@ -1,0 +1,29 @@
+{
+  "UTC": "2026-11-02T13:16:46.266891+00:00",
+  "branch": "docs/static-firmware-analysis-findings",
+  "HEAD": "88d61b3f3bf1456a708b62b0e3de6ed2242960ee",
+  "staged_paths": [],
+  "commits_ahead_of_locally_recorded_origin_main": 0,
+  "remote_freshness": "No fetch performed; origin/main is locally recorded metadata only",
+  "current_work": "Local uncommitted/unstaged working projection; no push/release/status publication",
+  "manufacturer_registry_editorial_change": false,
+  "original_delta_files": 3610,
+  "original_roles": {
+    "Human Markdown reference/navigation": 73,
+    "Workflow acceptance ledger": 1,
+    "Supporting evidence": 3535,
+    "Read-only manufacturer artifact registry": 1
+  },
+  "changed_original_files_by_role": {
+    "Human Markdown reference/navigation": 72,
+    "Workflow acceptance ledger": 1,
+    "Supporting evidence": 14
+  },
+  "new_canonical_page": "scenario-engine/server-scene-processing.md",
+  "machine_projection": "Controlled reviewed inputs, exact official generated outputs, actual complete double-build/global PASS",
+  "support_representation_mappings": 14,
+  "snapshot_hash_mismatches": 0,
+  "missing_original_delta_files": 0,
+  "machine_pre_edit_snapshots_verified": 75,
+  "scope": "Recorded before final evidence-index creation; no claim that every underlying firmware function was re-audited"
+}

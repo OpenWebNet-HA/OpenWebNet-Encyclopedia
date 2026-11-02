@@ -1,0 +1,17 @@
+{
+  "UTC": "2026-11-02T08:45:05.827936+00:00",
+  "current_document_pins": 5,
+  "exact_selected_exports": 14,
+  "original_execution": 0,
+  "prior_index_retained": {
+    "bytes": 12687,
+    "sha256": "eb6ca3a2725aa286941e91c0fc6b14eaf325c9ab48de6705c6cfd377139bce2a",
+    "snapshot": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/integration-pre-edit/OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+    "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md"
+  },
+  "source_review_scope": "Selected original bytes and semantic limits; not full Device/runtime/physical approval",
+  "source_reviews": [
+    "work/sequential-firmware-priorities/2026-11-02/reviews/stage3-legacy-source-review.md"
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,58 @@
+{
+  "collector_sha256": "667387237443ffd224edb25a929e588157af299ad2bc5bbf657eefeb74a7bae1",
+  "counts": {
+    "byte_guards": 19,
+    "direct_branches": 7,
+    "input_pins": 5,
+    "original_execution": 0,
+    "relative_slots": 2,
+    "spans": 7
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 704,
+      "sha256": "9bdc2c7a0b2fa50b1b9981f3c9e9a298ccf577ade52cab6b6206d8b13d3fb74a"
+    },
+    "METHOD.json": {
+      "bytes": 492,
+      "sha256": "7bbcd1a21b2aa5997a8462426e7f7db5779291a4b9d4ba3c5349118ea28b75db"
+    },
+    "ORIGINAL_SOURCE.json": {
+      "bytes": 4813,
+      "sha256": "3ea3a8597cc5e86108f7068d547969a7704d72845f2d8e586a43ca2aca585bdf"
+    },
+    "TRANSFER_LEDGER.json": {
+      "bytes": 2742,
+      "sha256": "d71933322d55dce0f2397af46213c5cb1d5af36e5f239fe6980dae83813922ac"
+    },
+    "spans/control-assignment-increment.txt": {
+      "bytes": 2956,
+      "sha256": "c149a902354e935980677074875d0d133e28d08ee121646f159cfdafd09f9746"
+    },
+    "spans/growth-and-storage-transfer.txt": {
+      "bytes": 4730,
+      "sha256": "bd64e1f2a14900bc831eb6892e0eda2f019137dc8a4e827893846ef0ff2f9a16"
+    },
+    "spans/initializer-scene-pointer-save.txt": {
+      "bytes": 1105,
+      "sha256": "46247edfb1296d3b6f4d3fab1a3ac1e549f84804d5e14c5496637ce7d1ffaccc"
+    },
+    "spans/normal-and-full-append.txt": {
+      "bytes": 886,
+      "sha256": "59b3de4a011da8be599f198d5e60f61d98d74332117b73ffe458b0a1641f41dc"
+    },
+    "spans/selected-control-dispose-boundary.txt": {
+      "bytes": 458,
+      "sha256": "8754dabb546d168b6bc2f9d21747b0cd95b6365ef36d36a3227cc8d169651d0c"
+    },
+    "spans/selected-sleep-owner-to-append.txt": {
+      "bytes": 3056,
+      "sha256": "ad24f3f0cc3fd39eba49d2dd6734cfbf555a921ddb2886670644d65375fe98f0"
+    },
+    "spans/temporary-control-release.txt": {
+      "bytes": 1967,
+      "sha256": "dd61bdb87fb384ebef2eadcd8b4db3eb82120112f731c40623e777a385e37425"
+    }
+  },
+  "report_sha256": "60323fc53eed456b2a0b6a648e9bbf8e5a7158ee6180cd58534e249aa150c5f0"
+}

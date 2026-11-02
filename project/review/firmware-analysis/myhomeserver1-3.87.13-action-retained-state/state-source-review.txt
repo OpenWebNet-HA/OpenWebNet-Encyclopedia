@@ -1,0 +1,37 @@
+# Independent source review: retained string producer and selected consumer
+
+PASS, no correction requested. This is an independent static original-byte/dataflow review plus the new host collector's read-only `--check`. No original/native/vendor/provider/query/output/target API execution, semantic fixture/model or CPU replay was added. The saved MyHOMEServer1 ledger remains1 corpus/8 entries/340 original code-hook visits/0 C primitives/12 redirects/8 EXIT/0 guard stops/360 hooks with4 data-relocation setup writes separate.
+
+## Original identity and verification scope
+
+The scheduler image `/home/bticino/scheduling_manager/scheduling_manager` has SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. I independently read it through ImageVFS, derived its ELF program/section mappings and checked all17 retained raw-span hashes,47 instruction guards,18 local control-flow targets,3 converging direct-PC global references, the selected converter table row/key and2 relative relocations,5 BLX/ARM-PLT/import-name proofs,8 input identities and23 exact first copies. The host reproduction passes21 outputs. Import declarations are candidate bindings, not observed live resolution.
+
+G=0x167808 is independently inside the original writable PT_LOAD memory extent and .bss SHT_NOBITS region, beyond file-backed data. I did not read invented runtime bytes or infer the current/initial value from that metadata. The code identifies selected access fields, not a complete anonymous object's extent or an RTTI class. G is distinct from the earlier shared stop byte0x167800; adjacency proves no ownership relationship. Other returned-record, compiled-action and capture layouts are not overlaid with G.
+
+## Producer, selected read and exact value path
+
+- The inherited first capture48 guard is concrete: zero skips the selected query/copy region; nonzero reaches the guarded local request to opaque0x10f4a0. Its normal returned pair word0 is loaded into R4, and null skips these stores. No query implementation, cached-record class/type/freshness or physical category is inferred. A valid nonnull source with its stated readable string/word layout and ordinary control/provider behavior remains a premise.
+- Independent PIC arithmetic at0xcf648/poold01ac and0xcf656/poold01b0 both resolves G. The first assignment requests destination G+24 from source-record string+8. After normal assignment return, source words36/40/44 are copied to G48/52/56. Only the string's selected later branch is interpreted; the three words receive no property/unit/physical meaning or complete consumer claim.
+- The second body's independent PIC at0xcdda8/poolce890 resolves the same G, and LDRD reads its string pointer/length at+24/+28. This is separate from that body's configured-ID capture and its outer request UUID. For valid length2 and exact lowercase bytes0x6f/0x6e, the selected branch reaches0xced6a. The earlier literal R1=1 at0xcddac is unchanged along this selected branch; SUBS R1,#1 produces local code0, then stores record status32=0 and presence28=1. Neither code0 nor the class name is assigned an OPEN/public-protocol/physical meaning.
+- After the selected normal descriptor/ID merge returns to0xcddf4, the actual pair copy moves SP296/SP300 (recordSP268+28/+32) to SP628/SP632. The converter's supplied source is SP600=descriptorSP524+76; the copied pair is therefore precisely its presence28/status32. This is an actual source copy and call-argument join, not a substitution of recordSP268 for SP600 or a host fixture.
+- In the converter, present byte28 selects word32+1, unsigned bound2 and the actual table indexing. Selected code0 gives index1. Original GOT slot0x166eb4 has table addend0x16216c; its selected row has length2 and relocation-backed pointer addend0x1362d4, exact `on`. This is ELF-relative relocation metadata, not a guessed entry-relative string offset. The retained short-string/copy continuation uses those two bytes, terminates the temporary and requests JsonCpp string construction, exact key `status`, move assignment and destruction before subsequent checks.
+
+These source facts support a narrow conditional preservation statement: if the selected first write occurred with a valid `on` string, that value remains at G+24 for the selected second read and all branch/object/provider/copy/lifetime premises hold, the second parameter helper requests string `on` under `status`. No configured object/value was supplied or executed. This does not prove natural first/second ordering, same queued action or ID correlation, absence of other G writers, initialization/locking, freshness, whole ownership/concurrency or physical restoration. The fixed destination is not shown here to be keyed by the queried ID; that bounded observation is not a collision/race/defect claim.
+
+## Boundary, preservation and applicability
+
+The query0x10f4a0 and output0x5dda0 bodies remain opaque. No receiving/transport/MQTT/libjel/authentication/session/framing body, broad status/property matrix, global-reference/absence scan or previous source collector was followed. Previous constructor/capture/request constants and field contracts are cited as inherited source, not counted as new activation or native coverage. No actual send result, accepted request, action completion, runtime restart/rollback or physical outcome follows.
+
+The manifest and immediate first-candidate copies match current report/collector/evidence bytes, sizes and hashes. Generation refuses existing outputs and computes its index before exclusive creation. No author/current/earlier file was edited; no canonical failure, overwritten draft or missing history is invented. PASS is limited to this exact original store/load/selected-conversion packet and its explicit normal-return/object/binding premises; it is not full-source, runtime, lifecycle or product certification.
+
+## Frozen reviewed identities
+
+| File | Bytes | SHA256 |
+| --- | ---: | --- |
+| `state/REPORT.md` | 10185 | `fc0f6a13fdde606d950b8f95f3b66c2a899e8f524a0effbbe86b5e1471774075` |
+| `state/collect_state_v1.py` | 12315 | `084389db91846c162c66e92370d3ce3ae8af457a8d8d66e3030496bed2c5a7a6` |
+| `state/ORIGINAL_SOURCE.json` | 12065 | `455045880ae2b1397dd7f59dfc047920fbffbab10eed00ef701102320516e9d4` |
+| `state/SELECTED_RELATION.json` | 2200 | `6bd6fbcefe52b982b50adf6bc8a7a6be0451e4b98cf9b91e11d77f218839e9b9` |
+| `state/INPUTS.json` | 1913 | `6c5f8c4a2c5ddc8b70ae0ea70b322272aafdc54513a54f64fdf5cab88cc02636` |
+| `state/OUTPUT_MANIFEST.json` | 3559 | `c9d43b9d66bcd2f850b2118718f702371f355227af37e6f9503f973b44190500` |
+| `state/first-candidate/INDEX.json` | 3328 | `68abcba7385f0f1576ab68739091f45b4661bee5a18baa29e67697f36e221ab9` |

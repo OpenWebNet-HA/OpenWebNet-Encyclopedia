@@ -1,0 +1,97 @@
+# MH2021.0.24 run7 — selected19-character diagnostic decode to General DIM1 builder
+
+Static-only follow-up. Original ARM/vendor/JS/PHP execution, original instructions executed, hooks and live I/O: **0**. Two host-only constructed strings exercise a transcription of selected predicates and arithmetic; neither is an accepted original-parser result, physical capture or hardware identity.
+
+## New result
+
+A selected internal receive-selector4,19-character D2 branch can be followed through the actual bt_device decoder, first SCS key rule, registered General member and DIM1 builder. The selected key **D2S80** maps to `s2o_deviceModel` at libdiag VA`0x18c30`. That method forms four decimal values from **one hexadecimal nibble shifted8bits plus a separate two-character byte**, followed by three separate hexadecimal nibbles. It calls the original General read-dimension composer with DIM1, which obtains WHO and WHERE through imported helpers and reaches the `CreateRdDimensionMsgOpen` import.
+
+This removes a specific static route/field-width gap before run6's post-decoder collector premises. It does **not** produce an accepted OPEN string: WHO/WHERE provider results, final libopen parsing/IsCorrect, C++ primitive completion and runtime binding remain explicit boundaries. No firmware process/parser was run. No actual query/response transaction or physical device-model meaning is inferred.
+
+## Identity and reproduction
+
+All originals are fresh normal-image ImageVFS reads; image paths are rooted inside the firmware. Exact hashes:
+
+| Original | SHA256 |
+|---|---|
+| `/home/bticino/bin/bt_device` | `65dad019cc15cf5036c04ec7ef23d0f9c2f388324f44692f43af37fd82192f70` |
+| `/home/bticino/lib/libdiag.so.0.0` | `72da849b0b589758d1c0ca07bf8922359fd7e28dff8e1c20f481f688815f31fe` |
+
+`python3 work/mh202-firmware/research/2026-10-30/protocol/run7/collect_evidence.py --check` reproduces34 generated files strictly byte-for-byte:27 original spans,29 exact words,8 PIC-resolved strings,5 selected original relocation lines, two host cases and provenance/layout evidence. There are9 pinned inputs. The collector invokes only host objdump/readelf and Python reads/arithmetic. `output-manifest.json` additionally pins report/collector/evidence and excludes itself and subsequent review. Prior reports, sources and repository documents remain unchanged.
+
+## 1. Actual decoder fields and route guards
+
+Run6 already established the collector-to-decoder call; this batch does not recount its qualification matrix. The local decoder starts at bt_device`0x12588`, receives raw text in r1, numeric selector in r2 and context in r3. The selected branch tests selector4 (`0x12724`) and strlen19 (`0x12734`), failing to its return0 at`0x1474c` otherwise. This is a local decoded-internal-buffer boundary, not the public network or serial grammar.
+
+`0x127f4..0x12864` copies these zero-terminated two-character fields from the received buffer (zero-based offsets):
+
+| Local offset | Original raw offsets |
+|---|---|
+| SP+538 |3,4|
+| SP+535 |5,6|
+| SP+532 |7,8|
+| SP+529 |9,10|
+
+The first field is compared with original literal`D0`; for D2 it branches to`0x12ba4`. The next original comparisons select D2, DC or D8. For this example D2 matches the first comparison at`0x12bb8/0x12bc0`. Other D0/fallback routes remain outside the chosen example.
+
+At`0x12cb0..0x12cdc`, raw[8] and raw[10] replace the SP+535 two-character field. It is first compared with literal`96`. A mismatch reaches`0x12e1c`, which compares the same field with`97`; another mismatch reaches`0x130fc`. Thus this selected example bypasses the separate96/97 longer branch bodies. Their extra format/suffix tests are not silently treated as common guards.
+
+The local helper`0xcf00..0xcf3c` subtracts ASCII`1`, bounds the unsigned8-bit result to21, then tests original mask`0x002001bf`. Its selected accepted characters are exactly `12345689F`. At`0x130fc..0x13114`, the tested input is SP+533, still original raw[8]; if it is in that set and raw[10] is ASCII`4`, the code reaches`0x13134`. Other displayed alternatives exist, but are unnecessary for this ordinary selected route and not remodeled as a complete raw grammar.
+
+After normal intervening logging/destructors, `0x131ec..0x13218` builds a std::string from the **whole original raw buffer** and calls imported `OPN_OpenScsDiagTranslator::scs2open` with the caller's array0 destination. No prefix bytes0..2 validation is added by our host model: the constructed `$04` prefix is a fixture choice, not a newly proven complete envelope guard.
+
+Original PIC base`0x2dd68` resolves `D0`,`D2`,`96`,`97`, and the later OPEN-OK literal. Exact pools/target VAs are in `selected-literals.json`.
+
+## 2. First key rule and actual registered member
+
+The original outer translator SCS-rule vector is this+36. Constructor`0x24d30..0x24d74` pushes member-table entries beginning at`0x382f8`; original ABS32 relocation there identifies **scsKeyGen`0x23e04` first**, followed by id_rule and ppt_rule at the next entries. The outer loop reads these member-pointer pairs at`0x22e98..0x22ebc`, calls the rule, looks up the resulting key via getTranslator at`0x22f88`, and invokes the selected class's virtual scs2open with key/raw/output at`0x230c4..0x230e4`. This is ordinary initialized registry/vector/control flow, not observed C++ execution or exception unwinding.
+
+The selected first rule:
+
+- requires string length>12 (`0x23e1c/0x23e24`);
+- extracts raw.substr(10,1), compares with original literal`8`, and takes an exception route if equal (`0x23e3c..0x23eb4`);
+- otherwise forms **raw.substr(3,2) + `S` + raw.substr(11,2)** (`0x23eb8..0x23f08`).
+
+Our selected raw[10] is`4`, so this normal first rule yields D2S80 without needing the exception/fallback route. All exception execution is out of scope.
+
+The General constructor's D2S80 literal load is at`0x1b248` (pool`0x1b6e8`→`0x31989`), map index call`0x1b268`. The following member assignment obtains tablebase+232, exactly **`0x38168`**. Its original ABS32 relocation identifies **s2o_deviceModel`0x18c30`**, with paired member adjustment word0. This is a pointer/relocation proof, not a guess from the key number or nearest symbol. Immutable run4's complete104-key result is reused only for the scoped fact that D2S80 belongs solely to General under completed same-build factory registration/no later mutation; the full matrix is not reconstructed again.
+
+General class dispatch`0x16540..0x165a8` obtains its selected member, copies the raw string, calls the member and stores its numeric response type at this+32. The method's local response enum and the class/outer boolean are distinct: deviceModel returns response enum0 at`0x18e88`, while General's normal scs2open tail returns boolean1 at`0x167b0`. This batch does not call that response enum "false".
+
+## 3. Payload width and formatter call boundary
+
+The actual selected method`0x18d24..0x18e60` assembles a four-string vector. Its local helper`0x163e8` extracts **one character** and calls strtol(base16); helper`0x16428` extracts **two characters** and calls strtol(base16). For ordinary hexadecimal fixture characters:
+
+| Value position | Original raw extraction |
+|---|---|
+|0| `(hex(raw[13]) <<8) + hex(raw[17:19])` |
+|1| `hex(raw[14])` |
+|2| `hex(raw[15])` |
+|3| `hex(raw[16])` |
+
+The shifts/offsets are explicit at`0x18d30/0x18d38/0x18d3c`, then`0x18d80`,`0x18dbc`,`0x18df8`. They do not describe four ordinary contiguous bytes. Decimal conversion and vector/string operations remain ordinary imported/local primitive contracts; no conversion routine was run.
+
+At`0x18e58`, r3 becomes**1**, the DIM argument to s2o_composeRdDimension at`0x18e60`. The General composer obtains WHO through its s2o_getWho→imported getOpenWho(raw, true) (`0x16e48`, `0x16808..0x16810`), and WHERE through imported getOpenWhere(raw) at`0x16e74`. This batch does not replace either result with a guessed WHO1000/1001 or numeric WHERE.
+
+Composer`0x16ef0..0x16f14` supplies the destination object, WHO string, WHERE string, decimal DIM string and vector-derived values/count to **imported CreateRdDimensionMsgOpen**. The native caller then performs normal cleanup and its helper returns1 at`0x16f70`. This is an actual original call boundary, not an executed final serializer result. There is no newly demonstrated complete raw-to-valid-OPEN output or IsCorrect result.
+
+## 4. Explicit synthetic examples and conditional decoder tail
+
+`host-selected-raw-and-values.json` contains two constructed ordinary candidates, not captures:
+
+| Constructed raw string | Selected key | Host-reconstructed DIM/values |
+|---|---|---|
+| `$04D200010480000000` |D2S80| DIM1, `[0,0,0,0]` |
+| `$04D200010480A12345` |D2S80| DIM1, `[2629,1,2,3]` |
+
+Both strings have19 characters; their raw[8]+raw[10] is`14`, so neither alternate96/97 branch is taken; raw[8] is in the local whitelist; raw[10] is`4`, also avoiding the first rule's`8` exception. The arbitrary nonzero payload exists solely to expose extraction widths. **2629 is not a claim about MH202 hardware/model identity.** Final WHO, WHERE, serialized text and accepted_original_parser_output remain null/unknown in the host results.
+
+If the actual imported operations/class return normally with a nonzero outer boolean, decoder`0x13234..0x1324c` inspects the output DIM for a special23 branch. Conditional DIM1 skips that special branch. Normal logging cleanup`0x13378..0x13430` reaches`0x144dc`, which calls CreateMsgOpen on **array element1** (destination+`0x624c`) with exact literal `*#*1##`, length6, via`0x14740`. It then returns1 at`0x14744`. This supplies the source-level OPEN-OK tail that run6's array-forward helper can use as kind6 under its conditional libopen provider. Neither parser call, destination kind, collector qualification nor forwarding is executed here. The decoder's local return1 must not be equated with a tested IsCorrect or delivered physical response.
+
+## Limits and next queue
+
+Confirmed statically: selected length/type/field guards, exact normal key rule, original registry/member identity, payload widths, DIM1 composer import arguments and conditional decoder append/return path. Host-only: two constructed strings, predicate/hex arithmetic and their selected key/value candidates. Unverified: complete native string/container execution, WHO/WHERE conversion, final serializer/parser validity, initialized object/descriptor state, live symbol interposition, actual input provenance, publication or physical support.
+
+Run2's explicit packaged bt_device provider assumptions are inherited read-only; named imports are not promoted to observed runtime providers. No F454 layout/fixture is reused. Authentication/credential/session work remains excluded. No previous report or source is edited.
+
+Highest next question is the concrete getOpenWho/getOpenWhere route for this exact19-character normal example, then actual libopen builder/IsCorrect static guards. That can close remaining formatting preconditions without pretending this host transcription is parser execution. A separate useful gap remains the two output descriptor setup/recipient roles and no-data/context-stop path; neither is inferred from a filename or generic protocol expectation.

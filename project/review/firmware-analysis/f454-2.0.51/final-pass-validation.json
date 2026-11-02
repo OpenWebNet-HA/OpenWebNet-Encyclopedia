@@ -1,0 +1,98 @@
+{
+  "checked_at": "2026-10-30T12:42:13.939249+00:00",
+  "status": "passed",
+  "passed": true,
+  "branch": "docs/static-firmware-analysis-findings",
+  "commits_or_pushes": false,
+  "method": "Static source/disassembly and host consistency models; zero original ARM/JavaScript execution",
+  "repository_checks": {
+    "style": {
+      "exit_code": 0,
+      "output": "STATS human_pages=380 support_pages=113 objective_failures=0 review_candidates=6856\n"
+    },
+    "evidence_privacy": {
+      "exit_code": 0,
+      "output": "STATS human_pages=380 objective_failures=0 review_candidates=14\n"
+    },
+    "diff": {
+      "exit_code": 0,
+      "output": ""
+    }
+  },
+  "device_definitions": 210,
+  "repository_tests": 31,
+  "local_links": 140,
+  "published_evidence": 6,
+  "source_review": "final-pass-integration-review.md",
+  "reviewed_document_pins": [
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-final-pass.md",
+      "sha256": "60565b7f632120772ee7228d49ad61eae26fad1ac28b4f94de090937b6f7530d"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-continuation.md",
+      "sha256": "c46636321d02ff375b730b6f083f956ceec2a5dd5e5837af1496e22a66fc1261"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51.md",
+      "sha256": "f100f0a173d18ba43cb9ffde1f6a05b760d43c8d6d96ab04120ba67a3085a3b8"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/README.md",
+      "sha256": "c5f54f0c2969adf22c66f15d009d55a907e81c5be954a951b82d924b1a36a3c8"
+    },
+    {
+      "path": "functional/who-18-energy-management/dimensions.md",
+      "sha256": "64c5e6c4bf9de5829394acf9dbe7703647576fa9e62fce99460a8b20754734bf"
+    },
+    {
+      "path": "functional/who-8-video-door-entry-telephony/README.md",
+      "sha256": "fc6e61be49bfbf7fc227384d8b781f54b49a0af82b3f66da89096e485537d6b8"
+    },
+    {
+      "path": "devices/definitions/own-dev-0002-audio-video-web-server-gateway.md",
+      "sha256": "f300b28ca0f358b73dff111ee47f1a911c71f8b949ecc979726a2b5ec5459af9"
+    },
+    {
+      "path": "devices/work-queue.yaml",
+      "sha256": "79baeb5ad9a47dadd46683c01d5fff827c8dc343e945ac6393ebebeb133fbe80"
+    },
+    {
+      "path": "project/review/firmware-analysis/f454-2.0.51/README.md",
+      "sha256": "ff631e7da999b8ecaa6e008e84361875a6f6f7f5f2196781e43329b921dc5ff7"
+    }
+  ],
+  "independent_source_reviews": [
+    "final-pass-energy-review.txt",
+    "final-pass-media-review.txt"
+  ],
+  "immutable_prior_dossiers": [
+    {
+      "dossier": "2026-10-29",
+      "files_verified": 1917,
+      "index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df"
+    },
+    {
+      "dossier": "2026-10-30-targeted",
+      "files_verified": 107,
+      "index_sha256": "ddb83866292f70631b968b91f07e08fbc79415b5e1762cf3699f8e326eacff79"
+    },
+    {
+      "dossier": "2026-10-30-targeted-2",
+      "files_verified": 130,
+      "index_sha256": "2dc3f9e3541478eff304d1d9bb368d02504c39cc3d5d8d3aec7ca96650032d82"
+    }
+  ],
+  "historical_document_snapshots": 25,
+  "archive": {
+    "artifact_id": "firmware-f454-020051",
+    "bytes": 74448014,
+    "sha256": "15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3",
+    "passed": true,
+    "method": "read-only archive hash; no extraction or execution"
+  },
+  "sources_changed": false,
+  "coverage_limit": "Selected two joins only; Device full-source gates remain pending; no physical/runtime coverage claim",
+  "automation": "Existing overnight schedule left unchanged; no new schedule",
+  "next_firmware": "Not selected or downloaded"
+}

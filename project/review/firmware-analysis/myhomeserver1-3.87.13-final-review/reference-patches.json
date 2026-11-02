@@ -1,0 +1,28 @@
+[
+  {
+    "source": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md",
+    "snapshot": "own-dev-0199-myhomeserver1-home-automation-server.md",
+    "before_sha256": "5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855",
+    "after_sha256": "bd64060e1e19f90eecad2808b62327847a0f541ae2fc46239bbda29a5efe5c98",
+    "substitutions": [
+      {
+        "old": "Current firmware binaries and parameter payloads were not examined.",
+        "new": "That documentation/catalogue review did not examine firmware binaries or parameter payloads. The separate [Firmware 3.87.13 study](../../reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md) now provides build-specific static implementation/catalogue evidence and one bounded original JSON-provider helper corpus. Installed state, complete parameter-payload review and physical/runtime corroboration remain open; this does not complete the Device/source review gates."
+      }
+    ],
+    "scope": "Historical documentation/research-gap reconciliation only; no new physical capability or full-source approval"
+  },
+  {
+    "source": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+    "snapshot": "mhcatalogue-source-profiles.md",
+    "before_sha256": "59affbd225571e554a49ad784619912a1521ff5b00c80bf5ea28094540b942b9",
+    "after_sha256": "643f65b12698dffef8858d451290f69c7a517ed239c13e80dd27d3322298aa69",
+    "substitutions": [
+      {
+        "old": "The next substantive evidence is the actual `matrix_mx` reader: how it selects Device/Firmware alternatives, resolves fields and handles missing or Prototype/RC definitions. Database declarations alone do not establish that behavior. Wider Device review remains pending.",
+        "new": "The later [consumer](../reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md) and [factory/owner](../reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-factories.md) analyses identify actual catalogue-opening requests and the selected15-column reader/SQL producer: column13 supplies slots and column14 the system ID. Full selection among Device/Firmware alternatives, fallback and missing or Prototype/RC policy remain unresolved. Database declarations and those selected source paths do not establish installed compatibility or complete runtime behavior. Wider Device review remains pending."
+      }
+    ],
+    "scope": "Historical documentation/research-gap reconciliation only; no new physical capability or full-source approval"
+  }
+]

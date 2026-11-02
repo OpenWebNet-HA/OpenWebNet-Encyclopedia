@@ -1,0 +1,77 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b94f0:
+   b94f0:	2300      	movs	r3, #0
+   b94f2:	4a4b      	ldr	r2, [pc, #300]	@ (b9620)
+   b94f4:	b5f0      	push	{r4, r5, r6, r7, lr}
+   b94f6:	460d      	mov	r5, r1
+   b94f8:	6083      	str	r3, [r0, #8]
+   b94fa:	2101      	movs	r1, #1
+   b94fc:	447a      	add	r2, pc
+   b94fe:	f100 0730 	add.w	r7, r0, #48	@ 0x30
+   b9502:	e9c0 3304 	strd	r3, r3, [r0, #16]
+   b9506:	b083      	sub	sp, #12
+   b9508:	e9c0 3306 	strd	r3, r3, [r0, #24]
+   b950c:	4604      	mov	r4, r0
+   b950e:	e9c0 3308 	strd	r3, r3, [r0, #32]
+   b9512:	6283      	str	r3, [r0, #40]	@ 0x28
+   b9514:	efc0 0010 	vmov.i32	d16, #0	@ 0x00000000
+   b9518:	4b42      	ldr	r3, [pc, #264]	@ (b9624)
+   b951a:	7301      	strb	r1, [r0, #12]
+   b951c:	f940 078f 	vst1.32	{d16}, [r0]
+   b9520:	4638      	mov	r0, r7
+   b9522:	58d3      	ldr	r3, [r2, r3]
+   b9524:	4e40      	ldr	r6, [pc, #256]	@ (b9628)
+   b9526:	681b      	ldr	r3, [r3, #0]
+   b9528:	9301      	str	r3, [sp, #4]
+   b952a:	f04f 0300 	mov.w	r3, #0
+   b952e:	447e      	add	r6, pc
+   b9530:	f757 ef58 	blx	113e4 <_ZNSt18condition_variableC1Ev@plt>
+   b9534:	b965      	cbnz	r5, b9550
+   b9536:	4a3d      	ldr	r2, [pc, #244]	@ (b962c)
+   b9538:	4b3a      	ldr	r3, [pc, #232]	@ (b9624)
+   b953a:	447a      	add	r2, pc
+   b953c:	58d3      	ldr	r3, [r2, r3]
+   b953e:	681a      	ldr	r2, [r3, #0]
+   b9540:	9b01      	ldr	r3, [sp, #4]
+   b9542:	405a      	eors	r2, r3
+   b9544:	f04f 0300 	mov.w	r3, #0
+   b9548:	d125      	bne.n	b9596
+   b954a:	4620      	mov	r0, r4
+   b954c:	b003      	add	sp, #12
+   b954e:	bdf0      	pop	{r4, r5, r6, r7, pc}
+   b9550:	2004      	movs	r0, #4
+   b9552:	f757 ea94 	blx	10a7c <_Znwj@plt>
+   b9556:	2300      	movs	r3, #0
+   b9558:	4605      	mov	r5, r0
+   b955a:	6003      	str	r3, [r0, #0]
+   b955c:	2008      	movs	r0, #8
+   b955e:	f757 ea8e 	blx	10a7c <_Znwj@plt>
+   b9562:	4b33      	ldr	r3, [pc, #204]	@ (b9630)
+   b9564:	2200      	movs	r2, #0
+   b9566:	6044      	str	r4, [r0, #4]
+   b9568:	4669      	mov	r1, sp
+   b956a:	9000      	str	r0, [sp, #0]
+   b956c:	447b      	add	r3, pc
+   b956e:	3308      	adds	r3, #8
+   b9570:	6003      	str	r3, [r0, #0]
+   b9572:	4628      	mov	r0, r5
+   b9574:	f757 eda0 	blx	110b8 <_ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@plt>
+   b9578:	9800      	ldr	r0, [sp, #0]
+   b957a:	b110      	cbz	r0, b9582
+   b957c:	6803      	ldr	r3, [r0, #0]
+   b957e:	685b      	ldr	r3, [r3, #4]
+   b9580:	4798      	blx	r3
+   b9582:	6920      	ldr	r0, [r4, #16]
+   b9584:	6125      	str	r5, [r4, #16]
+   b9586:	2800      	cmp	r0, #0
+   b9588:	d0d5      	beq.n	b9536
+   b958a:	6803      	ldr	r3, [r0, #0]
+   b958c:	b983      	cbnz	r3, b95b0
+   b958e:	2104      	movs	r1, #4
+   b9590:	f757 ec8e 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   b9594:	e7cf      	b.n	b9536

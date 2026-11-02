@@ -1,0 +1,26 @@
+
+/home/bticino/bin/dedrifupdater:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000005690 <.text+0x2ed0>:
+    5690:	d503233f 	paciasp
+    5694:	d10243ff 	sub	sp, sp, #0x90
+    5698:	900000a2 	adrp	x2, 19000 <_ZN8PlatformC1Ei@plt+0x16578>
+    569c:	52800201 	mov	w1, #0x10                  	// #16
+    56a0:	a9037bfd 	stp	x29, x30, [sp, #48]
+    56a4:	9100c3fd 	add	x29, sp, #0x30
+    56a8:	f947fc42 	ldr	x2, [x2, #4088]
+    56ac:	a90453f3 	stp	x19, x20, [sp, #64]
+    56b0:	a9055bf5 	stp	x21, x22, [sp, #80]
+    56b4:	aa0003f6 	mov	x22, x0
+    56b8:	d0000000 	adrp	x0, 7000 <_ZN8PlatformC1Ei@plt+0x4578>
+    56bc:	912fc000 	add	x0, x0, #0xbf0
+    56c0:	a90663f7 	stp	x23, x24, [sp, #96]
+    56c4:	900000b7 	adrp	x23, 19000 <_ZN8PlatformC1Ei@plt+0x16578>
+    56c8:	f9400043 	ldr	x3, [x2]
+    56cc:	f90017e3 	str	x3, [sp, #40]
+    56d0:	d2800003 	mov	x3, #0x0                   	// #0
+    56d4:	97fff2ab 	bl	2180 <_ZN7slogger5debugEPKcz@plt+0x10>
+    56d8:	35000400 	cbnz	w0, 5758 <_ZN8PlatformC1Ei@plt+0x2cd0>

@@ -1,0 +1,39 @@
+# Final MyHOMEServer1 Firmware Research Handoff
+
+The completed study maps selected implementation paths in MyHOMEServer1 3.87.13 from catalogue consumption and scene JSON to compiled triggers, conditions, actions, local state and request construction. It supplies concrete evidence for offline tooling and further investigation. It has not run a configured gateway, complete scene or physical installation.
+
+This final continuation follows the user's manual allowance reset and instruction to proceed until noon Paris on1November2026. The three planned source packets are complete; no further investigations are started. Final integration, independent reviews, identity/history/reference checks and actual automation closure are recorded separately. The last observed allowance was1% used with ordinary usage available; exhaustion is not claimed. Its reset timestamp was observed one second later than the initial resumed value, so that identity was not forced into an exact match and work remained final-only.
+
+## What the resumed work adds
+
+| Packet | New source-backed result | What it does not establish |
+| --- | --- | --- |
+|[Action handoff](../../../../../OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-action-output.md)|Distinct52/24-byte captures and adapters reach two four-key local request callsites with the same receiver|Complete callback execution, equal parameters, delivery or rollback|
+|[Selected request values](../../../../../OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-action-request-values.md)|Actual2.0/light.setStatus constructor constants; outer UUID-derivedID separate from captured paramsID; concrete ID/signed-positive-speed merge into actual converter input|Full accepted payload, UUID uniqueness, effective providers, physical speed domain or device support|
+|[Retained state](../../../../../OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-action-retained-state.md)|One conditional query-returned string→fixed global→second exact on branch→actual params status/on source relation|Natural order, same-ID/fresh state, no intervening mutation, concurrency safety or physical restoration|
+
+The practical change is a stronger source chain. Earlier selected BN3L schemas, sparse serialization/reparse, operational duration and callable binding now connect to concrete local method/member requests. Offline analysis can distinguish raw/compiled/capture/parameter objects, outer correlation ID from target ID, and per-action completion from scene/shared cancellation state. Those distinctions prevent a plausible label or equal offset from becoming an unsupported command or behavior claim.
+
+## How this fits the existing encyclopedia
+
+The [current overview](../../../../../OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md) and [practical handoff](../../../../../OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-knowledge-handoff.md) retain the wider work: original package/startup owners, distinct embedded/Suite catalogue profiles and selected15-column consumer, TIME and local event gates, BNIL/BNLD/BNTH/BNCUSCENE schemas/predicates, cancellation and concrete ownership/teardown requests.
+
+Database definitions and code paths are evidence for their own source profiles, not an installed-capability oracle. The embedded and Suite databases remain separate canonical artifacts. MyHOMEServer1 is the curated SCS/Ethernet app/scenario server; MH202 is the scenario programmer/scheduler; F454 has its separately documented AV and dedicated alarm-bus roles. This continuation imports neither MH202 script semantics nor F454 wiring/AV/alarm behavior into MyHOMEServer1.
+
+## Evidence levels and reproducibility
+
+All three resumed source packets have exclusive immutable first candidates, original image/hash/VA/bytes and static reproduction, independent original-byte review and separate documentary integration. Source reasoning is conditional on actual branch admission, valid objects, effective binding, ordinary provider/copy returns and stated lifetime/state premises. It is distinct from a runtime transaction.
+
+No new original execution, model cases, input fixtures or CPU replays were added. The saved MHS experiment remains ONE corpus/eight top-level entries/340 original code-hook visits/zero C primitives/12 definition redirects/eight private EXIT boundaries/zero guard stops/360 hooks. Four data-relocation setups and24FP/control plus24R0/SP/LR host writes remain separate. Four finite original double-constructor/SAME-object-asDouble cases are the entire executed scope. Visits are not measured retired instructions. Full JSON member/map/assignment/serializer/reparse, scheduler/scene/OS/services/threads/timers/network/bus and physical execution remain0; F454/MH202 ledgers remain separate.
+
+Current [coverage](COVERAGE.md), [ranked gaps](RANKED_REMAINING_QUESTIONS.md), [source review](reviews/state-source-review.md), final synthesis/documentary reviews, IDENTITY_VALIDATION.json, FINAL_CHECKS.json and final EVIDENCE_INDEX.json are separate records. The old17-row guide and later supplement remain historical navigation, not coverage percentages or a fresh full-source audit. Exact old reference versions resolve old pins. Prior corrections and unavailable MH20218/21 intermediate drafts remain scoped, with no fabricated historical authenticity.
+
+## Next decisive evidence
+
+1. Genuine configured scene/generator inputs and the missing configured assets, rather than defaults or invented extras80/81/94/95.
+2. Effective provider/type/ID/freshness and natural callback order/mutation/locking evidence for the selected requests and retained state, without reopening closed receiving/transport/MQTT/libjel/auth/session/framing routes.
+3. Positive shared-reset ownership and natural owner/poll/removal ordering, complete JSON/errors/unwind/lifetime/concurrency and separately authorized physical validation.
+
+For F454, the reviewed handoff still identifies initial role1 AV activation/private-state lifecycle and independent board/resource evidence for the serial-to-alarm-bus mapping. The video-status producer is already identified. For MH202, genuine configured ScenarioSuite input/export remains more decisive than repeating completed generator/native syntax joins. Neither is a new F454/MH202 investigation in this continuation.
+
+Work remains local on docs/static-firmware-analysis-findings, uncommitted and unstaged. No source-manifest edit, commit, publication, live contact or physical operation was performed. Wider Device/source gates remain pending; coverage is incomplete. Actual automation deletion and final control/branch checks are saved in the closure records, rather than inferred from this report's title.

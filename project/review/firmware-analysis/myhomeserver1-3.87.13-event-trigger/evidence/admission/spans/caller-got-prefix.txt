@@ -1,0 +1,28 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00051968 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6bf4>:
+   51968:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   5196c:	460c      	mov	r4, r1
+   5196e:	ed2d 8b04 	vpush	{d8-d9}
+   51972:	f5ad 7d5b 	sub.w	sp, sp, #876	@ 0x36c
+   51976:	ab50      	add	r3, sp, #320	@ 0x140
+   51978:	2100      	movs	r1, #0
+   5197a:	461a      	mov	r2, r3
+   5197c:	9306      	str	r3, [sp, #24]
+   5197e:	4603      	mov	r3, r0
+   51980:	4610      	mov	r0, r2
+   51982:	f8df 2b94 	ldr.w	r2, [pc, #2964]	@ 52518 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x77a4>
+   51986:	9317      	str	r3, [sp, #92]	@ 0x5c
+   51988:	f8df 3b90 	ldr.w	r3, [pc, #2960]	@ 5251c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x77a8>
+   5198c:	447a      	add	r2, pc
+   5198e:	f8df 9b90 	ldr.w	r9, [pc, #2960]	@ 52520 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x77ac>
+   51992:	58d3      	ldr	r3, [r2, r3]
+   51994:	44f9      	add	r9, pc
+   51996:	681b      	ldr	r3, [r3, #0]
+   51998:	93d9      	str	r3, [sp, #868]	@ 0x364
+   5199a:	f04f 0300 	mov.w	r3, #0
+   5199e:	f7bf e992 	blx	10cc4 <_ZN4Json5ValueC1ENS_9ValueTypeE@plt>

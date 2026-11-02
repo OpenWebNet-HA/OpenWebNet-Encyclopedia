@@ -1,0 +1,40 @@
+# Independent actual automation-closure receipt review — PASS for deletion acknowledgement
+
+Reviewer /root/evidence_reviewer, new review files only. CompletedUTC 2026-11-02T00:26:54.159028+00:00. This checks ACTUAL saved tool response, exact task identity, immediate receipt copy, action-phase control and public closure-copy consistency. It does NOT certify final strict checks, complete final workflow or final evidence index, which remain subsequent required steps.
+
+## Exact saved review inputs
+
+- `work/remaining-firmware-investigation/2026-11-02-final/AUTOMATION_DELETE.request.json` — 90 bytes, SHA256 `71d2cb94898f3a1af7bf6b5c457978d09e824a01c5a51d56ed3e7cb29f0dc186`.
+- `work/remaining-firmware-investigation/2026-11-02-final/AUTOMATION_DELETE.response.json` — 473 bytes, SHA256 `72a2b1365c087891d1c67f564a3e34d0f4a4d2923c407d2f89fde80d588fe7d1`.
+- `work/remaining-firmware-investigation/2026-11-02-final/receipts-first-candidate/INDEX.json` — 171 bytes, SHA256 `8b59b1346843f8ae2353f0b026d1829ec92adb2b00c515f6e819bf4585365964`.
+- `work/remaining-firmware-investigation/2026-11-02-final/CLOSURE.json` — 1233 bytes, SHA256 `c558382effb41a43a966c40a15e9580111065f583a8951a568d73566b2650f13`.
+- `work/remaining-firmware-investigation/2026-11-02-final/closure-action-snapshot/CONTROL.json` — 3709 bytes, SHA256 `29091bb6c72b2e290a471abbe0d988b9dff92f958b23b1f7175ea42d4f815975`.
+- `work/remaining-firmware-investigation/2026-11-02-final/VALIDATION.json` — 4256 bytes, SHA256 `90f09f5655753d4bdccf3993d0577ea6f7617c373c94c20bebb2c2ef9d1ae748`.
+- `work/remaining-firmware-investigation/2026-11-02-final/reviews/integration-review.md` — 13488 bytes, SHA256 `6475c57f4d305708c3030eae2b53542f44fe1077786630ef09728fa1fc873c9c`.
+- `work/remaining-firmware-investigation/2026-11-01-run09/AUTOMATION_UPDATE.request.json` — 16169 bytes, SHA256 `c5fd0874c8a66a24f3c60e28403839608439f27074fa264dc05d2c63b7b7bced`.
+
+## Actual SAME automation deletion evidence
+
+**PASS: the actual app tool acknowledges deletion of the SAME authorized finite overnight automation.** Request is exactly mode=delete, id=remaining-firmware-and-database-overnight-investigation. Response has isError=false, the actual text Deleted automation in the app, and separately structured metadata with the exact same automationId, mode delete and deleteStatus deleted. Its snapshot is heartbeat kind with the expected Remaining firmware and database overnight investigation name. I matched its finite recurrence snapshot to the actual last saved run09update request for this same ID/name; no new task/schedule or different older automation is substituted.
+
+The473byte actual responseSHA72a2b1365c087891d1c67f564a3e34d0f4a4d2923c407d2f89fde80d588fe7d1 exactly matches its immediate receipts-first-candidate copy and index. This is an observed tool result, not a proposed deletion, request-only receipt, invented metadata, schedule-expiry assumption or a declaration that a tool error meant success. No deleted-ID view/replay or network operation was needed or performed by this review. Review accepts the actual trusted app response at its recorded scope; it does not invent a separate server acknowledgement timestamp or independent global scheduler inventory.
+
+CLOSURE.json has actualdeleteStatus deleted and automation_deleted=true for the identical task ID, and pins that exact response. Its parent-recorded UTC acknowledgement time2026-11-02T00:24:40.565676+00:00 is before the original deadline07UTC/08Paris. Source work had stopped earlier at the documented qualified-scope boundary. Closure is early scientific consolidation with explicit unresolved gaps, not claimed allowance exhaustion, deadline expiry, exhaustive source/Device approval or absence of other useful evidence. Recorded usage is26percent ordinary included; no reset/purchase/paid-use action or exhausted-percentage claim is inferred.
+
+## Action-phase control and history consistency
+
+CLOSURE's exact control snapshot pin resolves to3709bytes/SHA29091bb6c72b2e290a471abbe0d988b9dff92f958b23b1f7175ea42d4f815975. At review time live mutable CONTROL equals this action snapshot: statusCLOSED, automation_statusDELETED, current_batch=the actual finalcheckpoint, pending_batchnull, matching automation ID/deletion acknowledgement time/response pin. Batch status ACTUAL_AUTOMATION_DELETED_FINAL_GATES_PENDING and phase FINAL_WORKFLOW_CHECKS_PENDING_SOURCE_STOPPED expressly distinguish scheduler closure from pending final verification. The old source questions/run09summary remain inherited coordination context, not an instruction to schedule new investigation after the closed status. The snapshot preserves F454paused/MH202-MHS-F460-F461closed labels; this review did not independently query or alter those other automations.
+
+Public final-capsule closure.json is an exact copy of current CLOSURE.json. Its status ACTUAL_DELETE_ACKNOWLEDGED_FINAL_WORKFLOW_CHECKS_PENDING and final_strict_checks pending are honest action-phase records, not complete-workflow certification. Parent may later save a distinct completed final control/state/verification after real checks; this frozen action snapshot/receipt should remain unchanged as its chronological evidence. No earlier response/control history is rewritten or silently repinned.
+
+Predelete documentary integration review6475c57f4d305708c3030eae2b53542f44fe1077786630ef09728fa1fc873c9c and actual identity validation90f09f5655753d4bdccf3993d0577ea6f7617c373c94c20bebb2c2ef9d1ae748 are saved/exported before this closure action as stated. VALIDATIONstatusPASS applies to its explicit CURRENT_DOCUMENTARY_AND_INPUT_IDENTITIES phase. Its historical automation_closure PENDING_ACTUAL_DELETION_RESPONSE and final_strict_checks pending are not falsified by the later separate tool response; validation is not rewritten into a deletion receipt. CLOSURE correctly says predelete identity/review saved, while separately acknowledging current strict checks are still pending. Public validation/integration-review exports equal those exact earlier files.
+
+## Required subsequent workflow and unchanged research scope
+
+This receipt review resolves only the actual deletion/control/classified-action evidence. Actual strict style/core-values/diff/current final checks still must run after this review is exported to resolve the final pending references. Final workflow-complete/control/state/report verification must use the actual outcomes, then save all actual closure/control/check/review receipts BEFORE generating final EVIDENCE_INDEX last. Only small read-only hash/branch/link checks should follow. This review does not certify that those future artifacts already exist/pass or authorize further source investigation.
+
+CLOSURE retains newR2objects0, THISinvestigation plaintextDBobjects0 and encryptedSUPPORTobjects1. Scheduler closure is workflow evidence, not a database/firmware capability/runtime/physical finding, extra R2upload/readback or global archive inventory. No original/source/helper/native/emulator/model/Qtlookup/SQLite/targetOS/service/network/bus/runtime/physical execution or corpus replay occurs. Existing source/Device/runtime/physical gaps, closed F450helper/equivalent and receiving/output-transport/auth/session/framing/MQTT/libjel/provider/callback routes, prior MHS/F454/MH202ledgers and missingMH20218/21history limits remain unchanged.
+
+No reviewer app/remote/R2mutation, source/research/repository edit, staging/commit/push/publication, private-value export or original firstcopy change occurred. I only read actual local records and wrote this new review/immediate exact copy/index. The index is computed before its own file is opened.
+
+**Final receipt decision: PASS for ACTUAL SAME automation deletion acknowledgement and action-phase control/copy consistency. Final strict checks and complete workflow NOT CERTIFIED yet.**

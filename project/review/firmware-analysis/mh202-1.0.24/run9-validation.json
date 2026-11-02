@@ -1,0 +1,166 @@
+{
+  "checked_at": "2026-10-30T19:23:54.530290+00:00",
+  "passed": true,
+  "scope": "Run9 static source, supplied-parser normalizer body, prepared suffix objects; no whole parser/runtime/physical proof",
+  "original_execution": 4424,
+  "run9_original_execution": 1659,
+  "original_execution_scope": "Four canonical named corpora; verification replays not accumulated",
+  "primitive_callbacks": 241,
+  "boundary_callbacks": 4,
+  "code_hook_visits": 4669,
+  "original_helper_calls": 46,
+  "execution_corpora": [
+    {
+      "artifact": "triggers/run7/execution-results.json",
+      "helper_calls": 13,
+      "original_instruction_visits": 1485,
+      "primitive_callbacks": 75,
+      "code_hook_visits": 1560,
+      "firmware_processes": 0,
+      "target_OS_calls": 0,
+      "count_scope": "Canonical corpus only; verifier replays not accumulated"
+    },
+    {
+      "artifact": "strings/run8/execution-results.json",
+      "helper_calls": 16,
+      "original_instruction_visits": 1280,
+      "primitive_callbacks": 0,
+      "code_hook_visits": 1280,
+      "firmware_processes": 0,
+      "target_OS_calls": 0,
+      "count_scope": "Canonical corpus only; verifier replays not accumulated"
+    },
+    {
+      "artifact": "triggers/run9/execution-results.json",
+      "helper_calls": 13,
+      "original_instruction_visits": 1515,
+      "primitive_callbacks": 142,
+      "boundary_callbacks": 0,
+      "code_hook_visits": 1657,
+      "firmware_processes": 0,
+      "target_OS_calls": 0,
+      "count_scope": "Five original normalizer calls with explicit parser primitives, eight comparator handoffs; canonical only, replays not accumulated"
+    },
+    {
+      "artifact": "protocol/run9/leaf-results.json",
+      "helper_calls": 4,
+      "original_instruction_visits": 144,
+      "primitive_callbacks": 24,
+      "boundary_callbacks": 4,
+      "code_hook_visits": 172,
+      "firmware_processes": 0,
+      "target_OS_calls": 0,
+      "count_scope": "Four prepared-object selected suffix helpers; canonical only, replays not accumulated"
+    }
+  ],
+  "firmware_processes": 0,
+  "target_OS_calls": 0,
+  "scripts": [
+    {
+      "script": "functional/run9/collect_evidence.py",
+      "passed": true,
+      "output": "PASS: 11 outputs+manifest/3spans/37words/2originalinputs/12finitehostcases; own originalexecution0"
+    },
+    {
+      "script": "triggers/run9/emulate_normalizer.py",
+      "passed": true,
+      "output": "{\"normalizer_calls\": 5, \"comparator_calls\": 8, \"original_visits\": 1515, \"primitive_callbacks\": 142, \"firmware_processes\": 0}"
+    },
+    {
+      "script": "protocol/run9/collect_evidence.py",
+      "passed": true,
+      "output": "{\n  \"outputs\": 8,\n  \"inputs\": 6,\n  \"spans\": 4,\n  \"critical_words\": 18,\n  \"host_cases\": 2,\n  \"original_execution_by_collector\": 0\n}"
+    },
+    {
+      "script": "protocol/run9/emulate_normal_suffix_helpers.py",
+      "passed": true,
+      "output": "{\n  \"cases\": 2,\n  \"code_hook_steps\": 172,\n  \"exit_boundaries\": 4,\n  \"leaf_runs\": 4,\n  \"original_instruction_visits\": 144,\n  \"primitive_callbacks\": 24\n}"
+    },
+    {
+      "script": "boot/run9/collect_marker.py",
+      "passed": true,
+      "output": "{\n  \"outputs\": 17,\n  \"spans\": 10,\n  \"word_assertions\": 17,\n  \"inputs\": 6,\n  \"host_path_cases\": 4,\n  \"host_return_cases\": 4,\n  \"original_execution\": 0,\n  \"hooks\": 0\n}"
+    }
+  ],
+  "published_exports": 8,
+  "local_links": 212,
+  "preserved_prior_artifacts": 871,
+  "reviewed_prior_document_snapshots": 58,
+  "document_pins": [
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24.md",
+      "sha256": "bed621e47c4bd6d1edb1c178d63bfb70beafc277d14b535f74cada78936a12b3"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-state-and-routing.md",
+      "sha256": "9a858748846ce50a91dac33a6ec50c464fad0e2731990bec40398da21102c4bf"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/README.md",
+      "sha256": "47f6857c790ab2b09d2ee97f23f0493f0d54b75e23de1269877c1fda41e8ff47"
+    },
+    {
+      "path": "project/review/firmware-analysis/README.md",
+      "sha256": "1091623004b8cb2c2ef4364be2b9498a940cbccabd21317868695595c3447400"
+    },
+    {
+      "path": "project/review/firmware-analysis/mh202-1.0.24/README.md",
+      "sha256": "cc6f364458ee338bf308b0d3ce6d7857827321ff3fc2d83f8f0357f2b31ae8e3"
+    },
+    {
+      "path": "functional/who-17-scenario-management/README.md",
+      "sha256": "6a4f129bbc8c97319980b182635b2f43a4fa02d30952e0584b2de8169b521a42"
+    },
+    {
+      "path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44"
+    },
+    {
+      "path": "devices/work-queue.yaml",
+      "sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4"
+    }
+  ],
+  "repository_checks": [
+    {
+      "name": "ESG",
+      "exit_code": 0,
+      "output": "STATS human_pages=382 support_pages=123 objective_failures=0 review_candidates=6867"
+    },
+    {
+      "name": "ECV",
+      "exit_code": 0,
+      "output": "STATS human_pages=382 objective_failures=0 review_candidates=14"
+    },
+    {
+      "name": "diff",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "protected_F454_dossiers": [
+    {
+      "dossier": "2026-10-29",
+      "index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df",
+      "files_verified": 1917
+    },
+    {
+      "dossier": "2026-10-30-targeted",
+      "index_sha256": "ddb83866292f70631b968b91f07e08fbc79415b5e1762cf3699f8e326eacff79",
+      "files_verified": 107
+    },
+    {
+      "dossier": "2026-10-30-targeted-2",
+      "index_sha256": "2dc3f9e3541478eff304d1d9bb368d02504c39cc3d5d8d3aec7ca96650032d82",
+      "files_verified": 130
+    },
+    {
+      "dossier": "2026-10-30-final-pass",
+      "index_sha256": "bf27345d8ce8d1e4e9277ad9346c62fcfde1f0b33bb20783ae5e66963ad100f2",
+      "files_verified": 83
+    }
+  ],
+  "sources_changed": false,
+  "branch": "docs/static-firmware-analysis-findings",
+  "commits_or_pushes": false,
+  "overnight_status": "ACTIVE, final-only31October07:15Paris, cutoff08:00; delete only after final saved"
+}

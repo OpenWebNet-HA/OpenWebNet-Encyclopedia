@@ -1,0 +1,63 @@
+{
+  "boundary": "Direct declarations/candidate definition only; no effective symbol resolution, target syscall, provider return or target clock observed.",
+  "objects": {
+    "/home/bticino/scheduling_manager/scheduling_manager": {
+      "DT_NEEDED": [
+        "libapplogger.so.1",
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "libdw.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-armhf.so.3"
+      ],
+      "selected_symbols": [
+        "12: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_mutex_lock@GLIBC_2.4 (2)",
+        "14: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_mutex_init@GLIBC_2.4 (2)",
+        "66: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_cond_clockwait@GLIBC_2.34 (12)",
+        "153: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@GLIBCXX_3.4.22 (10)",
+        "178: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_mutex_destroy@GLIBC_2.4 (2)",
+        "219: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt6chrono3_V212steady_clock3nowEv@GLIBCXX_3.4.19 (6)",
+        "233: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt18condition_variableC1Ev@GLIBCXX_3.4.11 (17)",
+        "266: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt18condition_variable4waitERSt11unique_lockISt5mutexE@GLIBCXX_3.4.11 (17)",
+        "291: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt18condition_variable10notify_allEv@GLIBCXX_3.4.11 (17)",
+        "304: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt6thread6detachEv@GLIBCXX_3.4.11 (17)",
+        "319: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt18condition_variableD1Ev@GLIBCXX_3.4.11 (17)",
+        "342: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_mutex_unlock@GLIBC_2.4 (2)"
+      ]
+    },
+    "/usr/lib/libstdc++.so.6.0.29": {
+      "DT_NEEDED": [
+        "libm.so.6",
+        "libc.so.6",
+        "ld-linux-armhf.so.3",
+        "libgcc_s.so.1"
+      ],
+      "selected_symbols": [
+        "24: 00000000     0 FUNC    GLOBAL DEFAULT  UND clock_gettime@GLIBC_2.17 (54)",
+        "90: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_mutex_unlock@GLIBC_2.4 (48)",
+        "98: 00000000     0 FUNC    GLOBAL DEFAULT  UND pthread_mutex_lock@GLIBC_2.4 (48)",
+        "838: 0009b269    32 FUNC    GLOBAL DEFAULT   12 _ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@@GLIBCXX_3.4.22",
+        "1348: 0009754d    10 FUNC    GLOBAL DEFAULT   12 _ZNSt18condition_variable4waitERSt11unique_lockISt5mutexE@@GLIBCXX_3.4.11",
+        "1607: 00097531    16 FUNC    GLOBAL DEFAULT   12 _ZNSt18condition_variableC1Ev@@GLIBCXX_3.4.11",
+        "2279: 00097541    12 FUNC    GLOBAL DEFAULT   12 _ZNSt18condition_variableD2Ev@@GLIBCXX_3.4.11",
+        "2451: 00094aed     8 FUNC    GLOBAL DEFAULT   12 _ZNSt12__basic_fileIcEC2EP15pthread_mutex_t@@GLIBCXX_3.4",
+        "2662: 0007db51    26 FUNC    GLOBAL DEFAULT   12 _ZNSt22condition_variable_anyC2Ev@@GLIBCXX_3.4.11",
+        "2943: 0007db6d    12 FUNC    GLOBAL DEFAULT   12 _ZNSt22condition_variable_anyD1Ev@@GLIBCXX_3.4.11",
+        "3000: 0009b375   228 FUNC    GLOBAL DEFAULT   12 _ZNSt6thread15_M_start_threadESt10shared_ptrINS_10_Impl_baseEEPFvvE@@GLIBCXX_3.4.21",
+        "3731: 000959cd    42 FUNC    GLOBAL DEFAULT   12 _ZNSt6chrono3_V212steady_clock3nowEv@@GLIBCXX_3.4.19",
+        "3738: 0009755d     4 FUNC    GLOBAL DEFAULT   12 _ZNSt18condition_variable10notify_allEv@@GLIBCXX_3.4.11",
+        "4015: 000975b9    52 FUNC    GLOBAL DEFAULT   12 _ZSt25notify_all_at_thread_exitRSt18condition_variableSt11unique_lockISt5mutexE@@GLIBCXX_3.4.21",
+        "4247: 0009b459   196 FUNC    GLOBAL DEFAULT   12 _ZNSt6thread15_M_start_threadESt10shared_ptrINS_10_Impl_baseEE@@GLIBCXX_3.4.11",
+        "4288: 0009b251    24 FUNC    GLOBAL DEFAULT   12 _ZNSt6thread6detachEv@@GLIBCXX_3.4.11",
+        "4658: 00094aed     8 FUNC    GLOBAL DEFAULT   12 _ZNSt12__basic_fileIcEC1EP15pthread_mutex_t@@GLIBCXX_3.4",
+        "4736: 00097531    16 FUNC    GLOBAL DEFAULT   12 _ZNSt18condition_variableC2Ev@@GLIBCXX_3.4.11",
+        "4789: 00097559     4 FUNC    GLOBAL DEFAULT   12 _ZNSt18condition_variable10notify_oneEv@@GLIBCXX_3.4.11",
+        "5015: 00097541    12 FUNC    GLOBAL DEFAULT   12 _ZNSt18condition_variableD1Ev@@GLIBCXX_3.4.11",
+        "5431: 0007db51    26 FUNC    GLOBAL DEFAULT   12 _ZNSt22condition_variable_anyC1Ev@@GLIBCXX_3.4.11",
+        "6121: 0007db6d    12 FUNC    GLOBAL DEFAULT   12 _ZNSt22condition_variable_anyD2Ev@@GLIBCXX_3.4.11"
+      ]
+    }
+  }
+}

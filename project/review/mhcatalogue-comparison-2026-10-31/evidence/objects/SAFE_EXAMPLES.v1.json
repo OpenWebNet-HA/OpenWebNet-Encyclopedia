@@ -1,0 +1,1943 @@
+{
+  "firmware": {
+    "canonical_product_probe": [
+      {
+        "commercial_rows": [],
+        "exact_code": "F454",
+        "firmwares": []
+      },
+      {
+        "commercial_rows": [],
+        "exact_code": "MH202",
+        "firmwares": []
+      },
+      {
+        "commercial_rows": [],
+        "exact_code": "MyHomeServer1",
+        "firmwares": []
+      }
+    ],
+    "conf_type_dictionary": [
+      {
+        "descr": "zone/room address",
+        "id_conf_type": 1
+      },
+      {
+        "descr": "point to point address",
+        "id_conf_type": 2
+      },
+      {
+        "descr": "group",
+        "id_conf_type": 3
+      },
+      {
+        "descr": "mode",
+        "id_conf_type": 4
+      }
+    ],
+    "fields": [
+      {
+        "conf_name": "M",
+        "hidden": 0,
+        "id_conf": 1541,
+        "id_conf_data_type": 3,
+        "id_conf_type": 4,
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 0,
+        "progressive": 0,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "ADDR_TYPE",
+        "hidden": 0,
+        "id_conf": 1542,
+        "id_conf_data_type": 3,
+        "id_conf_type": 0,
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 1,
+        "progressive": 1,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "CC",
+        "hidden": 0,
+        "id_conf": 218,
+        "id_conf_data_type": 2,
+        "id_conf_type": 0,
+        "id_firmware": 0,
+        "id_key_object": 39,
+        "idx": -1,
+        "progressive": 1,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "A",
+        "hidden": 0,
+        "id_conf": 315,
+        "id_conf_data_type": 1,
+        "id_conf_type": 0,
+        "id_firmware": 0,
+        "id_key_object": 39,
+        "idx": 0,
+        "progressive": 0,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "PL",
+        "hidden": 0,
+        "id_conf": 316,
+        "id_conf_data_type": 2,
+        "id_conf_type": 0,
+        "id_firmware": 0,
+        "id_key_object": 39,
+        "idx": 0,
+        "progressive": 0,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "A",
+        "hidden": 1,
+        "id_conf": 1543,
+        "id_conf_data_type": 2,
+        "id_conf_type": 0,
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 2,
+        "progressive": 2,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G1",
+        "hidden": 0,
+        "id_conf": 219,
+        "id_conf_data_type": 2,
+        "id_conf_type": 0,
+        "id_firmware": 0,
+        "id_key_object": 39,
+        "idx": -1,
+        "progressive": 2,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "PL",
+        "hidden": 1,
+        "id_conf": 1544,
+        "id_conf_data_type": 2,
+        "id_conf_type": 0,
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 2,
+        "progressive": 3,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G",
+        "hidden": 1,
+        "id_conf": 1545,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 2,
+        "progressive": 4,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "INST_LEV",
+        "hidden": 0,
+        "id_conf": 1546,
+        "id_conf_data_type": 3,
+        "id_conf_type": "",
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 3,
+        "progressive": 5,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "DEST_LEV",
+        "hidden": 0,
+        "id_conf": 1547,
+        "id_conf_data_type": 3,
+        "id_conf_type": 0,
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 4,
+        "progressive": 6,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "PL_R",
+        "hidden": 1,
+        "id_conf": 1548,
+        "id_conf_data_type": 2,
+        "id_conf_type": "",
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 5,
+        "progressive": 8,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "A_R",
+        "hidden": 1,
+        "id_conf": 1549,
+        "id_conf_data_type": 2,
+        "id_conf_type": "",
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 5,
+        "progressive": 7,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "PROXIMITY_ENABLE",
+        "hidden": 1,
+        "id_conf": 4379,
+        "id_conf_data_type": 4,
+        "id_conf_type": "",
+        "id_firmware": 0,
+        "id_key_object": 480,
+        "idx": 8,
+        "progressive": 7,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G1",
+        "hidden": 0,
+        "id_conf": 1332,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 240,
+        "progressive": 21,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G2",
+        "hidden": 0,
+        "id_conf": 1333,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 241,
+        "progressive": 22,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G3",
+        "hidden": 0,
+        "id_conf": 1334,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 242,
+        "progressive": 23,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G4",
+        "hidden": 0,
+        "id_conf": 1335,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 243,
+        "progressive": 24,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G5",
+        "hidden": 0,
+        "id_conf": 1336,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 244,
+        "progressive": 25,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G6",
+        "hidden": 0,
+        "id_conf": 1337,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 245,
+        "progressive": 26,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G7",
+        "hidden": 0,
+        "id_conf": 1338,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 246,
+        "progressive": 27,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G8",
+        "hidden": 0,
+        "id_conf": 1339,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 247,
+        "progressive": 28,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G9",
+        "hidden": 0,
+        "id_conf": 1340,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 248,
+        "progressive": 29,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G10",
+        "hidden": 0,
+        "id_conf": 1341,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 249,
+        "progressive": 30,
+        "read_only": "",
+        "visible": 1
+      }
+    ],
+    "new39_collections": [
+      {
+        "id_collection": 1,
+        "id_key_object": 39,
+        "max_device": "N"
+      },
+      {
+        "id_collection": 10,
+        "id_key_object": 39,
+        "max_device": "N"
+      },
+      {
+        "id_collection": 156,
+        "id_key_object": 39,
+        "max_device": "N"
+      },
+      {
+        "id_collection": 2,
+        "id_key_object": 39,
+        "max_device": "N"
+      },
+      {
+        "id_collection": 3,
+        "id_key_object": 39,
+        "max_device": "N"
+      },
+      {
+        "id_collection": 4,
+        "id_key_object": 39,
+        "max_device": "N"
+      },
+      {
+        "id_collection": 5,
+        "id_key_object": 39,
+        "max_device": "N"
+      },
+      {
+        "id_collection": 6,
+        "id_key_object": 39,
+        "max_device": "N"
+      },
+      {
+        "id_collection": 7,
+        "id_key_object": 39,
+        "max_device": "N"
+      },
+      {
+        "id_collection": 8,
+        "id_key_object": 39,
+        "max_device": "N"
+      },
+      {
+        "id_collection": 9,
+        "id_key_object": 39,
+        "max_device": "N"
+      }
+    ],
+    "new39_object_firmware": [
+      {
+        "id_firmware": 321,
+        "id_key_object": 39,
+        "id_object_firmware": 71
+      }
+    ],
+    "new39_slots": [
+      {
+        "first_slot": 0,
+        "fixed_ko": 0,
+        "id_object_firmware": 71,
+        "id_slot": 71
+      }
+    ],
+    "new39_systems": [
+      {
+        "id_key_object": 39,
+        "id_system": 1
+      }
+    ],
+    "numeric_range_metadata": [
+      {
+        "digit": "",
+        "id_conf": 218,
+        "id_conf_range": 364,
+        "max_value": 8,
+        "min_value": 1,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 219,
+        "id_conf_range": 365,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": 2,
+        "id_conf": 315,
+        "id_conf_range": 779,
+        "max_value": 10,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 316,
+        "id_conf_range": 780,
+        "max_value": 9,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1332,
+        "id_conf_range": 3267,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1333,
+        "id_conf_range": 3268,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1334,
+        "id_conf_range": 3269,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1335,
+        "id_conf_range": 3270,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1336,
+        "id_conf_range": 3271,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1337,
+        "id_conf_range": 3272,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1338,
+        "id_conf_range": 3273,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1339,
+        "id_conf_range": 3274,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1340,
+        "id_conf_range": 3275,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1341,
+        "id_conf_range": 3276,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1541,
+        "id_conf_range": 3764,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1541,
+        "id_conf_range": 3765,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1541,
+        "id_conf_range": 3766,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1541,
+        "id_conf_range": 3767,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1542,
+        "id_conf_range": 3768,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1542,
+        "id_conf_range": 3769,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1542,
+        "id_conf_range": 3770,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1542,
+        "id_conf_range": 3771,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1542,
+        "id_conf_range": 3772,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1543,
+        "id_conf_range": 3773,
+        "max_value": 10,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1544,
+        "id_conf_range": 3774,
+        "max_value": 15,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1545,
+        "id_conf_range": 3775,
+        "max_value": 255,
+        "min_value": 1,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3776,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3777,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3778,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3779,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3780,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3781,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3782,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3783,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3784,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3785,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3786,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3787,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3788,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3789,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3790,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3791,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3792,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3793,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1548,
+        "id_conf_range": 3794,
+        "max_value": 15,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1549,
+        "id_conf_range": 3795,
+        "max_value": 10,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7908,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7909,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7910,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7911,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7912,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7913,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7914,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7915,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7916,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7917,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7918,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7919,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7920,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7921,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7922,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7923,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7924,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7925,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 4379,
+        "id_conf_range": 34427,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 4379,
+        "id_conf_range": 34428,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 4379,
+        "id_conf_range": 34429,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      }
+    ]
+  },
+  "suite": {
+    "canonical_product_probe": [
+      {
+        "commercial_rows": [
+          {
+            "code": "F454",
+            "id_device": 1455,
+            "id_item": 1455
+          }
+        ],
+        "exact_code": "F454",
+        "firmwares": [
+          {
+            "FW_default": 1,
+            "firmware_R": 0,
+            "firmware_V": 2,
+            "id_firmware": 101,
+            "id_item": 1455,
+            "id_status": 0,
+            "slots": 2
+          },
+          {
+            "FW_default": 0,
+            "firmware_R": 0,
+            "firmware_V": 1,
+            "id_firmware": 6,
+            "id_item": 1455,
+            "id_status": 0,
+            "slots": 2
+          }
+        ]
+      },
+      {
+        "commercial_rows": [
+          {
+            "code": "MH202",
+            "id_device": 2222,
+            "id_item": 1902
+          }
+        ],
+        "exact_code": "MH202",
+        "firmwares": [
+          {
+            "FW_default": 1,
+            "firmware_R": 0,
+            "firmware_V": 1,
+            "id_firmware": 561,
+            "id_item": 1902,
+            "id_status": 0,
+            "slots": 1
+          }
+        ]
+      },
+      {
+        "commercial_rows": [
+          {
+            "code": "MyHomeServer1",
+            "id_device": 2552,
+            "id_item": 2198
+          }
+        ],
+        "exact_code": "MyHomeServer1",
+        "firmwares": [
+          {
+            "FW_default": 0,
+            "firmware_R": 0,
+            "firmware_V": 1,
+            "id_firmware": 729,
+            "id_item": 2198,
+            "id_status": 0,
+            "slots": 2
+          },
+          {
+            "FW_default": 0,
+            "firmware_R": 1,
+            "firmware_V": 1,
+            "id_firmware": 812,
+            "id_item": 2198,
+            "id_status": 0,
+            "slots": 2
+          },
+          {
+            "FW_default": 0,
+            "firmware_R": 2,
+            "firmware_V": 1,
+            "id_firmware": 813,
+            "id_item": 2198,
+            "id_status": 0,
+            "slots": 2
+          },
+          {
+            "FW_default": 0,
+            "firmware_R": 0,
+            "firmware_V": 2,
+            "id_firmware": 814,
+            "id_item": 2198,
+            "id_status": 0,
+            "slots": 2
+          },
+          {
+            "FW_default": 0,
+            "firmware_R": 1,
+            "firmware_V": 2,
+            "id_firmware": 815,
+            "id_item": 2198,
+            "id_status": 0,
+            "slots": 2
+          },
+          {
+            "FW_default": 0,
+            "firmware_R": 2,
+            "firmware_V": 2,
+            "id_firmware": 816,
+            "id_item": 2198,
+            "id_status": 0,
+            "slots": 2
+          },
+          {
+            "FW_default": 0,
+            "firmware_R": 14,
+            "firmware_V": 2,
+            "id_firmware": 817,
+            "id_item": 2198,
+            "id_status": 0,
+            "slots": 2
+          },
+          {
+            "FW_default": 0,
+            "firmware_R": 20,
+            "firmware_V": 2,
+            "id_firmware": 818,
+            "id_item": 2198,
+            "id_status": 0,
+            "slots": 2
+          },
+          {
+            "FW_default": 0,
+            "firmware_R": 30,
+            "firmware_V": 2,
+            "id_firmware": 821,
+            "id_item": 2198,
+            "id_status": 0,
+            "slots": 2
+          },
+          {
+            "FW_default": 0,
+            "firmware_R": 31,
+            "firmware_V": 2,
+            "id_firmware": 825,
+            "id_item": 2198,
+            "id_status": 0,
+            "slots": 2
+          },
+          {
+            "FW_default": 0,
+            "firmware_R": 32,
+            "firmware_V": 2,
+            "id_firmware": 831,
+            "id_item": 2198,
+            "id_status": 0,
+            "slots": 2
+          },
+          {
+            "FW_default": 0,
+            "firmware_R": 0,
+            "firmware_V": 3,
+            "id_firmware": 836,
+            "id_item": 2198,
+            "id_status": 0,
+            "slots": 2
+          },
+          {
+            "FW_default": 0,
+            "firmware_R": 60,
+            "firmware_V": 2,
+            "id_firmware": 839,
+            "id_item": 2198,
+            "id_status": 0,
+            "slots": 2
+          }
+        ]
+      }
+    ],
+    "conf_type_dictionary": [
+      {
+        "descr": "zone/room address",
+        "id_conf_type": 1
+      },
+      {
+        "descr": "point to point address",
+        "id_conf_type": 2
+      },
+      {
+        "descr": "group",
+        "id_conf_type": 3
+      },
+      {
+        "descr": "mode",
+        "id_conf_type": 4
+      }
+    ],
+    "fields": [
+      {
+        "conf_name": "M",
+        "hidden": 0,
+        "id_conf": 1541,
+        "id_conf_data_type": 3,
+        "id_conf_type": 4,
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 0,
+        "progressive": 1,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "ADDR_TYPE",
+        "hidden": 0,
+        "id_conf": 1542,
+        "id_conf_data_type": 3,
+        "id_conf_type": "",
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 1,
+        "progressive": 2,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "A",
+        "hidden": 1,
+        "id_conf": 1543,
+        "id_conf_data_type": 2,
+        "id_conf_type": "",
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 2,
+        "progressive": 3,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "PL",
+        "hidden": 1,
+        "id_conf": 1544,
+        "id_conf_data_type": 2,
+        "id_conf_type": "",
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 2,
+        "progressive": 4,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G",
+        "hidden": 1,
+        "id_conf": 1545,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 2,
+        "progressive": 5,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "INST_LEV",
+        "hidden": 0,
+        "id_conf": 1546,
+        "id_conf_data_type": 3,
+        "id_conf_type": "",
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 3,
+        "progressive": 6,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "DEST_LEV",
+        "hidden": 0,
+        "id_conf": 1547,
+        "id_conf_data_type": 3,
+        "id_conf_type": "",
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 4,
+        "progressive": 7,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "PL_R",
+        "hidden": 1,
+        "id_conf": 1548,
+        "id_conf_data_type": 2,
+        "id_conf_type": "",
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 5,
+        "progressive": 9,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "A_R",
+        "hidden": 1,
+        "id_conf": 1549,
+        "id_conf_data_type": 2,
+        "id_conf_type": "",
+        "id_firmware": 0,
+        "id_key_object": 401,
+        "idx": 5,
+        "progressive": 8,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "PROXIMITY_ENABLE",
+        "hidden": 0,
+        "id_conf": 4379,
+        "id_conf_data_type": 4,
+        "id_conf_type": "",
+        "id_firmware": 0,
+        "id_key_object": 480,
+        "idx": 8,
+        "progressive": 7,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G1",
+        "hidden": 0,
+        "id_conf": 1332,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 240,
+        "progressive": 30,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G2",
+        "hidden": 0,
+        "id_conf": 1333,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 241,
+        "progressive": 31,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G3",
+        "hidden": 0,
+        "id_conf": 1334,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 242,
+        "progressive": 32,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G4",
+        "hidden": 0,
+        "id_conf": 1335,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 243,
+        "progressive": 33,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G5",
+        "hidden": 0,
+        "id_conf": 1336,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 244,
+        "progressive": 34,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G6",
+        "hidden": 0,
+        "id_conf": 1337,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 245,
+        "progressive": 35,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G7",
+        "hidden": 0,
+        "id_conf": 1338,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 246,
+        "progressive": 36,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G8",
+        "hidden": 0,
+        "id_conf": 1339,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 247,
+        "progressive": 37,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G9",
+        "hidden": 0,
+        "id_conf": 1340,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 248,
+        "progressive": 38,
+        "read_only": "",
+        "visible": 1
+      },
+      {
+        "conf_name": "G10",
+        "hidden": 0,
+        "id_conf": 1341,
+        "id_conf_data_type": 2,
+        "id_conf_type": 3,
+        "id_firmware": 0,
+        "id_key_object": 514,
+        "idx": 249,
+        "progressive": 39,
+        "read_only": "",
+        "visible": 1
+      }
+    ],
+    "new39_collections": [],
+    "new39_object_firmware": [],
+    "new39_slots": [],
+    "new39_systems": [],
+    "numeric_range_metadata": [
+      {
+        "digit": "",
+        "id_conf": 1332,
+        "id_conf_range": 3267,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1333,
+        "id_conf_range": 3268,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1334,
+        "id_conf_range": 3269,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1335,
+        "id_conf_range": 3270,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1336,
+        "id_conf_range": 3271,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1337,
+        "id_conf_range": 3272,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1338,
+        "id_conf_range": 3273,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1339,
+        "id_conf_range": 3274,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1340,
+        "id_conf_range": 3275,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1341,
+        "id_conf_range": 3276,
+        "max_value": 255,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1542,
+        "id_conf_range": 3768,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1542,
+        "id_conf_range": 3769,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1542,
+        "id_conf_range": 3770,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1542,
+        "id_conf_range": 3771,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1542,
+        "id_conf_range": 3772,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1543,
+        "id_conf_range": 3773,
+        "max_value": 10,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1544,
+        "id_conf_range": 3774,
+        "max_value": 15,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1545,
+        "id_conf_range": 3775,
+        "max_value": 255,
+        "min_value": 1,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3776,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3777,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3778,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3779,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3780,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3781,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3782,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3783,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3784,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3785,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3786,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3787,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3788,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3789,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3790,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3791,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3792,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1547,
+        "id_conf_range": 3793,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1548,
+        "id_conf_range": 3794,
+        "max_value": 15,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1549,
+        "id_conf_range": 3795,
+        "max_value": 10,
+        "min_value": 0,
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7908,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7909,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7910,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7911,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7912,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7913,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7914,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7915,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7916,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7917,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7918,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7919,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7920,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7921,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7922,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7923,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7924,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1546,
+        "id_conf_range": 7925,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 4379,
+        "id_conf_range": 34427,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 4379,
+        "id_conf_range": 34428,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 4379,
+        "id_conf_range": 34429,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1541,
+        "id_conf_range": 38098,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1541,
+        "id_conf_range": 38099,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1541,
+        "id_conf_range": 38100,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      },
+      {
+        "digit": "",
+        "id_conf": 1541,
+        "id_conf_range": 38101,
+        "max_value": "",
+        "min_value": "",
+        "step": 1
+      }
+    ]
+  }
+}

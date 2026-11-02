@@ -1,0 +1,27 @@
+
+/usr/lib/libglib-2.0.so.0.7200.3:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000592d0 <g_timeout_source_new@@Base>:
+   592d0:	d503233f 	paciasp
+   592d4:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+   592d8:	b00007c2 	adrp	x2, 152000 <glib_major_version@@Base+0x36af8>
+   592dc:	910003fd 	mov	x29, sp
+   592e0:	a90153f3 	stp	x19, x20, [sp, #16]
+   592e4:	2a0003f4 	mov	w20, w0
+   592e8:	52800d01 	mov	w1, #0x68                  	// #104
+   592ec:	f9476c40 	ldr	x0, [x2, #3800]
+   592f0:	97ffee8c 	bl	54d20 <g_source_new@@Base>
+   592f4:	b9006014 	str	w20, [x0, #96]
+   592f8:	aa0003f3 	mov	x19, x0
+   592fc:	97fff7b5 	bl	571d0 <g_get_monotonic_time@@Base>
+   59300:	aa0003e1 	mov	x1, x0
+   59304:	aa1303e0 	mov	x0, x19
+   59308:	97fff1ce 	bl	55a40 <g_source_set_ready_time@@Base+0x110>
+   5930c:	aa1303e0 	mov	x0, x19
+   59310:	a94153f3 	ldp	x19, x20, [sp, #16]
+   59314:	a8c27bfd 	ldp	x29, x30, [sp], #32
+   59318:	d50323bf 	autiasp
+   5931c:	d65f03c0 	ret

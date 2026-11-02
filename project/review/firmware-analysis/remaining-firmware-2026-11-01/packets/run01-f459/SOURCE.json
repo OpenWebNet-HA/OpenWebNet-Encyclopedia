@@ -1,0 +1,189 @@
+{
+  "ELF_class": 32,
+  "PT_LOAD": [
+    {
+      "VA": "0x0",
+      "file_bytes": 40840,
+      "flags": 5,
+      "memory_bytes": 40840,
+      "offset": 0
+    },
+    {
+      "VA": "0x12000",
+      "file_bytes": 816,
+      "flags": 6,
+      "memory_bytes": 832,
+      "offset": 40960
+    }
+  ],
+  "caller_and_runtime": "Actual natural constructorcaller, validobject/provider/OS/FS/allocation/normalreturns and actual DBcreation/schema/rows/lifetime remain unproved",
+  "calls": [
+    {
+      "GOT_relocation_VA": "0x122a0",
+      "PLT_VA": "0x234c",
+      "PLT_bytes_hex": "00c68fe20fca8ce24cffbce5",
+      "actual_relocation": "000122a0  00004816 R_ARM_JUMP_SLOT        00000000   sqlite3_open",
+      "call_VA": "0x6838",
+      "symbol": "sqlite3_open"
+    },
+    {
+      "GOT_relocation_VA": "0x12224",
+      "PLT_VA": "0x21d8",
+      "PLT_bytes_hex": "00c68fe210ca8ce244f0bce5",
+      "actual_relocation": "00012224  00002b16 R_ARM_JUMP_SLOT        00000000   sqlite3_busy_handler",
+      "call_VA": "0x684c",
+      "symbol": "sqlite3_busy_handler"
+    },
+    {
+      "GOT_relocation_VA": "0x12258",
+      "PLT_VA": "0x2274",
+      "PLT_bytes_hex": "00c68fe20fca8ce2dcffbce5",
+      "actual_relocation": "00012258  00003716 R_ARM_JUMP_SLOT        00000000   sqlite3_exec",
+      "call_VA": "0x6870",
+      "symbol": "sqlite3_exec"
+    }
+  ],
+  "contract": "Constructor saves same receiverR4; ordinarynormalprelude -> filenameR0 andreceiver+8R1 sqlite3_open request -> receiver8handle/selectedbusyhandler -> SAMEhandleR0+DDL R1/nullR2/nullR3/GOTzErrorMessagepointer stackarg sqlite3_exec request. No selected intervening return-resultbranch. Selectedprefix ends6874 beforelaterQFile/source/error/unwind policy.",
+  "e_flags_hex": "0x5000202",
+  "endianness": "little",
+  "error_global_relocation": "00012300  00007b15 R_ARM_GLOB_DAT         0001233c   zErrorMessage",
+  "got_base_VA": "0x12180",
+  "guards": [
+    {
+      "VA": "0x67cc",
+      "word_hex": "e1a04000"
+    },
+    {
+      "VA": "0x682c",
+      "word_hex": "e59f0228"
+    },
+    {
+      "VA": "0x6830",
+      "word_hex": "e2841008"
+    },
+    {
+      "VA": "0x6834",
+      "word_hex": "e08f0000"
+    },
+    {
+      "VA": "0x6838",
+      "word_hex": "ebffeec3"
+    },
+    {
+      "VA": "0x683c",
+      "word_hex": "e59f121c"
+    },
+    {
+      "VA": "0x6840",
+      "word_hex": "e5940008"
+    },
+    {
+      "VA": "0x6844",
+      "word_hex": "e08f1001"
+    },
+    {
+      "VA": "0x6848",
+      "word_hex": "e3a02000"
+    },
+    {
+      "VA": "0x684c",
+      "word_hex": "ebffee61"
+    },
+    {
+      "VA": "0x6850",
+      "word_hex": "e59f320c"
+    },
+    {
+      "VA": "0x6854",
+      "word_hex": "e59f120c"
+    },
+    {
+      "VA": "0x6858",
+      "word_hex": "e7953003"
+    },
+    {
+      "VA": "0x685c",
+      "word_hex": "e3a02000"
+    },
+    {
+      "VA": "0x6860",
+      "word_hex": "e5940008"
+    },
+    {
+      "VA": "0x6864",
+      "word_hex": "e08f1001"
+    },
+    {
+      "VA": "0x6868",
+      "word_hex": "e58d3000"
+    },
+    {
+      "VA": "0x686c",
+      "word_hex": "e1a03002"
+    },
+    {
+      "VA": "0x6870",
+      "word_hex": "ebffee7f"
+    }
+  ],
+  "host_SQLite_queries_or_synthetic_DB": 0,
+  "literals": [
+    {
+      "VA": "0x90b4",
+      "bytes_hex": "2f746d702f706c7567696e2e7368617265642e73716c697465",
+      "text": "/tmp/plugin.shared.sqlite"
+    },
+    {
+      "VA": "0x9150",
+      "bytes_hex": "435245415445205441424c45207368617265642028706c7567696e6e616d652076617263686172283930292c206b65792076617263686172283930292c2076616c75652076617263686172283332373638292c2070657273697374656e7420626f6f6c65616e2064656661756c7420302c205052494d415259204b45592028706c7567696e6e616d652c6b65792929",
+      "text": "CREATE TABLE shared (pluginname varchar(90), key varchar(90), value varchar(32768), persistent boolean default 0, PRIMARY KEY (pluginname,key))"
+    }
+  ],
+  "machine": 40,
+  "new_database_bytes_recovered": false,
+  "original_bytes": 43208,
+  "original_execution": 0,
+  "original_path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libmhshared.so.1",
+  "original_sha256": "4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377",
+  "pool": [
+    {
+      "VA": "0x6a48",
+      "word_hex": "0000b9a0"
+    },
+    {
+      "VA": "0x6a5c",
+      "word_hex": "00002878"
+    },
+    {
+      "VA": "0x6a60",
+      "word_hex": "ffffbdd0"
+    },
+    {
+      "VA": "0x6a64",
+      "word_hex": "00000180"
+    },
+    {
+      "VA": "0x6a68",
+      "word_hex": "000028e4"
+    }
+  ],
+  "selected_constructor_symbol": [
+    "128: 000067c0   700 FUNC    GLOBAL DEFAULT   11 _ZN8mhSharedC1EP7QObject"
+  ],
+  "spans": [
+    {
+      "bytes_hex": "f04f2de97c529fe524d04de20040a0e1aaeeffeb70229fe505508fe0022095e768329fe5082082e210a084e2002084e5033095e70c3084e50a00a0e10010a0e3bceeffeb48229fe548329fe5022095e7182084e503b095e70c9084e200109be50900a0e1181081e288eeffeb28029fe5081084e200008fe0c3eeffeb1c129fe5",
+      "end_exclusive": "0x6840",
+      "name": "constructor-prefix",
+      "sha256": "6c6248e7bb0e5a1536429da9047c7c6d9f578418087c349d1380217530b07823",
+      "start_VA": "0x67c0"
+    },
+    {
+      "bytes_hex": "1c129fe5080094e501108fe00020a0e361eeffeb0c329fe50c129fe5033095e70020a0e3080094e501108fe000308de50230a0e17feeffeb",
+      "end_exclusive": "0x6874",
+      "name": "selected-following-requests",
+      "sha256": "63c0b25c6d195a7c032210462e0b31a42bb992754d94c576cae1c80d44a8fe60",
+      "start_VA": "0x683c"
+    }
+  ]
+}

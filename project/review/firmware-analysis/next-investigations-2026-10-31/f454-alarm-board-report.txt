@@ -1,0 +1,57 @@
+# F454 alarm lane: kernel board records and unresolved connector wiring
+
+This batch adds original kernel evidence beneath the previously established alarm pathname `/dev/ttyS2`. The original filesystem node is character device **major4/minor66**, matching index2 in the packaged `ttyS` driver whose base minor is64. The kernel contains **two DM365 serial records and a separate BASI board serial record**. Its ordinary selected board code requests registration of the DM365 serial device before registering the separate BASI serial device. Under successful compatible driver initialization and the stated slot-state premises, the latter can occupy the third serial slot. This is stronger than a pathname/name match, but it does **not** close the electrical connection to the documented SCS AI terminal.
+
+In particular, `/dev/ttyS2` must not be restated as “DM365 UART2.” The selected DM365 platform table has two nonterminating records, at address words `0x01c20000` and `0x01d06000`. The separate BASI record has address word `0x04000000`, interrupt65 and clock8000000. The actual connector, transceiver, external logic and pin wiring behind that separate address remain unknown here. Neither an XML bus_type nor a Linux ordinal supplies those facts.
+
+## Scope and reproducibility
+
+All work is static. Original ARM instructions, vendor processes, target syscalls, network, live gateway/bus/flash operations and native replay executed **0**. Host analysis reads files, decompresses the package's kernel, uses binutils, and requests read-only `debugfs stat` metadata from the original ext3 image. No image was mounted or modified. Connection/session/authentication/framing branches remain excluded; no prior alarm event or serial framing matrix was replayed.
+
+The collector verifies the original `extracted/uImage` U-Boot header and payload CRCs, decompresses its embedded gzip at file offset `0x3172`, and byte-compares it with the prior saved kernel. Its decompressed SHA256 is `7eca710bc8ebe4b9787cfedc6b0773e83170075ce4ba7e17d140639448153f84`. It independently decompresses the embedded IKCONFIG and checks it against the prior saved configuration. Exact original image/kernel/reference/tool-input identities, selected instruction words, table bytes, offsets and span hashes are adjacent JSON evidence.
+
+The compressed kernel symbol table is decoded from original bytes, not guessed from nearest disassembler labels: 28211 monotonically ordered addresses at decompressed offset `0x2a56e0`, count at `0x2c0fb0`, compressed names at `0x2c0fc0`, markers at `0x30c9e0`, 256 tokens at `0x30cba0` and their verified 256-entry token index at `0x30cf10`. Every 256-name marker is checked. Only selected board/serial symbols are exported. The selected virtual-address interpretation uses `_stext=0xc0008000`; these are kernel virtual addresses, distinct from the uImage's physical load/entry `0x80008000`.
+
+Reproduce with `python3 collect_board_v1.py --check` in this directory. Generation refuses existing outputs; successful checks compare exact bytes without writes. First report, collector and output bytes are frozen immediately under `initial-generated-v1/`, with the snapshot membership/hash index calculated before opening the index file. Four documentary references were frozen under `references-v1/` before generation, so later repository edits do not change this candidate's inputs.
+
+## Node and build-target attribution
+
+The recovered original kernel configuration selects `CONFIG_ARCH_DAVINCI_DM365=y`, `CONFIG_MACH_BASI=y`, `CONFIG_DAVINCI_MUX=y`, `CONFIG_SERIAL_8250=y`, and both compile-time/runtime 8250 counts3. This is a build target, not a physical probe or proof of the active kernel/configuration.
+
+Read-only original-image metadata gives `/dev/ttyS0` inode2674 major4/minor64; `/dev/ttyS1` inode2609 major4/minor65; `/dev/ttyS2` inode2630 major4/minor66. These are original packaged special nodes, not extracted placeholders or successful device opens. The previous reviewed ownership report already establishes that the selected scsai XML device pointer supplies `/dev/ttyS2` to the server's open request. That earlier alias/configuration/open-argument chain is retained as frozen provenance and is not presented as a new execution result.
+
+The original symbol `serial8250_reg` is at `0xc037d1d0`. Its selected fields are driver-name `serial`, device-name `ttyS`, major4, base minor64. At `serial8250_init:0xc0018130` the driver count is set to3, and `0xc0018134` calls `uart_register_driver` with this record. The latter's selected `0xc0184c20..0xc0184c4c` code copies the driver-name/device-name/major/base-minor fields into its allocated tty-driver structure. Full tty registration success, mutable overrides, boot parameters and actual runtime nodes are not observed.
+
+## Actual board device and platform tables
+
+The reconstructed `__mach_desc_BASI` at `0xc0021718` contains the pointer to `basi_init=0xc000ebe4` at record offset48, as well as the exact original name `BTicino BASI board`. This is the selected machine descriptor, not an observed boot-machine identifier. A pre-output draft expected the shortened string `BASI` and stopped at that assertion before any generated output write; exact report/collector drafts and the observed literal are retained under `development-before-first-generation/`. The parent authorized this source-precision correction before first generation; no generated candidate was replaced.
+
+The symbol `dm365_serial_device=0xc036b7f0` names `serial8250`, has platform ID0 and a platform-data pointer at offset80 to `dm365_serial_platform_data=0xc036b8b0`. The separate `basi_dm365_serial_device=0xc036d7f8` also names `serial8250`, has **platform ID1**, and its offset80 points to `basi_dm365_serial_platform_data=0xc036db58`. Platform-device ID1 is **not** Linux tty index1, XML bus_type1 or COSOAI descriptor34.
+
+| Original table record | Address word at +8 | Interrupt word at +12 | Clock word at +20 | Bytes at +28/+29/+30 | Flags at +32 | Type at +36 |
+| --- | --- | --- | --- | --- | --- | --- |
+| DM365 record0 | `0x01c20000` | 40 | 0 initially | `2,2,0` | `0x90000040` | 0 initially |
+| DM365 record1 | `0x01d06000` | 41 | 0 initially | `2,2,0` | `0x90000040` | 0 initially |
+| BASI separate record0 | `0x04000000` | 65 | 8000000 | `0,2,0` | `0x98000041` | 4 |
+
+Both arrays have an all-zero terminator after their selected records. The record stride48 and offset meanings are grounded in the original driver copies, not transferred from F454 application/COSO structures or an unrelated kernel header. The original `serial8250_probe:0xc0291c68..0xc0291d98` obtains platform_data from device+80, walks48-byte records while flags+32 is nonzero, and copies the table's address+8 into the temporary port+128, interrupt+12 into port+16, clock+20 into port+24, flags+32 into port+100, type+36 into port+112, and bytes+28/+29 into port+33/+34 before requesting `serial8250_register_port`. The callback is an original available provider; actual platform matching/probe timing and completed runtime registration are not executed here.
+
+## Initialization, pinmux and index allocation boundaries
+
+Within the selected BASI code, `0xc000efdc..0xc000eff0` requests pinmux entries36 and37, loads the configuration pointer whose enabled mask is7, and calls `davinci_serial_init`. That helper walks **two** DM365 records, checks the supplied mask where applicable, obtains clocks and requests `platform_device_register(dm365_serial_device)` at `0xc000daf4`. Its register/clock operations are inspected as code only, never performed.
+
+Later, `basi_init:0xc000f230..0xc000f234` loads literal pool `0xc000f384→basi_dm365_serial_device` and requests `platform_device_register`. The earlier call at `0xc000efd8` is **not** this registration: its literal is a LED-device pointer. This pre-output distinction was resolved by original operands; no generated candidate was overwritten.
+
+The original `dm365_pins` table at `0xc02986ac`, indexed in16-byte records by `davinci_cfg_reg`, names entries36/37 **UART1_RXD_34** and **UART1_TXD_25**. Their table configuration bytes are respectively `[16,14,3,3]` and `[12,29,3,3]`; the selected register-update code uses the byte fields as register offset/shift/mask/value. The suffixes34/25 are retained as **literal table labels**, not interpreted as package-ball, PCB-header or connector pin numbers. These entries relate the selected DM365 UART1 pinmux request to named SoC mux records; they do not establish the separate BASI serial record's connector wiring. No actual register values or pin voltage was read.
+
+`serial8250_register_port:0xc0187280..0xc0187330` first searches existing ports with `uart_match_port`, then searches for a slot with type+112 and I/O-base+0 both zero; another fallback can choose an untyped slot. It copies the selected port fields and calls `uart_add_one_port`; on its success it returns that slot's line word+124 at `0xc0187420`. `serial8250_isa_init_ports` initializes line ordinals, with200-byte port records. Therefore the BASI platform ID or table index does not force a particular tty ordinal.
+
+The finite host ledger states the sufficient limited premise: if normal DM365 records occupy typed slots0/1, no earlier match/other registration or override changes them, slot2 is available, and the BASI probe/registration succeeds, the distinct BASI record selects slot2, corresponding to the packaged tty prefix/base-minor and node major4/minor66. This is a conditional source composition, **not** a captured initialization order, proof of all clock/registration outcomes, dynamic major/minor observation, or complete kernel boot. The raw ordered registration requests support this possibility; the unobserved probe/slot state remains material.
+
+## Product terminal and remaining attribution gap
+
+The frozen reviewed device0002 page documents SCS AV and SCS AI terminal labels from `MQ00519-c-EN`, printed p499/PDF p1, and distinguishes their A/V/automation and burglar-alarm roles. This pass uses that existing reviewed synthesis; it does not re-extract a primary schematic/PDF or assert a schematic is globally unavailable. The selected kernel and packaged metadata provide no demonstrated net/connector relationship between the BASI serial record at `0x04000000` and that SCS AI terminal. They also do not identify a particular transceiver or explain the hardware behind interrupt65.
+
+High confidence: original image character-node identifiers; recovered target/configuration and symbol/table identities; concrete BASI/DM365 register-request operands; distinct record data; selected driver copies, mux labels and slot-selection code. Conditional: machine/driver activation, matching/provider success, normal-record typed allocation and third-slot assignment. Unresolved: actual ttyS2 runtime backing and, beyond that, electrical topology to the documented terminal and natural alarm event origin.
+
+The next decisive evidence would be a BASI circuit/net map or an independently established board-driver resource description linking address `0x04000000`/interrupt65 to the alarm interface and its connector. That work does not require reopening the excluded connection/auth/session/framing paths. Names, default ports, configured bus_type and a synthetic alarm frame are insufficient substitutes.

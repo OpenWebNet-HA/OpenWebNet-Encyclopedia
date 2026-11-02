@@ -1,0 +1,53 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/usr/lib/libjsoncpp.so.1.9.5:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00015ad4 <_ZN4Json5Value9initBasicENS_9ValueTypeEb@@Base>:
+   15ad4:	b5f0      	push	{r4, r5, r6, r7, lr}
+   15ad6:	4604      	mov	r4, r0
+   15ad8:	4d1b      	ldr	r5, [pc, #108]	@ (15b48 <_ZN4Json5Value9initBasicENS_9ValueTypeEb@@Base+0x74>)
+   15ada:	b083      	sub	sp, #12
+   15adc:	7a43      	ldrb	r3, [r0, #9]
+   15ade:	481b      	ldr	r0, [pc, #108]	@ (15b4c <_ZN4Json5Value9initBasicENS_9ValueTypeEb@@Base+0x78>)
+   15ae0:	447d      	add	r5, pc
+   15ae2:	f362 0300 	bfi	r3, r2, #0, #1
+   15ae6:	5828      	ldr	r0, [r5, r0]
+   15ae8:	6800      	ldr	r0, [r0, #0]
+   15aea:	9001      	str	r0, [sp, #4]
+   15aec:	f04f 0000 	mov.w	r0, #0
+   15af0:	2000      	movs	r0, #0
+   15af2:	9000      	str	r0, [sp, #0]
+   15af4:	f104 000c 	add.w	r0, r4, #12
+   15af8:	7221      	strb	r1, [r4, #8]
+   15afa:	4669      	mov	r1, sp
+   15afc:	7263      	strb	r3, [r4, #9]
+   15afe:	f7f5 eaba 	blx	b074 <_ZN4Json5Value8CommentsaSEOS1_@plt>
+   15b02:	9e00      	ldr	r6, [sp, #0]
+   15b04:	b17e      	cbz	r6, 15b26 <_ZN4Json5Value9initBasicENS_9ValueTypeEb@@Base+0x52>
+   15b06:	f106 0538 	add.w	r5, r6, #56	@ 0x38
+   15b0a:	f1a6 0710 	sub.w	r7, r6, #16
+   15b0e:	f855 0c08 	ldr.w	r0, [r5, #-8]
+   15b12:	42a8      	cmp	r0, r5
+   15b14:	d001      	beq.n	15b1a <_ZN4Json5Value9initBasicENS_9ValueTypeEb@@Base+0x46>
+   15b16:	f7f5 eb5a 	blx	b1cc <_ZdlPv@plt+0x4>
+   15b1a:	3d18      	subs	r5, #24
+   15b1c:	42bd      	cmp	r5, r7
+   15b1e:	d1f6      	bne.n	15b0e <_ZN4Json5Value9initBasicENS_9ValueTypeEb@@Base+0x3a>
+   15b20:	4630      	mov	r0, r6
+   15b22:	f7f5 eb54 	blx	b1cc <_ZdlPv@plt+0x4>
+   15b26:	2300      	movs	r3, #0
+   15b28:	4a09      	ldr	r2, [pc, #36]	@ (15b50 <_ZN4Json5Value9initBasicENS_9ValueTypeEb@@Base+0x7c>)
+   15b2a:	e9c4 3304 	strd	r3, r3, [r4, #16]
+   15b2e:	4b07      	ldr	r3, [pc, #28]	@ (15b4c <_ZN4Json5Value9initBasicENS_9ValueTypeEb@@Base+0x78>)
+   15b30:	447a      	add	r2, pc
+   15b32:	58d3      	ldr	r3, [r2, r3]
+   15b34:	681a      	ldr	r2, [r3, #0]
+   15b36:	9b01      	ldr	r3, [sp, #4]
+   15b38:	405a      	eors	r2, r3
+   15b3a:	f04f 0300 	mov.w	r3, #0
+   15b3e:	d101      	bne.n	15b44 <_ZN4Json5Value9initBasicENS_9ValueTypeEb@@Base+0x70>
+   15b40:	b003      	add	sp, #12
+   15b42:	bdf0      	pop	{r4, r5, r6, r7, pc}
+   15b44:	f7f5 ec04 	blx	b350 <__stack_chk_fail@plt>

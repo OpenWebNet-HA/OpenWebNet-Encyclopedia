@@ -1,0 +1,7 @@
+# BNLD serializer and selected local query
+
+Original source closes a selected schema-value join without executing JSON: the raw/final BNLD address points share serializer28178, despite distinct temporary BaseBnldCondition/final BnldCondition identities. The actual condition decoder supplies noOperator/higher/lower/equal/different→−1/0/1/2/3. Serializer status−1 emits signed level even−1; status0/1 emits on/off. Selected constructor-produced scalar coherence is conditional on ordinary providers, while member presence changes. No universal JSON roundtrip or physical meaning is proved.
+
+The actual query first calls ordinary lookup and returns a nonnull cached pair before selector/discriminator/response checks on that bounded leg. Selector0miss reaches opaque delegates, then conditional normal continuation waits for nonempty response-string length using this registry's mutex/CV. It is not a generic readiness flag, not action-domain+72, not verified freshness/ID correlation/type, and not observed elapsed time. Parser implementation and opaque delegates remain closed boundaries.
+
+Two static source areas, zero original/native/provider/JSON/clock/thread/OS/network/bus/physical execution and zero semantic host cases. Earlier execution ledgers remain unchanged. Exact original scheduler SHA2567d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26, ImageVFS/PT_LOAD/RTTI/relocation evidence and independent review define applicability to this packaged3.87.13 build. Curated OWN-DEV-0199 supplies product context only.

@@ -1,0 +1,22 @@
+[
+  {
+    "bytes": 43208,
+    "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libmhshared.so.1",
+    "sha256": "4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377"
+  },
+  {
+    "bytes": 1854,
+    "path": "work/f459-firmware/2.1.5/research/2026-11-01-night08-metadata/FORMAT_CONTEXT.json",
+    "sha256": "4036ef47f4a6b5bb6feb5e2aa5715d698462b88aa6fb0326e24b8104f9a5ae73"
+  },
+  {
+    "bytes": 9661,
+    "path": "work/f459-firmware/2.1.5/research/2026-11-01-night07-watcher/SOURCE.json",
+    "sha256": "af21885ba7d74f5bf909c84750061ba70e52a9d05f176ef6a473749c5f69fd59"
+  },
+  {
+    "bytes": 30310,
+    "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0198-f459-driver-manager.md",
+    "sha256": "b105f62875ebcba11d1989971a7674cee9b677a8010b49cfadee6a7bfff81423"
+  }
+]

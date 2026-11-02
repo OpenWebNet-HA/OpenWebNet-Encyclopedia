@@ -1,0 +1,26 @@
+[
+  {
+    "first_function_pointer": "0x24c9d",
+    "got_slot_va": "0x16651c",
+    "name": "SLEEP",
+    "offset_pool_va": "0x319e0",
+    "scope": "Original vtable/typeinfo identity; selected first method is not treated as an action execution entry.",
+    "stored_address_point_va": "0x15ffb8",
+    "typeinfo_name": "11SleepAction",
+    "typeinfo_name_va": "0x115538",
+    "typeinfo_va": "0x162ecc",
+    "vtable_header_va": "0x15ffb0"
+  },
+  {
+    "first_function_pointer": "0x24fa5",
+    "got_slot_va": "0x166f00",
+    "name": "SCENARIO",
+    "offset_pool_va": "0x319d8",
+    "scope": "Original vtable/typeinfo identity; selected first method is not treated as an action execution entry.",
+    "stored_address_point_va": "0x15ffac",
+    "typeinfo_name": "14ScenarioAction",
+    "typeinfo_name_va": "0x115524",
+    "typeinfo_va": "0x162ec0",
+    "vtable_header_va": "0x15ffa4"
+  }
+]

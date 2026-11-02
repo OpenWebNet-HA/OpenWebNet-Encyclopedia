@@ -1,0 +1,43 @@
+{
+  "checks": [
+    {
+      "path": "reset-alias/collect_alias_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "a5f792",
+          "wall_time_seconds": 0.152732145,
+          "exit_code": 0,
+          "original_token_count": 14,
+          "output": "{\"check\": true, \"outputs\": 27, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "path": "worker-ownership/collect_ownership_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "239997",
+          "wall_time_seconds": 0.274662762,
+          "exit_code": 0,
+          "original_token_count": 44,
+          "output": "{\"check\": true, \"outputs\": 19, \"spans\": 12, \"thread_state_tables\": 2, \"owner_chains\": 2, \"relative_relocations\": 16, \"byte_guards\": 12, \"inputs\": 6, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "path": "schema-activation/collect_activation_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "759e3b",
+          "wall_time_seconds": 0.043336761,
+          "exit_code": 0,
+          "original_token_count": 33,
+          "output": "{\"check\": true, \"outputs\": 15, \"spans\": 6, \"BL_checks\": 8, \"key_literals\": 10, \"instruction_guards\": 14, \"original_execution\": 0}\n"
+        }
+      }
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 This section documents the MyHOME Suite 3.5.38 implementation data that connects catalogue capability, OpenWebNet management workflows, validation, and scenario-editor capabilities.
 
-It describes the implementation represented by the preserved databases and support files. It does not claim a complete software-component architecture: the canonical corpus does not include application binaries, decompiled code, runtime traces of database access, or the format used to persist user-authored projects and scenarios.
+It describes the implementation represented by preserved databases, support files and selected statically inspected manufacturer assemblies. Device application catalogues and project/plant templates describe separate capability and persistence layers; selected ScenarioSuite methods identify generator call sites. These sources do not establish complete application architecture, runtime database-access traces or a genuine configured project/export.
 
 ## Reference
 
@@ -12,9 +12,12 @@ It describes the implementation represented by the preserved databases and suppo
 | Responsibilities and boundaries of each implementation store | [Data Store Responsibilities](data-store-responsibilities.md) |
 | How systems, frames, sequences, address rules, and timers are represented | [OpenWebNet Registry and State Machines](openwebnet-registry-and-state-machines.md) |
 | How product identity becomes firmware, Module, Object, and configuration capability | [Catalogue Resolution](catalogue-resolution.md) |
+| How the embedded MyHOMEServer1 catalogue differs from the Suite source | [MHCatalogue Source Profiles](mhcatalogue-source-profiles.md) |
 | How scenario-editor capabilities are represented and where execution evidence ends | [Scenario Capability Loading](scenario-capability-loading.md) |
 | How catalogue, protocol, and linked-property constraints combine | [Validation Layers](validation-layers.md) |
 | Resource keys, stored labels, UI terminology, and presentation boundaries | [Localization and Presentation](localization-and-presentation.md) |
+| Device-specific application items, behaviours and constraints | [Device Application Databases](device-application-databases.md) |
+| Project/plant templates, declared relationships and seed data | [Project and Plant Templates](project-and-plant-templates.md) |
 | Established behavior, safe inferences, unknowns, and investigation priorities | [Implementation Boundaries](implementation-boundaries.md) |
 
 ## Implementation-data pipeline
@@ -43,7 +46,7 @@ Confusing these layers produces common errors. A catalogue Object does not prove
 
 ## Source authority
 
-The canonical files and their SHA-256 fingerprints are registered in [`sources/manifest.yaml`](../sources/manifest.yaml). Database facts in this section describe that exact MyHOME Suite 3.5.38 source set; they are not protocol maxima or claims about later releases.
+The source catalogue is recorded in [`sources/manifest.yaml`](../sources/manifest.yaml); private preserved payloads and their SHA-256 identities are registered in the [artifact manifest](../sources/artifact-manifest.yaml). Database facts in this section describe that exact MyHOME Suite 3.5.38 source set; they are not protocol maxima or claims about later releases.
 
 The public OpenWebNet documents remain authoritative for published functional frame semantics. MyHOME Suite implementation data adds unpublished management structures and editor capability, but differences must be retained as source/version differences rather than silently reconciled.
 

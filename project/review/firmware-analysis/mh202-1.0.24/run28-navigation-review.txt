@@ -1,0 +1,50 @@
+# MH202 run28 later-navigation independent documentary review
+
+PASS for authoritative candidate-v3. The reviewer-requested same-object wording refinement and parent-detected relocation-link correction are resolved in separate immutable versions. This is host-only generator/source-locator, saved-record, byte-pin, link and version-preservation review; no firmware/original CPU execution, native replay, source collector execution, new firmware test or full inherited semantic re-audit. Only this NEW review is written.
+
+## Current candidate and reproduction
+
+I read build_later_navigation_v1.py, build_later_navigation_v2.py, build_later_navigation_v3.py, both VERSION_HISTORY records, current six candidate-v3 outputs and the three actual first-generation snapshot indexes/copies. `python3 -B work/mh202-firmware/research/2026-10-30/reconciliation/run28/build_later_navigation_v3.py --check` passes5 saved checkpoints,9 rows,413 input pins and6 outputs with new_original_execution0/new_tests0. Its check branch compares bytes only, without output writes or imports/execution of source/native collectors. Generation guards refuse existing output destinations and use exclusive creation; all three generated candidates and snapshots remain separate.
+
+Independent host checks, separate from the generator's own reconstruction, verified all413 input lengths/hashes,9 unique locator occurrences at their recorded source lines, exact source/review hashes,5 recorded PASS validations and historical original-visit subtotals, their retained document-byte snapshots,15 saved corpus result identities, and15 rendered local links. Every link resolves from the deeper candidate-v3 directory. Each of the three snapshot indexes has7 copied files; all21 copied files match their saved hash and current corresponding candidate/generator bytes. The first v1 hashes recorded before requesting refinement still match. This authenticates the preserved current candidates/first copies, not unknown drafts from unrelated checkpoints.
+
+## What this navigation establishes
+
+The9 rows cover23..27 only: utility deadline, conditional clock arithmetic, concrete utility-word setter, WHO25 translation/own STM, WHO14, WHO15, the original WHO25 manual join and positive WHO29 owner. They supplement the unchanged24-row through21 guide and separate2-row run22 supplement. They are locators/summaries, not a percentage, new command-domain table, fresh experiment or proof of every inherited assertion. New run28 source findings are deliberately excluded.
+
+Five saved checkpoints23..27 and their source/export/review/document identities are catalogued. Historical document bytes resolve through retained snapshots instead of mutable current pages. All15 canonical saved corpus records are recorded with their method/count scopes; this generator does not rerun them. Through27 totals are71 top-level entries including two stopped prefixes,31961 original visits+3165 declared primitives+132 original-definition redirects+27 EXIT returns+2 selector stops=35287 hooks. Setup writes and replays are separate, and tooling31/Device210 tests retain inherited run1 scope with wider gates pending.
+
+The current manual-WHO25 row correctly says SAME Q without reseeding and explicitly says application changes only envelope metadata4/8. It no longer implies an immutable envelope. Its boundary retains opaque API models and unexecuted actual source/timer/registry/callback/publication/OS/physical behavior. The corrected REPORT.v2 table identity/refinement and peer's source/saved-trace audit are distinguished from parent native replay. WHO29 remains positive packaged ownership plus a selected supplied getter/constructor-call boundary, without activation/current logger/wire/public-vocabulary/exclusive-owner promotion. Utility units remain conditional on provider/success/ABI and no physical measurement follows. Local state/timer/receipt and independent reverse examples do not become causal or physical proof.
+
+The saved base/catalog identities and earlier refinement/history-limit references are retained. In particular, neither current source PASS nor catalog hash reproduction authenticates unavailable run18/sound21 intermediate drafts. No full-source semantic re-audit is claimed for these inherited materials.
+
+## Preserved version history
+
+- V1's standalone row described Q as consumed unchanged, which could incorrectly imply that application metadata did not change. I requested a wording refinement before promotion and wrote no v1 review candidate. All v1 generator/outputs/initial-generated-v1 bytes remain intact.
+- V2 makes that wording precise and writes separate candidate-v2 files. Its relocation one directory deeper initially left report/validation Markdown links one level short. Parent found this before promotion and retained the entire v2/initial-generated-v2 candidate. Content-integrity reproduction alone did not certify those rendered links.
+- V3 changes those link depths, plus its separate destination/snapshot/version identities. The meaningful row wording and JSON source/count scopes remain those of corrected v2; verification-extension JSON is byte-identical across versions. Independent generator diffs show no source/result/count change. VERSION_HISTORY.json and VERSION_HISTORY.v3.json accurately identify both corrections and candidate-v3 as current.
+
+No further author correction is requested. This PASS certifies this bounded navigation/version audit and its current scope; final integration and final morning completion checks remain separate.
+
+## Exact reviewed identities
+
+| Reconciliation/run28-relative artifact | SHA256 |
+|---|---|
+|build_later_navigation_v1.py|e4f2c7530cd2c26fccfcbdb8a269c9abc26a867b8016aabbec608592e58461b8|
+|output-manifest.json|0eb8f9500df4e741cad11412848d74421071e9dbaa704eb33cedc4da6b0079b5|
+|initial-generated-v1/SNAPSHOT_INDEX.json|a56feb1ccdd66f8b1ec369ff020ca168fe3a3b0fbee7da6643844ab5ca928a62|
+|build_later_navigation_v2.py|026182476a81c26b94438676852be45942671d653d2e1c117f40419bcf6e9275|
+|candidate-v2/output-manifest.json|4c268ca54831079026406f4ce93848ecb7abc89c3ed42de12ef2f9547d0ccb1e|
+|candidate-v2/initial-generated-v2/SNAPSHOT_INDEX.json|3c8cbf4f3c0703e7d147868498ac52e4ff97794e9acae18dfaa0e9a6ea56b104|
+|build_later_navigation_v3.py|767cc62cd95b76a98f13d1ee04d5eb668506c1ef1d30d7304f93dc5e0c12c294|
+|candidate-v3/LATER_FINDINGS.json|878f303e251f2fdaba9181419ebf5ce8b8b515920140b40544fe1003dc3ab39b|
+|candidate-v3/LATER_FINDINGS.md|dad01efec97fce3645a644a29347d652b243d305429d1bbe49fa9d3c040bf347|
+|candidate-v3/VERIFICATION_EXTENSION.json|c937ec24cea4c6e52ca0d20361051fa569b6602f61e64bbed0b4b05352e2dbeb|
+|candidate-v3/VERIFICATION_EXTENSION.md|47e6cc03475f9fb90265f0054c53eff3252fa98d183ddafe9aaef341297ef2a9|
+|candidate-v3/SOURCE_PINS.json|cbd552ee2a753637cd949a741ad73d643bddead03139624e645d7cbc27b347c3|
+|candidate-v3/output-manifest.json|558ac47ad984b67cd5e5bbb957ff1d194d9ea7a6b7762610da4092aed4b11d30|
+|candidate-v3/initial-generated-v3/SNAPSHOT_INDEX.json|1383fed12763f9758e3591d08d134f53286839dc635fec0486bc9bfaa9be1125|
+|VERSION_HISTORY.json|5c77131a84118f73f7be9bb0f6ee4fd9b4a401680e985f6e5c4d8a5fbbac9299|
+|VERSION_HISTORY.v3.json|e67821f3436b511b54dffc6e571be5d128558237dd076760f4a6bef6c65b4f95|
+
+The manifests exclude themselves and later reviews, avoiding a self-pin cycle. Source/review/report locator identities are exhaustively recorded in current SOURCE_PINS/LATER_FINDINGS, not reconstructed or substituted in this review.

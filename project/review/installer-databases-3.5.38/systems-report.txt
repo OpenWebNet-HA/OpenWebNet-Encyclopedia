@@ -1,0 +1,97 @@
+# Four installer systems.sqlite catalogues: full structure and selected product constraints
+
+The four recovered databases share the same nine-table schema but contain different product catalogue data. The F454 variant has concrete camera, alarm-zone/scenario and advanced-control editor declarations. Their scope is **installer catalogue/UI metadata**, not installed objects, active hardware, firmware protocol acceptance or a complete implementation of a named validator. Every table and every row participates in the variant comparisons before these selected findings are interpreted.
+
+The strongest new distinctions are the F454's retained templates beneath six missing parent references; separate catalogue limits for VCT children, cameras and alarm structures; and actual touchscreen2.1 coordinate constants and control-behavior differences. Surrogate property/complex-row IDs shift heavily between variants, so changed IDs are not treated as changed product behavior.
+
+## Original identities, product applicability and method
+
+Inputs are the already conserved installer payloads under `work/installer-database-audit/2026-10-31/recovered/<SHA>.bin`, with installer-member provenance checked against AUDIT.json and PLAN.json. The parent performed archival/readback work; this analysis does not upload or independently certify remote storage.
+
+| Package and artifact ID suffix | Original SHA256 | Bytes | Catalogue product reference |
+| --- | --- | ---: | --- |
+| `1455_2.0_LGG`, `f454-1455-2.0-lgg-systems` | `fffc43f8d2fb5d05b8240aa4b6d449bcf5bf60339013aba2fb2301a42738e694` | 344064 | OWN-DEV-0002, F454 A/V bus web server |
+| `1768_1.0_BT/LG`, `device-1768-1.0-systems` | `73297a1449df378063b8a2ab23a8f1787a782df9ee6f00f7b2d702e3ec608e93` | 344064 | OWN-DEV-0047, MyHOME_Screen10 |
+| `1768_2.1_BT/LG`, `device-1768-2.1-systems` | `e44bbbd25ad849b38e52f58862c9b4e31240a01555115b68e4397584cb85308e` | 344064 | OWN-DEV-0047, separate2.1 package |
+| `1898_2.1_BT/LG`, `device-1898-2.1-systems` | `ad88777e1b3e2d11dd7efa6c79b080ec57258fdff3596c9c1ac5cc1ad0983214` | 344064 | OWN-DEV-0049, capacitive MyHOME_Screen10C |
+
+Full artifact IDs include prefix `myhome-suite-3.5.38-`. BT/LG member duplication is byte identity within each corresponding payload, not an inference that all four payloads are interchangeable. The package1455_2.0 label, Settings.DeviceFirmwareVersion string2, previously examined firmware2.0.51 and the installer3.5.38 are distinct version scopes. Canonical device references identify product roles; six frozen documentary/source reports preserve their exact capture bytes. No fresh manual, hardware or firmware compatibility test was performed.
+
+SQLite is opened through `uri=True` with `mode=ro&immutable=1`, `query_only=ON` and `trusted_schema=OFF`; both flags and unchanged before/after bytes are verified. All four integrity checks return ok and all declared foreign-key checks return no violations. The collector records every exact SQL statement/parameter and returned-row count. It never loads extensions, creates tables, evaluates stored expressions, invokes a vendor validator, executes vendor regular expressions or runs CLR/JavaScript/ARM/script code. No network or target process is used. Values for account/credential-bearing template families are not exported. Complete comparisons report changed keys/column names, not private values or per-secret hashes.
+
+## Complete nine-table inventory
+
+| Table | F4541455_2.0 | Screen1768_1.0 | Screen1768_2.1 | Capacitive1898_2.1 |
+| --- | ---: | ---: | ---: | ---: |
+| ApplicationItems | 211 | 217 | 228 | 228 |
+| ApplicationProperties | 1416 | 1436 | 1498 | 1498 |
+| ApplicationComplexProperties | 2635 | 2770 | 2836 | 2836 |
+| Behaviours | 212 | 194 | 243 | 244 |
+| ItemValidations | 36 | 41 | 41 | 41 |
+| PropertyValidations | 129 | 124 | 130 | 130 |
+| ApplicationCurrencies | 15 | 15 | 15 | 15 |
+| Settings | 9 | 9 | 9 | 9 |
+| sqlite_sequence | 7 | 7 | 7 | 7 |
+
+This is eight application tables plus SQLite's AUTOINCREMENT bookkeeping table, not nine product subsystems. `SCHEMA_AND_COUNTS.v1.json` contains every CREATE statement, column declared type/nullability/default/PK position, index and index-column metadata, FK target/action, row count, observed storage-type distribution and complete logical row-bag digest for every table in every variant. There are no views or triggers. INTEGER primary keys in the seven AUTOINCREMENT tables are row identities; Settings.Key is its text primary key. sqlite_sequence has no declared PK and is explicitly compared by its unique name entries here.
+
+Five declared child FKs use ON DELETE CASCADE: properties→items, complex properties→properties, behaviors→properties, item validations→items, and property validations→properties. `ApplicationItems.ParentApplicationItemId` has **no declared FK**. Cid and Id are also not declared foreign keys and are not identified as WHO, electrical bus numbers, firmware object offsets or universal protocol identifiers. Names, Cid, Id, parent IDs, property IDs and behavior selectors retain separate namespaces. Currency numeric fields are stored catalogue fields, not measured consumption or an inferred unit conversion.
+
+Settings MaxItems is the text600 and MaxExtraDirectorySize the text512 in all four payloads; no size unit or enforceable device memory limit is inferred without a consumer. DeviceFirmwareVersion is1 only for1768_1.0 and2 for the other three. The Version fields contain separate2016-02-16 timestamp strings; they are catalogue data, not current installed firmware readings. Other Settings values are inventoried by key/type/length and included in exact comparisons without exporting their contents.
+
+## Full variant comparison before semantic selection
+
+`ALL_TABLE_PAIR_DIFFERENCES.v1.json` compares **all six pairs and all nine complete tables**, with exact key-presence differences and changed-column names for every changed common key. The schemas are identical across all pairs. The fifteen currency rows are identical across all four variants. The whole-table logical digests cover complete rows, including columns not selected for narrative; no whole raw dump of credential-related values is needed.
+
+For example, comparing F454 against either2.1 screen by surrogate PK alone gives1397 changed common ApplicationProperties records and2631 changed common ApplicationComplexProperties records. Those numbers are **not feature differences**: many ownership IDs and insert-order identities changed. `LINKED_ITEM_COMPARISONS.v1.json` therefore also compares complete relation-linked item bags. It removes only the included objects' own generated PKs and FKs to their included owner; it retains every remaining property/complex/behavior/validation field, duplicate multiplicity and literal parent reference. This is an explicitly bounded normalization, not a universal graph-isomorphism algorithm or proof that identically named IDs identify the same runtime object.
+
+The two2.1 screen variants have identical full rows in **five** tables: ApplicationItems, ApplicationComplexProperties, ApplicationCurrencies, ItemValidations and PropertyValidations. They differ in ApplicationProperties, Behaviours, Settings and sqlite_sequence. Exactly four property rows differ:1495–1498, the coordinate-scale constants below. Behavior comparison without its own generated BehaviourId yields242 shared rows, one additional row in1768 and two in1898. Their owner property IDs happen to align in this pair; that coincidence is not transferred to other pairs. The extra/missing declarations all use `IsEnabled`, selector `IsMixedModeGroup`, target `mode`, target text `False`, attached to different source property IDs. No predicate implementation or actual enablement is executed.
+
+## F454 hierarchy: retained disconnected template families
+
+F454 has16 root rows, six direct parent references to missing items,65 items whose parent chains cannot reach a root, and no detected cycles. The three screen variants have23 roots, no missing parent references and no root-unreachable items. All five declared FK families remain clean in every variant because the parent-link field is undeclared.
+
+F454 direct missing-parent rows are88 externalIntercom and89 internalIntercom→83;92 soundSystem.mono,93 soundSystem.multi and94 soundSystem.nuvo→8;156 homepage→13. Descendants of those rows account for the larger65-item set. `GRAPH_AND_FK.v1.json` records every root, direct edge and unreachable ID.
+
+This positively establishes retained catalogue templates outside the present root hierarchy. It does **not** show that their properties are read, displayed or exported; that the F454 hardware lacks every related function; or that software encounters a fault. A concrete catalogue-reader/traversal and product activation consumer is still needed. The product-role distinction between the F454 gateway and screen UIs is independently documented, but does not itself prove the purpose of every retained row.
+
+## F454 A/V declarations: source keys and separate limits
+
+The exact selected SQL joins and all source row keys are in `SELECTED_SOURCE_ROWS.v1.json`. The joins are real declared FK relations; selected rows are chosen by item **Name**, not borrowed IDs from a different variant.
+
+- Item7 `page.vct`→property20 OnAddNewItem→complex3 declares `maxNrChildren=50`.
+- Item86 `camera`→property376 OnAddNewItem→complex520 declares `maxNrItems=20`; complex519 firstAvailableFor is `[1-95]`. Property379 `camera.address` is `VideodoorAddressControl`, default text0; its complex522 interval is `[0-95]` with description `filter=N`, not the same lexical lower bound as firstAvailableFor. Related levelValue rows retain the literal labels Private riser/Public riser and P/level labels. This does not decode an electrical riser or a firmware address grammar.
+- Item87 `entrancePanel` separately declares maxNrItems20 through property381/complex529, with firstAvailableFor and address interval `[0-95]`. Its staircase and lock properties expose text options0/1. These are separate editor declarations, not measured available cameras, simultaneous call capacity or the documented blocked-OPEN-command limit20.
+- ItemValidations6 and7 on page.vct name `ValidateScsTypeAndVde` and `ValidateScsType`, severity Error and ExecuteOn `children`. ItemValidation31 on videoControl names `ValidateDuplicateAddress` and stores ExecuteOn `10050,10050|10051,10051`. These are metadata-named consumer requests, not code bodies establishing their exact validation or precedence.
+
+Earlier F454 original-code evidence separately identifies the answering-machine DIM35 formatter and the frontend's first-status-field test. This database does not supply that dynamic status word or establish readiness, camera presence, the startup route's state, actual serialization of VideodoorAddressControl, or an API transaction. Firmware corroboration is scoped to the existence of a separate A/V application path; catalogue limits are not silently transferred into it.
+
+## F454 alarm editor declarations
+
+Item38 alarmZone is parented beneath35 alarmZones. Its OnAddNewItem property150 has firstAvailableFor `#[1-8]` (complex124) and maxNrItems8 (125). Address property151 has interval `[1-8]` (126), excludeExistingValuesWithTag `where` (127), and xmlFormatValue `#{0}` (128); its default is `#1`. These are coherent stored editor-range/format declarations. They do not prove actual acceptance/public protocol support for every zone or physical sensor identity. `SELECTED_LITERAL_RANGES.v1.json` only parses this bounded lexical range notation as data, without evaluating vendor validators.
+
+Item37 burglarAlarm.scenario, beneath36 burglarAlarm.scenarios, declares maxNrItems20 and maxNrItemsInGroup8 (complex121/122 under property148). This is separate from camera20 and the device manual's blocked-command20. Its description template includes `[1-20]` as stored text; no runtime scenario group or arming behavior is created.
+
+Item39 burglar.aux has UISettings/isVisible false (property153/complex130), an xmlLinkIgnore row, address interval `[1-9]` and a set of textual description options. This is positive hidden-template metadata, not an unsupported-feature or live-notification finding. Prior firmware alarm-channel ownership and the unresolved SCSAI electrical attribution remain separate; this database contains no demonstrated UART/pin/connector mapping.
+
+## Advanced controls: behaviors are explicit data, not evaluated predicates
+
+F454 item224 advancedOpenCloseCommand has item Cid3017/Id3012, a separate property `cid` with initial text3017, and address property1474 implemented as PluginBasedAtt. Its PluginParameter rows include isPointToPoint False, isMultiple False, isEvoluted True and addressType1. Its selected firstAvailableFor `[11-1015]` is plugin-input metadata, **not** an ordinary integer protocol address range inferred from its endpoints.
+
+Behaviours195/196 attach to that address property: `SetValue` with selector strings IsAMBGENGR/IsNotAMBGENGR requests target `cid`3018/3017. Other attached rows request pul0, visibility/enabled changes and mode0; behavior205 on mode requests ChangeApplicationItem to advancedOpenCloseCommandSafe when stored selector1 matches. The group's own item222 declares maxNrItems50/maxNrItemsInGroup16. Exact rows, including the parallel up/down and safe variants, are retained; no named predicate, plugin, property setter or conversion rule is executed.
+
+This source evidence separates an item's static Cid/Id, a mutable property named cid, a behavior's target name, and emitted firmware/protocol identifiers. Inferring a universal command or physical semantics directly from any one of these integers would erase those namespaces.
+
+## Cross-device coordinate and behavior evidence
+
+The two2.1 screen variants have explicit coordinate constants1495–1498. The1768 values are roomXFactor1, roomYFactor1, profileXFactor1, profileYFactor1, with descriptions naming the Resistive screen. The1898 values are1.25,1.33,1.27,1.34 respectively, with descriptions naming Capacitive. These are stored transformation factors for room/profile sections as described by their own rows, not measured panel geometry or executed coordinate conversion. Their actual reader, rounding, units and application timing remain unclosed.
+
+This is a concrete reason to retain distinct1768/1898 variants even when many tables match. The limited2.1 behavior differences are likewise source declarations, not proof of a physical difference in actuator support. The1768_1.0→2.1 item/behavior/property additions are fully represented by the complete comparisons, but a complete release feature table or release-wide runtime contract is not derived from row count differences.
+
+## Reproduction, confidence and remaining consumers
+
+Run `python3 -B work/installer-database-analysis/2026-10-31/systems/collect_systems_v1.py --check`. This reconstructs schema, full comparisons, normalized relation-linked comparisons, selected data, expression/type inventories, exact SQL/safety and input identities. Successful checks are read-only; first generation refuses existing evidence and freezes report/collector/outputs immediately. Snapshot membership and hashes are calculated before opening the snapshot index, avoiding circular inclusion. Older inputs/dossiers and repository pages are unchanged.
+
+High confidence: original payload identities/member attribution, full schemas/counts/relationships, all-pair equality/differences, actual selected metadata and bounded graph/range parsing. Conditional: device/package applicability, the meaning/action of named UI/plugin/validator consumers, serialization and installation. Unknown: evaluated expression behavior, active configured objects, actual generated files, dynamic camera/alarm state, hardware/electrical associations and universal protocol limits.
+
+The next useful source work is the catalogue reader/serializer for OnAddNewItem, VideodoorAddressControl and behavior predicates; the exact handling of retained disconnected templates; and the coordinate-factor consumer. It should preserve the difference between a UI-template declaration, a validator name and the actual firmware/runtime path rather than treating the database as executable proof.

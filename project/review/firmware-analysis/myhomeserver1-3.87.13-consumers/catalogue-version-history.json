@@ -1,0 +1,10 @@
+{
+  "authoritative_report": "REPORT.v2.md",
+  "changed_source_interpretations": false,
+  "current_collector": "collect_catalogue_v2.py",
+  "preserved_history": "development-before-v2",
+  "prior_collector": "collect_catalogue_v1.py",
+  "prior_report": "REPORT.md",
+  "reason": "Parent-authorized pre-output file-byte assertion encoding correction and honest failure disclosure",
+  "v1_generated_outputs": 0
+}

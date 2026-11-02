@@ -1,0 +1,39 @@
+{
+  "accessor": {
+    "path": "work/f461-firmware/2.0.11/research/2026-11-01/image_vfs.py",
+    "sha256": "6c54cac0515e0c74409e802fd8f4bf7a23caa2fff876287333917f598f72106a",
+    "size": 5602
+  },
+  "inputs": [
+    {
+      "path": "normal:/home/bticino/bin/bt_daemon",
+      "sha256": "b1a3f99cb78c97cd0aa98616c8074f56c8fd34fb10d2500138ea74ed5ed54c4e",
+      "size": 141968
+    },
+    {
+      "path": "normal:/home/bticino/cfg/stack_open.xml",
+      "sha256": "bc9e8f64e44f562d53b08398b4c0d7be7393d8c17a30aa76f350422789c44d3d",
+      "size": 5197
+    },
+    {
+      "path": "normal:/home/bticino/cfg/stack_open_reduced.xml",
+      "sha256": "f58632cef544dd507a9218f563b507b2525147f972b1408430314af28728a5e2",
+      "size": 5198
+    },
+    {
+      "path": "recovery:/home/bticino/bin/bt_daemon",
+      "sha256": "b1a3f99cb78c97cd0aa98616c8074f56c8fd34fb10d2500138ea74ed5ed54c4e",
+      "size": 141968
+    },
+    {
+      "path": "recovery:/home/bticino/cfg/stack_open.xml",
+      "sha256": "bc9e8f64e44f562d53b08398b4c0d7be7393d8c17a30aa76f350422789c44d3d",
+      "size": 5197
+    },
+    {
+      "path": "recovery:/home/bticino/cfg/stack_open_reduced.xml",
+      "sha256": "f58632cef544dd507a9218f563b507b2525147f972b1408430314af28728a5e2",
+      "size": 5198
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "outputs": [
+    {
+      "path": "INPUTS.json",
+      "sha256": "10ac3594117e77d160ec50ef60552960492ee9c5932b3205731e8e065c0ca219",
+      "size": 1043
+    },
+    {
+      "path": "METHOD.json",
+      "sha256": "8ba48f5d24d571bb1135f9474ee9f074cdc8598a3ca4a82b4fb97995387fd078",
+      "size": 582
+    },
+    {
+      "path": "ORIGINAL_SOURCE.json",
+      "sha256": "2438ee15964d6dfa979bf4c954aea0667f558c2d397131b8c7a891d03ae9b0b7",
+      "size": 5662
+    },
+    {
+      "path": "PROVIDER_DECLARATIONS.json",
+      "sha256": "92a702781657f20c8cd34976651dc5994acea70e14f6327d21eca53570240ea3",
+      "size": 3636
+    },
+    {
+      "path": "RESOLVED_NODE_HOST_CASES.json",
+      "sha256": "1e2c2e8891deb84d784133563129217bfb396753d714608af1db71973f5dd7ce",
+      "size": 4420
+    },
+    {
+      "path": "spans/ack-predicate.txt",
+      "sha256": "c0f89586504cc574d048565b918ecff155234d075fbfc0537aac9459ca45376d",
+      "size": 2093
+    },
+    {
+      "path": "spans/boolean-node-builder.txt",
+      "sha256": "259045e526e636751d844e84505edd7df9ebac3992a5a83c7e553e147d6999aa",
+      "size": 1581
+    },
+    {
+      "path": "spans/boolean-node-value-reader.txt",
+      "sha256": "7e3e0750b02e9160b72afbfec6d4a911861f9017a9225d7df178b49125fd5457",
+      "size": 3328
+    },
+    {
+      "path": "spans/error-predicate.txt",
+      "sha256": "df04c22a3e7436cceb2f21d43b1f2806751d2443280a79ef9854ad0527f7d407",
+      "size": 1643
+    },
+    {
+      "path": "spans/json-ack-builder.txt",
+      "sha256": "7eb1fc06f516cbdd3a368bebab8d85dffac03e1aaf3dba40bb8cda95beb6dd7a",
+      "size": 2130
+    },
+    {
+      "path": "spans/name-lookup.txt",
+      "sha256": "ba7cda826f6a2d46f947719b07c13b7498ab3fdaa3dc6b8762c05dd1b89ef97f",
+      "size": 1341
+    },
+    {
+      "path": "spans/new-data-node.txt",
+      "sha256": "d58594195e3d444ec3ceb9814e6259ca57a37a90fc04b452aa3fcce9a933dde7",
+      "size": 3198
+    },
+    {
+      "path": "spans/new-json-object.txt",
+      "sha256": "560cf725f11c32af95d48fd0e8bba8f6b0dcfeaaaa66d276fc623edb2f707c24",
+      "size": 2145
+    },
+    {
+      "path": "spans/recursive-name-lookup-body.txt",
+      "sha256": "e21e6eb22742ef55fd614eb5d0072c87dc95895863e1f0536ba8388bdc2466b1",
+      "size": 3459
+    },
+    {
+      "path": "spans/result-response-predicate.txt",
+      "sha256": "7298a1f147a1ac66db2950be12fafa7f6e09ad2f0cc61c74f244653a056ff465",
+      "size": 1891
+    }
+  ]
+}

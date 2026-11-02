@@ -1,0 +1,137 @@
+[
+  {
+    "bytes": 1585093,
+    "path": "work/f460-firmware/2.0.12/analysis/normal-regular-files.json",
+    "sha256": "f6dabc979c931bad293824fd3ba0d787ce2c6e67e74428d2cefe15955590f8d1"
+  },
+  {
+    "bytes": 141863,
+    "path": "work/f460-firmware/2.0.12/analysis/normal-symlinks.json",
+    "sha256": "6ec2104e219c95627678b5876ffe3c79e09d339a320477530a83a45578f754cc"
+  },
+  {
+    "bytes": 3,
+    "path": "work/f460-firmware/2.0.12/analysis/normal-hardlinks.json",
+    "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+  },
+  {
+    "bytes": 3,
+    "path": "work/f460-firmware/2.0.12/analysis/normal-special-nodes.json",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  {
+    "bytes": 1669481,
+    "path": "work/f460-firmware/2.0.12/analysis/recovery-regular-files.json",
+    "sha256": "b77c4cbce635515bae3754d502404c9afb2b920061d019fdb4c98c20f92f6a54"
+  },
+  {
+    "bytes": 134538,
+    "path": "work/f460-firmware/2.0.12/analysis/recovery-symlinks.json",
+    "sha256": "926e674e423856758d557ca7c309ea660f3f7eae16f9b7ca341fd8887350c4e1"
+  },
+  {
+    "bytes": 3,
+    "path": "work/f460-firmware/2.0.12/analysis/recovery-hardlinks.json",
+    "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+  },
+  {
+    "bytes": 3,
+    "path": "work/f460-firmware/2.0.12/analysis/recovery-special-nodes.json",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  {
+    "bytes": 1551,
+    "path": "work/f460-firmware/2.0.12/acquisition.json",
+    "sha256": "7bfd842c125100eb7e01a892e25bb7fefcc24db01ff26ccdea9b351078b180f8"
+  },
+  {
+    "bytes": 1274,
+    "path": "work/f460-firmware/2.0.12/package-output-identities.json",
+    "sha256": "54faa77e7ed63db904e2b411ae9e586ac193aa41087cf4cd1c06cde33e649738"
+  },
+  {
+    "bytes": 1097,
+    "path": "work/f460-firmware/2.0.12/nested-archive-listing.json",
+    "sha256": "b2bc55efe140e8d89cff627640cdd8268dde7b10c08dd1e97077bd180a64f012"
+  },
+  {
+    "bytes": 4915,
+    "path": "work/f460-firmware/2.0.12/image-extraction-provenance.json",
+    "sha256": "984075d31d54bc5d9fd9cc57cea7a943c9a6cec58edf10ed40322c7b2d7dec97"
+  },
+  {
+    "bytes": 1057,
+    "path": "work/f460-firmware/2.0.12/analysis/extraction-summary.json",
+    "sha256": "5787cc3fdfefd6df0f4e606b8903c0173aa73209debcc578c01d73b079152dbe"
+  },
+  {
+    "bytes": 2501,
+    "path": "work/f460-firmware/2.0.12/extract_package_v1.py",
+    "sha256": "28cd145063035c18eaf4745ddc875099b1f71a913a2bece5bdd1571678e5d4ae"
+  },
+  {
+    "bytes": 3150,
+    "path": "work/f460-firmware/2.0.12/extract_images_v1.py",
+    "sha256": "26db067e2e0314f1e9853969781d98dd80319899144f40f9ddefc84b5ce30f99"
+  },
+  {
+    "bytes": 4121,
+    "path": "work/f460-firmware/2.0.12/extract_filesystems_v1.py",
+    "sha256": "afd6a1c6b1c4275485382f617a11e30d13e59d448284c2eb9aaab30bd65cf749"
+  },
+  {
+    "bytes": 5602,
+    "path": "work/f460-firmware/2.0.12/research/2026-11-01/image_vfs.py",
+    "sha256": "32e453cb6af0e2daafb8325d7b5115c3c13883e57d279d347aa8ea4baa3e3838"
+  },
+  {
+    "bytes": 682,
+    "path": "work/f460-firmware/2.0.12/extracted/fwz.xml",
+    "sha256": "140ff2b63627a7324d4f75149cfd67dd7f90757242712981b6c3eabdb94f2ce7"
+  },
+  {
+    "bytes": 1597459,
+    "path": "work/myhomeserver1-firmware/3.87.13/analysis/normal-regular-files.json",
+    "sha256": "066ba8668cbce4b10a2d4f06167eb20b74817abfae3ac683f67af1a7c5c6b580"
+  },
+  {
+    "bytes": 41934,
+    "path": "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0207-f460-myhome-server.md",
+    "sha256": "ed4af14a11813ba1fdc53dfbf131a388b2cf8066fc688888e30da7c158579932"
+  },
+  {
+    "bytes": 6031,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/cfg/stack_open.xml",
+    "sha256": "3b17a185d49ffbdbd3c97705e33c4c1d5cd514db13ac83d45c1930a5133eba95"
+  },
+  {
+    "bytes": 4190,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/etc/init.d/bt_daemon-apps.sh",
+    "sha256": "7545de0fbd7fa33bdcab7bfcee0b4fb588385307cecd1f33865d84b88c66a9e8"
+  },
+  {
+    "bytes": 510,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/etc/init.d/setup_m4.sh",
+    "sha256": "ed40f3f69f3c79af4e74cb30aa83396437b3251fdfec111be16159c6db7d967d"
+  },
+  {
+    "bytes": 243,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/scheduling_manager/config.json",
+    "sha256": "bc83cdfcb72a743d66583428042d4db74b5e24c84ca111f1ae409b3e9cf3b9cf"
+  },
+  {
+    "bytes": 2522,
+    "path": "work/myhomeserver1-firmware/3.87.13/extract_package_v1.py",
+    "sha256": "54974d5f22986eb1d476aaebcbfaa563133c7931207f645b7ee8d33f1b6fab69"
+  },
+  {
+    "bytes": 3466,
+    "path": "work/myhomeserver1-firmware/3.87.13/extract_images_v1.py",
+    "sha256": "a70daadc5587f5ac19ef8f07a5e343fc804cac49cf41dc25c483334d020f2d99"
+  },
+  {
+    "bytes": 4121,
+    "path": "work/myhomeserver1-firmware/3.87.13/extract_filesystems_v1.py",
+    "sha256": "afd6a1c6b1c4275485382f617a11e30d13e59d448284c2eb9aaab30bd65cf749"
+  }
+]

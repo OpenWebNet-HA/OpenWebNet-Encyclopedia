@@ -1,0 +1,366 @@
+{
+  "PIC_keys": [
+    {
+      "ADD_PC": "0x23cb0",
+      "key": "mode",
+      "literal_VA": "0x1151a4",
+      "pool": "0x23d44",
+      "pool_word": "0xf14f0"
+    },
+    {
+      "ADD_PC": "0x23cc6",
+      "key": "status",
+      "literal_VA": "0x1151ac",
+      "pool": "0x23d48",
+      "pool_word": "0xf14e2"
+    },
+    {
+      "ADD_PC": "0x23cde",
+      "key": "setpoint",
+      "literal_VA": "0x1151b4",
+      "pool": "0x23d4c",
+      "pool_word": "0xf14d2"
+    },
+    {
+      "ADD_PC": "0x23ae4",
+      "key": "id",
+      "literal_VA": "0x116adc",
+      "pool": "0x23c20",
+      "pool_word": "0xf2ff4"
+    },
+    {
+      "ADD_PC": "0x23b02",
+      "key": "enabled",
+      "literal_VA": "0x1143e0",
+      "pool": "0x23c24",
+      "pool_word": "0xf08da"
+    },
+    {
+      "ADD_PC": "0x23b38",
+      "key": "type",
+      "literal_VA": "0x115f5c",
+      "pool": "0x23c28",
+      "pool_word": "0xf2420"
+    },
+    {
+      "ADD_PC": "0x23b7c",
+      "key": "operator",
+      "literal_VA": "0x115198",
+      "pool": "0x23c2c",
+      "pool_word": "0xf1618"
+    },
+    {
+      "ADD_PC": "0x2c06c",
+      "key": "mode",
+      "literal_VA": "0x1151a4",
+      "pool": "0x2c184",
+      "pool_word": "0xe9134"
+    },
+    {
+      "ADD_PC": "0x2c096",
+      "key": "mode",
+      "literal_VA": "0x1151a4",
+      "pool": "0x2c188",
+      "pool_word": "0xe910a"
+    },
+    {
+      "ADD_PC": "0x2c0ae",
+      "key": "status",
+      "literal_VA": "0x1151ac",
+      "pool": "0x2c18c",
+      "pool_word": "0xe90fa"
+    },
+    {
+      "ADD_PC": "0x2c0ba",
+      "key": "status",
+      "literal_VA": "0x1151ac",
+      "pool": "0x2c190",
+      "pool_word": "0xe90ee"
+    },
+    {
+      "ADD_PC": "0x2c0d2",
+      "key": "setpoint",
+      "literal_VA": "0x1151b4",
+      "pool": "0x2c194",
+      "pool_word": "0xe90de"
+    },
+    {
+      "ADD_PC": "0x2c102",
+      "key": "setpoint",
+      "literal_VA": "0x1151b4",
+      "pool": "0x2c1a0",
+      "pool_word": "0xe90ae"
+    }
+  ],
+  "base_tables": {
+    "operator_slot": "0x165e5c",
+    "operator_table": "0x160588",
+    "selected_name": "equal",
+    "selected_operator_row_for_word2": 3,
+    "type_name": "BNTH",
+    "type_row": 11,
+    "type_slot": "0x166b68",
+    "type_table": "0x1605b0"
+  },
+  "code_spans": [
+    {
+      "end_VA_exclusive": "0x23c14",
+      "file_offset": "0x23aac",
+      "name": "base-serializer",
+      "sha256": "53dc3baa49942f91dab8d28c56890c7f8ff31cd8d8339faa3664b85a3c071ef5",
+      "start_VA": "0x23aac"
+    },
+    {
+      "end_VA_exclusive": "0x23c62",
+      "file_offset": "0x23c3c",
+      "name": "derived-serializer-prefix",
+      "sha256": "5c938d70fdbeea8428002d0d842d266e2fb9fef1d9e628f77314283274f66073",
+      "start_VA": "0x23c3c"
+    },
+    {
+      "end_VA_exclusive": "0x23d14",
+      "file_offset": "0x23c68",
+      "name": "derived-serializer-arms-and-return",
+      "sha256": "9f7e5a910c81212a9e3084cf0368a9e022efa9f016204be59c55081dc0292753",
+      "start_VA": "0x23c68"
+    },
+    {
+      "end_VA_exclusive": "0x2c118",
+      "file_offset": "0x2c050",
+      "name": "reparse-selected-presence",
+      "sha256": "22c7e1543d1a0d93d81718bbf85b359401a6c44e03433685f799e4e19b4e5ba4",
+      "start_VA": "0x2c050"
+    },
+    {
+      "end_VA_exclusive": "0xa7e56",
+      "file_offset": "0xa7e28",
+      "name": "same-JSON-initializer",
+      "sha256": "bc98672ae2d2279c6c11a1e24a250bbc51be7125cd5e1d0cfb9744df179a2e42",
+      "start_VA": "0xa7e28"
+    },
+    {
+      "end_VA_exclusive": "0x103bca",
+      "file_offset": "0x103b96",
+      "name": "compiled-value-copies",
+      "sha256": "a8cb27015e60f166a5a98b91db570ce651c40979fdb80d8b0492360b83440a2d",
+      "start_VA": "0x103b96"
+    }
+  ],
+  "direct_calls": [
+    {
+      "BLX_to_ARM": false,
+      "VA": "0x23c54",
+      "bytes": "fff72aff",
+      "target": "0x23aac"
+    },
+    {
+      "BLX_to_ARM": true,
+      "VA": "0x23cd6",
+      "bytes": "edf7aaeb",
+      "target": "0x1142c"
+    },
+    {
+      "BLX_to_ARM": true,
+      "VA": "0x23ce0",
+      "bytes": "ecf7c6ef",
+      "target": "0x10c70"
+    },
+    {
+      "BLX_to_ARM": true,
+      "VA": "0x23c7e",
+      "bytes": "edf70aeb",
+      "target": "0x11294"
+    },
+    {
+      "BLX_to_ARM": false,
+      "VA": "0xa7e44",
+      "bytes": "84f704f9",
+      "target": "0x2c050"
+    },
+    {
+      "BLX_to_ARM": false,
+      "VA": "0xa7e52",
+      "bytes": "5bf059fe",
+      "target": "0x103b08"
+    },
+    {
+      "BLX_to_ARM": true,
+      "VA": "0x2c108",
+      "bytes": "e4f7e4ee",
+      "target": "0x10ed4"
+    },
+    {
+      "BLX_to_ARM": true,
+      "VA": "0x2c08c",
+      "bytes": "e5f708e8",
+      "target": "0x110a0"
+    },
+    {
+      "BLX_to_ARM": true,
+      "VA": "0x2c0b0",
+      "bytes": "e4f7f6ef",
+      "target": "0x110a0"
+    },
+    {
+      "BLX_to_ARM": true,
+      "VA": "0x2c0d4",
+      "bytes": "e4f7e4ef",
+      "target": "0x110a0"
+    }
+  ],
+  "guards": [
+    {
+      "VA": "0x23c42",
+      "bytes": "0d46"
+    },
+    {
+      "VA": "0x23c48",
+      "bytes": "0446"
+    },
+    {
+      "VA": "0x23c58",
+      "bytes": "ab6a"
+    },
+    {
+      "VA": "0x23c5a",
+      "bytes": "052b"
+    },
+    {
+      "VA": "0x23c5e",
+      "bytes": "dfe803f0"
+    },
+    {
+      "VA": "0x23cd0",
+      "bytes": "95ed0e0b"
+    },
+    {
+      "VA": "0x23ce4",
+      "bytes": "cae7"
+    },
+    {
+      "VA": "0x23c7c",
+      "bytes": "3146"
+    },
+    {
+      "VA": "0x23aba",
+      "bytes": "0021"
+    },
+    {
+      "VA": "0x23ad2",
+      "bytes": "ab68"
+    },
+    {
+      "VA": "0x23af6",
+      "bytes": "297f"
+    },
+    {
+      "VA": "0x23b14",
+      "bytes": "2b6a"
+    },
+    {
+      "VA": "0x23b58",
+      "bytes": "6b6a"
+    },
+    {
+      "VA": "0x2c070",
+      "bytes": "43f82c2b"
+    },
+    {
+      "VA": "0x2c090",
+      "bytes": "58b1"
+    },
+    {
+      "VA": "0x2c0b4",
+      "bytes": "58b1"
+    },
+    {
+      "VA": "0x2c0d8",
+      "bytes": "88b9"
+    },
+    {
+      "VA": "0x2c10c",
+      "bytes": "0223"
+    },
+    {
+      "VA": "0x2c110",
+      "bytes": "a362"
+    },
+    {
+      "VA": "0x2c112",
+      "bytes": "84ed0e0b"
+    },
+    {
+      "VA": "0xa7e2a",
+      "bytes": "94ac"
+    },
+    {
+      "VA": "0xa7e3c",
+      "bytes": "2146"
+    },
+    {
+      "VA": "0xa7e3e",
+      "bytes": "4846"
+    },
+    {
+      "VA": "0x103b9c",
+      "bytes": "d5ed0a1b"
+    },
+    {
+      "VA": "0x103ba6",
+      "bytes": "c4ed241b"
+    },
+    {
+      "VA": "0x103bb2",
+      "bytes": "d5e90e01"
+    },
+    {
+      "VA": "0x103bba",
+      "bytes": "c4e92801"
+    }
+  ],
+  "image": "/home/bticino/scheduling_manager/scheduling_manager",
+  "import_declarations": [
+    "00165cf0  0000f016 R_ARM_JUMP_SLOT        00000000   _ZN4Json5ValueC1Ed",
+    "00165b2c  00006d16 R_ARM_JUMP_SLOT        00000000   _ZNK4Json5Value8asDoubleEv",
+    "00165c68  0000c716 R_ARM_JUMP_SLOT        00000000   _ZN4Json5ValueaSEOS0_",
+    "00165a64  00003816 R_ARM_JUMP_SLOT        00000000   _ZN4Json5ValueixEPKc",
+    "00165bc4  00009616 R_ARM_JUMP_SLOT        00000000   _ZNK4Json5Value8isMemberEPKc"
+  ],
+  "raw_identity": {
+    "RTTI": "0x162fd0",
+    "constructor_GOT_base": "0x1659a4",
+    "constructor_and_final_factory_header": "same actual GOT slot; not an inferred temporary class",
+    "first_Thumb_method": "0x23c3d",
+    "header": "0x160118",
+    "name": "13BnthCondition",
+    "primary_AP": "0x160120",
+    "slot": "0x166a24"
+  },
+  "relative_relocations": [
+    "00166a24  00000017 R_ARM_RELATIVE",
+    "0016011c  00000017 R_ARM_RELATIVE",
+    "00160120  00000017 R_ARM_RELATIVE",
+    "00166b68  00000017 R_ARM_RELATIVE",
+    "00165e5c  00000017 R_ARM_RELATIVE"
+  ],
+  "selected_TBB": {
+    "base": "0x23c62",
+    "entry_byte": "0x36",
+    "selector": 2,
+    "target": "0x23cce"
+  },
+  "separate_data": [
+    {
+      "VA": "0x160118",
+      "name": "raw_header_and_first_method",
+      "raw_hex": "00000000d02f16003d3c0200",
+      "sha256": "998460abbea0a5c598b37568d24235e1eb02e916e40a749debef21a72d0f81ea"
+    },
+    {
+      "VA": "0x23c62",
+      "name": "selector_TBB",
+      "raw_hex": "202b36424e03",
+      "sha256": "460048274012939b4874fcca99676b306be27b19e682ce09468f7b852fa51b86"
+    }
+  ]
+}

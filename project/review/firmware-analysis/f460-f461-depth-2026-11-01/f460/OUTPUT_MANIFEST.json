@@ -1,0 +1,55 @@
+{
+  "collector_sha256": "4501da8d1278a9091b2d9cf21fd59dd20dc04ffd7f5c62125a87469659f03a81",
+  "counts": {
+    "ADRP_ADD": 8,
+    "classes": 2,
+    "direct_BL": 7,
+    "guards": 16,
+    "import_proofs": 6,
+    "inputs": 4,
+    "new_original_execution": 0,
+    "spans": 7
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 712,
+      "sha256": "38f4a4900c08f5ffe759d099318f31eaf520ba56ff20e82fb2e77681b6e6d84a"
+    },
+    "REPORT.md": {
+      "bytes": 5142,
+      "sha256": "4caa7e282a04f4a514803b4da93c875e5da20b6ccd4ccae14542d855726eb68a"
+    },
+    "SOURCE.json": {
+      "bytes": 7819,
+      "sha256": "0c05dff028e0d0eac220832c9ec78fe3af213ccda1417a406ce92805de6158c7"
+    },
+    "spans/compiled-constructor-prefix.txt": {
+      "bytes": 1801,
+      "sha256": "7d5b37ec1c545eb39b3f60dcdd8df723eba334b575c55ea85f388bc5dbfab464"
+    },
+    "spans/compiled-seconds-and-callable.txt": {
+      "bytes": 1670,
+      "sha256": "078d26f4ae3c7f4eba1c8b972b4af59b69266694a12b4cf6d3cb3fe2fc1affa0"
+    },
+    "spans/initializer-final-class.txt": {
+      "bytes": 695,
+      "sha256": "144ebf1be19a7b4bf485ff2257b98f19fec9d35a312a43944dc3f4b157a4a9e0"
+    },
+    "spans/initializer-serializer-reparse.txt": {
+      "bytes": 1707,
+      "sha256": "ec2f9809be8d4af28be88c00ec721ee662730b8297a8f76501773a0631f1cac4"
+    },
+    "spans/raw-selected-construction.txt": {
+      "bytes": 1589,
+      "sha256": "a060273febae49ead5ecd9c6dedf155bf62324f64649bdeda1e1f02c1f6dad57"
+    },
+    "spans/raw-serializer-result-type-prefix.txt": {
+      "bytes": 1591,
+      "sha256": "becee433f97494673afad55cb76d82c226b36945dd0ed5c23b17e6a6c2c2ab11"
+    },
+    "spans/raw-serializer-seconds.txt": {
+      "bytes": 938,
+      "sha256": "e51df339293113ab092d574da2670a04c28c7ff637da1e4861059653acc46eea"
+    }
+  }
+}

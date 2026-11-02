@@ -1,0 +1,54 @@
+{
+  "scope": "Independent human-reference semantic reviews; original conditional versions and private snapshots retained",
+  "records": [
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/semantic-reviews/mh202-by-gateway.v2.md.txt",
+      "original_review_sha256": "3f7c4b339187e06789fec98df631a63dcd058511e97b7c3c4f79ce9d2c9cda9a",
+      "public_sha256": "3f7c4b339187e06789fec98df631a63dcd058511e97b7c3c4f79ce9d2c9cda9a",
+      "representation": "Exact review bytes except any host workspace prefix replaced with ${WORKSPACE}",
+      "scope": "Point-in-time independent semantic review; identities/check states are those explicitly stated in the report, not automatic later approval"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/semantic-reviews/gateway-by-mhs.v2.md.txt",
+      "original_review_sha256": "2cdc2da181fdb44e36b6a98aabc8aa68040365420e0ef3b7a7da4ae8e3567bd9",
+      "public_sha256": "2cdc2da181fdb44e36b6a98aabc8aa68040365420e0ef3b7a7da4ae8e3567bd9",
+      "representation": "Exact review bytes except any host workspace prefix replaced with ${WORKSPACE}",
+      "scope": "Point-in-time independent semantic review; identities/check states are those explicitly stated in the report, not automatic later approval"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/semantic-reviews/mhs-by-mh202.v2.md.txt",
+      "original_review_sha256": "dbf97a4255f32a5185eb2ee17485c8c9ef8077d2155719af303b3264fbd3d196",
+      "public_sha256": "dbf97a4255f32a5185eb2ee17485c8c9ef8077d2155719af303b3264fbd3d196",
+      "representation": "Exact review bytes except any host workspace prefix replaced with ${WORKSPACE}",
+      "scope": "Point-in-time independent semantic review; identities/check states are those explicitly stated in the report, not automatic later approval"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/semantic-reviews/root-canonical-by-mh202.v2.md.txt",
+      "original_review_sha256": "96996b6c1a44621e0559dbdf8e4ed293074d369a387fc8cb907a00b3c3de609c",
+      "public_sha256": "96996b6c1a44621e0559dbdf8e4ed293074d369a387fc8cb907a00b3c3de609c",
+      "representation": "Exact review bytes except any host workspace prefix replaced with ${WORKSPACE}",
+      "scope": "Point-in-time independent semantic review; identities/check states are those explicitly stated in the report, not automatic later approval"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/semantic-reviews/final-disposition-by-mh202.v1.md.txt",
+      "original_review_sha256": "8fe39cfb160b8f498732e4bcad30a628564c9cb45f44f91169913103ac960db9",
+      "public_sha256": "8fe39cfb160b8f498732e4bcad30a628564c9cb45f44f91169913103ac960db9",
+      "representation": "Exact review bytes except any host workspace prefix replaced with ${WORKSPACE}",
+      "scope": "Point-in-time independent semantic review; identities/check states are those explicitly stated in the report, not automatic later approval"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/semantic-reviews/final-disposition-fa2-addendum.v2.md.txt",
+      "original_review_sha256": "14502a43259182db4ec3f08370212608eabda96435e5ca70e918ab9b380b234e",
+      "public_sha256": "14502a43259182db4ec3f08370212608eabda96435e5ca70e918ab9b380b234e",
+      "representation": "Exact review except any host workspace prefix replaced with ${WORKSPACE}",
+      "scope": "Independent closure of the additional historical diagnostic privacy mapping; Machine KB pending at that review"
+    },
+    {
+      "path": "project/review/encyclopedia-editorial-reconciliation-2026-11-02/semantic-reviews/catalogue-review-status-addendum.v1.md.txt",
+      "original_review_sha256": "fb9e1b23e943b1544a4f3417c12ad0ebb61de159a93b0f8148e8543b4e7f8c98",
+      "public_sha256": "fb9e1b23e943b1544a4f3417c12ad0ebb61de159a93b0f8148e8543b4e7f8c98",
+      "representation": "Exact review except any host workspace prefix replaced with ${WORKSPACE}",
+      "scope": "Independent single-sentence catalogue status cleanup; no changed technical assertion or Machine KB approval"
+    }
+  ]
+}

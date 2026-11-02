@@ -1,0 +1,35 @@
+# Consumer continuation read-only consultation
+
+This is a bounded lead/containment preflight, not a promoted scene schema, catalogue-open dataflow or runtime conclusion. Only host readelf/nm, existing whitelisted path declarations and regular-file/link metadata were consulted. No original vendor process, stored SQL/expression, firmware/native/emulator, target I/O, network/bus/flash or closed authentication/session/framing route executed. No unknown config/default/credential/private-key values were dumped. No author or earlier output was edited.
+
+## Exact source identities
+
+Paths below are original normal-image-relative.
+
+| Source | SHA256 |
+| --- | --- |
+| home/bticino/matrix_mx/matrix_mx | 96348136c2a0ebe859c689eb6246e3889e5154fdb63ffd5f3fc76975ac596717 |
+| home/bticino/scheduling_manager/scheduling_manager | 7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26 |
+| usr/lib/libjsoncpp.so.1.9.5 | 5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36 |
+| usr/lib/libsqlite3.so.0.8.6 | 66bd87b6acaeed42d6a6a9115a0a7ad261a731aa0a963703d3a20b39278cabd6 |
+| usr/lib/libjsonmsg.so.1.0.0 | d78437fdb23fb78ba881dbb22a14570b441a178e31c84244b126a5dfbf7866a7 |
+
+Fresh ARM32 hard-float/Thumb evidence and the existing image-link metadata must govern addresses/provider candidates. The vendor startup's user-library override precedes packaged providers; available definitions are not effective live binding. Do not reuse F454/MH202 object layouts, fixture state or calling conventions by matching filenames.
+
+## Bounded useful leads
+
+Matrix imports SQLite open/open_v2/exec/prepare_v2/step/reset/finalize/close/close_v2, binding, column and error APIs. This supports tracing the actual constructed path, handle lifetime, prepared SQL, arguments and return branches; it is not an actual database-open result or proof every SQLite call uses MHCatalogue. Definitions are available in usr/lib/libsqlite3.so.0.8.6: export entries open0xaf3f9,open_v20xaf401,prepare_v20x7a781,step0x83c45. Clear Thumb bit for instruction PCs. The very small open wrappers are entry/thunk-sized; do not interpret two/six-byte symbol sizes as complete provider implementations.
+
+Scheduling imports std::filesystem directory_iterator, path-extension/status/is_empty/create_directories/remove functions, std::ifstream/ofstream and Json::parseFromStream. These are useful exact loader/save callsite leads. JSON field type/accessor, existence/shape predicates, file extension/path and actual parser/output ownership still need source joins. A parseFromStream import is not complete accepted scene grammar. Available libjsoncpp.so.1.9.5 defines that function at export0x12525/Thumb code0x12524; no provider code was run.
+
+Its timing/work imports include std::thread/pthread conditions (clockwait/timedwait/condattr_setclock), pipe/poll/read/write, timerfd_create/settime and localtime/mktime/strftime. Actual caller clock ID, interval ABI/units, JSON numeric type, local timezone and return/error handling are required before time interpretation. Do not transfer MH202 gmtime/CHKTIME/SLEEP or old timer-helper semantics. A timerfd descriptor and elapsed/deadline value are separate namespaces.
+
+Matrix also imports JSON message and LCM/MQTT APIs. Available libjsonmsg.so.1.0.0 export entries include jsonmsg_to_jsonbuf0x3d69,jsonbuf_to_jsonmsg0x3dd1 and generate_json_ack0x3f71. These are possible nontransport handoff boundaries, not proof of message delivery or actual callback routing. Existing opaque registration/exchange/session/transport delegates remain closed; the trace can stop at explicit source call arguments.
+
+## Assets and product/namespace boundaries
+
+The exact configured extra0/scheduling_manager prefix has zero regular-file entries in the original normal manifest. This bounds packaged assets only; it does not prove live scene absence, identify missing80/81/94/95 assets, or exclude mounted/runtime-created stores. Use safe path/key shapes before inspecting unknown stored configurations. Source config's scenesPath and filename suffixes do not establish deployed scenes or actual file-operation success.
+
+MyHOMEServer1/item2198 remains an SCS/Ethernet/app home-automation server. Reused Object216/F454 text does not supply a dedicated SCS AI/AV path, and scenario functionality is not MH202's numbered .spt interpreter. Application scene IDs, JSON member names, catalogue item/Object/firmware IDs, OPEN WHO/WHERE, callback axes and filesystem names are distinct until linked by actual source. The embedded catalogue79fc...1edb is a separate profile from Suitef0c9...fe8e5; source comparison does not establish the reader's choice/fallback/update policy.
+
+Ready for independent review of frozen consumer reports. Only this new consultation file was written; no source/author/repository or old dossier changes were made.

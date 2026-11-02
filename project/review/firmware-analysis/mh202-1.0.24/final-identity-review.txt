@@ -1,0 +1,59 @@
+# Independent final identity and saved-ledger verification
+
+**PASS for the exact bytes and bounded arithmetic checked at the final read time, 31 October 2026 around 05:14–05:15 UTC.** No firmware investigation, original/native/helper replay, vendor process, target syscall, network or device operation was performed. This is an independent archive/source/hash and saved-result audit. It does not independently re-prove every earlier firmware semantic claim, all source VAs, complete parser acceptance, runtime provider selection, callback scheduling or physical behavior.
+
+## Exact new evidence
+
+| New artifact under `validation/final/` | SHA256 |
+|---|---|
+| verify_identities_v1.py | `0628e986cca9d2be18ccfbc10a4ad3b973b19b9f79e2d173bdfe2daef0be26f3` |
+| independent-identity-verification.json | `6cbd6f6e164c577d741002ba82783a30c1f87fb0692b5308a7d3216b5d238080` |
+| initial-generated-v1/SNAPSHOT_INDEX.json | `2ec2f824769cd5a376247b481656f0f006604003170e1a8f34a86c149b31a12c` |
+
+The exclusive first generation succeeded and its exact-byte `--check` succeeded independently immediately afterward:
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/validation/final/verify_identities_v1.py --check
+```
+
+The helper only reads prior artifacts/originals and constructs host JSON; it imports the read-only image accessor, not an emulator or original firmware library. Generation refuses an existing target, uses exclusive creation and immediately preserves the helper and JSON with a two-file SHA256 snapshot index. Check mode never writes. The JSON records **5,377 unique path identities at this read time**. Mutable current records among those pins are explicitly current-read identities; the snapshot is of this verification record/helper, not an assertion that mutable root state can never change. If parent legitimately updates a pinned current record later, this exact candidate's check is expected to fail rather than silently repin it. No old author, repository, source, root coordination or dossier file was edited.
+
+## Archive and original source identities
+
+The original `work/mh202-firmware/MH202_010024.fwz` is **37,111,681 bytes**, freshly SHA256 **`bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7`**. Both size/hash agree with the saved provenance and frozen baseline. All six declared extracted originals—two gzip images, their two ext3 outputs, fwz.xml and uImage—freshly match their recorded byte sizes and SHA256 values. This identity check did not repeat archive extraction, password handling, CRC/gzip checks, image mounting or executable loading.
+
+Nine selected original regular files were freshly read through normal-image ImageVFS: bt_script, bt_taskmanager, libcommon.so.0.0, libdomotica.so.0.0, libopen.so.0.0, libopenmsg.so, libcoso.so, libplug_trasv_cmd_stm.so, and packaged GLib. Their exact paths/sizes/hashes are in the JSON. Those identities match the saved corpus image identities where declared, plus separately fixed bt_script/libdomotica/taskmanager identities. In particular WHO25 STM remains **`8e656523b5bb4c22196203c7e801e631a3481b529982baa1a9f4a9ca13febe2d`**; the different multimedia STM identity is not substituted for it. These nine files are a selected provenance check, not a new all-files/inventory completeness claim. No new source semantics or virtual-address conclusions were inferred from the hashes.
+
+## Fifteen canonical saved corpora and separate count types
+
+All fifteen current saved result files match exact SHA256 pins in the frozen checkpoint27 inherited index. The new evidence gives each result path, size, SHA256, entry/count categories and the baseline used. Their own saved aggregate counts and available subordinate case/run/helper counts reconcile. Each corpus also satisfies:
+
+`original visits + primitive callbacks + linker redirects + EXIT boundaries + pre-selector stops = code-hook visits`.
+
+| Saved canonical total | Count |
+|---|---:|
+| Top-level helper entries | 71 |
+| Original instruction visits | 31,961 |
+| Declared primitive callbacks | 3,165 |
+| Linker-definition redirects | 132 |
+| EXIT boundaries | 27 |
+| Pre-selector stop boundaries | 2 |
+| Total code-hook visits | 35,287 |
+| Distinct named canonical corpora | 15 |
+
+Thus `31961 + 3165 + 132 + 27 + 2 = 35287`. EXIT and stop boundaries stay separate; setup data relocations/counter seeds are not counted as executed original instructions or primitive callbacks. Nested original parsers are not additional top-level helper entries. The result types remain distinct: original visits are not unique original instructions, broad source coverage or a hardware test count. These are canonical saved corpora, **not** sums of verifier replays or per-checkpoint cumulative subtotals. Existing private fixtures/import models, manual handoffs and each corpus's original-versus-modeled boundaries remain as previously reviewed; this audit did not reenact them. New original/native replay count added here is **0**.
+
+## Frozen provenance and version history
+
+* **2,669** non-current-coordination artifacts match their checkpoint27 inherited pins. This preserves exact prior result/report/evidence bytes rather than treating updated current coordination documents as immutable history.
+* All **809** input paths in the frozen catalog v2 SOURCE_PINS match current byte sizes and SHA256 values. They are the catalog's historical scope, not a new semantic audit or current feature-coverage count. Historical validation labels inherited from earlier runs are not rewritten or promoted into newly tested firmware scope.
+* The three selected first-generation sets verified explicitly are local FIFO run28 (**16** members), WHO25 source-ownership run28 (**29**) and WHO29 ownership run27 (**24**). Their exact indexed snapshot bytes match their SHA256s. Other earlier artifacts remain covered by the inherited index where pinned; no universal assertion about all drafts or every first-generation set is made.
+* FIFO REPORT.v2.md is verified to differ from immutable v1 by exactly the two documented wording substitutions; no source/evidence/count change. Native WHO25 REPORT.v2.md is verified to differ from v1 by exactly the corrected STM identity-table hash. The wrong original row remains historical evidence, not authoritative identity; code/harness/result identities did not change. Refinement notes and both report versions are pinned.
+* Historical draft limitations remain open. COSO run18's earlier `kind44`/`parsed_kind44` label draft lacked a contemporaneously preserved independent fingerprint; its later reconstruction cannot authenticate that unavailable history. Sound run21's overwritten intermediate descriptor-key draft bytes were not retained and are not reconstructed or authenticated here. Current source PASS/exact announced snapshots do not erase those omissions.
+* The earlier **31 repository tests and 210 Device checks** are inherited evidence, not rerun by this verification and not new firmware/native coverage. Frozen through21 and later navigation/draft documents remain historical records; their pinned bytes are not recertified as complete final semantic coverage.
+
+## Protected F454 dossiers
+
+All four protected EVIDENCE_INDEX.json hashes match their original baseline, and every listed file hash matches: 1,917 files in 2026-10-29; 107 in 2026-10-30-targeted; 130 in targeted-2; 83 in final-pass. Total **2,237 protected listed files**, with no modifications. This verifies indexed file preservation; it does not claim no unrelated unindexed file exists or re-audit F454 semantics.
+
+No correction to prior source findings was needed. The final result is exact reproducible identity and ledger preservation at the stated read time, with the known history limitations retained and no new runtime/physical claim.

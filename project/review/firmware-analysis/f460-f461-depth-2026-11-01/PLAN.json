@@ -1,0 +1,37 @@
+{
+  "started_UTC": "2026-11-01T10:47:48.122992+00:00",
+  "user_request": "Proceed with both in-depth firmware analysis in parallel",
+  "scope": "Two independent bounded original binary-source paths, followed by cross-source peer and documentary review; no whole-firmware completion claim.",
+  "authors": {
+    "F460": "firmware_protocol",
+    "F461": "firmware_boot"
+  },
+  "reviewer": "firmware_functional (read-only)",
+  "sources_read_only": true,
+  "original_or_vendor_execution": 0,
+  "closed_branches": "Authentication/session/framing, receiving/transport/MQTT/libjel bodies and equivalents remain closed",
+  "prior_checkpoint": [
+    {
+      "path": "work/f460-f461-comparison/2026-11-01/EVIDENCE_INDEX.json",
+      "bytes": 66505,
+      "sha256": "760a66fcae9e1d4eab76f20a00d062b86f57f891045c35e77d7ec2e3c318e701"
+    },
+    {
+      "path": "work/f460-f461-comparison/2026-11-01/IDENTITY_VALIDATION.json",
+      "bytes": 27374,
+      "sha256": "cd0ca82fac38b18db01428ea2de7209ff87ffae39264e933024c8c13f7e58364"
+    },
+    {
+      "path": "work/f460-f461-comparison/2026-11-01/RESEARCH_STATE.json",
+      "bytes": 4830,
+      "sha256": "5c33cd3c441270c239e9b2c7df33f40d3cd703cbae343b0020ce176b8fcda335"
+    }
+  ],
+  "source_manifest": {
+    "path": "OpenWebNet-Encyclopedia/sources/artifact-manifest.yaml",
+    "bytes": 893450,
+    "sha256": "dff0aac04bdb06c9ea298845d8666dce293818e65b03ae5882c3ab0aed883a05"
+  },
+  "prior_user_time_ceiling": "2026-11-01T11:00:00Z (noon Europe/Paris); preserve reviewed bounded checkpoint before that time",
+  "new_public_page": "Depth follow-up; original first-pass page and its pins remain unchanged"
+}

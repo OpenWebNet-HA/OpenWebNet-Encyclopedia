@@ -1,0 +1,35 @@
+{
+  "scope": "Parent independent source PIC literal check only; imported providers and field-to-params join are independent review obligations",
+  "image_sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26",
+  "PIC_literals": [
+    {
+      "pool_VA": "0xd22b0",
+      "ADD_PC": "0xd20e8",
+      "literal_VA": "0x116134",
+      "literal": "2.0",
+      "literal_bytes_sha256": "42b99ac8338a4b94df57f209d9360d4c42bf0164c4b459edc93ea827ed220706"
+    },
+    {
+      "pool_VA": "0xd22c0",
+      "ADD_PC": "0xd2170",
+      "literal_VA": "0x1361d4",
+      "literal": "light.setStatus",
+      "literal_bytes_sha256": "b1b2683d633550df9bc3301adbdb65eb54fc5d655ffb1980f146ca94cdd568fe"
+    },
+    {
+      "pool_VA": "0xd1950",
+      "ADD_PC": "0xd1780",
+      "literal_VA": "0x116adc",
+      "literal": "id",
+      "literal_bytes_sha256": "b1f1e1efa0422888346cb01744e905f325be96a2431ec34557ddc5eb50ef82f8"
+    },
+    {
+      "pool_VA": "0xd1944",
+      "ADD_PC": "0xd1694",
+      "literal_VA": "0x1151ac",
+      "literal": "status",
+      "literal_bytes_sha256": "afda34ac84d18210ca2fa7083fcbfcb31ad44fab7d47ec0ce7a448683cc1fded"
+    }
+  ],
+  "new_original_execution_fixtures_models": 0
+}

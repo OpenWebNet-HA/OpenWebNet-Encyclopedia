@@ -1,0 +1,20 @@
+
+/home/bticino/bin/coso:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000053a8 <send_msgs2open_@@Base+0x78>:
+    53a8:	71000a7f 	cmp	w19, #0x2
+    53ac:	54000888 	b.hi	54bc <send_msgs2open_@@Base+0x18c>  // b.pmore
+    53b0:	f94002c0 	ldr	x0, [x22]
+    53b4:	97fff67f 	bl	2db0 <g_list_first@plt>
+    53b8:	aa0003f4 	mov	x20, x0
+    53bc:	b40008e0 	cbz	x0, 54d8 <send_msgs2open_@@Base+0x1a8>
+    53c0:	f9400295 	ldr	x21, [x20]
+    53c4:	aa1803e0 	mov	x0, x24
+    53c8:	97fff672 	bl	2d90 <g_file_get_path@plt>
+    53cc:	f94002a1 	ldr	x1, [x21]
+    53d0:	97fff694 	bl	2e20 <g_str_has_suffix@plt>
+    53d4:	340007e0 	cbz	w0, 54d0 <send_msgs2open_@@Base+0x1a0>
+    53d8:	34000a13 	cbz	w19, 5518 <send_msgs2open_@@Base+0x1e8>

@@ -1,0 +1,219 @@
+{
+  "created_UTC": "2026-11-02T12:05:26.445532+00:00",
+  "status": "SEVEN_SEMANTIC_CHECKS_COMPLETE_VALIDATION_PENDING_HERE",
+  "review_method": "Full current3page read, exactHEAD/BASELINEdifferences, unchangedprioraccepted evidence reused explicitly; newfirmware implication prose checkedagainst reviewedcurrentreferences; no freshPDF/binary/source/collector work",
+  "HEAD": "88d61b3f3bf1456a708b62b0e3de6ed2242960ee",
+  "files": [
+    {
+      "path": "devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md",
+      "current_sha256": "5024a42759f659fae292987096f0d6ef7efff9a85a7ccf783e5884f36920410e",
+      "current_bytes": 43421,
+      "current_lines": 458,
+      "HEAD_sha256": "5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855",
+      "baseline_sha256": "bd64060e1e19f90eecad2808b62327847a0f541ae2fc46239bbda29a5efe5c98",
+      "HEAD_to_current_changes": [
+        {
+          "kind": "replace",
+          "HEAD_lines": [
+            445,
+            445
+          ],
+          "current_lines": [
+            445,
+            445
+          ],
+          "HEAD_text": [
+            "The later 2024/2025 feature matrices establish explicit app-version requirements but not installed state or payload behavior. Feature-detail pages 12\u201320 and 23 beyond the inspected matrix remain outside this review scope. The old exact-product export lead redirected to an unavailable product URL (HTTP 404); its search-only EAN was not adopted. Current firmware binaries and parameter payloads were not examined."
+          ],
+          "current_text": [
+            "The later 2024/2025 feature matrices establish explicit app-version requirements but not installed state or payload behavior. Feature-detail pages 12\u201320 and 23 beyond the inspected matrix remain outside this review scope. The old exact-product export lead redirected to an unavailable product URL (HTTP 404); its search-only EAN was not adopted. [Firmware `3.87.13`](../../reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md) supplies separate source evidence for the embedded catalogue and server scene processor, plus one isolated scalar-provider experiment. It does not establish installed state, complete parameter-payload semantics or a running/physical scene outcome."
+          ]
+        }
+      ],
+      "fresh_semantic_checks": {
+        "identity_scope": "complete",
+        "claim_evidence": "complete",
+        "source_reconciliation": "complete",
+        "information_architecture": "complete",
+        "reader_usefulness": "complete",
+        "evidence_limits": "complete",
+        "presentation": "complete"
+      },
+      "validation": "pending_in_this_review_parent_records_actual_checks_separately"
+    },
+    {
+      "path": "devices/definitions/own-dev-0207-f460-myhome-server.md",
+      "current_sha256": "8a168f0333cdc6d675ba0fbec04c587070e748fcb5ac75f41a37861830eea851",
+      "current_bytes": 42453,
+      "current_lines": 430,
+      "HEAD_sha256": "ed4af14a11813ba1fdc53dfbf131a388b2cf8066fc688888e30da7c158579932",
+      "baseline_sha256": "c36fa47758ff05e6e5fbeaf7d4d3549d6fed38e4e032cba299021ee261bf157e",
+      "HEAD_to_current_changes": [
+        {
+          "kind": "replace",
+          "HEAD_lines": [
+            399,
+            399
+          ],
+          "current_lines": [
+            399,
+            399
+          ],
+          "HEAD_text": [
+            "Installed release / build, production-specific compatibility, actual capacity under the installed version, third-party payload behavior and endpoints remain uncorroborated. Linked firmware packages and external developer-protocol payloads are explicitly pending inspection; a manufacturer link alone does not establish exact runtime operation."
+          ],
+          "current_text": [
+            "Installed release / build, production-specific compatibility, actual capacity under the installed version, third-party payload behavior and endpoints remain uncorroborated. The [retained `2.0.12` implementation](../../reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md) provides selected source evidence, with [product-specific implications](../../reverse-engineering/firmware-analysis/f460-f461-knowledge-handoff.md). It does not establish an installed release, active Configuration, successful protocol delivery or additional physical capability. External developer-protocol payloads remain pending inspection; a manufacturer link alone does not establish exact runtime operation."
+          ]
+        },
+        {
+          "kind": "replace",
+          "HEAD_lines": [
+            413,
+            413
+          ],
+          "current_lines": [
+            413,
+            413
+          ],
+          "HEAD_text": [
+            "| `F460_020012.fwz` | Firmware F460_020012  /  FWZ (151.2 MB) | [Manufacturer link](https://assets.legrand.com/pim/AUTRE/F460_020012.fwz) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |"
+          ],
+          "current_text": [
+            "| `F460_020012.fwz` | Firmware F460_020012  /  FWZ (151.2 MB) | [Manufacturer link](https://assets.legrand.com/pim/AUTRE/F460_020012.fwz) | Selected source paths described in the [F460 2.0.12 implementation reference](../../reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md), without installed/runtime approval |"
+          ]
+        },
+        {
+          "kind": "replace",
+          "HEAD_lines": [
+            417,
+            417
+          ],
+          "current_lines": [
+            417,
+            417
+          ],
+          "HEAD_text": [
+            "Historical ST-00001807-EN was found on the manufacturer site; it remains unexamined alongside linked firmware and developer-protocol payloads. The July 2024 manual was examined at the cited limits, update, scan, association, role and settings scopes; the individual UI screens of every graphic-object chapter were not exhaustively re-reviewed. All 2026 technical-sheet pages were compared; compatibility-list duplicate/mislabelled command rows are not treated as additional SKUs."
+          ],
+          "current_text": [
+            "Historical ST-00001807-EN and external developer-protocol payloads remain outside this manual/catalogue review. The separate retained F460 2.0.12 build is examined at selected static-source scopes in the firmware study linked above. The July 2024 manual was examined at the cited limits, update, scan, association, role and settings scopes; the individual UI screens of every graphic-object chapter were not exhaustively re-reviewed. All 2026 technical-sheet pages were compared; compatibility-list duplicate/mislabelled command rows are not treated as additional SKUs."
+          ]
+        }
+      ],
+      "fresh_semantic_checks": {
+        "identity_scope": "complete",
+        "claim_evidence": "complete",
+        "source_reconciliation": "complete",
+        "information_architecture": "complete",
+        "reader_usefulness": "complete",
+        "evidence_limits": "complete",
+        "presentation": "complete"
+      },
+      "validation": "pending_in_this_review_parent_records_actual_checks_separately"
+    },
+    {
+      "path": "devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md",
+      "current_sha256": "6db979580b7bd8a801c7b76ae9e1e0d2bc502503a44453f7b60169b2de3b7124",
+      "current_bytes": 40510,
+      "current_lines": 416,
+      "HEAD_sha256": "89f0a1cd681924ec8bf6b093c4c39d3d037b14cd416547b8111bffecd2eb5323",
+      "baseline_sha256": "ebdedce1537eec88678e418addcd076923a7f6997a659998f6c3affb51e3e259",
+      "HEAD_to_current_changes": [
+        {
+          "kind": "replace",
+          "HEAD_lines": [
+            385,
+            385
+          ],
+          "current_lines": [
+            385,
+            385
+          ],
+          "HEAD_text": [
+            "Installed release / build, production-specific compatibility, actual capacity under the installed version, third-party payload behavior and endpoints remain uncorroborated. Linked firmware packages and external developer-protocol payloads are explicitly pending inspection; a manufacturer link alone does not establish exact runtime operation."
+          ],
+          "current_text": [
+            "Installed release / build, production-specific compatibility, actual capacity under the installed version, third-party payload behavior and endpoints remain uncorroborated. The [retained `2.0.11` implementation](../../reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md) provides selected source evidence, with [product-specific implications](../../reverse-engineering/firmware-analysis/f460-f461-knowledge-handoff.md). It does not establish an installed release, active Configuration, successful protocol delivery or additional physical capability. External developer-protocol payloads remain pending inspection; a manufacturer link alone does not establish exact runtime operation."
+          ]
+        },
+        {
+          "kind": "replace",
+          "HEAD_lines": [
+            399,
+            399
+          ],
+          "current_lines": [
+            399,
+            399
+          ],
+          "HEAD_text": [
+            "| `F461_020011.fwz` | Firmware F461_020011  /  FWZ (132.2 MB) | [Manufacturer link](https://assets.legrand.com/pim/AUTRE/F461_020011.fwz) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |"
+          ],
+          "current_text": [
+            "| `F461_020011.fwz` | Firmware F461_020011  /  FWZ (132.2 MB) | [Manufacturer link](https://assets.legrand.com/pim/AUTRE/F461_020011.fwz) | Selected source paths described in the [F461 2.0.11 implementation reference](../../reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md), without installed/runtime approval |"
+          ]
+        },
+        {
+          "kind": "replace",
+          "HEAD_lines": [
+            403,
+            403
+          ],
+          "current_lines": [
+            403,
+            403
+          ],
+          "HEAD_text": [
+            "The shared commissioning manual was examined at limits, update, scan, role and settings scopes; detailed UI screens of every graphic-object chapter remain unexamined. The developer Local Interoperability specification and linked firmware/XML payloads were not inspected. Product export and guide integration examples do not establish every available driver or protocol behavior."
+          ],
+          "current_text": [
+            "The shared commissioning manual was examined at limits, update, scan, role and settings scopes; detailed UI screens of every graphic-object chapter remain unexamined. The developer Local Interoperability specification remains outside this manual/catalogue review. The retained F461 `2.0.11` build has selected source paths documented above; linked XML resources and unrelated listed payloads retain their own examination status. Product export and guide integration examples do not establish every available driver or protocol behavior."
+          ]
+        }
+      ],
+      "fresh_semantic_checks": {
+        "identity_scope": "complete",
+        "claim_evidence": "complete",
+        "source_reconciliation": "complete",
+        "information_architecture": "complete",
+        "reader_usefulness": "complete",
+        "evidence_limits": "complete",
+        "presentation": "complete"
+      },
+      "validation": "pending_in_this_review_parent_records_actual_checks_separately"
+    }
+  ],
+  "policy_prior_acceptance_and_implication_reference_identities": [
+    {
+      "path": "devices/contributing/device-definition-presentation-profile.md",
+      "sha256": "9b44c117a3c4b4bb53e44d291d3e4a2195108d0e9f933e9b7fb08f7d5fbbe6f6"
+    },
+    {
+      "path": "project/review/device-reviews-0191-0200-2026-10-07.md",
+      "sha256": "790214751fbe04a80e06f4386b59a5bd7d8676a62eed8ffca3d23daa664ac912"
+    },
+    {
+      "path": "project/review/device-reviews-0201-0210-2026-10-07.md",
+      "sha256": "db0f211ec01d7b8722926b8a707be88a94035615863ca288881254bc7a4195b8"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+      "sha256": "4530a90eb547893c7f96c3ff9e728e9d640012ad1ad7e85e12ed0e112480a7b5"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md",
+      "sha256": "49b961e7054601b69eb77a30d88f160233e3db548001182886ec3f349c5a2d08"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f460-f461-knowledge-handoff.md",
+      "sha256": "7dc3a116a6e72ed2bf00fc55208e5f64752b3214b9484122998a5547dab3cf00"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "sha256": "13fab5ab2c09f3df6b8e8633272f9a6930134699ba2377cd9001258bb670b860"
+    }
+  ],
+  "source_originals_or_vendor_execution": 0,
+  "repository_edits": 0
+}

@@ -1,0 +1,36 @@
+# MH202 run10 functional independent static source review — PASS
+
+No corrections required. Reviewer authored the distinct protocol/run10 builder/parser experiment, not this numeric/interpreter finding. This review writes only this file; author outputs, originals and earlier dossiers remain unchanged.
+
+## Checks and method
+
+`python3 -B work/mh202-firmware/research/2026-10-30/functional/run10/collect_evidence.py --check` passed18 evidence outputs plus manifest,10 original spans,32 words,2 originals and4lookup/4handoff finite host cases. Independently parsed original ELF PT_LOAD mappings via ImageVFS without importing author code and recomputed all10 span offsets/raw hashes,32 word values,2 original hashes and18 manifest entries. Independently checked actual library relocation names at GOT0x12224=Valori_num,0x1221c=n_num and0x1222c=linea, and recomputed all8 finite lookup/handoff cases.
+
+Inspected the actual lookup, allocation/assignment normalization, result stores, IIF numeric read, copy-decision tail and later OWRITE caller spans. Additionally inspected fresh original IIF0x74f8..0x7584: a left `$V` prefix leads to a search for `V` and a requested copy from its following byte; a right operand without `$V` selects0x75f4. This supports the selected direct operand-name interpretation under the declared copy/parser premises. No original ARM/library/interpreter/clock/IIF/OWRITE or other vendor instruction runs in this functional batch/review. Separate protocol native counts do not apply to this zero-execution area.
+
+## Source interpretation and boundaries
+
+- Original executable numeric declaration requests calloc(n_num,8), selected record stride8/name+0/value+4. Assignment accumulates decimal ID after `$V`, formats `%.3d`, looks up that key, and writes it at the selected record base. The format establishes a minimum precision for ordinary ID1→001, not arbitrary-width name safety or canonical configured source spelling.
+- Actual named library lookup0x3fbc..0x4140 returns an existing matching index or creates a name in the first empty record and sets value+4=0. IIF calls the same lookup-or-create provider, so missing-name lookup is not a pure failed read. The signed inclusive index<=n_num comparison and executable allocation count n_num are correctly recorded as a contract boundary; the host model stops before unprovided storage and no out-of-bounds runtime/impact claim is made.
+- Assignment normalization differs from the selected IIF operand read. Under supplied prefix/copy state, `$V001` becomes lookup key001 and can read the assignment key; `$V1` queries text1, which is distinct and may create a separate zero-valued name. Complete PARENTESI/current-line transformation, actual generator spelling and runtime global/provider binding remain explicit assumptions. There is no claim that these illustrative operands constitute an accepted full DSL statement.
+- Calendar/time result stores and numeric IIF load both identify the+4 value in index*8 records. IIF's selected left-numeric/right-literal branch reads the signed value after lookup, supplies it with explicit operator and atoi(rhs) to INT_OPERATORI, and stores the result byte. No local−1 guard is inserted into the source read. The earlier numeric0/1/2/−1 helper returns are not treated as Boolean conditions by themselves.
+- Nonzero comparison byte requests one global-line comma-prefix copy; zero requests two. The model correctly retains `OWRITE_BODY,FALSE_BODY` after one removal rather than pretending it selects an isolated action. Source copies overlap and are not executed here; prior standalone copy tests do not run this caller. The executable does not branch on IIF's own return value before later prefix handling.
+- Later source0xa4f4..0xa580 tests changed global text for OWRITE, extracts line-relative bytes9/10/11, queries the string record with false lookup argument from the successful prefix comparison, computes1028-byte stride and calls OWRITE on record+4. This remains an action call boundary under actual source/parser/lookup/DISABLED/provider premises; ignored action return is not successful delivery or physical execution.
+
+The conditional process-global join is supported by named exports/imports/GOT identities, not a demonstrated live loader resolution. Actual table allocation/capacity, configured extra/4 assets, complete operand/current-line parsing, source→condition→specific action sequence and physical scenario effects remain unresolved as stated. The report does not promote symbolic OWRITE_BODY or numeric-record identity to a runtime transaction.
+
+## Exact reviewed pins
+
+Paths below are relative to `functional/run10/`. Manifest transitively covers all18 generated outputs and excludes report/reviews; report and collector are separately pinned.
+
+| File | SHA256 |
+|---|---|
+| `REPORT.md` | `3cb3a737cea3b41b8687d0808894f5627787fb5447c1139216f32ce5cd3fb414` |
+| `collect_evidence.py` | `43597beddb95b8b693019da7365bd07f6e1139962d804ffb0791ea3d0003a4ed` |
+| `output-manifest.json` | `a39b1493bcf2240f783420a37f2e22c5563b8dbaf4bea5a2d3a3987f94f2ac68` |
+| `input-hashes.json` | `7dc9d20374e4b72538bad52e92fc33b2754aaf6fa6d965fbcef501be1c7c6b7c` |
+| `original-spans.json` | `16f4ba0947a55fe6ae9dd83132c77314af94e31aa16f33592cddfb89450215ed` |
+| `critical-words.json` | `eec28090d16bc3c78c1ba881554fb8aafb26693ac98c128dfebe3752508b47e7` |
+| `literal-and-got-facts.json` | `dafbfc0d41868169e4cb9706124eee6259efc87e5c572ab771f35e04830ebaef` |
+| `host-lookup-model.json` | `ca30fbcbb191bfe19616b3a2c3a273fda16b275fe242a9a5eb0d0132d138d3de` |
+| `host-composed-handoff.json` | `4fa04f44e74a2bd88c6c447fc2c5bfdd1c75ee82ffbea6173fa41a461ad24c8d` |

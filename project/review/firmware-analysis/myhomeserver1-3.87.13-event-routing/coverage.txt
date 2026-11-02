@@ -1,0 +1,11 @@
+# Bounded coverage
+
+| Area | Newly supported original source | Remaining boundary |
+| --- | --- | --- |
+|Classifier/route|light row1 to local code0; params.id; two code tables; separate rawtrigger table/index correlation|Earlier parse/filter/string provenance, actual return1, active scene/registry/vector/provider/lifetime|
+|Record|Selected missing/type0 Light constructor/status8/level32; control+12; shared global/node pair/readback|Alternate Load layout, actual JSON/map/owner results, accepted event/physical effects|
+|Condition|BNLD raw/compiled RTTI/layout, status-present vs level path, actual primary predicate/TBB|Serializer values/operator names/query/readiness/type/errors/full owner/scene effects|
+
+All three areas use static host extraction and byte assertions. Original execution0 and semantic fixtures0; no coverage percentage/full-source, external subscription, complete runtime, physical validation or wider Device closure. Sources/images/synced files/completed dossiers are read-only; corrected prior versions/history remain retained. Prior MH202 run18/run21 missing intermediate histories remain unverified. Functional agent remains reviewer/read-only.
+
+The earlier TIME, cancellation, lifetime, serialization and BNIL packets remain inherited scopes. Missing configured extras80/81/94/95, positive shared-reset owner, natural owner removal/order, effective providers and concurrency remain open. Branch work is local/uncommitted, without staging/publishing/source-manifest changes.

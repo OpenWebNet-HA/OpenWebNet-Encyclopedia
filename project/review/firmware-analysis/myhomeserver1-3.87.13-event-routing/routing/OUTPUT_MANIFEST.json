@@ -1,0 +1,102 @@
+{
+  "collector_sha256": "eedf8f0aa613cb3f00a5808ffab0adea9a029e3257aa8162356b2247172c9165",
+  "outputs": {
+    "BYTE_GUARDS.json": {
+      "bytes": 765,
+      "sha256": "b9051a9f1c3c855e9838efe49d529962908887b4c07fc91454a516e35715bccf"
+    },
+    "DATA_SPANS.json": {
+      "bytes": 624,
+      "sha256": "f388c5556a5632c244190f49e0c8f0e9c7fe7a3ff027839088720dcd9b509c84"
+    },
+    "DIRECT_BRANCHES.json": {
+      "bytes": 874,
+      "sha256": "5527d77f93bbcfc131eec19da9a84b7e302aff2ca15e65f8bf61091b74b69b7b"
+    },
+    "INPUTS.json": {
+      "bytes": 640,
+      "sha256": "3e328832ac7bf0c7334647b36caf89684b8f0fd639eab49cd3517cdd7b664107"
+    },
+    "KEYS.json": {
+      "bytes": 310,
+      "sha256": "7bbf5d73d12ab4fc32e48704310d6d49b1510f5bf7006f95b162fdd85da858ba"
+    },
+    "METHOD.json": {
+      "bytes": 412,
+      "sha256": "ae1025e04348a8ab466a8e259328c1e8c7b68124ef3b070ce76274b8b1294c8c"
+    },
+    "ROUTE_LEDGER.json": {
+      "bytes": 1383,
+      "sha256": "85030b800bd31ef394da81644a15f00561bb368dcca9d79b9ad6549b8676071e"
+    },
+    "SELECTED_DISCRIMINATOR.json": {
+      "bytes": 433,
+      "sha256": "6df4f8cf84d438c6ed9ae8966b54f460754e494dfe373a04a7994c67a199a52e"
+    },
+    "SOURCE_SPANS.json": {
+      "bytes": 3059,
+      "sha256": "1c900d843f406bdedd1ce493c1231996e763e3c27d6a9d6b82715c56b5b74192"
+    },
+    "TABLES.json": {
+      "bytes": 753,
+      "sha256": "7f09144d4324bd72dd76c040b9699a130c37f57137e6b022fee189569536d14c"
+    },
+    "spans/bnil-recipient.txt": {
+      "bytes": 1701,
+      "sha256": "617c09fbad110a2525640de4e68671e1dd4a78e3f5eb759683fa128e5090ccf8"
+    },
+    "spans/classification-store.txt": {
+      "bytes": 231,
+      "sha256": "bd9dcb78c874ea048002acf8251e75eb9b1d2a9bff8b0a6b0e1af885f657e1e3"
+    },
+    "spans/id-equality.txt": {
+      "bytes": 669,
+      "sha256": "4fa466eaf2a095811f4dc51ff97399eea26230a907133a32f87fcf26607ad8df"
+    },
+    "spans/iteration-step.txt": {
+      "bytes": 429,
+      "sha256": "66702c205836219f0790278b699ff17230a42603f120a05fbcd3a3fc97e9f2d0"
+    },
+    "spans/local-prefix-and-selected-label.txt": {
+      "bytes": 1483,
+      "sha256": "d25b72a1c745bddd7f09b741950e0a60bb6da5418086b1d0607a0e63c54c23dc"
+    },
+    "spans/params-id-initial-guard.txt": {
+      "bytes": 1284,
+      "sha256": "a3c8a6af1885e9ed0b6f4d7a286ae6b0a4f4e72150a7e56f510431bf032a32bc"
+    },
+    "spans/params-id-population.txt": {
+      "bytes": 1152,
+      "sha256": "b0a15253a3196b199d377c6c74602265a18126842e58c2700568c42d8c7c0974"
+    },
+    "spans/prefix-equality.txt": {
+      "bytes": 914,
+      "sha256": "a3c98727c5c116351674e672153a8d71e0b99819ebbd0562695c88b9b9fe9e1b"
+    },
+    "spans/producer-return-gate.txt": {
+      "bytes": 823,
+      "sha256": "a1effa6f40f873ef487bbc6282b5d5aa305516d128a8f4d854381a5645288ad1"
+    },
+    "spans/record-and-trigger-dispatch.txt": {
+      "bytes": 1125,
+      "sha256": "f59c1b95807d75eae8914fc8ca5b70343f14a4f373d113e9be6d0adebf536dfb"
+    },
+    "spans/return-one-cleanup-leg.txt": {
+      "bytes": 451,
+      "sha256": "0c9bb6d196f07e25a2c3304d044186bd83993a9df407f95a23e452a75d2982fa"
+    },
+    "spans/scene-and-second-dispatch.txt": {
+      "bytes": 1184,
+      "sha256": "1f2eebf5b0bd58427d6dd7006fbdf31cdc18c037863b8e4b74c77457fc0098c9"
+    },
+    "spans/selected-label-value.txt": {
+      "bytes": 193,
+      "sha256": "f67b8c7a7956dfe9a7d0dc10e3095e9b0201fbdb9e56a1d882e0043c71cd48f1"
+    },
+    "spans/selected-producer-tail.txt": {
+      "bytes": 912,
+      "sha256": "6a19e78a72d97dcf54af31e927b95f4c4b3e23ba472fcf578a6245c3672211ea"
+    }
+  },
+  "report_sha256": "85ffa994ed3bebf07000cbe3335a13b345c8cc869f73996e5bbc07eb3e608159"
+}

@@ -1,0 +1,24 @@
+# Independent F460 run07 receiver/worker source review
+
+PASS within the selected allocation/receiver/gate/state/predicate-to-local-boundary scope. No source correction requested. I authored the separate F461 pure identity getter packet; this review independently checks original F460 scheduler bytes/layouts and candidate import requests. No original/vendor/provider/thread/OS/native or semantic-model execution was used.
+
+Verified scheduler SHA5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62 and fresh PT_LOADs, all9 raw spans/hashes,39 guarded words,2 relocated RTTI/table groups,2 selected PICs,5 direct local calls and7 actual BL/PLT/import bindings. Selected allocation272 retains its control base and uses post-index+16 before calling105740; the control RTTI explicitly names _Sp_counted_ptr_inplace<SceneRunner>. This is control-block ownership intent and a positive inner-constructor source path, not an asserted SceneRunner primary vtable or a proved runtime lifetime.
+
+Constructor105740 preserves the same destination through its base helper and to initializerf94c0, connecting conditionally to run06's actual raw-pointer capture. Fresh source zero stores cover receiver168..247, halfword248/249 and byte250; pointer240 lies within that zeroed storage. The separate alternative constructor is source-backed but does not imply equal configuration semantics. No global reset or universal captured-owner provenance is inferred.
+
+Methodf7650 checks raw byte113, acquire-loads249 and on the selected zero249 route release-stores249=1/248=0. Exact receiver+249/+248 address arithmetic is verified. These are source atomics/orderings; no atomic compare-exchange/exclusion, configured enabled meaning, natural admission or race result is established. Actual8-byte holder/16-byte state requests and installed stateAP216f80+rawreceiver8 agree. The actual _M_start_thread import and later detach/sized-delete/terminate declarations are verified; none was executed or expanded into thread-provider/OS behavior. Conditional residual-state destructor and old-holder-nonzero terminate branches remain source requests, not demonstrated safety or successful scheduling.
+
+Fresh state table slot+16=f8cb0 and the actual worker load from state+8 independently establish the stored receiver/method relationship, beyond its RTTI text. The selected state contains a raw pointer, not a captured shared-owner pair. No owning retention or whole-lifetime conclusion follows from a local missing refcount operation.
+
+Worker source reads receiver192/200 as its own8-byte-pointer range, uses grouped iteration and separately dispatches the one-remaining-pointer tail. Atf90b4 it loads a condition pointee, its vtable slot+16, calls it and tests exactly low8 return bits. False branches to the failure/log path; true reloads the raw receiver from the same state and joins the retained normal string/cleanup route. Finalf903c reload/f9054 tail to localf84d0 are verified. Predicate identity/value, full zero/multiple-condition semantics, exceptions/cancellation, actual thread dispatch, lifetime/concurrency and the destination body's effect are not supplied or executed. The report appropriately stops before f84d0 rather than equating a source call with action success or physical behavior.
+
+Read-only host collector --check passes12 outputs. Independently checked6 input pins and14 exact first-candidate copies. Author files are unchanged; no failed generated candidate or overwritten output is claimed. No MHS field/state/thread layout is transferred. Source fields113/248/249/250, holder240, control aggregate, closure, thread-state and condition-pointer vector remain distinct namespaces. Existing execution ledgers are unchanged. No receiving, transport, authentication, session, framing, MQTT/libjel or equivalent closed body was examined.
+
+## Exact reviewed pins
+
+- `REPORT.md`: `578653ad15a4c18b203d9917867f32384d017894875e88054043fae29ff46557`
+- `collect_receiver_v1.py`: `898e268ac4c187ec7a708e2fe5031f07ce9b36fa9e64b7a8494a690ddb985a5a`
+- `SOURCE.json`: `2b0aaadc55a2e7f62c00cbe8e611d8cc00a09020f4035133fc06224fd0fa6395`
+- `INPUTS.json`: `cdbd41e56e9bde6d8025b4bebcde3f4597671f90a537367698dffef54ff13e9d`
+- `OUTPUT_MANIFEST.json`: `117ad99be19f9aff643c16bd0ca7d2c7d2f094c7f69815dab22c9c271b8a6ff4`
+- `first-candidate/INDEX.json`: `a48fa0135460766f323779bcd5babfecbdfdca1e799c56c5a15587dc90084a17`

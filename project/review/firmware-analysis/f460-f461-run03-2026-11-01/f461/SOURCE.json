@@ -1,0 +1,202 @@
+{
+  "actual_indirect_callback": {
+    "arg0": "selected origin axis W24",
+    "arg1": "selected destination axis W23",
+    "arg2": "same message X28",
+    "arg3": "SP+168 output-list address X21",
+    "arg4": "same descriptor X22",
+    "call": "0x4048",
+    "load": "0x4040",
+    "slot_offset": 56
+  },
+  "automation_descriptor": "0x18190",
+  "automation_direction_words": {
+    "offset64": 1,
+    "offset68": 2
+  },
+  "get_plug_m_PLT_bytes": "b00000b011d240f91082069120021fd6",
+  "get_plug_m_import": "00000000000171a0  0000003a00000402 R_AARCH64_JUMP_SLOT    0000000000000000 get_plug_m + 0",
+  "guards": {
+    "0x2f74": "001280d2",
+    "0x2f80": "2cffff97",
+    "0x3e08": "e23b00f9",
+    "0x3e94": "9c0240f9",
+    "0x3e98": "931340f9",
+    "0x3ef8": "1a0c40f9",
+    "0x3f14": "212b40f9",
+    "0x3f18": "3f0000eb",
+    "0x3f28": "131040f9",
+    "0x3f38": "760240f9",
+    "0x3f3c": "801340b9",
+    "0x3f40": "d7624829",
+    "0x3ffc": "215340b9",
+    "0x4000": "3f00186b",
+    "0x4008": "c02640f9",
+    "0x400c": "f803172a",
+    "0x4010": "f703012a",
+    "0x4024": "e40316aa",
+    "0x4028": "8c3340b9",
+    "0x402c": "e30315aa",
+    "0x4030": "e2031caa",
+    "0x4034": "e103172a",
+    "0x4038": "9f01006b",
+    "0x4040": "cc1e40f9",
+    "0x4044": "e003182a",
+    "0x4048": "80013fd6",
+    "0x404c": "c0000035",
+    "0x4070": "c02a40f9",
+    "0x4170": "e20300aa",
+    "0x4178": "00200291",
+    "0x417c": "1dffff17"
+  },
+  "inputs": [
+    {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          27804,
+          27804,
+          65536
+        ],
+        [
+          1,
+          6,
+          27848,
+          93384,
+          93384,
+          2328,
+          2432,
+          65536
+        ]
+      ],
+      "bytes": 32168,
+      "image_path": "/home/bticino/bin/coso",
+      "sha256": "2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197"
+    },
+    {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          19020,
+          19020,
+          65536
+        ],
+        [
+          1,
+          6,
+          19216,
+          84752,
+          84752,
+          1616,
+          1648,
+          65536
+        ]
+      ],
+      "bytes": 22752,
+      "image_path": "/home/bticino/libcoso/libcoso.so",
+      "sha256": "572bca218965a040393361bea4044b0d55519b4f2146ef69c9aa18d4aa6ef690"
+    },
+    {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          27368,
+          27368,
+          65536
+        ],
+        [
+          1,
+          6,
+          31456,
+          96992,
+          96992,
+          1864,
+          1872,
+          65536
+        ]
+      ],
+      "bytes": 35240,
+      "image_path": "/home/bticino/libcoso/libplug_automation_tr.so",
+      "sha256": "d7d361798ccec65843bd41c9ad7b8897645a334b0cd08121d372949f78eac277"
+    }
+  ],
+  "original_execution": 0,
+  "semantic_fixtures_or_models": 0,
+  "spans": [
+    {
+      "VA": "0x2f74",
+      "bytes_sha256": "9e7931485689b8c0b2a06c30477dc5c37e4e71c006a266e5492aab44a07ad72f",
+      "end_exclusive": "0x2f84",
+      "file_offset": "0x2f74",
+      "input": "exe"
+    },
+    {
+      "VA": "0x3df0",
+      "bytes_sha256": "8de3e9b67b802abd7c37c06550672bc5977dbedee09313d590910814824f6424",
+      "end_exclusive": "0x3e24",
+      "file_offset": "0x3df0",
+      "input": "exe"
+    },
+    {
+      "VA": "0x3e54",
+      "bytes_sha256": "738c2232420d7e9ad01a3904c6b2f9e33bc61fcd63f200515c7601a61d75bc47",
+      "end_exclusive": "0x3f70",
+      "file_offset": "0x3e54",
+      "input": "exe"
+    },
+    {
+      "VA": "0x3f70",
+      "bytes_sha256": "ecb25592b2d6b41bc13f7db8a267f5c912f651d92c2271d9303fc5089a355f49",
+      "end_exclusive": "0x3fd8",
+      "file_offset": "0x3f70",
+      "input": "exe"
+    },
+    {
+      "VA": "0x3ffc",
+      "bytes_sha256": "a887ccf4dd9f6af2fc7f87c16a1048be7e9c2e83276492e84575dad6f1783822",
+      "end_exclusive": "0x4078",
+      "file_offset": "0x3ffc",
+      "input": "exe"
+    },
+    {
+      "VA": "0x4170",
+      "bytes_sha256": "7031734a0fbf31ff87ee3635bd86ba6804fee33ff9310cee5d8398a6a59ef18b",
+      "end_exclusive": "0x4180",
+      "file_offset": "0x4170",
+      "input": "exe"
+    },
+    {
+      "VA": "0x25a0",
+      "bytes_sha256": "acbbf360323865c9fb246c1245431f858127fb25c35b0a2e482d834b8007f65f",
+      "end_exclusive": "0x25c4",
+      "file_offset": "0x25a0",
+      "input": "core"
+    },
+    {
+      "VA": "0x2888",
+      "bytes_sha256": "4c08bacb7646b41ae03be76ee194f91d89f5283ede0ba1c88f9905320ee4920f",
+      "end_exclusive": "0x28e4",
+      "file_offset": "0x2888",
+      "input": "core"
+    },
+    {
+      "VA": "0x3088",
+      "bytes_sha256": "3ec6ce767b2afa85af0275c858c3985a6ba68a9605257d119e2bc7c245cd884c",
+      "end_exclusive": "0x30c4",
+      "file_offset": "0x3088",
+      "input": "core"
+    }
+  ]
+}

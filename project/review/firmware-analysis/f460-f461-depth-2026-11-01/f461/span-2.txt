@@ -1,0 +1,52 @@
+
+work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/libcoso/libplug_automation_tr.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000021f8 <init_plugin@@Base+0xa8>:
+    21f8:	b00000b3 	adrp	x19, 17000 <automation_tr_translate@@Base+0x135d0>
+    21fc:	d2800200 	mov	x0, #0x10                  	// #16
+    2200:	97ffff60 	bl	1f80 <g_malloc0@plt>
+    2204:	aa0003f9 	mov	x25, x0
+    2208:	f947e663 	ldr	x3, [x19, #4040]
+    220c:	aa1403e1 	mov	x1, x20
+    2210:	913042a2 	add	x2, x21, #0xc10
+    2214:	f0000000 	adrp	x0, 5000 <automation_tr_translate@@Base+0x15d0>
+    2218:	91332000 	add	x0, x0, #0xcc8
+    221c:	f9002c79 	str	x25, [x3, #88]
+    2220:	97ffff00 	bl	1e20 <g_strdup_printf@plt>
+    2224:	aa0003f4 	mov	x20, x0
+    2228:	97ffff26 	bl	1ec0 <g_key_file_new@plt>
+    222c:	aa1403e1 	mov	x1, x20
+    2230:	aa0003f8 	mov	x24, x0
+    2234:	d2800003 	mov	x3, #0x0                   	// #0
+    2238:	52800002 	mov	w2, #0x0                   	// #0
+    223c:	97fffecd 	bl	1d70 <g_key_file_load_from_file@plt>
+    2240:	2a0003f6 	mov	w22, w0
+    2244:	35000b80 	cbnz	w0, 23b4 <init_plugin@@Base+0x264>
+    2248:	aa1803e0 	mov	x0, x24
+    224c:	97ffff3d 	bl	1f40 <g_key_file_free@plt>
+    2250:	aa1403e0 	mov	x0, x20
+    2254:	97ffff13 	bl	1ea0 <g_free@plt>
+    2258:	f947e674 	ldr	x20, [x19, #4040]
+    225c:	f0000002 	adrp	x2, 5000 <automation_tr_translate@@Base+0x15d0>
+    2260:	91344042 	add	x2, x2, #0xd10
+    2264:	528000c4 	mov	w4, #0x6                   	// #6
+    2268:	52800043 	mov	w3, #0x2                   	// #2
+    226c:	d2800021 	mov	x1, #0x1                   	// #1
+    2270:	a904fe9f 	stp	xzr, xzr, [x20, #72]
+    2274:	d2800000 	mov	x0, #0x0                   	// #0
+    2278:	b9000a84 	str	w4, [x20, #8]
+    227c:	f9000e82 	str	x2, [x20, #24]
+    2280:	b9002a83 	str	w3, [x20, #40]
+    2284:	97fffecf 	bl	1dc0 <g_list_append@plt>
+    2288:	aa0003e2 	mov	x2, x0
+    228c:	d2800041 	mov	x1, #0x2                   	// #2
+    2290:	f9402a80 	ldr	x0, [x20, #80]
+    2294:	f9002682 	str	x2, [x20, #72]
+    2298:	97fffeca 	bl	1dc0 <g_list_append@plt>
+    229c:	aa0003e1 	mov	x1, x0
+    22a0:	aa1403e0 	mov	x0, x20
+    22a4:	f9002a81 	str	x1, [x20, #80]
+    22a8:	97fffeba 	bl	1d90 <register_translation@plt>

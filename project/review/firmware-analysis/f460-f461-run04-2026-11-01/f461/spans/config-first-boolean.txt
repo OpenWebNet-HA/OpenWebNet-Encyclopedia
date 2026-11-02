@@ -1,0 +1,48 @@
+
+/home/bticino/libcoso/libplug_scs.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000003248 <init_plugin@@Base+0xc8>:
+    3248:	97fffbbe 	bl	2140 <g_key_file_new@plt>
+    324c:	aa1a03e1 	mov	x1, x26
+    3250:	aa0003f6 	mov	x22, x0
+    3254:	d2800003 	mov	x3, #0x0                   	// #0
+    3258:	52800002 	mov	w2, #0x0                   	// #0
+    325c:	97fffb45 	bl	1f70 <g_key_file_load_from_file@plt>
+    3260:	2a0003fb 	mov	w27, w0
+    3264:	350002c0 	cbnz	w0, 32bc <init_plugin@@Base+0x13c>
+    3268:	aa1603e0 	mov	x0, x22
+    326c:	97fffbc5 	bl	2180 <g_key_file_free@plt>
+    3270:	aa1a03e0 	mov	x0, x26
+    3274:	97fffba3 	bl	2100 <g_free@plt>
+    3278:	f947c662 	ldr	x2, [x19, #3976]
+    327c:	b9400042 	ldr	w2, [x2]
+    3280:	35000b02 	cbnz	w2, 33e0 <init_plugin@@Base+0x260>
+    3284:	f947ce62 	ldr	x2, [x19, #3992]
+    3288:	b9400040 	ldr	w0, [x2]
+    328c:	35000820 	cbnz	w0, 3390 <init_plugin@@Base+0x210>
+    3290:	910c02f7 	add	x23, x23, #0x300
+    3294:	52800020 	mov	w0, #0x1                   	// #1
+    3298:	a94153f3 	ldp	x19, x20, [sp, #16]
+    329c:	b901a6e0 	str	w0, [x23, #420]
+    32a0:	52800000 	mov	w0, #0x0                   	// #0
+    32a4:	a9425bf5 	ldp	x21, x22, [sp, #32]
+    32a8:	a94363f7 	ldp	x23, x24, [sp, #48]
+    32ac:	a9446bf9 	ldp	x25, x26, [sp, #64]
+    32b0:	a94573fb 	ldp	x27, x28, [sp, #80]
+    32b4:	a8c67bfd 	ldp	x29, x30, [sp], #96
+    32b8:	d65f03c0 	ret
+    32bc:	90000018 	adrp	x24, 3000 <scs_send_msg@@Base+0x810>
+    32c0:	9123631c 	add	x28, x24, #0x8d8
+    32c4:	aa1c03e1 	mov	x1, x28
+    32c8:	aa1603e0 	mov	x0, x22
+    32cc:	90000002 	adrp	x2, 3000 <scs_send_msg@@Base+0x810>
+    32d0:	d2800003 	mov	x3, #0x0                   	// #0
+    32d4:	91232042 	add	x2, x2, #0x8c8
+    32d8:	97fffbce 	bl	2210 <g_key_file_get_boolean@plt>
+    32dc:	f947c662 	ldr	x2, [x19, #3976]
+    32e0:	2a0003fb 	mov	w27, w0
+    32e4:	b9000040 	str	w0, [x2]
+    32e8:	35000a20 	cbnz	w0, 342c <init_plugin@@Base+0x2ac>

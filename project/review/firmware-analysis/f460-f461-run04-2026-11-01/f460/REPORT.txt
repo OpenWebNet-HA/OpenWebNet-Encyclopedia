@@ -1,0 +1,33 @@
+# F460 2.0.12: selected catalogue SQL producer and value-object reader
+
+Static source packet, 2026-11-01 run04. Original execution, semantic fixtures and models: zero. Existing product ledgers are unchanged. This is an F460 consumer finding; the equal F461 catalogue bytes do not establish an equal F461 consumer.
+
+## Source identity and reproduction
+
+Original `/home/bticino/matrix_mx/matrix_mx`, SHA256 `16d92b02ffe89819f6947d93efa76a0f24f8b590a43d3e5d8fdc7226ec68a4ff`, is a fresh ELF64 little-endian AArch64 object. `SOURCE.json` records PT_LOAD mappings, original span hashes/bytes, exact relocation rows, call/PLT/GOT proofs and selected instruction guards. Printed nearest-symbol labels in disassembly are not function identities.
+
+Run `python -B work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/collect_catalogue_v1.py --check` from the workspace. The collector performs host reads/binutils only, refuses generated-output overwrite, and freezes exact first copies before opening their index. No SQL queries or expressions are executed. `INPUTS.json` pins the original VFS, product context, predecessor and original catalogue bytes.
+
+## New positive source join
+
+The initializer prefix at 0x27d50 establishes X22=0x31a000; 0x27eac sets X20=0x31a200. Instructions 0x27eb0/0x27eb8 select the compiled SQL C string at 0x28be38; 0x27ebc requests local string construction at 0xda5f0 into that global. This helper's normal path requests length/allocation/copy and records pointer/length/terminator (0xda614..0xda6d4). The producer is conditional on reaching this static initialization block and ordinary helper/provider returns; invocation and successful initialization are not observed.
+
+The separate common constructor 0x112060 reads the **same** global 0x31a200: pointer at 0x1120cc and length at 0x1120d4. It requests a range-string construction into inner object+40 at 0x1120f4. It preserves supplied W2/W3/W4/W1 as words inner+8/+12/+16/+20. Selected replacement preparations at 0x1120f8, 0x1121b4, 0x112268 and 0x11231c use these words for `$modobj$`, `$line_modobj$`, `$brand_modobj$`, `$key_object$` respectively. Conversion/find/replace and resulting full SQL validity remain conditional; this packet does not execute them.
+
+The concrete constructor at 0x112fd0 allocates 88 bytes, retains the allocation as its control/base pointer and advances its inner receiver by 16 (0x113040). It supplies literal W1=89 to 0x112060 (0x11303c/0x113048), then installs primary address point 0x3103b0 at base+16 (0x113054..0x11305c). Original relative relocations and RTTI identify `13kobj_value_89`, RTTI 0x314c98/name 0x294f28; its primary slot is 0xfa970. Thus key 89 has an actual constructor-to-placeholder source path. It is neither a Device ID nor OPEN WHO by numeric equality. Caller-supplied modobj/line/brand values and actual object-selection callers remain unclosed.
+
+## Literal path, query and reader fields
+
+Both the constructor's immediate reader (0x113068..0x11314c) and primary reader 0xfa970 use the exact original literal `/home/bticino/matrix_mx/MHCatalogue.db` at 0x2945d0. Each requests `stat`, then `sqlite3_open_v2` with flags numeric 1 and null VFS argument, checks open return and nonnull handle, and requests `sqlite3_prepare_v2` on its object's SQL pointer (inner+40; constructor base+56), length -1 and null tail pointer. Exact imported names are derived from original BL/PLT/GOT/relocations, not objdump annotations. Numeric 1 corresponds to SQLITE_OPEN_READONLY under the separately pinned HOST SQLite API header; that header is semantic context, not an original target header or successful-open proof.
+
+The compiled template at 0x28be38 has 15 ordered projections. Zero-based column 13 is `EN_KEY_OBJECT.slots`; column 14 is `AS_OBJECT_SYSTEM.id_system`. `SQL_TEMPLATE.json` retains the exact compiled template and projection order, including joins, read_only filter, supplied placeholders, whole-range/partial-range filter clauses and ORDER BY EN_CONF.idx. These are executable-source declarations, not observed database results, evaluated conditions or supported-product claims.
+
+Primary reader 0xfaa30..0xfaa64 requests `sqlite3_column_text(stmt,13)` then `strtol(text,NULL,10)` and stores low W0 to **inner+24**; it repeats column 14 to **inner+28**. The constructor's matching stores are 0x11310c/0x11312c. These are 32-bit object words, distinct from the 88-byte control aggregate and supplied selector words. Subsequent step result 100 returns to the column loop; repeated rows can overwrite these two words. No unique-row or complete result-selection semantics are inferred.
+
+The first step is compared only with numeric 101 before the nonnull-statement test. It is **not** checked for numeric 100 before first column access. There is no selected-path null-column-text check before strtol and no full-text/end-pointer/range validation here. These facts bound interpretation; they are not a runtime failure or defect finding. Under ordinary SQLite API constants, 101 is DONE and 100 ROW. Normal paths request finalize and close; primary reader's 0xfaab4 tail requests close. Constructor normal return publishes the inner/control pair at 0x113154 even on its selected stat/open early-return paths. Full error/resource behavior and provider bodies are not audited.
+
+## Applicability and limits
+
+The packaged catalogue is SHA256 `bd2ff4d326692c85bc4eb3f86504d615758da97dc832389fac523734574833e9`, 2633728 bytes, already independently compared with F461. No database rows, arbitrary configuration defaults, credentials or private identifiers are exported. This packet connects a compiled query producer to a concrete source reader; it does not establish active binding, successful SQL execution, actual caller parameters, catalogue compatibility, stable IDs across products, scene/device support, runtime selection or physical effects.
+
+Ranked gaps: actual caller selecting this key/object and parameter tuple; normal string substitution and complete SQL/provider behavior; configured catalogue rows and resulting slots/system interpretation under a separately authorized, owner-aware database analysis. Receiving/transport/MQTT/libjel/auth/session/framing bodies remain closed and are not inspected. No failed first generation or overwritten candidate occurred in this packet.

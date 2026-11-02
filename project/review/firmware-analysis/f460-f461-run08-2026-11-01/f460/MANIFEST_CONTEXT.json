@@ -1,0 +1,52 @@
+{
+  "bytes": 682,
+  "path": "work/f460-firmware/2.0.12/extracted/fwz.xml",
+  "safe_selected_lines": [
+    {
+      "line": 3,
+      "text": "<name>F460</name>"
+    },
+    {
+      "line": 4,
+      "text": "<fwz_ver>2.0.12</fwz_ver>"
+    },
+    {
+      "line": 5,
+      "text": "<xml_ver>3.1</xml_ver>"
+    },
+    {
+      "line": 12,
+      "text": "<action id=\"1\" type=\"firmware\" provider=\"btesuv3\">"
+    },
+    {
+      "line": 13,
+      "text": "<attr type=\"file\">btweb_only.ext4.gz.sha256.sig.zip</attr>"
+    },
+    {
+      "line": 14,
+      "text": "<attr type=\"file\">Image.zip.sha256.sig.zip</attr>"
+    },
+    {
+      "line": 15,
+      "text": "</action>"
+    },
+    {
+      "line": 16,
+      "text": "<action id=\"2\" type=\"recovery_firmware\" provider=\"btesuv3\">"
+    },
+    {
+      "line": 17,
+      "text": "<attr type=\"file\">btweb_only_recovery.ext4.gz.sha256.sig.zip</attr>"
+    },
+    {
+      "line": 18,
+      "text": "<attr type=\"file\">Image.zip.sha256.sig.zip</attr>"
+    },
+    {
+      "line": 19,
+      "text": "</action>"
+    }
+  ],
+  "scope": "Extracted package declarations, not observed runtime /tmp/fwz.xml, no parser/execution fixture.",
+  "sha256": "140ff2b63627a7324d4f75149cfd67dd7f90757242712981b6c3eabdb94f2ce7"
+}

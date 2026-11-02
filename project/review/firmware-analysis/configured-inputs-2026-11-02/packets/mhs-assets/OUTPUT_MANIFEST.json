@@ -1,0 +1,22 @@
+{
+  "collector_sha256": "5d24915043fe124967bd4ec39d866eef516f50d53c8fff6d691822d3b309f9a5",
+  "files": {
+    "ADMISSION.json": {
+      "bytes": 2997,
+      "sha256": "f9960fa9a98f1216e36d39c40263158e83c0bc30f228b4c0218d90c04c9b467f"
+    },
+    "INPUTS.json": {
+      "bytes": 1990,
+      "sha256": "b5ec11f24449f816df0ff73a2db2862a0cbcf31055526d61b984693dcf0b12fa"
+    },
+    "PROPOSED_SOURCE.json": {
+      "bytes": 1333,
+      "sha256": "4086c471aa1972aeaf8590e3911906d81fe1ffbab528efaea03ff05473a346b3"
+    },
+    "REPORT.md": {
+      "bytes": 3500,
+      "sha256": "191e7c46fc321fcad96850d04022f12fbdda6fa462aead336536669e2dabd777"
+    }
+  },
+  "new_functional_source_coverage": 0
+}

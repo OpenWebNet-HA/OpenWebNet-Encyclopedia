@@ -1,0 +1,11 @@
+{
+  "authorized_parent_scope": "../SCOPE_AUTHORIZATION.json",
+  "created_UTC": "2026-11-02T08:22:00.283489+00:00",
+  "new_question": "All-offset database signature/header/extent qualification in exact F450standard+PROD/F459 regular-file views; prior offsetzero census inherited only",
+  "selected_content": "Own regular-file payload bytes verified against source manifests; actual PK-leading containers centraldirectory and capped unencrypted members only. Original binaries treated as data, never disassembled/executed. Auxiliary encrypted50.xtz metadata retained only as boundary.",
+  "format_admission": "Exact SQLite3/SQLite2 magic; BDB/GDBM/LMDB signature candidates receive conservative header checks. A passed header is still only a plausible candidate requiring independent full-format evidence. No DB creation/SQLqueries/decryption/keys/providerbody reads.",
+  "private_output": "No rawconfig/rowvalues/credentials/keys/identities; export only input identities, byteoffsets, magic/header-validity fields, classifications and archive membermetadata.",
+  "new_original_execution": 0,
+  "new_SQLite_query": 0,
+  "network_uploads": 0
+}

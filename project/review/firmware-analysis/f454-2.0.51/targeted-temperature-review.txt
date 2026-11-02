@@ -1,0 +1,37 @@
+# Independent static review
+
+Result: **PASS for the stated conditional software behavior and evidence scope. No material correction required.** This review does not classify raw501..511 physically or establish a backend→frontend live join.
+
+Reviewed current `REPORT.md`, `collect_evidence.py`, `model_range.py`, saved numbered original-source excerpts, original ARM disassembly, format-literal resolution and configured bundle fragments. Only this review file was written. Firmware, original frontend code, prior dossiers and the reviewed outputs were read-only. No original ARM instruction, original JavaScript, browser, firmware process, earlier execution matrix or live I/O ran.
+
+## Reproduction and identity
+
+Executed both **host Python** scripts with `Path.write_text` intercepted into memory, comparing every intercepted UTF-8 byte sequence against the existing file. Collector reproduced **19 outputs** byte-for-byte; model reproduced **one output** byte-for-byte. This reran host `objdump` solely for static disassembly. It did not rerun original ARM code. Verified all **18 input-manifest hashes**, the **57 enumerated search-file hashes**, the separately pinned original symlink inventory, and all **six bundle fragments** against their exact character offsets. The scoped search has zero saved matches. Checked every reviewed output's bytes again after the in-memory reproduction.
+
+Additional independent host assertions covered all11 interval rows, byte reconstruction `int(XX,16)+256`, decimal padding, Celsius and rounded Fahrenheit labels, DIM15 sign-prefix forms, documented domain membership, zero truthiness, the1010 control, and spinner endpoints. The Decimal model's Fahrenheit rounding agrees with an independent positive-number arithmetic calculation for this finite interval. It is not claimed equivalent to JavaScript for arbitrary inputs or numeric edge cases.
+
+Exact SHA256 pins:
+
+| Artifact | SHA256 |
+|---|---|
+|`REPORT.md`|`dad594cce5b8aaf9a3ac54cb09f4077e0e4997aa08bf765b98e04f85ad9f8375`|
+|`collect_evidence.py`|`1a607c509595d83c133523322cfc7c1fad368d2cd65f29984b42d34f7a863517`|
+|`model_range.py`|`279a4802e310a0bc2e84921142ad175c7128abe6942b02409411ef3d61a1c62c`|
+|`range-model.json`|`f1052b2bde43e036b685e36fac281f84bfc439d195aab11831e2b5e4a277fc12`|
+|`input-manifest.json`|`29f850ae1df5437a0afc53cd5d2c2e98672f608f4d14e8da8ee7024f180cb607`|
+|`active-bundle-fragments.json`|`9f68cee14438aa7de8b1993357b024d28e364f1bd94003c4ebe0fb0925e8225a`|
+|`unsigned-DIM0.txt`|`c1f939249e93740a5ef8c6c9b38588b176198f743f114e7ab578df46f6f2a9d8`|
+|`signed-DIM15.txt`|`7b8d7c4debc144014f57dea5e9d95311446d4ee713a0fe008e741a86ac8a4b48`|
+
+A read-only repeat can run the scripts through `runpy.run_path` under a `unittest.mock.patch.object(Path, 'write_text', capture)` callback that records `Path(path).resolve(): text.encode('utf-8')`, then compare each recorded value with `path.read_bytes()`. Set `sys.dont_write_bytecode=True`; no script/output modifications are necessary. The collector's normal command writes existing evidence, so this review deliberately used interception instead.
+
+## Critical semantic checks
+
+- **Raw interval:** Original bt_termo0xff4c–0xff6c combines two hex nibbles; B5 alternatives add256 at0xffd0 or0xfff8. The selected normal downstream branches format `%04d` and call `CreateMsgOpen` at0x10028. There is no501..511-specific range/sentinel substitution in this bounded span. The full upstream B4/B5 grammar/address validity is attributed to prior evidence, not newly demonstrated by a slice starting0xff4c. `XX=F5..FF` gives501..511 and `0501..0511` exactly.
+- **String precondition:** Readable converter2221–2236 uses string methods and drops character0 before forming a tenth. The report explicitly conditions the result on `actual_temperature` being the exact four-digit string, rather than assuming numeric inputs or a proven backend handoff. For these inputs the labels50.1..51.1°C, with0510→51°C, follow. Source renderers use `if(floatTemp)`, so `0000`→numeric0→dash is correctly described as UI truthiness, not a failed-sensor meaning. The default decimal point is a model setting; source can substitute a comma.
+- **Sign:** Original0xebac–0xebb4 combines the16-bit quantity, tests bit0x8000 and clears it; the resolved format supplies a distinct sign digit and minimum-three-digit magnitude. `01F5`/`81F5`→`0501`/`1501` is consistent. The shared web converter discards the sign-position character, so control1010→numeric1 is a conditional representation difference. The report correctly avoids calling this an observed negative-temperature display defect or assuming DIM15 reaches this converter unchanged.
+- **Configured bundle and consumers:** `index.html:13` names `js/main-built`. Six saved bounded fragments reproduce the relevant readable arithmetic/renderers and spinner constants in that exact packaged bundle; this is configured packaging evidence, not proof that a browser loaded it. ThermoUnitZoneView254–267 and ExternalProbeObjectView49–72 visibly call these renderers on event/cached values. TemperatureZoneModel's copied field and the external-probe event dispatch do not close the backend type/value mapping. The report preserves that break.
+- **Distinct domains:** Local documentation describes measured/status0000..0500 independently of DIM14 setpoint0050..0400. Spinner indices1..71 under `0.5*i+4.5` yield5..40 in0.5 steps. Celsius setpoint UI, Fahrenheit source defaults38..95 and dynamic AC model bounds are kept separate. The storing formatter's four-character passthrough is not presented as a complete validator. No501..511 acceptance as a setpoint is claimed.
+- **Negative evidence:** Zero exact-token matches across57 enumerated UI inputs is accurately scoped and cannot exclude symbolic/backend classification. The absent original-image translation target and generic externalProbe label are not turned into invented error semantics. Full original frontend and ELF hashes agree with the report.
+
+The remaining decisive gaps are physical meaning/production of501..511 and an actual backend WHO4 value→`actual_temperature` mapping with input type/representation. This report narrows software behavior while retaining both gaps.

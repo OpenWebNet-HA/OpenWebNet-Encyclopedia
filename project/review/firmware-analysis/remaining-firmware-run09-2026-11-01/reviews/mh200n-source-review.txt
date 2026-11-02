@@ -1,0 +1,23 @@
+# Independent MH200N run09 admission-gap peer review
+
+Reviewer: f450_archive_analysis. Result: PASS for the finite target-directed reference observations and GAP classification. ZERO new source functional coverage; no natural outer caller is admitted. No correction requested. Full Device/source/runtime/physical approval remains pending.
+
+The frozen collect_admission_v1.py --check passed using host static byte/ELF/metadata readers only: five outputs, six exact first copies, zero original executions, outer_caller_admitted=false. I independently parsed the original ELF header/program/section tables, identified own .text and retained symbol sections, recomputed the exact candidate-target arithmetic using an independently expressed encoding predicate, repeated the exact aligned-integer/symbol-value lookups, and verified every input pin, generated-output manifest row and all six canonical first copies. Own taskmanager identity remains159048bytes/SHA256 ad68f9bf43f7f10af122f34d3cb14b7d8c02730c46225a9a6cd1bf3e663072cb, ELF32 little-endian ARM EXEC/rawflags0x202. No other product layout or installed overlay is supplied.
+
+Independent .text metadata agrees withVA0xa250/fileoffset0x2250/135912bytes, hence33978 aligned words. The condition0..14 immediate ARM B/BL encoding-candidate rule yields4889 words. Computing VA+8+4*signextend24(imm24) yields zero exact matches to selected target0xa8f0. This supports only the finite selected-target candidate result: words/pools may happen to have those encodings, and4889 is not a call/function/execution/semantic coverage count. Neither review nor collector disassembles/interprets a containing body or other implementation from these candidates.
+
+The two own file-backed PT_LOAD ranges independently contain38667 and506 aligned words, with zero exact0xa8f0/0xa8f1 integers. The only retained symbol table queried is .dynsym with140 entries and zero selected-value matches. Adjacent0xa8f1 remains a queried integer, without alternate ISA/Thumb/entry assignment. This does not exclude unaligned/relative/relocated representations, indirect/computed/interworking calls, external objects/registrations, unretained symbols or runtime values. It cannot establish dead code, unreachability, complete caller absence or a whole-product census.
+
+Prior night07 local formatting/system/fopen and night08 retained-stream/string-store/formatting contracts are pinned as inherited context and remain conditional. This checkpoint neither replays those collectors nor promotes process/resource/product labels into a natural caller, receiver/object, configured callback, installed application, startup or scenario/compiler admission. Missing caller ABI/object/provider/lifetime and deployment scope remain unresolved. The report correctly states the specific positive call/pointer/registration or tied deployment/debug/loader evidence needed before admitting natural reach.
+
+No source correction/failure history was reported for this exclusive v1 packet; the frozen generation/reproduction and immediate-copy evidence are consistent. This peer did not create or execute fixtures/commands, query SQL or run any original/vendor/native/helper/emulator/targetOS/device/service/network/bus/mount/physical operation. Closed receiving/output/transport/auth/session/framing/MQTT/libjel/JS/provider bodies and denied F450 helper0x2eec4..0x2efc0/equivalents remain uninspected. Database recovery/generation and remote writes are zero. Inherited archive remains one encrypted F450 support container/zero plaintext databases, not a new archive operation. Original/synced/completed files, source manifest, public/repository artifacts and earlier ledgers remain unchanged. No blocking issue found.
+
+## Frozen reviewed members
+
+- collect_admission_v1.py: 14348 bytes, SHA256 38e8236fcc329ae5b9bc49515c4afe2420a761c4cf9b011a5383b0d22906d034
+- REPORT.md: 4641 bytes, SHA256 75343cc62d0efd9a65d4223c12e9c39bb60caf6516ba5a73469d583b9c62760c
+- TARGET_LOOKUP.json: 2431 bytes, SHA256 ea25e4bea307907140548756d06f832bfb2f8a1e2306da7e68b00913b5ea5bdd
+- ADMISSION_GAP.json: 1648 bytes, SHA256 78e0414618f68b0a486d04b9d1874c741e7dd945dda1403bcdbd2a5b0f059cbc
+- INPUTS.json: 1298 bytes, SHA256 58f6786f2b448f8178743762f82cea879970b7eb08c389f8c14ef8c129d4f5d7
+- OUTPUT_MANIFEST.json: 616 bytes, SHA256 be26db26a71d8b52ddc6f6f3803619f23003e81cd887998bf8b3b52ae0fd23a5
+- first-candidate/INDEX.json: 1026 bytes, SHA256 18cfb259f53114e855c2f38c3629891e31b32abaf898c11c20236d5de757c443

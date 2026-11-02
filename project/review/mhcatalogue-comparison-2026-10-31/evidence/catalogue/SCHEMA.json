@@ -1,0 +1,1780 @@
+{
+  "firmware": {
+    "complete_schema_digest": "32e0a85216582ee5f673597bb0e3d0203336dc2070139fb69bf3debcbb970f10",
+    "objects": 147,
+    "objects_detail": [
+      {
+        "name": "EN_CONF_INDEX",
+        "sql_sha256": "6b1d899bff3cb719e546d513e1ecb6ac4a66fc3ebfcd688002caf2289b234483",
+        "table": "EN_CONF",
+        "type": "index"
+      },
+      {
+        "name": "EN_FLOOR_TYPE_Index01",
+        "sql_sha256": "1a5435c8ea7b0abffd1a2c856dbd732a0ea079ceb70f84616d04bf57b35e03af",
+        "table": "EN_FLOOR_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "EN_LABELS_Index",
+        "sql_sha256": "91484c9200703a7a15d78dc7a51c167debb56f23cabb41764a5bd92f9ad5c801",
+        "table": "EN_LABELS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_BUS_INTERFACE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_BUS_INTERFACE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_BUS_ITEM_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_BUS_ITEM",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_BUS_SYSTEM_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_BUS_SYSTEM",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_CONNECTION_FIRMWARE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_CONNECTION_FIRMWARE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_DEPENDENT_DEVICES_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_DEPENDENT_DEVICES",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_DEVICE_PICTURE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_DEVICE_PICTURE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_FIRMWARE_PARAMETERS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_FIRMWARE_PARAMETERS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_FIRMWARE_VIRGIN_OBJECT_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_FIRMWARE_VIRGIN_OBJECT",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_FW_PACKAGE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_FW_PACKAGE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_ICON_KO_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_ICON_KO",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_ITEM_SYSTEM_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_ITEM_SYSTEM",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_LANGUAGE_PACKAGE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_LANGUAGE_PACKAGE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_OBJECT_COLLECTION_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_OBJECT_COLLECTION",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_OBJECT_FIRMWARE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_OBJECT_FIRMWARE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_OBJECT_FUNCTION_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_OBJECT_FUNCTION",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_OBJECT_SYSTEM_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_OBJECT_SYSTEM",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_SET_RANGE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_SET_RANGE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_SLOT_CONDITION_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_SLOT_CONDITION",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_CONF_SYMBOL_REF_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "CONF_SYMBOL_REF",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_DB_INFO_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "DB_INFO",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_AUX_SUBTYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_AUX_SUBTYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_BOX_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_BOX_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_BRAND_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_BRAND",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_BUILDS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_BUILDS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_BUS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_BUS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_BUS_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_BUS_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CHAR_ALLOW_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CHAR_ALLOW",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_COLLECTION_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_COLLECTION",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_COLLECTION_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_COLLECTION_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONDITION_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONDITION",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONFIG_MODE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONFIG_MODE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONF_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONF",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONF_DATA_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONF_DATA_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONF_RANGE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONF_RANGE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONF_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONF_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONNECTION_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONNECTION",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONV_RULE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONV_RULE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_DEVICE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_DEVICE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_FILE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_FILE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_FILTER_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_FILTER",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_FIRMWARE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_FIRMWARE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_FLOOR_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_FLOOR_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_ICON_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_ICON",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_ITEM_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_ITEM",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_KEY_OBJECT_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_KEY_OBJECT",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_LABELS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_LABELS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_LANGUAGE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_LANGUAGE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_LINE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_LINE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_OBJECT_ITEM_FAMILY_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_OBJECT_ITEM_FAMILY",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_PACKAGE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_PACKAGE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_PARAMETERS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_PARAMETERS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_PARAMETERS_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_PARAMETERS_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_PHY_TO_ADV_TRANS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_PHY_TO_ADV_TRANS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_PICTURE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_PICTURE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_ROOM_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_ROOM_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_SLOTS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_SLOTS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_SLOT_KO_VIRGIN_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_SLOT_KO_VIRGIN",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_SPECIAL_FUNCTION_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_SPECIAL_FUNCTION",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_STATUS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_STATUS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_SW_INIT_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_SW_INIT",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_SYSTEM_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_SYSTEM",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_UNICODE_RANGE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_UNICODE_RANGE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_UNICODE_SET_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_UNICODE_SET",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_VIRGIN_OBJECT_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_VIRGIN_OBJECT",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_MACRO_TASKS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "MACRO_TASKS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_RIF_ANA_GROUP_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "RIF_ANA_GROUP",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_RIF_MH_COLLECTION_OBJECTS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "RIF_MH_COLLECTION_OBJECTS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_RIF_MH_OBJECT_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "RIF_MH_OBJECT",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_TMP_ID_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "TMP_ID",
+        "type": "index"
+      },
+      {
+        "name": "AS_BUS_INTERFACE",
+        "sql_sha256": "070fb53f7ea7fdb1d13cb2a6189154d82da2f4bd9fcfe8b53f2aa59fbf22d318",
+        "table": "AS_BUS_INTERFACE",
+        "type": "table"
+      },
+      {
+        "name": "AS_BUS_ITEM",
+        "sql_sha256": "8abcfce73e9f4c257b31f8105dc788fd9a6fe8b79aac99b8a992fb2233556cf5",
+        "table": "AS_BUS_ITEM",
+        "type": "table"
+      },
+      {
+        "name": "AS_BUS_SYSTEM",
+        "sql_sha256": "513b00911fe28ab17a709f149b134d8c15ba7c3ff10839ed37d92c77768ffe56",
+        "table": "AS_BUS_SYSTEM",
+        "type": "table"
+      },
+      {
+        "name": "AS_CONNECTION_FIRMWARE",
+        "sql_sha256": "84f14b40ccc4a5943a2337c9a07187621d6b4ff9a85b72eaea15aa29ddd71836",
+        "table": "AS_CONNECTION_FIRMWARE",
+        "type": "table"
+      },
+      {
+        "name": "AS_DEPENDENT_DEVICES",
+        "sql_sha256": "dd8ec9b67e79b490ff73c9c09c457fbf2802164c75adcdcae2fa70a8e7f5b75b",
+        "table": "AS_DEPENDENT_DEVICES",
+        "type": "table"
+      },
+      {
+        "name": "AS_DEVICE_PICTURE",
+        "sql_sha256": "bc8944a74e32db085b4050324d14d8f6f8c16ff608f924292e6193e27de2ac21",
+        "table": "AS_DEVICE_PICTURE",
+        "type": "table"
+      },
+      {
+        "name": "AS_FIRMWARE_CONFIG_MODE",
+        "sql_sha256": "ad149c975bad63edce944c667fcdb950ea5f531df0d2b96fb21fd4d7481bae85",
+        "table": "AS_FIRMWARE_CONFIG_MODE",
+        "type": "table"
+      },
+      {
+        "name": "AS_FIRMWARE_PARAMETERS",
+        "sql_sha256": "421226be296e3b30f2bcc4145d6cfcff867df0b5ff7d3029927ed35c0c4dd594",
+        "table": "AS_FIRMWARE_PARAMETERS",
+        "type": "table"
+      },
+      {
+        "name": "AS_FIRMWARE_VIRGIN_OBJECT",
+        "sql_sha256": "515c050519e9cf98062c2ce54cc549ec66e8b57f5709e7a5612ce613251b8c18",
+        "table": "AS_FIRMWARE_VIRGIN_OBJECT",
+        "type": "table"
+      },
+      {
+        "name": "AS_FW_PACKAGE",
+        "sql_sha256": "74139d5a34cba0ad0be9fc13c2cd9a22f531fb3061a5449ce0e3427d54418144",
+        "table": "AS_FW_PACKAGE",
+        "type": "table"
+      },
+      {
+        "name": "AS_HIDDEN_KCONF",
+        "sql_sha256": "1850898f43b687e0665596fc6e418f9a23e44e7a57811b9fe69c463ddef1407e",
+        "table": "AS_HIDDEN_KCONF",
+        "type": "table"
+      },
+      {
+        "name": "AS_ICON_KO",
+        "sql_sha256": "be7df27b51edc335734fe9db9e8f7d94e8e5da1e2eebf377bc30e348d96b809e",
+        "table": "AS_ICON_KO",
+        "type": "table"
+      },
+      {
+        "name": "AS_ITEM_SYSTEM",
+        "sql_sha256": "a423f8286b3de8b7e30fe3178e4b4175dcc8665f9b3017e1b0ecd8b3fc4731b3",
+        "table": "AS_ITEM_SYSTEM",
+        "type": "table"
+      },
+      {
+        "name": "AS_KO_CMD_KO_DEV",
+        "sql_sha256": "3d0f6b04c1a5f6a22d23c6d3a96f849834097c423472660924d15c576613d94d",
+        "table": "AS_KO_CMD_KO_DEV",
+        "type": "table"
+      },
+      {
+        "name": "AS_LANGUAGE_PACKAGE",
+        "sql_sha256": "cc8ee7735a0264f488a8bf53e1a7b1e486b6cf297a5554cd07b544f8c92f3b19",
+        "table": "AS_LANGUAGE_PACKAGE",
+        "type": "table"
+      },
+      {
+        "name": "AS_OBJECT_COLLECTION",
+        "sql_sha256": "9f89596620de6320c09fcbcff7e5a0689fc8e8273c5efe6b4876fcc160be7c2c",
+        "table": "AS_OBJECT_COLLECTION",
+        "type": "table"
+      },
+      {
+        "name": "AS_OBJECT_FIRMWARE",
+        "sql_sha256": "191d7acb46f16ae2011be437e00447db3d25bbef0ff375b251da0b281055fdfc",
+        "table": "AS_OBJECT_FIRMWARE",
+        "type": "table"
+      },
+      {
+        "name": "AS_OBJECT_FUNCTION",
+        "sql_sha256": "01896a88105a967c877f7a08c2102ea26d3030a6c9aee30f0e0ec7fcf936df2d",
+        "table": "AS_OBJECT_FUNCTION",
+        "type": "table"
+      },
+      {
+        "name": "AS_OBJECT_SYSTEM",
+        "sql_sha256": "bdaaf3f46de7301ea6611383595fb7b4b51b1ef85e56f2f8c2c2370dd8a20305",
+        "table": "AS_OBJECT_SYSTEM",
+        "type": "table"
+      },
+      {
+        "name": "AS_OBJECT_VIRGIN_OBJECT",
+        "sql_sha256": "72e4b200df7d20630cb09409b53cb31bb40704cb0d9ff71fe36b5a58a88f9dc6",
+        "table": "AS_OBJECT_VIRGIN_OBJECT",
+        "type": "table"
+      },
+      {
+        "name": "AS_SET_RANGE",
+        "sql_sha256": "2812f34b20678bd05caf1243a01103dab7d71361bffdfd6d0c4dab972bcf36ab",
+        "table": "AS_SET_RANGE",
+        "type": "table"
+      },
+      {
+        "name": "AS_SLOT_CONDITION",
+        "sql_sha256": "f6cab3ff448ba7d2edb9424fefbfffd0861d07d709750efc7035c584f1b4a9a9",
+        "table": "AS_SLOT_CONDITION",
+        "type": "table"
+      },
+      {
+        "name": "CONF_SYMBOL_REF",
+        "sql_sha256": "adf32aa394f71a70b1a7e21604f4228d8618d11b0ca1a1a0152badd5c0b8c610",
+        "table": "CONF_SYMBOL_REF",
+        "type": "table"
+      },
+      {
+        "name": "DB_INFO",
+        "sql_sha256": "b81d09801ce2f4f4812fb6e8759fb897420fc3843ebe74bfc450b61dffe8213f",
+        "table": "DB_INFO",
+        "type": "table"
+      },
+      {
+        "name": "EN_AUX_SUBTYPE",
+        "sql_sha256": "294ae8db92cdeaaa2ded791e9de57cae9d2f36faae90cf1c8a72c11a91eff54d",
+        "table": "EN_AUX_SUBTYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_BOX_TYPE",
+        "sql_sha256": "c600c50748d653d551e81d72ffc82509a35d94da9140ae14a8d83eb9cb41f765",
+        "table": "EN_BOX_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_BRAND",
+        "sql_sha256": "6ed0945fed351aa827fbb9dc6f3671eae4b6fa46a17eefb2c107c9e69ddf9e9b",
+        "table": "EN_BRAND",
+        "type": "table"
+      },
+      {
+        "name": "EN_BUILDS",
+        "sql_sha256": "44cdf560e7a0b9cf5ba1fe0223660854af91e20a2774ab995a4de12980151fd9",
+        "table": "EN_BUILDS",
+        "type": "table"
+      },
+      {
+        "name": "EN_BUS",
+        "sql_sha256": "e0f35733a4b11904e2eccb9205eacf1180d6aac2ae99819105fda4e792ee3405",
+        "table": "EN_BUS",
+        "type": "table"
+      },
+      {
+        "name": "EN_BUS_TYPE",
+        "sql_sha256": "f3fae895c8241174a816a356b3d1cfa8b34a1f50ea65af5a161d960b28a13e7f",
+        "table": "EN_BUS_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_CHAR_ALLOW",
+        "sql_sha256": "67c92cca9eea4b44cf655299a73870b62bee82f6f02c383d63b19bf47b31d28e",
+        "table": "EN_CHAR_ALLOW",
+        "type": "table"
+      },
+      {
+        "name": "EN_COLLECTION",
+        "sql_sha256": "21cf345be0b85238306bd134e2ae4a1281d4158bf6b3f8d0e0d96b587731709d",
+        "table": "EN_COLLECTION",
+        "type": "table"
+      },
+      {
+        "name": "EN_COLLECTION_TYPE",
+        "sql_sha256": "3013a211dadf0b74280c29df0ac60e6bb95bfea28779da09a3f0df532df5a8f6",
+        "table": "EN_COLLECTION_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONDITION",
+        "sql_sha256": "93d7e74678046d50de8314ff4c7dd379be4f4dd1107fb7a9fac60834066fe5be",
+        "table": "EN_CONDITION",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONF",
+        "sql_sha256": "490cd08cd11686dc80a04d8dc521ba67f863a62833441350083fd96c7d626ae8",
+        "table": "EN_CONF",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONFIG_MODE",
+        "sql_sha256": "641fcc1487dc3bcd15fe6ae4cc2517b6578264ac5527888c6ca221e47e056ca2",
+        "table": "EN_CONFIG_MODE",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONF_DATA_TYPE",
+        "sql_sha256": "10fe73ec64d8cde31999cf1ba7a8f22a03f9c23e95ab0d933cc1a65f13c51466",
+        "table": "EN_CONF_DATA_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONF_RANGE",
+        "sql_sha256": "a247b1fbc143a073178bd51eb5ce4edf8febb46680843a80831d03dc7c4d6930",
+        "table": "EN_CONF_RANGE",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONF_TYPE",
+        "sql_sha256": "bc66a82495b645c46995ea1b124331510f90eb1f13b500c31ef3072a516a6d99",
+        "table": "EN_CONF_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONNECTION",
+        "sql_sha256": "063445278d84baff9e21652951a2e1b13eb34475862133e808d016b4153dda10",
+        "table": "EN_CONNECTION",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONV_RULE",
+        "sql_sha256": "ddcfdc88afe3c0305a7d4f2ed2b9cffb5fce7ae9bec8b9c44a5ae7fc005b9879",
+        "table": "EN_CONV_RULE",
+        "type": "table"
+      },
+      {
+        "name": "EN_DEVICE",
+        "sql_sha256": "39c1327d4fd6bd3dc529232d8ec7b756b0f7db65e3d00fd5246fdcb8e826b6ec",
+        "table": "EN_DEVICE",
+        "type": "table"
+      },
+      {
+        "name": "EN_FILE",
+        "sql_sha256": "6ea6e05e472c221d5a24f2ca943d8068284cf89841ed978c7166933070b26374",
+        "table": "EN_FILE",
+        "type": "table"
+      },
+      {
+        "name": "EN_FILTER",
+        "sql_sha256": "ab51e256c1946b6414478bfd3c0d949777e5a1b1ceb369296f9d7669a2680394",
+        "table": "EN_FILTER",
+        "type": "table"
+      },
+      {
+        "name": "EN_FILTER_RANGE",
+        "sql_sha256": "355e50cc964fc22c5c1b89408af5d8564406bd2d2c887a948eb9a3b362405619",
+        "table": "EN_FILTER_RANGE",
+        "type": "table"
+      },
+      {
+        "name": "EN_FIRMWARE",
+        "sql_sha256": "a2e5e18a2b51b65e24f6a410240aff0474ac9d4d59d0635542f64c142cd1074c",
+        "table": "EN_FIRMWARE",
+        "type": "table"
+      },
+      {
+        "name": "EN_FLOOR_TYPE",
+        "sql_sha256": "69a1a65ccd462e8f49c532336da630a7ad3c9d62952ad807a589e691313a5687",
+        "table": "EN_FLOOR_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_ICON",
+        "sql_sha256": "f677c8e59cade28492a43dec9f2280ce0130eb2b5cf626eee16a0bc13bec01fd",
+        "table": "EN_ICON",
+        "type": "table"
+      },
+      {
+        "name": "EN_ITEM",
+        "sql_sha256": "b6cb7a4c1327b3cca2fd5a93fef587c353dafdfed1ecd33f9f9eed3b0e7e4501",
+        "table": "EN_ITEM",
+        "type": "table"
+      },
+      {
+        "name": "EN_KEY_OBJECT",
+        "sql_sha256": "f437cb01a9e965fbf276c83f915743aaff6b379d3d09bdaff3cf40f8dc73f9ad",
+        "table": "EN_KEY_OBJECT",
+        "type": "table"
+      },
+      {
+        "name": "EN_LABELS",
+        "sql_sha256": "6c9adbd8caae54689d29e97b3e3ea2820d4c0a931e2b4ecee14d4908884cfee6",
+        "table": "EN_LABELS",
+        "type": "table"
+      },
+      {
+        "name": "EN_LANGUAGE",
+        "sql_sha256": "c7c280dfae608985e33a830ee335ff7bea37808411038c1fa89cbec7a8e61eb4",
+        "table": "EN_LANGUAGE",
+        "type": "table"
+      },
+      {
+        "name": "EN_LINE",
+        "sql_sha256": "2096018ae598943d0e9899e96adbfb27a7b3ac9c2645175b8edb703dd1d1169a",
+        "table": "EN_LINE",
+        "type": "table"
+      },
+      {
+        "name": "EN_OBJECT_ITEM_FAMILY",
+        "sql_sha256": "011b04428bb48794745d77b2f7f59949a89cb823d7a287ae2ce18ede2bfe1b96",
+        "table": "EN_OBJECT_ITEM_FAMILY",
+        "type": "table"
+      },
+      {
+        "name": "EN_PACKAGE",
+        "sql_sha256": "b36ade55b95137da91b30ec3d1f07dffcbef61410df41d6341ab904d7e2eefc1",
+        "table": "EN_PACKAGE",
+        "type": "table"
+      },
+      {
+        "name": "EN_PARAMETERS",
+        "sql_sha256": "e50d40a6db7dbe0b781f5d7355ab1a2888d7245b82882935fe75c11bf8dd4218",
+        "table": "EN_PARAMETERS",
+        "type": "table"
+      },
+      {
+        "name": "EN_PARAMETERS_TYPE",
+        "sql_sha256": "07bbd99d26a0d59676766f7eaa18983f5c95c404f14c12d0d556ee14d92649dc",
+        "table": "EN_PARAMETERS_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_PHY_TO_ADV_TRANS",
+        "sql_sha256": "f87e552562ef6332d6595bd43f338516a08c14673519b4f1c2fca1e4b378e82e",
+        "table": "EN_PHY_TO_ADV_TRANS",
+        "type": "table"
+      },
+      {
+        "name": "EN_PICTURE",
+        "sql_sha256": "79477c2e788d71c9c7648202ac574b33eb69408c4fdbc85687990c44e4df7a06",
+        "table": "EN_PICTURE",
+        "type": "table"
+      },
+      {
+        "name": "EN_ROOM_TYPE",
+        "sql_sha256": "aef7b4bfd0769b25311f81730f5ebcb3434df300e0d7806b87316ceee990421e",
+        "table": "EN_ROOM_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_SLOTS",
+        "sql_sha256": "95a97ca6a411624ea13d3becccabdee2f3a89d031f1a438d0cc8789ebf292e3b",
+        "table": "EN_SLOTS",
+        "type": "table"
+      },
+      {
+        "name": "EN_SLOT_KO_VIRGIN",
+        "sql_sha256": "65a34647d327744309e169887d9c476d62f3beb0f6a169eceb1fd03201e61fab",
+        "table": "EN_SLOT_KO_VIRGIN",
+        "type": "table"
+      },
+      {
+        "name": "EN_SPECIAL_FUNCTION",
+        "sql_sha256": "c53fd3c428df343333ec2482326d320d887ad15f4baff98b85b0737db968ac39",
+        "table": "EN_SPECIAL_FUNCTION",
+        "type": "table"
+      },
+      {
+        "name": "EN_STATUS",
+        "sql_sha256": "2aeaa8d5b7fb1c18bdafb7b1669581021035c6c3c333f652d3f6311fac16994f",
+        "table": "EN_STATUS",
+        "type": "table"
+      },
+      {
+        "name": "EN_SW_INIT",
+        "sql_sha256": "9645e02b0a4d32e2728678f1ae91cb7a6367076e605767c63780b0a41767d8cd",
+        "table": "EN_SW_INIT",
+        "type": "table"
+      },
+      {
+        "name": "EN_SYSTEM",
+        "sql_sha256": "e93193070c1d0185da9876040a4155ac2b20b0bf92e9212c18d7342495efb317",
+        "table": "EN_SYSTEM",
+        "type": "table"
+      },
+      {
+        "name": "EN_UNICODE_RANGE",
+        "sql_sha256": "22cbf5ba5775bd97fb34f3df6317a1da26ac7695e36328cbb85ade4f00f2c383",
+        "table": "EN_UNICODE_RANGE",
+        "type": "table"
+      },
+      {
+        "name": "EN_UNICODE_SET",
+        "sql_sha256": "c583ebc28af89d5ac9f422ad2df6b237f1813e222f77656dff454131f2219126",
+        "table": "EN_UNICODE_SET",
+        "type": "table"
+      },
+      {
+        "name": "EN_VIRGIN_OBJECT",
+        "sql_sha256": "9e7017c13c44930f0b3115388f9204197995e37eba5f070331937cbd9f3544cf",
+        "table": "EN_VIRGIN_OBJECT",
+        "type": "table"
+      },
+      {
+        "name": "MACRO_TASKS",
+        "sql_sha256": "b31c41bde95f4f9a86773df4a73971a5605994b962144378063e6e1b56fbf1c2",
+        "table": "MACRO_TASKS",
+        "type": "table"
+      },
+      {
+        "name": "RIF_ANA_GROUP",
+        "sql_sha256": "fd1d6a1bc5acadd1ff10c1ee026f1704b5c89e84cbc6030edcf78c7e0c47a934",
+        "table": "RIF_ANA_GROUP",
+        "type": "table"
+      },
+      {
+        "name": "RIF_MH_COLLECTION_OBJECTS",
+        "sql_sha256": "f42606b93a10571a5ef858fb6211a186b2c09bf9a792761a5d5f25d956c2ef8d",
+        "table": "RIF_MH_COLLECTION_OBJECTS",
+        "type": "table"
+      },
+      {
+        "name": "RIF_MH_OBJECT",
+        "sql_sha256": "ee05a7d679267c729bafd6ed3ea0fc7697e0cddbebb7d8c5a031ff84a3b77523",
+        "table": "RIF_MH_OBJECT",
+        "type": "table"
+      },
+      {
+        "name": "TMP_ID",
+        "sql_sha256": "9c319dd41dcaeb61b929d078e01eddeea9b13bbc54b7536e0a965d1fcba12d3a",
+        "table": "TMP_ID",
+        "type": "table"
+      },
+      {
+        "name": "sqlite_sequence",
+        "sql_sha256": "4cb1eaf14467f226196148cb5688569660cb290d414bae4c1c450b149b62befd",
+        "table": "sqlite_sequence",
+        "type": "table"
+      }
+    ],
+    "types": {
+      "index": 72,
+      "table": 75
+    }
+  },
+  "suite": {
+    "complete_schema_digest": "dd09d675160c644a7f4c5e7688122536cedc4b6ce4324cb81b12d2168bfb17ab",
+    "objects": 146,
+    "objects_detail": [
+      {
+        "name": "EN_FLOOR_TYPE_Index01",
+        "sql_sha256": "1a5435c8ea7b0abffd1a2c856dbd732a0ea079ceb70f84616d04bf57b35e03af",
+        "table": "EN_FLOOR_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "EN_LABELS_Index",
+        "sql_sha256": "91484c9200703a7a15d78dc7a51c167debb56f23cabb41764a5bd92f9ad5c801",
+        "table": "EN_LABELS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_BUS_INTERFACE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_BUS_INTERFACE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_BUS_ITEM_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_BUS_ITEM",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_BUS_SYSTEM_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_BUS_SYSTEM",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_CONNECTION_FIRMWARE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_CONNECTION_FIRMWARE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_DEPENDENT_DEVICES_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_DEPENDENT_DEVICES",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_DEVICE_PICTURE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_DEVICE_PICTURE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_FIRMWARE_PARAMETERS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_FIRMWARE_PARAMETERS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_FIRMWARE_VIRGIN_OBJECT_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_FIRMWARE_VIRGIN_OBJECT",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_FW_PACKAGE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_FW_PACKAGE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_ICON_KO_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_ICON_KO",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_ITEM_SYSTEM_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_ITEM_SYSTEM",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_LANGUAGE_PACKAGE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_LANGUAGE_PACKAGE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_OBJECT_COLLECTION_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_OBJECT_COLLECTION",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_OBJECT_FIRMWARE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_OBJECT_FIRMWARE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_OBJECT_FUNCTION_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_OBJECT_FUNCTION",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_OBJECT_SYSTEM_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_OBJECT_SYSTEM",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_SET_RANGE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_SET_RANGE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_AS_SLOT_CONDITION_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "AS_SLOT_CONDITION",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_CONF_SYMBOL_REF_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "CONF_SYMBOL_REF",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_DB_INFO_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "DB_INFO",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_AUX_SUBTYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_AUX_SUBTYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_BOX_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_BOX_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_BRAND_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_BRAND",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_BUILDS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_BUILDS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_BUS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_BUS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_BUS_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_BUS_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CHAR_ALLOW_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CHAR_ALLOW",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_COLLECTION_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_COLLECTION",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_COLLECTION_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_COLLECTION_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONDITION_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONDITION",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONFIG_MODE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONFIG_MODE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONF_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONF",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONF_DATA_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONF_DATA_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONF_RANGE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONF_RANGE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONF_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONF_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONNECTION_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONNECTION",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_CONV_RULE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_CONV_RULE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_DEVICE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_DEVICE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_FILE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_FILE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_FILTER_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_FILTER",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_FIRMWARE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_FIRMWARE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_FLOOR_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_FLOOR_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_ICON_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_ICON",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_ITEM_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_ITEM",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_KEY_OBJECT_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_KEY_OBJECT",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_LABELS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_LABELS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_LANGUAGE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_LANGUAGE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_LINE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_LINE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_OBJECT_ITEM_FAMILY_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_OBJECT_ITEM_FAMILY",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_PACKAGE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_PACKAGE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_PARAMETERS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_PARAMETERS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_PARAMETERS_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_PARAMETERS_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_PHY_TO_ADV_TRANS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_PHY_TO_ADV_TRANS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_PICTURE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_PICTURE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_ROOM_TYPE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_ROOM_TYPE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_SLOTS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_SLOTS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_SLOT_KO_VIRGIN_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_SLOT_KO_VIRGIN",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_SPECIAL_FUNCTION_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_SPECIAL_FUNCTION",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_STATUS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_STATUS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_SW_INIT_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_SW_INIT",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_SYSTEM_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_SYSTEM",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_UNICODE_RANGE_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_UNICODE_RANGE",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_UNICODE_SET_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_UNICODE_SET",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_EN_VIRGIN_OBJECT_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "EN_VIRGIN_OBJECT",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_MACRO_TASKS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "MACRO_TASKS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_RIF_ANA_GROUP_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "RIF_ANA_GROUP",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_RIF_MH_COLLECTION_OBJECTS_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "RIF_MH_COLLECTION_OBJECTS",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_RIF_MH_OBJECT_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "RIF_MH_OBJECT",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_TMP_ID_1",
+        "sql_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "table": "TMP_ID",
+        "type": "index"
+      },
+      {
+        "name": "AS_BUS_INTERFACE",
+        "sql_sha256": "070fb53f7ea7fdb1d13cb2a6189154d82da2f4bd9fcfe8b53f2aa59fbf22d318",
+        "table": "AS_BUS_INTERFACE",
+        "type": "table"
+      },
+      {
+        "name": "AS_BUS_ITEM",
+        "sql_sha256": "8abcfce73e9f4c257b31f8105dc788fd9a6fe8b79aac99b8a992fb2233556cf5",
+        "table": "AS_BUS_ITEM",
+        "type": "table"
+      },
+      {
+        "name": "AS_BUS_SYSTEM",
+        "sql_sha256": "513b00911fe28ab17a709f149b134d8c15ba7c3ff10839ed37d92c77768ffe56",
+        "table": "AS_BUS_SYSTEM",
+        "type": "table"
+      },
+      {
+        "name": "AS_CONNECTION_FIRMWARE",
+        "sql_sha256": "84f14b40ccc4a5943a2337c9a07187621d6b4ff9a85b72eaea15aa29ddd71836",
+        "table": "AS_CONNECTION_FIRMWARE",
+        "type": "table"
+      },
+      {
+        "name": "AS_DEPENDENT_DEVICES",
+        "sql_sha256": "dd8ec9b67e79b490ff73c9c09c457fbf2802164c75adcdcae2fa70a8e7f5b75b",
+        "table": "AS_DEPENDENT_DEVICES",
+        "type": "table"
+      },
+      {
+        "name": "AS_DEVICE_PICTURE",
+        "sql_sha256": "bc8944a74e32db085b4050324d14d8f6f8c16ff608f924292e6193e27de2ac21",
+        "table": "AS_DEVICE_PICTURE",
+        "type": "table"
+      },
+      {
+        "name": "AS_FIRMWARE_CONFIG_MODE",
+        "sql_sha256": "ad149c975bad63edce944c667fcdb950ea5f531df0d2b96fb21fd4d7481bae85",
+        "table": "AS_FIRMWARE_CONFIG_MODE",
+        "type": "table"
+      },
+      {
+        "name": "AS_FIRMWARE_PARAMETERS",
+        "sql_sha256": "421226be296e3b30f2bcc4145d6cfcff867df0b5ff7d3029927ed35c0c4dd594",
+        "table": "AS_FIRMWARE_PARAMETERS",
+        "type": "table"
+      },
+      {
+        "name": "AS_FIRMWARE_VIRGIN_OBJECT",
+        "sql_sha256": "515c050519e9cf98062c2ce54cc549ec66e8b57f5709e7a5612ce613251b8c18",
+        "table": "AS_FIRMWARE_VIRGIN_OBJECT",
+        "type": "table"
+      },
+      {
+        "name": "AS_FW_PACKAGE",
+        "sql_sha256": "74139d5a34cba0ad0be9fc13c2cd9a22f531fb3061a5449ce0e3427d54418144",
+        "table": "AS_FW_PACKAGE",
+        "type": "table"
+      },
+      {
+        "name": "AS_HIDDEN_KCONF",
+        "sql_sha256": "1850898f43b687e0665596fc6e418f9a23e44e7a57811b9fe69c463ddef1407e",
+        "table": "AS_HIDDEN_KCONF",
+        "type": "table"
+      },
+      {
+        "name": "AS_ICON_KO",
+        "sql_sha256": "be7df27b51edc335734fe9db9e8f7d94e8e5da1e2eebf377bc30e348d96b809e",
+        "table": "AS_ICON_KO",
+        "type": "table"
+      },
+      {
+        "name": "AS_ITEM_SYSTEM",
+        "sql_sha256": "a423f8286b3de8b7e30fe3178e4b4175dcc8665f9b3017e1b0ecd8b3fc4731b3",
+        "table": "AS_ITEM_SYSTEM",
+        "type": "table"
+      },
+      {
+        "name": "AS_KO_CMD_KO_DEV",
+        "sql_sha256": "3d0f6b04c1a5f6a22d23c6d3a96f849834097c423472660924d15c576613d94d",
+        "table": "AS_KO_CMD_KO_DEV",
+        "type": "table"
+      },
+      {
+        "name": "AS_LANGUAGE_PACKAGE",
+        "sql_sha256": "cc8ee7735a0264f488a8bf53e1a7b1e486b6cf297a5554cd07b544f8c92f3b19",
+        "table": "AS_LANGUAGE_PACKAGE",
+        "type": "table"
+      },
+      {
+        "name": "AS_OBJECT_COLLECTION",
+        "sql_sha256": "9f89596620de6320c09fcbcff7e5a0689fc8e8273c5efe6b4876fcc160be7c2c",
+        "table": "AS_OBJECT_COLLECTION",
+        "type": "table"
+      },
+      {
+        "name": "AS_OBJECT_FIRMWARE",
+        "sql_sha256": "191d7acb46f16ae2011be437e00447db3d25bbef0ff375b251da0b281055fdfc",
+        "table": "AS_OBJECT_FIRMWARE",
+        "type": "table"
+      },
+      {
+        "name": "AS_OBJECT_FUNCTION",
+        "sql_sha256": "01896a88105a967c877f7a08c2102ea26d3030a6c9aee30f0e0ec7fcf936df2d",
+        "table": "AS_OBJECT_FUNCTION",
+        "type": "table"
+      },
+      {
+        "name": "AS_OBJECT_SYSTEM",
+        "sql_sha256": "bdaaf3f46de7301ea6611383595fb7b4b51b1ef85e56f2f8c2c2370dd8a20305",
+        "table": "AS_OBJECT_SYSTEM",
+        "type": "table"
+      },
+      {
+        "name": "AS_OBJECT_VIRGIN_OBJECT",
+        "sql_sha256": "72e4b200df7d20630cb09409b53cb31bb40704cb0d9ff71fe36b5a58a88f9dc6",
+        "table": "AS_OBJECT_VIRGIN_OBJECT",
+        "type": "table"
+      },
+      {
+        "name": "AS_SET_RANGE",
+        "sql_sha256": "2812f34b20678bd05caf1243a01103dab7d71361bffdfd6d0c4dab972bcf36ab",
+        "table": "AS_SET_RANGE",
+        "type": "table"
+      },
+      {
+        "name": "AS_SLOT_CONDITION",
+        "sql_sha256": "f6cab3ff448ba7d2edb9424fefbfffd0861d07d709750efc7035c584f1b4a9a9",
+        "table": "AS_SLOT_CONDITION",
+        "type": "table"
+      },
+      {
+        "name": "CONF_SYMBOL_REF",
+        "sql_sha256": "adf32aa394f71a70b1a7e21604f4228d8618d11b0ca1a1a0152badd5c0b8c610",
+        "table": "CONF_SYMBOL_REF",
+        "type": "table"
+      },
+      {
+        "name": "DB_INFO",
+        "sql_sha256": "b81d09801ce2f4f4812fb6e8759fb897420fc3843ebe74bfc450b61dffe8213f",
+        "table": "DB_INFO",
+        "type": "table"
+      },
+      {
+        "name": "EN_AUX_SUBTYPE",
+        "sql_sha256": "294ae8db92cdeaaa2ded791e9de57cae9d2f36faae90cf1c8a72c11a91eff54d",
+        "table": "EN_AUX_SUBTYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_BOX_TYPE",
+        "sql_sha256": "c600c50748d653d551e81d72ffc82509a35d94da9140ae14a8d83eb9cb41f765",
+        "table": "EN_BOX_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_BRAND",
+        "sql_sha256": "6ed0945fed351aa827fbb9dc6f3671eae4b6fa46a17eefb2c107c9e69ddf9e9b",
+        "table": "EN_BRAND",
+        "type": "table"
+      },
+      {
+        "name": "EN_BUILDS",
+        "sql_sha256": "44cdf560e7a0b9cf5ba1fe0223660854af91e20a2774ab995a4de12980151fd9",
+        "table": "EN_BUILDS",
+        "type": "table"
+      },
+      {
+        "name": "EN_BUS",
+        "sql_sha256": "e0f35733a4b11904e2eccb9205eacf1180d6aac2ae99819105fda4e792ee3405",
+        "table": "EN_BUS",
+        "type": "table"
+      },
+      {
+        "name": "EN_BUS_TYPE",
+        "sql_sha256": "f3fae895c8241174a816a356b3d1cfa8b34a1f50ea65af5a161d960b28a13e7f",
+        "table": "EN_BUS_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_CHAR_ALLOW",
+        "sql_sha256": "67c92cca9eea4b44cf655299a73870b62bee82f6f02c383d63b19bf47b31d28e",
+        "table": "EN_CHAR_ALLOW",
+        "type": "table"
+      },
+      {
+        "name": "EN_COLLECTION",
+        "sql_sha256": "21cf345be0b85238306bd134e2ae4a1281d4158bf6b3f8d0e0d96b587731709d",
+        "table": "EN_COLLECTION",
+        "type": "table"
+      },
+      {
+        "name": "EN_COLLECTION_TYPE",
+        "sql_sha256": "3013a211dadf0b74280c29df0ac60e6bb95bfea28779da09a3f0df532df5a8f6",
+        "table": "EN_COLLECTION_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONDITION",
+        "sql_sha256": "93d7e74678046d50de8314ff4c7dd379be4f4dd1107fb7a9fac60834066fe5be",
+        "table": "EN_CONDITION",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONF",
+        "sql_sha256": "490cd08cd11686dc80a04d8dc521ba67f863a62833441350083fd96c7d626ae8",
+        "table": "EN_CONF",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONFIG_MODE",
+        "sql_sha256": "641fcc1487dc3bcd15fe6ae4cc2517b6578264ac5527888c6ca221e47e056ca2",
+        "table": "EN_CONFIG_MODE",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONF_DATA_TYPE",
+        "sql_sha256": "10fe73ec64d8cde31999cf1ba7a8f22a03f9c23e95ab0d933cc1a65f13c51466",
+        "table": "EN_CONF_DATA_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONF_RANGE",
+        "sql_sha256": "a247b1fbc143a073178bd51eb5ce4edf8febb46680843a80831d03dc7c4d6930",
+        "table": "EN_CONF_RANGE",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONF_TYPE",
+        "sql_sha256": "bc66a82495b645c46995ea1b124331510f90eb1f13b500c31ef3072a516a6d99",
+        "table": "EN_CONF_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONNECTION",
+        "sql_sha256": "063445278d84baff9e21652951a2e1b13eb34475862133e808d016b4153dda10",
+        "table": "EN_CONNECTION",
+        "type": "table"
+      },
+      {
+        "name": "EN_CONV_RULE",
+        "sql_sha256": "ddcfdc88afe3c0305a7d4f2ed2b9cffb5fce7ae9bec8b9c44a5ae7fc005b9879",
+        "table": "EN_CONV_RULE",
+        "type": "table"
+      },
+      {
+        "name": "EN_DEVICE",
+        "sql_sha256": "39c1327d4fd6bd3dc529232d8ec7b756b0f7db65e3d00fd5246fdcb8e826b6ec",
+        "table": "EN_DEVICE",
+        "type": "table"
+      },
+      {
+        "name": "EN_FILE",
+        "sql_sha256": "6ea6e05e472c221d5a24f2ca943d8068284cf89841ed978c7166933070b26374",
+        "table": "EN_FILE",
+        "type": "table"
+      },
+      {
+        "name": "EN_FILTER",
+        "sql_sha256": "ab51e256c1946b6414478bfd3c0d949777e5a1b1ceb369296f9d7669a2680394",
+        "table": "EN_FILTER",
+        "type": "table"
+      },
+      {
+        "name": "EN_FILTER_RANGE",
+        "sql_sha256": "355e50cc964fc22c5c1b89408af5d8564406bd2d2c887a948eb9a3b362405619",
+        "table": "EN_FILTER_RANGE",
+        "type": "table"
+      },
+      {
+        "name": "EN_FIRMWARE",
+        "sql_sha256": "a2e5e18a2b51b65e24f6a410240aff0474ac9d4d59d0635542f64c142cd1074c",
+        "table": "EN_FIRMWARE",
+        "type": "table"
+      },
+      {
+        "name": "EN_FLOOR_TYPE",
+        "sql_sha256": "69a1a65ccd462e8f49c532336da630a7ad3c9d62952ad807a589e691313a5687",
+        "table": "EN_FLOOR_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_ICON",
+        "sql_sha256": "f677c8e59cade28492a43dec9f2280ce0130eb2b5cf626eee16a0bc13bec01fd",
+        "table": "EN_ICON",
+        "type": "table"
+      },
+      {
+        "name": "EN_ITEM",
+        "sql_sha256": "b6cb7a4c1327b3cca2fd5a93fef587c353dafdfed1ecd33f9f9eed3b0e7e4501",
+        "table": "EN_ITEM",
+        "type": "table"
+      },
+      {
+        "name": "EN_KEY_OBJECT",
+        "sql_sha256": "f437cb01a9e965fbf276c83f915743aaff6b379d3d09bdaff3cf40f8dc73f9ad",
+        "table": "EN_KEY_OBJECT",
+        "type": "table"
+      },
+      {
+        "name": "EN_LABELS",
+        "sql_sha256": "6c9adbd8caae54689d29e97b3e3ea2820d4c0a931e2b4ecee14d4908884cfee6",
+        "table": "EN_LABELS",
+        "type": "table"
+      },
+      {
+        "name": "EN_LANGUAGE",
+        "sql_sha256": "c7c280dfae608985e33a830ee335ff7bea37808411038c1fa89cbec7a8e61eb4",
+        "table": "EN_LANGUAGE",
+        "type": "table"
+      },
+      {
+        "name": "EN_LINE",
+        "sql_sha256": "2096018ae598943d0e9899e96adbfb27a7b3ac9c2645175b8edb703dd1d1169a",
+        "table": "EN_LINE",
+        "type": "table"
+      },
+      {
+        "name": "EN_OBJECT_ITEM_FAMILY",
+        "sql_sha256": "011b04428bb48794745d77b2f7f59949a89cb823d7a287ae2ce18ede2bfe1b96",
+        "table": "EN_OBJECT_ITEM_FAMILY",
+        "type": "table"
+      },
+      {
+        "name": "EN_PACKAGE",
+        "sql_sha256": "b36ade55b95137da91b30ec3d1f07dffcbef61410df41d6341ab904d7e2eefc1",
+        "table": "EN_PACKAGE",
+        "type": "table"
+      },
+      {
+        "name": "EN_PARAMETERS",
+        "sql_sha256": "e50d40a6db7dbe0b781f5d7355ab1a2888d7245b82882935fe75c11bf8dd4218",
+        "table": "EN_PARAMETERS",
+        "type": "table"
+      },
+      {
+        "name": "EN_PARAMETERS_TYPE",
+        "sql_sha256": "07bbd99d26a0d59676766f7eaa18983f5c95c404f14c12d0d556ee14d92649dc",
+        "table": "EN_PARAMETERS_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_PHY_TO_ADV_TRANS",
+        "sql_sha256": "f87e552562ef6332d6595bd43f338516a08c14673519b4f1c2fca1e4b378e82e",
+        "table": "EN_PHY_TO_ADV_TRANS",
+        "type": "table"
+      },
+      {
+        "name": "EN_PICTURE",
+        "sql_sha256": "79477c2e788d71c9c7648202ac574b33eb69408c4fdbc85687990c44e4df7a06",
+        "table": "EN_PICTURE",
+        "type": "table"
+      },
+      {
+        "name": "EN_ROOM_TYPE",
+        "sql_sha256": "aef7b4bfd0769b25311f81730f5ebcb3434df300e0d7806b87316ceee990421e",
+        "table": "EN_ROOM_TYPE",
+        "type": "table"
+      },
+      {
+        "name": "EN_SLOTS",
+        "sql_sha256": "95a97ca6a411624ea13d3becccabdee2f3a89d031f1a438d0cc8789ebf292e3b",
+        "table": "EN_SLOTS",
+        "type": "table"
+      },
+      {
+        "name": "EN_SLOT_KO_VIRGIN",
+        "sql_sha256": "65a34647d327744309e169887d9c476d62f3beb0f6a169eceb1fd03201e61fab",
+        "table": "EN_SLOT_KO_VIRGIN",
+        "type": "table"
+      },
+      {
+        "name": "EN_SPECIAL_FUNCTION",
+        "sql_sha256": "c53fd3c428df343333ec2482326d320d887ad15f4baff98b85b0737db968ac39",
+        "table": "EN_SPECIAL_FUNCTION",
+        "type": "table"
+      },
+      {
+        "name": "EN_STATUS",
+        "sql_sha256": "2aeaa8d5b7fb1c18bdafb7b1669581021035c6c3c333f652d3f6311fac16994f",
+        "table": "EN_STATUS",
+        "type": "table"
+      },
+      {
+        "name": "EN_SW_INIT",
+        "sql_sha256": "9645e02b0a4d32e2728678f1ae91cb7a6367076e605767c63780b0a41767d8cd",
+        "table": "EN_SW_INIT",
+        "type": "table"
+      },
+      {
+        "name": "EN_SYSTEM",
+        "sql_sha256": "e93193070c1d0185da9876040a4155ac2b20b0bf92e9212c18d7342495efb317",
+        "table": "EN_SYSTEM",
+        "type": "table"
+      },
+      {
+        "name": "EN_UNICODE_RANGE",
+        "sql_sha256": "22cbf5ba5775bd97fb34f3df6317a1da26ac7695e36328cbb85ade4f00f2c383",
+        "table": "EN_UNICODE_RANGE",
+        "type": "table"
+      },
+      {
+        "name": "EN_UNICODE_SET",
+        "sql_sha256": "c583ebc28af89d5ac9f422ad2df6b237f1813e222f77656dff454131f2219126",
+        "table": "EN_UNICODE_SET",
+        "type": "table"
+      },
+      {
+        "name": "EN_VIRGIN_OBJECT",
+        "sql_sha256": "9e7017c13c44930f0b3115388f9204197995e37eba5f070331937cbd9f3544cf",
+        "table": "EN_VIRGIN_OBJECT",
+        "type": "table"
+      },
+      {
+        "name": "MACRO_TASKS",
+        "sql_sha256": "b31c41bde95f4f9a86773df4a73971a5605994b962144378063e6e1b56fbf1c2",
+        "table": "MACRO_TASKS",
+        "type": "table"
+      },
+      {
+        "name": "RIF_ANA_GROUP",
+        "sql_sha256": "fd1d6a1bc5acadd1ff10c1ee026f1704b5c89e84cbc6030edcf78c7e0c47a934",
+        "table": "RIF_ANA_GROUP",
+        "type": "table"
+      },
+      {
+        "name": "RIF_MH_COLLECTION_OBJECTS",
+        "sql_sha256": "f42606b93a10571a5ef858fb6211a186b2c09bf9a792761a5d5f25d956c2ef8d",
+        "table": "RIF_MH_COLLECTION_OBJECTS",
+        "type": "table"
+      },
+      {
+        "name": "RIF_MH_OBJECT",
+        "sql_sha256": "ee05a7d679267c729bafd6ed3ea0fc7697e0cddbebb7d8c5a031ff84a3b77523",
+        "table": "RIF_MH_OBJECT",
+        "type": "table"
+      },
+      {
+        "name": "TMP_ID",
+        "sql_sha256": "9c319dd41dcaeb61b929d078e01eddeea9b13bbc54b7536e0a965d1fcba12d3a",
+        "table": "TMP_ID",
+        "type": "table"
+      },
+      {
+        "name": "sqlite_sequence",
+        "sql_sha256": "4cb1eaf14467f226196148cb5688569660cb290d414bae4c1c450b149b62befd",
+        "table": "sqlite_sequence",
+        "type": "table"
+      }
+    ],
+    "types": {
+      "index": 71,
+      "table": 75
+    }
+  }
+}

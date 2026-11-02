@@ -1,0 +1,51 @@
+# MH202 1.0.24 run20: selected WHO22 multimedia dialect and metadata
+
+## Result and method
+
+Verified MH202 image paths package `libplug_multi_tr.so`, `libplug_multi_stm.so` and `libplug_multi_syn.so`. This batch traces actual **translation** code, not the STM/synchronizer bodies. Descriptor0x19400 has axes1/2, reverse criterion8 and forward criterion22; its callback is original **multim_tr0x872c**. Those numeric axes/criteria are distinct from parsed kinds and envelope types.
+
+Two bounded source-contract cases establish actual formats. A supplied coherent parsed WHO22/kind2/WHERE1/null-selector object takes a query branch producing internal ASCII **`95008F9F`**, wrapped as type3/representation1/SCS-routing8. A **separate** supplied brief input **`90008F00`** takes a selected reverse character/type path producing **`*22*1#1#0*1#1##`**, wrapped as type2/representation2/routing22 with copied status/ID. No source/volume/position/state meaning is inferred from these numbers. These are separate inputs, not a causal query/reply, physical capture or actual wire bytes.
+
+**All new original/native/primitive/hook counts are0.** This is verified host reads/disassembly/metadata and two finite source-format ledgers. No original parser, codec, translation function, vendor process, target OS, PHP/JS, service or live network/device operation runs. No F454 firmware, VAs, layout, fixtures or behavior transfers by filename.
+
+## Reproduction and provenance
+
+`python3 -B work/mh202-firmware/research/2026-10-30/sound/run20/collect_evidence.py --check` reproduces24 outputs plus manifest,18 original spans,27 word assertions,4 original ELF files,5 PIC-resolved safe formats/literals and2 separate host cases. `--check` writes nothing. Original owners are `/home/bticino/libcoso/libplug_multi_tr.so`, `/home/bticino/lib/libmulti.so`, `/home/bticino/libcoso/libcoso.so` and `/home/bticino/lib/libutils.so`. `input-hashes.json` pins their full bytes and the image accessor; `original-spans.json` gives VAs/file offsets/raw hashes. Separate output/author manifests identify evidence/report/method. Paths here are original-image or research-relative.
+
+## 1. Registration, direction and caller assumptions
+
+Original initialization **0x8560..0x85a8** clears descriptor criterion lists+52/+56, appends8 to+52 and22 to+56, then calls register_translation at0x85a4. Original ABS32 relocation **0x19428** assigns descriptor+40 to **multim_tr0x872c**; raw descriptor words+44/+48 are1/2. Complete plugin initialization/config/provider success and active registry/order remain conditional, not observed.
+
+The selected callback **0x872c..0x8774** sends argument pair(2,1) to `multi_open2scs` and pair(1,2) to `multi_scs2open`. It explicitly overwrites the latter's return with0; unsupported pairs also return0 without that translation call. Its zero return therefore is not a generic accepted-input/delivery signal. The reverse criterion8 is not WHO8; it is the reverse routing-list value paired with forward WHO22 criterion22.
+
+Original **frame_to_open0x8884** separately supplies routing22 when calling `scsmsg_to_openlist`. The selected reverse body below calls that core helper directly with the same routing selector. Provider/import/direct-NEEDED evidence is retained, but effective runtime resolution/interposition and complete global plugin namespace are not proven.
+
+## 2. Exact ordinary WHERE1 query source path
+
+Forward entry **multi_open2scs0x18c4** requests **g_malloc(64)** before loading the envelope's parsed pointer. This body assumes coherent parsed storage; it does not establish a complete envelope-representation/parser-admission check. The supplied case is the COSO48-byte pointer/string object with WHO`22`, WHERE`1`, selectors20/24 null and **parsed kind44=2**. Envelope metadata44 and representation56 are different members/namespaces.
+
+With selector20 null, **0x1930..0x1938** goes to0x2054 and duplicates WHERE`1`. The common address routine calls imported **getLevInt** at0x19b0 with the duplicated text and addresses of parsed selector20/24. Candidate `/home/bticino/lib/libmulti.so::getLevInt0x8ac` reads length1, finds no trailing`#`, takes its length<=2 branch and, for first character`1`, returns through0x96c without selector stores. Thus both selectors remain null on this selected simple route. More complex branches can modify parsed selectors; no global pure/immutable-translator claim follows.
+
+Back in the translator, exact WHERE text`1` takes **0x1a54..0x1a7c**, whose selected character setup includes header`9`, two`0` characters and`F` (**0x1a90..0x1adc**). The freed temporary WHERE copy is not the parsed WHERE field. **0x1ae4..0x1b0c** tests WHO text exactly`22`, including the terminating NUL. Parsed kind2 then takes **0x1b28..0x1b30**. There is no ordinary WHAT/parameter case fabricated for this query branch.
+
+At **0x1b44..0x1b70**, original format **`%c5%c%c%c%c9F`** receives characters`9,0,0,8,F`, giving **`95008F9F`**. The pointer is stored into the newly allocated output envelope. **0x1b84..0x1b88** requests prepare_briefscs_frames with routing8; selected null selector20 avoids the extended-body rewrite at0x1c3c..0x1c60, then returns local0.
+
+Fresh core **0x2a04..0x2a44** sets type40=3, representation56=1 and routing48=8, copies source metadata through **0x2230..0x2294**, and appends the record. Copied offsets are4/8/12/16/24/28/32/36/44/60. This selected g_malloc/helper body does not initialize status52; no zero/full-initialization, safety or defect claim is assigned. ID is copied, not newly assigned. Successful ordinary allocation/string/format/list/provider behavior remains a premise; nothing is serialized or sent.
+
+## 3. Independent reverse brief body and type formatting
+
+Reverse **multi_scs2open0x888c** borrows the input ASCII body and rejects an empty first character. It selects brief type3 (type9 is another admitted route) at **0x8908..0x892c**; type4 has a different source-offset branch. The supplied independent case is type3, coherent terminated8-character text **`90008F00`**, an existing supplied status/ID and valid output-list storage. There is no claim this is a captured reply to95008F9F.
+
+Original **0x8960..0x89d4** extracts first character`9`, address character`0`, character2/3=`0/0`, operation character4=`8`, value character5=`F`, argument character6=`0`, and type character7=`0`. **0x8ab4..0x8ab8** requires character4=`8`. First character`9` enters the8/9 branch at0x8bd8..0x8be0; value`F` and two zero characters at **0x8e1c..0x8e2c** select original **`%c#1`**, with literal character`1`. This creates temporary WHERE text **`1#1`**.
+
+The selected type3/address-character`0` route is **0x8c30..0x8c68 ->0x8f40**. Original local candidate **getMM_Type('0')0x8774..0x8788/0x885c..0x8864** returns integer1; candidate libutils **htod('0')0x14c0..0x14d8/0x15b4** returns0. Other type-code domains and error cases are not inferred. Earlier getbits calls remain normal imported prerequisites, but this chosen address0 formatter does not read their result arrays.
+
+At **0x8f68..0x8f94**, original format **`*%s*%s#%d#%d*%s##`** receives fixed WHO`22`, fixed text`1`, type integer1, argument0 and temporary WHERE`1#1`. The resulting candidate is **`*22*1#1#0*1#1##`**. The numeric type/argument are local format outputs, not assigned physical sound-source or volume semantics.
+
+The common tail **0x8d60..0x8e80** searches for LF separators. This selected format has no LF, so its single-output path **0x8e68..0x8e78** calls `scsmsg_to_openlist(text,output_list,input_record,22)`. This is a core text/list boundary, not an executed OPEN parser. Fresh core **0x26d8..0x2764** duplicates text, sets type40=2/representation56=2/routing48=22/meta4=2/meta8=0, and copies input direction12/metadata16/24/28 and **status52/ID60**. It calls no new_id. Other unspecified g_malloc fields are not assumed zero; record ownership/publication/physical delivery remain open.
+
+## Confidence and remaining boundaries
+
+The two ledgers reproduce the exact selected literal/branch arithmetic under supplied coherent parsed objects or ASCII bodies and ordinary candidate string/numeric/format/allocator/list helpers. Original callback/registration/format/dataflow confidence is high; input/provider/runtime and physical claims remain conditional or unknown. No ordinary command matrix, complete address/selector grammar, accepted raw frame, active multim STM/synchronizer lifecycle, source/volume interpretation or complete support list is established.
+
+The next distinct join is a selected actual STM field/application state or original caller preparing one of these parsed query/receive records. That should precede an end-to-end sound behavior or physical correspondence claim. Whole registration/order, parser/getLevInt modifications on other selectors, error/ownership paths and actual delivery remain explicit gaps.

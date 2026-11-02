@@ -1,0 +1,66 @@
+[
+  {
+    "bytes": "1868",
+    "va": "0x3e740"
+  },
+  {
+    "bytes": "0799",
+    "va": "0x3e73e"
+  },
+  {
+    "bytes": "8368",
+    "va": "0xb6b66"
+  },
+  {
+    "bytes": "0191",
+    "va": "0xb6b68"
+  },
+  {
+    "bytes": "dcf81840",
+    "va": "0xb6bb0"
+  },
+  {
+    "bytes": "4cf98f07",
+    "va": "0xb6bbc"
+  },
+  {
+    "bytes": "6368",
+    "va": "0xb6bcc"
+  },
+  {
+    "bytes": "6260",
+    "va": "0xb6bd0"
+  },
+  {
+    "bytes": "012b",
+    "va": "0xb6bd2"
+  },
+  {
+    "bytes": "9b68",
+    "va": "0xb6bfc"
+  },
+  {
+    "bytes": "9847",
+    "va": "0xb6bfe"
+  },
+  {
+    "bytes": "a260",
+    "va": "0xb6c08"
+  },
+  {
+    "bytes": "8069",
+    "va": "0xb63f6"
+  },
+  {
+    "bytes": "1c21",
+    "va": "0xb63ce"
+  },
+  {
+    "bytes": "7361",
+    "va": "0xb63de"
+  },
+  {
+    "bytes": "0c30",
+    "va": "0x1a048"
+  }
+]

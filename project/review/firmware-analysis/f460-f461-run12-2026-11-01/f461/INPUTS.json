@@ -1,0 +1,26 @@
+{
+  "/home/bticino/bin/coso": {
+    "sha256": "2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197",
+    "size": 32168
+  },
+  "/usr/lib/libglib-2.0.so.0.7200.3": {
+    "sha256": "3a3107de5686fcd9579547b2ae90201e89b7dc612ebc92855ed5112025507195",
+    "size": 1326696
+  },
+  "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md": {
+    "sha256": "89f0a1cd681924ec8bf6b093c4c39d3d037b14cd416547b8111bffecd2eb5323",
+    "size": 39923
+  },
+  "work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/REPORT.md": {
+    "sha256": "a89d70211c3f6eecb92f620d9e1aecdc52c2c1a06dbff99cdcc89b139b0f6c19",
+    "size": 9896
+  },
+  "work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/SOURCE.json": {
+    "sha256": "2cb9d0b1cab5555b8216adbc22068ea6ae1142c2e2ac9798e32d9d11ab9093a4",
+    "size": 4864
+  },
+  "work/f461-firmware/2.0.11/research/2026-11-01/image_vfs.py": {
+    "sha256": "6c54cac0515e0c74409e802fd8f4bf7a23caa2fff876287333917f598f72106a",
+    "size": 5602
+  }
+}

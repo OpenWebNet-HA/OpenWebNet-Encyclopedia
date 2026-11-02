@@ -1,0 +1,35 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0002fac6:
+   2fac6:	e9dd b61e 	ldrd	fp, r6, [sp, #120]	@ 0x78
+   2faca:	b3b6      	cbz	r6, 2fb3a
+   2facc:	f8df 1be0 	ldr.w	r1, [pc, #3040]	@ 306b0
+   2fad0:	f859 5001 	ldr.w	r5, [r9, r1]
+   2fad4:	e003      	b.n	2fade
+   2fad6:	3401      	adds	r4, #1
+   2fad8:	3508      	adds	r5, #8
+   2fada:	2c17      	cmp	r4, #23
+   2fadc:	d039      	beq.n	2fb52
+   2fade:	e9d5 3100 	ldrd	r3, r1, [r5]
+   2fae2:	429e      	cmp	r6, r3
+   2fae4:	d1f7      	bne.n	2fad6
+   2fae6:	4632      	mov	r2, r6
+   2fae8:	4658      	mov	r0, fp
+   2faea:	f7e1 edfc 	blx	116e4 <memcmp@plt>
+   2faee:	2800      	cmp	r0, #0
+   2faf0:	d1f1      	bne.n	2fad6
+   2faf2:	aa20      	add	r2, sp, #128	@ 0x80
+   2faf4:	4593      	cmp	fp, r2
+   2faf6:	d004      	beq.n	2fb02
+   2faf8:	9920      	ldr	r1, [sp, #128]	@ 0x80
+   2fafa:	4658      	mov	r0, fp
+   2fafc:	3101      	adds	r1, #1
+   2fafe:	f7e1 e9d8 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   2fb02:	3c01      	subs	r4, #1
+   2fb04:	2c15      	cmp	r4, #21
+   2fb06:	f200 87a9 	bhi.w	30a5c
+   2fb0a:	e8df f014 	tbh	[pc, r4, lsl #1]

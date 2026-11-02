@@ -1,0 +1,419 @@
+{
+  "scope": "Exact static source/report/review/history copies; no original binaries or target execution",
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/BYTE_GUARDS.json",
+      "published": "evidence/schema/BYTE_GUARDS.json",
+      "sha256": "8bc3fa11a35d336691affc08ba6ee576062f8ed4c5cc6567a6f8e27fca7dc4a8",
+      "bytes": 965
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/CLASS_IDENTITY.json",
+      "published": "evidence/schema/CLASS_IDENTITY.json",
+      "sha256": "15de35f45bd282193d88771061749e3f9b7805ce15cfd8104e64e50d305c0bdb",
+      "bytes": 2714
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/DATA_SPANS.json",
+      "published": "evidence/schema/DATA_SPANS.json",
+      "sha256": "a48393caf2f0e191c7624985d61efeeb1f76cf7e1bf0d848a34f3910e6d34b35",
+      "bytes": 1164
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/DIRECT_CALLS.json",
+      "published": "evidence/schema/DIRECT_CALLS.json",
+      "sha256": "1cace3fd0796cd57b0ddae0d1393620c6c74b4b6e02c7058389fa5299ff3d6b9",
+      "bytes": 714
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/INPUTS.json",
+      "published": "evidence/schema/INPUTS.json",
+      "sha256": "2a5b1cf06374059b196b1b8da2040977c71938708004fdf4129f930f63e91e97",
+      "bytes": 426
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/KEYS.json",
+      "published": "evidence/schema/KEYS.json",
+      "sha256": "c1b0afa93124270c70c499187c33dc7b44952b4f32b79049fdbe2e1859df80a5",
+      "bytes": 1009
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/LAYOUT.json",
+      "published": "evidence/schema/LAYOUT.json",
+      "sha256": "0553195665be4dd303ce857c04e5bc9baf16adb2c04b9471a773fba2ef74c853",
+      "bytes": 813
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/METHOD.json",
+      "published": "evidence/schema/METHOD.json",
+      "sha256": "d7a63850781641a05ac707e3fb4dfede2cdf97cce70b4a81a4f1bb6888870db1",
+      "bytes": 620
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/OPERATORS.json",
+      "published": "evidence/schema/OPERATORS.json",
+      "sha256": "32d0af45bbfadf3081054f853a18af72a0c4f63f565a792ebabd3b4a6b855323",
+      "bytes": 554
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/SOURCE_SPANS.json",
+      "published": "evidence/schema/SOURCE_SPANS.json",
+      "sha256": "1d0605cb8a40f29dee671a5471323eb15e1187c1cebf808ed6a693319281c569",
+      "bytes": 1953
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/spans/base-bnil-constructor.txt",
+      "published": "evidence/schema/spans/base-bnil-constructor.txt",
+      "sha256": "5397d37f4021e1bf04b1aacbf4799c4b37d419e095263e50092f3768e61aaa94",
+      "bytes": 3839
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/spans/base-raw-constructor.txt",
+      "published": "evidence/schema/spans/base-raw-constructor.txt",
+      "sha256": "9fa0637adf305a80e3fcb8fc5e15f7cc24d73ad9a9accdf8765bd9df21c12309",
+      "bytes": 9488
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/spans/compiled-constructor.txt",
+      "published": "evidence/schema/spans/compiled-constructor.txt",
+      "sha256": "2a2f468bdf7d482c03a780b1e1e8069fea6716916e3e1a4d61544a90b69bc888",
+      "bytes": 4926
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/spans/initializer-bnil.txt",
+      "published": "evidence/schema/spans/initializer-bnil.txt",
+      "sha256": "9992db155f5a125f4daa5fb2fe77b60201134efcf3060a3aec1f075f3f5f0181",
+      "bytes": 4311
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/spans/initializer-trigger-selection.txt",
+      "published": "evidence/schema/spans/initializer-trigger-selection.txt",
+      "sha256": "972c50801d8ca7c2d77b05c1f7e41bc954173913ad86535f205e05afbccc5271",
+      "bytes": 316
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/spans/raw-factory-bnil.txt",
+      "published": "evidence/schema/spans/raw-factory-bnil.txt",
+      "sha256": "e5c8b1bed3b71f6d96afdf45cf5deae41b2b056e354333332334b0980104b8d0",
+      "bytes": 936
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/spans/raw-factory-selection.txt",
+      "published": "evidence/schema/spans/raw-factory-selection.txt",
+      "sha256": "a3aa6206b640bc0752362f18aac665f576333c9f183a8d110cf132d940c3cdda",
+      "bytes": 1612
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/spans/raw-serializer.txt",
+      "published": "evidence/schema/spans/raw-serializer.txt",
+      "sha256": "53129bfee23f9e2a1483bbbe43cd007c1c9e3cc2d1976851af3c4800589da793",
+      "bytes": 8955
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/spans/schema-copy.txt",
+      "published": "evidence/schema/spans/schema-copy.txt",
+      "sha256": "93285f5f6fc378d6f8d1aedefacfb0fb28f0790d4377ca219d64dd2bbd4b52bc",
+      "bytes": 3077
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/OUTPUT_MANIFEST.json",
+      "published": "evidence/schema/OUTPUT_MANIFEST.json",
+      "sha256": "0b8aa8830ee1447f258e1a95602fee4ec7b588c543fe4de0c3e26e0b87fa2b09",
+      "bytes": 2888
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/collect_schema_v1.py",
+      "published": "evidence/schema/collect_schema_v1.py.txt",
+      "sha256": "9ff81491dcdf4d41b760cf805c747bbef7d63273ed45334cc802c9f8b0c8ecf4",
+      "bytes": 8390
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/REPORT.md",
+      "published": "schema-report.txt",
+      "sha256": "9f6a8393a6e86acaf34f2f3538d187a4ec67f911eb1db5a72e2dd569b281a2c9",
+      "bytes": 10228
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/reviews/schema-source-review.md",
+      "published": "schema-source-review.txt",
+      "sha256": "87a58349d7ff7eda56d9281c76c59a5b367052d6ebd0ba058a7902ab1bef6792",
+      "bytes": 6185
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/INPUTS.json",
+      "published": "evidence/registration/INPUTS.json",
+      "sha256": "8caddf52bba0337c066bbf04c30d83c9517e796e103a59ad07f294c1dec06d06",
+      "bytes": 698
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/LOCAL_HANDOFF.json",
+      "published": "evidence/registration/LOCAL_HANDOFF.json",
+      "sha256": "ed5f9c82b79c7424035ff4c22d69185247990b160bf8a181d5aafe882a9c0c25",
+      "bytes": 2530
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/METHOD.json",
+      "published": "evidence/registration/METHOD.json",
+      "sha256": "1accbf6f9828b01f2ac262c49e8ff3f335295e37b103db002addb20bd8deb82e",
+      "bytes": 407
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/ORIGINAL_SOURCE.json",
+      "published": "evidence/registration/ORIGINAL_SOURCE.json",
+      "sha256": "c66d1cd179333055778ec28ac1e265a9df429370bf916704a022ccca6dd2e6bc",
+      "bytes": 6056
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/spans/callback-copy-helper.txt",
+      "published": "evidence/registration/spans/callback-copy-helper.txt",
+      "sha256": "3ec969b277e5f14b7df21f59b6c1d51a446da66e828687de4a50a13b1749a515",
+      "bytes": 990
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/spans/compiled-callback-constructor-prefix.txt",
+      "published": "evidence/registration/spans/compiled-callback-constructor-prefix.txt",
+      "sha256": "5e23cdeb5879eb94ce767a74f4b94613ba352a5cca1a42f36c91cf50e28b2a14",
+      "bytes": 1466
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/spans/compiled-vtable-install.txt",
+      "published": "evidence/registration/spans/compiled-vtable-install.txt",
+      "sha256": "9d4f6d805313aaac075b7b87928b0276783fe4b18efc1e8120613d2b66ffafda",
+      "bytes": 831
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/spans/initializer-context-save.txt",
+      "published": "evidence/registration/spans/initializer-context-save.txt",
+      "sha256": "46247edfb1296d3b6f4d3fab1a3ac1e549f84804d5e14c5496637ce7d1ffaccc",
+      "bytes": 1105
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/spans/persistent-runner-local-publication.txt",
+      "published": "evidence/registration/spans/persistent-runner-local-publication.txt",
+      "sha256": "2dce91cb5f13eb48f90608b9de1b185cd29551ae725d5ebf8347dba8d9b92a59",
+      "bytes": 1784
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/spans/primary-callable-forwarder.txt",
+      "published": "evidence/registration/spans/primary-callable-forwarder.txt",
+      "sha256": "44c3e8b0da961fb48c5a15d1ec8e9eecf3b3383c472512e95988958055c06a2f",
+      "bytes": 407
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/spans/scene-callback-capture.txt",
+      "published": "evidence/registration/spans/scene-callback-capture.txt",
+      "sha256": "aee0a7a7a2fcf635ac042a4520faa2dc0d83700b328a155d92bf075cdffbf4d3",
+      "bytes": 920
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/spans/scene-pointer-callable-invoker.txt",
+      "published": "evidence/registration/spans/scene-pointer-callable-invoker.txt",
+      "sha256": "f40de36060aef042554d6cd5eb17d683cf8821da30fe71cbf45d3d463dbb9064",
+      "bytes": 198
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/spans/scene-pointer-callable-manager.txt",
+      "published": "evidence/registration/spans/scene-pointer-callable-manager.txt",
+      "sha256": "a22e78b3f668d34b8b489ca4dd9f28edf4e86f374deee378c5836e9f73d0ad3a",
+      "bytes": 722
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/spans/trigger-vector-normal-move.txt",
+      "published": "evidence/registration/spans/trigger-vector-normal-move.txt",
+      "sha256": "397d55c763bc3c2335a2cbcfb7487e171a33ec86b140aa00da25d7c36b2ecdd2",
+      "bytes": 840
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/OUTPUT_MANIFEST.json",
+      "published": "evidence/registration/OUTPUT_MANIFEST.json",
+      "sha256": "973cc2e240fc0293802a9188a910f33a1909e5790f0dba00444a0ca275ae8286",
+      "bytes": 2521
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/collect_registration_v1.py",
+      "published": "evidence/registration/collect_registration_v1.py.txt",
+      "sha256": "0b9d444aaf356a3e7f1a9aec630d84c1a12e21df3033b50a3afa6a219db8d9c1",
+      "bytes": 8985
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/REPORT.md",
+      "published": "registration-report.txt",
+      "sha256": "6917cdb678ecff2a78cf91287a9ee87f31ee5adfb50e43b603b7111404d77223",
+      "bytes": 7509
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/reviews/registration-source-review.md",
+      "published": "registration-source-review.txt",
+      "sha256": "53e4ad477776a570fe47e6a0a2b116aba246be54cd0486c1db42e6204fd79736",
+      "bytes": 5888
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/ADMISSION_LEDGER.json",
+      "published": "evidence/admission/ADMISSION_LEDGER.json",
+      "sha256": "392aeb9e4fbe4e49be4f56f3740a9c9c1b99b5ae4efbe63c3a50f26b5414a9d3",
+      "bytes": 1228
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/BOUNDED_LOCATOR.json",
+      "published": "evidence/admission/BOUNDED_LOCATOR.json",
+      "sha256": "e08eb508b7d7ac25de0109b8c40d51655d45d4b7a3099415d8682c3adc926c9b",
+      "bytes": 284
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/BYTE_GUARDS.json",
+      "published": "evidence/admission/BYTE_GUARDS.json",
+      "sha256": "026eb5343ba856b666119d04f823f9a3718d764d318eb8630b37d53e7337d544",
+      "bytes": 1207
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/DIRECT_CALLS.json",
+      "published": "evidence/admission/DIRECT_CALLS.json",
+      "sha256": "41948d15f1698280fb7310cc1e9ef11ae677ff81bfee78b193e58652da229abc",
+      "bytes": 413
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/INPUTS.json",
+      "published": "evidence/admission/INPUTS.json",
+      "sha256": "583dffe12ac0375ac753a7b47acd516a6ca4fb67bfaeb9edcde1f6629bb11465",
+      "bytes": 868
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/METHOD.json",
+      "published": "evidence/admission/METHOD.json",
+      "sha256": "31a10513d23a933425a48c3de8ada92f51fd04947622763b92628aeae0c6d931",
+      "bytes": 483
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/POINTER_BINDINGS.json",
+      "published": "evidence/admission/POINTER_BINDINGS.json",
+      "sha256": "fb0e522a739b0c3e49dd8751378abbb32e33660c2301f617a11977594abf48f9",
+      "bytes": 482
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/SOURCE_SPANS.json",
+      "published": "evidence/admission/SOURCE_SPANS.json",
+      "sha256": "380fc53c4bb2a6d5c316164b2d8f6063a01ca21b2a468baf8f56a0e526060ef3",
+      "bytes": 1828
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/spans/caller-got-prefix.txt",
+      "published": "evidence/admission/spans/caller-got-prefix.txt",
+      "sha256": "247fce96763f2337ea5df1c7bb5d8251d070fcf519f58720578d8b0ccdd4452e",
+      "bytes": 1372
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/spans/captured-scene-wrapper.txt",
+      "published": "evidence/admission/spans/captured-scene-wrapper.txt",
+      "sha256": "82822bc508125bbfc3b9d111925750b63a462290d226c3a154cc887b5867a97d",
+      "bytes": 428
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/spans/default-fire.txt",
+      "published": "evidence/admission/spans/default-fire.txt",
+      "sha256": "35c7e4000a3cf44fa7ce415a2efe675a8c2563f8777e221ec3fb574daac2f19d",
+      "bytes": 548
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/spans/id-getter.txt",
+      "published": "evidence/admission/spans/id-getter.txt",
+      "sha256": "0392810b4871988f78944935dcda77bdb863581b3ec1e0717348b50e27415a9c",
+      "bytes": 402
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/spans/local-state-handler.txt",
+      "published": "evidence/admission/spans/local-state-handler.txt",
+      "sha256": "11caf8fba784e3879cb7a7ee6be9d2a11edc15066497052699f4e87827bfdecb",
+      "bytes": 3817
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/spans/selected-local-dispatch.txt",
+      "published": "evidence/admission/spans/selected-local-dispatch.txt",
+      "sha256": "1b5d5b9be08c4771f04f45ccfa8ba03689a1c01abaccf415bef2e65047e3c207",
+      "bytes": 2786
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/spans/string-equality.txt",
+      "published": "evidence/admission/spans/string-equality.txt",
+      "sha256": "4d97fbccf349c7227c4bce7edcc44615902fdc4ce79c69260e19afb15806ac47",
+      "bytes": 948
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/spans/temporary-copy-release.txt",
+      "published": "evidence/admission/spans/temporary-copy-release.txt",
+      "sha256": "2d21d9ef1dbe5290599e8b30e1abfd8259b7a121d0560cf0b46044fbd0cc1a78",
+      "bytes": 3924
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/spans/trigger-handle-copy.txt",
+      "published": "evidence/admission/spans/trigger-handle-copy.txt",
+      "sha256": "7a216622fdd46b854736e46f8251e0800362056f712ce351f1a00824deffe3e0",
+      "bytes": 3943
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/OUTPUT_MANIFEST.json",
+      "published": "evidence/admission/OUTPUT_MANIFEST.json",
+      "sha256": "b1e5ad21bbc340fe3ef58a4f14056f3e16440998b4f12904b28e11d3ea2f7c6b",
+      "bytes": 2297
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/collect_admission_v1.py",
+      "published": "evidence/admission/collect_admission_v1.py.txt",
+      "sha256": "91401b006bf9096a7807aa9cf7cde69ea55f42452f6977a2b609087607758532",
+      "bytes": 7188
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/REPORT.v2.md",
+      "published": "admission-report-v2.txt",
+      "sha256": "b838a55616eb012ce7b00aa1f355ae1ae13bdff3e132359be5502f0b02ea47b3",
+      "bytes": 9056
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/reviews/admission-source-review.md",
+      "published": "admission-source-review.txt",
+      "sha256": "d6bb51d1f126cab5012cfad3e5781b8f7f1afef183aa7de53fa6576939a37378",
+      "bytes": 5956
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/REPORT.md",
+      "published": "admission-report-v1.txt",
+      "sha256": "14ce3ff928aa3770fb76fe5fec2ec903c0d787aacc2f5a5c3da3ee8def4b9424",
+      "bytes": 9053
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/WORDING_REFINEMENT.json",
+      "published": "admission-wording-refinement.json",
+      "sha256": "a06e0cd14c5f7e9de6ddf5ba3e774c35b5e81708c27baff90cc0503c9c9bec5a",
+      "bytes": 575
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/DEVELOPMENT_NOTES.json",
+      "published": "admission-development-notes.json",
+      "sha256": "a7cad9bd12b6a8aa02eb83450a46ac13fe594b197c67c19c4e45efa502ddde8f",
+      "bytes": 578
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/SYNTHESIS.md",
+      "published": "synthesis.txt",
+      "sha256": "11531db44619880580e688ff7104ec82e6762b881bb475cd006d807bb4b32669",
+      "bytes": 941
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/COVERAGE.md",
+      "published": "coverage.txt",
+      "sha256": "e32c10fbe5c4755baea2aef6b5c8829408f428f5b47e5a4b498863a5f9de4353",
+      "bytes": 848
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/RANKED_REMAINING_QUESTIONS.md",
+      "published": "remaining-questions.txt",
+      "sha256": "472621277e1a5aaa07820782e1ff21a64f1cc6a30a5ab74d849100fb90e26b4a",
+      "bytes": 1163
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/SOURCE_CHECKS.json",
+      "published": "source-checks.json",
+      "sha256": "d752b269edacb6a3073d0f40f8d82f388b50911b5953e2adf484ab1a3edb410c",
+      "bytes": 1288
+    }
+  ]
+}

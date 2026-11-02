@@ -1,0 +1,40 @@
+# F461 run13 — nonzero deadline producer remains open; two concrete object-role exclusions
+
+**No qualified local producer of a NONZERO message deadline field+32 is established by this packet.** The new positive result is narrower: an actual registered initializer constructs a112-byte private object whose+32 stores a GList return, and a separate callback reads a nested parsed object's+32 as a string. Neither may be substituted for the message's eight-byte deadline merely because the offset is32. This is a precise bounded gap/exclusion packet, not an all-writer census, global absence, untouched-record proof or replay of run12's scheduling arithmetic. Original/vendor/native/provider/target execution, clocks, target I/O, semantic models/fixtures and SQL added: **0**.
+
+Three fresh ELF64 AArch64 inputs are pinned in INPUTS.json: `/home/bticino/libcoso/libplug_automation_stm.so`, `libplug_aux_stm.so`, and `libcoso.so`. SOURCE.json retains their actual PT_LOADs, exact selected original bytes/words, descriptor relocations, import-call proofs and finite query boundaries. No F454/MH202/MHS layouts or public family/WHO meanings are transferred. Product0208 supplies F461 third-party-integration context only. The scoped run12 report is pinned as the unresolved deadline-consumer question; its clock/defer/provider cases are not repeated or counted as new coverage.
+
+## Actual same-descriptor initializer request
+
+The original automation plugin GLOB_DAT at0x14fb8 names exported104-byte object **automation_stm**, VA0x15150. Original ABS64 relocations identify initializer **descriptor+48→automation_stm_init0x23e0** and application callback **descriptor+64→automation_stm_gest_status_from_appli0x2fb0**. These are the plugin's own descriptor slots, not transferred translation/field descriptors or public protocol enums.
+
+Selected plugin initialization source0x200c..0x2044 loads that actual descriptor through its GOT, preserves the pointer inX21 and passes the SAME pointer to imported `register_state_machine`. Candidate libcoso's registration continuation0x27b8..0x27d4 loads the provided descriptor's initializer slot+48 and, when nonnull, requests it with X0=SAME descriptor and X1=returned manager+80. Imported binding/interposition, the same valid registered objects, manager/provider returns and successful selected initialization remain premises; no actual module activation or callback occurrence is observed. Registration/parser/transport bodies are not expanded to force provenance.
+
+## Positive constructor and private-list field32
+
+Initializer0x23e0 saves its supplied descriptor inX19, then loads P=[descriptor+88] at0x2428. The selected null branch reaches0x2b7c, requests112 zeroed bytes with `g_malloc0`, saves the returned pointer asP and stores it back into that SAME descriptor+88 at0x2b88. It branches back to0x2430. Original descriptor+88 file bytes are zero, but that is compiled initial data, not proof of a runtime null branch/reset or an unaliased installed state.
+
+On this selected normal construction path the initializer stores its descriptor pointer atP+0 and copies supplied initializer argument fields intoP+16/+24. This source role is the plugin's private context; the pointer identities and successful allocation/normal ABI/valid lifetime are explicit premises, not arbitrary forced objects.
+
+At0x25c8..0x25f4 it requests a separate24-byte entry, obtains a delegated formatted-string pointer and stores that pointer into entry+0. It loads the existing **P+32** as the first argument of `g_list_append`, supplies the new entry pointer as the second, and stores the returned list head back into **the SAME P+32** at0x25f4. This closes an actual supplied-descriptor→private allocation→list-field store edge. The stored word is a list-return pointer by its source dataflow; it does not establish a numerical deadline, its units, or a message object. No assumption that distinct roles can never alias globally is needed or claimed, and no full pointer lifetime/ownership/allocator behavior is certified.
+
+The tempting nonzero-looking offset32 store is therefore not a justified deadline producer. Treating it as one would conflate the plugin descriptor, privateP112, entry24, message/Q and nested parsed object namespaces.
+
+## Provided message and nested parsed-string distinction
+
+The automation application callback separately preserves its supplied second argument Q inX23 at0x2ff4, reads parsed=[Q] intoX19, and reads private context from its supplied descriptor+88. On one selected valid local continuation0x30e8..0x30f8 it passes SAME Q as the data argument to `g_list_append` on the supplied output-list address. The intervening matching/state/provider paths are not closed here. This demonstrates the record versus private-context argument roles; it does not assert Q+32 remains untouched across every callback path, alias, callee or bulk store, and does not supply a deadline value.
+
+The independent auxiliary callback provides another concrete offset distinction. At0x1f60 it loads **parsed=[incoming Q]** intoX22, then0x1f6c reads **parsed+32**, tests that pointer and requests `strtol(parsed_string,NULL,10)` at0x1f88. Thus this observed+32 load is a supplied nested string-pointer role, not a read or writer of Q's numeric deadline+32. Its conversion/domain/status/timer branches are not promoted into a public capability matrix. No arbitrary argument or runtime value is supplied.
+
+## Exact bounded query and unresolved boundary
+
+Only two explicitly named original symbol extents are included in the finite locator query:
+
+- automation application callback0x2fb0..0x37f0,2112 bytes;
+- auxiliary application callback0x1f50..0x20b4,356 bytes.
+
+The saved query matches rendered `STR*`/`STP` instructions with a direct non-SP `[Xn,#32]` operand in these extents. It has no matches. This is an instruction-form observation only: it is **not** alias analysis, all pair/vector stores covering32, shifted/interior pointers, callee side effects, all methods/plugins/whole-image writers, global absence, dead code or a proof that the message field cannot change. Other code, alias/bulk operations and relevant providers remain unresolved. The complete disassemblies of those query extents are not exported as a capability table; exact extent hashes/definitions and the query form/results are saved separately from the eight positive source fragments.
+
+The useful new result is the positive different-object provenance and exclusion above. The nonzero message+32 producer remains OPEN; a future source-backed local writer must prove its actual message receiver, value source and permitted caller before composition with run12. Timestamp+24 remains a different field. No clock, defer truth table, matcher, output formatter, frame-preparation, incoming/output/receiving/transport/authentication/session/framing/MQTT/libjel body, platform-command fallback or uncertain bt_device process route is used as a proxy.
+
+Reproduce with `python3 -B collect_gap_v1.py --check`. Generation is exclusive and immediately preserves report/collector/outputs in first-candidate; the index is computed before its own file is opened. No canonical failed generation or generated overwrite occurred. All original inputs and completed dossiers remain unchanged. Source-role exclusions and finite no-match results add no installed-state, physical, ownership-safety, defect or universal protocol conclusion.

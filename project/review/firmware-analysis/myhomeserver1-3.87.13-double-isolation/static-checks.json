@@ -1,0 +1,25 @@
+{
+  "checks": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "3088d6",
+        "wall_time_seconds": 0.182316422,
+        "exit_code": 0,
+        "original_token_count": 25,
+        "output": "{\"mode\": \"STATIC_PREFLIGHT_CHECK\", \"original_execution\": 0, \"outputs\": 2, \"source_known_PC\": 85}\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "0e1eeb",
+        "wall_time_seconds": 0.198220389,
+        "exit_code": 0,
+        "original_token_count": 26,
+        "output": "{\"check\": true, \"outputs\": 13, \"tool_files\": 63, \"RECORD_hashed_verified\": 41, \"original_execution\": 0}\n"
+      }
+    }
+  ],
+  "method": "Readonly static host checks only; no guest/replay"
+}

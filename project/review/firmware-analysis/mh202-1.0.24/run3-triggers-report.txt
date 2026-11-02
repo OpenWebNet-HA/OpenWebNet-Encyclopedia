@@ -1,0 +1,53 @@
+# MH202 run3: selected ordinary and special trigger comparison rules
+
+This bounded static batch recovers concrete comparison behavior inside bt_taskmanager, after run2's event-to-callback join. It does not execute an original parser/matcher, validate a configured .spt directive or observe an event/physical trigger. Original ARM/PHP/JavaScript/vendor execution remains0. Finite host transcriptions are explicitly separated from the original code.
+
+Input normal-image /home/bticino/bin/bt_taskmanager SHA256 ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e. The accessor verifies backing bytes. original-spans.json pins four original ranges; critical-words-and-literals.json pins14words and5literal pointers. All old reports and original trees are unchanged.
+
+## Actual selection and result convention
+
+Original0xc608 saves the incoming event text in r7. At0xc614..0xc638 it compares its first8bytes with *#13**22 and selects special comparator0xc8e0 on equality, ordinary0xc6dc otherwise. For each stored trigger it passes trigger text asr0 and event text asr1. A comparator result0 sets the trigger's hit word+8 at0xc65c..0xc664. Those actual caller/pointer relations are reused context from run2 and freshly pinned here; they are not another runtime experiment.
+
+## Ordinary literal and numeric-bracket subsets
+
+Comparator0xc6dc walks pattern and input cursors. Literal bytes must equal. On '[' it uses atoi on the event suffix and handles selected bracket constructs. For the ordinary nonnegative, nonoverflow examples modeled here:
+
+| Pattern construct | Selected source rule | Original branch |
+| --- | --- | --- |
+| [!N] | Reject when event numeric value equalsN; otherwise skip through closing bracket | 0xc71c..0xc774 |
+| [A,B,...] | Accumulate membership comparisons across comma-separated values | 0xc79c..0xc7e8,0xc828..0xc844 |
+| [A-B] | Inclusive lower/upper tests with signed ARM comparisons | 0xc7ec..0xc800,0xc848..0xc868 |
+| [N] | The selected closing path has neither comma mode nor both range bounds and returns mismatch | 0xc828..0xc83c |
+
+After an accepted bracket,0xc86c..0xc888 advances the input cursor through the complete ASCII decimal digit run, preserving leading-zero consumption in the transcribed example. This is helper numeric matching, not a new public WHERE grammar or complete acceptance policy for malformed/negative/mixed constructs.
+
+The helper also has a relevant **exhaustion boundary**:0xc8ac..0xc8c8 leaves the loop when either cursor reaches its length and returns0 at0xc8d4, with no final equality-of-lengths test. The host examples ABC versusAB, andAB versusABC, therefore derive helper result0 under this literal-only local model. They are not accepted network frames, valid script records, a live false trigger or a parser-bypass claim. The actual event/configuration pipeline has separate prerequisites. A literal mismatch before exhaustion derives1.
+
+Ten finite host examples cover selected lists/ranges/negation, a single-element bracket rejection, leading-zero digit consumption, helper-only exhaustion and ordinary mismatch. The model deliberately raises outside its selected regular subset instead of pretending to implement the whole pattern language. Source bracket parsing has additional register/sentinel and malformed-input behavior that remains unmodeled.
+
+## Special comparator: selected value positions
+
+The special helper first checks the stored trigger begins *#13, then constructs and parses separate trigger/event objects through imported openwebnet functions. This batch does not execute those constructors, establish final taskmanager provider binding or prove raw-frame acceptance. It records post-parser conditions only.
+
+The original trigger dimension selects local value-index stores:
+
+| Trigger dimension | Explicit selector indices | Original stores |
+| ---: | --- | --- |
+|22|0,1,5,6,7 then−1 terminator|0xc990..0xc9c4|
+|0|0,1 then−1 terminator|0xc9c8..0xc9e4|
+
+The loop at0xc9e8..0xca50 compares only selected trigger values that have a nonnull, nonempty string. A selected mismatch returns1. Empty selected trigger values skip the comparison; fields outside the selected list are not compared by this loop. Four host field-array fixtures illustrate DIM22 ignoring index2 but comparing index5, an empty selected trigger field skipping comparison, and DIM0 ignoring index2. These are assumed extracted fields, not captured/parsed frames or device identity semantics.
+
+DIM1 follows another branch into the selector loop without the explicit local selector writes shown for0/22 in this inspected body. Its initial selector state and outcome are **not established or modeled**. Do not present it as a guaranteed match-all, an uninitialized-memory defect or a physical failure. Other dimensions select the mismatch tail in the inspected branch. The selected value indices are implementation positions; this report does not assign them manufacturer identity/property meanings.
+
+## Normalizer: bounded source relation, not a full language
+
+Prior loader code calls normalizer0xcb38 before storing a configured trigger. Its nonbracket path invokes the parser and, conditional on WHO1, IsMeasureFrame, DIM1 and value0decimal100, chooses a formatter literal *1*0*%s##. The inspected bracket path has separate temporary-string construction and a formatter literal *1*1*%s##. Original format pointers and the level/interface combination %s#%s#%s are pinned. These are actual guarded code/format relations, not a proven accepted raw frame, a physical dimmer meaning or a complete preservation rule for bracket syntax.
+
+This batch does not reconstruct all mutation/parser/level/interface branches of0xcb38. In particular a source formatter alone does not establish how an actual configured pattern is transformed or whether its required parsed fields are reachable. No illustrative raw command is promoted into a completed normalizer fixture. Full validated normalization and the relationship to the finite ordinary comparison subsets remain next work.
+
+## Reproduction, confidence and next questions
+
+Run `python3 work/mh202-firmware/research/2026-10-30/triggers/run3/collect_evidence.py --check`. It reproduces8outputs from one verified original executable plus accessor identity, four spans,14words, selected literals and the finite models. No original instructions, libc routines, XML/.spt parser or event callback executes.
+
+High confidence applies to actual function selection/result convention, literal comparisons, the selected simple numeric branches, local exhaustion checks, explicit special0/22 selector lists and nonempty-field comparisons. Conditional host-model scope applies to the declared normal ASCII/nonoverflow strings and assumed post-parser field arrays. Complete pattern grammar, full normalizer behavior, native parser/providers, actual trigger contents/order and physical events remain unresolved. Next priorities are a complete valid normalization-to-comparator join and the specialDIM1 selector source, if those close a concrete use case; do not repeat the already mapped event latch/callback or simple syntax table as new evidence.

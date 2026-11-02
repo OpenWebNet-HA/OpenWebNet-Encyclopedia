@@ -1,0 +1,1112 @@
+{
+  "F460": {
+    "home/bticino/alarm_manager/alarm_manager": {
+      "DT_NEEDED": [
+        "libpthread.so.0",
+        "libuuid.so.1",
+        "libjsoncpp.so.25",
+        "libssl.so.3",
+        "libcrypto.so.3",
+        "libboost_program_options.so.1.78.0",
+        "libboost_system.so.1.78.0",
+        "libboost_date_time.so.1.78.0",
+        "libapplogger.so.1",
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libglib-2.0.so.0",
+        "libcppcore.so.0",
+        "libjsonmsg.so.1",
+        "libutils.so.1",
+        "libxml2.so.2",
+        "liblgsafe.so.1",
+        "libdw.so.1",
+        "libelf.so.1",
+        "libz.so.1",
+        "libbz2.so.1",
+        "liblzma.so.5",
+        "libzstd.so.1",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x250c0",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 2135472,
+      "present_as_regular_file": true,
+      "sha256": "4e0ec163ccb3a5de9e98bb06273a830cdd6f9bb4e7624db68723e4f8795645bd"
+    },
+    "home/bticino/backup_manager/backup_manager": {
+      "DT_NEEDED": [
+        "libboost_system.so.1.78.0",
+        "libboost_date_time.so.1.78.0",
+        "libapplogger.so.1",
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libglib-2.0.so.0",
+        "libutils.so.1",
+        "liblghal.so.1",
+        "libcppcore.so.0",
+        "libjsoncpp.so.25",
+        "libarchive.so.13",
+        "libssl.so.3",
+        "libcrypto.so.3",
+        "libcurl.so.4",
+        "libsqlite3.so.0",
+        "libuuid.so.1",
+        "libdw.so.1",
+        "libelf.so.1",
+        "libpthread.so.0",
+        "libz.so.1",
+        "libbz2.so.1",
+        "liblzma.so.5",
+        "libzstd.so.1",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x1b240",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 978280,
+      "present_as_regular_file": true,
+      "sha256": "8a9b24f15977383a6b4069660a895be6d1a30656427a490d46d8fff646cd550c"
+    },
+    "home/bticino/bin/bt_daemon": {
+      "DT_NEEDED": [
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libglib-2.0.so.0",
+        "libcrypto.so.3",
+        "libapplogger.so.1",
+        "libutils.so.1",
+        "liblgsafe.so.1",
+        "liblghal.so.1",
+        "libcommon.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x7780",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 141968,
+      "present_as_regular_file": true,
+      "sha256": "e5a3a10d78924c4efd282ef58b5d294340429eefd725c7912a7b4ea629b2c88f"
+    },
+    "home/bticino/bin/coso": {
+      "DT_NEEDED": [
+        "libc.so.6",
+        "libglib-2.0.so.0",
+        "libgmodule-2.0.so.0",
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libgthread-2.0.so.0",
+        "libz.so.1",
+        "libxml2.so.2",
+        "libopenmsg.so.1",
+        "liblog.so.1",
+        "libutils.so.1",
+        "libcoso.so"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x3800",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 32168,
+      "present_as_regular_file": true,
+      "sha256": "3bbc0e2f7c3a6bc88468faed711a684e092eccc0177563eb8aa7d78cd37edcae"
+    },
+    "home/bticino/bin/scsserver": {
+      "DT_NEEDED": [
+        "libglib-2.0.so.0",
+        "libcommon.so.1",
+        "libapplogger.so.1",
+        "libutils.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x2c00",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 39024,
+      "present_as_regular_file": true,
+      "sha256": "d8b8d3815974b090a15a7235e4ec91be01b848abd72115d4e90e8a5a848526d8"
+    },
+    "home/bticino/bt_drover_mx/bt_drover_mx": {
+      "DT_NEEDED": [
+        "libjsoncpp.so.25",
+        "libcrypto.so.3",
+        "libssl.so.3",
+        "libmosquitto.so.1",
+        "libuuid.so.1",
+        "libapplogger.so.1",
+        "liblghal.so.1",
+        "liblgsafe.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x17600",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 1034592,
+      "present_as_regular_file": true,
+      "sha256": "7af20b944af0685b1d972c2fb6b3419f8f6b3c379da12829f73b2603fb5d2da2"
+    },
+    "home/bticino/bt_netatmo/bt_netatmo": {
+      "DT_NEEDED": [
+        "libboost_filesystem.so.1.78.0",
+        "libpaho-mqttpp3.so.1",
+        "libpaho-mqtt3a.so.1",
+        "libglib-2.0.so.0",
+        "libssl.so.3",
+        "libcrypto.so.3",
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "libnetatmo.so",
+        "libapplogger.so.1",
+        "libutils.so.1",
+        "liblgsafe.so.1",
+        "liblghal.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x32a80",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 2860152,
+      "present_as_regular_file": true,
+      "sha256": "897261c50f036af1dbac5dbe7d911360e1d1bd56420789ced8ebcc4b0adcf5ff"
+    },
+    "home/bticino/bt_smart_home_manager/bt_smart_home_manager": {
+      "DT_NEEDED": [
+        "libglib-2.0.so.0",
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "liblcm.so.1",
+        "libacca.so.1",
+        "libapplogger.so.1",
+        "libutils.so.1",
+        "libjel.so.1",
+        "libjsonmsg.so.1",
+        "libopenmsg.so.1",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0xd180",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 649384,
+      "present_as_regular_file": true,
+      "sha256": "6343c1abac1e01253f2dcef594a241e8c20261ccd050b3828cf98767ebab9780"
+    },
+    "home/bticino/energy_manager/energy_manager": {
+      "DT_NEEDED": [
+        "liblcm.so.1",
+        "libglib-2.0.so.0",
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "libacca.so.1",
+        "libopenmsg.so.1",
+        "libutils.so.1",
+        "liblghal.so.1",
+        "libcppcore.so.0",
+        "libdw.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x18dc0",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 538840,
+      "present_as_regular_file": true,
+      "sha256": "9d59622bb81ef97ae622c02a17a894dfe3614ed4f11646c75f26eb62e9cf54d6"
+    },
+    "home/bticino/gateway_manager/gateway_manager": {
+      "DT_NEEDED": [
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "libcppcore.so.0",
+        "liblghal.so.1",
+        "libdw.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0xc5c0",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 190664,
+      "present_as_regular_file": true,
+      "sha256": "9c9092e7dc140d22e9abf9867ba95c5281b67bc5e51c65f648ff43288f1e163b"
+    },
+    "home/bticino/matrix_mx/matrix_mx": {
+      "DT_NEEDED": [
+        "libglib-2.0.so.0",
+        "libjsoncpp.so.25",
+        "libcurl.so.4",
+        "libsqlite3.so.0",
+        "liblcm.so.1",
+        "libuuid.so.1",
+        "libcrypto.so.3",
+        "libacca.so.1",
+        "libapplogger.so.1",
+        "libopenmsg.so.1",
+        "libjsonmsg.so.1",
+        "libjel.so.1",
+        "libutils.so.1",
+        "liblgsafe.so.1",
+        "liblghal.so.1",
+        "libdw.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x40d40",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 3180736,
+      "present_as_regular_file": true,
+      "sha256": "16d92b02ffe89819f6947d93efa76a0f24f8b590a43d3e5d8fdc7226ec68a4ff"
+    },
+    "home/bticino/player_manager/player_manager": {
+      "DT_NEEDED": [
+        "libapplogger.so.1",
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "libupnp.so.17",
+        "libixml.so.11",
+        "libdw.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x1cd00",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 1326488,
+      "present_as_regular_file": true,
+      "sha256": "e3d8e78d08e5bc6793b0b0fd37e7cfcc33fe723943e9f2b635c300f5786be904"
+    },
+    "home/bticino/scheduling_manager/scheduling_manager": {
+      "DT_NEEDED": [
+        "libapplogger.so.1",
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "libdw.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x2c280",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 2161128,
+      "present_as_regular_file": true,
+      "sha256": "5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62"
+    }
+  },
+  "F461": {
+    "home/bticino/alarm_manager/alarm_manager": {
+      "present_as_regular_file": false,
+      "scope": "Exact path in extracted normal image only; not whole-product function absence"
+    },
+    "home/bticino/backup_manager/backup_manager": {
+      "DT_NEEDED": [
+        "libboost_system.so.1.78.0",
+        "libboost_date_time.so.1.78.0",
+        "libapplogger.so.1",
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libglib-2.0.so.0",
+        "libutils.so.1",
+        "liblghal.so.1",
+        "libcppcore.so.0",
+        "libjsoncpp.so.25",
+        "libarchive.so.13",
+        "libssl.so.3",
+        "libcrypto.so.3",
+        "libcurl.so.4",
+        "libsqlite3.so.0",
+        "libuuid.so.1",
+        "libdw.so.1",
+        "libelf.so.1",
+        "libpthread.so.0",
+        "libz.so.1",
+        "libbz2.so.1",
+        "liblzma.so.5",
+        "libzstd.so.1",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x1b240",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 978280,
+      "present_as_regular_file": true,
+      "sha256": "1f8047a49f4aafc90f5916c3186587316175d68d250f35f17261ceded5fe5b5f"
+    },
+    "home/bticino/bin/bt_daemon": {
+      "DT_NEEDED": [
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libglib-2.0.so.0",
+        "libcrypto.so.3",
+        "libapplogger.so.1",
+        "libutils.so.1",
+        "liblgsafe.so.1",
+        "liblghal.so.1",
+        "libcommon.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x7780",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 141968,
+      "present_as_regular_file": true,
+      "sha256": "b1a3f99cb78c97cd0aa98616c8074f56c8fd34fb10d2500138ea74ed5ed54c4e"
+    },
+    "home/bticino/bin/coso": {
+      "DT_NEEDED": [
+        "libc.so.6",
+        "libglib-2.0.so.0",
+        "libgmodule-2.0.so.0",
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libgthread-2.0.so.0",
+        "libz.so.1",
+        "libxml2.so.2",
+        "libopenmsg.so.1",
+        "liblog.so.1",
+        "libutils.so.1",
+        "libcoso.so"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x3800",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 32168,
+      "present_as_regular_file": true,
+      "sha256": "2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197"
+    },
+    "home/bticino/bin/scsserver": {
+      "DT_NEEDED": [
+        "libglib-2.0.so.0",
+        "libcommon.so.1",
+        "libapplogger.so.1",
+        "libutils.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x2c00",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 39024,
+      "present_as_regular_file": true,
+      "sha256": "bcc42a6e97007eeaec5e2327dd313fa0c7b3fe03a66505ce3760e45194a45f83"
+    },
+    "home/bticino/bt_drover_mx/bt_drover_mx": {
+      "DT_NEEDED": [
+        "libjsoncpp.so.25",
+        "libcrypto.so.3",
+        "libssl.so.3",
+        "libmosquitto.so.1",
+        "libuuid.so.1",
+        "libapplogger.so.1",
+        "liblghal.so.1",
+        "liblgsafe.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x17600",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 1034592,
+      "present_as_regular_file": true,
+      "sha256": "3b5d7541133ae6fe4f7822b7c45a8dd414b96019f56c1daf62761ee6a608149c"
+    },
+    "home/bticino/bt_netatmo/bt_netatmo": {
+      "present_as_regular_file": false,
+      "scope": "Exact path in extracted normal image only; not whole-product function absence"
+    },
+    "home/bticino/bt_smart_home_manager/bt_smart_home_manager": {
+      "DT_NEEDED": [
+        "libglib-2.0.so.0",
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "liblcm.so.1",
+        "libacca.so.1",
+        "libapplogger.so.1",
+        "libutils.so.1",
+        "libjel.so.1",
+        "libjsonmsg.so.1",
+        "libopenmsg.so.1",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0xd180",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 649384,
+      "present_as_regular_file": true,
+      "sha256": "c9e76bb3be850730f53d6e63b82dd2502864555c44b85be3554e2a05372448e8"
+    },
+    "home/bticino/energy_manager/energy_manager": {
+      "present_as_regular_file": false,
+      "scope": "Exact path in extracted normal image only; not whole-product function absence"
+    },
+    "home/bticino/gateway_manager/gateway_manager": {
+      "DT_NEEDED": [
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "libcppcore.so.0",
+        "liblghal.so.1",
+        "libdw.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0xc5c0",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 190664,
+      "present_as_regular_file": true,
+      "sha256": "7e00f53a1aeabf5abd4cbf8e63fa3b53d524bbb77342dbb2173fe4604f3bfe93"
+    },
+    "home/bticino/matrix_mx/matrix_mx": {
+      "DT_NEEDED": [
+        "libglib-2.0.so.0",
+        "libjsoncpp.so.25",
+        "libcurl.so.4",
+        "libsqlite3.so.0",
+        "liblcm.so.1",
+        "libuuid.so.1",
+        "libcrypto.so.3",
+        "libacca.so.1",
+        "libapplogger.so.1",
+        "libopenmsg.so.1",
+        "libjsonmsg.so.1",
+        "libjel.so.1",
+        "libutils.so.1",
+        "liblgsafe.so.1",
+        "liblghal.so.1",
+        "libdw.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 64,
+        "flags": "0x0",
+        "interpreter": [
+          "/lib/ld-linux-aarch64.so.1"
+        ],
+        "linked_entry": "0x40d40",
+        "machine": 183,
+        "type": 3
+      },
+      "bytes": 3180736,
+      "present_as_regular_file": true,
+      "sha256": "4b50d95910061226fc531b296f4f0cfaaa951001c175e35d379987e20720ddad"
+    },
+    "home/bticino/player_manager/player_manager": {
+      "present_as_regular_file": false,
+      "scope": "Exact path in extracted normal image only; not whole-product function absence"
+    },
+    "home/bticino/scheduling_manager/scheduling_manager": {
+      "present_as_regular_file": false,
+      "scope": "Exact path in extracted normal image only; not whole-product function absence"
+    }
+  },
+  "MHS1": {
+    "home/bticino/alarm_manager/alarm_manager": {
+      "DT_NEEDED": [
+        "libpthread.so.0",
+        "libuuid.so.1",
+        "libjsoncpp.so.25",
+        "libssl.so.3",
+        "libcrypto.so.3",
+        "libboost_program_options.so.1.78.0",
+        "libboost_system.so.1.78.0",
+        "libboost_date_time.so.1.78.0",
+        "libapplogger.so.1",
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libglib-2.0.so.0",
+        "libcppcore.so.0",
+        "libjsonmsg.so.1",
+        "libutils.so.1",
+        "libxml2.so.2",
+        "liblgsafe.so.1",
+        "libdw.so.1",
+        "libelf.so.1",
+        "libz.so.1",
+        "libbz2.so.1",
+        "liblzma.so.5",
+        "libzstd.so.1",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-armhf.so.3"
+      ],
+      "ELF": {
+        "ELF_class": 32,
+        "flags": "0x5000400",
+        "interpreter": [
+          "/lib/ld-linux-armhf.so.3"
+        ],
+        "linked_entry": "0x17b85",
+        "machine": 40,
+        "type": 3
+      },
+      "bytes": 1437040,
+      "present_as_regular_file": true,
+      "sha256": "98c650f981deba683774f144770e410239e69ca13481614de246c3d155f4a1b7"
+    },
+    "home/bticino/backup_manager/backup_manager": {
+      "DT_NEEDED": [
+        "libboost_system.so.1.78.0",
+        "libboost_date_time.so.1.78.0",
+        "libapplogger.so.1",
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libglib-2.0.so.0",
+        "libutils.so.1",
+        "liblghal.so.1",
+        "libcppcore.so.0",
+        "libjsoncpp.so.25",
+        "libarchive.so.13",
+        "libssl.so.3",
+        "libcrypto.so.3",
+        "libcurl.so.4",
+        "libsqlite3.so.0",
+        "libuuid.so.1",
+        "libdw.so.1",
+        "libelf.so.1",
+        "libpthread.so.0",
+        "libz.so.1",
+        "libbz2.so.1",
+        "liblzma.so.5",
+        "libzstd.so.1",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-armhf.so.3"
+      ],
+      "ELF": {
+        "ELF_class": 32,
+        "flags": "0x5000400",
+        "interpreter": [
+          "/lib/ld-linux-armhf.so.3"
+        ],
+        "linked_entry": "0x121d9",
+        "machine": 40,
+        "type": 3
+      },
+      "bytes": 653472,
+      "present_as_regular_file": true,
+      "sha256": "10fae76eb25fe260798f47804e842b1f6ebf8d00974d2748222d98e652b559dd"
+    },
+    "home/bticino/bin/bt_daemon": {
+      "DT_NEEDED": [
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libglib-2.0.so.0",
+        "libcrypto.so.3",
+        "libapplogger.so.1",
+        "libutils.so.1",
+        "liblgsafe.so.1",
+        "liblghal.so.1",
+        "libcommon.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-armhf.so.3"
+      ],
+      "ELF": {
+        "ELF_class": 32,
+        "flags": "0x5000400",
+        "interpreter": [
+          "/lib/ld-linux-armhf.so.3"
+        ],
+        "linked_entry": "0x5545",
+        "machine": 40,
+        "type": 3
+      },
+      "bytes": 108384,
+      "present_as_regular_file": true,
+      "sha256": "b30f4b7789faaed475f8f6022e2ddb29df1da9c73d48b525fdbfee264fe89d1e"
+    },
+    "home/bticino/bin/coso": {
+      "DT_NEEDED": [
+        "libc.so.6",
+        "libglib-2.0.so.0",
+        "libgmodule-2.0.so.0",
+        "libgio-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libgthread-2.0.so.0",
+        "libz.so.1",
+        "libxml2.so.2",
+        "libopenmsg.so.1",
+        "liblog.so.1",
+        "libutils.so.1",
+        "libcoso.so",
+        "libgcc_s.so.1"
+      ],
+      "ELF": {
+        "ELF_class": 32,
+        "flags": "0x5000400",
+        "interpreter": [
+          "/lib/ld-linux-armhf.so.3"
+        ],
+        "linked_entry": "0x2951",
+        "machine": 40,
+        "type": 3
+      },
+      "bytes": 26860,
+      "present_as_regular_file": true,
+      "sha256": "f470a622df6dd32ded11d347cb198bdc2aa8878423d761066495a1607c2fb095"
+    },
+    "home/bticino/bin/scsserver": {
+      "DT_NEEDED": [
+        "libglib-2.0.so.0",
+        "libcommon.so.1",
+        "libapplogger.so.1",
+        "libutils.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-armhf.so.3"
+      ],
+      "ELF": {
+        "ELF_class": 32,
+        "flags": "0x5000400",
+        "interpreter": [
+          "/lib/ld-linux-armhf.so.3"
+        ],
+        "linked_entry": "0x2985",
+        "machine": 40,
+        "type": 3
+      },
+      "bytes": 30152,
+      "present_as_regular_file": true,
+      "sha256": "05f07eaf729afbedf54660d781c11ba05c0d24cf8099ce2064aa0c0f4ca8dc90"
+    },
+    "home/bticino/bt_drover_mx/bt_drover_mx": {
+      "DT_NEEDED": [
+        "libjsoncpp.so.25",
+        "libcrypto.so.3",
+        "libssl.so.3",
+        "libmosquitto.so.1",
+        "libuuid.so.1",
+        "libapplogger.so.1",
+        "liblghal.so.1",
+        "liblgsafe.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-armhf.so.3"
+      ],
+      "ELF": {
+        "ELF_class": 32,
+        "flags": "0x5000400",
+        "interpreter": [
+          "/lib/ld-linux-armhf.so.3"
+        ],
+        "linked_entry": "0xec19",
+        "machine": 40,
+        "type": 3
+      },
+      "bytes": 657036,
+      "present_as_regular_file": true,
+      "sha256": "2fb7f6859bb8975defc11e0954c3486abcaa97f81631d8886f7d1edc0c92a3f5"
+    },
+    "home/bticino/bt_netatmo/bt_netatmo": {
+      "DT_NEEDED": [
+        "libboost_filesystem.so.1.78.0",
+        "libpaho-mqttpp3.so.1",
+        "libpaho-mqtt3a.so.1",
+        "libglib-2.0.so.0",
+        "libssl.so.3",
+        "libcrypto.so.3",
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "libnetatmo.so",
+        "libapplogger.so.1",
+        "libutils.so.1",
+        "liblgsafe.so.1",
+        "liblghal.so.1",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-armhf.so.3"
+      ],
+      "ELF": {
+        "ELF_class": 32,
+        "flags": "0x5000400",
+        "interpreter": [
+          "/lib/ld-linux-armhf.so.3"
+        ],
+        "linked_entry": "0x193b1",
+        "machine": 40,
+        "type": 3
+      },
+      "bytes": 1821736,
+      "present_as_regular_file": true,
+      "sha256": "494afe1cc4154208b9ad6b64c4158faeff9e4fba61271b2fc6debc3658e61b47"
+    },
+    "home/bticino/bt_smart_home_manager/bt_smart_home_manager": {
+      "DT_NEEDED": [
+        "libglib-2.0.so.0",
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "liblcm.so.1",
+        "libacca.so.1",
+        "libapplogger.so.1",
+        "libutils.so.1",
+        "libjel.so.1",
+        "libjsonmsg.so.1",
+        "libopenmsg.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-armhf.so.3"
+      ],
+      "ELF": {
+        "ELF_class": 32,
+        "flags": "0x5000400",
+        "interpreter": [
+          "/lib/ld-linux-armhf.so.3"
+        ],
+        "linked_entry": "0x6d25",
+        "machine": 40,
+        "type": 3
+      },
+      "bytes": 325108,
+      "present_as_regular_file": true,
+      "sha256": "e6757ffaf4079d91254716ec6e9d0c288b43e0d1ad7914b3b44c972dbe4214a6"
+    },
+    "home/bticino/energy_manager/energy_manager": {
+      "DT_NEEDED": [
+        "liblcm.so.1",
+        "libglib-2.0.so.0",
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "libacca.so.1",
+        "libopenmsg.so.1",
+        "libutils.so.1",
+        "liblghal.so.1",
+        "libcppcore.so.0",
+        "libdw.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-armhf.so.3"
+      ],
+      "ELF": {
+        "ELF_class": 32,
+        "flags": "0x5000400",
+        "interpreter": [
+          "/lib/ld-linux-armhf.so.3"
+        ],
+        "linked_entry": "0xfef1",
+        "machine": 40,
+        "type": 3
+      },
+      "bytes": 288280,
+      "present_as_regular_file": true,
+      "sha256": "81edea2bd56b85a6244523ac4745b3b30cfc47a247c6aad7fe51d0982812748f"
+    },
+    "home/bticino/gateway_manager/gateway_manager": {
+      "DT_NEEDED": [
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "libcppcore.so.0",
+        "liblghal.so.1",
+        "libdw.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-armhf.so.3"
+      ],
+      "ELF": {
+        "ELF_class": 32,
+        "flags": "0x5000400",
+        "interpreter": [
+          "/lib/ld-linux-armhf.so.3"
+        ],
+        "linked_entry": "0x8409",
+        "machine": 40,
+        "type": 3
+      },
+      "bytes": 120320,
+      "present_as_regular_file": true,
+      "sha256": "c55f525ad9b6587a72cbc2a7abbfdda568ad30c45ea1d0e2c170700abe264250"
+    },
+    "home/bticino/matrix_mx/matrix_mx": {
+      "DT_NEEDED": [
+        "libglib-2.0.so.0",
+        "libjsoncpp.so.25",
+        "libcurl.so.4",
+        "libsqlite3.so.0",
+        "liblcm.so.1",
+        "libuuid.so.1",
+        "libcrypto.so.3",
+        "libacca.so.1",
+        "libapplogger.so.1",
+        "libopenmsg.so.1",
+        "libjsonmsg.so.1",
+        "libjel.so.1",
+        "libutils.so.1",
+        "liblgsafe.so.1",
+        "liblghal.so.1",
+        "libdw.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-armhf.so.3"
+      ],
+      "ELF": {
+        "ELF_class": 32,
+        "flags": "0x5000400",
+        "interpreter": [
+          "/lib/ld-linux-armhf.so.3"
+        ],
+        "linked_entry": "0x29f11",
+        "machine": 40,
+        "type": 3
+      },
+      "bytes": 2094580,
+      "present_as_regular_file": true,
+      "sha256": "96348136c2a0ebe859c689eb6246e3889e5154fdb63ffd5f3fc76975ac596717"
+    },
+    "home/bticino/player_manager/player_manager": {
+      "DT_NEEDED": [
+        "libapplogger.so.1",
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "libupnp.so.17",
+        "libixml.so.11",
+        "libdw.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-armhf.so.3"
+      ],
+      "ELF": {
+        "ELF_class": 32,
+        "flags": "0x5000400",
+        "interpreter": [
+          "/lib/ld-linux-armhf.so.3"
+        ],
+        "linked_entry": "0x118b9",
+        "machine": 40,
+        "type": 3
+      },
+      "bytes": 874672,
+      "present_as_regular_file": true,
+      "sha256": "960838e5f53a972172ff54df7ddeb5eb5f58b06952459c2b2b544bcca03ccf1d"
+    },
+    "home/bticino/scheduling_manager/scheduling_manager": {
+      "DT_NEEDED": [
+        "libapplogger.so.1",
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "libdw.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-armhf.so.3"
+      ],
+      "ELF": {
+        "ELF_class": 32,
+        "flags": "0x5000400",
+        "interpreter": [
+          "/lib/ld-linux-armhf.so.3"
+        ],
+        "linked_entry": "0x17229",
+        "machine": 40,
+        "type": 3
+      },
+      "bytes": 1406680,
+      "present_as_regular_file": true,
+      "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26"
+    }
+  }
+}

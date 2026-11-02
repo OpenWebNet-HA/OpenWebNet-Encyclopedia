@@ -1,0 +1,7 @@
+# Selected numeric-trigger value contract
+
+Fresh original method/ABI evidence locates the actual BNLD TRIGGER serializer at0x282e4, independent of the condition serializer. Its status−1 arm always requests signed level44, with no local zero/sentinel omission. Own trigger-base fresh-value requests contribute id/type/enabled/operator but no status. The same original JSON destination then reaches constructor0x2cc00's absent-status/asInt route.
+
+Under ordinary valid fresh-JSON/signed-int/member/assignment/asInt/copy/provider behavior, the selected structural path retains the constructor-reachable numeric threshold/status pair. It does not prove universal member-presence preservation, arbitrary accepted numeric grammar, full JSON/runtime, active configuration, physical units or natural event delivery. The previous numeric caller/capture/lifetime constraints remain explicit.
+
+This is source-only work with0 new original visits, guest/provider execution, replay or semantic fixtures. Current MHS ledger stays1 corpus/eight entries/340 original code-hook visits/0 C primitives/12 redirects/eight EXIT/0 stops/360 hooks; four setup data relocations separate. Earlier F454/MH202 ledgers and historical static-zero scopes remain unchanged. Final handoff remains closure-ready; safe final saving takes priority as the included window nears exhaustion.

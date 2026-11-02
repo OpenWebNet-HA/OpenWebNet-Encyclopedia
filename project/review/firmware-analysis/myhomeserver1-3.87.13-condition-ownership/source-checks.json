@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "area": "teardown",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "9b5f4c",
+          "wall_time_seconds": 0.07897108,
+          "exit_code": 0,
+          "original_token_count": 28,
+          "output": "{\"check\": true, \"outputs\": 12, \"code_spans\": 8, \"data_spans\": 3, \"byte_guards\": 32, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "area": "distinct-condition",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "9d8edd",
+          "wall_time_seconds": 0.116851862,
+          "exit_code": 0,
+          "original_token_count": 14,
+          "output": "{\"check\": true, \"outputs\": 19, \"original_execution\": 0}\n"
+        }
+      }
+    }
+  ]
+}

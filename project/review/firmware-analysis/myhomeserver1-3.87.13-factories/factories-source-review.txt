@@ -1,0 +1,27 @@
+# Independent selected action-factory source review
+
+PASS for factories/REPORT.md and its bounded static source claims. No correction requested. This reviewer did not author the report or collector. No original instruction, JsonCpp/provider, scene, timer, SQL, transport, target process or physical operation was executed. Author files remain unchanged.
+
+Reproduced collect_factories_v1.py --check: 22 outputs, 11 original spans, seven PIC strings, three factory tables, three selected branches, six direct calls, 13 byte guards and four direct inputs. Independently mapped the original ELF32 PT_LOAD segments; checked all 11 raw span hashes, 13 instruction ranges, seven PIC computations/literal bytes, six Thumb BL targets, three GOT/relocation/table chains and all table rows. Independently checked the three selected TBH entry calculations and two vtable/typeinfo chains against original file bytes plus readelf relocation records. All 23 indexed first copies and separate actual report copy match their source/output bytes.
+
+Source and control review:
+
+- The three factory prefixes read local JSON element type strings, compare exact lengths and memcmp bytes against separate local tables. Trigger/condition index decrement before TBH is explicit at 0x2eab4/0x2fb02; action uses its own direct index. Names/index equality is not OPEN or product support equivalence.
+- Action index 10 SLEEP maps through 0x30d8c to 0x31456; index 11 SCENARIO maps through 0x30d8e to 0x31406. Their derived fields are independently selected seconds/sceneId, converted with asUInt and stored at new object+40. Both request allocation size 44. TIME index 7 maps to 0x30e58 iterator advancement, so table declaration alone is not construction support. Unmatched strings and empty-string scanning remain local normal-flow conclusions, not a universal rejection policy.
+- Base constructor 0x2af90 builds id string at +4, initializes local type +28 to 0 and replaces it on a matched action-table row, and stores converted delay/duration at +32/+36. Copy helper 0x2e1ac constructs the destination string and copies +28/+32/+36. The source does not execute or prove numeric input/conversion acceptance, units, clock scheduling or target-scene lookup.
+- Both selected branches derive scene-owner+24 and pass an address of the stack+80 pointer slot to 0x30c8c. On available capacity, the actual helper stores the pointer at old end, zeroes the source slot and advances end. Capacity-full tail 0x30bc4 is a separate unexamined delegate. Common cleanup only requests local-pointer destruction when nonzero. This is the stated conditional ownership transfer, not complete lifetime, reallocation or exception-safety proof.
+- Original RTTI names 11SleepAction and 14ScenarioAction resolve through the selected vtable headers/address points. Their first function pointers establish class identity; they are not established execution entries. Fresh class offsets are not transferred from runner trigger elements or prior firmware.
+- Packaged JsonCpp definitions and scheduler declarations are candidate provider evidence. Runtime interposition, conversions, allocation success, scene assets, full grammar/validation, runner invocation, action effects and physical behavior remain open.
+
+Exact reviewed SHA-256 pins, relative to factories/:
+
+| File | SHA-256 |
+| --- | --- |
+| REPORT.md | 72009ae30fcb92becd998cb75f9fbef0de9d107f53cca4fca18f068c2d95e544 |
+| collect_factories_v1.py | e2be14b5a977ffd12a02b251d1211de8f72b6c715451e28100d2fc3b49bae504 |
+| OUTPUT_MANIFEST.v1.json | d90a9df453acf0a461505977026c85cd7056ab29eb18c471a8c4158a8e1316fa |
+| VTABLE_IDENTITIES.v1.json | 70573186162f607b006efff6d23194daf19b2bff62a3020d9d03a4c09c8e2667 |
+| LOCAL_ENUM_TABLES.v1.json | e70a44fd256c25708ab3eb191409e8b5c2febb1def52a5905f963bcdc53a94e5 |
+| first-candidate/SNAPSHOT.json | 51292395b06380d8270a106fcaedf485efc4cae89f38199785727f4082d7fa36 |
+
+Original scheduler SHA-256: 7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26. Reported missing-python-alias exploration is scoped as pre-generation history; this review certifies the current exact copies and source, not an independent replay of unavailable console history. This new ASCII review was created exclusively and its exact bytes announced immediately; no earlier review candidate was overwritten.

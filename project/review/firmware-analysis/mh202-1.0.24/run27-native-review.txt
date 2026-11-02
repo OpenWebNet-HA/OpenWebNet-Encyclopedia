@@ -1,0 +1,47 @@
+# Independent run27 WHO25 native source/isolation and saved-result audit
+
+**PASS for the corrected REPORT.v2.md and bounded original-code/private-model corpus, with the v1 identity-table error explicitly retained.** This reviewer performs **no CPU/native replay**. I run only unchanged collect_join_v1.py --check (static original-byte/saved-result audit), inspect the complete168-line harness/preflight/results/source spans and parent records, and independently check hashes/counts/object/write relationships. New reviewer original instruction visits, primitive hooks, target operations/syscalls and corpora are0. Only this NEW review file is written; all author/version/history artifacts remain unchanged.
+
+## Exact reviewed pins and identity correction
+
+| Artifact under who25/run27-native/ | SHA256 |
+|---|---|
+|`REPORT.md`|`58dc06a82a9a21a50ad60e3b9b5a513d120652c74945d38c924cfad7fb9436e3`|
+|`REPORT.v2.md`|`437cb8bb3777594d10b27bbc76a10a7b944431b1e918f28db51e89eaae50416a`|
+|`SOURCE_IDENTITY_REFINEMENT.md`|`cceba8f83a6b808192c848b1a5e131733970ce323dd603328d075a0ad12e4ccd`|
+|`emulate_query_stm_v1.py`|`a01175bf586005b229cbf255ebe6f2a2fed33ce4d1eb73d1e0e8215c54138b4a`|
+|`collect_join_v1.py`|`3c7a08cab78ad49aee94a8fae31f8425e078a58986f5c59e33270f521ff93f3a`|
+|`joined-results.json`|`3217b91dadba033cd3320a7c7b7412adf0ce89356b91e59bea41a5b4e6a67404`|
+|`output-manifest.json`|`3683717151b887c70e80eda7557082db9ac1edb04a7cb3b46564edf87172f071`|
+
+The first REPORT.md table **was wrong** for the path libplug_trasv_cmd_stm.so: it printed multimedia hash8b9f393f...69128. I independently read both originals through ImageVFS: actual WHO25 STM is **8e656523b5bb4c22196203c7e801e631a3481b529982baa1a9f4a9ca13febe2d**;8b9f393f... is the separate multimedia STM. REPORT.v2.md equals original REPORT.md with **exactly that one hash substitution and no other byte changes**. The refinement accurately records the parent-caught error, separate new report and unchanged harness/native/source/count evidence. I do not certify the v1 table as correct. Its unchanged historical manifest/static check still pins v1, while this review explicitly pins v2/refinement for promotion; no silent repointing occurred.
+
+## Reproduction and independent saved-evidence checks
+
+The unchanged static collector passes **17 outputs including manifest,11 original spans,12 inputs and3 saved corpus entries**, collector CPU execution0. I independently verify all12 source/research input hashes/sizes and11 raw original span hashes with PT_LOAD mapping. I verify the saved380-PC trace fits the declared original ranges, primitive/redirect array lengths25/4, three per-entry identities and object transitions, exact original image-write ranges, all deterministic manifest members, the preflight-first exact source/PREFLIGHT copies and both initial-native-v1/initial-complete-v1 hash indices/current byte equality. All41 digest-bearing tool-package files still match their saved hashes/sizes; no Unicorn import or native replay is needed for those reads.
+
+Canonical accounting is exact: core316original+20primitive+3redirect+1EXIT=340hooks; initializer25+1+1+1=28; application39+4+0+1=44. Total **380original+25modeled primitives+4definition redirects+3EXIT=412hooks**, zero stops,3 top-level entries. Nested parser/constructor/new_id/reset calls are included original visits, not extra entries. Six data-relocation/binding writes and one synthetic counter seed are separate setup, not instruction/callback counts. Reused MH202 core/parser visits are fully counted and not represented as unique/new code coverage.
+
+## Real object flow versus explicit manual fixtures
+
+The harness enters original core0x2340 with supplied synthetic `*#25*312##`, NULL source record/output list and seeded original counter. It redirects only declared PLT definitions into actual parser/new_open_msg/new_id code; central grammar, classifier and field stores are not models. Actual original GLib ASCII table bytes/pointer are relocated data, not fabricated classification results. Actual saved pointer-object fields are WHO25/WHERE312/kind2 with WHAT/DIM NULL. Original new_id reads/increments the synthetic counter and writes the returned old word to Q.ID60; this is original-code derivation from a **fixture seed**, not a live ID.
+
+The next two entries are deliberate host/manual handoffs, not original registry scheduling. Original WHO25 initializer allocates its own24-byte private object and calls actual reset; saved private words are descriptor/state0/ID−1/source0/opaquecontext/NULLcallback. No private fields are subsequently reseeded. The same actual core-produced Q and parsed pointer are passed to original application. Only Q offsets4/8 change to1; all48 parsed bytes remain unchanged. Application copies actual Q.ID60, stores state1/timer return and appends the same Q to a separate modeled list. Two lists sharing Q do not prove natural multi-owner lifetime or safe eventual destruction.
+
+The context0x61000000 and timer0x60000000 are **unmapped opaque values**. Timer primitives assert expected interval1000, callback pointer to original0x173c, exact actual private userdata and destroy-notifierNULL, then record requests only. Attach returns synthetic1. Private publication callback remainsNULL, and neither timeout/field callback, real GSource/context, scheduling, clock, destroy/refcount lifecycle nor publication executes. Binding these unused callback slots is setup, not executing them. No interval unit, elapsed firing, physical outcome or natural parser→registry→STM transaction is established.
+
+## Source and containment audit
+
+The complete harness permits only explicit original PC ranges and declared redirects/primitives. Unknown PC/import, Thumb/unaligned instruction state, IRQ/SVC and invalid/protected access abort. Original image code is RX, ordinary image data RO; counter/descriptor pages are RW without execution, with native-write guards restricted to counter0xbcb4..bcb8 and descriptor56's exact4-byte slot. Saved original writes match those two ranges. Setup callback/GOT/data relocations occur before execution. Stack/fixture/heap mappings are RW without execution, while EXIT is a separate stop boundary.
+
+Every native/model heap access is checked against a recorded allocation and freed state. The ordinary allocator returns declared48/64/24 zeroed objects and private12-byte GList nodes; the model does not replace central functions. Strings/allocations cap4096bytes, each region/heap is64KiB, and each entry caps100000hooks/2hostseconds. Stack/fixture checks are region bounds, **not general stack-object/memory-safety proof**. GLib reads are restricted to the actual pointer/table data ranges; no original GLib code executes in the saved PC trace. No target syscall/process/OS/network/device call is forwarded to the host.
+
+The modeled C/GLib callbacks are narrow successful ordinary contracts: selected WHO25 decimal conversion, bounded strings, nonfatal logging record, single-node empty-list append, zero allocation and fixture-string free/lifetime ledger. They do not prove general allocation/list/concurrency/ABI safety or parser coverage. The timeout API implementations are expressly opaque, supported separately by static original GLib source showing real objects that are not emulated. Unmodeled branches remain traps/premises rather than being forced through.
+
+## Preflight, replay and forensic limits
+
+Parent PARENT_NATIVE_PREFLIGHT.json pins and approves exact harnessa01175bf... before canonical execution and records41 tool RECORD pins. Parent-native-replay.json separately records a successful native/static byte replay and unchanged63 tool paths/sizes/mtimes/hashes. I inspect those records; **I did not reproduce their CPU run or independently make a before/after tool-tree replay claim**. My current independent41-file checks are distinct. No original-execution failure artifact is introduced by this review, and author/preflight history records no canonical developmental failure or guard relaxation.
+
+Successful native --check compares bytes without writes. The harness intentionally writes NEW first-failure JSON/source copies if an original-entry/guard/join assertion within its protected execution block fails; that exception path is not an always-read-only guarantee for every replay. The static collector check is read-only and never invokes CPU code. Final comparison assertions outside that execution block are not expanded into a promise that every possible program failure produces forensics. The preserved first snapshots and actual failure policy are reported honestly rather than hiding prefix runs or silently changing limits.
+
+This PASS applies to source containment, current saved evidence and corrected identity/report scope. It does not prove natural outer eligibility, active loader/registry/context, complete target memory/lifetime behavior, timeout publication with a live callback, raw gateway admission, actual I/O or physical state. The v1 report typo is corrected by separate documentation only; no new native corpus/count or source/result behavior change is claimed.

@@ -1,0 +1,17 @@
+{
+  "scope": "Selected update-manifest staging and daemon log-persistence request contracts; catalogue profile unchanged",
+  "patches": [
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "snapshot": "f460-f461-deep-analysis.md",
+      "before_bytes": 19182,
+      "before_sha256": "ece79b9fbb0ee0c08519058f28ce746817c9e910ddc5c64379ae4e0690a11dc7",
+      "candidate": "REFERENCE_DRAFT.md",
+      "mode": "replace-reviewed-candidate",
+      "after_bytes": 22111,
+      "after_sha256": "9212657411f70769273720fc0a2421362bb6ae93556be27c0416fe756c9f4f9b"
+    }
+  ],
+  "main_reproduction": "REFERENCE_DRAFT_METHOD.json",
+  "unchanged_profile_sha256": "bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba"
+}

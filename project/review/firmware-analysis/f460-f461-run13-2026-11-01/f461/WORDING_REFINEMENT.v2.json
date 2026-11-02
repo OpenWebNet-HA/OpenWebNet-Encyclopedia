@@ -1,0 +1,15 @@
+{
+  "authoritative_report": "REPORT.v2.md",
+  "old_report_sha256": "f24311c51db4c9290b8586ce4841a69cbc016defa69bf628f9ba00c3fc5e1ce2",
+  "new_report_sha256": "2b36473953ba35ff6e06d418a8a78d83eddb435d29ee48258748371f2980816c",
+  "changes": [
+    {
+      "old": "Registration/parser/transport bodies are not expanded to force provenance.",
+      "new": "Beyond the selected registration continuation, parser/transport bodies are not expanded."
+    }
+  ],
+  "source_code_results_counts_unchanged": true,
+  "old_report_collector_first_candidate_unchanged": true,
+  "collector_check_scope": "v1 collector intentionally remains bound to original REPORT.md",
+  "parent_pre_edit_snapshot": "work/f460-f461-comparison/2026-11-01-run13/integration/f461-before-report-v2/INDEX.json"
+}

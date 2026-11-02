@@ -1,0 +1,192 @@
+{
+  "ELF": {
+    "PT_LOAD": [
+      {
+        "VA": "0x8000",
+        "file_bytes": 527424,
+        "flags": 5,
+        "memory_bytes": 527424,
+        "offset": 0
+      },
+      {
+        "VA": "0x91000",
+        "file_bytes": 7116,
+        "flags": 6,
+        "memory_bytes": 6440268,
+        "offset": 528384
+      }
+    ],
+    "byte_order": "little",
+    "class": 32,
+    "flags": "0x5000002",
+    "machine": 40,
+    "type": 2
+  },
+  "calls": [
+    {
+      "VA": "0xa61c",
+      "target": "0x9e88"
+    },
+    {
+      "VA": "0xa640",
+      "target": "0xfe1c"
+    },
+    {
+      "VA": "0xa64c",
+      "target": "0xfcb4"
+    },
+    {
+      "VA": "0xfd94",
+      "target": "0xa140"
+    },
+    {
+      "VA": "0xfdec",
+      "target": "0x9fb4"
+    }
+  ],
+  "execution": {
+    "SQL_queries": 0,
+    "decryption_trials": 0,
+    "firmware_native_vendor_provider": 0,
+    "models_fixtures": 0,
+    "target_OS_network_bus": 0
+  },
+  "global_handle_output_slot": "0xc1f8c",
+  "guards": [
+    {
+      "VA": "0xa618",
+      "word": "e59f0880"
+    },
+    {
+      "VA": "0xa61c",
+      "word": "ebfffe19"
+    },
+    {
+      "VA": "0xa620",
+      "word": "e1a03000"
+    },
+    {
+      "VA": "0xa62c",
+      "word": "e2033cff"
+    },
+    {
+      "VA": "0xa630",
+      "word": "e1a03443"
+    },
+    {
+      "VA": "0xa640",
+      "word": "eb0015f5"
+    },
+    {
+      "VA": "0xa644",
+      "word": "e59f385c"
+    },
+    {
+      "VA": "0xa648",
+      "word": "e1a00003"
+    },
+    {
+      "VA": "0xa64c",
+      "word": "eb001598"
+    },
+    {
+      "VA": "0xa654",
+      "word": "e3530000"
+    },
+    {
+      "VA": "0xa668",
+      "word": "0a000005"
+    },
+    {
+      "VA": "0xfcb4",
+      "word": "e92d4800"
+    },
+    {
+      "VA": "0xfcb8",
+      "word": "e28db004"
+    },
+    {
+      "VA": "0xfcc0",
+      "word": "e50b0010"
+    },
+    {
+      "VA": "0xfd8c",
+      "word": "e51b0010"
+    },
+    {
+      "VA": "0xfd90",
+      "word": "e59f1078"
+    },
+    {
+      "VA": "0xfd94",
+      "word": "ebffe8e9"
+    },
+    {
+      "VA": "0xfd9c",
+      "word": "e3530000"
+    },
+    {
+      "VA": "0xfdb0",
+      "word": "0a000005"
+    },
+    {
+      "VA": "0xfdc0",
+      "word": "e3e03000"
+    },
+    {
+      "VA": "0xfdcc",
+      "word": "e59f303c"
+    },
+    {
+      "VA": "0xfdd0",
+      "word": "e5932000"
+    },
+    {
+      "VA": "0xfde0",
+      "word": "e59f1030"
+    },
+    {
+      "VA": "0xfdec",
+      "word": "ebffe870"
+    },
+    {
+      "VA": "0xfdf0",
+      "word": "e3a03000"
+    },
+    {
+      "VA": "0xfdf8",
+      "word": "e51b3014"
+    },
+    {
+      "VA": "0xfdfc",
+      "word": "e1a00003"
+    },
+    {
+      "VA": "0xfe04",
+      "word": "e8bd8800"
+    }
+  ],
+  "helper_entry": "0xfcb4",
+  "limits": "Selected local block reached, valid runtime mappings/stack/callee ABI and ordinary binding/normal returns are premises. No actual system/copy/SQLite/provider call executes.",
+  "safe_literals": [
+    {
+      "VA": "0x7a444",
+      "bytes": 69,
+      "file_offset": "0x72444",
+      "sha256": "c34de88d3fdb2b41e08e602162df8fe9fc96d7e0a3cbef80355df628eb3ad9a3",
+      "text": "cp /home/bticino/cfg/extra/50/master.sqlite /var/tmp/db/master.sqlite"
+    },
+    {
+      "VA": "0x7a4ac",
+      "bytes": 25,
+      "file_offset": "0x724ac",
+      "sha256": "5277bd347687b38bb93518b69594e9b05e8e57b21a28982a398646b7caadfc47",
+      "text": "/var/tmp/db/master.sqlite"
+    }
+  ],
+  "source": {
+    "bytes": 539612,
+    "path": "work/f450-firmware/2.0.10/analysis/rootfs/home/bticino/bin/ebacgw",
+    "sha256": "b99d2566662f692d949f24f4d0f9c2c9eb5c00f24e90b319a183462155c63ddd"
+  }
+}

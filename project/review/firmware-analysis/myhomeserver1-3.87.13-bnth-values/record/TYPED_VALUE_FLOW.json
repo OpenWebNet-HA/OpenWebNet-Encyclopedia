@@ -1,0 +1,53 @@
+{
+  "consumer": {
+    "cached_value": "103d20or10489c record32\u2192D9",
+    "lookup": "prior10e3d8foundpairnode40/44",
+    "not_established": [
+      "freshness",
+      "naturalrecordsource",
+      "physicalunits/range",
+      "allreturnedrecordtypes"
+    ],
+    "registry": "same167368",
+    "required": [
+      "matchingID",
+      "actualsuitableretainedtypedrecord",
+      "normalproviders/tree/control/lifetime",
+      "predicateguardconditions"
+    ],
+    "selected_BNTH_compare": "prior own160vsD9 EQpath"
+  },
+  "local_JSON": {
+    "ID": "params.id\u2192FPstring",
+    "absent": "5517c D9allzerobits\u2192construction",
+    "container": "params",
+    "grammar/filter/provider": "unexecutedpremises; noacceptedrawinputclaim",
+    "key": "setpoint",
+    "present": "asDouble53bb2\u2192D9"
+  },
+  "method_counts": {
+    "closed_provider_bodies_inspected": 0,
+    "original_execution": 0,
+    "semantic_fixtures": 0,
+    "target_calls": 0
+  },
+  "producer": {
+    "RTTI": "20ItemStatusThermostat",
+    "allocation_bytes": 88,
+    "call": "53c8e10eb10(registry167368,FPid,pair)",
+    "control": "allocationbase",
+    "other_value": "D8\u2192allocation64=record48,notselected",
+    "pair": "SP296=(record,control)",
+    "record": "allocation+16",
+    "record_discriminator": 3,
+    "selected_value_store": "53c7c D9\u2192allocation48=record32"
+  },
+  "stored_value": {
+    "boundaries": "allotherpolicy/return/error/provider/locking/lifetime notclosed",
+    "changed_double_guard": "10f0e0VCMP;NE\u219210edda",
+    "copy": "10edfcD17\u2192old32",
+    "existing": "matchingdiscriminator3\u219210ed46",
+    "newnode": "normalgenericinstallpair\u2192node40/44",
+    "read": "incoming32\u2192D17,old32\u2192D19"
+  }
+}

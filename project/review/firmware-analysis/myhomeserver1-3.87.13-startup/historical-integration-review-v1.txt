@@ -1,0 +1,42 @@
+# Startup and scene-registry integration review
+
+PASS for current source-to-summary documentary consistency. No correction requested. This review covers the new startup reference, one added TIME continuation paragraph, current capsule README and three local summary documents. Startup is source-aware from this reviewer's independent startup-source-review.md; registry is an independent documentary comparison with the author report, saved source ledger and boot agent's independent registry-source-review.md, not a new full raw-source audit or native replay.
+
+## Source and summary consistency
+
+- Original entry/main/GOT identification, relative settings path, zero-settings diagnostic continuation and supplied service flag1 are accurately summarized. The flag closes a particular constructor thread-request premise under ordinary delegate returns; no page promotes it to actual boot, successful thread, running service or readiness.
+- Main's C=SP160 container and T=112-byte service allocation+16 remain distinct. Loader and initializer stack offsets are explicitly different frames. Loader r1/r2 -> constructor r3/r2 -> initializer r2/r1 is preserved, allowing the SCENARIO captured context to be C while TIME registration uses T. The per-file scene's160-byte allocation+12, compiled trigger aggregate and service inner offset are not substituted for one another.
+- Registry node key+16/value+20/+24 and the selected current-key conversion are correctly connected with the same C pointer, rather than equal names/numbers. Category2 can intervene between conversion and insertion; its local guard/allocator is not a public scene-ID domain or universal unmodified JSON-ID promise.
+- The selected equal-key wrapper returns0 and bypasses replacement after construction and possible trigger registration. Summaries explicitly avoid the stronger no-side-effects, atomic-load or global duplicate-policy claims. The category/allocation/file-rewrite/provider paths and complete first/second-tree usage remain open.
+- Source order places the service thread request before file loading and constructor/trigger registration before map insertion. It establishes neither an observed race nor a readiness/barrier guarantee, target availability, actual registry population, live handles or successful nested launch. Successful providers, actual configured assets/state, lifetime/unwind/concurrency, timing and physical outcomes remain open.
+- New reproduction counts are20startup+24registry=44 deterministic outputs, with four startup host branch examples and no scene/tree/project fixtures. Original/native/API/parser/thread/service/transport/physical execution remains0; historical firmware ledgers and wider Device/source gates are not reclassified.
+
+## Exact identity, edits and links
+
+Verified all six frozen snapshots against current exact document sizes/hashes. Verified all54 SOURCE_EXPORTS source/published pairs, their sizes and hashes. Checked the original pre-edit TIME page snapshot and confirmed its only change is the exact added continuation paragraph; the older full reference was not re-audited or rewritten. Parent source-check record is an actual saved pair of checks; this review does not relabel parent reproduction as fresh reviewer execution.
+
+All21 currently existing local Markdown links resolve; there are no fragment links in this reviewed set. The capsule's integration-review.txt and validation.json are explicitly pending actual mechanical assembly. This review certifies neither their future bytes nor final strict ESG/identity results. Parent must create actual review/validation files and run strict final checks without placeholder or exemptions. References to local FINAL_CHECKS.json are future completion requirements, not a passed result asserted by this review.
+
+Current reviewed document pins:
+
+| Document | SHA-256 |
+| --- | --- |
+| OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-startup.md | 7c290aac300926e51dcdf1c36e0a25aa31a310ee7edc2e88bba071cf62e22727 |
+| OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-time-scenarios.md | fe129d97448d6e09bffe82c6b536bb252890f306580c7b8224690c330a07aefa |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-startup/README.md | 969595314791ea2933d21d62d2b9a3f52cc01514d9c2740199008471383f5c4b |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/SYNTHESIS.md | 429772ca74b97fd11e33418c32e72c1f599a5af3184e377774e605168206fa5d |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/COVERAGE.md | 1667e191073dedc1bdebaa0deac6edb095587b506b395253ccb9eba7b2cd02b6 |
+| work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/RANKED_REMAINING_QUESTIONS.md | 452cad786543a6474cb0fddd05d54d31a7059115ac95fbb0e209b31ee28fa92b |
+
+Additional exact pins:
+
+| Record | SHA-256 |
+| --- | --- |
+| integration/review-candidate/INDEX.json | 68e329767e2cf8e005bb02bd7646f6732ab20cbce44bb25beca71bd2d5755010 |
+| capsule SOURCE_EXPORTS.json | b1ef4cea80194a8b432aa84d85e383ff123ee5bf59d18aacd3c87487ecf33c4f |
+| capsule source-checks.json | 98c83ea16a08799608fe853f569db6fdece3f7621c74eeda24a35a93ec793605 |
+| integration/pre-edit/INDEX.json | 1bc8e11b6720ebc523fbd1a381a9faaf9cdf1e1415d011fa2fe20c61f11d24f2 |
+| reviews/startup-source-review.md | 9bad15fa5c1c88c112e2f7197331b16cf9ed2be4d45f980b9277e1c171837916 |
+| reviews/registry-source-review.md | b0674402abc5e54af6a3fb0bf1e67b43e2341f84d7e382955378645078054447 |
+
+No source, author, prior dossier or repository document was edited by this reviewer. This new ASCII review is exclusively created with an immediate exact first-review copy and index computed before opening it, then announced with its SHA-256. No earlier candidate was overwritten.

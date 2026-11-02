@@ -1,0 +1,145 @@
+{
+  "atexit_request": {
+    "VA": "0x154a4",
+    "r0_object": "0x1677b8",
+    "r1_GOT_slot": "0x166858",
+    "r1_stored_Thumb": "0xcdaf5",
+    "r2_dso": "0x167004",
+    "wrapper_code": "0xcdaf4",
+    "wrapper_request": "condition_variableD1@plt at0xcdaf8"
+  },
+  "candidate_provider_range": {
+    "boundary": "Source request only; no effective binding/provider/kernel state or reset from destructor name.",
+    "constructor": "0x97530\u2192memset(receiver,0,48)",
+    "destructor": "0x97540\u2192pthread_cond_destroy(receiver); returns receiver"
+  },
+  "domain": {
+    "CV_offset": 0,
+    "base": "0x1677b8",
+    "file_storage": "SHT_NOBITS; not a packaged mutable-state snapshot",
+    "flag_VA": "0x167800",
+    "flag_offset": 72,
+    "mutex_offset": 48,
+    "section": ".bss",
+    "section_VA": "0x1670f8",
+    "section_bytes": 3892
+  },
+  "guards": [
+    {
+      "VA": "0x15484",
+      "bytes": "0023"
+    },
+    {
+      "VA": "0x1548e",
+      "bytes": "84f84830"
+    },
+    {
+      "VA": "0xcd702",
+      "bytes": "0123"
+    },
+    {
+      "VA": "0xcd706",
+      "bytes": "84f84830"
+    },
+    {
+      "VA": "0xcdaf4",
+      "bytes": "10b5"
+    },
+    {
+      "VA": "0xcdaf8",
+      "bytes": "43f71eee"
+    }
+  ],
+  "init_array": {
+    "VA": "0x15fb1c",
+    "count": 66,
+    "pointer": "0x15475",
+    "selected_index": 28
+  },
+  "known_domain_PIC": [
+    {
+      "ADD_PC": "0x1547a",
+      "pool": "0x154a8",
+      "target": "0x1677b8"
+    },
+    {
+      "ADD_PC": "0xcd5e0",
+      "pool": "0xcd6e0",
+      "target": "0x1677b8"
+    },
+    {
+      "ADD_PC": "0xcd6b0",
+      "pool": "0xcd6ec",
+      "target": "0x1677b8"
+    },
+    {
+      "ADD_PC": "0xcd6f4",
+      "pool": "0xcd71c",
+      "target": "0x1677b8"
+    },
+    {
+      "ADD_PC": "0xcd73c",
+      "pool": "0xcd838",
+      "target": "0x1677b8"
+    },
+    {
+      "ADD_PC": "0xcd80c",
+      "pool": "0xcd844",
+      "target": "0x1677b8"
+    }
+  ],
+  "selected_relocations": [
+    "00166858  00000017 R_ARM_RELATIVE",
+    "00165df0  00013f16 R_ARM_JUMP_SLOT        00000000   _ZNSt18condition_variableD1Ev@GLIBCXX_3.4.11"
+  ],
+  "spans": [
+    {
+      "end_VA_exclusive": "0x154b8",
+      "file_offset": "0x15474",
+      "name": "shared-domain-initializer",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "2e3bd59f9931a0d5ea003f42432d34da3cbc21413e854f17b6cdcc6113e53b17",
+      "start_VA": "0x15474"
+    },
+    {
+      "end_VA_exclusive": "0xcdb00",
+      "file_offset": "0xcdaf4",
+      "name": "shared-domain-exit-wrapper",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "156fa2284069ac69054f154bc56478def79c8fd321a1b9507bf06760ed9335a3",
+      "start_VA": "0xcdaf4"
+    },
+    {
+      "end_VA_exclusive": "0xcd720",
+      "file_offset": "0xcd6f0",
+      "name": "shared-stop-request",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "f3699dc56d42e3037e02e8bb4844c1c5c80497e2b47ca2bcb2e54a7d1291cbe2",
+      "start_VA": "0xcd6f0"
+    },
+    {
+      "end_VA_exclusive": "0xcd6f0",
+      "file_offset": "0xcd5c4",
+      "name": "delay-worker-aliases-and-flag",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "cb50521dbc9ce2310c06775cc4bf2b38ff4577d1274140b15f0a3cd2f78ba2b2",
+      "start_VA": "0xcd5c4"
+    },
+    {
+      "end_VA_exclusive": "0xcd848",
+      "file_offset": "0xcd720",
+      "name": "duration-worker-aliases-and-flag",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "70d2e1fb7ba10550d0f15aa7c309cb783ee90c4b9dd49c3cc8042d6eb68e4e6b",
+      "start_VA": "0xcd720"
+    },
+    {
+      "end_VA_exclusive": "0x9754c",
+      "file_offset": "0x97530",
+      "name": "candidate-CV-constructor-and-destructor",
+      "path": "/usr/lib/libstdc++.so.6.0.29",
+      "raw_sha256": "fc732fe0ac8e72006bcdabef68093ac220c241d56500a82372fde20aa386ff1d",
+      "start_VA": "0x97530"
+    }
+  ]
+}

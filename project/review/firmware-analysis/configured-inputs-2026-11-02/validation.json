@@ -1,0 +1,194 @@
+{
+  "status": "PASS",
+  "scope": "New finite configured-input pass: exact admission/source/current-v2/firstcopy/review/history identities only. No commissioned asset, complete schema/trace, original execution or full Device/source/runtime approval.",
+  "packets": [
+    {
+      "role": "asset-admission",
+      "root": "work/configured-scene-module-investigation/2026-11-02/admission/mhs",
+      "collector": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/admission/mhs/collect_admission_v1.py",
+        "bytes": 9836,
+        "sha256": "5d24915043fe124967bd4ec39d866eef516f50d53c8fff6d691822d3b309f9a5"
+      },
+      "current_report": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/admission/mhs/REPORT.md",
+        "bytes": 3500,
+        "sha256": "191e7c46fc321fcad96850d04022f12fbdda6fa462aead336536669e2dabd777"
+      },
+      "canonical_report": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/admission/mhs/REPORT.md",
+        "bytes": 3500,
+        "sha256": "191e7c46fc321fcad96850d04022f12fbdda6fa462aead336536669e2dabd777"
+      },
+      "manifest": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/admission/mhs/OUTPUT_MANIFEST.json",
+        "bytes": 687,
+        "sha256": "f55767566028c23ac10b0658b1936988e73c5d494ff2dec699771e660f6916c8"
+      },
+      "outputs": 5,
+      "firstcopies": 6
+    },
+    {
+      "role": "asset-admission",
+      "root": "work/configured-scene-module-investigation/2026-11-02/admission/f46",
+      "collector": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/admission/f46/collect_admission_v1.py",
+        "bytes": 9870,
+        "sha256": "bc1c514948d61dada67ea718a27b8f84d1cc36415f7cac53483e2ee98d99202c"
+      },
+      "current_report": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/admission/f46/REPORT.md",
+        "bytes": 2971,
+        "sha256": "e32dbc59066ef8ffecd875632ab9490ac2ed384987efd885a813a4820dc7568d"
+      },
+      "canonical_report": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/admission/f46/REPORT.md",
+        "bytes": 2971,
+        "sha256": "e32dbc59066ef8ffecd875632ab9490ac2ed384987efd885a813a4820dc7568d"
+      },
+      "manifest": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/admission/f46/OUTPUT_MANIFEST.json",
+        "bytes": 597,
+        "sha256": "7efa56536d8972addb48dc01dab3d4609c1358956e1ec4fd59f1b2bd88175b5a"
+      },
+      "outputs": 4,
+      "firstcopies": 5
+    },
+    {
+      "role": "new-source",
+      "root": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission",
+      "collector": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission/collect_filesystem_v1.py",
+        "bytes": 12836,
+        "sha256": "fc897bf53c543b598df8fa5093cf95e88fc190bcc5beff77582a23fc41f4f80e"
+      },
+      "current_report": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission/REPORT.v2.md",
+        "bytes": 5083,
+        "sha256": "69e004bdab8f0bd2a58af69dee1d1b94c294089f108e432bb12ebdf03900d523"
+      },
+      "canonical_report": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission/REPORT.md",
+        "bytes": 4630,
+        "sha256": "cfb0b3b7778fb732dac7f78f65c85c46a48323f461be36d92cc5e2b006e97b65"
+      },
+      "manifest": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission/OUTPUT_MANIFEST.json",
+        "bytes": 1095,
+        "sha256": "8124925c0b08354b09536202373ec24beb601c39b04c000bbe0a342f727df2b4"
+      },
+      "outputs": 6,
+      "firstcopies": 7
+    },
+    {
+      "role": "new-source",
+      "root": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-input-producer",
+      "collector": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-input-producer/collect_input_v1.py",
+        "bytes": 15398,
+        "sha256": "d3c2f57fc9e30e9c7c506efb2813c63e4fc1a63d8c94e3e9dbe58725e5fb6910"
+      },
+      "current_report": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-input-producer/REPORT.md",
+        "bytes": 6279,
+        "sha256": "3cb67adf71f4a4e8fde4ddc3eae8367e8fc4169519179c8a09685ee9c2eaaa8a"
+      },
+      "canonical_report": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-input-producer/REPORT.md",
+        "bytes": 6279,
+        "sha256": "3cb67adf71f4a4e8fde4ddc3eae8367e8fc4169519179c8a09685ee9c2eaaa8a"
+      },
+      "manifest": {
+        "path": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-input-producer/OUTPUT_MANIFEST.json",
+        "bytes": 925,
+        "sha256": "248ac8fb16e91f547165bceaeeafa90ac5beaaa930df8f89a121e520a70ab4db"
+      },
+      "outputs": 5,
+      "firstcopies": 8
+    }
+  ],
+  "asset_outputs": 9,
+  "asset_firstcopies": 11,
+  "new_source_outputs": 11,
+  "new_source_firstcopies": 15,
+  "new_source_packets": 2,
+  "new_source_bytes_selected": 1024,
+  "configured_exports_admitted": 0,
+  "MHS_new_code_bytes": 0,
+  "MHS_policy": "Qualification only, no correction of prior report or new natural path",
+  "generic_range_helper": "Stopped qualification; zero additional functional coverage",
+  "producer_procedural_defect": "Failed pre-read record/order requirement disclosed; root range authorization existed; canonical evidence generated afterward and independently checked",
+  "reviews": {
+    "asset-admission-review": {
+      "path": "work/configured-scene-module-investigation/2026-11-02/reviews/asset-admission-review.md",
+      "bytes": 6071,
+      "sha256": "1c1609dd7098065d3df95d6abc712d62d1e580a28f00e5d07213f6470f77e8a5"
+    },
+    "policy-context-review": {
+      "path": "work/configured-scene-module-investigation/2026-11-02/reviews/policy-context-review.md",
+      "bytes": 4532,
+      "sha256": "bae8318d26dfc349fdcd70305a150c8063636d2c113f946ee03d8bb95273b534"
+    },
+    "f460-source-review": {
+      "path": "work/configured-scene-module-investigation/2026-11-02/reviews/f460-source-review.md",
+      "bytes": 6727,
+      "sha256": "a68545006d382119e29cfb63706eb3aabeb077795e6c5cc0c5bf9b27a442c74b"
+    },
+    "f460-producer-review": {
+      "path": "work/configured-scene-module-investigation/2026-11-02/reviews/f460-producer-review.md",
+      "bytes": 7757,
+      "sha256": "6dd67e3b7b3068a72ee88d69b09233c67223e8988486027c8776d1a1881ca0ad"
+    },
+    "integration-review": {
+      "path": "work/configured-scene-module-investigation/2026-11-02/reviews/integration-review.md",
+      "bytes": 7673,
+      "sha256": "32a344ed26fcb68c44aa8b29071cb066348cd01f73ae8e61e02cda3a78bbb2a0"
+    }
+  },
+  "current_exports": 38,
+  "current_v2_document_pins": 8,
+  "first_v1_document_copies_preserved": 9,
+  "historical_reference_mappings": 1,
+  "prior_reports_Device_source_manifest_closed_controls": "Exact locks unchanged; only new firmware-index row has captured old input",
+  "new_original_helper_runtime_SQL_models_fixtures_physical_execution": 0,
+  "MHS_cumulative_ledger": {
+    "canonical_corpora": 1,
+    "corpus": "JsonCpp-double-same-object-four-finite-cases",
+    "top_level_entries": 8,
+    "original_code_hook_visits": 340,
+    "C_primitive_callbacks": 0,
+    "original_definition_redirect_callbacks": 12,
+    "EXIT_return_boundaries": 8,
+    "guard_stop_callbacks": 0,
+    "code_hook_callbacks": 360,
+    "synthetic_data_relocation_setups": 4,
+    "FP_control_host_register_setup_writes": 24,
+    "R0_SP_LR_host_register_setup_writes": 24,
+    "failed_guest_attempts": 0,
+    "verification_CPU_replays": 0
+  },
+  "old_ledger_pin": {
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/RESULTS.json",
+    "bytes": 22496,
+    "sha256": "450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525"
+  },
+  "no_old_collector_replay": true,
+  "automation": "NONE CREATED_OR_REOPENED",
+  "new_R2_objects": 0,
+  "repository_integration": {
+    "page": {
+      "path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-f460-f461-input-admission.md",
+      "bytes": 8283,
+      "sha256": "f34d48d0f30437a2e91254ae5be5962c8f73556aab9d7deddef2529a62127982"
+    },
+    "firmware_index": {
+      "path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+      "bytes": 12048,
+      "sha256": "37cc55da0ba75ed23110589ac89912f573f7ee0ebf559f3ffce154e8eea4a921"
+    },
+    "capsule": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/configured-inputs-2026-11-02"
+  },
+  "staged": false,
+  "committed": false,
+  "pushed": false
+}

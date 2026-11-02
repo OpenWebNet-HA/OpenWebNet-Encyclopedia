@@ -1,0 +1,11 @@
+{
+  "condition_worker": "a6d18 conditionpointerrange116/120 andvptr+8; firstzero falsepath clears scene145/144 at a6e6a/a6e76 thenreturns. Allnonzero/empty normalrange reaches a6f8c\u2192a6734",
+  "constructor": "b94f0 vectorzero, runningbyte12=1, CV48, threadholder16; nonzero suppliedflag requests state thread; state vtable161e94 slot8\u2192bbd84\u2192bb5ec",
+  "deadline": "b8be0 requests time/localtime and %H:%M streamparse; selected stores replace current tmhour/minute andzero seconds; mktime signedseconds*1e9; ifearlier than systemclock add86400000000000 once; field88/92",
+  "due_entry": "Selected live first serviceentry; queueordering/rebuild helpers remain unclosed",
+  "fire": "b8a08 gates ownenabled48, weekdaymap anddaysmask84, callablemanager12; invokesinvoker16 withdata4; installedcapture reachesa60a8\u2192a5db0",
+  "limits": "No configuredscenes/APIobjects/actualthread/timer/clock, fullparser/queue/ownership/unwind/concurrency/catchup/DST/runtime/physical guarantee.",
+  "rearm": "After normal virtualslot0 return reloadsameobjectdeadline andadd86400000000000 via b8bd8; not a measurednextcalendarwalltime/DST policy",
+  "register": "b9814 normal capacity branch copies same two-word handle to service end, increments ownership word, advances8, unlocks+20 and notifiesCV+48; reallocationbbd8c remainsdelegate",
+  "window": "After wait firstclock N1>=D; selectedsecond N2 has abs(N2-D)<=30000000000 (bounded nonoverflow arithmetic) before virtualslot0 callbb906"
+}

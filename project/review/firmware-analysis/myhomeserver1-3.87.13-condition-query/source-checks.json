@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "area": "serializer",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "9390e7",
+          "wall_time_seconds": 0.112731901,
+          "exit_code": 0,
+          "original_token_count": 39,
+          "output": "{\"check\": true, \"outputs\": 15, \"spans\": 5, \"guards\": 17, \"keys\": 12, \"data_spans\": 4, \"calls\": 5, \"relocations\": 11, \"inputs\": 3, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "area": "query",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "917e20",
+          "wall_time_seconds": 0.103913828,
+          "exit_code": 0,
+          "original_token_count": 14,
+          "output": "{\"check\": true, \"outputs\": 17, \"original_execution\": 0}\n"
+        }
+      }
+    }
+  ]
+}

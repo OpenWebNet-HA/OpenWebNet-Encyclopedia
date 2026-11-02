@@ -1,0 +1,21 @@
+# Independent MH202 and F454 reference cross-review
+
+PASS for the reviewed editorial scope after the recorded refinements. The initial assessment and exact reviewed identities remain in mh202-by-gateway.md and mh202-by-gateway-identities.v1.json; this current review does not rewrite that history.
+
+The parent retained exact pre-refinement pages and recorded CROSSREVIEW_REFINEMENTS.v1.json before corrections. Current page hashes and those specific before/after identities match for all five changes relevant to this review.
+
+## Closed findings
+
+| Initial finding | Current result |
+| --- | --- |
+| Malformed Counter multiplier literal | The generator reference now states multiplier `10` and explicit `ANA_RANGE.ID_KIND = 2`; source-produced multiplier `1` remains separate |
+| Unproved project-loader-before-compiler ordering | The definition describes separate loader/compiler components and explicitly leaves their actual caller unresolved |
+| Lifecycle section order | Named FIFO behavior precedes the final Evidence limits section; no source fact was changed |
+| OS-only container/checksum algorithm | The state reference now retains concise Configuration-availability context and explicitly disclaims an OpenWebNet configuration/restore contract; detailed operands/provider tests remain in supporting source records |
+| F454 energy normalization exception | The canonical energy table explicitly retains the unnormalized hourly record9 totalizer high byte alongside the selected scalar/daily255 policy |
+
+The source/guard/namespace checks listed in the initial review remain applicable. In particular, the selected thermo query keeps the different-ID kind4 response matching WHERE/DIM distinct from matching-ID status, and its timeout still depends only on status. XML/type retention does not become an executed configured export; conditional translations and parser/helper tests do not become natural traffic, complete grammar or physical behavior.
+
+The three F454 functional sections retain their build-scoped temperature, direct-DH/old-energy and video/status/discovery distinctions without competing public protocol definitions. Their cases are explicitly static or host-derived. No additional semantic correction is requested within the reviewed material.
+
+This independent pass compared current reference prose with the exact baseline, preserved source records and recorded refinements. It added no source/body examination, native/vendor/provider execution, collector replay or repository edit. Final whole-branch mechanical/navigation/Device/privacy verification remains distinct from this semantic editorial review. No complete Firmware, Device or physical validation is asserted.

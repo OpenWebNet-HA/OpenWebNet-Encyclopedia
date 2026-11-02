@@ -1,0 +1,27 @@
+# F461 AArch64 automation routing: independent source review
+
+PASS for authoritative REPORT.v2.md and its bounded original descriptor, registry-callback and local-admission claims. No source correction requested. This is a new static source review, not a target/native replay. I authored the separate F460 scheduler packet; no F460/MHS layout or command meaning is imported into this F461 review.
+
+Reproduced `collect_routing_v2.py --check`:16 outputs,7 spans and16 byte guards passed. Independently re-read the two original ELF64 little-endian machine183 files, translated their PT_LOADs and checked all7 retained raw source spans and16 instruction words. All18 exact first-copy identities match current authoritative bytes. I separately inspected original core register_translation0x2870..0x28f4, selected translator0x3cb8..0x3d64 and allocation branch0x3a1c..0x3a30, including predecessor register context rather than nearest symbol names alone.
+
+The plugin's original GLOB_DAT slot0x17fc8 names descriptor automation_tr0x18190. Original ABS64 relocations at0x181c0/0x181c8 name initializer0x38b0 and translator0x3a30 at descriptor48/56. The local init writes private pointer88, field8=6, field40=2, list72/80 requests and passes the same descriptor to register_translation. Candidate libcoso register_translation obtains a manager, requests unregister/prepend into manager32, stores manager96 and conditionally invokes descriptor48. That positive callback slot is source-proved; effective loader/provider binding, configuration returns, list allocation and actual plugin activation remain conditional. Plugin DT_NEEDED does not directly name libcoso, as the report correctly discloses.
+
+The actual argument captures and CMP/branches preserve two separate local axes: W0/W1 pairs(1,2)/(2,1). Selected(1,2) path separately gates record40 and representation56; record40 values3 or9 pass the exact CMP/CCMP/NE gate before four g_strndup requests at source pointer offsets0/2/4/6 with length2. Pointer validity, complete raw parsing and downstream conversion remain premises. The opposite path's representation2/3 and parsed-object104 are separate source fields, not a borrowed old parsed-object layout. No numeric field is promoted to a public WHO, accepted wire grammar, supported command or physical effect. Descriptor identity, private16-byte storage and record fields are not overlaid.
+
+The v1 host workspace-parent error is honestly retained: generation/check stopped before candidate outputs, not because of firmware rejection. FAILURE_HISTORY's exact old report/script fingerprints match preserved development-v1 files. The new v2 changes host root/report references while retaining original guards/source conclusions. No earlier failure is renamed a successful original execution. All author/source files stayed read-only in this review; no receiving/transport/MQTT/libjel/authentication/session/framing body, vendor/runtime/process, semantic fixture or physical device was executed.
+
+## Exact reviewed pins
+
+Paths below are relative to `work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/`.
+
+| File | SHA256 |
+| --- | --- |
+| `REPORT.v2.md` | `b26581f9a9292aec707562863ba43e7dfc8dcbca1bb6d51e2037295304ca72ec` |
+| `collect_routing_v2.py` | `474531e88c04267e8b9f901e1e055cb07e6119dd9895543ca485423ea55ecd20` |
+| `OUTPUT_MANIFEST.json` | `429aaba2dceacb8e8653314386d7f728dc20c7b6b1e07332f3ecdecd69b82fbb` |
+| `SOURCE.json` | `2462ad6cf61c12cff71dd8a7d7e9de11d0b472ca6e809689d450051b26566680` |
+| `INPUTS.json` | `60a819e20a1d7fcfa1b2c91e12c10314ce730cf746b70f07b9e87aaa9168a911` |
+| `first-candidate/INDEX.json` | `c9f3d3f6b883027b4a261bf529bc2549f619590d36ad15dfb865c085b658fd54` |
+| `FAILURE_HISTORY.json` | `da28c16538f0d40ac3c1230f852adccb9f2630f51b9750e3b09ac3b3300502f0` |
+
+Original plugin SHA `d7d361798ccec65843bd41c9ad7b8897645a334b0cd08121d372949f78eac277`; original core SHA `572bca218965a040393361bea4044b0d55519b4f2146ef69c9aa18d4aa6ef690`. Retained draft identities verified: `{"REPORT.md": {"path": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/development-v1/REPORT.md", "sha256": "1c720100e1ae34a73c0a74f2a29d0639beca80eaa4dff202a67ce666da9d572f"}, "collect_routing_v1.py": {"path": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/development-v1/collect_routing_v1.py", "sha256": "535470653b103b5b25e84d2ba282e9342d9c513100707f50a0ae1f2f23428d78"}}`. The PASS is limited to this bounded source packet; runtime/public/physical and wider coverage gates remain open.

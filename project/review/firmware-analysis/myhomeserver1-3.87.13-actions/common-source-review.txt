@@ -1,0 +1,29 @@
+# Independent common ActionRunner source review
+
+PASS for the bounded source report; no author correction requested. This review independently audits original bytes, declarations, selected control/dataflow and the finite host results. It does not execute or replay original firmware, a timer/thread/clock API, a callback or a configured scene. The reviewer authored the separate SCENARIO callback report; that action-specific context was kept distinct from these shared methods.
+
+The read-only `collect_common_v1.py --check` reproduced24 outputs and verified its first snapshots. Independently of that collector, a fresh ELF PT_LOAD parser checked both original image hashes,17 raw span hashes,20 critical Thumb instruction-byte guards, eight PIC joins, two RTTI-backed vtable headers and their stored methods, two worker slot values, and all eight corresponding entries directly in the original SHT_REL data. All23 manifest members and26 first-copy members agree byte-for-byte with their declared hashes and current files. Six execute, five wait-guard and four arithmetic host cases were independently recomputed; these are selected consistency examples, not runtime coverage.
+
+## Decisive source checks
+
+- Primary method pointers resolve to instruction entries0xcd848,0xcd6f0 and0xcd550 for both ActionRunner and the selected SleepActionRunner. The third method really is BXLR. Completion is separately read by0xcd97c and the selected caller0xa6908; no completion-getter meaning was inferred for a vtable slot just from its position.
+- Execute clears byte+4, tests operational word+8, calls the first callable inline only on its zero branch, then tests word+12. The nonzero first-word branch requests the first worker; only the inline path with a nonzero second word requests the second worker. The original callback-return completion stores are present. A first-wait worker does not automatically chain to the second worker on its inspected local route. Provider/exception/thread-success and already-running state remain unresolved as reported.
+- The actual operational controls+8/+12 differ from copied metadata+84/+88. Original SLEEP construction zeroes the controls, copies the JSON pair into metadata and passes only the selected delay value through0xcd988 in the retained narrow corroboration. The base move helper copies the operational pair independently. The report therefore correctly refuses to promote metadata duration+88 into an initialized operational word+12 or a universal JSON-duration contract.
+- Stop0xcd6f0 never uses its incoming action receiver. Its original lock/set/notify/unlock path and both workers resolve the same global base0x1677b8, with mutex+48 and byte+72. Startup initializer0x15474 is actually present in init_array and stores zero to that byte. These positive references do not establish all aliases/resets, current flag state, permanent latching, global cancellation success or a defect.
+- Both wait workers test the shared flag before waiting, refresh the clock after a wait return and compare signed64 values. A pre-deadline flag0 repeats; flag1 exits. At/past the deadline, the saved flag controls callback admission after unlocking. Completion1 follows a normal callback return, without another stop read. This supports the bounded report statements rather than an immediate-interruption or eventual-completion guarantee.
+- The original UMULL/MLA constants form unsigned64 60,000,000,000. Original division pools both hold1,000,000,000. The selected source packs low32 quotient/remainder words after signed division and requests clockwait clockID1. Independently recomputing all four arithmetic examples, including the synthetic max uint, agrees with modulo64 and truncation-toward-zero behavior; no inference of admitted max input, all-uint timer validity, actual API failure or elapsed timing is justified.
+- The separately pinned libstdc++ body0x959cc requests clock_gettime with argument1 and computes signed seconds-times1e9 plus the second32-bit word via SMLAL. Its source does not inspect the API return. Thus the report's nanosecond and60-second-per-operational-unit conclusion remains correctly conditional on ordinary successful Linux seconds/nanoseconds semantics and effective same-build binding. It is not an API-name-only unit assertion, measured minute, host timespec-layout injection or a universal field label.
+
+The selected callback and thread-state pointers, plus the known standard API declarations, remain unexecuted source relationships. Derived callback bodies, live ownership/concurrency, target clock ABI/provider success and actual configured scene behavior are expressly open. No transport, authentication, session, framing or physical effect is reviewed or inferred.
+
+## Exact identities and preservation
+
+- Scheduler image `/home/bticino/scheduling_manager/scheduling_manager`: `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`.
+- Candidate provider `/usr/lib/libstdc++.so.6.0.29`: `02d98c9486577d7be0b3fb71b5f0c0b6c090b72554c83640cb525cb3a3c1549a`.
+
+- `common/REPORT.md`: `3ac86206587e25f07db979bfec8a46ec0d401f658784e6d15fcb2d7d80676e0d`.
+- `common/collect_common_v1.py`: `ded730079e38d56e9087d9d131143c6a9915c58a1e343f8571406529539add79`.
+- `common/OUTPUT_MANIFEST.json`: `1355a6cdee85c20add380da0b675077587dcbb68d038747a211ae64f9c072e73`.
+- `common/first-candidate/INDEX.json`: `7e29a4e01c844444abace3694d855604ca968bd426847be56003dd7384f799a3`.
+
+Author files and existing snapshots were not edited. One reviewer inline Python consistency command initially had an `else1` syntax typo and stopped at parsing before checks or writes; the corrected read-only command passed. No source outcome changed and no failed result was substituted for author evidence. This first review is saved exclusively with an immediate exact copy and a snapshot index computed before opening it.

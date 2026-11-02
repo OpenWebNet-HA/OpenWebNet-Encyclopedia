@@ -47,3 +47,13 @@ The [functional overview](../) provides alternate navigation by function while t
 ## Gateway boundaries
 
 For gateway compatibility, see [CEN+ gateway compatibility](cen-plus.md#gateway-compatibility-and-hardware-boundaries) and [Dry-contact and IR gateway compatibility](dry-contact-ir.md#gateway-compatibility-and-hardware-boundaries). These references distinguish published function support from scoped firmware observations.
+
+## MH202 implementation evidence
+
+MH202 Firmware `1.0.24` has separate WHO25 translation and query-state paths. Source-derived constructions include `WHAT 12` / `WHERE 112` and a query using `WHERE 312`; these are selected formatting cases, not a complete accepted-address grammar or physical observation.
+
+The query state saves an ID and requests a timer. A field-ID comparison selects local behavior rather than universally rejecting every unmatched record. Original query-object/initializer/application code was also examined in isolated private memory with modeled timer APIs. Creation, attachment, destruction and reference release remain separate operations: a cleared pointer or local software receipt proves neither timer quiescence nor physical acknowledgement. See [MH202 WHO25 translation and state](../../reverse-engineering/firmware-analysis/mh202-1.0.24-functional-translation.md#who-25-translation-and-state-machine).
+
+## ScenarioSuite address-profile evidence
+
+The [MH202 ScenarioSuite profile](../../scenario-engine/scenario-suite-database.md#who-25-address-profiles-and-command-context) provides concrete ScenarioPlus address choices formed from literal prefix `1` and `1..255`, separately from CEN+ and dry-contact choices. This is a source-specific editor catalogue, not a universal public ScenarioPlus address range or proof of gateway support. It retains per-command role differences: the selected STOP declaration is offered in Start/Stop associations, while the Action list contains the other four ScenarioPlus declarations.

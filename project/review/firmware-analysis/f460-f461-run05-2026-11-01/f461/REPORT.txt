@@ -1,0 +1,50 @@
+# F461 2.0.11 run05: one selected automation converter output record
+
+A selected original typed-object path produces the conditional ASCII normal form `B1001208`, stores it in a newly requested72-byte local record, assigns that output record's category/criterion/representation words and appends the same pointer to the supplied output list. This closes one converter-output source join after the run03/04 route work. It is not a captured frame, raw OPEN acceptance test, executed fixture, physical command interpretation, serial framing or delivery result.
+
+## Exact originals and inherited premises
+
+- `/home/bticino/libcoso/libplug_automation_tr.so` SHA256 `d7d361798ccec65843bd41c9ad7b8897645a334b0cd08121d372949f78eac277`.
+- `/home/bticino/libcoso/libcoso.so` SHA256 `572bca218965a040393361bea4044b0d55519b4f2146ef69c9aa18d4aa6ef690`.
+
+Both originals are fresh ELF64 little-endian AArch64 objects. SOURCE.json records own PT_LOAD mappings,10 selected source spans,36 plugin instruction guards,15 local-helper guards, seven literal/PIC joins and six actual import proofs. VAs are linked source addresses. Verified ImageVFS and run03/run04 reports are pinned. Curated Device0208 supplies F461 integration-product context only; public command or physical meanings are not inferred from module names or equal numbers.
+
+Run03 already proved an actual local matcher can call this descriptor's translator with axes `(2,1)` and the same message/output-list/descriptor pointers under its explicit manager/direction/criterion premises. Run04 added the exact packed field-route constructor correspondence. Those are inherited source facts, not new acceptance or execution tests. This packet starts with those supplied valid objects and traces one coherent local converter branch.
+
+## Fresh selected object and scalar path
+
+Translator argument capture keeps input recordX2 inX19, descriptorX4 inX28 and supplied output-list addressX3 atSP96. On the `(2,1)` branch it requests72 bytes at0x3b64/0x3b6c and saves the returned output pointer atSP160. Descriptor+88 supplies a private pointer (X27). Input record word+56 must follow the parsed representation3 path; record+0 is read as the parsed-object pointer and its own word+104 must equal1 to branch0x4518. These are separate namespaces from input message category+40 and matcher criterion+48.
+
+At0x4518..0x4524 the code duplicates literal `12` (VA0x6528) intoX22. It loads the supplied parsed object's pointer+16 at0x4534, requests `g_ascii_strtoll(pointer,NULL,10)` at0x4538, and performs original comparisons. The selected numeric result1 reaches0x460c..0x461c, which duplicates literal `08` (VA0x6530) intoX26 and joins0x3be8. Valid pointers, ordinary string/GLib conversion behavior and normal returns remain premises; no entire raw grammar, end-pointer/range policy or all-command domain is established.
+
+At0x3c00 the same parsed object supplies its pointer+32. The selected `g_strcmp0` comparison against literal `0` (VA0x6038) returning0 reaches0x49c0. No address meaning is assigned to this literal beyond the actual branch. Prefix/length/other address cases are outside the selected path.
+
+## Actual formatting order and bounded normal form
+
+At0x49c0..0x49d4 the source requests `g_strdup_printf("%s00","B1")`, using original format VA0x6718 and argument VA0x64e0. It retains the result asX23; under ordinary successful formatting this is `B100`. Its null result takes a separate error path. The selected parsed-object pointer+48 is NULL at0x49e0..0x49e4; nonnull alternatives and their dialect meaning remain outside this one case.
+
+Original0x49fc..0x4a14 supplies X1=addressX23, X2=classX22 and X3=commandX26 to actual `g_strdup_printf` with literal format `%s%s%s` (VA0x6750), and stores the separately allocated result pointer into output record+0. Therefore the source-normal form under these premises is `B100` + `12` + `08` = ASCII `B1001208`, eight characters. This is a human-readable consequence of original literals/argument order, not a host numeric/data-model simulation or original execution. The ASCII text is not itself proof of four physical bus bytes, a wire frame or actuator behavior.
+
+The address's first character is compared with literal `B` at0x4a18..0x4a28; this selected formatted address satisfies that branch under the ordinary formatting premise. Descriptor-private word+4 is compared with4 at0x4a30..0x4a38. The selected word is not4 (the earlier initializer's default3 is one conditional source context, not an installed value). This path calls imported `prepare_briefscs_frames` at0x4a50 with X0=&SP160 output-pointer slot, X1=same original record, X2=same supplied output-list address and W3=1. The private-word4 alternative and other metadata helpers are not reconstructed here.
+
+## Pure local record helper, list and ID semantics
+
+Actual plugin PLT0x1f70/JUMP_SLOT0x18110 names `prepare_briefscs_frames`. Candidate packaged libcoso defines it at0x3a30. Its own body writes output word+40=3, word+48=the suppliedW3(1), and word+56=1 before requesting `prepare_scs_from_open`. These output assignments are distinct from input parsed kind+104=1, input message representation+56=3, input matcher criterion+48 and descriptor-private selector+4. Numeric equality alone does not establish shared meaning or public WHO support.
+
+The actual candidate local copy helper0x3a00 moves source bytes8..23 to output8..23, source24..39 to output24..39, source word44 to output44, and source64-bit word64 to output64. The exact copy sizes are16+16+4+8 bytes. Thus the route/direction/timestamp-related region is copied as bytes; the new output category40/criterion48/representation56 are not copied from those input offsets. Source and target field meanings not separately established remain byte-level contracts. Other requested-record fields/padding are not declared initialized by this proof.
+
+The same source ID word64 is copied here; this selected helper does not request new_id. It therefore provides a source-backed local ID-copy relationship, not proof of uniqueness, natural ID origin, global lifetime or absence of mutations/delegates elsewhere. Candidate dynamic binding/interposition and normal provider behavior remain explicit premises.
+
+At0x3a60..0x3a70, the helper obtains the very same output record pointer from the supplied slot, requests `g_list_append` on the caller's current list and stores the returned list pointer back to that caller's address. It returns0 locally. This is a pure record-copy/list-construction helper despite its exported name; no transport/frame encoder, receiving or delivery implementation is followed.
+
+## Callback return and temporary ownership boundary
+
+The selected caller joins0x41b0: it requests freeing the temporary address string, sets its own return-code registerW23=0 and enters the selected cleanup0x3c80. Temporary class/command strings are conditionally freed. With W23=0 the branch0x3ca4 reaches the ordinary epilogue0x3ab8 without freeing the output-pointer slot's record. Thus the newly appended record is retained for the caller under ordinary allocation/format/list/copy/normal-return premises. This is a selected source ownership boundary, not a whole object-lifetime, concurrent-use or actual physical-completion proof. Callback0 means this selected local return; it is not delivery acknowledgment.
+
+## Reproduction and limits
+
+`python3 -B work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/collect_output_v1.py --check`
+
+The host collector checks original maps/bytes, exact guarded instructions, safe literals/PICs and original import relocations; it reproduces outputs read-only. Generation refuses overwrite and immediately preserves report, collector and output bytes with the index built before its file is opened. No failed canonical generation or overwritten output candidate occurred. Ordinary provider formatting/conversion/list semantics remain conditional, and no original/vendor/provider/native/OS/SQL operation or semantic fixture/model was executed.
+
+Next gaps are the actual natural producer of these parsed fields and criteria, richer address/interface alternatives, the selected output's later local caller and physical/protocol interpretation under independently justified input. Effective binding, active configuration, accepted raw language, output delivery and hardware behavior remain unverified. Receiving, transport, authentication, session, framing, MQTT/libjel and equivalent closed bodies stay opaque. Prior product execution ledgers are unchanged.

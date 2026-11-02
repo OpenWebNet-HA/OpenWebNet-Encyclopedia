@@ -1,0 +1,76 @@
+{
+  "C_primitive_callbacks": 0,
+  "FP_control_setup_writes": 24,
+  "current_task_guest_execution": 0,
+  "current_task_guest_replay": 0,
+  "first_result_members_byte_identical": 10,
+  "four_finite_bit_pattern_pairs": [
+    {
+      "case": "positive-zero",
+      "constructor_visits": 56,
+      "input_hex": "0000000000000000",
+      "object_address": "0x50000000",
+      "readback_hex": "0000000000000000",
+      "readback_visits": 29,
+      "same_object_bytes_without_reseed": true
+    },
+    {
+      "case": "negative-zero",
+      "constructor_visits": 56,
+      "input_hex": "8000000000000000",
+      "object_address": "0x50000000",
+      "readback_hex": "8000000000000000",
+      "readback_visits": 29,
+      "same_object_bytes_without_reseed": true
+    },
+    {
+      "case": "negative-one",
+      "constructor_visits": 56,
+      "input_hex": "bff0000000000000",
+      "object_address": "0x50000000",
+      "readback_hex": "bff0000000000000",
+      "readback_visits": 29,
+      "same_object_bytes_without_reseed": true
+    },
+    {
+      "case": "one-point-two-five",
+      "constructor_visits": 56,
+      "input_hex": "3ff4000000000000",
+      "object_address": "0x50000000",
+      "readback_hex": "3ff4000000000000",
+      "readback_visits": 29,
+      "same_object_bytes_without_reseed": true
+    }
+  ],
+  "saved_63_tool_entries_equal": true,
+  "saved_after": {
+    "bytes": 16035,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/TOOL_TREE_AFTER.json",
+    "sha256": "69f236a741f1429119aab7a86d8451e522d0615db8f541921541156116128220"
+  },
+  "saved_before": {
+    "bytes": 13596,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/TOOL_TREE_BEFORE.json",
+    "sha256": "3ebab93891ce85f986507232376fc1cbc0f0d4e12a85a3f9774444962e739b7e"
+  },
+  "saved_first_results_index": {
+    "bytes": 1493,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/first-results/INDEX.json",
+    "sha256": "3479c6bae64d42b3764ac646927669f157f32a4034e95235b45a9b701f71845a"
+  },
+  "scope": "Saved canonical corpus and saved tool observations only. Hook visits are not retired-instruction measurements. Setup relocations/FP writes are not code callbacks. Historical static zero-execution reports retain their earlier scope.",
+  "source_results": {
+    "bytes": 22496,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/RESULTS.json",
+    "sha256": "450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525"
+  },
+  "top_level_entries": 8,
+  "totals": {
+    "EXIT_callbacks": 8,
+    "code_hook_steps": 360,
+    "guard_stop_callbacks": 0,
+    "linker_redirect_callbacks": 12,
+    "original_code_visits": 340,
+    "setup_data_relocations": 4
+  }
+}

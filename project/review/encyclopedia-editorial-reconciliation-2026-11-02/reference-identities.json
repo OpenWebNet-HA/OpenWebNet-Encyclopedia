@@ -1,0 +1,532 @@
+{
+  "scope": "Current human Markdown reference identities plus separately classified workflow ledger; original broad baseline label is preserved privately but refined here",
+  "UTC": "2026-11-02T11:57:54.678413+00:00",
+  "files": [
+    {
+      "path": "device-model/firmware.md",
+      "pre_editorial_sha256": "ad681ed30c0c38ce0cee5509330ddd8e8e343a19b063b64d5ea3a8866fa01b87",
+      "current_sha256": "e6602aed3cd14aef5537f91019ce07b76fdbf8038862b536c77fd58e9b64c393",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "devices/definitions/own-dev-0002-audio-video-web-server-gateway.md",
+      "pre_editorial_sha256": "f300b28ca0f358b73dff111ee47f1a911c71f8b949ecc979726a2b5ec5459af9",
+      "current_sha256": "3d64e07b49c36c0c1850152ce1427acd2eb20146adef26a5b9e8f85f476f65ff",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "pre_editorial_sha256": "74f961aa3aaafb99003d1677304a6d971a42c871950796707712d1c66f50bbb9",
+      "current_sha256": "93e1d8a5e56b9a57b1c422e28ad51307a633798a6d70fefbb7357c0eb6b4157e",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md",
+      "pre_editorial_sha256": "bd64060e1e19f90eecad2808b62327847a0f541ae2fc46239bbda29a5efe5c98",
+      "current_sha256": "5024a42759f659fae292987096f0d6ef7efff9a85a7ccf783e5884f36920410e",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "devices/definitions/own-dev-0207-f460-myhome-server.md",
+      "pre_editorial_sha256": "c36fa47758ff05e6e5fbeaf7d4d3549d6fed38e4e032cba299021ee261bf157e",
+      "current_sha256": "8a168f0333cdc6d675ba0fbec04c587070e748fcb5ac75f41a37861830eea851",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md",
+      "pre_editorial_sha256": "ebdedce1537eec88678e418addcd076923a7f6997a659998f6c3affb51e3e259",
+      "current_sha256": "6db979580b7bd8a801c7b76ae9e1e0d2bc502503a44453f7b60169b2de3b7124",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "diagnostics/dim1-device-identity.md",
+      "pre_editorial_sha256": "df460bc77a64985a2f7f3d943cdaa25214533613d228aa82ba5b9f7e3087d72d",
+      "current_sha256": "8f92aeb2f9b7f513a6f553e12a367ea45db537fbda5349eef01bc4d4eee3f03c",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "functional/who-14-special-commands/README.md",
+      "pre_editorial_sha256": "87a61958e0a39d1ef88fe5b6d413369b6720cdea52a79586652a6a9d2fc6c8e5",
+      "current_sha256": "ba302a4a07ed953585c772c193ddfc3bb3a039b61bfb916b82718eb8507587f0",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "functional/who-15-cen/README.md",
+      "pre_editorial_sha256": "128febb454675db4ae37c340f902e5d3d5b2924df5a6c6c825ffd69cd9cb5627",
+      "current_sha256": "55891b19e3e4809ce6cd8152fa8b8c21863133c717a8e634f0daf08fee09c772",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "functional/who-17-scenario-management/README.md",
+      "pre_editorial_sha256": "bf2f1470c2547bdec0c406dcd9dfcd1b35f4f23a9194ae3ef3adb7362a127397",
+      "current_sha256": "7f524ca29b51233e7fc4489960e026d29f67cf0ef4840364c83c5733a00c0ef6",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "functional/who-18-energy-management/dimensions.md",
+      "pre_editorial_sha256": "64c5e6c4bf9de5829394acf9dbe7703647576fa9e62fce99460a8b20754734bf",
+      "current_sha256": "a78fc84113d4b1c40b3778b50082f33eb3c72a5248a7f1ae0c5559b749513033",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "functional/who-22-sound-diffusion/README.md",
+      "pre_editorial_sha256": "064acf6f2b1655a51c883f9df69cdd10c2218506a742aa569b49b986d608348d",
+      "current_sha256": "b2982d25c362e4da835aa5a8fc5be94238be048eb9a472d79ba16c2ac88dd9be",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "functional/who-25-transversal/README.md",
+      "pre_editorial_sha256": "5a9428be472d8d3d8a09bd36897bc71b131fe4d28de628cf2191b843ad27a51d",
+      "current_sha256": "52d675a9fa8d8a089250b1b8c3f6a414cb4a1e07f9db7d8a5a659de54ffd553b",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "functional/who-25-transversal/cen-plus.md",
+      "pre_editorial_sha256": "6d13fc46a98533dc0d0a69459a2a730011c043f69b0c029b4664c6367f307f67",
+      "current_sha256": "cc701b744ea62ecb8b9e4bdea8c1d4b5612b615646fadfa6a518bb5d28bbeab7",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "functional/who-25-transversal/dry-contact-ir.md",
+      "pre_editorial_sha256": "e3524907abe49823f78cd729d655f330f79851ada6f1cca1b5f7e7015c63ed3b",
+      "current_sha256": "709a9f890b0bd6b9d88748aa2eabed323c565aa866f55fd345fab8f808c47d6a",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "functional/who-4-temperature-control/dimensions.md",
+      "pre_editorial_sha256": "f42a1c8cb247eb4e99d05e12c46df7359b104cc17df70fa46e18e0ab47bd797e",
+      "current_sha256": "55a807e2c12f6f9e5d684dcf122868bddeb196300ab766e96088b059745810a2",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "functional/who-5-alarm/README.md",
+      "pre_editorial_sha256": "b4dd242f30c4c9dde1e4e04772eb7c39e74cd503b2e3cc241186701ac9f4abe3",
+      "current_sha256": "111d813e0602109dcd44aa5a45d9ee7968552320cbd203ac09ec6d442597c178",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "functional/who-8-video-door-entry-telephony/README.md",
+      "pre_editorial_sha256": "fc6e61be49bfbf7fc227384d8b781f54b49a0af82b3f66da89096e485537d6b8",
+      "current_sha256": "410f91833350051f3b041197be5d346f4e6e07c16466c9e56944c53a3f63bc86",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "functional/who-9-auxiliaries/README.md",
+      "pre_editorial_sha256": "a1fad1cfa8364af1323922150a7376381703087c016b4b45b2c5f557659d1dbf",
+      "current_sha256": "7ad86d2f6cc58cb93b51ac79e2b51642c0d58d9b4e49d3b009b1c43e456772f3",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "internals/README.md",
+      "pre_editorial_sha256": "d189e16827dcd15b8e08dd6dc7630776ccc1a4c67e45f0916dc2f9b5013fde9f",
+      "current_sha256": "970f67711f67d9b59456a09fb8384753c46a63f0d6c662e9c8001c41205fe691",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "internals/data-store-responsibilities.md",
+      "pre_editorial_sha256": "a7d92f854a874fad0628938dfb596664c3baebe3c515945e5917f43e82f08aac",
+      "current_sha256": "7c229da9ff89ccc9f523e01842567308f41194aa5872e9788237925afdf14e6c",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "internals/device-application-databases.md",
+      "pre_editorial_sha256": "d9d6dad3b74a16805ff25dc97f8bc6792dcd66226e158cc8954f32a0efbd9879",
+      "current_sha256": "2f2c484df82cef59ce337193bd19e0882689e0668ed054a47ef7496595c2cb33",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "internals/implementation-boundaries.md",
+      "pre_editorial_sha256": "b1178a0b885096803eb161167624c86dff066bb2fa2538fb7792a7eae13fb374",
+      "current_sha256": "068fa71b4a071f2bcfa3f71e4a064d52fc26fde00bae7b5707b1190bce41ecec",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "internals/installation-and-source-layout.md",
+      "pre_editorial_sha256": "24227e83c47a1fba42a131825a6a405447b2e70845b46b3d65d246296a312596",
+      "current_sha256": "4cd284419c54dbb7bfa6cff3fa836c33b33b8c1cd8068aa1848e8b971551fd6c",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "internals/mhcatalogue-source-profiles.md",
+      "pre_editorial_sha256": "bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba",
+      "current_sha256": "62c2172851236bcf50d50d78e90bfa342ac4526a955c4d6546ea42e3e33a15b4",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity",
+      "last_refinement": "Remove one generic pending-review sentence; concrete limits unchanged; independent narrow review passed"
+    },
+    {
+      "path": "internals/project-and-plant-templates.md",
+      "pre_editorial_sha256": "fe7ac8c0083a1f70c0ca918eec944228642bf91277dbd6a24c826d6ea52fdbbd",
+      "current_sha256": "eba36ba1f651435f45a9ed4a945ed39fe8d49ea604891ff5d55459f154572da8",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/README.md",
+      "pre_editorial_sha256": "e3338b7eef3cdb19108350797ff6ee50e5984cf0df9f794465cbd410a64290ca",
+      "current_sha256": "e3338b7eef3cdb19108350797ff6ee50e5984cf0df9f794465cbd410a64290ca",
+      "changed": false,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/README.md",
+      "pre_editorial_sha256": "012378faf435fe5996f6d016dc004ade2ba6e51f45302083ac96a93d1a1785c6",
+      "current_sha256": "db88cc50db05900c003bc1de9689eef4c9271218ecbd3a2b5e27d6cdcfafe82b",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f450-f453av-f455-f459-mh200n.md",
+      "pre_editorial_sha256": "76e855cf78cfb618b60a6ee0df68805cab653c00384cf33c914502d6fda063bb",
+      "current_sha256": "4b23d2ffa8073913591f898fb0dd2104c24aa2879f2a9b7b56b3700595a5ea19",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f450-f459-database-byte-followup.md",
+      "pre_editorial_sha256": "be8f5cdd8968468b3f5d202d7af5d510519ee2762e95cdcd08137287fb2a1233",
+      "current_sha256": "72c49970399a4c5eab765cb70c635ffb86a73fabfd470b38366ddb60512aadbb",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f453av-mh200n-clock-script-contracts.md",
+      "pre_editorial_sha256": "1d0287e85a7a1548c87afaa7c232654dcdceb5a4cb9c6e62fd3a588aa37ce7bd",
+      "current_sha256": "0386dc22194feb4620eee5a37cc6df17539e409a450c8c277b4f3f260485be12",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-av-and-board.md",
+      "pre_editorial_sha256": "c1cbfa5a7af37642d6e54c23573824541b09b594d0b0f172c1415ce5f277c1ad",
+      "current_sha256": "2c8cf6b75f25177a21f5027014ea16b20b056dcebda2ca5afdca5ce58b53397c",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-continuation.md",
+      "pre_editorial_sha256": "c46636321d02ff375b730b6f083f956ceec2a5dd5e5837af1496e22a66fc1261",
+      "current_sha256": "95a4123e8141210009d36c4212cce3bc5dd99f853b570fd35fe1380636965042",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-final-pass.md",
+      "pre_editorial_sha256": "60565b7f632120772ee7228d49ad61eae26fad1ac28b4f94de090937b6f7530d",
+      "current_sha256": "a4ff78e63fc98b143e979ea36e723c31c550faa3c0c0b73d7dc4bd2f894e0ece",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-follow-up.md",
+      "pre_editorial_sha256": "cee61700aed2526daf651fe423f8f86700a8924d1349b4e52af9c7fff0ba45b4",
+      "current_sha256": "842b0e779270af0383f8a85d4db7b4102c7d4003e4ff959d6a9cb8171c5f058f",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-product-paths.md",
+      "pre_editorial_sha256": "84316d465c6135bad1dd75669313b83d708de23ecc68ae9c467f1c01e3e44d8a",
+      "current_sha256": "48045fa2ce4695a32e050dce7cad44cd62c7060cddca235ee2b817c3880b1a80",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51.md",
+      "pre_editorial_sha256": "b509a968644fa93b9234f66e123e00be0e80af472c4e6c294c0f50da5396de0b",
+      "current_sha256": "ad7e4d46fd1cc77e754ea78ac6dd3e4cd5a52de26c929a4bc5cf1cea74b32724",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f460-2.0.12-and-f461-2.0.11.md",
+      "pre_editorial_sha256": "702d30094daeb126727f7b8d485421fcca1fe849fb63280049770197ffb5d69e",
+      "current_sha256": "8d4d9dbaa2d2858cf492806be8e6c3bccba5855c7a4a1369077cb599c00021db",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "pre_editorial_sha256": "7ecc06f5c9a6381697a2372b12dcaf6d56f1a3f074d9f016d5d6b8b7de578f3e",
+      "current_sha256": "13fab5ab2c09f3df6b8e8633272f9a6930134699ba2377cd9001258bb670b860",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f460-f461-knowledge-handoff.md",
+      "pre_editorial_sha256": "6a61539cd196a2bb691363690811be5c0243db2679952fe6746f1f7860bbc1dc",
+      "current_sha256": "7dc3a116a6e72ed2bf00fc55208e5f64752b3214b9484122998a5547dab3cf00",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f460-f461-selected-source-paths.md",
+      "pre_editorial_sha256": "96732373ac912f84b9f539c77924247ad21ee1364d151d8b27a9dacc1709af1a",
+      "current_sha256": "35531c4e897178e79ac85dc20cd7055e8cee5ffa2fdaac9aeb0b1b19a2822a66",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-functional-translation.md",
+      "pre_editorial_sha256": "8bc7f7d12f8bab491c6fafa95ef3d9f00c454b10c6d4443f9c427b087f7696d5",
+      "current_sha256": "434229c828d36d1f86c752f8ae1b1cc4d91d5316c9abeab4614ffb9e3bdd77fd",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-generated-scenarios.md",
+      "pre_editorial_sha256": "9abcb0bb59764d90bf9a9737ee2f9b595c77e23a2122b8e78748228acd55b991",
+      "current_sha256": "283709a6b6ac84c387bedcda97089e78a7b2a6b0c3fcb2df2477f8ff65af100b",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-record-and-script-lifecycle.md",
+      "pre_editorial_sha256": "4ac3074e73d4f2dd62d6c641725f4a1a9160c0c4c1ec1da654d85713124cc29c",
+      "current_sha256": "f7ac29e77f292d7f9f269e026fb028fb4ab828d26235be09d014f8689679d680",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-scenario-resources.md",
+      "pre_editorial_sha256": "84ea1599c1f6dd494f679d6faf8ed3df4b8a2894a5110703f8b7e6f5cfca073f",
+      "current_sha256": "ba2ba2ccae89966035050fec3b8e6ffeb94baeacd4eaa9939cc3aa7aa5013051",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-state-and-routing.md",
+      "pre_editorial_sha256": "538bc2fd816788cd53ff1feb179514632c987b6856fd9ae92fd6ef5c945e65dd",
+      "current_sha256": "238ed5d1054ae03f5183c77ec2cb86cfd21f51d99e31119ae2b4d1d9a01065d5",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24.md",
+      "pre_editorial_sha256": "2b7eb6a1cc0420f847c6b7922e9b958cb3f78849bc64ce7267cadc914f36ea0a",
+      "current_sha256": "5244280cd12060c3bb5729e200d76a81f8e78a3b20a6181589be038bb3281973",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-project-scenario-loader.md",
+      "pre_editorial_sha256": "1db360d41f30b5385700b7cd0df171751b9274c359d63c8692e6ff7d27c25ebc",
+      "current_sha256": "1661309cad928988ccbfc24e9136e738f3fa435260312e66ea2d0a955c082319",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-action-output.md",
+      "pre_editorial_sha256": "641fbc991b13ec0b1fbca991f6d15775d47805bfea40272298c8e80871b2ab3f",
+      "current_sha256": "b660a012b15fb47c2f270b7d2d58720103865aed9f8045d7e59b5ff73296c18a",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-action-request-values.md",
+      "pre_editorial_sha256": "c9b66541bd2d45a02188a414363a91254df8ccf61d16a752bbf8c79212f3434c",
+      "current_sha256": "e0ed5b26b4b50e21f09a41fd88b3ad9d7e6eb15c93f739f4c8fb3448e762aca4",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-action-retained-state.md",
+      "pre_editorial_sha256": "b3686b6cf85ce9f02e038ca7687bf8e98ea4aa4ea7b6a1bdfb87216748404c68",
+      "current_sha256": "3b2e34e450e41966522b51f3aaeb7c9f931fb706816bf9f8ef1b92b9a516e5b0",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-actions.md",
+      "pre_editorial_sha256": "489e4f7bd56b212139f7ade028cefaa26b2b6062cb3d9ee32eb4c454b3a52fe9",
+      "current_sha256": "8e91216417e268ab3ca1a88429ab3eb730a3034b1b8d147959e021e3dad4f460",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-cancellation.md",
+      "pre_editorial_sha256": "361effbac491faf6daa0dd91da9d67ee76b39321afca2a5e760a6648df92a3ab",
+      "current_sha256": "6bd07fb2f37176de05861724cec51b3157f9aacff7e0e93c7c68f28eae75e361",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md",
+      "pre_editorial_sha256": "0306fe7a480c2111933b39fbe22a39ba7b3483264c48110c2dd3025cafb2c492",
+      "current_sha256": "5897494f52a61b34972296de44e6e2b2e3a9a7e2194402337a6de85cd00d0e8c",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-routing.md",
+      "pre_editorial_sha256": "c7e309cf81b4a32110db37f441a820d04d08ece7554c07a38833bc8c72205409",
+      "current_sha256": "67b8741f60ebd9ea402ac2da848bcf3be683c5059b0d538b7d3e213eb7e5a773",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-trigger.md",
+      "pre_editorial_sha256": "c8b300d671f145553cf65821c8db2dc8eab1cc3ddc9d950658660ae1fab5527c",
+      "current_sha256": "c0756339fb2907761f56eb6f2599fbdff0f77ef8f9dee088eb13c8a43b336ee8",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-factories.md",
+      "pre_editorial_sha256": "f670582ed8e8dc49065215dde6f64f59b9ab4f34462b6546a0b509f715b77388",
+      "current_sha256": "be472ad317e93ea150385d358e41002896d28088c987cd517129083900cc19d9",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-knowledge-handoff.md",
+      "pre_editorial_sha256": "6a3e6bc1e82379e0b403fbaa93d18886213a0687606ef418abf208edcdc29008",
+      "current_sha256": "0222b0fcac58082d63b8325079754fb89e9a5dfccfc58726e2f97efd32f77ff5",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-lifetime.md",
+      "pre_editorial_sha256": "2618b7d557e60d4953044a8eaa75d4a2e42b0e276e64dc18a0787b98c7216dc4",
+      "current_sha256": "dacf4eaefa6893eefc902678903123dc2498728327b7c6f9249973e4f98d85ec",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+      "pre_editorial_sha256": "4e2cf1f6d26e9b04debbd14a8e0e5fac1f61e87826850bfdce853f4547196c76",
+      "current_sha256": "4530a90eb547893c7f96c3ff9e728e9d640012ad1ad7e85e12ed0e112480a7b5",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md",
+      "pre_editorial_sha256": "69f408a664e4331c2d756285e3498ca7bbb777ae9d7c1a3a50d33951394df13a",
+      "current_sha256": "49b961e7054601b69eb77a30d88f160233e3db548001182886ec3f349c5a2d08",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-startup.md",
+      "pre_editorial_sha256": "3650604c30ff0268e5d0743efb05a27dbec327a09c195a9bc92b5cd09977d0ed",
+      "current_sha256": "53c88d0335af496e008018d0529ddbebcd3ebbf72f485deb960ab04aab8d0870",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-time-scenarios.md",
+      "pre_editorial_sha256": "fe129d97448d6e09bffe82c6b536bb252890f306580c7b8224690c330a07aefa",
+      "current_sha256": "a0c7ba879d09569bddcb8a111e63a873a637166e21a22371f3bcd36e58253604",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-trigger-serialization.md",
+      "pre_editorial_sha256": "1ada24f848b42554cc44deaca92cfa3d346e7625d6453ecb1cdeaa80191bb325",
+      "current_sha256": "10fa86874164ac2366f003bb715790a2d986eaa065462200111318438f710b57",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "pre_editorial_sha256": "fe62c6fc373713f9d873656d49e53a9f729bf7306f70588424f54f379dabc981",
+      "current_sha256": "8d6e2deaca3a24da5d5428754efa7c2027ff036033ab7de8a177631bea435eee",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-f460-f461-input-admission.md",
+      "pre_editorial_sha256": "f34d48d0f30437a2e91254ae5be5962c8f73556aab9d7deddef2529a62127982",
+      "current_sha256": "c5cad42569d5e3ee89dc77ed930bd0ffad2b3e7666a8fba0dcebc75ccc752629",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/remaining-firmware-database-handoff.md",
+      "pre_editorial_sha256": "800dbf69ca31d7d6420ededc3630512cbfe35d287685f636b7db8cdffed9476a",
+      "current_sha256": "85d876e19e0717880770eb3e394d7a50e2138b492cb132e034f24365592ddaf5",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "scenario-engine/README.md",
+      "pre_editorial_sha256": "b9b0a264dd8e84e8d1161de4a21c4a391f52cc9c2e857413452733734c0baa13",
+      "current_sha256": "09ffb45931c4a889f51ab45cfd197468f75950ff2ecf5a3bca2c1bd1e38e4248",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "scenario-engine/open-questions.md",
+      "pre_editorial_sha256": "2a60ee5bebaed07696a94cd601092f5caba82e7a46e331707c1efa21be5fb7a7",
+      "current_sha256": "4cfd5ddf089337b0497a67f5110381a2aa72641f14f86fe72a3107292e439e20",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "scenario-engine/scenario-suite-database.md",
+      "pre_editorial_sha256": "a1697760814082db62e7cc93b9694d85a044cc10b27f3a49cd080e36a80dbbb9",
+      "current_sha256": "4b73517042f7615e67218c9ff353fee467f3ef05df063b52158fd80a0a298c8e",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "scenario-engine/scenario-suite-generator.md",
+      "pre_editorial_sha256": "2d13975a4167754c4b6c411b1febd671cbd95df62659bafe3e98d666f358314b",
+      "current_sha256": "c765bffa9b4acf5b663bbf12233fab1e1044c71f73c1134c934c9ed37db64231",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "scenario-engine/scenario-suite-variants.md",
+      "pre_editorial_sha256": "2547a50c1efb2e2912b41bb329572a4274c0b98ab55aa1a777776e030afb94ab",
+      "current_sha256": "de477cc2c82359818d6486a1b6d87a0ff70e1c80584004271a50f83449bbead8",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "scenario-engine/sources-and-identifiers.md",
+      "pre_editorial_sha256": "888c136f1a550e6de53fcab1e98057782f967a4a79555e5bb96554cb0cb8718f",
+      "current_sha256": "7b0ad59ba2ea36a8b35270426846aa5fad3c0e901ddfa31b1caac7cdca255e4c",
+      "changed": true,
+      "role": "Current conceptual reference/navigation; original exact pre-edit version privately retained; historical validators retain old expected identity"
+    },
+    {
+      "path": "scenario-engine/server-scene-processing.md",
+      "current_sha256": "6244922718434d71e094d70c52b2c394f5dfa7c4d69fff9fc772d17596ad4491",
+      "role": "New canonical server-scene model; source-specific semantics, independent review"
+    }
+  ],
+  "workflow_ledgers": [
+    {
+      "path": "devices/work-queue.yaml",
+      "pre_editorial_sha256": "1850e9d68825d403851e894b3b26fe0642da4f1705c5ab6fe1c62017030859f6",
+      "current_sha256": "10ac817c9a174bcdf45b2006d1583654d455bbed6e8e741d8a5272f6b96245aa",
+      "changed": true,
+      "role": "Device acceptance workflow ledger; current actual semantic and validation transitions recorded separately; not a reader-facing reference or canonical Machine KB document"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+# MHCatalogue comparison: Objects, configuration and relationship scope
+
+The firmware catalogue is substantially a subset of the Suite catalogue in this area, with one additional Object and several new associations. It is not a simple subset at every level. The important configuration distinction is **48 repurposed same-ID rows,20 same-owner field metadata changes, and114 equivalent fields with changed IDs**. Comparing configuration IDs alone would turn reallocation into false product changes.
+
+This report compares declarations, table relationships and complete typed row bags. Original firmware/vendor execution, stored-expression evaluation, protocol/device testing and network operations are all0. It does not establish accepted frames, generated configuration, active Object placement or physical support. No configuration defaults, credentials, keys, arbitrary filter text or raw condition expressions are exported.
+
+## Sources, equivalence and coverage
+
+| Source | Original path | Bytes / SHA-256 |
+| --- | --- | --- |
+| Suite | `work/installer-database-audit/2026-10-31/recovered/f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5.bin` |2625536 / `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5` |
+| Firmware | `work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/matrix_mx/MHCatalogue.db` |2233344 / `79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb` |
+
+Every connection uses URI `mode=ro&immutable=1`, `query_only=ON` and `trusted_schema=OFF`. Source hashes are asserted before querying. The20 relationship tables below are fully compared, with10 owner/dictionary tables loaded for context. All75 stored table definitions match. This is deliberately not a claim of identical whole database schemas or indexes; parent analysis owns the complete schema/index census.
+
+The explicit external `EN_KEY_OBJECT.key_object` value is unique in both sources. Its94 shared values have completely identical Object rows, including IDs, descriptions, slots, visibility and family. This proves an unusually strong anchor here rather than assuming equal integer IDs imply equality. For firmware-owner contexts, all104 shared `EN_ITEM` rows are also complete-row identical, with no changed same-ID item row. The logical configuration key uses external Object code (or explicit zero sentinel), firmware owner item identity/description/family plus version/revision/slot/status/default declaration, field name and idx. The two sources have **zero duplicate configuration contexts** under this explicit key. Zero owner values are represented as sentinels, not actual Object/Firmware0. No stored expression or missing owner is silently evaluated or invented.
+
+`TABLE_COVERAGE.v1.json` contains complete counts, primary keys and changed-column frequencies; `RAW_DELTA_IDENTITIES.v1.json` covers all changed full-row fingerprints/multiplicities and every same-PK update key. It intentionally uses hashes rather than dumping configuration values. `QUERIES.v1.json` records202 SQL statements and counts. Selected rows below have exact source/table/PK references in the evidence. Owner-linked projections follow each source's own parents; filter IDs can have multiple Object/Firmware headers and are not treated as a globally unique parent by themselves.
+
+## Complete selected-table comparison
+
+Counts below are complete typed raw-row bag comparisons. A row changed at the same primary key contributes to both source-only columns. These are row counts, not feature or command counts.
+
+| Table | Suite | Firmware | Suite-only rows | Firmware-only rows |
+| --- | ---: | ---: | ---: | ---: |
+| EN_KEY_OBJECT |158|95|64|1|
+| EN_VIRGIN_OBJECT |18|14|4|0|
+| AS_OBJECT_COLLECTION |1352|1151|212|11|
+| AS_OBJECT_FIRMWARE |827|470|411|54|
+| AS_OBJECT_SYSTEM |251|179|73|1|
+| AS_OBJECT_VIRGIN_OBJECT |102|87|15|0|
+| AS_OBJECT_FUNCTION |4|4|0|0|
+| AS_FIRMWARE_VIRGIN_OBJECT |75|58|23|6|
+| EN_SLOTS |1725|1153|675|103|
+| EN_SLOT_KO_VIRGIN |169|138|45|14|
+| AS_SLOT_CONDITION |1000|912|88|0|
+| EN_CONDITION |488|460|28|0|
+| EN_CONF |2883|1760|1294|171|
+| EN_CONF_RANGE |14346|11412|3289|355|
+| EN_FILTER |1909|1649|372|112|
+| EN_FILTER_RANGE |6152|4848|1454|150|
+| AS_HIDDEN_KCONF |289|266|27|4|
+| AS_BUS_INTERFACE |39|24|15|0|
+| AS_BUS_ITEM |499|201|300|2|
+| AS_ITEM_SYSTEM |223|113|112|2|
+
+Among these20 tables, only `EN_CONF` changes complete rows under shared declared primary keys. Thus the460 retained condition rows and912 retained slot-condition links are exact raw subsets, not newly altered expressions. Virgin Object rows and Object/Virgin links are also subsets. Object/Firmware, collection, system, firmware/Virgin, slot and filter additions prevent describing the entire graph as merely a subset. No changed runtime condition result is inferred from those declarations.
+
+Ten explicit dangling-reference count probes per source return0, including nonzero configuration Object/Firmware owners, range-to-configuration, filter-to-configuration/Object-Firmware, filter-range-to-filter, slot-condition-to-slot/condition and hidden-link-to-range/configuration. This is a scoped join check, not complete relational validation or proof all intended relationships are declared foreign keys. `SCHEMA_AND_KEYS.v1.json` preserves actual declared key/FK metadata; names alone were not promoted to FK guarantees.
+
+## The additional Object and exact source relationships
+
+The firmware-only external Object is **39**, database row `EN_KEY_OBJECT.id_key_object=39`, description `Actuator Control Item Loads`, family12, slots text`1`, visible1. There are64 Suite-only external Objects, with their complete safe Object rows retained in `OBJECT_EQUIVALENCE.v1.json`. All94 shared complete rows are identical; no Object was matched by a similar label or an assumed stable numeric ID.
+
+Firmware `AS_OBJECT_FIRMWARE.id_object_firmware=71` links Object39 to firmware321. `EN_SLOTS.id_slot=71` references that relationship with `first_slot=0` and `fixed_ko=0`. Source firmware321 is item533, version/revision literal`-1/-1`, slots1, status1 and default1. These source flags are declarations; this report does not assign undocumented status meaning or a running firmware release. Item533 is `Energy control actuator` in the source, rather than MyHomeServer1.
+
+Object39 has system association `(39,1)` and11 collection associations (collection IDs1..10 and156, `max_device` literal`N`). It has four selected fields: `A` id315, `PL`316, `CC`218 and `G1`219. Safe range metadata for `A` id315/range779 gives min0,max10,digit2,step1; `PL` id316/range780 gives min0,max9,step1. These numerical declarations do not independently define a complete accepted addressing grammar or electrical capability. All raw defaults are withheld.
+
+The exact source queries for the owner declarations are reproducible without application execution:
+
+```sql
+SELECT * FROM EN_KEY_OBJECT WHERE key_object=39;
+SELECT * FROM AS_OBJECT_FIRMWARE WHERE id_key_object=39;
+SELECT * FROM EN_FIRMWARE WHERE id_firmware=321;
+SELECT * FROM EN_SLOTS WHERE id_object_firmware=71;
+SELECT * FROM AS_OBJECT_SYSTEM WHERE id_key_object=39;
+SELECT * FROM AS_OBJECT_COLLECTION WHERE id_key_object=39;
+```
+
+## Why the68 changed configuration IDs are not68 changed fields
+
+`CONF_ID_CLASSIFICATION.v1.json` preserves all68 update keys, changed-column names, complete source row fingerprints, both resolved owner/field contexts and linked child range IDs. Under the stated context key:
+
+- **48 same IDs identify different owners or fields.** Twenty-one change their name to`AID`; another27 retain name`AID` but belong to different firmware owners. Their child range ID sets have no overlap across the two sources:88 Suite child rows versus48 firmware child rows. They must not be read as inherited range settings for the former owner.
+- **20 retain the same logical field.** Ten are Object218 group progressive changes, nine are Object401 metadata/address-field changes, and one is Object130 visibility metadata. Their precise deltas follow below.
+- Independently, **114 unique logical fields move to different IDs with all non-ID metadata unchanged**. All114 are recorded with both source IDs and full owner context in `NORMALIZED_RELATIONSHIPS.v1.json`. This is a concrete ID-churn result, not an inference from unchanged field names alone.
+
+For example, Suite `EN_CONF.id_conf=5293` is `AID` for item1455 `Web Server A/V Bus`, version1/revision0. Firmware row5293 is `AID` for item1162 `Load management central unit`, version3/revision0. The shared integer5293 therefore does **not** demonstrate a changed F454 AID definition. Its source child range38105 is replaced by firmware child37447; each belongs to that source's own parent. This example is fully pinned by `CONF_ID_CLASSIFICATION` key`[5293]`.
+
+Owner-linked comparison reduces the raw configuration difference from171 firmware-only rows to57 and from1294 Suite-only rows to1180. The114 exact ID moves account for the difference. Of the57 remaining firmware-only projected field rows,20 are the actual same-owner metadata updates and37 lack an equivalent Suite field under this key. That last37 is a scoped catalogue count, not37 new product capabilities. Raw range differences355/3289 become233/3167 after parent-context and range-ID normalization; the collector hashes all non-ID range content, including values/defaults, privately for comparison without exporting it. Remaining differences must not all be dismissed as renumbering.
+
+## Selected genuine field metadata refinements
+
+### Object218: group ordering metadata
+
+Object218 is `Shutter actuator`, database Object ID514. Configuration IDs1332..1341, names`G1`..`G10`, keep their indices240..249, group type3, ownership and other complete metadata. Only progressive changes from30..39 in Suite to21..30 in firmware. This is exact ordering metadata, not a changed group number range or a changed wire index. The safe range for G1 remains min0/max255; this does not prove every endpoint is protocol-valid.
+
+### Object401: address metadata and mode label
+
+Object401 is `Automation control`. Fields1541..1549 have progressive values decreased by1, retaining their field names and indices. `ADDR_TYPE`1542, `A`1543, `PL`1544 and `DEST_LEV`1547 also change `id_conf_type` from empty string to integer0. This is a real typed difference: neither value is silently treated as NULL, and the retained type dictionary has named IDs1..4 but no row0. No meaning for type0 is invented.
+
+The actual numeric range metadata for `A`1543 remains0..10 and `PL`1544 remains0..15, while the Object39 PL example is0..9. Therefore neither Object's range is used as a universal addressing rule. `INST_LEV`, `DEST_LEV` and related names are not a complete level/interface conversion algorithm.
+
+For `M`1541 the four range IDs also change: Suite38098..38101 versus firmware3764..3767. The rows matched by their selected progressive values have the same non-ID content except the label at progressive3: `Blades control and bistable` becomes `Bistable and blades control`. `SELECTED_RANGE_LABELS.v1.json` records the exact narrow SQL, source hashes and safe labels; no default or compiled mode execution is exposed or claimed. The collector comparison retains this as a non-ID content difference, not four new modes.
+
+### Object130: hidden metadata
+
+Object130 `User interface settings` is database Object ID480, distinct from its external code. `EN_CONF.id_conf=4379`, `PROXIMITY_ENABLE`, changes hidden0 to1 with the same owner/name/index and otherwise identical complete field row. It is not proof that proximity functionality is disabled, unsupported or physically absent; visibility and consumer behavior remain separate.
+
+## Canonical product applicability and encyclopedia implications
+
+Exact commercial-code probes find Suite F454 ->item1455/two firmware rows, MH202 ->item1902/one firmware row and MyHomeServer1 ->item2198/thirteen firmware rows. All three exact probes have no commercial row or firmware owner in the embedded source. Suite-only external Objects include150 `Gateway Open SCS`,216 `Enhanced Web Server Audio/Video 2 Wires (F454)` and61 `Scenario scheduler`. The embedded source therefore cannot silently replace the canonical Suite Device models or erase previously source-scoped module associations. This does not say that a running MyHOMEServer1 lacks gateway/scenario capabilities or cannot interact with devices omitted from this catalogue.
+
+New encyclopedia evidence is the additional **embedded-source** Object39/item533 graph and source-specific configuration/range metadata. Refinements are the explicit20 same-owner differences,114 equivalent renumbered fields, and the warning that Object IDs, external Object codes, configuration IDs, field indices, progressive ordering and catalogue product owners are distinct axes. The original Suite records remain accurate for their source snapshot; no whole-catalogue or physical-support correction is justified merely by the embedded selection. Parent firmware/package and full75-table tracks supply complementary applicability evidence rather than being replaced by this20-table scope.
+
+## Reproduction, preservation and limits
+
+```text
+python3 -B work/mhcatalogue-comparison/2026-10-31/objects/collect_objects_v1.py --check
+python3 -B work/mhcatalogue-comparison/2026-10-31/objects/collect_selected_ranges_v1.py --check
+```
+
+Main collector:12 outputs including manifest,202 logged SQL statements,20 relationship tables plus10 supporting owner/dictionary tables from each source,68 same-ID classifications,114 unique equivalent field moves. The narrow mode-label collector adds one output/one SQL per source. Both refuse existing generated output files and `--check` compares bytes without writing. Immediate first-candidate snapshots preserve main collector+12 outputs (13 copies), plus the narrow collector/output (2 copies). The report is frozen separately on publication; no old candidate was overwritten.
+
+Development history is explicit. A pre-output ad hoc SQL typo omitted whitespace after BETWEEN and failed before any evidence output. After main output freeze, an exploratory hypothesis that all20 same-owner child-ID lists matched failed for M1541; saved first output already contained the differing IDs. That prompted the separately versioned narrow label probe above, not an edit to original evidence or a silently weakened check. No firmware execution, user-generated configuration or full compiler behavior is represented by either host analysis.

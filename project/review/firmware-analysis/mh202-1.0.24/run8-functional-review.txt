@@ -1,0 +1,34 @@
+# MH202 run8 functional independent static source review — PASS
+
+No corrections required. This is an independent review of functional/run8; reviewer authored the distinct protocol/run8 WHO/WHERE work. Only this review file was written. Original images, author artifacts, completed dossiers and repository documents remain unchanged.
+
+## Reproduction
+
+`python3 -B work/mh202-firmware/research/2026-10-30/functional/run8/collect_evidence.py --check` passed15 generated outputs plus manifest,10 original spans,27 exact words,4 original inputs,2 format identities and6 finite host cases. Independently parsed the originals' ELF PT_LOAD mappings using ImageVFS without importing author code, and checked all10 span byte offsets/hashes,27 word values,4 original file hashes,15 manifest entries and2 format target bytes. Separately recalculated all6 selected first-field/send/second-field host decisions.
+
+Reviewed original selected receive scan, first1 send-result branch, queue feedback, reverse TR query and forward measure body, reverse metadata copies and STM flag/key/kind branches. Original ARM/vendor/library/parser/JS/PHP instruction execution, emulator hooks, actual callbacks, send operations, timers and live I/O are0 in this area/review. The separately attributed parent comparator corpus1485/75 remains historical and is not presented as this batch's execution.
+
+## Source and scope checked
+
+- Receive eligibility: the selected readable/condition and accumulation guards remain upstream premises. Exact scan format is `*%02u*%02u`; first output SP+64 and second SP+60 are correctly ordered. Source0x291c does not test sscanf conversion count before later field use; successful two-field extraction is supplied, not asserted as an executed parse or malformed-input finding.
+- First numeric field1 selects0x2a94. Zero/nonzero second-field logging arms converge at0x2abc: the explicit0x2d48 branch returns there. At0x2b1c, r5 has been explicitly set0 at0x2ad4, so the tested send return is nonzero, including a supplied negative value; it is not a positive/full-length test. Actual payload/setup/send/GError behavior is left opaque and unexecuted; no authentication meaning or physical acknowledgement is assigned.
+- Queued feedback:0x2c80..0x2d3c retains the selected private callback/queue nonempty premises, reloads second scan field SP+60, assigns flag1 for nonzero/2 for zero, removes the selected queue link and updates existing record fields without generating a new key+60. Callback/timestamp and optional next-send calls are boundaries, not successful runtime delivery.
+- TR forward kind2 source0x1918..0x192c writes opcode0x1c and low byte0x80; the preceding address and zero byte, selector/context guard and brief constructor call establish the selected supplied body contract. Reverse types3/9 route uses the original ASCII decoder first; conditional coherent decoded nonB8/1C80 fields select the exact format `*#0*%s%s##` and scsmsg_to_openlist. Address0x11↔11 and empty brief suffix are declared primitive/layout premises; no codec, address conversion or native raw parser ran.
+- Reverse wrapper copies source+52/+60 into its format2 record. The later successful coherent parser kind2 and field-to-STM eligibility are explicit assumptions. Matched key/state1/flag1 sets state2 then pending kind2 sets state3; parsed kind2 exits at the unsigned2/3 exclusion before the ordinary data-address/counter branch. Thus this is a reconstructed query candidate, not a newly measured state or counted data reply. Flag2 selects reset/NACK. Future state3 timeout ACK is conditional on that state actually persisting until callback, never a scheduled or observed experiment.
+
+The host cases faithfully distinguish first2 outside the selected route, send0 outside queue feedback and negative nonzero send satisfying the local branch. They do not prove natural queue/head correlation, complete request/feedback body identity, TR/STM runtime ordering, accepted wire grammar, actual timeout, retained-counter history, lifetime or physical success. Selected imports/normal primitive contracts and live binding remain limits; no complete provider/runtime claim is inferred from named call sites.
+
+## Exact reviewed pins
+
+Paths below are relative to `functional/run8/`. Pinned manifest transitively covers all15 generated evidence outputs, excluding report/reviews; report and collector are pinned separately.
+
+| File | SHA256 |
+|---|---|
+| `REPORT.md` | `942828ec9273f390d16e5ebe11fab60c8e9be67cf97b9393992549cd403803eb` |
+| `collect_evidence.py` | `2a3badc6f7f0d92250d53e8834d29cbdba1847ed26ab919e6e110e1b370e0ab0` |
+| `output-manifest.json` | `459f983efb17c7d322d08bfadbbac7ccd8f30188561216bbc421647a82bf2693` |
+| `input-hashes.json` | `e930bbb8c96d47e82a34f9359ba0de7d4f5576e252489f97800b8b3146fc38c4` |
+| `original-spans.json` | `7a189e1dccf1ceb70945709afc712c3153b5d1f50c48a62537f423da676f6f9f` |
+| `critical-words.json` | `8c4c68982ff49ab624606a5382c1522a88a58308426189de1da72a7cd09aac1f` |
+| `safe-parser-and-query-formats.json` | `f1758fb36f26c5a9ecfd57201691ab29c644d0ebb5ccd01f66c8c7dca964827d` |
+| `host-selected-feedback-chain.json` | `c8f84493efea94676b97b836d7dbe4dcd44be557c75f2bb4ac21baf7399355af` |

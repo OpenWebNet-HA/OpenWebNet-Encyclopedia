@@ -1,0 +1,23 @@
+# Independent F453AV run10 final scope-boundary review
+
+Reviewer: f450_archive_analysis. Result: PASS for final-only finite-scope boundary, original identity pins and ZERO new functional coverage. No source packet, collector, new update contract or source/runtime approval is admitted. No correction requested.
+
+I independently verified the exact SCOPE_BOUNDARY.json identity:4084bytes/SHA25648066e9d03ba9d7f3bcc91d154005194cef072a8013323c813016d640dff3ff4. Its immediate first-scope-boundary copy matches byte-for-byte and the precomputed index row matches its size/hash. I also checked all five selected original path/size/hash pins, rejecting symlinks, and joined the two normal-script identities against their own normal regular-file manifest records. These were byte-identity/provenance checks only: no selected script body was interpreted, sourced, executed, excerpted or expanded by this peer.
+
+The note identifies the author's finite path-discovery/qualification route and explicitly withholds a genuinely distinct permitted update/recovery-file/manifest-selection or safe nontransport contract. The selected device-output helper is not promoted into an update contract or hardware behavior. This review accepts that narrow qualification boundary; it does not independently expand/retry the helper, surrounding configuration, options files, boot environment or provider route to decide their implementation. No source-body/device-value excerpts or private configuration appear in the boundary note.
+
+The finite route is correctly separated from global absence: it does not exclude other update mechanisms, original files, companion tools/documents/hardware or every possible source path. Filename/product/package/header/entry/marker/module labels remain contextual evidence and do not establish actual boot, selected application overlay, updater selection, install/flash/reboot/mount, successful device output or any runtime outcome. Missing qualification is a retained limit, not a source finding about nonexistent functionality. Status FINAL_ONLY_FINITE_SCOPE_BOUNDARY and new_functional_coverage0 agree with the explicit parent STOP-new-investigations direction.
+
+There is no canonical collector --check to run because the author generated no source packet or collector for this boundary. The peer therefore checks the exact note, identity/manifest joins, finite claims and first copy only. Earlier original/synced/completed evidence, first copies, source manifest, public/repository artifacts and CPU ledgers are not replayed or rewritten. No new F450/F455 gap/CPU/alias/resource/helper investigation is performed; denied F450 helper0x2eec4..0x2efc0/body/equivalents remain unaccessed and unexpanded.
+
+All original/vendor/native/helper/emulator/model/fixture/SQL/targetOS/device/service/network/bus/mount/flash/physical executions, actual database recovery/generation and remote writes are zero in this peer. Inherited one encrypted F450 supporting container/zero plaintext databases is not a new archival/readback operation. Root alone owns final integration, public/archive records and automation closure. No blocking issue found.
+
+## Reviewed identity pins
+
+- work/f453av-firmware/3.0.14/analysis/normal-regular-files.json: 88118 bytes, SHA256 ff08fcc12cd10c4720101f951e8a96e2a665fe44a86cde5750ae32e1b4b6f536
+- work/f453av-firmware/3.0.14/analysis/recovery-regular-files.json: 55359 bytes, SHA256 4e93d6d001272cb7a68bc6c72b2162b1bb0caca9efe25175a75469ef2a1b73b2
+- work/f453av-firmware/3.0.14/analysis/application-regular-files.json: 175124 bytes, SHA256 e42fa8bb995359192b37a7000e74f114c036900c18c9dcffe7e3473050365664
+- work/f453av-firmware/3.0.14/analysis/rootfs/bin/bt_rearm.tcl: 80 bytes, SHA256 ae15e521827e4d63fe2039a4668f66a2313cf34fb52758950a959e197b7da3c4
+- work/f453av-firmware/3.0.14/analysis/rootfs/sbin/init: 4269 bytes, SHA256 0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb
+- SCOPE_BOUNDARY.json: 4084 bytes, SHA256 48066e9d03ba9d7f3bcc91d154005194cef072a8013323c813016d640dff3ff4
+- first-scope-boundary/INDEX.json: 264 bytes, SHA256 2bd5b1c355838856cfaef7c75ad8896abc267a630f8b919ee6db45c6124b297e

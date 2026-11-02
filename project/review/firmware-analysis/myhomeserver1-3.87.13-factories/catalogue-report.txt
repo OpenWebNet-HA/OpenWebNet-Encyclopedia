@@ -1,0 +1,99 @@
+# MyHOMEServer1 3.87.13: the catalogue reader's SQL owner
+
+The earlier selected reader now has a concrete source owner and SQL producer. Its method address `0xa8c00` belongs to the relocation-backed `kobj_value_139` vtable. That class's factory constructs the same SQL string consumed by the method and also contains an inlined version of its row reader. The actual query has fifteen columns: **column 13 is `EN_KEY_OBJECT.slots`; column 14 is `AS_OBJECT_SYSTEM.id_system`**. They are stored at inner-object offsets20/24 (allocation offsets32/36). These are catalogue metadata fields, not physical channel counts, WHO values or executed device capability.
+
+This is a static, conditional compiled-code join. Original instructions, vendor processes, SQL statements/expressions, JSON parsing, network/bus/device/flash and physical execution are all0. The host text example does not execute SQL. No authentication/session/framing or equivalent route was inspected.
+
+## Source and evidence identity
+
+Original image path `/home/bticino/matrix_mx/matrix_mx`, SHA-256 `96348136c2a0ebe859c689eb6246e3889e5154fdb63ffd5f3fc76975ac596717`. Current ARMv7 little-endian hard-float Thumb2 code is read through the original metadata-only ImageVFS. Linked VAs and file offsets are mapped through actual PT_LOAD headers; no live PIE bias or binding is claimed. In particular, RW vtable/GOT bytes use their own mapping, not the equal-VA/code file-offset shortcut.
+
+The prior authoritative consumer report is frozen under [references-v1](references-v1/INDEX.json). Its SQL-producer gap was correct for its bounded source scope; no old report or artifact is overwritten. This new batch supplies that missing join for the selected class. The earlier separate two-column `AS_ITEM_SYSTEM/main=1` declaration remains separate and is not used here.
+
+[ORIGINAL_SOURCE.json](ORIGINAL_SOURCE.json) pins selected source spans, explicit Thumb halfwords/file bytes, literal arithmetic, relocated data, seven selected R_ARM_RELATIVE entries and initializer registration. [OWNER_ALIAS_LEDGER.json](OWNER_ALIAS_LEDGER.json) records the ownership/offset/argument aliases and limits. No inferred nearest C++ template label is used as a stripped local function identity.
+
+## 1. Method, vtable and actual factory object
+
+The selected address-point is linked VA `0x20a880`, file offset `0x1fa880`. Its first stored method pointer is `0xa8c01` (Thumb instruction address `0xa8c00`). The preceding typeinfo pointer at `0x20a87c` is `0x20cba0`; that object's name pointer at `0x20cba4` resolves to original string `14kobj_value_139` at `0x1cd1a0`. The appropriate slots carry R_ARM_RELATIVE relocations. These independently establish the selected class attachment, without assuming equal names or old firmware class layout.
+
+Factory entry `0xb9934` requests a 72-byte allocation. It sets up shared ownership/control data in the allocation prefix and uses **allocation+12 as the inner object**. At `0xb997e..0xb9982`, it calls base construction `0xb91b0(inner,139,modobj,line_modobj,brand_modobj)`, using the fifth argument on the ARM stack. At `0xb9996..0xb99a4`, its GOT chain is:
+
+```text
+GOT base20de04 + pool offset848 -> slot20e64c
+slot20e64c holds vtable header20a878
+header+8 -> address-point20a880 -> first method Thumb a8c01
+```
+
+The factory stores that address-point at allocation+12. The base SQL string pointer at inner+36 is consequently allocation+48. This alias is directly used by the factory's own prepare call at `0xb99dc..0xb99e0`. Its inlined stores at `0xb9a0a` and `0xb9a1c` write allocation+32/+36, the same fields as inner+20/+24 in the earlier virtual method.
+
+The returned two-word pair contains inner pointer and allocation/control pointer under ordinary construction/ownership completion. Complete reference-counting, destructors, exception/unwind and allocation-failure behavior are not established by this bounded source. No naturally allocated object or private execution fixture is supplied.
+
+## 2. Correct template initialization and copying into inner+36
+
+Stored `.init_array` index11 of72 is Thumb pointer `0x161c9`. Original veneer `0x161c8` tail-branches to the initializer at `0x15464`. In its selected template branch:
+
+- pool `0x16010` plus PC at `0x155b8` yields global string object address `0x210720`;
+- pool `0x16014` plus PC at `0x155ba` yields the full SQL literal at `0x1c4f70`;
+- call `0x155c4 -> 0x95ea0` constructs/copies that string into the selected global object.
+
+The global and later registry addresses are initialized data/BSS targets derived from instructions, not fabricated file-backed pointers or observed live memory. Normal startup/constructor/provider completion remains a premise.
+
+Base constructor `0xb91b0` stores context arguments into inner+4/+8/+12 and key139 into inner+16. It clears fields20/24, initializes its own string storage and reads the global's data pointer/length at `0xb9210`. It then requests the range-copy helper `0x95384` at `0xb921c`, with destination **inner+36**. The original helper copies the specified source range and stores length/NUL; allocation and imported copies are ordinary delegates.
+
+The base subsequently performs these literal-token substitutions in that same inner SQL string:
+
+| Exact token | Stored context source | Conversion call | Replace loop |
+| --- | ---: | --- | --- |
+| `$modobj$` | inner+4 | `0xb923a -> 0x6e810` | `0xb9242..0xb9276` |
+| `$line_modobj$` | inner+8 | `0xb92ba -> 0x6e810` | `0xb92c2..0xb92f6` |
+| `$brand_modobj$` | inner+12 | `0xb9336 -> 0x6e810` | `0xb933e..0xb9370` |
+| `$key_object$` | inner+16, selected literal139 | `0xb93aa -> 0x6e810` | `0xb93b2..0xb93e4` |
+
+The fresh `0x6e810` source performs signed integer magnitude/sign and decimal-digit string construction; original std::string find/replace imports supply the replacement operations. The token lengths are8,13,14,12 respectively. Numeric values are source-context values, not public commercial item/brand/line IDs by assumption. The code binds the literal key139 in this factory, independently of its RTTI label.
+
+## 3. Fifteen-column configuration query and stored meanings
+
+[SQL_TEMPLATE.json](SQL_TEMPLATE.json) retains the exact original SQL literal, its bytes/hash and the complete ordered SELECT expressions. Only schema/column/predicate text is exported; no returned data, default or private configuration value is read. The decisive prefix is:
+
+```sql
+SELECT DISTINCT EN_DEVICE.id_item, EN_CONF.conf_name, EN_CONF.idx,
+ EN_CONF.id_conf, EN_CONF_RANGE.id_conf_range,
+ EN_CONF_DATA_TYPE.id_conf_data_type, EN_CONF_RANGE.value,
+ EN_CONF_RANGE.'default', EN_CONF_RANGE.'min_value',
+ EN_CONF_RANGE.'max_value', EN_CONF_RANGE.'step', EN_CONF.hidden,
+ AS_OBJECT_FIRMWARE.id_object_firmware,
+ EN_KEY_OBJECT.slots, AS_OBJECT_SYSTEM.id_system
+```
+
+The query joins Device→Item→Firmware→Object/Firmware→Object plus configuration/range/data-type and system/brand/line context tables. Its predicates include `EN_CONF.read_only <> 1`, the four substituted context tokens, a whole-range filter exclusion and a partial-range value exclusion; ordering is `EN_CONF.idx`. Those are concrete stored query predicates, not a complete application admission grammar, migration policy or runtime compatibility proof. No host SQLite evaluator is invoked, and NULL/duplicate/filter/provider outcomes are not simulated.
+
+The exact zero-based result positions settle the earlier unknown fields:
+
+| Result column | SQL expression | Virtual reader `0xa8c00` field | Same factory inlined field |
+| ---: | --- | --- | --- |
+| 13 | `EN_KEY_OBJECT.slots` | inner+20 | allocation+32 |
+| 14 | `AS_OBJECT_SYSTEM.id_system` | inner+24 | allocation+36 |
+
+Both paths call `sqlite3_column_text` and decimal `strtol`, then store the conversion result. Later selected rows overwrite the fields; the SQL ordering by configuration index does not establish a unique row, a stable tie order or a singleton system/slot combination. If no row reaches those stores during construction, the base initialized20/24 values remain0 on the inspected path. That source initialization is not observed runtime state or proof that0 means a physically missing object/system.
+
+System ID is a catalogue namespace, not automatically an OPEN WHO or electrical bus. `slots` is the selected catalogue field, not a verified hardware-capacity measurement. The query traverses Firmware relationships, but this source alone does not establish the application's full version/default/status/Prototype/RC eligibility policy or prove an omitted catalogue product incompatible. Later uses of these fields remain a separate question.
+
+## 4. Conditional application registry/caller route
+
+The same startup initializer builds a keyed callable registry at global `0x210720+1020 = 0x210b1c`. Its selected stack-array record at relative offset900 stores key139; offset904 stores the factory pointer obtained through GOT slot`0x20ec9c` (`0xb9935`). Common callable manager/invoker words are stored at912/916. The selected invoker comes through GOT`0x20ee98`, value`0xa2a15`. The array is passed to the original registry construction helper at `0x15dc4`; its complete container insertion/collision/lifetime policy is not independently reconstructed here.
+
+An actual application walker at `0xa1320` obtains current integer keys from an input-owned range, performs preceding context/lookup work, and on its selected guard path uses the **same registry** through PC join `0xa1354` plus1020. The preceding gate includes comparison of helper`0x998c0`'s returned value with word`[singleton+420]` at`0xa1398..0xa139e`; its full semantic purpose is not promoted to an exhaustive admission rule.
+
+The registry search at`0xa13a0..0xa13de` compares the current integer key. On a matching entry with a nonempty callable, `0xa143c` invokes its function wrapper. Under normal completed initialization and retained key139 entry, that wrapper is`0xa2a14`, which loads and invokes the stored factory pointer at`0xa2a3a`.
+
+The caller's argument source is concrete: pure getters`0x10017c`,`0x1001b4`,`0x1001d0` load current context fields+76,+80,+84. Caller stack placement and wrapper dereferences forward them as modobj,line_modobj,brand_modobj to factory`0xb9934`; base construction then supplies the already proved four query substitutions. The origin/validity of these current context numbers and key range is not traced beyond those loads. The caller appends/moves the returned owned object on its selected continuation, but this report does not establish actual startup reaching the walker, an observed key139, later virtual calls or field publication.
+
+The registry mapping is conditional on normal initializer/container/callable completion and no effective interposition/later mutation replacing that entry. The source record and local lookup/invoker route are positive; complete registry closure, natural activation, all error cases and an installed configuration are not claimed.
+
+## Reproduction, preservation and remaining boundary
+
+`python3 -B collect_owner_v1.py --check` performs host-only byte reproduction. The collector uses exact original reads, host binutils, PT_LOAD mapping, explicit little-endian Thumb halfword assertions, selected relocation/PIC checks and a plain-text positive-integer substitution example. The example is clearly synthetic; it is neither accepted-device input, original string-helper execution nor a SQL result. No old fixtures or layouts are reused.
+
+Initial generation exclusively creates outputs and refuses existing candidates. Report, collector and outputs receive immediate exact first copies; the snapshot index is constructed before its own file is opened. The current source, earlier reports and frozen prior candidates remain unchanged. No generated output was overwritten or canonical failure corrected in this batch.
+
+Confidence is high for this selected source chain: vtable/RTTI→factory/base SQL construction→correct result-field names, plus the conditional same-registry application lookup/invoker. The key remaining joins are naturally produced key/context values, the preceding admission guard's full meaning, later uses of slots/systemID, complete row/filter/version policy and runtime/provider/ownership effects. This resolves the earlier selected reader's SQL origin; it does not complete catalogue consumer semantics or broader MyHOMEServer1 functionality.

@@ -1,0 +1,9 @@
+# Overnight run04 source and reference integration
+
+Two new bounded source packets add F450 registered configuration producers for the prior archive-request fields and one MH200N token-to-destination copy request. Root adds no new binary/provider investigation: it integrates reviewed first exploration/run01..04 evidence into the local encyclopedia with exact source exports and a preserved old firmware-index version.
+
+F450 db_name/db_compressed producers narrow the local configuration contract; the actual temporary file/configuration, full markup state, owner lifetime and extra50 association remain open. MH200N's third token reaches an actual imported string-copy request with a compiled destination; no semantic filename, extent/capacity, safety, installation or full grammar is inferred. These are conditional source facts, with independent peers required before completion.
+
+The [encyclopedia overview](../../../OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f450-f453av-f455-f459-mh200n.md) and its review capsule distinguish the six exact packages/five curated product roles, datastore prefix survey, actual encrypted support archive, selected source requests and unresolved runtime/physical behavior. Device pages are read-only role context; no source-manifest or Device-review upgrade occurs. Prior firmware README bytes were retained before the new row; exact historical substitution is recorded.
+
+No actual database recovered/generated or new R2 upload/readback in this run. Cumulative actual archive remains one encrypted F450support container/zero plaintext databases; original run01receipt retained. All original/helper/native/emulator/SQLite/target/runtime/physical execution0. Host static source readers are separate from earlier authorized private R2hostnetworkwrite. Older MHS/F454/MH202 ledgers and history limits remain unchanged. Function-named authors/reviewer now own continuation; old role names remain inactive.

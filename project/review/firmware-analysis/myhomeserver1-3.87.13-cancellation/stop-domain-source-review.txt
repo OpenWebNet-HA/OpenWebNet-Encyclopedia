@@ -1,0 +1,24 @@
+# Independent shared-stop-domain source review
+
+PASS for the bounded original ownership/reference findings; no author correction requested. This review ran the read-only12-output collector check, inspected the source/query implementations, and independently checked selected original bytes and integrity. It performed no original instruction, native-helper, C++ destructor, target API/process/thread/clock/I/O or semantic host-model execution. The reviewer authored the separate operational-duration constructor report; that does not supply or alter this source's reset/lifetime conclusions.
+
+## Source and finite-query checks
+
+- Independently verified both original ELF hashes, six raw source-span hashes, six instruction-byte guards and six known PC-add joins with fresh PT_LOAD mapping. Original `.bss` is SHT_NOBITS at0x1670f8, size0xf34, containing the domain0x1677b8 and stop byte0x167800. That establishes static placement, not packaged mutable state or current runtime zero.
+- Original init_array contains Thumb0x15475 exactly once at index28. The actual initializer separately requests CV construction at domain+0, writes zero to mutex-related words+48..+68 and explicitly zeroes byte+72. Source0x1549e loads the callback from original relocated slot0x166858; its value is Thumb0xcdaf5. Independent pool arithmetic recovers r0=domain receiver and r2=0x167004 token before the0x154a4 `__aeabi_atexit` request. This is correctly framed as ABI-conditional exit-registration source, not successful registration or natural lifecycle observation.
+- Local wrapper0xcdaf4 preserves the receiver across the D1 request0xcdaf8 and returns it. Candidate provider definitions and bodies at0x97530/0x97540 respectively request memset(receiver,0,48) and pthread_cond_destroy(receiver). The constructor's selected byte range excludes flag+72. The destructor delegate remains opaque, so a local lack of a flag store is not converted into a claim about all possible provider/kernel memory effects, runtime resetting or an actual permanently latched flag.
+- All six known domain joins belong to already established initializer/delay/stop/duration code and are explicitly inherited anchors. These are distinct from scene bytes+144/+145 and per-action completion+4. The report does not reuse a same-numbered offset to invent ownership.
+- The restricted register-only ADD/nearest-LDR query is a syntactic locator over linear Thumb rendering with a24-rendered-line window. It deliberately excludes ADR/immediate-add and does not track all clobbers/aliases or prove reachability outside its manually verified six anchors. The MOVW/MOVT20-row query, rendered direct-init target query and broader offset-store queries have similarly finite, documented limitations. The22 byte-offset72 and747 wider-offset candidates are retained as unresolved syntax, not actual flag writes or completed mutation coverage.
+- An independent scan of each original file-backed PT_LOAD at every2-byte-aligned word reproduced the empty absolute-pointer-value result for0x1677b8..0x167803. This cannot search live/NOBITS state, relative/compressed pointers or arbitrary arithmetic. The empty direct-init rendering query also does not contradict the positive indirect init_array source or exclude indirect reinitialization.
+- Defined dynamic OBJECT enumeration is limited to this one executable and that symbol type. It is not used to exclude computed addresses, hidden/non-OBJECT aliases, other modules, interposition or external mutation. No additional reset is established within the exact queries, and no global absence/defect/cancellation guarantee is asserted.
+
+The collector reproduces12 outputs. Independently verified11 manifest members and14 immediate first-copy members against declared hashes and current bytes; the snapshot includes the report and collector. No author file was edited. Confidence is high for the positive receiver/GOT/wrapper/provider-request chain; negative-search confidence remains only its stated syntax/file-range scope. Startup/exit invocation, destruction ordering, later aliases/resets, successful provider binding, scene stop/completion/relaunch and physical consequences remain open.
+
+## Exact reviewed pins
+
+- `stop-domain/REPORT.md`: `c91d8ac959061cede3645d0d72d947359a0d8af66439701d7b240b2279dac67d`.
+- `stop-domain/collect_stop_v1.py`: `a6af3d8612668aa2e2ede3ff2497405022970e1d4eebe40acc7e86b042babab7`.
+- `stop-domain/OUTPUT_MANIFEST.json`: `1623e89ba913bb41d76a1f5c0439ef37a2a1c3612e7df5e43e04adc7483acdda`.
+- `stop-domain/first-candidate/INDEX.json`: `afd79c2a3f4899185319c8bdebe9f42806b974bfe040e15dee47456c7a4fbf86`.
+
+Original scheduler SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`; selected libstdc++ SHA256 `02d98c9486577d7be0b3fb71b5f0c0b6c090b72554c83640cb525cb3a3c1549a`. The first review is saved exclusively with an immediate exact snapshot; its index was computed before opening it.

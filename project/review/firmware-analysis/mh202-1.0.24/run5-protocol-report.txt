@@ -1,0 +1,85 @@
+# MH202 1.0.24 — original request/raw-text alias and bounded marker provenance
+
+**The second text pointer's source is now established:** bt_device handler`0x1523c` stores its incoming object pointer in the previously examined original-object slot, then stores **that object+0x5e3c** in the second-text slot. This is the embedded raw-text location in the candidate MH202 libopen layout. The two slots hold different pointers but are linked by exact original dataflow; the later text is not an independently selected external input.
+
+That narrows run4's peer-reviewed input-identity gap. It does **not** prove that every existing parsed field agrees with the current raw buffer, that its content remained unchanged, or that the full raw parser accepts a synthetic WHO1000 frame. The later local marker's prior value also remains unestablished. The inspected explicit prologue zero-fills do not cover that local result, and a bounded encoding locator identifies no other direct FP−224 access before its shown address construction; neither is an exhaustive alias/call-effect proof or defect verdict.
+
+Only this directory was written. Original firmware, synced sources, previous reports/reviews and repository documents remained read-only. All methods are host ELF/Python/binutils reads and finite address/range arithmetic. Original ARM/PHP/JS/loader/vendor/library execution, emulator instructions/hooks, live I/O, services, network/device actions and credential/authentication investigation remain0.
+
+## Identity and inherited context
+
+Firmware-image paths and exact normal-image SHA256:
+
+| Object | SHA256 |
+| --- | --- |
+| `/home/bticino/bin/bt_device` | `65dad019cc15cf5036c04ec7ef23d0f9c2f388324f44692f43af37fd82192f70` |
+| `/home/bticino/lib/libopen.so.0.0` | `868eeb717020232c11623224df17bd6b2034fffc2fb80043c39c34b76310fb04` |
+
+`input-hashes.json` pins these originals, shared accessor/archive provenance and the corrected run4 report/source review. Run4's104-key normal factory result and mode7/8 branch map are reused context and not repeated. Candidate provider/layout scope remains the previously reviewed bt_device/libopen model; effective runtime binding and recovery-runtime equivalence are not newly established.
+
+## 1. Original object and second text: exact pointer relation
+
+The concrete handler begins at`0x1523c` with a prologue establishing fp. At`0x1524c`, r3 becomes FP−28672. `0x15258` stores incoming r0 at `[r3−2232]`. The **original parsed-object slot** is therefore FP−30904.
+
+Later, straight-line entry dataflow `0x15338..0x15354`:
+
+| Original VA | Relevant operation |
+| --- | --- |
+| `0x1533c` | Reload original object pointer from FP−28672−2232 |
+| `0x15340` | Add`0x5e00` |
+| `0x15344` | Add`0x3c` |
+| `0x1534c` | Store resulting pointer at FP−28672−2228 |
+
+The **second-text slot**, FP−30900, thus holds `original_object+0x5e3c`. The saved `candidate-parser-raw-buffer-copy.txt` independently shows candidate libopen `CreateMsgOpen` forming that same object offset and calling strcpy into it at`0xb384..0xb390`. This is a provider-specific raw-buffer relation, not a libcommon/F454 object assumption.
+
+The later loads at`0x1e908/0x1e924` use the second-text slot for strlen and `CreateMsgOpen` input respectively; the latter call is`0x1e928`. The input to this second parse is consequently an alias into the original object's raw buffer under the unchanged pointer/object premise. It is not a copied independent string in that slot.
+
+This establishes pointer provenance, **not arbitrary object consistency**. An existing parsed WHO field and embedded text can only be treated as coherent under additional upstream construction/normalization/no-mutation assumptions. Full earlier parser eligibility and bytes at this address were not executed or proven for a supplied raw fixture. Run4's correction remains historically valid: its reviewed spans had not yet established this relation, and they were not silently rewritten.
+
+## 2. The selected diagnostic route bypasses the two specialized WHO bodies
+
+The entry compares imported `Extract_chi()` text against literal`13` at`0x153cc`; mismatch branches at`0x153d4` to`0x1ca20`. That second block compares against literal`1013` at`0x1ca34`; mismatch branches at`0x1ca3c` to the diagnostic membership path`0x1e288`.
+
+The PIC base is independently reconstructed as`0x2dd68` from original`0x15264` and pool`0x16184`; pools`0x161ac` and`0x1c43c` resolve to exact WHO text`13` and`1013`. Under the selected original-object getter text`1000` and ordinary strcmp/getter contracts, the handler bypasses those specialized bodies. This is an actual original path from the new entry/pointer definition to the previously reviewed diagnostic branch, not an assumption that all intervening WHO families run.
+
+This does not certify the complete downstream raw parser or all called-function side effects. The newly established raw-buffer alias and these selected comparisons reduce the unknown source path; they do not manufacture accepted WHO1000 fields or a captured request.
+
+## 3. The two direct callers copy an object, not a raw-input acceptance proof
+
+Two concrete direct BL sites target this handler: `0x20668` and`0x20c00`. Each preceding selected span calls memcpy into the object supplied as r0. Their shared original size pool`0x20870` is **0x624c**. Their context/descriptor arguments remain selected existing pointers.
+
+This is useful ownership/ABI context for the incoming object and its embedded buffer. A fixed-size object copy is not itself a raw parser, a constructor validation result, accepted network syntax or an observed handoff. This batch inspects these two direct call sites and makes no absence claim about possible indirect callers or upstream producers.
+
+## 4. Explicit prologue initialization does not determine FP−224
+
+The entry performs three explicit memset requests with zero value. Exact instruction spans and a small host frame-range calculation give:
+
+| Call VA | Frame range, half-open | Bytes | Overlaps result range `[FP−224,FP−212)`? |
+| --- | --- | ---: | --- |
+| `0x1528c` | `[FP−3144,FP−2892)` |252|No|
+| `0x152a8` | `[FP−366,FP−332)` |34|No|
+| `0x152d0` | `[FP−401,FP−367)` |34|No|
+
+The stack allocation instructions at`0x15244/0x15248` reserve storage; they are not a zero-initialization operation. These positive range facts do not establish every local initialization or callee's write extent.
+
+`bounded-frame-encoding-locators.json` scans original words over handler range`[0x1523c,0x1f5b4)` for specific immediate-store and direct FP-address forms. It records two negative-offset STR encodings for2228/2232: the entry object store and raw-alias store above. For exact direct FP−224 memory addressing or the exact `sub r0,fp,#224` form it records the result-address construction at`0x1e938` and marker read at`0x1eed8`.
+
+The locator deliberately remains an **encoding query**, not full instruction/control-flow/alias analysis. It cannot exclude composed base registers, other offsets into a wider range, aliases passed to callees, wider stores, runtime mutation or effects outside this handler. In-range literal pools are included in its byte range and its scope explicitly notes that limitation. The actual query output is a bounded negative result, not a claim that the whole function never initializes this storage.
+
+The second parsed object's `getScsAddr` call at`0x1e93c` receives FP−224 as its native result destination. If successful reparsing of the embedded text yields WHO1000 with the reviewed initialized libwhere map/provider, that helper's present-null path leaves the result bytes untouched. The loaded marker is then whatever prior value/alias effect reached the local byte; it is **not** synthesized zero. Mode8 versus7 remains conditional on the reviewed comparison with0xd5. This batch neither assigns the prior value nor calls the path a guaranteed uninitialized-memory defect, rejection, failure or physical limitation.
+
+## Reproduction and coverage
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/protocol/run5/collect_evidence.py --check
+```
+
+The host-only collector strictly reproduces18 outputs from6 pinned inputs:2 original ELFs, accessor/provenance and2 completed run4 artifacts. It preserves12 original-code spans with exact VA/file-offset/range hashes, checks15 selected original words, resolves2 WHO literals/PIC relations, verifies two direct call targets/copy-size data and saves the bounded handler-byte query with its range hash. The host model performs frame-range arithmetic and preserves unknown marker/parser state. No original parser/helper or firmware instruction runs.
+
+`output-manifest.json` pins this report, collector and generated evidence, excluding itself and later peer reviews. No earlier dossier/index/report was edited. There is no new serial/envelope/publication/ACK-delivery or physical-support claim, and the internal candidate from earlier runs has not become an accepted or transmitted fixture.
+
+## Remaining questions
+
+1. Establish complete upstream object/raw-text coherence and a justified full ordinary WHO1000 raw-parser/address-normalization route, preserving provider and mutation assumptions.
+2. If useful, perform a complete selected-path alias/callee-write analysis of FP−224 before the second getScsAddr call. The current direct-encoding/range evidence deliberately does not prove a byte value.
+3. Alternatively inspect a collector7/8 normal qualification/completion slice with an explicit marker/context premise, keeping original parser, timeout, local ACK choice and actual delivery separate. Repeating the mode selector alone adds no new evidence.

@@ -1,0 +1,8 @@
+{
+  "actual_approval_review_text": "This action was rejected due to unacceptable risk.\nReason: Although read-only and intrinsically low risk, the requested disassembly targets a helper body explicitly outside the user-authorized scope of closed receiving/helper implementations.\nDo not bypass this rejection through a workaround or indirect execution. Continue with a safer alternative, or carry out checks to prove that the action is authorized or low risk before trying again. Complete unaffected work without asking for confirmation. Report anything that remains blocked, clarify why it was blocked by auto-review, inform the user of the risk and ask for approval.",
+  "actual_requested_command": "objdump -d -m arm --start-address=0x2eec4 --stop-address=0x2efc0 work/f450-firmware/2.0.10/analysis/rootfs/home/bticino/bin/bacclient",
+  "actual_result": "CreateProcess Rejected; no process/disassembly output",
+  "receipt_scope": "New factual note of observed tool result; no invented approval ID, original terminal file, historical hash or timestamp",
+  "response": "Honored. No retry, body-byte decoding, alternate tool or adjacent proxy of helper. Parent notified human; permitted caller-only work continued. Helper not executed or expanded.",
+  "route": "exec_command require_escalated; prefix_rule objdump"
+}

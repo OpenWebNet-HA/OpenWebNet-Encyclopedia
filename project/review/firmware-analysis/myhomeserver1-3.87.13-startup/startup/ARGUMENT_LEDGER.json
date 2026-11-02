@@ -1,0 +1,50 @@
+{
+  "container": {
+    "address": "mainSP160",
+    "initialization": "selected local tree/field writes at0x13288; semantic container layout assigned to separate author",
+    "preservation": "r4=SP160, held across normal EABI callee-preserving delegates"
+  },
+  "loader_call": {
+    "VA": "0x1334a",
+    "boundary": "Stop at selected loader argument capture. Parsing, registry insertion, later handlers and transport are separate scopes.",
+    "callee_save": "loader stores containerSP4 at17642 and serviceSP20 at1764c; r0path heldfp",
+    "r0": "fresh copy of settings+60 string from getter32ae4 at1333e",
+    "r1": "same localcontainerSP160",
+    "r2": "same serviceinner pointer loadedSP88 at13342",
+    "target": "0x17630"
+  },
+  "main": "0x130a0",
+  "opaque_preloader_calls": [
+    "guardedglobal/container operations between132e4and1333a",
+    "settings parser/file helpers",
+    "logger/diagnostic calls"
+  ],
+  "original_execution": 0,
+  "settings": {
+    "constructor": "0x1dae4",
+    "default_field_same_path": true,
+    "field": 60,
+    "getter": "0x32ae4",
+    "input_path": "argv[1] when argc>1, otherwise exact relative default",
+    "limits": "Settings parser/file/diagnostic helpers remain normal-return prerequisites; no actual configuration parse or input-file admission asserted.",
+    "load_request": "0x1316a\u21920x32b8c",
+    "normal_success_assignment": "0x32eee/asString0x32efa\u2192field60 (heap/string-copy branches retain same destination)",
+    "object": "mainSP336",
+    "packaged_whitelist": {
+      "scenesPath": "/home/bticino/cfg/extra/0/scheduling_manager"
+    },
+    "return_zero": "0x13184\u21920x1370a diagnostic\u21920x13716\u21920x13188; not an exit gate",
+    "scenes_key": "scenesPath"
+  },
+  "time_service": {
+    "allocation_base_register": "r9",
+    "allocation_request_bytes": 112,
+    "constructor": "0xb94f0",
+    "flag_premise": "ctor copies incomingr1 tor5; nonzero\u21920xb9550 thread allocation/request branch",
+    "inner_pointer": "allocation+16 heldsl",
+    "same_pair_store": "0x132e0 mainSP88=(inner,allocation/controlbase)",
+    "stored_service_pointer": "SP88word0",
+    "supplied_flag": 1,
+    "thread_request": "0xb9574 std::thread::_M_start_thread; no successful thread/service assumed"
+  }
+}

@@ -1,0 +1,73 @@
+# MH2021.0.24 run9 — selected no-suffix parser helpers and prepared-state CPU check
+
+The two remaining selected libopen helpers preserve **kind4** for the saved WHO`1001`/WHERE`0`/DIM`1` candidate state. The first helper examines suffixes in the **WHO field**, not WHERE: with WHO`1001` containing no`#`, it returns without writing the object. The second copies WHERE into fullDove, then returns when WHERE`0` contains no`#`, without writing kind or interface-present flag.
+
+This is confirmed by original static control flow and four isolated original-helper invocations on **prepared private objects**. It is not a full original parser run or proof that a physical MH202 emits/accepts the synthetic candidates. Earlier reports and originals remain unchanged.
+
+## Identity, reproduction and exact accounting
+
+Original normal-image `/home/bticino/lib/libopen.so.0.0` SHA256 `868eeb717020232c11623224df17bd6b2034fffc2fb80043c39c34b76310fb04`, read and verified via shared ImageVFS. The8-output static collector pins6 inputs,4 original spans with exact VA/file offset/byte hashes and18 original words. The isolated harness additionally verifies all digest-bearing Unicorn2.1.4 package RECORD entries before import, saving their identities in `verified-tool-package.json`. It reuses only that standalone analysis package; no F454 firmware, layout or harness code is loaded.
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run9/collect_evidence.py --check
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run9/emulate_normal_suffix_helpers.py --check
+```
+
+Both checks strictly compare saved output bytes. Static collector original execution0. Native isolated harness counts for this area:
+
+| Metric | Count |
+|---|---:|
+|Prepared candidate objects|2|
+|Original leaf invocations|4|
+|Original instruction visits|144|
+|Explicit host primitive callbacks|24|
+|Private EXIT boundary callbacks|4|
+|Total code-hook steps|172|
+
+**172=144+24+4.** EXIT callbacks are separate from the24 primitives and execute no original instruction. The original-instruction count excludes all intercepted PLT entries and private EXIT. These are new area counts; no earlier project corpus is rerun or silently included. Per-leaf original VAs, primitive event types and register observations are saved in `leaf-results.json`.
+
+The author manifest pins report, both scripts, static evidence and both native output files; it excludes itself and subsequent peer review. No live sockets, serial devices, network, service, firmware loader, vendor process, original libc/C++ primitive or host syscall is invoked by emulated original code. Host Python/binutils file reads and the standalone CPU analysis package are the tools used.
+
+## 1. WHO suffix helper's actual selected path
+
+Original **Assegna_indirizzo** is`0x9fa8..0xa24c`. It copies the object-base WHO field into two90-byte private stack buffers at`0x9fcc..0x9ff0`, then calls imported strchr for`#` at`0x9ffc`. With ordinary WHO string`1001`, result0 takes **`0xa00c→0xa234`**, the normal cleanup/return.
+
+This selected branch performs no object write and no numeric WHO/address domain check. It does not inspect WHERE0. The source later has suffix-splitting/address-component stores and a kind-invalid1 store at`0xa230` (object offset pool`0xa248=0x623c`), but those are bypassed here; this batch neither exercises nor generalizes their suffix grammar. The distinction matters: a function's address-oriented name does not make this selected no-`#` path validate a device address.
+
+Thus under the already supplied coherent parsed WHO field, the prior kind4 and its normal WHO text remain unchanged by this helper. This alone is not a global validation-absence or physical-support claim.
+
+## 2. WHERE/interface helper's actual selected path
+
+Original **Assegna_livello_interfaccia** is`0xa24c..0xa42c`. Its entry clears90bytes at object+`0x5dde`, then copies object+540 (WHERE) there at`0xa274..0xa280`. This is fullDove storage; for prepared WHERE`0` it contains`0` afterwards.
+
+It copies the supplied WHERE into stack buffers, with an initial optional leading-`#` adjustment, then tests a stack copy for`#` at`0xa2e4`. With WHERE`0`, result0 takes **`0xa2f0→0xa410`**, cleanup/return. This path does not set the byte at object+`0x6240` or write kind at object+`0x623c`. Its later empty-interface invalid1 store at`0xa3fc` is not reached. No full interface/suffix parser matrix is inferred.
+
+The two prepared normal candidates differ only in value strings and raw text, so they deliberately select the same WHO/WHERE helper paths. This is targeted closure, not additional protocol breadth.
+
+## 3. Final kind contract under the earlier static prefix
+
+Run8's retained original IsCorrect path assigned kind4 and copied WHO`1001`, WHERE`0`, DIM`1` and four value strings under ordinary primitive semantics. The actual continuation`0xb0c4..0xb0f8` checks current kind against invalid1, calls Assegna_indirizzo if not1, checks kind again and calls Assegna_livello_interfaccia if still not1, then returns.
+
+The original selected helper bodies above leave kind4 unchanged. Consequently **the complete selected static path predicts final kind4**, conditional on the preceding native builder/parser/field extraction actually producing the supplied fields and all selected imports returning normally. This narrows run8's remaining helper guard boundary without retrospectively representing run8 as an executed full-parser success.
+
+Neither the name IsCorrect nor r0 should be converted into an invented formal boolean contract. The helper executions record r0 register observations on return, but their C++ mangled names do not encode return types. No complete IsCorrect invocation or caller interpretation was executed here. The demonstrated object discriminator is kind4, not an asserted whole-parser boolean acceptance result.
+
+## 4. Isolated original-helper verification and its limits
+
+`emulate_normal_suffix_helpers.py` is a fresh MH202-specific harness. It maps the verified original libopen ELF PT_LOAD file bytes and zeroed memory sizes into a private Unicorn address space, then makes the original image read/execute only. It does not run ELF initialization, apply a live loader or execute original PLT bodies. Only the selected helper instruction range is allowed per invocation; unexpected PC, original interrupt, unmapped/protected access or hook cap violation aborts. Each invocation has a10000-step hook cap and a10000-instruction emulator cap. Private object/stack are the only writable guest regions. Host primitive read/write ranges are explicitly bounded to those private regions, with1024-byte C-string/primitive caps.
+
+The only allowed intercepted original PLT addresses are memset`0x54a0`, strcpy`0x5704` and strchr`0x53d4`. Their host callbacks implement the ordinary semantics on private fixtures and return to original LR. Their callbacks are counted separately from native instruction visits; no real library is delegated to. A private EXIT hook stops the emulation after the original return, counted as a boundary.
+
+Each prepared object has the exact MH202 run8 layout/fields: WHO`1001` at+0, WHERE`0` at+540, DIM`1` at+900, four strings at+990 with90-byte stride, raw text at+`0x5e3c`, its length at+`0x5e38`, kind4 at+`0x623c`, value count4 at+`0x6244` and fullDove`0` at+`0x5dde`. The rest is private zero-filled state. This object is **prepared from static evidence**, not produced by executing the earlier parser. Initial interface flag/address metadata are supplied zeros, not observed firmware runtime values.
+
+Both original helpers run sequentially for each candidate. After each helper the harness asserts kind4 and **entire prepared object byte-for-byte unchanged**. For the interface helper this is consistent with clearing/re-copying already-correct fullDove`0`; it does not mean the helper issued no writes. The first helper's object nonwrite follows its selected static path, while the second has the explicit fullDove writes above.
+
+These four bounded executions confirm the selected final-helper behavior under prepared state and the three primitive models. They do not execute full IsCorrect, read-dimension builder, earlier WHO/WHERE maps, diagnostic registry/decoder, collector, native allocator, socket or device. Native full-parser acceptance remains unknown in both host/static and leaf result JSON.
+
+## Remaining scope
+
+Confirmed static: precise suffix sources, no-`#` branches, bypassed invalid-kind stores, IsCorrect continuation and conditional kind4 preservation. Confirmed isolated execution: four selected original leaf calls on two prepared objects,144 original visits with explicit callbacks and zero guest I/O. Conditional: ordinary primitive models, prepared fields, earlier parser state and selected provider binding. Unknown: whole native parser/output/caller acceptance, natural internal response provenance, descriptors, publication and hardware/model semantics.
+
+The two candidate texts remain `*#1001*0*1*0*0*0*0##` and `*#1001*0*1*2629*1*2*3##`. Value2629 is synthetic arithmetic evidence, not MH202 model identity. No authentication, credential or closed framing branch is investigated.
+
+A useful next bounded task would join the full original normal builder/IsCorrect path using a fresh properly scoped primitive model if the stronger execution proof is needed, or move to the unresolved output descriptor setup/no-data/context-stop semantics. Repeating factory/key/collector matrices is unnecessary for this selected case.

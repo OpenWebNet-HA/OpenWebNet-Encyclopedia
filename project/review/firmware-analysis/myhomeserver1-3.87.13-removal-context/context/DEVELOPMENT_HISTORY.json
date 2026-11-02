@@ -1,0 +1,6 @@
+{
+  "canonical_failures": 0,
+  "historical_identity": "This is a transparent message/source refinement, not a reconstructed historical file or independently pinned old artifact.",
+  "refinement": "An exploratory parent message inferred params.id from earlier eventcache context. Exact original PIC lookup then established params.scene_id. No authored context candidate/report had yet existed or been overwritten.",
+  "stage": "Before currentarea collector/report/output creation"
+}

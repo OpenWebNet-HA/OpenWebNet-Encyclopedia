@@ -1,0 +1,9 @@
+# Ranked remaining questions after run06
+
+1. F460 actual captured-receiver identity/lifecycle and local handofff7650: one justified constructor/caller-to-gate source contract can distinguish callback request from scene start/conditions/actions. Do not assume SceneRunner identity from MHS or repeat BNIL status/table/copy guards.
+2. F461 actual diagnostic/device-identity helper or one justified remaining address/suffix contract on original typed objects. Do not treat classifier4/prefixD1 as full numeric/public address validation or reopen raw receiving/framing/auth/session/transport.
+3. Product-specific boot/config/profile/DTB/auxiliary-core/local IPC and static update/recovery/component source contracts should add breadth. No target OS/bus/network/vendor execution.
+4. F460 root catalogue-owner semantics/key list/config selection/full SQL/result/fallback and actual configured scene assets remain unclosed; require new concrete callers.
+5. F461 main/CLI/config/module precedence, natural criteria/clock/record provenance and later output owner/physical meaning remain open.
+
+Full JSON/string/SQL/provider semantics, activation/readiness/freshness, errors/unwind/ownership/lifetime/concurrency and physical observations remain separate gaps. No repeated inventories/source matrices/native corpora as new coverage, no forced runtime objects, source-registry edits, staging/commits/publication/remote writes or live contact.

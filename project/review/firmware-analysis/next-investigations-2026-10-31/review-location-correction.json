@@ -1,0 +1,6 @@
+{
+  "misplaced_new_file": "work/firmware-product-followup/2026-10-31/F454_ALARM_BOARD_SOURCE_REVIEW.md",
+  "corrected_path": "work/firmware-next-investigations/2026-10-31/reviews/F454_ALARM_BOARD_SOURCE_REVIEW.md",
+  "sha256": "1b9df919ba4b9dcd83ea96af7c2f65c71336a38f22188d02b587e90fa191b189",
+  "note": "New review was accidentally created in an already completed directory. Parent copied exact bytes to this current review directory and removed only that newly created, non-indexed file. Every completed indexed artifact remains unchanged."
+}

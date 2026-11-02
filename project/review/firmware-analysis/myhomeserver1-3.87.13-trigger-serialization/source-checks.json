@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "command": "serializer/collect_serializer_v1.py --check",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "16449d",
+          "wall_time_seconds": 0.052066986,
+          "exit_code": 0,
+          "original_token_count": 23,
+          "output": "{\"check\": true, \"outputs\": 11, \"spans\": 7, \"guards\": 20, \"original_execution_additions\": 0}\n"
+        }
+      }
+    }
+  ],
+  "scope": "Readonly source reproduction only; zero original execution or guest replay"
+}

@@ -1,0 +1,24 @@
+{
+  "collector_sha256": "8fd3003c30fb51d6d2b651bd5e104734ffba55e3d90c62060ff6e0bd21eb83a9",
+  "new_code_spans": 1,
+  "new_data_extents": 6,
+  "original_execution": 0,
+  "outputs": {
+    "INPUT_PINS.json": {
+      "bytes": 829,
+      "sha256": "5f2d541fc96383d7162552229ab0fbf958e634e4e96def314c11cf8347c40f53"
+    },
+    "METADATA.json": {
+      "bytes": 4783,
+      "sha256": "a5e9bb4d133e7c761c09b5edc6af0a415e39736bb5018c4336c72a0b27b3ed27"
+    },
+    "REPORT.md": {
+      "bytes": 4286,
+      "sha256": "0bd38bbd4f7f3bf9a38f38895965462c995851dbdedfb8a2c6e37cf3d255f215"
+    },
+    "spans/selected-metaobject-getter.txt": {
+      "bytes": 738,
+      "sha256": "d764b5c9f8d4040d6b7348d31375d47f99ed5eab1100a60a68e6a21adf4d2533"
+    }
+  }
+}

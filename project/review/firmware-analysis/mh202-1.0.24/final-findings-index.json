@@ -1,0 +1,297 @@
+{
+  "history_and_refinement_pins": [
+    {
+      "bytes": 2394,
+      "path": "work/mh202-firmware/research/2026-10-30/coso/run18/NAMESPACE_REFINEMENT.md",
+      "sha256": "96f0af7e2adf1b4d0f969a14034055107e42fc4eec3d7bf9b8938a29f102c8bf"
+    },
+    {
+      "bytes": 10277,
+      "path": "work/mh202-firmware/research/2026-10-30/sound/run21/REPORT.md",
+      "sha256": "7a620c417174980119e9573c914dbe7730823697661cb975a20708e8e127aea6"
+    },
+    {
+      "bytes": 2844,
+      "path": "work/mh202-firmware/research/2026-10-30/who25/run27-native/SOURCE_IDENTITY_REFINEMENT.md",
+      "sha256": "cceba8f83a6b808192c848b1a5e131733970ce323dd603328d075a0ad12e4ccd"
+    },
+    {
+      "bytes": 1614,
+      "path": "work/mh202-firmware/research/2026-10-30/lifecycle/run28/WORDING_REFINEMENT.md",
+      "sha256": "15c0350d69c0d835114651ec70c1a6b5a2f97caea8634c89d7c8a5a806d6cc46"
+    },
+    {
+      "bytes": 7491,
+      "path": "work/mh202-firmware/research/2026-10-30/reviews/run28/navigation-review.md",
+      "sha256": "d0b1cf4bf79cb5b319aa743ed39ad22b523d25a5aca2e7dcbf8c2cb431e76a9b"
+    },
+    {
+      "bytes": 638,
+      "path": "work/mh202-firmware/research/2026-10-30/reconciliation/run28/VERSION_HISTORY.v3.json",
+      "sha256": "e67821f3436b511b54dffc6e571be5d128558237dd076760f4a6bef6c65b4f95"
+    }
+  ],
+  "new_original_execution": 0,
+  "new_rows": [
+    {
+      "area": "GSource/WHO25 API ownership",
+      "finding": "Packaged new/attach/destroy/unref update the actual GSource reference counter through distinct paths; WHO25 reset/rearm operates on its separate private source pointer, while framework dispatch also changes references.",
+      "id": "MH28-01",
+      "independent_review": {
+        "bytes": 5694,
+        "path": "work/mh202-firmware/research/2026-10-30/reviews/run28/source-ownership-review.md",
+        "sha256": "2dcc2aaa20236b5fda6fd5fbf78961e387c5158c104dade12e8a978b7c8d7fc1"
+      },
+      "locator_exact": "## Destruction is separate from unref",
+      "method": "Reviewed static original source plus explicitly bounded host-only ledgers; navigation executes neither",
+      "new_original_execution_added_by_navigation": 0,
+      "refinement": null,
+      "remaining_boundary": "Closed arithmetic ledgers do not prove actual retained reference, leak, lifetime, timer/clock behavior, natural registry invocation or physical outcome.",
+      "report": {
+        "bytes": 12236,
+        "path": "work/mh202-firmware/research/2026-10-30/who25/run28-source/REPORT.md",
+        "sha256": "d3c4f4f85dbd6b5417ddf0173b537491babdb411da6821c3780f2832e006217e"
+      },
+      "report_line": 44
+    },
+    {
+      "area": "Local FIFO descriptor provenance",
+      "finding": "Selected script pathname options flow to the complete two-open/global-store wrapper and one read-descriptor/count API boundary; bounded exact R/P query leaves producer unresolved.",
+      "id": "MH28-02",
+      "independent_review": {
+        "bytes": 7303,
+        "path": "work/mh202-firmware/research/2026-10-30/reviews/run28/fifo-review.md",
+        "sha256": "282d65fa08f982d0688f800d63bdae273a5e2535e0886cb31085596137b31690"
+      },
+      "locator_exact": "## Actual local path and descriptor contract",
+      "method": "Reviewed static original source plus explicitly bounded host-only ledgers; navigation executes neither",
+      "new_original_execution_added_by_navigation": 0,
+      "refinement": {
+        "bytes": 1614,
+        "path": "work/mh202-firmware/research/2026-10-30/lifecycle/run28/WORDING_REFINEMENT.md",
+        "sha256": "15c0350d69c0d835114651ec70c1a6b5a2f97caea8634c89d7c8a5a806d6cc46"
+      },
+      "remaining_boundary": "No actual target open/read, live binding, filesystem/FIFO success, complete payload/cleanup or R/P producer/absence proof; separate0x8c90 remains opaque.",
+      "report": {
+        "bytes": 7395,
+        "path": "work/mh202-firmware/research/2026-10-30/lifecycle/run28/REPORT.v2.md",
+        "sha256": "59a19126dfca9f0ff909b04f7e70af1f9df5ec2f09f368b70c93942fb0d81d5c"
+      },
+      "report_line": 18
+    }
+  ],
+  "new_test_runs": 0,
+  "predecessor_rows": [
+    {
+      "row_integrity_index": [
+        {
+          "canonical_sorted_JSON_sha256": "01dd743ce5af6ed77d88f32ddbed282575e0a49792db73f0b87d1b12ec648abc",
+          "id": "MH21-01",
+          "source_row_index": 0
+        },
+        {
+          "canonical_sorted_JSON_sha256": "b6c3196efe729489a1417833b1b672647ad8807e30e3c8ff7d8f4559779d446c",
+          "id": "MH21-02",
+          "source_row_index": 1
+        },
+        {
+          "canonical_sorted_JSON_sha256": "1e993ef15ac0614e9080560b29c1573f3a1a85858e4305cf9a33004e192b5278",
+          "id": "MH21-03",
+          "source_row_index": 2
+        },
+        {
+          "canonical_sorted_JSON_sha256": "c6e449d4a58ad112b40982de7e47c7f2e13dda6cb87ad81b39ffacc5632f106a",
+          "id": "MH21-04",
+          "source_row_index": 3
+        },
+        {
+          "canonical_sorted_JSON_sha256": "eb4ea7db42758fe3dbd49f8ed5fde4f1e2f9f148de8c1740e52d01848a1f3bc6",
+          "id": "MH21-05",
+          "source_row_index": 4
+        },
+        {
+          "canonical_sorted_JSON_sha256": "2965ff7380d883d9a497abae3c02701c2ba30087a8e6303465ccdd0891079c69",
+          "id": "MH21-06",
+          "source_row_index": 5
+        },
+        {
+          "canonical_sorted_JSON_sha256": "3efb823a2d8455b4c5f3e7442f3b6f86d586e272fc3116e0dea95424116a1140",
+          "id": "MH21-07",
+          "source_row_index": 6
+        },
+        {
+          "canonical_sorted_JSON_sha256": "faf693482d2f351ee8ff6b14ac346436224df169a4925cc7d5b1c09a535dbaf4",
+          "id": "MH21-08",
+          "source_row_index": 7
+        },
+        {
+          "canonical_sorted_JSON_sha256": "85818cb5dbc5465483dc0adf124cdf242dba49a010269ed9117d76571cb1fd62",
+          "id": "MH21-09",
+          "source_row_index": 8
+        },
+        {
+          "canonical_sorted_JSON_sha256": "5296d99d5042df310c0981a02035e332308dcc2c3284c3de1c055c05ee1fa60b",
+          "id": "MH21-10",
+          "source_row_index": 9
+        },
+        {
+          "canonical_sorted_JSON_sha256": "939241790aa1b5a94ca272ed481c9058e9f6b8e59074260f6bc11414322c5664",
+          "id": "MH21-11",
+          "source_row_index": 10
+        },
+        {
+          "canonical_sorted_JSON_sha256": "800027169555fc2eade6f72392958c26701106bcb57f2fd8e067c02b8ccca07d",
+          "id": "MH21-12",
+          "source_row_index": 11
+        },
+        {
+          "canonical_sorted_JSON_sha256": "c6c963ede484ad2897c009755619f60ff6f96e4c77a169f2cefbb4fb3033c06f",
+          "id": "MH21-13",
+          "source_row_index": 12
+        },
+        {
+          "canonical_sorted_JSON_sha256": "f8db7c09a2a381e9bb19045aaad3f58a30ac8683053335652a4cddbeecf21a4f",
+          "id": "MH21-14",
+          "source_row_index": 13
+        },
+        {
+          "canonical_sorted_JSON_sha256": "21e1f59aae9e6cb24a61a6aafa01eb0a1784e965d44c88c892f298081eea232e",
+          "id": "MH21-15",
+          "source_row_index": 14
+        },
+        {
+          "canonical_sorted_JSON_sha256": "65f2c78e6c94c72cd6241a97a84176c83a68e115e315b31cca1176e38acd3bae",
+          "id": "MH21-16",
+          "source_row_index": 15
+        },
+        {
+          "canonical_sorted_JSON_sha256": "e8cf95483c25a51e9a3d803c524903d63d77d38f758d64fe1d79a3c235623f5d",
+          "id": "MH21-17",
+          "source_row_index": 16
+        },
+        {
+          "canonical_sorted_JSON_sha256": "74449052231c075cb91a37680bcdafffa0f05eecd3292c78c0fd26468c53315a",
+          "id": "MH21-18",
+          "source_row_index": 17
+        },
+        {
+          "canonical_sorted_JSON_sha256": "87f1610a93c8e2bf84b35e67c78229ec7ab1517a8b6383ac3c60dd0692d3daa5",
+          "id": "MH21-19",
+          "source_row_index": 18
+        },
+        {
+          "canonical_sorted_JSON_sha256": "8673e5bd3281409c3e5dad0d04f6146fbe7b27de1ba48609d3031d8ea823fcaa",
+          "id": "MH21-20",
+          "source_row_index": 19
+        },
+        {
+          "canonical_sorted_JSON_sha256": "d7b36d875766c94d6cacd7407bd8eade7f06804933f75296d582e10bad900e14",
+          "id": "MH21-21",
+          "source_row_index": 20
+        },
+        {
+          "canonical_sorted_JSON_sha256": "b03118d1c09146ab022f874c95898b18ba8092774a9f5dc0da7cddfce4e450bc",
+          "id": "MH21-22",
+          "source_row_index": 21
+        },
+        {
+          "canonical_sorted_JSON_sha256": "9e0ed1efb6dd0012383d22e8396e387df38bbc838549f9c903463639763a0aa6",
+          "id": "MH21-23",
+          "source_row_index": 22
+        },
+        {
+          "canonical_sorted_JSON_sha256": "85901cdf42ace8dfc989130496e99ebcabf557cb35d70434cba61c48b4b526c8",
+          "id": "MH21-24",
+          "source_row_index": 23
+        }
+      ],
+      "rows": 24,
+      "scope": "Unchanged predecessor row fields; index is not fresh semantic re-audit",
+      "source": {
+        "bytes": 29634,
+        "path": "work/mh202-firmware/research/2026-10-30/reconciliation/run22/SCOPED_FINDINGS.json",
+        "sha256": "636c284114ef156012546346854a34dccb40413c8813a2435137ae76f7102eb6"
+      }
+    },
+    {
+      "row_integrity_index": [
+        {
+          "canonical_sorted_JSON_sha256": "2ceefab09526ab5bdb5b0a7070be6a3f1b4b323c9860012a61ae06dd2b6eeb7b",
+          "id": "MH22-S01",
+          "source_row_index": 0
+        },
+        {
+          "canonical_sorted_JSON_sha256": "793b7ada3de832f0c47d9301b5ad673bdc823ab27502d44fff8c1afcdcd86926",
+          "id": "MH22-S02",
+          "source_row_index": 1
+        }
+      ],
+      "rows": 2,
+      "scope": "Unchanged predecessor row fields; index is not fresh semantic re-audit",
+      "source": {
+        "bytes": 4907,
+        "path": "work/mh202-firmware/research/2026-10-30/reconciliation/run23/candidate-v2/RUN22_FINDINGS_SUPPLEMENT.json",
+        "sha256": "746fdd8e794566319ab33465530d575420620075582afab9672ed1bc6eb2e2de"
+      }
+    },
+    {
+      "row_integrity_index": [
+        {
+          "canonical_sorted_JSON_sha256": "76e2241039d47be616f8b3fb9f8a3976d4f89cba6af0d2bb3b867a4502f04917",
+          "id": "MH23-01",
+          "source_row_index": 0
+        },
+        {
+          "canonical_sorted_JSON_sha256": "617dd439d6fc7cd26dda3df8da001a7b016fab1acf44c73adefae87dda1b163b",
+          "id": "MH24-01",
+          "source_row_index": 1
+        },
+        {
+          "canonical_sorted_JSON_sha256": "7386bc034991f9f9c8df764ba7976911dee9fb929e7bc4afc55fffb823ff6581",
+          "id": "MH24-02",
+          "source_row_index": 2
+        },
+        {
+          "canonical_sorted_JSON_sha256": "af3e51db5bbbf9f017faca2551af9920f60cc266b1ab7b71e886ddcc326a6360",
+          "id": "MH25-01",
+          "source_row_index": 3
+        },
+        {
+          "canonical_sorted_JSON_sha256": "10f9a5adf559ab5544218022110875061b486b677ee0f6439e4101542c528fe3",
+          "id": "MH25-02",
+          "source_row_index": 4
+        },
+        {
+          "canonical_sorted_JSON_sha256": "3acea3541c2c210164a848a7d74bd7750cd6b8379fa79dd363346c1ae86c302f",
+          "id": "MH26-01",
+          "source_row_index": 5
+        },
+        {
+          "canonical_sorted_JSON_sha256": "09df105b51e0cdb6d398c0a193ec2fa9d492ffcdbf90ab058ed99253796c72a4",
+          "id": "MH26-02",
+          "source_row_index": 6
+        },
+        {
+          "canonical_sorted_JSON_sha256": "0b08fdffc1bb6809128ffa9ff4b9bae83c6c9ba30dda8a4446922d39234e67a8",
+          "id": "MH27-01",
+          "source_row_index": 7
+        },
+        {
+          "canonical_sorted_JSON_sha256": "908576fbd985d61d0c21f8f1218277f931721823c201ea9c90814fb0a66c824d",
+          "id": "MH27-02",
+          "source_row_index": 8
+        }
+      ],
+      "rows": 9,
+      "scope": "Unchanged predecessor row fields; index is not fresh semantic re-audit",
+      "source": {
+        "bytes": 11030,
+        "path": "work/mh202-firmware/research/2026-10-30/reconciliation/run28/candidate-v3/LATER_FINDINGS.json",
+        "sha256": "878f303e251f2fdaba9181419ebf5ce8b8b515920140b40544fe1003dc3ab39b"
+      }
+    }
+  ],
+  "scope": "Lightweight extension of unchanged24through21+2run22+9later23..27 rows; only two reviewed28 rows added.37 rows are navigation, not coverage/claim closure or semantic re-audit.",
+  "status": "Final scoped navigation through validated28; firmware coverage incomplete",
+  "total_navigation_rows": 37
+}

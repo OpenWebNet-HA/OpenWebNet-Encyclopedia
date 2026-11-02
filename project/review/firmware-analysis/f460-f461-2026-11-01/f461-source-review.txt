@@ -1,0 +1,47 @@
+# F461 first-pass independent source review
+
+PASS for the bounded source/identity claims in authoritative REPORT.v2.md, with LOCATOR_REFINEMENT.v2.json as authoritative locator history. No remaining source correction requested. This is independent static source and host-integrity review of the F461 author packet; I authored the separate F460 first pass. No target/vendor/native/provider/runtime execution, firmware installation, bus/network experiment or broader command/transport/authentication/session/framing analysis was performed.
+
+## Reproduction and independent evidence
+
+- Reproduced `collect_firstpass_v1.py --check`:14 outputs/16 first copies passed. Reproduced `collect_db_scope_v1.py --check`:75 total/74 noninternal tables passed. Independently checked all68 INPUTS identities and each retained first-copy index, including separate initial report, v2 report and locator-metadata snapshots.
+- Independently hashed the138644991-byte canonical archive against `cb6f3e9d875c14f74a0791d7f3f420ce9d4babadb4459c1250c6cba7e741af2b`, all19 extracted member identities and both image identities. A separate host archive test validated outer CRCs without printing the privately derived packaging input; four nested ZIP testzip checks passed. The source extractor checks flat member paths/types, refuses overwrite, verifies gzip/ext geometry, materializes only regular files/directories and retains links/special nodes as metadata. These checks do not cryptographically authenticate the signature blobs.
+- Independently checked extracted normal/recovery path sets and absence of materialized host symlinks. The host-only full collector re-read every regular file through VFS SHA verification. I separately recounted raw ELF headers: normal866 ELF64/machine183 +8 ELF32/machine40 +2 ELF32/machine164=876; recovery735+8+2=745. Fresh bt_daemon/matrix/Drover header entries and report hashes were checked against original bytes, not filename assumptions.
+- Verified both normal-stack XMLs have17 process declarations including matrix_mx and excluding scheduling_manager in those lists; reduced-stack counts16 and source request lines are retained separately. Startup/init/device-node/extra/USB-library source is a conditional declaration/request chain, not an observed launch or provider binding. The report correctly leaves daemon internal working-mode interpretation untraced, distinguishes setup_m4 restart from default start, and retains alternate reduced-stack selection.
+- Checked package declaration F4612.0.11/XML3.1/model5.0.134 and whitelisted kernel/DTB metadata against original package bytes. The literal2011 banner date is not promoted into reliable chronology, and candidate DTB CPU/model strings are not hardware/electrical corroboration. Image-size header versus file-size difference is not labeled corruption.
+- Reopened both actual catalogue files with immutable read-only SQLite URI, query_only and trusted_schema OFF. Their shared2633728-byte SHA is `bd2ff4d326692c85bc4eb3f86504d615758da97dc832389fac523734574833e9`, identical to the separately extracted F460 catalogue. Independent SQL verifies75 total tables,74 excluding SQLite bookkeeping and internal sqlite_sequence. The initial schema query's narrower scope and supplemental clarification agree. No stored row/default/credential values, expressions or capability oracle were needed.
+
+## Interpretation and boundaries
+
+The report preserves OWN-DEV-0208's third-party-integration role. Equal catalogue bytes and shared object labels do not give F461 F460's user-management role, old F454 alarm ports or MH202/MHS scenario execution semantics. Header/DT_NEEDED/import/entry values are package metadata, not actual loader binding, main-function reachability, service readiness or accepted wire commands. No scheduling_manager declaration or older exact regular-file path was found in the stated selected scope; the report correctly avoids a global scenario-capability absence claim. SQLite/Redis signature misses are bounded to regular-file leading-header scanning, not encrypted, embedded or live databases.
+
+The direct same-path comparisons remain identity comparisons. In the separate F460 collector, the stdout field named normal_files prints its ELF count875; its saved report/census/manifest correctly distinguish5873 regular files from875 ELFs. That already disclosed F460-only stdout-label issue is not used as a F461 count or changed here.
+
+## Preserved refinements
+
+The original report remains SHA3265846866f7cebb4d3a91f6c4fd3c64ad111ff72c617b980faa0b3282927c2f. I verified that REPORT.v2 is exactly one clause replacement: XML recovery-action locator17–22/status23–26 becomes16–19/20–23. Values/actions and all14 generated source outputs are unchanged. Actual parent pre-edit report/index paths in authoritative LOCATOR_REFINEMENT.v2.json exist and match their exact retained hashes.
+
+The first LOCATOR_REFINEMENT.json guessed a nonexistent parent directory prefix. It is retained unchanged, explicitly superseded only for that metadata path by the new v2 JSON, whose actual parent report/index hashes I independently verified. This is honest retained locator history, not overwritten evidence or a change in firmware interpretation. Existing first-copy sets were checked individually; no global historical/full-coverage claim follows from their number.
+
+## Exact reviewed pins
+
+Paths below are relative to `work/f461-firmware/2.0.11/research/2026-11-01/`.
+
+| File | SHA256 |
+| --- | --- |
+| `REPORT.md` | `3265846866f7cebb4d3a91f6c4fd3c64ad111ff72c617b980faa0b3282927c2f` |
+| `REPORT.v2.md` | `187877260da89ef432021b971268f83854641a72b73e4d7c8d4d02b035b1dd16` |
+| `collect_firstpass_v1.py` | `a5e0e12bad2b1b3fada8f5bec8d83fcc2a762781450ef74095d85551e6e715cf` |
+| `OUTPUT_MANIFEST.json` | `9654f7ac4a4a9ca736477d55c8e44fd269a7b448d9fe6b2e8f79fb8fc3fbb357` |
+| `INPUTS.json` | `e504d9684915867b8cf5fe8ac0d045d4204b6a0da46849af8ab7fb209136e723` |
+| `first-candidate/INDEX.json` | `6346465950733980d479af7ec91e3f6dc01ac8fbdcc9d22a69e1a12ea1bd9058` |
+| `collect_db_scope_v1.py` | `2ff33a5d303e3fac71abe5d4939681eb17dfa4b10d8eb10df4d559fcb01878cf` |
+| `DB_SCOPE.json` | `191fa7c13aa0ef0df29f106fba9152003964b9d9d8bdbcf558d49fb19bc75c1c` |
+| `db-scope-first-candidate/INDEX.json` | `e5c306a60fed71c0a1cd99758f7744d1c39d20d55cc3eb26db0a3737523509a7` |
+| `report-first-candidate/INDEX.json` | `12ae53314691f3fd194ecf48e176d84da9288965f056e326d589b4a5398fcc08` |
+| `report-v2-first-candidate/INDEX.json` | `f92719d38ef4660d437a463e85b43ed8dde44fe9b3d3e7479f273383f73181db` |
+| `LOCATOR_REFINEMENT.json` | `4a34b715636f1df1c362d5754efc78e778dc278b33406674692cce3a1e8687d8` |
+| `LOCATOR_REFINEMENT.v2.json` | `0403589b1aa9206a4943e2f8bbe1ea5337b85dd8b051ed235766d7658395e8ad` |
+| `locator-metadata-v2-first-candidate/INDEX.json` | `1cb21bdae1ea2f1c77443954d3828a0a41ec650c638cbe48be33ba3f683b33d8` |
+
+Actual parent snapshot: `work/f460-f461-comparison/2026-11-01/f461-pre-locator-refinement/REPORT.md` SHA `3265846866f7cebb4d3a91f6c4fd3c64ad111ff72c617b980faa0b3282927c2f`; index `work/f460-f461-comparison/2026-11-01/f461-pre-locator-refinement/INDEX.json` SHA `d22ac8cfaaf8e2b3dc446817c1a5f8f606dc579bd6e10902dc712baf69b0dca3`. No author files or previous reports were edited by this review. All new source execution and semantic fixtures remain0; previous product experiment ledgers are unchanged.

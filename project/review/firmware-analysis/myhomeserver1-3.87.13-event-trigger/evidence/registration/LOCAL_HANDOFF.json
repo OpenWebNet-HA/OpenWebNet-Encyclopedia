@@ -1,0 +1,48 @@
+{
+  "callback_entry": {
+    "captured_invoker": "a60a8 loadsscenepointerthen tailcallsa5db0",
+    "primary": "ee59c tests managerinner12 then tailcallsinvokerinner16 usingdata inner4",
+    "scope": "Conditional callback/scene-launch request, no event admission, installedservice, delivery/readiness or actual launch"
+  },
+  "capture": {
+    "compiled_copy": "ee5ac managerop2\u2192innerdata4 andcopymanager12/invoker16",
+    "data": "SP3912 word0=scene,word1=0",
+    "first_copy": "a8f52\u2192b43d8 from wrapperSP3912 toinnerwrapperSP4036",
+    "invoker_Thumb": "0xa60a9",
+    "manager_Thumb": "0xa56c1",
+    "manager_local_contract": "op2copiesoneword;op3normalreturn0 hasno local retainedreceiver release",
+    "persistent_copy": "a900c\u2192b43d8 withreceiverallocation+16=inner+4",
+    "scope": "Raw capturedscene pointer, no strongscenecontrol capture inferred",
+    "source": "initializerincoming scene pointer savedSP4"
+  },
+  "original_execution": 0,
+  "publication": {
+    "caller": "a9034pair\u2192a9044a56e4",
+    "capacity_full": "a5712 onward not inspected here; remains delegate",
+    "cleanup": "a9048 tests nowzero sourcecontrol on selected normal move; releaseconditional",
+    "destination": "same scene+104 trigger-handle vector",
+    "meaning": "Local vector append/publication only, not externalservice registration/subscription",
+    "normal_move": "exact8Bpaircopiedtoend,sourcepairzero,end+8"
+  },
+  "runner": {
+    "allocation_bytes": 76,
+    "allocation_control_base": "r7",
+    "class": "BnilTriggerRunner",
+    "final_header": "0x1625ac",
+    "initial_countwords": "control+4/+8each1",
+    "inner": "base+12",
+    "nonvirtual_admission": "ee708 separate parent-owned scope, not retained/examined here",
+    "pair": "SP592=(inner,controlbase)",
+    "primary_slot0": "0xee59c callableforwarder",
+    "primary_slots1_2": "destructor entries ee7b4/ee868, not event admission"
+  },
+  "startup_composition": "Prior scoped source provides loader/container and registry insertion after scene construction. It doesnot prove any external eventservice routes a payload to this runner.",
+  "unclosed": [
+    "external eventcallback/registration/service identity and dispatcher route",
+    "full rawschema/grammar and actual configured BNIL triggers",
+    "capacityfull append and complete control/lifetime/unwind here",
+    "normal ABI/copy/provider/allocator success and dynamic binding",
+    "admissionhandlerbody and its caller owned separately",
+    "actualeventdelivery/sceneexecution/physical meaning"
+  ]
+}

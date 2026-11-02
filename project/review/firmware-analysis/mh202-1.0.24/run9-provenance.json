@@ -1,0 +1,150 @@
+{
+  "checkpoint": "run9",
+  "status": "four reviewed source areas; two new isolated corpora, overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "method": "Static host evidence plus strict private CPU helper tests, no firmware process/targetOS",
+  "canonical_execution": {
+    "normalizer_corpus": {
+      "helper_calls": 13,
+      "normalizer_visits": 383,
+      "comparator_visits": 1132,
+      "original_instruction_visits": 1515,
+      "primitive_callbacks": 142,
+      "boundary_callbacks": 0,
+      "code_hook_visits": 1657
+    },
+    "suffix_corpus": {
+      "helper_calls": 4,
+      "original_instruction_visits": 144,
+      "primitive_callbacks": 24,
+      "boundary_callbacks": 4,
+      "code_hook_visits": 172
+    },
+    "cumulative": {
+      "corpora": 4,
+      "helper_calls": 46,
+      "original_instruction_visits": 4424,
+      "primitive_callbacks": 241,
+      "boundary_callbacks": 4,
+      "code_hook_visits": 4669,
+      "firmware_processes": 0,
+      "target_OS_calls": 0
+    },
+    "count_scope": "Canonical named corpora only; verification replays not accumulated; normalizer report three-corpus subtotal excludes separate suffix corpus"
+  },
+  "exports": [
+    {
+      "role": "report",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run9/REPORT.md",
+      "source_sha256": "4e371d4c794dbf9585045c368d37d45dbedfeaf57f7361bf811dbdf4bc560f7f",
+      "published": "run9-functional-report.txt",
+      "published_sha256": "4e371d4c794dbf9585045c368d37d45dbedfeaf57f7361bf811dbdf4bc560f7f",
+      "normalization": "Workspace prefix removed if present; evidence otherwise exact"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run9/functional-review.md",
+      "source_sha256": "c76ad68805cf67b5ac55f36faa4c34e95ec6467b3f5e2d87aa8ee428c6f5858a",
+      "published": "run9-functional-review.txt",
+      "published_sha256": "c76ad68805cf67b5ac55f36faa4c34e95ec6467b3f5e2d87aa8ee428c6f5858a",
+      "normalization": "Workspace prefix removed if present; evidence otherwise exact"
+    },
+    {
+      "role": "report",
+      "area": "triggers",
+      "research_path": "work/mh202-firmware/research/2026-10-30/triggers/run9/REPORT.md",
+      "source_sha256": "958775cd08e3bc150ab4d58811714e5ede949a27e6480e3c667970caa90e79a4",
+      "published": "run9-triggers-report.txt",
+      "published_sha256": "958775cd08e3bc150ab4d58811714e5ede949a27e6480e3c667970caa90e79a4",
+      "normalization": "Workspace prefix removed if present; evidence otherwise exact"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "triggers",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run9/triggers-review.md",
+      "source_sha256": "00db817ae3ee540cdf97bf7e86a97e675ed3e008289e807d1356e8dad0c94cd9",
+      "published": "run9-triggers-review.txt",
+      "published_sha256": "00db817ae3ee540cdf97bf7e86a97e675ed3e008289e807d1356e8dad0c94cd9",
+      "normalization": "Workspace prefix removed if present; evidence otherwise exact"
+    },
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run9/REPORT.md",
+      "source_sha256": "a64de16441ddefa4b01ed77e9480cc30aa172b7bc46270f97b1147024ba62653",
+      "published": "run9-protocol-report.txt",
+      "published_sha256": "a64de16441ddefa4b01ed77e9480cc30aa172b7bc46270f97b1147024ba62653",
+      "normalization": "Workspace prefix removed if present; evidence otherwise exact"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run9/protocol-review.md",
+      "source_sha256": "151fb4576023a089dc8c761c58a22ff54dc9b7fe8f6da16199e89f45e6b3619d",
+      "published": "run9-protocol-review.txt",
+      "published_sha256": "151fb4576023a089dc8c761c58a22ff54dc9b7fe8f6da16199e89f45e6b3619d",
+      "normalization": "Workspace prefix removed if present; evidence otherwise exact"
+    },
+    {
+      "role": "report",
+      "area": "boot",
+      "research_path": "work/mh202-firmware/research/2026-10-30/boot/run9/REPORT.md",
+      "source_sha256": "6252cfd0328a677e41af4b4210d3ef25c86bb779c6bbad899cf5085ee05b77c2",
+      "published": "run9-boot-report.txt",
+      "published_sha256": "6252cfd0328a677e41af4b4210d3ef25c86bb779c6bbad899cf5085ee05b77c2",
+      "normalization": "Workspace prefix removed if present; evidence otherwise exact"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "boot",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run9/boot-review.md",
+      "source_sha256": "ccbb9139ad355177684ee698fd2d5617d6db400933bb9c6224f0182dea8d0aa3",
+      "published": "run9-boot-review.txt",
+      "published_sha256": "ccbb9139ad355177684ee698fd2d5617d6db400933bb9c6224f0182dea8d0aa3",
+      "normalization": "Workspace prefix removed if present; evidence otherwise exact"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run9/collect_evidence.py",
+      "sha256": "6aa51949dcebc236f3930288c2b4784e3b7c7c57f432307273755de1c777f379",
+      "method": "static original source and finite host model"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/triggers/run9/emulate_normalizer.py",
+      "sha256": "abd3cb11b85d3b4df65dece5e21e750a8c9c8b13aa34c684350a4130c78f9f5f",
+      "method": "guarded original ARM with explicit primitives/prepared-state boundaries"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run9/collect_evidence.py",
+      "sha256": "8863940ae0730088c49b67710461b4d09d15f2cbff47612306c69d9f746bb030",
+      "method": "static original source and finite host model"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run9/emulate_normal_suffix_helpers.py",
+      "sha256": "e71983f69f7b73eb4a79c1c4fc85e701fdd2941c4289bc6b396934d5d693243e",
+      "method": "guarded original ARM with explicit primitives/prepared-state boundaries"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/boot/run9/collect_marker.py",
+      "sha256": "b06387a7a1077ec9c94ddcb4c7580406f122319b26fdfcea8c72722e6bb9a23b",
+      "method": "static original source and finite host model"
+    }
+  ],
+  "history": {
+    "reviewed_run8_documents": "reviewed/run8/SOURCE_SNAPSHOTS.json",
+    "earlier_artifacts_unchanged": true,
+    "normalizer_host_construction_error": "triggers/run9/DEVELOPMENT_NOTES.md, fixed before canonical outputs; no guard/cap weakened"
+  },
+  "limits": [
+    "Normalizer constructors/parser/extractors/format/allocation are explicit primitives; not original parser/objects/valid configured input",
+    "Suffix objects prepared from static state; no full native IsCorrect/builder/decoder acceptance",
+    "Calendar source UTC/date rules not actual clock/tokenization/condition/action execution",
+    "Matching application marker under packaged path_var/runtime configuration/provider premises, no elapsed liveness/readiness proof",
+    "Five original functions across four bounded corpora, not complete firmware runtime or physical observations",
+    "Missing2.xtz/4.xtz and widerDevice gates remain open"
+  ]
+}

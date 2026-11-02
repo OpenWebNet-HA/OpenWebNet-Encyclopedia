@@ -1,0 +1,37 @@
+# MH202 run8 independent packaged-strcpy source/isolation review
+
+**PASS for the exact16-case packaged-libc leaf corpus and its stated limits. No correction requested.** I inspected the report/harness and original symbol/body, then independently replayed `python3 -B strings/run8/emulate_strcpy.py --check`. This review adds a verification replay, not another canonical saved corpus or a claim to execute the interpreter.
+
+## Original identity and isolation
+
+Independent verified ImageVFS reads resolve `/lib/libc.so.6` to `/lib/libc-2.8.so`, full SHA25699013ec5ea7c647c8b3fbc6786c6efcf5b93343c4250bd3ef364c93c074e4cf8. Host readelf identifies dynamic FUNC strcpy@@GLIBC_2.4 at0x70ad0, size240. Separate PT_LOAD arithmetic confirms file offset0x70ad0, exclusive end0x70bc0 and function SHA2567fb2a14b24b87f76462eaf618f0f6967ea3a70feb32f18c6c2a19fbbed671f79. Host objdump ignores the separate-debug CRC mismatch; this review relies on original ELF bytes/symbol metadata. The complete original leaf contains no BL/imported-helper body calls.
+
+The harness creates a fresh emulator for each fixture, loads only this leaf into a page made RX, and supplies separate private RW/nonexecuting strings and stack. Original PC execution is restricted to0x70ad0≤PC<0x70bc0; there are no primitive PC exceptions. Unknown PCs, interrupts and invalid memory reject without automatic mapping. Count100000 and timeout1000000microseconds bound each call. Completion requires return sentinel0xf000, correct destination pointer, r4/r5 and SP unchanged. The sentinel itself is not executed/counted. No syscall, target loader, original process/service/filesystem/socket/network/device or host forwarding implementation is supplied.
+
+The standalone Unicorn analysis package's41 hash-bearing RECORD entries are checked before import with bytecode disabled. I compared all63 old tool-tree regular files before/after replay by path, size, modification timestamp and SHA256: unchanged, with no added bytecode or other file. No F454 firmware, layout, input fixture or firmware harness is imported. Reusing the analysis engine does not supply original libc/environment behavior outside the mapped MH202 leaf.
+
+## Replay, source behavior and counts
+
+All16 fixtures reproduce saved outputs and trace hashes with no violation: twelve shrinking suffixes (base alignments0..3 × offsets1,4,11), one identity, one empty suffix and two disjoint controls. Saved per-case totals independently sum to **1280 original instruction visits,0 primitive callbacks,1280 code-hook visits**. Every fixture has expected string, original destination return pointer and preserved r4/r5/SP. Both current output-manifest entries match their saved hashes.
+
+The original XOR/alignment branch and byte/halfword/word-copy loops explain the tested path variation. Deliberate32-byte padding beyond NUL is mapped: word-prefetch behavior stays within supplied private memory. The corpus does not test missing terminators, arbitrary lengths, unmapped allocation edges, destination-after-source overlap, concurrency or target memory safety. A successful copied suffix for these exact arguments is not a portable C overlap contract.
+
+The prior comparator13-call corpus is separate:1485 original visits/75 primitives/1560 hooks. The report's two-corpus sum is correct: **29 calls,2765 original visits,75 primitives,2840 hooks**. Verification replays are not accumulated. Firmware processes/target OS and original interpreter/parser calls remain0. Other static run8 areas do not inherit these executed-leaf results.
+
+## Interpreter and historical boundaries
+
+The report correctly treats original IIF/CHKTIME copy-call sites as earlier static context. No original bt_script caller, strchr/strtok, effective global line, IIF control flow, CHKTIME grammar, clock, action or configured `.spt` executes here. Direct analogous arguments narrow the exact helper uncertainty for this finite corpus; they do not prove a full deployed statement or its runtime binding. Prior run5 report/model bytes retain their honest historical uncertainty; no earlier result is silently rewritten.
+
+## Exact final reviewed pins
+
+Paths relative to `strings/run8/`:
+
+| Artifact | SHA256 |
+|---|---|
+| REPORT.md | `38fec6157b5983588fe230878415e61ddf34f006d8f58227549dce5b71610419` |
+| emulate_strcpy.py | `9bdca7466c492f10964244deb59562e0975d6950496e6ec2e32d7d5376a0fc98` |
+| execution-results.json | `8c2b6f72a8817fab9d2d6de2b69ff4f23d3a2646450c7c1cca96672a9b792293` |
+| isolation-and-provenance.json | `4f8e18f06e30010fb8a365bf98744fbaade39ace019ffe4bbb9519ce0440f6b1` |
+| output-manifest.json | `74a4a8179fb8f4c2ec0812b8e43c91dadc3c6aff9e66bb1c6dd61bc43a238fb7` |
+
+Only `reviews/run8/strings-review.md` was written. No author artifact, original/tool tree, prior dossier or repository document changed.

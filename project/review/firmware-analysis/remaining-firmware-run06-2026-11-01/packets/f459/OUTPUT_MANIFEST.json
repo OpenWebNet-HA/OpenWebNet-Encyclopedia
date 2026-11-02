@@ -1,0 +1,30 @@
+{
+  "collector_sha256": "aa281001f82dccb827a37571aee15a4c8d06d4d38f809b72ab40d8b6f7739d82",
+  "original_execution": 0,
+  "outputs": {
+    "INPUT_PINS.json": {
+      "bytes": 628,
+      "sha256": "ff69abe74c2f7e7a9f712c8a72e6a28bd6b02b6b8a07081cf41457d249830372"
+    },
+    "REPORT.md": {
+      "bytes": 3753,
+      "sha256": "68b649309fd779a8265881a22cd9733fdcae041045e2a702426a54c32092f624"
+    },
+    "SOURCE.json": {
+      "bytes": 6554,
+      "sha256": "e83abeddb47a07b1fd285d82192692f413f722914f45a1b997a8e3bc919c9d09"
+    },
+    "spans/D0-entire-exported-body.txt": {
+      "bytes": 371,
+      "sha256": "508996140f69ab83aad82be6f1441cdc5497eabdec99f29b68bf9ca80f3d7833"
+    },
+    "spans/D1-literal-pool-data.txt": {
+      "bytes": 316,
+      "sha256": "5897c5c16fc1fc221ddc6d33f9046fefbb6f1fd27fe5b8904c84a3293ee8cfd2"
+    },
+    "spans/D1-selected-normal-requests-and-local-connectors.txt": {
+      "bytes": 2913,
+      "sha256": "3abc1619d7df4b0e92eb96081ee27360dd01a5284642e1ce076ca0b768b07d7c"
+    }
+  }
+}

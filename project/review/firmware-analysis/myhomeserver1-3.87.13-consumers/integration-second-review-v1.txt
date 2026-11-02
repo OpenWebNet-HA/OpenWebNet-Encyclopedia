@@ -1,0 +1,54 @@
+# Second documentary review: MyHOMEServer1 consumers
+
+PASS for the frozen source-to-summary, product-applicability and two reference-update scope. No content correction requested. Seven future capsule review/validation targets remain **PENDING mechanical completion** at this checkpoint; this review does not certify their future bytes or final strict link validation.
+
+I authored the catalogue consumer candidate and the separate provider source review. This is not independent certification of my own catalogue source: its independent review is `reviews/CATALOGUE_SOURCE_REVIEW.md`, SHA-256 `85e166345757cf44804c694f2e6b8630e568714f514993225f718a37ffa7ebdc`. The scheduler and provider also have independent source reviews. This task checks documentary consistency against those frozen reports/evidence; it does not re-audit all original source or the older encyclopedia, execute collectors/native tests, or validate physical behavior. No author/source/repository document was edited.
+
+## Exact seven-document candidate
+
+The current bytes of all seven documents match the frozen `integration/review-candidate` copies and the recorded sizes/SHA-256 hashes. That INDEX.json is `3a1cc5ccd9b463de0d44d7ff23cc0e94a44844b61c1d466bba5dc6f6718fc220`. Paths below are relative to the workspace.
+
+| Document | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md` | 8899 | `bb6e757b2caac6d39b8501abd2b5861030e40aca8bc3b61cf7da0b7f2a8b2911` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md` | 10973 | `ee2ac5108fec4dca958afa73832cc874f43aebb9e1e6f4ffa5d5c4ecaab4d381` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | 11425 | `5c60cbbf8796612b1efaa80392d77cf067b1ec647ca802dae72f91b673da2dac` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-consumers/README.md` | 4550 | `26de95b34cfcec1552fbe99ef645bc56aa75e9d9bd40b41466a86a72063e53ed` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/SYNTHESIS.md` | 2601 | `3f0982b54b2cd1973c083620891311db23f28dafffe24e617186d70b6801bd24` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/COVERAGE.md` | 2076 | `14f68a093f38427f75ac6c16cd08bed8ca2fef402429f55e4954753723b47799` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/RANKED_REMAINING_QUESTIONS.md` | 1336 | `d3cf75eb44d90a55f3ac1a9f3084287b453f7f07315878b5dd841d59c76db633` |
+
+## Source-to-summary and applicability checks
+
+Source reports inspected at current exact hashes: catalogue `609c22da91d9f4b1cf2d51dca5fb50fc3665190907fa96bd0cb8f18a1b7708a4`; scheduler `d41cdc4417f72070792d1e45b1930787fd5e5511c61907ce166b2f231f0c5f12`; providers `653c93560b2a2604ad7973d62e4eabc4d64c41e645e5ece3b4bbd979b4438c9f`. The new page preserves their original ELF identities and linked-VA versus runtime-bias distinction.
+
+- Catalogue claims remain exact and bounded. Compiled absolute-path open requests and the caller/two-handle relation are positive code dataflow, not observed successful file access. The separate reader prepares its own object+36 SQL, converts column indices13/14 and writes object+20/+24; their semantic names and eligibility policy remain unknown. The separately constructed two-column AS_ITEM_SYSTEM/main=1 declaration is explicitly not substituted for that reader. Initial101 versus repeated100 guards, finalize/close and nonuniform return boundaries are retained without inferring a defect, ordering or a successful row.
+- The scheduler summary follows the actual reported setting→storage/getter→directory loader→selected file→JsonCpp parse→same-object/root constructor path. The three trigger/condition/action factories are handoff endpoints, not a claim that those factory bodies, validation, subscriptions or actions were traced or executed. Exact excluded spelling `twiligts_times.json` and `action_schedule.json` is retained. Missing-enabled selects stored true at object+65 under the reported constructor branch, while later enabled execution gating remains unknown. Runner initialization0xa72c0, timing units, cancellation/state and command delivery stay separate future questions.
+- Zero packaged regular files under the literal configured prefix is correctly framed as a manifest/input gap. The summaries do not infer an absent live directory, inactive service, inability to create scenarios or reconstructed mount/symlink/current state. No synthetic scene or MH202 .spt grammar was presented as a valid MyHOMEServer1 asset.
+- C libjsonmsg20-byte messages/32-byte nodes are kept separate from C++ JsonCpp and C OPEN56-byte objects. The local kind2/type20/value1 result builder is not conflated with is_json_response's kind0 predicate. Resolved-node host cases remain explicit models after assumed lookup; they are not original parser/helper execution or accepted wire inputs. A generated local ACK does not become successful action, OPEN/bus acknowledgement, delivery or physical receipt.
+- Original product scope remains MyHOMEServer1 SCS/app/commissioning. Nothing transfers F454 dedicated alarm/A-V roles, MH202 scheduler layout or old state/firmware assumptions into the new C/C++ providers. Prior catalogue differences, including omitted products and Prototype/RC alternatives, do not become compatibility findings merely because compiled readers now exist.
+- Coverage59outputs is arithmetic method scope (16+27+16), not full firmware or API coverage. Root synthesis/ranking explicitly separates the now-positive consumer joins from remaining SQL producer, factory/runner, timing, ownership/provider and nontransport command-object questions. Vendor/original/SQL/parser/runtime/physical execution counters remain0 for this continuation; previous isolated-execution dossiers are neither replayed nor reset. Closed investigations and wider Device gates remain unchanged.
+
+The source checks consulted are separate from this documentary review: catalogue source review above; scheduler review `e83d452ec93694ed7d61c830d8f057480b3407f66fca42307cd87f743b492f87`; provider source review `6546ceef43a36ba30a5b5d8c9ee936f802f6ba99693c32cf5abde683b940c7e3` and second review `6bc4a7ba043abf4c132a1e64d08cdb8ecb838e859226875b5bc1fb467ddadc0f`. This review does not claim to have rerun their original-byte inspections.
+
+## Export integrity, history and two reference updates
+
+Independently compared all **67** entries in capsule SOURCE_EXPORTS.json: original source bytes equal their published counterparts and both match recorded size/SHA-256. SOURCE_EXPORTS.json is `b112fa8355415edb68740f0ea777d076de3cd07f841b1a428a52ec1b98f45e9a`. The authoritative catalogue export is REPORT.v2.md, not the preserved erroneous preliminary report. Its disclosed pre-output assertion encoding failure/new-version correction is carried in the capsule; no silent overwritten generated candidate is implied. Scheduler pre-output locator/disassembly history remains qualified rather than reconstructed as unavailable console evidence.
+
+Compared the two existing reference files with their preserved pre-edit snapshots. The original first-pass page adds only one consumer crosslink paragraph. The catalogue profile changes one source paragraph from open/query-untraced to compiled open/selected-reader-traced, retaining SQL-producer and eligibility uncertainty. The rest of those documents is unchanged by this integration. This does not amount to a semantic re-review of their older contents.
+
+## Mechanical completion still pending
+
+There are35 currently existing local Markdown link occurrences across the seven reviewed files. Seven missing targets are intentional future capsule completion records, all recorded here as **PENDING**, not verified future byte copies:
+
+- `catalogue-source-review.txt`
+- `scheduler-source-review.txt`
+- `providers-source-review.txt`
+- `providers-second-review.txt`
+- `integration-review.txt`
+- `integration-second-review.txt`
+- `validation.json`
+
+The existing source-checks.json target was present at this checkpoint; the parent's three actual check results are distinct from my documentary-only work. Local source reviews have been inspected, but their absent future capsule copies have not been certified. The parent must create the real copies/validation and run final strict ESG/link checks after they exist. No placeholder, exemption, circular certification of this review's future export or future-byte approval is granted.
+
+Only this new review file was written; no new firmware/source investigation, source-registry change, native replay, commit, publishing or automation was performed.

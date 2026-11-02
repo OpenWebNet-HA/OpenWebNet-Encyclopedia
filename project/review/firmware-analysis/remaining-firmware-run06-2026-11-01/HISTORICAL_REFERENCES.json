@@ -1,0 +1,15 @@
+{
+  "mappings": [
+    {
+      "current_bytes": 18203,
+      "current_sha256": "caa2cdfd7b2c16860e1e7d9d26f61e5a633d1a509b07bf9e8cac67c28b079b95",
+      "expected_old_sha256": "e4ad3be093335e6c9e5d3acd72dfd5dc01fbf31d93ed5670f0f206d70f5bf471",
+      "old_bytes": 15860,
+      "original_path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f450-f453av-f455-f459-mh200n.md",
+      "reason": "Add selected resource/recovery/teardown source, preserve prior reviewed snapshot",
+      "retained_export": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/remaining-firmware-run06-2026-11-01/pre-edit/overview.txt",
+      "retained_local": "work/remaining-firmware-investigation/2026-11-01-run06/integration/pre-edit/overview.md"
+    }
+  ],
+  "scope": "One exact expected-hash historical input mapping, no broad fallback/repinning"
+}

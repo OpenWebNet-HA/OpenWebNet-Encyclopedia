@@ -1,0 +1,116 @@
+[
+  {
+    "common_paths": 5823,
+    "different_hash_at_common_path": 66,
+    "image": "normal",
+    "left": "F460",
+    "left_only_application_paths": [
+      "home/bticino/alarm_manager/alarm_manager",
+      "home/bticino/bt_netatmo/bt_netatmo",
+      "home/bticino/energy_manager/energy_manager",
+      "home/bticino/player_manager/player_manager",
+      "home/bticino/scheduling_manager/scheduling_manager"
+    ],
+    "left_only_paths": 50,
+    "left_regular_paths": 5873,
+    "right": "F461",
+    "right_only_application_paths": [],
+    "right_only_paths": 30,
+    "right_regular_paths": 5853,
+    "same_hash_at_common_path": 5757,
+    "scope": "Path/hash census only, not runtime or behavior equivalence, capability absence or coverage percentage"
+  },
+  {
+    "common_paths": 5696,
+    "different_hash_at_common_path": 905,
+    "image": "normal",
+    "left": "F460",
+    "left_only_application_paths": [],
+    "left_only_paths": 177,
+    "left_regular_paths": 5873,
+    "right": "MHS1",
+    "right_only_application_paths": [],
+    "right_only_paths": 228,
+    "right_regular_paths": 5924,
+    "same_hash_at_common_path": 4791,
+    "scope": "Path/hash census only, not runtime or behavior equivalence, capability absence or coverage percentage"
+  },
+  {
+    "common_paths": 5648,
+    "different_hash_at_common_path": 892,
+    "image": "normal",
+    "left": "F461",
+    "left_only_application_paths": [],
+    "left_only_paths": 205,
+    "left_regular_paths": 5853,
+    "right": "MHS1",
+    "right_only_application_paths": [
+      "home/bticino/alarm_manager/alarm_manager",
+      "home/bticino/bt_netatmo/bt_netatmo",
+      "home/bticino/energy_manager/energy_manager",
+      "home/bticino/player_manager/player_manager",
+      "home/bticino/scheduling_manager/scheduling_manager"
+    ],
+    "right_only_paths": 276,
+    "right_regular_paths": 5924,
+    "same_hash_at_common_path": 4756,
+    "scope": "Path/hash census only, not runtime or behavior equivalence, capability absence or coverage percentage"
+  },
+  {
+    "common_paths": 6129,
+    "different_hash_at_common_path": 63,
+    "image": "recovery",
+    "left": "F460",
+    "left_only_application_paths": [
+      "home/bticino/alarm_manager/alarm_manager",
+      "home/bticino/bt_netatmo/bt_netatmo",
+      "home/bticino/energy_manager/energy_manager",
+      "home/bticino/player_manager/player_manager",
+      "home/bticino/scheduling_manager/scheduling_manager"
+    ],
+    "left_only_paths": 50,
+    "left_regular_paths": 6179,
+    "right": "F461",
+    "right_only_application_paths": [],
+    "right_only_paths": 4,
+    "right_regular_paths": 6133,
+    "same_hash_at_common_path": 6066,
+    "scope": "Path/hash census only, not runtime or behavior equivalence, capability absence or coverage percentage"
+  },
+  {
+    "common_paths": 5185,
+    "different_hash_at_common_path": 771,
+    "image": "recovery",
+    "left": "F460",
+    "left_only_application_paths": [],
+    "left_only_paths": 994,
+    "left_regular_paths": 6179,
+    "right": "MHS1",
+    "right_only_application_paths": [],
+    "right_only_paths": 199,
+    "right_regular_paths": 5384,
+    "same_hash_at_common_path": 4414,
+    "scope": "Path/hash census only, not runtime or behavior equivalence, capability absence or coverage percentage"
+  },
+  {
+    "common_paths": 5137,
+    "different_hash_at_common_path": 758,
+    "image": "recovery",
+    "left": "F461",
+    "left_only_application_paths": [],
+    "left_only_paths": 996,
+    "left_regular_paths": 6133,
+    "right": "MHS1",
+    "right_only_application_paths": [
+      "home/bticino/alarm_manager/alarm_manager",
+      "home/bticino/bt_netatmo/bt_netatmo",
+      "home/bticino/energy_manager/energy_manager",
+      "home/bticino/player_manager/player_manager",
+      "home/bticino/scheduling_manager/scheduling_manager"
+    ],
+    "right_only_paths": 247,
+    "right_regular_paths": 5384,
+    "same_hash_at_common_path": 4379,
+    "scope": "Path/hash census only, not runtime or behavior equivalence, capability absence or coverage percentage"
+  }
+]

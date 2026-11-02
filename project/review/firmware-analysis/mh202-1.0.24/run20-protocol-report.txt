@@ -1,0 +1,83 @@
+# MH2021.0.24 run20 — actual WHO9 parser output and original selector4 copy helper
+
+## Result and execution boundary
+
+Original `libopenmsg::buf_to_openmsg` parses synthetic **`*9*3*5##`** into its own48-byte pointer-string object. A second original entry, **libcoso::new_openmsg_from_openmsg(4, same_actual_object)**, consumes that exact unchanged pointer without field reseeding. Selector4 chooses original **new_message_to_opencmd0x2c78**, then **new_message_to_open0x2b5c**. The helper allocates a distinct64-byte envelope and48-byte parsed copy, duplicates WHO/WHAT/WHERE strings, and preserves actual parsed kind1. Output envelope metadata+8=**4**, distinguishing this constructor selector from parsed kind4 or an ACK code.
+
+The selected new envelope has metadata4=2, type40=**1** copied from source parsed kind, route48=9, status52=0, representation56=3 and ID60 from actual original new_id. Its timestamp words come from an explicitly synthetic ordinary clock callback; no host/target clock runs. This resolves COSO19's imported selector4 body under private premises; it does **not** execute the field STM caller, registry, queue/classifier, serializer, socket or physical transaction.
+
+Canonical new corpus: **2top-level entries,383original visits,29ordinary C/GLib primitives,5definition redirects,2EXIT boundaries,0stops =419code hooks**. Parser setup is included in those counts; it is not counted as a separate unrelated corpus or an old test replay. Two data-relocation setup writes and one synthetic counter setup write are separate. No target OS/vendor process/network/device/authentication code is invoked.
+
+## Reproduction and lineage
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run20/collect_evidence.py --check
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run20/emulate_selector4.py --check
+```
+
+Static collector:16outputs,11inputs,9original spans,32critical words. It only reads/binutils/recounts saved arrays and writes nothing under `--check`. The second command reruns the one two-entry bounded CPU corpus and compares deterministic output bytes. Replays do not accumulate new coverage. Input/source/tool/lineage manifests pin all identities. Original/earlier files remain unchanged; the new harness adapts MH202-only run18 private mapping/guards. No F454 firmware/VAs/layout/fixture/harness is imported. Only the verified readonly Unicorn2.1.4 analysis package is reused, after checking every digest-bearing RECORD member.
+
+| Original normal-image file | SHA-256 |
+|---|---|
+| `/home/bticino/lib/libopenmsg.so` | `7a4793f740c4cb41a774bf06e3af3acf4bd8a7606c5329ac70d7e0e7fd64bcd7` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+| `/usr/lib/libglib-2.0.so.0.2800.7` | `029c2a7913131a84c46958d9ed445cb8a79dd1c8abc61116321badb7ad2735c0` |
+
+Core directly NEEDEDs libopenmsg; explicit PLT redirects choose same-build native definitions. This does not execute the loader or resolve real overrides/interposition/initialized plugins. All paths are image or research-relative paths.
+
+## Exact original selector/copy chain
+
+At0x2fa4 the selector is decremented. **Selector4 table entry0x2fc8→0x3178** calls new_message_to_opencmd through PLT0x1860. Original definition **0x2c78..0x2c8c** invokes new_message_to_open0x2b5c and stores literal4 to envelope+8. Definition **0x2b5c..0x2b9c** requests zero-allocation64, explicitly sets metadata4=2/status52=0, calls g_get_real_time, stores its low/high words at24/28 and representation56=3. The clock import is an ordinary supplied primitive, not original time-provider execution.
+
+Returning to **0x2fe4..0x2fec**, the helper calls actual original new_open_msg0x1c80 through corePLT0x17a0 with the envelope address. That original constructor requests zeroed48 bytes and initializes its fields. The helper then duplicates source parsed WHO0, WHAT8 and WHERE16 at **0x2ffc/0x3010/0x3058**, storing them in a new parsed object. Source optional fields/lists are actuallyNULL for this native parser result; original g_list_first calls on source+12/+36/+40 take ordinary NULL-list branches. No supplied pre-parsed fields or list contents replace those original branches.
+
+At **0x3118..0x3138**, source parsed kind+44=1 is copied both to **new envelope type+40** and **new parsed kind+44**, while envelope representation+56=3 and selected metadata32/36=0 are set. These offsets belong to different objects. Original strtol at0x3148 converts actual source WHO`9`, storing route9 at0x314c. Original new_id at0x3150 executes same-image0x220c, returns prior seeded counter and stores it to new envelope+60. It does not copy an input envelope ID: the supplied source is a48-byte parsed object with no Q envelope/status/ID namespace.
+
+This is a new command-output constructor choice under the original names/meta stores. No claim is made that helper selector4 itself means ACK, DIM4 or a physical command success. The actual field caller and final monitor/command dispatch remain separate static context and are not native joined here. The bounded consumer continuation below checks metadata classification only.
+
+## Bounded static consumer continuation
+
+Fresh original `/home/bticino/bin/coso` SHA-256 `6865c2d1d441d25effa31275080ded70ad3538a8a49288e3002ffb196b066175` provides **send_msgs2open0xbc10..0xbd2c**. Applying actual returned Q representation3/metadata4 to its original predicates gives a selected **command-list** path: unsigned(repr−2)<=2 admits3 at0xbc48; metadata3/5 monitor branch0xbc58 is not taken; unsigned(metadata−4)<=1 admits4 at0xbc68. **0xbcf8..0xbd04** appends Q to the command list, then deletes its original queue node via0xbc6c..0xbc7c. Nonempty command list calls **send_msg2cmd0xbb78** at0xbc98. No monitor append or metadata5 copy branch is selected for4.
+
+This is a **static continuation**, not an actual native consumer invocation. COSO19's original field record G has metadata3 and takes monitor-only classification; the helper's distinct new Q has metadata4 and takes this command-list classification. They are distinct envelopes/parsed objects, not one record whose metadata is casually reinterpreted. Actual field-caller invocation, queue/list ownership, initialized recipients, serializer/text output, socket and natural delivery remain unexecuted. Copying parsed WHAT`3` does not establish physical actuation or a successful command.
+
+Exact pre-extension report/collector/manifest bytes and hashes are retained in `development-before-consumer-continuation/`. This parent-requested static source extension changes no native harness/result/counts.
+
+## Actual same-pointer input and distinct outputs
+
+Top entry1 is original parser0x10002704 (originalVA0x2704). It returns r0=0 and writes actual parsed pointer **0x05000010** to a supplied initiallyNULL private output slot. Actual object fields read back WHO`9`,WHAT`3`,WHERE`5`,DIMNULL,kind1. Top entry2 supplies that same pointer and selector4 at original0x2fa4. An entry observation confirms the pointer, and the complete48 input bytes compare unchanged after helper return. No field/object reseeding occurs between entries.
+
+New envelope returned by entry2 is **0x05000058**. New parsed copy is **0x05000098**, with WHO/WHAT/WHERE strings at0x050000c8/0x050000d0/0x050000d8. These differ from source string pointers0x05000040/0x05000048/0x05000050, while all three texts and kind1 match. Output words:
+
+| Envelope offset | Native returned value/source |
+|---|---|
+| 0 | Distinct new parsed pointer0x05000098 |
+| 4/8 | 2 /4, base metadata /selected output selector |
+| 24/28 | Synthetic clock callback low0x50607080/high0x01020304, stored by original constructor |
+| 40 | 1 from source parsedkind1 |
+| 48 | 9 from actual source WHO conversion |
+| 52 | 0, explicitly stored by original base constructor |
+| 56 | Representation3 |
+| 60 |0x10203040, original new_id return |
+
+Other envelope words remain zero under private zero-allocation. Native counter0xbcb4 changes **0x10203040→0x10203041** at original0x2220. Initial counter is private synthetic runtime state, not recovered real progression/uniqueness. Ten allocations comprise one input fixture and nine callback-model allocations. No free is requested in this selected two-entry path; all remain live in the private ledger. This is not a full lifetime/reclamation/safety verdict.
+
+## Isolation, callbacks and exact accounting
+
+Fresh mappings retain corebase0/parserbase0x10000000/originalGLibdatabase0x20000000, private stack0x02000000/input0x04000000/heap0x05000000/EXIT0x03000000. Original code is read/execute; GLibdata is read-only/nonexecuting; core counter page is read/write/nonexecuting, with writes restricted to exact0xbcb4..0xbcb8 by the memory guard. Other private writes are bounded to stack/input/heap; native and primitive reads of dead allocations abort. Unknown PC/import, invalid/protected access or interrupt aborts.
+
+Original GLib ASCII table/cell are used with mask0x0008(bit-index3), set up by exactly2data relocations: parserGOT0xee78→GLibcell0xe50c8 and that cell→originaltable0x9ed8a with privatebase. No classifier or central grammar stub is used. Five original-definition redirects cover parsernew_open_msg and core command/base constructors/new_open_msg/new_id. Ordinary primitives cover length/prefix/suffix/string compare/search/duplication, zero-allocation, NULL g_list_first, decimal WHO conversion and fixed synthetic64-bit clock return. Parser and clone helpers plus the constructors/new_id bodies actually execute.
+
+C-string reads cap4096bytes; each allocation<=4096/64KiBprivateheap. The code-hook cap100000 applies to the whole corpus and emulator instruction cap100000 to each top entry. No guard/cap is weakened. Existing generic callback arms remain fail-closed by assertions/finite expected results; selected empty lists require no list mutation model.86original memory-write events plus15primitive events are recorded; setup writes are not code callbacks.
+
+| Entry | Original | Primitives | Redirects | EXIT | Stops | Hooks |
+|---|---:|---:|---:|---:|---:|---:|
+| Actual WHO9 parser |266|19|1|1|0|287|
+| Selector4 on same actual object |117|10|4|1|0|132|
+| Total |383|29|5|2|0|419|
+
+Original function visits: parserbuf167/WHO30/WHERE49/new_open40(two calls); coreclone69/commandconstructor5/baseconstructor16/new_id7. Nested calls are included, not extra top entries. `runs` explicitly records both native entry counts, traces, primitive/redirect/write slices and return registers.
+
+The first successful draft's terminal summary retained stale `top_level_entries1` while its saved result already correctly contained2 and both runs. Exact initial harness/result and explanatory note are preserved in `development-before-stdout-label-fix/`. Only terminal summary text changed; saved result bytes, native behavior and counts did not. No earlier completed evidence was edited.
+
+High confidence under explicit private execution premises: one actual parser→same-object helper chain, selector4 choice, deep copies, exact metadata/status/type/ID and branch/callback accounting. Static high confidence: original table/symbol/relocation/provider identities. Unknown: runtime initialized bindings/time/counter, nonempty optional lists, allocation/error/unwind behavior, other selectors/grammar, actual STM caller/queue/recipient/correlation and physical effects. Highest remaining distinct question is the actual field caller with its original/source envelope and two-list ownership, keeping this generated command record distinct from the original monitor record; this experiment alone does not execute it.

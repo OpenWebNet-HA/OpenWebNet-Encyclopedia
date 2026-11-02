@@ -1,0 +1,30 @@
+# Run22: complete normal diagnostic factory and class-key ownership
+
+Scope: packaged F4542.0.51. This pass executes the original diagnostic outer factory through normal return, including all five original translator constructors and managed-key registration. It determines actual registered key overlap before assigning any precedence meaning. It does not rerun class reply/collector matrices or produce physical/accepted-version claims. Original/synced files and prior reports remain read only; new outputs are in`protocol/run22/`. No vendor process, host syscall, real I/O, authentication branch or child agent is used.
+
+## Result
+
+**All five original classes construct/register normally, producing104 distinct keys with no cross-class collisions in this build.** The earlier selected-class construction limitation is closed for this normal constructor/registration path, with explicit C++ storage/ownership primitives still retained.
+
+| Original order | Class | Constructor VA | Original allocation size | Managed keys |
+|---:|---|---|---:|---:|
+|1|General|0xb298|36|55|
+|2|Thermo|0x1125c|36|4|
+|3|ID|0xf420|36|11|
+|4|KeyObj|0x17394|40|17|
+|5|Ppt|0x1bd68|40|17|
+
+Original constructor calls supply argument0 to every class. The sum104 equals the unique outer-key count; independent set intersections for all ten class pairs are empty. Original registration order therefore does not select between conflicting owners for these104 keys. This does not establish that every constructor side effect is order-independent or that another firmware build has the same registry.
+
+Five representative original outer `getTranslator` lookups then return the expected actual constructed class objects:
+
+```text
+D2S81 → General
+D2S8F → Thermo
+R13P0 → ID
+D2S8D → KeyObj
+R40P1 → Ppt
+```
+
+No selected frame handlers execute. Combined execution is **4,515 original ARM instructions,5,345 code-hook callbacks,824 diverted PLT callbacks and6 private EXIT callbacks**. The factory alone accounts for3,997 original instructions/4,778 callbacks; five ownership lookups add518 original instructions. Counts sum exactly. No constructor-prefix stop remains in this batch.
+

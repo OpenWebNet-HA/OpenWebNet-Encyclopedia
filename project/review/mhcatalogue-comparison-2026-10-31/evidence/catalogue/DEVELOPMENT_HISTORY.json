@@ -1,0 +1,18 @@
+{
+  "attempt1": {
+    "collector": "compare_catalogues_v1.py",
+    "sha256": "7772b2a6ae286a00e2a700cba1ae5475c147d8dc5066e31d5a8523b8de2acf2f",
+    "generated_outputs": 0,
+    "error": "AssertionError RIF_MH_COLLECTION_OBJECTS: zero duplicate primary-key groups, one NULL-bearing key row in each source. Prior assumption all declared keys non-NULL was false."
+  },
+  "premature_snapshot": {
+    "folder": "first-candidate",
+    "scope": "Exact original collector only; subsequent SUMMARY lookup failed because first generation had stopped. No generated outputs existed or were overwritten."
+  },
+  "new_candidate": {
+    "collector": "compare_catalogues_v2.py",
+    "sha256": "5f157e799e1e3d0153a4457dfc0b8e4e1f816b70477643f8ea167d0e5cb7c00e",
+    "change": "Retain strict uniqueness assertion and full NULL-key audit. Allow observed NULL-bearing unique typed keys for literal data/key census only; no SQL NULL-equality or semantic join is inferred."
+  },
+  "original_inputs_unchanged": true
+}

@@ -1,0 +1,66 @@
+# MH202 1.0.24 — marker supervision and hardware-watchdog request policy
+
+This pass uses the authorized independent boot-breadth option. It identifies the MH202 daemon's marker-consumption policy, its ordinary byte-counter checkpoints and a separate `/dev/watchdog` write helper. The marker sweep tests metadata presence and deletes markers; it does not test whether a recorded PID is alive or measure marker age. These are source-level requests and decision rules, not observed service/device health or a working hardware reset.
+
+Only this directory was written. Original firmware, extracted trees, synced files, previous reports and repository documents remained read-only. Host Python/binutils/static arithmetic only: original ARM/JS/PHP/vendor execution, original instructions, hooks, real processes/signals/files/status/service/network/device/mount activity are **zero**. The HTTP-template/authentication route was not inspected. No packaged password/header/full-argv or credential content is output. Paths below are original firmware paths.
+
+## Identity and source scope
+
+| Original image object | SHA256 |
+| --- | --- |
+| `/home/bticino/bin/bt_daemon` | `41a8844318d47cf33571b6d74a7de528dea5118d4c2289f4d666de419d91b1b6` |
+| `/home/bticino/lib/libcommon.so.0.0` | `07b2c6d09e4a1b317bb3b37aff8f7ddd72dcec15e1e7194fde00c4f0ce1ecab5` |
+
+The daemon consumer/hardware helper is direct local code. The separate libcommon marker-creation primitive is inspected as that original implementation; this pass does not establish every application's actual provider/caller/path or marker cadence. Earlier provider, XML, persistence and CRC matrices are not repeated or modified. No F454 fixture or VA is substituted.
+
+## 1. Consuming per-name markers
+
+Original daemon helper `0x14c34` reads the child-record list head. For each record it tests **record+12 against zero** at `0x14c74..0x14c7c`. A zero record value is skipped; any nonzero value selects the record. This is the launch-return storage previously identified, not a new positive-PID validity check. A value−1 also satisfies this particular nonzero selection condition.
+
+It constructs `/var/tmp/bticino/bt_wd/` plus record.name and calls local metadata wrapper `0x1794c` (the imported `__xstat` boundary established earlier). Selected behavior:
+
+- Metadata result0: request unlink of that marker at `0x14d04`, ignore the unlink result, and continue to the next record.
+- Metadata result nonzero: log/report the current name and immediately return0, without scanning remaining records.
+- End of list after all selected records pass: return1 at `0x14d98`.
+
+The empty list and a list containing only zero launch-return records therefore return1 through this helper's selected code. The helper does not read marker contents, modification time or process existence. A metadata success may still be followed by an unsuccessful unlink; no actual marker was created, removed or probed here. The list/name/string/libc/metadata/logging contracts remain ordinary static premises.
+
+`host-marker-sweep-model.json` contains four ordered private fixtures. They illustrate skipped-zero, empty-list and early-failure/deletion-request ordering only; they do not run original code or create files/processes.
+
+## 2. Separate marker producer primitive
+
+Original libcommon `bt_wd_common` at `0xf930` takes a **supplied pathname**. It requests metadata first. Result0 returns without recreating or touching the existing marker. Nonzero metadata result requests `creat(path,0644)` at `0xf96c`. If creation does not return−1 it requests close; creation/close error routes log. This is not a marker timestamp-refresh loop or an observed application heartbeat.
+
+The wrapper `my_sleep_wd` at `0xfa1c` takes a requested unsigned iteration count and pathname. Its selected nonzero-count loop requests sleep1 then invokes `bt_wd_common` using that pathname, once per loop increment. A zero count returns immediately. Interrupted sleeps, actual elapsed time and all callers are not reconstructed.
+
+The consumer's unlink policy and this primitive's create-if-absent behavior are compatible with a marker being recreated after a sweep, **if an application actually supplies the matching path and reaches this primitive**. That caller/path/activity linkage is not established by function names alone and remains a ranked gap. No concrete application's response processing or bus activity is claimed to be measured.
+
+## 3. Ordinary supervision checkpoints use a wrapping byte
+
+The ordinary-child entry initializes the byte at FP−77 to0 (`0xcb84..0xcb88`) and the sweep counter at FP−76 to0 (`0xcbc4..0xcbc8`). The loop requests sleep using its current local period, then increments the byte through `0xefd4..0xeff4`. At `0xf6a4..0xf6d0` it loads that byte and uses an unsigned UMULL/shift/subtract sequence with multiplier `0x88888889` to test divisibility by60.
+
+The host collector checks all256 byte values against that original arithmetic. Starting at zero and following ordinary single-step increments, selected checkpoint iteration numbers are60,120,180,240,256,316. The256 wrap produces a16-iteration gap after240; this is not a uniform sixty-iteration schedule. These are iteration counts, not measured seconds. Sleep/provider behavior, logging, other work, blocking helpers and failure branches prevent an exact wall-clock deadline or hardware timeout claim.
+
+Each reached checkpoint increments the separate sweep count and calls the marker helper at `0xf704`. A helper0 triggers a sleep3 request. With config word+20 zero, the displayed code rejoins the common later policy. With that word nonzero, further configuration/local/marker conditions may select additional cleanup/recovery calls; the displayed eventual path requests imported `reboot` at `0xf7d0`. The optional local recovery helper `0x13f90` and imported reboot/cleanup behavior are delegates outside this pass; they may not return normally. No actual restart, recovery-image switch or per-application relaunch is established by the selected source.
+
+The counter value is not reset by a successful sweep in this displayed continuation. The watchdog policy and other maintenance code are separate operations; “marker sweep passed” is not a certificate of application readiness.
+
+## 4. Conditional hardware-watchdog request
+
+After the sweep/failure continuation, original `0xf7d4..0xf81c` requires sweep count>2 and a **nonzero metadata result** for literal `ESCO_DA_MODALITA_AGGIORNAMENTO` before calling local hardware helper `0x13a20` at `0xf820`. This literal is a relative path passed directly to metadata; its effective working directory and runtime creator/purpose are not resolved here. A zero metadata result skips this selected refresh request. The model does not call it an absolute `/var/tmp` path or assume all failures are absence.
+
+The hardware helper's complete original source is saved. It initializes its descriptor local to−1, then repeats an open request for `/dev/watchdog` with raw flags `0x1001` until the result differs from−1. It requests sleep1 **after each open attempt, including a successful one**. No attempt limit is present in this helper. Its only exit from the selected open loop is the returned-number comparison; no actual successful device access was observed.
+
+After the loop it requests a two-byte write at `0x13a84`, then close. The exact requested bytes are **`0d00`**: carriage-return plus NUL. The original literal is one character followed by the terminator; the requested count is2. Write/close returns are ignored in this selected helper. The method does not set a timeout through an inspected ioctl, and this pass does not inspect the kernel watchdog driver's behavior or claim the write actually refreshes physical hardware.
+
+If optional cleanup/reboot delegates return normally, later maintenance helper `0xac50` and a byte store into the supervisor object follow in the ordinary tail. Their full maintenance semantics are not reconstructed here. This prevents the local refresh call from being presented as complete reset/readiness policy.
+
+## Reproduction, confidence and remaining questions
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/boot/run8/collect_watchdog.py --check
+```
+
+The deterministic host collector strictly compares17 outputs: ten original spans with firmware paths/VAs/file offsets/byte hashes, sixteen exact word assertions, five pinned inputs, all256 counter values and four private marker-decision cases. It exports only an explicit safe watchdog-path whitelist and two requested payload byte codes. `input-hashes.json` pins both original ELFs, shared VFS and read-only run6/run7 reports; `output-manifest.json` pins current artifacts and excludes later reviews. Original instruction/hook execution remains0/0.
+
+Confidence is high for these selected original branch/arithmetic/call relationships. Actual process liveness, marker creation/cadence/path ownership, unlink success, supervisor failure handling, physical watchdog driver/reset/timeout and runtime binding are unobserved. Next useful questions are a concrete application's actual marker-path producer/call site; the relative marker's creator/working directory; or a distinct recovery/service cleanup contract. These gaps should not be filled from the marker filename, helper name, generic Linux expectations or previous F454 behavior.

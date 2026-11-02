@@ -1,0 +1,80 @@
+# MH202 1.0.24 taskmanager event/callback and control-state joins — run2
+
+This batch closes an actual original event-table→state-change→trigger matcher→latched callback path and the FIFO-message→PID/control-state handoff. It also locates the original configured panic-frame comparison and two distinct automatic launch passes. **All evidence is static. Original ARM/PHP/JS/vendor execution and code hooks remain zero.** It does not establish live delivery, a running child, complete script language or full parser grammar.
+
+Input is the same MH202 normal-image `/home/bticino/bin/bt_taskmanager`, SHA256 `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e`. [inputs.json](inputs.json) pins verified ImageVFS provenance, accessor and prior report. Old reports and images are unchanged. VAs below are original ELF VAs; [original-spans.json](original-spans.json) supplies file offsets and range hashes. There is no F454 behavior transfer.
+
+## Concrete event-to-callback route
+
+The original table at `0x195a0` has sixteen 16-byte entries, each with WHO, an event callback, an initialization callback and a trigger-initialization callback. [who-callback-table.json](who-callback-table.json) decodes all original words; the event dispatch function `0xd850` constructs/parses an incoming string, extracts numeric WHO and calls table+4 for a matching WHO (`0xd898..0xd8c8`). This is an internal parser/provider boundary, not proof of external transport acceptance.
+
+For one concrete ordinary path, table entry5 is **WHO9→0xdd10**. Its original handler ([who9-event-change.txt](who9-event-change.txt)):
+
+1. Extracts WHERE and WHAT using original imported getters/atoi (`0xdd18..0xdd2c`). The unsigned check of WHERE−1 at `0xdd30..0xdd38` restricts this local path to WHERE1..10.
+2. Reads cached WHAT at `0x1c4fc + 44 + 4*(WHERE−1)`; equal current/new WHAT returns immediately (`0xdd3c..0xdd4c`).
+3. Requires global pointer `0x1b4d4`'s object+4 nonzero (`0xdd50..0xdd60`). Its wider lifecycle is not newly decoded here. If this field is zero, the handler returns without even updating this cache.
+4. If the previous cached value is −1, skips matching and stores the new value. Otherwise passes the original object's full-frame string (`object+0x19ec`) with the record-list pointer at `0x1b4d0` to **`0xc608`** (`0xdd64..0xdd7c`), then stores new WHAT (`0xdd80..0xdd88`). Thus first-known values and unchanged values do not take the same matcher route as a subsequent change.
+
+The six finite cases in [host-static-model.json](host-static-model.json) transcribe exactly this **local** guard/store rule. They are host consistency examples, not an executed original parser, matcher, state cache or physical sensor.
+
+The actual outer handler at `0xa2bc` checks the global command gate before reaching `0xa410`: it clears trigger hit fields via `0xc698`, sends the current original full-frame string through **`0xd850`**, then walks each script record and its trigger list (`record+36`). For each trigger with nonzero **trigger+8 hit** and a nonnull **trigger+12 callback**, `0xa458..0xa464` clears the hit, sets r1 to the script record, and calls the stored callback. See [event-gate-and-callback.txt](event-gate-and-callback.txt), [who-dispatch.txt](who-dispatch.txt) and [trigger-match-and-latches.txt](trigger-match-and-latches.txt).
+
+`0xc608` walks the same record/trigger lists. It chooses comparison helper `0xc8e0` when the event string begins with the eight-byte prefix `*#13**22`; otherwise helper `0xc6dc`. It calls the chosen helper with stored trigger text and current event; a zero comparator result sets trigger+8 to1 (`0xc650..0xc664`). `0xc698` clears those same fields before per-event dispatch. Comparator `0xc6dc` contains literal-character and bracket numeric alternatives/ranges, rather than simply calling strcmp. Its complete accepted pattern language, malformed-pattern behavior and `0xc8e0` special comparison are **not reconstructed** here. [trigger-normalizer.txt](trigger-normalizer.txt) preserves the prior normalizer's actual code for the next grammar-focused pass; it is not counted as a newly completed semantic result.
+
+This supplies a composed static path through actual original functions and pointers. It stops short of original execution, raw socket ingestion, descriptor binding or actual event subscription. The callback traversal consumes all matched list entries; it is not a first-match-only dispatcher. Exact configured trigger ordering/content remains unavailable with missing scenario assets.
+
+## Disabled, restart and always are separate controls
+
+The matched callback path above does not read record+52 before invoking callbacks. The original start callback `0xd6d0` (previously reviewed run1) tests +60 only before calling launch; stop callback tests nonzero +60. Enable/disable callbacks change the +52 axis. Therefore **this taskmanager path does not establish that “disabled” suppresses a matching start event**. It also does not prove that a disabled script executes its actions: interpreter-side `DISABLED`, conditions and other lifecycle gates require separate evidence. Parent's interpreter investigation is independent of this batch.
+
+Two original automatic launch passes differ:
+
+| Pass | Original local condition and action | Boundaries |
+|---|---|---|
+| Restore saved control state, `0xac4c` | Reads a per-ID saved byte for IDs1..300; saved0xff becomes0. Numeric mask2 invokes disable `0xd258`. If saved numeric mask1 is set **and record+48 `$RESTART=SI` flag is nonzero**, invokes launch `0xd4f8` (`0xac84..0xacb0`). Otherwise clears saved numeric mask1. | The bit names here use mask values: disable mask is numeric2, execution mask numeric1. No inference that restart means rerun after every normal completion. |
+| Always-start pass, `0xa6dc` | For each record, if +60 is zero and +56 (`$TRIGGERSTART=SEMPRE`) is nonzero, invokes launch (`0xa6f0..0xa70c`). | Does not itself read +52. Invocation timing depends on the outer loop's readiness state. |
+
+To remove possible ambiguity in the table: saved **numeric mask1** is execution/control nonzero, saved **numeric mask2** is disabled. `0xace4` computes those bits from helper `0xb5f8` and record+52 (`0xad04..0xad28`). The restore pass acts on these bit values; no new physical state is implied. See [restore-status.txt](restore-status.txt) and [always-pass.txt](always-pass.txt).
+
+The main loop calls restoration then always-start **in that order** at `0xb4a8/0xb4ac`, once guarded by the object-status helper `0xd838` returning nonzero and a local once flag r8 still zero (`0xb490..0xb4b0`). Thus this is not an unconditional rerun of both passes every loop. Original file handling at `0xada0` uses `/home/bticino/cfg/extra/SCRIPTS_STATUS`; reader/writer validation and startup file freshness remain outside this batch. The saved byte interpretation is code-derived; actual persisted file contents were not available or synthesized as device observations.
+
+## The configured panic comparison is now located
+
+Run1 intentionally left the global gate's setter unknown. This batch finds a concrete one: `0xb080..0xb0bc` initializes a destination string at global `0x1b528` and calls GetConfigValue with path components `configuratore` / `setup` / `sicurezza` / `panic`. Literal pools `0xb598..0xb5a4` and [selected-literals.json](selected-literals.json) pin those keys. This proves the key/consumer relation, not that a particular configuration value is installed.
+
+`0xa36c..0xa394` compares the incoming object's full-frame string against that configured buffer with strcmp. On equality, it stores **1 at `0x1b4c4`** and walks script records, stopping records with nonzero +60 (`0xa398..0xa3c4`). At `0xa490..0xa4a0`, the same global decides whether ordinary event matching/callback dispatch is reached or the `General Panic%s!` logger branch is taken. Run1's WHO17 normal-command gate reads this same global. This justifies a **configured panic-frame→gate set→stop iteration** static description, while keeping exact raw accepted input, configuration defaults, gate reset, manual recovery policy and running-product behavior unresolved. The report does not treat logger `0x9d84` as the setter.
+
+## FIFO message and PID/control-state handoff
+
+The original select/read path uses record+44 for script-to-task bytes. It reads one byte per call, treats newline as termination, allocates/NUL-terminates a record-owned buffer at +200 with length at+196, and later the main loop passes those fields to `0x9dbc` at `0xb4dc..0xb4e8`. It frees the buffer and zeros +196/+200 afterwards (`0xb4ec..0xb500`). See [fifo-receive-and-eof.txt](fifo-receive-and-eof.txt) and [main-loop-handoff.txt](main-loop-handoff.txt). This is original buffer/dataflow evidence, not proof of correct I/O timing, one complete protocol or all error paths.
+
+Original first-byte jump table at `0x9ddc..0x9e14` maps these selected messages:
+
+| First byte | Actual selected action in `0x9dbc` |
+|---|---|
+| `S` | Increments global `0x1b4bc`, captures previous+60, sets +60=2, formats status through prior renderer wrapper, parses `atoi(payload+2)` and stores record+192 PID (`0x9e18..0x9e4c`). If previous state was0 or5, immediately calls cleanup (`0x9e50..0x9e58`). |
+| `R` | Sets record+60=2 (`0x9e60..0x9e70`). |
+| `P` | Sets record+60=3 (`0x9e68..0x9e70`). |
+| `E` | Calls cleanup `0xd3bc`, conditionally clears the active-request record global (`0x9e74..0x9e90`). |
+| `F` | Requires length>2 and gate clear, parses payload+2 as an OPEN object, hands it to `0xc330` with selector4; on nonnegative result sets record+60=4 and the active-request record global (`0x9e94..0x9f30`). |
+
+These byte meanings describe the actual receiver's actions, not the producer's full message language. In particular `S` becomes a concrete PID assignment boundary, but neither original process creation nor the sender of that PID was executed. WHO17 rendered executionWHAT1 remains merely **+60 nonzero**, including states3/4/5 and a requested stop; it cannot become a universal “child is running” assertion.
+
+On a no-data/closed read path with a nonzero control state, `0xbdb0..0xbe3c` compares state with5 for logging, clears an outstanding-request association when appropriate, compares saved PID with getpid, may call kill(pid,9), and invokes cleanup. No general automatic `$RESTART` on EOF is present in this selected path. No leak/UAF/durability/error-exploit conclusion is drawn from this inspection.
+
+## Reproduction, confidence and next boundaries
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/functional/run2/collect_evidence.py --check
+```
+
+The host-only collector verifies the original input, checks 14 exact instruction/table words, decodes the original sixteen-entry callback table, saves 11 bounded disassembly ranges, selected safe literals and six finite local branch examples. It checks 17 deterministic outputs plus a manifest without writing under `--check`. The exploratory full disassembly is not a final evidence artifact. Original instructions/hooks remain **0/0**; no script, template, FIFO, network or service executes.
+
+**High confidence:** composed table→WHO9 change guard→latch matcher→actual callback pointers; selected control-byte/PID branch; configured panic key/setter/gate; saved bit construction and two launch passes' local guards/order. **Conditional:** these joins presume the respective original parsed objects/configuration/list structures exist and normal imported contracts hold. **Unresolved:** complete raw parser/provider binding; trigger normalizer/bracket and special comparator language; interpreter disabled/only-if gate; complete clock/date event sourcing; panic clearing; startup readiness object's full semantics; full request/publication ownership; actual mounted resources, process scheduling and physical effects.
+
+Ranked next questions:
+
+1. Join the interpreter's actual `DISABLED` / start-condition behavior to these taskmanager callbacks without interpreting +52 as automatic suppression. Reconcile producer `S/R/P/E/F` format against this exact receiver.
+2. Recover complete ordinary trigger pattern normalization/comparison and one real configured directive if assets become available; preserve accepted field grammar versus physical-event semantics.
+3. Trace global queue/readiness object+4, `0xd838`, startup saved-status file contract and gate reset. `$RESTART` is currently established as a saved-running restoration condition, not a universal EOF rerun.
+4. Follow one original date/time source and callback join, then full publication/request completion ownership. Avoid repeating already established loader and WHO17 WHAT tables.

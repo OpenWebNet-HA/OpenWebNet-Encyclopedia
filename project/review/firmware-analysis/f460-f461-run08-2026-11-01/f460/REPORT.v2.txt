@@ -1,0 +1,45 @@
+# F460 2.0.12 run08: original update-manifest staging and filename selection
+
+One original updater function connects a tested local manifest path, libxml parsing requests, action-type selection and a selected filename-list output. It is new update architecture evidence beyond package inventory. No target script/updater/vendor code, provider, parser, syscall, installation, flash, mount, network, semantic fixture or model executes. All new execution counts are zero; previous product ledgers are unchanged.
+
+## Original identities and reproduction
+
+`/home/bticino/bin/dedrifupdater` is a fresh ELF64 little-endian AArch64 object,43088 bytes, SHA256 `8f32212bee98b507690f1e22d6b26524c8a13dc20efcc8cc05900ac4142f9753`. Original normal and recovery ImageVFS reads independently give this exact same byte identity; this is a checked same-file result, not a same-name behavioral assumption about the whole images or selected boot mode.
+
+SOURCE.json pins PT_LOADs, original code spans/bytes, instruction guards, compiled safe literals, actual BL/PLT/GOT import rows and local branch/call targets. Nearest objdump annotations are not function identities. The packaged extracted fwz.xml is separately hash-pinned and only safe action/version lines retained; it is not substituted for an observed runtime file. Device0207 supplies product context only.
+
+Reproduce with `python3 -B work/f460-firmware/2.0.12/research/2026-11-01-run08-update/collect_update_v2.py --check`. Generation refuses existing outputs and immediately freezes report/collector/output bytes with its index computed before opening the index file. Only host file reads/binutils occur. V1 first canonical invocation failed in Python parsing, before the collector body/output generation, on the malformed token `or12`. Host Python parsing did run; target execution remained0. NEW v2 changes that token to `or 12`, updates reproduction/version names, and records this history; all original source guards/interpretation remain unchanged. Exact v1 report/script and parent pre-v2 copies are retained. FIRST_GENERATION_FAILURE.json is an honest later transcription of captured tool output, not a contemporaneous full-terminal file. No generated candidate was overwritten.
+
+## Literal runtime-file request and selected caller gate
+
+Original local function0x5690 saves supplied X0 asX22. Its exact literal0x7bf0 is `/tmp/fwz.xml`. It requests g_file_test(path,16) at0x56d4. Nonzero follows0x5758 to xmlReadFile; zero first requests local helper0x5140 with the same supplied context and argument0, then tests its returned pointer. That helper body is opaque: this packet does not establish how a runtime archive/file is obtained or unpacked.
+
+Both selected file-present/normal-helper paths request `xmlReadFile(path,NULL,0)` at0x5728 or0x5780. Null document results take a branch returning local numeric3 after an unlink request; null extraction/helper result takes a distinct local numeric2 return. A nonnull document is saved atSP+24 and passed to actual xmlDocGetRootElement at0x578c. This proves source requests/gates only, not successful parsing, valid XML, safe/universal grammar, file contents, origin, authenticity or active binding.
+
+An actual local wrapper0x5d60 first requests opaque helper0x4b60 on the same supplied context. Only its zero return reaches0x5dd0 and calls0x5690 with that same pointer. The wrapper maps the parser's nonzero result to1 and zero result to0 before its normal canary epilogue. The helper's purpose/admission and outer natural callers remain open; no security/session/receiving proxy is inferred from it.
+
+## Actual action-record and filename staging join
+
+Under ordinary libxml ABI/provider returns and valid node pointers, the source follows a returned root's child chain using original offsets: node name+16, children+24, next+48, content+80 and properties+88. These are fresh original accesses, not a transferred ARM32 layout or an injected tree. This packet follows only the selected actions/action/type/attr chain, not every XML field or complete parser.
+
+At0x598c..0x599c a node named literal `actions`0x7cc8 supplies its children pointer intoX20; the loop then selects literal `action`0x7d18 at0x5a74..0x5a80. At0x5a84 it loads that action's properties. A property name equal to `type`0x7d20 and nonnull content selects further comparisons.
+
+For exact type content `firmware`0x7d28,0x5ac8..0x5ae0 follows the caller-supplied pointer chain: C=[entryX0], R=[C+48]. Only if word[R+0] is0 does it store1 there and set local W19=1. The independent `recovery_firmware`0x7d38 branch instead uses R=[C+56], tests its word0 and stores2/local W19=2 at0x5af8..0x5b10. These are local record/selection codes, not XML action IDs, the package status value4, Device IDs, public WHO, installed partition identity or an actual flashing command.
+
+The supplied outer context, pointed-to records, writable words, preexisting state and normal comparison returns are premises; their constructors/current contents are not fabricated. A repeated/prepopulated record can skip the selected zero-word initialization. The source begins each selected action with local W19=0. No universal duplicate/fallback/policy behavior is inferred beyond these actual guards.
+
+After the property scan, the selected child loop compares element name with literal `attr`0x7d68. With a nonnull child-content pointer and local W19=1,0x5bfc branches to0x5c64. It reloads the **same** R=[C+48], reads R+8 as the current list, requests `g_string_new(content)`, then requests `g_list_append(old_list,new_GString)` and stores the returned list back into R+8 at0x5c88. This is a positive type-selection -> same-record filename-list join. The selected attr block does not itself compare that element's attribute value with `file`; no complete validation or security inference follows from this bounded fact.
+
+The analogous selected W19=2 path0x5c0c..0x5c30 builds the list at the other R=[C+56]+8. Other action kinds/branches are retained only as original immediate code context, not interpreted as a support matrix. No actual filenames from a device are supplied or executed.
+
+## Package concordance and normal source exit
+
+The separately retained official package manifest has F460/fwz_ver2.0.12/xml_ver3.1 and two corresponding declared action types. Its selected source lines12..19 contain the original normal/recovery filesystem wrapper names and Image.zip wrapper. MANIFEST_CONTEXT.json records those exact safe lines and original SHA256; they demonstrate declaration concordance with the compiled selector, not that the runtime `/tmp/fwz.xml` equals this extracted file, the parser has run, or these actions/attributes are accepted and installed.
+
+In the selected no-error exit after traversal,0x5c98..0x5cb4 requests xmlCleanupParser, xmlMemoryDump, xmlFreeDoc(saved document), and g_unlink of the literal runtime path, then assigns local W0=0 before canary/return. Exact imported names come from original relocations despite misleading disassembly neighbors. These cleanup/return requests do not mean signature/version/device compatibility succeeded, filenames exist, archive members were authenticated, a partition was updated, or any reboot happened. Other missing-node/error/unwind paths and their resource policy are not comprehensively audited.
+
+The package's status4/action order is a separate declaration; this packet does not join it to a runtime state-machine transition. OpenSSL/signature import names alone are deliberately not promoted into verification/trust claims, and no key material, credentials, boot environment or private identifiers are read/exported.
+
+## Remaining boundaries
+
+Highest new gaps are constructor/provenance of the supplied context/action records; the later consumer of the staged filename lists under original status/procedure gates; and an independently bounded version/signature result gate only if its source can be audited without entering excluded routes. The opaque local file-extraction helper0x5140, precheck0x4b60, update/flash/mount/reboot and OS/provider bodies are not followed. Receiving/transport/MQTT/libjel/auth/session/framing and equivalents remain closed. No capability, authenticity, installation outcome or physical effect is inferred.

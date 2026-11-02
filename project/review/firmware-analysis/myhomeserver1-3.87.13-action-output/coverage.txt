@@ -1,0 +1,9 @@
+# Action-output source coverage
+
+| Question | Selected new evidence | Open boundary |
+| --- | --- | --- |
+|Callable receivers|Original adapters and own52/24-byte capture producers/manager copies|Actual binding/owner lifetime/concurrency/normal allocation/string returns|
+|Request members|Two selected four-key JSON assembly blocks and original key/PIC joins|Full branch admission, descriptor values and conversion/merge semantics|
+|Local handoff|Same relocation-backed receiver, method-string and JSON addresses at5dda0 callsites|Delegate behavior, complete callback return, external delivery/physical meaning|
+
+18 deterministic outputs,14 retained code spans,30 byte guards,12 direct-call/branch checks,8 key PIC joins,4 callable PIC joins,2 GOT bases,1 receiver relocation,3 import declarations,7 input pins and20 immediate exact source copies. Parent independent spot checks and source peer review remain distinct from execution. No coverage percentage, full source approval, natural configured scene or lifetime/physical conclusion is assigned. Prior ledgers/history limits stay intact.

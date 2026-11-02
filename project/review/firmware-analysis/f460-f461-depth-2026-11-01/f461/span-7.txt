@@ -1,0 +1,40 @@
+
+work/f461-firmware/2.0.11/analysis/rootfs/home/bticino/libcoso/libcoso.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000002870 <register_translation@@Base>:
+    2870:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+    2874:	910003fd 	mov	x29, sp
+    2878:	a90153f3 	stp	x19, x20, [sp, #16]
+    287c:	aa0003f3 	mov	x19, x0
+    2880:	d2800000 	mov	x0, #0x0                   	// #0
+    2884:	97fffdbf 	bl	1f80 <get_plug_m@plt>
+    2888:	aa0003f4 	mov	x20, x0
+    288c:	aa1303e0 	mov	x0, x19
+    2890:	97fffdac 	bl	1f40 <unregister_translation@plt>
+    2894:	aa1303e1 	mov	x1, x19
+    2898:	f9401280 	ldr	x0, [x20, #32]
+    289c:	97fffdd1 	bl	1fe0 <g_list_prepend@plt>
+    28a0:	a9419e63 	ldp	x3, x7, [x19, #24]
+    28a4:	b0000002 	adrp	x2, 3000 <new_openmsg_from_openmsg@@Base+0xd0>
+    28a8:	91356042 	add	x2, x2, #0xd58
+    28ac:	b9401666 	ldr	w6, [x19, #20]
+    28b0:	29419664 	ldp	w4, w5, [x19, #12]
+    28b4:	f9001280 	str	x0, [x20, #32]
+    28b8:	52800801 	mov	w1, #0x40                  	// #64
+    28bc:	b0000000 	adrp	x0, 3000 <new_openmsg_from_openmsg@@Base+0xd0>
+    28c0:	91346000 	add	x0, x0, #0xd18
+    28c4:	97fffdeb 	bl	2070 <g_log@plt>
+    28c8:	d2800000 	mov	x0, #0x0                   	// #0
+    28cc:	97fffdad 	bl	1f80 <get_plug_m@plt>
+    28d0:	f9401a61 	ldr	x1, [x19, #48]
+    28d4:	f9003260 	str	x0, [x19, #96]
+    28d8:	b4000061 	cbz	x1, 28e4 <register_translation@@Base+0x74>
+    28dc:	aa1303e0 	mov	x0, x19
+    28e0:	d63f0020 	blr	x1
+    28e4:	52800000 	mov	w0, #0x0                   	// #0
+    28e8:	a94153f3 	ldp	x19, x20, [sp, #16]
+    28ec:	a8c27bfd 	ldp	x29, x30, [sp], #32
+    28f0:	d65f03c0 	ret

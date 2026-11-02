@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+"""One constructor-reachable signed32 JsonCpp scalar path, static source only."""
+import sys
+sys.dont_write_bytecode=True
+from pathlib import Path
+import argparse,hashlib,importlib.util,json,os,re,struct,subprocess
+D=Path(__file__).resolve().parent;W=next(p for p in D.parents if(p/'sources').is_dir());R=W/'work/myhomeserver1-firmware/3.87.13/research';V=R/'2026-10-31/image_vfs.py';LIB='/usr/lib/libjsoncpp.so.1.9.5';H=lambda z:hashlib.sha256(z).hexdigest();J=lambda x:(json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+sp=importlib.util.spec_from_file_location('integer_provider_vfs',V);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+SPANS=[('signed-int-constructor-normal',0x15c40,0x15c5a),('basic-tag-prefix',0x15ad4,0x15b02),('type-byte',0x14e3c,0x14e40),('asInt-prefix',0x1682c,0x16856),('asInt-type1',0x1687a,0x1688a),('asInt-normal-return',0x1685e,0x1687a),('isInt-type-selection',0x15518,0x1553e),('isInt-signed-range',0x1556c,0x15580),('isInt-normal-return',0x15540,0x15558)]
+GUARDS=[(0x15c40,'0022'),(0x15c44,'0d46'),(0x15c46,'c260'),(0x15c48,'0121'),(0x15c50,'eb17'),(0x15c54,'c4e90053'),(0x15af8,'2172'),(0x14e3c,'007a'),(0x16852,'dfe800f0'),(0x16880,'0028'),(0x16886,'2068'),(0x15532,'0228'),(0x15536,'0328'),(0x1553a,'0128'),(0x1553c,'16d0'),(0x1556c,'d4e90030'),(0x15570,'13f10043'),(0x15574,'40f10000'),(0x15578,'b0fa80f0'),(0x1557c,'4009')]
+def build():
+ v=m.ImageVFS();b=v.read_bytes(LIB);assert H(b)=='5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36';ph=struct.unpack_from('<I',b,28)[0];es,n=struct.unpack_from('<HH',b,42);L=[struct.unpack_from('<8I',b,ph+i*es)for i in range(n)]
+ def off(a,n=1):return next(o+a-va for t,o,va,_,fs,*_ in L if t==1 and va<=a and a+n<=va+fs)
+ def raw(a,n):o=off(a,n);return b[o:o+n]
+ def u(a):return int.from_bytes(raw(a,4),'little')
+ hp=v.root/v.resolve(LIB).lstrip('/');env=dict(os.environ,DEBUGINFOD_URLS='');out={};rs=[]
+ for name,a,e in SPANS:
+  z=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(hp)],text=True,env=env).replace(str(hp),LIB);out['spans/'+name+'.txt']=z.encode();rs.append({'name':name,'start_VA':hex(a),'end_VA_exclusive':hex(e),'file_offset':hex(off(a,e-a)),'sha256':H(raw(a,e-a))})
+ for a,z in GUARDS:assert raw(a,len(bytes.fromhex(z))).hex()==z,hex(a)
+ sy=subprocess.check_output(['readelf','-sW',str(hp)],text=True,env=env);symbols=[]
+ for name,a in [('_ZN4Json5ValueC1Ei',0x15c41),('_ZN4Json5ValueC2Ei',0x15c41),('_ZN4Json5Value9initBasicENS_9ValueTypeEb',0x15ad5),('_ZNK4Json5Value4typeEv',0x14e3d),('_ZNK4Json5Value5asIntEv',0x1682d),('_ZNK4Json5Value5isIntEv',0x15519)]:
+  z=[s.strip()for s in sy.splitlines()if s.split()and s.split()[-1]==name];assert len(z)==1 and int(z[0].split()[1],16)==a;symbols.append(z[0])
+ def rimm(x):r=((x>>8)&15)*2;z=x&255;return((z>>r)|(z<<(32-r)))&0xffffffff if r else z
+ rel=subprocess.check_output(['readelf','-rW',str(hp)],text=True,env=env);calls=[]
+ for pc,plt,slot,target,name in [(0x15c4c,0xba94,0x32f54,0x15ad5,'_ZN4Json5Value9initBasicENS_9ValueTypeEb'),(0x16848,0xb768,0x32e54,0x14e3d,'_ZNK4Json5Value4typeEv'),(0x1687c,0xadfc,0x32b48,0x15519,'_ZNK4Json5Value5isIntEv'),(0x1552e,0xb768,0x32e54,0x14e3d,'_ZNK4Json5Value4typeEv')]:
+  x,y=struct.unpack('<HH',raw(pc,4));assert x&0xf800==0xf000 and y&0xd000==0xc000;s=x>>10&1;i=1-((y>>13&1)^s);j=1-((y>>11&1)^s);d=s<<24|i<<23|j<<22|(x&1023)<<12|(y&2047)<<1;assert(((pc+4)&~3)+d-((1<<25)if s else 0))&0xffffffff==plt
+  x,y,z=struct.unpack('<III',raw(plt,12));assert x&0xfffff000==0xe28fc000 and y&0xfffff000==0xe28cc000 and z&0xfffff000==0xe5bcf000;assert plt+8+rimm(x)+rimm(y)+(z&4095)==slot
+  rr=next(s.strip()for s in rel.splitlines()if s.startswith(f'{slot:08x} '));assert'R_ARM_JUMP_SLOT'in rr and rr.split()[-1]==name
+  calls.append({'call_VA':hex(pc),'call_bytes':raw(pc,4).hex(),'ARM_PLT':hex(plt),'ARM_PLT_bytes':raw(plt,12).hex(),'slot':hex(slot),'definition_Thumb':hex(target),'symbol':name,'original_relocation':rr})
+ table=raw(0x16856,6);assert table.hex()=='ad121a30af03'and 0x16856+2*table[1]==0x1687a
+ assert 0x1553c+4+2*(int.from_bytes(raw(0x1553c,2),'little')&255)==0x1556c
+ pins={LIB:{'sha256':H(b),'bytes':len(b)}}
+ for p,k in [(V,'image_accessor'),(R/'2026-11-01-serialization/provider-values/REPORT.md','prior_null_unsigned_scope'),(R/'2026-11-01-trigger-serialization/serializer/REPORT.md','prior_signed_trigger_serializer_boundary'),(R/'2026-11-01-double-isolation/harness/RESULTS.json','unchanged_saved_execution_ledger'),(W/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md','CURRENT_product_context')]:z=p.read_bytes();pins[k]={'path':str(p.relative_to(W)),'sha256':H(z),'bytes':len(z)}
+ out['ORIGINAL_SOURCE.json']=J({'image':LIB,'spans':rs,'guards':[{'VA':hex(a),'bytes':z}for a,z in GUARDS],'definitions':symbols,'candidate_self_binding_calls':calls,'selected_asInt_TBB':{'base':'0x16856','bytes':table.hex(),'constructor_tag':1,'entry_byte':hex(table[1]),'target':'0x1687a'},'data_scope':'TBB bytes are data, not instructions. No other type-arm/error/body inspection is claimed.'})
+ out['SIGNED_CONTRACT.json']=J({'ABI':'thisR0,int32argumentR1; normalint32returnR0; noVFPfixture/layouttransfer','constructor':'C1Ei/C2Ei15c40 savesR1 inR5; owncomments12zero; initBasic type1/allocated0; ASR31 makeshighsignword; STRD lowinput/highsign toobject0/4','tag':'initBasic storesargument1 atobjectbyte8; actualtype14e3c readsbyte8','asInt_type1':'actualtype call→TBBtag1→1687a callsactualisInt; nonzero→16886 loadsobjectlowwordR0→normalcanaryepilogue','isInt_type1':'1556c loadsloR3/hiR0; ADDSlo+0x80000000 thenADChi+carry; CLZ(adjustedhi)>>5→1iffadjustedhi0; normalcanaryreturn','algebra_scope':'For normalvalidtwo-complement64bitinteger this identifies signed32 interval; a C1Ei-producedsignextended32bitargument liesinthatinterval. No numericfixtures or executedalgebra model.','conditional_result':'Normalvalidconstructor-produced object/nointerveningmutation/candidatebinding/ABI/tag/canary anddelegate returns→asInt loads original32bitargument word; not wholeJSON/intdomain/admission/assignment/parser proof','not_followed':['otherstoredtype arms','false-range/error/unwind behavior','nonnullComments/destructor/providerOS','string/member/map/moveassignment/serialization/reparse','physicalunits/range/installedstate'],'execution':{'new_original':0,'host_semantic_fixtures':0,'native_replays':0,'prior_cumulative':'1corpus8entries340originalvisits0C12redirect8EXIT360hooks+4datasetup unchanged'}})
+ out['INPUTS.json']=J(pins);out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes()),'outputs':{n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()},'counts':{'spans':len(SPANS),'guards':len(GUARDS),'definitions':len(symbols),'original_PLT_call_proofs':len(calls),'inputs':len(pins),'original_execution_additions':0}})
+ return out
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');ck=ap.parse_args().check;out=build();C=D/'first-candidate';cp={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),Path(__file__).name:Path(__file__).read_bytes()};ix=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in cp.items()})
+ if ck:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  assert(C/'INDEX.json').read_bytes()==ix
+  for n,z in cp.items():assert(C/n).read_bytes()==z,n
+ else:
+  assert not C.exists();assert all(not(D/n).exists()for n in out)
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  C.mkdir()
+  for n,z in cp.items():p=C/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (C/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':ck,'outputs':len(out),'spans':len(SPANS),'guards':len(GUARDS),'original_execution_additions':0}))
+if __name__=='__main__':main()

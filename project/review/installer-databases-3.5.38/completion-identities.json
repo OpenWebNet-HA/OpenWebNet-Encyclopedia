@@ -1,0 +1,220 @@
+{
+  "result": "PASS",
+  "scope": "Final saved archival/analysis/review/mechanical/identity artifacts; not complete software/runtime/physical proof.",
+  "files": [
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/README.md",
+      "bytes": 5110,
+      "sha256": "f3d43e1aaab9585fce0b4bd87f51706aee87f7744e8a381b4e87fc66d3d664d0"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/archive-completion.json",
+      "bytes": 830,
+      "sha256": "bbca9bad3126b4d6ce7b33f7adb16f6512b4a4497528c5c18d3f971149e1cfc3"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/archive-readback-receipts.json",
+      "bytes": 4288,
+      "sha256": "1f6f7b64923d9f92f461511bb66378c17580ba53844d318b7d59269e387de2b5"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/archive-source-review.txt",
+      "bytes": 6130,
+      "sha256": "46b1092c8841111b95a2d893b06da69132687810bf5771138a2ba0c288f9604c"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/canonical-member-map.json",
+      "bytes": 8802,
+      "sha256": "dfea91e352ec507c5e3fd2317c7ead13c4d7cf2534cd85f1438eee15fb5fb0a8"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/canonical-registration.json",
+      "bytes": 1118,
+      "sha256": "a0d8524c808f992d4404bad4376dd402832e77d4bb1aaa84158650596b05e3a2"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/installer-database-inventory.json",
+      "bytes": 173332,
+      "sha256": "63a049c4ad34e7e21ef0fc2d3e9ee42bfba9b48f0c7157c9dafb85c17ac8ba50"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/integration-review.txt",
+      "bytes": 10036,
+      "sha256": "3e8a776e5dc1b76c397df3b3254e1c7e87c8e6085f77f7f3e7952bc3dbbb5a5b"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/postwrite-checks.json",
+      "bytes": 1390,
+      "sha256": "ea3b4d9a6ff55c80d56f2fb66fb33e206b53ba5c1151f680289caced1fd0a9bf"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/project-preoutput-history.json",
+      "bytes": 768,
+      "sha256": "ba9de484b43699ee83249f13a73059ccbdfe2626589682fc5da08b71969f9a0f"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/project-reference-rows.json",
+      "bytes": 2756,
+      "sha256": "29593557dbf4bf6f873f5fadf4a7da7988c55400883b956f3ca0c28df8d848e8"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/project-schema-sanitized.json",
+      "bytes": 32872,
+      "sha256": "a96ece06d9c8c3d1b3c0ac03474ccb68317aecbe19d4b2031cde558022d1ef06"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/project-templates-report.txt",
+      "bytes": 7641,
+      "sha256": "595c1169811d27506e7ab3a2cfe9c9775c0d10f1356961a3b0649d4d06d4fd24"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/project-templates-source-review.txt",
+      "bytes": 7374,
+      "sha256": "092877dd9be3d2bfccccf064ab324885c0d6bb91a1e1107625c6b28112a3c771"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/provenance.json",
+      "bytes": 7009,
+      "sha256": "c07e8b756e4b18417f70a164415d1c23f46d50b784045c9132c9e8727d60e0e2"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/scenario-context-queries.v2.json",
+      "bytes": 12717,
+      "sha256": "9e09dcc65cf267d33d3e23caa51d96924589906f12ef912c57d6a33dee79fdab"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/scenario-logical-differences.v2.json",
+      "bytes": 13553,
+      "sha256": "e15792b55a871273988620c53bd8a766c18906327fe6243af364214d9f89c118"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/scenario-variants-report.v2.txt",
+      "bytes": 12512,
+      "sha256": "b2eee5bb1c8a51a0bfa7eff3b146268aba7c225150430738395d23298597529f"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/scenario-variants-source-review.txt",
+      "bytes": 6249,
+      "sha256": "a9dcf7d9a1f88a3d2ec36e88a88482a8f69e0d63aecd6361917747acc7a43f18"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/scenario-version-key-history.v2.json",
+      "bytes": 1107,
+      "sha256": "277ba251f0fa64099cf8817745f042242106d48f26f45b45d5838923ef517f28"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/systems-report.txt",
+      "bytes": 16279,
+      "sha256": "ca046a1f5f6764935455040a09c3e2f7c8221ba466a448e89fe811168e922e5b"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/systems-selected-source-rows.json",
+      "bytes": 683429,
+      "sha256": "81e863b702cd299f6d41c4982905e98c1028b66a099306af65ce57ca41430b04"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/systems-source-review.txt",
+      "bytes": 8320,
+      "sha256": "3aa0af045f83bb277ea0a766727f546c0b723982186e963519c026e5c5627437"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/project/review/installer-databases-3.5.38/validation.json",
+      "bytes": 8190,
+      "sha256": "68c9c44442780a157a5a76c5ed5f2f6ecd163546713c67e32a0004061e1742d2"
+    },
+    {
+      "path": "work/installer-database-analysis/2026-10-31/COVERAGE.md",
+      "bytes": 3002,
+      "sha256": "bf2bfa73180075604127dcb9aa0e608e8aa83a4c1a0e0b2734ffce9538521a8c"
+    },
+    {
+      "path": "work/installer-database-analysis/2026-10-31/IDENTITY_VALIDATION.json",
+      "bytes": 8190,
+      "sha256": "68c9c44442780a157a5a76c5ed5f2f6ecd163546713c67e32a0004061e1742d2"
+    },
+    {
+      "path": "work/installer-database-analysis/2026-10-31/POSTWRITE_CHECKS.json",
+      "bytes": 1390,
+      "sha256": "ea3b4d9a6ff55c80d56f2fb66fb33e206b53ba5c1151f680289caced1fd0a9bf"
+    },
+    {
+      "path": "work/installer-database-analysis/2026-10-31/REMAINING_QUESTIONS.md",
+      "bytes": 2353,
+      "sha256": "2232f65df374411bd46cc62b7a7543a6f0f5960bb6ac335d03d9b99373710bdd"
+    },
+    {
+      "path": "work/installer-database-analysis/2026-10-31/RESEARCH_STATE.json",
+      "bytes": 2120,
+      "sha256": "4b08249f1993d8f3f2d0feb6b14f123a09c807e68b35b9f6023f2d85b23b0542"
+    },
+    {
+      "path": "work/installer-database-analysis/2026-10-31/SYNTHESIS.md",
+      "bytes": 4050,
+      "sha256": "76254561950bf0b72a36904ae3e563f2a4212606636cf968c464bba59d44e5d7"
+    },
+    {
+      "path": "work/installer-database-analysis/2026-10-31/final-reviewed-documents/SOURCE_SNAPSHOTS.json",
+      "bytes": 2549,
+      "sha256": "c7b380a5247934f9104b812ba6eb533bb1148931ad4d9db5d694b09ffc41ece4"
+    }
+  ],
+  "current_document_pins": [
+    {
+      "path": "internals/README.md",
+      "bytes": 5064,
+      "sha256": "5db3e9f6d46dbd7b60b1d8fbae9cc69c9f5bc1c13c17dd0711709df11815d62f"
+    },
+    {
+      "path": "internals/installation-and-source-layout.md",
+      "bytes": 5859,
+      "sha256": "24227e83c47a1fba42a131825a6a405447b2e70845b46b3d65d246296a312596"
+    },
+    {
+      "path": "internals/data-store-responsibilities.md",
+      "bytes": 5414,
+      "sha256": "a7d92f854a874fad0628938dfb596664c3baebe3c515945e5917f43e82f08aac"
+    },
+    {
+      "path": "internals/implementation-boundaries.md",
+      "bytes": 5705,
+      "sha256": "b1178a0b885096803eb161167624c86dff066bb2fa2538fb7792a7eae13fb374"
+    },
+    {
+      "path": "scenario-engine/README.md",
+      "bytes": 7832,
+      "sha256": "b9b0a264dd8e84e8d1161de4a21c4a391f52cc9c2e857413452733734c0baa13"
+    },
+    {
+      "path": "scenario-engine/scenario-suite-database.md",
+      "bytes": 10710,
+      "sha256": "a1697760814082db62e7cc93b9694d85a044cc10b27f3a49cd080e36a80dbbb9"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-av-and-board.md",
+      "bytes": 7003,
+      "sha256": "c1cbfa5a7af37642d6e54c23573824541b09b594d0b0f172c1415ce5f277c1ad"
+    },
+    {
+      "path": "internals/project-and-plant-templates.md",
+      "bytes": 5737,
+      "sha256": "fe7ac8c0083a1f70c0ca918eec944228642bf91277dbd6a24c826d6ea52fdbbd"
+    },
+    {
+      "path": "internals/device-application-databases.md",
+      "bytes": 7823,
+      "sha256": "d9d6dad3b74a16805ff25dc97f8bc6792dcd66226e158cc8954f32a0efbd9879"
+    },
+    {
+      "path": "scenario-engine/scenario-suite-variants.md",
+      "bytes": 6064,
+      "sha256": "2547a50c1efb2e2912b41bb329572a4274c0b98ab55aa1a777776e030afb94ab"
+    },
+    {
+      "path": "project/review/installer-databases-3.5.38/README.md",
+      "bytes": 5110,
+      "sha256": "f3d43e1aaab9585fce0b4bd87f51706aee87f7744e8a381b4e87fc66d3d664d0"
+    }
+  ],
+  "canonical_archive_main_commit": "974eced66cf40fdc5b5dc3417357244db710d848",
+  "analysis_published": false
+}

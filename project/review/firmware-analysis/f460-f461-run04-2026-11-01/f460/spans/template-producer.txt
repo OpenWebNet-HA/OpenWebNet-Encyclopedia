@@ -1,0 +1,12 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000027eac <_ZNKSt5ctypeIcE8do_widenEc@@Base-0x1a694>:
+   27eac:	910802d4 	add	x20, x22, #0x200
+   27eb0:	90001321 	adrp	x1, 28b000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x134070>
+   27eb4:	aa1403e0 	mov	x0, x20
+   27eb8:	9138e021 	add	x1, x1, #0xe38
+   27ebc:	9402c9cd 	bl	da5f0 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x36e10>

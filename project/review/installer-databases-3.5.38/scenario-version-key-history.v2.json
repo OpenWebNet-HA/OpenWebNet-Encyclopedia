@@ -1,0 +1,12 @@
+{
+  "scope": "Parent-authorized source-key/count correction before any canonical evidence generation; exact v1 source/report/failure retained",
+  "v1_collector_sha256": "80214c031c0421686de2994cfeb8d95c6294431655e132fc0f274cbb7f5e451d",
+  "v1_report_sha256": "03d5b7560211cef5f79fb464be3ae1d12318347611c9231fa203ee47d641844e",
+  "failure_record_sha256": "45ae5182aca5889d134ff17b7673dd532285bda334e0b3d67063658057b0ea56",
+  "diagnosis": "ANA_VERSIONE_DB declares composite PK(VERSION,RELEASE,BUILD). V1 logical code already honored it and stopped at incorrect expected9matchedrows/11cells before output writes. Actual8same-keyupdates/9cells plusremoved(1,1,0) andadded(1,0,53).",
+  "v2_collector_sha256": "3833d0089df7313ff8fb30ecf52f9c9f62290dff7c787f5c6dc6b0a2e83828fc",
+  "v2_report_sha256": "b2eee5bb1c8a51a0bfa7eff3b146268aba7c225150430738395d23298597529f",
+  "changed_method": "Same complete schema and typed-row multiset/key comparison. New stricter event/count/key guards and explicit output-version/report names. Original data unmodified.",
+  "generated_v1_outputs": 0,
+  "original_execution": 0
+}

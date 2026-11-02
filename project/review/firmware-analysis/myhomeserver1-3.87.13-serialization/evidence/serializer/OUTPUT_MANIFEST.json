@@ -1,0 +1,58 @@
+{
+  "collector_sha256": "f4baef80658ed0164cd0b40eb4d361c945c6b6ee0c0bf5c179e4ce49069deeeb",
+  "outputs": {
+    "CRITICAL_BYTES.json": {
+      "bytes": 1003,
+      "sha256": "b3bb6558d3008831f2da3bc607b3a7a18535736a2e94d38abc0977d9dab45144"
+    },
+    "DIRECT_CALLS.json": {
+      "bytes": 240,
+      "sha256": "7107b901bc65aff5bfc7c2be84d1920ca9a1d1b87f95b0eccecb3b54c480cca8"
+    },
+    "FIELD_RULES.json": {
+      "bytes": 1509,
+      "sha256": "ad938267f67a4d9d0f8b2732db3d7898d0301a1b4d0e606b0d19f4f75fe19eef"
+    },
+    "IDENTITY.json": {
+      "bytes": 1365,
+      "sha256": "c9e0b8572dfd5441482714ea972bbe38f912412d2afe49fce061cbdbd08bb835"
+    },
+    "INPUTS.json": {
+      "bytes": 863,
+      "sha256": "9834b8e91cb117e7729b12bce99a75c4f6c1d71de1377354d1131298e0fadcb8"
+    },
+    "METHOD.json": {
+      "bytes": 552,
+      "sha256": "f94e07d02947b16d647e6dab8cb27d4d883e327ccff17ebd006260887a31efba"
+    },
+    "PIC_KEYS.json": {
+      "bytes": 1127,
+      "sha256": "5b3bc37f4b76fa0d4d226739a0830f30f28c86f635fa3add48f7a3e53977c968"
+    },
+    "POOL_DATA.json": {
+      "bytes": 475,
+      "sha256": "ea229ad3ff86f37614227e711f8745868e0082eb7f70b4f23d74d3a9524615c1"
+    },
+    "SOURCE_SPANS.json": {
+      "bytes": 865,
+      "sha256": "286e1294ea736168055ff3fbe10eb6fefa43f34369bd3285697c7969c28604ef"
+    },
+    "spans/compiled-duration-prefix.txt": {
+      "bytes": 3591,
+      "sha256": "b63f99d3b95e833151fa70d8c380d71d834e0ec7fc242316f3f2abd2884554e5"
+    },
+    "spans/raw-constructor.txt": {
+      "bytes": 10402,
+      "sha256": "ba381d8d65f5b6473aba111965bde28682b800d1a681b2d226bcccf40577b23b"
+    },
+    "spans/raw-serializer.txt": {
+      "bytes": 10186,
+      "sha256": "d83160062b95d6f4f187ea8fc9d197a3a19f3809f86fb1c56970aa12635c7d1f"
+    },
+    "spans/same-json-reparse.txt": {
+      "bytes": 1055,
+      "sha256": "cd9d32c9f56ab8ada74a41a4bff9676dd53bcd3d730f5c7d98636b4198cbdfb6"
+    }
+  },
+  "report_sha256": "9764cd1a79d78665b802ec3393e7261d247aca9bf4a0d165cd58feb7eb5bdfd8"
+}

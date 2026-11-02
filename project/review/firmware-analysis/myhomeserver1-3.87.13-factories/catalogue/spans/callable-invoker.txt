@@ -1,0 +1,38 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a2a14:
+   a2a14:	f8df c044 	ldr.w	ip, [pc, #68]	@ a2a5c
+   a2a18:	b530      	push	{r4, r5, lr}
+   a2a1a:	4614      	mov	r4, r2
+   a2a1c:	681a      	ldr	r2, [r3, #0]
+   a2a1e:	b083      	sub	sp, #12
+   a2a20:	44fc      	add	ip, pc
+   a2a22:	4b0f      	ldr	r3, [pc, #60]	@ (a2a60)
+   a2a24:	680d      	ldr	r5, [r1, #0]
+   a2a26:	6821      	ldr	r1, [r4, #0]
+   a2a28:	4604      	mov	r4, r0
+   a2a2a:	f85c 3003 	ldr.w	r3, [ip, r3]
+   a2a2e:	681b      	ldr	r3, [r3, #0]
+   a2a30:	9301      	str	r3, [sp, #4]
+   a2a32:	f04f 0300 	mov.w	r3, #0
+   a2a36:	9b06      	ldr	r3, [sp, #24]
+   a2a38:	681b      	ldr	r3, [r3, #0]
+   a2a3a:	47a8      	blx	r5
+   a2a3c:	4a09      	ldr	r2, [pc, #36]	@ (a2a64)
+   a2a3e:	4b08      	ldr	r3, [pc, #32]	@ (a2a60)
+   a2a40:	447a      	add	r2, pc
+   a2a42:	58d3      	ldr	r3, [r2, r3]
+   a2a44:	681a      	ldr	r2, [r3, #0]
+   a2a46:	9b01      	ldr	r3, [sp, #4]
+   a2a48:	405a      	eors	r2, r3
+   a2a4a:	f04f 0300 	mov.w	r3, #0
+   a2a4e:	d102      	bne.n	a2a56
+   a2a50:	4620      	mov	r0, r4
+   a2a52:	b003      	add	sp, #12
+   a2a54:	bd30      	pop	{r4, r5, pc}
+   a2a56:	f76d e912 	blx	fc7c <__stack_chk_fail@plt>
+   a2a5a:	bf00      	nop

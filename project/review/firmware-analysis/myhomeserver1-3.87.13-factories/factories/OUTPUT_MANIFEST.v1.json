@@ -1,0 +1,88 @@
+{
+  "files": {
+    "CRITICAL_BYTES.v1.json": {
+      "bytes": 721,
+      "sha256": "458c0e6071bce8ae1649e17dc9bdb599e7a343b0250c960adb4bc7f178d5983e"
+    },
+    "DIRECT_CALLS.v1.json": {
+      "bytes": 549,
+      "sha256": "b1e14a43beee928e5e94e7ef2a1a808d56b622b485d93961839cb8477bc89290"
+    },
+    "INPUTS.v1.json": {
+      "bytes": 843,
+      "sha256": "c17952f2b48ca2a8113264588e74394b73a6e43ddbb3949f59459aaac8b1f6ff"
+    },
+    "LOCAL_ENUM_TABLES.v1.json": {
+      "bytes": 11345,
+      "sha256": "e70a44fd256c25708ab3eb191409e8b5c2febb1def52a5905f963bcdc53a94e5"
+    },
+    "METHOD.v1.json": {
+      "bytes": 765,
+      "sha256": "121668363a73e95546a18280e11b4aa33a3869e048dfc224a90387dcb51c29ec"
+    },
+    "PIC_LITERALS.v1.json": {
+      "bytes": 1192,
+      "sha256": "62055f18a6ffa1caa27fc569bd8bc0e0515e3ded3cc9dfac2ad7c112b6e4fe10"
+    },
+    "PROVIDERS.v1.json": {
+      "bytes": 1489,
+      "sha256": "a43299aa9f7ccb6dd6eff6597a7bde04eece6097f66091d115b368a30ce56f5b"
+    },
+    "SELECTED_DISPATCH.v1.json": {
+      "bytes": 850,
+      "sha256": "4dd3b3c86ecb016d775b6b15c3f0a4f96358967ca7b577230bb48821b2269235"
+    },
+    "SOURCE_SPANS.v1.json": {
+      "bytes": 2259,
+      "sha256": "17759a4d4b185f000cdac9e75ea3e05079eaafc53031a3dd23e765393b190ea6"
+    },
+    "VTABLE_IDENTITIES.v1.json": {
+      "bytes": 881,
+      "sha256": "70573186162f607b006efff6d23194daf19b2bff62a3020d9d03a4c09c8e2667"
+    },
+    "spans/action-cleanup-and-advance.txt": {
+      "bytes": 4491,
+      "sha256": "9085473d960ae5d2af6fee982bf55b5646fbcc40cb2a81ca51cdb4909db15af5"
+    },
+    "spans/action-discrimination.txt": {
+      "bytes": 6665,
+      "sha256": "90d4dc8f41a88d71cc2380e4b47a6d2e2d294c860d5a251e1494817ae3b242d8"
+    },
+    "spans/action-pools.txt": {
+      "bytes": 3592,
+      "sha256": "abbadebf2d45dd77e9ee65d7e9e6da5fb55296507c38df1b0cb4470f0868fbc5"
+    },
+    "spans/base-action-copy.txt": {
+      "bytes": 5917,
+      "sha256": "3295cf9984981a3f5779d82792e862318f702cedfe4eb6caa084b1fcf969bbe1"
+    },
+    "spans/base-action-json.txt": {
+      "bytes": 9428,
+      "sha256": "53e2d9e1f169217225a0572c934d1ef35fc05204a87b53283980211523b4e9c4"
+    },
+    "spans/condition-discrimination.txt": {
+      "bytes": 6805,
+      "sha256": "63e3bd6902500672c082dd5881fce7789da4f27cbbdd5b18bd7dc6f12a2b379e"
+    },
+    "spans/condition-pools.txt": {
+      "bytes": 682,
+      "sha256": "9bebee301ddf55211f2f6676341afb7b3cecb1e03af6f825d5c1d878396c5cd6"
+    },
+    "spans/pointer-vector-append.txt": {
+      "bytes": 1145,
+      "sha256": "384862e39ea7f2617aa1b143d39007c0ccd23909d3a70f5f0ac526e872892548"
+    },
+    "spans/selected-scenario-and-sleep.txt": {
+      "bytes": 4605,
+      "sha256": "4f6d61f7dbebe2235ccf36a550277b7e556bfc0ced0e2f8e8d0f7ed844c54958"
+    },
+    "spans/trigger-discrimination.txt": {
+      "bytes": 7164,
+      "sha256": "5bc991a63ea02358059c5192f4aab9fe75426bb82bf1f50576b299828afb0673"
+    },
+    "spans/trigger-pools.txt": {
+      "bytes": 690,
+      "sha256": "fa34e12d1ca3c8e98f7b0c297673f179eb9ecf5d3d2c62476b2e207c05214897"
+    }
+  }
+}

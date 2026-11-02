@@ -1,0 +1,80 @@
+# ScenarioSuite database-to-script method chain - static source
+
+The recovered original assemblies contain a concrete compiler chain, not just script-name literals. DataManager owns the rule-query builders; Core owns their row conversion, ordered OPEN-field substitution, scenario-line construction and actual file/XML API call sites. `cCore.CompileAll` passes a scenario-specific `.spt` pathname to `cCompiler.CompileScenario`, whose original method constructs a StreamWriter and writes the built line list; CompileAll also constructs and saves `info.xml`.
+
+These are original method/token/IL dataflow findings. No vendor assembly, reflection instruction, compiler, SQLite driver, project, script or firmware was executed. No fixture scenario or fabricated SQL object was supplied. The finding identifies an available source implementation; successful generation, configured inputs, complete language behavior, installation and compatibility with MH202 firmware1.0.24 remain unproved.
+
+## Source and analysis-tool identity
+
+Inputs are the four exact previously verified installer resources under `scenario-artifacts/acquisition/selected-files-v2/default/targetDir/Bticino.ScenarioSuite.{Core,DataManager,OSJConverter,Class}.dll`. `INPUTS.v1.json` pins each full file; its identity is checked against `selected-file-identities.v2.json`, not copied manually from a different library. `METHODS.v1.json` records assembly names/versions/references and the original selected method tokens, owners, RVAs, file offsets, body sizes/hashes, signatures, parameter names and decoded IL bytes. References to another assembly identify metadata linkage, not a demonstrated live CLR binding.
+
+Only host Python static-analysis packages execute: dnfile0.18.0, dncil1.0.2 and pefile2024.8.26, from the parent's verified read-only tooling directory. The collector verifies all52 installed-file pins plus SOURCE_PINS metadata. Parent provenance records official wheel hashes and43 RECORD verifications; this pass does not install or alter those tools. Parsing arbitrary PE/CLI/CIL bytes does not load vendor types or run their managed instructions. Method operands naming reflection or file APIs are source evidence, not calls made by the analyst.
+
+Frozen input copies preserve the reviewed scenario-artifact report and database claims/synthesis/variable/scheduler reports. The genuine resource catalogue remains Suite3.5.38/package1902_1.0_LGG; database version1.0.53, catalogue build1.0.0 and device firmware1.0.24 are different scopes. No equivalence is inferred from their names.
+
+## Exact selected method ownership
+
+Tokens below are local to the stated assembly; they must not be compared as global method IDs.
+
+| Assembly | MethodDef token | Original owner and method | RVA |
+| --- | --- | --- | --- |
+|Core|`0x0600001f`|`Bticino.ScenarioSuite.Core.cCompiler::CompileScenario`|`0x22f8`|
+|Core|`0x06000021`|`cCompiler::MakeOpenCommand`|`0x61ec`|
+|Core|`0x06000022`|`cCompiler::GetOpenParameterObject`|`0x6630`|
+|Core|`0x060000bd`|`cCore::GetOPENRuleCompile`|`0xe408`|
+|Core|`0x060000be`|`cCore::CastGetOPENRuleCompile_Record2Class`|`0xe618`|
+|Core|`0x060000c1`|`cCore::GetStatusRequestCompile`|`0xefcc`|
+|Core|`0x060000c2`|`cCore::CastGetStatusRequestCompile_Record2Class`|`0xf0dc`|
+|Core|`0x060000c8`|`cCore::CompileAll`|`0xfba0`|
+|DataManager|`0x06000030`|`Bticino.ScenarioSuite.DataManager.cDataManager::GetOPENRuleCompile`|`0x4690`|
+|DataManager|`0x06000032`|`cDataManager::GetStatusRequestCompile`|`0x4aac`|
+
+The complete10 selected method bodies are decoded and pinned, but not every branch has been semantically reconstructed. Full IL supports bounded follow-up and independent review; its volume is not a complete compiler-coverage claim. OSJConverter/Class are identity/reference inputs here; no separate converter execution or full method survey is promoted.
+
+## Query builder and missing-rule behavior
+
+DataManager `GetOPENRuleCompile` takes IDObj, nullable IDCosa, IDArea and an output dataset. Original code-relative IL001c..0077 maps area3..9 to `TRIGGER_START_AREA`, `COND_OK_AREA`, `ACT_AREA`, `TRIGGER_STOP_AREA`, `TRIGGER_ENABLE`, `TRIGGER_DISABLE`, `PANIC_KEY`. It constructs SELECT text from `ANA_OPEN_RULE_COMPILE`, object ID, selected flag `<> 0`, and command ID at IL00c8..0112, then calls the referenced SQLite adapter Fill. This establishes actual consumer filtering at this method; it does not establish which commands the UI permits upstream or execute the provider.
+
+Core `GetOPENRuleCompile` calls that manager at IL002a and selects its returned status before reading the named table. A branch-coordinate trap matters: dncil branch operands include the method header, while this report's IL offsets exclude it. Raw branch bytes independently establish:
+
+| Instruction | Raw bytes | Code-relative target | Local significance |
+| --- | --- | --- | --- |
+|IL0036 `bne.un`|`4099000000`|IL00d4|manager result not selected as positive leads to local−3 return|
+|IL0052 `brfalse.s`|`2c7c`|IL00d0|missing named table sets fallback flag1|
+|IL00d2 `br.s`|`2b08`|IL00dc|joins fallback check|
+
+Thus the selected positive-manager/missing-table path reaches the default-rule construction at IL00f8; manager return0 does not take that default path. The DataManager's normal method returns1 and adds its named table only when Fill count is positive, providing a conditional ordinary-provider no-row-to-missing-table route. Actual Fill behavior/provider completion remains unexecuted. A default rule is therefore not the same as finding an eligible catalogue row, and compile-flag absence alone is not a universal failure verdict.
+
+The default sets ordinary ordered fields `ID_CHI`, `ID_COSA`, `ID_DOVE`. That is separate from the actual Counter/Boolean catalogue rows declaring `#ID_CHI`, `ID_DOVE`, `ID_COSA`. This pass does not invent an accepted default frame or resolve full Boolean OnlyIf/UI precedence by assuming these two templates are interchangeable. Core cast060000be reads selected row properties, including flags and all10OPEN_FIELD values; exact source remains in the pinned method body.
+
+## OPEN rule to command support
+
+`MakeOpenCommand` calls original `GetOpenParameterObject` at IL0092, then `cCore.GetOPENRuleCompile` at IL00b8 with CommandIn.IDOBJ, ID_COSA and IDArea. On its selected successful path it iterates returned rules and fields1..10, obtaining `OPEN_FIELD_n` properties through original metadata-named reflection call sites. It recognizes ID_CHI, ID_COSA and ID_DOVE substrings and substitutes the resolved WHO/WHAT/WHERE components; other nonempty fields are appended as literal template content. The selected concatenation uses `*` between fields and wraps the result with leading `*` and trailing `##` at IL0315..0325. It assigns that constructed value to `cCommandSupport.MakeOpen` at IL0346, alongside its separate Who/What/Where values. Object-specific later normalization branches also exist; no universal substitution/escaping contract is claimed from this selected description.
+
+`GetOpenParameterObject` actually calls Core WHO/WHAT/WHERE-related consumers, not an analyst-supplied placeholder dictionary. It also has custom/configuration/auxiliary paths and unexpanded generic/LINQ calls. Those details remain boundaries: no selected Counter/Boolean object or custom range was run through the method, and no method-specific result for the temperature/time-labelled range reuse is inferred here. Generic signatures and underlying token references are preserved without inventing decoded generic type semantics.
+
+`CompileScenario` calls MakeOpenCommand at several area-specific sites, stores the command support objects and builds its line list. The ordinary script includes command strings/variables and control/header templates; OWRITE consumes a script variable on the selected later path rather than establishing that every emitted command line directly embeds a literal frame. This is a static source value/call relation, not a generated or executed `.spt` example.
+
+## Status declarations enter the original compiler
+
+CompileScenario calls `cCore.GetStatusRequestCompile` at IL05b3 with the command's original object/command identity and an output record. The Core and DataManager method bodies and record cast are pinned. The compiler compares ReplyFunction with literal `EXTRACTVALUE` and transfers reply/request properties into support state. A later original format at IL1947 is `{0} {1}=EXTRACTVALUE({2},{3},"{4}",{5}%,{6})`; the argument-array construction at IL1979..1986 reads `ReplyDimension` and `ReplyPar` from the support object into the format arguments. This closes original method ownership for the previously discovered EXTRACTVALUE declaration-to-script-template use.
+
+It does not establish how the firmware helper interprets ReplyPar, a zero/one-based convention, real reply acceptance, returned values or a naturally configured OnlyIf result. Metadata strings and complete method source are evidence, not evaluation of the stored function name. Counter/Boolean reply parameter string1 is not promoted to an indexing conclusion.
+
+## Actual script and index writer call sites
+
+Core `CompileAll` takes named parameters ScenariosCollection, AllCompiled, OutputFolder, CompileAllAction and WhichScenario. The selected compile branch enumerates supplied scenario objects and reads their original ID. IL016c..017d builds `Path.Combine(OutputFolder, ID + '.spt')`; IL0187..0199 then builds `Path.Combine(that path, ID + '.spt')`. These are a scenario-specific directory and nested script pathname in this method. They are not silently flattened to a deployed firmware filename. Different action/mode selections and errors can skip compilation or change subsequent output handling.
+
+On the selected branch, IL027c..0287 passes the actual scenario, Core, nested FileSPT pathname and output references to `cCompiler.CompileScenario`. The compiler's named FileSPT parameter is used for the script-name header and, at IL3a41..3a48, `new StreamWriter(FileSPT, false)`. The original loop rewrites specific line placeholders, then calls referenced `TextWriter.WriteLine` at IL3b6b and closes the writer at IL3b8d. Error handlers/regions are retained in evidence; existence of call sites does not prove an actual successful file write. The earlier caller can delete `.spt` output and write `.err` when compilation status/action-count conditions fail.
+
+CompileScenario has explicit header/control templates, including `$NOMESCRIPT`, `$RESTART` with SI/NO from Scenario.Restart, BEGIN, END, IIF, GOTO, OWRITE, SLEEP and SLEEPRANDOM. Scenario.Repeat selects a later branch that uses a stored BEGIN line number in a GOTO-format line before END. These are original compiler source choices, not proof of the firmware's full repeat/restart or panic lifecycle; no specific scenario values or output lines were fabricated.
+
+CompileAll separately constructs an XML document rooted `script`, creator software data and panic/scenario entries. Its per-scenario nodes include name `ID.spt`, numeric id, user description and scen_name. IL057e..0589 constructs `Path.Combine(OutputFolder,'info.xml')`; IL059f..05a3 calls original referenced `XmlDocument.Save` with that path. This establishes ownership of the index writer, distinct from load/copy methods that also reference info.xml. Actual runtime XML serialization, installed contents and a successful project export remain unobserved.
+
+## Reproduction and remaining boundaries
+
+Run `python3 -B work/mh202-firmware/research/2026-10-31-generator-chain/collect_chain_v1.py --check`. It verifies original identities, static-tool files and frozen references, reparses the selected method bytes and compares generated evidence exactly. It adds no original/vendor IL execution or native instruction count. Only the static analysis packages execute on the host.
+
+Outputs are exclusive and first collector/report/output bytes are copied immediately; snapshot membership/hashes are computed before opening the index. This candidate has no vendor object injection or runtime-generated output. Early exploratory console commands included corrected Python syntax and bounded/truncated method-print outputs; no earlier generated candidate was overwritten. The complete saved method evidence replaces those partial console displays as the reproducible source.
+
+The main new closure is method-level database-filter/record-to-command/line-list-to-writer ownership. Unknowns remain active UI permission/filter precedence, configuration/custom field semantics, full grammar and all error paths, original provider/dependency loading, a genuine configured generated project, actual emitted bytes, packaging/installation, firmware applicability and physical scene behavior. The next bounded work should select one real project/compiler input or the exact custom field consumer; it should not substitute a synthetic model for actual compiler execution or infer a full product contract from a call graph.

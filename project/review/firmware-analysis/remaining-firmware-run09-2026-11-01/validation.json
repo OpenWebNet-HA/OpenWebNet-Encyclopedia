@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "scope": "Documentary handoff plus finite admission gap; ZERO new functional source coverage. Exact current/copy/review/export/history/archive identities and127prior members verified. Old firmware-index hash resolved ONLY to exact retained input, no broad fallback or old validator replay.",
+  "source_packets": [],
+  "gap_packets": [
+    {
+      "product": "MH200N",
+      "root": "work/mh200n-firmware/1.1.8/research/2026-11-01-night09-admission",
+      "classification": "gap_zero_new_functional_source_coverage",
+      "report": {
+        "path": "work/mh200n-firmware/1.1.8/research/2026-11-01-night09-admission/REPORT.md",
+        "bytes": 4641,
+        "sha256": "75343cc62d0efd9a65d4223c12e9c39bb60caf6516ba5a73469d583b9c62760c"
+      },
+      "collector": {
+        "path": "work/mh200n-firmware/1.1.8/research/2026-11-01-night09-admission/collect_admission_v1.py",
+        "bytes": 14348,
+        "sha256": "38e8236fcc329ae5b9bc49515c4afe2420a761c4cf9b011a5383b0d22906d034"
+      },
+      "manifest": {
+        "path": "work/mh200n-firmware/1.1.8/research/2026-11-01-night09-admission/OUTPUT_MANIFEST.json",
+        "bytes": 616,
+        "sha256": "be26db26a71d8b52ddc6f6f3803619f23003e81cd887998bf8b3b52ae0fd23a5"
+      },
+      "admission": {
+        "path": "work/mh200n-firmware/1.1.8/research/2026-11-01-night09-admission/ADMISSION_GAP.json",
+        "bytes": 1648,
+        "sha256": "78e0414618f68b0a486d04b9d1874c741e7dd945dda1403bcdbd2a5b0f059cbc"
+      },
+      "outputs": 5,
+      "firstcopies": 6,
+      "new_source_coverage": 0
+    }
+  ],
+  "source_outputs": 0,
+  "source_firstcopies": 0,
+  "gap_outputs": 5,
+  "gap_firstcopies": 6,
+  "all_packet_outputs": 5,
+  "all_packet_firstcopies": 6,
+  "gap_new_source_coverage": 0,
+  "separate_current_report_copies": 0,
+  "reviews": {
+    "mh200n-source-review": {
+      "path": "work/remaining-firmware-investigation/2026-11-01-run09/reviews/mh200n-source-review.md",
+      "bytes": 4488,
+      "sha256": "581f41485be14f24866dd6e7f7319b26561b2af054791f70578be4c406ef7b26"
+    },
+    "database-handoff-review": {
+      "path": "work/remaining-firmware-investigation/2026-11-01-run09/reviews/database-handoff-review.md",
+      "bytes": 10246,
+      "sha256": "42b96f27c2af3f558f7bfabedbac5df225a7791fc9dd3700d4b4fff3271389ea"
+    },
+    "integration-review": {
+      "path": "work/remaining-firmware-investigation/2026-11-01-run09/reviews/integration-review.md",
+      "bytes": 12822,
+      "sha256": "dc50f2dae45b9821a7ad37d649c2764b7882c893e14cd08abc88a6e62d215755"
+    }
+  },
+  "exact_selected_exports": 16,
+  "first_documentary_copies": 10,
+  "exact_historical_reference_mappings": 2,
+  "prior_index": {
+    "path": "work/remaining-firmware-investigation/2026-11-01-run08/EVIDENCE_INDEX.json",
+    "bytes": 30131,
+    "sha256": "f7eca903996f73dba0352d0e047ae5d1278b5472aa05df5ffa7d438ab34341a8"
+  },
+  "prior_indexed_members_verified": 127,
+  "prior_capsule_members_verified": {
+    "remaining-firmware-2026-11-01": 104,
+    "remaining-firmware-run05-2026-11-01": 34,
+    "remaining-firmware-run06-2026-11-01": 35,
+    "remaining-firmware-run07-2026-11-01": 32,
+    "remaining-firmware-run08-2026-11-01": 29
+  },
+  "unchanged_Device_pages_verified": 5,
+  "historical_firmware_index": {
+    "path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+    "bytes": 11560,
+    "sha256": "ce01c4d35f26e5c798d1b2f179a9457ca9b8adea3e752c49dc695a35b92f748e"
+  },
+  "archive_index": {
+    "path": "work/remaining-firmware-investigation/2026-11-01-run09/R2_ARCHIVE_INDEX.json",
+    "bytes": 1119,
+    "sha256": "133c94eb95859e111df0c1b6c005636ce8ee13ce164e3576fae85e70256f0719"
+  },
+  "actual_prior_archive_receipt": {
+    "path": "work/remaining-firmware-investigation/2026-11-01-run01/archive/R2_RECEIPT.json",
+    "bytes": 235,
+    "sha256": "072092bb105685ab2aa0395cde439b431ac6a016037b501a06d2faf509b07793"
+  },
+  "new_R2_objects": 0,
+  "cumulative_encrypted_support_objects": 1,
+  "cumulative_plaintext_database_objects": 0,
+  "source_manifest_unchanged": true,
+  "new_original_helper_SQLite_runtime_physical_execution": 0,
+  "prior_MHS_ledger": {
+    "corpora": 1,
+    "top_level_entries": 8,
+    "original_code_hook_visits": 340,
+    "C_primitives": 0,
+    "definition_redirects": 12,
+    "EXIT": 8,
+    "guard_stops": 0,
+    "total_hooks": 360,
+    "data_relocation_setups": 4,
+    "FP_control_host_register_writes": 24,
+    "R0_SP_LR_host_register_writes": 24
+  },
+  "prior_F454_MH202_ledgers": "Separate unchanged, no CPUreplay",
+  "repository_integration": {
+    "page": {
+      "path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f450-f453av-f455-f459-mh200n.md",
+      "bytes": 22592,
+      "sha256": "a7fc32f8063e19a678f6024942f97bde2a7118679360e0c063988fd3ba95411b"
+    },
+    "handoff": {
+      "path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/remaining-firmware-database-handoff.md",
+      "bytes": 10042,
+      "sha256": "aef872bd6c65190fc42bc3444b02ac34f367ffd22795a3dae0985c76f6427c39"
+    },
+    "firmware_index": {
+      "path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+      "bytes": 11620,
+      "sha256": "a4c84175a4a81c917b7d2fba567a8b203a1b43408fbbbf37279872d97ca0a9e9"
+    },
+    "capsule": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/remaining-firmware-run09-2026-11-01",
+    "prior_capsules_unchanged": true,
+    "Device_pages_unchanged": true,
+    "firmware_index_changed_with_exact_old_snapshot": true
+  },
+  "prior_F450_denied_body": "Closed/opaque, no new attempt/equivalent route",
+  "staged": false,
+  "committed": false,
+  "Git_published": false
+}

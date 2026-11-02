@@ -1,0 +1,51 @@
+# Run04 documentary integration review
+
+PASS for the exact current candidate after the preserved summary refinement; no remaining correction requested. I compared the expanded analysis, profile appendix, capsule and coordination documents with authoritative F460 REPORT.v2, F461 REPORT and both independent original-source reviews. This is documentary/product/method comparison, informed by my earlier comparison-source audit, not a fresh original-byte audit of these consumers or a whole-product semantic/runtime test. I executed no source collector, original/vendor/provider/SQL code, emulator, model, fixture or CPU replay.
+
+F460 selected initialization/SQL-member/constructor/reader dataflow is correctly bounded. Column13 slots and column14 system ID are tied to the actual15-projection template and original conversion stores, without converting selector89 into DeviceID/WHO or claiming all final substitutions, unique results, successful SQL, complete selection/fallback or compatibility. Repeated-row overwrites and initial-step/null-text/range limits remain source/provider boundaries, not a demonstrated defect. The public text does not promise safe row handling or complete error/resource behavior. Ordinary SQLite numeric API meanings are premises rather than target-header or executed-provider evidence.
+
+The additional catalogue profile keeps the shared F460/F461 bytes,75 SQL definitions and52/23 versus MHS or42/33 versus Suite fingerprints as inherited structural/content evidence. The earlier detailed owner-aware MHS/Suite correspondence is not transferred to this profile. Identical DB bytes do not transfer the selected F460 executable reader to F461 or establish installed features. Canonical package provenance is not an invented separate database registration.
+
+F461 field descriptor/list, translation descriptor/list and message namespaces remain distinct. Conditional register_field_bus to manager+24 and directory handoff are source joins, not loaded-module/config-precedence/readiness proof. Packaged SCSEnable1/SCSAIEnable0 is kept separate from fallback globals1/1. Full64 routes(1,0), wrapper(1,1) and separate(1,2) are not conflated by their shared lowword1; route match, direction, criteria, private96 and manager slots retain their different ownership. Composition still requires the same manager/list objects and remaining due/criterion/provider premises. Neither SCSAI spelling nor enable metadata establishes F454 alarm hardware, an electrical bus, accepted input or delivery.
+
+Curated product roles, actual configurations/assets, binding, natural producers, full JSON/string/SQL/error/unwind/lifetime/concurrency and physical evidence stay open. Closed receiving/transport/MQTT/libjel/auth/session/framing scopes remain closed. New original/native/helper/model/fixture/SQL/runtime/physical execution is zero; prior MHS/F454/MH202 ledgers and historical limits remain separate and unchanged. Full Device/source gates are not closed.
+
+## Preservation, source refinements and links
+
+Verified all16 frozen current pins/copies and all58 exact SOURCE_EXPORTS pairs. Six source/reviewer/pre-edit snapshot sets contain42 verified members, including36 author first copies and both source reviews. Exact retained analysis and profile versions reconstruct the main insertion/substitution and profile append; the main public page equals REFERENCE_DRAFT.v2. The initial draft/method were preserved before the exact one-paragraph requested summary update; no author result changed. The older pre-edit indices remain separately retained.
+
+The F460 parent-before-v2 report/script snapshots match preserved v1 bytes. Its hand-entered wrong guard stopped before outputs; v2 checks the actual word and openly removes an unreachable guessed HOST header assertion. No failed source outcome, original guard relaxation, contemporaneous terminal capture or overwritten generated result is invented. F461 base/wrapper clarification occurred before generation. Previous missing MH20218/21 draft-history limits are not newly authenticated.
+
+Checked42 local Markdown link occurrences and two fragments: all40 existing targets and both fragments resolve. Only the intended later capsule integration-review.txt and validation.json targets await actual assembly. Final full protection/identity, strict ESG/ECV/diff, branch/status and index-last checkpoint checks remain subsequent parent-owned gates against actual saved artifacts. No future-byte certification, placeholder or missing-link exemption is endorsed. No author/repository/source/prior dossier was edited.
+
+One inline reconstruction helper initially omitted the existing separator newline and stopped on an assertion before review writes. Comparing exact bytes established the actual separator; corrected reconstruction passed. This was reviewer bookkeeping, not a source/candidate failure or a claimed historical file.
+
+## Exact current pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md` | `f8c18480c7aa608a06a973c3e6b8d956b461b49201018276b1bcb75011157608` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | `ed74e4da897e9c500b4fe9333a3a89ae5dc3a2a849469ed756ae7d2b99d52ce3` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run04-2026-11-01/README.md` | `0f58c2256208cba174ae620fbe77c07557da00b8a69cbb8549d9915036ff6e96` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run04-2026-11-01/SOURCE_EXPORTS.json` | `28e998109f95c02c0fb17d48fe44a030ca648316cfcf616842eba4aac748a200` |
+| `work/f460-f461-comparison/2026-11-01-run04/REFERENCE_DRAFT.v2.md` | `f8c18480c7aa608a06a973c3e6b8d956b461b49201018276b1bcb75011157608` |
+| `work/f460-f461-comparison/2026-11-01-run04/PROFILE_APPENDIX_DRAFT.md` | `ee8ab757b91e416e4cd6246fce47bc22959fe3dbcbf76885b0d569003c7e6537` |
+| `work/f460-f461-comparison/2026-11-01-run04/SYNTHESIS.md` | `1c55e472a56429f3ec98d59dac9452fb385d4859b8b8db7c6e7703f7f336733d` |
+| `work/f460-f461-comparison/2026-11-01-run04/COVERAGE.md` | `09fb41ab820afe060d3e52129841a99388ef0e34151c60e228882255f77f047b` |
+| `work/f460-f461-comparison/2026-11-01-run04/RANKED_REMAINING_QUESTIONS.md` | `e169ec70ae4fb718c393d5053bac224b8e5ce4f7f6aa1a27e9991046126088ff` |
+| `work/f460-f461-comparison/2026-11-01-run04/SOURCE_CHECKS.json` | `8127383038c56926f009850b1dc5e2805340d6a64ba52d3d0971f49b30c35f04` |
+| `work/f460-f461-comparison/2026-11-01-run04/integration/DOCUMENT_PATCH.json` | `9470d2c8e0c087505c42918fa780f0af0051808ed3e88acb534901ffdef57324` |
+| `work/f460-f461-comparison/2026-11-01-run04/WORDING_REFINEMENT.json` | `20b0a7a367406d4895639dba9a0af5b22c52ee40be5e5c96b15726fd51658877` |
+| `work/f460-f461-comparison/2026-11-01-run04/REFERENCE_DRAFT_METHOD.v2.json` | `0ce451e5b2c2e1239a8c82ccf55f52725b4054a09cd51a2264b6055a7333bade` |
+| `work/f460-f461-comparison/2026-11-01-run04/reviews/f460-source-review.md` | `e261fa073f196e780e28829e7f51156cfa9f12c9a66ac72753fc07372c67650c` |
+| `work/f460-f461-comparison/2026-11-01-run04/reviews/f461-source-review.md` | `6103784f71cb44276b76b4ef3e87957fae6e0f2605fb4c1d923a9623a3c3dfd2` |
+| `work/f460-f461-comparison/2026-11-01-run04/CAPSULE_README.first.md` | `0f58c2256208cba174ae620fbe77c07557da00b8a69cbb8549d9915036ff6e96` |
+| `review-candidate/INDEX.json` | `71d2172778b0958c567196fa7ba1c6fbcba40437cd22200744c62b1c264d7cac` |
+| `integration/pre-summary-refinement/INDEX.json` | `09944e7568d6de2b76cede706c93ed410c7c5304d579317707bb9dfb91f12ddd` |
+| `integration/f460-before-v2/INDEX.json` | `a398275ca9d12ce624b6ed249da123b8d19f7908084047644576d1d378223223` |
+| `REFERENCE_DRAFT.md` | `ef40cb73f98688d1167c252abbce2d64247d828c6ff422194b88e50300d37aea` |
+| `REFERENCE_DRAFT_METHOD.json` | `b2b98553b524c0c1fc67a7e6bc08eaaa782a2c407db87bea05089c0e5d141b64` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/REPORT.v2.md` | `00c18455900a2ac60c25d0ad0d0d19ec12935e264b960c30c321da054b477687` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/collect_catalogue_v2.py` | `ff037c546c43f74feedff5f9b742556d7a951a9c7157b960c48a6b9e855b8fb8` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/REPORT.md` | `91a541f322d8126f3dc8c5e64547242ebedecbb8c3d6b959e9494ffe2ee2ff3f` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/collect_field_v1.py` | `1f2825c7b7207879acd413aefac96d2a1e4b141f85b2a25f8f40c40cde7cbc81` |

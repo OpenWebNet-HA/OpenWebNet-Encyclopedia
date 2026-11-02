@@ -1,0 +1,26 @@
+# F461 run12 independent deferred-record/clock source review
+
+PASS. No author correction requested. This is an independent bounded static source/artifact audit and read-only host collector reconstruction, with no original/clock/provider/native/target execution, semantic fixture, value model, SQL, target I/O or CPU replay. Author files were unchanged.
+
+Authoritative area: `work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/`. Exact current pins:
+
+- `REPORT.md`: `0e13cbfe063217d9234b916774616ee5233a2a5892ba7ffdb3dd19aa3fb3ec04`.
+- `collect_clock_v1.py`: `fa5bc0aff7145ef719557399b839a375b6580014ef2583e1e88c64a675afc726`.
+- `SOURCE.json`: `640efb1c7df2adef38b5142345a6eb06cff58fadfe35ed65c8b7e93d6a2daad5`.
+- `INPUTS.json`: `75867ce52d815f1fff9c1ee40694c7b7929a8e2b6c7e2594f669ad7722ef9bb6`.
+- `OUTPUT_MANIFEST.json`: `31965f34cf57816dedd8176bae37c5d692500ed2a23eef8fd01358860420a23f`.
+- `first-candidate/INDEX.json`: `ae84b8945b7bfd3cd59abcc18faf8cd3369c681bffed630e879337e88cd780a5`.
+
+The host `--check` passes12 outputs, nine spans,43 guards plus four reciprocal-constant words, eight actual import proofs, six input pins and14 first copies. Independent regular-file reads confirm executable `/home/bticino/bin/coso` SHA256 `2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197` and candidate `/usr/lib/libglib-2.0.so.0.7200.3` SHA256 `3a3107de5686fcd9579547b2ae90201e89b7dc612ebc92855ed5112025507195`. Fresh ELF64/AArch64 PT_LOAD mappings reproduce all nine span hashes/hex,43 words, four constant words and eight BL/PLT/relocation rows. Callback data-slot0x16f88 resolves through the executable's actual file mapping to relative target0x4170. Output identities and all14 first copies match. This selected audit is not a whole GLib, record-producer or scheduler review.
+
+Source establishes an eight-byte record+32 load, unsigned comparison against the first g_get_real_time return plus10, and unsigned local minimum selection in zero-initialized SP120 on the selected not-due continuations. The due body remains outside this review. Field+32's nonzero producer/coherent unit remains OPEN, independent of constructor timestamp+24. List consistency, valid record/data pointers, no relevant mutation and the specified loop paths remain premises; this does not establish a globally earliest deadline or actual scheduled record.
+
+The defer block samples the clock again, computes SUB64 into X24, then SMULH/ASR7/subtract-sign. I independently reconstructed the four MOV/MOVK words as constant0x20c49ba5e353f7cf and checked its reciprocal relation to2^71 and1000, plus the exact signed operation words. This supports the stated standard signed division-by1000 sequence for the represented64-bit delta; it is not finite value simulation or proof the subtraction represented a positive/nonoverflowing mathematical elapsed interval. The candidate timeout constructor copies W0 to W20 and stores W20 at source+96, so high bits are not retained by that storage. No clamp, validity, overflow safety or actual timer outcome is inferred.
+
+Fresh candidate real-time source requests gettimeofday, then computes pairword0*1,000,000+pairword1 without testing its return in the selected body. Microsecond interpretation requires ordinary successful AArch64 timeval/provider ABI; no host layout, current time or actual syscall result is substituted. Separately, timeout-source code requests the distinct monotonic getter and passes its return to helper0x55a40. Only source-word100==0 selects the retained UMADDL branch forming incoming-now+1000*unsigned-word96, then tail-requesting g_source_set_ready_time. Source initialization, other flags, monotonic implementation, live binding and ready-time API units remain conditional. No measured interval, positivity, deadline guarantee or actual dispatch is proved.
+
+The callback setup uses the same third input pointer saved at SP112 as callback data, relative callback0x4170 and NULL destroy-notify. Main-context/attach/unref calls are source requests only, with outcomes and ownership/lifetime unresolved. The complete callback moves incoming pointer to X2, forms list address incoming+136 as X0, supplies X1=0 and tails the original send_list_field0x3df0. This is positive same-data pointer arithmetic/re-entry, not a proven manager construction, fired callback, surviving owner or one-shot result.
+
+The report preserves all key namespaces: record24 versus record32, SP120 candidate, signed caller delta versus unsigned due/minimum, source96 interval versus source100 flag, and callback-data/owner136. Its unavailable exploratory host-version guess is described without invented candidate/history hashes; current first-candidate preservation is verified without certifying unavailable exploratory completeness. Existing packets and execution ledgers remain unchanged.
+
+OS/gettimeofday, monotonic/dispatch/attach/provider bodies, due/output, frame preparation, receiving/transport/authentication/session/framing/MQTT/libjel, platform-command and uncertain bt_device routes remain opaque. No physical, availability, security, defect, full-runtime or concurrency result follows from this conditional local source contract.

@@ -1,0 +1,79 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a6508 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b794>:
+   a6508:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+   a650a:	2200      	movs	r2, #0
+   a650c:	e9d1 341a 	ldrd	r3, r4, [r1, #104]	@ 0x68
+   a6510:	460d      	mov	r5, r1
+   a6512:	4606      	mov	r6, r0
+   a6514:	4f29      	ldr	r7, [pc, #164]	@ (a65bc <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b848>)
+   a6516:	efc0 0010 	vmov.i32	d16, #0	@ 0x00000000
+   a651a:	1ae4      	subs	r4, r4, r3
+   a651c:	6082      	str	r2, [r0, #8]
+   a651e:	447f      	add	r7, pc
+   a6520:	f940 078f 	vst1.32	{d16}, [r0]
+   a6524:	d03d      	beq.n	a65a2 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b82e>
+   a6526:	f64f 73f8 	movw	r3, #65528	@ 0xfff8
+   a652a:	f6c7 73ff 	movt	r3, #32767	@ 0x7fff
+   a652e:	429c      	cmp	r4, r3
+   a6530:	d839      	bhi.n	a65a6 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b832>
+   a6532:	4620      	mov	r0, r4
+   a6534:	f76a eaa2 	blx	10a7c <_Znwj@plt>
+   a6538:	4603      	mov	r3, r0
+   a653a:	ee80 3b90 	vdup.32	d16, r3
+   a653e:	441c      	add	r4, r3
+   a6540:	60b4      	str	r4, [r6, #8]
+   a6542:	f946 078f 	vst1.32	{d16}, [r6]
+   a6546:	e9d5 151a 	ldrd	r1, r5, [r5, #104]	@ 0x68
+   a654a:	42a9      	cmp	r1, r5
+   a654c:	d02f      	beq.n	a65ae <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b83a>
+   a654e:	1a6d      	subs	r5, r5, r1
+   a6550:	441d      	add	r5, r3
+   a6552:	e006      	b.n	a6562 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b7ee>
+   a6554:	6854      	ldr	r4, [r2, #4]
+   a6556:	3401      	adds	r4, #1
+   a6558:	6054      	str	r4, [r2, #4]
+   a655a:	3308      	adds	r3, #8
+   a655c:	3108      	adds	r1, #8
+   a655e:	42ab      	cmp	r3, r5
+   a6560:	d01c      	beq.n	a659c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b828>
+   a6562:	f961 078f 	vld1.32	{d16}, [r1]
+   a6566:	ee30 2b90 	vmov.32	r2, d16[1]
+   a656a:	f943 078f 	vst1.32	{d16}, [r3]
+   a656e:	2a00      	cmp	r2, #0
+   a6570:	d0f3      	beq.n	a655a <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b7e6>
+   a6572:	4813      	ldr	r0, [pc, #76]	@ (a65c0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b84c>)
+   a6574:	5838      	ldr	r0, [r7, r0]
+   a6576:	7800      	ldrb	r0, [r0, #0]
+   a6578:	2800      	cmp	r0, #0
+   a657a:	d1eb      	bne.n	a6554 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b7e0>
+   a657c:	3204      	adds	r2, #4
+   a657e:	f3bf 8f5b 	dmb	ish
+   a6582:	e852 4f00 	ldrex	r4, [r2]
+   a6586:	3401      	adds	r4, #1
+   a6588:	e842 4000 	strex	r0, r4, [r2]
+   a658c:	2800      	cmp	r0, #0
+   a658e:	d1f8      	bne.n	a6582 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b80e>
+   a6590:	3308      	adds	r3, #8
+   a6592:	3108      	adds	r1, #8
+   a6594:	42ab      	cmp	r3, r5
+   a6596:	f3bf 8f5b 	dmb	ish
+   a659a:	d1e2      	bne.n	a6562 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b7ee>
+   a659c:	4630      	mov	r0, r6
+   a659e:	6075      	str	r5, [r6, #4]
+   a65a0:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+   a65a2:	4623      	mov	r3, r4
+   a65a4:	e7c9      	b.n	a653a <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b7c6>
+   a65a6:	4294      	cmp	r4, r2
+   a65a8:	da05      	bge.n	a65b6 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b842>
+   a65aa:	f76a ed00 	blx	10fac <_ZSt28__throw_bad_array_new_lengthv@plt>
+   a65ae:	461d      	mov	r5, r3
+   a65b0:	4630      	mov	r0, r6
+   a65b2:	6075      	str	r5, [r6, #4]
+   a65b4:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+   a65b6:	f76a eb38 	blx	10c28 <_ZSt17__throw_bad_allocv@plt>
+   a65ba:	bf00      	nop

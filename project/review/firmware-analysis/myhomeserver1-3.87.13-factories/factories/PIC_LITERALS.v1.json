@@ -1,0 +1,58 @@
+[
+  {
+    "add_pc_va": "0x30cf2",
+    "literal": "type",
+    "name": "action-type",
+    "pool_va": "0x3195c",
+    "pool_word": "0xe5266",
+    "target_va": "0x115f5c"
+  },
+  {
+    "add_pc_va": "0x2afb8",
+    "literal": "id",
+    "name": "base-id",
+    "pool_va": "0x2b09c",
+    "pool_word": "0xebb20",
+    "target_va": "0x116adc"
+  },
+  {
+    "add_pc_va": "0x2afd4",
+    "literal": "delay",
+    "name": "base-delay",
+    "pool_va": "0x2b0a0",
+    "pool_word": "0xea2b0",
+    "target_va": "0x115288"
+  },
+  {
+    "add_pc_va": "0x2afe4",
+    "literal": "duration",
+    "name": "base-duration",
+    "pool_va": "0x2b0a4",
+    "pool_word": "0xea2a8",
+    "target_va": "0x115290"
+  },
+  {
+    "add_pc_va": "0x2aff6",
+    "literal": "type",
+    "name": "base-type",
+    "pool_va": "0x2b0a8",
+    "pool_word": "0xeaf62",
+    "target_va": "0x115f5c"
+  },
+  {
+    "add_pc_va": "0x3146c",
+    "literal": "seconds",
+    "name": "sleep-seconds",
+    "pool_va": "0x319e4",
+    "pool_word": "0xe3e2c",
+    "target_va": "0x11529c"
+  },
+  {
+    "add_pc_va": "0x3141c",
+    "literal": "sceneId",
+    "name": "scenario-id",
+    "pool_va": "0x319dc",
+    "pool_word": "0xe3e90",
+    "target_va": "0x1152b0"
+  }
+]

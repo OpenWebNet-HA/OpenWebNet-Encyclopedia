@@ -1,0 +1,8 @@
+# Condition-query batch log
+
+- Initial usage88% used/12% remaining in the original weekly window; no reset/paid credit action. Prior event-routing checkpoint complete.
+- Two independent author scopes: BNLD serializer/operator source and local query contract. Original execution0 and semantic fixtures0.
+- Serializer v1 strict constructor-header assertion rejected an incorrect temporary/final class expectation BEFORE generated outputs. Root snapshotted the3 existing files before separate v2; v1 commands/errors later transcribed honestly, no invented historical failure-file hash. V2 asserts both classes and shared method; original sources/prior reports unchanged.
+- Root independently reviewed query source, raw span hashes/guards/PIC/GOT/branches and first copies. Serializer independent source review and final documentary review precede final validation/promotion.
+- Exact existing encyclopedia-page pre-edit bytes retained. New review capsule exports current v2 plus failed v1/history and source evidence; current knowledge remains conditional static source, not query/scene/physical execution.
+- Final source checks/reviews/identity validation/ESG/ECV/diff and same finite automation/control receipts are saved separately; evidence index generated last. Local branch remains uncommitted/unstaged.

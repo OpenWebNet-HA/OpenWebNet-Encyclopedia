@@ -1,0 +1,14 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .plt:
+
+000108a4 <sqlite3_close@plt>:
+   108a4:	4778      	bx	pc
+   108a6:	e7fd      	b.n	108a4 <sqlite3_close@plt>
+   108a8:	c601      	stmia	r6!, {r0}
+   108aa:	e28f      	b.n	10dcc <g_source_set_callback@plt+0x2f0>
+   108ac:	cafd      	ldmia	r2, {r0, r2, r3, r4, r5, r6, r7}
+   108ae:	e28c      	b.n	10dca <g_source_set_callback@plt+0x2ee>
+   108b0:	fa90 e5bc 			@ instruction: 0xfa90e5bc

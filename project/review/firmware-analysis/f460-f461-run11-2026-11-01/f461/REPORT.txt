@@ -1,0 +1,43 @@
+# F461 run11 — main configuration selection to the same module-directory holder
+
+Fresh source closes a specific supplied-directory premise from run04: original COSO main registers actual option destinations, requests option/configuration parsing, selects a plugin configuration directory through guarded alternatives, and passes that selected pointer to the same manager's plugin-data initializer and registration request. These are source requests and local dataflow, not actual command-line input, installed file choice, module loading, service readiness or physical capability. Original/vendor/native/provider/target execution, target I/O, SQL, models and fixtures added: **0**.
+
+Original `/home/bticino/bin/coso` is ELF64 AArch64, SHA256 `2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197`. Its exported main is VA0x2f00. SOURCE.json retains fresh PT_LOAD mappings, exact words, textual/hex spans, three selected option-row relocations, five safe literal joins and actual BL/PLT/JUMP_SLOT proofs. No disassembler neighbor substitutes for a function identity. Only the normal image's specified code and nonsecret configuration lines are examined; recovery/installed environments are not assumed equal. Curated Device0208 supplies the separate third-party-integration product role only.
+
+## Actual option destinations and parse request
+
+Main requests144 zeroed bytes at0x2f74/0x2f78 and retains the resulting manager pointer M in X20. Its subsequent `get_plug_m` request and ordinary same-object/ABI returns are premises; active dynamic binding and global-manager identity are not certified here.
+
+The original option-table base is formed at0x2f68/0x2f6c as VA0x17310. Three selected48-byte entries have exact relative-relocated names and argument-kind word1:
+
+- row0 at0x17310: `dirname`, short `d`; its argument destination is dynamically set to SP112 at0x2fb4.
+- row4 at0x173d0: `configfile`, short `c`; destination SP128 at0x2fcc.
+- row11 at0x17520: `path_to_plug_cfg_dir`, short `p`; destination SP160 at0x2fe8.
+
+These are original option declarations and stack destinations, not actual supplied values or public protocol fields. Main requests `g_option_context_add_main_entries` with the same table at0x3000, then `g_option_context_parse` at0x3014 with its saved argc/argv addresses. A zero parse result branches away at0x3018. The selected chain assumes normal successful provider parsing, valid string storage and continuing ordinary returns; no option string or argument fixture is supplied or evaluated.
+
+## Selected main file and directory precedence
+
+At0x3058/0x305c main tests configfile slotSP128. If null,0x3468..0x3478 forms and duplicates exact relative literal **`cfg/coso_cfg`** (VA0x59e8), stores its returned pointer inSP128 and conditionally rejoins the main continuation. The relative path is not an assertion about the host/target working directory or installed file. A nonnull earlier option value bypasses this default assignment. The earlier separate configuration path and diagnostic settings are outside this selected proof; no full configuration or private values are exported.
+
+The actual selected key-file load request at0x30b0..0x30bc receives the SAME SP128 pointer, flags0 and error-pointerNULL. A zero load result takes its own branch at0x30c0. The following claims concern the selected successful-load continuation, not universal file-error behavior or a guarantee that a packaged file exists at runtime.
+
+Near the end of the selected conditional settings reads,0x3118/0x311c requests the **`Plugins settings` / `LibDir`** string only if SP112 is null; the actual getter at0x3774 writes its returned pointer intoSP112 at0x3778. The next SP160 test at0x3120/0x3124 requests **`Plugins settings` / `PlugCfgDir`** only if that slot is null;0x3750 requests the getter and0x3754 stores its returned pointer inSP160. Thus under the specified successful parsing/load path, a nonnull option-produced directory pointer suppresses the corresponding file-key request. This is exact presence-based local precedence, not proof of an installed effective setting or all configuration errors.
+
+Later main tests SP160 again at0x3244/0x3248. If still null,0x3568..0x359c requests `g_file_new_for_path` on the selected configfile pointer, then `g_file_get_parent`, then `g_file_get_path`; the final returned pointer is stored inSP160. This is a parent-directory fallback request, not a check that a parent exists, a successful filesystem read or a guaranteed nonnull directory. The parent API's valid-object and normal-return prerequisites remain explicit. This fallback is distinct from the earlier relative default filename and from either module library directory or plugin settings directory.
+
+## Same manager and two distinct copied directory fields
+
+At0x32d4 and0x32dc, main reloads the selected SP112 and SP160 pointers into X1 and X2. It forms X0=**M+16** at0x32e4 and directly calls **`init_plugin_data`0x5640** at0x32e8. It then requests `init_dir_monitoring(M)` and `register_plugins(M)` at0x32f0/0x32f8 using the SAME saved M. Their implementation outcomes and effective modules remain unobserved; no monitoring, directory enumeration, module-open or readiness result is claimed.
+
+The fresh selected initializer source distinguishes the holder from its fields. It requests24 bytes P, stores P through its supplied destination pointer (therefore M+16), duplicates the supplied X1 into **P+8**, and duplicates supplied X2 into **P+16**. A null supplied directory follows a separate literal **`./`** duplication path for that field. M+16 is the pointer-holding manager slot; P+16 is the copied plugin-configuration-directory field, not the same object/offset namespace. Allocation/string normal returns and lifetime are premises, and no full ownership or failure policy is established.
+
+Run04 already independently established the later selected `register_plugins` initializer call using this plugin-data field+16 as its directory argument. That source edge is inherited through exact report/source pins; it is not replayed or promoted into actual module initialization. Current main source now supplies the earlier selected pointer/holder premise under the stated ordinary returns, rather than assuming the packaged key is automatically used.
+
+## Qualified packaged values and boundaries
+
+Only three whitelisted normal-image lines are exported from original `/home/bticino/cfg/coso_cfg`: line17 `[Plugins settings]`, line18 `LibDir=/home/bticino/libcoso`, line19 `PlugCfgDir=/home/bticino/cfg/coso_plugins`. Full file bytes are hash-pinned but not reproduced. These values demonstrate a possible declared configuration matching the requested keys. Actual relative-path resolution, current working directory, command-line overrides, runtime file contents, module inventory/policy and active product configuration remain open. No credential, private identifier or adjacent configuration value is exposed.
+
+This packet does not expand selected module initializers, file-provider internals, output/receiving/transport/authentication/session/framing/MQTT/libjel bodies, the closed platform command fallback or the uncertain bt_device process consumer. The positive result is a bounded main/CLI/config-directory selection and SAME-manager argument/copy join, not full startup, accepted raw protocol or physical availability.
+
+Reproduce with `python3 -B collect_selection_v1.py --check`. Generation is exclusive; immediate first-candidate copies preserve report, collector and outputs, with index bytes computed before its own file is opened. No failed generation, overwritten generated candidate or invented earlier artifact occurred. All originals and completed dossiers remain unchanged.

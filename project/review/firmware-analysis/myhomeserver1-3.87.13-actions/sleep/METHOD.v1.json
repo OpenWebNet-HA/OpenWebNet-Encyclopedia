@@ -1,0 +1,9 @@
+{
+  "development": "Pre-generation direct byte audit caught one manually transcribed VST1 guard byte (0f versus8f), exact draft and audit retained under development. Fixed before first collector invocation or output; source interpretation unchanged. Unknown provider/runtime state is not forced.",
+  "limits": "No accepted scenes, timer/elapsed measurement, full provider closure, whole-program state/lifetime/cancellation/concurrency proof. All ordinary imported string/allocation/logging/thread/kernel calls remain unexecuted delegates.",
+  "method": "Original static Thumb2 source, fresh PT_LOAD mappings, bytes/PIC/relocs and versioned provider symbols; external API context is not target source.",
+  "original_instructions_executed": 0,
+  "primitive_callbacks": 0,
+  "semantic_host_models": 0,
+  "target_process_SQL_threads_services_bus_network_physical_execution": 0
+}

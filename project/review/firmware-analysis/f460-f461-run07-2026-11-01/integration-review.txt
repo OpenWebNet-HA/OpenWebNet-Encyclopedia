@@ -1,0 +1,46 @@
+# Run07 documentary integration review
+
+PASS, no correction requested. I compared the exact expanded analysis, unchanged profile context, capsule and coordination documents against both frozen reports and completed independent original-source reviews. This is bounded documentary/product/method review, informed by earlier comparison-source work, not a new original-byte audit, complete lifecycle/identity proof or runtime experiment. I ran no collector, original/vendor/provider/thread/getter code, emulator, model/fixture or CPU replay.
+
+F460 gives one positive control-block RTTI/272-byte aggregate/base+16 construction context for the same initializer receiver. The control table is not mistaken for the inner primary vtable, and this source path does not prove every callback receiver or its lifetime. The capture remains a raw pointer. Flags113/248/249, holder240, state receiver, control block, pointer range and trigger owner pairs retain separate namespaces. Acquire/release source operations are not atomic exclusion or natural admission proof. Thread start/detach/delete/terminate are conditional requests, not successful scheduling, completion or ownership safety.
+
+The installed-source table/method/receiver chain and selected one-condition tail are accurately described: an eight-byte condition pointer leads to its predicate slot, low-eight-bit return test and a later local boundary under normal intermediate returns. Concrete predicate identity/value, all condition counts, worker actions, errors/unwind/cancellation, concurrency and physical effects remain open. The earlier trigger section now clearly marks its old handoff limit as historical; the followup does not silently rewrite the old source packet. No SceneRunner owning capture or natural event subscription is inferred.
+
+F461 remains a pure selected HAL getter declaration. Opaque result22, separate F461/134 compile-time strings, strdup requests and supplied output slots do not establish actual board, public WHO/model equivalence, diagnostic response, nonnull allocation or Boolean return status. Candidate SONAME/import metadata is not a permitted consumer or observed binding. The uncertain process caller was stopped and excluded before generation, not used as a proxy for a closed route. The board-selector body remains opaque; no serial/MAC/provisioning/private identity is promoted.
+
+Curated product roles, configured input, effective providers, output-slot/receiver validity and full lifetime/physical corroboration remain separate. All new original/native/model/fixture/SQL/runtime/OS/thread/network/bus/physical execution is zero. Earlier MHS/F454/MH202 ledgers, correction histories and unavailable MH20218/21 intermediate-draft limits stay unchanged; full Device/source gates remain pending. Closed receiving/transport/MQTT/libjel/auth/session/framing scopes are not expanded.
+
+## Copies, history and completion boundary
+
+Verified all16 current document pins and frozen copies, all36 exact SOURCE_EXPORTS source/export pairs, and four source/reviewer first-copy sets containing28 members:26 author copies plus two reviews. The public main equals REFERENCE_DRAFT. Exact retained main plus the declared appendix/historical-limit clarification/summary/ranking substitutions reconstructs current bytes. The capsule README equals its first copy; core profile remains exactly bc9859ac with no new consumer/ownership transfer.
+
+Both first generations and current documentary candidate remain unchanged. The separate-debug warning did not supply debug-source evidence, and excluded caller exploration is not a generated failure, retroactive success or missing-history authenticity claim. Older versioned failures and exact retained input requirements remain scoped. No author/repository/source/prior dossier was edited.
+
+Checked43 local Markdown link occurrences and one fragment: all41 existing targets and the fragment resolve. Only intended later capsule integration-review.txt and validation.json await actual assembly. Final full protection/identity, strict ESG/ECV/diff, actual branch/status and index-last checkpoint checks remain subsequent parent-owned gates against actual saved artifacts. No future-byte certification, placeholder or missing-link exemption is endorsed.
+
+## Exact current pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md` | `ece79b9fbb0ee0c08519058f28ce746817c9e910ddc5c64379ae4e0690a11dc7` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | `bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run07-2026-11-01/README.md` | `0f4c2cb1948942e246e11c8585daf4a2ffcabfd6468b4d57b55b9ccdc336a18d` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run07-2026-11-01/SOURCE_EXPORTS.json` | `031da9f4035ca8e27bdf75a0d66fce57d782c9e0a757ca46de1caeffd609ec7f` |
+| `work/f460-f461-comparison/2026-11-01-run07/REFERENCE_DRAFT.md` | `ece79b9fbb0ee0c08519058f28ce746817c9e910ddc5c64379ae4e0690a11dc7` |
+| `work/f460-f461-comparison/2026-11-01-run07/ANALYSIS_APPENDIX_DRAFT.md` | `e457ca12dc5643df1af83f270ed8cc96725befcf6ca2cdf8d3ca317612e5f8f4` |
+| `work/f460-f461-comparison/2026-11-01-run07/SYNTHESIS.md` | `af45df9522df30b38f1d9f41746ec6030130f244abdf52505a4f738d01825481` |
+| `work/f460-f461-comparison/2026-11-01-run07/COVERAGE.md` | `18d578eb1ad143acd65aa9a0a5f666946496c40b8f73f412e4f23e10586d0cab` |
+| `work/f460-f461-comparison/2026-11-01-run07/RANKED_REMAINING_QUESTIONS.md` | `69fb81b078049c568b299a8face0910b6b8f7785d8944a1576291e759a9d9508` |
+| `work/f460-f461-comparison/2026-11-01-run07/SOURCE_CHECKS.json` | `5071ef4643f5e7f4d0690cc856d1ca378e25ed72b499d6bc83bdf9f8740ab2c2` |
+| `work/f460-f461-comparison/2026-11-01-run07/integration/DOCUMENT_PATCH.json` | `51d8dc0737c6b4c3443fbb23ff0b5e49983f83aa7bc7d737c2615681736162a4` |
+| `work/f460-f461-comparison/2026-11-01-run07/REFERENCE_DRAFT_METHOD.json` | `869f89406a02979aeb473e7b6326b1c0b428bab5d1e9e42c2a7d2204dd4c3999` |
+| `work/f460-f461-comparison/2026-11-01-run07/reviews/f460-source-review.md` | `a4bdfb5d3f019d03e768733df85b081ffa5dece0653ce92e202d077c6f155484` |
+| `work/f460-f461-comparison/2026-11-01-run07/reviews/f461-source-review.md` | `5150123d077525bf0f80e9560d58a0b191ffb755ba3abedbf2b35c7b40a30edd` |
+| `work/f460-f461-comparison/2026-11-01-run07/CAPSULE_README.first.md` | `0f4c2cb1948942e246e11c8585daf4a2ffcabfd6468b4d57b55b9ccdc336a18d` |
+| `work/f460-f461-comparison/2026-11-01-run07/PLAN.json` | `6fbf99024d21a4e9b6b7200806c47831c6de34370c70fb132b1a311e5e222435` |
+| `review-candidate/INDEX.json` | `3d3f3b87260e5d6b390268063e936eecbef294578e1b43cb76fbe0d7328e388d` |
+| `integration/pre-edit/INDEX.json` | `ceaefb3f9b013969132f3ced75258126e37c080fe6681428f8f293a71a360358` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/REPORT.md` | `578653ad15a4c18b203d9917867f32384d017894875e88054043fae29ff46557` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/first-candidate/INDEX.json` | `a48fa0135460766f323779bcd5babfecbdfdca1e799c56c5a15587dc90084a17` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/REPORT.md` | `1599bdd53dd4f3a9f20091f141338dfd22249fd0fb7b3ab0e900108a992f11ae` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/first-candidate/INDEX.json` | `18517f1d944ccea1579f003a3523f796bd2e0041ec6ee6c0f43078304731c437` |

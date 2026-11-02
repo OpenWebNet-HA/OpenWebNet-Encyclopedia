@@ -1,0 +1,350 @@
+{
+  "counts": {
+    "computed-stack": 3,
+    "direct-stack": 6,
+    "fresh-allocation-result": 1,
+    "known-global-init0": 1,
+    "known-global-set1": 1,
+    "supplied-object-r0": 10
+  },
+  "local_string_or_conversion_notes": {
+    "0x10abde": "selected one-character string initialization; incoming destination object.",
+    "0x2b4ce": "JsonCppasBool return stored toincomingobject+72; no key literal exported or provider/caller body followed.",
+    "0x392fc": "low8bits ofJsonCppasUInt return stored toincomingobject+72; no key literal exported or provider/caller body followed.",
+    "0xb2c0c": "r3=0; caller-suppliedobject+64 points toobject+72 and+68 length0; byte+72 is inline string terminator on this construction path.",
+    "0xb365c": "same selected empty inline-string construction shape, independently derived entry receiver.",
+    "0xb4eda": "one-character copy toobject+72 with string fieldobject+64/length+68; source byte from supplied source object.",
+    "0xc3798": "one-character inline string copy toobject+72; supplied destination receiver.",
+    "0xe4eb4": "selected one-character string initialization, pointerobject+64=object+72, length+68=1.",
+    "0xe85f2": "selected one-character string initialization, same source-local field shape; object receiver remains incomingr0.",
+    "0xe8c20": "selected one-character copy toobject+72, lengthobject+68; incoming destination object."
+  },
+  "positive_reduction": "9 current-stack stores and1 fresh-allocation destination under ordinary premises;2 prior exact global stores;10 incoming receiver objects whose full caller aliases remain open.",
+  "reset_conclusion": "No newly established write toglobal167800; no global absence/permanent-latch/defect claim.",
+  "rows": [
+    {
+      "alias_instruction_VA": null,
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0x17328",
+        "entry_VA": "0x14c120",
+        "start_VA": "0x13b14"
+      },
+      "instruction_bytes": "84f84830",
+      "prior_operand": "r3, [r4, #72]",
+      "receiver_boundary": "previous independently reviewed exact global PIC join",
+      "receiver_kind": "known-global-init0",
+      "store_VA": "0x1548e"
+    },
+    {
+      "alias_instruction_VA": "0x2b3a6",
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0x2b5f8",
+        "entry_VA": "0x14c758",
+        "start_VA": "0x2b39c"
+      },
+      "instruction_bytes": "86f84800",
+      "prior_operand": "r0, [r6, #72]",
+      "receiver_boundary": "supplied r0 object retained in callee-saved register; caller identity not resolved globally",
+      "receiver_kind": "supplied-object-r0",
+      "store_VA": "0x2b4ce"
+    },
+    {
+      "alias_instruction_VA": "0x31356",
+      "allocation_call_VA": "0x31350",
+      "allocation_size": 76,
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0x31e34",
+        "entry_VA": "0x14c870",
+        "start_VA": "0x30cb0"
+      },
+      "instruction_bytes": "84f84830",
+      "loaded_byte_source": "currentSP+192 at3137c",
+      "prior_operand": "r3, [r4, #72]",
+      "receiver_boundary": "ordinary allocator success/fresh valid object and normal ABI returns, separate from BSS",
+      "receiver_kind": "fresh-allocation-result",
+      "return_save_VA": "0x31356",
+      "store_VA": "0x31392"
+    },
+    {
+      "alias_instruction_VA": "0x39064",
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0x39b18",
+        "entry_VA": "0x14c990",
+        "start_VA": "0x39048"
+      },
+      "instruction_bytes": "84f84800",
+      "prior_operand": "r0, [r4, #72]",
+      "receiver_boundary": "supplied r0 object retained in callee-saved register; caller identity not resolved globally",
+      "receiver_kind": "supplied-object-r0",
+      "store_VA": "0x392fc"
+    },
+    {
+      "alias_instruction_VA": null,
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0x5da9c",
+        "entry_VA": "0x14cde8",
+        "start_VA": "0x5d460"
+      },
+      "instruction_bytes": "8df84830",
+      "prior_operand": "r3, [sp, #72]",
+      "receiver_boundary": "ordinary valid stack/current frame, separate from BSS",
+      "receiver_kind": "direct-stack",
+      "store_VA": "0x5d636"
+    },
+    {
+      "alias_instruction_VA": null,
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0x6b014",
+        "entry_VA": "0x14d348",
+        "start_VA": "0x6ac14"
+      },
+      "instruction_bytes": "8df84820",
+      "prior_operand": "r2, [sp, #72]",
+      "receiver_boundary": "ordinary valid stack/current frame, separate from BSS",
+      "receiver_kind": "direct-stack",
+      "store_VA": "0x6ad74"
+    },
+    {
+      "alias_instruction_VA": "0xb2bd4",
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0xb2db0",
+        "entry_VA": "0x14e4c0",
+        "start_VA": "0xb2bc4"
+      },
+      "instruction_bytes": "84f84830",
+      "prior_operand": "r3, [r4, #72]",
+      "receiver_boundary": "supplied r0 object retained in callee-saved register; caller identity not resolved globally",
+      "receiver_kind": "supplied-object-r0",
+      "store_VA": "0xb2c0c"
+    },
+    {
+      "alias_instruction_VA": "0xb3624",
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0xb3800",
+        "entry_VA": "0x14e4f8",
+        "start_VA": "0xb3614"
+      },
+      "instruction_bytes": "84f84830",
+      "prior_operand": "r3, [r4, #72]",
+      "receiver_boundary": "supplied r0 object retained in callee-saved register; caller identity not resolved globally",
+      "receiver_kind": "supplied-object-r0",
+      "store_VA": "0xb365c"
+    },
+    {
+      "alias_instruction_VA": "0xb4dfc",
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0xb4fd4",
+        "entry_VA": "0x14e650",
+        "start_VA": "0xb4de8"
+      },
+      "instruction_bytes": "84f84830",
+      "prior_operand": "r3, [r4, #72]",
+      "receiver_boundary": "supplied r0 object retained in callee-saved register; caller identity not resolved globally",
+      "receiver_kind": "supplied-object-r0",
+      "store_VA": "0xb4eda"
+    },
+    {
+      "alias_instruction_VA": "0xc36bc",
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0xc3898",
+        "entry_VA": "0x14e958",
+        "start_VA": "0xc3694"
+      },
+      "instruction_bytes": "84f84830",
+      "prior_operand": "r3, [r4, #72]",
+      "receiver_boundary": "supplied r0 object retained in callee-saved register; caller identity not resolved globally",
+      "receiver_kind": "supplied-object-r0",
+      "store_VA": "0xc3798"
+    },
+    {
+      "alias_instruction_VA": null,
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0xc49c8",
+        "entry_VA": "0x14e998",
+        "start_VA": "0xc42f0"
+      },
+      "instruction_bytes": "8df84820",
+      "prior_operand": "r2, [sp, #72]",
+      "receiver_boundary": "ordinary valid stack/current frame, separate from BSS",
+      "receiver_kind": "direct-stack",
+      "store_VA": "0xc4402"
+    },
+    {
+      "alias_instruction_VA": null,
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0xcd720",
+        "entry_VA": "0x14ec28",
+        "start_VA": "0xcd6f0"
+      },
+      "instruction_bytes": "84f84830",
+      "prior_operand": "r3, [r4, #72]",
+      "receiver_boundary": "previous independently reviewed exact global PIC join",
+      "receiver_kind": "known-global-set1",
+      "store_VA": "0xcd706"
+    },
+    {
+      "alias_instruction_VA": null,
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0xd79e4",
+        "entry_VA": "0x14ede8",
+        "start_VA": "0xd747c"
+      },
+      "instruction_bytes": "8df84830",
+      "prior_operand": "r3, [sp, #72]",
+      "receiver_boundary": "ordinary valid stack/current frame, separate from BSS",
+      "receiver_kind": "direct-stack",
+      "store_VA": "0xd7508"
+    },
+    {
+      "alias_instruction_VA": "0xe4e56",
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0xe4f20",
+        "entry_VA": "0x14f088",
+        "start_VA": "0xe4e50"
+      },
+      "instruction_bytes": "84f84830",
+      "prior_operand": "r3, [r4, #72]",
+      "receiver_boundary": "supplied r0 object retained in callee-saved register; caller identity not resolved globally",
+      "receiver_kind": "supplied-object-r0",
+      "store_VA": "0xe4eb4"
+    },
+    {
+      "SP_base_offset": 612,
+      "SP_effective_store_offset": 684,
+      "alias_instruction_VA": "0xe6154",
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0xe78a0",
+        "entry_VA": "0x14f0c0",
+        "start_VA": "0xe5c48"
+      },
+      "instruction_bytes": "86f84830",
+      "prior_operand": "r3, [r6, #72]",
+      "receiver_boundary": "ordinary valid stack/current frame, separate from BSS",
+      "receiver_kind": "computed-stack",
+      "store_VA": "0xe618c"
+    },
+    {
+      "alias_instruction_VA": "0xe8580",
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0xe871c",
+        "entry_VA": "0x14f118",
+        "start_VA": "0xe8578"
+      },
+      "instruction_bytes": "84f84830",
+      "prior_operand": "r3, [r4, #72]",
+      "receiver_boundary": "supplied r0 object retained in callee-saved register; caller identity not resolved globally",
+      "receiver_kind": "supplied-object-r0",
+      "store_VA": "0xe85f2"
+    },
+    {
+      "alias_instruction_VA": "0xe88de",
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0xe8f54",
+        "entry_VA": "0x14f128",
+        "start_VA": "0xe88c4"
+      },
+      "instruction_bytes": "84f84820",
+      "prior_operand": "r2, [r4, #72]",
+      "receiver_boundary": "supplied r0 object retained in callee-saved register; caller identity not resolved globally",
+      "receiver_kind": "supplied-object-r0",
+      "store_VA": "0xe8c20"
+    },
+    {
+      "alias_instruction_VA": null,
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0xf5aa0",
+        "entry_VA": "0x14f3d0",
+        "start_VA": "0xf5734"
+      },
+      "instruction_bytes": "8df84830",
+      "prior_operand": "r3, [sp, #72]",
+      "receiver_boundary": "ordinary valid stack/current frame, separate from BSS",
+      "receiver_kind": "direct-stack",
+      "store_VA": "0xf586a"
+    },
+    {
+      "SP_base_offset": 596,
+      "SP_effective_store_offset": 668,
+      "alias_instruction_VA": "0x1041a0",
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0x1059bc",
+        "entry_VA": "0x14f680",
+        "start_VA": "0x103c6c"
+      },
+      "instruction_bytes": "86f84830",
+      "prior_operand": "r3, [r6, #72]",
+      "receiver_boundary": "ordinary valid stack/current frame, separate from BSS",
+      "receiver_kind": "computed-stack",
+      "store_VA": "0x1041da"
+    },
+    {
+      "alias_instruction_VA": null,
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0x10829c",
+        "entry_VA": "0x14f6f0",
+        "start_VA": "0x107f20"
+      },
+      "instruction_bytes": "8df84830",
+      "prior_operand": "r3, [sp, #72]",
+      "receiver_boundary": "ordinary valid stack/current frame, separate from BSS",
+      "receiver_kind": "direct-stack",
+      "store_VA": "0x108060"
+    },
+    {
+      "SP_base_offset": 612,
+      "SP_effective_store_offset": 684,
+      "alias_instruction_VA": "0x108c26",
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0x10a34c",
+        "entry_VA": "0x14f720",
+        "start_VA": "0x108750"
+      },
+      "instruction_bytes": "86f84830",
+      "prior_operand": "r3, [r6, #72]",
+      "receiver_boundary": "ordinary valid stack/current frame, separate from BSS",
+      "receiver_kind": "computed-stack",
+      "store_VA": "0x108c5e"
+    },
+    {
+      "alias_instruction_VA": "0x10ab6c",
+      "enclosing_exidx_region": {
+        "boundary": "Exception-index interval only; not automatically one source function, especially init group.",
+        "end_VA_exclusive": "0x10acf8",
+        "entry_VA": "0x14f758",
+        "start_VA": "0x10ab64"
+      },
+      "instruction_bytes": "84f84830",
+      "prior_operand": "r3, [r4, #72]",
+      "receiver_boundary": "supplied r0 object retained in callee-saved register; caller identity not resolved globally",
+      "receiver_kind": "supplied-object-r0",
+      "store_VA": "0x10abde"
+    }
+  ],
+  "unclosed": [
+    "all callers/indirectaliases of10suppliedreceiver functions",
+    "747widerstore candidates from priorquery",
+    "arbitrary computed/provider/bulk writes and complete reinitialization lifetime",
+    "actual runtime addresses/configuration/stop/reset behavior"
+  ]
+}

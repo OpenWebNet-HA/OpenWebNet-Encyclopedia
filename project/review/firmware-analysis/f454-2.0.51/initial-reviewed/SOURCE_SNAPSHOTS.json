@@ -1,0 +1,30 @@
+{
+  "scope": "Exact five files pinned by the initial integration review, before targeted follow-up edits. Review history remains unchanged.",
+  "files": [
+    {
+      "source_path": "reverse-engineering/firmware-analysis/README.md",
+      "source_sha256": "6c677a0ca8ef819e5f83feebf8a27b9dde9f56880c514413630292660ab64833",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/initial-reviewed/reverse-engineering__firmware-analysis__README.md.txt"
+    },
+    {
+      "source_path": "reverse-engineering/firmware-analysis/f454-2.0.51.md",
+      "source_sha256": "8455eb35067e96b7760f033b1a8c5d3b0f47f1ad43ed43520b701335ddc2ac8b",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/initial-reviewed/reverse-engineering__firmware-analysis__f454-2.0.51.md.txt"
+    },
+    {
+      "source_path": "devices/definitions/own-dev-0002-audio-video-web-server-gateway.md",
+      "source_sha256": "92e8afc01f715264acc442c83000f889663ad835e29e729763faaacfad57216a",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/initial-reviewed/devices__definitions__own-dev-0002-audio-video-web-server-gateway.md.txt"
+    },
+    {
+      "source_path": "project/review/firmware-analysis/f454-2.0.51/README.md",
+      "source_sha256": "34520ee3bdcc0d10f48c925c62edd05227942537f7a88f124f146bb9c4e54035",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/initial-reviewed/project__review__firmware-analysis__f454-2.0.51__README.md.txt"
+    },
+    {
+      "source_path": "project/review/firmware-analysis/f454-2.0.51/provenance.json",
+      "source_sha256": "eeb281531b26e8e117ecd7d934170044db9619da9bf8957231942c0fc7914edd",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/initial-reviewed/project__review__firmware-analysis__f454-2.0.51__provenance.json.txt"
+    }
+  ]
+}

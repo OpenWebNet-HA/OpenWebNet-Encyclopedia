@@ -1,0 +1,632 @@
+[
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6387",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "b1a3f99cb78c97cd0aa98616c8074f56c8fd34fb10d2500138ea74ed5ed54c4e",
+      "size": 141968
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6422",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "b30f4b7789faaed475f8f6022e2ddb29df1da9c73d48b525fdbfee264fe89d1e",
+      "size": 108384
+    },
+    "other_product": "MyHOMEServer1",
+    "path": "home/bticino/bin/bt_daemon"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6386",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "bcc42a6e97007eeaec5e2327dd313fa0c7b3fe03a66505ce3760e45194a45f83",
+      "size": 39024
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6418",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "05f07eaf729afbedf54660d781c11ba05c0d24cf8099ce2064aa0c0f4ca8dc90",
+      "size": 30152
+    },
+    "other_product": "MyHOMEServer1",
+    "path": "home/bticino/bin/scsserver"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6397",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "1ecabc82832aa3d341692ef5e4a426b1bc5804d2b2019520f3665358f1e33428",
+      "size": 133872
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6432",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "d55fae40b7a6ac1a433ac7ea556387d14a9c8e1080780f74c88fd54e4a425748",
+      "size": 91972
+    },
+    "other_product": "MyHOMEServer1",
+    "path": "home/bticino/bin/openserver"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6381",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "6b8f20afc427fa4647f7de9d4101e265073565ecd5113d8ab5535385e312faad",
+      "size": 186616
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6413",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "f237866f0379eb180dd8c532d22e4f3b66f8156aa4ce8ac420e4a460883c0f4c",
+      "size": 144884
+    },
+    "other_product": "MyHOMEServer1",
+    "path": "home/bticino/bin/bt_device"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6428",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "f65fe9084e8ccc7e27b56cb2305b4cf7f1efe7f14ed628f2f01296e1257a1dd3",
+      "size": 47080
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6463",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "f910b749689a8376ade87565410524ae69d497d5ab02194e78a9c54f47640c1c",
+      "size": 34180
+    },
+    "other_product": "MyHOMEServer1",
+    "path": "home/bticino/bin/fw_manager"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6657",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "5e7af98b4621ce693f9386b3497926225f85d7a280d9458360e2000fa608fdc7",
+      "size": 43088
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6717",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "5e765d44425f80aa00cb402d7252a417b2386fdd77f0c4ff26a51f14f9223270",
+      "size": 30140
+    },
+    "other_product": "MyHOMEServer1",
+    "path": "home/bticino/bin/dedrifupdater"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6402",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197",
+      "size": 32168
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6437",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "f470a622df6dd32ded11d347cb198bdc2aa8878423d761066495a1607c2fb095",
+      "size": 26860
+    },
+    "other_product": "MyHOMEServer1",
+    "path": "home/bticino/bin/coso"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6421",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "4b50d95910061226fc531b296f4f0cfaaa951001c175e35d379987e20720ddad",
+      "size": 3180736
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6456",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "96348136c2a0ebe859c689eb6246e3889e5154fdb63ffd5f3fc76975ac596717",
+      "size": 2094580
+    },
+    "other_product": "MyHOMEServer1",
+    "path": "home/bticino/matrix_mx/matrix_mx"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6674",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "3b5d7541133ae6fe4f7822b7c45a8dd414b96019f56c1daf62761ee6a608149c",
+      "size": 1034592
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6746",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "2fb7f6859bb8975defc11e0954c3486abcaa97f81631d8886f7d1edc0c92a3f5",
+      "size": 657036
+    },
+    "other_product": "MyHOMEServer1",
+    "path": "home/bticino/bt_drover_mx/bt_drover_mx"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6437",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "c9e76bb3be850730f53d6e63b82dd2502864555c44b85be3554e2a05372448e8",
+      "size": 649384
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6476",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "e6757ffaf4079d91254716ec6e9d0c288b43e0d1ad7914b3b44c972dbe4214a6",
+      "size": 325108
+    },
+    "other_product": "MyHOMEServer1",
+    "path": "home/bticino/bt_smart_home_manager/bt_smart_home_manager"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6685",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "1f8047a49f4aafc90f5916c3186587316175d68d250f35f17261ceded5fe5b5f",
+      "size": 978280
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6779",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "10fae76eb25fe260798f47804e842b1f6ebf8d00974d2748222d98e652b559dd",
+      "size": 653472
+    },
+    "other_product": "MyHOMEServer1",
+    "path": "home/bticino/backup_manager/backup_manager"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6700",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "7e00f53a1aeabf5abd4cbf8e63fa3b53d524bbb77342dbb2173fe4604f3bfe93",
+      "size": 190664
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6798",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "c55f525ad9b6587a72cbc2a7abbfdda568ad30c45ea1d0e2c170700abe264250",
+      "size": 120320
+    },
+    "other_product": "MyHOMEServer1",
+    "path": "home/bticino/gateway_manager/gateway_manager"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6423",
+      "original_mode": "-rw-rw-r--",
+      "original_uid": "1000",
+      "sha256": "bd2ff4d326692c85bc4eb3f86504d615758da97dc832389fac523734574833e9",
+      "size": 2633728
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6799",
+      "original_mode": "-rw-rw-r--",
+      "original_uid": "1000",
+      "sha256": "79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb",
+      "size": 2233344
+    },
+    "other_product": "MyHOMEServer1",
+    "path": "home/bticino/matrix_mx/MHCatalogue.db"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6734",
+      "original_mode": "-rw-rw-r--",
+      "original_uid": "1000",
+      "sha256": "bc9e8f64e44f562d53b08398b4c0d7be7393d8c17a30aa76f350422789c44d3d",
+      "size": 5197
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6842",
+      "original_mode": "-rw-rw-r--",
+      "original_uid": "1000",
+      "sha256": "2c30a6291f05471133dec393692f66242b31ac74f403501e0511d4d031ad747a",
+      "size": 5852
+    },
+    "other_product": "MyHOMEServer1",
+    "path": "home/bticino/cfg/stack_open.xml"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6704",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "39cfb97523c78c0bc61334f8ff1fea9da7d9a49353c561e56f3fb234fba3ff2e",
+      "size": 3599
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6802",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "721554b0e6369696023cd1fe403e86d96f6fe7149c53a1ad8017225fd85340d3",
+      "size": 4193
+    },
+    "other_product": "MyHOMEServer1",
+    "path": "etc/init.d/bt_daemon-apps.sh"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6387",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "b1a3f99cb78c97cd0aa98616c8074f56c8fd34fb10d2500138ea74ed5ed54c4e",
+      "size": 141968
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6338",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "e5a3a10d78924c4efd282ef58b5d294340429eefd725c7912a7b4ea629b2c88f",
+      "size": 141968
+    },
+    "other_product": "F460",
+    "path": "home/bticino/bin/bt_daemon"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6386",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "bcc42a6e97007eeaec5e2327dd313fa0c7b3fe03a66505ce3760e45194a45f83",
+      "size": 39024
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6337",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "d8b8d3815974b090a15a7235e4ec91be01b848abd72115d4e90e8a5a848526d8",
+      "size": 39024
+    },
+    "other_product": "F460",
+    "path": "home/bticino/bin/scsserver"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6397",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "1ecabc82832aa3d341692ef5e4a426b1bc5804d2b2019520f3665358f1e33428",
+      "size": 133872
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6348",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "3822230ea71018536bcdd90008f0c44f39fd326da1ca48da76e9e69c5fa866f2",
+      "size": 133872
+    },
+    "other_product": "F460",
+    "path": "home/bticino/bin/openserver"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6381",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "6b8f20afc427fa4647f7de9d4101e265073565ecd5113d8ab5535385e312faad",
+      "size": 186616
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6332",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "4b4e999d04c4b2b6f28b681586a5b5ef84556640d180d26641237009a4ac4cbf",
+      "size": 186616
+    },
+    "other_product": "F460",
+    "path": "home/bticino/bin/bt_device"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6428",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "f65fe9084e8ccc7e27b56cb2305b4cf7f1efe7f14ed628f2f01296e1257a1dd3",
+      "size": 47080
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6379",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "d2168d817b75d5e341602b8eb26e454a4c23372c00ce13e1b594a02b35074c24",
+      "size": 47080
+    },
+    "other_product": "F460",
+    "path": "home/bticino/bin/fw_manager"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6657",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "5e7af98b4621ce693f9386b3497926225f85d7a280d9458360e2000fa608fdc7",
+      "size": 43088
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6616",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "8f32212bee98b507690f1e22d6b26524c8a13dc20efcc8cc05900ac4142f9753",
+      "size": 43088
+    },
+    "other_product": "F460",
+    "path": "home/bticino/bin/dedrifupdater"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6402",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197",
+      "size": 32168
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6353",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "1000",
+      "sha256": "3bbc0e2f7c3a6bc88468faed711a684e092eccc0177563eb8aa7d78cd37edcae",
+      "size": 32168
+    },
+    "other_product": "F460",
+    "path": "home/bticino/bin/coso"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6421",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "4b50d95910061226fc531b296f4f0cfaaa951001c175e35d379987e20720ddad",
+      "size": 3180736
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6372",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "16d92b02ffe89819f6947d93efa76a0f24f8b590a43d3e5d8fdc7226ec68a4ff",
+      "size": 3180736
+    },
+    "other_product": "F460",
+    "path": "home/bticino/matrix_mx/matrix_mx"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6674",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "3b5d7541133ae6fe4f7822b7c45a8dd414b96019f56c1daf62761ee6a608149c",
+      "size": 1034592
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6645",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "7af20b944af0685b1d972c2fb6b3419f8f6b3c379da12829f73b2603fb5d2da2",
+      "size": 1034592
+    },
+    "other_product": "F460",
+    "path": "home/bticino/bt_drover_mx/bt_drover_mx"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6437",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "c9e76bb3be850730f53d6e63b82dd2502864555c44b85be3554e2a05372448e8",
+      "size": 649384
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6392",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "6343c1abac1e01253f2dcef594a241e8c20261ccd050b3828cf98767ebab9780",
+      "size": 649384
+    },
+    "other_product": "F460",
+    "path": "home/bticino/bt_smart_home_manager/bt_smart_home_manager"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6685",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "1f8047a49f4aafc90f5916c3186587316175d68d250f35f17261ceded5fe5b5f",
+      "size": 978280
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6678",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "8a9b24f15977383a6b4069660a895be6d1a30656427a490d46d8fff646cd550c",
+      "size": 978280
+    },
+    "other_product": "F460",
+    "path": "home/bticino/backup_manager/backup_manager"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6700",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "7e00f53a1aeabf5abd4cbf8e63fa3b53d524bbb77342dbb2173fe4604f3bfe93",
+      "size": 190664
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6699",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "9c9092e7dc140d22e9abf9867ba95c5281b67bc5e51c65f648ff43288f1e163b",
+      "size": 190664
+    },
+    "other_product": "F460",
+    "path": "home/bticino/gateway_manager/gateway_manager"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6423",
+      "original_mode": "-rw-rw-r--",
+      "original_uid": "1000",
+      "sha256": "bd2ff4d326692c85bc4eb3f86504d615758da97dc832389fac523734574833e9",
+      "size": 2633728
+    },
+    "exact_same_bytes": true,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6374",
+      "original_mode": "-rw-rw-r--",
+      "original_uid": "1000",
+      "sha256": "bd2ff4d326692c85bc4eb3f86504d615758da97dc832389fac523734574833e9",
+      "size": 2633728
+    },
+    "other_product": "F460",
+    "path": "home/bticino/matrix_mx/MHCatalogue.db"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6734",
+      "original_mode": "-rw-rw-r--",
+      "original_uid": "1000",
+      "sha256": "bc9e8f64e44f562d53b08398b4c0d7be7393d8c17a30aa76f350422789c44d3d",
+      "size": 5197
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6742",
+      "original_mode": "-rw-rw-r--",
+      "original_uid": "1000",
+      "sha256": "3b17a185d49ffbdbd3c97705e33c4c1d5cd514db13ac83d45c1930a5133eba95",
+      "size": 6031
+    },
+    "other_product": "F460",
+    "path": "home/bticino/cfg/stack_open.xml"
+  },
+  {
+    "F461": {
+      "original_gid": "1000",
+      "original_inode": "6704",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "39cfb97523c78c0bc61334f8ff1fea9da7d9a49353c561e56f3fb234fba3ff2e",
+      "size": 3599
+    },
+    "exact_same_bytes": false,
+    "other": {
+      "original_gid": "1000",
+      "original_inode": "6703",
+      "original_mode": "-rwxrwxr-x",
+      "original_uid": "1000",
+      "sha256": "7545de0fbd7fa33bdcab7bfcee0b4fb588385307cecd1f33865d84b88c66a9e8",
+      "size": 4190
+    },
+    "other_product": "F460",
+    "path": "etc/init.d/bt_daemon-apps.sh"
+  }
+]

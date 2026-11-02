@@ -1,0 +1,54 @@
+[
+  {
+    "image": "normal",
+    "path": "/etc/version",
+    "sha256": "dd298f750a4ce5e7732bd58e23d204811d3deac613f4f217d2b0bed31a975ce9",
+    "whitelisted_version_metadata": "20260415162228"
+  },
+  {
+    "image": "normal",
+    "path": "/etc/issue",
+    "sha256": "73bf252da837c1e47614a08fbab0f524e5b4dcd6092c61b5a7e62a40b048b8e4",
+    "whitelisted_version_metadata": [
+      "The BTicino Distribution (Chess board) \\l",
+      "Poky (Yocto Project Reference Distro) 4.0.23 \\n \\l"
+    ]
+  },
+  {
+    "image": "normal",
+    "path": "/home/bticino/sp/dbfiles_ws.xml",
+    "sha256": "b6fabbedab91845acc5f4506af2b82b9d63f6e4bd253c87f5cf4d37e02f7bef1",
+    "whitelisted_version_metadata": [
+      {
+        "tag": "ver_webserver",
+        "value": "2.0.11"
+      }
+    ]
+  },
+  {
+    "image": "recovery",
+    "path": "/etc/version",
+    "sha256": "fa188ae1519f3f0fd8efa837a2fc0c231323eb9edda6307448f48a8080fad670",
+    "whitelisted_version_metadata": "20260415162301"
+  },
+  {
+    "image": "recovery",
+    "path": "/etc/issue",
+    "sha256": "73bf252da837c1e47614a08fbab0f524e5b4dcd6092c61b5a7e62a40b048b8e4",
+    "whitelisted_version_metadata": [
+      "The BTicino Distribution (Chess board) \\l",
+      "Poky (Yocto Project Reference Distro) 4.0.23 \\n \\l"
+    ]
+  },
+  {
+    "image": "recovery",
+    "path": "/home/bticino/sp/dbfiles_ws.xml",
+    "sha256": "07c8fad8e2a35adb6f3f0808c3cd3f6c7a100232e7e7dd7da0e677b51443dd88",
+    "whitelisted_version_metadata": [
+      {
+        "tag": "ver_webserver",
+        "value": "2.0.11"
+      }
+    ]
+  }
+]

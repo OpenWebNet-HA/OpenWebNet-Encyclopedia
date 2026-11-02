@@ -1,0 +1,37 @@
+# Independent source review: typed BNTH cached-value producer
+
+PASS, no correction requested. This is an independent static source/current-artifact review of the authoritative `record/REPORT.v2.md`, not a native replay or a claim that an event naturally occurred. No author file was edited. Original/vendor/native/provider/JSON/target APIs and semantic fixtures executed: zero. The only replay was the host collector's read-only `--check`.
+
+## Source and scope checks
+
+I read the current report, collector, retained source spans, typed-value contract, version/failure records and relevant predecessor/type/register context. Independently read the original scheduler through ImageVFS, derived its PT_LOAD mappings and rechecked all 13 original raw-span hashes, 13 instruction guards, five PIC member names, three GOT contents and both selected TBH targets. Original image `/home/bticino/scheduling_manager/scheduling_manager` has SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. The selected source and the report agree:
+
+- The provided local code3 TBH branch and the new record's discriminator3 are separately evidenced selectors; their equality does not transfer public WHO/physical meanings. Earlier input parse/filter/classification remains a premise.
+- The copied params object's exact `setpoint` member requests `asDouble` and moves D0 into D9. The missing-member branch at `0x5517c` is explicitly `VMOV.I64 D9,#0` before its return to construction. This local default is source-proven and is not an inferred sensor state. Its ID is the separate event-cache `params.id` string, not the removal routine's `params.scene_id` numeric key.
+- The selected allocation is 88 bytes, with control base and embedded `ItemStatusThermostat` record at base+16. Original GOT/RTTI data agree with both record and control identities. The literal type3 store at allocation+20 is record+4, and `VSTR D9,[allocation+48]` is exactly record+32. The independent D8 store is record+48. The prior Light record's +12 embedding is not reused.
+- The outgoing two-word pair is `(record=base+16, control=base)` at SP+296/+300. The getter-supplied receiver and FP ID accompany that pair at `0x53c8e -> 0x10eb10`. Getter GOT `0x166bf8` resolves to actual local registry `0x167368`, matching the BNTH lookup receiver.
+- The retained normal installed-node continuation writes data/control at node+40/+44; that branch is conditional, not a complete all-type insertion/replacement policy. Its control-retain/release requests do not establish observed lifetime.
+- Existing-record update checks old and incoming discriminator equality before the bounded type switch. Selected type3 reads incoming+32 into D17 and old+32 into D19. The retained floating compare NE leg reaches the copy path, whose `0x10edfc` writes D17 into old+32. Other preceding field changes can also reach copying; the report correctly claims a concrete changed-double path rather than an exhaustive update return/notification contract.
+- The ordinary found lookup copies the stored pair, and the two retained BNTH cache-hit legs read this record+32 into D9. Actual matching ID, suitable retained record type, valid provider/object/tree/control state and predicate guards remain premises. The source does not prove every possible cache result has this layout or that it is current.
+
+Class labels, conversion keys and local offsets do not establish units, temperature domain, configured state, physical thermostat behavior or accepted raw protocol. No miss/receiving/transport/auth/session/framing/MQTT/libjel body was followed. All concurrency, failure/unwind, allocation/provider effects, cache freshness and complete lifetime remain outside the result. I did not repeat the prior predicate or generic worker matrices.
+
+## Reproduction, source identities and history
+
+The authoritative read-only collector passes with 17 outputs. Independently verified all saved manifest members, five input hashes and all 19 exact first-candidate-v2 copies against their size/SHA256 index. Separately verified the parent's six-file pre-v2 snapshot against current unchanged v1 source files. The actual preserved v1 report/collector/failure metadata match the declared history.
+
+The v1 collector and its attempted `--check` stopped before generated-output writes because its Thumb32-only decoder rejected the actual Thumb16 branch. Independently decoded exact halfword `0xe75c` at `0x10ee0c`: signed displacement -328 from PC+4 gives target `0x10ecc8`. The v2 code adds a selected-VA exact-halfword/target check and this sign extension, while retaining Thumb32 assertions. It does not weaken the original opcode guard or alter source semantics. Failure metadata records the two attempts; this review verifies preserved bytes and consistency, not an independently observed historical terminal session or unavailable raw stderr.
+
+| Authoritative / preserved file | SHA256 |
+| --- | --- |
+| `REPORT.v2.md` | `9d5e8401ea962f30b509964f8ed4ac5c8dff069b118f33cc14b0a0fb3a2490f7` |
+| `collect_record_value_v2.py` | `cef2c95008c1e6419bae4ecffff03f72f9e9f3b4cb600fe4bb8bf7a6902874dc` |
+| `OUTPUT_MANIFEST.json` | `16eea723f88168e594da6b4d966911c9bb34d138c514e568219adc84cd6083ee` |
+| `VERSION_HISTORY.json` | `b2e1919dd6955ace1980ceb3e976538a35b89841d302efe2287897f481e5c1b5` |
+| `first-candidate-v2/INDEX.json` | `cc0ae8114cf0f6188ce637828c256366b5802bb21a7ac2c0582cc6325aef8150` |
+| `REPORT.md` | `7d68c13a2ca3939ef8427c64fd327b33026c8a12b25874537ad41a8bfd205e51` |
+| `collect_record_value_v1.py` | `0008e9a9f6ce97d6ec9a680617709cb5b9323489061d31f6334f1b92efc1979e` |
+| `development-first-failure-v1/FAILURE.json` | `c57422c44b764d201bdae6eb23841867d065170e4530d54f5a5583016b29e6c0` |
+| `development-first-failure-v1/INDEX.json` | `85d58378a0ee2474d2146506aa5688ecd3c0eb1cf986f0def953e30a29002856` |
+
+The parent's pre-v2 snapshot index has SHA256 `ac753482acbd3df597cc88c3de8caefb00e788259e2e77cc7e234610cb4db974`. Source inputs and exact critical-source coordinates remain in the pinned author's `INPUTS.json` and `ORIGINAL_SOURCE.json`. PASS applies to these current bytes and their explicitly bounded source claims only; it is not whole firmware coverage or historical-artifact certification beyond the retained snapshots.

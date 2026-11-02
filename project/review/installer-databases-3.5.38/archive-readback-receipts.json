@@ -1,0 +1,111 @@
+{
+  "status": "ALL13_PRIVATE_R2_DATABASES_READBACK_VERIFIED",
+  "objects": 13,
+  "new_registrations": 7,
+  "results": [
+    {
+      "id": "myhome-suite-3.5.38-mhcatalogue",
+      "ok": true,
+      "status": "existing",
+      "sha256": "f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5",
+      "size": 2625536,
+      "object_key": "sha256/f0/c9/f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5"
+    },
+    {
+      "id": "myhome-suite-3.5.38-thermo-rules",
+      "ok": true,
+      "status": "existing",
+      "sha256": "23b62e3bb7a11ede3f91561b63a1aaf39449da47025626a2c477e9833347cb06",
+      "size": 36864,
+      "object_key": "sha256/23/b6/23b62e3bb7a11ede3f91561b63a1aaf39449da47025626a2c477e9833347cb06"
+    },
+    {
+      "id": "myhome-suite-3.5.38-scenario-devices-programdata",
+      "ok": true,
+      "status": "existing",
+      "sha256": "cd3b9b67160f468cdbd30134357b8733c696aacd5d625129240dff6b79224fc3",
+      "size": 34816,
+      "object_key": "sha256/cd/3b/cd3b9b67160f468cdbd30134357b8733c696aacd5d625129240dff6b79224fc3"
+    },
+    {
+      "id": "myhome-suite-3.5.38-device-1768-1.0-systems",
+      "ok": true,
+      "status": "uploaded",
+      "sha256": "73297a1449df378063b8a2ab23a8f1787a782df9ee6f00f7b2d702e3ec608e93",
+      "size": 344064,
+      "object_key": "sha256/73/29/73297a1449df378063b8a2ab23a8f1787a782df9ee6f00f7b2d702e3ec608e93"
+    },
+    {
+      "id": "myhome-suite-3.5.38-mh200n-1331-1.0-scen-suite-db-eng",
+      "ok": true,
+      "status": "uploaded",
+      "sha256": "83b7fa13c224012ebd1561fbc2895deb599b06223eb8e5041f565b7c5b7dbfd8",
+      "size": 2542592,
+      "object_key": "sha256/83/b7/83b7fa13c224012ebd1561fbc2895deb599b06223eb8e5041f565b7c5b7dbfd8"
+    },
+    {
+      "id": "myhome-suite-3.5.38-device-1898-2.1-systems",
+      "ok": true,
+      "status": "uploaded",
+      "sha256": "ad88777e1b3e2d11dd7efa6c79b080ec57258fdff3596c9c1ac5cc1ad0983214",
+      "size": 344064,
+      "object_key": "sha256/ad/88/ad88777e1b3e2d11dd7efa6c79b080ec57258fdff3596c9c1ac5cc1ad0983214"
+    },
+    {
+      "id": "myhome-suite-3.5.38-mh202-1902-lgg-scen-suite-db-eng",
+      "ok": true,
+      "status": "existing",
+      "sha256": "ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29",
+      "size": 2542592,
+      "object_key": "sha256/ae/1e/ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29"
+    },
+    {
+      "id": "myhome-suite-3.5.38-f454-1455-2.0-lgg-systems",
+      "ok": true,
+      "status": "uploaded",
+      "sha256": "fffc43f8d2fb5d05b8240aa4b6d449bcf5bf60339013aba2fb2301a42738e694",
+      "size": 344064,
+      "object_key": "sha256/ff/fc/fffc43f8d2fb5d05b8240aa4b6d449bcf5bf60339013aba2fb2301a42738e694"
+    },
+    {
+      "id": "myhome-suite-3.5.38-device-1768-2.1-systems",
+      "ok": true,
+      "status": "uploaded",
+      "sha256": "e44bbbd25ad849b38e52f58862c9b4e31240a01555115b68e4397584cb85308e",
+      "size": 344064,
+      "object_key": "sha256/e4/4b/e44bbbd25ad849b38e52f58862c9b4e31240a01555115b68e4397584cb85308e"
+    },
+    {
+      "id": "myhome-suite-3.5.38-mhprj",
+      "ok": true,
+      "status": "uploaded",
+      "sha256": "74fc3762e47718da40f85562225fb676932349e39bd797ff94a073b8db8bd39a",
+      "size": 50176,
+      "object_key": "sha256/74/fc/74fc3762e47718da40f85562225fb676932349e39bd797ff94a073b8db8bd39a"
+    },
+    {
+      "id": "myhome-suite-3.5.38-scenario-devices-program-files",
+      "ok": true,
+      "status": "existing",
+      "sha256": "2ce7ffe1286c3246271aed160116fe664407d9e8ff43595f50192e7d2ac85569",
+      "size": 35840,
+      "object_key": "sha256/2c/e7/2ce7ffe1286c3246271aed160116fe664407d9e8ff43595f50192e7d2ac85569"
+    },
+    {
+      "id": "myhome-suite-3.5.38-ptdb",
+      "ok": true,
+      "status": "uploaded",
+      "sha256": "606f0fef30b8db6c5a2998ae5ef88d7193488479ad97f7aea89c8f274c41ae64",
+      "size": 17408,
+      "object_key": "sha256/60/6f/606f0fef30b8db6c5a2998ae5ef88d7193488479ad97f7aea89c8f274c41ae64"
+    },
+    {
+      "id": "myhome-suite-3.5.38-open",
+      "ok": true,
+      "status": "existing",
+      "sha256": "d864a4946b47c3671a74a6844cec4da605cf20b33ac14f49959785778f104051",
+      "size": 80896,
+      "object_key": "sha256/d8/64/d864a4946b47c3671a74a6844cec4da605cf20b33ac14f49959785778f104051"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+# F454 2.0.51: alarm channel configuration and COSOAI ownership
+
+The packaged software has a concrete, separate alarm-routing configuration: image alias `scsai` selects the scsserver executable under the name `scsai`; its XML profile declares `/dev/ttyS2`, local server port21001 and bus_type1. A separate COSOAI launch wrapper/config selects the alarm plugin directory and an enabled SCSAI client tuple for that same port. Original plugin registration and callback metadata positively identify the alarm translation/state ownership. **The electrical connection between the documented SCS AI terminal and UART2 remains unproved**: product legends plus matching software names/configuration are not a schematic or pin-map measurement.
+
+This is a new static-only source/provenance batch: original instructions/native helpers/vendor processes/target open/read/network/device operations executed **0**. It does not repeat earlier alarm zone, parser, state or serialization cases. Connection/session/authentication/framing internals remain excluded; the selected initializer stops at its opaque connection delegate. No live gateway, bus, shell script or service ran.
+
+## Original inputs and reproduction
+
+All firmware bytes come through the read-only original-image accessor from normal F454 2.0.51. Exact file hashes/sizes, original virtual addresses/file offsets, span hashes, instruction words, safe configuration lines, selected relocations and prior-result/report pins are saved alongside this report. Principal original identities include:
+
+| Image path | SHA256 |
+|---|---|
+| `/home/bticino/bin/scsserver` | `281bb0eee184420bda73b8cdd3c88b9b14cfd87814b7913c0cfc7b21a1e6f197` |
+| `/home/bticino/bin/coso` | `7259067a648b215ef93ba93ede0037296cffe273a099b72e6c593dcb9057ee89` |
+| `/home/bticino/libcosoai/libplug_alarm_tr.so` | `24828dd3f29e91d4413d69937b6bd55b6455259f22145d655e3cc0a0d6469431` |
+| `/home/bticino/libcosoai/libcoso.so` | `c6650f073f36453073599ac87272e1ff276b5dddd83b06896a188ae76985d2fc` |
+
+```sh
+python3 -B work/f454-firmware/research/2026-10-31-alarm-ownership/collect_ownership_v1.py --check
+```
+
+The exclusive generator refuses existing outputs and preserves exact first report/collector/output bytes immediately. Read-only check compares exact reconstructed bytes; it executes host binutils, not firmware. Earlier completed F454/MH202 dossiers, original archives/images/source trees and repository pages remain unchanged. Earlier result files are hashed/read as evidence, not imported or replayed. The pre-output draft briefly reused the basename scs_cmd for both config records; before any first output generation this was changed to path-qualified output names and explicit original-path tuple keys. No generated candidate was overwritten.
+
+## Documented hardware scope versus software declarations
+
+The existing reviewed OWN-DEV-0002 device page cites MQ00519-c-EN printed p499/PDF p1 for connector labels **SCS AV** and **SCS AI**, with publisher legends describing video-door-entry/automation and burglar-alarm connections. That page also cautions that a bus label/catalogue relationship is not interchangeable wiring proof. `documented-connector-scope.json` pins the exact current device-page identity and selected lines. This pass uses that reviewed product-document synthesis; it does not freshly inspect the primary PDF or probe hardware.
+
+The original packaged XML declares separate profiles:
+
+| Software profile | Serial pathname | Local server port | XML bus_type |
+|---|---|---:|---:|
+| scsserver | `/dev/ttyS1` | 20001 | 0 |
+| scsai | `/dev/ttyS2` | 21001 | 1 |
+
+It separately declares COSOAI process/WHO5 openserver routing, command port30005 and monitor port31005, versus ordinary COSO WHO2/9/29 and ports30002/31002. These are default package declarations, not active persistent configuration, successful startup, electrical-bus equivalence or observed service readiness. `stack-selected-routing-lines.json` retains the exact original line numbers.
+
+## Positive alias → XML selector → serial-path argument
+
+Original image metadata resolves `/home/bticino/bin/scsai` to `/home/bticino/bin/scsserver`. This is a true image symlink, verified without following extracted host links. The name is functionally relevant: original scsserver startup `0x9854..0x98cc` copies argv0, finds its last slash, takes the following basename and stores the copied name in global base+0x244 at `0x98ac`. The selected code has ordinary pointer/allocation/string-call premises; it is not a claim that arbitrary argv0 strings are accepted safely.
+
+Config setup `0xc390..0xc3d8` reads that same global slot and stores the selector into config-record+36 at `0xc3bc`, then requests the XML parser. The text callback's `0xd144..0xd178` path compares the selected XML application name against config+36. Its `0xd1f8..0xd240` path matches `serialchannel` then `device`, requests a length-bounded duplicate of supplied text and stores the resulting pathname pointer at config+20 (`0xd238`). The selected serial-open boundary at `0xa7dc..0xa7f4` loads that same config+20 pointer into r0 and requests imported open at `0xa7e4`, storing the returned descriptor and testing its sign. This is a concrete static dataflow into an API request, not an actual open, tty configuration, UART/driver mapping, read/framing path or hardware response.
+
+The two profile values therefore have a stronger software basis than names alone: the invocation basename can select the corresponding XML section, whose device field supplies the original open argument. Actual launch name/path, XML/parser/provider completion and active config remain premises. No electrical pin mapping is established by this composition.
+
+## Separate COSOAI configuration and field descriptor
+
+`/home/bticino/bin/cosoai` is a **186-byte shell wrapper**, not an ELF alias: it requests `./bin/coso -c cfg/cosoai_cfg` and contains signal/wait handling. Nothing in it was executed. The intended `/home/bticino` working-directory premise is required for those relative paths.
+
+The original cosoai_cfg selects ApplicationName COSOAI, LibDir `/home/bticino/libcosoai`, PlugCfgDir `/home/bticino/cfg/cosoai_plugins`, command30005 and monitor31005. Its scs_cmd config declares SCSEnable0, SCSAIEnable1, SCSAIserverPort21001 and SCSAIidClient46. The ordinary COSO config/directory has a distinct SCS tuple. Safe original small routing files and unambiguous original-path tuple records are retained; no secret-bearing templates are exported.
+
+The original AI plugin initializer consumes SCSAIEnable via g_key_file_get_boolean at `0x2b48`, conditionally reads the server-port/client-ID keys and stores the values in its own allocated client record at offsets+12/+8. Pool relations in `whitelisted-schema-key-relations.json` verify the actual SCSAI key names, rather than assigning meaning from library filenames. If the AI enable word is nonzero, `0x2bdc..0x2c28` selects `scsai_field_bus` through the original GOT, writes **34** into descriptor+8 at `0x2c20`, and requests register_field_bus at `0x2c24`. The descriptor symbol is original VA0xb8ac; relocation0xb8d0 binds offset+36 to original scs_init0x1e34. The configured port/client defaults and corresponding supplied file values are local software identifiers, not alarm zones or WHO values.
+
+Candidate core register_field_bus0x1ec8 appends/prepends into manager field-list+16 and calls a nonNULL descriptor initializer+36 with r0=descriptor and r1=manager+32 at `0x1f50..0x1f58`. The selected scs_init prefix loads descriptor private+68, stores this supplied tuple pointer into private+0 at `0x1e78`, and reaches the **opaque scs_connect request at0x1e84**. No scs_connect implementation or transport/session/framing code is inspected. This closes available registration/initializer argument ownership only. It does not establish real callback activation, descriptor-ready state, connection success, full manager callback contents or natural event delivery.
+
+Candidate providers and exact dependencies/relocations are recorded. They are same-build available providers, not a complete runtime loader closure or live-binding proof. Configured plugin-directory choice does not by itself prove every library initialized successfully: original alarm init has prerequisite version/config branches. Later mutable configuration/provider overrides remain external premises.
+
+## Alarm translator/state and one documented event boundary
+
+Original alarm translator initialization `0x1740..0x1798` writes descriptor metadata, appends source filter **4** to descriptor+52, destination **5** to descriptor+56 and calls register_translation. Relocation0xce3c resolves descriptor callback+40 to complete original alarm_tr_translate0x19e4. These numeric criteria are separate from AI field-descriptor34, XML bus_type1, client46 and local port21001. They must not be collapsed into one bus/WHO enumeration.
+
+The alarm state plugin separately registers WHO/system5 (selected `0x16cc..0x1708`); relocation0xb3e8 binds its descriptor+40 to alarm_stm_gest_status_from_field0x2484. The original framework `0xaf10..0xaf5c` walks descriptor+52 criteria, compares incoming message system+48 and invokes matching field callback+40. These original registration/callback links place the earlier normal-state handoff in the available framework; actual registry state/caller selection is not newly executed or fully closed.
+
+One already reviewed synthetic event supplies the concrete publication endpoint: run10's source `D1C10404D0005603` yielded **`*5*17*#5##`** through original translator→publication/parser in its historical bounded experiment. Current fresh static span `0x3288..0x32a0` verifies the actual translator's call to imported add_open_buf_to_msg_list at0x3294. Existing curated WHO5 vocabulary labels WHAT17 “Anti-panic alarm”; `documented-event-label.json` pins that exact label/line. This does **not** validate synthetic WHERE#5 as a configured physical sensor, establish source-type/product meaning, actual SCSAI admission or an electrical event.
+
+Historical run26 then showed the same staged object through a supplied idle-state context to monitor routing; run27 showed original serialization and an exact 10-byte send-API request under a private subscriber fixture. Their reports/result identities are pinned, **not replayed**. The source raw-message system4 → parsed OPEN WHO5, message protocol3 versus parsed kind1, state route+8=3, AI descriptor34 and XML bus_type1 remain distinct namespaces. No original decoded serial/source producer is joined to that synthetic alarm body here. No subscriber/session or physical alarm outcome is claimed.
+
+## Bounded result and next evidence needed
+
+High confidence: original image alias and basename selector, XML device-pointer store→open argument, separate COSOAI wrapper/config/plugin tuple, conditional field registration/init argument, alarm translator/state callback identities and existing reviewed single-event publication boundary. Conditional: intended working directory/name, parsed/active configuration, compatible version gates/provider binding and actual manager registration. Unresolved: documented terminal↔board UART electrical topology, actual serial/decoded-origin admission into source4, complete natural callback/registry readiness, delivery/lifetime and physical meaning.
+
+This is positive product-specific software ownership evidence, not proof of electrical bus assignment from names. A schematic/board-driver pin map or separately obtained hardware observation would be needed to close that remaining physical link. Closed connection/auth/session/framing branches remain opaque; they were not reopened to force an end-to-end claim.

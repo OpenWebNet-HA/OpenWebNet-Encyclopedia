@@ -1,0 +1,17 @@
+# MyHOMEServer1 3.87.13 first-pass coverage
+
+Counts below describe explicit inputs/methods, not a global coverage percentage or semantic completeness.
+
+| Area | Examined | Remaining boundary |
+| --- | --- | --- |
+| Package/images | Original archive identity, extraction records, two images, kernel CRCs and selected DTB metadata | Signature verification, actual boot tree/board, installation/rollback |
+| Structural census | All5924normal+5384recovery regular bytes verified; defined ELF/SQLite/REDIS/ZIP prefixes and selected DB suffixes; all1598ELF headers saved | Other container/embedded stores, complete software semantics/SBOM/runtime versions |
+| Embedded catalogue | Both identical copies,75tables/read-only quick_check, complete schema/count/typed-row digest comparison to distinct installer source; selected self-lookups | Actual open/query consumers, meaningful changed row relationships, runtime writable stores |
+| Application structure | Eight selected modern ELF dependencies/imports/JSON key shapes; matrix SQLite literalVA | Actual scene/action/alarm/backup ownership and I/O boundaries |
+| Startup/configuration | SysV/volatile alias/script declarations; original daemon parser/default/field/selected-launch source;25normal/recovery and23reduced declarations | Live alias, global list/activation/order, imported helper outcomes, effective profile/readiness |
+| Protocol |44selectedELFs; separate provider families; fresh56B/+52 C object allocation/ordinary stores; selected descriptor registration/direction/body/format code | Full parser acceptance/address grammar/provider binding/outer match/STM/publication |
+| Runtime/physical | None | All target execution, timing, concurrency, electrical topology and effects |
+| Missing assets | Manifest references80.xtz/81.xtz/94.xtz/95.xtz recorded as absent | Original contents and deployment roles cannot be substituted from other products |
+| Review | Independent input/source/final integration checks and mechanical ECV/ESG checks | Wider Device/full-source/oracle/physical gates stay pending |
+
+All current original execution counters are0. Prior F454/MH202 native corpora retain their own historical counts and are not replayed or credited as new coverage. Original images/extracted files, synced sources, previous completed dossiers and prior uncommitted work remain protected. A packaged catalogue field or process declaration is implementation evidence, not active installed state.

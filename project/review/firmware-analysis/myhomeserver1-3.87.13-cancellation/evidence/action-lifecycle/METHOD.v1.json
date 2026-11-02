@@ -1,0 +1,7 @@
+{
+  "history": "No canonical generation failure or generated candidate overwrite. One exploratory Thumb slice began within a wide instruction; its first bogus decode was discarded before retaining complete instruction-aligned spans.",
+  "host_models_or_input_fixtures": 0,
+  "original_execution": 0,
+  "scope": "Nontransport constructor/storage/getter/setter and shared local dispatch only. Invoker/manager bodies remain opaque; no external send/command/transport/session/auth/framing internals read or executed.",
+  "target_IO": 0
+}

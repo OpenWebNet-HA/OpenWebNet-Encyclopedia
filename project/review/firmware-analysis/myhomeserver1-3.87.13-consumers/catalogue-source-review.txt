@@ -1,0 +1,38 @@
+# Independent source review: catalogue open and selected reader
+
+PASS for the authoritative v2 static source findings, no required correction. This reviewer did not author the consumer report/collector. The earlier database comparisons are source-aware context only; this review independently checked the original ELF source below. No vendor/original instruction, SQL statement, stored expression, target syscall, service, transport or physical operation executed. Author artifacts were not edited.
+
+## Exact reviewed pins
+
+Paths below are relative to `catalogue/`.
+
+| Artifact | SHA-256 |
+| --- | --- |
+| `REPORT.v2.md` | `609c22da91d9f4b1cf2d51dca5fb50fc3665190907fa96bd0cb8f18a1b7708a4` |
+| `collect_catalogue_v2.py` | `90abf64677172dcee56402ccbe5962a9962200ac2c14de5506be293f479ee601` |
+| `output-manifest.json` | `6f4dc6d78962ac70a07f920d7f783c16516c6d0b38f94cf0792c7eaf33bf5489` |
+| `original-source-provenance.json` | `35efd45c83964eb25d11be1519aa2432c52a75946c6f039a020d5e614c064f3b` |
+| `ownership-and-controlflow.json` | `f351b920b0d259fecb864bc30c312239a4045029786828a06ed3cdba5ef3ad4b` |
+| `input-manifest.json` | `dba1ea96ec1dc5ec51a263a7d4934a23b11b629c21bc87d57766845e81404503` |
+| `development-before-v2/FAILURE.json` | `b0da45dfbb35f08f3af5114b5b316e413b3f5982cafc64d51863a090dc423cf0` |
+| `development-before-v2/SNAPSHOT_INDEX.json` | `e09dd5e31628d7b1e2795bd9b28f8739e2c7e78a23b1a68208d6cf17b8874a73` |
+
+## Reproduction and independent original-byte checks
+
+The unmodified `collect_catalogue_v2.py --check` reproduced16 outputs,10 original spans,17 byte guards and3 whitelisted PIC literals. I inspected source containment/method: original images and reviewed accessor are read only, all SQL is literal source text rather than submitted to a database, selected provider bodies stop at the small open wrappers, and no earlier firmware layout or implementation is injected.
+
+I independently mapped every retained source span through its actual original ELF PT_LOAD headers, comparing original file offsets, sizes and raw span SHA for all10. All17 byte assertions and three PIC target/literal computations match original file bytes. All9 input pins,18 current first copies and the stored initializer pointer/index also pass independent checks. These reproduce static/source evidence, not native execution.
+
+The original opener0xd3948 loads the storage context from input+16. Its first/second output slots are context+556/+560, and both calls pass the same absolute catalogue literal. In the second-error branch, the error message uses slot560 but the explicit close argument uses slot556; the8-byte vector zero store clears both. The first-error branch closes/clears slot556 only. Both-open-zero returns1 and selected errors return0 under normal delegate return assumptions. The caller0x8baa2 passes word[caller+532], tests zero at0x8baa6, and has the saved r0=0 tail. Later setup calls remain opaque. No global ownership/leak/failure-occurrence conclusion is justified or claimed.
+
+The separate reader0xa8c00 uses a different input object and private stack handle/statement. Original source proves stat-return0, open_v2 numeric flags1/VFS0, successful open and non-NULL-handle guards, then SQL from object+36 with prepare length-1 and tailNULL. Its first step comparison is101 only; the non101 path checks the statement pointer before the column block. Source then requests column13->decimal strtol->object+20 and column14->decimal strtol->object+24. Subsequent step100 repeats that block, so selected repeated rows overwrite fields; no ordering or semantic column names are established. Ordinary finalize/close, initial101 finalize and prepare-failure close boundaries match. Early exits and normal delegated close result are not converted into a universal Boolean result. Error/NULL/conversion behavior was neither executed nor replaced with a host fixture.
+
+The close veneer starts with original78 47 fd e7 at0x108a4 and reaches the ARM PLT stub0x108a8; it is not a distinct provider/callback. Candidate SQLite's original tiny wrappers use internal6/0 for sqlite3_open and preserve caller parameters for open_v2, tailing to the same internal target. The report retains those numeric requests without extending into actual SQLite filesystem or live binding behavior.
+
+The exact AS_ITEM_SYSTEM two-column literal is tied to .init_array's stored Thumb pointer0x11139 at index1 of72 and to original global string-construction request0x20f024 via helper0x2a140. It is correctly left separate from reader object+36: the selected column13/14 consumer cannot be justified by silently substituting this two-column query. No executed initializer/query, natural virtual caller, device/Firmware eligibility or replacement policy is claimed.
+
+## Version history and applicability
+
+I checked exact development-before-v2 report/collector/failure-record hashes against their snapshot index and byte equality with retained root v1 files. The actual observed first v1 assertion failure is disclosed as pre-output; exact console traceback preservation is explicitly not claimed. The v2 file-byte guards correct displayed-halfword versus little-endian byte encoding, while original interpretation remains the inspected opener/reader/initializer scope. All18 current first copies match; no earlier candidate was overwritten or reconstructed as authenticated history.
+
+The result closes the first-pass unused-filename uncertainty for these compiled open requests. It does not establish actual successful file access, complete handle lifetime, effective provider selection, the unresolved SQL producer, field meanings or running catalogue admission policy. The prior114 retained firmware definitions/eight added source definitions and omitted self/product rows remain database facts rather than acceptance rules. Those boundaries are appropriately preserved.

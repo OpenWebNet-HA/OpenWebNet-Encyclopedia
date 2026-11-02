@@ -1,0 +1,171 @@
+{
+  "objects": [
+    {
+      "id": "myhome-suite-3.5.38-thermo-rules",
+      "sha256": "23b62e3bb7a11ede3f91561b63a1aaf39449da47025626a2c477e9833347cb06",
+      "bytes": 36864,
+      "object_key": "sha256/23/b6/23b62e3bb7a11ede3f91561b63a1aaf39449da47025626a2c477e9833347cb06",
+      "existing_registration": true,
+      "descriptor": null,
+      "source_local": "work/installer-database-audit/2026-10-31/recovered/23b62e3bb7a11ede3f91561b63a1aaf39449da47025626a2c477e9833347cb06.bin",
+      "installer_members": [
+        "default/resTargetDir4/Db_KeyOThermoValidator/rules.db3"
+      ]
+    },
+    {
+      "id": "myhome-suite-3.5.38-mhcatalogue",
+      "sha256": "f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5",
+      "bytes": 2625536,
+      "object_key": "sha256/f0/c9/f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5",
+      "existing_registration": true,
+      "descriptor": null,
+      "source_local": "work/installer-database-audit/2026-10-31/recovered/f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5.bin",
+      "installer_members": [
+        "default/resTargetDir4/Db_MHCatalogue/MHCatalogue.db",
+        "default/resTargetDir4/RestoreDb_MHCatalogue/MHCatalogue.db"
+      ]
+    },
+    {
+      "id": "myhome-suite-3.5.38-scenario-devices-programdata",
+      "sha256": "cd3b9b67160f468cdbd30134357b8733c696aacd5d625129240dff6b79224fc3",
+      "bytes": 34816,
+      "object_key": "sha256/cd/3b/cd3b9b67160f468cdbd30134357b8733c696aacd5d625129240dff6b79224fc3",
+      "existing_registration": true,
+      "descriptor": null,
+      "source_local": "work/installer-database-audit/2026-10-31/recovered/cd3b9b67160f468cdbd30134357b8733c696aacd5d625129240dff6b79224fc3.bin",
+      "installer_members": [
+        "default/resTargetDir4/Db_ScenarioDevices/ScenarioDevices.sqlite",
+        "default/resTargetDir4/RestoreDb_ScenarioDevices/ScenarioDevices.sqlite"
+      ]
+    },
+    {
+      "id": "myhome-suite-3.5.38-mh200n-1331-1.0-scen-suite-db-eng",
+      "sha256": "83b7fa13c224012ebd1561fbc2895deb599b06223eb8e5041f565b7c5b7dbfd8",
+      "bytes": 2542592,
+      "object_key": "sha256/83/b7/83b7fa13c224012ebd1561fbc2895deb599b06223eb8e5041f565b7c5b7dbfd8",
+      "existing_registration": false,
+      "descriptor": "descriptors/myhome-suite-3.5.38-mh200n-1331-1.0-scen-suite-db-eng.json",
+      "source_local": "work/installer-database-audit/2026-10-31/recovered/83b7fa13c224012ebd1561fbc2895deb599b06223eb8e5041f565b7c5b7dbfd8.bin",
+      "installer_members": [
+        "default/resTargetDir4/devices/1331_1.0_BT/xml/Steps/Step_2/Scen_SuiteDB_ENG.db",
+        "default/resTargetDir4/devices/1331_1.0_LG/xml/Steps/Step_2/Scen_SuiteDB_ENG.db"
+      ]
+    },
+    {
+      "id": "myhome-suite-3.5.38-device-1768-1.0-systems",
+      "sha256": "73297a1449df378063b8a2ab23a8f1787a782df9ee6f00f7b2d702e3ec608e93",
+      "bytes": 344064,
+      "object_key": "sha256/73/29/73297a1449df378063b8a2ab23a8f1787a782df9ee6f00f7b2d702e3ec608e93",
+      "existing_registration": false,
+      "descriptor": "descriptors/myhome-suite-3.5.38-device-1768-1.0-systems.json",
+      "source_local": "work/installer-database-audit/2026-10-31/recovered/73297a1449df378063b8a2ab23a8f1787a782df9ee6f00f7b2d702e3ec608e93.bin",
+      "installer_members": [
+        "default/resTargetDir4/devices/1768_1.0_LG/db/systems.sqlite",
+        "default/resTargetDir4/devices/1768_1.0_BT/db/systems.sqlite"
+      ]
+    },
+    {
+      "id": "myhome-suite-3.5.38-device-1898-2.1-systems",
+      "sha256": "ad88777e1b3e2d11dd7efa6c79b080ec57258fdff3596c9c1ac5cc1ad0983214",
+      "bytes": 344064,
+      "object_key": "sha256/ad/88/ad88777e1b3e2d11dd7efa6c79b080ec57258fdff3596c9c1ac5cc1ad0983214",
+      "existing_registration": false,
+      "descriptor": "descriptors/myhome-suite-3.5.38-device-1898-2.1-systems.json",
+      "source_local": "work/installer-database-audit/2026-10-31/recovered/ad88777e1b3e2d11dd7efa6c79b080ec57258fdff3596c9c1ac5cc1ad0983214.bin",
+      "installer_members": [
+        "default/resTargetDir4/devices/1898_2.1_BT/db/systems.sqlite",
+        "default/resTargetDir4/devices/1898_2.1_LG/db/systems.sqlite"
+      ]
+    },
+    {
+      "id": "myhome-suite-3.5.38-device-1768-2.1-systems",
+      "sha256": "e44bbbd25ad849b38e52f58862c9b4e31240a01555115b68e4397584cb85308e",
+      "bytes": 344064,
+      "object_key": "sha256/e4/4b/e44bbbd25ad849b38e52f58862c9b4e31240a01555115b68e4397584cb85308e",
+      "existing_registration": false,
+      "descriptor": "descriptors/myhome-suite-3.5.38-device-1768-2.1-systems.json",
+      "source_local": "work/installer-database-audit/2026-10-31/recovered/e44bbbd25ad849b38e52f58862c9b4e31240a01555115b68e4397584cb85308e.bin",
+      "installer_members": [
+        "default/resTargetDir4/devices/1768_2.1_LG/db/systems.sqlite",
+        "default/resTargetDir4/devices/1768_2.1_BT/db/systems.sqlite"
+      ]
+    },
+    {
+      "id": "myhome-suite-3.5.38-mh202-1902-lgg-scen-suite-db-eng",
+      "sha256": "ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29",
+      "bytes": 2542592,
+      "object_key": "sha256/ae/1e/ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29",
+      "existing_registration": true,
+      "descriptor": null,
+      "source_local": "work/installer-database-audit/2026-10-31/recovered/ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29.bin",
+      "installer_members": [
+        "default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_2/Scen_SuiteDB_ENG.db",
+        "default/resTargetDir2/db/Scen_SuiteDB_ENG.db"
+      ]
+    },
+    {
+      "id": "myhome-suite-3.5.38-f454-1455-2.0-lgg-systems",
+      "sha256": "fffc43f8d2fb5d05b8240aa4b6d449bcf5bf60339013aba2fb2301a42738e694",
+      "bytes": 344064,
+      "object_key": "sha256/ff/fc/fffc43f8d2fb5d05b8240aa4b6d449bcf5bf60339013aba2fb2301a42738e694",
+      "existing_registration": false,
+      "descriptor": "descriptors/myhome-suite-3.5.38-f454-1455-2.0-lgg-systems.json",
+      "source_local": "work/installer-database-audit/2026-10-31/recovered/fffc43f8d2fb5d05b8240aa4b6d449bcf5bf60339013aba2fb2301a42738e694.bin",
+      "installer_members": [
+        "default/resTargetDir4/devices/1455_2.0_LGG/db/systems.sqlite"
+      ]
+    },
+    {
+      "id": "myhome-suite-3.5.38-mhprj",
+      "sha256": "74fc3762e47718da40f85562225fb676932349e39bd797ff94a073b8db8bd39a",
+      "bytes": 50176,
+      "object_key": "sha256/74/fc/74fc3762e47718da40f85562225fb676932349e39bd797ff94a073b8db8bd39a",
+      "existing_registration": false,
+      "descriptor": "descriptors/myhome-suite-3.5.38-mhprj.json",
+      "source_local": "work/installer-database-audit/2026-10-31/recovered/74fc3762e47718da40f85562225fb676932349e39bd797ff94a073b8db8bd39a.bin",
+      "installer_members": [
+        "default/resTargetDir2/db/MHPrj.db"
+      ]
+    },
+    {
+      "id": "myhome-suite-3.5.38-ptdb",
+      "sha256": "606f0fef30b8db6c5a2998ae5ef88d7193488479ad97f7aea89c8f274c41ae64",
+      "bytes": 17408,
+      "object_key": "sha256/60/6f/606f0fef30b8db6c5a2998ae5ef88d7193488479ad97f7aea89c8f274c41ae64",
+      "existing_registration": false,
+      "descriptor": "descriptors/myhome-suite-3.5.38-ptdb.json",
+      "source_local": "work/installer-database-audit/2026-10-31/recovered/606f0fef30b8db6c5a2998ae5ef88d7193488479ad97f7aea89c8f274c41ae64.bin",
+      "installer_members": [
+        "default/resTargetDir2/db/PTDB.db"
+      ]
+    },
+    {
+      "id": "myhome-suite-3.5.38-scenario-devices-program-files",
+      "sha256": "2ce7ffe1286c3246271aed160116fe664407d9e8ff43595f50192e7d2ac85569",
+      "bytes": 35840,
+      "object_key": "sha256/2c/e7/2ce7ffe1286c3246271aed160116fe664407d9e8ff43595f50192e7d2ac85569",
+      "existing_registration": true,
+      "descriptor": null,
+      "source_local": "work/installer-database-audit/2026-10-31/recovered/2ce7ffe1286c3246271aed160116fe664407d9e8ff43595f50192e7d2ac85569.bin",
+      "installer_members": [
+        "default/targetDir/ScenarioDevices.sqlite"
+      ]
+    },
+    {
+      "id": "myhome-suite-3.5.38-open",
+      "sha256": "d864a4946b47c3671a74a6844cec4da605cf20b33ac14f49959785778f104051",
+      "bytes": 80896,
+      "object_key": "sha256/d8/64/d864a4946b47c3671a74a6844cec4da605cf20b33ac14f49959785778f104051",
+      "existing_registration": true,
+      "descriptor": null,
+      "source_local": "work/installer-database-audit/2026-10-31/recovered/d864a4946b47c3671a74a6844cec4da605cf20b33ac14f49959785778f104051.bin",
+      "installer_members": [
+        "default/targetDir/db/OPEN.db"
+      ]
+    }
+  ],
+  "new_registrations": 7,
+  "unique_databases": 13,
+  "member_paths": 20,
+  "scope": "All13payloads verified through configured uploader; add7canonical records using established manifest-only main registry workflow. No vendor binaries or research branch published."
+}

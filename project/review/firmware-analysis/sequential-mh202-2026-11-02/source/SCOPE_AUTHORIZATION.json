@@ -1,0 +1,38 @@
+{
+  "scope": "Stage 1 only, original local MH202 ScenarioSuite loader to collection source",
+  "allowed_methods": [
+    {
+      "assembly": "Core",
+      "token": "0x0600008d",
+      "rva": "0x8e98"
+    },
+    {
+      "assembly": "Core",
+      "token": "0x0600008e",
+      "rva": "0x8ecc"
+    },
+    {
+      "assembly": "Class",
+      "token": "0x06000215",
+      "rva": "0x4b54",
+      "purpose": "Declared constructor field allocation, direct MemberRef .ctor from loader"
+    },
+    {
+      "assembly": "Class",
+      "token": "0x06000220",
+      "rva": "0x4c3c",
+      "purpose": "Declared backing collection identity, direct get_ScenariosCollection from loader"
+    }
+  ],
+  "chronology": "Proposal sent to parent before reading the two Core bodies; those two exploratory reads occurred before parent explicit authorization response, under child interpretation that proposal notification sufficed. No generated output existed. This authorization record is saved after that response, before any Class helper body read or generation. Not a retroactive pre-body receipt.",
+  "new_vendor_execution": 0,
+  "opaque": [
+    "CopyFolder",
+    "CleaupFolder",
+    "SaveScenarios",
+    "providers/XML serializer",
+    "MH200N loader",
+    "CompileAll inherited body",
+    "auth/receiving/output transport"
+  ]
+}

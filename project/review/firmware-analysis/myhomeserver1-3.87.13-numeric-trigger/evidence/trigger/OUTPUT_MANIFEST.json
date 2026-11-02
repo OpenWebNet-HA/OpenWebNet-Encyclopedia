@@ -1,0 +1,86 @@
+{
+  "collector_sha256": "c10653cb265171a5f46a04d22d6142e94f6e55a7eea8bb3168b330ee511404b8",
+  "counts": {
+    "byte_guards": 27,
+    "calls": 10,
+    "cast_typeinfos": 2,
+    "classes": 3,
+    "code_spans": 14,
+    "inputs": 6,
+    "keys": 3,
+    "original_execution_additions": 0,
+    "relative_relocations": 17,
+    "selected_tables": 3
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 1409,
+      "sha256": "7ccc19d69da107ed941a0d76975c545c097b82807c439ce013068b8f28b775e2"
+    },
+    "NUMERIC_CONTRACT.json": {
+      "bytes": 3020,
+      "sha256": "89213d11b604e0ff9c1f824c6ab0bbfa84b9dbc18c70f31d989ab083c6c46b81"
+    },
+    "ORIGINAL_SOURCE.json": {
+      "bytes": 9221,
+      "sha256": "8f5364b48f352dedcee1bc59b54de98c993ff12f65a3720bd0941c869ca913a0"
+    },
+    "spans/compiled-callback-copy.txt": {
+      "bytes": 1466,
+      "sha256": "7f630d739b69b4b9b8917e77f5ea00eea89b3e43f0caae0030319a79fd5c9a88"
+    },
+    "spans/compiled-field-copies.txt": {
+      "bytes": 674,
+      "sha256": "fe1e6c03c9f91b67c7a92bb5d0a65df36ade1d15e86c07147a6bb9bc27247d81"
+    },
+    "spans/initializer-capture.txt": {
+      "bytes": 920,
+      "sha256": "3315143e6f35ae5d3fa893a879fe9c382611b94d119c5c3cd461a80d6901247d"
+    },
+    "spans/initializer-virtual-reparse.txt": {
+      "bytes": 868,
+      "sha256": "e7f2620ce2ebe32f94512a673f07749982cb2436900cb96b11f93347a277f52a"
+    },
+    "spans/local-raw-trigger-dispatch.txt": {
+      "bytes": 1125,
+      "sha256": "f59c1b95807d75eae8914fc8ca5b70343f14a4f373d113e9be6d0adebf536dfb"
+    },
+    "spans/numeric-admission-handler.txt": {
+      "bytes": 1573,
+      "sha256": "40cf98e8101928ee5d73f47d795b89ca4e67d349a2b5d512a266bd0560cf694d"
+    },
+    "spans/numeric-local-guards-and-call.txt": {
+      "bytes": 636,
+      "sha256": "be8459e04c25e20d8b584c01c8016d28000ed5a875f9b3c8734b3d17976ee8d3"
+    },
+    "spans/persistent-object-publication.txt": {
+      "bytes": 1725,
+      "sha256": "817e3d0b76d561d2c6c53cb18f0516413abdf151b98a9d2c1d41ec095874d25e"
+    },
+    "spans/primary-fire-method.txt": {
+      "bytes": 407,
+      "sha256": "7adcc73141742016b39144f4c76627486a864f52d1be4d8000f8ee8117576999"
+    },
+    "spans/raw-numeric-presence.txt": {
+      "bytes": 3140,
+      "sha256": "c7c2738b614b67d950ac3231b38d00298a15f8712851e9c541457e7d8853ae51"
+    },
+    "spans/raw-selected-factory.txt": {
+      "bytes": 948,
+      "sha256": "b845267fe2d81891f79b6e6fd899b46953e244b3cdcfafd5cb1ef8a2d8dbf6ba"
+    },
+    "spans/scene-callback-wrapper.txt": {
+      "bytes": 198,
+      "sha256": "f40de36060aef042554d6cd5eb17d683cf8821da30fe71cbf45d3d463dbb9064"
+    },
+    "spans/scene-capture-manager.txt": {
+      "bytes": 674,
+      "sha256": "b87df852ba660a1707c1fd1cfcb8a1a5ee8833a3ce0ca6353b7f316c2ead8cad"
+    },
+    "spans/selected-local-recipient.txt": {
+      "bytes": 1717,
+      "sha256": "aa5612c1ef9cd7933acd4c7a37a683925b18b4ee6994ea93a38127de03a99042"
+    }
+  },
+  "report_sha256": "5c07aa082902c7caa80a51213f287a159ea50ff47c91d3f5ace98996da9f3b3c"
+}

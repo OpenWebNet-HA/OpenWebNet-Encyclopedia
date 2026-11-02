@@ -1,0 +1,10 @@
+{
+  "arbitrary_configuration_values_exported": false,
+  "boundaries": "Factories/runner init/standard file and JSON APIs are static delegates, not executed or stubbed; runtime/command/transport paths unclosed.",
+  "central_grammar_stubs": 0,
+  "code_mode": "Selected original Thumb2 code; force-thumb explicit. Literal-pool bytes in retained spans are not executed instructions.",
+  "history": "Exploratory default disassembly mode misdecoded a Thumb loader prefix as ARM; it was discarded before candidates. A pre-output ad-hoc Python branch-locator typo (else0) raised SyntaxError; fixed before source guards. No evidence candidate was generated/overwritten by either probe.",
+  "host_reconstructions": 0,
+  "original_execution": 0,
+  "stored_expressions_evaluated": 0
+}

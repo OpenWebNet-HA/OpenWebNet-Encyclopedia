@@ -1,0 +1,58 @@
+# MyHOMEServer1 3.87.13: retained compiled-action handle and vector growth
+
+A selected original SLEEP initializer creates a concrete action/control handle, establishes a strong-count word for that control, and transfers the complete8-byte handle into the scene's compiled action vector. The available-capacity append zeroes the source pair; the full-capacity delegate also zeroes that pair and relocates existing handle records before deleting the old buffer as storage. This is positive retained-owner source that complements the separately established raw-pointer worker-state capture. It does **not** prove complete receiver lifetime, actual configuration, successful threads, ownership removal order, a safe/unsafe interleaving, leak, UAF, cancellation or physical behavior.
+
+Original instructions, native helpers, vendor processes, target OS/network/I/O, provider APIs, scene fixtures and semantic host models executed: **0**. All original files and earlier dossiers remain read-only. No transport/authentication/session/framing/equivalent, MQTT or libjel body is followed.
+
+## Identity, evidence and reproduction
+
+Original image `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. `INPUTS.json` pins this object, the reviewed ImageVFS accessor and earlier SLEEP/common/worker-ownership reports. This batch rederives its source pointers, original control type, transfer and reallocation flow; older teardown/state-vtable/poll matrices are not counted as new coverage.
+
+`ORIGINAL_SOURCE.json` retains seven original ranges,19 file-byte guards, seven direct branch joins, selected RTTI/GOT/relative relocations and the growth helper's exidx bounds. Each span has its exact VA range, PT_LOAD-derived offset and raw-byte hash. Thumb pointer bit0 and code addresses are kept distinct; nearby stripped labels are not function identities. Original pools are data, including the growth helper's terminal pool.
+
+Run `python3 collect_vector_v1.py --check` from this directory for read-only byte reproduction. Generation refuses existing outputs and immediately copies report/collector/generated files into `first-candidate/`; its index is computed before that index is opened. A staged, unexecuted collector was preserved in `pre-generation-draft/` before separating an exidx-entry variable from a later path-loop variable. This correction preceded any report or generated output; no generated candidate was overwritten.
+
+## 1. Selected handle creation and vector destination
+
+Initializer `0xa72c0` saves its incoming scene pointer at its own SP+4 (`0xa72d0`). In the selected SLEEP branch, `0xa7640..0xa7648` derives scene+128 and saves that vector-header address at initializer SP+28. Its header has begin/end/capacity-end at+0/+4/+8. These are offsets into this selected scene object, not the raw action vector or a worker-state layout.
+
+The branch constructs a local compiled SLEEP object, requests96 bytes at `0xa767a/0xa767c`, copies the selected compiled representation at `0xa7684` and retains the resulting action pointer in r6. The temporary8-byte handle lives at initializer SP+592: pointer at+0 is set to r6 at `0xa76c0`, while its control word at SP+596 is initially0 (`0xa76be`).
+
+At `0xa76d2`, the source requests a separate16-byte control object. It installs the control vptr, initializes count words+4/+8 to1 with the original doubleword store `0xa76e2`, and stores the same action pointer at control+12 (`0xa76ec`). Pool `0xa7f50` plus GOT base `0x1659a4` selects relocated slot `0x1669c4` → header `0x1619dc`; its exact RTTI is `St19_Sp_counted_deleterIP17SleepActionRunnerSt14default_deleteIS0_ESaIvELN9__gnu_cxx12_Lock_policyE2EE`. Dispose slot header+16 contains Thumb `0xb0b61`; the selected dispose prefix loads its actual action pointer from control+12. That is concrete owner identity, not a guessed relationship from raw receiver or class spelling alone.
+
+## 2. Temporary control bookkeeping before append
+
+`0xa76f6` calls helper `0xa5980` with r0=&the temporary handle's control word (SP+596), r1=new control. The helper checks old/new identity. On the selected distinct-new/nonzero-control path it increments new control+4, using either the original direct single-threaded branch or LDREX/STREX branch, conditionally releases an old control, then stores the new pointer. The selected old control was explicitly0. Under normal valid object/provider/state premises and no concurrent count mutation, the new strong-count word therefore goes1→2; the separate+8 count remains1.
+
+`0xa76fe` then calls original control-release helper `0x1f8a4` on the standalone new-control pointer. Its selected count path decrements+4; a prior count2 does not enter the last-count virtual-dispose branch, yielding2→1. This leaves the temporary handle retaining one strong-count unit under those premises. No actual reference count, virtual release or successful allocation is executed. The names strong/weak follow this original shared-control type and its last-count source, not an invented caller fixture.
+
+At `0xa7706`, the caller supplies r0=&scene+128 vector header and r1=&the temporary pair to append `0xa7288`. After that request, `0xa770a` checks the temporary control word and only conditionally calls release `0x1f8a4`. Both retained normal append paths clear the source pair, so this selected normal post-append check skips a second release. Error/unwind, interposition, invalid pointers and concurrent mutation remain outside that sequential source interpretation.
+
+## 3. Available-capacity append transfers the actual pair
+
+Helper `0xa7288` reads current end/capacity-end. If unequal, its normal branch:
+
+- loads the source action pointer and control pointer;
+- zeroes both source words with the store at `0xa72a2`;
+- stores those exact pointer/control values at the old end;
+- advances vector end by8 at `0xa72b2`.
+
+It does not add another control count in this local move. The retained vector handle takes over the temporary handle's existing count unit rather than manufacturing an additional action owner. This establishes a positive stored owner under valid ordinary vector/shared-control/provider premises; it does not give the separate worker state an owning capture or prove how long the vector remains populated.
+
+## 4. Full-capacity growth and relocation
+
+When end equals capacity-end, `0xa72ba` tailcalls `0xb509c`, preserving r0=header, r1=old end and r2=source pair. Original exidx locates that delegate at `0xb509c..0xb51f4`. Its inspected normal growth body is therefore available rather than left as an unnamed reallocation promise.
+
+The source computes `n=(old_end-old_begin)>>3`, compares against the selected maximum literal `0x0fffffff`, and normally chooses `n+max(n,1)` with carry/clamp branches before requesting new storage. This is exact integer/capacity source, not a complete admitted size domain or an observed allocation. The maximum-equal branch requests a length-error throw.
+
+At `0xb50de..0xb50e8`, it loads the incoming8-byte handle, zeroes its two source words, and writes it at new_base+(position−old_begin). It then relocates existing prefix/suffix8-byte record values through the original scalar/NEON copy branches. For this actual append caller, position=old end: the old suffix is empty, and the new end follows the moved prefix plus one new8-byte entry. The generic helper's other insertion positions are not supplied as a runtime fixture.
+
+The selected retained helper makes no per-element reference-count increment or element-destructor call during those record transfers. At `0xb5190` it requests sized delete on the old buffer, using old capacity bytes; it then stores new begin/end at `0xb5196` and new capacity-end at `0xb519a`. Existing action/control values are therefore relocated without local copy-count increments or per-element owner release on this selected normal path. Old storage temporarily still contains raw copied values before deletion, but that is not an additional observed owner or a demonstrated concurrency incident.
+
+Allocator/delete success, valid buffer separation/headers, normal providers, memory alias assumptions, all exceptions/unwind, existing entry validity and concurrent mutation remain explicit boundaries. The helper's absence of a local count callback is not promoted into global reference behavior or a universal lifetime claim.
+
+## Positive ownership relation and remaining boundary
+
+The selected source now connects initializer-produced action/control → retained scene vector entry, while earlier worker evidence independently connects worker state+4 → raw action pointer. These can coexist: a vector/control handle may retain the action while a worker uses its raw receiver. This narrows the prior ownership gap without proving that the vector or another owner necessarily survives every worker, polling, removal, disposal or restart path.
+
+Next useful source work is a concrete vector-removal/replace caller or owner-retention boundary tied to this selected initialized scene, keeping thread holder, captured raw receiver, control counts, scene active/stop and shared action-stop flag distinct. Natural class activation/input, runtime allocation/binding, complete error paths, ownership ordering/concurrency, successful thread/clock behavior and physical observations remain unresolved. Confidence is high for the original pointer/count/move/storage joins under the stated normal premises; whole-lifetime safety or failure is intentionally not assigned.

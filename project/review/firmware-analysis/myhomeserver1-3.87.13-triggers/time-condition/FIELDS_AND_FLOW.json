@@ -1,0 +1,60 @@
+{
+  "boundary_helper": {
+    "date_preservation": "copies parsed first3 words into current localtime object; remaining date/DST words not copied from parsed temporary",
+    "entry": "0xb7f10",
+    "failure_boundary": "stream fail flags flow through clear then same conversion if clear returns; sentry-false also reaches conversion; no separate successful-parse Boolean branch before conversion. No malformed-string outcome or provider exception prediction.",
+    "format": "%a %b %d %H:%M:%S %Y",
+    "normal_conversion": "mktime then signed32 result times1000000000\u219264bit return object",
+    "parse_text": "Fri Apr 16 <supplied boundary>:00 2021"
+  },
+  "compiled": {
+    "days_mask": 192,
+    "enabled_byte": 132,
+    "from_string": 144,
+    "local_enum_word": 136,
+    "predicate": "0xb86a4",
+    "scene_range_base": 116,
+    "size_at_call": 200,
+    "to_string": 168
+  },
+  "days_parse": {
+    "binary_order": "selected prefix first character is highest bit of selected prefix",
+    "empty_mask": 0,
+    "invalid_selected_character": "requests invalid_argument throw",
+    "selected_prefix_length": "min(string_length,7)",
+    "serializer": "exactly7characters from bit6 to bit0"
+  },
+  "original_execution": 0,
+  "predicate": {
+    "enabled_nonzero": [
+      "time/localtime",
+      "returned word24\u2192map key; mapped value20 masked31\u2192bit",
+      "day bit clear\u21920",
+      "two independent boundary helper calls",
+      "system_clock now",
+      "boundaries equal\u21921",
+      "otherwise signed64 from<now AND now<to"
+    ],
+    "enabled_zero": 1,
+    "missing_map_key": "out_of_range throw request",
+    "scope": "Method result only; generic worker inversion/conjunction/admission not investigated."
+  },
+  "raw": {
+    "days_mask": 88,
+    "enabled_byte": 28,
+    "from_string": 40,
+    "local_enum_word": 32,
+    "serializer": "0x246a4",
+    "size_at_factory": 92,
+    "to_string": 64
+  },
+  "unclosed": [
+    "weekday map initializer/orientation",
+    "complete JsonCpp/time_get accepted grammar or locale",
+    "effective providers and ordinary target tm layout/API success",
+    "timezone/DST and midnight races across separate time samples",
+    "mktime/time/localtime failure policy beyond local source",
+    "natural scene activation and generic worker policy",
+    "runtime elapsed/physical device behavior"
+  ]
+}

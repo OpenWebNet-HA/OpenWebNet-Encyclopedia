@@ -1,0 +1,56 @@
+
+
+
+Disassembly of section .text:
+
+00003bd8 <new_json_msg@@Base>:
+    3bd8:	4a17      	ldr	r2, [pc, #92]	@ (3c38 <new_json_msg@@Base+0x60>)
+    3bda:	4b18      	ldr	r3, [pc, #96]	@ (3c3c <new_json_msg@@Base+0x64>)
+    3bdc:	b530      	push	{r4, r5, lr}
+    3bde:	b083      	sub	sp, #12
+    3be0:	447a      	add	r2, pc
+    3be2:	58d3      	ldr	r3, [r2, r3]
+    3be4:	681b      	ldr	r3, [r3, #0]
+    3be6:	9301      	str	r3, [sp, #4]
+    3be8:	f04f 0300 	mov.w	r3, #0
+    3bec:	b300      	cbz	r0, 3c30 <new_json_msg@@Base+0x58>
+    3bee:	4604      	mov	r4, r0
+    3bf0:	2014      	movs	r0, #20
+    3bf2:	f7fe ebd6 	blx	23a0 <g_malloc0@plt>
+    3bf6:	4605      	mov	r5, r0
+    3bf8:	4811      	ldr	r0, [pc, #68]	@ (3c40 <new_json_msg@@Base+0x68>)
+    3bfa:	6025      	str	r5, [r4, #0]
+    3bfc:	4478      	add	r0, pc
+    3bfe:	f7fe ebea 	blx	23d4 <g_strdup@plt>
+    3c02:	4603      	mov	r3, r0
+    3c04:	2020      	movs	r0, #32
+    3c06:	602b      	str	r3, [r5, #0]
+    3c08:	f7fe ebca 	blx	23a0 <g_malloc0@plt>
+    3c0c:	2200      	movs	r2, #0
+    3c0e:	6821      	ldr	r1, [r4, #0]
+    3c10:	4603      	mov	r3, r0
+    3c12:	4610      	mov	r0, r2
+    3c14:	610b      	str	r3, [r1, #16]
+    3c16:	601a      	str	r2, [r3, #0]
+    3c18:	4a0a      	ldr	r2, [pc, #40]	@ (3c44 <new_json_msg@@Base+0x6c>)
+    3c1a:	4b08      	ldr	r3, [pc, #32]	@ (3c3c <new_json_msg@@Base+0x64>)
+    3c1c:	447a      	add	r2, pc
+    3c1e:	58d3      	ldr	r3, [r2, r3]
+    3c20:	681a      	ldr	r2, [r3, #0]
+    3c22:	9b01      	ldr	r3, [sp, #4]
+    3c24:	405a      	eors	r2, r3
+    3c26:	f04f 0300 	mov.w	r3, #0
+    3c2a:	d103      	bne.n	3c34 <new_json_msg@@Base+0x5c>
+    3c2c:	b003      	add	sp, #12
+    3c2e:	bd30      	pop	{r4, r5, pc}
+    3c30:	2001      	movs	r0, #1
+    3c32:	e7f1      	b.n	3c18 <new_json_msg@@Base+0x40>
+    3c34:	f7fe ea84 	blx	2140 <__stack_chk_fail@plt>
+    3c38:	327c      	adds	r2, #124	@ 0x7c
+    3c3a:	0001      	movs	r1, r0
+    3c3c:	0178      	lsls	r0, r7, #5
+    3c3e:	0000      	movs	r0, r0
+    3c40:	2438      	movs	r4, #56	@ 0x38
+    3c42:	0000      	movs	r0, r0
+    3c44:	3240      	adds	r2, #64	@ 0x40
+    3c46:	0001      	movs	r1, r0

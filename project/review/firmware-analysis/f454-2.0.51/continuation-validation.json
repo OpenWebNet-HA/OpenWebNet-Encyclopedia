@@ -1,0 +1,118 @@
+{
+  "checked_at": "2026-10-30T11:55:40.388469+00:00",
+  "passed": true,
+  "branch": "docs/static-firmware-analysis-findings",
+  "method": "Static original-byte/source and host-model consistency only; no original ARM/JavaScript or runtime execution",
+  "style_checker": {
+    "exit_code": 0,
+    "objective_failures": 0,
+    "human_pages": 379,
+    "support_pages": 112
+  },
+  "evidence_privacy_checker": {
+    "exit_code": 0,
+    "objective_failures": 0
+  },
+  "device_completeness": {
+    "exit_code": 0,
+    "definitions": 210
+  },
+  "device_tests": {
+    "exit_code": 0,
+    "tests": 31
+  },
+  "diff_check": {
+    "exit_code": 0
+  },
+  "sources_changed": false,
+  "static_replay": {
+    "passed": true,
+    "method": "Read-only host static collectors/models with writes intercepted; no original ARM/JS or runtime execution",
+    "scripts": [
+      {
+        "script": "frontend/collect_frontend.py",
+        "passed": true,
+        "intercepted_output_bytes_compared": 10,
+        "strict_check_mode": false
+      },
+      {
+        "script": "temperature/collect_temperature_mapping.py",
+        "passed": true,
+        "intercepted_output_bytes_compared": 15,
+        "strict_check_mode": false
+      },
+      {
+        "script": "temperature/model_mapping.py",
+        "passed": true,
+        "intercepted_output_bytes_compared": 1,
+        "strict_check_mode": false
+      },
+      {
+        "script": "energy/collect_evidence.py",
+        "passed": true,
+        "intercepted_output_bytes_compared": 0,
+        "strict_check_mode": true
+      },
+      {
+        "script": "media/collect_evidence.py",
+        "passed": true,
+        "intercepted_output_bytes_compared": 0,
+        "strict_check_mode": true
+      }
+    ],
+    "published_evidence_verified": 14,
+    "prior_dossiers_unchanged": [
+      {
+        "dossier": "2026-10-29",
+        "files_verified": 1917,
+        "index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df"
+      },
+      {
+        "dossier": "2026-10-30-targeted",
+        "files_verified": 107,
+        "index_sha256": "ddb83866292f70631b968b91f07e08fbc79415b5e1762cf3699f8e326eacff79"
+      }
+    ],
+    "corrected_energy_manifest_excludes_current_review": true,
+    "new_firmware_instructions_executed": 0
+  },
+  "material_correction": "Selected energy rows replace later values; row0x19-only append was incorrectly applied in pre-review development model, corrected before promotion; exact superseded files preserved.",
+  "reviewed_document_pins": [
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-continuation.md",
+      "sha256": "bacdad94f0e56c462f8d76757a0176f2c25990b59d36e6f20fe42027c860c2ea"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-follow-up.md",
+      "sha256": "cee61700aed2526daf651fe423f8f86700a8924d1349b4e52af9c7fff0ba45b4"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51.md",
+      "sha256": "b53c3dd934ece314cfe0b55b9738643647487d0d690dba5fd3d23051b270986a"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/README.md",
+      "sha256": "048199ee9310bc604eaaf116a371bd8f43f93d16c983fffd8b98c4ff922d65d9"
+    },
+    {
+      "path": "functional/who-4-temperature-control/dimensions.md",
+      "sha256": "f42a1c8cb247eb4e99d05e12c46df7359b104cc17df70fa46e18e0ab47bd797e"
+    },
+    {
+      "path": "functional/who-18-energy-management/dimensions.md",
+      "sha256": "c86c9ebddd0572028a40f4810b9b18f431dc94b7f7be92f8e4a50acc4cd8e7e7"
+    },
+    {
+      "path": "functional/who-8-video-door-entry-telephony/README.md",
+      "sha256": "652903dfd8f628d6b29f12800922464f95690baf0922a9075685a032d0443fe7"
+    },
+    {
+      "path": "devices/definitions/own-dev-0002-audio-video-web-server-gateway.md",
+      "sha256": "f5f56c5a6a7dfd4e22d2cbffc521eae21028ddc98c752440b65856ccbde98021"
+    },
+    {
+      "path": "devices/work-queue.yaml",
+      "sha256": "8146b54fc001af5379dd258b7b6a5b9567d2ca3cfae462cebcf7fcb1cd19bd3f"
+    }
+  ]
+}

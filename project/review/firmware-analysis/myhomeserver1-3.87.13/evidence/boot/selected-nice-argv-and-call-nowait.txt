@@ -1,0 +1,39 @@
+
+/home/bticino/bin/bt_daemon:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00011898 <harvest_str_shielded@@Base+0x88b0>:
+   11898:	692b      	ldr	r3, [r5, #16]
+   1189a:	9a05      	ldr	r2, [sp, #20]
+   1189c:	f852 0023 	ldr.w	r0, [r2, r3, lsl #2]
+   118a0:	f7f2 e926 	blx	3af0 <g_strdup@plt>
+   118a4:	9a05      	ldr	r2, [sp, #20]
+   118a6:	692b      	ldr	r3, [r5, #16]
+   118a8:	6038      	str	r0, [r7, #0]
+   118aa:	eb02 0383 	add.w	r3, r2, r3, lsl #2
+   118ae:	68d8      	ldr	r0, [r3, #12]
+   118b0:	f7f2 e91e 	blx	3af0 <g_strdup@plt>
+   118b4:	6969      	ldr	r1, [r5, #20]
+   118b6:	6078      	str	r0, [r7, #4]
+   118b8:	9807      	ldr	r0, [sp, #28]
+   118ba:	f7f1 eccc 	blx	3254 <g_strdup_printf@plt>
+   118be:	60b8      	str	r0, [r7, #8]
+   118c0:	486a      	ldr	r0, [pc, #424]	@ (11a6c <harvest_str_shielded@@Base+0x8a84>)
+   118c2:	e9d5 2100 	ldrd	r2, r1, [r5]
+   118c6:	4478      	add	r0, pc
+   118c8:	f7f1 ecc4 	blx	3254 <g_strdup_printf@plt>
+   118cc:	60f8      	str	r0, [r7, #12]
+   118ce:	6ae8      	ldr	r0, [r5, #44]	@ 0x2c
+   118d0:	2800      	cmp	r0, #0
+   118d2:	d175      	bne.n	119c0 <harvest_str_shielded@@Base+0x89d8>
+   118d4:	ab0e      	add	r3, sp, #56	@ 0x38
+   118d6:	613e      	str	r6, [r7, #16]
+   118d8:	9306      	str	r3, [sp, #24]
+   118da:	6aab      	ldr	r3, [r5, #40]	@ 0x28
+   118dc:	2b00      	cmp	r3, #0
+   118de:	d13e      	bne.n	1195e <harvest_str_shielded@@Base+0x8976>
+   118e0:	4638      	mov	r0, r7
+   118e2:	f7f1 efd8 	blx	3894 <call_nowait@plt>
+   118e6:	60e8      	str	r0, [r5, #12]

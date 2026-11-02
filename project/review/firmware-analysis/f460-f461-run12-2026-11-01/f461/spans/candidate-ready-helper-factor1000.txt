@@ -1,0 +1,15 @@
+
+/usr/lib/libglib-2.0.so.0.7200.3:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000055ae8 <g_source_set_ready_time@@Base+0x1b8>:
+   55ae8:	b9406262 	ldr	w2, [x19, #96]
+   55aec:	52807d00 	mov	w0, #0x3e8                 	// #1000
+   55af0:	9ba00441 	umaddl	x1, w2, w0, x1
+   55af4:	aa1303e0 	mov	x0, x19
+   55af8:	a94153f3 	ldp	x19, x20, [sp, #16]
+   55afc:	a8c37bfd 	ldp	x29, x30, [sp], #48
+   55b00:	d50323bf 	autiasp
+   55b04:	17ffff8b 	b	55930 <g_source_set_ready_time@@Base>

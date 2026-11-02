@@ -1,0 +1,57 @@
+# Isolated original double helper: source and saved-result review
+
+Verdict: PASS; no correction requested. I independently inspected the frozen v3 source/containment, original source identities, canonical saved traces/results and REPORT.RESULTS.md. I performed NO CPU replay, imported no Unicorn/native analysis package, and executed no original/helper/provider/vendor/target instructions. Root's separate approved canonical run is credited as8 entries/340 original code-hook visits; those visits are not relabeled zero by this review. This is not a whole JSON/BNTH/runtime/physical experiment.
+
+## Canonical source and isolation audit
+
+Original candidate SHA256 `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36` matches the previously reviewed exact double constructor/type3 provider. A fresh ELF32 PT_LOAD mapper independently rehashed all9 narrower preflight ranges and reconstructed the full85-PC/size map from original disassembly. Four canary PIC paths resolve the original slot32f98. Constructor/initBasic/Comments-null/type/type3-readback and normal epilogues agree with the independently source-reviewed provider; literal/TBB data are not executable allowed PCs.
+
+The entire harness was read. Original code pages are final RX and image data/canary RO after setup. Guest writes are constrained to exact24-byte object or64KiB stack; private reads require initialized bytes and image reads actual PT_LOAD extents. Original PC/size/Thumb mode, ARM4 PLT boundary and Thumb2 EXIT checks, IRQ/invalid/protected/unmapped traps, original/engine/time caps, normal EXIT and balanced stack checks remain explicit. Unexpected nonnull Comments/error/other-type states stop without success substitutes. No syscall/provider-I/O forwarding or vendor process exists.
+
+Three pre-execution PLT interceptions redirect to actual same-image definitions, preserving nested original execution rather than model-returning values. They are linker callbacks, not original PLT instructions or C/GLib/JSON/allocator primitives. The original candidate self-binding, private synthetic canary, Cortex-A15/FP control setup, ordinary hard-float ABI and valid storage remain experiment premises. The same UC instance/object persists across each constructor/readback pair; only call registers/D0 poison are reset before readback, without object reseeding.
+
+## Saved results and exact accounting
+
+All8 saved attempts agree with RESULTS and immediate attempt copies. Each of4 fresh instances starts with zeroed caller storage; original construction writes type3/comments/offsets and supplied union bits. Each subsequent asDouble before-image equals that constructor's after-image, its after-image remains identical and its write trace contains no object-field write. Each readback PC trace includes actual type0x14e3c and double load0x1724e, not a constant-return stub. The D0 poison in the harness prevents reusing its incoming register as the claimed result.
+
+The four exact readback bit patterns are positivezero0000000000000000, negativezero8000000000000000, negativeonebff0000000000000 and one-and-a-quarter3ff4000000000000. Signed zero is retained in the saved union and D0 bits. Integer-byte checks establish these finite synthetic results without host floating computation; they do not validate arbitrary/exceptional doubles or real device values.
+
+Each constructor trace has56 original visits,2 definition redirects,1 EXIT and59 hook steps. Each readback has29 original visits,1 redirect,1 EXIT and31 steps. Independently summing the eight traces yields340 original code-hook visits+12 redirects+8 EXIT+0 guard-stop callbacks=360 hooks. Nested initBasic/Comments/type are not extra top-level entries. C primitive callbacks0. Setup is separate:4 data relocations,24 FP/control register writes and24 R0/SP/LR call-register writes; storage/image/return initialization are host fixture work. Code-hook visits are not proof of retired instructions.
+
+Every original trace PC belongs to the exact allowed map, all saved writes stay within object/stack bounds, all attempts returned, and no FAILED_ATTEMPT record exists. The successful ledger records no guest failure/retry. I verify the saved record and harness's one-run gate, not an external claim that no unrelated execution could ever occur elsewhere.
+
+## Approval, tools and immutable copies
+
+Approval hashes match the exact harness/preflight, prior independent isolation review and root preflight. RUN_STARTED binds that approval hash. The run source checks both PASS requirements before marker/import/guest execution and refuses a preexisting marker. The prior review's execution-pending statement is its historical preflight scope, not a contradictory current zero ledger.
+
+All9 first-preflight,10 first-result,1 first-results-report and2 first-after-check members match their current bytes/lengths/hashes. The source-report copy pins the announced REPORT.RESULTS.md. Unexecuted v1/v2 design refinements and verification-v1 ordering failure remain preserved as disclosed; no guest result was silently overwritten or reconstructed.
+
+Independently read all63 tool files after the canonical run: exact path set, size, nanosecond mtime and SHA256 equal the immutable BEFORE inventory. All41 RECORD-hashed entries independently match;22 unhashed RECORD rows are separately covered by full-file pins. The asserted-absent cache-prefix path remains absent. This check imported no analysis package and is a read-time after-state, not future immutability or firmware behavior proof. The historical F454 directory contributes only the verified host analysis library, not firmware/layout/harness/authentication code.
+
+## Remaining interpretation limits
+
+REPORT.RESULTS accurately confines the outcome to these finite same-object helper chains under candidate binding/private ABI/FP/storage/canary premises. Full JSON creation/member insertion/move assignment/map/string/serializer/reparse, destructor/nonempty Comments/error/unwind, configured scenes/cache freshness/type, live loader/OS/services/network, physical units/range or Device approval remain unproved. No transport/authentication/session/framing/equivalent body was inspected or executed. Static verification and this saved-result audit add no visits to the canonical corpus.
+
+## Exact reviewed pins
+
+Paths below are relative to this research batch.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `verification/REPORT.v2.md` | `0f5bad12227b48e30646918853d56dbbce5641d91d4c385b51d1648c3f55f45f` |
+| `verification/TOOL_TREE_BEFORE.json` | `3ebab93891ce85f986507232376fc1cbc0f0d4e12a85a3f9774444962e739b7e` |
+| `verification/TOOL_TREE_AFTER.json` | `69f236a741f1429119aab7a86d8451e522d0615db8f541921541156116128220` |
+| `verification/AFTER_CHECK.md` | `f30f6bad356e0c710abab706c524c5b0d7e09795a1ffe4331b8b51e5efb9f7bf` |
+| `harness/REPORT.RESULTS.md` | `a18c1a027645fa7cc17e9882d09a49099509b2f33bb6f502f25ce7a2ea018c3f` |
+| `harness/isolate_double_v3.py` | `1ef53f7e04a20cb43c37dfb1cae965bb119bcda167db9b372b58b02bf1cb4a15` |
+| `harness/REPORT.PLAN.v3.md` | `bf9d23f03b1d2b8423652381d47894c61633a4245a20fc99d441199a55b83826` |
+| `harness/SOURCE_PREFLIGHT.json` | `dcc9dffa77e22c8a2ca0ffd1ec5eaed52f6f730bef03d1a5519cf639ebcebad4` |
+| `harness/TOOL_PINS.json` | `a413baf37e5dda914980653987c352a1672b777d1637ead66993f8cb2f081097` |
+| `harness/RESULTS.json` | `450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525` |
+| `harness/RUN_STARTED.json` | `b547c202bb3e673a5e04601584f026c7760a0e645219855e763123070030216b` |
+| `harness/first-preflight-v3/INDEX.json` | `0ba153181696e31658c818ba4482e3df8fed5e1310903d56950f59c39fe768f0` |
+| `harness/first-results/INDEX.json` | `3479c6bae64d42b3764ac646927669f157f32a4034e95235b45a9b701f71845a` |
+| `harness/first-results-report/INDEX.json` | `f476035a345e858df0986b6a18a4b851af109c119c55dfa985922a2432e92349` |
+| `EXECUTION_APPROVAL.json` | `ffda236a0eeb4b8bfef5404d73ec84c32e6f93f5c6c98cb1983107615a6bd57f` |
+| `reviews/isolation-preflight.md` | `2efa4cef0980458c03412c661103518f0f18a2b0b7e85b5f7518890437c149f6` |
+| `reviews/root-preflight.json` | `175c0f6f84ceaf7349209542c5dfbb4e7a1affc858001e209d71f28f78fde6c6` |

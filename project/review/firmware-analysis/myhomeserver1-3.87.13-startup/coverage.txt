@@ -1,0 +1,10 @@
+# Examined scope
+
+| Area | New bounded closure | Remaining boundary |
+| --- | --- | --- |
+| Executable/startup | Actual entry/GOT/main chain, settings path/getter, zero-return continuation, supplied service flag1 and same allocation/container loader arguments | Actual process invocation, config/API/provider success, working directory, live service/readiness and lifetime |
+| Loader/registry | Same C/T through runner initialization and SCENARIO context, numeric ID store/intervening category2 selection, equal-key wrapper and absent-key node payload | Valid input grammar, installed registry/targets, second-tree use, complete category/duplicate/rewrite/mutation/order/concurrency policy |
+
+Two collectors reproduce44 outputs:20startup and24registry. Four startup branch cases use host values only; no scene/tree/project/runtime fixture or original parser/API/thread/target execution is performed. Counts describe evidence reproduction/navigation rather than whole-firmware coverage. Earlier constructor/trigger/action findings are inherited and composed, not rerun as new native evidence.
+
+Original images/archive/database/source references and earlier reports are read-only. One existing TIME page receives a continuation link after an exact pre-edit snapshot. Missing configured scenes/extras80/81/94/95, provider/lifecycle/unwind/concurrency, measured timing and physical outcomes remain explicit. Full Device/source gates are pending; closed authentication/session/framing/equivalent work remains closed.

@@ -1,0 +1,43 @@
+{
+  "checks": [
+    {
+      "collector": "sleep/collect_sleep_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "fff59c",
+          "wall_time_seconds": 0.115949613,
+          "exit_code": 0,
+          "original_token_count": 19,
+          "output": "{\"check\": true, \"outputs\": 19, \"source_spans\": 10, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "collector": "common/collect_common_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "69ed05",
+          "wall_time_seconds": 0.233198485,
+          "exit_code": 0,
+          "original_token_count": 14,
+          "output": "{\"check\": true, \"outputs\": 24, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "collector": "scenario/collect_scenario_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "bb86d3",
+          "wall_time_seconds": 0.115343528,
+          "exit_code": 0,
+          "original_token_count": 41,
+          "output": "{\"check\": true, \"outputs\": 20, \"spans\": 11, \"PIC_targets\": 4, \"direct_calls\": 10, \"byte_guards\": 15, \"relocation_rows\": 5, \"inputs\": 4, \"original_execution\": 0}\n"
+        }
+      }
+    }
+  ]
+}

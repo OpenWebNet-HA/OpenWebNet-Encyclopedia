@@ -1,0 +1,261 @@
+{
+  "GOT_base": "0x1659a4",
+  "GOT_chains": [
+    {
+      "GOT_slot": "0x166bf8",
+      "addend": "0x167368",
+      "pool": "0x572c4"
+    },
+    {
+      "GOT_slot": "0x166c80",
+      "addend": "0x160cf8",
+      "pool": "0x53f40"
+    },
+    {
+      "GOT_slot": "0x166878",
+      "addend": "0x160d88",
+      "pool": "0x53f3c"
+    }
+  ],
+  "branches": [
+    {
+      "VA": "0x53c22",
+      "bytes": "03f013fb",
+      "encoding": "retained Thumb32 decoder",
+      "target": "0x5724c"
+    },
+    {
+      "VA": "0x53c8e",
+      "bytes": "baf03fff",
+      "encoding": "retained Thumb32 decoder",
+      "target": "0x10eb10"
+    },
+    {
+      "VA": "0x55180",
+      "bytes": "fef71bbd",
+      "encoding": "retained Thumb32 decoder",
+      "target": "0x53bba"
+    },
+    {
+      "VA": "0x10ee0c",
+      "bytes": "5ce7",
+      "encoding": "selected exact Thumb16 B.n",
+      "target": "0x10ecc8"
+    }
+  ],
+  "guards": [
+    {
+      "VA": "0x53bb2",
+      "bytes": "bdf790e9"
+    },
+    {
+      "VA": "0x53bb6",
+      "bytes": "b0ee409b"
+    },
+    {
+      "VA": "0x53c28",
+      "bytes": "5820"
+    },
+    {
+      "VA": "0x53c3e",
+      "bytes": "0321"
+    },
+    {
+      "VA": "0x53c70",
+      "bytes": "03f11002"
+    },
+    {
+      "VA": "0x53c7c",
+      "bytes": "83ed0c9b"
+    },
+    {
+      "VA": "0x53c8c",
+      "bytes": "4b93"
+    },
+    {
+      "VA": "0x53c8e",
+      "bytes": "baf03fff"
+    },
+    {
+      "VA": "0x5517c",
+      "bytes": "80ef309e"
+    },
+    {
+      "VA": "0x10ed4c",
+      "bytes": "d6ed081b"
+    },
+    {
+      "VA": "0x10edfc",
+      "bytes": "c4ed081b"
+    },
+    {
+      "VA": "0x103d20",
+      "bytes": "93ed089b"
+    },
+    {
+      "VA": "0x10489c",
+      "bytes": "93ed089b"
+    }
+  ],
+  "image": "/home/bticino/scheduling_manager/scheduling_manager",
+  "keys": [
+    {
+      "ADD_PC": "0x52326",
+      "literal_VA": "0x116144",
+      "pool": "0x525dc",
+      "text": "params"
+    },
+    {
+      "ADD_PC": "0x54db6",
+      "literal_VA": "0x116adc",
+      "pool": "0x54ef4",
+      "text": "id"
+    },
+    {
+      "ADD_PC": "0x54dc6",
+      "literal_VA": "0x116adc",
+      "pool": "0x54ef8",
+      "text": "id"
+    },
+    {
+      "ADD_PC": "0x53b9a",
+      "literal_VA": "0x1151b4",
+      "pool": "0x53f1c",
+      "text": "setpoint"
+    },
+    {
+      "ADD_PC": "0x53bac",
+      "literal_VA": "0x1151b4",
+      "pool": "0x53f20",
+      "text": "setpoint"
+    }
+  ],
+  "relative_relocations": [
+    "00166bf8  00000017 R_ARM_RELATIVE",
+    "00166c80  00000017 R_ARM_RELATIVE",
+    "00166878  00000017 R_ARM_RELATIVE"
+  ],
+  "spans": [
+    {
+      "end_VA_exclusive": "0x52358",
+      "file_offset": "0x52322",
+      "name": "params-copy",
+      "raw_sha256": "c6e176b835dbb56bf9e55a8012b26f97c734df3320b510f75c65728814daee51",
+      "start_VA": "0x52322"
+    },
+    {
+      "end_VA_exclusive": "0x54df4",
+      "file_offset": "0x54db2",
+      "name": "id-member-copy",
+      "raw_sha256": "88d1505fbac3c6907d58529f43793f6a6964fd7b76058863d3f2f79560c725b6",
+      "start_VA": "0x54db2"
+    },
+    {
+      "end_VA_exclusive": "0x53bba",
+      "file_offset": "0x53b96",
+      "name": "selected-setpoint-conversion",
+      "raw_sha256": "7c62baeb8dc4b42c1cc83eae0568fdd7f2c8e095a9e3e0fa8371986885e2c7f6",
+      "start_VA": "0x53b96"
+    },
+    {
+      "end_VA_exclusive": "0x55184",
+      "file_offset": "0x5517c",
+      "name": "missing-setpoint-default",
+      "raw_sha256": "334a054b27d224414033e8804ca6b29a2e688aa5ff938fd8935c744a10f216f9",
+      "start_VA": "0x5517c"
+    },
+    {
+      "end_VA_exclusive": "0x53ca2",
+      "file_offset": "0x53c22",
+      "name": "typed-construction-registry-handoff",
+      "raw_sha256": "5caa8ce7f6f07936ed0d68893619fba91f392aeac2df708e2e79eb9181cfdb3c",
+      "start_VA": "0x53c22"
+    },
+    {
+      "end_VA_exclusive": "0x10ebd6",
+      "file_offset": "0x10eba6",
+      "name": "map-type-dispatch",
+      "raw_sha256": "d74903649b1f3b3d972f7f8977c3a6093b5474961af5cd3aab92138443040bae",
+      "start_VA": "0x10eba6"
+    },
+    {
+      "end_VA_exclusive": "0x10edda",
+      "file_offset": "0x10ed46",
+      "name": "typed-update-read-compare",
+      "raw_sha256": "03a132ad0c4d537282e0c532ca80224f364c5aff5f32bdf25873a9d9bda89fa1",
+      "start_VA": "0x10ed46"
+    },
+    {
+      "end_VA_exclusive": "0x10ee0e",
+      "file_offset": "0x10edda",
+      "name": "typed-update-copy",
+      "raw_sha256": "bbf0693c60148085a1cb3fa8f781c1e3f7006afb55d203a6b3713486257109d9",
+      "start_VA": "0x10edda"
+    },
+    {
+      "end_VA_exclusive": "0x10f108",
+      "file_offset": "0x10f0d6",
+      "name": "typed-change-guard",
+      "raw_sha256": "c4c31918976a6234ef60a4e675b91a3c8bbcbe4c251f4370e0c78d99eec5976d",
+      "start_VA": "0x10f0d6"
+    },
+    {
+      "end_VA_exclusive": "0x10efca",
+      "file_offset": "0x10ef86",
+      "name": "generic-stored-pair",
+      "raw_sha256": "0dc34ff8ab3aa34fc25d7592a5a082f4e749bcfeda24c340bf5e3afbee350e5d",
+      "start_VA": "0x10ef86"
+    },
+    {
+      "end_VA_exclusive": "0x103d2c",
+      "file_offset": "0x103d1e",
+      "name": "bnth-cached-control-present",
+      "raw_sha256": "d73677fcd0df9c7b3acdfcb9802bbb083f473a74dca0ad46963eaad42e3abb82",
+      "start_VA": "0x103d1e"
+    },
+    {
+      "end_VA_exclusive": "0x1048ae",
+      "file_offset": "0x104898",
+      "name": "bnth-cached-control-zero",
+      "raw_sha256": "427c33366060bb347b97e688948a65e539cd4a29b431e36e357c0a5bf4d93960",
+      "start_VA": "0x104898"
+    },
+    {
+      "end_VA_exclusive": "0x10e450",
+      "file_offset": "0x10e442",
+      "name": "lookup-stored-pair",
+      "raw_sha256": "bc10619b75e77a266182ffcd5505c547c6c6ab44335e6c3df13fd3566c045a99",
+      "start_VA": "0x10e442"
+    }
+  ],
+  "tables": [
+    {
+      "base": "0x52374",
+      "index": 3,
+      "scope": "Eventcode3 andrecordtype3 are separate namespaces",
+      "target": "0x53b52",
+      "value": "0xbef"
+    },
+    {
+      "base": "0x10ebc0",
+      "index": 3,
+      "scope": "Eventcode3 andrecordtype3 are separate namespaces",
+      "target": "0x10ed46",
+      "value": "0xc3"
+    }
+  ],
+  "types": [
+    {
+      "RTTI": "0x163480",
+      "header": "0x160cf8",
+      "name": "20ItemStatusThermostat",
+      "name_pointer": "0x11727c"
+    },
+    {
+      "RTTI": "0x1634c8",
+      "header": "0x160d88",
+      "name": "St23_Sp_counted_ptr_inplaceI20ItemStatusThermostatSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE",
+      "name_pointer": "0x1173fc"
+    }
+  ]
+}

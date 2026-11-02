@@ -1,0 +1,135 @@
+
+/usr/lib/liblghal.so.1.0.0:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000253e0 <hal_board@@Base+0x230>:
+   253e0:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   253e4:	910f6021 	add	x1, x1, #0x3d8
+   253e8:	aa1403e0 	mov	x0, x20
+   253ec:	97ff9641 	bl	acf0 <strcasestr@plt>
+   253f0:	b4000180 	cbz	x0, 25420 <hal_board@@Base+0x270>
+   253f4:	528000d3 	mov	w19, #0x6                   	// #6
+   253f8:	17ffffb4 	b	252c8 <hal_board@@Base+0x118>
+   253fc:	d0000120 	adrp	x0, 4b000 <hal_save_microsemi_coeff@@Base+0x1e200>
+   25400:	aa1403e3 	mov	x3, x20
+   25404:	90000042 	adrp	x2, 2d000 <hal_save_microsemi_coeff@@Base+0x200>
+   25408:	52800081 	mov	w1, #0x4                   	// #4
+   2540c:	f947d800 	ldr	x0, [x0, #4016]
+   25410:	912a4042 	add	x2, x2, #0xa90
+   25414:	f9400000 	ldr	x0, [x0]
+   25418:	97ff959e 	bl	aa90 <_ZN6logger5debugEiPKcz@plt>
+   2541c:	17ffff9e 	b	25294 <hal_board@@Base+0xe4>
+   25420:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   25424:	910f8021 	add	x1, x1, #0x3e0
+   25428:	aa1403e0 	mov	x0, x20
+   2542c:	97ff9631 	bl	acf0 <strcasestr@plt>
+   25430:	b4000060 	cbz	x0, 2543c <hal_board@@Base+0x28c>
+   25434:	52800153 	mov	w19, #0xa                   	// #10
+   25438:	17ffffa4 	b	252c8 <hal_board@@Base+0x118>
+   2543c:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   25440:	910fa021 	add	x1, x1, #0x3e8
+   25444:	aa1403e0 	mov	x0, x20
+   25448:	97ff962a 	bl	acf0 <strcasestr@plt>
+   2544c:	b4000060 	cbz	x0, 25458 <hal_board@@Base+0x2a8>
+   25450:	52800133 	mov	w19, #0x9                   	// #9
+   25454:	17ffff9d 	b	252c8 <hal_board@@Base+0x118>
+   25458:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   2545c:	910fc021 	add	x1, x1, #0x3f0
+   25460:	aa1403e0 	mov	x0, x20
+   25464:	97ff9623 	bl	acf0 <strcasestr@plt>
+   25468:	b4000060 	cbz	x0, 25474 <hal_board@@Base+0x2c4>
+   2546c:	528000f3 	mov	w19, #0x7                   	// #7
+   25470:	17ffff96 	b	252c8 <hal_board@@Base+0x118>
+   25474:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   25478:	910fe021 	add	x1, x1, #0x3f8
+   2547c:	aa1403e0 	mov	x0, x20
+   25480:	97ff961c 	bl	acf0 <strcasestr@plt>
+   25484:	b4000060 	cbz	x0, 25490 <hal_board@@Base+0x2e0>
+   25488:	52800173 	mov	w19, #0xb                   	// #11
+   2548c:	17ffff8f 	b	252c8 <hal_board@@Base+0x118>
+   25490:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   25494:	91102021 	add	x1, x1, #0x408
+   25498:	aa1403e0 	mov	x0, x20
+   2549c:	97ff9615 	bl	acf0 <strcasestr@plt>
+   254a0:	b4000060 	cbz	x0, 254ac <hal_board@@Base+0x2fc>
+   254a4:	528001b3 	mov	w19, #0xd                   	// #13
+   254a8:	17ffff88 	b	252c8 <hal_board@@Base+0x118>
+   254ac:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   254b0:	91104021 	add	x1, x1, #0x410
+   254b4:	aa1403e0 	mov	x0, x20
+   254b8:	97ff960e 	bl	acf0 <strcasestr@plt>
+   254bc:	b4000060 	cbz	x0, 254c8 <hal_board@@Base+0x318>
+   254c0:	52800113 	mov	w19, #0x8                   	// #8
+   254c4:	17ffff81 	b	252c8 <hal_board@@Base+0x118>
+   254c8:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   254cc:	91106021 	add	x1, x1, #0x418
+   254d0:	aa1403e0 	mov	x0, x20
+   254d4:	97ff9607 	bl	acf0 <strcasestr@plt>
+   254d8:	b4000060 	cbz	x0, 254e4 <hal_board@@Base+0x334>
+   254dc:	52800193 	mov	w19, #0xc                   	// #12
+   254e0:	17ffff7a 	b	252c8 <hal_board@@Base+0x118>
+   254e4:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   254e8:	91108021 	add	x1, x1, #0x420
+   254ec:	aa1403e0 	mov	x0, x20
+   254f0:	97ff9600 	bl	acf0 <strcasestr@plt>
+   254f4:	b4000060 	cbz	x0, 25500 <hal_board@@Base+0x350>
+   254f8:	528001d3 	mov	w19, #0xe                   	// #14
+   254fc:	17ffff73 	b	252c8 <hal_board@@Base+0x118>
+   25500:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   25504:	9110a021 	add	x1, x1, #0x428
+   25508:	aa1403e0 	mov	x0, x20
+   2550c:	97ff95f9 	bl	acf0 <strcasestr@plt>
+   25510:	b4000060 	cbz	x0, 2551c <hal_board@@Base+0x36c>
+   25514:	528001f3 	mov	w19, #0xf                   	// #15
+   25518:	17ffff6c 	b	252c8 <hal_board@@Base+0x118>
+   2551c:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   25520:	9110c021 	add	x1, x1, #0x430
+   25524:	aa1403e0 	mov	x0, x20
+   25528:	97ff95f2 	bl	acf0 <strcasestr@plt>
+   2552c:	b4000060 	cbz	x0, 25538 <hal_board@@Base+0x388>
+   25530:	52800213 	mov	w19, #0x10                  	// #16
+   25534:	17ffff65 	b	252c8 <hal_board@@Base+0x118>
+   25538:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   2553c:	9110e021 	add	x1, x1, #0x438
+   25540:	aa1403e0 	mov	x0, x20
+   25544:	97ff95eb 	bl	acf0 <strcasestr@plt>
+   25548:	b4000060 	cbz	x0, 25554 <hal_board@@Base+0x3a4>
+   2554c:	52800293 	mov	w19, #0x14                  	// #20
+   25550:	17ffff5e 	b	252c8 <hal_board@@Base+0x118>
+   25554:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   25558:	91110021 	add	x1, x1, #0x440
+   2555c:	aa1403e0 	mov	x0, x20
+   25560:	97ff95e4 	bl	acf0 <strcasestr@plt>
+   25564:	b4000060 	cbz	x0, 25570 <hal_board@@Base+0x3c0>
+   25568:	52800233 	mov	w19, #0x11                  	// #17
+   2556c:	17ffff57 	b	252c8 <hal_board@@Base+0x118>
+   25570:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   25574:	91112021 	add	x1, x1, #0x448
+   25578:	aa1403e0 	mov	x0, x20
+   2557c:	97ff95dd 	bl	acf0 <strcasestr@plt>
+   25580:	b4000060 	cbz	x0, 2558c <hal_board@@Base+0x3dc>
+   25584:	52800253 	mov	w19, #0x12                  	// #18
+   25588:	17ffff50 	b	252c8 <hal_board@@Base+0x118>
+   2558c:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   25590:	91114021 	add	x1, x1, #0x450
+   25594:	aa1403e0 	mov	x0, x20
+   25598:	97ff95d6 	bl	acf0 <strcasestr@plt>
+   2559c:	b4000060 	cbz	x0, 255a8 <hal_board@@Base+0x3f8>
+   255a0:	52800273 	mov	w19, #0x13                  	// #19
+   255a4:	17ffff49 	b	252c8 <hal_board@@Base+0x118>
+   255a8:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   255ac:	91116021 	add	x1, x1, #0x458
+   255b0:	aa1403e0 	mov	x0, x20
+   255b4:	97ff95cf 	bl	acf0 <strcasestr@plt>
+   255b8:	b4000060 	cbz	x0, 255c4 <hal_board@@Base+0x414>
+   255bc:	528002b3 	mov	w19, #0x15                  	// #21
+   255c0:	17ffff42 	b	252c8 <hal_board@@Base+0x118>
+   255c4:	d0000061 	adrp	x1, 33000 <hal_save_microsemi_coeff@@Base+0x6200>
+   255c8:	91118021 	add	x1, x1, #0x460
+   255cc:	aa1403e0 	mov	x0, x20
+   255d0:	97ff95c8 	bl	acf0 <strcasestr@plt>
+   255d4:	b4000060 	cbz	x0, 255e0 <hal_board@@Base+0x430>
+   255d8:	528002d3 	mov	w19, #0x16                  	// #22
+   255dc:	17ffff3b 	b	252c8 <hal_board@@Base+0x118>

@@ -1,0 +1,7675 @@
+{
+  "anchor": [
+    "exact code (case/spacing preserved)",
+    "id_brand with identical full EN_BRAND tables",
+    "id_line with identical full EN_LINE tables"
+  ],
+  "boundary": "Within this exact source pair only; commercial row equality is not installed state, physical equivalence or compatibility proof",
+  "firmware_only": [
+    {
+      "device": {
+        "code": "L/N/NT4672",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 533,
+        "id_item": 533,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "Energy control actuator",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Energy control actuator",
+        "id_family": 12,
+        "id_item": 533
+      }
+    }
+  ],
+  "firmware_rows": 331,
+  "matched": [
+    {
+      "anchor": [
+        "002600",
+        2,
+        5
+      ],
+      "firmware_device_id": 1577,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1577
+    },
+    {
+      "anchor": [
+        "002601",
+        2,
+        5
+      ],
+      "firmware_device_id": 1576,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1576
+    },
+    {
+      "anchor": [
+        "002602",
+        2,
+        5
+      ],
+      "firmware_device_id": 1574,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1574
+    },
+    {
+      "anchor": [
+        "002604",
+        2,
+        5
+      ],
+      "firmware_device_id": 1156,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1156
+    },
+    {
+      "anchor": [
+        "002611",
+        2,
+        5
+      ],
+      "firmware_device_id": 656,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 656
+    },
+    {
+      "anchor": [
+        "002612",
+        2,
+        5
+      ],
+      "firmware_device_id": 1772,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1772
+    },
+    {
+      "anchor": [
+        "002621",
+        2,
+        5
+      ],
+      "firmware_device_id": 1603,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1603
+    },
+    {
+      "anchor": [
+        "002622",
+        2,
+        5
+      ],
+      "firmware_device_id": 1604,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1604
+    },
+    {
+      "anchor": [
+        "002627",
+        2,
+        5
+      ],
+      "firmware_device_id": 1493,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1493
+    },
+    {
+      "anchor": [
+        "002631",
+        2,
+        5
+      ],
+      "firmware_device_id": 1606,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1606
+    },
+    {
+      "anchor": [
+        "002633",
+        2,
+        5
+      ],
+      "firmware_device_id": 1171,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1171
+    },
+    {
+      "anchor": [
+        "003517",
+        6,
+        5
+      ],
+      "firmware_device_id": 2123,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2123
+    },
+    {
+      "anchor": [
+        "003518",
+        6,
+        5
+      ],
+      "firmware_device_id": 2111,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2111
+    },
+    {
+      "anchor": [
+        "003519",
+        6,
+        5
+      ],
+      "firmware_device_id": 2113,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2113
+    },
+    {
+      "anchor": [
+        "003551",
+        2,
+        5
+      ],
+      "firmware_device_id": 1710,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1710
+    },
+    {
+      "anchor": [
+        "003552",
+        2,
+        5
+      ],
+      "firmware_device_id": 1629,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1629
+    },
+    {
+      "anchor": [
+        "003553",
+        2,
+        5
+      ],
+      "firmware_device_id": 1605,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1605
+    },
+    {
+      "anchor": [
+        "003555",
+        2,
+        5
+      ],
+      "firmware_device_id": 1894,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1894
+    },
+    {
+      "anchor": [
+        "003557",
+        2,
+        5
+      ],
+      "firmware_device_id": 1895,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1895
+    },
+    {
+      "anchor": [
+        "003558",
+        2,
+        5
+      ],
+      "firmware_device_id": 1896,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1896
+    },
+    {
+      "anchor": [
+        "003559",
+        2,
+        5
+      ],
+      "firmware_device_id": 1897,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1897
+    },
+    {
+      "anchor": [
+        "003562",
+        2,
+        5
+      ],
+      "firmware_device_id": 1592,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1592
+    },
+    {
+      "anchor": [
+        "003576",
+        6,
+        5
+      ],
+      "firmware_device_id": 2194,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2194
+    },
+    {
+      "anchor": [
+        "003577",
+        2,
+        5
+      ],
+      "firmware_device_id": 1463,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1463
+    },
+    {
+      "anchor": [
+        "003579",
+        2,
+        5
+      ],
+      "firmware_device_id": 1696,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1696
+    },
+    {
+      "anchor": [
+        "003580",
+        2,
+        5
+      ],
+      "firmware_device_id": 1697,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1697
+    },
+    {
+      "anchor": [
+        "003651",
+        6,
+        5
+      ],
+      "firmware_device_id": 2510,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2510
+    },
+    {
+      "anchor": [
+        "003652",
+        2,
+        5
+      ],
+      "firmware_device_id": 1601,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1601
+    },
+    {
+      "anchor": [
+        "003653",
+        2,
+        5
+      ],
+      "firmware_device_id": 1600,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1600
+    },
+    {
+      "anchor": [
+        "003656",
+        2,
+        5
+      ],
+      "firmware_device_id": 1709,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1709
+    },
+    {
+      "anchor": [
+        "003665",
+        2,
+        5
+      ],
+      "firmware_device_id": 2187,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2187
+    },
+    {
+      "anchor": [
+        "003841",
+        2,
+        5
+      ],
+      "firmware_device_id": 1706,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1706
+    },
+    {
+      "anchor": [
+        "003842",
+        2,
+        5
+      ],
+      "firmware_device_id": 1708,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1708
+    },
+    {
+      "anchor": [
+        "003843",
+        2,
+        5
+      ],
+      "firmware_device_id": 1704,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1704
+    },
+    {
+      "anchor": [
+        "003844",
+        2,
+        5
+      ],
+      "firmware_device_id": 1707,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1707
+    },
+    {
+      "anchor": [
+        "003845",
+        2,
+        5
+      ],
+      "firmware_device_id": 1705,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1705
+    },
+    {
+      "anchor": [
+        "003847",
+        2,
+        5
+      ],
+      "firmware_device_id": 2517,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2517
+    },
+    {
+      "anchor": [
+        "003848",
+        2,
+        5
+      ],
+      "firmware_device_id": 2518,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2518
+    },
+    {
+      "anchor": [
+        "048820",
+        2,
+        4
+      ],
+      "firmware_device_id": 1575,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1575
+    },
+    {
+      "anchor": [
+        "048822",
+        2,
+        5
+      ],
+      "firmware_device_id": 1581,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1581
+    },
+    {
+      "anchor": [
+        "048834",
+        2,
+        5
+      ],
+      "firmware_device_id": 2490,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2490
+    },
+    {
+      "anchor": [
+        "049238",
+        2,
+        5
+      ],
+      "firmware_device_id": 1866,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1866
+    },
+    {
+      "anchor": [
+        "067216",
+        2,
+        13
+      ],
+      "firmware_device_id": 1873,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1873
+    },
+    {
+      "anchor": [
+        "067217",
+        2,
+        13
+      ],
+      "firmware_device_id": 1700,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1700
+    },
+    {
+      "anchor": [
+        "067218",
+        2,
+        13
+      ],
+      "firmware_device_id": 1701,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1701
+    },
+    {
+      "anchor": [
+        "067225",
+        2,
+        13
+      ],
+      "firmware_device_id": 2006,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2006
+    },
+    {
+      "anchor": [
+        "067226",
+        2,
+        5
+      ],
+      "firmware_device_id": 1849,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1849
+    },
+    {
+      "anchor": [
+        "067241",
+        2,
+        5
+      ],
+      "firmware_device_id": 1591,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1591
+    },
+    {
+      "anchor": [
+        "067242",
+        2,
+        13
+      ],
+      "firmware_device_id": 1724,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1724
+    },
+    {
+      "anchor": [
+        "067243",
+        2,
+        13
+      ],
+      "firmware_device_id": 1796,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1796
+    },
+    {
+      "anchor": [
+        "067244",
+        2,
+        13
+      ],
+      "firmware_device_id": 1898,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1898
+    },
+    {
+      "anchor": [
+        "067245",
+        2,
+        13
+      ],
+      "firmware_device_id": 1899,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1899
+    },
+    {
+      "anchor": [
+        "067249",
+        2,
+        13
+      ],
+      "firmware_device_id": 1860,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1860
+    },
+    {
+      "anchor": [
+        "067273",
+        2,
+        13
+      ],
+      "firmware_device_id": 1798,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1798
+    },
+    {
+      "anchor": [
+        "067274",
+        2,
+        13
+      ],
+      "firmware_device_id": 1800,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1800
+    },
+    {
+      "anchor": [
+        "067275",
+        2,
+        13
+      ],
+      "firmware_device_id": 1801,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1801
+    },
+    {
+      "anchor": [
+        "067281",
+        2,
+        13
+      ],
+      "firmware_device_id": 1908,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1908
+    },
+    {
+      "anchor": [
+        "067282",
+        2,
+        13
+      ],
+      "firmware_device_id": 1992,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1992
+    },
+    {
+      "anchor": [
+        "067293",
+        2,
+        13
+      ],
+      "firmware_device_id": 1802,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1802
+    },
+    {
+      "anchor": [
+        "067294",
+        2,
+        13
+      ],
+      "firmware_device_id": 1803,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1803
+    },
+    {
+      "anchor": [
+        "067295",
+        2,
+        13
+      ],
+      "firmware_device_id": 1805,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1805
+    },
+    {
+      "anchor": [
+        "067455",
+        2,
+        13
+      ],
+      "firmware_device_id": 1620,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1620
+    },
+    {
+      "anchor": [
+        "067457",
+        2,
+        13
+      ],
+      "firmware_device_id": 1674,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1674
+    },
+    {
+      "anchor": [
+        "067458",
+        2,
+        13
+      ],
+      "firmware_device_id": 1611,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1611
+    },
+    {
+      "anchor": [
+        "067459",
+        2,
+        13
+      ],
+      "firmware_device_id": 1995,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1995
+    },
+    {
+      "anchor": [
+        "067552",
+        2,
+        13
+      ],
+      "firmware_device_id": 1925,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1925
+    },
+    {
+      "anchor": [
+        "067553",
+        2,
+        13
+      ],
+      "firmware_device_id": 1926,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1926
+    },
+    {
+      "anchor": [
+        "067554",
+        2,
+        13
+      ],
+      "firmware_device_id": 1927,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1927
+    },
+    {
+      "anchor": [
+        "067556",
+        2,
+        13
+      ],
+      "firmware_device_id": 1929,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1929
+    },
+    {
+      "anchor": [
+        "067557",
+        2,
+        13
+      ],
+      "firmware_device_id": 1930,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1930
+    },
+    {
+      "anchor": [
+        "067558",
+        2,
+        13
+      ],
+      "firmware_device_id": 1919,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1919
+    },
+    {
+      "anchor": [
+        "067559",
+        2,
+        13
+      ],
+      "firmware_device_id": 2467,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2467
+    },
+    {
+      "anchor": [
+        "067561",
+        2,
+        13
+      ],
+      "firmware_device_id": 2534,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2534
+    },
+    {
+      "anchor": [
+        "067566",
+        2,
+        13
+      ],
+      "firmware_device_id": 2201,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2201
+    },
+    {
+      "anchor": [
+        "067584",
+        2,
+        13
+      ],
+      "firmware_device_id": 2598,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2598
+    },
+    {
+      "anchor": [
+        "067585",
+        2,
+        13
+      ],
+      "firmware_device_id": 2595,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2595
+    },
+    {
+      "anchor": [
+        "067586",
+        2,
+        13
+      ],
+      "firmware_device_id": 2601,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2601
+    },
+    {
+      "anchor": [
+        "067587",
+        2,
+        13
+      ],
+      "firmware_device_id": 2605,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2605
+    },
+    {
+      "anchor": [
+        "067592",
+        2,
+        13
+      ],
+      "firmware_device_id": 2156,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2156
+    },
+    {
+      "anchor": [
+        "078462",
+        2,
+        12
+      ],
+      "firmware_device_id": 1583,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1583
+    },
+    {
+      "anchor": [
+        "078463",
+        2,
+        12
+      ],
+      "firmware_device_id": 1584,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1584
+    },
+    {
+      "anchor": [
+        "078465",
+        2,
+        12
+      ],
+      "firmware_device_id": 1874,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1874
+    },
+    {
+      "anchor": [
+        "078466",
+        2,
+        12
+      ],
+      "firmware_device_id": 1711,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1711
+    },
+    {
+      "anchor": [
+        "078467",
+        2,
+        12
+      ],
+      "firmware_device_id": 1712,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1712
+    },
+    {
+      "anchor": [
+        "078469",
+        2,
+        12
+      ],
+      "firmware_device_id": 1713,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1713
+    },
+    {
+      "anchor": [
+        "078471",
+        2,
+        12
+      ],
+      "firmware_device_id": 1589,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1589
+    },
+    {
+      "anchor": [
+        "078472",
+        2,
+        12
+      ],
+      "firmware_device_id": 1721,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1721
+    },
+    {
+      "anchor": [
+        "078473",
+        2,
+        3
+      ],
+      "firmware_device_id": 1587,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1587
+    },
+    {
+      "anchor": [
+        "078475",
+        2,
+        12
+      ],
+      "firmware_device_id": 1719,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1719
+    },
+    {
+      "anchor": [
+        "078478",
+        2,
+        12
+      ],
+      "firmware_device_id": 1703,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1703
+    },
+    {
+      "anchor": [
+        "078480",
+        2,
+        12
+      ],
+      "firmware_device_id": 2202,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2202
+    },
+    {
+      "anchor": [
+        "078485",
+        2,
+        12
+      ],
+      "firmware_device_id": 2130,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2130
+    },
+    {
+      "anchor": [
+        "078486",
+        2,
+        5
+      ],
+      "firmware_device_id": 1848,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1848
+    },
+    {
+      "anchor": [
+        "079171",
+        2,
+        12
+      ],
+      "firmware_device_id": 1590,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1590
+    },
+    {
+      "anchor": [
+        "079172",
+        2,
+        12
+      ],
+      "firmware_device_id": 1722,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1722
+    },
+    {
+      "anchor": [
+        "079173",
+        2,
+        12
+      ],
+      "firmware_device_id": 1588,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1588
+    },
+    {
+      "anchor": [
+        "079175",
+        2,
+        12
+      ],
+      "firmware_device_id": 1720,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1720
+    },
+    {
+      "anchor": [
+        "079178",
+        2,
+        12
+      ],
+      "firmware_device_id": 1702,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1702
+    },
+    {
+      "anchor": [
+        "079262",
+        2,
+        12
+      ],
+      "firmware_device_id": 1932,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1932
+    },
+    {
+      "anchor": [
+        "079263",
+        2,
+        12
+      ],
+      "firmware_device_id": 1933,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1933
+    },
+    {
+      "anchor": [
+        "079265",
+        2,
+        12
+      ],
+      "firmware_device_id": 1875,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1875
+    },
+    {
+      "anchor": [
+        "079266",
+        2,
+        12
+      ],
+      "firmware_device_id": 1714,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1714
+    },
+    {
+      "anchor": [
+        "079267",
+        2,
+        12
+      ],
+      "firmware_device_id": 1715,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1715
+    },
+    {
+      "anchor": [
+        "079269",
+        2,
+        12
+      ],
+      "firmware_device_id": 1716,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1716
+    },
+    {
+      "anchor": [
+        "3454",
+        1,
+        5
+      ],
+      "firmware_device_id": 2626,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2626
+    },
+    {
+      "anchor": [
+        "3475",
+        1,
+        5
+      ],
+      "firmware_device_id": 54,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 54
+    },
+    {
+      "anchor": [
+        "3476",
+        1,
+        5
+      ],
+      "firmware_device_id": 55,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 55
+    },
+    {
+      "anchor": [
+        "3477",
+        1,
+        5
+      ],
+      "firmware_device_id": 81,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 81
+    },
+    {
+      "anchor": [
+        "3522N",
+        6,
+        5
+      ],
+      "firmware_device_id": 2192,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2192
+    },
+    {
+      "anchor": [
+        "571848",
+        2,
+        11
+      ],
+      "firmware_device_id": 1924,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1924
+    },
+    {
+      "anchor": [
+        "571849",
+        2,
+        11
+      ],
+      "firmware_device_id": 1725,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1725
+    },
+    {
+      "anchor": [
+        "572235",
+        2,
+        11
+      ],
+      "firmware_device_id": 2228,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2228
+    },
+    {
+      "anchor": [
+        "572236",
+        2,
+        11
+      ],
+      "firmware_device_id": 2203,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2203
+    },
+    {
+      "anchor": [
+        "572735",
+        2,
+        11
+      ],
+      "firmware_device_id": 2197,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2197
+    },
+    {
+      "anchor": [
+        "572736",
+        2,
+        11
+      ],
+      "firmware_device_id": 2198,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2198
+    },
+    {
+      "anchor": [
+        "573900",
+        2,
+        11
+      ],
+      "firmware_device_id": 1876,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1876
+    },
+    {
+      "anchor": [
+        "573901",
+        2,
+        11
+      ],
+      "firmware_device_id": 1877,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1877
+    },
+    {
+      "anchor": [
+        "573902",
+        2,
+        11
+      ],
+      "firmware_device_id": 1699,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1699
+    },
+    {
+      "anchor": [
+        "573903",
+        2,
+        11
+      ],
+      "firmware_device_id": 1920,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1920
+    },
+    {
+      "anchor": [
+        "573904",
+        2,
+        11
+      ],
+      "firmware_device_id": 1177,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1177
+    },
+    {
+      "anchor": [
+        "573905",
+        2,
+        11
+      ],
+      "firmware_device_id": 1791,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1791
+    },
+    {
+      "anchor": [
+        "573906",
+        2,
+        11
+      ],
+      "firmware_device_id": 1792,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1792
+    },
+    {
+      "anchor": [
+        "573907",
+        2,
+        11
+      ],
+      "firmware_device_id": 1793,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1793
+    },
+    {
+      "anchor": [
+        "573912",
+        2,
+        11
+      ],
+      "firmware_device_id": 1900,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1900
+    },
+    {
+      "anchor": [
+        "573913",
+        2,
+        11
+      ],
+      "firmware_device_id": 1901,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1901
+    },
+    {
+      "anchor": [
+        "573916",
+        2,
+        11
+      ],
+      "firmware_device_id": 1148,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1148
+    },
+    {
+      "anchor": [
+        "573917",
+        2,
+        11
+      ],
+      "firmware_device_id": 1993,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1993
+    },
+    {
+      "anchor": [
+        "573920",
+        2,
+        11
+      ],
+      "firmware_device_id": 1610,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1610
+    },
+    {
+      "anchor": [
+        "573921",
+        2,
+        11
+      ],
+      "firmware_device_id": 1609,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1609
+    },
+    {
+      "anchor": [
+        "573922",
+        2,
+        11
+      ],
+      "firmware_device_id": 1139,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1139
+    },
+    {
+      "anchor": [
+        "573923",
+        2,
+        11
+      ],
+      "firmware_device_id": 1140,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1140
+    },
+    {
+      "anchor": [
+        "573924",
+        2,
+        11
+      ],
+      "firmware_device_id": 1141,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1141
+    },
+    {
+      "anchor": [
+        "573925",
+        2,
+        11
+      ],
+      "firmware_device_id": 1142,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1142
+    },
+    {
+      "anchor": [
+        "573961",
+        2,
+        11
+      ],
+      "firmware_device_id": 1861,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1861
+    },
+    {
+      "anchor": [
+        "573974",
+        2,
+        11
+      ],
+      "firmware_device_id": 1549,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1549
+    },
+    {
+      "anchor": [
+        "573975",
+        2,
+        11
+      ],
+      "firmware_device_id": 1632,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1632
+    },
+    {
+      "anchor": [
+        "573987",
+        2,
+        11
+      ],
+      "firmware_device_id": 1723,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1723
+    },
+    {
+      "anchor": [
+        "573996",
+        2,
+        11
+      ],
+      "firmware_device_id": 1742,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1742
+    },
+    {
+      "anchor": [
+        "574046",
+        2,
+        11
+      ],
+      "firmware_device_id": 2128,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2128
+    },
+    {
+      "anchor": [
+        "574048",
+        2,
+        5
+      ],
+      "firmware_device_id": 1850,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1850
+    },
+    {
+      "anchor": [
+        "574089",
+        2,
+        11
+      ],
+      "firmware_device_id": 1794,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1794
+    },
+    {
+      "anchor": [
+        "574091",
+        2,
+        11
+      ],
+      "firmware_device_id": 1902,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1902
+    },
+    {
+      "anchor": [
+        "574096",
+        2,
+        11
+      ],
+      "firmware_device_id": 2129,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2129
+    },
+    {
+      "anchor": [
+        "574098",
+        2,
+        5
+      ],
+      "firmware_device_id": 1851,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1851
+    },
+    {
+      "anchor": [
+        "574503",
+        2,
+        11
+      ],
+      "firmware_device_id": 1921,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1921
+    },
+    {
+      "anchor": [
+        "574504",
+        2,
+        11
+      ],
+      "firmware_device_id": 1922,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1922
+    },
+    {
+      "anchor": [
+        "574589",
+        2,
+        11
+      ],
+      "firmware_device_id": 1795,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1795
+    },
+    {
+      "anchor": [
+        "574591",
+        2,
+        11
+      ],
+      "firmware_device_id": 1903,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1903
+    },
+    {
+      "anchor": [
+        "64160",
+        7,
+        18
+      ],
+      "firmware_device_id": 2213,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2213
+    },
+    {
+      "anchor": [
+        "64161",
+        7,
+        18
+      ],
+      "firmware_device_id": 2214,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2214
+    },
+    {
+      "anchor": [
+        "64162",
+        7,
+        18
+      ],
+      "firmware_device_id": 2218,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2218
+    },
+    {
+      "anchor": [
+        "64170",
+        7,
+        18
+      ],
+      "firmware_device_id": 2172,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2172
+    },
+    {
+      "anchor": [
+        "64190",
+        7,
+        18
+      ],
+      "firmware_device_id": 2215,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2215
+    },
+    {
+      "anchor": [
+        "64191",
+        7,
+        18
+      ],
+      "firmware_device_id": 2216,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2216
+    },
+    {
+      "anchor": [
+        "64192",
+        7,
+        18
+      ],
+      "firmware_device_id": 2217,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2217
+    },
+    {
+      "anchor": [
+        "64195",
+        7,
+        18
+      ],
+      "firmware_device_id": 2535,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2535
+    },
+    {
+      "anchor": [
+        "64196",
+        7,
+        18
+      ],
+      "firmware_device_id": 2536,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2536
+    },
+    {
+      "anchor": [
+        "64360",
+        7,
+        18
+      ],
+      "firmware_device_id": 2209,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2209
+    },
+    {
+      "anchor": [
+        "64362",
+        7,
+        18
+      ],
+      "firmware_device_id": 2212,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2212
+    },
+    {
+      "anchor": [
+        "64390",
+        7,
+        18
+      ],
+      "firmware_device_id": 2210,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2210
+    },
+    {
+      "anchor": [
+        "64391",
+        7,
+        18
+      ],
+      "firmware_device_id": 2211,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2211
+    },
+    {
+      "anchor": [
+        "64393",
+        7,
+        18
+      ],
+      "firmware_device_id": 2537,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2537
+    },
+    {
+      "anchor": [
+        "67565",
+        2,
+        13
+      ],
+      "firmware_device_id": 2204,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2204
+    },
+    {
+      "anchor": [
+        "683090",
+        2,
+        10
+      ],
+      "firmware_device_id": 2191,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2191
+    },
+    {
+      "anchor": [
+        "687376",
+        2,
+        10
+      ],
+      "firmware_device_id": 2180,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2180
+    },
+    {
+      "anchor": [
+        "687377",
+        2,
+        10
+      ],
+      "firmware_device_id": 2185,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2185
+    },
+    {
+      "anchor": [
+        "687378",
+        2,
+        10
+      ],
+      "firmware_device_id": 2186,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2186
+    },
+    {
+      "anchor": [
+        "687390",
+        2,
+        10
+      ],
+      "firmware_device_id": 2189,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2189
+    },
+    {
+      "anchor": [
+        "687890",
+        2,
+        10
+      ],
+      "firmware_device_id": 2190,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2190
+    },
+    {
+      "anchor": [
+        "AM5658",
+        1,
+        3
+      ],
+      "firmware_device_id": 1847,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1847
+    },
+    {
+      "anchor": [
+        "AM5659",
+        1,
+        3
+      ],
+      "firmware_device_id": 2188,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2188
+    },
+    {
+      "anchor": [
+        "AM5831/2",
+        1,
+        3
+      ],
+      "firmware_device_id": 1934,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1934
+    },
+    {
+      "anchor": [
+        "AM5831M2",
+        1,
+        3
+      ],
+      "firmware_device_id": 1726,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1726
+    },
+    {
+      "anchor": [
+        "AM5832/2",
+        1,
+        3
+      ],
+      "firmware_device_id": 1585,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1585
+    },
+    {
+      "anchor": [
+        "AM5832/3",
+        1,
+        3
+      ],
+      "firmware_device_id": 1630,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1630
+    },
+    {
+      "anchor": [
+        "AM5834",
+        1,
+        3
+      ],
+      "firmware_device_id": 1872,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1872
+    },
+    {
+      "anchor": [
+        "AM5851/1",
+        1,
+        3
+      ],
+      "firmware_device_id": 1633,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1633
+    },
+    {
+      "anchor": [
+        "AM5851/2",
+        1,
+        3
+      ],
+      "firmware_device_id": 1635,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1635
+    },
+    {
+      "anchor": [
+        "AM5851M2",
+        1,
+        3
+      ],
+      "firmware_device_id": 1859,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1859
+    },
+    {
+      "anchor": [
+        "AM5852M2",
+        1,
+        3
+      ],
+      "firmware_device_id": 2533,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2533
+    },
+    {
+      "anchor": [
+        "AM5860M2",
+        1,
+        3
+      ],
+      "firmware_device_id": 1846,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1846
+    },
+    {
+      "anchor": [
+        "AM5861M2",
+        1,
+        3
+      ],
+      "firmware_device_id": 1865,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1865
+    },
+    {
+      "anchor": [
+        "AM5872",
+        1,
+        3
+      ],
+      "firmware_device_id": 1135,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1135
+    },
+    {
+      "anchor": [
+        "AM5875",
+        1,
+        3
+      ],
+      "firmware_device_id": 1648,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1648
+    },
+    {
+      "anchor": [
+        "BMDI1001",
+        1,
+        5
+      ],
+      "firmware_device_id": 1769,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1769
+    },
+    {
+      "anchor": [
+        "BMDI1002",
+        1,
+        5
+      ],
+      "firmware_device_id": 1311,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1311
+    },
+    {
+      "anchor": [
+        "BMDI1100",
+        1,
+        5
+      ],
+      "firmware_device_id": 2516,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2516
+    },
+    {
+      "anchor": [
+        "BMSE3001",
+        1,
+        4
+      ],
+      "firmware_device_id": 45,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 45
+    },
+    {
+      "anchor": [
+        "BMSE3003",
+        1,
+        5
+      ],
+      "firmware_device_id": 49,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 49
+    },
+    {
+      "anchor": [
+        "BMSW1001",
+        1,
+        5
+      ],
+      "firmware_device_id": 128,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 128
+    },
+    {
+      "anchor": [
+        "BMSW1002",
+        1,
+        5
+      ],
+      "firmware_device_id": 134,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 134
+    },
+    {
+      "anchor": [
+        "BMSW1003",
+        1,
+        5
+      ],
+      "firmware_device_id": 63,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 63
+    },
+    {
+      "anchor": [
+        "BMSW1005",
+        1,
+        5
+      ],
+      "firmware_device_id": 1729,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1729
+    },
+    {
+      "anchor": [
+        "F401",
+        1,
+        5
+      ],
+      "firmware_device_id": 1570,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1570
+    },
+    {
+      "anchor": [
+        "F411/1",
+        1,
+        5
+      ],
+      "firmware_device_id": 1594,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1594
+    },
+    {
+      "anchor": [
+        "F411/1FL",
+        1,
+        5
+      ],
+      "firmware_device_id": 1595,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1595
+    },
+    {
+      "anchor": [
+        "F411/1N",
+        1,
+        5
+      ],
+      "firmware_device_id": 1,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1
+    },
+    {
+      "anchor": [
+        "F411/1NC",
+        1,
+        5
+      ],
+      "firmware_device_id": 1593,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1593
+    },
+    {
+      "anchor": [
+        "F411/2",
+        1,
+        5
+      ],
+      "firmware_device_id": 2,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2
+    },
+    {
+      "anchor": [
+        "F411/2NC",
+        1,
+        5
+      ],
+      "firmware_device_id": 1596,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1596
+    },
+    {
+      "anchor": [
+        "F411/4",
+        1,
+        5
+      ],
+      "firmware_device_id": 3,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 3
+    },
+    {
+      "anchor": [
+        "F411U1",
+        1,
+        5
+      ],
+      "firmware_device_id": 2468,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2468
+    },
+    {
+      "anchor": [
+        "F411U2",
+        1,
+        5
+      ],
+      "firmware_device_id": 2450,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2450
+    },
+    {
+      "anchor": [
+        "F413",
+        1,
+        5
+      ],
+      "firmware_device_id": 31,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 31
+    },
+    {
+      "anchor": [
+        "F413N",
+        1,
+        5
+      ],
+      "firmware_device_id": 1597,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1597
+    },
+    {
+      "anchor": [
+        "F414",
+        1,
+        5
+      ],
+      "firmware_device_id": 17,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 17
+    },
+    {
+      "anchor": [
+        "F414/127",
+        1,
+        5
+      ],
+      "firmware_device_id": 1598,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1598
+    },
+    {
+      "anchor": [
+        "F415",
+        1,
+        5
+      ],
+      "firmware_device_id": 1599,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1599
+    },
+    {
+      "anchor": [
+        "F415/127",
+        1,
+        5
+      ],
+      "firmware_device_id": 1602,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1602
+    },
+    {
+      "anchor": [
+        "F416U1",
+        1,
+        5
+      ],
+      "firmware_device_id": 84,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 84
+    },
+    {
+      "anchor": [
+        "F417U2",
+        1,
+        5
+      ],
+      "firmware_device_id": 85,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 85
+    },
+    {
+      "anchor": [
+        "F418",
+        1,
+        5
+      ],
+      "firmware_device_id": 1638,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1638
+    },
+    {
+      "anchor": [
+        "F418U2",
+        6,
+        5
+      ],
+      "firmware_device_id": 2365,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2365
+    },
+    {
+      "anchor": [
+        "F420",
+        1,
+        5
+      ],
+      "firmware_device_id": 61,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 61
+    },
+    {
+      "anchor": [
+        "F422",
+        1,
+        5
+      ],
+      "firmware_device_id": 90,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 90
+    },
+    {
+      "anchor": [
+        "F425",
+        1,
+        5
+      ],
+      "firmware_device_id": 60,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 60
+    },
+    {
+      "anchor": [
+        "F428",
+        1,
+        5
+      ],
+      "firmware_device_id": 79,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 79
+    },
+    {
+      "anchor": [
+        "F429",
+        1,
+        5
+      ],
+      "firmware_device_id": 71,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 71
+    },
+    {
+      "anchor": [
+        "F430/2",
+        1,
+        5
+      ],
+      "firmware_device_id": 72,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 72
+    },
+    {
+      "anchor": [
+        "F430/4",
+        1,
+        5
+      ],
+      "firmware_device_id": 73,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 73
+    },
+    {
+      "anchor": [
+        "F430FP",
+        1,
+        5
+      ],
+      "firmware_device_id": 2007,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2007
+    },
+    {
+      "anchor": [
+        "F430R3V10",
+        6,
+        5
+      ],
+      "firmware_device_id": 1745,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1745
+    },
+    {
+      "anchor": [
+        "F430R8",
+        6,
+        5
+      ],
+      "firmware_device_id": 1743,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1743
+    },
+    {
+      "anchor": [
+        "F430V10",
+        6,
+        5
+      ],
+      "firmware_device_id": 1744,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1744
+    },
+    {
+      "anchor": [
+        "F520",
+        1,
+        5
+      ],
+      "firmware_device_id": 1160,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1160
+    },
+    {
+      "anchor": [
+        "F521",
+        1,
+        5
+      ],
+      "firmware_device_id": 1162,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1162
+    },
+    {
+      "anchor": [
+        "F522",
+        1,
+        5
+      ],
+      "firmware_device_id": 1163,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1163
+    },
+    {
+      "anchor": [
+        "F523",
+        1,
+        5
+      ],
+      "firmware_device_id": 1164,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1164
+    },
+    {
+      "anchor": [
+        "H4648",
+        1,
+        2
+      ],
+      "firmware_device_id": 1564,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1564
+    },
+    {
+      "anchor": [
+        "H4649",
+        1,
+        2
+      ],
+      "firmware_device_id": 1563,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1563
+    },
+    {
+      "anchor": [
+        "H4651/2",
+        1,
+        2
+      ],
+      "firmware_device_id": 537,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 537
+    },
+    {
+      "anchor": [
+        "H4651M2",
+        1,
+        2
+      ],
+      "firmware_device_id": 1718,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1718
+    },
+    {
+      "anchor": [
+        "H4652",
+        1,
+        2
+      ],
+      "firmware_device_id": 1733,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1733
+    },
+    {
+      "anchor": [
+        "H4652/2",
+        1,
+        2
+      ],
+      "firmware_device_id": 1533,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1533
+    },
+    {
+      "anchor": [
+        "H4652/3",
+        1,
+        2
+      ],
+      "firmware_device_id": 1664,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1664
+    },
+    {
+      "anchor": [
+        "H4652M2",
+        1,
+        2
+      ],
+      "firmware_device_id": 2596,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2596
+    },
+    {
+      "anchor": [
+        "H4652M3",
+        1,
+        2
+      ],
+      "firmware_device_id": 2593,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2593
+    },
+    {
+      "anchor": [
+        "H4655",
+        1,
+        2
+      ],
+      "firmware_device_id": 1717,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1717
+    },
+    {
+      "anchor": [
+        "H4660M2",
+        1,
+        2
+      ],
+      "firmware_device_id": 1624,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1624
+    },
+    {
+      "anchor": [
+        "H4661M2",
+        1,
+        2
+      ],
+      "firmware_device_id": 1653,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1653
+    },
+    {
+      "anchor": [
+        "H4671/1",
+        1,
+        2
+      ],
+      "firmware_device_id": 1662,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1662
+    },
+    {
+      "anchor": [
+        "H4671/2",
+        1,
+        2
+      ],
+      "firmware_device_id": 7,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 7
+    },
+    {
+      "anchor": [
+        "H4671M2",
+        1,
+        2
+      ],
+      "firmware_device_id": 1858,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1858
+    },
+    {
+      "anchor": [
+        "H4672M2",
+        1,
+        2
+      ],
+      "firmware_device_id": 2531,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2531
+    },
+    {
+      "anchor": [
+        "H4672M2L",
+        1,
+        2
+      ],
+      "firmware_device_id": 2599,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2599
+    },
+    {
+      "anchor": [
+        "H4672M2S",
+        1,
+        2
+      ],
+      "firmware_device_id": 2604,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2604
+    },
+    {
+      "anchor": [
+        "H4674",
+        1,
+        2
+      ],
+      "firmware_device_id": 1731,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1731
+    },
+    {
+      "anchor": [
+        "H4678",
+        1,
+        2
+      ],
+      "firmware_device_id": 1730,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1730
+    },
+    {
+      "anchor": [
+        "H4691",
+        1,
+        2
+      ],
+      "firmware_device_id": 1746,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1746
+    },
+    {
+      "anchor": [
+        "HC/HS/HD4563",
+        1,
+        2
+      ],
+      "firmware_device_id": 25,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 25
+    },
+    {
+      "anchor": [
+        "HC/HS/HD4575",
+        1,
+        2
+      ],
+      "firmware_device_id": 28,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 28
+    },
+    {
+      "anchor": [
+        "HC/HS/HD4575SB",
+        1,
+        2
+      ],
+      "firmware_device_id": 40,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 40
+    },
+    {
+      "anchor": [
+        "HC/HS/HD4657M4",
+        1,
+        2
+      ],
+      "firmware_device_id": 1191,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1191
+    },
+    {
+      "anchor": [
+        "HC/HS/HD4658",
+        1,
+        2
+      ],
+      "firmware_device_id": 1565,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1565
+    },
+    {
+      "anchor": [
+        "HC/HS/HD4659",
+        1,
+        2
+      ],
+      "firmware_device_id": 1566,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1566
+    },
+    {
+      "anchor": [
+        "HC/HS/HD4672N",
+        1,
+        2
+      ],
+      "firmware_device_id": 1166,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1166
+    },
+    {
+      "anchor": [
+        "HC/HS/HD4680",
+        1,
+        2
+      ],
+      "firmware_device_id": 1537,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1537
+    },
+    {
+      "anchor": [
+        "HC/HS/HD4685",
+        1,
+        2
+      ],
+      "firmware_device_id": 917,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 917
+    },
+    {
+      "anchor": [
+        "HC/HS/HD4692",
+        1,
+        2
+      ],
+      "firmware_device_id": 1663,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1663
+    },
+    {
+      "anchor": [
+        "HC/HS/HD4692FAN",
+        1,
+        2
+      ],
+      "firmware_device_id": 1619,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1619
+    },
+    {
+      "anchor": [
+        "HC/HS/HD4693",
+        1,
+        2
+      ],
+      "firmware_device_id": 1608,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1608
+    },
+    {
+      "anchor": [
+        "HC/HS4576",
+        1,
+        2
+      ],
+      "firmware_device_id": 34,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 34
+    },
+    {
+      "anchor": [
+        "HC/HS4653/2",
+        1,
+        2
+      ],
+      "firmware_device_id": 12,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 12
+    },
+    {
+      "anchor": [
+        "HC/HS4653/3",
+        1,
+        2
+      ],
+      "firmware_device_id": 1554,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1554
+    },
+    {
+      "anchor": [
+        "HC/HS4657M3",
+        1,
+        2
+      ],
+      "firmware_device_id": 1190,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1190
+    },
+    {
+      "anchor": [
+        "HC/HS4695",
+        1,
+        2
+      ],
+      "firmware_device_id": 1646,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1646
+    },
+    {
+      "anchor": [
+        "HD4576",
+        1,
+        2
+      ],
+      "firmware_device_id": 1829,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1829
+    },
+    {
+      "anchor": [
+        "HD4653M2",
+        1,
+        2
+      ],
+      "firmware_device_id": 1553,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1553
+    },
+    {
+      "anchor": [
+        "HD4653M3",
+        1,
+        2
+      ],
+      "firmware_device_id": 1555,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1555
+    },
+    {
+      "anchor": [
+        "HD4657M3",
+        1,
+        2
+      ],
+      "firmware_device_id": 1741,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1741
+    },
+    {
+      "anchor": [
+        "HD4695",
+        1,
+        2
+      ],
+      "firmware_device_id": 1647,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1647
+    },
+    {
+      "anchor": [
+        "HS/HD/HC4654",
+        1,
+        2
+      ],
+      "firmware_device_id": 37,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 37
+    },
+    {
+      "anchor": [
+        "K4652M2",
+        1,
+        20
+      ],
+      "firmware_device_id": 2568,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2568
+    },
+    {
+      "anchor": [
+        "K4652M3",
+        1,
+        20
+      ],
+      "firmware_device_id": 2569,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2569
+    },
+    {
+      "anchor": [
+        "K4659",
+        1,
+        20
+      ],
+      "firmware_device_id": 2615,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2615
+    },
+    {
+      "anchor": [
+        "K4672M2L",
+        1,
+        20
+      ],
+      "firmware_device_id": 2570,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2570
+    },
+    {
+      "anchor": [
+        "K4672M2S",
+        1,
+        20
+      ],
+      "firmware_device_id": 2581,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2581
+    },
+    {
+      "anchor": [
+        "K8002L",
+        1,
+        20
+      ],
+      "firmware_device_id": 2633,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2633
+    },
+    {
+      "anchor": [
+        "K8002S",
+        1,
+        20
+      ],
+      "firmware_device_id": 2634,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2634
+    },
+    {
+      "anchor": [
+        "KG4691",
+        1,
+        20
+      ],
+      "firmware_device_id": 2587,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2587
+    },
+    {
+      "anchor": [
+        "KG8010",
+        1,
+        20
+      ],
+      "firmware_device_id": 2629,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2629
+    },
+    {
+      "anchor": [
+        "KG8011",
+        1,
+        20
+      ],
+      "firmware_device_id": 2632,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2632
+    },
+    {
+      "anchor": [
+        "KG8013",
+        1,
+        20
+      ],
+      "firmware_device_id": 2637,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2637
+    },
+    {
+      "anchor": [
+        "KM4691",
+        1,
+        20
+      ],
+      "firmware_device_id": 2586,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2586
+    },
+    {
+      "anchor": [
+        "KM8010",
+        1,
+        20
+      ],
+      "firmware_device_id": 2628,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2628
+    },
+    {
+      "anchor": [
+        "KM8011",
+        1,
+        20
+      ],
+      "firmware_device_id": 2631,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2631
+    },
+    {
+      "anchor": [
+        "KM8013",
+        1,
+        20
+      ],
+      "firmware_device_id": 2636,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2636
+    },
+    {
+      "anchor": [
+        "KW4691",
+        1,
+        20
+      ],
+      "firmware_device_id": 2588,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2588
+    },
+    {
+      "anchor": [
+        "KW8010",
+        1,
+        20
+      ],
+      "firmware_device_id": 2627,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2627
+    },
+    {
+      "anchor": [
+        "KW8011",
+        1,
+        20
+      ],
+      "firmware_device_id": 2630,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2630
+    },
+    {
+      "anchor": [
+        "KW8013",
+        1,
+        20
+      ],
+      "firmware_device_id": 2635,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2635
+    },
+    {
+      "anchor": [
+        "L/N/NT4563",
+        1,
+        4
+      ],
+      "firmware_device_id": 1838,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1838
+    },
+    {
+      "anchor": [
+        "L/N/NT4575",
+        1,
+        4
+      ],
+      "firmware_device_id": 1839,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1839
+    },
+    {
+      "anchor": [
+        "L/N/NT4575N",
+        1,
+        4
+      ],
+      "firmware_device_id": 1840,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1840
+    },
+    {
+      "anchor": [
+        "L/N/NT4575SB",
+        1,
+        2
+      ],
+      "firmware_device_id": 1841,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1841
+    },
+    {
+      "anchor": [
+        "L/N/NT4576",
+        1,
+        2
+      ],
+      "firmware_device_id": 1828,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1828
+    },
+    {
+      "anchor": [
+        "L/N/NT4654N",
+        1,
+        2
+      ],
+      "firmware_device_id": 1835,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1835
+    },
+    {
+      "anchor": [
+        "L/N/NT4658N",
+        1,
+        4
+      ],
+      "firmware_device_id": 1844,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1844
+    },
+    {
+      "anchor": [
+        "L/N/NT4659N",
+        1,
+        4
+      ],
+      "firmware_device_id": 1854,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1854
+    },
+    {
+      "anchor": [
+        "L/N/NT4672N",
+        1,
+        4
+      ],
+      "firmware_device_id": 1891,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1891
+    },
+    {
+      "anchor": [
+        "L/N/NT4674",
+        1,
+        4
+      ],
+      "firmware_device_id": 23,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 23
+    },
+    {
+      "anchor": [
+        "L/N/NT4675",
+        1,
+        4
+      ],
+      "firmware_device_id": 66,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 66
+    },
+    {
+      "anchor": [
+        "L/N/NT4680",
+        1,
+        4
+      ],
+      "firmware_device_id": 1698,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1698
+    },
+    {
+      "anchor": [
+        "L/N/NT4685",
+        1,
+        4
+      ],
+      "firmware_device_id": 1147,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1147
+    },
+    {
+      "anchor": [
+        "L/N/NT4688",
+        1,
+        4
+      ],
+      "firmware_device_id": 80,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 80
+    },
+    {
+      "anchor": [
+        "L/N/NT4692",
+        1,
+        4
+      ],
+      "firmware_device_id": 502,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 502
+    },
+    {
+      "anchor": [
+        "L/N/NT4692FAN",
+        1,
+        4
+      ],
+      "firmware_device_id": 500,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 500
+    },
+    {
+      "anchor": [
+        "L/N/NT4693",
+        1,
+        4
+      ],
+      "firmware_device_id": 1971,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1971
+    },
+    {
+      "anchor": [
+        "L/N/NT4695",
+        1,
+        4
+      ],
+      "firmware_device_id": 168,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 168
+    },
+    {
+      "anchor": [
+        "L4651/2",
+        1,
+        4
+      ],
+      "firmware_device_id": 1831,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1831
+    },
+    {
+      "anchor": [
+        "L4651M2",
+        1,
+        4
+      ],
+      "firmware_device_id": 1524,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1524
+    },
+    {
+      "anchor": [
+        "L4652/2",
+        1,
+        4
+      ],
+      "firmware_device_id": 281,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 281
+    },
+    {
+      "anchor": [
+        "L4652/3",
+        1,
+        4
+      ],
+      "firmware_device_id": 4,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 4
+    },
+    {
+      "anchor": [
+        "L4655",
+        1,
+        4
+      ],
+      "firmware_device_id": 1104,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1104
+    },
+    {
+      "anchor": [
+        "L4671/1",
+        1,
+        4
+      ],
+      "firmware_device_id": 1121,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1121
+    },
+    {
+      "anchor": [
+        "L4671/2",
+        1,
+        4
+      ],
+      "firmware_device_id": 1122,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1122
+    },
+    {
+      "anchor": [
+        "L4678",
+        1,
+        4
+      ],
+      "firmware_device_id": 1123,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1123
+    },
+    {
+      "anchor": [
+        "LN4648",
+        1,
+        4
+      ],
+      "firmware_device_id": 1988,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1988
+    },
+    {
+      "anchor": [
+        "LN4649",
+        1,
+        4
+      ],
+      "firmware_device_id": 1987,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1987
+    },
+    {
+      "anchor": [
+        "LN4652",
+        1,
+        4
+      ],
+      "firmware_device_id": 2155,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2155
+    },
+    {
+      "anchor": [
+        "LN4652M2",
+        1,
+        4
+      ],
+      "firmware_device_id": 2597,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2597
+    },
+    {
+      "anchor": [
+        "LN4652M3",
+        1,
+        4
+      ],
+      "firmware_device_id": 2594,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2594
+    },
+    {
+      "anchor": [
+        "LN4660M2",
+        1,
+        4
+      ],
+      "firmware_device_id": 1845,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1845
+    },
+    {
+      "anchor": [
+        "LN4661M2",
+        1,
+        4
+      ],
+      "firmware_device_id": 1864,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1864
+    },
+    {
+      "anchor": [
+        "LN4671M2",
+        1,
+        4
+      ],
+      "firmware_device_id": 1184,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1184
+    },
+    {
+      "anchor": [
+        "LN4672M2",
+        1,
+        4
+      ],
+      "firmware_device_id": 2532,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2532
+    },
+    {
+      "anchor": [
+        "LN4672M2L",
+        1,
+        4
+      ],
+      "firmware_device_id": 2600,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2600
+    },
+    {
+      "anchor": [
+        "LN4672M2S",
+        1,
+        4
+      ],
+      "firmware_device_id": 2603,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 2603
+    },
+    {
+      "anchor": [
+        "LN4691",
+        1,
+        4
+      ],
+      "firmware_device_id": 1991,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 1991
+    },
+    {
+      "anchor": [
+        "N4681",
+        1,
+        4
+      ],
+      "firmware_device_id": 20,
+      "same_full_row": true,
+      "same_item_row": true,
+      "suite_device_id": 20
+    }
+  ],
+  "suite_only": [
+    {
+      "device": {
+        "code": "002645",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1676,
+        "id_item": 1672,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Light manager control unit",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Light manager control unit",
+        "id_family": 8,
+        "id_item": 1672
+      }
+    },
+    {
+      "device": {
+        "code": "003535",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 2362,
+        "id_item": 1902,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Scenario programmer",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Scenario programmer",
+        "id_family": 19,
+        "id_item": 1902
+      }
+    },
+    {
+      "device": {
+        "code": "003554",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1893,
+        "id_item": 1031,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Pulses counter interface",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Pulses counter interface",
+        "id_family": 12,
+        "id_item": 1031
+      }
+    },
+    {
+      "device": {
+        "code": "003565",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1790,
+        "id_item": 1331,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Scenario programmer",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Scenario programmer",
+        "id_family": 19,
+        "id_item": 1331
+      }
+    },
+    {
+      "device": {
+        "code": "003566",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1986,
+        "id_item": 1475,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Energy data logger",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Energy data logger",
+        "id_family": 8,
+        "id_item": 1475
+      }
+    },
+    {
+      "device": {
+        "code": "003586",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2121,
+        "id_item": 1130,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Stereo control",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Stereo control",
+        "id_family": 25,
+        "id_item": 1130
+      }
+    },
+    {
+      "device": {
+        "code": "003594",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 2364,
+        "id_item": 2064,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Basic gateway",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Basic gateway",
+        "id_family": 8,
+        "id_item": 2064
+      }
+    },
+    {
+      "device": {
+        "code": "003597",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1656,
+        "id_item": 1556,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Gateway OPEN-BACNET",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Gateway OPEN-BACNET",
+        "id_family": 8,
+        "id_item": 1556
+      }
+    },
+    {
+      "device": {
+        "code": "003598",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 1572,
+        "id_item": 1455,
+        "id_line": 5,
+        "is_gateway": 1,
+        "name": "Web Server A/V Bus",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Web Server A/V Bus",
+        "id_family": 8,
+        "id_item": 1455
+      }
+    },
+    {
+      "device": {
+        "code": "003599",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 2158,
+        "id_item": 1864,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "IP server",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "IP server",
+        "id_family": 8,
+        "id_item": 1864
+      }
+    },
+    {
+      "device": {
+        "code": "048821",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1580,
+        "id_item": 48,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Sensor lighting and movement US ceiling + IR Port",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Sensor lighting and movement US ceiling + IR Port",
+        "id_family": 5,
+        "id_item": 48
+      }
+    },
+    {
+      "device": {
+        "code": "048823",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1559,
+        "id_item": 50,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "PIR+US wall mounted sensor",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR+US wall mounted sensor",
+        "id_family": 5,
+        "id_item": 50
+      }
+    },
+    {
+      "device": {
+        "code": "048824",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1557,
+        "id_item": 51,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "PIR wall mounted sensor, straight range",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR wall mounted sensor, straight range",
+        "id_family": 5,
+        "id_item": 51
+      }
+    },
+    {
+      "device": {
+        "code": "048825",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1558,
+        "id_item": 52,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "PIR wall mounted sensor, short range",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR wall mounted sensor, short range",
+        "id_family": 5,
+        "id_item": 52
+      }
+    },
+    {
+      "device": {
+        "code": "048826",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1799,
+        "id_item": 53,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "PIR wall mounted sensor, dual range",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR wall mounted sensor, dual range",
+        "id_family": 5,
+        "id_item": 53
+      }
+    },
+    {
+      "device": {
+        "code": "048828",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1582,
+        "id_item": 57,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Daylight sensor for Room Controller + RJ45",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Daylight sensor for Room Controller + RJ45",
+        "id_family": 5,
+        "id_item": 57
+      }
+    },
+    {
+      "device": {
+        "code": "048829",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1797,
+        "id_item": 56,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "PIR wall maunted sensor, long range",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR wall maunted sensor, long range",
+        "id_family": 5,
+        "id_item": 56
+      }
+    },
+    {
+      "device": {
+        "code": "048830",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1560,
+        "id_item": 137,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "IP55 PIR wall mounted sensor",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "IP55 PIR wall mounted sensor",
+        "id_family": 5,
+        "id_item": 137
+      }
+    },
+    {
+      "device": {
+        "code": "048831",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1561,
+        "id_item": 58,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Sensor occupancy + IR + ZigBee",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Sensor occupancy + IR + ZigBee",
+        "id_family": 5,
+        "id_item": 58
+      }
+    },
+    {
+      "device": {
+        "code": "048832",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1786,
+        "id_item": 1169,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Gateway SCS / ZIGBEE",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Gateway SCS / ZIGBEE",
+        "id_family": 100,
+        "id_item": 1169
+      }
+    },
+    {
+      "device": {
+        "code": "048833",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1556,
+        "id_item": 33,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "PIR surface ceiling mounted sensor",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR surface ceiling mounted sensor",
+        "id_family": 5,
+        "id_item": 33
+      }
+    },
+    {
+      "device": {
+        "code": "048840",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1804,
+        "id_item": 130,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Room Controller 1 Output 16 Amps",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Room Controller 1 Output 16 Amps",
+        "id_family": 23,
+        "id_item": 130
+      }
+    },
+    {
+      "device": {
+        "code": "048841",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1789,
+        "id_item": 59,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Room Controller 2 Outputs 16 Amps",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Room Controller 2 Outputs 16 Amps",
+        "id_family": 23,
+        "id_item": 59
+      }
+    },
+    {
+      "device": {
+        "code": "048842",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1774,
+        "id_item": 94,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Room Controller 2 Dim Outputs 0-10V 1000VA",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Room Controller 2 Dim Outputs 0-10V 1000VA",
+        "id_family": 23,
+        "id_item": 94
+      }
+    },
+    {
+      "device": {
+        "code": "048843",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1775,
+        "id_item": 86,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Room Controller 4 Dim Outputs 0-10V 1000VA",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Room Controller 4 Dim Outputs 0-10V 1000VA",
+        "id_family": 23,
+        "id_item": 86
+      }
+    },
+    {
+      "device": {
+        "code": "048844",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1776,
+        "id_item": 1180,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Room controller - Dimmer 4 Outputs Dali",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Room controller - Dimmer 4 Outputs Dali",
+        "id_family": 23,
+        "id_item": 1180
+      }
+    },
+    {
+      "device": {
+        "code": "048845",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1779,
+        "id_item": 88,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Room Controller 2 Dim Outputs All loads 1000W",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Room Controller 2 Dim Outputs All loads 1000W",
+        "id_family": 23,
+        "id_item": 88
+      }
+    },
+    {
+      "device": {
+        "code": "048847",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1788,
+        "id_item": 89,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Room Controller 1 Output 16 Amps - Blind devi",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Room Controller 1 Output 16 Amps - Blind devi",
+        "id_family": 23,
+        "id_item": 89
+      }
+    },
+    {
+      "device": {
+        "code": "067205",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2183,
+        "id_item": 1884,
+        "id_line": 13,
+        "is_gateway": 0,
+        "name": "Energy display 2 modules",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Energy display 2 modules",
+        "id_family": 100,
+        "id_item": 1884
+      }
+    },
+    {
+      "device": {
+        "code": "067206",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1904,
+        "id_item": 1465,
+        "id_line": 13,
+        "is_gateway": 0,
+        "name": "Load Control Panel bus",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Load Control Panel bus",
+        "id_family": 1,
+        "id_item": 1465
+      }
+    },
+    {
+      "device": {
+        "code": "067207",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1905,
+        "id_item": 1465,
+        "id_line": 13,
+        "is_gateway": 0,
+        "name": "Load Control Panel bus",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Load Control Panel bus",
+        "id_family": 1,
+        "id_item": 1465
+      }
+    },
+    {
+      "device": {
+        "code": "067219",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2423,
+        "id_item": 1898,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 10 Capacitive",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 10 Capacitive",
+        "id_family": 100,
+        "id_item": 1898
+      }
+    },
+    {
+      "device": {
+        "code": "067228",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2422,
+        "id_item": 1898,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 10 Capacitive",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 10 Capacitive",
+        "id_family": 100,
+        "id_item": 1898
+      }
+    },
+    {
+      "device": {
+        "code": "067259",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2556,
+        "id_item": 2214,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "HOME TOUCH 7",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "HOME TOUCH 7",
+        "id_family": 20,
+        "id_item": 2214
+      }
+    },
+    {
+      "device": {
+        "code": "067267",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1980,
+        "id_item": 1768,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 10",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 10",
+        "id_family": 100,
+        "id_item": 1768
+      }
+    },
+    {
+      "device": {
+        "code": "067268",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1981,
+        "id_item": 1768,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 10",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 10",
+        "id_family": 100,
+        "id_item": 1768
+      }
+    },
+    {
+      "device": {
+        "code": "067271",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1910,
+        "id_item": 1657,
+        "id_line": 13,
+        "is_gateway": 0,
+        "name": "Local Display 1.2\" bus",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Local Display 1.2\" bus",
+        "id_family": 100,
+        "id_item": 1657
+      }
+    },
+    {
+      "device": {
+        "code": "067272",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1989,
+        "id_item": 1657,
+        "id_line": 13,
+        "is_gateway": 0,
+        "name": "Local Display 1.2\" bus",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Local Display 1.2\" bus",
+        "id_family": 100,
+        "id_item": 1657
+      }
+    },
+    {
+      "device": {
+        "code": "067283",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1516,
+        "id_item": 1516,
+        "id_line": 13,
+        "is_gateway": 0,
+        "name": "Colour Touch Screen",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Colour Touch Screen",
+        "id_family": 1,
+        "id_item": 1516
+      }
+    },
+    {
+      "device": {
+        "code": "067285",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1950,
+        "id_item": 1809,
+        "id_line": 11,
+        "is_gateway": 0,
+        "name": "Multimedia Touch Screen",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Multimedia Touch Screen",
+        "id_family": 100,
+        "id_item": 1809
+      }
+    },
+    {
+      "device": {
+        "code": "067292",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1913,
+        "id_item": 1469,
+        "id_line": 13,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 3.5",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 3.5",
+        "id_family": 1,
+        "id_item": 1469
+      }
+    },
+    {
+      "device": {
+        "code": "067456",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1837,
+        "id_item": 291,
+        "id_line": 13,
+        "is_gateway": 0,
+        "name": "Temperature central unit",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Temperature central unit",
+        "id_family": 11,
+        "id_item": 291
+      }
+    },
+    {
+      "device": {
+        "code": "067510",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 974,
+        "id_item": 975,
+        "id_line": 13,
+        "is_gateway": 0,
+        "name": "Burglar alarm central unit with communicator",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Burglar alarm central unit with communicator",
+        "id_family": 10,
+        "id_item": 975
+      }
+    },
+    {
+      "device": {
+        "code": "067520",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1423,
+        "id_item": 1423,
+        "id_line": 13,
+        "is_gateway": 0,
+        "name": "Burglar alarm central unit with communicator",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Burglar alarm central unit with communicator",
+        "id_family": 10,
+        "id_item": 1423
+      }
+    },
+    {
+      "device": {
+        "code": "067546",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1448,
+        "id_item": 1195,
+        "id_line": 13,
+        "is_gateway": 0,
+        "name": "Polyx Memory Display",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Polyx Memory Display",
+        "id_family": 26,
+        "id_item": 1195
+      }
+    },
+    {
+      "device": {
+        "code": "067590",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2002,
+        "id_item": 1680,
+        "id_line": 13,
+        "is_gateway": 0,
+        "name": "DO NOT DISTURB-MAKE UP ROOM indicator",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "DO NOT DISTURB-MAKE UP ROOM indicator",
+        "id_family": 101,
+        "id_item": 1680
+      }
+    },
+    {
+      "device": {
+        "code": "067591",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2000,
+        "id_item": 1681,
+        "id_line": 13,
+        "is_gateway": 0,
+        "name": "DO NOT DISTURB-MAKE UP ROOM reader",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "DO NOT DISTURB-MAKE UP ROOM reader",
+        "id_family": 101,
+        "id_item": 1681
+      }
+    },
+    {
+      "device": {
+        "code": "067593",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1998,
+        "id_item": 1679,
+        "id_line": 13,
+        "is_gateway": 0,
+        "name": "DO NOT DISTURB-MAKE UP ROOM control",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "DO NOT DISTURB-MAKE UP ROOM control",
+        "id_family": 1,
+        "id_item": 1679
+      }
+    },
+    {
+      "device": {
+        "code": "078474",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1515,
+        "id_item": 1515,
+        "id_line": 12,
+        "is_gateway": 0,
+        "name": "Colour Touch Screen",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Colour Touch Screen",
+        "id_family": 1,
+        "id_item": 1515
+      }
+    },
+    {
+      "device": {
+        "code": "078479",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1914,
+        "id_item": 1469,
+        "id_line": 12,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 3.5",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 3.5",
+        "id_family": 1,
+        "id_item": 1469
+      }
+    },
+    {
+      "device": {
+        "code": "088301",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1728,
+        "id_item": 1520,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "IR emitter",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "IR emitter",
+        "id_family": 100,
+        "id_item": 1520
+      }
+    },
+    {
+      "device": {
+        "code": "318011",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2640,
+        "id_item": 2279,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Easy Kit Connnected",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Easy Kit Connnected",
+        "id_family": 20,
+        "id_item": 2279
+      }
+    },
+    {
+      "device": {
+        "code": "323011",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1953,
+        "id_item": 1178,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "IP interface (D45/IP) ",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "IP interface (D45/IP) ",
+        "id_family": 100,
+        "id_item": 1178
+      }
+    },
+    {
+      "device": {
+        "code": "335254",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2655,
+        "id_item": 2301,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Easy Kit Connnected with H+S",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Easy Kit Connnected with H+S",
+        "id_family": 20,
+        "id_item": 2301
+      }
+    },
+    {
+      "device": {
+        "code": "344163",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1195,
+        "id_item": 1195,
+        "id_line": 7,
+        "is_gateway": 0,
+        "name": "Polyx Memory Display",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Polyx Memory Display",
+        "id_family": 26,
+        "id_item": 1195
+      }
+    },
+    {
+      "device": {
+        "code": "344400",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1076,
+        "id_item": 1076,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "Video Display",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Video Display",
+        "id_family": 26,
+        "id_item": 1076
+      }
+    },
+    {
+      "device": {
+        "code": "344401",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2069,
+        "id_item": 1076,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "Video Display",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Video Display",
+        "id_family": 26,
+        "id_item": 1076
+      }
+    },
+    {
+      "device": {
+        "code": "344602",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2165,
+        "id_item": 1872,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "CLASSE100 X12B",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "CLASSE100 X12B",
+        "id_family": "",
+        "id_item": 1872
+      }
+    },
+    {
+      "device": {
+        "code": "344612",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2473,
+        "id_item": 2134,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "CLASSE300 V13E/M",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "CLASSE300 V13E/M",
+        "id_family": 20,
+        "id_item": 2134
+      }
+    },
+    {
+      "device": {
+        "code": "344613",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2474,
+        "id_item": 2134,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "CLASSE300 V13E/M",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "CLASSE300 V13E/M",
+        "id_family": 20,
+        "id_item": 2134
+      }
+    },
+    {
+      "device": {
+        "code": "344622",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2475,
+        "id_item": 2134,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "CLASSE300 V13E/M",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "CLASSE300 V13E/M",
+        "id_family": 20,
+        "id_item": 2134
+      }
+    },
+    {
+      "device": {
+        "code": "344642",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2508,
+        "id_item": 2162,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "CLASSE300 X13E",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "CLASSE300 X13E",
+        "id_family": 26,
+        "id_item": 2162
+      }
+    },
+    {
+      "device": {
+        "code": "344643",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2509,
+        "id_item": 2162,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "CLASSE300 X13E",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "CLASSE300 X13E",
+        "id_family": 26,
+        "id_item": 2162
+      }
+    },
+    {
+      "device": {
+        "code": "344682",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2624,
+        "id_item": 2266,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "CLASSE100 X16E",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "CLASSE100 X16E",
+        "id_family": 26,
+        "id_item": 2266
+      }
+    },
+    {
+      "device": {
+        "code": "344742",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2676,
+        "id_item": 2321,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Classe 300X",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Classe 300X",
+        "id_family": "",
+        "id_item": 2321
+      }
+    },
+    {
+      "device": {
+        "code": "344743",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2677,
+        "id_item": 2321,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Classe 300X",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Classe 300X",
+        "id_family": "",
+        "id_item": 2321
+      }
+    },
+    {
+      "device": {
+        "code": "344745",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2678,
+        "id_item": 2321,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Classe 300X",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Classe 300X",
+        "id_family": "",
+        "id_item": 2321
+      }
+    },
+    {
+      "device": {
+        "code": "344746",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2679,
+        "id_item": 2321,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Classe 300X",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Classe 300X",
+        "id_family": "",
+        "id_item": 2321
+      }
+    },
+    {
+      "device": {
+        "code": "344782",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2646,
+        "id_item": 2266,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "CLASSE100 X16E",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "CLASSE100 X16E",
+        "id_family": 26,
+        "id_item": 2266
+      }
+    },
+    {
+      "device": {
+        "code": "344842",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2645,
+        "id_item": 2283,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "CLASSE300 EOS",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "CLASSE300 EOS",
+        "id_family": 26,
+        "id_item": 2283
+      }
+    },
+    {
+      "device": {
+        "code": "344845",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2648,
+        "id_item": 2283,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "CLASSE300 EOS",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "CLASSE300 EOS",
+        "id_family": 26,
+        "id_item": 2283
+      }
+    },
+    {
+      "device": {
+        "code": "345000",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2701,
+        "id_item": 2341,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Linea 5000",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Linea 5000",
+        "id_family": "",
+        "id_item": 2341
+      }
+    },
+    {
+      "device": {
+        "code": "345020",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1174,
+        "id_item": 1175,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "VideoTouchTelephone",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "VideoTouchTelephone",
+        "id_family": 26,
+        "id_item": 1175
+      }
+    },
+    {
+      "device": {
+        "code": "345021",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1175,
+        "id_item": 1175,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "VideoTouchTelephone",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "VideoTouchTelephone",
+        "id_family": 26,
+        "id_item": 1175
+      }
+    },
+    {
+      "device": {
+        "code": "3456",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1157,
+        "id_item": 1520,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "IR emitter",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "IR emitter",
+        "id_family": 100,
+        "id_item": 1520
+      }
+    },
+    {
+      "device": {
+        "code": "345829",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1958,
+        "id_item": 1819,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "PABX288 automatic telephone switching system",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PABX288 automatic telephone switching system",
+        "id_family": 100,
+        "id_item": 1819
+      }
+    },
+    {
+      "device": {
+        "code": "346310",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1440,
+        "id_item": 1440,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Management Center 2Wires",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Management Center 2Wires",
+        "id_family": 20,
+        "id_item": 1440
+      }
+    },
+    {
+      "device": {
+        "code": "346890",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1689,
+        "id_item": 1177,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "IP interface (2Wire/IP)",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "IP interface (2Wire/IP)",
+        "id_family": 100,
+        "id_item": 1177
+      }
+    },
+    {
+      "device": {
+        "code": "346891",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1762,
+        "id_item": 1698,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "IP interface (2Wire/IP)",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "IP interface (2Wire/IP)",
+        "id_family": 20,
+        "id_item": 1698
+      }
+    },
+    {
+      "device": {
+        "code": "348040",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1753,
+        "id_item": 1689,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Central unit access control 1 head Vigik ",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Central unit access control 1 head Vigik ",
+        "id_family": 101,
+        "id_item": 1689
+      }
+    },
+    {
+      "device": {
+        "code": "348330",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1755,
+        "id_item": 1691,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "GPRS Interface",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "GPRS Interface",
+        "id_family": 8,
+        "id_item": 1691
+      }
+    },
+    {
+      "device": {
+        "code": "348405",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1754,
+        "id_item": 1690,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Local portable programmer",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Local portable programmer",
+        "id_family": 100,
+        "id_item": 1690
+      }
+    },
+    {
+      "device": {
+        "code": "3485",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 139,
+        "id_item": 139,
+        "id_line": 9,
+        "is_gateway": 0,
+        "name": "Burglar alarm central unit with communicator",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Burglar alarm central unit with communicator",
+        "id_family": 14,
+        "id_item": 139
+      }
+    },
+    {
+      "device": {
+        "code": "3485B",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 140,
+        "id_item": 140,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "Polyx Alarm",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Polyx Alarm",
+        "id_family": 10,
+        "id_item": 140
+      }
+    },
+    {
+      "device": {
+        "code": "3485STD",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1931,
+        "id_item": 1804,
+        "id_line": 7,
+        "is_gateway": 0,
+        "name": "Burglar alarm control unit with contacts",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Burglar alarm control unit with contacts",
+        "id_family": 14,
+        "id_item": 1804
+      }
+    },
+    {
+      "device": {
+        "code": "3486",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 141,
+        "id_item": 141,
+        "id_line": 9,
+        "is_gateway": 0,
+        "name": "GSM burglar alarm central unit",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "GSM burglar alarm central unit",
+        "id_family": 14,
+        "id_item": 141
+      }
+    },
+    {
+      "device": {
+        "code": "3488",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2555,
+        "id_item": 2214,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "HOME TOUCH 7",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "HOME TOUCH 7",
+        "id_family": 20,
+        "id_item": 2214
+      }
+    },
+    {
+      "device": {
+        "code": "349311",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2092,
+        "id_item": 1076,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Video Display",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Video Display",
+        "id_family": 26,
+        "id_item": 1076
+      }
+    },
+    {
+      "device": {
+        "code": "349312",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2093,
+        "id_item": 1076,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Video Display",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Video Display",
+        "id_family": 26,
+        "id_item": 1076
+      }
+    },
+    {
+      "device": {
+        "code": "349313",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2094,
+        "id_item": 1076,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Video Display",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Video Display",
+        "id_family": 26,
+        "id_item": 1076
+      }
+    },
+    {
+      "device": {
+        "code": "349320",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1078,
+        "id_item": 1078,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Video Station",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Video Station",
+        "id_family": 26,
+        "id_item": 1078
+      }
+    },
+    {
+      "device": {
+        "code": "349321",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1965,
+        "id_item": 1078,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Video Station",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Video Station",
+        "id_family": 26,
+        "id_item": 1078
+      }
+    },
+    {
+      "device": {
+        "code": "349340",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2095,
+        "id_item": 1076,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Video Display",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Video Display",
+        "id_family": 26,
+        "id_item": 1076
+      }
+    },
+    {
+      "device": {
+        "code": "351100",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1459,
+        "id_item": 1459,
+        "id_line": 6,
+        "is_gateway": 0,
+        "name": "Audio module",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Audio module",
+        "id_family": 20,
+        "id_item": 1459
+      }
+    },
+    {
+      "device": {
+        "code": "351200",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1460,
+        "id_item": 1460,
+        "id_line": 6,
+        "is_gateway": 0,
+        "name": "A/V module",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "A/V module",
+        "id_family": 20,
+        "id_item": 1460
+      }
+    },
+    {
+      "device": {
+        "code": "351300",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1461,
+        "id_item": 1461,
+        "id_line": 6,
+        "is_gateway": 0,
+        "name": "Wide angle A/V module",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Wide angle A/V module",
+        "id_family": 20,
+        "id_item": 1461
+      }
+    },
+    {
+      "device": {
+        "code": "3522",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1031,
+        "id_item": 1031,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Pulses counter interface",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Pulses counter interface",
+        "id_family": 12,
+        "id_item": 1031
+      }
+    },
+    {
+      "device": {
+        "code": "352400",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1489,
+        "id_item": 1489,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "N&D wide angle camera module",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "N&D wide angle camera module",
+        "id_family": "",
+        "id_item": 1489
+      }
+    },
+    {
+      "device": {
+        "code": "352500",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1488,
+        "id_item": 1488,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Display module",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Display module",
+        "id_family": "",
+        "id_item": 1488
+      }
+    },
+    {
+      "device": {
+        "code": "352700",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1487,
+        "id_item": 1487,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Inductive loop module",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Inductive loop module",
+        "id_family": 20,
+        "id_item": 1487
+      }
+    },
+    {
+      "device": {
+        "code": "353000",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1470,
+        "id_item": 1470,
+        "id_line": 6,
+        "is_gateway": 0,
+        "name": "Keypad module",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Keypad module",
+        "id_family": 101,
+        "id_item": 1470
+      }
+    },
+    {
+      "device": {
+        "code": "353200",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1471,
+        "id_item": 1471,
+        "id_line": 6,
+        "is_gateway": 0,
+        "name": "Proximity reader module",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Proximity reader module",
+        "id_family": 101,
+        "id_item": 1471
+      }
+    },
+    {
+      "device": {
+        "code": "3550",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 291,
+        "id_item": 291,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Temperature central unit",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Temperature central unit",
+        "id_family": 11,
+        "id_item": 291
+      }
+    },
+    {
+      "device": {
+        "code": "365225",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2656,
+        "id_item": 2301,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Easy Kit Connnected with H+S",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Easy Kit Connnected with H+S",
+        "id_family": 20,
+        "id_item": 2301
+      }
+    },
+    {
+      "device": {
+        "code": "369420",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2642,
+        "id_item": 2279,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Easy Kit Connnected",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Easy Kit Connnected",
+        "id_family": 20,
+        "id_item": 2279
+      }
+    },
+    {
+      "device": {
+        "code": "573716",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1911,
+        "id_item": 1657,
+        "id_line": 11,
+        "is_gateway": 0,
+        "name": "Local Display 1.2\" bus",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Local Display 1.2\" bus",
+        "id_family": 100,
+        "id_item": 1657
+      }
+    },
+    {
+      "device": {
+        "code": "573717",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1990,
+        "id_item": 1657,
+        "id_line": 11,
+        "is_gateway": 0,
+        "name": "Local Display 1.2\" bus",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Local Display 1.2\" bus",
+        "id_family": 100,
+        "id_item": 1657
+      }
+    },
+    {
+      "device": {
+        "code": "573918",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1784,
+        "id_item": 291,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Temperature central unit",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Temperature central unit",
+        "id_family": 11,
+        "id_item": 291
+      }
+    },
+    {
+      "device": {
+        "code": "573919",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1785,
+        "id_item": 291,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Temperature central unit",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Temperature central unit",
+        "id_family": 11,
+        "id_item": 291
+      }
+    },
+    {
+      "device": {
+        "code": "573934",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 976,
+        "id_item": 1423,
+        "id_line": 11,
+        "is_gateway": 0,
+        "name": "Burglar alarm central unit with communicator",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Burglar alarm central unit with communicator",
+        "id_family": 10,
+        "id_item": 1423
+      }
+    },
+    {
+      "device": {
+        "code": "573950",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2096,
+        "id_item": 1076,
+        "id_line": 11,
+        "is_gateway": 0,
+        "name": "Video Display",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Video Display",
+        "id_family": 26,
+        "id_item": 1076
+      }
+    },
+    {
+      "device": {
+        "code": "573951",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2097,
+        "id_item": 1076,
+        "id_line": 11,
+        "is_gateway": 0,
+        "name": "Video Display",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Video Display",
+        "id_family": 26,
+        "id_item": 1076
+      }
+    },
+    {
+      "device": {
+        "code": "573958",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1912,
+        "id_item": 1469,
+        "id_line": 11,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 3.5",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 3.5",
+        "id_family": 1,
+        "id_item": 1469
+      }
+    },
+    {
+      "device": {
+        "code": "573960",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1957,
+        "id_item": 1814,
+        "id_line": 11,
+        "is_gateway": 0,
+        "name": "Colour Touch Screen",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Colour Touch Screen",
+        "id_family": 1,
+        "id_item": 1814
+      }
+    },
+    {
+      "device": {
+        "code": "573962",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1951,
+        "id_item": 1809,
+        "id_line": 11,
+        "is_gateway": 0,
+        "name": "Multimedia Touch Screen",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Multimedia Touch Screen",
+        "id_family": 100,
+        "id_item": 1809
+      }
+    },
+    {
+      "device": {
+        "code": "573963",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1949,
+        "id_item": 1809,
+        "id_line": 11,
+        "is_gateway": 0,
+        "name": "Multimedia Touch Screen",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Multimedia Touch Screen",
+        "id_family": 100,
+        "id_item": 1809
+      }
+    },
+    {
+      "device": {
+        "code": "573985",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1906,
+        "id_item": 1465,
+        "id_line": 11,
+        "is_gateway": 0,
+        "name": "Load Control Panel bus",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Load Control Panel bus",
+        "id_family": 1,
+        "id_item": 1465
+      }
+    },
+    {
+      "device": {
+        "code": "573991",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1907,
+        "id_item": 1465,
+        "id_line": 11,
+        "is_gateway": 0,
+        "name": "Load Control Panel bus",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Load Control Panel bus",
+        "id_family": 1,
+        "id_item": 1465
+      }
+    },
+    {
+      "device": {
+        "code": "573992",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1976,
+        "id_item": 1834,
+        "id_line": 11,
+        "is_gateway": 1,
+        "name": "Webserver Audio/Video DIN",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Webserver Audio/Video DIN",
+        "id_family": 8,
+        "id_item": 1834
+      }
+    },
+    {
+      "device": {
+        "code": "64171",
+        "dependent": 0,
+        "id_brand": 7,
+        "id_device": 2184,
+        "id_item": 1884,
+        "id_line": 18,
+        "is_gateway": 0,
+        "name": "Energy display 2 modules",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Energy display 2 modules",
+        "id_family": 100,
+        "id_item": 1884
+      }
+    },
+    {
+      "device": {
+        "code": "687408",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 1954,
+        "id_item": 1812,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Colour Touch Screen",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Colour Touch Screen",
+        "id_family": 1,
+        "id_item": 1812
+      }
+    },
+    {
+      "device": {
+        "code": "775795",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 975,
+        "id_item": 975,
+        "id_line": 14,
+        "is_gateway": 0,
+        "name": "Burglar alarm central unit with communicator",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Burglar alarm central unit with communicator",
+        "id_family": 10,
+        "id_item": 975
+      }
+    },
+    {
+      "device": {
+        "code": "AA5222",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2686,
+        "id_item": 2307,
+        "id_line": 11,
+        "is_gateway": 0,
+        "name": "Command Device 2M Light Now",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Command Device 2M Light Now",
+        "id_family": 1,
+        "id_item": 2307
+      }
+    },
+    {
+      "device": {
+        "code": "AA5223",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2687,
+        "id_item": 2311,
+        "id_line": 11,
+        "is_gateway": 0,
+        "name": "Command Device 3M Light Now",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Command Device 3M Light Now",
+        "id_family": 1,
+        "id_item": 2311
+      }
+    },
+    {
+      "device": {
+        "code": "AA5230",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2688,
+        "id_item": 2309,
+        "id_line": 11,
+        "is_gateway": 0,
+        "name": "Acutator/Command Light Light Now",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Acutator/Command Light Light Now",
+        "id_family": 2,
+        "id_item": 2309
+      }
+    },
+    {
+      "device": {
+        "code": "AC5220MB",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2673,
+        "id_item": 1559,
+        "id_line": 23,
+        "is_gateway": 0,
+        "name": "PIR+US flush mounted sensor",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR+US flush mounted sensor",
+        "id_family": 5,
+        "id_item": 1559
+      }
+    },
+    {
+      "device": {
+        "code": "AC5220MW",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2672,
+        "id_item": 1559,
+        "id_line": 23,
+        "is_gateway": 0,
+        "name": "PIR+US flush mounted sensor",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR+US flush mounted sensor",
+        "id_family": 5,
+        "id_item": 1559
+      }
+    },
+    {
+      "device": {
+        "code": "AM4890",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1915,
+        "id_item": 1469,
+        "id_line": 3,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 3.5",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 3.5",
+        "id_family": 1,
+        "id_item": 1469
+      }
+    },
+    {
+      "device": {
+        "code": "AM5864",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1510,
+        "id_item": 1510,
+        "id_line": 3,
+        "is_gateway": 0,
+        "name": "Colour Touch Screen",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Colour Touch Screen",
+        "id_family": 1,
+        "id_item": 1510
+      }
+    },
+    {
+      "device": {
+        "code": "BMDI3001",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 94,
+        "id_item": 94,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Room Controller 2 Dim Outputs 0-10V 1000VA",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Room Controller 2 Dim Outputs 0-10V 1000VA",
+        "id_family": 23,
+        "id_item": 94
+      }
+    },
+    {
+      "device": {
+        "code": "BMDI3002",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 86,
+        "id_item": 86,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Room Controller 4 Dim Outputs 0-10V 1000VA",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Room Controller 4 Dim Outputs 0-10V 1000VA",
+        "id_family": 23,
+        "id_item": 86
+      }
+    },
+    {
+      "device": {
+        "code": "BMDI3101",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1180,
+        "id_item": 1180,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Room controller - Dimmer 4 Outputs Dali",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Room controller - Dimmer 4 Outputs Dali",
+        "id_family": 23,
+        "id_item": 1180
+      }
+    },
+    {
+      "device": {
+        "code": "BMDI3301",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 88,
+        "id_item": 88,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Room Controller 2 Dim Outputs All loads 1000W",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Room Controller 2 Dim Outputs All loads 1000W",
+        "id_family": 23,
+        "id_item": 88
+      }
+    },
+    {
+      "device": {
+        "code": "BMNE4000",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1923,
+        "id_item": 1169,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Gateway SCS / ZIGBEE",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Gateway SCS / ZIGBEE",
+        "id_family": 100,
+        "id_item": 1169
+      }
+    },
+    {
+      "device": {
+        "code": "BMNE500",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 35,
+        "id_item": 35,
+        "id_line": 5,
+        "is_gateway": 1,
+        "name": "Light manager control unit",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Light manager control unit",
+        "id_family": 8,
+        "id_item": 35
+      }
+    },
+    {
+      "device": {
+        "code": "BMSE1001",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 33,
+        "id_item": 33,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "PIR surface ceiling mounted sensor",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR surface ceiling mounted sensor",
+        "id_family": 5,
+        "id_item": 33
+      }
+    },
+    {
+      "device": {
+        "code": "BMSE2001",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 51,
+        "id_item": 51,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "PIR wall mounted sensor, straight range",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR wall mounted sensor, straight range",
+        "id_family": 5,
+        "id_item": 51
+      }
+    },
+    {
+      "device": {
+        "code": "BMSE2002",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 52,
+        "id_item": 52,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "PIR wall mounted sensor, short range",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR wall mounted sensor, short range",
+        "id_family": 5,
+        "id_item": 52
+      }
+    },
+    {
+      "device": {
+        "code": "BMSE2003",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 53,
+        "id_item": 53,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "PIR wall mounted sensor, dual range",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR wall mounted sensor, dual range",
+        "id_family": 5,
+        "id_item": 53
+      }
+    },
+    {
+      "device": {
+        "code": "BMSE2004",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 56,
+        "id_item": 56,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "PIR wall maunted sensor, long range",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR wall maunted sensor, long range",
+        "id_family": 5,
+        "id_item": 56
+      }
+    },
+    {
+      "device": {
+        "code": "BMSE2005",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 50,
+        "id_item": 50,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "PIR+US wall mounted sensor",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR+US wall mounted sensor",
+        "id_family": 5,
+        "id_item": 50
+      }
+    },
+    {
+      "device": {
+        "code": "BMSE2006",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 137,
+        "id_item": 137,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "IP55 PIR wall mounted sensor",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "IP55 PIR wall mounted sensor",
+        "id_family": 5,
+        "id_item": 137
+      }
+    },
+    {
+      "device": {
+        "code": "BMSE2007",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 58,
+        "id_item": 58,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Sensor occupancy + IR + ZigBee",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Sensor occupancy + IR + ZigBee",
+        "id_family": 5,
+        "id_item": 58
+      }
+    },
+    {
+      "device": {
+        "code": "BMSE3002",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 48,
+        "id_item": 48,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Sensor lighting and movement US ceiling + IR Port",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Sensor lighting and movement US ceiling + IR Port",
+        "id_family": 5,
+        "id_item": 48
+      }
+    },
+    {
+      "device": {
+        "code": "BMSE3005",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 57,
+        "id_item": 57,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Daylight sensor for Room Controller + RJ45",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Daylight sensor for Room Controller + RJ45",
+        "id_family": 5,
+        "id_item": 57
+      }
+    },
+    {
+      "device": {
+        "code": "BMSW3001",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 130,
+        "id_item": 130,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Room Controller 1 Output 16 Amps",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Room Controller 1 Output 16 Amps",
+        "id_family": 23,
+        "id_item": 130
+      }
+    },
+    {
+      "device": {
+        "code": "BMSW3002",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 59,
+        "id_item": 59,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Room Controller 2 Outputs 16 Amps",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Room Controller 2 Outputs 16 Amps",
+        "id_family": 23,
+        "id_item": 59
+      }
+    },
+    {
+      "device": {
+        "code": "BMSW3003",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 89,
+        "id_item": 89,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Room Controller 1 Output 16 Amps - Blind devi",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Room Controller 1 Output 16 Amps - Blind devi",
+        "id_family": 23,
+        "id_item": 89
+      }
+    },
+    {
+      "device": {
+        "code": "F450",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1562,
+        "id_item": 1556,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Gateway OPEN-BACNET",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Gateway OPEN-BACNET",
+        "id_family": 8,
+        "id_item": 1556
+      }
+    },
+    {
+      "device": {
+        "code": "F453",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 912,
+        "id_item": 912,
+        "id_line": 5,
+        "is_gateway": 1,
+        "name": "Enhanced Webserver",
+        "visibility_type": "EDC",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Enhanced Webserver",
+        "id_family": 8,
+        "id_item": 912
+      }
+    },
+    {
+      "device": {
+        "code": "F453AV",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 207,
+        "id_item": 207,
+        "id_line": 5,
+        "is_gateway": 1,
+        "name": "Webserver Audio/Video DIN",
+        "visibility_type": "EDC",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Webserver Audio/Video DIN",
+        "id_family": 8,
+        "id_item": 207
+      }
+    },
+    {
+      "device": {
+        "code": "F454",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 1455,
+        "id_item": 1455,
+        "id_line": 5,
+        "is_gateway": 1,
+        "name": "Web Server A/V Bus",
+        "visibility_type": "EDC",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Web Server A/V Bus",
+        "id_family": 8,
+        "id_item": 1455
+      }
+    },
+    {
+      "device": {
+        "code": "F455",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 2363,
+        "id_item": 2064,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Basic gateway",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Basic gateway",
+        "id_family": 8,
+        "id_item": 2064
+      }
+    },
+    {
+      "device": {
+        "code": "F458",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 2157,
+        "id_item": 1864,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "IP server",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "IP server",
+        "id_family": 8,
+        "id_item": 1864
+      }
+    },
+    {
+      "device": {
+        "code": "F459",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 2546,
+        "id_item": 2193,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Driver Manager",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Driver Manager",
+        "id_family": 8,
+        "id_item": 2193
+      }
+    },
+    {
+      "device": {
+        "code": "F459T",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 2697,
+        "id_item": 2335,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Driver Manager HVAC",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Driver Manager HVAC",
+        "id_family": 8,
+        "id_item": 2335
+      }
+    },
+    {
+      "device": {
+        "code": "F460",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 2649,
+        "id_item": 2288,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "F460",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "F460",
+        "id_family": 8,
+        "id_item": 2288
+      }
+    },
+    {
+      "device": {
+        "code": "F461",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 2650,
+        "id_item": 2293,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "F461",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "F461",
+        "id_family": 8,
+        "id_item": 2293
+      }
+    },
+    {
+      "device": {
+        "code": "F524",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1475,
+        "id_item": 1475,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Energy data logger",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Energy data logger",
+        "id_family": 8,
+        "id_item": 1475
+      }
+    },
+    {
+      "device": {
+        "code": "F80/SG",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 913,
+        "id_item": 913,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Stop&Go",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Stop&Go",
+        "id_family": 12,
+        "id_item": 913
+      }
+    },
+    {
+      "device": {
+        "code": "F80/SGB",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 914,
+        "id_item": 914,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Stop&Go Btest",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Stop&Go Btest",
+        "id_family": 12,
+        "id_item": 914
+      }
+    },
+    {
+      "device": {
+        "code": "F80/SGP",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 916,
+        "id_item": 916,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Stop&Go Plus",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Stop&Go Plus",
+        "id_family": 12,
+        "id_item": 916
+      }
+    },
+    {
+      "device": {
+        "code": "H4650",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1736,
+        "id_item": 1680,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "DO NOT DISTURB-MAKE UP ROOM indicator",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "DO NOT DISTURB-MAKE UP ROOM indicator",
+        "id_family": 101,
+        "id_item": 1680
+      }
+    },
+    {
+      "device": {
+        "code": "H4651",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1737,
+        "id_item": 1681,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "DO NOT DISTURB-MAKE UP ROOM reader",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "DO NOT DISTURB-MAKE UP ROOM reader",
+        "id_family": 101,
+        "id_item": 1681
+      }
+    },
+    {
+      "device": {
+        "code": "H4653",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1735,
+        "id_item": 1679,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "DO NOT DISTURB-MAKE UP ROOM control",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "DO NOT DISTURB-MAKE UP ROOM control",
+        "id_family": 1,
+        "id_item": 1679
+      }
+    },
+    {
+      "device": {
+        "code": "H4684",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 924,
+        "id_item": 1509,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Colour Touch Screen",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Colour Touch Screen",
+        "id_family": 1,
+        "id_item": 1509
+      }
+    },
+    {
+      "device": {
+        "code": "H4710",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2181,
+        "id_item": 1884,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Energy display 2 modules",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Energy display 2 modules",
+        "id_family": 100,
+        "id_item": 1884
+      }
+    },
+    {
+      "device": {
+        "code": "H4890",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1469,
+        "id_item": 1469,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 3.5",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 3.5",
+        "id_family": 1,
+        "id_item": 1469
+      }
+    },
+    {
+      "device": {
+        "code": "HC/HS/HD4577",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1966,
+        "id_item": 39,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Radio interface for temperature probes",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Radio interface for temperature probes",
+        "id_family": 27,
+        "id_item": 39
+      }
+    },
+    {
+      "device": {
+        "code": "HC/HS/HD4601",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 142,
+        "id_item": 160,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Flush mounted alarm central unit",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Flush mounted alarm central unit",
+        "id_family": 10,
+        "id_item": 160
+      }
+    },
+    {
+      "device": {
+        "code": "HC/HS/HD4673",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1465,
+        "id_item": 1465,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Load Control Panel bus",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Load Control Panel bus",
+        "id_family": 1,
+        "id_item": 1465
+      }
+    },
+    {
+      "device": {
+        "code": "HC/HS/HD4891",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1658,
+        "id_item": 1657,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Local Display 1.2\" bus",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Local Display 1.2\" bus",
+        "id_family": 100,
+        "id_item": 1657
+      }
+    },
+    {
+      "device": {
+        "code": "HC/HS4657M3_OLD",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 925,
+        "id_item": 925,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Touch control",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Touch control",
+        "id_family": 1,
+        "id_item": 925
+      }
+    },
+    {
+      "device": {
+        "code": "HC4690",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1340,
+        "id_item": 1340,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Multimedia Touch Screen",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Multimedia Touch Screen",
+        "id_family": 100,
+        "id_item": 1340
+      }
+    },
+    {
+      "device": {
+        "code": "HD4690",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1947,
+        "id_item": 1340,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Multimedia Touch Screen",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Multimedia Touch Screen",
+        "id_family": 100,
+        "id_item": 1340
+      }
+    },
+    {
+      "device": {
+        "code": "HS4690",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1948,
+        "id_item": 1340,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Multimedia Touch Screen",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Multimedia Touch Screen",
+        "id_family": 100,
+        "id_item": 1340
+      }
+    },
+    {
+      "device": {
+        "code": "HW4684",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1512,
+        "id_item": 1512,
+        "id_line": 2,
+        "is_gateway": 0,
+        "name": "Colour Touch Screen",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Colour Touch Screen",
+        "id_family": 1,
+        "id_item": 1512
+      }
+    },
+    {
+      "device": {
+        "code": "HW4890",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1916,
+        "id_item": 1469,
+        "id_line": 16,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 3.5",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 3.5",
+        "id_family": 1,
+        "id_item": 1469
+      }
+    },
+    {
+      "device": {
+        "code": "L/N/NT4577",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 39,
+        "id_item": 39,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "Radio interface for temperature probes",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Radio interface for temperature probes",
+        "id_family": 27,
+        "id_item": 39
+      }
+    },
+    {
+      "device": {
+        "code": "L/N/NT4601",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 160,
+        "id_item": 160,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "Flush mounted alarm central unit",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Flush mounted alarm central unit",
+        "id_family": 10,
+        "id_item": 160
+      }
+    },
+    {
+      "device": {
+        "code": "L/N/NT4673",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1883,
+        "id_item": 1465,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "Load Control Panel bus",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Load Control Panel bus",
+        "id_family": 1,
+        "id_item": 1465
+      }
+    },
+    {
+      "device": {
+        "code": "L/N/NT4891",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1657,
+        "id_item": 1657,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "Local Display 1.2\" bus",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Local Display 1.2\" bus",
+        "id_family": 100,
+        "id_item": 1657
+      }
+    },
+    {
+      "device": {
+        "code": "L4561N",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1130,
+        "id_item": 1130,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Stereo control",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Stereo control",
+        "id_family": 25,
+        "id_item": 1130
+      }
+    },
+    {
+      "device": {
+        "code": "L4684",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1509,
+        "id_item": 1509,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "Colour Touch Screen",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Colour Touch Screen",
+        "id_family": 1,
+        "id_item": 1509
+      }
+    },
+    {
+      "device": {
+        "code": "LN4650",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2001,
+        "id_item": 1680,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "DO NOT DISTURB-MAKE UP ROOM indicator",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "DO NOT DISTURB-MAKE UP ROOM indicator",
+        "id_family": 101,
+        "id_item": 1680
+      }
+    },
+    {
+      "device": {
+        "code": "LN4651",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1999,
+        "id_item": 1681,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "DO NOT DISTURB-MAKE UP ROOM reader",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "DO NOT DISTURB-MAKE UP ROOM reader",
+        "id_family": 101,
+        "id_item": 1681
+      }
+    },
+    {
+      "device": {
+        "code": "LN4653",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2171,
+        "id_item": 1679,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "DO NOT DISTURB-MAKE UP ROOM control",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "DO NOT DISTURB-MAKE UP ROOM control",
+        "id_family": 1,
+        "id_item": 1679
+      }
+    },
+    {
+      "device": {
+        "code": "LN4684A",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1511,
+        "id_item": 1511,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "Colour Touch Screen",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Colour Touch Screen",
+        "id_family": 1,
+        "id_item": 1511
+      }
+    },
+    {
+      "device": {
+        "code": "LN4710",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2182,
+        "id_item": 1884,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "Energy display 2 modules",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Energy display 2 modules",
+        "id_family": 100,
+        "id_item": 1884
+      }
+    },
+    {
+      "device": {
+        "code": "LN4890",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1917,
+        "id_item": 1469,
+        "id_line": 4,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 3.5",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 3.5",
+        "id_family": 1,
+        "id_item": 1469
+      }
+    },
+    {
+      "device": {
+        "code": "LN4890A",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1918,
+        "id_item": 1469,
+        "id_line": 17,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 3.5",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 3.5",
+        "id_family": 1,
+        "id_item": 1469
+      }
+    },
+    {
+      "device": {
+        "code": "MH200",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 98,
+        "id_item": 98,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Scenes programmer",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Scenes programmer",
+        "id_family": 19,
+        "id_item": 98
+      }
+    },
+    {
+      "device": {
+        "code": "MH200N",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1331,
+        "id_item": 1331,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Scenario programmer",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Scenario programmer",
+        "id_family": 19,
+        "id_item": 1331
+      }
+    },
+    {
+      "device": {
+        "code": "MH201",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 1814,
+        "id_item": 1771,
+        "id_line": 5,
+        "is_gateway": 1,
+        "name": "IP scenario module",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "IP scenario module",
+        "id_family": 8,
+        "id_item": 1771
+      }
+    },
+    {
+      "device": {
+        "code": "MH202",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 2222,
+        "id_item": 1902,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "Scenario programmer",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Scenario programmer",
+        "id_family": 19,
+        "id_item": 1902
+      }
+    },
+    {
+      "device": {
+        "code": "MH4892",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1806,
+        "id_item": 1768,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 10",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 10",
+        "id_family": 100,
+        "id_item": 1768
+      }
+    },
+    {
+      "device": {
+        "code": "MH4892C",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2420,
+        "id_item": 1898,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 10 Capacitive",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 10 Capacitive",
+        "id_family": 100,
+        "id_item": 1898
+      }
+    },
+    {
+      "device": {
+        "code": "MH4893",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 1977,
+        "id_item": 1768,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 10",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 10",
+        "id_family": 100,
+        "id_item": 1768
+      }
+    },
+    {
+      "device": {
+        "code": "MH4893C",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2421,
+        "id_item": 1898,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "MyHOME_Screen 10 Capacitive",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHOME_Screen 10 Capacitive",
+        "id_family": 100,
+        "id_item": 1898
+      }
+    },
+    {
+      "device": {
+        "code": "MX5220",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2666,
+        "id_item": 2310,
+        "id_line": 23,
+        "is_gateway": 0,
+        "name": "Acutator/Command Shutter Light Now",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Acutator/Command Shutter Light Now",
+        "id_family": 2,
+        "id_item": 2310
+      }
+    },
+    {
+      "device": {
+        "code": "MX5222",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2662,
+        "id_item": 2307,
+        "id_line": 23,
+        "is_gateway": 0,
+        "name": "Command Device 2M Light Now",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Command Device 2M Light Now",
+        "id_family": 1,
+        "id_item": 2307
+      }
+    },
+    {
+      "device": {
+        "code": "MX5223",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2668,
+        "id_item": 2311,
+        "id_line": 23,
+        "is_gateway": 0,
+        "name": "Command Device 3M Light Now",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Command Device 3M Light Now",
+        "id_family": 1,
+        "id_item": 2311
+      }
+    },
+    {
+      "device": {
+        "code": "MX5230",
+        "dependent": 0,
+        "id_brand": 2,
+        "id_device": 2664,
+        "id_item": 2309,
+        "id_line": 23,
+        "is_gateway": 0,
+        "name": "Acutator/Command Light Light Now",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Acutator/Command Light Light Now",
+        "id_family": 2,
+        "id_item": 2309
+      }
+    },
+    {
+      "device": {
+        "code": "MyHomeServer1",
+        "dependent": 0,
+        "id_brand": 6,
+        "id_device": 2552,
+        "id_item": 2198,
+        "id_line": 5,
+        "is_gateway": 0,
+        "name": "MyHomeServer",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "MyHomeServer",
+        "id_family": 8,
+        "id_item": 2198
+      }
+    },
+    {
+      "device": {
+        "code": "Y4652M2",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2661,
+        "id_item": 2307,
+        "id_line": 22,
+        "is_gateway": 0,
+        "name": "Command Device 2M Light Now",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Command Device 2M Light Now",
+        "id_family": 1,
+        "id_item": 2307
+      }
+    },
+    {
+      "device": {
+        "code": "Y4652M3",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2667,
+        "id_item": 2311,
+        "id_line": 22,
+        "is_gateway": 0,
+        "name": "Command Device 3M Light Now",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Command Device 3M Light Now",
+        "id_family": 1,
+        "id_item": 2311
+      }
+    },
+    {
+      "device": {
+        "code": "Y4672M2L",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2663,
+        "id_item": 2309,
+        "id_line": 22,
+        "is_gateway": 0,
+        "name": "Acutator/Command Light Light Now",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Acutator/Command Light Light Now",
+        "id_family": 2,
+        "id_item": 2309
+      }
+    },
+    {
+      "device": {
+        "code": "Y4672M2S",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2665,
+        "id_item": 2310,
+        "id_line": 22,
+        "is_gateway": 0,
+        "name": "Acutator/Command Shutter Light Now",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "Acutator/Command Shutter Light Now",
+        "id_family": 2,
+        "id_item": 2310
+      }
+    },
+    {
+      "device": {
+        "code": "YD4658",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2670,
+        "id_item": 1559,
+        "id_line": 22,
+        "is_gateway": 0,
+        "name": "PIR+US flush mounted sensor",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR+US flush mounted sensor",
+        "id_family": 5,
+        "id_item": 1559
+      }
+    },
+    {
+      "device": {
+        "code": "YG4658",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2671,
+        "id_item": 1559,
+        "id_line": 22,
+        "is_gateway": 0,
+        "name": "PIR+US flush mounted sensor",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR+US flush mounted sensor",
+        "id_family": 5,
+        "id_item": 1559
+      }
+    },
+    {
+      "device": {
+        "code": "YW4658",
+        "dependent": 0,
+        "id_brand": 1,
+        "id_device": 2669,
+        "id_item": 1559,
+        "id_line": 22,
+        "is_gateway": 0,
+        "name": "PIR+US flush mounted sensor",
+        "visibility_type": "",
+        "visible": 1
+      },
+      "item": {
+        "descr": "PIR+US flush mounted sensor",
+        "id_family": 5,
+        "id_item": 1559
+      }
+    }
+  ],
+  "suite_rows": 541,
+  "uniqueness_verified": true
+}

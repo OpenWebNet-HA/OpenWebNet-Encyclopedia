@@ -1,0 +1,18 @@
+# MH202 1.0.24 - ranked remaining questions
+
+The overnight examination has finished its source investigations. These questions remain open; they are not a request to continue the closed authentication/session/framing branch or a claim that the exact file has been analyzed exhaustively.
+
+| Rank | Question | Evidence needed to progress |
+| --- | --- | --- |
+|1|What configured extra4 scripts/index and extra2 resources were actually installed, and how do script variables/actions join manager state?|The missing2.xtz/4.xtz or an independently sourced configuration; the current package cannot reconstruct their contents.|
+|2|Which providers, plugin registry, contexts, callbacks, queue owners and source lifetime paths are naturally active?|Coherent initialized state and ownership provenance. The manual WHO25 join and packaged GLib contract do not prove real timing, leaks, publication or feedback.|
+|3|Where do internal R/P lifecycle records originate, and how is the shared command gate fully cleared?|An identifiable internal non-transport producer/configured-script bridge. Existing FIFO path/descriptor source and exact-pattern queries do not establish global absence; external/third-party delegates stay uninspected.|
+|4|What initializes production special DIM1 selector words, and what complete configured grammar/precedence/capacity policy applies?|Actual selector/source history and justified original state. Stopped prefixes, canaries and finite ledgers cannot supply it.|
+|5|Can upstream diagnostics, C++ registry/stream/caller state and thermo status/data correlation be joined coherently?|Original initialized objects/provider provenance and justified inputs, followed by separately authorized isolated or physical corroboration. No forced opaque stubs or invented fields.|
+|6|Which software constructions correspond to actual Device support, physical measurements and concurrent behavior?|Appropriately scoped Device/runtime evidence and remaining source reconciliation. Current static/helpers do not establish those outcomes or close wider Device gates.|
+
+Additional targeted static work remains possible, but expected value now depends increasingly on fresh configured assets and coherent state rather than repeating completed helper, body, guard or inventory matrices. Other firmware packages must retain their own exact identities/layouts and cannot inherit these MH202 conclusions by filename or product similarity.
+
+WHO29's positive packaged owner is resolved; actual activation/current logger state/full constructor/wire/public vocabulary remain outside that result. Raw temperature scalars retain no assigned units or special-value meaning. Existing published command meanings and physical/oracle records keep their original applicability.
+
+The final saved ledger remains15 canonical corpora/71 entries/31,961original visits/3,165primitives/132redirects/27EXIT returns/2selector stops/35,287hooks, with no firmware process/target OS/service/gateway/bus execution. Wider Device/source gates and run18/run21 unavailable intermediate-history limitations remain explicit. See [final report](FINAL_REPORT.md), [coverage](COVERAGE.md), [verification](validation/final/final-checkpoint.json) and [research state/closure receipt](RESEARCH_STATE.json).

@@ -1,0 +1,33 @@
+# MH200N night03 resource-consumer source review
+
+PASS. No author correction requested.
+
+Reviewed UTC: 2026-11-01T20:52:42.579157+00:00. Scope is the frozen original local consumer prefix0xa1dc and its two early token-return branches, with the prior caller retained as inherited context. Full resource format, later fields and installation remain outside this review.
+
+I read the entire collector/report/source/argument-flow evidence and ran only the permitted read-only reproduction using the parent-verified host ARM disassembler: `python3 -B work/mh200n-firmware/1.1.8/research/2026-11-01-night03-consumer/collect_consumer_v1.py --check`. Actual result was PASS, five outputs, eight spans,33 guards, zero original execution. Host disassembly reads bytes; no original/helper/provider instruction or target device path is executed/read through those original calls.
+
+An independent audit verified all five exact input identities, all generated manifest entries and all six exact first copies. Fresh original ELF32 little-endian ARM EXEC/machine40/flags0x202 and PT_LOAD mapping agree. All eight saved spans,33 exact words, six BL targets, two selected return branches, shared delimiter pool and its two bytes match the original file. I independently decoded rotated ARM immediates in all four PLT stubs and corroborated their actual JUMP_SLOT rows with host readelf; this verifies original import metadata, not effective runtime binding or provider bodies.
+
+The positive dataflow is precise. EntryR0 pathname is retained inR4; supplied output addresses are separately retained inR8/R7. The selected prefix requests open on that same pathname with numericR1=0, preserves the returned machine word inR6, requests memset on the1024-byte SP buffer, then requests read with savedR6/sameSP/1024. Retained bytes show no explicit open/read-result check before the token requests on this local path; later comparisons in the prefix concern a separate diagnostic-selection value, not the read result. This does not prove a valid descriptor, complete read, safe resource, error policy or defect. In particular, an initially zeroed1024-byte buffer may be fully overwritten by the requested read; a valid terminated C string remains a premise rather than an unconditional consequence.
+
+The same SP buffer is supplied to the first strtok request with exact NUL-terminated delimiter '*', pool0xa3c4→0xe488. CMP0 followed by non-flag-setting ADDEQ R0,R0,#1 preserves the equality flags for BEQ0xa28c→0xa3a8, so the selected NULL result produces local numeric1. The next selected request suppliesR0=0 and the same delimiter; its corresponding ADDEQ #2 and BEQ0xa2a4→the same epilogue produce local numeric2 onNULL. Ordinary strtok continuation semantics, effective binding and suitable string state remain explicit premises. These values are not public protocol statuses, OS error codes, child exits or application modes.
+
+The epilogue restores the1024-byte allocation and the saved registers/PC. The nonnull second-token continuation, subsequent stores, output content, cleanup and successful-return meaning are not inspected or inferred. The prior0xa3ec→0xa424 caller context is accurately labeled inherited and does not count the old marker/cell table again. Its configured pathname/current state, natural earlier/later admission, no relevant mutation/aliases and valid addresses remain conditional; no actual partition, copy, extraction, installed overlay, script compiler or resource grammar is forced.
+
+No MH202/MHS/F454/F453AV roles, layouts, helper semantics or physical capabilities are transferred. Curated product context and same-file identities do not establish runtime behavior. No token/resource/private configuration/credential/key values are supplied or exported. No original/vendor/native/provider/emulator, target OS/device/network/bus, mount, SQL, model/fixture, old source collector or previous corpus execution occurred. Output/receiving/transport/authentication/session/framing/MQTT/libjel and equivalent closed implementations stay opaque. All author files, old evidence and original sources remain unchanged.
+
+## Exact frozen identities
+
+Paths below are relative to `work/mh200n-firmware/1.1.8/research/2026-11-01-night03-consumer/`.
+
+| File | Bytes | SHA-256 |
+|---|---:|---|
+| `REPORT.md` | 5916 | `34bb0640bb51ed6d100587cce098de847b359839120532e2b32cf18f505d263e` |
+| `collect_consumer_v1.py` | 13858 | `3603e4841f5fa60e33cf7a27271cf76f22b1d4455070c15ad5e35783e73e922e` |
+| `OUTPUT_MANIFEST.json` | 612 | `51649d65186135eebd5f25d41625eab99b2b24bce1001640a9e0a73c3128c4ec` |
+| `SOURCE.json` | 12964 | `91a223cfd41f7eef759d9b5d69fa0a5fc4d00e9ddfb5495c619251938fb47fd5` |
+| `ARGUMENT_FLOW.json` | 1581 | `474bcb0ef7b43a0a737c3a70084abe5c72ebb718286619ff22741bb3b7f35aed` |
+| `INPUTS.json` | 1051 | `8e761a8692e06af73b051cb9a49eefbda18f3318d1656c86bebdb5ce54fca792` |
+| `first-candidate/INDEX.json` | 989 | `a913294dc9fefc541e6223a020a9568337ee9b205d0272feccaa946541000281` |
+
+This review is exclusively created with an immediate exact first copy. The index excludes itself and was computed before opening its own file. No correction or earlier review rewrite was required.

@@ -1,0 +1,48 @@
+# MH202 morning completion preflight through reviewed checkpoint27
+
+PASS for the bounded preparation review; this does not complete the overnight task. I read the current coordination state, synthesis, coverage, ranking and completion plan, the frozen through26 draft, corrected run27 native report/refinement, positive WHO29 report and their independent reviews. This is documentary/source-aware comparison with selectively rechecked identities and arithmetic, not a new all-source semantic audit, original-code replay or target execution. Only this NEW review is written.
+
+## Precise requirements for the NEW final edition
+
+1. Create NEW FINAL_REPORT.md. Keep root MORNING_REPORT.md through22 and FINAL_DRAFT.through26.md byte-for-byte frozen. Preserve their historical counts rather than relabeling either as current/completed.
+2. Use the latest completed checkpoint ledger at assembly. Through27 it is15 canonical corpora,71 top-level entries including two stopped prefixes,31961 original instruction visits,3165 declared primitive callbacks,132 original-definition redirects,27 EXIT returns and2 selector-read stops, totaling35287 hooks. Setup writes, verifier replays, original GLib visit subsets and nested parsers are not extra corpora/entries. Firmware process/target OS/service/device/bus operations remain0. I independently summed corpus entry/original/primitive/redirect/hook records and checked the full ledger equation. Later static-only additions do not change it.
+3. Add run27's actual NULL-source core/parser/new_id -> SAME Q -> original WHO25 initializer/application closure, explicitly MANUAL and conditional. It is3 top entries/380 original+25 primitives+4 redirects+3 EXIT=412 hooks. Original24-byte private initialization and parsed fields are not reseeded. Q metadata changes, same-pointer list outputs and native ID production do not prove natural dispatcher/queue/feedback correlation, uniqueness or ownership safety. Timer/context handles are deliberately unmapped opaque models, publication callback is NULL, and no actual timer/callback/publication/I/O executes.
+4. Cite WHO25 REPORT.v2.md together with SOURCE_IDENTITY_REFINEMENT.md. The sole v1-to-v2 change corrects one source table hash; v1 report/collector/results/code/counts remain retained. Do not promote the wrong v1 hash or imply its historical static collector regenerates v2. This preserved identity-table refinement is different from missing intermediate history.
+5. Add positive WHO29 packaged ownership: actual debug descriptor registration/criterion29/outer callback plus exact parsed WHO29 check. Selected already-parsed WHERE4/kind3/DIM2 getter0 is a supplied fixture reaching raw constructor arguments only. No current logger value, final response schema/wire, whole public vocabulary, exclusive owner, activation, secret command or access-policy conclusion is established. Update an old 'unknown owner' question if present; retain activation/constructor boundaries.
+6. Carry source23..26 refinements forward: utility600microseconds only under candidate provider/success/ordinary ARM32 timeval ABI; no measured timer/defect. Utility260's tenth converted value is not Boolean/full accepted configuration. WHO25/14/15 examples retain independent supplied reverse/config/address premises, own state policies and curated-reference separation. The through26 private-context table's WHO25 'static only' cell becomes stale if copied as a CURRENT scope: distinguish static STM source from the later selected manual native join. It remains accurate inside its frozen historical draft.
+7. Replace final-current verification references with final saved verification, coverage, evidence index and ranked gaps. Draft's checkpoint22 link and through26 fourteen-corpus subtotal are historical, not final-current certificates. Include later navigation as navigation only, not source re-audit/test/coverage percentage. All73 existing through26 draft references resolve at review time; no frozen draft edit is requested.
+8. State both run18 and sound21 unavailable intermediate generated-draft limits. Current source/effects independently verified does not authenticate missing old bytes. Announced snapshots, reconstructed-history limits and later immutable first-candidate policy must remain distinct. Do not call history complete or analysis exhaustive.
+9. Perform final checks with honest method labels: archive/source/report identities, current branch/docs/local refs/ESG/ECV/diff, frozen pins, per-corpus arithmetic, independent final synthesis review and coverage/ranking. Inherited tooling31/Device210 checks remain inherited; wider Device/source gates stay pending. Generate evidence index last, save final completion artifacts, then close the SAME MH202 heartbeat and report its actual closure. F454 remains paused. No commits/publishing/live contact.
+10. From07:15 Europe/Paris (06:15UTC) use consolidation only; the06:13UTC wake should already consolidate rather than start an unfittable source batch. Complete by08:00Paris (07:00UTC). Pending run28 source results need their own reviewed identities before inclusion; this preflight does not preapprove them.
+
+## Recommended final ranked gaps
+
+1. Missing extra4 configured scripts/index and extra2 resources: strongest limit on real source grammar, natural lifecycle and configured command/action behavior. Retain taskmanager direct slots, event caches and interpreter named records as separate until an actual bridge is proved.
+2. Natural active provider/registry/context/queue/lifetime chain, including WHO25 real source ownership/timer/publication and coherent field feedback. A bounded packaged GLib API contract can narrow obligations, but is not leak/scheduling/physical proof.
+3. Internal named-FIFO R/P producer/control lifecycle and complete command-gate clearing, using only established FIFO descriptor provenance. External client/network/session/auth/framing delegates are closed boundaries, not a proposed retry.
+4. Production special DIM1 selector history/configuration and complete trigger/interpreter grammar/action/global/capacity state. Stopped prefixes/canaries/finite source ledgers do not establish production state.
+5. Diagnostic upstream raw decoder/maps/registry/C++ stream state, thermo admission/status-data correlation, and actual constructor/publication outcomes. Keep synthetic identity/scalars/software receipts distinct from physical measurements.
+6. Runtime/concurrency/device corroboration and wider Device/source gates remain outside this examination. WHO29 positive owner is no longer an inventory gap; no broad debug/access/secret exploration is recommended.
+
+The current plan and state are consistent with these requirements. No blocking contradiction or need to edit either frozen draft was found. The final synthesis remains to be assembled and independently reviewed after the last bounded source batches.
+
+## Reviewed exact bytes
+
+| Research-relative artifact | SHA256 |
+|---|---|
+|RESEARCH_STATE.json|52e3692fc9f9272ca101da3f079661b42e85085a3b0cdf4ce90dcc17c956264f|
+|SYNTHESIS.md|630820ee46a62d68f7240ce69d70ea42b2f10c0211113466fe7c1420ff24dd3d|
+|COVERAGE.md|ce624e048502a0267eb86e2a586cb00552b5dbb5d74f6315c8c5087c38f90c5c|
+|REMAINING_QUESTIONS.md|bdb13015503fef6e52f20f88fdfa90053010aa3d8f9ee5e98dd2591595799994|
+|reconciliation/run24/MORNING_COMPLETION_PLAN.md|bda115bbcfd92aeccaece7aee7a63e615d4d4f85a54297a50c573459785ed015|
+|MORNING_REPORT.md|ad21bd70deb3c1b21eec6d52f86d473162b3ede66b7cb6ed1164193c3fc7ab44|
+|reconciliation/run27/FINAL_DRAFT.through26.md|e1ba480d93b1a0c60105c85a5f0ab6e8bfa94db8bfa066c421baa1cf2f1ae301|
+|who25/run27-native/REPORT.v2.md|437cb8bb3777594d10b27bbc76a10a7b944431b1e918f28db51e89eaae50416a|
+|who25/run27-native/SOURCE_IDENTITY_REFINEMENT.md|cceba8f83a6b808192c848b1a5e131733970ce323dd603328d075a0ad12e4ccd|
+|routing/run27/REPORT.md|b28b2d23d05d5edb25ba0fa70886c98b50fbcdcf9b370d3dcdfe268dd34e9712|
+|reviews/run27/native-review.md|187e879f6fe2ff617239169b2ccbd672e6753b75864298520c806ebc04a49852|
+|reviews/run27/owner-review.md|66ec88c1ae2a86d1f506cb9e8c770884ff8eeafb1fd24a99641ca82673168544|
+|reviews/run27/integration-review.md|3c19bcd2e8eecd960848a8030dc19c72b243630d1e462f354ed125376dcbe558|
+|validation/run27/final-checkpoint.json|d5e178ad7e85f88078b021ca22ba7ae18a6ef498782e303cb4fe66b55a41dc4f|
+
+The first four coordination pins are a read-time checkpoint27 snapshot and may legitimately advance; they are not frozen-source claims. All other identities identify the exact reviewed documents above.

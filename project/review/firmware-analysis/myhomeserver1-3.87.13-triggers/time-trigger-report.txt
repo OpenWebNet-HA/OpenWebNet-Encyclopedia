@@ -1,0 +1,64 @@
+# MyHOMEServer1 3.87.13: TIME trigger schema and compiled handoff
+
+The raw trigger local enum0 is exactly `TIME`. Its special factory branch constructs a68-byte TimeTrigger, retaining the JSON `time` string and a binary mask derived from `days`. The selected initializer reparses its serialized JSON, constructs a distinct TimeTriggerRunner and passes a two-word handle to an original registration entry. This closes a static schema/class/argument path, not a valid configured calendar, installed trigger, actual registration, firing, elapsed timing or scene success.
+
+Original image path `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. All addresses are original ELF VAs; actual PT_LOAD translation is used, including the distinct RW file offset. No live PIE address or earlier firmware layout is supplied.
+
+## The raw zero route is special
+
+The raw factory0x2e9fc compares `type` against its original local trigger table. The first row at0x160450 is length4 and literal `TIME`; this enum namespace is not action TIME, WHO or a parsed frame kind. At0x2eab4 it subtracts1 from the matched local index, compares the result unsigned to22 and uses BHI0x2eab8 to0x2f7ec. Thus matched index0 takes the special branch instead of the ordinary index-minus1 TBH. This is the selected matched-index route; no broad missing/unknown-type acceptance inference is needed.
+
+At0x2f7ec the factory calls0x2d140 with the original current JSON element, requests68 bytes at0x2f7f4/0x2f7f6, calls base copy0x2df3c, installs the TimeTrigger address point, copies its string at+40 and stores mask+64 at0x2f828. Original vtable header0x1603dc, RTTI0x163140 and exact name `11TimeTrigger` are verified through relocation-backed GOTslot0x1662d4. Its JSON serialization slot+8 from the address point is Thumb0x29af1. No serializer, parser or allocation was executed.
+
+## Selected raw schema and local mask grammar
+
+The shared base-trigger parser0x2c678 stores these fields before the TIME-specific extension. They are fresh fields from this exact executable:
+
+| JSON key | Selected conversion / destination |
+|---|---|
+|`enabled`|JsonCpp `asBool`; byte+28 store0x2c6cc|
+|`id`|Presence check and string conversion; C++ string beginning+4, no runtime identity/default meaning claimed|
+|`type`|Exact table matching; local enum+32 store0x2c784|
+|`operator`|Selected string-based base field at+36; complete operator semantics are outside this batch|
+
+The derived parser0x2d140 calls that base parser at0x2d164, reads exact `time` at0x2d184 and `asString`0x2d190, assigning the result to string+40. It then reads exact `days` at0x2d1b2 and `asString`0x2d1ba. The local algorithm inspects at most seven leading characters: length0 yields mask0; lengths1..6 use that length; a length greater than6 sets the iteration count to7 at0x2d21c. It walks left to right, shifting each inspected `'1'` into bit(inspection_count−1−position); `'0'` contributes no bit. A different inspected character reaches an invalid-argument throw request0x2d224. The resulting mask is stored+64 at0x2d1f2. Uninspected suffixes of strings longer than7 are not validated by this local loop.
+
+These are bounded original character/bit rules, not a supplied calendar fixture or whole valid-input grammar. JsonCpp conversion/error behavior remains unexecuted. The local time-string assignment alone does not validate clock syntax, timezone, date, recurrence or natural input. The weekday associated with any mask bit is not established here.
+
+Serializer0x29af0 independently reads time+40 at0x29bca and emits it under the exact `time` key0x29bda. It creates a seven-character string initially filled with `'0'`, then maps bits6..0 of mask+64 into character positions0..6 (0x29bea..0x29c58), and emits exact `days` at0x29c64. Thus shorter parser inputs have a source-backed seven-character serialization representation, but no roundtrip execution or calendar meaning is inferred. The base fields and any optional operator serialization remain governed by their separate source branches.
+
+## Compilation and two distinct pointers
+
+The original initializer reads raw trigger+32 at0xa7322. Its TBH0xa732a/base0xa732e has index0 halfword0x06ed, reaching0xa8108. This is a different table from the raw factory's special branch.
+
+That selected branch prepares a callable capturing the scene pointer, with invoker Thumb0xa60a9 and manager Thumb0xa56c1 recovered from pools0xa8af0/0xa8af4. It calls0xb43d8 at0xa813e to form a temporary base callback object. Next it obtains JSON through the raw trigger's vtable+8 at0xa814e, parses0x2d140 at0xa815a, and calls compiled constructor0xb8e7c at0xa816c. This callback's known wrapper/scene launch is inherited from the preceding runner report; callback invocation is not performed or proved here.
+
+Constructor0xb8e7c takes the callback object in r1 and the reparsed TimeTrigger in r2. It copies the callback's callable data/manager/invoker under ordinary normal-return semantics. Selected compiled **inner object** offsets are:
+
+| Inner object offset | Source at0xb8e7c |
+|---|---|
+|+0|Primary runner vptr|
+|+4/+12/+16|Callable data / manager / invoker fields copied from the supplied callback representation|
+|+20|Raw/base subobject vptr|
+|+24|Raw id string copied from raw+4|
+|+48|Raw enabled byte copied at0xb8f3a|
+|+52/+56|Raw type/operator pair copied at0xb8f34..0xb8f40|
+|+60|Raw time string copied from raw+40|
+|+84|Raw days mask+64 copied at0xb8f88..0xb8f90|
+|+88/+92|Two words zeroed at0xb8f98; subsequent meaning is outside this constructor-only scope|
+
+The exact derived type is `17TimeTriggerRunner`, RTTI0x164df8, vtable header0x161e5c. Primary address point is header+8; the stored subobject address point is header+32. Original constructor PIC0xb907c/0xb8f8a and outer GOTslot0x1667e0 both resolve to that same header. Constructor call0xb8fa0 delegates to original0xb8be0. Its calendar preparation/registration details are deliberately not inspected or assumed in this batch.
+
+The outer initializer then requests a112-byte allocation at0xa81a2. Its **allocation base** is held in r8, while sl becomes **base+16**, the inner object pointer. All following aggregate offsets must be read with that distinction: for example allocation+36 is inner+20 vptr, allocation+76 is inner+60 time string and allocation+100 is inner+84 mask. The pair written at0xa829e is `(sl, r8)`, hence `(inner pointer, allocation/control base)`. The selected capacity-available vector path writes the same pair to the old end at0xa82ca and advances scene+108 by8 at0xa82e6; this is the compiled trigger range rooted at scene+104, not the raw pointer vector rooted at scene+0. Capacity-growth and ownership/error branches remain outside the selected normal append scope.
+
+At0xa830a the caller loads r0 from initializer stack+20 (the saved incoming r1), passes r1=&the two-word pair at0xa830c and calls0xb9814 at0xa830e. This is the precise context/handle registration handoff. It does not prove that the context is active, the callee accepts/retains it, the handle refers to a currently registered calendar, or that firing happens. Reference-count operations and the control/object aggregate shape do not establish whole lifetime/concurrency correctness. The registration callee, lower preparation0xb8be0 and framework firing are separate investigation boundaries.
+
+## Reproduction, preservation and remaining questions
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31-triggers/time-trigger/collect_time_v1.py --check`
+
+The collector emits20 outputs including its manifest, pins four read-only inputs and retains11 exact original Thumb2 spans, nine safe JSON-key PIC resolutions, two RTTI/vtable identities with four relocation chains, two callback code-pointer joins, nine direct BL checks and15 critical instruction-byte guards. All20 outputs plus collector were immediately preserved in `first-candidate/`; the21-member index was computed before opening it. This first report is independently frozen in `report-first-candidate/`. No generated candidate failed or was overwritten. An exploratory disassembly slice began inside a Thumb BL and its first bogus decode was discarded before evidence generation; retained spans use verified function/instruction starts and treat pool/TBH data as data.
+
+Accounting: original instruction execution0; native entries0; callbacks/primitives/redirects/EXIT/stops0; scene/calendar fixtures0; semantic host models0. No vendor process, calendar/time API, actual SQL/expression, service, network/bus or physical execution occurred. Original files, prior reports and source registry remain read-only. Nearest exported template labels are not adopted as source function identities.
+
+Highest remaining questions: exact lower calendar preparation and accepted time syntax; registration-context provider/population; framework callback retention and firing; weekday orientation/timezone/recurrence/clock policy; lifetime/error paths and natural scene state. The present evidence establishes a selected packaged source path only, not a complete scheduler or Device approval.

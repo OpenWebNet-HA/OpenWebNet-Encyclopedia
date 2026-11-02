@@ -1,0 +1,38 @@
+{
+  "collector_sha256": "bcde12a10d6d8b83f9305d076c53d9018573abbca18b54c595d4688a0e3a1435",
+  "outputs": {
+    "INPUTS.json": {
+      "sha256": "301877deb810f70d1d89c573a4028328517a9cc3cb3eaff3fef0db3079d335cc",
+      "size": 1091
+    },
+    "SOURCE.json": {
+      "sha256": "ea28b2bfad1730e31fb40d358bbed191bfab0c623ee8ee34a4ecb79a3e8719c4",
+      "size": 7766
+    },
+    "spans/actual-main-monitor-request.txt": {
+      "sha256": "243cc9f37a2557affc6ae78c19ec076c16fa55cadf2f90aeb3562114f3820078",
+      "size": 219
+    },
+    "spans/callback-input-and-support.txt": {
+      "sha256": "43007d6d33ede18729a16c89592a2e9b3104c0d273dba729bca4a8603c78a7cd",
+      "size": 1145
+    },
+    "spans/monitor-callback-registration.txt": {
+      "sha256": "db04ac906eab607735d7c45190f8cecb78975d209e331880ef25b0eae77aa828",
+      "size": 1407
+    },
+    "spans/nonmatch-next-node.txt": {
+      "sha256": "aa0c3b0b830270619f6edbb1fb40b1d51ee9d7ca2558f9fc54bd07d9b69d83c8",
+      "size": 509
+    },
+    "spans/retained-path-match-event-gate.txt": {
+      "sha256": "cb41e41daeef4c16d7687d47007e508b7810156a9a61731a6e0f34cbe513b67a",
+      "size": 752
+    },
+    "spans/selected-stop-remove-close-return.txt": {
+      "sha256": "a963a10f81b177900230d44fdd70d6e79bae272090b00984fc6c8536492d83c7",
+      "size": 1886
+    }
+  },
+  "report_sha256": "891728ccd1d024c018cc8362d0399cd5bdc793c0597c696b68560765407735d3"
+}

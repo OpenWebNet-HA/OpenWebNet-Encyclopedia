@@ -1,0 +1,10 @@
+# F460/F461 first-pass coverage
+
+| Evidence space | Bounded examined reach | Open boundary |
+| --- | --- | --- |
+|Archive/images|Exactregisteredarchivebytes, fourmembers, normal/recoveryext4, kernel/DTB/auxiliarypayload, CRC/gzip/geometry|Cryptographicsignatureauthenticity/install/recovery/runtime|
+|Packagedsoftware|Allregularheadercensuses, selectedELFheaders/dependencies, startupscript/stackdeclarations, exactpath/hashcomparisons|Actualconsumers/activation/binding/peripherals, object/command/sourcebehavior|
+|Databases|AllregularSQLite-headersearch, sharedcatalogueidentity,75tableSQL/typedrowmultisets+indexmetadata vsMHS/Suite|Othercontainer/encrypted/runtimeDBs, stableID/ownersemantics, consumerfilter/fallback/support|
+|Crossproductscope|F460Home+Control vsF461thirdpartycuratedroles, separate actualpackageABI andcomposition|No featureabsence/hardware/physicalmeaning fromnames, inventoryorObjectreuse|
+
+Comparisoncounts:3imageprofiles/6normal-recoverypathpairs/13selectedpathsperproduct/4DBprofiles300tableinstances/3DBpairs,8outputs9firstcopies. Countsarestructuralreach/integritynotcoveragepercentages. Perproductfirstpasses retainowncounts/reproduction/reviews. Alloriginal/native/targetruntime/bus/physical/models/fixtures0; oldledgers separateunchanged. No fullDevice/sourcegateclosure.

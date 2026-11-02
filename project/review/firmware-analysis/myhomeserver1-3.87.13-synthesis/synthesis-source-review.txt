@@ -1,0 +1,71 @@
+# Source-to-synthesis review: MyHOMEServer1 3.87.13 overview
+
+PASS, no required correction. The frozen candidate is `overview/ENCYCLOPEDIA_CANDIDATE.md` SHA256 `5d9426583d60ffe1618b2a82e0bf9bd97426387a6245c7b8e6500bfe09cdc5c1`, intended for `reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md`. Relative links were assessed in that final repository context, not the local research draft's directory. Final capsule/materialized navigation/mechanical validation remain the coordinator's responsibility.
+
+I am a different author from the synthesis author, but authored several underlying protocol/schema/ownership reports and the isolated harness. This is an independent synthesis-wording/authority comparison, source-aware for my contributions; it is not independent reexecution or new corroboration of those underlying findings. Other topics were compared documentarily with the current reviewed encyclopedia pages, their preserved source-scope/refinement notes and selected authoritative reports. No old collector, native/CPU corpus, vendor/runtime/provider, JSON, SQL expression or target operation was replayed. This review introduces no new firmware-source investigation.
+
+## Coherent scope and authority
+
+The overview correctly leads with a selected source-level scenario-engine map and a distinct embedded catalogue, rather than complete firmware/command coverage. Device OWN-DEV-0199 supplies product roles only. Package, scheduler, catalogue and scalar-provider identities match their retained sources. F454 hardware roles, MH202 script grammar, names/enum equality and catalogue metadata are not promoted into this build's behavior.
+
+The loading section retains absence of packaged regular files as a bounded configuration gap. The actual scheduler report independently says both normal and recovery original regular-file inventories contain zero under the exact configured prefix; the overview correctly does not infer a missing live directory or inactive feature. Its arrows explicitly denote conditional source relations, not a captured/executed transaction.
+
+The selected startup container to loader to SCENARIO context is a positive source join. The numeric-removal dispatcher's word0 to that startup container remains unclosed, and the overview keeps that separate. Duplicate insertion/key handling is not called a universal ID grammar, natural order or atomic/idempotent operation. No after-poll removal/lifetime result is inferred.
+
+Compiled trigger/action eight-byte pointer/control entries remain distinct from the four-byte compiled-condition pointees. The overview's positive condition deleting-slot teardown is supported by the new scene+116 walker, exact null leg and selected BNCUSCENE primary slot+4/body. It does not misidentify predicate slot+8, infer absent ownership from raw pointers, or turn conditional deleting requests into a whole-lifetime guarantee.
+
+## Namespaces, behavior and timing
+
+The trigger/condition table preserves each path's own raw/compiled identities, fields and premises. BNIL local event publication/admission is not external registration or accepted traffic. BNLD status/level and its query boundary remain scoped. BNTH selector2/setpoint serializer and typed Thermostat record+32 are conditional same-ID/type/provider source joins; record+16 embedding is not transferred from Light+12. Missing-member local zero is not a physical measurement or missing-device meaning. Event `params.id` and removal `params.scene_id` remain distinct.
+
+BNCUSCENE's complete selected XOR predicate is stated exactly, including the enabled1 result0, without an unsupported-product/defect conclusion or extrapolation to unexamined methods. Private names and local numbers are explicitly not a public command-support table.
+
+SLEEP's seconds callback is separated from the common wait's derived 60-second operational scale. Duration metadata versus operational+12 and the concrete BN3L setter/second-callable route are not merged with SLEEP's different construction. Earlier timing reports retain normal ABI/provider/nonoverflow/clock/calendar premises and no measured scheduling guarantee; the overview preserves that source-level role and their links.
+
+Scene stop144/active145, action completion4 and shared-domain stop72 are separate. The bounded open reset question is not a permanent-latch/global-absence finding. Raw thread-state receiver capture, holder word clearing on successful detach, conditional join requests, registry/vector releases and natural last ownership are kept apart. No race, UAF/leak, safety, successful cancellation/restart or completed worker is claimed.
+
+## Catalogue and current execution ledger
+
+The overview correctly says all75 stored table definitions match while the embedded schema adds an index; it does not call entire schemas identical. The 42 equal/33 differing row-multiset result, owner-aware reused/renumbered EN_CONF identities, actual selected catalogue SQL/column consumers, and absent embedded self-item scope match current references. No row declaration becomes an accepted protocol, compatibility or physical-support assertion. Host immutable database analysis and unexecuted original SQL requests remain distinct.
+
+The current MyHOMEServer1 native ledger matches the saved result exactly: one corpus/eight top-level entries,340 original code-hook visits, zero C primitives,12 actual-definition redirects and8 private EXIT boundaries/zero guard stops, totaling360 hooks. Four canary data-relocation setup writes are separate. Visits are not retired instructions, nested helpers are not extra entries and peer source/saved-trace review is not a CPU replay. Earlier MHS static-only reports preserve historical zero execution; F454/MH202 ledgers are not mixed in.
+
+Only four finite same-original-object constructor/asDouble paths ran, including signed-zero bit preservation. Full JSON map/member/assignment/parser/serializer/reparse, scheduler scenes, target OS/services/threads/timers/network/bus and physical activity remain unexecuted. Candidate binding, synthetic caller storage/canary/CPU/FP setup and current scope are explicit. The missing MH202 intermediate-history limitation is retained without claiming recovered/authenticated unavailable drafts.
+
+## Review limits and pins
+
+This is a bounded cross-evidence overview review, not a new full semantic audit of every old native span, catalogue row, fixture or historical validation. No author/repository/source file was edited. Wider Device/source gates and closed investigation boundaries remain pending/unchanged. The navigation catalog will receive a separate integrity/scope review after it is frozen; it is not certified by this PASS.
+
+Exact current document and selected authority identities used for this review:
+
+| File | SHA256 |
+| --- | --- |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/overview/ENCYCLOPEDIA_CANDIDATE.md` | `5d9426583d60ffe1618b2a82e0bf9bd97426387a6245c7b8e6500bfe09cdc5c1` |
+| `OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md` | `5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-actions.md` | `489e4f7bd56b212139f7ade028cefaa26b2b6062cb3d9ee32eb4c454b3a52fe9` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-cancellation.md` | `361effbac491faf6daa0dd91da9d67ee76b39321afca2a5e760a6648df92a3ab` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md` | `0306fe7a480c2111933b39fbe22a39ba7b3483264c48110c2dd3025cafb2c492` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-routing.md` | `c7e309cf81b4a32110db37f441a820d04d08ece7554c07a38833bc8c72205409` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-trigger.md` | `68524eb6514d4663ca9d0cec87a47cb70ffc5d6797b054c76f53907c01a68e89` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-factories.md` | `f670582ed8e8dc49065215dde6f64f59b9ab4f34462b6546a0b509f715b77388` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-lifetime.md` | `2618b7d557e60d4953044a8eaa75d4a2e42b0e276e64dc18a0787b98c7216dc4` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md` | `69f408a664e4331c2d756285e3498ca7bbb777ae9d7c1a3a50d33951394df13a` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-startup.md` | `3650604c30ff0268e5d0743efb05a27dbec327a09c195a9bc92b5cd09977d0ed` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-time-scenarios.md` | `fe129d97448d6e09bffe82c6b536bb252890f306580c7b8224690c330a07aefa` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md` | `23629011fc6f1afd56e837d5d0a65e62952c02c051573bea534ffd4a9535d848` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31/SYNTHESIS.md` | `6e745a8d2490558970863d2e3bb96cde37c7e9cbcaf37d93bc8e24ade90bc645` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31/protocol/REPORT.v2.md` | `b07a9d0fcb645f42c347a47075997dbee23a202a18e797d57825da82d2a7a97d` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/REPORT.md` | `d41cdc4417f72070792d1e45b1930787fd5e5511c61907ce166b2f231f0c5f12` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/registry/REPORT.md` | `bf0b87c8b304c8a3e417d261fea2a5cf9212c12c46d64061f9d0fa4eb1af19df` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/REPORT.md` | `3ac86206587e25f07db979bfec8a46ec0d401f658784e6d15fcb2d7d80676e0d` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime/worker-ownership/REPORT.v2.md` | `a065946b921909290bf1a88ea5ce9064b0487c5f99625a6d72e7b460cd45af92` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/REPORT.md` | `68c32fd66ef0d6c8d310a9e1efde7163a76fd334399a8cb5c025dc4c6eb74659` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-removal-context/context/REPORT.md` | `bbc23551b48f2e8b89e7c5af5c4c5fd392164705bd1573ec25156c98ba494c93` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-removal-context/scene-condition/REPORT.md` | `92c64b715c2747ced59b18ca4ddbeb28f811a1f6651683a7d2c4aee656c035c8` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/REPORT.md` | `4bbc78187774b2e08795eedeafd212cc100ead905e19f6face1500fc0f40b2e1` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/REPORT.md` | `a931c47b595f61be0194befc3f39abafc464b4dce9a57b5cb1ca9d4ea2d6eda0` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/REPORT.v2.md` | `57cf16095f0da61eddf81d3b0133f30ab8b6848ec9f2fc1f74dea8001924c97d` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/REPORT.v2.md` | `9d5e8401ea962f30b509964f8ed4ac5c8dff069b118f33cc14b0a0fb3a2490f7` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/REPORT.RESULTS.md` | `a18c1a027645fa7cc17e9882d09a49099509b2f33bb6f502f25ce7a2ea018c3f` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/RESULTS.json` | `450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/EXECUTION_APPROVAL.json` | `ffda236a0eeb4b8bfef5404d73ec84c32e6f93f5c6c98cb1983107615a6bd57f` |

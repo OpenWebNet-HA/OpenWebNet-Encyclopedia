@@ -1,0 +1,232 @@
+{
+  "PIC_joins": [
+    {
+      "ADD": "0x58e4",
+      "ADRP": "0x58d8",
+      "target": "0x5350"
+    },
+    {
+      "ADD": "0x58e8",
+      "ADRP": "0x58dc",
+      "target": "0x6320"
+    },
+    {
+      "ADD": "0x5564",
+      "ADRP": "0x5560",
+      "target": "0x62b8"
+    }
+  ],
+  "PT_LOAD": [
+    [
+      1,
+      5,
+      0,
+      0,
+      0,
+      27804,
+      27804,
+      65536
+    ],
+    [
+      1,
+      6,
+      27848,
+      93384,
+      93384,
+      2328,
+      2432,
+      65536
+    ]
+  ],
+  "execution": {
+    "fixtures": 0,
+    "models": 0,
+    "original": 0,
+    "provider": 0,
+    "target_IO": 0
+  },
+  "guards": {
+    "0x32ec": "0xaa1403e0",
+    "0x5354": "0xaa0403e5",
+    "0x5368": "0x2a0303f3",
+    "0x5388": "0xaa0103f8",
+    "0x5398": "0xf94008b6",
+    "0x53a4": "0x34000a60",
+    "0x53a8": "0x71000a7f",
+    "0x53b0": "0xf94002c0",
+    "0x53b8": "0xaa0003f4",
+    "0x53c0": "0xf9400295",
+    "0x53c4": "0xaa1803e0",
+    "0x53cc": "0xf94002a1",
+    "0x53d4": "0x340007e0",
+    "0x53d8": "0x34000a13",
+    "0x54d0": "0xf9400694",
+    "0x54d4": "0xb5fff774",
+    "0x555c": "0xf94006a0",
+    "0x5568": "0x910123e2",
+    "0x5570": "0x34000060",
+    "0x5574": "0xf94027e0",
+    "0x5578": "0xd63f0000",
+    "0x557c": "0xf94002c0",
+    "0x5580": "0xaa1503e1",
+    "0x5588": "0xaa0003e1",
+    "0x558c": "0xf94002a0",
+    "0x5590": "0xf90002c1",
+    "0x5598": "0xf94006a0",
+    "0x55a0": "0xaa1503e0",
+    "0x55b8": "0xd65f03c0",
+    "0x58ac": "0xaa0003f3",
+    "0x58b0": "0xf9400800",
+    "0x58b4": "0xf9400400",
+    "0x58cc": "0xb4000160",
+    "0x58d0": "0xd2800a01",
+    "0x58e0": "0xaa1303e3",
+    "0x58ec": "0x52800005",
+    "0x58f0": "0xd2800004",
+    "0x58f8": "0x52800000"
+  },
+  "image": "/home/bticino/bin/coso",
+  "imports": [
+    {
+      "PLT": "0x2e30",
+      "call": "0x58b8",
+      "relocation": "00000000000172a0  0000005a00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_file_new_for_path + 0",
+      "slot": "0x172a0"
+    },
+    {
+      "PLT": "0x2b80",
+      "call": "0x58c8",
+      "relocation": "0000000000017148  0000002f00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_file_monitor_directory + 0",
+      "slot": "0x17148"
+    },
+    {
+      "PLT": "0x2cb0",
+      "call": "0x58d4",
+      "relocation": "00000000000171e0  0000004200000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_type_check_instance_cast + 0",
+      "slot": "0x171e0"
+    },
+    {
+      "PLT": "0x2c90",
+      "call": "0x58f4",
+      "relocation": "00000000000171d0  0000004000000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_signal_connect_data + 0",
+      "slot": "0x171d0"
+    },
+    {
+      "PLT": "0x2d00",
+      "call": "0x53a0",
+      "relocation": "0000000000017208  0000004700000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_module_supported + 0",
+      "slot": "0x17208"
+    },
+    {
+      "PLT": "0x2db0",
+      "call": "0x53b4",
+      "relocation": "0000000000017260  0000005200000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_list_first + 0",
+      "slot": "0x17260"
+    },
+    {
+      "PLT": "0x2d90",
+      "call": "0x53c8",
+      "relocation": "0000000000017250  0000005000000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_file_get_path + 0",
+      "slot": "0x17250"
+    },
+    {
+      "PLT": "0x2e20",
+      "call": "0x53d0",
+      "relocation": "0000000000017298  0000005900000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_str_has_suffix + 0",
+      "slot": "0x17298"
+    },
+    {
+      "PLT": "0x2c00",
+      "call": "0x556c",
+      "relocation": "0000000000017188  0000003700000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_module_symbol + 0",
+      "slot": "0x17188"
+    },
+    {
+      "PLT": "0x2e70",
+      "call": "0x5584",
+      "relocation": "00000000000172c0  0000005e00000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_list_remove + 0",
+      "slot": "0x172c0"
+    },
+    {
+      "PLT": "0x28f0",
+      "call": "0x5594",
+      "relocation": "0000000000017000  0000000300000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_free + 0",
+      "slot": "0x17000"
+    },
+    {
+      "PLT": "0x2a30",
+      "call": "0x559c",
+      "relocation": "00000000000170a0  0000001700000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_module_close + 0",
+      "slot": "0x170a0"
+    },
+    {
+      "PLT": "0x28f0",
+      "call": "0x55a4",
+      "relocation": "0000000000017000  0000000300000402 R_AARCH64_JUMP_SLOT    0000000000000000 g_free + 0",
+      "slot": "0x17000"
+    }
+  ],
+  "safe_literals": {
+    "0x62b8": "stop_plugin",
+    "0x6320": "changed"
+  },
+  "selected_contract": {
+    "bodies_opaque": [
+      "pluginstop",
+      "GModule/GFile/GObject/list/free/log providers",
+      "othermoduleupdate/reloadbranches",
+      "closedoutput/receiving/transport/auth/session/framing/MQTT/libjel"
+    ],
+    "event": "selectednumericW3=0; no public/deleted-eventmeaningassigned",
+    "ordering": "stop-symbolrequest(handle), conditionalcallable request; removeentryP0/storehead; freepath; closerequesthandle; freeentry; normalreturn",
+    "owner_data": "mainM\u2192init_dir_monitoring(M), callbackregistrationuserdataM; underordinarychangedABI callbackX4sameM; P=[M16]",
+    "path_gate": "g_str_has_suffix(g_file_get_path(eventfile),entry0storedpath) nonzero; notcanonicalexactidentity",
+    "registered_callback": "0x5350, notnearestexportedsymbolname",
+    "retained_entry": "node0 entry; entry0path/entry8modulehandle inheritedproduceronlyunderSAMEP/list/validpointee premises"
+  },
+  "sha256": "2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197",
+  "spans": [
+    {
+      "bytes_hex": "e00314aa6c090094",
+      "end_VA_exclusive": "0x32f4",
+      "name": "actual-main-monitor-request",
+      "sha256": "05826348a494a52d910a4fb03b62f81816912142b0637d42eb3233083feb12cc",
+      "start_VA": "0x32ec"
+    },
+    {
+      "bytes_hex": "fd7bbea9fd030091f30b00f9f30300aa000840f9000440f95ef5ff97030080d2020080d201008052aef4ff97600100b4010a80d2f7f4ff9702000090010000b0e30313aa42400d9121800c9105008052040080d2e7f4ff9700008052f30b40f9fd7bc2a8c0035fd6",
+      "end_VA_exclusive": "0x5908",
+      "name": "monitor-callback-registration",
+      "sha256": "a3d4a2aa4cb228e2a75c083457b269b6b9b332bfc2c3ae35a413cf004c6cb830",
+      "start_VA": "0x58a0"
+    },
+    {
+      "bytes_hex": "fd7bbba9e50304aa020000b0fd030091f35301a9e403032af303032af76303a917000090f4022591e00314aa42000091030000b063a00c91f80301aa01088052f55b02a9ff7f04a9b60840f9c1f6ff9758f6ff97600a00347f0a0071",
+      "end_VA_exclusive": "0x53ac",
+      "name": "callback-input-and-support",
+      "sha256": "0f14b8eeb9bf3920da10e1fbe5a0f379287b88a165cf8899f42efb68cb85345c",
+      "start_VA": "0x5350"
+    },
+    {
+      "bytes_hex": "7f0a007188080054c00240f97ff6ff97f40300aae00800b4950240f9e00318aa72f6ff97a10240f994f6ff97e0070034130a0034",
+      "end_VA_exclusive": "0x53dc",
+      "name": "retained-path-match-event-gate",
+      "sha256": "a30e63b57b62ff25518502a24ec14c2a7c22509176748c5064cde64d323d88f1",
+      "start_VA": "0x53a8"
+    },
+    {
+      "bytes_hex": "940640f974f7ffb5f3f8ff35f35341a9f55b42a9f76343a9fd7bc5a8c0035fd6",
+      "end_VA_exclusive": "0x54f0",
+      "name": "nonmatch-next-node",
+      "sha256": "27b0e5ff08c2dc6ff0a6326931bce5b9e84ac97cb529c7104a68a43a3e5ecff5",
+      "start_VA": "0x54d0"
+    },
+    {
+      "bytes_hex": "f702259101028052e00317aa020000b0428009915df6ff97e00317aa01028052020000b042e0099158f6ff97a30240f9e00317aa01088052020000b042800a9152f6ff97a00640f9010000b021e00a91e2230191a5f5ff9760000034e02740f900003fd6c00240f9e10315aa3bf6ff97e10300aaa00240f9c10200f9d7f4ff97a00640f925f5ff97e00315aad3f4ff97f35341a9f55b42a9f76343a9fd7bc5a8c0035fd6",
+      "end_VA_exclusive": "0x55bc",
+      "name": "selected-stop-remove-close-return",
+      "sha256": "9c91c704e14e6209ad1d4024a04713588d473064affc2ed2d0e7adf333b9c588",
+      "start_VA": "0x5518"
+    }
+  ]
+}

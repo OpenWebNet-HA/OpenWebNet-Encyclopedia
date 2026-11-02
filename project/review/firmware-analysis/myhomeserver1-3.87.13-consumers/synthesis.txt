@@ -1,0 +1,15 @@
+# MyHOMEServer1 catalogue and scene-consumer synthesis
+
+This bounded continuation replaces two first-pass leads with original consumer dataflow. All findings remain static source evidence; original firmware/vendor/target SQL/runtime/physical execution is0.
+
+## Positive joins
+
+1. matrix_mx has actual compiled calls opening the exact embedded catalogue path. A helper opens two context handles at556/560 and its caller tests the local result. A separate same-path reader prepares object+36SQL, converts result columns13/14 and writes object+20/+24. That reader's SQL producer and semantic field names remain unknown. An actual initializer requests a separate two-column AS_ITEM_SYSTEM/main=1 string; it is not falsely connected to the13/14 reader.
+2. scheduling_manager has a fresh C++ JsonCpp source chain from configured scenesPath through settings storage/getter/startup call, directory iteration and selected .json entries, into file parsing and the same object/root scene constructor. Triggers/conditions/actions reach three actual factories. Exact exclusions twiligts_times.json/action_schedule.json, enabled-defaulttrue and the later runner initializer boundary are retained. No complete valid scene was invented, and no MH202 .spt engine/state was imported.
+3. The C libjsonmsg family has fresh20-byte message/32-byte node structures, separate from C OPEN56 and C++ JsonCpp. The local generated Boolean result uses kind2/type20/value1; its acknowledgement reader and named response predicate have distinct guards. This is local data-helper behavior, not send/action/bus success or accepted wire input.
+
+## Application-model impact
+
+The application ownership picture is firmer: the catalogue has real compiled opening/row-reading requests and scenarios have a concrete file/JsonCpp/factory consumer. The new evidence still does not establish complete catalogue eligibility or actual trigger/action execution. Provider families, handles, output slots, scalar fields and return conventions are kept separate. The original product role is MyHOMEServer1's SCS/app/commissioning server; F454 alarm/AV and MH202 scenario implementation remain separate sources.
+
+Exact reports/collectors/first candidates and independent source reviews are retained in their new areas. Current encyclopedia integration uses a new consumer page and two source-aware crosslinks, preserving previous reviewed reference versions. No source-registry change, new binary archive, commit, publishing or automation is required by this continuation. Remaining work is ranked separately rather than silently treated as complete.

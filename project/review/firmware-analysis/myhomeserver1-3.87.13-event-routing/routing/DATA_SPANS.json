@@ -1,0 +1,23 @@
+[
+  {
+    "bytes": 22,
+    "file_offset": "0x52374",
+    "scope": "first event-code TBH",
+    "sha256": "e99b83465ae0fdfe861e0f2d21bb8d2b11811169b0f32ce89d5058212aa2ef6b",
+    "start_va": "0x52374"
+  },
+  {
+    "bytes": 22,
+    "file_offset": "0x528aa",
+    "scope": "second event-code TBH",
+    "sha256": "df734c53bb582a4ce921f1454c1affdbbd9164c24d8de2f1532ff9f4fdd0ff38",
+    "start_va": "0x528aa"
+  },
+  {
+    "bytes": 92,
+    "file_offset": "0x52d5c",
+    "scope": "trigger-type relative32 pointer table",
+    "sha256": "d61c8a6dbc6596538f0f5961afe1c56654331c887a2fa576c2dddf62b5fa5c27",
+    "start_va": "0x52d5c"
+  }
+]

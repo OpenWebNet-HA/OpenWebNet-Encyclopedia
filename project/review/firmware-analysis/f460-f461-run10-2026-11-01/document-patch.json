@@ -1,0 +1,17 @@
+{
+  "scope": "Selected F460 action dispatch/marker/scene cleanup and F461 typed suffix/formatter edge; core profile unchanged",
+  "patches": [
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "snapshot": "f460-f461-deep-analysis.md",
+      "before_bytes": 25490,
+      "before_sha256": "006c251d87960b34142b5bfa5bd478f1c5cdb02cbf495a0153295357b5548414",
+      "candidate": "REFERENCE_DRAFT.md",
+      "mode": "replace-reviewed-candidate",
+      "after_bytes": 28872,
+      "after_sha256": "a96ca9d01a24312b305b3e2c11da24d79a28d1fb7618db7d3ffd61a2271896c9"
+    }
+  ],
+  "main_reproduction": "REFERENCE_DRAFT_METHOD.json",
+  "unchanged_profile_sha256": "bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba"
+}

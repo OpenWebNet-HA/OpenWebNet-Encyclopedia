@@ -1,0 +1,15 @@
+{
+  "bytes": 13660,
+  "collector": "collect_resource_v1.py",
+  "correction_rule": "Parent snapshot before NEWv2 dynamic exact literal span lengths; keep v1 unchanged",
+  "failure": "AssertionError at line42: hardcoded conf path NUL length18; actual17. Template NUL length23 correct. No output generated.",
+  "observed_attempts": [
+    "generation",
+    "subsequent --check in same shell command after generation failed; same guard failure before outputs"
+  ],
+  "original_execution": 0,
+  "outputs_written": 0,
+  "sha256": "46b879b4ac101a48d47d0a16712346f24a64fbd08350bad4d4e40bf04b449f57",
+  "source_issue": false,
+  "status": "FAILED_BEFORE_OUTPUTS"
+}

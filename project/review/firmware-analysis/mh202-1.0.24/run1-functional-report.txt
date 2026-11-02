@@ -1,0 +1,110 @@
+# MH202 1.0.24: scenario ownership, script loader and WHO17 controls — run 1
+
+This is fresh, normal-image MH202 evidence. Original firmware code was **not executed**. Host ELF disassembly, exported/imported symbols, verified original bytes and selected configuration lines establish a concrete scenario-control path; they do not establish a running service, accepted raw network grammar, configured scenario bodies or physical actions. No F454 implementation was imported into this analysis.
+
+## Main result and provenance
+
+`/home/bticino/bin/bt_taskmanager` owns an actual WHO17 command dispatcher and a `.spt` scenario loader. Its loader reads `/home/bticino/cfg/extra/4/<number>.spt/<number>.spt`, binds four trigger callback types, stages runtime script files, and constructs a `bt_script` launch command with two FIFOs. This gives direct code evidence for a scenario-script consumer of **extra/4**. It does not prove that the missing external `4.xtz` has any particular archive layout or that its absent scenario files are present on a running product.
+
+The original normal image's WHO routing declaration separates `bt_taskmanager` WHO17 from COSO's `0.1.2.4.5.9.14.15.22.25.29`. COSO's scenarios TR/STM libraries are translation/state-machine plugins, not evidence that COSO owns the WHO17 script scheduler.
+
+Exact verified input image paths, full SHA256, sizes and original inode metadata are in [inputs.json](inputs.json). Principal hashes:
+
+| Original image path | SHA256 |
+|---|---|
+| `/home/bticino/bin/bt_taskmanager` | `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e` |
+| `/home/bticino/bin/bt_script` | `f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4` |
+| `/home/bticino/lib/libdomotica.so.0.0` | `5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09` |
+| `/home/bticino/libcoso/libplug_scenarios_tr.so` | `b64fcd47314d457be86f7ce86406a401786f877b8e3a420c247376018e27a6fa` |
+| `/home/bticino/libcoso/libplug_scenarios_stm.so` | `5b5709bd9b33945b4650f1ee86532b6459724376c108c22f69b097fc43f12d82` |
+
+Addresses below are original ELF virtual addresses, not file offsets. `taskmanager-literals.json` and `word-checks.json` separately pin literal addresses, file offsets and selected original words. The verified image accessor prevents accidental following of extracted host symlinks. Only the normal image is covered here; recovery equivalence was not tested.
+
+## WHO17 command and state paths
+
+The unnamed function beginning at `0xa72c` extracts WHO, WHAT, WHERE and dimension at `0xa738..0xa76c`, looks up a scenario record by the numeric WHERE at `0xa778..0xa780`, then checks WHO equals 17 at `0xa784`. This is **post-parser field evidence**, not a complete proof of which raw frames the original parser accepts. See [who17-dispatch.txt](who17-dispatch.txt).
+
+For `IsNormalFrame()!=0`, the jump table at `0xa7dc..0xa7e8` maps WHAT 1–4 as follows:
+
+| WHAT | Actual selected branch | WHERE and state conditions visible in this dispatcher |
+|---|---|---|
+| 1 | `0xa7ec` → launch `0xd4f8` via `0xab84` | Requires nonzero WHERE, an existing record, record+60 zero, and another global counter not greater than 29. This batch has not established the counter's complete lifetime. |
+| 2 | `0xa818` → stop `0xd47c` | Nonzero WHERE stops an existing record only when record+60 is nonzero. WHERE 0 iterates the record list and stops records with nonzero +60. |
+| 3 | `0xa878` → enable `0xd2f4` | WHERE 0 iterates all records; nonzero WHERE selects the looked-up record. |
+| 4 | `0xa8b8` → disable `0xd258` | Same all-record versus selected-record structure. |
+
+At `0xa7bc..0xa7c8`, a pre-existing global value gates normal commands other than WHAT2; its setter and complete semantics remain open. Calling it a proven panic state machine would exceed this batch. `0x9d84` is only the reached logger wrapper with the `General Panic%s!` format, not the setter of that global.
+
+Actual record fields are supported by direct load/store paths:
+
+| Record offset | Narrow established meaning | Original evidence |
+|---|---|---|
+| +0 | Identifier used as the final field in status formatting | `0xcadc..0xcaf4`, `0xcb14..0xcb28` |
+| +4 | Name used in runtime paths and launch formatting | loader `0xcf08..0xcf18`; launch `0xd50c` onward |
+| +40,+44 | File descriptors opened for task↔script FIFO communication; reset to −1 in cleanup | `0xd5d0..0xd60c`; `0xd3bc..0xd47c` |
+| +48 | `$RESTART` payload equals `SI` flag | loader `0xcfc4..0xcff0`; downstream use not yet traced |
+| +52 | Disabled marker state: disable sets 1 after creating `DISABLED`; enable unlinks the marker and clears it | `0xd258..0xd2d8`, `0xd2f4..0xd360` |
+| +56 | `$TRIGGERSTART` payload `SEMPRE` flag | `0xcff4..0xd014`; subsequent scheduling untraced |
+| +60 | Nonzero execution/control state; helper returns boolean nonzero, launch sets 1, stop's FIFO branch sets 5 | `0xb5f8..0xb60c`, `0xd580..0xd584`, `0xd4b8..0xd4c4` |
+| +64,+128 | Two FIFO pathname buffers | `0xd520..0xd578` |
+| +192 | PID field: initialized/reset to taskmanager's `getpid()`, compared before stop's `kill(...,9)` path | loader `0xce94..0xce9c`; stop `0xd47c..0xd4a4`; cleanup `0xd40c` onward |
+
+The status renderers are concrete, not string-only guesses. `0xcad0` emits `*17*3*ID##` for +52 zero and `*17*4*ID##` otherwise. `0xcb04` emits `*17*2*ID##` for +60 zero and `*17*1*ID##` otherwise, using the original `*17*%d*%d##` literal at `0x109a8`. See [status-render.txt](status-render.txt). The `IsStateFrame` branch `0xa8f8..0xa988` calls the corresponding wrappers for a selected record or iterates all records for WHERE0; wrappers route their formatted strings into `0xc330`. Complete serialization, subscription delivery and transport ownership of `0xc330` remain untraced.
+
+WHO17 dimensions 6/7/8 also have code paths at `0xa98c..0xab6c`, including indexed integer/boolean state and adjustment, but their physical or script-language meanings are **not assigned** here. These are a next-batch target, not completed semantic coverage.
+
+## Extra/4 loader and concrete trigger binding
+
+The loader at `0xce14..0xd198` starts the numeric file search at 1 and increments to the exclusive bound 301 (`0xce3c`, `0xd160..0xd16c`, literal word `0xd214`). Thus the selected loop tests numbers **1 through 300**, including gaps: a failed `fopen` branches to the next number. It is not the same as a frontend loop which may stop at its first missing configuration name.
+
+`0xce44..0xce64` passes the actual format `%s%d.spt/%d.spt` (`0x10a0f`) and prefix `/home/bticino/cfg/extra/4/` (`0x10a1f`) to `sprintf`, then `fopen`. Within that file, the code obtains tokens with the `%s` `fscanf` format (`0xd0c8`, literal `0x1025f`), searches for quoted payload delimiters and compares directive prefixes. This is not a complete language grammar; whitespace/quoting validity still needs careful tracing. See [script-loader.txt](script-loader.txt).
+
+| Matched directive | Trigger kind / selected callback | What the actual callback does |
+|---|---|---|
+| `$TRIGGERSTART` | kind0, callback `0xd6d0` from word `0xd1c0` | Takes record from r1; if +60 is zero, tailcalls launch `0xd4f8`; otherwise returns. |
+| `$TRIGGERSTOP` | kind1, callback `0xd4d4` from `0xd1c8` | If +60 nonzero, tailcalls stop `0xd47c`. |
+| `$TRIGGERENABLE` | kind2, callback `0xd374` from `0xd1d0` | Moves r1 record into r0 and tailcalls enable `0xd2f4`. |
+| `$TRIGGERDISABLE` | kind3, callback `0xd2ec` from `0xd1d8` | Tailcalls disable `0xd258`. |
+
+`$NOME` passes its quoted payload as the `snprintf` format argument for the name field with size argument31 (`0xcf00..0xcf18`); it is not a demonstrated byte-for-byte copy or a complete name-validation policy. `$RESTART` only sets its flag on exact payload `SI`. Start `SEMPRE` gets a dedicated flag. `SEMPRE` and `MAI` are checked around the generic trigger branch; nonempty other trigger strings enter normalizer `0xcb38`, global trigger lookup `0xd914`, then record trigger-list insertion `0xb8f0` with the kind and callback pointer (`0xd084..0xd0b8`). This proves callback binding, **not** the complete event matcher, only-if policy, restart policy, date/time scheduler or panic implementation.
+
+After parsing, the loader builds `mkdir` and `cp` commands using the packaged runtime prefix `/var/tmp/bticino/script/`, unlinks the runtime `DISABLED` pathname and adds the script record. These original `system` calls were inspected as code only; none was invoked. The normal packaged image has an `extra` directory with no descendant entries in the authoritative listing ([packaged-extra-inventory.json](packaged-extra-inventory.json)). This limits analysis of actual scripts; it does not describe mounted persistent storage or external archives.
+
+## Launch/stop and interpreter boundary
+
+See [script-control.txt](script-control.txt). Launch `0xd4f8` constructs runtime FIFO names `FIFO_scr_to_tsk` and `FIFO_tsk_to_scr`, passes mode `0600` to `mkfifo`, sets record+60 to1 and formats:
+
+```text
+/home/bticino/bin/bt_script -s /var/tmp/bticino/script/NAME/NAME -w <FIFO_scr_to_tsk> -r <FIFO_tsk_to_scr> &
+```
+
+The format is at `0x10b26`; original argument construction and `system` call are `0xd588..0xd5b4`. This records exact command construction, not a successful shell launch or a complete proof of interpreter option semantics. Descriptor opening at `0xd5f4/0xd604` and retry bound100 at `0xd644` follow; a failing launch cleans up through `0xd3bc`. No host command or FIFO was created.
+
+Stop `0xd47c` has two different original branches. A PID different from current taskmanager PID goes to `kill(record_pid,9)` then cleanup. With equal PID, it calls `write(record+40, "E\n", 1)`—**one byte `E`, not the entire two-byte literal**—then changes +60 to5. Cleanup closes descriptors, unlinks FIFO paths, resets descriptor/PID state, and frees a record-owned pointer at +200. This is static policy evidence; PID assignment by the actual child/event loop is still missing.
+
+`bt_script` directly depends on `libdomotica.so.0`; its imported operations include `IIF`, `CHKTIME`, `CHKDATE`, `SLEEP`, `SLEEPRANDOM`, `GOTO`, `OWRITE`, `OREAD`, `FINDOPEN`, `FINDDIMMERON` and `EXTRACTVALUE`. The packaged provider has named original definitions, e.g. `CHKTIME` at `0x1d60`, `CHKDATE` `0x2078`, `GOTO` `0x3518`, `SLEEPRANDOM` `0x36b0`, `SLEEP` `0x3ab4`, `IIF` `0x74a0`, `OWRITE` `0x8544`. Export sizes and complete provenance are in [libdomotica-symbols.txt](libdomotica-symbols.txt); dependency/import evidence is in [bt-script-dependencies.txt](bt-script-dependencies.txt) and [bt-script-symbols.txt](bt-script-symbols.txt). These are concrete available implementation targets, but this batch has **not** proven the script parser's calls into them or equated `IIF` with the product's “only if” stage.
+
+## COSO distinction
+
+Original config `/home/bticino/cfg/coso_cfg` selects `/home/bticino/libcoso` and `/home/bticino/cfg/coso_plugins`; saved selected config has no scenario bodies. The scenarios TR plugin `init_plugin` initializes a translation descriptor and actually calls imported `register_translation` at `0x1660`; see [coso-tr-registration.txt](coso-tr-registration.txt). Its named translator is `scenarios_tr_translate` at `0x1788` (1568 bytes). STM exports field/application/timeout state callbacks at `0x1910/0x1bb4/0x1894` and imports GLib timeout source APIs. The implementation of these callback bodies, the descriptor's WHO fields and actual COSO dispatch remain open; their names do not transfer WHO17 script semantics to COSO.
+
+## Reproduction and confidence
+
+From the workspace root, run the **host-only** collector:
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/functional/run1/collect_evidence.py --check
+```
+
+It verifies nine original image files through ImageVFS, extracts five narrow taskmanager ranges and one COSO registration range with host `objdump`, records symbols/dependencies with host `readelf`, and verifies 11 original jump-table/literal words. It checks 19 saved outputs plus their manifest without rewriting them. Outputs and report intentionally contain no packaged credentials/private keys. No original ARM/JS/PHP/vendor process, network, service or device operation occurred; original execution and emulation counts are **0**.
+
+**High confidence:** actual extra/4 path consumer, numeric1..300 loop, directive→callback bindings, WHO17 normal WHAT1–4 dispatch, two state renderers, command construction and direct stop branches. **Moderate/composed static evidence:** field names such as disabled/execution, inferred from several original loads/stores and formatted statuses. **Unresolved:** parser acceptance, event matching order, full only-if/restart/panic lifecycle, child PID/FD events, actual `.spt` scripts, timer units/semantics, COSO scenario translation and any real execution or physical delivery.
+
+## Ranked next questions
+
+1. Trace trigger normalizer `0xcb38` → event storage/matching → callback invocation, including the +52 disabled gate, +48 restart and +56 always-start fields. Keep manual stage names separate until exact code joins exist.
+2. Trace actual `bt_script` option/line parser into original `libdomotica` `IIF` and date/time/sleep operations; recover parameter syntax and return/control-flow behavior statically before deciding whether any isolated execution would add value.
+3. Trace taskmanager FIFO consumer and PID update: what distinguishes requested start, active script, normal completion, restart and general-panic transitions? Complete `0xc330` publication/ownership boundary.
+4. Recover WHO17 dimensions6/7/8 state meanings and their script-reader/writer joins. Do not infer a physical device dimension from the numeric indexes.
+5. Map the concrete COSO scenarios TR/STM descriptor WHO selection and translation/state outputs; independently compare exact bytes if any F454 analogy is proposed.
+6. Resolve missing `4.xtz`/persistent extra contents by original archive provenance only. Current packaged normal-image absence cannot prove no product scenarios exist.

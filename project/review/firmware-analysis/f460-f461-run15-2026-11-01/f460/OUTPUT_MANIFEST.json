@@ -1,0 +1,63 @@
+{
+  "collector_sha256": "06864c8ee0fdef852243b116a908c0d39e5328903674c239c6a3a97a96f139d4",
+  "counts": {
+    "guards": 38,
+    "imports": 10,
+    "inputs": 6,
+    "key_PIC_joins": 6,
+    "operator_rows": 4,
+    "original_execution": 0,
+    "spans": 10
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 1159,
+      "sha256": "a2851dcd85f0a2de48ab98426f8f28962f56ea7ef9390e060a5586c4af5c2529"
+    },
+    "SOURCE.json": {
+      "bytes": 12464,
+      "sha256": "609ba90604c925ce36416486948edbe47360509c6190bf4c38703e846cae6284"
+    },
+    "spans/actual-serializer-hidden-ABI-and-status-gate.txt": {
+      "bytes": 1166,
+      "sha256": "669c68a0565f6c90ebf76f47d0ad13f56eb7d93fbafb692f91e10639ce3ddf38"
+    },
+    "spans/base-normal-serializer.txt": {
+      "bytes": 6431,
+      "sha256": "b15e1cdedaa3ee5436c489a78ce507b3d0be74f6ec0232202185680477d6341d"
+    },
+    "spans/decode-different.txt": {
+      "bytes": 817,
+      "sha256": "5a356d3ad01f8233128804a99d7f4b41f2f3f64ee50b052db679d15b86146417"
+    },
+    "spans/decode-higher-and-common-store.txt": {
+      "bytes": 860,
+      "sha256": "6c9852b735587c160fcce2ae9287696c647fae81534ea3f0633f41effa604292"
+    },
+    "spans/decode-lower-equal-prefix.txt": {
+      "bytes": 949,
+      "sha256": "b7f1ee030204a336dc9a5056591699435dcab115515005e82da8b0f00d431d62"
+    },
+    "spans/decode-lower-tail.txt": {
+      "bytes": 469,
+      "sha256": "f9f0f2632360f5a9356bffbb9f38f1bbbb7edcdf97b30722de010d26f95e8001"
+    },
+    "spans/operator-initial-value.txt": {
+      "bytes": 467,
+      "sha256": "579318f7a682835f46ce38d05c9103c8d1120d08162a0f15c4fb13ec19d2c697"
+    },
+    "spans/operator-member-and-length-selection.txt": {
+      "bytes": 1142,
+      "sha256": "37fbcedfb76a056e2fac5f1a498f6b2a4306557be8f94ebda42614df73a454f1"
+    },
+    "spans/selected-level-assignment.txt": {
+      "bytes": 823,
+      "sha256": "d45999155576055479c9b193f0e7f2fe6dbf95a0d101e31ca325c7ca5092d1fe"
+    },
+    "spans/serializer-normal-return.txt": {
+      "bytes": 855,
+      "sha256": "1d44f2e0ae155a2f49be48c65bf374b9bf050eb986bcbde650e30a96d533baf3"
+    }
+  },
+  "report_sha256": "346d77b15b08e3da42e1f5aafe3ed1717d4bf20c13eca1929e1b4c8143469420"
+}

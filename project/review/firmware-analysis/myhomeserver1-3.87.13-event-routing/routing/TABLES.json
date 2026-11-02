@@ -1,0 +1,26 @@
+[
+  {
+    "base_va": "0x52374",
+    "entry_bytes": 2,
+    "scope": "TBH halfword scaled2; third table relative32 Thumb pointer, instruction entry0x53a1a",
+    "selected_index": 0,
+    "stored_value": "0xf80",
+    "target_pointer_or_va": "0x54274"
+  },
+  {
+    "base_va": "0x528aa",
+    "entry_bytes": 2,
+    "scope": "TBH halfword scaled2; third table relative32 Thumb pointer, instruction entry0x53a1a",
+    "selected_index": 0,
+    "stored_value": "0x233",
+    "target_pointer_or_va": "0x52d10"
+  },
+  {
+    "base_va": "0x52d5c",
+    "entry_bytes": 4,
+    "scope": "TBH halfword scaled2; third table relative32 Thumb pointer, instruction entry0x53a1a",
+    "selected_index": 0,
+    "stored_value": "0xcbf",
+    "target_pointer_or_va": "0x53a1b"
+  }
+]

@@ -1,0 +1,23 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0010f0d6:
+  10f0d6:	6962      	ldr	r2, [r4, #20]
+  10f0d8:	6be3      	ldr	r3, [r4, #60]	@ 0x3c
+  10f0da:	4297      	cmp	r7, r2
+  10f0dc:	f47f ae7d 	bne.w	10edda
+  10f0e0:	eef4 1b63 	vcmp.f64	d17, d19
+  10f0e4:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+  10f0e8:	f47f ae77 	bne.w	10edda
+  10f0ec:	eef4 0b62 	vcmp.f64	d16, d18
+  10f0f0:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+  10f0f4:	f47f ae71 	bne.w	10edda
+  10f0f8:	459e      	cmp	lr, r3
+  10f0fa:	f47f ae6e 	bne.w	10edda
+  10f0fe:	6c62      	ldr	r2, [r4, #68]	@ 0x44
+  10f100:	4594      	cmp	ip, r2
+  10f102:	f47f ae6a 	bne.w	10edda
+  10f106:	e799      	b.n	10f03c

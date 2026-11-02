@@ -1,0 +1,21 @@
+{
+  "changes": [
+    "Print saved INPUTS.direct_input_count, not shadowed loop variable",
+    "v2 reproduction/firstsnapshot names",
+    "Include exact original v1 and this history in first copies"
+  ],
+  "failed_attempts": 0,
+  "generated_v1_outputs": 0,
+  "issue": "stdout-only main count variable shadowed by output-name loop; saved input count and guards unchanged",
+  "original_execution_additions": 0,
+  "parent_snapshot": {
+    "path": "../integration/pre-v2-supplement/INDEX.json",
+    "sha256": "d73d50805af7ede1f556c7771aa83f0993653e328353d12292a80453bde88aeb"
+  },
+  "source_guard_or_row_change": false,
+  "stage": "unexecuted v1 draft, before first generation",
+  "v1_bytes": 14238,
+  "v1_canonical_attempts": 0,
+  "v1_sha256": "aa8ec037cfa1a419a8add1613aba15c74d048c77a6bb7414183850ec8edb6d09",
+  "v2_sha256": "d5a903e05dbfb7988619924de139c2250d84a53389b3089fb604ab5709ec2ea0"
+}

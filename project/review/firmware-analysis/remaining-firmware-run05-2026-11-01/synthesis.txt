@@ -1,0 +1,11 @@
+# Overnight run05 source and reference continuation
+
+Three independently reviewed source packets add F450 conditional startup-file alias requests, F453AV own recovery entry-to-startup-provider argument mapping and F459 conditional shared-store namespace initialization. They do not add vendor/target/SQLite execution, actual live file selection, observed startup, installed plugin identity or database contents.
+
+The F450 alias source narrows the prior temporary-file origin under startup/tool/existing-object/cache/asynchronous premises; effective config/db_name/extra50 and decrypted master.sqlite remain unresolved. F453AV contributes only the fresh recovery-entry/import/candidate-main argument edge; earlier init/script/header context is inherited, main body and natural recovery execution unexamined. F459 constructor supplies receiver12 through assignment from a field of an externally bound global object; pointer validity/type/meaning/lifetime/caller and later mutation remain premises. Earlier SQL operands are inherited context, not another SQL matrix.
+
+The local encyclopedia overview now links this separate continuation capsule after an exact old-page snapshot. Prior run04capsule/readme/Devicepages stay unchanged. Exact hash-specific old/current mapping is retained; old validators need their original input bytes. No staging/commit/push/publication or canonical source-manifest change occurred.
+
+Cumulative actual R2 status remains one original encrypted F450support container/zero plaintext databases. No new database recovered/generated or upload/readback. Source-only static zero does not reset MHS/F454/MH202 ledgers or unavailable MH20218/21 history limits.
+
+Tooling history is explicit: F450v1 failed beforeoutputs on a negative line guard; parent snapshot preceded NEWv2 positive exact guard. F459v1 failed parsing a Unicode bytesliteral beforeoutputs; parent snapshot preceded NEWv2 UTF8encoding. An inline v2preparation compile error occurred beforefile-save, followed by a nofile invocation; no phantom earlier v2file/hash is invented. Successful canonicalv2source/output/report stayed unchanged while a separately retained report-onlyv2 corrected its reproduction command label. Source guards/results and original bytes were not changed. No vendor/guest failure or CPUreplay occurred.

@@ -1,0 +1,7 @@
+# Run4 author-stage correction
+
+Independent parent source review identified a material operand-label error before final export. The first generated host reconciliation model called the selected primary-repair-looking request `primary_to_mirror`. Original `0x10498` and `0x104a4` both load primary-path pool `0x10984`, while `0x1046c` first unlinks mirror-path pool `0x10970`. The actual recorded request is primary-to-primary after mirror unlink. The final collector/model/report preserve that distinction without asserting actual execution, helper behavior or durability.
+
+`draft/host-reconcile-model.pre-correction.json` preserves the earlier generated model content. It was reconstructed from the current JSON by reversing only the two documented edits (remove the added correction field; restore the old copy-direction labels); an untouched earlier disk snapshot was not retained. The first unfinalized report was corrected in the same author batch and explicitly acknowledges this error. No completed earlier dossier/report was rewritten.
+
+Full fixed header literals and archive password/argv were not saved. An exploratory tool output had disclosed one packaged literal; it is not reproduced in this note or the research artifacts. Export now uses explicit safe-path/format metadata only.

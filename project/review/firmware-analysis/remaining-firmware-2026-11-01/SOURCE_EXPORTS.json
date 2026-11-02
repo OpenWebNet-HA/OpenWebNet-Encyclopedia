@@ -1,0 +1,635 @@
+{
+  "files": [
+    {
+      "bytes": 6862,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/first-1/REPORT.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "9e525852d8ca2d7ca4f485f10ff8425764da215fdb4a1c51c1987a8aa75d0d78",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-first-exploration/REPORT.md"
+    },
+    {
+      "bytes": 19325,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/first-1/collector.py.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "c78a270b0ef37047a6a83108128a0638318c224cd323c119a87f727880dd6128",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-first-exploration/collect_firstpass_v2.py"
+    },
+    {
+      "bytes": 1436,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/first-1/OUTPUT_MANIFEST.json",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "389ccd014e19cf6c4126df1ddbd8fdbb79bc1b75d63c8e84d931cdc57ffb4e1a",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-first-exploration/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 8091,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/first-2/REPORT.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "77c1b90bf0d3fe2d4a651d26f5f93dad728b04ebf8c3e7f0efd60c94b402f778",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration/REPORT.md"
+    },
+    {
+      "bytes": 24271,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/first-2/collector.py.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "95b71f2d7ae8ba6a4c4a8d6cb065189777442914c359045b56e8fa22d3bbefe4",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration/collect_first_v1.py"
+    },
+    {
+      "bytes": 1274,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/first-2/OUTPUT_MANIFEST.json",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "6e2308ce9a2c96260500460af396f2175d101214a33da4b253396f71685583a7",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 12111,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/first-2/STARTUP.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "c70d00ed8d368d32bcf488431b776ca42d0b297645d6488dc061a3b48fc8f33b",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration/STARTUP.json"
+    },
+    {
+      "bytes": 3158,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/first-3/REPORT.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "855e0f3016343bc4b8ab387a7f0ded5265c0dd67e67630e179b41bfb29863e8f",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-first-exploration/REPORT.md"
+    },
+    {
+      "bytes": 10398,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/first-3/collector.py.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "e8d3adabafd6fd8793f121484cbb6f10016b1f7bb966481ac9d0c58fd7dd4553",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-first-exploration/collect_firstpass_v1.py"
+    },
+    {
+      "bytes": 538,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/first-3/OUTPUT_MANIFEST.json",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "f807503ca136b4610f8a1733723fd36301f58ad9e76c6d125b4bcedc7649d64f",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-first-exploration/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 46782,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/first-3/SOURCE.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "f65ed2f8c11ec515571cd0487254bbc1ac41ad9dc10c03676cd50360c39ee5e4",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-first-exploration/SOURCE.json"
+    },
+    {
+      "bytes": 5971,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run01-f450/REPORT.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "3e25a7de747b22c77afed6eff8f8751e8b0e050a23a9708703dde67e2dbef2d2",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/REPORT.md"
+    },
+    {
+      "bytes": 14932,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run01-f450/collector.py.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "3529802d1dfb118ccdfa9f4d7405d089a8670285e1f56da404a4758b3c182ae1",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/collect_archive_v1.py"
+    },
+    {
+      "bytes": 981,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run01-f450/OUTPUT_MANIFEST.json",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "58958954a980fc8d22602c6a69dad911120ab7ea1213aa3652a393063815b83e",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 3578,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run01-f450/SOURCE.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "b83297b4cc219c429482b5c2512a379bc9b50c0c1e4fae58594323386a0597c9",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/SOURCE.json"
+    },
+    {
+      "bytes": 2339,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run01-f459/REPORT.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "2e2a56a80412660e7a2992593510fcb2bc61095e59c4bd162aac9d03607d4847",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night01-shared-store/REPORT.md"
+    },
+    {
+      "bytes": 8625,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run01-f459/collector.py.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "1b95488ba324321d2e6d49cfd27014bf5324152ec0a076bdb7f0c211de3bf5d5",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night01-shared-store/collect_store_v1.py"
+    },
+    {
+      "bytes": 842,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run01-f459/OUTPUT_MANIFEST.json",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "84f9b2d13514461f97d2512e439aad2ec85f02b302cdf90f6fea1b5c8ee75961",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night01-shared-store/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 5446,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run01-f459/SOURCE.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "083dd69b4fd6c23e03476530ac3f912b487b9c34743a741b1c4769cb89f5227c",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night01-shared-store/SOURCE.json"
+    },
+    {
+      "bytes": 6363,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run01-mh200n/REPORT.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "908ed410d6954c8080c0a50821ca1cbbd5e7c2533b7b4320893aebc4d6004f4c",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night01-resources/REPORT.md"
+    },
+    {
+      "bytes": 15454,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run01-mh200n/collector.py.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "fd998b8f6df2ee68ae9119c11fc37a91b0bb9443c127ef17dd683b21df258046",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night01-resources/collect_resources_v1.py"
+    },
+    {
+      "bytes": 609,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run01-mh200n/OUTPUT_MANIFEST.json",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "7b815b42b906d97a92b87ba8301052f831223a251bf8667df96005aa92165a83",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night01-resources/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 16710,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run01-mh200n/SOURCE.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "877a472b9766e671f271e84a3ce3002072968b97a7f9284c092df7ec5e87c017",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night01-resources/SOURCE.json"
+    },
+    {
+      "bytes": 1529,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run01-mh200n/POINTER_FLOW.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "a7024291d81dfcdfbcd77e76f78384088b37e59991cc05cef5663c7f014cc00f",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night01-resources/POINTER_FLOW.json"
+    },
+    {
+      "bytes": 6387,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run02-f453av/REPORT.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "30aa6c495f788ef11feb91381cf0347ca25c09dc8b1bc6bedf69a8e6996f363e",
+      "source": "work/f453av-firmware/3.0.14/research/2026-11-01-night02-resources/REPORT.md"
+    },
+    {
+      "bytes": 14310,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run02-f453av/collector.py.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "2e8488bccc8f1af59cad8955396cf3e50cb7b20ae904fdf883fc22be272cd49a",
+      "source": "work/f453av-firmware/3.0.14/research/2026-11-01-night02-resources/collect_resources_v1.py"
+    },
+    {
+      "bytes": 742,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run02-f453av/OUTPUT_MANIFEST.json",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "63d7cb93a4fc35ce507685e4bcb2d53e761bda0e61626cfa4eca6953f8b0144d",
+      "source": "work/f453av-firmware/3.0.14/research/2026-11-01-night02-resources/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 2798,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run02-f453av/STARTUP.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "dc10b03318ad5e04fb998698062574003b784e27c42b602f73e987c117130113",
+      "source": "work/f453av-firmware/3.0.14/research/2026-11-01-night02-resources/STARTUP.json"
+    },
+    {
+      "bytes": 2817,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run02-f453av/MODULE.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "151353d4db381eda9a1272c66e5691b298ba378f860b5bf375f61a4d9359f9f0",
+      "source": "work/f453av-firmware/3.0.14/research/2026-11-01-night02-resources/MODULE.json"
+    },
+    {
+      "bytes": 5859,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run02-f455/REPORT.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "f955678a426ff1f4602fc4d481cb7b1b79f23d619c9d3f1cbf5b3a2e0b835a87",
+      "source": "work/f455-firmware/1.1.2/research/2026-11-01-night02-format/REPORT.md"
+    },
+    {
+      "bytes": 13710,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run02-f455/collector.py.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "4f8829acda5536e216240f10889d03c496b340ff899ee3593801a53c661ddc76",
+      "source": "work/f455-firmware/1.1.2/research/2026-11-01-night02-format/collect_format_v1.py"
+    },
+    {
+      "bytes": 728,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run02-f455/OUTPUT_MANIFEST.json",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "7e6460abbd1fd1664542b743e4f28f640e1d837f0383b5d8eaef177c5718ab2b",
+      "source": "work/f455-firmware/1.1.2/research/2026-11-01-night02-format/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 28848,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run02-f455/CANDIDATE_PREFIX.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "83d8185db63b092241a8a85fcb336cb23c841a295d4009beb5411fc0f11530a5",
+      "source": "work/f455-firmware/1.1.2/research/2026-11-01-night02-format/CANDIDATE_PREFIX.json"
+    },
+    {
+      "bytes": 1075,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run02-f455/PACKAGE_FORMAT.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "d4b63281cc9396b669c20e0a408f385a2da3d5f72788a6398a11f0a9a8017622",
+      "source": "work/f455-firmware/1.1.2/research/2026-11-01-night02-format/PACKAGE_FORMAT.json"
+    },
+    {
+      "bytes": 1322,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run02-f455/ARM_CONTEXT.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "480bac5da2b3838921c83b8c4a202db3f44fc98681480a7c6c51ae9de3cfb528",
+      "source": "work/f455-firmware/1.1.2/research/2026-11-01-night02-format/ARM_CONTEXT.json"
+    },
+    {
+      "bytes": 3368,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run02-f459/REPORT.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "b58d3b1d6f76e58f13bd5d4e737be9fa213fe0183bb9b0b5c829f71dbf78ca9b",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night02-shared-write/REPORT.md"
+    },
+    {
+      "bytes": 9780,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run02-f459/collector.py.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "f0d76595d54786b7a1d3629d1f85614e90e382e72b9a4bbbaa4a9fb172977068",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night02-shared-write/collect_write_v1.py"
+    },
+    {
+      "bytes": 1190,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run02-f459/OUTPUT_MANIFEST.json",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "dac4b46f44db688178fe31fb2e9c0e49af673be711cdec0e3588cd6b45696a0f",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night02-shared-write/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 11578,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run02-f459/SOURCE.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "35e9ace8a1bbf4e0c25882057a287688d5ca295aab5758b137b1e6a4453e53e7",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night02-shared-write/SOURCE.json"
+    },
+    {
+      "bytes": 5648,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-f450/REPORT.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "fb73ae57a898efca61b10dede7029744b3d85fd267eae1900f5b190f9a07b797",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-night03-resource/REPORT.md"
+    },
+    {
+      "bytes": 14748,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-f450/collector.py.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "ac1907c687a32dccca777b74718e1624b681492dcd1f7b7b80b1750697d5f6e3",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-night03-resource/collect_resource_v1.py"
+    },
+    {
+      "bytes": 838,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-f450/OUTPUT_MANIFEST.json",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "d16ef0c952905f1dd3eaf39ceba6dd6f581c0e25e9c657cee4f18c5272dc0932",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-night03-resource/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 6026,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-f450/SOURCE.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "e8c8ccea0c0e372fc6a37717e1b9bed857c9102166e13bcf0dc8a4d3999ee1b7",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-night03-resource/SOURCE.json"
+    },
+    {
+      "bytes": 1946,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-f450/POINTER_FLOW.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "8940d0edb73c17d530512ff4b75ab87345125beb2cadf6a527aa940c68c9620e",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-night03-resource/POINTER_FLOW.json"
+    },
+    {
+      "bytes": 5916,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-mh200n/REPORT.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "34bb0640bb51ed6d100587cce098de847b359839120532e2b32cf18f505d263e",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night03-consumer/REPORT.md"
+    },
+    {
+      "bytes": 13858,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-mh200n/collector.py.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "3603e4841f5fa60e33cf7a27271cf76f22b1d4455070c15ad5e35783e73e922e",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night03-consumer/collect_consumer_v1.py"
+    },
+    {
+      "bytes": 612,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-mh200n/OUTPUT_MANIFEST.json",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "51649d65186135eebd5f25d41625eab99b2b24bce1001640a9e0a73c3128c4ec",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night03-consumer/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 12964,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-mh200n/SOURCE.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "91a223cfd41f7eef759d9b5d69fa0a5fc4d00e9ddfb5495c619251938fb47fd5",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night03-consumer/SOURCE.json"
+    },
+    {
+      "bytes": 1581,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-mh200n/ARGUMENT_FLOW.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "474bcb0ef7b43a0a737c3a70084abe5c72ebb718286619ff22741bb3b7f35aed",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night03-consumer/ARGUMENT_FLOW.json"
+    },
+    {
+      "bytes": 3786,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-f459/REPORT.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "641a116874bc640fcb6ba09bc14406ff4c6f716f9371374a652ca5840668c1a9",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night03-shared-read/REPORT.md"
+    },
+    {
+      "bytes": 10226,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-f459/collector.py.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "37d4bc244dff7b2ae70a6b6391261224a7ba23a53cdea6e54b59636e7ba0e8e5",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night03-shared-read/collect_read_v1.py"
+    },
+    {
+      "bytes": 1637,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-f459/OUTPUT_MANIFEST.json",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "82ac851eef771502e86af731c51080db1544c498d18f703169b59895991ee1cf",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night03-shared-read/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 12534,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run03-f459/SOURCE.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "827ef148cc52afffad58653978a783b7f2ce97e308c3d75f0d23dd4ffcedafa0",
+      "source": "work/f459-firmware/2.1.5/research/2026-11-01-night03-shared-read/SOURCE.json"
+    },
+    {
+      "bytes": 5332,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run04-f450/REPORT.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "e8de9351b23a232ab5898a7023f342f11fb40418a9773367c95575b1bfe88db7",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-night04-config-source/REPORT.md"
+    },
+    {
+      "bytes": 14551,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run04-f450/collector.py.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "1c0769d6c64bf652a4f444d47bd50ca4cb28209a870e62e7e2fee4c2bc081c09",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-night04-config-source/collect_config_v1.py"
+    },
+    {
+      "bytes": 820,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run04-f450/OUTPUT_MANIFEST.json",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "a8586a8d408300abdff46db6f0f63c64a825ace6294248e3b96b7a3e8bc0c65e",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-night04-config-source/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 7847,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run04-f450/SOURCE.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "a7bace175e8a5cab4167ffbaf44d33258ca7660411864f3ad1994dcbf7f33761",
+      "source": "work/f450-firmware/2.0.10/research/2026-11-01-night04-config-source/SOURCE.json"
+    },
+    {
+      "bytes": 5469,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run04-mh200n/REPORT.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "bf26786cbb8638a41d94240203d14c5b5ae593de00623ddd19848c4721f46ab2",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night04-fields/REPORT.md"
+    },
+    {
+      "bytes": 15476,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run04-mh200n/collector.py.txt",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "f3174863a055a1170fbce9d8d3cdd4c285446e9a762574dcca378c266842696f",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night04-fields/collect_fields_v1.py"
+    },
+    {
+      "bytes": 611,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run04-mh200n/OUTPUT_MANIFEST.json",
+      "role": "Exact selected source report/collector/output identity; original inputs and full history remain local",
+      "sha256": "ec46c6df4bda669c83cebae705f76c06bcd0bcd61680429d1e6752934f6e854a",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night04-fields/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 6798,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run04-mh200n/SOURCE.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "2f2743423265987d92f10ee3c97fce35d6a5b9df0748e6f0e7ec9ed67e957b83",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night04-fields/SOURCE.json"
+    },
+    {
+      "bytes": 1881,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/packets/run04-mh200n/ARGUMENT_FLOW.json",
+      "role": "Selected original evidence metadata; no vendor process or actual values executed",
+      "sha256": "70a5c6b1fca2445e4d353f158e7f96db1e919485c54ec9b17e6522ab995a9674",
+      "source": "work/mh200n-firmware/1.1.8/research/2026-11-01-night04-fields/ARGUMENT_FLOW.json"
+    },
+    {
+      "bytes": 8213,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/first-f450-f455-source-review.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "d5c71e073adf278cb54a741fd9630513936fc63047966544eb498982c7bb6e3e",
+      "source": "work/remaining-firmware-exploration/2026-11-01/reviews/f450-f455-source-review.md"
+    },
+    {
+      "bytes": 8703,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/first-f459-datastore-review.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "b66f7eab96717444051f43bfc3179db04ff2162594e9835d8e7dac073fa22a14",
+      "source": "work/remaining-firmware-exploration/2026-11-01/reviews/f459-datastore-review.md"
+    },
+    {
+      "bytes": 6261,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/first-legacy-source-review.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "f7085bf8319916f21dc834b8707d81bf584b164718b21d5684d1f112dbd37a76",
+      "source": "work/remaining-firmware-exploration/2026-11-01/reviews/legacy-source-review.md"
+    },
+    {
+      "bytes": 6725,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/first-synthesis-review.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "d8729af08d781ac45ad2dd4a1b8c4012870c19f9a94b187794ec29e284fad9f5",
+      "source": "work/remaining-firmware-exploration/2026-11-01/reviews/synthesis-review.md"
+    },
+    {
+      "bytes": 4693,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/historical/first-validation.json",
+      "role": "Historical saved validation, not a current replay",
+      "sha256": "fd4c1907ddcddf8c9d491c89a71acbf1a0d4f3b61e6cd46e6af51e10a8fbe71c",
+      "source": "work/remaining-firmware-exploration/2026-11-01/VALIDATION.json"
+    },
+    {
+      "bytes": 8222,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/run01-f450-source-review.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "6f32834cfd953515e4663861a7df5f10b91984b73bccf4ce2fbaca86643a1d30",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run01/reviews/f450-source-review.md"
+    },
+    {
+      "bytes": 6718,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/run01-f459-archive-preflight.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "3d1061b33341a61966f877e865b70686471d5dd5a039c9cd44d0be85dfb919f0",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run01/reviews/f459-archive-preflight.md"
+    },
+    {
+      "bytes": 9376,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/run01-integration-review.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "1886d8222d2928696e897b89c770c56afea048d623021e6ca5ece834cc1e5ddc",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run01/reviews/integration-review.md"
+    },
+    {
+      "bytes": 5193,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/run01-mh200n-source-review.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "1177369efbd4ff4ec4597cb37a67b9317f2feae0979328ea84f034f7537341d3",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run01/reviews/mh200n-source-review.md"
+    },
+    {
+      "bytes": 5411,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/historical/run01-validation.json",
+      "role": "Historical saved validation, not a current replay",
+      "sha256": "8d914454091d2c286ef690f04a812c797edfd1c57393b2d97af07163ea45669b",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run01/VALIDATION.json"
+    },
+    {
+      "bytes": 5297,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/run02-f453av-source-review.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "69cbb11868232760c9b5c11f20bae7721107911464e5e9e93c16aae395437fa5",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run02/reviews/f453av-source-review.md"
+    },
+    {
+      "bytes": 6970,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/run02-f455-source-review.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "8efd075469d7f18ed96a282400eb90558e771169c3009fb039179c196a8675e4",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run02/reviews/f455-source-review.md"
+    },
+    {
+      "bytes": 6008,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/run02-f459-source-review.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "071181d45e6ed4f5834e481bca7315a8dc935ced19bb988d68cbbf98caef559b",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run02/reviews/f459-source-review.md"
+    },
+    {
+      "bytes": 7239,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/run02-integration-review.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "3eb0c01e63a333370108c314717cb864e9a1d5f445e0c3b849ab9a64c0ff9f03",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run02/reviews/integration-review.md"
+    },
+    {
+      "bytes": 5321,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/historical/run02-validation.json",
+      "role": "Historical saved validation, not a current replay",
+      "sha256": "b34e075f05043d04863301fe4d6a4c879dea6d27d82e80f94cad327b0eeb78a0",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run02/VALIDATION.json"
+    },
+    {
+      "bytes": 7733,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/run03-f450-source-review.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "0eb3ecb747ca2c68defa15adc1d6155dfd58fd6d32683ec3755149839eb76f7c",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run03/reviews/f450-source-review.md"
+    },
+    {
+      "bytes": 6664,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/run03-f459-source-review.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "975e1c6ead54bfa947658c2b78d61b87b17f07f699ed16e093b7e31563157348",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run03/reviews/f459-source-review.md"
+    },
+    {
+      "bytes": 9520,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/run03-integration-review.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "3b2b15db66dd90ce3e87c687673f9fd7edd8f3056a590cf7f808997f17a8984c",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run03/reviews/integration-review.md"
+    },
+    {
+      "bytes": 5190,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/reviews/run03-mh200n-source-review.txt",
+      "role": "Exact completed independent source/documentary review; historical scope retained",
+      "sha256": "53300c1c050364e780f102a9ee5df1e430387878368f217afd614e0f8d67f20b",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run03/reviews/mh200n-source-review.md"
+    },
+    {
+      "bytes": 5324,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/historical/run03-validation.json",
+      "role": "Historical saved validation, not a current replay",
+      "sha256": "d21600fd372fd83d75f265fa9084a27042b38716c7053d8a750a9c12a5fd8c74",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run03/VALIDATION.json"
+    },
+    {
+      "bytes": 8956,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/acquisition.json",
+      "role": "Exact retained acquisition summary; original hashes/cache provenance",
+      "sha256": "3f10719c9f06c5851295946a3ca08944edbe94a85f305f11dc30752c04d4bfe4",
+      "source": "work/remaining-firmware-acquisition/2026-11-01/SUMMARY.json"
+    },
+    {
+      "bytes": 1119,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/archive-index.json",
+      "role": "Cumulative actual archive status, unchanged through this integration",
+      "sha256": "133c94eb95859e111df0c1b6c005636ce8ee13ce164e3576fae85e70256f0719",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run01/R2_ARCHIVE_INDEX.json"
+    },
+    {
+      "bytes": 235,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/archive-receipt.json",
+      "role": "Actual prior configured-uploader receipt; no new network replay",
+      "sha256": "072092bb105685ab2aa0395cde439b431ac6a016037b501a06d2faf509b07793",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run01/archive/R2_RECEIPT.json"
+    },
+    {
+      "bytes": 11179,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/pre-edit/firmware-README.txt",
+      "role": "Exact old reference bytes before this edit",
+      "sha256": "aa7c70da0facac0260d00d38de3235ef4c8656874daf0f21c10c23b6e6d0e1f3",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run04/integration/pre-edit/firmware-README.md"
+    },
+    {
+      "bytes": 2192,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/device-role-context.json",
+      "role": "Read-only curated role pins; no Device-page edits or review upgrade",
+      "sha256": "332f2f15161ce94375dcddf40773b3c821108f2935ab827c43408b28b16e685b",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run04/integration/device-role-context/INDEX.json"
+    },
+    {
+      "bytes": 1957,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/synthesis.txt",
+      "role": "Current documentary scope",
+      "sha256": "d4d84a04040483d0b0b4309e7b0110110a8df3bc261914df02546b1c946aa0cf",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run04/SYNTHESIS.md"
+    },
+    {
+      "bytes": 1390,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/coverage.txt",
+      "role": "Current selected coverage, not exhaustive",
+      "sha256": "ec19c5b6bd040615400fa9b64088ae5e2bfe7ae7fe62be524268a88cbac36445",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run04/COVERAGE.md"
+    },
+    {
+      "bytes": 1416,
+      "export": "project/review/firmware-analysis/remaining-firmware-2026-11-01/remaining-questions.txt",
+      "role": "Current ranked gaps",
+      "sha256": "3d207d3e4eac0ad95065bb214b3540e72e80e9ded3b8e6df6d3d434aa9c79e26",
+      "source": "work/remaining-firmware-investigation/2026-11-01-run04/RANKED_REMAINING_QUESTIONS.md"
+    }
+  ],
+  "scope": "Exact selected source/documentary exports; no recursive full-index semantic approval or self-contained original-runtime package"
+}

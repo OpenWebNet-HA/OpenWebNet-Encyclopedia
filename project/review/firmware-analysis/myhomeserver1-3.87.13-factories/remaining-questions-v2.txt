@@ -1,0 +1,9 @@
+# Ranked remaining questions
+
+1. Trace one compiled runtime action's virtual execute/stop/completion methods and exact uses of shared delay/duration versus derived seconds/sceneId. Use original constructor/vtable ownership; do not call the JSON serializer an execution method or assign units from names.
+2. Trace one concrete trigger and condition class through its local type factory, compiled callback/registration and worker predicate. The full initializer and configured scene grammar remain unreviewed.
+3. Follow class139's stored slots/system ID into later application consumers, and identify naturally produced key/context values and the preceding admission guard. Do not equate catalogue slots/system IDs with physical channels, OPEN WHO or a complete compatibility table.
+4. Complete selected scene/vector ownership, reallocation, callback state, thread failure/unwind and stop behavior. DMB and normal control flow do not establish race freedom, successful scheduling or immediate interruption.
+5. Seek actual configured scene/source assets or independent observations only within future authorized work. Missing bundled extras/configuration cannot be replaced by invented manufacturer fixtures.
+
+The already closed selected SQL producer, two action constructors and enabled-gate/worker joins should not be repeated as new coverage. Missing live providers, bus/runtime/physical results and broader product roles remain explicit. No closed auth/session/framing/equivalent investigation is reopened.

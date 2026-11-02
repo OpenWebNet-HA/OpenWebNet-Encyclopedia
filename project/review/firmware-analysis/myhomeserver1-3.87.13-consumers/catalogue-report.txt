@@ -1,0 +1,66 @@
+# MyHOMEServer1 3.87.13: catalogue open and row-reader consumer
+
+The packaged `matrix_mx` contains **actual calls opening the exact absolute catalogue path**, not merely an unused filename literal. One local setup helper opens it twice into distinct context fields and reports success to a caller. A separate local reader requests the same file with `sqlite3_open_v2`, prepares an object-supplied SQL string, converts selected result columns and stores them in that object. The producer of that reader's SQL string remains unresolved, so this batch does **not** establish a device/Firmware eligibility rule or assign names to those result fields.
+
+All findings are static compiled requests. No original instructions, vendor processes, SQL statements or stored expressions were executed; no target/network/device operation occurred. Prior firmware/source reports and original image files were read only.
+
+## Source and applicability
+
+Original image ELF: `/home/bticino/matrix_mx/matrix_mx`, SHA-256 `96348136c2a0ebe859c689eb6246e3889e5154fdb63ffd5f3fc76975ac596717`. This is the fresh ARMv7 little-endian hard-float build with Thumb2 bodies and interworking ARM PLT stubs. All VAs below are linked ELF VAs, without a claim about runtime PIE load bias. Nearest disassembler C++ labels are not function identities.
+
+The file requested is `/home/bticino/matrix_mx/MHCatalogue.db`, SHA-256 `79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb`. Its full path literal begins at VA/file offset `0x1ccdec`; the previously identified filename-only substring at `0x1cce04` lies inside it. This closes the first-pass filename-presence gap for the compiled opening requests, while leaving actual filesystem success and catalogue replacement policy unobserved.
+
+The packaged `/usr/lib/libsqlite3.so.0.8.6` is examined only as a candidate provider: definitions and a small wrapper span are pinned in [input-manifest.json](input-manifest.json) and [selected-ELF-and-imports.json](selected-ELF-and-imports.json). No live symbol binding or SQLite internal filesystem behavior was investigated. The first-pass inventory and catalogue firmware-graph report are frozen separately under [references-v1](references-v1/INDEX.json); F454/MH202 layouts, app roles or catalogue versions are not transferred to this binary.
+
+## Caller and two-handle setup
+
+The caller at `0x8baa2` passes `word[caller_object+532]` to the local helper at `0xd3948`. The bounded caller span records two preceding opaque setup requests, then tests the opener return at `0x8baa6`. A zero return branches to `0x8bae8`, which sets `r0=0`. A nonzero result reaches another setup call at `0x8baac` and a further zero-result check; subsequent requests are retained as opaque boundaries, not traced here. The containing function's natural origin/registration is not established.
+
+At `0xd3948`, the helper loads `context=word[input_object+16]`. Its two SQLite output-pointer arguments are `context+556` (`0x22c`) and `context+560` (`0x230`). The same absolute path pointer is passed to imported `sqlite3_open` at `0xd3958` and `0xd3972`.
+
+| Local outcome | Original branch/effect | Returned value, assuming delegates return normally |
+| --- | --- | --- |
+| Both opens return zero | Second-success branch `0xd3978..0xd3988` | 1 |
+| First open returns nonzero | `0xd39b2..0xd39d8`: errmsg request, close first-slot handle, zero first slot | 0 |
+| Second open returns nonzero | `0xd398a..0xd39b0`: errmsg request on second slot, close first-slot handle, eight-byte zero store covering both slots | 0 |
+
+The second-error branch's local close argument is the **first** slot; the second slot is subsequently cleared by the vector store. This describes the inspected requests exactly. It is not a global handle-leak finding: provider ownership after failure, other owners/destructors and actual failure occurrence were not traced. Logging/close return values are not separately checked on these branches. No initial values for the surrounding context are assumed from a private fixture or zero-filled allocation.
+
+The candidate packaged SQLite wrapper at `0xaf3f8` sets internal argument `r2=6`, `r3=0` and tail-branches to `0xaeeb4`. Its `sqlite3_open_v2` entry at `0xaf400` tail-branches to the same internal target with caller arguments. These are exact numeric arguments; the internal opener, actual provider resolution, file creation/write effects and target policy remain outside this span. In particular, the setup call is `sqlite3_open`, not the selected reader's flags-1 `open_v2` request.
+
+## Separate concrete catalogue row-reader
+
+Local reader entry `0xa8c00` independently reconstructs the **same** absolute path through pool `0xa8d08` plus Thumb PC at `0xa8c20`. It first requests `stat`; only return zero reaches the open request. At `0xa8c3e` it calls `sqlite3_open_v2(path,&stack_handle,1,NULL)`. It requires open return zero and a non-NULL handle before preparing SQL. These are source-level requested flags and guards, not proof of a naturally successful read-only session.
+
+At `0xa8c56..0xa8c60`, the prepared SQL pointer comes directly from `word[input_object+36]`; the remaining request is `sqlite3_prepare_v2(handle,sql,-1,&statement,NULL)`, with return zero required. Its object argument and SQL pointer are **not** borrowed from the setup helper's context. The reader's handle/statement slots are private stack locals, unlike the setup helper's two long-lived context fields.
+
+The selected result path is precise:
+
+1. Initial `sqlite3_step` at `0xa8c64` is compared with literal **101**. That value takes the immediate finalize path. Other initial return values reach the statement-pointer test; the code does not first require literal 100 here. No error-handling defect is inferred from that local fact.
+2. With a non-NULL statement, `0xa8c72..0xa8c96` requests `sqlite3_column_text(statement,13)` then `strtol(text,NULL,10)`, storing the result at object offset **20**; column **14** is converted the same way and stored at offset **24**. These are zero-based column argument numbers and object offsets, not known semantic field names or catalogue key values.
+3. The subsequent step at `0xa8c9a` repeats this column/store block only when return equals literal **100**. On that normal repeated-row path, later rows overwrite those two object fields. No ordering or single-row guarantee is established because the actual SQL producer is unresolved.
+4. Ordinary loop exit requests `sqlite3_finalize`, then reaches a tail call to imported `sqlite3_close`. Immediate initial-101 also finalizes before closing. Prepare failure goes to close without a local finalize call on that edge. Earlier stat/open/non-NULL-handle failures return without a newly assigned uniform Boolean result.
+
+The close tail at `0xa8cc4` targets Thumb veneer `0x108a4`, whose first bytes are `78 47 fd e7`; it interworks to the ARM PLT stub at `0x108a8`. The same logical import is called directly through ARM-interworking branches elsewhere. This avoids confusing a Thumb veneer with a distinct provider or an executed callback.
+
+`100/101` are recorded as the actual code comparisons; conventional SQLite row/done interpretation does not turn other first-step results into observed rows. Finalize/close results are not validated in the selected normal path, and its returned close result is not promoted to a Boolean success contract. NULL column text, conversion failure/range, malformed SQL, application exception behavior and actual row contents were not modeled or tested. No default, credential or configuration value was read from SQLite.
+
+## Concrete item/system SQL declaration: useful, still a separate join
+
+The whitelisted SQL literal at `0x1c4390` is:
+
+```sql
+SELECT AS_ITEM_SYSTEM.id_item, AS_ITEM_SYSTEM.id_system FROM AS_ITEM_SYSTEM WHERE AS_ITEM_SYSTEM.main=1
+```
+
+The initializer at `0x11138` is an actual stored `.init_array` entry: index 1 of 72 entries, stored Thumb pointer `0x11139`. Its literal-pool arithmetic loads this exact SQL string, and its `0x11168` call requests string construction/copy into linked global address `0x20f024`. The inspected helper at `0x2a140` initializes a string buffer pointer, computes source length, copies data and stores length/NUL; allocation/copy APIs remain delegates.
+
+This positively ties an item-to-main-system SQL declaration to a compiled initializer request. It is **not** joined in this batch to the selected reader's `object+36`, an actual prepare/execute invocation, a row consumer for those two item/system columns, or the caller's eligibility decisions. The selected reader accesses columns 13/14, so silently substituting this two-column query for its unknown SQL would be incorrect. Nor does `.init_array` registration prove startup reached it on a device. This report intentionally keeps those boundaries separate rather than inventing a complete query pipeline.
+
+## Reproduction, confidence and next question
+
+[original-source-provenance.json](original-source-provenance.json) pins ten exact source spans, seventeen Thumb byte assertions, three safe PIC literals, linked/file offsets, and initializer registration. The text spans preserve original instruction bytes and normalized image paths. [ownership-and-controlflow.json](ownership-and-controlflow.json) records the handle, caller, result-column and query-origin distinctions without any original execution. Input hashes include the reviewed image accessor and normal-image regular/symlink metadata; no host-active image symlink was used.
+
+Run `python3 collect_catalogue_v2.py --check` for host-only deterministic reproduction. Initial generation refuses existing generated outputs; report, collector and all outputs receive immediate exact first copies with a precomputed, non-self-referencing snapshot index. One earlier ad hoc initializer-inspection snippet had a Python whitespace syntax error before any probe execution/output; it was corrected before this collector existed. The first canonical v1 collector stopped before output writes because opcode assertions incorrectly used the displayed halfword order instead of little-endian file bytes. Parent authorized a separately named v2 with corrected assertion encoding. Exact original report/collector copies and an observed-failure record are retained under `development-before-v2`; the original v1 files remain unchanged. This authoritative `REPORT.v2.md` and new collector do not alter any source interpretation. No generated candidate was overwritten; unavailable console history is not reconstructed as preserved evidence.
+
+Confidence is high for the compiled absolute-file requests, local setup return/cleanup policy, separate handle ownership, prepare/column/conversion/store sequence and selected initializer declaration. Natural activation, file replacement/override, complete handle lifetime, actual provider binding and consumer policy remain unclosed. The highest-value next source join is the **producer/constructor and virtual caller that supply the selected reader's `object+36` SQL**; only after that join should column names, Firmware selection or Object/device eligibility be assigned. The known 114 retained firmware definitions, eight Prototype/RC additions and omitted canonical products remain data-comparison facts, not acceptance rules derived from this partial reader.

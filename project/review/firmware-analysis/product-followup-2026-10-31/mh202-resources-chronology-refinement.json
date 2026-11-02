@@ -1,0 +1,10 @@
+{
+  "scope": "Documentary chronology correction only; original extraction/selected files/collector/results/initial report and first snapshots unchanged. v1 remains historically retained and collector reproduces it, not current wording. v2 is the promoted report.",
+  "old_report_sha256": "15ce268fc91529c5d7c55aacb2fd74be7da5d513277257eadf7ab12498d39c80",
+  "new_report_sha256": "615445c3437ccd30b7d52bccdd41d86ee02200f0c6d3b147efc634deb0663c3d",
+  "exact_old": "The earlier six-root local filename inventory is frozen as a pre-acquisition snapshot in `LOCAL_DISCOVERY.v1.json`; its negative result is superseded by this positive installer acquisition and is not a current global absence claim.",
+  "exact_new": "The six-root local filename inventory is frozen in `LOCAL_DISCOVERY.v1.json` as a bounded capture of pre-existing research/source roots, with the entire new acquisition/output tree excluded. Its recorded capture time follows the installer acquisition time; it is not a literal pre-acquisition snapshot. That excluded-tree scope establishes no current global absence and does not contradict the positive installer acquisition.",
+  "acquired_at_UTC": "2026-10-31T09:41:10.473150+00:00",
+  "inventory_captured_at_UTC": "2026-10-31T09:43:03.657687+00:00",
+  "why": "Independent reviewer compared timestamps and exact excluded-tree query scope; original phrase pre-acquisition was inaccurate."
+}

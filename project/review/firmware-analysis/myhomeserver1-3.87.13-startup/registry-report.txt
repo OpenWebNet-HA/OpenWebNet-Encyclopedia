@@ -1,0 +1,55 @@
+# MyHOMEServer1 3.87.13: scene loading, numeric registry key and SCENARIO context
+
+The selected startup scene loader populates the same first-tree container whose pointer is captured by a compiled `SCENARIO` action. The insertion key is scene object word+36, assigned by the original `id` conversion on the selected normal path. An existing equal key returns0 without replacement in the inspected insertion wrapper. Category2 can reassign an out-of-range ID before that insertion, so this is not a claim that every stored registry key is the untouched JSON ID.
+
+This is static original dataflow only. No configured scene, JSON parser, filesystem operation, vendor instruction, target process, tree rebalance, clock, callback, network/bus or physical effect was executed. No input project/object fixture or semantic host model was created. All earlier sources/reports remain read-only.
+
+Original image: `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. All source VAs are original linked addresses. All selected local functions are in this same executable; standard C++/JsonCpp/strtol definitions remain unexecuted provider boundaries rather than a forced second-image implementation join.
+
+## One container, two incoming roles
+
+The startup source initializes two tree headers in a local container at startup SP+160 (r4,0x13288). The first tree has root+8, self/header links+12/+16 and count+20; the next header is24 bytes later. This batch's positive insertion/lookup join concerns the first tree only, not every use of the second tree.
+
+At0x13342..0x1334a the caller supplies r0=scenesPath, r1=that r4 container and r2=the stored service inner pointer to loader0x17630. Under ordinary return/dataflow premises, the aliases remain distinct:
+
+| Stage | Container role | Service role |
+|---|---|---|
+|Loader0x17630 entry|Incoming r1, stored loader SP+4 at0x17642|Incoming r2, stored loader SP+20 at0x1764c|
+|Runner constructor call0x178ae|Loaded to r3 at0x178a6|Loaded to r2 at0x178aa|
+|Constructor0xaf3d4|r3 saved in r6 at0xaf3da|r2 saved in r5 at0xaf3d8|
+|Initializer call0xaf410|Forwarded in r2 at0xaf3f0|Forwarded in r1 at0xaf3f2|
+|Initializer0xa72c0|Incoming r2 saved at initializer SP+24 by0xa72fa|Incoming r1 saved at initializer SP+20 by the same STRD|
+
+That proves the supplied SCENARIO constructor context is the container, not merely a same-named class or the service: selected SCENARIO branch0xabc96 loads initializer SP+24 into r2 before calling0x113a88. The constructor preserves incoming r2 and stores it at compiled object+96 at0x113b46; its captured pair's second word is that same pointer at0x113b60..0x113b62. The preceding SCENARIO report's captured-pointer-to0xb6580/0xb69fc path can therefore be composed with this startup path under the stated normal activation/lifetime premises. In `ALIASES.v1.json`, shorthand `compiled96` denotes compiled object offset+96, not an object size.
+
+The source scene runner itself is constructed at an inner pointer12 bytes past a160-byte allocation: loader0x17898 advances r0 by12, saves that inner pointer, and0x178ae passes it to0xaf3d4. The loader's eventual value pair is `(scene object pointer, allocation/control base)` at0x178ce. This differs from the service aggregate's inner+16 and from compiled-trigger aggregates; those other layouts are not substituted here.
+
+## Parsed ID to object word+36
+
+In scene parser0x31e34, the selected `id`-present branch resolves exact key `id`, converts it with JsonCpp `asString` at0x31f12 and requests `strtol` base10 at0x31f2c. Its normal return is stored into scene object+36 at0x31f46. Source checks that at least one character was consumed and branches to provider exception requests for no-conversion/range-error cases. No complete end-of-string check appears in this selected retained conversion prefix. This report neither defines a full valid ID grammar nor supplies/adopts malformed, missing or out-of-range input; provider conversion/errors and constructor control-flow outcomes remain conditional.
+
+After construction, insertion wrapper0xb6ea8 loads the handle's first word at0xb6eb6, then reads its object+36 at0xb6ebe into the prospective key. Since the loader's object pointer is allocation+12, the loader's earlier allocation+48 accesses refer to this same object+36 word. Tree comparison instructions treat the stored32-bit key as unsigned, not as a source string. String spelling and numeric key identity must therefore remain distinct; no public scene-ID domain is inferred from these local integer comparisons.
+
+## Category2 key reassignment is a real intervening path
+
+At0x178c4 the loader reads allocation+104, i.e. scene object+92, and compares that category word to2. If it differs, the selected source proceeds toward insertion. For category2, it loads object+36 as allocation+48, subtracts20 and unsigned-compares to32747. Values in20..32767 take the direct insertion route0x17b9e; other bit patterns reach0x178ec, calling0xb6480 with the same container and category2. The returned word replaces object+36 at0x178f0 before eventual insertion.
+
+The retained helper's selected category2 branch starts candidate20, searches the same first tree for occupancy and increments through occupied candidates. Reaching candidate32767 after an increment requests an exception; an earlier absent candidate is returned. This is a local selector, not a complete product range declaration, a generated project or a guarantee of an available ID. Other helper categories, the subsequent file-rewrite/rename path, exception recovery, filesystem success and actual installed state are not analyzed here. The key conclusion is narrower and positive: an original source path can change the key between parsing and registry insertion.
+
+## Existing key and absent-key insertion paths
+
+At0x17ba0 the loader reloads its SP+4 container, passes the two-word scene handle to0xb6ea8 at0x17ba4, and then proceeds to handle cleanup without testing that helper's Boolean return in this selected caller.
+
+The wrapper reads first-tree root at container+8 and searches node keys+16 using unsigned lower-bound comparisons. Under ordinary valid ordered-tree, stable-state premises, an equal-key candidate reaches0xb6f00, returns0 and bypasses the insertion helper. This path does not overwrite or replace the existing value. It does not establish directory iteration order, a chosen winner across all startup paths, globally silent error handling, thread safety or a universal duplicate policy.
+
+If no equal key exists, it assembles a three-word payload `(key, scene pointer, control pointer)` and passes it to0xb71d4 at0xb6f24. In the selected insertion path, that original helper allocates28 bytes, stores the key to new node+16 at0xb7234, moves the two-word value into node+20/+24 at0xb7242, requests `_Rb_tree_insert_and_rebalance` at0xb7248 and increments container+20 at0xb725e. Its result/exception/concurrency behavior remains a provider/ordinary-tree premise; no real tree was inserted by the analysis. The wrapper reports1 on its normal insertion continuation; no actual tree mutation or accepted scene is claimed.
+
+This exact storage agrees with both SCENARIO readers:0xb6580 uses receiver+8 root/node+16 key;0xb69fc independently searches that layout and retrieves node+20/+24. Combined with the proven container pointer alias, this closes the former supplied-context identity gap for this selected startup route. It does not show when an action fires relative to loading, whether an equal target key exists, whether a handle is live, or whether0xa5db0 ultimately launches/completes a target scene.
+
+## Reproduction, integrity and remaining boundaries
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/registry/collect_registry_v1.py --check`
+
+The collector emits24 files including its manifest. It verifies four source pins,16 original Thumb2 spans, eight direct BL joins,16 critical instruction-byte guards and two `id` PIC literals. Fresh ELF PT_LOAD translation is used. All24 outputs plus collector were immediately copied into `first-candidate/`; its25-member index was computed before opening it. This first report is independently frozen in `report-first-candidate/`. No generated candidate failed or was overwritten.
+
+Original instruction/native helper/API/callback/redirect/EXIT/stop execution0; configured scene fixtures0; host semantic models0. The new evidence is container identity, ID storage/intervening reassignment, duplicate wrapper and exact node payload layout. File selection and JSON construction are inherited normal-path prerequisites; full filesystem/error/standard-provider behavior, service activity, complete second-tree use, concurrent loading, invalid ID policies, actual registry contents and target scene outcomes remain open. No transport, authentication, session, framing, physical-support or complete Device claim follows.

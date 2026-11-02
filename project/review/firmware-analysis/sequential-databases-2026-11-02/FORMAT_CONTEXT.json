@@ -1,0 +1,15 @@
+{
+  "classification": "Primary format documentation context, not vendor input/source/effective SQLite release",
+  "url": "https://www.sqlite.org/fileformat.html",
+  "accessed_UTC_date": "2026-11-02",
+  "sections": [
+    "1.3 Database Header",
+    "1.3.1 Magic Header String",
+    "1.3.2 Page Size",
+    "1.3.5 Payload fractions",
+    "1.3.7 In-header database size"
+  ],
+  "paraphrase": "A SQLite3 header is100bytes with fixed magic and fixed payload fraction bytes64/32/32. BE page-size field accepts powers2 from512 through32768, or1 for65536. Header pagecount is authoritative only when nonzero and change-counter agrees with version-valid-for; legacy/stale counts cannot alone reject an otherwise plausible file. Header match alone does not establish a complete database extent or readable schema.",
+  "fetched_full_document_bytes_or_hash": "Not retained; no invented full-page byte identity",
+  "vendor_or_SQL_execution": 0
+}

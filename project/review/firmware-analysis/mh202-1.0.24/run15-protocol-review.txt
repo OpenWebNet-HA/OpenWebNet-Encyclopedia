@@ -1,0 +1,40 @@
+# MH202 protocol/run15 independent source review
+
+**PASS after one documentation refinement.** The newly retained predecessor adds matching DIM1–8 and18 to the selected diagnostic branch's early DIM-equality shortcuts. The source also supports the distinct decoder array D/caller object C identities and the conditional data-slot/sentinel walk. No material finding correction is requested.
+
+This review used host Python, read-only image VFS and binutils/source evidence. I reran the static collector with `--check`; all23 generated outputs reproduced byte for byte:15 pinned inputs,14 original spans and40 instruction-word assertions. I independently mapped ELF load segments and verified the14 span hashes and40 words against original-image bytes, all15 input identities and all29 final author-manifest entries. I inspected the original disassembly/control flow and the finite source-contract JSON. **I did not execute original ARM instructions, invoke an emulator, run a target parser/decoder/array walker, or replay inherited run10 native experiments.** Those earlier endpoint results are saved evidence inputs only. All new execution/hook/primitive/linker/EXIT/stop counts here and in the author batch are0.
+
+## Source and model checks
+
+- **D versus C:** `0xf2f4` saves incoming r1 at collector-local SP+28. The reset loop computes eight objects starting SP+60, stride0x624c (`0x107b8..0x107d8`), and the decoder receives D[0] at `0x107e0..0x107f8`. D[0].raw is SP+24184 (`60+0x5e3c`); `0x10900/0x10904` reparses that text into saved caller C. Subsequent WHO/DIM/WHERE getters and the two forwarding calls explicitly reconstruct D[0], so C's reparse does not replace the output array. Distinct, well-formed caller/output storage and normal provider/string/logging completion remain premises.
+- **Sentinel:** decoder `0x144e4..0x144fc` adds one0x624c stride to its saved output pointer, then `0x14740` calls the selected CreateMsgOpen and returns1. Same-build libopen `0xb370` resets/copies text and tailbranches to IsCorrect. The original exact OPEN-OK comparison at `0xad90`, equal-kind6 at `0xad98`, store at `0xadbc`, and IsOKFrame's kind6 test at `0x9ac8` agree with the ledgers. This establishes conditional static classification, not an observed decoder/sentinel parse.
+- **Array consumer:** `0xf038` retains descriptor/array separately, checks IsOKFrame before each raw write, requests `write(descriptor, raw, strlen(raw))` at `0xf094`, and treats only negative return as this helper's write error. Normal logging/destructor continuation advances0x624c, with eight-slot cap0x31260. A kind4 data slot followed by a normally parsed kind6 sentinel therefore requests one data write per walk and stops before writing the sentinel. It does not establish full-length delivery, an actual recipient, or a live stop at index1 if the kind6 premise fails. The report correctly keeps short writes/error/lifetime and other slot contents outside its selected result.
+- **New predecessor:** the actual `sub r3,r5,#1; cmp r5,#18; cmpne r3,#7; bls 0x10c2c` at `0x10bfc..0x10c08` uses unsigned conditions. I independently modeled the ARM flag relation, confirming DIM1..8/18 and rejecting0/9/0xffffffff; matching requested DIM at `0x10c34/0x10c38` reaches `0x10d84` before WHERE comparison. `REFINEMENT.md` accurately identifies the earlier retained-span/model omission, keeps the old32-entry manifest unchanged, and limits the correction to completeness of the shortcut predicate. Rechecking eight inherited outcomes does not establish complete coverage.
+- **Selected mode7 composition:** supplied requested DIM1/WHERE42 and conditional D[0] WHO1001/DIM1/WHERE0 expose the new shortcut. The monitor array call precedes this filter; the selected command call follows the shortcut; DIM1 avoids the DIM23 preface. With nonnegative command helper return, mode7/requested-DIM1 takes `0x10e4c→0x11280` under the inherited return-tail scope. Monitor/command role identities are inherited pinned descriptor evidence, not observed connections. The saved run10 object is expressly a direct builder endpoint, not evidence that this invocation's decoder/registry produced the object.
+
+The finite host walker has two recipient-role compositions, each with kind sequence4,6, exactly one write-call boundary and length excluding NUL. This is source-contract arithmetic on a conditional pair, not parser/runtime/publication execution. Decimal example fields do not validate arbitrary C `atoi` grammar. Earlier mode2/mode10 handling and raw admission, final provider binding, object/container/global state and physical correlation remain separate boundaries.
+
+## Review refinement
+
+The original collector docstring incorrectly mentioned a separately invoked emulator experiment. The author replaced that sentence with explicit static/no-emulator wording, retained exact prior bytes and documented the change in `WORDING_REFINEMENT.md`. I reran `--check` after this wording-only change and checked the refreshed29-entry manifest. No code behavior, generated evidence, report finding or counter changed.
+
+## Exact reviewed pins
+
+| Author artifact | SHA256 |
+| --- | --- |
+| `protocol/run15/REPORT.md` | `cc37b4383aa124e7c4141aa825ff1ba8588cd61c3966b8eda35d197a69a0ad77` |
+| `protocol/run15/collect_evidence.py` | `1011a6cfe5ada0780a0ee3caafdffd5fb6d49ad32603ffb56faffc9854a2e35f` |
+| `protocol/run15/REFINEMENT.md` | `57c4d70d5d10dd3a72a3dc2ad2f98ae97d41aff3f19b45947f37c1afd74cd80a` |
+| `protocol/run15/WORDING_REFINEMENT.md` | `00912754d4d9d5c245430c3dcf9669122316fb665ef47896bd45ccff44521707` |
+| `protocol/run15/output-manifest.json` | `e38038ef78b70462c28b19eb0896e87f90b55dc4ee05e53d980c236794019ca3` |
+| `protocol/run15/original-spans.json` | `f65aefc2bd3d7dd493b5d37186bc9dba8e17078fd52b73754d4a205430fe7046` |
+| `protocol/run15/critical-words.json` | `22e74e0a9c0c42104506ca19ade7f42642fd913b840a8a11e56aca0d053962a7` |
+| `protocol/run15/D-versus-C-source-ledger.json` | `1b15d78965bf43dc5d1be8108e407154e1d5cac25466171687267ba532265ffe` |
+| `protocol/run15/qualification-refinement.json` | `374e7e31e7df34f91259ee40ee24bcb421afbafb404973374342be48d672f511` |
+| `protocol/run15/host-selected-two-slot-consumer.json` | `5dbacb8142fbc60411ac8cb2c189e26ab899ffcbae358d4d243379556221965f` |
+| `protocol/run15/sentinel-parser-and-walker-contract.json` | `324efc93b9dcab48ad983a80a6903b975f6b2e86fce87296ea8d747c7f5d4329` |
+| `protocol/run15/input-hashes.json` | `e8b91e48684042f8169691cd6b82a10179dc2808ada641b2975f9da3ccec92e7` |
+
+Original image identities checked are `/home/bticino/bin/bt_device` SHA256`65dad019cc15cf5036c04ec7ef23d0f9c2f388324f44692f43af37fd82192f70` and `/home/bticino/lib/libopen.so.0.0` SHA256`868eeb717020232c11623224df17bd6b2034fffc2fb80043c39c34b76310fb04`.
+
+No author source, prior dossier, synced reference, firmware or repository document was edited by this reviewer. This review does not certify the unexecuted full decoder/collector/transport or physical device behavior.

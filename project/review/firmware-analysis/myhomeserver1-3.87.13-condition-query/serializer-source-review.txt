@@ -1,0 +1,42 @@
+# BNLD serializer/operator schema: independent source review
+
+Verdict: PASS for authoritative v2; no correction requested. This independently checks original code/data, exact pointer ownership, branches and source-level value requests against the frozen packet. No original firmware/native/provider/JsonCpp/vendor/target process, semantic model or scene fixture was executed. This is not a complete executed JSON roundtrip, accepted scene grammar, live provider/type/query contract, physical interpretation or whole-lifetime proof. Author files remained read-only.
+
+## Reproduction and independent identity checks
+
+Read-only `python3 -B collect_serializer_v2.py --check` passed15 outputs. A separate ELF32 PT_LOAD mapper verified the original scheduler SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`, all5 original code and4 separate data span hashes,17 instruction guards,12 exact key pool/PC targets,5 decoded Thumb direct-call targets,11 R_ARM_RELATIVE entries and3 current input identities. Original class pointers, operator/status/type table rows and decoder literal bytes were separately checked; the retained instruction bodies were read for their register/branch semantics. All21 immediate v2 first copies match current bytes, sizes and hashes.
+
+The raw final class header0x1600b8/AP0x1600c0 and RTTI13BnldCondition resolve first method Thumb0x28179. Constructor pool0x2be88 instead resolves GOT0x16618c to temporary header0x1600a8/AP0x1600b0, RTTI17BaseBnldCondition; its same serializer pointer does not make the classes identical. Initializer pool0xa7f80/GOT0x1660f8 reinstalls the final header. V2's stronger separate assertions and original relocations agree. Linked pointers/Thumb bit0 are not observed live addresses or effective binding.
+
+## Original semantics and conditionality
+
+- Derived entry0x28178 actually calls condition base0x23aac at0x28192. Hidden JSON-result/receiver aliases and initializer SP+592 result passed unchanged to raw constructor0x2bd58, then the reparsed raw object to compiled0xf1634, agree. Allocator/publication and normal JSON/string/assignment/provider returns remain premises. No BNIL/action serializer behavior is transferred by similar fields.
+- Base emission conditionally includes nonempty id, always requests enabled Boolean and local type string, and uses original condition-name bound22/table0x1605b0 (23 rows). Row2 is BNLD. This differs from the trigger/action table bound and does not establish a public support domain.
+- Operator36 minus-one skips emission before its incremented unsigned bound/table lookup. Non-sentinel recognized0..3 produces higher/lower/equal/different; other values take empty text. The physically present noOperator table row is not normally emitted for raw minus-one. Actual condition constructor comparisons independently decode noOperator/higher/lower/equal/different to minus-one/0/1/2/3: its common store subtracts1 from the selected branch value. Empty/unmatched text retains the initialized sentinel on normal paths, conditional on original conversion/provider behavior. This is schema vocabulary, not a repeated or newly executed predicate table.
+- Derived status40 plus1 zero selects0x28258. It loads level44 and requests the signed Json integer constructor without any minus-one, zero or positive-level omission guard, then assigns only the level member. Thus status minus-one does not emit noStatus here, even though that string exists in the referenced status table. Status0/1 selects on/off; other non-sentinel patterns use the bounded-table fallback empty status string, with no level assignment on that route.
+- Raw constructor member presence remains material: PRESENT status selects its token path and level minus-one; ABSENT status reads level/asInt. Constructor-reachable scalar relationships are therefore conditionally coherent under ordinary provider/value/member semantics, but original JSON member presence is not preserved. Explicit noStatus can become level minus-one, omitted operator minus-one and omitted empty id. Source JSON containing both fields already discarded its level on the present-status path. Arbitrary altered raw combinations and complete signed/string/member/error behavior remain outside the claimed relation.
+
+Exact lowercase keys, local type/operator/status integers, compiled predicate/query semantics, physical units and accepted inputs remain separate namespaces. No actual installed condition, query transaction, natural trigger-to-action chain or physical lighting effect follows.
+
+## V1 preservation and history scope
+
+All3 root integration/pre-v2-serializer snapshot members match the exact retained v1 report/code/probe-disclosure bytes. The v1 strict temporary-header assertion occurs in build before generation writes; independently read original data contradict that final-header assumption, so the recorded zero-output stop is consistent with source control flow. Current v2 is separately generated/frozen, and the old v1 files remain unchanged.
+
+DEVELOPMENT_HISTORY.v2 explicitly labels the failed normal/check/index terminal sequence as a later transcription, not a contemporaneously hash-pinned terminal file. The earlier probe failure likewise retains only a transcribed faulty inline source/error excerpt, without an invented pre-call file hash. This review verifies current records, exact source and preserved bytes; it does not authenticate unavailable historical terminal/probe bytes or independently witness every development event. No source guard or generated result was silently weakened/overwritten by this review.
+
+## Exact current pins
+
+Paths below are relative to serializer/.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.v2.md` | `b96a6bfb2a30d4c20ba50abb6a2243a5cfe378eb5842c469acb3d3baba8f17d5` |
+| `collect_serializer_v2.py` | `303754b80717c1e5ad422b84a5e218d1bb9fb865e9c52fd12d49763e2d11bc7f` |
+| `OUTPUT_MANIFEST.json` | `7e32cdcb93894cbaf4a2d48e1fc71fd2825e4817d2d798a709096552310b2861` |
+| `CLASS_TABLES.json` | `4d3561f8df44f50744df323ca77e7a1ca657bae824b09c5c7c96f5621cbb05d8` |
+| `FIELD_RULES.json` | `c4815f3a5c28afd0398580e653904f9cbf0309edc1728ec9eaf412c126136c43` |
+| `DEVELOPMENT_HISTORY.v2.json` | `973cc387241c5277b9f884a1355fadbeefa8b90d8f06ce262a3f6fe89092107d` |
+| `first-candidate-v2/INDEX.json` | `8fcbde9f6c106708f03cb6ba27a5b95180ae42e0120811aeb771a0da9cd84cd1` |
+| `development/PROBE_FAILURE.json` | `c2f7fe836dda54686f2f6eed7fda2d1266b256f5850bb7e31c0554f7d6bdfc60` |
+
+Root three-file snapshot index SHA256 `1bace59497b8a4cb29a617af4ca92f5fb97b4c408834c5819f689221240c730d`.

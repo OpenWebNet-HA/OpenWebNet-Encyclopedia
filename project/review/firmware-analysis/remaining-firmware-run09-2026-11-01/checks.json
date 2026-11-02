@@ -1,0 +1,36 @@
+{
+  "scope": "Actual current strict ESG/ECV/diff commands after documentary/current identity PASS; human Markdown/link checks do not certify JSON semantics or fullsource/Device/runtime/physical coverage. Result sink opened before checks to provide its own link target; final bytes hashed after completed write.",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "project/review/checks/check_esg.py",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "STATS human_pages=417 support_pages=195 objective_failures=0 review_candidates=7038\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "project/review/checks/check_ecv.py",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "STATS human_pages=417 objective_failures=0 review_candidates=15\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "status": "PASS"
+}

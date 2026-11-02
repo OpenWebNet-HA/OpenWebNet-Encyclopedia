@@ -1,0 +1,586 @@
+{
+  "status": "PASS",
+  "completed_UTC": "2026-11-01T13:20:58.320187+00:00",
+  "scope": "Two selected original binary-source paths and exact source/review/document/history identities. No full Device/source/runtime/physical approval.",
+  "packets": [
+    {
+      "product": "F460",
+      "root": "work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver",
+      "report": "REPORT.md",
+      "report_sha256": "578653ad15a4c18b203d9917867f32384d017894875e88054043fae29ff46557",
+      "outputs_including_manifest": 12,
+      "first_copies": 14,
+      "snapshot": "first-candidate"
+    },
+    {
+      "product": "F461",
+      "root": "work/f461-firmware/2.0.11/research/2026-11-01-run07-identity",
+      "report": "REPORT.md",
+      "report_sha256": "1599bdd53dd4f3a9f20091f141338dfd22249fd0fb7b3ab0e900108a992f11ae",
+      "outputs_including_manifest": 10,
+      "first_copies": 12,
+      "snapshot": "first-candidate"
+    }
+  ],
+  "source_exports": 36,
+  "document_pins": [
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "snapshot": "00-f460-f461-deep-analysis.md",
+      "bytes": 19182,
+      "sha256": "ece79b9fbb0ee0c08519058f28ce746817c9e910ddc5c64379ae4e0690a11dc7"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+      "snapshot": "01-mhcatalogue-source-profiles.md",
+      "bytes": 15603,
+      "sha256": "bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run07-2026-11-01/README.md",
+      "snapshot": "02-README.md",
+      "bytes": 3240,
+      "sha256": "0f4c2cb1948942e246e11c8585daf4a2ffcabfd6468b4d57b55b9ccdc336a18d"
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run07-2026-11-01/SOURCE_EXPORTS.json",
+      "snapshot": "03-SOURCE_EXPORTS.json",
+      "bytes": 9863,
+      "sha256": "031da9f4035ca8e27bdf75a0d66fce57d782c9e0a757ca46de1caeffd609ec7f"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run07/REFERENCE_DRAFT.md",
+      "snapshot": "04-REFERENCE_DRAFT.md",
+      "bytes": 19182,
+      "sha256": "ece79b9fbb0ee0c08519058f28ce746817c9e910ddc5c64379ae4e0690a11dc7"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run07/ANALYSIS_APPENDIX_DRAFT.md",
+      "snapshot": "05-ANALYSIS_APPENDIX_DRAFT.md",
+      "bytes": 3016,
+      "sha256": "e457ca12dc5643df1af83f270ed8cc96725befcf6ca2cdf8d3ca317612e5f8f4"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run07/SYNTHESIS.md",
+      "snapshot": "06-SYNTHESIS.md",
+      "bytes": 1382,
+      "sha256": "af45df9522df30b38f1d9f41746ec6030130f244abdf52505a4f738d01825481"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run07/COVERAGE.md",
+      "snapshot": "07-COVERAGE.md",
+      "bytes": 1722,
+      "sha256": "18d578eb1ad143acd65aa9a0a5f666946496c40b8f73f412e4f23e10586d0cab"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run07/RANKED_REMAINING_QUESTIONS.md",
+      "snapshot": "08-RANKED_REMAINING_QUESTIONS.md",
+      "bytes": 1449,
+      "sha256": "69fb81b078049c568b299a8face0910b6b8f7785d8944a1576291e759a9d9508"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run07/SOURCE_CHECKS.json",
+      "snapshot": "09-SOURCE_CHECKS.json",
+      "bytes": 648,
+      "sha256": "5071ef4643f5e7f4d0690cc856d1ca378e25ed72b499d6bc83bdf9f8740ab2c2"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run07/integration/DOCUMENT_PATCH.json",
+      "snapshot": "10-DOCUMENT_PATCH.json",
+      "bytes": 767,
+      "sha256": "51d8dc0737c6b4c3443fbb23ff0b5e49983f83aa7bc7d737c2615681736162a4"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run07/REFERENCE_DRAFT_METHOD.json",
+      "snapshot": "11-REFERENCE_DRAFT_METHOD.json",
+      "bytes": 1778,
+      "sha256": "869f89406a02979aeb473e7b6326b1c0b428bab5d1e9e42c2a7d2204dd4c3999"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run07/reviews/f460-source-review.md",
+      "snapshot": "12-f460-source-review.md",
+      "bytes": 4405,
+      "sha256": "a4bdfb5d3f019d03e768733df85b081ffa5dece0653ce92e202d077c6f155484"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run07/reviews/f461-source-review.md",
+      "snapshot": "13-f461-source-review.md",
+      "bytes": 3854,
+      "sha256": "5150123d077525bf0f80e9560d58a0b191ffb755ba3abedbf2b35c7b40a30edd"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run07/CAPSULE_README.first.md",
+      "snapshot": "14-CAPSULE_README.first.md",
+      "bytes": 3240,
+      "sha256": "0f4c2cb1948942e246e11c8585daf4a2ffcabfd6468b4d57b55b9ccdc336a18d"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run07/PLAN.json",
+      "snapshot": "15-PLAN.json",
+      "bytes": 712,
+      "sha256": "6fbf99024d21a4e9b6b7200806c47831c6de34370c70fb132b1a311e5e222435"
+    }
+  ],
+  "reviews": {
+    "f460-source-review": "a4bdfb5d3f019d03e768733df85b081ffa5dece0653ce92e202d077c6f155484",
+    "f461-source-review": "5150123d077525bf0f80e9560d58a0b191ffb755ba3abedbf2b35c7b40a30edd",
+    "integration-review": "fa5ae85efb10c6eaacf5a187179162fced5e18f17c30916f887221d96ee7b78e"
+  },
+  "protected_indexed_entries": 12738,
+  "protected_dossiers": [
+    {
+      "root": "work/f454-firmware/research/2026-10-29",
+      "files": 1917,
+      "index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-targeted",
+      "files": 107,
+      "index_sha256": "ddb83866292f70631b968b91f07e08fbc79415b5e1762cf3699f8e326eacff79"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-targeted-2",
+      "files": 130,
+      "index_sha256": "2dc3f9e3541478eff304d1d9bb368d02504c39cc3d5d8d3aec7ca96650032d82"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-final-pass",
+      "files": 83,
+      "index_sha256": "bf27345d8ce8d1e4e9277ad9346c62fcfde1f0b33bb20783ae5e66963ad100f2"
+    },
+    {
+      "root": "work/mh202-firmware/research/2026-10-30",
+      "files": 2904,
+      "index_sha256": "c65b6ab0961d6ba4ec7e19471c16993be0470b7d5eac3bbd1f93ad78aaeaf8f0"
+    },
+    {
+      "root": "work/firmware-product-followup/2026-10-31",
+      "files": 330,
+      "index_sha256": "624c42bcff5bd7b014dae7686648b3f3019be7956dd90de93c253dab7f891be7"
+    },
+    {
+      "root": "work/artifact-conservation/2026-10-31",
+      "files": 91,
+      "index_sha256": "5fa10c935d988778c9ce909e73e1b04f5635c034fd749a5ed96a8a5bcd323ed4"
+    },
+    {
+      "root": "work/mh202-firmware/research/2026-10-31-database-analysis",
+      "files": 128,
+      "index_sha256": "6292be5148fb4590c4b7e7229af6efe75eb547c79e755113369d24cfff37b828"
+    },
+    {
+      "root": "work/firmware-next-investigations/2026-10-31",
+      "files": 354,
+      "index_sha256": "47235b5e1fd5748bddb239b5f538cc87b7361c9c8cbb9d09dac530b9d0f08782"
+    },
+    {
+      "root": "work/installer-database-audit/2026-10-31",
+      "files": 18,
+      "index_sha256": "812a8e16432596609936272a46af2d942b1f4bf4fa141a0fa564018197ffe0b8"
+    },
+    {
+      "root": "work/installer-database-conservation/2026-10-31",
+      "files": 44,
+      "index_sha256": "627d109115fa8b8a0ab90ab2d644ccceba329187bd650c380c343424ed93e719"
+    },
+    {
+      "root": "work/installer-database-analysis/2026-10-31",
+      "files": 166,
+      "index_sha256": "898b879a364515f3a978864e5fc6e8f8b2577ec619f48eef9515203c1e2280f6"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31",
+      "files": 238,
+      "index_sha256": "85d5fa383d6a0bd54734b022b78c8fc375f9e71dba24e40c2bccbced2965dce2"
+    },
+    {
+      "root": "work/myhomeserver1-database-conservation/2026-10-31",
+      "files": 11,
+      "index_sha256": "e95c6cb5e89214f29b2cabda8707e2d640c436814c537cc3c2eee3ee192534f0"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13",
+      "files": 50,
+      "index_sha256": "bd315f66fc3e8bddfb1d1ade3a43c4c9cefd713cac075ee971024d59c80b33ca"
+    },
+    {
+      "root": "work/mhcatalogue-comparison/2026-10-31",
+      "files": 228,
+      "index_sha256": "1fb864fa45df95ca01d2bd6baea61c1cd99b85a14e4aade0f7a8baf8da40b25a"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers",
+      "files": 277,
+      "index_sha256": "0fee5ce7f2f839af29b4f22f2e5b7429dd75c56c253e39b8febd6dfd24f8aaca"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories",
+      "files": 294,
+      "index_sha256": "01a7ca5d6c2779048b04554eb394e633896511441a483ca413f4de061ac95360"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions",
+      "files": 270,
+      "index_sha256": "6c97ed8608d12533336d49840f71a6ae1816527ab8f0c8304cb8d82497c4c1ea"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-triggers",
+      "files": 255,
+      "index_sha256": "98b39e6e03a68556ab8639f52d47bd7296719da3365511132f970d2e00673115"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup",
+      "files": 203,
+      "index_sha256": "1e65b3dd131bcdaa97a73043a489e9acedb041aa5831d46288a2c3f00293c566"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation",
+      "files": 209,
+      "index_sha256": "9437d63e5be7271e2da97c7c7c06a821e645bbe3736e4cf0759862a90266ebbf"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime",
+      "files": 290,
+      "index_sha256": "1ef36f8ea9b655f6901ecef6cf752e3c10b01cc404e029e7756e0fd264ef74be"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization",
+      "files": 253,
+      "index_sha256": "d9faea1c810366127dd3f993da54046f18e6a23a592030e8c2d2d11d9b78bdd9"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger",
+      "files": 242,
+      "index_sha256": "fa02a2cee18fc5264137a902fe016793aecffc46a7af2ac81a36c0c8f7ea9aa9"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing",
+      "files": 255,
+      "index_sha256": "88dc7cb6a73d9485fbac9c0fa11c5acd8bd195d84228939a04bc2ade18e3b895"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query",
+      "files": 180,
+      "index_sha256": "a5b63f48a31789319fd96b7ddc394136d460e39b8239982b04d95dba641031cc"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal",
+      "files": 128,
+      "index_sha256": "383279930c2b63280575e9ec3221e0ce65edd14c9f4f1f2696ae06f1570865d4"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-removal-context",
+      "files": 188,
+      "index_sha256": "a97d21be032235bd6c52cef56dbfad7c4f3d1ac39156a05ea81a32f2b63e711d"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership",
+      "files": 164,
+      "index_sha256": "3065ea51555d18f5ab2af9b1b97ce9ddd2498c2b148ac9050471915fa358fe57"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values",
+      "files": 243,
+      "index_sha256": "f98d48d1c960afd4bfe1914262e0389ccee40a1c4768b629bcaf64d68d2475b9"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation",
+      "files": 228,
+      "index_sha256": "b6133496c1f9ab0989c832bcdb741727457acc9585e4ec91c37ae5f5ecab2867"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis",
+      "files": 112,
+      "index_sha256": "a2c92f2d00c8363989c30dee1ee08f85ce5092011312ee691608bee12aa6879a"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger",
+      "files": 142,
+      "index_sha256": "9aa272b2543bded5bd6765473851fdd9897e9abfde504239218b15dbd274a9f2"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review",
+      "files": 133,
+      "index_sha256": "03284df24b832dce40422161c9068df5dfdb03d793b7f1398e72a828053ede69"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-trigger-serialization",
+      "files": 105,
+      "index_sha256": "055cc83c10a440dffecbe86883fddeffdc02b90a83305f453c2f295e13e72948"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider",
+      "files": 108,
+      "index_sha256": "f479ae18af6627d428afd768227caeecee14b4506827d8c6a0d95a7d60275177"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output",
+      "files": 128,
+      "index_sha256": "8adbceef41a34ff348517f2c64c35a5d9c9a93f73dc72a7166c5095f26c219de"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-request-values",
+      "files": 133,
+      "index_sha256": "126e0742ba0f07f98ba1903b4b2612be743c390dc44c2e3285c85b245d1b50af"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state",
+      "files": 167,
+      "index_sha256": "491ee6a06ac3e03b19ded579ae5e3c7491da9ce76b2c834f9602f6f7f8018974"
+    },
+    {
+      "root": "work/f460-f461-comparison/2026-11-01",
+      "files": 307,
+      "index_sha256": "760a66fcae9e1d4eab76f20a00d062b86f57f891045c35e77d7ec2e3c318e701"
+    },
+    {
+      "root": "work/f460-f461-comparison/2026-11-01-depth",
+      "files": 157,
+      "index_sha256": "1d3869b521522976df8a63bd91116438431a453ce873f06a8fdaee53454b51b5"
+    },
+    {
+      "root": "work/f460-f461-comparison/2026-11-01-run03",
+      "files": 179,
+      "index_sha256": "1d60bb1c8d9d1cd574c58c8e7ed989444a48c333acb3508a99972d08313f1fc0"
+    },
+    {
+      "root": "work/f460-f461-comparison/2026-11-01-run04",
+      "files": 210,
+      "index_sha256": "a6e38143d7f9def0a681b44b806c6b1cadf1d985f802a20540d2a5d367c66a3a"
+    },
+    {
+      "root": "work/f460-f461-comparison/2026-11-01-run05",
+      "files": 188,
+      "index_sha256": "420016be1282100405980fee2866f4c7982e8dd910c13c7756734a0c0fa1f6bb"
+    },
+    {
+      "root": "work/f460-f461-comparison/2026-11-01-run06",
+      "files": 191,
+      "index_sha256": "15dcc89cef282e7c400aedc0a2a65f568d6368e401d8347871a93ecd6b5e9485"
+    }
+  ],
+  "historical_reference_substitutions": [
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+      "retained_prior": "work/f460-f461-comparison/2026-11-01/integration/pre-edit/README.md",
+      "sha256": "312d54e3264bad9ddc1226ecebd93880359ae3f992265d8667d92fd9f81722fb"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "retained_prior": "work/mhcatalogue-comparison/2026-10-31/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "sha256": "0581a52f32a95f4cae419693fe8d20b4ecf272f5e195f40070b00e166aea173f"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/integration/pre-edit/internals/mhcatalogue-source-profiles.md",
+      "sha256": "35cab23085fdc9120784916657da218aabd783a0f2008705ba8e41cc3485f809"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "sha256": "c787f9bc0f70f8ab99dc8341331c4f72714b9e29878034efd5b4d9a0ba70a9e7"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/integration/pre-edit/internals/mhcatalogue-source-profiles.md",
+      "sha256": "5c60cbbf8796612b1efaa80392d77cf067b1ec647ca802dae72f91b673da2dac"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md",
+      "sha256": "ff3b179e05c69f6a1f34ab97ee76c43c3e72bdfff89d6c6661644c4bd45f4583"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "sha256": "ee2ac5108fec4dca958afa73832cc874f43aebb9e1e6f4ffa5d5c4ecaab4d381"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/pre-edit/mhcatalogue-source-profiles.md",
+      "sha256": "59affbd225571e554a49ad784619912a1521ff5b00c80bf5ea28094540b942b9"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-factories.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-factories.md",
+      "sha256": "00ff0103bb815431071651ee12c170078e345649728e36e3bfe0eb7c9f4bea10"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/integration/pre-edit/myhomeserver1-3.87.13.md",
+      "sha256": "23629011fc6f1afd56e837d5d0a65e62952c02c051573bea534ffd4a9535d848"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-actions.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-triggers/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-actions.md",
+      "sha256": "8fbbecb80d000f43bdfbb05cfd9d89eb761820d10878445bd273d7ecceb80a45"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-time-scenarios.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-time-scenarios.md",
+      "sha256": "3387b6f658f8950db4ebfc81df7b5ec24adfbddbf6ab3cd1af40938afe0724b8"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-startup.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-startup.md",
+      "sha256": "373bc378d94e31a59a0f7e9b40ac143a474d0a98e220336bb46d366f17cb4e88"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-cancellation.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-cancellation.md",
+      "sha256": "2c23c61974b9307a7af5981111abe0bbc0fc1cda36900d64ac49e5daa7f13925"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-lifetime.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-lifetime.md",
+      "sha256": "8ce553099d5dc56a22329d172b0e88c007628ac420d026bcb61d42a681a0c7bc"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md",
+      "sha256": "f45e764793f742393c69c7988759e146f48e03d9fdfbc23f01978d61b3cbe332"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-trigger.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/integration/pre-edit/event-trigger.md",
+      "sha256": "9c00b5afa69dfeed629a8d4a67508b22c3457a5dd323a77ff8858f3898247df5"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/integration/pre-edit/myhomeserver1-3.87.13-serialization.md",
+      "sha256": "60b5db067af68cd9e2a4d27ccfd65dee0c9db74581c42783400d63099d21e3ab"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-routing.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/integration/pre-edit/myhomeserver1-3.87.13-event-routing.md",
+      "sha256": "3459f6f31691b5bcc0bba3bd7b61c423c94a5ba4af0affa92cb44beaf128d5e8"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-trigger.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/integration/pre-edit/myhomeserver1-3.87.13-event-trigger.md",
+      "sha256": "68524eb6514d4663ca9d0cec87a47cb70ffc5d6797b054c76f53907c01a68e89"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-routing.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-removal-context/integration/pre-edit/myhomeserver1-3.87.13-event-routing.md",
+      "sha256": "4f2d6e51a6fe074bd47a32128ad65ed54d3129ecb780704bc946eaccf2a62d20"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-removal-context/integration/pre-edit/myhomeserver1-3.87.13-serialization.md",
+      "sha256": "c9003e66c58e126236b4829218109e3033cfb984c1a16dc0428203f7cd1a9242"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-routing.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/integration/pre-edit/myhomeserver1-3.87.13-event-routing.md",
+      "sha256": "8a438087be67ca228d7c6c6b3a006ff0ccfb5bb02499973ab671f27b845b05b5"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/integration/pre-edit/myhomeserver1-3.87.13-serialization.md",
+      "sha256": "d1b6bef0431a19332a85dab89d9ee889a13732e77ca23b1287a37537393deb24"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-routing.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/integration/pre-edit/myhomeserver1-3.87.13-event-routing.md",
+      "sha256": "39900de1777ceb80338c94f97b66f2594c45ae953147bd0147b7d7d63c0b2420"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/integration/pre-edit/myhomeserver1-3.87.13-serialization.md",
+      "sha256": "af361935539177bd8fd7f4d6678edb9f315005a2d2c1789ce423da81e7d5a5bf"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/integration/pre-edit/myhomeserver1-3.87.13-serialization.md",
+      "sha256": "a33d0cbacec9e522b2f6237ab2a9c06b6d29c72378371c542175b162b749b069"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/integration/pre-edit/myhomeserver1-3.87.13-research-synthesis.md",
+      "sha256": "5d9426583d60ffe1618b2a82e0bf9bd97426387a6245c7b8e6500bfe09cdc5c1"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/integration/pre-edit/myhomeserver1-3.87.13-research-synthesis.md",
+      "sha256": "5a3dec72f1d14ac5c338a38571c809749594e761854e915c8a0decea447bcd52"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+      "retained_prior": "work/f460-f461-comparison/2026-11-01-run04/integration/pre-edit/mhcatalogue-source-profiles.md",
+      "sha256": "643f65b12698dffef8858d451290f69c7a517ed239c13e80dd27d3322298aa69"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-knowledge-handoff.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/integration/pre-edit/myhomeserver1-3.87.13-knowledge-handoff.md",
+      "sha256": "4487454c6cb76efb3850b8ccdd30e9f01414eefccf5acbf84f8ff725cfc018e6"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-trigger-serialization/integration/pre-edit/myhomeserver1-3.87.13-research-synthesis.md",
+      "sha256": "060d6bf14627853d85dc6cf701afcae2aec884f62da519d29428067c953cb982"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/integration/pre-edit/myhomeserver1-3.87.13-research-synthesis.md",
+      "sha256": "2d906542a4a369b4dd71c4e1820a79205a70613ddaf739e4b5265b26bb6106d2"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-trigger-serialization.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/integration/pre-edit/myhomeserver1-3.87.13-trigger-serialization.md",
+      "sha256": "2c1e7ad4af0488d23f081d266fe42050661cc1ff345def8041926f51f23a9c43"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-request-values/integration/pre-edit/myhomeserver1-3.87.13-research-synthesis.md",
+      "sha256": "03dc425c580d209ae4dbd6749e0455ab7e514f3873208b9c3543b0148f4c10d6"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/integration/pre-edit/myhomeserver1-3.87.13-research-synthesis.md",
+      "sha256": "217ab6d2fb2edc99c6befa30677edd9fc44c7d09269ed68d5ca207ed28fa27ae"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+      "retained_prior": "work/f460-f461-comparison/2026-11-01-run03/integration/pre-edit/README.md",
+      "sha256": "cec905b76f4c95fc3309774a0d453ff7cb0d6d0dfa6f7c2d5714f0a8e2743274"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "retained_prior": "work/f460-f461-comparison/2026-11-01-run04/integration/pre-edit/f460-f461-deep-analysis.md",
+      "sha256": "6df016d9d20c97cd01f43b31b0587d27e935ee9fe09ed4ecc2117a27bd12904f"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+      "retained_prior": "work/f460-f461-comparison/2026-11-01-run05/integration/pre-edit/mhcatalogue-source-profiles.md",
+      "sha256": "ed74e4da897e9c500b4fe9333a3a89ae5dc3a2a849469ed756ae7d2b99d52ce3"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "retained_prior": "work/f460-f461-comparison/2026-11-01-run05/integration/pre-edit/f460-f461-deep-analysis.md",
+      "sha256": "f8c18480c7aa608a06a973c3e6b8d956b461b49201018276b1bcb75011157608"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "retained_prior": "work/f460-f461-comparison/2026-11-01-run06/integration/pre-edit/f460-f461-deep-analysis.md",
+      "sha256": "e02310bc79076614af748122f6da7d652359b4bbb6606919fb8e5f3c530cc100"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "retained_prior": "work/f460-f461-comparison/2026-11-01-run07/integration/pre-edit/f460-f461-deep-analysis.md",
+      "sha256": "318c3c8c8282fa0ff08b8c877be4fcafe3b560906754d7f2374aefbe2c58cf7e"
+    }
+  ],
+  "new_original_native_model_fixture_runtime_execution": 0,
+  "old_MHS_ledger": "Separate unchanged one corpus/eight entries/340 original code-hook visits/12 redirects/eight EXIT/zero stops/360 hooks; no replay",
+  "old_F454_MH202_ledgers": "Separate unchanged",
+  "source_manifest_modified": false,
+  "prior_public_pages_modified": "Continuing main only; core catalogue profile explicitly unchanged. Exact old reference, patch reconstruction and historical substitutions verified.",
+  "branch": "docs/static-firmware-analysis-findings",
+  "staged": false,
+  "uncommitted": true,
+  "committed": false,
+  "published": false,
+  "Device_source_gates": "Pending unchanged",
+  "history": "Both source first generations and documentary candidate passed without correction. Uncertain process consumer was stopped/excluded before generation; only HAL pure-getter spans promoted, no closed-route proxy. Earlier failed/versioned histories and MH20218/21 limitations remain preserved."
+}

@@ -1,0 +1,92 @@
+{
+  "actual_manifest": {
+    "actions": [
+      {
+        "files": [
+          "btweb_only.ext4.gz.sha256.sig.zip",
+          "Image.zip.sha256.sig.zip"
+        ],
+        "provider": "btesuv3",
+        "type": "firmware"
+      },
+      {
+        "files": [
+          "btweb_only_recovery.ext4.gz.sha256.sig.zip",
+          "Image.zip.sha256.sig.zip"
+        ],
+        "provider": "btesuv3",
+        "type": "recovery_firmware"
+      }
+    ],
+    "name": "F461",
+    "object_models": [
+      "5.0.134"
+    ],
+    "status4_action_order": [
+      "2",
+      "1"
+    ],
+    "version": "2.0.11",
+    "xml_version": "3.1"
+  },
+  "archive": {
+    "bytes": 138644991,
+    "path": "F461_020011.fwz",
+    "sha256": "cb6f3e9d875c14f74a0791d7f3f420ce9d4babadb4459c1250c6cba7e741af2b"
+  },
+  "extraction": {
+    "images": [
+      {
+        "all_regular_size_SHA_verified": true,
+        "directories": 805,
+        "hardlink_metadata": 0,
+        "host_links_created": 0,
+        "image": "normal",
+        "readonly_tree": true,
+        "regular_bytes": 200526634,
+        "regular_files": 5853,
+        "special_metadata": 0,
+        "symlink_metadata": 1768
+      },
+      {
+        "all_regular_size_SHA_verified": true,
+        "directories": 748,
+        "hardlink_metadata": 0,
+        "host_links_created": 0,
+        "image": "recovery",
+        "readonly_tree": true,
+        "regular_bytes": 161637437,
+        "regular_files": 6133,
+        "special_metadata": 0,
+        "symlink_metadata": 1644
+      }
+    ],
+    "link_policy": "Metadata only; no host symlinks/hardlinks/special nodes materialized",
+    "mounts": 0,
+    "original_execution": 0,
+    "result": "PASS"
+  },
+  "images": [
+    {
+      "block_bytes": 4096,
+      "bytes": 1073741824,
+      "gzip_CRC_verified": true,
+      "image": "normal",
+      "path": "extracted/images/normal.ext4",
+      "sha256": "3674680fbe5c9db24c266c4323e7100c1050e9be02fa5f8e11adeb44871e4d69",
+      "source": "extracted/btweb_only.ext4.gz.sha256.sig.zip.contents/btweb_only.ext4.gz"
+    },
+    {
+      "block_bytes": 1024,
+      "bytes": 268435456,
+      "gzip_CRC_verified": true,
+      "image": "recovery",
+      "path": "extracted/images/recovery.ext4",
+      "sha256": "7de562cc6e33fcc6409696d124026586cf80d42ead305b4b10d568741e403d76",
+      "source": "extracted/btweb_only_recovery.ext4.gz.sha256.sig.zip.contents/btweb_only_recovery.ext4.gz"
+    }
+  ],
+  "key_source": "Curated exact commercial identity; value not exported",
+  "outer_members": 4,
+  "signature_authenticity": "ZIP/gzip hashes/CRCs verified; signature blobs present, not cryptographically verified"
+}

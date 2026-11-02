@@ -1,0 +1,79 @@
+# ScenarioSuite MH200N and MH202/common variants - complete logical comparison
+
+The two installer ScenarioSuite databases have identical79-table schemas and54406 rows each, but are not interchangeable copies. Complete type-aware row-multiset comparison finds exactly8 updates retaining their declared primary keys, changing9 nonkey cells, plus1 removed and1 added composite version-key row, in4 tables. There are no other row additions or removals. The other75 table contents match logically, including address, permission, association, variable/status and working-table data.
+
+The substantive differences are a Dimmer100 Start/Stop trigger rule's ordered field literal1 versus4, and Presence sensor's family/order placement. These are source-profile changes, not a demonstrated device capability, compile result, live trigger or physical outcome. All original CLR/ARM/vendor/generator/driver/network/device execution is0. This pass performs only host read-only SQLite and file analysis.
+
+## Exact sources and product scope
+
+| Profile label | SHA256 | Installer members / internal database version |
+| --- | --- | --- |
+|MH200N1331|`83b7fa13c224012ebd1561fbc2895deb599b06223eb8e5041f565b7c5b7dbfd8`|`default/resTargetDir4/devices/1331_1.0_BT/xml/Steps/Step_2/Scen_SuiteDB_ENG.db` and identical LG alias; version row1.1.0|
+|MH202/common|`ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29`|`default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_2/Scen_SuiteDB_ENG.db` and identical `default/resTargetDir2/db/Scen_SuiteDB_ENG.db`; version row1.0.53|
+
+Each payload is2542592 bytes. Inputs here are the unchanged hash-named files under `work/installer-database-audit/2026-10-31/recovered/`, identified by AUDIT.json/LOGICAL_INVENTORY.json and conservation PLAN.json. The archive registration/readback work is a separate parent checkpoint; this analysis performs no upload, registry edit or independent remote readback. PLAN's existing_registration fields describe planning time rather than contradicting later conservation completion.
+
+The frozen canonical device references associate item1331 with OWN-DEV-0131 MH200N and item1902 with OWN-DEV-0151 MH202. These are installer device-package associations, not evidence that either database was recovered from a running gateway. Suite3.5.38, package directory builds1.0, internal database rows1.1.0/1.0.53, catalogue firmware-definition IDs and actual firmware releases are separate namespaces. Numeric version ordering does not establish chronology, compatibility or a product upgrade path. The common alias does not make the ae1e payload universal across all identically named installer files.
+
+## Full schema, key and logical-row audit
+
+`SCHEMA_AND_KEYS.v2.json` retains complete sqlite_master schema metadata and, for every table in both profiles, table_xinfo columns, declared primary key, foreign keys, index_list and index_xinfo. These structures are exactly equal across both profiles. All79 tables are included, not just the four changed ones.
+
+There are59 tables with declared primary keys and20 without. Across both current datasets, every declared primary key has0 NULL-containing rows and0 duplicate key groups. Selected/all table schemas declare no foreign keys; an empty foreign-key check would not establish implicit-owner correctness. Logical comparisons therefore retain duplicate multiplicity and do not assume same-name ID columns are foreign keys. This audit does not turn reused ID_ASS or object/resource numbers into shared namespaces.
+
+Every nonworking table row is read into host memory and compared using type-tagged values and a sorted multiset with duplicate multiplicity. Rowid and physical record order are excluded. `SQL_LOG.v2.json` records exact statements; `SCHEMA_AND_KEYS.v2.json` records all per-table counts and logical fingerprints. The fingerprint codec is explicitly different from the prior inventory's codec; prior table counts and changed-table partition are independently crosschecked, rather than comparing incompatible hash encodings.
+
+All24 TMP tables are empty in both originals. The collector requests their counts/schema only and refuses to read temporary rows if any count is nonzero. No working/project instance, credential, DB_CONFIG value or unchanged row contents are exported. Only the complete10 row events (8 same-key updates and2 one-sided version-key rows) in the four explicitly whitelisted manufacturer ANA tables are exported, with full left/right rows and changed-column values. A read-only quick_check returns ok for both; this is source health, not semantic validation of vendor rules.
+
+## Every changed row and column
+
+Direction below is MH200N1331 to MH202/common, solely a comparison direction, not a migration chronology.
+
+| Table / primary key | Changed column | MH200N1331 | MH202/common |
+| --- | --- | --- | --- |
+|ANA_COSA /317|OPEN_COSA|`1`|`4`|
+|ANA_OPEN_RULE_COMPILE /284|OPEN_FIELD_3|`1`|`4`|
+|ANA_OGGETTI /59 Movement sensor|ORDINE|1|2|
+|ANA_OGGETTI /62 Lighting sensor|ORDINE|2|3|
+|ANA_OGGETTI /63 Twilight sensor|ORDINE|3|4|
+|ANA_OGGETTI /64 Rain sensor|ORDINE|4|5|
+|ANA_OGGETTI /65 Wind sensor|ORDINE|5|6|
+|ANA_OGGETTI /69 Presence sensor|ORDINE|2|1|
+|ANA_OGGETTI /69 Presence sensor|ID_FAMIGLIA|13|15|
+|ANA_VERSIONE_DB /composite key|Removed versus added `(VERSION,RELEASE,BUILD)` key|`(1,1,0)` removed|`(1,0,53)` added|
+
+The first9 cells belong to8 same-key updates:1 command,1 compile rule and6 objects. All other columns in those matched rows are unchanged. ANA_VERSIONE_DB instead declares all three VERSION/RELEASE/BUILD columns as its composite primary key; its sole old and new rows are therefore1 removal and1 addition, not a matched-key update. The two version tuples may be compared descriptively, but must not be presented as two updated nonkey cells. Full exact rows, NULL-versus-empty distinctions and keys are in `LOGICAL_DIFFERENCES.v2.json`. All597 ANA_COSA rows,63 ANA_OGGETTI rows and608 compile-rule rows were compared; the report does not select a few examples while concealing other changes.
+
+## Dimmer difference: trigger template, not ordinary WHAT replacement
+
+The complete contextual query on command317 returns only associations1340/1341, object43 Dimmer100, areas3 Start and6 Stop; no selected Action association is added. WHO ownership joins object43 through CHI key1 to literal OPEN_CHI1. Command label Dimmer ON is unchanged. Compile-rule PK284 names that same object/command, with TRIGGER_START_AREA1 and TRIGGER_STOP_AREA1, COND_OK_AREA0 and ACT_AREA0 in both profiles.
+
+Its ordered fields are `#1`, `ID_DOVE`, `1` or `4`, `[101-200]*`, followed by empty fields. Thus the changed third template field is in a dimension-shaped trigger pattern after WHO/WHERE, not an ordinary WHO1 WHAT command being renamed1 to4. The literal range/pattern text is preserved exactly; no matcher, wildcard, payload-completeness or accepted-wire interpretation was executed.
+
+The reviewed same-installer compiler source provides the relevant consumer context: DataManager.GetOPENRuleCompile selects by object, command and area flag; Core materializes all10 OPEN_FIELD properties; MakeOpenCommand appends nonempty ordered fields and substitutes ID_DOVE where present. Under compatible resource/provider and source-object premises, selecting PK284 therefore changes a literal field of the assembled trigger pattern. No concrete WHERE, user scenario or compiler output is fabricated, and upstream editor/resource binding remains unobserved.
+
+This is not a global DIM1-to-DIM4 substitution. All67 ANA_STATUS_REQUEST_COMPILE rows match between profiles. Object43's complete status-rule query returns PK36/37/38, all REQUEST_DIMENSION1 in BOTH profiles, with their unchanged FINDDIMMERON/EXTRACTVALUE declarations. All other596 ANA_COSA rows and607 compile-rule rows are unchanged. The published WHO1 reference distinguishes DIM1 level/speed from DIM4 status; that makes this source distinction meaningful, but neither the publication nor this database comparison proves why a specific gateway/actuator behaves differently. Existing physical capture observations are not rerun, changed or attributed causally to the catalogue.
+
+## Presence membership and ordering
+
+Presence sensor69 moves from family13 Lighting, order2, to family15 Sensors, order1. Movement59 and Lighting62/Twilight63/Rain64/Wind65 shift their Sensors order by1. The complete two-family membership query is retained for both profiles: MH200N1331 Lighting contains Zone50 and Presence69, while Sensors contains the other five; MH202/common Lighting contains Zone50 and Sensors contains Presence69 followed by those five.
+
+Family rows themselves are unchanged: Lighting13 has ATTIVA0, Sensors15 ATTIVA1. This records a family/membership/order difference relevant to a potential family-based editor consumer. It does not prove a visible/hidden UI change, enable a physical sensor or override per-object permissions. Labels, resource IDs, object IDs, tooltips and other object columns remain unchanged. Source compiler method availability is not execution of the editor's active-family filter.
+
+## New, corroborated and narrowed knowledge
+
+New: complete exact profile differences and their keys/columns; the Dimmer100 Start/Stop pattern distinction; Presence family/order reassignment; internal version rows for both originals. The byte-distinct BT/LG MH200N payload is now a precisely scoped source rather than a same-filename assumption.
+
+Corroborated: the earlier audit's four differing tables, now checked across all79 schemas and complete row multisets. WHO17 Counter66/Boolean67 declarations,128-address domains, status rules, text-field metadata, area permissions and associations are unchanged at their source-table level. The earlier actual consumer refinement selecting ANA_TEXT for text controls also remains source-scoped; temperature/time range reuse is not revived as a Counter consumer relationship.
+
+Narrowed: references to the MH202/common ae1e source must retain that exact source identity; they cannot be generalized to all Scen_SuiteDB_ENG.db files. Correct earlier MH202-specific findings are not superseded as false merely because a separate MH200N profile differs. Neither internal version row is equated to a firmware release. No historical report, source snapshot, capture, native result or canonical page is rewritten by this batch.
+
+## Reproduction and remaining scope
+
+Run `python3 -B work/installer-database-analysis/2026-10-31/scenario-variants/collect_variants_v2.py --check`. Connections use absolute URI `mode=ro&immutable=1`, `uri=True`, query_onlyON/trusted_schemaOFF, and no extension loading or vendor functions. Source bytes are verified against their SHA identities. Exact SQL, table schemas/keys, complete logical equality/difference partition, safe changed rows and full selected contextual sets reproduce without writes.
+
+The initial v1 collector/report are preserved unchanged, together with the assertion failure before any generated output write. The guard exposed an incorrect expected count caused by treating the VERSION column alone as the version-row key in the draft prose; the actual collector had already read the complete composite key and correctly produced two one-sided events. The authorized NEW v2 makes that distinction explicit and asserts8 same-key updates/9 cells plus exactly1 removed and1 added version-key tuple. It does not weaken the logical comparison, overwrite v1 or change any original data. `DEVELOPMENT_HISTORY.v2.json` pins the correction.
+
+The exclusive first successful v2 candidate copies the collector/report/outputs immediately; snapshot membership and hashes are computed before opening its index. Existing candidates cannot be overwritten. Only the assigned new analysis area is written; original recovered databases, conservation records, prior dossiers and repository sources stay read-only. No commit, registry change, upload, network or original execution occurs.
+
+High confidence: source identities, schema/key equality, counts, complete row differences and selected declaration contexts. Conditional: the reviewed compiler's ordinary provider/property contracts and active device-profile binding. Unknown: actual MH200N/MH202 editor visibility/validation, successful compilation/export/deployment, accepted trigger patterns, physical cause or device/gateway capability. Full static comparison of these two sources is complete; analysis of the other installer database families belongs to separate tracks.

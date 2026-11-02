@@ -1,0 +1,22 @@
+# MH202 WHO17 storage and event-cache independent source review
+
+PASS after the documented author metadata refinement. The parent independently replayed the static collector and separately mapped original ELF segments to reproduce11 raw spans,23 exact instruction words, seven input identities and all24 manifest entries. Four original images are read through ImageVFS without active host symlinks. No original helper or prior native corpus is replayed.
+
+The reviewer read the complete selected event callback0xdd9c..0xde3c, initializer0xdcc8..0xdcf8, matching WHO-table dispatcher/initializer spans, direct command-array operands and interpreter allocation/lookup/IIF consumers. Row13 at0x19670 contains WHO17/event0xdd9c/init0xdcc8. The initializer requests two512-byte zero memsets at0x1cebc and0x1d0bc. Event DIM6/7 use four-byte direct numeric-WHERE indexing; command DIM6 uses four-byte WHERE-minus-one at0x1b928 and DIM7 byte WHERE-minus-one at0x1bb28. These source formulas, memory layouts and separate program domains do not prove an automatic shared variable or a natural publication-to-event transaction.
+
+Changed event values are stored at0xde10 before readiness-object+4 is read; equal values return first. The selected nonzero-readiness branch passes script-list global and original full-frame string to matcher0xc608. Readiness gates that matcher call, not the cache write. Safe supplied DIM6/7/WHERE1 cases are appropriately bounded; this is not a full unsupported-DIM/range policy or malformed-input outcome. The requested initialization is not observed runtime reset.
+
+Interpreter n_num/Valori_num and conditional effective libdomotica binding select allocated eight-byte string-name/value records, rather than either taskmanager array. A numeric1 or key001 is not evidence of aliasing, synchronization or a configured semantic relation. Missing extra4/provider/callback/IPC lifecycle remains open; local absence of such a call is not whole-program absence. No physical variable meaning is assigned.
+
+The parent caught generic duplicate stride/index keys before final promotion. Exact pre-edit collector, model and manifest were preserved before correction; final metadata independently verifies explicit DIM6_integer_stride4 and DIM7_boolean_stride1. The report's source table and host event effects were already correct. The retained refinement note accurately calls this a host metadata representation correction, with no source-semantic/outcome/count change and no silent historical replacement.
+
+All new original instructions, primitives, redirects, return/stop boundaries, target OS/process/IPC and physical observations are0. Confidence is high for selected source/operand/storage/request order, conditional for effective providers/normal imports/objects, and unresolved for complete runtime/configured relationship. Author and earlier dossier bytes were unchanged by this review.
+
+## Reviewed pins
+
+- `REPORT.md`: `336f4b21b0d7157c385b621c13ddeec2ce9cae60da99fe738fcc86eb635f8022`
+- `collect_storage.py`: `86eea296ba9bee3dfabbbde7d3a5a935ded0e441cab3cc2d355452b1eba9c888`
+- `output-manifest.json`: `d0ff824c202530fe21cb0466a730bbe60eb1a3c679bcb786bead59f724c5519a`
+- `STRIDE_KEY_REFINEMENT.md`: `9c08c2256d6c53653a06518f95124828ddfb9b3df12157c17ec2bc5eef9e7d07`
+- `original-spans.json`: `63d1f7c663f9d1ca29dabd9c6e4ecf70c1f24bf7a3960bc889b2ca12da07509a`
+- `storage-domains-and-event-row.json`: `6e0330957deab8a3df436ffe1d9884297197969ba0a935f1635741c18a985db6`

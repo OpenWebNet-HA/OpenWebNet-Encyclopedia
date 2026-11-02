@@ -1,0 +1,26 @@
+# Firmware Analysis Review Capsules
+
+These capsules preserve selected analysis excerpts, original artifact identities, locators and integration dispositions for the human-facing [Firmware analyses](../../../reverse-engineering/firmware-analysis/). They are documentary review records, not vendor archives or Physical Device evidence packages.
+
+| Capsule | Scope |
+| --- | --- |
+| [F454 2.0.51](f454-2.0.51/) | Initial selected findings from the 29-30 October 2026 examination; wider integration remains pending |
+| [MH202 1.0.24](mh202-1.0.24/) | In-progress examination; reviewed static continuations and eight bounded original-code corpora |
+
+Keep each product/release fingerprint separate. Do not copy manufacturer binaries, credentials, keys, live installation data or a raw private research tree into these capsules. Static analysis and bounded original-helper execution retain different methods and limits. Existing dynamic-oracle/physical evidence uses its own manifest contract; this documentary index does not change it.
+
+The MH202 continuation now also records a second isolated original helper (packaged copy routine), selected COSO feedback/key-to-pending-state joins, diagnostic WHO/WHERE and final-builder boundaries, and marker/watchdog request policy. These remain build-specific software evidence; complete runtime and physical behavior are unproved.
+
+The later MH202 batch adds UTC calendar comparison, an executed normalizer body with supplied parser fields, prepared diagnostic suffix helpers and a concrete application marker producer. Whole parser/runtime/physical boundaries remain open.
+
+The MH202 continuation further joins numeric-record condition/action prefixes, executes a full selected normal builder/parser-object path, narrows special DIM1 constructor write ownership and adds selected lighting translation. These remain scoped implementation evidence.
+
+The latest MH202 continuation links native common parsing to ordinary normalization, separates IIF operand extraction from line rewriting, identifies diagnostic output/no-data policy and narrows reverse lighting WHAT-prefix construction.
+
+The MH202 component audit distinguishes packaged PHP CLI5.2.13 from Apache module5.1.6 and preserves normal/recovery path identities; later native bracket/level normalization, selected logical folding and lighting pending-state evidence retain their runtime limits.
+
+The next MH202 continuation executes selected special-parser prefixes only up to the first unresolved selector read, maps mixed logical-state ownership and adds distinct WHO2 translation. Configured grammar, full comparator outcomes, runtime ownership and physical behavior remain open.
+
+A further static MH202 continuation joins diagnostic output-reference/return ownership, automation ordinary receipt versus query/timer state and selected WHO4 scalar formatting. It adds no native execution or physical meaning to raw formatted values.
+
+The subsequent static MH202 batch separates decoder-array/caller-object ownership, preserves an explicit diagnostic-qualification correction, joins conditional same-record automation feedback and adds one WHO4 DIM0 request builder. These refinements add no native or physical observations.

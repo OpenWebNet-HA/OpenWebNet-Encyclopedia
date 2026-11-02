@@ -1,0 +1,38 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000132e4:
+   132e4:	f857 9003 	ldr.w	r9, [r7, r3]
+   132e8:	f8d9 3000 	ldr.w	r3, [r9]
+   132ec:	f3bf 8f5b 	dmb	ish
+   132f0:	f013 0a01 	ands.w	sl, r3, #1
+   132f4:	f000 825d 	beq.w	137b2 <_ZNSt6localeC1Ev@plt+0x1f3e>
+   132f8:	f8db 3000 	ldr.w	r3, [fp]
+   132fc:	aa24      	add	r2, sp, #144	@ 0x90
+   132fe:	a917      	add	r1, sp, #92	@ 0x5c
+   13300:	a825      	add	r0, sp, #148	@ 0x94
+   13302:	9202      	str	r2, [sp, #8]
+   13304:	9324      	str	r3, [sp, #144]	@ 0x90
+   13306:	f009 fbb9 	bl	1ca7c
+   1330a:	4629      	mov	r1, r5
+   1330c:	4640      	mov	r0, r8
+   1330e:	f01f fbe9 	bl	32ae4
+   13312:	f8df 37bc 	ldr.w	r3, [pc, #1980]	@ 13ad0 <_ZNSt6localeC1Ev@plt+0x225c>
+   13316:	4642      	mov	r2, r8
+   13318:	9902      	ldr	r1, [sp, #8]
+   1331a:	58f8      	ldr	r0, [r7, r3]
+   1331c:	f0ad f8c6 	bl	c04ac
+   13320:	984c      	ldr	r0, [sp, #304]	@ 0x130
+   13322:	9b04      	ldr	r3, [sp, #16]
+   13324:	4298      	cmp	r0, r3
+   13326:	d003      	beq.n	13330 <_ZNSt6localeC1Ev@plt+0x1abc>
+   13328:	994e      	ldr	r1, [sp, #312]	@ 0x138
+   1332a:	3101      	adds	r1, #1
+   1332c:	f7fd edc0 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   13330:	9b02      	ldr	r3, [sp, #8]
+   13332:	6858      	ldr	r0, [r3, #4]
+   13334:	b108      	cbz	r0, 1333a <_ZNSt6localeC1Ev@plt+0x1ac6>
+   13336:	f00c fab5 	bl	1f8a4

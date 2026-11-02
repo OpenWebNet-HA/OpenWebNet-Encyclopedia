@@ -1,0 +1,12 @@
+# Bounded coverage
+
+| Area | New source reach | Remaining boundary |
+| --- | --- | --- |
+|Actual trigger identity|Own raw row3/RTTI, raw48 and compiled68/control80 identities|Local enum is not a public WHO or physical capability declaration|
+|Selected numeric admission|Own enabled/operator/signed-threshold reads and four callback comparisons|Configured input, all other branches, provider/callable state and complete errors|
+|Local caller|Selected status-selector−1, suitable integer32!=−1 and exact on gates before handler|Earlier classifier/type/ID, full registry readiness/freshness, natural event and complete owner lifetime|
+|Research method|Static original bytes/disassembly/relocations/source checks and independent review|No original predicate/scene/provider/helper/OS/network/physical execution in this batch|
+
+Current cumulative provider ledger is unchanged:1 corpus/8 entries/340 original code-hook visits/0 C primitives/12 definition redirects/8 EXIT/0 stops/360 hooks, plus4 setup data relocations. New static0 does not reset it. No old helper replay or semantic fixture is new coverage. The earlier17-row through-double navigation remains frozen and historical; row counts are not completeness or full semantic re-audit. Wider Device/source gates remain pending.
+
+BNLD trigger and condition, BNIL trigger, BNTH condition and typed records retain separate layouts, local indices and provider contracts. No threshold crossing, deduplication, physical brightness/unit/range or supported-input table is inferred. Missing configured assets/extras80/81/94/95, shared reset, dispatcher/main identity, full query/owner/provider/error/unwind/concurrency and physical evidence remain open. Prior corrections and unavailable MH20218/21 histories remain explicitly scoped.

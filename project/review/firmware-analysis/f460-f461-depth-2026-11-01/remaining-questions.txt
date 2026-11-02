@@ -1,0 +1,8 @@
+# Ranked remaining questions
+
+1. F460: actual bound SLEEP callable invoker, downstream wait/clock provider and return/completion contract, preserving the distinction between the literal seconds key and verified timing units.
+2. F461: actual libcoso indirect translator caller and its criteria/argument ownership, then one original record-construction-to-selected-branch join. Do not equate criteria, axes, categories or descriptor numbers with public WHO.
+3. F460: actual catalogue opening/selection/reader and configured scene factory admission; shared database contents do not establish installed capabilities.
+4. Product-specific auxiliary-core/DTB/profile selection and a justified local IPC handoff, with no device or bus contact.
+
+Effective providers/full JSON, original scene assets, natural delivery, ownership/errors/unwind/concurrency, timing and physical behavior remain open. Closed receiving/transport/MQTT/libjel/authentication/session/framing and equivalent investigations remain closed.

@@ -1,0 +1,105 @@
+# MH2021.0.24 run10 — original normal read-dimension builder and parser path
+
+**The full selected original libopen builder/IsCorrect path now runs in a private CPU model for both saved normal candidates**, calling the actual native field-assignment and suffix helpers. Starting with poisoned object bytes, it produces the expected raw texts and parsed WHO`1001`, WHERE`0`, DIM`1`, four values and **kind4**. This is stronger than run9's prepared parsed-object suffix checks.
+
+It is still a bounded selected-provider/ordinary-C-primitive experiment: no original decoder, C++ registry/maps, WHO/WHERE conversion, firmware loader, target OS/process, network, serial device or physical MH202 ran. The upstream raw strings and value2629 remain synthetic context, not hardware captures or model identity. Native kind4/object readback under the explicit model is the result; no formal Boolean or physical acceptance guarantee is invented.
+
+## Original identity and reproduction
+
+Normal-image original `/home/bticino/lib/libopen.so.0.0` SHA256 `868eeb717020232c11623224df17bd6b2034fffc2fb80043c39c34b76310fb04`, verified through the shared read-only ImageVFS. The static collector retains11 original byte spans (six native definitions plus five PLT locations),7 exact control/assignment words and5 original dynamic relocation rows. Source locators/hashes are in `original-spans.json`, `critical-words.json` and `selected-original-function-relocations.txt`.
+
+Run in this order from the project root:
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run10/emulate_normal_builder.py --check
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run10/collect_evidence.py --check
+```
+
+The first strictly reproduces the two native-output files. It verifies the digest-bearing standalone Unicorn2.1.4 package RECORD entries before import; `verified-tool-package.json` records exact package hashes. Only the analysis package is reused, not F454 firmware/harness/layout. This harness extends the fresh MH202-only private-memory setup from run9 and uses only this image's original VAs/objects.
+
+The second does no original execution: it strictly reproduces16 source/ledger outputs from8 pinned inputs, independently recounts the saved original-PC trace and callback arrays, and checks native result fields/accounting. It does not substitute its recount for a native rerun. The output manifest pins both scripts, report, original evidence, results, package identities and ledger, excluding itself and later peer review. Earlier evidence and repository/source/image files stay read-only.
+
+## Executed original path and supplied inputs
+
+Top-level native entry is the five-argument C-interface **CreateRdDimensionMsgOpen** at`0xb680`. Arguments supply WHO C string`1001`, WHERE`0`, DIM`1`, a four-pointer C array of decimal value strings and count4. Argument strings/pointer array live in private read-only memory. These values come from run8's reviewed selected static route; those earlier C++/raw stages are not executed here.
+
+The destination object is initially **all0xa5 bytes**, not prefilled with kind/WHO/WHERE/DIM or a parsed raw buffer. Original CreateNullMsgOpen clears/initializes the required storage before original builder concatenation. The actual executed definitions are:
+
+| Original libopen definition | VA range, end exclusive | Native visits case0 / case1 |
+|---|---|---:|
+|CreateRdDimensionMsgOpen|`0xb680..0xb7ec`|126 /126|
+|CreateNullMsgOpen|`0x9af8..0x9c30`|2655 /2655|
+|IsCorrect|`0xad60..0xb0fc`|625 /655|
+|Assegna_chi_dove_grandezza|`0xaa5c..0xad50`|247 /247|
+|Assegna_indirizzo|`0x9fa8..0xa23c`|28 /28|
+|Assegna_livello_interfaccia|`0xa24c..0xa418`|44 /44|
+
+These functions are actual original instructions, not host replacements. The source calls through five original PLT entries are explicitly redirected to the selected same-build definitions:
+
+| Original PLT | Original definition |
+|---|---|
+|`0x5614` CreateNullMsgOpen|`0x9af8`|
+|`0x5368` IsCorrect|`0xad60`|
+|`0x5b0c` measure field assignment|`0xaa5c`|
+|`0x529c` WHO suffix assignment|`0x9fa8`|
+|`0x559c` WHERE/interface assignment|`0xa24c`|
+
+The original call/branch instructions execute. The intercepted PLT body does not; a `linker_redirect_callbacks` event binds it to the verified original definition and preserves original LR. This is an explicit provider assumption, not an observed live loader or symbol-interposition resolution. Each redirected original body then runs to its native return. No native parser/field/helper result is injected.
+
+## Measured object outputs
+
+Readback after each top-level native return:
+
+| Supplied values | Original-generated raw text | Parsed readback |
+|---|---|---|
+|`0,0,0,0`|`*#1001*0*1*0*0*0*0##`|WHO`1001`, WHERE`0`, DIM`1`, kind4, values`0,0,0,0`, count4|
+|`2629,1,2,3`|`*#1001*0*1*2629*1*2*3##`|WHO`1001`, WHERE`0`, DIM`1`, kind4, values`2629,1,2,3`, count4|
+
+Both also yield fullDove`0`, interface-present byte0 and WHO-address-component count0. All these fields are read from original-written private memory and asserted; they are not copied into a prepared object before the native call. Per-case raw context `$04D200010480000000` / `$04D200010480A12345` is recorded only as earlier synthetic lineage: neither string is an input to this C-interface experiment or an executed raw decoder.
+
+Both final r0 register observations are0. This is retained as an observation, **not a formal IsCorrect/whole-builder Boolean return contract**: the original epilogue retains the last helper's register state, and mangled names do not encode return types. The asserted discriminator/readback result is kind4. No physical command success is assigned to that field or to r0.
+
+## Primitive model and containment
+
+The only host-modeled callees are ordinary C memory/string primitives. Each case records419 primitive callbacks:
+
+| Primitive | Callbacks per case |
+|---|---:|
+|memset|286|
+|strcpy|23|
+|strcat|15|
+|sprintf|1|
+|strlen|48|
+|strcmp|2|
+|strchr|35|
+|strtok|8|
+|strncpy|1|
+
+The callbacks operate only on explicit guest addresses, never delegate to original libc or a host target service. The `cstring` primitive reads are capped at4096bytes. The strtok token scanner separately checks each scanned byte against a permitted mapped region; it has no4096-byte token-scan cap, and the selected fixture strings are short. Writes are bounded to the private object/stack; the argument region and original image are not writable. `strncpy` models ordinary truncation/padding; `strtok` updates a private per-case token state and guest delimiter bytes; comparison models preserve the required sign/equality. The **only** sprintf format allowed in this selected path is the literal supplied WHERE`0` without `%`; another format aborts instead of adding speculative format semantics. No allocator callback was needed by this C-interface normal path; an unknown call aborts.
+
+Original ELF PT_LOAD file bytes/memory sizes are mapped privately, then the entire original image is read/execute. The allowed original-PC ranges are exactly the six native definitions above. Unknown PC, original interrupt or invalid/protected memory access aborts. Per-case code-hook and emulator instruction caps are100000. A private EXIT boundary stops after the native top-level return. No ELF constructors or actual PLT resolver run, no original syscalls or target processes run, and no live I/O is connected. Host Python/binutils only read/write authorized evidence and implement the explicit CPU/primitive model.
+
+The modeled C primitive/state/provider contracts bound applicability. This is not evidence that every input, allocator state, thread interaction, global strtok state, live library provider or device environment behaves identically. Only the two normal supplied C-interface cases are tested; no malformed/suffix/authentication matrix is added.
+
+## Corpus ledger and exact new counts
+
+`builder-results.json` preserves all original PC visits, original-function redirect events, primitive events and readback fields. `execution-ledger.json` independently reconstructs function/primitive histograms and original-trace hashes from those saved arrays.
+
+| New run10 metric | Case0 | Case1 | Total |
+|---|---:|---:|---:|
+|Top-level native builder calls|1|1|2|
+|Original instruction visits|3725|3755|7480|
+|C primitive callbacks|419|419|838|
+|`linker_redirect_callbacks`|5|5|10|
+|Private EXIT boundaries|1|1|2|
+|Code-hook steps|4150|4180|8330|
+
+**8330=7480+838+10+2.** Diverted PLT entries and EXIT are not counted as original instructions. Linker redirects10 are separate from C primitives838 and EXIT2. Static collector original execution0; all native execution counts above belong to this new two-call area. Earlier corpora are not rerun, merged into local counts or rewritten. Parent-wide cumulative totals are maintained separately.
+
+## What this closes and what remains
+
+Confirmed original bounded execution: normal C-interface builder construction, original null initialization, original IsCorrect syntax/classification, original measurement-field assignment, original suffix helpers and final kind4/readback for both supplied argument sets under the documented model. This replaces run9's unexecuted whole-builder/parser boundary for these two C-interface examples, while preserving run9's prepared-state-only historical claim.
+
+Still conditional/unexecuted: earlier raw selector4 decoder/translator registry and class execution, actual WHO/WHERE conversion/maps, live binding/loader initialization, caller/context/descriptor state, response collector/publication and physical device support or identity. The tests do not establish an observed complete raw request→device→response exchange. Synthetic2629 remains an arithmetic fixture.
+
+Highest next gap is the original diagnostic decoder's actual native call-chain join to this now-tested builder without fabricating C++ registry/WHO/WHERE state, or the distinct output descriptor/no-data/context-stop contract. Avoid repeating the separate factory/leaf/collector matrices. Closed authentication/framing work remains excluded.

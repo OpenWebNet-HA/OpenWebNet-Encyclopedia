@@ -1,0 +1,5 @@
+{
+  "change": "Unpublished root candidate paraphrased literal try [source ...]; actual original source is try [list source $n]. Exact old root draft retained BEFORE newv2 fixes quotation. Source report/code/results unaffected and unchanged.",
+  "parent_snapshot": "parent-before-page-v2/INDEX.json",
+  "scope": "Literal source quotation correction, no executed Tcl or new source coverage"
+}

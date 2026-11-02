@@ -1,0 +1,48 @@
+
+/home/bticino/bin/coso:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000005518 <send_msgs2open_@@Base+0x1e8>:
+    5518:	912502f7 	add	x23, x23, #0x940
+    551c:	52800201 	mov	w1, #0x10                  	// #16
+    5520:	aa1703e0 	mov	x0, x23
+    5524:	b0000002 	adrp	x2, 6000 <_IO_stdin_used@@Base+0x6e0>
+    5528:	91098042 	add	x2, x2, #0x260
+    552c:	97fff65d 	bl	2ea0 <g_log@plt>
+    5530:	aa1703e0 	mov	x0, x23
+    5534:	52800201 	mov	w1, #0x10                  	// #16
+    5538:	b0000002 	adrp	x2, 6000 <_IO_stdin_used@@Base+0x6e0>
+    553c:	9109e042 	add	x2, x2, #0x278
+    5540:	97fff658 	bl	2ea0 <g_log@plt>
+    5544:	f94002a3 	ldr	x3, [x21]
+    5548:	aa1703e0 	mov	x0, x23
+    554c:	52800801 	mov	w1, #0x40                  	// #64
+    5550:	b0000002 	adrp	x2, 6000 <_IO_stdin_used@@Base+0x6e0>
+    5554:	910a8042 	add	x2, x2, #0x2a0
+    5558:	97fff652 	bl	2ea0 <g_log@plt>
+    555c:	f94006a0 	ldr	x0, [x21, #8]
+    5560:	b0000001 	adrp	x1, 6000 <_IO_stdin_used@@Base+0x6e0>
+    5564:	910ae021 	add	x1, x1, #0x2b8
+    5568:	910123e2 	add	x2, sp, #0x48
+    556c:	97fff5a5 	bl	2c00 <g_module_symbol@plt>
+    5570:	34000060 	cbz	w0, 557c <send_msgs2open_@@Base+0x24c>
+    5574:	f94027e0 	ldr	x0, [sp, #72]
+    5578:	d63f0000 	blr	x0
+    557c:	f94002c0 	ldr	x0, [x22]
+    5580:	aa1503e1 	mov	x1, x21
+    5584:	97fff63b 	bl	2e70 <g_list_remove@plt>
+    5588:	aa0003e1 	mov	x1, x0
+    558c:	f94002a0 	ldr	x0, [x21]
+    5590:	f90002c1 	str	x1, [x22]
+    5594:	97fff4d7 	bl	28f0 <g_free@plt>
+    5598:	f94006a0 	ldr	x0, [x21, #8]
+    559c:	97fff525 	bl	2a30 <g_module_close@plt>
+    55a0:	aa1503e0 	mov	x0, x21
+    55a4:	97fff4d3 	bl	28f0 <g_free@plt>
+    55a8:	a94153f3 	ldp	x19, x20, [sp, #16]
+    55ac:	a9425bf5 	ldp	x21, x22, [sp, #32]
+    55b0:	a94363f7 	ldp	x23, x24, [sp, #48]
+    55b4:	a8c57bfd 	ldp	x29, x30, [sp], #80
+    55b8:	d65f03c0 	ret

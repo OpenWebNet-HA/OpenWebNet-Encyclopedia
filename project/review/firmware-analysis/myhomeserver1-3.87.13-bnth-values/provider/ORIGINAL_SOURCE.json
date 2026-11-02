@@ -1,0 +1,182 @@
+{
+  "PLT_self_definition_requests": [
+    {
+      "ARM_PLT_bytes": "00c68fe227ca8ce2b8f4bce5",
+      "PLT_VA": "0xba94",
+      "call_VA": "0x15cf2",
+      "call_bytes": "f5f7d0ee",
+      "jump_slot": "0x32f54",
+      "relocation": "00032f54  0001b116 R_ARM_JUMP_SLOT        00015ad5   _ZN4Json5Value9initBasicENS_9ValueTypeEb",
+      "symbol": "_ZN4Json5Value9initBasicENS_9ValueTypeEb"
+    },
+    {
+      "ARM_PLT_bytes": "00c68fe227ca8ce29cfbbce5",
+      "PLT_VA": "0xb074",
+      "call_VA": "0x15afe",
+      "call_bytes": "f5f7baea",
+      "jump_slot": "0x32c18",
+      "relocation": "00032c18  00007416 R_ARM_JUMP_SLOT        000159ed   _ZN4Json5Value8CommentsaSEOS1_",
+      "symbol": "_ZN4Json5Value8CommentsaSEOS1_"
+    },
+    {
+      "ARM_PLT_bytes": "00c68fe227ca8ce2e4f6bce5",
+      "PLT_VA": "0xb768",
+      "call_VA": "0x171da",
+      "call_bytes": "f4f7c6ea",
+      "jump_slot": "0x32e54",
+      "relocation": "00032e54  0000ec16 R_ARM_JUMP_SLOT        00014e3d   _ZNK4Json5Value4typeEv",
+      "symbol": "_ZNK4Json5Value4typeEv"
+    }
+  ],
+  "SONAME_alias": "libjsoncpp.so.25 metadata-resolves to candidate bytes",
+  "guards": [
+    {
+      "VA": "0x15ce0",
+      "bytes": "0022"
+    },
+    {
+      "VA": "0x15ce4",
+      "bytes": "0321"
+    },
+    {
+      "VA": "0x15cec",
+      "bytes": "c260"
+    },
+    {
+      "VA": "0x15cee",
+      "bytes": "b0ee408b"
+    },
+    {
+      "VA": "0x15cf6",
+      "bytes": "84ed008b"
+    },
+    {
+      "VA": "0x15af8",
+      "bytes": "2172"
+    },
+    {
+      "VA": "0x159f4",
+      "bytes": "0a60"
+    },
+    {
+      "VA": "0x159fa",
+      "bytes": "86b1"
+    },
+    {
+      "VA": "0x14e3c",
+      "bytes": "007a"
+    },
+    {
+      "VA": "0x1724e",
+      "bytes": "94ed000b"
+    }
+  ],
+  "provider": {
+    "path": "/usr/lib/libjsoncpp.so.1.9.5",
+    "sha256": "5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36"
+  },
+  "scheduler": {
+    "path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26"
+  },
+  "scheduler_imports": [
+    "00165cf0  0000f016 R_ARM_JUMP_SLOT        00000000   _ZN4Json5ValueC1Ed",
+    "00165b2c  00006d16 R_ARM_JUMP_SLOT        00000000   _ZNK4Json5Value8asDoubleEv"
+  ],
+  "spans": [
+    {
+      "end_VA_exclusive": "0x15d02",
+      "file_offset": "0x15ce0",
+      "image": "/usr/lib/libjsoncpp.so.1.9.5",
+      "name": "double-normal-constructor",
+      "raw_sha256": "21fde8c432238210ba4c0faed5d3de040ef4c21595233b2668ecb711a67d63cd",
+      "start_VA": "0x15ce0"
+    },
+    {
+      "end_VA_exclusive": "0x15b44",
+      "file_offset": "0x15ad4",
+      "image": "/usr/lib/libjsoncpp.so.1.9.5",
+      "name": "basic-initialization",
+      "raw_sha256": "bf1a9f32039a4091cf553fddb8d5e0ca91f78f79742ea520d8d7cf3c14da8923",
+      "start_VA": "0x15ad4"
+    },
+    {
+      "end_VA_exclusive": "0x15a22",
+      "file_offset": "0x159ec",
+      "image": "/usr/lib/libjsoncpp.so.1.9.5",
+      "name": "comments-move-assignment",
+      "raw_sha256": "927862de01ed651e92c72649811c89caae96e7836ba559888981395ae05a5b17",
+      "start_VA": "0x159ec"
+    },
+    {
+      "end_VA_exclusive": "0x14e40",
+      "file_offset": "0x14e3c",
+      "image": "/usr/lib/libjsoncpp.so.1.9.5",
+      "name": "type-byte",
+      "raw_sha256": "3d60dc05dc4c24756d2ca8efc142ade6c166e93868c74098bb3f0c5e00e4a925",
+      "start_VA": "0x14e3c"
+    },
+    {
+      "end_VA_exclusive": "0x171e6",
+      "file_offset": "0x171c4",
+      "image": "/usr/lib/libjsoncpp.so.1.9.5",
+      "name": "asDouble-prefix",
+      "raw_sha256": "b2b537e999c0dabba9dc80e46f5bf8b3e32ed79721175f388a56215757a60f45",
+      "start_VA": "0x171c4"
+    },
+    {
+      "end_VA_exclusive": "0x17254",
+      "file_offset": "0x1724e",
+      "image": "/usr/lib/libjsoncpp.so.1.9.5",
+      "name": "asDouble-type3-load",
+      "raw_sha256": "a692dd57271980779a01504c4176cd4e66b3ad1fdcd6bd132af8318feb61563e",
+      "start_VA": "0x1724e"
+    },
+    {
+      "end_VA_exclusive": "0x17216",
+      "file_offset": "0x171fe",
+      "image": "/usr/lib/libjsoncpp.so.1.9.5",
+      "name": "asDouble-normal-epilogue",
+      "raw_sha256": "44c4352826ea34c98fed82ab68f054536749e5252d4d077d0c07000ebe1ba741",
+      "start_VA": "0x171fe"
+    }
+  ],
+  "symbols": [
+    {
+      "Thumb_value": "0x15ce1",
+      "name": "_ZN4Json5ValueC1Ed",
+      "original_row": "218: 00015ce1    46 FUNC    GLOBAL DEFAULT   11 _ZN4Json5ValueC1Ed"
+    },
+    {
+      "Thumb_value": "0x15ce1",
+      "name": "_ZN4Json5ValueC2Ed",
+      "original_row": "313: 00015ce1    46 FUNC    GLOBAL DEFAULT   11 _ZN4Json5ValueC2Ed"
+    },
+    {
+      "Thumb_value": "0x15ad5",
+      "name": "_ZN4Json5Value9initBasicENS_9ValueTypeEb",
+      "original_row": "433: 00015ad5   128 FUNC    GLOBAL DEFAULT   11 _ZN4Json5Value9initBasicENS_9ValueTypeEb"
+    },
+    {
+      "Thumb_value": "0x159ed",
+      "name": "_ZN4Json5Value8CommentsaSEOS1_",
+      "original_row": "116: 000159ed    54 FUNC    GLOBAL DEFAULT   11 _ZN4Json5Value8CommentsaSEOS1_"
+    },
+    {
+      "Thumb_value": "0x14e3d",
+      "name": "_ZNK4Json5Value4typeEv",
+      "original_row": "236: 00014e3d     4 FUNC    GLOBAL DEFAULT   11 _ZNK4Json5Value4typeEv"
+    },
+    {
+      "Thumb_value": "0x171c5",
+      "name": "_ZNK4Json5Value8asDoubleEv",
+      "original_row": "315: 000171c5   228 FUNC    GLOBAL DEFAULT   11 _ZNK4Json5Value8asDoubleEv"
+    }
+  ],
+  "type3_TBB": {
+    "base": "0x171e6",
+    "bytes": "37181f343a03",
+    "index": 3,
+    "target": "0x1724e"
+  }
+}

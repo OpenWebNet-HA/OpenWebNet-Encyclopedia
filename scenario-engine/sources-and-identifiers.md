@@ -68,9 +68,14 @@ Do not correlate values only because their integers are equal. In particular, `F
 
 ## Evidence labels
 
-This section uses:
+[Evidence and Confidence](../reverse-engineering/evidence-and-confidence.md) defines claim-level confidence and examination methods. Direct schema/row facts, source-derived interpretation and actual application/runtime observations have separate roles. A stored template does not establish installed support; a corroborated cross-source mapping does not make every interpretation universal. Unresolved selectors and enum meanings remain attached to the affected field rather than being filled with a plausible name.
 
-- **established** for direct schema/data facts or corroborated protocol mappings;
-- **implementation-derived** for stable meaning recovered from resource keys and stored frames;
-- **inferred** for the best explanation of a complete observed pattern without a direct declaration;
-- **unknown** where competing explanations remain.
+## Separate ScenarioSuite database
+
+Registered artifact `myhome-suite-3.5.38-mh202-1902-lgg-scen-suite-db-eng` preserves `Scen_SuiteDB_ENG.db`, SHA-256 `ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29`. It is a distinct schema from both ScenarioDevices files: 79 tables, no declared foreign keys, and empty shipped scenario-working tables. The [source-specific analysis](scenario-suite-database.md) identifies exact joins and remaining compiler/runtime limits.
+
+`ANA_OGGETTI.ID_OBJ`, `ANA_CHI.ID_CHI`, `ANA_COSA.ID_COSA`, `ANA_DOVE.ID_DOVE` and area/association IDs are local identities. Stored `OPEN_CHI`, `OPEN_COSA`, `OPEN_DOVE` and ordered `OPEN_FIELD_n` tokens belong to a different representation layer. Do not transfer CategoryFlag/matching-ID semantics or catalogue Module/Object identity by equal integers. Database version `1.0.53`, Suite `3.5.38` and Firmware `1.0.24` are separate scopes.
+
+The [original generator and field consumers](scenario-suite-generator.md) provide method-level relationships for this separate source. Its graphic type selects the field-kind namespace; equal `ID_KIND` values across text and range tables do not override that dispatch. The [MH200N profile](scenario-suite-variants.md) has a separate fingerprint and database version.
+
+Server-side JSON records and C++ runners in [MyHOMEServer1/F460](server-scene-processing.md) form another implementation layer. Their local type indices, numeric fields and object layouts must not be equated with editor IDs or catalogue Objects by numerical coincidence.

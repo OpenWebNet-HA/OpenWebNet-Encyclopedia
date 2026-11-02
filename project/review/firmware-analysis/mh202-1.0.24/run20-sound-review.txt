@@ -1,0 +1,47 @@
+# MH202 sound/run20 independent source and finite-model review
+
+**PASS; no correction requested.** The actual multi translation descriptor distinguishes reverse routing criterion8 and forward WHO22 criterion22. The two examples are separate selected source paths: ordinary query text-to-body `95008F9F` and independent reverse body `90008F00` to candidate `*22*1#1#0*1#1##`. The report does not promote them into a physical query/reply, sound-source/volume semantics or raw admission proof.
+
+I reproduced `collect_evidence.py --check`:24 deterministic outputs plus its manifest,18 source spans,27 exact words, four original ELF identities, five PIC-resolved formats/literals and two host cases. I independently mapped ELF load segments and verified all18 raw span hashes/27 words, all four original byte identities/sizes and accessor hash, all24 deterministic-manifest entries and27 final author-manifest entries. I inspected original disassembly, selected local/candidate helper paths and core metadata wrappers and independently recomputed the two finite format strings. **No original firmware/helper/parser/emulator was executed or replayed by this reviewer.** Author and reviewer original/native/primitive/hook coverage for this source-only batch remains0.
+
+## Registration, namespaces and direction
+
+Original registration0x8560..0x85a8 clears criterion lists and appends8 to descriptor52 and22 to56; descriptor0x19400 callback40 relocation0x19428 resolves original multim_tr0x872c. Original direction words44/48 are1/2. I checked their actual bytes. The callback pair(2,1) selects multi_open2scs; pair(1,2) selects multi_scs2open and then overwrites that helper return with0. Unsupported pairs also return0. Zero is therefore not generic admission/delivery success.
+
+The report correctly keeps source routing8 separate from parsed WHO8, forward WHO22, parsed kind44 and envelope type40/metadata44. Original frame_to_open0x8884 was additionally checked directly against original bytes: it supplies r3=22 and tailbranches to scsmsg_to_openlist. Packaged TR/STM/synchronizer filenames establish available candidates, not active components or complete provider/registry ordering. Direct-NEEDED/candidate definitions do not establish live loader binding or interposition absence.
+
+## Selected forward case
+
+Forward0x18c4 borrows record0 as coherent parsed storage and requests g_malloc(64). The report correctly leaves whole envelope representation/admission unproved. Supplied WHO22/kind2/WHERE1/null selectors take the exact ordinary path: null selector20→0x2054 WHERE duplicate; candidate libmulti getLevInt0x8ac sees length1 and character1 and returns through0x96c without selector stores. Its other branches can mutate selectors, so this is not a whole-function purity claim.
+
+The translator's WHERE1 path sets header9, two zero characters and F. Exact WHO22 including NUL is checked before kind2 selection. I checked original format `%c5%c%c%c%c9F` against its register/stack argument order9/0/0/8/F at0x1b44..0x1b70 and independently obtained `95008F9F`. Routing8 reaches original prepare_briefscs_frames. With null selector20, the later extended-rewrite path is skipped and local return0 is reached under normal delegates.
+
+Core0x2a04 sets type40=3/representation56=1/route48=8 and appends the record. Its actual source-copy helper0x2230 copies4/8/12/16/24/28/32/36/44/60. **Status52 is not initialized by that selected g_malloc/body/helper path**, and ID60 is copied; the report/model correctly makes no zeroed/full-initialization or new-ID claim. The ASCII candidate is not asserted as transmitted bytes or physical sound control.
+
+## Independent reverse case
+
+I checked the actual character offsets and guards for supplied nonempty type3 body `90008F00`: first9, address-character0, character2/3=0/0, operation-character4=8, value-character5=F, argument-character6=0 and type-character7=0. First9 takes the8/9 source branch; valueF and two zeros select the `%c#1` temporary with literal1. Type3/address0 selects0x8f40 after the temporary `1#1` is formed.
+
+Original getMM_Type's ASCII0 selector reaches its actual subtract47 return, giving1. Candidate libutils htod's ASCII0 selector returns its actual subtract48 result0. These are selected source branches, not a complete codec/type-domain model. Earlier getbits imports/logging remain required normal-completion premises; this chosen final formatter does not derive its output from those result arrays.
+
+Original `*%s*%s#%d#%d*%s##` receives WHO22, fixed text1, integers1/0 and temporary WHERE1#1. Independent arithmetic gives `*22*1#1#0*1#1##`, matching the saved finite model. It contains no LF; the selected single-output tail calls scsmsg_to_openlist with routing22. This is one candidate string/list call, not an executed OPEN parser or causally linked response to the different forward example.
+
+Core0x26d8 duplicates plain text and creates representation2/type2/route22/meta4=2/meta8=0. It copies input direction12, metadata16/24/28 and **status52/ID60**, with no new_id call or central parser call in this wrapper. The report accurately leaves other unspecified g_malloc words uninitialized by this selected body and actual ownership/list/provider/physical effects conditional. This plain-text wrapper must not be substituted with the separately studied add_open_buf_to_msg_list parser wrapper.
+
+## Limits and final provenance
+
+The two host rows are finite source-format transcriptions under explicitly supplied original-layout object/body, normal allocation/string/format/log/list and provider premises. No case supplies accepted raw bus input, observes natural queue provenance, establishes whole address/dialect/WHAT support, executes multimedia STM/synchronizer callbacks or assigns volume/source/position meanings. Shared numeric labels and filenames are not F454 evidence transfer. No preparation artifact was overwritten following a review correction; no author correction was needed.
+
+| Reviewed artifact | SHA256 |
+| --- | --- |
+| `sound/run20/REPORT.md` | `81440e9833acb835626e2036923e2614db5bdf341ad03b5cf877e585a50d1e33` |
+| `sound/run20/collect_evidence.py` | `f0eb68766f46b7b6888f1589d897632948ac8407805645b8d00dadc3ecf7f7d9` |
+| `sound/run20/author-manifest.json` | `d49f4d2084ee6789a1534d8959aa84f617c6cafc2ed007e14bf415941ca1aa20` |
+| `sound/run20/output-manifest.json` | `fbbde9d2017bd5858e7c5bdbd9c66517475231437534e1e685bb522e2d2b9c37` |
+| `sound/run20/input-hashes.json` | `3f0e0431c31092c4cd1a45f31b50de4f0498c3ff8aae3b6542ca36175d348a09` |
+| `sound/run20/original-spans.json` | `94b055bbc7cbe74f424816a46a346d610766ea0cb05c16efe56137a14e2c8939` |
+| `sound/run20/critical-words.json` | `61c6720ca26e6b566f924011e84e94191b1d12dd6f7d17472105c931ecb9fc51` |
+| `sound/run20/host-selected-query-and-reverse.json` | `c3f0db3b97ea06d8ce7bbf60a46c946eb9ffa614f9c052ff509036836feb8659` |
+| `sound/run20/descriptor-provider-and-discovery.json` | `38e0b4d7fb6c6e66d4e98296baaec56efe1f52d39c333adf99ec5a8c2cc95537` |
+
+Original owners and exact hashes agree with input-hashes.json: multi TR, libmulti, libcoso and libutils. The author manifest pins report/method/evidence; no author source, prior dossier, original image, synced source or repository documentation was edited by this reviewer. Actual producer/STM/registry/provider/lifetime state, raw grammar and physical correspondence remain open.

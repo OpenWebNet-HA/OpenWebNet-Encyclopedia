@@ -1,0 +1,19 @@
+{
+  "libc_nanosleep32_entry": "0x860d4",
+  "limits": "Static packaged definitions and import version, not effective loader binding or provider/kernel execution.",
+  "original_imports": [
+    "99: 00000000     0 FUNC    GLOBAL DEFAULT  UND nanosleep@GLIBC_2.4 (2)",
+    "298: 00000000     0 FUNC    GLOBAL DEFAULT  UND __errno_location@GLIBC_2.4 (2)"
+  ],
+  "packaged_candidate_definitions": [
+    "194: 000860d5    92 FUNC    GLOBAL DEFAULT   13 __nanosleep@@GLIBC_2.4",
+    "540: 000860ad    40 FUNC    GLOBAL DEFAULT   13 __nanosleep64@@GLIBC_2.34",
+    "679: 000828d9    60 FUNC    GLOBAL DEFAULT   13 clock_nanosleep@GLIBC_2.4",
+    "682: 000828d9    60 FUNC    GLOBAL DEFAULT   13 clock_nanosleep@@GLIBC_2.17",
+    "851: 000860d5    92 FUNC    WEAK   DEFAULT   13 nanosleep@@GLIBC_2.4",
+    "2762: 00021b29    20 FUNC    GLOBAL DEFAULT   13 __errno_location@@GLIBC_2.4",
+    "2857: 000827f5   226 FUNC    GLOBAL DEFAULT   13 __clock_nanosleep_time64@@GLIBC_2.34"
+  ],
+  "remainder_copy": "on code4 with nonnull remainder, copied back to supplied output",
+  "request_read": "ldrd first32,second32; first ASR31 sign-extension to time64 temporary"
+}

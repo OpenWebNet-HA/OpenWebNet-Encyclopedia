@@ -1,0 +1,33 @@
+# Packaged JsonCpp double constructor and type3 readback source
+
+The packaged candidate provides a concrete source contract for the double overload requested by the BNTH setpoint serializer. Its double constructor passes type3 to original initBasic, preserves incoming D0 in D8, and stores that value into the object's union. For an unchanged correctly constructed type3 value, original asDouble selects a direct union-to-D0 load, without numeric conversion on that selected route. This narrows one scalar-provider premise; it does not execute a JSON roundtrip or establish effective runtime binding.
+
+Original provider `/usr/lib/libjsoncpp.so.1.9.5`, SHA256 `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36`; original scheduler `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. VAs below are PROVIDER VAs unless explicitly qualified. Fresh ImageVFS/PT_LOAD/dynamic-symbol/JUMP_SLOT/PLT identities are retained. Scheduler NEEDED and candidate SONAME both name libjsoncpp.so.25; the image metadata alias reads the same candidate bytes. Interposition/loader/provider choices are not observed.
+
+Original/native/helper/provider/vendor/target process/OS/JSON/floating-operation/network/bus/physical execution0, semantic numeric fixtures0. No native harness is run. Only host reads, hashes and disassembly inspect source. No F454/MH202 code/layout/harness, opaque receiving/transport/authentication/session/framing body or arbitrary runtime configuration is used.
+
+## Original constructor and helper binding
+
+Provider dynamic symbols independently resolve ValueC1(double) and C2(double) to Thumb0x15ce1, initBasic to Thumb0x15ad5, Comments move assignment to Thumb0x159ed, type() to Thumb0x14e3d and asDouble() to Thumb0x171c5. Original internal PLT targets and JUMP_SLOT rows point to those candidate definitions; this is candidate self-binding source, not an executed loader.
+
+At0x15ce0 the constructor sets R2=0, saves its receiver, supplies R1=3 and explicitly writes0 to receiver+12 before calling initBasic. VMOV.F64 at0x15cee copies D0 into callee-preserved D8. After normal initBasic return, VSTR at0x15cf6 stores D8 into receiver+0. The constructor does not request conversion of the incoming double to a string, integer or physical unit on this normal route. Valid construction, ordinary ARM hard-float ABI/register preservation and candidate provider returns remain premises; exception/unwind tails are outside the selected normal result.
+
+## Type initialization and comments are separate from the scalar
+
+initBasic0x15ad4 writes supplied type byte3 to object+8 at0x15af8. It separately updates an allocation flag bit at+9, prepares a local zero comments pointer, and requests original Comments move assignment with destination object+12. On the selected double-constructor route, that destination was explicitly set0 first.
+
+Comments assignment0x159ec loads the source pointer, zeros its source slot, reads the old destination pointer and installs the source. For old destination0 its explicit null branch returns without its nonnull deallocation loop. Thus under this exact normal composed source, the old-comments disposal route is bypassed, rather than replaced by an unexplained successful host free. initBasic subsequently writes zero offset words at+16/+20 and passes its normal stack-guard epilogue. Comment pointers, flags, offsets and the scalar union are different fields. This packet does not claim complete object lifecycle, arbitrary preexisting comments/flags, all initBasic branches or destructor behavior.
+
+## Actual type3 asDouble path
+
+Provider type()0x14e3c reads unsigned byte object+8 and returns it. asDouble0x171c4 retains its receiver, requests that type method and dispatches through original TBB data at0x171e6. Exact table bytes are `37 18 1f 34 3a 03`. Type3 selects byte0x34, giving instruction0x1724e. That block loads D0 directly from object+0 and branches to the normal epilogue at0x171fe.
+
+The candidate stack-guard checks and normal successful imports are explicit premises. No arithmetic/conversion is performed on the type3 selected union value between the load and normal return. Other null/integer/Boolean/string/error routes and floating exceptional behavior are not generalized from this path. Under ordinary valid constructed state and no intervening mutation, the constructor's stored double therefore has a source path back to asDouble's D0 result. No supplied floating value, host numerical test, original instruction or JSON object is executed.
+
+## Relationship to BNTH and remaining boundaries
+
+The current BNTH serializer packet independently identifies the scheduler's Value(double) request for raw setpoint56 and same-result reparse through raw constructor2c050, whose chosen setpoint path requests asDouble. This provider supplement confirms candidate overload/tag/readback source for that scalar. Actual JSON result creation/member insertion/move assignment/map lookup/string conversion, complete serializer/reparse preservation, valid raw schema selection, target library binding and configuration remain additional premises. A candidate scalar contract does not establish those whole-object operations.
+
+The scheduler's exact import declarations for ValueC1(double) and asDouble are retained, without executing their PLT entries or treating a shared SONAME as guaranteed live behavior. No physical temperature unit, admissible setpoint domain, accepted external grammar, full Device/source approval or real action/scene/record result follows.
+
+Run `python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/provider/collect_provider_v1.py --check`. Exclusive generation refuses overwrite and immediately preserves report/collector/all deterministic outputs. Confidence is high for original constructor/tag/Comments-null/type3 byte/call/dataflow identities, conditional for normal provider/ABI/object/no-mutation scalar preservation, and unresolved for complete JSON/runtime/physical behavior.

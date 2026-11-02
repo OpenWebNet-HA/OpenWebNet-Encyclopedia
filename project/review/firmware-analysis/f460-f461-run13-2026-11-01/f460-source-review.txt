@@ -1,0 +1,28 @@
+# F460 run13 independent source review — PASS, profile/runtime boundary retained
+
+I independently reviewed the frozen profile packet and original executable/candidate-library bytes. Read-only host `collect_profile_v1.py --check` passes9 outputs/6 spans/31 guards. No original/provider/native/helper/target I/O, runtime environment file, model, fixture, SQL, install or flash execution occurred; no author files were changed.
+
+Fresh ImageVFS reads confirm `/home/bticino/bin/dedrifupdater`43,088 bytes/SHA256 `8f32212bee98b507690f1e22d6b26524c8a13dc20efcc8cc05900ac4142f9753` and `/usr/lib/libdedrifupdater.so.1.0.0`30,840 bytes/SHA256 `ccd87b29d164976bb5ab626ead466fb1875854bb2fbb036982d4e3eea9e4cc89`. I independently remapped all6 raw spans/31 fixed guards against original PT_LOAD bytes, nine real PLT/GOT/relocation call identities, two safe compiled literals, candidate exported definitions and all11 immediate first copies. Executable SONAME dependency and image alias resolve only a packaged candidate; active binding/interposition remains a premise.
+
+The coherent selected source join is supported. Executable0x288c/0x2898 forms separate stack addresses SP64/SP104. It passes SAME SP104 to the actual Platform C1(int) request0x28a8 and, under its intervening selected source gate/normal construction/lifetime premises, to actual get_working_mode0x28bc. The selected constructor continuation0x30e8..0x30f4 requests a GString for literal `/var/tmp/dedrifu_env.txt` and stores the returned pointer at SAME receiver+48. get_running_platform and the full constructor branch selection are deliberately opaque; this is not a universal active-platform path.
+
+The COMPLETE get_working_mode body0x3200..0x32c8 agrees with the report:
+
+- Dereference receiver+48→GString0 text, request stat; exact TBNZ W0 bit31 selects local0. This is a negative32-bit gate, not an invented any-nonzero failure test.
+- Otherwise request g_file_get_contents on SAME path, with local buffer output and NULL length/error pointers. False result or NULL resulting buffer selects0.
+- On successful nonnull buffer, actual g_strrstr(buffer,compiled `MYRECOVERY=y`) yields a pointer; CSET NE plus1 returns2 on nonnull or1 onNULL, after normal free/canary returns. This is substring logic, not shell evaluation, exact assignment parsing, actual boot environment or a compatibility/security verdict.
+
+Actual executable result is retained in callee-saved W19. Its mode2 diagnostic branch rejoins the local request path; under normal diagnostic/ABI returns, W19 is passed as W1 to actual StatusMachine::next_step at0x2900 with the OTHER stack receiverSP64. That request body and the meaning of its own subsequent return test remain open. The result0 is not shown universally rejected, and mode0/1/2 is not package XMLstatus4, staged-record kind2, Device identity or installed partition. No trust, supported-version, update-success or physical conclusion follows from method names or the forwarded value.
+
+Only compiled path/marker literals were inspected. I did not read or reproduce actual `/var/tmp/dedrifu_env.txt`, full boot environment, secrets/private configuration, get_running_platform/next_step bodies, extraction0x5140, precheck0x4b60 or downstream update/install/mount/reboot/provider bodies. Receiving/transport/authentication/session/framing/MQTT/libjel and equivalent stopped routes remain closed. Product0207 supplies curated role only; no cross-product object layout or capabilities are inferred.
+
+First generation/check and no-overwrite preservation are consistent; all11 copies/index agree. Prior authoritative reports are documentary context, not replayed source coverage or new execution. This PASS is bounded original-source/provenance/reproducibility agreement, not whole startup/profile/compatibility verification.
+
+Exact reviewed pins:
+
+- REPORT.md: `e54bdfb6f6e196584bb9c97a35d6cf984cc4082d1b3e13ced22875a00250cd78`.
+- collect_profile_v1.py: `fb2ea3f4325e25fbe5484216f6d16ce666c3209dba95fff13299395006bc287f`.
+- OUTPUT_MANIFEST.json: `129cfc06e685dc099bec1ab7c287f5b896c04698bdb552bf3e5e60134d2dda29`.
+- first-candidate/INDEX.json: `2c30ec5cffd508e77509dfa546e224110175ab4e0fa9ade937d590f2665c9091`.
+
+No source/report correction is requested. Actual runtime profile and update-policy effects remain unresolved.

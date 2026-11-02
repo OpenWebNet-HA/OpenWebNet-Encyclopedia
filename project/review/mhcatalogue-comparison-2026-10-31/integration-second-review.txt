@@ -1,0 +1,51 @@
+# Second documentary review: MHCatalogue source-profile integration
+
+PASS for the reviewed source-to-summary and applicability scope; no required content correction. Mechanical completion of the eight forward review/validation targets listed below remains **PENDING** at this review checkpoint. This is not final link validation or an exemption from the parent's strict checks.
+
+I authored the firmware-area report. I therefore do not claim independent source certification of that area here: its independent original-database review is `reviews/FIRMWARE_SOURCE_REVIEW.md`, SHA-256 `6c5649a55cd704d60c40e7671ebe94f0ec39ecb71371c1e138b6504b62f7af77`. The other two areas have separate source reviews. This review checks the new source-profile page, capsule and coordination summaries against those frozen reports and their evidence, plus only the two added crosslinks. It does not re-audit older encyclopedia contents, all cell consumers, product manuals, or physical support. No source collectors, vendor programs, original firmware, stored expressions or native tests were executed. Only this new review was written.
+
+## Exact seven-document candidate
+
+All seven current files byte-match the frozen review-candidate copies and recorded sizes/hashes. `integration/review-candidate/INDEX.json` itself has SHA-256 `5f811a00d524808b2ceb5fa632503b65731b4b3368d450901819cd13a1d02a6b`. Paths below are relative to the workspace root.
+
+| Document | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | 11241 | `35cab23085fdc9120784916657da218aabd783a0f2008705ba8e41cc3485f809` |
+| `OpenWebNet-Encyclopedia/internals/README.md` | 5203 | `d189e16827dcd15b8e08dd6dc7630776ccc1a4c67e45f0916dc2f9b5013fde9f` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md` | 10686 | `c787f9bc0f70f8ab99dc8341331c4f72714b9e29878034efd5b4d9a0ba70a9e7` |
+| `OpenWebNet-Encyclopedia/project/review/mhcatalogue-comparison-2026-10-31/README.md` | 4601 | `b774f979460aaa3617378432cf9aea02b6eab212922e36006035afdb673a5f53` |
+| `work/mhcatalogue-comparison/2026-10-31/SYNTHESIS.md` | 3132 | `16f8ec39d5e091f32d9cf85948f54113de0d1cd5eba0cecce38eabc6f993aa52` |
+| `work/mhcatalogue-comparison/2026-10-31/COVERAGE.md` | 2206 | `dd14f64dda9e307825a0b9999e6499ca997b66d3e705bfd23a2b2f8e46b0bb83` |
+| `work/mhcatalogue-comparison/2026-10-31/RANKED_REMAINING_QUESTIONS.md` | 1264 | `f5584dc3fcf7e14ab1426f6e455a7a87ee4b38e2b80ee931a6a7f70fd711cf0a` |
+
+## Source-to-summary checks
+
+The source reports pinned here are catalogue `4d34c288a3bc577cec4c4a758d54841a1af539026e2535136dc686e1bb003bd5`, objects `c312fe9bec13bd8b076f70832ac9ac7fe783327a086cf5facbbb0f835f3ce576`, and firmware `d70cd72edbf7460ac94907fd8a0116c889c48e4c1d7a223884760f869eeaa2bc`. All are exact current bytes and exact exported report copies.
+
+- Structural scope is accurate: 75 equal stored table definitions, 146 equal shared schema objects, one extra embedded nonunique index, 42 equal complete table bags and 33 differing bags. The 13 subset/20 embedded-addition categories concern literal rows, not feature counts. Equal DATA4.4.0 labels and literal dates do not become source equivalence or deployment chronology. The summary preserves typed/NULL/multiplicity and declared-versus-inferred relationship distinctions.
+- Firmware scope agrees with the author report and its independent source review: 114 complete shared firmware rows, 104 item owners and 570 complete owner-child bag comparisons across five relation types; eight embedded-only definitions comprise seven Prototype and one RC record. Their seven added builds and mode associations do not become released or accepted firmware. The Official/Deprecated omission split and retained Official2.0 alongside added RC1.0 prevent simplistic deprecated-only or newer-only selection claims. Other configuration subgraphs are expressly allowed to differ.
+- The configuration distinction remains exact: 68 changed same-ID rows split into 48 repurposed owner/field identities and 20 same-context metadata changes. The 114 equivalent fields with changed IDs are a separate correspondence result, not part of the 68. Context matching is explicitly unique for this pair, with owner-zero sentinels preserved; it is not a universal migration or integer-key rule. The projected 57/1180 field and 233/3167 range differences retain residual content rather than dismissing everything as renumbering.
+- Genuine selected differences stay narrow: Object218 group ordering, nine Object401 progressive changes including four typed empty-TEXT-to-integer0 changes, and Object130 hidden metadata. The M1541 word-order reversal does not become four new modes. Source-specific A/PL range metadata does not become universal protocol grammar. Object39, item533, model103, relationship/slot IDs and WHO retain distinct namespaces; L/N/NT4672 is correctly separated from L/N/NT4672N.
+- Product boundaries are maintained. Embedded omission of F4541455, MH2021902 and MyHOMEServer1's own2198 is not a physical incompatibility list or server self-description. Suite-based canonical product descriptions are not replaced. F454 alarm/A-V interfaces, MH202 scenario scheduling and server commissioning/app roles are not transferred between devices. Package/language/condition/reference/template rows are not runtime state, deployed files or executed expressions.
+- Source completion and consumer gaps are separated: the comparison covers the specified data and relationships; actual matrix_mx catalogue reading, eligibility/default/version fallback, field/range use and package/resource consumers remain questions. No automatically scheduled continuation, migration fault, installed configuration or complete firmware coverage is claimed. Wider Device gates and previously stopped branches remain explicitly unchanged.
+
+I independently verified all **44 source/export pairs** from the capsule's BASE_EXPORTS.json and OBJECT_EXPORTS.json: current source bytes equal published bytes and both match recorded size/SHA-256. This includes the three source reports and current synthesis/coverage/ranking exports. It is export-integrity evidence, not a fresh semantic execution test. Five collector output counts sum to 42 including manifests (14+6+9+12+1), consistent with coverage/capsule wording.
+
+## Crosslink changes and mechanical completion
+
+Against the preserved pre-edit snapshots, internals/README.md has exactly one added navigation row; the original first-pass MyHOMEServer1 page has exactly one added paragraph linking the later source-profile comparison. The rest of those files remains byte-preserved around those additions. The new paragraph explicitly keeps the first-pass report's original scope and distinguishes table definitions from the added index. No review of the older pages' entire semantic contents is implied.
+
+The selected seven documents currently have 46 existing local Markdown link occurrences and eight missing local targets, all intentional capsule completion records at this checkpoint. The following are **PENDING mechanical completion**, not verified bytes:
+
+- `catalogue-source-review.txt`
+- `catalogue-second-review.txt`
+- `firmware-source-review.txt`
+- `objects-source-review.txt`
+- `integration-review.txt`
+- `integration-second-review.txt`
+- `source-checks.json`
+- `validation.json`
+
+The parent must create the actual review/validation copies and run final strict link/ESG checks after they exist. This review neither certifies future bytes nor permits placeholders, exemptions, or a circular self-certification of its later exported copy. Existing source reviews were inspected locally, but their absent future capsule copies were not counted as verified targets.
+
+No candidate or source file was edited, and no additional firmware investigation was performed.

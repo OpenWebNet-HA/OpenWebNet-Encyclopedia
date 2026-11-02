@@ -1,0 +1,49 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0005724c:
+   5724c:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+   5724e:	4d1b      	ldr	r5, [pc, #108]	@ (572bc)
+   57250:	4b1b      	ldr	r3, [pc, #108]	@ (572c0)
+   57252:	447d      	add	r5, pc
+   57254:	58ef      	ldr	r7, [r5, r3]
+   57256:	683c      	ldr	r4, [r7, #0]
+   57258:	f3bf 8f5b 	dmb	ish
+   5725c:	f014 0401 	ands.w	r4, r4, #1
+   57260:	d003      	beq.n	5726a
+   57262:	4b18      	ldr	r3, [pc, #96]	@ (572c4)
+   57264:	58ee      	ldr	r6, [r5, r3]
+   57266:	4630      	mov	r0, r6
+   57268:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+   5726a:	4638      	mov	r0, r7
+   5726c:	f7ba ea5e 	blx	1172c <__cxa_guard_acquire@plt>
+   57270:	4b14      	ldr	r3, [pc, #80]	@ (572c4)
+   57272:	58ee      	ldr	r6, [r5, r3]
+   57274:	2800      	cmp	r0, #0
+   57276:	d0f6      	beq.n	57266
+   57278:	1d33      	adds	r3, r6, #4
+   5727a:	f106 0018 	add.w	r0, r6, #24
+   5727e:	e9c6 3303 	strd	r3, r3, [r6, #12]
+   57282:	e9c6 4401 	strd	r4, r4, [r6, #4]
+   57286:	6174      	str	r4, [r6, #20]
+   57288:	f7ba e8ac 	blx	113e4 <_ZNSt18condition_variableC1Ev@plt>
+   5728c:	f106 0368 	add.w	r3, r6, #104	@ 0x68
+   57290:	4a0d      	ldr	r2, [pc, #52]	@ (572c8)
+   57292:	e9c6 3418 	strd	r3, r4, [r6, #96]	@ 0x60
+   57296:	4630      	mov	r0, r6
+   57298:	4b0c      	ldr	r3, [pc, #48]	@ (572cc)
+   5729a:	447a      	add	r2, pc
+   5729c:	64b4      	str	r4, [r6, #72]	@ 0x48
+   5729e:	e9c6 4415 	strd	r4, r4, [r6, #84]	@ 0x54
+   572a2:	65f4      	str	r4, [r6, #92]	@ 0x5c
+   572a4:	e9c6 4413 	strd	r4, r4, [r6, #76]	@ 0x4c
+   572a8:	f886 4068 	strb.w	r4, [r6, #104]	@ 0x68
+   572ac:	58e9      	ldr	r1, [r5, r3]
+   572ae:	f7b9 ec30 	blx	10b10 <__aeabi_atexit@plt+0x4>
+   572b2:	4638      	mov	r0, r7
+   572b4:	f7b9 edc4 	blx	10e40 <__cxa_guard_release@plt>
+   572b8:	4630      	mov	r0, r6
+   572ba:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}

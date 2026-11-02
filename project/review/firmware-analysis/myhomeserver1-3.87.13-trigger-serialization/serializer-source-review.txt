@@ -1,0 +1,39 @@
+# Independent source review: raw BNLD trigger numeric serialization
+
+PASS, no author rewrite requested. I independently reviewed the frozen report/collector, actual original source and metadata, selected contract and first copies. Only the new host collector's read-only `--check` was replayed; no old numeric collector, original/native helper, full JSON provider, target process/API or semantic fixture was executed. The saved MyHOMEServer1 ledger remains1 corpus/8 entries/340 original code-hook visits/0 C primitives/12 redirects/8 EXIT=360 hooks, plus4 setup relocations; this review adds no original execution.
+
+## Actual method, selected member and same-JSON source
+
+The original scheduler image is `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Independently derived ELF PT_LOAD mappings and verified all7 recorded span hashes,20 instruction guards,6 decoded BL/BLX calls,7 member-key PICs,3 relative relocations,3 import declarations and the original header/RTTI bytes. Import declarations are not an observed effective provider binding.
+
+- Final raw header`0x160304`/address point`0x16030c` has exact RTTI `11BnldTrigger`, and its actual slot+8 contains Thumb`0x282e5`. This is raw-trigger code`0x282e4`, not the BNLD condition serializer`0x28178`, its condition-base helper or the constructor's temporary BaseBnldTrigger class.
+- The method's hidden result destination arrives in R0 and is retained in R4, while raw input R1 is retained in R6. Its call targets actual trigger-base helper`0x23394`. On the selected normal base path, a ValueType0 construction request precedes optional nonempty `id`, `type`, `enabled` and optional `operator` assignments. No base `status` request is supplied on that normal path. Fresh valid destination/member/assignment/string and ordinary provider semantics remain premises.
+- Status40 all ones selects`0x283c4`. The source loads raw44 into R1, requests `Json::Value(int)`, then exact member `level` on the original result destination and move assignment from that temporary. There is no source-level level-zero/−1/range suppression between that selected branch and assignment. This is an integer argument/control-flow result, not an executed conversion, accepted numeric domain or unit/physical-level interpretation. The status-present sibling is not classified here.
+- Initializer`0xa8dbe` forms R4=its SP+592 and supplies that as R0 to the raw slot+8 call. After its normal return,`0xa8dcc` supplies the unchanged R4 as constructor R1, and`0xa8dd2` calls`0x2cc00` with a separate raw destination. This is actual same-JSON alias provenance, not a substituted parsed fixture or transferred condition-object layout.
+- Under ordinary fresh-JSON/member/int/move/asInt coherence, the selected object contains `level` without the earlier-priority `status`, so the actual absent-status constructor arm reads the numeric source. That arm initializes raw40/44 to−1, requests `asInt`, stores its word into raw44 and conditionally writes **−1**, not0, into raw40 for positive results. Other normal selected results retain the initialized status−1. The original inherited raw40→compiled60/raw44→compiled64 and numeric caller guards remain conditional source facts; they were not replayed. This narrows the selected numeric serializer/reparse premise without claiming a complete or universal JSON roundtrip.
+
+Full JSON constructor/member/type/assignment/asInt semantics, strings/base conversions, invalid/missing fields, errors/unwind, actual configured scenes, provider binding, record freshness/type/ID/cast/owner lifetime, natural event delivery, crossing/dedup and physical meaning remain unproved. The earlier finite double-provider corpus is not reused as proof of this integer/full-JSON path. Closed receiving/transport/session/authentication/framing/MQTT/libjel bodies remain unopened.
+
+## Explicit retained-span boundary and supplemental original word
+
+The author's saved `serializer-normal-return` span is`0x28352..0x2836c`. It stops halfway through the four-byte POP.W instruction beginning at`0x2836a`; its retained objdump text consequently reports an out-of-bounds final instruction. The saved raw span/hash is unchanged and is not described here as a fully decoded complete epilogue. This is an evidence-window boundary, not a failed canonical packet or changed source outcome.
+
+I separately read the complete original **four bytes at VA`0x2836a`, PT_LOAD file offset`0x2836a`: `bd e8 f0 83`**, the POP.W restoring R4–R9 and PC. Together with the preceding stack restoration, ordinary canary/normal-return premise and retained branch to`0x28352`, this supplies the small normal-epilogue boundary needed by the report. It is a reviewer source supplement, not original execution or an author-output correction. Its exact four-byte SHA256 is **5acc6a8ed63cd9203e10008b3d28223d1e176c36584ae722478953cc5569658e**; whole-image identity is above.
+
+## Current inputs, reproducibility and preservation
+
+The new collector's read-only check passes11 outputs. Independently verified all5 input identities, every manifest member and all13 exact first-candidate copies/current counterparts against size/SHA256. Its current Device0199 context uses SHA256`bd64060e1e19f90eecad2808b62327847a0f541ae2fc46239bbda29a5efe5c98`, without forcing the obsolete5940 pin. Product context establishes no additional capabilities. The first-index bytes are prepared before exclusive creation; no generated candidate or prior dossier was edited. No failed canonical generation is reported or inferred from the partial disassembly window.
+
+PASS applies to this exact selected source arm, current bytes and explicit supplemental return word. It is not a full optional-schema/provider audit, whole configured runtime, compatibility or wider Device-gate certification.
+
+## Exact reviewed identities
+
+| File | Bytes | SHA256 |
+| --- | ---: | --- |
+| `serializer/REPORT.md` | 6003 | `b080f437b7f54d577f3ff880dcd0bb336c1e1343d52bb20bc0b7d955e0bf7de6` |
+| `serializer/collect_serializer_v1.py` | 7714 | `97411869d01a86411ba02a866ac8e9d44163a991426f889ef8e3d858e36b3c4d` |
+| `serializer/ORIGINAL_SOURCE.json` | 5305 | `17fde416f1bf7d923c52eba5a28d5f171867bb31fe59807f7d29dae51be2d83f` |
+| `serializer/SELECTED_CONTRACT.json` | 1514 | `c7ee2adaced621b15d5769dd2627c783fe953247cde970cfba5ade3df9354345` |
+| `serializer/INPUTS.json` | 1146 | `1523c15838741d0e8279d636785043dce3c8622235b0c63ac863cf2f6ba08028` |
+| `serializer/OUTPUT_MANIFEST.json` | 1886 | `5085bd17bd54260f1a0b1f25075c448e542fe29c029162161df458f997266ec1` |
+| `serializer/first-candidate/INDEX.json` | 1802 | `83f6a0fcd66e1129979575a67b14b8ca43057c8b5386b515c4f0b2ff21f546bb` |

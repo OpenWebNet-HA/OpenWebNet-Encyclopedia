@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "collector": "startup/collect_startup_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "37dbbb",
+          "wall_time_seconds": 0.116647637,
+          "exit_code": 0,
+          "original_token_count": 14,
+          "output": "{\"check\": true, \"outputs\": 20, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "collector": "registry/collect_registry_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "9b17c3",
+          "wall_time_seconds": 0.098675958,
+          "exit_code": 0,
+          "original_token_count": 32,
+          "output": "{\"check\": true, \"outputs\": 24, \"spans\": 16, \"calls\": 8, \"byte_guards\": 16, \"PIC_keys\": 2, \"inputs\": 4, \"original_execution\": 0}\n"
+        }
+      }
+    }
+  ]
+}

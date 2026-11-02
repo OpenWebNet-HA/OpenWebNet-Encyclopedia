@@ -1,0 +1,1593 @@
+{
+  "checkpoint_count": 15,
+  "checkpoints": [
+    {
+      "candidate_index_pins": [
+        {
+          "bytes": 565,
+          "copy": "source-inputs/7bd4fcc9c794aac799529c1c4a85dc3f2e0aa5013f5a816c8ffbb088ceda1b61.bin",
+          "path": "work/f460-f461-comparison/2026-11-01/integration/coordination-first-candidate/INDEX.json",
+          "sha256": "7bd4fcc9c794aac799529c1c4a85dc3f2e0aa5013f5a816c8ffbb088ceda1b61"
+        },
+        {
+          "bytes": 799,
+          "copy": "source-inputs/8e8ab70e0b58a0e763930e2fa353159a5d2fb0e03aa67238bee67f68252359bd.bin",
+          "path": "work/f460-f461-comparison/2026-11-01/integration/pre-edit/INDEX.json",
+          "sha256": "8e8ab70e0b58a0e763930e2fa353159a5d2fb0e03aa67238bee67f68252359bd"
+        },
+        {
+          "bytes": 3277,
+          "copy": "source-inputs/ffba913737b38e9b572297c0241a82a116c33b41744d27aac82d3414df0427ae.bin",
+          "path": "work/f460-f461-comparison/2026-11-01/integration/review-candidate-v2/INDEX.json",
+          "sha256": "ffba913737b38e9b572297c0241a82a116c33b41744d27aac82d3414df0427ae"
+        },
+        {
+          "bytes": 3271,
+          "copy": "source-inputs/17e14facd4823ae39195a0bbe6b304894249b376f188df137473f97dc48fe26b.bin",
+          "path": "work/f460-f461-comparison/2026-11-01/integration/review-candidate/INDEX.json",
+          "sha256": "17e14facd4823ae39195a0bbe6b304894249b376f188df137473f97dc48fe26b"
+        }
+      ],
+      "checkpoint": "2026-11-01",
+      "evidence_index": {
+        "bytes": 66505,
+        "copy": "source-inputs/760a66fcae9e1d4eab76f20a00d062b86f57f891045c35e77d7ec2e3c318e701.bin",
+        "path": "work/f460-f461-comparison/2026-11-01/EVIDENCE_INDEX.json",
+        "sha256": "760a66fcae9e1d4eab76f20a00d062b86f57f891045c35e77d7ec2e3c318e701"
+      },
+      "reports": [
+        {
+          "first_VA_line": null,
+          "heading": {
+            "exact_text": "# F460 2.0.12: bounded static first pass",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 7328,
+            "copy": "source-inputs/c7a2949ed3f49a14fa611561795c68f3f166d980326719d61029975069263945.bin",
+            "path": "work/f460-firmware/2.0.12/research/2026-11-01/first-pass/REPORT.md",
+            "sha256": "c7a2949ed3f49a14fa611561795c68f3f166d980326719d61029975069263945"
+          },
+          "product": "F460"
+        },
+        {
+          "first_VA_line": {
+            "exact_text": "The raw Image SHA256 is`f249b7bb544db7743a5b76d5927c5a154204f7c90a946ce08f5177bd46431a94`,14434312 bytes. Original offset56 has the ARM64 Image magic. The original banner at file offset0x8e00c8 reports Linux5.10.35+g59ec3f0ef418+p0, GCC11.5.0 and Binutils2.38.20220708. Its embedded2011 timestamp is retained as metadata, not product/build/deployment chronology. The declared Image-size field14811136 and file size are separately retained; no equality/corruption claim is imposed.",
+            "line": 24
+          },
+          "heading": {
+            "exact_text": "# F461 2.0.11: verified extraction and bounded platform/startup first pass",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 12048,
+            "copy": "source-inputs/187877260da89ef432021b971268f83854641a72b73e4d7c8d4d02b035b1dd16.bin",
+            "path": "work/f461-firmware/2.0.11/research/2026-11-01/REPORT.v2.md",
+            "sha256": "187877260da89ef432021b971268f83854641a72b73e4d7c8d4d02b035b1dd16"
+          },
+          "product": "F461"
+        }
+      ],
+      "reviews": [
+        {
+          "bytes": 4303,
+          "copy": "source-inputs/99f9f603381611a6f22a58e7631471285cd3ee9dc92b9b3a1539bcd6882ea88d.bin",
+          "path": "work/f460-f461-comparison/2026-11-01/reviews/f460-source-review.md",
+          "sha256": "99f9f603381611a6f22a58e7631471285cd3ee9dc92b9b3a1539bcd6882ea88d"
+        },
+        {
+          "bytes": 7383,
+          "copy": "source-inputs/56e9d58cc23b99a5093ea7772323e9783496824ad30d031c9c669a2fbf1b34ea.bin",
+          "path": "work/f460-f461-comparison/2026-11-01/reviews/f461-source-review.md",
+          "sha256": "56e9d58cc23b99a5093ea7772323e9783496824ad30d031c9c669a2fbf1b34ea"
+        },
+        {
+          "bytes": 7838,
+          "copy": "source-inputs/ebed42f918ffd09f67ec5107a8b40698a5f625f1d658da9578d8642b8fa8cb93.bin",
+          "path": "work/f460-f461-comparison/2026-11-01/reviews/comparison-source-review.md",
+          "sha256": "ebed42f918ffd09f67ec5107a8b40698a5f625f1d658da9578d8642b8fa8cb93"
+        },
+        {
+          "bytes": 8071,
+          "copy": "source-inputs/172f32819a795e05d8a7f798a13e6a8edd0e51921c9a38d09cafe058ee137147.bin",
+          "path": "work/f460-f461-comparison/2026-11-01/reviews/integration-review.md",
+          "sha256": "172f32819a795e05d8a7f798a13e6a8edd0e51921c9a38d09cafe058ee137147"
+        }
+      ],
+      "saved_UTC": "2026-11-01T10:44:39.317170+00:00",
+      "saved_index_member_count": 307,
+      "saved_scope": "Parallel independent F460 2.0.12 and F461 2.0.11 canonical package extraction/static first passes, comparison and reviewed local encyclopedia integration. Further binary behavior and configured/runtime/physical evidence remain open.",
+      "saved_status": "COMPLETE_FIRST_PASS",
+      "state": {
+        "bytes": 4830,
+        "copy": "source-inputs/5c33cd3c441270c239e9b2c7df33f40d3cd703cbae343b0020ce176b8fcda335.bin",
+        "path": "work/f460-f461-comparison/2026-11-01/RESEARCH_STATE.json",
+        "sha256": "5c33cd3c441270c239e9b2c7df33f40d3cd703cbae343b0020ce176b8fcda335"
+      },
+      "state_history": [],
+      "topic": "Package and first-pass provenance",
+      "validation": {
+        "bytes": 27374,
+        "copy": "source-inputs/cd0ca82fac38b18db01428ea2de7209ff87ffae39264e933024c8c13f7e58364.bin",
+        "path": "work/f460-f461-comparison/2026-11-01/IDENTITY_VALIDATION.json",
+        "sha256": "cd0ca82fac38b18db01428ea2de7209ff87ffae39264e933024c8c13f7e58364"
+      }
+    },
+    {
+      "candidate_index_pins": [
+        {
+          "bytes": 2672,
+          "copy": "source-inputs/338a268797d2d8cada6278f8b6b0329c8a94b04e1c89ef15151774f86b35f11c.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-depth/review-candidate/INDEX.json",
+          "sha256": "338a268797d2d8cada6278f8b6b0329c8a94b04e1c89ef15151774f86b35f11c"
+        }
+      ],
+      "checkpoint": "2026-11-01-depth",
+      "evidence_index": {
+        "bytes": 35678,
+        "copy": "source-inputs/1d3869b521522976df8a63bd91116438431a453ce873f06a8fdaee53454b51b5.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-depth/EVIDENCE_INDEX.json",
+        "sha256": "1d3869b521522976df8a63bd91116438431a453ce873f06a8fdaee53454b51b5"
+      },
+      "reports": [
+        {
+          "first_VA_line": {
+            "exact_text": "Relocation-backed raw header0x212ce0/AP0x212cf0 refers to RTTI0x218aa0/name `11SleepAction`; primary slot0 is original0x37e60. The action-name table at0x213bf0 has16-byte entries. Row10 at0x213c90 is length5/string `SLEEP` at0x196ad0:5 is the string length, not the selected enum. The raw serializer reads type word40, bounds it against23 and uses this table; complete upstream parsing/selection of row10 is a premise, not reimplemented.",
+            "line": 9
+          },
+          "heading": {
+            "exact_text": "# F460 2.0.12: fresh AArch64 SleepAction schema/initializer join",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 5142,
+            "copy": "source-inputs/4caa7e282a04f4a514803b4da93c875e5da20b6ccd4ccae14542d855726eb68a.bin",
+            "path": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/REPORT.md",
+            "sha256": "4caa7e282a04f4a514803b4da93c875e5da20b6ccd4ccae14542d855726eb68a"
+          },
+          "product": "F460"
+        },
+        {
+          "first_VA_line": {
+            "exact_text": "Plugin `init_plugin`0x2150 preserves its input pointer and uses an already-initialized word at0x1822c to return0 early. The selected remaining path requests a16-byte zero allocation at0x2200. ADRP0x21f8 plus LDR0x2208 reaches GOT0x17fc8; its GLOB_DAT relocation names `automation_tr` at0x18190. The new private pointer is stored to that descriptor+88 at0x221c.",
+            "line": 14
+          },
+          "heading": {
+            "exact_text": "# F461 2.0.11: original automation translation registration and local admission",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 5869,
+            "copy": "source-inputs/b26581f9a9292aec707562863ba43e7dfc8dcbca1bb6d51e2037295304ca72ec.bin",
+            "path": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/REPORT.v2.md",
+            "sha256": "b26581f9a9292aec707562863ba43e7dfc8dcbca1bb6d51e2037295304ca72ec"
+          },
+          "product": "F461"
+        }
+      ],
+      "reviews": [
+        {
+          "bytes": 3546,
+          "copy": "source-inputs/99245aee7920799ad5c5aac57df6bfc7c4ffb7ce4b7049fbe1e59ae50f93223c.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-depth/reviews/f460-source-review.md",
+          "sha256": "99245aee7920799ad5c5aac57df6bfc7c4ffb7ce4b7049fbe1e59ae50f93223c"
+        },
+        {
+          "bytes": 4522,
+          "copy": "source-inputs/68e7e4fecd83b2e1b0e1d8aab86f46bad43d1bf01dd7e7abec1809de1c501b84.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-depth/reviews/f461-source-review.md",
+          "sha256": "68e7e4fecd83b2e1b0e1d8aab86f46bad43d1bf01dd7e7abec1809de1c501b84"
+        },
+        {
+          "bytes": 6092,
+          "copy": "source-inputs/e62b06087db8740439bc33164798777434fce98b368a380ee06c9973da54cc06.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-depth/reviews/integration-review.md",
+          "sha256": "e62b06087db8740439bc33164798777434fce98b368a380ee06c9973da54cc06"
+        }
+      ],
+      "saved_UTC": "2026-11-01T10:56:00.462230+00:00",
+      "saved_index_member_count": 157,
+      "saved_scope": "Two selected independent original AArch64 binary-source paths with cross-source and documentary reviews; full in-depth firmware examination remains incomplete.",
+      "saved_status": "COMPLETE_SELECTED_DEPTH_BATCH",
+      "state": {
+        "bytes": 25750,
+        "copy": "source-inputs/cd5799faea4f79021be329ad0abbef5234612ea535691ef5eeaa322998030417.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-depth/RESEARCH_STATE.json",
+        "sha256": "cd5799faea4f79021be329ad0abbef5234612ea535691ef5eeaa322998030417"
+      },
+      "state_history": [],
+      "topic": "First selected compiled/source routes",
+      "validation": {
+        "bytes": 26522,
+        "copy": "source-inputs/87c6cd66fcccef52832f2c11515e2d2bfc58043fc7a99b78f9d86cabd69cf0c9.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-depth/IDENTITY_VALIDATION.json",
+        "sha256": "87c6cd66fcccef52832f2c11515e2d2bfc58043fc7a99b78f9d86cabd69cf0c9"
+      }
+    },
+    {
+      "candidate_index_pins": [
+        {
+          "bytes": 231,
+          "copy": "source-inputs/ed056ac136414f58fc5083a9bbf471ff9c99306461bc4235e120a02763a30bc3.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run03/integration/pre-edit/INDEX.json",
+          "sha256": "ed056ac136414f58fc5083a9bbf471ff9c99306461bc4235e120a02763a30bc3"
+        },
+        {
+          "bytes": 3356,
+          "copy": "source-inputs/e7985a6d2f03a406ca111584104a23a4d25b0ce508d2cf7634b92d25f3e3c00a.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run03/review-candidate/INDEX.json",
+          "sha256": "e7985a6d2f03a406ca111584104a23a4d25b0ce508d2cf7634b92d25f3e3c00a"
+        }
+      ],
+      "checkpoint": "2026-11-01-run03",
+      "evidence_index": {
+        "bytes": 41592,
+        "copy": "source-inputs/1d60bb1c8d9d1cd574c58c8e7ed989444a48c333acb3508a99972d08313f1fc0.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run03/EVIDENCE_INDEX.json",
+        "sha256": "1d60bb1c8d9d1cd574c58c8e7ed989444a48c333acb3508a99972d08313f1fc0"
+      },
+      "reports": [
+        {
+          "first_VA_line": {
+            "exact_text": "The reviewed deep-scheduler packet establishes raw field52 `seconds`→compiled field148→temporary callable dataSP8, manager0x1125f0 and invoker0x112640, passed to storage helper0x1303f0. Those schema/construction facts are inherited, not a repeated factory test. Here the actual manager/storage implementations narrow the stored-data premise.",
+            "line": 9
+          },
+          "heading": {
+            "exact_text": "# F460 2.0.12 run03: SLEEP callable, timing request and caller marker",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 9034,
+            "copy": "source-inputs/ee7c55b26c5587121bdd27347e602d7cc9f5c3105a407d68f84294c19949d521.bin",
+            "path": "work/f460-firmware/2.0.12/research/2026-11-01-run03-sleep-invoker/REPORT.md",
+            "sha256": "ee7c55b26c5587121bdd27347e602d7cc9f5c3105a407d68f84294c19949d521"
+          },
+          "product": "F460"
+        },
+        {
+          "first_VA_line": {
+            "exact_text": "The executable's selected startup source0x2f74..0x2f80 requests144 zeroed bytes and passes the returned pointer to imported `get_plug_m`. Its actual0x2c30 PLT loads JUMP_SLOT0x171a0, whose original relocation names `get_plug_m`. DT_NEEDED names `libcoso.so`. In that packaged candidate, `get_plug_m`0x25a0 reads a static pointer at0x15168: a nonnull existing pointer is returned; only a null slot causes the supplied pointer to be stored and returned. Thus the source supports a first-owner/getter contract, not proof that this particular allocation always wins or that no interposition/other initialization occurs.",
+            "line": 17
+          },
+          "heading": {
+            "exact_text": "# F461 2.0.11 run03: actual local descriptor matcher and translator call",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 9896,
+            "copy": "source-inputs/a89d70211c3f6eecb92f620d9e1aecdc52c2c1a06dbff99cdcc89b139b0f6c19.bin",
+            "path": "work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/REPORT.md",
+            "sha256": "a89d70211c3f6eecb92f620d9e1aecdc52c2c1a06dbff99cdcc89b139b0f6c19"
+          },
+          "product": "F461"
+        }
+      ],
+      "reviews": [
+        {
+          "bytes": 4478,
+          "copy": "source-inputs/9fb28914733382eadb8b1021084dffeba11822cf2f34ebed37a325d2b58bc6ee.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run03/reviews/f460-source-review.md",
+          "sha256": "9fb28914733382eadb8b1021084dffeba11822cf2f34ebed37a325d2b58bc6ee"
+        },
+        {
+          "bytes": 5525,
+          "copy": "source-inputs/74ead3147ceade81adb9a1c76806caaaed1cb338eec47d6332e8ba480760407c.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run03/reviews/f461-source-review.md",
+          "sha256": "74ead3147ceade81adb9a1c76806caaaed1cb338eec47d6332e8ba480760407c"
+        },
+        {
+          "bytes": 7282,
+          "copy": "source-inputs/a9ce8ea335248f5547d69feb09e240b80b11c120a014031443cd8eaea7606912.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run03/reviews/integration-review.md",
+          "sha256": "a9ce8ea335248f5547d69feb09e240b80b11c120a014031443cd8eaea7606912"
+        }
+      ],
+      "saved_UTC": "2026-11-01T11:15:21.284769+00:00",
+      "saved_index_member_count": 179,
+      "saved_scope": "Two selected original source request/caller and matcher/callback contracts, independently reviewed. Full firmware study incomplete; timed continuation active.",
+      "saved_status": "COMPLETE_REVIEWED_RUN03_CONTINUATION_ACTIVE",
+      "state": {
+        "bytes": 27403,
+        "copy": "source-inputs/1837d5414c9344e97b15b07332432915cbe2a1aec68fc0c06ecf28e1232a7223.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run03/RESEARCH_STATE.json",
+        "sha256": "1837d5414c9344e97b15b07332432915cbe2a1aec68fc0c06ecf28e1232a7223"
+      },
+      "state_history": [],
+      "topic": "Sleep callable / translation callback dispatch",
+      "validation": {
+        "bytes": 27995,
+        "copy": "source-inputs/27ad277dc13f40c60a4ffa0b419495c56398bccc70725feee5a6500e23dd0caf.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run03/IDENTITY_VALIDATION.json",
+        "sha256": "27ad277dc13f40c60a4ffa0b419495c56398bccc70725feee5a6500e23dd0caf"
+      }
+    },
+    {
+      "candidate_index_pins": [
+        {
+          "bytes": 788,
+          "copy": "source-inputs/a398275ca9d12ce624b6ed249da123b8d19f7908084047644576d1d378223223.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run04/integration/f460-before-v2/INDEX.json",
+          "sha256": "a398275ca9d12ce624b6ed249da123b8d19f7908084047644576d1d378223223"
+        },
+        {
+          "bytes": 264,
+          "copy": "source-inputs/594770ef90ab6013ac75c79d71637f6664a73e16ae2d39517f5cfdd6ae6015c8.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run04/integration/pre-edit/INDEX.json",
+          "sha256": "594770ef90ab6013ac75c79d71637f6664a73e16ae2d39517f5cfdd6ae6015c8"
+        },
+        {
+          "bytes": 701,
+          "copy": "source-inputs/09944e7568d6de2b76cede706c93ed410c7c5304d579317707bb9dfb91f12ddd.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run04/integration/pre-summary-refinement/INDEX.json",
+          "sha256": "09944e7568d6de2b76cede706c93ed410c7c5304d579317707bb9dfb91f12ddd"
+        },
+        {
+          "bytes": 3885,
+          "copy": "source-inputs/71d2172778b0958c567196fa7ba1c6fbcba40437cd22200744c62b1c264d7cac.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run04/review-candidate/INDEX.json",
+          "sha256": "71d2172778b0958c567196fa7ba1c6fbcba40437cd22200744c62b1c264d7cac"
+        }
+      ],
+      "checkpoint": "2026-11-01-run04",
+      "evidence_index": {
+        "bytes": 48323,
+        "copy": "source-inputs/a6e38143d7f9def0a681b44b806c6b1cadf1d985f802a20540d2a5d367c66a3a.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run04/EVIDENCE_INDEX.json",
+        "sha256": "a6e38143d7f9def0a681b44b806c6b1cadf1d985f802a20540d2a5d367c66a3a"
+      },
+      "reports": [
+        {
+          "first_VA_line": {
+            "exact_text": "The initializer prefix at 0x27d50 establishes X22=0x31a000; 0x27eac sets X20=0x31a200. Instructions 0x27eb0/0x27eb8 select the compiled SQL C string at 0x28be38; 0x27ebc requests local string construction at 0xda5f0 into that global. This helper's normal path requests length/allocation/copy and records pointer/length/terminator (0xda614..0xda6d4). The producer is conditional on reaching this static initialization block and ordinary helper/provider returns; invocation and successful initialization are not observed.",
+            "line": 13
+          },
+          "heading": {
+            "exact_text": "# F460 2.0.12: selected catalogue SQL producer and value-object reader",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 6764,
+            "copy": "source-inputs/00c18455900a2ac60c25d0ad0d0d19ec12935e264b960c30c321da054b477687.bin",
+            "path": "work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/REPORT.v2.md",
+            "sha256": "00c18455900a2ac60c25d0ad0d0d19ec12935e264b960c30c321da054b477687"
+          },
+          "product": "F460"
+        },
+        {
+          "first_VA_line": {
+            "exact_text": "The plugin's original GLOB_DAT0x14fb0 names `scs_field_bus`0x15220 (112 bytes);0x14fa0 separately names `scsai_field_bus`0x151b0 (112 bytes). These are actual exported object identities, not inferred from a filename. Initial data at scs descriptor+80 encodes low/high32 words `(1,1)`; the separate scsai descriptor+80 encodes `(1,2)`. Both initially have callback slots+48/+56 resolved by ABS64 relocations to `scs_init`0x2780 and `scs_send`0x3130. Those callback bodies and downstream connection/output/receiving delegates are outside this packet; no operational or physical meaning is assigned from their names.",
+            "line": 15
+          },
+          "heading": {
+            "exact_text": "# F461 2.0.11 run04: actual field owner, configuration and packed local route",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 9454,
+            "copy": "source-inputs/91a541f322d8126f3dc8c5e64547242ebedecbb8c3d6b959e9494ffe2ee2ff3f.bin",
+            "path": "work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/REPORT.md",
+            "sha256": "91a541f322d8126f3dc8c5e64547242ebedecbb8c3d6b959e9494ffe2ee2ff3f"
+          },
+          "product": "F461"
+        }
+      ],
+      "reviews": [
+        {
+          "bytes": 4845,
+          "copy": "source-inputs/e261fa073f196e780e28829e7f51156cfa9f12c9a66ac72753fc07372c67650c.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run04/reviews/f460-source-review.md",
+          "sha256": "e261fa073f196e780e28829e7f51156cfa9f12c9a66ac72753fc07372c67650c"
+        },
+        {
+          "bytes": 4327,
+          "copy": "source-inputs/6103784f71cb44276b76b4ef3e87957fae6e0f2605fb4c1d923a9623a3c3dfd2.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run04/reviews/f461-source-review.md",
+          "sha256": "6103784f71cb44276b76b4ef3e87957fae6e0f2605fb4c1d923a9623a3c3dfd2"
+        },
+        {
+          "bytes": 8462,
+          "copy": "source-inputs/036e51478ac98228b1bbd6cb69ac554c7be9dc25927c857e1d60a57831674c11.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run04/reviews/integration-review.md",
+          "sha256": "036e51478ac98228b1bbd6cb69ac554c7be9dc25927c857e1d60a57831674c11"
+        }
+      ],
+      "saved_UTC": "2026-11-01T11:53:30.840052+00:00",
+      "saved_index_member_count": 210,
+      "saved_scope": "Selected F460 catalogue SQL/reader and F461 actual field/config/packed-route source; full firmware/Device study remains incomplete.",
+      "saved_status": "COMPLETE_REVIEWED_RUN04_CONTINUATION_ACTIVE",
+      "state": {
+        "bytes": 28629,
+        "copy": "source-inputs/6448111dc01e5224b33d77b9cfe9ffef309e5f1838673c90adbd3726240fcbba.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run04/RESEARCH_STATE.json",
+        "sha256": "6448111dc01e5224b33d77b9cfe9ffef309e5f1838673c90adbd3726240fcbba"
+      },
+      "state_history": [],
+      "topic": "Catalogue reader / field owner",
+      "validation": {
+        "bytes": 29512,
+        "copy": "source-inputs/abb43ca3651081eeefbe636ee7e53e502e35f180367c36a12127eee2c14955e7.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run04/IDENTITY_VALIDATION.json",
+        "sha256": "abb43ca3651081eeefbe636ee7e53e502e35f180367c36a12127eee2c14955e7"
+      }
+    },
+    {
+      "candidate_index_pins": [
+        {
+          "bytes": 506,
+          "copy": "source-inputs/3f52a496dd3ae3ba24ee4812f0efd1f82ac28cfb53be10122f1fe29dc4a7783e.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run05/integration/pre-edit/INDEX.json",
+          "sha256": "3f52a496dd3ae3ba24ee4812f0efd1f82ac28cfb53be10122f1fe29dc4a7783e"
+        },
+        {
+          "bytes": 3882,
+          "copy": "source-inputs/59f20515a29df0edfea499d4a981fcc60f41f2b319b5df903ebbda863350ce32.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run05/review-candidate/INDEX.json",
+          "sha256": "59f20515a29df0edfea499d4a981fcc60f41f2b319b5df903ebbda863350ce32"
+        }
+      ],
+      "checkpoint": "2026-11-01-run05",
+      "evidence_index": {
+        "bytes": 43727,
+        "copy": "source-inputs/420016be1282100405980fee2866f4c7982e8dd910c13c7756734a0c0fa1f6bb.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run05/EVIDENCE_INDEX.json",
+        "sha256": "420016be1282100405980fee2866f4c7982e8dd910c13c7756734a0c0fa1f6bb"
+      },
+      "reports": [
+        {
+          "first_VA_line": {
+            "exact_text": "The static initializer uses a local 40-byte-per-entry range. At0x28624/0x28628, original ADRP/ADD computes code address0x112fd0, the key89 constructor audited in run04. The source retains this inX2 until0x286e0, which stores it as the first word of function storage atSP+0x6b8 (1720). At0x2864c W21=89;0x286dc stores that key atSP+1712, immediately before this storage. X10 was explicitly set toSP+0x6b8 at0x286a4. The manager and invoker words adjacent to the function storage are original source addresses0xf5350 and0xf0d00, established at0x28210..0x2821c and stored by0x286e8. This is a numeric registry key and a constructor pointer, not a Device ID, OPEN WHO, scene enum or physical meaning inferred from RTTI.",
+            "line": 13
+          },
+          "heading": {
+            "exact_text": "# F460 2.0.12 run05: key89 callable selection and supplied owner tuple",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 7108,
+            "copy": "source-inputs/3c6d2d502e1322c7279f3fe259e4e30a9348858add5b656ed332a08ebdf7bdfb.bin",
+            "path": "work/f460-firmware/2.0.12/research/2026-11-01-run05-selector/REPORT.md",
+            "sha256": "3c6d2d502e1322c7279f3fe259e4e30a9348858add5b656ed332a08ebdf7bdfb"
+          },
+          "product": "F460"
+        },
+        {
+          "first_VA_line": {
+            "exact_text": "Translator argument capture keeps input recordX2 inX19, descriptorX4 inX28 and supplied output-list addressX3 atSP96. On the `(2,1)` branch it requests72 bytes at0x3b64/0x3b6c and saves the returned output pointer atSP160. Descriptor+88 supplies a private pointer (X27). Input record word+56 must follow the parsed representation3 path; record+0 is read as the parsed-object pointer and its own word+104 must equal1 to branch0x4518. These are separate namespaces from input message category+40 and matcher criterion+48.",
+            "line": 16
+          },
+          "heading": {
+            "exact_text": "# F461 2.0.11 run05: one selected automation converter output record",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 8532,
+            "copy": "source-inputs/295e1e82d037adfaa3e6846fa3de579232dc5cbaefdd88734a7d294877b19631.bin",
+            "path": "work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/REPORT.md",
+            "sha256": "295e1e82d037adfaa3e6846fa3de579232dc5cbaefdd88734a7d294877b19631"
+          },
+          "product": "F461"
+        }
+      ],
+      "reviews": [
+        {
+          "bytes": 4494,
+          "copy": "source-inputs/002b6a8a6942d3d23fb50bca6e30916a5187b7755dfc65ac66dfb5cda92d0dc5.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run05/reviews/f460-source-review.md",
+          "sha256": "002b6a8a6942d3d23fb50bca6e30916a5187b7755dfc65ac66dfb5cda92d0dc5"
+        },
+        {
+          "bytes": 4046,
+          "copy": "source-inputs/0ab9d39ddaeeca104c3ac6d87aef404cf9fc2c92e387888290832c81cce6e251.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run05/reviews/f461-source-review.md",
+          "sha256": "0ab9d39ddaeeca104c3ac6d87aef404cf9fc2c92e387888290832c81cce6e251"
+        },
+        {
+          "bytes": 7337,
+          "copy": "source-inputs/837702edb93b59718253e5d2f6d0ef5499b323f311bf1a23bf6fadcb1ff6c3fc.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run05/reviews/integration-review.md",
+          "sha256": "837702edb93b59718253e5d2f6d0ef5499b323f311bf1a23bf6fadcb1ff6c3fc"
+        }
+      ],
+      "saved_UTC": "2026-11-01T12:18:21.928297+00:00",
+      "saved_index_member_count": 188,
+      "saved_scope": "Selected F460 indirect selector/owner argument and F461 conditional converter-output contracts; full firmware/Device/source study remains incomplete.",
+      "saved_status": "COMPLETE_REVIEWED_RUN05_CONTINUATION_ACTIVE",
+      "state": {
+        "bytes": 29610,
+        "copy": "source-inputs/5bb9d90d01c8a80a8d98ac99e16343db108e555a77974def24a12a1d79254923.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run05/RESEARCH_STATE.json",
+        "sha256": "5bb9d90d01c8a80a8d98ac99e16343db108e555a77974def24a12a1d79254923"
+      },
+      "state_history": [],
+      "topic": "Constructor selection / local translator output",
+      "validation": {
+        "bytes": 30238,
+        "copy": "source-inputs/4238070f57ee580477b8bdb6bd67254ce602b878732d9dffaf36166a7c58bc2f.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run05/IDENTITY_VALIDATION.json",
+        "sha256": "4238070f57ee580477b8bdb6bd67254ce602b878732d9dffaf36166a7c58bc2f"
+      }
+    },
+    {
+      "candidate_index_pins": [
+        {
+          "bytes": 507,
+          "copy": "source-inputs/1ce0cb62da8f9f67f82292a179b231171cfc1e858251d9968e6cb280bf4a679f.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run06/integration/pre-edit/INDEX.json",
+          "sha256": "1ce0cb62da8f9f67f82292a179b231171cfc1e858251d9968e6cb280bf4a679f"
+        },
+        {
+          "bytes": 3848,
+          "copy": "source-inputs/673c6de2ba108c968fd37fc4ec649cad7cc38463a62fd9d26ccf0bd5748ed43e.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run06/review-candidate/INDEX.json",
+          "sha256": "673c6de2ba108c968fd37fc4ec649cad7cc38463a62fd9d26ccf0bd5748ed43e"
+        }
+      ],
+      "checkpoint": "2026-11-01-run06",
+      "evidence_index": {
+        "bytes": 44071,
+        "copy": "source-inputs/15dcc89cef282e7c400aedc0a2a65f568d6368e401d8347871a93ecd6b5e9485.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run06/EVIDENCE_INDEX.json",
+        "sha256": "15dcc89cef282e7c400aedc0a2a65f568d6368e401d8347871a93ecd6b5e9485"
+      },
+      "reports": [
+        {
+          "first_VA_line": {
+            "exact_text": "The factory uses the actual literal key `type`0x1954a8, const JsonCpp member access and asString requests (0x4f5f8..0x4f614), then compares the supplied type string with the length/string table at0x2136f0 (0x4f61c..0x4f654). Row1 is length4 and original literal BNIL0x196828; the row number is not the string length. After subtracting1 and bounding the result, the selected jump table0x196d44 entry0 resolves0x502f0. This selected block requests raw constructor0x4c100,56-byte allocation and base-copy helper0x4e2b0, installs raw AP0x2141a0 and stores status word52, then requests local vector insertion0x4f030.",
+            "line": 15
+          },
+          "heading": {
+            "exact_text": "# F460 2.0.12 run06: one actual BNIL trigger factory and local admission",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 8740,
+            "copy": "source-inputs/06435e577532e42b000a89b5cb7125faea507da85d8a79f791e9aae6f120157f.bin",
+            "path": "work/f460-firmware/2.0.12/research/2026-11-01-run06-trigger/REPORT.md",
+            "sha256": "06435e577532e42b000a89b5cb7125faea507da85d8a79f791e9aae6f120157f"
+          },
+          "product": "F460"
+        },
+        {
+          "first_VA_line": {
+            "exact_text": "The plugin's original DT_NEEDED requests `libautomation.so.1`. Verified ImageVFS resolves the image alias `/home/bticino/lib/libautomation.so.1` using saved symlink metadata to the actual regular file above. No host symlink is created or followed. SOURCE.json pins that alias metadata, original file identities and fresh ELF64/AArch64 PT_LOADs. The actual exported helper definition is VA0x1c10. The plugin's actual BL0x40c4→PLT0x1fe0→JUMP_SLOT0x18148 names `automation_get_where_type`. These establish a packaged candidate; effective dynamic binding/interposition and active loading are not observed.",
+            "line": 10
+          },
+          "heading": {
+            "exact_text": "# F461 2.0.11 run06: address-shape helper to local prefix normalization",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 7350,
+            "copy": "source-inputs/d8be70c3da862cfe82c367b1537beb6918ceaada5c5200cda2910b6ec049f52c.bin",
+            "path": "work/f461-firmware/2.0.11/research/2026-11-01-run06-address/REPORT.md",
+            "sha256": "d8be70c3da862cfe82c367b1537beb6918ceaada5c5200cda2910b6ec049f52c"
+          },
+          "product": "F461"
+        }
+      ],
+      "reviews": [
+        {
+          "bytes": 5045,
+          "copy": "source-inputs/9138708c663f0bf3f90c53165aca508abb3ea55ea4d24bb5c8d6565bfeb4e738.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run06/reviews/f460-source-review.md",
+          "sha256": "9138708c663f0bf3f90c53165aca508abb3ea55ea4d24bb5c8d6565bfeb4e738"
+        },
+        {
+          "bytes": 3761,
+          "copy": "source-inputs/00311f3f40e01cff1bd1b67765a35b02cc336db8fb27c2b05459b9bacf1103df.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run06/reviews/f461-source-review.md",
+          "sha256": "00311f3f40e01cff1bd1b67765a35b02cc336db8fb27c2b05459b9bacf1103df"
+        },
+        {
+          "bytes": 7484,
+          "copy": "source-inputs/2cc95470ade437197f26f3a3b39143b4a12b62345d8dde225de087e075274168.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run06/reviews/integration-review.md",
+          "sha256": "2cc95470ade437197f26f3a3b39143b4a12b62345d8dde225de087e075274168"
+        }
+      ],
+      "saved_UTC": "2026-11-01T12:53:11.939741+00:00",
+      "saved_index_member_count": 191,
+      "saved_scope": "Fresh F460 selected state-trigger factory/admission/callback and F461 address-shape/prefix contracts; full firmware/Device/source study incomplete.",
+      "saved_status": "COMPLETE_REVIEWED_RUN06_CONTINUATION_ACTIVE",
+      "state": {
+        "bytes": 30079,
+        "copy": "source-inputs/4c23e592e42181ec62513d0cc19a4df3702d8fe74afb12f6d84173e7311aef5a.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run06/RESEARCH_STATE.json",
+        "sha256": "4c23e592e42181ec62513d0cc19a4df3702d8fe74afb12f6d84173e7311aef5a"
+      },
+      "state_history": [],
+      "topic": "Trigger schema / address prefix",
+      "validation": {
+        "bytes": 30749,
+        "copy": "source-inputs/2ea9edd57da1b2091242d301d6144ea20385353f40dd3e1dea9d6bc59cc1eb05.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run06/IDENTITY_VALIDATION.json",
+        "sha256": "2ea9edd57da1b2091242d301d6144ea20385353f40dd3e1dea9d6bc59cc1eb05"
+      }
+    },
+    {
+      "candidate_index_pins": [
+        {
+          "bytes": 507,
+          "copy": "source-inputs/ceaefb3f9b013969132f3ced75258126e37c080fe6681428f8f293a71a360358.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run07/integration/pre-edit/INDEX.json",
+          "sha256": "ceaefb3f9b013969132f3ced75258126e37c080fe6681428f8f293a71a360358"
+        },
+        {
+          "bytes": 3847,
+          "copy": "source-inputs/3d3f3b87260e5d6b390268063e936eecbef294578e1b43cb76fbe0d7328e388d.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run07/review-candidate/INDEX.json",
+          "sha256": "3d3f3b87260e5d6b390268063e936eecbef294578e1b43cb76fbe0d7328e388d"
+        }
+      ],
+      "checkpoint": "2026-11-01-run07",
+      "evidence_index": {
+        "bytes": 34954,
+        "copy": "source-inputs/3be5585783d70841fad8256d431982106e3a1e7b3ebe1b43bada1af9f32839db.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run07/EVIDENCE_INDEX.json",
+        "sha256": "3be5585783d70841fad8256d431982106e3a1e7b3ebe1b43bada1af9f32839db"
+      },
+      "reports": [
+        {
+          "first_VA_line": {
+            "exact_text": "A selected original caller0x2cc20..0x2cc70 requests272 bytes, retains the allocation base, stores control address point0x213450 at that base with initial count words, advances its inner pointer by16 at0x2cc58, and passes that exact inner to constructor0x105740 at0x2cc70. Its normal path publishes inner/control pair atSP+104/+112 (0x2cc90). Prior parse/success branches and supplied source/configuration remain premises; no installed asset is reconstructed.",
+            "line": 13
+          },
+          "heading": {
+            "exact_text": "# F460 2.0.12 run07: captured receiver identity and conditional worker handoff",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 8030,
+            "copy": "source-inputs/578653ad15a4c18b203d9917867f32384d017894875e88054043fae29ff46557.bin",
+            "path": "work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/REPORT.md",
+            "sha256": "578653ad15a4c18b203d9917867f32384d017894875e88054043fae29ff46557"
+          },
+          "product": "F460"
+        },
+        {
+          "first_VA_line": {
+            "exact_text": "Both originals are ELF64 little-endian AArch64. ImageVFS resolves the metadata-only alias `/usr/lib/liblghal.so.1` to the actual regular1.0.0 file; no host symlink is created or followed. Original SONAME is `liblghal.so.1`. `bt_device` declares that DT_NEEDED and actual JUMP_SLOT imports `hal_get_codename` at0x3cd40 and `hal_get_code` at0x3c688. Those declarations identify a packaged candidate, not natural invocation or effective live binding/interposition.",
+            "line": 12
+          },
+          "heading": {
+            "exact_text": "# F461 2.0.11 run07: bounded compile-time identity getter contracts",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 6813,
+            "copy": "source-inputs/1599bdd53dd4f3a9f20091f141338dfd22249fd0fb7b3ab0e900108a992f11ae.bin",
+            "path": "work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/REPORT.md",
+            "sha256": "1599bdd53dd4f3a9f20091f141338dfd22249fd0fb7b3ab0e900108a992f11ae"
+          },
+          "product": "F461"
+        }
+      ],
+      "reviews": [
+        {
+          "bytes": 4405,
+          "copy": "source-inputs/a4bdfb5d3f019d03e768733df85b081ffa5dece0653ce92e202d077c6f155484.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run07/reviews/f460-source-review.md",
+          "sha256": "a4bdfb5d3f019d03e768733df85b081ffa5dece0653ce92e202d077c6f155484"
+        },
+        {
+          "bytes": 3854,
+          "copy": "source-inputs/5150123d077525bf0f80e9560d58a0b191ffb755ba3abedbf2b35c7b40a30edd.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run07/reviews/f461-source-review.md",
+          "sha256": "5150123d077525bf0f80e9560d58a0b191ffb755ba3abedbf2b35c7b40a30edd"
+        },
+        {
+          "bytes": 7496,
+          "copy": "source-inputs/fa5ae85efb10c6eaacf5a187179162fced5e18f17c30916f887221d96ee7b78e.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run07/reviews/integration-review.md",
+          "sha256": "fa5ae85efb10c6eaacf5a187179162fced5e18f17c30916f887221d96ee7b78e"
+        }
+      ],
+      "saved_UTC": "2026-11-01T13:25:02.479473+00:00",
+      "saved_index_member_count": 152,
+      "saved_scope": "Selected normal-image F460 receiver/condition-worker and F461 pure HAL compile-time getter contracts; full firmware/Device/source study incomplete.",
+      "saved_status": "COMPLETE_REVIEWED_RUN07_CONTINUATION_ACTIVE",
+      "state": {
+        "bytes": 30567,
+        "copy": "source-inputs/1cee561d240ccb1149a061e220e2890d319e4401412d707769804dcaaaf0c487.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run07/RESEARCH_STATE.json",
+        "sha256": "1cee561d240ccb1149a061e220e2890d319e4401412d707769804dcaaaf0c487"
+      },
+      "state_history": [],
+      "topic": "Scene receiver / pure identity getter",
+      "validation": {
+        "bytes": 31247,
+        "copy": "source-inputs/64543e83734717308fec83751a28cb361c30171c4c6833804acf1d0b59594f6d.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run07/IDENTITY_VALIDATION.json",
+        "sha256": "64543e83734717308fec83751a28cb361c30171c4c6833804acf1d0b59594f6d"
+      }
+    },
+    {
+      "candidate_index_pins": [
+        {
+          "bytes": 2268,
+          "copy": "source-inputs/62ed921ed3a470eb9ecb98cf8308db5eba573f287144d85da82051e5d4cba1ce.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run08/integration/before-wording-v2/INDEX.json",
+          "sha256": "62ed921ed3a470eb9ecb98cf8308db5eba573f287144d85da82051e5d4cba1ce"
+        },
+        {
+          "bytes": 819,
+          "copy": "source-inputs/c3d5e573dc3b0580d144bcf9b3c5b29c51d13493fa203f4582541409b5de0308.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run08/integration/f460-before-v2/INDEX.json",
+          "sha256": "c3d5e573dc3b0580d144bcf9b3c5b29c51d13493fa203f4582541409b5de0308"
+        },
+        {
+          "bytes": 929,
+          "copy": "source-inputs/dc1276998573a70aa972c44614c0a2689c9e2cd5682c0d99d1a5694c0c25424d.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run08/integration/f460-before-v3/INDEX.json",
+          "sha256": "dc1276998573a70aa972c44614c0a2689c9e2cd5682c0d99d1a5694c0c25424d"
+        },
+        {
+          "bytes": 914,
+          "copy": "source-inputs/b438b4eebb0500d4b968c0a4739354c37c8b14401578edcffa53447052f3f8d7.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run08/integration/f461-before-v2/INDEX.json",
+          "sha256": "b438b4eebb0500d4b968c0a4739354c37c8b14401578edcffa53447052f3f8d7"
+        },
+        {
+          "bytes": 507,
+          "copy": "source-inputs/807dd395cf9cb9998c1aebf826d2ac5a82c25ffaf54a58e83ca0baecaa25159e.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run08/integration/pre-edit/INDEX.json",
+          "sha256": "807dd395cf9cb9998c1aebf826d2ac5a82c25ffaf54a58e83ca0baecaa25159e"
+        },
+        {
+          "bytes": 3991,
+          "copy": "source-inputs/f6f0db4642f0abd6c867ef5f1e46fd55ca236fdcd63faaf8711c6faf54df0942.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run08/review-candidate-v2/INDEX.json",
+          "sha256": "f6f0db4642f0abd6c867ef5f1e46fd55ca236fdcd63faaf8711c6faf54df0942"
+        },
+        {
+          "bytes": 3961,
+          "copy": "source-inputs/dca45ebf96d17309d2438d08e42c07a36c1af42ca6d48e0fdc30f88218f5d41e.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run08/review-candidate/INDEX.json",
+          "sha256": "dca45ebf96d17309d2438d08e42c07a36c1af42ca6d48e0fdc30f88218f5d41e"
+        }
+      ],
+      "checkpoint": "2026-11-01-run08",
+      "evidence_index": {
+        "bytes": 55078,
+        "copy": "source-inputs/323883fcddda2580263308dd20812528a6fdb69985774022ae5981bc5fa9b8c6.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run08/EVIDENCE_INDEX.json",
+        "sha256": "323883fcddda2580263308dd20812528a6fdb69985774022ae5981bc5fa9b8c6"
+      },
+      "reports": [
+        {
+          "first_VA_line": {
+            "exact_text": "Original local function0x5690 saves supplied X0 asX22. Its exact literal0x7bf0 is `/tmp/fwz.xml`. It requests g_file_test(path,16) at0x56d4. Nonzero follows0x5758 to xmlReadFile; zero first requests local helper0x5140 with the same supplied context and argument0, then tests its returned X0 value. That helper body is opaque: this packet does not establish how a runtime archive/file is obtained or unpacked.",
+            "line": 15
+          },
+          "heading": {
+            "exact_text": "# F460 2.0.12 run08: original update-manifest staging and filename selection",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 8249,
+            "copy": "source-inputs/8edf41662a72cbdfad04dd09febfe8eb8826ab6d55dddb5b6a2445f38ebf6d4e.bin",
+            "path": "work/f460-firmware/2.0.12/research/2026-11-01-run08-update/REPORT.v3.md",
+            "sha256": "8edf41662a72cbdfad04dd09febfe8eb8826ab6d55dddb5b6a2445f38ebf6d4e"
+          },
+          "product": "F460"
+        },
+        {
+          "first_VA_line": {
+            "exact_text": "The selected default-initialization prefix at `0x190ec..0x1911c` takes its destination from the supplied X1 (`MOV X19,X1` at `0x190ec`) and writes byte zero at destination+360 (`0x19118`). This is a local initialization store, not an observed runtime reset.",
+            "line": 9
+          },
+          "heading": {
+            "exact_text": "# F461 run08 — local log-rotation configuration and service-selection policy",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 6993,
+            "copy": "source-inputs/88568663f780e22040ffe7fe6f50530fd620e7ae25133f594937ae16f9dff312.bin",
+            "path": "work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/REPORT.v2.md",
+            "sha256": "88568663f780e22040ffe7fe6f50530fd620e7ae25133f594937ae16f9dff312"
+          },
+          "product": "F461"
+        }
+      ],
+      "reviews": [
+        {
+          "bytes": 2336,
+          "copy": "source-inputs/4c8432f94a508a12ce3b468c6c1a29cd8dc4179426fd1f0d02770d94f068905f.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run08/reviews/f460-source-review.v2.md",
+          "sha256": "4c8432f94a508a12ce3b468c6c1a29cd8dc4179426fd1f0d02770d94f068905f"
+        },
+        {
+          "bytes": 4221,
+          "copy": "source-inputs/6e7d0fee0a163584fb18e65243e2ddfb59f20b0d6e6b5a16516f9ee883cef953.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run08/reviews/f461-source-review.md",
+          "sha256": "6e7d0fee0a163584fb18e65243e2ddfb59f20b0d6e6b5a16516f9ee883cef953"
+        },
+        {
+          "bytes": 8330,
+          "copy": "source-inputs/537038892b6df4db0f2d99f22ee838c529cfa304c147a13ab88e4562f4210a9f.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run08/reviews/integration-review.md",
+          "sha256": "537038892b6df4db0f2d99f22ee838c529cfa304c147a13ab88e4562f4210a9f"
+        }
+      ],
+      "saved_UTC": "2026-11-01T13:52:18.061943+00:00",
+      "saved_index_member_count": 243,
+      "saved_scope": "Selected original normal/recovery-file update staging and daemon log-persistence policy; no full Device/source/runtime/physical approval",
+      "saved_status": "COMPLETE_REVIEWED_RUN08_CONTINUATION_ACTIVE",
+      "state": {
+        "bytes": 31193,
+        "copy": "source-inputs/e7c9386180a236dea7b05f8b80dff145feb875c693b0b8935dcfa8fdceab832a.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run08/RESEARCH_STATE.json",
+        "sha256": "e7c9386180a236dea7b05f8b80dff145feb875c693b0b8935dcfa8fdceab832a"
+      },
+      "state_history": [],
+      "topic": "Update manifest / daemon configuration",
+      "validation": {
+        "bytes": 31976,
+        "copy": "source-inputs/815f8d64ab6facb20876fd181c7e7ecdcad93054d966b96c8c20de3ec27b834b.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run08/IDENTITY_VALIDATION.json",
+        "sha256": "815f8d64ab6facb20876fd181c7e7ecdcad93054d966b96c8c20de3ec27b834b"
+      }
+    },
+    {
+      "candidate_index_pins": [
+        {
+          "bytes": 507,
+          "copy": "source-inputs/208f3074e85dc2dbbd6d57eac0d37de7e680d6c12f0aa0a642e2c7c41c09937f.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run09/integration/pre-edit/INDEX.json",
+          "sha256": "208f3074e85dc2dbbd6d57eac0d37de7e680d6c12f0aa0a642e2c7c41c09937f"
+        },
+        {
+          "bytes": 3955,
+          "copy": "source-inputs/4089e35943cb372cf591e0e0a1da349d0428aa86d597ed93423f3096f6d4ed2a.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run09/review-candidate/INDEX.json",
+          "sha256": "4089e35943cb372cf591e0e0a1da349d0428aa86d597ed93423f3096f6d4ed2a"
+        }
+      ],
+      "checkpoint": "2026-11-01-run09",
+      "evidence_index": {
+        "bytes": 37575,
+        "copy": "source-inputs/bf30c644ed4aa1c1c54eee77349b7e4b0d4ae6c8b51ab8ae45d457bfa8acd075.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run09/EVIDENCE_INDEX.json",
+        "sha256": "bf30c644ed4aa1c1c54eee77349b7e4b0d4ae6c8b51ab8ae45d457bfa8acd075"
+      },
+      "reports": [
+        {
+          "first_VA_line": {
+            "exact_text": "The original common condition parser0x4a260 looks up literal enabled0x1954b0 using actual const JsonCpp member access, requests asBool and stores its returned low byte at raw+40 (0x4a2c8..0x4a2d4). Separate type-string lookup0x4a384..0x4a3e0 uses a24-entry length/string table at0x213960; row18 at0x213a80 is length9/literal BNCUSCENE0x1968e8, and a matching row is stored in raw word44. These are local condition-schema axes, not trigger row18, an allocation/control count, Device ID or public WHO.",
+            "line": 13
+          },
+          "heading": {
+            "exact_text": "# F460 2.0.12 run09: one condition-pointer producer and complete scalar predicate",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 8247,
+            "copy": "source-inputs/db8227a6259b29bf1c29cb118dbe462de6c21ae5eb675bdaf07af0674f688a19.bin",
+            "path": "work/f460-firmware/2.0.12/research/2026-11-01-run09-condition/REPORT.md",
+            "sha256": "db8227a6259b29bf1c29cb118dbe462de6c21ae5eb675bdaf07af0674f688a19"
+          },
+          "product": "F460"
+        },
+        {
+          "first_VA_line": {
+            "exact_text": "Original `/usr/lib/liblghal.so.1.0.0` is 247,928 bytes, SHA256 `c0f9c41de5c3380efa69a9ccecb9a3fd5ef558c151150197cc366199f1a81863`, independently equal in the verified normal and recovery trees. Its ELF64 AArch64 exported `hal_board` definition is VA **0x251b0**, size1316. `SOURCE.json` retains exact original PT_LOADs, safe textual/hex code spans, word guards, literal joins and real import relocations. ImageVFS verifies regular-file bytes through product metadata, not host symlinks. Product0208 supplies the third-party-integration role only; no physical or commercial meaning is inferred from an internal selector or codename.",
+            "line": 5
+          },
+          "heading": {
+            "exact_text": "# F461 run09 — platform-selector file provenance and local cache",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 7295,
+            "copy": "source-inputs/f8ee2fabea6b81b234fef657fca5314a206f2a785c2a0d312eb6597ae3774d3b.bin",
+            "path": "work/f461-firmware/2.0.11/research/2026-11-01-run09-platform/REPORT.md",
+            "sha256": "f8ee2fabea6b81b234fef657fca5314a206f2a785c2a0d312eb6597ae3774d3b"
+          },
+          "product": "F461"
+        }
+      ],
+      "reviews": [
+        {
+          "bytes": 4819,
+          "copy": "source-inputs/98fcb72d3555a86f2449f41972eef5f978d3e591003074714e2d7d04426a2ef1.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run09/reviews/f460-source-review.md",
+          "sha256": "98fcb72d3555a86f2449f41972eef5f978d3e591003074714e2d7d04426a2ef1"
+        },
+        {
+          "bytes": 3699,
+          "copy": "source-inputs/6cec5aaa827a88d0f9136a769203f48dd81f54c2aeb9e9dce9d6cfdf18ee8c34.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run09/reviews/f461-source-review.md",
+          "sha256": "6cec5aaa827a88d0f9136a769203f48dd81f54c2aeb9e9dce9d6cfdf18ee8c34"
+        },
+        {
+          "bytes": 7274,
+          "copy": "source-inputs/7b212a2243a7229d32df77281433d812fd21de3c8cf6cb4126544dc597176a69.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run09/reviews/integration-review.md",
+          "sha256": "7b212a2243a7229d32df77281433d812fd21de3c8cf6cb4126544dc597176a69"
+        }
+      ],
+      "saved_UTC": "2026-11-01T14:17:53.139024+00:00",
+      "saved_index_member_count": 163,
+      "saved_scope": "Selected concrete F460 condition/predicate and F461 cached platform-selector source contracts; full firmware/Device/source study remains incomplete",
+      "saved_status": "COMPLETE_REVIEWED_RUN09_CONTINUATION_ACTIVE",
+      "state": {
+        "bytes": 31951,
+        "copy": "source-inputs/974205b3af082ba92eba299edc00062b294bdb8aaa61b5118349f0f49002ca21.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run09/RESEARCH_STATE.json",
+        "sha256": "974205b3af082ba92eba299edc00062b294bdb8aaa61b5118349f0f49002ca21"
+      },
+      "state_history": [],
+      "topic": "Condition pointer / platform selector",
+      "validation": {
+        "bytes": 32404,
+        "copy": "source-inputs/60be0367a2c26ce51a3a4453e88c6e664145f56c5b549fe94ccffe0ec8e15650.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run09/IDENTITY_VALIDATION.json",
+        "sha256": "60be0367a2c26ce51a3a4453e88c6e664145f56c5b549fe94ccffe0ec8e15650"
+      }
+    },
+    {
+      "candidate_index_pins": [
+        {
+          "bytes": 957,
+          "copy": "source-inputs/43b4f3b88ae8e0026296381f3700d59fda2f10c392621f7ad4336b93b55e5420.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run10/integration/f460-before-v2/INDEX.json",
+          "sha256": "43b4f3b88ae8e0026296381f3700d59fda2f10c392621f7ad4336b93b55e5420"
+        },
+        {
+          "bytes": 507,
+          "copy": "source-inputs/fc45d1389ba72052207c723e4f3e1b8857b71517d645298ea676aea15a7ea3ba.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run10/integration/pre-edit/INDEX.json",
+          "sha256": "fc45d1389ba72052207c723e4f3e1b8857b71517d645298ea676aea15a7ea3ba"
+        },
+        {
+          "bytes": 3955,
+          "copy": "source-inputs/f89aef209975d6bec4f7424866b42c49679575afc5e9f21088b575acffb492a8.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run10/review-candidate/INDEX.json",
+          "sha256": "f89aef209975d6bec4f7424866b42c49679575afc5e9f21088b575acffb492a8"
+        }
+      ],
+      "checkpoint": "2026-11-01-run10",
+      "evidence_index": {
+        "bytes": 42488,
+        "copy": "source-inputs/933633007a66611375d4c31da20ca6bd05f699406809714d381745c43eda88eb.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run10/EVIDENCE_INDEX.json",
+        "sha256": "933633007a66611375d4c31da20ca6bd05f699406809714d381745c43eda88eb"
+      },
+      "reports": [
+        {
+          "first_VA_line": {
+            "exact_text": "Reproduce with `python3 -B work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/collect_gate_v2.py --check`. Generation is exclusive and immediately freezes collector, report and all generated evidence as exact first copies; index bytes are computed before opening the index. Check reconstructs and compares without modifying output. The first v1 host generation stopped at a strict BL opcode assertion before generated evidence writes: callsite0x100060 was a MOV, while the actual BL to0x40630 is0x100064. V1 script/report and the honest later-transcribed terminal failure note remain unchanged under the parent exact pre-v2 snapshot. NEWv2 corrects only that callsite plus report/version/history references; the strict BL/target guard remains. No original execution or source interpretation changed, and no candidate was overwritten. Previous run07 receiver/predicate worker, run09 condition predicate and run03 SLEEP timing/callable bodies are inherited only, not replayed or counted as new coverage.",
+            "line": 9
+          },
+          "heading": {
+            "exact_text": "# F460 run10: action-handle dispatch, marker polling and local scene flags",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 8497,
+            "copy": "source-inputs/0e960fe9a386c15467227feb382366becd285b324e59eed7eb5c01d0f386df64.bin",
+            "path": "work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/REPORT.v2.md",
+            "sha256": "0e960fe9a386c15467227feb382366becd285b324e59eed7eb5c01d0f386df64"
+          },
+          "product": "F460"
+        },
+        {
+          "first_VA_line": {
+            "exact_text": "The callback's selected forward axes are the existing local `(2,1)` source route. At `0x3b8c..0x3ba8`, message word+56 is compared with3; that selected branch loads message pointer+0 and saves it at SP152, then reads that provided object's word+104. These are representation/parsed-kind namespaces, not public protocol categories. The complete intervening kind/body predecessors are not re-audited here: reaching the local block at0x4024 with valid same objects, allocation/string/provider results and ordinary ABI preservation remains a premise.",
+            "line": 9
+          },
+          "heading": {
+            "exact_text": "# F461 run10 — typed address context, exact suffix flags and local formatter handoff",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 7848,
+            "copy": "source-inputs/289215b4a715abf4b148af32327883fd1246a8282a6535f7a061d50f4f89589a.bin",
+            "path": "work/f461-firmware/2.0.11/research/2026-11-01-run10-address/REPORT.md",
+            "sha256": "289215b4a715abf4b148af32327883fd1246a8282a6535f7a061d50f4f89589a"
+          },
+          "product": "F461"
+        }
+      ],
+      "reviews": [
+        {
+          "bytes": 4966,
+          "copy": "source-inputs/029b838a0c0badb4e69c4d2ba3ab0a367e044bb1415b725bb17e1525b88ef6c2.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run10/reviews/f460-source-review.md",
+          "sha256": "029b838a0c0badb4e69c4d2ba3ab0a367e044bb1415b725bb17e1525b88ef6c2"
+        },
+        {
+          "bytes": 4549,
+          "copy": "source-inputs/287c6dbbe061873285d72e952bddfb69b95616d402bcd9b201bdebf3812df021.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run10/reviews/f461-source-review.md",
+          "sha256": "287c6dbbe061873285d72e952bddfb69b95616d402bcd9b201bdebf3812df021"
+        },
+        {
+          "bytes": 7889,
+          "copy": "source-inputs/9337677562f814e72c1d77a0d7583f9fc9149e6f1bdd6e8457265ad7fc0a54bd.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run10/reviews/integration-review.md",
+          "sha256": "9337677562f814e72c1d77a0d7583f9fc9149e6f1bdd6e8457265ad7fc0a54bd"
+        }
+      ],
+      "saved_UTC": "2026-11-01T14:47:18.645641+00:00",
+      "saved_index_member_count": 184,
+      "saved_scope": "Selected F460 action dispatch/marker/scene cleanup and F461 typed suffix/local formatter source contracts; full firmware/Device/source study incomplete",
+      "saved_status": "COMPLETE_REVIEWED_RUN10_CONTINUATION_ACTIVE",
+      "state": {
+        "bytes": 32353,
+        "copy": "source-inputs/71956082d213b2b77a7a1efde2f6a83c038d9d975afc2b8b4eb8c7fc83dfc7df.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run10/RESEARCH_STATE.json",
+        "sha256": "71956082d213b2b77a7a1efde2f6a83c038d9d975afc2b8b4eb8c7fc83dfc7df"
+      },
+      "state_history": [],
+      "topic": "Action polling / contextual address suffix",
+      "validation": {
+        "bytes": 33163,
+        "copy": "source-inputs/0dc7d17f5285925c335a337532066568d200ed03fdfd68c2c2e0744ef612f28e.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run10/IDENTITY_VALIDATION.json",
+        "sha256": "0dc7d17f5285925c335a337532066568d200ed03fdfd68c2c2e0744ef612f28e"
+      }
+    },
+    {
+      "candidate_index_pins": [
+        {
+          "bytes": 507,
+          "copy": "source-inputs/560acea564535fb0bab4d93b31f870b6b37762489f3d2752646d001a227af5bd.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run11/integration/pre-edit/INDEX.json",
+          "sha256": "560acea564535fb0bab4d93b31f870b6b37762489f3d2752646d001a227af5bd"
+        },
+        {
+          "bytes": 3954,
+          "copy": "source-inputs/47afaf3b8be9ddb51e3d2746bc7b49ca95a2a3b8617b11f78b3e18a4da93a70f.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run11/review-candidate/INDEX.json",
+          "sha256": "47afaf3b8be9ddb51e3d2746bc7b49ca95a2a3b8617b11f78b3e18a4da93a70f"
+        }
+      ],
+      "checkpoint": "2026-11-01-run11",
+      "evidence_index": {
+        "bytes": 34906,
+        "copy": "source-inputs/6bfb334f62bb1fc716f9907ca54d7d5c8a951c1229d48cb24caa2148431a6e8f.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run11/EVIDENCE_INDEX.json",
+        "sha256": "6bfb334f62bb1fc716f9907ca54d7d5c8a951c1229d48cb24caa2148431a6e8f"
+      },
+      "reports": [
+        {
+          "first_VA_line": {
+            "exact_text": "The local entry at0xf7ad0 saves incoming X0 in callee-saved X20 at0xf7aec. It reads a pointer/length pair at receiver80/88 for diagnostic/string preparation. This does not identify its incoming caller or establish that every supplied receiver is a SceneRunner. The comparison with the previously established run07 SceneRunner domain is explicitly conditional: **if the incoming valid receiver is that same scene object**, byte248 and range216/224 coincide with the scene fields independently consumed in run10. Similar offsets alone do not close a caller or runtime-object identity.",
+            "line": 9
+          },
+          "heading": {
+            "exact_text": "# F460 run11: positive local byte248 writer and action-slot8 requests",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 6474,
+            "copy": "source-inputs/c378a24d9bda1856de09e9be59047b53f68909aa418cb3ab584ea74dceb6d650.bin",
+            "path": "work/f460-firmware/2.0.12/research/2026-11-01-run11-scene-control/REPORT.md",
+            "sha256": "c378a24d9bda1856de09e9be59047b53f68909aa418cb3ab584ea74dceb6d650"
+          },
+          "product": "F460"
+        },
+        {
+          "first_VA_line": {
+            "exact_text": "Original `/home/bticino/bin/coso` is ELF64 AArch64, SHA256 `2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197`. Its exported main is VA0x2f00. SOURCE.json retains fresh PT_LOAD mappings, exact words, textual/hex spans, three selected option-row relocations, five safe literal joins and actual BL/PLT/JUMP_SLOT proofs. No disassembler neighbor substitutes for a function identity. Only the normal image's specified code and nonsecret configuration lines are examined; recovery/installed environments are not assumed equal. Curated Device0208 supplies the separate third-party-integration product role only.",
+            "line": 5
+          },
+          "heading": {
+            "exact_text": "# F461 run11 — main configuration selection to the same module-directory holder",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 7731,
+            "copy": "source-inputs/034b07713342adc93dab60818a90d92b724ad10d6047581124972ae17a358595.bin",
+            "path": "work/f461-firmware/2.0.11/research/2026-11-01-run11-config-selection/REPORT.md",
+            "sha256": "034b07713342adc93dab60818a90d92b724ad10d6047581124972ae17a358595"
+          },
+          "product": "F461"
+        }
+      ],
+      "reviews": [
+        {
+          "bytes": 3924,
+          "copy": "source-inputs/c960abd7fd7804899de1898972c4cf3f1cd2bc4b9d66cf594b928ea48345c8b5.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run11/reviews/f460-source-review.md",
+          "sha256": "c960abd7fd7804899de1898972c4cf3f1cd2bc4b9d66cf594b928ea48345c8b5"
+        },
+        {
+          "bytes": 4746,
+          "copy": "source-inputs/9bf18c56bd1922eae2b4cc4e2ed2f94eb19e39ddd540852a2123eab238c9b864.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run11/reviews/f461-source-review.md",
+          "sha256": "9bf18c56bd1922eae2b4cc4e2ed2f94eb19e39ddd540852a2123eab238c9b864"
+        },
+        {
+          "bytes": 8479,
+          "copy": "source-inputs/8941ef50baabfb918ececb5a865fb33158a48f1502337f2fc9cb48d16c53c16f.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run11/reviews/integration-review.md",
+          "sha256": "8941ef50baabfb918ececb5a865fb33158a48f1502337f2fc9cb48d16c53c16f"
+        }
+      ],
+      "saved_UTC": "2026-11-01T15:20:19.135818+00:00",
+      "saved_index_member_count": 151,
+      "saved_scope": "F460 providedreceiver writer with unclosed caller/class identity and F461 concrete main config-directory selection; full firmware/Device/source study incomplete",
+      "saved_status": "COMPLETE_REVIEWED_RUN11_CONTINUATION_ACTIVE",
+      "state": {
+        "bytes": 32762,
+        "copy": "source-inputs/787705e5665805d83cb6b1af514f30989e2c7006abf2efada18483eec8757da1.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run11/RESEARCH_STATE.json",
+        "sha256": "787705e5665805d83cb6b1af514f30989e2c7006abf2efada18483eec8757da1"
+      },
+      "state_history": [],
+      "topic": "Provided-receiver control / configuration selection",
+      "validation": {
+        "bytes": 33515,
+        "copy": "source-inputs/d7f5906f7d8b7a8afe532fcf0a049bd23720babd33be8b8561ed2818a2d8f59c.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run11/IDENTITY_VALIDATION.json",
+        "sha256": "d7f5906f7d8b7a8afe532fcf0a049bd23720babd33be8b8561ed2818a2d8f59c"
+      }
+    },
+    {
+      "candidate_index_pins": [
+        {
+          "bytes": 507,
+          "copy": "source-inputs/54d015ab921442c7b1069213834e695c0092684bc4522ade1b028fe812890aac.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run12/integration/pre-edit/INDEX.json",
+          "sha256": "54d015ab921442c7b1069213834e695c0092684bc4522ade1b028fe812890aac"
+        },
+        {
+          "bytes": 3954,
+          "copy": "source-inputs/04ec6854f8e4c7a02c68323697bb312ab8e3e4236a94c12b01cde179ecdace67.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run12/review-candidate/INDEX.json",
+          "sha256": "04ec6854f8e4c7a02c68323697bb312ab8e3e4236a94c12b01cde179ecdace67"
+        }
+      ],
+      "checkpoint": "2026-11-01-run12",
+      "evidence_index": {
+        "bytes": 34679,
+        "copy": "source-inputs/ac1771b13367555f01377c0b579439a0bd09c7f980cba99ef0e603ee7cfb805b.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run12/EVIDENCE_INDEX.json",
+        "sha256": "ac1771b13367555f01377c0b579439a0bd09c7f980cba99ef0e603ee7cfb805b"
+      },
+      "reports": [
+        {
+          "first_VA_line": {
+            "exact_text": "This packet follows only local0x66d0 ->0x5f30 -> selected string construction and stops before0x6000. Extraction0x5140, precheck0x4b60, downstream command/filesystem/update/flash/mount/reboot and provider bodies remain opaque. No signature/key material, trust/authenticity, firmware compatibility result or private configuration is read/exported to complete this source join.",
+            "line": 9
+          },
+          "heading": {
+            "exact_text": "# F460 run12: selected staged-list consumer and local string request",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 6241,
+            "copy": "source-inputs/d288575f22d4e76b0c257ce2cbfad0dd2424efc59f5fa20e92ac310f5675a620.bin",
+            "path": "work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/REPORT.md",
+            "sha256": "d288575f22d4e76b0c257ce2cbfad0dd2424efc59f5fa20e92ac310f5675a620"
+          },
+          "product": "F460"
+        },
+        {
+          "first_VA_line": {
+            "exact_text": "Original `send_list_field` entry0x3df0 saves its supplied list-address argument and third context/owner argument; the third pointer is stored at SP112 at0x3e08. The selected nonempty valid-list path obtains nodes through ordinary GLib list requests. Local SP120 is initially zero at0x3e70, and0x3e78 reloads its current value into X22 for the next iteration.",
+            "line": 9
+          },
+          "heading": {
+            "exact_text": "# F461 run12 — selected deferred-record path and local clock/source contract",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 8843,
+            "copy": "source-inputs/0e13cbfe063217d9234b916774616ee5233a2a5892ba7ffdb3dd19aa3fb3ec04.bin",
+            "path": "work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/REPORT.md",
+            "sha256": "0e13cbfe063217d9234b916774616ee5233a2a5892ba7ffdb3dd19aa3fb3ec04"
+          },
+          "product": "F461"
+        }
+      ],
+      "reviews": [
+        {
+          "bytes": 4233,
+          "copy": "source-inputs/702fa2c7906e475bef5fd9ffd6a0174e91fad5e76b569c1724f39729f19b26be.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run12/reviews/f460-source-review.md",
+          "sha256": "702fa2c7906e475bef5fd9ffd6a0174e91fad5e76b569c1724f39729f19b26be"
+        },
+        {
+          "bytes": 5176,
+          "copy": "source-inputs/dc29c4d41b0f275e193d8ec02e2627d2024099f5ab1be0cd5b2207d329569264.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run12/reviews/f461-source-review.md",
+          "sha256": "dc29c4d41b0f275e193d8ec02e2627d2024099f5ab1be0cd5b2207d329569264"
+        },
+        {
+          "bytes": 9011,
+          "copy": "source-inputs/f6d4bd3b71fe7ca124cde889be7fac828dc7d6ef5f9001d809865e5f9a7d76aa.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run12/reviews/integration-review.md",
+          "sha256": "f6d4bd3b71fe7ca124cde889be7fac828dc7d6ef5f9001d809865e5f9a7d76aa"
+        }
+      ],
+      "saved_UTC": "2026-11-01T15:47:05.001796+00:00",
+      "saved_index_member_count": 151,
+      "saved_scope": "Selected F460 staged-list consumer and F461 deferred-record/provider-arithmetic/callback source; full firmware/Device/source study incomplete",
+      "saved_status": "COMPLETE_REVIEWED_RUN12_CONTINUATION_ACTIVE",
+      "state": {
+        "bytes": 33272,
+        "copy": "source-inputs/6ca1a2a8c38ccbc41571bbbf0838809e228200bfc3bf3c0ec2a219c8ae35a8e5.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run12/RESEARCH_STATE.json",
+        "sha256": "6ca1a2a8c38ccbc41571bbbf0838809e228200bfc3bf3c0ec2a219c8ae35a8e5"
+      },
+      "state_history": [],
+      "topic": "Update record / deferred clock request",
+      "validation": {
+        "bytes": 34069,
+        "copy": "source-inputs/acd8791df13a5553f1757b4045a00cd541bafc64cc409253f91492cfebda5058.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run12/IDENTITY_VALIDATION.json",
+        "sha256": "acd8791df13a5553f1757b4045a00cd541bafc64cc409253f91492cfebda5058"
+      }
+    },
+    {
+      "candidate_index_pins": [
+        {
+          "bytes": 1035,
+          "copy": "source-inputs/d1dd282e85d67348ec10f74e72b46783040a6b882dfd2b9e3ae10f7a3cdd45ac.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run13/integration/device-reference-context/INDEX.json",
+          "sha256": "d1dd282e85d67348ec10f74e72b46783040a6b882dfd2b9e3ae10f7a3cdd45ac"
+        },
+        {
+          "bytes": 950,
+          "copy": "source-inputs/e9f26900766b10270caf2d70bae93f342879401529f5b1f55f8a37aa2a4e0fc4.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run13/integration/f461-before-report-v2/INDEX.json",
+          "sha256": "e9f26900766b10270caf2d70bae93f342879401529f5b1f55f8a37aa2a4e0fc4"
+        },
+        {
+          "bytes": 507,
+          "copy": "source-inputs/0cde06f73a5b462ffc0fa8b7bb61145a49a458f84659bee0eae49e98e555be38.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run13/integration/pre-edit/INDEX.json",
+          "sha256": "0cde06f73a5b462ffc0fa8b7bb61145a49a458f84659bee0eae49e98e555be38"
+        },
+        {
+          "bytes": 3955,
+          "copy": "source-inputs/43fc616a531d99e04a60efcc2982de927a85076c3d11b1a63b3d76f2d083f8f1.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run13/review-candidate/INDEX.json",
+          "sha256": "43fc616a531d99e04a60efcc2982de927a85076c3d11b1a63b3d76f2d083f8f1"
+        }
+      ],
+      "checkpoint": "2026-11-01-run13",
+      "evidence_index": {
+        "bytes": 39946,
+        "copy": "source-inputs/a5671759d4a73295a7ebf1f54f59e49a2d4b3859fcb1c50a85cec93be112d174.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run13/EVIDENCE_INDEX.json",
+        "sha256": "a5671759d4a73295a7ebf1f54f59e49a2d4b3859fcb1c50a85cec93be112d174"
+      },
+      "reports": [
+        {
+          "first_VA_line": {
+            "exact_text": "On the selected normal executable path,0x288c forms X20=SP+64 and0x2898 forms X21=SP+104. At0x28a0 the original passes X0=X21 and saved integerW23 to actual imported **Platform C1(int)** at0x28a8. After the separate source gate0x28ac..0x28b4,0x28b8 passes the SAME X21 to its actual **get_working_mode** request at0x28bc. Earlier outer arguments, the source gate, construction success and the lifetime of both stack objects remain premises; they are not injected or executed.",
+            "line": 13
+          },
+          "heading": {
+            "exact_text": "# F460 run13: actual local profile-result getter and updater handoff",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 6981,
+            "copy": "source-inputs/e54bdfb6f6e196584bb9c97a35d6cf984cc4082d1b3e13ced22875a00250cd78.bin",
+            "path": "work/f460-firmware/2.0.12/research/2026-11-01-run13-compatibility/REPORT.md",
+            "sha256": "e54bdfb6f6e196584bb9c97a35d6cf984cc4082d1b3e13ced22875a00250cd78"
+          },
+          "product": "F460"
+        },
+        {
+          "first_VA_line": {
+            "exact_text": "The original automation plugin GLOB_DAT at0x14fb8 names exported104-byte object **automation_stm**, VA0x15150. Original ABS64 relocations identify initializer **descriptor+48→automation_stm_init0x23e0** and application callback **descriptor+64→automation_stm_gest_status_from_appli0x2fb0**. These are the plugin's own descriptor slots, not transferred translation/field descriptors or public protocol enums.",
+            "line": 9
+          },
+          "heading": {
+            "exact_text": "# F461 run13 — nonzero deadline producer remains open; two concrete object-role exclusions",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 7447,
+            "copy": "source-inputs/2b36473953ba35ff6e06d418a8a78d83eddb435d29ee48258748371f2980816c.bin",
+            "path": "work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/REPORT.v2.md",
+            "sha256": "2b36473953ba35ff6e06d418a8a78d83eddb435d29ee48258748371f2980816c"
+          },
+          "product": "F461"
+        }
+      ],
+      "reviews": [
+        {
+          "bytes": 4307,
+          "copy": "source-inputs/ec873f4f59d038ddb80bf0084dcd2308161b4a68c6742a9b66900fd967ba0e8b.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run13/reviews/f460-source-review.md",
+          "sha256": "ec873f4f59d038ddb80bf0084dcd2308161b4a68c6742a9b66900fd967ba0e8b"
+        },
+        {
+          "bytes": 5740,
+          "copy": "source-inputs/00202481238b0d9c1678dffe5ececa84cd68762ebedc968451033434db1a5ee9.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run13/reviews/f461-source-review.md",
+          "sha256": "00202481238b0d9c1678dffe5ececa84cd68762ebedc968451033434db1a5ee9"
+        },
+        {
+          "bytes": 9733,
+          "copy": "source-inputs/c2df19623df4d383437047f74dd0014aa4e1afc54014063fddc9c4c2e5d36119.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run13/reviews/integration-review.md",
+          "sha256": "c2df19623df4d383437047f74dd0014aa4e1afc54014063fddc9c4c2e5d36119"
+        }
+      ],
+      "saved_UTC": "2026-11-01T16:19:41.921996+00:00",
+      "saved_index_member_count": 173,
+      "saved_scope": "Conditional F460 profile-result handoff and F461 precise deadline-gap object-role exclusions; full firmware/Device/source study incomplete",
+      "saved_status": "COMPLETE_REVIEWED_RUN13_CONTINUATION_ACTIVE",
+      "state": {
+        "bytes": 34513,
+        "copy": "source-inputs/ad2c64c6d08a758a3fb5945c0913287af23562905e55f74d7ab19f100e9af27e.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run13/RESEARCH_STATE.json",
+        "sha256": "ad2c64c6d08a758a3fb5945c0913287af23562905e55f74d7ab19f100e9af27e"
+      },
+      "state_history": [],
+      "topic": "Working-profile request / deadline producer gap",
+      "validation": {
+        "bytes": 34752,
+        "copy": "source-inputs/4a38352457e2f1d72e49d4fe3434ea81ca81ae7b7723ed7d034625f1c0eff119.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run13/IDENTITY_VALIDATION.json",
+        "sha256": "4a38352457e2f1d72e49d4fe3434ea81ca81ae7b7723ed7d034625f1c0eff119"
+      }
+    },
+    {
+      "candidate_index_pins": [
+        {
+          "bytes": 311,
+          "copy": "source-inputs/f4011c528c10b894830ac83606d274adecb2b29edcbbe4b3b7da39c1c6c98725.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run14/integration/before-appendix-v2/INDEX.json",
+          "sha256": "f4011c528c10b894830ac83606d274adecb2b29edcbbe4b3b7da39c1c6c98725"
+        },
+        {
+          "bytes": 531,
+          "copy": "source-inputs/506658e885d4cfe221934bf7debfa508e71a8ca3393c4280e919fd3c0a3eca42.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run14/integration/f460-before-v2/INDEX.json",
+          "sha256": "506658e885d4cfe221934bf7debfa508e71a8ca3393c4280e919fd3c0a3eca42"
+        },
+        {
+          "bytes": 507,
+          "copy": "source-inputs/0a16df4519447743bb6b8694d7e2c6fdc02d591d004f9d8392c6208d2b720623.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run14/integration/pre-edit/INDEX.json",
+          "sha256": "0a16df4519447743bb6b8694d7e2c6fdc02d591d004f9d8392c6208d2b720623"
+        },
+        {
+          "bytes": 3955,
+          "copy": "source-inputs/567f9c25268480d34b9534f51ccc0221a0ffa568184b08e9deb914fdcaca2f57.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run14/review-candidate/INDEX.json",
+          "sha256": "567f9c25268480d34b9534f51ccc0221a0ffa568184b08e9deb914fdcaca2f57"
+        }
+      ],
+      "checkpoint": "2026-11-01-run14",
+      "evidence_index": {
+        "bytes": 42912,
+        "copy": "source-inputs/def324284364ef38987b7721c5b57a69ff3b1531f1627bcf9dc3087d8662c5b9.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run14/EVIDENCE_INDEX.json",
+        "sha256": "def324284364ef38987b7721c5b57a69ff3b1531f1627bcf9dc3087d8662c5b9"
+      },
+      "reports": [
+        {
+          "first_VA_line": {
+            "exact_text": "The actual condition-name table0x213960 has row2 at0x213980: length4 and pointer0x196980 to literal **BNLD**. Raw class header/AP0x214068/0x214078 names RTTI `13BnldCondition`; slot0 targets0x48710. The parser's temporary/base AP0x214058 instead names `17BaseBnldCondition`. Compiled header/AP0x217f70/0x217f80 names **19BnldConditionRunner**; its primary slot16 is actual predicate0x161880. These raw/base/compiled objects and method roles are separate, not a name-only claim of identical layouts or behavior.",
+            "line": 9
+          },
+          "heading": {
+            "exact_text": "# F460 run14: fresh BNLD numeric condition construction and selected comparison",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 8499,
+            "copy": "source-inputs/72c63ccc002bc723808670dc7835b7732b3362e1277a7cb2004a531031fab59f.bin",
+            "path": "work/f460-firmware/2.0.12/research/2026-11-01-run14-numeric/REPORT.v2.md",
+            "sha256": "72c63ccc002bc723808670dc7835b7732b3362e1277a7cb2004a531031fab59f"
+          },
+          "product": "F460"
+        },
+        {
+          "first_VA_line": {
+            "exact_text": "Original `/home/bticino/bin/coso` is ELF64 AArch64, SHA256 `2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197`. Its exported `register_plugins` definition is VA0x56f0, size428. The selected spans cover that original body plus one original main callsite; SOURCE.json retains exact PT_LOAD-backed words/text/hex, four safe compiled literal joins and actual imported-call PLT/GOT relocations. The executable declares libglib and libgmodule SONAME requests; full loader closure, effective interposition/binding and successful provider/module returns remain premises. Device0208 supplies third-party-integration product context only, with no public WHO/feature, physical-platform or electrical conclusion.",
+            "line": 5
+          },
+          "heading": {
+            "exact_text": "# F461 run14 — local module admission, recorded handles and qualified loader returns",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 7609,
+            "copy": "source-inputs/85438c26d5c27d9259e8970633318f3f3ea495fee5444865b75219ff59009e64.bin",
+            "path": "work/f461-firmware/2.0.11/research/2026-11-01-run14-boot-selection/REPORT.md",
+            "sha256": "85438c26d5c27d9259e8970633318f3f3ea495fee5444865b75219ff59009e64"
+          },
+          "product": "F461"
+        }
+      ],
+      "reviews": [
+        {
+          "bytes": 5965,
+          "copy": "source-inputs/98a86a235c8651d78a96a718f605b3e7bf5579b1f539f87cb6a29f67ad9f323f.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run14/reviews/f460-source-review.md",
+          "sha256": "98a86a235c8651d78a96a718f605b3e7bf5579b1f539f87cb6a29f67ad9f323f"
+        },
+        {
+          "bytes": 4593,
+          "copy": "source-inputs/8a7f67eef0fae3ef1e0d79e9aade00bd58e5b25a1d05272be4a6dafd01a66f9a.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run14/reviews/f461-source-review.md",
+          "sha256": "8a7f67eef0fae3ef1e0d79e9aade00bd58e5b25a1d05272be4a6dafd01a66f9a"
+        },
+        {
+          "bytes": 9834,
+          "copy": "source-inputs/fd5f3862897b715481dfef40e18cb3531ca4a2bd4e795ca6c0e36dfeb19dc4c3.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run14/reviews/integration-review.md",
+          "sha256": "fd5f3862897b715481dfef40e18cb3531ca4a2bd4e795ca6c0e36dfeb19dc4c3"
+        }
+      ],
+      "saved_UTC": "2026-11-01T16:50:18.674601+00:00",
+      "saved_index_member_count": 185,
+      "saved_scope": "Fresh F460 numericcondition and F461 localmodule-admission/retention source; full firmware/Device/source study incomplete",
+      "saved_status": "COMPLETE_REVIEWED_RUN14_CONTINUATION_ACTIVE",
+      "state": {
+        "bytes": 34292,
+        "copy": "source-inputs/04b57e4670946c0011454fc28ca5c109cb70a014be2c1dae98507e107a44b245.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run14/RESEARCH_STATE.json",
+        "sha256": "04b57e4670946c0011454fc28ca5c109cb70a014be2c1dae98507e107a44b245"
+      },
+      "state_history": [],
+      "topic": "Numeric condition / module admission",
+      "validation": {
+        "bytes": 35061,
+        "copy": "source-inputs/d826144f68248db339825d8f3f0bcccf57544ae7b98b97a5972901822a471341.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run14/IDENTITY_VALIDATION.json",
+        "sha256": "d826144f68248db339825d8f3f0bcccf57544ae7b98b97a5972901822a471341"
+      }
+    },
+    {
+      "candidate_index_pins": [
+        {
+          "bytes": 906,
+          "copy": "source-inputs/fb6efdad343b4bc55860ea2a9f719a55c65d095af86f819be278879152b81b59.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run15/integration/before-state-v2/INDEX.json",
+          "sha256": "fb6efdad343b4bc55860ea2a9f719a55c65d095af86f819be278879152b81b59"
+        },
+        {
+          "bytes": 950,
+          "copy": "source-inputs/ee1cf98c981d22b488633c589a2b2bb344013c1952fbb735b7e26c159f35bfad.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run15/integration/before-synthesis-v2/INDEX.json",
+          "sha256": "ee1cf98c981d22b488633c589a2b2bb344013c1952fbb735b7e26c159f35bfad"
+        },
+        {
+          "bytes": 506,
+          "copy": "source-inputs/487a04c9f2ec6c560438e9f427d429cf94ae15bf79539e23e13ebe8c5bb59f31.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run15/integration/f460-before-v2/INDEX.json",
+          "sha256": "487a04c9f2ec6c560438e9f427d429cf94ae15bf79539e23e13ebe8c5bb59f31"
+        },
+        {
+          "bytes": 976,
+          "copy": "source-inputs/e68204e9afadaaf20060e17d5c0bf50849d4b14cb5ffc3ee0556f220a7f76f21.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run15/integration/f461-before-report-v2/INDEX.json",
+          "sha256": "e68204e9afadaaf20060e17d5c0bf50849d4b14cb5ffc3ee0556f220a7f76f21"
+        },
+        {
+          "bytes": 507,
+          "copy": "source-inputs/45bc55a736724d004813fe6e2ba653d31d16e9f1434f9d94291a92b32dc735a5.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run15/integration/pre-edit/INDEX.json",
+          "sha256": "45bc55a736724d004813fe6e2ba653d31d16e9f1434f9d94291a92b32dc735a5"
+        },
+        {
+          "bytes": 470,
+          "copy": "source-inputs/8423d1b8497e3e15bec3b89f4d329b20571e21f93c6ff9e5baa26d600accc528.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run15/integration/validator-v1-before-v2/INDEX.json",
+          "sha256": "8423d1b8497e3e15bec3b89f4d329b20571e21f93c6ff9e5baa26d600accc528"
+        },
+        {
+          "bytes": 3955,
+          "copy": "source-inputs/0f0e673c9bc5e72f70de6952c24cf0c88d41bfc2640a4065cec64fe0654d0f32.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run15/review-candidate/INDEX.json",
+          "sha256": "0f0e673c9bc5e72f70de6952c24cf0c88d41bfc2640a4065cec64fe0654d0f32"
+        }
+      ],
+      "checkpoint": "2026-11-01-run15",
+      "evidence_index": {
+        "bytes": 49382,
+        "copy": "source-inputs/5404603de569afe83163cce60b8d64c9a3cf9965da15cf5b9468d1d3627476a6.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run15/EVIDENCE_INDEX.v2.json",
+        "sha256": "5404603de569afe83163cce60b8d64c9a3cf9965da15cf5b9468d1d3627476a6"
+      },
+      "reports": [
+        {
+          "first_VA_line": {
+            "exact_text": "The final raw AP0x214078 has original relative slot0→**0x48710**, with RTTI `13BnldCondition`. This is the same final raw class used by the previously reviewed initializer, not its BaseBnld temporary or a trigger. Entry0x4872c preserves raw thisX0 inX20;0x48734 preserves hidden JSON resultX8 inX19. The call0x48748 goes to original common helper0x393d0 with that same raw object/result. The helper saves raw this asX21 and hidden result asX20; these local register meanings differ from the outer method's X20/X19.",
+            "line": 9
+          },
+          "heading": {
+            "exact_text": "# F460 run15: actual BNLD raw serializer and selected numeric reparse contract",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 7653,
+            "copy": "source-inputs/346d77b15b08e3da42e1f5aafe3ed1717d4bf20c13eca1929e1b4c8143469420.bin",
+            "path": "work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/REPORT.v2.md",
+            "sha256": "346d77b15b08e3da42e1f5aafe3ed1717d4bf20c13eca1929e1b4c8143469420"
+          },
+          "product": "F460"
+        },
+        {
+          "first_VA_line": {
+            "exact_text": "At0x32ec main passes its saved M pointer to **`init_dir_monitoring`0x58a0** at0x32f0. The method preserves M inX19, loads **P=[M+16]**, then **library_directory=[P+8]**, and requests `g_file_new_for_path` at0x58b8. It requests `g_file_monitor_directory` with flags0/cancellableNULL/errorNULL at0x58c8. A NULL result skips the registration block and still reaches the local W0=0 return; this numeric return is not monitor readiness.",
+            "line": 9
+          },
+          "heading": {
+            "exact_text": "# F461 run15 — local monitor callback consumes retained module entries",
+            "line": 1
+          },
+          "identity": {
+            "bytes": 7463,
+            "copy": "source-inputs/dcce7197af2737f165295c51bcb3b51ff07bc3076550daa4732da48e38c3ae70.bin",
+            "path": "work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/REPORT.v2.md",
+            "sha256": "dcce7197af2737f165295c51bcb3b51ff07bc3076550daa4732da48e38c3ae70"
+          },
+          "product": "F461"
+        }
+      ],
+      "reviews": [
+        {
+          "bytes": 5371,
+          "copy": "source-inputs/db66c8db063702dc7d2162b5da264740a08f3898bb31c2533d412f564cf2444b.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run15/reviews/f460-source-review.md",
+          "sha256": "db66c8db063702dc7d2162b5da264740a08f3898bb31c2533d412f564cf2444b"
+        },
+        {
+          "bytes": 5853,
+          "copy": "source-inputs/a9338460a240f65a8be4a95a9c23673164cfffade42e17f8c6fed6b310a5ec10.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run15/reviews/f461-source-review.md",
+          "sha256": "a9338460a240f65a8be4a95a9c23673164cfffade42e17f8c6fed6b310a5ec10"
+        },
+        {
+          "bytes": 11369,
+          "copy": "source-inputs/b731906903afe707b4ce539e11a819a756d1990f8d5ecd5932c3dfda19d9162a.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run15/reviews/integration-review.md",
+          "sha256": "b731906903afe707b4ce539e11a819a756d1990f8d5ecd5932c3dfda19d9162a"
+        }
+      ],
+      "saved_UTC": "2026-11-01T17:22:11.799528+00:00",
+      "saved_index_member_count": 214,
+      "saved_scope": "Final selected serializer/removal source batch; full Device/source/runtime study remains incomplete",
+      "saved_status": "COMPLETE_REVIEWED_RUN15_SOURCE_STOPPED_FINAL_CONSOLIDATION_NEXT",
+      "state": {
+        "bytes": 34783,
+        "copy": "source-inputs/cf4de356e900caa93cebfbe39cb2d22079a7aa4e8eaf402f11a221db18df1589.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run15/RESEARCH_STATE.v2.json",
+        "sha256": "cf4de356e900caa93cebfbe39cb2d22079a7aa4e8eaf402f11a221db18df1589"
+      },
+      "state_history": [
+        {
+          "bytes": 34657,
+          "copy": "source-inputs/080ba467a3553d8a21f557f423c73b7162413c83892d1ef8d0c0bf0aee0f1d19.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run15/RESEARCH_STATE.json",
+          "sha256": "080ba467a3553d8a21f557f423c73b7162413c83892d1ef8d0c0bf0aee0f1d19"
+        },
+        {
+          "bytes": 47411,
+          "copy": "source-inputs/d2349cd049143c4471517ed0a0ffb743752a62911524998e6457342ae42eb553.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run15/EVIDENCE_INDEX.json",
+          "sha256": "d2349cd049143c4471517ed0a0ffb743752a62911524998e6457342ae42eb553"
+        },
+        {
+          "bytes": 1092,
+          "copy": "source-inputs/c44c971d3a5799b7cf56c766c3fd13bbe865e22654a9714f7437cc4f46c2ded6.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run15/STATE_CORRECTION.v2.json",
+          "sha256": "c44c971d3a5799b7cf56c766c3fd13bbe865e22654a9714f7437cc4f46c2ded6"
+        }
+      ],
+      "topic": "Numeric serialization / module removal request",
+      "validation": {
+        "bytes": 36694,
+        "copy": "source-inputs/db834a70fea933910b686746b9b2ebccbc01b09cb725a1a0853676520e719d93.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run15/IDENTITY_VALIDATION.json",
+        "sha256": "db834a70fea933910b686746b9b2ebccbc01b09cb725a1a0853676520e719d93"
+      }
+    }
+  ],
+  "new_original_native_provider_model_fixture_SQL_or_target_execution": 0,
+  "scope": "Navigation and documentary hash verification, not semantic reaudit, replay, coverage percentage or support table",
+  "source_report_count": 30
+}

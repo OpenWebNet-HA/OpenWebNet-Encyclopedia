@@ -1,0 +1,98 @@
+[
+  {
+    "bytes": 210,
+    "end_va_exclusive": "0xcd968",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "action-wait-state-construction",
+    "sha256": "a52c78e5750590a8928eaf12e94442fe7144e708ac8d19544f3dbc3e4a39fcd2",
+    "start_va": "0xcd896"
+  },
+  {
+    "bytes": 112,
+    "end_va_exclusive": "0xcd5c4",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "action-wait-state-destructors",
+    "sha256": "2ef6ea1c2d76cd541266d44c68036b6fe035e9dc8b0b0eb4ee19a86305ca177e",
+    "start_va": "0xcd554"
+  },
+  {
+    "bytes": 112,
+    "end_va_exclusive": "0xa56c0",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "scene-state-destructors",
+    "sha256": "e48ddcf02252b7f421f1222cfc6e13b2804306ee49abc956f3e731f83194caad",
+    "start_va": "0xa5650"
+  },
+  {
+    "bytes": 136,
+    "end_va_exclusive": "0xa5e6e",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "scene-state-construction",
+    "sha256": "da9b07499a07f0851a44d2763d223c858bd67bc88e8740af5a96b239725ec20e",
+    "start_va": "0xa5de6"
+  },
+  {
+    "bytes": 6,
+    "end_va_exclusive": "0x1a04e",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "scene-owner-dispose-thunk",
+    "sha256": "f08dbd28b347cf1669c02042b51c3bacbc99dbb93f3d03560d6d1b5ccc66f02a",
+    "start_va": "0x1a048"
+  },
+  {
+    "bytes": 266,
+    "end_va_exclusive": "0xa5b46",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "scene-teardown-holder-and-action-release",
+    "sha256": "7168219284640beee744d545d75e71e6b9a123d273cb1040593a6dbe42e06735",
+    "start_va": "0xa5a3c"
+  },
+  {
+    "bytes": 212,
+    "end_va_exclusive": "0xa5da0",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "scene-teardown-join-and-terminate",
+    "sha256": "104274730a30e0cb8a67dd7af6f2fa6585eff649c734f0613e5924fc391d3abd",
+    "start_va": "0xa5ccc"
+  },
+  {
+    "bytes": 132,
+    "end_va_exclusive": "0xb0be4",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "sleep-owner-dispose",
+    "sha256": "8a6b7c662ef33f33049c1f845b28166d9c904e490ea40ca6f0f04fb219260cfe",
+    "start_va": "0xb0b60"
+  },
+  {
+    "bytes": 128,
+    "end_va_exclusive": "0xb4568",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "temporary-action-owner-cleanup",
+    "sha256": "9305e57756ad4799d6a210a73c5add6b59e7cee61ae0be8dafb867760ae6e40f",
+    "start_va": "0xb44e8"
+  },
+  {
+    "bytes": 106,
+    "end_va_exclusive": "0xa770a",
+    "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+    "name": "sleep-shared-owner-construction",
+    "sha256": "978e6165ee173a31bd2cacfe67d00846c34e913f1f0838176dcac0b850b90e09",
+    "start_va": "0xa76a0"
+  },
+  {
+    "bytes": 38,
+    "end_va_exclusive": "0x9b21e",
+    "image_path": "/usr/lib/libstdc++.so.6.0.29",
+    "name": "provider-state-entry-and-base-destructor",
+    "sha256": "1ef5fc2bdfd6808c4b7f72e36ba1d6e195617b24ad7b83a9f892ebcc271a4fb5",
+    "start_va": "0x9b1f8"
+  },
+  {
+    "bytes": 84,
+    "end_va_exclusive": "0x9b288",
+    "image_path": "/usr/lib/libstdc++.so.6.0.29",
+    "name": "provider-join-detach-start",
+    "sha256": "5da906101f06b5cd2b32af45462a1cb77706a5224019caeafd62a041a19c3cab",
+    "start_va": "0x9b234"
+  }
+]

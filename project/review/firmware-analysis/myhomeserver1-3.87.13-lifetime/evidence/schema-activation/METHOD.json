@@ -1,0 +1,6 @@
+{
+  "history": "First generation refuses overwrite; exact outputs/code and separately report frozen before independent review.",
+  "host_semantic_models_or_configured_scenes": 0,
+  "original_execution": 0,
+  "scope": "Original raw-schema/dispatch/construction/move/append joins only. No original JsonCpp/filesystem/allocator/provider/thread/action/transport runtime. A loaded action spelling and construction source are not proof of installed input or physical effects."
+}

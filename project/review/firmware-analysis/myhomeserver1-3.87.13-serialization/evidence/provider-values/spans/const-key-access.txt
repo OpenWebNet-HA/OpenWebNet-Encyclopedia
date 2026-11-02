@@ -1,0 +1,20 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/usr/lib/libjsoncpp.so.1.9.5:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00017f48 <_ZNK4Json5ValueixEPKc@@Base>:
+   17f48:	b538      	push	{r3, r4, r5, lr}
+   17f4a:	460c      	mov	r4, r1
+   17f4c:	4605      	mov	r5, r0
+   17f4e:	4608      	mov	r0, r1
+   17f50:	f7f3 ebcc 	blx	b6ec <strlen@plt>
+   17f54:	4621      	mov	r1, r4
+   17f56:	1822      	adds	r2, r4, r0
+   17f58:	4628      	mov	r0, r5
+   17f5a:	f7f3 e904 	blx	b164 <_ZNK4Json5Value4findEPKcS2_@plt>
+   17f5e:	b100      	cbz	r0, 17f62 <_ZNK4Json5ValueixEPKc@@Base+0x1a>
+   17f60:	bd38      	pop	{r3, r4, r5, pc}
+   17f62:	e8bd 4038 	ldmia.w	sp!, {r3, r4, r5, lr}
+   17f66:	f7f3 b8dd 	b.w	b124 <_ZN4Json5Value13nullSingletonEv@plt>

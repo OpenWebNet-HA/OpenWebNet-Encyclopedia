@@ -1,0 +1,72 @@
+# MH202 run18 COSO selected STM→monitor ownership review
+
+**PASS after the current-batch namespace/provenance refinement; no source-outcome or native correction required.** Independent static/source and finite-ledger review of `coso/run18`. The reviewer authored the separate native protocol/run18 NULL-source corpus; that corpus uses WHERE0 and is not used as native corroboration of this static WHO2/WHERE11 timer/STM/recipient composition. No whole producer/STM/recipient route was executed by this review.
+
+## Checks performed
+
+Reproduced `python3 -B work/mh202-firmware/research/2026-10-30/coso/run18/collect_evidence.py --check`: 16 outputs plus manifest, 10 original spans, 30 words, three original ELF files, three calculated callback targets and two conditional recipient-count ledgers. The collector writes nothing under `--check`. Independently reread all three original ELFs, mapped PT_LOAD VAs/file offsets without using collector address helpers, compared all10 raw span hashes and30 words, and recomputed the three PIC callback targets. All16 deterministic manifest members,26 final author-manifest members, accessor hash and three prior-input hashes match current bytes.
+
+Read actual original disassembly calls/branches/register aliases and independently recomputed the two finite ledgers. This review added **0original/native instruction execution,0primitive callbacks and0code hooks**; it did not run a native harness, target parser, serializer, GLib callback, OS, socket or network. No author/source/repository files were edited.
+
+## Source and scope agreement
+
+1. Main `syn_receive`0xb4d0 passes the first list address and manager to `send_to_sm_from_field`0xb7b8. Pool0xb898/PIC0x16660 resolves its foreach callback to0xade8. That source compares each registered numeric criterion to envelope G+48 at0xae64 and calls matching descriptor+40 at0xae80 with descriptor/G/&fieldlist/&OPENlist. Automation criterion2 registration and ABS32 slot0xc4dc→0x1c0c identify the selected **field** handler. Actual registered descriptor count/order/effects and initialized context remain supplied premises.
+2. Handler0x1c44 obtains parsed=`[G]`; parsed kind at **parsed+44** is separate from envelope+44. Query-active(private+28)=0 sends0x1c54→0x1cb0, and pending(private+52)=0 sends0x1cb8→0x1c80. Those exact branches bypass later ID/status comparisons. Unsigned(parsedkind−2)<=1 excludes2/3, so supplied kind1 reaches literal3 store to **G+8** at0x1c94 and same-G append0x1ca0. The report correctly keeps envelope status52, private pending52, parsed kind44 and output-routing metadata8 separate. No receipt helper/WHAT/WHERE test occurs in this selected block; no universal acceptance or runtime-idle premise is inferred.
+3. Original0xae84..0xae90 concatenates the selected OPEN list into descriptor-manager+60; normal same-pointer list behavior makes G present at0xaed8..0xaee8, skipping0xaf08's free_message call. Input-node free/headNULL at0xb7f0/0xb7f4 is distinct from payload destruction. Source does not copy G. Distinct input/output/monitor node identities and ordinary list semantics are explicit; neither concurrency nor actual reclamation is established.
+4. `send_msgs2open`0xbc40..0xbc48 uses unsigned(repr−2)<=2, admitting selected repr3. Metadata3 takes monitor append0xbccc, skips metadata5 copy at0xbce4, and fails the command4/5 predicate. It then deletes the manager queue node before monitor handling. This is a precise selected monitor-only routing statement, conditional on the earlier selected descriptor/callback effects. It is not a claim about real subscribers or complete registry behavior.
+5. Monitor foreach's pool0xbc0c resolves callback0xbb3c; role context calculates0x169e0. Its recipient foreach pool0xbb74 resolves callback0xbd3c with G as user data. Selected repr3 reaches original serializer import0xbe14 using actual parsed pointer `[G]` and local output slot; normal nonnull serialized text is a premise. The selected send boundary is0xbdb8, with recipient[0]/text/strlen/NULL/&error. Neither serializer completion, real recipient validity, actual socket call or send result is executed/proved here.
+6. On normal recipient-foreach completion,0xbb64..0xbb6c requests `free_message(G)` even for an empty supplied recipient list; no recipient-count guard precedes the tailcall. Candidate destructor0x2300..0x2340 checks body/repr3, passes **G** (address of first pointer member) to `free_open_msg`0x2338, then requests `g_free(G)` at0x2334. Actual imported destructor behavior is not executed. Monitor nodes/head cleanup0xbbf0..0xbbfc is separately identified. The report appropriately limits this to source call order rather than safety, lifetime, exception/unwind or successful freeing guarantees.
+
+The host ledgers supply coherent generated WHO2/WHAT0/WHERE11/parsedkind1, source status0/repr3/route2, one matching descriptor, idle private context and normal nonaliasing list/callback contracts. With recipient counts0 and1, only the serializer/send request counts differ; both request one subsequent record destruction after normal foreach. The source generator/timer, actual complete registry/subscriptions, natural invocation/pending state, queue/ID correlation, initialized socket objects, errors/unwinding, reclamation and physical causality remain unknown.
+
+The initial successful author collector generated a ledger with ambiguous `kind44` beside envelope offsets. The author qualified it to `parsed_kind44` during drafting; the reviewer independently flagged the same ambiguity before the final report was read. These initial generated collector/model/manifest bytes were overwritten without a contemporaneous snapshot. This was a provenance omission, not an original branch/value/count change. The author has now disclosed it in `NAMESPACE_REFINEMENT.md` and preserved a reconstructed earlier draft plus reconstruction metadata. No independently retained/pinned pre-overwrite hash exists. The reconstruction fingerprints were calculated now and are **not independently hash-pinned historical byte evidence**.
+
+Independently verified that the reconstructed collector's sole dictionary-key edit reproduces the corrected collector bytes, renaming the two model fields and sorted serialization reproduces the current model exactly, and changing only that model hash reproduces the current deterministic manifest. This verifies transformation consistency, not unavailable historical authenticity. The actually retained pre-history-note report and first author manifest match their previously announced hashes e9050896…a6562c9 and aad627a4…61b670. The final report adds the disclosure; corrected source/model values/outcomes and native count0 remain unchanged. This is a closed **current-batch** namespace/provenance refinement, not a correction to a completed earlier dossier. No earlier research or original source was edited.
+
+## Exact reviewed pins
+
+Paths are relative to `work/mh202-firmware/research/2026-10-30/`. Author manifest excludes itself and later independent reviews; no citing-review cycle is introduced.
+
+| Artifact in `coso/run18/` | SHA-256 |
+|---|---|
+| `NAMESPACE_REFINEMENT.md` | `96f0af7e2adf1b4d0f969a14034055107e42fc4eec3d7bf9b8938a29f102c8bf` |
+| `OPEN-list-monitor-command-classification.txt` | `f572ca8828c44cff61101308389509996133567c718266f3b1e7d11e2b3a019b` |
+| `REPORT.md` | `580e2695e56a164f19e5638fd06f0bb6b2c04e4bcd61d5fd4bd983b760d701bf` |
+| `actual-STM-callback-routing-and-retention.txt` | `5a4c011b02a175625e14e84b7cc23d6056821310b0c38216c2fd665d3312505b` |
+| `actual-callback-chain.json` | `2907fc417b010ea42756ac1fcb9f71bef8b235dfd612b8a108e60dad4fec53c6` |
+| `actual-candidate-envelope-destructor.txt` | `28ad9e83d6206cbdbbd27358b96024b304ebf2fcb31120dddc0cc25bf51481a8` |
+| `automation-WHO2-registration.txt` | `ef624497a8b97461960e0a33acd215d1a15fdb42d5b56715d10a6290f1223c38` |
+| `collect_evidence.py` | `9778d1b9088aadcee27e80e8b0f9422788c0ff8b489adda91a081b9c744c92f5` |
+| `critical-words.json` | `10d8447d09b707d9f4c796163fc90b265b6189eb3ceb2ba8a974fd7a06d3cec1` |
+| `development-before-history-note/REPORT.md` | `e9050896b4634701253866afa5848ecaf3bbd54eef025909732cd7219a6562c9` |
+| `development-before-history-note/author-manifest.json` | `aad627a45f5978e9f03d2eec50494d6646e983b036e6f88d42613ca52561b670` |
+| `development-before-namespace-refinement/RECONSTRUCTION.json` | `e5884aa0b99bdf6151b57c3d5f1e3843a54b85f03d12671047955966843c513e` |
+| `development-before-namespace-refinement/collect_evidence.py` | `2f07a7c24213de93d303dcbb518bd55d7d5d9733f2fe250334b6620df737fd1f` |
+| `development-before-namespace-refinement/host-selected-idle-STM-monitor-ownership.json` | `0bd0341bcabf1d34626c0e30d284b1a8622b223ac2dc5e288e446f9a73e708ee` |
+| `development-before-namespace-refinement/output-manifest.json` | `dd935d2a2d522154f545ea0d7c9d7d62c75cbcada57a83bcfb229b29394be70c` |
+| `field-list-dispatch-and-node-cleanup.txt` | `28121ea41f6d07b7fc173ce099994e79c20c9093ebf8cdba1a8011112285905b` |
+| `host-selected-idle-STM-monitor-ownership.json` | `4b42fac114b101f38b6f815b6dc71ecacafdce5a400db4a741427595f473e74e` |
+| `input-hashes.json` | `14e5db55274fe3fe9dbd525452382022f4772f011c9a91c33933e935c4ea4179` |
+| `monitor-list-foreach-and-node-cleanup.txt` | `4511f9c0284ca11301efebcf4d18dacfc80653c49a40f7de28d31c3029d220ac` |
+| `original-spans.json` | `46378939783d4f6ff695b14e08d05777e425fb3341033d1b365d2a6e47de18fa` |
+| `output-manifest.json` | `ea21fc9cc31a59196bed2ecad9943db8df8f4346815ba53fcdcb5775ac3f49f7` |
+| `recipient-serialization-send-call-boundary.txt` | `4ad000da64f258052a6ac757101a19030c278cd9e39445b4af06e479bb9a4214` |
+| `record-recipient-foreach-then-free.txt` | `740c6756ac695a7ae020241539c5ea74f6d71732621020fb207f0e633fcf2e3d` |
+| `selected-idle-field-forwarding.txt` | `76e9605b77cbf28e797b3d9b90a4840f22e90432b2b62aee97944aed9796478c` |
+| `selected-ownership-source-order.json` | `72c0021246e3792a68c36b0f703047c48be664ef3a99f2526b75e5b84654228a` |
+| `syn-receive-first-list-to-STM.txt` | `e916ba5bbbe0627dccf59ad33854670229cd69c87960f5847227677be5cdea64` |
+| `author-manifest.json` | `b1b9fd2060ec903b1749465a5468450e7b9ebe17ab9b5a9df1f361c087cd2cd1` |
+
+| Original normal-image file | SHA-256 |
+|---|---|
+| `/home/bticino/bin/coso` | `6865c2d1d441d25effa31275080ded70ad3538a8a49288e3002ffb196b066175` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+| `/home/bticino/libcoso/libplug_automation_stm.so` | `0d8969f4623493fa8a054694a836d958b612e137fe34d89ba1d3ccade7ce43fb` |
+
+Accessor `image_vfs.py`: `67fbac9a1508655bd69ac15dacf1b98679def8c62fad344c4b3c01c3ba2219a3`.
+
+| Prior read-only source | SHA-256 |
+|---|---|
+| `coso/run14/REPORT.md` | `73fa582bb2d2f316200099498f3fa6b04e542595a5c78b1ef31829cceeef04e6` |
+| `coso/run17/REPORT.md` | `00cddc41451d6553b7986c50a2d6585e60113fc7ef1bb963c9c84cc583142138` |
+| `coso/run17/host-config-to-future-output-ledger.json` | `fd4eb63b587178926401affcd5a64df8329b83de24774cdfbfb26c131b45359e` |

@@ -1,0 +1,10 @@
+{
+  "old_method": "SUPPLEMENT_METHOD.json",
+  "old_key": "raw_column_values_exported=false",
+  "new_method": "SUPPLEMENT_METHOD.v2.json",
+  "new_key": "unrestricted_raw_column_values_exported=false",
+  "reason": "All-table arbitrary values are withheld, while explicit selected manufacturer energy labels/association fields are exported. New key avoids suggesting no values at all are exported.",
+  "first_v1_snapshot": "supplement-first-v1/INDEX.json",
+  "data_queries_and_source_interpretations_changed": false,
+  "new_outputs": "Separate *.v2.json; all original code/outputs retained unchanged"
+}

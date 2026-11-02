@@ -1,0 +1,66 @@
+{
+  "changed_shared_PK_tables": [
+    {
+      "column_counts": {
+        "conf_name": 21,
+        "descr": 21,
+        "descr_ext": 22,
+        "hidden": 1,
+        "id_conf_data_type": 21,
+        "id_conf_type": 25,
+        "id_firmware": 48,
+        "id_key_object": 9,
+        "idx": 9,
+        "progressive": 40,
+        "read_only": 21
+      },
+      "count": 68,
+      "table": "EN_CONF"
+    }
+  ],
+  "commercial_anchor_matches": 330,
+  "commercial_firmware_only": 1,
+  "commercial_matched_complete_rows_equal": true,
+  "commercial_suite_only": 211,
+  "different_complete_row_multisets": 33,
+  "firmware_has_distinct_rows_tables": [
+    "AS_BUS_ITEM",
+    "AS_FIRMWARE_CONFIG_MODE",
+    "AS_FIRMWARE_VIRGIN_OBJECT",
+    "AS_HIDDEN_KCONF",
+    "AS_ITEM_SYSTEM",
+    "AS_OBJECT_COLLECTION",
+    "AS_OBJECT_FIRMWARE",
+    "AS_OBJECT_SYSTEM",
+    "DB_INFO",
+    "EN_BUILDS",
+    "EN_CONF",
+    "EN_CONF_RANGE",
+    "EN_DEVICE",
+    "EN_FILTER",
+    "EN_FILTER_RANGE",
+    "EN_FIRMWARE",
+    "EN_ITEM",
+    "EN_KEY_OBJECT",
+    "EN_SLOTS",
+    "EN_SLOT_KO_VIRGIN"
+  ],
+  "no_strict_whole_database_subset": true,
+  "same_complete_row_multisets": 42,
+  "strict_firmware_subset_tables": [
+    "AS_BUS_INTERFACE",
+    "AS_CONNECTION_FIRMWARE",
+    "AS_DEVICE_PICTURE",
+    "AS_FIRMWARE_PARAMETERS",
+    "AS_FW_PACKAGE",
+    "AS_ICON_KO",
+    "AS_OBJECT_VIRGIN_OBJECT",
+    "AS_SLOT_CONDITION",
+    "EN_CONDITION",
+    "EN_ICON",
+    "EN_PARAMETERS",
+    "EN_PICTURE",
+    "EN_VIRGIN_OBJECT"
+  ],
+  "tables": 75
+}

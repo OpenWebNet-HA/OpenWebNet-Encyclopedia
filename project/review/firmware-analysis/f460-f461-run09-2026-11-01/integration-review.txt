@@ -1,0 +1,42 @@
+# Run09 documentary integration review
+
+PASS, no correction requested. I compared the exact expanded reference, unchanged catalogue profile, capsule and coordination records with both frozen reports and completed independent original-source reviews. This is bounded documentary/product/method review informed by earlier source-profile work, not a fresh instruction audit, complete condition/platform semantics review or runtime test. I ran no collector, original/vendor/provider/JSON/file/getter code, emulator, model/fixture or CPU replay.
+
+F460 correctly identifies a fresh local condition row/class and a256-byte allocation BASE passed directly to its compiled constructor and published unchanged as one eight-byte pointer. It is not the trigger aggregate's inner/control pair or an MHS layout. Raw enabled40 to compiled176 is a source copy; complete same-JSON serializer/reparse coherence remains conditional. The entire16-byte predicate including BTI loads the byte, XORs1 and returns. Boolean inversion requires ordinary0/1 construction, successful copy, valid object and no mutation; it is not arbitrary-byte logical normalization. The absence of target lookup is confined to this complete local body, not all class methods or product capabilities. Same-pointer publication and inherited worker slot dispatch do not prove configured inclusion, natural execution, whole condition policy, unsupported functionality, ownership safety or physical effects.
+
+F461 correctly separates the file-backed ffffffff cache sentinel from actual runtime cache contents, hit/uncached paths, CPUinfo Hardware-line selection and the separate DT-model fallback. The latter need not pass the former marker test. Selected BEAR matching after earlier nonmatches can store22 into the same word, under ordinary providers and normal flow; no actual line or selector input was supplied. Same-definition pure-getter composition remains binding/object/provider conditional. It does not establish installed board/model, selected packaged DTB, auxiliary-core readiness, public WHO/Device identity or refresh/concurrency policy. The command fallback/body/literal and uncertain process consumer stay excluded, without a proxy investigation.
+
+Curated product roles, numeric namespaces, source initialization versus observed reset, JSON/provider/configuration, lifetime/error/unwind/concurrency and physical evidence remain separate. All new original/native/model/fixture/SQL/target file/service/OS/network/bus/physical execution is zero. Earlier product ledgers, retained corrections and unavailable MH20218/21 intermediate-history limits remain unchanged. Broader Device/source gates and closed receiving/output/transport/MQTT/libjel/auth/session/framing scopes are not expanded.
+
+## Exact copies, preservation and completion boundary
+
+Verified all16 current document pins and frozen copies, all37 exact SOURCE_EXPORTS source/export pairs, and four author/reviewer first-copy sets containing29 members:27 author copies plus two reviews. Exact retained pre-edit main, appendix and declared summary/ranking substitutions reconstruct current public bytes; the page equals REFERENCE_DRAFT. Core profile stays exactly bc9859ac. Both author first generations and current candidate remain unchanged; no generated failure/correction/overwrite is claimed. Historical inputs retain exact source identities rather than similar-file fallback or silent repinning.
+
+Checked45 local Markdown link occurrences and one fragment: all43 existing targets and the fragment resolve. Only intended later capsule integration-review.txt and validation.json targets await actual assembly. Final full protection/identity, strict ESG/ECV/diff, actual branch/status and index-last checkpoint checks remain subsequent parent-owned gates against actual saved artifacts. No future-byte certification, placeholder or missing-link exemption is endorsed. No author/repository/source/prior dossier was edited.
+
+## Exact current pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md` | `006c251d87960b34142b5bfa5bd478f1c5cdb02cbf495a0153295357b5548414` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | `bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run09-2026-11-01/README.md` | `866da5b143ce3a9d706ab860d527b23b5a954125e1b1e97917bb168368703ee1` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run09-2026-11-01/SOURCE_EXPORTS.json` | `8433254ce7547166521008bd99587ab2daf289485b49c4e29e5bd736a8303a24` |
+| `work/f460-f461-comparison/2026-11-01-run09/SYNTHESIS.md` | `1f1129840babe0c5b3c3964feed1bc555f13c4591e0f8ef2c2ada6d01cba7a7b` |
+| `work/f460-f461-comparison/2026-11-01-run09/COVERAGE.md` | `6d4bbacf66984b925e0458f23cd43a9564f044f3a4440cff0aa7b69363a4c7e6` |
+| `work/f460-f461-comparison/2026-11-01-run09/RANKED_REMAINING_QUESTIONS.md` | `6056c888754af8cc2e4466ec46607727f43a17c7e0c3d21e3ab77904098e8ecd` |
+| `work/f460-f461-comparison/2026-11-01-run09/SOURCE_CHECKS.json` | `297656ccabe38633453e42c3ac13e6f10b72339b02db503b91c3f82ab461ca26` |
+| `work/f460-f461-comparison/2026-11-01-run09/integration/DOCUMENT_PATCH.json` | `e5732d133e937733d49270c04005bd9bb46bcc57ee6f728dd95a70e251de7268` |
+| `work/f460-f461-comparison/2026-11-01-run09/REFERENCE_DRAFT.md` | `006c251d87960b34142b5bfa5bd478f1c5cdb02cbf495a0153295357b5548414` |
+| `work/f460-f461-comparison/2026-11-01-run09/REFERENCE_DRAFT_METHOD.json` | `fbc7c660d8bc454524560dc92e9b9f2cf92d6104e60545f112f98536333c9daf` |
+| `work/f460-f461-comparison/2026-11-01-run09/ANALYSIS_APPENDIX_DRAFT.md` | `8c2c5a602fb21e6bb2e9fe2b0d5b2bf9b0232dda92078db56071c340aacbb29e` |
+| `work/f460-f461-comparison/2026-11-01-run09/reviews/f460-source-review.md` | `98fcb72d3555a86f2449f41972eef5f978d3e591003074714e2d7d04426a2ef1` |
+| `work/f460-f461-comparison/2026-11-01-run09/reviews/f461-source-review.md` | `6cec5aaa827a88d0f9136a769203f48dd81f54c2aeb9e9dce9d6cfdf18ee8c34` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run09-2026-11-01/f460-source-review.txt` | `98fcb72d3555a86f2449f41972eef5f978d3e591003074714e2d7d04426a2ef1` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run09-2026-11-01/f461-source-review.txt` | `6cec5aaa827a88d0f9136a769203f48dd81f54c2aeb9e9dce9d6cfdf18ee8c34` |
+| `review-candidate/INDEX.json` | `4089e35943cb372cf591e0e0a1da349d0428aa86d597ed93423f3096f6d4ed2a` |
+| `integration/pre-edit/INDEX.json` | `208f3074e85dc2dbbd6d57eac0d37de7e680d6c12f0aa0a642e2c7c41c09937f` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run09-condition/REPORT.md` | `db8227a6259b29bf1c29cb118dbe462de6c21ae5eb675bdaf07af0674f688a19` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run09-condition/first-candidate/INDEX.json` | `601004bc1ab41529ee04608c1a9062a8da067fa0d3d91ad06777e07fe8b04117` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run09-platform/REPORT.md` | `f8ee2fabea6b81b234fef657fca5314a206f2a785c2a0d312eb6597ae3774d3b` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run09-platform/first-candidate/INDEX.json` | `7a7af54f43c94963911d5c5acf50be5d31abddaf89119f3b19f99096f7271a07` |

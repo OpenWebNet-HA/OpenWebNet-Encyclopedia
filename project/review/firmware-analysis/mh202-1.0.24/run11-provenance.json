@@ -1,0 +1,134 @@
+{
+  "checkpoint": "run11",
+  "status": "four reviewed areas plus coherent ordinary native common parser-normalizer corpus, overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "report",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run11/REPORT.md",
+      "source_sha256": "bde5160852a2633b415ec463050b319456fe26f92b60b59746a6466324f397b3",
+      "published": "run11-functional-report.txt",
+      "published_sha256": "bde5160852a2633b415ec463050b319456fe26f92b60b59746a6466324f397b3"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run11/functional-review.md",
+      "source_sha256": "b7ded752c5890e435a2d6b2b47f1cd766cd108989506e46a43c6809013a29a7e",
+      "published": "run11-functional-review.txt",
+      "published_sha256": "b7ded752c5890e435a2d6b2b47f1cd766cd108989506e46a43c6809013a29a7e"
+    },
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run11/REPORT.md",
+      "source_sha256": "b609d52cb82e37d6dedc7906a71b24732713e305f1a7a9b9377a253e61d306d5",
+      "published": "run11-protocol-report.txt",
+      "published_sha256": "b609d52cb82e37d6dedc7906a71b24732713e305f1a7a9b9377a253e61d306d5"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run11/protocol-review.md",
+      "source_sha256": "19ae2e829e5ca8d2d695ed0b96f68e14c191324182bbaea51a5fda552e7ff330",
+      "published": "run11-protocol-review.txt",
+      "published_sha256": "19ae2e829e5ca8d2d695ed0b96f68e14c191324182bbaea51a5fda552e7ff330"
+    },
+    {
+      "role": "report",
+      "area": "diagnostics",
+      "research_path": "work/mh202-firmware/research/2026-10-30/diagnostics/run11/REPORT.md",
+      "source_sha256": "8f865cbea3c0baf7537c0d7b75957129e3e4111582b544e50efbd1cb6382cb84",
+      "published": "run11-diagnostics-report.txt",
+      "published_sha256": "8f865cbea3c0baf7537c0d7b75957129e3e4111582b544e50efbd1cb6382cb84"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "diagnostics",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run11/diagnostics-review.md",
+      "source_sha256": "8e12205b5922bab6eedde1a759e1c91c1282fd436b1b05c80e4bc769da66f3f7",
+      "published": "run11-diagnostics-review.txt",
+      "published_sha256": "8e12205b5922bab6eedde1a759e1c91c1282fd436b1b05c80e4bc769da66f3f7"
+    },
+    {
+      "role": "report",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run11/REPORT.md",
+      "source_sha256": "d0225ba1a97e61c66510515bf5f00bb755180c379c22ad9fbbb894f1920c9e67",
+      "published": "run11-coso-report.txt",
+      "published_sha256": "d0225ba1a97e61c66510515bf5f00bb755180c379c22ad9fbbb894f1920c9e67"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run11/coso-review.md",
+      "source_sha256": "83a88cf324b339c478213f6aed25b7fac81dac6c085d48cc49eacbf176a30c29",
+      "published": "run11-coso-review.txt",
+      "published_sha256": "83a88cf324b339c478213f6aed25b7fac81dac6c085d48cc49eacbf176a30c29"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run11/collect_evidence.py",
+      "sha256": "87c1d2ba646590b74eddbfc9b438b1fc65e1a5a867525be32335d28144a9e57e",
+      "method": "static original/finite host evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run11/emulate_common_normalizer.py",
+      "sha256": "a650972f4601dcd1be29e67b2a14a5abccf3236e0ca48ec8f41bbf181678a27a",
+      "method": "actual taskmanager/common parser-normalizer with explicit C primitives/bindings"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run11/collect_evidence.py",
+      "sha256": "884db0a9b4e5f766e3efc40dc27f8eaad6c033eb296de831e9d3bb30399ae6a2",
+      "method": "static original/finite host evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/diagnostics/run11/collect_output_policy.py",
+      "sha256": "2d0af267e3d0bfbf82ca09a02b175041244303866ac4e23111afe79e6f773864",
+      "method": "static original/finite host evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run11/collect_reverse_lighting.py",
+      "sha256": "f11c59d411311af70a535d47291540a5762abbc8f037ef41bf8cbcba440df60f",
+      "method": "static original/finite host evidence"
+    }
+  ],
+  "canonical_execution": {
+    "new_corpus": {
+      "top_level_calls": 2,
+      "original_instruction_visits": 3178,
+      "primitive_callbacks": 346,
+      "linker_redirect_callbacks": 26,
+      "boundary_callbacks": 2,
+      "code_hook_visits": 3552
+    },
+    "cumulative": {
+      "corpora": 6,
+      "top_level_calls": 50,
+      "original_instruction_visits": 15082,
+      "primitive_callbacks": 1425,
+      "linker_redirect_callbacks": 36,
+      "boundary_callbacks": 8,
+      "code_hook_visits": 16551,
+      "firmware_processes": 0,
+      "target_OS_calls": 0
+    },
+    "count_scope": "Canonical named corpora only, verification replays not accumulated"
+  },
+  "history": {
+    "run10_document_snapshots": "reviewed/run10/SOURCE_SNAPSHOTS.json",
+    "earlier_artifacts_unchanged": true,
+    "diagnostic_span_labels": "Corrected two span filenames/extended monitor SP+36 load before author report/source review; source contract unchanged, DEVELOPMENT_NOTES retained"
+  },
+  "limits": [
+    "Actual ordinary common130 parser-to-normalizer, not libopen90/native runtime/configuredgrammar or specialDIM1 selectors",
+    "Ordinary PARENTESI static byte-copy rules not full recursive/logical/configured DSL",
+    "Output slot/accept caller boundaries only; socket/accept authorization/handshake/framing implementations not investigated",
+    "No-data local return0/OPEN-OK choice not measured deadline or physical response/delivery",
+    "Reverse lighting WHAT-prefix constructs are decoded-body host models, no original converter/STM/physical echo",
+    "Missingassets/wider Device gates remain open"
+  ]
+}

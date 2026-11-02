@@ -1,0 +1,317 @@
+{
+  "byte_guards": [
+    {
+      "VA": "0xa5a40",
+      "bytes": "0546"
+    },
+    {
+      "VA": "0xa5b46",
+      "bytes": "d5e91d46"
+    },
+    {
+      "VA": "0xa5b4c",
+      "bytes": "0ad0"
+    },
+    {
+      "VA": "0xa5b4e",
+      "bytes": "54f8040b"
+    },
+    {
+      "VA": "0xa5b52",
+      "bytes": "0028"
+    },
+    {
+      "VA": "0xa5b54",
+      "bytes": "00f0cf80"
+    },
+    {
+      "VA": "0xa5b58",
+      "bytes": "0368"
+    },
+    {
+      "VA": "0xa5b5a",
+      "bytes": "5b68"
+    },
+    {
+      "VA": "0xa5b5c",
+      "bytes": "9847"
+    },
+    {
+      "VA": "0xa5b5e",
+      "bytes": "a642"
+    },
+    {
+      "VA": "0xa5b60",
+      "bytes": "f5d1"
+    },
+    {
+      "VA": "0xa5b62",
+      "bytes": "6e6f"
+    },
+    {
+      "VA": "0xa5b64",
+      "bytes": "26b1"
+    },
+    {
+      "VA": "0xa5b66",
+      "bytes": "e96f"
+    },
+    {
+      "VA": "0xa5b6a",
+      "bytes": "891b"
+    },
+    {
+      "VA": "0xa5cf6",
+      "bytes": "a642"
+    },
+    {
+      "VA": "0xa5cf8",
+      "bytes": "7ff429af"
+    },
+    {
+      "VA": "0xa5cfc",
+      "bytes": "6e6f"
+    },
+    {
+      "VA": "0xc864e",
+      "bytes": "0446"
+    },
+    {
+      "VA": "0xc865a",
+      "bytes": "d0f8a800"
+    },
+    {
+      "VA": "0xc8668",
+      "bytes": "04f1b003"
+    },
+    {
+      "VA": "0xc867a",
+      "bytes": "d4f89000"
+    },
+    {
+      "VA": "0xc8696",
+      "bytes": "e06e"
+    },
+    {
+      "VA": "0xc86b2",
+      "bytes": "206d"
+    },
+    {
+      "VA": "0xc86c8",
+      "bytes": "04f10800"
+    },
+    {
+      "VA": "0xc86d0",
+      "bytes": "2046"
+    },
+    {
+      "VA": "0xc86d2",
+      "bytes": "c021"
+    },
+    {
+      "VA": "0xc86d8",
+      "bytes": "2046"
+    },
+    {
+      "VA": "0xa7a02",
+      "bytes": "03f17407"
+    },
+    {
+      "VA": "0xa7a1e",
+      "bytes": "3e60"
+    },
+    {
+      "VA": "0xa7272",
+      "bytes": "43f8040b"
+    },
+    {
+      "VA": "0xa7276",
+      "bytes": "0a60"
+    }
+  ],
+  "code_spans": [
+    {
+      "end_VA_exclusive": "0xa5a4a",
+      "file_offset": "0xa5a3c",
+      "name": "scene-receiver-alias",
+      "sha256": "fa1e463fe9b54d812cefce454f251d778c40e0f2033599895518c6d9cee1002a",
+      "start_VA": "0xa5a3c"
+    },
+    {
+      "end_VA_exclusive": "0xa5b46",
+      "file_offset": "0xa5b2e",
+      "name": "inherited-action-tail-into-condition",
+      "sha256": "13204ab802e237f93d7966bcb585eb18186fa7c80add2fd50d3d6234a615e8a0",
+      "start_VA": "0xa5b2e"
+    },
+    {
+      "end_VA_exclusive": "0xa5b78",
+      "file_offset": "0xa5b46",
+      "name": "condition-pointer-loop-and-storage",
+      "sha256": "1db8eed862ad8d8cdfa94f2aef31d834d40a0ace7c9f39af21f9345c673485dd",
+      "start_VA": "0xa5b46"
+    },
+    {
+      "end_VA_exclusive": "0xa5d00",
+      "file_offset": "0xa5cf6",
+      "name": "condition-null-leg",
+      "sha256": "bf7c3c990e98a3c32acc4f56eb16ebb03c48ad1db0f01d573baf160f18172d5e",
+      "start_VA": "0xa5cf6"
+    },
+    {
+      "end_VA_exclusive": "0xa7a24",
+      "file_offset": "0xa79fc",
+      "name": "selected-condition-publication",
+      "sha256": "422b9ef76116598596b72ec90a813cf0880246a5cd515f20f9c3f4d9738d2f4b",
+      "start_VA": "0xa79fc"
+    },
+    {
+      "end_VA_exclusive": "0xa727e",
+      "file_offset": "0xa7264",
+      "name": "condition-four-byte-append",
+      "sha256": "58175c72fb4e318b37aec9e7d9f0b6e30144aab74cb189c94d68644848593ce2",
+      "start_VA": "0xa7264"
+    },
+    {
+      "end_VA_exclusive": "0xc8522",
+      "file_offset": "0xc8514",
+      "name": "selected-compiled-header-install",
+      "sha256": "c45c73acba57896d7eb8c45c392bfb9f189bd38223c05025820fadb7e3df651b",
+      "start_VA": "0xc8514"
+    },
+    {
+      "end_VA_exclusive": "0xc86dc",
+      "file_offset": "0xc864c",
+      "name": "selected-deleting-destructor",
+      "sha256": "3d7bca6e1d2c0bac46f224d0adf37ef32df6937cfabe318571c15f21d1f3b686",
+      "start_VA": "0xc864c"
+    }
+  ],
+  "data_spans": [
+    {
+      "end_VA_exclusive": "0x161fc4",
+      "file_offset": "0x151fb0",
+      "name": "compiled-primary-header",
+      "raw_hex": "00000000b84f1600f1860c004d860c00d9830c00",
+      "sha256": "c237849d9083a12fb82cda68215d104209676a918a05bc3330e7e0fd95fc5fbe",
+      "start_VA": "0x161fb0"
+    },
+    {
+      "end_VA_exclusive": "0xc863c",
+      "file_offset": "0xc8638",
+      "name": "constructor-header-pool",
+      "raw_hex": "989a0900",
+      "sha256": "80d82a643912550121f291de73e35437618c97dfc573a474cc8ac7311b2f953e",
+      "start_VA": "0xc8638"
+    },
+    {
+      "end_VA_exclusive": "0xc86f0",
+      "file_offset": "0xc86dc",
+      "name": "destructor-pools",
+      "raw_hex": "5699090042d30900cc110000f8110000b0100000",
+      "sha256": "328550d97a7234bcb017de34f02d122201c889eaacba824839901ada031e3c45",
+      "start_VA": "0xc86dc"
+    }
+  ],
+  "destructor_header_PIC": {
+    "add_PC": "0xc8656",
+    "header": "0x161fb0",
+    "pool": "0xc86dc"
+  },
+  "direct_requests": [
+    {
+      "bytes": "20f0e6fc",
+      "call_VA": "0xa7a14",
+      "kind": "Thumb BL",
+      "target": "0xc83e4"
+    },
+    {
+      "bytes": "fff720fc",
+      "call_VA": "0xa7a20",
+      "kind": "Thumb BL",
+      "target": "0xa7264"
+    },
+    {
+      "bytes": "6bf7a0e9",
+      "call_VA": "0xa5b6c",
+      "kind": "Thumb BLX immediate to ARM",
+      "target": "0x10eb0"
+    },
+    {
+      "bytes": "48f71cec",
+      "call_VA": "0xc8676",
+      "kind": "Thumb BLX immediate to ARM",
+      "target": "0x10eb0"
+    },
+    {
+      "bytes": "48f710ec",
+      "call_VA": "0xc868c",
+      "kind": "Thumb BLX immediate to ARM",
+      "target": "0x10eb0"
+    },
+    {
+      "bytes": "48f702ec",
+      "call_VA": "0xc86a8",
+      "kind": "Thumb BLX immediate to ARM",
+      "target": "0x10eb0"
+    },
+    {
+      "bytes": "48f7f4eb",
+      "call_VA": "0xc86c4",
+      "kind": "Thumb BLX immediate to ARM",
+      "target": "0x10eb0"
+    },
+    {
+      "bytes": "49f734e8",
+      "call_VA": "0xc86cc",
+      "kind": "Thumb BLX immediate to ARM",
+      "target": "0x11738"
+    },
+    {
+      "bytes": "48f7eceb",
+      "call_VA": "0xc86d4",
+      "kind": "Thumb BLX immediate to ARM",
+      "target": "0x10eb0"
+    }
+  ],
+  "image": "/home/bticino/scheduling_manager/scheduling_manager",
+  "import_PLT_proofs": [
+    {
+      "ARM_entry_VA": "0x10eb0",
+      "jump_slot": "0x165b20",
+      "raw_hex": "01c68fe254ca8ce268fcbce5",
+      "scope": "Imported request/candidate binding only; definition and live API behavior unexecuted.",
+      "sha256": "3e1a1248498b2aa71d7f099e0100b8811943ba52d1b181bc7dbbb18370abbee3",
+      "symbol": "_ZdlPvj"
+    },
+    {
+      "ARM_entry_VA": "0x11738",
+      "jump_slot": "0x165df0",
+      "raw_hex": "01c68fe254ca8ce2b0f6bce5",
+      "scope": "Imported request/candidate binding only; definition and live API behavior unexecuted.",
+      "sha256": "73a203d1af75eff62c847143ca035bac7c720d01963150021a0cfba52e83080d",
+      "symbol": "_ZNSt18condition_variableD1Ev"
+    }
+  ],
+  "primary_vtable": {
+    "RTTI": "0x164fb8",
+    "address_point": "0x161fb8",
+    "header": "0x161fb0",
+    "name": "24BncuSceneConditionRunner",
+    "selected_deleting_slot": "0x161fbc",
+    "slots_Thumb": [
+      "0xc86f1",
+      "0xc864d",
+      "0xc83d9"
+    ],
+    "target_instruction": "0xc864c"
+  },
+  "relocations": [
+    "00161fb4  00000017 R_ARM_RELATIVE",
+    "00161fb8  00000017 R_ARM_RELATIVE",
+    "00161fbc  00000017 R_ARM_RELATIVE",
+    "00161fc0  00000017 R_ARM_RELATIVE",
+    "00165b20  00006916 R_ARM_JUMP_SLOT        00000000   _ZdlPvj@CXXABI_1.3.9",
+    "00165df0  00013f16 R_ARM_JUMP_SLOT        00000000   _ZNSt18condition_variableD1Ev@GLIBCXX_3.4.11"
+  ]
+}

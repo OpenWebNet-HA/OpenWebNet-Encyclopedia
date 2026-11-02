@@ -1,0 +1,41 @@
+# MyHOMEServer1 3.87.13: compiled TIME condition
+
+This static batch establishes a concrete raw `TIME` condition → serializer/reparse → 200-byte `TimeConditionRunner` → virtual predicate chain. The predicate first treats disabled conditions as true, then tests a day bit, and finally compares two locally constructed time boundaries with the current system clock. Equal boundaries return true after the day check; distinct boundaries use strict `from < now < to` comparisons. These are method-level results, not observed scenario admission, generic worker conjunction or physical execution.
+
+Original target instructions, native emulation, vendor processes and target clock calls executed: **0**. Host tools only read original image bytes and construct finite integer examples. No configured scene is supplied or invented. Original and previous research files remain read-only.
+
+## Identity and reproduction
+
+Original image path `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. `INPUTS.json` pins this file, the selected same-image libstdc++/libc candidates and the reviewed metadata-only image accessor/inventories. Every saved span in `ORIGINAL_SOURCE.json` has its exact original path, VA range, PT_LOAD-derived file offset and raw-byte hash. Thumb pointers retain bit0 in the vtable ledger; disassembly addresses clear it. Symbols adjacent to stripped code are not treated as function identities.
+
+Run `python3 collect_condition_v1.py --check` from this directory for read-only byte reproduction. The first generation refuses existing generated files and creates immediate report/collector/output copies under `first-candidate/`; the snapshot index is computed before opening that index. A source draft with a Python conditional-spacing error was preserved under `pre-generation-draft/` and corrected before its first execution or generation; no generated candidate was overwritten.
+
+## Factory and ownership join
+
+The raw condition discriminator at `0x2fa4c` matches the `type` string against its own 23-row table at `0x1605b0`; row1 is exactly length4/string `TIME`. The local index is decremented at `0x2fb02` before TBH. Thus local index1 selects halfword `0x0440` at `0x2fb0e` and branch `0x3038e`, not table index1 after decrement. That branch calls raw constructor `0x2c1b8`, allocates92 bytes, copies the raw base and its two strings/day mask, and supplies the object to the raw condition vector at scene+12.
+
+Raw RTTI is `13TimeCondition`, vtable header `0x160148`, address point `0x160150`; slot0 points to serializer Thumb `0x246a5`. The compiled initializer condition loop begins `0xa74e4`, reads each raw object's enum at+32 and dispatches local index1 through halfword `0x0438` at `0xa7518` to `0xa7d86`. There it invokes the raw virtual serializer, reparses its JSON with the same raw TIME constructor, allocates200 bytes, calls `0xb7c94`, and passes the resulting pointer to the runtime range helper with scene+116. Allocation/copy/append/provider normal-return and valid input-object premises remain explicit; this is not an observed live configured range.
+
+Compiled RTTI is `19TimeConditionRunner`, header `0x161e38`, primary address point `0x161e40`, and primary slot+8 contains Thumb `0xb86a5`. Its predicate starts at `0xb86a4`. The secondary address point at object+104 retains the raw TIME serializer interface. Selected relative relocations pin these pointers; runtime effective relocation/binding was not observed.
+
+## Declared fields and serialization
+
+The raw base reads `enabled` through JsonCpp `asBool` and writes byte+28 at `0x2b824`; it resolves `type` to the raw enum at+32. The TIME constructor reads `from`, `to`, `days` as strings. Raw offsets are40,64,88 respectively. The compiled constructor copies enabled→+132, enum→+136, from→+144, to→+168 and mask→+192. It also copies adjacent base metadata; no meaning for the extra word is assigned here.
+
+The days conversion at `0x2c21e..0x2c250` consumes at most the first7 characters. Empty strings produce0; strings of length1..6 consume that length; length≥7 selects7 characters. Each inspected character must be ASCII0/1 or the code requests `invalid_argument`; the first inspected character supplies the highest bit of that inspected prefix. Later characters beyond the selected prefix are not visited by this loop. The serializer `0x246a4` emits exactly7 binary characters, bit6 first through bit0, under key `days`; it emits the two boundary strings unchanged under `from` and `to`. This is local conversion behavior, not a complete accepted JSON grammar or a public weekday ordering claim.
+
+## Predicate and time-boundary helper
+
+At `0xb86ba..0xb86c0`, compiled enabled byte0 returns1 before any time calls. Otherwise it calls `time(NULL)` and `localtime`, loads word+24 of the returned object, and performs an ordered-map lookup at global `0x1674f8`. A matching node's value+20 masked31 is the bit index into compiled mask+192. A missing key requests `out_of_range`; a clear bit returns0. This batch leaves the map initializer and weekday orientation to separate source work. Ordinary Linux `struct tm`/successful API premises are needed to call returned word24 a weekday; no host structure layout is substituted.
+
+If the day bit passes, helper `0xb7f10` runs separately for `from` and `to`. Each invocation samples `time/localtime`, assembles literal `Fri Apr 16 ` + supplied boundary + literal `:00 2021`, and parses against `%a %b %d %H:%M:%S %Y` through C++ stream/locale machinery. The fixed date is parsing scaffolding: instructions `0xb80e4..0xb80ee` copy only the parsed first3 words into the current `localtime` object before `mktime` at `0xb80f2`. Under the ordinary successful `tm` API layout, those are second/minute/hour; its current date and DST fields are retained rather than copied from the fixed parse date. The signed32 `mktime` result is multiplied by1,000,000,000 at `0xb80fe..0xb810a` into the helper's returned64-bit object.
+
+The predicate then requests `system_clock::now`. The same-image libstdc++ candidate definition at `0x959a0` requests `clock_gettime(0, ...)`, reads two32-bit words and computes signed seconds×1e9+nsec. Under ordinary successful Linux clock/API semantics and effective packaged-provider binding, this places the two conversions and current time on a nanosecond system-clock scale. No API success, deployed timezone, DST interpretation, effective binding or measured time is established. The code takes separate samples, so a single shared calendar date across midnight is not guaranteed by this source.
+
+At `0xb8772..0xb8778`, identical64-bit boundaries return1. Otherwise signed comparison sequences `0xb877a..0xb8790` return1 only when `from < now` and `now < to`. Exact endpoints therefore return0 on this selected path. A reversed pair is not converted into an overnight wrap interval in this bounded predicate; this is not a claim about every product scheduling feature or all alternate inputs.
+
+Stream sentry-false goes to the conversion path; stream state error handling also flows through `basic_ios::clear` and then conversion if that provider returns. There is no separate successful-parse Boolean guard immediately before the copied fields/`mktime`. Malformed input, exception, null `localtime`, failed `mktime`, locale and uninitialized temporary behavior are **not** modeled or promoted into a defect/outcome claim. The 13 finite host examples exercise only selected integer branches and the bounded binary-prefix algorithm.
+
+## Limits and next questions
+
+Confidence is high for original pointer/field/branch/literal joins and conditional method-level comparisons. Generic worker inversion/conjunction/launch policy, TIME-trigger service registration, weekday-map initialization, target timezone/locale/configured scenes, provider failures and actual clock behavior are separate scopes. Next useful work is the independently traced weekday map and generic condition caller, then a real nonsecret configured TIME condition artifact if available. No universal support, electrical behavior, physical action or runtime timing claim follows from this batch.

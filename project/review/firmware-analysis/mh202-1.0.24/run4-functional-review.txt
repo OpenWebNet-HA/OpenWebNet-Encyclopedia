@@ -1,0 +1,50 @@
+# Independent static source review — MH202 functional/run4
+
+**PASS within the declared selected-call-site and host-model scope. No required correction.** I read the report/collector and original source spans, reproduced the read-only collector, and independently checked source bytes, models and selected global definitions. This is an independent review of the functional author's work, not a physical/runtime oracle. Only this review file was written; author artifacts, original images, earlier dossiers, synced sources and repository documents remained read-only.
+
+No original ARM/PHP/JavaScript, loader, vendor/library helper, emulator, libc call, wall-clock sleep, process, network/service/device operation or connection/authentication body ran. Host Python, original-file reads and host objdump/readelf metadata were the only analysis methods.
+
+## Reproduction and independent checks
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/functional/run4/collect_evidence.py --check
+```
+
+The collector passes15 deterministic outputs plus manifest,5 original spans,13 selected author instruction assertions and3 verified original ELF inputs, with original execution0. Independently checked all15 producer-manifest hashes and all5 original span-byte hashes using a separate ELF segment mapping. Independently checked21 selected original instruction words, the9 host return/arithmetic cases and5 executable-global choices under the plan's assumptions. I additionally read original `libdomotica` `0x3bf0..0x3c94` in memory to verify the quotient/remainder setup omitted between the two saved SLEEP spans; this did not execute a helper or produce a new source artifact.
+
+Original source SHA256:
+
+| Firmware image path | SHA256 |
+| --- | --- |
+| `/home/bticino/bin/bt_script` | `f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4` |
+| `/home/bticino/lib/libdomotica.so.0.0` | `5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09` |
+| `/home/bticino/lib/libcommon.so.0.0` | `07b2c6d09e4a1b317bb3b37aff8f7ddd72dcec15e1e7194fde00c4f0ce1ecab5` |
+
+## Source-critical findings checked
+
+- **Assigned OWRITE return:** Original seven-byte `=OWRITE` comparison leads through selected string lookup and argument/destination setup at`0x9fe0..0x9ff8`. OWRITE call`0x9ffc` is immediately followed by branch`0xa000→0xa480`, whose original word stores r0 at numeric-record+4. It is a direct returned-integer store, not a Boolean action-success conversion. The full assignment grammar, variable index/domain and actual configured source remain outside that evidence.
+- **Standalone OWRITE return:** Original six-byte `OWRITE` prefix path supplies an argument and calls OWRITE at`0xa580`; the following code prepares another prefix comparison and overwrites r0 at`0xa58c` without inspecting/storing that returned value. The report correctly joins run3's skipped-action return1 as stored in the first selected caller and unused in the second, without claiming emission, delivery, execution or success. Other command paths are not inferred from these two call sites.
+- **Conditional global scope:** Exact symbol definitions/visibility and relocation references support the stated selected-input executable-first model. Under that explicit default-visible scope, executable Script`0x138b8`/size100, f_wr`0x13928`, f_rd`0x13938`, linea`0x134a4`/size1024 and sleep_executed`0x13934` are the first candidate definitions. The three selected objects have no SYMBOLIC dynamic tag. This is not a complete dependency closure, loader run, relocated memory image or effective-binding proof. The separate leading-space ` $NOMESCRIPT` content/copy and taskmanager `$NOME` equality remain asset/runtime assumptions; choosing a symbol address does not prove matching names.
+- **Unit conversion:** The exact full-string `ms` comparison precedes first-byte m/s/h dispatch. Original m arithmetic is amount×60, h arithmetic is amount×3600, and s/displayed fallthrough retain amount. The selected `ms` path computes amount×1000 for usleep. The report properly separates helper parameter behavior from complete DSL unit extraction/validity and does not declare arbitrary strings valid script syntax.
+- **Chunk plan:** Original unsigned comparison with300 branches to the single-call path for amounts at most300. Original calls at`0x3c38/0x3c50` obtain unsigned quotient and remainder by the stored300; the loop calls my_sleep_select(300), then a nonzero remainder is passed separately. The six nonoverflow examples reproduce `[2]`, `[120]`, twenty-four300 chunks, usleep2000, `[300]` and `[300,1]` as declared. These are arithmetic/delegate plans, not elapsed-time tests, original helper execution or overflow/cancellation policy.
+- **Candidate seconds delegate:** Original `libcommon::my_sleep_select` stores its argument in the first timeval word,0 in the second, then passes that buffer to select with nfds0 and null descriptor sets. The displayed loop tests the remaining first word and checks errno4 after a negative result. Under ordinary timeval/select contracts this supports a seconds argument; actual provider binding, interruptions, timeout mutation, scheduling and measured wall time remain unproved. No complete timing or return contract is promoted from this helper.
+
+The source report maintains action-return, candidate global binding, helper parameter arithmetic and physical outcome as distinct layers. R/P producers, full names/assets/grammar, complete disabling policy and script lifecycle remain open. No connection or authentication investigation was used to fill those gaps.
+
+## Exact reviewed artifact pins
+
+Paths below are relative to `functional/run4/`.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `b0a188a9cb2000b1480700d37ccde2e1e071b8e49874ae2be3f7801a8f9eaa4f` |
+| `collect_evidence.py` | `64e69381e779d7f7f50cc00161b5a75c3edd9c73a7ac41171fd8b778a3dc7f39` |
+| `output-manifest.json` | `427526ca3bf209e2bba01560f53fe4295d80317645854d7c42386b3c21ae3813` |
+| `input-hashes.json` | `7ff9b251010969ae2b0f45d871206f3c844bb887188093aca25bd815893f87bf` |
+| `original-spans.json` | `67e4e63a29c81e600d353e3899ff4cdf3b52a108b3e8b195d06d0449d5db6d7b` |
+| `critical-words.json` | `1d5fd183ca1fc6e82c109db8f294cdb4e774b777fd7a1215c543a4903c80692d` |
+| `host-local-models.json` | `994b0339d56bf1dcd0e812002f23d65d3a37b12d9681e840b2abb3d0285e6460` |
+| `conditional-symbol-plan.json` | `bef849041548b1950dc1b946368a0513affcc66b9fb3c5ed945938fb5a297b70` |
+| `selected-ELF-metadata.json` | `923f7c90db0269c4ee6d21a833e8a08c27096d1e2d914694f0cee8df877bf7b2` |
+
+The producer manifest covers remaining inspected output bytes and excludes report/review to avoid cycles. This review is tied to these current source/artifact bytes, not an exhaustive interpreter/loader/timing audit or actual gateway behavior.

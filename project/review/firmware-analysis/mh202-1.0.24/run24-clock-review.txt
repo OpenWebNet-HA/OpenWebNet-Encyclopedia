@@ -1,0 +1,42 @@
+# Independent MH202 run24 conditional clock-source review
+
+**PASS within the reported conditional provider/arithmetic/unit scope. No author correction requested.** This review runs the host static collector `--check`, independent host hash/ELF metadata/closure checks and source inspection only. No original ARM/vendor/native code, target gettimeofday/SVC, OS/device/network operation, clock query or timer executes. Native entries, original instruction visits, primitive hooks and syscalls added by the review are0. Only this NEW review file is written; source-author files and immutable sound24 remain unchanged.
+
+## Final reviewed pins
+
+Paths below are relative to clock/run24/.
+
+| Artifact | SHA256 |
+|---|---|
+|`REPORT.md`|`40c7f32abe248b08c1609b37a184bc898bfb6ef709a1501ccf479993a5938fa3`|
+|`collect_clock_v1.py`|`3374b6cbbd3b7aee07e5d1e297a02956181c50412805ae16fe79b4ef5f97c79b`|
+|`output-manifest.json`|`e94ce7a44135a5860b79fa4986ad43220c0c95c7fde8e7db884750635cf28b01`|
+|`initial-generated-v1/SNAPSHOT_INDEX.json`|`fbf2ab6446beceae298655ca9289bea86e1eed16db436737ba07673008aed36c`|
+|`conditional-provider-closure.json`|`0c8d97c95404d42896c3cdec2b945f51ec448e03d32545d1d32325b99feeda9d`|
+|`host-UAPI-timeval-unit-reference.json`|`d7aec534b5fa7f60d80a836f44cec8d94abb44dc9bf92ecdc8bebc823a1a0b65`|
+
+## Reproduction and independent checks
+
+The unchanged final collector passes **14 outputs including manifest,20 closure objects,104 dependency edges,25 inputs,5 original spans,24 exact words and1 finite host arithmetic case**. `--check` strictly compares bytes and writes nothing.
+
+Independent checks reread all25 inputs and verify full hashes/sizes, using ImageVFS for original image files and separately labeled host/reference/research sources. I independently map original PT_LOAD VAs, verify all5 raw span hashes and24 asserted words, and inspect the displayed original instructions. All20 modeled object hashes and DT_NEEDED sequences match fresh readelf metadata; the104 candidate/search/choice edges and BFS object order reconstruct independently from the saved search premises. Selected exported symbol identities/VAs match fresh dynamic symbols. There is no host ldd or vendor loader execution.
+
+The13 output members in the manifest, report/collector pins and16 immediately preserved first-candidate copies all match exact current bytes. Generation checks absent destinations before writing and uses exclusive creation/new snapshot directory. This is generator refusal and current snapshot identity, not filesystem-enforced immutability against arbitrary manual edits. No non-check generation attempt was made and no author file was edited.
+
+## Source/dataflow agreement
+
+- The plugin's JUMP_SLOT0x1aae8 names g_get_real_time, and its first DT_NEEDED is libglib-2.0.so.0. The saved startup script's exact line3 library-path declaration matches the modeled first two search directories. Conventional /lib,/usr/lib fallback, compatible versions and no external interposer/preload/dlopen namespace/replacement are explicit assumptions. This root-plugin closure does not establish the full application's symbol scope or live binding. RPATH/RUNPATH rejection and retained other dynamic flags are scoped honestly to the modeled definitions.
+- Original GLib g_get_current_time **0x3544c..0x3547c** reserves8 stack bytes, passes SP as output and r1=0 to its imported gettimeofday at0x35460, then copies words0/+4 into the supplied object. There is **no r0 error guard before those copies**. Successful normal ABI output is therefore necessary to infer valid time fields; no failed-call value or initialized output is fabricated.
+- Original g_get_real_time **0x3547c..0x354b0** directly calls0x3544c at0x35488. It loads word0 into r0/word1 into r2, sign-extends word1 into high accumulator r3, then SMLAL with literal **1,000,000 at0x354ac**. Its selected mathematical relation is `signed32(word0)*1000000 + signed32(word1)`, returned low r0/high r1. The report correctly distinguishes this direct internal call from an imported same-name API stub.
+- GLib's versioned gettimeofday import relocation0xe53d8 and same-build libc weak gettimeofday@@GLIBC_2.4/strong __gettimeofday@@GLIBC_2.4 definitions sharing0x81560 are verified metadata. Original libc **0x81560..0x8157c** sets r7=78, contains SVC and a subsequent return/error branch. It is an inspected syscall-wrapper boundary only. No SVC, kernel, success/failure result, real timeval, installed ABI or clock behavior is exercised.
+- The consumer's original0xc650 requests the clock,0xc660/0xc664 save low/high words in SL/FP, and0xcc8c..0xcca0 adds600 with carry into offsets152/156. The preserved sound23 report/review identities and fresh original spans agree. This is **entry-clock+600**, with helper work before the later deadline stores, not a fresh-at-store clock+600. Its restored-state/control path is not rerun here.
+
+## Unit claim and host-reference boundary
+
+I inspected the exact selected **host** `/usr/include/linux/time.h` lines16..19: tv_sec is commented seconds and tv_usec microseconds. Its pinned source class is a separate installed Linux UAPI **semantic reference**. It is not a target firmware header and does not prove host/target layout equivalence. The report explicitly makes that distinction; its target offset/width evidence comes instead from original8-byte temporary/two32-bit-word instructions and compatible ELF32 little-endian ARM metadata.
+
+Under the separately stated **successful ordinary Linux ARM32 gettimeofday timeval ABI and identified provider premises**, the first word is seconds and second microseconds. Multiplying the former by1,000,000 and adding the latter gives a microsecond-valued result; adding600 then means a **conditional600-microsecond arithmetic increment**, or0.0006seconds. The finite host `(1,999900)`→1999900→2000500 example independently recomputes correctly. It is not an original clock reading or target instruction execution.
+
+The bounded image basename query for time.h/time_types.h is recorded as such; a no-match result is not a universal statement that no target contract/header exists anywhere. Ordinary success, field interpretation, provider binding and target ABI remain premises, not conclusions proved by the host header. The report avoids a600-millisecond interpretation without upgrading the source arithmetic into measured scheduling, latency, invocation or hardware behavior.
+
+Failure/interposition can invalidate those premises. Realtime does not establish monotonic elapsed behavior; wall-clock changes, helper duration, polling/scheduler behavior, actual private state/lifetime, complete time-domain/2038 behavior and physical/defect consequences remain unobserved. Current source evidence is sufficient for the narrowly conditional unit conclusion, and no broader result is implied by this PASS.

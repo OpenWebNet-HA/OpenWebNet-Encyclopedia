@@ -1,0 +1,17 @@
+
+/usr/lib/libdedrifupdater.so.1.0.0:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000002fe0 <_ZN8PlatformC1Ei@@Base>:
+    2fe0:	d503233f 	paciasp
+    2fe4:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+    2fe8:	910003fd 	mov	x29, sp
+    2fec:	a90153f3 	stp	x19, x20, [sp, #16]
+    2ff0:	aa0003f3 	mov	x19, x0
+    2ff4:	2a0103f4 	mov	w20, w1
+    2ff8:	97fffe4a 	bl	2920 <_ZN8Platform20get_running_platformEv@plt>
+    2ffc:	7100081f 	cmp	w0, #0x2
+    3000:	b9000a60 	str	w0, [x19, #8]
+    3004:	54000528 	b.hi	30a8 <_ZN8PlatformC1Ei@@Base+0xc8>  // b.pmore

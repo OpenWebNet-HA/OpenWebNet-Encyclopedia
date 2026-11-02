@@ -1,0 +1,1061 @@
+{
+  "F454": {
+    "firmware": {
+      "device_identities": [],
+      "firmware": [],
+      "item_id": 1455,
+      "item_row": null,
+      "relations": {
+        "AS_CONNECTION_FIRMWARE": [],
+        "AS_FIRMWARE_CONFIG_MODE": [],
+        "AS_FIRMWARE_PARAMETERS": [],
+        "AS_FW_PACKAGE": [],
+        "EN_BUILDS": []
+      }
+    },
+    "suite": {
+      "device_identities": [
+        {
+          "code": "003598",
+          "id_brand": 6,
+          "id_device": 1572,
+          "id_item": 1455,
+          "id_line": 5,
+          "is_gateway": 1,
+          "name": "Web Server A/V Bus"
+        },
+        {
+          "code": "F454",
+          "id_brand": 6,
+          "id_device": 1455,
+          "id_item": 1455,
+          "id_line": 5,
+          "is_gateway": 1,
+          "name": "Web Server A/V Bus"
+        }
+      ],
+      "firmware": [
+        {
+          "FW_default": 0,
+          "firmware_R": 0,
+          "firmware_V": 1,
+          "id_firmware": 6,
+          "id_item": 1455,
+          "id_status": 0,
+          "slots": 2
+        },
+        {
+          "FW_default": 1,
+          "firmware_R": 0,
+          "firmware_V": 2,
+          "id_firmware": 101,
+          "id_item": 1455,
+          "id_status": 0,
+          "slots": 2
+        }
+      ],
+      "item_id": 1455,
+      "item_row": {
+        "descr": "Web Server A/V Bus",
+        "id_family": 8,
+        "id_item": 1455
+      },
+      "relations": {
+        "AS_CONNECTION_FIRMWARE": [
+          {
+            "id_connection": 2,
+            "id_firmware": 101
+          },
+          {
+            "id_connection": 2,
+            "id_firmware": 6
+          },
+          {
+            "id_connection": 3,
+            "id_firmware": 101
+          },
+          {
+            "id_connection": 3,
+            "id_firmware": 6
+          }
+        ],
+        "AS_FIRMWARE_CONFIG_MODE": [
+          {
+            "id_config_mode": 4,
+            "id_firmware": 101
+          },
+          {
+            "id_config_mode": 4,
+            "id_firmware": 6
+          }
+        ],
+        "AS_FIRMWARE_PARAMETERS": [
+          {
+            "brand": 1,
+            "id_firmware": 101,
+            "id_parameters": 178,
+            "line": 0
+          },
+          {
+            "brand": 1,
+            "id_firmware": 101,
+            "id_parameters": 179,
+            "line": 0
+          },
+          {
+            "brand": 1,
+            "id_firmware": 101,
+            "id_parameters": 180,
+            "line": 0
+          },
+          {
+            "brand": 1,
+            "id_firmware": 101,
+            "id_parameters": 181,
+            "line": 0
+          },
+          {
+            "brand": 1,
+            "id_firmware": 101,
+            "id_parameters": 182,
+            "line": 0
+          },
+          {
+            "brand": 1,
+            "id_firmware": 6,
+            "id_parameters": 15,
+            "line": 0
+          },
+          {
+            "brand": 1,
+            "id_firmware": 6,
+            "id_parameters": 16,
+            "line": 0
+          },
+          {
+            "brand": 1,
+            "id_firmware": 6,
+            "id_parameters": 17,
+            "line": 0
+          },
+          {
+            "brand": 1,
+            "id_firmware": 6,
+            "id_parameters": 18,
+            "line": 0
+          },
+          {
+            "brand": 1,
+            "id_firmware": 6,
+            "id_parameters": 19,
+            "line": 0
+          },
+          {
+            "brand": 2,
+            "id_firmware": 101,
+            "id_parameters": 142,
+            "line": 0
+          },
+          {
+            "brand": 2,
+            "id_firmware": 101,
+            "id_parameters": 423,
+            "line": 0
+          },
+          {
+            "brand": 2,
+            "id_firmware": 101,
+            "id_parameters": 424,
+            "line": 0
+          },
+          {
+            "brand": 2,
+            "id_firmware": 101,
+            "id_parameters": 425,
+            "line": 0
+          },
+          {
+            "brand": 2,
+            "id_firmware": 101,
+            "id_parameters": 426,
+            "line": 0
+          },
+          {
+            "brand": 2,
+            "id_firmware": 6,
+            "id_parameters": 142,
+            "line": 0
+          },
+          {
+            "brand": 2,
+            "id_firmware": 6,
+            "id_parameters": 143,
+            "line": 0
+          },
+          {
+            "brand": 2,
+            "id_firmware": 6,
+            "id_parameters": 144,
+            "line": 0
+          },
+          {
+            "brand": 2,
+            "id_firmware": 6,
+            "id_parameters": 145,
+            "line": 0
+          },
+          {
+            "brand": 2,
+            "id_firmware": 6,
+            "id_parameters": 146,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 101,
+            "id_parameters": 781,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 101,
+            "id_parameters": 782,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 101,
+            "id_parameters": 783,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 101,
+            "id_parameters": 784,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 101,
+            "id_parameters": 785,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 6,
+            "id_parameters": 786,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 6,
+            "id_parameters": 787,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 6,
+            "id_parameters": 788,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 6,
+            "id_parameters": 789,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 6,
+            "id_parameters": 790,
+            "line": 0
+          }
+        ],
+        "AS_FW_PACKAGE": [],
+        "EN_BUILDS": [
+          {
+            "firmware_b": 1,
+            "id_build": 63,
+            "id_firmware": 101,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 37,
+            "id_build": 5,
+            "id_firmware": 6,
+            "localization_level": 0
+          }
+        ]
+      }
+    }
+  },
+  "MH202": {
+    "firmware": {
+      "device_identities": [],
+      "firmware": [],
+      "item_id": 1902,
+      "item_row": null,
+      "relations": {
+        "AS_CONNECTION_FIRMWARE": [],
+        "AS_FIRMWARE_CONFIG_MODE": [],
+        "AS_FIRMWARE_PARAMETERS": [],
+        "AS_FW_PACKAGE": [],
+        "EN_BUILDS": []
+      }
+    },
+    "suite": {
+      "device_identities": [
+        {
+          "code": "003535",
+          "id_brand": 6,
+          "id_device": 2362,
+          "id_item": 1902,
+          "id_line": 5,
+          "is_gateway": 0,
+          "name": "Scenario programmer"
+        },
+        {
+          "code": "MH202",
+          "id_brand": 6,
+          "id_device": 2222,
+          "id_item": 1902,
+          "id_line": 5,
+          "is_gateway": 0,
+          "name": "Scenario programmer"
+        }
+      ],
+      "firmware": [
+        {
+          "FW_default": 1,
+          "firmware_R": 0,
+          "firmware_V": 1,
+          "id_firmware": 561,
+          "id_item": 1902,
+          "id_status": 0,
+          "slots": 1
+        }
+      ],
+      "item_id": 1902,
+      "item_row": {
+        "descr": "Scenario programmer",
+        "id_family": 19,
+        "id_item": 1902
+      },
+      "relations": {
+        "AS_CONNECTION_FIRMWARE": [
+          {
+            "id_connection": 2,
+            "id_firmware": 561
+          },
+          {
+            "id_connection": 3,
+            "id_firmware": 561
+          }
+        ],
+        "AS_FIRMWARE_CONFIG_MODE": [
+          {
+            "id_config_mode": 4,
+            "id_firmware": 561
+          }
+        ],
+        "AS_FIRMWARE_PARAMETERS": [
+          {
+            "brand": 1,
+            "id_firmware": 561,
+            "id_parameters": 314,
+            "line": 0
+          },
+          {
+            "brand": 1,
+            "id_firmware": 561,
+            "id_parameters": 315,
+            "line": 0
+          },
+          {
+            "brand": 1,
+            "id_firmware": 561,
+            "id_parameters": 316,
+            "line": 0
+          },
+          {
+            "brand": 1,
+            "id_firmware": 561,
+            "id_parameters": 317,
+            "line": 0
+          },
+          {
+            "brand": 1,
+            "id_firmware": 561,
+            "id_parameters": 318,
+            "line": 0
+          },
+          {
+            "brand": 2,
+            "id_firmware": 561,
+            "id_parameters": 360,
+            "line": 0
+          },
+          {
+            "brand": 2,
+            "id_firmware": 561,
+            "id_parameters": 361,
+            "line": 0
+          },
+          {
+            "brand": 2,
+            "id_firmware": 561,
+            "id_parameters": 362,
+            "line": 0
+          },
+          {
+            "brand": 2,
+            "id_firmware": 561,
+            "id_parameters": 363,
+            "line": 0
+          },
+          {
+            "brand": 2,
+            "id_firmware": 561,
+            "id_parameters": 364,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 561,
+            "id_parameters": 319,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 561,
+            "id_parameters": 320,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 561,
+            "id_parameters": 321,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 561,
+            "id_parameters": 322,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 561,
+            "id_parameters": 323,
+            "line": 0
+          }
+        ],
+        "AS_FW_PACKAGE": [],
+        "EN_BUILDS": [
+          {
+            "firmware_b": 0,
+            "id_build": 517,
+            "id_firmware": 561,
+            "localization_level": 0
+          }
+        ]
+      }
+    }
+  },
+  "MyHOMEServer1": {
+    "firmware": {
+      "device_identities": [],
+      "firmware": [],
+      "item_id": 2198,
+      "item_row": null,
+      "relations": {
+        "AS_CONNECTION_FIRMWARE": [],
+        "AS_FIRMWARE_CONFIG_MODE": [],
+        "AS_FIRMWARE_PARAMETERS": [],
+        "AS_FW_PACKAGE": [],
+        "EN_BUILDS": []
+      }
+    },
+    "suite": {
+      "device_identities": [
+        {
+          "code": "MyHomeServer1",
+          "id_brand": 6,
+          "id_device": 2552,
+          "id_item": 2198,
+          "id_line": 5,
+          "is_gateway": 0,
+          "name": "MyHomeServer"
+        }
+      ],
+      "firmware": [
+        {
+          "FW_default": 0,
+          "firmware_R": 0,
+          "firmware_V": 1,
+          "id_firmware": 729,
+          "id_item": 2198,
+          "id_status": 0,
+          "slots": 2
+        },
+        {
+          "FW_default": 0,
+          "firmware_R": 0,
+          "firmware_V": 2,
+          "id_firmware": 814,
+          "id_item": 2198,
+          "id_status": 0,
+          "slots": 2
+        },
+        {
+          "FW_default": 0,
+          "firmware_R": 0,
+          "firmware_V": 3,
+          "id_firmware": 836,
+          "id_item": 2198,
+          "id_status": 0,
+          "slots": 2
+        },
+        {
+          "FW_default": 0,
+          "firmware_R": 1,
+          "firmware_V": 1,
+          "id_firmware": 812,
+          "id_item": 2198,
+          "id_status": 0,
+          "slots": 2
+        },
+        {
+          "FW_default": 0,
+          "firmware_R": 1,
+          "firmware_V": 2,
+          "id_firmware": 815,
+          "id_item": 2198,
+          "id_status": 0,
+          "slots": 2
+        },
+        {
+          "FW_default": 0,
+          "firmware_R": 14,
+          "firmware_V": 2,
+          "id_firmware": 817,
+          "id_item": 2198,
+          "id_status": 0,
+          "slots": 2
+        },
+        {
+          "FW_default": 0,
+          "firmware_R": 2,
+          "firmware_V": 1,
+          "id_firmware": 813,
+          "id_item": 2198,
+          "id_status": 0,
+          "slots": 2
+        },
+        {
+          "FW_default": 0,
+          "firmware_R": 2,
+          "firmware_V": 2,
+          "id_firmware": 816,
+          "id_item": 2198,
+          "id_status": 0,
+          "slots": 2
+        },
+        {
+          "FW_default": 0,
+          "firmware_R": 20,
+          "firmware_V": 2,
+          "id_firmware": 818,
+          "id_item": 2198,
+          "id_status": 0,
+          "slots": 2
+        },
+        {
+          "FW_default": 0,
+          "firmware_R": 30,
+          "firmware_V": 2,
+          "id_firmware": 821,
+          "id_item": 2198,
+          "id_status": 0,
+          "slots": 2
+        },
+        {
+          "FW_default": 0,
+          "firmware_R": 31,
+          "firmware_V": 2,
+          "id_firmware": 825,
+          "id_item": 2198,
+          "id_status": 0,
+          "slots": 2
+        },
+        {
+          "FW_default": 0,
+          "firmware_R": 32,
+          "firmware_V": 2,
+          "id_firmware": 831,
+          "id_item": 2198,
+          "id_status": 0,
+          "slots": 2
+        },
+        {
+          "FW_default": 0,
+          "firmware_R": 60,
+          "firmware_V": 2,
+          "id_firmware": 839,
+          "id_item": 2198,
+          "id_status": 0,
+          "slots": 2
+        }
+      ],
+      "item_id": 2198,
+      "item_row": {
+        "descr": "MyHomeServer",
+        "id_family": 8,
+        "id_item": 2198
+      },
+      "relations": {
+        "AS_CONNECTION_FIRMWARE": [
+          {
+            "id_connection": 2,
+            "id_firmware": 729
+          },
+          {
+            "id_connection": 2,
+            "id_firmware": 812
+          },
+          {
+            "id_connection": 2,
+            "id_firmware": 813
+          },
+          {
+            "id_connection": 2,
+            "id_firmware": 814
+          },
+          {
+            "id_connection": 2,
+            "id_firmware": 815
+          },
+          {
+            "id_connection": 2,
+            "id_firmware": 816
+          },
+          {
+            "id_connection": 2,
+            "id_firmware": 817
+          },
+          {
+            "id_connection": 2,
+            "id_firmware": 818
+          },
+          {
+            "id_connection": 2,
+            "id_firmware": 821
+          },
+          {
+            "id_connection": 2,
+            "id_firmware": 825
+          },
+          {
+            "id_connection": 2,
+            "id_firmware": 831
+          },
+          {
+            "id_connection": 2,
+            "id_firmware": 836
+          },
+          {
+            "id_connection": 2,
+            "id_firmware": 839
+          },
+          {
+            "id_connection": 4,
+            "id_firmware": 729
+          },
+          {
+            "id_connection": 4,
+            "id_firmware": 812
+          },
+          {
+            "id_connection": 4,
+            "id_firmware": 813
+          },
+          {
+            "id_connection": 4,
+            "id_firmware": 814
+          },
+          {
+            "id_connection": 4,
+            "id_firmware": 815
+          },
+          {
+            "id_connection": 4,
+            "id_firmware": 816
+          },
+          {
+            "id_connection": 4,
+            "id_firmware": 817
+          },
+          {
+            "id_connection": 4,
+            "id_firmware": 818
+          },
+          {
+            "id_connection": 4,
+            "id_firmware": 821
+          },
+          {
+            "id_connection": 4,
+            "id_firmware": 825
+          },
+          {
+            "id_connection": 4,
+            "id_firmware": 831
+          },
+          {
+            "id_connection": 4,
+            "id_firmware": 836
+          },
+          {
+            "id_connection": 4,
+            "id_firmware": 839
+          }
+        ],
+        "AS_FIRMWARE_CONFIG_MODE": [
+          {
+            "id_config_mode": 4,
+            "id_firmware": 729
+          },
+          {
+            "id_config_mode": 4,
+            "id_firmware": 812
+          },
+          {
+            "id_config_mode": 4,
+            "id_firmware": 813
+          },
+          {
+            "id_config_mode": 4,
+            "id_firmware": 814
+          },
+          {
+            "id_config_mode": 4,
+            "id_firmware": 815
+          },
+          {
+            "id_config_mode": 4,
+            "id_firmware": 816
+          },
+          {
+            "id_config_mode": 4,
+            "id_firmware": 817
+          },
+          {
+            "id_config_mode": 4,
+            "id_firmware": 818
+          },
+          {
+            "id_config_mode": 4,
+            "id_firmware": 821
+          },
+          {
+            "id_config_mode": 4,
+            "id_firmware": 825
+          },
+          {
+            "id_config_mode": 4,
+            "id_firmware": 831
+          },
+          {
+            "id_config_mode": 4,
+            "id_firmware": 836
+          },
+          {
+            "id_config_mode": 4,
+            "id_firmware": 839
+          }
+        ],
+        "AS_FIRMWARE_PARAMETERS": [
+          {
+            "brand": 5,
+            "id_firmware": 729,
+            "id_parameters": 1054,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 729,
+            "id_parameters": 1055,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 812,
+            "id_parameters": 1056,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 812,
+            "id_parameters": 1057,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 813,
+            "id_parameters": 1058,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 813,
+            "id_parameters": 1059,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 814,
+            "id_parameters": 1060,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 814,
+            "id_parameters": 1061,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 815,
+            "id_parameters": 1062,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 815,
+            "id_parameters": 1063,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 816,
+            "id_parameters": 1064,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 816,
+            "id_parameters": 1065,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 817,
+            "id_parameters": 1066,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 817,
+            "id_parameters": 1067,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 818,
+            "id_parameters": 1068,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 818,
+            "id_parameters": 1069,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 821,
+            "id_parameters": 1074,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 821,
+            "id_parameters": 1075,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 825,
+            "id_parameters": 1097,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 825,
+            "id_parameters": 1098,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 831,
+            "id_parameters": 1099,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 831,
+            "id_parameters": 1100,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 836,
+            "id_parameters": 1107,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 836,
+            "id_parameters": 1108,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 839,
+            "id_parameters": 1109,
+            "line": 0
+          },
+          {
+            "brand": 5,
+            "id_firmware": 839,
+            "id_parameters": 1110,
+            "line": 0
+          }
+        ],
+        "AS_FW_PACKAGE": [],
+        "EN_BUILDS": [
+          {
+            "firmware_b": 0,
+            "id_build": 682,
+            "id_firmware": 812,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 0,
+            "id_build": 683,
+            "id_firmware": 813,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 0,
+            "id_build": 684,
+            "id_firmware": 814,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 0,
+            "id_build": 685,
+            "id_firmware": 815,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 0,
+            "id_build": 686,
+            "id_firmware": 816,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 0,
+            "id_build": 687,
+            "id_firmware": 817,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 0,
+            "id_build": 688,
+            "id_firmware": 818,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 0,
+            "id_build": 698,
+            "id_firmware": 821,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 0,
+            "id_build": 700,
+            "id_firmware": 825,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 0,
+            "id_build": 706,
+            "id_firmware": 831,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 0,
+            "id_build": 710,
+            "id_firmware": 836,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 0,
+            "id_build": 711,
+            "id_firmware": 839,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 1,
+            "id_build": 680,
+            "id_firmware": 729,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 1,
+            "id_build": 689,
+            "id_firmware": 812,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 1,
+            "id_build": 690,
+            "id_firmware": 813,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 1,
+            "id_build": 691,
+            "id_firmware": 814,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 1,
+            "id_build": 692,
+            "id_firmware": 815,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 1,
+            "id_build": 693,
+            "id_firmware": 816,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 1,
+            "id_build": 694,
+            "id_firmware": 817,
+            "localization_level": 0
+          },
+          {
+            "firmware_b": 1,
+            "id_build": 695,
+            "id_firmware": 818,
+            "localization_level": 0
+          }
+        ]
+      }
+    }
+  }
+}

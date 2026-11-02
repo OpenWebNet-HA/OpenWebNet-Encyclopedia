@@ -1,0 +1,41 @@
+# Raw BNLD trigger: selected signed level serializer and same-JSON reparse
+
+The actual **trigger** serializer selected by the BNLD initializer requests a signed integer `level` member whenever its own status word is−1. It has no level-value omission guard on that selected arm: zero,−1 or another source word is not filtered by a local comparison. The same original JSON destination is then passed to the trigger constructor. Under ordinary valid fresh-JSON/int/member/assignment/asInt/copy premises, that selected path retains the numeric selector and configured threshold source; no full or universal JSON roundtrip is executed or proved.
+
+This tiny source-only continuation adds **zero original/native/provider execution, zero semantic fixtures and zero target I/O**. The saved MyHOMEServer1 ledger remains one corpus/eight entries,340 original code-hook visits,0 C primitives,12 redirects,8 EXIT=360 hooks; four synthetic data-relocation setup writes are separate. No old collector, native corpus or integer-provider experiment is rerun.
+
+## Fresh method and ABI identity
+
+Original `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`, is read through original ImageVFS with fresh PT_LOAD mapping. Final raw class header `0x160304`, address point `0x16030c`, has exact RTTI `11BnldTrigger`. Its **slot+8** at `0x160314` contains Thumb `0x282e5`; actual method entry is **`0x282e4`**. Original relative relocations and initializer GOT `0x165f04` independently corroborate this identity.
+
+Method prologue `0x282ec` retains incoming r1 in r6 as the raw object, and `0x282f2` retains incoming r0 in r4 as the JSON result destination. `0x282fe` calls original **trigger base helper `0x23394`**. This is not condition serializer `0x28178`, condition base `0x23aac` or a transferred condition-object layout.
+
+## The selected arm always requests the signed level member
+
+At `0x28302..0x2830a`, the method reads raw status+40 and tests status+1 for zero. Status−1 reaches `0x283c4`. There the selected source is exact:
+
+- `0x283c6` loads raw level+44 into r1;
+- `0x283ca` requests imported `Json::Value(int)` for a local temporary;
+- PIC pool `0x28448` and add-PC `0x283d2` resolve exact literal `level` at `0x115278`;
+- `0x283d4` requests member access on the original destination;
+- `0x283da` requests move assignment from the integer temporary, then temporary destruction and the normal return.
+
+There is no level sentinel/zero/range comparison between the selected branch and that request. This is source evidence about an integer argument, not executed integer conversion, accepted input domain or physical level semantics. The status-present sibling's string/table behavior is outside this packet's claim.
+
+The original trigger base helper begins with a new ValueType0 request and normally requests only `id` (if its source string is nonempty), `type`, `enabled` and optional `operator`. Their literal PICs and the retained normal source are pinned. On this selected derived arm it requests no `status` member. Under the ordinary valid fresh-value/member/assignment premises, the resulting selected object therefore has `level` and no earlier-priority `status`; this is not asserted for arbitrary corrupted/prior JSON storage or unsuccessful providers.
+
+## Same destination feeds the actual trigger constructor
+
+At `0xa8dbe`, initializer r4 is current SP+592; `0xa8dc0` supplies that JSON destination as r0. It loads the raw object's slot+8 and invokes it at `0xa8dc6`. After normal return, `0xa8dcc` supplies unchanged r4 as r1, and `0xa8dd2` calls **`0x2cc00`** with a separate raw destination. These original aliases establish the same-JSON handoff rather than substituting a supplied parsed object.
+
+The constructor's absent-status branch at `0x2cc94` resets both status+40 and level+44 to−1, accesses `level`, requests `asInt` and stores the returned word to raw+44. The positive-result ITT-GT path at `0x2ccb0..0x2ccb4` writes **−1**, not0, back to raw status+40; nonpositive results retain its initialized−1 under normal provider/nonmutation premises. Thus the selected structural path does not exclude positive thresholds via a supposed status0 override. The previous independently reviewed numeric-trigger packet establishes the later raw44→compiled64 and raw40→compiled60 copies and the actual caller's ID/status/on/value/record/lifetime guards; those paths are inherited, not retested here.
+
+The source supports a selected conditional serializer/reparse value path, including no local omission of source level−1. Complete JsonCpp constructor/member/move/asInt semantics, string/base conversion, allocation/errors/unwind, numeric domain and actual configured objects remain premises. It does not establish integer-provider behavior by analogy with the earlier isolated double helper, nor accepted external grammar, event delivery, crossing/dedup, physical meaning or complete lifetime.
+
+## Reproduction and preservation
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-trigger-serialization/serializer/collect_serializer_v1.py --check`
+
+The exclusive collector records seven code spans,20 byte guards, six decoded calls, seven exact PIC keys, the raw header data, three relative relocations, three import declarations and five input identities. The curated OWN-DEV-0199 reference is the CURRENT documentary version, without forcing its older hash; its role remains product context only. Existing source/dossiers are read-only. Initial generation refuses overwrite and immediately freezes all outputs/report/collector, computing index bytes before opening the index.
+
+No original provider implementation, target process, receiving/transport/session/authentication/framing/MQTT/libjel body, full optional schema or new class is investigated. All scope is the one actual trigger serializer arm and selected same-JSON constructor continuation. The saved native ledger is unchanged.

@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+"""Static BNLD condition serializer/operator schema; no predicate or original execution."""
+import argparse,hashlib,importlib.util,json,re,struct,subprocess,sys
+from pathlib import Path
+sys.dont_write_bytecode=True
+D=Path(__file__).resolve().parent;P=D.parents[2];W=P.parents[2];H=lambda z:hashlib.sha256(z).hexdigest();J=lambda v:(json.dumps(v,indent=2,sort_keys=True)+'\n').encode()
+V=P/'research/2026-10-31/image_vfs.py';s=importlib.util.spec_from_file_location('bnldser_vfs',V);m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+S='/home/bticino/scheduling_manager/scheduling_manager';SHA='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26'
+SPANS=[('bnld-serializer',0x28178,0x282c4),('base-condition-serializer',0x23aac,0x23c14),('base-condition-constructor',0x2b7d0,0x2ba20),('bnld-constructor',0x2bd58,0x2be7c),('same-result-initializer',0xa7d40,0xa7d86)]
+KEYS=[(0x23c20,0x23ae4,'id'),(0x23c24,0x23b02,'enabled'),(0x23c28,0x23b38,'type'),(0x23c2c,0x23b7c,'operator'),(0x282d0,0x281c6,'status'),(0x282dc,0x28266,'level'),(0x2ba30,0x2b7fe,'enabled'),(0x2ba34,0x2b828,'id'),(0x2ba40,0x2b8a0,'type'),(0x2ba48,0x2b8f2,'operator'),(0x2be8c,0x2bd86,'status'),(0x2be98,0x2bdf4,'level')]
+GUARDS=[(0x28196,'b36a'),(0x2819a,'591c'),(0x281a2,'022b'),(0x2825a,'f16a'),(0x23ad2,'ab68'),(0x23af6,'297f'),(0x23b14,'2b6a'),(0x23b16,'162b'),(0x23b58,'6b6a'),(0x23b5a,'5a1c'),(0x23b60,'042b'),(0x2b8dc,'3462'),(0x2b972,'7362'),(0x2bd96,'48b3'),(0x2bdd0,'e362'),(0x2be04,'e062'),(0xa7d50,'9847')]
+def bl(z,pc):
+ a,b=struct.unpack('<HH',z);assert a&0xf800==0xf000;s=a>>10&1;i=1-((b>>13&1)^s);j=1-((b>>11&1)^s);n=(s<<24)|(i<<23)|(j<<22)|((a&1023)<<12)|((b&2047)<<1);return(pc+4+n-((1<<25)if s else 0))&0xffffffff
+def build():
+ v=m.ImageVFS();b=v.read_bytes(S);assert H(b)==SHA;ph=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);L=[struct.unpack_from('<8I',b,ph+i*sz)for i in range(n)]
+ def off(a,z):return next(o+a-va for t,o,va,_,fs,*_ in L if t==1 and va<=a and a+z<=va+fs)
+ def at(a,z):o=off(a,z);return b[o:o+z]
+ def w(a):return struct.unpack('<I',at(a,4))[0]
+ def txt(a):return at(a,128).split(b'\0')[0].decode('ascii')
+ hp=v.root/S.lstrip('/');out={};spans=[]
+ for name,a,e in SPANS:
+  spans.append({'name':name,'start_va':hex(a),'end_va_exclusive':hex(e),'file_offset':hex(off(a,e-a)),'sha256':H(at(a,e-a))});z=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(hp)],text=True).replace(str(hp),S);z=re.sub(r' <([^>]+)>',lambda q:q[0]if'@plt'in q[1]else'',z);out['spans/'+name+'.txt']=z.encode()
+ for a,z in GUARDS:assert at(a,len(bytes.fromhex(z))).hex()==z
+ keys=[]
+ for p,pc,key in KEYS:a=(w(p)+pc+4)&0xffffffff;assert txt(a)==key;keys.append({'pool':hex(p),'pc':hex(pc),'target':hex(a),'key':key})
+ base=(w(0x23c1c)+0x23ad4+4)&0xffffffff;assert base==0x1659a4
+ assert w(0x1600c0)==0x28179;rt=w(0x1600bc);assert txt(w(rt+4))=='13BnldCondition'
+ slot=base+w(0x2be88);bh=w(slot);assert slot==0x16618c and bh==0x1600a8 and txt(w(w(bh+4)+4))=='17BaseBnldCondition' and w(bh+8)==0x28179
+ finalslot=base+w(0xa7f80);assert finalslot==0x1660f8 and w(finalslot)==0x1600b8
+ typeslot=base+w(0x23c34);tt=w(typeslot);assert tt==0x1605b0 and w(tt+16)==4 and txt(w(tt+20))=='BNLD'
+ opslot=base+w(0x23c38);ot=w(opslot);assert ot==0x160588
+ ops=[]
+ for i,(name,p)in enumerate([('noOperator',0x2ba50),('higher',0x2ba54),('lower',0x2ba5c),('equal',0x2ba60),('different',0x2ba58)]):assert w(ot+i*8)==len(name)and txt(w(ot+i*8+4))==name and txt(w(base+w(p)))==name;ops.append({'stored_raw_operator':i-1,'serializer_table_row':i,'serializer_text':name,'decoder_pool':hex(p),'decoder_GOT':hex(base+w(p))})
+ sb=(w(0x282cc)+0x2819c+4)&0xffffffff;ss=sb+w(0x282d8);st=w(ss);assert sb==base and st==0x1607d0
+ status=[]
+ for i,name in enumerate(['noStatus','on','off']):assert w(st+i*8)==len(name)and txt(w(st+i*8+4))==name;status.append({'stored_status':i-1,'table_row':i,'name':name})
+ calls=[]
+ for pc,t in [(0x28192,0x23aac),(0x2bd76,0x2b7d0),(0xa7d5c,0x2bd58),(0xa7d74,0xf1634),(0xa7d80,0xa7264)]:assert bl(at(pc,4),pc)==t;calls.append({'pc':hex(pc),'bytes':at(pc,4).hex(),'target':hex(t)})
+ rel=subprocess.check_output(['readelf','-rW',str(hp)],text=True);rs=[]
+ for a in [0x1600bc,0x1600c0,rt+4,slot,typeslot,opslot,ss,bh+4,bh+8,w(bh+4)+4,finalslot]:r=[x for x in rel.splitlines()if re.match('^'+f'{a:08x}'+r'\s',x)];assert len(r)==1 and'R_ARM_RELATIVE'in r[0];rs+=r
+ data=[{'start_va':hex(a),'end_va_exclusive':hex(e),'sha256':H(at(a,e-a))}for a,e in [(0x282c4,0x282e4),(0x23c14,0x23c3c),(0x2ba20,0x2ba64),(0x2be7c,0x2bea4)]]
+ pinpaths=[hp,V,P/'research/2026-11-01-event-routing/condition/REPORT.md'];pins=[{'path':str(p.relative_to(W)),'bytes':len(p.read_bytes()),'sha256':H(p.read_bytes())}for p in pinpaths]
+ out.update({'INPUTS.json':J(pins),'SOURCE_SPANS.json':J(spans),'DATA_SPANS.json':J(data),'BYTE_GUARDS.json':J([{'va':hex(a),'bytes':z}for a,z in GUARDS]),'KEYS.json':J(keys),'CLASS_TABLES.json':J({'raw_header':'0x1600b8','address_point':'0x1600c0','first_method_Thumb':'0x28179','rtti':hex(rt),'name':'13BnldCondition','temporary_constructor_header':hex(bh),'temporary_constructor_RTTI':'17BaseBnldCondition','temporary_constructor_GOT_slot':hex(slot),'final_initializer_GOT_slot':hex(finalslot),'condition_type_table':hex(tt),'BNLD_row':2,'operator_table':hex(ot),'operator_rows':ops,'status_table':hex(st),'status_rows':status,'relocations':rs}),'DIRECT_CALLS.json':J(calls),'FIELD_RULES.json':J({'base':{'id':'string+4 emitted only length8nonzero','enabled':'byte28 always JsonBool','type':'word32 always condition-name string, unsigned0..22 elseempty','operator':'word36 omitted iff−1, else table(raw+1 unsigned<=4) or emptystring'},'derived':{'status40_equals_minus1':'emit level44 through signed JsonInt, including−1; do not emit status','status40_other':'emit statusstring via(raw+1 unsigned<=2)table elseemptystring; do not emit level'},'reparse':'2bd58 presentstatus branch always levelsentinel−1; absentstatus branch readslevel asInt, independentlyofpositivevalue; no providerexecution','initializer':'virtualslot0→JSONSP592→sameinput2bd58rawtempSP4280→f1634; normalproviders/assignment/cast/lifetime stillpremises','scope':'Constructor-reachable scalar coherence conditional; not sourceJSONmemberpresence preservation/fullroundtrip/validation/predicate behavior.'}),'METHOD.json':J({'original_execution':0,'semantic_models_or_fixtures':0,'target_IO':0,'scope':'One BNLD raw serializer/commonconditionbase/operator decoder and same-result caller; no repeated predicate/TBB or provider/transport/auth/session/framing body.','development':'V1 stopped before generated outputs at a strict class-identity assertion; exact original temporary/final class distinction is asserted in v2. Failed normal/check/index attempts are later transcribed in DEVELOPMENT_HISTORY.v2.json; root preserved exact pre-v2 files. No original execution or guard weakening.'})})
+ return out
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build();out['OUTPUT_MANIFEST.json']=J({'outputs':{n:{'bytes':len(z),'sha256':H(z)}for n,z in out.items()},'collector_sha256':H(Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.v2.md').read_bytes()),'development_sha256':H((D/'development/PROBE_FAILURE.json').read_bytes())})
+ if a.check:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  for n,p in json.loads((D/'first-candidate-v2/INDEX.json').read_bytes()).items():z=(D/n).read_bytes();assert z==(D/'first-candidate-v2'/n).read_bytes()and H(z)==p['sha256']and len(z)==p['bytes']
+ else:
+  C=D/'first-candidate-v2';assert not C.exists();assert not any((D/n).exists()for n in out);copies={**out,'REPORT.v2.md':(D/'REPORT.v2.md').read_bytes(),Path(__file__).name:Path(__file__).read_bytes(),'development/PROBE_FAILURE.json':(D/'development/PROBE_FAILURE.json').read_bytes(),'DEVELOPMENT_HISTORY.v2.json':(D/'DEVELOPMENT_HISTORY.v2.json').read_bytes(),'REPORT.md':(D/'REPORT.md').read_bytes(),'collect_serializer_v1.py':(D/'collect_serializer_v1.py').read_bytes()};ix=J({n:{'bytes':len(z),'sha256':H(z)}for n,z in copies.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in copies.items():p=C/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (C/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':a.check,'outputs':len(out),'spans':len(SPANS),'guards':len(GUARDS),'keys':len(KEYS),'data_spans':4,'calls':5,'relocations':11,'inputs':3,'original_execution':0}))
+if __name__=='__main__':main()

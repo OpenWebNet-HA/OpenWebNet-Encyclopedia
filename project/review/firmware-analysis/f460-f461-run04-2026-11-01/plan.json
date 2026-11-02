@@ -1,0 +1,19 @@
+{
+  "run": "04",
+  "scope": "F460 original matrix catalogue opening/query/reader selection and F461 actual field registration/local message route ownership; original static source only",
+  "authors": {
+    "F460": "firmware_protocol",
+    "F461": "firmware_boot"
+  },
+  "reviewer": "firmware_functional reviewer/read-only",
+  "prior_batch": "work/f460-f461-comparison/2026-11-01-run03",
+  "prior_index": {
+    "path": "work/f460-f461-comparison/2026-11-01-run03/EVIDENCE_INDEX.json",
+    "bytes": 41592,
+    "sha256": "1d60bb1c8d9d1cd574c58c8e7ed989444a48c333acb3508a99972d08313f1fc0"
+  },
+  "deadline_UTC": "2026-11-01T19:00:00Z",
+  "final_only_UTC": "2026-11-01T18:15:00Z",
+  "user_summary_each_run": true,
+  "new_original_execution": 0
+}

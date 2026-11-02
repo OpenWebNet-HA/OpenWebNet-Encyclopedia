@@ -1,0 +1,15 @@
+{
+  "scope": "Exact prepared documentary insertion/substitutions; final independent source/documentary review required",
+  "anchor": "## Evidence status and next questions\n",
+  "appendix": "ANALYSIS_APPENDIX_DRAFT.md",
+  "substitutions": [
+    {
+      "before": "The positive additions include F460's selected callable-to-wait, callback-to-completion and catalogue SQL/reader paths, plus F461's descriptor matcher, same-object translator invocation and field/packed-route joins.",
+      "after": "The positive additions include F460's wait/completion, catalogue SQL/reader and indirect selector/parameter-owner paths, plus F461's matcher/callback, field/packed-route and selected payload/output-record contracts."
+    },
+    {
+      "before": "The next useful source work is actual scene/factory admission and complete catalogue selection for F460, and main/config selection, natural local message producers and selected translator output construction for F461.",
+      "after": "The next useful source work is actual scene/factory admission, root parameter provenance and complete catalogue selection for F460, and main/config selection, natural local message producers, distinct converter/address/diagnostic paths and later output ownership for F461."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "compiled_bytes": 152,
+  "disabled_normal_result": 1,
+  "fields": {
+    "enabled": [
+      28,
+      132
+    ],
+    "level": [
+      44,
+      148
+    ],
+    "operator": [
+      36,
+      140
+    ],
+    "status": [
+      40,
+      144
+    ],
+    "type": [
+      32,
+      136
+    ]
+  },
+  "member_split": "present status string vs absent status level asInt; no JSON provider execution",
+  "null_data_normal_result": 0,
+  "numeric": {
+    "0": "signed configured < observed",
+    "1": "signed configured > observed",
+    "2": "configured == observed",
+    "3": "configured != observed"
+  },
+  "numeric_premise": "configured status -1 and exact on record string",
+  "original_execution": 0,
+  "raw_bytes": 48,
+  "semantic_host_cases": 0,
+  "status_comparison": {
+    "2": "decoded == configured",
+    "3": "decoded != configured",
+    "other": "false"
+  },
+  "unknown": [
+    "raw serializer value coherence",
+    "condition operator-name decoding",
+    "query/provider/returned type/readiness",
+    "configured scene assets",
+    "full ownership/unwind/concurrency",
+    "units/domain/physical outcomes"
+  ]
+}

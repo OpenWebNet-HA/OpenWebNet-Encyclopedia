@@ -1,0 +1,10 @@
+{
+  "scope": "One spacing-only prose precision fix before independent review; source/code/results unchanged",
+  "old_report": "REPORT.md",
+  "old_sha256": "14ce3ff928aa3770fb76fe5fec2ec903c0d787aacc2f5a5c3da3ee8def4b9424",
+  "new_report": "REPORT.v2.md",
+  "new_sha256": "b838a55616eb012ce7b00aa1f355ae1ae13bdff3e132359be5502f0b02ea47b3",
+  "exact_old": "copies scene+104/+1088-byte handle records",
+  "exact_new": "copies scene+104/+108 in8-byte handle records",
+  "history": "Original report already retained in report-first-candidate; no overwrite or fabricated draft."
+}

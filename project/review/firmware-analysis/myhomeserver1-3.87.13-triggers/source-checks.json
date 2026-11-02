@@ -1,0 +1,43 @@
+{
+  "checks": [
+    {
+      "collector": "time-trigger/collect_time_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "3d87e2",
+          "wall_time_seconds": 0.090050736,
+          "exit_code": 0,
+          "original_token_count": 44,
+          "output": "{\"check\": true, \"outputs\": 20, \"spans\": 11, \"PIC_keys\": 9, \"vtables\": 2, \"relocation_chains\": 4, \"direct_calls\": 9, \"byte_guards\": 15, \"inputs\": 4, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "collector": "time-condition/collect_condition_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "156963",
+          "wall_time_seconds": 0.204936597,
+          "exit_code": 0,
+          "original_token_count": 14,
+          "output": "{\"check\": true, \"outputs\": 20, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "collector": "service/collect_service_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "954b52",
+          "wall_time_seconds": 0.147647365,
+          "exit_code": 0,
+          "original_token_count": 18,
+          "output": "{\"check\": true, \"outputs\": 21, \"spans\": 13, \"original_execution\": 0}\n"
+        }
+      }
+    }
+  ]
+}

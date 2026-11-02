@@ -1,0 +1,93 @@
+# MH202 run18 — original script node construction, BEGIN head and execution END
+
+**Static original source; runtime and physical execution0.** The actual list head supplying run17's GOTO path is the first scanned record whose line remainder begins with the six bytes ` BEGIN`, under the selected normal file/stdio/allocation premises. Before that marker, other non-comment records do not populate the list. After it, later non-comment records are appended—including END—and construction continues to end of file. Execution handles END separately.
+
+This closes a useful semantic boundary left by run17's arbitrary synthetic labels: the selected initialized head is an actual BEGIN marker entry, rather than an established ordinary action node or an extra sentinel allocated outside the script. The selected complete construction body does not explicitly initialize the final next word to NULL or head. This is a local write contract, not an observed invalid-script outcome, memory defect, guaranteed crash/hang or absence of wider allocation/provider effects.
+
+Original images, earlier reports, synced sources and repository documentation remain read-only. No original ARM/vendor/interpreter/stdio/allocator/process/network/device code, file operation or physical transaction runs. Four finite host cases describe supplied byte positions and source effects, not an executable replacement grammar or real script test.
+
+## Original allocation and actual scanner caller
+
+Normal-image `/home/bticino/bin/bt_script` SHA256 is `f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4`.
+
+At main `0x9ae8..0x9af0`, the program requests `operator new(12)` and stores the returned pointer in exported `inizio`, VA `0x138a4` (`0x13494+0x410`). There is no node constructor or explicit three-word initialization at this allocation site. The scanner call is `0x9af4→0x94d0`.
+
+After scanner return, main tests r0 against0. A nonzero result loads inizio and stores it into exported `esegui`, VA `0x1392c` (`0x9afc/0x9b00`), then enters the actual node-offset read loop at `0x9b2c`. A zero scanner return takes the separate error/end path. This is the original guard, not a claim that nonzero validates a complete executable script.
+
+The retained scanner source is complete and contiguous: `0x94d0..0x9594`, `0x9594..0x97e8`, `0x97e8..0x9820`. The middle span includes pre-BEGIN directive handling to preserve its branches rather than infer behavior from isolated list stores. Only explicitly whitelisted public syntax literals are exported as text; no packaged configuration or credential content is read into the report.
+
+## Token, label and file-offset relationship
+
+Selected scanner `0x94d0` requests fopen with mode `r`; the input pathname comes from its existing global. On the nonnull stream path it sets started register sl=0 and local tail r7=0. At the bottom of the loop it invokes **fscanf with original format `%s`** into the global line buffer (`0x97f8..0x9808`). The loop repeats unless the imported result is exactly−1.
+
+At `0x9518/0x951c`, a token beginning with ASCII slash47 takes the comment-rest branch `0x97e8..0x97f4`: request fgets for the rest of that line, then request the next token. It does not create a node in this selected branch. This is a first-token-byte rule, not a reconstruction of all comment syntax.
+
+For another supplied token, the scanner calls atoi on that token at `0x9528`; the returned integer is retained as the candidate numeric node label r6. It then calls ftell at `0x9534`, computes **r5=returned position+1** at `0x953c`, and calls fgets to read the remainder into the line buffer at `0x9548`.
+
+Thus the node's offset is derived from the stream position **after the label token**, plus one byte. It is not simply the start of the original line or an ordinal index. For the deliberately supplied simple ASCII form `10 BEGIN\n`, a normal token scan stops before the one space, so the saved offset points at the B in BEGIN. This is a finite ordinary stdio premise, not validation for arbitrary separators, line endings, failed reads, ftell errors, long records or malformed source. The ftell/fgets returns are not checked locally before the selected uses shown here.
+
+## First BEGIN populates the existing head
+
+While started sl remains0, `0x9570..0x9580` compares the first six bytes of the just-read remainder against exact original literal **` BEGIN`** (one leading ASCII space). Equality:
+
+1. Loads the already allocated inizio head at `0x9584`.
+2. Stores captured file offset r5 into head+4 at `0x958c`.
+3. Stores atoi label r6 into head+0 at `0x9590`.
+4. Sets started sl=1 at `0x95a0`.
+
+Other pre-BEGIN records continue through separate directive checks; they do not take these head stores or the later started append branch. This is a prefix rule: it does not require that the marker end immediately after BEGIN. The actual configured script source is unavailable with extra4; no valid whole DSL example is claimed from this prefix alone.
+
+The head is therefore the marker's **own source record**, under successful matching and storage premises. The program does not create a separate initialized dummy node whose label precedes the script. The source-defined fields used by later consumers are node0=numeric label, node4=captured file offset, node8=next pointer. A complete C++ type/lifetime is not recovered from those uses.
+
+## Appending, duplicate labels and the tail boundary
+
+When started!=0 at `0x954c`, the scanner bypasses the entire pre-BEGIN directive region. It requests another12-byte allocation at `0x9554/0x9558`, then:
+
+| Original VA | Explicit source effect |
+| --- | --- |
+|0x955c|old tail+8 = newly allocated node pointer|
+|0x9560|new node+0 = atoi label|
+|0x9564|new node+4 = ftell+1 offset|
+|0x9568|local tail = new node|
+|0x956c|continue at token-scan loop0x97f8|
+
+Each subsequent non-comment token creates a node on this selected started path, without a label uniqueness comparison in that branch. A later remainder beginning ` BEGIN` is an appended node; it does not replace the original head because this branch bypasses the first-marker test. The finite duplicate-label example preserves both records, which does not establish a user-level error or intended label policy for all source forms.
+
+Every append writes the **previous** tail's next field. Neither the main allocation site nor this selected complete scanner body explicitly writes0/head into the final tail+8. In a one-marker-only construction, even head+8 has no selected explicit link store; with later records, all interior links are supplied by subsequent appends and the last link has no selected store. The payload allocations use operator new, so zeroed final storage is not an initialization guarantee of this source path. Actual allocator bytes, wider aliases, later operations and invalid-script effects remain unknown; no uninitialized-memory defect or hardware/runtime claim is assigned.
+
+## Construction EOF and execution END are different boundaries
+
+Construction has no END stop on the started path: after creating its node, it jumps directly back to fscanf. `0x980c` checks fscanf return against−1; on equality `0x9814` adds2 to that return value and returns **1**, independently of started. Thus reaching this EOF return without a matched BEGIN does not produce the selected head payload stores, yet still returns nonzero locally. This is an exact limited counterexample to equating this return with “a valid initialized list was proved”; it is not an observed outcome of feeding an invalid script, an assertion about unknown allocation bytes, or a full error-policy verdict.
+
+The execution tail separately compares current line text's first three bytes with exact public literal **END** at `0xaa68..0xaa80`. Equality requests the end helper repeatedly until its nonzero return (`0xaa84..0xaa8c`); the ordinary next-node path is bypassed. Nonmatching text instead loads esegui+8, stores the successor into esegui and returns to `0x9b2c` (`0xaa94..0xaaa0`). The selected construction code can append records that follow an END record; their presence is distinct from whether ordinary execution ever reaches them.
+
+At `0x9b34..0x9b50`, actual execution reads node+4, requests fseek with whence0, then fgets into the1024-byte line buffer. It does not use node0 as an implicit file-line index. None of these imported effects is executed here.
+
+## What this adds to GOTO
+
+Run17 proved GOTO's two pointer positions: matching head leaves esegui=head; a later matching successor leaves esegui at its predecessor; the subsequent normal interpreter tail advances once. Those remain source facts, not new experiments in this batch.
+
+This construction source now supplies a concrete head identity: **the matched BEGIN record**. Under consistent shared-global bindings, valid reachable nodes, ordinary helper return and reaching the non-END outer continuation, GOTO to that head label advances to the first appended source record. This is not evidence that GOTO necessarily skips an ordinary first action: the previous `[10,20,30]` examples were deliberately arbitrary synthetic labels, while this pass establishes how a BEGIN entry can occupy the head in the actual program.
+
+The helper's search of successor labels, handling of missing or duplicate labels, head-marker pacing and numeric bounds do not become a complete language/termination proof. This batch neither runs GOTO nor repeats its prior pointer/counter matrix. Command-gate clearing, R/P production, Only-if semantics and live process/lifetime behavior are untouched.
+
+## Finite host cases and reproducibility
+
+`host-selected-construction-cases.json` contains four explicitly supplied ASCII files, with numeric label tokens separated by a single space and normal newline termination. The model derives byte positions arithmetically under successful ordinary scanning/EOF premises; it performs no libc or original parsing.
+
+| Host-only case | Selected construction effect |
+| --- | --- |
+|BEGIN, NOP, END|head is BEGIN; NOP and END are appended|
+|preamble, comment, BEGIN, second BEGIN, END|pre-marker entries are excluded; second BEGIN appends|
+|BEGIN, two equal labels, END followed by NOP|duplicate label records and the after-END record remain in construction|
+|NOP, END without BEGIN|no selected head payload stores; EOF local return remains1|
+
+A model field with no next index means **no explicit final link store**, not a NULL pointer value. Actual source allocations/stdio/error paths and configured contents are not fabricated.
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/lifecycle/run18/collect_nodes.py --check
+```
+
+PASS:12 deterministic outputs, five spans,29 exact instruction words, three inputs, four safe literal assertions and four finite host cases. `input-hashes.json` pins the fresh original image, image accessor and immutable run17 report; `original-spans.json` supplies VAs/file offsets/raw hashes. The collector/report/output manifest are pinned together. Original/native/C primitive/linker/EXIT/stop/hook counts all0.
+
+Confidence is high in selected control flow, first-marker head stores, later append stores, offset formula and independent EOF/END boundaries. Ordinary stdio/new/atoi contracts, effective global binding, configured content, allocation/list lifetime and execution sequencing remain conditional. The next useful boundary is actual source generation or a valid unavailable extra4 script showing its marker/label/END contract; that should precede a product-level correctness, invalid-input or termination verdict.

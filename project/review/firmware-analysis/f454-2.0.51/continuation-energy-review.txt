@@ -1,0 +1,61 @@
+# Independent static review: corrected selected-row semantics accepted
+
+Final status: **PASS after material correction and independent recheck.** The corrected report and both current host models now select ordinary-row **replacement**, preserving the separate row0x19 append branch. The original parser/send route, two selected row schemas and narrower terminal representation are supported within the stated static/model scope. No physical calendar/unit/delivery or complete protocol-acceptance conclusion follows.
+
+The initial review was **HOLD**: the first development report/models incorrectly described selected rows0x10/0x14 as cumulative appends. Parent was notified immediately and held integration. This was a static interpretation/model error, not an observed firmware or protocol defect. The original discovery and pre-correction pins below are retained as review history; they are not current findings.
+
+## Material finding
+
+Original `0xe70c` compares row with0x16; unequal reaches`0xe76c`, which compares with **0x19**. Row0x19 alone enters`0xe774–0xe7ec`, obtains `strlen`, sets destination to existing buffer+length at`0xe7e0`, and uses the `*%d*%d*%d` literal at pool`0xe9b0`.
+
+The selected rows0x10/0x14 instead branch at`0xe770` to`0xe7f0`. That path loads the **nonleading-star `%d*%d*%d`** literal via pool`0xe928` at`0xe840`, and sets the destination directly to **context+820 at`0xe850`**, then branches to `sprintf` at`0xdd00`. It **replaces** the persistent text with the current three decimal bytes. It does not preserve or append the earlier two values.
+
+Therefore the selected second record's buffer/parser input must be:
+
+```text
+row10: buffer12*13*14 → *#18*51*56#10#2*2*12*13*14##
+row14: buffer12*13*14 → *#18*51*510#10*2*12*13*14##
+```
+
+The third record temporarily replaces the buffer with`3*15*16`, then the already-correct terminal rule replaces it with`3*15` for row0x10 or`3` for row0x14. Terminal values/frames and the distinction between intermediate/terminal parser/send calls remain valid. Existing critical assertion`0xe7e0` belongs to the **other row0x19** append branch and cannot corroborate selected-row accumulation.
+
+Requested repair, now addressed: preserve original dispatch span`0xe70c–0xe7f0` plus ordinary sprintf call boundary; add exact assertions for the0x19 guard and ordinary format/base destination; correct report, both sequences, transient buffers and derived hashes. Exact superseded bytes were preserved before replacing evidence. No original code execution was necessary.
+
+## Other scoped checks completed
+
+Read the original header/class/count/row selection, first-value/metadata paths, terminal jump table and both parser/send pairs. Row0x10 dispatch to`0xddc0` and row0x14 via table entry`0xdd5c`→`0xde00` support two-field versus one-field **replacement** into the original buffer. Both parser calls target caller output object r7, with local text pointer/length, and send calls require descriptor word!=−1 and use object wire text+0x879c. No `IsCorrect` check occurs between the inspected call sites. These are static calls, not accepted parser inputs or successful delivery. Negative alternate-DH discussion is appropriately bounded to the inspected mediator/helper/FD branches; it does not claim an archive-wide absence. Physical metadata/calendar/unit and full-producer/parser/runtime meanings remain open.
+
+Independently ran only collector `--check`:35 saved static outputs,27 spans,26 exact words,9 input hashes and two host models reproduced. This equality check confirms the current model is reproducible; it does **not** validate the erroneous selected-row append interpretation. Additional host `objdump` inspection of`0xe70c–0xe7f4` and`0xdce0–0xdd08` exposed the missing dispatch/base-destination evidence. Zero original ARM/JavaScript instructions, CPU helpers, firmware processes, services, network/device operations or prior execution matrices ran. Only this review file was written.
+
+## Pre-correction pins
+
+| Pre-correction file | SHA256 |
+|---|---|
+|REPORT.md|`7917b1bf58e4847a042024391167df8574ea1b67d24637706adb428a5320ae51`|
+|collect_evidence.py|`22f6de3ae713c1621e582026bfff44f214acccb37f14dc98ed75622d39add231`|
+|host-oldstream-model.json|`cf106a4986a0bb51f02ee43c17dd67d3dc3cd28d62c71e003b6fda9ef85b550c`|
+|critical-words.json|`e0d31de1b66c976c561aa198164d8672a27aff6bee07834ab31bc701c25b6325`|
+|original-spans.json|`2eeb17254ec06d7a4d77202790e39b270d55afb95b6a4a91a6a1b33cd564f28f`|
+|output-manifest.json|`bced8ab6618d8943417006924145d6702cd602a65911200231b1a9c5e8e707f7`|
+
+These superseded files are now mapped explicitly by `development-pre-review/snapshot-sha256.json`, SHA256 `bab25028ec0f379996750b1a8d93d19ac649660bdf0222946d25362410c4ae7b`. Its8 files include all6 pins above plus old validation and the misleadingly named `oldstream-append-values.txt`. Independently hashed every mapped snapshot: all8 match. `CORRECTION.md` records the material error and corrected outputs, SHA256 `71a301893850f3bb828ba4c9d788bda992b750527ba23e899690493a39f777cf`. These history files must not be substituted for the current report/model.
+
+## Corrected independent recheck
+
+Reran only current host collector `--check`: **36 generated outputs,28 original spans,30 exact words,9 input hashes,2 host sequences**, zero original instructions/hooks. The added original row-dispatch span includes `0xe76c` compare0x19 and conditional branch`0xe770`; four additional exact words pin that dispatch and ordinary format/base destination at`0xe840`/`0xe850`. The original `sprintf` at`0xdd00` and terminal replacements remain unchanged.
+
+Independently recomputed all6 parser-input strings directly from the host model's actual raw records and header fields, rather than comparing only fixed expected fixtures. Both selected buffers progress `10*11`→`12*13*14`, then current-record temporary `3*15*16` is replaced by terminal`3*15` (DIM56) or`3` (DIM510). No prior values are concatenated into the second output. Metadata2 is taken from the first record only for row0x10; row0x14 omits it. The corrected report explicitly separates row0x19 append behavior, and its final next-question wording asks about differing first/later/terminal field counts rather than cumulative prefixes.
+
+The owner corrected a metadata cycle: the output manifest had included the interim peer-review file. The stable manifest now explicitly excludes this independent review, delegates its pinning to the final batch evidence index, and preserves all49 other entries. Independently checked all49 current hashes: all match, with no source/report/model changes. Stable `output-manifest.json` SHA256 is `979f86c88e9bda629fde6ee04862c3f745788a1c5d73cccb861b700e57408fae`. Editing this review therefore does not invalidate its reviewed source/output manifest.
+
+Current reviewed pins:
+
+| Corrected file | SHA256 |
+|---|---|
+|REPORT.md|`4b1c391eec22a9ec880c5ac8cb32830a23bd6c2ff983dc918b02363fcd288652`|
+|collect_evidence.py|`7a9d3f37dac6daeca4cbbd7642d039924a7be891a4aeaceea8573427b70ea89a`|
+|host-oldstream-model.json|`546fd529b0199d6d6ca0201cbcc78f175f3f4d2868a11aee96a6a81915581ba7`|
+|critical-words.json|`9cfa064e9d94c2980b2ad461123877f1424d9e15fd7afd43a3f3815aadb7743b`|
+|original-spans.json|`b6d1596cca4b1143487de4572782df3a3b6bfa207f90f1084bd0c5b4cfbed85c`|
+
+No further semantic correction requested for these exact bytes. Negative alternate-DH scope remains bounded; a longer-DH table7E producer is still unresolved. The models remain static finite derivations and the original parser/send **call sites** do not establish full framing acceptance, runtime initialization, later caller effects, transmission, physical device production or calendar semantics. No ARM/JS/native runtime or broader old matrix was rerun during either review pass.

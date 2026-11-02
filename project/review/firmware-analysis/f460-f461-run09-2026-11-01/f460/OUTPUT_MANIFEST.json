@@ -1,0 +1,64 @@
+{
+  "collector_sha256": "760219b7716c18773cfa5f5d84f49188987e10a8f675639dd22a63285cf1f385",
+  "counts": {
+    "PIC_joins": 7,
+    "classes": 2,
+    "guards": 35,
+    "imports": 5,
+    "inputs": 6,
+    "local_calls": 4,
+    "new_original_execution": 0,
+    "spans": 10
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 1158,
+      "sha256": "c70ed3e5e2145b0195d0c4a5811ab1c30137143699ebc2e9961cb70af7b7dfc5"
+    },
+    "SOURCE.json": {
+      "bytes": 11943,
+      "sha256": "aa0d5a80d2d1cb3e04bf8cd020f15b70bef3a7d71d01400dc3b565a34444de5e"
+    },
+    "spans/compiled-destination-source-prefix.txt": {
+      "bytes": 1840,
+      "sha256": "8d89c361ab5f9a6e976033037a1894c45af735fee35da27eb100cbf765b45035"
+    },
+    "spans/compiled-primary-install-normal-return.txt": {
+      "bytes": 1310,
+      "sha256": "42505c0b6a02e0113b46ef1d9a3e4cf8df4d8179dc1dd23d8741fc6c048d5382"
+    },
+    "spans/condition-common-enabled.txt": {
+      "bytes": 1765,
+      "sha256": "3eae0fcaec1ec9eb8487a7e3b38c9c543ad71388ae4c4067ff9fc0b3425fbf31"
+    },
+    "spans/condition-common-type-row.txt": {
+      "bytes": 1517,
+      "sha256": "5838b9e560f527cf33776947be47eafbc46ba94ad7ded732457206ea70929d5b"
+    },
+    "spans/condition-loop-own-switch.txt": {
+      "bytes": 1193,
+      "sha256": "33b137d42a687bdbb78696f3d064b15643d2d2e4e675d9b015d367673d7d1d1c"
+    },
+    "spans/enabled-byte-and-type-copy.txt": {
+      "bytes": 724,
+      "sha256": "28076d557271c9ba9b4d31b6b0df2da863725b43c1be41822e6b97e4e2203377"
+    },
+    "spans/entire-selected-predicate.txt": {
+      "bytes": 313,
+      "sha256": "5c49ccdaadc897c813bd6b2d5360668191fdbe65ed483bc606923fc6eb653212"
+    },
+    "spans/pointer-vector-append.txt": {
+      "bytes": 773,
+      "sha256": "97420712fc707fde99066d7c7d3a19b8843a7b6003735cb632cbeb8cad895797"
+    },
+    "spans/selected-raw-parser-prefix.txt": {
+      "bytes": 1241,
+      "sha256": "d5f2030f9fedd488a70af36d16ca7a23e411862a30329d665e978ea6aaa955a3"
+    },
+    "spans/selected-reparse-construction-publication.txt": {
+      "bytes": 1952,
+      "sha256": "273497dae3809cba34e7a9c88c9a6db2feab127bd984753d541e3146eb4d5e05"
+    }
+  },
+  "report_sha256": "db8227a6259b29bf1c29cb118dbe462de6c21ae5eb675bdaf07af0674f688a19"
+}

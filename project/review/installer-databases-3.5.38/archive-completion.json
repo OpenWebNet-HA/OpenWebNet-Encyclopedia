@@ -1,0 +1,12 @@
+{
+  "status": "CANONICAL_ARCHIVE_COMPLETE",
+  "timestamp_UTC": "2026-10-31T16:26:11.169405+00:00",
+  "canonical_commit": "974eced66cf40fdc5b5dc3417357244db710d848",
+  "objects_readback_verified": 13,
+  "new_registry_records": 7,
+  "installer_member_paths": 20,
+  "manifest_sha256": "dff0aac04bdb06c9ea298845d8666dce293818e65b03ae5882c3ab0aed883a05",
+  "private_bucket": "openwebnet-data",
+  "scope": "Established configured-helper workflow; only7additive manifestrecords published on main. No vendorbytes or researchbranch published. Localresearch manifest synchronized after exact prior snapshot; earlier historical validators retain prior-source captures.",
+  "user_authorization": "Archive all of these as canonical evidence; prior established manifest-only registration/publishing workflow reused without new confirmation."
+}

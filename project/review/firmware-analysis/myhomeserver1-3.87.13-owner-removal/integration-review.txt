@@ -1,0 +1,52 @@
+# Selected owner removal and reset-candidate caller: integration review
+
+Verdict: PASS for the frozen current integration and existing exact exports. No correction requested. This is source-aware of my independent removal audit and a documentary comparison of the reset-caller area with its authoritative report and independent root source review/checker. It is not a fresh complete original-byte reset-source audit, native replay, all-encyclopedia review or whole-lifetime/runtime assessment. Original/author/repository files and previous reviews remained untouched.
+
+## Essential scope and source-to-summary checks
+
+The serialization/action-ownership page preserves the established append-owner proof while explicitly treating its previous removal uncertainty as that packet's historical boundary. The selected new local caller0x3e742 ->0xb6b5c is concrete source, with supplied context/ID and equality to startup main's actual registry still a premise. The matching-node pair20/24 is cleared before release; prior strong count1 requests disposal; normal continuation requests keyed erase. The text does not replace these conditional requests with observed destruction, actual count state or natural invocation.
+
+The SceneRunner dispose join remains conditioned on the actual loader-produced control type and normal providers/returns. Control+12 reaches inherited scene teardown, whose holder/compiled-action cleanup has its own null/detached/other-owner and concurrency limits. No natural after-poll timing, last-owner guarantee, every-worker completion, adequate lifetime, memory defect or physical outcome is claimed. Scene/control registry nodes, compiled action vector, trigger/condition handles and thread state/holders stay distinct.
+
+Whole-tree recursive delegation is distinguished from the non-whole-range next-node/rebalance/delete28/count path. The selected caller's cleared pair is not silently treated as an independent second owner release or as erasure of the compiled vector. Valid tree/key/returned-node alias correspondence, normal helper returns and complete errors/unwind remain explicit. The summary's deletion language is read as those original normal-path requests, not an executed heap operation.
+
+The reset-candidate result excludes ONE selected callsite hypothesis:0xa7a06 supplies current SP+4280, and constructor byte+72 therefore addresses SP+4352 under valid stack/ABI/callee-return premises. Its pointer64/length68/terminator72 source is an inline string on that call, not shared stop byte0x167800 or registry mutex+72. Other constructor destinations/callers, indirect/bulk/provider writers and a positive shared reset owner remain open. Historical22/747 scopes are neither subtracted nor declared exhaustive; no permanent latch, absence, defect, cancellation or relaunch inference appears.
+
+Synthesis/coverage/ranking retain natural caller eligibility/context, ownership order, reset, assets80/81/94/95, effective providers/readiness, full concurrency/unwind and physical gaps. Private class/context/key roles do not become public protocol or physical product functions. All new original/provider/OS/thread/JSON/clock/network/bus/physical execution and semantic fixtures remain0; earlier execution ledgers and wider Device/source gates remain unchanged. Closed transport/authentication/session/framing/equivalent bodies remain closed.
+
+## Preservation, exact exports and references
+
+All7 current documents match the frozen candidate bytes, sizes and hashes. All31 SOURCE_EXPORTS pairs match the local source and published bytes/metadata. Removal16 and reset8 first-candidate rows match their exact originals/indexes. Saved parent read-only checks record14 removal and6 reset outputs,20 total. This review does not add a runtime corpus or claim a fresh full-source replay.
+
+The earlier page is preserved exactly in integration/pre-edit. Independently reconstructing DOCUMENT_PATCH's one sentence replacement and focused section insertion yields the current page byte-for-byte; the previous page's other source claims are not silently rewritten. Prior failed/versioned histories and unavailable MH202 intermediate-history disclosures remain retained and scoped. Exclusive first-candidate identities are checked without claiming independent observation of every development event.
+
+There are19 local Markdown link occurrences and0 fragments. All17 existing targets resolve. Only capsule integration-review.txt and validation.json await actual assembly. This review certifies neither their future bytes nor current existence. Parent must create the exact files and then run final strict link/identity/ESG/ECV/diff gates with them present, without placeholders or missing-link exemptions. Coordination log references to later results are bounded checkpoint sequencing, not premature final certification.
+
+## Exact current document pins
+
+| Workspace-relative file | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md` | `c9003e66c58e126236b4829218109e3033cfb984c1a16dc0428203f7cd1a9242` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-owner-removal/README.md` | `780c58e9d7cf02fc4ea069505d10a1598fc091a51681d2241cf87fa353462173` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/SYNTHESIS.md` | `f04e1b1b2aa8c4efe6a029b261ffbdf58a4ff9661aa64231b1162ecfbe3d9cc1` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/COVERAGE.md` | `e5f1ce7d54b730a3bb3d670e607596184ac760a66e8332cd34433c853d5e2572` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/RANKED_REMAINING_QUESTIONS.md` | `2cb95bebb3520d27158808a804d6854d237b3d24c075534ea89968d093d04616` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/RUN_LOG.md` | `c73bf6d170f5dc63646827f11fec182ef247a642b47d9519f764a684a7960d60` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-owner-removal/SOURCE_EXPORTS.json` | `cec45325466ce717074cb084580e677bf3459539fdb5744607e0afc7b300ebf8` |
+
+## Source, independent review and preservation pins
+
+Paths below are relative to this research batch.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `removal/REPORT.md` | `68c32fd66ef0d6c8d310a9e1efde7163a76fd334399a8cb5c025dc4c6eb74659` |
+| `reset/REPORT.md` | `2ba2740c2dd49d5cb9a40c265c0effc083c30d2fe172c053b21ee7d2ab63fdbd` |
+| `reviews/removal-source-review.md` | `1ee9b216941061b06a74c85269d6d64ec67f24e2f262434b046535bacae4cc2b` |
+| `reviews/reset-source-review.md` | `a868233485d4af65ae71948231b97a75db056fa43785e160e87156e75c57e8c3` |
+| `removal/first-candidate/INDEX.json` | `7b9008d42de91d831c0fc6600cde9d134e138660903a41ad52aa988fefa6dd98` |
+| `reset/first-candidate/INDEX.json` | `659ea2e2c8cf7e58bbb321575454ad0b478b1710ed44ca8e1fbfbc9c309e66e4` |
+| `integration/pre-edit/INDEX.json` | `c670ba59d86236ccfb58594d845d33ace29287d0da3e382c1c8ce4c667e34519` |
+| `integration/DOCUMENT_PATCH.json` | `8d85dce627e58028f959723103dedecd9ae76a47c810b5e3d2c1a9021b84f4fc` |
+
+Frozen current candidate index SHA256 `706516808dd519d1342906ba163edc40925227b7d22ddfb15a0e202298c55174`. SOURCE_EXPORTS.json SHA256 `cec45325466ce717074cb084580e677bf3459539fdb5744607e0afc7b300ebf8`.

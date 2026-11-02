@@ -1,0 +1,125 @@
+{
+  "scope": "One constructor-reachable signed-int candidate-provider source route and exact history/review; no provider binary",
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/INPUTS.json",
+      "published": "evidence/INPUTS.json",
+      "sha256": "def464f77e3c02d9dac16021c814689c340976f425d70118c46e5274d2dadabb",
+      "bytes": 1377
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/ORIGINAL_SOURCE.json",
+      "published": "evidence/ORIGINAL_SOURCE.json",
+      "sha256": "0a7eee2964b7a7e985a8a1881a2d14208c649af8ee33a35e5819a9a8f82d9fc5",
+      "bytes": 5623
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/OUTPUT_MANIFEST.json",
+      "published": "evidence/OUTPUT_MANIFEST.json",
+      "sha256": "787035b44a1ddffa5c3ddb8ec733f176afa0e7903f8553cb3716d30d08629c64",
+      "bytes": 2102
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/REPORT.md",
+      "published": "evidence/REPORT.txt",
+      "sha256": "beff1f9aad24030e988d5507daac8391fc4fe60492c3630a2c10a505a52c6090",
+      "bytes": 5746
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/SIGNED_CONTRACT.json",
+      "published": "evidence/SIGNED_CONTRACT.json",
+      "sha256": "1e3747c5ab2ac652e9fb16de0408f76fc41cecf24bdbdcf869a8e39a3d51937d",
+      "bytes": 1503
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/collect_integer_v1.py",
+      "published": "evidence/collect_integer_v1.py.txt",
+      "sha256": "caa9009edbb70e6fab75fc45c7baaa5502ffc9d2122b6bf0f7cb2343b022aa83",
+      "bytes": 7956
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/spans/asInt-normal-return.txt",
+      "published": "evidence/spans/asInt-normal-return.txt",
+      "sha256": "8c4a8c6d02100ea6a6a3d9eafe0736a1b4553e260233021b096e0661cc320a7f",
+      "bytes": 716
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/spans/asInt-prefix.txt",
+      "published": "evidence/spans/asInt-prefix.txt",
+      "sha256": "84d2169d9efc66a411a06c7a2c1c989178834e9eca85ed1ce1c109115a62bcbd",
+      "bytes": 953
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/spans/asInt-type1.txt",
+      "published": "evidence/spans/asInt-type1.txt",
+      "sha256": "df8b65ee459fe982bc3c56edbc1796a2a81a7c229efbc6837d7440aeec7c8e2c",
+      "bytes": 444
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/spans/basic-tag-prefix.txt",
+      "published": "evidence/spans/basic-tag-prefix.txt",
+      "sha256": "af414d089b457e378fcfef889bc34ad7c79b4e82171387953dc3791cc86a4fd0",
+      "bytes": 1021
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/spans/isInt-normal-return.txt",
+      "published": "evidence/spans/isInt-normal-return.txt",
+      "sha256": "0765fd198e1c5e4028bb7356223e36aaca532a8cdbd47635a89828acee227db6",
+      "bytes": 668
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/spans/isInt-signed-range.txt",
+      "published": "evidence/spans/isInt-signed-range.txt",
+      "sha256": "73ca2a012d21842d83e94284f89cf8573d1ca90f642f7ae13dc220a223c6be22",
+      "bytes": 418
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/spans/isInt-type-selection.txt",
+      "published": "evidence/spans/isInt-type-selection.txt",
+      "sha256": "5f63a4450f5af8a840ca2676d7659b0851119de2eaa225a97f33eeff7e8ce88b",
+      "bytes": 958
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/spans/signed-int-constructor-normal.txt",
+      "published": "evidence/spans/signed-int-constructor-normal.txt",
+      "sha256": "3235415fa5fa78719740908e97fe8c768cbf4c50f00c1831b5502809f78d7f18",
+      "bytes": 573
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/provider/spans/type-byte.txt",
+      "published": "evidence/spans/type-byte.txt",
+      "sha256": "613cf76ab1e5f775eb14e9e3e5bff678b881edb663cc40ba697cf6ab97f36c80",
+      "bytes": 203
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/reviews/provider-source-review.md",
+      "published": "provider-source-review.txt",
+      "sha256": "53a5fea7d019ffffbd57214f18f8afd48a959fd6a791d7563f086027c32994b2",
+      "bytes": 5075
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/integration/pre-edit/myhomeserver1-3.87.13-trigger-serialization.md",
+      "published": "historical-trigger-page.txt",
+      "sha256": "2c1e7ad4af0488d23f081d266fe42050661cc1ff345def8041926f51f23a9c43",
+      "bytes": 3439
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/integration/DOCUMENT_PATCH.json",
+      "published": "document-patch.json",
+      "sha256": "762a2efed07fffd2c71c55c1c3a8c961acc24f2830e3047690d55b2c5aa0a7c0",
+      "bytes": 2157
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/SOURCE_CHECKS.json",
+      "published": "source-checks.json",
+      "sha256": "ad554aaecf7829bcd179c50b18b4531b528422b9004af877466a897a6b1c232a",
+      "bytes": 555
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/PROVIDER_SECTION_CANDIDATE.md",
+      "published": "section-candidate.txt",
+      "sha256": "a8d7a75c787815c39ab474599bedf0593d636fca32ba06add930c3a1075323ec",
+      "bytes": 1767
+    }
+  ]
+}

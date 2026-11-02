@@ -1,0 +1,7 @@
+# MyHOMEServer1 cross-review: guard restoration
+
+Verdict: **PASS** for the previously reviewed seventeen MHS pages and new server-scene page after the sole required correction M1. The original conditional report and exact pins remain unchanged.
+
+The current event-routing paragraph explicitly requires the selected processing return `1`, followed by normal cleanup, before the later second-table registry lookup. This is positive numeric one, not negative one or an inferred public success contract. Its exact pre-refinement snapshot matches root's recorded old candidate hash; the current file matches the recorded new hash. The revision restores the baseline admission guard and changes no provider, lifetime, physical or input-grammar conclusion. All other seventeen reviewed file identities (sixteen MHS pages plus the new server-scene page) are unchanged from the prior independent review.
+
+Current identities are in mhs-by-mh202-pins.v2.json. The detailed 87-section semantic assessment remains mhs-by-mh202.md; its conditional verdict is closed by this addendum. No repository edits, new source inspection or execution were performed. This is not a full Device/source/runtime approval.

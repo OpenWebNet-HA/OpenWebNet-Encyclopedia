@@ -1,0 +1,40 @@
+# Independent source and tool-state verification before a bounded double experiment
+
+This packet verifies original packaged helper identities, the selected stack-canary data dependency, and the complete pre-existing analysis-tool file state. It **does not authorize or perform guest execution**. The fresh harness/preflight remains a separate review gate until its exact candidate has been inspected by root and an independent reviewer.
+
+Original provider `/usr/lib/libjsoncpp.so.1.9.5` SHA256 `5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36`. I independently read its original ELF through ImageVFS/PT_LOAD, source bytes, relocations, symbols, ARM attributes and disassembly. No F454 code, old emulator, Unicorn Python module or native library was imported/executed. Original helper/guest/vendor/process/target API/OS/network execution and semantic numerical fixtures are **0**.
+
+## Exact source and ABI premises
+
+The provider declares ARM v7 application/Thumb-2, VFPv3/NEON and `Tag_ABI_VFP_args: VFP registers`, with IEEE754 number-model attributes. Those are packaged ABI declarations, not target execution. The selected constructor takes the supplied scalar in D0 and copies it through D8, with its receiver in R0. Stack/receiver validity, ordinary hard-float callee preservation and effective candidate self-binding must remain explicit experiment premises.
+
+Selected source entries: C1(double) `0x15ce0`; initBasic `0x15ad4`; Comments move `0x159ec`; type `0x14e3c`; asDouble `0x171c4`, its selected type3 target `0x1724e` and normal epilogue `0x171fe`. Constructor code itself writes zero to object+12, supplies type3 and copies D0 to D8 before initBasic, then writes D8 to object+0. initBasic writes byte+8=3, clears only the selected allocation-flag bit at +9, and handles the comments pointer and offset fields separately. A harness must not pre-seed the resulting type or union in place of those original instructions.
+
+Original Comments move loads the source pointer, zeros the source slot and installs that pointer at the destination. Since the actual constructor first wrote destination+12=0 and initBasic supplies a local zero source, its selected old-destination-null branch at `0x159fa` reaches `0x15a1e` without the nonnull deallocation calls. The unused nonnull paths must remain disallowed/abort boundaries rather than successful host-free substitutes. type() reads object+8; the original TBB bytes `37 18 1f 34 3a 03` select `0x1724e` for type3. That block reads the union into D0 and returns through the original normal stack-guard epilogue.
+
+The three selected self-definition requests are original ARM PLT entries `0xba94` (initBasic), `0xb074` (Comments move), and `0xb768` (type), with original JUMP_SLOT definitions `0x15ad5`, `0x159ed`, `0x14e3d`. Any explicit redirection in the proposed experiment must call those original candidate bodies and preserve link/Thumb state; it is not a proof of the installed loader's interposition or binding decisions. No scalar/body shortcut or provider-success primitive is justified by this packet.
+
+## Sole required selected-path data relocation
+
+All four selected stack-check PIC joins independently resolve **base `0x32a40` + offset `0x558` = GOT slot `0x32f98`**:
+
+- initBasic prologue pool `0x15b48` / ADD `0x15ae0`;
+- initBasic epilogue pool `0x15b50` / ADD `0x15b30`;
+- asDouble prologue pool `0x17298` / ADD `0x171cc`;
+- asDouble epilogue pool `0x172a0` / ADD `0x17202`.
+
+The original relocation is `R_ARM_GLOB_DAT __stack_chk_guard@GLIBC_2.4`. This is the sole required **selected-path** data relocation identified here, not the provider's only GLOB_DAT. A private canary and this explicit setup write are analysis fixtures and must be counted separately from guest stores/callbacks. No target TLS, kernel canary or actual process state is provided.
+
+PT_LOAD source bounds are RX VA `[0,0x21bd4)` and RW file VA `[0x3277c,0x33004)`, with memory extent to `0x3304c`. The latter file bytes map from file offset `0x2277c`. A private runtime mapping must use these translations; source addresses are not observed live process addresses. Required selected code, literal/TBB words, GOT slot, stack, receiver and canary backing must be mapped and permission checked. The packet records source bounds; exact private guest bases, PC allowlists, write/read guards, IRQ/unknown-import handling and exit/count caps still require the frozen harness review.
+
+## Complete old tool tree and RECORD
+
+`TOOL_TREE_BEFORE.json` is an explicit read-time BEFORE inventory, captured for this packet at 2026-11-01 03:10:41 UTC. It contains all **63** existing tool files with relative paths, sizes, nanosecond mtimes and SHA256 hashes. Every one agrees with the independently retained MH202 run27 parent baseline, including RECORD and pre-existing bytecode files. Current path-set equality is checked; no extra/missing file is silently ignored.
+
+The standalone Unicorn distribution declares version **2.1.4**. Its RECORD contains **63 rows**: **41** carry cryptographic hashes and sizes, and **22** have no RECORD hash (RECORD itself and 21 existing `.pyc` files). All 41 declared hashes/sizes are independently verified. The separate full 63-file SHA/size/mtime baseline comparison covers the 22 unhashed RECORD entries too. This does not equate unverified package provenance with a firmware property; it establishes exact unchanged local analysis-tool bytes before the planned experiment.
+
+`collect_verification_v2.py --check` imports only the metadata ImageVFS helper, reads original/tool files and invokes host binutils. It neither imports Unicorn nor runs any guest helper. It reproduces source/tool inventories and all output bytes, compares the pinned report/collector and first copies, and fails if the old tool tree changes. Exclusive generation refuses outputs or snapshot overwrite. Index bytes are computed before opening the index file. Source evidence and this before inventory remain immutable even if a separately approved later experiment occurs; no later after-state is represented as this historical capture.
+
+## Version history
+
+The first v1 generation and check stopped before any output: the current and baseline 63-file maps were identical, but Path-component ordering differed from POSIX relative-path string ordering. Exact failed v1 report/collector and failure metadata were preserved before the parent made its own pre-v2 snapshot. This authoritative v2 normalizes rows by their relative path strings before the same strict whole-row comparison. All 63 path/size/mtime/hash and 41 RECORD hash/size checks remain required; no tool identity or original-source condition was weakened. No guest execution or tool mutation occurred. `VERSION_HISTORY.json` pins the exact old files and parent snapshot.

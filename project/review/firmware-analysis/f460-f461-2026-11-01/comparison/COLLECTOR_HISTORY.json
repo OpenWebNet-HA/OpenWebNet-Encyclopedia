@@ -1,0 +1,8 @@
+{
+  "v1_sha256": "e6411888fe26d628a6d9ca6fdc58dd4c7e088a1e0ea05ee0e2c65f31104b18c2",
+  "v2_sha256": "37df4f6dc32c1440996d41fb9825e52197ce703575120899911258cd0dcfb080",
+  "failure": "Initial AST parse rejected missing whitespace in Python conditional else64 before collector execution/output generation. Actual error observed in tool return; no fabricated historical on-disk terminal file.",
+  "correction": "New v2 changes exactly else64 to else 64; v1 and pre-v2 exactcopy unchanged; no source assertion removed",
+  "original_execution": 0,
+  "outputs_generated_by_v1": 0
+}

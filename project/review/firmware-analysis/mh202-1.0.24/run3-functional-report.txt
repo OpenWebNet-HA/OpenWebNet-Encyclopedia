@@ -1,0 +1,76 @@
+# MH202 run3: actual DISABLED action guard and script IPC producers
+
+The selected original **OWRITE** implementation checks a runtime `DISABLED` pathname and returns1 before constructing an OPEN request when the stat call returns0. This closes a concrete action-level marker consumer; it does **not** turn taskmanager's disabled state into demonstrated suppression of start events, all script commands, or a manual-level Only if stage.
+
+The batch also establishes actual `S <pid>\n`, `F <text>\n` and `E\n` producer construction corresponding to the independently reviewed taskmanager receiver. It does not establish complete FIFO delivery, a successful child process, parser acceptance or physical effects. **Original ARM/PHP/JS/vendor instructions and hooks remain0.** All reads are host/static; no libc call, FIFO, connection helper, service or network ran. Connection setup remains an opaque delegate, with no session/authentication/framing investigation.
+
+## Original provenance and reproducibility
+
+Normal-image inputs, independently verified through ImageVFS:
+
+| Original image path | SHA256 |
+|---|---|
+| `/home/bticino/bin/bt_script` | `f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4` |
+| `/home/bticino/lib/libdomotica.so.0.0` | `5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09` |
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/functional/run3/collect_evidence.py --check
+```
+
+The collector verifies20 deterministic outputs plus manifest, eight exact original disassembly ranges,11 original words, safe literal/PIC relations, selected symbol/relocation/dependency metadata, bounded direct-write call sites and finite host formatting/return examples. [input-hashes.json](input-hashes.json), [original-spans.json](original-spans.json) and [critical-words.json](critical-words.json) pin the exact original paths, file offsets, VAs and range hashes. No old report, original tree or repository file changed. All findings start from MH202 bytes.
+
+The first collector draft expected the directive prefix without its original leading blank. Its assertion stopped **before generated outputs were written**. [CORRECTIONS.md](CORRECTIONS.md) and the exact preserved draft record that host transcription correction; the final assertion requires the original twelve-byte ` $NOMESCRIPT` prefix. It was not a firmware failure or executed parser test.
+
+## Actual OWRITE marker consumer
+
+Original `libdomotica!OWRITE(char*)` begins at `0x8544`. Its PIC base computes to `0x12114`. The pool relations at `0x89dc/0x89e0/0x89e4` select:
+
+```text
+format: %s%s/DISABLED
+prefix: /var/tmp/bticino/script/
+name:   GOT-resolved Script global
+```
+
+The caller passes those values to sprintf at `0x85b0`, then the resulting pathname plus a local stat-output buffer to `0x9188` at `0x85cc`. That tiny original wrapper simply rearranges the arguments, sets version argument3 and tailcalls imported **`__xstat`** at `0x9194`. It is not a connection routine despite objdump's nearest exported-symbol label. See [owrite-marker-and-request.txt](owrite-marker-and-request.txt), [owrite-pools.txt](owrite-pools.txt), [stat-wrapper.txt](stat-wrapper.txt) and [safe-literal-evidence.json](safe-literal-evidence.json).
+
+At `0x85d0..0x85e8`, **stat result0** takes the marker-found log branch, sets the function's return slot to1 at `0x8618..0x861c`, and branches to the return tail before any selected F formatting/write. A nonzero stat result takes `0x8624`, which formats `F %s\n` from the OWRITE argument and then calls write at `0x8688`. Return1 in the marker branch is an observed **source return value**, not proof that an action occurred successfully. This batch does not establish how each interpreter call site consumes or ignores it.
+
+This is a concrete cross-area refinement: taskmanager's run1 disable function creates `/var/tmp/bticino/script/<record-name>/DISABLED`; enable unlinks that path. Run2 proved that selected event/start/always callbacks do not themselves test record+52. OWRITE now supplies a later consumer of a matching pathname. The join depends on **consistent configured names and runtime prefix**, correct global binding and accessible filesystem state. It is not observed gateway behavior.
+
+## Names and symbol ownership remain explicit
+
+Taskmanager derives its record-name field from the scenario `$NOME` directive. The interpreter has a separate original branch at `0x979c..0x97e0` comparing the twelve-byte literal **` $NOMESCRIPT`** (leading blank included), finding a quote, requesting a copy/tokenization of the line, and requesting strcpy into its exported **Script** object at `0x138b8`. See [script-name-directive.txt](script-name-directive.txt). The selected branch does not read taskmanager's record-name field directly.
+
+The intermediate line-copy source/destination overlap. This report records call arguments and destination ownership rather than claiming a portable libc result, complete directive grammar, or reliable name extraction for arbitrary input. The final actual Script value depends on original parsing/copy behavior and configured script contents, which are missing with4.xtz.
+
+The candidate library also exports Script at `0x12690`. Original `R_ARM_GLOB_DAT` slot `0x12230` is Script, and OWRITE uses PIC+0x11c to reach that slot. Library f_wr is at `0x1268c`, relocation slot `0x12214` (PIC+0x100); f_rd has slot `0x12238`. The executable exports f_wr at `0x13928`. These are original symbol/relocation facts, not executed process binding. A composed producer/marker join assumes the intended shared globals resolve correctly in the actual process; no dynamic loader closure is claimed here.
+
+## IPC producer→reviewed receiver correspondence
+
+| Original producer | Actual construction/write boundary | Reviewed taskmanager receiver correspondence |
+|---|---|---|
+| bt_script startup `0x9ab4..0x9ae4` | Gets PID, formats `S %d\n` with snprintf size31 and writes strlen bytes to executable f_wr (`base0x13494+0x494=0x13928`). It does not write the trailing NUL. Prior connection setup is opaque/unexecuted. | Run2 `0x9e18..0x9e4c` increments its counter, sets control+60=2 and stores `atoi(payload+2)` into record+192. This is the concrete producer shape expected by that PID branch. |
+| libdomotica OWRITE selected nonzero-stat branch `0x8624..0x8688` | Formats `F %s\n` using the supplied OPEN-text argument; writes strlen bytes through GOT-resolved f_wr. | Run2 first-byte F branch requires length>2 and gate clear, then passes payload+2 to original OPEN parsing and selected publication/request delegate. Complete text/transport applicability remains open. |
+| libdomotica OREAD `0x7fcc..0x8064` | Formats the same `F %s\n` from its first argument and writes through the same f_wr relocation. This displayed straight-line prefix reaches the first write without an OWRITE-style marker test. | Same receiver command prefix. Read-result matching and full OREAD response policy are not decoded here. |
+| libdomotica end() `0x8ba0..0x8c78` | Formats exact `E\n` with snprintf size15, then writes strlen bytes to f_wr at `0x8c14`. Returns1 if write result>0, otherwise0. | Run2 first-byte E branch invokes cleanup, with conditional outstanding-request association handling. This is a textual/source join, not demonstrated natural child exit or scheduler removal. |
+
+Evidence: [startup-pid-producer.txt](startup-pid-producer.txt), [oread-request-prefix.txt](oread-request-prefix.txt), [end-ipc-producer.txt](end-ipc-producer.txt), and the selected metadata files. The interpreter's separately reviewed normal terminal prefix path calls end() repeatedly until nonzero; this report does not rerun that prior table or imply every termination path behaves that way.
+
+The positive-write guard in end() is not a whole-length check: under its narrow local predicate, a hypothetical result1 for its two-byte E literal returns1. [host-boundary-model.json](host-boundary-model.json) records −1/0/1/2 examples as a host transcription only. It is not observed truncation, data loss or a device exploit claim.
+
+The example `S 123\n` and `F *1*1*11##\n` are only host string-format candidates. No original snprintf, parser or pipe ran. The receiver join assumes complete line delivery, correct descriptors/globals, valid original objects and caller sequencing. Actual process/thread scheduling, descriptor initialization, parser/provider selection, response handling and physical delivery remain external boundaries.
+
+## Scope of the marker finding and bounded R/P gap
+
+OWRITE's marker guard is **action-specific evidence**. The selected OREAD prefix lacks such a guard before its first F write; this does not prove that all other code or actions ignore disabled state. TWRITE/TWRITEI, conditional transformations, sleeps and arbitrary configured actions were not audited as a disabled-policy matrix. The actual user-level meaning of disabling a scenario needs those separate consumers and actual configured scripts.
+
+[bounded-write-sites.json](bounded-write-sites.json) records the direct ARM BL→write@PLT sites found in these **two files only**: one in bt_script and six in libdomotica. They include the S/F/E producers above and text-write routines. This batch did not identify a dedicated R/P producer corresponding to the reviewed receiver's state2/state3 first-byte branches. That is a **bounded unfinished join**, not proof that R/P is unreachable or unsupported: computed calls, other providers, generated values and configured text can remain relevant. No global archive/namespace sweep or connection/authentication investigation was used to turn that gap into an absence claim.
+
+## Confidence and ranked next questions
+
+**High confidence static:** exact OWRITE path construction→__xstat→stat0 early return1 before F; separate Script directive/global; S/PID, F/text and E producer call arguments; end's positive-write predicate. **Conditional joins:** correct effective global/provider bindings, consistent `$NOME`/` $NOMESCRIPT` values, complete line delivery and filesystem visibility. **Unresolved:** full parser/copy grammar, actual names/assets, all-action disabled policy, producer R/P, descriptor setup, actual response/publication lifetime and any process/device effect.
+
+1. Trace the interpreter's actual OWRITE call site and whether it uses the source return value, then one additional action only if it settles a concrete disabled-policy question. Do not label return1 “action success.”
+2. Establish a concrete R/P producer or preserve the receiver-only boundary. Do not expand into session/connection framing or infer absence from the selected write sites.
+3. Reconcile valid configured `$NOME` versus ` $NOMESCRIPT` names if missing scenario assets become available; current marker correspondence is conditional.
+4. Finish one normal IPC response/completion ownership join with explicit provider/descriptor assumptions. Physical delivery and manual-level Only if equivalence remain separate questions.

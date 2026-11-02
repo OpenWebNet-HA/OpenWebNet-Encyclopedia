@@ -1,0 +1,21 @@
+# MH202 sound and alarm reference boundaries
+
+Read-only reconciliation of new build-specific source reports with the existing encyclopedia reference. No original/native code or collector was executed for this reconciliation. Exact pre-edit reference bytes are in the run19 reference-pin supplement, separately from that checkpoint's earlier validation pins.
+
+| Existing reference | Consequence for the new source claims |
+| --- | --- |
+|WHO5 what.md24..25; protocol.md23..25|WHAT27 already has the published label Stop programming. Preserve that vocabulary; opcode42/status09→literal27 alone does not prove a physical programming event or convert status09 into a general control meaning.|
+|WHO5 addressing.md5..16; protocol.md7,35..37|The generated empty-WHERE candidate is literal. Do not normalize it to0/1 or conflate it with distinct published or touchscreen query forms. Those references do not establish its native parser acceptance.|
+|WHO22 README.md46,54..62|Retain complete parameterized WHAT1#1#0 and WHERE1#1. This MH202 static candidate does not replace/expand the published tagged target table or prove its grammar wrong.|
+|WHO22 README.md116..122 and126onward|Request/reported target text and source inconsistencies are already qualified; historical touchscreen tests remain their own evidence class. Do not infer causal reply or physical ON/source/volume from the new synthetic bodies.|
+|New alarm/sound descriptor criteria|Alarm reverse4/forward5 is not WHO4/WHO5 equivalence; sound reverse8/forward22 is not WHO8/WHO22 equivalence. Internal routing axes stay separate from parsed WHO namespaces.|
+
+No substantive source contradiction was identified. Published labels, implementation formats, selected native parsing, transport admission and physical meaning remain distinct. The initial read-only reconciliation was performed by the protocol subagent, with paths/line ranges supplied to parent; parent froze the exact referenced bytes before edits.
+
+## Reference pins
+
+- `functional/who-5-alarm/README.md`: `5304dd537066076a3bf59ff2fc9947386d77111f5ee98842f83ee5fff5a61a63`; snapshot `project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/reference-01-who-5-alarm-README.md.txt`.
+- `functional/who-5-alarm/what.md`: `8ee92e45243a827ee095139c9a0019294ce4643f6beae7d08b46992048c47e7b`; snapshot `project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/reference-02-who-5-alarm-what.md.txt`.
+- `functional/who-5-alarm/protocol.md`: `0c7d0b6da0de684234a1aed1326d5ea4f69118da191e73e853a53c1d31632073`; snapshot `project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/reference-03-who-5-alarm-protocol.md.txt`.
+- `functional/who-5-alarm/addressing.md`: `13011a07d36a2fdf99d0026301aec9f0ad8b6f0b9e7953df066f2e0b5ed9efaf`; snapshot `project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/reference-04-who-5-alarm-addressing.md.txt`.
+- `functional/who-22-sound-diffusion/README.md`: `4d99236f786819aa123791945c25cfedf62cc23ac06ecc9177e469b34031bb94`; snapshot `project/review/firmware-analysis/mh202-1.0.24/reviewed/run19/reference-05-who-22-sound-diffusion-README.md.txt`.

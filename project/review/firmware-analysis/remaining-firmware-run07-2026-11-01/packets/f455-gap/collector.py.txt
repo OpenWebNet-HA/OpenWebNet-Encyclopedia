@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+"""F455 retained-provenance admission gap, not new executable coverage."""
+from pathlib import Path
+import argparse,hashlib,json,xml.etree.ElementTree as ET,zipfile
+O=Path(__file__).resolve().parent;W=O.parents[4]
+def sha(b):return hashlib.sha256(b).hexdigest()
+def enc(x):return(json.dumps(x,sort_keys=True,indent=2)+'\n').encode()
+def build():
+ pins=[]
+ def read(s,h):
+  p=W/s;assert p.is_file()and not p.is_symlink();b=p.read_bytes();assert sha(b)==h,s;pins.append({'path':s,'bytes':len(b),'sha256':sha(b)});return b
+ base='work/f455-firmware/1.1.2/';prior=base+'research/2026-11-01-night02-format/'
+ xb=read(base+'extracted/fwz.xml','5b93f792b5d9ece0a7d26b75847d91df5ebe9b3c0bfbeea29c617e1557d852ad')
+ payload=read(base+'extracted/F455_1_1_2.bin','6d61c308888ccd78f6fb289cf23e672203921a50931b838533a7a315c5d49ccc')
+ archive=read(base+'F455_1_1_2.fwz','cd99299fc729679b4eade46acda7bd4f5e619a0a9eac34a1f6a3b73b625a18f9')
+ pr=read(prior+'REPORT.md','f955678a426ff1f4602fc4d481cb7b1b79f23d619c9d3f1cbf5b3a2e0b835a87')
+ package=json.loads(read(prior+'PACKAGE_FORMAT.json','d4b63281cc9396b669c20e0a408f385a2da3d5f72788a6398a11f0a9a8017622'))
+ arm=json.loads(read(prior+'ARM_CONTEXT.json','480bac5da2b3838921c83b8c4a202db3f44fc98681480a7c6c51ae9de3cfb528'))
+ dev=read('OpenWebNet-Encyclopedia/devices/definitions/own-dev-0152-f455-basic-gateway.md','89622ff8bc7833f9d02bbb2bb8e765bd739120b6036ff1c72d22ff72efd0430d')
+ assert len(payload)==301016 and len(archive)==180196 and len(xb)==453
+ root=ET.fromstring(xb);assert root.tag=='fwz'
+ paths=[]
+ def walk(e,path):
+  paths.append({'element_path':path,'attribute_names':sorted(e.attrib)})
+  for c in e:walk(c,path+'/'+c.tag)
+ walk(root,'/fwz')
+ expected=[('/fwz',[]),('/fwz/name',[]),('/fwz/fwz_ver',[]),('/fwz/device',['id']),('/fwz/device/name',[]),('/fwz/device/object_models',[]),('/fwz/device/object_models/object_model',['id']),('/fwz/device/files',[]),('/fwz/device/files/file',['id']),('/fwz/file',['id']),('/fwz/file/name',[]),('/fwz/file/version',[]),('/fwz/file/update',['mode'])]
+ assert paths==[{'element_path':p,'attribute_names':a}for p,a in expected]
+ assert root.findtext('name')=='Basic Gateway'and root.findtext('fwz_ver')=='1.1.2'
+ f=root.find('file');assert f.findtext('name')=='F455_1_1_2.bin'and f.find('update').attrib=={'mode':'bootloader'}
+ assert package['XML_declarations']['object_models']==['5.0.8'] and package['XML_declarations']['update_attributes']=={'mode':'bootloader'}
+ with zipfile.ZipFile(W/(base+'F455_1_1_2.fwz'))as z:
+  rows=[{'name':i.filename,'declared_bytes':i.file_size,'encrypted':bool(i.flag_bits&1),'CRC32':f'{i.CRC:08x}'}for i in z.infolist()]
+ assert rows==[{'name':'F455_1_1_2.bin','declared_bytes':301016,'encrypted':True,'CRC32':'d801438a'},{'name':'fwz.xml','declared_bytes':453,'encrypted':True,'CRC32':'4b488fc1'}]
+ assert b'CPU, actual endianness/load map and executable ABI unproved'in pr
+ line='No installed hardware revision or microcontroller fingerprint is retained for this cluster.'
+ assert line.encode()in dev
+ context={'retained_XML_topology':paths,'scope':'Exact original manifest element paths/attribute names only; no executable target schema assumed','new_binary_code_or_format_coverage':False}
+ admission={'status':'GAP_CONSOLIDATION_NO_NEW_SOURCE_COVERAGE','selected_originals':{'XML':base+'extracted/fwz.xml','payload':base+'extracted/F455_1_1_2.bin','archive':base+'F455_1_1_2.fwz'},'retained_container_members':rows,'XML_proven_labels_inherited':{'product':'Basic Gateway','release':'1.1.2','object_model':'5.0.8','update_mode':'bootloader'},'target_assignment':'NOT ADMITTED','missing_for_target_assignment':['Product-specific authoritative CPU/core/ISA/endian provenance tied to this image or hardware revision','Genuine original linker/map/debug/loader record specifying placement and entry semantics','Qualified original format/loader source establishing interpretation rather than chosen arithmetic'], 'premise_separation':{'model_label':'Product/configuration namespace, not decoded CPU part or ISA','bootloader_label':'Update-mode label, not inspected loader behavior/address map','generic_Arm_document':'Prior documentary pattern context only; not F455 manufacturer CPU provenance','vector_shaped_prefix':'Prior finite candidate arithmetic only; not rerun/redecoded/new coverage','curated_device_role':'Read-only context; not installed hardware fingerprint or binary capability oracle'},'bounded_limit':'No authoritative target metadata admitted from these selected retained package/XML/prior-context records. No claim that other vendor documents/tools/hardware or the entire payload lack such evidence.','VA_ISA_ABI_entry':'UNASSIGNED; no disassembler, code-byte range, CPU model or emulator chosen','denied_F450_helper':'Not accessed, decoded, retried, proxied or used in this packet','original_vendor_helper_native_emulator_SQL_target_OS_device_service_network_bus_physical_execution':0,'remote_writes':0,'recovered_DB':False}
+ report='''# F455 night07: retained provenance admission gap
+
+This packet is an explicit gap/consolidation checkpoint. It adds no new firmware function, byte-format interpretation, original execution or database coverage. The selected retained F455 package/manifest/context does not admit a CPU, ISA, endian mode, ABI, address map or executable entry assignment. No forced disassembly or invented activity substitutes for the missing provenance.
+
+## Exactly selected evidence
+
+The original F455_1_1_2.fwz archive is180196bytes/SHA256 cd99299fc729679b4eade46acda7bd4f5e619a0a9eac34a1f6a3b73b625a18f9. It retains exactly the two previously reviewed encrypted central-directory entries F455_1_1_2.bin and fwz.xml. The legitimately retained payload is301016bytes/SHA256 6d61c308888ccd78f6fb289cf23e672203921a50931b838533a7a315c5d49ccc; original manifest is453bytes/SHA256 5b93f792b5d9ece0a7d26b75847d91df5ebe9b3c0bfbeea29c617e1557d852ad. These identities/entries are inherited package evidence revalidated for this admission checkpoint, not a new extraction, decryption or source discovery.
+
+FIELD_PATHS.json records exactly thirteen original manifest element paths and their attribute names, without exporting a full configuration. This finite schema contains product/release, device/object-model, file-reference and update-mode declarations. Its known Basic Gateway/version1.1.2/model5.0.8/bootloader labels remain packaging facts. They do not identify a processor part, actual hardware revision, target ISA/ABI, load map, a loader algorithm or accepted update. The observation is limited to this exact selected metadata, not all product documentation, companion tools, hardware or all possible payload encodings.
+
+## Inherited candidate and context stay separate
+
+Night02's exact wrapper/XML/CRC evidence, finite96-word candidate arithmetic and generic Arm document comparison stay inherited. This collector does not rerun the earlier collector, repeat its prefix/target bytes or MMIO-shaped counts, decode code, extend the hypothesized vector table or promote its chosen arithmetic base into a loader map. Generic Arm documentation provides comparative semantics; it is not F455-specific manufacturer CPU provenance. A product name/model/update label or a disassembler accepting a chosen architecture supplies no missing target authority.
+
+The read-only curated Device page explicitly retains no installed hardware revision or microcontroller fingerprint for this cluster. It is contextual documentation, not a new binary source or complete hardware search. This packet does not import its feature/protocol/authentication descriptions or infer CPU identity from commercial role. No other product's ELF/layout or closed implementation is used as a substitute.
+
+## Precise next evidence requirement
+
+Admitting an executable interpretation needs a product/image-specific authoritative CPU/core/ISA/endian source, or a genuine original linker/map/debug/loader record tied to these exact bytes/hardware revision, including placement/entry semantics. If such evidence later appears, it can be reviewed before assigning addresses or following code. None was acquired/admitted in this bounded checkpoint. This is a finite documented limit, not a global claim that such a record never existed or cannot be recovered.
+
+F450's denied helper0x2eec4 and equivalent/alternate/proxy routes were not accessed or expanded. No new F450 resource-pointer/alias/argv/producer matrix, key/password guess, original/vendor/helper/native/emulator/model/SQL/targetOS/device/service/network/bus/mount/physical execution, external fetch or remote write occurred. No actual database was recovered/generated/uploaded; cumulative archive remains inherited one encrypted F450 support container and zero plaintext databases. Parent owns public edits/archive changes. Original/synced/completed artifacts, source manifest, prior capsules, older ledgers and Git staging/commits/push remain unchanged.
+
+## Reproduction and preservation
+
+python3 -B collect_admission_v1.py --check revalidates exact source hashes, original ZIP central metadata and XML field-path topology using host readers only. There is no selected code VA/ISA/body to reproduce; those remain unassigned. Initial canonical generation and read-only reproduction passed. The collector and five generated outputs are created exclusively and immediately retained in six exact first copies; index bytes are computed before opening itself. No failed canonical attempt, correction or overwritten output is claimed.
+'''
+ out={'PROVENANCE_ADMISSION.json':enc(admission),'FIELD_PATHS.json':enc(context),'INPUTS.json':enc({'files':sorted(pins,key=lambda x:x['path'])}),'REPORT.md':report.encode()}
+ out['OUTPUT_MANIFEST.json']=enc({'collector_sha256':sha(Path(__file__).read_bytes()),'files':{n:{'bytes':len(v),'sha256':sha(v)}for n,v in sorted(out.items())},'scope':'Generated members excluding this manifest'})
+ return out
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build()
+ if a.check:
+  for n,b in out.items():assert(O/n).read_bytes()==b,n
+  ix=json.loads((O/'first-candidate/INDEX.json').read_bytes());assert len(ix['files'])==6
+  for x in ix['files']:
+   b=(O/'first-candidate'/x['copy']).read_bytes();assert len(b)==x['bytes'] and sha(b)==x['sha256'] and b==(O/x['copy']).read_bytes()
+ else:
+  assert not(O/'first-candidate').exists()and all(not(O/n).exists()for n in out)
+  for n,b in out.items():(O/n).open('xb').write(b)
+  d=O/'first-candidate';d.mkdir();rows=[]
+  for n,b in sorted({**out,Path(__file__).name:Path(__file__).read_bytes()}.items()):
+   (d/n).open('xb').write(b);rows.append({'copy':n,'bytes':len(b),'sha256':sha(b)})
+  ix=enc({'scope':'Exact first gap/consolidation outputs and collector; index excluded','files':rows});(d/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'status':'PASS','outputs':len(out),'firstcopies':6,'new_source_coverage':0,'CPU_assignment':'NOT_ADMITTED','original_execution':0,'recovered_DB':False}))
+if __name__=='__main__':main()

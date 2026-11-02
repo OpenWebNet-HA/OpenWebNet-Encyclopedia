@@ -1,0 +1,22 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000037f34 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x7b74>:
+   37f34:	b9402e81 	ldr	w1, [x20, #44]
+   37f38:	350006e1 	cbnz	w1, 38014 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x7c54>
+   37f3c:	b9403281 	ldr	w1, [x20, #48]
+   37f40:	35000541 	cbnz	w1, 37fe8 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x7c28>
+   37f44:	b9403681 	ldr	w1, [x20, #52]
+   37f48:	aa1303e0 	mov	x0, x19
+   37f4c:	97ffaf59 	bl	23cb0 <_ZNSt8ios_baseC2Ev@plt>
+   37f50:	d0000ae1 	adrp	x1, 195000 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x80c10>
+   37f54:	911ce021 	add	x1, x1, #0x738
+   37f58:	aa1503e0 	mov	x0, x21
+   37f5c:	97ffaf61 	bl	23ce0 <pthread_mutex_lock@plt>
+   37f60:	aa1303e1 	mov	x1, x19
+   37f64:	97ffb157 	bl	244c0 <dwfl_module_addrdie@plt>
+   37f68:	aa1303e0 	mov	x0, x19
+   37f6c:	97ffaf9d 	bl	23de0 <_ZSt25__throw_bad_function_callv@plt+0x10>

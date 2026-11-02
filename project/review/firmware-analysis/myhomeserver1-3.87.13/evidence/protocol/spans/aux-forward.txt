@@ -1,0 +1,125 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/libcoso/libplug_aux_tr.so:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000016fc <aux_tr_open2scs@@Base>:
+    16fc:	e3a03000 	mov	r3, #0
+    1700:	e92d4070 	push	{r4, r5, r6, lr}
+    1704:	e24dd010 	sub	sp, sp, #16
+    1708:	e58d3004 	str	r3, [sp, #4]
+    170c:	e5903038 	ldr	r3, [r0, #56]	@ 0x38
+    1710:	e1a04000 	mov	r4, r0
+    1714:	e3530002 	cmp	r3, #2
+    1718:	e1a05001 	mov	r5, r1
+    171c:	0a00002c 	beq	17d4 <aux_tr_open2scs@@Base+0xd8>
+    1720:	e3530003 	cmp	r3, #3
+    1724:	1a000021 	bne	17b0 <aux_tr_open2scs@@Base+0xb4>
+    1728:	e5903000 	ldr	r3, [r0]
+    172c:	e58d3004 	str	r3, [sp, #4]
+    1730:	e3a020b0 	mov	r2, #176	@ 0xb0
+    1734:	e5931034 	ldr	r1, [r3, #52]	@ 0x34
+    1738:	e1cd20bc 	strh	r2, [sp, #12]
+    173c:	e3510001 	cmp	r1, #1
+    1740:	0a000002 	beq	1750 <aux_tr_open2scs@@Base+0x54>
+    1744:	e3a00001 	mov	r0, #1
+    1748:	e28dd010 	add	sp, sp, #16
+    174c:	e8bd8070 	pop	{r4, r5, r6, pc}
+    1750:	e3a0200a 	mov	r2, #10
+    1754:	e3a01000 	mov	r1, #0
+    1758:	e5930008 	ldr	r0, [r3, #8]
+    175c:	ebfffe35 	bl	1038 <strtol@plt>
+    1760:	e1a06000 	mov	r6, r0
+    1764:	e59d3004 	ldr	r3, [sp, #4]
+    1768:	e3a0200a 	mov	r2, #10
+    176c:	e3a01000 	mov	r1, #0
+    1770:	e5930010 	ldr	r0, [r3, #16]
+    1774:	ebfffe2f 	bl	1038 <strtol@plt>
+    1778:	e356000a 	cmp	r6, #10
+    177c:	908ff106 	addls	pc, pc, r6, lsl #2
+    1780:	eaffffef 	b	1744 <aux_tr_open2scs@@Base+0x48>
+    1784:	ea000032 	b	1854 <aux_tr_open2scs@@Base+0x158>
+    1788:	ea00001b 	b	17fc <aux_tr_open2scs@@Base+0x100>
+    178c:	ea000036 	b	186c <aux_tr_open2scs@@Base+0x170>
+    1790:	ea000038 	b	1878 <aux_tr_open2scs@@Base+0x17c>
+    1794:	ea000040 	b	189c <aux_tr_open2scs@@Base+0x1a0>
+    1798:	ea000042 	b	18a8 <aux_tr_open2scs@@Base+0x1ac>
+    179c:	ea000044 	b	18b4 <aux_tr_open2scs@@Base+0x1b8>
+    17a0:	ea000046 	b	18c0 <aux_tr_open2scs@@Base+0x1c4>
+    17a4:	ea000036 	b	1884 <aux_tr_open2scs@@Base+0x188>
+    17a8:	ea000038 	b	1890 <aux_tr_open2scs@@Base+0x194>
+    17ac:	ea00002b 	b	1860 <aux_tr_open2scs@@Base+0x164>
+    17b0:	e59f2114 	ldr	r2, [pc, #276]	@ 18cc <aux_tr_open2scs@@Base+0x1d0>
+    17b4:	e59f0114 	ldr	r0, [pc, #276]	@ 18d0 <aux_tr_open2scs@@Base+0x1d4>
+    17b8:	e3a01040 	mov	r1, #64	@ 0x40
+    17bc:	e08f2002 	add	r2, pc, r2
+    17c0:	e08f0000 	add	r0, pc, r0
+    17c4:	ebfffe2a 	bl	1074 <g_log@plt>
+    17c8:	e3a00001 	mov	r0, #1
+    17cc:	e28dd010 	add	sp, sp, #16
+    17d0:	e8bd8070 	pop	{r4, r5, r6, pc}
+    17d4:	e28d1004 	add	r1, sp, #4
+    17d8:	e5900000 	ldr	r0, [r0]
+    17dc:	ebfffe3c 	bl	10d4 <buf_to_openmsg@plt>
+    17e0:	e5940000 	ldr	r0, [r4]
+    17e4:	ebfffe43 	bl	10f8 <g_free@plt>
+    17e8:	e3a02003 	mov	r2, #3
+    17ec:	e59d3004 	ldr	r3, [sp, #4]
+    17f0:	e5842038 	str	r2, [r4, #56]	@ 0x38
+    17f4:	e5843000 	str	r3, [r4]
+    17f8:	eaffffcc 	b	1730 <aux_tr_open2scs@@Base+0x34>
+    17fc:	e3a0209a 	mov	r2, #154	@ 0x9a
+    1800:	e3a03004 	mov	r3, #4
+    1804:	e1833200 	orr	r3, r3, r0, lsl #4
+    1808:	e3a00040 	mov	r0, #64	@ 0x40
+    180c:	e5cd200e 	strb	r2, [sp, #14]
+    1810:	e5cd300f 	strb	r3, [sp, #15]
+    1814:	ebfffe25 	bl	10b0 <g_malloc@plt>
+    1818:	e1a06000 	mov	r6, r0
+    181c:	e3a01004 	mov	r1, #4
+    1820:	e28d000c 	add	r0, sp, #12
+    1824:	e58d6008 	str	r6, [sp, #8]
+    1828:	ebfffe35 	bl	1104 <array_to_ascii_hex_frame@plt>
+    182c:	e1a0c000 	mov	ip, r0
+    1830:	e3a03009 	mov	r3, #9
+    1834:	e1a02005 	mov	r2, r5
+    1838:	e1a01004 	mov	r1, r4
+    183c:	e28d0008 	add	r0, sp, #8
+    1840:	e586c000 	str	ip, [r6]
+    1844:	ebfffe40 	bl	114c <prepare_briefscs_frames@plt>
+    1848:	e3a00000 	mov	r0, #0
+    184c:	e28dd010 	add	sp, sp, #16
+    1850:	e8bd8070 	pop	{r4, r5, r6, pc}
+    1854:	e3a0209a 	mov	r2, #154	@ 0x9a
+    1858:	e3a03000 	mov	r3, #0
+    185c:	eaffffe8 	b	1804 <aux_tr_open2scs@@Base+0x108>
+    1860:	e3a0209b 	mov	r2, #155	@ 0x9b
+    1864:	e3a0300c 	mov	r3, #12
+    1868:	eaffffe5 	b	1804 <aux_tr_open2scs@@Base+0x108>
+    186c:	e3a0209a 	mov	r2, #154	@ 0x9a
+    1870:	e3a03008 	mov	r3, #8
+    1874:	eaffffe2 	b	1804 <aux_tr_open2scs@@Base+0x108>
+    1878:	e3a0209b 	mov	r2, #155	@ 0x9b
+    187c:	e3a03000 	mov	r3, #0
+    1880:	eaffffdf 	b	1804 <aux_tr_open2scs@@Base+0x108>
+    1884:	e3a0209c 	mov	r2, #156	@ 0x9c
+    1888:	e3a03004 	mov	r3, #4
+    188c:	eaffffdc 	b	1804 <aux_tr_open2scs@@Base+0x108>
+    1890:	e3a0209a 	mov	r2, #154	@ 0x9a
+    1894:	e3a0300c 	mov	r3, #12
+    1898:	eaffffd9 	b	1804 <aux_tr_open2scs@@Base+0x108>
+    189c:	e3a0209b 	mov	r2, #155	@ 0x9b
+    18a0:	e3a03004 	mov	r3, #4
+    18a4:	eaffffd6 	b	1804 <aux_tr_open2scs@@Base+0x108>
+    18a8:	e3a0209b 	mov	r2, #155	@ 0x9b
+    18ac:	e3a03008 	mov	r3, #8
+    18b0:	eaffffd3 	b	1804 <aux_tr_open2scs@@Base+0x108>
+    18b4:	e3a0209c 	mov	r2, #156	@ 0x9c
+    18b8:	e3a03001 	mov	r3, #1
+    18bc:	eaffffd0 	b	1804 <aux_tr_open2scs@@Base+0x108>
+    18c0:	e3a0209c 	mov	r2, #156	@ 0x9c
+    18c4:	e3a03002 	mov	r3, #2
+    18c8:	eaffffcd 	b	1804 <aux_tr_open2scs@@Base+0x108>
+    18cc:	00000530 	andeq	r0, r0, r0, lsr r5
+    18d0:	00000230 	andeq	r0, r0, r0, lsr r2

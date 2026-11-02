@@ -1,0 +1,9 @@
+# Run06 coverage and boundaries
+
+| Area | Selected examined reach | Open boundary |
+| --- | --- | --- |
+| F460 state-trigger | Raw type/table/factory/RTTI, separate compiled table/init/sameJSON request, ownraw/compiled fields and callback capture/copy, state/operator handler and actual ID/method-filtered local caller | Full serializer/coherence/grammar, actual receiver class and f7650 body, cast validity (not postcast nonnullguard), natural record/subscription, providers/ownership/lifetime/concurrency/scene effects |
+| F461 address helper | Actual metadata-only alias/regular-file hash/ELF/export/import, selected shapeclass4, sameparsedfieldcaller and D1+two ordered delegatedbyte-digit prefix | UTF8 versusASCII validity, natural typed caller and schemas, conversion/string providers, remaining suffix/categories/full address/output/public domain/physical topology |
+| Reference history | Exact old main before insertion; prior core profile retained as unchanged context | No MHS layouts, catalogue ID mapping, physical roles or public protocol support transferred |
+
+F460:21 outputs/18 selected spans/54 instruction guards/3 class identities/10 PIC joins/2 jump entries/11 calls/6 imports/4 pins/23 first copies. F461:14 outputs/5 spans/15helper+19caller guards/6 PIC joins/9 imports/16 first copies. Counts are selected reach/integrity, not coverage percentages or executed semantic cases. Peer review separately notes actual secondary-method identity check and absence of a postcast null-result guard; valid-cast object remains a premise, not a defect/safety claim. New original/helper/native/emulator/model/fixture/SQL/OS/process/service/network/bus/physical execution is zero. Old MHS8-entry340-code-hook corpus and separate F454/MH202 ledgers remain unchanged; full Device/source gates pending.

@@ -1,0 +1,11 @@
+{
+  "code_mode": "Thumb2, explicit force-thumb; tables/pools in spans are data, not executed instructions.",
+  "history": "No generated candidate overwrites/corrections. An exploratory python command failed because python alias is absent; retried using python3 before any candidate generation.",
+  "host_scene_fixtures": 0,
+  "host_semantic_models": 0,
+  "image_path": "/home/bticino/scheduling_manager/scheduling_manager",
+  "native_top_entries": 0,
+  "original_execution": 0,
+  "scope": "Three factory discrimination prefixes and two action construction branches. No whole scene schema, trigger/condition branch coverage, runner/sleep execution, timer units, target resolution, live provider or physical action conclusion.",
+  "stored_expressions_evaluated": 0
+}

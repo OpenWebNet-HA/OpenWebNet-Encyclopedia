@@ -1,0 +1,5 @@
+# Cancellation continuation synthesis
+
+Scene stop144, scene active145, per-action completion4 and shared action-domain flag72 are distinct. The selected scene stop requests each action virtual slot4. Selected completion polling requests nanosleep(1,0), then leaves on scene stop without requiring all action completion bytes. Normal cleanup clears scene active/stop and can reopen one launch guard; it does not establish shared-domain reset or worker completion.
+
+A positive original exit-registration/destructor chain owns the shared CV, while bounded alias searches establish no additional reset. A concrete Bn3l constructor connects raw duration metadata to operational12 and conditionally installs a second callable. Callback, configured action, effective provider, lifecycle/unwind/concurrency and physical behavior remain unexecuted. No permanent latch, defect, immediate interruption, guaranteed restart or universal two-phase action is claimed.

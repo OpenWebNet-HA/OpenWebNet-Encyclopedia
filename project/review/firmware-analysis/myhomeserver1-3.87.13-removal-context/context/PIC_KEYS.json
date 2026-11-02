@@ -1,0 +1,14 @@
+[
+  {
+    "literal": "params",
+    "literal_va": "0x116144",
+    "pc_va": "0x3e2b0",
+    "pool_va": "0x3ebe4"
+  },
+  {
+    "literal": "scene_id",
+    "literal_va": "0x116138",
+    "pc_va": "0x3e2ba",
+    "pool_va": "0x3ebe8"
+  }
+]

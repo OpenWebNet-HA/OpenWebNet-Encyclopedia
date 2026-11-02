@@ -1,0 +1,80 @@
+# MH202 run13 — original special-DIM1 parser writes before selector read
+
+Two bounded native-entry experiments close a specific boundary left by `triggers/run10`: for the selected short WHO13 measurement inputs, both original common130 constructors and complete normal parser paths execute, but neither their writes nor the surrounding selected taskmanager instructions write the six-word selector region. Execution stops **before** original taskmanager instruction `0xca48` can read its first selector word. No selector value, comparison outcome, comparator return, hit, defect or physical behavior is inferred.
+
+This is selected native code with explicit same-build common providers and ordinary C primitive models, not a complete deployed caller join. A fresh static upstream check distinguishes the entry-only first fixture from a second fixture whose received text satisfies the actual outer special-selector prefix. The outer matcher itself is not executed.
+
+## Actual caller and experiment inputs
+
+Original taskmanager matcher `0xc608` saves incoming event text in r7. Its `strncmp` at `0xc620` compares8 bytes against literal `*#13**22` at `0x1099a`. Equal selects function pointer `0xc8e0` from pool `0xc690`; unequal selects ordinary comparator `0xc6dc` from `0xc694`. At indirect call `0xc658`, r0 is the trigger-record text pointer loaded from `[r4]`, r1 the saved incoming text. This is an indirect selected route, not a direct BL to the special entry. No complete indirect-caller inventory or absence claim is made.
+
+Special entry `0xc8e0` separately checks the first4 trigger bytes against `*#13` (literal `0x109a3`, comparison call `0xc91c`). The first parsed trigger DIM, not the parsed received DIM, selects the local DIM1 branch. These are distinct selector conditions.
+
+| Canonical private entry fixture | Synthetic trigger text r0 | Synthetic received text r1 | Original parsed received fields | Outer event-prefix compatible? |
+| --- | --- | --- | --- | --- |
+| Entry-only initial trial | `*#13*0*1*10*20*30*40*50*60##` | `*#13*0*1*11*21*31*41*51*61##` | WHO13, WHERE0, DIM1 | No |
+| Prefix-compatible continuation | same trigger | `*#13**22*11*21*31*41*51*61##` | WHO13, empty WHERE, DIM22 | Yes, by static8-byte comparison only |
+
+Both native parsed trigger objects have kind4, WHO13, WHERE0, DIM1 and values `10,20,30,40,50,60`. Both received objects have kind4 and values `11,21,31,41,51,61`; the differing received fields are listed above. Original common `CreateMsgOpen`, its `IsCorrect` and normal measurement/suffix helpers create this state, without host parsed-field or predicate injection.
+
+Development history is retained honestly: the initial two-DIM1 experiment succeeded at the selected entry, but fresh upstream inspection showed it was not compatible with the outer received-prefix selector. It remains explicitly entry-only in the canonical results, rather than being promoted into an outer route or silently discarded. The second fixture adds that precise prefix premise. Both canonical cases are replayed by the final harness. No initial failed native run is concealed; collector-development exact-count assertions were corrected from observed saved arrays before finalization. There was no pre-review published report or claimed byte-exact historical snapshot.
+
+These are synthetic short source strings, not captured or configured triggers/events. Prefix compatibility does not prove upstream frame acceptance, table contents, loader behavior, original outer invocation, physical product semantics or full binding.
+
+## Frame ownership and executed path
+
+Offsets are relative to the special helper's local SP after its16-byte register push and15,376-byte allocation (`0xc8e4/0xc8e8`). The two original object bases are SP+0 and SP+7,676; the selector region is `[SP+15,352, SP+15,376)`. Saved entry registers begin at SP+15,376 and are a separate region.
+
+Native taskmanager constructor calls `0xc900/0xc90c` invoke actual common C1 `0x24bf0`, which invokes original reset `0x24aa0`. Parser calls `0xc940/0xc960` invoke original common `CreateMsgOpen` `0x2646c`, with actual source strings/lengths and object pointers; snapshots are taken after normal returns at `0xc944/0xc964`. Each parser resets its own object again, copies the raw text, updates its original length fields and invokes original `IsCorrect` `0x25e38`. The actual measurement-field helper `0x25b00` and WHO/WHERE suffix helpers `0x25010/0x252bc` execute. This is the common130 layout, not the libopen90 layout.
+
+Native DIM accessor `0x24948` is called at `0xc96c`, and the normal integer conversion yields1. Original comparison `0xc974` and equal branch `0xc978→0xcac4` set byte cursor r5=0 and branch to `0xca40`. Original `0xca40/0xca44` compute r3=localSP+15,352. At that point the harness stops at the code hook for `0xca48` (`ldr r4,[r3,r5]`) **without executing it**. No value accessor indexed by that word, string comparison, destructor/return tail or hit consumer executes.
+
+Every original data write is guarded/recorded via the CPU memory-write hook; every modeled primitive write is independently guarded/recorded at the explicit write helper. Original and modeled primitive reads into the selector test region are forbidden before the stop, and none occurs. Code-hook accounting is distinct from these memory-observation callbacks.
+
+Across the two selected traces,882 write events are recorded:252 original-instruction write events and630 modeled primitive write events. None overlaps the selector region. Object-intersecting writes reach at most SP+15,352 exclusive, exactly its lower boundary. Writes into callee stack frames or the saved-entry-register region are retained as separate events, rather than mistaken for object writes. Full trace/event arrays and addresses are saved in `preselector-results.json`; the host collector recomputes interval overlaps, counts and the original VA/file mapping.
+
+The24 selector bytes are deliberately distinct private canary bytes `80 81 … 97` before entry and remain identical at the stop. They are **test state supplied by the host**, not claimed original initialization or an observed production stack value. They are never consumed by a selector read. This demonstrates selected nonwriting, not a match-all result or evidence of a particular production word.
+
+## What is newly established and what remains open
+
+Run10's selected default-reset interval analysis excluded complete parser effects. This batch executes those effects for these two short native accepted measurement pairs and shows the selector region remains untouched through the original DIM1 branch's first read boundary. The original local DIM0/22 selector-store matrices are not rerun as new coverage. Ordinary run11/12 normalization cases are also not rerun.
+
+This does not prove a global bound on all parser writes: raw/field copies and value-slot progression have input-dependent lengths/counts. No malformed or excessive-length/count inputs are explored. Live provider overrides, stack reuse/history, configured trigger contents, other paths and actual incoming event provenance remain unknown. No supplied canary is used as an original selector initialization. A production selector value/outcome cannot be obtained by replacing unknown stack state with zero, an arbitrary value index or a sentinel. The comparator stops before that unresolved dependency.
+
+The package's ordinary taskmanager direct NEEDED order places common before open, as established in read-only run11/10 metadata. Here the same-build common definitions are explicitly selected by native redirects. No live loader/interposition/global environment or full taskmanager closure is executed or newly claimed.
+
+## Containment and accounting
+
+The fresh MH202 harness extends the verified same-build run11 setup in new files. Taskmanager is mapped read/execute at its original VAs, common read/execute at private base `0x10000000`; only private stack/input/heap are writable. Unknown PCs, interrupts and invalid/protected accesses abort. Read/write guards reject selector consumption before the explicit stop. Native entry is `0xc8e0`; execution never continues into an arbitrary selector index. There is a100,000-hook and100,000-emulator-instruction cap per top-level call.
+
+Primitive models cover only ordinary `memset`, `strcpy`, `strlen`, comparison-sign `strcmp`, four-byte `strncmp`, `strchr`, `strtok`, exact selected `strncpy`, `strcat` and decimal `atoi`. C-string reads are capped4,096 bytes; token scans are region-bounded with per-byte checks. Native parser/predicate/constructor/getter code is not replaced. No real libc/allocator, target OS/process, loader, syscall, network/device, interpreter or authentication route executes. The analysis-tool package alone is RECORD-verified; no F454 firmware/layout/harness is imported.
+
+| New top-level special-entry call | Original visits | C primitive callbacks | Native-definition redirects | EXIT | Stop-before-selector callbacks | Code hooks |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Entry-only DIM1 pair | 4,152 | 466 | 17 | 0 | 1 | 4,636 |
+| Prefix-compatible DIM22 event | 4,123 | 459 | 17 | 0 | 1 | 4,600 |
+| **Run13 only:2 calls** | **8,275** | **925** | **34** | **0** | **2** | **9,236** |
+
+These contain four nested native constructors and four nested native parser invocations; they are not six new top-level calls. Stop-before-selector callbacks are2 generic boundary callbacks, **not** normal returns/EXIT. `0xca48` is excluded from original-instruction visits. Repeated setup visits are counted; replays do not add canonical coverage. The host collector executes original instructions0.
+
+## Provenance and reproduction
+
+Original normal-image paths/hashes:
+
+| Original image path | SHA256 |
+| --- | --- |
+| `/home/bticino/bin/bt_taskmanager` | `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e` |
+| `/home/bticino/lib/libcommon.so.0.0` | `07b2c6d09e4a1b317bb3b37aff8f7ddd72dcec15e1e7194fde00c4f0ce1ecab5` |
+
+Paths are within the firmware; host research references are relative to the research root. `input-hashes.json` pins11 image/research inputs. `original-spans.json` identifies10 original spans with VA/file-offset/byte hashes; `critical-words.json` asserts21 exact words. Caller/prefix literal pointers and function-pointer pools are checked directly against original bytes. The collector produces16 deterministic evidence files; the separate emulator produces results/tool identities. The finished author manifest excludes itself and later review files.
+
+From the workspace root:
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run13/collect_evidence.py --check
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run13/emulate_preselector.py --check
+```
+
+Both pass. The first command reads/disassembles/recounts and performs no original execution. The second repeats only the two isolated entry prefixes, strictly comparing saved result bytes and never consuming the canary. Earlier sources, original firmware and reports remain unchanged.
+
+Highest remaining question: what actual production caller/stack history or upstream contract determines selector words when a real configured DIM1 trigger reaches this branch? The selected parser/reset path does not answer that, and a continued comparison with invented words would add an assumption rather than resolve it.

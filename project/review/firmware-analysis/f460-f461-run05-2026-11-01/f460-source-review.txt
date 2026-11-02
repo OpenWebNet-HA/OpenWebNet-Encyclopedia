@@ -1,0 +1,26 @@
+# Independent F460 run05 key89 selector source review
+
+PASS within the original local registration/callable/argument-owner route. No correction requested. I authored the distinct F461 converter packet; this review independently checks original F460 matrix_mx bytes, fresh AArch64 argument/capture layouts and immutable candidates. No SQL/provider/vendor/native execution or semantic fixture/model is used.
+
+Verified original matrix SHA16d92b02ffe89819f6947d93efa76a0f24f8b590a43d3e5d8fdc7226ec68a4ff and fresh PT_LOAD mapping, all13 retained span bytes/hashes and43 exact guard words,5 PIC pairs and7 direct calls. Raw code28210/28218 resolves invokerf0d00/managerf5350. Code28624/28628 actually forms constructor112fd0; W21=89 at2864c is stored immediately before its function storage atSP1712, pointer112fd0 goes toSP1720 and manager/invoker to that storage+16/+24. This is an8-byte function-pointer capture, not the separate SLEEP UInt32 capture. I additionally checked the original selected28210..287a0 straight-line source for intervening call/register clobbers affecting those stored addresses and destinationX0; this corroborates bounded alias retention, not whole-program CFG or observed initialization.
+
+Range request287a0 selects12fad0 and global31a798. Selected entry copying independently reads key from entry0, stores node8, calls the actual manager with operation2 from entry+8 into node16 and copies manager/invoker into node32/40. Managerf5350's operation2 performs an8-byte load/store. Container construction/collisions/allocations/exception paths remain normal-provider premises; the structural51-entry range does not establish51 supported product functions.
+
+Original ed7d8/ed7e0 selects bucket/count at the same global offsets, and hash-chain key comparison gates the new-object call route. Under source-initialized/unmodified registry, selectedkey89 and valid-object premises, this chooses the constructor proven in run04. No natural configured key list, accepted message, global uniqueness or full dispatch domain was inferred.
+
+The actual supplied owner is reloaded as[X21] before each tiny getter; fresh definitions read its words120/124/128. Prologue ed660/ed664 and ed668/ed66c establish the three stack argument addresses SP28/SP32/SP36. The selected stores place getter120 atSP36, getter124 atSP32 and getter128 atSP28. BLRed88c passes functionstorage node16, those three pointers and hiddenX8=SP40. Actual invokerf0d00 loads its stored function pointer, dereferences the three arguments intoW0/W1/W2 and forwards the same hidden result address to the indirect call. This independently supports source composition with prior reviewed constructor: owner120/124/128 supply modobj/line_modobj/brand_modobj placeholder roles, while constructor itself supplies key89. The owner's class, construction, configuration provenance, mutation/lifetime and actual values remain open; numeric89 is neither DeviceID nor public WHO.
+
+The selected returned pair atSP40/SP48 is moved into an available16-byte owner-vector slot and its end is advanced. Full-capacity helper, ownership/reference effects, outer publication, SQL success/results and concurrency are unexamined. The pair source/copy does not establish active catalogue compatibility or a physical result.
+
+Read-only host collector --check passes16 outputs. Independently checked6 pinned inputs and18 exact first-candidate copies, with no author-file changes. No failed generation or overwritten candidate is claimed. Existing product/native ledgers remain unchanged. No receiving, transport, MQTT/libjel, authentication, session or framing implementation was inspected. Current field labels are source-established SQL placeholder roles under predecessor premises, not a cross-product type/layout transfer.
+
+Supplementary reviewed original source range28210..287a0 (end exclusive), byte SHA256: a9fea9bf084597f314fbad41784b9ae3321ad58dd22e5423d5da7c7f21f07905.
+
+## Exact reviewed pins
+
+- `REPORT.md`: `3c6d2d502e1322c7279f3fe259e4e30a9348858add5b656ed332a08ebdf7bdfb`
+- `collect_selector_v1.py`: `051bfd97e70c7e18566420437168b9dc5314ead1512b551d7a78802170800b90`
+- `SOURCE.json`: `fe53347164fcbbfd3dd2ebf13d1906452a5c7edd11e61eccd51c4c1e7b610c5e`
+- `INPUTS.json`: `1803b2a000dfe718096a5c2aa5b744015b604c55ef1604737e9c51d87b15c694`
+- `OUTPUT_MANIFEST.json`: `d9fa2aee3ef2c6b9b70b9bd29a7efa92e1709d2ab1e64ec2ae731d7e1b7c9033`
+- `first-candidate/INDEX.json`: `909ba88eeb009f583a36068823cbaa05f1c716e0dbbf1289635e5af445afca03`

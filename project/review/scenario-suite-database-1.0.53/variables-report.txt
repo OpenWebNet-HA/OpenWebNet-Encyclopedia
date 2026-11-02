@@ -1,0 +1,81 @@
+# WHO17 Counter/Boolean catalogue declarations and MH202 slot evidence
+
+The recovered ScenarioSuite database explicitly associates Counter object66 and Boolean object67 with WHO17, provides separate DIM6/7/8 command/status declarations and lists exactly128 addresses for each object. This is strong product-specific catalogue context for the previously recovered MH202 word/byte slot handlers. It is not an executed generator, accepted raw frame, configured script, live variable, or physical outcome.
+
+A material discrepancy must remain visible: counter auxiliary fields join temperature/time-labelled range records that do not match the firmware's selected0..32000 value guard. Those fields use graphic type `text`; the database join alone cannot prove effective UI validation, units or scaling. Boolean OnlyIf associations and compile-rule area flags also differ. The report preserves both rather than manufacturing one unified interpretation.
+
+## Provenance and method
+
+The read-only original is `work/mh202-firmware/research/2026-10-31-scenario-artifacts/acquisition/selected-files-v2/default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_2/Scen_SuiteDB_ENG.db`, SHA256 `ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29`. It is a genuine selected resource from the verified MyHOME Suite3.5.38 installer. The package directory/catalogue build and MH202 firmware1.0.24 remain separate applicability scopes. No executed Suite-to-firmware workflow is asserted.
+
+`collect_variables_v1.py` opens an absolute SQLite URI with `uri=True`, `mode=ro&immutable=1`, `PRAGMA query_only=ON`, `PRAGMA trusted_schema=OFF`, and verifies those settings and source SHA. Exact SQL, result rows, row counts and original primary-key column definitions are retained in `SQL_RESULTS.v1.json` and `SCHEMA.v1.json`. The selected tables have no declared foreign keys: joins are explicit analyst column-equality joins, not enforced relational constraints or a proven vendor consumer call graph. No configured-instance or credential tables are queried.
+
+The two comparison documents were frozen before integration in `reference-inputs/`, with exact original paths/hashes in `SOURCE_IDENTITIES.json`: canonical `functional/who-17-scenario-management/README.md` and completed MH202 `functional/run19/REPORT.md`. Reproduction uses these immutable snapshots rather than later edited canonical prose. No original ARM, vendor, JavaScript, generator, target process, network, database-writing statement or old native corpus executes. New original execution and hook counts are0.
+
+## Object, WHO and area joins
+
+Query `objects` returns PK `ANA_OGGETTI.ID_OBJ`66 Counter and67 Boolean, both family16. `family` identifies that family as Variables. `who` returns two composite association keys `(66,17)`/`(67,17)` through `ASS_OBJ_CHI`, joined to `ANA_CHI.ID_CHI=17`, description Variables, `OPEN_CHI='17'`.
+
+`commands` contains12 object-command association rows, PK `ASS_OBJ_COSA.ID_ASS`1501..1512. `areas` preserves the area dictionary:3 WHEN IT HAPPENS,4 ONLY IF,5 EXECUTE,6 Stop if it happens. These are database labels, not newly tested runtime scheduling semantics.
+
+| Object | Command PK / association PKs | Exact `OPEN_COSA` declaration | Area labels |
+| --- | --- | --- | --- |
+| Counter66 |618 /1501 | `6` (Variable value) | Only If |
+| Counter66 |619 /1502 | `#6*%cv%` (Set value) | Execute |
+| Counter66 |620 /1503 | `#8*1*%cvs%` (Value up) | Execute |
+| Counter66 |621 /1504 | `#8*0*%cvs%` (Value down) | Execute |
+| Boolean67 |622 /1505,1506,1507 | `7*1` (True) | When, Only If, Stop |
+| Boolean67 |623 /1508,1509,1510 | `7*0` (False) | When, Only If, Stop |
+| Boolean67 |624 /1511 | `#7*1` (True) | Execute |
+| Boolean67 |625 /1512 | `#7*0` (False) | Execute |
+
+`compile_rules` contains8 PK rows in `ANA_OPEN_RULE_COMPILE`: Counter579/580/581 (commands619/620/621, ACT_AREA1), Counter623 (command618, COND_OK_AREA1), Boolean582/583 (commands622/623, TRIGGER_START_AREA1/TRIGGER_STOP_AREA1), Boolean584/585 (commands624/625, ACT_AREA1). All eight declare ordered fields `#ID_CHI`, `ID_DOVE`, `ID_COSA`; remaining fields are NULL or empty, preserved exactly. These tokens are rule declarations, not a replayed substitution/formatting algorithm or a full generated frame.
+
+For Boolean622/623, `ASS_OBJ_COSA` includes OnlyIf area4 while these compile rows have COND_OK_AREA0. The separate status rows have CUSTOM_VALUTATION1. This is a real difference among declarations. Whether another generator/status-evaluation path handles Boolean OnlyIf remains unresolved; neither universal support nor absence is inferred from one flag.
+
+## Status requests and comparisons
+
+`status` returns three `ANA_STATUS_REQUEST_COMPILE.ID_COMP` rows:
+
+| PK | Object/command | Request type/dimension | Reply declaration | Custom valuation |
+| --- | --- | --- | --- | --- |
+|65|66/618|2, dictionary label Dimension; `6`|`EXTRACTVALUE`, dimension `6`, parameter string `1`|0|
+|66|67/622|2, Dimension; `7`|`EXTRACTVALUE`, dimension `7`, parameter string `1`|1|
+|67|67/623|2, Dimension; `7`|`EXTRACTVALUE`, dimension `7`, parameter string `1`|1|
+
+All three have CUSTOM_REQUEST0. The stored reply-parameter string is exactly `1`; no zero-based/one-based extraction convention, EXTRACTVALUE implementation, timeout or real reply admission was executed. ID_COMP66 is not object66 merely because its integer matches. No DIM8 status row appears in this selected object query, consistent with the earlier firmware DIM8 adjustment producing a DIM6 result, but not proof that a generator/runtime joined those operations.
+
+Auxiliary association PK64 maps command618 to field31 IfCountValue (`cv`, default0, valuation1). PK61 maps command619 to field29 CountValue (`cv`, default1, valuation0). PK62/63 map commands620/621 to field30 ValueStep (`cvs`, default1, valuation0). Conditions query retains original `(ID_FIELD,ID_COND)` pairs: field31 has `=`, `<`, `>`, `<=`, `>=`; fields29 and30 have only `=`. This supplies catalogue comparison/operator vocabulary, not the executed embedded-language IIF grammar or named numeric-record behavior.
+
+## Range metadata discrepancy
+
+The exact original ID_KIND joins are:
+
+| Field | Range PK/label | Stored range metadata | Graphic type |
+| --- | --- | --- | --- |
+|29 CountValue,31 IfCountValue|2, If temperature|MIN−50/MAX500/STEP5/MOLTIPLICATORE10; granularity1 OPENTemperature|3 text|
+|30 ValueStep|3, Time within|MIN1/MAX240/STEP1/MOLTIPLICATORE1; granularity2 Seconds|3 text|
+
+These are actual row values and joins, not a claim that counters measure temperature or that increment amounts are seconds. `CONVERSION_RULE=0` is stored on the fields; no interpretation of that discriminator or multiplier is derived. The text control may ignore, reinterpret or process range metadata through unexamined code. The declared data does not justify replacing firmware bounds with−50..500, applying division/multiplication by10 to Counter values, or restricting accepted DIM8 amount to240. A specific vendor field consumer would be needed to establish UI/generator semantics.
+
+## WHERE domain and parameter-owner limits
+
+`where_types` contains association PK88 for Counter66 and89 for Boolean67, both WHERE type23 with description Counter, placeholder text `[n]`, MASTER1/COMBO0 and no command-specific discriminator. That shared Counter label does not change Boolean's object identity or prove an executable regular expression.
+
+`where_configurators` joins type23 to configuration PK20, name `n`, default1. `where_rows` returns768 rows: Counter has128 addresses in each area4/5; Boolean has128 in each area3/4/5/6. Six summary rows each prove complete ordered numeric values1..128, not merely matching endpoints. Counter `ANA_DOVE.ID_DOVE`8535..8662 name Counter1..128; Boolean8663..8790 name Boolean1..128. Those database primary keys are not transmitted addresses: `OPEN_DOVE` is the separate string1..128. `GESTIONE_CUSTOM` is1 for Counter and Boolean OnlyIf,0 for Boolean's other selected areas; its engine effect is not executed.
+
+The bounded parameter query on selected WHERE association IDs88/89 returns0 rows. This is an analyst candidate owner relation, not a declared FK or proof that all custom addressing parameters are absent. `ANA_PARAMETER` has composite PK `(ID_ASS,ORDER)`; identically numbered ID_ASS values in auxiliary/command/WHERE tables must not be interchanged. Selected field-exception and object-open-extension queries also return0; these scoped misses do not prove whole-engine absence.
+
+## Cross-evidence with the selected firmware and canonical WHO17
+
+The completed, immutable MH202 functional/run19 report identifies `bt_taskmanager` dispatcher0xa72c, selected slot guard1..128 at0xa99c/0xaa04, word array0x1b928 and byte array0x1bb28. Measure DIM6/7 uses those separate arrays. The new catalogue address lists agree with the selected slot domain. They do not redefine public scene identifiers or the separate300-entry script-file loader domain.
+
+That report's exact source locators remain inherited static evidence, not new execution here: DIM6 converted-word store0xaa58 precedes unsigned<=32000 response admission; DIM7 unsigned<=1 guard0xaa80..0xaa88 precedes byte store; DIM8 direction1 adds and0 subtracts, then clamps to0..32000 and selects emitted DIM6 at0xab2c. This aligns with catalogue Value up/down direction literals and Boolean0/1 action labels, while preserving the metadata discrepancies above. Query-side word−1 suppression, unnormalized byte reads, publication helper returns and local2/3 codes are not erased by friendly labels. No local code is promoted to wire acknowledgement.
+
+The canonical WHO17 public four-command model describes scene Start/Stop/Enable/Disable and execution/availability axes. Its separate indexed-dimension subsection already distinguishes these manager slots from scene-record state and interpreter numeric records. This catalogue adds object/rule/status labels for the dimension namespace; it does not turn DIM7 Boolean into ordinary WHAT3/4 availability, establish shared interpreter variables, or prove one physical scenario workflow.
+
+## Reproduction and remaining question
+
+Run `python3 -B work/mh202-firmware/research/2026-10-31-database-analysis/variables/collect_variables_v1.py --check`. Exact SQL results and schemas regenerate in memory and outputs compare byte-for-byte. Initial collector/report/output bytes are immediately copied to `initial-generated-v1/`; snapshot hashes are computed before the index is opened. Generation refuses existing candidates, and no prior file is changed. Early unsaved exploratory reads had one incorrect column name and one SQL spacing typo; neither wrote a database or generated candidate. The final saved query set is the reproducible evidence, not those failed exploratory statements.
+
+Confidence is high for identities, literal declarations, analyst joins and scoped counts. The firmware comparison is inherited reviewed static source. Version applicability, conversion rules, range/control consumption, reply parameter indexing, real substitution/output, Boolean OnlyIf route, configured runtime state and physical behavior remain conditional or unknown. The highest next question is the exact ScenarioSuite field/rule/status consumer for Counter66/Boolean67, particularly whether text controls consume the temperature/time-labelled ranges and how EXTRACTVALUE's parameter1 is indexed. No distinct WHO25/WHO15 route was added to dilute this focused result.

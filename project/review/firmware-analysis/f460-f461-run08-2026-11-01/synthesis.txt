@@ -1,0 +1,7 @@
+# Run08 dual-analysis synthesis
+
+F460's actual updater connects a literal runtime manifest request and selected XML actions to separate caller-supplied normal/recovery staging records. Type-specific zero-word gates precede string/list requests into the same record. Normal/recovery updater bytes match, and safe packaged declarations correspond, but the runtime file, context, XML/providers, authenticity, extraction and installation remain unproved.
+
+F461's actual daemon has a configuration/status/file-result contract: default/XML/key-file writes to receiver byte360; extras-status low32==1 and nonzero byte select stat(extra/70); zero selects stop/load/restart and nonzero selects mkdir/restart requests. A real local caller passes the same receiver. This adds configuration/log-persistence architecture, not whole boot, active configuration, directory readiness, service success, restored logs or physical behavior.
+
+F460 v1 host syntax failure and F461 v1 readelf-header parsing failure occurred before generated outputs. Exact parent snapshots preceded exclusive v2 fixes. F460 report-only v3 narrows opaque helper return wording; old v2 report, first peer and exact two substitutions remain. No original source behavior correction, original execution, model, SQL, parser/service/device operation or replay occurred. Earlier histories/ledgers remain unchanged. Broader Device/source gates stay pending.

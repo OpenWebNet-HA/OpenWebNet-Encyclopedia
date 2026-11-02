@@ -1,0 +1,80 @@
+# MH202 WHO25: packaged GSource ownership and reset/rearm source contract
+
+The actual packaged GLib distinguishes **source creation/reference ownership**, **context attachment**, **destruction**, and **unref**. Original source_new writes reference count1; the attach internal path increments that same count and records a context; attached active-source destruction itself calls the decrement helper once, while unattached destruction only clears an active flag. Explicit source_unref enters the decrement helper directly. Therefore WHO25's local destroy requests cannot be treated as either complete source deallocation or as zero reference release merely because the plugin has no explicit source_unref import.
+
+The own WHO25 reset/rearm paths request destroy and clear/replace their private source pointer. Under a deliberately closed host-only ledger with no other references/framework activity, new→attach→destroy leaves count1, while adding an explicit unref can bring the count to0. This is a conditional API arithmetic illustration, **not an actual leak, lifetime, allocation/free, scheduling, resource-growth or physical finding**. The same packaged framework dispatch also decrements source references; its complete ownership history and installed execution are unobserved. No actual reference count or GSource object is read from a running target.
+
+Original/native/vendor/process/syscall/service/network execution, hook counts and new native corpora are all0. This batch is static ImageVFS/binutils plus three pure host ledgers. It does not execute GLib source internals, timer callbacks or the prior native corpus, and does not inspect network/session/authentication/framing/closed-equivalent paths. Originals, old dossiers, repository documents and synced sources remain read-only.
+
+## Exact original identities and candidate providers
+
+| Original image-relative path | SHA256 |
+| --- | --- |
+| /usr/lib/libglib-2.0.so.0.2800.7 | 029c2a7913131a84c46958d9ed445cb8a79dd1c8abc61116321badb7ad2735c0 |
+| /home/bticino/libcoso/libplug_trasv_cmd_stm.so | 8e656523b5bb4c22196203c7e801e631a3481b529982baa1a9f4a9ca13febe2d |
+
+The collector freshly reads these original bytes and saves PT_LOAD-derived VAs/file offsets/raw hashes. It preserves selected exports/DT_NEEDED and actual WHO25 JUMP_SLOT records: g_source_set_callback0xa308, g_timeout_source_new0xa348, g_source_destroy0xa358 and g_source_attach0xa35c. Packaged GLib exports the matching definitions. WHO25's dynamic metadata has no explicit g_source_unref import. This is matching packaged candidate evidence, not proof of an actual loader binding, active manager/provider or absence of indirect/framework decrements.
+
+The prior run25 source contract and authoritative corrected run27-native/REPORT.v2.md plus its source-identity refinement are pinned read-only inputs. Run27's opaque unmapped timer/context handles were not vendor GSource layouts, and no original GLib timer/refcount code executed in that experiment. This batch adds static source semantics without relabeling those opaque native models as real timer objects.
+
+## Numeric layouts: two different objects
+
+| Object/offset | Source-established role |
+| --- | --- |
+| GLib GSource+12 | reference counter, initialized1 and modified by ref/attach/unref |
+| GLib GSource+16 | attached context pointer |
+| GLib GSource+24 | flags; bit-index0/mask0x1 is set at creation and cleared by destruction |
+| GLib GSource+0/+4 | callback data/function-table pair, distinct from source reference count |
+| WHO25 private24+12 | pointer to a GSource, **not** its reference count |
+| WHO25 private24+16 | supplied context passed to attach |
+| WHO25 private24+20 | supplied publication callback, separate from the timer callback |
+
+The actual WHO25 initializer creates its own24-byte object. These offsets must not be transferred to another plugin or confused just because GLib and private structures both have an offset12. No host structure layout or API name alone supplies the counter identity: original new/ref/attach/unref instructions operate on that actual same GLib offset.
+
+## Original creation, attach and independent unref
+
+Original g_source_new **0x343a4..0x343d0** requests zero allocation of the supplied size and writes flags+24=1, priority+20=0, source-function table+8 and reference count+12=1. g_timeout_source_new **0x351e0..0x3522c** requests that source constructor with size72, stores its numeric argument at+64 and requests clock/internal setup. It is static evidence only; no timer unit or elapsed interval is inferred here.
+
+Original g_source_ref **0x33a54..0x33b28** confirms the counter by incrementing+12, including ordinary threaded/context locking branches. Original attach wrapper **0x36984..0x36a6c** selects the supplied context or requests the default whenNULL and invokes exact internal entry **0x34124** at0x369b8. Internal **0x34124..0x34238** increments source+12 at0x34140/0x34148/0x34150 and writes context+16 at0x34154. It also sets an ID and connects the source into context structures; normal compatible source/context, locking/list/helper completion are premises. No actual context attachment, ID or wakeup is observed.
+
+Original g_source_unref **0x34898..0x348a4** loads context+16 and tails directly to exact internal **0x34560**, which decrements+12 at0x345ac..0x345bc. The nonzero branch0x345c4 bypasses deallocation. A resulting zero enters cleanup, including conditional callbacks/context-list cleanup and eventual source g_free request at0x34684. This is a cleanup branch under normal helper completion, not an observed free. Reentrant callbacks, children, other references and threading can affect a full lifetime trace and are not flattened into this source arithmetic.
+
+The stripped internal entries0x34124 and0x34560 are identified by exact incoming branches and dataflow, **not** named after the nearest exported priority/main-depth symbol that objdump displays. All six decisive internal call edges are decoded directly from original ARM branch words in exact-internal-call-edges.json.
+
+## Destruction is separate from unref
+
+Original g_source_destroy **0x34e54..0x34e7c** checks source+16. With no attached context it clears flags mask0x1 at0x34e70/0x34e74 and returns without decrementing+12. With an attached context it tails at0x34e68 to a **different** internal entry0x348a4.
+
+Internal destroy **0x348a4..0x34ae4** checks active mask0x1 at0x348d4..0x348dc. If already inactive, the selected cleanup/decrement branch is skipped. If active, it clears that flag, removes callback-data/function-table pointers from source+0/+4 and requests their conditional cleanup. Child/poll/context paths have their own guards. Finally, at0x349c0..0x349cc, the ordinary active attached-source path calls **the same decrement helper0x34560** with the source/context and internal lock-state argument. This one decrement is an actual source-code effect under these premises; destroy is not simply a pointer clear or a universal free.
+
+The callback box is a different owner. Original g_source_set_callback **0x34318..0x34368** allocates16 bytes, stores its callback/data/notifier arguments and hands that box to an indirect setter. WHO25 supplies the actual private pointer as userdata and a NULL destroy notifier. Callback-box cleanup and source count changes are distinct; this batch does not derive a complete private-context destruction policy from either. It does not execute setter, destroy notifier or user callback.
+
+## Exact WHO25 reset/query/rearm paths
+
+Complete own reset **0x1574..0x15a4** writes saved ID8=-1 and state4=0. If private source pointer12 is nonNULL, it requests g_source_destroy and only then writes private12=0. There is no explicit g_source_unref call in this complete body. This local observation does not mean zero reference decrements, because the selected actual destroy implementation can perform one itself.
+
+Complete application **0x17b4..0x18c0** contains the already selected kind2/WHERE-first-character3 query path. It appends Q, saves ID/state1, requests new source with numeric argument1000, stores the returned pointer into private12, sets original timeout callback0x173c with this private userdata/NULL notifier, and attaches using private16. The displayed query path has no selected busy-state test or prior-source destroy before replacing12; no repeated-query/concurrency/resource outcome is inferred.
+
+The common eligible field continuation **0x16bc..0x16fc** instead checks existing private12, requests destroy when nonNULL, then requests new1000, stores the new returned pointer, installs callback/private userdata/NULL notifier and attaches. Earlier field state/ID/kind predicates remain the run25 premises; this is not a universal rearm policy for every incoming record.
+
+Complete own timeout **0x173c..0x17b4** requests the state-dependent local receipt and supplied publication callback under its state1/2 premises, then invokes reset. Other states go directly to reset. Thus the selected old source pointer may be destroyed/cleared from reset after publication or destroyed/replaced from the common field rearm. Creation references, context references, other holders, actual callback execution and context destruction remain separate ownership questions. No source_unref request is displayed in these callers; the whole process/framework may still perform decrements.
+
+## Framework counter changes prevent global promotion
+
+The actual packaged g_main_context_dispatch has an additional reference-release slice **0x34d0c..0x34d54**: when source+12>1 it directly subtracts/stores1; otherwise it requests the same decrement helper0x34560. An adjacent guarded branch **0x34cf4..0x34d0c** can select destroy internal0x348a4 through0x34df4..0x34e08 when the saved dispatch result is zero and the source remains active, after other source-flag guards. These are conditional framework counter/cleanup paths, not proof that any one releases the locally created WHO25 reference in an actual execution.
+
+Their existence is enough to invalidate any inference from a local no-unref callsite to global reference retention. Full acquisition/release provenance, pending/context ownership, callback reentrancy, context shutdown and actual calls remain unclosed. This report neither claims those framework paths compensate the local source contract nor claims an actual missing release/leak. The closed host examples intentionally exclude all such additional changes.
+
+## Host ledgers and reproduction
+
+Three independent closed illustrations assume ordinary new/attach, an active source, no extra refs/unrefs/framework dispatch/children/concurrency/reentrant mutation and normal helper returns:
+
+1. new1→attach2→destroy1 illustrates that attached active destroy need not reach zero;
+2. new1→attach2→unref1→destroy0 illustrates a balanced decrement sequence;
+3. unattached new1→destroy1→unref0 illustrates that unattached destruction alone does not release the creation count.
+
+Zero means the original cleanup branch is a candidate under those ledger premises, not observed deallocation. These Python arithmetic cases are not GLib object simulation, original CPU execution, actual ownership histories or a prescription to change code. No actual retained reference, leak, timer lifetime, callback effect or physical behavior follows.
+
+Run `python3 -B work/mh202-firmware/research/2026-10-30/who25/run28-source/collect_source_v1.py --check`. The collector rereads exact original spans/words, verifies provider records and six branch edges, and reconstructs three finite ledgers. It hashes current originals and frozen prior source reports; check mode writes nothing and performs original execution0. All original/source/repo files remain unchanged.
+
+First generation refuses existing outputs, uses exclusive creation and immediately preserves this report, collector and every first output under initial-generated-v1 with a SHA256 index. A later correction must be separately preserved/versioned by parent before any change; no generated candidate is overwritten. The highest remaining question is complete actual framework/context/owner lifetime provenance, not an inferred leak or observed schedule from this bounded static contract.

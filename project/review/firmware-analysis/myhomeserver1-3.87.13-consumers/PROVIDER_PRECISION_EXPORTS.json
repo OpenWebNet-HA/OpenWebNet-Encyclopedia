@@ -1,0 +1,16 @@
+{
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/REPORT.v2.md",
+      "published": "providers-report-v2.txt",
+      "size": 7527,
+      "sha256": "a15c6eddf21993e7b5f41372c747412fce771471632429b4da2896ac5c4b13da"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/REPORT_PRECISION_HISTORY.json",
+      "published": "providers-report-precision.json",
+      "size": 843,
+      "sha256": "ed0973060344ff88aa64adf347693350b1554d9658bb4484195839e61504cc90"
+    }
+  ]
+}

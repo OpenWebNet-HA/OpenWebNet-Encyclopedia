@@ -1,0 +1,10 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000001303a0 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1bfb0>:
+  1303a0:	d503245f 	bti	c
+  1303a4:	39402000 	ldrb	w0, [x0, #8]
+  1303a8:	d65f03c0 	ret

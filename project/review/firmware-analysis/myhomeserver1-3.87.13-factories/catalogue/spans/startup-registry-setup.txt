@@ -1,0 +1,24 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000156a2:
+   156a2:	ac0a      	add	r4, sp, #40	@ 0x28
+   156a4:	af07      	add	r7, sp, #28
+   156a6:	f10d 0818 	add.w	r8, sp, #24
+   156aa:	f8df a998 	ldr.w	sl, [pc, #2456]	@ 16044 <g_source_set_callback@plt+0x5568>
+   156ae:	2600      	movs	r6, #0
+   156b0:	f8df b994 	ldr.w	fp, [pc, #2452]	@ 16048 <g_source_set_callback@plt+0x556c>
+   156b4:	4649      	mov	r1, r9
+   156b6:	ef80 8010 	vmov.i32	d8, #0	@ 0x00000000
+   156ba:	44fa      	add	sl, pc
+   156bc:	44fb      	add	fp, pc
+   156be:	f10a 0320 	add.w	r3, sl, #32
+   156c2:	465a      	mov	r2, fp
+   156c4:	f8ca 601c 	str.w	r6, [sl, #28]
+   156c8:	f88a 6020 	strb.w	r6, [sl, #32]
+   156cc:	f10a 0018 	add.w	r0, sl, #24
+   156d0:	f8ca 3018 	str.w	r3, [sl, #24]
+   156d4:	f7fa ee5e 	blx	10394 <__aeabi_atexit@plt+0x4>

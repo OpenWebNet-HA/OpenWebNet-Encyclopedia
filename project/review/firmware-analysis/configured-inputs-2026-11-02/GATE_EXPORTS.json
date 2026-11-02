@@ -1,0 +1,25 @@
+{
+  "files": [
+    {
+      "source": "work/configured-scene-module-investigation/2026-11-02/reviews/integration-review.md",
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/integration-review.txt",
+      "bytes": 7673,
+      "sha256": "32a344ed26fcb68c44aa8b29071cb066348cd01f73ae8e61e02cda3a78bbb2a0",
+      "role": "Actual independent current documentary/identity/strict-check gate; not full configured/runtime approval"
+    },
+    {
+      "source": "work/configured-scene-module-investigation/2026-11-02/VALIDATION.json",
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/validation.json",
+      "bytes": 8792,
+      "sha256": "29b48685bd2c140be00b4301774b268e6306a1cc07eedfe55886e440e26a03fb",
+      "role": "Actual independent current documentary/identity/strict-check gate; not full configured/runtime approval"
+    },
+    {
+      "source": "work/configured-scene-module-investigation/2026-11-02/FINAL_CHECKS.json",
+      "export": "project/review/firmware-analysis/configured-inputs-2026-11-02/checks.json",
+      "bytes": 1011,
+      "sha256": "6a12432f7ff0d89c26de5b23d30f9cb5f4fc27522420f0e0dee7ae39c2f252ae",
+      "role": "Actual independent current documentary/identity/strict-check gate; not full configured/runtime approval"
+    }
+  ]
+}

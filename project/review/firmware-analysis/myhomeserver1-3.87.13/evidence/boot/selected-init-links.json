@@ -1,0 +1,241 @@
+{
+  "normal": [
+    {
+      "path": "/etc/rc5.d/S01networking",
+      "resolved": "/etc/init.d/networking",
+      "target": "../init.d/networking"
+    },
+    {
+      "path": "/etc/rc5.d/S02dbus-1",
+      "resolved": "/etc/init.d/dbus-1",
+      "target": "../init.d/dbus-1"
+    },
+    {
+      "path": "/etc/rc5.d/S15mountnfs.sh",
+      "resolved": "/etc/init.d/mountnfs.sh",
+      "target": "../init.d/mountnfs.sh"
+    },
+    {
+      "path": "/etc/rc5.d/S20hwclock.sh",
+      "resolved": "/etc/init.d/hwclock.sh",
+      "target": "../init.d/hwclock.sh"
+    },
+    {
+      "path": "/etc/rc5.d/S87redis-server",
+      "resolved": "/etc/init.d/redis-server",
+      "target": "../init.d/redis-server"
+    },
+    {
+      "path": "/etc/rc5.d/S99rmnologin.sh",
+      "resolved": "/etc/init.d/rmnologin.sh",
+      "target": "../init.d/rmnologin.sh"
+    },
+    {
+      "path": "/etc/rc5.d/S98-bt_daemon-apps.sh",
+      "resolved": "/etc/init.d/bt_daemon-apps.sh",
+      "target": "../init.d/bt_daemon-apps.sh"
+    },
+    {
+      "path": "/etc/rc5.d/S99_zfac",
+      "resolved": "/etc/init.d/fac.sh",
+      "target": "../init.d/fac.sh"
+    },
+    {
+      "path": "/etc/rc5.d/S97-bt-avahi-setup.sh",
+      "resolved": "/etc/init.d/bt-avahi-setup.sh",
+      "target": "../init.d/bt-avahi-setup.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S02banner.sh",
+      "resolved": "/etc/init.d/banner.sh",
+      "target": "../init.d/banner.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S02sysfs.sh",
+      "resolved": "/etc/init.d/sysfs.sh",
+      "target": "../init.d/sysfs.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S03mountall.sh",
+      "resolved": "/etc/init.d/mountall.sh",
+      "target": "../init.d/mountall.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S03populate-volatile.sh",
+      "resolved": "/etc/init.d/populate-volatile.sh",
+      "target": "../init.d/populate-volatile.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S05checkroot.sh",
+      "resolved": "/etc/init.d/checkroot.sh",
+      "target": "../init.d/checkroot.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S06alignment.sh",
+      "resolved": "/etc/init.d/alignment.sh",
+      "target": "../init.d/alignment.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S06devpts.sh",
+      "resolved": "/etc/init.d/devpts.sh",
+      "target": "../init.d/devpts.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S06modutils.sh",
+      "resolved": "/etc/init.d/modutils.sh",
+      "target": "../init.d/modutils.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S29read-only-rootfs-hook.sh",
+      "resolved": "/etc/init.d/read-only-rootfs-hook.sh",
+      "target": "../init.d/read-only-rootfs-hook.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S36bootmisc.sh",
+      "resolved": "/etc/init.d/bootmisc.sh",
+      "target": "../init.d/bootmisc.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S38dmesg.sh",
+      "resolved": "/etc/init.d/dmesg.sh",
+      "target": "../init.d/dmesg.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S39hostname.sh",
+      "resolved": "/etc/init.d/hostname.sh",
+      "target": "../init.d/hostname.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S41udev",
+      "resolved": "/etc/init.d/udev",
+      "target": "../init.d/udev"
+    },
+    {
+      "path": "/etc/rcS.d/S95-dedrifu_env.sh",
+      "resolved": "/etc/init.d/dedrifu_env.sh",
+      "target": "../init.d/dedrifu_env.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S01init_wdt.sh",
+      "resolved": "/etc/init.d/init_wdt.sh",
+      "target": "../init.d/init_wdt.sh"
+    },
+    {
+      "path": "/sbin/init",
+      "resolved": "/sbin/init.sysvinit",
+      "target": "/sbin/init.sysvinit"
+    }
+  ],
+  "recovery": [
+    {
+      "path": "/etc/rc5.d/S01networking",
+      "resolved": "/etc/init.d/networking",
+      "target": "../init.d/networking"
+    },
+    {
+      "path": "/etc/rc5.d/S02dbus-1",
+      "resolved": "/etc/init.d/dbus-1",
+      "target": "../init.d/dbus-1"
+    },
+    {
+      "path": "/etc/rc5.d/S99rmnologin.sh",
+      "resolved": "/etc/init.d/rmnologin.sh",
+      "target": "../init.d/rmnologin.sh"
+    },
+    {
+      "path": "/etc/rc5.d/S98-bt_daemon-apps.sh",
+      "resolved": "/etc/init.d/bt_daemon-apps.sh",
+      "target": "../init.d/bt_daemon-apps.sh"
+    },
+    {
+      "path": "/etc/rc5.d/S97-bt-avahi-setup.sh",
+      "resolved": "/etc/init.d/bt-avahi-setup.sh",
+      "target": "../init.d/bt-avahi-setup.sh"
+    },
+    {
+      "path": "/etc/rc5.d/S55_patch_uboot",
+      "resolved": "/etc/init.d/patch_uboot.sh",
+      "target": "../init.d/patch_uboot.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S02banner.sh",
+      "resolved": "/etc/init.d/banner.sh",
+      "target": "../init.d/banner.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S02sysfs.sh",
+      "resolved": "/etc/init.d/sysfs.sh",
+      "target": "../init.d/sysfs.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S03mountall.sh",
+      "resolved": "/etc/init.d/mountall.sh",
+      "target": "../init.d/mountall.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S03populate-volatile.sh",
+      "resolved": "/etc/init.d/populate-volatile.sh",
+      "target": "../init.d/populate-volatile.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S05checkroot.sh",
+      "resolved": "/etc/init.d/checkroot.sh",
+      "target": "../init.d/checkroot.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S06alignment.sh",
+      "resolved": "/etc/init.d/alignment.sh",
+      "target": "../init.d/alignment.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S06devpts.sh",
+      "resolved": "/etc/init.d/devpts.sh",
+      "target": "../init.d/devpts.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S06modutils.sh",
+      "resolved": "/etc/init.d/modutils.sh",
+      "target": "../init.d/modutils.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S29read-only-rootfs-hook.sh",
+      "resolved": "/etc/init.d/read-only-rootfs-hook.sh",
+      "target": "../init.d/read-only-rootfs-hook.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S36bootmisc.sh",
+      "resolved": "/etc/init.d/bootmisc.sh",
+      "target": "../init.d/bootmisc.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S38dmesg.sh",
+      "resolved": "/etc/init.d/dmesg.sh",
+      "target": "../init.d/dmesg.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S39hostname.sh",
+      "resolved": "/etc/init.d/hostname.sh",
+      "target": "../init.d/hostname.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S41udev",
+      "resolved": "/etc/init.d/udev",
+      "target": "../init.d/udev"
+    },
+    {
+      "path": "/etc/rcS.d/S95-dedrifu_env.sh",
+      "resolved": "/etc/init.d/dedrifu_env.sh",
+      "target": "../init.d/dedrifu_env.sh"
+    },
+    {
+      "path": "/etc/rcS.d/S01init_wdt.sh",
+      "resolved": "/etc/init.d/init_wdt.sh",
+      "target": "../init.d/init_wdt.sh"
+    },
+    {
+      "path": "/sbin/init",
+      "resolved": "/sbin/init.sysvinit",
+      "target": "/sbin/init.sysvinit"
+    }
+  ]
+}

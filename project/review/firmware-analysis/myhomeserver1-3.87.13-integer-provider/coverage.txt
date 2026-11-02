@@ -1,0 +1,9 @@
+# Bounded signed-provider coverage
+
+| Selected question | New source reach | Remaining boundary |
+| --- | --- | --- |
+|Value(int) representation|Actual own symbols/ABI/initBasic type1 and sign-extended low/high store|Valid object/normal delegate/live binding, other overloads and errors|
+|Type1 conversion|Actual type/isInt/asInt dispatch, required range test and normal lowword load|All other JSON types/error paths, arbitrary incoming object admission|
+|Trigger relevance|Candidate scalar constructor/readback link for actual C1Ei/asInt requests|Full member/map/move/assignment/reparse, configuration/provider/runtime and physical domain|
+
+No native/emulator/host numeric matrix or source expansion beyond the constructor-reachable signed32 route. All new execution/replay/model additions0; saved cumulative provider ledger stays1/8/340/0C/12redirect/eightEXIT/360hooks plus4setup. No double corpus rerun or unsigned-source broadening. Broader Device/source gates, old correction/history limits and closed opaque branches remain unchanged.

@@ -1,0 +1,74 @@
+# MH202 1.0.24 — post-restore XML callbacks and selected web-service effects
+
+The shared post-default step at `0x1556c` is a GLib markup configuration reader. It parses `/var/tmp/conf.xml` into the existing daemon configuration object through element-name callbacks. A concrete path is now linked from XML leaves `abil_pagine_web`/`abil_sdk`, to configuration bytes180/181, to later ordinary-child HTTP configuration/restart requests. These are static memory/call relationships; successful default restoration, parser completion and working HTTP services are not observed.
+
+All addresses below are from original MH202 `/home/bticino/bin/bt_daemon`, SHA256 `41a8844318d47cf33571b6d74a7de528dea5118d4c2289f4d666de419d91b1b6` (81584bytes). Image paths refer to the firmware root. Only this run7 directory was written; originals, synced files, completed reports and repository documents remain unchanged. Host Python/XML metadata parsing and binutils reads were used. Original ARM/JS/PHP/vendor/GLib execution, original instructions, hooks, processes, live files/status/service/network/device operations and mounts: **zero**. No archive/header/password/full-argv or credential values are output. Only one explicitly selected public Boolean from packaged XML is exported.
+
+## 1. Actual source and callback table
+
+Main's post-fallback join loads `/var/tmp/conf.xml` through original pool `0x10a84` and calls `0x1556c` at `0x10dec`, passing the existing configuration pointer as its second argument. Main does not test the return before continuing its running-copy policy. Two other selected direct calls at `0x1101c` and `0x113a8` use the same configuration-reader boundary; they are retained as caller evidence, not a complete reload/state model.
+
+The reader opens the supplied path, allocates a20-byte callback structure and initializes these original pointers (`callback-table-and-fields.json`):
+
+| Callback | Target VA | Role established by original calls |
+| --- | --- | --- |
+| Start element | `0x16244` | Duplicate element name, append it to existing GList at config+160 |
+| End element | `0x161d0` | Obtain last list node, free its name and delete the link; store updated head at config+160 |
+| Text | `0x158a0` | Traverse element-name list and update selected config fields |
+
+The remaining two table slots are zero. The existing config pointer is passed as GLib user data at `0x15628..0x15640`. There is no newly demonstrated event registration from this call: nearby `event_handler` symbol labels do not name this reader's actual operation. Element callbacks here are markup callbacks, with later configuration consumers traced separately.
+
+The selected normal path assumes valid callback/user-data/list state and ordinary GLib allocation/container contracts. The driver does not itself establish a fresh all-zero configuration object or prove that an existing element-name list is empty. Complete malformed-input/list/error behavior is not modeled.
+
+## 2. Selected service leaves write bytes in that same config object
+
+The text callback traverses the name list using exact original string comparisons. The selected path is:
+
+```
+/configuratore/setup/servizi/<selected leaf>
+```
+
+The root/setup/services comparisons are in `callback-root-setup-services-path.txt`; selected leaf comparisons and stores are in `callback-web-SDK-flags.txt`.
+
+| Selected XML leaf | Original compare literal | Store VA | Existing config field |
+| --- | --- | --- | --- |
+| `abil_pagine_web` | pool `0x16188→0x1a998` | `0x15c30` | byte+180 |
+| `abil_sdk` | pool `0x1618c→0x1a9a8` | `0x15c84` | byte+181 |
+
+Each selected branch reads the **first byte of the current text callback chunk**, compares it with ASCII `0`, and stores0 if equal or1 otherwise. It does not accumulate text across these selected callbacks or parse a word such as “false” into a Boolean. The supplied text length is not used by these two selected first-byte branches. Statements about zero-length chunks or malformed pointers are outside the nonempty-chunk model.
+
+`host-text-chunk-model.json` supplies six pure host examples on an already recognized path: chunks `0` and `00` yield0; `1`, `false` and leading-space ` 0` yield1; sequential nonempty chunks `1` then `0` leave the last stored byte0. This transcribes the instruction/store rule only. It is not original GLib execution, a prediction of actual XML chunk segmentation, accepted malformed XML or a firmware defect claim.
+
+The packaged generic default `/home/bticino/cfg/restore/conf.xml.def` has the selected public flag `/configuratore/setup/servizi/abil_pagine_web` text1. Its `abil_sdk` leaf is absent. The collector exports only that selected0/1 value, field presence and original identity, never the complete XML or other values. An absent packaged leaf does not by itself determine the existing runtime byte181. Actual restored contents and callback chunk sequence remain unknown.
+
+## 3. Concrete ordinary-child service consequences
+
+The ordinary child is created after main's selected parse call; the original child helper/caller ordering is preserved in `ordinary-child-creation-after-parse.txt` and earlier read-only boot reports. No successful fork or actual child memory was observed.
+
+In the ordinary child's code:
+
+- `0xe79c` loads config byte180 and tests zero. Its nonzero branch loads **byte181** at `0xe7c4` and passes it to imported `hal_configHttpd(bool)` at `0xe7cc`.
+- The following `0xe7d8` invokes a separate configuration reader with the selected `webpage` group (prior source context). Its detailed generated output is not reconstructed here.
+- Later `0xee54` loads **byte180** again; nonzero reaches imported `hal_restartHttpd` at `0xee60`, before the ordinary child-list launcher at `0xee88`.
+
+The displayed configure/restart call results are not immediately tested in these continuations. These are separate requests, not one atomic service-start event. On the configure gate's zero branch, a further independent comparison can request `hal_stopHttpd`; byte180 zero alone does not prove that stop call occurs. No HAL-generated files, daemon state, HTTP listening, successful restart or end-user feature availability is inferred.
+
+The text callbacks themselves update the existing config object and name list; their selected branches do not directly perform these service calls or write working/configuration status. The later ordinary-child consumers provide the concrete effect linkage. This keeps XML parsing, source flags, external HAL effects and runtime readiness separate.
+
+## 4. Parser return is not a validation/readback certificate
+
+The complete reader is saved in `runtime-XML-parser-driver.txt`. Its original open guard compares the descriptor with **zero** (`0x155c0`), returning1 for that value; it does not exclude−1 at this guard. This is a distinct runtime-config reader from the stack-file driver discussed earlier.
+
+The selected parse loop requests4096 bytes, passes the returned count to imported `g_markup_parse_context_parse`, and repeats only if the count equals4096. It does not check the parse Boolean, `end_parse` Boolean or pass an error-output pointer; the selected ordinary cleanup stores/returns0. No read-error campaign, full GLib contract or accepted runtime XML was executed. Main's post-fallback caller ignores this return as described above.
+
+Consequently neither a source return0 nor reaching the later consumers proves that all selected fields were successfully populated, that partial writes to the existing object were rolled back, or that the active services match the packaged default. This pass identifies concrete dataflow and bounded return/side-effect contracts, not complete restoration/validation behavior.
+
+## Reproduction and remaining questions
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/boot/run7/collect_config_effects.py --check
+```
+
+The deterministic host collector strictly compares18 outputs: ten original-code spans with original image paths/VA ranges/file offsets/byte hashes, twenty exact instruction-word assertions, five pinned inputs and six nonempty-chunk host cases. `input-hashes.json` pins the executable, packaged default XML identity, shared VFS and read-only run5/run6 reports. `safe-path-and-element-identities.json` contains only an explicit selected path/element whitelist. `packaged-selected-flag.json` contains the selected public Boolean/presence metadata. No original parser/library/instruction or live service operation runs.
+
+Confidence is high for the selected callback table, path/store instructions and later field consumers. Effective runtime file/list contents, actual GLib segmentation/error behavior, full configuration semantics, HAL provider/output contracts and working service readiness remain unclosed. Next questions: select another meaningful noncredential configuration producer/consumer or follow a narrow HAL HTTP output contract; distinguish runtime/default XML values from the separate stack-file startup declarations; expand parser/error handling only where a concrete new behavior depends on it. No previous closure/checksum/copy/fallback matrix was repeated, and closed authentication work remains untouched.

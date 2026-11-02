@@ -1,0 +1,38 @@
+
+/home/bticino/bin/dedrifupdater:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000005f30 <.text+0x3770>:
+    5f30:	d503233f 	paciasp
+    5f34:	d10403ff 	sub	sp, sp, #0x100
+    5f38:	900000a4 	adrp	x4, 19000 <_ZN8PlatformC1Ei@plt+0x16578>
+    5f3c:	7100043f 	cmp	w1, #0x1
+    5f40:	a90a7bfd 	stp	x29, x30, [sp, #160]
+    5f44:	910283fd 	add	x29, sp, #0xa0
+    5f48:	f947fc84 	ldr	x4, [x4, #4088]
+    5f4c:	a90b53f3 	stp	x19, x20, [sp, #176]
+    5f50:	aa0003f3 	mov	x19, x0
+    5f54:	a90c5bf5 	stp	x21, x22, [sp, #192]
+    5f58:	aa0203f4 	mov	x20, x2
+    5f5c:	2a0103f6 	mov	w22, w1
+    5f60:	a90e6bf9 	stp	x25, x26, [sp, #224]
+    5f64:	2a0303fa 	mov	w26, w3
+    5f68:	f9400080 	ldr	x0, [x4]
+    5f6c:	f9004fe0 	str	x0, [sp, #152]
+    5f70:	d2800000 	mov	x0, #0x0                   	// #0
+    5f74:	f9400260 	ldr	x0, [x19]
+    5f78:	54002169 	b.ls	63a4 <_ZN8PlatformC1Ei@plt+0x391c>  // b.plast
+    5f7c:	f9401c00 	ldr	x0, [x0, #56]
+    5f80:	f9400400 	ldr	x0, [x0, #8]
+    5f84:	97fff1af 	bl	2640 <abort@plt+0x8>
+    5f88:	aa0003f5 	mov	x21, x0
+    5f8c:	a90d63f7 	stp	x23, x24, [sp, #208]
+    5f90:	b4003995 	cbz	x21, 66c0 <_ZN8PlatformC1Ei@plt+0x3c38>
+    5f94:	b0000017 	adrp	x23, 6000 <_ZN8PlatformC1Ei@plt+0x3578>
+    5f98:	912962f7 	add	x23, x23, #0xa58
+    5f9c:	d0000018 	adrp	x24, 7000 <_ZN8PlatformC1Ei@plt+0x4578>
+    5fa0:	9135e318 	add	x24, x24, #0xd78
+    5fa4:	121e7ad6 	and	w22, w22, #0xfffffffd
+    5fa8:	1400000a 	b	5fd0 <_ZN8PlatformC1Ei@plt+0x3548>

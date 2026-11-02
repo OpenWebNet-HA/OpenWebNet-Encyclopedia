@@ -1,0 +1,21 @@
+{
+  "files": {
+    "ADMISSION_GAP.json": {
+      "bytes": 1648,
+      "sha256": "78e0414618f68b0a486d04b9d1874c741e7dd945dda1403bcdbd2a5b0f059cbc"
+    },
+    "INPUTS.json": {
+      "bytes": 1298,
+      "sha256": "58f6786f2b448f8178743762f82cea879970b7eb08c389f8c14ef8c129d4f5d7"
+    },
+    "REPORT.md": {
+      "bytes": 4641,
+      "sha256": "75343cc62d0efd9a65d4223c12e9c39bb60caf6516ba5a73469d583b9c62760c"
+    },
+    "TARGET_LOOKUP.json": {
+      "bytes": 2431,
+      "sha256": "ea25e4bea307907140548756d06f832bfb2f8a1e2306da7e68b00913b5ea5bdd"
+    }
+  },
+  "scope": "Generated members excluding this manifest"
+}

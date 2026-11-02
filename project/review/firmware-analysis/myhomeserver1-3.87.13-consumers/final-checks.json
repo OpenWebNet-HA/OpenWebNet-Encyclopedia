@@ -1,0 +1,44 @@
+{
+  "scope": "Final strict mechanical checks after every current review/validation target exists; no placeholder, deferred target or link exemption",
+  "checks": [
+    {
+      "name": "ESG",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "7577cb",
+          "wall_time_seconds": 3.9186349590000003,
+          "exit_code": 0,
+          "original_token_count": 21,
+          "output": "STATS human_pages=396 support_pages=150 objective_failures=0 review_candidates=6869\n"
+        }
+      }
+    },
+    {
+      "name": "ECV",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "925fb1",
+          "wall_time_seconds": 1.696445776,
+          "exit_code": 0,
+          "original_token_count": 16,
+          "output": "STATS human_pages=396 objective_failures=0 review_candidates=14\n"
+        }
+      }
+    },
+    {
+      "name": "Git_diff",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "7616e8",
+          "wall_time_seconds": 0.00000933,
+          "exit_code": 0,
+          "original_token_count": 0,
+          "output": ""
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+# Installer database conservation review
+
+PASS for the exact audited selection's conservation and additive canonical registration, with remote status interpreted from saved receipts. This is an independent read-only local evidence review. I did not upload, fetch from R2, inspect live ACLs, query the remote Git server, run vendor code or change any source, object, manifest or author file. The saved receipts attest the parent's configured-helper readback workflow; this review independently verifies their local identity/composition, not a second fresh remote readback.
+
+## Exact reviewed inputs
+
+| Artifact | SHA256 |
+| --- | --- |
+| work/installer-database-audit/2026-10-31/AUDIT.json | 63a049c4ad34e7e21ef0fc2d3e9ee42bfba9b48f0c7157c9dafb85c17ac8ba50 |
+| work/installer-database-audit/2026-10-31/PAGE_PROOF.json | 11971719727d901d3c8d44832ec3c712501abedf3b27745596c5e7e516a1b3e0 |
+| work/installer-database-audit/2026-10-31/LOGICAL_INVENTORY.json | e27b01a26a1111acacf3f37f52e859b4559e61df50a4035fda0af2ad9679637d |
+| work/installer-database-conservation/2026-10-31/PLAN.json | dfea91e352ec507c5e3fd2317c7ead13c4d7cf2534cd85f1438eee15fb5fb0a8 |
+| work/installer-database-conservation/2026-10-31/receipts.tar | 10c8eb262b2b8a759531d9b9b7cf4bfe63c6124471ee32490a9e0ba87a478322 |
+| work/installer-database-conservation/2026-10-31/register_on_main.py | 256075e5187157f96d19946173915ece1b62d2fa7e5c85bb87a877f0222db456 |
+| work/installer-database-conservation/2026-10-31/ARCHIVE_COMPLETE.json | bbca9bad3126b4d6ce7b33f7adb16f6512b4a4497528c5c18d3f971149e1cfc3 |
+
+The extracted receipt files match the exact tar members, including all13 individual object receipts. Receipt/member identities are:
+
+| Member | SHA256 |
+| --- | --- |
+| R2_COMPLETE.json | 1f6f7b64923d9f92f461511bb66378c17580ba53844d318b7d59269e387de2b5 |
+| REGISTRY_COMPLETE.json | a0d8524c808f992d4404bad4376dd402832e77d4bb1aaa84158650596b05e3a2 |
+| manifest.before-registration.yaml | 01b67e8006e447169451bc8977a18edeb8c7c51f63c8f9c4d550d47b2eef89e0 |
+| manifest.registered.yaml | dff0aac04bdb06c9ea298845d8666dce293818e65b03ae5882c3ab0aed883a05 |
+
+## Independent checks
+
+* AUDIT's20 installer member paths and PLAN's expanded member lists agree exactly by path and SHA256. Their13 unique content hashes agree, so duplicate BT/LG/restore paths do not become duplicate payload registrations. This is the top-level decoded index selection of database-like extensions; nested/opaque/extensionless content remains outside the audit.
+* All13 conservation object bytes match their SHA256/size filenames, original recovered source bytes, SQLite16-byte header and declared content-addressed object key. Fresh host SQLite connections used absolute `mode=ro&immutable=1`, `query_only=ON` and `trusted_schema=OFF`; all13 PRAGMA quick_check results are exactly ok. A successful quick_check is structural, not application-level semantic or relationship validation. Selected source-page size/CRC provenance remains inherited from the audit, not a repeated complete installer decompression here.
+* PLAN's seven new IDs agree with both the registration receipt and manifest set difference. All seven descriptor objects exactly equal their registered entries. All832 prior artifact records remain equal as YAML objects AND their individual original manifest blocks remain byte-for-byte identical. The manifest grows832 to839 entries. No prior record is rewritten to register a duplicated path/payload.
+* Every one of the13 reviewed payloads occurs exactly once by SHA256 in the registered manifest. Each has matching size/key and storage visibility private. All seven new records explicitly say private-archive-only; absence of that newer optional field in some historical records is preserved unchanged, with their existing private storage declaration intact.
+* Saved R2 results identify13 successful object readbacks, statuses existing/uploaded, with matching IDs, hashes, sizes and keys. Every individual receipt matches its aggregate result. The aggregate and registration receipt identify six existing payloads and seven uploaded/new registrations. These are recorded remote checks, not new remote execution by the reviewer.
+* The current local canonical manifest exactly equals the saved registered bytes, SHA256dff0aac04bdb06c9ea298845d8666dce293818e65b03ae5882c3ab0aed883a05. The saved registration record attributes the manifest-only main commit to974eced66cf40fdc5b5dc3417357244db710d848 and records upstream/clean-tree validation. That commit object was not available in this local research checkout; I do not claim an independent remote commit/tree read. The saved before/after manifests independently prove the additive content change.
+
+The seven additive IDs are mh200n-1331-1.0-scen-suite-db-eng, device-1768-1.0-systems, device-1898-2.1-systems, device-1768-2.1-systems, f454-1455-2.0-lgg-systems, mhprj and ptdb, all under the common `myhome-suite-3.5.38-` prefix. The six existing identities remain thermo-rules, mhcatalogue, scenario-devices-programdata, mh202-1902-lgg-scen-suite-db-eng, scenario-devices-program-files and open under that same prefix.
+
+## Analysis boundaries
+
+Conservation does not convert database names, model-directory IDs or shared schemas into proven device capability, installed user projects or runtime state. The fresh structural table counts are2/74/4/79/8/8/8/79/8/19/7/4/23 in PLAN order; those are database inventories, not coverage percentages. Application-level joins, consumer ownership and profile differences require the separate bounded analyses.
+
+MHPrj/PTDB consultation must not export credential-bearing schema defaults or raw EN_HOST DDL/value content. Column names/types, source hashes, redacted structural metadata and empty-instance counts can establish bounded relationships without inspecting authentication behavior. No packaged credentials or private keys were printed or included in this review.
+
+Only this new review file was written. Existing audit/conservation/source/registry files and completed dossiers remain unchanged. No request for further upload, permission or remote operation follows from this review.

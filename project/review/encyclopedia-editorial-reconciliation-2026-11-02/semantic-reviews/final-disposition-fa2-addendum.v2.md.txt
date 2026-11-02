@@ -1,0 +1,9 @@
+# Final editorial audit: FA2 closure
+
+Verdict: **PASS — FA2 is resolved.** This is a narrow mapping-integration recheck. The original final-disposition-by-mh202.v1.md and its identity file remain unchanged.
+
+The public export-representations.json now has fourteen entries, including the historical diagnostic export privacy projection. Its original hash matches the exact private pre-anonymization snapshot and DEVICE_IDENTIFIER_PRIVACY_REFINEMENT.json; its public hash matches the actual current anonymized export. The prior thirteen entries and every non-mapping field are unchanged from the exact preserved prior public map. All fourteen destination fingerprints match actual public bytes. EXPORT_REPRESENTATION_PRIVACY_ADDENDUM.json also matches both prior and current public-map fingerprints.
+
+The mapping explains the historical identity difference without reproducing the installation identifier, changing the diagnostic model/item/SKU facts, or silently repinning an old manifest. It closes the only remaining traceability integration item from the disposition audit. Current details and all checks are recorded in final-disposition-fa2-addendum-identities.v2.json.
+
+No additional material editorial issue remains from that original-delta disposition audit. **Machine KB remains PENDING and is not passed by this addendum.** No repository edit, new source investigation, collector replay or execution occurred.

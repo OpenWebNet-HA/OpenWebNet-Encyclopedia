@@ -1,0 +1,56 @@
+# F459 run08 own callback metadata source review — PASS for authoritative report v2
+
+Reviewer /root/evidence_reviewer, new review files only. CompletedUTC 2026-11-01T23:19:50.138902+00:00. The source/relocation/getter facts are independently checked. Selected name/index interpretation is explicitly conditional on Qt5revision7-compatible metadata/string layout, not original target headers/version/binding or runtime lookup. Full source/Device/runtime/physical approval remains pending.
+
+## Frozen identities
+
+Root `work/f459-firmware/2.1.5/research/2026-11-01-night08-metadata`:
+
+- `REPORT.v2.md` — 4658 bytes, SHA256 `58d1d0e679735953293ba9097d7cf59c6c9360679b9e189c4ccd4a341d870232`.
+- `REPORT.md` — 4286 bytes, SHA256 `0bd38bbd4f7f3bf9a38f38895965462c995851dbdedfb8a2c6e37cf3d255f215`.
+- `REPORT_VERSION_MAPPING.json` — 642 bytes, SHA256 `e47a59543baf0c15aac3ac1188dc6dbd7799423b6b260ecdc9b40ae608b47878`.
+- `collect_metadata_v1.py` — 10083 bytes, SHA256 `8fd3003c30fb51d6d2b651bd5e104734ffba55e3d90c62060ff6e0bd21eb83a9`.
+- `METADATA.json` — 4783 bytes, SHA256 `a5e9bb4d133e7c761c09b5edc6af0a415e39736bb5018c4336c72a0b27b3ed27`.
+- `INPUT_PINS.json` — 829 bytes, SHA256 `5f2d541fc96383d7162552229ab0fbf958e634e4e96def314c11cf8347c40f53`.
+- `FORMAT_CONTEXT.json` — 1854 bytes, SHA256 `4036ef47f4a6b5bb6feb5e2aa5715d698462b88aa6fb0326e24b8104f9a5ae73`.
+- `OUTPUT_MANIFEST.json` — 742 bytes, SHA256 `6f1fc577374f78208b9b4237a5ce31514ee7f3a72396acac5935b4d427de358a`.
+- `first-candidate/INDEX.json` — 999 bytes, SHA256 `a746c9a9f61f8da225940d8b0aaa23170a13b3dc8b45b4bc003797c768d55a93`.
+- `report-v2-first-candidate/INDEX.json` — 642 bytes, SHA256 `e47a59543baf0c15aac3ac1188dc6dbd7799423b6b260ecdc9b40ae608b47878`.
+
+Original own libmhshared.so.1 is43208bytes/SHA2564d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377, ELF32 little-endian ARM/machine40 with fresh own PT_LOAD mapping. All four input pins, five outputmanifest members and seven exact first copies match. The additional authoritative reportv2 has an independent exact first copy and flat version-mapping index, separate from the immutable canonical output manifest.
+
+## Independent byte/data/import checks
+
+Actual permitted canonical `collect_metadata_v1.py --check` passes5outputs/7copies/10guards/one getter span/six data extents/originalexecution0. Separately I parsed original headers/program mappings, compared all10guard words and the complete48byte getter export (40instructionbytes plus8literalpool bytes), all6selected data extents with exact bytes/SHA, all5original relocations and both export-symbol rows. Pool words are data, not executed instructions. I recomputed the selected branch, GOTbase/static slot, table-index arithmetic, relative string address and selected parameter-word position. No selected code/data extent reads the callback body5f08..67c0.
+
+### Conditional own getter
+
+Original744c loads suppliedreceiver+4 intoR0;7454 loads that pointer+24 intoR2. Under valid receiver/pointers, ordinary ABI and effective binding, exact zero compare745c/branch7460 selects7468. Pool7474 plus ARM PC yields GOTbase12180; pool7478 selects slot122e8. Actual R_ARM_GLOB_DAT there is own `_ZN8mhShared16staticMetaObjectE`, exported at12058/24bytes, and746c loads the relocated symbol pointer to return. This is source selection, not an observed instance/dynamic state or live pointer.
+
+The nonzero tail branch7464 recomputes toPLT2094. As a reviewer-only import bridge I independently read that original12byte stub `00c68fe210ca8ce21cf1bce5`, computed GOT121b8 and verified actual row `000121b8  00001016 R_ARM_JUMP_SLOT        00000000   _ZNK11QObjectData17dynamicMetaObjectEv`. This supports the report's opaque dynamicMetaObject request name without entering its body or assuming provider semantics. No dynamic route executes or proves class/lifetime/binding.
+
+### Own static object, selected local row and string
+
+Original staticMetaObject12058 has six32bit words0,0x920c,0x9340,0x74bc,0,0. Its first actual ABS32 relocation names QObject::staticMetaObject;1205c/12060/12064 have original RELATIVE relocations for own string/data/static-dispatch addends. A common correct load bias and external binding are premises. File zeros/addends are not observed runtime pointers.
+
+At9340 the14original words are7,0,0,0,9,14,0,0,0,0,0,0,0,1. Under the selected Qt5revision7-compatible format, methodCount9 and methodData14 permit selected localindex8. Exact arithmetic0x9340+4*(14+5*8)=0x9418, whose five original words are12,0,95,2,8. Under the SAME format premise, the selected name index12 reaches the16byte record0x920c+12*16=0x92cc. Its four original words are0xffffffff,9,0,0x66, where the last word is **0x66 =102decimal**, not66decimal. Adding that relative byte offset to the record gives0x9332; exact ten original bytes are _onChange followed byNUL. The row argument count0 supports a zero-argument name under the premise. Parameter-word position0x9340+4*95 is0x94bc and its raw word43; flags/tag/type/numeric metadata are not promoted to public protocol semantics or absolute inherited method identifiers.
+
+### Host/API format context, not target provider evidence
+
+I reopened the two official upstream Qt repository URLs recorded in FORMAT_CONTEXT and checked the selected paraphrases. The [Qt5.15 private metadata header](https://github.com/qt/qtbase/blob/5.15/src/corelib/kernel/qmetaobject_p.h), rendered lines1025–1054, supports the revision/class-info/method-count/data field ordering and labels revision7 as Qt5.0-era format. The [Qt5.15 metadata implementation](https://github.com/qt/qtbase/blob/5.15/src/corelib/kernel/qmetaobject.cpp), rendered lines2413–2448 and3172–3192, supports indexed string-data resolution and a five-word local method-row stride, returning a relative local index. These are selected documentary/API interpretations, not original target headers, release identity, effective binding or executed matching.
+
+For the review-only string-format clarification I also checked the official [Qt5.15 array header](https://github.com/qt/qtbase/blob/5.15/src/corelib/tools/qarraydata.h), rendered lines961–994: size and relative byte displacement are structural data; access derives a byte address relative to the record. The16byte ARM32 record assumption is expressly a compatible-layout premise corroborated by the own raw record/address/size/string relationship, not proof of the exact target header or a universal ABI. This public-host context fetch did not inspect a target provider body, execute Qt lookup or acquire an original target source. No full upstream source download/hash or immutable earlier webpage byte identity is invented; selected URL/paraphrase/locator context only. Older5.0.0/5.3 unavailable/cache-miss probes remain unavailable, not falsely pinned source bytes.
+
+The new selected metadata conditionally narrows the old name/index gap: local8 describes zero-argument _onChange and static-dispatch field74bc agrees with the independently frozen run07helper. Its mode0/index8→candidate callback request and earlier encoded connect name remain INHERITED, not fresh code coverage. Actual metadata-name resolution/encoded-name treatment/event admission, same valid unchanged objects, provider binding and lifetime are still required. No absolute base-class method index, successful connection, event/callback execution/order, query freshness/contents, quiescence, ownership or concurrency is proved. Callback and provider bodies remain opaque.
+
+## Documentary correction and exact history
+
+The initial canonical report printed string offset66 without clarifying mixed hexadecimal/decimal notation. I requested clarification BEFORE edits. Parent captured exact report/collector/outputmanifest in `run08/parent-before-f459-report-v2` first, then created separate authoritative REPORT.v2.mdSHA58d1d0e679735953293ba9097d7cf59c6c9360679b9e189c4ccd4a341d870232. The diff changes the ambiguous record/displacement spelling to0x66(102decimal) and appends explicit report-version roles only. Original REPORT.mdSHA0bd38bbd4f7f3bf9a38f38895965462c995851dbdedfb8a2c6e37cf3d255f215, code/results/manifest/firstcopies are unchanged. Canonical --check continues reproducing that historical report; current reportv2 is independently pinned/copied/reviewed, not silently substituted into its old manifest. All three exact parent snapshots and the new flat report-copy/version index match.
+
+One reviewer inline check initially assumed the report-copy index used a files-key schema; actual index is the flat mapping shown above. It stopped before any review writes, then I inspected the actual shape and verified exact bytes/hashes using it. No old on-disk reviewer script/hash, generated report, guest failure or source correction is invented from that metadata-assumption error. No canonical generation failure/correction occurred; the refined report's numeric notation does not change source behavior/counts/guards.
+
+## Final scope
+
+**PASS for the original selected getter/data/relocation facts and authoritative REPORT.v2's conditional interpretation.** High confidence for exact words/addresses/imports; semantic applicability remains format/provider/object/lifetime dependent. No further correction requested.
+
+Original/vendor/helper/native/emulator/Qtlookup/SQLite/targetOS/services/network/bus/runtime/physical execution0; no model/fixture, recovered/generated DB, syntheticDB, archive upload/readback or remote write. Reviewer public-document access and host static readers/disassembly are separate from original execution and earlier authorized archive-host writes. Existing one encrypted F450SUPPORT/zero plaintextDB remains the parent's saved prior receipt scope, not fresh independent network verification. Old MHS340code-hookvisits/360hooks and separate F454/MH202 ledgers stay unchanged; no old corpus/collector replay. Closed F450helper2eec4/equivalent and receiving/output-transport/auth/session/framing/MQTT/libjel routes remain unexamined. No credentials/private configuration/runtime values exported, original/research/repository edits, staging/commit/push/publication or prior firstcopy changes. This exclusive review is immediately copied exactly with a precomputed noncircular index.

@@ -1,0 +1,11 @@
+{
+  "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+  "snapshot": "README.md",
+  "before_sha256": "cec905b76f4c95fc3309774a0d453ff7cb0d6d0dfa6f7c2d5714f0a8e2743274",
+  "before_bytes": 10704,
+  "anchor": "| [F460 2.0.12 and F461 2.0.11](f460-2.0.12-and-f461-2.0.11.md) | Existing canonical firmware-f460-020012 /firmware-f461-020011, exactSHA/size in the analysis | Parallel safe static extraction, fresh AArch64/boot/DB metadata and read-only source-profile comparison | Separate product declarations, shared catalogue and changed selected binaries; no firmware execution or runtime/physical approval |\n",
+  "insert_after": "| [F460/F461 deeper source analysis](f460-f461-deep-analysis.md) | Original AArch64 F460 2.0.12 / F461 2.0.11, independently checked build identities | Selected SLEEP callable/wait/completion and descriptor-matcher/translator source paths | Conditional API/binding/object contracts; no firmware execution, exhaustive coverage or runtime/physical approval |\n",
+  "after_sha256": "33a04d33f248a91c67de7a70e25ec2a54766b793b813efddafe40cde14fc17c0",
+  "new_page": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+  "new_page_sha256": "6df016d9d20c97cd01f43b31b0587d27e935ee9fe09ed4ecc2117a27bd12904f"
+}

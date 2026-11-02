@@ -1,0 +1,71 @@
+from pathlib import Path
+import json,hashlib,struct,subprocess,argparse,os
+O=Path(__file__).resolve().parent;W=next(p for p in O.parents if (p/'OpenWebNet-Encyclopedia').is_dir());P=W/'work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager';OLD=W/'work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver'
+def H(b):return hashlib.sha256(b).hexdigest()
+def J(x):return (json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+def build():
+ b=P.read_bytes();assert len(b)==2161128 and H(b)=='5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62';assert b[:6]==b'\x7fELF\x02\x01' and struct.unpack_from('<H',b,18)[0]==183
+ ph=struct.unpack_from('<Q',b,32)[0];pe,pn=struct.unpack_from('<HH',b,54);L=[struct.unpack_from('<II6Q',b,ph+i*pe) for i in range(pn)];L=[r for r in L if r[0]==1]
+ def raw(a,n):
+  r=next(r for r in L if r[3]<=a and a+n<=r[3]+r[5]);z=r[2]+a-r[3];return b[z:z+n]
+ def u(a):return struct.unpack('<I',raw(a,4))[0]
+ def sx(v,n):return v-(1<<n) if v&(1<<(n-1)) else v
+ def bl(a):return a+(sx(u(a)&0x3ffffff,26)<<2)
+ def cb(a):return a+(sx((u(a)>>5)&0x7ffff,19)<<2)
+ def adrp(a):
+  w=u(a);return (a&~4095)+(sx((((w>>5)&0x7ffff)<<2)|((w>>29)&3),21)<<12)
+ assert H(raw(0x2ca20,0x200))=='8c05185d4d5b432d59ebd00cdbd6927c89345be75559f578c8a3eeca077cf413'
+ G={0x2ca78:0xf9402ff6,0x2ca8c:0xb50002b6,0x2cae4:0x910143fb,0x2cae8:0xaa1b03e0,0x2caf8:0x97ffe036,0x2cafc:0xaa0003f6,0x2cb00:0x97ffdc80,0x2cb34:0xf0000b42,0x2cb38:0x9133d442,0x2cb3c:0xf0000b41,0x2cb40:0x9133c021,0x2cb64:0x910483f9,0x2cb68:0xaa1703e1,0x2cb6c:0xaa1903e0,0x2cb70:0x5280003c,0x2cb74:0x97ffddc3,0x2cb78:0x34002ce0,0x2cbac:0x3500247c,0x2cbb0:0xaa1303e8,0x2cbb4:0xaa1603e0,0x2cbb8:0x94002ec6,0x2cbbc:0x9106a3e0,0x2cbc0:0x910663fc,0x2cbc4:0xaa0003e3,0x2cbc8:0xb0000b41,0x2cbcc:0xb0000b42,0x2cbd0:0x9107f042,0x2cbd4:0xaa1c03e0,0x2cbd8:0x9107a021,0x2cbe4:0x97fffe4b,0x2cbe8:0x9106e3f8,0x2cbec:0xaa1803e0,0x2cbf0:0x97ffdbe4,0x2cbf4:0xaa1c03e0,0x2cbf8:0x97ffdd46,0x2cbfc:0xaa1c03e1,0x2cc00:0xaa1303e0,0x2cc04:0x97ffdd9f,0x2cc08:0x2a0003f8,0x2cc0c:0xaa1c03e0,0x2cc10:0x94002e98,0x2cc14:0xaa1303e0,0x2cc18:0x94002e96,0x2cc1c:0x34002b78}
+ for a,w in G.items():assert u(a)==w,(hex(a),hex(u(a)))
+ assert cb(0x2cb78)==0x2d114 and cb(0x2cbac)==0x2d038 and cb(0x2cc1c)==0x2d188
+ local=[]
+ for a,t in [(0x2cbb8,0x386d0),(0x2cbe4,0x2c510),(0x2cb4c,0x2c510),(0x2cc10,0x38670),(0x2cc18,0x38670)]:assert u(a)>>26==0b100101 and bl(a)==t;local.append({'call_VA':hex(a),'target_VA':hex(t),'body':'OPAQUE/UNEXPANDED'})
+ literals=[]
+ for lo,addlo,hi,addhi,a,text in [(0x2cb3c,0x2cb40,0x2cb34,0x2cb38,0x197cf0,'.json'),(0x2cbc8,0x2cbd8,0x2cbcc,0x2cbd0,0x1951e8,'action_schedule.json')]:
+  n=len(text);assert adrp(lo)+((u(addlo)>>10)&4095)==a and adrp(hi)+((u(addhi)>>10)&4095)==a+n and raw(a,n+1)==text.encode()+b'\0';literals.append({'text':text,'begin':hex(a),'end_exclusive':hex(a+n),'NUL_terminated_bytes_hex':raw(a,n+1).hex(),'begin_instructions':[hex(lo),hex(addlo)],'end_instructions':[hex(hi),hex(addhi)]})
+ rel=subprocess.check_output(['readelf','-rW',str(P)],text=True);symbols=subprocess.check_output(['readelf','-sW',str(P)],text=True);defined=[]
+ for row in symbols.splitlines():
+  x=row.split()
+  if len(x)>=8 and x[3]=='FUNC' and x[6]!='UND':
+   try:a=int(x[1],16);n=int(x[2])
+   except ValueError:continue
+   if a<=0x2cc20<a+n:defined.append(row.strip())
+ assert defined==[]
+ calls=[]
+ for a,t,g,name in [(0x2caf8,0x24bd0,0x21ec58,'_ZNKSt10filesystem7__cxx1118directory_iteratordeEv'),(0x2cb00,0x23d00,0x21e4f0,'_ZNKSt10filesystem7__cxx114path17_M_find_extensionEv'),(0x2cb74,0x24280,0x21e7b0,'_ZNKSt10filesystem7__cxx114path7compareERKS1_'),(0x2cbf0,0x23b80,0x21e430,'_ZNSt10filesystem7__cxx114path5_ListC1Ev'),(0x2cbf8,0x24110,0x21e6f8,'_ZNSt10filesystem7__cxx114path14_M_split_cmptsEv'),(0x2cc04,0x24280,0x21e7b0,'_ZNKSt10filesystem7__cxx114path7compareERKS1_')]:
+  assert u(a)>>26==0b100101 and bl(a)==t;x,y,z,v=struct.unpack('<4I',raw(t,16));assert x&0x9f00001f==0x90000010 and y&0xffc003ff==0xf9400211 and v==0xd61f0220;assert adrp(t)+((y>>10)&4095)*8==g;row=next(r.strip() for r in rel.splitlines() if r.startswith(f'{g:016x} '));assert 'R_AARCH64_JUMP_SLOT' in row and name in row;calls.append({'call_VA':hex(a),'PLT':hex(t),'GOT':hex(g),'symbol':name,'PLT_bytes_hex':raw(t,16).hex(),'actual_relocation':row})
+ old=json.loads((OLD/'SOURCE.json').read_text());span=next(x for x in old['spans'] if x['name']=='selected-owner-allocation');assert bytes.fromhex(span['bytes_hex'])==raw(0x2cc20,0x78)
+ for a,w in [(0x2cc44,0xf94002c1),(0x2cc54,0xf94006c2),(0x2cc5c,0x8b020022),(0x2cc68,0xaa1303e1)]:assert u(a)==w
+ assert bl(0x2cc60)==0x2c600 and bl(0x2cc70)==0x105740
+ pins=[]
+ for p,role in [(P,'Own immutable F460 ELF64/AArch64 source'),(OLD/'SOURCE.json','Inherited construction context, no collector replay'),(OLD/'REPORT.md','Inherited SceneRunner identity/scope, not new coverage'),(W/'work/configured-scene-module-investigation/2026-11-02/admission/f46/ASSET_ADMISSION.json','Current finite asset admission, no commissioned export')]:
+  z=p.read_bytes();pins.append({'path':str(p.relative_to(W)),'bytes':len(z),'sha256':H(z),'role':role})
+ txt=subprocess.check_output(['objdump','-d','-m','aarch64','--dwarf=no-follow-links','--start-address=0x2ca20','--stop-address=0x2cc20',str(P)],text=True,env=dict(os.environ,DEBUGINFOD_URLS='')).replace(str(P),'scheduling_manager')
+ out={'spans/local-filesystem-admission.txt':txt.encode(),'INPUT_PINS.json':J(pins),'INHERITED_CONTEXT.json':J({'scope':'Selected existing run07 construction span is inherited, NOT new source coverage or an old collector rerun','original_span':span,'entry_argument_words':'2cc44/54 read SAME X22 first two words;2cc5c forms second endpoint;opaque2c600 writes providedX19storage;2cc68 passes SAMEstorage to105740','raw_input_or_file_read':'NOT established;2c600 body unexpanded','same_storage_not_same_object':'X19 storage participates in opaque calls/reconstruction; no preserved semantic object/value claim'})}
+ out['SOURCE.json']=J({'original':pins[0],'ELF_class':64,'machine':183,'PT_LOAD':L,'new_code_spans':[{'start':'0x2ca20','end_exclusive':'0x2cc20','bytes':512,'sha256':H(raw(0x2ca20,512)),'bytes_hex':raw(0x2ca20,512).hex()}],'fixed_guards':[{'VA':hex(a),'word':f'{v:08x}'} for a,v in G.items()],'import_call_proofs':calls,'local_requests':local,'safe_literal_range_joins':literals,'branches':[{'VA':'0x2cb78','raw_zero_target':hex(cb(0x2cb78)),'target_body':'unexpanded'}, {'VA':'0x2cbac','raw_nonzero_target':hex(cb(0x2cbac)),'zero_fallthrough':'0x2cbb0','producer_of_selectedW28zero':'UNPROVED within this prefix'}, {'VA':'0x2cc1c','raw_zero_target':hex(cb(0x2cc1c)),'nonzero_fallthrough':'0x2cc20 inherited allocation','target_body':'unexpanded, no global loop/ignore claim'}],'owner_function_symbol':'UNASSIGNED; no retained defined function containing2cc20, nearest disassembly labels are not identity','natural_outer_caller':'UNPROVED','original_execution':0,'provider_JSON_filesystem_or_target_execution':0,'models_fixtures_SQL':0})
+ out['REPORT.md']='''# F460 local filesystem admission before SceneRunner construction
+
+This packet adds ONE512-byte local prefix2ca20..2cc20 from original2161128B ARM64 scheduling_manager/SHA5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62. It does not admit a genuine configured scene or complete file-to-scene trace. Own AArch64 source/ABI is used; no MHS/MH202 layout or namespace transfers. No retained defined FUNC symbol contains2cc20, so owningfunction/name and natural outercaller remain UNASSIGNED/UNPROVED. Nearest objdump labels are not used as identities.
+
+Under original predecessor-state, valid iterator/entry/path objects, ordinary AArch64/standard-library ABI and normal opaque-provider premises, local2cae4/2cae8 supplies SP80 to an actual directory_iterator::operator* import at2caf8, whose returned pointer is retainedX22 at2cafc. Actual imported path::_M_find_extension then receives the same returned pointer. This is a positive original entry-to-local-path-provider request, not a valid directory/filesystem/runtime observation or proof of the current full filename. The pointer's firstpath representation and private provider layout remain premises.
+
+The source constructs a local path using the exact compiled range for .json and requests path::compare at2cb74. Its raw zero branch goes2d114 OUTSIDEthis packet; producer/caller/cleanup there is unexpanded. Later2cbac branches away on W28nonzero. The selected W28zero continuation remains a premise; this packet does NOT prove an effective complete extension filter, every admitted .json file, the full loop or accepted JSON syntax.
+
+On that selected continuation,2cbb0 gives hidden resultstorageX19 and2cbb4 passes SAMEentrypointerX22 to local386d0. That helper remains opaque, so the resulting X19path is UNCLASSIFIED: no basename/fullpath identity or extraction behavior is assigned. The source constructs another local path from exact compiled action_schedule.json begin1951e8/end1951fc. Actual _List construction and _M_split_cmpts imports identify its local filesystem-path request. At2cbfc/2cc00 the compared addresses are this local pathSP198 and the providedX19path storage. Actual path::compare2cc04 result is savedW24 before two unexpanded local38670 calls. Under ordinary preservation/normal-return premises, raw W24zero at2cc1c branches2d188 and bypasses the immediate allocation2cc20. Nonzero falls through to that known allocation. With ordinary pathcompare equality semantics this is a selected equality gate only: not a global basename exclusion, ignored-file policy, complete loader admission, actual compared value or successful parse.
+
+The inherited run07 span then reads SAMEentryX22 first two64-bit words at2cc44/54, forms one begin/end argument range at2cc5c and requests local2c600 using X19storage. It subsequently passes SAMEstorageX19 asX1 to105740. This constructor/owner identity was already proved in run07 and is NOTnew coverage here. Local2c600 body remains opaque; no file read, JSONparse, raw-scene producer or semantic type is asserted. In particular X19 is STORAGE reused across opaque calls/reconstruction, not a proved unchanged semantic object/value from the earlier comparison.
+
+Qualification initially considered a JSONparse lead based on the question and misleading nearest labels. Actual PLT/GOT relocations identify filesystem operations instead, resolved BEFORE canonical collector/report/outputs. No earlier erroneous report/file/hash or canonical failure is claimed. SOURCE retains44fixedguards,6actual callsite/PLT/GOT proofs(five unique importedsymbols),five unexpanded localrequestsites,two compiled literal-range joins and exact source span. INPUT_PINS and INHERITED_CONTEXT keep old construction evidence distinct. Reproduce python3 collect_filesystem_v1.py --check with hostARM64objdump; fresh generation refuses overwrite and preserves immediate exact firstcopies.
+
+Original firmware/native/helper/emulator/providers/JSON/SQL/models/fixtures/targetOS/services/network/bus/physical execution0. No actual file, private config/IDs/credentials/key or runtime value is exported; compiled safe filename operands are not configured data. Full errors/unwind/lifetime/concurrency, original loader/function root, directory/source admission, provider outcomes, complete JSON/scene semantics and wider Device/source gates remain open. Closed receiving/output/transport/auth/session/framing/MQTT/libjel, frame-preparation/platformfallback/uncertainprocess and equivalent routes remain closed. All originals/completed reports/corpora unchanged, no source-manifest/repository/remote write or old collector/native replay.
+'''.encode()
+ out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(Path(__file__).read_bytes()),'outputs':{n:{'bytes':len(v),'sha256':H(v)} for n,v in out.items()},'counts':{'new_code_spans':1,'new_code_bytes':512,'fixed_guards':len(G),'import_callsite_proofs':len(calls),'unique_import_symbols':len({x['symbol'] for x in calls}),'local_requests':len(local),'compiled_literal_ranges':len(literals),'inherited_construction_spans':1,'original_execution':0}});return out
+ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build()
+if a.check:
+ for n,b in out.items():assert (O/n).read_bytes()==b,n
+else:
+ for n,b in out.items():p=O/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(b)
+ d=O/'first-candidate';d.mkdir();ix={}
+ for n,b in {Path(__file__).name:Path(__file__).read_bytes(),**out}.items():p=d/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(b);ix[n]={'bytes':len(b),'sha256':H(b)}
+ (d/'INDEX.json').open('xb').write(J({'files':ix}))
+print(json.dumps({'check':a.check,'outputs':len(out),'new_code_spans':1,'new_code_bytes':512,'original_execution':0}))

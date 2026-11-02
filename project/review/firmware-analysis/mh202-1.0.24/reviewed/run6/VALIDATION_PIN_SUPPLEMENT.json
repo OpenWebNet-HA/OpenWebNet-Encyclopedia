@@ -1,0 +1,12 @@
+{
+  "scope": "Additional exact document pin from run6 completed validation, before run7 index update; original seven-review snapshot index unchanged",
+  "validation": "../../run6-validation.json",
+  "validation_sha256": "118c0a218fd4318b1642edb34c671ef7999896b9b8e2933ce6ef6df653ddba35",
+  "files": [
+    {
+      "source_path": "project/review/firmware-analysis/README.md",
+      "source_sha256": "653317d0bca414bf4a20fbc3ff75fb8cb6b0ad1d5a23420088d52bde4a869512",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run6/project__review__firmware-analysis__README.md.txt"
+    }
+  ]
+}

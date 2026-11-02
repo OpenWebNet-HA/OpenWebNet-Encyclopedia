@@ -1,0 +1,59 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b9814 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x105c>:
+   b9814:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+   b9816:	f100 0614 	add.w	r6, r0, #20
+   b981a:	4f1f      	ldr	r7, [pc, #124]	@ (b9898 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x10e0>)
+   b981c:	4604      	mov	r4, r0
+   b981e:	4630      	mov	r0, r6
+   b9820:	460d      	mov	r5, r1
+   b9822:	447f      	add	r7, pc
+   b9824:	f757 e93c 	blx	10aa0 <pthread_mutex_lock@plt>
+   b9828:	bb78      	cbnz	r0, b988a <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x10d2>
+   b982a:	e9d4 1301 	ldrd	r1, r3, [r4, #4]
+   b982e:	4299      	cmp	r1, r3
+   b9830:	d018      	beq.n	b9864 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x10ac>
+   b9832:	f965 078f 	vld1.32	{d16}, [r5]
+   b9836:	ee30 3b90 	vmov.32	r3, d16[1]
+   b983a:	f941 078f 	vst1.32	{d16}, [r1]
+   b983e:	b133      	cbz	r3, b984e <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1096>
+   b9840:	4a16      	ldr	r2, [pc, #88]	@ (b989c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x10e4>)
+   b9842:	58ba      	ldr	r2, [r7, r2]
+   b9844:	7812      	ldrb	r2, [r2, #0]
+   b9846:	b192      	cbz	r2, b986e <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x10b6>
+   b9848:	689a      	ldr	r2, [r3, #8]
+   b984a:	3201      	adds	r2, #1
+   b984c:	609a      	str	r2, [r3, #8]
+   b984e:	3108      	adds	r1, #8
+   b9850:	6061      	str	r1, [r4, #4]
+   b9852:	4630      	mov	r0, r6
+   b9854:	f757 efea 	blx	1182c <pthread_mutex_unlock@plt+0x4>
+   b9858:	f104 0030 	add.w	r0, r4, #48	@ 0x30
+   b985c:	e8bd 40f8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, lr}
+   b9860:	f757 bee8 	b.w	11634 <_ZNSt18condition_variable10notify_allEv@plt>
+   b9864:	462a      	mov	r2, r5
+   b9866:	4620      	mov	r0, r4
+   b9868:	f002 fa90 	bl	bbd8c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35d4>
+   b986c:	e7f1      	b.n	b9852 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x109a>
+   b986e:	3308      	adds	r3, #8
+   b9870:	f3bf 8f5b 	dmb	ish
+   b9874:	e853 1f00 	ldrex	r1, [r3]
+   b9878:	3101      	adds	r1, #1
+   b987a:	e843 1200 	strex	r2, r1, [r3]
+   b987e:	2a00      	cmp	r2, #0
+   b9880:	d1f8      	bne.n	b9874 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x10bc>
+   b9882:	f3bf 8f5b 	dmb	ish
+   b9886:	6861      	ldr	r1, [r4, #4]
+   b9888:	e7e1      	b.n	b984e <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1096>
+   b988a:	f757 eae6 	blx	10e58 <_ZSt20__throw_system_errori@plt>
+   b988e:	4630      	mov	r0, r6
+   b9890:	f757 efcc 	blx	1182c <pthread_mutex_unlock@plt+0x4>
+   b9894:	f757 ecae 	blx	111f4 <__cxa_end_cleanup@plt>
+   b9898:	c17e      	stmia	r1!, {r1, r2, r3, r4, r5, r6}
+   b989a:	000a      	movs	r2, r1
+   b989c:	0eec      	lsrs	r4, r5, #27
+	...

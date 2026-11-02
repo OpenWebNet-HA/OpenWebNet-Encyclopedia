@@ -1,0 +1,150 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0002d140 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd510>:
+   2d140:	4a4c      	ldr	r2, [pc, #304]	@ (2d274 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd644>)
+   2d142:	4b4d      	ldr	r3, [pc, #308]	@ (2d278 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd648>)
+   2d144:	e92d 43f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, lr}
+   2d148:	b089      	sub	sp, #36	@ 0x24
+   2d14a:	447a      	add	r2, pc
+   2d14c:	4d4b      	ldr	r5, [pc, #300]	@ (2d27c <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd64c>)
+   2d14e:	4604      	mov	r4, r0
+   2d150:	4688      	mov	r8, r1
+   2d152:	58d3      	ldr	r3, [r2, r3]
+   2d154:	4626      	mov	r6, r4
+   2d156:	447d      	add	r5, pc
+   2d158:	f104 0730 	add.w	r7, r4, #48	@ 0x30
+   2d15c:	681b      	ldr	r3, [r3, #0]
+   2d15e:	9307      	str	r3, [sp, #28]
+   2d160:	f04f 0300 	mov.w	r3, #0
+   2d164:	f7ff fa88 	bl	2c678 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xca48>
+   2d168:	4b45      	ldr	r3, [pc, #276]	@ (2d280 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd650>)
+   2d16a:	4640      	mov	r0, r8
+   2d16c:	4945      	ldr	r1, [pc, #276]	@ (2d284 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd654>)
+   2d16e:	58eb      	ldr	r3, [r5, r3]
+   2d170:	4479      	add	r1, pc
+   2d172:	3308      	adds	r3, #8
+   2d174:	f846 3b28 	str.w	r3, [r6], #40
+   2d178:	2300      	movs	r3, #0
+   2d17a:	62a7      	str	r7, [r4, #40]	@ 0x28
+   2d17c:	62e3      	str	r3, [r4, #44]	@ 0x2c
+   2d17e:	f884 3030 	strb.w	r3, [r4, #48]	@ 0x30
+   2d182:	6423      	str	r3, [r4, #64]	@ 0x40
+   2d184:	f7e4 ea4a 	blx	1161c <_ZNK4Json5ValueixEPKc@plt>
+   2d188:	f10d 0904 	add.w	r9, sp, #4
+   2d18c:	4601      	mov	r1, r0
+   2d18e:	4648      	mov	r0, r9
+   2d190:	f7e4 eaf0 	blx	11774 <_ZNK4Json5Value8asStringB5cxx11Ev@plt>
+   2d194:	4649      	mov	r1, r9
+   2d196:	4630      	mov	r0, r6
+   2d198:	f7e3 edea 	blx	10d70 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_@plt+0x4>
+   2d19c:	9801      	ldr	r0, [sp, #4]
+   2d19e:	ae03      	add	r6, sp, #12
+   2d1a0:	42b0      	cmp	r0, r6
+   2d1a2:	d003      	beq.n	2d1ac <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd57c>
+   2d1a4:	9903      	ldr	r1, [sp, #12]
+   2d1a6:	3101      	adds	r1, #1
+   2d1a8:	f7e3 ee82 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   2d1ac:	4936      	ldr	r1, [pc, #216]	@ (2d288 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd658>)
+   2d1ae:	4640      	mov	r0, r8
+   2d1b0:	4479      	add	r1, pc
+   2d1b2:	f7e4 ea34 	blx	1161c <_ZNK4Json5ValueixEPKc@plt>
+   2d1b6:	4601      	mov	r1, r0
+   2d1b8:	4648      	mov	r0, r9
+   2d1ba:	f7e4 eadc 	blx	11774 <_ZNK4Json5Value8asStringB5cxx11Ev@plt>
+   2d1be:	e9dd e001 	ldrd	lr, r0, [sp, #4]
+   2d1c2:	2806      	cmp	r0, #6
+   2d1c4:	d82a      	bhi.n	2d21c <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd5ec>
+   2d1c6:	b198      	cbz	r0, 2d1f0 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd5c0>
+   2d1c8:	1e43      	subs	r3, r0, #1
+   2d1ca:	f10e 31ff 	add.w	r1, lr, #4294967295	@ 0xffffffff
+   2d1ce:	2000      	movs	r0, #0
+   2d1d0:	f04f 0c01 	mov.w	ip, #1
+   2d1d4:	e000      	b.n	2d1d8 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd5a8>
+   2d1d6:	4613      	mov	r3, r2
+   2d1d8:	f811 2f01 	ldrb.w	r2, [r1, #1]!
+   2d1dc:	2a30      	cmp	r2, #48	@ 0x30
+   2d1de:	d004      	beq.n	2d1ea <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd5ba>
+   2d1e0:	2a31      	cmp	r2, #49	@ 0x31
+   2d1e2:	d11d      	bne.n	2d220 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd5f0>
+   2d1e4:	fa0c f203 	lsl.w	r2, ip, r3
+   2d1e8:	4310      	orrs	r0, r2
+   2d1ea:	1e5a      	subs	r2, r3, #1
+   2d1ec:	2b00      	cmp	r3, #0
+   2d1ee:	d1f2      	bne.n	2d1d6 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd5a6>
+   2d1f0:	45b6      	cmp	lr, r6
+   2d1f2:	6420      	str	r0, [r4, #64]	@ 0x40
+   2d1f4:	d004      	beq.n	2d200 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd5d0>
+   2d1f6:	9903      	ldr	r1, [sp, #12]
+   2d1f8:	4670      	mov	r0, lr
+   2d1fa:	3101      	adds	r1, #1
+   2d1fc:	f7e3 ee58 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   2d200:	4a22      	ldr	r2, [pc, #136]	@ (2d28c <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd65c>)
+   2d202:	4b1d      	ldr	r3, [pc, #116]	@ (2d278 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd648>)
+   2d204:	447a      	add	r2, pc
+   2d206:	58d3      	ldr	r3, [r2, r3]
+   2d208:	681a      	ldr	r2, [r3, #0]
+   2d20a:	9b07      	ldr	r3, [sp, #28]
+   2d20c:	405a      	eors	r2, r3
+   2d20e:	f04f 0300 	mov.w	r3, #0
+   2d212:	d109      	bne.n	2d228 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd5f8>
+   2d214:	4620      	mov	r0, r4
+   2d216:	b009      	add	sp, #36	@ 0x24
+   2d218:	e8bd 83f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, pc}
+   2d21c:	2007      	movs	r0, #7
+   2d21e:	e7d3      	b.n	2d1c8 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd598>
+   2d220:	481b      	ldr	r0, [pc, #108]	@ (2d290 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd660>)
+   2d222:	4478      	add	r0, pc
+   2d224:	f7e3 eddc 	blx	10de0 <_ZSt24__throw_invalid_argumentPKc@plt>
+   2d228:	f7e3 efde 	blx	111e8 <__stack_chk_fail@plt>
+   2d22c:	9801      	ldr	r0, [sp, #4]
+   2d22e:	ab03      	add	r3, sp, #12
+   2d230:	4298      	cmp	r0, r3
+   2d232:	d003      	beq.n	2d23c <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd60c>
+   2d234:	9903      	ldr	r1, [sp, #12]
+   2d236:	3101      	adds	r1, #1
+   2d238:	f7e3 ee3a 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   2d23c:	6aa0      	ldr	r0, [r4, #40]	@ 0x28
+   2d23e:	4287      	cmp	r7, r0
+   2d240:	d003      	beq.n	2d24a <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd61a>
+   2d242:	6b21      	ldr	r1, [r4, #48]	@ 0x30
+   2d244:	3101      	adds	r1, #1
+   2d246:	f7e3 ee34 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   2d24a:	4a12      	ldr	r2, [pc, #72]	@ (2d294 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd664>)
+   2d24c:	f104 030c 	add.w	r3, r4, #12
+   2d250:	6860      	ldr	r0, [r4, #4]
+   2d252:	58aa      	ldr	r2, [r5, r2]
+   2d254:	4298      	cmp	r0, r3
+   2d256:	f102 0208 	add.w	r2, r2, #8
+   2d25a:	6022      	str	r2, [r4, #0]
+   2d25c:	d003      	beq.n	2d266 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd636>
+   2d25e:	68e1      	ldr	r1, [r4, #12]
+   2d260:	3101      	adds	r1, #1
+   2d262:	f7e3 ee26 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   2d266:	f7e3 efc6 	blx	111f4 <__cxa_end_cleanup@plt>
+   2d26a:	e7e7      	b.n	2d23c <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd60c>
+   2d26c:	9801      	ldr	r0, [sp, #4]
+   2d26e:	42b0      	cmp	r0, r6
+   2d270:	d1e0      	bne.n	2d234 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd604>
+   2d272:	e7e3      	b.n	2d23c <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0xd60c>
+   2d274:	8856      	ldrh	r6, [r2, #2]
+   2d276:	0013      	movs	r3, r2
+   2d278:	06b4      	lsls	r4, r6, #26
+   2d27a:	0000      	movs	r0, r0
+   2d27c:	884a      	ldrh	r2, [r1, #2]
+   2d27e:	0013      	movs	r3, r2
+   2d280:	0930      	lsrs	r0, r6, #4
+   2d282:	0000      	movs	r0, r0
+   2d284:	8198      	strh	r0, [r3, #12]
+   2d286:	000e      	movs	r6, r1
+   2d288:	80b0      	strh	r0, [r6, #4]
+   2d28a:	000e      	movs	r6, r1
+   2d28c:	879c      	strh	r4, [r3, #60]	@ 0x3c
+   2d28e:	0013      	movs	r3, r2
+   2d290:	80ee      	strh	r6, [r5, #6]
+   2d292:	000e      	movs	r6, r1
+   2d294:	084c      	lsrs	r4, r1, #1
+	...

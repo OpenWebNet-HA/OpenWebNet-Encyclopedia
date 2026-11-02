@@ -1,0 +1,36 @@
+# MyHOMEServer1 3.87.13: a distinct BNLD condition predicate
+
+The selected condition factory row2 `BNLD` resolves to raw `13BnldCondition` and compiled `19BnldConditionRunner`. Its original primary method at Thumb0xf1351 implements a status or signed numeric comparison against a string-keyed local record query. This is source reasoning, not an executed JSON/condition/scene or a physical lighting claim. Original firmware/helper/provider execution and semantic host cases are0. The curated OWN-DEV-0199 home-automation/scenario role supplies product context only; private class names and integers do not define public OPEN support.
+
+Original image `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. The collector uses the original ImageVFS and fresh ELF32 PT_LOAD translation, retains exact span hashes, RTTI/vtable/GOT references and dispatch bytes. Embedded TBB data0xf15b2..0xf15b6 is separate from instructions. Nearest exported template labels are not class evidence.
+
+## Raw and compiled ownership boundaries
+
+The local condition-name table at0x1605b0 row2 names BNLD. Raw factory TBH entry1 at0x2fb10 selects0x304f4 after its index adjustment; compiled initializer entry2 at0xa751a selects0xa7d40. These condition indices are not trigger or action numbers. The raw branch requests48 bytes, copies the base, copies derived words40/44 and installs the final class vptr before appending to the raw scene condition vector at scene+12.
+
+Raw constructor0x2bd58 calls the common condition base0x2b7d0. The retained base prefix initializes id at+4, reads enabled into byte28 and initializes type32/operator36. This packet does not transfer the trigger operator-name table to this condition. The derived constructor initializes status40 and level44 to signed−1. Its member-presence split is material: a PRESENT `status` member selects its string conversion/token path and leaves level44 at−1; only the ABSENT-status branch0x2bdec reads exact key `level` through asInt and writes44 at0x2be04. Thus explicit status `noStatus` and absent status plus level are different source paths. JsonCpp valid-object/conversion/error behavior remains an unexecuted premise, not a safe/default/range contract.
+
+At0xa7d40..0xa7d86 the initializer requests the raw object's virtual serializer, reparses its returned JSON through0x2bd58, allocates152 bytes and calls compiled constructor0xf1634, then requests publication to scene+116 through0xa7264. The serializer body/value coherence and complete publication/ownership are not closed here. Constructor stores establish raw enabled28→compiled132, and raw words32/36/40/44→compiled136/140/144/148. The compiled id string is at108. Vtable/RTTI resolves the primary predicate to Thumb0xf1351; primary cleanup methods and the secondary base at+104 are distinct.
+
+## Actual primary predicate
+
+The source initializes result1 at0xf135e. If enabled132 is0, it returns that1 through the normal stack-guard epilogue, without the record query. For enabled nonzero, the selected initialized/normal singleton leg resolves GOT slot0x166bf8 to receiver0x167368 and calls0x10f4a0 with selector0 and compiled id-string address+108. This is the SAME global independently recovered by the companion record getter0x5724c, but0x10f4a0 and0x10e3d8 are DIFFERENT query helpers; readiness, waiting, returned type and error contracts are not equated. A returned null data pointer selects result0. Returned object/control validity, selected reference-count operations and normal cleanup remain conditional, with no complete lifetime/concurrency conclusion.
+
+For a nonnull record, the method reads a string object at record+8 (pointer/length), and recognizes exact `on`, `off`, `noStatus` as local values0,1,−1. Unrecognized strings take the fallback−1 value on the configured-status route. Let C=compiled status144 and O=operator140. If C!=−1, O2 returns decoded-value==C, O3 returns decoded-value!=C; other operator words return0. This local Boolean behavior differs from the earlier BNIL trigger handler, so equal field numbers do not justify transferred admission semantics.
+
+If C==−1, only recognized `on` reaches the numeric comparison. The method then reads V=record+32 and Q=compiled level148. Unsigned operator bound3 precedes the ORIGINAL TBB bytes `16 0f 08 02` at0xf15b2. The selected targets are:
+
+| Local operator | Original target | Selected signed/integer predicate |
+|---|---|---|
+|0|0xf15de|Q < V|
+|1|0xf15d0|Q > V|
+|2|0xf15c2|Q == V|
+|3|0xf15b6|Q != V|
+
+The order comes from the table, not linear block order. Other strings/operator words return0 on this numeric route. Units, accepted scalar domain, physical brightness, configured action consequences and unset-level policy are not inferred from the comparison. The whole generic condition-worker/action path is inherited separately; this packet establishes this method's local result, not scene admission or execution.
+
+## Reproduction and remaining premises
+
+Run `python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/condition/collect_condition_v1.py --check`. Exclusive first generation and immediate first copies preserve the report, collector and deterministic outputs. No receiving/transport/authentication/session/framing implementation or vendor code is executed or expanded.
+
+Confidence is high for raw/compiled class identity, selected field-copy offsets, member-presence split, disabled/null-query returns and status/numeric branch predicates. Actual serializer→reparse values, condition operator-name decoding, natural record type/query behavior, configured scene/condition assets, effective providers/readiness, whole errors/unwind/owner lifetime/concurrency and physical behavior remain open. The companion local event producer does not by itself prove a natural trigger→condition→action transaction.

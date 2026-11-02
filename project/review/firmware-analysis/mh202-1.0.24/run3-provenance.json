@@ -1,0 +1,122 @@
+{
+  "checkpoint": "run3",
+  "status": "reviewed selected static paths; overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "method": "Original bytes/static source and explicit finite host models; original execution0",
+  "exports": [
+    {
+      "role": "report",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run3/REPORT.md",
+      "source_sha256": "cc8be66fd56d256880c6724987208b86eb7da2ca939212bdb8121f53fa7dca00",
+      "published": "run3-functional-report.txt",
+      "published_sha256": "cc8be66fd56d256880c6724987208b86eb7da2ca939212bdb8121f53fa7dca00",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "role": "report",
+      "area": "triggers",
+      "research_path": "work/mh202-firmware/research/2026-10-30/triggers/run3/REPORT.md",
+      "source_sha256": "2f628d990d2d4ae7c4765cd08692ae8d7734c62fd55e74aa1391f0970cbfa0f9",
+      "published": "run3-triggers-report.txt",
+      "published_sha256": "2f628d990d2d4ae7c4765cd08692ae8d7734c62fd55e74aa1391f0970cbfa0f9",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run3/REPORT.md",
+      "source_sha256": "40ece988cc53e03be936c10c9e81380e2d483a2188d27b80d9d2a8cfaba7cadc",
+      "published": "run3-protocol-report.txt",
+      "published_sha256": "40ece988cc53e03be936c10c9e81380e2d483a2188d27b80d9d2a8cfaba7cadc",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "role": "report",
+      "area": "boot",
+      "research_path": "work/mh202-firmware/research/2026-10-30/boot/run3/REPORT.md",
+      "source_sha256": "4707944b94cce809d6c3beebb47a46ed13ea3f6c2d1b4270250de4b1e58e12c8",
+      "published": "run3-boot-report.txt",
+      "published_sha256": "4707944b94cce809d6c3beebb47a46ed13ea3f6c2d1b4270250de4b1e58e12c8",
+      "normalization": "Local workspace prefix removed if present; no finding content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run3/functional-review.md",
+      "source_sha256": "475c4c5187752b9491fb4cdb452f098a0f477b33dfc8a2d5db32317c8bf5d88e",
+      "published": "run3-functional-review.txt",
+      "published_sha256": "475c4c5187752b9491fb4cdb452f098a0f477b33dfc8a2d5db32317c8bf5d88e",
+      "normalization": "Local workspace prefix removed if present; no review content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "triggers",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run3/triggers-review.md",
+      "source_sha256": "c04769756686b21904c6fa18f4b83c8f6a564f4b709587fb88c91d1b308eca90",
+      "published": "run3-triggers-review.txt",
+      "published_sha256": "c04769756686b21904c6fa18f4b83c8f6a564f4b709587fb88c91d1b308eca90",
+      "normalization": "Local workspace prefix removed if present; no review content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run3/protocol-review.md",
+      "source_sha256": "e01ddaf9997adcde56619207412e8c1406125e0873ca4463905810db7b33a8a5",
+      "published": "run3-protocol-review.txt",
+      "published_sha256": "e01ddaf9997adcde56619207412e8c1406125e0873ca4463905810db7b33a8a5",
+      "normalization": "Local workspace prefix removed if present; no review content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "boot",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run3/boot-review.md",
+      "source_sha256": "178a842b57b05d9133a92264258e22863c206c667f46b17896382512c99d8bc6",
+      "published": "run3-boot-review.txt",
+      "published_sha256": "178a842b57b05d9133a92264258e22863c206c667f46b17896382512c99d8bc6",
+      "normalization": "Local workspace prefix removed if present; no review content changed"
+    },
+    {
+      "role": "pre-promotion-correction",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run3/CORRECTIONS.md",
+      "source_sha256": "26dffe698fb1cc16adfac40ab6248e2e8c7a04f1c61563097958e37c4fef4c78",
+      "published": "run3-functional-correction.txt",
+      "published_sha256": "26dffe698fb1cc16adfac40ab6248e2e8c7a04f1c61563097958e37c4fef4c78",
+      "normalization": "none"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run3/collect_evidence.py",
+      "sha256": "619295953d587ae2c973fd278c7091fbae3eea8a96c80b98df34fbae2c63f8b9"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/triggers/run3/collect_evidence.py",
+      "sha256": "f5dcc89ee28434b5e916c84ffb77d3f842e84fb574e3ce716b8ec8f25802348f"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run3/collect_evidence.py",
+      "sha256": "cbd2d77f226d3c5732df0c74c987d5b91b2f18cb52ccd75f4924836f5826b178"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/boot/run3/collect_startup.py",
+      "sha256": "91929717b6540838f75061eff6070aae4fe9d49206ba93526c0830266eae899f"
+    }
+  ],
+  "history": {
+    "run2_reviewed_document_snapshots": "reviewed/run2/SOURCE_SNAPSHOTS.json",
+    "old_reports_unchanged": true,
+    "directive_correction": "Original leading space asserted before outputs; exact initial draft retained in local research"
+  },
+  "limits": [
+    "No firmware process/parser/physical observation",
+    "Action guard depends on matching names/globals; not all-action disabled semantics",
+    "Trigger models are selected helper subsets, not accepted configured or network inputs",
+    "WHO1000 final registry/parser and transport remain conditional",
+    "Startup alias/status writer is policy, not completed runtime readiness",
+    "Full Device source gates remain pending"
+  ],
+  "reproduction_limit": "Original images/full byte spans/collectors remain in separate local dossier; exports are documentary evidence, not self-contained runtime tests"
+}

@@ -1,0 +1,237 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00017630 <_ZNKSt5ctypeIcE8do_widenEc@@Base-0x25d0>:
+   17630:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   17634:	4683      	mov	fp, r0
+   17636:	f5ad 7d1d 	sub.w	sp, sp, #628	@ 0x274
+   1763a:	4608      	mov	r0, r1
+   1763c:	4613      	mov	r3, r2
+   1763e:	f50d 7aac 	add.w	sl, sp, #344	@ 0x158
+   17642:	9001      	str	r0, [sp, #4]
+   17644:	4659      	mov	r1, fp
+   17646:	f8df 0ae8 	ldr.w	r0, [pc, #2792]	@ 18130 <_ZNSt6localeC1Ev@plt+0x68bc>
+   1764a:	2202      	movs	r2, #2
+   1764c:	9305      	str	r3, [sp, #20]
+   1764e:	ac1a      	add	r4, sp, #104	@ 0x68
+   17650:	f8df 3ae0 	ldr.w	r3, [pc, #2784]	@ 18134 <_ZNSt6localeC1Ev@plt+0x68c0>
+   17654:	4478      	add	r0, pc
+   17656:	58c3      	ldr	r3, [r0, r3]
+   17658:	4650      	mov	r0, sl
+   1765a:	681b      	ldr	r3, [r3, #0]
+   1765c:	939b      	str	r3, [sp, #620]	@ 0x26c
+   1765e:	f04f 0300 	mov.w	r3, #0
+   17662:	f8df 3ad4 	ldr.w	r3, [pc, #2772]	@ 18138 <_ZNSt6localeC1Ev@plt+0x68c4>
+   17666:	447b      	add	r3, pc
+   17668:	9300      	str	r3, [sp, #0]
+   1766a:	f005 ff47 	bl	1d4fc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x98>
+   1766e:	4651      	mov	r1, sl
+   17670:	4620      	mov	r0, r4
+   17672:	f7f9 eae6 	blx	10c40 <_ZNSt10filesystem6statusERKNS_7__cxx114pathE@plt>
+   17676:	7823      	ldrb	r3, [r4, #0]
+   17678:	4650      	mov	r0, sl
+   1767a:	3301      	adds	r3, #1
+   1767c:	b2db      	uxtb	r3, r3
+   1767e:	2b01      	cmp	r3, #1
+   17680:	d95d      	bls.n	1773e <_ZNSt6localeC1Ev@plt+0x5eca>
+   17682:	f004 fe1d 	bl	1c2c0 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x26c0>
+   17686:	2202      	movs	r2, #2
+   17688:	4659      	mov	r1, fp
+   1768a:	4650      	mov	r0, sl
+   1768c:	f005 ff36 	bl	1d4fc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x98>
+   17690:	2300      	movs	r3, #0
+   17692:	a814      	add	r0, sp, #80	@ 0x50
+   17694:	4651      	mov	r1, sl
+   17696:	461a      	mov	r2, r3
+   17698:	9002      	str	r0, [sp, #8]
+   1769a:	f7fa e810 	blx	116bc <_ZNSt10filesystem7__cxx1118directory_iteratorC1ERKNS0_4pathENS_17directory_optionsEPSt10error_code@plt>
+   1769e:	4650      	mov	r0, sl
+   176a0:	f004 fe0e 	bl	1c2c0 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x26c0>
+   176a4:	eddd 0b14 	vldr	d16, [sp, #80]	@ 0x50
+   176a8:	ee30 0b90 	vmov.32	r0, d16[1]
+   176ac:	2800      	cmp	r0, #0
+   176ae:	f000 8282 	beq.w	17bb6 <_ZNSt6localeC1Ev@plt+0x6342>
+   176b2:	9a00      	ldr	r2, [sp, #0]
+   176b4:	f8df 3a84 	ldr.w	r3, [pc, #2692]	@ 1813c <_ZNSt6localeC1Ev@plt+0x68c8>
+   176b8:	58d3      	ldr	r3, [r2, r3]
+   176ba:	781a      	ldrb	r2, [r3, #0]
+   176bc:	2a00      	cmp	r2, #0
+   176be:	f000 8299 	beq.w	17bf4 <_ZNSt6localeC1Ev@plt+0x6380>
+   176c2:	6842      	ldr	r2, [r0, #4]
+   176c4:	781b      	ldrb	r3, [r3, #0]
+   176c6:	3201      	adds	r2, #1
+   176c8:	6042      	str	r2, [r0, #4]
+   176ca:	edcd 0b16 	vstr	d16, [sp, #88]	@ 0x58
+   176ce:	2b00      	cmp	r3, #0
+   176d0:	f000 82a8 	beq.w	17c24 <_ZNSt6localeC1Ev@plt+0x63b0>
+   176d4:	6843      	ldr	r3, [r0, #4]
+   176d6:	3301      	adds	r3, #1
+   176d8:	6043      	str	r3, [r0, #4]
+   176da:	f008 f8e3 	bl	1f8a4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x2440>
+   176de:	9817      	ldr	r0, [sp, #92]	@ 0x5c
+   176e0:	f8df 3a5c 	ldr.w	r3, [pc, #2652]	@ 18140 <_ZNSt6localeC1Ev@plt+0x68cc>
+   176e4:	f248 591f 	movw	r9, #34079	@ 0x851f
+   176e8:	f241 7859 	movw	r8, #5977	@ 0x1759
+   176ec:	f24e 02ff 	movw	r2, #57599	@ 0xe0ff
+   176f0:	f2c5 19eb 	movt	r9, #20971	@ 0x51eb
+   176f4:	f2cd 18b7 	movt	r8, #53687	@ 0xd1b7
+   176f8:	447b      	add	r3, pc
+   176fa:	f2c0 52f5 	movt	r2, #1525	@ 0x5f5
+   176fe:	9303      	str	r3, [sp, #12]
+   17700:	3305      	adds	r3, #5
+   17702:	9208      	str	r2, [sp, #32]
+   17704:	9304      	str	r3, [sp, #16]
+   17706:	f8cd b01c 	str.w	fp, [sp, #28]
+   1770a:	e9cd 9809 	strd	r9, r8, [sp, #36]	@ 0x24
+   1770e:	bb28      	cbnz	r0, 1775c <_ZNSt6localeC1Ev@plt+0x5ee8>
+   17710:	9b02      	ldr	r3, [sp, #8]
+   17712:	6858      	ldr	r0, [r3, #4]
+   17714:	b108      	cbz	r0, 1771a <_ZNSt6localeC1Ev@plt+0x5ea6>
+   17716:	f008 f8c5 	bl	1f8a4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x2440>
+   1771a:	2001      	movs	r0, #1
+   1771c:	f8df 2a24 	ldr.w	r2, [pc, #2596]	@ 18144 <_ZNSt6localeC1Ev@plt+0x68d0>
+   17720:	f8df 3a10 	ldr.w	r3, [pc, #2576]	@ 18134 <_ZNSt6localeC1Ev@plt+0x68c0>
+   17724:	447a      	add	r2, pc
+   17726:	58d3      	ldr	r3, [r2, r3]
+   17728:	681a      	ldr	r2, [r3, #0]
+   1772a:	9b9b      	ldr	r3, [sp, #620]	@ 0x26c
+   1772c:	405a      	eors	r2, r3
+   1772e:	f04f 0300 	mov.w	r3, #0
+   17732:	f040 82e1 	bne.w	17cf8 <_ZNSt6localeC1Ev@plt+0x6484>
+   17736:	f50d 7d1d 	add.w	sp, sp, #628	@ 0x274
+   1773a:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+   1773e:	f004 fdbf 	bl	1c2c0 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x26c0>
+   17742:	2202      	movs	r2, #2
+   17744:	4659      	mov	r1, fp
+   17746:	4650      	mov	r0, sl
+   17748:	f005 fed8 	bl	1d4fc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x98>
+   1774c:	4650      	mov	r0, sl
+   1774e:	f7f9 eb7e 	blx	10e4c <_ZNSt10filesystem18create_directoriesERKNS_7__cxx114pathE@plt>
+   17752:	4650      	mov	r0, sl
+   17754:	f004 fdb4 	bl	1c2c0 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x26c0>
+   17758:	2000      	movs	r0, #0
+   1775a:	e7df      	b.n	1771c <_ZNSt6localeC1Ev@plt+0x5ea8>
+   1775c:	f10d 0b58 	add.w	fp, sp, #88	@ 0x58
+   17760:	af3a      	add	r7, sp, #232	@ 0xe8
+   17762:	4658      	mov	r0, fp
+   17764:	f7f9 eff4 	blx	11750 <_ZNKSt10filesystem7__cxx1118directory_iteratordeEv@plt>
+   17768:	4604      	mov	r4, r0
+   1776a:	4638      	mov	r0, r7
+   1776c:	4621      	mov	r1, r4
+   1776e:	f006 f92b 	bl	1d9c8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base+0x564>
+   17772:	ab43      	add	r3, sp, #268	@ 0x10c
+   17774:	ae41      	add	r6, sp, #260	@ 0x104
+   17776:	9306      	str	r3, [sp, #24]
+   17778:	4630      	mov	r0, r6
+   1777a:	6033      	str	r3, [r6, #0]
+   1777c:	f04f 0300 	mov.w	r3, #0
+   17780:	e9dd 1203 	ldrd	r1, r2, [sp, #12]
+   17784:	f005 fe6e 	bl	1d464 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base>
+   17788:	ad47      	add	r5, sp, #284	@ 0x11c
+   1778a:	4628      	mov	r0, r5
+   1778c:	f7f9 e9fc 	blx	10b88 <_ZNSt10filesystem7__cxx114path5_ListC1Ev@plt>
+   17790:	4630      	mov	r0, r6
+   17792:	f7f9 ec18 	blx	10fc4 <_ZNSt10filesystem7__cxx114path14_M_split_cmptsEv@plt>
+   17796:	4631      	mov	r1, r6
+   17798:	4638      	mov	r0, r7
+   1779a:	f7f9 eca0 	blx	110dc <_ZNKSt10filesystem7__cxx114path7compareERKS1_@plt>
+   1779e:	b158      	cbz	r0, 177b8 <_ZNSt6localeC1Ev@plt+0x5f44>
+   177a0:	4630      	mov	r0, r6
+   177a2:	f004 fd8d 	bl	1c2c0 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x26c0>
+   177a6:	4638      	mov	r0, r7
+   177a8:	f004 fd8a 	bl	1c2c0 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x26c0>
+   177ac:	4658      	mov	r0, fp
+   177ae:	f7f9 ea30 	blx	10c10 <_ZNSt10filesystem7__cxx1118directory_iteratorppEv@plt>
+   177b2:	f8db 0004 	ldr.w	r0, [fp, #4]
+   177b6:	e7aa      	b.n	1770e <_ZNSt6localeC1Ev@plt+0x5e9a>
+   177b8:	ab48      	add	r3, sp, #288	@ 0x120
+   177ba:	4621      	mov	r1, r4
+   177bc:	4618      	mov	r0, r3
+   177be:	930c      	str	r3, [sp, #48]	@ 0x30
+   177c0:	f004 fd90 	bl	1c2e4 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x26e4>
+   177c4:	f8df 1980 	ldr.w	r1, [pc, #2432]	@ 18148 <_ZNSt6localeC1Ev@plt+0x68d4>
+   177c8:	f50d 79b0 	add.w	r9, sp, #352	@ 0x160
+   177cc:	f04f 0300 	mov.w	r3, #0
+   177d0:	4650      	mov	r0, sl
+   177d2:	f8ca 9000 	str.w	r9, [sl]
+   177d6:	4479      	add	r1, pc
+   177d8:	f101 0213 	add.w	r2, r1, #19
+   177dc:	f005 fe42 	bl	1d464 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base>
+   177e0:	ad5c      	add	r5, sp, #368	@ 0x170
+   177e2:	4628      	mov	r0, r5
+   177e4:	f7f9 e9d0 	blx	10b88 <_ZNSt10filesystem7__cxx114path5_ListC1Ev@plt>
+   177e8:	4650      	mov	r0, sl
+   177ea:	f7f9 ebec 	blx	10fc4 <_ZNSt10filesystem7__cxx114path14_M_split_cmptsEv@plt>
+   177ee:	f8dd 8030 	ldr.w	r8, [sp, #48]	@ 0x30
+   177f2:	4651      	mov	r1, sl
+   177f4:	4640      	mov	r0, r8
+   177f6:	f7f9 ec72 	blx	110dc <_ZNKSt10filesystem7__cxx114path7compareERKS1_@plt>
+   177fa:	4605      	mov	r5, r0
+   177fc:	4650      	mov	r0, sl
+   177fe:	f004 fd5f 	bl	1c2c0 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x26c0>
+   17802:	4640      	mov	r0, r8
+   17804:	f004 fd5c 	bl	1c2c0 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x26c0>
+   17808:	4630      	mov	r0, r6
+   1780a:	f004 fd59 	bl	1c2c0 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x26c0>
+   1780e:	4638      	mov	r0, r7
+   17810:	f004 fd56 	bl	1c2c0 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x26c0>
+   17814:	2d00      	cmp	r5, #0
+   17816:	d0c9      	beq.n	177ac <_ZNSt6localeC1Ev@plt+0x5f38>
+   17818:	4621      	mov	r1, r4
+   1781a:	4650      	mov	r0, sl
+   1781c:	f004 fd62 	bl	1c2e4 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x26e4>
+   17820:	f8df 1928 	ldr.w	r1, [pc, #2344]	@ 1814c <_ZNSt6localeC1Ev@plt+0x68d8>
+   17824:	ab51      	add	r3, sp, #324	@ 0x144
+   17826:	ad4f      	add	r5, sp, #316	@ 0x13c
+   17828:	930e      	str	r3, [sp, #56]	@ 0x38
+   1782a:	602b      	str	r3, [r5, #0]
+   1782c:	4628      	mov	r0, r5
+   1782e:	4479      	add	r1, pc
+   17830:	f04f 0300 	mov.w	r3, #0
+   17834:	f101 0214 	add.w	r2, r1, #20
+   17838:	f005 fe14 	bl	1d464 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag@@Base>
+   1783c:	f50d 78aa 	add.w	r8, sp, #340	@ 0x154
+   17840:	4640      	mov	r0, r8
+   17842:	f7f9 e9a2 	blx	10b88 <_ZNSt10filesystem7__cxx114path5_ListC1Ev@plt>
+   17846:	4628      	mov	r0, r5
+   17848:	f7f9 ebbc 	blx	10fc4 <_ZNSt10filesystem7__cxx114path14_M_split_cmptsEv@plt>
+   1784c:	4629      	mov	r1, r5
+   1784e:	4650      	mov	r0, sl
+   17850:	f7f9 ec44 	blx	110dc <_ZNKSt10filesystem7__cxx114path7compareERKS1_@plt>
+   17854:	4680      	mov	r8, r0
+   17856:	4628      	mov	r0, r5
+   17858:	f004 fd32 	bl	1c2c0 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x26c0>
+   1785c:	4650      	mov	r0, sl
+   1785e:	f004 fd2f 	bl	1c2c0 <_ZNKSt5ctypeIcE8do_widenEc@@Base+0x26c0>
+   17862:	f1b8 0f00 	cmp.w	r8, #0
+   17866:	f000 81a9 	beq.w	17bbc <_ZNSt6localeC1Ev@plt+0x6348>
+   1786a:	ab18      	add	r3, sp, #96	@ 0x60
+   1786c:	20a0      	movs	r0, #160	@ 0xa0
+   1786e:	461a      	mov	r2, r3
+   17870:	930b      	str	r3, [sp, #44]	@ 0x2c
+   17872:	2300      	movs	r3, #0
+   17874:	6013      	str	r3, [r2, #0]
+   17876:	f7f9 e902 	blx	10a7c <_Znwj@plt>
+   1787a:	efc0 0011 	vmov.i32	d16, #1	@ 0x00000001
+   1787e:	1d02      	adds	r2, r0, #4
+   17880:	f8df 38cc 	ldr.w	r3, [pc, #2252]	@ 18150 <_ZNSt6localeC1Ev@plt+0x68dc>
+   17884:	4680      	mov	r8, r0
+   17886:	f942 078f 	vst1.32	{d16}, [r2]
+   1788a:	9a00      	ldr	r2, [sp, #0]
+   1788c:	58d3      	ldr	r3, [r2, r3]
+   1788e:	f8ca 9000 	str.w	r9, [sl]
+   17892:	e9d4 1200 	ldrd	r1, r2, [r4]
+   17896:	3308      	adds	r3, #8
+   17898:	f840 3b0c 	str.w	r3, [r0], #12
+   1789c:	440a      	add	r2, r1
+   1789e:	900d      	str	r0, [sp, #52]	@ 0x34
+   178a0:	4650      	mov	r0, sl
+   178a2:	f7ff fdb9 	bl	17418 <_ZNSt6localeC1Ev@plt+0x5ba4>
+   178a6:	9b01      	ldr	r3, [sp, #4]
+   178a8:	4651      	mov	r1, sl
+   178aa:	9a05      	ldr	r2, [sp, #20]
+   178ac:	980d      	ldr	r0, [sp, #52]	@ 0x34
+   178ae:	f097 fd91 	bl	af3d4 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x64660>

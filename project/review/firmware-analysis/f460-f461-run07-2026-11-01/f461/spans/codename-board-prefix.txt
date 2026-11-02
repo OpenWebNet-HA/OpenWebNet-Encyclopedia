@@ -1,0 +1,31 @@
+
+/usr/lib/liblghal.so.1.0.0:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+000000000000e440 <hal_get_codename@@Base>:
+    e440:	d503233f 	paciasp
+    e444:	d10703ff 	sub	sp, sp, #0x1c0
+    e448:	b00001e1 	adrp	x1, 4b000 <hal_save_microsemi_coeff@@Base+0x1e200>
+    e44c:	a9197bfd 	stp	x29, x30, [sp, #400]
+    e450:	910643fd 	add	x29, sp, #0x190
+    e454:	f947ac21 	ldr	x1, [x1, #3928]
+    e458:	a91a53f3 	stp	x19, x20, [sp, #416]
+    e45c:	9105c3f4 	add	x20, sp, #0x170
+    e460:	a91b5bf5 	stp	x21, x22, [sp, #432]
+    e464:	aa0003f5 	mov	x21, x0
+    e468:	f9400020 	ldr	x0, [x1]
+    e46c:	f900c7e0 	str	x0, [sp, #392]
+    e470:	d2800000 	mov	x0, #0x0                   	// #0
+    e474:	97ffef17 	bl	a0d0 <hal_board@plt>
+    e478:	a9177fff 	stp	xzr, xzr, [sp, #368]
+    e47c:	121d7801 	and	w1, w0, #0xfffffffb
+    e480:	b900129f 	str	wzr, [x20, #16]
+    e484:	7100403f 	cmp	w1, #0x10
+    e488:	3900529f 	strb	wzr, [x20, #20]
+    e48c:	540005e0 	b.eq	e548 <hal_get_codename@@Base+0x108>  // b.none
+    e490:	71004c1f 	cmp	w0, #0x13
+    e494:	54000ae0 	b.eq	e5f0 <hal_get_codename@@Base+0x1b0>  // b.none
+    e498:	7100581f 	cmp	w0, #0x16
+    e49c:	54000b40 	b.eq	e604 <hal_get_codename@@Base+0x1c4>  // b.none

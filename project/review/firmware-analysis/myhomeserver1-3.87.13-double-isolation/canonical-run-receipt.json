@@ -1,0 +1,10 @@
+{
+  "result": {
+    "chunk_id": "799ed6",
+    "wall_time_seconds": 0.531200516,
+    "exit_code": 0,
+    "original_token_count": 80,
+    "output": "{\"mode\": \"STATIC_PREFLIGHT_CHECK\", \"original_execution\": 0, \"outputs\": 2, \"source_known_PC\": 85}\n{\"status\": \"COMPLETE\", \"top_level_entries\": 8, \"totals\": {\"original_code_visits\": 340, \"linker_redirect_callbacks\": 12, \"EXIT_callbacks\": 8, \"guard_stop_callbacks\": 0, \"code_hook_steps\": 360, \"setup_data_relocations\": 4}}\n"
+  },
+  "method": "Root's single approved canonical isolated helper execution; counts in harness/RESULTS.json, no replay"
+}

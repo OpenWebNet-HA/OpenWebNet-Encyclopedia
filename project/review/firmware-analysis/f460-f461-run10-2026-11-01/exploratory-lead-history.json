@@ -1,0 +1,9 @@
+{
+  "saved_UTC": "2026-11-01T14:35:36.690688+00:00",
+  "scope": "Parent transcription of two exploratory author messages before any run10 F461 report/collector/output existed; not a historical candidate or contemporaneous terminal file. No fabricated old-file hash.",
+  "initial_lead": "F461 author initially described suffix final character4 only when local context equalsF and flag remains0, else3.",
+  "correction": "Before generation, author decoded CCMP NZCV immediate4: comparison-unequal path setsZ1. Exact4420/4428/443c selects3 only when context==F AND W20!=0, else4. Selected earlierW20=0 therefore chooses4 regardless context.",
+  "parent_response": "Require exact original guards and independent flags decode; distinguish current parsed48 string4 from earlier selectedNULL case premises; opaque prepare_extscs_frames call boundary only, no body/receiving/framing expansion.",
+  "source_or_guest_execution": 0,
+  "model_fixture_execution": 0
+}

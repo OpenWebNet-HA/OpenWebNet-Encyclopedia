@@ -1,0 +1,44 @@
+{
+  "boundary": "Static declarations and packaged definitions, no live loader/interposition/JsonCpp conversion execution.",
+  "declarations_and_candidate_definitions": [
+    {
+      "packaged_candidate_definition": [
+        "   299: 00016aad   624 FUNC    GLOBAL DEFAULT   11 _ZNK4Json5Value6asUIntEv"
+      ],
+      "scheduler_declaration": [
+        "    72: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNK4Json5Value6asUIntEv"
+      ],
+      "symbol": "_ZNK4Json5Value6asUIntEv"
+    },
+    {
+      "packaged_candidate_definition": [
+        "   465: 000166f9   308 FUNC    GLOBAL DEFAULT   11 _ZNK4Json5Value8asStringB5cxx11Ev"
+      ],
+      "scheduler_declaration": [
+        "   324: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNK4Json5Value8asStringB5cxx11Ev"
+      ],
+      "symbol": "_ZNK4Json5Value8asStringB5cxx11Ev"
+    },
+    {
+      "packaged_candidate_definition": [
+        "   524: 00017f49    34 FUNC    GLOBAL DEFAULT   11 _ZNK4Json5ValueixEPKc"
+      ],
+      "scheduler_declaration": [
+        "   289: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNK4Json5ValueixEPKc"
+      ],
+      "symbol": "_ZNK4Json5ValueixEPKc"
+    }
+  ],
+  "jsoncpp_image_path": "/usr/lib/libjsoncpp.so.1.9.5",
+  "jsoncpp_sha256": "5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36",
+  "needed": [
+    "libapplogger.so.1",
+    "libjsoncpp.so.25",
+    "libuuid.so.1",
+    "libdw.so.1",
+    "libstdc++.so.6",
+    "libgcc_s.so.1",
+    "libc.so.6",
+    "ld-linux-armhf.so.3"
+  ]
+}

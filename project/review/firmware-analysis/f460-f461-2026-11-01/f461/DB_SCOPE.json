@@ -1,0 +1,40 @@
+{
+  "databases": [
+    {
+      "all_schema_objects_by_type": {
+        "index": 75,
+        "table": 75
+      },
+      "bytes": 2633728,
+      "image": "normal",
+      "internal_table_names": [
+        "sqlite_sequence"
+      ],
+      "noninternal_table_count": 74,
+      "path": "/home/bticino/matrix_mx/MHCatalogue.db",
+      "sha256": "bd2ff4d326692c85bc4eb3f86504d615758da97dc832389fac523734574833e9"
+    },
+    {
+      "all_schema_objects_by_type": {
+        "index": 75,
+        "table": 75
+      },
+      "bytes": 2633728,
+      "image": "recovery",
+      "internal_table_names": [
+        "sqlite_sequence"
+      ],
+      "noninternal_table_count": 74,
+      "path": "/home/bticino/matrix_mx/MHCatalogue.db",
+      "sha256": "bd2ff4d326692c85bc4eb3f86504d615758da97dc832389fac523734574833e9"
+    }
+  ],
+  "mode": "ro/immutable/query_only/trusted_schemaOFF",
+  "original_execution": 0,
+  "queries": [
+    "SELECT type,count(*) FROM sqlite_master GROUP BY type ORDER BY type",
+    "SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'sqlite_%' ORDER BY name",
+    "SELECT count(*) FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'"
+  ],
+  "scope": "Clarifies existing DATABASE_SCHEMAS.json selected query:74 noninternal tables,75 total including SQLite bookkeeping. Prior generated files/counts unchanged."
+}

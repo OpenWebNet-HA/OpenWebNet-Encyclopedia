@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+"""Static selected action-control/vector move and growth; no target execution."""
+import sys
+sys.dont_write_bytecode=True
+import pathlib,struct,json,hashlib,subprocess,re,importlib.util,argparse,os
+D=pathlib.Path(__file__).resolve().parent;W=next(x for x in D.parents if(x/'sources').is_dir());R=W/'work/myhomeserver1-firmware/3.87.13/research';H=lambda b:hashlib.sha256(b).hexdigest();J=lambda x:(json.dumps(x,indent=2,sort_keys=True)+'\n').encode();V=R/'2026-10-31/image_vfs.py'
+sp=importlib.util.spec_from_file_location('vectorvfs',V);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+S='/home/bticino/scheduling_manager/scheduling_manager'
+def build():
+ v=m.ImageVFS();b=v.read_bytes(S);assert H(b)=='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26';ph=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);maps=[struct.unpack_from('<8I',b,ph+i*sz)for i in range(n)]
+ def off(a,n=1):return next(o+a-va for t,o,va,_,fs,*_ in maps if t==1 and va<=a and a+n<=va+fs)
+ def raw(a,n):return b[off(a,n):off(a,n)+n]
+ def w(a):return struct.unpack('<I',raw(a,4))[0]
+ def txt(a):i=off(a);z=b.index(0,i);assert z-i<256;return b[i:z].decode()
+ out={};host=v.root/v.resolve(S).lstrip('/');env=dict(os.environ,DEBUGINFOD_URLS='');spans=[('initializer-scene-pointer-save',0xa72c0,0xa7304),('selected-sleep-owner-to-append',0xa7640,0xa7712),('normal-and-full-append',0xa7288,0xa72c0),('growth-and-storage-transfer',0xb509c,0xb51f4),('control-assignment-increment',0xa5980,0xa5a3c),('temporary-control-release',0x1f8a4,0x1f920),('selected-control-dispose-boundary',0xb0b60,0xb0b70)];records=[]
+ for name,a,z in spans:
+  s=subprocess.check_output(['objdump','-d','--dwarf=no-follow-links','-M','force-thumb',f'--start-address={a}',f'--stop-address={z}',str(host)],text=True,env=env).replace(str(host),S);s=re.sub(r' <([^>]+)>',lambda q:q[0]if'@plt'in q[1]else'',s);out['spans/'+name+'.txt']=s.encode();records.append({'path':S,'name':name,'start_VA':hex(a),'end_VA_exclusive':hex(z),'file_offset':hex(off(a,z-a)),'raw_sha256':H(raw(a,z-a))})
+ guards=[(0xa72d0,'0190'),(0xa7646,'8033'),(0xa7648,'0793'),(0xa76be,'6360'),(0xa76c0,'2660'),(0xa76e2,'42f98f07'),(0xa76ec,'c660'),(0xa72a2,'42f98f07'),(0xa72aa,'0c60'),(0xa72ac,'4860'),(0xb50de,'69f98f07'),(0xb50e4,'49f98f17'),(0xb50e8,'40f98f07'),(0xb5196,'c6e900b2'),(0xb519a,'b460'),(0xa599e,'4b60'),(0xa59ae,'3460'),(0x1f8b8,'4260'),(0xb0b62,'c468')]
+ for a,h in guards:assert raw(a,len(bytes.fromhex(h))).hex()==h,hex(a)
+ def branch(pc,t):
+  a,z=struct.unpack('<HH',raw(pc,4));assert a&0xf800==0xf000;s=(a>>10)&1;i1=1-(((z>>13)&1)^s);i2=1-(((z>>11)&1)^s);imm=(s<<24)|(i1<<23)|(i2<<22)|((a&1023)<<12)|((z&2047)<<1);got=(pc+4+imm-((1<<25)if s else 0))&0xffffffff;assert got==t;return{'VA':hex(pc),'target':hex(t),'bytes':raw(pc,4).hex()}
+ branches=[branch(pc,t)for pc,t in [(0xa7676,0xb7590),(0xa7684,0xb444c),(0xa76f6,0xa5980),(0xa76fe,0x1f8a4),(0xa7706,0xa7288),(0xa770e,0x1f8a4),(0xa72ba,0xb509c)]]
+ slot=0x1659a4+w(0xa7f50);assert slot==0x1669c4;head=w(slot);assert head==0x1619dc;rt=w(head+4);name=txt(w(rt+4));assert name=='St19_Sp_counted_deleterIP17SleepActionRunnerSt14default_deleteIS0_ESaIvELN9__gnu_cxx12_Lock_policyE2EE';assert w(head+16)==0xb0b61
+ rel=subprocess.check_output(['readelf','-rW',str(host)],text=True,env=env);rels=[]
+ for a in [slot,head+16]:r=next(x.strip()for x in rel.splitlines()if x.startswith(f'{a:08x} '));assert'R_ARM_RELATIVE'in r;rels.append(r)
+ sh=struct.unpack_from('<I',b,32)[0];sz,n,_=struct.unpack_from('<HHH',b,46);sections=[struct.unpack_from('<10I',b,sh+i*sz)for i in range(n)];ex=next(q for q in sections if q[1]==0x70000001);starts=[]
+ for i in range(ex[3],ex[3]+ex[5],8):q=w(i)&0x7fffffff;q=q-(1<<31)if q&(1<<30)else q;starts.append(((i+q)&0xfffffffe,i))
+ st,exentry=max((q,p)for q,p in starts if q<=0xb509c);en=next(q for q,p in starts if q>st);assert(st,en)==(0xb509c,0xb51f4)
+ pins={S:{'bytes':len(b),'sha256':H(b)}}
+ for p,label in [(V,'image_accessor'),(R/'2026-10-31-actions/sleep/REPORT.md','prior_sleep_source'),(R/'2026-10-31-lifetime/worker-ownership/REPORT.v2.md','prior_worker_ownership'),(R/'2026-10-31-actions/common/REPORT.md','prior_shared_action_source')]:z=p.read_bytes();pins[label]={'bytes':len(z),'sha256':H(z)}
+ out['ORIGINAL_SOURCE.json']=J({'spans':records,'byte_guards':[{'VA':hex(a),'bytes':h}for a,h in guards],'direct_branch_joins':branches,'selected_control':{'offset_pool':'0xa7f50','GOT_slot':hex(slot),'vtable_header':hex(head),'RTTI_VA':hex(rt),'RTTI_name':name,'dispose_Thumb':'0xb0b61','dispose_receiver_action_load':'owner+12 atb0b62','relative_relocations':rels},'growth_exidx':{'entry_VA':hex(exentry),'start':'0xb509c','end_exclusive':'0xb51f4','boundary':'Includes original terminal literal pool; not every byte is an instruction.'}})
+ out['TRANSFER_LEDGER.json']=J({'selected_initializer':{'scene_pointer':'initializerSP4 savedincomingr0 at a72d0','vector_header':'scene+128 savedinitializerSP28 at a7648','header_words':'begin+0,end+4,capacity_end+8','temporary_pair':'initializerSP592=(actionpointer,controlpointer)','temporary_control_word':'SP596 initially0','action_allocation':'operatornew96 ata767c returnedr6; selectedsame-build SleepActionRunner copy path','control_allocation':'operatornew16 ata76d2; vptr+0; two countwords+4/+8 each1; actionptr+12','control_assignment':'a76f6→a5980 with destinationSP596 and newcontrol; samecontrol normalstrongincrement1→2, oldcontrol0, store destination','standalone_release':'a76fe→1f8a4 decrementsstrong2→1 on selected normal initialized path; no disposal becausepriorcount2','append':'a7706→a7288 passes &scene128 and &temporarypair','post_append_cleanup':'a770a checks temporarycontrol; normalmove leaves0 so1f8a4 callskipped'},'normal_capacity':{'source':'a7288','condition':'end!=capacity_end','effect':['loadaction/controlfromsourcepair','zerobothsourcewords','storeexactpairatoldend','advanceendby8'],'count_update':'none in selected move helper','scope':'Stored vector entry owns the transferred control under valid vector/shared-owner/provider premises, not an extra owning worker-state capture.'},'full_capacity':{'delegate':'b509c','inputs':'sameheader,r1=oldend,r2=&temporarypair','normal_growth':['n=(oldend-oldbegin)>>3','checkselectedmax n0x0fffffff; normalgrowth n+max(n,1) subjectcarry/clamp','requestnewcapacitybytes','moveincoming8Bpair tonewbase+(oldend-oldbegin) andzeroits2sourcewords','copyexisting8Bprefix/suffixrecordbytes without per-element countcalls in this retained helper','requestdeleteoldstorage sizedoldcapacitybytes ifnonnull','store newbegin/newend/newcapacityend'],'selected_append':'r1==oldend, so old suffix empty; newend=oldsizebytes+8','ownership':'Existingrecord/controlvalues relocate without a new copy-countincrement or elementdestructorrelease on selected normal path; oldbuffer freed as rawstorage','limits':'No allocation/provider success, memory-alias safety, inputadmission, concurrentmutation or all-unwind guarantee; no actual heap/vector fixture.'},'positive_relation':'A scene vector can retain one concrete action/control handle while the separate worker-state stores a rawactionpointer. This is not proof when that ownerisremoved or of whole receiver lifetime, completion, cancellation or safety/defect.','original_execution':0})
+ out['INPUTS.json']=J(pins);out['METHOD.json']=J({'method':'Static original ImageVFS ELF32/PT_LOAD/Thumb2/relative-relocation/RTTI/exidx/selected reference-count source only','original_instructions':0,'native_helpers':0,'target_OS_or_IO':0,'semantic_host_models_or_scenes':0,'scope':'One selected SLEEPowner pair→action vector normal/full append; external allocator/delete/countmode provider and full lifetime remain conditional. No teardown/statevtable/poll matrix repeated as new coverage; no closedroutes.'})
+ out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(pathlib.Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes()),'outputs':{n:{'bytes':len(z),'sha256':H(z)}for n,z in out.items()},'counts':{'spans':len(spans),'byte_guards':len(guards),'direct_branches':len(branches),'relative_slots':len(rels),'input_pins':len(pins),'original_execution':0}});return out
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');check=ap.parse_args().check;out=build()
+ if check:
+  for n,b in out.items():assert(D/n).read_bytes()==b,n
+  for n,r in json.loads((D/'first-candidate/INDEX.json').read_text()).items():b=(D/'first-candidate'/n).read_bytes();assert b==(D/n).read_bytes()and H(b)==r['sha256']and len(b)==r['bytes']
+ else:
+  s=D/'first-candidate';assert not s.exists(),'refuse snapshot overwrite'
+  for n in out:assert not(D/n).exists(),'refuse generated overwrite'
+  cp={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),pathlib.Path(__file__).name:pathlib.Path(__file__).read_bytes()};ix=J({n:{'bytes':len(b),'sha256':H(b)}for n,b in cp.items()})
+  for n,b in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(b)
+  for n,b in cp.items():p=s/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(b)
+  (s/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':check,'outputs':len(out),'original_execution':0}))
+if __name__=='__main__':main()

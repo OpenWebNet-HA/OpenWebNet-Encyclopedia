@@ -1,0 +1,22 @@
+# Independent F461 run05 source review
+
+PASS; no source correction requested. This review reproduces host-only collection and independently audits source bytes/saved artifacts. It does not execute the translator, providers, raw parser or a semantic fixture.
+
+Reproduced `python3 -B work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/collect_output_v1.py --check`:17 outputs/10 spans/19 first copies. Separately read both original extracted ELF streams, independently checked their SHA256 identities and derived fresh ELF64 PT_LOAD offsets. Every saved span hash, all36 plugin guards and15 core guards, seven exact safe C-string literals and six original BL/relocation rows agree. All16 non-self output-manifest members and19 first-copy entries match actual current bytes. No author files were edited and no source/native/provider/runtime operation ran.
+
+The selected source premises are complete for the bounded path: axes(2,1) from inherited conditional matching; valid supplied record/descriptor/output-list; input representation56=3; separate parsed object kind104=1; ordinary conversion of parsed pointer16 giving numeric1; parsed pointer32 comparing equal to literal0; parsed pointer48=NULL; private word4!=4. Namespaces remain separate, including descriptor-private4, parsed kind104, input representation56, output category40 and criterion48. This does not validate a raw grammar or physical address.
+
+Original literals and actual AArch64 argument order support only the conditional ASCII normal form: formatter%s00 with B1 produces address B100 under ordinary successful provider semantics; later formatter%s%s%s receives X1=address, X2=12, X3=08, giving B1001208. The saved text is neither a capture nor an original execution/model result. The selected address-prefix comparison and private-word guard lead to the named imported local record helper; no transport/frame encoder body is followed.
+
+Candidate libcoso helper0x3a30 writes output40=3/48=supplied1/56=1. Candidate copy helper0x3a00 separately copies exact16-byte regions8..23 and24..39, word44 and eight-byte word64. Its source/target identities and uninitialized-field boundary are correctly stated; new metadata words are not conflated with copied ranges. The list helper reads the same output-pointer slot, appends that exact pointer to the caller's list and stores the returned list head. Local return0 is not an acknowledgment or delivery result.
+
+Caller0x41b0 sets W23=0 before normal cleanup; 0x3ca4 branches to its epilogue without freeing the appended record under that selected normal-return path. Temporary frees are scoped and do not prove complete ownership/lifetime/concurrency. Candidate binding/interposition, allocations, formatting/conversion/list semantics and original input provenance remain explicit conditions. No WHO/physical action, accepted raw input, natural invocation/order, ID uniqueness or end-to-end output claim is promoted. First-candidate history shows no overwritten generated outputs; no unsupported historical completeness is certified.
+
+Exact reviewed pins:
+
+- `work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/REPORT.md`: `295e1e82d037adfaa3e6846fa3de579232dc5cbaefdd88734a7d294877b19631`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/collect_output_v1.py`: `f189fad5d7f6af37f3a1d2b06ca37c5620399f258d7640c6ce40865aa3c4b2ed`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/SOURCE.json`: `03251bc3c75e9025477c96dc60ca0f3e003cf9694eae9b91e9058299306d61c2`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/INPUTS.json`: `0ba04a0214addde147c746631a068946bc391ffbb0e2d73610981cf09581f418`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/OUTPUT_MANIFEST.json`: `4e96138df8901194844787f42f333552cb76951091a2a36806d696d914948980`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/first-candidate/INDEX.json`: `11a4956485b946576a3579d417014f545c195255012eeadae82539c9ff295714`.

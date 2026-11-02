@@ -1,0 +1,43 @@
+{
+  "checks": [
+    {
+      "path": "schema/collect_schema_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "fbbccb",
+          "wall_time_seconds": 0.218764701,
+          "exit_code": 0,
+          "original_token_count": 33,
+          "output": "{\"check\": true, \"outputs\": 20, \"spans\": 9, \"guards\": 19, \"keys\": 9, \"calls\": 9, \"classes\": 4, \"inputs\": 2, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "path": "registration/collect_registration_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "460c4b",
+          "wall_time_seconds": 0.09799409,
+          "exit_code": 0,
+          "original_token_count": 14,
+          "output": "{\"check\": true, \"outputs\": 15, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "path": "admission/collect_admission_v1.py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "aafddd",
+          "wall_time_seconds": 0.333269032,
+          "exit_code": 0,
+          "original_token_count": 26,
+          "output": "{\"check\": true, \"outputs\": 18, \"spans\": 9, \"guards\": 22, \"branch_checks\": 5, \"original_execution\": 0}\n"
+        }
+      }
+    }
+  ]
+}

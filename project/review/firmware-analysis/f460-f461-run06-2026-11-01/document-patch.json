@@ -1,0 +1,17 @@
+{
+  "scope": "Selected functional/address source insertion; core catalogue profile explicitly unchanged",
+  "patches": [
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+      "snapshot": "f460-f461-deep-analysis.md",
+      "before_bytes": 12965,
+      "before_sha256": "e02310bc79076614af748122f6da7d652359b4bbb6606919fb8e5f3c530cc100",
+      "candidate": "REFERENCE_DRAFT.md",
+      "mode": "replace-reviewed-candidate",
+      "after_bytes": 16069,
+      "after_sha256": "318c3c8c8282fa0ff08b8c877be4fcafe3b560906754d7f2374aefbe2c58cf7e"
+    }
+  ],
+  "main_reproduction": "REFERENCE_DRAFT_METHOD.json",
+  "unchanged_profile_sha256": "bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba"
+}

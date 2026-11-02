@@ -1,0 +1,85 @@
+# F454 2.0.51 Static Dataflow Continuation
+
+This continuation examines the remaining joins from the [first targeted follow-up](f454-2.0.51-follow-up.md), using the same archive SHA-256 `15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3`. Methods are original-byte/disassembly inspection and explicit host derivation. No original ARM/JavaScript, Firmware process, browser, service, gateway or bus was executed.
+
+## Results
+
+| Question | Static result | Retained boundary |
+| --- | --- | --- |
+| Does the backend compensate temperature strings before rendering? | Selected WHO 4 DIM0 and selector1 DIM15 mappings preserve scalar text as JSON strings; the selected frontend event/cache/view handoff preserves that value | Physical production, real HTTP/browser operation, different mapper paths and Device validity remain unobserved |
+| Is there a separate energy producer? | FD `0x50` rows `0x10` / `0x14` have old DIM56/510 record formatting plus original parser/send call sites | No newly established longer table7E/DH publication, actual parser acceptance, units, calendar or delivery |
+| Which VDE setting has a concrete startup consumer? | Stack discovery `vde` value controls seven search targets and selected detected-device handling | Not the factory `communication/vde_enabled` switch, media startup or readiness |
+| What is the initial camera-status request? | Normal initialized query builder produces `*#8**35##` | Actual response producer/schema and full request reachability remain unresolved |
+
+[Provenance and source/model reviews](../../project/review/firmware-analysis/f454-2.0.51/continuation-provenance.json) identify exact report, collector, original-file and published evidence hashes. Host examples are consistency reconstructions, not captured or newly executed Firmware exchanges.
+
+## Temperature frame to JSON
+
+Static `api-arm` dispatch selects dimension-class handler `0xa1898`, WHO 4 handler `0xa2dd8`, then DIM0 mapper `0xa9afc` or DIM15 mapper `0xa6b98`. The ordinary completion uses string-valued `who`, `where`, `eventName`, `eventType` and `actual_temperature` fields.
+
+| Selected mapper | Extraction and guard | Resulting field |
+| --- | --- | --- |
+| DIM0 | Dedicated digits-only raw-frame regex; capture start pointer becomes a C-string suffix, then delimiter trimming extracts the scalar | `0501` and `0511` remain JSON strings with their leading zero |
+| DIM15 | General dimension parse; first tail token must equal `1`; the next token is copied without numerical interpretation | `1010` and `1501` remain JSON strings with their leading digit |
+
+The C-string detail matters: capture helper `0xc002c` returns start/end pointers, but DIM0 constructs from the start pointer alone. An intermediate `0501##` is then trimmed to `0501`. The compare against `100` at `0xa9eb0` tests a delimiter position, not a temperature threshold. Both successful routes call `cppcms::json::value::str(std::string const&)`; no scalar sign operation or numeric conversion intervenes in these extraction-to-field paths. See the [backend report](../../project/review/firmware-analysis/f454-2.0.51/continuation-temperature-report.txt).
+
+## JSON event to renderer
+
+Both backend branches use event name/type `cu_zone_set_actual_temperature`. In the selected packaged frontend:
+
+1. Successful live-update data passes `data.result` to `processEvent`; array results enter the event-burst handler.
+2. The burst handler passes the same event element to `fireEvent` with its name and WHERE. It does not numerically transform `actual_temperature`.
+3. For selected nonzero thermal targets, the individual route resolves configured objects by `where`, or the external-probe `eprobe`/`where_probe` association. Matching object inventory and view registration are prerequisites.
+4. The selected thermal model IDs directly store the field selected by the event-to-status mapping. Registered view dispatch annotates `uii` and passes the event parameters to the controlled-zone/external-probe handler.
+5. Those handlers supply the same `actual_temperature` string to the shared renderer. No compensating sign operation exists on this inspected handoff.
+
+The collector also retains the corresponding bundled burst/object-update function fragments. Runtime loading, Backbone callbacks, JSON transport and actual DOM effects were not exercised. General-WHERE routing and alternative models retain their own branches. See the [frontend handoff report](../../project/review/firmware-analysis/f454-2.0.51/continuation-frontend-report.txt).
+
+The previous backend-compensation hypothesis is therefore excluded for the selected mapped strings. Combining the static mappings with the earlier renderer gives:
+
+| Synthetic ordinary source representation | Backend/event scalar | Derived Celsius label |
+| --- | --- | --- |
+| DIM0 value `0501` | String `0501` | `50.1°C` |
+| DIM0 value `0511` | String `0511` | `51.1°C` |
+| DIM15 selector1 value `1010` | String `1010` | `1°C` |
+| DIM15 selector1 value `1501` | String `1501` | `50.1°C` |
+
+The backend preserves the leading digit that the renderer discards. This is a concrete static representation difference from the separately established signed-temperature interpretation; it remains distinct from an observed negative-reading display defect. Physical code meanings, the source of any actual reading and valid setpoint domains are unchanged. The [host mapping examples](../../project/review/firmware-analysis/f454-2.0.51/continuation-temperature-model.json) retain selector rejection and their normal ASCII/regex assumptions.
+
+## Old-format energy producer
+
+A separate `bt_supervisione` path accepts selected stream function `0x50`. Rows `0x10..0x14` map textually to dimensions `56`, `57`, `58`, `59`, `510`; the two modeled rows are `0x10` / DIM56 and `0x14` / DIM510. This is distinct from newer DIM511..514 and from table7E's unused direct-DH local candidate.
+
+Header/data classes carry a descending countdown and an accepted-record counter. For the selected normal rows, the persistent text area is reused as scratch storage:
+
+| Stage | Selected rows `0x10` / `0x14` |
+| --- | --- |
+| First accepted record | Replace scratch text with two decimal byte values |
+| Later ordinary record | Replace scratch text with the current three decimal byte values |
+| Terminal row `0x10` | Replace with the first two current bytes |
+| Terminal row `0x14` | Replace with the first current byte |
+
+An initial development model incorrectly selected the cumulative append branch. Independent review identified that append belongs only to row `0x19`; selected rows `0x10` / `0x14` branch elsewhere and use a nonleading-star format at the base buffer address. The source report/models were corrected before promotion. Exact superseded development bytes and the [correction record](../../project/review/firmware-analysis/f454-2.0.51/continuation-energy-correction.txt) preserve the error and its resolution.
+
+The corrected synthetic second record contains only `12*13*14`, not a cumulative `10*11*12*13*14`. Intermediate parser/send calls are at `0xe49c` / `0xe4b4`; terminal calls are `0xde9c` / `0xdeb4`, conditional on the descriptor word not being `-1`. These call sites establish a static publication route, not successful parser acceptance, valid runtime state or delivered frames. Distinct terminal widths must not be assigned physical sample/calendar/tariff meanings without a consumer or authoritative source. See the [energy report](../../project/review/firmware-analysis/f454-2.0.51/continuation-energy-report.txt) and [corrected host sequences](../../project/review/firmware-analysis/f454-2.0.51/continuation-energy-model.json).
+
+Concrete alternate mediator and assembled-response gates did not establish a longer DH7E publication route. That question remains open; a known old-format producer is not evidence for DH401..428 exposure.
+
+## VDE discovery consumer and initial status request
+
+In `bt_upnp`, startup loads runtime `/tmp/stack_open.xml`. After the search/features checks it decimal-converts the selected `vde` text and stores `feature_vde` at `0x21d28`. The packaged declaration is under `bt_upnp/upnpsearch/features/vde` and equals `0`; the actual API uses descendant-tag lookup rather than enforcing this as a strict XML path. Runtime Configuration can differ.
+
+When the flag equals `1`, one branch adds seven to the search-target count. `loadDefaultDeviceType` tests the same flag and copies seven original device-type URNs into the search list: interface, switchboard, internal unit, alarm logger, server, external unit and generic VDE. After its separate initialization/registration checks, `BtCtrlPointStart` iterates the list into `UpnpSearchAsync`. Other feature targets can still be selected when VDE is not `1`; a zero VDE flag does not mean all discovery is off.
+
+The same flag gates one `parseUpnpDetected` branch through `isCDP` and `parseDeviceUpdate`, subject to an earlier gate and successful client acquisition. These are concrete discovery/type-handling consumers, not media-process activation. See the [media report](../../project/review/firmware-analysis/f454-2.0.51/continuation-media-report.txt), [field locators](../../project/review/firmware-analysis/f454-2.0.51/continuation-discovery-fields.json) and [original target strings](../../project/review/firmware-analysis/f454-2.0.51/continuation-discovery-targets.json).
+
+The camera-status builder's previously recovered seven-byte prefix is now joined to the exact global string object initialized to `##`. Original `.init_array` membership and constructor/literal identity establish initial query `*#8**35##` under successful normal initialization and no mutation. The initializer was already known from earlier work; its identity with this query's suffix is a reused-evidence join, not an independent runtime experiment.
+
+The selected `bt_vct` shared measure block does not provide the missing status response schema: its special translated dimensions are `9001` / `9002`; conditional DIM35 there instead reaches an OPEN-OK tail. The full empty-WHERE query, role/session routing and actual response producer are not joined, so this must not become a claim that the query always receives only ACK. Factory `communication/vde_enabled`, WHO 8 role, WHO 7 board capability, discovery and service readiness remain separate controls.
+
+The later [final static pass](f454-2.0.51-final-pass.md) adds the old-format consumer and a selected ordinary WHO 8 query route. It narrows the following historical open questions without rewriting the report evidence above.
+
+## Remaining work
+
+Useful remaining targets are the actual old-format energy consumer/terminal semantics, a separate longer-DH producer if present, and a genuine WHO 8 DIM35 response producer or complete request-routing proof. Actual negative readings, physical validity of `501..511`, missing persistent/optional assets and running process/browser behavior require further evidence. The complete original research dossier still needs broader canonical reconciliation; this continuation does not assign a coverage percentage or close every Device review gate.

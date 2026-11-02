@@ -1,0 +1,55 @@
+# BNTH: one nonconstant setpoint/equality condition path
+
+This batch selects the original local condition-table **row 11, `BNTH`** and proves a distinct nonconstant comparison: after its own enabled/cache/selector guards, original `BnthConditionRunner` compares a configured double from its **`setpoint`** constructor member with the double loaded from a cached record at +32. Its selected operator-word **2** uses the floating-point equality condition to produce 1 or 0. These are software member names and instructions, not physical units, supported temperature ranges, public protocol semantics or measured device behavior.
+
+Original executable `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. All retained addresses are original linked VAs with freshly derived PT_LOAD offsets/raw span hashes in `ORIGINAL_SOURCE.json`. Original/vendor/native instructions, JSON/provider/target APIs and semantic host fixtures executed: **0**. Previous dossiers and original firmware remain read-only.
+
+## Own row, raw schema and compiled object
+
+The condition-name table `0x1605b0` has row 11 length 4 and exact text `BNTH`. On that row, the raw factory's decrement gives index 10 at TBH data base **`0x2fb0e`**. Its selected halfword `0x02c2` reaches **`0x30092`**. This branch calls raw constructor **`0x2c050`**, requests **80 bytes**, copies its base/derived fields, installs raw header **`0x160118`**, and requests raw-condition append to scene+12. RTTI is independently **`13BnthCondition`**. No acronym or neighboring class supplies this layout.
+
+The chosen subschema is explicitly conditional on the constructor's member-presence order:
+
+1. A present `mode` takes its earlier conversion/return path.
+2. Only with `mode` absent does it check `status`; a present `status` takes another earlier conversion/return path.
+3. Only with both absent does it check exact `setpoint`. If present, the source calls imported `asDouble`, stores local selector **2** at raw+40 and the converted double at **raw+56** (`0x2c0fe..0x2c116`).
+
+The `measure` member belongs to an alternative path and is not substituted for this selected source. Constructor defaults, all other optional fields, invalid-type behavior and complete raw grammar are not promoted from the selected branch. Ordinary JsonCpp successful conversion and valid input-object premises remain unexecuted delegates. The base constructor independently writes its `asBool` enabled result at raw+28; the local operator is stored separately at raw+36. This packet does not decode operator-word 2 from an assumed public token.
+
+The compiled initializer reads raw+32 directly. At TBH data base **`0xa7516`**, index 11 halfword `0x0489` reaches **`0xa7e28`**. It requests the raw object's virtual serializer, reparses the result through `0x2c050`, requests **184 bytes**, and invokes compiled constructor **`0x103b08`**. Complete serializer/reparse value preservation, effective providers, allocation success and exceptions remain premises.
+
+This constructor independently copies raw+4 ID string to compiled+108, raw enabled+28 to compiled+132, raw type/operator+32/+36 to compiled+136/+140, selector+40 to compiled+144, and the selected setpoint double+56 to **compiled+160**. Other copied members have their own fields; in particular raw+64 goes to compiled+168 and is not the selected double. These offsets come from this constructor's instructions, not BNLD, TIME or BNCUSCENE conventions.
+
+Its final primary header is **`0x1628b8`**, address point **`0x1628c0`**, with RTTI **`19BnthConditionRunner`**. Primary slot+8 at `0x1628c8` contains Thumb **`0x103c6d`**, hence instruction entry **`0x103c6c`**. The other primary slots are distinct pointers, not implicitly predicate entries.
+
+## Actual selected cache and comparison source
+
+The predicate initializes its result to 1 and tests its own enabled byte+132. Disabled zero takes the normal return of 1. The selected enabled branch retains the predicate receiver in R9 and obtains the local registry at **`0x167368`** through independently resolved GOT slot **`0x166bf8`**. At `0x103cfa`, it calls the ordinary string-keyed lookup **`0x10e3d8`** using compiled ID-string+108.
+
+A null data pointer branches to **`0x103e30`**, which is outside this selected cache-hit investigation; its request/receiving behavior is not followed. For a valid nonnull cached record, the retained control-zero leg at `0x104898..0x1048ae`, and the normal retained-control leg at `0x103d1e..0x103d42`, load the double at **record+32 into D9**. Control retain/release and their virtual/provider effects remain conditional; no concurrent lifetime or cache freshness/type proof is supplied. The source does not identify this record merely by sharing the registry with earlier Light records.
+
+At `0x103d46`, the method reads **its own selector+144**. Selected value 2 reaches `0x103e00`, subtracts one, and selects index 1 of the TBH at data base **`0x103e0c`**. Its halfword `0x062d` reaches **`0x104a66`**. There, its own operator word+140 is bounded unsigned by 3. The TBB data base **`0x104a74`**, index 2 byte **`0x4e`**, reaches **`0x104b10`**. This is a second, different dispatch table; source block order is not used to infer the operator mapping.
+
+The selected body is exact:
+
+- `0x104b10`: load double at `[this+160]` into D16;
+- `0x104b14`: `VCMP.F64 D16,D9`;
+- `0x104b18`: transfer FPSCR condition flags to APSR;
+- `0x104b1c..0x104b20`: set result R4=1 on EQ, otherwise 0;
+- `0x104b22`: branch to local control cleanup at `0x103d6e`, then the normal result epilogue.
+
+Under ordinary finite-double/VFP comparison and normal cleanup premises, equal configured and cached doubles return true, unequal doubles return false. No original comparison is executed. Floating-point environment, exceptional/unordered values, provider errors, unknown record type, freshness, scalar domain and physical units are not exercised or inferred. No record+32 producer or setpoint field interpretation is established merely from the load and key name.
+
+## Positive condition-consumer join
+
+At `0xa7e5c`, the initializer places the primary compiled pointer in a temporary and passes it through `0xa7264` to the same scene's condition vector at **+116**. On capacity available, the helper moves **one unchanged four-byte pointer**, zeros **one source word**, and advances end by four. Growth/reallocation remains delegated. This is not a trigger/action eight-byte pointer/control handle.
+
+The actual generic worker reads the scene's condition range at +116/+120, loads a pointee and calls **that primary object's vtable+8** (`0xa6d88..0xa6d94`). When this valid BNTH object is the selected member, this reaches `0x103c6c` and its chosen equality path under the guards above. A nonzero result continues the aggregate loop; zero enters its failure path. The complete normal conjunction and subsequent action-worker/false-cleanup behavior remain the separately reviewed service packet's inherited scope. This is a new concrete class-to-consumer binding, not a repeated whole-worker matrix or a natural configured scene execution.
+
+## Scope, applicability and reproduction
+
+Confirmed static: own row/factory/constructor/RTTI/compiled slot, selected presence-priority subschema, enabled/selector/double copies, same registry reference and ordinary lookup request, cached-record D9 load, exact two-level dispatch and floating equality instructions, four-byte condition-pointer publication and actual slot+8 consumer. Conditional: all normal parse/serializer/string/allocation/provider/control cleanup returns, valid object/record layout and retained lifetime, and actual worker/scene membership. Unknown: configured input/assets, miss pipeline, record producer/type/freshness, full optional field/operator vocabulary, all error/unwind/concurrency, floating exceptional behavior and physical meaning.
+
+The curated `OWN-DEV-0199` definition supplies MyHOMEServer1 item 2198 and home-automation/scenario product context only. It does not establish installed state, a public WHO mapping or a physical thermostat measurement for this code. No transport, receiving, authentication, session, framing, MQTT or libjel body is inspected.
+
+Run `python3 collect_distinct_condition_v1.py --check`. It verifies original identity/PT_LOAD/raw spans, instruction guards, exact selected literals/RTTI/PIC/GOT/relocations, all four selected table entries and local direct calls, report/input pins and exact first copies. No firmware or original helper is executed. Generation refuses overwrite; first snapshot-index bytes are computed before opening that index file.

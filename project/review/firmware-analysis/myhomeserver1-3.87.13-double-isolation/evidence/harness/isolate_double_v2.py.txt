@@ -1,0 +1,152 @@
+#!/usr/bin/env python3
+"""Static preflight by default. Guest execution requires separately pinned root approval."""
+import sys
+sys.dont_write_bytecode=True
+import argparse,base64,csv,hashlib,importlib.util,json,os,re,struct,subprocess,time,traceback
+from pathlib import Path
+D=Path(__file__).resolve().parent;W=next(x for x in D.parents if(x/'sources').is_dir())
+P=W/'work/myhomeserver1-firmware/3.87.13';V=P/'research/2026-10-31/image_vfs.py'
+T=W/'work/f454-firmware/research/tooling' # Verified analysis package ONLY; no firmware/harness imports.
+LIB='/usr/lib/libjsoncpp.so.1.9.5';LIBSHA='5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36'
+H=lambda z:hashlib.sha256(z).hexdigest();J=lambda x:(json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+BASE=0x41000000;OBJ=0x50000000;STACK=0x51000000;CANARY=0x52000000;EXIT=0x53000000
+CASES=[('positive-zero','0000000000000000'),('negative-zero','8000000000000000'),('negative-one','bff0000000000000'),('one-point-two-five','3ff4000000000000')]
+RANGES=[(0x15ce0,0x15d02),(0x15ad4,0x15b06),(0x15b26,0x15b44),(0x159ec,0x159fc),(0x15a1e,0x15a22),(0x14e3c,0x14e40),(0x171c4,0x171e6),(0x1724e,0x17254),(0x171fe,0x17216)]
+REDIRECTS={0xba94:0x15ad5,0xb074:0x159ed,0xb768:0x14e3d}
+def source():
+ sp=importlib.util.spec_from_file_location('isolated_double_vfs',V);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+ v=m.ImageVFS();b=v.read_bytes(LIB);assert H(b)==LIBSHA
+ ph=struct.unpack_from('<I',b,28)[0];es,n=struct.unpack_from('<HH',b,42);L=[struct.unpack_from('<8I',b,ph+i*es)for i in range(n)if struct.unpack_from('<I',b,ph+i*es)[0]==1]
+ assert [(x[2],x[4],x[5],x[6])for x in L]==[(0,138196,138196,5),(206716,2184,2256,6)]
+ def raw(a,n):
+  o=next(o+a-va for _,o,va,_,fs,*_ in L if va<=a and a+n<=va+fs);return b[o:o+n]
+ def u(a):return int.from_bytes(raw(a,4),'little')
+ hp=v.root/v.resolve(LIB).lstrip('/');env=dict(os.environ,DEBUGINFOD_URLS='');rel=subprocess.check_output(['readelf','-rW',str(hp)],text=True,env=env);sym=subprocess.check_output(['readelf','-sW',str(hp)],text=True,env=env)
+ definitions=[]
+ for name,a in [('_ZN4Json5ValueC1Ed',0x15ce1),('_ZN4Json5Value9initBasicENS_9ValueTypeEb',0x15ad5),('_ZN4Json5Value8CommentsaSEOS1_',0x159ed),('_ZNK4Json5Value4typeEv',0x14e3d),('_ZNK4Json5Value8asDoubleEv',0x171c5)]:
+  rows=[s.strip()for s in sym.splitlines()if s.split()and s.split()[-1]==name];assert len(rows)==1 and int(rows[0].split()[1],16)==a;definitions.append(rows[0])
+ got=[]
+ for a,name in [(0x32f98,'__stack_chk_guard@GLIBC_2.4'),(0x32f54,'_ZN4Json5Value9initBasicENS_9ValueTypeEb'),(0x32c18,'_ZN4Json5Value8CommentsaSEOS1_'),(0x32e54,'_ZNK4Json5Value4typeEv')]:
+  row=next(s.strip()for s in rel.splitlines()if s.startswith(f'{a:08x} '));assert row.split()[-1]==name;got.append(row)
+ for pool,pc in [(0x15b48,0x15ae0),(0x15b50,0x15b30),(0x17298,0x171cc),(0x172a0,0x17202)]:assert(u(pool)+pc+4)&0xffffffff==0x32a40
+ assert u(0x15b4c)==u(0x1729c)==0x558 and u(0x32f98)==0
+ assert raw(0x171e6,6).hex()=='37181f343a03' and 0x171e6+2*raw(0x171e6,6)[3]==0x1724e
+ allowed={};spans=[]
+ for a,e in RANGES:
+  z=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(hp)],text=True,env=env)
+  for line in z.splitlines():
+   x=re.match(r'^\s*([0-9a-f]+):\s+([0-9a-f]{4})(?: ([0-9a-f]{4}))?\s',line)
+   if x:allowed[int(x[1],16)]=4 if x[3]else 2
+  spans.append({'start_VA':hex(a),'end_VA_exclusive':hex(e),'sha256':H(raw(a,e-a))})
+ assert len(allowed)>70
+ # PLT actual ARM bytes and link slots are retained, but diverted before execution.
+ def rimm(w):
+  rot=((w>>8)&15)*2;x=w&255
+  return ((x>>rot)|(x<<(32-rot)))&0xffffffff if rot else x
+ plt=[]
+ for call,a,target,slot in [(0x15cf2,0xba94,0x15ad5,0x32f54),(0x15afe,0xb074,0x159ed,0x32c18),(0x171da,0xb768,0x14e3d,0x32e54)]:
+  x,y=struct.unpack('<HH',raw(call,4));sign=x>>10&1;i=1-((y>>13&1)^sign);j=1-((y>>11&1)^sign);disp=sign<<24|i<<23|j<<22|(x&1023)<<12|(y&2047)<<1
+  assert x&0xf800==0xf000 and y&0xd000==0xc000
+  assert (((call+4)&~3)+disp-((1<<25)if sign else 0))&0xffffffff==a
+  x,y,z=struct.unpack('<III',raw(a,12));assert x&0xfffff000==0xe28fc000 and y&0xfffff000==0xe28cc000 and z&0xfffff000==0xe5bcf000
+  assert a+8+rimm(x)+rimm(y)+(z&4095)==slot
+  plt.append({'call_VA':hex(call),'call_bytes':raw(call,4).hex(),'entry':hex(a),'target_Thumb':hex(target),'jump_slot':hex(slot),'ARM_bytes':raw(a,12).hex()})
+ return b,L,allowed,{'image':LIB,'sha256':H(b),'PT_LOAD':L,'definitions':definitions,'relocations':got,'code_spans':spans,'allowed_instruction_count':len(allowed),'allowed_PC_sizes':{hex(k):s for k,s in sorted(allowed.items())},'self_definition_redirects':plt,'canary_GOT':'0x32f98 -> private0x52000000','type3_TBB':raw(0x171e6,6).hex()}
+def toolproof():
+ rec=T/'unicorn-2.1.4.dist-info/RECORD';assert H(rec.read_bytes())=='a6aaee9cc319e3b1a9b65c0d6487a1a11e344a79189835b10585d11dde4ff121'
+ checked=[];unhashed=[]
+ for name,h,n in csv.reader(rec.read_text().splitlines()):
+  p=T/name;assert p.is_file()and not p.is_symlink();z=p.read_bytes()
+  if h:
+   alg,encoded=h.split('=',1);assert alg=='sha256'and base64.urlsafe_b64encode(hashlib.sha256(z).digest()).decode().rstrip('=')==encoded and len(z)==int(n);checked.append(name)
+  else:unhashed.append(name)
+ assert len(checked)==41 and len(unhashed)==22
+ assert 'Version: 2.1.4' in (T/'unicorn-2.1.4.dist-info/METADATA').read_text()
+ return {'root':str(T.relative_to(W)),'RECORD_sha256':H(rec.read_bytes()),'verified_RECORD_hashes':41,'unhashed_RECORD_rows':unhashed,'all63file_pins':{str(p.relative_to(T)):{'sha256':H(p.read_bytes()),'bytes':p.stat().st_size}for p in sorted(T.rglob('*'))if p.is_file()},'import_policy':'sys.pycache_prefix points to absent local directory, dont_write_bytecode=True; existing21unhashedpyc never imported; verified package source/native analysis runtime only.'}
+def preflight():
+ _,_,_,src=source();tp=toolproof()
+ proof={'harness_sha256':H(Path(__file__).read_bytes()),'plan_sha256':H((D/'REPORT.PLAN.md').read_bytes()),'source':src,'caseplan':CASES,'top_level_entries':8,'setup':{'base':hex(BASE),'object':hex(OBJ),'object_bytes':24,'initial_object':'24 zero bytes in fresh caller-storage fixture; original constructor supplies tag/value/comments fields','stack':[hex(STACK),65536],'canary':hex(CANARY),'EXIT':hex(EXIT),'data_relocation_per_case':1,'FP_registers':'CortexA15, CPACR0xf00000,FPEXC0x40000000,FPSCR0,D8zero; D0 integer-bitinput for constructor; distinct finite registerpoison before asDouble','same_object':'Constructor then asDouble in SAME instance; no object reseeding/field writes between calls'},'containment':{'original_execution_before_root_and_independent_PASS':0,'known_PC':'exact statically decoded instruction map only; nonnull-comments/error/other-type paths excluded','per_entry_caps':{'original_visits':5000,'engine_count':10000,'engine_timeout_us':1000000,'host_wall_seconds':2},'memory':'Image pages RX/RO only after setup; exact24byte privateobject,64KiB stack and4byte readonlycanary; valid-byte reads tracked for private stack/object; no allocator or syscall; nonprivatewrites trap','traps':['unknown PC/size','Thumb mode or PC mismatch','read outside actualPT_LOAD/privateinitializedbytes','write outside object24/stack','IRQ','invalidinstruction','protected/unmappedmemory','cap/timeout/noEXIT'],'callbacks':'Only 3 linker redirects to actual original definitions + private EXIT; ZERO C/GLib primitive models','accounting':'original code-hook visits (not retired instructions), redirectedPLT callbacks, EXITcallbacks, guard-stop callbacks, setupdata/FP writes separately; every attempted call preserved even if failed'},'limits':['private fixture, candidate selfbinding, synthetic canary and registerFP setup','not fullJSONmember/map/moveassignment/reparse/serialization','no original targetprocess/OS/provider-I/O behavior or physicaldomain','no destructor/nonemptyComments/error/unwind coverage']}
+ return {'SOURCE_PREFLIGHT.json':J(proof),'TOOL_PINS.json':J(tp)}
+def write_preflight(check=False):
+ out=preflight();C=D/'first-preflight-v2'
+ if check:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  for n,p in json.loads((C/'INDEX.json').read_bytes()).items():z=(D/n).read_bytes();assert z==(C/n).read_bytes()and H(z)==p['sha256']and len(z)==p['bytes'],n
+ else:
+  assert not C.exists();assert all(not(D/n).exists()for n in out)
+  cp={**out,'REPORT.PLAN.md':(D/'REPORT.PLAN.md').read_bytes(),Path(__file__).name:Path(__file__).read_bytes(),'isolate_double_v1.py':(D/'isolate_double_v1.py').read_bytes(),'DRAFT_HISTORY.json':(D/'DRAFT_HISTORY.json').read_bytes()};ix=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in cp.items()})
+  for n,z in out.items():(D/n).open('xb').write(z)
+  C.mkdir()
+  for n,z in cp.items():(C/n).open('xb').write(z)
+  (C/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'mode':'STATIC_PREFLIGHT_CHECK'if check else 'STATIC_PREFLIGHT','original_execution':0,'outputs':len(out),'source_known_PC':json.loads(out['SOURCE_PREFLIGHT.json'])['source']['allowed_instruction_count']}))
+def run(approval_path):
+ write_preflight(True);approval=Path(approval_path);a=json.loads(approval.read_bytes())
+ assert a.get('approved')is True and a.get('scope')=='MHS_JSONCPP_DOUBLE_ONLY' and a['harness_sha256']==H(Path(__file__).read_bytes()) and a['preflight_sha256']==H((D/'SOURCE_PREFLIGHT.json').read_bytes()) and a.get('independent_preflight_pass')is True
+ assert not(D/'RUN_STARTED.json').exists(),'no repeat/replay in author output area'
+ (D/'RUN_STARTED.json').open('xb').write(J({'approval_sha256':H(approval.read_bytes()),'harness_sha256':H(Path(__file__).read_bytes()),'preflight_sha256':H((D/'SOURCE_PREFLIGHT.json').read_bytes())}))
+ b,L,allowed,_=source();toolproof()
+ assert not(D/'disabled-pycache-never-created').exists();sys.pycache_prefix=str(D/'disabled-pycache-never-created');sys.path.insert(0,str(T))
+ from unicorn import Uc,UC_ARCH_ARM,UC_MODE_THUMB,UC_PROT_READ,UC_PROT_WRITE,UC_PROT_EXEC,UC_HOOK_CODE,UC_HOOK_MEM_READ,UC_HOOK_MEM_WRITE,UC_HOOK_MEM_INVALID,UC_HOOK_INTR,UC_HOOK_INSN_INVALID,UC_MEM_WRITE
+ from unicorn.arm_const import UC_CPU_ARM_CORTEX_A15,UC_ARM_REG_R0,UC_ARM_REG_SP,UC_ARM_REG_LR,UC_ARM_REG_PC,UC_ARM_REG_CPSR,UC_ARM_REG_C1_C0_2,UC_ARM_REG_FPEXC,UC_ARM_REG_FPSCR,UC_ARM_REG_D0,UC_ARM_REG_D8
+ attempts=[];current=None
+ try:
+  for label,bits in CASES:
+   uc=Uc(UC_ARCH_ARM,UC_MODE_THUMB);uc.ctl_set_cpu_model(UC_CPU_ARM_CORTEX_A15)
+   initialized=set(range(OBJ,OBJ+24))|set(range(CANARY,CANARY+4));ranges=[]
+   for _,o,va,_,fs,ms,flags,_ in L:
+    lo=(BASE+va)&~4095;hi=(BASE+va+ms+4095)&~4095;uc.mem_map(lo,hi-lo,UC_PROT_READ|UC_PROT_WRITE);uc.mem_write(BASE+va,b[o:o+fs]);ranges.append((BASE+va,BASE+va+ms))
+    uc.mem_protect(lo,hi-lo,UC_PROT_READ|(UC_PROT_EXEC if flags&1 else 0))
+   # Host-only exact data relocation; restore the complete data page read-only.
+   gp=(BASE+0x32f98)&~4095;uc.mem_protect(gp,4096,UC_PROT_READ|UC_PROT_WRITE);uc.mem_write(BASE+0x32f98,struct.pack('<I',CANARY));uc.mem_protect(gp,4096,UC_PROT_READ)
+   uc.mem_map(OBJ,4096,UC_PROT_READ|UC_PROT_WRITE);uc.mem_write(OBJ,b'\0'*24)
+   uc.mem_map(STACK,65536,UC_PROT_READ|UC_PROT_WRITE);uc.mem_map(CANARY,4096,UC_PROT_READ|UC_PROT_WRITE);uc.mem_write(CANARY,struct.pack('<I',0x6a29c517));uc.mem_protect(CANARY,4096,UC_PROT_READ)
+   uc.mem_map(EXIT,4096,UC_PROT_READ|UC_PROT_WRITE);uc.mem_write(EXIT,b'\x00\xbe');uc.mem_protect(EXIT,4096,UC_PROT_READ|UC_PROT_EXEC)
+   uc.reg_write(UC_ARM_REG_C1_C0_2,0xf00000);uc.reg_write(UC_ARM_REG_FPEXC,0x40000000);uc.reg_write(UC_ARM_REG_FPSCR,0);uc.reg_write(UC_ARM_REG_D8,0)
+   def fail(msg):
+    current['failure']=msg;uc.emu_stop();raise RuntimeError(msg)
+   def code(_,pc,size,user):
+    current['code_hook_steps']+=1
+    if pc==EXIT:
+     if not(uc.reg_read(UC_ARM_REG_CPSR)&0x20):current['guard_stop_callbacks']+=1;fail('nonThumb EXIT')
+     current['EXIT_callbacks']+=1;current['returned']=True;uc.emu_stop();return
+    r=pc-BASE
+    if r in REDIRECTS:
+     current['linker_redirect_callbacks']+=1;current['redirect_trace'].append({'PLT_VA':hex(r),'target_Thumb':hex(REDIRECTS[r])});uc.reg_write(UC_ARM_REG_PC,BASE+REDIRECTS[r]);return
+    if r not in allowed or allowed[r]!=size or not(uc.reg_read(UC_ARM_REG_CPSR)&0x20):
+     current['guard_stop_callbacks']+=1;fail('unknown PC/size/mode '+hex(pc))
+    current['original_code_visits']+=1;current['PC_trace'].append(hex(r))
+    if current['original_code_visits']>5000 or time.monotonic()-current['start']>2:fail('instruction/wall cap')
+   def mem(_,kind,addr,size,value,user):
+    if kind==UC_MEM_WRITE:
+     if not(OBJ<=addr and addr+size<=OBJ+24 or STACK<=addr and addr+size<=STACK+65536):fail('write outside private object/stack '+hex(addr))
+     initialized.update(range(addr,addr+size));current['writes'].append({'address':hex(addr),'bytes':size});return
+    if any(lo<=addr and addr+size<=hi for lo,hi in ranges):return
+    if not all(p in initialized for p in range(addr,addr+size)):fail('uninitialized/unmapped read '+hex(addr))
+   def invalid(*args):fail('unmapped/protected access');return False
+   def irq(*args):fail('interrupt');return False
+   def badinsn(*args):fail('invalid instruction');return False
+   uc.hook_add(UC_HOOK_CODE,code);uc.hook_add(UC_HOOK_MEM_READ|UC_HOOK_MEM_WRITE,mem);uc.hook_add(UC_HOOK_MEM_INVALID,invalid);uc.hook_add(UC_HOOK_INTR,irq);uc.hook_add(UC_HOOK_INSN_INVALID,badinsn)
+   for phase,entry in [('constructor',0x15ce1),('asDouble',0x171c5)]:
+    current={'case':label,'input_hex':bits,'phase':phase,'entry_Thumb':hex(entry),'original_code_visits':0,'linker_redirect_callbacks':0,'EXIT_callbacks':0,'guard_stop_callbacks':0,'code_hook_steps':0,'returned':False,'PC_trace':[],'redirect_trace':[],'writes':[],'start':time.monotonic()}
+    before=bytes(uc.mem_read(OBJ,24));uc.reg_write(UC_ARM_REG_R0,OBJ);uc.reg_write(UC_ARM_REG_SP,STACK+65536-32);uc.reg_write(UC_ARM_REG_LR,EXIT|1);uc.reg_write(UC_ARM_REG_D0,int(bits,16)if phase=='constructor'else 0x405edd2f1a9fbe77)
+    uc.emu_start(BASE+entry,0,timeout=1000000,count=10000)
+    assert current['returned'],'no normal EXIT';assert uc.reg_read(UC_ARM_REG_SP)==STACK+65536-32,'unbalanced call stack';current.pop('start');after=bytes(uc.mem_read(OBJ,24));current.update({'object_before_hex':before.hex(),'object_after_hex':after.hex(),'D0_after_hex':f'{uc.reg_read(UC_ARM_REG_D0):016x}','object_address':hex(OBJ),'setup_data_relocations':1 if phase=='constructor'else 0,'same_constructed_object_no_reseed':phase=='asDouble'})
+    assert after[:8]==int(bits,16).to_bytes(8,'little')and after[8]==3 and after[12:24]==b'\0'*12
+    if phase=='asDouble':assert before==after and current['D0_after_hex']==bits and not any(OBJ<=int(x['address'],16)<OBJ+24 for x in current['writes'])
+    assert current['code_hook_steps']==sum(current[k]for k in ['original_code_visits','linker_redirect_callbacks','EXIT_callbacks','guard_stop_callbacks'])
+    attempts.append(current);adir=D/'attempts';adir.mkdir(exist_ok=True);(adir/f'{len(attempts):02}-{label}-{phase}.json').open('xb').write(J(current));current=None
+  totals={k:sum(x[k]for x in attempts)for k in ['original_code_visits','linker_redirect_callbacks','EXIT_callbacks','guard_stop_callbacks','code_hook_steps','setup_data_relocations']}
+  result={'status':'COMPLETE','top_level_entries':len(attempts),'totals':totals,'C_primitive_callbacks':0,'setup_FP_register_writes':4*4+8,'attempts':attempts,'limits':'Private same-provider helper corpus only, no full JSON roundtrip/destructor/OS/providerI/O/physical claim.'}
+  (D/'RESULTS.json').open('xb').write(J(result));cp={n:(D/n).read_bytes()for n in ['RUN_STARTED.json','RESULTS.json']};cp.update({str(p.relative_to(D)):p.read_bytes()for p in sorted((D/'attempts').glob('*.json'))});C=D/'first-results';assert not C.exists();ix=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in cp.items()});C.mkdir()
+  for n,z in cp.items():p=C/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (C/'INDEX.json').open('xb').write(ix);print(json.dumps({'status':'COMPLETE','top_level_entries':len(attempts),'totals':totals}))
+ except BaseException as e:
+  if current:current.pop('start',None)
+  failure={'status':'FAILED_ATTEMPT','exception':repr(e),'traceback':traceback.format_exc(),'completed_attempts':attempts,'failed_attempt':current,'original_visits_attempted':sum(x['original_code_visits']for x in attempts)+(current['original_code_visits']if current else 0),'not_execution_zero':'All observed original code-hook visits retained even without complete canonical corpus. STOP: root snapshot/version review before any retry.'}
+  (D/'FAILED_ATTEMPT.json').open('xb').write(J(failure));raise
+def main():
+ ap=argparse.ArgumentParser();g=ap.add_mutually_exclusive_group(required=True);g.add_argument('--preflight',action='store_true');g.add_argument('--check',action='store_true');g.add_argument('--run',action='store_true');ap.add_argument('--approval');a=ap.parse_args()
+ if a.run:assert a.approval;run(a.approval)
+ else:write_preflight(a.check)
+if __name__=='__main__':main()

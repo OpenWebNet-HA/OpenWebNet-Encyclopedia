@@ -1,0 +1,44 @@
+# F461 run14 — local module admission, recorded handles and qualified loader returns
+
+This run chooses the permitted **module-selection alternative**, adding actual filename/symbol gates and local result/recording policy beyond run11's configuration-directory handoff. It does **not** establish a new actual boot/DTB/auxiliary-core selector or hardware readiness. New original/vendor/native/provider/target execution, runtime directory reads, models, fixtures, SQL and target I/O are **0**. No module is opened, initialized or evaluated by this analysis.
+
+Original `/home/bticino/bin/coso` is ELF64 AArch64, SHA256 `2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197`. Its exported `register_plugins` definition is VA0x56f0, size428. The selected spans cover that original body plus one original main callsite; SOURCE.json retains exact PT_LOAD-backed words/text/hex, four safe compiled literal joins and actual imported-call PLT/GOT relocations. The executable declares libglib and libgmodule SONAME requests; full loader closure, effective interposition/binding and successful provider/module returns remain premises. Device0208 supplies third-party-integration product context only, with no public WHO/feature, physical-platform or electrical conclusion.
+
+## Actual supplied holder and caller boundary
+
+Main's original0x32f4 passes its saved manager pointer inX0 to local `register_plugins`0x56f0 at0x32f8. The preceding configuration/holder construction is inherited through exact run11 report/source pins, not repeated as new coverage. The callee saves its provided owner inX22, loads **P=[owner+16]** and requests a directory open on **[P+8]**. Under the previously reviewed normal construction and same-object premise, P is the24-byte plugin-data holder, its+8 is the copied library directory and its+16 the separate plugin-configuration directory. These offsets do not designate a message, timer, descriptor or newly allocated module entry.
+
+Actual natural startup, argument values, working directory and directory contents remain unobserved. Neither the main call request nor a provided valid holder certifies that a module is installed or initialized.
+
+## Support, directory and exact filename filters
+
+The source first requests `g_module_supported` at0x5704. A zero result takes0x5808, requests a diagnostic with numeric log flag4, then has a source return1 at0x5820. That return is conditional on the diagnostic delegate returning normally; no log/provider implementation or universal error-return behavior is asserted. The diagnostic may have its own control effects outside this packet.
+
+For the supported continuation, `g_dir_open([P+8],0,NULL)` at0x5720 supplies the directory pointer. A NULL result branches0x5890 and selects low32 **0xffffffff** before the normal epilogue. On a nonnull directory, the source requests entry names at0x5744 and follows the ordinary valid-directory/name/ABI lifetime premises.
+
+A candidate name must first produce a nonzero result from `g_str_has_prefix(name,**"lib"**)` at0x5754, then a nonzero result from `g_str_has_suffix(name,**".so"**)` at0x5764. Either false result loops to the next name. The exact compiled prefix is only **lib**, not libplug or libplug_. These are two delegated string-result gates, not wildcard matching, ELF-format/architecture/ABI verification, a trusted-module policy or a universal accepted filename grammar.
+
+The selected path requests `g_build_filename([P+8],same_entry_name,NULL)` at0x577c and passes its returned path to `g_module_open` at0x5788 with numeric flags **3**. No meaning for all platform-specific flag/binding effects is inferred from that number alone. A NULL handle requests `g_module_error` and a diagnostic, then continues enumeration under normal returns. Runtime names/path/error text and module/provider implementations are not read or exported.
+
+## Two symbol gates and local record before initializer request
+
+A nonnull handle must satisfy BOTH original symbol requests:
+
+- `g_module_symbol(handle,"init_plugin",&SP80)` at0x57a0 must return nonzero;
+- then `g_module_symbol(handle,"stop_plugin",&SP88)` at0x57b8 must return nonzero.
+
+If either result is zero, the selected failure path requests `g_module_close(handle)` and continues enumeration. A success result is not independently proved function-type/ABI validity, active plugin status or readiness. Valid returned callable pointers and ordinary provider behavior remain explicit premises. The stop symbol is looked up here, not invoked.
+
+When both gates succeed, the source requests **16 bytes**, stores **(constructed_path_pointer,module_handle)** as two64-bit words at0x5844, and appends that entry pointer to the list at **P+0**. The returned list is written back at0x5854. This records the pair before the next initializer request; it is not a complete owning lifetime/refcount/unwind proof. P24, owner manager, module handle, constructed path and new entry16 are distinct objects/roles.
+
+The source then loads the previously resolved init pointer from SP80, reloads **[P+16]** and invokes the pointer at **0x585c** with that configuration-directory pointer inX0. This composes with the older supplied-argument proof, but the initializer body remains closed. Immediately afterward it requests `update_log_type` and returns to enumeration. There is no explicit local test/branch on the initializer's returned machine value between these requests. This bounded observation does not establish the complete return ABI, what another helper may observe or a global absence of validation. It does not certify successful initialization, connection, service creation or output.
+
+## Normal traversal and remaining scope
+
+Normal end of directory traversal requests `g_dir_close`, sets W0=0 and returns. The same traversal can have skipped names, closed modules after failed symbol lookups or encountered a NULL module-open result. Therefore this local numeric0 is not proof that any module initialized or every entry succeeded. Provider/diagnostic exceptions or nonreturns, allocation failure, mutated holders/directory entries, concurrency, unloading and complete cleanup/ownership policy remain open. No leak, safety, security, defect or installed-state conclusion follows from these source branches.
+
+The useful positive closure is: same local owner/holder → support/directory/name gates → constructed path/module request → BOTH symbol gates → pair recorded before initializer request → qualified local returns. The function's safe string/control selection is new coverage; previous main option tables, field registration, route criteria, translators and exact initializer argument details are inherited, not repeated as new cases.
+
+This packet neither runs nor expands GModule/GLib, plugin initializer/stop, log or downstream implementation bodies. Receiving/output/transport/authentication/session/framing/MQTT/libjel and frame-preparation, platform-command fallback and uncertain bt_device process routes remain closed. No private configuration, boot environment, credentials, serial/MAC, hardware values or directory contents are exported; only four compiled nonsecret symbol/filter literals are retained.
+
+Reproduce with `python3 -B collect_modules_v1.py --check`. Generation is exclusive and immediately preserves report/collector/outputs with a first-candidate index computed before opening its own file. No canonical failed generation or generated overwrite occurred. All originals and completed dossiers remain unchanged. Actual boot/DTB/auxiliary-core selection and active module/readiness state remain unresolved.

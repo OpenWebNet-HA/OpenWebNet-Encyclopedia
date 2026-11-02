@@ -1,0 +1,20 @@
+
+/home/bticino/bin/dedrifupdater:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000002888 <.text+0xc8>:
+    2888:	52800017 	mov	w23, #0x0                   	// #0
+    288c:	910103f4 	add	x20, sp, #0x40
+    2890:	2a1703e1 	mov	w1, w23
+    2894:	aa1403e0 	mov	x0, x20
+    2898:	9101a3f5 	add	x21, sp, #0x68
+    289c:	97ffff0d 	bl	24d0 <mount_kernel_recovery@plt>
+    28a0:	aa1503e0 	mov	x0, x21
+    28a4:	2a1703e1 	mov	w1, w23
+    28a8:	97ffffb6 	bl	2780 <fread@plt+0x10>
+    28ac:	b9405be0 	ldr	w0, [sp, #88]
+    28b0:	7100041f 	cmp	w0, #0x1
+    28b4:	54001280 	b.eq	2b04 <_ZN8PlatformC1Ei@plt+0x7c>  // b.none
+    28b8:	aa1503e0 	mov	x0, x21

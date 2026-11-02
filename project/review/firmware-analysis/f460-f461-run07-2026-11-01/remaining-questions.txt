@@ -1,0 +1,9 @@
+# Ranked remaining questions after run07
+
+1. Architectural breadth next: actual product-specific boot/config/profile/auxiliary-core/local IPC and static update/recovery/component source contracts, with originalnormal/recovery views kept separate and no targetboot/flashing/network/I/O. Do not repeat package inventory/DTB hash tables.
+2. F460 concrete condition-range producer/predicate identity or localf84d0 next gate, only under new bounded source; receiver/holder/state teardown/concurrency remains a distinct lifetime gap. Do not repeat BNIL/copiedreceiver/threadrequest matrix.
+3. F461 permitted local diagnostic consumer or board-provider provenance under a justified nonsecret platform-only scope; uncertainprocesscaller stays excluded/closed, never use adjacent serialization as a workaround. CompiletimeF461/134 labels do not prove installed identity.
+4. Remaining F461 address/suffix/provider/typedcaller and local output/naturalmessage/clock source, only without raw receiving/framing/auth/session/transport.
+5. F460 root catalogue/configuration/key-list/fullSQL selection, actualsceneassets, effectiveproviders/fullJSON/strings and full errors/unwind/lifetime/concurrency/physical observations remain unclosed.
+
+No forcedruntimeobjects/native/model replay or negativeglobalcapability/safetyclaims. Earlier source cases/firstcopies are frozen, histories preserved, staged/committed/published/remote-write/livecontact changes prohibited.

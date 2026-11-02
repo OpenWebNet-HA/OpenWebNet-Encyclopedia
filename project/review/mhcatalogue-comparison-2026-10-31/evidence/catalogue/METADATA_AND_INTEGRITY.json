@@ -1,0 +1,92 @@
+{
+  "firmware": {
+    "DB_INFO": [
+      {
+        "param": "DATA_B",
+        "value": 0
+      },
+      {
+        "param": "DATA_R",
+        "value": 4
+      },
+      {
+        "param": "DATA_V",
+        "value": 4
+      },
+      {
+        "param": "R",
+        "value": 0
+      },
+      {
+        "param": "V",
+        "value": 3
+      },
+      {
+        "param": "date",
+        "value": 1304041729
+      },
+      {
+        "param": "export_date",
+        "value": 20240327
+      }
+    ],
+    "database_pragmas": {
+      "application_id": 0,
+      "auto_vacuum": 1,
+      "encoding": "UTF-8",
+      "freelist_count": 0,
+      "page_count": 2181,
+      "page_size": 1024,
+      "user_version": 0
+    },
+    "declared_foreign_key_check": [],
+    "integrity_check": "ok",
+    "query_only": true,
+    "trusted_schema": false
+  },
+  "suite": {
+    "DB_INFO": [
+      {
+        "param": "DATA_B",
+        "value": 0
+      },
+      {
+        "param": "DATA_R",
+        "value": 4
+      },
+      {
+        "param": "DATA_V",
+        "value": 4
+      },
+      {
+        "param": "R",
+        "value": 0
+      },
+      {
+        "param": "V",
+        "value": 3
+      },
+      {
+        "param": "date",
+        "value": 2606181506
+      },
+      {
+        "param": "export_date",
+        "value": 20260520
+      }
+    ],
+    "database_pragmas": {
+      "application_id": 0,
+      "auto_vacuum": 1,
+      "encoding": "UTF-8",
+      "freelist_count": 0,
+      "page_count": 2564,
+      "page_size": 1024,
+      "user_version": 0
+    },
+    "declared_foreign_key_check": [],
+    "integrity_check": "ok",
+    "query_only": true,
+    "trusted_schema": false
+  }
+}

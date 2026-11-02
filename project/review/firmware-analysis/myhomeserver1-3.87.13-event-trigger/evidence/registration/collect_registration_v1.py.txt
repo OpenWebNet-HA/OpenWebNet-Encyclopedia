@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+"""Local BNIL callback capture and trigger-vector publication; no external registration claim."""
+import sys
+sys.dont_write_bytecode=True
+import pathlib,json,hashlib,struct,re,subprocess,importlib.util,argparse,os
+D=pathlib.Path(__file__).resolve().parent;W=next(x for x in D.parents if(x/'sources').is_dir());R=W/'work/myhomeserver1-firmware/3.87.13/research';V=R/'2026-10-31/image_vfs.py';H=lambda b:hashlib.sha256(b).hexdigest();J=lambda x:(json.dumps(x,sort_keys=True,indent=2)+'\n').encode();S='/home/bticino/scheduling_manager/scheduling_manager'
+spec=importlib.util.spec_from_file_location('regvfs',V);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+def build():
+ v=m.ImageVFS();b=v.read_bytes(S);assert H(b)=='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26';ph=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);segs=[struct.unpack_from('<8I',b,ph+i*sz)for i in range(n)]
+ def off(a,n=1):return next(o+a-va for t,o,va,_,fs,*_ in segs if t==1 and va<=a and a+n<=va+fs)
+ def raw(a,n):return b[off(a,n):off(a,n)+n]
+ def w(a):return struct.unpack('<I',raw(a,4))[0]
+ def txt(a):i=off(a);z=b.index(0,i);assert z-i<256;return b[i:z].decode()
+ out={};hp=v.root/v.resolve(S).lstrip('/');env=dict(os.environ,DEBUGINFOD_URLS='');spans=[('initializer-context-save',0xa72c0,0xa7304),('scene-callback-capture',0xa8f1c,0xa8f56),('compiled-callback-constructor-prefix',0xee5ac,0xee60a),('persistent-runner-local-publication',0xa8fd2,0xa9050),('callback-copy-helper',0xb43d8,0xb4414),('primary-callable-forwarder',0xee59c,0xee5ac),('scene-pointer-callable-manager',0xa56c0,0xa56e4),('scene-pointer-callable-invoker',0xa60a8,0xa60ae),('trigger-vector-normal-move',0xa56e4,0xa5712),('compiled-vtable-install',0xee666,0xee68e)];records=[]
+ for name,a,z in spans:
+  s=subprocess.check_output(['objdump','-d','--dwarf=no-follow-links','-M','force-thumb',f'--start-address={a}',f'--stop-address={z}',str(hp)],text=True,env=env).replace(str(hp),S);s=re.sub(r' <([^>]+)>',lambda q:q[0]if'@plt'in q[1]else'',s);out['spans/'+name+'.txt']=s.encode();records.append({'name':name,'image':S,'start_VA':hex(a),'end_VA_exclusive':hex(z),'file_offset':hex(off(a,z-a)),'raw_sha256':H(raw(a,z-a))})
+ guards=[(0xa72d0,'0190'),(0xa8f3a,'c6e90221'),(0xa8f42,'3260'),(0xa8f46,'7260'),(0xee5f4,'0222'),(0xee5fa,'c847'),(0xee606,'43f98f07'),(0xa8fd4,'4c20'),(0xa8fd6,'03f1680a'),(0xa9034,'c4e90087'),(0xa5706,'46f98f07'),(0xa570a,'6a60'),(0xa56ce,'0b68'),(0xa56d0,'0360'),(0xee59c,'c368'),(0xee5a0,'0369'),(0xa60a8,'0068')]
+ for a,z in guards:assert raw(a,len(bytes.fromhex(z))).hex()==z,hex(a)
+ def branch(pc,t):
+  x,y=struct.unpack('<HH',raw(pc,4));assert x&0xf800==0xf000;s=(x>>10)&1;i1=1-(((y>>13)&1)^s);i2=1-(((y>>11)&1)^s);n=(s<<24)|(i1<<23)|(i2<<22)|((x&1023)<<12)|((y&2047)<<1);assert(pc+4+n-((1<<25)if s else 0))&0xffffffff==t;return{'VA':hex(pc),'target':hex(t),'bytes':raw(pc,4).hex()}
+ branches=[branch(a,t)for a,t in [(0xa8f52,0xb43d8),(0xa8f86,0xee5ac),(0xa900c,0xb43d8),(0xa9044,0xa56e4),(0xa904c,0x1f8a4),(0xa60aa,0xa5db0)]]
+ pics=[]
+ for pool,pc,target in [(0xa9698,0xa8f34,0xa60a9),(0xa969c,0xa8f38,0xa56c1),(0xee6fc,0xee66a,0x1625ac)]:assert(w(pool)+pc+4)&0xffffffff==target;pics.append({'pool':hex(pool),'ADD_PC':hex(pc),'target':hex(target)})
+ tables=[]
+ for h,name in [(0x1625ac,'17BnilTriggerRunner'),(0x161b9c,'St23_Sp_counted_ptr_inplaceI17BnilTriggerRunnerSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE')]:rt=w(h+4);assert txt(w(rt+4))==name;tables.append({'header':hex(h),'RTTI':hex(rt),'name':name,'primary_address_point':hex(h+8),'first_three_Thumb':[hex(w(h+x))for x in [8,12,16]]})
+ assert[w(0x1625ac+x)for x in [8,12,16]]==[0xee59d,0xee7b5,0xee869]
+ slots=[]
+ for pool,want,header in [(0xa96a4,0x1665d8,0x161b9c),(0xa96a8,0x166400,0x1625ac)]:a=0x1659a4+w(pool);assert a==want and w(a)==header;slots.append({'pool':hex(pool),'GOT_slot':hex(a),'header':hex(header)})
+ rel=subprocess.check_output(['readelf','-rW',str(hp)],text=True,env=env);relrows=[]
+ for a in [0x1665d8,0x166400,0x1625b4,0x1625b8,0x1625bc]:r=next(x.strip()for x in rel.splitlines()if x.startswith(f'{a:08x} '));assert'R_ARM_RELATIVE'in r;relrows.append(r)
+ pins={S:{'sha256':H(b),'bytes':len(b)}}
+ for p,label in [(V,'image_accessor'),(R/'2026-10-31-startup/startup/REPORT.md','prior_startup'),(R/'2026-10-31-startup/registry/REPORT.md','prior_scene_registry'),(R/'2026-10-31-triggers/service/REPORT.md','prior_scene_callback_context')]:z=p.read_bytes();pins[label]={'sha256':H(z),'bytes':len(z)}
+ out['ORIGINAL_SOURCE.json']=J({'spans':records,'byte_guards':[{'VA':hex(a),'bytes':z}for a,z in guards],'direct_branches':branches,'PIC_code_pointers':pics,'types':tables,'GOT_chains':slots,'relative_relocations':relrows})
+ out['LOCAL_HANDOFF.json']=J({'capture':{'source':'initializerincoming scene pointer savedSP4','data':'SP3912 word0=scene,word1=0','manager_Thumb':'0xa56c1','invoker_Thumb':'0xa60a9','first_copy':'a8f52→b43d8 from wrapperSP3912 toinnerwrapperSP4036','compiled_copy':'ee5ac managerop2→innerdata4 andcopymanager12/invoker16','persistent_copy':'a900c→b43d8 withreceiverallocation+16=inner+4','manager_local_contract':'op2copiesoneword;op3normalreturn0 hasno local retainedreceiver release','scope':'Raw capturedscene pointer, no strongscenecontrol capture inferred'},'runner':{'class':'BnilTriggerRunner','allocation_bytes':76,'allocation_control_base':'r7','inner':'base+12','pair':'SP592=(inner,controlbase)','initial_countwords':'control+4/+8each1','final_header':'0x1625ac','primary_slot0':'0xee59c callableforwarder','primary_slots1_2':'destructor entries ee7b4/ee868, not event admission','nonvirtual_admission':'ee708 separate parent-owned scope, not retained/examined here'},'publication':{'caller':'a9034pair→a9044a56e4','destination':'same scene+104 trigger-handle vector','normal_move':'exact8Bpaircopiedtoend,sourcepairzero,end+8','cleanup':'a9048 tests nowzero sourcecontrol on selected normal move; releaseconditional','capacity_full':'a5712 onward not inspected here; remains delegate','meaning':'Local vector append/publication only, not externalservice registration/subscription'},'callback_entry':{'primary':'ee59c tests managerinner12 then tailcallsinvokerinner16 usingdata inner4','captured_invoker':'a60a8 loadsscenepointerthen tailcallsa5db0','scope':'Conditional callback/scene-launch request, no event admission, installedservice, delivery/readiness or actual launch'},'startup_composition':'Prior scoped source provides loader/container and registry insertion after scene construction. It doesnot prove any external eventservice routes a payload to this runner.','unclosed':['external eventcallback/registration/service identity and dispatcher route','full rawschema/grammar and actual configured BNIL triggers','capacityfull append and complete control/lifetime/unwind here','normal ABI/copy/provider/allocator success and dynamic binding','admissionhandlerbody and its caller owned separately','actualeventdelivery/sceneexecution/physical meaning'],'original_execution':0})
+ out['INPUTS.json']=J(pins);out['METHOD.json']=J({'method':'Static ImageVFS original ELF32/PT_LOAD/Thumb2/PIC/GOT/RTTI/relative-relocation and selected local callback-copy/vector handoff only','original_instructions':0,'native_helpers':0,'targetOS_or_IO':0,'host_semantic_models':0,'scope':'No admissionhandlerbody retained; no transport/auth/session/framing/MQTT/libjel provider bodies; localappend is not service registration.'})
+ out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(pathlib.Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes()),'outputs':{n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()},'counts':{'spans':len(spans),'guards':len(guards),'branches':len(branches),'PIC_code_pointers':len(pics),'types':len(tables),'GOT_chains':len(slots),'relocations':len(relrows),'inputs':len(pins),'original_execution':0}});return out
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');check=ap.parse_args().check;out=build()
+ if check:
+  for n,b in out.items():assert(D/n).read_bytes()==b,n
+  for n,r in json.loads((D/'first-candidate/INDEX.json').read_text()).items():b=(D/'first-candidate'/n).read_bytes();assert b==(D/n).read_bytes()and H(b)==r['sha256']and len(b)==r['bytes']
+ else:
+  s=D/'first-candidate';assert not s.exists(),'refuse snapshot overwrite'
+  for n in out:assert not(D/n).exists(),'refuse generated overwrite'
+  cp={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),pathlib.Path(__file__).name:pathlib.Path(__file__).read_bytes()};ix=J({n:{'bytes':len(b),'sha256':H(b)}for n,b in cp.items()})
+  for n,b in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(b)
+  for n,b in cp.items():p=s/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(b)
+  (s/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':check,'outputs':len(out),'original_execution':0}))
+if __name__=='__main__':main()

@@ -1,0 +1,96 @@
+{
+  "SQL_declaration": {
+    "compiled_initializer": "0x11138 listed at .init_array index1",
+    "context": "item-to-main-system identifiers",
+    "joined_to_selected_reader": false,
+    "not_established": "pointer transfer from constructed global string20f024 to the selected reader input+36; not claimed executed SQL",
+    "text": "SELECT AS_ITEM_SYSTEM.id_item, AS_ITEM_SYSTEM.id_system FROM AS_ITEM_SYSTEM WHERE AS_ITEM_SYSTEM.main=1"
+  },
+  "SQL_statements_executed": 0,
+  "caller": {
+    "call_VA": "0x8baa2",
+    "false_branch": "0x8bae8 sets r0=0",
+    "outer_object_source": "word[caller object+532]",
+    "true_continuation": "0x8baac calls0xe1f78 then tests return; later0xe3050 and0xa1510 requests are opaque in this batch",
+    "whole_function_origin": "not traced"
+  },
+  "candidate_library_wrapper": {
+    "boundaries": "No internal opener/provider binding or target filesystem behavior traced; numeric flags are exact, not host ABI fixtures.",
+    "path": "/usr/lib/libsqlite3.so.0.8.6",
+    "requested_internal_flags": 6,
+    "requested_internal_vfs": 0,
+    "sqlite3_open_VA": "0xaf3f8",
+    "sqlite3_open_v2_VA": "0xaf400",
+    "tail_target": "0xaeeb4",
+    "tail_target_same": true
+  },
+  "network_or_target_operations": 0,
+  "opener": {
+    "API": "sqlite3_open imported",
+    "entry": "0xd3948",
+    "first_error_effects": [
+      "errmsg on first slot",
+      "sqlite3_close first slot",
+      "first slot=0"
+    ],
+    "first_handle_slot": 556,
+    "input": "outer object in r0; storage context=word[object+16]",
+    "not_established": [
+      "all lifetime owners/destructor",
+      "second failed handle provider lifetime",
+      "naturally initialized context",
+      "actual runtime provider or success"
+    ],
+    "path": "/home/bticino/matrix_mx/MHCatalogue.db",
+    "return_both_success": 1,
+    "return_first_error": 0,
+    "return_second_error": 0,
+    "second_error_effects": [
+      "errmsg on second slot",
+      "sqlite3_close first slot",
+      "8-byte zero store covering both slots"
+    ],
+    "second_handle_slot": 560
+  },
+  "original_instructions_executed": 0,
+  "reader": {
+    "SQL_pointer_source": "word[input object+36]",
+    "VFS_argument": 0,
+    "conversion": "column_text\u2192strtol(text,NULL,10)",
+    "destination_fields": [
+      20,
+      24
+    ],
+    "early_stat_open_orNULL_failure": "return without assigning explicit Boolean result",
+    "entry": "0xa8c00",
+    "handle_nonNULL_guard": true,
+    "handle_slot": "private stack+12",
+    "initial_step_guard": "only101 branches to immediate finalize; other values continue if statement nonNULL",
+    "loop_guard": "subsequent sqlite3_step return100 repeats columns; any other value exits loop",
+    "normal_effects": [
+      "sqlite3_finalize",
+      "tailcall sqlite3_close via Thumb veneer108a4"
+    ],
+    "not_established": [
+      "actual SQL contents at object+36",
+      "selected columns semantic labels",
+      "natural caller/virtual registration",
+      "accepted device/Firmware/Object and policy"
+    ],
+    "open_v2_flags": 1,
+    "path_exists_guard": "stat return must be0",
+    "prepare_failure_effects": [
+      "close handle; no local finalize on that edge"
+    ],
+    "prepare_nByte": -1,
+    "prepare_success_guard": "return0",
+    "read_columns": [
+      13,
+      14
+    ],
+    "return_contract": "No uniform Boolean inferred; normal close return is delegated. No error/short-row defect inferred.",
+    "same_absolute_path": true,
+    "statement_slot": "private stack+16",
+    "tail_argument": 0
+  }
+}

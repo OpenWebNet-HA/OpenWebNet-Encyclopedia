@@ -1,0 +1,44 @@
+# MyHOMEServer1, F460 and F461: configured-input admission follow-up
+
+This focused pass establishes which retained assets can support a configured-scene/module study and adds two bounded F460 source edges. No commissioned scene/module export was admitted in the selected retained scope; the user also confirmed no configured installation/export was available. A complete configured file-to-scene or module trace therefore remains unproved. Packaged defaults, earlier source reasoning and new source checks keep separate roles.
+
+## Available assets and their roles
+
+| Product/build | Retained material checked | Admission result |
+| --- | --- | --- |
+| MyHOMEServer1 3.87.13 | Own normal/recovery scheduler settings and declared scene-directory prefix | Settings are six manager keys; no populated scene/example admitted below the selected prefix |
+| F460 2.0.12 | Own normal/recovery scheduler settings and declared scene-directory prefix | Packaged manager defaults, with no scene asset admitted in that finite prefix |
+| F461 2.0.11 | Own packaged manager/plugin configuration files | Logging/communication settings; no commissioned module instance, accepted record or active setting established |
+| Retained installer/project context | Previously reviewed MyHOME Suite project/plant templates and a separate MH202 default-project lead | Manufacturer templates/defaults belong to their original products; they do not supply an MHS/F46 configured scene |
+
+The [asset-admission review](../../project/review/firmware-analysis/configured-inputs-2026-11-02/reviews/asset-admission-review.txt) checks exact own manifests, source identities and sanitized structures. These are finite inventory/admission results, not proof that configured assets do not exist elsewhere, that a device directory is empty at runtime, or that a product lacks a capability. No full/private configuration or private leaf values, credentials, keys or runtime IDs were exported; the previously reviewed packaged selector is explicitly whitelisted. Manufacturer templates were not populated to manufacture a commissioned example.
+
+## New F460 filesystem edge
+
+Original AArch64 `scheduling_manager` is 2,161,128 bytes, SHA-256 `5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62`. The selected original prefix `0x2ca20..0x2cc20` requests a directory-iterator entry and retains its pointer. It requests extension/path operations and compares a locally constructed `.json` path. The matching branch leaves the bounded slice; a later zero-state continuation remains a predecessor premise. This does not establish a complete extension filter or every accepted file.
+
+On that selected continuation, another opaque local request produces unclassified path storage. A comparison against a path constructed from compiled `action_schedule.json` retains its result across cleanup requests. Zero branches around the immediately following allocation; nonzero reaches the earlier inspected construction boundary. The source proves a local equality gate, without establishing a global basename exclusion, an ignored-file policy, the actual compared value or a successful parse. Storage reused by later requests is not proof of an unchanged semantic object. [Filesystem source and independent review](../../project/review/firmware-analysis/configured-inputs-2026-11-02/reviews/f460-source-review.txt) retain exact instructions/import relocations and those limits.
+
+## New F460 source argument reaches a file-open request
+
+The actual previously identified SceneRunner constructor calls local `0x10fe60` at `0x105760`, carrying its destination and supplied source argument. The new prefix `0x10fe60..0x110060` preserves those arguments under the stated AArch64/object/provider premises. It forms a path-related request and tests a returned status word, with the rejected branch outside the bounded slice; no exact file-type meaning or existence/success follows.
+
+Later, the supplied source's first word becomes the filename argument to the actual imported `basic_filebuf::open` request, with numeric mode 8 and a local file-buffer receiver. A zero returned word branches outside the slice; the selected nonzero continuation requests stream-state clearing. The original then constructs JSON reader/value objects and prepares arguments. **The retained range ends before any parse call or result.** It establishes a conditional source-argument-to-file-open request, not successful reading, parsed root publication, accepted JSON, a complete scene schema or an actual configured scene. [Input source report](../../project/review/firmware-analysis/configured-inputs-2026-11-02/packets/f460-input/REPORT.txt) and [independent review](../../project/review/firmware-analysis/configured-inputs-2026-11-02/reviews/f460-producer-review.txt) retain the exact proof and procedural history.
+
+The two F460 edges compose only under appropriate natural caller, valid objects, argument/value preservation, provider binding and normal-return premises. Owning-function/root admission in the filesystem slice remains unassigned; opaque helpers and register/stack reuse do not supply that missing identity. No genuine configured asset or runtime observation bridges these edges.
+
+## MyHOMEServer1 validation-order caution
+
+Existing MyHOMEServer1 evidence already maps its own startup/loader and retains local JSON guards. This pass adds no new MHS code range or natural configured path. A [policy qualification](../../project/review/firmware-analysis/configured-inputs-2026-11-02/mhs-policy-note.txt) notes that nonconst category lookup precedes later membership checks. Under ordinary JsonCpp premises, post-lookup membership alone cannot establish that the original input required that member. Likewise, one local numeric branch's lack of a name-presence check does not prove that names are optional throughout the parser.
+
+The earlier report already disclaimed a complete JSON Schema or all-category validation policy and made no required-field claim to correct. This is a caution for future tooling, not a newly demonstrated accepted input, defect or corrected product behavior. MHS Thumb layouts, F460 AArch64 layouts and F461 module settings remain separate. No synthetic scene or accepted-input fixture was substituted for unavailable data.
+
+## Provenance, checks and remaining work
+
+The filesystem report has a separately retained current version clarifying hexadecimal versus decimal stack offsets; canonical code/results/report remain unchanged. In the later input-prefix preparation, a wrong call-address precheck failed and orchestration continued to the already-authorized read before the promised authorization file was written. The actual sequence and missing pre-read record were preserved, with no backdating or invented failed script/report/hash. Canonical evidence was generated afterward under a limited post-read decision and independently checked. This procedural defect is disclosed; a clean preflight is not claimed.
+
+The [evidence capsule](../../project/review/firmware-analysis/configured-inputs-2026-11-02/README.md) separates asset metadata, inherited policy, fresh source, qualification stops, exact version roles, independent review, identity validation and actual repository checks. Original inputs/tools/full histories remain local. Earlier MyHOMEServer1/F454/MH202 execution ledgers remain unchanged; no firmware/helper/native/emulator/model/fixture/JSON/SQL/target process/service/network/bus/physical execution or old collector replay was added. No remote write, source-manifest edit, staging, commit or push occurred. Full source, Device, runtime and physical gates remain pending.
+
+The next decisive input is a genuine scene export or properly attributed generator asset. Further source work would need its own bounded qualification of actual parsing, root publication and natural caller/configuration correlation. The reviewed comparisons and local request gates are insufficient to publish a complete offline validator or guarantee deployed behavior.
+
+The current documentary version refines privacy wording to distinguish the whitelisted packaged scene-path selector from private leaf values. Exact first documents and export/index versions remain retained; no source claim, code or result changed.

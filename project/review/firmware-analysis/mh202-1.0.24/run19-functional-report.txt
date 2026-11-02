@@ -1,0 +1,66 @@
+# MH202 1.0.24 run19: WHO17 DIM6/7/8 direct slots, adjustment and publication
+
+## Result and scope
+
+Original `bt_taskmanager` has concrete WHO17 handlers for **128 indexed word slots and128 indexed byte slots**. Selected measure-predicate DIM6 reads a word; DIM7 reads a byte. Selected write-predicate DIM6 assigns a converted integer, DIM7 assigns a guarded0/1 byte, and DIM8 applies a guarded signed adjustment to a word, clamps it to0..32000 and emits a **DIM6** result. The numeric WHERE chooses the slot; the scenario-record lookup result is not used by these selected dimension paths.
+
+The common response formatter is original **`*#17*%d*%d*%d##`**. Eligible outputs request local publication helper0xc330 twice, selectors0 then1. The dispatcher subsequently returns local code2 regardless of those helper returns. Guard rejection uses local3; neither number is established here as wire ACK/KO. A DIM6 store precedes its upper-range rejection, unlike DIM7's guarded store. These are bounded original source facts, not a defect, valid raw input or physical/script-variable behavior finding.
+
+**Original/native execution and all new hooks are0.** This is static host reading/binutils plus nine finite converted-field/source ledgers. No target parser, interpreter, IPC/FIFO, system/service/network/device or physical operation runs. It does not equate these globals with script-local numeric records, separate event caches, scene-record fields or a public physical variable.
+
+## Reproduction and provenance
+
+`python3 -B work/mh202-firmware/research/2026-10-30/functional/run19/collect_evidence.py --check` reproduces17 outputs plus manifest,11 fresh spans,31 exact instruction words,2 original ELF files,1 safe response format,3 candidate provider definitions and9 host ledgers. `--check` writes nothing. Inputs are verified normal MH202 `/home/bticino/bin/bt_taskmanager`, `/home/bticino/lib/libcommon.so.0.0`, image accessor and immutable functional/run1 report. `input-hashes.json` records full byte identities; `original-spans.json` provides VAs/file offsets/raw hashes. Deterministic evidence and separate author report/method snapshots are pinned by manifests. No F454 firmware, VAs, layout or fixture is imported.
+
+## 1. Actual field/predicate and slot gates
+
+Dispatcher **0xa72c** extracts WHO, WHAT, WHERE and DIM through imported accessors and decimal `atoi`. Numeric WHERE is retained in r7. It also calls scene lookup0xb630 at0xa780 and saves its result r5. After WHO17 comparison0xa784, normal-frame and state-frame predicates are tried first. This batch follows their false continuations into **0xa98c**; it does not repeat WHAT1..4 or infer complete accepted raw grammar.
+
+The candidate same-build `libcommon` definitions clarify local object/kind namespace: **IsMeasureFrame0x249f8** compares object+0x1dec against4; **IsWriteFrame0x24a30** compares that field against8. `Extract_valori(int)0x24954` returns object+1430+130*index. Taskmanager's first direct NEEDED library is libcommon, followed by libopen; these support conditional ordinary same-build provider/layout, not a live loader/interposition or full process closure. The48-byte COSO parsed-object enums/layouts are not substituted here.
+
+On the measure path, **0xa99c..0xa9a4** requires unsigned32(WHERE-1)<=127. DIM6/7 are selected; other DIMs take local3. Writes first require **IsWriteFrame()!=0**, then **0xa9e4..0xa9f8** permit the selected branch when the known command-gate word is0 or numeric WHAT equals2. This is the actual local gate, not a newly established panic-reset mechanism. The allowed branch sets r1=0 at0xa9f0, then applies the same slot1..128 guard at0xaa04..0xaa0c. No scene-pointer r5 guard/access is present on these dimension routes; existing scene-record presence does not supply the indexed values here.
+
+## 2. Exact direct storage and measure results
+
+Original pool0xaba0 is global base **0x1b6ac**. Address arithmetic yields:
+
+| Selected storage | First slot | Address for numeric WHERE n | Size/stride |
+|---|---|---|---|
+| Word slots |0x1b928|0x1b928+4*(n-1)|128 words,4 bytes|
+| Byte slots |0x1bb28|0x1bb28+(n-1)|128 bytes,1 byte|
+
+The byte array begins exactly after the128-word region. Initial/runtime values, writers outside this branch and synchronization are not inferred from that arithmetic.
+
+For **measure DIM6**, **0xa9bc..0xa9c4** reads the indexed word into ip and goes through **0xab34**. Exact value minus1 suppresses formatting and returns local2 at0xab78. Other supplied word values format as signed decimal through the common result path; no query-side0..32000 clamp is performed in this selected read block.
+
+For **measure DIM7**, **0xa9c8..0xa9d0** loads an unsigned byte and jumps directly to0xab3c. It bypasses that minus1 test and does not normalize the byte in the selected read path. The host example raw byte2 therefore formats2; this does not assert such a value is naturally initialized or a public Boolean domain.
+
+## 3. DIM6 and DIM7 write/store ordering
+
+Both selected writes require the count word at parsed object **+0x1df4** positive. DIM6 explicitly supplies value index0 at0xaa38; DIM7 inherits the allowed-gate r1=0 without an intervening call before `Extract_valori` at0xaa78. Each calls `atoi` on the returned pointer. Successful coherent source fields and ordinary string/atoi behavior are premises, not native parser results.
+
+**DIM6:** converted r0 is written at **0xaa58** to base+4*WHERE+0x278, equal to the selected word slot. Only afterward does **0xaa5c** use the unsigned<=32000 condition from0xaa4c to reach response formatting. Otherwise it returns local3. The host boundary example writes32001, then takes local3 with no formatted publication. Negative converted words also fail that unsigned guard after the store, but this batch adds no malformed-input/impact matrix or actual frame acceptance claim. The bounded fact is store-before-guard ordering, not an observed defect or physical state effect.
+
+**DIM7:** **0xaa80..0xaa88** checks converted value unsigned<=1 **before** the byte store. Admitted0/1 is normalized to a byte at0xaa90..0xaa9c, then uses the common response route. Supplied value2 takes local3 and leaves the old byte unchanged. The original response integer ip is the admitted converted0/1, not a separate readback of arbitrary byte storage.
+
+## 4. DIM8 adjustment and resulting DIM6 output
+
+DIM8 requires count>1 at **0xaaac..0xaab0**. It extracts value0 as direction at0xaab4..0xaac0, then value1 as amount at0xaac4..0xaad4. The amount must be signed<=32000 and>=0; the direction must be unsigned<=1 (**0xaad8..0xaaf8**). These are separate signed/unsigned guards and local values, not physical direction names.
+
+At **0xab00..0xab18**, the old indexed word is read. Direction0 selects multiplier-1, direction1 selects+1, and `mla` computes old plus/minus amount. **0xab1c..0xab24** clamps signed results>=32000 to32000 and negative results to0, then stores the resulting word at0xab28. **0xab2c** changes the emitted DIM register to6 before formatting, so this branch answers with **DIM6**, not DIM8.
+
+The host adjustment examples deliberately constrain old word0..32000 and amount0..32000, avoiding signed overflow in their arithmetic. They demonstrate31990+20 ->32000 and5-20 ->0 under direction1/0. This does not establish the behavior/domain for arbitrary corrupted prior words, concurrent writes or a complete accepted payload grammar.
+
+## 5. Formatter, output selectors and local return
+
+At **0xab3c..0xab54**, `sprintf` receives original format literal **0x10262 `*#17*%d*%d*%d##`**, numeric WHERE r7, selected DIM r8 and integer value ip. It uses a local stack buffer; no parsed input object's raw text is copied as the response. The ordinary examples yield `*#17*1*6*123##`, `*#17*2*7*1##` and clamped DIM6 messages.
+
+The dispatcher requests **0xc330(selector0,text)** at0xab60, then **selector1** through0xab64..0xab98. Both immediate return values are ignored; normal control reaches **0xab78**, setting the dispatcher's own r0 to2. Local3 rejection at0xab70 and local0 for wrong WHO are separate control values. No actual original caller has been traced here to wire ACK/KO conversion, so none is assigned.
+
+The narrowly retained publication entry **0xc330..0xc378** selects a24-byte row from original table0x194e0 using the supplied selector; row+20 supplies a descriptor. The selected0/1 channels bypass its special4/6 connection-initialization route. Under a nonnegative existing descriptor, **0xc3b0..0xc3c0** requests imported **invio_msg_open(descriptor,text)**. That transport helper and connection/session/framing internals are opaque and unexamined. Failed/missing descriptors, delivery, actual subscriber roles, retry policy and publication ownership are not closed by these selected source calls. No interpreter numeric helper or new FIFO/IPC producer is called by the dimension-state blocks themselves.
+
+## Finite models, confidence and remaining joins
+
+`host-selected-slot-effect-ledgers.json` contains9 explicitly supplied converted-field cases: word/byte reads, admitted word/byte writes, one DIM6 store-then-reject boundary, DIM7 pre-store rejection, two clamped DIM8 adjustments and minus1 word-read suppression. These are host source/effect transcriptions, not raw frames or runtime/global/stdio/transport tests. Local2/3 values are not wire outcomes. All source/provider/storage/coherent-object/gate/valuecount and ordinary publication-call completion assumptions are explicit.
+
+Confidence is high in exact guards, array addresses, source indices, store/guard order, clamp arithmetic for the selected domain, response DIM/format and ignored publication returns. Actual configured/runtime array initialization, alias/concurrency, same-build provider loading, parser accepted grammar, output delivery, script/interpreter correspondence and physical meaning remain unknown. The separate WHO17 event-cache/trigger and interpreter-heap questions need their own actual joins; address/name similarity does not establish shared variables or synchronization. No exhaustive support or coverage claim is assigned.

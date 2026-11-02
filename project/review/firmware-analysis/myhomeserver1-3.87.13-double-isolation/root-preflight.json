@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "Root source/containment preflight only; no guest yet",
+  "observedAt": "2026-11-01T03:18:54.418598+00:00",
+  "pins": {
+    "isolate_double_v3.py": "1ef53f7e04a20cb43c37dfb1cae965bb119bcda167db9b372b58b02bf1cb4a15",
+    "REPORT.PLAN.v3.md": "bf9d23f03b1d2b8423652381d47894c61633a4245a20fc99d441199a55b83826",
+    "SOURCE_PREFLIGHT.json": "dcc9dffa77e22c8a2ca0ffd1ec5eaed52f6f730bef03d1a5519cf639ebcebad4",
+    "TOOL_PINS.json": "a413baf37e5dda914980653987c352a1672b777d1637ead66993f8cb2f081097"
+  },
+  "checks": [
+    "Read entire v2 source and exact v3 diff; freshzero24 caller storage, actual constructor tag/value/comments writes, SAME unchanged object readback",
+    "Independent exact original provider PT_LOAD/hash/symbol/BLX/ARMPLT/JUMP_SLOT/canary source matched verification packet",
+    "85 exact Thumb PCs/sizes, ARM4 redirects, Thumb2 return guard; excludes literal/TBB data and nonempty/error/type alternatives",
+    "RXcode/ROimage/canary, exact private initialized read/write bounds, unknown/IRQ/protected/invalid traps and time/instruction caps",
+    "No vendor process/OS/network or forced return/object fields; only verified standalone Unicorn analysis import with cache bypass",
+    "Static harness --check PASS and verification --check PASS, neither imports/runs guest",
+    "Failed-attempt traces remain nonzero if any original visits occur; no automatic retry; immutable versions/root snapshots retained"
+  ],
+  "limits": "Private finite candidate selfbinding, syntheticcanary, hardfloatCPU register setup; no fullJSON/map/assignment/parser/scene/runtime/physical conclusion"
+}

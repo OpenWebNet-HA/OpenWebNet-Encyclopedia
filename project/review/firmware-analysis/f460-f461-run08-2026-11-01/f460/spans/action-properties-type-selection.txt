@@ -1,0 +1,51 @@
+
+/home/bticino/bin/dedrifupdater:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000005a64 <.text+0x32a4>:
+    5a64:	f9400e95 	ldr	x21, [x20, #24]
+    5a68:	b5000bd5 	cbnz	x21, 5be0 <_ZN8PlatformC1Ei@plt+0x3158>
+    5a6c:	f9401a94 	ldr	x20, [x20, #48]
+    5a70:	b4001114 	cbz	x20, 5c90 <_ZN8PlatformC1Ei@plt+0x3208>
+    5a74:	f9400a80 	ldr	x0, [x20, #16]
+    5a78:	91346321 	add	x1, x25, #0xd18
+    5a7c:	97fff2b1 	bl	2540 <__errno_location@plt+0x10>
+    5a80:	35ffff60 	cbnz	w0, 5a6c <_ZN8PlatformC1Ei@plt+0x2fe4>
+    5a84:	f9402e9b 	ldr	x27, [x20, #88]
+    5a88:	52800013 	mov	w19, #0x0                   	// #0
+    5a8c:	b4fffedb 	cbz	x27, 5a64 <_ZN8PlatformC1Ei@plt+0x2fdc>
+    5a90:	d0000015 	adrp	x21, 7000 <_ZN8PlatformC1Ei@plt+0x4578>
+    5a94:	913482b5 	add	x21, x21, #0xd20
+    5a98:	d0000018 	adrp	x24, 7000 <_ZN8PlatformC1Ei@plt+0x4578>
+    5a9c:	9134e318 	add	x24, x24, #0xd38
+    5aa0:	f9400b60 	ldr	x0, [x27, #16]
+    5aa4:	aa1503e1 	mov	x1, x21
+    5aa8:	97fff2a6 	bl	2540 <__errno_location@plt+0x10>
+    5aac:	350006a0 	cbnz	w0, 5b80 <_ZN8PlatformC1Ei@plt+0x30f8>
+    5ab0:	f9400f60 	ldr	x0, [x27, #24]
+    5ab4:	f9402800 	ldr	x0, [x0, #80]
+    5ab8:	b4000640 	cbz	x0, 5b80 <_ZN8PlatformC1Ei@plt+0x30f8>
+    5abc:	aa1a03e1 	mov	x1, x26
+    5ac0:	97fff2a0 	bl	2540 <__errno_location@plt+0x10>
+    5ac4:	35000100 	cbnz	w0, 5ae4 <_ZN8PlatformC1Ei@plt+0x305c>
+    5ac8:	f94002c0 	ldr	x0, [x22]
+    5acc:	f9401800 	ldr	x0, [x0, #48]
+    5ad0:	b9400001 	ldr	w1, [x0]
+    5ad4:	35000081 	cbnz	w1, 5ae4 <_ZN8PlatformC1Ei@plt+0x305c>
+    5ad8:	52800021 	mov	w1, #0x1                   	// #1
+    5adc:	2a0103f3 	mov	w19, w1
+    5ae0:	b9000001 	str	w1, [x0]
+    5ae4:	f9400f60 	ldr	x0, [x27, #24]
+    5ae8:	aa1803e1 	mov	x1, x24
+    5aec:	f9402800 	ldr	x0, [x0, #80]
+    5af0:	97fff294 	bl	2540 <__errno_location@plt+0x10>
+    5af4:	35000100 	cbnz	w0, 5b14 <_ZN8PlatformC1Ei@plt+0x308c>
+    5af8:	f94002c0 	ldr	x0, [x22]
+    5afc:	f9401c00 	ldr	x0, [x0, #56]
+    5b00:	b9400001 	ldr	w1, [x0]
+    5b04:	35000081 	cbnz	w1, 5b14 <_ZN8PlatformC1Ei@plt+0x308c>
+    5b08:	52800041 	mov	w1, #0x2                   	// #2
+    5b0c:	2a0103f3 	mov	w19, w1
+    5b10:	b9000001 	str	w1, [x0]

@@ -1,0 +1,2279 @@
+[
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_bus_in",
+      "id_bus_out",
+      "id_key_object",
+      "max_interface"
+    ],
+    "declared_PK": [
+      "id_bus_in",
+      "id_bus_out",
+      "id_key_object"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "50d264478b2e671d015868349e5519db01b1520d9a31b2a896a7dc0983c09554",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 24,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 24,
+    "suite_digest": "8fdcf60a9ed4d325903b0af177ecab244bb0b81ef6df671d7af759b27cd54035",
+    "suite_only_keys": 15,
+    "suite_only_rows": 15,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 39,
+    "table": "AS_BUS_INTERFACE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_bus",
+      "id_item"
+    ],
+    "declared_PK": [
+      "id_bus",
+      "id_item"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "a69a47cba69087628d756d7b56e761b6ba81f4d00d668191b8d85e6242bf2d71",
+    "firmware_only_keys": 2,
+    "firmware_only_rows": 2,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 201,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 199,
+    "suite_digest": "be490de833d79993b5a059513ccf8fa0a89657748664b7dc51295208b8e47e5d",
+    "suite_only_keys": 300,
+    "suite_only_rows": 300,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 499,
+    "table": "AS_BUS_ITEM"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_bus",
+      "id_system"
+    ],
+    "declared_PK": [
+      "id_bus",
+      "id_system"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "829caf02f28fdac14101b0d983b4e4d8830ae30b10612375fbb1d800106e020c",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 44,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 44,
+    "suite_digest": "829caf02f28fdac14101b0d983b4e4d8830ae30b10612375fbb1d800106e020c",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 44,
+    "table": "AS_BUS_SYSTEM"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_connection",
+      "id_firmware"
+    ],
+    "declared_PK": [
+      "id_connection",
+      "id_firmware"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "7323c1df0bd9351c74097af6ad20b6a38601f8023c8758fe01aa56f66cba9ada",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 2,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 2,
+    "suite_digest": "f8862e72ec00f2853afcd2013611426161108e65d9b58d9242899055e27db78f",
+    "suite_only_keys": 239,
+    "suite_only_rows": 239,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 241,
+    "table": "AS_CONNECTION_FIRMWARE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_device_master",
+      "id_device_dependent"
+    ],
+    "declared_PK": [
+      "id_device_master",
+      "id_device_dependent"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 0,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 0,
+    "suite_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 0,
+    "table": "AS_DEPENDENT_DEVICES"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_device",
+      "id_picture"
+    ],
+    "declared_PK": [
+      "id_device"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "874caf52a466c80da8887f5dd16b610dc57abf4fcd9a8b115d12e0863c640e46",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 274,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 274,
+    "suite_digest": "362f85bf3c1b70f409fe1aff8b3292079fb088157e6047938f262c5572b90d8a",
+    "suite_only_keys": 160,
+    "suite_only_rows": 160,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 434,
+    "table": "AS_DEVICE_PICTURE"
+  },
+  {
+    "columns": [
+      "id_firmware",
+      "id_config_mode"
+    ],
+    "declared_PK": [],
+    "equal_row_multiset": false,
+    "firmware_digest": "b45eaa1d58dac221731d6f319bb29fb624f5c655e1310e2eee6852e7e0994830",
+    "firmware_only_rows": 17,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 314,
+    "suite_digest": "e3c2c50821adb443a93c2f4eacaa0441b9e7fb817d8a17be08fd9737aa099cb3",
+    "suite_only_rows": 243,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 540,
+    "table": "AS_FIRMWARE_CONFIG_MODE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_firmware",
+      "id_parameters",
+      "brand",
+      "line"
+    ],
+    "declared_PK": [
+      "id_firmware",
+      "id_parameters",
+      "brand",
+      "line"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "d8a293d140c062f4a08846abfe70681000122b017fe8b879116c32c85e5a7365",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 23,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 23,
+    "suite_digest": "488018375e9222dd56a191ea8d5a24f9196ad62546cd8eb49ccb8b654dde9c60",
+    "suite_only_keys": 532,
+    "suite_only_rows": 532,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 555,
+    "table": "AS_FIRMWARE_PARAMETERS"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_virgin_key_object",
+      "id_firmware",
+      "id_fw_virgin_object"
+    ],
+    "declared_PK": [
+      "id_fw_virgin_object"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "a9f6ef64c74deca3c941d9e0269fe02344113c0870b74edd7b60a666e64a21c1",
+    "firmware_only_keys": 6,
+    "firmware_only_rows": 6,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 58,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 52,
+    "suite_digest": "22ca3597c7c33a08067134b6801fcc71e13f7f757991a28a0a4ff7fa4ddd4074",
+    "suite_only_keys": 23,
+    "suite_only_rows": 23,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 75,
+    "table": "AS_FIRMWARE_VIRGIN_OBJECT"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_firmware",
+      "id_package"
+    ],
+    "declared_PK": [
+      "id_firmware",
+      "id_package"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 0,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 0,
+    "suite_digest": "e4a59f2d69b859f7a51ef5099d85f4329b7b2477ea02666c6c88700fbc8e4d94",
+    "suite_only_keys": 35,
+    "suite_only_rows": 35,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 35,
+    "table": "AS_FW_PACKAGE"
+  },
+  {
+    "columns": [
+      "id_conf_range",
+      "id_conf"
+    ],
+    "declared_PK": [],
+    "equal_row_multiset": false,
+    "firmware_digest": "68c1476f5ce7cc50cc9f5e376f1fe9b40628499cb77bc46ef8524c2b3ceef81a",
+    "firmware_only_rows": 4,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 266,
+    "suite_digest": "333353b217df98ebcb1b62b787c7b55433f62cca4921fb283248c551c6c810b6",
+    "suite_only_rows": 27,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 289,
+    "table": "AS_HIDDEN_KCONF"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id",
+      "id_key_object",
+      "id_icon",
+      "subtype",
+      "modifiable"
+    ],
+    "declared_PK": [
+      "id"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "ea3824eed71007414321153d0b9ccd63e35df43b3723f9469fefa3316721e4a7",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 53,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 53,
+    "suite_digest": "d205d0b9badd1df47e0b3a564db92816a61e985301c3e7de448544e4fb7905e5",
+    "suite_only_keys": 6,
+    "suite_only_rows": 6,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 59,
+    "table": "AS_ICON_KO"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_item",
+      "id_system",
+      "modobj",
+      "main"
+    ],
+    "declared_PK": [
+      "id_item",
+      "id_system",
+      "modobj"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "64784d54f4fe1067e377e90cabcc8530e67201c0d03c945c658e9ea583934d80",
+    "firmware_only_keys": 2,
+    "firmware_only_rows": 2,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 113,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 111,
+    "suite_digest": "16d52880ef32ac06cb64ad4789d68660ce51eb0bce169b352c789c6d0dcfe6fc",
+    "suite_only_keys": 112,
+    "suite_only_rows": 112,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 223,
+    "table": "AS_ITEM_SYSTEM"
+  },
+  {
+    "columns": [
+      "key_object_cmd",
+      "key_object_cmd_desc",
+      "key_object_dev",
+      "key_object_dev_desc"
+    ],
+    "declared_PK": [],
+    "equal_row_multiset": true,
+    "firmware_digest": "f8739d9db7c09a16a8b7d228d161831d0d69f1462d1452c2d271f318753d1da0",
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 21,
+    "suite_digest": "f8739d9db7c09a16a8b7d228d161831d0d69f1462d1452c2d271f318753d1da0",
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 21,
+    "table": "AS_KO_CMD_KO_DEV"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id",
+      "code",
+      "direction",
+      "order",
+      "id_package"
+    ],
+    "declared_PK": [
+      "id"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "7b19cf544739898cdb6ea19bdda71a52c4927bc22f8662e75eea0d0b8c89f877",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 148,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 148,
+    "suite_digest": "7b19cf544739898cdb6ea19bdda71a52c4927bc22f8662e75eea0d0b8c89f877",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 148,
+    "table": "AS_LANGUAGE_PACKAGE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_key_object",
+      "id_collection",
+      "max_device"
+    ],
+    "declared_PK": [
+      "id_key_object",
+      "id_collection"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "e3c63c264029cf7ff407b3465f073f5d41c1dcf641d17deecd6e71ee8ea2509c",
+    "firmware_only_keys": 11,
+    "firmware_only_rows": 11,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 1151,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 1140,
+    "suite_digest": "01f77e39ca34b86bf444f5325b008bdddaa2e2d0dfcf5cad9f8fd7d1008bba45",
+    "suite_only_keys": 212,
+    "suite_only_rows": 212,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 1352,
+    "table": "AS_OBJECT_COLLECTION"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_object_firmware",
+      "id_firmware",
+      "id_key_object"
+    ],
+    "declared_PK": [
+      "id_object_firmware"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "36fab0f33ad265d7b50820d87ec542d7d190b17d29851f94f7f53cfe6590aea5",
+    "firmware_only_keys": 54,
+    "firmware_only_rows": 54,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 470,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 416,
+    "suite_digest": "369b34ea660743eb1b28991033b877c1e481d19e80150fbac3182d5a9117b959",
+    "suite_only_keys": 411,
+    "suite_only_rows": 411,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 827,
+    "table": "AS_OBJECT_FIRMWARE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_function",
+      "id_object"
+    ],
+    "declared_PK": [
+      "id_function",
+      "id_object"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "dca4a86ab49e548eacffcd8cf1873790e05db9fd5805c99224fb537df1855419",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 4,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 4,
+    "suite_digest": "dca4a86ab49e548eacffcd8cf1873790e05db9fd5805c99224fb537df1855419",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 4,
+    "table": "AS_OBJECT_FUNCTION"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_key_object",
+      "id_system"
+    ],
+    "declared_PK": [
+      "id_key_object",
+      "id_system"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "06831dedf92586ca3e80be634803a579836acd907dcb8241180e255b980a9fcc",
+    "firmware_only_keys": 1,
+    "firmware_only_rows": 1,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 179,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 178,
+    "suite_digest": "0853c23e88570d89e7094b2ac7a59df38119e63a2daef13d6903f4cc921854d2",
+    "suite_only_keys": 73,
+    "suite_only_rows": 73,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 251,
+    "table": "AS_OBJECT_SYSTEM"
+  },
+  {
+    "columns": [
+      "id_virgin_key_object",
+      "id_key_object"
+    ],
+    "declared_PK": [],
+    "equal_row_multiset": false,
+    "firmware_digest": "666e1351b22ca3dc34b5256451d91325f23a9f1693b7beef50e67d4c750f50d7",
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 87,
+    "suite_digest": "2318de9f6d07056f8264b384bbf8b2b826f3a944aba3c2be22fe18cca4914439",
+    "suite_only_rows": 15,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 102,
+    "table": "AS_OBJECT_VIRGIN_OBJECT"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_unicode_set",
+      "id_unicode_range"
+    ],
+    "declared_PK": [
+      "id_unicode_set",
+      "id_unicode_range"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "c25977e4e7a846abea72bcc4c43833c3d5761530deeb71cdbe1ef9694fec26d6",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 4534,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 4534,
+    "suite_digest": "c25977e4e7a846abea72bcc4c43833c3d5761530deeb71cdbe1ef9694fec26d6",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 4534,
+    "table": "AS_SET_RANGE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_slot",
+      "id_condition"
+    ],
+    "declared_PK": [
+      "id_slot",
+      "id_condition"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "ecf74acddaa0fcfef27810f92b85c9516aac4716082b844b3d98b85adb279bee",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 912,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 912,
+    "suite_digest": "f90aed70040944191697b30e2a71b8feedad929b4a1faa25c5ef3b432616dee3",
+    "suite_only_keys": 88,
+    "suite_only_rows": 88,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 1000,
+    "table": "AS_SLOT_CONDITION"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id",
+      "item_conf_symbol",
+      "ko_conf_sysmbol",
+      "key_system",
+      "slot",
+      "descr"
+    ],
+    "declared_PK": [
+      "id"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "a965bceb67462154a78e22a8ee976444ead5adc8ebb82468fdaf9e98bf7fa4e3",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 66,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 66,
+    "suite_digest": "a965bceb67462154a78e22a8ee976444ead5adc8ebb82468fdaf9e98bf7fa4e3",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 66,
+    "table": "CONF_SYMBOL_REF"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "param",
+      "value"
+    ],
+    "declared_PK": [
+      "param",
+      "value"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "025ec55c44b857dd84d4f00814a23a355f4d9328effa6973e5e55bd68b786e1b",
+    "firmware_only_keys": 2,
+    "firmware_only_rows": 2,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 7,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 5,
+    "suite_digest": "ba69bc43bcfcad779c264c0dbfe8e6c502b6e3f8ac7ce5e64c7b7a5194030308",
+    "suite_only_keys": 2,
+    "suite_only_rows": 2,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 7,
+    "table": "DB_INFO"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_aux_subtype",
+      "descr"
+    ],
+    "declared_PK": [
+      "id_aux_subtype"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "452bf953f106b7a8ef956bfea01650041a4bc2362f81cd6fbf68453486e7654b",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 10,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 10,
+    "suite_digest": "452bf953f106b7a8ef956bfea01650041a4bc2362f81cd6fbf68453486e7654b",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 10,
+    "table": "EN_AUX_SUBTYPE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_box_type",
+      "box_type_descr",
+      "default_value"
+    ],
+    "declared_PK": [
+      "id_box_type"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "f2007cb46428e09b452c75acb5ea19efcdf4d886f0cfdfc00fd50b2266249d8c",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 13,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 13,
+    "suite_digest": "f2007cb46428e09b452c75acb5ea19efcdf4d886f0cfdfc00fd50b2266249d8c",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 13,
+    "table": "EN_BOX_TYPE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_brand",
+      "brand_name",
+      "brand_modobj"
+    ],
+    "declared_PK": [
+      "id_brand"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "ae5cbd5e28993f9a91593e3ccc2387cc0e7cf0706f62d4cee56b46002b5d5172",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 7,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 7,
+    "suite_digest": "ae5cbd5e28993f9a91593e3ccc2387cc0e7cf0706f62d4cee56b46002b5d5172",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 7,
+    "table": "EN_BRAND"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_build",
+      "firmware_b",
+      "localization_level",
+      "id_firmware"
+    ],
+    "declared_PK": [
+      "id_build"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "957bfb1ade5afcc8d7ea133daeb8e566b67364d89b618c405f24b0d2bd8c85bf",
+    "firmware_only_keys": 7,
+    "firmware_only_rows": 7,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 104,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 97,
+    "suite_digest": "10b381907dc654f9e5931b2dacaf5fe617eac38adea0ef02a615a8d5ee9838b7",
+    "suite_only_keys": 211,
+    "suite_only_rows": 211,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 308,
+    "table": "EN_BUILDS"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_bus",
+      "descr",
+      "id_bus_type",
+      "level_descr",
+      "level"
+    ],
+    "declared_PK": [
+      "id_bus"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "2e7153660148f7af63278f0c0708b411bf9c09a078582aff1c14307b6fdbe9b9",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 13,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 13,
+    "suite_digest": "2e7153660148f7af63278f0c0708b411bf9c09a078582aff1c14307b6fdbe9b9",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 13,
+    "table": "EN_BUS"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_bus_type",
+      "desc_bus_type"
+    ],
+    "declared_PK": [
+      "id_bus_type"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "76c42844fcd9636d4ee9fa04a4170603feb43b404aa390edc0723e69dbb1a1ad",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 7,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 7,
+    "suite_digest": "76c42844fcd9636d4ee9fa04a4170603feb43b404aa390edc0723e69dbb1a1ad",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 7,
+    "table": "EN_BUS_TYPE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "char",
+      "value"
+    ],
+    "declared_PK": [
+      "char",
+      "value"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "649d1686dfc3f32f50253afc44aa17af31a4ecc8a5573de57f0e13c4fb5026f6",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 192,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 192,
+    "suite_digest": "649d1686dfc3f32f50253afc44aa17af31a4ecc8a5573de57f0e13c4fb5026f6",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 192,
+    "table": "EN_CHAR_ALLOW"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_collection",
+      "id_system",
+      "id_collection_type",
+      "xml_key_conf",
+      "xml_key_value",
+      "collection_desc"
+    ],
+    "declared_PK": [
+      "id_collection"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "4f91dee922379cb601b9599adcc58e8ca522b53ded8594e46e821b1066327374",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 177,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 177,
+    "suite_digest": "4f91dee922379cb601b9599adcc58e8ca522b53ded8594e46e821b1066327374",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 177,
+    "table": "EN_COLLECTION"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_collection_type",
+      "xml_key_collection",
+      "descr"
+    ],
+    "declared_PK": [
+      "id_collection_type"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "5d1c8f5e2bc9906c5813bfc0a5902ea05aed111f8f9d480bec1da254bb1cfb78",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 22,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 22,
+    "suite_digest": "5d1c8f5e2bc9906c5813bfc0a5902ea05aed111f8f9d480bec1da254bb1cfb78",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 22,
+    "table": "EN_COLLECTION_TYPE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_condition",
+      "condition",
+      "id_conv_rule"
+    ],
+    "declared_PK": [
+      "id_condition"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "b13529a7f9a129befa4046bf68b9ea285a9c56f0f91a4411001ac50746cfb8a8",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 460,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 460,
+    "suite_digest": "6ad121775a2f3b61784ed00674cd32d5cd853d0b138916ade15df7636afaeddd",
+    "suite_only_keys": 28,
+    "suite_only_rows": 28,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 488,
+    "table": "EN_CONDITION"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_conf",
+      "id_key_object",
+      "id_firmware",
+      "conf_name",
+      "id_conf_type",
+      "descr",
+      "descr_ext",
+      "hidden",
+      "idx",
+      "id_conf_data_type",
+      "progressive",
+      "visible",
+      "read_only"
+    ],
+    "declared_PK": [
+      "id_conf"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "815961752cd1387e55564c489827d78cf7e787dc847a34b7f57c7ad8185bf263",
+    "firmware_only_keys": 103,
+    "firmware_only_rows": 171,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 1760,
+    "same_PK_changed_rows": 68,
+    "same_PK_equal_rows": 1589,
+    "suite_digest": "722d82036e4f42f891e620901aec18039c787f44f2155323b74aaba41056c6b8",
+    "suite_only_keys": 1226,
+    "suite_only_rows": 1294,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 2883,
+    "table": "EN_CONF"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_config_mode",
+      "descr",
+      "config_mode"
+    ],
+    "declared_PK": [
+      "id_config_mode"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "b977c61091c4c4b806735ce3525e3f2cdf6cab618ae24811e1f840c965a759fe",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 4,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 4,
+    "suite_digest": "b977c61091c4c4b806735ce3525e3f2cdf6cab618ae24811e1f840c965a759fe",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 4,
+    "table": "EN_CONFIG_MODE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_conf_data_type",
+      "data_type"
+    ],
+    "declared_PK": [
+      "id_conf_data_type"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "fb4b3bdad603e2581a3b9557cfe6bb764c2e714ca5dcb44ca500af37a3d65cca",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 6,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 6,
+    "suite_digest": "fb4b3bdad603e2581a3b9557cfe6bb764c2e714ca5dcb44ca500af37a3d65cca",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 6,
+    "table": "EN_CONF_DATA_TYPE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_conf_range",
+      "value",
+      "name",
+      "descr_ext",
+      "default",
+      "progressive",
+      "id_conf",
+      "digit",
+      "step",
+      "min_value",
+      "max_value"
+    ],
+    "declared_PK": [
+      "id_conf_range"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "d686e00ee88d3344bb9fef9d4ffc43fab97a5b6da7b4855d355575772f3b957d",
+    "firmware_only_keys": 355,
+    "firmware_only_rows": 355,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 11412,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 11057,
+    "suite_digest": "99f87b3c20ac530893b3526b0465c55f76b36a951301f2116b2611bc376013f4",
+    "suite_only_keys": 3289,
+    "suite_only_rows": 3289,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 14346,
+    "table": "EN_CONF_RANGE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_conf_type",
+      "descr"
+    ],
+    "declared_PK": [
+      "id_conf_type"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "5e98f177ac366a40d8c9b69f22f6bb64cf81a9d0de39d7262411e0836186779e",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 4,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 4,
+    "suite_digest": "5e98f177ac366a40d8c9b69f22f6bb64cf81a9d0de39d7262411e0836186779e",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 4,
+    "table": "EN_CONF_TYPE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_connection",
+      "modality_connection"
+    ],
+    "declared_PK": [
+      "id_connection"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "32fea347bf813d409f3500d952efd6fc533d2511d9e7d80ff4cbe2b7bada1817",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 4,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 4,
+    "suite_digest": "32fea347bf813d409f3500d952efd6fc533d2511d9e7d80ff4cbe2b7bada1817",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 4,
+    "table": "EN_CONNECTION"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_conv_rule",
+      "item_conf",
+      "item_conf_value",
+      "object_conf",
+      "object_conf_value",
+      "always_true",
+      "jump_id_conv_rule",
+      "id"
+    ],
+    "declared_PK": [
+      "id"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "78b7c95d596072648cb1bf248b626dd213c474df30f70b66ee1193334108d1c4",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 7899,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 7899,
+    "suite_digest": "78b7c95d596072648cb1bf248b626dd213c474df30f70b66ee1193334108d1c4",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 7899,
+    "table": "EN_CONV_RULE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_device",
+      "code",
+      "name",
+      "id_brand",
+      "id_line",
+      "visible",
+      "id_item",
+      "visibility_type",
+      "dependent",
+      "is_gateway",
+      "descr"
+    ],
+    "declared_PK": [
+      "id_device"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "6803c691de21c9a029e78bda310d3511a153dd52f037dcf931cf0195cf971e8b",
+    "firmware_only_keys": 1,
+    "firmware_only_rows": 1,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 331,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 330,
+    "suite_digest": "d4c4780a88608a07c31fd3456cfd35f23d2f6e40ab3e9600ede4ed579ff03334",
+    "suite_only_keys": 211,
+    "suite_only_rows": 211,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 541,
+    "table": "EN_DEVICE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_extra",
+      "filename",
+      "version",
+      "release",
+      "build",
+      "id_package"
+    ],
+    "declared_PK": [
+      "id_extra"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "40d597d1ed1d864da786b72bebfdabc96d68375ff04a394f733d2ebe798155bb",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 73,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 73,
+    "suite_digest": "40d597d1ed1d864da786b72bebfdabc96d68375ff04a394f733d2ebe798155bb",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 73,
+    "table": "EN_FILE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_filter",
+      "id_object_firmware",
+      "note",
+      "whole_range",
+      "id_conf"
+    ],
+    "declared_PK": [
+      "id_filter",
+      "id_object_firmware"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "46ae53c2b9f49e73615ea344e6421e7535734eab0ce5a3e2033306ab7cd224a9",
+    "firmware_only_keys": 112,
+    "firmware_only_rows": 112,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 1649,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 1537,
+    "suite_digest": "53d0189f5d56b5d377056f060da7e105ec73f21e5e6c78a910fd75279f5c65f9",
+    "suite_only_keys": 372,
+    "suite_only_rows": 372,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 1909,
+    "table": "EN_FILTER"
+  },
+  {
+    "columns": [
+      "id_filter",
+      "range",
+      "note"
+    ],
+    "declared_PK": [],
+    "equal_row_multiset": false,
+    "firmware_digest": "31012b13ade8352557e623c11473d11b48c8bd4379d5237084947bad458942d4",
+    "firmware_only_rows": 150,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 4848,
+    "suite_digest": "5f32b6c5c1b9fe5f0def1d18ff0a4f52689189257647e73ec33c66a5007a3311",
+    "suite_only_rows": 1454,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 6152,
+    "table": "EN_FILTER_RANGE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_firmware",
+      "id_item",
+      "firmware_V",
+      "firmware_R",
+      "slots",
+      "id_status",
+      "FW_default"
+    ],
+    "declared_PK": [
+      "id_firmware"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "28e1d985194058408a5bfd7b09c085329e5b56c80880b82977de16b21cd204d0",
+    "firmware_only_keys": 8,
+    "firmware_only_rows": 8,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 122,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 114,
+    "suite_digest": "489f3edbcdede74bb2c9fc5964d405d4c5fef314e0f73848ea2bea5a4cc1e89e",
+    "suite_only_keys": 197,
+    "suite_only_rows": 197,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 311,
+    "table": "EN_FIRMWARE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_floor",
+      "floor",
+      "floor_default"
+    ],
+    "declared_PK": [
+      "id_floor"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "33ff6e6bad6dc8fd2a86d3d6a34df04325c74367a6d0b9a23e9dd47662336dac",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 33,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 33,
+    "suite_digest": "33ff6e6bad6dc8fd2a86d3d6a34df04325c74367a6d0b9a23e9dd47662336dac",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 33,
+    "table": "EN_FLOOR_TYPE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_icon",
+      "descr",
+      "icon_file"
+    ],
+    "declared_PK": [
+      "id_icon"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "8ce9c1363e9a6bedf57988b0971272c50592994394c38b716eaaee49ec6d7c46",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 22,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 22,
+    "suite_digest": "e748663ad073a7ebe4b214b84dda0b18e99117c91f9603ec4f29df21fcb67868",
+    "suite_only_keys": 2,
+    "suite_only_rows": 2,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 24,
+    "table": "EN_ICON"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_item",
+      "descr",
+      "id_family"
+    ],
+    "declared_PK": [
+      "id_item"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "021f7c9f3316d7782d86e5327cd16873e14468c79ba9cba336b00113d4695234",
+    "firmware_only_keys": 1,
+    "firmware_only_rows": 1,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 105,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 104,
+    "suite_digest": "ead77a671f36ed631770e8886da96da4000f250a331e9ee601b59d27b1426f37",
+    "suite_only_keys": 106,
+    "suite_only_rows": 106,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 210,
+    "table": "EN_ITEM"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_key_object",
+      "descr",
+      "slots",
+      "visible",
+      "id_family",
+      "key_object"
+    ],
+    "declared_PK": [
+      "id_key_object"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "b7b92af0d3fb86e4b70099216ccad3bc31e4c92cb4160200a51d0603cad62767",
+    "firmware_only_keys": 1,
+    "firmware_only_rows": 1,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 95,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 94,
+    "suite_digest": "9b261e642531468a69a6ed06034e4b085725b9474a726e56c05b56a887291147",
+    "suite_only_keys": 64,
+    "suite_only_rows": 64,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 158,
+    "table": "EN_KEY_OBJECT"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id",
+      "descr"
+    ],
+    "declared_PK": [
+      "id"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "1602835bf11c9ace201b0202f18cf5210e8f192f96c5aad89bf8b6ecf39a20ed",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 310,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 310,
+    "suite_digest": "1602835bf11c9ace201b0202f18cf5210e8f192f96c5aad89bf8b6ecf39a20ed",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 310,
+    "table": "EN_LABELS"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "code",
+      "name",
+      "defPackageL1",
+      "defPackageL2"
+    ],
+    "declared_PK": [
+      "code"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "9581d4f15dab404abae287d71af5f029e7921fac76983c5692c7b8a5968a9b95",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 35,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 35,
+    "suite_digest": "9581d4f15dab404abae287d71af5f029e7921fac76983c5692c7b8a5968a9b95",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 35,
+    "table": "EN_LANGUAGE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_line",
+      "line_name",
+      "line_modobj"
+    ],
+    "declared_PK": [
+      "id_line"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "ea5d144d763274f4a211797e24c89bde817143417d9ab89457786cb2f06e148f",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 19,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 19,
+    "suite_digest": "ea5d144d763274f4a211797e24c89bde817143417d9ab89457786cb2f06e148f",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 19,
+    "table": "EN_LINE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_family",
+      "family_name",
+      "descr",
+      "progressive"
+    ],
+    "declared_PK": [
+      "id_family"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "18e95205cac5eb5c837c4da01a90fc7f292a4f3d0a11522fb4bdf40d77f6d57a",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 33,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 33,
+    "suite_digest": "18e95205cac5eb5c837c4da01a90fc7f292a4f3d0a11522fb4bdf40d77f6d57a",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 33,
+    "table": "EN_OBJECT_ITEM_FAMILY"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_package",
+      "name",
+      "GL",
+      "version",
+      "release",
+      "build",
+      "id_unicode_set"
+    ],
+    "declared_PK": [
+      "id_package"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "0c691cbb987eac33c23765fcb656be9d9b907fb8d38a661e10c880e6ca1ed2a6",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 50,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 50,
+    "suite_digest": "0c691cbb987eac33c23765fcb656be9d9b907fb8d38a661e10c880e6ca1ed2a6",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 50,
+    "table": "EN_PACKAGE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_parameters",
+      "path",
+      "type"
+    ],
+    "declared_PK": [
+      "id_parameters"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "e1fce3a58c43e4d0b4f40e2380aa64102745cba5fffe541d4f3de9d7e346f97f",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 23,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 23,
+    "suite_digest": "9caa250941d1e4dfb4dd9d8847ae24edf8fe7abb4de4b69fcf45d7ef6e1236af",
+    "suite_only_keys": 514,
+    "suite_only_rows": 514,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 537,
+    "table": "EN_PARAMETERS"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_parameters_type",
+      "descr"
+    ],
+    "declared_PK": [
+      "id_parameters_type"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "e412dd5d9831da3e38ce2492166b4bb69268d269b9d9675ba02b6958353c4d64",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 8,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 8,
+    "suite_digest": "e412dd5d9831da3e38ce2492166b4bb69268d269b9d9675ba02b6958353c4d64",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 8,
+    "table": "EN_PARAMETERS_TYPE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_en_phy_to_adv_trans",
+      "id_firmware",
+      "trans_data",
+      "description"
+    ],
+    "declared_PK": [
+      "id_en_phy_to_adv_trans"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "78d963e92a0a5ab00e8437cdcccd2114adc71cbefd2cc857400a993c8edb760d",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 3,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 3,
+    "suite_digest": "78d963e92a0a5ab00e8437cdcccd2114adc71cbefd2cc857400a993c8edb760d",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 3,
+    "table": "EN_PHY_TO_ADV_TRANS"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_picture",
+      "picture_file",
+      "descr"
+    ],
+    "declared_PK": [
+      "id_picture"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "f7c5d74d33ef2d45fc419bfa2e5325466f49b12b71dc3e43d756ead9eae26579",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 9,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 9,
+    "suite_digest": "f10e6878fb2e28c7afd32c0a98f25f87cf9e215b265bce8442043c11e4107def",
+    "suite_only_keys": 17,
+    "suite_only_rows": 17,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 26,
+    "table": "EN_PICTURE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_room_type",
+      "room_type_descr",
+      "default_value"
+    ],
+    "declared_PK": [
+      "id_room_type"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "ae25ff26c83f722f2949164337bf75da51467b9879110376fac30dbb0dfd1b2b",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 26,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 26,
+    "suite_digest": "ae25ff26c83f722f2949164337bf75da51467b9879110376fac30dbb0dfd1b2b",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 26,
+    "table": "EN_ROOM_TYPE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_slot",
+      "first_slot",
+      "fixed_ko",
+      "id_object_firmware"
+    ],
+    "declared_PK": [
+      "id_slot"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "6e9247e9c0dec7a6bd7537b209a5b09fb362b5513dff7cad35ffcd2238c558c8",
+    "firmware_only_keys": 103,
+    "firmware_only_rows": 103,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 1153,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 1050,
+    "suite_digest": "841714dfbc84dbe9e370dfa38530dfdcf2540eac920a0cf69932e93090ac7473",
+    "suite_only_keys": 675,
+    "suite_only_rows": 675,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 1725,
+    "table": "EN_SLOTS"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_slot_ko_virgin",
+      "id_fw_virgin",
+      "slots"
+    ],
+    "declared_PK": [
+      "id_slot_ko_virgin"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "d39a2a9bbd19495986bf00320e2105feb1085d252019ba251b0b1f8845cec9c5",
+    "firmware_only_keys": 14,
+    "firmware_only_rows": 14,
+    "firmware_row_multiset_subset_of_suite": false,
+    "firmware_rows": 138,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 124,
+    "suite_digest": "a39ffc3105af3ece1fe17de50776ff1cccee8c58e5800508b91285ce2d70dcad",
+    "suite_only_keys": 45,
+    "suite_only_rows": 45,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 169,
+    "table": "EN_SLOT_KO_VIRGIN"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_function",
+      "function",
+      "descr"
+    ],
+    "declared_PK": [
+      "id_function"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "619a09390bedac417ff3d4634181803c2a107a8dd5f779682c7266455c82e79f",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 2,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 2,
+    "suite_digest": "619a09390bedac417ff3d4634181803c2a107a8dd5f779682c7266455c82e79f",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 2,
+    "table": "EN_SPECIAL_FUNCTION"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id",
+      "name",
+      "description"
+    ],
+    "declared_PK": [
+      "id"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "17204c3a2f03525c2b0d2a66c048fd2eb0fda1183476e819e304c0a782e3c396",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 7,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 7,
+    "suite_digest": "17204c3a2f03525c2b0d2a66c048fd2eb0fda1183476e819e304c0a782e3c396",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 7,
+    "table": "EN_STATUS"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "param",
+      "value"
+    ],
+    "declared_PK": [
+      "param"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "24f97aacc45111399c5ee99247c61e4b310ccf12772f271959327c28c08b046d",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 3,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 3,
+    "suite_digest": "24f97aacc45111399c5ee99247c61e4b310ccf12772f271959327c28c08b046d",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 3,
+    "table": "EN_SW_INIT"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_system",
+      "name",
+      "descr",
+      "xml_key_system",
+      "sys_modobj"
+    ],
+    "declared_PK": [
+      "id_system"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "7a26903a34e41ec765f20653a75d3ac7b88b9d06d94c1a1603ea3e5a3a91c691",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 30,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 30,
+    "suite_digest": "7a26903a34e41ec765f20653a75d3ac7b88b9d06d94c1a1603ea3e5a3a91c691",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 30,
+    "table": "EN_SYSTEM"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_unicode_range",
+      "Min",
+      "Max"
+    ],
+    "declared_PK": [
+      "id_unicode_range"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "aebed15613cf5fef2608b0084fbecafd36ca0f9a016bd5b27e0d486f5841beff",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 4531,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 4531,
+    "suite_digest": "aebed15613cf5fef2608b0084fbecafd36ca0f9a016bd5b27e0d486f5841beff",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 4531,
+    "table": "EN_UNICODE_RANGE"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_unicode_set",
+      "notes"
+    ],
+    "declared_PK": [
+      "id_unicode_set"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "5581cb52a680355d83afd808cd71e0ffcbcef7ae2e279d01c70ee1179a34f91d",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 5,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 5,
+    "suite_digest": "5581cb52a680355d83afd808cd71e0ffcbcef7ae2e279d01c70ee1179a34f91d",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 5,
+    "table": "EN_UNICODE_SET"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_virgin_key_object",
+      "descr",
+      "virgin_key_object"
+    ],
+    "declared_PK": [
+      "id_virgin_key_object"
+    ],
+    "equal_row_multiset": false,
+    "firmware_digest": "2a8579e765d40d3b565aa5738ffb1317e0eeb94bf4e860f041ee6878cc34481c",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 14,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 14,
+    "suite_digest": "4e4552b60e1021eaeb3186c4fbaf56cd02b1cfb6665389a4eb9efaabbcb096aa",
+    "suite_only_keys": 4,
+    "suite_only_rows": 4,
+    "suite_row_multiset_subset_of_firmware": false,
+    "suite_rows": 18,
+    "table": "EN_VIRGIN_OBJECT"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "key_object",
+      "ko_descr",
+      "id_bus_type",
+      "bus_type_descr",
+      "id_system",
+      "system_descr",
+      "collection"
+    ],
+    "declared_PK": [
+      "key_object",
+      "id_bus_type",
+      "id_system",
+      "collection"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "732f3dd707a55703ed4fb0338b294a9d96962bf1bfa50745e68416d5696dcb72",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 16,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 16,
+    "suite_digest": "732f3dd707a55703ed4fb0338b294a9d96962bf1bfa50745e68416d5696dcb72",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 16,
+    "table": "MACRO_TASKS"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_group",
+      "id_apartment",
+      "id_bus",
+      "id_system",
+      "descr",
+      "group_number",
+      "is_light_zone",
+      "color"
+    ],
+    "declared_PK": [
+      "id_group",
+      "id_apartment",
+      "id_bus",
+      "id_system"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "d511218f31864a028a800c29d047f4102eb26b60acbb55fa5d3c945f29613884",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 256,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 256,
+    "suite_digest": "d511218f31864a028a800c29d047f4102eb26b60acbb55fa5d3c945f29613884",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 256,
+    "table": "RIF_ANA_GROUP"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 1,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 1,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_collection",
+      "collection_type",
+      "key_conf_collection",
+      "key_value_collection",
+      "descr",
+      "id_apartment",
+      "id_bus",
+      "id_system",
+      "progressive"
+    ],
+    "declared_PK": [
+      "id_collection",
+      "id_apartment",
+      "id_bus",
+      "id_system"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "67a41f04586c2f4fd439b751369d2fcf334f6a8a9eeddca8d9fcabb66b3be9b0",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 189,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 189,
+    "suite_digest": "67a41f04586c2f4fd439b751369d2fcf334f6a8a9eeddca8d9fcabb66b3be9b0",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 189,
+    "table": "RIF_MH_COLLECTION_OBJECTS"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id_object",
+      "key_object",
+      "descr",
+      "id_apartment",
+      "id_bus",
+      "id_system",
+      "id_collection",
+      "progressive",
+      "esistenza",
+      "id_group",
+      "SysAddress"
+    ],
+    "declared_PK": [
+      "id_object",
+      "id_apartment",
+      "id_bus",
+      "id_system",
+      "id_collection"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "7b7109ce48cd8c3e8ec1733cfe7f97784cba83ba028aa24dccd0c164a00dc8d7",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 2001,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 2001,
+    "suite_digest": "7b7109ce48cd8c3e8ec1733cfe7f97784cba83ba028aa24dccd0c164a00dc8d7",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 2001,
+    "table": "RIF_MH_OBJECT"
+  },
+  {
+    "PK_audit": {
+      "firmware_NULL_key_rows": 0,
+      "firmware_duplicate_groups": 0,
+      "suite_NULL_key_rows": 0,
+      "suite_duplicate_groups": 0
+    },
+    "columns": [
+      "id"
+    ],
+    "declared_PK": [
+      "id"
+    ],
+    "equal_row_multiset": true,
+    "firmware_digest": "202e8db084b3ea58569d4b5be786da36ff92bda1205bf21f0475cce98930d3d2",
+    "firmware_only_keys": 0,
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 2000,
+    "same_PK_changed_rows": 0,
+    "same_PK_equal_rows": 2000,
+    "suite_digest": "202e8db084b3ea58569d4b5be786da36ff92bda1205bf21f0475cce98930d3d2",
+    "suite_only_keys": 0,
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 2000,
+    "table": "TMP_ID"
+  },
+  {
+    "columns": [
+      "name",
+      "seq"
+    ],
+    "declared_PK": [],
+    "equal_row_multiset": true,
+    "firmware_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "firmware_only_rows": 0,
+    "firmware_row_multiset_subset_of_suite": true,
+    "firmware_rows": 0,
+    "suite_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suite_only_rows": 0,
+    "suite_row_multiset_subset_of_firmware": true,
+    "suite_rows": 0,
+    "table": "sqlite_sequence"
+  }
+]

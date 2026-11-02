@@ -1,0 +1,126 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000cd5c4:
+   cd5c4:	4a44      	ldr	r2, [pc, #272]	@ (cd6d8)
+   cd5c6:	4b45      	ldr	r3, [pc, #276]	@ (cd6dc)
+   cd5c8:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   cd5cc:	b089      	sub	sp, #36	@ 0x24
+   cd5ce:	447a      	add	r2, pc
+   cd5d0:	9001      	str	r0, [sp, #4]
+   cd5d2:	58d3      	ldr	r3, [r2, r3]
+   cd5d4:	4c42      	ldr	r4, [pc, #264]	@ (cd6e0)
+   cd5d6:	681b      	ldr	r3, [r3, #0]
+   cd5d8:	9307      	str	r3, [sp, #28]
+   cd5da:	f04f 0300 	mov.w	r3, #0
+   cd5de:	6843      	ldr	r3, [r0, #4]
+   cd5e0:	447c      	add	r4, pc
+   cd5e2:	f104 0530 	add.w	r5, r4, #48	@ 0x30
+   cd5e6:	4628      	mov	r0, r5
+   cd5e8:	689f      	ldr	r7, [r3, #8]
+   cd5ea:	f743 ea5a 	blx	10aa0 <pthread_mutex_lock@plt>
+   cd5ee:	2800      	cmp	r0, #0
+   cd5f0:	d167      	bne.n	cd6c2
+   cd5f2:	f10d 0a08 	add.w	sl, sp, #8
+   cd5f6:	4650      	mov	r0, sl
+   cd5f8:	f743 eea6 	blx	11348 <_ZNSt6chrono3_V212steady_clock3nowEv@plt>
+   cd5fc:	f44f 43b0 	mov.w	r3, #22528	@ 0x5800
+   cd600:	220d      	movs	r2, #13
+   cd602:	f6cf 0347 	movt	r3, #63559	@ 0xf847
+   cd606:	fba7 3603 	umull	r3, r6, r7, r3
+   cd60a:	fb02 6607 	mla	r6, r2, r7, r6
+   cd60e:	9f02      	ldr	r7, [sp, #8]
+   cd610:	9a03      	ldr	r2, [sp, #12]
+   cd612:	18ff      	adds	r7, r7, r3
+   cd614:	f894 3048 	ldrb.w	r3, [r4, #72]	@ 0x48
+   cd618:	eb46 0602 	adc.w	r6, r6, r2
+   cd61c:	2b00      	cmp	r3, #0
+   cd61e:	d13c      	bne.n	cd69a
+   cd620:	a32b      	add	r3, pc, #172	@ (adr r3, cd6d0)
+   cd622:	e9d3 2300 	ldrd	r2, r3, [r3]
+   cd626:	4638      	mov	r0, r7
+   cd628:	4631      	mov	r1, r6
+   cd62a:	f10d 0b14 	add.w	fp, sp, #20
+   cd62e:	f743 ee14 	blx	11258 <__aeabi_ldivmod@plt>
+   cd632:	4681      	mov	r9, r0
+   cd634:	4690      	mov	r8, r2
+   cd636:	465b      	mov	r3, fp
+   cd638:	2201      	movs	r2, #1
+   cd63a:	4629      	mov	r1, r5
+   cd63c:	4620      	mov	r0, r4
+   cd63e:	e9cd 9805 	strd	r9, r8, [sp, #20]
+   cd642:	f743 eb52 	blx	10ce8 <pthread_cond_clockwait@plt>
+   cd646:	4650      	mov	r0, sl
+   cd648:	f743 ee7e 	blx	11348 <_ZNSt6chrono3_V212steady_clock3nowEv@plt>
+   cd64c:	e9dd 3202 	ldrd	r3, r2, [sp, #8]
+   cd650:	42bb      	cmp	r3, r7
+   cd652:	41b2      	sbcs	r2, r6
+   cd654:	db1d      	blt.n	cd692
+   cd656:	f894 4048 	ldrb.w	r4, [r4, #72]	@ 0x48
+   cd65a:	4628      	mov	r0, r5
+   cd65c:	f744 e8e6 	blx	1182c <pthread_mutex_unlock@plt+0x4>
+   cd660:	b954      	cbnz	r4, cd678
+   cd662:	9b01      	ldr	r3, [sp, #4]
+   cd664:	6858      	ldr	r0, [r3, #4]
+   cd666:	6983      	ldr	r3, [r0, #24]
+   cd668:	b34b      	cbz	r3, cd6be
+   cd66a:	69c3      	ldr	r3, [r0, #28]
+   cd66c:	3010      	adds	r0, #16
+   cd66e:	4798      	blx	r3
+   cd670:	9b01      	ldr	r3, [sp, #4]
+   cd672:	2201      	movs	r2, #1
+   cd674:	685b      	ldr	r3, [r3, #4]
+   cd676:	711a      	strb	r2, [r3, #4]
+   cd678:	4a1a      	ldr	r2, [pc, #104]	@ (cd6e4)
+   cd67a:	4b18      	ldr	r3, [pc, #96]	@ (cd6dc)
+   cd67c:	447a      	add	r2, pc
+   cd67e:	58d3      	ldr	r3, [r2, r3]
+   cd680:	681a      	ldr	r2, [r3, #0]
+   cd682:	9b07      	ldr	r3, [sp, #28]
+   cd684:	405a      	eors	r2, r3
+   cd686:	f04f 0300 	mov.w	r3, #0
+   cd68a:	d11c      	bne.n	cd6c6
+   cd68c:	b009      	add	sp, #36	@ 0x24
+   cd68e:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+   cd692:	f894 3048 	ldrb.w	r3, [r4, #72]	@ 0x48
+   cd696:	2b00      	cmp	r3, #0
+   cd698:	d0cd      	beq.n	cd636
+   cd69a:	4a13      	ldr	r2, [pc, #76]	@ (cd6e8)
+   cd69c:	4b0f      	ldr	r3, [pc, #60]	@ (cd6dc)
+   cd69e:	447a      	add	r2, pc
+   cd6a0:	58d3      	ldr	r3, [r2, r3]
+   cd6a2:	681a      	ldr	r2, [r3, #0]
+   cd6a4:	9b07      	ldr	r3, [sp, #28]
+   cd6a6:	405a      	eors	r2, r3
+   cd6a8:	f04f 0300 	mov.w	r3, #0
+   cd6ac:	d10b      	bne.n	cd6c6
+   cd6ae:	480f      	ldr	r0, [pc, #60]	@ (cd6ec)
+   cd6b0:	4478      	add	r0, pc
+   cd6b2:	3030      	adds	r0, #48	@ 0x30
+   cd6b4:	b009      	add	sp, #36	@ 0x24
+   cd6b6:	e8bd 4ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   cd6ba:	f744 b8b5 	b.w	11828 <pthread_mutex_unlock@plt>
+   cd6be:	f743 eaba 	blx	10c34 <_ZSt25__throw_bad_function_callv@plt>
+   cd6c2:	f743 ebca 	blx	10e58 <_ZSt20__throw_system_errori@plt>
+   cd6c6:	f743 ed90 	blx	111e8 <__stack_chk_fail@plt>
+   cd6ca:	bf00      	nop
+   cd6cc:	f3af 8000 	nop.w
+   cd6d0:	ca00      	ldmia	r2!, {}
+   cd6d2:	3b9a      	subs	r3, #154	@ 0x9a
+   cd6d4:	0000      	movs	r0, r0
+   cd6d6:	0000      	movs	r0, r0
+   cd6d8:	83d2      	strh	r2, [r2, #30]
+   cd6da:	0009      	movs	r1, r1
+   cd6dc:	06b4      	lsls	r4, r6, #26
+   cd6de:	0000      	movs	r0, r0
+   cd6e0:	a1d4      	add	r1, pc, #848	@ (adr r1, cda34)
+   cd6e2:	0009      	movs	r1, r1
+   cd6e4:	8324      	strh	r4, [r4, #24]
+   cd6e6:	0009      	movs	r1, r1
+   cd6e8:	8302      	strh	r2, [r0, #24]
+   cd6ea:	0009      	movs	r1, r1
+   cd6ec:	a104      	add	r1, pc, #16	@ (adr r1, cd700)
+   cd6ee:	0009      	movs	r1, r1

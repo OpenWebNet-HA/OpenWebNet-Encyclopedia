@@ -1,0 +1,24 @@
+# Independent F460 run03 SLEEP source review
+
+PASS within the bounded original stored-callable/request/return-marker contract. No source correction requested. I authored the separate F461 matcher packet; this review independently checks the original F460 scheduler and packaged libc mappings, selected bytes and candidate imports. It does not reuse ARM32 fields or claim actual elapsed time.
+
+Independently verified both original file SHA identities, fresh ELF64/AArch64 PT_LOADs, all10 source-span hashes and35 instruction words. Manager1125f0 operation2 copies a32-bit word, not a pointer-bearing heap capture from an unrelated action. Storage1303f0 conditionally invokes that manager with operation2, transfers the actual data pair to action24/32 and manager/invoker pair to40/48; old-operation3 cleanup is a source request only. Inherited constructor binding remains separately scoped.
+
+Original112880 LDRW0 zero-extends the selected stored word intoX0. CBZX0 bypasses sleep when zero; otherwise STPX0/XZR atSP8 makes the two64-bit words, and both actual nanosleep arguments are copied from the sameSP8 address. BL1128ac reaches24140, whose real JUMP_SLOT21e710 is nanosleep@GLIBC_2.17. CMNW0,#1/BEQ retries only the−1 case; the subsequent errno pointer call245a0/slot21e940 names __errno_location@GLIBC_2.17, and CMP4/BNE exits for any other word. These branch polarities and exact alias are independently checked, not inferred from a function or JSON name.
+
+The packaged libc wrapperb97c0 moves the two pointers toX2/X3 and calls clock_nanosleepb47a0 withW0/W1 zero. Its nonzero return route stores the result at thread-pointer plus the relocated offset from19ade0, returns−1 and uses the same TLS slot as the original errno-location helper. Those are static candidate-provider contracts; clock_nanosleep, TLS initialization and OS effects remain opaque. Host timespec/time/errno headers and selected lines were independently hash/line checked as HOST semantic context only. Under the explicitly stated ordinary Linux/POSIX LP64 ABI and candidate-binding premises, the first word is seconds, the second nanoseconds and code4 is EINTR. No target header/layout, signal/timing experiment, all-UInt32 validity, actual alias handling or measured interval is established by that host context. Parent-provided man-pages provenance is documentary input, not a reviewer network fetch.
+
+Actual compiled primary slot21cc50→1301e0 and its selected common path use fresh operational12/16, callablemanager40/invoker48 and markerbyte8. With operational12 zero, nonnull manager40 permits invoker48(action+24); only AFTER normal callback return is operational16 freshly loaded, and zero then writes markerbyte8=1 and follows the normal method return1. This supports the author's key caveat: a normal callback return after a nonretry errno exit can also reach that marker. Marker1 does not certify that a delay elapsed, the provider succeeded or a whole scene completed. Nonzero operational branches and preamble/unwind/canary failures are not a reconstructed cancellation/thread matrix.
+
+Read-only host collector --check passes15 outputs. Independently verified8 input pins, three HOST semantic header pin/line sets and17 exact first-candidate copies. No author file was changed. Exploratory separate-debug CRC warning is disclosed; no separate debug data or guessed symbol labels were accepted. Original/vendor/provider/native/target execution, fixtures/models and elapsed tests added by this review:0. Effective provider binding, valid objects/lifetime/concurrency, natural scene admission, exact wait behavior and physical results remain unclosed. No receiving, transport, authentication, session, framing, MQTT or libjel body was examined.
+
+## Exact reviewed pins
+
+- `REPORT.md`: `ee7c55b26c5587121bdd27347e602d7cc9f5c3105a407d68f84294c19949d521`
+- `collect_sleep_v1.py`: `2aa19f62d551f01efff27004fb822c76042f3e8a8a17f748cd92f5adad9c7478`
+- `SOURCE.json`: `f01faef603836a72f32ddb4105b607859530654a9e7e98d76e0125fd12b426c9`
+- `CONTRACT.json`: `d5c52f455905ae851e627dab9e59f1d9fdfc5e206ca66a8a3ed4ce0fb83c5c5c`
+- `HOST_API_CONTEXT.json`: `cb3da4f2ca5301b84c53e6e6f793748703319f7674e98f4ca2eba70081a8feb0`
+- `INPUTS.json`: `68690d922896a96c1226c727e874650e94b065a679168c4f7a4bc403ff467ed3`
+- `OUTPUT_MANIFEST.json`: `4a900a0a8bfac13b8517abd145efdf9d576fa030dc70df9081123f3eb3d8a2bc`
+- `first-candidate/INDEX.json`: `58f0654591aa046845bfdf28a52509b7d1fd50743cfc35a5320b97fccb109eed`

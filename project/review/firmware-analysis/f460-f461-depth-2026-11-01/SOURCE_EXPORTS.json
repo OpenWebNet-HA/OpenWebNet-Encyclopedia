@@ -1,0 +1,245 @@
+{
+  "scope": "Exact source/collector/history exports; original firmware binaries and private values not included",
+  "files": [
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/INPUTS.json",
+      "export": "f460/INPUTS.json",
+      "bytes": 712,
+      "sha256": "38f4a4900c08f5ffe759d099318f31eaf520ba56ff20e82fb2e77681b6e6d84a"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/OUTPUT_MANIFEST.json",
+      "export": "f460/OUTPUT_MANIFEST.json",
+      "bytes": 1792,
+      "sha256": "f8872ead2440c2af39e299d4aba9c337f0085f103f36af4f53e5f7444c22c5a6"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/REPORT.md",
+      "export": "f460/REPORT.txt",
+      "bytes": 5142,
+      "sha256": "4caa7e282a04f4a514803b4da93c875e5da20b6ccd4ccae14542d855726eb68a"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/SOURCE.json",
+      "export": "f460/SOURCE.json",
+      "bytes": 7819,
+      "sha256": "0c05dff028e0d0eac220832c9ec78fe3af213ccda1417a406ce92805de6158c7"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/collect_scheduler_v1.py",
+      "export": "f460/collect_scheduler_v1.py",
+      "bytes": 12385,
+      "sha256": "4501da8d1278a9091b2d9cf21fd59dd20dc04ffd7f5c62125a87469659f03a81"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/spans/compiled-constructor-prefix.txt",
+      "export": "f460/spans/compiled-constructor-prefix.txt",
+      "bytes": 1801,
+      "sha256": "7d5b37ec1c545eb39b3f60dcdd8df723eba334b575c55ea85f388bc5dbfab464"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/spans/compiled-seconds-and-callable.txt",
+      "export": "f460/spans/compiled-seconds-and-callable.txt",
+      "bytes": 1670,
+      "sha256": "078d26f4ae3c7f4eba1c8b972b4af59b69266694a12b4cf6d3cb3fe2fc1affa0"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/spans/initializer-final-class.txt",
+      "export": "f460/spans/initializer-final-class.txt",
+      "bytes": 695,
+      "sha256": "144ebf1be19a7b4bf485ff2257b98f19fec9d35a312a43944dc3f4b157a4a9e0"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/spans/initializer-serializer-reparse.txt",
+      "export": "f460/spans/initializer-serializer-reparse.txt",
+      "bytes": 1707,
+      "sha256": "ec2f9809be8d4af28be88c00ec721ee662730b8297a8f76501773a0631f1cac4"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/spans/raw-selected-construction.txt",
+      "export": "f460/spans/raw-selected-construction.txt",
+      "bytes": 1589,
+      "sha256": "a060273febae49ead5ecd9c6dedf155bf62324f64649bdeda1e1f02c1f6dad57"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/spans/raw-serializer-result-type-prefix.txt",
+      "export": "f460/spans/raw-serializer-result-type-prefix.txt",
+      "bytes": 1591,
+      "sha256": "becee433f97494673afad55cb76d82c226b36945dd0ed5c23b17e6a6c2c2ab11"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/spans/raw-serializer-seconds.txt",
+      "export": "f460/spans/raw-serializer-seconds.txt",
+      "bytes": 938,
+      "sha256": "e51df339293113ab092d574da2670a04c28c7ff637da1e4861059653acc46eea"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/FAILURE_HISTORY.json",
+      "export": "f461/FAILURE_HISTORY.json",
+      "bytes": 688,
+      "sha256": "da28c16538f0d40ac3c1230f852adccb9f2630f51b9750e3b09ac3b3300502f0"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/INPUTS.json",
+      "export": "f461/INPUTS.json",
+      "bytes": 1266,
+      "sha256": "60a819e20a1d7fcfa1b2c91e12c10314ce730cf746b70f07b9e87aaa9168a911"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/OUTPUT_MANIFEST.json",
+      "export": "f461/OUTPUT_MANIFEST.json",
+      "bytes": 2216,
+      "sha256": "429aaba2dceacb8e8653314386d7f728dc20c7b6b1e07332f3ecdecd69b82fbb"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/REPORT.md",
+      "export": "f461/REPORT.txt",
+      "bytes": 5574,
+      "sha256": "1c720100e1ae34a73c0a74f2a29d0639beca80eaa4dff202a67ce666da9d572f"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/REPORT.v2.md",
+      "export": "f461/REPORT.v2.txt",
+      "bytes": 5869,
+      "sha256": "b26581f9a9292aec707562863ba43e7dfc8dcbca1bb6d51e2037295304ca72ec"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/SOURCE.json",
+      "export": "f461/SOURCE.json",
+      "bytes": 1899,
+      "sha256": "2462ad6cf61c12cff71dd8a7d7e9de11d0b472ca6e809689d450051b26566680"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/collect_routing_v1.py",
+      "export": "f461/collect_routing_v1.py",
+      "bytes": 4237,
+      "sha256": "535470653b103b5b25e84d2ba282e9342d9c513100707f50a0ae1f2f23428d78"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/collect_routing_v2.py",
+      "export": "f461/collect_routing_v2.py",
+      "bytes": 4243,
+      "sha256": "474531e88c04267e8b9f901e1e055cb07e6119dd9895543ca485423ea55ecd20"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/core-dynamic.txt",
+      "export": "f461/core-dynamic.txt",
+      "bytes": 2046,
+      "sha256": "6b17590bea57feca1705db5c53c4464a03530e4bc3332801b5e1571541377d06"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/core-relocations.txt",
+      "export": "f461/core-relocations.txt",
+      "bytes": 7841,
+      "sha256": "b84cd46e900d90c0ce6488379ebe5bba80fb333cc0b802eb34f6ee2593f95476"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/core-symbols.txt",
+      "export": "f461/core-symbols.txt",
+      "bytes": 8048,
+      "sha256": "7c4ae57ed7c22d009a937d7c3493f9a44d8ad96276f3af95746b04ea12c1c6d5"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/development-v1/INDEX.json",
+      "export": "f461/development-v1/INDEX.json",
+      "bytes": 259,
+      "sha256": "fe0215a10814ff1a57f7646d15eb616f2e08f8ccba669efca4208f0924ed1b3c"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/development-v1/REPORT.md",
+      "export": "f461/development-v1/REPORT.txt",
+      "bytes": 5574,
+      "sha256": "1c720100e1ae34a73c0a74f2a29d0639beca80eaa4dff202a67ce666da9d572f"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/development-v1/collect_routing_v1.py",
+      "export": "f461/development-v1/collect_routing_v1.py",
+      "bytes": 4237,
+      "sha256": "535470653b103b5b25e84d2ba282e9342d9c513100707f50a0ae1f2f23428d78"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/plugin-dynamic.txt",
+      "export": "f461/plugin-dynamic.txt",
+      "bytes": 2268,
+      "sha256": "f18bb3b60d7778343b7e5748a6041552f472322c4084e3ce009afae1af630c05"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/plugin-relocations.txt",
+      "export": "f461/plugin-relocations.txt",
+      "bytes": 9160,
+      "sha256": "ce250d3ddf38c8b3d0b5330245e6cfff875fda351cb3088d6f916f25785b7a84"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/plugin-symbols.txt",
+      "export": "f461/plugin-symbols.txt",
+      "bytes": 7285,
+      "sha256": "608515ddf74cf57ed6380f84fdf47ae4999de9e2d5e96152da78443d6df85362"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/span-1.txt",
+      "export": "f461/span-1.txt",
+      "bytes": 1298,
+      "sha256": "e17904cd98aab6f2c2066e15979d03e24896a5cf19e34b4bfdfd5b08969f7a3f"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/span-2.txt",
+      "export": "f461/span-2.txt",
+      "bytes": 2262,
+      "sha256": "4214f9464298dae8ea6d7594d8447f826d2ea5880e3ec6fccc30b882342a8660"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/span-3.txt",
+      "export": "f461/span-3.txt",
+      "bytes": 1676,
+      "sha256": "c0a145298c9f72e26688e0e872b7ba3ce4bccf8768d3ec63988bc6fae79c1389"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/span-4.txt",
+      "export": "f461/span-4.txt",
+      "bytes": 3758,
+      "sha256": "d506d4a3b1e2573670434542b771a8c47795864797ec150db4085378edeb120f"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/span-5.txt",
+      "export": "f461/span-5.txt",
+      "bytes": 1115,
+      "sha256": "5f83cf5828323e186de39cc58754b53218f624d6b94d4ec6b327c3214e024477"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/span-6.txt",
+      "export": "f461/span-6.txt",
+      "bytes": 2154,
+      "sha256": "1d1667a39857fa50e6253fadf751af6c56deaaa5574531cdfa7e3e0ae67ff047"
+    },
+    {
+      "source": "work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/span-7.txt",
+      "export": "f461/span-7.txt",
+      "bytes": 1652,
+      "sha256": "1f4f6f23e86c94e99e8be56a8d9d5380948feebe00a34f8f093b0abc7d903ff1"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-depth/PLAN.json",
+      "export": "PLAN.json",
+      "bytes": 1645,
+      "sha256": "1a3fb237d01b7edf1ffe2eda1278fcb9748d72c84991a30a66bd97193aa006e2"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-depth/REVIEW_CONTRACT.json",
+      "export": "REVIEW_CONTRACT.json",
+      "bytes": 1202,
+      "sha256": "406b725f36de331bfdbb922bd846530aea25d278a8fe61f67e83a216e64adbe8"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-depth/PRIOR_PROTECTION.json",
+      "export": "PRIOR_PROTECTION.json",
+      "bytes": 315,
+      "sha256": "8086e39b340ff1614f445c227be70a41d90637cf709c81cd0726a4ea69f3bba1"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-depth/SOURCE_CHECKS.json",
+      "export": "SOURCE_CHECKS.json",
+      "bytes": 558,
+      "sha256": "538c9dfa92170301aa214bb4b9942cb966f6741ffa36f293518ef740779a2274"
+    }
+  ]
+}

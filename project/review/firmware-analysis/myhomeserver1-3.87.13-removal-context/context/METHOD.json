@@ -1,0 +1,12 @@
+{
+  "original_execution": 0,
+  "scope": "Only localprovidedcontext aliases and whitelistedscene_id/string/decimalrequest source; importedJSONparse and receiving/transport/auth/session/framing/MQTT/libjel bodies remainopaque.",
+  "semantic_models_or_fixtures": 0,
+  "target_IO": 0,
+  "unclosed": [
+    "incomingdispatchercontextproducer/maincontainer equality",
+    "selectedbranch eligibility afteropaqueparse/provider/otherlocalsteps",
+    "JsonCpp/asString/stringcopy/strtol/error/overflow/partialtext/provider semantics",
+    "fullindirectalias/unwind/lifetime/concurrency and actualscene/removal behavior"
+  ]
+}

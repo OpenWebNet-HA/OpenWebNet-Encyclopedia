@@ -1,0 +1,67 @@
+# MH202 resources: independent installer/source provenance review
+
+PASS for authoritative REPORT.v2.md plus CHRONOLOGY_REFINEMENT.json and the unchanged static evidence. The review found one documentary chronology error in v1; parent preserved it and created a separate current report rather than overwriting it. No extraction/source/result/count disagreement remains. I independently inspected the collector/extractors/parser and performed a fresh in-memory reconstruction from the original installer, not merely a report-wording comparison. Only this NEW review is written. No vendor Windows/Tcl/.NET/ARM/JavaScript code, installer, target process, service or network operation was executed; no passwords, guessing, payload decryption or original-file edits occurred.
+
+## Registered installer and raw CookFS reconstruction
+
+I freshly hashed the599437936-byte MyHOME_Suite_030538.exe to SHA256707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b. It matches both the frozen documentary selected record and the actual registered manifest's corresponding field projection. The current manifest hash also equals the frozen documentary source hash. Acquisition URL/metadata are parent acquisition provenance, not a new network retrieval or fresh Authenticode validation by this review. Selected record projection does not recertify extra signature metadata outside that scope.
+
+Using read-only mmap and independent Python data parsing, I found the unique CFS0002 signature at596301290 and reconstructed the footer/header relationships directly: end596301297,78915-byte index at596222366,3585 page-size entries at596208026,16-byte metadata entries beginning596150666 and page-data start978446. All3585 computed offsets/sizes and raw metadata records match layout.v2.json. This is a format relation for these bytes, not complete installer validation.
+
+The actual raw-deflate index decodes to363367 bytes, begins CFS2.200 and has SHA2560e8bcb22fc1e22398c67ac3bbca56d1512b9026748179949cb6ef920e67fa951. I independently parsed its counted directory hierarchy/names/block triples, with depth/count/bounds checks. All8166 resulting entries, including6586 regular files, exactly equal the saved file-index. Parsing ends at363338 with29 trailing metadata bytes deliberately uninterpreted. I did not flatten that remainder into a full-format claim or evaluate installer/Tcl code.
+
+I then decompressed ONLY the21 selected pages entirely in memory; all21 actually use tag1/raw-deflate. Each decoder reached its stream end without unused/tail data, under bounded size, and each actual binary metadata record has8 leading zero bytes followed by big-endian decoded size and CRC32. All21 decoded sizes, CRC32 values and SHA256s agree with the saved per-page proofs. All25 files were independently rebuilt from their checked original block triples, bounded page slices and concatenations; every byte, declared size and SHA256 matches selected-file-identities.v2.json and the existing selected-files-v2 copy. No file was re-extracted or overwritten by review. Unselected pages were not decoded or certified.
+
+## Rejected hypothesis and current extraction history
+
+The original layout's MD5-labelled fields and v1 extractor are retained. I confirmed layout.v2 changes those field names/metadata scope while retaining the same numeric tables/raw records. V2 tests actual decoded size/CRC32; it does not claim the rejected MD5 test passed. Both extractor hashes match EXTRACTION_VERSION_HISTORY; the v1 selected-files directory remains empty after its recorded rejection. Earlier InstallJammer failure artifacts are retained separately. These observations support the disclosed failed/versioned attempts, not a universal authenticity certificate for every unrecorded development step. No guard weakening, original executable evaluation or secret extraction is needed for the21 current positive page checks.
+
+## Resource content and product applicability
+
+The25 files consist of21 device-directory resources (15 XML,5 ZIP-like containers,1 SQLite database) plus4 shared ScenarioSuite assemblies. They are not25 separate device-local XML payloads. I independently checked all15 XML structural-name/root/count records, four assemblies' exact whitelisted UTF-16LE substring offsets, five ZIP central-directory member/size/encryption records and the read-only SQLite table-name query. No database rows, XML text/attribute values, credentials, private identifiers or encrypted payloads were exported/inspected for semantics. Schema names/literal hits establish genuine resources/leads, not a generator method or script grammar.
+
+Core .spt/info.xml/OWRITE and converter .spt/info.xml byte matches agree with the reported offsets. The DB contains the listed TMP_SCENARI/TMP_TRIGGER/TMP_STEP_ACT/ANA_OPEN_RULE_COMPILE table names. Director/Extra/SDC/conversion/scenarioSuite structures are present; no transformation, method, GUI or .NET runtime was executed. Their intended generation/use still requires a bounded static method-to-output trace or an independently sourced configured project.
+
+The five selected ZIP central directories have no .spt/basename info.xml entry. Default/restoration4.xtz contains only its listed directory/extra.xml, with encrypted file members; project.prj's nested names are a listing, not decoded nested content or proof of equality with standalone defaults. The decoded top-level CookFS index likewise has no .spt/basename info.xml path. Neither bounded result proves global absence, hidden/encrypted/nested absence, no installed scripts or no dynamic output. No archive password or decryption was attempted.
+
+I separately checked the actual firmware manifest's limited public artifact fields: action3/type extra_download names4.xtz; action4/type extra_download names2.xtz. The firmware ZIP membership remains the original image archives/fwz.xml/uImage. Suite3.5.38, catalogue firmware561/default1.0.0, package1902_1.0_LGG and examined firmware1.0.24 remain distinct namespaces. Genuine installer defaults with similarly named archives do not identify the separate firmware download payloads, installed extra4, a generated .spt/info.xml pair or full1.0.24 compatibility. Existing catalogue15 association rows/13 normalized paths are documentary scope, not evidence all brand variants are physically supplied here. The completed overnight report and its18/21 missing-intermediate-history limits are not silently rewritten or repaired by this acquisition.
+
+## Reviewer chronology correction
+
+V1 incorrectly called LOCAL_DISCOVERY.v1.json a pre-acquisition snapshot. I compared acquisition09:41:10UTC with inventory09:43:03UTC and its exact exclusion of the whole new acquisition/output tree, and requested correction before writing this review. Parent retained v1 report/collector/results/first copies and created REPORT.v2.md. I independently verified exactly the one recorded sentence substitution and no other bytes. Current v2 accurately calls it a bounded capture of pre-existing roots with acquisition/output excluded and explicitly states its later timestamp; it supports no current global absence claim.
+
+CHRONOLOGY_REFINEMENT preserves the original error and actual timestamps. The unchanged v1 collector intentionally regenerates historical v1, not the promoted v2 prose. `collect_artifacts_v1.py --check` passes4 outputs/36 pinned inputs/25 files/21 pages/original_execution0; this reproduces the static evidence and historical report bytes, while the separate refinement establishes current wording. My in-memory raw-installer/page reconstruction is an additional independent source check and does not write new extraction artifacts. All5 artifact-first,2 documentary-first and2 local-inventory-first copied files match both indexed hashes and current corresponding immutable files.
+
+No further correction is requested. The positive resource availability and generator leads are supported, while real generated artifacts, full grammar, firmware applicability, installed state and physical outcomes remain unresolved. This review does not propose execution/decryption or extension into transport/session/authentication/framing.
+
+## Exact current and preserved evidence identities
+
+Paths below are relative to work/mh202-firmware/research/2026-10-31-scenario-artifacts.
+
+| Artifact | SHA256 |
+|---|---|
+|REPORT.v2.md|615445c3437ccd30b7d52bccdd41d86ee02200f0c6d3b147efc634deb0663c3d|
+|CHRONOLOGY_REFINEMENT.json|5a31ecea29da909f4f1cc3da8ab6a9326a5717d516d5f37cfacf1e066e553cf6|
+|REPORT.md|15ce268fc91529c5d7c55aacb2fd74be7da5d513277257eadf7ab12498d39c80|
+|collect_artifacts_v1.py|0b199603a76b0709928a7ed7803995107b461cba9d76562ad572921db9fb71c6|
+|EVIDENCE.v1.json|cc091828fa4a2a126ac4177abf72b9f0d620f88c99a8e64c8d96515bb652aec0|
+|INPUTS.v1.json|7f3b7b7853c18beaecce037819b4257b99706bf0cfe644530f990c4f2d8735c8|
+|OUTPUT_MANIFEST.v1.json|4a1154247ca19e87c0eb8b461e72d3d71637e7c06881fb17ebd7630f277ad390|
+|initial-artifacts-v1/SNAPSHOT_INDEX.json|74db1b1351c46dba139486acdea4e4095bc53779a928152436696aa7cb37ea5d|
+|DOCUMENTARY_INPUTS.v1.json|6d0ad406a73b45bed7905423800d6023c5e5cb41801817c19d203ec5e1c40cff|
+|LOCAL_DISCOVERY.v1.json|f9825355882a9b180217afa421020243507e1d9c4a1f363bc950d5eef9a6e954|
+|initial-documentary-v1/SNAPSHOT_INDEX.json|a4d77386c96f2d6fcac85554f0186dc0aa33e64b868d973cbcf5d7f61f0fddbe|
+|initial-local-v1/SNAPSHOT_INDEX.json|883396914fc6366b407f7fa1f4f288ca346dbb4ad2fb84177a7029f77089ba94|
+|acquisition/acquisition.json|6b4e89af1aba04cf547d27ea6a2a526379e3141d11e415b18202aff9b98021ae|
+|acquisition/parse_cookfs_v1.py|b5d99302d96774ca5f5d19a75b3dbba322f9c17e5185e2727b44c1514f24fa36|
+|acquisition/extract_selected_v1.py|047372a9a772673e806d6ede1c774c731ea5d35f4e9dc4c8af55a95958b23333|
+|acquisition/extract_selected_v2.py|97c3916723b6fa072ca0f34003e2db718f6cf2554fbd9c94f2fe75256370f732|
+|acquisition/cookfs-index/layout.json|71fa58c7f08f93a1b0b4048ddc309c2ca27ba0fb164fdce372054d2cd2fd1ce4|
+|acquisition/cookfs-index/layout.v2.json|adf1ee0fc3d62fd4511f9c1240c900a16c120aee7f53ebd3808f13f50b75131b|
+|acquisition/cookfs-index/file-index.json|54e7ba1bc2cc618227e2de93190142b22e5f9f4007c0298a324eaf912a09e2af|
+|acquisition/cookfs-index/decoded-index.bin|0e8bcb22fc1e22398c67ac3bbca56d1512b9026748179949cb6ef920e67fa951|
+|acquisition/selected-file-identities.v2.json|9e9bb6d5a1822454abf8f80658310c600210464c73e0f84ac0b70449e81a6b5e|
+|acquisition/selected-page-proof.v2.json|5a858c5c6f845d9835164beb5cc8e6e583a7d63d6eb314faca8919064fca89c6|
+|acquisition/EXTRACTION_VERSION_HISTORY.json|9f168181fc3d3d20c22f224c12a40ec1aecfe70e43876d636d77e9a705c89d17|
+
+The selected-file identity/proof documents above carry all25 exact original installer paths/file hashes and21 page hashes/CRCs. Their identity pins supplement, not replace, the independent raw-byte reconstruction described above. No full-installer Authenticode, all-page integrity, vendor semantics or all historical drafts are certified.

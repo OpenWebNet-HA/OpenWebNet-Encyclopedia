@@ -1,0 +1,8024 @@
+{
+  "scope": "Top-level decoded installer index, selected database-like extensions; nested/opaque archive members and extensionless files not audited.",
+  "inputs": [
+    {
+      "path": "work/mh202-firmware/research/2026-10-31-scenario-artifacts/acquisition/MyHOME_Suite_030538.exe",
+      "bytes": 599437936,
+      "sha256": "707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b"
+    },
+    {
+      "path": "work/mh202-firmware/research/2026-10-31-scenario-artifacts/acquisition/cookfs-index/layout.v2.json",
+      "bytes": 238586,
+      "sha256": "adf1ee0fc3d62fd4511f9c1240c900a16c120aee7f53ebd3808f13f50b75131b"
+    },
+    {
+      "path": "work/mh202-firmware/research/2026-10-31-scenario-artifacts/acquisition/cookfs-index/file-index.json",
+      "bytes": 1949773,
+      "sha256": "54e7ba1bc2cc618227e2de93190142b22e5f9f4007c0298a324eaf912a09e2af"
+    },
+    {
+      "path": "OpenWebNet-Encyclopedia/sources/artifact-manifest.yaml",
+      "bytes": 883889,
+      "sha256": "01b67e8006e447169451bc8977a18edeb8c7c51f63c8f9c4d550d47b2eef89e0"
+    }
+  ],
+  "indexed_files": 6586,
+  "database_paths": 20,
+  "unique_payloads": 13,
+  "members": [
+    {
+      "installer_path": "default/resTargetDir4/Db_KeyOThermoValidator/rules.db3",
+      "bytes": 36864,
+      "sha256": "23b62e3bb7a11ede3f91561b63a1aaf39449da47025626a2c477e9833347cb06",
+      "blocks": [
+        [
+          1351,
+          0,
+          36864
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir4/Db_MHCatalogue/MHCatalogue.db",
+      "bytes": 2625536,
+      "sha256": "f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5",
+      "blocks": [
+        [
+          1352,
+          0,
+          262144
+        ],
+        [
+          1353,
+          0,
+          262144
+        ],
+        [
+          1354,
+          0,
+          262144
+        ],
+        [
+          1355,
+          0,
+          262144
+        ],
+        [
+          1356,
+          0,
+          262144
+        ],
+        [
+          1357,
+          0,
+          262144
+        ],
+        [
+          1358,
+          0,
+          262144
+        ],
+        [
+          1359,
+          0,
+          262144
+        ],
+        [
+          1360,
+          0,
+          262144
+        ],
+        [
+          1361,
+          0,
+          262144
+        ],
+        [
+          1362,
+          0,
+          4096
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir4/Db_ScenarioDevices/ScenarioDevices.sqlite",
+      "bytes": 34816,
+      "sha256": "cd3b9b67160f468cdbd30134357b8733c696aacd5d625129240dff6b79224fc3",
+      "blocks": [
+        [
+          1363,
+          0,
+          34816
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir4/devices/1331_1.0_BT/xml/Steps/Step_2/Scen_SuiteDB_ENG.db",
+      "bytes": 2542592,
+      "sha256": "83b7fa13c224012ebd1561fbc2895deb599b06223eb8e5041f565b7c5b7dbfd8",
+      "blocks": [
+        [
+          1384,
+          0,
+          262144
+        ],
+        [
+          1330,
+          0,
+          262144
+        ],
+        [
+          1385,
+          0,
+          262144
+        ],
+        [
+          1332,
+          0,
+          262144
+        ],
+        [
+          1333,
+          0,
+          262144
+        ],
+        [
+          1334,
+          0,
+          262144
+        ],
+        [
+          1335,
+          0,
+          262144
+        ],
+        [
+          1336,
+          0,
+          262144
+        ],
+        [
+          1337,
+          0,
+          262144
+        ],
+        [
+          1338,
+          0,
+          183296
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir4/devices/1768_1.0_LG/db/systems.sqlite",
+      "bytes": 344064,
+      "sha256": "73297a1449df378063b8a2ab23a8f1787a782df9ee6f00f7b2d702e3ec608e93",
+      "blocks": [
+        [
+          2790,
+          0,
+          262144
+        ],
+        [
+          2791,
+          0,
+          81920
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir4/devices/1898_2.1_BT/db/systems.sqlite",
+      "bytes": 344064,
+      "sha256": "ad88777e1b3e2d11dd7efa6c79b080ec57258fdff3596c9c1ac5cc1ad0983214",
+      "blocks": [
+        [
+          3317,
+          0,
+          262144
+        ],
+        [
+          3318,
+          0,
+          81920
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir4/devices/1768_2.1_LG/db/systems.sqlite",
+      "bytes": 344064,
+      "sha256": "e44bbbd25ad849b38e52f58862c9b4e31240a01555115b68e4397584cb85308e",
+      "blocks": [
+        [
+          3113,
+          0,
+          262144
+        ],
+        [
+          3114,
+          0,
+          81920
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir4/devices/1331_1.0_LG/xml/Steps/Step_2/Scen_SuiteDB_ENG.db",
+      "bytes": 2542592,
+      "sha256": "83b7fa13c224012ebd1561fbc2895deb599b06223eb8e5041f565b7c5b7dbfd8",
+      "blocks": [
+        [
+          1384,
+          0,
+          262144
+        ],
+        [
+          1330,
+          0,
+          262144
+        ],
+        [
+          1385,
+          0,
+          262144
+        ],
+        [
+          1332,
+          0,
+          262144
+        ],
+        [
+          1333,
+          0,
+          262144
+        ],
+        [
+          1334,
+          0,
+          262144
+        ],
+        [
+          1335,
+          0,
+          262144
+        ],
+        [
+          1336,
+          0,
+          262144
+        ],
+        [
+          1337,
+          0,
+          262144
+        ],
+        [
+          1338,
+          0,
+          183296
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir4/devices/1898_2.1_LG/db/systems.sqlite",
+      "bytes": 344064,
+      "sha256": "ad88777e1b3e2d11dd7efa6c79b080ec57258fdff3596c9c1ac5cc1ad0983214",
+      "blocks": [
+        [
+          3317,
+          0,
+          262144
+        ],
+        [
+          3318,
+          0,
+          81920
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_2/Scen_SuiteDB_ENG.db",
+      "bytes": 2542592,
+      "sha256": "ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29",
+      "blocks": [
+        [
+          1329,
+          0,
+          262144
+        ],
+        [
+          1330,
+          0,
+          262144
+        ],
+        [
+          1331,
+          0,
+          262144
+        ],
+        [
+          1332,
+          0,
+          262144
+        ],
+        [
+          1333,
+          0,
+          262144
+        ],
+        [
+          1334,
+          0,
+          262144
+        ],
+        [
+          1335,
+          0,
+          262144
+        ],
+        [
+          1336,
+          0,
+          262144
+        ],
+        [
+          1337,
+          0,
+          262144
+        ],
+        [
+          1338,
+          0,
+          183296
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir4/devices/1455_2.0_LGG/db/systems.sqlite",
+      "bytes": 344064,
+      "sha256": "fffc43f8d2fb5d05b8240aa4b6d449bcf5bf60339013aba2fb2301a42738e694",
+      "blocks": [
+        [
+          1820,
+          0,
+          262144
+        ],
+        [
+          1821,
+          0,
+          81920
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir4/devices/1768_1.0_BT/db/systems.sqlite",
+      "bytes": 344064,
+      "sha256": "73297a1449df378063b8a2ab23a8f1787a782df9ee6f00f7b2d702e3ec608e93",
+      "blocks": [
+        [
+          2790,
+          0,
+          262144
+        ],
+        [
+          2791,
+          0,
+          81920
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir4/devices/1768_2.1_BT/db/systems.sqlite",
+      "bytes": 344064,
+      "sha256": "e44bbbd25ad849b38e52f58862c9b4e31240a01555115b68e4397584cb85308e",
+      "blocks": [
+        [
+          3113,
+          0,
+          262144
+        ],
+        [
+          3114,
+          0,
+          81920
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir4/RestoreDb_MHCatalogue/MHCatalogue.db",
+      "bytes": 2625536,
+      "sha256": "f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5",
+      "blocks": [
+        [
+          1352,
+          0,
+          262144
+        ],
+        [
+          1353,
+          0,
+          262144
+        ],
+        [
+          1354,
+          0,
+          262144
+        ],
+        [
+          1355,
+          0,
+          262144
+        ],
+        [
+          1356,
+          0,
+          262144
+        ],
+        [
+          1357,
+          0,
+          262144
+        ],
+        [
+          1358,
+          0,
+          262144
+        ],
+        [
+          1359,
+          0,
+          262144
+        ],
+        [
+          1360,
+          0,
+          262144
+        ],
+        [
+          1361,
+          0,
+          262144
+        ],
+        [
+          1362,
+          0,
+          4096
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir4/RestoreDb_ScenarioDevices/ScenarioDevices.sqlite",
+      "bytes": 34816,
+      "sha256": "cd3b9b67160f468cdbd30134357b8733c696aacd5d625129240dff6b79224fc3",
+      "blocks": [
+        [
+          1363,
+          0,
+          34816
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir2/db/MHPrj.db",
+      "bytes": 50176,
+      "sha256": "74fc3762e47718da40f85562225fb676932349e39bd797ff94a073b8db8bd39a",
+      "blocks": [
+        [
+          1328,
+          0,
+          50176
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir2/db/PTDB.db",
+      "bytes": 17408,
+      "sha256": "606f0fef30b8db6c5a2998ae5ef88d7193488479ad97f7aea89c8f274c41ae64",
+      "blocks": [
+        [
+          1366,
+          25234,
+          17408
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/resTargetDir2/db/Scen_SuiteDB_ENG.db",
+      "bytes": 2542592,
+      "sha256": "ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29",
+      "blocks": [
+        [
+          1329,
+          0,
+          262144
+        ],
+        [
+          1330,
+          0,
+          262144
+        ],
+        [
+          1331,
+          0,
+          262144
+        ],
+        [
+          1332,
+          0,
+          262144
+        ],
+        [
+          1333,
+          0,
+          262144
+        ],
+        [
+          1334,
+          0,
+          262144
+        ],
+        [
+          1335,
+          0,
+          262144
+        ],
+        [
+          1336,
+          0,
+          262144
+        ],
+        [
+          1337,
+          0,
+          262144
+        ],
+        [
+          1338,
+          0,
+          183296
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/targetDir/ScenarioDevices.sqlite",
+      "bytes": 35840,
+      "sha256": "2ce7ffe1286c3246271aed160116fe664407d9e8ff43595f50192e7d2ac85569",
+      "blocks": [
+        [
+          1140,
+          0,
+          35840
+        ]
+      ]
+    },
+    {
+      "installer_path": "default/targetDir/db/OPEN.db",
+      "bytes": 80896,
+      "sha256": "d864a4946b47c3671a74a6844cec4da605cf20b33ac14f49959785778f104051",
+      "blocks": [
+        [
+          1288,
+          0,
+          80896
+        ]
+      ]
+    }
+  ],
+  "databases": [
+    {
+      "bytes": 36864,
+      "sha256": "23b62e3bb7a11ede3f91561b63a1aaf39449da47025626a2c477e9833347cb06",
+      "local_path": "recovered/23b62e3bb7a11ede3f91561b63a1aaf39449da47025626a2c477e9833347cb06.bin",
+      "registered_artifact_ids": [
+        "myhome-suite-3.5.38-thermo-rules"
+      ],
+      "SQLite3_header": true,
+      "tables": [
+        "DisablelinkedParameter",
+        "rules",
+        "sqlite_sequence"
+      ],
+      "table_columns": {
+        "DisablelinkedParameter": [
+          {
+            "name": "KO",
+            "type": "INTEGER"
+          },
+          {
+            "name": "KConf",
+            "type": "TEXT"
+          },
+          {
+            "name": "KValue",
+            "type": "TEXT"
+          },
+          {
+            "name": "LinkedKconf",
+            "type": "TEXT"
+          },
+          {
+            "name": "KValueLinkedKconf",
+            "type": "TEXT"
+          }
+        ],
+        "rules": [
+          {
+            "name": "KOBJECTS",
+            "type": "NUMERIC"
+          },
+          {
+            "name": "N_RULES",
+            "type": "NUMERIC"
+          },
+          {
+            "name": "1_Parameter",
+            "type": "TEXT"
+          },
+          {
+            "name": "Condition",
+            "type": "TEXT"
+          },
+          {
+            "name": "2_Parameter",
+            "type": "TEXT"
+          },
+          {
+            "name": "TrueCondition",
+            "type": "TEXT"
+          },
+          {
+            "name": "FalseCondition",
+            "type": "TEXT"
+          },
+          {
+            "name": "Condition_order",
+            "type": "NUMERIC"
+          }
+        ],
+        "sqlite_sequence": [
+          {
+            "name": "name",
+            "type": ""
+          },
+          {
+            "name": "seq",
+            "type": ""
+          }
+        ]
+      },
+      "quick_check": [
+        "ok"
+      ]
+    },
+    {
+      "bytes": 2625536,
+      "sha256": "f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5",
+      "local_path": "recovered/f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5.bin",
+      "registered_artifact_ids": [
+        "myhome-suite-3.5.38-mhcatalogue"
+      ],
+      "SQLite3_header": true,
+      "tables": [
+        "AS_BUS_INTERFACE",
+        "AS_BUS_ITEM",
+        "AS_BUS_SYSTEM",
+        "AS_CONNECTION_FIRMWARE",
+        "AS_DEPENDENT_DEVICES",
+        "AS_DEVICE_PICTURE",
+        "AS_FIRMWARE_CONFIG_MODE",
+        "AS_FIRMWARE_PARAMETERS",
+        "AS_FIRMWARE_VIRGIN_OBJECT",
+        "AS_FW_PACKAGE",
+        "AS_HIDDEN_KCONF",
+        "AS_ICON_KO",
+        "AS_ITEM_SYSTEM",
+        "AS_KO_CMD_KO_DEV",
+        "AS_LANGUAGE_PACKAGE",
+        "AS_OBJECT_COLLECTION",
+        "AS_OBJECT_FIRMWARE",
+        "AS_OBJECT_FUNCTION",
+        "AS_OBJECT_SYSTEM",
+        "AS_OBJECT_VIRGIN_OBJECT",
+        "AS_SET_RANGE",
+        "AS_SLOT_CONDITION",
+        "CONF_SYMBOL_REF",
+        "DB_INFO",
+        "EN_AUX_SUBTYPE",
+        "EN_BOX_TYPE",
+        "EN_BRAND",
+        "EN_BUILDS",
+        "EN_BUS",
+        "EN_BUS_TYPE",
+        "EN_CHAR_ALLOW",
+        "EN_COLLECTION",
+        "EN_COLLECTION_TYPE",
+        "EN_CONDITION",
+        "EN_CONF",
+        "EN_CONFIG_MODE",
+        "EN_CONF_DATA_TYPE",
+        "EN_CONF_RANGE",
+        "EN_CONF_TYPE",
+        "EN_CONNECTION",
+        "EN_CONV_RULE",
+        "EN_DEVICE",
+        "EN_FILE",
+        "EN_FILTER",
+        "EN_FILTER_RANGE",
+        "EN_FIRMWARE",
+        "EN_FLOOR_TYPE",
+        "EN_ICON",
+        "EN_ITEM",
+        "EN_KEY_OBJECT",
+        "EN_LABELS",
+        "EN_LANGUAGE",
+        "EN_LINE",
+        "EN_OBJECT_ITEM_FAMILY",
+        "EN_PACKAGE",
+        "EN_PARAMETERS",
+        "EN_PARAMETERS_TYPE",
+        "EN_PHY_TO_ADV_TRANS",
+        "EN_PICTURE",
+        "EN_ROOM_TYPE",
+        "EN_SLOTS",
+        "EN_SLOT_KO_VIRGIN",
+        "EN_SPECIAL_FUNCTION",
+        "EN_STATUS",
+        "EN_SW_INIT",
+        "EN_SYSTEM",
+        "EN_UNICODE_RANGE",
+        "EN_UNICODE_SET",
+        "EN_VIRGIN_OBJECT",
+        "MACRO_TASKS",
+        "RIF_ANA_GROUP",
+        "RIF_MH_COLLECTION_OBJECTS",
+        "RIF_MH_OBJECT",
+        "TMP_ID",
+        "sqlite_sequence"
+      ],
+      "table_columns": {
+        "AS_BUS_INTERFACE": [
+          {
+            "name": "id_bus_in",
+            "type": "INT"
+          },
+          {
+            "name": "id_bus_out",
+            "type": "INT"
+          },
+          {
+            "name": "id_key_object",
+            "type": "INT"
+          },
+          {
+            "name": "max_interface",
+            "type": "VARCHAR"
+          }
+        ],
+        "AS_BUS_ITEM": [
+          {
+            "name": "id_bus",
+            "type": "INTEGER"
+          },
+          {
+            "name": "id_item",
+            "type": "INTEGER"
+          }
+        ],
+        "AS_BUS_SYSTEM": [
+          {
+            "name": "id_bus",
+            "type": "INT"
+          },
+          {
+            "name": "id_system",
+            "type": "INT"
+          }
+        ],
+        "AS_CONNECTION_FIRMWARE": [
+          {
+            "name": "id_connection",
+            "type": "INT"
+          },
+          {
+            "name": "id_firmware",
+            "type": "INT"
+          }
+        ],
+        "AS_DEPENDENT_DEVICES": [
+          {
+            "name": "id_device_master",
+            "type": "INT"
+          },
+          {
+            "name": "id_device_dependent",
+            "type": "INT"
+          }
+        ],
+        "AS_DEVICE_PICTURE": [
+          {
+            "name": "id_device",
+            "type": "INT"
+          },
+          {
+            "name": "id_picture",
+            "type": "INT"
+          }
+        ],
+        "AS_FIRMWARE_CONFIG_MODE": [
+          {
+            "name": "id_firmware",
+            "type": "INT"
+          },
+          {
+            "name": "id_config_mode",
+            "type": "INT"
+          }
+        ],
+        "AS_FIRMWARE_PARAMETERS": [
+          {
+            "name": "id_firmware",
+            "type": "INT"
+          },
+          {
+            "name": "id_parameters",
+            "type": "INT"
+          },
+          {
+            "name": "brand",
+            "type": "INT"
+          },
+          {
+            "name": "line",
+            "type": "INT"
+          }
+        ],
+        "AS_FIRMWARE_VIRGIN_OBJECT": [
+          {
+            "name": "id_virgin_key_object",
+            "type": "INT"
+          },
+          {
+            "name": "id_firmware",
+            "type": "INT"
+          },
+          {
+            "name": "id_fw_virgin_object",
+            "type": "INT"
+          }
+        ],
+        "AS_FW_PACKAGE": [
+          {
+            "name": "id_firmware",
+            "type": "INT"
+          },
+          {
+            "name": "id_package",
+            "type": "INT"
+          }
+        ],
+        "AS_HIDDEN_KCONF": [
+          {
+            "name": "id_conf_range",
+            "type": "INT"
+          },
+          {
+            "name": "id_conf",
+            "type": "INT"
+          }
+        ],
+        "AS_ICON_KO": [
+          {
+            "name": "id",
+            "type": "INT"
+          },
+          {
+            "name": "id_key_object",
+            "type": "INT"
+          },
+          {
+            "name": "id_icon",
+            "type": "INT"
+          },
+          {
+            "name": "subtype",
+            "type": "INT"
+          },
+          {
+            "name": "modifiable",
+            "type": "INT"
+          }
+        ],
+        "AS_ITEM_SYSTEM": [
+          {
+            "name": "id_item",
+            "type": "INT"
+          },
+          {
+            "name": "id_system",
+            "type": "INT"
+          },
+          {
+            "name": "modobj",
+            "type": "INT"
+          },
+          {
+            "name": "main",
+            "type": "tinyint"
+          }
+        ],
+        "AS_KO_CMD_KO_DEV": [
+          {
+            "name": "key_object_cmd",
+            "type": "INT"
+          },
+          {
+            "name": "key_object_cmd_desc",
+            "type": "TEXT"
+          },
+          {
+            "name": "key_object_dev",
+            "type": "INT"
+          },
+          {
+            "name": "key_object_dev_desc",
+            "type": "TEXT"
+          }
+        ],
+        "AS_LANGUAGE_PACKAGE": [
+          {
+            "name": "id",
+            "type": "INT"
+          },
+          {
+            "name": "code",
+            "type": "char(50)"
+          },
+          {
+            "name": "direction",
+            "type": "INT"
+          },
+          {
+            "name": "order",
+            "type": "INT"
+          },
+          {
+            "name": "id_package",
+            "type": "INT"
+          }
+        ],
+        "AS_OBJECT_COLLECTION": [
+          {
+            "name": "id_key_object",
+            "type": "INT"
+          },
+          {
+            "name": "id_collection",
+            "type": "INT"
+          },
+          {
+            "name": "max_device",
+            "type": "VARCHAR"
+          }
+        ],
+        "AS_OBJECT_FIRMWARE": [
+          {
+            "name": "id_object_firmware",
+            "type": "INT"
+          },
+          {
+            "name": "id_firmware",
+            "type": "INT"
+          },
+          {
+            "name": "id_key_object",
+            "type": "INT"
+          }
+        ],
+        "AS_OBJECT_FUNCTION": [
+          {
+            "name": "id_function",
+            "type": "INT"
+          },
+          {
+            "name": "id_object",
+            "type": "INT"
+          }
+        ],
+        "AS_OBJECT_SYSTEM": [
+          {
+            "name": "id_key_object",
+            "type": "INT"
+          },
+          {
+            "name": "id_system",
+            "type": "INT"
+          }
+        ],
+        "AS_OBJECT_VIRGIN_OBJECT": [
+          {
+            "name": "id_virgin_key_object",
+            "type": "INT"
+          },
+          {
+            "name": "id_key_object",
+            "type": "INT"
+          }
+        ],
+        "AS_SET_RANGE": [
+          {
+            "name": "id_unicode_set",
+            "type": "INT"
+          },
+          {
+            "name": "id_unicode_range",
+            "type": "INT"
+          }
+        ],
+        "AS_SLOT_CONDITION": [
+          {
+            "name": "id_slot",
+            "type": "INT"
+          },
+          {
+            "name": "id_condition",
+            "type": "INT"
+          }
+        ],
+        "CONF_SYMBOL_REF": [
+          {
+            "name": "id",
+            "type": "INT"
+          },
+          {
+            "name": "item_conf_symbol",
+            "type": "TEXT"
+          },
+          {
+            "name": "ko_conf_sysmbol",
+            "type": "TEXT"
+          },
+          {
+            "name": "key_system",
+            "type": "TEXT"
+          },
+          {
+            "name": "slot",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          }
+        ],
+        "DB_INFO": [
+          {
+            "name": "param",
+            "type": "char(50)"
+          },
+          {
+            "name": "value",
+            "type": "INTEGER"
+          }
+        ],
+        "EN_AUX_SUBTYPE": [
+          {
+            "name": "id_aux_subtype",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          }
+        ],
+        "EN_BOX_TYPE": [
+          {
+            "name": "id_box_type",
+            "type": "INT"
+          },
+          {
+            "name": "box_type_descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "default_value",
+            "type": "boolean"
+          }
+        ],
+        "EN_BRAND": [
+          {
+            "name": "id_brand",
+            "type": "INT"
+          },
+          {
+            "name": "brand_name",
+            "type": "TEXT"
+          },
+          {
+            "name": "brand_modobj",
+            "type": "INT"
+          }
+        ],
+        "EN_BUILDS": [
+          {
+            "name": "id_build",
+            "type": "INT"
+          },
+          {
+            "name": "firmware_b",
+            "type": "INT"
+          },
+          {
+            "name": "localization_level",
+            "type": "INT"
+          },
+          {
+            "name": "id_firmware",
+            "type": "INT"
+          }
+        ],
+        "EN_BUS": [
+          {
+            "name": "id_bus",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_bus_type",
+            "type": "INT"
+          },
+          {
+            "name": "level_descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "level",
+            "type": "INT"
+          }
+        ],
+        "EN_BUS_TYPE": [
+          {
+            "name": "id_bus_type",
+            "type": "INT"
+          },
+          {
+            "name": "desc_bus_type",
+            "type": "TEXT"
+          }
+        ],
+        "EN_CHAR_ALLOW": [
+          {
+            "name": "char",
+            "type": "TEXT"
+          },
+          {
+            "name": "value",
+            "type": "TEXT"
+          }
+        ],
+        "EN_COLLECTION": [
+          {
+            "name": "id_collection",
+            "type": "INT"
+          },
+          {
+            "name": "id_system",
+            "type": "INT"
+          },
+          {
+            "name": "id_collection_type",
+            "type": "INT"
+          },
+          {
+            "name": "xml_key_conf",
+            "type": "TEXT"
+          },
+          {
+            "name": "xml_key_value",
+            "type": "TEXT"
+          },
+          {
+            "name": "collection_desc",
+            "type": "TEXT"
+          }
+        ],
+        "EN_COLLECTION_TYPE": [
+          {
+            "name": "id_collection_type",
+            "type": "INT"
+          },
+          {
+            "name": "xml_key_collection",
+            "type": "TEXT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          }
+        ],
+        "EN_CONDITION": [
+          {
+            "name": "id_condition",
+            "type": "INT"
+          },
+          {
+            "name": "condition",
+            "type": "VARCHAR"
+          },
+          {
+            "name": "id_conv_rule",
+            "type": "INT"
+          }
+        ],
+        "EN_CONF": [
+          {
+            "name": "id_conf",
+            "type": "INT"
+          },
+          {
+            "name": "id_key_object",
+            "type": "INT"
+          },
+          {
+            "name": "id_firmware",
+            "type": "INT"
+          },
+          {
+            "name": "conf_name",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_conf_type",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "descr_ext",
+            "type": "TEXT"
+          },
+          {
+            "name": "hidden",
+            "type": "INT"
+          },
+          {
+            "name": "idx",
+            "type": "INT"
+          },
+          {
+            "name": "id_conf_data_type",
+            "type": "INT"
+          },
+          {
+            "name": "progressive",
+            "type": "INT"
+          },
+          {
+            "name": "visible",
+            "type": "INT"
+          },
+          {
+            "name": "read_only",
+            "type": "INT"
+          }
+        ],
+        "EN_CONFIG_MODE": [
+          {
+            "name": "id_config_mode",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "config_mode",
+            "type": "INT"
+          }
+        ],
+        "EN_CONF_DATA_TYPE": [
+          {
+            "name": "id_conf_data_type",
+            "type": "INT"
+          },
+          {
+            "name": "data_type",
+            "type": "TEXT"
+          }
+        ],
+        "EN_CONF_RANGE": [
+          {
+            "name": "id_conf_range",
+            "type": "INT"
+          },
+          {
+            "name": "value",
+            "type": "TEXT"
+          },
+          {
+            "name": "name",
+            "type": "TEXT"
+          },
+          {
+            "name": "descr_ext",
+            "type": "TEXT"
+          },
+          {
+            "name": "default",
+            "type": "VARCHAR"
+          },
+          {
+            "name": "progressive",
+            "type": "INT"
+          },
+          {
+            "name": "id_conf",
+            "type": "INT"
+          },
+          {
+            "name": "digit",
+            "type": "INT"
+          },
+          {
+            "name": "step",
+            "type": "INT"
+          },
+          {
+            "name": "min_value",
+            "type": "INT"
+          },
+          {
+            "name": "max_value",
+            "type": "INT"
+          }
+        ],
+        "EN_CONF_TYPE": [
+          {
+            "name": "id_conf_type",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          }
+        ],
+        "EN_CONNECTION": [
+          {
+            "name": "id_connection",
+            "type": "INT"
+          },
+          {
+            "name": "modality_connection",
+            "type": "TEXT"
+          }
+        ],
+        "EN_CONV_RULE": [
+          {
+            "name": "id_conv_rule",
+            "type": "INT"
+          },
+          {
+            "name": "item_conf",
+            "type": "TEXT"
+          },
+          {
+            "name": "item_conf_value",
+            "type": "TEXT"
+          },
+          {
+            "name": "object_conf",
+            "type": "TEXT"
+          },
+          {
+            "name": "object_conf_value",
+            "type": "TEXT"
+          },
+          {
+            "name": "always_true",
+            "type": "INT"
+          },
+          {
+            "name": "jump_id_conv_rule",
+            "type": "INT"
+          },
+          {
+            "name": "id",
+            "type": "INT"
+          }
+        ],
+        "EN_DEVICE": [
+          {
+            "name": "id_device",
+            "type": "INT"
+          },
+          {
+            "name": "code",
+            "type": "TEXT"
+          },
+          {
+            "name": "name",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_brand",
+            "type": "INT"
+          },
+          {
+            "name": "id_line",
+            "type": "INT"
+          },
+          {
+            "name": "visible",
+            "type": "INT"
+          },
+          {
+            "name": "id_item",
+            "type": "INT"
+          },
+          {
+            "name": "visibility_type",
+            "type": "TEXT"
+          },
+          {
+            "name": "dependent",
+            "type": "INT"
+          },
+          {
+            "name": "is_gateway",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "VARCHAR"
+          }
+        ],
+        "EN_FILE": [
+          {
+            "name": "id_extra",
+            "type": "char(50)"
+          },
+          {
+            "name": "filename",
+            "type": "char(50)"
+          },
+          {
+            "name": "version",
+            "type": "INT"
+          },
+          {
+            "name": "release",
+            "type": "INT"
+          },
+          {
+            "name": "build",
+            "type": "INT"
+          },
+          {
+            "name": "id_package",
+            "type": "INT"
+          }
+        ],
+        "EN_FILTER": [
+          {
+            "name": "id_filter",
+            "type": "INT"
+          },
+          {
+            "name": "id_object_firmware",
+            "type": "INT"
+          },
+          {
+            "name": "note",
+            "type": "TEXT"
+          },
+          {
+            "name": "whole_range",
+            "type": "INT"
+          },
+          {
+            "name": "id_conf",
+            "type": "INT"
+          }
+        ],
+        "EN_FILTER_RANGE": [
+          {
+            "name": "id_filter",
+            "type": "INT"
+          },
+          {
+            "name": "range",
+            "type": "TEXT"
+          },
+          {
+            "name": "note",
+            "type": "TEXT"
+          }
+        ],
+        "EN_FIRMWARE": [
+          {
+            "name": "id_firmware",
+            "type": "INT"
+          },
+          {
+            "name": "id_item",
+            "type": "INT"
+          },
+          {
+            "name": "firmware_V",
+            "type": "INT"
+          },
+          {
+            "name": "firmware_R",
+            "type": "INT"
+          },
+          {
+            "name": "slots",
+            "type": "INT"
+          },
+          {
+            "name": "id_status",
+            "type": "INT"
+          },
+          {
+            "name": "FW_default",
+            "type": "tinyint"
+          }
+        ],
+        "EN_FLOOR_TYPE": [
+          {
+            "name": "id_floor",
+            "type": "INT"
+          },
+          {
+            "name": "floor",
+            "type": "TEXT"
+          },
+          {
+            "name": "floor_default",
+            "type": "boolean"
+          }
+        ],
+        "EN_ICON": [
+          {
+            "name": "id_icon",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "icon_file",
+            "type": "TEXT"
+          }
+        ],
+        "EN_ITEM": [
+          {
+            "name": "id_item",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_family",
+            "type": "INT"
+          }
+        ],
+        "EN_KEY_OBJECT": [
+          {
+            "name": "id_key_object",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "slots",
+            "type": "TEXT"
+          },
+          {
+            "name": "visible",
+            "type": "INT"
+          },
+          {
+            "name": "id_family",
+            "type": "INT"
+          },
+          {
+            "name": "key_object",
+            "type": "INT"
+          }
+        ],
+        "EN_LABELS": [
+          {
+            "name": "id",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          }
+        ],
+        "EN_LANGUAGE": [
+          {
+            "name": "code",
+            "type": "char(50)"
+          },
+          {
+            "name": "name",
+            "type": "char(50)"
+          },
+          {
+            "name": "defPackageL1",
+            "type": "INT"
+          },
+          {
+            "name": "defPackageL2",
+            "type": "INT"
+          }
+        ],
+        "EN_LINE": [
+          {
+            "name": "id_line",
+            "type": "INT"
+          },
+          {
+            "name": "line_name",
+            "type": "VARCHAR"
+          },
+          {
+            "name": "line_modobj",
+            "type": "INT"
+          }
+        ],
+        "EN_OBJECT_ITEM_FAMILY": [
+          {
+            "name": "id_family",
+            "type": "INT"
+          },
+          {
+            "name": "family_name",
+            "type": "TEXT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "progressive",
+            "type": "INT"
+          }
+        ],
+        "EN_PACKAGE": [
+          {
+            "name": "id_package",
+            "type": "INT"
+          },
+          {
+            "name": "name",
+            "type": "char(50)"
+          },
+          {
+            "name": "GL",
+            "type": "INT"
+          },
+          {
+            "name": "version",
+            "type": "INT"
+          },
+          {
+            "name": "release",
+            "type": "INT"
+          },
+          {
+            "name": "build",
+            "type": "INT"
+          },
+          {
+            "name": "id_unicode_set",
+            "type": "INT"
+          }
+        ],
+        "EN_PARAMETERS": [
+          {
+            "name": "id_parameters",
+            "type": "INT"
+          },
+          {
+            "name": "path",
+            "type": "TEXT"
+          },
+          {
+            "name": "type",
+            "type": "INT"
+          }
+        ],
+        "EN_PARAMETERS_TYPE": [
+          {
+            "name": "id_parameters_type",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          }
+        ],
+        "EN_PHY_TO_ADV_TRANS": [
+          {
+            "name": "id_en_phy_to_adv_trans",
+            "type": "int(11)"
+          },
+          {
+            "name": "id_firmware",
+            "type": "int(11)"
+          },
+          {
+            "name": "trans_data",
+            "type": "int(50)"
+          },
+          {
+            "name": "description",
+            "type": "TEXT"
+          }
+        ],
+        "EN_PICTURE": [
+          {
+            "name": "id_picture",
+            "type": "INT"
+          },
+          {
+            "name": "picture_file",
+            "type": "TEXT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          }
+        ],
+        "EN_ROOM_TYPE": [
+          {
+            "name": "id_room_type",
+            "type": "INT"
+          },
+          {
+            "name": "room_type_descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "default_value",
+            "type": "boolean"
+          }
+        ],
+        "EN_SLOTS": [
+          {
+            "name": "id_slot",
+            "type": "INT"
+          },
+          {
+            "name": "first_slot",
+            "type": "INT"
+          },
+          {
+            "name": "fixed_ko",
+            "type": "BOOL"
+          },
+          {
+            "name": "id_object_firmware",
+            "type": "INT"
+          }
+        ],
+        "EN_SLOT_KO_VIRGIN": [
+          {
+            "name": "id_slot_ko_virgin",
+            "type": "INT"
+          },
+          {
+            "name": "id_fw_virgin",
+            "type": "INT"
+          },
+          {
+            "name": "slots",
+            "type": "INT"
+          }
+        ],
+        "EN_SPECIAL_FUNCTION": [
+          {
+            "name": "id_function",
+            "type": "INT"
+          },
+          {
+            "name": "function",
+            "type": "TEXT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          }
+        ],
+        "EN_STATUS": [
+          {
+            "name": "id",
+            "type": "int(10)"
+          },
+          {
+            "name": "name",
+            "type": "varchar(50)"
+          },
+          {
+            "name": "description",
+            "type": "varchar(255)"
+          }
+        ],
+        "EN_SW_INIT": [
+          {
+            "name": "param",
+            "type": "TEXT"
+          },
+          {
+            "name": "value",
+            "type": "TEXT"
+          }
+        ],
+        "EN_SYSTEM": [
+          {
+            "name": "id_system",
+            "type": "INT"
+          },
+          {
+            "name": "name",
+            "type": "TEXT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "xml_key_system",
+            "type": "TEXT"
+          },
+          {
+            "name": "sys_modobj",
+            "type": "INT"
+          }
+        ],
+        "EN_UNICODE_RANGE": [
+          {
+            "name": "id_unicode_range",
+            "type": "INT"
+          },
+          {
+            "name": "Min",
+            "type": "char(50)"
+          },
+          {
+            "name": "Max",
+            "type": "char(50)"
+          }
+        ],
+        "EN_UNICODE_SET": [
+          {
+            "name": "id_unicode_set",
+            "type": "INT"
+          },
+          {
+            "name": "notes",
+            "type": "char(50)"
+          }
+        ],
+        "EN_VIRGIN_OBJECT": [
+          {
+            "name": "id_virgin_key_object",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "virgin_key_object",
+            "type": "INT"
+          }
+        ],
+        "MACRO_TASKS": [
+          {
+            "name": "key_object",
+            "type": "INT"
+          },
+          {
+            "name": "ko_descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_bus_type",
+            "type": "INT"
+          },
+          {
+            "name": "bus_type_descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_system",
+            "type": "INT"
+          },
+          {
+            "name": "system_descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "collection",
+            "type": "TEXT"
+          }
+        ],
+        "RIF_ANA_GROUP": [
+          {
+            "name": "id_group",
+            "type": "INT"
+          },
+          {
+            "name": "id_apartment",
+            "type": "INT"
+          },
+          {
+            "name": "id_bus",
+            "type": "INT"
+          },
+          {
+            "name": "id_system",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "group_number",
+            "type": "INT"
+          },
+          {
+            "name": "is_light_zone",
+            "type": "INT"
+          },
+          {
+            "name": "color",
+            "type": "TEXT"
+          }
+        ],
+        "RIF_MH_COLLECTION_OBJECTS": [
+          {
+            "name": "id_collection",
+            "type": "INT"
+          },
+          {
+            "name": "collection_type",
+            "type": "TEXT"
+          },
+          {
+            "name": "key_conf_collection",
+            "type": "TEXT"
+          },
+          {
+            "name": "key_value_collection",
+            "type": "TEXT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_apartment",
+            "type": "INT"
+          },
+          {
+            "name": "id_bus",
+            "type": "INT"
+          },
+          {
+            "name": "id_system",
+            "type": "INT"
+          },
+          {
+            "name": "progressive",
+            "type": "INT"
+          }
+        ],
+        "RIF_MH_OBJECT": [
+          {
+            "name": "id_object",
+            "type": "INT"
+          },
+          {
+            "name": "key_object",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_apartment",
+            "type": "INT"
+          },
+          {
+            "name": "id_bus",
+            "type": "INT"
+          },
+          {
+            "name": "id_system",
+            "type": "INT"
+          },
+          {
+            "name": "id_collection",
+            "type": "INT"
+          },
+          {
+            "name": "progressive",
+            "type": "INT"
+          },
+          {
+            "name": "esistenza",
+            "type": "INT"
+          },
+          {
+            "name": "id_group",
+            "type": "INT"
+          },
+          {
+            "name": "SysAddress",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_ID": [
+          {
+            "name": "id",
+            "type": "INT"
+          }
+        ],
+        "sqlite_sequence": [
+          {
+            "name": "name",
+            "type": ""
+          },
+          {
+            "name": "seq",
+            "type": ""
+          }
+        ]
+      },
+      "quick_check": [
+        "ok"
+      ]
+    },
+    {
+      "bytes": 34816,
+      "sha256": "cd3b9b67160f468cdbd30134357b8733c696aacd5d625129240dff6b79224fc3",
+      "local_path": "recovered/cd3b9b67160f468cdbd30134357b8733c696aacd5d625129240dff6b79224fc3.bin",
+      "registered_artifact_ids": [
+        "myhome-suite-3.5.38-scenario-devices-programdata"
+      ],
+      "SQLite3_header": true,
+      "tables": [
+        "Commands",
+        "DeviceObjects",
+        "ObjectSystems",
+        "Parameters",
+        "sqlite_sequence"
+      ],
+      "table_columns": {
+        "Commands": [
+          {
+            "name": "Id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "CommandId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "CommandMatchingId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "WherePlaceholder",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "WhereType",
+            "type": "tinyint"
+          },
+          {
+            "name": "WhereName",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ChiOpen",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Frame",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "DeviceObject_Id",
+            "type": "INTEGER"
+          }
+        ],
+        "DeviceObjects": [
+          {
+            "name": "Id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "ObjectId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "ObjectMatchingId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ObjectSystem_Id",
+            "type": "INTEGER"
+          }
+        ],
+        "ObjectSystems": [
+          {
+            "name": "Id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "CategoryFlag",
+            "type": "tinyint"
+          }
+        ],
+        "Parameters": [
+          {
+            "name": "Id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Min",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Max",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Type",
+            "type": "tinyint"
+          },
+          {
+            "name": "Step",
+            "type": "float"
+          },
+          {
+            "name": "Command_Id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Placeholder",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "OperatorType",
+            "type": "tinyint"
+          },
+          {
+            "name": "Value",
+            "type": "nvarchar(2147483647)"
+          }
+        ],
+        "sqlite_sequence": [
+          {
+            "name": "name",
+            "type": ""
+          },
+          {
+            "name": "seq",
+            "type": ""
+          }
+        ]
+      },
+      "quick_check": [
+        "ok"
+      ]
+    },
+    {
+      "bytes": 2542592,
+      "sha256": "83b7fa13c224012ebd1561fbc2895deb599b06223eb8e5041f565b7c5b7dbfd8",
+      "local_path": "recovered/83b7fa13c224012ebd1561fbc2895deb599b06223eb8e5041f565b7c5b7dbfd8.bin",
+      "registered_artifact_ids": [],
+      "SQLite3_header": true,
+      "tables": [
+        "ANA_AREA",
+        "ANA_AUXILIARIES_FIELDS",
+        "ANA_CHI",
+        "ANA_COMBO",
+        "ANA_COMBO_VALUES",
+        "ANA_CONDITION",
+        "ANA_CONF",
+        "ANA_CONVERSION_TYPE",
+        "ANA_CONV_OSX_AUX_FIELDS",
+        "ANA_COSA",
+        "ANA_DOVE",
+        "ANA_FAMIGLIA",
+        "ANA_FIELD_TYPE",
+        "ANA_GRANULARITY",
+        "ANA_GRAPHIC_TYPE",
+        "ANA_KEYCONF",
+        "ANA_KEYOBJECT",
+        "ANA_LABELS",
+        "ANA_OBJECT_COMPOSITION",
+        "ANA_OBJ_FIELDS_GROUPS",
+        "ANA_OGGETTI",
+        "ANA_OPEN_RULE_COMPILE",
+        "ANA_OPERATORE",
+        "ANA_PARAMETER",
+        "ANA_PARAMETER_TYPE",
+        "ANA_RANGE",
+        "ANA_REQUEST_TYPE",
+        "ANA_RES",
+        "ANA_RES_OPEN_EXT",
+        "ANA_RES_TYPE",
+        "ANA_RULE_OPEN_EXT",
+        "ANA_STATUS_REQUEST_COMPILE",
+        "ANA_SYSTEM",
+        "ANA_TEXT",
+        "ANA_VALUES",
+        "ANA_VERSIONE_DB",
+        "ANA_WHERE_DEADVALUES",
+        "ANA_WHERE_TYPE",
+        "ASS_COMBO_VALUES",
+        "ASS_CONV_OSX_AUX_FIELDS",
+        "ASS_COSA_AUX_FIELDS",
+        "ASS_FIELD_CONDITION",
+        "ASS_KEYOBJ_OBJ",
+        "ASS_OBJ_AREE",
+        "ASS_OBJ_CHI",
+        "ASS_OBJ_COSA",
+        "ASS_OBJ_COSA_FIELDS_EXCEPTIONS",
+        "ASS_OBJ_DOVE",
+        "ASS_OBJ_RULE_OPEN",
+        "ASS_OBJ_WHERE_TYPE",
+        "ASS_OPEN_EXT_DEAD_VALUE",
+        "ASS_RES_TIME",
+        "ASS_RULE_OPEN_DOVE",
+        "ASS_TYPE_CONF",
+        "DB_CONFIG",
+        "TMP_COLLECION",
+        "TMP_COND_OK",
+        "TMP_COND_OK_AUX_FIELDS",
+        "TMP_COND_OK_WHERE_CONF",
+        "TMP_OPE_OK",
+        "TMP_PANICKEY",
+        "TMP_PANICKEY_AUX_FIELDS",
+        "TMP_PANICKEY_WHERE_CONF",
+        "TMP_SCENARI",
+        "TMP_STEP_ACT",
+        "TMP_STEP_ACT_AUX_FIELDS",
+        "TMP_STEP_ACT_WHERE_CONF",
+        "TMP_TRIGGER",
+        "TMP_TRIGGERSTOP",
+        "TMP_TRIGGER_AUX_FIELDS",
+        "TMP_TRIGGER_DISABLE",
+        "TMP_TRIGGER_DISABLE_AUX_FIELDS",
+        "TMP_TRIGGER_DISABLE_WHERE_CONF",
+        "TMP_TRIGGER_ENABLE",
+        "TMP_TRIGGER_ENABLE_AUX_FIELDS",
+        "TMP_TRIGGER_ENABLE_WHERE_CONF",
+        "TMP_TRIGGER_WHERE_CONF",
+        "TMP_TRIGG_STOP_AUX_FIELDS",
+        "TMP_TRIGG_STOP_WHERE_CONF"
+      ],
+      "table_columns": {
+        "ANA_AREA": [
+          {
+            "name": "ID_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_AUXILIARIES_FIELDS": [
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_GRAPHIC_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "CONFIGURATOR",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_KIND",
+            "type": "INT"
+          },
+          {
+            "name": "VALUATION",
+            "type": "INT"
+          },
+          {
+            "name": "CONVERSION_RULE",
+            "type": "INTEGER"
+          }
+        ],
+        "ANA_CHI": [
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI_CHI",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_CHI",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_COMBO": [
+          {
+            "name": "ID_KIND",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_COMBO_VALUES": [
+          {
+            "name": "ID_COMBO_VALUE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_KIND",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "VALUE_COMBO",
+            "type": "INT"
+          }
+        ],
+        "ANA_CONDITION": [
+          {
+            "name": "ID_COND",
+            "type": "INT"
+          },
+          {
+            "name": "SYMBOL",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_CONF": [
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "CONFIGURATOR",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_CONVERSION_TYPE": [
+          {
+            "name": "ID_CONV_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "CONVERSION",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_CONV_OSX_AUX_FIELDS": [
+          {
+            "name": "ID_CONVERSION_OSX",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRIPTION",
+            "type": "varchar(100)"
+          }
+        ],
+        "ANA_COSA": [
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI_COSA",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_COSA",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_RES_COSA",
+            "type": "INT"
+          }
+        ],
+        "ANA_DOVE": [
+          {
+            "name": "ID_DOVE",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI_DOVE",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_DOVE",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_WHERE_TYPE",
+            "type": "INT"
+          }
+        ],
+        "ANA_FAMIGLIA": [
+          {
+            "name": "ID_FAMIGLIA",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI_FAM",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG_FAM",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT_OBJ",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT_TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "ATTIVA",
+            "type": "INT"
+          }
+        ],
+        "ANA_FIELD_TYPE": [
+          {
+            "name": "ID_FIELD",
+            "type": "INTEGER"
+          },
+          {
+            "name": "DESCR",
+            "type": "VARCHAR(50)"
+          }
+        ],
+        "ANA_GRANULARITY": [
+          {
+            "name": "ID_GRANULARITY",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_GRAPHIC_TYPE": [
+          {
+            "name": "ID_GRAPHIC_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_KEYCONF": [
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_CONF",
+            "type": "TEXT"
+          },
+          {
+            "name": "KEY_VALUE",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_KEYOBJECT": [
+          {
+            "name": "ID_KO",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_LABELS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_OBJECT_COMPOSITION": [
+          {
+            "name": "ID_COMP",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "ORDER",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INTEGER"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_OBJ_FIELDS_GROUPS",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_OBJ_FIELDS_GROUPS": [
+          {
+            "name": "ID_OBJ_FIELDS_GROUPS",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_OGGETTI": [
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI_OBJ",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_RES",
+            "type": "INT"
+          },
+          {
+            "name": "FUNCT_OBJ",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT_TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FAMIGLIA",
+            "type": "INT"
+          }
+        ],
+        "ANA_OPEN_RULE_COMPILE": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGER_START_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGER_STOP_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "COND_OK_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "ACT_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGER_ENABLE",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGER_DISABLE",
+            "type": "INT"
+          },
+          {
+            "name": "PANIC_KEY",
+            "type": "INT"
+          },
+          {
+            "name": "OPEN_FIELD_1",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_2",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_3",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_4",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_5",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_6",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_7",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_8",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_9",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_10",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_OPERATORE": [
+          {
+            "name": "ID_OPE",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI_OPE",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG_OPE",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT_OPE",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_PARAMETER": [
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "ID_PARAMETER_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "PARAMETER",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDER",
+            "type": "INT"
+          },
+          {
+            "name": "PROPERTY",
+            "type": "TEXT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONV_TYPE",
+            "type": "INT"
+          }
+        ],
+        "ANA_PARAMETER_TYPE": [
+          {
+            "name": "ID_PARAMETER_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "TYPE",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_RANGE": [
+          {
+            "name": "ID_KIND",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          },
+          {
+            "name": "MIN",
+            "type": "INT"
+          },
+          {
+            "name": "MAX",
+            "type": "INT"
+          },
+          {
+            "name": "STEP",
+            "type": "INT"
+          },
+          {
+            "name": "MOLTIPLICATORE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_GRANULARITY",
+            "type": "INT"
+          }
+        ],
+        "ANA_REQUEST_TYPE": [
+          {
+            "name": "ID_REQ_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "varchar(50)"
+          }
+        ],
+        "ANA_RES": [
+          {
+            "name": "ID_RES_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_RES_TYPE",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_RES_OPEN_EXT": [
+          {
+            "name": "ID_RES",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRIPTION",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_RES_TYPE": [
+          {
+            "name": "ID_RES_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "RES_TYPE",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_RULE_OPEN_EXT": [
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "LEVEL_OPEN",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "PREFIX_LEVEL",
+            "type": "TEXT"
+          },
+          {
+            "name": "NUM_DIGIT_ADD",
+            "type": "INT"
+          },
+          {
+            "name": "MIN_ADD_I1",
+            "type": "INT"
+          },
+          {
+            "name": "MAX_ADD_I1",
+            "type": "INT"
+          },
+          {
+            "name": "MIN_ADD_I2",
+            "type": "INT"
+          },
+          {
+            "name": "MAX_ADD_I2",
+            "type": "INT"
+          },
+          {
+            "name": "MIN_ADD_I3",
+            "type": "INT"
+          },
+          {
+            "name": "MAX_ADD_I3",
+            "type": "INT"
+          },
+          {
+            "name": "MIN_ADD_I4",
+            "type": "INT"
+          },
+          {
+            "name": "MAX_ADD_I4",
+            "type": "INT"
+          },
+          {
+            "name": "PREFIX_ADD",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_STATUS_REQUEST_COMPILE": [
+          {
+            "name": "ID_COMP",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM_REQUEST",
+            "type": "INT"
+          },
+          {
+            "name": "ID_REQ_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "REQUEST_DIMENSION",
+            "type": "TEXT"
+          },
+          {
+            "name": "REPLY_FUNCTION",
+            "type": "TEXT"
+          },
+          {
+            "name": "REPLY_DIMENSION",
+            "type": "TEXT"
+          },
+          {
+            "name": "REPLY_PAR",
+            "type": "TEXT"
+          },
+          {
+            "name": "CUSTOM_VALUTATION",
+            "type": "INT"
+          }
+        ],
+        "ANA_SYSTEM": [
+          {
+            "name": "ID_SYSTEM",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          },
+          {
+            "name": "KEY_SYSTEM",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_TEXT": [
+          {
+            "name": "ID_KIND",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          },
+          {
+            "name": "REGEXP",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_VALUES": [
+          {
+            "name": "ID_VALUE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "MIN",
+            "type": "INT"
+          },
+          {
+            "name": "MAX",
+            "type": "INT"
+          },
+          {
+            "name": "STEP",
+            "type": "INT"
+          }
+        ],
+        "ANA_VERSIONE_DB": [
+          {
+            "name": "VERSION",
+            "type": "INT"
+          },
+          {
+            "name": "RELEASE",
+            "type": "INT"
+          },
+          {
+            "name": "BUILD",
+            "type": "INT"
+          }
+        ],
+        "ANA_WHERE_DEADVALUES": [
+          {
+            "name": "ID_VALUE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_WHERE_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "ADDRESS_VALUE",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_WHERE_TYPE": [
+          {
+            "name": "ID_WHERE_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "REGEXP",
+            "type": "TEXT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          }
+        ],
+        "ASS_COMBO_VALUES": [
+          {
+            "name": "ID_COMBO_VALUE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_KIND",
+            "type": "INT"
+          }
+        ],
+        "ASS_CONV_OSX_AUX_FIELDS": [
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONVERSION_OSX",
+            "type": "INT"
+          }
+        ],
+        "ASS_COSA_AUX_FIELDS": [
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "ORDER",
+            "type": "INT"
+          },
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "AUX_DEFAULT_VALUE",
+            "type": "TEXT"
+          }
+        ],
+        "ASS_FIELD_CONDITION": [
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COND",
+            "type": "INT"
+          }
+        ],
+        "ASS_KEYOBJ_OBJ": [
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "ID_KO",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_SYSTEM",
+            "type": "TEXT"
+          }
+        ],
+        "ASS_OBJ_AREE": [
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGER",
+            "type": "INT"
+          },
+          {
+            "name": "COND_OK",
+            "type": "INT"
+          },
+          {
+            "name": "COND_KO",
+            "type": "INT"
+          },
+          {
+            "name": "ACT",
+            "type": "INT"
+          },
+          {
+            "name": "ACT_ELSE",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGERSTOP",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGERENABLE",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGERDISABLE",
+            "type": "INT"
+          },
+          {
+            "name": "PANICKEY",
+            "type": "INT"
+          }
+        ],
+        "ASS_OBJ_CHI": [
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          }
+        ],
+        "ASS_OBJ_COSA": [
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          }
+        ],
+        "ASS_OBJ_COSA_FIELDS_EXCEPTIONS": [
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ_FIELDS_GROUPS",
+            "type": "INT"
+          }
+        ],
+        "ASS_OBJ_DOVE": [
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_DOVE",
+            "type": "INT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "GESTIONE_CUSTOM",
+            "type": "INT"
+          }
+        ],
+        "ASS_OBJ_RULE_OPEN": [
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ID_AREA",
+            "type": "INT"
+          }
+        ],
+        "ASS_OBJ_WHERE_TYPE": [
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_WHERE_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "MASTER",
+            "type": "INT"
+          },
+          {
+            "name": "COMBO",
+            "type": "INT"
+          },
+          {
+            "name": "ORDER",
+            "type": "INT"
+          }
+        ],
+        "ASS_OPEN_EXT_DEAD_VALUE": [
+          {
+            "name": "IDVALUE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADDRESS_VALUE",
+            "type": "TEXT"
+          }
+        ],
+        "ASS_RES_TIME": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ORA_SINGOLA",
+            "type": "INT"
+          },
+          {
+            "name": "FASCIA_ORA",
+            "type": "INT"
+          },
+          {
+            "name": "TUTTA_SETT",
+            "type": "INT"
+          },
+          {
+            "name": "PIANO_SETT",
+            "type": "INT"
+          },
+          {
+            "name": "SEMPRE",
+            "type": "INT"
+          },
+          {
+            "name": "DADATA_ADATA",
+            "type": "INT"
+          },
+          {
+            "name": "ID_RES",
+            "type": "INT"
+          }
+        ],
+        "ASS_RULE_OPEN_DOVE": [
+          {
+            "name": "ID_DOVE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          }
+        ],
+        "ASS_TYPE_CONF": [
+          {
+            "name": "ID_WHERE_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "ORDER",
+            "type": "INT"
+          },
+          {
+            "name": "DEFAULT_VALUE",
+            "type": "INT"
+          }
+        ],
+        "DB_CONFIG": [
+          {
+            "name": "LINGUA",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_COLLECION": [
+          {
+            "name": "ID_PARAM",
+            "type": "INT"
+          },
+          {
+            "name": "PARAM",
+            "type": "TEXT"
+          },
+          {
+            "name": "PAR_VALUE",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_COND_OK": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_SCENARIO",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_OPT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADD_INT",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPE",
+            "type": "INT"
+          },
+          {
+            "name": "ID1",
+            "type": "INT"
+          },
+          {
+            "name": "ID2",
+            "type": "INT"
+          }
+        ],
+        "TMP_COND_OK_AUX_FIELDS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_FIELD",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_COND_OK_WHERE_CONF": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_CONF",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_OPE_OK": [
+          {
+            "name": "ID_OPE",
+            "type": "INT"
+          },
+          {
+            "name": "ID1",
+            "type": "INT"
+          },
+          {
+            "name": "ID2",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          }
+        ],
+        "TMP_PANICKEY": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_OPT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADD_INT",
+            "type": "INT"
+          }
+        ],
+        "TMP_PANICKEY_AUX_FIELDS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_FIELD",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_PANICKEY_WHERE_CONF": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_CONF",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_SCENARI": [
+          {
+            "name": "ID_SCENARIO",
+            "type": "INT"
+          },
+          {
+            "name": "SCEN_NAME",
+            "type": "TEXT"
+          },
+          {
+            "name": "USER_DESCRIPTION",
+            "type": "TEXT"
+          },
+          {
+            "name": "REPEAT",
+            "type": "INT"
+          },
+          {
+            "name": "RESTART",
+            "type": "INT"
+          },
+          {
+            "name": "SPT_PATH",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_STEP_ACT": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_SCENARIO",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_OPT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADD_INT",
+            "type": "INT"
+          }
+        ],
+        "TMP_STEP_ACT_AUX_FIELDS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_FIELD",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_STEP_ACT_WHERE_CONF": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_CONF",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGGER": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_SCENARIO",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_OPT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADD_INT",
+            "type": "INT"
+          }
+        ],
+        "TMP_TRIGGERSTOP": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_SCENARIO",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_OPT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADD_INT",
+            "type": "INT"
+          }
+        ],
+        "TMP_TRIGGER_AUX_FIELDS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_FIELD",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGGER_DISABLE": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_SCENARIO",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_OPT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADD_INT",
+            "type": "INT"
+          }
+        ],
+        "TMP_TRIGGER_DISABLE_AUX_FIELDS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_FIELD",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGGER_DISABLE_WHERE_CONF": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_CONF",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGGER_ENABLE": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_SCENARIO",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_OPT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADD_INT",
+            "type": "INT"
+          }
+        ],
+        "TMP_TRIGGER_ENABLE_AUX_FIELDS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_FIELD",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGGER_ENABLE_WHERE_CONF": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_CONF",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGGER_WHERE_CONF": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_CONF",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGG_STOP_AUX_FIELDS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_FIELD",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGG_STOP_WHERE_CONF": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_CONF",
+            "type": "TEXT"
+          }
+        ]
+      },
+      "quick_check": [
+        "ok"
+      ]
+    },
+    {
+      "bytes": 344064,
+      "sha256": "73297a1449df378063b8a2ab23a8f1787a782df9ee6f00f7b2d702e3ec608e93",
+      "local_path": "recovered/73297a1449df378063b8a2ab23a8f1787a782df9ee6f00f7b2d702e3ec608e93.bin",
+      "registered_artifact_ids": [],
+      "SQLite3_header": true,
+      "tables": [
+        "ApplicationComplexProperties",
+        "ApplicationCurrencies",
+        "ApplicationItems",
+        "ApplicationProperties",
+        "Behaviours",
+        "ItemValidations",
+        "PropertyValidations",
+        "Settings",
+        "sqlite_sequence"
+      ],
+      "table_columns": {
+        "ApplicationComplexProperties": [
+          {
+            "name": "ApplicationComplexPropertyId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Description",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Value",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationProperty_ApplicationPropertyId",
+            "type": "INTEGER"
+          }
+        ],
+        "ApplicationCurrencies": [
+          {
+            "name": "ApplicationCurrencyId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Symbol",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Decimal",
+            "type": "float"
+          },
+          {
+            "name": "Integer",
+            "type": "smallint"
+          },
+          {
+            "name": "Delta",
+            "type": "float"
+          }
+        ],
+        "ApplicationItems": [
+          {
+            "name": "ApplicationItemId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Image",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ParentApplicationItemId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Cid",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          }
+        ],
+        "ApplicationProperties": [
+          {
+            "name": "ApplicationPropertyId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Value",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ConfTag",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Description",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationItem_ApplicationItemId",
+            "type": "INTEGER"
+          }
+        ],
+        "Behaviours": [
+          {
+            "name": "BehaviourId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "PropertyValue",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "TargetPropertyName",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "TargetValue",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationProperty_ApplicationPropertyId",
+            "type": "INTEGER"
+          }
+        ],
+        "ItemValidations": [
+          {
+            "name": "ItemValidationId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Function",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Message",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Severity",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ExecuteOn",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationItem_ApplicationItemId",
+            "type": "INTEGER"
+          }
+        ],
+        "PropertyValidations": [
+          {
+            "name": "PropertyValidationId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Rule",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ErrorMessage",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationProperty_ApplicationPropertyId",
+            "type": "INTEGER"
+          }
+        ],
+        "Settings": [
+          {
+            "name": "Key",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Value",
+            "type": "nvarchar(2147483647)"
+          }
+        ],
+        "sqlite_sequence": [
+          {
+            "name": "name",
+            "type": ""
+          },
+          {
+            "name": "seq",
+            "type": ""
+          }
+        ]
+      },
+      "quick_check": [
+        "ok"
+      ]
+    },
+    {
+      "bytes": 344064,
+      "sha256": "ad88777e1b3e2d11dd7efa6c79b080ec57258fdff3596c9c1ac5cc1ad0983214",
+      "local_path": "recovered/ad88777e1b3e2d11dd7efa6c79b080ec57258fdff3596c9c1ac5cc1ad0983214.bin",
+      "registered_artifact_ids": [],
+      "SQLite3_header": true,
+      "tables": [
+        "ApplicationComplexProperties",
+        "ApplicationCurrencies",
+        "ApplicationItems",
+        "ApplicationProperties",
+        "Behaviours",
+        "ItemValidations",
+        "PropertyValidations",
+        "Settings",
+        "sqlite_sequence"
+      ],
+      "table_columns": {
+        "ApplicationComplexProperties": [
+          {
+            "name": "ApplicationComplexPropertyId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Description",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Value",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationProperty_ApplicationPropertyId",
+            "type": "INTEGER"
+          }
+        ],
+        "ApplicationCurrencies": [
+          {
+            "name": "ApplicationCurrencyId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Symbol",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Decimal",
+            "type": "float"
+          },
+          {
+            "name": "Integer",
+            "type": "smallint"
+          },
+          {
+            "name": "Delta",
+            "type": "float"
+          }
+        ],
+        "ApplicationItems": [
+          {
+            "name": "ApplicationItemId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Image",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ParentApplicationItemId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Cid",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          }
+        ],
+        "ApplicationProperties": [
+          {
+            "name": "ApplicationPropertyId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Value",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ConfTag",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Description",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationItem_ApplicationItemId",
+            "type": "INTEGER"
+          }
+        ],
+        "Behaviours": [
+          {
+            "name": "BehaviourId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "PropertyValue",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "TargetPropertyName",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "TargetValue",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationProperty_ApplicationPropertyId",
+            "type": "INTEGER"
+          }
+        ],
+        "ItemValidations": [
+          {
+            "name": "ItemValidationId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Function",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Message",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Severity",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ExecuteOn",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationItem_ApplicationItemId",
+            "type": "INTEGER"
+          }
+        ],
+        "PropertyValidations": [
+          {
+            "name": "PropertyValidationId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Rule",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ErrorMessage",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationProperty_ApplicationPropertyId",
+            "type": "INTEGER"
+          }
+        ],
+        "Settings": [
+          {
+            "name": "Key",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Value",
+            "type": "nvarchar(2147483647)"
+          }
+        ],
+        "sqlite_sequence": [
+          {
+            "name": "name",
+            "type": ""
+          },
+          {
+            "name": "seq",
+            "type": ""
+          }
+        ]
+      },
+      "quick_check": [
+        "ok"
+      ]
+    },
+    {
+      "bytes": 344064,
+      "sha256": "e44bbbd25ad849b38e52f58862c9b4e31240a01555115b68e4397584cb85308e",
+      "local_path": "recovered/e44bbbd25ad849b38e52f58862c9b4e31240a01555115b68e4397584cb85308e.bin",
+      "registered_artifact_ids": [],
+      "SQLite3_header": true,
+      "tables": [
+        "ApplicationComplexProperties",
+        "ApplicationCurrencies",
+        "ApplicationItems",
+        "ApplicationProperties",
+        "Behaviours",
+        "ItemValidations",
+        "PropertyValidations",
+        "Settings",
+        "sqlite_sequence"
+      ],
+      "table_columns": {
+        "ApplicationComplexProperties": [
+          {
+            "name": "ApplicationComplexPropertyId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Description",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Value",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationProperty_ApplicationPropertyId",
+            "type": "INTEGER"
+          }
+        ],
+        "ApplicationCurrencies": [
+          {
+            "name": "ApplicationCurrencyId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Symbol",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Decimal",
+            "type": "float"
+          },
+          {
+            "name": "Integer",
+            "type": "smallint"
+          },
+          {
+            "name": "Delta",
+            "type": "float"
+          }
+        ],
+        "ApplicationItems": [
+          {
+            "name": "ApplicationItemId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Image",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ParentApplicationItemId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Cid",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          }
+        ],
+        "ApplicationProperties": [
+          {
+            "name": "ApplicationPropertyId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Value",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ConfTag",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Description",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationItem_ApplicationItemId",
+            "type": "INTEGER"
+          }
+        ],
+        "Behaviours": [
+          {
+            "name": "BehaviourId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "PropertyValue",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "TargetPropertyName",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "TargetValue",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationProperty_ApplicationPropertyId",
+            "type": "INTEGER"
+          }
+        ],
+        "ItemValidations": [
+          {
+            "name": "ItemValidationId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Function",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Message",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Severity",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ExecuteOn",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationItem_ApplicationItemId",
+            "type": "INTEGER"
+          }
+        ],
+        "PropertyValidations": [
+          {
+            "name": "PropertyValidationId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Rule",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ErrorMessage",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationProperty_ApplicationPropertyId",
+            "type": "INTEGER"
+          }
+        ],
+        "Settings": [
+          {
+            "name": "Key",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Value",
+            "type": "nvarchar(2147483647)"
+          }
+        ],
+        "sqlite_sequence": [
+          {
+            "name": "name",
+            "type": ""
+          },
+          {
+            "name": "seq",
+            "type": ""
+          }
+        ]
+      },
+      "quick_check": [
+        "ok"
+      ]
+    },
+    {
+      "bytes": 2542592,
+      "sha256": "ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29",
+      "local_path": "recovered/ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29.bin",
+      "registered_artifact_ids": [
+        "myhome-suite-3.5.38-mh202-1902-lgg-scen-suite-db-eng"
+      ],
+      "SQLite3_header": true,
+      "tables": [
+        "ANA_AREA",
+        "ANA_AUXILIARIES_FIELDS",
+        "ANA_CHI",
+        "ANA_COMBO",
+        "ANA_COMBO_VALUES",
+        "ANA_CONDITION",
+        "ANA_CONF",
+        "ANA_CONVERSION_TYPE",
+        "ANA_CONV_OSX_AUX_FIELDS",
+        "ANA_COSA",
+        "ANA_DOVE",
+        "ANA_FAMIGLIA",
+        "ANA_FIELD_TYPE",
+        "ANA_GRANULARITY",
+        "ANA_GRAPHIC_TYPE",
+        "ANA_KEYCONF",
+        "ANA_KEYOBJECT",
+        "ANA_LABELS",
+        "ANA_OBJECT_COMPOSITION",
+        "ANA_OBJ_FIELDS_GROUPS",
+        "ANA_OGGETTI",
+        "ANA_OPEN_RULE_COMPILE",
+        "ANA_OPERATORE",
+        "ANA_PARAMETER",
+        "ANA_PARAMETER_TYPE",
+        "ANA_RANGE",
+        "ANA_REQUEST_TYPE",
+        "ANA_RES",
+        "ANA_RES_OPEN_EXT",
+        "ANA_RES_TYPE",
+        "ANA_RULE_OPEN_EXT",
+        "ANA_STATUS_REQUEST_COMPILE",
+        "ANA_SYSTEM",
+        "ANA_TEXT",
+        "ANA_VALUES",
+        "ANA_VERSIONE_DB",
+        "ANA_WHERE_DEADVALUES",
+        "ANA_WHERE_TYPE",
+        "ASS_COMBO_VALUES",
+        "ASS_CONV_OSX_AUX_FIELDS",
+        "ASS_COSA_AUX_FIELDS",
+        "ASS_FIELD_CONDITION",
+        "ASS_KEYOBJ_OBJ",
+        "ASS_OBJ_AREE",
+        "ASS_OBJ_CHI",
+        "ASS_OBJ_COSA",
+        "ASS_OBJ_COSA_FIELDS_EXCEPTIONS",
+        "ASS_OBJ_DOVE",
+        "ASS_OBJ_RULE_OPEN",
+        "ASS_OBJ_WHERE_TYPE",
+        "ASS_OPEN_EXT_DEAD_VALUE",
+        "ASS_RES_TIME",
+        "ASS_RULE_OPEN_DOVE",
+        "ASS_TYPE_CONF",
+        "DB_CONFIG",
+        "TMP_COLLECION",
+        "TMP_COND_OK",
+        "TMP_COND_OK_AUX_FIELDS",
+        "TMP_COND_OK_WHERE_CONF",
+        "TMP_OPE_OK",
+        "TMP_PANICKEY",
+        "TMP_PANICKEY_AUX_FIELDS",
+        "TMP_PANICKEY_WHERE_CONF",
+        "TMP_SCENARI",
+        "TMP_STEP_ACT",
+        "TMP_STEP_ACT_AUX_FIELDS",
+        "TMP_STEP_ACT_WHERE_CONF",
+        "TMP_TRIGGER",
+        "TMP_TRIGGERSTOP",
+        "TMP_TRIGGER_AUX_FIELDS",
+        "TMP_TRIGGER_DISABLE",
+        "TMP_TRIGGER_DISABLE_AUX_FIELDS",
+        "TMP_TRIGGER_DISABLE_WHERE_CONF",
+        "TMP_TRIGGER_ENABLE",
+        "TMP_TRIGGER_ENABLE_AUX_FIELDS",
+        "TMP_TRIGGER_ENABLE_WHERE_CONF",
+        "TMP_TRIGGER_WHERE_CONF",
+        "TMP_TRIGG_STOP_AUX_FIELDS",
+        "TMP_TRIGG_STOP_WHERE_CONF"
+      ],
+      "table_columns": {
+        "ANA_AREA": [
+          {
+            "name": "ID_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_AUXILIARIES_FIELDS": [
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_GRAPHIC_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "CONFIGURATOR",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_KIND",
+            "type": "INT"
+          },
+          {
+            "name": "VALUATION",
+            "type": "INT"
+          },
+          {
+            "name": "CONVERSION_RULE",
+            "type": "INTEGER"
+          }
+        ],
+        "ANA_CHI": [
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI_CHI",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_CHI",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_COMBO": [
+          {
+            "name": "ID_KIND",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_COMBO_VALUES": [
+          {
+            "name": "ID_COMBO_VALUE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_KIND",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "VALUE_COMBO",
+            "type": "INT"
+          }
+        ],
+        "ANA_CONDITION": [
+          {
+            "name": "ID_COND",
+            "type": "INT"
+          },
+          {
+            "name": "SYMBOL",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_CONF": [
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "CONFIGURATOR",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_CONVERSION_TYPE": [
+          {
+            "name": "ID_CONV_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "CONVERSION",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_CONV_OSX_AUX_FIELDS": [
+          {
+            "name": "ID_CONVERSION_OSX",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRIPTION",
+            "type": "varchar(100)"
+          }
+        ],
+        "ANA_COSA": [
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI_COSA",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_COSA",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_RES_COSA",
+            "type": "INT"
+          }
+        ],
+        "ANA_DOVE": [
+          {
+            "name": "ID_DOVE",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI_DOVE",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_DOVE",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_WHERE_TYPE",
+            "type": "INT"
+          }
+        ],
+        "ANA_FAMIGLIA": [
+          {
+            "name": "ID_FAMIGLIA",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI_FAM",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG_FAM",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT_OBJ",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT_TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "ATTIVA",
+            "type": "INT"
+          }
+        ],
+        "ANA_FIELD_TYPE": [
+          {
+            "name": "ID_FIELD",
+            "type": "INTEGER"
+          },
+          {
+            "name": "DESCR",
+            "type": "VARCHAR(50)"
+          }
+        ],
+        "ANA_GRANULARITY": [
+          {
+            "name": "ID_GRANULARITY",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_GRAPHIC_TYPE": [
+          {
+            "name": "ID_GRAPHIC_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_KEYCONF": [
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_CONF",
+            "type": "TEXT"
+          },
+          {
+            "name": "KEY_VALUE",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_KEYOBJECT": [
+          {
+            "name": "ID_KO",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_LABELS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_OBJECT_COMPOSITION": [
+          {
+            "name": "ID_COMP",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "ORDER",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INTEGER"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_OBJ_FIELDS_GROUPS",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_OBJ_FIELDS_GROUPS": [
+          {
+            "name": "ID_OBJ_FIELDS_GROUPS",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_OGGETTI": [
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI_OBJ",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_RES",
+            "type": "INT"
+          },
+          {
+            "name": "FUNCT_OBJ",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT_TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FAMIGLIA",
+            "type": "INT"
+          }
+        ],
+        "ANA_OPEN_RULE_COMPILE": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGER_START_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGER_STOP_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "COND_OK_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "ACT_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGER_ENABLE",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGER_DISABLE",
+            "type": "INT"
+          },
+          {
+            "name": "PANIC_KEY",
+            "type": "INT"
+          },
+          {
+            "name": "OPEN_FIELD_1",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_2",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_3",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_4",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_5",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_6",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_7",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_8",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_9",
+            "type": "TEXT"
+          },
+          {
+            "name": "OPEN_FIELD_10",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_OPERATORE": [
+          {
+            "name": "ID_OPE",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI_OPE",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG_OPE",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT_OPE",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_PARAMETER": [
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "ID_PARAMETER_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "PARAMETER",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDER",
+            "type": "INT"
+          },
+          {
+            "name": "PROPERTY",
+            "type": "TEXT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONV_TYPE",
+            "type": "INT"
+          }
+        ],
+        "ANA_PARAMETER_TYPE": [
+          {
+            "name": "ID_PARAMETER_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "TYPE",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_RANGE": [
+          {
+            "name": "ID_KIND",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          },
+          {
+            "name": "MIN",
+            "type": "INT"
+          },
+          {
+            "name": "MAX",
+            "type": "INT"
+          },
+          {
+            "name": "STEP",
+            "type": "INT"
+          },
+          {
+            "name": "MOLTIPLICATORE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_GRANULARITY",
+            "type": "INT"
+          }
+        ],
+        "ANA_REQUEST_TYPE": [
+          {
+            "name": "ID_REQ_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "varchar(50)"
+          }
+        ],
+        "ANA_RES": [
+          {
+            "name": "ID_RES_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_RES_TYPE",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_RES_OPEN_EXT": [
+          {
+            "name": "ID_RES",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRIPTION",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_RES_TYPE": [
+          {
+            "name": "ID_RES_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "RES_TYPE",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_RULE_OPEN_EXT": [
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "LEVEL_OPEN",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "PREFIX_LEVEL",
+            "type": "TEXT"
+          },
+          {
+            "name": "NUM_DIGIT_ADD",
+            "type": "INT"
+          },
+          {
+            "name": "MIN_ADD_I1",
+            "type": "INT"
+          },
+          {
+            "name": "MAX_ADD_I1",
+            "type": "INT"
+          },
+          {
+            "name": "MIN_ADD_I2",
+            "type": "INT"
+          },
+          {
+            "name": "MAX_ADD_I2",
+            "type": "INT"
+          },
+          {
+            "name": "MIN_ADD_I3",
+            "type": "INT"
+          },
+          {
+            "name": "MAX_ADD_I3",
+            "type": "INT"
+          },
+          {
+            "name": "MIN_ADD_I4",
+            "type": "INT"
+          },
+          {
+            "name": "MAX_ADD_I4",
+            "type": "INT"
+          },
+          {
+            "name": "PREFIX_ADD",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_STATUS_REQUEST_COMPILE": [
+          {
+            "name": "ID_COMP",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM_REQUEST",
+            "type": "INT"
+          },
+          {
+            "name": "ID_REQ_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "REQUEST_DIMENSION",
+            "type": "TEXT"
+          },
+          {
+            "name": "REPLY_FUNCTION",
+            "type": "TEXT"
+          },
+          {
+            "name": "REPLY_DIMENSION",
+            "type": "TEXT"
+          },
+          {
+            "name": "REPLY_PAR",
+            "type": "TEXT"
+          },
+          {
+            "name": "CUSTOM_VALUTATION",
+            "type": "INT"
+          }
+        ],
+        "ANA_SYSTEM": [
+          {
+            "name": "ID_SYSTEM",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          },
+          {
+            "name": "KEY_SYSTEM",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_TEXT": [
+          {
+            "name": "ID_KIND",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          },
+          {
+            "name": "REGEXP",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_VALUES": [
+          {
+            "name": "ID_VALUE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "MIN",
+            "type": "INT"
+          },
+          {
+            "name": "MAX",
+            "type": "INT"
+          },
+          {
+            "name": "STEP",
+            "type": "INT"
+          }
+        ],
+        "ANA_VERSIONE_DB": [
+          {
+            "name": "VERSION",
+            "type": "INT"
+          },
+          {
+            "name": "RELEASE",
+            "type": "INT"
+          },
+          {
+            "name": "BUILD",
+            "type": "INT"
+          }
+        ],
+        "ANA_WHERE_DEADVALUES": [
+          {
+            "name": "ID_VALUE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_WHERE_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "ADDRESS_VALUE",
+            "type": "TEXT"
+          }
+        ],
+        "ANA_WHERE_TYPE": [
+          {
+            "name": "ID_WHERE_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "DESCR",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_TXT",
+            "type": "TEXT"
+          },
+          {
+            "name": "REGEXP",
+            "type": "TEXT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          }
+        ],
+        "ASS_COMBO_VALUES": [
+          {
+            "name": "ID_COMBO_VALUE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_KIND",
+            "type": "INT"
+          }
+        ],
+        "ASS_CONV_OSX_AUX_FIELDS": [
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONVERSION_OSX",
+            "type": "INT"
+          }
+        ],
+        "ASS_COSA_AUX_FIELDS": [
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "ORDER",
+            "type": "INT"
+          },
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "AUX_DEFAULT_VALUE",
+            "type": "TEXT"
+          }
+        ],
+        "ASS_FIELD_CONDITION": [
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COND",
+            "type": "INT"
+          }
+        ],
+        "ASS_KEYOBJ_OBJ": [
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "ID_KO",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_SYSTEM",
+            "type": "TEXT"
+          }
+        ],
+        "ASS_OBJ_AREE": [
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGER",
+            "type": "INT"
+          },
+          {
+            "name": "COND_OK",
+            "type": "INT"
+          },
+          {
+            "name": "COND_KO",
+            "type": "INT"
+          },
+          {
+            "name": "ACT",
+            "type": "INT"
+          },
+          {
+            "name": "ACT_ELSE",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGERSTOP",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGERENABLE",
+            "type": "INT"
+          },
+          {
+            "name": "TRIGGERDISABLE",
+            "type": "INT"
+          },
+          {
+            "name": "PANICKEY",
+            "type": "INT"
+          }
+        ],
+        "ASS_OBJ_CHI": [
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          }
+        ],
+        "ASS_OBJ_COSA": [
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          }
+        ],
+        "ASS_OBJ_COSA_FIELDS_EXCEPTIONS": [
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ_FIELDS_GROUPS",
+            "type": "INT"
+          }
+        ],
+        "ASS_OBJ_DOVE": [
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_DOVE",
+            "type": "INT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_AREA",
+            "type": "INT"
+          },
+          {
+            "name": "GESTIONE_CUSTOM",
+            "type": "INT"
+          }
+        ],
+        "ASS_OBJ_RULE_OPEN": [
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ID_AREA",
+            "type": "INT"
+          }
+        ],
+        "ASS_OBJ_WHERE_TYPE": [
+          {
+            "name": "ID_ASS",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "ID_WHERE_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "MASTER",
+            "type": "INT"
+          },
+          {
+            "name": "COMBO",
+            "type": "INT"
+          },
+          {
+            "name": "ORDER",
+            "type": "INT"
+          }
+        ],
+        "ASS_OPEN_EXT_DEAD_VALUE": [
+          {
+            "name": "IDVALUE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADDRESS_VALUE",
+            "type": "TEXT"
+          }
+        ],
+        "ASS_RES_TIME": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ORA_SINGOLA",
+            "type": "INT"
+          },
+          {
+            "name": "FASCIA_ORA",
+            "type": "INT"
+          },
+          {
+            "name": "TUTTA_SETT",
+            "type": "INT"
+          },
+          {
+            "name": "PIANO_SETT",
+            "type": "INT"
+          },
+          {
+            "name": "SEMPRE",
+            "type": "INT"
+          },
+          {
+            "name": "DADATA_ADATA",
+            "type": "INT"
+          },
+          {
+            "name": "ID_RES",
+            "type": "INT"
+          }
+        ],
+        "ASS_RULE_OPEN_DOVE": [
+          {
+            "name": "ID_DOVE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          }
+        ],
+        "ASS_TYPE_CONF": [
+          {
+            "name": "ID_WHERE_TYPE",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "ORDER",
+            "type": "INT"
+          },
+          {
+            "name": "DEFAULT_VALUE",
+            "type": "INT"
+          }
+        ],
+        "DB_CONFIG": [
+          {
+            "name": "LINGUA",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_COLLECION": [
+          {
+            "name": "ID_PARAM",
+            "type": "INT"
+          },
+          {
+            "name": "PARAM",
+            "type": "TEXT"
+          },
+          {
+            "name": "PAR_VALUE",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_COND_OK": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_SCENARIO",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_OPT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADD_INT",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPE",
+            "type": "INT"
+          },
+          {
+            "name": "ID1",
+            "type": "INT"
+          },
+          {
+            "name": "ID2",
+            "type": "INT"
+          }
+        ],
+        "TMP_COND_OK_AUX_FIELDS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_FIELD",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_COND_OK_WHERE_CONF": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_CONF",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_OPE_OK": [
+          {
+            "name": "ID_OPE",
+            "type": "INT"
+          },
+          {
+            "name": "ID1",
+            "type": "INT"
+          },
+          {
+            "name": "ID2",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          }
+        ],
+        "TMP_PANICKEY": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_OPT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADD_INT",
+            "type": "INT"
+          }
+        ],
+        "TMP_PANICKEY_AUX_FIELDS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_FIELD",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_PANICKEY_WHERE_CONF": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_CONF",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_SCENARI": [
+          {
+            "name": "ID_SCENARIO",
+            "type": "INT"
+          },
+          {
+            "name": "SCEN_NAME",
+            "type": "TEXT"
+          },
+          {
+            "name": "USER_DESCRIPTION",
+            "type": "TEXT"
+          },
+          {
+            "name": "REPEAT",
+            "type": "INT"
+          },
+          {
+            "name": "RESTART",
+            "type": "INT"
+          },
+          {
+            "name": "SPT_PATH",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_STEP_ACT": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_SCENARIO",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_OPT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADD_INT",
+            "type": "INT"
+          }
+        ],
+        "TMP_STEP_ACT_AUX_FIELDS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_FIELD",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_STEP_ACT_WHERE_CONF": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_CONF",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGGER": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_SCENARIO",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_OPT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADD_INT",
+            "type": "INT"
+          }
+        ],
+        "TMP_TRIGGERSTOP": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_SCENARIO",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_OPT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADD_INT",
+            "type": "INT"
+          }
+        ],
+        "TMP_TRIGGER_AUX_FIELDS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_FIELD",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGGER_DISABLE": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_SCENARIO",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_OPT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADD_INT",
+            "type": "INT"
+          }
+        ],
+        "TMP_TRIGGER_DISABLE_AUX_FIELDS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_FIELD",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGGER_DISABLE_WHERE_CONF": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_CONF",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGGER_ENABLE": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_SCENARIO",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OBJ",
+            "type": "INT"
+          },
+          {
+            "name": "DESCRI",
+            "type": "TEXT"
+          },
+          {
+            "name": "IMG",
+            "type": "TEXT"
+          },
+          {
+            "name": "FUNCT",
+            "type": "TEXT"
+          },
+          {
+            "name": "TOOLTIP",
+            "type": "TEXT"
+          },
+          {
+            "name": "ID_CHI",
+            "type": "INT"
+          },
+          {
+            "name": "ID_COSA",
+            "type": "INT"
+          },
+          {
+            "name": "KEY_OPT",
+            "type": "TEXT"
+          },
+          {
+            "name": "ORDINE",
+            "type": "INT"
+          },
+          {
+            "name": "CUSTOM",
+            "type": "INT"
+          },
+          {
+            "name": "ID_OPEN_EXT",
+            "type": "INT"
+          },
+          {
+            "name": "ADD_INT",
+            "type": "INT"
+          }
+        ],
+        "TMP_TRIGGER_ENABLE_AUX_FIELDS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_FIELD",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGGER_ENABLE_WHERE_CONF": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_CONF",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGGER_WHERE_CONF": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_CONF",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGG_STOP_AUX_FIELDS": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_FIELD",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_FIELD",
+            "type": "TEXT"
+          }
+        ],
+        "TMP_TRIGG_STOP_WHERE_CONF": [
+          {
+            "name": "ID",
+            "type": "INT"
+          },
+          {
+            "name": "ID_CONF",
+            "type": "INT"
+          },
+          {
+            "name": "VALUE_CONF",
+            "type": "TEXT"
+          }
+        ]
+      },
+      "quick_check": [
+        "ok"
+      ]
+    },
+    {
+      "bytes": 344064,
+      "sha256": "fffc43f8d2fb5d05b8240aa4b6d449bcf5bf60339013aba2fb2301a42738e694",
+      "local_path": "recovered/fffc43f8d2fb5d05b8240aa4b6d449bcf5bf60339013aba2fb2301a42738e694.bin",
+      "registered_artifact_ids": [],
+      "SQLite3_header": true,
+      "tables": [
+        "ApplicationComplexProperties",
+        "ApplicationCurrencies",
+        "ApplicationItems",
+        "ApplicationProperties",
+        "Behaviours",
+        "ItemValidations",
+        "PropertyValidations",
+        "Settings",
+        "sqlite_sequence"
+      ],
+      "table_columns": {
+        "ApplicationComplexProperties": [
+          {
+            "name": "ApplicationComplexPropertyId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Description",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Value",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationProperty_ApplicationPropertyId",
+            "type": "INTEGER"
+          }
+        ],
+        "ApplicationCurrencies": [
+          {
+            "name": "ApplicationCurrencyId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Symbol",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Decimal",
+            "type": "float"
+          },
+          {
+            "name": "Integer",
+            "type": "smallint"
+          },
+          {
+            "name": "Delta",
+            "type": "float"
+          }
+        ],
+        "ApplicationItems": [
+          {
+            "name": "ApplicationItemId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Image",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ParentApplicationItemId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Cid",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          }
+        ],
+        "ApplicationProperties": [
+          {
+            "name": "ApplicationPropertyId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Value",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ConfTag",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Description",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationItem_ApplicationItemId",
+            "type": "INTEGER"
+          }
+        ],
+        "Behaviours": [
+          {
+            "name": "BehaviourId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "PropertyValue",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "TargetPropertyName",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "TargetValue",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationProperty_ApplicationPropertyId",
+            "type": "INTEGER"
+          }
+        ],
+        "ItemValidations": [
+          {
+            "name": "ItemValidationId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Function",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Message",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Severity",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ExecuteOn",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationItem_ApplicationItemId",
+            "type": "INTEGER"
+          }
+        ],
+        "PropertyValidations": [
+          {
+            "name": "PropertyValidationId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Type",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Rule",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ErrorMessage",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ApplicationProperty_ApplicationPropertyId",
+            "type": "INTEGER"
+          }
+        ],
+        "Settings": [
+          {
+            "name": "Key",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Value",
+            "type": "nvarchar(2147483647)"
+          }
+        ],
+        "sqlite_sequence": [
+          {
+            "name": "name",
+            "type": ""
+          },
+          {
+            "name": "seq",
+            "type": ""
+          }
+        ]
+      },
+      "quick_check": [
+        "ok"
+      ]
+    },
+    {
+      "bytes": 50176,
+      "sha256": "74fc3762e47718da40f85562225fb676932349e39bd797ff94a073b8db8bd39a",
+      "local_path": "recovered/74fc3762e47718da40f85562225fb676932349e39bd797ff94a073b8db8bd39a.bin",
+      "registered_artifact_ids": [],
+      "SQLite3_header": true,
+      "tables": [
+        "DB_INFO",
+        "RT_AREA_TYPE",
+        "RT_AS_AREA_DEVICE_CODE",
+        "RT_AS_AREA_TYPE",
+        "RT_AS_BUSSES_AREA_TYPE",
+        "RT_AS_BUS_INTERFACE",
+        "RT_AS_KO_DEVICE",
+        "RT_BUS",
+        "RT_COLLECTION_BOX",
+        "RT_COLLECTION_OBJECTS",
+        "RT_COLLECTION_ROOM",
+        "RT_DEVICE",
+        "RT_DEVICE_CONF",
+        "RT_DEVICE_STATE",
+        "RT_OBJECT",
+        "RT_OBJECT_CONF",
+        "RT_OBJECT_STATE",
+        "RT_PROJECT",
+        "RT_SYSTEM"
+      ],
+      "table_columns": {
+        "DB_INFO": [
+          {
+            "name": "param",
+            "type": "TEXT"
+          },
+          {
+            "name": "value",
+            "type": "INT"
+          }
+        ],
+        "RT_AREA_TYPE": [
+          {
+            "name": "id_rt_area_type",
+            "type": "INT"
+          },
+          {
+            "name": "description",
+            "type": "TEXT"
+          },
+          {
+            "name": "type",
+            "type": "INT"
+          }
+        ],
+        "RT_AS_AREA_DEVICE_CODE": [
+          {
+            "name": "id_rt_area",
+            "type": "INT"
+          },
+          {
+            "name": "id_rt_device",
+            "type": "INT"
+          },
+          {
+            "name": "code_type",
+            "type": "INT"
+          },
+          {
+            "name": "code_value",
+            "type": "TEXT"
+          }
+        ],
+        "RT_AS_AREA_TYPE": [
+          {
+            "name": "id_rt_area",
+            "type": "INT"
+          },
+          {
+            "name": "id_rt_area_type",
+            "type": "INT"
+          },
+          {
+            "name": "checked",
+            "type": "INT"
+          }
+        ],
+        "RT_AS_BUSSES_AREA_TYPE": [
+          {
+            "name": "id_rt_area_type",
+            "type": "INT"
+          },
+          {
+            "name": "id_bus",
+            "type": "INT"
+          }
+        ],
+        "RT_AS_BUS_INTERFACE": [
+          {
+            "name": "id_rt_object",
+            "type": "INT"
+          },
+          {
+            "name": "id_bus_out",
+            "type": "INT"
+          }
+        ],
+        "RT_AS_KO_DEVICE": [
+          {
+            "name": "id_rt_device",
+            "type": "INT"
+          },
+          {
+            "name": "id_rt_object",
+            "type": "INT"
+          }
+        ],
+        "RT_BUS": [
+          {
+            "name": "id_bus",
+            "type": "INT"
+          },
+          {
+            "name": "bus_type",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "level",
+            "type": "INT"
+          },
+          {
+            "name": "interface_address",
+            "type": "TEXT"
+          }
+        ],
+        "RT_COLLECTION_BOX": [
+          {
+            "name": "id_box",
+            "type": "INT"
+          },
+          {
+            "name": "box_type",
+            "type": "INT"
+          },
+          {
+            "name": "box_descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_room",
+            "type": "INT"
+          }
+        ],
+        "RT_COLLECTION_OBJECTS": [
+          {
+            "name": "id_collection",
+            "type": "INT"
+          },
+          {
+            "name": "collection_type",
+            "type": "TEXT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "key_conf_collection",
+            "type": "TEXT"
+          },
+          {
+            "name": "key_value_collection",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_system",
+            "type": "INT"
+          }
+        ],
+        "RT_COLLECTION_ROOM": [
+          {
+            "name": "id_room",
+            "type": "INT"
+          },
+          {
+            "name": "room_type",
+            "type": "INT"
+          },
+          {
+            "name": "room_user_descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "room_floor",
+            "type": "INT"
+          },
+          {
+            "name": "fixed_row",
+            "type": "INT"
+          },
+          {
+            "name": "id_rt_area_type",
+            "type": "INT"
+          }
+        ],
+        "RT_DEVICE": [
+          {
+            "name": "id_rt_device",
+            "type": "INT"
+          },
+          {
+            "name": "id_device",
+            "type": "INT"
+          },
+          {
+            "name": "user_descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_system",
+            "type": "INT"
+          },
+          {
+            "name": "id_box",
+            "type": "INT"
+          },
+          {
+            "name": "config_mode",
+            "type": "INT"
+          },
+          {
+            "name": "firmware_v",
+            "type": "INT"
+          },
+          {
+            "name": "firmware_r",
+            "type": "INT"
+          }
+        ],
+        "RT_DEVICE_CONF": [
+          {
+            "name": "item_conf",
+            "type": "TEXT"
+          },
+          {
+            "name": "item_value",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_rt_device",
+            "type": "INT"
+          }
+        ],
+        "RT_DEVICE_STATE": [
+          {
+            "name": "id_rt_device",
+            "type": "INT"
+          },
+          {
+            "name": "id_rt_area",
+            "type": "INT"
+          },
+          {
+            "name": "device_status",
+            "type": "INT"
+          }
+        ],
+        "RT_OBJECT": [
+          {
+            "name": "id_rt_object",
+            "type": "INT"
+          },
+          {
+            "name": "key_object",
+            "type": "TEXT"
+          },
+          {
+            "name": "user_descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_collection",
+            "type": "INT"
+          },
+          {
+            "name": "id_room",
+            "type": "INT"
+          },
+          {
+            "name": "slot",
+            "type": "INT"
+          },
+          {
+            "name": "disable",
+            "type": "INT"
+          }
+        ],
+        "RT_OBJECT_CONF": [
+          {
+            "name": "key_conf",
+            "type": "TEXT"
+          },
+          {
+            "name": "key_value",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_rt_object",
+            "type": "INT"
+          },
+          {
+            "name": "visible",
+            "type": "INT"
+          },
+          {
+            "name": "hidden",
+            "type": "INT"
+          }
+        ],
+        "RT_OBJECT_STATE": [
+          {
+            "name": "id_rt_object",
+            "type": "INT"
+          },
+          {
+            "name": "id_rt_area",
+            "type": "INT"
+          },
+          {
+            "name": "object_status",
+            "type": "INT"
+          }
+        ],
+        "RT_PROJECT": [
+          {
+            "name": "project_guid",
+            "type": "GUID"
+          }
+        ],
+        "RT_SYSTEM": [
+          {
+            "name": "id_system",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "system_type",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_bus",
+            "type": "INT"
+          }
+        ]
+      },
+      "quick_check": [
+        "ok"
+      ]
+    },
+    {
+      "bytes": 17408,
+      "sha256": "606f0fef30b8db6c5a2998ae5ef88d7193488479ad97f7aea89c8f274c41ae64",
+      "local_path": "recovered/606f0fef30b8db6c5a2998ae5ef88d7193488479ad97f7aea89c8f274c41ae64.bin",
+      "registered_artifact_ids": [],
+      "SQLite3_header": true,
+      "tables": [
+        "AS_AREA_HOST",
+        "AS_AREA_RELATIONSHIP",
+        "EN_AREA",
+        "EN_AREA_TYPE",
+        "EN_AREA_TYPE_CATEGORY",
+        "EN_HOST",
+        "EN_PLANT_INFO",
+        "sqlite_sequence"
+      ],
+      "table_columns": {
+        "AS_AREA_HOST": [
+          {
+            "name": "area_id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "host_id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "progressive",
+            "type": "INTEGER"
+          }
+        ],
+        "AS_AREA_RELATIONSHIP": [
+          {
+            "name": "parent_area_id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "child_area_id",
+            "type": "INTEGER"
+          }
+        ],
+        "EN_AREA": [
+          {
+            "name": "id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "description",
+            "type": "TEXT"
+          },
+          {
+            "name": "key",
+            "type": "TEXT"
+          },
+          {
+            "name": "area_type_id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "hosts_in_count",
+            "type": "INTEGER"
+          },
+          {
+            "name": "area_type_category_id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "category",
+            "type": "TEXT"
+          }
+        ],
+        "EN_AREA_TYPE": [
+          {
+            "name": "id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "description",
+            "type": "TEXT"
+          }
+        ],
+        "EN_AREA_TYPE_CATEGORY": [
+          {
+            "name": "id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "description",
+            "type": "TEXT"
+          }
+        ],
+        "EN_HOST": [
+          {
+            "name": "id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "fc",
+            "type": "INTEGER"
+          },
+          {
+            "name": "uc",
+            "type": "INTEGER"
+          },
+          {
+            "name": "na",
+            "type": "varchar(255)"
+          },
+          {
+            "name": "port",
+            "type": "INTEGER"
+          },
+          {
+            "name": "pwd",
+            "type": "varchar(255)"
+          },
+          {
+            "name": "description",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_device",
+            "type": "varchar(50)"
+          },
+          {
+            "name": "subnet_mask",
+            "type": "TEXT"
+          },
+          {
+            "name": "router_ip",
+            "type": "TEXT"
+          },
+          {
+            "name": "mac",
+            "type": "TEXT"
+          },
+          {
+            "name": "add_type",
+            "type": "INTEGER"
+          }
+        ],
+        "EN_PLANT_INFO": [
+          {
+            "name": "key",
+            "type": "TEXT"
+          },
+          {
+            "name": "value",
+            "type": "TEXT"
+          }
+        ],
+        "sqlite_sequence": [
+          {
+            "name": "name",
+            "type": ""
+          },
+          {
+            "name": "seq",
+            "type": ""
+          }
+        ]
+      },
+      "quick_check": [
+        "ok"
+      ]
+    },
+    {
+      "bytes": 35840,
+      "sha256": "2ce7ffe1286c3246271aed160116fe664407d9e8ff43595f50192e7d2ac85569",
+      "local_path": "recovered/2ce7ffe1286c3246271aed160116fe664407d9e8ff43595f50192e7d2ac85569.bin",
+      "registered_artifact_ids": [
+        "myhome-suite-3.5.38-scenario-devices-program-files"
+      ],
+      "SQLite3_header": true,
+      "tables": [
+        "Commands",
+        "DeviceObjects",
+        "ObjectSystems",
+        "Parameters",
+        "sqlite_sequence"
+      ],
+      "table_columns": {
+        "Commands": [
+          {
+            "name": "Id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "CommandId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "CommandMatchingId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "WherePlaceholder",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "WhereType",
+            "type": "tinyint"
+          },
+          {
+            "name": "WhereName",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ChiOpen",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Frame",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "DeviceObject_Id",
+            "type": "INTEGER"
+          }
+        ],
+        "DeviceObjects": [
+          {
+            "name": "Id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "ObjectId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "ObjectMatchingId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "ObjectSystem_Id",
+            "type": "INTEGER"
+          }
+        ],
+        "ObjectSystems": [
+          {
+            "name": "Id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "FamilyId",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "CategoryFlag",
+            "type": "tinyint"
+          }
+        ],
+        "Parameters": [
+          {
+            "name": "Id",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Min",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Max",
+            "type": "INTEGER"
+          },
+          {
+            "name": "Placeholder",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Name",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "OperatorType",
+            "type": "tinyint"
+          },
+          {
+            "name": "Value",
+            "type": "nvarchar(2147483647)"
+          },
+          {
+            "name": "Type",
+            "type": "tinyint"
+          },
+          {
+            "name": "Step",
+            "type": "float"
+          },
+          {
+            "name": "Command_Id",
+            "type": "INTEGER"
+          }
+        ],
+        "sqlite_sequence": [
+          {
+            "name": "name",
+            "type": ""
+          },
+          {
+            "name": "seq",
+            "type": ""
+          }
+        ]
+      },
+      "quick_check": [
+        "ok"
+      ]
+    },
+    {
+      "bytes": 80896,
+      "sha256": "d864a4946b47c3671a74a6844cec4da605cf20b33ac14f49959785778f104051",
+      "local_path": "recovered/d864a4946b47c3671a74a6844cec4da605cf20b33ac14f49959785778f104051.bin",
+      "registered_artifact_ids": [
+        "myhome-suite-3.5.38-open"
+      ],
+      "SQLite3_header": true,
+      "tables": [
+        "AS_GATEWAY_OPEN",
+        "AS_OPEN_ADDRESS_RULE",
+        "AS_OPEN_PARAM",
+        "AS_OPEN_SEQUENCE",
+        "AS_OPEN_SYSTEM",
+        "AS_SCENARIO_SEQUENCE",
+        "AS_SYSTEM_ADDRESS_RULE",
+        "AS_TIMEOUT_OPEN_SEQUENCE",
+        "EN_ADDRESS_RULE",
+        "EN_ITEM_GATEWAY",
+        "EN_OPEN",
+        "EN_OPEN_ERROR_TYPE",
+        "EN_OPEN_PARAM",
+        "EN_OPEN_TYPE",
+        "EN_PARAM_RANGE",
+        "EN_PARAM_TYPE",
+        "EN_PROTOCOL_TYPE",
+        "EN_SCENARIO",
+        "EN_SCENARIO_TYPE",
+        "EN_SEQUENCE",
+        "EN_STATE_VALUE",
+        "EN_SYSTEM",
+        "EN_TIMEOUT"
+      ],
+      "table_columns": {
+        "AS_GATEWAY_OPEN": [
+          {
+            "name": "id_item",
+            "type": "INT"
+          },
+          {
+            "name": "id_open",
+            "type": "INT"
+          }
+        ],
+        "AS_OPEN_ADDRESS_RULE": [
+          {
+            "name": "id_open",
+            "type": "INT"
+          },
+          {
+            "name": "id_address_rule",
+            "type": "INT"
+          }
+        ],
+        "AS_OPEN_PARAM": [
+          {
+            "name": "id_open",
+            "type": "INT"
+          },
+          {
+            "name": "id_param",
+            "type": "INT"
+          }
+        ],
+        "AS_OPEN_SEQUENCE": [
+          {
+            "name": "id_open",
+            "type": "INT"
+          },
+          {
+            "name": "id_sequence",
+            "type": "INT"
+          },
+          {
+            "name": "mandatory_open",
+            "type": "boolean"
+          },
+          {
+            "name": "open_order",
+            "type": "INT"
+          },
+          {
+            "name": "repeated_open",
+            "type": "boolean"
+          },
+          {
+            "name": "status4nack",
+            "type": "INTEGER"
+          },
+          {
+            "name": "status4error",
+            "type": "INTEGER"
+          }
+        ],
+        "AS_OPEN_SYSTEM": [
+          {
+            "name": "id_open",
+            "type": "INT"
+          },
+          {
+            "name": "id_system",
+            "type": "INT"
+          }
+        ],
+        "AS_SCENARIO_SEQUENCE": [
+          {
+            "name": "id_scenario",
+            "type": "INT"
+          },
+          {
+            "name": "id_sequence",
+            "type": "INT"
+          },
+          {
+            "name": "sequence_order",
+            "type": "INT"
+          },
+          {
+            "name": "repeated_sequence",
+            "type": "boolean"
+          }
+        ],
+        "AS_SYSTEM_ADDRESS_RULE": [
+          {
+            "name": "id_system",
+            "type": "INT"
+          },
+          {
+            "name": "id_address_rule",
+            "type": "INT"
+          }
+        ],
+        "AS_TIMEOUT_OPEN_SEQUENCE": [
+          {
+            "name": "id_open",
+            "type": "INT"
+          },
+          {
+            "name": "id_sequence",
+            "type": "INT"
+          },
+          {
+            "name": "id_timeout",
+            "type": "INT"
+          },
+          {
+            "name": "action",
+            "type": "TEXT"
+          },
+          {
+            "name": "status4timeout",
+            "type": "INTEGER"
+          }
+        ],
+        "EN_ADDRESS_RULE": [
+          {
+            "name": "id_address_rule",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "address_rule_virt",
+            "type": "TEXT"
+          },
+          {
+            "name": "address_rule_adv",
+            "type": "TEXT"
+          },
+          {
+            "name": "level_4_rule",
+            "type": "INT"
+          },
+          {
+            "name": "level_2_rule",
+            "type": "INT"
+          },
+          {
+            "name": "object_device_family",
+            "type": "INT"
+          },
+          {
+            "name": "validity_rule",
+            "type": "TEXT"
+          },
+          {
+            "name": "offset_adv",
+            "type": "INT"
+          }
+        ],
+        "EN_ITEM_GATEWAY": [
+          {
+            "name": "id_item",
+            "type": "INT"
+          },
+          {
+            "name": "fw_ver",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_protocol",
+            "type": "INT"
+          }
+        ],
+        "EN_OPEN": [
+          {
+            "name": "id_open",
+            "type": "INT"
+          },
+          {
+            "name": "open_label",
+            "type": "TEXT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "open_string",
+            "type": "TEXT"
+          },
+          {
+            "name": "has_address",
+            "type": "boolean"
+          },
+          {
+            "name": "has_param",
+            "type": "boolean"
+          },
+          {
+            "name": "open_type",
+            "type": "INT"
+          },
+          {
+            "name": "diag_open",
+            "type": "boolean"
+          },
+          {
+            "name": "error_open",
+            "type": "INT"
+          },
+          {
+            "name": "open4keyo",
+            "type": "boolean"
+          },
+          {
+            "name": "note",
+            "type": "TEXT"
+          }
+        ],
+        "EN_OPEN_ERROR_TYPE": [
+          {
+            "name": "id_error_type",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          }
+        ],
+        "EN_OPEN_PARAM": [
+          {
+            "name": "id_param",
+            "type": "INT"
+          },
+          {
+            "name": "id_param_type",
+            "type": "INT"
+          },
+          {
+            "name": "param_string",
+            "type": "TEXT"
+          },
+          {
+            "name": "param_descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "min_value",
+            "type": "INT"
+          },
+          {
+            "name": "max_value",
+            "type": "INT"
+          },
+          {
+            "name": "step_value",
+            "type": "INT"
+          },
+          {
+            "name": "pad_value",
+            "type": "INT"
+          },
+          {
+            "name": "num_digit",
+            "type": "INT"
+          }
+        ],
+        "EN_OPEN_TYPE": [
+          {
+            "name": "id_open_type",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          }
+        ],
+        "EN_PARAM_RANGE": [
+          {
+            "name": "id_param",
+            "type": "INT"
+          },
+          {
+            "name": "value",
+            "type": "TEXT"
+          },
+          {
+            "name": "id_range",
+            "type": "INT"
+          }
+        ],
+        "EN_PARAM_TYPE": [
+          {
+            "name": "id_param_type",
+            "type": "INT"
+          },
+          {
+            "name": "param_type_descr",
+            "type": "TEXT"
+          }
+        ],
+        "EN_PROTOCOL_TYPE": [
+          {
+            "name": "id_protocol_type",
+            "type": "INT"
+          },
+          {
+            "name": "protocol_descr",
+            "type": "TEXT"
+          }
+        ],
+        "EN_SCENARIO": [
+          {
+            "name": "id_scenario",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "scenario_label",
+            "type": "TEXT"
+          },
+          {
+            "name": "scenario_type",
+            "type": "INTEGER"
+          }
+        ],
+        "EN_SCENARIO_TYPE": [
+          {
+            "name": "id_scenario_type",
+            "type": "INTEGER"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          }
+        ],
+        "EN_SEQUENCE": [
+          {
+            "name": "id_sequence",
+            "type": "INT"
+          },
+          {
+            "name": "sequence_label",
+            "type": "TEXT"
+          },
+          {
+            "name": "open_rule",
+            "type": "TEXT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          }
+        ],
+        "EN_STATE_VALUE": [
+          {
+            "name": "id_state",
+            "type": "INT"
+          },
+          {
+            "name": "name",
+            "type": "TEXT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          }
+        ],
+        "EN_SYSTEM": [
+          {
+            "name": "id_system",
+            "type": "INT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "who",
+            "type": "TEXT"
+          },
+          {
+            "name": "diag_who",
+            "type": "TEXT"
+          },
+          {
+            "name": "managed",
+            "type": "boolean"
+          }
+        ],
+        "EN_TIMEOUT": [
+          {
+            "name": "id_timeout",
+            "type": "INT"
+          },
+          {
+            "name": "timeout_label",
+            "type": "TEXT"
+          },
+          {
+            "name": "descr",
+            "type": "TEXT"
+          },
+          {
+            "name": "type",
+            "type": "TEXT"
+          },
+          {
+            "name": "default",
+            "type": "INT"
+          },
+          {
+            "name": "note",
+            "type": "TEXT"
+          }
+        ]
+      },
+      "quick_check": [
+        "ok"
+      ]
+    }
+  ],
+  "validated_pages": 37,
+  "vendor_execution": 0,
+  "format_limit": "Existing CookFS index parsing left29 trailing metadata bytes uninterpreted; selected decoded page sizes and CRC32 all verified."
+}

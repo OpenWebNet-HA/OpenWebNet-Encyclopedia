@@ -1,0 +1,20 @@
+{
+  "run": "08",
+  "scope": "F460 original staticupdate/recovery/selection chain and F461 actualboot/config/auxcore/profile/readiness source; never execute target scripts/vendor/OS/device operations",
+  "authors": {
+    "F460": "firmware_protocol",
+    "F461": "firmware_boot"
+  },
+  "reviewer": "firmware_functional reviewer/read-only",
+  "prior_batch": "work/f460-f461-comparison/2026-11-01-run07",
+  "prior_index": {
+    "path": "work/f460-f461-comparison/2026-11-01-run07/EVIDENCE_INDEX.json",
+    "bytes": 34954,
+    "sha256": "3be5585783d70841fad8256d431982106e3a1e7b3ebe1b43bada1af9f32839db"
+  },
+  "deadline_UTC": "2026-11-01T19:00:00Z",
+  "final_only_UTC": "2026-11-01T18:15:00Z",
+  "new_original_execution": 0,
+  "user_summary_each_run": true,
+  "privacy": "Only selected nonsecret script/config lines and code/metadata; no full config/privatekeys/credentials/bootenv/MACserial/runtimevalues"
+}

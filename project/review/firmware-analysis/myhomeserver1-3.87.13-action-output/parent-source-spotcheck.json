@@ -1,0 +1,96 @@
+{
+  "scope": "Parent independent original-byte spot checks of adapters, request keys, selected handoff ABI and shared GOT slot; no whole-function/provider/runtime/physical proof",
+  "image": "/home/bticino/scheduling_manager/scheduling_manager",
+  "image_sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26",
+  "adapters": [
+    {
+      "VA": "0xd14a6",
+      "bytes": "fef78fb8",
+      "target": "0xcf5c8"
+    },
+    {
+      "VA": "0xcf066",
+      "bytes": "fef755be",
+      "target": "0xcdd14"
+    }
+  ],
+  "PIC_keys": [
+    {
+      "pool": "0xd01bc",
+      "ADD_PC": "0xcf8a8",
+      "address": "0x115e04",
+      "key": "jsonrpc"
+    },
+    {
+      "pool": "0xd01c0",
+      "ADD_PC": "0xcf8ca",
+      "address": "0x115e0c",
+      "key": "method"
+    },
+    {
+      "pool": "0xd01c4",
+      "ADD_PC": "0xcf8ea",
+      "address": "0x116adc",
+      "key": "id"
+    },
+    {
+      "pool": "0xd01c8",
+      "ADD_PC": "0xcf90e",
+      "address": "0x116144",
+      "key": "params"
+    },
+    {
+      "pool": "0xce898",
+      "ADD_PC": "0xcdeba",
+      "address": "0x115e04",
+      "key": "jsonrpc"
+    },
+    {
+      "pool": "0xce89c",
+      "ADD_PC": "0xcdedc",
+      "address": "0x115e0c",
+      "key": "method"
+    },
+    {
+      "pool": "0xce8a0",
+      "ADD_PC": "0xcdefc",
+      "address": "0x116adc",
+      "key": "id"
+    },
+    {
+      "pool": "0xce8a4",
+      "ADD_PC": "0xcdf20",
+      "address": "0x116144",
+      "key": "params"
+    }
+  ],
+  "shared_receiver_GOT_slot": "0x1666a4",
+  "spans": [
+    {
+      "start": "0xd14a4",
+      "end_exclusive": "0xd14aa",
+      "bytes": 6,
+      "sha256": "a3926c313f5291f1636cfbd9afabf24f43348bf8fa281bd6db1293bf87b5357a"
+    },
+    {
+      "start": "0xcf064",
+      "end_exclusive": "0xcf06a",
+      "bytes": 6,
+      "sha256": "ca8ad8606386cbe66b630be85ef5f235c0eefb7ea7079c7a9f06e42ea75cf96b"
+    },
+    {
+      "start": "0xcf88c",
+      "end_exclusive": "0xcf934",
+      "bytes": 168,
+      "sha256": "d134ee233f4653bb8d948ed651d9e380b8d10e6b270e3e93e92c5913303263a3"
+    },
+    {
+      "start": "0xcde9e",
+      "end_exclusive": "0xcdf46",
+      "bytes": 168,
+      "sha256": "3994f30936557339f6c60c578c38c17f7cfc10166fcc22f67a9da5c28bbecd60"
+    }
+  ],
+  "new_original_execution": 0,
+  "exploratory_prefixes_not_promoted": "d20c0..d217c and d163c..d16e0 read as future local constructor/converter leads; no conclusions from them promoted in this packet and no receiving/transport body opened"
+}

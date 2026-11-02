@@ -1,0 +1,8 @@
+{
+  "boundaries": "Normal valid-stack/allocator/EABI and valid input-object premises; no external provider/caller bodies or closedroutes. No new credentials/privateconfig literals.",
+  "host_semantic_models": 0,
+  "method": "Manual original receiver dataflow for exact frozen22 candidates, file-byte guards/PT_LOAD/exidx bounds and host disassembly only; no repeat fullsyntaxscan.",
+  "native_helpers": 0,
+  "original_execution": 0,
+  "target_IO_clock_process_network": 0
+}

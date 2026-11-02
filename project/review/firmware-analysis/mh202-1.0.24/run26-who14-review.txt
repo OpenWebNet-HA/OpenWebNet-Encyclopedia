@@ -1,0 +1,40 @@
+# MH202 WHO14 run26 independent static source review
+
+PASS. No correction requested. This is independent original-source, saved-evidence, finite-host-model and first-candidate-integrity review, with static collector replay. No original ARM/native helper, vendor process, syscall, service or physical operation was executed or replayed by this reviewer. All author files and earlier artifacts were read-only; this is a new review file.
+
+## Exact final pins
+
+| Artifact relative to research 2026-10-30 | SHA256 |
+| --- | --- |
+| who14/run26/REPORT.md | e76adbf02e3531cebf52b54be84041601a07d7ed53cd3d83218da6ebe7531a15 |
+| who14/run26/collect_who14_v1.py | 92fee06a4b684f5bd99d864c0284bd51f476675c939a461d29f285158b6c2493 |
+| who14/run26/output-manifest.json | 4c768524bb8a2f1fc5013f21c2dcb5d74e47e7b5e3feeae58d6d0b70e8151fc1 |
+| who14/run26/initial-generated-v1/SNAPSHOT_INDEX.json | 1f4abcf3c6c90ef815aaaec67d9d34aa2d90e0ca48d8fd9e1af016714fd7c1f2 |
+
+Original image-relative /home/bticino/libcoso/libplug_special_cmd_tr.so matches SHA256c5638e801335d8710e2320c8636341c323f6b4f9b6e1f78cbf6c744ac56ebeec and /home/bticino/libcoso/libplug_special_cmd_stm.so matches58e0db730d3e8afbdd30ae255b989365ff34872ace0e802b3224a86dbf457c3b. Same-build core/liblights/libutils and accessor hashes are preserved in the reviewed six-input manifest. These are image paths, not private host paths.
+
+## Reproduction and independent byte checks
+
+`python3 -B work/mh202-firmware/research/2026-10-30/who14/run26/collect_who14_v1.py --check` passes: 22 outputs including manifest, 13 original spans, 42 words, six inputs, two whitelisted pools and six host cases; original execution/hooks0. I independently reread the originals via ImageVFS, mapped ELF32 PT_LOAD bytes, and checked all13 raw-span hashes/42 critical words and all six input hashes/lengths. I separately resolved the two original reverse-format pool references using the original PIC-base arithmetic and verified their exact target bytes.
+
+The21 evidence hashes plus report/collector pins match their manifest. All24 indexed actual first-candidate copies match recorded hashes and current bytes; no reconstructed historical bytes or author correction are involved. I independently recomputed both supplied four-byte forward arrays/ASCII renderings, the two pending-state outcomes, and audited all six finite cases against the original branches. These are host source-effect checks, not actual address/parser/allocator/list/timer behavior. Fresh original STM dynamic symbols have no g_timeout import; that corroborates only the bounded callback/source scope, not gateway-wide timeout absence.
+
+## Source findings checked
+
+TR descriptor0x9f88 has initializer+36/callback+40 relocations to0x1894/0x1504. Registration adds reverse criterion1 and forward criterion14, independently from callback pair(1,2)/(2,1), parsed kind44, envelope body40 and representation56. STM descriptor0x9ba8 separately binds initializer0x1510, field0x136c and application0x1490 and registers criterion14. Candidate imports/definitions are original packaged evidence, with active registry/effective binding/ordinary completion explicit premises.
+
+The selected TR forward source requires coherent fifth-argument/config storage, representation3 parsed pointer and kind1. Original0x16b0..0x16ec maps converted WHAT0 to operation bytes0x11,0 and WHAT1 to0x10,0. Selectors24/20 default0/3; config8/12 equality selects the brief path0x1848..0x187c. The report explicitly supplies address-helper output0x11,0 rather than claiming this pass proves WHERE11 maps to those bytes. Its independent candidate bodies11001100/11001000 therefore have honest delegate and configuration premises. Core brief/source-copy metadata fields and copied ID60 agree with fresh original helper source; no serial transmission follows from that pointer/list construction.
+
+The independently supplied reverse B1111100 satisfies the selected body3/9 path, byte0 high-nibble<=0xb, byte2=0x11/byte3=0 selecting numeric WHAT0. This is a high-nibble guard, not an asserted exact byte0 opcode. The address helper's supplied WHERE11 remains a delegate premise. Original empty suffix and `*14*%d*%s%s##` literal produce the scoped candidate `*14*0*11##`; core reverse construction copies source status52/ID60 and produces text representation2, not an accepted pointer object. Forward and reverse examples are visibly independent.
+
+The initializer0x1510..0x153c allocates its own8-byte private object, sets pending0=0/savedID4=-1 and stores the pointer at descriptor56. It supplies no timer/publication context and is not copied from WHO25 or other modules.
+
+Application0x1490..0x1510 directly dereferences coherent parsed storage and sets Q metadata4/8=1 before the kind guard. Kind1 converted WHAT unsigned<=1 requests same-Q append, then pending1/ID60 copy. The displayed non-kind1 branch also arms the pair without that append. Rejected kind1 requests NACK and returns local1 without the selected pending reset; the report preserves previous-private-state uncertainty and makes no valid-query or invalid-input runtime claim.
+
+Field0x136c..0x1490 has a separate unexecuted representation2 parser/free/install route; finite cases use coherent representation3. With pending nonzero, only matching savedID/ID60 enters status52 handling. Status1 requests ACK, status2 NACK; other matched statuses request neither. After normal receipt helper return, matching paths clear pending/ID, then independently test parsed kind1/converted WHAT unsigned<=1 for F.meta8=3/same-F append. Mismatch bypasses receipt and clear but may pass that normal forwarding guard. Thus neither saved-ID match nor receipt generation is a universal forwarding requirement. The order receipt-before-clear-before-ordinary-forwarding is correct, and a receipt plus same-F output may coexist under these supplied predicates.
+
+The complete own initializer/application/field bodies contain no timer request; the report expressly avoids promoting this to absence of framework/device timeouts. Private storage contains flag/ID, not retained Q/F pointers. List append, normal helper completion, owner lifetime and actual downstream consumption remain boundaries.
+
+## Scope conclusion
+
+The report supports selected original local construction/callback contracts and six independent host ledgers. It retains effective provider/registry, parsed/admission, address/configuration, allocation/list/ABI and lifetime prerequisites. It does not claim a natural translation/STM roundtrip, physical command meaning/receipt, public WHO14 support table, accepted raw grammar, whole-framework timeout policy, oracle corroboration or hardware observation. No original/native corpus or source correction was added in review.

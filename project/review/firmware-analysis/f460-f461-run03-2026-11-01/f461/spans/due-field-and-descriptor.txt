@@ -1,0 +1,78 @@
+
+/home/bticino/bin/coso:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000003e54 <send_list_field@@Base+0x64>:
+    3e54:	a9025bf5 	stp	x21, x22, [sp, #32]
+    3e58:	9102a3f5 	add	x21, sp, #0xa8
+    3e5c:	a90363f7 	stp	x23, x24, [sp, #48]
+    3e60:	a9046bf9 	stp	x25, x26, [sp, #64]
+    3e64:	a90573fb 	stp	x27, x28, [sp, #80]
+    3e68:	d000001b 	adrp	x27, 5000 <init_socketd@@Base+0x60>
+    3e6c:	913ac360 	add	x0, x27, #0xeb0
+    3e70:	f9003fff 	str	xzr, [sp, #120]
+    3e74:	f90047e0 	str	x0, [sp, #136]
+    3e78:	a94783f6 	ldp	x22, x0, [sp, #120]
+    3e7c:	52800801 	mov	w1, #0x40                  	// #64
+    3e80:	f9400284 	ldr	x4, [x20]
+    3e84:	f94047e2 	ldr	x2, [sp, #136]
+    3e88:	aa1603e3 	mov	x3, x22
+    3e8c:	91250000 	add	x0, x0, #0x940
+    3e90:	97fffc04 	bl	2ea0 <g_log@plt>
+    3e94:	f940029c 	ldr	x28, [x20]
+    3e98:	f9401393 	ldr	x19, [x28, #32]
+    3e9c:	97fffc11 	bl	2ee0 <g_get_real_time@plt>
+    3ea0:	91002800 	add	x0, x0, #0xa
+    3ea4:	eb00027f 	cmp	x19, x0
+    3ea8:	54000269 	b.ls	3ef4 <send_list_field@@Base+0x104>  // b.plast
+    3eac:	f9401380 	ldr	x0, [x28, #32]
+    3eb0:	b4000096 	cbz	x22, 3ec0 <send_list_field@@Base+0xd0>
+    3eb4:	f9403fe1 	ldr	x1, [sp, #120]
+    3eb8:	eb00003f 	cmp	x1, x0
+    3ebc:	54000049 	b.ls	3ec4 <send_list_field@@Base+0xd4>  // b.plast
+    3ec0:	f9003fe0 	str	x0, [sp, #120]
+    3ec4:	f9400694 	ldr	x20, [x20, #8]
+    3ec8:	b5fffd94 	cbnz	x20, 3e78 <send_list_field@@Base+0x88>
+    3ecc:	f9403fe0 	ldr	x0, [sp, #120]
+    3ed0:	b5001000 	cbnz	x0, 40d0 <send_list_field@@Base+0x2e0>
+    3ed4:	52800000 	mov	w0, #0x0                   	// #0
+    3ed8:	a94153f3 	ldp	x19, x20, [sp, #16]
+    3edc:	a9425bf5 	ldp	x21, x22, [sp, #32]
+    3ee0:	a94363f7 	ldp	x23, x24, [sp, #48]
+    3ee4:	a9446bf9 	ldp	x25, x26, [sp, #64]
+    3ee8:	a94573fb 	ldp	x27, x28, [sp, #80]
+    3eec:	a8cb7bfd 	ldp	x29, x30, [sp], #176
+    3ef0:	d65f03c0 	ret
+    3ef4:	f9403be0 	ldr	x0, [sp, #112]
+    3ef8:	f9400c1a 	ldr	x26, [x0, #24]
+    3efc:	b500009a 	cbnz	x26, 3f0c <send_list_field@@Base+0x11c>
+    3f00:	1400005e 	b	4078 <send_list_field@@Base+0x288>
+    3f04:	f940075a 	ldr	x26, [x26, #8]
+    3f08:	b4000b9a 	cbz	x26, 4078 <send_list_field@@Base+0x288>
+    3f0c:	f9400359 	ldr	x25, [x26]
+    3f10:	f9400780 	ldr	x0, [x28, #8]
+    3f14:	f9402b21 	ldr	x1, [x25, #80]
+    3f18:	eb00003f 	cmp	x1, x0
+    3f1c:	54ffff41 	b.ne	3f04 <send_list_field@@Base+0x114>  // b.any
+    3f20:	f9403be0 	ldr	x0, [sp, #112]
+    3f24:	f90057ff 	str	xzr, [sp, #168]
+    3f28:	f9401013 	ldr	x19, [x0, #32]
+    3f2c:	b4fffed3 	cbz	x19, 3f04 <send_list_field@@Base+0x114>
+    3f30:	b9006fff 	str	wzr, [sp, #108]
+    3f34:	d503201f 	nop
+    3f38:	f9400276 	ldr	x22, [x19]
+    3f3c:	b9401380 	ldr	w0, [x28, #16]
+    3f40:	294862d7 	ldp	w23, w24, [x22, #64]
+    3f44:	6b0002ff 	cmp	w23, w0
+    3f48:	540005a0 	b.eq	3ffc <send_list_field@@Base+0x20c>  // b.none
+    3f4c:	6b18001f 	cmp	w0, w24
+    3f50:	54000081 	b.ne	3f60 <send_list_field@@Base+0x170>  // b.any
+    3f54:	b9405320 	ldr	w0, [x25, #80]
+    3f58:	6b0002ff 	cmp	w23, w0
+    3f5c:	540008a0 	b.eq	4070 <send_list_field@@Base+0x280>  // b.none
+    3f60:	f9400673 	ldr	x19, [x19, #8]
+    3f64:	b5fffeb3 	cbnz	x19, 3f38 <send_list_field@@Base+0x148>
+    3f68:	b9406fe0 	ldr	w0, [sp, #108]
+    3f6c:	34fffcc0 	cbz	w0, 3f04 <send_list_field@@Base+0x114>

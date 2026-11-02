@@ -1,0 +1,57 @@
+[
+  {
+    "bytes": "fcf7e9ff",
+    "pc": "0x52236",
+    "target": "0x4f20c"
+  },
+  {
+    "bytes": "fdf7afba",
+    "pc": "0x54dae",
+    "target": "0x52310"
+  },
+  {
+    "bytes": "baf0e8fb",
+    "pc": "0x5433c",
+    "target": "0x10eb10"
+  },
+  {
+    "bytes": "fef738ba",
+    "pc": "0x54340",
+    "target": "0x527b4"
+  },
+  {
+    "bytes": "fdf74dbb",
+    "pc": "0x551c6",
+    "target": "0x52864"
+  },
+  {
+    "bytes": "04f09bfa",
+    "pc": "0x52d12",
+    "target": "0x5724c"
+  },
+  {
+    "bytes": "bbf05cfb",
+    "pc": "0x52d1c",
+    "target": "0x10e3d8"
+  },
+  {
+    "bytes": "52f071fd",
+    "pc": "0x53a22",
+    "target": "0xa6508"
+  },
+  {
+    "bytes": "03f0a3fc",
+    "pc": "0x53a5a",
+    "target": "0x573a4"
+  },
+  {
+    "bytes": "fbf7bdfa",
+    "pc": "0x53a82",
+    "target": "0x4f000"
+  },
+  {
+    "bytes": "9af039fe",
+    "pc": "0x53a92",
+    "target": "0xee708"
+  }
+]

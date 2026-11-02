@@ -1,0 +1,12 @@
+[
+  {
+    "add_pc_va": "0xa8120",
+    "pool_va": "0xa8af0",
+    "target_thumb_pointer": "0xa60a9"
+  },
+  {
+    "add_pc_va": "0xa8124",
+    "pool_va": "0xa8af4",
+    "target_thumb_pointer": "0xa56c1"
+  }
+]

@@ -1,0 +1,59 @@
+# MyHOMEServer1 3.87.13: local BNIL state-string admission and selected caller
+
+This static batch identifies a separate original BNIL state-string handler, its enabled/recognized-string/operator guards, callback request and one typed/ID-matched local caller. It also retains the selected temporary trigger-handle copy/release order. This is a conditional local source chain, not accepted wire input, an installed event subscription, natural callback execution, a complete owner lifetime or a physical device function. Original instructions/native helpers/providers/JSON/event objects/threads/network/bus/physical execution0; semantic host models0.
+
+Original image object `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Fresh PT_LOAD VA-to-file translation, actual data/relative relocations and original Thumb2 source are used. Linked VAs are not observed PIE addresses. Curated OWN-DEV-0199 describes the product's home-automation/scenario role, without assigning any physical meaning to BNIL or transferring MH202/F454 implementations.
+
+## Separate handler and generic primary fire
+
+The actual compiled class header0x1625ac/address point0x1625b4 has first method Thumb0xee59d. Original code0xee59c checks callable manager inner+12, loads invoker inner+16 and tailcalls it with data inner+4; an absent manager requests bad_function_call. This body does not itself perform the state-string comparisons below. The nonvirtual handler0xee708 is separate, not vtable+8. Class method pointer values and nearby cleanup bodies must not be mislabeled as a generic trigger predicate.
+
+Handler0xee708 takes the compiled inner object in r0 and a valid C++ string object in r1. It first reads enabled byte inner+48; zero returns before string inspection. This offset belongs to this64-byte compiled inner, not the76-byte allocation/control base, a scene enabled byte, action completion or shared cancellation domain.
+
+For enabled nonzero, it loads the supplied string's buffer and length. Only these exact selected lowercase forms reach the local state calculation:
+
+| Supplied string | Length/selected comparison | Local state |
+| --- | --- | --- |
+|on|2, two original character comparisons|0|
+|off|3, three original character comparisons|1|
+|noStatus|8, original literal through GOT0x166444 and memcmp request|−1|
+
+Other lengths or failed selected comparisons return. Ordinary valid string buffers, memcmp semantics, normal ABI/provider returns and valid live receiver remain premises. These local strings and numbers are not external wire-frame grammar, OPEN WHAT values or observed electrical states.
+
+## Operator and configured-status gate
+
+Once a recognized local state is available, original0xee73c reads operator inner+56. Code2 reads configured status inner+60 and permits fire only when equal; code3 permits it only when different. Other operator words take the selected fire path without either of these equality comparisons. The independently reviewed schema maps local names equal/different to2/3; names higher/lower/noOperator belong to other stored codes, but this handler does not implement an ordered numeric comparison for them in this retained path. This is not proof that all such combinations are admitted by product configuration or other validation.
+
+No previous-event value is stored by this retained handler. Its fields are read and a callback may be requested; this local fact does not establish a globally absent change detector, event deduplication policy, naturally repeated firings or a defect. Upstream and other entry points remain separate.
+
+At0xee748..0xee752, the selected fire path compares primary vtable slot0 with exact Thumb0xee59d, recovered independently through original pool0xee7ac/PC0xee74e. For the known method it directly checks manager+12 and tailcalls stored invoker+16 with data+4. A different primary method is an opaque virtual delegate. The generic fire method and this fast path preserve the original callable request relation, not successful invocation or scene/action completion.
+
+The complementary callback-capture report connects the selected initializer's callable to wrapper0xa60a8. That wrapper dereferences the captured scene pointer and tailcalls scene launch0xa5db0. The already reviewed scene enabled/active and condition/action-worker gates remain further conditional boundaries; a matching state string alone is not a completed scenario.
+
+## A selected typed and ID-matched local caller
+
+A bounded halfword-position Thumb BL/B.W locator over original text0x11880..0x113fb0 finds one syntactic candidate targeting handler0xee708: original call0x53a92. This caller is manually retained; the scan is not a proof that no indirect caller, other encoding or data alias exists.
+
+The selected caller0x53a1a..0x53aa0 operates on already supplied scene/event/ID objects. It requests a local copy of scene+104 trigger handles through0xa6508, checks an index against the local range size and reads an entry pointer. It requests dynamic_cast from original RTTI13TriggerRunner to17BnilTriggerRunner, using relocated GOT slots0x165e8c/0x1662a4, and retains the result in r5. Live type/vtable and successful nonnull cast are premises; a failed cast/error outcome is not supplied or promoted into a defect.
+
+The function's source prefix establishes r9's original GOT base0x1659a4; the selected pool accesses are resolved under that retained normal PIC/register premise, not a complete proof of every preceding path through the larger routine. No upstream parser, external transport/session/authentication/framing body or origin of the supplied event is investigated.
+
+For the known secondary ID getter, slot+12 resolves Thumb0x2264d. Its body returns supplied secondary receiver+4, corresponding to compiled inner+24 string. The selected shortcut directly reads that string's buffer/length. An alternative getter call is retained as an opaque normal-return path. Equality helper0x4f000 first compares lengths, then for nonempty equal lengths requests memcmp and returns1 only for zero result; equal empty strings return1. This is source-backed string equality, not a public ID format or device-identity claim.
+
+Only a nonzero equality result reaches0x53a8c..0x53a92, passing supplied event object's embedded string at r8+8 and typed receiver r5 into the handler. The field producer and whole dispatcher classification remain open; arbitrary raw traffic is not assumed to enter this branch.
+
+## Temporary handle-copy cleanup precedes that call
+
+The source copy helper0xa6508 allocates a local vector, copies scene+104/+1088-byte handle records and increments each nonzero control's selected strong-count word (single-threaded or LDREX/STREX branch). This is local retained-owner source under ordinary header/allocation/control premises.
+
+However, the selected caller saves the raw typed receiver and calls0x573a4 at0x53a5a before the later ID/handler call. The retained cleanup helper decrements copied control counts, conditionally requests last-owner disposal/weak release, and requests deletion of its raw buffer. The source therefore does not establish that this temporary copy itself retains the receiver throughout the subsequent callback. A scene vector or other owners may still do so. Normal callee returns, live receiver, full natural owner order, all errors/unwind and actual concurrency remain unclosed; no safe/unsafe interleaving, UAF/leak or lifetime failure is inferred.
+
+This ordering is kept explicit rather than substituting a generic shared-owner name for a lifetime proof. The target class, state-string guard, callback capture, scene active/stop, temporary handle controls and shared action cancellation flag are separate namespaces.
+
+## Reproduction and preservation
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/collect_admission_v1.py --check`
+
+The collector emits18 files including manifest, nine source spans,22 instruction guards, five selected direct-branch checks, original pointer/relative-relocation bindings, the bounded locator and four input identities. It refuses overwrite and immediately freezes outputs/code under first-candidate; this report is frozen separately before independent review. No original event object, runtime/provider or semantic model executes. An earlier unsaved exploratory locator invocation had a Python spacing SyntaxError before generation; DEVELOPMENT_NOTES.json records only its actual error excerpt, not invented historical file hashes. Canonical first generation succeeded.
+
+Confidence is high for bounded original source/field/guard/string/pointer/call/cleanup order. Active event subscription, full upstream event construction/classification, complete provider/loader/validation/exception semantics, receiver lifetime/concurrency, configured scenes, actual callbacks/timing and physical observations remain open. Wider Device/source gates and closed authentication/session/framing/equivalent boundaries are unchanged.

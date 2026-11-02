@@ -1,0 +1,100 @@
+[
+  {
+    "collector_sha256": "c78a270b0ef37047a6a83108128a0638318c224cd323c119a87f727880dd6128",
+    "export_report": "packets/first-1/REPORT.txt",
+    "label": "first-1",
+    "local_root": "work/f450-firmware/2.0.10/research/2026-11-01-first-exploration",
+    "report_sha256": "9e525852d8ca2d7ca4f485f10ff8425764da215fdb4a1c51c1987a8aa75d0d78"
+  },
+  {
+    "collector_sha256": "95b71f2d7ae8ba6a4c4a8d6cb065189777442914c359045b56e8fa22d3bbefe4",
+    "export_report": "packets/first-2/REPORT.txt",
+    "label": "first-2",
+    "local_root": "work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration",
+    "report_sha256": "77c1b90bf0d3fe2d4a651d26f5f93dad728b04ebf8c3e7f0efd60c94b402f778"
+  },
+  {
+    "collector_sha256": "e8d3adabafd6fd8793f121484cbb6f10016b1f7bb966481ac9d0c58fd7dd4553",
+    "export_report": "packets/first-3/REPORT.txt",
+    "label": "first-3",
+    "local_root": "work/f459-firmware/2.1.5/research/2026-11-01-first-exploration",
+    "report_sha256": "855e0f3016343bc4b8ab387a7f0ded5265c0dd67e67630e179b41bfb29863e8f"
+  },
+  {
+    "collector_sha256": "3529802d1dfb118ccdfa9f4d7405d089a8670285e1f56da404a4758b3c182ae1",
+    "export_report": "packets/run01-f450/REPORT.txt",
+    "label": "run01-f450",
+    "local_root": "work/f450-firmware/2.0.10/research/2026-11-01-night01-archive",
+    "report_sha256": "3e25a7de747b22c77afed6eff8f8751e8b0e050a23a9708703dde67e2dbef2d2"
+  },
+  {
+    "collector_sha256": "1b95488ba324321d2e6d49cfd27014bf5324152ec0a076bdb7f0c211de3bf5d5",
+    "export_report": "packets/run01-f459/REPORT.txt",
+    "label": "run01-f459",
+    "local_root": "work/f459-firmware/2.1.5/research/2026-11-01-night01-shared-store",
+    "report_sha256": "2e2a56a80412660e7a2992593510fcb2bc61095e59c4bd162aac9d03607d4847"
+  },
+  {
+    "collector_sha256": "fd998b8f6df2ee68ae9119c11fc37a91b0bb9443c127ef17dd683b21df258046",
+    "export_report": "packets/run01-mh200n/REPORT.txt",
+    "label": "run01-mh200n",
+    "local_root": "work/mh200n-firmware/1.1.8/research/2026-11-01-night01-resources",
+    "report_sha256": "908ed410d6954c8080c0a50821ca1cbbd5e7c2533b7b4320893aebc4d6004f4c"
+  },
+  {
+    "collector_sha256": "2e8488bccc8f1af59cad8955396cf3e50cb7b20ae904fdf883fc22be272cd49a",
+    "export_report": "packets/run02-f453av/REPORT.txt",
+    "label": "run02-f453av",
+    "local_root": "work/f453av-firmware/3.0.14/research/2026-11-01-night02-resources",
+    "report_sha256": "30aa6c495f788ef11feb91381cf0347ca25c09dc8b1bc6bedf69a8e6996f363e"
+  },
+  {
+    "collector_sha256": "4f8829acda5536e216240f10889d03c496b340ff899ee3593801a53c661ddc76",
+    "export_report": "packets/run02-f455/REPORT.txt",
+    "label": "run02-f455",
+    "local_root": "work/f455-firmware/1.1.2/research/2026-11-01-night02-format",
+    "report_sha256": "f955678a426ff1f4602fc4d481cb7b1b79f23d619c9d3f1cbf5b3a2e0b835a87"
+  },
+  {
+    "collector_sha256": "f0d76595d54786b7a1d3629d1f85614e90e382e72b9a4bbbaa4a9fb172977068",
+    "export_report": "packets/run02-f459/REPORT.txt",
+    "label": "run02-f459",
+    "local_root": "work/f459-firmware/2.1.5/research/2026-11-01-night02-shared-write",
+    "report_sha256": "b58d3b1d6f76e58f13bd5d4e737be9fa213fe0183bb9b0b5c829f71dbf78ca9b"
+  },
+  {
+    "collector_sha256": "ac1907c687a32dccca777b74718e1624b681492dcd1f7b7b80b1750697d5f6e3",
+    "export_report": "packets/run03-f450/REPORT.txt",
+    "label": "run03-f450",
+    "local_root": "work/f450-firmware/2.0.10/research/2026-11-01-night03-resource",
+    "report_sha256": "fb73ae57a898efca61b10dede7029744b3d85fd267eae1900f5b190f9a07b797"
+  },
+  {
+    "collector_sha256": "3603e4841f5fa60e33cf7a27271cf76f22b1d4455070c15ad5e35783e73e922e",
+    "export_report": "packets/run03-mh200n/REPORT.txt",
+    "label": "run03-mh200n",
+    "local_root": "work/mh200n-firmware/1.1.8/research/2026-11-01-night03-consumer",
+    "report_sha256": "34bb0640bb51ed6d100587cce098de847b359839120532e2b32cf18f505d263e"
+  },
+  {
+    "collector_sha256": "37d4bc244dff7b2ae70a6b6391261224a7ba23a53cdea6e54b59636e7ba0e8e5",
+    "export_report": "packets/run03-f459/REPORT.txt",
+    "label": "run03-f459",
+    "local_root": "work/f459-firmware/2.1.5/research/2026-11-01-night03-shared-read",
+    "report_sha256": "641a116874bc640fcb6ba09bc14406ff4c6f716f9371374a652ca5840668c1a9"
+  },
+  {
+    "collector_sha256": "1c0769d6c64bf652a4f444d47bd50ca4cb28209a870e62e7e2fee4c2bc081c09",
+    "export_report": "packets/run04-f450/REPORT.txt",
+    "label": "run04-f450",
+    "local_root": "work/f450-firmware/2.0.10/research/2026-11-01-night04-config-source",
+    "report_sha256": "e8de9351b23a232ab5898a7023f342f11fb40418a9773367c95575b1bfe88db7"
+  },
+  {
+    "collector_sha256": "f3174863a055a1170fbce9d8d3cdd4c285446e9a762574dcca378c266842696f",
+    "export_report": "packets/run04-mh200n/REPORT.txt",
+    "label": "run04-mh200n",
+    "local_root": "work/mh200n-firmware/1.1.8/research/2026-11-01-night04-fields",
+    "report_sha256": "bf26786cbb8638a41d94240203d14c5b5ae593de00623ddd19848c4721f46ab2"
+  }
+]

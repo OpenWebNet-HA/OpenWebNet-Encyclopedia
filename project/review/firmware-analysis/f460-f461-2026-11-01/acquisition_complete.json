@@ -1,0 +1,101 @@
+{
+  "status": "BOTH_CANONICAL_COPIES_VERIFIED",
+  "records": [
+    {
+      "product": "F460",
+      "filename": "F460_020012.fwz",
+      "size": 158564663,
+      "sha256": "b5a50d606578f47ecbf0d327d7078b1357abb78425ea821ce743cd486b801b26",
+      "bucket": "openwebnet-software",
+      "object_key": "sha256/b5/a5/b5a50d606578f47ecbf0d327d7078b1357abb78425ea821ce743cd486b801b26",
+      "canonical_cached_copy": "/workspace/archive-staging/openwebnet-software/F460_020012.fwz",
+      "workspace": "work/f460-firmware/2.0.12",
+      "local_path": "work/f460-firmware/2.0.12/F460_020012.fwz",
+      "local_SHA256_verified": true,
+      "local_size_verified": true,
+      "remote_canonical_staging_SHA256_size_verified": true,
+      "transfer": "SCP using existing authenticated archive-server connection; cached original matching canonical R2 manifest, no new remote write",
+      "retrieved_UTC": "2026-11-01T10:18:30.929281+00:00",
+      "original_vendor_execution": false,
+      "outer_ZIP_members_metadata": [
+        {
+          "name": "Image.zip.sha256.sig.zip",
+          "bytes": 5669942,
+          "compressed_bytes": 5669954,
+          "encrypted": true,
+          "CRC32": "a392fb50"
+        },
+        {
+          "name": "btweb_only.ext4.gz.sha256.sig.zip",
+          "bytes": 83592545,
+          "compressed_bytes": 83592557,
+          "encrypted": true,
+          "CRC32": "052e9c12"
+        },
+        {
+          "name": "btweb_only_recovery.ext4.gz.sha256.sig.zip",
+          "bytes": 69301168,
+          "compressed_bytes": 69301180,
+          "encrypted": true,
+          "CRC32": "c3a3d30d"
+        },
+        {
+          "name": "fwz.xml",
+          "bytes": 682,
+          "compressed_bytes": 290,
+          "encrypted": true,
+          "CRC32": "a58725e3"
+        }
+      ]
+    },
+    {
+      "product": "F461",
+      "filename": "F461_020011.fwz",
+      "size": 138644991,
+      "sha256": "cb6f3e9d875c14f74a0791d7f3f420ce9d4babadb4459c1250c6cba7e741af2b",
+      "bucket": "openwebnet-software",
+      "object_key": "sha256/cb/6f/cb6f3e9d875c14f74a0791d7f3f420ce9d4babadb4459c1250c6cba7e741af2b",
+      "canonical_cached_copy": "/workspace/archive-staging/openwebnet-software/F461_020011.fwz",
+      "workspace": "work/f461-firmware/2.0.11",
+      "local_path": "work/f461-firmware/2.0.11/F461_020011.fwz",
+      "local_SHA256_verified": true,
+      "local_size_verified": true,
+      "remote_canonical_staging_SHA256_size_verified": true,
+      "transfer": "SCP using existing authenticated archive-server connection; cached original matching canonical R2 manifest, no new remote write",
+      "retrieved_UTC": "2026-11-01T10:18:31.057158+00:00",
+      "original_vendor_execution": false,
+      "outer_ZIP_members_metadata": [
+        {
+          "name": "Image.zip.sha256.sig.zip",
+          "bytes": 5669887,
+          "compressed_bytes": 5669899,
+          "encrypted": true,
+          "CRC32": "bd4af9b9"
+        },
+        {
+          "name": "btweb_only.ext4.gz.sha256.sig.zip",
+          "bytes": 74018854,
+          "compressed_bytes": 74018866,
+          "encrypted": true,
+          "CRC32": "59d14970"
+        },
+        {
+          "name": "btweb_only_recovery.ext4.gz.sha256.sig.zip",
+          "bytes": 58955243,
+          "compressed_bytes": 58955255,
+          "encrypted": true,
+          "CRC32": "708ddc21"
+        },
+        {
+          "name": "fwz.xml",
+          "bytes": 682,
+          "compressed_bytes": 289,
+          "encrypted": true,
+          "CRC32": "843fb897"
+        }
+      ]
+    }
+  ],
+  "source_manifest_modified": false,
+  "remote_upload": false
+}

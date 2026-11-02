@@ -1,0 +1,30 @@
+# Independent TIME trigger source review
+
+PASS for time-trigger/REPORT.md. No correction requested. This is independent static source/dataflow/identity review of the selected raw schema and compiled registration handoff. No original instructions, JsonCpp/provider, calendar, callback, scene, service, transport or physical execution occurred. No calendar fixture or semantic host model was supplied, and no author file was edited.
+
+Reproduced collect_time_v1.py --check: 20 outputs, 11 spans, nine key PIC joins, two RTTI identities/four relocation chains, nine direct calls, 15 byte guards and four direct input pins. Independently mapped the original scheduler ELF32 PT_LOAD ranges and checked all 11 raw span hashes, 15 file-byte guards, nine literal targets/bytes, two captured callback pointer joins, nine Thumb BL targets, both vtable/typeinfo data sets and four original relative-relocation chains. Original TIME row/table and the distinct initializer index0 TBH target were verified separately. All 21 indexed initial collector/output copies and the separate actual report copy match current exact bytes.
+
+Source conclusions verified:
+
+- Trigger TIME is matched local table index0, not action TIME or an OPEN namespace. Original matched index is decremented at2eab4 then compared unsigned with22; its wrapped index0 selects special2f7ec. The report confines this to the matched-index route and does not infer unknown/missing type admission.
+- Raw derived construction requests68 bytes, copies base fields and time string at+40, and stores days mask+64. The shared parser has enabled+28, id string+4, type+32 and operator+36. Local schema labels do not prove clock syntax or operator/runtime meaning.
+- Original days parser2d1c2..2d21e inspects min(length,7) leading characters: zero-length mask0; shorter nonempty strings use their own count; longer strings inspect seven. It walks left-to-right using shift count count-1-position, accepting inspected characters 0/1 and requesting invalid_argument for another inspected character. It does not locally validate suffix characters beyond seven. This is a bounded character/bit contract, not a complete accepted JsonCpp/scene grammar.
+- Serializer29af0 independently emits time+40 and seven days characters, mapping mask bits6..0 to positions0..6. The source establishes that fixed-width representation; it does not establish an executed roundtrip, weekday labels, timezone, recurrence or firing policy.
+- Compiled initializer uses its own raw-trigger+32/table index0 route to a8108. Original raw virtual serialization and reparsing feed b8e7c with callback r1 and TimeTrigger r2, not injected fields. The constructor copies callback data/manager/invoker and selected enabled/type/operator/time/mask fields to the documented fresh inner offsets; its b8be0 delegate is outside this report's calendar closure.
+- TimeTrigger and TimeTriggerRunner RTTI/address points resolve through original data and relocations. The outer allocation is112 bytes, inner pointer is allocation+16. Allocation+36/+76/+100 therefore correspond to inner+20/+60/+84, not the same aggregate offsets. The pair is (inner,control allocation), and the selected available-capacity path copies that pair into compiled trigger vector rooted at scene+104 and advances scene+108 by8. Reallocation, aggregate lifetime and errors remain open.
+- Registration b9814 receives saved initializer incoming r1 as context and the address of the actual two-word handle. This is an original argument handoff, not proven acceptance, installed timer, retained handle or callback invocation. Raw scene+0 pointers, compiled scene+104 handles and runner/object offsets remain distinct.
+
+The report correctly leaves preparation b8be0, registration implementation, context/provider population, weekdays/timezone, natural input/state, callback retention/firing, ownership/concurrency and scene/physical outcomes outside this batch. Earlier callback-launch findings are inherited with their limited source scope. The discarded exploratory mid-BL disassembly is disclosed as pre-generation history; this review verifies the retained instruction-aligned current candidate, not unavailable console history.
+
+Reviewed SHA-256 pins relative to time-trigger/:
+
+| File | SHA-256 |
+| --- | --- |
+| REPORT.md | 84577a44d93002a00c9ec0ffba5de06840cafbb7607776e5bfad26a91b0c5682 |
+| collect_time_v1.py | 8956e0168e3ef01246b74b00b874b48b223a1dcea6c933272f73cfa47784ae35 |
+| OUTPUT_MANIFEST.v1.json | 15479f8788848027d223d4463473ea72285c9a37cb6f4bdafbc09295e2d769ed |
+| VTABLE_CHAINS.v1.json | e4041efc0d1ae3cb95e971b03f2e9351af4d20b8bb12ee2f90676265f46ad695 |
+| PIC_KEYS.v1.json | f2cfbd40c067e84aaa5f91be2d308926de81a04ab58c4c11b94dd58e7c47e2a7 |
+| first-candidate/SNAPSHOT.json | 383c93f82708e9a74d945398844be0ea3ae6ccfedaa098b0c37975d5aa483d0e |
+
+Original scheduler SHA-256: 7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26. This new ASCII review is exclusively created and immediately frozen as exact first-review bytes with a non-self-referencing snapshot index before its hash is announced. No old source or review was overwritten.

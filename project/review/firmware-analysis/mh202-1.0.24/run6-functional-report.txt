@@ -1,0 +1,101 @@
+# MH202 1.0.24 — scenario STM pending request, field and timeout paths
+
+Bounded static report. **Original ARM/vendor/library/PHP/JS execution, instruction counts and hooks:0.** No device, descriptor, service, timer, callback or network operation was performed. This batch examines the actual separate `scenarios_stm` component rather than repeating run5's scenario TR body packing.
+
+## Material result and scope
+
+The scenario STM has a concrete pending-request state machine. A selected application parsed-kind2 request queues its existing record, saves its correlation key/WHERE/selectors, sets state1 and requests a `g_timeout_source_new(1000)` callback. Timeout state1 queues local NACK; states2/3 queue local ACK, followed by supplied publication callback and reset. Selected field flags and matched ordinary fields can move or complete the pending state. These are original branch/API-request relationships, not observed scenario execution or bus acknowledgements.
+
+An important limit is source-visible: private counter+32 is initialized to0 by the initializer but **not cleared by the selected reset helper**. The field path's equality-to2 completion therefore depends on counter history; it must not be described as a universal "second reply per request" policy. No defect or physical behavior is inferred.
+
+WHO0 scenario translation and WHO17 taskmanager scheduling remain distinct. The STM registration appends numeric0 to its descriptor's selected list, while run5's separate TR component has fixed-WHO0 format evidence. Full dispatcher/list-criterion interpretation and effective active routing are not executed here; no new WHO17 command or accepted raw WHO0 frame is established.
+
+## Inputs and reproduction
+
+Fresh normal-image verified `ImageVFS` reads:
+
+| Original image path | SHA256 |
+|---|---|
+| `/home/bticino/libcoso/libplug_scenarios_stm.so` | `5b5709bd9b33945b4650f1ee86532b6459724376c108c22f69b097fc43f12d82` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+| `/usr/lib/libglib-2.0.so.0.2800.7` | `029c2a7913131a84c46958d9ed445cb8a79dd1c8abc61116321badb7ad2735c0` |
+| `/home/bticino/cfg/coso_plugins/scenarios_stm` | `5493c5e90fdc206a576ef71772e9b0f1423bc8c91b58254b9a0f2c84020a00e3` |
+
+The safe plugin configuration contains only a log-level setting; it does not provide scenario bodies or observed initialized state. `input-hashes.json` also records sizes.
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/functional/run6/collect_evidence.py --check
+```
+
+This strictly compares20 generated outputs plus manifest,10 original spans,32 exact instruction words,4 original inputs, two ACK literals and finite host models (5 timeout,6 selected field,3 reset examples). It runs host reads/binutils/Python only. All spans include exact original VA, file-offset and raw-byte hash. Manifest excludes this report/reviews. No F454 fixture or address is reused.
+
+## Registration and private state
+
+Plugin `init_plugin` calls imported `register_state_machine` at0x16f0, with descriptor `scenarios_stm_sm` at0xa4d8. Original relocations distinguish descriptor+36 initializer0x1d58, +40 field handler0x1910 and +44 application handler0x1bb4. Core `register_state_machine`0x2074..0x2120 prepends the descriptor, stores manager pointer at descriptor+60, and calls its nonnull+36 callback with arguments descriptor and manager+44.
+
+Initializer0x1d58..0x1da8 requests zeroed44bytes, stores pointer at descriptor+56, calls reset, then copies the two supplied manager+44 words into private+36/+40 (context/callback), stores descriptor at private+0 and explicitly zeros counter+32. This is an original initialization contract, not an actual allocation/registration.
+
+| Private offset | Selected source use |
+|---|---|
+|+0|Descriptor pointer|
+|+4|State code, reset0|
+|+8|Saved application record+60 correlation key, reset−1|
+|+12|Pending parsed kind, reset0|
+|+16/+20/+24|Duplicated WHERE and optional selector strings; reset frees/nulls|
+|+28|Timer source pointer; reset destroys/nulls|
+|+32|Matched-field counter; initializer0; reset preserves|
+|+36|Supplied context pointer for source attachment|
+|+40|Supplied publication callback|
+
+Reset0x1818..0x1894 sets state0/key−1/kind0, requests frees of the three strings and destroy of a nonnull source. It contains no counter+32 store and no source-unref call. That identifies selected calls, not a leak/lifetime/refcount verdict. A complete scheduler/allocator/ownership analysis is outside this batch.
+
+## Application measure request enters pending state
+
+The complete application handler0x1bb4..0x1d58 obtains private state through descriptor+56 and parsed object through input record+0. Existing private state nonzero selects queue-NACK→reset→source return1 (0x1c00..0x1c14). This is a local reject/reset path under the passed record/context, not a public concurrent-request guarantee.
+
+For idle state0, it sets input record+4/+8 to1 (0x1be4..0x1bf0). Selected parsed kind+44=2 reaches0x1c18: appends the **existing record** to the supplied output list, duplicates parsed WHERE+16 and optional+20/+24, saves input record+60 at private+8, sets state1 and private+12 to parsed kind2. It then requests the1000 timer and returns0. No key string/selector domain or accepted raw grammar is validated by these observations; original parser and successful allocation/list contracts remain supplied.
+
+Application normal-command kind1 takes a separate branch, and other kinds reach the displayed reject/reset path. Its command/parameter table is retained in the complete original span for context but not remodeled here. Run5's TR no-parameter40/41 correction is not repeated as a new finding.
+
+## Timer API, units and callback policy
+
+Application timer call0x1c74 and selected field rearm0x1b18 both pass integer**1000** to imported `g_timeout_source_new`. Callback registration supplies original `scenarios_gest_status_from_timeout`0x1894 through GOT relocation0xa4a0, data=private pointer, destroy-notify=NULL, then attaches source to private+36 context. The attach return is not checked in these selected call sites.
+
+The selected packaged GLib definition0x351e0 stores that argument unchanged at source+64. Its distinct seconds constructor0x35184 multiplies its argument by1000 before the same field. Shared deadline arithmetic0x334a8..0x334dc multiplies this field by1000 and adds the monotonic-time result. These original relationships support the ordinary GLib API interpretation **1000 milliseconds, one nominal second**, conditional on the selected provider/monotonic-time ABI. They do not establish elapsed delay, attachment success, callback scheduling, cancellation/refcount completion or concurrency behavior. The host objdump ignores an unmatched separate-debug CRC; evidence is original ELF bytes, not debug symbols/source.
+
+Complete callback0x1894..0x1910:
+
+| Private state+4 | Selected local action |
+|---|---|
+|1|Queue NACK into its initially empty local list|
+|2 or3|Queue ACK into that list|
+|0 or displayed other unsigned states|Skip queue/publication|
+
+For states1..3, the callback calls private+40 with r0=address of local first list, r1=address of a second initially empty list, r2=descriptor+60 manager. It then calls reset and returns integer0. This is a supplied function-pointer publication boundary; no actual output consumer, timer dispatch or list destruction runs. Ordinary GLib interpretation of return0 removes recurrence, but real lifetime/scheduling remains unexecuted.
+
+## Selected field transitions and count history
+
+The complete field handler0x1910..0x1bb4 supports already-parsed record+56=3, or record+56=2 through a parser/free/replace path. The latter parser result is not proven successful by this batch. Other formats return1. All cases below supply a coherent successful parsed object and valid private state.
+
+- State0: parsed kind2 returns without forwarding; the displayed other-kind branch sets input record+8=3 and appends that existing record, then returns0. This does not start a pending request.
+- State1: compare saved private+8 key against input record+60 at0x19f0..0x19fc. For equal keys, record+52==1 sets state2, while+52==2 queues NACK and resets. Other flags or different keys follow the next selected state/pending-kind tests. These numeric metadata flags are not assigned universal physical meanings.
+- State2 or its selected fallthrough: pending kind+12==2 sets state3; otherwise resets/queues ACK. State3 reaches the ordinary field branch.
+- The selected ordinary state3 branch excludes parsed kinds2 and3, sets existing input record+8=3 and **appends it before address matching**. It calls imported `lighting_parse_where` twice on saved WHERE and incoming parsed WHERE, then compares only two of its output words (saved sp+20/+28 against incoming sp+32/+40). The helper return is not used here. Those output meanings/full address equivalence are not established; they remain supplied comparison contracts.
+- If both comparisons equal, increment private+32 (0x1ab8..0x1ac8), irrespective of whether the later clone path qualifies. For pending kind2 plus incoming parsed kind1 or4, call `new_openmsg_from_openmsg(4,parsed)` and append its result. **Only incremented count exactly2** queues ACK and resets (0x1af8,0x1b94..0x1ba4); other counts destroy an existing source if nonnull and recreate the1000 timer. A WHERE mismatch returns before increment/clone/rearm, after that existing-record append.
+
+`host-local-state-models.json` explicitly contrasts starting counters0/1/2: a selected qualifying match produces1/rearm,2/ACK-reset,3/rearm respectively. Reset retains those values; fresh initialization gives0. These are finite branch transcriptions, not three executed requests or a complete automaton. Actual natural dispatcher order/key/flag/provider/counter history is unestablished.
+
+## Output records and metadata boundaries
+
+Selected core queue helpers0x2a44..0x2b5c request zeroed64-byte records, real-time stamping at+24/+28, duplicate exact safe strings `*#*0##` (NACK) / `*#*1##` (ACK), set+40 to7/6 respectively, and final+4=2,+8=4,+56=2,+52=0 before list append. These are local native record constructors, not proof that an application or bus received either string. Later key/context association and output draining remain outside the selected helper.
+
+`new_openmsg_from_openmsg`0x2fa4..0x3190 selects imported `new_message_to_opencmd` for argument4, then duplicates ordinary parsed strings/list items into a new parsed object. It sets new record+40 from parsed kind, +56=3, +48 from decimal WHO text, requests a new id at+60, and zeros+32/+36. It does **not** merely copy the pending request's correlation id into this clone. Constructors/string/list/id providers and successful ownership remain unexecuted. This records a static clone/list boundary, not whole-message lifecycle proof.
+
+## Confidence and next questions
+
+High confidence: displayed original state/key/flag/counter branches; timer call arguments and callback linkage; reset's counter-preserving body; static ACK/clone/list metadata relationships. Conditional: actual dispatcher ownership/WHO criteria, parsed-object coherence, address-comparison outputs, imported provider binding, allocation/container completion and callback/context validity. Unknown: deployed requests, natural counter history, timer delivery/refcounts/concurrency and physical scenario effects.
+
+1. Trace the actual core state-machine dispatch call arguments/eligibility and metadata+52/+60 producers, so the selected private state transition can be joined to a justified ordinary record.
+2. Resolve the two compared `lighting_parse_where` outputs and why optional saved selector strings are retained; do not infer full address equality from two opaque words.
+3. Follow the supplied publication callback and ACK correlation/drain ownership under an explicit state/context, preserving runtime/lifetime boundaries.
+4. Establish natural counter+32 initialization/reuse from actual callers before assigning per-request semantics; the reset helper alone does not close that question.

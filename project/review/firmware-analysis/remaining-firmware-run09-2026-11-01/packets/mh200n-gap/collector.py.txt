@@ -1,0 +1,181 @@
+#!/usr/bin/env python3
+"""One finite target-directed reference lookup; admission gap, not functional reach."""
+import sys
+sys.dont_write_bytecode = True
+import argparse
+import hashlib
+import json
+import struct
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = next(p for p in HERE.parents if (p / 'work/mh200n-firmware').is_dir())
+BASE = Path('work/mh200n-firmware/1.1.8')
+TARGET = 0xa8f0
+
+
+def sha(b):
+    return hashlib.sha256(b).hexdigest()
+
+
+def enc(x):
+    return (json.dumps(x, indent=2, sort_keys=True) + '\n').encode()
+
+
+def exclusive(p, b):
+    p.parent.mkdir(parents=True, exist_ok=True)
+    with p.open('xb') as f:
+        f.write(b)
+
+
+def build():
+    pins = {}
+
+    def read(p):
+        p = Path(p)
+        f = ROOT / p
+        assert not p.is_absolute() and '..' not in p.parts
+        assert f.is_file() and not f.is_symlink() and ROOT in f.resolve().parents
+        b = f.read_bytes()
+        pins[str(p)] = {'path': str(p), 'bytes': len(b), 'sha256': sha(b)}
+        return b
+
+    manifest = json.loads(read(BASE / 'analysis/application-regular-files.json'))
+    original = BASE / 'analysis/application/home/bticino/bin/bt_taskmanager'
+    b = read(original)
+    assert len(b) == manifest['home/bticino/bin/bt_taskmanager']['bytes'] == 159048
+    assert sha(b) == manifest['home/bticino/bin/bt_taskmanager']['sha256'] == 'ad68f9bf43f7f10af122f34d3cb14b7d8c02730c46225a9a6cd1bf3e663072cb'
+    assert b[:8] == bytes.fromhex('7f454c4601010161')
+    h = struct.unpack_from('<HHIIIIIHHHHHH', b, 16)
+    assert h[0:2] == (2, 40) and h[6] == 0x202 and h[8] == 32 and h[10] == 40
+    ph = [struct.unpack_from('<8I', b, h[4] + i * h[8]) for i in range(h[9])]
+    loads = [s for s in ph if s[0] == 1]
+    assert [(s[1], s[2], s[4], s[6]) for s in loads] == [(0, 0x8000, 154668, 5), (0x26000, 0x36000, 2024, 6)]
+    sh = [struct.unpack_from('<10I', b, h[5] + i * h[10]) for i in range(h[11])]
+    sn = b[sh[h[12]][4]:sh[h[12]][4] + sh[h[12]][5]]
+
+    def name(s):
+        return sn[s[0]:].split(b'\0', 1)[0].decode('ascii')
+
+    texts = [s for s in sh if name(s) == '.text']
+    assert len(texts) == 1
+    text = texts[0]
+    assert text[1] == 1 and text[2] == 6 and text[3:6] == (0xa250, 0x2250, 135912)
+    assert struct.unpack_from('<I', b, TARGET - 0x8000)[0] == 0xe1a0c00d
+    # Target-specific candidate metadata only. No containing body is interpreted/exported.
+    hits = []
+    encodings = 0
+    for d in range(0, text[5] - 3, 4):
+        a = text[3] + d
+        v = struct.unpack_from('<I', b, text[4] + d)[0]
+        if v & 0x0e000000 == 0x0a000000 and v >> 28 != 15:
+            encodings += 1
+            n = v & 0xffffff
+            if n & (1 << 23):
+                n -= 1 << 24
+            if a + 8 + 4 * n == TARGET:
+                hits.append({'VA': hex(a), 'word': hex(v)})
+    assert encodings == 4889 and not hits
+    pointer_ranges = []
+    for s in loads:
+        matches = []
+        for o in range(s[1], s[1] + s[4] - 3, 4):
+            v = struct.unpack_from('<I', b, o)[0]
+            if v in (TARGET, TARGET + 1):
+                matches.append({'file_offset': hex(o), 'VA': hex(s[2] + o - s[1]), 'word': hex(v)})
+        assert not matches
+        pointer_ranges.append({'file_offset': hex(s[1]), 'VA': hex(s[2]), 'file_bytes': s[4], 'aligned_words': s[4] // 4, 'exact_integer_values_queried': [hex(TARGET), hex(TARGET + 1)], 'matches': matches})
+    symbols = []
+    for s in sh:
+        if s[1] in (2, 11):
+            assert s[9] == 16
+            matches = []
+            for o in range(s[4], s[4] + s[5], s[9]):
+                x = struct.unpack_from('<IIIBBH', b, o)
+                if x[1] in (TARGET, TARGET + 1):
+                    matches.append({'entry_file_offset': hex(o), 'value': hex(x[1])})
+            assert not matches
+            symbols.append({'section': name(s), 'entries': s[5] // s[9], 'exact_selected_value_matches': matches})
+    assert symbols == [{'section': '.dynsym', 'entries': 140, 'exact_selected_value_matches': []}]
+    prior7 = BASE / 'research/2026-11-01-night07-application'
+    s7 = json.loads(read(prior7 / 'SOURCE.json'))
+    read(prior7 / 'REPORT.md')
+    prior8 = BASE / 'research/2026-11-01-night08-list-consumer'
+    f8 = json.loads(read(prior8 / 'ARGUMENT_FLOW.json'))
+    read(prior8 / 'REPORT.md')
+    assert s7['original']['sha256'] == sha(b) and s7['outer_caller'].startswith('NOT ESTABLISHED')
+    assert f8['premises'][0].startswith('Natural outer caller/local-routine admission')
+    lookup = {'scope': 'One finite target-directed reference candidate lookup, not body disassembly/interpretation or a complete caller census',
+              'original': pins[str(original)], 'mapping_context': {'ELF32_LE_ARM_EXEC_rawflags': '0x202', 'PT_LOAD': [list(s) for s in loads]},
+              'inherited_target': {'VA': hex(TARGET), 'boundary_word': '0xe1a0c00d', 'role': 'Previously selected local routine only; not a symbol/natural-entry/admission proof'},
+              'immediate_query': {'section': '.text', 'VA': hex(text[3]), 'file_offset': hex(text[4]), 'bytes': text[5], 'aligned_words': text[5] // 4,
+                                  'rule': '(word & 0x0e000000)==0x0a000000 and condition!=15; target=VA+8+4*signextend24(word&0xffffff)',
+                                  'encoding_candidate_words': encodings, 'selected_target_matches': hits,
+                                  'interpretation': 'Words/pools may resemble instruction encodings;4889 is not a call/function/execution count. No containing body or non-target instruction is decoded/exported.'},
+              'aligned_pointer_queries': pointer_ranges,
+              'symbol_value_queries': symbols,
+              'adjacent_value_limit': '0xa8f1 queried as an exact integer only; no alternate ISA, Thumb state, new entry or address interpretation assigned',
+              'bounded_omissions': ['Indirect/computed/relative/relocated/interworking representations and external objects not proved absent', 'No alternate architecture/ISA, broader address sweep, receiver/transport/provider body or dynamic execution attempted']}
+    admission = {'status': 'GAP_NO_NATURAL_OUTER_CALLER_ADMITTED', 'new_source_functional_coverage': 0,
+                 'positive_caller_or_argument_branch_admission': 'NOT ESTABLISHED',
+                 'selected_scope_result': 'No selected-target immediate B/BL candidate in exact .text lookup, no exact aligned target/adjacent integer pointer in two file-backed PT_LOADs, no selected-value retained symbol entry',
+                 'inherited_contracts': ['Night07 fixed pattern/listing-path formatting/system/fopen source requests', 'Night08 retained stream/line byte-store/first filename-format request with nonempty-string/capacity/provider premises'],
+                 'meaning': 'Earlier local contracts remain conditional. These finite observations do not compose them into startup, a configured application, callback, installed overlay or actual resource consumption.',
+                 'not_claimed': ['Dead code, unreachable function or absence of all possible natural/indirect/computed callers', 'Complete function/callback/transport/body census, actual command/listing, scenario grammar/compiler/parser, runtime success or safety', 'Any new CPU/ISA/entry assignment, hardware/protocol support, private configuration or database evidence'],
+                 'next_admissible_evidence': 'A product-specific permitted original call/pointer/registration record or genuine deployment/debug/loader evidence tied to this exact routine, with qualifying caller scope and ABI/object/provider/lifetime premises, before promoting natural reach',
+                 'new_original_vendor_native_helper_emulator_model_fixture_SQL_target_OS_device_service_network_bus_physical_execution': 0,
+                 'remote_writes': 0, 'recovered_DB': False}
+    report = '''# MH200N 1.1.8 night09 — finite outer-admission gap
+
+**GAP: no natural outer caller/admission to selected local routine0xa8f0 is established. ZERO new source functional coverage.** One finite target-directed lookup of this exact original finds no selected-target immediate ARM B/BL encoding candidate in `.text`, no exact aligned target/adjacent integer pointer in the two file-backed PT_LOADs and no selected-value retained symbol entry. These are bounded reference observations, not proof of dead code, unreachability, complete caller absence or a whole-product search.
+
+## Exact own source and finite queries
+
+Own separate-application `home/bticino/bin/bt_taskmanager` remains159048 bytes/SHA256 ad68f9bf43f7f10af122f34d3cb14b7d8c02730c46225a9a6cd1bf3e663072cb, checked against the application regular-file manifest. Own ELF32 little-endian ARM EXEC/raw flags0x202 and file/section mappings support these metadata queries, not new header/entry coverage or an installed overlay. Previously selected0xa8f0 boundary word is rechecked as identity context only; no forced receiver/object or function name is invented.
+
+The original `.text` query is exactly VA0xa250/fileoffset0x2250/135912 bytes (33978 aligned words). Its sole direct-reference rule admits condition0..14 ARM immediate B/BL encoding candidates and compares VA+8+4*signextend24(imm24) with0xa8f0. It finds4889 candidate-encoding words and **zero selected-target matches**. Candidate words may be pool/data encodings;4889 is not a call, function, execution or semantic coverage count. No containing source body, transport/provider semantics, other instruction, whole disassembly or alternate architecture is decoded/exported by this query.
+
+The two exact file-backed PT_LOAD aligned-word ranges contain38667 and506 words, respectively. Exact integer0xa8f0 and adjacent0xa8f1 have zero matches there. The adjacent integer is not assigned alternate ISA/Thumb/entry semantics. The only retained queried symbol table is `.dynsym`,140 entries, with zero selected-value matches. This does not assert that unretained debug/static symbols, external registrations, relative/relocated forms, computed calls, indirect/interworking paths or runtime values are absent. Such routes are not forced or expanded to manufacture admission.
+
+## Earlier contracts remain conditional
+
+Immutable night07 SOURCE/REPORT and night08 ARGUMENT_FLOW/REPORT are pinned as inherited context only. Their formatting/system/fopen and retained-stream/line-store/filename-formatting requests remain exact local source contracts under their own normal-provider/ABI/frame/string/capacity premises. This checkpoint neither reruns those collectors nor repeats their operands, line/token variants or formatted command strings as new coverage. The missing outer admission is not supplied by the scenario-programmer role, process-file declarations, resource suffix or binary filename. No startup, configured application, natural callback, accepted scenario, parser/compiler or current file contents are promoted from those labels.
+
+The next evidence needed is a genuinely permitted original call/pointer/registration or tied deployment/debug/loader record that qualifies a natural caller of this exact routine, including its own ABI/object/provider/lifetime and scope premises. This finite checkpoint establishes no such positive edge. It is a precise retained limit, not a global claim about all vendor tools/documents/hardware or every possible encoded reference.
+
+## Reproduction and preservation
+
+`python3 -B collect_admission_v1.py --check` reproduces exact host byte/hash/ELF/section/symbol and target-address candidate metadata only. The collector is compiled before initial canonical generation; outputs are created exclusively and immediately retained with collector in six exact first copies and a precomputed non-circular index. No original/vendor/native/helper/emulator/model/fixture/SQL/targetstartup/OS/device/service/network/bus/mount/flash/physical execution or generated/submitted command is used. No private/full configuration or closed receiving/output/transport/authentication/session/framing/MQTT/libjel/JS/provider or denied F450 helper body/equivalent route is inspected or expanded. Old collectors and CPU ledgers are not replayed. Originals/synced/completed artifacts/firstcopies/source manifest remain unchanged; parent alone owns public/repository/archive edits. New database recovery/generation0 and remote writes0; cumulative inherited archive one encrypted F450 support container/zero plaintext databases. MHS340 code-hook-visits/360hooks and separate F454/MH202 ledgers remain unchanged.
+'''
+    out = {'TARGET_LOOKUP.json': enc(lookup), 'ADMISSION_GAP.json': enc(admission), 'INPUTS.json': enc({'files': sorted(pins.values(), key=lambda x: x['path'])}), 'REPORT.md': report.encode()}
+    out['OUTPUT_MANIFEST.json'] = enc({'scope': 'Generated members excluding this manifest', 'files': {n: {'bytes': len(v), 'sha256': sha(v)} for n, v in sorted(out.items())}})
+    return out
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--check', action='store_true')
+    a = ap.parse_args()
+    names = ['TARGET_LOOKUP.json', 'ADMISSION_GAP.json', 'INPUTS.json', 'REPORT.md', 'OUTPUT_MANIFEST.json']
+    if not a.check:
+        assert not any((HERE / n).exists() for n in names) and not (HERE / 'first-candidate').exists()
+    out = build()
+    if a.check:
+        for n, b in out.items():
+            assert (HERE / n).read_bytes() == b, n
+        for x in json.loads((HERE / 'first-candidate/INDEX.json').read_bytes())['files']:
+            b = (HERE / 'first-candidate' / x['copy']).read_bytes()
+            assert len(b) == x['bytes'] and sha(b) == x['sha256'] and b == (HERE / x['copy']).read_bytes()
+    else:
+        for n, b in out.items():
+            exclusive(HERE / n, b)
+        copies = {**out, 'collect_admission_v1.py': Path(__file__).read_bytes()}
+        ix = {'scope': 'Immediate exact first gap outputs and collector; precomputed index excludes itself', 'files': [{'copy': n, 'bytes': len(b), 'sha256': sha(b)} for n, b in sorted(copies.items())]}
+        for n, b in copies.items():
+            exclusive(HERE / 'first-candidate' / n, b)
+        exclusive(HERE / 'first-candidate/INDEX.json', enc(ix))
+    print(json.dumps({'status': 'PASS', 'outputs': len(out), 'new_source_functional_coverage': 0, 'outer_caller_admitted': False, 'original_execution': 0}))
+
+
+if __name__ == '__main__':
+    main()

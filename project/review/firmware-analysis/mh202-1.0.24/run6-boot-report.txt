@@ -1,0 +1,84 @@
+# MH202 1.0.24 — daemon process-helper provider and return contract
+
+The packaged daemon's selected process helpers resolve conditionally to **`/home/bticino/lib/libutils.so`**. Its `call` helper returns an unsigned byte extracted from the wait-status storage, not a raw status word or the sentinel−1. This materially narrows the opaque return boundary in runs4–5: the inspected daemon tests for exact−1 do not reject positive returned child-exit-byte values under this implementation. This is a static software contract finding, not an observed archive/copy failure, live loader binding or hardware outcome.
+
+All image paths below belong to the firmware root. Original archives/images, extracted trees, synced sources, previous reports and repository documents were unchanged; only this run6 directory was written. Methods are host Python, ELF metadata reads, readelf and objdump decoding. Original ARM/JS/PHP/vendor/loader execution, emulation, original instruction counts, code hooks, actual processes, signals, files/status, sockets, network, services and devices: **zero**. No archive argv, header/password literals or credential contents were inspected/exported in this pass.
+
+## 1. Conditional daemon provider scope
+
+`/etc/init.d/bt_daemon-apps.sh` line3 declares `LD_LIBRARY_PATH=/home/bticino/lib:/home/bticino/libcoso`; its selected startup lines are saved. The collector performs a fresh breadth-first `DT_NEEDED` traversal beginning with `/home/bticino/bin/bt_daemon`. It resolves canonical image paths through the verified read-only VFS, searching those two directories then explicit conventional `/lib` and `/usr/lib` fallback directories.
+
+The model contains23 unique objects (including the executable) and102 resolved dependency edges. No dependency is unresolved. The original interpreter and later dynamic loads are excluded. No RPATH/RUNPATH appears in these objects; ssl/crypto DT_SYMBOLIC metadata is retained without assuming it changes selected helper ownership. Packaged regular/symlink metadata searches find no loader-cache/config/preload filenames; this concerns packaged metadata, not running-device state.
+
+Selected executable relocations and ordered definitions identify a sole visible selected helper provider, `libutils.so`, at scope index4:
+
+| Import | Candidate original definition | Original function size |
+| --- | --- | ---: |
+| `call_nowait` | `0x22bc` |176bytes|
+| `call` | `0x236c` |48bytes|
+| `call_daemon` | `0x239c` |92bytes|
+
+All three definitions are GLOBAL/DEFAULT and have unversioned names. Their imported process primitives retain GLIBC_2.4 symbol-version metadata in `libutils-selected-definitions.json`. `call` calls `call_nowait` through its PLT; the same modeled scope supplies that helper. Ordinary ABI and selected provider assumptions remain explicit.
+
+This is a candidate lookup model, not a complete runtime-loader emulator. It assumes inherited packaged paths, normal search/interposition rules, no preload/interposer/additional dlopen namespace, no replaced files/environment and ordinary completed initialization. It does not observe actual inheritance or bind a live daemon. No host `ldd` or original dynamic loader ran.
+
+Original identities:
+
+| Image object | SHA256 |
+| --- | --- |
+| `/home/bticino/bin/bt_daemon` | `41a8844318d47cf33571b6d74a7de528dea5118d4c2289f4d666de419d91b1b6` |
+| `/home/bticino/lib/libutils.so` | `53ef706201b13f6966dc6a0ca71bae345e9835e24bced6c557071b797d196e79` |
+
+## 2. `call_nowait`: parent gets the fork result before exec confirmation
+
+The complete176-byte original function is in `call-nowait-full.txt`.
+
+It preserves its incoming argv pointer and calls imported `fork` at `0x22c4`. Comparison with zero at `0x22c8` immediately returns for **any nonzero** result at `0x22cc`. Under the ordinary fork contract, that covers parent PID and fork-error−1. No exec-success exchange is performed before the parent return.
+
+Only the zero-result child branch requests closing descriptors3 through19, with no selected return checks, then loads argv[0] and calls imported `execvp(argv[0],argv)` at `0x2360`. If exec returns, it requests `exit(-1)` at `0x2368`. This is a child exit request, not a normal helper return−1 to the waiting parent. No actual descriptor, command lookup, executable, child or exit was produced.
+
+The daemon's launcher calls this import at `0x14efc` and stores the returned value in child record+12 (`0x14f08`; `service-launch-return-storage.txt`). That stored number is not by itself exec confirmation or application readiness. Other launcher logic and service matrices are prior findings, not repeated here.
+
+## 3. `call`: unsigned wait-status byte with unchecked delegate returns
+
+The entire original helper is only48bytes (`call-full.txt`). Its exact dataflow is:
+
+1. `0x2374` makes r5 zero. `0x2378..0x237c` computes a local pointer to SP+4 and stores that zero word there.
+2. `0x2380` calls `call_nowait` with the original argument vector.
+3. Without checking that result, `0x2384/0x2388` supplies the local word pointer and zero options to `waitpid` at `0x238c`; r0 still contains `call_nowait`'s returned number.
+4. Without checking `waitpid`'s returned number or testing normal-exit/signal bits, `0x2390` executes **`ldrb r0,[sp,#5]`** and returns.
+
+The original ELF is little-endian ARM. The returned byte is therefore byte1 of the local32-bit storage: `(stored_word >> 8) & 255`. This is a zero-extended byte, so a normal return through this instruction is in0..255. It is neither the raw wait-status word nor signed−1. The zero-initialized word is a positive source fact; a specific failed wait's actual writes or nonwrites remain a delegate/runtime question.
+
+The helper also does not explicitly preserve fork-error semantics: a−1 from `call_nowait` is passed onward to `waitpid`, rather than immediately returned to its caller. There is no wait-error retry or independent error branch in this complete helper. This report does not claim which child a real kernel would report, actual scheduling, signal handling or a particular runtime error.
+
+`host-process-return-model.json` demonstrates the byte arithmetic with six private illustrative status/return fixtures. Storage words `0x00000100` and `0x0000ff00` yield1 and255; a word with only low signal-number bits set yields0. Fixtures with delegate error and the initialized word unchanged yield0 **by that stated fixture premise**; this is not a claim that every real error leaves the word unchanged. These are pure host calculations, not injected original syscall results or firmware execution.
+
+## 4. Refinement of the persistence/default-restore call sites
+
+Runs4–5 correctly retained the imported `call` contract as unresolved. This batch now connects its candidate implementation to their exact−1 comparisons:
+
+- Main's archive-processing return is compared with−1 at `0x1083c` (`persistence-caller-exact-minus1.txt`).
+- The selected default-copy call's result is compared with−1 at `0x11c18` (`default-copy-caller-exact-minus1.txt`). The other generic/default branch follows the same checked form documented in run5.
+
+Under the new provider/ordinary-return assumptions, an unsigned-byte return cannot equal−1. Positive nonzero child-exit-byte values therefore follow these sites' non−1 continuations. The default helper may request configuration status1 and return Boolean1 through that continuation, as mapped previously; this new result still does not show that any actual file was copied or status changed.
+
+This conclusion is specifically about **`call`**, whose byte-extraction body is now inspected. It is not a raw `system` wait-status bug claim, not a claim that every imported helper shares this convention, and not proof of successful archive processing. Subsequent content-marker checks, negative-selection fallback, locks, filesystem state and external utility behavior remain separate. Existing reports are preserved with their earlier honest uncertainty; this is a later refinement.
+
+## 5. `call_daemon` has a different contract
+
+The complete92-byte function is in `call-daemon-full.txt`. It calls fork, returns−1 on the explicit fork-error branch, and preserves the original positive PID in r4 on the parent route. That parent requests `waitpid(pid,NULL,0)`, ignores the returned number, then returns the preserved PID at `0x23f0`.
+
+The zero-result child branch requests imported `daemon` with the then-zero arguments. A negative daemon result can return directly from this helper in that child (`0x23cc`); it is not the parent's child-status return. Otherwise it attempts execvp using the saved argv and requests exit(-1) if exec returns. No daemonization, process hierarchy or later execution was observed.
+
+Thus `call_daemon`'s parent result and `call_nowait`'s parent result are PID/error-oriented source contracts, while `call` returns a status-storage byte. None of these parent numbers proves the eventual application is functioning. The full libc implementations, actual kernel/process/descriptor behavior and any overridden providers remain delegated.
+
+## Reproduction and coverage
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/boot/run6/collect_process_helpers.py --check
+```
+
+The deterministic host-only collector strictly compares16 outputs: a23-object/102-edge closure, selected original relocations/definitions, six original-code spans, sixteen exact instruction-word assertions,29 input identities and private host return arithmetic. Every closure ELF is hash-checked through the VFS. `input-hashes.json` also pins original inventories/startup script, shared accessor, archive provenance and read-only run5 report. `original-spans.json` gives image paths, VA ranges, file offsets and exact byte hashes. No original instruction or hook executes; no full archive argv or packaged credential is output.
+
+Confidence is high for these complete original helper bodies, selected call-site comparisons and conditional packaged provider model. Actual binding, successful external operations, child/wait outcomes, later marker-content validation and durability remain unobserved. Next useful work is a narrow post-default `0x1556c` event/configuration effect or an independent normal-storage fault policy; repeating the byte/−1 or service-launch matrices would not close a new question.

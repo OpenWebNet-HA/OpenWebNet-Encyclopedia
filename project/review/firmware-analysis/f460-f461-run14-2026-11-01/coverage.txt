@@ -1,0 +1,10 @@
+# Run14 coverage and boundaries
+
+| Area | Selected original reach | Remaining boundary |
+| --- | --- | --- |
+| F460 numericcondition | Ownrow2/raw64 final/base RTTI/factory and switch; actualsameJSONreparse; compiled200BASE/ownfields; selectedrecord'on'/status−1/numeric48 predicate; inheritedslot16consumer | Fullrawserializer/JSON/provider/coherence/operatorgrammar, opaquequery/type/readiness/freshness/normalcleanup, configuredinstances/units/physicalrole, lifetime/concurrency/wholepolicy |
+| F461 moduleloader | Mainactualcaller/sameM/P24; support/diropen/lib+.so/namepath/open3; bothsymbols; retained16Bpairbeforeinitcfgdir; qualifiedlocalreturns | GModule/diagnostic/provider/moduleABI/initializer/outcomes, actualdirectories/activation/modules/readiness/unload/lifetime, actualboot/DTB/auxcoreselection |
+
+F460:13 deterministic outputs,10 spans,45 guards, three class identities, four imports, six local calls, four PIC joins, five pins and15 first copies. F461:11 outputs, eight spans,37 guards, four safe PIC joins,16 imports, six pins and13 first copies. Counts are selectedreach/integrity, not coverage percentages or executed cases. F460 staged-unexecuted-v1 snapshot/history is not a failedcanonical or missingreport claim.
+
+Neworiginal/helper/native/provider/emulator/model/fixture/SQL/JSON/file/clock/service/OS/network/bus/physicalexecution zero. PriorMHSonecorpus/eightentries/340codehookvisits and separateF454/MH202 ledgers unchanged. FullDevice/source gatespending; no full/privateconfiguration/bootenv/keys/runtimevalues exported. Allclosed output/receiving/transport/auth/session/framing/MQTT/libjel/excludedcommand/process bodies remainclosed.

@@ -1,0 +1,29 @@
+# Independent scheduler scene-loader source review
+
+PASS for the bounded static claims in scheduler/REPORT.md. No correction requested. I independently reviewed the selected original Thumb source and C++ argument/dataflow chain. This is not execution of the scheduler, JsonCpp, scene factories, timers or commands; original vendor execution is 0.
+
+Reproduced collect_scheduler_v1.py --check: 27 outputs, 17 spans, 28 PIC joins, ten direct BL targets, 11 instruction byte guards and six direct input pins. Independently mapped original ELF32 PT_LOAD segments and checked all 17 raw span hashes, 28 literal targets/bytes, ten Thumb BL destinations, 11 instruction ranges and five exidx starts. Verified all 28 indexed first collector/output copies and the separate actual report copy. The selected code has equal VA/file offsets; this is not assumed for the later RW segment. Retained forced-Thumb disassembly, rather than its nearby template-symbol annotations, supports the selected function interpretation.
+
+Key source conclusions checked:
+
+- scenesPath member selection at 0x32ee6..0x32efa feeds the selected string-move store at settings+60/+64 (0x32f1c). Getter 0x32ae4 takes an explicit output string in r0 and settings input in r1, reads input+60 and returns the constructed string. Caller 0x1333e then passes that same output string to loader 0x17630 at 0x1334a. The report appropriately retains successful settings parsing/string operations as premises.
+- Loader 0x17630 uses filesystem status and directory iteration; selected status handling requests create_directories then returns 0. Extension comparison uses the original .json literal and separate name comparisons exclude twiligts_times.json and action_schedule.json. They are exclusions from this loader, not whole-program non-use claims. The new object receives selected path/container/service arguments at 0x178ae -> 0xaf3d4.
+- Constructor 0xaf3d4 calls 0xb57fc with the original object/file arguments before its separate 0xa72c0 initialization delegate. In 0xb57fc, r5 preserves the object; r7 initially holds the file argument and is later changed to local JSON root sp+48 at 0xb595c. parseFromStream receives that root in r2, the existing stream in r1 and local error string in r3. The parse return is tested. At 0xb5a54..0xb5a58 the same root goes to r1 and same object to r0 for 0x31e34. No parser result or class field was injected.
+- Scene constructor 0x31e34 separately handles name, hidden, customizable, editable, has_button_trigger, id and enabled. Hidden stores at +64; enabled stores at +65, with missing member selecting literal 1 at 0x31f6a, and present member selecting asBool via 0x320d8..0x320e6. This establishes initialization, not later execution eligibility.
+- The original triggers/conditions/actions member branches call distinct factories 0x2e9fc/0x2fa4c/0x30cb0 with object r0 and selected member r1. Conditions return to the actions check. Collection schemas, factory ownership/results, runner activation, calendar/timer units and command publication remain open.
+- The packaged JsonCpp .25 alias/definition and scheduler imports support a candidate C++ provider. They do not establish effective runtime binding or allow C libjsonmsg/OPEN/MH202 object layouts to replace these objects. Zero normal/recovery regular-file entries under the configured prefix is a packaged-manifest result, not live directory, scene availability or service state.
+
+The preserved exploratory ARM-mode misdecode and pre-output Python typo are explicitly pre-generation history. I verified the actual first candidate and report copies; I do not claim an independent historical replay of those exploratory failures. No prior author file was edited, no stored scene/config expression was evaluated, and no missing scene or complete accepted grammar was invented.
+
+Reviewed SHA-256 pins, relative to scheduler/:
+
+| File | SHA-256 |
+| --- | --- |
+| REPORT.md | d41cdc4417f72070792d1e45b1930787fd5e5511c61907ce166b2f231f0c5f12 |
+| collect_scheduler_v1.py | d7731138527e2772edff5a398cae1507981b88a603c0b54d06b3383f58053bb9 |
+| OUTPUT_MANIFEST.v1.json | f3310ffe7b04fcff7fe7912daaf7881fb57ed69ab21f163a5b46bb676a9cb0b4 |
+| SOURCE_SPANS.v1.json | 1dfeedf4e1e465a83fbdc3332278289429f61d37b6972f713711cc2a8408bf4b |
+| DIRECT_CALLS.v1.json | 900db08b1376335d78bec8dd4da953b79a65cea52df26589289d09644d9ec664 |
+| first-candidate/SNAPSHOT.json | c6ed199b33837536d87b04d6698d2b71de6bce4bc5b06f7aa3d404f008060cd5 |
+
+Original scheduler SHA-256: 7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26. This review covers the source loading/member-dispatch edges, not a complete scheduler or physical behavior audit.

@@ -1,0 +1,38 @@
+# Signed-integer provider documentary integration review
+
+PASS, no correction requested. This is a bounded documentary comparison of the exact appended reference section, capsule and coordination documents against the frozen report and independent original-source review. My prior double-provider audit supplies scope context only. I did not repeat this signed-overload source audit, run a collector, inspect new original bytes, execute provider instructions, supply a numeric fixture or replay the saved corpus.
+
+The addition accurately distinguishes actual signed Value(int) from unsigned/null methods and the separately executed double corpus. It preserves the source sequence: type1 initialization, low argument word plus arithmetic sign-extension high word, actual type1 asInt dispatch to isInt, selected ADDS/ADC adjustment and CLZ-high test, then normal lowword readback. Its constructor-reachable implication is explicit source algebra under candidate self-binding, valid unchanged objects, ordinary ABI/canary/delegate return premises. It is neither observed integer execution nor an admission proof for arbitrary objects, public thresholds or physical units. Full JSON member/map/move/assignment/serializer/reparse, configured scenes, other types/error paths and lifetime/concurrency remain open.
+
+The current focused page is exactly its retained preceding version plus PROVIDER_SECTION_CANDIDATE. The original trigger-method/same-JSON result remains a separate conditional source relation; the new scalar proof narrows one provider premise without converting it into a full JSON or natural-event transaction. No unsupported product feature, cross-product layout transfer or wider Device/source approval is claimed. Overview/Device/profile/handoff/event/old-guide inputs are not changed by this patch. Prior correction records and unavailable MH20218/21 intermediate-history limits retain their scope.
+
+All new original/provider/guest execution, model cases, semantic fixtures and CPU replays remain zero. The cumulative MyHOMEServer1 ledger stays one corpus/eight top-level entries/340 original code-hook visits/zero C primitives/12 definition redirects/eight EXIT/zero stops/360 hooks, with four setup relocations separate. Historical static-zero reports and F454/MH202 ledgers remain distinct. Final handoff readiness is not an actual closure/deletion receipt.
+
+## Copies, links and completion scope
+
+Verified all 10 frozen current document pins and candidate copies, all 20 exact SOURCE_EXPORTS source/published pairs, 15 provider first copies, four coordination first copies, the independent source-review copy and the appended-section first copy. The exact pre-edit page hash, DOCUMENT_PATCH append and provider section reproduce the current page without other changes. No author or prior artifact was edited.
+
+Checked 15 local Markdown link occurrences and two fragments. All 13 existing targets and both fragments resolve. Only intended future capsule integration-review.txt and validation.json remain pending actual assembly. Final protection/identity, strict ESG/ECV/diff and actual allowance/control receipts remain subsequent parent-owned gates against actual saved artifacts. No future bytes, placeholders or missing-link exemptions are certified here.
+
+## Exact reviewed pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-trigger-serialization.md` | `1ada24f848b42554cc44deaca92cfa3d346e7625d6453ecb1cdeaa80191bb325` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-integer-provider/README.md` | `462a7c93ccd8e68a2a2da182562a55e827c8fbcb56cc42597f3c4cdc3e3b66b6` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-integer-provider/SOURCE_EXPORTS.json` | `8316c6c3ee240eb9216ef62d71674d4e97d3333e7b4b07c09279a94a5f34e151` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-integer-provider/synthesis.txt` | `1b8f18de82ac3e7117786b0ee19ec58be9d048218c1e2c0dad07ed2d1e2741a7` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-integer-provider/coverage.txt` | `bdb9246382b599aeff0be169fa77c75521269d24c33838bf1942bea0337367fa` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-integer-provider/remaining-questions.txt` | `c53469192c2824ef1cfdbc4d6d90677c30d08aff461a8077efb6184d22d35710` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/SYNTHESIS.md` | `1b8f18de82ac3e7117786b0ee19ec58be9d048218c1e2c0dad07ed2d1e2741a7` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/COVERAGE.md` | `bdb9246382b599aeff0be169fa77c75521269d24c33838bf1942bea0337367fa` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/RANKED_REMAINING_QUESTIONS.md` | `c53469192c2824ef1cfdbc4d6d90677c30d08aff461a8077efb6184d22d35710` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-integer-provider/RUN_LOG.md` | `716289ce8d7cb1a47d767451c7ebf6c9c8a333fb28e4eb4b02837c42b0be70de` |
+| `provider/REPORT.md` | `beff1f9aad24030e988d5507daac8391fc4fe60492c3630a2c10a505a52c6090` |
+| `provider/collect_integer_v1.py` | `caa9009edbb70e6fab75fc45c7baaa5502ffc9d2122b6bf0f7cb2343b022aa83` |
+| `provider/OUTPUT_MANIFEST.json` | `787035b44a1ddffa5c3ddb8ec733f176afa0e7903f8553cb3716d30d08629c64` |
+| `provider/first-candidate/INDEX.json` | `95973277c2d87159ccda3ed9a5017dd1828d46a137d4cdf195cad2da03c71256` |
+| `reviews/provider-source-review.md` | `53a5fea7d019ffffbd57214f18f8afd48a959fd6a791d7563f086027c32994b2` |
+| `integration/DOCUMENT_PATCH.json` | `762a2efed07fffd2c71c55c1c3a8c961acc24f2830e3047690d55b2c5aa0a7c0` |
+| `integration/review-candidate/INDEX.json` | `a40e4d4ca1049b03304f633f8126089acbff7ae6cb77e83e6fa8e0af471761d5` |
+| `PROVIDER_SECTION_CANDIDATE.md` | `a8d7a75c787815c39ab474599bedf0593d636fca32ba06add930c3a1075323ec` |

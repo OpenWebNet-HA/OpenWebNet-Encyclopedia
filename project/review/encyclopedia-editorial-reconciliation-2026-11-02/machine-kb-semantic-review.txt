@@ -1,0 +1,37 @@
+# Machine KB curated input candidate v7: independent semantic review
+
+Status: PASS for controlled application of the exact private curated-input-proposal-v7 candidate. This accepts the reviewed input reconciliation, not generated freshness, a complete build, release or future edits. [Exact candidate pins](machine-kb-candidate-v7-by-mhs-pins.json) identify this review target. Previous proposals, rejected/preflight history and the [provisional review](machine-kb-by-mhs-provisional.md) remain distinct.
+
+## Existing claims and source conservation
+
+The [per-ID review of all 93 changed-context assertions](machine-kb-changed93-by-mhs.json) distinguishes unchanged meaning, scope corrections, obsolete local taxonomy and method/navigation framing. Current v7 corrections resolve the required WHO25 literal-prefix forms, F454 SCS connector attribution, source/installer manifest roles, known persistence-template versus genuine-instance scope, and the selected examination status of F454, MH202, MyHOMEServer1, F460 and F461. The three earlier method/lead-in statements now express the continuing scoped boundary rather than silently disappearing. Twelve obsolete claims have explicit retirement histories.
+
+Historical Device catalogue values remain separate from newly examined firmware labels. The actual MH200 literal probe facts and no-configured-target premise remain unchanged, including WHERE339's NACK at39.486ms. That address now fits the published prefix3 notation without converting the probe into a gateway-wide support or rejection rule. The unchanged finite no-event observation retains its declared windows and lack of a transmitter.
+
+Independent read-only checks of the current v7 data against official IRv3 found all74,728 seed section pins current. Complete Device ledgers cover210documents and57,514units; keys, full table-header/unit hashes, same-section claim/context mappings and retained cell/paragraph content check without errors. The347 old/current changed-Device conservation mappings were also checked against accepted/current units. In particular, F454's continuing package-scope paragraph moved from oldb4 to newb5 while the separate application-database paragraph has its own new assertion; no source-accounting qualification was replaced by adjacency.
+
+## All affected reference prose
+
+The [reference disposition record](machine-kb-affected-reference-review.v7.json) accounts for all1,035 original impact reference IDs. Of these,27 are canonical-document source records generated from current shared IR. For the1,008 curated records,931 retain exact complete direct source text,74 have changed direct text and3 depend on explicitly retired sections. Reusing accepted context for the931 unchanged records is scoped evidence reuse, not an assertion that every prior reference has been newly investigated.
+
+The74 changed-context records were independently reread across caution, question, topic/entity, namespace, source-summary and relationship roles. Eight materially stale Device cautions/questions were found in v3 and are corrected in v7: w000011,w000017,w000212,w000219,q300011,q300017,q302881,q302888. Exact old/current records are retained. The corrections remove blanket unexamined-firmware assertions while retaining pending developer/XML scopes, private-original classification and unknown installed/runtime/physical outcomes. Their continuing open-work IDs are retained; they are not marked answered merely because a selected static path is now known.
+
+Other changed records retain their proper meaning: bibliographic sources and source-association edges are not upgraded into universal capability evidence; continuing topics retain current semantic labels; the implementation namespace remains source/version scoped. ScenarioDevices execution questionq300009 remains scoped to that model, not a global assertion that every newly examined engine is unknown. Three obsolete section-topic dependants are explicitly retired. Current affected records contain none of the identified obsolete blanket examination negatives.
+
+## New selected claims
+
+The339 new claims comprise selected single relationships or coherent qualified rows, including seventeen complete new Device units. Meaningful rows replace the draft bare lead-ins; actual navigation/method-only units have explicit nonclaim treatment. This is selected atomic coverage, not exhaustive assertion extraction. Complete prepared text remains available for retrieval; a whole-section evidence note is not counted as proof that every sentence has become an atomic claim.
+
+Exact product/build applicability is retained for firmware-specific findings, including separate F4602.0.12 and F4612.0.11 sections, MyHOMEServer1 3.87.13, F4542.0.51, MH2021.0.24 and the legacy sources. General model/reference statements remain explicitly source-specific. Suite3.5.38, database-local versions, installer profiles and firmware versions are distinguished. Public WHO25 notation names specification1.0.0/page4 separately from ScenarioSuite corroboration.
+
+New authority remains canonical_documentation:299 source declarations use specified,34 direct database declarations/comparisons use catalogue_documented, and6 unresolved relationships retain unresolved values and real linked open questions. No new selected firmware claim is assigned official-specification, observed-runtime or experimentally-confirmed authority. These statuses describe the canonical source proposition; they do not certify target execution. Static branches, actual isolated original-helper cases and physical captures remain different evidence classes in the retained context.
+
+The selected statements and governing evidence retain material provider/valid-object/caller/lifetime limits. Boolean-only XOR inversion is not arbitrary-byte logical negation; serialized operator wording is not its predicate operand order; cleanup is not all-actions-complete; module enumeration/removal requests are not activation or safe unload; copied IDs are not new unique IDs; encrypted support metadata is not plaintext database content. The v7 correction of the one catalogue workflow sentence changes no selected substantive claim.
+
+The six new open questions name actual remaining caller/provider, board/electrical, complete-DH/factory-enable, role-activation, delivery/reclamation and clock/queue-lifecycle evidence. They do not close or reopen investigation routes or infer an installed outcome.
+
+## Identity and remaining checks
+
+All23 retired IDs were independently found live in the actual local machine-kb-v0.2.0 tag, commit447e4c731f44c1e753efb33f245be5444f15912c. Their last_release0.2.0 tombstones are therefore grounded. Current claims, reference inputs and8,351 live chunk/section pairs have live registry identities. The474 empty internal IR sections have no emitted chunk and are correctly outside that emitted-ID check. New first_release0.1.0 is the established compatibility-origin convention, not fabricated historical tag membership; the candidate remains unpublished.
+
+The author's actual scoped claim/reference preflight is useful corroboration, not a substitute for the complete official build. After controlled input application, the unchanged build and complete schema/reference/privacy/claim-coverage/lifecycle/Device-conservation checks, generated-output diff and repository-wide gates still need to pass. No repository, author or supporting source was edited by this reviewer, and no firmware investigation, original helper, vendor process or old firmware collector ran.

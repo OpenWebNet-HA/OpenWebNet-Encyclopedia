@@ -1,0 +1,5 @@
+# Bounded coverage
+
+Three static source scopes: actual raw BN3L serializer/class/keys/guards/same-result reparse; selected candidate JsonCpp null/unsigned value paths; concrete compiled-action owner pair normal/full-capacity transfer. Original/native/provider/process/JSON/clock/thread/timer/targetOS/network/bus/physical execution0; no supplied runtime objects, configured scenes or semantic host cases. Earlier ledgers unchanged.
+
+Unfinished: complete string/signed/object-assignment/map/error semantics, effective runtime/provider binding, actual configured assets, natural owner removal and callback ordering, full unwind/concurrency, shared reset and physical outcomes. No whole parser/roundtrip/support/lifetime guarantee or exhaustive coverage is claimed. Wider Device/source gates remain pending.

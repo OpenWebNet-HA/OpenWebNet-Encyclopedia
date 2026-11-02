@@ -1,0 +1,42 @@
+# Run05 documentary integration review
+
+PASS, no correction requested. I compared the current expanded analysis, profile appendix, capsule and coordination records against both frozen reports and completed independent original-source reviews. This is bounded documentary/product/method review, informed by my earlier comparison-source audit; it is not a new original-byte audit, complete firmware/consumer semantic verification or runtime test. I executed no collector, original/vendor/provider/SQL code, emulator, model/fixture or CPU replay.
+
+F460 key89 is correctly a selected registry/callable constructor key. The positive indirect source route and copied function pointer are not treated as absence of other callers, global key admission or a supported-device table. The same supplied pointee120/124/128 getters and actual argument-pointer adapter narrow modobj/line_modobj/brand_modobj SQL-placeholder roles under predecessor construction/substitution premises; key_object89 is separately supplied by the constructor. They do not identify the pointee class, configuration/root values, actual key-list inclusion, physical DeviceID/WHO or installed compatibility. Registry initialization, selected new-object/cache path, normal valid callable/container/provider state, pair publication and full lifetime remain conditional.
+
+F461 B1001208 is accurately a conditional ASCII normal form from exact literals and formatter arguments under the report's full typed-object/direction/scalar/string/null-field/private-selector premises. It is not an executed fixture, accepted raw OPEN input, four observed bus bytes or physical actuator command. New72-byte output allocation, metadata stores,16+16+4+8-byte source copies, same-pointer list append and selected cleanup are source requests. Unwritten fields are not asserted initialized, copied ID is not new_id generation or proof of uniqueness, and local zero return is not a wire acknowledgment or delivery. Natural input/other branches, candidate binding, allocation/format/list semantics and later ownership/output remain open.
+
+The profile appendix does not transfer earlier MHS/Suite owner correspondence to F460/F461 or equate shared catalogue bytes with shared consumer behavior. Curated product roles, numeric namespaces, pointer/control versus scalar capture layouts and physical meanings remain separate. Missing configuration/assets, full SQL/JSON/provider/error/unwind/lifetime/concurrency and physical evidence remain genuine gaps. Closed receiving/transport/MQTT/libjel/auth/session/framing scopes remain closed; all new original/native/model/fixture/target/runtime/network/bus/physical execution is zero. Previous product ledgers/history limits and wider Device/source gates remain unchanged.
+
+## Exact copies, references and completion boundary
+
+Verified all16 current document pins and frozen copies, all48 exact SOURCE_EXPORTS source/export pairs, and four source/reviewer first-copy sets containing39 members:37 author copies plus two reviews. The public main exactly equals REFERENCE_DRAFT, the capsule README equals its first copy, and retained pre-edit main/profile bytes reconstruct the declared insertion/two substitutions and profile append byte-for-byte. The current summary/ranking includes the new source joins without presenting them as full acceptance, capability or physical closure. No source/draft correction, failed canonical generation or overwritten candidate is claimed for this packet; earlier failures and unavailable MH20218/21 histories remain historically scoped.
+
+Checked43 local Markdown link occurrences and two fragments: all41 existing targets and both fragments resolve. Only the intended later capsule integration-review.txt and validation.json remain pending actual assembly. Final full protection/identity, strict ESG/ECV/diff, actual branch/status and index-last checks remain subsequent parent-owned gates against actual saved artifacts. No future-byte certification, placeholder or missing-link exemption is endorsed. No author/repository/source/prior dossier was edited.
+
+## Exact current pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md` | `e02310bc79076614af748122f6da7d652359b4bbb6606919fb8e5f3c530cc100` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | `bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run05-2026-11-01/README.md` | `e6e10c20210cd11aa374a303510851bf5fe932e134d7461bbad9557e3e6951ea` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run05-2026-11-01/SOURCE_EXPORTS.json` | `81a8d52d4b5d7b0f2bbc154bcec5192d2614dd60f89fc971db8f7ffb98182862` |
+| `work/f460-f461-comparison/2026-11-01-run05/REFERENCE_DRAFT.md` | `e02310bc79076614af748122f6da7d652359b4bbb6606919fb8e5f3c530cc100` |
+| `work/f460-f461-comparison/2026-11-01-run05/PROFILE_APPENDIX_DRAFT.md` | `202e398f17fb37f03a61526d176b3ae0cb33ef9d56cfacad3325e576303e515e` |
+| `work/f460-f461-comparison/2026-11-01-run05/ANALYSIS_APPENDIX_DRAFT.md` | `93eb030d6ca217ab4a1ebfff9b83bd4e527664da1a32c88155be852aed384135` |
+| `work/f460-f461-comparison/2026-11-01-run05/SYNTHESIS.md` | `c10dfe81e78c605668318c797a647d8b8ac65e4d35567bb8dd58e4654726a7bd` |
+| `work/f460-f461-comparison/2026-11-01-run05/COVERAGE.md` | `a715ad31e9146045fdd0b6927648274b0fbb7d8f057956520799318d9579d24e` |
+| `work/f460-f461-comparison/2026-11-01-run05/RANKED_REMAINING_QUESTIONS.md` | `763cad2ce8a850ff0fab7b3c4faea2699b7be081d5420d7d92f602b02c84715f` |
+| `work/f460-f461-comparison/2026-11-01-run05/SOURCE_CHECKS.json` | `de0a8293b705c96587525d8107cde4f226b88ee3de5ee3ae0c78cad19fc1f85d` |
+| `work/f460-f461-comparison/2026-11-01-run05/integration/DOCUMENT_PATCH.json` | `cabe3b1668dc1c7ab167ce244769f2339f2e4bae29caabe58a935abf713e98f2` |
+| `work/f460-f461-comparison/2026-11-01-run05/REFERENCE_DRAFT_METHOD.json` | `54715f976f7442c1206b00ec44bb6c03b945ed80376b93ee6fb03512bbe7e173` |
+| `work/f460-f461-comparison/2026-11-01-run05/reviews/f460-source-review.md` | `002b6a8a6942d3d23fb50bca6e30916a5187b7755dfc65ac66dfb5cda92d0dc5` |
+| `work/f460-f461-comparison/2026-11-01-run05/reviews/f461-source-review.md` | `0ab9d39ddaeeca104c3ac6d87aef404cf9fc2c92e387888290832c81cce6e251` |
+| `work/f460-f461-comparison/2026-11-01-run05/CAPSULE_README.first.md` | `e6e10c20210cd11aa374a303510851bf5fe932e134d7461bbad9557e3e6951ea` |
+| `review-candidate/INDEX.json` | `59f20515a29df0edfea499d4a981fcc60f41f2b319b5df903ebbda863350ce32` |
+| `integration/pre-edit/INDEX.json` | `3f52a496dd3ae3ba24ee4812f0efd1f82ac28cfb53be10122f1fe29dc4a7783e` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run05-selector/REPORT.md` | `3c6d2d502e1322c7279f3fe259e4e30a9348858add5b656ed332a08ebdf7bdfb` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run05-selector/first-candidate/INDEX.json` | `909ba88eeb009f583a36068823cbaa05f1c716e0dbbf1289635e5af445afca03` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/REPORT.md` | `295e1e82d037adfaa3e6846fa3de579232dc5cbaefdd88734a7d294877b19631` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/first-candidate/INDEX.json` | `11a4956485b946576a3579d417014f545c195255012eeadae82539c9ff295714` |

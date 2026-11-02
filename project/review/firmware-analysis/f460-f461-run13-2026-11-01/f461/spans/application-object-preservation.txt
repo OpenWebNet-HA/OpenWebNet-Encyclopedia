@@ -1,0 +1,32 @@
+
+/home/bticino/libcoso/libplug_automation_stm.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000002fb0 <automation_stm_gest_status_from_appli@@Base>:
+    2fb0:	a9b77bfd 	stp	x29, x30, [sp, #-144]!
+    2fb4:	aa0003e4 	mov	x4, x0
+    2fb8:	910003fd 	mov	x29, sp
+    2fbc:	a90153f3 	stp	x19, x20, [sp, #16]
+    2fc0:	b0000000 	adrp	x0, 3000 <automation_stm_gest_status_from_appli@@Base+0x50>
+    2fc4:	913aa014 	add	x20, x0, #0xea8
+    2fc8:	f9400033 	ldr	x19, [x1]
+    2fcc:	a9025bf5 	stp	x21, x22, [sp, #32]
+    2fd0:	a9046bf9 	stp	x25, x26, [sp, #64]
+    2fd4:	b000001a 	adrp	x26, 3000 <automation_stm_gest_status_from_appli@@Base+0x50>
+    2fd8:	91204355 	add	x21, x26, #0x810
+    2fdc:	a90573fb 	stp	x27, x28, [sp, #80]
+    2fe0:	a90603e2 	stp	x2, x0, [sp, #96]
+    2fe4:	b0000000 	adrp	x0, 3000 <automation_stm_gest_status_from_appli@@Base+0x50>
+    2fe8:	9120201b 	add	x27, x0, #0x808
+    2fec:	aa1b03e2 	mov	x2, x27
+    2ff0:	a90363f7 	stp	x23, x24, [sp, #48]
+    2ff4:	aa0103f7 	mov	x23, x1
+    2ff8:	52801001 	mov	w1, #0x80                  	// #128
+    2ffc:	f9003be0 	str	x0, [sp, #112]
+    3000:	aa1503e0 	mov	x0, x21
+    3004:	f9003fe3 	str	x3, [sp, #120]
+    3008:	9101c283 	add	x3, x20, #0x70
+    300c:	f9402c98 	ldr	x24, [x4, #88]
+    3010:	97fffaf4 	bl	1be0 <g_log@plt>

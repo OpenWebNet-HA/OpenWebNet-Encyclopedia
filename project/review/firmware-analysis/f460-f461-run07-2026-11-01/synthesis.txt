@@ -1,0 +1,7 @@
+# Run07 dual-analysis synthesis
+
+F460 now has one positive SceneRunner construction context for the captured receiver:272Baggregate/control-blockRTTI, inner+16 through constructor to same initializer. The selected receiver gate reads numericbytes113/249, writes flags and requests raw-pointer thread state/start/detach. State table→same receiver+192/+200 condition-pointer range→one selected predicate slot16/low8true→next localf84d0 boundary is source-proven. No field public semantics, owningcapture/threadsuccess/wholeconditionpolicy/action result follows.
+
+F461 pure HAL getters under opaqueboardresult22 request compiletime labelsF461/134 and store returned duplicate pointers through supplied slots. Device dependency/import metadata supplies candidate linkage only; uncertaincallercontext was stopped/excluded BEFOREgeneration and was not used as a closed-route proxy. Boardselection/providerruntime/actualdiagnosticconsumer/hardwareidentity remain unproved. No serial/MAC/runtimeconfiguration values exported.
+
+Both normal-image source first generations and parent reconstruction pass; independent source peers and scoped documentation review are separate. Main report adds receiver-worker/getter contracts, core catalogue profile unchanged. All new original/provider/native/thread/model/fixture/SQL/runtime/physical execution zero; earlier ledgers/history unchanged.

@@ -1,0 +1,39 @@
+# MyHOMEServer1 first-pass protocol source review
+
+PASS for authoritative REPORT.v2 and the bounded static protocol/translation findings. No author correction requested. This is an independent original-byte/source review, not raw parser acceptance, a native replay, target loader/binding experiment, complete command/support table or physical bus observation. No vendor code/process, service, network/device, emulation or closed authentication/session/framing delegate was executed or investigated.
+
+## Exact current pins
+
+Paths below are relative to the current research protocol directory.
+
+| Artifact | SHA256 |
+| --- | --- |
+| REPORT.v2.md | b07a9d0fcb645f42c347a47075997dbee23a202a18e797d57825da82d2a7a97d |
+| REPORT.md | 10f066119eef1e6c8e4fbae952b5cad54fd744dfdbe6ce3a435d8b663b767c74 |
+| collect_protocol_v1.py | d6a452eebebf65d4c75548799971841ade9d3b278580dcf2209f0e745ba35727 |
+| OUTPUT_MANIFEST.v1.json | 0564eeee2fce37ef3028ad451bb6be714bc6b8cbe615f21a52128002e7d0c559 |
+| EVIDENCE.v1.json | ab6a377aaec392a449421bd03adaa5610736ccbff2011ad3820358eecc96a8ec |
+| ELF_INVENTORY.v1.json | 9f6cdb10e838cbb314f75a6ac399bb53461eadb4194cb6a4d8cc999fb6521d1f |
+| HOST_RECONSTRUCTIONS.v1.json | 837805904b619b86429b698243e6ede34725541aa792148bdde8c7412e545e26 |
+| REPORT_PRECISION_REFINEMENT.json | 5286968299a59a2b89b1d5dbc26c77fb741b15fbf0e9271b493810fc2849da11 |
+| first-candidate/SNAPSHOT.json | 909b2e3b31b6ae64d3cae53f08f794a349beb7e2c0e4fd395292faab2fe7695b |
+| report-first-candidate/SNAPSHOT.json | 19ccc03d1fc37167d43f715d5fb486e96d3311a85926db8a0481985fff3f9c3f |
+| report-v2-first-candidate/SNAPSHOT.json | 4b9c5f40ef55891d9696fe5aa7ddd645064554c3b61f632c28a93508451efb03 |
+
+Read-only collector --check passes22 outputs,97 inputs,44 selected ELF objects,10 spans,25 ARM-word/Thumb-byte assertions and two host cases, with original execution0. Independently mapped original file-backed PT_LOAD ranges match all10 span hashes and25 asserted byte ranges. All44 recorded original ELF identities agree with actual normal/recovery files, and their raw ELF machine/flags agree with ARM32/EABI5 hard-float. This is equality of these selected objects, not whole-image equivalence.
+
+A separate raw section/dynamic-symbol/REL parser verifies auxiliary GOT relocation0x13088 type21 to aux_tr_tr0x130a0, and descriptor+40 relocation0x130c8 type2 to aux_tr_translate0x18d4. Source initializer stores/list arguments, descriptor type2, local register_translation manager/list stores and optional initializer agree. Automation's separate directional criteria1/2 are registration fields, not a WHO2 command matrix or active registration proof.
+
+The selected auxiliary dispatcher branches exactly on axes(1,2) and(2,1). Source input envelope representation+56 is distinct from the parsed object+52 discriminator. Original new_open_msg Thumb code requests g_malloc0(56) and initializes discriminator+52; normal parser stores literal1, field+8 and parameter list+12. These are fresh current source writes, not an old48-byte parser layout or supplied parse result. Full grammar and validation remain unexecuted.
+
+Independently decoded ARM branch0x1790 reaches0x1878, where WHAT3 selects byte9b/low0; original shift/OR and prefix initialization yield b0,00,9b,50 for the declared postparsed WHERE5 premise. This corroborates the host B0009B50 reconstruction, not parser admission or actual helper execution. The separate reverse branch0x1624 reaches0x16b0 selecting WHAT7 for the declared B0009C52 fixture; high nibble gives WHERE5. Raw PIC arithmetic0x1644+8+pool0x16f8 reaches0x1ce8, exact literal *9*%d*%d##. The two examples are separate source reconstructions, not a delivered roundtrip. Downstream helper/list/serializer/STM/socket/physical behavior remains open.
+
+The report correctly separates C++ parser definitions in libopen/libcommon from the libopenmsg dependency family. Repeated symbols and dependency declarations do not establish actual runtime binding; no ldd/target loader/interposition ran. Thumb symbol low bits and cleared instruction VAs are distinguished. The seven-file libcoso directory enumeration and five extra usr/lib providers total44 with19 bin/13 lib; no packaged scenario plugin in this selected directory is not product-wide scenario absence. Descriptor-name objects elsewhere are not active implementations.
+
+Whitelisted process fields and scs_enable/disable_automation values remain configuration declarations. Numeric working modes, callback axes, WHO, representation, parser discriminator and package Object model5.0.67 are not equated. Diagnostic class/formatter exports remain entrypoint inventory rather than an executed device identity query.
+
+## Frozen history and bounds
+
+Verified23 exact first-candidate source/output copies, the separate actual old-report copy, and two v2-report/refinement copies. The original report remains unchanged. Independently applying exactly the three disclosed count/line-locator substitutions to that report yields authoritative v2; collector/all22 outputs/cases and execution counts remain unchanged. Snapshot indexes exclude themselves/reviewer files, preventing a review self-hash cycle. The checker only compares candidate bytes; no author file was edited.
+
+No earlier firmware harness/layout/native ledger was imported. Claims are appropriately limited to source identity, allocation/field stores, registration/relocation, selected local arithmetic and explicit host premises. Natural plugin loading/order, complete criterion/WHO/WHERE routing, actual providers, accepted frames, diagnostic reply format, state lifetime and physical outcomes remain unclosed. Only this new review was written.

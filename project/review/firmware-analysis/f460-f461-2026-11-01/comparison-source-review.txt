@@ -1,0 +1,51 @@
+# Independent source review: F460/F461 comparison
+
+PASS for authoritative REPORT.v2 and the frozen v3 comparison packet, no correction requested. I independently inspected the comparison source/method, actual selected original files and database contents, archive identities, saved outputs and version preservation. The only author command executed was the host read-only v3 --check, which passed eight outputs. No vendor/original program, helper, emulator, service, expression from packaged code, network/bus/device or physical operation was executed; no prior CPU corpus was replayed.
+
+## Original identities and comparison source
+
+Independently hashed both acquired local packages: F460 has 158564663 bytes/SHA b5a50d606578f47ecbf0d327d7078b1357abb78425ea821ce743cd486b801b26; F461 has 138644991 bytes/SHA cb6f3e9d875c14f74a0791d7f3f420ce9d4babadb4459c1250c6cba7e741af2b. These match the saved acquisition/canonical records. The authenticated remote transfer is recorded provenance, not a new independent remote R2/signature audit by this reviewer. No publisher retrieval, upload or manifest mutation is inferred. CRC/hash integrity is correctly separated from unperformed cryptographic signature authentication.
+
+Independently read both actual fwz XMLs and confirmed names, versions 2.0.12/2.0.11, XML3.1 and models5.0.132/5.0.134. Counted actual normal stack declarations at the selected stackopen node:25/17. These are source declarations, not installed diagnostics, daemon admission semantics or active services. Checked the F460 packaged kernel MD5 against Image; F461 only retains its checksum file, and REPORT.v2 properly makes no F461 MD5-verification claim. Per-product extraction/deployment/source reports remain separate evidence; I did not redo their complete filesystem safety/DTB/startup audits.
+
+Recomputed all six manifest path-census relations and independently read/hash-checked all present selected original binaries and their ELF class/machine headers. Eight selected common F460/F461 applications/core objects are AArch64 and differ in whole-file bytes; MHS uses its own ARM32 layouts. At normal common paths5823,5757 complete hashes agree and66 differ; F460-only50/F461-only30 are path-inventory facts. The five named F460 application paths missing from the F461 regular-file census remain exact-path limits, not whole-product feature absence, unsupported scenarios or evidence about alternative owners. Shared dependencies/names do not prove behavior equivalence.
+
+Independently hashed every reported kernel/auxiliary/DTB member: Image and hygw_cortex-m.bin differ; all six corresponding DTBs agree byte-for-byte. These results do not select a live DTB, prove identical boards or identify electrical/SCS routing. The reused ImageVFS is host analysis tooling with separately supplied product inventories, not a transferred firmware ABI or guest execution.
+
+## Complete read-only catalogue verification
+
+Independently opened all four exact databases using immutable mode=ro, query_only=ON and trusted_schema=OFF; quick_check returned ok. For all300 table instances I verified the actual table SQL hash, row count and complete sorted type-tagged length-framed row-multiset hash without exporting raw rows/defaults/configuration values. This preserves NULL/type/blob distinctions and multiplicity; it is structural/data equality, not a stable-ID semantic mapping or validation of every compiler/runtime consumer.
+
+Both new embedded database files are2633728 bytes/SHA bd2ff4d326692c85bc4eb3f86504d615758da97dc832389fac523734574833e9. They have75 stored tables including sqlite_sequence,74 noninternal application tables. All75 table SQL definitions match the MHS and Suite profiles. New embedded versus MHS has52 equal/23 different row multisets; versus Suite42 equal/33 different. Same database bytes across these products do not establish identical installed features. Index/schema metadata and complete table definitions remain distinct from whole-schema equality and owner-aware field correspondence. No private rows were printed by this audit.
+
+## Product scope, preservation and limitations
+
+The curated product definitions distinguish F460 Home + Project/Home + Control and documented alarm integration from F461 third-party local control. The F461 export app-classification conflict stays unresolved rather than becoming native Home + Control support. Reusable Object216/F454 labels, Modules2, catalogue version/build tuples and defaults are not physical identity, actual package versions, live endpoints or F454 hardware. Manufacturer capacity/scenario/update generations remain separate from firmware execution. Current report and ranked work preserve these distinctions.
+
+Verified all14 input identities and nine immediate comparison first copies, including the exact v3 script. Retained v1/pre-v2 and v2/pre-v3 copies match unchanged originals. Their disclosed failures occurred before generated outputs: initial conditional-token syntax and then the invalid common nested-path assumption. V3 uses actual distinct product paths and trusted_schema=OFF without dropping existing source/hash guards. No unavailable contemporaneous terminal file is authenticated.
+
+Independently reconstructed REPORT.v2 from the retained v1 by exactly its two declared substitutions, and verified original/v2 first copies plus root pre-v2 report. The checksum-scope refinement and exact auxiliary filename change no data/source counts or outcomes. The F460 stdout normal_files label is a disclosed console-only mistake; saved census5873 regular files versus875 ELF objects remains authoritative, not an inferred changed output. Prior MHS/F454/MH202 ledgers remain separate and unchanged; this first pass adds zero original execution/models/fixtures and no full Device/source or physical certification.
+
+PASS applies to this exact structural comparison and its stated provenance/source scopes. Detailed parser/translation, dynamic provider binding, actual catalogue consumers/policies, runtime activation, hardware identity and physical behavior remain open. Author/repository/prior artifacts were not edited.
+
+## Exact reviewed pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.v2.md` | `73b59a730aea8720c0a174a4731bcaf5978ba21c655c55750f1db4e11414e254` |
+| `REPORT.md` | `5bfd1872d9d6c25460459fa7cf3927eb0f2f6acacfd1d05dcd8f7b3544826c44` |
+| `REPORT_REFINEMENT.json` | `376240409fc561dfb2810413c6625987568f36dc35f8b3941789a0bf46264733` |
+| `collect_comparison_v3.py` | `1417e1e82ee9ff3d970a1d23e72073d332c3064f44d9f54ce7c2f95d7555d568` |
+| `OUTPUT_MANIFEST.json` | `57af131dcd2ca9e5e99913bf3aa25f6829415ce4f0f568dd5a27b17140660872` |
+| `METHOD.json` | `777bc809106cf82b4f0b304615f3744d5df383cec0b3cecdb38628d4b8bee61a` |
+| `INPUTS.json` | `88e4eb9d56b39c495ab5fc5fe16408de863f79feb82831cb028c581607742dc4` |
+| `PATH_HASH_COMPARISON.json` | `18eef92283fd8d4e73c637c089eb3c6cc08a4c7cd46ca39f5c6a6b9b74cab17b` |
+| `SELECTED_COMPONENTS.json` | `10b34ca8936b947b7619ad78a8cb512843c99dbc06c500cac288981832f081fd` |
+| `CATALOGUE_PROFILES.json` | `c9085227000fa0983910c83d49c1f368eab0b84bae7ba017abd54987e947ec0a` |
+| `CATALOGUE_COMPARISON.json` | `d9174c80abcbcbcd861d950db5867cfdcff4da59695ffaac0813a43ad6a222bb` |
+| `BOOT_BUNDLE_COMPARISON.json` | `c53ab93d83877f5eb949989a2be9652d98444d62cc9675b943d0c1a056d5d711` |
+| `comparison-first-candidate/INDEX.json` | `e05d0bdb83174071d7e7b5c8cdf56f3457ce7cde50729f6b11b0b0f21a183508` |
+| `COLLECTOR_HISTORY.json` | `ebee9952361dc20f6fc765710356e5e498d0d8531b16816e9b655d6326ce403d` |
+| `COLLECTOR_HISTORY.v3.json` | `34cc4700e0cc7cc0dcbcdaff8b7534297a636cc799bc0492dd156cb9257c9597` |
+| `ACQUISITION_PLAN.json` | `1522d0ce97d97d3125913a25c26eac047d3a0b02eebc02ef3518284df3ab99a0` |
+| `ACQUISITION_COMPLETE.json` | `df377c64dfd5590d6276e4d8e380107b904ffc5724a37d63b942c935a2f4a3cd` |

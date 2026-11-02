@@ -1,0 +1,89 @@
+{
+  "files": {
+    "CONFIGURATION.v1.json": {
+      "bytes": 4090,
+      "sha256": "a49f18091d1df41afd8945d15a43f148efb89589afbcf267de089e60e9014d85"
+    },
+    "ELF_INVENTORY.v1.json": {
+      "bytes": 84972,
+      "sha256": "9f6cdb10e838cbb314f75a6ac399bb53461eadb4194cb6a4d8cc999fb6521d1f"
+    },
+    "EVIDENCE.v1.json": {
+      "bytes": 6049,
+      "sha256": "ab6a377aaec392a449421bd03adaa5610736ccbff2011ad3820358eecc96a8ec"
+    },
+    "HOST_RECONSTRUCTIONS.v1.json": {
+      "bytes": 865,
+      "sha256": "837805904b619b86429b698243e6ede34725541aa792148bdde8c7412e545e26"
+    },
+    "IMAGE_SYMLINKS.v1.json": {
+      "bytes": 1402,
+      "sha256": "aeba8cf47b83b84579a73e57be7b60066fa9e59531089075a9e35d0f567eac78"
+    },
+    "INPUTS.v1.json": {
+      "bytes": 19198,
+      "sha256": "9f86d1f7cd3363cc37e7741625e1ddd4750cb8df4d56033923d22c08a497ef55"
+    },
+    "MANIFEST_IDENTITY.v1.json": {
+      "bytes": 113,
+      "sha256": "1e2d2bee9279edad64c9d19da1fd72ef6bdc97c4cb1d7aa4cbaf15b692b3119c"
+    },
+    "SELECTED_SYMBOLS.v1.json": {
+      "bytes": 117742,
+      "sha256": "aca68b2800a8e0fe45dab0d6962961af1c47ba3b3c93b0b06f18784c89693c2f"
+    },
+    "relocations/libcoso.so.txt": {
+      "bytes": 5024,
+      "sha256": "86709e3726798ad8f679b2d56f8b1aa97695ad0d8130968940ac8bbc39cebeea"
+    },
+    "relocations/libplug_automation_tr.so.txt": {
+      "bytes": 6009,
+      "sha256": "5f3986525a1425a8ade66e75bcb6058b1ca91c0d30033281adb3edaadef6f903"
+    },
+    "relocations/libplug_aux_tr.so.txt": {
+      "bytes": 4580,
+      "sha256": "8ba8ba076503d69e49e7c8ee81e193232cd1b389fb2fa9a888dba22c0c271e94"
+    },
+    "spans/automation-dispatch-prefix.txt": {
+      "bytes": 3118,
+      "sha256": "3b95ee708611c1e4a93c5f2d41a968e301be6a603de5a2757f9e92d68241f373"
+    },
+    "spans/automation-registration.txt": {
+      "bytes": 2436,
+      "sha256": "3af9ce6a3270ef7a0c3dcc41858ad635806ac79e9286895688f393197c634a36"
+    },
+    "spans/aux-dispatch.txt": {
+      "bytes": 981,
+      "sha256": "aab51629140ff400bf1f42680532d5e096684bed3b942d44294c000fc0ee54ef"
+    },
+    "spans/aux-forward.txt": {
+      "bytes": 5125,
+      "sha256": "4654854073613d6d011146fabdf9926beae8ec2d2f8256ea08d9647a64a24deb"
+    },
+    "spans/aux-init.txt": {
+      "bytes": 8021,
+      "sha256": "c321da6bb55d7578df1b22d4725e9ad537d3c56bff3ad222bc61996c02874237"
+    },
+    "spans/aux-reverse.txt": {
+      "bytes": 4787,
+      "sha256": "e4c71232fb1197842bcce5a0bd05911c9bdfbcba58710d953ffdd2db765fb866"
+    },
+    "spans/hex-converters.txt": {
+      "bytes": 4660,
+      "sha256": "df4d8fc89c2dca1a75097f0fd1f92b3a16f3a7f8686c108b1de7aea1b49c745d"
+    },
+    "spans/new-open-object.txt": {
+      "bytes": 2006,
+      "sha256": "be9c90b698e53d75d8afc2904afb29c9eca8cd96c3a50d8822b68fac3a16b872"
+    },
+    "spans/normal-parser-fields.txt": {
+      "bytes": 5230,
+      "sha256": "5ac6fd3376487f5818b571a924ca7a3dfb072e015ad61022bf64adec919eb65d"
+    },
+    "spans/register-translation.txt": {
+      "bytes": 1818,
+      "sha256": "05ffb4f341c3d4d72b17e4398bbae216a0589632d6ff038f4a0ec70b5d018538"
+    }
+  },
+  "scope": "Static candidate outputs only; reviewer documents excluded to prevent cycles."
+}

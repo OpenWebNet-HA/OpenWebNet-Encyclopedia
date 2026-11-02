@@ -1,0 +1,30 @@
+# Independent static review: ordinary WHO8 query routing
+
+Result: **pass within the stated ordinary/local/conditional scope; no required correction**. Independently inspected the report, collector, parser/reset/field code, role caller, mode gate, ACK/KO selection and send wrapper. Ran host read-only evidence/model reproduction only. This review writes only this file; no original ARM/JS/vendor/runtime or live I/O executed.
+
+## Exact current pins
+
+| Artifact | SHA256 |
+|---|---|
+| `../media/REPORT.md` | `0e39e989b782d8cc89d36bf1e6e01de7df7843b4a9ffe07a883ad0e7f910e237` |
+| `../media/collect_evidence.py` | `1261bb3c9882e434509b2c877c8c037c93d8aa448e2843d44015cf40bc4099f2` |
+| `../media/host-query-route-model.json` | `81ea19d3ae64656144f46ba5c47960656d936aa4042d992a7dff59ec6dd144ce` |
+| `../media/original-spans.json` | `bd1992a1d20ce3edc6b01fadae247432cd8c5fe5e1ff68c270d38ac8576a3894` |
+| `../media/input-hashes.json` | `1247193e7364b5f3dcfdafe94756d70d2268c16823d31f13b156972f39b4b6d3` |
+| `../media/output-manifest.json` | `cc5ee7b9b23c0e44d910e376fde43a8ed4ef3288229e890592a385eefa11e627` |
+
+## Reproduction and independent source checks
+
+- Current collector `--check` passes:40 generated outputs,30 original spans,25 exact word assertions,6 input identities and6 host mode cases. Repeated its read-only check via host runpy to inspect derived metadata; all40 generated output hashes also match the current manifest. Original libcommon/bt_vct hashes are verified against the expected identities by the collector. No evidence outputs were rewritten.
+- Read original CreateNullMsgOpen code: it zeros WHO, four130-byte address slots, WHAT, WHERE, DIM and value slots, and resets parser kind/state. Read CreateMsgOpen and the exact-query guard/classification spans. Under the declared nine-byte NUL-terminated ordinary input and named C primitive contracts, the length/character/segment guards allow the selected short text; *# selection and the suffix byte3 classify it as kind4. This remains static reasoning, not executed parser acceptance.
+- Independently followed source-offset arithmetic in Assegna_chi_dove_grandezza: raw+2 supplies8**35##; tokenization copies WHO8. Raw+3+len(WHO) supplies*35##; first-star branch at0x30214 skips WHERE copy, preserving zeroed empty storage. Raw+4+len(WHO)+len(WHERE) supplies35##, and no-star branch0x30418 copies two characters into pre-zeroed DIM storage. WHAT remains empty. No fabricated destination0 or lost field separator is required.
+- Read the no-hash address/level early-return spans and additionally disassembled original libcommon0x3112c–0x31148 independently: IsCorrect actually calls Assegna_indirizzo, checks error state, then Assegna_livello_interfaccia. WHO8/no-hash and empty WHERE preserve initialized address/level fields on these branches. IsMeasureFrame predicate explicitly tests kind4.
+- Read normal receive loop and join: its selected plain-text path records bytes until consecutive##, NUL-terminates and supplies the selected length to CreateMsgOpen, then checks Error/Null before returning1. The report correctly starts with exact bytes supplied at this receive boundary and does not infer a completed API/openserver/socket/handshake delivery.
+- Read role1 caller and handler prologue: actual config+32 role selection precedes handler0x143f0; Null is tested; multimedia analysis sees empty WHAT and returns without introducing IP/WHAT payload; empty address0 takes the ordinary branch. WHERE emptiness explicitly stores−1 and skips destination helpers. Static candidate libcommon ownership is carefully separated from a live loader/provider assertion.
+- The measure predicate at0x14644 reaches the original trampoline0x167ec, setting localflag1 and returning to0x146d8. Independently verified unsigned `(global−1)<=2` branch semantics: only global1/2/3 pass directly. For missing WHAT=−1, exceptions19..22,37,77 do not apply, so other32-bit global values clear the flag. This gate must precede the shared dimension-block conclusion.
+- In the positive branch, DIM35 differs from9001/9002 and30; ordinary path selects OpenOK. In the negative branch, WHO8 fails the WHO6/7-only fallback and selects OpenKO. Getter literals are the saved *#*1##/*#*0##. Both call the same wrapper, which checks **exactly−1** from invio_msg_open, closes its supplied descriptor then returns0; otherwise returns1. No stored descriptor reset, successful transport, remote receipt or status-field response follows from this wrapper.
+- Fifth constructor argument provenance is concrete: caller stores−1 on stack; constructor reads that argument after its push and stores it into the same0x2b5f8 global used by the gate. It establishes that initial constructor path only. The report properly leaves later mutation/state unconstrained and separates this word from role/config+32, board profile, factory vde_enabled and feature_vde discovery.
+
+## Scope and conclusion
+
+The six cases in host-query-route-model.json transcribe one selected normal query and declared global values; they are not firmware executions, a general grammar parser, a mode-state discovery campaign or a live transaction. The report advances the prior conditional DIM35 local branch into a concrete parser/empty-WHERE/role/trampoline/state-gated route without promoting it to a complete API exchange. The actual WHO8/DIM35 status-fields producer/schema remains unresolved; other roles, addressed/multimedia paths, later runtime state and physical behavior remain outside this review. No factory activation or universal ACK/KO claim is introduced.

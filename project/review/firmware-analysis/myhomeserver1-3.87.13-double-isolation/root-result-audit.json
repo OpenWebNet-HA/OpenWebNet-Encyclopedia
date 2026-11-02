@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "method": "Independent parent saved-result/source arithmetic audit after executing single canonical run; no replay",
+  "result_sha256": "450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525",
+  "top_level_entries": 8,
+  "totals": {
+    "EXIT_callbacks": 8,
+    "code_hook_steps": 360,
+    "guard_stop_callbacks": 0,
+    "linker_redirect_callbacks": 12,
+    "original_code_visits": 340,
+    "setup_data_relocations": 4
+  },
+  "C_primitive_callbacks": 0,
+  "cases": [
+    {
+      "case": "positive-zero",
+      "phase": "constructor",
+      "original_code_visits": 56,
+      "linker_redirect_callbacks": 2,
+      "EXIT_callbacks": 1,
+      "code_hook_steps": 59,
+      "D0_after_hex": "0000000000000000",
+      "object_before_hex": "000000000000000000000000000000000000000000000000",
+      "object_after_hex": "000000000000000003000000000000000000000000000000"
+    },
+    {
+      "case": "positive-zero",
+      "phase": "asDouble",
+      "original_code_visits": 29,
+      "linker_redirect_callbacks": 1,
+      "EXIT_callbacks": 1,
+      "code_hook_steps": 31,
+      "D0_after_hex": "0000000000000000",
+      "object_before_hex": "000000000000000003000000000000000000000000000000",
+      "object_after_hex": "000000000000000003000000000000000000000000000000"
+    },
+    {
+      "case": "negative-zero",
+      "phase": "constructor",
+      "original_code_visits": 56,
+      "linker_redirect_callbacks": 2,
+      "EXIT_callbacks": 1,
+      "code_hook_steps": 59,
+      "D0_after_hex": "8000000000000000",
+      "object_before_hex": "000000000000000000000000000000000000000000000000",
+      "object_after_hex": "000000000000008003000000000000000000000000000000"
+    },
+    {
+      "case": "negative-zero",
+      "phase": "asDouble",
+      "original_code_visits": 29,
+      "linker_redirect_callbacks": 1,
+      "EXIT_callbacks": 1,
+      "code_hook_steps": 31,
+      "D0_after_hex": "8000000000000000",
+      "object_before_hex": "000000000000008003000000000000000000000000000000",
+      "object_after_hex": "000000000000008003000000000000000000000000000000"
+    },
+    {
+      "case": "negative-one",
+      "phase": "constructor",
+      "original_code_visits": 56,
+      "linker_redirect_callbacks": 2,
+      "EXIT_callbacks": 1,
+      "code_hook_steps": 59,
+      "D0_after_hex": "bff0000000000000",
+      "object_before_hex": "000000000000000000000000000000000000000000000000",
+      "object_after_hex": "000000000000f0bf03000000000000000000000000000000"
+    },
+    {
+      "case": "negative-one",
+      "phase": "asDouble",
+      "original_code_visits": 29,
+      "linker_redirect_callbacks": 1,
+      "EXIT_callbacks": 1,
+      "code_hook_steps": 31,
+      "D0_after_hex": "bff0000000000000",
+      "object_before_hex": "000000000000f0bf03000000000000000000000000000000",
+      "object_after_hex": "000000000000f0bf03000000000000000000000000000000"
+    },
+    {
+      "case": "one-point-two-five",
+      "phase": "constructor",
+      "original_code_visits": 56,
+      "linker_redirect_callbacks": 2,
+      "EXIT_callbacks": 1,
+      "code_hook_steps": 59,
+      "D0_after_hex": "3ff4000000000000",
+      "object_before_hex": "000000000000000000000000000000000000000000000000",
+      "object_after_hex": "000000000000f43f03000000000000000000000000000000"
+    },
+    {
+      "case": "one-point-two-five",
+      "phase": "asDouble",
+      "original_code_visits": 29,
+      "linker_redirect_callbacks": 1,
+      "EXIT_callbacks": 1,
+      "code_hook_steps": 31,
+      "D0_after_hex": "3ff4000000000000",
+      "object_before_hex": "000000000000f43f03000000000000000000000000000000",
+      "object_after_hex": "000000000000f43f03000000000000000000000000000000"
+    }
+  ]
+}

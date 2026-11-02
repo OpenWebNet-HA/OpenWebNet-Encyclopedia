@@ -1,0 +1,43 @@
+# Documentary integration review: first candidate
+
+Source-to-summary and product boundaries are consistent, with **one requested ranking precision correction**. This review addresses the immutable first candidate, not the subsequently versioned current README. During the original inspection all five current human files matched the frozen first candidate. Parent created a new v2 candidate after accepting the finding and before this review file was written. This document is therefore a retrospective review of the exact retained first-candidate bytes, not a fabricated pre-correction file or certification of the later current README. No source/candidate was edited by this reviewer.
+
+I authored the catalogue-owner report. Its independent source review is `reviews/catalogue-source-review.md` SHA-256 `902f3914dcc6a1684f60b5035d2aacdf162fc9a04fb771422920944b116a94a2`; this review does not self-certify that source. The separate factory and runner reports/source reviews were read for documentary consistency, without rerunning their original-byte investigations, collectors or native tests. No vendor, original instruction, SQL, JSON parser, network/target or physical operation executed.
+
+## First-candidate pins
+
+The original integration/review-candidate/INDEX.json is SHA-256 `974d815c190e21c147551578479aec962051fa7088e421ee035d0a51f100695c`. Every retained snapshot still matches its declared bytes/hash. Workspace-relative source identities at that original checkpoint follow.
+
+| Document | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-factories.md` | 7387 | `00ff0103bb815431071651ee12c170078e345649728e36e3bfe0eb7c9f4bea10` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md` | 11224 | `23629011fc6f1afd56e837d5d0a65e62952c02c051573bea534ffd4a9535d848` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md` | 9295 | `0306fe7a480c2111933b39fbe22a39ba7b3483264c48110c2dd3025cafb2c492` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | 11611 | `59affbd225571e554a49ad784619912a1521ff5b00c80bf5ea28094540b942b9` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-factories/README.md` | 3688 | `2bb4f337ffaf465072365258a9ed42e8bb42d5b283f2f256ecdac1b5c0ec0f0d` |
+
+Root source/coordination pins at the original inspection: catalogue report `03e91bcd39e0c1c1dc4d0b08145981bcd1ea73556f97e868b0113172b33c835a`; factories report `72009ae30fcb92becd998cb75f9fbef0de9d107f53cca4fca18f068c2d95e544`; runner report `dc4692b0bbac6d1aa84574ad6aa02b632bb47864d03b644e3c66a9b8a408661e`; SYNTHESIS `cb57f804eec06fa60d8469e7abe8b2b222235e687211b8c65692642355de37f9`; COVERAGE `a734a4753873fbdc8f3868740f22a7a720999a983a3bbb7046e905e4e43d0314`; ranking v1 `9a14046ffe212dc90fbe8a49093a44b56847cb91d176dcbc090989ffca367448`.
+
+## Required precision finding
+
+Ranking item2 says `Full23-type initializer and configured scene grammar remain unreviewed.` The runner source report instead establishes an action-index bound of23 (0..23), while the factory report declares24 action rows and24 trigger/23 condition rows. The full initializer type set is expressly unexamined. The phrase23-type is therefore unsupported and risks confusing an inclusive bound or the condition-table count with whole-initializer coverage.
+
+Requested replacement: `The full initializer and configured scene grammar remain unreviewed.` This qualifies only documentary scope; it does not establish another global type count or change firmware interpretation. Parent accepted the change and preserved the first candidate; the separately versioned ranking/current candidate requires a new review.
+
+## Otherwise consistent bounded claims
+
+The new human summary accurately retains the selected class139 RTTI/vtable/factory/base SQL join and conditional registry/caller route. Actual fifteen-column query positions13/14 are EN_KEY_OBJECT.slots and AS_OBJECT_SYSTEM.id_system, stored into inner20/24 or wrapper32/36. The previous two-column query remains separate. Key/context producers, preceding admission guard, query results/order/filter/version policy and later field consumers remain open; catalogue IDs/slots are not physical capacity, OPEN WHO or universal compatibility.
+
+The action summary keeps local enums, exact type matching and two44-byte JSON-facing SLEEP/SCENARIO constructors separate from later compiled runtime objects. Fields seconds/sceneId and delay/duration are schema/conversion data, not elapsed timing or action execution. Normal-capacity vector transfer does not establish reallocation, complete ownership, grammar or provider failure behavior. TIME table membership is correctly distinguished from a construction branch.
+
+The runner summary distinguishes same-scene initialization and selected action10 conversion/append from the full32932-byte initializer. Selected96-byte compiled runtime allocation in the source is not replaced with the44-byte schema object or its serializer. Enabled+65 guards, active+145 and stop-request+144 are separate; thread state/start/detach and relocated worker calls remain compiled requests. Conditional predicate/action traversal and stop-slot calls do not prove execution, immediate interruption, timing, callback lifetime or race freedom. No MH202 control words or F454 interfaces are transferred. Missing assets and wider Device gates remain explicit.
+
+Independent source-review identities consulted: factory `979d136e497c78afe9f0b46cbbac77d9a38c95b80ff3d00cba1741111cb438c2`; runner `a3ba1e101e7147c1c86bee383160b1ad7027872fc9a3e0fcccb01683fff2165e`. Only the documentary implications of their findings are assessed here. Original execution counters remain0; the70-output arithmetic29+22+19 is method scope, not complete firmware coverage.
+
+## Export/link checkpoint and limits
+
+At the original read checkpoint all84 SOURCE_EXPORTS source/published pairs matched current source bytes, sizes and SHA-256; that export mapping is `a653d677dee07e4c69ee010d02abb30a7188d366fc93ea07ca67d0b94f1df2f5`. SOURCE_CHECKS.json was `879d205ae2eddebc7ea118a20cec01513cecf254d40cf471fc5821bb88dc3b4d`; no source collector was rerun for this documentary review.
+
+The original five human pages had48 existing local Markdown link occurrences and exactly two pending capsule completion targets: integration-review.txt and validation.json. Those future bytes were not certified. Parent must create actual final review/validation files and complete strict ESG/link checks; no placeholder, exemption or circular certification is granted. The current v2 candidate/link changes will be assessed separately, rather than overwriting this first-candidate record.
+
+Only this exclusive first review was written. It records the source-backed precision finding and original inspection scope honestly; no source/evidence/candidate edit or new firmware investigation occurred.

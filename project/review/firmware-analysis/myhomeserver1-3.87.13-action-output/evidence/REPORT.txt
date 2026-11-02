@@ -1,0 +1,49 @@
+# MyHOMEServer1 3.87.13: BN3L callable captures and local request handoff
+
+The two previously opaque callable invokers are small adapters to different local bodies. Both bodies contain an original four-member JsonCpp request assembly and call the same local delegate with that object, a method-string subobject and the same relocation-backed receiver. This closes a selected action-callable to local request-call edge. It does not establish the method value, complete parameters, delivery, external protocol acceptance, a physical operation or successful restoration of prior state.
+
+The original image object is `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. All addresses below are linked original VAs, not runtime pointers. Fresh ELF PT_LOAD mapping is used, including the distinct RW data file offset. This is static source analysis: no original instruction, vendor process, provider, JsonCpp expression, semantic fixture, clock, thread, network or bus was executed.
+
+## Inherited selection versus new source edges
+
+The completed cancellation/action-lifecycle, lifetime/schema-activation and serialization/serializer reports establish selection of local action enum12 `BN3L`, raw64-byte action serialization/reparse, compiled116-byte `16Bn3lActionRunner`, duration-derived operational word12, and conditional binding of its second callable. They also establish first callable storage16/manager24/invoker28 and second storage32/manager40/invoker44. Those constructor, scheduling and schema conclusions are inherited, not new coverage here. The curated Device0199 product role does not assign a physical meaning to these local offsets or class names.
+
+New evidence covers the adapters, actual heap-capture producers/copy-manager branches, selected body prefixes and two four-member request callsites. The bodies are substantially larger than the retained slices: this packet does not audit every branch, every request they might form, exceptions, or complete return/lifetime behavior.
+
+## Three distinct objects at the callable boundary
+
+Original Thumb adapter0xd14a4 is `ldr r0,[r0]` followed by B.W0xcf5c8. Adapter0xcf064 has the same load followed by B.W0xcdd14. Thus incoming r0 addresses callable storage; its first word supplies the heap-capture receiver. It is not the compiled action object's `this`, a JSON object, or a hidden forwarded set of command arguments. The adjacent function beginning0xd14ac is excluded.
+
+On the selected normal constructor path,0xcf1f6 requests52 bytes and0xcf226 calls the imported allocator. The capture stores the compiled+112 word at its own0, a copied ID string at4 (pointer4/length8/inline buffer12), compiled words92/96/100/104 at28/32/36/40, compiled108 at44 and the operational-duration getter result at48. The stores are explicit scalar/vector dataflow through the constructor stack; capture48 is not compiled48's thread holder. Pointer PIC joins bind manager Thumb0xcdbf9 and invoker Thumb0xd14a5 before storage helper0xcd990.
+
+The selected manager operation2 at0xcdc68 requests another52-byte capture, copies word0 and the string at4, then copies words28..51 into the clone. Its destination callable storage receives the cloned pointer at0xcdcb8. Normal imported allocation/string-copy returns and valid source lifetime remain premises. Manager operation3 separately requests string/52-byte deallocation; no real heap lifetime was observed.
+
+For the conditional second callable,0xcf32a requests24 bytes. Its capture contains the copied ID string starting at0 (pointer0/length4/inline buffer8); it has no copied six-word state or operational duration field in that24-byte layout. Manager Thumb0xcdb01 operation2 at0xcdb6a likewise requests24 bytes and copies that string into the new capture, storing the cloned pointer at0xcdba2. Pointer PIC joins bind invoker Thumb0xcf065 before helper0xcda40. The two capture layouts must not be overlaid with each other or the compiled116-byte object.
+
+## First body: bounded receiver and local construction
+
+Body0xcf5c8 retains its incoming capture pointer in fp and derives capture+4 as an ID-string subobject. It tests capture48 at0xcf5f4..0xcf5f8: zero branches directly to0xcf6ba; nonzero enters a guarded local path which requests0x10f4a0 at0xcf61e with result storageSP96, a GOT-sourced receiver, selector0 and the ID-string address. That query body is not audited in this packet. This positive call and copied-state-looking local code do not prove a snapshot, fresh cache record or successful restoration.
+
+The retained0xcf6ba prefix builds a local optional-field record atSP148. It copies the capture's ID string and uses capture28 in a bounded status-index calculation. Later capture0>0 sets record40 plus presence byte36. These are local storage/guard facts, not a public command-domain or support table. The status-string table, alternate string-copy branches and intervening merge paths are not audited here. Separately, at0xcf7c0 the body requests local descriptor helper0xd20c0 with result storageSP404. No concrete returned method/ID/version is asserted.
+
+The selected original block0xcf88c..0xcf934, reached only under its preceding original guards and normal helper/provider returns, forms a JsonCpp object atSP72. It constructs string values from descriptor subobjectsSP408,SP432 andSP456 and assigns them under exact keys `jsonrpc`, `method`, `id`. It requests0xd163c at0xcf904 with destinationSP96 and local recordSP480, then moves that returned value under `params`. The detailed merge provenance and conversion are not replaced by a model: they remain helper/callsite premises.
+
+At0xcf930 the local call to0x5dda0 has r0 supplied by GOT slot0x1666a4, r1=SP432 (the same method-string subobject used above), and r2=SP72 (the assembled JsonCpp object). Fresh original R_ARM_RELATIVE data at that slot has linked addend0x16711c. This identifies the selected receiver source, not its initialized runtime state, remote service or effective lifetime. Analysis stops at this local delegate; its body and any downstream transport are not inspected in this packet. JsonCpp destruction is requested at0xcf936 after normal delegate return, not a demonstrated send result.
+
+## Second body: independent capture, same request boundary
+
+Body0xcdd14 retains incoming capture in r6 and initially reads its own string pointer/length0/4. It builds a distinct local recordSP268, copies that string and sets its presence byte. It reads additional local/global state and requests descriptor helper0xd20c0 at0xcddd0 with result storageSP524; the source does not justify calling the second callable a physical stop or universal rollback.
+
+The selected0xcde9e..0xcdf4c block forms another JsonCpp object atSP56, using descriptor stringsSP528,SP552 andSP576 under the same three literal keys. Call0xcdf16 asks0xd163c to convert local recordSP600 into temporarySP80, then assigns its result under `params`. Call0xcdf42 to0x5dda0 uses the same relocated receiver, r1=SP552 and r2=SP56. The two bodies therefore have source-equivalent request-member spellings and receiver provenance at these selected callsites; the source here does not prove equal method values, equal params, a request/response pair, natural invocation order or coherent state restoration.
+
+## Scope, reproducibility and remaining question
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/callable/collect_callable_v1.py --check`
+
+The collector checks fresh original hashes/PT_LOAD translation, exact instruction bytes and direct local branch targets, eight member-key PIC resolutions, four callable pointer PIC resolutions, two GOT-base joins and the original relative receiver relocation. It emits selected disassemblies with code and literal-pool records separated. It never follows the descriptor, converter, query or output-delegate bodies. First outputs, report and collector are immediately copied byte-for-byte into first-candidate with an index computed before opening it. Generation refuses any overwrite; --check is read-only.
+
+First generation has no prior generated draft or canonical failure. Exploratory host reads included slices beginning or ending inside unrelated wide Thumb instructions; these were not treated as source proofs, and the retained code spans use complete selected instruction boundaries. No previous completed packet was changed.
+
+Confidence is high for these bounded original call/dataflow and capture-layout facts. Valid C++ objects, candidate import binding and normal allocation/string/JsonCpp/helper returns are conditional. Complete merge semantics, descriptor method/value production, conversion guards, callback scheduling, configured scene presence, concurrency, unwind and whole ownership remain open. The next useful local question is the descriptor/parameter helper contract; this report does not authorize following transport delegates.
+
+New original execution, semantic models and input fixtures are0. The saved MHS experiment remains1 corpus,8 top-level entries,340 original code-hook visits,0 C primitives,12 definition redirects,8 EXIT callbacks,0 guard stops,360 total hooks and4 data-setup relocations. Static source coverage is not a new native corpus or proof of physical behavior.

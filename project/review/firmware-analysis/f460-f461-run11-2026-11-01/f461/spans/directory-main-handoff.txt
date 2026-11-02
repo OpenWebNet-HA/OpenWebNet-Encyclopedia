@@ -1,0 +1,20 @@
+
+/home/bticino/bin/coso:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000032cc <main@@Base+0x3cc>:
+    32cc:	f9400683 	ldr	x3, [x20, #8]
+    32d0:	f9001e83 	str	x3, [x20, #56]
+    32d4:	f9403be1 	ldr	x1, [sp, #112]
+    32d8:	f9002a83 	str	x3, [x20, #80]
+    32dc:	f94053e2 	ldr	x2, [sp, #160]
+    32e0:	f9003283 	str	x3, [x20, #96]
+    32e4:	91004280 	add	x0, x20, #0x10
+    32e8:	940008d6 	bl	5640 <init_plugin_data@@Base>
+    32ec:	aa1403e0 	mov	x0, x20
+    32f0:	9400096c 	bl	58a0 <init_dir_monitoring@@Base>
+    32f4:	aa1403e0 	mov	x0, x20
+    32f8:	940008fe 	bl	56f0 <register_plugins@@Base>
+    32fc:	35000da0 	cbnz	w0, 34b0 <main@@Base+0x5b0>

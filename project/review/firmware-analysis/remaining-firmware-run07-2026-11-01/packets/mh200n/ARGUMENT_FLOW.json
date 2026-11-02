@@ -1,0 +1,46 @@
+{
+  "buffer": "Each selected construction yields the same local address FP-1140; valid frame/write capacity/lifetime and ordinary ABI remain premises",
+  "first_sprintf": {
+    "R0": "local buffer FP-1140",
+    "R1_format": "%s %s%s > %s%s",
+    "R2_string1": "ls -1",
+    "R3_string2": "/root/script/",
+    "SP_plus4_string4": "/var/tmp/bticino/script/",
+    "SP_plus8_string5": "lista",
+    "SP_string3": "*.*.spt",
+    "VA": "0xa938"
+  },
+  "fopen_request": {
+    "R0": "same buffer after second formatter request",
+    "R1_mode": "compiled r",
+    "VA": "0xa984",
+    "path_under_ordinary_formatting": "/var/tmp/bticino/script/lista"
+  },
+  "limits": [
+    "First-pass pattern literal only is inherited; new coverage is argument/stack/buffer/import request linkage",
+    "No actual shell/ls/system/fopen/provider execution, file generation/reading or target path access",
+    "No matched-file count, list contents, filename grammar, valid scenario/compiler/parser or accepted script established",
+    "No later line-reader/token/schema/whole-function/error/cleanup claim",
+    "No installed overlay, natural startup, current configuration, hardware or protocol capability inferred",
+    "Closed receiving/output/transport/auth/session/framing/MQTT/libjel/JS and equivalent denied helper bodies remain opaque"
+  ],
+  "premises": [
+    "Natural outer-caller/local-routine admission not established",
+    "Valid stack/frame, local writable capacity/lifetime and ordinary ARM32 variadic register/stack convention",
+    "Ordinary formatting/termination semantics, effective imports and normal provider returns without invalidating state",
+    "Actual shell/file-provider behavior, current paths/data/permissions and prior command completion/content remain open"
+  ],
+  "scope": "One exact pattern/list-path request contract in own application taskmanager; no listing or enumeration executed",
+  "second_sprintf": {
+    "R0": "same local buffer FP-1140",
+    "R1_format": "%s%s",
+    "R2": "/var/tmp/bticino/script/",
+    "R3": "lista",
+    "VA": "0xa96c"
+  },
+  "system_request": {
+    "R0": "same local buffer after first formatter request",
+    "VA": "0xa94c",
+    "semantics": "Provider/shell interpretation, command completion, wildcard expansion, listing output and status remain unproved"
+  }
+}

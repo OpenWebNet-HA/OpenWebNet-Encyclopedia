@@ -1,0 +1,60 @@
+# Run12 documentary integration review
+
+PASS for the current frozen documentary integration. No correction requested. The actual integration-review export, validation record and subsequent strict gates remain pending mechanical completion.
+
+This is an independent documentary comparison of the new run12 summaries with the two frozen author reports and independent source-peer reports. Prior product/source familiarity informs namespace and role checks. It is not a fresh original-byte semantic audit, review of every inherited claim, source-collector replay or native execution. Only host file reads, exact reconstruction, hashes and local-reference checks were performed. Author outputs, original images and repository documents were not edited.
+
+## Claim and boundary assessment
+
+F460 has an actual local wrapper-to-consumer argument edge: literal selector3, same incoming outer pointer, C=[input], R=[C+56], list=[R+8], selected valid node/GString text, dot-positive/masked-selector1 branch and a new GString request using that same text. Composition with the earlier XML producer requires the SAME valid context, stable list and normal imported returns; common constructor/caller and natural parser-to-consumer order are not established. Record kind2, wrapper selector3 and package status4 remain separate. The trace stops before0x6000 and does not prove full output/outcell behavior, accepted extensions, security, compatibility, authenticity, installation or downstream effects. These qualifications are preserved in the public appendix, capsule, synthesis and ranking.
+
+F461 adds the selected defer alternative, not a record+32 producer. The unsigned first-clock due/minimum selection, fresh-clock64-bit subtraction interpreted through signed reciprocal division-by1000 and low32-bit interval storage remain distinct stages. The first comparison does not establish a positive or nonoverflowing mathematical delta at the fresh sample. Candidate wall-clock arithmetic is interpreted as microseconds only under successful ordinary AArch64 timeval/provider ABI; the timeout path separately requests a monotonic clock and has a source+100==0 ready-time branch. Actual binding, flag state, units of the unknown record+32 producer and measured timer behavior remain conditional. No target clock or numeric fixture/model was executed.
+
+Actual callback registration uses the saved supplied owner as data; source attachment/unref are requests with unresolved outcomes/lifetime. The complete local callback forms owner+136 and re-enters the dispatcher with that same owner. This closes source-level data/pointer arithmetic, not actual activation, firing, manager construction, one-shot behavior or safe lifetime. Timestamp+24, record+32, local minimum SP120, provider interval+96, flag+100 and owner+136 are kept separate. The source peers support these exact bounded claims.
+
+F460 and F461 retain their curated product roles without MyHOMEServer1/F454 layout or physical-feature transfer. New original/helper/native/provider/emulator/model/fixture/SQL/JSON/time/runtime/physical execution remains zero; parent coordination-clock readings are separate. Earlier ledgers and MH202 run18/run21 unavailable intermediate-history limits remain scoped unchanged. Full Device/source gates, whole update policy, effective providers, concurrency and physical behavior stay open. Closed receiving/output/transport/authentication/session/framing and equivalent bodies remain excluded.
+
+## Exact checks
+
+- All 16 current source files equal their frozen review-candidate snapshots, recorded byte lengths and SHA-256 values.
+- All 33 SOURCE_EXPORTS entries equal both original local source and capsule copy, including actual source-peer reports.
+- Four immediate source/review indexes verify 25 members: F460 9, F461 14, and one member for each source-peer first copy. This certifies saved bytes, not unavailable exploratory history.
+- Both pre-edit reference snapshots verify. The declared single insertion and two substitutions reconstruct the new main byte-for-byte, identical to REFERENCE_DRAFT.md and the current public page. The catalogue profile remains unchanged at bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba.
+- Selected current-context integration Markdown has 32 local-reference occurrences: 30 resolve now with one verified heading fragment. Only capsule integration-review.txt and validation.json are pending actual assembly. Future bytes, strict ESG/ECV/diff and final identity validation are not certified here; no placeholder or exemption is requested.
+- Current source first generations and parent static reconstructions are recorded PASS; their exact indexed copies agree. The unavailable exploratory host GLib path guess is not turned into an authenticated old artifact or additional source result. Parent/source-peer checks were read as separate work, not replayed by this reviewer.
+
+## Source and preservation pins
+
+| File | SHA-256 |
+| --- | --- |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/REPORT.md` | `d288575f22d4e76b0c257ce2cbfad0dd2424efc59f5fa20e92ac310f5675a620` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/collect_consumer_v1.py` | `5abef98d606c834b4edc39adc25e906fc65e19e7e9e5f1ece9a36892c9a41eba` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/REPORT.md` | `0e13cbfe063217d9234b916774616ee5233a2a5892ba7ffdb3dd19aa3fb3ec04` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/collect_clock_v1.py` | `fa5bc0aff7145ef719557399b839a375b6580014ef2583e1e88c64a675afc726` |
+| `work/f460-f461-comparison/2026-11-01-run12/reviews/f460-source-review.md` | `702fa2c7906e475bef5fd9ffd6a0174e91fad5e76b569c1724f39729f19b26be` |
+| `work/f460-f461-comparison/2026-11-01-run12/reviews/f461-source-review.md` | `dc29c4d41b0f275e193d8ec02e2627d2024099f5ab1be0cd5b2207d329569264` |
+| `work/f460-f461-comparison/2026-11-01-run12/integration/pre-edit/INDEX.json` | `54d015ab921442c7b1069213834e695c0092684bc4522ade1b028fe812890aac` |
+| `work/f460-f461-comparison/2026-11-01-run12/review-candidate/INDEX.json` | `04ec6854f8e4c7a02c68323697bb312ab8e3e4236a94c12b01cde179ecdace67` |
+
+## Frozen current integration pins
+
+| Current file | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md` | 35131 | `71ac65fa4ddd6934f01ec8d1f07e132f7b1e61635673e39eb840e4668d38a7d5` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | 15603 | `bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run12-2026-11-01/README.md` | 3474 | `f3e237c4851606a2b4dcb7c9b456413f9c6ae8a029e8e4c296ba72afe5be444e` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run12-2026-11-01/SOURCE_EXPORTS.json` | 9069 | `0da0b64a62ece68b17680131b34c4144be53a9b02b6be2c27f6c3fbffb0d50c7` |
+| `work/f460-f461-comparison/2026-11-01-run12/SYNTHESIS.md` | 1467 | `ad07427a0aa3f4c1d0064301c203fd7bca016694094872fd5a82063ab988b289` |
+| `work/f460-f461-comparison/2026-11-01-run12/COVERAGE.md` | 1815 | `746a8d7da972d651ebe9da54edcdfa63777f071d817d47b92f62a09333983b29` |
+| `work/f460-f461-comparison/2026-11-01-run12/RANKED_REMAINING_QUESTIONS.md` | 1508 | `889c67be8eafecfcd80e9e4b50ad448c6c57c5809699990b5139fe6f7d4be288` |
+| `work/f460-f461-comparison/2026-11-01-run12/SOURCE_CHECKS.json` | 488 | `f18eb1164dbca36a7740d0eba4c0b2aa2e4797231ff552ea5837112f678b5a0c` |
+| `work/f460-f461-comparison/2026-11-01-run12/integration/DOCUMENT_PATCH.json` | 773 | `e47e2586bf1add2b71ba14177cdb7df2afc515b40a63745e2e1fd7247191457e` |
+| `work/f460-f461-comparison/2026-11-01-run12/REFERENCE_DRAFT.md` | 35131 | `71ac65fa4ddd6934f01ec8d1f07e132f7b1e61635673e39eb840e4668d38a7d5` |
+| `work/f460-f461-comparison/2026-11-01-run12/REFERENCE_DRAFT_METHOD.json` | 2962 | `2eb6adadbb8de04585457b8df915c97426a3c32aead297f781ddc3ce81828c51` |
+| `work/f460-f461-comparison/2026-11-01-run12/ANALYSIS_APPENDIX_DRAFT.md` | 2961 | `781501062586d16ab259594ed93131e4c655206e8d15927443b5ff67118412e5` |
+| `work/f460-f461-comparison/2026-11-01-run12/reviews/f460-source-review.md` | 4233 | `702fa2c7906e475bef5fd9ffd6a0174e91fad5e76b569c1724f39729f19b26be` |
+| `work/f460-f461-comparison/2026-11-01-run12/reviews/f461-source-review.md` | 5176 | `dc29c4d41b0f275e193d8ec02e2627d2024099f5ab1be0cd5b2207d329569264` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run12-2026-11-01/f460-source-review.txt` | 4233 | `702fa2c7906e475bef5fd9ffd6a0174e91fad5e76b569c1724f39729f19b26be` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run12-2026-11-01/f461-source-review.txt` | 5176 | `dc29c4d41b0f275e193d8ec02e2627d2024099f5ab1be0cd5b2207d329569264` |
+
+Current documentary PASS does not pre-certify subsequent review export, validation, strict repository gates or coordination transitions. Those remain parent-owned actual completion steps.

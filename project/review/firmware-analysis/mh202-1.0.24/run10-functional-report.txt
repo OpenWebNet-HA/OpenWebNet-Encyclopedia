@@ -1,0 +1,59 @@
+# MH202 run10: numeric record to conditional line and action-prefix route
+
+**Static, conditional join; original execution **0**.** This batch closes the selected numeric record identity and read/write correspondence between the previously reviewed calendar-result stores and `IIF`. It also follows the original caller into its later `OWRITE` prefix check. It does not supply a complete accepted DSL statement, configured scenario, actual clock/action execution or full Only-if semantics.
+
+## Material findings
+
+The numeric assignment and selected numeric `IIF` branch use an 8-byte-stride table with names beginning at record+0 and signed integer values at record+4. They call the same named lookup provider, which is **lookup-or-create**: on a matching name it returns the existing index; on the first empty name it requests a name copy, initializes value+4 to 0 and returns that index. Thus selected missing-name handling is not simply a failed read.
+
+There is a concrete text-identity qualification. The executable's assignment parses a decimal ID after `$V`, then formats the key with `%.3d`. The selected library `IIF` branch removes `$V` and looks up the remaining operand text directly. For ordinary supplied ID1, the assignment key is `001`; an IIF operand supplied as `$V001` can address that same key under the shared-global/provider premises, while text `$V1` queries a distinct name `1`. No claim establishes which spelling a missing configured generator actually emits or how the full operand parser transforms it.
+
+Stored values 0/1/2/−1 from the earlier reviewed calendar/time branches are not themselves Booleans. They are read as signed integers by the selected IIF branch and passed with an explicit operator/right operand to `INT_OPERATORI`. Its byte result controls how many comma-prefix removals IIF requests on the current global line. The caller then tests that changed line against later action prefixes, including `OWRITE`; it does not branch on the IIF return value.
+
+## Original provenance and reproduction
+
+| Original normal-image path | Bytes | SHA256 |
+|---|---:|---|
+| `/home/bticino/bin/bt_script` |14884|`f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4`|
+| `/home/bticino/lib/libdomotica.so.0.0` |42908|`5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09`|
+
+Fresh reads use the MH202 `image_vfs.py` verified accessor. Run `python3 -B functional/run10/collect_evidence.py --check` from the research root. It reproduces 18 evidence outputs plus manifest: 10 original spans, 32 exact instruction words, selected literals/GOT/linkage and 4 lookup plus 4 conditional handoff host cases. No ARM/libc/interpreter/clock code executes; no target process, OS, I/O or authentication route is used. `input-hashes.json` pins originals, accessor and four prior reports; `original-spans.json` pins exact byte spans. The output manifest deliberately excludes report and reviews.
+
+## Numeric table declaration and assignment
+
+`numeric-allocation.txt`: `bt_script` `0x95a4..0x9600`. The immediately preceding comparison uses 8 bytes of exact header literal ` $NUMVAR` (`0xac41`, pointer pool `0x9830`). The selected branch starts its numeric accumulation at line index 9, stops on `%`, and stores its count in global `n_num`: base `0x13494` plus`0x414` =`0x138a8`. At `0x95f0..0x95fc` it requests **calloc(n_num,8)** and stores the returned pointer at base+`0x418` =`Valori_num 0x138ac`. This records the actual count/size arguments; no allocation, header grammar or complete bounds contract is executed.
+
+`numeric-assignment-key.txt`: after the original IIF call, `0x9c08..0x9c24` compares the current global line's first 2 bytes with `$V`. On match it starts at index 2 and accumulates decimal digits until `=` (`0x9c2c..0x9c50`), using imported `ctoi`. There is no new whole-source validity claim here. It formats the numeric ID into a stack key using exact `%.3d` (`0xac5a`, pool`0xa9a0`), then calls `ricerca_num` at`0x9c6c`. The selected caller checks return−1; the fallback call `0x9c80` uses the actual empty-string literal at`0xacf0` (pool`0xa968`); a second−1 closes the file and returns through its error path. Successful selection at`0x9cb4..0x9ccc` multiplies the returned index by 8 and writes the formatted ID at the selected record start. `%.3d` is a minimum width, not proof that arbitrary names fit a four-byte name area; finite models use only short ordinary names.
+
+The caller requests an overlapping current-line copy from the located `=` to the same global line at`0x9cd0..0x9ce4`. The previously reviewed `=CHKDATE`/`=CHKTIME` argument extraction and helper calls then supply r0 to the common store. Narrow fresh excerpts save `0x9d88..0x9da0` and`0x9e40..0x9e58`; each forms `Valori_num + index*8`, calls its helper, then branches to **`0xa480: str r0,[r4,#4]`**. This reuses prior helper findings without rerunning their date/copy matrices.
+
+## Actual lookup-or-create provider and global binding
+
+`numeric-lookup-create.txt` saves the entire named library body `ricerca_num(char*)` at`0x3fbc..0x4140`, including pools. Its PIC arithmetic establishes base`0x12114`. Pool`0x412c` offset`0x110` accesses GOT`0x12224`, whose `R_ARM_GLOB_DAT` names `Valori_num`; pool`0x4130` offset`0x108` accesses GOT`0x1221c`, naming `n_num`.
+
+- `0x3fec..0x4028` compares record name at `table + index*8` with the supplied key using `strcmp`. Equality returns the current index.
+- For a nonmatch, `0x402c..0x4050` tests the record's first name byte. Zero selects `strcpy(record,key)` at`0x4078`, value+4=0 at`0x409c`, then returns the index. This mutation is present for IIF callers too, unless lookup returns an existing record first.
+- The loop starts index 0 and takes the **signed index<=n_num** branch at`0x40cc..0x40d0`. The executable's allocation request uses count n_num, not n_num+1. These two exact facts leave an allocation/index-contract boundary; no actual out-of-range access, corruption, deployed defect or impact is tested. Host models stop at any unprovided record instead of inventing storage. After the exhausted-loop path the function returns −1 (`0x4110..0x4124`); an optional flag-controlled error-pointer store is visible but not expanded into unrelated semantics.
+
+The executable exports `Valori_num 0x138ac`, `n_num 0x138a8`, and `linea 0x134a4`; the library exports its own same-named objects and corresponding relocations. The library's IIF selected read also uses GOT`0x12224`; its line-rewrite tail uses GOT`0x1222c` naming `linea`. Matching imports, provider definitions and relocation identities support a **conditional process-global join**. Actual loader binding/interposition, pointer allocation and configured assets remain unexecuted. Independent objects must not silently be assumed shared without this premise.
+
+## Numeric value to line transformation to selected action boundary
+
+`iif-selected-numeric-read.txt` (`0x75f4..0x7644`) isolates the left-numeric/right-literal branch after prior left `$V` prefix removal and right-prefix test. It loads `*Valori_num`, calls `ricerca_num(left_name)` at`0x7608`, multiplies index by 8, reads value+4 at`0x7618`, converts right text with `atoi` at`0x7620`, then passes operator, loaded left value and right value to `INT_OPERATORI` at`0x7634`. It stores that result's byte at`0x763c`. No −1 result check appears between this selected lookup and value read; this is an exact local path, not proof that callers supply missing/invalid names or an assessed defect.
+
+The earlier reviewed original operators `=`, `<`, `<=`, `>`, `>=`, `<>` are not rediscovered or executed in this batch. The new host composition uses equality only, with existing short key`001` and explicitly supplied values. Calendar/time numeric codes therefore need an explicit comparison; merely being nonzero does not automatically describe the IIF's condition meaning.
+
+`iif-copy-branch.txt` saves the source tail: byte nonzero at`0x797c..0x7984` requests one global-line comma/suffix copy via`0x79e8`; zero takes two requests via`0x7a50` then`0x7a88`. These remain overlapping source/destination operations with full `PARENTESI` transformation and configured line content unclosed. The standalone packaged copy corpus does not execute these caller arguments or validate a full DSL statement.
+
+`iif-caller-continuation.txt` shows the executable's imported IIF call at`0x9bf0`, then logger/current-line and prefix tests without using its return as a Boolean gate. `later-owrite-caller.txt` records the later normal path at`0xa4f4`: compare first 6 changed-line bytes with literal`OWRITE` (`0xaf8d`, pool`0xa9fc`). If matched, `0xa524..0xa53c` formats the line's bytes 9/10/11 using `%c%c%c`, calls `ricerca_str(key,false)` at`0xa548`, handles−1 via the existing error path, and on selection computes a 1028-byte-stride string record and passes record+4 to `OWRITE` at`0xa580`. That call's return is ignored. The existing run3/run4 DISABLED guard and return1 limitations remain applicable; no transmission occurs here.
+
+`host-composed-handoff.json` has four explicitly conditional cases: stored 0 compared `=0`→one requested removal;1 compared `=0`→two;2 compared `=2`→one;−1 compared `=0`→two. Symbolic line`CONDITION,OWRITE_BODY,FALSE_BODY` describes only suffix/request relations. Its first outcome retains `OWRITE_BODY,FALSE_BODY`, including the second suffix, rather than falsely truncating to one action. It is not accepted source or a valid OWRITE argument. The action-prefix observation remains conditional on the supplied transformation, parser/provider/global binding and later caller path.
+
+## Confidence and ranked remaining boundaries
+
+High confidence: original lookup mutation, stride/value offset, differing assignment/IIF key normalization, exact calendar-result store and IIF read correspondence, source-level copy decision and later OWRITE call route. Finite host results are consistency models, not original execution or physical observations.
+
+1. Obtain an actual configured extra/4 body or exact generator output before asserting canonical `$V` spelling, delimiters, full `IIF` syntax or complete guarded action examples.
+2. Close full `PARENTESI` parsing/current-line transformation and effective runtime globals/provider binding; this batch deliberately supplies separate operands and symbolic line state.
+3. Resolve declared numeric-table capacity and inclusive lookup iteration contract with actual configured bounds before making any safety/impact conclusion. This batch records the mismatch in requested count versus comparison without executing a boundary access.
+4. Establish a complete normal interpreter source→record→IIF→specific action argument run only under a separately bounded justified state. Missing assets, original clock/parser/object behavior and physical effects remain open.

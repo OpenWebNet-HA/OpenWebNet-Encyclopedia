@@ -1,0 +1,18 @@
+{
+  "SQL": "No query or stored expression evaluated; SQL text read only as whitelisted literal",
+  "development": "The first v1 canonical collector stopped on incorrectly encoded opcode-assertion bytes before output writes. Parent authorized new v2; exact v1 report/collector and observed failure record remain under development-before-v2. V2 converts displayed halfwords to little-endian file bytes, leaving source interpretations unchanged. Earlier ad hoc syntax failure was also pre-output; unavailable console history is not reconstructed.",
+  "operations": [
+    "verified image regular-file reads",
+    "host readelf/objdump",
+    "ELF PT_LOAD VA\u2192file offset",
+    "literal-pool PC-relative arithmetic",
+    "exact source-span and opcode checks"
+  ],
+  "source": "Fresh MyHOMEServer1 ARMv7 little-endian hard-float ELF, Thumb2 local bodies and ARM interworking PLT",
+  "unclosed": [
+    "selected reader SQL producer and concrete column meanings",
+    "natural call/activation and all handle lifetimes",
+    "catalogue replacement/selection/eligibility policy",
+    "actual provider resolution and SQLite/OS effects"
+  ]
+}

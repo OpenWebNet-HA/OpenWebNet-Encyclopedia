@@ -1,0 +1,43 @@
+{
+  "checks": [
+    {
+      "area": "serializer",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "852ead",
+          "wall_time_seconds": 0.076972997,
+          "exit_code": 0,
+          "original_token_count": 23,
+          "output": "{\"check\": true, \"outputs\": 11, \"code_spans\": 6, \"byte_guards\": 27, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "area": "record",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "b43767",
+          "wall_time_seconds": 0.110513843,
+          "exit_code": 0,
+          "original_token_count": 14,
+          "output": "{\"check\": true, \"outputs\": 17, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "area": "provider",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "89a0de",
+          "wall_time_seconds": 0.079905614,
+          "exit_code": 0,
+          "original_token_count": 14,
+          "output": "{\"check\": true, \"outputs\": 11, \"original_execution\": 0}\n"
+        }
+      }
+    }
+  ]
+}

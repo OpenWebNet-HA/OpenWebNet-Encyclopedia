@@ -1,0 +1,54 @@
+# Remaining firmware: database evidence and research handoff
+
+The six retained packages cover F450 2.0.10 standard and PROD, F453AV 3.0.14, F455 1.1.2, F459 archive 020105/local label 2.1.5, and MH200N 1.1.8. Their exact archive identities and distinct product roles are in the [build-specific study](f450-f453av-f455-f459-mh200n.md#retained-packages). This handoff consolidates reviewed evidence; it adds no binary investigation, database query or runtime observation.
+
+This investigation's actual private R2 archival result is **one original encrypted database-bearing support container and zero recovered plaintext database objects**. F459 source describes a shared-store implementation, while F450 source describes configuration, copying and SQLite-open requests. Neither establishes that the corresponding runtime database was recovered or that those requests succeeded. MH200N and F453AV resource paths, and F455's raw-image format candidate, remain separate evidence classes.
+
+## What the database evidence establishes
+
+| Evidence | Retained result | Limit |
+| --- | --- | --- |
+| Extracted regular-file survey | 16,088 offset-zero prefixes contained no SQLite 3 magic in the bounded first survey | Does not exclude embedded, encrypted, archived, configured, runtime-created or other-format stores |
+| F450 PROD `50.xtz` | Original encrypted container; archive metadata declares `50/master.sqlite`; exact container privately archived | No plaintext header, schema, rows, decoder or effective runtime archive input recovered |
+| F450 database consumer | Named source/destination copying and same-destination SQLite-open requests, with selected local result gates | No actual copy/open, successful SQL, installed database or connection to decrypted extra50 bytes |
+| F459 shared-store component | Original path/handle-to-SQL requests and selected read/write/namespace/watcher/teardown contracts | No original runtime DB bytes, actual schema/rows, freshness, transaction durability or event delivery |
+| Legacy SQLite library | A separately packaged legacy SQLite-interface library is distinguished from SQLite 3 imports | Library presence does not identify an actual database, loaded provider or parser compatibility |
+| `Thumbs.db`-named candidate | OLE header candidate retained in the first exploration | Not established as an application catalogue or a newly recovered SQLite database |
+
+The [first exploration and source navigation](../../project/review/firmware-analysis/remaining-firmware-2026-11-01/README.md#source-navigation) preserve the bounded survey and first four overnight batches. File extensions, compiled SQL, library exports and requested pathnames do not substitute for original database bytes. No synthetic database was created from the DDL, and no host SQLite query was run.
+
+## Product-specific implications
+
+**F450 standard and PROD.** The firmware packages have distinct identities. Selected source connects markup fields to an archive request and conditionally connects a temporary configuration pathname to a packaged file. Those joins do not supply absent live configuration values or connect the PROD encrypted extra50 container to a working decoder. The [configuration/archive study](f450-f453av-f455-f459-mh200n.md#f450-configuration-and-archive-requests-remain-distinct-from-extra50) keeps declarations, callback producers, file-origin requests and SQLite consumption separate. The later BACnet resource caller remains caller-only evidence: its helper body is closed and its return meaning is unproved. No password/key guesses or equivalent helper route were used to bridge that gap.
+
+**F459.** The selected component requests a shared store with `pluginname`, `key`, `value` and `persistent` SQL fields. Supplied string conversions and the integer's SQL-placeholder role do not prove accepted values, persistence or a lossless read/write roundtrip. A constructor prefix conditionally supplies the query namespace from an external global pointer; its meaning and actual value remain open. Watcher registration and selected static callback metadata narrow local argument/name/index edges under valid-object, ABI, binding and Qt-format premises. They do not establish a file event, a successful callback, fresh database contents or safe shutdown. [The shared-store section](f450-f453av-f455-f459-mh200n.md#f459-a-shared-store-request-is-not-durable-state) links each bounded contract rather than treating them as a full runtime trace.
+
+**MH200N and F453AV.** Their own startup/resource, module and separate application evidence is not database recovery. Normal and recovery filesystem views, and separately packaged application bundles, were not composed into an assumed installed overlay. MH200N's taskmanager source requests a listing and follows one returned stream/line consumer; this does not establish configured scripts, complete filenames, accepted scenario grammar or a script compiler. F453AV's own recovery entry and resource gate do not inherit MH200N marker meaning or normal-image video behavior. [Resource evidence](f450-f453av-f455-f459-mh200n.md#mh200n-and-f453av-resource-and-module-requests-need-their-own-environment) retains those boundaries.
+
+**F455.** A finite vector-shaped candidate and packaging labels remain insufficient to assign CPU, ISA, endianness, executable ABI, base, entry or load map. The separately reviewed [provenance gap](../../project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/packets/f455-gap/REPORT.txt) adds no new code coverage. Product/image-linked manufacturer, loader, linker, debug or hardware provenance is needed before following code. No database or architecture is inferred from the filename or generic Arm pattern.
+
+## Actual private archive and provenance
+
+The original encrypted F450 PROD support container is 72,774 bytes with SHA-256 `824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8`. Its private object is stored in `openwebnet-data` under `sha256/82/4b/824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8`. This identifies encrypted original support bytes, not plaintext `master.sqlite`.
+
+The [classified archive index](../../project/review/firmware-analysis/remaining-firmware-2026-11-01/archive-index.json) and [actual upload receipt](../../project/review/firmware-analysis/remaining-firmware-2026-11-01/archive-receipt.json) record the successful original upload after the configured helper's full readback SHA-256/size verification. Later copies of that receipt are documentary evidence; they are not new uploads or independent network replays. Fresh descriptors and a registration candidate remain in local work; the canonical source manifest was not changed.
+
+The six original firmware packages were copied from an authenticated archive-server cache and matched retained canonical private R2 records. No fresh R2 API retrieval, signature authenticity or installation trust chain is claimed. Any future recovered original database needs its own member provenance, format identification and hash deduplication. SQLite 3 access does not test SQLite 2 or Berkeley DB compatibility. Private values, credentials, keys and full configuration remain outside the published evidence.
+
+## Finding and checking the evidence
+
+| Snapshot | Navigation and version role |
+| --- | --- |
+| First exploration and runs01–04 | [Foundation capsule](../../project/review/firmware-analysis/remaining-firmware-2026-11-01/README.md): original acquisition, selected reports, independent reviews and actual archive receipt |
+| Run05 | [Configuration origin, recovery entry and namespace source](../../project/review/firmware-analysis/remaining-firmware-run05-2026-11-01/README.md); F459's separate current report corrects a reproduction-command label while its canonical report remains retained |
+| Run06 | [Resource callers, recovery gate and teardown](../../project/review/firmware-analysis/remaining-firmware-run06-2026-11-01/README.md); F450 helper body remains closed |
+| Run07 | [Application requests, watcher registration and separate F455 gap](../../project/review/firmware-analysis/remaining-firmware-run07-2026-11-01/README.md); two source packets plus zero-new-source admission, not three code investigations |
+| Run08 | [Listing-line consumer and selected callback metadata](../../project/review/firmware-analysis/remaining-firmware-run08-2026-11-01/README.md); current F459 report clarifies a hexadecimal offset, with original code/results/canonical report unchanged |
+
+Each capsule distinguishes selected exports, source reviews, documentary review, identity validation and actual repository checks. Exact original bytes, mappings and address/word guards support the source claims. The complete original inputs, tools, first copies and versioned histories remain local; exported collectors alone are not a self-contained runtime package. Older collectors must retain the exact reference versions they pinned. Later page edits do not turn an old successful check into a check of changed inputs.
+
+## Unfinished work and evidence levels
+
+The useful next questions concern actual permitted application admission, configured assets, original database bytes/formats and effective providers. Full JSON/XML/SQL behavior, natural data/type/ID/freshness, complete errors/unwind, ownership, concurrency and physical operation remain unclosed. Repeating a guard table, format variant or provenance gap does not resolve them.
+
+This investigation adds static source reasoning and host extraction/identity checks. It adds no original firmware/helper/native/emulator execution, model/fixture, SQLite query, target OS/service/network/bus activity or physical observation. Earlier MyHOMEServer1, F454 and MH202 execution ledgers remain separate and unchanged; unavailable MH202 run18/run21 intermediate histories remain unverified. Full source, Device, runtime and physical review gates remain pending. The research branch is local with uncommitted/unstaged work; this study does not claim a GitHub push or publication.

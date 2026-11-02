@@ -1,0 +1,44 @@
+# Run06 documentary integration review
+
+PASS, no correction requested. I compared the exact expanded reference, unchanged catalogue-profile context, capsule and coordination records with both frozen reports and independent original-source reviews. This is bounded documentary/product/method review, informed by earlier comparison-source work, not a fresh original-byte audit, complete scheduler/address grammar proof or runtime experiment. I ran no collector, original/vendor/provider code, emulator, model/fixture or CPU replay.
+
+F460 uses freshly derived BNIL raw56, compiled96-inner/112-aggregate identities, separate raw/compiled tables and actual same-JSON return-to-reparse requests. Complete serializer/value coherence remains conditional. State labels/local integers, enabled/operator fallthrough and method dispatch are not a public operator list, physical state or crossing/dedup policy. The actual caller supplies an ID/string under valid result/lifetime/record and method-identity premises: requesting dynamic_cast does not prove a subsequent nonnull guard. The peer's source interpretation precision is retained without pretending the author candidate was repaired. Raw capture is only the supplied initializer receiver; neither an owning scene reference, proven SceneRunner identity, natural subscription nor downstream successful action is established.
+
+F461 resolves a packaged candidate helper through image-link metadata to a verified regular file, without a host symlink or live binding claim. Exact exclusions and selected UTF-8 character-length2/4 classification remain different from byte offsets and decimal-digit validation. The caller uses the same supplied parsed field, selected classifier result and repeated length test before D1 plus delegated byte0/byte1 conversions in original order. This is prefix-only source normalization with unexamined suffix/context, not a complete address, public grammar/domain, two-ASCII-byte assumption, physical topology or invalid-input/vulnerability result. Classifier4, private selector4 and other record/descriptor/public namespaces are separate.
+
+The public summary/ranking reflects both new source joins while leaving valid JSON/objects/casts/strings, normal binding/providers, natural input/activation/configuration, receiver lifetime, errors/unwind/concurrency and physical behavior open. Curated F460/F461 roles and other product layouts/hardware are not transferred. Closed receiving/transport/MQTT/libjel/auth/session/framing scopes stay closed. All new original/native/helper/model/fixture/SQL/runtime/physical execution is zero; prior product ledgers/history limitations and wider Device/source gates remain unchanged.
+
+## Exact copies, preservation and completion boundary
+
+Verified all16 frozen current pins/copies, all49 exact SOURCE_EXPORTS source/export pairs and four source/reviewer first-copy sets containing41 members:39 author copies plus two source reviews. The public main equals REFERENCE_DRAFT. Retained pre-edit main bytes, appendix and two declared substitutions reconstruct it byte-for-byte; capsule README equals its first copy. The catalogue profile retains the exact unchanged bc9859ac source hash and no new profile-ownership claim.
+
+Both author first generations and documentary candidate remain unchanged. F461 exploratory wrong host-alias/revision probes are honestly separated from the final metadata-resolved source proof; no bogus decoding or target execution is promoted. The valid-cast/method-identity peer clarification is interpretation precision, not a new runtime failure or overwritten source outcome. Earlier versioned tooling/report failures and unavailable MH20218/21 intermediate drafts retain their historical limits.
+
+Checked42 local Markdown link occurrences and one fragment: all40 existing targets and the fragment resolve. Only intended later capsule integration-review.txt and validation.json remain pending actual assembly. Final full protection/identity, strict ESG/ECV/diff, actual branch/status and index-last checkpoint checks remain subsequent parent-owned gates against actual saved artifacts. No future-byte certification, placeholder or missing-link exemption is endorsed. No author/repository/source/previous dossier was edited.
+
+## Exact current pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md` | `318c3c8c8282fa0ff08b8c877be4fcafe3b560906754d7f2374aefbe2c58cf7e` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | `bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run06-2026-11-01/README.md` | `8ccc0ae9b24966c35af760e1ecf90bccabcc5264c77eba045e21d23364b6c10a` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/f460-f461-run06-2026-11-01/SOURCE_EXPORTS.json` | `2d206f57c902ad1ab36de903cd0fdf9d54494b8ec259e1589fa76ff14e9aaa22` |
+| `work/f460-f461-comparison/2026-11-01-run06/REFERENCE_DRAFT.md` | `318c3c8c8282fa0ff08b8c877be4fcafe3b560906754d7f2374aefbe2c58cf7e` |
+| `work/f460-f461-comparison/2026-11-01-run06/ANALYSIS_APPENDIX_DRAFT.md` | `49674ee87f86cb1c34c92beeb429a8c5701c41867e1393ab44669ac0474d42df` |
+| `work/f460-f461-comparison/2026-11-01-run06/SYNTHESIS.md` | `41f1f89d11f6779445b38f3dd98c41c142a3a3d45bd67be0b6069a8c738e0340` |
+| `work/f460-f461-comparison/2026-11-01-run06/COVERAGE.md` | `4b26bad1806836cdcbed2253f0f0a928e3e01ebacdfb25e949cdf446d7f86211` |
+| `work/f460-f461-comparison/2026-11-01-run06/RANKED_REMAINING_QUESTIONS.md` | `ac8a7db4c3c5c9b3f10f23c75498f7477fe4e6083e1ec37d23b770450e862db2` |
+| `work/f460-f461-comparison/2026-11-01-run06/SOURCE_CHECKS.json` | `0495b3f0f2084ba10a2e2f740c34c2c20288fad30a81322e3c44727af374bc24` |
+| `work/f460-f461-comparison/2026-11-01-run06/integration/DOCUMENT_PATCH.json` | `16f87737d30ba95c55fd27aa8b348a83a714b481723a1a5474a29990808d99ef` |
+| `work/f460-f461-comparison/2026-11-01-run06/REFERENCE_DRAFT_METHOD.json` | `f950250442ab14e75b6abcf4b597d413b0433d064799098a78e834dcab5ae982` |
+| `work/f460-f461-comparison/2026-11-01-run06/reviews/f460-source-review.md` | `9138708c663f0bf3f90c53165aca508abb3ea55ea4d24bb5c8d6565bfeb4e738` |
+| `work/f460-f461-comparison/2026-11-01-run06/reviews/f461-source-review.md` | `00311f3f40e01cff1bd1b67765a35b02cc336db8fb27c2b05459b9bacf1103df` |
+| `work/f460-f461-comparison/2026-11-01-run06/CAPSULE_README.first.md` | `8ccc0ae9b24966c35af760e1ecf90bccabcc5264c77eba045e21d23364b6c10a` |
+| `work/f460-f461-comparison/2026-11-01-run06/PLAN.json` | `826409b5ee544911a7a86e3b14d0d49564890740bb43d344ed5bdfae6b306a93` |
+| `review-candidate/INDEX.json` | `673c6de2ba108c968fd37fc4ec649cad7cc38463a62fd9d26ccf0bd5748ed43e` |
+| `integration/pre-edit/INDEX.json` | `1ce0cb62da8f9f67f82292a179b231171cfc1e858251d9968e6cb280bf4a679f` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run06-trigger/REPORT.md` | `06435e577532e42b000a89b5cb7125faea507da85d8a79f791e9aae6f120157f` |
+| `work/f460-firmware/2.0.12/research/2026-11-01-run06-trigger/first-candidate/INDEX.json` | `444ba5ca6430aadbbd9724497b8a84393b991bb22643ea1043d0a84b9eb0cb83` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run06-address/REPORT.md` | `d8be70c3da862cfe82c367b1537beb6918ceaada5c5200cda2910b6ec049f52c` |
+| `work/f461-firmware/2.0.11/research/2026-11-01-run06-address/first-candidate/INDEX.json` | `08b509f7ea441eb16d7339df885027c6aebe25e66b2ecff84032c0a8694c2900` |

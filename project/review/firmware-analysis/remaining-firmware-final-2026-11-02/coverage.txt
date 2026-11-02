@@ -1,0 +1,11 @@
+# Final coverage and evidence levels
+
+| Family | Reviewed selected reach | Unfinished |
+| --- | --- | --- |
+| F450 standard/PROD2.0.10 | Configuration producers/origin, archive/copy/open/resource caller requests; encrypted original support archived | Effective config/extra50 relation, decoder/plaintext DB, provider outcomes; denied helper remains closed |
+| F459020105/local2.1.5 | Shared-store SQL/namespace/read/write/watch/staticmetadata/teardown requests | Original DB/schema/rows, natural objects/effective binding, events/freshness/durability/lifetime/concurrency |
+| MH200N1.1.8 | Own startup/resource and separate application request/line contracts; finite admission gap | Outer admission/actual assets/data/nonempty filename/grammar/compiler/installed state |
+| F453AV3.0.14 | Own normal/recovery resource/module contexts; final qualification boundary | Effective environment, useful permitted update selection/component semantics, runtime/hardware |
+| F4551.1.2 | Original wrapper/raw identity and finite format candidate; provenance gap | Authoritative product-linked CPU/ISA/endian/ABI/base/load-map/entry/loader provenance |
+
+Selected spans/guards/output/index counts describe reach or integrity, never exhaustive semantic percentages. No new functional contract is promoted during final consolidation. Static source reasoning and host extraction/identity are distinct from isolated original execution, complete runtime or physical observation. New original/helper/native/emulator/model/fixture/SQL/target/runtime/physical execution0; old execution ledgers unchanged. This study archive1encrypted SUPPORT/0plaintext DB. Full source/Device/runtime/physical review gates remain pending.

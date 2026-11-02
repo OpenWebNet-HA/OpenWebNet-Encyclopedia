@@ -1,0 +1,25 @@
+{
+  "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+  "snapshot": "myhomeserver1-3.87.13.md",
+  "before_sha256": "23629011fc6f1afd56e837d5d0a65e62952c02c051573bea534ffd4a9535d848",
+  "after_sha256": "fe62c6fc373713f9d873656d49e53a9f729bf7306f70588424f54f379dabc981",
+  "substitutions": [
+    {
+      "old": "## Reference\n",
+      "new": "The [current research synthesis](myhomeserver1-3.87.13-research-synthesis.md) connects the later catalogue, scenario, event, ownership and provider findings and distinguishes current remaining gaps from this preserved first-pass scope.\n\n## Reference\n"
+    },
+    {
+      "old": "| Methods | Verified extraction, static headers/disassembly, read-only SQLite queries and explicit host arithmetic |",
+      "new": "| First-pass methods | Verified extraction, static headers/disassembly, read-only SQLite queries and explicit host arithmetic |"
+    },
+    {
+      "old": "| Original Firmware execution | Zero; no target loader, service, system call, script, gateway or bus execution |",
+      "new": "| Execution scope | This first pass executed no original Firmware. The [later isolated provider corpus](myhomeserver1-3.87.13-research-synthesis.md) adds8 helper entries/340 original code-hook visits; target processes/OS/services/network/bus and physical execution remain zero |"
+    },
+    {
+      "old": "## Evidence limits and next investigations\n",
+      "new": "## Evidence limits and next investigations\n\nThe numbered targets below retain the initial first-pass questions; later continuations close selected joins. Use the [current synthesis and ranked gaps](myhomeserver1-3.87.13-research-synthesis.md) for the consolidated state.\n"
+    }
+  ],
+  "scope": "Current navigation/historical execution-method scope only, exact initial page retained; no original source or prior report altered"
+}

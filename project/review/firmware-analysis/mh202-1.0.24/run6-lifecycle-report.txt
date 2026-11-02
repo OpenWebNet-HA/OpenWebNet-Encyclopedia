@@ -1,0 +1,41 @@
+# MH2021.0.24 taskmanager readiness and command gate - run6
+
+The initial-query readiness flag and the general command gate are different storage objects. A working-mode4 path sets the same gate used by the configured panic comparison. The identified readiness-reset helper clears query cursor/readiness fields, not that gate through its two explicit stores. The full panic-clear policy remains unresolved; no absence or guaranteed recovery verdict follows.
+
+This is fresh static examination of normal-image `/home/bticino/bin/bt_taskmanager`, SHA256 `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e`. Original ARM/vendor/library instructions/hooks0/0, no process, script, query, I/O, clock wait or gateway operation. Original images, prior reports and synced files remain read-only. `inputs.json` pins ImageVFS/accessor and immutable event/saved-state reports; all VAs below are original ELF addresses, with file offsets/range hashes retained.
+
+## Same gate has a mode4 setter
+
+Run2 proved configured panic equality sets gate at `0x1b4c4`. This pass resolves the later main-loop status source around the previously retained saved-state reset call. At0xb2c8 main calls imported get_mystatus_working_mode, decimal-converts its buffer, and compares with4 at0xb2d4. Its separate one-time flag at0x1b4b8 must be0. Under those conditions it calls default saved-state initializer0xad38, sets r3=1 at0xb300, then stores1 to **the same gate0x1b4c4** at0xb304 and to the one-time flag at0xb308.
+
+The mode getter result itself is not checked before decimal parsing. Exact runtime working-mode/status provider and readback are not demonstrated. This is not a claim that every mode4 transition succeeds or a source-level factory reset. It does show that this gate is not uniquely attributable to a received panic frame.
+
+The gate lies in the ELF NOBITS section recorded in `gate-vs-ready-storage.json`. Under ordinary ELF loading, that storage starts zero-filled in a fresh process; this is a loader premise, not observed runtime state or the complete in-process gate-reset mechanism. The selected positive writes here and in run2 set1. No whole-program claim that no other alias/callee can clear it is made.
+
+## Readiness is a cursor/list completion condition
+
+The separate query object is allocated at0xdaac with calloc(12,1), then initializes its list field+8. `d838` simply returns object+4. The identified query step0xda24 walks that list against object+0 as an index. At a matching entry it requests `c330(4,query_text)`. If that helper's return is nonnegative, it increments object+0; either result returns from this call without locally writing readiness1. If list traversal exhausts without a matching entry, it writes **object+4=1** at0xda98..da9c.
+
+Consequences are local and explicit: an empty supplied list reaches the completion flag immediately; an attempted entry does not set it in that same call, even when it was the last entry; a negative helper return leaves the index unchanged. These six finite examples are host transcriptions, not original queries/responses or readiness-health tests. Exact built query contents, list mutation and actual imported request success remain outside this batch.
+
+The main's once guard at0xb490..b4b0 reads this object+4. When nonzero and local once flagr8 is0, it calls saved-control restoration0xac4c then always-start0xa6dc and advances that once flag. Those launch policies are inherited run2 context, not reinterpreted as successful children.
+
+## Either selected OK or KO can advance the query step
+
+Original response handler0xa4b0 first tests a separate active-request-record global. In its active-null path0xa64c, it checks query readiness. While readiness is0, it sends the incoming full-frame string through the original WHO dispatcher0xd850, then checks the incoming object's IsOKFrame and IsKOFrame predicates. Either nonzero predicate reaches another call to0xda24 at0xa694; neither leaves without that advance call.
+
+Thus this identified completion path is not proof that every initial query returned a positive answer. Input parser/descriptor/subscription/correlation, whether a KO is associated with the intended query, called handler effects and actual response delivery remain unexecuted and unproven. The static observation is the two predicate branches and subsequent query-step call under explicit active-null/not-ready premises, not a complete event-loop or transaction simulation.
+
+## Control synchronization is separate from panic clearing
+
+At the selected outer event entry, the post-getter WHO arithmetic admits1000..1999. A WHAT string beginning with ASCII9 or decimal-converting to1 calls0x9f64 before the ordinary global-gate test. This is a field/caller route, not accepted raw input grammar or a new documented public operation.
+
+The saved0x9f64 body stops records with nonzero control state and runs receive/poll/watchdog logic under its own counters. One displayed counter100 path calls **0xd840**, then0xda24. Helper0xd840 explicitly writes0 to the query object's +0 and+4 and then dispatches WHO initialization callbacks through0xd804. Its two direct zero stores are to this supplied query object; they are not the gate0x1b4c4. Callback side effects and wider alias analysis remain open, so this is not proof that the entire control helper cannot indirectly affect the gate.
+
+No wall-clock duration, actual select/receive/watchdog behavior, successful resynchronization or physical script stop was measured. This narrows a tempting reset hypothesis: identified query readiness reset and command-gate clearing cannot be equated from names or zero stores alone.
+
+## Reproduction, confidence and next questions
+
+`python3 work/mh202-firmware/research/2026-10-30/lifecycle/run6/collect_evidence.py --check` verifies12 deterministic outputs plus manifest, seven original spans,17 exact instruction words, ELF storage metadata and six finite query-step examples. It loads no vendor code and --check writes no outputs.
+
+High confidence static: same gate address in mode4/panic stores, distinct once flag/query object, cursor/ready stores, either OK/KO selected advance and main restoration/always ordering. Conditional: ordinary ELF/calloc/list/request/parser/getter/provider and callback completion. Open: actual gate-clear path, full query list generation/correlation/retry/readiness semantics, complete caller/alias effects and physical behavior. Do not repeat completed gate setters or query cursor models without a new semantic question.

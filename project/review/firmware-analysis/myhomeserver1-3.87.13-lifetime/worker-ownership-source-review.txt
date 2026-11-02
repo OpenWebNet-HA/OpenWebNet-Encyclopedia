@@ -1,0 +1,40 @@
+# Independent worker-state ownership source review
+
+PASS for authoritative worker-ownership/REPORT.v2.md after two precisely recorded prose corrections. The original v1 report remains immutable and is not certified as fully precise. Original instructions, native helpers, target/provider APIs, thread/scene/concurrency fixtures and semantic host models executed0. This is independent original-source/data/byte review, not an actual ownership, scheduling, concurrency, adequate-lifetime or defect proof. No source-author files were edited by the reviewer.
+
+## Preservation and exact correction
+
+The reviewer caught two report-only issues before promotion: the local holder replacement follows either a zero residual state slot OR a normal return from its deleting destructor, and the captured raw pointer resides in state+4 rather than action+4. Action+4 is the separate completion byte. Parent preserved23 exact pre-refinement files; their saved source/snapshot bytes, sizes and hashes independently agree with the unchanged current v1 files. WORDING_REFINEMENT.json records exactly two one-occurrence substitutions. Applying those substitutions to immutable v1 reproduces REPORT.v2.md byte-for-byte. Both new v2 files match their immediate separate v2 snapshot. Collector, source/evidence/results and counts are unchanged.
+
+Reproduced collect_ownership_v1.py --check:19 outputs,12 original spans,12 byte guards,2 thread-state vtable groups,2 owner-dispose chains,16 relative slots and6 input pins. Independently mapped both original ELF32 PT_LOAD sets, rehashed all12 source ranges/12 guards/6 input pins, checked both original vtable arrays and both GOT/header/dispose chains, independently parsed SHT_REL entries for all16 R_ARM_RELATIVE slots and verified the provider-entry PIC target. All18 manifest evidence members,20 immediate first copies and separate actual v1 report copy match saved bytes/size/hash. No native replay was involved.
+
+## Source conclusions verified
+
+- The selected action execute branches request4-byte holders and8-byte states. State+4 receives the same raw action receiver r4 atcd8aa/cd8f4, with its state vptr in the other word. The source local capture contains no action/control pair or receiver-count increment. That is a local representation contract; it does not exclude an external owning handle retained elsewhere.
+- Original relocation-backed state tables attach first/second wait workers and complete/deleting destructor pairs. The full local state destructors set their own vptr and request StateD2; deleting variants additionally request sized delete8. They do not locally load/release their captured state+4. Candidate same-image StateD2 at9b21c is BXLR. Effective binding/normal provider behavior remain premises rather than a global no-release/interposition assertion.
+- Candidate _M_start_thread9b268 passes the actual state pointer as pthread_create's argument and PIC-resolved Thumb9b1f9 as entry. Return0 clears the supplied unique-state slot; nonzero requests a system-error throw. Candidate entry9b1f8 invokes state-vtable+8 and, after normal worker return, rereads its vptr and invokes deleting slot+4; the retained cleanup tail also requests deletion. This is state ownership/cleanup source, not a strong reference to the captured action or observed pthread execution.
+- The v2 holder wording matches direct fallthrough: cd8c4 deleting-destructor normal return reachescd8c6; cd90e reachescd910. Both join the zero-state-slot path before action+48 holder replacement. That replacement and later detach remain conditional source requests; exceptions/nonreturning delegates are not modeled as successful execution.
+- Candidate join/detach requests clear the holder word only on pthread return0; other outcomes request a throw, including a zero input holder. A successfully detached zero holder therefore does not establish worker completion. No host pthread structure or successful API fixture is substituted for target state.
+- Selected scene launch stores its raw scene pointer at state+4, retains its distinct4-byte holder at scene+140 and requests detach. Its separate state tables/destructors have the corresponding local8-byte-state ownership shape. Raw capture does not itself retain the scene's external allocation/control pair.
+- Scene owner GOT/header/dispose slot resolves to1a048, which advances the owner by12 then tailcalls scene teardowna5a3c, matching the prior loader allocation+12 scene-object alias. This is a positive selected disposal route, not proof of when the count reaches zero or teardown actually occurs.
+- Teardown checks scene+140. A nonnull holder with nonzero word requests join ata5ccc. Later reread still-nonzero requests terminate; zero allows delete4. Null/zero paths differ. Compiled action handle cleanup follows selected holder handling, traverses scene+128/+132 with8-byte entries, decrements control counts and conditionally invokes dispose slot+8 and weak-release slot+12. These are owner-release requests, not guaranteed destruction of every pointee, no-other-owner proof, action-worker join or readiness.
+- The separately resolved SLEEP shared-owner disposeb0b60 loads its concrete action pointer from owner+12, checks action+48 and permits delete4 only for a zero holder word; nonzero requests terminate. It then requests callable manager cleanup and delete96. Its retained local body contains no join request. Temporary cleanup has its own analogous checks. Neither local absence nor raw capture is promoted into a leak, unsafe interleaving, universally missing join or physical cancellation conclusion.
+
+Scene holder+140, action holder+48, state capture+4, action completion+4, external control count and shared action-stop domain remain distinct namespaces. Adequate whole-receiver lifetime, all owners/removal paths, full unwind, natural ordering/provider success, reset/relaunch effects and concurrency remain unresolved. No invoker/transport/authentication/session/framing or equivalent closed route was expanded.
+
+## Exact authoritative and historical pins
+
+| File relative to worker-ownership/ | SHA256 |
+| --- | --- |
+| REPORT.v2.md (authoritative) | a065946b921909290bf1a88ea5ce9064b0487c5f99625a6d72e7b460cd45af92 |
+| WORDING_REFINEMENT.json | 02b5abe79affb7411d11b209df5ef7c531983b001e0e553aeccaf3841b9dc7b8 |
+| REPORT.md (preserved v1) | eacb97617f64a572adba1ea615e459a8b4d1cbb37842fa4620677fdd78ab3c23 |
+| collect_ownership_v1.py | 4d6ff7a4527a1235eea446e6b16ef48f52e72deb61c60e34835f92a8cb28b504 |
+| OUTPUT_MANIFEST.v1.json | 3b826657d19c46c0153d76cbd946b3a2b223c1d308e9f7888e2a709a739d79c3 |
+| VTABLES_AND_OWNERS.v1.json | fc3fb3fb3a7fd5d586ee042182f371d58bbb33c9e6af44977a5c0cb2449ab866 |
+| PROVIDERS.v1.json | 071a04db343be7cc4dda3108449e836e4ae166ba9f83c6d29f32b1e2ec838ebe |
+| first-candidate/SNAPSHOT.json | 9530dc60e280a8dce5763e945111a7fe2b610844c26f71016ddd448c0e90004d |
+| report-first-candidate/SNAPSHOT.json | 08e6e058a1eed619046dfb57136a0d59dd48fab1b933856c7be172cc842edb65 |
+| v2-first-candidate/INDEX.json | 3cefd55803507ecf32d59589371ea7a731d2f5224e921dc6b62602281ffb3340 |
+
+Parent pre-refinement index ../integration/ownership-pre-refinement/INDEX.json SHA25672c34a9a1b9268de3bf80bd6c0952c57e202d1d38a02696d8a6329b474e0a07b. This new review is exclusively created and immediately preserved with a non-self-referencing index computed before opening it. No earlier review draft existed or is invented; findings were communicated before the separately versioned corrections. No further correction requested.

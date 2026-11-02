@@ -1,0 +1,7 @@
+{
+  "first_list_hypothesis": "InstallJammerFILErecords notpresent, stoppedbeforedecompression; firstscript/failure retained",
+  "first_CookFS_extraction": "Metadata wasincorrectlyassumedMD5from generictoolsource; guardrejectedfirstpagebeforewritingselectedfiles. Actualmetadata4sample checks showsdecodedsize/CRC32. V2usesactualBEsize+CRCguards, no guardloosening or vendorcode execution",
+  "v1_extract_sha256": "047372a9a772673e806d6ede1c774c731ea5d35f4e9dc4c8af55a95958b23333",
+  "v2_extract_sha256": "97c3916723b6fa072ca0f34003e2db718f6cf2554fbd9c94f2fe75256370f732",
+  "originalinstaller_unchanged": true
+}

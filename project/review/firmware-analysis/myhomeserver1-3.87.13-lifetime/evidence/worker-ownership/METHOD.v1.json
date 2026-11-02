@@ -1,0 +1,7 @@
+{
+  "history": "No generated candidate overwrite or failed canonical generation. Source tables/pools are data; stripped adjacent symbol names are not function identities.",
+  "host_models_or_fixtures": 0,
+  "original_execution": 0,
+  "scope": "Positive state capture/dtor, selected scene+140 and action+48 holder teardown, owner dispose and packaged thread glue only. No complete lifetime/strong-owner/globalabsence/leak/UAF/concurrency/physical claim.",
+  "target_OS_or_API_execution": 0
+}

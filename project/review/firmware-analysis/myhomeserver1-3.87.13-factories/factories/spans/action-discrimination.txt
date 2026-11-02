@@ -1,0 +1,105 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00030cb0 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11080>:
+   30cb0:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   30cb4:	4603      	mov	r3, r0
+   30cb6:	b0bd      	sub	sp, #244	@ 0xf4
+   30cb8:	f8df 2c94 	ldr.w	r2, [pc, #3220]	@ 31950 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11d20>
+   30cbc:	af08      	add	r7, sp, #32
+   30cbe:	460c      	mov	r4, r1
+   30cc0:	9302      	str	r3, [sp, #8]
+   30cc2:	4638      	mov	r0, r7
+   30cc4:	f8df 3c8c 	ldr.w	r3, [pc, #3212]	@ 31954 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11d24>
+   30cc8:	447a      	add	r2, pc
+   30cca:	f8df 9c8c 	ldr.w	r9, [pc, #3212]	@ 31958 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11d28>
+   30cce:	58d3      	ldr	r3, [r2, r3]
+   30cd0:	44f9      	add	r9, pc
+   30cd2:	681b      	ldr	r3, [r3, #0]
+   30cd4:	933b      	str	r3, [sp, #236]	@ 0xec
+   30cd6:	f04f 0300 	mov.w	r3, #0
+   30cda:	f7e0 e914 	blx	10f04 <_ZNK4Json5Value5beginEv@plt>
+   30cde:	ab0a      	add	r3, sp, #40	@ 0x28
+   30ce0:	4621      	mov	r1, r4
+   30ce2:	4618      	mov	r0, r3
+   30ce4:	9300      	str	r3, [sp, #0]
+   30ce6:	f7e0 ea0e 	blx	11104 <_ZNK4Json5Value3endEv@plt>
+   30cea:	f8df 3c70 	ldr.w	r3, [pc, #3184]	@ 3195c <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11d2c>
+   30cee:	4638      	mov	r0, r7
+   30cf0:	9900      	ldr	r1, [sp, #0]
+   30cf2:	447b      	add	r3, pc
+   30cf4:	9301      	str	r3, [sp, #4]
+   30cf6:	f8df 3c68 	ldr.w	r3, [pc, #3176]	@ 31960 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11d30>
+   30cfa:	447b      	add	r3, pc
+   30cfc:	9303      	str	r3, [sp, #12]
+   30cfe:	f8df 3c64 	ldr.w	r3, [pc, #3172]	@ 31964 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11d34>
+   30d02:	447b      	add	r3, pc
+   30d04:	9304      	str	r3, [sp, #16]
+   30d06:	f7df eeb4 	blx	10a70 <_ZNK4Json17ValueIteratorBase7isEqualERKS0_@plt>
+   30d0a:	4604      	mov	r4, r0
+   30d0c:	2800      	cmp	r0, #0
+   30d0e:	f040 80ae 	bne.w	30e6e <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1123e>
+   30d12:	4638      	mov	r0, r7
+   30d14:	f10d 0878 	add.w	r8, sp, #120	@ 0x78
+   30d18:	f7e0 eb52 	blx	113c0 <_ZNK4Json17ValueIteratorBase5derefEv@plt>
+   30d1c:	9901      	ldr	r1, [sp, #4]
+   30d1e:	4606      	mov	r6, r0
+   30d20:	f7e0 ec7c 	blx	1161c <_ZNK4Json5ValueixEPKc@plt>
+   30d24:	4601      	mov	r1, r0
+   30d26:	4640      	mov	r0, r8
+   30d28:	f7e0 ed24 	blx	11774 <_ZNK4Json5Value8asStringB5cxx11Ev@plt>
+   30d2c:	e9dd ba1e 	ldrd	fp, sl, [sp, #120]	@ 0x78
+   30d30:	f1ba 0f00 	cmp.w	sl, #0
+   30d34:	f000 80ab 	beq.w	30e8e <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1125e>
+   30d38:	f8df 1c2c 	ldr.w	r1, [pc, #3116]	@ 31968 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11d38>
+   30d3c:	f859 5001 	ldr.w	r5, [r9, r1]
+   30d40:	e004      	b.n	30d4c <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1111c>
+   30d42:	3401      	adds	r4, #1
+   30d44:	3508      	adds	r5, #8
+   30d46:	2c18      	cmp	r4, #24
+   30d48:	f000 80ae 	beq.w	30ea8 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11278>
+   30d4c:	e9d5 3100 	ldrd	r3, r1, [r5]
+   30d50:	459a      	cmp	sl, r3
+   30d52:	d1f6      	bne.n	30d42 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11112>
+   30d54:	4652      	mov	r2, sl
+   30d56:	4658      	mov	r0, fp
+   30d58:	f7e0 ecc4 	blx	116e4 <memcmp@plt>
+   30d5c:	2800      	cmp	r0, #0
+   30d5e:	d1f0      	bne.n	30d42 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11112>
+   30d60:	aa20      	add	r2, sp, #128	@ 0x80
+   30d62:	4593      	cmp	fp, r2
+   30d64:	d004      	beq.n	30d70 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11140>
+   30d66:	9920      	ldr	r1, [sp, #128]	@ 0x80
+   30d68:	4658      	mov	r0, fp
+   30d6a:	3101      	adds	r1, #1
+   30d6c:	f7e0 e8a0 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   30d70:	2c17      	cmp	r4, #23
+   30d72:	d871      	bhi.n	30e58 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x11228>
+   30d74:	e8df f014 	tbh	[pc, r4, lsl #1]
+   30d78:	04e6      	lsls	r6, r4, #19
+   30d7a:	04a0      	lsls	r0, r4, #18
+   30d7c:	045c      	lsls	r4, r3, #17
+   30d7e:	0542      	lsls	r2, r0, #21
+   30d80:	0505      	lsls	r5, r0, #20
+   30d82:	0586      	lsls	r6, r0, #22
+   30d84:	0440      	lsls	r0, r0, #17
+   30d86:	0070      	lsls	r0, r6, #1
+   30d88:	03da      	lsls	r2, r3, #15
+   30d8a:	0397      	lsls	r7, r2, #14
+   30d8c:	036f      	lsls	r7, r5, #13
+   30d8e:	0347      	lsls	r7, r0, #13
+   30d90:	031e      	lsls	r6, r3, #12
+   30d92:	02e4      	lsls	r4, r4, #11
+   30d94:	02ac      	lsls	r4, r5, #10
+   30d96:	0253      	lsls	r3, r2, #9
+   30d98:	022b      	lsls	r3, r5, #8
+   30d9a:	0203      	lsls	r3, r0, #8
+   30d9c:	017c      	lsls	r4, r7, #5
+   30d9e:	012a      	lsls	r2, r5, #4
+   30da0:	00e9      	lsls	r1, r5, #3
+   30da2:	00c0      	lsls	r0, r0, #3
+   30da4:	00a1      	lsls	r1, r4, #2
+   30da6:	0018      	movs	r0, r3

@@ -1,0 +1,73 @@
+# MyHOMEServer1 3.87.13: selected BNIL trigger schema and compiled construction
+
+The original scheduler has a distinct local trigger row1 named `BNIL`. This batch follows its raw44-byte factory object through a virtual JSON serializer/reparse, a compiled constructor and a76-byte allocation containing a64-byte inner object. It closes selected schema/layout/construction facts, not configured scene contents, accepted external event grammar, handler behavior, subscription, timing or a physical device function. Original instructions/native helpers/JsonCpp/vendor processes/target APIs executed0; host semantic models and input fixtures0.
+
+Curated `OWN-DEV-0199` describes MyHOMEServer1 as a MyHOME SCS home-automation server with scenario functions. That product context does not assign a physical function to the private `BNIL` spelling or its numeric row. Local trigger enums, raw schema values, compiled fields and any public OPEN namespace remain distinct. No MH202/F454 object layout or handler behavior is transferred.
+
+## Exact original identity and local dispatch
+
+Original image `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. All VAs are original linked addresses, with fresh PT_LOAD translation for code and relocated data. Pool/TBH bytes are separately retained as data; nearest stripped template names are not class identities.
+
+The raw trigger factory0x2e9fc searches its24-row local name table. Original row1 of table0x160450 has length4/string `BNIL`. After a selected match it decrements the index at0x2eab4, applies unsigned bound22, then uses TBH base0x2eac0. Entry0 is0x04f1, reaching0x2f4a2. This is the row1/decrement route, distinct from the special raw TIME row0 route; no TIME calendar behavior is inferred here.
+
+The selected branch calls0x2cb04 at0x2f4a6, requests44 bytes at0x2f4ac/0x2f4b8, copies the base schema through0x2df3c and the derived status word to+40, installs the final raw vptr, then supplies its pointer to helper0x2e84c at0x2f4d2. Allocation, JSON conversion, copy/vector behavior and normal return are premises, not executed successes.
+
+The initializer has a different direct-index trigger dispatch: raw type+32 is read at0xa7322, unsigned bound23 is applied, and TBH base0xa732e entry1 reaches0xa8f1c. The collector independently checks both table arithmetic expressions. Equal local enum values do not make the raw and compiled dispatch tables interchangeable.
+
+## Actual classes, methods and fresh layouts
+
+| Source role | Original header / address point | RTTI | Selected method fact |
+| --- | --- | --- | --- |
+| Raw constructor base |0x160298 /0x1602a0|`15BaseBnilTrigger`|Temporary base class installed inside0x2cb04|
+| Final raw factory object |0x1602b4 /0x1602bc|`11BnilTrigger`|Address-point+8 is serializer Thumb0x28fdd|
+| Compiled inner object |0x1625ac /0x1625b4|`17BnilTriggerRunner`|Primary first method is Thumb0xee59d; pointer only here|
+| Allocation owner/control |0x161b9c /0x161ba4|`St23_Sp_counted_ptr_inplaceI17BnilTriggerRunnerSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE`|Separate owner layout, not the raw trigger|
+
+The original GOT slots resolve the raw base/final classes separately:0x166a90 versus0x166314. The compiled class is recovered both through direct pool+PC arithmetic in its constructor and GOT0x166400 in the initializer; allocation owner comes from GOT0x1665d8. Relative relocations substantiate the vtable/RTTI pointers. Live loader bias/provider integrity and actual object construction are not observed.
+
+The raw base constructor0x2c678 and derived0x2cb04 establish:
+
+| Raw field | Key/source | Selected normal rule |
+| --- | --- | --- |
+|std::string+4, length+8|`id`|Starts empty; present member uses asString/move; absent selected route requests empty replacement|
+|byte+28|`enabled`|Unconditional key access then asBool, stored at0x2c6cc|
+|word+32|`type`|Initialized0 in the original vector initialization pair, then local name lookup may replace it; selected `BNIL` row is1|
+|word+36|`operator`|Initialized−1; exact string mapping below|
+|word+40|`status`|Derived constructor initializes−1, then reads key/asString and conditionally assigns below|
+
+The local operator names map `noOperator`→−1, `higher`→0, `lower`→1, `equal`→2 and `different`→3. These are exact stored local integers from original comparisons/assignments, not mathematical semantics or a claim about the handler's comparison policy. Empty/unmatched text leaves the selected initial−1. The original string/GOT identity for each is retained in `OPERATORS.json`.
+
+The derived status constructor accepts exact lowercase `on`→0, `off`→1 and `noStatus`→−1 on its selected length/character or memcmp paths. Empty/unmatched strings leave−1. `noStatus` is separately verified through its original GOT target. Missing/null/wrong-type/overflow/exception behavior of JsonCpp remains a provider premise; no comprehensive external grammar or validation guarantee is implied.
+
+## Raw serializer and same-result reparse
+
+The raw factory installs `BnilTrigger`, whose serializer is original0x28fdc, not a method inferred from a nearby symbol. Initializer0xa8f56 obtains the current raw object, loads its vtable slot+8 at0xa8f60 and invokes it at0xa8f62. Result JSON is constructed in current SP+592;0xa8f68 passes that same address as r1 into0x2cb04 at0xa8f6e, with temporary raw destination current SP+4152. No JSON result replacement or supplied field fixture occurs in that selected source segment. The initializer reinstalls the final BnilTrigger vptr at0xa8f84.
+
+The original serializer0x28fdc..0x291fc requests id only when its string length is nonzero; it assigns the type string (bounded local0..23 lookup, otherwise empty string), enabled as a Json Boolean, operator only when raw operator differs from−1, and status as a string. For ordinary recognized status values−1/0/1 the status table yields noStatus/on/off; out-of-range status takes the selected empty-string construction. Operator values0..3 have a bounded table route; out-of-range values other than−1 take empty text. This describes local emission rules, not an executed or universal lossless roundtrip. Actual JSON assignment/member lookup/string conversion and valid object/provider state remain conditional.
+
+Keys are independently recovered through original pool+PC arithmetic: `enabled`, `id`, `type`, `operator`, `status`. These are schema keys, not raw target configuration exported from a running installation. The original table row and spelling identities do not establish that a configured scene contains this trigger.
+
+## Compiled temporary, aggregate and append
+
+Original0xa8f86 calls compiled constructor0xee5ac with r0=current SP+4280, r1 pointing to a function-wrapper temporary at current SP+4032, and r2 pointing to the reparsed raw object at current SP+4152. That constructor initializes a separate callable area, conditionally requests wrapper copy with operation2, copies its manager/invoker words after normal return, and copies the raw schema. Callback construction/registration and all pointed-to handler bodies are separate scopes; this report establishes fields and pointer identities only.
+
+| Raw source | Compiled inner destination | Source instruction/context |
+| --- | --- | --- |
+|id string+4/length+8|string+24/length+28|Original string-copy branch in0xee610..0xee662|
+|enabled byte+28|byte+48|0xee658/0xee65e|
+|type/operator words+32/+36|words+52/+56|Original vector load/store0xee65a/0xee662|
+|status word+40|word+60|0xee668/0xee67c|
+
+Compiled inner+0 is the primary vptr; inner+20 is the secondary schema vptr. Initial writes to inner+4,+8,+12,+16 set the callable storage/manager/invoker area to zero before a selected successful copy may populate it. Those zeros are not a newly inferred trigger-event state machine or a claim of runtime inactivity. The source uses raw bool/type/operator/status offsets distinct from action, TIME condition, scene enabled/active and shared stop namespaces.
+
+The initializer requests76 bytes at0xa8fd4/0xa8fda and sets allocation+4/+8 count storage. It derives inner=allocation+12 at0xa9000 and a separate secondary schema at allocation+32=inner+20. It copies callable storage using0xb43d8, calls0x2df3c for the base schema at allocation+32, and copies the derived status to allocation+72=inner+60 at0xa902a. The original base-copy helper retains enabled/type/operator at its own+28/+32/+36; no equal-number alias is assumed.
+
+At0xa9034 the outgoing two-word pair is explicitly `(inner pointer, allocation/control pointer)`. The selected final vptr stores at allocation+12 and+32 reinstall the compiled primary/secondary class address points.0xa9044 passes the pair to0xa56e4 with the selected scene+104 range. This closes the local successful construction/copy/append handoff only. Owner counts, allocation/provider/clone/vector behavior, exception paths and whole lifetime remain premises; no actual allocation, subscription, event or callback is executed.
+
+## Reproduction and limits
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/schema/collect_schema_v1.py --check`
+
+The exclusive collector retains nine original code spans,19 byte guards, nine key references, four relocation-backed class identities, nine direct-call checks, six separate data spans and two input hashes. It refuses overwrite; all deterministic outputs plus report/collector are immediately copied to first-candidate with index bytes computed before opening the index. No generated candidate correction or overwrite is part of this first candidate.
+
+Confidence is high for selected original field/key/branch/class/table/call/alias facts. Actual complete scene validation, JsonCpp/provider success, active assets, handler admission, registration/filtering/callback effects, runtime binding, unwind/concurrency/lifetime, public namespace meaning and physical behavior remain unresolved. The actual primary method pointer is supplied for the independent admission investigation; its body is not evidence claimed by this schema batch. No transport/authentication/session/framing/MQTT/libjel implementation is followed or executed.

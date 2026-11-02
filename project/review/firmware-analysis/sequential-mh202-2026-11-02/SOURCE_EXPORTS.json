@@ -1,0 +1,125 @@
+{
+  "files": [
+    {
+      "bytes": 9723,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source/collect_loader_v2.py.txt",
+      "sha256": "c442941c5e362b6540549f8baadd786b106ade105da291d4d606ae9dc005d4db",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/collect_loader_v2.py"
+    },
+    {
+      "bytes": 96552,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source/METHODS.v2.json",
+      "sha256": "63875d7a17c048fbe7b6488e5401d46a88b3a681556744849f44b8962567d232",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/METHODS.v2.json"
+    },
+    {
+      "bytes": 2016,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source/METADATA_LINKS.v2.json",
+      "sha256": "fe496fc74b69413f0c83d0c50b441b13722a30e64fa239b9d8f57c938a1b3c5c",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/METADATA_LINKS.v2.json"
+    },
+    {
+      "bytes": 1897,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source/INHERITED_COMPILEALL.v2.json",
+      "sha256": "ece271f40f15f83e82965f4850ddbc416de77e169b4e4f42854aeaeeec0a0655",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/INHERITED_COMPILEALL.v2.json"
+    },
+    {
+      "bytes": 11497,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source/INPUTS.v2.json",
+      "sha256": "e72d02fcad8c4e25a1a317b2160c8198653dfe4d83da30ee635c44cdc13473ec",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/INPUTS.v2.json"
+    },
+    {
+      "bytes": 899,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source/OUTPUT_MANIFEST.v2.json",
+      "sha256": "fd54b5274d1a38438ba8a0d7dfe812de20e5ef97ea9ec241caa82038051a7c23",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/OUTPUT_MANIFEST.v2.json"
+    },
+    {
+      "bytes": 1306,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source/SCOPE_AUTHORIZATION.json",
+      "sha256": "c232456db22bbe41a0c07fcba4792ec5107ba0960928fb0df334445ab527b2c0",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/SCOPE_AUTHORIZATION.json"
+    },
+    {
+      "bytes": 2055,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source/PREPARATION_HISTORY.json",
+      "sha256": "73dab912ba6a2b5dca3565df08a22e61f6f39a6314f30cf5da8479b920f7834d",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/PREPARATION_HISTORY.json"
+    },
+    {
+      "bytes": 1253,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source/VERSION_HISTORY.v2.json",
+      "sha256": "785aa07fefa844684940bdff41e830d8c145d8810cf34c7104980587d1716299",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/VERSION_HISTORY.v2.json"
+    },
+    {
+      "bytes": 518,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source/FAILED_V1.json",
+      "sha256": "5e9ff6eab83510dd8da6bab7353e779a7eb674e9d9f7cab9cbbbc4d6e96cf3aa",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/FAILED_V1.json"
+    },
+    {
+      "bytes": 4778,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/DEFAULT_PROJECT_ADMISSION.json",
+      "sha256": "48a45619d3b40787c8d84af02a32df86edf2250208ceefe09bcfb212b88f8930",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/DEFAULT_PROJECT_ADMISSION.json"
+    },
+    {
+      "bytes": 323,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/PARENT_ADMISSION_CHECK.json",
+      "sha256": "2d7bb36de8a1ef4a9629d03112f27f7c227a7966189bb2bc02241dd5ab6a1589",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/PARENT_ADMISSION_CHECK.json"
+    },
+    {
+      "bytes": 409,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/PARENT_SOURCE_CHECK.json",
+      "sha256": "3675a42d909f3d9f0e6c9ebe3183b43bc2234e0e671367ae6c30c4d2fce3d080",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/PARENT_SOURCE_CHECK.json"
+    },
+    {
+      "bytes": 1011,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/ROOT_GENERATION_DECISION.json",
+      "sha256": "4ccc2b15cf42a0cb50a067743102e9b4617bf02cb4b8b36d332445804ce9364f",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/ROOT_GENERATION_DECISION.json"
+    },
+    {
+      "bytes": 8758,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source-review.txt",
+      "sha256": "2211bd10dd7780ee3b18ccd0761a332ab32b42ae07cbe2d10e65811437611eb7",
+      "source": "work/sequential-firmware-priorities/2026-11-02/reviews/stage1-mh202-source-review.md"
+    },
+    {
+      "bytes": 12490,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source/REPORT.v4.txt",
+      "sha256": "706ce09abc8c6c4eb776ef6eb8bfcb2dc959ef142437f8dce67b9e85d5fc4af9",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/REPORT.v4.md"
+    },
+    {
+      "bytes": 10271,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source/REPORT.v2.txt",
+      "sha256": "64f80a2aa474b587cdb3352bc4b2a6946a29113c9c629f487b967c56175d26c5",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/REPORT.v2.md"
+    },
+    {
+      "bytes": 4289,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source/COORDINATE_MAPPING.v2.json",
+      "sha256": "1e00784ae7e1616c9187a1be372c93afe3e7e49f63529e6ec18085f44ddec970",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/COORDINATE_MAPPING.v2.json"
+    },
+    {
+      "bytes": 4237,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source/coordinate_supplement_v2.py.txt",
+      "sha256": "cfc2b42c350651b830fadd056b7315a95d978576a49170d6015636cd9406a65e",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/coordinate_supplement_v2.py"
+    },
+    {
+      "bytes": 459,
+      "export": "project/review/firmware-analysis/sequential-mh202-2026-11-02/source/COORDINATE_SUPPLEMENT_FAILED_V1.json",
+      "sha256": "99bc914896a86ab0afe293a1c46afc6449dbf77448f0a690726f490fbce2830b",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage1-mh202/source-loader/COORDINATE_SUPPLEMENT_FAILED_V1.json"
+    }
+  ],
+  "scope": "Four selected original IL methods, manufacturer-default admission, inherited compiler context and actual histories; no commissioned project/runtime approval"
+}

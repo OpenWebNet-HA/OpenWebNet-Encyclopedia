@@ -1,0 +1,31 @@
+# Gateway reference cross-review: refinement check
+
+Status: PASS for the current fifteen reference identities and the human-page corrections requested in the [earlier review](gateway-by-mhs.md). One nonsemantic work-record anchor correction remains noted below. This is a narrow editorial recheck, not new firmware/source-body investigation, an old collector replay, runtime observation or repository-wide approval.
+
+## Current identities and retained history
+
+All fifteen current gateway reference pages match either their reviewed COVERAGE.v2 identity or the explicit old-to-new chain in CROSSREVIEW_REFINEMENTS.v1 and GATEWAY_SCOPE_REFINEMENT. Both parent pre-correction snapshot indices match their retained bytes and SHA-256 values. Original baseline identities also match. The [current pins](gateway-by-mhs-pins.v2.json) record all fifteen files, refinement chains, sizes and current hashes without replacing the earlier review or author coverage.
+
+The prior review covered every page, the 99 old-section mappings and the material F454/F46/legacy conditions. This recheck reread the three refined pages and their recorded changes. It does not recast the other twelve unchanged pages as new source coverage.
+
+## Requested corrections
+
+| Requested correction | Current result |
+| --- | --- |
+| ECV11 placement of OS-only F46 mechanisms | Resolved. F460 scene/catalogue and F461 module/message concepts now organize the reference. The HAL, updater, platform-file and logging mechanisms are a compact supporting-component evidence table, with explicit limits and links to the retained detailed records. They are no longer independent implementation topics in this encyclopedia page. |
+| Handoff updater placement | Resolved. The standalone updater paragraph is removed; the handoff explains relevant catalogue, scene, module and structured-message distinctions. Platform/installation identity is only a limit. |
+| Exact BNIL discriminator values | Resolved. The reference names on/off/noStatus as local 0/1/-1 and operator words 2 equality/3 inequality, retaining other-word callback fallthrough and rejecting external grammar/physical inference. |
+| Exact F461 address exclusions | Resolved. Exact 0, prefix #, exact 00 and exact 100 precede the UTF-8 character-count classification. Character count, byte position, digit validity and private class/WHO meanings remain separate. |
+| Useful database path arguments | Resolved. F450 cfg/extra/50/master.sqlite to /var/tmp/db/master.sqlite and F459 /tmp/plugin.shared.sqlite are identified as request arguments, with no successful extraction, opening, runtime rows or durability conclusion. |
+
+The changed F46 organization preserves the relevant scene/message H3 anchors. Removed OS-only headings have explicit supporting-only destinations in the parent refinement record; their full source evidence remains linked. No substantive guard, ownership premise, effect limitation or original source fact was lost in these refinements.
+
+The refined legacy handoff continues to distinguish the one original encrypted support container from zero recovered plaintext database objects for this investigation. It does not claim an inventory of the private archive. No new private values or operating-system procedure was introduced into reference prose.
+
+## Links and remaining note
+
+A fresh read-only audit checked 219 Markdown links involving the fifteen current human-page destinations, including outgoing evidence links and incoming human-page fragments. There were zero missing paths or fragments. This count differs from the earlier 221 because the OS-only content and its handoff paragraph were consolidated; it is a current link count, not semantic coverage.
+
+GATEWAY_SCOPE_REFINEMENT.json records the removed handoff updater anchor as moving to evidence-levels-and-reproduction. The actual current destination is evidence. This is a work-record mapping typo, not a broken human-page link or reference-content defect. Root was notified; any correction should use a new explicit record rather than silently repin the earlier file. The current pins retain the exact reviewed record hash.
+
+No source bodies, original datasets, supporting capsules, manifests or repository paths were edited by this reviewer. Full Device/runtime/physical approval and final repository checks remain separate.

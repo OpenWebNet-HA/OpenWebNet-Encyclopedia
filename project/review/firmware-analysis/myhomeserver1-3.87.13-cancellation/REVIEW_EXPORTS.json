@@ -1,0 +1,10 @@
+{
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/reviews/integration-review.md",
+      "published": "integration-review.txt",
+      "sha256": "673ca67556c1a25f64b87854ffa23b330fbd7e7d8b109125e7139f4b1a4a8afc",
+      "bytes": 6991
+    }
+  ]
+}

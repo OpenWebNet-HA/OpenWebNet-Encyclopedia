@@ -1,0 +1,56 @@
+# MH2021.0.24: component records and distinct packaged PHP implementations, run12
+
+The original package declarations contain218 normal-image records and203 recovery records, with203 shared names and no shared version-label changes. Twelve selected actual binaries add byte identities and source version evidence. A material refinement is **PHP CLI5.2.13 versus the bundled Apache PHP module5.1.6**: the separate package labels and each original no-argument phpversion code path agree. No PHP process or module was run.
+
+A second image distinction is precise: normal `usr/sbin/httpd` is the Apache binary, while recovery's same requested pathname resolves through **image symlink metadata to bin/busybox**. Recovery lacks the selected PHP CLI/module and OpenSSL CLI paths, but retains the selected SSL/crypto libraries byte-identical to normal. Absence of a CLI/package record therefore must not become absence of every server/TLS capability or a service-readiness claim.
+
+## Original sources and reproduction
+
+Run `python3 -B work/mh202-firmware/research/2026-10-30/inventory/run12/collect_components.py --check`. The read-only shared ImageVFS verifies every original read, resolving symlinks as image metadata rather than host links. Collector reproduces10 outputs from36 distinct image/accessor reads: two status files, selected package file lists,12 normal binary locations plus recovery targets, three GLib version objects and four PHP code spans. Host binutils disassemble/read ELF metadata only. Own original ARM/PHP/JS/vendor process/OS/I/O execution and hooks remain0; earlier project native corpora retain their counts.
+
+`input-hashes.json` pins image paths, resolved identities, bytes and SHA256. `package-version-records.json` retains only safe Package/Version/Architecture/Status fields and exact Package/Version line numbers; no conffile contents, credential/header/private-key material, install timestamps or arbitrary strings are exported. The selected file-list membership checks are metadata ownership evidence, not proof of a current package manager's runtime state. All earlier reports/images remain unchanged.
+
+## Declared package membership
+
+Normal-only status names are apache2,bonnie++,iperf,libmysqlclient16,libpcre0,libxml2,lmbench,modphp,ntp,ntp-bin,ntp-tickadj,ntpdate,openssl,php,php-cli. Recovery-only status names are empty. Shared203 names have identical Version and Architecture fields. Three shared Status strings differ (libexpat1,libssl1.0.0,libstdc++6); status flags are not executable identity/version differences or actual installed-device observations.
+
+This is a wider metadata audit than the initial selected-component table. It does not redo the completed complete-tree inventory or infer behavior from matching filenames. Package absence and requested-path absence are kept separate from alias resolution and actual bytes.
+
+## Twelve selected package/file joins
+
+|Package|Normal declared version|Resolved normal image path|Same requested path in recovery|
+|---|---|---|---|
+|libc6|2.8-r12.6|lib/libc-2.8.so|same bytes|
+|libgcc1|4.3.3-r12.6|lib/libgcc_s.so.1|same bytes|
+|libstdc++6|4.3.3-r12.6|usr/lib/libstdc++.so.6.0.10|same bytes|
+|libssl1.0.0|1.0.0d-r14.0.6|usr/lib/libssl.so.1.0.0|same bytes|
+|libcrypto1.0.0|1.0.0d-r14.0.6|usr/lib/libcrypto.so.1.0.0|same bytes|
+|libglib-2.0-0|2.28.7-r2.6|usr/lib/libglib-2.0.so.0.2800.7|same bytes|
+|libz1|1.2.3-r7.0.6|usr/lib/libz.so.1.2.3|same bytes|
+|busybox|1.13.2-r42.4-arago3.6|bin/busybox|same bytes|
+|apache2|2.2.14-r3.6|usr/sbin/httpd|different target: bin/busybox|
+|php-cli|5.2.13-r7.4.6|usr/bin/php|path absent|
+|modphp|5.1.6-r3.6|usr/lib/apache2/modules/libphp5.so|path absent|
+|openssl|1.0.0d-r14.0.6|usr/bin/openssl|path absent|
+
+Exact size/SHA256, ELF machine40, SONAME, selected embedded public version tokens/file offsets, source file-list path and status Version line are in selected-package-binary-evidence.json. Shared core-library/BusyBox paths match full hashes across these two images. The recovery httpd alias's byte difference is an actual different resolved target, not an Apache binary with a changed build. No HTTP helper/authentication/handshake/configuration is executed or investigated by this component audit.
+
+## PHP CLI and module are distinct source versions
+
+CLI package php-cli is5.2.13-r7.4.6. Original usr/bin/php exports zif_phpversion at0x1ba140; its argument-count0 branch0x1ba150 selects0x1ba248, loads original pool0x1ba280 and references literal **5.2.13** atVA0x3136a0 (file offset0x30b6a0). Its selected source duplicates that literal into the return value. This is static code, not php -v or runtime evaluation.
+
+The module package modphp is5.1.6-r3.6. Original usr/lib/apache2/modules/libphp5.so exports zif_phpversion at0x1c4e74. Zero argument count follows0x1c4eb8; PIC arithmetic uses pools0x1c50a8/0x1c50ac and references literal **5.1.6** atVA0x3626e8 (file offset0x3626e8). Its selected source duplicates the referenced string into the return value. Four original spans and each binary/literal identity are pinned in distinct-php-version-source.json. No cross-version equality or active Apache module-loading/version observation is inferred.
+
+The earlier selected PHP package label5.2.13 remains correct for php/php-cli. A generic summary saying only “PHP5.2.13” must now distinguish the bundled module. This refines aggregate applicability without rewriting the earlier report or asserting a security/compatibility issue. Both originals and their labels are retained rather than choosing one universal firmware PHP version.
+
+## Release, ABI and compiler labels stay separate
+
+Original GLib exported integer objects atVA0xd681c/0xd6820/0xd6824 contain2/28/7, matching libglib-2.0-0 package2.28.7-r2.6. Their SONAME is libglib-2.0.so.0, an ABI name rather than the full release. glib-original-version-objects.json gives exact file offsets, symbol rows, hash and integer reads; no version function executes.
+
+Likewise SSL/crypto SONAME1.0.0 is separate from OpenSSL package/banner1.0.0d; libc SONAME6 is separate from its2.8 package/banner; libstdc++ SONAME6 is separate from package4.3.3 and file6.0.10. The libc banner additionally identifies Sourcery G++ Lite2009q1-203. Selected .comment searches supply no matched GCC version, so this pass does not assign a compiler version to every binary from the libgcc/libstdc++ package version alone. Embedded public strings/constants are build evidence, not proof of active services, hardware state, installation version or vulnerability status.
+
+## Confidence and remaining limits
+
+High confidence: original safe package record counts/lines, selected list membership, symlink-resolved binary hashes/presence, both PHP source literal references, GLib integers and ABI-label separation. Conditional/unobserved: package-manager accuracy beyond these files, effective Apache/module/runtime loading, service configuration, hardware/kernel execution and installed gateway contents. No version command, firmware process, network, recovery boot or original userspace routine was run.
+
+The initial host file-list candidate for zlib incorrectly named lib/libz.so.1; a strict original file-list assertion rejected it before canonical outputs. The exact original list supplied usr/lib/libz.so.1 and the final collector validates it. This was a host path-selection correction, not a firmware fault or modified guard. Earlier immutable inventories and source review pins are preserved.

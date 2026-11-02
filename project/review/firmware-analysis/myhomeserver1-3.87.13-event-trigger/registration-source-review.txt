@@ -1,0 +1,36 @@
+# Independent source review: BNIL local callback capture/publication
+
+PASS, no correction requested. I independently checked the frozen registration report/collector against original source and metadata. Some class/layout facts overlap the complementary schema report I authored; the callback-manager, append and primary-forwarder contracts below were checked directly from original instructions. This is static review, not native replay, external registration proof or event-admission analysis. Original instructions, vendor processes, JsonCpp/target APIs, callbacks and semantic fixtures executed0. Author files are unchanged.
+
+## Reproduction and exact reviewed pins
+
+Read-only `python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/registration/collect_registration_v1.py --check` passed15 outputs. Independently parsed ELF PT_LOAD mapping reproduced all10 source-span hashes,17 instruction guards,6 direct branch targets and3 PIC targets. All5 input hashes/sizes,14 manifest output members and17 immediate first copies (15 outputs plus report/collector) match. No generated candidate changed during review.
+
+| Artifact in `registration/` | SHA256 |
+| --- | --- |
+| `REPORT.md` | `6917cdb678ecff2a78cf91287a9ee87f31ee5adfb50e43b603b7111404d77223` |
+| `collect_registration_v1.py` | `0b9d444aaf356a3e7f1a9aec630d84c1a12e21df3033b50a3afa6a219db8d9c1` |
+| `OUTPUT_MANIFEST.json` | `973cc2e240fc0293802a9188a910f33a1909e5790f0dba00444a0ca275ae8286` |
+| `ORIGINAL_SOURCE.json` | `c66d1cd179333055778ec28ac1e265a9df429370bf916704a022ccca6dd2e6bc` |
+| `LOCAL_HANDOFF.json` | `ed5f9c82b79c7424035ff4c22d69185247990b160bf8a181d5aafe882a9c0c25` |
+| `first-candidate/INDEX.json` | `7ec30e97359591f99f735c03d148a23dac1369638166127aed12c1feb7d9ed39` |
+
+Original `/home/bticino/scheduling_manager/scheduling_manager` SHA256 is `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Linked VAs and Thumb function pointers are separated. Original GOT, RTTI and the selected5 relative relocations support candidate pointer/class ownership; actual live binding or object identity is not observed.
+
+## Selected original contracts checked
+
+The initializer saves its incoming scene pointer at current SP+4. The BNIL branch loads this word at `0xa8f40`, stores it as the first word of the callable temporary at `0xa8f42`, and zeros the second word. Original pool/PC joins resolve manager Thumb`0xa56c1` and invoker Thumb`0xa60a9`; their positions are preserved through the supplied temporary and original copy helper. The copy is a source-level raw receiver capture, not an implied strong scene handle.
+
+The complete selected manager code `0xa56c0..0xa56e0` distinguishes operations: op2 loads the first source word and stores it at the destination; op3 reaches return0 with no local captured-scene release. The trailing pool word at `0xa56e0` is data, not evidence of an additional manager instruction. In `0xb43d8`, the destination16-byte callable is initialized zero, a nonnull source manager is called with op2, then its manager/invoker pair is copied on normal return. Its cleanup op3 request remains unexecuted. Constructor `0xee5ac` applies the same selected op2/copy structure to its own inner callable data+4 and manager/invoker+12/+16. Full ABI/provider/error/lifetime behavior is correctly conditional.
+
+The persistent allocation source supplies76 bytes, derives runner inner=control allocation+12, and copies callable data to allocation+16=inner+4. The retained count initialization is1/1 at allocation+4/+8; it is not event or service state. Original GOT chains resolve owner header`0x161b9c` and final runner header`0x1625ac`. The primary address point`0x1625b4` has Thumb pointers`0xee59d`, `0xee7b5`, `0xee869`; cleanup slots are not the separately located nonvirtual admission handler. This review does not inspect that handler or infer an external recipient from the vtable.
+
+The source derives scene+104, constructs the pair `(inner, control)` at SP+592, and passes its address to `0xa56e4` at `0xa9044`. In that helper's available-capacity branch, the old end receives the first pointer and control word, the original source pair is zeroed at `0xa5706`, and end advances8 at `0xa570c`. The subsequent caller test at `0xa9048` therefore skips the conditional source-control release under exactly this normal move path. The full-capacity branch and all later owner behavior are appropriately unclosed. An append request and source move are not actual vector success, natural service registration or eventual ownership proof.
+
+Primary method`0xee59c` tests manager inner+12; if nonzero it reads invoker+16, supplies callable data at inner+4 and tailcalls it. Manager0 requests bad-function-call. Original captured invoker`0xa60a8` loads its first data word as the scene receiver and tailbranches to`0xa5db0`. This is a conditional source callback-to-scene-launch-entry join, not evidence that an event invokes it or that launch succeeds.
+
+## Scope and remaining uncertainty
+
+The report correctly calls this local capture/publication rather than external registration. The actual nonvirtual admission method`0xee708`, its caller/recipient routing, any external event dispatcher, subscription, service context and physical role are complementary/unclosed scopes. Curated product roles or class spellings do not close them.
+
+Raw captured scene lifetime is not proved by local op2 copies/op3 return alone; other owners can exist. Configured scene/trigger presence, valid callable/provider/allocation state, full-capacity append, unwind/concurrency, actual launch/readiness, external delivery and physical effects remain open. No new native corpus or execution-count increment is justified. The current exact candidate/first copies are verified; source review does not independently prove every development-history statement beyond those retained bytes.

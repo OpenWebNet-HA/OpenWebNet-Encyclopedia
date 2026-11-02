@@ -1,0 +1,99 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b2bc4:
+   b2bc4:	4a72      	ldr	r2, [pc, #456]	@ (b2d90)
+   b2bc6:	4b73      	ldr	r3, [pc, #460]	@ (b2d94)
+   b2bc8:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+   b2bcc:	b088      	sub	sp, #32
+   b2bce:	447a      	add	r2, pc
+   b2bd0:	f8df 91c4 	ldr.w	r9, [pc, #452]	@ b2d98
+   b2bd4:	4604      	mov	r4, r0
+   b2bd6:	460e      	mov	r6, r1
+   b2bd8:	58d3      	ldr	r3, [r2, r3]
+   b2bda:	4627      	mov	r7, r4
+   b2bdc:	44f9      	add	r9, pc
+   b2bde:	f104 0a48 	add.w	sl, r4, #72	@ 0x48
+   b2be2:	681b      	ldr	r3, [r3, #0]
+   b2be4:	9307      	str	r3, [sp, #28]
+   b2be6:	f04f 0300 	mov.w	r3, #0
+   b2bea:	f778 fdf1 	bl	2b7d0
+   b2bee:	4b6b      	ldr	r3, [pc, #428]	@ (b2d9c)
+   b2bf0:	4630      	mov	r0, r6
+   b2bf2:	496b      	ldr	r1, [pc, #428]	@ (b2da0)
+   b2bf4:	f859 3003 	ldr.w	r3, [r9, r3]
+   b2bf8:	4479      	add	r1, pc
+   b2bfa:	3308      	adds	r3, #8
+   b2bfc:	f847 3b30 	str.w	r3, [r7], #48
+   b2c00:	2300      	movs	r3, #0
+   b2c02:	e9c4 730a 	strd	r7, r3, [r4, #40]	@ 0x28
+   b2c06:	f884 3030 	strb.w	r3, [r4, #48]	@ 0x30
+   b2c0a:	6463      	str	r3, [r4, #68]	@ 0x44
+   b2c0c:	f884 3048 	strb.w	r3, [r4, #72]	@ 0x48
+   b2c10:	f8c4 a040 	str.w	sl, [r4, #64]	@ 0x40
+   b2c14:	f75e ed02 	blx	1161c <_ZNK4Json5ValueixEPKc@plt>
+   b2c18:	46e8      	mov	r8, sp
+   b2c1a:	4601      	mov	r1, r0
+   b2c1c:	4640      	mov	r0, r8
+   b2c1e:	f75e edaa 	blx	11774 <_ZNK4Json5Value8asStringB5cxx11Ev@plt>
+   b2c22:	9b00      	ldr	r3, [sp, #0]
+   b2c24:	ad02      	add	r5, sp, #8
+   b2c26:	6aa0      	ldr	r0, [r4, #40]	@ 0x28
+   b2c28:	42ab      	cmp	r3, r5
+   b2c2a:	d052      	beq.n	b2cd2
+   b2c2c:	aa01      	add	r2, sp, #4
+   b2c2e:	4287      	cmp	r7, r0
+   b2c30:	62a3      	str	r3, [r4, #40]	@ 0x28
+   b2c32:	f104 032c 	add.w	r3, r4, #44	@ 0x2c
+   b2c36:	f962 078f 	vld1.32	{d16}, [r2]
+   b2c3a:	d044      	beq.n	b2cc6
+   b2c3c:	6b22      	ldr	r2, [r4, #48]	@ 0x30
+   b2c3e:	f943 078f 	vst1.32	{d16}, [r3]
+   b2c42:	2800      	cmp	r0, #0
+   b2c44:	d041      	beq.n	b2cca
+   b2c46:	9202      	str	r2, [sp, #8]
+   b2c48:	9000      	str	r0, [sp, #0]
+   b2c4a:	2300      	movs	r3, #0
+   b2c4c:	9301      	str	r3, [sp, #4]
+   b2c4e:	7003      	strb	r3, [r0, #0]
+   b2c50:	9800      	ldr	r0, [sp, #0]
+   b2c52:	42a8      	cmp	r0, r5
+   b2c54:	d003      	beq.n	b2c5e
+   b2c56:	9902      	ldr	r1, [sp, #8]
+   b2c58:	3101      	adds	r1, #1
+   b2c5a:	f75e e92a 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   b2c5e:	4951      	ldr	r1, [pc, #324]	@ (b2da4)
+   b2c60:	4630      	mov	r0, r6
+   b2c62:	4479      	add	r1, pc
+   b2c64:	f75e ecda 	blx	1161c <_ZNK4Json5ValueixEPKc@plt>
+   b2c68:	4601      	mov	r1, r0
+   b2c6a:	4640      	mov	r0, r8
+   b2c6c:	f75e ed82 	blx	11774 <_ZNK4Json5Value8asStringB5cxx11Ev@plt>
+   b2c70:	9b00      	ldr	r3, [sp, #0]
+   b2c72:	6c20      	ldr	r0, [r4, #64]	@ 0x40
+   b2c74:	42ab      	cmp	r3, r5
+   b2c76:	d03e      	beq.n	b2cf6
+   b2c78:	aa01      	add	r2, sp, #4
+   b2c7a:	4582      	cmp	sl, r0
+   b2c7c:	f962 078f 	vld1.32	{d16}, [r2]
+   b2c80:	d04b      	beq.n	b2d1a
+   b2c82:	6423      	str	r3, [r4, #64]	@ 0x40
+   b2c84:	f104 0344 	add.w	r3, r4, #68	@ 0x44
+   b2c88:	6ca2      	ldr	r2, [r4, #72]	@ 0x48
+   b2c8a:	f943 078f 	vst1.32	{d16}, [r3]
+   b2c8e:	2800      	cmp	r0, #0
+   b2c90:	d048      	beq.n	b2d24
+   b2c92:	9000      	str	r0, [sp, #0]
+   b2c94:	9202      	str	r2, [sp, #8]
+   b2c96:	2300      	movs	r3, #0
+   b2c98:	9301      	str	r3, [sp, #4]
+   b2c9a:	7003      	strb	r3, [r0, #0]
+   b2c9c:	9800      	ldr	r0, [sp, #0]
+   b2c9e:	42a8      	cmp	r0, r5
+   b2ca0:	d003      	beq.n	b2caa
+   b2ca2:	9902      	ldr	r1, [sp, #8]
+   b2ca4:	3101      	adds	r1, #1
+   b2ca6:	f75e e904 	blx	10eb0 <_ZdlPvj@plt+0x4>

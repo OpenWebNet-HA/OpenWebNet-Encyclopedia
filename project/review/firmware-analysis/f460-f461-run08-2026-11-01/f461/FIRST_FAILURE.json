@@ -1,0 +1,11 @@
+{
+  "phase": "first generation and attempted readonly check, both stopped in build before writing any output",
+  "exception": "ValueError: invalid literal for int() with base 16: Relocation",
+  "cause": "readelf relocation-section header was not filtered before hex-address conversion",
+  "original_instructions": 0,
+  "generated_outputs": 0,
+  "v1_files": {
+    "REPORT.md": "7a4fdc98c06f7dcf5239bbe5032db962ba26e424ac012fe29ca0e7dfcd5db6a5",
+    "collect_boot_v1.py": "e1005c31a6a940074eff48652bf97aa9e5607291103fb6f7dbb502a741ebf8d8"
+  }
+}

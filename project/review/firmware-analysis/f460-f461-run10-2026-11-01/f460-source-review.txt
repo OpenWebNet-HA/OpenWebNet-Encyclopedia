@@ -1,0 +1,27 @@
+# F460 run10 independent source review — PASS
+
+I reviewed authoritative `REPORT.v2.md`, collector, saved evidence/history and freshly mapped original scheduler bytes. Read-only `collect_gate_v2.py --check` passes13 outputs/10 spans/44 guards. No firmware/native/provider/helper/JSON/model/fixture/target I/O executed; no old source collector or native corpus was replayed, and no author files were changed.
+
+Original `/home/bticino/scheduling_manager/scheduling_manager` SHA256 is `5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62`. I independently remapped all10 raw spans/44 guarded words against its product ImageVFS/PT_LOAD bytes, the selected relocated action primary slot, four direct local calls, three actual imported-call PLT/GOT identities, nine selected branches and all15 first copies. Fresh AArch64 pair widths and offsets are supported, with no MHS transfer.
+
+The positive selected joins agree:
+
+- Same inherited actionX19 is stored into pairSP976, second wordSP984 initially zero. I additionally checked original **0x10000c**, word **0xd2800300** (file bytes `000380d2`), immediately before the retained span: it requests size24 inX0 before actual operator-new call0x100028. This supports that reported allocation request without changing the frozen span boundary. Pointer/control allocations and stack pair remain distinct; opaque0xf7040/0x40630 return/storage-preservation and full ownership are premises.
+- Actual corrected0x100064 is BL0x40630;0x100060 is MOV X0,X1. The later local pair address feeds SAME initializer receiverX20+216→0xf9480. Available-capacity code reads end/capacity, stores the first pointer plus second64-bit word, zeroes both source words and advances end by16. Growth0x10f2c0 is opaque. This is not the8-byte condition-pointer vector or a full refcount/ownership proof.
+- Body0xf84d0 saves its actual supplied receiver inX22. The retained source then loads its+216/+224 action range, dispatches the first entry pointer's primary slot0, acquire-loads scene byte248 after normal return, and advances16 only on zero. Nonzero leaves the loop; empty range has a separate cleanup entry. Selected slot0 at AP0x21cc50 really contains0x1301e0, but this packet neither repeats nor executes that action body.
+- The one-entry remainder path really loads its first pointer and calls0x1303a0; the entire getter is BTI/LDRB action+8/RET. Its low-byte test is separate from scene248/249 and condition176. A false marker can reach a local nanosleep request and, following normal local continuation, a scene248 acquire test; nonzero scene248 can reach cleanup even while the selected action marker was false. No all-actions-complete, elapsed-wait, cancellation or successful-effect claim is supported or made.
+- The retained normal cleanup block release-stores zero to original scene249 then original scene248, before its canary/epilogue RET. This verifies block ordering and same-receiver addresses; intermediate diagnostics/helpers and path occurrence remain conditional. It is not an exhaustive whole-function control-flow, concurrent-lifetime or global reset proof.
+
+The report correctly keeps action marker8, scene248/249, receiver vector216/224/232, pair16, action152 and control24 in different object/numeric namespaces. It retains valid dynamic objects/ranges, ordinary provider returns, relevant no-mutation/lifetime and selected normal-caller premises. No installed scene, natural order, physical command, complete ownership, safety/defect or public protocol meaning is inferred. Receiving/transport/authentication/session/framing/MQTT/libjel bodies remain closed.
+
+History/alias review: v1's strict BL-site assertion failed before generated evidence. Exact old report/script/failure and parent snapshot are retained and match VERSION_HISTORY.v2.json. The v2 change preserves strict opcode/target checking at the actual0x100064. The failure note is an honest later transcription, not a contemporaneous terminal-file claim. **first-candidate/REPORT.md deliberately contains authoritative REPORT.v2.md bytes**, while the area-root REPORT.md retains the different v1 bytes. I verified this alias intentionally, all15 index members and exact copy hashes; no historical report was overwritten. A source review must not accidentally pin root REPORT.md as authoritative.
+
+Exact authoritative pins:
+
+- REPORT.v2.md: `0e960fe9a386c15467227feb382366becd285b324e59eed7eb5c01d0f386df64`.
+- collect_gate_v2.py: `2c15c188e6171d8eaa1b071f713ebd23f0f7e8b35f2bf5e7f77b1d623ad3dd76`.
+- OUTPUT_MANIFEST.json: `9684a17f943d774f21ca19b4e43e946e485814b478d6284709a46bfcaf03b2e1`.
+- first-candidate/INDEX.json: `a3d9d09e715497caba4a903e85cf689c15bafb0a63b1f791642e5ece9180a27a`.
+- VERSION_HISTORY.v2.json: `d1bc91ed8e577972a3c98669ab1742a61f184784a5b8058a82c99c3e87d7f055`.
+
+No source/report correction is requested. This is a bounded static source/provenance/reproducibility review, adding zero original execution or runtime corpus.

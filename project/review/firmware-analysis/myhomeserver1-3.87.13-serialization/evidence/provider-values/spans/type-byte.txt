@@ -1,0 +1,9 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/usr/lib/libjsoncpp.so.1.9.5:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00014e3c <_ZNK4Json5Value4typeEv@@Base>:
+   14e3c:	7a00      	ldrb	r0, [r0, #8]
+   14e3e:	4770      	bx	lr

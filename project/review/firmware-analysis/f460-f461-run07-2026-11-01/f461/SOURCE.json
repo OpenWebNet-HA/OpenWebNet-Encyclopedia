@@ -1,0 +1,256 @@
+{
+  "guards": [
+    {
+      "VA": "0xcc3c",
+      "word": "0xaa0003f4"
+    },
+    {
+      "VA": "0xcc4c",
+      "word": "0x97fff521"
+    },
+    {
+      "VA": "0xcc50",
+      "word": "0x121d7801"
+    },
+    {
+      "VA": "0xcc54",
+      "word": "0x7100403f"
+    },
+    {
+      "VA": "0xcc58",
+      "word": "0x540005a0"
+    },
+    {
+      "VA": "0xcc5c",
+      "word": "0x71004c1f"
+    },
+    {
+      "VA": "0xcc60",
+      "word": "0x7a5a1804"
+    },
+    {
+      "VA": "0xcc64",
+      "word": "0x54000d40"
+    },
+    {
+      "VA": "0xcc68",
+      "word": "0x7100581f"
+    },
+    {
+      "VA": "0xcc6c",
+      "word": "0x54000da0"
+    },
+    {
+      "VA": "0xce20",
+      "word": "0xb0000100"
+    },
+    {
+      "VA": "0xce24",
+      "word": "0x91074000"
+    },
+    {
+      "VA": "0xce28",
+      "word": "0x97fff476"
+    },
+    {
+      "VA": "0xce2c",
+      "word": "0xf9000280"
+    },
+    {
+      "VA": "0xce30",
+      "word": "0x17ffffbb"
+    },
+    {
+      "VA": "0xe464",
+      "word": "0xaa0003f5"
+    },
+    {
+      "VA": "0xe474",
+      "word": "0x97ffef17"
+    },
+    {
+      "VA": "0xe47c",
+      "word": "0x121d7801"
+    },
+    {
+      "VA": "0xe484",
+      "word": "0x7100403f"
+    },
+    {
+      "VA": "0xe48c",
+      "word": "0x540005e0"
+    },
+    {
+      "VA": "0xe490",
+      "word": "0x71004c1f"
+    },
+    {
+      "VA": "0xe494",
+      "word": "0x54000ae0"
+    },
+    {
+      "VA": "0xe498",
+      "word": "0x7100581f"
+    },
+    {
+      "VA": "0xe49c",
+      "word": "0x54000b40"
+    },
+    {
+      "VA": "0xe604",
+      "word": "0xf00000e0"
+    },
+    {
+      "VA": "0xe608",
+      "word": "0x910de000"
+    },
+    {
+      "VA": "0xe60c",
+      "word": "0x97ffee7d"
+    },
+    {
+      "VA": "0xe610",
+      "word": "0xf90002a0"
+    },
+    {
+      "VA": "0xe614",
+      "word": "0x17ffffd1"
+    }
+  ],
+  "image_alias_metadata": {
+    "usr/lib/liblghal.so.1": "liblghal.so.1.0.0"
+  },
+  "import_proofs": [
+    {
+      "PLT": "0xa0d0",
+      "PLT_bytes": "100200b0116244f91002239120021fd6",
+      "call": "0xe474",
+      "relocation": "000000000004b8c0  0000018300000402 R_AARCH64_JUMP_SLOT    00000000000251b0 hal_board + 0",
+      "slot": "0x4b8c0"
+    },
+    {
+      "PLT": "0xa0d0",
+      "PLT_bytes": "100200b0116244f91002239120021fd6",
+      "call": "0xcc4c",
+      "relocation": "000000000004b8c0  0000018300000402 R_AARCH64_JUMP_SLOT    00000000000251b0 hal_board + 0",
+      "slot": "0x4b8c0"
+    },
+    {
+      "PLT": "0xa000",
+      "PLT_bytes": "100200b0112e44f91062219120021fd6",
+      "call": "0xe60c",
+      "relocation": "000000000004b858  0000002600000402 R_AARCH64_JUMP_SLOT    0000000000000000 strdup@GLIBC_2.17 + 0",
+      "slot": "0x4b858"
+    },
+    {
+      "PLT": "0xa000",
+      "PLT_bytes": "100200b0112e44f91062219120021fd6",
+      "call": "0xce28",
+      "relocation": "000000000004b858  0000002600000402 R_AARCH64_JUMP_SLOT    0000000000000000 strdup@GLIBC_2.17 + 0",
+      "slot": "0x4b858"
+    }
+  ],
+  "models_fixtures": 0,
+  "new_original_execution": 0,
+  "originals": {
+    "HAL": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          239876,
+          239876,
+          65536
+        ],
+        [
+          1,
+          6,
+          241416,
+          306952,
+          306952,
+          4488,
+          4752,
+          65536
+        ]
+      ],
+      "bytes": 247928,
+      "requested_image_path": "/usr/lib/liblghal.so.1",
+      "resolved_image_path": "/usr/lib/liblghal.so.1.0.0",
+      "sha256": "c0f9c41de5c3380efa69a9ccecb9a3fd5ef558c151150197cc366199f1a81863"
+    },
+    "device": {
+      "PT_LOAD": [
+        [
+          1,
+          5,
+          0,
+          0,
+          0,
+          179926,
+          179926,
+          65536
+        ],
+        [
+          1,
+          6,
+          180888,
+          246424,
+          246424,
+          3568,
+          31472,
+          65536
+        ]
+      ],
+      "bytes": 186616,
+      "requested_image_path": "/home/bticino/bin/bt_device",
+      "resolved_image_path": "/home/bticino/bin/bt_device",
+      "sha256": "6b8f20afc427fa4647f7de9d4101e265073565ecd5113d8ab5535385e312faad"
+    }
+  },
+  "safe_compiled_literals": {
+    "0x2d1d0": "134",
+    "0x2d378": "F461"
+  },
+  "selected_contract": {
+    "code_output_pointer": "originalX0 savedX20; requeststrdup134thenstore[X20]",
+    "codename_output_pointer": "originalX0 savedX21; requeststrdupF461thenstore[X21]",
+    "function_integer_return_status": "not established",
+    "opaque_board_result": 22,
+    "scope": "Conditional puregetter compiletimebranches, not installed/hardware identity or a demonstrated permitted caller"
+  },
+  "spans": [
+    {
+      "VA": "0xcc20",
+      "end_exclusive": "0xcc70",
+      "sha256": "bd1a2725d660698f9a4e60e4c8c7cce7808da1f26b9fbc5bc62306b511259e0c"
+    },
+    {
+      "VA": "0xce20",
+      "end_exclusive": "0xce34",
+      "sha256": "775bf17638f8dca21d43dd72e4f1567fad805c35e70a450fb6802dc3c027990b"
+    },
+    {
+      "VA": "0xcd1c",
+      "end_exclusive": "0xcd4c",
+      "sha256": "69b1e0caad3e05dea0ac6c04d13ef50489bc3f89bc70bedc1b63092dee38f68a"
+    },
+    {
+      "VA": "0xe440",
+      "end_exclusive": "0xe4a0",
+      "sha256": "7b31089275a05947970443f685d5de53fce197718be4bbb77384059c42013deb"
+    },
+    {
+      "VA": "0xe604",
+      "end_exclusive": "0xe618",
+      "sha256": "da8f1f85e8d3a4bbc7849a0372c7fde9f860a28b3310458f4c3a57bf919e37be"
+    },
+    {
+      "VA": "0xe558",
+      "end_exclusive": "0xe58c",
+      "sha256": "7aaf5bf918b4e22b2ac85f8a3e85e9b387ce55a9ec8144d1be43f8e11e5e5c6c"
+    }
+  ]
+}

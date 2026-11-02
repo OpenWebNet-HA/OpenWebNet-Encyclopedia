@@ -1,0 +1,73 @@
+{
+  "D0_after_hex": "bff0000000000000",
+  "EXIT_callbacks": 1,
+  "PC_trace": [
+    "0x171c4",
+    "0x171c6",
+    "0x171c8",
+    "0x171ca",
+    "0x171cc",
+    "0x171ce",
+    "0x171d0",
+    "0x171d2",
+    "0x171d4",
+    "0x171d6",
+    "0x171da",
+    "0x14e3c",
+    "0x14e3e",
+    "0x171de",
+    "0x171e0",
+    "0x171e2",
+    "0x1724e",
+    "0x17252",
+    "0x171fe",
+    "0x17200",
+    "0x17202",
+    "0x17204",
+    "0x17206",
+    "0x17208",
+    "0x1720a",
+    "0x1720c",
+    "0x17210",
+    "0x17212",
+    "0x17214"
+  ],
+  "case": "negative-one",
+  "code_hook_steps": 31,
+  "entry_Thumb": "0x171c5",
+  "guard_stop_callbacks": 0,
+  "input_hex": "bff0000000000000",
+  "linker_redirect_callbacks": 1,
+  "object_address": "0x50000000",
+  "object_after_hex": "000000000000f0bf03000000000000000000000000000000",
+  "object_before_hex": "000000000000f0bf03000000000000000000000000000000",
+  "original_code_visits": 29,
+  "phase": "asDouble",
+  "redirect_trace": [
+    {
+      "PLT_VA": "0xb768",
+      "target_Thumb": "0x14e3d"
+    }
+  ],
+  "returned": true,
+  "same_constructed_object_no_reseed": true,
+  "setup_data_relocations": 0,
+  "writes": [
+    {
+      "address": "0x5100ffd4",
+      "bytes": 4
+    },
+    {
+      "address": "0x5100ffd8",
+      "bytes": 4
+    },
+    {
+      "address": "0x5100ffdc",
+      "bytes": 4
+    },
+    {
+      "address": "0x5100ffcc",
+      "bytes": 4
+    }
+  ]
+}

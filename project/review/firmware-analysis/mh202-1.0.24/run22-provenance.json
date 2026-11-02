@@ -1,0 +1,130 @@
+{
+  "checkpoint": "run22",
+  "status": "two independent firmware source/isolation areas plus independently reviewed frozen navigation; documentary integration separate; overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run22/REPORT.md",
+      "source_sha256": "35369bef23a8032dc0553a5dc4c75717f6d79625e7695d463ff50e8e5b73ee49",
+      "published": "run22-protocol-report.txt",
+      "published_sha256": "35369bef23a8032dc0553a5dc4c75717f6d79625e7695d463ff50e8e5b73ee49"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run22/protocol-review.md",
+      "source_sha256": "cca3f4fe735f6bf8655fa92563715daee292d414fe85097f9e3c13e5d4b8985e",
+      "published": "run22-protocol-review.txt",
+      "published_sha256": "cca3f4fe735f6bf8655fa92563715daee292d414fe85097f9e3c13e5d4b8985e"
+    },
+    {
+      "role": "report",
+      "area": "alarm",
+      "research_path": "work/mh202-firmware/research/2026-10-30/alarm/run22/REPORT.md",
+      "source_sha256": "9d47e1b79578fd6e97765d1392d1d6afdacd078e7ca81b01ad743d4e5748e43a",
+      "published": "run22-alarm-report.txt",
+      "published_sha256": "9d47e1b79578fd6e97765d1392d1d6afdacd078e7ca81b01ad743d4e5748e43a"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "alarm",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run22/alarm-review.md",
+      "source_sha256": "6d22c5eabc20833b6ba811bf117e738a73178a82f1046372cd97e735f0f1d908",
+      "published": "run22-alarm-review.txt",
+      "published_sha256": "6d22c5eabc20833b6ba811bf117e738a73178a82f1046372cd97e735f0f1d908"
+    },
+    {
+      "role": "frozen_navigation_not_new_firmware_evidence",
+      "area": "navigation",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run22/SCOPED_FINDINGS.md",
+      "source_sha256": "51ac5cd6b94064e18e121b519480c7026dd0e4492b54a563b3ba04d59ad1fb85",
+      "published": "run22-findings-index.txt",
+      "published_sha256": "51ac5cd6b94064e18e121b519480c7026dd0e4492b54a563b3ba04d59ad1fb85"
+    },
+    {
+      "role": "frozen_navigation_data",
+      "area": "navigation",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run22/SCOPED_FINDINGS.json",
+      "source_sha256": "636c284114ef156012546346854a34dccb40413c8813a2435137ae76f7102eb6",
+      "published": "run22-findings-index.json",
+      "published_sha256": "636c284114ef156012546346854a34dccb40413c8813a2435137ae76f7102eb6"
+    },
+    {
+      "role": "frozen_exact_report_source_pins",
+      "area": "navigation",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run22/SOURCE_PINS.json",
+      "source_sha256": "e3173a27f60a327b2f6abf9c849de75882b6da65d2b1e40467199c3aa3e7b796",
+      "published": "run22-findings-source-pins.json",
+      "published_sha256": "e3173a27f60a327b2f6abf9c849de75882b6da65d2b1e40467199c3aa3e7b796"
+    },
+    {
+      "role": "independent_navigation_reproducibility_review_not_full_semantic_reaudit",
+      "area": "navigation",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run22/findings-index-review.md",
+      "source_sha256": "b14a50a48754262ad465981107785abb80558b1006f45a6a8e4e13ca4c9a738d",
+      "published": "run22-findings-index-review.txt",
+      "published_sha256": "b14a50a48754262ad465981107785abb80558b1006f45a6a8e4e13ca4c9a738d"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run22/collect_evidence_v1.py",
+      "sha256": "59372af7cf6c46c903247e2b7bc41dbc4fcbadd3b0f7f6f326f75ad6277fd2be",
+      "method": "static source/saved serializer arrays; immutable firstv1"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run22/emulate_serializer_v1.py",
+      "sha256": "624a7215d57a2b4e6e75b888862a9b5e6076acba3063f06a836606e955d9e71d",
+      "method": "four original parse/serialize entries with originalGLibforeach/paramcallbacks and explicit private API models"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/alarm/run22/collect_registration.py",
+      "sha256": "eecc1e4e7d45ab7e4bef7bb1f1d5e1a768d41f549dee5e71da9d12868998961d",
+      "method": "static non-transport initialization/config/pointer evidence; immutablefirstcandidate"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run22/build_scoped_findings.py",
+      "sha256": "ad9bac56cb7f3804cc82ec2feed6efa2898eab2c43fefa08048c03d844071e86",
+      "method": "frozen checkpoint21 navigation/sourcepin builder only; zero original execution"
+    }
+  ],
+  "canonical_execution": {
+    "new_corpus": {
+      "top_level_entries": 4,
+      "original_instruction_visits": 894,
+      "primitive_callbacks": 75,
+      "linker_redirect_callbacks": 3,
+      "exit_boundaries": 4,
+      "stop_boundaries": 0,
+      "code_hook_visits": 976,
+      "setup_data_relocation_writes": 4,
+      "private_sessions": 2,
+      "original_GLib_foreach_visits_subset": 18,
+      "original_parameter_callback_visits_subset": 52
+    },
+    "cumulative": {
+      "corpora": 14,
+      "top_level_entries": 68,
+      "original_instruction_visits": 31581,
+      "primitive_callbacks": 3140,
+      "linker_redirect_callbacks": 128,
+      "exit_boundaries": 24,
+      "selector_read_stop_boundaries": 2,
+      "code_hook_visits": 34875,
+      "firmware_processes": 0,
+      "target_OS_calls": 0
+    },
+    "count_scope": "Includes reused652parser prep plus242serializer originalvisits; not all newPCs. Earlier13corpora frozen, replaysnotaccumulated; alarm/navigation0."
+  },
+  "navigation_scope": {
+    "rows": 24,
+    "reports": 28,
+    "through_checkpoint": 21,
+    "current_run22_findings_included": false,
+    "no_new_firmware_execution": true,
+    "does_not_claim": "Coverage percentage or independent semantic re-audit of every old claim"
+  }
+}

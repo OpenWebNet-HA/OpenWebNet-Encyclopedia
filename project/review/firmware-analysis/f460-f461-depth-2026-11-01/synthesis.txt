@@ -1,0 +1,7 @@
+# Parallel selected binary-source findings
+
+F460 now has a fresh original AArch64 connection from a raw SleepAction serializer through the same JSON result and reparse to its compiled field and callable binding. This supports selected representation/dataflow understanding without transferring MHS layouts, claiming a universal roundtrip, invoking the callable or assigning elapsed units.
+
+F461 now has original automation plugin descriptor relocations, registration request and a packaged candidate registry consumer that calls the initializer slot, plus its own direction/representation/category gates. Natural registry loading, effective binding, outer translator invocation, accepted traffic, output and public/physical meanings remain open.
+
+These are new source paths beyond the prior inventory. Both original packages and all earlier dossiers remain unchanged. No new original execution or semantic fixture was performed.

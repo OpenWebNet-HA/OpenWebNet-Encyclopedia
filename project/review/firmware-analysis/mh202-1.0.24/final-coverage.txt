@@ -1,0 +1,34 @@
+# MH202 1.0.24 - final coverage matrix
+
+This matrix summarizes the bounded examination through source checkpoint28. It is not a percentage, complete support inventory or full-source review. Detailed source identities, ELF addresses, reproduction methods and corrections remain in the linked reports and review capsule. Final integrity and documentary checks are separate from firmware execution.
+
+| Area | Established evidence | Remaining boundary |
+| --- | --- | --- |
+| Archive and inventory | Exact archive/extracted identities; normal/recovery and selected vendor-file comparisons; package/file joins | Installed state, full SBOM and universal capability/version claims |
+| WHO17 scheduler | Dispatch, numeric loader/gap policy, callbacks, stop/control state, restoration and always-start source | Configured extra4 scripts, complete natural lifecycle, successful child/process behavior |
+| Readiness and panic | Separate query cursor/readiness and shared command gate; selected panic/mode4 setters | Complete gate clearing, production reset/configuration and callback effects |
+| Interpreter | Selected numeric records/IIF, calendar/time, copy/action guard, SLEEP, GOTO/BEGIN-head and logical-state source | Full configured grammar/precedence, globals/capacity, natural condition-to-action execution |
+| Variables and IPC | Separate direct WHO17 slots, event caches and named interpreter records; S/F/E joins; local -r/-w path/open/global/read-API dataflow | Actual variable bridge, dedicated R/P producers, delivery, liveness and full cleanup |
+| Trigger matching | Original ordinary comparator and common-parser normalizer/selected bracket-level cases; two special prefixes stopped before selector read | Production special DIM1 selector history, full configured trigger language and physical matching |
+| COSO architecture | Fresh descriptor/dispatcher/key/status/metadata/provider source, selected routing and record ownership | Installed active registry/order/provider, complete queue/callback/lifetime and natural causal exchanges |
+| Scenario, lighting and automation | Selected translations, callback/pending/query/ID/timer/software-receipt policies and synchronizer source | Complete address/parameter domains, active state, natural feedback, physical receipt/actuation |
+| Temperature | Selected WHO4 forward/reverse formatting and thermo query/status-data/timeout source | Units/signedness/error meaning of raw scalars, outer admission/correlation and real measurements |
+| WHO9 auxiliaries | Selected translation/STM source; original parser-to-selector4 distinct object/envelope copy | Complete optional copy/lifetime, natural STM/queue/physical exchange |
+| WHO22 sound and WHO5 alarm | Selected translation/state/deadline/configuration and conditional alarm registration; exact COSO parse/serialize candidate cases | Active configuration/providers, upstream raw admission, actual timer/output and physical meaning |
+| WHO25 | Fresh translator and own24-byte STM source; manual original core/parser/new-ID/initializer/application join; packaged GSource ownership contract | Natural dispatch/feedback, real sources/timers/publication, complete lifetime/support and physical behavior |
+| WHO14 and WHO15 | Selected translator/address/configuration premises and separate own STM policies | Full public domain/support, active providers/configuration and physical behavior |
+| WHO29 | Positive packaged debug-plugin owner/criterion/exact-WHO check and one bounded getter/constructor-call path | Activation/current logger state, constructor output/wire/public grammar and exclusive ownership |
+| Diagnostics | Factory/map/header/raw-pointer/object/consumer/qualification source; original selected normal builder/parser endpoint | Coherent upstream raw decoder/registry/C++ streams/caller state, production marker and physical identity/data |
+| Web | PHP WHO17 command/status/index consumers and XML-id/gap distinctions | Actual configured data/PHP/browser/service execution and session/transport behavior |
+| Boot and recovery | Daemon environment/mode/XML/child/marker/provider policy; selected device-write requests | Actual boot/service readiness, drivers, physical reset/watchdog behavior and full recovery |
+| Configuration and update | Header/checksum/validator/copy/writer/default/helper-return source | Real I/O/short-read/write/child results, complete validity, rollback, durability and cryptographic authorization |
+| Components | Selected original PHP CLI5.2.13 versus module5.1.6, GLib2.28.7 and normal/recovery metadata/aliases | Running-service inventory, full SBOM or vulnerability assessment |
+| Missing resources | Concrete extra2 language and extra4 script/index consumers | Referenced2.xtz/4.xtz and mounted/configured contents are absent |
+| Authentication/session | Stopped branch retained as closed | No new authentication/handshake/framing result or equivalent retry |
+| Encyclopedia integration | Reviewed build profile, focused continuations, bounded WHO notes, retained correction/snapshot evidence | Wider Device/source gates remain pending; source review does not promote support/physical claims |
+
+Fifteen canonical isolated corpora contain **71 top-level entries**, including2 prefixes stopped before selector consumption: **31,961 original instruction visits +3,165 declared primitives +132 original-definition redirects +27 EXIT returns +2 selector stops =35,287 hooks**. Setup writes, nested calls, subset GLib visits and verification replays are not additional entries or coverage. Original firmware processes, target OS calls, services, PHP/JavaScript, gateway and bus operations remain0. Most other findings are static source or explicit finite host models.
+
+The frozen24-row through21 guide,2-row run22 supplement and9-row23..27 guide retain their own historical scopes. Later source28 findings are separately reviewed. Navigation row counts are not coverage or a semantic re-audit. Run18/run21 unavailable intermediate generated-draft histories remain unverified; exact announced snapshots and current source reviews do not restore missing bytes. The inherited31 tooling tests and210 Device checks are not new firmware tests.
+
+See [final report](FINAL_REPORT.md), [ranked remaining questions](REMAINING_QUESTIONS.md), [final verification](validation/final/final-checkpoint.json), [evidence index](EVIDENCE_INDEX.json) and the [encyclopedia profile](../../../../OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/mh202-1.0.24.md). Earlier checkpoint matrices remain preserved in retained snapshots and run history.

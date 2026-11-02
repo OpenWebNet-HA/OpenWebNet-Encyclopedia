@@ -1,0 +1,29 @@
+# MH202 COSO/run19 independent source review
+
+**PASS. No correction requested.** The selected WHO9 auxiliary translation/STM evidence agrees with original source, exact bytes, provider metadata and the finite host ledger. This review ran only the static collector and independent host read/ELF checks; no ARM/parser/codec/STM/vendor process, emulator, target OS or I/O ran. All new original/native/primitive/redirect/EXIT/stop/hook counts remain0.
+
+`collect_evidence.py --check` reproduced19 outputs plus manifest. Separately mapped original ELF PT_LOAD segments and verified all4 original identities,12 raw spans/file offsets,36 words,2 literal targets and22 author-manifest entries. I inspected selected original disassembly and fixed table targets against the one supplied forward/reverse ledger, rather than treating expected host values as independent native results.
+
+## Source and scope checks
+
+- Actual aux TR registration appends9 to descriptor+52/+56; its+40 relocation identifies0x1ab0. STM registration appends9, with distinct field0x1688/application0x1788 callbacks. Direction pairs1/2 and2/1 select reverse/forward; those selectors, WHO criterion9, parsedkind1, envelope type/representation and opcode9B remain separate namespaces. No loaded outer registry/order is proved.
+- Application source converts WHERE and uses unsigned<=15, then selected parsedkind1 converts WHAT and uses unsigned<=10 before appending the same input and requesting a local queue ACK. Coherent supplied parsed fields/actual outer callback selection and ordinary strtol/container/provider behavior remain premises. These STM guards are not silently attributed to the standalone translator or the public accepted grammar.
+- The actual WHAT3 table target0x17a8->0x18c0 supplies byte9B (low byte of original mvn result) and low nibble0. Header B0/00 and shifted WHERE5 form bytes B0 00 9B 50; source hex formatter yields ASCII B0009B50 under declared ordinary imports. This is a static internal body candidate, not an executed codec/serial frame or evidence that touchscreen status0/1 covers all ordinary WHATs.
+- The selected forward output uses g_malloc64, not zero-allocation. Core prepare-brief stores type40=3/repr56=1/route48=9; prepare_scs_from_open copies exact source offsets4/8/12/16/24/28/32/36/44/60. Neither selected body initializes status52. Envelope metadata44 is distinct from parsedkind44. No status0, completely initialized record, defect or memory-safety conclusion follows.
+- Reverse type3/9, high-nibble B0, opcode9B and final low0 guards/table target yield WHAT3 and WHERE5; format *9*%d*%d## gives *9*3*5##. The input status is explicitly separately supplied, not a physically returned forward object. Core scsmsg_to_openlist allocates/duplicates text without parsing it, sets type2/repr2/route9/meta4=2/meta8=0, copies source status52/ID60 and selected metadata, and calls no new_id. Unspecified g_malloc fields remain unspecified.
+- Field handler admits coherent parsedkind1 and forwards same envelope with metadata8=3, then requests imported new_openmsg_from_openmsg(4,parsed). Selector4's clone/output meaning remains unresolved; it is not renamed an ACK or known parsedkind. The original private8-byte context is distinct from envelope offsets. Counter+4 increments; signed private0<0 skips ACK, positive selects ACK, zero selects it only when incremented count15. Selected ACK then resets private0 to-1/count0 in the displayed source. No actual timing, universal receipt, complete query policy or hardware completion is claimed.
+- Candidate DT_NEEDED/import/definition relations are correctly conditional. Aux plugins import core helpers without directly NEEDED libcoso; actual loader/global namespace closure and binding remain open. Decoder/normal numeric/string/allocator/list completion, record lifetime, natural queue/transaction, transport and physical auxiliary behavior are not supplied by one host composition.
+
+The report's one forward/reverse host ledger and precise status/namespace limits agree. No source-author refinement or overwritten prior draft was needed for this review. No old corpus or prior F454 object/layout was replayed or transferred.
+
+## Exact reviewed pins
+
+Research-root-relative paths:
+
+| Artifact | SHA256 |
+|---|---|
+|`coso/run19/REPORT.md`|`59ef9ce56f6344b6ce9ea1ea9fff36ddfe8283e6968bac0a4075cd7810633e05`|
+|`coso/run19/collect_evidence.py`|`fab1498ff4366b3b214a69af33a5b0207fbc630a737096693043496788af0b84`|
+|`coso/run19/author-manifest.json`|`259d4f88461f2fa897cf43250d5f5ff1cc0e16c63107cc2fe469a606196e1093`|
+
+Reviewer wrote only this review. No author artifact, completed dossier, original image, synced source or repository documentation changed.

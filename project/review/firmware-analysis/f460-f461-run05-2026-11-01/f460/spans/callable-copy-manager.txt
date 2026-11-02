@@ -1,0 +1,24 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000f5350 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x51b70>:
+   f5350:	d503245f 	bti	c
+   f5354:	34000162 	cbz	w2, f5380 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x51ba0>
+   f5358:	7100045f 	cmp	w2, #0x1
+   f535c:	540000c0 	b.eq	f5374 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x51b94>  // b.none
+   f5360:	7100085f 	cmp	w2, #0x2
+   f5364:	54000060 	b.eq	f5370 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x51b90>  // b.none
+   f5368:	52800000 	mov	w0, #0x0                   	// #0
+   f536c:	d65f03c0 	ret
+   f5370:	f9400021 	ldr	x1, [x1]
+   f5374:	f9000001 	str	x1, [x0]
+   f5378:	52800000 	mov	w0, #0x0                   	// #0
+   f537c:	d65f03c0 	ret
+   f5380:	f00010e1 	adrp	x1, 314000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1bd070>
+   f5384:	9138c021 	add	x1, x1, #0xe30
+   f5388:	f9000001 	str	x1, [x0]
+   f538c:	52800000 	mov	w0, #0x0                   	// #0
+   f5390:	d65f03c0 	ret

@@ -1,0 +1,19 @@
+{
+  "approved_original_files_per_product_view": [
+    "sbin/init: ONLY safe caller selector/loop and hwtosys reference lines with bounded necessary context",
+    "etc/init.d/scripts/S10rtc_verify: bounded nonsecret script source",
+    "bin/hwtosys.tcl: bounded nonsecret script source"
+  ],
+  "decision_UTC": "2026-11-02T08:35:13.276581+00:00",
+  "exclude_proposed_unneeded": "bin/systohw.tcl not selected; no body reads or extra caller search for it",
+  "new_original_execution": 0,
+  "order": "Save actual author SCOPE.json before first approved body read, then compile\u2192generate\u2192check with every failed predecessor stopping dependents. Parent snapshots before any correction; NEWversions/firstcopies; originalsreadonly.",
+  "products_and_views": [
+    "F453AV normal",
+    "F453AV recovery",
+    "MH200N normal",
+    "MH200N recovery"
+  ],
+  "proposal": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/source-component/QUALIFICATION_PROPOSAL.json",
+  "scope_limit": "Selected Tcl/script source only, no hwclock/rtc-rw/Tcl/runtime provider binary bodies, no options/profile/private values. Treat file/device/clock/copy/command requests as requests with provider/environment/normalreturn premises; no actualhardware/time/readiness/installed overlay claim. No extra bodies without new proposal."
+}

@@ -1,0 +1,407 @@
+{
+  "scope": "Exact current source reports and nonsecret original-code/metadata evidence; no vendor binaries/configured scenes/raw databases",
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/METHOD.json",
+      "published": "evidence/catalogue/METHOD.json",
+      "size": 1134,
+      "sha256": "852651849508c4239db2f34083bae2198a82eff011c328d9e8fc6d8a99cb9478"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/caller-false-result.txt",
+      "published": "evidence/catalogue/caller-false-result.txt",
+      "size": 175,
+      "sha256": "1d77483da78db3a85da89ed09e709836954451d21cda2a40ae81f3090bb7094e"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/caller-open-and-dependent-setup.txt",
+      "published": "evidence/catalogue/caller-open-and-dependent-setup.txt",
+      "size": 897,
+      "sha256": "84f6d6586780d63885d7d155f3cc7b16f207f22e87cb5e3f346fa5049080aa17"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/candidate-sqlite-open-wrappers.txt",
+      "published": "evidence/catalogue/candidate-sqlite-open-wrappers.txt",
+      "size": 295,
+      "sha256": "4e9617534336c887b1e888ac2cff35fc92c708e3abf99e3f2dda47c93546340b"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/input-manifest.json",
+      "published": "evidence/catalogue/input-manifest.json",
+      "size": 1510,
+      "sha256": "dba1ea96ec1dc5ec51a263a7d4934a23b11b629c21bc87d57766845e81404503"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/original-source-provenance.json",
+      "published": "evidence/catalogue/original-source-provenance.json",
+      "size": 5769,
+      "sha256": "35efd45c83964eb25d11be1519aa2432c52a75946c6f039a020d5e614c064f3b"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/ownership-and-controlflow.json",
+      "published": "evidence/catalogue/ownership-and-controlflow.json",
+      "size": 3532,
+      "sha256": "f351b920b0d259fecb864bc30c312239a4045029786828a06ed3cdba5ef3ad4b"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/reader-finalize-close-error-exits.txt",
+      "published": "evidence/catalogue/reader-finalize-close-error-exits.txt",
+      "size": 1574,
+      "sha256": "569c0a3e955a237474bda9fdc443be41b3560354e5af6111c6bbc446123f7d32"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/reader-path-stat-open-prepare.txt",
+      "published": "evidence/catalogue/reader-path-stat-open-prepare.txt",
+      "size": 1747,
+      "sha256": "42442692151bbbe603d4253592e20712a8366954363a168dd8724a1405e42b86"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/reader-step-column-stores.txt",
+      "published": "evidence/catalogue/reader-step-column-stores.txt",
+      "size": 1202,
+      "sha256": "c1229d5923c3ebd57547f89da558a5153eb781a1ceeae6c65f3ca8eb505bcc55"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/selected-ELF-and-imports.json",
+      "published": "evidence/catalogue/selected-ELF-and-imports.json",
+      "size": 8412,
+      "sha256": "c309244cd2655b1837d6498e88a0e7146fc275223b90d9aefeace32443643b94"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/selected-static-SQL-constructor-request.txt",
+      "published": "evidence/catalogue/selected-static-SQL-constructor-request.txt",
+      "size": 1620,
+      "sha256": "5d4ff9ea7ca34eb3fbdb961315a6586755c3c7d08db7b2e464616e027b0c703e"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/sqlite-close-interworking-PLT.txt",
+      "published": "evidence/catalogue/sqlite-close-interworking-PLT.txt",
+      "size": 484,
+      "sha256": "de8f1ba996a6c46b88fe2c9f7de3977adc27894bdab900f8f581e41e7e155264"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/string-copy-helper.txt",
+      "published": "evidence/catalogue/string-copy-helper.txt",
+      "size": 2898,
+      "sha256": "c3ddffc8bd543cb1c41c6ac3c59d06d18817bb316b4caa2dcef3e7f9f139ab92"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/two-handle-catalogue-opener.txt",
+      "published": "evidence/catalogue/two-handle-catalogue-opener.txt",
+      "size": 2283,
+      "sha256": "77311dc8aae237348a435a4950c35c9538fe391e5495e1f2ba33e3ab26e5a01e"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/output-manifest.json",
+      "published": "evidence/catalogue/output-manifest.json",
+      "size": 2615,
+      "sha256": "6f4dc6d78962ac70a07f920d7f783c16516c6d0b38f94cf0792c7eaf33bf5489"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/CONFIG_SCOPE.v1.json",
+      "published": "evidence/scheduler/CONFIG_SCOPE.v1.json",
+      "size": 401,
+      "sha256": "fc6155440bd52ba721772eeea4ef66d89a9c2ba086b449b5a70c0ec6df4a81a6"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/CRITICAL_BYTES.v1.json",
+      "published": "evidence/scheduler/CRITICAL_BYTES.v1.json",
+      "size": 625,
+      "sha256": "ca90b9f37538ec539309a99b95bfca8eafa1a8599a818979d89fd5cc7c6a328a"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/DIRECT_CALLS.v1.json",
+      "published": "evidence/scheduler/DIRECT_CALLS.v1.json",
+      "size": 1893,
+      "sha256": "900db08b1376335d78bec8dd4da953b79a65cea52df26589289d09644d9ec664"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/FUNCTION_BOUNDARIES.v1.json",
+      "published": "evidence/scheduler/FUNCTION_BOUNDARIES.v1.json",
+      "size": 813,
+      "sha256": "fc710f1da986e6448845e78710943670e8860c5d0c8b0376f7483d4081e5b660"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/INPUTS.v1.json",
+      "published": "evidence/scheduler/INPUTS.v1.json",
+      "size": 1249,
+      "sha256": "d2eeafb9e97543b88d7a0971571a2577e479c30b7e34389242a71a21f99d0e54"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/METHOD.v1.json",
+      "published": "evidence/scheduler/METHOD.v1.json",
+      "size": 773,
+      "sha256": "a88b24f5cf7b951195435e392a0d422ea7bbc8ab5fc95965b858d56c17c9c91b"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/PIC_LITERALS.v1.json",
+      "published": "evidence/scheduler/PIC_LITERALS.v1.json",
+      "size": 5360,
+      "sha256": "4835e9422428f25e86503b5d13ac44f37ec772860494282fec253d9d03b2c10b"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/PROVIDERS.v1.json",
+      "published": "evidence/scheduler/PROVIDERS.v1.json",
+      "size": 2555,
+      "sha256": "61749c5ebc439d90443c517439eb3e3557a7bf2946907c8321781ebfa6bd2a8d"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/SOURCE_SPANS.v1.json",
+      "published": "evidence/scheduler/SOURCE_SPANS.v1.json",
+      "size": 4845,
+      "sha256": "1dfeedf4e1e465a83fbdc3332278289429f61d37b6972f713711cc2a8408bf4b"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/directory-loader.txt",
+      "published": "evidence/scheduler/spans/directory-loader.txt",
+      "size": 11842,
+      "sha256": "92a59b67c44a3fc58e77359f76a0d1b8878a42dde8cfeb24513e3ccd660db6b1"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/extension-helper.txt",
+      "published": "evidence/scheduler/spans/extension-helper.txt",
+      "size": 7117,
+      "sha256": "5474a1429375f7486818ccb6f2cde80aac654e7b7069af8efb1f794b3b1f3a87"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/file-constructor-prefix.txt",
+      "published": "evidence/scheduler/spans/file-constructor-prefix.txt",
+      "size": 7395,
+      "sha256": "8bb96af066b8a465b67fdc3189cbaae024cddaee2d7c943957df1c44ea395d7f"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/file-error-tails.txt",
+      "published": "evidence/scheduler/spans/file-error-tails.txt",
+      "size": 6385,
+      "sha256": "33ea4344adaaf17f4e5167c901a6b02b28148464e07a0e6fea85644ccfc0f531"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/file-extra-guards.txt",
+      "published": "evidence/scheduler/spans/file-extra-guards.txt",
+      "size": 1961,
+      "sha256": "a7f6d00d2ede70d3e5e4d89bd524e70d6cafa74faaf6770ed5caffe22c815bac"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/file-parser-pools.txt",
+      "published": "evidence/scheduler/spans/file-parser-pools.txt",
+      "size": 3075,
+      "sha256": "87d8ddf5e9749e9b57b45bfc52bd8f06d59a5daf78e99e615dcddb8ea902160f"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/file-schema-guards.txt",
+      "published": "evidence/scheduler/spans/file-schema-guards.txt",
+      "size": 5959,
+      "sha256": "af38ff5e723b069df1972d3573c81fef025bca1192ef3d5e18bf9bb478a9080a"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/loader-caller.txt",
+      "published": "evidence/scheduler/spans/loader-caller.txt",
+      "size": 639,
+      "sha256": "7ff80b715d0931d42f7a5ea6632db65334a7545b3cab7741f6723db1cf340180"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/loader-pools.txt",
+      "published": "evidence/scheduler/spans/loader-pools.txt",
+      "size": 1895,
+      "sha256": "55bb68c2bbf7a6a547a87bd004af2792b678a4019fb7f8d00f77e0e47c6d9a95"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/runner-constructor.txt",
+      "published": "evidence/scheduler/spans/runner-constructor.txt",
+      "size": 1302,
+      "sha256": "32f24f8ea5f1cec0daf226d43d69c7ffe3a74e91d9c5cea40271fe69bc400ff6"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/scene-factory-handoffs.txt",
+      "published": "evidence/scheduler/spans/scene-factory-handoffs.txt",
+      "size": 7739,
+      "sha256": "02c8cba539b7a511287d122f979bd47a7d6c50dc881d8e7150d4674112520920"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/scene-initial-fields.txt",
+      "published": "evidence/scheduler/spans/scene-initial-fields.txt",
+      "size": 8134,
+      "sha256": "ea09be81802cb7720897c8f18c01c8ca43774d085a810f2f2c2624c926016d08"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/scene-pools.txt",
+      "published": "evidence/scheduler/spans/scene-pools.txt",
+      "size": 2540,
+      "sha256": "1b1b6dcb09753048c68c5f4f114fec0f4845a13d35a4d3c8935b7006da775187"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/scenesPath-getter.txt",
+      "published": "evidence/scheduler/spans/scenesPath-getter.txt",
+      "size": 4993,
+      "sha256": "452799d3295425dc5131e38f416a63db28d5e23750f976eec09e4d8510732091"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/settings-caller.txt",
+      "published": "evidence/scheduler/spans/settings-caller.txt",
+      "size": 1915,
+      "sha256": "b984a79b79914f2e0cc4363df198c0d1947181b882819c5e4fbb7d2493463878"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/settings-parser-prefix.txt",
+      "published": "evidence/scheduler/spans/settings-parser-prefix.txt",
+      "size": 6213,
+      "sha256": "2f2676546d0f0c0b70abf2d1d6c7e71d68258bdd389296fff44fb96ea6e9dfd8"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/spans/settings-scenesPath.txt",
+      "published": "evidence/scheduler/spans/settings-scenesPath.txt",
+      "size": 2686,
+      "sha256": "84d3a186ef638586e3dce408cfe5b5f4c4ebc8d11fb9456c3d83fa8e7e272aef"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/OUTPUT_MANIFEST.v1.json",
+      "published": "evidence/scheduler/OUTPUT_MANIFEST.v1.json",
+      "size": 3798,
+      "sha256": "f3310ffe7b04fcff7fe7912daaf7881fb57ed69ab21f163a5b46bb676a9cb0b4"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/INPUTS.json",
+      "published": "evidence/providers/INPUTS.json",
+      "size": 1043,
+      "sha256": "10ac3594117e77d160ec50ef60552960492ee9c5932b3205731e8e065c0ca219"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/METHOD.json",
+      "published": "evidence/providers/METHOD.json",
+      "size": 582,
+      "sha256": "8ba48f5d24d571bb1135f9474ee9f074cdc8598a3ca4a82b4fb97995387fd078"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/ORIGINAL_SOURCE.json",
+      "published": "evidence/providers/ORIGINAL_SOURCE.json",
+      "size": 5662,
+      "sha256": "2438ee15964d6dfa979bf4c954aea0667f558c2d397131b8c7a891d03ae9b0b7"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/PROVIDER_DECLARATIONS.json",
+      "published": "evidence/providers/PROVIDER_DECLARATIONS.json",
+      "size": 3636,
+      "sha256": "92a702781657f20c8cd34976651dc5994acea70e14f6327d21eca53570240ea3"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/RESOLVED_NODE_HOST_CASES.json",
+      "published": "evidence/providers/RESOLVED_NODE_HOST_CASES.json",
+      "size": 4420,
+      "sha256": "1e2c2e8891deb84d784133563129217bfb396753d714608af1db71973f5dd7ce"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/spans/ack-predicate.txt",
+      "published": "evidence/providers/spans/ack-predicate.txt",
+      "size": 2093,
+      "sha256": "c0f89586504cc574d048565b918ecff155234d075fbfc0537aac9459ca45376d"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/spans/boolean-node-builder.txt",
+      "published": "evidence/providers/spans/boolean-node-builder.txt",
+      "size": 1581,
+      "sha256": "259045e526e636751d844e84505edd7df9ebac3992a5a83c7e553e147d6999aa"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/spans/boolean-node-value-reader.txt",
+      "published": "evidence/providers/spans/boolean-node-value-reader.txt",
+      "size": 3328,
+      "sha256": "7e3e0750b02e9160b72afbfec6d4a911861f9017a9225d7df178b49125fd5457"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/spans/error-predicate.txt",
+      "published": "evidence/providers/spans/error-predicate.txt",
+      "size": 1643,
+      "sha256": "df04c22a3e7436cceb2f21d43b1f2806751d2443280a79ef9854ad0527f7d407"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/spans/json-ack-builder.txt",
+      "published": "evidence/providers/spans/json-ack-builder.txt",
+      "size": 2130,
+      "sha256": "7eb1fc06f516cbdd3a368bebab8d85dffac03e1aaf3dba40bb8cda95beb6dd7a"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/spans/name-lookup.txt",
+      "published": "evidence/providers/spans/name-lookup.txt",
+      "size": 1341,
+      "sha256": "ba7cda826f6a2d46f947719b07c13b7498ab3fdaa3dc6b8762c05dd1b89ef97f"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/spans/new-data-node.txt",
+      "published": "evidence/providers/spans/new-data-node.txt",
+      "size": 3198,
+      "sha256": "d58594195e3d444ec3ceb9814e6259ca57a37a90fc04b452aa3fcce9a933dde7"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/spans/new-json-object.txt",
+      "published": "evidence/providers/spans/new-json-object.txt",
+      "size": 2145,
+      "sha256": "560cf725f11c32af95d48fd0e8bba8f6b0dcfeaaaa66d276fc623edb2f707c24"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/spans/recursive-name-lookup-body.txt",
+      "published": "evidence/providers/spans/recursive-name-lookup-body.txt",
+      "size": 3459,
+      "sha256": "e21e6eb22742ef55fd614eb5d0072c87dc95895863e1f0536ba8388bdc2466b1"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/spans/result-response-predicate.txt",
+      "published": "evidence/providers/spans/result-response-predicate.txt",
+      "size": 1891,
+      "sha256": "7298a1f147a1ac66db2950be12fafa7f6e09ad2f0cc61c74f244653a056ff465"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/OUTPUT_MANIFEST.json",
+      "published": "evidence/providers/OUTPUT_MANIFEST.json",
+      "size": 2407,
+      "sha256": "692c73f2b0b391ed4da2fc99ef2f9e7daae1a35220f3ba936edeb95a07f9b5f9"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/REPORT.v2.md",
+      "published": "catalogue-report.txt",
+      "size": 11328,
+      "sha256": "609c22da91d9f4b1cf2d51dca5fb50fc3665190907fa96bd0cb8f18a1b7708a4"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/scheduler/REPORT.md",
+      "published": "scheduler-report.txt",
+      "size": 12724,
+      "sha256": "d41cdc4417f72070792d1e45b1930787fd5e5511c61907ce166b2f231f0c5f12"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/REPORT.md",
+      "published": "providers-report.txt",
+      "size": 7463,
+      "sha256": "653c93560b2a2604ad7973d62e4eabc4d64c41e645e5ece3b4bbd979b4438c9f"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/SYNTHESIS.md",
+      "published": "synthesis.txt",
+      "size": 2601,
+      "sha256": "3f0982b54b2cd1973c083620891311db23f28dafffe24e617186d70b6801bd24"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/COVERAGE.md",
+      "published": "coverage.txt",
+      "size": 2076,
+      "sha256": "14f68a093f38427f75ac6c16cd08bed8ca2fef402429f55e4954753723b47799"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/RANKED_REMAINING_QUESTIONS.md",
+      "published": "remaining-questions.txt",
+      "size": 1336,
+      "sha256": "d3cf75eb44d90a55f3ac1a9f3084287b453f7f07315878b5dd841d59c76db633"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/reviews/CONSUMER_TRACE_PREFLIGHT.md",
+      "published": "preflight-review.txt",
+      "size": 4835,
+      "sha256": "eee38efb8aafda17897ff91003cce7b316580d7de83afaaa11b9d5b6ae25b66b"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/VERSION_HISTORY.json",
+      "published": "catalogue-version-history.json",
+      "size": 408,
+      "sha256": "cc5aa4207849eb9a9eee8a6b7e9b94a365186b2bba396f5bf467ba4466cabad4"
+    }
+  ]
+}

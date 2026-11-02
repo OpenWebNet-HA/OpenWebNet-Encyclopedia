@@ -1,0 +1,14 @@
+[
+  {
+    "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-f461-deep-analysis.md",
+    "snapshot": "f460-f461-deep-analysis.md",
+    "bytes": 9811,
+    "sha256": "f8c18480c7aa608a06a973c3e6b8d956b461b49201018276b1bcb75011157608"
+  },
+  {
+    "source": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+    "snapshot": "mhcatalogue-source-profiles.md",
+    "bytes": 14351,
+    "sha256": "ed74e4da897e9c500b4fe9333a3a89ae5dc3a2a849469ed756ae7d2b99d52ce3"
+  }
+]

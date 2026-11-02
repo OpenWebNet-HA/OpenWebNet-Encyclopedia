@@ -1,0 +1,22 @@
+{
+  "saved_UTC": "2026-11-01T11:41:14.302942+00:00",
+  "scope": "Parent exact snapshots after author reported before-output wrong hand-entered guard, BEFORE requested v2 correction",
+  "files": [
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/REPORT.md",
+      "snapshot": "REPORT.md",
+      "bytes": 6324,
+      "sha256": "44efc5c31720408792806aaef382c024ec630d1a060dd9177a7d7aae50cefae8"
+    },
+    {
+      "source": "work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/collect_catalogue_v1.py",
+      "snapshot": "collect_catalogue_v1.py",
+      "bytes": 8414,
+      "sha256": "7570b5dbc79ff9060ce5c9fd39482d87809d9a854e7d4ca6788c7ca5ddab7dec"
+    }
+  ],
+  "directory_at_snapshot": [
+    "REPORT.md",
+    "collect_catalogue_v1.py"
+  ]
+}

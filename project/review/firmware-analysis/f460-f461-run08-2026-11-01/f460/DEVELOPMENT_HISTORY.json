@@ -1,0 +1,16 @@
+{
+  "changes": [
+    "sole Python syntax token or12 -> or 12",
+    "new v2 report/script/first-copy names",
+    "honest pre-body/output-generation failure disclosure"
+  ],
+  "no_v1_overwrite": true,
+  "original_source_guards_changed": false,
+  "parent_pre_v2_snapshot": "work/f460-f461-comparison/2026-11-01-run08/integration/f460-before-v2/INDEX.json",
+  "source_interpretation_changed": false,
+  "target_execution": 0,
+  "v1_report_sha256": "cee75d144a076d862b771d91133dca0fb1e892fc3170d29ded555bb58a5afecf",
+  "v1_script_sha256": "f7185cd42fea9765bbc889e9053432917922452bf1f52db9bf13a4f74eaaff02",
+  "v2_report_sha256": "8a46eb35e26d98eef19e44c9730445a8cee86f0b87866337fd304faf5262c93f",
+  "v2_script_sha256": "4cf6d6b32b5c9855589b879b488c7828683c6ca545f824b49d0f434512e12c1a"
+}

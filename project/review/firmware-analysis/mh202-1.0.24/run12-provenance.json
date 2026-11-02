@@ -1,0 +1,134 @@
+{
+  "checkpoint": "run12",
+  "status": "four source reviewed areas, native bracket/level corpus and component applicability refinement; overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "report",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run12/REPORT.md",
+      "source_sha256": "91a006a6359fd8d68b1b69068d819ab9c537afc2a5ecfab77f2eeed89ff9e823",
+      "published": "run12-functional-report.txt",
+      "published_sha256": "91a006a6359fd8d68b1b69068d819ab9c537afc2a5ecfab77f2eeed89ff9e823"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run12/functional-review.md",
+      "source_sha256": "31936a090b0752abc4b897cf0c3844ab1712ce3f4873683f9ad809b45ae602b9",
+      "published": "run12-functional-review.txt",
+      "published_sha256": "31936a090b0752abc4b897cf0c3844ab1712ce3f4873683f9ad809b45ae602b9"
+    },
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run12/REPORT.md",
+      "source_sha256": "00eb78b0ff647c8d1e6fee74c9c53a25971c9c13495910093992279e3d68fc48",
+      "published": "run12-protocol-report.txt",
+      "published_sha256": "00eb78b0ff647c8d1e6fee74c9c53a25971c9c13495910093992279e3d68fc48"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run12/protocol-review.md",
+      "source_sha256": "90d314467a8c64eaa3d7a6fcf410b5a5b5215abd3aa99e84d3cc4894c9db8373",
+      "published": "run12-protocol-review.txt",
+      "published_sha256": "90d314467a8c64eaa3d7a6fcf410b5a5b5215abd3aa99e84d3cc4894c9db8373"
+    },
+    {
+      "role": "report",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run12/REPORT.md",
+      "source_sha256": "fb9e5775b71ea822eff0b0bb5c8df7577a100b3e1373cf9001fa75ce9082ccc3",
+      "published": "run12-coso-report.txt",
+      "published_sha256": "fb9e5775b71ea822eff0b0bb5c8df7577a100b3e1373cf9001fa75ce9082ccc3"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run12/coso-review.md",
+      "source_sha256": "a1d3e35172435216b536ef1850deed169c586c151ca733a1691997df121049b1",
+      "published": "run12-coso-review.txt",
+      "published_sha256": "a1d3e35172435216b536ef1850deed169c586c151ca733a1691997df121049b1"
+    },
+    {
+      "role": "report",
+      "area": "inventory",
+      "research_path": "work/mh202-firmware/research/2026-10-30/inventory/run12/REPORT.md",
+      "source_sha256": "2302cebc0f001a2e66232c0d6e9e93d7748a3df7230af1a24d22cd6755edafad",
+      "published": "run12-inventory-report.txt",
+      "published_sha256": "2302cebc0f001a2e66232c0d6e9e93d7748a3df7230af1a24d22cd6755edafad"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "inventory",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run12/inventory-review.md",
+      "source_sha256": "9d383148aeead66e21e6985cb1cc9b9aa8b500a4e84a2d87e1d8bb72bb9e81d5",
+      "published": "run12-inventory-review.txt",
+      "published_sha256": "9d383148aeead66e21e6985cb1cc9b9aa8b500a4e84a2d87e1d8bb72bb9e81d5"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run12/collect_evidence.py",
+      "sha256": "8566a0d4f2477b84c474735bdc0c3870e064412c4411d1b6058ae57befdb5bc0",
+      "method": "static original/finite host evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run12/emulate_common_normalizer.py",
+      "sha256": "4815183016d34967bf569b3b997e32a063222f5e9ae4dfd8e9aeecde33c35848",
+      "method": "native common130 bracket/level normalization with Cprimitive/binding model"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run12/collect_evidence.py",
+      "sha256": "8592996442589f2d7f3cf9c3170004a2f58f98e200855af2a210808eb5dffeb8",
+      "method": "static original/finite host evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run12/collect_lighting_stm.py",
+      "sha256": "30fa5c313bf99745f635da8efa513fa5d9f4c34756b8a444363bb6626bcd0226",
+      "method": "static original/finite host evidence"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/inventory/run12/collect_components.py",
+      "sha256": "e067994782ad644bbe38c291f85ea09d40087b168cfdd9bed687068e1645cfde",
+      "method": "static original/finite host evidence"
+    }
+  ],
+  "canonical_execution": {
+    "new_corpus": {
+      "top_level_calls": 3,
+      "original_instruction_visits": 5022,
+      "primitive_callbacks": 547,
+      "linker_redirect_callbacks": 41,
+      "boundary_callbacks": 3,
+      "code_hook_visits": 5613
+    },
+    "cumulative": {
+      "corpora": 7,
+      "top_level_calls": 53,
+      "original_instruction_visits": 20104,
+      "primitive_callbacks": 1972,
+      "linker_redirect_callbacks": 77,
+      "boundary_callbacks": 11,
+      "code_hook_visits": 22164,
+      "firmware_processes": 0,
+      "target_OS_calls": 0
+    },
+    "count_scope": "Canonical named corpora only, replays not accumulated"
+  },
+  "history": {
+    "run11_snapshots": "reviewed/run11/SOURCE_SNAPSHOTS.json",
+    "earlier_artifacts_unchanged": true,
+    "PHP_refinement": "OriginalCLI5.2.13/module5.1.6 packages+noargversionliteralrefs refine aggregatePHPsummary; oldnamedpackageevidence retained",
+    "component_path_selection": "strictlibzfilelistassert rejected wronginitialhostpath beforecanonicaloutputs; originalpathvalidated, noguardweakened"
+  },
+  "limits": [
+    "Bracket input is mutated/rewritten BEFORE exactlyoneactualcommonCreateMsgOpen; originalbracketcontents notparsed/validatedasset",
+    "ORhelperreturnscombinedbyte; PARENTESIsubsequentlyrewritesoperandbuffers, nofullDSLprecedence/actionproof",
+    "LightingSTMlocalreceipt paths underouteradmission/key/lifetimeconstraints, nophysicalACK/universalIDguard",
+    "Package/file/versioncodefacts only; noPHPprocess/moduleload/runtime/CVE/serviceabsenceclaim",
+    "Missingassets/widerDevicegatespending"
+  ]
+}

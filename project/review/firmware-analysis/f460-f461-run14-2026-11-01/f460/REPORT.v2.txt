@@ -1,0 +1,46 @@
+# F460 run14: fresh BNLD numeric condition construction and selected comparison
+
+One distinct original F460 condition path connects its own BNLD raw factory entry, same-result virtual-JSON reparse, a200-byte compiled allocation and selected signed numeric predicate. The result is conditional source behavior, not a configured scene, observed value, trigger crossing, valid public grammar or physical brightness meaning. Original/native/provider/target execution, models, fixtures and SQL added:0; earlier ledgers remain unchanged.
+
+## Original identity and own class namespaces
+
+Original `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62`, is freshly mapped ELF64 little-endian AArch64. SOURCE.json retains exact bytes/hex, word guards, original relative RTTI/method relocations, two own halfword switch entries, actual local calls and PLT/JUMP_SLOT imports. Device0207 supplies product context only. MHS enums/layouts, BNIL trigger fields and BNCUSCENE's scalar predicate are not transferred.
+
+The actual condition-name table0x213960 has row2 at0x213980: length4 and pointer0x196980 to literal **BNLD**. Raw class header/AP0x214068/0x214078 names RTTI `13BnldCondition`; slot0 targets0x48710. The parser's temporary/base AP0x214058 instead names `17BaseBnldCondition`. Compiled header/AP0x217f70/0x217f80 names **19BnldConditionRunner**; its primary slot16 is actual predicate0x161880. These raw/base/compiled objects and method roles are separate, not a name-only claim of identical layouts or behavior.
+
+## Actual selected raw factory and same-JSON compiled construction
+
+The original raw factory matches lengths/bytes against the own condition-name table, decrements matched row by1 at0x50e30, and dispatches through its own halfword table0x196d74. For matched row2, index1 entry0x196d76=0x030f with base0x50f7c selects0x51bb8. The selected block calls raw parser0x4aa60, installs final raw AP0x214078, requests64 bytes, requests local base/copy helper0x4e3d0, reinstalls final AP and copies the raw status/level word pair at52/56 into the returned allocation. The source then supplies that pointer to its local vector helper. Successful name matching, source JSON, helper/allocator returns and the outer factory continuation remain premises; no scene input or factory model is supplied.
+
+The selected initializer independently reads its raw type and dispatches its own row2 entry0x1b5958=0x0389 from base0xf9790 to0xfa5b4. It calls the raw object's actual virtual slot0 with hidden AArch64 result X8=SP976, then passes that SAME result address to raw parser0x4aa60 for temporary SP6352 at0xfa5e0. The serializer0x48710 body is not audited here; valid result objects, assignment/provider semantics and full JSON value coherence remain conditional. This is actual source call/dataflow, not an emitted JSON fixture or proven universal round trip.
+
+At0xfa5ec the initializer requests **200 bytes**, retains the returned allocation itself in X21, and passes that SAME base plus temporary source to constructor0x161c40. There is no selected inner+16/control aggregate substitution. The constructor stores final primary AP0x217f80 at destination0, copies raw enabled byte40 to compiled176, and copies raw44..59 into compiled180..195. Thus the selected compiled fields are type180, operator184, status-selector188 and level-threshold192. A200-byte allocation request is not a transferred MHS size, and observed record+48 below is not any prior product's record+32.
+
+The initializer supplies this compiled pointer to the receiver+192 condition-vector helper. Its generic pointer movement and run07 slot16 worker consumer are inherited facts, not repeated new coverage. Composition requires the same valid scene/range/pointee/class and normal helper/lifetime premises. No actual append, worker or predicate invocation occurs.
+
+## Raw numeric input branch and selected query premises
+
+The raw parser calls the inherited common condition parser, initially writes all-ones32-bit words at raw52/56, and asks whether the supplied JSON has literal `status`. On the selected absence branch it requests the literal **level** member and actual `Json::Value::asInt`, storing the returned32-bit word at raw56. A positive-word guard writes raw52=-1 again; the initial value was already-1, so this is not a zero-status producer. Full operator-name decoding, arbitrary JSON/provider range behavior and presence-priority alternatives are not completed here; the configured operator word copied into184 remains a supplied/raw-parser premise.
+
+The predicate saves its receiver, sets a secondary-base pointer X21=this+136 and reads enabled byte176. Zero bypasses the query and returns local1 through the normal epilogue. This packet follows only the nonzero-enabled continuation reaching the local query request0x16191c, with selector0, key at this+144 and hidden result pairSP8/SP16. Query0x18def0 is opaque: its record class/type, producer, registry state, freshness, active binding and ownership/lifetime are not supplied or assumed.
+
+The selected numeric continuation requires a valid nonnull returned record, a valid source string pointer at record+16 with length at record+24 exactly2, and the original halfword comparison with0x6e6f, i.e. exact local spelling **on**. This spelling is a source gate, not observed physical state or public device mapping. It also requires configured status-selector at this+188 to equal-1. Only then does the source use observed32-bit word at **returned record+48** and select numeric operator handling. Other returned strings, configured status modes and query/initialization paths remain outside this selected predicate proof.
+
+## Exact operand orientation and conditional result
+
+On that selected continuation,0x161bbc loads operator from X21+48, i.e. this+184. The comparisons use configured threshold from X21+56 (this+192) in W0 and the observed record+48 word in W1. Their original signed CMP/CSET operations give:
+
+- operator0: **configured threshold < observed value**, signed LT at0x161c24/0x161c28;
+- operator1: **configured threshold > observed value**, signed GT at0x161bdc/0x161be0;
+- operator2: equality at0x161c14/0x161c18;
+- operator3: inequality at0x161bf4/0x161bf8.
+
+These are original local numeric code/operand relations, not transferred BNLD condition/trigger opcode names or a universal supported-operator grammar. Other operators take the selected local false route. The computed local W20 is the value returned by the retained epilogue only under normal intermediate ownership/cleanup/helper returns, valid ABI preservation and live objects; those provider/virtual cleanup effects are not proven or executed. No configured threshold or observed value example is fabricated, and no units, range, physical role, successful scene start or output follows from the comparison.
+
+## Reproduction and exact staged-draft history
+
+Use `python3 -B work/f460-firmware/2.0.12/research/2026-11-01-run14-numeric/collect_numeric_v2.py --check`. Exclusive generation immediately freezes report/collector/evidence and computes the first-copy index before opening it. Check only reconstructs and compares. No original/vendor/provider instruction or semantic fixture executes.
+
+Before any report, generated evidence or canonical invocation existed, a read-only precheck caught a manually mistyped BNLD literal pointer1968f8 in the staged v1 collector. The actual original table row points to196980. Parent preserved the exact ONE staged-unexecuted file before NEWv2. V2 corrects all **three** textual occurrences (tuple guard, literal read, metadata) plus version/report references; strict pointer/string guards remain. V1 is unchanged. This was not a failed canonical generation or an invented prior report/output; VERSION_HISTORY.v2.json records the available exact bytes and parent index. No generated candidate was overwritten.
+
+The useful new result is actual own factory row/class -> same-result reparse -> distinct200-byte compiled object -> selected numeric predicate/consumer relation. Configured objects, provider/query/record type and layout suitability, full raw serializer/JSON coherence, operator grammar, initial registry state, lifetime/concurrency and whole scene policy remain open. Receiving/output/transport/MQTT/libjel/auth/session/framing and equivalent stopped routes remain closed. No capability, physical, defect, safety, security or full-runtime conclusion is established.

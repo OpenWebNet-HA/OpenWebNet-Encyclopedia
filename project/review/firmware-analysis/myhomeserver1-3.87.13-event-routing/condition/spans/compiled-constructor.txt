@@ -1,0 +1,118 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000f1634:
+   f1634:	e92d 43f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, lr}
+   f1638:	b085      	sub	sp, #20
+   f163a:	4c46      	ldr	r4, [pc, #280]	@ (f1754)
+   f163c:	4607      	mov	r7, r0
+   f163e:	460e      	mov	r6, r1
+   f1640:	4a45      	ldr	r2, [pc, #276]	@ (f1758)
+   f1642:	447c      	add	r4, pc
+   f1644:	4d45      	ldr	r5, [pc, #276]	@ (f175c)
+   f1646:	4b46      	ldr	r3, [pc, #280]	@ (f1760)
+   f1648:	58a2      	ldr	r2, [r4, r2]
+   f164a:	4604      	mov	r4, r0
+   f164c:	447d      	add	r5, pc
+   f164e:	f104 0858 	add.w	r8, r4, #88	@ 0x58
+   f1652:	6812      	ldr	r2, [r2, #0]
+   f1654:	9203      	str	r2, [sp, #12]
+   f1656:	f04f 0200 	mov.w	r2, #0
+   f165a:	58eb      	ldr	r3, [r5, r3]
+   f165c:	9301      	str	r3, [sp, #4]
+   f165e:	3308      	adds	r3, #8
+   f1660:	f847 3b08 	str.w	r3, [r7], #8
+   f1664:	4638      	mov	r0, r7
+   f1666:	f71f eebe 	blx	113e4 <_ZNSt18condition_variableC1Ev@plt>
+   f166a:	4a3e      	ldr	r2, [pc, #248]	@ (f1764)
+   f166c:	2300      	movs	r3, #0
+   f166e:	e9c4 330e 	strd	r3, r3, [r4, #56]	@ 0x38
+   f1672:	f104 0074 	add.w	r0, r4, #116	@ 0x74
+   f1676:	e9c4 3310 	strd	r3, r3, [r4, #64]	@ 0x40
+   f167a:	e9c4 3312 	strd	r3, r3, [r4, #72]	@ 0x48
+   f167e:	f884 3058 	strb.w	r3, [r4, #88]	@ 0x58
+   f1682:	6563      	str	r3, [r4, #84]	@ 0x54
+   f1684:	f8c4 8050 	str.w	r8, [r4, #80]	@ 0x50
+   f1688:	58ab      	ldr	r3, [r5, r2]
+   f168a:	68b5      	ldr	r5, [r6, #8]
+   f168c:	66e0      	str	r0, [r4, #108]	@ 0x6c
+   f168e:	f8d6 9004 	ldr.w	r9, [r6, #4]
+   f1692:	3308      	adds	r3, #8
+   f1694:	66a3      	str	r3, [r4, #104]	@ 0x68
+   f1696:	426b      	negs	r3, r5
+   f1698:	fab9 f289 	clz	r2, r9
+   f169c:	4599      	cmp	r9, r3
+   f169e:	ea4f 1252 	mov.w	r2, r2, lsr #5
+   f16a2:	bf08      	it	eq
+   f16a4:	2200      	moveq	r2, #0
+   f16a6:	2a00      	cmp	r2, #0
+   f16a8:	d140      	bne.n	f172c
+   f16aa:	2d0f      	cmp	r5, #15
+   f16ac:	9502      	str	r5, [sp, #8]
+   f16ae:	d82b      	bhi.n	f1708
+   f16b0:	2d01      	cmp	r5, #1
+   f16b2:	d126      	bne.n	f1702
+   f16b4:	f899 3000 	ldrb.w	r3, [r9]
+   f16b8:	f884 3074 	strb.w	r3, [r4, #116]	@ 0x74
+   f16bc:	2300      	movs	r3, #0
+   f16be:	6725      	str	r5, [r4, #112]	@ 0x70
+   f16c0:	5543      	strb	r3, [r0, r5]
+   f16c2:	f106 0020 	add.w	r0, r6, #32
+   f16c6:	4b28      	ldr	r3, [pc, #160]	@ (f1768)
+   f16c8:	f104 0288 	add.w	r2, r4, #136	@ 0x88
+   f16cc:	7f31      	ldrb	r1, [r6, #28]
+   f16ce:	f960 0a8f 	vld1.32	{d16-d17}, [r0]
+   f16d2:	447b      	add	r3, pc
+   f16d4:	f884 1084 	strb.w	r1, [r4, #132]	@ 0x84
+   f16d8:	f942 0a8f 	vst1.32	{d16-d17}, [r2]
+   f16dc:	f103 0208 	add.w	r2, r3, #8
+   f16e0:	6022      	str	r2, [r4, #0]
+   f16e2:	331c      	adds	r3, #28
+   f16e4:	4a21      	ldr	r2, [pc, #132]	@ (f176c)
+   f16e6:	66a3      	str	r3, [r4, #104]	@ 0x68
+   f16e8:	4b1b      	ldr	r3, [pc, #108]	@ (f1758)
+   f16ea:	447a      	add	r2, pc
+   f16ec:	58d3      	ldr	r3, [r2, r3]
+   f16ee:	681a      	ldr	r2, [r3, #0]
+   f16f0:	9b03      	ldr	r3, [sp, #12]
+   f16f2:	405a      	eors	r2, r3
+   f16f4:	f04f 0300 	mov.w	r3, #0
+   f16f8:	d116      	bne.n	f1728
+   f16fa:	4620      	mov	r0, r4
+   f16fc:	b005      	add	sp, #20
+   f16fe:	e8bd 83f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, pc}
+   f1702:	2d00      	cmp	r5, #0
+   f1704:	d0da      	beq.n	f16bc
+   f1706:	e008      	b.n	f171a
+   f1708:	f104 036c 	add.w	r3, r4, #108	@ 0x6c
+   f170c:	a902      	add	r1, sp, #8
+   f170e:	4618      	mov	r0, r3
+   f1710:	f71f efb0 	blx	11674 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERjj@plt>
+   f1714:	9b02      	ldr	r3, [sp, #8]
+   f1716:	66e0      	str	r0, [r4, #108]	@ 0x6c
+   f1718:	6763      	str	r3, [r4, #116]	@ 0x74
+   f171a:	462a      	mov	r2, r5
+   f171c:	4649      	mov	r1, r9
+   f171e:	f71f eeaa 	blx	11474 <memcpy@plt>
+   f1722:	9d02      	ldr	r5, [sp, #8]
+   f1724:	6ee0      	ldr	r0, [r4, #108]	@ 0x6c
+   f1726:	e7c9      	b.n	f16bc
+   f1728:	f71f ed5e 	blx	111e8 <__stack_chk_fail@plt>
+   f172c:	4810      	ldr	r0, [pc, #64]	@ (f1770)
+   f172e:	4478      	add	r0, pc
+   f1730:	f71f ebd6 	blx	10ee0 <_ZSt19__throw_logic_errorPKc@plt>
+   f1734:	6d20      	ldr	r0, [r4, #80]	@ 0x50
+   f1736:	9b01      	ldr	r3, [sp, #4]
+   f1738:	4580      	cmp	r8, r0
+   f173a:	f103 0308 	add.w	r3, r3, #8
+   f173e:	6023      	str	r3, [r4, #0]
+   f1740:	d003      	beq.n	f174a
+   f1742:	6da1      	ldr	r1, [r4, #88]	@ 0x58
+   f1744:	3101      	adds	r1, #1
+   f1746:	f71f ebb4 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   f174a:	4638      	mov	r0, r7
+   f174c:	f71f eff4 	blx	11738 <_ZNSt18condition_variableD1Ev@plt>
+   f1750:	f71f ed50 	blx	111f4 <__cxa_end_cleanup@plt>

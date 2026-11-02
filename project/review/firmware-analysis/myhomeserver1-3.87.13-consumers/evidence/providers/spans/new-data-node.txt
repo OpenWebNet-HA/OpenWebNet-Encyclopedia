@@ -1,0 +1,80 @@
+
+
+
+Disassembly of section .text:
+
+000036e0 <add_node@@Base>:
+    36e0:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+    36e4:	4690      	mov	r8, r2
+    36e6:	4a28      	ldr	r2, [pc, #160]	@ (3788 <add_node@@Base+0xa8>)
+    36e8:	b082      	sub	sp, #8
+    36ea:	4681      	mov	r9, r0
+    36ec:	4604      	mov	r4, r0
+    36ee:	4b27      	ldr	r3, [pc, #156]	@ (378c <add_node@@Base+0xac>)
+    36f0:	447a      	add	r2, pc
+    36f2:	e9dd 670a 	ldrd	r6, r7, [sp, #40]	@ 0x28
+    36f6:	9d0c      	ldr	r5, [sp, #48]	@ 0x30
+    36f8:	58d3      	ldr	r3, [r2, r3]
+    36fa:	681b      	ldr	r3, [r3, #0]
+    36fc:	9301      	str	r3, [sp, #4]
+    36fe:	f04f 0300 	mov.w	r3, #0
+    3702:	b348      	cbz	r0, 3758 <add_node@@Base+0x78>
+    3704:	468a      	mov	sl, r1
+    3706:	2020      	movs	r0, #32
+    3708:	f7fe ee4a 	blx	23a0 <g_malloc0@plt>
+    370c:	4604      	mov	r4, r0
+    370e:	f8c0 a000 	str.w	sl, [r0]
+    3712:	4640      	mov	r0, r8
+    3714:	f7fe ee5e 	blx	23d4 <g_strdup@plt>
+    3718:	2d28      	cmp	r5, #40	@ 0x28
+    371a:	e9c4 0501 	strd	r0, r5, [r4, #4]
+    371e:	bf08      	it	eq
+    3720:	e9c4 6704 	strdeq	r6, r7, [r4, #16]
+    3724:	d00f      	beq.n	3746 <add_node@@Base+0x66>
+    3726:	d908      	bls.n	373a <add_node@@Base+0x5a>
+    3728:	2d3c      	cmp	r5, #60	@ 0x3c
+    372a:	d023      	beq.n	3774 <add_node@@Base+0x94>
+    372c:	2d40      	cmp	r5, #64	@ 0x40
+    372e:	d124      	bne.n	377a <add_node@@Base+0x9a>
+    3730:	4630      	mov	r0, r6
+    3732:	f7fe ee50 	blx	23d4 <g_strdup@plt>
+    3736:	6120      	str	r0, [r4, #16]
+    3738:	e005      	b.n	3746 <add_node@@Base+0x66>
+    373a:	2d04      	cmp	r5, #4
+    373c:	d003      	beq.n	3746 <add_node@@Base+0x66>
+    373e:	2d14      	cmp	r5, #20
+    3740:	bf08      	it	eq
+    3742:	6126      	streq	r6, [r4, #16]
+    3744:	d119      	bne.n	377a <add_node@@Base+0x9a>
+    3746:	f8d9 0018 	ldr.w	r0, [r9, #24]
+    374a:	4621      	mov	r1, r4
+    374c:	f8c4 901c 	str.w	r9, [r4, #28]
+    3750:	f7fe ec68 	blx	2024 <g_list_append@plt>
+    3754:	f8c9 0018 	str.w	r0, [r9, #24]
+    3758:	4a0d      	ldr	r2, [pc, #52]	@ (3790 <add_node@@Base+0xb0>)
+    375a:	4b0c      	ldr	r3, [pc, #48]	@ (378c <add_node@@Base+0xac>)
+    375c:	447a      	add	r2, pc
+    375e:	58d3      	ldr	r3, [r2, r3]
+    3760:	681a      	ldr	r2, [r3, #0]
+    3762:	9b01      	ldr	r3, [sp, #4]
+    3764:	405a      	eors	r2, r3
+    3766:	f04f 0300 	mov.w	r3, #0
+    376a:	d10b      	bne.n	3784 <add_node@@Base+0xa4>
+    376c:	4620      	mov	r0, r4
+    376e:	b002      	add	sp, #8
+    3770:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
+    3774:	e9c4 6704 	strd	r6, r7, [r4, #16]
+    3778:	e7e5      	b.n	3746 <add_node@@Base+0x66>
+    377a:	4806      	ldr	r0, [pc, #24]	@ (3794 <add_node@@Base+0xb4>)
+    377c:	4478      	add	r0, pc
+    377e:	f7fe ecc0 	blx	2100 <g_print@plt+0x4>
+    3782:	e7e0      	b.n	3746 <add_node@@Base+0x66>
+    3784:	f7fe ecdc 	blx	2140 <__stack_chk_fail@plt>
+    3788:	376c      	adds	r7, #108	@ 0x6c
+    378a:	0001      	movs	r1, r0
+    378c:	0178      	lsls	r0, r7, #5
+    378e:	0000      	movs	r0, r0
+    3790:	3700      	adds	r7, #0
+    3792:	0001      	movs	r1, r0
+    3794:	28a0      	cmp	r0, #160	@ 0xa0
+	...

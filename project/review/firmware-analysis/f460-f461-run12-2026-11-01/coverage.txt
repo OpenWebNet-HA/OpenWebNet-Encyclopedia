@@ -1,0 +1,10 @@
+# Run12 coverage and boundaries
+
+| Area | Selected original reach | Remaining boundary |
+| --- | --- | --- |
+| F460 staged-list consumer | Actualwrapper66d0→consumer5f30 selector3/sameinput; [input]context/record56/list8/nodeGStringtext; substring/maskedselector branch→same-textGString request | IFsamecontext withXMLproducer; constructor/naturalorder/liststate/otherpaths/fullreturnoutcell, downstreamcommands/provider/update/compatibility/authenticity/install |
+| F461 defer | Unsignedrecord32 due/minimum branch; freshclock signedmachineformula/narrowinterval; candidateclock/timeouts conditionalarithmetic; actualcallbackrelocation/data/attachment/unref; complete owner136dispatcherreentry | Nonzerofield32producer; timestamp24distinct; clock/datarepresentation, validobjects/list/providers/binding/sourceflag, actualactivation/time/readiness/ownership/errors/concurrency/physical |
+
+F460:7 deterministic outputs, four spans,27 guards, five import proofs, seven branch checks, two literals, seven pins and9 first copies. F461:12 outputs, nine spans,43 guards plus four reciprocal-constant words, eight import proofs, six pins and14 first copies. Counts describe selected reach/integrity, not coverage percentages or executed cases. Candidate-provider and source-language/API premises remain explicit.
+
+New original/helper/native/emulator/model/fixture/SQL/JSON/clock/timer/file/service/OS/network/bus/physical execution zero. Root coordination UTC readings are separate from target-clock execution. Earlier MHS onecorpus/eightentries/340originalcodehookvisits and separate F454/MH202 ledgers unchanged. Full Device/source gates pending. No keys/private/fullconfig/runtimevalues exported; closed output/receiving/transport/auth/session/framing/MQTT/libjel and excluded command/process routes remain closed.

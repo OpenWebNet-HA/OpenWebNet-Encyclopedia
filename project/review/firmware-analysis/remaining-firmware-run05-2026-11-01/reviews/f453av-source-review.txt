@@ -1,0 +1,23 @@
+# Independent F453AV run05 source peer review
+
+Reviewer: f450_archive_analysis. Result: PASS for the new own-recovery entry/import/candidate-main argument edge and explicit limits. No correction requested. Full Device/source/runtime/physical approval remains pending.
+
+The frozen collect_recovery_v1.py --check passed through the established host ARM-disassembly route: five outputs, three original spans, eighteen word guards and zero original executions. I independently parsed original recovery bt_start ELF header/PT_LOAD mappings, recomputed the selected PC-relative pools, signed BL target and PLT/GOT arithmetic, compared all three retained span bytes/hashes to the original source, and verified all six exact first copies against canonical members. Original SHA256 f5a4f002e212e97e5f3e40fc4ed067237ad0095642bdec0b2c8792fa22a2fbd9 and37956-byte length agree with the source packet/own recovery manifest; raw ELF flags0x2 and declared entry0x8f6c remain source facts, without a transferred modern ABI assignment.
+
+Original0x8f84 is LDR R0,[PC,#12]: ARM PC arithmetic selects0x8f98 and original word0xb8c0. Next0x8f88 writesR3, so it does not replaceR0 before BL0x8f8c. That signed BL target is0x8e0c. Its original stub reads offset0x100a4 at0x8e18; adding that to the PC value0x8e18 at instruction0x8e10 gives GOT0x18ebc. An independent readelf relocation query confirms R_ARM_JUMP_SLOT __libc_start_main@GLIBC_2.0 at0x18ebc. Thus the import identity and forwardedR0 word are supported. Candidate0xb8c0 lies in own executable file-backed PT_LOAD; retaining its first word does not expand or establish its body behavior.
+
+The report correctly makes candidate-main meaning conditional on conventional startup-provider ABI, binding, valid entry state and actual loader/helper admission. It does not imply a direct BL into the candidate, successful invocation, current recovery boot, selected kernel/dependency closure, readiness, installed overlay, application copying or database recovery. libc/provider/interpreter/sys_exec/candidate-main bodies remain opaque. The existing script/header context is explicitly inherited; the prior three exact members are pinned and checked for absence of the newly selected main/import edge, rather than reclassified as new init-loop coverage.
+
+Fresh source identity and selected-line checks support only the own recovery context: init names /bin/ettclsh and conditionally sources regular application scripts in the false sys_fork branch; the selected three-line script requests sys_exec /bin/bt_start after its preceding requests. Its echo/> text is not assumed to carry shell redirection, an observed proc-file write or successful helper behavior. Effective path composition/image selection, regular-file/helper results and preceding normal returns remain premises. No normal-image module behavior or another product's layout is transferred.
+
+This review used static host readers/readelf/disassembly only. Original/vendor/native/helper/emulator/model/SQL/targetOS/service/network/bus/device/physical execution, database recovery/generation and remote writes are zero. The inherited archive count remains one encrypted F450 support container and zero plaintext databases; no new archive readback/upload is implied. Original/synced/completed source, public integration, source manifest and older ledgers were unchanged. No blocking issue found.
+
+## Frozen reviewed members
+
+- collect_recovery_v1.py: 17171 bytes, SHA256 83459d1cb00b38f65942654d581d1b172ac189ccb5de3d876007c10623ab6707
+- REPORT.md: 5412 bytes, SHA256 fa4ee00fce4f0dda5a3e66754e9e44a00bb0c1455697256b41daa5ff36f913b9
+- SOURCE.json: 5695 bytes, SHA256 25af62ff37b1571acf3925fca094ef32a4648faaa56ae315725be0525358c42c
+- RECOVERY_CONTEXT.json: 3269 bytes, SHA256 36ae44e59716de94b932e74e99b089de916c594facee9296676c4f99f701ff21
+- INPUTS.json: 2220 bytes, SHA256 b24fb5a230035a989acb5911b0a04f972eb0e67de0cf37ffbf827984e6956e5d
+- OUTPUT_MANIFEST.json: 614 bytes, SHA256 39cbd39f370306fda69ce242977ee25676b9c3e9136107efe92ced7b6a27b2c4
+- first-candidate/INDEX.json: 1017 bytes, SHA256 a9efd8b1ef3706633fe3eed3aef8afcfa6b34d3fa1c3aab75879c2364e570a54

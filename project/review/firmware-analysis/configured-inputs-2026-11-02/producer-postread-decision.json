@@ -1,0 +1,11 @@
+{
+  "decision_UTC": "2026-11-02T05:50:13.677655+00:00",
+  "root_body_authorization": "Parent explicitly authorized minimal10fe60..110060 max0x200 after local SceneRunner105740 caller/context qualification; actualreadstayedwithinthatstaticrange.",
+  "failed_pre_read_requirement": "SOURCE_AUTHORIZATION.json was NOTwritten before body read; wrong105768 call precheck asserted; orchestration then continued. This procedural defect remains disclosed, not retroactively repaired.",
+  "permission": "Retain actual history; qualify and independently verify ONLY already-authorized512B plus actual callsite105760/importrelocation metadata. No additional body/neighbor/provider read.",
+  "promotable_scope": "Only source-proved same-receiver/source-argument and local file-open/gate facts if actual own instructions/relocations support them. No inferred JSONparse/rawscene/fullconfiguredtrace.",
+  "required": "New collector/report firstgeneration after actualpostreadscope note; canonical guard/identity checks, immediatefirstcopies, independentpeer+reviewer. No reopeningfailedprecondition as cleanhistory.",
+  "parent_history_snapshot": "work/configured-scene-module-investigation/2026-11-02/parent-before-producer-tooling/INDEX.json",
+  "new_original_execution": 0,
+  "new_scope_beyond_approved_range": false
+}

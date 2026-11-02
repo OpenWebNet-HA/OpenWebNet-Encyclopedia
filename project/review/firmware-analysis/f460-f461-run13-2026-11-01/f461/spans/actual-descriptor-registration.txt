@@ -1,0 +1,22 @@
+
+/home/bticino/libcoso/libplug_automation_stm.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+000000000000200c <init_plugin@@Base+0xec>:
+    200c:	f947de95 	ldr	x21, [x20, #4024]
+    2010:	b0000002 	adrp	x2, 3000 <automation_stm_gest_status_from_appli@@Base+0x50>
+    2014:	9123c042 	add	x2, x2, #0x8f0
+    2018:	528000e4 	mov	w4, #0x7                   	// #7
+    201c:	52800063 	mov	w3, #0x3                   	// #3
+    2020:	d2800041 	mov	x1, #0x2                   	// #2
+    2024:	f9402aa0 	ldr	x0, [x21, #80]
+    2028:	b9000aa4 	str	w4, [x21, #8]
+    202c:	f9000ea2 	str	x2, [x21, #24]
+    2030:	b9002aa3 	str	w3, [x21, #40]
+    2034:	97fffef3 	bl	1c00 <g_list_append@plt>
+    2038:	aa0003e1 	mov	x1, x0
+    203c:	aa1503e0 	mov	x0, x21
+    2040:	f9002aa1 	str	x1, [x21, #80]
+    2044:	97ffff1f 	bl	1cc0 <register_state_machine@plt>

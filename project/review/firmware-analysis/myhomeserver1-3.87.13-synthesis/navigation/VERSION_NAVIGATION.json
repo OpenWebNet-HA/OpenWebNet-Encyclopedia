@@ -1,0 +1,201 @@
+[
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/boot/REPORT.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N01",
+    "version_and_refinement_documents": [
+      {
+        "bytes": 1375,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31/protocol/REPORT_PRECISION_REFINEMENT.json",
+        "sha256": "5286968299a59a2b89b1d5dbc26c77fb741b15fbf0e9271b493810fc2849da11"
+      }
+    ]
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/REPORT.v2.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N02",
+    "version_and_refinement_documents": [
+      {
+        "bytes": 408,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/catalogue/VERSION_HISTORY.json",
+        "sha256": "cc5aa4207849eb9a9eee8a6b7e9b94a365186b2bba396f5bf467ba4466cabad4"
+      },
+      {
+        "bytes": 843,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/providers/REPORT_PRECISION_HISTORY.json",
+        "sha256": "ed0973060344ff88aa64adf347693350b1554d9658bb4484195839e61504cc90"
+      }
+    ]
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/catalogue/REPORT.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N03",
+    "version_and_refinement_documents": [
+      {
+        "bytes": 731,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/RANKING_PRECISION_HISTORY.json",
+        "sha256": "3d280aaf3df97223cfc7b1cbdc96a4d47e537670edf1113adcdc90fd6fd0387f"
+      }
+    ]
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/common/REPORT.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N04",
+    "version_and_refinement_documents": []
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-triggers/service/REPORT.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N05",
+    "version_and_refinement_documents": []
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/startup/REPORT.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N06",
+    "version_and_refinement_documents": [
+      {
+        "bytes": 1427,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/PATH_REPRESENTATION_HISTORY.json",
+        "sha256": "24558df097d290213126753ad8ebccbc1c93afc81bb344eb9b04165054461a38"
+      }
+    ]
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/REPORT.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N07",
+    "version_and_refinement_documents": [
+      {
+        "bytes": 741,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/API_WORDING_HISTORY.json",
+        "sha256": "9c2bf9d5cde596824121f5a6e42abd7390c888817fe29a8a5f980fa0360f9419"
+      }
+    ]
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime/worker-ownership/REPORT.v2.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N08",
+    "version_and_refinement_documents": [
+      {
+        "bytes": 1495,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime/worker-ownership/WORDING_REFINEMENT.json",
+        "sha256": "02b5abe79affb7411d11b209df5ef7c531983b001e0e553aeccaf3841b9dc7b8"
+      }
+    ]
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/REPORT.v2.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N09",
+    "version_and_refinement_documents": [
+      {
+        "bytes": 720,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-serialization/vector-ownership/VERSION_HISTORY.json",
+        "sha256": "b44c1d270b23032d150480fb49e65885e731b397ae9a024d8c5b32348dd390dd"
+      }
+    ]
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/REPORT.v2.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N10",
+    "version_and_refinement_documents": [
+      {
+        "bytes": 575,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-trigger/admission/WORDING_REFINEMENT.json",
+        "sha256": "a06e0cd14c5f7e9de6ddf5ba3e774c35b5e81708c27baff90cc0503c9c9bec5a"
+      }
+    ]
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/REPORT.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N11",
+    "version_and_refinement_documents": []
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/query/REPORT.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N12",
+    "version_and_refinement_documents": [
+      {
+        "bytes": 1840,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/serializer/DEVELOPMENT_HISTORY.v2.json",
+        "sha256": "973cc387241c5277b9f884a1355fadbeefa8b90d8f06ce262a3f6fe89092107d"
+      }
+    ]
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/REPORT.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N13",
+    "version_and_refinement_documents": []
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-removal-context/scene-condition/REPORT.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N14",
+    "version_and_refinement_documents": [
+      {
+        "bytes": 482,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-removal-context/context/DEVELOPMENT_HISTORY.json",
+        "sha256": "27a249d0ffc7d291dba1374bc2b01a4ab571e90dece8f015237dc38cee8436dc"
+      },
+      {
+        "bytes": 1826,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-removal-context/CONDITION_STORAGE_REFINEMENT.md",
+        "sha256": "77345c3139bf9eadaf34be646b105ca55eeb45d7e5da6094e98a5bdc7b3f0418"
+      }
+    ]
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/REPORT.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N15",
+    "version_and_refinement_documents": []
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/REPORT.v2.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N16",
+    "version_and_refinement_documents": [
+      {
+        "bytes": 932,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/record/VERSION_HISTORY.json",
+        "sha256": "b2e1919dd6955ace1980ceb3e976538a35b89841d302efe2287897f481e5c1b5"
+      },
+      {
+        "bytes": 909,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/DEVELOPMENT_HISTORY.json",
+        "sha256": "522288bc7b8025be24c2b9698eb95b68bb3b4e26f126d17c1ed680ef8f8c0e15"
+      },
+      {
+        "bytes": 1414,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/VERSION_HISTORY.json",
+        "sha256": "f6575cf96a442b331865c14b3b631407d99241c6e0ac5a32ddf28b46397966ab"
+      }
+    ]
+  },
+  {
+    "authoritative_selected_report": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/REPORT.RESULTS.md",
+    "historical_reports_remain_immutable": true,
+    "row": "N17",
+    "version_and_refinement_documents": [
+      {
+        "bytes": 1157,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/DRAFT_HISTORY.json",
+        "sha256": "b808c84b7cc63938f1b3a3bb699e2482c6ed66e52d4adc22cdec50302ba6a9a8"
+      },
+      {
+        "bytes": 1398,
+        "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/DRAFT_HISTORY.v3.json",
+        "sha256": "7bca78358180470b4a8b9a91182cc9c6d7f1fe487a413ab1f6770f08a8920620"
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+# Bounded catalogue ownership and scene-runner continuation
+
+The selected catalogue reader now has its actual original class139 owner, fifteen-column query producer and conditional registry-to-factory route. Its two previously unnamed integer destinations acquire catalogue `slots` and system ID. This materially connects stored catalogue schema to application code without executing SQL or establishing the full eligibility policy.
+
+Selected scheduler action strings SLEEP/SCENARIO construct distinct44-byte JSON-facing objects with derived seconds/sceneId plus shared id/type/delay/duration fields, then transfer into the scene action vector. Separate compiled runtime objects and action vectors are established in a selected initializer branch. Two launch functions consume the actual enabled byte before thread requests; relocated state vtables connect workers to conditional predicates and selected action/cancellation dispatch.
+
+All three author reports and exact outputs are separately frozen. Original vendor/ARM/Thumb/SQL/JSON/scenes/threads/services/network/bus/physical execution is0. The only semantic host case is one explicit positive-integer plain-text SQL substitution; no SQLite connection or evaluator is used. Previous firmware instruction corpora remain unchanged.
+
+These source joins narrow missing ownership and execution-gate questions. They do not complete the scheduler, input grammar, timing semantics, scene lookup, callback lifecycle, catalogue policy, provider/concurrency/unwind or physical verification. Device approval gates remain pending. Closed authentication/session/framing investigations stay closed.

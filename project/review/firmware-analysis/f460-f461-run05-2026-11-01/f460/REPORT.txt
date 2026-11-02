@@ -1,0 +1,35 @@
+# F460 2.0.12 run05: key89 callable selection and supplied owner tuple
+
+This static packet closes a local constructor-selection and argument-owner edge left open in run04. It does not identify a configured product instance or execute SQL, vendor instructions, semantic fixtures or models. All new execution counts are zero; previous product ledgers remain unchanged.
+
+## Identity and reproduction
+
+Original `/home/bticino/matrix_mx/matrix_mx`, SHA256 `16d92b02ffe89819f6947d93efa76a0f24f8b590a43d3e5d8fdc7226ec68a4ff`, is freshly mapped as ELF64 little-endian AArch64. `SOURCE.json` retains exact PT_LOAD mappings, span bytes/hashes, selected guards, original PIC joins and call targets. Names printed as nearest symbols by objdump are not function identities. The current Device0207 page supplies product context only. Run04 authoritative v2 and its independent review are pinned as inheritance; old collectors are not replayed.
+
+Reproduce with `python3 -B work/f460-firmware/2.0.12/research/2026-11-01-run05-selector/collect_selector_v1.py --check`. The collector uses host reads/binutils, refuses existing generated outputs and immediately freezes exact first copies with index bytes computed before opening the index. No database data is read by this packet. The only original input is the executable; source references are independently hash-pinned.
+
+## Actual constructor pointer is a registered callable
+
+The static initializer uses a local 40-byte-per-entry range. At0x28624/0x28628, original ADRP/ADD computes code address0x112fd0, the key89 constructor audited in run04. The source retains this inX2 until0x286e0, which stores it as the first word of function storage atSP+0x6b8 (1720). At0x2864c W21=89;0x286dc stores that key atSP+1712, immediately before this storage. X10 was explicitly set toSP+0x6b8 at0x286a4. The manager and invoker words adjacent to the function storage are original source addresses0xf5350 and0xf0d00, established at0x28210..0x2821c and stored by0x286e8. This is a numeric registry key and a constructor pointer, not a Device ID, OPEN WHO, scene enum or physical meaning inferred from RTTI.
+
+The normal initializer path calls0x12fad0 at0x287a0 with local entry rangeSP+32 throughSP+2072, 40-byte stride, into global0x31a798. The destination is derived from original base0x31a200 plus0x598 at0x282d4; the base comes from0x27ff0. The supplied entry range therefore has51 entries, but this packet analyzes only the key89 tuple, not a support matrix. Reaching/finishing this initializer and ordinary allocation/provider returns remain premises.
+
+The selected original range-constructor path copies an entry key into node+8 (0x12fbe4/0x12fbf4). If its manager word is nonnull it calls that manager with operation2, destination node+16 and source entry+8 (0x12fbec..0x12fc14); it then copies entry manager/invoker words into node+32/+40 (0x12fc18/0x12fc1c). Original manager0xf5350 operation2 reads source storage's first pointer and stores it into destination storage (0xf5370/0xf5374). The key89 constructor pointer is thus preserved by the actual selected source-copy operation; the invocation is not inferred from matching names. Container allocation, hashing/collision state, all other manager operations and complete exception/lifetime behavior are not claimed as executed.
+
+## Actual caller selects the same registry and supplies three words
+
+At0xed610, the entry saves its supplied X0 inX21 and reads a provided pointee from[X0]. It obtains a four-byte-key range from pointee+24/+32 (0xed644), and selected iteration0xed678 reads W19 from the current entry. The caller has original existing-object checks before the selected new-object route. The retained source includes those checks; this packet does not equate the chosen route with every existing-object or error path.
+
+On the selected route0xed7d8, X23 is the independently derived0x31a200 base from0xed654/0xed658. Loads at+1432/+1440 are exactly global0x31a798's bucket pointer/count, the same registry initialized above. The local hash-chain path compares node+8 with the supplied W19 key (0xed7f8..0xed828); null/mismatching paths return to iteration. This proves selected key equality; it does not prove the map is populated or any supplied list naturally contains89. Only under the explicit key89 and successfully initialized-map premises does this path select the prior constructor.
+
+The three getters are original tiny definitions:0x17abe0 reads a 32-bit word at receiver+120;0x17ac60 reads+124;0x17aca0 reads+128. At0xed834/0xed83c,0xed844/0xed848 and0xed850/0xed858, the caller passes the **same** supplied pointee[X21] to them. It saves their results respectively toSP+36,SP+32,SP+28. Therefore the input owner is precisely that provided pointee, not the outer wrapper, registry node, catalogue row or constructed value object. Its construction, semantic type, configuration provenance and lifetime remain open.
+
+At0xed868 the selected node's manager is checked for nonnull;0xed878 loads its invoker. BLR0xed88c supplies function storage node+16 asX0; X1=SP+36, X2=SP+32, X3=SP+28, and hidden resultX8=SP+40. Exact original invoker0xf0d00 loads the stored constructor pointer intoX5, dereferences those three argument pointers intoW0/W1/W2 at0xf0d1c..0xf0d24, preserves the same hidden result address, and calls that pointer at0xf0d3c. The indirect call's code identity is conditional on the source-initialized, unmodified selected callable; no live binding or runtime mutation is observed.
+
+Combining this new edge with run04's independently reviewed constructor/base argument stores gives the source-only correspondence: provided pointee+120 -> `$modobj$`;+124 -> `$line_modobj$`;+128 -> `$brand_modobj$`. Key89's constructor independently supplies `$key_object$`=89. These labels are SQL-placeholder roles established by original construction/substitution requests, not inferred published identifier meanings. No actual values or configured product associations are supplied or exported.
+
+## Output and limits
+
+The hidden pair result is the same output address passed through original invoker0xf0d00. On the normal caller path following return,0xed890..0xed8b8 copies the pair fromSP+40/+48 into an available16-byte owner-vector slot and advances its end pointer. The full-vector helper branch, reference counting, outer publication, SQL/provider success and concurrency/lifetime are outside this packet. This is an original local output-storage request, not a naturally executed query, accepted protocol, physical action or compatibility verdict.
+
+Ranked remaining questions: the actual class/construction and trusted provenance of the supplied owner fields and key list; complete outer caller and configured catalogue selection; provider/string/SQL execution and resulting semantic use under a separately authorized analysis. No global absence is inferred from the bounded direct-call locator (the new positive route is indirect). Receiving/transport/MQTT/libjel/auth/session/framing and related delegates remain closed. No failed first generation or overwritten candidate occurred in this packet.

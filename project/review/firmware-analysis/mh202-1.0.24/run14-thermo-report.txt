@@ -1,0 +1,69 @@
+# MH2021.0.24 run14 — selected WHO4 brief scalar status path
+
+## Result and scope
+
+A concrete original MH202 brief-status route constructs WHO4/DIM0 text from a supplied eight-character ASCII body. Two finite host cases illustrate the actual packed-value branch:
+
+| Private ASCII body | Reconstructed WHERE | Branch scalar | Conditional generated text |
+|---|---|---:|---|
+|`B40130C8`|`1`|200|`*#4*1*0*0200##`|
+|`B50130F5`|`1`|501|`*#4*1*0*0501##`|
+
+These are original-code arithmetic/format expectations under ordinary selected providers/primitives, **not native generated messages, accepted raw inputs or measured temperature**. The value501 is preserved as raw code behavior. No physical units, scale, signed interpretation, error/reserved/sentinel meaning, setpoint domain or F454 classification is assigned. This batch does not examine extended signed DIM15.
+
+Original ARM/vendor/parser/JS/PHP execution, original instructions executed, emulator hooks and live I/O are **0**. Host tools read verified original bytes, inspect source metadata and compute two finite models. No original process, target OS/device/network/framing, authentication/HTTP route or credentials are involved. Earlier firmware/research/repository files remain unchanged.
+
+## Original source identities and reproduction
+
+| Original normal-image path | SHA256 |
+|---|---|
+| `/home/bticino/libcoso/libplug_thermo_tr.so` | `5e2da864f01b19f4f14dde76e11786234b36c97f4f6778966d6a32f597d1452b` |
+| `/home/bticino/lib/libthermo.so` | `a84ac5be4d01eaadceafa4bbc54bee58e6794bf144398d64bb54c1f944686ff2` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+
+`python3 work/mh202-firmware/research/2026-10-30/thermo/run14/collect_thermo.py --check` strictly reproduces22 outputs:14 original spans,24 asserted words,4 safe literal targets, descriptor relocation/import evidence and2 host cases. All5 inputs are hashed: three originals, VFS and immutable coso/run13 report. `original-spans.json` records source VAs/file offsets/byte hashes. Separate author manifest pins report/collector/evidence and excludes itself and later reviews. All addresses/layouts are from fresh MH202 bytes; no F454 fixture or native harness is loaded.
+
+## 1. Descriptor, routing axes and actual reverse call path
+
+Original68-byte **thermo_tr_tr descriptor0x1089c** has relocation+36 at0x108c0→**thermo_tr_init0x79e0** and+40 at0x108c4→**thermo_tr_translate0x7940**. Fixed direction fields+44/+48 are1/2. Original registration0x77c0..0x781c appends **numeric3 to descriptor+52** and **numeric4 to+56**, then calls register_translation at0x7818. The lists are separate routing criteria: selected reverse SCS-family3 versus parsed WHO4 forward route, not both WHO4. The actual COSO dispatcher/list-axis interpretation was established from the same verified build in coso/run13; this batch does not repeat that matrix or observe active admission/registration.
+
+Translator0x7940 compares pair(1,2) and tailcalls **thermo_scs2open at0x79cc** through its import PLT; pair(2,1) selects the different forward converter. No full support table follows from the pair guard.
+
+Reverse entry **0x7528** uses input record+0 as body text and first rejects an empty string. It calls imported **thermo_where** at0x7594. For selected source type+40=3 it calls **briefscs_translate at0x75d4**, passing the supplied body, actual WHERE text and a local output-list pointer. Type4 has a separate prefix-dependent extended route at0x7698; other types can reach the displayed brief branch too. No general representation+56 check or accepted complete input schema is inferred beyond the shown source conditions and our coherent private premises.
+
+The plugin’s direct NEEDED metadata includes **libthermo.so**, with original candidate definition thermo_where0x1c08 and getHexByte0x1154. Brief conversion/coarse-check definitions are in the same plugin; output list helper is a candidate host/core libcoso definition. That core helper is not asserted to be a direct NEEDED plugin dependency. Effective live imports/interposition/initialization and complete loader closure are not observed; selected candidate-provider identities are pinned instead.
+
+## 2. Actual short-body address construction
+
+Candidate **libthermo::thermo_where0x1c08..0x1dac** calls **getHexByte0x1154** for body text offsets2 and4 and checks length against16. getHexByte copies exactly two characters plus NUL into a local buffer and calls g_ascii_strtoll(base16). For our length8 bodies, original0x1c3c/0x1c44 forms:
+
+`address = hex(body[2:4]) | ((hex(body[4:6]) & 15) << 8)`.
+
+Both selected bodies have slices`01` and`30`, yielding address1. The length-not16 branch sets the selected auxiliary register0; the relevant further branches find no high address component and reach **0x1d5c**. Exact original format `%d`, pool0x1da4→0x222c, therefore produces WHERE string **`1`** under ordinary formatting. This is distinct from the length16 extended-address formula and does not establish the valid physical address domain or probe role.
+
+## 3. Brief scalar selection and decimal formatting
+
+**briefscs_translate0x41f8** takes four two-character slices at ASCII offsets0/2/4/6. It requires the **first character of the third slice to be ASCII`3`** at0x4250..0x4260. Original0x42a4..0x4308 converts marker low character, second slice, complete marker, third slice and final slice using base16 integer primitives. The selected marker-low values4/5 jump through **0x4328/0x432c→0x4420**.
+
+The actual selected branch at **0x4420..0x4428** requires the converted third byte in unsigned range **0x30..0x38**. Our opcode0x30 satisfies it. It then compares the **full marker with0xb4** at0x442c. For markerB4 the final converted byte is retained; for the selected markerB5 the conditional add at **0x4430** adds256. Thus:
+
+- B4/C8: scalar0xc8=200;
+- B5/F5: scalar0xf5+256=501.
+
+The source path performs no divide/multiply or physical conversion before formatting these selected values. Exact format **`*#%d*%s*0*%04d##`**, pool0x4a78→0x7c10, receives fixed WHO integer4, actual WHERE string and scalar. The four-digit decimal formatting produces0200 or0501. The hard-coded DIM field is0. Generated text is appended to the local candidate-string list at0x444c..0x4458. No signed extension, physical unit, range validity, sensor error or setpoint meaning follows from this selected branch/format.
+
+The host model checks only these two complete well-formed supplied ASCII slices and ordinary string/numeric/list premises. It does not run the original converter, parser or any source of natural input bytes. Nearby markers, values and opcodes are not expanded into an exhaustive protocol classification.
+
+## 4. Coarse text screening and metadata/list boundary
+
+Reverse entry iterates generated candidate strings at **0x75e8..0x7664**. Each string goes to **check_open_frame0x4c84** at0x7634. Its actual source is a coarse screen: it traverses string characters up to length−1, permits`*`/`#` or classification-table bit8, then requires original prefix **`*`** and suffix **`##`**. The selected digit-only bodies satisfy this source-level ordinary ASCII/table assumption. This helper **does not invoke a full OPEN parser** or inspect all field/address/domain semantics. Its name is not a whole-parser-acceptance proof.
+
+Only nonzero screen result reaches **scsmsg_to_openlist at0x761c**, with original source record, output-list pointer and explicit routing argument4. Candidate same-build core **0x26d8..0x2764** duplicates text into a newly allocated64-byte record, sets type+40=2/representation+56=2/+4=2/+8=0, writes routing field+48=4, copies source+12/+16/+24/+28/+52/+60, and appends to the supplied output list. Those fields are record metadata, not measured temperatures or device state. Unlike a distinct parser/list helper used in earlier COSO work, this selected wrapper duplicates text and does not itself call buf_to_openmsg.
+
+Allocation, metadata copying, classification/prefix primitives, list publication/draining, native parser readback and physical transport remain unexecuted/delegated. A candidate string surviving this conditional coarse screen is not a claim of a delivered or accepted frame.
+
+## Confidence and next distinct gap
+
+Confirmed static: fresh descriptor/callback/routing-axis identity, concrete reverse/brief calls, short-address construction, marker/opcode guards, retained/add256 scalar, exact WHO4/DIM0/four-digit formatting, coarse screen and core text/metadata/list boundary. Host-only: two source-backed scalar/address/text models. Conditional: coherent source record/body, initialized descriptor, selected providers, numeric/string/classification/container completion and caller admission. Unknown: natural source provenance, live binding, full address/opcode/value domain, extended signed DIM15, physical scale/units/errors/setpoints, STM control policy and transport effects.
+
+A useful next distinct question is an ordinary forward WHO4 request builder or actual thermo STM/query correlation, with justified parser/context inputs. The present raw501 formatter result should remain a software byte/format fact until a separately proven consumer/source establishes any additional meaning.

@@ -1,0 +1,44 @@
+# BNCUSCENE condition and pointer-storage refinement: source review
+
+Verdict: PASS; no correction requested. This independently checks original selection/schema/layout/predicate/consumer source, current generated evidence and the new scoped storage clarification. No original/vendor/native/JsonCpp/provider/target instructions, configured object, semantic fixture or scene execution occurred. Author/original/repository and earlier report/review files remained read-only. The result is not a configured feature, accepted scene grammar, unsupported-function declaration, defect or physical interpretation.
+
+## Reproduction and independent checks
+
+Read-only `python3 -B collect_scene_condition_v1.py --check` reproduced19 outputs. A separate ELF32 PT_LOAD mapping independently verified the scheduler SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`, all15 span hashes,18 instruction guards,6 decoded direct branches,6 exact key pool/PC joins,2 TBH targets,4 R_ARM_RELATIVE entries, raw/compiled RTTI/vtable identities and5 input pins. All21 immediate first copies match current bytes/sizes/hashes. The retained selected bodies were read for actual source contracts rather than relying only on equality of outputs.
+
+Original raw table row17 has exact BNCUSCENE length9. Raw factory decrements row index before TBH entry16; compiled dispatch instead uses entry17 directly. Independent base/entry/target arithmetic agrees with0x2fb0e +2*0x011b =0x2fd44 and0xa7516 +2*0x026a =0xa79ea. No public WHO/action/trigger namespace or neighboring-condition layout is substituted.
+
+## Critical source relations
+
+The raw factory's88-byte schema and direct0xb2bc4 class construction agree on local BncuSceneCondition identity. Base id+4 and derived id+40/name+64 are distinct storage despite the repeated source key. Raw enabled28 conversion and type/operator32/36 stores are source-backed, with ordinary JsonCpp/string/provider validity and return premises. The virtual serializer/reparse occurs before compiled construction, but its complete derived-field value coherence remains open.
+
+Compiled constructor0xc83e4 receives the selected192-byte allocation, copies base id to108, enabled28 to132, type/operator32/36 to136/140 and derived strings to144/168. These are independent members, not actual target-scene lookup or configuration identity. Own CV/mutex/storage is distinct from action shared-stop and registry synchronization objects.
+
+Original primary header0x161fb0/AP0x161fb8 and exact24BncuSceneConditionRunner RTTI agree. Its slots are Thumb0xc86f1,0xc864d,0xc83d9; the first two are cleanup/deallocation paths, not predicate handlers. The selected third slot is primary+8. The secondary base at own104 is a separate interface.
+
+Initializer0xa7a1e supplies the compiled primary pointer to one-word temporary storage and0xa7a20 requests append to scene+116. Available-capacity0xa7264 loads ONE word, writes the same pointer at old end, zeros ONE source word and advances end4. Full capacity tailcalls the separately opaque0xb4fd4 delegate. This source does not prove actual append/allocation success or complete condition ownership.
+
+The selected generic condition range is scene116/120; its count arithmetic divides byte span by4. The original pointee at0xa6d88 is passed unchanged through its primary vptr, slot+8 load0xa6d92 and call0xa6d94. For the stated valid same-scene member/class premise this selects0xc83d8. The complete method is exactly LDRB this132, XOR1, return. It has no local ID/query/state/timer/provider call or other-field read. Under ordinary valid Boolean0/1 from construction, disabled0 yields1 and enabled1 yields0. Arbitrary corrupt/non-Boolean bytes are not normalized or supplied by this review.
+
+The immediate consumer tests zero/nonzero at0xa6d96..0xa6d98. Its previously reviewed normal conjunction/failure/action continuation remains inherited source, not new whole-worker coverage. No actual configured BNCUSCENE instance, aggregate result, callback/action, readiness, timing or physical effect follows. Intended feature meaning and all other methods/provider/mutation/lifetime/unwind/concurrency behavior stay open.
+
+## Explicit prior terminology refinement
+
+CONDITION_STORAGE_REFINEMENT.md is supported by the actual four-byte publication and consumer source. The old immutable removal report's phrase 'Trigger+104/condition+116 controls' and old documentary review's 'trigger/condition handles' are too broad if read as assigning the trigger/action two-word control-record representation to conditions. Both complete old files and exact phrases match the two retained snapshot/index hashes; current originals are unchanged.
+
+This new clarification separates condition116 four-byte compiled pointers from trigger104/action128 eight-byte pointer/control pairs. It does not change the old numeric-registry pair-clear/count/disposal/erase proof, claim no condition ownership, classify all growth/destructor/error/alias paths or establish lifetime safety/failure. No unavailable earlier bytes or historical events are reconstructed or certified. The old evidence/reviews remain preserved with this explicit current qualification.
+
+## Exact reviewed pins
+
+Paths below are relative to this research batch.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `scene-condition/REPORT.md` | `92c64b715c2747ced59b18ca4ddbeb28f811a1f6651683a7d2c4aee656c035c8` |
+| `scene-condition/collect_scene_condition_v1.py` | `49a4dba646fdef25be62d6c2da603e2f3bf112767902a7079f8b1cbc2788327f` |
+| `scene-condition/OUTPUT_MANIFEST.json` | `1e1c2c5106b199c8701feb0116d87912fafc61f6e1ce4d5aa2d74a93defa1a29` |
+| `scene-condition/ORIGINAL_SOURCE.json` | `4bf82d162279ba48da844254119e3369864ffe4528e9616fa53faf69f025c108` |
+| `scene-condition/CONDITION_CONTRACT.json` | `608ad2f2196381b50a6c1065dab7873c5ed9edd64ee71b74968da90e7ae5ef40` |
+| `scene-condition/first-candidate/INDEX.json` | `4c19fa880fb978cb70fbbd2513afe42447ca3409a6d6c0cf92c800db99a731c5` |
+| `CONDITION_STORAGE_REFINEMENT.md` | `77345c3139bf9eadaf34be646b105ca55eeb45d7e5da6094e98a5bdc7b3f0418` |
+| `integration/condition-storage-prior/INDEX.json` | `c75027842abd4d03bf7067d784f6235056ffac243c85ded6d29d3bc1aee6c75e` |

@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+"""One BNLD numeric trigger/local caller, static only; no semantic fixtures."""
+import sys
+sys.dont_write_bytecode=True
+from pathlib import Path
+import argparse,hashlib,importlib.util,json,os,re,struct,subprocess
+D=Path(__file__).resolve().parent;W=next(x for x in D.parents if(x/'sources').is_dir());R=W/'work/myhomeserver1-firmware/3.87.13/research';V=R/'2026-10-31/image_vfs.py';S='/home/bticino/scheduling_manager/scheduling_manager';H=lambda z:hashlib.sha256(z).hexdigest();J=lambda x:(json.dumps(x,sort_keys=True,indent=2)+'\n').encode()
+sp=importlib.util.spec_from_file_location('numeric_trigger_vfs',V);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+SPANS=[('raw-selected-factory',0x2f416,0x2f452),('raw-numeric-presence',0x2cc00,0x2ccb8),('initializer-capture',0xa8d80,0xa8dba),('initializer-virtual-reparse',0xa8dba,0xa8dee),('compiled-callback-copy',0xf487c,0xf48da),('compiled-field-copies',0xf4920,0xf4946),('persistent-object-publication',0xa8e36,0xa8eb4),('primary-fire-method',0xf486c,0xf487c),('numeric-admission-handler',0xf4a80,0xf4ad4),('selected-local-recipient',0x5398c,0x53a10),('numeric-local-guards-and-call',0x54c0e,0x54c38),('scene-capture-manager',0xa56c0,0xa56e0),('scene-callback-wrapper',0xa60a8,0xa60ae),('local-raw-trigger-dispatch',0x52d10,0x52d5c)]
+GUARDS=[(0x2f420,'3020'),(0x2cc32,'46f8283b'),(0x2cc3e,'48b3'),(0x2ccaa,'0028'),(0x2ccac,'e062'),(0xa8da6,'3260'),(0xa8dd2,'83f715ff'),(0xa8e38,'5020'),(0xa8e52,'00f11009'),(0xa8ea0,'c4e90087'),(0xf48c4,'0222'),(0xf492a,'317f'),(0xf4932,'84f83010'),(0xf4936,'42f98f0a'),(0xf4a80,'90f83030'),(0xf4a86,'836b'),(0xf4a92,'036c'),(0xf4a94,'9942'),(0xf4a96,'0edd'),(0xf4ac6,'8b42'),(0xf4ac8,'e6dc'),(0x539fe,'eb6b'),(0x54c0e,'d8f82010'),(0x54c18,'d8e90232'),(0x54c1c,'022a'),(0x54c24,'6f2a'),(0x54c2c,'6e2b')]
+def build():
+ v=m.ImageVFS();b=v.read_bytes(S);assert H(b)=='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26';ph=struct.unpack_from('<I',b,28)[0];es,n=struct.unpack_from('<HH',b,42);L=[struct.unpack_from('<8I',b,ph+i*es)for i in range(n)]
+ def off(a,n=1):return next(o+a-va for t,o,va,_,fs,*_ in L if t==1 and va<=a and a+n<=va+fs)
+ def raw(a,n):o=off(a,n);return b[o:o+n]
+ def u(a):return int.from_bytes(raw(a,4),'little')
+ def txt(a):o=off(a);e=b.index(0,o);assert e-o<128;return b[o:e].decode('ascii')
+ hp=v.root/v.resolve(S).lstrip('/');env=dict(os.environ,DEBUGINFOD_URLS='');out={};spanrows=[]
+ for name,a,e in SPANS:
+  z=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(hp)],text=True,env=env).replace(str(hp),S);z=re.sub(r' <([^>]+)>',lambda x:x[0]if'@plt'in x[1]else'',z);out['spans/'+name+'.txt']=z.encode();spanrows.append({'name':name,'start_VA':hex(a),'end_VA_exclusive':hex(e),'file_offset':hex(off(a,e-a)),'sha256':H(raw(a,e-a))})
+ for a,z in GUARDS:assert raw(a,len(bytes.fromhex(z))).hex()==z,hex(a)
+ def call(a,t):
+  x,y=struct.unpack('<HH',raw(a,4));assert x&0xf800==0xf000;s=x>>10&1;i=1-((y>>13&1)^s);j=1-((y>>11&1)^s);d=s<<24|i<<23|j<<22|(x&1023)<<12|(y&2047)<<1;assert(a+4+d-((1<<25)if s else 0))&0xffffffff==t,hex(a);return{'VA':hex(a),'target':hex(t),'bytes':raw(a,4).hex()}
+ calls=[call(a,t)for a,t in [(0x2f41a,0x2cc00),(0x2cc1e,0x2c678),(0xa8dd2,0x2cc00),(0xa8dea,0xf487c),(0xa8eb0,0xa56e4),(0x53994,0xa6508),(0x539cc,0x573a4),(0x539f4,0x4f000),(0x54c34,0xf4a80),(0xa60aa,0xa5db0)]]
+ base=(u(0x2cd2c)+0x2cc14+4)&0xffffffff;assert base==0x1659a4
+ types=[];relvas=[]
+ for p,name,h in [(0x2cd30,'15BaseBnldTrigger',0x1602ec),(0x2f6e4,'11BnldTrigger',0x160304),(0xa9694,'17BnldTriggerRunner',0x16265c)]:
+  slot=base+u(p);assert u(slot)==h;rt=u(h+4);assert txt(u(rt+4))==name;types.append({'pool':hex(p),'GOT_slot':hex(slot),'header':hex(h),'AP':hex(h+8),'RTTI':hex(rt),'name':name,'primary_slots_Thumb':[hex(u(h+i))for i in [8,12,16]]});relvas.extend([slot,h+4,h+8,h+12,h+16])
+ assert base+u(0xa968c)==0x165f04 and u(0x165f04)==0x160304
+ assert(u(0xf49c8)+0xf4930+4)&0xffffffff==0x16265c
+ assert(u(0xf4ad4)+0xf4a9e+4)&0xffffffff==0xf486d
+ assert u(0x162664)==0xf486d and u(0x160314)==0x282e5
+ # Exact selected destination/source typeinfo used by the local dynamic cast.
+ rtti=[]
+ for p,want in [(0x53eec,'17BnldTriggerRunner'),(0x53ec8,'13TriggerRunner')]:
+  slot=base+u(p);rt=u(slot);assert txt(u(rt+4))==want;rtti.append({'pool':hex(p),'slot':hex(slot),'typeinfo':hex(rt),'name':want});relvas.append(slot)
+ keys=[]
+ for p,pc,k in [(0x2cd34,0x2cc2e,'status'),(0x2cd38,0x2cc44,'status'),(0x2cd40,0x2cc9c,'level')]:a=(u(p)+pc+4)&0xffffffff;assert txt(a)==k;keys.append({'pool':hex(p),'ADD_PC':hex(pc),'literal_VA':hex(a),'key':k})
+ tt=0x160450;assert u(tt+3*8)==4 and txt(u(tt+3*8+4))=='BNLD'
+ tables=[]
+ for a,w,idx,target in [(0x2eac0,2,2,0x2f416),(0xa732e,2,3,0xa8d80),(0x52d5c,4,2,0x5398d)]:
+  val=int.from_bytes(raw(a+w*idx,w),'little');assert(a+(2*val if w==2 else val))&0xffffffff==target;tables.append({'base':hex(a),'entry_bytes':w,'index':idx,'raw_value':hex(val),'target':hex(target),'scope':'Distinct rawdecrement/directcompiled/localrelativepointer indices; row3 notconditionrow2 orprotocolcode'})
+ cb=[]
+ for p,pc,want in [(0xa9684,0xa8d98,0xa60a9),(0xa9688,0xa8d9c,0xa56c1)]:a=(u(p)+pc+4)&0xffffffff;assert a==want;cb.append({'pool':hex(p),'ADD_PC':hex(pc),'Thumb_target':hex(a)})
+ rel=subprocess.check_output(['readelf','-rW',str(hp)],text=True,env=env);rr=[]
+ for a in sorted(set(relvas)):
+  z=next(s.strip()for s in rel.splitlines()if s.startswith(f'{a:08x} '));assert'R_ARM_RELATIVE'in z;rr.append(z)
+ pins={S:{'sha256':H(b),'bytes':len(b)}}
+ for p,k in [(V,'image_accessor'),(R/'2026-11-01-event-trigger/registration/REPORT.md','inherited_generic_scene_capture_publication'),(R/'2026-11-01-event-routing/routing/REPORT.md','inherited_local_event_cache_and_loop'),(R/'2026-11-01-double-isolation/harness/RESULTS.json','unchanged_prior_cumulative_native_ledger'),(W/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md','curated_product_context')]:z=p.read_bytes();pins[k]={'path':str(p.relative_to(W)),'sha256':H(z),'bytes':len(z)}
+ out['INPUTS.json']=J(pins);out['ORIGINAL_SOURCE.json']=J({'image':S,'code_spans':spanrows,'guards':[{'VA':hex(a),'bytes':z}for a,z in GUARDS],'calls':calls,'classes':types,'cast_types':rtti,'keys':keys,'type_row':{'table':hex(tt),'row':3,'label':'BNLD'},'tables':tables,'capture_targets':cb,'relative_relocations':rr})
+ out['NUMERIC_CONTRACT.json']=J({'schema':{'raw_bytes':48,'temporary':'BaseBnldTrigger','final':'BnldTrigger','raw_enabled':28,'raw_type':32,'raw_operator':36,'raw_status':40,'raw_level':44,'numeric_path':'statusmemberABSENT→leveloperator[]/asInt→raw44; no levelpresence/type/range admission proved','compiled_inner':{'bytes':68,'callback':[4,12,16],'schema_secondary':20,'ID':24,'enabled':48,'type':52,'operator':56,'status':60,'level':64},'aggregate':{'bytes':80,'inner':12,'outgoing_pair':'inner/control','scene_append':104},'coherence':'Virtualrawslot+8→sameJSONreparse2cc00; fullserializer/provider preservation remainspremise'},'selected_caller':{'raw_trigger_type':3,'relative_table_index':2,'target':'5398c','compiled_vector':'index-correlated copiedscene104handles; pointer/cast validpremises; copyreleased573a4 before lateruse','ID':'selectedfastgetter pointer/length vsFP ID at539f4','numeric_selection':'compiledstatus60==-1','record_integer':'record32!=-1','record_status':'recordstring8 length2 exactASCII on','call':'54c34 f4a80(r0=compiledprimary,r1=suppliedrecordinteger32)','record_type':'suitablevalidrecord layout premise, NOT Thermostatdouble/otherrecordtransfer'},'numeric_handler':{'entry':'f4a80','enabled':'own48mustnonzero','operator':'own56','threshold':'own64 signed32','operands':'eventinteger r1 compared with configuredthreshold own64','operator0':'invoke only event > threshold (signed)','operator1':'invoke only event < threshold (signed)','operator2':'invoke only event == threshold','operator3':'invoke only event != threshold','otheroperator':'selected code bypasses numericcomparison and proceeds to callback branch; not a public admissibleoperator domain','callback':'ownprimary slot0==f486d fastpath checksmanager12 then tailcalls invoker16 atfunctionstorage+4; differentvirtual target remainsdelegate'},'capture':'initializer storesprovidedsceneSP4 withmanagera56c1/invokera60a9; actualmanageroperation2 copiesrawpointer; constructorcopiescallable andpersistentaggregate beforeappend; wrappera60a8 loadsstoredscene thena5db0 launchboundary','limits':['no status-selected siblinghandler classification','providedparsedlocalinput/recordtype/provider/ID/cast/vectoralignment/owner/lifetime premises','fullJSONserializer/default/error/unwind/thresholdrange/publicprotocol/physicalmeaning unclosed','sceneenabled/active/condition/thread/provider outcomes inheritedconditional, not actualsuccess'],'method':{'original_execution_additions':0,'semantic_host_fixtures':0,'target_IO':0,'prior_cumulative':'1corpus8entries340originalvisits0C12redirect8EXIT360hooks unchanged'}})
+ out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes()),'outputs':{n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()},'counts':{'code_spans':len(SPANS),'byte_guards':len(GUARDS),'calls':len(calls),'classes':len(types),'cast_typeinfos':len(rtti),'keys':len(keys),'selected_tables':len(tables),'relative_relocations':len(rr),'inputs':len(pins),'original_execution_additions':0}})
+ return out
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');ck=ap.parse_args().check;out=build();C=D/'first-candidate'
+ if ck:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  for n,p in json.loads((C/'INDEX.json').read_bytes()).items():z=(D/n).read_bytes();assert z==(C/n).read_bytes()and H(z)==p['sha256']and len(z)==p['bytes'],n
+ else:
+  assert not C.exists();assert all(not(D/n).exists()for n in out);cp={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),Path(__file__).name:Path(__file__).read_bytes()};ix=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in cp.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in cp.items():p=C/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (C/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':ck,'outputs':len(out),'code_spans':len(SPANS),'guards':len(GUARDS),'original_execution_additions':0}))
+if __name__=='__main__':main()

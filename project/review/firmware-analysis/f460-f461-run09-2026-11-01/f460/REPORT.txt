@@ -1,0 +1,41 @@
+# F460 2.0.12 run09: one condition-pointer producer and complete scalar predicate
+
+Fresh original source connects local condition row18 BNCUSCENE to its raw class/parser, a concrete compiled condition allocation, an eight-byte pointer publication into the same receiver's condition range, and the actual primary predicate. The complete selected predicate is byte-load/XOR1/return. Its narrow scalar behavior is proved as source; it does not establish target-scene state, unsupported capabilities, a defect or whole-scene policy. New target/original/native execution, SQL, models and fixtures:0. Earlier product ledgers are unchanged.
+
+## Original identity, inheritance and reproduction
+
+Original `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62`, is freshly mapped ELF64 little-endian AArch64. SOURCE.json separates code bytes/spans, fixed instruction guards, relative-relocation class/method data, name-table row, signed jump-table entry and import/call proofs. Nearest stripped disassembly names are not function identities. No MHS/ARM32 condition layout, enum or runtime semantics is transferred. Device0207 supplies product context only.
+
+Run07's reviewed same-initializer receiver identity, condition pointer range+192/+200 and actual worker slot+16 call are inherited through exact report/source/review pins; those collectors/capture/thread tables are not replayed as new coverage. Reproduce only this packet with `python3 -B work/f460-firmware/2.0.12/research/2026-11-01-run09-condition/collect_condition_v1.py --check`. Host file reads/binutils only; no JSON, expressions, provider or target code executes. Generation refuses existing outputs and immediately freezes exact first copies, with index bytes computed before opening its file. No failed canonical generation or overwritten candidate occurred.
+
+## Selected raw schema and fresh table identities
+
+The original common condition parser0x4a260 looks up literal enabled0x1954b0 using actual const JsonCpp member access, requests asBool and stores its returned low byte at raw+40 (0x4a2c8..0x4a2d4). Separate type-string lookup0x4a384..0x4a3e0 uses a24-entry length/string table at0x213960; row18 at0x213a80 is length9/literal BNCUSCENE0x1968e8, and a matching row is stored in raw word44. These are local condition-schema axes, not trigger row18, an allocation/control count, Device ID or public WHO.
+
+Selected raw parser0x10b8b0 calls that common parser on its own supplied JSON (0x10b8fc), then installs raw AP0x212da8 (0x10b900..0x10b908). Header0x212d98/RTTI0x218b40/name0x195df8 independently identify `18BncuSceneCondition`. Its primary slot0 is0x39d50. This class's raw serializer is therefore not assumed equal to a trigger serializer or to its compiled predicate. The rest of its string/target metadata parsing and arbitrary-value serializer coherence are outside this packet.
+
+## Actual initializer and compiled pointer publication
+
+The existing initializer's selected condition loop starts with raw pointer range at receiver+24/+32 (0xf974c). It loads each raw pointer's type word44, bounds it against23 and indexes its own halfword table0x1b5954 (0xf9768..0xf978c). Entry18 is original signed halfword0x0177 at0x1b5978; base0xf9790 plus four times that value is0xf9d6c. This derives the selected original branch without transferring a table or code from another firmware.
+
+Selected0xf9d70..0xf9d98 calls the raw object's slot0 with hidden resultX8=SP+976 and passes that SAME result address to raw parser0x10b8b0 in a temporary atSP+6352. This is an original virtual-result-to-reparse source request, not an injected parsed object or a universal successful JSON round trip. Effective class identity, valid JSON/provider/string returns, normal construction and no intervening mutation remain premises.
+
+The branch requests a256-byte allocation at0xf9d9c/0xf9da0. The returned allocation baseX24 itself is passed as destinationX0 to compiled constructor0x128d20 (0xf9da8/0xf9dac), then published from that same X24. No base+16 adjustment or separate inner/control pair is constructed in this selected block;256 is the requested allocation size, not a transferred shared-control layout or proof that every byte has one semantic field.
+
+Constructor0x128d20 preserves destinationX0 inX19 and raw sourceX1 inX20. Its selected normal copy path reads raw enabled byte40 at0x128e04 and stores that byte to compiled+176 at0x128e18. It also copies raw words44/48 into compiled180/184. Later0x128e98..0x128eb0 installs primary AP0x217310 at destination+0 and secondary AP0x217338 at+136. The primary header0x217300/RTTI0x21d078/name0x1b7ca8 identifies `24BncuSceneConditionRunner`; primary slots0/+8/+16 are0x129150/0x129070/0x128d10 respectively. These are actual destructor/deleting-destructor/predicate address roles by their table positions and source usage; the destructor bodies and full lifetime are not audited here. Primary AP is on the published destination, not a control-block vtable inferred from its name.
+
+At0xf9d84, the append destination is the SAME initializer receiverX20+192. The branch places X24 into pointer cellSP+928 and calls0xf9450 (0xf9db0..0xf9dbc). Original helper0xf9450 reads vector end/capacity from destination+8/+16. On the selected available-capacity path it loads the pointer cell, stores exactly one pointer at current end, advances end by8, clears the source pointer cell and updates destination+8. Therefore the receiver's+192 begin/+200 end/+208 capacity namespace is connected to actual eight-byte condition pointers. It is not the16-byte trigger/control-pair vector or this compiled condition's own internal string field at offset192.
+
+The full-capacity path instead tail-delegates to0x10f190 and remains opaque. On the retained available-capacity normal path, the subsequent source-cell null check skips its deleting-destructor request because the cell was cleared. This establishes source pointer-transfer ordering only, not complete ownership, growth, exception safety, reference counting or concurrency guarantees.
+
+## Complete predicate and actual inherited consumer
+
+The entire original selected primary predicate0x128d10..0x128d1c is four instructions including BTI: load byte[receiver+176] into W0; XOR W0 with immediate1; RET. Thus the exact machine-level scalar result is the loaded unsigned byte XOR1. Under ordinary valid asBool construction yielding0/1, successful same-object copy and no intervening mutation, that is Boolean inversion of the constructed enabled byte. For arbitrary other byte values it is not a universal logical-not conversion; this packet neither supplies nor executes such fixtures.
+
+This complete local body contains no target-ID/scene-registry lookup or imported delegate. That statement is restricted to these16 original bytes, not all class methods, callbacks, schemas, other paths or system capabilities. Stored target metadata, the BNCUSCENE label and a public scene identifier do not establish a target-scene-state match on this predicate path. No unsupported/defect or physical conclusion follows.
+
+Run07 already proved that the original condition worker loads the same receiver's+192/+200 pointer range and calls each selected condition's primary slot+16. Under the new branch's successful publication, same pointer/class state, valid range and worker-lifetime premises, that call can select this actual0x128d10 predicate. The worker's low8-bit return test is inherited, not a new execution or whole-policy model. Actual vector composition/order, condition truth at runtime, outer admission, callback occurrence and any next action remain unobserved.
+
+## Remaining boundaries
+
+The new closure is one raw-schema/type -> concrete compiled base -> same receiver eight-byte pointer publication -> complete scalar predicate contract. Full source JSON validity/serializer coherence, heap/list helpers and providers, growth path, class teardown, runtime mutation/lifetime/concurrency and whole scene/target semantics remain open. No target code, parsed fixture, finite semantic model, SQL, external output or physical operation is executed. Receiving/transport/MQTT/libjel/auth/session/framing and equivalents remain closed.

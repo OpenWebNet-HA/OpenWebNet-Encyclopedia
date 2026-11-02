@@ -1,0 +1,46 @@
+# MH202 run23 utility deadline source review
+
+PASS, no correction requested. Independent static original-source/finite-ledger review of sound/run23's immutable first candidate. Only this NEW review file was written. No author files, old dossier, firmware or repository docs were edited. No original/native helper, parser, timer, transport, target OS/network/device code or physical operation was executed by this review; new original visits/callbacks/hooks are0.
+
+## Reproduction and exact identities
+
+Reproduced collect_deadline_v1.py --check:23outputs including manifest,16original spans,43instruction assertions,fourinput identities,five selected relocation rows and four finite source cases. Check mode writes nothing. Independently reread original libplug_multi_stm.so via ImageVFS and mapped PT_LOAD VAs/file offsets separately to compare all16raw span hashes and43words. Accessor/prior sound21 report/review identities agree. All22deterministic manifest members, manifest's report/collector pins and25actual first-generation snapshot files agree with current bytes. Snapshot copies are actually retained, not reconstructed earlier history.
+
+Read the actual entry/WHO/WHERE/kind/parameter/WHAT19 relay/save/add/store/strict-expiry/restore branches, rather than relying only on hashes. As a narrow supplementary source check, control_timeout calls original g_get_real_time at0xd134 and stores returned low/high words to SP64/68 at0xd160/0xd164; those are the slots used by the later high/low comparison. No clock implementation or scheduler execution was added.
+
+## Source agreement and limits
+
+- The selected outer nonreceipt route requires supplied status outside1..2, source252=0 and utility260nonzero before its same-descriptor/record/output-argument call to candidate gest_status_from_field_util0xc634. This remains a postparsed field contract: WHO22/kind1/WHAT19/WHERE5/nullselectors/noWHATlist. The utility-enabled flag1 is a separate supplied premise, while the earlier actual initializer sets util260=0. Neither record admission nor a natural default-to-event enable path is claimed.
+- Entry clock low/high are saved in SL/FP before guard/helper work. The original no-selector WHEREfirst5 shortcut and kind1 guard are exact local branches, not a complete address grammar. An absent parameter list sets convertedfirst0 and secondselector255. Managed(private,lowbyte0) result10 is supplied, not original managed behavior or a recovered physical channel.
+- WHAT19 selection is supported by actual register flow. First character1 leaves r0=0 at0xca00, second nonNUL prevents the exactsingle1 path; relay0/2 branches avoid their bodies without clobbering r0.0xcc10/0xcc1c/0xcc28 then require that0,secondchar9 and terminator. It is not inferred from log text. Selector255 bypasses the additional private225-nibble comparison for this fixture.
+- At0xcc60..0xcc80 original stores save old200 to201/old198 to199, then198=3 and200=managedlowbyte.0xcc88 requests send_util_state BEFORE deadline assignment. ADDS/ADC at0xcc90/0xcc98 adds literal600 to the SAVED ENTRY clock with carry; stores152/156 follow. It is not write-time+600, a timer interval600ms, delivered output, physical priority/source or an actual measured deadline. Normal noninterfering delegate completion remains explicit.
+- control_timeout reads the same152/156 pair and requires it nonzero, private198==3 and a strictly later supplied clock. High-word comparison is signed, equal-high low-word comparison unsigned. Equal time skips, as does the selected before case. The finite positive-high examples do not validate arbitrary timestamp ABI/overflow domains or prove actual timer dispatch at any deadline.
+- Restore0xd91c..0xd954 reads saved199/201, clears152/156, restores198/200, sets201=10 and199=1, then requests send_util_state on a local output slot. Whole callback/publication/lifetime and actual source scheduling remain delegates. The outer normal manage_timeout call is a separate source boundary, not proof a source was created or fired.
+
+Independently recomputed the finite producer: high1/lowffffff00 +600 gives high2/low158, saves initial198/200=2/7 into199/201 and sets3/10. Three independent consumer fixtures at deadline-1/equal/+1 restore only in the last case, yielding198/200=2/7,199/201=1/10 and cleared deadline. These are source-effect arithmetic examples, not an original trace, consecutive observed events or complete scheduler/model matrix.
+
+The report correctly narrows the prior supplied-deadline gap to an original writer under utility-enable/context premises. It does not repair/reconstruct unavailable sound21 drafts, relabel initialization, assert global support/absence, or assign physical sound meaning. Current bounded source confidence and unknown natural enable/record/provider/clock/output paths stay separate. No author correction or new version was requested.
+
+## Reviewed pins
+
+Paths below are relative to work/mh202-firmware/research/2026-10-30/. This later review remains outside the author's immutable first manifest/snapshot.
+
+| Artifact in sound/run23/ | SHA-256 |
+|---|---|
+| `REPORT.md` | `bbc268a6a786661cfccc02fa286bddd3e135326ff640f8184877e5366d3539ba` |
+| `collect_deadline_v1.py` | `9b8a299955de239266197e954811e9066a984488dcb02815c1fa3aabcee4b034` |
+| `output-manifest.json` | `63e8c7cddf939bba073a918c401b15d5cbb7d4bb56cf142a32337d4c36dde073` |
+| `original-spans.json` | `93b982574600c2184b0800b060e075f3615c36d20f82bff4af29342b44bd5a26` |
+| `critical-words.json` | `ed3abd374cd9642c0570b2353732f936cce0c5ed56bea3f22db7101a237c5f43` |
+| `input-hashes.json` | `bd8c402f295a70fdfcc409d89c58d7450073d1c5d8c60e6683cd0b638aa0de27` |
+| `source-contract.json` | `a08419a2b836519440041122d871767c0dd95e3b59f0ee6e8ef33fad9e6e70f6` |
+| `host-deadline-write-ledger.json` | `f8a4700e6e0f126f88df0681e41f8a55955b4a436341ad056a8f2ab5906b5bd8` |
+| `selected-helper-relocations.txt` | `b1945b4b1a35dd61170881f80909d7231f09e72e043b2e22db625a6de4f6eee4` |
+| `initial-generated-v1/SNAPSHOT_INDEX.json` | `bbdee999f49390104eb77a454a02df8e4c7ba90ae3240e4b00ffa9fddc6ea96d` |
+
+| Verified input | SHA-256 |
+|---|---|
+| `/home/bticino/libcoso/libplug_multi_stm.so` | `8b9f393f5b8b4f47645821d7e7eedcc2cc15351f76d10fc8d8c8f6c38cd69128` |
+| `research:image_vfs.py` | `67fbac9a1508655bd69ac15dacf1b98679def8c62fad344c4b3c01c3ba2219a3` |
+| `research:sound/run21/REPORT.md` | `7a620c417174980119e9573c914dbe7730823697661cb975a20708e8e127aea6` |
+| `research:reviews/run21/sound-review.md` | `087023ecd094dea55e9494555c74ce3a1188b1013b5e5fbe94bcd5654ada0f9d` |

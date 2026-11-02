@@ -1,0 +1,118 @@
+{
+  "checkpoint": "run15",
+  "status": "three independently source-reviewed static areas and qualification correction; documentary integration recorded separately, overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run15/REPORT.md",
+      "source_sha256": "cc37b4383aa124e7c4141aa825ff1ba8588cd61c3966b8eda35d197a69a0ad77",
+      "published": "run15-protocol-report.txt",
+      "published_sha256": "cc37b4383aa124e7c4141aa825ff1ba8588cd61c3966b8eda35d197a69a0ad77"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run15/protocol-review.md",
+      "source_sha256": "1cd66fef7762d7fd7231a134d95465d19c1bd148858e8cc28b70600f9be25242",
+      "published": "run15-protocol-review.txt",
+      "published_sha256": "1cd66fef7762d7fd7231a134d95465d19c1bd148858e8cc28b70600f9be25242"
+    },
+    {
+      "role": "report",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run15/REPORT.md",
+      "source_sha256": "26826089a28b89869ae5ef5a3e4b00ea1ffb2ebda200bea13ecd67357149894d",
+      "published": "run15-coso-report.txt",
+      "published_sha256": "26826089a28b89869ae5ef5a3e4b00ea1ffb2ebda200bea13ecd67357149894d"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "coso",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run15/coso-review.md",
+      "source_sha256": "e5d3189780b2d7a6e963bcd65c0697930b2f39e34c888bb6e10fdeea3f91b25e",
+      "published": "run15-coso-review.txt",
+      "published_sha256": "e5d3189780b2d7a6e963bcd65c0697930b2f39e34c888bb6e10fdeea3f91b25e"
+    },
+    {
+      "role": "report",
+      "area": "thermo",
+      "research_path": "work/mh202-firmware/research/2026-10-30/thermo/run15/REPORT.md",
+      "source_sha256": "cf3f9d141f09a2720fdfa1522fc891dcd7adcaa451cab762e3ab0b8866eb9de0",
+      "published": "run15-thermo-report.txt",
+      "published_sha256": "cf3f9d141f09a2720fdfa1522fc891dcd7adcaa451cab762e3ab0b8866eb9de0"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "thermo",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run15/thermo-review.md",
+      "source_sha256": "a87b813bb57e4e3b38b8c55180eb101fb21c5e2e4df77284aa88673daddf9bb6",
+      "published": "run15-thermo-review.txt",
+      "published_sha256": "a87b813bb57e4e3b38b8c55180eb101fb21c5e2e4df77284aa88673daddf9bb6"
+    },
+    {
+      "role": "source_scope_correction",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run15/REFINEMENT.md",
+      "source_sha256": "57c4d70d5d10dd3a72a3dc2ad2f98ae97d41aff3f19b45947f37c1afd74cd80a",
+      "published": "run15-protocol-refinement.txt",
+      "published_sha256": "57c4d70d5d10dd3a72a3dc2ad2f98ae97d41aff3f19b45947f37c1afd74cd80a"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run15/collect_evidence.py",
+      "sha256": "1011a6cfe5ada0780a0ee3caafdffd5fb6d49ad32603ffb56faffc9854a2e35f",
+      "method": "static original/control/dataflow and finite host evidence; native additions0"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/coso/run15/collect_evidence.py",
+      "sha256": "70446fd3fb80a8c38a13709514bb532dbd189b21ef605e815dd6662fb95bcc63",
+      "method": "static original/control/dataflow and finite host evidence; native additions0"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/thermo/run15/collect_thermo_query.py",
+      "sha256": "fab7ebe26237ddd1ad5c12bda6ddcd9408709170016e38fab9803a36f1500c11",
+      "method": "static original/control/dataflow and finite host evidence; native additions0"
+    }
+  ],
+  "canonical_execution": {
+    "all_new_counters": 0,
+    "cumulative": {
+      "corpora": 8,
+      "top_level_entries": 55,
+      "original_instruction_visits": 28379,
+      "primitive_callbacks": 2897,
+      "linker_redirect_callbacks": 111,
+      "exit_boundaries": 11,
+      "selector_read_stop_boundaries": 2,
+      "code_hook_visits": 31400,
+      "firmware_processes": 0,
+      "target_OS_calls": 0
+    },
+    "count_scope": "Earlier eight canonical corpora frozen; run15 saved-endpoint/old-case checks are integrity/source composition, not new native runs. Static0 does not reset totals."
+  },
+  "history": {
+    "run14_snapshots": "reviewed/run14/SOURCE_SNAPSHOTS.json",
+    "earlier_artifacts_unchanged": true,
+    "qualification_source_correction": "Run6 retained span/list/hostpredicate omitted10bfc..10c08. Exact prior pins and new matchingDIM1..8/18shortcut in exportedREFINEMENT. Old32manifest entries/eightoutcomes remain unchanged.",
+    "protocol_docstring_refinement": {
+      "research_path": "protocol/run15/WORDING_REFINEMENT.md",
+      "sha256": "00912754d4d9d5c245430c3dcf9669122316fb665ef47896bd45ccff44521707",
+      "scope": "Docstring-only emulator wording removed; exact earlier collector retained, evidence/models/counts unchanged"
+    },
+    "coso_assertion_typo": {
+      "research_path": "coso/run15/REPORT.md",
+      "scope": "One register-encoding expected-word assertion stopped before outputs; exact draft retained, correctedexpectedword matchesoriginal with no source-semantic change"
+    }
+  },
+  "limits": [
+    "Decoder localarrayD and callerparsedC distinct; sentinel/walk/writecalls conditional originalprovider/kind/normal-return contracts, not actualdecoded transaction or deliveredoutput",
+    "MatchingDIMshortcut correction applies only to selected diagnostic flow; not global modes/raw/physical acceptance",
+    "SamequeuedQ/status52/ID60 preservation requires actualbody/queue/parser/provider and empty-or-preserving synchronizer plus ordinary ownership; no natural causal/physicalACK",
+    "WHO4request is a postparsed/serializerreturn0/destination/briefmodel, no rawacceptance/units/physicalsuccess",
+    "Missingassets/liveproviders/runtime/physical/widerDevice gates remain open"
+  ]
+}

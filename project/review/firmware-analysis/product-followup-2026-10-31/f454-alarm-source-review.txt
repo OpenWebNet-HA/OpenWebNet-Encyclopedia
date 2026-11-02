@@ -1,0 +1,71 @@
+# F454 alarm ownership: independent static source review
+
+PASS for the exact current report/collector/source-evidence bytes pinned below. No source-semantic correction is requested. This review independently reproduces the host/static check, reads original selected code/configuration/metadata through ImageVFS, audits original words/spans and first snapshots, and compares the report to product/documentary limits. Original/native/vendor code, target open/read/OS/network/device operations and prior native replay added here are0. Only this NEW review is written; author artifacts, old dossiers, originals and repository pages remain unchanged.
+
+## Reproduction and independently checked identities
+
+`python3 -B work/f454-firmware/research/2026-10-31-alarm-ownership/collect_ownership_v1.py --check` passes31 outputs,13 original spans,26 words,15 inputs and6 whitelisted literal/pool relations, with original execution/native replays0. Successful check reconstructs bytes without writing and invokes host binutils, not vendor executables. The generation branch refuses existing destinations, uses exclusive creation and preserves its actual first candidate.
+
+A separate raw ELF PT_LOAD reader independently checked all15 input lengths/SHA256 values, every13 original span offset/hash and26 words, six literal/pool arithmetic relations and selected original XML line identities. All30 evidence-manifest members, report/collector identities and33 indexed first copies match their saved/current bytes. Original alias metadata resolves scsai to scsserver without following extracted host links. All4 prior-report/result handoff pins match; no historical fixture/harness is imported or replayed. First outputs have path-qualified tuple ownership and distinct filenames. The author's unpublished pre-output naming account is not treated as independently preserved historical draft bytes; the actual announced/first-generated candidate is preserved and verified.
+
+## Alias, selector and serial API request
+
+The documented connector labels SCS AV/SCS AI and current Device0002 synthesis provide product motivation, not a new primary-PDF audit or an electrical map. Original stack XML separately assigns scsserver to ttyS1/20001/bus_type0 and scsai to ttyS2/21001/bus_type1. COSOAI WHO5 and command/monitor ports30005/31005 are separate declarations. The report correctly leaves active mutable configuration/startup/readiness unproved.
+
+I checked the original entry context0x982c..0x9854: r1 is retained in r9 before0x9854 reads its first pointer, supporting the argv0 source. The saved basename code copies it, selects the suffix after the last slash and stores the copied name through the global+0x244 slot. Both literal-pool references0xa4a4/0xc658 resolve to the same global base. Configuration setup loads that slot and stores config+36 at0xc3bc; selected XML callback compares that value and stores the length-bounded device-text duplicate at config+20. The original open request0xa7e4 consumes that pointer, stores r0 and sign-tests it. Ordinary argv/string/allocation/XML/provider/caller success remain premises; this is not actual open, UART configuration/driver identity or any response.
+
+Thus the software ownership is stronger than matching names alone. It still does not prove that a numbered tty pathname maps to a particular electrical UART/terminal/riser. The report's explicit unproved SCS AI terminal-to-UART link must remain unproved; neither software bus_type1 nor catalogue2-Module metadata supplies it.
+
+## COSOAI tuple and original callback ownership
+
+The original186-byte cosoai wrapper is script text, not an ELF symlink. Its relative coso/config request needs the intended working directory; no shell/service was executed. Separate original COSOAI configuration selects libcosoai/plugins, SCSEnable0/SCSAIEnable1, server21001 and client46. These are package declarations/local identifiers, not observed installed activation, alarm zones or WHO values.
+
+I checked additional narrow original initializer context0x2a20..0x2a6c: a36-byte allocation becomes r6, the GOT-selected scsai_field_bus descriptor is saved atSP8, and its private+68 receives that record. PIC arithmetic selects GOT0xb82c, whose GLOB_DAT relocation names descriptor0xb8ac; its unrelocated raw zero is not mistaken for runtime NULL. SCSAI key pool/PC arithmetic agrees with boolean/integer reads and private12/8 stores. Nonzero enable reaches the separate registration path; descriptor+8 gets literal34 and register_field_bus is requested. The log criterion34 and field descriptor34 are identifiable stores, not an inferred WHO34.
+
+Descriptor initializer relocation0xb8d0 is exactly descriptor+36 and binds scs_init0x1e34. Candidate core register_field_bus obtains the manager, updates its field-list+16, stores manager into descriptor+72 and conditionally calls initializer+36 with descriptor and manager+32. The initializer's selected paths store that tuple at private0 before opaque scs_connect request0x1e84. Its descriptor56==2 branch uses a different log-string setup at0x1e94..0x1e9c and rejoins0x1e58 before the common tuple store; it does not establish a skipped initialization. Only the branch/call boundary was checked. The scs_connect implementation and transport/session/framing were not inspected.
+
+This proves available candidate configuration/registration/argument ownership, conditional on compatible initialization/config/version/provider/manager state. It does not prove actual callback activation, natural field input, complete tuple contents or connection success.
+
+## Translation/state/publication and namespaces
+
+Original translator initialization appends4 into source filter52 and5 into destination filter56, then requests registration. Exact relocation0xce3c is callback+40 to alarm_tr_translate0x19e4. State initialization separately appends5 into criteria52 and registers; relocation0xb3e8 binds field callback+40 to0x2484. These are independent translation/state roles.
+
+I independently read framework entry context0xaec8..0xaf10: it selects manager+24 and loads incoming message+48 into r5. The saved0xaf10..0xaf5c loop compares that value with descriptor criteria52 and invokes callback40. The nearby exported label send_to_field belongs to a preceding function; its nearest objdump label is not assigned as the unnamed entry's identity. This supports the report's bounded framework match, while actual installed registry/eligibility remains a premise.
+
+The actual translator publication call0x3294 and saved historical synthetic event D1C10404D0005603 -> `*5*17*#5##` remain separate from physical source evidence. WHAT17's curated Anti-panic alarm label is checked as an existing reference, not used to validate WHERE#5/sensor identity or product wiring. Prior run26/27 state/serializer/recorded-send evidence is pinned without replay. It does not complete the raw serial/decoded-origin admission edge, real subscriber readiness, full destruction/lifetime or physical alarm outcome.
+
+XMLbus_type1, descriptor34, raw-message system4, parsed OPENWHO5, protocol3 versus parsedkind1, route8=3, client46 and the three port pairs are kept distinct. No causal physical source4 producer is inferred from their numeric or lexical similarity. The report correctly presents positive software ownership with the electrical/producer/activation gaps retained, not an end-to-end event capture or full bus attribution.
+
+## Integration-time reproducibility boundary
+
+Current v1 check reads and hashes the current repository Device0002 page and WHO5 what.md as explicit reference inputs. If either is edited during later integration, this immutable v1 check will fail rather than silently repin the old candidate. I notified parent before integration: preserve exact current reference bytes/pins and use an explicit versioned/frozen-reference policy or clearly scoped historical read-time reproduction. No v1 author files should be overwritten, and postintegration byte reproduction must not be claimed without checking the actual inputs. This is a future integration/provenance requirement, not a current source-semantic disagreement or request to loosen checks.
+
+The report's hardware/product interpretation is appropriately bounded and agrees with PRODUCT_SCOPE_REVIEW. No source correction is needed for the current candidate. Later branch promotion should retain these source, reference-input and physical boundaries.
+
+## Exact current evidence pins
+
+Paths below are relative to work/f454-firmware/research/2026-10-31-alarm-ownership unless qualified.
+
+| Artifact | SHA256 |
+|---|---|
+|REPORT.md|e6f2e97d0cbffed85110360d4218730650d3a59439263ff86f2942b933183617|
+|collect_ownership_v1.py|7db3284611d11cf1d5f1993daf8a9842b57902d44daa4305dda70cf13b08a69b|
+|output-manifest.json|8cfe5ef7b514266f0bee20064f805c06a28f0577abf66495ace8c89be4a84d55|
+|initial-generated-v1/SNAPSHOT_INDEX.json|2b171e772665b09b1f55f39e5d34349204d36f3461423492138dbf7d041b46d9|
+|input-hashes.json|576e27390ba1e6a014256cc5513336c70cd3ec459a9b660833c82f4fea9acd67|
+|original-spans.json|a13bb90cb3d7e063557f14e4d06f7e6514bb68a7779a7e00969224a4a01fc389|
+|namespace-and-boundary-ledger.json|f1b790f36759a2516021e15b22997262be6ed2efb018d252055a08caebf467b4|
+|prior-reviewed-event-handoff-pins.json|a20f5e66b9c33f2b609d933ae0501806edc9ecc57e801451ad1c07a4ea65365f|
+|selected-provider-descriptor-relocations.json|31d0547788f3f81c8666ba9f212e9d6db1a3b7ea07182efc514d26cbf23ccff9|
+|work/firmware-product-followup/2026-10-31/PRODUCT_SCOPE_REVIEW.md|867898ecefe59fcf292cbc7a3a6008abccc6e0e0fb68932659d8d079c62fe1c5|
+
+## Additional narrow original context checks
+
+These source-only byte intervals were independently read to validate the report's producer/control assumptions, without investigating any opaque delegate. End addresses are exclusive.
+
+| Original image | VA range | File offset | Raw span SHA256 |
+|---|---|---|---|
+|/home/bticino/bin/scsserver|0x982c..0x9854|0x182c|20da2fadb9cd1446f37a33e830827f797213fde7bc914e915e18227c519dac5a|
+|/home/bticino/libcosoai/libplug_scs.so|0x2a20..0x2a6c|0x2a20|8dfc89e653dc7cc0f4db6e1a629fc2410c15f3bec4d907f7d64a49c4ddb17afe|
+|/home/bticino/libcosoai/libplug_scs.so|0x1e94..0x1ea0|0x1e94|c5d8a58b762464eae3beb51c975a4b0f8be6e16d70da0c4a3afcff54319b881a|
+|/home/bticino/bin/coso|0xaec8..0xaf10|0x2ec8|717c84116cbad5bfaed952d90889c38ee412dfe79cc793639435e5b876a39171|

@@ -1,0 +1,42 @@
+{
+  "scope": "Exact run3 reviewed document bytes before run4 integration",
+  "review": "../../run3-integration-review.md",
+  "review_sha256": "d6568fe8d6c38770bfea3691cbce3abaa425ebaeb38f29a992a22ef90d8bd048",
+  "files": [
+    {
+      "source_path": "reverse-engineering/firmware-analysis/mh202-1.0.24.md",
+      "source_sha256": "763ce809e4bff87dd3a85d03129fd3b19d110cae4830149e43e868738735bb6d",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run3/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt"
+    },
+    {
+      "source_path": "reverse-engineering/firmware-analysis/mh202-1.0.24-state-and-routing.md",
+      "source_sha256": "3509942a5cb8cd530838705e4ecdc34d39b93685418b9af4587ac043a5b74789",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run3/reverse-engineering__firmware-analysis__mh202-1.0.24-state-and-routing.md.txt"
+    },
+    {
+      "source_path": "reverse-engineering/firmware-analysis/README.md",
+      "source_sha256": "0d08572985f519f93d556edc1421f9420ee48e13306556dbc4c0cfb2b75d55f9",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run3/reverse-engineering__firmware-analysis__README.md.txt"
+    },
+    {
+      "source_path": "functional/who-17-scenario-management/README.md",
+      "source_sha256": "95eb2ae111f534ce84e33d41fc2057775cf5bea7cb520e7cbf1d5d5352c02679",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run3/functional__who-17-scenario-management__README.md.txt"
+    },
+    {
+      "source_path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "source_sha256": "a587419d33e4201025db715e70160b248fb8aeae76f50f5b91cbe655d062dd23",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run3/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt"
+    },
+    {
+      "source_path": "devices/work-queue.yaml",
+      "source_sha256": "417c3c4a4d03775ae28701b7a8a73c2f41548dc39799470ab1beb4e7c4a2b856",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run3/devices__work-queue.yaml.txt"
+    },
+    {
+      "source_path": "project/review/firmware-analysis/mh202-1.0.24/README.md",
+      "source_sha256": "a4ed4cc5b72101a9d812f4d950cb8cec485e54e37c74e3b3e717de6d9d0c16f3",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run3/project__review__firmware-analysis__mh202-1.0.24__README.md.txt"
+    }
+  ]
+}

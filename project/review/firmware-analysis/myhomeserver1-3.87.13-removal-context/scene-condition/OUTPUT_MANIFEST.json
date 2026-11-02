@@ -1,0 +1,88 @@
+{
+  "collector_sha256": "49a4dba646fdef25be62d6c2da603e2f3bf112767902a7079f8b1cbc2788327f",
+  "counts": {
+    "calls": 6,
+    "guards": 18,
+    "inputs": 5,
+    "keys": 6,
+    "original_execution": 0,
+    "relocations": 4,
+    "spans": 15,
+    "tables": 2
+  },
+  "outputs": {
+    "CONDITION_CONTRACT.json": {
+      "bytes": 2028,
+      "sha256": "608ad2f2196381b50a6c1065dab7873c5ed9edd64ee71b74968da90e7ae5ef40"
+    },
+    "INPUTS.json": {
+      "bytes": 1110,
+      "sha256": "e3c58588fdbb681943d006f2c4a95a08bdc01ee5463ed7eb3259fb0b841721ce"
+    },
+    "ORIGINAL_SOURCE.json": {
+      "bytes": 7202,
+      "sha256": "4bf82d162279ba48da844254119e3369864ffe4528e9616fa53faf69f025c108"
+    },
+    "spans/cleanup-slot-one-body.txt": {
+      "bytes": 2401,
+      "sha256": "41f453c54a52e2dd7bb818478cdc2c0397c2d347e6273eb78a254c517ca7f02e"
+    },
+    "spans/cleanup-slot-zero-body.txt": {
+      "bytes": 2278,
+      "sha256": "ff596ed2e9a470ff20823855fb9b3c63822644b0f17f53516fae3ff0bd49db12"
+    },
+    "spans/compiled-base-construction.txt": {
+      "bytes": 1743,
+      "sha256": "22c49f117666fd0202f6fffc19b95a55d6f646b9dcf8367fdd9e7b569207d1e7"
+    },
+    "spans/compiled-derived-copy-header.txt": {
+      "bytes": 2588,
+      "sha256": "0d9f4b09a3a9a486e2976df3966be703e66d275f5520e682f31b05e643b8d0b8"
+    },
+    "spans/compiled-dispatch.txt": {
+      "bytes": 316,
+      "sha256": "d01aee532d6f96026d976aec6d42e8fa8f52ddc97c8f81055fe5a5b3cfed1402"
+    },
+    "spans/compiled-initializer.txt": {
+      "bytes": 936,
+      "sha256": "739398b9667d2fba3255dd0f60d44eea1434ecf6485111a15b70ff1a135c6cd9"
+    },
+    "spans/condition-consumer-predicate-slot.txt": {
+      "bytes": 370,
+      "sha256": "6a7579627ae4e7637acd513815ea6a7507441b59318145e4f011e0487db9bdcb"
+    },
+    "spans/condition-consumer-range.txt": {
+      "bytes": 442,
+      "sha256": "90e4695641184823201076e6af81441bb8e9690f5f76e17ab52c57d4afebb03a"
+    },
+    "spans/condition-pointer-append.txt": {
+      "bytes": 580,
+      "sha256": "adb53b8c753a041b9d5a26de46bda54745e792b325a7c03bc1b709e32744ec7d"
+    },
+    "spans/exact-predicate.txt": {
+      "bytes": 244,
+      "sha256": "9fa87189f4e2578ed02289a445432c1f600504f83f4b53fb23d3b81224029c80"
+    },
+    "spans/raw-base-enabled.txt": {
+      "bytes": 1540,
+      "sha256": "928f2a9805ecbc480490ae69669cc3aaa98ec1e85d271fc9d2c733ce818a53b2"
+    },
+    "spans/raw-derived-schema.txt": {
+      "bytes": 3774,
+      "sha256": "007e72dc21d7e471a0baa4805fbe6774bdd65cbee1d25ae13f19160c1f83e04a"
+    },
+    "spans/raw-factory-row-selection.txt": {
+      "bytes": 1159,
+      "sha256": "645091640f5b252089c6ab157c62a5133049600e4347e133f51de7571e106c68"
+    },
+    "spans/raw-selected-construction.txt": {
+      "bytes": 3486,
+      "sha256": "d70dbfed03445de325d1b163a5365f859f89938d74b78ceb552f98c54edda85f"
+    },
+    "spans/raw-type-store.txt": {
+      "bytes": 445,
+      "sha256": "642ab5b04e371f7393de2811e323c208030a7f7a94915b8aa4f38507ab2f4715"
+    }
+  },
+  "report_sha256": "92c64b715c2747ced59b18ca4ddbeb28f811a1f6651683a7d2c4aee656c035c8"
+}

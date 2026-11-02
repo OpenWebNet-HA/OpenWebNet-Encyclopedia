@@ -1,0 +1,42 @@
+# F461 2.0.11 run07: bounded compile-time identity getter contracts
+
+Fresh original HAL source contains two conditional identity outputs: an opaque board-result value22 selects compile-time codename `F461`, and the same numeric selection in a separate getter selects compile-time code `134`. Both request string duplication and write the returned pointer to the caller's supplied output slot. These are source declarations under an unproved board-result premise, not observed installed identity, hardware attribution or a whole diagnostic response.
+
+A selected process declares imports of these getters, but this packet does not promote an actual permitted consumer: its caller context remains unclosed. Scope was narrowed before generation rather than using an uncertain caller as a proxy for a closed route. No raw receiving, transport, authentication, session, framing, MQTT/libjel or equivalent body is included or expanded in the packet.
+
+## Original identities and candidate provider
+
+- `/usr/lib/liblghal.so.1.0.0` SHA256 `c0f9c41de5c3380efa69a9ccecb9a3fd5ef558c151150197cc366199f1a81863`.
+- `/home/bticino/bin/bt_device` SHA256 `6b8f20afc427fa4647f7de9d4101e265073565ecd5113d8ab5535385e312faad`.
+
+Both originals are ELF64 little-endian AArch64. ImageVFS resolves the metadata-only alias `/usr/lib/liblghal.so.1` to the actual regular1.0.0 file; no host symlink is created or followed. Original SONAME is `liblghal.so.1`. `bt_device` declares that DT_NEEDED and actual JUMP_SLOT imports `hal_get_codename` at0x3cd40 and `hal_get_code` at0x3c688. Those declarations identify a packaged candidate, not natural invocation or effective live binding/interposition.
+
+Selected exported definitions are `hal_get_codename`0xe440, `hal_get_code`0xcc20 and `hal_board`0x251b0. SOURCE.json pins original PT_LOAD mappings, six bounded pure-getter code spans,29 exact instruction guards, safe compile-time strings and original call/PLT/relocation proofs. The `hal_board` body is opaque; no file/device-backed identity data or runtime getter output is extracted. Curated Device0208 and the first-pass report supply documentary product context only.
+
+## Exact codename output-pointer contract
+
+Original `hal_get_codename` saves its supplied X0 intoX21 at0xe464, then requests `hal_board` through actual BL0xe474→PLT0xa0d0/JUMP_SLOT0x4b8c0. The selected path depends on that opaque call returningW0=22. Earlier mask/board comparisons do not take their other branches for that selected value; CMP0xe498 compares0x16 and BEQ0xe49c reaches0xe604. The number22 is a HAL board-result namespace, not project Device0208, catalogue item2293, object model134, public WHO or a direct statement of which board is installed.
+
+At0xe604/0xe608 the original ADRP/ADD builds pointer0x2d378, whose exact bounded C string is `F461`. BL0xe60c→PLT0xa000/JUMP_SLOT0x4b858 requests `strdup@GLIBC_2.17`;0xe610 stores that returned pointer to the original caller slot[X21]. The branch joins the ordinary stack-canary epilogue0xe558..0xe58c. Thus valid supplied writable slot, candidate binding, allocation/duplication and normal canary/provider returns are premises. A nonnull allocation, whole lifetime/ownership policy or function integer/Boolean return status is not certified. The observable source result is the requested duplicate pointer stored through the argument.
+
+Other board and file-backed getter alternatives are outside this selected proof. No value from those alternative data sources is read or exported, and no universal fallback/identity policy is inferred.
+
+## Separate code getter and namespace boundary
+
+Original `hal_get_code` independently saves supplied X0 intoX20 at0xcc3c and requests the same `hal_board` candidate at0xcc4c. Under the same opaque selected result22, its own branch0xcc68/0xcc6c reaches0xce20. The original ADRP/ADD there builds pointer0x2d1d0, whose exact bounded C string is `134`;0xce28 requests the same strdup import and0xce2c stores the result to the original slot[X20], then joins its own ordinary epilogue0xcd1c..0xcd4c.
+
+This is a separate output contract, not a numeric parse or proof that the process treats all catalogue/model/diagnostic identifiers alike. The string is source-compatible with Device0208's documented item-model value and the separately parsed package object-model5.0.134, but those documentary agreements do not prove the runtime board getter returns22 or that any deployed device's response contains this value. In particular, compile-time product labels are not serial/MAC/provisioning identity or physical availability evidence.
+
+## Bounded search and caller stop
+
+The initial bounded lookup inspected the selected process's identity import declarations and the candidate HAL symbol definitions, then the selected pure-getter branches above. A possible process consumer's permitted local context was not established within this bound. That route was stopped and excluded from source-span/result exports before first generation; no uncertain caller or serialization fragment is presented as evidence of diagnostic response or used to reopen a closed route. The actual safe consumer/caller remains an explicit gap. This is not a claim that no such consumer exists elsewhere.
+
+No serial number, MAC address, credential/private-key/configuration value or arbitrary runtime identity is exported. Only the two independently verified compile-time labels and selected original metadata/code are retained. An exploratory disassembler emitted a separate-debug CRC warning; no separate debug data was used, and the final collector disables separate-debug following.
+
+## Reproduction and remaining questions
+
+`python3 -B work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/collect_identity_v1.py --check`
+
+The host collector validates original ELF/segment identities, source bytes, exact guards, compile-time string locations, selected symbol/SONAME/import declarations and getter call stubs. It does not call original code, an emulator or an OS/device identity provider. First generation refuses overwrite and immediately preserves exact report/collector/output bytes with an index computed before its file is opened; --check is read-only. No canonical failed generation or candidate overwrite occurred.
+
+Next questions are an independently justified permitted local consumer, the board getter's provenance under an authorized nonsecret platform-only scope, and actual diagnostic-property composition independent of closed routes. Until those are established, caller admission, actual installed identity, provider binding, response formatting and hardware/physical meaning remain unverified. New original/vendor/provider/native/target execution, semantic models/fixtures, SQL and target I/O0; host analysis reads only. Previous product execution ledgers are unchanged.

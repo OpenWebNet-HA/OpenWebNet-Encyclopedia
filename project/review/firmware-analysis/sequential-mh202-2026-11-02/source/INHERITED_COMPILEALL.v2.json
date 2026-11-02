@@ -1,0 +1,70 @@
+{
+  "classification": "INHERITED evidence only, not re-decoded or new coverage",
+  "collection_calls": [
+    {
+      "body_offset": "0x156",
+      "bytes_hex": "6f2401000a",
+      "il_offset": "0x14a",
+      "opcode": "callvirt",
+      "operand": {
+        "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::get_ScenariosCollection",
+        "rid": 292,
+        "signature_hex": "2000151280d9011231",
+        "table_id": 10,
+        "token": "0x0a000124"
+      }
+    },
+    {
+      "body_offset": "0x15b",
+      "bytes_hex": "6f2b01000a",
+      "il_offset": "0x14f",
+      "opcode": "callvirt",
+      "operand": {
+        "name": "TypeSpec(signature:1512815d011231)::GetEnumerator",
+        "rid": 299,
+        "signature_hex": "200015128145011300",
+        "table_id": 10,
+        "token": "0x0a00012b"
+      }
+    },
+    {
+      "body_offset": "0x169",
+      "bytes_hex": "6f2c01000a",
+      "il_offset": "0x15d",
+      "opcode": "callvirt",
+      "operand": {
+        "name": "TypeSpec(signature:15128145011231)::get_Current",
+        "rid": 300,
+        "signature_hex": "20001300",
+        "table_id": 10,
+        "token": "0x0a00012c"
+      }
+    }
+  ],
+  "method_body_sha256": "4d1c568001bf46b0e57ac695d76370d394965c2f60a6f9a9aa449063fade813f",
+  "method_token": "0x060000c8",
+  "parameters": [
+    {
+      "name": "ScenariosCollection",
+      "sequence": 1
+    },
+    {
+      "name": "AllCompiled",
+      "sequence": 2
+    },
+    {
+      "name": "OutputFolder",
+      "sequence": 3
+    },
+    {
+      "name": "CompileAllAction",
+      "sequence": 4
+    },
+    {
+      "name": "WhichScenario",
+      "sequence": 5
+    }
+  ],
+  "path": "work/mh202-firmware/research/2026-10-31-generator-chain/METHODS.v1.json",
+  "pipeline_premise": "Caller passes the output collection from this loader to the inherited CompileAll without replacing/mutating it; actual caller is not proved here."
+}

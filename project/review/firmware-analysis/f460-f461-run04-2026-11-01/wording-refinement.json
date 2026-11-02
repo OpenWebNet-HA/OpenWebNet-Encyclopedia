@@ -1,0 +1,11 @@
+{
+  "scope": "One reviewer-requested documentary summary refinement; source/code/results and both original author packets unchanged",
+  "before": "The positive additions are F460's selected callable-to-wait and callback-to-completion paths, and F461's actual descriptor matcher and same-object translator invocation.",
+  "after": "The positive additions include F460's selected callable-to-wait, callback-to-completion and catalogue SQL/reader paths, plus F461's descriptor matcher, same-object translator invocation and field/packed-route joins.",
+  "old": "REFERENCE_DRAFT.md",
+  "old_sha256": "ef40cb73f98688d1167c252abbce2d64247d828c6ff422194b88e50300d37aea",
+  "new": "REFERENCE_DRAFT.v2.md",
+  "new_sha256": "f8c18480c7aa608a06a973c3e6b8d956b461b49201018276b1bcb75011157608",
+  "before_edit_snapshot": "integration/pre-summary-refinement/INDEX.json",
+  "reason": "Include current run04 source joins in the public summary instead of listing only run03 additions"
+}

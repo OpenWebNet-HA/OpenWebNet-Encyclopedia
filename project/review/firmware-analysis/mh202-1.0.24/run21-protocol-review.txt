@@ -1,0 +1,38 @@
+# MH202 run21 protocol independent review
+
+PASS. No source, isolation or result correction requested. I reviewed original source bytes, saved native results and harness containment, and reproduced the static collector only. I did not import Unicorn or execute/replay original instructions. Parent native replay is independent and is not claimed here.
+
+`protocol/run21/collect_evidence.py --check` passes11 deterministic outputs,9 input hashes,5 original spans and20 critical words. A separate ELF32/PT_LOAD reader checked all5 raw span hashes and20 original words against verified ImageVFS source bytes. All18 current author-manifest entries and9 input identities match. I separately rehashed the41 digest-bearing tool-package files and RECORD without importing the tool. Author outputs, originals, earlier evidence and tool files remained read-only.
+
+## Source and actual returned object fields
+
+Both cases invoke the actual original libopenmsg buf_to_openmsg0x2704 and original new_open_msg0x1c80 via the single explicit original-definition redirect. InitiallyNULL output slots, complete supplied strings and constructor-owned48-byte objects are explicit. No field or parsed kind is injected. The saved returned r0=0 and kind1 agree with the selected original branches and byte traces; these are helper-level parser results, not bus admission or a whole target runtime.
+
+For exact synthetic `*5*27*##`, the WHERE helper sees terminal `##` at the substring start; compare0x24cc/branch0x24d0 bypass the WHERE store0x250c and reach0x25ec. The actual parsed WHERE member remains the constructor's NULL pointer. It is not an allocated empty string, normalized zero or supplied WHERE1. No later consumer or serializer is executed, so downstream NULL handling remains open. Published Stop programming wording and any physical42/09 correspondence are separate evidence channels, not established by this parse.
+
+For exact synthetic `*22*1#1#0*1#1##`, original code stores base WHAT text1, makes two parameter duplication/list-append requests in order1 then0, and stores base WHERE text1 plus selector20 text1 with selector24NULL. The saved parameter nodes are distinct and ordered; the full textual WHAT and WHERE are not silently flattened or assigned source/volume/ON semantics. WHO5 and WHO22 sessions are independent fresh mappings; coincident numeric pointers across sessions do not denote the same object or a causal sound/alarm exchange.
+
+## GList model and isolation
+
+I checked original packaged GLib g_list_append0x33050..0x3309c. It requests12bytes, writes data0/next4/prev8, sets a first node's prevNULL, or links oldtail.next and new.prev, then returns the head. The finite host primitive models those ordinary selected append relations with known unique nodes, cycle/predecessor validation and16-node bounds. Exactly two append callbacks occur in the sound case and none in the alarm case. GLib allocation/list implementation instructions are not counted as executed. The model does not establish slice-allocator behavior, concurrency, allocation failure or destruction.
+
+Fresh parser mappings are RX, original GLib table/cell data RO and nonexecuting, private stack/input/heap RW and nonexecuting, and sentinel EXIT RX. Native PC allowlists admit only the selected parser, WHO, WHERE and constructor ranges. Unknown PCs/imports, invalid/protected memory and interrupts abort. Native and primitive writes are restricted to private memory; ledger-dead reads abort, although the selected paths request no frees. String/allocation bounds and100000 hook/instruction caps remain intact. Two table-data setup relocations per fresh session are separate from native visits and callback accounting. No original GLib code, target OS/process, syscall, service, network or physical device runs.
+
+## Saved accounting and provenance
+
+I independently recounted saved arrays and per-case accounting: WHO5 has248 original visits +18 primitives +1 redirect +1 EXIT=268 hooks; WHO22 has404 +27 +1 +1=433. Aggregate2 top entries/652 original visits/45 primitives/2 redirects/2 EXIT/0 stops=701 hooks. These are instruction visits, including code revisited from earlier corpora, not652 new PCs. Nested constructors are included, not extra top entries. Four setup data writes are not callbacks. Input text remains unchanged, both output kinds are1, the first WHERE word is actually0, and the second case's list data texts/selectors agree with original-source decisions.
+
+The docstring-only development refinement retains an exact earlier harness and note. Current native result identity and counts remain unchanged; no failed native attempt, weakened guard or forced unknown import is used in the selected harness. The collector's static GLib span supports the model boundary and does not inflate native counts. Complete grammar, effective live binding, plugin invocation, metadata/routing/publication, destructor/error paths and physical meanings remain unresolved.
+
+## Final reviewed identities
+
+| Current artifact, relative to protocol/run21 | SHA-256 |
+|---|---|
+| `REPORT.md` | `4b266b673700b9cb0115ab81bd08aae21902149ac76664c32043b69d492fdef3` |
+| `collect_evidence.py` | `51e95b39068127847ef7d1c10f2067ea75cda9d00a964a5bc9f79b6cb3f6feb2` |
+| `emulate_generated_candidates.py` | `11447ab3a9157d414e31b1e2ad268f1f2b9a7c07bc30aec098dfe0c40280c4cb` |
+| `parser-results.json` | `e845e5025efe1085a2435637c7f857984e31fb85205b9d480ee3d2653b65559f` |
+| `output-manifest.json` | `0572748decfe462b93be08050eaa7aba8d17553c2f80d327a879e3a61a833a0d` |
+| `verified-tool-package.json` | `9f9bae4d6be11b8849669aeca2375469304e78ab5697abb89e47d3d73f6ca36a` |
+
+Original input hashes: libopenmsg `7a4793f740c4cb41a774bf06e3af3acf4bd8a7606c5329ac70d7e0e7fd64bcd7`; GLib `029c2a7913131a84c46958d9ed445cb8a79dd1c8abc61116321badb7ad2735c0`. No F454 firmware/layout/harness is used; only the independently distributed read-only analysis-tool package is reused.

@@ -1,0 +1,42 @@
+# Independent review — MH202 protocol run2
+
+Result: **PASS for the bounded static claims in the reviewed report.** No material correction requested. This review does not establish full parser acceptance, diagnostic class selection, live loader binding, WHERE acceptance, publication, or hardware behavior.
+
+The author confirmed these artifacts stable. I read the report and collector, reproduced the collector's read-only `--check`, inspected the selected original instruction/relocation spans, and independently reconstructed the two dependency scopes using host `readelf` and hash-checked image bytes. No original ARM instructions, original loader, JavaScript, PHP, vendor process, network, device or service ran. No firmware inputs or authored artifacts were changed.
+
+## Reproduction and independent checks
+
+The collector passes strict byte comparison of 24 generated outputs, with 35 unique closure ELF objects, 41 input identities, 12 original-code spans, 15 exact instruction-word assertions and five PIC-literal assertions. I separately verified all 26 entries of the producer's output manifest against current bytes. The manifest excludes itself and later reviews.
+
+The independent host-only breadth-first reconstruction agrees with all ordered canonical object paths and each object's `DT_NEEDED` list and hash: 27 objects for `bt_device`, 29 for `openserver`, 35 in their union, and 262 resolved dependency edges across the two scopes. The count includes each executable and deduplicated NEEDED objects, excludes the ELF interpreter, and is conditional on the declared vendor directories plus the explicit conventional fallback directories. Startup line 3 declares `LD_LIBRARY_PATH`; the report correctly distinguishes this from observed inheritance. No RPATH/RUNPATH occurs in these selected objects. The two crypto objects' `DT_SYMBOLIC` metadata is retained without pretending the collector implements all dynamic-loader behavior.
+
+Within this model, `bt_device` contains `libopen` and `libbase`, with `libcommon` absent; `openserver` contains `libcommon`, with `libopen` and `libbase` absent. The selected relocation/provider candidates, symbol attributes and unversioned parser definitions agree with the saved ELF evidence. These facts support candidate ownership under packaged-scope assumptions, not observed runtime binding or interchangeability of the two C++ layouts. Preload, dlopen, replacement, actual loader search and live environment remain outside this check. The report does not extend these scopes to `bt_daemon`.
+
+## Original route and prerequisite checks
+
+I inspected the original selected `libdiag`, `libopen` and `libwhere` spans, including the member-pointer relocation and PIC literals:
+
+- `openKeyGen` constructs the local object at `SP+4`, invokes `CreateMsgOpen`, then reads kind at `SP+0x6240`, establishing object-relative offset `0x623c`. The report correctly selects the `libopen` candidate layout rather than importing `libcommon`'s offset.
+- The selected kind-4 branch extracts DIM, calls `unpackKey`, and prefixes `R`. The no-`#` and parameter-count suffix branches support the host reconstruction `0` to `R0P0`; this is not an executed native parser fixture. The synthetic full frame's successful parsing and WHERE fields remain assumptions.
+- The General constructor's `R0P0` entry copies the two-word member pointer from the table slot `0x380c8`; its `R_ARM_ABS32` relocation targets `o2s_allParameters` at `0x15b60`. That method assigns `8C000100` and returns numeric zero in its response-type namespace. This establishes the selected entry, not the unresolved outer registry/factory selection or collisions.
+- General `open2scs` invokes the selected member and stores the result before calling `getScsAddr` at `0x191b0`. This precedes the WHO1000 test. The outer WHERE helper extracts WHO and looks up its map, with an exception path for a missing key. The report correctly leaves map initialization and selected WHERE1 translation unresolved.
+- Only after that prerequisite does the WHO1000 compare/branch choose literal `$04`, bypassing the generic header call. The continuation assembles header and method suffix and pushes a string into the output vector. Thus `$048C000100` is a conditional internal ASCII candidate, not serial bytes, a send operation or a completed transaction.
+
+The stated conclusion is appropriately narrow: absence from a generic WHO-to-SCS map alone cannot settle a separate special General branch; existence of that branch alone cannot prove WHO1000 reachability. The saved instruction sequence does not justify promoting WHERE1 or the full synthetic frame to accepted input. The report preserves those limits and distinguishes parser kind, response-type and SCS selector namespaces.
+
+## Reviewed exact identities
+
+Paths in this table are relative to `protocol/run2/`.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `9e2685f9d7c98fe93d3409619fcde3f26c04debb0d9eca1242d6814310801893` |
+| `collect_evidence.py` | `7044d421057e0a609f077006424ce4cd986f4743a46e2d3e0494344996443ddd` |
+| `conditional-provider-closure.json` | `0e607be42881f505924fc48b4adb0bec722a29d8c332c084895462e00a99bb9a` |
+| `selected-static-route.json` | `385987de51b303fa5f93d869f617875f957904125e267388f4323cd4ac2111a5` |
+| `original-spans.json` | `29bec2cc31b53c5122bdf86e752be7a49ddf2e72166f4bdd1d9ed039b59e7956` |
+| `critical-words.json` | `5bc7fd679ee0e511e557e0db714538d6500b35859a3c81be08bc3e6ba30c7aad` |
+| `input-hashes.json` | `7e739682e6eefa5420e2eac98857c774b030c39e7a83c76fcd30fe5340686ac0` |
+| `output-manifest.json` | `c13a0e5af1c0e8b0b41ae09036bc266b4cf31cad0997e418155453a27a19c99f` |
+
+The review is tied to these exact bytes, not future revisions. Source identities, VA bounds/file offsets and original-byte hashes remain in the reviewed input/span manifests. This was targeted review of the two closure models and selected General route, not an independent audit of every grammar branch, all diagnostic classes, all firmware components or the recovery runtime environment.

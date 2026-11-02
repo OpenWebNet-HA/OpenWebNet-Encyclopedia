@@ -1,0 +1,23 @@
+
+/usr/lib/libstdc++.so.6.0.29:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000959cc:
+   959cc:	b530      	push	{r4, r5, lr}
+   959ce:	b083      	sub	sp, #12
+   959d0:	4604      	mov	r4, r0
+   959d2:	4669      	mov	r1, sp
+   959d4:	2001      	movs	r0, #1
+   959d6:	f7e3 e896 	blx	78b04 <clock_gettime@plt>
+   959da:	9b01      	ldr	r3, [sp, #4]
+   959dc:	f44f 414a 	mov.w	r1, #51712	@ 0xca00
+   959e0:	9d00      	ldr	r5, [sp, #0]
+   959e2:	f6c3 319a 	movt	r1, #15258	@ 0x3b9a
+   959e6:	4620      	mov	r0, r4
+   959e8:	17da      	asrs	r2, r3, #31
+   959ea:	fbc5 3201 	smlal	r3, r2, r5, r1
+   959ee:	e9c4 3200 	strd	r3, r2, [r4]
+   959f2:	b003      	add	sp, #12
+   959f4:	bd30      	pop	{r4, r5, pc}

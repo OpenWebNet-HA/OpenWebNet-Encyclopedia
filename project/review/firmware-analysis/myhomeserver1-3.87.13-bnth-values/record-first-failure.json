@@ -1,0 +1,18 @@
+{
+  "attempts": [
+    {
+      "mode": "normalgeneration",
+      "result": "AssertionError at branch halfword guard"
+    },
+    {
+      "mode": "--check",
+      "result": "same AssertionError before comparison"
+    }
+  ],
+  "first_candidate_snapshots": 0,
+  "generated_outputs": 0,
+  "intended_resolution": "NEWv2 decoder support16-bit B.n with exactguard; preservev1 source/report unchanged",
+  "phase": "build before any output file write",
+  "selected_source": "0x10ee0c B.n0x10ecc8 has first halfword0xe75c; v1branch decoder only accepted32-bit branchprefix0xf000",
+  "source_semantics_change": false
+}

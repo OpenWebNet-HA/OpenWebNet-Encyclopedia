@@ -1,0 +1,31 @@
+
+/home/bticino/bin/coso:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000003e94 <send_list_field@@Base+0xa4>:
+    3e94:	f940029c 	ldr	x28, [x20]
+    3e98:	f9401393 	ldr	x19, [x28, #32]
+    3e9c:	97fffc11 	bl	2ee0 <g_get_real_time@plt>
+    3ea0:	91002800 	add	x0, x0, #0xa
+    3ea4:	eb00027f 	cmp	x19, x0
+    3ea8:	54000269 	b.ls	3ef4 <send_list_field@@Base+0x104>  // b.plast
+    3eac:	f9401380 	ldr	x0, [x28, #32]
+    3eb0:	b4000096 	cbz	x22, 3ec0 <send_list_field@@Base+0xd0>
+    3eb4:	f9403fe1 	ldr	x1, [sp, #120]
+    3eb8:	eb00003f 	cmp	x1, x0
+    3ebc:	54000049 	b.ls	3ec4 <send_list_field@@Base+0xd4>  // b.plast
+    3ec0:	f9003fe0 	str	x0, [sp, #120]
+    3ec4:	f9400694 	ldr	x20, [x20, #8]
+    3ec8:	b5fffd94 	cbnz	x20, 3e78 <send_list_field@@Base+0x88>
+    3ecc:	f9403fe0 	ldr	x0, [sp, #120]
+    3ed0:	b5001000 	cbnz	x0, 40d0 <send_list_field@@Base+0x2e0>
+    3ed4:	52800000 	mov	w0, #0x0                   	// #0
+    3ed8:	a94153f3 	ldp	x19, x20, [sp, #16]
+    3edc:	a9425bf5 	ldp	x21, x22, [sp, #32]
+    3ee0:	a94363f7 	ldp	x23, x24, [sp, #48]
+    3ee4:	a9446bf9 	ldp	x25, x26, [sp, #64]
+    3ee8:	a94573fb 	ldp	x27, x28, [sp, #80]
+    3eec:	a8cb7bfd 	ldp	x29, x30, [sp], #176
+    3ef0:	d65f03c0 	ret

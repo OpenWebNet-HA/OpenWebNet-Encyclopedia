@@ -1,0 +1,103 @@
+#!/usr/bin/env python3
+"""Static original-byte signature/header admission only; no SQL or vendor execution."""
+from pathlib import Path
+import argparse,hashlib,json,struct,zipfile,io
+O=Path(__file__).resolve().parent
+W=next(p for p in O.parents if (p/'AGENTS.md').is_file())
+J=lambda x:(json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+H=lambda b:hashlib.sha256(b).hexdigest()
+SIGS={'SQLite3':b'SQLite format 3\0','SQLite2_prefix':b'** This file contains an SQLite'}
+for name,seq in [('Berkeley_DB',['62310500','00053162','61150600','00061561','53220400','00042253']),('GNU_dbm',['ce9a5713','13579ace','cf9a5713','13579acf','cd9a5713','13579acd']),('LMDB',['dec0efbe','beefc0de'])]:
+ for n,s in enumerate(seq):SIGS[f'{name}_word{n}']=bytes.fromhex(s)
+LIMIT={'zip_members':1024,'plain_member_bytes':32*1024*1024,'plain_total_bytes':128*1024*1024,'archive_depth':1}
+def build():
+ pins=[];sources=[];candidates=[];archives=[];seen={};plain_total=0
+ def pin(p,b=None):
+  b=p.read_bytes() if b is None else b;pins.append({'path':str(p.relative_to(W)),'bytes':len(b),'sha256':H(b)});return b
+ summary_path=W/'work/remaining-firmware-acquisition/2026-11-01/SUMMARY.json';a=json.loads(pin(summary_path));pin(O/'SCOPE.json');pin(O.parent/'SCOPE_AUTHORIZATION.json')
+ def scan(data,source_id):
+  found=[]
+  for name,sig in SIGS.items():
+   start=0
+   while True:
+    off=data.find(sig,start)
+    if off<0:break
+    start=off+1;r={'format_lead':name,'offset':off,'signature_hex':sig.hex(),'available_bytes_after_signature_start':len(data)-off}
+    if name=='SQLite3':
+     h=data[off:off+100];reasons=[]
+     if len(h)!=100:reasons.append('truncated_100_byte_header')
+     else:
+      rawps=int.from_bytes(h[16:18],'big');ps=65536 if rawps==1 else rawps
+      validps=512<=ps<=65536 and ps&(ps-1)==0
+      if not validps:reasons.append('invalid_page_size')
+      if h[18] not in (1,2):reasons.append('read_write_version_outside_selected_ordinary_1_2_admission')
+      if h[19] not in (1,2):reasons.append('read_version_outside_selected_ordinary_1_2_admission')
+      if h[21:24]!=bytes([64,32,32]):reasons.append('invalid_fixed_payload_fractions')
+      if validps and ps-h[20]<480:reasons.append('invalid_usable_page_size')
+      if validps and len(data)-off<ps:reasons.append('no_complete_first_page_extent')
+      if h[72:92]!=bytes(20):reasons.append('nonzero_reserved_header_expansion')
+      if len(data)-off>100 and data[off+100] not in (2,5,10,13):reasons.append('unadmitted_first_btree_page_type')
+      count=int.from_bytes(h[28:32],'big');counter=int.from_bytes(h[24:28],'big');vv=int.from_bytes(h[92:96],'big');validcount=count!=0 and counter==vv
+      r['header_admission']={'header100_sha256':H(h),'page_size_raw':rawps,'page_size_interpreted':ps,'write_version':h[18],'read_version':h[19],'reserved_bytes_per_page':h[20],'payload_fraction_bytes_hex':h[21:24].hex(),'page_count_header':count,'page_count_current_under_documented_counter_rule':validcount,'declared_extent_if_current':count*ps if validps and validcount else None,'remaining_extent_bytes':len(data)-off,'page_count_not_used_to_reject_candidate':True,'full_header_schema_rows_not_parsed':True}
+     r['rejection_reasons']=reasons;r['status']='REJECTED_SELECTED_SQLITE3_HEADER_ADMISSION' if reasons else 'PLAUSIBLE_SQLITE3_HEADER_REQUIRES_FULL_FORMAT_REVIEW'
+    else:r['status']='UNPARSED_SIGNATURE_ONLY_NOT_RECOVERED_DATABASE';r['scope']='No alternate-format parser/type/extent or database assignment; embedded magic alone is insufficient'
+    found.append(r)
+  return {'content_sha256':H(data),'bytes':len(data),'candidate_hits':found}
+ def zipscan(data,source_id):
+  nonlocal plain_total
+  if not(data.startswith(b'PK\x03\x04') or data.startswith(b'PK\x05\x06')):return
+  with zipfile.ZipFile(io.BytesIO(data)) as z:
+   infos=z.infolist();assert len(infos)<=LIMIT['zip_members'];members=[]
+   for n,i in enumerate(infos):
+    r={'index':n,'name':i.filename,'bytes':i.file_size,'compressed_bytes':i.compress_size,'CRC32':f'{i.CRC:08x}','encrypted':bool(i.flag_bits&1)}
+    if i.is_dir():r['payload_status']='DIRECTORY_METADATA_ONLY'
+    elif r['encrypted']:r['payload_status']='ENCRYPTED_NOT_OPENED'
+    elif i.file_size>LIMIT['plain_member_bytes'] or plain_total+i.file_size>LIMIT['plain_total_bytes']:r['payload_status']='CAP_NOT_OPENED'
+    else:
+     with z.open(i) as f:payload=f.read(LIMIT['plain_member_bytes']+1)
+     assert len(payload)==i.file_size and len(payload)<=LIMIT['plain_member_bytes'];plain_total+=len(payload)
+     # zipfile verifies its CRC on EOF. No output file or archive path extraction occurs.
+     r['payload_status']='UNENCRYPTED_CRC_VERIFIED_STATIC_SIGNATURE_SCAN';r['payload_sha256']=H(payload)
+     result=scan(payload,source_id+'::zip-member-'+str(n));result['source_id']=source_id+'::zip-member-'+str(n);result['provenance']={'archive_source_id':source_id,'member_index':n,'member_name':i.filename,'CRC32':r['CRC32']};candidates.append(result)
+     r['nested_archive_body_unexpanded']=payload.startswith(b'PK\x03\x04')
+    members.append(r)
+  archives.append({'source_id':source_id,'sha256':H(data),'bytes':len(data),'central_directory_and_selected_plain_members':members})
+ files_checked=0;bytes_checked=0
+ selected=[p for p in a['packages'] if p['product'] in ('F450','F459')];assert len(selected)==3
+ for p in selected:
+  package=W/p['directory'];pin(W/p['archive']);
+  for c in p['components']:
+   manifest=package/'analysis'/(c['label']+'-regular-files.json');rows=json.loads(pin(manifest));assert len(rows)==c['regular_files'];root=W/c['path'];local=[]
+   for rel,d in sorted(rows.items()):
+    f=root/rel;assert f.is_file() and not f.is_symlink();data=f.read_bytes();digest=H(data);assert (len(data),digest)==(d['bytes'],d['sha256']);files_checked+=1;bytes_checked+=len(data)
+    source={'artifact':p['artifact_id'],'view':c['label'],'path':str(f.relative_to(W)),'bytes':len(data),'sha256':digest}
+    if digest not in seen:
+     sid='regular:'+digest;seen[digest]=sid;result=scan(data,sid);result['source_id']=sid;candidates.append(result);zipscan(data,sid)
+    source['scan_source_id']=seen[digest];local.append(source)
+   sources.extend(local)
+  for rel in p['remaining_encrypted_auxiliary']:
+   f=package/rel;data=pin(f);source={'artifact':p['artifact_id'],'view':'separate_auxiliary_not_overlay','path':str(f.relative_to(W)),'bytes':len(data),'sha256':H(data)};sid='auxiliary:'+H(data);source['scan_source_id']=sid;sources.append(source);candidates.append(dict(scan(data,sid),source_id=sid));zipscan(data,sid)
+ hits=[dict(x,source_id=r['source_id'],content_sha256=r['content_sha256']) for r in candidates for x in r['candidate_hits']]
+ plausible=[r for r in hits if r['status']=='PLAUSIBLE_SQLITE3_HEADER_REQUIRES_FULL_FORMAT_REVIEW']
+ alt=[r for r in hits if r['format_lead']!='SQLite3'];sql3=[r for r in hits if r['format_lead']=='SQLite3']
+ stats={'package_views':len(selected),'regular_files_identity_checked':files_checked,'regular_bytes_identity_checked':bytes_checked,'unique_regular_payloads_scanned':len(seen),'unique_regular_bytes_scanned':sum(r['bytes'] for r in candidates if r['source_id'].startswith('regular:')),'alloffset_SQLite3_hits':len(sql3),'alloffset_alternate_magic_hits':len(alt),'plausible_SQLite3_headers':len(plausible),'actual_recovered_DB_objects':0,'new_archive_uploads':0,'plain_zip_member_bytes_scanned':plain_total,'vendor_SQLite_queries_decryptions':0}
+ # Do not promote even a plausible header to actual recovered DB bytes automatically.
+ report=f'''# F450/F459 embedded database format admission\n\nThis pass scans complete selected original regular-file payloads at every byte offset for SQLite3/SQLite2 and finite BDB/GDBM/LMDB signatures. It goes beyond the earlier offset-zero file-prefix census. It is a byte/format admission study, not a SQL/runtime/provider study.\n\n## Reviewed source scope\n\nF4502.0.10 standard and PROD normal views and F459 archive020105/local2.1.5 normal/recovery views are resolved from the original acquisition summary and exact regular-file manifests. Each occurrence is size/SHA-256 verified, then identical payload bytes share one scan with multiple provenance. The separate F450PROD50.xtz is an auxiliary container, never an assumed installed overlay.\n\nCurrent bounded results: {files_checked} regular file occurrences verified; {len(seen)} distinct regular payloads scanned. There are {len(sql3)} exact SQLite3 signature hits and {len(alt)} finite alternate-format magic hits; {len(plausible)} SQLite3 headers pass the selected conservative admission. No actual database object is recovered or promoted by this collector. Individual exact offsets and header failure reasons are in CANDIDATES.json; file aliases are in SOURCES.json. Counts describe finite byte reach/integrity, not full firmware semantic coverage or global absence.\n\n## Header and format limits\n\nSQLite3 admission requires a complete100-byte header, ordinary selected read/writeversions1/2, an allowed power-of-two page size (raw1 represents65536), fixed fractions64/32/32, valid usable bytes, reserved-expansion zeros and an available first page with admitted B-tree type. These are conservative local gates, not a full page/tree/schema/checksum verifier. The header pagecount can be stale: it is only current under the nonzero count plus matching change-counter/version-valid-for rule. A stale or mismatched count is not used here to reject a candidate. See [official SQLite file format](https://sqlite.org/fileformat.html), sections1.3.1–1.3.7. A magic literal in a binary is not an embedded database.\n\nSQLite2/BDB/GDBM/LMDB signatures remain unparsed leads. No modern SQLite parser was forced onto a legacy format, and a four-byte word does not establish database type, page layout or extent. Alternate-format completeness remains open. No SQL, schema, row/count query, repair, transformation, synthetic DB, key/password trial, private configuration export or vendor/helper/native process ran.\n\n## Containers, archive and interpretation\n\nActual PK-leading containers are read only through their central directories and capped unencrypted members with CRC verification. No encrypted member is opened, no archive is extracted into a filesystem, and nested bodies beyond the declared depth are not expanded. Caps and per-member outcomes are explicit in ARCHIVES.json. Other compressed/encrypted/fragmented/custom formats, runtime-created and configured stores remain outside this finite result.\n\nPreviously source-proven F450 copy/open and F459 SQLite API requests remain inherited evidence only. They do not supply a packaged plaintext database, accepted schema/rows, successful persistence or effective runtime binding. The previously archived50.xtz remains an original encrypted SUPPORT container; this pass performs no upload/readback and does not relabel it as a plaintext database. Parent owns any newly justified archival action; no automatically generated candidate becomes vendor-original DB bytes.\n\n## Reproduction\n\nRun `python3 -B work/sequential-firmware-priorities/2026-11-02/stage2-databases/source-format/collect_formats_v1.py --check` from the workspace. It revalidates own archive/manifest/file bytes and repeats only this static signature/header/container scan. Originals and all earlier reports/collectors remain unchanged. No earlier collector, native corpus or configured fixture is replayed. New output is exclusive with immediate exact first copies. Important candidates and source-to-prose claims require independent review before promotion. Full Device/source/runtime/physical gates remain pending.\n'''
+ out={'INPUTS.json':J(pins),'SOURCES.json':J(sources),'CANDIDATES.json':J({'summary':stats,'hits':hits,'all_payloads':[{'source_id':r['source_id'],'sha256':r['content_sha256'],'bytes':r['bytes'],'hit_count':len(r['candidate_hits'])} for r in candidates]}),'ARCHIVES.json':J({'limits':LIMIT,'archives':archives}),'SUMMARY.json':J(stats),'REPORT.md':report.encode()}
+ out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(Path(__file__).read_bytes()),'outputs':{n:{'bytes':len(b),'sha256':H(b)} for n,b in out.items()},'source_code_bodies_disassembled_or_interpreted':0,'new_vendor_SQL_model_fixture_execution':0})
+ return out
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build()
+ if a.check:
+  for n,b in out.items():assert (O/n).read_bytes()==b,n
+ else:
+  assert not (O/'first-candidate-v1').exists() and all(not (O/n).exists() for n in out)
+  for n,b in out.items():
+   with (O/n).open('xb') as f:f.write(b)
+  d=O/'first-candidate-v1';d.mkdir();names=['collect_formats_v1.py','SCOPE.json']+list(out)
+  for n in names:
+   with (d/n).open('xb') as f:f.write((O/n).read_bytes())
+  with (d/'INDEX.json').open('xb') as f:f.write(J({n:{'bytes':(O/n).stat().st_size,'sha256':H((O/n).read_bytes())} for n in names}))
+ print(json.dumps({'check':a.check,'outputs':len(out),'summary':json.loads(out['SUMMARY.json'])}))
+if __name__=='__main__':main()

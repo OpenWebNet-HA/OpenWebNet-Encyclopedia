@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+"""Static packaged JsonCpp null/uint selected value-contract source, not provider execution."""
+import argparse,hashlib,importlib.util,json,struct,subprocess,sys
+from pathlib import Path
+sys.dont_write_bytecode=True
+D=Path(__file__).resolve().parent;P=D.parents[2];W=P.parents[2];H=lambda b:hashlib.sha256(b).hexdigest();J=lambda v:(json.dumps(v,sort_keys=True,indent=2)+'\n').encode()
+HP=P/'research/2026-10-31/image_vfs.py';s=importlib.util.spec_from_file_location('values_vfs',HP);m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+IMAGE='/usr/lib/libjsoncpp.so.1.9.5';SHA='5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36'
+SPANS=[('type-byte',0x14e3c,0x14e40),('basic-tag-write',0x15ad4,0x15b48),('value-type-constructor',0x15b54,0x15bc4),('null-singleton',0x15bc8,0x15c24),('unsigned-constructor',0x15c68,0x15c82),('unsigned-predicate',0x155dc,0x15626),('unsigned-conversion-prefix',0x16aac,0x16b14),('find-normal-paths',0x17e74,0x17ef0),('const-key-access',0x17f48,0x17f6a)]
+GUARDS=[(0x14e3c,'007a7047'),(0x15af8,'2172'),(0x15b54,'0022'),(0x15b5c,'0c46'),(0x15bf0,'2146'),(0x15bf2,'05f10800'),(0x15c6c,'0d46'),(0x15c70,'0221'),(0x15c78,'0023'),(0x15c7c,'c4e90053'),(0x155f6,'0228'),(0x1561c,'6068'),(0x1561e,'b0fa80f0'),(0x16ae8,'2068'),(0x17ecc,'0024'),(0x17ee6,'2046'),(0x17f5e,'00b1')]
+SYMS=['_ZNK4Json5Value4typeEv','_ZN4Json5Value9initBasicENS_9ValueTypeEb','_ZN4Json5ValueC1ENS_9ValueTypeE','_ZN4Json5Value13nullSingletonEv','_ZN4Json5ValueC1Ej','_ZNK4Json5Value6isUIntEv','_ZNK4Json5Value6asUIntEv','_ZNK4Json5Value4findEPKcS2_','_ZNK4Json5ValueixEPKc']
+def build():
+ v=m.ImageVFS();b=v.read_bytes(IMAGE);assert H(b)==SHA and H(v.read_bytes('/usr/lib/libjsoncpp.so.25'))==SHA;ph=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);L=[struct.unpack_from('<8I',b,ph+i*sz)for i in range(n)];L=[q for q in L if q[0]==1]
+ def at(a,n):
+  for q in L:
+   if q[2]<=a and a+n<=q[2]+q[4]:return b[q[1]+a-q[2]:q[1]+a-q[2]+n]
+  raise ValueError(hex(a))
+ bp=v.root/IMAGE.lstrip('/');out={};rows=[]
+ for name,a,e in SPANS:
+  rows.append({'name':name,'start_va':hex(a),'end_va_exclusive':hex(e),'bytes':e-a,'sha256':H(at(a,e-a))});out['spans/'+name+'.txt']=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(bp)],text=True).replace(str(W)+'/', '').encode()
+ for a,h in GUARDS:assert at(a,len(bytes.fromhex(h))).hex()==h
+ t=at(0x16ad6,6);assert t==bytes.fromhex('0a031a30ab18');assert 0x16ad6+2*t[0]==0x16aea and 0x16ad6+2*t[2]==0x16b0a
+ # Original scalar symbol declarations and concrete candidate linkage, not live binding.
+ sym=subprocess.check_output(['readelf','-WsW',str(bp)],text=True).splitlines();selected=[line.strip()for line in sym if line.split()and line.split()[-1]in SYMS];assert len(selected)==len(SYMS)
+ sched=v.root/'home/bticino/scheduling_manager/scheduling_manager';sd=subprocess.check_output(['readelf','-d',str(sched)],text=True);pd=subprocess.check_output(['readelf','-d',str(bp)],text=True);assert '[libjsoncpp.so.25]'in sd and '[libjsoncpp.so.25]'in pd
+ inp=[{'path':str(p.relative_to(W)),'sha256':H(z),'bytes':len(z)}for p,z in [(bp,b),(HP,HP.read_bytes()),(sched,sched.read_bytes())]]
+ assert inp[2]['sha256']=='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26'
+ out.update({'INPUTS.json':J(inp),'SOURCE_SPANS.json':J(rows),'BYTE_GUARDS.json':J([{'va':hex(a),'bytes_hex':h}for a,h in GUARDS]),'CONVERSION_TABLE.json':J({'va':'0x16ad6','bytes_hex':t.hex(),'type0_target':'0x16aea','type2_target':'0x16b0a','scope':'Original TBB bytes are data, not instructions; selected null/unsigned paths only.'}),'CANDIDATE_SYMBOLS.json':J({'provider':IMAGE,'provider_sha256':SHA,'soname':'libjsoncpp.so.25','scheduler_needed':'libjsoncpp.so.25','alias_read_sha256':SHA,'definitions':selected,'effective_live_binding':'Unobserved; not executedloader/interposition proof.'}),'VALUE_LEDGER.json':J({'type':'ldrb object+8','initBasic':'stores supplied typebyte to+8 at15af8','nullSingleton':'ordinary successful guard-false initialization uses supplied type0; returns samebase+8; effective initialized state/API guards remainpremises','missing_member':'find tree end==map+4 sets localreturn0; constkeyaccess zero tailcalls nullSingleton; tree/key/comparator/allocator internals unexecuted','null_asUInt':'type0 retained r0=0, TBB entry0 directly selects cleanup16aea; no loadfromunionword','unsigned_constructor':'type2, lowwordinputr1, highword0','unsigned_asUInt':'type2→isUInt; highword0 yields1 throughCLZ/LSR; accepted branchloads lowword at16ae8','scope':'Selected candidate source contracts, not actual JsonCpp roundtrip, complete invalidinput grammar or physical behavior.'}),'METHOD.json':J({'original_execution':0,'target_OS_or_IO':0,'host_semantic_models_or_JsonCpp_objects':0,'scope':'Nine original source spans, null/uint selected predicates and metadata-only candidate binding. No actual objects, parser, tree, allocation/assignment/string/ABI/provider execution.','history':'Exclusive firstgeneration; exact outputs/code copied immediately, report frozen separately before independentreview.'})})
+ return out
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build();out['OUTPUT_MANIFEST.json']=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()})
+ if a.check:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+ else:
+  assert not any((D/n).exists()for n in out);S=D/'first-candidate';assert not S.exists();copies={**out,Path(__file__).name:Path(__file__).read_bytes()}
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in copies.items():p=S/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (S/'INDEX.json').open('xb').write(J({n:{'sha256':H(z),'bytes':len(z)}for n,z in copies.items()}))
+ print(json.dumps({'check':a.check,'outputs':len(out),'spans':len(SPANS),'guards':len(GUARDS),'candidate_symbols':len(SYMS),'original_execution':0}))
+if __name__=='__main__':main()

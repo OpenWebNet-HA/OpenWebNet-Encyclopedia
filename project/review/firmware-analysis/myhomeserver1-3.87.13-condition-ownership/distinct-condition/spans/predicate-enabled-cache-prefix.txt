@@ -1,0 +1,80 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00103c6c:
+  103c6c:	f8df 2ca0 	ldr.w	r2, [pc, #3232]	@ 104910
+  103c70:	f8df 3ca0 	ldr.w	r3, [pc, #3232]	@ 104914
+  103c74:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+  103c78:	2401      	movs	r4, #1
+  103c7a:	447a      	add	r2, pc
+  103c7c:	ed2d 8b04 	vpush	{d8-d9}
+  103c80:	f2ad 5d24 	subw	sp, sp, #1316	@ 0x524
+  103c84:	58d3      	ldr	r3, [r2, r3]
+  103c86:	f8df ac90 	ldr.w	sl, [pc, #3216]	@ 104918
+  103c8a:	681b      	ldr	r3, [r3, #0]
+  103c8c:	f8cd 351c 	str.w	r3, [sp, #1308]	@ 0x51c
+  103c90:	f04f 0300 	mov.w	r3, #0
+  103c94:	f890 3084 	ldrb.w	r3, [r0, #132]	@ 0x84
+  103c98:	44fa      	add	sl, pc
+  103c9a:	b9a3      	cbnz	r3, 103cc6
+  103c9c:	f8df 2c7c 	ldr.w	r2, [pc, #3196]	@ 10491c
+  103ca0:	f8df 3c70 	ldr.w	r3, [pc, #3184]	@ 104914
+  103ca4:	447a      	add	r2, pc
+  103ca6:	58d3      	ldr	r3, [r2, r3]
+  103ca8:	681a      	ldr	r2, [r3, #0]
+  103caa:	f8dd 351c 	ldr.w	r3, [sp, #1308]	@ 0x51c
+  103cae:	405a      	eors	r2, r3
+  103cb0:	f04f 0300 	mov.w	r3, #0
+  103cb4:	f041 84cd 	bne.w	105652
+  103cb8:	4620      	mov	r0, r4
+  103cba:	f20d 5d24 	addw	sp, sp, #1316	@ 0x524
+  103cbe:	ecbd 8b04 	vpop	{d8-d9}
+  103cc2:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+  103cc6:	f8df 3c58 	ldr.w	r3, [pc, #3160]	@ 104920
+  103cca:	4681      	mov	r9, r0
+  103ccc:	f85a 3003 	ldr.w	r3, [sl, r3]
+  103cd0:	9307      	str	r3, [sp, #28]
+  103cd2:	681c      	ldr	r4, [r3, #0]
+  103cd4:	f3bf 8f5b 	dmb	ish
+  103cd8:	f014 0401 	ands.w	r4, r4, #1
+  103cdc:	f000 809b 	beq.w	103e16
+  103ce0:	f8df 3c40 	ldr.w	r3, [pc, #3136]	@ 104924
+  103ce4:	f85a 3003 	ldr.w	r3, [sl, r3]
+  103ce8:	4619      	mov	r1, r3
+  103cea:	9303      	str	r3, [sp, #12]
+  103cec:	ab16      	add	r3, sp, #88	@ 0x58
+  103cee:	f109 026c 	add.w	r2, r9, #108	@ 0x6c
+  103cf2:	461c      	mov	r4, r3
+  103cf4:	4618      	mov	r0, r3
+  103cf6:	9302      	str	r3, [sp, #8]
+  103cf8:	9208      	str	r2, [sp, #32]
+  103cfa:	f00a fb6d 	bl	10e3d8
+  103cfe:	6823      	ldr	r3, [r4, #0]
+  103d00:	2b00      	cmp	r3, #0
+  103d02:	f000 8095 	beq.w	103e30
+  103d06:	9a02      	ldr	r2, [sp, #8]
+  103d08:	6855      	ldr	r5, [r2, #4]
+  103d0a:	2d00      	cmp	r5, #0
+  103d0c:	f000 85c4 	beq.w	104898
+  103d10:	f8df 2c14 	ldr.w	r2, [pc, #3092]	@ 104928
+  103d14:	f85a 7002 	ldr.w	r7, [sl, r2]
+  103d18:	783a      	ldrb	r2, [r7, #0]
+  103d1a:	2a00      	cmp	r2, #0
+  103d1c:	d049      	beq.n	103db2
+  103d1e:	686a      	ldr	r2, [r5, #4]
+  103d20:	ed93 9b08 	vldr	d9, [r3, #32]
+  103d24:	ed93 8b0c 	vldr	d8, [r3, #48]	@ 0x30
+  103d28:	1c51      	adds	r1, r2, #1
+  103d2a:	6069      	str	r1, [r5, #4]
+  103d2c:	e9d3 4004 	ldrd	r4, r0, [r3, #16]
+  103d30:	9004      	str	r0, [sp, #16]
+  103d32:	6bd8      	ldr	r0, [r3, #60]	@ 0x3c
+  103d34:	6c5b      	ldr	r3, [r3, #68]	@ 0x44
+  103d36:	9001      	str	r0, [sp, #4]
+  103d38:	9309      	str	r3, [sp, #36]	@ 0x24
+  103d3a:	606a      	str	r2, [r5, #4]
+  103d3c:	2901      	cmp	r1, #1
+  103d3e:	f000 85ce 	beq.w	1048de

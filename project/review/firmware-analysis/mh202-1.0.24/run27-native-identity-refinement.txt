@@ -1,0 +1,21 @@
+# Source identity table refinement - report v2 only
+
+Parent independent review caught a source-identity table typo before documentary promotion. The v1 REPORT.md row naming original image /home/bticino/libcoso/libplug_trasv_cmd_stm.so incorrectly printed the hash of the multimedia STM image. This affects the report table only; the actual WHO25 input bytes, native harness, preflight, saved results, static inputs, execution counts and containment are unchanged.
+
+The exact original v1 report remains REPORT.md, SHA256 58dc06a82a9a21a50ad60e3b9b5a513d120652c74945d38c924cfad7fb9436e3. Its wrong table hash is 8b9f393f5b8b4f47645821d7e7eedcc2cc15351f76d10fc8d8c8f6c38cd69128, independently reread here as the actual hash of /home/bticino/libcoso/libplug_multi_stm.so. The correct WHO25 STM source /home/bticino/libcoso/libplug_trasv_cmd_stm.so independently rereads through original ImageVFS to SHA256 8e656523b5bb4c22196203c7e801e631a3481b529982baa1a9f4a9ca13febe2d. No target/original code executes for this read/hash check.
+
+NEW REPORT.v2.md differs from REPORT.md by exactly that one hash substitution and no other bytes. Its SHA256 is 437cb8bb3777594d10b27bbc76a10a7b944431b1e918f28db51e89eaae50416a. Promote REPORT.v2.md together with this refinement, retaining the v1 historical candidate. This is a source-identity-table correction, not a change to firmware behavior, native inputs, results or confidence boundaries. No new native corpus or replay is added.
+
+The immutable v1 report, collector, manifest, saved native outputs and all preflight-first-v1/initial-native-v1/initial-complete-v1 copies are retained without overwrite. The v1 static collector --check still reproduces and pins the historical v1 report; it is not silently repointed to the new version. Parent independent VFS identity check is recorded separately in validation/run27/native-report-source-identity-check.json. Parent also reports an independent native replay; this refinement performs no native replay.
+
+Unchanged v1 identities and the new report pin:
+
+- REPORT.md: 58dc06a82a9a21a50ad60e3b9b5a513d120652c74945d38c924cfad7fb9436e3
+- REPORT.v2.md: 437cb8bb3777594d10b27bbc76a10a7b944431b1e918f28db51e89eaae50416a
+- emulate_query_stm_v1.py: a01175bf586005b229cbf255ebe6f2a2fed33ce4d1eb73d1e0e8215c54138b4a
+- collect_join_v1.py: 3c7a08cab78ad49aee94a8fae31f8425e078a58986f5c59e33270f521ff93f3a
+- joined-results.json: 3217b91dadba033cd3320a7c7b7412adf0ce89356b91e59bea41a5b4e6a67404
+- output-manifest.json: 3683717151b887c70e80eda7557082db9ac1edb04a7cb3b46564edf87172f071
+- PREFLIGHT.json: c24aa801185953516120a51d8150e3ae3b295e57eab8315ad579dc0d0adfc9a2
+
+No code, result, count, source image, old dossier or earlier artifact was modified. This new refinement and report are separate files; later independent review remains outside the unchanged v1 self-manifest.

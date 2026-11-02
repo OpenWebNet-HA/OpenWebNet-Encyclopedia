@@ -1,0 +1,31 @@
+# Independent SLEEP callable and provider-ABI source review
+
+PASS for sleep/REPORT.md, no correction requested. This source-aware independent review covers the selected constructor/move/callable/request/provider wrapper. No original instruction, parser/provider, thread, sleep, timer, SQL, transport or physical operation was executed, and no elapsed time or cancellation response was measured. Author files were not changed.
+
+Reproduced collect_sleep_v1.py --check: 19 outputs and ten source spans. Separately mapped both original ELF32 PT_LOAD tables and verified all ten raw span hashes, 15 original byte guards, four PIC joins, seven original relocation records/vtable words and five direct Thumb call targets. The 21 indexed first copies (19 outputs, collector and API context) and separate report match current bytes. Original scheduler and libc identities match the report. I independently inspected the decisive original constructor, callback loop, move prefix and libc wrapper disassembly, including its exported versioned symbol metadata.
+
+Source relationships verified:
+
+- Initializer local action10 selects the SLEEP constructor and 96-byte compiled allocation/move path. Relocated RTTI is 17SleepActionRunner; primary runtime and secondary JSON serializer address points are distinct. Source/metadata identity is not natural runner execution.
+- Constructor explicitly clears operational +8/+12 before copying raw delay/duration to metadata +84/+88. It supplies only the delay word to cd988, whose complete body stores r1 at +8. The selected move copies the operational +8/+12 pair, not metadata duration+88. Operational duration therefore remains initially zero on this constructor/move path; later whole-program mutation and other action types are not covered.
+- Raw seconds+40 is copied to compiled metadata+92, then copied by value into the start callable's data. The manager operation2 copies the captured word; cd990 installs that data at +16 and separate manager/invoker. It is not an alias causing future metadata+92 changes to update the capture. The initial separate stop callable is empty under the selected stores; complete lifetime/unwind and all later mutation are unproved.
+- Callback b72d4 performs logging and then reloads the captured word at b746e. Zero bypasses nanosleep. Nonzero builds two32-bit words [captured,0] at stack+12; r0 and r1 receive exactly the same address. The ADD1/zero check after the call selects only return -1 for errno inspection, and errno4 loops to the same req/rem address. Other returns/errors leave this loop. No separate Boolean success result is established.
+- Actual packaged nanosleep/__nanosleep GLIBC_2.4 exports have Thumb pointer860d5/instruction860d4 and a 92-byte body. Its LDRD reads two32-bit words; ASR31 at860e0 sign-extends the first into the time64 temporary. The normal helper call and code4/non-NULL remainder-copy branch at86124 are explicit original source. This proves the chosen packaged wrapper's request conversion, not dynamic binding, kernel behavior or a successful sleep.
+- Seconds/nanoseconds and EINTR semantics are retained as ordinary Linux API context in API_CONTEXT.json, not a target header or observation. Combined with the original request layout this supports the requested whole-second interval for ordinary valid values. JSON asUInt and the signed wrapper conversion remain separate; no assertion that every uint32 value is valid, elapsed timing equals the request, or nonzero values are inherently invalid is made.
+- The inspected blocking loop has no explicit common cancellation-flag read or condition-variable wait. This does not prove that signals, thread cancellation, provider effects or outer state cannot interrupt it. Common stop signaling alone has not established immediate interruption of an entered sleep.
+
+Preservation: the exact pre-generation collector draft matches its saved old hash. Its difference from current collector is one VST1 guard-byte correction plus the explicit development-history description of that correction. I checked both changes, the original instruction bytes and current first copies; no generated evidence was replaced. The saved audit's chronology is retained rather than recharacterized as an independently replayed old failure. My read-only draft-comparison initially assumed a guard-only file delta and stopped before any review output; the documented history-text addition was then checked explicitly.
+
+Reviewed SHA-256 pins relative to sleep/:
+
+| File | SHA-256 |
+| --- | --- |
+| REPORT.md | 399ab5a54cc5682e59b1a5fd166395145c5e6a511590b9344eadb2781a6e0eac |
+| collect_sleep_v1.py | dcfb342823838c8df65384a3b070ab0fc09c45b3f0599cdc15dfafaae6f1ad2c |
+| OUTPUT_MANIFEST.v1.json | b2e10a6efdfeabd22ee064cc15e20e6d9acf5329c8c063e42a9819e6e99bee25 |
+| PIC_AND_VTABLE.v1.json | f93cd92ba468c8f5a4015fb7189056a3681c0dea1ff33b24ac2723f470643097 |
+| API_CONTEXT.json | 2627975631126c2959103846a93b7a0ad22ef968fde055025fb8a091e0056350 |
+| first-candidate/SNAPSHOT.json | 837a1c1ad563a7e2f3b5c80003a402ea88d20fe082558d086c899d21147834cb |
+| development/GUARD_PREFLIGHT.json | cc58c3b76af65cc1fa75dd01c94702c0d597695c5e2da8d324e616867bdc23d9 |
+
+Original scheduler SHA-256: 7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26. Original libc SHA-256: c8598ca6fd7a47a301fd0b09937f5ab3e270e53db22c7a35b196485c2772d5c6. This new ASCII review is exclusively created and immediately frozen as an exact first-review copy/index before its hash is announced.

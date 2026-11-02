@@ -1,0 +1,26 @@
+{
+  "range_end_va_exclusive": "0x113fb0",
+  "range_start_va": "0x11880",
+  "scope": "Bounded syntactic locator; only selected constructor validated as a caller. No indirect/other-encoding/global-absence claim.",
+  "selected_exidx": {
+    "end_va_exclusive": "0xcf5c8",
+    "start_va": "0xcf06c"
+  },
+  "stride_bytes": 2,
+  "syntactic_thumb_BL_candidates": [
+    "0xcf15e",
+    "0xd4112",
+    "0xd7cb4",
+    "0xdd756",
+    "0xdfb8e",
+    "0xe2a3c",
+    "0xeb958",
+    "0xed908",
+    "0xef896",
+    "0xf27b2",
+    "0xf7f2c",
+    "0xf9944",
+    "0x10256e"
+  ],
+  "target_va": "0xcdaf0"
+}

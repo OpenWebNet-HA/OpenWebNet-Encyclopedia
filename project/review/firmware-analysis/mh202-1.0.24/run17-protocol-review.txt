@@ -1,0 +1,47 @@
+# MH202 protocol/run17 independent source, harness and saved-result review
+
+**PASS; no correction requested.** The report supports one selected same-record core/parser replacement under explicit private fixtures and normal primitive/provider premises. It accurately distinguishes Q64, the newly parsed48-byte object, owned old/formatted text and the modeled output GList node. It does not promote this into natural queue/translation/STM/transport execution or a Boolean return contract.
+
+I reran **only the host static collector** with `--check`:14 deterministic outputs reproduced byte for byte,10 inputs, five spans and23 words. I independently mapped ELF program headers and checked all five raw span hashes and23 words against original-image bytes, verified all10 input identities and23 final author-manifest entries, inspected original code/harness and recounted saved traces/events/fields/write sites. **I did not replay `emulate_core_inplace.py`, import Unicorn, or execute original firmware.** The parent independently replays native code; the native counts below are audited saved results, not new reviewer coverage.
+
+## Exact source/result joins
+
+- Core original0x2340 receives new owned formatted text in r0, existing Q in r1 and output-list-pointer slot in r2. Original0x2364/0x236c initializes a private local parser-output slot to null;0x2378 retains Q in r7. Core PLT0x18c0 redirects to the actual same-build pointer parser0x2704, with its own original allocator wrapper0x1c80 reached through one further redirect. No central record/parser/constructor/WHO/WHERE/classifier code is supplied as a host stub.
+- Source call0x2390 and observation point0x2394 agree: the saved nested parser returns0 and its output slot contains the native-created48-byte object, WHO2/WHAT0/WHERE0/DIMnull/kind1. The core does not establish a general checked-parser-error contract here; this experiment supplies the successful parser result. Failure/null branches remain unexecuted.
+- Original0x2398 requests freeing the new formatted text after parsing; selected nonnull Q/representation1 then requests freeing Q's prior ASCII at0x23b4. Actual parsed field strings are separate allocations. The reported order is a private g_free model/ledger, not native OS reclamation. The harness checks reads of dead private allocations and does not dereference them afterward on the selected continuation; no broader asynchronous/UAF claim follows.
+- I matched all eight Q stores to original source PCs and offsets:23c8→40,type2;23cc→56,repr3;23d0→0,new parsed pointer;23d4→12,direction2;23d8→4,value2;23e4→16,value0;23e8→8,value0;23f4→48,actual parsed WHO converted to2. Every saved Q write is original-origin, four bytes; primitive writes do not seed Q fields. Other words remain unchanged, notably status52=1 and ID60=41. These are deliberately supplied initial opaque metadata, not proof they are valid natural whole-system state.
+- Original0x23f0 passes r7=Q as GList data;0x23fc invokes append with the supplied initially-null head;0x2400 stores the modeled returned head. The saved node is[data=Q,next=0,prev=0]. That node address remains in r0 through the return; the report correctly treats it as a register observation, not return0/success Boolean. No newQ64/newID branch or existing representation3 free_open_msg branch ran.
+
+## Provider, table and containment audit
+
+Current source metadata identifies actual core parser JUMP_SLOT0xbc6c and direct NEEDED libopenmsg.so. The selected same-build original definitions and report pins agree. They remain candidate binding assumptions, not observed loader/plugin/registry state.
+
+The three images have disjoint private mapping bases: core0, parser0x10000000, GLib data0x20000000. PC-relative parser code runs at its private base, while recorded parser VAs are normalized back to original-image addresses. Two explicit setup data writes relocate the parser GOT0xee78 to the GLib exported cell0xe50c8 and that cell to its original table0x9ed8a plus private GLib base. These writes are not loader code, instruction visits or callbacks. Original classification executes `tst r3,#8`, mask0x0008/bit index3, using original packaged data. Four original GLib data reads and no GLib code are retained.
+
+Original core/parser memory becomes read/execute-only, GLib memory read-only/nonexecuting; writable stack/input/heap are private. Native PC allowlists cover the selected core helper and parser/new-object/WHO/WHERE spans, not unrestricted ELF execution. Unknown PCs/imports, interrupts, invalid/protected accesses, primitive/native writes outside private regions and reads of modeled-freed allocations abort. Strings/individual allocations have4096-byte bounds, heap64KiB, and the one top-level entry has100000-hook and100000-emulator-instruction caps. These are experiment containment/contract checks, not proofs of arbitrary firmware memory safety or real allocator/layout equivalence.
+
+Modeled primitives are explicit successful ordinary string/allocation/free/numeric/list operations and normal nonfatal logging. The selected g_ascii_strtoll primitive admits only actual parsed WHOtext2/base10, including high result register0; it does not manufacture the parser's WHO string. The list primitive admits only empty-head/dataQ and constructs one private node. Nonfatal g_log return is a stated premise despite its original level argument128; no custom/fatal handler policy is established. Invalid input, nonempty lists, failures, other representations and callback lifetimes remain outside this case. Tool-package reuse supplies only the independently verified analysis package; there is no F454 firmware/VA/layout transfer or target syscall/network/authentication branch.
+
+## Independent saved accounting and history
+
+One top-level entry has317 original visits,24 C/GLib primitive callbacks, two original-definition redirects, one EXIT, zero stops:344 code hooks. I verified every saved PC against its image/range, with51 core and266 parser/helper visits; primitive/redirect arrays and arithmetic agree. Nested parser and new_open_msg are not extra top-level calls.
+
+The memory event arrays contain59 original and nine primitive writes; eight original writes touch Q. Three fixture setup allocations plus five callback allocations give eight distinct records. Setup data relocations and memory-observation callbacks are separate from code-hook counts. Saved old body/formatted allocation identities, free order, parser output pointer and output node/data identities agree. Replays do not create another canonical corpus entry.
+
+I verified both retained preparation snapshot hash indices/current bytes. The missing UC_HOOK_MEM_WRITE import in the earlier harness occurs at hook installation before emu_start, consistent with its documented no-native-visits preparation failure. The retained collector's guessed relocation prefix differs from the final exact0xbc6c assertion; neither collector runs original firmware, and output writes occur after its assertions. The report records a subsequent pre-output syntax preparation as history without fabricating a native result. Current harness/results/source interpretation/counters are pinned below; no historical draft is imported or replayed by this reviewer.
+
+## Exact reviewed pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `protocol/run17/REPORT.md` | `84220fe09ba11ed5cec0ea46378942cd7c32ed4928766e3ca938aea5d5a71be3` |
+| `protocol/run17/collect_evidence.py` | `acd4176e4f257d712ccbdb8555b368da646bdb00cf6ed16d1edd148cb9b1cc0d` |
+| `protocol/run17/emulate_core_inplace.py` | `5fe9e8cdb8ab529720cc6edc6665ac3cde4331c23b6daeed8505822fc86cbec3` |
+| `protocol/run17/joined-results.json` | `8da39446a75a89fcd17fa0c495d02a202d48679e08e1b844b451ec248bc9fb10` |
+| `protocol/run17/verified-tool-package.json` | `9f9bae4d6be11b8849669aeca2375469304e78ab5697abb89e47d3d73f6ca36a` |
+| `protocol/run17/input-hashes.json` | `efc814fe56c9a13adf1f03cdf89aa8148b5a6422b0203f3c34714a81e06b2590` |
+| `protocol/run17/original-spans.json` | `a2db72f806c41665ba0699414ede31a4c433e084191291b19a38622cc76c3ebe` |
+| `protocol/run17/critical-words.json` | `0799d63d4b729af09797b846af467ec3f288fadc225ffcef73f3b7a039ee544b` |
+| `protocol/run17/output-manifest.json` | `717bf8092b75e437190a0c3b8784a8a259a26210cdf747afdec8227a5434f7ac` |
+
+The three original image hashes match the author’s principal-original table and `input-hashes.json`. No author artifact, original firmware, prior dossier, synced source or repository document was edited by this reviewer. Runtime fixture equivalence, actual TR/synchronizer/STM queues, effective provider state, later record/list lifetime, delivery and physical causality remain unresolved.

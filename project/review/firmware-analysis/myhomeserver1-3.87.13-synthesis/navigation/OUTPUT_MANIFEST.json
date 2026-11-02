@@ -1,0 +1,45 @@
+{
+  "generator": {
+    "bytes": 23383,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/build_navigation_v1.py",
+    "sha256": "d901db90423620f626101a0c412e404b9d65fa7506730cb63eddb66a74cdc656"
+  },
+  "outputs": [
+    {
+      "bytes": 133066,
+      "path": "CATALOGUE.json",
+      "sha256": "c7c4a1af363f1b8a60980e2281695f5708c240e99383d9239d87371e1088fdca"
+    },
+    {
+      "bytes": 8852,
+      "path": "CATALOGUE.md",
+      "sha256": "692bdffd1c0f648599a5eecc6ad8bd9b0b4361a0594b2b26cded6d4c863d774e"
+    },
+    {
+      "bytes": 146684,
+      "path": "INPUTS.json",
+      "sha256": "470397b9d7f8cbc15d01f3451d3da26fb43d96f6b3d339d760d6418eb315d342"
+    },
+    {
+      "bytes": 468,
+      "path": "PROTECTED_CHECK.json",
+      "sha256": "3232b555f3a76076004907b31746b7ed665f8eb6b2158404cf5d57badec77289"
+    },
+    {
+      "bytes": 3479,
+      "path": "REPORT.md",
+      "sha256": "41a3481502c1951bf58c7d475518d670fb9acd806c26bd509ce10902be9152f8"
+    },
+    {
+      "bytes": 2819,
+      "path": "SAVED_CORPUS.json",
+      "sha256": "17f93c8ee2e00f7cfaad49f7d41c40305bb4f24564b7521acc999c866afc6ee9"
+    },
+    {
+      "bytes": 8452,
+      "path": "VERSION_NAVIGATION.json",
+      "sha256": "2af645d3576ecfc64dcfabca287025a875b8c4ad046d28d4268ba4e81789a39d"
+    }
+  ],
+  "scope": "Manifest excludes itself to avoid a circular identity; first-candidate index separately pins this manifest and the generator."
+}

@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "scope": "Parent exact new packet/output/first-copy/review/current-summary identities; source semantics and original-file checks remain separately scoped peer reviews, not a new full-source/old-corpus replay",
+  "packets": [
+    {
+      "root": "work/f450-firmware/2.0.10/research/2026-11-01-first-exploration",
+      "report": {
+        "path": "work/f450-firmware/2.0.10/research/2026-11-01-first-exploration/REPORT.md",
+        "bytes": 6862,
+        "sha256": "9e525852d8ca2d7ca4f485f10ff8425764da215fdb4a1c51c1987a8aa75d0d78"
+      },
+      "collector": {
+        "path": "work/f450-firmware/2.0.10/research/2026-11-01-first-exploration/collect_firstpass_v2.py",
+        "bytes": 19325,
+        "sha256": "c78a270b0ef37047a6a83108128a0638318c224cd323c119a87f727880dd6128"
+      },
+      "manifest": {
+        "path": "work/f450-firmware/2.0.10/research/2026-11-01-first-exploration/OUTPUT_MANIFEST.json",
+        "bytes": 1436,
+        "sha256": "389ccd014e19cf6c4126df1ddbd8fdbb79bc1b75d63c8e84d931cdc57ffb4e1a"
+      },
+      "outputs_including_manifest": 10,
+      "firstcopies": 11
+    },
+    {
+      "root": "work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration",
+      "report": {
+        "path": "work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration/REPORT.md",
+        "bytes": 8091,
+        "sha256": "77c1b90bf0d3fe2d4a651d26f5f93dad728b04ebf8c3e7f0efd60c94b402f778"
+      },
+      "collector": {
+        "path": "work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration/collect_first_v1.py",
+        "bytes": 24271,
+        "sha256": "95b71f2d7ae8ba6a4c4a8d6cb065189777442914c359045b56e8fa22d3bbefe4"
+      },
+      "manifest": {
+        "path": "work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration/OUTPUT_MANIFEST.json",
+        "bytes": 1274,
+        "sha256": "6e2308ce9a2c96260500460af396f2175d101214a33da4b253396f71685583a7"
+      },
+      "outputs_including_manifest": 9,
+      "firstcopies": 10
+    },
+    {
+      "root": "work/f459-firmware/2.1.5/research/2026-11-01-first-exploration",
+      "report": {
+        "path": "work/f459-firmware/2.1.5/research/2026-11-01-first-exploration/REPORT.md",
+        "bytes": 3158,
+        "sha256": "855e0f3016343bc4b8ab387a7f0ded5265c0dd67e67630e179b41bfb29863e8f"
+      },
+      "collector": {
+        "path": "work/f459-firmware/2.1.5/research/2026-11-01-first-exploration/collect_firstpass_v1.py",
+        "bytes": 10398,
+        "sha256": "e8d3adabafd6fd8793f121484cbb6f10016b1f7bb966481ac9d0c58fd7dd4553"
+      },
+      "manifest": {
+        "path": "work/f459-firmware/2.1.5/research/2026-11-01-first-exploration/OUTPUT_MANIFEST.json",
+        "bytes": 538,
+        "sha256": "f807503ca136b4610f8a1733723fd36301f58ad9e76c6d125b4bcedc7649d64f"
+      },
+      "outputs_including_manifest": 4,
+      "firstcopies": 5
+    }
+  ],
+  "source_outputs_including_manifests": 23,
+  "source_first_copies": 26,
+  "datastore_firstcopies": 7,
+  "reviews": {
+    "legacy-source-review": {
+      "path": "work/remaining-firmware-exploration/2026-11-01/reviews/legacy-source-review.md",
+      "bytes": 6261,
+      "sha256": "f7085bf8319916f21dc834b8707d81bf584b164718b21d5684d1f112dbd37a76"
+    },
+    "f450-f455-source-review": {
+      "path": "work/remaining-firmware-exploration/2026-11-01/reviews/f450-f455-source-review.md",
+      "bytes": 8213,
+      "sha256": "d5c71e073adf278cb54a741fd9630513936fc63047966544eb498982c7bb6e3e"
+    },
+    "f459-datastore-review": {
+      "path": "work/remaining-firmware-exploration/2026-11-01/reviews/f459-datastore-review.md",
+      "bytes": 8703,
+      "sha256": "b66f7eab96717444051f43bfc3179db04ff2162594e9835d8e7dac073fa22a14"
+    },
+    "synthesis-review": {
+      "path": "work/remaining-firmware-exploration/2026-11-01/reviews/synthesis-review.md",
+      "bytes": 6725,
+      "sha256": "d8729af08d781ac45ad2dd4a1b8c4012870c19f9a94b187794ec29e284fad9f5"
+    }
+  },
+  "datastore_summary": {
+    "packages": 6,
+    "regular_files_scanned": 16088,
+    "confirmed_SQLite3_files": 0,
+    "database_candidates": 1,
+    "structured_files": 301,
+    "nested_archive_containers": 1,
+    "scope": "Only extracted regular files at offset0; embedded/encrypted/archive contents not ruled out. Filename/library leads are not a database schema or effective provider.",
+    "row_values_exported": false,
+    "original_execution": 0,
+    "host_SQLite_queries_executed": false
+  },
+  "branch": {
+    "name": "docs/static-firmware-analysis-findings",
+    "staged": 0,
+    "tracked_unstaged": 30,
+    "untracked": 11
+  },
+  "source_manifest_unchanged": true,
+  "new_original_firmware_native_helper_SQLite_query_runtime_physical_execution": 0
+}

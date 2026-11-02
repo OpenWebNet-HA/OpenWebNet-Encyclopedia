@@ -1,0 +1,3653 @@
+{
+  "assemblies": {
+    "Class": {
+      "assembly_name": "Bticino.ScenarioSuite.Class",
+      "bytes": 51200,
+      "sha256": "3a9ef4d3c41889d5990ce1977b4782580d9b6bed7f2a3a28ab4693d091dc3afb",
+      "version": [
+        6,
+        0,
+        0,
+        1
+      ]
+    },
+    "Core": {
+      "assembly_name": "Bticino.ScenarioSuite.Core",
+      "bytes": 1021440,
+      "sha256": "7b7269a14652472fc471568430364a038f02a8c881cb5c9db089a7683e38307b",
+      "version": [
+        6,
+        0,
+        0,
+        2
+      ]
+    }
+  },
+  "methods": [
+    {
+      "IL_code_bytes": 40,
+      "assembly": "Core",
+      "body_bytes": 52,
+      "body_hex": "133002002800000066000011027b580000044502000000020000000a0000002b1002036f8e0000062a02036f8f0000062a1f9c2a",
+      "body_sha256": "c45b61678b03c1efdd769ff1276d8f846b36957302eb570b7c641e6326c678c8",
+      "exception_regions_dncil_body_coordinates": [],
+      "file_offset": 29336,
+      "header_bytes": 12,
+      "instructions": [
+        {
+          "body_offset": 12,
+          "bytes_hex": "02",
+          "il_offset": 0,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 13,
+          "bytes_hex": "7b58000004",
+          "il_offset": 1,
+          "op": "ldfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::_Mode",
+            "signature_hex": "06115d",
+            "table": "Field",
+            "token": "0x04000058"
+          }
+        },
+        {
+          "body_offset": 18,
+          "bytes_hex": "4502000000020000000a000000",
+          "il_offset": 6,
+          "op": "switch",
+          "operand": {
+            "body_targets": [
+              33,
+              41
+            ],
+            "il_targets": [
+              21,
+              29
+            ]
+          }
+        },
+        {
+          "body_offset": 31,
+          "bytes_hex": "2b10",
+          "il_offset": 19,
+          "op": "br.s",
+          "operand": {
+            "body_target": 49,
+            "il_target": 37
+          }
+        },
+        {
+          "body_offset": 33,
+          "bytes_hex": "02",
+          "il_offset": 21,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 34,
+          "bytes_hex": "03",
+          "il_offset": 22,
+          "op": "ldarg.1"
+        },
+        {
+          "body_offset": 35,
+          "bytes_hex": "6f8e000006",
+          "il_offset": 23,
+          "op": "callvirt",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::LoadscenariosMH202",
+            "signature_hex": "2001115c101269",
+            "table": "MethodDef",
+            "token": "0x0600008e"
+          }
+        },
+        {
+          "body_offset": 40,
+          "bytes_hex": "2a",
+          "il_offset": 28,
+          "op": "ret"
+        },
+        {
+          "body_offset": 41,
+          "bytes_hex": "02",
+          "il_offset": 29,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 42,
+          "bytes_hex": "03",
+          "il_offset": 30,
+          "op": "ldarg.1"
+        },
+        {
+          "body_offset": 43,
+          "bytes_hex": "6f8f000006",
+          "il_offset": 31,
+          "op": "callvirt",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::LoadscenariosMH200N",
+            "signature_hex": "2001115c101269",
+            "table": "MethodDef",
+            "token": "0x0600008f"
+          }
+        },
+        {
+          "body_offset": 48,
+          "bytes_hex": "2a",
+          "il_offset": 36,
+          "op": "ret"
+        },
+        {
+          "body_offset": 49,
+          "bytes_hex": "1f9c",
+          "il_offset": 37,
+          "op": "ldc.i4.s",
+          "operand": -100
+        },
+        {
+          "body_offset": 51,
+          "bytes_hex": "2a",
+          "il_offset": 39,
+          "op": "ret"
+        }
+      ],
+      "name": "Bticino.ScenarioSuite.Core.cCore::Loadscenarios",
+      "parameters": [
+        {
+          "name": "ScenariosCollection",
+          "sequence": 1
+        }
+      ],
+      "rva": 36504,
+      "signature_hex": "2001115c101269",
+      "token": "0x0600008d"
+    },
+    {
+      "IL_code_bytes": 925,
+      "assembly": "Core",
+      "body_bytes": 1064,
+      "body_hex": "1b3004009d03000067000011160b02027b3700000472231c007072770000706fef00000602027b540000046ff000000626027b52000004723f1c0070280e01000a1304110428fb00000a130511052c2c1104027b54000004723f1c0070280e01000a17280f01000a027b54000004723f1c0070280e01000a13042b0772210200701304027b52000004726d1c0070280e01000a0d0928fb00000a130511052c2a09027b54000004726d1c0070280e01000a17280f01000a027b54000004726d1c0070280e01000a0d2b0672210200700d03731001000a511104722102007016284c00000a163bae000000141308d076000001281400000a731101000a1309110419731201000a1307110911076f1301000a7576000001130811076f1401000ade1625288e00000a130a11076f1401000a289000000ade0011082c3a035011086f1501000a6f1601000a035011086f1701000a6f1801000a035011086f1901000a6f1a01000a035011086f1b01000a6f1c01000a2b4473d000000a130b110b166fd200000a110b1f096fd300000a0350110b6f1c01000a2b2173d000000a130c110c166fd200000a110c1f096fd300000a0350110c6f1c01000a027b52000004731d01000a0c086f1e01000a13061106131a16131938d1000000111a11199a130f027b54000004110f6f1f01000a280e01000a130d110d282001000a130511052d08110d282101000a2602110f6f2201000a110d6ff100000626110d110f6f2201000a282301000a727f1c0070288400000a280e01000a130e110e28fb00000a130511052c5f141311d00c000001281400000a731101000a1312110e19731201000a1310111211106f1301000a750c000001131111106f1401000ade1625288e00000a131311106f1401000a289000000ade0011112c0e03506f2401000a11116f2501000a111917d613191119111a8eb73f24ffffff09722102007016284c00000a163b88000000732601000a13151115096f2701000a111572891c00706f2801000a131411146f2901000a1717282a01000a72f30a007016284c00000a16333b03506f2401000a6f2b01000a131b2b14111b6f2c01000a131602031116176f9100000626111b6f3c00000a2de3de0c111b2c07111b6f3d00000adc141315de0f25288e00000a1317289000000ade0002027b3700000472231c007072091c00706fef00000602167d36000004160ade3725288e00000a131802027b3700000472231c007011186f8f00000a6fef00000607162e09070a289000000ade0a1f9c0a289000000ade00062a000000417c000000000000fc0000001900000015010000160000005000000100000000570200001900000070020000160000005000000102000000f40200002f000000230300000c0000000000000000000000bb02000079000000340300000f00000050000001000000000200000062030000640300003700000050000001",
+      "body_sha256": "9c1df09de0ca348acd48d0c29912387fceeae052a6c78edacfe5f28d7e1c3d4c",
+      "exception_regions_dncil_body_coordinates": [
+        {
+          "catch_type": {
+            "name": "System.Exception",
+            "table": "TypeRef",
+            "token": "0x01000050"
+          },
+          "exception_type": 0,
+          "filter_start": -1,
+          "handler_end": 299,
+          "handler_start": 277,
+          "try_end": 277,
+          "try_start": 252
+        },
+        {
+          "catch_type": {
+            "name": "System.Exception",
+            "table": "TypeRef",
+            "token": "0x01000050"
+          },
+          "exception_type": 0,
+          "filter_start": -1,
+          "handler_end": 646,
+          "handler_start": 624,
+          "try_end": 624,
+          "try_start": 599
+        },
+        {
+          "catch_type": null,
+          "exception_type": 2,
+          "filter_start": -1,
+          "handler_end": 815,
+          "handler_start": 803,
+          "try_end": 803,
+          "try_start": 756
+        },
+        {
+          "catch_type": {
+            "name": "System.Exception",
+            "table": "TypeRef",
+            "token": "0x01000050"
+          },
+          "exception_type": 0,
+          "filter_start": -1,
+          "handler_end": 835,
+          "handler_start": 820,
+          "try_end": 820,
+          "try_start": 699
+        },
+        {
+          "catch_type": {
+            "name": "System.Exception",
+            "table": "TypeRef",
+            "token": "0x01000050"
+          },
+          "exception_type": 0,
+          "filter_start": -1,
+          "handler_end": 923,
+          "handler_start": 868,
+          "try_end": 868,
+          "try_start": 2
+        }
+      ],
+      "file_offset": 29388,
+      "header_bytes": 12,
+      "instructions": [
+        {
+          "body_offset": 12,
+          "bytes_hex": "16",
+          "il_offset": 0,
+          "op": "ldc.i4.0"
+        },
+        {
+          "body_offset": 13,
+          "bytes_hex": "0b",
+          "il_offset": 1,
+          "op": "stloc.1"
+        },
+        {
+          "body_offset": 14,
+          "bytes_hex": "02",
+          "il_offset": 2,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 15,
+          "bytes_hex": "02",
+          "il_offset": 3,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 16,
+          "bytes_hex": "7b37000004",
+          "il_offset": 4,
+          "op": "ldfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::lcSwName",
+            "signature_hex": "060e",
+            "table": "Field",
+            "token": "0x04000037"
+          }
+        },
+        {
+          "body_offset": 21,
+          "bytes_hex": "72231c0070",
+          "il_offset": 9,
+          "op": "ldstr",
+          "operand": {
+            "text": "Loadscenarios",
+            "token": "0x70001c23"
+          }
+        },
+        {
+          "body_offset": 26,
+          "bytes_hex": "7277000070",
+          "il_offset": 14,
+          "op": "ldstr",
+          "operand": {
+            "text": "========= Start procedure =========",
+            "token": "0x70000077"
+          }
+        },
+        {
+          "body_offset": 31,
+          "bytes_hex": "6fef000006",
+          "il_offset": 19,
+          "op": "callvirt",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::Ins2Log",
+            "signature_hex": "2003010e0e0e",
+            "table": "MethodDef",
+            "token": "0x060000ef"
+          }
+        },
+        {
+          "body_offset": 36,
+          "bytes_hex": "02",
+          "il_offset": 24,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 37,
+          "bytes_hex": "02",
+          "il_offset": 25,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 38,
+          "bytes_hex": "7b54000004",
+          "il_offset": 26,
+          "op": "ldfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::lcTempFolder",
+            "signature_hex": "060e",
+            "table": "Field",
+            "token": "0x04000054"
+          }
+        },
+        {
+          "body_offset": 43,
+          "bytes_hex": "6ff0000006",
+          "il_offset": 31,
+          "op": "callvirt",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::CleaupFolder",
+            "signature_hex": "2001020e",
+            "table": "MethodDef",
+            "token": "0x060000f0"
+          }
+        },
+        {
+          "body_offset": 48,
+          "bytes_hex": "26",
+          "il_offset": 36,
+          "op": "pop"
+        },
+        {
+          "body_offset": 49,
+          "bytes_hex": "02",
+          "il_offset": 37,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 50,
+          "bytes_hex": "7b52000004",
+          "il_offset": 38,
+          "op": "ldfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::_WorkingFolder",
+            "signature_hex": "060e",
+            "table": "Field",
+            "token": "0x04000052"
+          }
+        },
+        {
+          "body_offset": 55,
+          "bytes_hex": "723f1c0070",
+          "il_offset": 43,
+          "op": "ldstr",
+          "operand": {
+            "text": "ScenarioCollection.xml",
+            "token": "0x70001c3f"
+          }
+        },
+        {
+          "body_offset": 60,
+          "bytes_hex": "280e01000a",
+          "il_offset": 48,
+          "op": "call",
+          "operand": {
+            "class_row": 91,
+            "class_table": "TypeRef",
+            "name": "System.IO.Path::Combine",
+            "signature_hex": "00020e0e0e",
+            "table": "MemberRef",
+            "token": "0x0a00010e"
+          }
+        },
+        {
+          "body_offset": 65,
+          "bytes_hex": "1304",
+          "il_offset": 53,
+          "op": "stloc.s",
+          "operand": {
+            "index": 4,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 67,
+          "bytes_hex": "1104",
+          "il_offset": 55,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 4,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 69,
+          "bytes_hex": "28fb00000a",
+          "il_offset": 57,
+          "op": "call",
+          "operand": {
+            "class_row": 113,
+            "class_table": "TypeRef",
+            "name": "System.IO.File::Exists",
+            "signature_hex": "0001020e",
+            "table": "MemberRef",
+            "token": "0x0a0000fb"
+          }
+        },
+        {
+          "body_offset": 74,
+          "bytes_hex": "1305",
+          "il_offset": 62,
+          "op": "stloc.s",
+          "operand": {
+            "index": 5,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 76,
+          "bytes_hex": "1105",
+          "il_offset": 64,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 5,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 78,
+          "bytes_hex": "2c2c",
+          "il_offset": 66,
+          "op": "brfalse.s",
+          "operand": {
+            "body_target": 124,
+            "il_target": 112
+          }
+        },
+        {
+          "body_offset": 80,
+          "bytes_hex": "1104",
+          "il_offset": 68,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 4,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 82,
+          "bytes_hex": "02",
+          "il_offset": 70,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 83,
+          "bytes_hex": "7b54000004",
+          "il_offset": 71,
+          "op": "ldfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::lcTempFolder",
+            "signature_hex": "060e",
+            "table": "Field",
+            "token": "0x04000054"
+          }
+        },
+        {
+          "body_offset": 88,
+          "bytes_hex": "723f1c0070",
+          "il_offset": 76,
+          "op": "ldstr",
+          "operand": {
+            "text": "ScenarioCollection.xml",
+            "token": "0x70001c3f"
+          }
+        },
+        {
+          "body_offset": 93,
+          "bytes_hex": "280e01000a",
+          "il_offset": 81,
+          "op": "call",
+          "operand": {
+            "class_row": 91,
+            "class_table": "TypeRef",
+            "name": "System.IO.Path::Combine",
+            "signature_hex": "00020e0e0e",
+            "table": "MemberRef",
+            "token": "0x0a00010e"
+          }
+        },
+        {
+          "body_offset": 98,
+          "bytes_hex": "17",
+          "il_offset": 86,
+          "op": "ldc.i4.1"
+        },
+        {
+          "body_offset": 99,
+          "bytes_hex": "280f01000a",
+          "il_offset": 87,
+          "op": "call",
+          "operand": {
+            "class_row": 113,
+            "class_table": "TypeRef",
+            "name": "System.IO.File::Copy",
+            "signature_hex": "0003010e0e02",
+            "table": "MemberRef",
+            "token": "0x0a00010f"
+          }
+        },
+        {
+          "body_offset": 104,
+          "bytes_hex": "02",
+          "il_offset": 92,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 105,
+          "bytes_hex": "7b54000004",
+          "il_offset": 93,
+          "op": "ldfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::lcTempFolder",
+            "signature_hex": "060e",
+            "table": "Field",
+            "token": "0x04000054"
+          }
+        },
+        {
+          "body_offset": 110,
+          "bytes_hex": "723f1c0070",
+          "il_offset": 98,
+          "op": "ldstr",
+          "operand": {
+            "text": "ScenarioCollection.xml",
+            "token": "0x70001c3f"
+          }
+        },
+        {
+          "body_offset": 115,
+          "bytes_hex": "280e01000a",
+          "il_offset": 103,
+          "op": "call",
+          "operand": {
+            "class_row": 91,
+            "class_table": "TypeRef",
+            "name": "System.IO.Path::Combine",
+            "signature_hex": "00020e0e0e",
+            "table": "MemberRef",
+            "token": "0x0a00010e"
+          }
+        },
+        {
+          "body_offset": 120,
+          "bytes_hex": "1304",
+          "il_offset": 108,
+          "op": "stloc.s",
+          "operand": {
+            "index": 4,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 122,
+          "bytes_hex": "2b07",
+          "il_offset": 110,
+          "op": "br.s",
+          "operand": {
+            "body_target": 131,
+            "il_target": 119
+          }
+        },
+        {
+          "body_offset": 124,
+          "bytes_hex": "7221020070",
+          "il_offset": 112,
+          "op": "ldstr",
+          "operand": {
+            "text": "",
+            "token": "0x70000221"
+          }
+        },
+        {
+          "body_offset": 129,
+          "bytes_hex": "1304",
+          "il_offset": 117,
+          "op": "stloc.s",
+          "operand": {
+            "index": 4,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 131,
+          "bytes_hex": "02",
+          "il_offset": 119,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 132,
+          "bytes_hex": "7b52000004",
+          "il_offset": 120,
+          "op": "ldfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::_WorkingFolder",
+            "signature_hex": "060e",
+            "table": "Field",
+            "token": "0x04000052"
+          }
+        },
+        {
+          "body_offset": 137,
+          "bytes_hex": "726d1c0070",
+          "il_offset": 125,
+          "op": "ldstr",
+          "operand": {
+            "text": "info.xml",
+            "token": "0x70001c6d"
+          }
+        },
+        {
+          "body_offset": 142,
+          "bytes_hex": "280e01000a",
+          "il_offset": 130,
+          "op": "call",
+          "operand": {
+            "class_row": 91,
+            "class_table": "TypeRef",
+            "name": "System.IO.Path::Combine",
+            "signature_hex": "00020e0e0e",
+            "table": "MemberRef",
+            "token": "0x0a00010e"
+          }
+        },
+        {
+          "body_offset": 147,
+          "bytes_hex": "0d",
+          "il_offset": 135,
+          "op": "stloc.3"
+        },
+        {
+          "body_offset": 148,
+          "bytes_hex": "09",
+          "il_offset": 136,
+          "op": "ldloc.3"
+        },
+        {
+          "body_offset": 149,
+          "bytes_hex": "28fb00000a",
+          "il_offset": 137,
+          "op": "call",
+          "operand": {
+            "class_row": 113,
+            "class_table": "TypeRef",
+            "name": "System.IO.File::Exists",
+            "signature_hex": "0001020e",
+            "table": "MemberRef",
+            "token": "0x0a0000fb"
+          }
+        },
+        {
+          "body_offset": 154,
+          "bytes_hex": "1305",
+          "il_offset": 142,
+          "op": "stloc.s",
+          "operand": {
+            "index": 5,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 156,
+          "bytes_hex": "1105",
+          "il_offset": 144,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 5,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 158,
+          "bytes_hex": "2c2a",
+          "il_offset": 146,
+          "op": "brfalse.s",
+          "operand": {
+            "body_target": 202,
+            "il_target": 190
+          }
+        },
+        {
+          "body_offset": 160,
+          "bytes_hex": "09",
+          "il_offset": 148,
+          "op": "ldloc.3"
+        },
+        {
+          "body_offset": 161,
+          "bytes_hex": "02",
+          "il_offset": 149,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 162,
+          "bytes_hex": "7b54000004",
+          "il_offset": 150,
+          "op": "ldfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::lcTempFolder",
+            "signature_hex": "060e",
+            "table": "Field",
+            "token": "0x04000054"
+          }
+        },
+        {
+          "body_offset": 167,
+          "bytes_hex": "726d1c0070",
+          "il_offset": 155,
+          "op": "ldstr",
+          "operand": {
+            "text": "info.xml",
+            "token": "0x70001c6d"
+          }
+        },
+        {
+          "body_offset": 172,
+          "bytes_hex": "280e01000a",
+          "il_offset": 160,
+          "op": "call",
+          "operand": {
+            "class_row": 91,
+            "class_table": "TypeRef",
+            "name": "System.IO.Path::Combine",
+            "signature_hex": "00020e0e0e",
+            "table": "MemberRef",
+            "token": "0x0a00010e"
+          }
+        },
+        {
+          "body_offset": 177,
+          "bytes_hex": "17",
+          "il_offset": 165,
+          "op": "ldc.i4.1"
+        },
+        {
+          "body_offset": 178,
+          "bytes_hex": "280f01000a",
+          "il_offset": 166,
+          "op": "call",
+          "operand": {
+            "class_row": 113,
+            "class_table": "TypeRef",
+            "name": "System.IO.File::Copy",
+            "signature_hex": "0003010e0e02",
+            "table": "MemberRef",
+            "token": "0x0a00010f"
+          }
+        },
+        {
+          "body_offset": 183,
+          "bytes_hex": "02",
+          "il_offset": 171,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 184,
+          "bytes_hex": "7b54000004",
+          "il_offset": 172,
+          "op": "ldfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::lcTempFolder",
+            "signature_hex": "060e",
+            "table": "Field",
+            "token": "0x04000054"
+          }
+        },
+        {
+          "body_offset": 189,
+          "bytes_hex": "726d1c0070",
+          "il_offset": 177,
+          "op": "ldstr",
+          "operand": {
+            "text": "info.xml",
+            "token": "0x70001c6d"
+          }
+        },
+        {
+          "body_offset": 194,
+          "bytes_hex": "280e01000a",
+          "il_offset": 182,
+          "op": "call",
+          "operand": {
+            "class_row": 91,
+            "class_table": "TypeRef",
+            "name": "System.IO.Path::Combine",
+            "signature_hex": "00020e0e0e",
+            "table": "MemberRef",
+            "token": "0x0a00010e"
+          }
+        },
+        {
+          "body_offset": 199,
+          "bytes_hex": "0d",
+          "il_offset": 187,
+          "op": "stloc.3"
+        },
+        {
+          "body_offset": 200,
+          "bytes_hex": "2b06",
+          "il_offset": 188,
+          "op": "br.s",
+          "operand": {
+            "body_target": 208,
+            "il_target": 196
+          }
+        },
+        {
+          "body_offset": 202,
+          "bytes_hex": "7221020070",
+          "il_offset": 190,
+          "op": "ldstr",
+          "operand": {
+            "text": "",
+            "token": "0x70000221"
+          }
+        },
+        {
+          "body_offset": 207,
+          "bytes_hex": "0d",
+          "il_offset": 195,
+          "op": "stloc.3"
+        },
+        {
+          "body_offset": 208,
+          "bytes_hex": "03",
+          "il_offset": 196,
+          "op": "ldarg.1"
+        },
+        {
+          "body_offset": 209,
+          "bytes_hex": "731001000a",
+          "il_offset": 197,
+          "op": "newobj",
+          "operand": {
+            "class_row": 26,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::.ctor",
+            "signature_hex": "200001",
+            "table": "MemberRef",
+            "token": "0x0a000110"
+          }
+        },
+        {
+          "body_offset": 214,
+          "bytes_hex": "51",
+          "il_offset": 202,
+          "op": "stind.ref"
+        },
+        {
+          "body_offset": 215,
+          "bytes_hex": "1104",
+          "il_offset": 203,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 4,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 217,
+          "bytes_hex": "7221020070",
+          "il_offset": 205,
+          "op": "ldstr",
+          "operand": {
+            "text": "",
+            "token": "0x70000221"
+          }
+        },
+        {
+          "body_offset": 222,
+          "bytes_hex": "16",
+          "il_offset": 210,
+          "op": "ldc.i4.0"
+        },
+        {
+          "body_offset": 223,
+          "bytes_hex": "284c00000a",
+          "il_offset": 211,
+          "op": "call",
+          "operand": {
+            "class_row": 90,
+            "class_table": "TypeRef",
+            "name": "Microsoft.VisualBasic.CompilerServices.Operators::CompareString",
+            "signature_hex": "0003080e0e02",
+            "table": "MemberRef",
+            "token": "0x0a00004c"
+          }
+        },
+        {
+          "body_offset": 228,
+          "bytes_hex": "16",
+          "il_offset": 216,
+          "op": "ldc.i4.0"
+        },
+        {
+          "body_offset": 229,
+          "bytes_hex": "3bae000000",
+          "il_offset": 217,
+          "op": "beq",
+          "operand": {
+            "body_target": 408,
+            "il_target": 396
+          }
+        },
+        {
+          "body_offset": 234,
+          "bytes_hex": "14",
+          "il_offset": 222,
+          "op": "ldnull"
+        },
+        {
+          "body_offset": 235,
+          "bytes_hex": "1308",
+          "il_offset": 223,
+          "op": "stloc.s",
+          "operand": {
+            "index": 8,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 237,
+          "bytes_hex": "d076000001",
+          "il_offset": 225,
+          "op": "ldtoken",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Class.cPRJScenarioCollection",
+            "table": "TypeRef",
+            "token": "0x01000076"
+          }
+        },
+        {
+          "body_offset": 242,
+          "bytes_hex": "281400000a",
+          "il_offset": 230,
+          "op": "call",
+          "operand": {
+            "class_row": 5,
+            "class_table": "TypeRef",
+            "name": "System.Type::GetTypeFromHandle",
+            "signature_hex": "0001121511810d",
+            "table": "MemberRef",
+            "token": "0x0a000014"
+          }
+        },
+        {
+          "body_offset": 247,
+          "bytes_hex": "731101000a",
+          "il_offset": 235,
+          "op": "newobj",
+          "operand": {
+            "class_row": 119,
+            "class_table": "TypeRef",
+            "name": "System.Xml.Serialization.XmlSerializer::.ctor",
+            "signature_hex": "2001011215",
+            "table": "MemberRef",
+            "token": "0x0a000111"
+          }
+        },
+        {
+          "body_offset": 252,
+          "bytes_hex": "1309",
+          "il_offset": 240,
+          "op": "stloc.s",
+          "operand": {
+            "index": 9,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 254,
+          "bytes_hex": "1104",
+          "il_offset": 242,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 4,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 256,
+          "bytes_hex": "19",
+          "il_offset": 244,
+          "op": "ldc.i4.3"
+        },
+        {
+          "body_offset": 257,
+          "bytes_hex": "731201000a",
+          "il_offset": 245,
+          "op": "newobj",
+          "operand": {
+            "class_row": 117,
+            "class_table": "TypeRef",
+            "name": "System.IO.FileStream::.ctor",
+            "signature_hex": "2002010e1181e5",
+            "table": "MemberRef",
+            "token": "0x0a000112"
+          }
+        },
+        {
+          "body_offset": 262,
+          "bytes_hex": "1307",
+          "il_offset": 250,
+          "op": "stloc.s",
+          "operand": {
+            "index": 7,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 264,
+          "bytes_hex": "1109",
+          "il_offset": 252,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 9,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 266,
+          "bytes_hex": "1107",
+          "il_offset": 254,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 7,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 268,
+          "bytes_hex": "6f1301000a",
+          "il_offset": 256,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 119,
+            "class_table": "TypeRef",
+            "name": "System.Xml.Serialization.XmlSerializer::Deserialize",
+            "signature_hex": "20011c1280d5",
+            "table": "MemberRef",
+            "token": "0x0a000113"
+          }
+        },
+        {
+          "body_offset": 273,
+          "bytes_hex": "7576000001",
+          "il_offset": 261,
+          "op": "isinst",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Class.cPRJScenarioCollection",
+            "table": "TypeRef",
+            "token": "0x01000076"
+          }
+        },
+        {
+          "body_offset": 278,
+          "bytes_hex": "1308",
+          "il_offset": 266,
+          "op": "stloc.s",
+          "operand": {
+            "index": 8,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 280,
+          "bytes_hex": "1107",
+          "il_offset": 268,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 7,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 282,
+          "bytes_hex": "6f1401000a",
+          "il_offset": 270,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 53,
+            "class_table": "TypeRef",
+            "name": "System.IO.Stream::Close",
+            "signature_hex": "200001",
+            "table": "MemberRef",
+            "token": "0x0a000114"
+          }
+        },
+        {
+          "body_offset": 287,
+          "bytes_hex": "de16",
+          "il_offset": 275,
+          "op": "leave.s",
+          "operand": {
+            "body_target": 311,
+            "il_target": 299
+          }
+        },
+        {
+          "body_offset": 289,
+          "bytes_hex": "25",
+          "il_offset": 277,
+          "op": "dup"
+        },
+        {
+          "body_offset": 290,
+          "bytes_hex": "288e00000a",
+          "il_offset": 278,
+          "op": "call",
+          "operand": {
+            "class_row": 106,
+            "class_table": "TypeRef",
+            "name": "Microsoft.VisualBasic.CompilerServices.ProjectData::SetProjectError",
+            "signature_hex": "000101128141",
+            "table": "MemberRef",
+            "token": "0x0a00008e"
+          }
+        },
+        {
+          "body_offset": 295,
+          "bytes_hex": "130a",
+          "il_offset": 283,
+          "op": "stloc.s",
+          "operand": {
+            "index": 10,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 297,
+          "bytes_hex": "1107",
+          "il_offset": 285,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 7,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 299,
+          "bytes_hex": "6f1401000a",
+          "il_offset": 287,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 53,
+            "class_table": "TypeRef",
+            "name": "System.IO.Stream::Close",
+            "signature_hex": "200001",
+            "table": "MemberRef",
+            "token": "0x0a000114"
+          }
+        },
+        {
+          "body_offset": 304,
+          "bytes_hex": "289000000a",
+          "il_offset": 292,
+          "op": "call",
+          "operand": {
+            "class_row": 106,
+            "class_table": "TypeRef",
+            "name": "Microsoft.VisualBasic.CompilerServices.ProjectData::ClearProjectError",
+            "signature_hex": "000001",
+            "table": "MemberRef",
+            "token": "0x0a000090"
+          }
+        },
+        {
+          "body_offset": 309,
+          "bytes_hex": "de00",
+          "il_offset": 297,
+          "op": "leave.s",
+          "operand": {
+            "body_target": 311,
+            "il_target": 299
+          }
+        },
+        {
+          "body_offset": 311,
+          "bytes_hex": "1108",
+          "il_offset": 299,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 8,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 313,
+          "bytes_hex": "2c3a",
+          "il_offset": 301,
+          "op": "brfalse.s",
+          "operand": {
+            "body_target": 373,
+            "il_target": 361
+          }
+        },
+        {
+          "body_offset": 315,
+          "bytes_hex": "03",
+          "il_offset": 303,
+          "op": "ldarg.1"
+        },
+        {
+          "body_offset": 316,
+          "bytes_hex": "50",
+          "il_offset": 304,
+          "op": "ldind.ref"
+        },
+        {
+          "body_offset": 317,
+          "bytes_hex": "1108",
+          "il_offset": 305,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 8,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 319,
+          "bytes_hex": "6f1501000a",
+          "il_offset": 307,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 118,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cPRJScenarioCollection::get_Name",
+            "signature_hex": "20000e",
+            "table": "MemberRef",
+            "token": "0x0a000115"
+          }
+        },
+        {
+          "body_offset": 324,
+          "bytes_hex": "6f1601000a",
+          "il_offset": 312,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 26,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::set_Name",
+            "signature_hex": "2001010e",
+            "table": "MemberRef",
+            "token": "0x0a000116"
+          }
+        },
+        {
+          "body_offset": 329,
+          "bytes_hex": "03",
+          "il_offset": 317,
+          "op": "ldarg.1"
+        },
+        {
+          "body_offset": 330,
+          "bytes_hex": "50",
+          "il_offset": 318,
+          "op": "ldind.ref"
+        },
+        {
+          "body_offset": 331,
+          "bytes_hex": "1108",
+          "il_offset": 319,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 8,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 333,
+          "bytes_hex": "6f1701000a",
+          "il_offset": 321,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 118,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cPRJScenarioCollection::get_Author",
+            "signature_hex": "20000e",
+            "table": "MemberRef",
+            "token": "0x0a000117"
+          }
+        },
+        {
+          "body_offset": 338,
+          "bytes_hex": "6f1801000a",
+          "il_offset": 326,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 26,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::set_Author",
+            "signature_hex": "2001010e",
+            "table": "MemberRef",
+            "token": "0x0a000118"
+          }
+        },
+        {
+          "body_offset": 343,
+          "bytes_hex": "03",
+          "il_offset": 331,
+          "op": "ldarg.1"
+        },
+        {
+          "body_offset": 344,
+          "bytes_hex": "50",
+          "il_offset": 332,
+          "op": "ldind.ref"
+        },
+        {
+          "body_offset": 345,
+          "bytes_hex": "1108",
+          "il_offset": 333,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 8,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 347,
+          "bytes_hex": "6f1901000a",
+          "il_offset": 335,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 118,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cPRJScenarioCollection::get_Description",
+            "signature_hex": "20000e",
+            "table": "MemberRef",
+            "token": "0x0a000119"
+          }
+        },
+        {
+          "body_offset": 352,
+          "bytes_hex": "6f1a01000a",
+          "il_offset": 340,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 26,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::set_Description",
+            "signature_hex": "2001010e",
+            "table": "MemberRef",
+            "token": "0x0a00011a"
+          }
+        },
+        {
+          "body_offset": 357,
+          "bytes_hex": "03",
+          "il_offset": 345,
+          "op": "ldarg.1"
+        },
+        {
+          "body_offset": 358,
+          "bytes_hex": "50",
+          "il_offset": 346,
+          "op": "ldind.ref"
+        },
+        {
+          "body_offset": 359,
+          "bytes_hex": "1108",
+          "il_offset": 347,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 8,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 361,
+          "bytes_hex": "6f1b01000a",
+          "il_offset": 349,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 118,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cPRJScenarioCollection::get_PanicKey",
+            "signature_hex": "20001261",
+            "table": "MemberRef",
+            "token": "0x0a00011b"
+          }
+        },
+        {
+          "body_offset": 366,
+          "bytes_hex": "6f1c01000a",
+          "il_offset": 354,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 26,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::set_PanicKey",
+            "signature_hex": "200101123d",
+            "table": "MemberRef",
+            "token": "0x0a00011c"
+          }
+        },
+        {
+          "body_offset": 371,
+          "bytes_hex": "2b44",
+          "il_offset": 359,
+          "op": "br.s",
+          "operand": {
+            "body_target": 441,
+            "il_target": 429
+          }
+        },
+        {
+          "body_offset": 373,
+          "bytes_hex": "73d000000a",
+          "il_offset": 361,
+          "op": "newobj",
+          "operand": {
+            "class_row": 24,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cIfCommand::.ctor",
+            "signature_hex": "200001",
+            "table": "MemberRef",
+            "token": "0x0a0000d0"
+          }
+        },
+        {
+          "body_offset": 378,
+          "bytes_hex": "130b",
+          "il_offset": 366,
+          "op": "stloc.s",
+          "operand": {
+            "index": 11,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 380,
+          "bytes_hex": "110b",
+          "il_offset": 368,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 11,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 382,
+          "bytes_hex": "16",
+          "il_offset": 370,
+          "op": "ldc.i4.0"
+        },
+        {
+          "body_offset": 383,
+          "bytes_hex": "6fd200000a",
+          "il_offset": 371,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 15,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cCommand::set_IDOBJ",
+            "signature_hex": "20010108",
+            "table": "MemberRef",
+            "token": "0x0a0000d2"
+          }
+        },
+        {
+          "body_offset": 388,
+          "bytes_hex": "110b",
+          "il_offset": 376,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 11,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 390,
+          "bytes_hex": "1f09",
+          "il_offset": 378,
+          "op": "ldc.i4.s",
+          "operand": 9
+        },
+        {
+          "body_offset": 392,
+          "bytes_hex": "6fd300000a",
+          "il_offset": 380,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 15,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cCommand::set_IDArea",
+            "signature_hex": "20010108",
+            "table": "MemberRef",
+            "token": "0x0a0000d3"
+          }
+        },
+        {
+          "body_offset": 397,
+          "bytes_hex": "03",
+          "il_offset": 385,
+          "op": "ldarg.1"
+        },
+        {
+          "body_offset": 398,
+          "bytes_hex": "50",
+          "il_offset": 386,
+          "op": "ldind.ref"
+        },
+        {
+          "body_offset": 399,
+          "bytes_hex": "110b",
+          "il_offset": 387,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 11,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 401,
+          "bytes_hex": "6f1c01000a",
+          "il_offset": 389,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 26,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::set_PanicKey",
+            "signature_hex": "200101123d",
+            "table": "MemberRef",
+            "token": "0x0a00011c"
+          }
+        },
+        {
+          "body_offset": 406,
+          "bytes_hex": "2b21",
+          "il_offset": 394,
+          "op": "br.s",
+          "operand": {
+            "body_target": 441,
+            "il_target": 429
+          }
+        },
+        {
+          "body_offset": 408,
+          "bytes_hex": "73d000000a",
+          "il_offset": 396,
+          "op": "newobj",
+          "operand": {
+            "class_row": 24,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cIfCommand::.ctor",
+            "signature_hex": "200001",
+            "table": "MemberRef",
+            "token": "0x0a0000d0"
+          }
+        },
+        {
+          "body_offset": 413,
+          "bytes_hex": "130c",
+          "il_offset": 401,
+          "op": "stloc.s",
+          "operand": {
+            "index": 12,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 415,
+          "bytes_hex": "110c",
+          "il_offset": 403,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 12,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 417,
+          "bytes_hex": "16",
+          "il_offset": 405,
+          "op": "ldc.i4.0"
+        },
+        {
+          "body_offset": 418,
+          "bytes_hex": "6fd200000a",
+          "il_offset": 406,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 15,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cCommand::set_IDOBJ",
+            "signature_hex": "20010108",
+            "table": "MemberRef",
+            "token": "0x0a0000d2"
+          }
+        },
+        {
+          "body_offset": 423,
+          "bytes_hex": "110c",
+          "il_offset": 411,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 12,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 425,
+          "bytes_hex": "1f09",
+          "il_offset": 413,
+          "op": "ldc.i4.s",
+          "operand": 9
+        },
+        {
+          "body_offset": 427,
+          "bytes_hex": "6fd300000a",
+          "il_offset": 415,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 15,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cCommand::set_IDArea",
+            "signature_hex": "20010108",
+            "table": "MemberRef",
+            "token": "0x0a0000d3"
+          }
+        },
+        {
+          "body_offset": 432,
+          "bytes_hex": "03",
+          "il_offset": 420,
+          "op": "ldarg.1"
+        },
+        {
+          "body_offset": 433,
+          "bytes_hex": "50",
+          "il_offset": 421,
+          "op": "ldind.ref"
+        },
+        {
+          "body_offset": 434,
+          "bytes_hex": "110c",
+          "il_offset": 422,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 12,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 436,
+          "bytes_hex": "6f1c01000a",
+          "il_offset": 424,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 26,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::set_PanicKey",
+            "signature_hex": "200101123d",
+            "table": "MemberRef",
+            "token": "0x0a00011c"
+          }
+        },
+        {
+          "body_offset": 441,
+          "bytes_hex": "02",
+          "il_offset": 429,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 442,
+          "bytes_hex": "7b52000004",
+          "il_offset": 430,
+          "op": "ldfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::_WorkingFolder",
+            "signature_hex": "060e",
+            "table": "Field",
+            "token": "0x04000052"
+          }
+        },
+        {
+          "body_offset": 447,
+          "bytes_hex": "731d01000a",
+          "il_offset": 435,
+          "op": "newobj",
+          "operand": {
+            "class_row": 116,
+            "class_table": "TypeRef",
+            "name": "System.IO.DirectoryInfo::.ctor",
+            "signature_hex": "2001010e",
+            "table": "MemberRef",
+            "token": "0x0a00011d"
+          }
+        },
+        {
+          "body_offset": 452,
+          "bytes_hex": "0c",
+          "il_offset": 440,
+          "op": "stloc.2"
+        },
+        {
+          "body_offset": 453,
+          "bytes_hex": "08",
+          "il_offset": 441,
+          "op": "ldloc.2"
+        },
+        {
+          "body_offset": 454,
+          "bytes_hex": "6f1e01000a",
+          "il_offset": 442,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 116,
+            "class_table": "TypeRef",
+            "name": "System.IO.DirectoryInfo::GetDirectories",
+            "signature_hex": "20001d1281d1",
+            "table": "MemberRef",
+            "token": "0x0a00011e"
+          }
+        },
+        {
+          "body_offset": 459,
+          "bytes_hex": "1306",
+          "il_offset": 447,
+          "op": "stloc.s",
+          "operand": {
+            "index": 6,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 461,
+          "bytes_hex": "1106",
+          "il_offset": 449,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 6,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 463,
+          "bytes_hex": "131a",
+          "il_offset": 451,
+          "op": "stloc.s",
+          "operand": {
+            "index": 26,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 465,
+          "bytes_hex": "16",
+          "il_offset": 453,
+          "op": "ldc.i4.0"
+        },
+        {
+          "body_offset": 466,
+          "bytes_hex": "1319",
+          "il_offset": 454,
+          "op": "stloc.s",
+          "operand": {
+            "index": 25,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 468,
+          "bytes_hex": "38d1000000",
+          "il_offset": 456,
+          "op": "br",
+          "operand": {
+            "body_target": 682,
+            "il_target": 670
+          }
+        },
+        {
+          "body_offset": 473,
+          "bytes_hex": "111a",
+          "il_offset": 461,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 26,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 475,
+          "bytes_hex": "1119",
+          "il_offset": 463,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 25,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 477,
+          "bytes_hex": "9a",
+          "il_offset": 465,
+          "op": "ldelem.ref"
+        },
+        {
+          "body_offset": 478,
+          "bytes_hex": "130f",
+          "il_offset": 466,
+          "op": "stloc.s",
+          "operand": {
+            "index": 15,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 480,
+          "bytes_hex": "02",
+          "il_offset": 468,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 481,
+          "bytes_hex": "7b54000004",
+          "il_offset": 469,
+          "op": "ldfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::lcTempFolder",
+            "signature_hex": "060e",
+            "table": "Field",
+            "token": "0x04000054"
+          }
+        },
+        {
+          "body_offset": 486,
+          "bytes_hex": "110f",
+          "il_offset": 474,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 15,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 488,
+          "bytes_hex": "6f1f01000a",
+          "il_offset": 476,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 116,
+            "class_table": "TypeRef",
+            "name": "System.IO.DirectoryInfo::get_Name",
+            "signature_hex": "20000e",
+            "table": "MemberRef",
+            "token": "0x0a00011f"
+          }
+        },
+        {
+          "body_offset": 493,
+          "bytes_hex": "280e01000a",
+          "il_offset": 481,
+          "op": "call",
+          "operand": {
+            "class_row": 91,
+            "class_table": "TypeRef",
+            "name": "System.IO.Path::Combine",
+            "signature_hex": "00020e0e0e",
+            "table": "MemberRef",
+            "token": "0x0a00010e"
+          }
+        },
+        {
+          "body_offset": 498,
+          "bytes_hex": "130d",
+          "il_offset": 486,
+          "op": "stloc.s",
+          "operand": {
+            "index": 13,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 500,
+          "bytes_hex": "110d",
+          "il_offset": 488,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 13,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 502,
+          "bytes_hex": "282001000a",
+          "il_offset": 490,
+          "op": "call",
+          "operand": {
+            "class_row": 122,
+            "class_table": "TypeRef",
+            "name": "System.IO.Directory::Exists",
+            "signature_hex": "0001020e",
+            "table": "MemberRef",
+            "token": "0x0a000120"
+          }
+        },
+        {
+          "body_offset": 507,
+          "bytes_hex": "1305",
+          "il_offset": 495,
+          "op": "stloc.s",
+          "operand": {
+            "index": 5,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 509,
+          "bytes_hex": "1105",
+          "il_offset": 497,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 5,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 511,
+          "bytes_hex": "2d08",
+          "il_offset": 499,
+          "op": "brtrue.s",
+          "operand": {
+            "body_target": 521,
+            "il_target": 509
+          }
+        },
+        {
+          "body_offset": 513,
+          "bytes_hex": "110d",
+          "il_offset": 501,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 13,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 515,
+          "bytes_hex": "282101000a",
+          "il_offset": 503,
+          "op": "call",
+          "operand": {
+            "class_row": 122,
+            "class_table": "TypeRef",
+            "name": "System.IO.Directory::CreateDirectory",
+            "signature_hex": "00011281d10e",
+            "table": "MemberRef",
+            "token": "0x0a000121"
+          }
+        },
+        {
+          "body_offset": 520,
+          "bytes_hex": "26",
+          "il_offset": 508,
+          "op": "pop"
+        },
+        {
+          "body_offset": 521,
+          "bytes_hex": "02",
+          "il_offset": 509,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 522,
+          "bytes_hex": "110f",
+          "il_offset": 510,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 15,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 524,
+          "bytes_hex": "6f2201000a",
+          "il_offset": 512,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 123,
+            "class_table": "TypeRef",
+            "name": "System.IO.FileSystemInfo::get_FullName",
+            "signature_hex": "20000e",
+            "table": "MemberRef",
+            "token": "0x0a000122"
+          }
+        },
+        {
+          "body_offset": 529,
+          "bytes_hex": "110d",
+          "il_offset": 517,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 13,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 531,
+          "bytes_hex": "6ff1000006",
+          "il_offset": 519,
+          "op": "callvirt",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::CopyFolder",
+            "signature_hex": "2002020e0e",
+            "table": "MethodDef",
+            "token": "0x060000f1"
+          }
+        },
+        {
+          "body_offset": 536,
+          "bytes_hex": "26",
+          "il_offset": 524,
+          "op": "pop"
+        },
+        {
+          "body_offset": 537,
+          "bytes_hex": "110d",
+          "il_offset": 525,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 13,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 539,
+          "bytes_hex": "110f",
+          "il_offset": 527,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 15,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 541,
+          "bytes_hex": "6f2201000a",
+          "il_offset": 529,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 123,
+            "class_table": "TypeRef",
+            "name": "System.IO.FileSystemInfo::get_FullName",
+            "signature_hex": "20000e",
+            "table": "MemberRef",
+            "token": "0x0a000122"
+          }
+        },
+        {
+          "body_offset": 546,
+          "bytes_hex": "282301000a",
+          "il_offset": 534,
+          "op": "call",
+          "operand": {
+            "class_row": 91,
+            "class_table": "TypeRef",
+            "name": "System.IO.Path::GetFileNameWithoutExtension",
+            "signature_hex": "00010e0e",
+            "table": "MemberRef",
+            "token": "0x0a000123"
+          }
+        },
+        {
+          "body_offset": 551,
+          "bytes_hex": "727f1c0070",
+          "il_offset": 539,
+          "op": "ldstr",
+          "operand": {
+            "text": ".xml",
+            "token": "0x70001c7f"
+          }
+        },
+        {
+          "body_offset": 556,
+          "bytes_hex": "288400000a",
+          "il_offset": 544,
+          "op": "call",
+          "operand": {
+            "class_row": 85,
+            "class_table": "TypeRef",
+            "name": "System.String::Concat",
+            "signature_hex": "00020e0e0e",
+            "table": "MemberRef",
+            "token": "0x0a000084"
+          }
+        },
+        {
+          "body_offset": 561,
+          "bytes_hex": "280e01000a",
+          "il_offset": 549,
+          "op": "call",
+          "operand": {
+            "class_row": 91,
+            "class_table": "TypeRef",
+            "name": "System.IO.Path::Combine",
+            "signature_hex": "00020e0e0e",
+            "table": "MemberRef",
+            "token": "0x0a00010e"
+          }
+        },
+        {
+          "body_offset": 566,
+          "bytes_hex": "130e",
+          "il_offset": 554,
+          "op": "stloc.s",
+          "operand": {
+            "index": 14,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 568,
+          "bytes_hex": "110e",
+          "il_offset": 556,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 14,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 570,
+          "bytes_hex": "28fb00000a",
+          "il_offset": 558,
+          "op": "call",
+          "operand": {
+            "class_row": 113,
+            "class_table": "TypeRef",
+            "name": "System.IO.File::Exists",
+            "signature_hex": "0001020e",
+            "table": "MemberRef",
+            "token": "0x0a0000fb"
+          }
+        },
+        {
+          "body_offset": 575,
+          "bytes_hex": "1305",
+          "il_offset": 563,
+          "op": "stloc.s",
+          "operand": {
+            "index": 5,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 577,
+          "bytes_hex": "1105",
+          "il_offset": 565,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 5,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 579,
+          "bytes_hex": "2c5f",
+          "il_offset": 567,
+          "op": "brfalse.s",
+          "operand": {
+            "body_target": 676,
+            "il_target": 664
+          }
+        },
+        {
+          "body_offset": 581,
+          "bytes_hex": "14",
+          "il_offset": 569,
+          "op": "ldnull"
+        },
+        {
+          "body_offset": 582,
+          "bytes_hex": "1311",
+          "il_offset": 570,
+          "op": "stloc.s",
+          "operand": {
+            "index": 17,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 584,
+          "bytes_hex": "d00c000001",
+          "il_offset": 572,
+          "op": "ldtoken",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Class.cScenario",
+            "table": "TypeRef",
+            "token": "0x0100000c"
+          }
+        },
+        {
+          "body_offset": 589,
+          "bytes_hex": "281400000a",
+          "il_offset": 577,
+          "op": "call",
+          "operand": {
+            "class_row": 5,
+            "class_table": "TypeRef",
+            "name": "System.Type::GetTypeFromHandle",
+            "signature_hex": "0001121511810d",
+            "table": "MemberRef",
+            "token": "0x0a000014"
+          }
+        },
+        {
+          "body_offset": 594,
+          "bytes_hex": "731101000a",
+          "il_offset": 582,
+          "op": "newobj",
+          "operand": {
+            "class_row": 119,
+            "class_table": "TypeRef",
+            "name": "System.Xml.Serialization.XmlSerializer::.ctor",
+            "signature_hex": "2001011215",
+            "table": "MemberRef",
+            "token": "0x0a000111"
+          }
+        },
+        {
+          "body_offset": 599,
+          "bytes_hex": "1312",
+          "il_offset": 587,
+          "op": "stloc.s",
+          "operand": {
+            "index": 18,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 601,
+          "bytes_hex": "110e",
+          "il_offset": 589,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 14,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 603,
+          "bytes_hex": "19",
+          "il_offset": 591,
+          "op": "ldc.i4.3"
+        },
+        {
+          "body_offset": 604,
+          "bytes_hex": "731201000a",
+          "il_offset": 592,
+          "op": "newobj",
+          "operand": {
+            "class_row": 117,
+            "class_table": "TypeRef",
+            "name": "System.IO.FileStream::.ctor",
+            "signature_hex": "2002010e1181e5",
+            "table": "MemberRef",
+            "token": "0x0a000112"
+          }
+        },
+        {
+          "body_offset": 609,
+          "bytes_hex": "1310",
+          "il_offset": 597,
+          "op": "stloc.s",
+          "operand": {
+            "index": 16,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 611,
+          "bytes_hex": "1112",
+          "il_offset": 599,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 18,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 613,
+          "bytes_hex": "1110",
+          "il_offset": 601,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 16,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 615,
+          "bytes_hex": "6f1301000a",
+          "il_offset": 603,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 119,
+            "class_table": "TypeRef",
+            "name": "System.Xml.Serialization.XmlSerializer::Deserialize",
+            "signature_hex": "20011c1280d5",
+            "table": "MemberRef",
+            "token": "0x0a000113"
+          }
+        },
+        {
+          "body_offset": 620,
+          "bytes_hex": "750c000001",
+          "il_offset": 608,
+          "op": "isinst",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Class.cScenario",
+            "table": "TypeRef",
+            "token": "0x0100000c"
+          }
+        },
+        {
+          "body_offset": 625,
+          "bytes_hex": "1311",
+          "il_offset": 613,
+          "op": "stloc.s",
+          "operand": {
+            "index": 17,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 627,
+          "bytes_hex": "1110",
+          "il_offset": 615,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 16,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 629,
+          "bytes_hex": "6f1401000a",
+          "il_offset": 617,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 53,
+            "class_table": "TypeRef",
+            "name": "System.IO.Stream::Close",
+            "signature_hex": "200001",
+            "table": "MemberRef",
+            "token": "0x0a000114"
+          }
+        },
+        {
+          "body_offset": 634,
+          "bytes_hex": "de16",
+          "il_offset": 622,
+          "op": "leave.s",
+          "operand": {
+            "body_target": 658,
+            "il_target": 646
+          }
+        },
+        {
+          "body_offset": 636,
+          "bytes_hex": "25",
+          "il_offset": 624,
+          "op": "dup"
+        },
+        {
+          "body_offset": 637,
+          "bytes_hex": "288e00000a",
+          "il_offset": 625,
+          "op": "call",
+          "operand": {
+            "class_row": 106,
+            "class_table": "TypeRef",
+            "name": "Microsoft.VisualBasic.CompilerServices.ProjectData::SetProjectError",
+            "signature_hex": "000101128141",
+            "table": "MemberRef",
+            "token": "0x0a00008e"
+          }
+        },
+        {
+          "body_offset": 642,
+          "bytes_hex": "1313",
+          "il_offset": 630,
+          "op": "stloc.s",
+          "operand": {
+            "index": 19,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 644,
+          "bytes_hex": "1110",
+          "il_offset": 632,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 16,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 646,
+          "bytes_hex": "6f1401000a",
+          "il_offset": 634,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 53,
+            "class_table": "TypeRef",
+            "name": "System.IO.Stream::Close",
+            "signature_hex": "200001",
+            "table": "MemberRef",
+            "token": "0x0a000114"
+          }
+        },
+        {
+          "body_offset": 651,
+          "bytes_hex": "289000000a",
+          "il_offset": 639,
+          "op": "call",
+          "operand": {
+            "class_row": 106,
+            "class_table": "TypeRef",
+            "name": "Microsoft.VisualBasic.CompilerServices.ProjectData::ClearProjectError",
+            "signature_hex": "000001",
+            "table": "MemberRef",
+            "token": "0x0a000090"
+          }
+        },
+        {
+          "body_offset": 656,
+          "bytes_hex": "de00",
+          "il_offset": 644,
+          "op": "leave.s",
+          "operand": {
+            "body_target": 658,
+            "il_target": 646
+          }
+        },
+        {
+          "body_offset": 658,
+          "bytes_hex": "1111",
+          "il_offset": 646,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 17,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 660,
+          "bytes_hex": "2c0e",
+          "il_offset": 648,
+          "op": "brfalse.s",
+          "operand": {
+            "body_target": 676,
+            "il_target": 664
+          }
+        },
+        {
+          "body_offset": 662,
+          "bytes_hex": "03",
+          "il_offset": 650,
+          "op": "ldarg.1"
+        },
+        {
+          "body_offset": 663,
+          "bytes_hex": "50",
+          "il_offset": 651,
+          "op": "ldind.ref"
+        },
+        {
+          "body_offset": 664,
+          "bytes_hex": "6f2401000a",
+          "il_offset": 652,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 26,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::get_ScenariosCollection",
+            "signature_hex": "2000151280d9011231",
+            "table": "MemberRef",
+            "token": "0x0a000124"
+          }
+        },
+        {
+          "body_offset": 669,
+          "bytes_hex": "1111",
+          "il_offset": 657,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 17,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 671,
+          "bytes_hex": "6f2501000a",
+          "il_offset": 659,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 55,
+            "class_signature_hex": "1512815d011231",
+            "class_table": "TypeSpec",
+            "name": "TypeSpec(signature:1512815d011231)::Add",
+            "signature_hex": "2001011300",
+            "table": "MemberRef",
+            "token": "0x0a000125"
+          }
+        },
+        {
+          "body_offset": 676,
+          "bytes_hex": "1119",
+          "il_offset": 664,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 25,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 678,
+          "bytes_hex": "17",
+          "il_offset": 666,
+          "op": "ldc.i4.1"
+        },
+        {
+          "body_offset": 679,
+          "bytes_hex": "d6",
+          "il_offset": 667,
+          "op": "add.ovf"
+        },
+        {
+          "body_offset": 680,
+          "bytes_hex": "1319",
+          "il_offset": 668,
+          "op": "stloc.s",
+          "operand": {
+            "index": 25,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 682,
+          "bytes_hex": "1119",
+          "il_offset": 670,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 25,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 684,
+          "bytes_hex": "111a",
+          "il_offset": 672,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 26,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 686,
+          "bytes_hex": "8e",
+          "il_offset": 674,
+          "op": "ldlen"
+        },
+        {
+          "body_offset": 687,
+          "bytes_hex": "b7",
+          "il_offset": 675,
+          "op": "conv.ovf.i4"
+        },
+        {
+          "body_offset": 688,
+          "bytes_hex": "3f24ffffff",
+          "il_offset": 676,
+          "op": "blt",
+          "operand": {
+            "body_target": 473,
+            "il_target": 461
+          }
+        },
+        {
+          "body_offset": 693,
+          "bytes_hex": "09",
+          "il_offset": 681,
+          "op": "ldloc.3"
+        },
+        {
+          "body_offset": 694,
+          "bytes_hex": "7221020070",
+          "il_offset": 682,
+          "op": "ldstr",
+          "operand": {
+            "text": "",
+            "token": "0x70000221"
+          }
+        },
+        {
+          "body_offset": 699,
+          "bytes_hex": "16",
+          "il_offset": 687,
+          "op": "ldc.i4.0"
+        },
+        {
+          "body_offset": 700,
+          "bytes_hex": "284c00000a",
+          "il_offset": 688,
+          "op": "call",
+          "operand": {
+            "class_row": 90,
+            "class_table": "TypeRef",
+            "name": "Microsoft.VisualBasic.CompilerServices.Operators::CompareString",
+            "signature_hex": "0003080e0e02",
+            "table": "MemberRef",
+            "token": "0x0a00004c"
+          }
+        },
+        {
+          "body_offset": 705,
+          "bytes_hex": "16",
+          "il_offset": 693,
+          "op": "ldc.i4.0"
+        },
+        {
+          "body_offset": 706,
+          "bytes_hex": "3b88000000",
+          "il_offset": 694,
+          "op": "beq",
+          "operand": {
+            "body_target": 847,
+            "il_target": 835
+          }
+        },
+        {
+          "body_offset": 711,
+          "bytes_hex": "732601000a",
+          "il_offset": 699,
+          "op": "newobj",
+          "operand": {
+            "class_row": 47,
+            "class_table": "TypeRef",
+            "name": "System.Xml.XmlDocument::.ctor",
+            "signature_hex": "200001",
+            "table": "MemberRef",
+            "token": "0x0a000126"
+          }
+        },
+        {
+          "body_offset": 716,
+          "bytes_hex": "1315",
+          "il_offset": 704,
+          "op": "stloc.s",
+          "operand": {
+            "index": 21,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 718,
+          "bytes_hex": "1115",
+          "il_offset": 706,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 21,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 720,
+          "bytes_hex": "09",
+          "il_offset": 708,
+          "op": "ldloc.3"
+        },
+        {
+          "body_offset": 721,
+          "bytes_hex": "6f2701000a",
+          "il_offset": 709,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 47,
+            "class_table": "TypeRef",
+            "name": "System.Xml.XmlDocument::Load",
+            "signature_hex": "2001010e",
+            "table": "MemberRef",
+            "token": "0x0a000127"
+          }
+        },
+        {
+          "body_offset": 726,
+          "bytes_hex": "1115",
+          "il_offset": 714,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 21,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 728,
+          "bytes_hex": "72891c0070",
+          "il_offset": 716,
+          "op": "ldstr",
+          "operand": {
+            "text": "//script/creator_sw/ver_sw",
+            "token": "0x70001c89"
+          }
+        },
+        {
+          "body_offset": 733,
+          "bytes_hex": "6f2801000a",
+          "il_offset": 721,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 120,
+            "class_table": "TypeRef",
+            "name": "System.Xml.XmlNode::SelectSingleNode",
+            "signature_hex": "20011281e10e",
+            "table": "MemberRef",
+            "token": "0x0a000128"
+          }
+        },
+        {
+          "body_offset": 738,
+          "bytes_hex": "1314",
+          "il_offset": 726,
+          "op": "stloc.s",
+          "operand": {
+            "index": 20,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 740,
+          "bytes_hex": "1114",
+          "il_offset": 728,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 20,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 742,
+          "bytes_hex": "6f2901000a",
+          "il_offset": 730,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 120,
+            "class_table": "TypeRef",
+            "name": "System.Xml.XmlNode::get_InnerText",
+            "signature_hex": "20000e",
+            "table": "MemberRef",
+            "token": "0x0a000129"
+          }
+        },
+        {
+          "body_offset": 747,
+          "bytes_hex": "17",
+          "il_offset": 735,
+          "op": "ldc.i4.1"
+        },
+        {
+          "body_offset": 748,
+          "bytes_hex": "17",
+          "il_offset": 736,
+          "op": "ldc.i4.1"
+        },
+        {
+          "body_offset": 749,
+          "bytes_hex": "282a01000a",
+          "il_offset": 737,
+          "op": "call",
+          "operand": {
+            "class_row": 94,
+            "class_table": "TypeRef",
+            "name": "Microsoft.VisualBasic.Strings::Mid",
+            "signature_hex": "00030e0e0808",
+            "table": "MemberRef",
+            "token": "0x0a00012a"
+          }
+        },
+        {
+          "body_offset": 754,
+          "bytes_hex": "72f30a0070",
+          "il_offset": 742,
+          "op": "ldstr",
+          "operand": {
+            "text": "1",
+            "token": "0x70000af3"
+          }
+        },
+        {
+          "body_offset": 759,
+          "bytes_hex": "16",
+          "il_offset": 747,
+          "op": "ldc.i4.0"
+        },
+        {
+          "body_offset": 760,
+          "bytes_hex": "284c00000a",
+          "il_offset": 748,
+          "op": "call",
+          "operand": {
+            "class_row": 90,
+            "class_table": "TypeRef",
+            "name": "Microsoft.VisualBasic.CompilerServices.Operators::CompareString",
+            "signature_hex": "0003080e0e02",
+            "table": "MemberRef",
+            "token": "0x0a00004c"
+          }
+        },
+        {
+          "body_offset": 765,
+          "bytes_hex": "16",
+          "il_offset": 753,
+          "op": "ldc.i4.0"
+        },
+        {
+          "body_offset": 766,
+          "bytes_hex": "333b",
+          "il_offset": 754,
+          "op": "bne.un.s",
+          "operand": {
+            "body_target": 827,
+            "il_target": 815
+          }
+        },
+        {
+          "body_offset": 768,
+          "bytes_hex": "03",
+          "il_offset": 756,
+          "op": "ldarg.1"
+        },
+        {
+          "body_offset": 769,
+          "bytes_hex": "50",
+          "il_offset": 757,
+          "op": "ldind.ref"
+        },
+        {
+          "body_offset": 770,
+          "bytes_hex": "6f2401000a",
+          "il_offset": 758,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 26,
+            "class_table": "TypeRef",
+            "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::get_ScenariosCollection",
+            "signature_hex": "2000151280d9011231",
+            "table": "MemberRef",
+            "token": "0x0a000124"
+          }
+        },
+        {
+          "body_offset": 775,
+          "bytes_hex": "6f2b01000a",
+          "il_offset": 763,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 55,
+            "class_signature_hex": "1512815d011231",
+            "class_table": "TypeSpec",
+            "name": "TypeSpec(signature:1512815d011231)::GetEnumerator",
+            "signature_hex": "200015128145011300",
+            "table": "MemberRef",
+            "token": "0x0a00012b"
+          }
+        },
+        {
+          "body_offset": 780,
+          "bytes_hex": "131b",
+          "il_offset": 768,
+          "op": "stloc.s",
+          "operand": {
+            "index": 27,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 782,
+          "bytes_hex": "2b14",
+          "il_offset": 770,
+          "op": "br.s",
+          "operand": {
+            "body_target": 804,
+            "il_target": 792
+          }
+        },
+        {
+          "body_offset": 784,
+          "bytes_hex": "111b",
+          "il_offset": 772,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 27,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 786,
+          "bytes_hex": "6f2c01000a",
+          "il_offset": 774,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 56,
+            "class_signature_hex": "15128145011231",
+            "class_table": "TypeSpec",
+            "name": "TypeSpec(signature:15128145011231)::get_Current",
+            "signature_hex": "20001300",
+            "table": "MemberRef",
+            "token": "0x0a00012c"
+          }
+        },
+        {
+          "body_offset": 791,
+          "bytes_hex": "1316",
+          "il_offset": 779,
+          "op": "stloc.s",
+          "operand": {
+            "index": 22,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 793,
+          "bytes_hex": "02",
+          "il_offset": 781,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 794,
+          "bytes_hex": "03",
+          "il_offset": 782,
+          "op": "ldarg.1"
+        },
+        {
+          "body_offset": 795,
+          "bytes_hex": "1116",
+          "il_offset": 783,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 22,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 797,
+          "bytes_hex": "17",
+          "il_offset": 785,
+          "op": "ldc.i4.1"
+        },
+        {
+          "body_offset": 798,
+          "bytes_hex": "6f91000006",
+          "il_offset": 786,
+          "op": "callvirt",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::SaveScenarios",
+            "signature_hex": "2003116410126912311180c8",
+            "table": "MethodDef",
+            "token": "0x06000091"
+          }
+        },
+        {
+          "body_offset": 803,
+          "bytes_hex": "26",
+          "il_offset": 791,
+          "op": "pop"
+        },
+        {
+          "body_offset": 804,
+          "bytes_hex": "111b",
+          "il_offset": 792,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 27,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 806,
+          "bytes_hex": "6f3c00000a",
+          "il_offset": 794,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 88,
+            "class_table": "TypeRef",
+            "name": "System.Collections.IEnumerator::MoveNext",
+            "signature_hex": "200002",
+            "table": "MemberRef",
+            "token": "0x0a00003c"
+          }
+        },
+        {
+          "body_offset": 811,
+          "bytes_hex": "2de3",
+          "il_offset": 799,
+          "op": "brtrue.s",
+          "operand": {
+            "body_target": 784,
+            "il_target": 772
+          }
+        },
+        {
+          "body_offset": 813,
+          "bytes_hex": "de0c",
+          "il_offset": 801,
+          "op": "leave.s",
+          "operand": {
+            "body_target": 827,
+            "il_target": 815
+          }
+        },
+        {
+          "body_offset": 815,
+          "bytes_hex": "111b",
+          "il_offset": 803,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 27,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 817,
+          "bytes_hex": "2c07",
+          "il_offset": 805,
+          "op": "brfalse.s",
+          "operand": {
+            "body_target": 826,
+            "il_target": 814
+          }
+        },
+        {
+          "body_offset": 819,
+          "bytes_hex": "111b",
+          "il_offset": 807,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 27,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 821,
+          "bytes_hex": "6f3d00000a",
+          "il_offset": 809,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 89,
+            "class_table": "TypeRef",
+            "name": "System.IDisposable::Dispose",
+            "signature_hex": "200001",
+            "table": "MemberRef",
+            "token": "0x0a00003d"
+          }
+        },
+        {
+          "body_offset": 826,
+          "bytes_hex": "dc",
+          "il_offset": 814,
+          "op": "endfinally"
+        },
+        {
+          "body_offset": 827,
+          "bytes_hex": "14",
+          "il_offset": 815,
+          "op": "ldnull"
+        },
+        {
+          "body_offset": 828,
+          "bytes_hex": "1315",
+          "il_offset": 816,
+          "op": "stloc.s",
+          "operand": {
+            "index": 21,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 830,
+          "bytes_hex": "de0f",
+          "il_offset": 818,
+          "op": "leave.s",
+          "operand": {
+            "body_target": 847,
+            "il_target": 835
+          }
+        },
+        {
+          "body_offset": 832,
+          "bytes_hex": "25",
+          "il_offset": 820,
+          "op": "dup"
+        },
+        {
+          "body_offset": 833,
+          "bytes_hex": "288e00000a",
+          "il_offset": 821,
+          "op": "call",
+          "operand": {
+            "class_row": 106,
+            "class_table": "TypeRef",
+            "name": "Microsoft.VisualBasic.CompilerServices.ProjectData::SetProjectError",
+            "signature_hex": "000101128141",
+            "table": "MemberRef",
+            "token": "0x0a00008e"
+          }
+        },
+        {
+          "body_offset": 838,
+          "bytes_hex": "1317",
+          "il_offset": 826,
+          "op": "stloc.s",
+          "operand": {
+            "index": 23,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 840,
+          "bytes_hex": "289000000a",
+          "il_offset": 828,
+          "op": "call",
+          "operand": {
+            "class_row": 106,
+            "class_table": "TypeRef",
+            "name": "Microsoft.VisualBasic.CompilerServices.ProjectData::ClearProjectError",
+            "signature_hex": "000001",
+            "table": "MemberRef",
+            "token": "0x0a000090"
+          }
+        },
+        {
+          "body_offset": 845,
+          "bytes_hex": "de00",
+          "il_offset": 833,
+          "op": "leave.s",
+          "operand": {
+            "body_target": 847,
+            "il_target": 835
+          }
+        },
+        {
+          "body_offset": 847,
+          "bytes_hex": "02",
+          "il_offset": 835,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 848,
+          "bytes_hex": "02",
+          "il_offset": 836,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 849,
+          "bytes_hex": "7b37000004",
+          "il_offset": 837,
+          "op": "ldfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::lcSwName",
+            "signature_hex": "060e",
+            "table": "Field",
+            "token": "0x04000037"
+          }
+        },
+        {
+          "body_offset": 854,
+          "bytes_hex": "72231c0070",
+          "il_offset": 842,
+          "op": "ldstr",
+          "operand": {
+            "text": "Loadscenarios",
+            "token": "0x70001c23"
+          }
+        },
+        {
+          "body_offset": 859,
+          "bytes_hex": "72091c0070",
+          "il_offset": 847,
+          "op": "ldstr",
+          "operand": {
+            "text": "Procedure Ok",
+            "token": "0x70001c09"
+          }
+        },
+        {
+          "body_offset": 864,
+          "bytes_hex": "6fef000006",
+          "il_offset": 852,
+          "op": "callvirt",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::Ins2Log",
+            "signature_hex": "2003010e0e0e",
+            "table": "MethodDef",
+            "token": "0x060000ef"
+          }
+        },
+        {
+          "body_offset": 869,
+          "bytes_hex": "02",
+          "il_offset": 857,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 870,
+          "bytes_hex": "16",
+          "il_offset": 858,
+          "op": "ldc.i4.0"
+        },
+        {
+          "body_offset": 871,
+          "bytes_hex": "7d36000004",
+          "il_offset": 859,
+          "op": "stfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::lcLibInit",
+            "signature_hex": "0602",
+            "table": "Field",
+            "token": "0x04000036"
+          }
+        },
+        {
+          "body_offset": 876,
+          "bytes_hex": "16",
+          "il_offset": 864,
+          "op": "ldc.i4.0"
+        },
+        {
+          "body_offset": 877,
+          "bytes_hex": "0a",
+          "il_offset": 865,
+          "op": "stloc.0"
+        },
+        {
+          "body_offset": 878,
+          "bytes_hex": "de37",
+          "il_offset": 866,
+          "op": "leave.s",
+          "operand": {
+            "body_target": 935,
+            "il_target": 923
+          }
+        },
+        {
+          "body_offset": 880,
+          "bytes_hex": "25",
+          "il_offset": 868,
+          "op": "dup"
+        },
+        {
+          "body_offset": 881,
+          "bytes_hex": "288e00000a",
+          "il_offset": 869,
+          "op": "call",
+          "operand": {
+            "class_row": 106,
+            "class_table": "TypeRef",
+            "name": "Microsoft.VisualBasic.CompilerServices.ProjectData::SetProjectError",
+            "signature_hex": "000101128141",
+            "table": "MemberRef",
+            "token": "0x0a00008e"
+          }
+        },
+        {
+          "body_offset": 886,
+          "bytes_hex": "1318",
+          "il_offset": 874,
+          "op": "stloc.s",
+          "operand": {
+            "index": 24,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 888,
+          "bytes_hex": "02",
+          "il_offset": 876,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 889,
+          "bytes_hex": "02",
+          "il_offset": 877,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 890,
+          "bytes_hex": "7b37000004",
+          "il_offset": 878,
+          "op": "ldfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::lcSwName",
+            "signature_hex": "060e",
+            "table": "Field",
+            "token": "0x04000037"
+          }
+        },
+        {
+          "body_offset": 895,
+          "bytes_hex": "72231c0070",
+          "il_offset": 883,
+          "op": "ldstr",
+          "operand": {
+            "text": "Loadscenarios",
+            "token": "0x70001c23"
+          }
+        },
+        {
+          "body_offset": 900,
+          "bytes_hex": "1118",
+          "il_offset": 888,
+          "op": "ldloc.s",
+          "operand": {
+            "index": 24,
+            "kind": "Local"
+          }
+        },
+        {
+          "body_offset": 902,
+          "bytes_hex": "6f8f00000a",
+          "il_offset": 890,
+          "op": "callvirt",
+          "operand": {
+            "class_row": 80,
+            "class_table": "TypeRef",
+            "name": "System.Exception::ToString",
+            "signature_hex": "20000e",
+            "table": "MemberRef",
+            "token": "0x0a00008f"
+          }
+        },
+        {
+          "body_offset": 907,
+          "bytes_hex": "6fef000006",
+          "il_offset": 895,
+          "op": "callvirt",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Core.cCore::Ins2Log",
+            "signature_hex": "2003010e0e0e",
+            "table": "MethodDef",
+            "token": "0x060000ef"
+          }
+        },
+        {
+          "body_offset": 912,
+          "bytes_hex": "07",
+          "il_offset": 900,
+          "op": "ldloc.1"
+        },
+        {
+          "body_offset": 913,
+          "bytes_hex": "16",
+          "il_offset": 901,
+          "op": "ldc.i4.0"
+        },
+        {
+          "body_offset": 914,
+          "bytes_hex": "2e09",
+          "il_offset": 902,
+          "op": "beq.s",
+          "operand": {
+            "body_target": 925,
+            "il_target": 913
+          }
+        },
+        {
+          "body_offset": 916,
+          "bytes_hex": "07",
+          "il_offset": 904,
+          "op": "ldloc.1"
+        },
+        {
+          "body_offset": 917,
+          "bytes_hex": "0a",
+          "il_offset": 905,
+          "op": "stloc.0"
+        },
+        {
+          "body_offset": 918,
+          "bytes_hex": "289000000a",
+          "il_offset": 906,
+          "op": "call",
+          "operand": {
+            "class_row": 106,
+            "class_table": "TypeRef",
+            "name": "Microsoft.VisualBasic.CompilerServices.ProjectData::ClearProjectError",
+            "signature_hex": "000001",
+            "table": "MemberRef",
+            "token": "0x0a000090"
+          }
+        },
+        {
+          "body_offset": 923,
+          "bytes_hex": "de0a",
+          "il_offset": 911,
+          "op": "leave.s",
+          "operand": {
+            "body_target": 935,
+            "il_target": 923
+          }
+        },
+        {
+          "body_offset": 925,
+          "bytes_hex": "1f9c",
+          "il_offset": 913,
+          "op": "ldc.i4.s",
+          "operand": -100
+        },
+        {
+          "body_offset": 927,
+          "bytes_hex": "0a",
+          "il_offset": 915,
+          "op": "stloc.0"
+        },
+        {
+          "body_offset": 928,
+          "bytes_hex": "289000000a",
+          "il_offset": 916,
+          "op": "call",
+          "operand": {
+            "class_row": 106,
+            "class_table": "TypeRef",
+            "name": "Microsoft.VisualBasic.CompilerServices.ProjectData::ClearProjectError",
+            "signature_hex": "000001",
+            "table": "MemberRef",
+            "token": "0x0a000090"
+          }
+        },
+        {
+          "body_offset": 933,
+          "bytes_hex": "de00",
+          "il_offset": 921,
+          "op": "leave.s",
+          "operand": {
+            "body_target": 935,
+            "il_target": 923
+          }
+        },
+        {
+          "body_offset": 935,
+          "bytes_hex": "06",
+          "il_offset": 923,
+          "op": "ldloc.0"
+        },
+        {
+          "body_offset": 936,
+          "bytes_hex": "2a",
+          "il_offset": 924,
+          "op": "ret"
+        }
+      ],
+      "name": "Bticino.ScenarioSuite.Core.cCore::LoadscenariosMH202",
+      "parameters": [
+        {
+          "name": "ScenariosCollection",
+          "sequence": 1
+        }
+      ],
+      "rva": 36556,
+      "signature_hex": "2001115c101269",
+      "token": "0x0600008e"
+    },
+    {
+      "IL_code_bytes": 29,
+      "assembly": "Class",
+      "body_bytes": 30,
+      "body_hex": "7602281700000a0273930100067d1c01000402734b00000a7d1d0100042a",
+      "body_sha256": "61b435edd074b0fbb1d7d5cf367f50dbc42ec18c64ca47013ecc13b2242301c6",
+      "exception_regions_dncil_body_coordinates": [],
+      "file_offset": 12116,
+      "header_bytes": 1,
+      "instructions": [
+        {
+          "body_offset": 1,
+          "bytes_hex": "02",
+          "il_offset": 0,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 2,
+          "bytes_hex": "281700000a",
+          "il_offset": 1,
+          "op": "call",
+          "operand": {
+            "class_row": 3,
+            "class_table": "TypeRef",
+            "name": "System.Object::.ctor",
+            "signature_hex": "200001",
+            "table": "MemberRef",
+            "token": "0x0a000017"
+          }
+        },
+        {
+          "body_offset": 7,
+          "bytes_hex": "02",
+          "il_offset": 6,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 8,
+          "bytes_hex": "7393010006",
+          "il_offset": 7,
+          "op": "newobj",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Class.cCommand::.ctor",
+            "signature_hex": "200001",
+            "table": "MethodDef",
+            "token": "0x06000193"
+          }
+        },
+        {
+          "body_offset": 13,
+          "bytes_hex": "7d1c010004",
+          "il_offset": 12,
+          "op": "stfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::_PanicKey",
+            "signature_hex": "061280ac",
+            "table": "Field",
+            "token": "0x0400011c"
+          }
+        },
+        {
+          "body_offset": 18,
+          "bytes_hex": "02",
+          "il_offset": 17,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 19,
+          "bytes_hex": "734b00000a",
+          "il_offset": 18,
+          "op": "newobj",
+          "operand": {
+            "class_row": 22,
+            "class_signature_hex": "151255011280c4",
+            "class_table": "TypeSpec",
+            "name": "TypeSpec(signature:151255011280c4)::.ctor",
+            "signature_hex": "200001",
+            "table": "MemberRef",
+            "token": "0x0a00004b"
+          }
+        },
+        {
+          "body_offset": 24,
+          "bytes_hex": "7d1d010004",
+          "il_offset": 23,
+          "op": "stfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::_ScenariosCollection",
+            "signature_hex": "06151255011280c4",
+            "table": "Field",
+            "token": "0x0400011d"
+          }
+        },
+        {
+          "body_offset": 29,
+          "bytes_hex": "2a",
+          "il_offset": 28,
+          "op": "ret"
+        }
+      ],
+      "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::.ctor",
+      "parameters": [],
+      "rva": 19284,
+      "signature_hex": "200001",
+      "token": "0x06000215"
+    },
+    {
+      "IL_code_bytes": 9,
+      "assembly": "Class",
+      "body_bytes": 21,
+      "body_hex": "1330010009000000ff000011027b1d0100040a062a",
+      "body_sha256": "33493981251ca4d612e62a521a5721943dc70b8dfae5c1fe9d9fa4e85263a100",
+      "exception_regions_dncil_body_coordinates": [],
+      "file_offset": 12348,
+      "header_bytes": 12,
+      "instructions": [
+        {
+          "body_offset": 12,
+          "bytes_hex": "02",
+          "il_offset": 0,
+          "op": "ldarg.0"
+        },
+        {
+          "body_offset": 13,
+          "bytes_hex": "7b1d010004",
+          "il_offset": 1,
+          "op": "ldfld",
+          "operand": {
+            "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::_ScenariosCollection",
+            "signature_hex": "06151255011280c4",
+            "table": "Field",
+            "token": "0x0400011d"
+          }
+        },
+        {
+          "body_offset": 18,
+          "bytes_hex": "0a",
+          "il_offset": 6,
+          "op": "stloc.0"
+        },
+        {
+          "body_offset": 19,
+          "bytes_hex": "06",
+          "il_offset": 7,
+          "op": "ldloc.0"
+        },
+        {
+          "body_offset": 20,
+          "bytes_hex": "2a",
+          "il_offset": 8,
+          "op": "ret"
+        }
+      ],
+      "name": "Bticino.ScenarioSuite.Class.cScenariosCollection::get_ScenariosCollection",
+      "parameters": [],
+      "rva": 19516,
+      "signature_hex": "2000151255011280c4",
+      "token": "0x06000220"
+    }
+  ],
+  "offset_rule": "IL offsets exclude header; dncil branch body targets normalized independently in each operand; raw body and instruction bytes retained."
+}

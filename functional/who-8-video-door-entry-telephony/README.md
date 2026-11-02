@@ -129,6 +129,27 @@ The public corpus has no dedicated `WHO 8` specification. `WHO 6`, `WHO 7`, and 
 
 Diagnostic traffic belongs to `WHO 1008`; the numeric relationship does not make functional and diagnostic frames interchangeable.
 
+## F454 2.0.51 camera availability path
+
+F454's packaged camera UI, `bt_vct` role handling and answering-machine status producer have distinct state:
+
+| Component | Inspected behavior | Limit |
+| --- | --- | --- |
+| Camera frontend | Under its auto-switch condition, split result field `4` equal to string `0` permits a camera-switch request | UI eligibility is not observed camera activation |
+| API query builder | Compiled prefix plus the normally initialized suffix construct `*#8**35##` | Static request construction, not captured traffic |
+| `bt_vct` role `1` | Selected empty-WHERE measure request uses a local branch; modes `1..3` retain its acceptance flag, other modes with absent WHAT clear it | Constructor mode is `-1`; later mutable state governs the selected ACK/rejection path |
+| `bt_answering_machine` | Separate guarded DIM35 formatter requests `*#8**35*Value1*Value2*Value3##` | A source pattern, not a published universal response schema or demonstrated delivery |
+
+The answering-machine formatter's first value is the private status word read by split field `4`; the other two values have separate private fields. With delivery of that same response, the frontend gate can be related to that word. Its public value meanings, initial role activation and complete state lifecycle remain unresolved. Selected local writes set it to `2`, `4` or `0` under different private-state conditions; they do not establish one universal AV mode table. See [video-response ownership](../../reverse-engineering/firmware-analysis/f454-2.0.51-av-and-board.md#video-status-response-ownership) and [ordinary-role routing](../../reverse-engineering/firmware-analysis/f454-2.0.51-final-pass.md#who-8-dim35-ordinary-role-route).
+
+The factory `vdes/communication/vde_enabled` consumer is still unresolved. It must remain separate from WHO 8 role, WHO 7 board profile, discovery, process eligibility and the camera-status gate. See [VDE control boundaries](../../reverse-engineering/firmware-analysis/f454-2.0.51-follow-up.md#vde-controls-and-unresolved-enablement).
+
+## F454 2.0.51 VDE discovery selection
+
+The `bt_upnp` configuration reader consumes runtime `/tmp/stack_open.xml`. When its search/features checks pass, selected `vde` text is decimal-converted to `feature_vde`. Value `1` selects seven search types for a list passed to `UpnpSearchAsync`, conditional on normal library initialization/registration. It also gates one detected-device classification/update path.
+
+The packaged declaration is `bt_upnp/upnpsearch/features/vde=0`. Descendant-tag lookup is not a strict schema check, and installed content may differ. This discovery flag does not establish factory media enablement or running media services. See [VDE discovery dataflow](../../reverse-engineering/firmware-analysis/f454-2.0.51-continuation.md#vde-discovery-consumer-and-initial-status-request).
+
 ## Decoder guidance
 
 Decode the historical forms only in the applicable touchscreen context. Preserve other fields losslessly, including unknown call kinds, message parameters, and addresses. Device-specific applicability still requires a resolved implementation, specification, or observed traffic; the historical classes do not establish a universal grammar.

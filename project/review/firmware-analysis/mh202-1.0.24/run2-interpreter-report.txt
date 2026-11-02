@@ -1,0 +1,42 @@
+# MH202 interpreter run2: line dispatch to IIF and typed comparison
+
+This bounded static batch joins a real bt_script line-dispatch call into the candidate libdomotica IIF implementation. It is more than a symbol/import inventory, but is not a complete script grammar or execution of the product's manual-described Only if stage. Original ARM/PHP/JavaScript/vendor execution and live I/O remain0. No configured scenario body, C library call, script process or emulator ran.
+
+## Original inputs and provider boundary
+
+Original normal-image bt_script SHA256 f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4; libdomotica.so.0.0 SHA256 5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09. Inputs are verified by the shared ImageVFS; input-hashes.json records both. The executable's direct dependency list names libdomotica.so.0 and its IIF import; the library exports IIF at0x74a0. This is a candidate-provider join, not live loader/interposition proof.
+
+The executable exports a1024-byte global linea at0x134a4. The library also exports a1024-byte linea at0x12284 and has R_ARM_GLOB_DAT relocation0x1222c for linea. IIF's computed PIC/GOT base is0x12114 and its tail accesses GOT+0x118, exactly that relocation. A joined process-global line rewrite therefore assumes the library resolves linea to the intended executable/global object. No effective runtime binding was executed; the source-level request is preserved independently of that assumption.
+
+## Actual interpreter control flow
+
+bt_script0x9b2c..0x9b50 takes its current line-record pointer at base+0x498, loads its saved file offset+4, calls fseek(...,SEEK_SET), then fgets(linea,1024,...). Complete record construction, valid configured input and file behavior remain prior/other boundaries.
+
+At0x9b68..0x9b7c it compares the first3line bytes with the actual literal IIF at0xae96(pool0xa98c). On a match it clears three stack buffers, calls PARENTESI at0x9be0 with delimiter comma and integer3, then calls IIF at0x9bf0 using the parsed left/operator/right buffers. The integer3 is a source-position argument: PARENTESI's prologue0x419c..0x41bc increments it and uses it to index global linea. It must not be described as three argument slots or a completed grammar proof. Nested expression/parenthesis handling is present, but its full13KBimplementation is not reconstructed here.
+
+The IIF return value is not consumed by the caller. After the call, the interpreter continues with ordinary line-prefix comparisons beginning0x9c08. At the later normal next-step path0xaa94..0xaaa0 it advances the current linked record through+8. These are concrete instruction paths, not an observed successful script run, guaranteed next-step behavior on every command or complete termination/restart policy.
+
+## Typed IIF and the original equality spelling
+
+The library's selected IIF branch compares the left operand prefix with `$V` at0x74f8..0x751c. It requests removal through V using a string copy, looks up the numeric variable and reads value+4 from8-byte records. A right `$V` takes the corresponding second lookup; other selected right text uses atoi. It passes the operator and signed integer operands to INT_OPERATORI. Other IIF branches include `$S` string-variable dispatch to STR_OPERATORI; those complete string/operator and mixed-type rules are not modeled in this batch.
+
+The actual INT_OPERATORI function0x1b38..0x1d40 compares operator strings and uses signed ARM comparison branches. Its six literals are **=, <, <=, >, >=, <>**, in that order, from the original PIC-relative pool0x1d48..0x1d5c. Unknown operators take its zero-result tail. It is not C-style ==/!=syntax. Seven finite host arithmetic examples retain signed32-bit operands and actual literal spelling; no original comparison helper ran.
+
+The first host collector draft expected ==/!=. Its literal assertion stopped before evidence/model outputs were written; actual =/<>values were then used. CORRECTIONS.md and the exact development-before-literal-check/collect_evidence.py.txt preserve that transcription history. No vendor execution, firmware failure or malformed-input campaign occurred.
+
+## Conditional line-prefix copy requests
+
+After a boolean byte result, IIF0x797c..0x7a88 makes branch-dependent calls using global linea:
+
+- A nonzero result finds the first comma and passes its following suffix plus the same global destination to strcpy.
+- A zero result requests that first prefix removal, then repeats the comma/suffix request once more.
+
+Those source/destination ranges overlap within the same line buffer. This batch records the actual call arguments and a **hypothetical forward-copy suffix model**, not a portable C result or demonstrated handling by the packaged libc. PARENTESI's complete transformation of the line, full input syntax, missing-delimiter cases and actual runtime line content remain open. The host example CONDITION,TRUE_TEXT,FALSE_TEXT is deliberately not represented as a valid MH202 script statement; under its declared copy model the requested suffix is TRUE_TEXT,FALSE_TEXT versus FALSE_TEXT. Do not silently truncate the nonzero case to only TRUE_TEXT.
+
+Thus IIF is a concrete per-line conditional transformation target, but it cannot yet be equated to the manufacturer's complete scenario-level Only if stage, disabled-marker policy or a running interpreter action. The helper's exact DISABLED-role and complete expression grammar need separate consumer evidence; absence of a direct taskmanager+52 check does not settle that policy.
+
+## Reproduction and next boundary
+
+Run `python3 work/mh202-firmware/research/2026-10-30/functional/run2-interpreter/collect_evidence.py --check`. It reproduces16outputs:6original spans,13word assertions, selected literal/PIC facts, dynamic/symbol/relocation metadata and finite host models from2verified original files. No source-defined code evaluation or original instruction hooks are used. The source bodies and uncompleted grammar are explicitly separate from host reconstructions.
+
+High confidence: actual executable prefix→PARENTESI→IIF call, source-position3, candidate provider/linea relocation, selected numeric-variable branch, signed comparison operators and conditional copy-call structure. Unresolved: full grammar and nested expressions, complete type/variable lookup rules, effective process binding, overlap behavior, actual configured script data, time/date/sleep syntax/units and manual-stage equivalence. Those are ranked next questions, not silently promoted script semantics.

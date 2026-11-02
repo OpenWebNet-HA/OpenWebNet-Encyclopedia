@@ -1,0 +1,35 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b3614:
+   b3614:	4a72      	ldr	r2, [pc, #456]	@ (b37e0)
+   b3616:	4b73      	ldr	r3, [pc, #460]	@ (b37e4)
+   b3618:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+   b361c:	b088      	sub	sp, #32
+   b361e:	447a      	add	r2, pc
+   b3620:	f8df 91c4 	ldr.w	r9, [pc, #452]	@ b37e8
+   b3624:	4604      	mov	r4, r0
+   b3626:	460e      	mov	r6, r1
+   b3628:	58d3      	ldr	r3, [r2, r3]
+   b362a:	4627      	mov	r7, r4
+   b362c:	44f9      	add	r9, pc
+   b362e:	f104 0a48 	add.w	sl, r4, #72	@ 0x48
+   b3632:	681b      	ldr	r3, [r3, #0]
+   b3634:	9307      	str	r3, [sp, #28]
+   b3636:	f04f 0300 	mov.w	r3, #0
+   b363a:	f779 f81d 	bl	2c678
+   b363e:	4b6b      	ldr	r3, [pc, #428]	@ (b37ec)
+   b3640:	4630      	mov	r0, r6
+   b3642:	496b      	ldr	r1, [pc, #428]	@ (b37f0)
+   b3644:	f859 3003 	ldr.w	r3, [r9, r3]
+   b3648:	4479      	add	r1, pc
+   b364a:	3308      	adds	r3, #8
+   b364c:	f847 3b30 	str.w	r3, [r7], #48
+   b3650:	2300      	movs	r3, #0
+   b3652:	e9c4 730a 	strd	r7, r3, [r4, #40]	@ 0x28
+   b3656:	f884 3030 	strb.w	r3, [r4, #48]	@ 0x30
+   b365a:	6463      	str	r3, [r4, #68]	@ 0x44
+   b365c:	f884 3048 	strb.w	r3, [r4, #72]	@ 0x48

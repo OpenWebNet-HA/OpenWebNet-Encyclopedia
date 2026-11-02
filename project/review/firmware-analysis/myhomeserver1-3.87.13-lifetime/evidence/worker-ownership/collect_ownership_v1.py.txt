@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+"""Static thread-state capture/deletion and selected scene/action holder teardown. No execution."""
+import argparse,hashlib,importlib.util,json,re,struct,subprocess,sys
+from pathlib import Path
+sys.dont_write_bytecode=True
+D=Path(__file__).resolve().parent;P=D.parents[2];W=P.parents[2];H=lambda z:hashlib.sha256(z).hexdigest();J=lambda x:(json.dumps(x,sort_keys=True,indent=2)+'\n').encode()
+HELPER=P/'research/2026-10-31/image_vfs.py';sp=importlib.util.spec_from_file_location('ownership_vfs',HELPER);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+S='/home/bticino/scheduling_manager/scheduling_manager';L='/usr/lib/libstdc++.so.6.0.29'
+SPANS=[(S,'action-wait-state-construction',0xcd896,0xcd968),(S,'action-wait-state-destructors',0xcd554,0xcd5c4),(S,'scene-state-destructors',0xa5650,0xa56c0),(S,'scene-state-construction',0xa5de6,0xa5e6e),(S,'scene-owner-dispose-thunk',0x1a048,0x1a04e),(S,'scene-teardown-holder-and-action-release',0xa5a3c,0xa5b46),(S,'scene-teardown-join-and-terminate',0xa5ccc,0xa5da0),(S,'sleep-owner-dispose',0xb0b60,0xb0be4),(S,'temporary-action-owner-cleanup',0xb44e8,0xb4568),(S,'sleep-shared-owner-construction',0xa76a0,0xa770a),(L,'provider-state-entry-and-base-destructor',0x9b1f8,0x9b21e),(L,'provider-join-detach-start',0x9b234,0x9b288)]
+GUARDS=[(0xcd8aa,'4460'),(0xcd8f4,'4460'),(0xcd57e,'0821'),(0xcd5b6,'0821'),(0xa567a,'0821'),(0xa56b2,'0821'),(0xa5e14,'4460'),(0xb0b90,'206b'),(0xb0b9c,'bbb9'),(0xb0b9e,'0421'),(0xa5a42,'d0f88c00'),(0xa5b0a,'9847')]
+def build():
+ v=m.ImageVFS();bb={};mp={};inputs=[];out={}
+ for image,sha in [(S,'7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26'),(L,'02d98c9486577d7be0b3fb71b5f0c0b6c090b72554c83640cb525cb3a3c1549a')]:
+  z=v.read_bytes(image);assert H(z)==sha;bb[image]=z;po=struct.unpack_from('<I',z,28)[0];sz,n=struct.unpack_from('<HH',z,42);mp[image]=[(q[2],q[1],q[4])for i in range(n)if(q:=struct.unpack_from('<8I',z,po+i*sz))[0]==1];inputs.append({'path':str((v.root/image.lstrip('/')).relative_to(W)),'bytes':len(z),'sha256':H(z)})
+ def at(image,a,n):
+  for va,o,s in mp[image]:
+   if va<=a and a+n<=va+s:return bb[image][o+a-va:o+a-va+n]
+  raise ValueError((image,hex(a)))
+ w=lambda a,image=S:struct.unpack('<I',at(image,a,4))[0]
+ spans=[]
+ for image,name,a,e in SPANS:
+  spans.append({'image_path':image,'name':name,'start_va':hex(a),'end_va_exclusive':hex(e),'bytes':e-a,'sha256':H(at(image,a,e-a))});out['spans/'+name+'.txt']=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(v.root/image.lstrip('/'))],text=True).replace(str(W)+'/', '').encode()
+ tables=[];slots=[]
+ for name,a,want in [('action-wait',0x162100,[0,0x1650ac,0xcd555,0xcd56d,0xcd5c5,0,0x1650b8,0xcd58d,0xcd5a5,0xcd721]),('scene-workers',0x161de8,[0,0x164d84,0xa5651,0xa5669,0xa6d19,0,0x164d90,0xa5689,0xa56a1,0xa6d11])]:
+  actual=[w(a+i*4)for i in range(10)];assert actual==want;tables.append({'name':name,'start_va':hex(a),'words':[hex(x)for x in actual]});slots +=[a+i*4 for i in [2,3,4,7,8,9]]
+ chains=[]
+ for name,pool,slot,head,dispose in [('scene-owner',0x18150,0x166c2c,0x15fd24,0x1a049),('sleep-action-owner',0xa7f50,0x1669c4,0x1619dc,0xb0b61)]:
+  assert(0x1659a4+w(pool))&0xffffffff==slot;assert w(slot)==head and w(head+16)==dispose;chains.append({'name':name,'offset_pool_va':hex(pool),'got_slot_va':hex(slot),'vtable_header_va':hex(head),'dispose_slot_va':hex(head+16),'dispose_thumb_pointer':hex(dispose)});slots +=[slot,head+16]
+ rel=subprocess.check_output(['readelf','-rW',str(v.root/S.lstrip('/'))],text=True);rows=[]
+ for a in slots:
+  z=[r for r in rel.splitlines()if re.match('^'+f'{a:08x}'+r'\s',r)];assert len(z)==1 and 'R_ARM_RELATIVE'in z[0];rows+=z
+ guards=[]
+ for a,h in GUARDS:assert at(S,a,len(bytes.fromhex(h))).hex()==h;guards.append({'va':hex(a),'bytes_hex':h})
+ assert at(L,0x9b21c,2)==b'\x70\x47'
+ target=(w(0x9b284,L)+0x9b272+4)&0xffffffff;assert target==0x9b1f9
+ providers={}
+ names=['_ZNSt6thread6_StateD2Ev','_ZNSt6thread15_M_start_threadESt10unique_ptr','_ZNSt6thread6detachEv','_ZNSt6thread4joinEv','pthread_create','pthread_join','pthread_detach']
+ for image in [S,L]:
+  sy=subprocess.check_output(['readelf','--dyn-syms','-W',str(v.root/image.lstrip('/'))],text=True);providers[image]=[r.strip()for r in sy.splitlines()if any(n in r for n in names)]
+ for p in [HELPER,P/'research/2026-10-31-actions/common/REPORT.md',P/'research/2026-10-31-factories/runner/REPORT.md',P/'research/2026-10-31-startup/registry/REPORT.md']:
+  z=p.read_bytes();inputs.append({'path':str(p.relative_to(W)),'bytes':len(z),'sha256':H(z)})
+ out.update({'INPUTS.v1.json':J(inputs),'SOURCE_SPANS.v1.json':J(spans),'VTABLES_AND_OWNERS.v1.json':J({'thread_state_tables':tables,'selected_owner_chains':chains,'relative_relocations':rows,'provider_entry_pic':{'pool_va':'0x9b284','add_pc_va':'0x9b272','target_thumb_pointer':hex(target)}}),'CRITICAL_BYTES.v1.json':J(guards),'PROVIDERS.v1.json':J({'selected_declarations_and_definitions':providers,'boundary':'Packaged candidates only; no effective binding/pthread API invocation or lifecycle execution.'}),'METHOD.v1.json':J({'original_execution':0,'host_models_or_fixtures':0,'target_OS_or_API_execution':0,'scope':'Positive state capture/dtor, selected scene+140 and action+48 holder teardown, owner dispose and packaged thread glue only. No complete lifetime/strong-owner/globalabsence/leak/UAF/concurrency/physical claim.','history':'No generated candidate overwrite or failed canonical generation. Source tables/pools are data; stripped adjacent symbol names are not function identities.'})})
+ return out
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build();out['OUTPUT_MANIFEST.v1.json']=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()})
+ if a.check:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+ else:
+  assert not any((D/n).exists()for n in out),'refuse overwrite';S0=D/'first-candidate';assert not S0.exists();copies={**out,Path(__file__).name:Path(__file__).read_bytes()};idx=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in copies.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in copies.items():p=S0/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (S0/'SNAPSHOT.json').open('xb').write(idx)
+ print(json.dumps({'check':a.check,'outputs':len(out),'spans':len(SPANS),'thread_state_tables':2,'owner_chains':2,'relative_relocations':16,'byte_guards':len(GUARDS),'inputs':6,'original_execution':0}))
+if __name__=='__main__':main()

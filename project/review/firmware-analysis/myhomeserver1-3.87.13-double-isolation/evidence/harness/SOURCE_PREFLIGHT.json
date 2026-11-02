@@ -1,0 +1,269 @@
+{
+  "caseplan": [
+    [
+      "positive-zero",
+      "0000000000000000"
+    ],
+    [
+      "negative-zero",
+      "8000000000000000"
+    ],
+    [
+      "negative-one",
+      "bff0000000000000"
+    ],
+    [
+      "one-point-two-five",
+      "3ff4000000000000"
+    ]
+  ],
+  "containment": {
+    "accounting": "original code-hook visits (not retired instructions), redirectedPLT callbacks, EXITcallbacks, guard-stop callbacks, setupdata/FP writes separately; every attempted call preserved even if failed",
+    "callbacks": "Only 3 linker redirects to actual original definitions + private EXIT; ZERO C/GLib primitive models",
+    "known_PC": "exact statically decoded instruction map only; nonnull-comments/error/other-type paths excluded",
+    "memory": "Image pages RX/RO only after setup; exact24byte privateobject,64KiB stack and4byte readonlycanary; valid-byte reads tracked for private stack/object; no allocator or syscall; nonprivatewrites trap",
+    "original_execution_before_root_and_independent_PASS": 0,
+    "per_entry_caps": {
+      "engine_count": 10000,
+      "engine_timeout_us": 1000000,
+      "host_wall_seconds": 2,
+      "original_visits": 5000
+    },
+    "traps": [
+      "unknown PC/size",
+      "Thumb mode or PC mismatch",
+      "read outside actualPT_LOAD/privateinitializedbytes",
+      "write outside object24/stack",
+      "IRQ",
+      "invalidinstruction",
+      "protected/unmappedmemory",
+      "cap/timeout/noEXIT"
+    ]
+  },
+  "harness_sha256": "1ef53f7e04a20cb43c37dfb1cae965bb119bcda167db9b372b58b02bf1cb4a15",
+  "limits": [
+    "private fixture, candidate selfbinding, synthetic canary and registerFP setup",
+    "not fullJSONmember/map/moveassignment/reparse/serialization",
+    "no original targetprocess/OS/provider-I/O behavior or physicaldomain",
+    "no destructor/nonemptyComments/error/unwind coverage"
+  ],
+  "plan_sha256": "bf9d23f03b1d2b8423652381d47894c61633a4245a20fc99d441199a55b83826",
+  "setup": {
+    "EXIT": "0x53000000",
+    "FP_registers": "CortexA15, CPACR0xf00000,FPEXC0x40000000,FPSCR0,D8zero; D0 integer-bitinput for constructor; distinct finite registerpoison before asDouble",
+    "base": "0x41000000",
+    "canary": "0x52000000",
+    "data_relocation_per_case": 1,
+    "initial_object": "24 zero bytes in fresh caller-storage fixture; original constructor supplies tag/value/comments fields",
+    "object": "0x50000000",
+    "object_bytes": 24,
+    "same_object": "Constructor then asDouble in SAME instance; no object reseeding/field writes between calls",
+    "stack": [
+      "0x51000000",
+      65536
+    ]
+  },
+  "source": {
+    "PT_LOAD": [
+      [
+        1,
+        0,
+        0,
+        0,
+        138196,
+        138196,
+        5,
+        65536
+      ],
+      [
+        1,
+        141180,
+        206716,
+        206716,
+        2184,
+        2256,
+        6,
+        65536
+      ]
+    ],
+    "allowed_PC_sizes": {
+      "0x14e3c": 2,
+      "0x14e3e": 2,
+      "0x159ec": 2,
+      "0x159ee": 2,
+      "0x159f0": 2,
+      "0x159f2": 2,
+      "0x159f4": 2,
+      "0x159f6": 2,
+      "0x159f8": 2,
+      "0x159fa": 2,
+      "0x15a1e": 2,
+      "0x15a20": 2,
+      "0x15ad4": 2,
+      "0x15ad6": 2,
+      "0x15ad8": 2,
+      "0x15ada": 2,
+      "0x15adc": 2,
+      "0x15ade": 2,
+      "0x15ae0": 2,
+      "0x15ae2": 4,
+      "0x15ae6": 2,
+      "0x15ae8": 2,
+      "0x15aea": 2,
+      "0x15aec": 4,
+      "0x15af0": 2,
+      "0x15af2": 2,
+      "0x15af4": 4,
+      "0x15af8": 2,
+      "0x15afa": 2,
+      "0x15afc": 2,
+      "0x15afe": 4,
+      "0x15b02": 2,
+      "0x15b04": 2,
+      "0x15b26": 2,
+      "0x15b28": 2,
+      "0x15b2a": 4,
+      "0x15b2e": 2,
+      "0x15b30": 2,
+      "0x15b32": 2,
+      "0x15b34": 2,
+      "0x15b36": 2,
+      "0x15b38": 2,
+      "0x15b3a": 4,
+      "0x15b3e": 2,
+      "0x15b40": 2,
+      "0x15b42": 2,
+      "0x15ce0": 2,
+      "0x15ce2": 2,
+      "0x15ce4": 2,
+      "0x15ce6": 4,
+      "0x15cea": 2,
+      "0x15cec": 2,
+      "0x15cee": 4,
+      "0x15cf2": 4,
+      "0x15cf6": 4,
+      "0x15cfa": 2,
+      "0x15cfc": 4,
+      "0x15d00": 2,
+      "0x171c4": 2,
+      "0x171c6": 2,
+      "0x171c8": 2,
+      "0x171ca": 2,
+      "0x171cc": 2,
+      "0x171ce": 2,
+      "0x171d0": 2,
+      "0x171d2": 2,
+      "0x171d4": 2,
+      "0x171d6": 4,
+      "0x171da": 4,
+      "0x171de": 2,
+      "0x171e0": 2,
+      "0x171e2": 4,
+      "0x171fe": 2,
+      "0x17200": 2,
+      "0x17202": 2,
+      "0x17204": 2,
+      "0x17206": 2,
+      "0x17208": 2,
+      "0x1720a": 2,
+      "0x1720c": 4,
+      "0x17210": 2,
+      "0x17212": 2,
+      "0x17214": 2,
+      "0x1724e": 4,
+      "0x17252": 2
+    },
+    "allowed_instruction_count": 85,
+    "canary_GOT": "0x32f98 -> private0x52000000",
+    "code_spans": [
+      {
+        "end_VA_exclusive": "0x15d02",
+        "sha256": "21fde8c432238210ba4c0faed5d3de040ef4c21595233b2668ecb711a67d63cd",
+        "start_VA": "0x15ce0"
+      },
+      {
+        "end_VA_exclusive": "0x15b06",
+        "sha256": "9f566be0161e21179adadd7f5b990802a5b749d185c76cf86e4477877135f69b",
+        "start_VA": "0x15ad4"
+      },
+      {
+        "end_VA_exclusive": "0x15b44",
+        "sha256": "e4ea1d0dad7dc31ba1c42c8d045a3fa92900f8ba3b20d90841914562b6d225db",
+        "start_VA": "0x15b26"
+      },
+      {
+        "end_VA_exclusive": "0x159fc",
+        "sha256": "ab172063284d5767aa44c70640b357bc5e12efc6e4ff6c9308f0e7fe46c95886",
+        "start_VA": "0x159ec"
+      },
+      {
+        "end_VA_exclusive": "0x15a22",
+        "sha256": "76f0aa94237de503a3ad6924b13ec10fa4a1ff554fe054298e24a00487983296",
+        "start_VA": "0x15a1e"
+      },
+      {
+        "end_VA_exclusive": "0x14e40",
+        "sha256": "3d60dc05dc4c24756d2ca8efc142ade6c166e93868c74098bb3f0c5e00e4a925",
+        "start_VA": "0x14e3c"
+      },
+      {
+        "end_VA_exclusive": "0x171e6",
+        "sha256": "b2b537e999c0dabba9dc80e46f5bf8b3e32ed79721175f388a56215757a60f45",
+        "start_VA": "0x171c4"
+      },
+      {
+        "end_VA_exclusive": "0x17254",
+        "sha256": "a692dd57271980779a01504c4176cd4e66b3ad1fdcd6bd132af8318feb61563e",
+        "start_VA": "0x1724e"
+      },
+      {
+        "end_VA_exclusive": "0x17216",
+        "sha256": "44c4352826ea34c98fed82ab68f054536749e5252d4d077d0c07000ebe1ba741",
+        "start_VA": "0x171fe"
+      }
+    ],
+    "definitions": [
+      "218: 00015ce1    46 FUNC    GLOBAL DEFAULT   11 _ZN4Json5ValueC1Ed",
+      "433: 00015ad5   128 FUNC    GLOBAL DEFAULT   11 _ZN4Json5Value9initBasicENS_9ValueTypeEb",
+      "116: 000159ed    54 FUNC    GLOBAL DEFAULT   11 _ZN4Json5Value8CommentsaSEOS1_",
+      "236: 00014e3d     4 FUNC    GLOBAL DEFAULT   11 _ZNK4Json5Value4typeEv",
+      "315: 000171c5   228 FUNC    GLOBAL DEFAULT   11 _ZNK4Json5Value8asDoubleEv"
+    ],
+    "image": "/usr/lib/libjsoncpp.so.1.9.5",
+    "relocations": [
+      "00032f98  00000e15 R_ARM_GLOB_DAT         00000000   __stack_chk_guard@GLIBC_2.4",
+      "00032f54  0001b116 R_ARM_JUMP_SLOT        00015ad5   _ZN4Json5Value9initBasicENS_9ValueTypeEb",
+      "00032c18  00007416 R_ARM_JUMP_SLOT        000159ed   _ZN4Json5Value8CommentsaSEOS1_",
+      "00032e54  0000ec16 R_ARM_JUMP_SLOT        00014e3d   _ZNK4Json5Value4typeEv"
+    ],
+    "self_definition_redirects": [
+      {
+        "ARM_bytes": "00c68fe227ca8ce2b8f4bce5",
+        "call_VA": "0x15cf2",
+        "call_bytes": "f5f7d0ee",
+        "entry": "0xba94",
+        "jump_slot": "0x32f54",
+        "target_Thumb": "0x15ad5"
+      },
+      {
+        "ARM_bytes": "00c68fe227ca8ce29cfbbce5",
+        "call_VA": "0x15afe",
+        "call_bytes": "f5f7baea",
+        "entry": "0xb074",
+        "jump_slot": "0x32c18",
+        "target_Thumb": "0x159ed"
+      },
+      {
+        "ARM_bytes": "00c68fe227ca8ce2e4f6bce5",
+        "call_VA": "0x171da",
+        "call_bytes": "f4f7c6ea",
+        "entry": "0xb768",
+        "jump_slot": "0x32e54",
+        "target_Thumb": "0x14e3d"
+      }
+    ],
+    "sha256": "5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36",
+    "type3_TBB": "37181f343a03"
+  },
+  "top_level_entries": 8
+}

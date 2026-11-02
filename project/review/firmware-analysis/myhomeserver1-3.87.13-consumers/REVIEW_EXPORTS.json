@@ -1,0 +1,53 @@
+{
+  "scope": "Six current source/documentary reviews plus two exact superseded documentary records; original byte/source checks unchanged",
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/reviews/CATALOGUE_SOURCE_REVIEW.md",
+      "published": "catalogue-source-review.txt",
+      "size": 5856,
+      "sha256": "85e166345757cf44804c694f2e6b8630e568714f514993225f718a37ffa7ebdc"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/reviews/SCHEDULER_SOURCE_REVIEW.md",
+      "published": "scheduler-source-review.txt",
+      "size": 4680,
+      "sha256": "e83d452ec93694ed7d61c830d8f057480b3407f66fca42307cd87f743b492f87"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/reviews/PROVIDERS_SOURCE_REVIEW.md",
+      "published": "providers-source-review.txt",
+      "size": 5803,
+      "sha256": "6546ceef43a36ba30a5b5d8c9ee936f802f6ba99693c32cf5abde683b940c7e3"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/reviews/PROVIDERS_SECOND_REVIEW.md",
+      "published": "providers-second-review.txt",
+      "size": 3548,
+      "sha256": "6bc4a7ba043abf4c132a1e64d08cdb8ecb838e859226875b5bc1fb467ddadc0f"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/reviews/INTEGRATION_REVIEW.v2.md",
+      "published": "integration-review.txt",
+      "size": 3910,
+      "sha256": "d8cbb75b7fb865bcd8c307e645bbfb545f91a3da387f6f2e4508714ec779b0c8"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/reviews/INTEGRATION_SECOND_REVIEW.v2.md",
+      "published": "integration-second-review.txt",
+      "size": 5542,
+      "sha256": "1ef212307f378544461c9a9dd6a83f3389725701d302e2883536b4e095b5a230"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/reviews/INTEGRATION_REVIEW.md",
+      "published": "integration-review-v1.txt",
+      "size": 5986,
+      "sha256": "393c8362caf6b64d7fb620589821353cf876ea605700905f9ccf606ae1b0f7af"
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/reviews/INTEGRATION_SECOND_REVIEW.md",
+      "published": "integration-second-review-v1.txt",
+      "size": 8679,
+      "sha256": "cbeedb6e4b9008b08cb98988351d925494ff7893626cfbef55c61fc158946ba0"
+    }
+  ]
+}

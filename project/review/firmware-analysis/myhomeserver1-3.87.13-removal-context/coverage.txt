@@ -1,0 +1,11 @@
+# Bounded coverage
+
+| Area | Newly supported source | Remaining boundary |
+| --- | --- | --- |
+|Local removal arguments|Dispatcher r1/frame/word0 alias; exact params.scene_id/string/base10 request/result-slot key|Context producer/main-registry equality, opaque parse/provider/branch eligibility, full grammar/errors/aliases/lifetime/concurrency/natural removal|
+|BNCUSCENE|Own row/raw88B/compiled192B/field/vtable identity, same4Bpointer publication and actual slot+8 consumer, byteXOR1 predicate|Actual configured inclusion, raw serializer coherence/other methods/mutations, intended support, providers/ownership/runtime/physical behavior|
+|Storage refinement|Exact old label/quote/hash retention plus new one-word/end+4/one-word-zero source|No full-growth/destructor/ownership proof; old numeric-owner removal source unchanged|
+
+All original execution and semantic fixtures0. No physical observation, complete source/Device approval or exhaustive coverage. Missing configured extras80/81/94/95, positive shared reset owner, query response/type/correlation and full errors/unwind/providers/lifetime/concurrency remain open. Previous tables/append/erase/poll/22alias scopes are not recounted as native execution.
+
+Both canonical first generations/checks pass with immutable first copies. Context exploratory params.id inference was corrected to exact scene_id BEFORE candidate generation and disclosed without invented old on-disk hash. Old condition-storage wording remains immutable with explicit scoped refinement. Earlier versioned failures and unavailable MH202run18/run21 intermediate histories remain retained/unverified as appropriate; no new history loss. Functional reviewer/read-only only; originals/sources/synced/completed dossiers read-only.

@@ -1,0 +1,22 @@
+{
+  "ABI": "thisR0,int32argumentR1; normalint32returnR0; noVFPfixture/layouttransfer",
+  "algebra_scope": "For normalvalidtwo-complement64bitinteger this identifies signed32 interval; a C1Ei-producedsignextended32bitargument liesinthatinterval. No numericfixtures or executedalgebra model.",
+  "asInt_type1": "actualtype call\u2192TBBtag1\u21921687a callsactualisInt; nonzero\u219216886 loadsobjectlowwordR0\u2192normalcanaryepilogue",
+  "conditional_result": "Normalvalidconstructor-produced object/nointerveningmutation/candidatebinding/ABI/tag/canary anddelegate returns\u2192asInt loads original32bitargument word; not wholeJSON/intdomain/admission/assignment/parser proof",
+  "constructor": "C1Ei/C2Ei15c40 savesR1 inR5; owncomments12zero; initBasic type1/allocated0; ASR31 makeshighsignword; STRD lowinput/highsign toobject0/4",
+  "execution": {
+    "host_semantic_fixtures": 0,
+    "native_replays": 0,
+    "new_original": 0,
+    "prior_cumulative": "1corpus8entries340originalvisits0C12redirect8EXIT360hooks+4datasetup unchanged"
+  },
+  "isInt_type1": "1556c loadsloR3/hiR0; ADDSlo+0x80000000 thenADChi+carry; CLZ(adjustedhi)>>5\u21921iffadjustedhi0; normalcanaryreturn",
+  "not_followed": [
+    "otherstoredtype arms",
+    "false-range/error/unwind behavior",
+    "nonnullComments/destructor/providerOS",
+    "string/member/map/moveassignment/serialization/reparse",
+    "physicalunits/range/installedstate"
+  ],
+  "tag": "initBasic storesargument1 atobjectbyte8; actualtype14e3c readsbyte8"
+}

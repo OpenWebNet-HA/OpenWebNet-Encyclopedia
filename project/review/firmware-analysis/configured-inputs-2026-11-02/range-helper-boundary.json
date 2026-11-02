@@ -1,0 +1,29 @@
+{
+  "status": "QUALIFICATION_STOP_GENERIC_RANGE_HELPER_NO_RAW_SCENE_PRODUCER_ADMITTED",
+  "saved_UTC": "2026-11-02T05:46:25.000555+00:00",
+  "original": {
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager",
+    "bytes": 2161128,
+    "sha256": "5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62"
+  },
+  "source_authorization": {
+    "path": "work/configured-scene-module-investigation/2026-11-02/source/f460-file-scene-producer/SOURCE_AUTHORIZATION.json",
+    "bytes": 1376,
+    "sha256": "699bf1f7b3922958d403357aff3cb1305c603955d4b7fb8c0d61f39687fc46ea"
+  },
+  "already_read_minimal_body": {
+    "start_VA": "0x2c600",
+    "end_exclusive": "0x2c6f0",
+    "bytes": 240,
+    "sha256": "7bc45695be76bf3672d4a9a785edd757b685b8b29b752ad905b66b477255ef8e",
+    "body_bytes_or_disassembly_exported": false
+  },
+  "qualification": "Original local helper uses supplied begin/end difference and buffer/copy/length/terminator-shaped operations. It does not qualify the desired file-read/JSON/raw-scene producer; no semantic producer or new functional contract is promoted.",
+  "boundary_note": "Initial authorized256B qualification display included16B of the next prologue; stopped at identified240B helper boundary. No claim or export from the next prologue, no furtherbody/alternate route.",
+  "new_functional_source_coverage": 0,
+  "new_raw_scene_or_file_parse_join": false,
+  "new_source_packet_or_collector": false,
+  "new_original_execution_models_fixtures_SQL_target_IO": 0,
+  "parent_direction": "Stop qualification only; no full second producer packet or additional body reading/exports. Existing constructor/initializer/provider boundaries remain opaque.",
+  "no_absence_claim": "Does not establish absence of file/JSON producers elsewhere, complete semantics or natural configured admission."
+}

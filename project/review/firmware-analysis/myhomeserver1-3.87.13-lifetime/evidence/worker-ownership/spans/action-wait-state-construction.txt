@@ -1,0 +1,95 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000cd896 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x150de>:
+   cd896:	2004      	movs	r0, #4
+   cd898:	f743 e8f0 	blx	10a7c <_Znwj@plt>
+   cd89c:	4606      	mov	r6, r0
+   cd89e:	2008      	movs	r0, #8
+   cd8a0:	6035      	str	r5, [r6, #0]
+   cd8a2:	f743 e8ec 	blx	10a7c <_Znwj@plt>
+   cd8a6:	4b33      	ldr	r3, [pc, #204]	@ (cd974 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x151bc>)
+   cd8a8:	462a      	mov	r2, r5
+   cd8aa:	6044      	str	r4, [r0, #4]
+   cd8ac:	4669      	mov	r1, sp
+   cd8ae:	9000      	str	r0, [sp, #0]
+   cd8b0:	447b      	add	r3, pc
+   cd8b2:	3308      	adds	r3, #8
+   cd8b4:	6003      	str	r3, [r0, #0]
+   cd8b6:	4630      	mov	r0, r6
+   cd8b8:	f743 ebfe 	blx	110b8 <_ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@plt>
+   cd8bc:	9800      	ldr	r0, [sp, #0]
+   cd8be:	b110      	cbz	r0, cd8c6 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1510e>
+   cd8c0:	6803      	ldr	r3, [r0, #0]
+   cd8c2:	685b      	ldr	r3, [r3, #4]
+   cd8c4:	4798      	blx	r3
+   cd8c6:	6b20      	ldr	r0, [r4, #48]	@ 0x30
+   cd8c8:	6326      	str	r6, [r4, #48]	@ 0x30
+   cd8ca:	b128      	cbz	r0, cd8d8 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15120>
+   cd8cc:	6803      	ldr	r3, [r0, #0]
+   cd8ce:	bb83      	cbnz	r3, cd932 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1517a>
+   cd8d0:	2104      	movs	r1, #4
+   cd8d2:	f743 eaee 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   cd8d6:	6b26      	ldr	r6, [r4, #48]	@ 0x30
+   cd8d8:	4630      	mov	r0, r6
+   cd8da:	f743 eef8 	blx	116cc <_ZNSt6thread6detachEv@plt+0x4>
+   cd8de:	e7cd      	b.n	cd87c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x150c4>
+   cd8e0:	2004      	movs	r0, #4
+   cd8e2:	f743 e8cc 	blx	10a7c <_Znwj@plt>
+   cd8e6:	4605      	mov	r5, r0
+   cd8e8:	2008      	movs	r0, #8
+   cd8ea:	602e      	str	r6, [r5, #0]
+   cd8ec:	f743 e8c6 	blx	10a7c <_Znwj@plt>
+   cd8f0:	4b21      	ldr	r3, [pc, #132]	@ (cd978 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x151c0>)
+   cd8f2:	2200      	movs	r2, #0
+   cd8f4:	6044      	str	r4, [r0, #4]
+   cd8f6:	4669      	mov	r1, sp
+   cd8f8:	9000      	str	r0, [sp, #0]
+   cd8fa:	447b      	add	r3, pc
+   cd8fc:	331c      	adds	r3, #28
+   cd8fe:	6003      	str	r3, [r0, #0]
+   cd900:	4628      	mov	r0, r5
+   cd902:	f743 ebda 	blx	110b8 <_ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@plt>
+   cd906:	9800      	ldr	r0, [sp, #0]
+   cd908:	b110      	cbz	r0, cd910 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15158>
+   cd90a:	6803      	ldr	r3, [r0, #0]
+   cd90c:	685b      	ldr	r3, [r3, #4]
+   cd90e:	4798      	blx	r3
+   cd910:	6b20      	ldr	r0, [r4, #48]	@ 0x30
+   cd912:	6325      	str	r5, [r4, #48]	@ 0x30
+   cd914:	b128      	cbz	r0, cd922 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1516a>
+   cd916:	6803      	ldr	r3, [r0, #0]
+   cd918:	b95b      	cbnz	r3, cd932 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x1517a>
+   cd91a:	2104      	movs	r1, #4
+   cd91c:	f743 eac8 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   cd920:	6b25      	ldr	r5, [r4, #48]	@ 0x30
+   cd922:	4628      	mov	r0, r5
+   cd924:	f743 eed2 	blx	116cc <_ZNSt6thread6detachEv@plt+0x4>
+   cd928:	e7a8      	b.n	cd87c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x150c4>
+   cd92a:	f743 ec5e 	blx	111e8 <__stack_chk_fail@plt>
+   cd92e:	f743 e982 	blx	10c34 <_ZSt25__throw_bad_function_callv@plt>
+   cd932:	f743 e942 	blx	10bb8 <_ZSt9terminatev@plt>
+   cd936:	9800      	ldr	r0, [sp, #0]
+   cd938:	b110      	cbz	r0, cd940 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15188>
+   cd93a:	6803      	ldr	r3, [r0, #0]
+   cd93c:	685b      	ldr	r3, [r3, #4]
+   cd93e:	4798      	blx	r3
+   cd940:	2104      	movs	r1, #4
+   cd942:	4630      	mov	r0, r6
+   cd944:	f743 eab4 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   cd948:	f743 ec54 	blx	111f4 <__cxa_end_cleanup@plt>
+   cd94c:	e7f8      	b.n	cd940 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x15188>
+   cd94e:	9800      	ldr	r0, [sp, #0]
+   cd950:	b110      	cbz	r0, cd958 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x151a0>
+   cd952:	6803      	ldr	r3, [r0, #0]
+   cd954:	685b      	ldr	r3, [r3, #4]
+   cd956:	4798      	blx	r3
+   cd958:	2104      	movs	r1, #4
+   cd95a:	4628      	mov	r0, r5
+   cd95c:	f743 eaa8 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   cd960:	f743 ec48 	blx	111f4 <__cxa_end_cleanup@plt>
+   cd964:	e7f8      	b.n	cd958 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x151a0>
+   cd966:	bf00      	nop

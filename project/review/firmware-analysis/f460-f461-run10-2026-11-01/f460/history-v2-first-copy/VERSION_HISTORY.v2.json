@@ -1,0 +1,19 @@
+{
+  "history_limit": "Failure note is honest later transcription, not contemporaneous terminal-file hash",
+  "new": {
+    "REPORT.v2.md": "0e960fe9a386c15467227feb382366becd285b324e59eed7eb5c01d0f386df64",
+    "collect_gate_v2.py": "2c15c188e6171d8eaa1b071f713ebd23f0f7e8b35f2bf5e7f77b1d623ad3dd76"
+  },
+  "old": {
+    "FIRST_GENERATION_FAILURE.json": "472673527a560370a5336fcb90c93c73c6094b1db88479e7778dd58dedafa9ed",
+    "REPORT.md": "3f58a87e373e600a08479a7268a87b7e0af596cbd4da43bb6a46d2d7c67ed2fe",
+    "collect_gate_v1.py": "e8a9f9a51b8316ce32e9e0ae4206ea57c94797cd5bc864bed7cfe1739a0b96d0"
+  },
+  "original_execution": 0,
+  "parent_snapshot": {
+    "path": "work/f460-f461-comparison/2026-11-01-run10/integration/f460-before-v2/INDEX.json",
+    "sha256": "43b4f3b88ae8e0026296381f3700d59fda2f10c392621f7ad4336b93b55e5420"
+  },
+  "scope": "Exclusive v2 after parent exact pre-edit preservation; all v1 bytes unchanged",
+  "source_guard_change": "Only actual BL callsite0x100060\u21920x100064; BL opcode/target guard retained; no source claim change"
+}

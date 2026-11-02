@@ -1,0 +1,119 @@
+{
+  "scope": "host static-rule reconstruction only, not original ARM/OPEN parser or actual I/O; two selected rows, not a generic stream decoder",
+  "preconditions": "normal code4 text, raw selector235, no competing address/request; header establishes active stream; conventional imported hex/string primitives; usable private descriptor if considering conditional send branch",
+  "new_original_instructions_executed": 0,
+  "code_hooks": 0,
+  "sequences": [
+    {
+      "row": "0x10",
+      "dimension": "56",
+      "synthetic_header": "$18D2A102358350100A",
+      "initial_header_count": 3,
+      "initial_data_buffer": "",
+      "metadata1": 10,
+      "host_reconstructed_internal_request": "$06D1A1023350100A02",
+      "steps": [
+        {
+          "raw_candidate": "$18D2A10235A2020A0B",
+          "remaining": 2,
+          "chunk_counter": 1,
+          "buffer_before": "",
+          "buffer_before_terminal_override": "10*11",
+          "buffer_after": "10*11",
+          "metadata2": 2,
+          "action": "replace with first two values; possible metadata2",
+          "conditional_parser_input": "*#18*51*56#10#2*1*10*11##",
+          "parser_call_va": "0xe49c",
+          "send_call_va": "0xe4b4",
+          "send_condition": "descriptor word != -1; no IsCorrect guard is inserted between parser and send here"
+        },
+        {
+          "raw_candidate": "$18D2A10235A10C0D0E",
+          "remaining": 1,
+          "chunk_counter": 2,
+          "buffer_before": "10*11",
+          "buffer_before_terminal_override": "12*13*14",
+          "buffer_after": "12*13*14",
+          "metadata2": 2,
+          "action": "replace with three current values; selected rows bypass row0x19-only append",
+          "conditional_parser_input": "*#18*51*56#10#2*2*12*13*14##",
+          "parser_call_va": "0xe49c",
+          "send_call_va": "0xe4b4",
+          "send_condition": "descriptor word != -1; no IsCorrect guard is inserted between parser and send here"
+        },
+        {
+          "raw_candidate": "$18D2A10235A0030F10",
+          "remaining": 0,
+          "chunk_counter": 3,
+          "buffer_before": "12*13*14",
+          "buffer_before_terminal_override": "3*15*16",
+          "buffer_after": "3*15",
+          "metadata2": 2,
+          "action": "replace with three current values; selected rows bypass row0x19-only append; terminal path overwrites scratch with terminal one/two-field record",
+          "conditional_parser_input": "*#18*51*56#10#2*3*3*15##",
+          "parser_call_va": "0xde9c",
+          "send_call_va": "0xdeb4",
+          "send_condition": "descriptor word != -1; no IsCorrect guard is inserted between parser and send here"
+        }
+      ],
+      "final_active_flag": 0,
+      "final_request_state": 0
+    },
+    {
+      "row": "0x14",
+      "dimension": "510",
+      "synthetic_header": "$18D2A102358350140A",
+      "initial_header_count": 3,
+      "initial_data_buffer": "",
+      "metadata1": 10,
+      "host_reconstructed_internal_request": "$06D1A1023350140A00",
+      "steps": [
+        {
+          "raw_candidate": "$18D2A10235A2020A0B",
+          "remaining": 2,
+          "chunk_counter": 1,
+          "buffer_before": "",
+          "buffer_before_terminal_override": "10*11",
+          "buffer_after": "10*11",
+          "metadata2": -1,
+          "action": "replace with first two values; possible metadata2",
+          "conditional_parser_input": "*#18*51*510#10*1*10*11##",
+          "parser_call_va": "0xe49c",
+          "send_call_va": "0xe4b4",
+          "send_condition": "descriptor word != -1; no IsCorrect guard is inserted between parser and send here"
+        },
+        {
+          "raw_candidate": "$18D2A10235A10C0D0E",
+          "remaining": 1,
+          "chunk_counter": 2,
+          "buffer_before": "10*11",
+          "buffer_before_terminal_override": "12*13*14",
+          "buffer_after": "12*13*14",
+          "metadata2": -1,
+          "action": "replace with three current values; selected rows bypass row0x19-only append",
+          "conditional_parser_input": "*#18*51*510#10*2*12*13*14##",
+          "parser_call_va": "0xe49c",
+          "send_call_va": "0xe4b4",
+          "send_condition": "descriptor word != -1; no IsCorrect guard is inserted between parser and send here"
+        },
+        {
+          "raw_candidate": "$18D2A10235A0030F10",
+          "remaining": 0,
+          "chunk_counter": 3,
+          "buffer_before": "12*13*14",
+          "buffer_before_terminal_override": "3*15*16",
+          "buffer_after": "3",
+          "metadata2": -1,
+          "action": "replace with three current values; selected rows bypass row0x19-only append; terminal path overwrites scratch with terminal one/two-field record",
+          "conditional_parser_input": "*#18*51*510#10*3*3##",
+          "parser_call_va": "0xde9c",
+          "send_call_va": "0xdeb4",
+          "send_condition": "descriptor word != -1; no IsCorrect guard is inserted between parser and send here"
+        }
+      ],
+      "final_active_flag": 0,
+      "final_request_state": 0
+    }
+  ],
+  "physical_metadata_names_units": "unresolved; numeric metadata1/2 remain unassigned"
+}

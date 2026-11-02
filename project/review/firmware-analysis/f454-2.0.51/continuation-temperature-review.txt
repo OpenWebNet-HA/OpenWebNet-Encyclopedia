@@ -1,0 +1,38 @@
+# Independent static peer review
+
+**PASS for the selected conditional mapper dataflow. No material correction required.** The new code evidence establishes string preservation through the identified backend assignments. It does not establish physical input availability, actual HTTP/event delivery, browser execution or a negative-temperature display defect.
+
+Reviewed `REPORT.md`, collector, host model, literal/word evidence and thirteen original disassembly spans. Reproduced the collector with `Path.write_text` intercepted into memory: **15 generated outputs matched existing UTF-8 bytes exactly**. Reproduced the pure Python model the same way: **one output matched exactly**, including four string assignments and one selector rejection. Verified four historical input-report hashes, all thirteen saved span-output hashes, the exact executable hash, sixteen original word/table assertions and twenty selected literal-pool entries. No original ARM/JavaScript/library code, old execution matrix, runtime helper, browser or live I/O ran. Only this review file was written; all reviewed files were checked unchanged afterward.
+
+## Dispatch and fields
+
+The mapper's subtract-one class dispatch at0xa0d90–0xa0d98 makes table word0xa0da4 the **classifier return2** route to0xa1898. This is the api-arm classifier namespace, not libopen/libcommon kind2 or any SCS type2. The selected route calls parser0xa0214 and swaps WHO/DIM/WHERE/tail fields into offsets0/4/8/12; the completion byte moves separately. WHO decimal conversion/table selection reaches the WHO4 branch0xa2dd8. Its exact DIM15/DIM0 compare and branch pairs reach0xa6b98/0xa9afc. This is supported static selection, without a new execution of the complete classifier or malformed-frame acceptance matrix.
+
+The general dimension parser uses capture bounds when constructing its WHO/WHERE/capture3 strings, then splits capture3 at the first `*`. That must remain distinct from the later dedicated DIM0 capture handling. The report preserves this distinction.
+
+## Crucial string operations
+
+- **DIM0 capture suffix:** Helper0xc002c writes capture start/end pointers and a validity byte. The caller loads only the start pointer into the `std::string(char const*,...)` constructor at0xa9d24/0xa9e50. For `*#4*1*0*0501##`, intermediate suffixes `1*0*0501##` and `0501##` are therefore correct under ordinary C-string construction. This is not a fabricated capture-only intermediate or an assumption that the helper NUL-terminates the capture.
+- **Trimming:** The scalar path saves the `find('*')` result inr8. Original0xa9eb0 compares that **position** with100; `bls`0xa9eb4 is unsigned. For the ordinary digit scalar there is no `*`, so unsigned `npos` selects the subsequent `find('##')`, yielding count4. The substring at0xa9f4c preserves `0501`/`0511`. This is not a measured-value threshold or clamp.
+- **DIM15 selector1:** The nonempty tail goes through0xab6a4 to extract its first token, then exact comparison with literal`1` at0xa6bb4. Selector2 follows the mismatch branch outside this event assignment. For selector1, the original bounds check and substring calls isolate the next token before its next `*`: `1010` or `1501`. The trailing flag-like field is excluded. Its physical meaning and exceptional/missing-delimiter behavior are not established here.
+- **JSON type:** Both actual-temperature assignment paths call the named `cppcms::json::value::str(std::string const&)` import0xf69c, then assign that string-valued temporary to the selected JSON member. The DIM15 call0xa6de8 receives the isolated scalar temporary inr1; the DIM0 call0xa9f6c receives its trimmed substring. No scalar numeric conversion, sign compensation or leading-character removal appears in these extraction-to-setter paths. The conclusion assumes ordinary named standard-library/CppCMS contracts; it is not new execution of their implementations or final serialization.
+
+The event-name/type/WHERE assignments and common completion join are consistent with the report. WHO is added as a string only when the original completion byte is nonzero. The illustrated event is explicitly a field subset, not a captured or complete response. DIM0's dedicated digits-only regex and DIM15's general WHERE/selector parser remain distinct despite their common event name. Neither chooses a physical control-zone/external-probe object solely from the numeric WHERE.
+
+The five finite model cases preserve their explicit source/standard-string assumptions. Python regex is not presented as Booster equivalence, and the model does not run vendor code. The claimed lack of backend compensation is warranted **for the identified normal mapping paths**, while a live producer→HTTP→frontend→DOM chain and physical signed/501..511 semantics remain outside the result. The frontend counterpart was not re-audited here.
+
+## Exact pins
+
+| Artifact | SHA256 |
+|---|---|
+|`REPORT.md`|`051da2368efdeb1b97526bfd88c49a1223a51546a24e43195727aafcc3962f9f`|
+|`collect_temperature_mapping.py`|`b604c7a062b07ff9dfc7d23adf1dba8a22fd751d6cfe00688f04e9fcd4b39dcb`|
+|`model_mapping.py`|`ff86ab569ad1ab25966f4c225a4f1e92e8389886ed33c5699b25248c2a6cc761`|
+|`model-results.json`|`dd6ad1aaf820bd8c2051bfed6b1af7509b158ddf6cfa1fb261383e35e52630e1`|
+|`input-manifest.json`|`03c88f1fdc683b94e0a32449f45fa2c6363875e3189bea1a88f85930a8f23763`|
+|`literal-and-word-evidence.json`|`47602589196cb8c3620c740ceab438956882173f42e27d56100b69ae50f91c00`|
+|`capture_helper.txt`|`80100702acce557df17717f663f24d0fa74934b3f58e4ee651f1dcaad222875f`|
+|`dim0_mapping.txt`|`68d07c60bf46bea439b5548405cbec4c4b5d57d4a61549b1fcb1f79c4e576f2c`|
+|`dim15_mapping.txt`|`18177cd6f4a0dcbf5eed220135f730574a74c2c6bea83d146a160f9f800b7f7c`|
+
+To repeat without overwriting evidence, execute each host script with `runpy.run_path` under a patched `Path.write_text` callback that records resolved output path and UTF-8 bytes, then compare against `read_bytes()`. Set `sys.dont_write_bytecode=True`. The normal collector/model commands write their outputs; this review used only intercepted writes and comparison.

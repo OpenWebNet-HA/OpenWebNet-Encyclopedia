@@ -1,0 +1,44 @@
+# Independent source review: BN3L captures and local request handoff
+
+PASS, no correction requested. I independently read the frozen report/collector, captured-state and handoff records, the original scheduler's selected bytes and current first copies. Only the new host collector's read-only `--check` was run. No original/native/vendor/provider/JsonCpp/target OS or I/O execution, semantic fixture or CPU replay was added. The existing MyHOMEServer1 ledger remains1 corpus/8 entries/340 original code-hook visits/0 C primitives/12 redirects/8 EXIT/0 guard stops/360 hooks plus4 data-relocation setup writes.
+
+## Original identities and independent verification
+
+The original image object is `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. I read it through ImageVFS and independently derived both ELF PT_LOAD mappings. The RX segment is offset/VA0; the selected RW mapping starts file0x14fb1c/VA0x15fb1c, so the receiver slot VA0x1666a4 is file offset0x1566a4. This avoids treating every linked data VA as a file offset.
+
+Independently checked all14 recorded raw-span hashes/offsets,30 guards,12 decoded direct BL/B.W targets,8 member-key PICs,4 callable-target PICs,2 GOT-base PICs, the actual receiver addend/relative relocation and3 declared JsonCpp imports. Imported symbol declarations are not live binding. All7 input identities, manifest members and20 exact immediate first copies match sizes/SHA256/current counterparts. The host reproduction passes18 outputs. Selected retained instruction windows have complete boundaries; exploratory unrelated partial disassembly is not used as proof.
+
+## Three object namespaces and actual capture producers
+
+- First invoker`0xd14a4` and second`0xcf064` each load the first word of incoming callable storage into R0, then tailbranch to`0xcf5c8` and`0xcdd14` respectively. Their receivers are heap-capture data, not automatically the compiled116-byte action object, a JSON result or hidden forwarded command arguments. The adjacent function at`0xd14ac` is outside this review.
+- The selected constructor's52-byte first capture has word0 from compiled112, string at4, compiled92/96/100/104 copied at28..40, compiled108 at44 and the operational-duration getter result at48. The selected original ID-copy prefix`0xcf162` loads the compiled string pair at56/60 into constructor local SP72/76 before the retained copy chain; normal valid string/provider/copy provenance remains conditional. Capture48 is distinct from the compiled action's thread-holder offset48.
+- First manager operation2 branches to`0xcdc68`, requests52 bytes, copies word0/string4, then the remaining words28..51 and stores the new capture pointer into destination callable storage. Its string length/heap alternatives converge conditionally on that copy continuation. Operation3 conditionally frees a non-inline string and requests52-byte capture deallocation. These are local source requests, not observed live heap ownership or concurrency safety.
+- The second capture is independently24 bytes with its string at0/4 and inline storage8. Its manager operation2 requests24 bytes and stores the cloned string capture pointer. It does not have the first capture's six extra words. Second callable construction remains dependent on the previously reviewed duration/constructor branch. The report properly inherits that selection and the shared scheduling contract rather than counting them as newly proven activation.
+
+## Selected body and request joins
+
+The first body retains its capture in FP, uses capture+4 as the ID-string subobject and tests capture48. Its nonzero selected branch requests the already known opaque query boundary`0x10f4a0` with selector0; zero goes to the retained local-record prefix. Query success, cache freshness, snapshot semantics or coherent restoration are not inferred. The record prefix copies the string, uses capture28 in its bounded status-index path and conditionally writes capture0>0 into local record40/presence36. The status table and alternate/merge/helper paths remain outside the claim.
+
+For the selected first request at`0xcf930`, exact PIC literals are `jsonrpc`, `method`, `id`, `params`. JSON storage is this body's SP72; the first three values are constructed from descriptor string subobjects SP408/SP432/SP456. Params is the opaque`0xd163c` result from the separate record at SP480. The same method-string subobject SP432 is passed in R1, JSON SP72 in R2, and GOT-sourced receiver in R0. These are normal-return request arguments, not proven descriptor values or a fully traced params merge.
+
+The second body has its own frame and capture. It uses descriptor strings SP528/SP552/SP576 and params conversion from record SP600, then calls`0x5dda0` at`0xcdf42` with R1=SP552 and R2=SP56. Both original GOT bases resolve to0x1659a4; offset0xd00 selects actual relative slot0x1666a4 with linked addend0x16711c. That positive shared receiver source does not prove its active initialization, remote service identity or effective lifetime. Different stack-frame offsets and different captured objects are not overlaid.
+
+I did not inspect the bodies of descriptor`0xd20c0`, converter`0xd163c`, query`0x10f4a0` or output delegate`0x5dda0`; receiving/transport/MQTT/libjel/authentication/session/framing routes remain closed. The first body continues after its selected handoff, so this is not a complete callback return/completion result. Equal keys and receiver do not establish equal method/params, paired order, restoration, a physical stop, delivery, external acceptance or a physical operation. The report preserves all of these boundaries.
+
+## Preservation and applicability
+
+The first-candidate index was computed before exclusive creation and includes report/collector/manifest and all generated evidence. No author candidate, earlier dossier, source or repository file was edited; no correction/failure/history is invented. Source identities, local offsets and the product's curated scenario role establish no public BN3L physical meaning or universal support/domain rule. Valid C++ objects/captures, normal allocation/string/JSON/helper returns, candidate import/data binding, admission, lifetime and no incompatible mutation remain premises. Complete body branches, descriptor/parameter semantics, configured scenes, activation/order, exceptions/unwind and whole ownership remain open.
+
+PASS is limited to this exact bounded original captured-receiver→local-request evidence and its preserved identities. It is not a whole-runtime, full source, protocol, lifetime or physical certification.
+
+## Frozen reviewed identities
+
+| File | Bytes | SHA256 |
+| --- | ---: | --- |
+| `callable/REPORT.md` | 9307 | `0f55aa02fd373acbd1b7ef81f2e85aa71bf7ae27e826663bf91061f1376fb3e7` |
+| `callable/collect_callable_v1.py` | 10519 | `a93c3890294c69d9f152cf54a8464b7e76e3bef89b85e6be842334be26fd6cba` |
+| `callable/ORIGINAL_SOURCE.json` | 10603 | `4f4f713a188108c5c6458fb68c6e27da44d6106e759c10cda745166f568042e2` |
+| `callable/CALLABLE_HANDOFF.json` | 2682 | `81a27094fcd5c19b993e40270e3528429d67bc9e2ea715adee4f84e04a0266f1` |
+| `callable/INPUTS.json` | 1613 | `e8379c0413027f2b28b9c13d8249427a1af2f69321e16c6a95698fa6f369f921` |
+| `callable/OUTPUT_MANIFEST.json` | 2989 | `0835f1abbf548fe89d0c31eef3bd321c1bea403ddedcb1c0d6dfb242973ad686` |
+| `callable/first-candidate/INDEX.json` | 2787 | `4c216ee68a593ce41d926d659e517eb7d9b83cfe533d2bac25ea1fcd52c2e16d` |

@@ -1,0 +1,17 @@
+## F460: a selected consumer of the staged filename list
+
+An actual updater wrapper passes its incoming pointer and literal selector3 to a later local consumer. The consumer follows the outer pointer to a context, then record+56 and that record's list at +8. Under valid-node and ordinary GLib returns, it obtains a node's GString text, tests for a dot substring and, on the selected masked-selector path, requests a new GString from that same text.
+
+The earlier XML producer appends strings through that context/record/list shape. Composition still requires the same valid context and stable list; a common constructor/caller and natural parser-to-consumer order have not been established. The producer's record kind2, this wrapper's selector3 and package status4 remain separate namespaces. The substring branch is not a full extension, accepted-path or security policy.
+
+The new trace stops at the local string-construction request, before subsequent command, extraction or update operations. It proves neither the consumer's full output contract nor compatibility, authenticity or installation.
+
+## F461: deferred records to a timer request and same-owner re-entry
+
+The selected not-due path compares record+32 with a clock return plus10 using unsigned64 arithmetic and tracks a local minimum candidate. A nonzero candidate later leads to a fresh clock request, a signed interpretation of the subtraction result, the original division-by1000 instruction sequence and a timeout-source request using the low32 interval bits. The earlier comparison does not establish a positive or nonoverflowing delta across the fresh clock sample.
+
+The packaged clock candidate computes two `gettimeofday` result words as `word0 * 1,000,000 + word1`; microseconds follow only under the ordinary successful AArch64 timeval ABI. The timeout candidate stores the unsigned interval and requests a monotonic clock. One conditional helper branch forms a ready-time request using that clock plus1000 times the stored interval. These are distinct clock/provider contracts, not measured elapsed time or guaranteed dispatch.
+
+The executable registers its actual callback with the same supplied owner pointer, requests source attachment and unreferences its local source. The complete local callback forms the list address at owner+136 and tail-requests the dispatcher again with that owner. Actual activation, binding, source/list lifetime and callback behavior remain premises. The producer of nonzero record+32 is still open; it is distinct from the constructor timestamp at +24. No runtime clock, record or timer was supplied or executed.
+
+The [run12 source and review capsule](../../project/review/firmware-analysis/f460-f461-run12-2026-11-01/README.md) preserves original code/provider hashes, guards, callback relocation, exact first copies and independent reviews. Both additions are static reasoning; no updater, clock, timer, list fixture or physical operation was executed.

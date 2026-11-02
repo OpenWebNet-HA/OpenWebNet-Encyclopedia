@@ -1,0 +1,8 @@
+{
+  "host_semantic_models": 0,
+  "method": "Static ImageVFS original ELF32/PT_LOAD/Thumb2/PIC/GOT/RTTI/relative-relocation and selected local callback-copy/vector handoff only",
+  "native_helpers": 0,
+  "original_instructions": 0,
+  "scope": "No admissionhandlerbody retained; no transport/auth/session/framing/MQTT/libjel provider bodies; localappend is not service registration.",
+  "targetOS_or_IO": 0
+}

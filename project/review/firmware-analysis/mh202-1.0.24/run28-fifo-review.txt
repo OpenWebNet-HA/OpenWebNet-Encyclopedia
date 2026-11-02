@@ -1,0 +1,46 @@
+# MH202 local FIFO descriptor run28 independent static source review
+
+PASS for authoritative REPORT.v2.md plus WORDING_REFINEMENT.md; no additional correction requested. This independent review reproduces the static collector and checks original selected source/bytes, finite supplied-result ledgers and preservation history. No original/native code or target open/read call was executed. Host analysis reads files. Author artifacts, originals and earlier dossiers stayed read-only; this is a new review file.
+
+## Exact version and source identities
+
+| Artifact relative to research 2026-10-30 | SHA256 |
+| --- | --- |
+| lifecycle/run28/REPORT.v2.md, authoritative | 59a19126dfca9f0ff909b04f7e70af1f9df5ec2f09f368b70c93942fb0d81d5c |
+| lifecycle/run28/WORDING_REFINEMENT.md | 15c0350d69c0d835114651ec70c1a6b5a2f97caea8634c89d7c8a5a806d6cc46 |
+| lifecycle/run28/REPORT.md, preserved v1 | 5e5fe4a5a42a8e143c32d7d8819e57da278beb9ec9bb03ad4894814c4442d647 |
+| lifecycle/run28/collect_fifo_v1.py | 1525af71d5f58d6759044032cc2db378e6b3b235c8d5f520f61204540c00b0ec |
+| lifecycle/run28/output-manifest.json | 3aee60641c10b2f5a2d6b81c69dd2acf11fdaba26e39829bafa60d3577f80565 |
+| lifecycle/run28/initial-generated-v1/SNAPSHOT_INDEX.json | 73bb979b59ff13c6c3fdc099cde2229307857cebc8510c1b26bf67eb8e3313a0 |
+
+Original image-relative /home/bticino/bin/bt_script matches SHA256f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4 and /home/bticino/lib/libdomotica.so.0.0 matches5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09. Accessor and two historical context reports are the remaining three pinned inputs. Historical launch/cleanup findings are context, not newly repeated coverage.
+
+## Reproduction and exact history
+
+`python3 -B work/mh202-firmware/research/2026-10-30/lifecycle/run28/collect_fifo_v1.py --check` passes14 outputs including manifest, five original spans,16 critical words, five inputs and four host ledgers; original execution/hooks0. I independently reread original ELF bytes through ImageVFS, mapped PT_LOAD ranges, compared all five raw-span hashes and16 words, verified all five input hashes/lengths and13 evidence hashes plus report/collector pins. All16 indexed actual first copies match their hashes and current immutable v1 files.
+
+Parent's three actual before-wording report/collector/manifest copies also match unchanged v1. I independently verified that v2 is produced by exactly the two disclosed text substitutions and no other changes. It corrects the overly broad target/host-I/O0 phrase to original target open/read0, and removes an implied fresh-permission requirement where the actual missing prerequisite is an identifiable source/provenance. No source result, code, evidence or count changed. The v1 collector intentionally still pins the preserved v1 report; it is not silently repointed to v2. New authoritative prose/refinement are separately pinned above, without a manifest/review cycle.
+
+## Source and pointer/dataflow checks
+
+Original bt_script option code0x98e8..0x99b8 uses the exact getopt format f:s:r:w:i. The w/r branches load optarg and store pointers at base0x13494+0x48c/+0x490, i.e.0x13920/0x13924. They are pathname pointer slots, distinct from exported descriptor integers f_wr/f_rd. Original selected main gate0x9a74..0x9ab8 checks script and both path pointers, loads -r into r0 and -w into r1 and requests the two-argument imported helper at0x9ab0. No filesystem type/visibility/open-success predicate follows from this nonNULL gate.
+
+The complete local helper0x9120..0x9188 preserves its two path arguments, calls open(readpath,0) then open(writepath,1), and stores both returned words through the PIC/GOT f_rd/f_wr slots. Original PIC arithmetic resolves base0x12114, read GOT0x12238 and write GOT0x12214. No intermediate comparison or close appears in the complete104-byte wrapper. It returns the second r0 result; main immediately calls getpid at0x9ab4 without comparing that result. These are bounded source facts, not a whole-process error/liveness or successful-FIFO conclusion. The numeric access flags are observed original arguments; ordinary read/write access interpretation remains an API premise.
+
+The executable's exported f_rd/f_wr and library definitions/GLOB_DAT records support a conditional ordinary executable-first, no-interposer join. Direct libdomotica dependency and absent selected RPATH/RUNPATH/SYMBOLIC tags are correctly distinguished from a full loader closure or observed runtime binding. The report does not collapse pathname slots into descriptor globals or rule out other providers/overrides.
+
+Only the OREAD PIC prologue and descriptor-to-read request slice were reviewed. Original0x82b0..0x82e4 loads that same f_rd GOT-target word into r0, supplies a local buffer in r1/count0x408 in r2, requests read and stores the result at fp-24. The report stops there: natural reachability, read result classification, payload grammar/content and complete OREAD control flow remain uninspected. It does not turn a descriptor-flow proof into response parsing or source-protocol evidence.
+
+## Bounded R/P query and finite models
+
+I independently recomputed the exact two patterns R-newline-NUL and P-newline-NUL in the two verified ELF byte arrays, without exporting the containing string text. Counts0/1/0/0 and the one interior P suffix's offset/length/hash agree with the saved query. In bt_script it is at file0x315a/VA0xb15a, offset27 in a29-byte NUL-delimited string, not a separately NUL-preceded literal. The absent exact little-endian pointer-word occurrence is a bounded byte result, not absence of computed/PIC/interior references or a writer.
+
+This does not establish either a dedicated R/P producer or its absence. Other providers, generated bytes, configured script text and missing extra/4 resources remain gaps. The historical functional producer evidence is separately pinned, not reclassified as a new exhaustive scan. No containing string, payload framing or unknown helper implementation was inspected to force closure.
+
+All four host cases correctly retain the supplied first/second open results in the respective globals and return the supplied second result, including -1 and0 fixtures. They are arithmetic/dataflow transcriptions, not actual descriptors, valid file handles, blocking behavior or OS outcomes.
+
+The separate0x8c90 helper remains opaque and uninspected. The complete selected0x9120 wrapper does not call it and contains only the two local open requests/global stores above. No third-party/external/network/session/authentication/framing helper, target OS or vendor execution was used in review. This respects the explicitly bounded local-file descriptor task rather than expanding a similarly named helper into unrelated behavior.
+
+## Scope conclusion
+
+Authoritative v2 correctly limits conclusions to selected local pointer/descriptor/API dataflow and an unresolved R/P producer question. Provider binding, actual path/configuration assets, filesystem/FIFO visibility, open/read returns, complete cleanup/signal/response behavior and physical process outcomes remain unknown. The preserved wording refinements are factual/permission-clarity corrections with no source-semantic change. Current source and exact history pass; no further author change is required.

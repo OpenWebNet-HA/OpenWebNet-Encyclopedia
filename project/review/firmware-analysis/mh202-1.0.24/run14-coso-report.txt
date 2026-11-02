@@ -1,0 +1,94 @@
+# MH202 run14 — automation STM ordinary receipt ownership versus query state
+
+**Static source/effect evidence; original execution0.** This batch joins one admitted ordinary WHO2 request to the actual automation STM's saved request ID and selected field-status receipt path. It reveals two distinct local axes: query-active at context+28, and receipt-pending/saved ID at+52/+56. A selected ordinary WHAT0 request sets the latter without requesting a timer on that route. This is not the lighting STM's44-byte/state-number layout, raw parser acceptance, successful command transmission or physical shutter state.
+
+## Original identity and reproduction
+
+| Original normal-image path | SHA256 |
+|---|---|
+|`/home/bticino/libcoso/libplug_automation_stm.so`|`0d8969f4623493fa8a054694a836d958b612e137fe34d89ba1d3ccade7ce43fb`|
+|`/home/bticino/libcoso/libcoso.so`|`f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97`|
+
+Fresh MH202 ImageVFS reads and ELF32 PT_LOAD mapping underpin all addresses. From the research root, `python3 -B coso/run14/collect_evidence.py --check` reproduces21 evidence outputs plus manifest:14 original spans,34 exact instruction words,3 descriptor callback relocations,2 core receipt literals and one request/three field/one conditional timer-gate host ledgers. Input hashes pin originals, accessor, run13 automation TR and run12 lighting STM reports. Exact source VAs/file offsets/byte hashes and deterministic output identities are separate. No original ARM/libc/parser/plugin callback, timer, allocator, target OS/process, service/network/device or authentication route executes. Earlier images/reports stay read-only; no F454 address/layout/fixture is used.
+
+## Actual automation descriptor and private context
+
+The original **64-byte descriptor automation_stm at`0xc4b4`** has relocations:
+
+| Descriptor offset | Original callback |
+|---|---|
+|+36 /`0xc4d8`|initializer`0x1fb0`|
+|+40 /`0xc4dc`|field callback`0x1c0c`|
+|+44 /`0xc4e0`|application callback`0x2ec4`|
+
+Initialization code at`0x18bc..0x18d4` appends numeric2 to descriptor+52 and requests register_state_machine. This is configured WHO2/STM routing metadata, not proof of an active instance. Initializer`0x2e80..0x2e90` requests **g_malloc0(60)** when private storage is absent and stores it at descriptor+56. `0x2000..0x200c` saves descriptor at context+0, supplied initialization argument[0] at+8, argument[1] at+12. Actual allocation/registration/core-callback membership and these supplied owner values remain unexecuted.
+
+Selected field identities come from actual accesses, not transferred names:
+
+| Context offset | Selected source use |
+|---|---|
+|+4|query timer source pointer|
+|+8/+12|supplied attach context/completion callback|
+|+16|command/parameter admission table|
+|+20|dimension/query admission table|
+|+24|address admission list|
+|+28|query-active flag|
+|+32|query-mode word on selected routes|
+|+36/+40|saved dimension/WHERE text|
+|+44/+48|optional saved selector text|
+|+52/+56|local receipt-pending flag / saved request record+60 ID|
+
+The zero-allocation request supports a conditional initial0 premise. Successful startup/table construction, live bindings and complete private lifetime are not inferred. Numeric parsed kinds, COSO metadata and these context flags are separate namespaces.
+
+## One selected ordinary application request
+
+The application callback receives descriptor, message record and two output-list pointers. It loads the input parsed pointer from record+0 and private context from descriptor+56. Kind1 selects`0x3054` via the jump table at`0x2f44..0x2f68`. It searches the actual context command table for matching WHAT text and calls the local parameter-table helper at`0x309c`. If the table/helper or address list fails, displayed branches choose a NACK path; this batch supplies successful admission, not actual table contents or an accepted configured command.
+
+Selected premises are coherent post-parser WHO2/kind1/WHAT`0`/WHERE`0`, null selector+20, command/parameter helper success and matching context address-list entry. The low ordinary WHAT route and address matching reach`0x301c`; it sets source record+4/+8 to1 and dispatches kind1 to`0x359c`. No missing script/config asset is invented to establish these premises.
+
+The g_ascii_strtoll result WHAT0, after the source's64-bit subtract1/unsigned compare, takes`0x35d0→0x361c`. Thus it bypasses the displayed extra formatted-prefix request used by another selected WHAT range. `0x361c..0x3634` appends the **original request record** to the supplied field-output list and branches to`0x3380`:
+
+- load request record+60;
+- store context+52=1 at`0x338c`;
+- store the loaded ID into context+56 at`0x3390`;
+- return0 at`0x3394..0x3398`.
+
+This selected route contains no g_timeout_source_new/attach request and does not set context+28. It is therefore not evidence of a generic one-second receipt timer. It also does not prove no timer could exist from another prior route, or a universal busy/request-replacement policy; outer callback admission/lifetime is unclosed.
+
+The distinct kind3-selected route at`0x339c..0x34a0` supplies the query-axis producer: append request, optionally destroy an existing source, request timeout argument1000, set callback, attach using context+8, then store context+28=1 at`0x33f4`. It saves query fields/selectors and eventually joins the same+52/+56 receipt store at`0x349c→0x3380`. The timer callback literal resolves to stripped local entry`0x390c` under PICbase`0xc3d4`; a nearest-symbol app label is not treated as its function identity. This identifies the two axes without reconstructing full query completion/address semantics or asserting elapsed timing.
+
+## Field status: ID correlation guards the local receipt
+
+The field callback`0x1c0c` takes parsed pointer from incoming record+0. With **query-active+28==0**, `0x1cb0..0x1cc8` tests receipt-pending+52 and compares saved+56 with incoming record+60. For a pending matching ID:
+
+| Incoming record+52 local status | Source effect |
+|---|---|
+|1|queue_ack_to_open at`0x1f0c`|
+|2|queue_nack_to_open at`0x1f30`|
+|another displayed value|neither receipt helper on this selected branch|
+
+All those matching-ID paths join`0x1ce0`: clear context+52 at`0x1ce4`, set saved+56=−1 at`0x1cf0`, then continue the selected field-forward policy. This completion does **not** call the distinct query reset body. Source status1/2 are local metadata inputs, not inferred physical ACK/error enums.
+
+If the ID differs, `0x1cc8` instead goes to`0x1c80` without receipt or those clear stores. That same continuation suppresses append for parsed kinds2/3, but for the supplied normal parsed kind1 it sets incoming record+8=3, appends the incoming record to the OPEN-output list and returns0 (`0x1c90..0x1cac`). Consequently ordinary field forwarding does not universally require matching ID, while this selected local receipt does. No outer ownership/key/routing or cross-request defect follows from that local distinction.
+
+The actual same-build core helpers make the receipt construction boundary concrete: NACK`0x2a44` duplicates `*#*0##` and sets type7; ACK`0x2ad0` duplicates `*#*1##` and sets type6. Both request64-byte zero allocation, timestamp and list insertion with final representation2 and metadata+4=2/+8=4. These are unexecuted allocator/time/list/provider calls, not emitted or delivered frames. The preceding request's field-output handoff and later actual TR conversion/transport are not joined into a causal physical exchange here.
+
+## Timer and reset do not collapse the two axes
+
+Original local timeout body`0x390c..0x39f0` reads context+28 at`0x3950`. Zero returns0 at`0x395c` without reading or clearing receipt-pending+52/saved ID+56. A **hypothetical callback entry** on the ordinary-only context therefore leaves that pending state unchanged; this does not imply such a callback is naturally scheduled by the ordinary route.
+
+With query-active nonzero, that body requests ACK construction, invokes supplied context+12 completion with list pointers and descriptor+60 manager, then destroys/reset/frees selected query timer/fields. Actual callback/publication and timer delivery/cancellation/lifetime remain delegates. The separate reset helper`0x1bac..0x1c0c` clears+4/+28/+32 and frees selected saved strings; its displayed body does not itself clear+52/+56. Its reset stores must not be promoted to a whole-context lifetime or universal pending-receipt reset.
+
+## Finite host ledgers and remaining bounds
+
+`host-ordinary-request-field-ledger.json` starts with declared query flag0 and admitted synthetic request ID41. It records the actual source effects producing pending1/ID41, then three independent supplied field entries:
+
+1. ID41/status1/kind1 requests ACK, clears pending/ID and forwards the ordinary record.
+2. ID41/status2/kind1 requests NACK, clears pending/ID and forwards the ordinary record.
+3. ID42/status1/kind1 requests neither receipt nor clear, but still forwards the ordinary record.
+
+The fifth ledger is the explicitly hypothetical timeout entry on that ordinary context and its early return. No original callback/list/timer/parser runs. These are event/effect compositions, not copied lighting truth tables, a full command/status domain or naturally timed request/response test.
+
+High-confidence static: automation-specific descriptor/60-byte allocation, callback roles, selected admission→request-ID store, distinct query timer producer, field correlation/status/forward/clear branches, timeout gate and core receipt construction. Conditional: coherent parsed fields, configured admission tables, descriptor/private owner, normal imports and effective same-build providers. Open: actual outer STM eligibility/key/status producer, complete query/address/config/defaults, new request replacement, source/record/list lifetime, timer/receipt transport and physical behavior. No original-execution corpus count changes.
+
+The next useful join is the outer COSO dispatcher/status producer admitting this exact ordinary field record and assigning record+60/+52; it could distinguish software-local receipt status from translated endpoint events. A separate query path could be followed only with justified address/dimension state. Repeating the completed WHO2 TR body or lighting STM matrices would not resolve these ownership gaps.

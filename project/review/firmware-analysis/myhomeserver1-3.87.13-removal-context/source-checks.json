@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "area": "context",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "5ccf84",
+          "wall_time_seconds": 0.046180425,
+          "exit_code": 0,
+          "original_token_count": 32,
+          "output": "{\"check\": true, \"outputs\": 17, \"spans\": 7, \"guards\": 14, \"keys\": 2, \"direct_branches\": 4, \"inputs\": 5, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "area": "scene-condition",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "5d0bc8",
+          "wall_time_seconds": 0.115572792,
+          "exit_code": 0,
+          "original_token_count": 14,
+          "output": "{\"check\": true, \"outputs\": 19, \"original_execution\": 0}\n"
+        }
+      }
+    }
+  ]
+}

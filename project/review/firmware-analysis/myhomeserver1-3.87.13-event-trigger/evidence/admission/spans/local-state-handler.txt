@@ -1,0 +1,81 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000ee708 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35f50>:
+   ee708:	f890 2030 	ldrb.w	r2, [r0, #48]	@ 0x30
+   ee70c:	4b26      	ldr	r3, [pc, #152]	@ (ee7a8 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35ff0>)
+   ee70e:	447b      	add	r3, pc
+   ee710:	b15a      	cbz	r2, ee72a <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35f72>
+   ee712:	b510      	push	{r4, lr}
+   ee714:	4604      	mov	r4, r0
+   ee716:	e9d1 0200 	ldrd	r0, r2, [r1]
+   ee71a:	b12a      	cbz	r2, ee728 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35f70>
+   ee71c:	2a08      	cmp	r2, #8
+   ee71e:	d031      	beq.n	ee784 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35fcc>
+   ee720:	2a02      	cmp	r2, #2
+   ee722:	d003      	beq.n	ee72c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35f74>
+   ee724:	2a03      	cmp	r2, #3
+   ee726:	d01c      	beq.n	ee762 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35faa>
+   ee728:	bd10      	pop	{r4, pc}
+   ee72a:	4770      	bx	lr
+   ee72c:	7803      	ldrb	r3, [r0, #0]
+   ee72e:	2b6f      	cmp	r3, #111	@ 0x6f
+   ee730:	d1fa      	bne.n	ee728 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35f70>
+   ee732:	7843      	ldrb	r3, [r0, #1]
+   ee734:	2b6e      	cmp	r3, #110	@ 0x6e
+   ee736:	bf08      	it	eq
+   ee738:	2301      	moveq	r3, #1
+   ee73a:	d1f5      	bne.n	ee728 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35f70>
+   ee73c:	6ba2      	ldr	r2, [r4, #56]	@ 0x38
+   ee73e:	3b01      	subs	r3, #1
+   ee740:	2a02      	cmp	r2, #2
+   ee742:	d01b      	beq.n	ee77c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35fc4>
+   ee744:	2a03      	cmp	r2, #3
+   ee746:	d025      	beq.n	ee794 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35fdc>
+   ee748:	6822      	ldr	r2, [r4, #0]
+   ee74a:	4b18      	ldr	r3, [pc, #96]	@ (ee7ac <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35ff4>)
+   ee74c:	6812      	ldr	r2, [r2, #0]
+   ee74e:	447b      	add	r3, pc
+   ee750:	429a      	cmp	r2, r3
+   ee752:	d123      	bne.n	ee79c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35fe4>
+   ee754:	68e3      	ldr	r3, [r4, #12]
+   ee756:	b32b      	cbz	r3, ee7a4 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35fec>
+   ee758:	6923      	ldr	r3, [r4, #16]
+   ee75a:	1d20      	adds	r0, r4, #4
+   ee75c:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+   ee760:	4718      	bx	r3
+   ee762:	7803      	ldrb	r3, [r0, #0]
+   ee764:	2b6f      	cmp	r3, #111	@ 0x6f
+   ee766:	d1df      	bne.n	ee728 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35f70>
+   ee768:	7843      	ldrb	r3, [r0, #1]
+   ee76a:	3001      	adds	r0, #1
+   ee76c:	2b66      	cmp	r3, #102	@ 0x66
+   ee76e:	d1db      	bne.n	ee728 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35f70>
+   ee770:	7843      	ldrb	r3, [r0, #1]
+   ee772:	2b66      	cmp	r3, #102	@ 0x66
+   ee774:	bf08      	it	eq
+   ee776:	2302      	moveq	r3, #2
+   ee778:	d0e0      	beq.n	ee73c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35f84>
+   ee77a:	bd10      	pop	{r4, pc}
+   ee77c:	6be2      	ldr	r2, [r4, #60]	@ 0x3c
+   ee77e:	429a      	cmp	r2, r3
+   ee780:	d0e2      	beq.n	ee748 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35f90>
+   ee782:	bd10      	pop	{r4, pc}
+   ee784:	490a      	ldr	r1, [pc, #40]	@ (ee7b0 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35ff8>)
+   ee786:	5859      	ldr	r1, [r3, r1]
+   ee788:	f722 efac 	blx	116e4 <memcmp@plt>
+   ee78c:	4603      	mov	r3, r0
+   ee78e:	2800      	cmp	r0, #0
+   ee790:	d0d4      	beq.n	ee73c <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35f84>
+   ee792:	bd10      	pop	{r4, pc}
+   ee794:	6be2      	ldr	r2, [r4, #60]	@ 0x3c
+   ee796:	429a      	cmp	r2, r3
+   ee798:	d1d6      	bne.n	ee748 <_ZNKSt5ctypeIcE9do_narrowEcc@@Base+0x35f90>
+   ee79a:	bd10      	pop	{r4, pc}
+   ee79c:	4620      	mov	r0, r4
+   ee79e:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+   ee7a2:	4710      	bx	r2
+   ee7a4:	f722 ea46 	blx	10c34 <_ZSt25__throw_bad_function_callv@plt>

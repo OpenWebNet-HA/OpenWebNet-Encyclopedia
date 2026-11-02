@@ -1,0 +1,62 @@
+# MH2021.0.24 — SCS feedback header to conditional scenario measure state
+
+This batch closes the previously opaque SCS feedback stack predicate and composes one selected scenario measure-request route through the actual reverse TR/copy/STM branches. **Own original instruction/callback/emulator/OS/vendor-process/device/network execution remains0.** The separate run7 comparator corpus remains historical context (1485 original visits/75 primitives); it was not rerun or reused as firmware code here. No original image, prior report or repository document changed.
+
+## Material result
+
+SCS receive parsing uses exact format **`*%02u*%02u`**. The first unsigned field is written at SP+64 and chooses the selected route1; the second is written at SP+60 and supplies the queued-feedback nonzero/zero predicate. Route1 requests an opaque outgoing send before queue feedback. The tested return is **nonzero**, not positive/full-length; only supplied nonzero completion reaches the selected queue-head update. It writes record flag+52=1 for nonzero second field, otherwise2, preserving that selected queued record's existing key+60.
+
+For a selected ordinary scenario measure request, its outgoing decoded body `[address,0,0x1c,0x80]` has an actual reverse-TR branch that reconstructs a **WHO0 measure query candidate**, rather than a measured state value. Under coherent successful parsing/address/queue/callback premises, its copied key/flag can reach STM: flag1 moves the pending measure to state3, and parsed kind2 exits before the ordinary field-counter path; a later actual timeout would choose local ACK if state3 still held. Flag2 selects local NACK/reset. This is a conditional code/dataflow chain, not a captured exchange, accepted raw grammar, physical response or executed timer.
+
+## Provenance and reproduction
+
+Normal-image originals verified afresh by ImageVFS:
+
+| Original image path | SHA256 |
+|---|---|
+| `/home/bticino/libcoso/libplug_scs.so` | `07fe8d2b35264df4961e1cc9b648808a6ee5b32754a705b237fb90d0a6a6f6af` |
+| `/home/bticino/libcoso/libplug_scenarios_tr.so` | `b64fcd47314d457be86f7ce86406a401786f877b8e3a420c247376018e27a6fa` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+| `/home/bticino/libcoso/libplug_scenarios_stm.so` | `5b5709bd9b33945b4650f1ee86532b6459724376c108c22f69b097fc43f12d82` |
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/functional/run8/collect_evidence.py --check
+```
+
+Strict host-only check:15 outputs plus manifest,10 original spans,27 exact words,4 original inputs, two safe format identities and6 finite host branch compositions. Each original span records exact VA/file offset/raw-byte hash. `input-hashes.json` pins the accessor and immutable run7 dispatcher context. Manifest excludes report/reviews. No F454 firmware/layout/harness or authentication work was used.
+
+## Selected receive eligibility and the actual predicate producer
+
+The original SCS callback begins at0x2678. Its selected ordinary readable path excludes condition bits0x38 and requires mask0x01 at0x26e0..0x26f0, then requests bytes into an existing400-byte accumulation buffer. Receive/error/reconnect handling is retained as an external branch boundary; it is not executed here. The normal no-GError path appends/zeros its buffer and requires accumulated count>6 at0x2814..0x2818 before this scan loop.
+
+The selected buffer loop at0x28d0..0x291c computes its current length, requires leading `*` and byte3 `*`, and calls imported `sscanf`. Original pool0x2f78 resolves through PIC base0xb948 to **0x3298 `*%02u*%02u`**. Arguments are r2=SP+64, r3=SP+60. The sscanf return count is not tested; successful two-field extraction is an explicit normal-path premise of the host examples. This is not malformed/short-input analysis or a statement about prior local bytes.
+
+It also obtains the first `#` position. Header first field1 branches0x2934/0x2938 to0x2a94. First field2 has a different path, outside this selected chain. For first1, second field0 and nonzero take different logging arms, converging on the opaque request/send preparation at0x2abc. Its payload/connection setup is not decoded or given any authentication meaning here.
+
+The actual `g_socket_send` call is0x2b0c. At0x2b1c..0x2b20 it compares the returned r4 against zero, branching to0x2c80 on **nonzero**. Zero takes another cleanup/logging continuation. Consequently a supplied negative nonzero return also satisfies this local branch; this is a source predicate, not an observed failed send or a full GError/error-policy verdict. No send, peer, descriptor or runtime bytes are supplied to original code.
+
+At0x2c9c..0x2d2c, the path clears a private flag, obtains a queue head, and updates that existing record. Queue-empty exits instead; no record is invented. Original0x2cf8 reloads the **second sscanf field SP+60**, zero/nonzero chooses flag2/1 at0x2d04..0x2d1c. The saved slice writes+16,+56=1,+12=1 and removes the queue node; it does not allocate a new key or replace record+60. After an optional next-send request, source0x294c..0x298c stamps time and calls the supplied field callback. This establishes the predicate/queue record source, not a physical acknowledgement, validated queue correlation or complete lifetime.
+
+## One selected query body through reverse translation
+
+The scenario TR's measure parsed-kind2 branch0x1918..0x192c writes opcode0x1c and low byte0x80 (`mvn #0x7f`). With supplied successful address conversion and matching selector/private-context values, it calls the brief constructor for decoded body `[address,0,0x1c,0x80]`. This is the new query-kind route; run5's normal-command/no-parameter table is not repeated.
+
+On the selected reverse brief route (types3/9, source0x1814..0x18e8), a supplied decoded body whose first byte is not0xb8 reaches tests opcode0x1c and value0x80 at0x1854/0x1860. It passes the first byte to imported address conversion, formats exact **`*#0*%s%s##`** (pool0x1d94), with the brief suffix empty, and calls `scsmsg_to_openlist` at0x1894. With supplied address0x11→text11, the candidate is `*#0*11##`. No original hex/address/format/parser helper is executed, and this candidate is not claimed to be actual received state data.
+
+The core wrapper0x26d8..0x2764 copies source metadata+52 and+60 to its new record+52/+60 and sets format+56=2. The run7 actual field-to-STM numeric WHO criterion/callback argument join is reused context, not rerun as a new dispatcher matrix. The later selected STM path converts text format2 through imported `buf_to_openmsg`; this batch supplies successful coherent parsed-kind2 as an assumption. Complete actual raw/frame/provider acceptance, outgoing/feedback body identity and natural queue/translation eligibility remain unresolved.
+
+## Conditional STM consequence and host cases
+
+For selected state1, pending kind2 and matching saved/current key7, flag1 at0x1b60..0x1b70 sets state2, then0x1a00..0x1a0c sets state3. Parsed kind2 satisfies the unsigned2/3 exclusion at0x1a18..0x1a24 and returns before ordinary forwarding/address matching/counter increment. It does not itself generate a new state measurement or count a matching data reply. If the existing timer later actually fires with state3 unchanged, run6's already reviewed callback contract chooses local ACK then reset. This future choice is conditional, not another scheduled or executed experiment.
+
+Flag2 with the same key instead takes0x1b74..0x1b90, calling reset and queue-NACK. Neither path proves delivery or physical command success. Natural intermediate state changes, timer cancellation/ordering and counter history are not supplied by this composition.
+
+`host-selected-feedback-chain.json` contains six explicit cases: first1/second1,0,2 with supplied send1; first1/second1 with send0; first1/second0 with send−1; and first2 outside this selected route. The strings `*01*01##`/`*01*00##` etc. are **constructed header candidates**, not captured traffic or executed sscanf tests. Both extracted numeric fields, valid buffer/queue state, opaque send completion, selected original query body, address conversions, successful reverse parsing and current matching STM state are individually declared. No physical result is assigned.
+
+## Confidence and remaining questions
+
+High-confidence static: exact format/destination order, first-field routing, send nonzero gate, second-field predicate/queue-head update, reverse measure format, copied metadata, selected STM flag/key/kind branches. Conditional: source buffers/scan result, normal queue/callback/list/provider completion, TR body/address/coherent parser and current STM state. Unknown: live input origin, natural end-to-end transaction, state/data response availability, scheduling, ownership/refcounts and physical behavior.
+
+1. Close an actual selected raw-body→decoder/address/provider route before calling this a valid transaction; the current host header and post-parser query premises are not that proof.
+2. Trace one concrete later ordinary data response into the pending measure's address/counter path, preserving source key versus fresh-field key distinctions and reset-retained counter history.
+3. Follow final callback serialization/drain ownership only as a separate bounded question. Local ACK choice cannot certify measured data or delivery.

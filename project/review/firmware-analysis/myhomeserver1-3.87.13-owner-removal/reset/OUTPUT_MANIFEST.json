@@ -1,0 +1,35 @@
+{
+  "collector_sha256": "4ab1bba16aa0f245b8dde908012519fd017ae3cd278f647eb929be8a254798af",
+  "counts": {
+    "PIC_GOT_RTTI_chains": 1,
+    "direct_calls": 2,
+    "direct_target_query_hits": 1,
+    "guards": 9,
+    "inputs": 6,
+    "original_execution": 0,
+    "spans": 2
+  },
+  "outputs": {
+    "BOUNDED_CALLER_QUERY.json": {
+      "bytes": 1359,
+      "sha256": "36bc9e9f1a61452c19c14bbdfc9576db7a40e60375ac0673559644b8287f039b"
+    },
+    "INPUTS.json": {
+      "bytes": 1358,
+      "sha256": "a9c5c248fbc43709bbbfc8c5b2ff683ac588eda3d0e55e9b418710cf238e4176"
+    },
+    "ORIGINAL_SOURCE.json": {
+      "bytes": 1674,
+      "sha256": "1cd4f8e4210ff7d86550c64d304c3207c80153c3527161a0f7561d3744ed7390"
+    },
+    "spans/selected-stack-caller.txt": {
+      "bytes": 579,
+      "sha256": "80b2044a182632ad9fec7594806412ac173c6ee9610af983aad7bcecb3bbb176"
+    },
+    "spans/supplied-constructor-inline-string.txt": {
+      "bytes": 1316,
+      "sha256": "ee139dca8c3ceb66a221c8b5e60431c1d5aca3586e0c05e9d7643e181507f594"
+    }
+  },
+  "report_sha256": "2ba2740c2dd49d5cb9a40c265c0effc083c30d2fe172c053b21ee7d2ab63fdbd"
+}

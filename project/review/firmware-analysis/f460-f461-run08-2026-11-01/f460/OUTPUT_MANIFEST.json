@@ -1,0 +1,56 @@
+{
+  "collector_sha256": "4cf6d6b32b5c9855589b879b488c7828683c6ca545f824b49d0f434512e12c1a",
+  "counts": {
+    "PIC_joins": 10,
+    "branches": 9,
+    "guards": 36,
+    "imports": 18,
+    "inputs": 5,
+    "local_calls": 3,
+    "new_original_execution": 0,
+    "spans": 7
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 1035,
+      "sha256": "af0d4b9eeb5ef1bfba2017b29aa51f66f0f2b47c97417e8bec12f6459e977446"
+    },
+    "MANIFEST_CONTEXT.json": {
+      "bytes": 1256,
+      "sha256": "52e478025f7454df5b0917defdaa6ec30133c8b7968ac0789268d4cff8ffc933"
+    },
+    "SOURCE.json": {
+      "bytes": 14447,
+      "sha256": "7caa414a7f7ac40d07046c62390f93b6b28d169bdad2825f90616d87c794173b"
+    },
+    "spans/action-properties-type-selection.txt": {
+      "bytes": 2215,
+      "sha256": "de6a304498b1236cbb6cd65db07fa6144ff35266957c3a3904f688bdb91a72b3"
+    },
+    "spans/actions-node-selection.txt": {
+      "bytes": 922,
+      "sha256": "25c094fdb24583255e63c7a78b51af21692dff4e88055c982fae36acc72da953"
+    },
+    "spans/attr-child-normal-recovery-lists.txt": {
+      "bytes": 2175,
+      "sha256": "4f4ee455771858b6092227a7691253d223a156e98d466bf4da4f071478e6724b"
+    },
+    "spans/file-read-and-document-gates.txt": {
+      "bytes": 2248,
+      "sha256": "2a72ac2b4f8f8f0f8abf8b61c756d848297d49d7d36b054a6ac7a5abaa3c1f59"
+    },
+    "spans/file-test-entry.txt": {
+      "bytes": 1039,
+      "sha256": "2d3bd67363c6b205364bb2708458d1affea246a3a34686119c89a837f9084d02"
+    },
+    "spans/normal-cleanup-and-return.txt": {
+      "bytes": 1307,
+      "sha256": "ff651957356693bcd77b72167f3da2f392e836cc56230e2264b2276ff33e5c7f"
+    },
+    "spans/selected-local-wrapper.txt": {
+      "bytes": 1600,
+      "sha256": "35186477cdeb8c30e99192a757e908fe6b92463c25df921a2fc731c716160f5e"
+    }
+  },
+  "report_sha256": "8a46eb35e26d98eef19e44c9730445a8cee86f0b87866337fd304faf5262c93f"
+}

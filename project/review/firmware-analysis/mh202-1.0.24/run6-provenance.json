@@ -1,0 +1,116 @@
+{
+  "checkpoint": "run6",
+  "status": "reviewed selected static paths; overnight active",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "method": "Original-byte static source and finite host models; original execution0",
+  "exports": [
+    {
+      "role": "report",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run6/REPORT.md",
+      "source_sha256": "435709c2c5aee19831d8de311c052675bf86dc5eae2f5650ad28c812ba6533ac",
+      "published": "run6-functional-report.txt",
+      "published_sha256": "435709c2c5aee19831d8de311c052675bf86dc5eae2f5650ad28c812ba6533ac",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "functional",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run6/functional-review.md",
+      "source_sha256": "b1de2f1d1e2a62bf54cb34d1809be3af7a8158c7b21076a8e3eb113c2199eca8",
+      "published": "run6-functional-review.txt",
+      "published_sha256": "b1de2f1d1e2a62bf54cb34d1809be3af7a8158c7b21076a8e3eb113c2199eca8",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "report",
+      "area": "lifecycle",
+      "research_path": "work/mh202-firmware/research/2026-10-30/lifecycle/run6/REPORT.md",
+      "source_sha256": "38bcdd3d720aa85ea95f8a17a727c1bcb4d20864bd71f65460e466d09626fd76",
+      "published": "run6-lifecycle-report.txt",
+      "published_sha256": "38bcdd3d720aa85ea95f8a17a727c1bcb4d20864bd71f65460e466d09626fd76",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "lifecycle",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run6/lifecycle-review.md",
+      "source_sha256": "04a01f91e7cded2688ca515b1b69813c38458b931a1648fe2cb9e6ff595c0cb4",
+      "published": "run6-lifecycle-review.txt",
+      "published_sha256": "04a01f91e7cded2688ca515b1b69813c38458b931a1648fe2cb9e6ff595c0cb4",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "report",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run6/REPORT.md",
+      "source_sha256": "0389b36c43fa8da6156f3974dd98bf21893029167b5d0678c64216af19976bfa",
+      "published": "run6-protocol-report.txt",
+      "published_sha256": "0389b36c43fa8da6156f3974dd98bf21893029167b5d0678c64216af19976bfa",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "protocol",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run6/protocol-review.md",
+      "source_sha256": "dbe18dee2cb77258fe3873a879254608525d302ea3631360188da32d37e328ca",
+      "published": "run6-protocol-review.txt",
+      "published_sha256": "dbe18dee2cb77258fe3873a879254608525d302ea3631360188da32d37e328ca",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "report",
+      "area": "boot",
+      "research_path": "work/mh202-firmware/research/2026-10-30/boot/run6/REPORT.md",
+      "source_sha256": "f0c2b3215c01ecaf58dc07f27eaa1bd5b0f8dfa8b8550ea04d26a28f7ae2785a",
+      "published": "run6-boot-report.txt",
+      "published_sha256": "f0c2b3215c01ecaf58dc07f27eaa1bd5b0f8dfa8b8550ea04d26a28f7ae2785a",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    },
+    {
+      "role": "independent_source_review",
+      "area": "boot",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run6/boot-review.md",
+      "source_sha256": "81507f08f79b9c60a45ecbaf925ef526d0a24e9d7b21a575877af6b6d7fb7e77",
+      "published": "run6-boot-review.txt",
+      "published_sha256": "81507f08f79b9c60a45ecbaf925ef526d0a24e9d7b21a575877af6b6d7fb7e77",
+      "normalization": "Local workspace prefix removed if present; no evidence content changed"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/functional/run6/collect_evidence.py",
+      "sha256": "91ed733fcbf77a33f727e0cdab0f4817f164a07d32d05c4e2e2b8a1c97d02212"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/lifecycle/run6/collect_evidence.py",
+      "sha256": "0e9885aaf6eaf6aaa22c5bb39602b13cf60f8eb01406b2f1e94620c3dc8ff16f"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/protocol/run6/collect_evidence.py",
+      "sha256": "ce17cf7eb5f670e116a3c9f9bd6c3c0aaffc5aeaca308327f647933ea73bbbe2"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/boot/run6/collect_process_helpers.py",
+      "sha256": "877c4b0b332f4968b9fe1017c36b88afff0eff447f2aadf69e17acb421da7f50"
+    }
+  ],
+  "history": {
+    "run5_reviewed_document_snapshots": "reviewed/run5/SOURCE_SNAPSHOTS.json",
+    "old_reports_unchanged": true,
+    "provider_refinement": "Prior call convention explicitly opaque; current same-build candidate provider yields zero-extended byte and narrows exact-minus1 checks without retroactive runtime claims",
+    "evidence_extension": "Protocol elapsed span widened during source review without semantic correction"
+  },
+  "limits": [
+    "No original firmware process/parser/physical execution",
+    "Taskmanager list-readiness/gate/reset are separate, not complete panic-clear/health semantics",
+    "COSO own parsed representation, supplied dispatcher/key/address/counter/callback history",
+    "Timer interval inference from selected GLib code is not measured scheduling",
+    "Diagnostic post-decoder qualification/elapsed branch not global parser/deadline/physical support",
+    "Daemon provider closure conditional on packaged search/no interposition/live replacement",
+    "call normal byte return not raw wait status or successful command outcome",
+    "Complete recovery/durability/full Device gates pending"
+  ],
+  "reproduction_limit": "Original images/spans/collectors remain in separate local dossier; exports are documentary evidence"
+}

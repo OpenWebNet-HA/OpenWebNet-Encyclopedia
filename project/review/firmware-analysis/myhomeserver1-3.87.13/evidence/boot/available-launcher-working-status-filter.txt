@@ -1,0 +1,72 @@
+
+/home/bticino/bin/bt_daemon:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000116ac <harvest_str_shielded@@Base+0x86c4>:
+   116ac:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   116b0:	4605      	mov	r5, r0
+   116b2:	48da      	ldr	r0, [pc, #872]	@ (11a1c <harvest_str_shielded@@Base+0x8a34>)
+   116b4:	b0ed      	sub	sp, #436	@ 0x1b4
+   116b6:	ae2b      	add	r6, sp, #172	@ 0xac
+   116b8:	2400      	movs	r4, #0
+   116ba:	4bd9      	ldr	r3, [pc, #868]	@ (11a20 <harvest_str_shielded@@Base+0x8a38>)
+   116bc:	22fc      	movs	r2, #252	@ 0xfc
+   116be:	4478      	add	r0, pc
+   116c0:	9602      	str	r6, [sp, #8]
+   116c2:	4621      	mov	r1, r4
+   116c4:	af0b      	add	r7, sp, #44	@ 0x2c
+   116c6:	58c3      	ldr	r3, [r0, r3]
+   116c8:	a82c      	add	r0, sp, #176	@ 0xb0
+   116ca:	681b      	ldr	r3, [r3, #0]
+   116cc:	936b      	str	r3, [sp, #428]	@ 0x1ac
+   116ce:	f04f 0300 	mov.w	r3, #0
+   116d2:	4bd4      	ldr	r3, [pc, #848]	@ (11a24 <harvest_str_shielded@@Base+0x8a3c>)
+   116d4:	942b      	str	r4, [sp, #172]	@ 0xac
+   116d6:	447b      	add	r3, pc
+   116d8:	9303      	str	r3, [sp, #12]
+   116da:	f7f2 e93c 	blx	3954 <memset@plt>
+   116de:	2280      	movs	r2, #128	@ 0x80
+   116e0:	4621      	mov	r1, r4
+   116e2:	4638      	mov	r0, r7
+   116e4:	f7f2 e936 	blx	3954 <memset@plt>
+   116e8:	682b      	ldr	r3, [r5, #0]
+   116ea:	2b00      	cmp	r3, #0
+   116ec:	f000 80c6 	beq.w	1187c <harvest_str_shielded@@Base+0x8894>
+   116f0:	4630      	mov	r0, r6
+   116f2:	f7f2 e9c0 	blx	3a74 <get_mystatus_working_mode@plt>
+   116f6:	6828      	ldr	r0, [r5, #0]
+   116f8:	f7f2 e968 	blx	39cc <g_list_first@plt>
+   116fc:	4680      	mov	r8, r0
+   116fe:	2800      	cmp	r0, #0
+   11700:	f000 80bc 	beq.w	1187c <harvest_str_shielded@@Base+0x8894>
+   11704:	4bc8      	ldr	r3, [pc, #800]	@ (11a28 <harvest_str_shielded@@Base+0x8a40>)
+   11706:	46a2      	mov	sl, r4
+   11708:	447b      	add	r3, pc
+   1170a:	9304      	str	r3, [sp, #16]
+   1170c:	4bc7      	ldr	r3, [pc, #796]	@ (11a2c <harvest_str_shielded@@Base+0x8a44>)
+   1170e:	447b      	add	r3, pc
+   11710:	9305      	str	r3, [sp, #20]
+   11712:	4bc7      	ldr	r3, [pc, #796]	@ (11a30 <harvest_str_shielded@@Base+0x8a48>)
+   11714:	447b      	add	r3, pc
+   11716:	9307      	str	r3, [sp, #28]
+   11718:	f8d8 5000 	ldr.w	r5, [r8]
+   1171c:	46d1      	mov	r9, sl
+   1171e:	f10a 0a01 	add.w	sl, sl, #1
+   11722:	69eb      	ldr	r3, [r5, #28]
+   11724:	2b00      	cmp	r3, #0
+   11726:	f000 80a3 	beq.w	11870 <harvest_str_shielded@@Base+0x8888>
+   1172a:	9802      	ldr	r0, [sp, #8]
+   1172c:	220a      	movs	r2, #10
+   1172e:	2100      	movs	r1, #0
+   11730:	f7f1 ee98 	blx	3464 <g_ascii_strtoll@plt>
+   11734:	3802      	subs	r0, #2
+   11736:	4308      	orrs	r0, r1
+   11738:	d103      	bne.n	11742 <harvest_str_shielded@@Base+0x875a>
+   1173a:	68ab      	ldr	r3, [r5, #8]
+   1173c:	2b00      	cmp	r3, #0
+   1173e:	f000 8097 	beq.w	11870 <harvest_str_shielded@@Base+0x8888>
+   11742:	6829      	ldr	r1, [r5, #0]
+   11744:	9804      	ldr	r0, [sp, #16]
+   11746:	f7f1 ed38 	blx	31b8 <g_print@plt>

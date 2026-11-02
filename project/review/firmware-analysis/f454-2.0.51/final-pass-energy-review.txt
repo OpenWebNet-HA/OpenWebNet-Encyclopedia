@@ -1,0 +1,30 @@
+# Independent static review: final old-energy schema join
+
+Result: **pass within the explicitly conditional static/host-model scope**. No material correction requested. Reviewed current report/collector, selected original mapper instructions, original complete JS model source, bundle fragments and the three finite host reconstructions. This review writes only this file; no ARM/JS/vendor/framework code executes.
+
+## Current reviewed pins
+
+| Artifact | SHA256 |
+|---|---|
+| `../energy/REPORT.md` | `ba45225e11013186ddcce55f8f307cb1cd7b04dabc2ccdb9b5a6ed0f46123b35` |
+| `../energy/collect_evidence.py` | `691ed70dbfff5e398804552607b26563ce823df43debfa2001aa97c19a4b2b55` |
+| `../energy/host-schema-join.json` | `ab8f22f1fd3a2b4a3e79b1427cb1a0eed994187e86e2425ce18799686223803c` |
+| `../energy/input-hashes.json` | `3082c47ec68dfdf8595afcdc836c8d0abc9fe1d6a525b2d2c3c8f287bb8ec9db` |
+| `../energy/original-spans.json` | `f10abaa8f4b728cb589ad50e73490d8a1fff92e099428f8fdba56cb15e4bb35b` |
+| `../energy/output-manifest.json` | `b3fe0f79f14ae49828b904fb59959d7408cbd5da3f902c07206fcbc42ad56feb` |
+
+## Independent verification
+
+- Current collector `--check` passes:12 generated outputs,3 original spans,6 asserted words,7 literal pools,13 input hashes and3 host sequences. Also inspected its generated objects through read-only host runpy. This reruns host parsing/model logic, not original firmware/JavaScript or historical execution matrices.
+- Read selected original API mapper spans, not only saved hashes. The hourly/daily prefixes are56#/510#; `date` receives the complete dimension string and `extraValues` receives record+12 through helper0x54c44. That helper forwards its incoming string to named CppCMS `value::str` at0x54c5c. Independently resolved the hourly event literal from pool0xb11f8 and daily literal from0xb1270; they match the source old-device event names. WHERE/string handling and the historical execution caveats are correctly separate.
+- Independently reread current original bt_supervisione words at0xe76c=`e3530019`,0xe770=`1a00001e` (mismatch→0xe7f0),0xe840=`e59f10e0`,0xe850=`e2850fcd`, and terminal table entry0xdd5c=`0000de00`. The corrected selected-row **replacement** route remains distinct from row0x19 append. This is a narrow crosscheck, not another full producer proof.
+- Original source initializer contains exactly24 explicit zero values for hourlyConsumptionValues. Thus untouched index1 remains an initialized **zero**, not a sparse hole and not an independently normalized/measured missing value. Source record1 writes index0;2..8 write2..22;9 writes23/24 and extends the array to25. The model and report preserve these expressions and limits.
+- Source hourly record9 uses the third payload times256 for totalizer without the other payloads’255 normalization; record10 adds the **second** payload after its own255 rule. Selected terminal tail10*255*4 therefore contributes4, not255 or0. The host result772 and branch explanation match source. The first terminal payload is ignored by that handler.
+- Daily case1 consumes two bytes; alternating cases2..21 consume three, with pair reconstruction crossing records. Source compares each byte string with255 and substitutes0 before combination. This is the packaged frontend’s **per-byte** rule, not the historical TS10 whole-word/all-ones validity rule; no equivalence or physical calibration follows. The finite daily21/22 examples do not exercise255, so their successful host reconstruction must not be called dynamic coverage of that special value.
+- Daily21 as a terminal one-field payload supplies60 for the preceding low byte but lacks the next high/low fields. Under ordinary JS primitive semantics Number(undefined) is nonfinite; the host marker "NaN" records that derivation explicitly rather than storing nonstandard numeric JSON. With22 records, nonterminal21 instead has60/61/62;22 has no switch case. Model values15164/15678 and ignored22 agree with source. Neither hypothetical count is established as actual device behavior.
+- Independently read original old-model date gates and the graphic handlers: model daily uses day_format month; graphic daily uses month_format month. The report correctly preserves that difference, no year gate and response.date spelling. Matching configured models, selected DOM date text and real event delivery remain prerequisites.
+- Read BaseModel source dispatch and the bounded complete old-model bundle fragments. Those corroborate the named handler and packaged logic, not actual eval/Backbone/view/DOM execution. Full classifier/storage/HTTP delivery and physical production are not silently included in the static join.
+
+## Limits and conclusion
+
+The report makes a useful, source-grounded producer-width→backend-string→consumer-position join without reviving the superseded append mistake. It appropriately labels10/21/22 counts as finite hypotheses, keeps the untouched-zero/index-extension observation static and declines a physical history/display defect claim. Calendar validity, supported stream counts, device units, live delivery and visible browser effects remain open. No historical native test or closed authentication work was rerun.

@@ -1,0 +1,17 @@
+# MHCatalogue comparison synthesis
+
+The two archived sources share a catalogue model but are different curated profiles. Equal DATA4.4.0 labels do not make them interchangeable. All75 table definitions match; one extra embedded index makes the complete schemas different. All complete rows were compared with types/duplicates/NULL preserved:42tables equal,33different,13differing tables literal subsets and20with embedded-only rows.
+
+## Substantive results
+
+- The commercial model is largely stable:330exact branded/line-scoped commercial anchors have identical complete device and item rows. There is one embedded-only commercial/item533 (L/N/NT4672, Energy control actuator),104shared items and106Suite-only items. This is source selection, not physical compatibility proof.
+- All114sharedfirmware definitions and their104itemowners are unchanged. Every retained owner's five full build/mode/parameter/package/connection bags also match. The eight embedded-only definitions are7Prototype+1RC catalogue records, not proof of released firmware. Omissions include175Official and22Deprecated definitions, so deprecated-only pruning is disproved for this pair.
+- Configuration IDs are hazardous cross-source keys. Of68changed same-ID rows,48represent different owners/fields and20have actual retained-field metadata changes. A separate114fields are equivalent after owner-context matching but have different IDs. Normalization does not discard genuine residual differences or invent universal migration rules.
+- The genuine20changes are narrow:10Object218group progressive fields,9Object401progressive/type-metadata fields and1Object130hidden flag. Selected M1541label word order and range-ID changes are not new physical modes. Embedded-onlyObject39 has a source-specific item533/firmware321/slot relation graph; its metadata does not define universal addressing or installed support.
+- The database omits its own server's catalogue definition as well as F454/MH202. It cannot replace the Suite Device profiles or prove omitted products unsupported. Retained package/language/reference/condition/template data are not active runtime state.
+
+## Implications and limits
+
+Use the exact artifact identity and that source's own owner/child relationships. A rawid_conf union or overwrite would mix different logical settings (e.g5293means F454AID inSuite but item1162AID embedded). Prototype/RC/status/default/modeID/modecode/Module/Object/slot/progressive remain distinct namespaces. These are data-model consequences and catalogue facts, not tested migration/application faults or protocol acceptance.
+
+No vendor/firmware/CLR/JavaScript/storedexpression/runtime/physical execution occurred. Original archives/databases and prior reports remain unchanged. Existing Device source scopes and wider review gates stay pending. The next new source evidence is the actual matrix_mx reader's catalogue selection, version fallback, configuration/range resolution and treatment of missing or Prototype/RC alternatives. The user-requested database comparison is complete within the explicit source/data scope; full consumer behavior is not claimed.

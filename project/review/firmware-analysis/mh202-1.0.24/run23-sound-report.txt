@@ -1,0 +1,80 @@
+# MH202 run23 — a utility deadline producer and restoring consumer
+
+## Result
+
+A concrete original multimedia utility field path produces the **private152/156 deadline** that run21's scheduler consumed as a supplied premise. Under the selected already parsed WHO22/kind1/WHAT19/WHERE5 fields, a utility-enabled context and normal delegates, `gest_status_from_field_util` saves private bytes198/200 into199/201, writes state198=3 and its managed selector to200, requests `send_util_state`, and then stores the entry clock value **plus literal600** into deadline152/156. This is a source/dataflow join, not a natural observed sound event or a newly validated raw request.
+
+Original `control_timeout` reads the same pair. A nonzero pair, a supplied clock **strictly later** than it and state198=3 reach the selected restore branch: clear deadline152/156, restore198/200 from199/201, set199=1 and201=10, then request `send_util_state` again. Before/equal deadline does not take that selected branch. Actual timer creation, dispatch and output delivery are not executed. The literal600 is not called600 milliseconds or assigned physical device semantics.
+
+All new original ARM/vendor/parser execution, native helper entries, primitive callbacks, hooks, target OS/device/network operations and physical observations are **0**. Only ImageVFS host reads, binutils and four finite source-contract cases run. No transport/session/connection/authentication/framing implementation is investigated. Earlier artifacts, firmware and synced files remain read-only; no old query/receipt matrix is rerun.
+
+## Reproduction and first-candidate integrity
+
+Run `python3 -B work/mh202-firmware/research/2026-10-30/sound/run23/collect_deadline_v1.py --check`. The host collector compares exact bytes and writes nothing in check mode. It uses the same-build original `/home/bticino/libcoso/libplug_multi_stm.so`, SHA256 **8b9f393f5b8b4f47645821d7e7eedcc2cc15351f76d10fc8d8c8f6c38cd69128**, verified through ImageVFS. ELF VAs are mapped through PT_LOAD before raw assertions/hashes. Source span locators and full input/accessor/prior report/review identities are recorded separately.
+
+The first generation refuses existing output destinations. It writes evidence exclusively, then immediately snapshots the report, generator and evidence/manifest into **initial-generated-v1/** with an exact snapshot index. The candidate is not overwritten or silently corrected. Any requested correction requires the parent to preserve exact candidate bytes and authorize a new version first. The manifest pins both report and collector; no native or old corpus replay is needed to reproduce these static outputs.
+
+## 1. Exact selected caller and input premises
+
+The normal field entry's nonreceipt route first excludes envelope status52 in1..2. Under the selected source252=0 and **utility260 nonzero** premise, **0xce88..0xce94** branches to **0xcff4..0xd00c**. That original call passes the same descriptor and field record to imported `gest_status_from_field_util`, with the original output-list arguments. Relocation/definition metadata identifies the same-build candidate **0xc634**; effective runtime loader binding, outer registry eligibility and natural field-record provenance remain unproved.
+
+The fixture supplied here has representation56=3, status52=3 and a coherent pointer object with WHO text22, kind44=1, WHAT text19, WHERE text5, NULL selectors20/24 and no WHAT parameter list. It is an **already parsed field contract**; no raw complete input string is manufactured or accepted by a parser. Valid pointers, nonempty strings, ordinary allocation/container/numeric returns and private context are explicit premises.
+
+Entry **0xc634..0xc6bc** loads descriptor+56 into r7 and requests `g_get_real_time`; its returned low/high words are saved in SL/FP. Direct representation3 supplies the parsed object, and original character comparisons identify exact WHO22. WHERE+16 and selector+20 loads are preserved at **0xc744..0xc764**. In the selected no-selector route, **0xc814..0xc85c** takes an ordinary prefix-match route or the first-character5 shortcut into the kind test. Kind1 at **0xc8bc..0xc8d0** enters the selected command branch. This does not define a complete WHERE domain or support malformed/empty WHERE outcomes.
+
+The utility enable value is **not** derived from package defaults here. Run21's verified `sm_init`→`init_status` source supplies initial util260=0 for its selected initialization. Therefore this batch's util260=1 is a declared context premise, and the natural later producer/configuration of that enable remains unresolved. The new result closes a deadline/state writer under that premise, not the entire default-to-event chain.
+
+## 2. Missing parameter defaults and exact WHAT19 guard
+
+At **0xc970..0xc9cc**, the original inspects the parsed WHAT parameter list. Its absent-list route **0xccac..0xccbc** sets converted first argument0 and second selector255 before rejoining. It calls imported `managed(private, converted_first_low_byte)`, saving the return in stack+36. The finite ledger supplies managed return10; the original helper is not executed and its full configuration policy is not newly modeled.
+
+Original **0xc9f4..0xca14** loads parsed WHAT+8 and subtracts ASCII1 from its first byte into r0. With text19, r0 becomes0, while its nonzero second byte avoids the exact single-character1 branch. The relay tests at **0xcb50..0xcbb4** avoid exact0 and exact2 without replacing r0. At **0xcc10..0xcc2c**, r0==0, the second byte is ASCII9 and the third is NUL, selecting exact19. This is the actual source guard chain, not an inference from log labels. Other command bodies and their physical meanings are outside this pass.
+
+The second selector255 at **0xcc44..0xcc60** bypasses the additional comparison with the low nibble of private225. A present selector can take other paths; the absent-list fixture does not establish their full range or meaning.
+
+## 3. State save, output request and deadline write
+
+The original selected branch **0xcc60..0xcca8** requests these operations in order:
+
+| Source VA | Requested operation |
+|---|---|
+|0xcc60..0xcc70|read old200/198; store old200→201 and old198→199|
+|0xcc74|store literal3 to198|
+|0xcc78..0xcc80|store managed selector low byte to200|
+|0xcc88|request `send_util_state(private, output argument2)`|
+|0xcc8c..0xcc98|add literal600 to the saved entry clock, propagating carry with ADDS/ADC|
+|0xcc9c/0xcca0|store result low/high at private152/156|
+|0xcca4/0xcca8|select local return2 and normal temporary cleanup|
+
+The clock was requested at function entry, **before** the subsequent string/guard/output-helper work. The deadline is written **after** the utility-state helper request. It is not necessarily clock-at-write+600. The helper's normal return/noninterference with these selected tracked fields is a ledger premise; its allocation/list/output behavior and side effects are not executed or silently replaced with a successful publication result.
+
+The normal cleanup slice **0xc8d0..0xc8fc** requests freeing its temporary WHERE copy. For selected kind1 it retains local return2. The original outer field continuation has a separate normal `manage_timeout(private)` request at **0xcefc..0xcf0c**. This is a caller/scheduler boundary, not proof that a source was created, a callback ran or the complete original caller followed every assumed path naturally. The prior report separately describes manage_timeout's chosen-deadline/divide-by1000/source-create chain; this batch does not rerun that scheduler matrix.
+
+## 4. Same deadline's strict restoring consumer
+
+Original **control_timeout0xd228..0xd250** reads private152/156, skips the selected branch for an all-zero pair, compares current clock high word to deadline high word, and requires byte198==3 before taking **0xd8f0**. For equal high words, **0xd2c4..0xd2d8** compares low words unsigned and skips when current-low<=deadline-low. Its high-word comparison is signed, preserving the actual instruction semantics rather than assuming a host signed timestamp ABI.
+
+The selected restore span **0xd8f0..0xd958** first prepares temporary formatting arguments, then requests:
+
+| Source VA | Requested operation |
+|---|---|
+|0xd91c/0xd920|read saved bytes199/201|
+|0xd928/0xd92c|clear deadline152/156|
+|0xd93c/0xd940|restore saved199→198 and saved201→200|
+|0xd944|set201=10|
+|0xd950|set199=1|
+|0xd954|request `send_util_state(private, &local output-list slot)`|
+
+These are private-state restore operations, not a physical source/priority/volume interpretation. The actual timeout callback registration/lifetime, stored publication callback consumption, complete output-list construction and natural clock/order remain external contracts. No callback after deadline is guaranteed merely because the comparison exists.
+
+## 5. Finite host ledger and counterexample
+
+The single producer ledger supplies clock words **high1/low0xffffff00**, managed selector10 and initial bytes198=2/199=1/200=7/201=10. The requested writes yield198=3/199=2/200=10/201=7 and deadline **high2/low0x158**, illustrating the original carry from adding600. This is finite arithmetic/source composition, not an executed instruction trace or a real timestamp.
+
+Three separate consumer cases start from that same post-producer declared state: current deadline−1, exactly deadline and deadline+1. Only the last requests the restore. It clears the pair and returns198/200 to2/7 while writing199=1/201=10. The equality case is an explicit counterexample to a claim that this branch runs at time>=deadline. All cases assume the same private object, normal noninterfering delegates and correct callback invocation; they are independent fixtures rather than consecutive captured events.
+
+## Confidence and remaining work
+
+**Confirmed static:** original utility-enabled call boundary; exact selected WHO/kind/WHAT/parameter guard chain; state-save/output-request/deadline ordering; same152/156 consumer, strict comparison and restoring stores. **Host-only:** one selected producer plus three independent finite time comparisons. **Conditional:** coherent parsed/context inputs, util enable, normal same-build import resolution and delegate completion, actual callback ownership/invocation and unchanged state between these supplied boundaries. **Unknown:** actual utility-enable/config producer, natural input admission/category/registry, clock/timer behavior, complete output ownership/publication and physical sound semantics.
+
+A useful next static question is the non-transport source of util260 enable or the full ordinary-source/private mode producer, preserving its initialization/configuration/caller premises. No global absence, defect, corruption or universal timeout/support claim follows from the unclosed enable/activation boundary. No old report or unavailable run21 draft was repaired or reconstructed.

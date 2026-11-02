@@ -1,0 +1,91 @@
+# Final bounded static pass: old DIM56/510 producer-to-consumer schema
+
+**The corrected old producer's per-record replacement matches a byte-packed frontend schema, not cumulative histories.** The selected original api-arm mapper preserves the complete `date` dimension and `extraValues` tail as strings. DIM56's shorter terminal record has a concrete consumer at record10: the second payload byte completes a two-byte totalizer begun at record9. For DIM510, the consumer has cases1–21 and no22 case; a one-byte terminal record21 lacks two fields that case21 reads, whereas a full nonterminal21 followed by a one-byte22 completes those fields before the ignored terminal22. Which sequence a physical device actually sends is **unproved**.
+
+This pass joins distinct original static stages and three finite host reconstructions. **Zero original ARM instructions, original JavaScript evaluations, vendor/native helper processes, browsers, services or live I/O.** All earlier dossiers, original image files and repository/synced sources remained read-only. No old CPU matrix ran. The earlier material replacement/append correction is retained: rows0x10/0x14 replace the buffer; row0x19-only append is not borrowed into these models.
+
+## Scope, identity and prior evidence
+
+| Original input | SHA256 |
+|---|---|
+|`/home/bticino/bin/bt_supervisione`|`12c4d6f09d53fe2f1862eea8d1112b9b960f0511b11ac7a3767a22b0daaabfd2`|
+|`/home/bticino/bin/api-arm`|`2248b877bcc4180f0f04ffb1bad71e0efe4607fd06eacf174a2a6a380ea2cb13`|
+
+`input-hashes.json` pins13 inputs: the two executables, five original frontend files, and six read-only historical report/model/collector/result files. Original frontend paths, numbered line excerpts and configured bundle fragments are saved. `original-spans.json` pins three newly collected api-arm spans by original VA/file offset/byte hash; six exact word assertions and seven literal-pool pointers are in `backend-literals-words.json`.
+
+The corrected producer proof is **reused** from `2026-10-30-targeted-2/energy/REPORT.md`, `CORRECTION.md`, collector and finite output model. That prior report establishes FD0x50/row0x10→DIM56, row0x14→DIM510; data-record counter at context+816; first two-current-value formatting; later three-current-value replacement; terminal two-/one-value replacement. This pass does not relabel that evidence as new execution. The relevant original producer VAs are0xe544–0xe5b4 (dimension),0xe6c0–0xe704 (first values),0xe76c→0xe7f0→0xe850→0xdd00 (ordinary replacement),0xddc0–0xddf8 (row0x10 terminal two fields), and0xde00–0xde1c (row0x14 terminal one field).
+
+Overnight `2026-10-29/web/run10/REPORT.md` and `old-history-results.json` supply earlier bounded original mapper runs and their explicit primitive/regex/storage limits. They already established tail retention on selected synthetic examples. **Those experiments were not rerun.** This pass statically audits their concrete assignments and joins newly reconstructed producer record positions to the actual frontend consumers.
+
+## Original backend field schema
+
+Within the selected WHO18 dimension branch, original0xb0570–0xb05b0 compares the first3 dimension characters against literal`56#` (pool0xb11f4). Nonmatch reaches0xb1318;0xb132c takes4 characters and0xb1338 compares literal`510#` (pool0xb126c). These are old-format prefix routes, distinct from newer511–514 scalar schemas.
+
+| Output field | DIM56 original assignment | DIM510 original assignment | Preserved content |
+|---|---|---|---|
+|eventName|0xb05f4|0xb1398|`getHourlyConsumptionValuesOldDevice` / `getDailyConsumptionValuesOldDevice`|
+|eventType|0xb0670|0xb1410|same event string|
+|where|0xb06c0–0xb06d4|0xb1460–0xb1474|parsed WHERE string|
+|date|0xb0724–0xb073c|0xb14c4–0xb14d8|**entire dimension string**, e.g.`56#10#2` or`510#10`|
+|extraValues|0xb0788–0xb079c|0xb1524–0xb1538|**entire parsed tail**, beginning with the producer's record counter|
+
+The actual string helper0x54c44 passes the supplied `std::string` to named CppCMS `value::str(std::string const&)` at0x54c5c. No per-byte unpacking, terminal padding, synthetic missing payload, calendar conversion or unit scaling occurs in these selected assignments. The event preserves e.g.`10*255*4`, not a numerically decoded totalizer. This is static C++ dataflow under normal named library contracts, not new execution of the full classifier/parser, framework tree storage or serialized HTTP delivery.
+
+## Frontend dispatch and date assumptions
+
+Original `/home/httpd/html/myhome/js/models/energy_management/ConsumptionProductionFamilyModel.js` registers the two old events in `updateStatusFunctions` at lines28–29, separately from newer events at26–27. `BaseModel.js:11–16` looks up `params.eventName` and invokes the registered model method with the same params. This source was read, not evaluated.
+
+The hourly old handler is lines123–190; it strips`56#` from **params.date**, splits month/day and requires both to equal the displayed **day_format** DOM strings at125–136. The daily old handler is lines191–380; it strips`510#` from **params.date** and compares against the displayed **day_format month** at194–201. Neither selected old handler checks a year. These are event-position/date-string gates, not proof of real clock, calendar or transaction selection.
+
+The separate graphic view `/home/httpd/html/myhome/js/views/monitoring_consumption/MainGraphicConsumptionHandlerFunctions.js` maps the old event names at33/35, registers listeners272–273 and handles **response.date**, not `response.dimension`: hourly310–316 strips`56#`; daily549–552 strips`510#`. Its daily graphic uses a **month_format** DOM selector at543. That differs from the model old-daily handler's day_format selector; both must not be silently conflated into an observed visible update.
+
+The collector corroborates the actual old model methods in the packaged `js/main-built.js`, with original character offsets and full bundle hash; `index.html:13` names `js/main-built`. This is configured source packaging, not an observed browser load or event dispatch.
+
+## DIM56: record-position schema and the two-field terminal
+
+Under matching displayed month/day and ordered events, the original hourly handler interprets `extraValues` as:
+
+| Identifier | Actual source consumption | Lines |
+|---:|---|---|
+|1|takes payload2 (`split[2]`), normalizes literal255 to0, writes hourly index0; payload1 is unused by this handler|145–153|
+|2–8|takes three current payload bytes, normalizes numeric255 to0, writes indices `3*(id−1)−1`, `3*(id−1)`, `3*(id−1)+1`|154–166|
+|9|takes first two payload bytes for indices23/24; third byte sets totalizer high part `byte*256`, without the same255 normalization on that high part|167–178|
+|10|takes only **payload2**, normalizes255 to0, adds it to existing totalizer; payload1 is unused|179–185|
+
+This explains a concrete **schema-compatible terminal position**: the producer's terminal row0x10 contains two fields, and consumer identifier10 needs its second one. It does not prove every shorter producer record belongs at10 or that the selected device emits ten records.
+
+The finite host model explicitly declares a ten-data-record header and ascending identifiers1–10. Metadata10/2 are private matching month/day strings; they are not a hardware capture or a year. Record1 raw bytes `(2,3,1)` give metadata2=2 and emitted payload`3*1`. Record9 bytes `(23,24,3)` give tail`9*23*24*3`; terminal record10 bytes `(255,4,0)` yield the producer's shortened tail`10*255*4`, ignoring the last raw byte. Conditional backend→consumer arithmetic sets totalizer to3×256 at9 then adds4 at10: **772**. The unused first terminal field255 does not cause that low value to be zeroed.
+
+The same model preserves the earlier static index issue: initial array length24 at line16, then record1 writes index0 and identifiers2–8 write2–22; record9 writes23/24. **Initial index1 is never assigned; index24 extends the array to25.** Source initializes index1 to zero; it remains untouched, not a normalized missing value or a measured zero. No graph shift, live symptom or physical timestamp assignment is asserted. The newer hourly consumer at lines96–121 uses a different explicit `hour−1` layout and must not replace these old expressions in the model.
+
+## DIM510: cross-record byte pairs and the shorter-terminal limit
+
+The daily old handler's explicit switch at lines208–375 reconstructs two-byte quantities as `256*high+low`, replacing individual string255 values with0. It has cases **1–21**, no22 case and no general terminal-record padding. The layout is:
+
+- Identifier1 has two payloads, establishing array index0 from high/low (210–215).
+- Even identifiers2..20 have three payloads: complete the next high/low pair, then store the next day's high-byte partial (e.g.case2 at216–223; case20 at360–367).
+- Odd identifiers3..21 have three payloads: add the first low byte to the preceding stored partial, then establish a complete following high/low pair (e.g.case3 at224–231; case21 at368–375).
+
+The model calls these positions day1..31 because that is how the actual frontend array and variable names use them. It does not independently validate physical dates, expected month length, year, measured unit or device stream count. The selected old source does not derive record count from the calendar.
+
+Two **alternative hypothetical counts**, using the same corrected producer rules and matching month10 DOM string, locate the terminal boundary precisely:
+
+| Host-only count | Producer text at identifier21 | Frontend effect under ordered source model |
+|---:|---|---|
+|21 (identifier21 is terminal)|`*#18*51*510#10*21*60##`|first payload60 finishes index29 from its stored high byte; missing second/third payloads become `undefined`, then `Number(undefined)`→NaN for index30|
+|22 (identifier21 is nonterminal)|`*#18*51*510#10*21*60*61*62##`|all three fields complete indices29/30; subsequent one-field terminal22 has no switch case and makes no new day assignments|
+
+For chosen ascending bytes, both models give index29=59×256+60=**15164**. Count21 model yields index30 nonfinite; count22 model gives61×256+62=**15678** and ignores terminal22. `host-schema-join.json` uses the string marker`"NaN"` to record the **source-model nonfinite result**; this is not wire JSON, actual JS output or a runtime serialization claim.
+
+This is a conditional field-count mismatch for terminal identifier21 and a compatible alternative position for terminal22. It is **not proof of a broken physical31-day history**, a real truncated packet, missing/reordered events, accepted original raw framing or which count a supported device chooses. Likewise the earlier three-record illustrative producer sequence must not be called a normal completed calendar transaction: terminal position controls which consumer case applies.
+
+## Reproduction, checks and stopping boundary
+
+```sh
+python3 work/f454-firmware/research/2026-10-30-final-pass/energy/collect_evidence.py
+python3 work/f454-firmware/research/2026-10-30-final-pass/energy/collect_evidence.py --check
+```
+
+The collector produces12 static/model files, pins three original api-arm byte spans, checks six original words/seven literal pools, hashes13 inputs and derives three finite host sequences. It never imports or runs an old native harness or original JS. `--check` compares saved generated bytes without writing. Original instruction/JS execution and code hooks are all0. The source/output manifest excludes independent `review.md` so peer review can be pinned by the parent final evidence index without a self-referential hash cycle.
+
+Confirmed static join: corrected old producer positions/widths→selected original backend date/tail string schema→specific source consumer positions, including hourly10 totalizer low byte and daily21/22 distinction. Historical original mapper execution remains separately attributed to overnight run10. Conditional host-model outputs are not new firmware executions. Unresolved: physical units/calendar validity/expected count, actual runtime routing/storage/regex/HTTP delivery, device production and live browser effects. Newer511–514 semantics and DH7E publication remain distinct unresolved scopes. This bounded pass stops here; repeating previous matrices would not settle those physical/runtime questions.

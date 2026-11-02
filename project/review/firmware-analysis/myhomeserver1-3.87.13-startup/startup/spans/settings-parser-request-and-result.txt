@@ -1,0 +1,43 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00032cb8:
+   32cb8:	f8da 1000 	ldr.w	r1, [sl]
+   32cbc:	2208      	movs	r2, #8
+   32cbe:	9804      	ldr	r0, [sp, #16]
+   32cc0:	f7de e9e2 	blx	11088 <_ZNSt13basic_filebufIcSt11char_traitsIcEE4openEPKcSt13_Ios_Openmode@plt>
+   32cc4:	682b      	ldr	r3, [r5, #0]
+   32cc6:	f853 3c0c 	ldr.w	r3, [r3, #-12]
+   32cca:	442b      	add	r3, r5
+   32ccc:	2800      	cmp	r0, #0
+   32cce:	f000 8377 	beq.w	333c0
+   32cd2:	4618      	mov	r0, r3
+   32cd4:	2100      	movs	r1, #0
+   32cd6:	f7de ec9c 	blx	11610 <_ZNSt9basic_iosIcSt11char_traitsIcEE5clearESt12_Ios_Iostate@plt>
+   32cda:	f10d 0b48 	add.w	fp, sp, #72	@ 0x48
+   32cde:	2100      	movs	r1, #0
+   32ce0:	4658      	mov	r0, fp
+   32ce2:	f7dd eff0 	blx	10cc4 <_ZN4Json5ValueC1ENS_9ValueTypeE@plt>
+   32ce6:	9f03      	ldr	r7, [sp, #12]
+   32ce8:	4638      	mov	r0, r7
+   32cea:	f7de ed3e 	blx	11768 <_ZN4Json17CharReaderBuilderC1Ev@plt>
+   32cee:	2300      	movs	r3, #0
+   32cf0:	aa21      	add	r2, sp, #132	@ 0x84
+   32cf2:	9322      	str	r3, [sp, #136]	@ 0x88
+   32cf4:	4629      	mov	r1, r5
+   32cf6:	f88d 308c 	strb.w	r3, [sp, #140]	@ 0x8c
+   32cfa:	ab23      	add	r3, sp, #140	@ 0x8c
+   32cfc:	920b      	str	r2, [sp, #44]	@ 0x2c
+   32cfe:	4638      	mov	r0, r7
+   32d00:	930d      	str	r3, [sp, #52]	@ 0x34
+   32d02:	9321      	str	r3, [sp, #132]	@ 0x84
+   32d04:	4613      	mov	r3, r2
+   32d06:	465a      	mov	r2, fp
+   32d08:	f7dd ef08 	blx	10b1c <_ZN4Json15parseFromStreamERKNS_10CharReader7FactoryERSiPNS_5ValueEPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@plt>
+   32d0c:	f8da 1004 	ldr.w	r1, [sl, #4]
+   32d10:	9002      	str	r0, [sp, #8]
+   32d12:	2800      	cmp	r0, #0
+   32d14:	f000 8279 	beq.w	3320a

@@ -1,0 +1,103 @@
+{
+  "method": "Existing curated reference-page boundary reading, not new specification/oracle/physical verification",
+  "pins": [
+    {
+      "path": "functional/who-25-transversal/README.md",
+      "sha256": "e9ba3229e4a09c9412b21b59bcaf316d81ecc5499a0afdb19225fe1370e79acb",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-README.md.txt",
+      "line": 3,
+      "excerpt": "`WHO 25` contains multiple transversal OpenWebNet functions whose grammars are selected by their `WHAT` family. The namespace includes CEN+ virtual-command events and dry-contact/IR state reporting. Sharing `WHO 25` does not make these functions one address or parameter model."
+    },
+    {
+      "path": "functional/who-25-transversal/README.md",
+      "sha256": "e9ba3229e4a09c9412b21b59bcaf316d81ecc5499a0afdb19225fe1370e79acb",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-README.md.txt",
+      "line": 17,
+      "excerpt": "The BTicino touchscreen `ScenarioPlusDevice` emits a separate `WHAT 11..15` family under `WHO 25`:"
+    },
+    {
+      "path": "functional/who-25-transversal/README.md",
+      "sha256": "e9ba3229e4a09c9412b21b59bcaf316d81ecc5499a0afdb19225fe1370e79acb",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-README.md.txt",
+      "line": 31,
+      "excerpt": "The [2026-10-22 physical MH200 capture](../../evidence/cap-mh200-who25-boundary-20261022/manifest.json) records NACK on firmware 2.1.0 for literal ScenarioPlus-family probes `*25*11#0*11##` after 25.392 ms, `*25*11#121*10##` after 23.398 ms, and `*25*12*131##` after 34.942 ms. These are responses to those bytes in the recorded setup; the test does not establish the complete valid ScenarioPlus address/parameter domain or a namespace-wide WHO 25 rejection rule. It does not establish incoming ScenarioPlus event handling or physical bus forwarding."
+    },
+    {
+      "path": "functional/who-25-transversal/README.md",
+      "sha256": "e9ba3229e4a09c9412b21b59bcaf316d81ecc5499a0afdb19225fe1370e79acb",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-README.md.txt",
+      "line": 33,
+      "excerpt": "## Function selection"
+    },
+    {
+      "path": "functional/who-25-transversal/cen-plus.md",
+      "sha256": "86f2d687f90e84d0991f8d99915e0146858fa8b817c99ca553e5ea25919d681d",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-cen-plus.md.txt",
+      "line": 9,
+      "excerpt": "| `21` | Short pressure, less than 0.5 seconds |"
+    },
+    {
+      "path": "functional/who-25-transversal/cen-plus.md",
+      "sha256": "86f2d687f90e84d0991f8d99915e0146858fa8b817c99ca553e5ea25919d681d",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-cen-plus.md.txt",
+      "line": 30,
+      "excerpt": "CEN+ uses a virtual address formed from the prefix `2` and an Object value in the range `0..2047`."
+    },
+    {
+      "path": "functional/who-25-transversal/cen-plus.md",
+      "sha256": "86f2d687f90e84d0991f8d99915e0146858fa8b817c99ca553e5ea25919d681d",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-cen-plus.md.txt",
+      "line": 124,
+      "excerpt": "**Current oracle v3 result inspection.** The pinned results at own-firmware-oracle revision `8a61bbeb1d26354241debac84a7310142e5ab3a5` record the following for both `*25*21#1*21##` and `*25*23#8*233##`. These observations are from executed firmware under a simulated PIC, inspected here without rerunning it; they are separate from physical gateway observations."
+    },
+    {
+      "path": "functional/who-25-transversal/cen-plus.md",
+      "sha256": "86f2d687f90e84d0991f8d99915e0146858fa8b817c99ca553e5ea25919d681d",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-cen-plus.md.txt",
+      "line": 141,
+      "excerpt": "**Historical oracle v1 records.** The following superseded harness observations come from the pinned `who25-messages` results at own-firmware-oracle revision `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. For both CEN+ inputs `*25*21#1*21##` and `*25*23#8*233##`, the recorded reply and bus-output verdict are:"
+    },
+    {
+      "path": "functional/who-25-transversal/dry-contact-ir.md",
+      "sha256": "1c0a04bae56ba9312392632fbbe8b8ca5ad81e1e7d0ed9c561cb936b180b86e9",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-dry-contact-ir.md.txt",
+      "line": 9,
+      "excerpt": "| `31` | ON / IR detection |"
+    },
+    {
+      "path": "functional/who-25-transversal/dry-contact-ir.md",
+      "sha256": "1c0a04bae56ba9312392632fbbe8b8ca5ad81e1e7d0ed9c561cb936b180b86e9",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-dry-contact-ir.md.txt",
+      "line": 27,
+      "excerpt": "| `1..201` | Automation dry-contact interfaces configured using Virtual Configurator Software |"
+    },
+    {
+      "path": "functional/who-25-transversal/dry-contact-ir.md",
+      "sha256": "1c0a04bae56ba9312392632fbbe8b8ca5ad81e1e7d0ed9c561cb936b180b86e9",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-dry-contact-ir.md.txt",
+      "line": 54,
+      "excerpt": "This source does not list MH202, F454 or MyHomeServer1. Their absence from this historical table is not a finding of incompatibility. Published dry-contact/IR availability does not establish the reply to every `WHO 25` request or support for the separate CEN+ and ScenarioPlus families. See [CEN+ gateway compatibility](cen-plus.md#gateway-compatibility-and-hardware-boundaries) for the CEN+ specification and the scoped replay observations; the replay comparison there covers CEN+ commands, not dry-contact state queries."
+    },
+    {
+      "path": "functional/who-25-transversal/zigbee-binding.md",
+      "sha256": "bdea58b831237abc6628ed5cfc23d1d1c4d8a67239ebe6d459e7ba192dc01951",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-zigbee-binding.md.txt",
+      "line": 7,
+      "excerpt": "## `WHAT` reference"
+    },
+    {
+      "path": "functional/who-25-transversal/zigbee-binding.md",
+      "sha256": "bdea58b831237abc6628ed5cfc23d1d1c4d8a67239ebe6d459e7ba192dc01951",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-zigbee-binding.md.txt",
+      "line": 12,
+      "excerpt": "| `33` | Binding Request | client to server |"
+    },
+    {
+      "path": "functional/who-25-transversal/zigbee-binding.md",
+      "sha256": "bdea58b831237abc6628ed5cfc23d1d1c4d8a67239ebe6d459e7ba192dc01951",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run24/reference-who25-zigbee-binding.md.txt",
+      "line": 67,
+      "excerpt": "## No `DIMENSION` family"
+    }
+  ]
+}

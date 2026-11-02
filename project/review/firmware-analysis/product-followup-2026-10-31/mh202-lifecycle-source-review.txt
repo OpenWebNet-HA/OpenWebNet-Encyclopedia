@@ -1,0 +1,46 @@
+# MH202 lifecycle source review
+
+PASS for the bounded static declaration-to-consumer join. No required correction found. This is an independent review of the parent-authored lifecycle analysis and original firmware dataflow. I authored the separate product-resource discovery report, so the acquisition/resource-discovery relationship is source-aware rather than a second independent acquisition. I independently reread the selected recovered XML declarations and original firmware bytes for this lifecycle review.
+
+## Checks actually performed
+
+- Ran `collect_panic_join_v1.py --check`: PASS, 11 outputs, 9 input identities, 4 original spans, 7 asserted instruction words, 4 finite host ledgers. This is a host collector replay, not original instruction execution.
+- Independently mapped original `bt_taskmanager` PT_LOAD ranges from its ELF headers, rehashed all four saved source spans, and checked all seven original words. This did not rely on nearest-symbol names or executing the collector's disassembly as code.
+- Independently decoded all four original key-pool pointers and their NUL-terminated strings. Verified comparison pool `0xa4a4` derives buffer `0x1b528` and gate `0x1b4c4`; independently checked the separate getter pool at `0xb534` reaches the same destination buffer after subtracting `0x184`.
+- Independently decoded ELF section headers and found gate `0x1b4c4` inside NOBITS `.bss`. Rechecked all nine input byte identities and all 13 saved first-candidate copies against their snapshot index and current candidate bytes.
+- Read the actual recovered Step1 and `prj2conf.xml` excerpts, actual saved disassembly, inherited run2 configured-gate context and run6 gate/readiness context. Inspected the host ledger expressions and four saved cases. No vendor conversion, ARM, Windows/.NET/Tcl/PHP/JavaScript, target process, physical event, network or authentication operation executed.
+
+## Source conclusions and necessary premises
+
+The recovered Suite resource declares P50 `panicKey/enabling`, default string `0`, choices `0`/`1`; P51 `panicKey/command`, default action text `*15*00*01##`; and hidden P52 `panic` with empty default. The enclosing parameter data source is `configuratore/setup/sicurezza`. The actual conversion rule at `xml/prj2conf.xml:374..381` tests the full enable leaf for string `1` and declares action `copy` from `panicKey/command/action/open` to the full `panic` leaf, with from attributes delete `0` and mode `value`. That establishes a producer declaration. The vendor conversion engine is neither executed nor fully reconstructed. In particular, skipping this rule with enable `0` does not establish clearing or preservation by the whole converter; the stale-target host case is appropriately conditional.
+
+Original MH202 taskmanager SHA256 `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e` supports the scoped consumer join. At `0xb08c` it initially writes NUL to the destination before the imported getter call at `0xb0bc`. Exact original key strings produce the same `configuratore/setup/sicurezza/panic` path. At `0xa378..0xa380` it supplies the event full-frame string and configured buffer to imported strcmp; `0xa384..0xa388` selects equality. `0xa38c..0xa394` writes literal `1` to the command gate, and `0xa398..0xa3c4` traverses records and conditionally calls stop at `0xd47c`. The ordinary gate read at `0xa494..0xa4a0` uses the same address. These are static source and ordinary imported-contract conclusions, not an executed parser, getter, stop, callback, or physical command.
+
+The supplied frame spelling comparison retains leading-zero significance only under the explicitly unmodified-string premise. Host inequality of `*15*00*01##` and `*15*0*1##` is not proof of a false trigger, canonicalization behavior, public address validity or bus admission. Runtime getter/configuration binding and successful export/loading remain open.
+
+Suite release `3.5.38`, installed-package directory `1902_1.0_LGG`, catalogue default build `1.0.0` and firmware `1.0.24` remain different version scopes. The source join is conditional on compatibility and matching installed paths/values; it is not a demonstrated Suite-to-device round trip. Defaults/restoration archives do not establish an installed generated `.spt` or `info.xml` pair.
+
+The NOBITS finding supports an ordinary fresh-process zero-fill premise. It is not an observed power-cycle reset, an implemented complete gate-clear contract, or proof of readiness. The separate mode4 setter, query cursor/readiness storage, saved-active RESTART pass and subsequent always-start pass remain separate policies. The report preserves the inherited documented power-restoration statement without claiming this batch proved its implementation. The manual itself was not independently re-audited in this review.
+
+## Integrity and scope
+
+The candidate report and collector are unchanged, and immediate first-candidate copies match. This review does not claim complete historical-draft integrity outside the provided first-candidate snapshot, full generator grammar, actual installed configuration, whole-framework suppression, global absence of additional gate aliases, restart-at-EOF semantics, or physical behavior. Review findings add no native coverage or firmware tests. No author artifact or completed dossier was edited.
+
+All paths in the table below are relative to `work/mh202-firmware/research/2026-10-31-scenario-lifecycle/`.
+
+| Reviewed artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `e99fa8b024697b17c5b7b4777f0ae0dc196a9d8e97699e1f4844f7d5f563961f` |
+| `collect_panic_join_v1.py` | `6d555254724543f9f21b8eaf5367ca09d7a2341eebcbba8172570f73628ef3db` |
+| `Suite-panic-declaration.json` | `3d229b73f869e34bb79449451d9146e62580f0e8054fd849256084d8dad00698` |
+| `conditional-copy-and-equality-ledgers.json` | `e69c52b8fda1b2ce7d7e9f955f9a8916736f7b264d816405ddc79ac945b9d314` |
+| `configured-panic-getter.txt` | `707d46b44dbc0c5a7be999a449bf44e3b5ebc3b2cb0b494f842cc6489a3a38bc` |
+| `panic-strcmp-gate-stop.txt` | `2152099763ab8139150beb30fc6e5eaa5a2d6938cf51e21ab7aae9ec14ca12f4` |
+| `ordinary-command-gate.txt` | `3ef21245c62b2de0bc129627f467886b7a39d55cba81466b0126eb361b3246c3` |
+| `ordinary-stop-own-body.txt` | `dd31198eff59dd91e615c35f7a1807a6a28d294b26b7adbc25eacf63a2296c6f` |
+| `exact-config-key-pools.json` | `4ea3c53c16914d19ebe8f31ec96f6a5d3bd2d9228e34361032f11b6bc11b9091` |
+| `firmware-code-pins.json` | `5c97a17c3aa0ff8a9207ae6643dc3a8719d1fd4c9971d6099d2768a3a322370c` |
+| `original-spans.json` | `a2e9619b59c485207387485800b1c149afbc062b807d12c7446a6f317e9df864` |
+| `input-pins.json` | `b6978148dc50321e835ab3ff89f5718d16931e5b41b0847dfd1c0a0d9f9bcbc9` |
+| `output-manifest.json` | `2edb56454ee94a6b88734a3e45c64a9629935756d8a179ceff93b521f02dc221` |
+| `initial-generated-v1/SNAPSHOT_INDEX.json` | `5f0a667ac1c1ca4ce8da214da466d8c95e91f52f9b20ae69f4f8c64d9fdfad97` |

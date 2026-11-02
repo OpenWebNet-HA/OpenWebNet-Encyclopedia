@@ -1,0 +1,26 @@
+[
+  {
+    "add_pc_va": "0xcf26e",
+    "pool_va": "0xcf59c",
+    "scope": "Pointer binding only; target invoker/manager body not inspected.",
+    "target_thumb_pointer": "0xd14a5"
+  },
+  {
+    "add_pc_va": "0xcf27e",
+    "pool_va": "0xcf5a0",
+    "scope": "Pointer binding only; target invoker/manager body not inspected.",
+    "target_thumb_pointer": "0xcdbf9"
+  },
+  {
+    "add_pc_va": "0xcf372",
+    "pool_va": "0xcf5a8",
+    "scope": "Pointer binding only; target invoker/manager body not inspected.",
+    "target_thumb_pointer": "0xcf065"
+  },
+  {
+    "add_pc_va": "0xcf376",
+    "pool_va": "0xcf5ac",
+    "scope": "Pointer binding only; target invoker/manager body not inspected.",
+    "target_thumb_pointer": "0xcdb01"
+  }
+]

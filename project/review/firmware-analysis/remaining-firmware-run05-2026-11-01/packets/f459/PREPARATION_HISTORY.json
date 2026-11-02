@@ -1,0 +1,9 @@
+{
+  "scope": "Honest parent inline preparation history, no source/target/vendor execution",
+  "first_inline_v2_preparation": "Compile check caught extra indentation before saving v2; no v2 file existed",
+  "dependent_attempt_error": "Subsequent host Python invocation reported nonexistent collect_namespace_v2.py; no source or output executed",
+  "cause": "Inline helper removed a line without its leading space, leaving unexpected indentation",
+  "correction": "Reconstructed v2 directly from immutablev1 with one Unicode-report encode substitution; compile passed before exclusive save",
+  "historical_file_hashes": "No previous on-disk v2 or inline helper file existed; none invented",
+  "source_guards_changed": false
+}

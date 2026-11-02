@@ -1,0 +1,21 @@
+{
+  "ABI": "rawtrigger slot+8 method282e4 receives JSONdest r0\u2192r4, raw r1\u2192r6; NOT condition serializer28178",
+  "base": "23394 freshValueType0; normalmembers id(ifnonempty),type,enabled,operator(unless\u22121), no statusrequest",
+  "boundaries": [
+    "unexaminedstatus-present serializer sibling",
+    "fullJSON/intprovider/errors/defaults/domain/range",
+    "actualconfiguredscene/event/cache/provider/lifetime/concurrency",
+    "publicprotocol/physicalmeaning or universalroundtrip"
+  ],
+  "conditional_coherence": "Validraw/vptr/storage + normalJSONfreshobject/member/intctor/moveassignment/asInt/string/base/copy semantics; not executed fullJSON or allvalues/domainproof",
+  "inherited_copy": "raw44\u2192compiled64 andraw40\u2192compiled60; caller numericselector\u22121/suitableeventinteger/on/ID/lifetime premises unchanged",
+  "method": {
+    "original_execution_additions": 0,
+    "prior_MHS_canonical": "1corpus8entries340originalvisits0C12redirect8EXIT360hooks+4setup unchanged",
+    "semantic_host_fixtures": 0,
+    "target_IO": 0
+  },
+  "reparse": "ordinaryfreshJSONcontainslevel/no status\u2192statusABSENTnumericarm2cc94; asIntresult\u2192raw44; statusinitialized\u22121 andpositiveGTwrites\u22121 not0",
+  "same_JSON": "a8dbe SP592 r4\u2192r0 at a8dc0, rawvirtualslot+8 calla8dc6; SAMEr4\u2192r1 a8dcc\u21922cc00 a8dd2",
+  "selected_path": "rawstatus40==-1\u2192283c4 unconditionally serializes signed rawlevel44 viaJsonValue(int) toexactlevel; no levelzero/\u22121/range suppression"
+}

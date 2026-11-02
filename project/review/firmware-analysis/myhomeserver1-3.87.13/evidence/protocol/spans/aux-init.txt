@@ -1,0 +1,185 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/libcoso/libplug_aux_tr.so:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00001268 <init_plugin@@Base>:
+    1268:	e59f327c 	ldr	r3, [pc, #636]	@ 14ec <init_plugin@@Base+0x284>
+    126c:	e92d40f0 	push	{r4, r5, r6, r7, lr}
+    1270:	e08f3003 	add	r3, pc, r3
+    1274:	e5933000 	ldr	r3, [r3]
+    1278:	e59f5270 	ldr	r5, [pc, #624]	@ 14f0 <init_plugin@@Base+0x288>
+    127c:	e3530000 	cmp	r3, #0
+    1280:	e08f5005 	add	r5, pc, r5
+    1284:	e24dd014 	sub	sp, sp, #20
+    1288:	0a000002 	beq	1298 <init_plugin@@Base+0x30>
+    128c:	e3a00000 	mov	r0, #0
+    1290:	e28dd014 	add	sp, sp, #20
+    1294:	e8bd80f0 	pop	{r4, r5, r6, r7, pc}
+    1298:	e1a04000 	mov	r4, r0
+    129c:	ebffff8f 	bl	10e0 <liblog_get_version@plt>
+    12a0:	e3500000 	cmp	r0, #0
+    12a4:	da00004d 	ble	13e0 <init_plugin@@Base+0x178>
+    12a8:	ebffff8c 	bl	10e0 <liblog_get_version@plt>
+    12ac:	e3500001 	cmp	r0, #1
+    12b0:	0a000047 	beq	13d4 <init_plugin@@Base+0x16c>
+    12b4:	ebffff9b 	bl	1128 <libopenmsg_get_version@plt>
+    12b8:	e3500000 	cmp	r0, #0
+    12bc:	da000058 	ble	1424 <init_plugin@@Base+0x1bc>
+    12c0:	ebffff98 	bl	1128 <libopenmsg_get_version@plt>
+    12c4:	e3500001 	cmp	r0, #1
+    12c8:	0a000083 	beq	14dc <init_plugin@@Base+0x274>
+    12cc:	ebffffa7 	bl	1170 <libutils_get_version@plt>
+    12d0:	e3500000 	cmp	r0, #0
+    12d4:	da000063 	ble	1468 <init_plugin@@Base+0x200>
+    12d8:	ebffffa4 	bl	1170 <libutils_get_version@plt>
+    12dc:	e3500001 	cmp	r0, #1
+    12e0:	0a000079 	beq	14cc <init_plugin@@Base+0x264>
+    12e4:	e59f2208 	ldr	r2, [pc, #520]	@ 14f4 <init_plugin@@Base+0x28c>
+    12e8:	e59f0208 	ldr	r0, [pc, #520]	@ 14f8 <init_plugin@@Base+0x290>
+    12ec:	e1a01004 	mov	r1, r4
+    12f0:	e08f2002 	add	r2, pc, r2
+    12f4:	e08f0000 	add	r0, pc, r0
+    12f8:	ebffff69 	bl	10a4 <g_strdup_printf@plt>
+    12fc:	e1a04000 	mov	r4, r0
+    1300:	ebffff82 	bl	1110 <g_key_file_new@plt>
+    1304:	e3a03000 	mov	r3, #0
+    1308:	e1a01004 	mov	r1, r4
+    130c:	e1a02003 	mov	r2, r3
+    1310:	e1a06000 	mov	r6, r0
+    1314:	ebffff4a 	bl	1044 <g_key_file_load_from_file@plt>
+    1318:	e2507000 	subs	r7, r0, #0
+    131c:	1a000061 	bne	14a8 <init_plugin@@Base+0x240>
+    1320:	e1a00006 	mov	r0, r6
+    1324:	ebffff82 	bl	1134 <g_key_file_free@plt>
+    1328:	e1a00004 	mov	r0, r4
+    132c:	ebffff71 	bl	10f8 <g_free@plt>
+    1330:	e3a03002 	mov	r3, #2
+    1334:	e3a0601a 	mov	r6, #26
+    1338:	e59f21bc 	ldr	r2, [pc, #444]	@ 14fc <init_plugin@@Base+0x294>
+    133c:	e3a01009 	mov	r1, #9
+    1340:	e7954002 	ldr	r4, [r5, r2]
+    1344:	e5843020 	str	r3, [r4, #32]
+    1348:	e59f31b0 	ldr	r3, [pc, #432]	@ 1500 <init_plugin@@Base+0x298>
+    134c:	e5940034 	ldr	r0, [r4, #52]	@ 0x34
+    1350:	e08f3003 	add	r3, pc, r3
+    1354:	e5846008 	str	r6, [r4, #8]
+    1358:	e5843018 	str	r3, [r4, #24]
+    135c:	ebffff4a 	bl	108c <g_list_append@plt>
+    1360:	e1a03000 	mov	r3, r0
+    1364:	e3a01009 	mov	r1, #9
+    1368:	e5940038 	ldr	r0, [r4, #56]	@ 0x38
+    136c:	e5843034 	str	r3, [r4, #52]	@ 0x34
+    1370:	ebffff45 	bl	108c <g_list_append@plt>
+    1374:	e1a03000 	mov	r3, r0
+    1378:	e1a00004 	mov	r0, r4
+    137c:	e5843038 	str	r3, [r4, #56]	@ 0x38
+    1380:	ebffff38 	bl	1068 <register_translation@plt>
+    1384:	e59f3178 	ldr	r3, [pc, #376]	@ 1504 <init_plugin@@Base+0x29c>
+    1388:	e1a01006 	mov	r1, r6
+    138c:	e7954003 	ldr	r4, [r5, r3]
+    1390:	e5940000 	ldr	r0, [r4]
+    1394:	ebffff3c 	bl	108c <g_list_append@plt>
+    1398:	e1a03000 	mov	r3, r0
+    139c:	e1a00004 	mov	r0, r4
+    13a0:	e5843000 	str	r3, [r4]
+    13a4:	ebffff6b 	bl	1158 <log_init@plt>
+    13a8:	e59f0158 	ldr	r0, [pc, #344]	@ 1508 <init_plugin@@Base+0x2a0>
+    13ac:	e1a01007 	mov	r1, r7
+    13b0:	e08f0000 	add	r0, pc, r0
+    13b4:	ebffff6a 	bl	1164 <log_change_lev@plt>
+    13b8:	e3a02001 	mov	r2, #1
+    13bc:	e3a00000 	mov	r0, #0
+    13c0:	e59f3144 	ldr	r3, [pc, #324]	@ 150c <init_plugin@@Base+0x2a4>
+    13c4:	e08f3003 	add	r3, pc, r3
+    13c8:	e5832000 	str	r2, [r3]
+    13cc:	e28dd014 	add	sp, sp, #20
+    13d0:	e8bd80f0 	pop	{r4, r5, r6, r7, pc}
+    13d4:	ebffff59 	bl	1140 <liblog_get_release@plt>
+    13d8:	e3500000 	cmp	r0, #0
+    13dc:	aaffffb4 	bge	12b4 <init_plugin@@Base+0x4c>
+    13e0:	ebffff3e 	bl	10e0 <liblog_get_version@plt>
+    13e4:	e1a06000 	mov	r6, r0
+    13e8:	ebffff54 	bl	1140 <liblog_get_release@plt>
+    13ec:	e3a03001 	mov	r3, #1
+    13f0:	e3a01000 	mov	r1, #0
+    13f4:	e88d0009 	stm	sp, {r0, r3}
+    13f8:	e59f2110 	ldr	r2, [pc, #272]	@ 1510 <init_plugin@@Base+0x2a8>
+    13fc:	e59f0110 	ldr	r0, [pc, #272]	@ 1514 <init_plugin@@Base+0x2ac>
+    1400:	e1a03006 	mov	r3, r6
+    1404:	e08f2002 	add	r2, pc, r2
+    1408:	e58d1008 	str	r1, [sp, #8]
+    140c:	e08f0000 	add	r0, pc, r0
+    1410:	e3a01004 	mov	r1, #4
+    1414:	ebffff16 	bl	1074 <g_log@plt>
+    1418:	ebffff42 	bl	1128 <libopenmsg_get_version@plt>
+    141c:	e3500000 	cmp	r0, #0
+    1420:	caffffa6 	bgt	12c0 <init_plugin@@Base+0x58>
+    1424:	ebffff3f 	bl	1128 <libopenmsg_get_version@plt>
+    1428:	e1a06000 	mov	r6, r0
+    142c:	ebffff13 	bl	1080 <libopenmsg_get_release@plt>
+    1430:	e3a03001 	mov	r3, #1
+    1434:	e3a01000 	mov	r1, #0
+    1438:	e88d0009 	stm	sp, {r0, r3}
+    143c:	e59f20d4 	ldr	r2, [pc, #212]	@ 1518 <init_plugin@@Base+0x2b0>
+    1440:	e59f00d4 	ldr	r0, [pc, #212]	@ 151c <init_plugin@@Base+0x2b4>
+    1444:	e1a03006 	mov	r3, r6
+    1448:	e08f2002 	add	r2, pc, r2
+    144c:	e58d1008 	str	r1, [sp, #8]
+    1450:	e08f0000 	add	r0, pc, r0
+    1454:	e3a01004 	mov	r1, #4
+    1458:	ebffff05 	bl	1074 <g_log@plt>
+    145c:	ebffff43 	bl	1170 <libutils_get_version@plt>
+    1460:	e3500000 	cmp	r0, #0
+    1464:	caffff9b 	bgt	12d8 <init_plugin@@Base+0x70>
+    1468:	ebffff40 	bl	1170 <libutils_get_version@plt>
+    146c:	e1a06000 	mov	r6, r0
+    1470:	ebffff14 	bl	10c8 <libutils_get_release@plt>
+    1474:	e3a0c001 	mov	ip, #1
+    1478:	e1a0e000 	mov	lr, r0
+    147c:	e59f209c 	ldr	r2, [pc, #156]	@ 1520 <init_plugin@@Base+0x2b8>
+    1480:	e59f009c 	ldr	r0, [pc, #156]	@ 1524 <init_plugin@@Base+0x2bc>
+    1484:	e3a01004 	mov	r1, #4
+    1488:	e1a03006 	mov	r3, r6
+    148c:	e08f2002 	add	r2, pc, r2
+    1490:	e08f0000 	add	r0, pc, r0
+    1494:	e58de000 	str	lr, [sp]
+    1498:	e58dc008 	str	ip, [sp, #8]
+    149c:	e58dc004 	str	ip, [sp, #4]
+    14a0:	ebfffef3 	bl	1074 <g_log@plt>
+    14a4:	eaffff8e 	b	12e4 <init_plugin@@Base+0x7c>
+    14a8:	e59f2078 	ldr	r2, [pc, #120]	@ 1528 <init_plugin@@Base+0x2c0>
+    14ac:	e59f1078 	ldr	r1, [pc, #120]	@ 152c <init_plugin@@Base+0x2c4>
+    14b0:	e3a03000 	mov	r3, #0
+    14b4:	e1a00006 	mov	r0, r6
+    14b8:	e08f2002 	add	r2, pc, r2
+    14bc:	e08f1001 	add	r1, pc, r1
+    14c0:	ebffff15 	bl	111c <g_key_file_get_integer@plt>
+    14c4:	e1a07000 	mov	r7, r0
+    14c8:	eaffff94 	b	1320 <init_plugin@@Base+0xb8>
+    14cc:	ebfffefd 	bl	10c8 <libutils_get_release@plt>
+    14d0:	e3500000 	cmp	r0, #0
+    14d4:	caffff82 	bgt	12e4 <init_plugin@@Base+0x7c>
+    14d8:	eaffffe2 	b	1468 <init_plugin@@Base+0x200>
+    14dc:	ebfffee7 	bl	1080 <libopenmsg_get_release@plt>
+    14e0:	e3500000 	cmp	r0, #0
+    14e4:	aaffff78 	bge	12cc <init_plugin@@Base+0x64>
+    14e8:	eaffffcd 	b	1424 <init_plugin@@Base+0x1bc>
+    14ec:	00011e88 	andeq	r1, r1, r8, lsl #29
+    14f0:	00011d78 	andeq	r1, r1, r8, ror sp
+    14f4:	00000700 	andeq	r0, r0, r0, lsl #14
+    14f8:	00000770 	andeq	r0, r0, r0, ror r7
+    14fc:	00000088 	andeq	r0, r0, r8, lsl #1
+    1500:	00000738 	andeq	r0, r0, r8, lsr r7
+    1504:	00000084 	andeq	r0, r0, r4, lsl #1
+    1508:	00000640 	andeq	r0, r0, r0, asr #12
+    150c:	00011d34 	andeq	r1, r1, r4, lsr sp
+    1510:	000005b8 			@ <UNDEFINED> instruction: 0x000005b8
+    1514:	000005e4 	andeq	r0, r0, r4, ror #11
+    1518:	000005b0 			@ <UNDEFINED> instruction: 0x000005b0
+    151c:	000005a0 	andeq	r0, r0, r0, lsr #11
+    1520:	000005a4 	andeq	r0, r0, r4, lsr #11
+    1524:	00000560 	andeq	r0, r0, r0, ror #10
+    1528:	000005b4 			@ <UNDEFINED> instruction: 0x000005b4
+    152c:	000005b8 			@ <UNDEFINED> instruction: 0x000005b8

@@ -1,0 +1,200 @@
+{
+  "/home/bticino/cfg/coso_cfg": {
+    "LibDir": "/home/bticino/libcoso",
+    "LogLev": "0",
+    "PlugCfgDir": "/home/bticino/cfg/coso_plugins"
+  },
+  "/home/bticino/cfg/coso_plugins/automation_stm": {
+    "LogLev": "0"
+  },
+  "/home/bticino/cfg/coso_plugins/automation_tr": {
+    "LogLev": "0"
+  },
+  "/home/bticino/cfg/coso_plugins/aux_stm": {
+    "LogLev": "0"
+  },
+  "/home/bticino/cfg/coso_plugins/aux_tr": {
+    "LogLev": "0"
+  },
+  "process_entries": [
+    {
+      "entry": "p0",
+      "name": "openserver",
+      "path": "bin",
+      "working_mode": "1"
+    },
+    {
+      "entry": "p1",
+      "name": "scsserver",
+      "path": "bin",
+      "working_mode": "1"
+    },
+    {
+      "entry": "p2",
+      "name": "bt_luci",
+      "path": "bin",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p3",
+      "name": "bt_device",
+      "path": "bin",
+      "working_mode": "1"
+    },
+    {
+      "entry": "p4",
+      "name": "bt_dbus_manager",
+      "path": "bin",
+      "working_mode": "1"
+    },
+    {
+      "entry": "p5",
+      "name": "coso",
+      "path": "bin",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p6",
+      "name": "bt_termo",
+      "path": "bin",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p7",
+      "name": "bt_supervisione",
+      "path": "bin",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p8",
+      "name": "bt_multi",
+      "path": "bin",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p9",
+      "name": "fw_manager",
+      "path": "bin",
+      "working_mode": "1"
+    },
+    {
+      "entry": "p10",
+      "name": "bt_netatmo.sh",
+      "path": "bt_netatmo",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p11",
+      "name": "bt_drover.sh",
+      "path": "bt_drover",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p12",
+      "name": "matrix_mx",
+      "path": "matrix_mx",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p13",
+      "name": "bt_drover_mx.sh",
+      "path": "bt_drover_mx",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p14",
+      "name": "bt_thermo_manager",
+      "path": "bin",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p15",
+      "name": "bt_mail_sender",
+      "path": "bin",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p16",
+      "name": "scheduling_manager",
+      "path": "scheduling_manager",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p17",
+      "name": "bt_smart_home_manager",
+      "path": "bt_smart_home_manager",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p18",
+      "name": "energy_manager",
+      "path": "energy_manager",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p19",
+      "name": "bt_jdevice",
+      "path": "bin",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p20",
+      "name": "player_manager",
+      "path": "player_manager",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p21",
+      "name": "bt_ext_light",
+      "path": "bin",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p22",
+      "name": "alarm_manager",
+      "path": "alarm_manager",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p23",
+      "name": "backup_manager",
+      "path": "backup_manager",
+      "working_mode": "0"
+    },
+    {
+      "entry": "p24",
+      "name": "gateway_manager",
+      "path": "gateway_manager",
+      "working_mode": "0"
+    }
+  ],
+  "scope": "Whitelisted process/functional fields only; working_mode values remain uninterpreted numeric metadata.",
+  "selected_lines": [
+    {
+      "line": 250,
+      "text": "<object_model_15_not_managed>1</object_model_15_not_managed>"
+    },
+    {
+      "line": 251,
+      "text": "<scs_enable>1</scs_enable>"
+    },
+    {
+      "line": 263,
+      "text": "<disable_automation>1</disable_automation>"
+    }
+  ],
+  "selected_module_fields": {
+    "bt_device": {
+      "object_model_15_not_managed": "1",
+      "scs_enable": "1"
+    },
+    "bt_luci": {
+      "disable_automation": "1"
+    },
+    "coso": {},
+    "scsserver": {
+      "bus_type": "0"
+    }
+  },
+  "source": "/home/bticino/cfg/stack_open.xml"
+}

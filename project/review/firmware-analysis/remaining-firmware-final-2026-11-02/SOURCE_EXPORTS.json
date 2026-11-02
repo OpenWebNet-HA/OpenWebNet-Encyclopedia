@@ -1,0 +1,82 @@
+{
+  "files": [
+    {
+      "bytes": 4084,
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/final-scope-boundary.json",
+      "path": "work/remaining-firmware-investigation/2026-11-02-run10/SCOPE_BOUNDARY.json",
+      "role": "Finite qualification boundary only, ZERO new functional source coverage",
+      "sha256": "48066e9d03ba9d7f3bcc91d154005194cef072a8013323c813016d640dff3ff4"
+    },
+    {
+      "bytes": 4146,
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/boundary-review.txt",
+      "path": "work/remaining-firmware-investigation/2026-11-02-run10/reviews/f453av-boundary-review.md",
+      "role": "Actual independent boundary identity/scope review, not new source approval",
+      "sha256": "48b86f0e5ae463c90848305cd3a16d84b821c63a8cef6f83d82406e8d43675f0"
+    },
+    {
+      "bytes": 17270,
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/navigation.json",
+      "path": "work/remaining-firmware-investigation/2026-11-02-final/NAVIGATION.json",
+      "role": "Exact selected frozen checkpoint identities, not new semantic coverage",
+      "sha256": "077646e09f1eb364a28d8e288f08f60a55c0467f665a4c6fcfb34bb2a865392e"
+    },
+    {
+      "bytes": 1119,
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/archive-index.json",
+      "path": "work/remaining-firmware-investigation/2026-11-02-final/R2_ARCHIVE_INDEX.json",
+      "role": "This investigation actual cumulative archive result only",
+      "sha256": "133c94eb95859e111df0c1b6c005636ce8ee13ce164e3576fae85e70256f0719"
+    },
+    {
+      "bytes": 235,
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/archive-receipt.json",
+      "path": "work/remaining-firmware-investigation/2026-11-01-run01/archive/R2_RECEIPT.json",
+      "role": "Exact actual RUN01 receipt; configured helper full readback then, not new upload/replay",
+      "sha256": "072092bb105685ab2aa0395cde439b431ac6a016037b501a06d2faf509b07793"
+    },
+    {
+      "bytes": 4388,
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/synthesis.txt",
+      "path": "work/remaining-firmware-investigation/2026-11-02-final/SYNTHESIS.md",
+      "role": "Final documentary scope/coverage/gaps, not new source investigation",
+      "sha256": "2e02c2aa0ddb903fc6ba8822060e790e865bb9bb8ea512718a3cf3eea0325f96"
+    },
+    {
+      "bytes": 1700,
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/coverage.txt",
+      "path": "work/remaining-firmware-investigation/2026-11-02-final/COVERAGE.md",
+      "role": "Final documentary scope/coverage/gaps, not new source investigation",
+      "sha256": "ee669d7f84fea85816e1eebaa59022e85dc572d329e19c2e01955a3422a0fae7"
+    },
+    {
+      "bytes": 1534,
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/remaining-questions.txt",
+      "path": "work/remaining-firmware-investigation/2026-11-02-final/RANKED_REMAINING_QUESTIONS.md",
+      "role": "Final documentary scope/coverage/gaps, not new source investigation",
+      "sha256": "f643c4d20219470ed792ee5816abb98bb2cf3fe97491eab085349a6fa5de9f9f"
+    },
+    {
+      "bytes": 22592,
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/pre-edit/overview.txt",
+      "path": "work/remaining-firmware-investigation/2026-11-02-final/integration/pre-edit/overview.md",
+      "role": "Exact reviewed reference retained BEFORE final local edit",
+      "sha256": "a7fc32f8063e19a678f6024942f97bde2a7118679360e0c063988fd3ba95411b"
+    },
+    {
+      "bytes": 11620,
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/pre-edit/firmware-index.txt",
+      "path": "work/remaining-firmware-investigation/2026-11-02-final/integration/pre-edit/firmware-index.md",
+      "role": "Exact reviewed reference retained BEFORE final local edit",
+      "sha256": "a4c84175a4a81c917b7d2fba567a8b203a1b43408fbbbf37279872d97ca0a9e9"
+    },
+    {
+      "bytes": 10042,
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/pre-edit/database-handoff.txt",
+      "path": "work/remaining-firmware-investigation/2026-11-02-final/integration/pre-edit/database-handoff.md",
+      "role": "Exact reviewed reference retained BEFORE final local edit",
+      "sha256": "aef872bd6c65190fc42bc3444b02ac34f367ffd22795a3dae0985c76f6427c39"
+    }
+  ],
+  "scope": "Selected final documentary/navigation/boundary/archive exports only, ZERO new functional source coverage"
+}

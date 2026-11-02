@@ -1,0 +1,71 @@
+# MH202 1.0.24 run15 — automation queue-record identity through reverse translation and STM admission
+
+## Result and scope
+
+A concrete **conditional same-pointer source join** now connects the selected WHO2 ordinary command body from run13 and receipt ownership from run14. For an existing brief SCS queued record whose ASCII body is `B100120A`, the original automation reverse translator constructs `*2*0*0##`. Its actual `add_open_buf_to_msg_list` call supplies that **nonnull existing record**. The candidate same-image core helper replaces the body/parsed object and routing fields in place; its selected record stores do not replace status+52 or ID+60. A different, NULL-source branch allocates64 bytes and calls `new_id`.
+
+The actual outer `field_receive` code also provides a later join: it checks the translator's output list for that original record pointer, then passes that list to `send_to_sm_from_field`. The STM callback dispatcher matches the new routing value2 to the registered automation criterion2 and passes the same record to descriptor+40, the relocated automation field callback. With coherent normal parser output, the run14 pending/matching-ID route therefore has a concrete candidate producer for its status1/2 and ID.
+
+**This is static source/dataflow plus two finite host ledgers, original execution0.** It is not an observed natural roundtrip, accepted raw frame/script fixture, transport receipt, physical automation acknowledgement or motion result. In particular, a synchronizer foreach occurs between TR and STM: the joined state requires that registry empty or its invoked callbacks preserve the selected record metadata. Full provider closure, active registries, queue identity and parser-kind validity remain premises.
+
+## Reproduction and provenance
+
+Run `python3 -B work/mh202-firmware/research/2026-10-30/coso/run15/collect_evidence.py --check` from the workspace. It reproduces25 deterministic outputs plus manifest,19 exact original spans,34 word assertions,5 original ELF inputs,10 PIC-resolved safe literals and2 conditional host ledgers. The collector uses the fresh MH202 `image_vfs.py` accessor, ELF PT_LOAD address mapping and host objdump/readelf only. It writes nothing under `--check`; original firmware code, target OS/processes and services are not run. No F454 firmware, layout or harness is used.
+
+`input-hashes.json` pins all original byte streams, the accessor and four reused reports. `original-spans.json` records image paths, original VAs, file offsets and byte hashes. `output-manifest.json` pins deterministic evidence; it excludes this report and independent reviews. Candidate code owners are `/home/bticino/bin/coso`, `/home/bticino/libcoso/libcoso.so`, `libplug_scs.so`, `libplug_automation_tr.so` and `libplug_automation_stm.so`. Paths here are original image paths or research-relative paths.
+
+## 1. Existing ID and queued-feedback status source
+
+The reviewed forward WHO2 WHAT0/WHERE0 source creates ASCII body `B100120A` under selected private configword3; this is reused run13 context, not a new forward body matrix. Fresh core span **0x2230..0x2294** shows `prepare_scs_from_open` copying source ID+60 at **0x2238/0x2250** and other selected metadata into its output record. The copy does not itself establish queue placement, body identity or future response correlation.
+
+Fresh SCS **0x2ca4..0x2d40** selects an actual queue head rather than inventing a new message. It saves that pointer at **0x2cdc**, reads its ID+60 at0x2cd0, removes the queue link at0x2cf4, then reloads the second previously scanned header field from SP+60 at0x2cf8. Zero/nonzero selects numeric2/1 at0x2d04..0x2d1c and writes record+52. It also writes representation+56=1 and direction+12=1. No new ID is stored in this slice.
+
+Run8's successful extraction/route1/nonzero opaque-send-result conditions remain explicit reused prerequisites. Neither this scan field nor numeric1/2 is relabeled as physical success/error. The selected same queued record must actually contain the supplied body and retained request ID; FIFO selection alone is not proof of a causal device response.
+
+## 2. Exact reverse body path — B1/00/12/0A
+
+The original automation TR entry **0x3174**, selected direction pair(1,2), type3/representation1, slices four two-character fields at **0x32ec..0x3340**. PIC base is **0xda58**, independently reconstructed from0x319c + original pool0x406c. `original-body-and-output-literals.json` checks every selected string against original bytes.
+
+The first-field `B1` branch at **0x3664..0x3678** reaches0x45e8. The second field equals literal `00` at **0x45e8..0x45fc**; equality stores r9=0 and duplicates address text `0` at0x4600..0x4610. The common address path uses that nonempty string. Third field `12` is selected at **0x3584** onward. Fourth field does not equal `08` or `09`; equality with `0A` at **0x3fe0..0x3ff4** uses the comparison's zero return as the `%d` argument at0x3ff8..0x4004, producing WHAT text`0`.
+
+Selected private configword3 avoids the config4 suffix route at **0x3d38..0x3d44**. With the selected zero branch variables, **0x3634..0x364c** formats fixed WHO`2`, WHAT`0`, WHERE`0` using literal `*%s*%s*%s##`: **`*2*0*0##`**. At **0x3650**, r1 is the saved input record; r2 is the output-list address; **0x3658** calls `add_open_buf_to_msg_list`. These are ASCII body/text relationships, not serial bytes or parser acceptance results.
+
+## 3. Full core helper proves in-place metadata preservation on the selected path
+
+The complete helper **0x2340..0x2430** resolves the earlier partial-body ambiguity:
+
+- **0x2378** saves supplied source pointer r1 in r7; **0x2390** requests `buf_to_openmsg` into a local pointer and0x2398 frees the formatted input text.
+- **0x239c..0x23a0** tests source pointer. Nonnull enters existing-record handling, freeing its old body through `g_free` when representation is not3, or `free_open_msg` for representation3 at0x240c..0x2414.
+- Common stores **0x23b8..0x2400** set existing record type+40=2, representation+56=3, parsed pointer+0, direction+12=2, metadata+4=2,+16=0,+8=0. Decimal parsed WHO becomes routing+48, then `g_list_append` receives **that same r7 pointer**.
+- Only **NULL source0x2418..0x242c** allocates a new64-byte record and stores `new_id` at+60 before the common stores. The selected nonnull path executes neither instruction.
+
+The selected direct stores never address record+52 or+60. Their preservation is conditional on ordinary nonaliasing allocations/import behavior: `buf_to_openmsg`, frees, numeric conversion and list operations are delegates, and effective runtime symbol binding is not observed. The parser return at0x2390 is **not tested** before later dereference. Consequently coherent successful parser output, correct WHO text and normal parsedkind1 are explicit premises; this source join is not evidence that every arbitrary string parses or survives this helper.
+
+## 4. Outer admission and the intervening synchronizer boundary
+
+Fresh main **0xb8a8..0xbb2c** provides the actual upstream caller. Its selected TR loop checks descriptor axes+44/+48 against incoming direction and destination2, then compares its criterion list+52 with record+48 (**0xb944..0xb994**). Automation TR descriptor0xdb5c declares axes1/2, registers criterion1 in the previously reviewed initialization path, and its+40 relocation identifies translator0x3174. At **0xb998..0xb9b0**, callback arguments are axes1/2, the original record and address of local output list, plus descriptor as fifth stack argument.
+
+Selected translator return0 triggers **0xb9cc..0xb9dc**: `g_list_find` checks the output list for the original pointer. If absent,0xbaf8 calls `free_message`; if present, the source does not take that branch. Successful selected in-place append supplies that membership, under ordinary list behavior.
+
+Before STM processing, **0xb9e8..0xb9fc** performs foreach over the output list using actual callback **0xad70**, reconstructed from pool0xbb14/PIC base0x16660, with manager+28 as user data. This callback iterates supplied synchronizer descriptors, compares their criterion to record+48 and calls descriptor+40 at **0xadc0**. Its contents are not all resolved here. An empty registry produces no such call; a nonempty one needs an explicit preservation premise. It would be incorrect to silently bypass this producer/consumer boundary and assert all feedback necessarily reaches STM unchanged.
+
+Then **0xba0c** calls `send_to_sm_from_field0xb7b8` with the local list address and manager. Its selected foreach invokes **0xade8**. At **0xae1c**, record+48 is read; **0xae60..0xae68** compares it to each STM descriptor criterion. On match, **0xae6c..0xae80** calls descriptor+40 with descriptor, same record, field-list address and OPEN-list address. Automation criterion2 comes from original STM0x18bc and the actual callback relocation is **0x1c0c**. Thus coherent parser WHO`2`→routing2 makes that callback eligible under active-registry assumptions. This outer dispatcher does not compare the request ID itself; that guard belongs to the selected automation callback.
+
+## 5. Conditional receipt state, forwarding and limits
+
+Reusing run14's established ordinary context (`query_active+28=0`, pending+52=1, saved ID+56=41), the same record ID+60=41 satisfies **0x1cc4**. Status1 branches at **0x1cd4** to the local ACK helper call0x1f0c; status2 at **0x1cdc** to local NACK0x1f30. The selected completion clears context pending+52 and saves−1 at+56. Coherent parsedkind1 then takes ordinary forwarding, setting record metadata+8=3 and appending it to the OPEN output list. This is the local protocol/list policy; no physical ACK or delivery is established.
+
+The two host ledgers merely record those selected status1/2 conditional state effects with pointer token`Q` and ID41 retained. They do not execute native parser, TR, queue, synchronizer, STM, callbacks, allocation, free or list ownership. Destruction bodies and natural event-loop scheduling are not exercised, so same-pointer list membership is not promoted into a general lifetime/reclamation/leak/UAF result. The outer code also iterates additional descriptors/criteria; a one-selected-path ledger is not a complete multi-plugin behavior model.
+
+## Confidence and remaining questions
+
+High confidence static: original body literal path, nonnull/null helper split, direct record stores preserving52/60, actual outer TR call/list membership/synchronizer/STM call order and callback arguments. Conditional confidence: complete selected composition under the stated parser/provider/registry/body/state premises. Runtime and physical behavior remain unknown.
+
+1. Determine actual initialized synchronizer registry+28 and selected callbacks' effects on this WHO2 record before STM admission.
+2. Close effective `buf_to_openmsg` provider and actual normal parsedkind for `*2*0*0##`; current ordinary-kind premise is deliberately unexecuted.
+3. Establish natural outgoing queue/body/ID placement and event ordering without equating queue-head reuse with physical causal correlation.
+4. Broader multi-plugin ownership, replacement requests, actual transport and physical automation response remain outside this batch.
+
+## Author-stage correction history
+
+The first collector assertion used the wrong destination-register encoding for the already understood core ID store at0x2250 (`str ...[ip]` instead of actual `[r2]`). It stopped before output writes. Exact draft is retained in `development-before-assert/collect_evidence.py`; final assertion checks original word`e582303c`. This changed no source semantics or historical report and did not involve firmware execution.

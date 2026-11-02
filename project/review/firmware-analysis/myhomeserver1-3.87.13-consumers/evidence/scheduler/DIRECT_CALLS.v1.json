@@ -1,0 +1,62 @@
+[
+  {
+    "call_va": "0x1316a",
+    "original_bytes_hex": "1ff00ffd",
+    "scope": "Original static direct BL; no runtime invocation or call-return claimed.",
+    "target_va": "0x32b8c"
+  },
+  {
+    "call_va": "0x1333e",
+    "original_bytes_hex": "1ff0d1fb",
+    "scope": "Original static direct BL; no runtime invocation or call-return claimed.",
+    "target_va": "0x32ae4"
+  },
+  {
+    "call_va": "0x1334a",
+    "original_bytes_hex": "04f071f9",
+    "scope": "Original static direct BL; no runtime invocation or call-return claimed.",
+    "target_va": "0x17630"
+  },
+  {
+    "call_va": "0x1776e",
+    "original_bytes_hex": "06f02bf9",
+    "scope": "Original static direct BL; no runtime invocation or call-return claimed.",
+    "target_va": "0x1d9c8"
+  },
+  {
+    "call_va": "0x178ae",
+    "original_bytes_hex": "97f091fd",
+    "scope": "Original static direct BL; no runtime invocation or call-return claimed.",
+    "target_va": "0xaf3d4"
+  },
+  {
+    "call_va": "0xaf3e0",
+    "original_bytes_hex": "06f00cfa",
+    "scope": "Original static direct BL; no runtime invocation or call-return claimed.",
+    "target_va": "0xb57fc"
+  },
+  {
+    "call_va": "0xb5a58",
+    "original_bytes_hex": "7cf7ecf9",
+    "scope": "Original static direct BL; no runtime invocation or call-return claimed.",
+    "target_va": "0x31e34"
+  },
+  {
+    "call_va": "0x32076",
+    "original_bytes_hex": "fcf7c1fc",
+    "scope": "Original static direct BL; no runtime invocation or call-return claimed.",
+    "target_va": "0x2e9fc"
+  },
+  {
+    "call_va": "0x320be",
+    "original_bytes_hex": "fdf7c5fc",
+    "scope": "Original static direct BL; no runtime invocation or call-return claimed.",
+    "target_va": "0x2fa4c"
+  },
+  {
+    "call_va": "0x320d2",
+    "original_bytes_hex": "fef7edfd",
+    "scope": "Original static direct BL; no runtime invocation or call-return claimed.",
+    "target_va": "0x30cb0"
+  }
+]

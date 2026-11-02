@@ -1,0 +1,29 @@
+# F461 final run15 independent retained-entry removal source review
+
+PASS for authoritative REPORT.v2 plus its exact instruction-order wording refinement. No further author correction requested. This is independent bounded original-byte/artifact review and a read-only host collector replay. No original/provider/native/target execution, actual module/stop invocation, signal/file event, semantic model, fixture or SQL was performed. Author files were unchanged by the reviewer.
+
+Authoritative area: `work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/`. Exact pins:
+
+- `REPORT.v2.md`: `dcce7197af2737f165295c51bcb3b51ff07bc3076550daa4732da48e38c3ae70`.
+- `REPORT.md`: `891728ccd1d024c018cc8362d0399cd5bdc793c0597c696b68560765407735d3`.
+- `collect_removal_v1.py`: `bcde12a10d6d8b83f9305d076c53d9018573abbca18b54c595d4688a0e3a1435`.
+- `SOURCE.json`: `ea28b2bfad1730e31fb40d358bbed191bfab0c623ee8ee34a4ecb79a3e8719c4`.
+- `INPUTS.json`: `301877deb810f70d1d89c573a4028328517a9cc3cb3eaff3fef0db3079d335cc`.
+- `OUTPUT_MANIFEST.json`: `efd02f55889d6aef0fd2d065e18f22c2cac655360da5b58ad9f576fb16f22ee3`.
+- `first-candidate/INDEX.json`: `e31251141b8b686fcf2aad0de39fbc05d14e0158bbd2902f73c1a7cf6a5d79df`.
+- `WORDING_REFINEMENT.v2.json`: `bde209563f58d1e8e09374221068cda6d40e1c3b4e146508013417fcc3be7b70`.
+- `report-v2-first/INDEX.json`: `915ed0cb6f7876955355018b587b61e4312124819bc1ff51c31df0de027af70d`.
+
+The intentionally v1-report-bound collector `--check` passes nine outputs, six spans,38 guards, three PIC joins, two safe literals,13 import proofs, six input pins and11 first copies. Independent regular-file read confirms original `/home/bticino/bin/coso` SHA256 `2fb47ebfb8e63df22053a5ca95b08183a11ab93b248dcbc2b2d7a5f682561197`. Fresh ELF64/AArch64 PT_LOAD mapping reproduces every selected span hash/hex,38 words, three PIC targets, two literal strings and13 BL/PLT/JUMP_SLOT rows. Actual main BL, output identities and11 first copies agree. This is selected source verification, not whole loader/provider/lifetime analysis.
+
+Source positively links main's saved managerM to init_dir_monitoring0x58a0, P=[M+16], directoryP+8, monitor request and nonnull-monitor branch. The subsequent type-check/cast and changed-signal connection are requests under ordinary valid GObject/provider premises, not an observed cast/registration/firing success. The actual callback pointer0x5350 is formed by original ADRP/ADD and the same savedM is userdata. Under the ordinary signal callback ABI, supplied X4 is copied to X5 and P=[X5+16] becomes X22 before the diagnostic call. P24, manager, event-file/monitor, retained entry16 and path/handle fields remain distinct objects; actual same-owner, live callback and lifetime are conditional.
+
+The selected callback gates and operand direction agree: module support nonzero, bounded unsigned event<=2 continuation, P+0 list head, node data as entry, then `g_str_has_suffix(g_file_get_path(provided_file),entry+0 stored_path)`. This is a provider string-result relation, not canonical path equality or validated filesystem identity. Nonzero suffix result plus numeric event0 reaches the selected removal block. The report correctly avoids assigning public/deleted-event semantics to0, actual runtime filenames, uniqueness, active plugin or a complete event-policy matrix. Prior entry producer composition requires the same valid P/list/entry and no relevant mutation; it is not inferred solely from field offsets.
+
+The selected request sequence is exact: module-symbol lookup of stop_plugin on entry+8 handle; call through the returned pointer only for nonzero lookup result; g_list_remove(P_head,entry); write returned head; free path; close handle; free entry; normal callback return under ordinary intervening returns. The stop callable's argument ABI/body/result remains opaque. A missing stop symbol skips its invocation but still reaches bookkeeping. No local stop-return test precedes bookkeeping and no close-return test precedes final free, without implying global absence of checks or actual successful stop/unload.
+
+The author's original step4 combined the path load and free request as after the head update. Independent original words instead show LOAD558c before STORE5590, followed by FREEcall5594. Root preserved exact old report/collector/manifest before author created NEW REPORT.v2 with that one phrase clarified. Current v2 equals v1 with exactly the refinement's recorded phrase substituted; all three parent pre-edit files, both v2 report/refinement copies and both indexes match. The main requested-call ordering and source/code/results/counts were unchanged. V1 report/collector/manifest/first copies remain immutable, and direct collector check deliberately binds v1. No peer review file existed before this authoritative version. A reviewer-only in-memory snapshot-check expression initially had a Path-indexing typo; its corrected read-only expression verified the three retained snapshots before this final review, without author/output writes.
+
+The report correctly treats close as a request rather than demonstrated code unloading or stopped plugin activity. Diagnostics/providers can fail or not return; aliases, callbacks/threads, unloading/reference policy, repeated events, concurrency and unwind remain open. No leak, race, UAF, ownership safety, security, defect, readiness, boot/DTB/auxiliary-core or physical conclusion follows. Original trees, previous dossiers and all execution ledgers remain unchanged.
+
+GModule/GFile/GObject/list/free/log/plugin-stop and other update/reload bodies were not expanded or executed. Receiving/output/transport/authentication/session/framing/MQTT/libjel, frame preparation, platform-command and uncertain bt_device routes remain closed. This completes the assigned final selected source review; subsequent work is consolidation only.

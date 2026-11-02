@@ -1,0 +1,29 @@
+# F450 night03: original provided-resource array and qualified local handoff
+
+This new bounded source chain supplies a six-word request containing unzip/-d//var/tmp/-o, a provided field andNULL to an actual import, through a qualified local caller. It does **not** establish that the provided field names PROD50.xtz, that the XML check50 populates it, that an archive is decoded or that a database is recovered. The concrete50 producer/packaging-input gap remains OPEN. No password/key guess, decryption or target execution occurs.
+
+## Original caller and supplied owner
+
+SOURCE.json pins fresh F450 bt_daemon (`85e7ca65b4d1c4e8ab23a93ac532aea568dd06272fefb1b1be928eeba18f3d73`) and packaged libutils.so identities, own ELF32 little-endian ARM machine40/flags0x5000002, nine PT_LOAD-backed source/data/PLT spans and40 exact words. Stripped nearest-symbol labels are not used as function names. No other-product layouts or runtime objects are forced.
+
+Original local entry0xf96c stores supplied entryR0 C atFP-16. It requests imported fork at0xf984; its signed negative leg is separate, and the selected numeric-zero branch through0xf9c0/0xf9c8 reloads C at0xf9e4 then BL0xf9e8→0xc7f0. Nonzero skips that call. Ordinary provider/callee-save ABI, valid stack and normal diagnostic returns are premises; numeric0 is source fact, not an observed child process or activation. Callee0xc7f0 saves the same entryR0 atFP-2120. C's actual type, constructor, configuration owner, natural outer admission and lifetime remain unproved.
+
+## Exact selected resource request
+
+After earlier unclosed admission,0xdb4c loads that C;0xdb50 reads its word+80. Comparison0xdb54 and zero branch0xdb58→0xdc10 skip this selected construction when zero. On the retained nonzero leg, original pool loads/stores fill address0x23e8c in order:0literalunzip,+4literal-d,+8literal/var/tmp,+12literal-o,+16the provided word[C+76],+20zero.0xdbc0 loads the table address and0xdbc4 requests imported call through original stub0xa1f4. This exactly constructs a conventional argument-vector-shaped request; the provider is not presumed to execute it, and the supplied word is not read as a string or assigned an archive pathname/secret.
+
+The actual original DT_NEEDED declaration includes libutils.so, whose defined call is0x3488/48bytes. Under that explicit live-binding premise, its complete tiny body preserves originalR0 until0x349c requests call_nowait via a self/import PLT. The call_nowait body stays opaque. The wrapper then requests waitpid with its returnedR0, a zero-initialized scratch-word address inR1 and0inR2;0x34ac uses LDRB[SP+5] for the normal returned byte. Its range0..255 is an instruction-level fact, not certified launch, wait-status, exit-code or extraction-success semantics. The caller's separate CMN against−1 is retained without inventing a full error policy or alleging a defect. Fork, call_nowait, waitpid, logging, loader binding and process implementations are not executed or expanded.
+
+All four original PLT/GOT/JUMP_SLOT relationships are decoded from each own image rather than inferred from names. The source proves the pointer/table forwarding request with ordinary valid-object and normal-call premises, not actual command execution, completion or lifetime safety. Unknown writes/aliases and surrounding control flow remain open; no global absence or universal consumer policy is claimed.
+
+##50 remains a separate declaration and unresolved producer
+
+Original stack_open.xml lines51-55 have extra/enable0, check50 and empty nocheck. Only those whitelisted nonsecret fields/lines are retained. They are on-disk declarations, not active configuration; this packet does **not** map them to C+76 or C+80. The selected table has no separately supplied literal password option. That fact does not identify a packaging key/algorithm or prove no key exists elsewhere. A different discovered unzip site was excluded from this packet rather than conflated with this caller.
+
+The earlier encrypted archive metadata remains inherited:50.xtz SHA256 `824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8`, encrypted member50/master.sqlite declared289792bytes/CRC52150069. Its source bytes are not decoded or reinterpreted here. Night01's local copy→SQLite request remains separate, not repeated new coverage or an assumed natural sequence. There is no recovered/generated DB to query or upload. A genuine, qualified source relation from a configuration/packaging producer to the actual archive input is still needed.
+
+## Reproduction and containment
+
+`python3 -B collect_resource_v1.py --check` reproduces raw-byte/pool/branch/PLT/identity and whitelisted XML checks using host readelf only. Author host ARM objdump was used to read selected original spans, never to execute instructions. Initial canonical outputs/script are exclusive and immediately frozen in exact first copies; the index bytes are computed before its own file is opened. No failed canonical generation or overwritten candidate is claimed.
+
+All original/vendor/provider/native/emulator/helper/model/fixture/SQL/target OS/network/bus and decryption executions are0. No shell command, fork, unzip, wait or filesystem operation is invoked on behalf of the firmware. No key, credential, private identifier, raw configuration or adjacent payload values are exported. System/output/receiving/transport/authentication/session/framing/MQTT/libjel and equivalent closed implementations remain opaque. Original images, acquisition records, old packets/ledgers, source registry and repository remain unchanged; parent alone controls any future genuine database archival operation.

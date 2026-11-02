@@ -1,0 +1,103 @@
+# Static follow-up: WHO4 temperature frame → JSON string
+
+The selected packaged `api-arm` mappings **preserve the scalar digits as a JSON string**. Ordinary DIM0 `0501`/`0511` become `actual_temperature: "0501"`/`"0511"`; the selected DIM15 selector1 path preserves `1010` as `"1010"`, including its first character. These paths do not apply numeric conversion, sign negation, rounding or compensation before the shared frontend converter. This resolves the backend mapping gap identified in `research/2026-10-30-targeted/temperature/REPORT.md` for these specific mapper paths.
+
+This is static original-instruction/data analysis with a small **host Python model**, not new original ARM execution, JavaScript execution, a device capture or a running backend/frontend test. The ordinary `std::string` and named CppCMS string-setter contracts support the value derivation; their implementations were not executed here.
+
+## Identity and reproducibility
+
+Original-image executable: `/home/bticino/bin/api-arm`, SHA256 `2248b877bcc4180f0f04ffb1bad71e0efe4607fd06eacf174a2a6a380ea2cb13`. The collector checks this exact hash before reading load segments, original instruction words and selected non-sensitive literals. It independently disassembles the original ELF with host `objdump`.
+
+From the project work directory:
+
+```text
+python3 work/f454-firmware/research/2026-10-30-targeted-2/temperature/collect_temperature_mapping.py
+python3 work/f454-firmware/research/2026-10-30-targeted-2/temperature/model_mapping.py
+```
+
+Outputs: [input-manifest.json](input-manifest.json), [literal-and-word-evidence.json](literal-and-word-evidence.json), thirteen bounded disassembly spans, and [model-results.json](model-results.json). The collector verifies **16 original words/table entries and 20 literal-pool entries**. The model derives five selected ordinary examples. Original instructions executed in this batch: **zero**. No previous firmware/native matrix was rerun.
+
+## Concrete dispatch and parsed fields
+
+The main mapper calls original classifier0x9da8c at0xa0d44. Its class2 table entry0xa0da4 points to0xa1898 (`class_dispatch.txt`). The dimension branch calls parser0xa0214 at0xa18c4 and swaps its fields into the local record (`who_dispatch.txt`):
+
+| Local offset | Content | Transfer evidence |
+|---|---|---|
+| +0 | WHO string |0xa18dc |
+| +4 | DIM string before first `*` of the third regex capture |0xa18f0 |
+| +8 | WHERE string |0xa1900 |
+| +12 | remainder after DIM separator |0xa1914 |
+| +16 | parser completion flag |0xa1920–0xa192c |
+
+The parser's regex global0x154640 is initialized from the original literal `\*#(\d*)\*([0-9#]+)\*(.*)##` (initializer0x11230–0x11244, pool0x114b4→literal0x1297b8). Parser0xa026c loads this same global through pool0xa0a10. It copies regex capture1 to WHO, capture2 to WHERE, splits capture3 at the first `*`, and stores DIM and remaining tail. See `dimension_parse.txt`:0xa034c–0xa035c locates the delimiter;0xa03f4–0xa03fc stores WHO;0xa04ac–0xa04b4 stores WHERE;0xa04c8–0xa04e8 stores DIM;0xa052c–0xa0558 stores the remainder. The normal completion flag is set at0xa057c.
+
+The main mapper converts WHO using `strtol(...,10)` at0xa19bc, subtracts1 and uses the table at0xa19d0. WHO4 entry0xa19dc points to0xa2dd8. There DIM is converted with `strtol(...,10)` at0xa2de8. Original compare/branch pairs select:
+
+- DIM15:0xa2e08 `e357000f`;0xa2e0c `0a000f61`→0xa6b98.
+- DIM0:0xa2e30 `e3570000`;0xa2e34 `0a001b30`→0xa9afc.
+
+These observations describe the selected ordinary dispatch. They are not a comprehensive malformed-frame validator or a claim about all strings accepted by `strtol`.
+
+## DIM0: suffix trimming preserves all four digits
+
+The DIM0 branch constructs a Booster regex from global0x15466c at0xa9b0c–0xa9b14. Initializer0x11408 adds52 to base0x154638;0x11418 loads pool0x114e8→literal0x1298e4, and0x1141c constructs this exact pattern:
+
+```text
+^\*#4\*(\d*)\*0\*(\d*)\##$
+```
+
+At0xa9b44 the raw frame is matched. False takes0xa9b4c→0xacda4, outside the successful temperature assignment path. The pattern here restricts ordinary WHERE and scalar captures to digits; it does not impose exactly four digits or a0..500 numeric limit. Empty-capture/malformed behavior was not modeled.
+
+**The capture accessor does not itself return a copied string.** Original helper0xc002c writes a capture start/end pointer pair plus a validity byte (`capture_helper.txt`:0xc0058–0xc0084). The caller requests capture1 at0xa9d10 and capture2 at0xa9e38, but passes only the returned **start pointer** to `std::string(char const*,...)` at0xa9d24/0xa9e50. Consequently its intermediate strings include the remaining frame suffix:
+
+| Example raw frame | WHERE intermediate | Temperature intermediate |
+|---|---|---|
+| `*#4*1*0*0501##` | `1*0*0501##` | `0501##` |
+
+WHERE is truncated before the first `*` using find0xa9d48 and substring constructor0xa9da8. For temperature, find0xa9e70 searches for `*`; result is kept inr8 at0xa9e80. The comparison0xa9eb0 `e3580064` compares this **delimiter position** with100; it does not compare the scalar temperature with100. If the position is greater than100, including unsigned `npos`,0xa9ed8 instead searches for `##`. The final substring is constructed at0xa9f4c from position0 with this count. Ordinary suffix `0501##` therefore becomes `0501`.
+
+At0xa9f20 the key is `actual_temperature`;0xa9f30 selects that JSON field;0xa9f6c calls `cppcms::json::value::str(std::string const&)` and0xa9f7c assigns it. There is no scalar `strtol`, arithmetic, leading-digit removal or numeric JSON setter in this extraction-to-field path. Leading zeros remain part of the string.
+
+## DIM15 selector1: signed-notation prefix remains present
+
+At entry0xa6b98 the branch checks whether the parsed tail is nonempty. If so,0xab6a4–0xab6d8 copies its first token before `*` into a temporary. At0xa6bb4 this token is compared with the literal `"1"` (pool0xa71bc→0x128000). A mismatch branches0xa6bbc→0xa2e50, outside this temperature-event assignment. No claim is made that selector2 or other DIM15 selectors carry the same field.
+
+For an ordinary tail `1*1010*1111`,0xa6d54 finds the first `*`;0xa6d60 adds1, and0xa6d64–0xa6d6c checks this start against the source length. The remainder is copied at0xa6d7c. Then0xa6d90 finds its next `*` and0xa6da8 copies the preceding token into the temporary addressed byfp. Thus the selected scalar is `1010`, while the trailing `1111` does not enter this field. Missing-separator and exception behavior is outside the model.
+
+At0xa6db4 the key is `actual_temperature`;0xa6dc8 selects the field;0xa6de4 explicitly setsr1=fp (`e1a0100b`),0xa6de8 calls the same JSON string setter (`ebfda22b`), and0xa6df8 assigns it. No sign interpretation occurs between this substring and that setter. In particular `1010` remains `"1010"`; `1501` remains `"1501"`.
+
+Earlier `research/2026-10-29/functional/run11-temperature/REPORT.md` and `run12-temperature/REPORT.md` identify the distinct signed extended external-probe producer and preserve offline output such as `*#4*11*15*1*1010*1111##`. This batch joins that **wire representation** to the selected backend field by static dataflow; it does not re-execute the producer, prove actual physical input, or turn the short unsigned DIM0 decoder into a signed decoder.
+
+## Event schema and normal completion
+
+Both selected paths build the same field subset:
+
+```json
+{
+  "eventName": "cu_zone_set_actual_temperature",
+  "eventType": "cu_zone_set_actual_temperature",
+  "where": "11",
+  "actual_temperature": "1010"
+}
+```
+
+This is an illustrative field subset, not a captured/full serialized response. WHERE and scalar vary with the selected input. Evidence:
+
+| Field | DIM0 assignment | DIM15 selector1 assignment |
+|---|---|---|
+| eventName |0xa9b80–0xa9ba4 |0xa6be4–0xa6c08 |
+| eventType copied from eventName |0xa9bf8–0xa9c2c |0xa6c54–0xa6c8c |
+| where via JSON string setter |0xa9dc4–0xa9dd4 |0xa6d0c–0xa6d1c |
+| actual_temperature via JSON string setter |0xa9f6c–0xa9f7c |0xa6de8–0xa6df8 |
+
+Literal pools bind both paths to the same event0x128b8c and scalar key0x128b98. `json_string_helper.txt` independently shows the event-name helper0xc0428 constructing a string and calling the string setter at0xc0454. DIM0 then cleans up through0xa9ffc→0xa9adc→0xa2f84; DIM15 uses0xa6e4c→0xa2f84. Both join0xa13e8. If the parser completion byte is nonzero,0xa1408 loads the key `who` (pool0xa1ac0→0x126ddc) and0xa143c stores the original WHO string through the JSON string setter. The host model includes `who: "4"` for that ordinary completed case.
+
+DIM0 uses its dedicated digits-only raw-frame regex and suffix trimming; DIM15 uses the general parsed WHERE and selector1 tail. Their common event name does not erase this distinction. A numeric WHERE alone does not prove whether the consuming configured object is a control zone or an external probe; that depends on frontend configuration and matching. The backend trace establishes neither a separate external event name nor a special numerical compensation for external values in this selected branch.
+
+## Host derivation and boundaries
+
+`model_mapping.py` derives four string results and one selector rejection from these normal branches: DIM0 `0501`, DIM0 `0511`, DIM15 selector1 `1010`, DIM15 selector1 `1501`, and a selector2 example that does not select this temperature event. It explicitly models the DIM0 C-string **suffix** before delimiter trimming, not a fabricated capture-only intermediate. Python regex is used only for selected ASCII examples; it is not claimed to implement every Booster regex edge case.
+
+The new evidence removes the proposed backend-compensation explanation **for these mapped strings**. Combined with the earlier shared frontend source, ordinary `"0501"` reaches its scalar conversion as the padded string, and selected `"1010"` retains its prefix before the shared converter drops its first character. Parent's separate frontend dispatch investigation traces the event/model/view handoff. This report alone stops at the backend JSON field assignment/common completion, not an observed HTTP event delivery or display.
+
+Physical meaning and validity of501..511, fault/sentinel semantics, valid device ranges, actual negative-reading availability and missing translated resources remain unresolved. Neither these JSON mappings nor their permissive digit patterns expand the documented valid setpoint domains. No source/image/synced file was changed; no original application/library code or JavaScript ran; there was no device/network/file/service interaction by firmware code and no credential material was collected.

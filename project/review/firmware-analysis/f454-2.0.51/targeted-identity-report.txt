@@ -1,0 +1,33 @@
+# F454 identity metadata: packaged N_CONF declaration and conditional writer
+
+Static-only follow-up, 30 October 2026. The exact normal image contains `/art.xml` with `/root/art1/mynconfdiag` equal to decimal text `15` at line8. This closes the earlier uncertainty about whether this archive includes an identity declaration for that value. It does **not** establish why15 was chosen, that it denotes a count or sentinel, or what a particular gateway currently stores.
+
+## Original source and method
+
+`collect_identity.py` reads canonical original bytes through the pre-existing read-only ImageVFS. It hashes `/art.xml` and `/home/bticino/lib/liblghal.so.0.0`, verifies six selected PC-relative literals directly from original ELF LOAD bytes, records only the allowlisted N_CONF XML leaf and extracts exact disassembly spans. The source disassembly hash is recorded; every retained span instruction word is independently checked against the original ELF bytes. Other identity/configuration field values are deliberately omitted.
+
+No original instruction, GLib callback, process, file-write command, EEPROM operation or gateway executes. ElementTree and literal-address arithmetic are host-side inspection methods. All paths and VAs below refer to the identified F4542.0.51 archive SHA25615f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3.
+
+## Concrete dataflow
+
+| Stage | Static evidence | Established boundary |
+| --- | --- | --- |
+| Packaged declaration | `/art.xml:8`, `/root/art1/mynconfdiag` is `15` | Packaged metadata, not a live EEPROM read |
+| XML path matching | `liblghal` text callback `0x125d4`; first comparisons resolve `root` at0x125f4 and `art1` at0x12618 | Original callback recognizes the matching hierarchy; actual parser invocation is not executed |
+| Leaf and output slot | Comparison string `mynconfdiag` at0x126dc; duplicated text stored at output-array+12 by0x126f8 | Slot3 in this parser result, not an EEPROM offset or Module count |
+| Initial synchronization path | `configure_device(bool)`0x86c8;0x880c..0x881c loads literal `/art.xml` through `load_device_data`, with result array atSP+36;0x887c loadsSP+48 and0x8880 calls `hal_set_nconfdiag` | Conditional source→array slot3→setter argument dataflow; no actual initialization or write outcome |
+| Update/comparison path |0x8948 checks the bool argument;0x8950..0x899c obtains a code-name, forms `/art.xml.%s`, uses it if the stat wrapper succeeds, otherwise `/art.xml`;0x8a90..0x8ac8 compares slot3 with `hal_get_nconfdiag` and calls the setter on mismatch | A possible variant-file override is explicit. `/art.xml` is not asserted to win every installation |
+
+`load_device_data`0x6dac selects `read_art_file`0x127cc when its stat wrapper reports success, with another fallback helper otherwise. `read_art_file` builds a GLib markup context, invokes `run_parse_xml`, end-parse and cleanup. The callbacks and GLib parsing are inspected as code relationships, not executed or validated here. The static leaf-to-slot/store chain does not constitute an uninterrupted successful parser transaction.
+
+The surrounding synchronization routine first uses a cached/detected generation predicate and compares persistent key-code material. When the selected generation value is1, a key mismatch reaches the initial-load/setter path. A matching key can skip synchronization when its bool argument isfalse; a true argument enables the later compare/update route. Key values are neither read into the report nor interpreted. Caller selection, generation detection, real storage contents and successful writes remain outside this follow-up.
+
+## Reconciliation
+
+The earlier protocol report established getter/cache provenance and the eight-byte persistent offset0x15e, but did not identify the packaged default. The initial boot report explicitly recorded that no provisioning default was found in that pass. Those historical reports remain unchanged. The new fact is the actual packaged `mynconfdiag=15` declaration and its conditional static writer linkage.
+
+It is now supportable to say that the examined Firmware carries a declaration matching the observed gateway field15. It remains unsupported to call15 the number of physical configurators, an all-ones sentinel, a universal gateway constant, or a confirmed current EEPROM value. Nor does this establish semantic identity between diagnostic N_CONF, local client IDs, WHO13 compatibility MODEL200 and catalogue Module/slot counts.
+
+## Reproduction
+
+Run `python3 work/f454-firmware/research/2026-10-30-targeted/identity/collect_identity.py` from the task workspace. `identity-evidence.json` contains original hashes, allowlisted XML line, literal pool/PC/target addresses, span locators and scope. The disassembly spans are retained beside it. No source, original image, completed overnight report or synced file is modified.

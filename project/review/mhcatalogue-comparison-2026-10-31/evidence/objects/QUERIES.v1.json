@@ -1,0 +1,1214 @@
+[
+  {
+    "SQL": "SELECT name,sql FROM sqlite_master WHERE type='table' ORDER BY name",
+    "parameters": [],
+    "rows": 75,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_KEY_OBJECT\"",
+    "parameters": [],
+    "rows": 158,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_KEY_OBJECT\")",
+    "parameters": [],
+    "rows": 6,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_KEY_OBJECT\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_VIRGIN_OBJECT\"",
+    "parameters": [],
+    "rows": 18,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_VIRGIN_OBJECT\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_VIRGIN_OBJECT\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_OBJECT_COLLECTION\"",
+    "parameters": [],
+    "rows": 1352,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_OBJECT_COLLECTION\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_OBJECT_COLLECTION\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_OBJECT_FIRMWARE\"",
+    "parameters": [],
+    "rows": 827,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_OBJECT_FIRMWARE\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_OBJECT_FIRMWARE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_OBJECT_SYSTEM\"",
+    "parameters": [],
+    "rows": 251,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_OBJECT_SYSTEM\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_OBJECT_SYSTEM\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_OBJECT_VIRGIN_OBJECT\"",
+    "parameters": [],
+    "rows": 102,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_OBJECT_VIRGIN_OBJECT\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_OBJECT_VIRGIN_OBJECT\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_OBJECT_FUNCTION\"",
+    "parameters": [],
+    "rows": 4,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_OBJECT_FUNCTION\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_OBJECT_FUNCTION\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_FIRMWARE_VIRGIN_OBJECT\"",
+    "parameters": [],
+    "rows": 75,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_FIRMWARE_VIRGIN_OBJECT\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_FIRMWARE_VIRGIN_OBJECT\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_SLOTS\"",
+    "parameters": [],
+    "rows": 1725,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_SLOTS\")",
+    "parameters": [],
+    "rows": 4,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_SLOTS\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_SLOT_KO_VIRGIN\"",
+    "parameters": [],
+    "rows": 169,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_SLOT_KO_VIRGIN\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_SLOT_KO_VIRGIN\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_SLOT_CONDITION\"",
+    "parameters": [],
+    "rows": 1000,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_SLOT_CONDITION\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_SLOT_CONDITION\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_CONDITION\"",
+    "parameters": [],
+    "rows": 488,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_CONDITION\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_CONDITION\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_CONF\"",
+    "parameters": [],
+    "rows": 2883,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_CONF\")",
+    "parameters": [],
+    "rows": 13,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_CONF\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_CONF_RANGE\"",
+    "parameters": [],
+    "rows": 14346,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_CONF_RANGE\")",
+    "parameters": [],
+    "rows": 11,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_CONF_RANGE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_FILTER\"",
+    "parameters": [],
+    "rows": 1909,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_FILTER\")",
+    "parameters": [],
+    "rows": 5,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_FILTER\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_FILTER_RANGE\"",
+    "parameters": [],
+    "rows": 6152,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_FILTER_RANGE\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_FILTER_RANGE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_HIDDEN_KCONF\"",
+    "parameters": [],
+    "rows": 289,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_HIDDEN_KCONF\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_HIDDEN_KCONF\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_BUS_INTERFACE\"",
+    "parameters": [],
+    "rows": 39,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_BUS_INTERFACE\")",
+    "parameters": [],
+    "rows": 4,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_BUS_INTERFACE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_BUS_ITEM\"",
+    "parameters": [],
+    "rows": 499,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_BUS_ITEM\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_BUS_ITEM\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_ITEM_SYSTEM\"",
+    "parameters": [],
+    "rows": 223,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_ITEM_SYSTEM\")",
+    "parameters": [],
+    "rows": 4,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_ITEM_SYSTEM\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_ITEM\"",
+    "parameters": [],
+    "rows": 210,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_ITEM\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_ITEM\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_FIRMWARE\"",
+    "parameters": [],
+    "rows": 311,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_FIRMWARE\")",
+    "parameters": [],
+    "rows": 7,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_FIRMWARE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_DEVICE\"",
+    "parameters": [],
+    "rows": 541,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_DEVICE\")",
+    "parameters": [],
+    "rows": 11,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_DEVICE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_COLLECTION\"",
+    "parameters": [],
+    "rows": 177,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_COLLECTION\")",
+    "parameters": [],
+    "rows": 6,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_COLLECTION\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_SYSTEM\"",
+    "parameters": [],
+    "rows": 30,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_SYSTEM\")",
+    "parameters": [],
+    "rows": 5,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_SYSTEM\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_BUS\"",
+    "parameters": [],
+    "rows": 13,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_BUS\")",
+    "parameters": [],
+    "rows": 5,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_BUS\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_CONF_TYPE\"",
+    "parameters": [],
+    "rows": 4,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_CONF_TYPE\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_CONF_TYPE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_CONF_DATA_TYPE\"",
+    "parameters": [],
+    "rows": 6,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_CONF_DATA_TYPE\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_CONF_DATA_TYPE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_CONV_RULE\"",
+    "parameters": [],
+    "rows": 7899,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_CONV_RULE\")",
+    "parameters": [],
+    "rows": 8,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_CONV_RULE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_OBJECT_ITEM_FAMILY\"",
+    "parameters": [],
+    "rows": 33,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_OBJECT_ITEM_FAMILY\")",
+    "parameters": [],
+    "rows": 4,
+    "source": "suite"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_OBJECT_ITEM_FAMILY\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM EN_CONF x WHERE x.id_key_object IS NOT NULL AND x.id_key_object<>0 AND NOT EXISTS(SELECT 1 FROM EN_KEY_OBJECT p WHERE p.id_key_object=x.id_key_object)",
+    "parameters": [],
+    "rows": 1,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM EN_CONF x WHERE x.id_firmware IS NOT NULL AND x.id_firmware<>0 AND NOT EXISTS(SELECT 1 FROM EN_FIRMWARE p WHERE p.id_firmware=x.id_firmware)",
+    "parameters": [],
+    "rows": 1,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM EN_CONF_RANGE x WHERE x.id_conf IS NOT NULL AND NOT EXISTS(SELECT 1 FROM EN_CONF p WHERE p.id_conf=x.id_conf)",
+    "parameters": [],
+    "rows": 1,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM EN_FILTER x WHERE x.id_conf IS NOT NULL AND NOT EXISTS(SELECT 1 FROM EN_CONF p WHERE p.id_conf=x.id_conf)",
+    "parameters": [],
+    "rows": 1,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM EN_FILTER x WHERE x.id_object_firmware IS NOT NULL AND NOT EXISTS(SELECT 1 FROM AS_OBJECT_FIRMWARE p WHERE p.id_object_firmware=x.id_object_firmware)",
+    "parameters": [],
+    "rows": 1,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM EN_FILTER_RANGE x WHERE x.id_filter IS NOT NULL AND NOT EXISTS(SELECT 1 FROM EN_FILTER p WHERE p.id_filter=x.id_filter)",
+    "parameters": [],
+    "rows": 1,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM AS_SLOT_CONDITION x WHERE x.id_slot IS NOT NULL AND NOT EXISTS(SELECT 1 FROM EN_SLOTS p WHERE p.id_slot=x.id_slot)",
+    "parameters": [],
+    "rows": 1,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM AS_SLOT_CONDITION x WHERE x.id_condition IS NOT NULL AND NOT EXISTS(SELECT 1 FROM EN_CONDITION p WHERE p.id_condition=x.id_condition)",
+    "parameters": [],
+    "rows": 1,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM AS_HIDDEN_KCONF x WHERE x.id_conf_range IS NOT NULL AND NOT EXISTS(SELECT 1 FROM EN_CONF_RANGE p WHERE p.id_conf_range=x.id_conf_range)",
+    "parameters": [],
+    "rows": 1,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM AS_HIDDEN_KCONF x WHERE x.id_conf IS NOT NULL AND NOT EXISTS(SELECT 1 FROM EN_CONF p WHERE p.id_conf=x.id_conf)",
+    "parameters": [],
+    "rows": 1,
+    "source": "suite"
+  },
+  {
+    "SQL": "SELECT name,sql FROM sqlite_master WHERE type='table' ORDER BY name",
+    "parameters": [],
+    "rows": 75,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_KEY_OBJECT\"",
+    "parameters": [],
+    "rows": 95,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_KEY_OBJECT\")",
+    "parameters": [],
+    "rows": 6,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_KEY_OBJECT\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_VIRGIN_OBJECT\"",
+    "parameters": [],
+    "rows": 14,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_VIRGIN_OBJECT\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_VIRGIN_OBJECT\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_OBJECT_COLLECTION\"",
+    "parameters": [],
+    "rows": 1151,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_OBJECT_COLLECTION\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_OBJECT_COLLECTION\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_OBJECT_FIRMWARE\"",
+    "parameters": [],
+    "rows": 470,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_OBJECT_FIRMWARE\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_OBJECT_FIRMWARE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_OBJECT_SYSTEM\"",
+    "parameters": [],
+    "rows": 179,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_OBJECT_SYSTEM\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_OBJECT_SYSTEM\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_OBJECT_VIRGIN_OBJECT\"",
+    "parameters": [],
+    "rows": 87,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_OBJECT_VIRGIN_OBJECT\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_OBJECT_VIRGIN_OBJECT\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_OBJECT_FUNCTION\"",
+    "parameters": [],
+    "rows": 4,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_OBJECT_FUNCTION\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_OBJECT_FUNCTION\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_FIRMWARE_VIRGIN_OBJECT\"",
+    "parameters": [],
+    "rows": 58,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_FIRMWARE_VIRGIN_OBJECT\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_FIRMWARE_VIRGIN_OBJECT\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_SLOTS\"",
+    "parameters": [],
+    "rows": 1153,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_SLOTS\")",
+    "parameters": [],
+    "rows": 4,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_SLOTS\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_SLOT_KO_VIRGIN\"",
+    "parameters": [],
+    "rows": 138,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_SLOT_KO_VIRGIN\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_SLOT_KO_VIRGIN\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_SLOT_CONDITION\"",
+    "parameters": [],
+    "rows": 912,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_SLOT_CONDITION\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_SLOT_CONDITION\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_CONDITION\"",
+    "parameters": [],
+    "rows": 460,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_CONDITION\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_CONDITION\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_CONF\"",
+    "parameters": [],
+    "rows": 1760,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_CONF\")",
+    "parameters": [],
+    "rows": 13,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_CONF\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_CONF_RANGE\"",
+    "parameters": [],
+    "rows": 11412,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_CONF_RANGE\")",
+    "parameters": [],
+    "rows": 11,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_CONF_RANGE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_FILTER\"",
+    "parameters": [],
+    "rows": 1649,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_FILTER\")",
+    "parameters": [],
+    "rows": 5,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_FILTER\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_FILTER_RANGE\"",
+    "parameters": [],
+    "rows": 4848,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_FILTER_RANGE\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_FILTER_RANGE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_HIDDEN_KCONF\"",
+    "parameters": [],
+    "rows": 266,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_HIDDEN_KCONF\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_HIDDEN_KCONF\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_BUS_INTERFACE\"",
+    "parameters": [],
+    "rows": 24,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_BUS_INTERFACE\")",
+    "parameters": [],
+    "rows": 4,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_BUS_INTERFACE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_BUS_ITEM\"",
+    "parameters": [],
+    "rows": 201,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_BUS_ITEM\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_BUS_ITEM\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"AS_ITEM_SYSTEM\"",
+    "parameters": [],
+    "rows": 113,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"AS_ITEM_SYSTEM\")",
+    "parameters": [],
+    "rows": 4,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"AS_ITEM_SYSTEM\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_ITEM\"",
+    "parameters": [],
+    "rows": 105,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_ITEM\")",
+    "parameters": [],
+    "rows": 3,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_ITEM\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_FIRMWARE\"",
+    "parameters": [],
+    "rows": 122,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_FIRMWARE\")",
+    "parameters": [],
+    "rows": 7,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_FIRMWARE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_DEVICE\"",
+    "parameters": [],
+    "rows": 331,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_DEVICE\")",
+    "parameters": [],
+    "rows": 11,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_DEVICE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_COLLECTION\"",
+    "parameters": [],
+    "rows": 177,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_COLLECTION\")",
+    "parameters": [],
+    "rows": 6,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_COLLECTION\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_SYSTEM\"",
+    "parameters": [],
+    "rows": 30,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_SYSTEM\")",
+    "parameters": [],
+    "rows": 5,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_SYSTEM\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_BUS\"",
+    "parameters": [],
+    "rows": 13,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_BUS\")",
+    "parameters": [],
+    "rows": 5,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_BUS\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_CONF_TYPE\"",
+    "parameters": [],
+    "rows": 4,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_CONF_TYPE\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_CONF_TYPE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_CONF_DATA_TYPE\"",
+    "parameters": [],
+    "rows": 6,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_CONF_DATA_TYPE\")",
+    "parameters": [],
+    "rows": 2,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_CONF_DATA_TYPE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_CONV_RULE\"",
+    "parameters": [],
+    "rows": 7899,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_CONV_RULE\")",
+    "parameters": [],
+    "rows": 8,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_CONV_RULE\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT * FROM \"EN_OBJECT_ITEM_FAMILY\"",
+    "parameters": [],
+    "rows": 33,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA table_info(\"EN_OBJECT_ITEM_FAMILY\")",
+    "parameters": [],
+    "rows": 4,
+    "source": "firmware"
+  },
+  {
+    "SQL": "PRAGMA foreign_key_list(\"EN_OBJECT_ITEM_FAMILY\")",
+    "parameters": [],
+    "rows": 0,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM EN_CONF x WHERE x.id_key_object IS NOT NULL AND x.id_key_object<>0 AND NOT EXISTS(SELECT 1 FROM EN_KEY_OBJECT p WHERE p.id_key_object=x.id_key_object)",
+    "parameters": [],
+    "rows": 1,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM EN_CONF x WHERE x.id_firmware IS NOT NULL AND x.id_firmware<>0 AND NOT EXISTS(SELECT 1 FROM EN_FIRMWARE p WHERE p.id_firmware=x.id_firmware)",
+    "parameters": [],
+    "rows": 1,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM EN_CONF_RANGE x WHERE x.id_conf IS NOT NULL AND NOT EXISTS(SELECT 1 FROM EN_CONF p WHERE p.id_conf=x.id_conf)",
+    "parameters": [],
+    "rows": 1,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM EN_FILTER x WHERE x.id_conf IS NOT NULL AND NOT EXISTS(SELECT 1 FROM EN_CONF p WHERE p.id_conf=x.id_conf)",
+    "parameters": [],
+    "rows": 1,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM EN_FILTER x WHERE x.id_object_firmware IS NOT NULL AND NOT EXISTS(SELECT 1 FROM AS_OBJECT_FIRMWARE p WHERE p.id_object_firmware=x.id_object_firmware)",
+    "parameters": [],
+    "rows": 1,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM EN_FILTER_RANGE x WHERE x.id_filter IS NOT NULL AND NOT EXISTS(SELECT 1 FROM EN_FILTER p WHERE p.id_filter=x.id_filter)",
+    "parameters": [],
+    "rows": 1,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM AS_SLOT_CONDITION x WHERE x.id_slot IS NOT NULL AND NOT EXISTS(SELECT 1 FROM EN_SLOTS p WHERE p.id_slot=x.id_slot)",
+    "parameters": [],
+    "rows": 1,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM AS_SLOT_CONDITION x WHERE x.id_condition IS NOT NULL AND NOT EXISTS(SELECT 1 FROM EN_CONDITION p WHERE p.id_condition=x.id_condition)",
+    "parameters": [],
+    "rows": 1,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM AS_HIDDEN_KCONF x WHERE x.id_conf_range IS NOT NULL AND NOT EXISTS(SELECT 1 FROM EN_CONF_RANGE p WHERE p.id_conf_range=x.id_conf_range)",
+    "parameters": [],
+    "rows": 1,
+    "source": "firmware"
+  },
+  {
+    "SQL": "SELECT count(*) AS n FROM AS_HIDDEN_KCONF x WHERE x.id_conf IS NOT NULL AND NOT EXISTS(SELECT 1 FROM EN_CONF p WHERE p.id_conf=x.id_conf)",
+    "parameters": [],
+    "rows": 1,
+    "source": "firmware"
+  }
+]

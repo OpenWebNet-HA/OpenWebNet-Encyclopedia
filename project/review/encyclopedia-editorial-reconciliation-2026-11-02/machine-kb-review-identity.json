@@ -1,0 +1,12 @@
+{
+  "scope": "Independent exact-v7 curated-input semantic review, before official complete generation/global validation; no release assertion",
+  "private_original_review_sha256": "e3a22e22b4325905e645bff199ae0aeb5e1888702aca85d548230bc75b5a0e19",
+  "public_review_sha256": "e3a22e22b4325905e645bff199ae0aeb5e1888702aca85d548230bc75b5a0e19",
+  "transformation": "Only host workspace prefix replaced with ${WORKSPACE} where present",
+  "human_reference_freeze": "Current source text includes explicit diagnostic-identifier privacy and catalogue process-sentence refinements; no other source drift",
+  "input_semantics": "Existing stable meanings conserved, specific stale assertions corrected, source/build/provider bounds retained, obsolete method/taxonomy entries explicitly retired",
+  "new_selected_claims": 339,
+  "atomic_coverage_limit": "Selected source-backed assertions, not an exhaustive atomization of every statement; complete admitted reference text remains in retrieval",
+  "first_release_metadata": "Existing compatibility-origin convention 0.1.0; newly curated IDs are unpublished working projection, not a claim they existed in a released 0.1.0 dataset",
+  "last_release_retirements": "Actual local 0.2.0 tag membership independently verified; no new release/tag created"
+}

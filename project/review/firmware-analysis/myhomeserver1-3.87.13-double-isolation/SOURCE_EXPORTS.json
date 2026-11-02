@@ -1,0 +1,311 @@
+{
+  "scope": "Exact bounded source/harness/results/history/reviews exports; no firmware binary",
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/DRAFT_HISTORY.json",
+      "published": "evidence/harness/DRAFT_HISTORY.json",
+      "sha256": "b808c84b7cc63938f1b3a3bb699e2482c6ed66e52d4adc22cdec50302ba6a9a8",
+      "bytes": 1157
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/DRAFT_HISTORY.v3.json",
+      "published": "evidence/harness/DRAFT_HISTORY.v3.json",
+      "sha256": "7bca78358180470b4a8b9a91182cc9c6d7f1fe487a413ab1f6770f08a8920620",
+      "bytes": 1398
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/REPORT.PLAN.md",
+      "published": "evidence/harness/REPORT.PLAN.txt",
+      "sha256": "69545b3e3989119f3226347e0916b88fa97672a4f06f569ea17edf2b01da6e60",
+      "bytes": 8683
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/REPORT.PLAN.v3.md",
+      "published": "evidence/harness/REPORT.PLAN.v3.txt",
+      "sha256": "bf9d23f03b1d2b8423652381d47894c61633a4245a20fc99d441199a55b83826",
+      "bytes": 9477
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/REPORT.RESULTS.md",
+      "published": "evidence/harness/REPORT.RESULTS.txt",
+      "sha256": "a18c1a027645fa7cc17e9882d09a49099509b2f33bb6f502f25ce7a2ea018c3f",
+      "bytes": 9258
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/RESULTS.json",
+      "published": "evidence/harness/RESULTS.json",
+      "sha256": "450b84ba12c88ecd2c2bed177b58ad127efa26c5fbc092901dffd352ae48e525",
+      "bytes": 22496
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/RUN_STARTED.json",
+      "published": "evidence/harness/RUN_STARTED.json",
+      "sha256": "b547c202bb3e673a5e04601584f026c7760a0e645219855e763123070030216b",
+      "bytes": 270
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/SOURCE_PREFLIGHT.json",
+      "published": "evidence/harness/SOURCE_PREFLIGHT.json",
+      "sha256": "dcc9dffa77e22c8a2ca0ffd1ec5eaed52f6f730bef03d1a5519cf639ebcebad4",
+      "bytes": 8007
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/TOOL_PINS.json",
+      "published": "evidence/harness/TOOL_PINS.json",
+      "sha256": "a413baf37e5dda914980653987c352a1672b777d1637ead66993f8cb2f081097",
+      "bytes": 11501
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/attempts/01-positive-zero-constructor.json",
+      "published": "evidence/harness/attempts/01-positive-zero-constructor.json",
+      "sha256": "96d9c0882432e493e8e9782c81f66094b416f01d17936866f84b1bd21633a284",
+      "bytes": 3088
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/attempts/02-positive-zero-asDouble.json",
+      "published": "evidence/harness/attempts/02-positive-zero-asDouble.json",
+      "sha256": "2b449a9f4cf648becba9a980b574ffb2ed933a30becdfe7bed5ca1e7aab75172",
+      "bytes": 1388
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/attempts/03-negative-zero-constructor.json",
+      "published": "evidence/harness/attempts/03-negative-zero-constructor.json",
+      "sha256": "d8c12493d9e543087e7a2ec24f39f25e43e163510976b55452499e909f4447a7",
+      "bytes": 3088
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/attempts/04-negative-zero-asDouble.json",
+      "published": "evidence/harness/attempts/04-negative-zero-asDouble.json",
+      "sha256": "86ffe90d997bb96e6d36a1492e6cdf7d04b59956bdc711ca236432defe82232b",
+      "bytes": 1388
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/attempts/05-negative-one-constructor.json",
+      "published": "evidence/harness/attempts/05-negative-one-constructor.json",
+      "sha256": "83ce9aa14619f393434ef894fd1bdf1121ad5dbe2b78921cc278f1b3e51d0a4a",
+      "bytes": 3087
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/attempts/06-negative-one-asDouble.json",
+      "published": "evidence/harness/attempts/06-negative-one-asDouble.json",
+      "sha256": "390f1d4bd2f1d8bf6b807567ee007684ad0a7cbd2c25b25d382c47ddf0de3afd",
+      "bytes": 1387
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/attempts/07-one-point-two-five-constructor.json",
+      "published": "evidence/harness/attempts/07-one-point-two-five-constructor.json",
+      "sha256": "0a6692bc86ff615c50f7ee1e122d2b6b32ec9cdb17408c4abaacec06c91a2ca1",
+      "bytes": 3093
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/attempts/08-one-point-two-five-asDouble.json",
+      "published": "evidence/harness/attempts/08-one-point-two-five-asDouble.json",
+      "sha256": "a8a773c757a8553d95334afdae27969b3141af7f113d193af0eab3bba26aca62",
+      "bytes": 1393
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/isolate_double_v1.py",
+      "published": "evidence/harness/isolate_double_v1.py.txt",
+      "sha256": "5a9c7288d9e99d1c42d6e8a3c4863f922e1e10799af43c45a1b4969d23f68c01",
+      "bytes": 15985
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/isolate_double_v2.py",
+      "published": "evidence/harness/isolate_double_v2.py.txt",
+      "sha256": "2a0d92654a132921dea699a32c18cd45d7353f2b880303c52881fe6e73ebbe3f",
+      "bytes": 17054
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/harness/isolate_double_v3.py",
+      "published": "evidence/harness/isolate_double_v3.py.txt",
+      "sha256": "1ef53f7e04a20cb43c37dfb1cae965bb119bcda167db9b372b58b02bf1cb4a15",
+      "bytes": 17467
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/AFTER_CHECK.md",
+      "published": "evidence/verification/AFTER_CHECK.txt",
+      "sha256": "f30f6bad356e0c710abab706c524c5b0d7e09795a1ffe4331b8b51e5efb9f7bf",
+      "bytes": 2568
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/INPUTS.json",
+      "published": "evidence/verification/INPUTS.json",
+      "sha256": "5769e3aaed560f68255ffbbc38f0d42dfd6560de6c9bc98e9d3fc37983046251",
+      "bytes": 767
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/OUTPUT_MANIFEST.json",
+      "published": "evidence/verification/OUTPUT_MANIFEST.json",
+      "sha256": "50147b6324d84272e0f05cf402479daf31152c85f2299990a63bd23fa9cce3f0",
+      "bytes": 2093
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/PACKAGE_RECORD_VERIFICATION.json",
+      "published": "evidence/verification/PACKAGE_RECORD_VERIFICATION.json",
+      "sha256": "04fe2bff2e1635d0f1f6f0bf2886a0884ee4a2e90180a3ca9d92a342817cf0c3",
+      "bytes": 17579
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/PROVIDER_ATTRIBUTES.txt",
+      "published": "evidence/verification/PROVIDER_ATTRIBUTES.txt",
+      "sha256": "7dc30b897def278c2fa81f8023537ecda32fa3afcc038d3b2bca85b336d5ecca",
+      "bytes": 585
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/PROVIDER_SOURCE.json",
+      "published": "evidence/verification/PROVIDER_SOURCE.json",
+      "sha256": "bb9097856f79b3088c9368dc21230bc9165cc356fed5b0da67d00f1e6d610734",
+      "bytes": 4234
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/REPORT.md",
+      "published": "evidence/verification/REPORT.txt",
+      "sha256": "2817bb8ec288fbc505d53499c5f9c6cfe92c7d391bac2e50787487ad66d82086",
+      "bytes": 6095
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/REPORT.v2.md",
+      "published": "evidence/verification/REPORT.v2.txt",
+      "sha256": "0f5bad12227b48e30646918853d56dbbce5641d91d4c385b51d1648c3f55f45f",
+      "bytes": 6792
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/TOOL_TREE_AFTER.json",
+      "published": "evidence/verification/TOOL_TREE_AFTER.json",
+      "sha256": "69f236a741f1429119aab7a86d8451e522d0615db8f541921541156116128220",
+      "bytes": 16035
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/TOOL_TREE_BEFORE.json",
+      "published": "evidence/verification/TOOL_TREE_BEFORE.json",
+      "sha256": "3ebab93891ce85f986507232376fc1cbc0f0d4e12a85a3f9774444962e739b7e",
+      "bytes": 13596
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/VERSION_HISTORY.json",
+      "published": "evidence/verification/VERSION_HISTORY.json",
+      "sha256": "19393ed9d9cc07992ba889b348405e00b3419bf61afa7566527e60942b85bcd5",
+      "bytes": 1074
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/collect_verification_v1.py",
+      "published": "evidence/verification/collect_verification_v1.py.txt",
+      "sha256": "2c1fd246930a29878f59984dcd01d2c260268bb6178721a14a329e8beab9c39b",
+      "bytes": 7634
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/collect_verification_v2.py",
+      "published": "evidence/verification/collect_verification_v2.py.txt",
+      "sha256": "59519f23773574416ac8802df642386d68a512c7be493b8d51500b379f61801e",
+      "bytes": 7687
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/development-first-failure-v1/FAILURE.json",
+      "published": "evidence/verification/development-first-failure-v1/FAILURE.json",
+      "sha256": "602ff83f4e23ff26a88df976a779f79af4dcfbe50e4bed6c63d2a4ccb75fd37b",
+      "bytes": 617
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/development-first-failure-v1/INDEX.json",
+      "published": "evidence/verification/development-first-failure-v1/INDEX.json",
+      "sha256": "c8d60b5760e23fa6e7c404920534e0ce27c4ce912b41286a23fbc68044c5f637",
+      "bytes": 388
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/development-first-failure-v1/REPORT.md",
+      "published": "evidence/verification/development-first-failure-v1/REPORT.txt",
+      "sha256": "2817bb8ec288fbc505d53499c5f9c6cfe92c7d391bac2e50787487ad66d82086",
+      "bytes": 6095
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/development-first-failure-v1/collect_verification_v1.py",
+      "published": "evidence/verification/development-first-failure-v1/collect_verification_v1.py.txt",
+      "sha256": "2c1fd246930a29878f59984dcd01d2c260268bb6178721a14a329e8beab9c39b",
+      "bytes": 7634
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/spans/C1-double.txt",
+      "published": "evidence/verification/spans/C1-double.txt",
+      "sha256": "4ca8e954c6053b4ea294ed11430cf07548a974426c94d7ee2dc3700e20013144",
+      "bytes": 583
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/spans/Comments-move.txt",
+      "published": "evidence/verification/spans/Comments-move.txt",
+      "sha256": "4e0a13c3cbb56546604c643990074f2fa18b0e86c04ce9b6ca50210419203f95",
+      "bytes": 1083
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/spans/asDouble-epilogue.txt",
+      "published": "evidence/verification/spans/asDouble-epilogue.txt",
+      "sha256": "3cf7befb525c30506116751672ed7796607c2710a4a6977749da1276f6ad6177",
+      "bytes": 700
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/spans/asDouble-prefix.txt",
+      "published": "evidence/verification/spans/asDouble-prefix.txt",
+      "sha256": "230d991c3366a608c01c95e1c1ca518b443756518e55708e5caf7b209f49a9d6",
+      "bytes": 820
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/spans/asDouble-type3.txt",
+      "published": "evidence/verification/spans/asDouble-type3.txt",
+      "sha256": "6ff010972f72055543592a8de212792ea5c61a08c26dee1e13eb2a2186da18c7",
+      "bytes": 252
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/spans/initBasic.txt",
+      "published": "evidence/verification/spans/initBasic.txt",
+      "sha256": "8f88c27041f4e7bc5b74cb93ed36af9068abfb680f13f2c7892f1731d378f3ac",
+      "bytes": 2334
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/verification/spans/type-byte.txt",
+      "published": "evidence/verification/spans/type-byte.txt",
+      "sha256": "613cf76ab1e5f775eb14e9e3e5bff678b881edb663cc40ba697cf6ab97f36c80",
+      "bytes": 203
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/EXECUTION_APPROVAL.json",
+      "published": "execution-approval.json",
+      "sha256": "ffda236a0eeb4b8bfef5404d73ec84c32e6f93f5c6c98cb1983107615a6bd57f",
+      "bytes": 821
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/reviews/root-preflight.json",
+      "published": "root-preflight.json",
+      "sha256": "175c0f6f84ceaf7349209542c5dfbb4e7a1affc858001e209d71f28f78fde6c6",
+      "bytes": 1633
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/reviews/root-result-audit.json",
+      "published": "root-result-audit.json",
+      "sha256": "f962968e075067a712313e95667f9a8f5fd45df3ac874a4b72af5e812d4a1672",
+      "bytes": 3703
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/reviews/isolation-preflight.md",
+      "published": "isolation-preflight.txt",
+      "sha256": "2efa4cef0980458c03412c661103518f0f18a2b0b7e85b5f7518890437c149f6",
+      "bytes": 6634
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/reviews/helper-source-review.md",
+      "published": "helper-source-review.txt",
+      "sha256": "23302b26b59edb5a761eee05ff514b1867ab64d82f316c27d6500d68036de46f",
+      "bytes": 8155
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/STATIC_CHECKS.json",
+      "published": "static-checks.json",
+      "sha256": "c37cb055c84b961339370537ab6d02a783172a09e74c94d5aeca49a39ea71509",
+      "bytes": 749
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/CANONICAL_RUN_RECEIPT.json",
+      "published": "canonical-run-receipt.json",
+      "sha256": "0f6526422e59fbcdcfcf8d0b3c47911c6890ae3b10a932bd539d6cc5370fd0aa",
+      "bytes": 623
+    }
+  ]
+}

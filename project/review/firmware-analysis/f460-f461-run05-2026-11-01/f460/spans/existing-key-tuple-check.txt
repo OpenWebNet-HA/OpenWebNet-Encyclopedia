@@ -1,0 +1,46 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000ed6b4 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x49ed4>:
+   ed6b4:	9346fc44 	asr	x4, x2, #6
+   ed6b8:	9344fc42 	asr	x2, x2, #4
+   ed6bc:	f100009f 	cmp	x4, #0x0
+   ed6c0:	5400136d 	b.le	ed92c <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x4a14c>
+   ed6c4:	8b041824 	add	x4, x1, x4, lsl #6
+   ed6c8:	14000010 	b	ed708 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x49f28>
+   ed6cc:	f9400822 	ldr	x2, [x1, #16]
+   ed6d0:	b9401443 	ldr	w3, [x2, #20]
+   ed6d4:	6b03027f 	cmp	w19, w3
+   ed6d8:	54000620 	b.eq	ed79c <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x49fbc>  // b.none
+   ed6dc:	f9401022 	ldr	x2, [x1, #32]
+   ed6e0:	b9401443 	ldr	w3, [x2, #20]
+   ed6e4:	6b03027f 	cmp	w19, w3
+   ed6e8:	54000f20 	b.eq	ed8cc <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x4a0ec>  // b.none
+   ed6ec:	f9401822 	ldr	x2, [x1, #48]
+   ed6f0:	b9401443 	ldr	w3, [x2, #20]
+   ed6f4:	6b03027f 	cmp	w19, w3
+   ed6f8:	54001000 	b.eq	ed8f8 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x4a118>  // b.none
+   ed6fc:	91010021 	add	x1, x1, #0x40
+   ed700:	eb01009f 	cmp	x4, x1
+   ed704:	54001100 	b.eq	ed924 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x4a144>  // b.none
+   ed708:	f9400022 	ldr	x2, [x1]
+   ed70c:	b9401443 	ldr	w3, [x2, #20]
+   ed710:	6b03027f 	cmp	w19, w3
+   ed714:	54fffdc1 	b.ne	ed6cc <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x49eec>  // b.any
+   ed718:	b9400843 	ldr	w3, [x2, #8]
+   ed71c:	6b03037f 	cmp	w27, w3
+   ed720:	54fffd61 	b.ne	ed6cc <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x49eec>  // b.any
+   ed724:	b9400c43 	ldr	w3, [x2, #12]
+   ed728:	6b03039f 	cmp	w28, w3
+   ed72c:	54fffd01 	b.ne	ed6cc <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x49eec>  // b.any
+   ed730:	b9401042 	ldr	w2, [x2, #16]
+   ed734:	6b02001f 	cmp	w0, w2
+   ed738:	54fffca1 	b.ne	ed6cc <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x49eec>  // b.any
+   ed73c:	aa0103f8 	mov	x24, x1
+   ed740:	97ff7ab8 	bl	cc220 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x28a40>
+   ed744:	f9416c00 	ldr	x0, [x0, #728]
+   ed748:	eb00031f 	cmp	x24, x0
+   ed74c:	54000460 	b.eq	ed7d8 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x49ff8>  // b.none

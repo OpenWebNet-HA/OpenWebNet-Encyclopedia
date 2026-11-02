@@ -1,0 +1,29 @@
+{
+  "actual_v1_failure": "Wrong manual generic type identity List; actual Core Add owner Collection`1 and Class ctor ObservableCollection`1. Not a metadata shape problem. Strict guard failed before any outputs; --check did not run.",
+  "v2_change": "Correct exact generic type names/namespaces and getter return identity; retain raw signature/type token/method/input/tool guards. New filenames and v2 outputs/firstcopy only.",
+  "parent_pre_snapshot": "../parent-before-loader-v2/INDEX.json",
+  "files": {
+    "collect_loader_v1.py": {
+      "bytes": 9142,
+      "sha256": "a689758820822b7698e72d383e28d92e2ed542d06b17fc39c77d6b80b7071cdf"
+    },
+    "REPORT.md": {
+      "bytes": 9530,
+      "sha256": "971e7279e2cc31a10bc231eee56fa66e09ceac036e4b423df2253ec7be902b64"
+    },
+    "FAILED_V1.json": {
+      "bytes": 518,
+      "sha256": "5e9ff6eab83510dd8da6bab7353e779a7eb674e9d9f7cab9cbbbc4d6e96cf3aa"
+    },
+    "collect_loader_v2.py": {
+      "bytes": 9723,
+      "sha256": "c442941c5e362b6540549f8baadd786b106ade105da291d4d606ae9dc005d4db"
+    },
+    "REPORT.v2.md": {
+      "bytes": 10271,
+      "sha256": "64f80a2aa474b587cdb3352bc4b2a6946a29113c9c629f487b967c56175d26c5"
+    }
+  },
+  "no_new_method_scope": true,
+  "no_vendor_execution": true
+}

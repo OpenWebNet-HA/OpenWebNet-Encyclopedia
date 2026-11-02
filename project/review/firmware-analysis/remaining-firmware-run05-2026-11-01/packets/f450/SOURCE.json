@@ -1,0 +1,144 @@
+{
+  "image": {
+    "ELF32_LE": true,
+    "PT_LOAD": [
+      [
+        1,
+        0,
+        32768,
+        32768,
+        79552,
+        79552,
+        5,
+        32768
+      ],
+      [
+        1,
+        79552,
+        145088,
+        145088,
+        1868,
+        2068,
+        6,
+        32768
+      ]
+    ],
+    "bytes": 83040,
+    "flags": "0x5000002",
+    "machine": 40,
+    "path": "home/bticino/bin/bt_daemon",
+    "sha256": "85e7ca65b4d1c4e8ab23a93ac532aea568dd06272fefb1b1be928eeba18f3d73",
+    "type": 2
+  },
+  "original_startup_declaration": {
+    "manifest_path": "etc/rcS.d/S37populate-volatile.sh",
+    "manifest_target": "../init.d/populate-volatile.sh",
+    "role": "original symlink metadata only, not a materialized host link or observed boot"
+  },
+  "safe_XML": {
+    "extra": {
+      "check": "50",
+      "enable": "0",
+      "nocheck": null
+    },
+    "fullip_addressbook_nodes": 0,
+    "root": "root"
+  },
+  "safe_core_record": {
+    "fields": [
+      "l",
+      "root",
+      "root",
+      "0777",
+      "/var/tmp/stack_open.xml",
+      "/home/bticino/cfg/stack_open.xml"
+    ],
+    "line": 82,
+    "text": "l root root 0777 /var/tmp/stack_open.xml /home/bticino/cfg/stack_open.xml"
+  },
+  "safe_rcS_record": {
+    "line": 27,
+    "text": "VOLATILE_ENABLE_CACHE=no"
+  },
+  "script_line_guards": 14,
+  "selected_manifest_records": {
+    "etc/default/rcS": {
+      "bytes": 898,
+      "original_gid": "0",
+      "original_inode": "24552",
+      "original_mode": "-rw-r--r--",
+      "original_uid": "0",
+      "sha256": "7bc15f9fa8e0cc56528c6880675d701b2f6e87eac931b88dd76015dd6ff07e6a"
+    },
+    "etc/default/volatiles/00_core": {
+      "bytes": 3493,
+      "original_gid": "0",
+      "original_inode": "16424",
+      "original_mode": "-rw-r--r--",
+      "original_uid": "0",
+      "sha256": "a40f3fe0477f9d60dc095a22c86cef45ed6f76c6fc66643c2758426fdba97207"
+    },
+    "etc/init.d/populate-volatile.sh": {
+      "bytes": 4571,
+      "original_gid": "0",
+      "original_inode": "16420",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "0",
+      "sha256": "62f2d22a2591f2a5d6b76a5ea9e9fe6ad9ab634c84378bc48d050054f1b602ec"
+    },
+    "home/bticino/bin/bt_daemon": {
+      "bytes": 83040,
+      "original_gid": "0",
+      "original_inode": "4328",
+      "original_mode": "-rwxr-xr-x",
+      "original_uid": "0",
+      "sha256": "85e7ca65b4d1c4e8ab23a93ac532aea568dd06272fefb1b1be928eeba18f3d73"
+    },
+    "home/bticino/cfg/stack_open.xml": {
+      "bytes": 2823,
+      "original_gid": "1000",
+      "original_inode": "4265",
+      "original_mode": "-rw-rw-r--",
+      "original_uid": "1000",
+      "sha256": "17a56dbaba4a039d41b52c732042bcf301f5df0bb41fbca96529336070f3ade9"
+    }
+  },
+  "word_guards": [
+    {
+      "VA": "0x12908",
+      "word": "0xe92d4800"
+    },
+    {
+      "VA": "0x12914",
+      "word": "0xe50b0008"
+    },
+    {
+      "VA": "0x12918",
+      "word": "0xe59f3014"
+    },
+    {
+      "VA": "0x1291c",
+      "word": "0xe5933000"
+    },
+    {
+      "VA": "0x12920",
+      "word": "0xe1a00003"
+    },
+    {
+      "VA": "0x12924",
+      "word": "0xe51b1008"
+    },
+    {
+      "VA": "0x12928",
+      "word": "0xeb000b85"
+    },
+    {
+      "VA": "0x12934",
+      "word": "0x23a74"
+    },
+    {
+      "VA": "0x23a74",
+      "word": "0x19ee8"
+    }
+  ]
+}

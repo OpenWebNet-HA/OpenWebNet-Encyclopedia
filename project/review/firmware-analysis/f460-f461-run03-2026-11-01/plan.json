@@ -1,0 +1,13 @@
+{
+  "scope": "Parallel F460 actual SLEEP invoker/timing provider and F461 actual translator dispatch/criteria ownership, original static source only",
+  "authors": {
+    "F460": "firmware_protocol",
+    "F461": "firmware_boot"
+  },
+  "reviewer": "firmware_functional reviewer-only",
+  "new_execution": 0,
+  "prior_checkpoint": "work/f460-f461-comparison/2026-11-01-depth",
+  "prior_index_sha256": "1d3869b521522976df8a63bd91116438431a453ce873f06a8fdaee53454b51b5",
+  "deadline_UTC": "2026-11-01T19:00:00Z",
+  "user_run_summaries": true
+}

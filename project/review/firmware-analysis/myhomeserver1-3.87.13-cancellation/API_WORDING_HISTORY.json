@@ -1,0 +1,10 @@
+{
+  "scope": "Documentary precision only; source reports, code, evidence and findings unchanged",
+  "old_page_snapshot": "integration/review-candidate/0-myhomeserver1-3.87.13-cancellation.md",
+  "old_sha256": "56339dc92ddb26b3ed91eff81727948e1f6058c9531011af53086aa5dbe64bf0",
+  "new_page": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-cancellation.md",
+  "new_sha256": "2c23c61974b9307a7af5981111abe0bbc0fc1cda36900d64ac49e5daa7f13925",
+  "exact_old": "under the ordinary verified API binding",
+  "exact_new": "under the ordinary nanosleep ABI and the verified packaged-wrapper layout",
+  "reason": "Do not confuse ordinary ABI/verified packaged wrapper with unobserved effective runtime binding."
+}

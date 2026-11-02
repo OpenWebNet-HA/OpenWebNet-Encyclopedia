@@ -1,0 +1,77 @@
+# MH202 run13 — mixed separator ownership in PARENTESI
+
+**Bounded static dataflow and finite state ledgers; original execution **0**.** This pass maps a meaningful shared-state boundary beyond the previously reviewed ordinary scanner, OR pair and one recursive call. OR and AND have separate seen flags but share the same two comparison bytes. On selected first-use paths, either operator writes its current comparison directly into that shared accumulator. Delimiter finalization checks OR first and can leave the shared pending byte set, which suppresses the subsequent AND finalizer. These are exact selected store/guard effects, not a complete language precedence rule, accepted configured mixed expression, running-script fault or physical/action consequence.
+
+## Original identity and reproduction
+
+| Normal image path | Bytes | SHA256 |
+|---|---:|---|
+|`/home/bticino/bin/bt_script`|14884|`f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4`|
+|`/home/bticino/lib/libdomotica.so.0.0`|42908|`5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09`|
+
+Fresh original reads use the MH202 verified ImageVFS. `python3 -B functional/run13/collect_evidence.py --check` from the research root strictly reproduces 19 evidence outputs plus manifest: 12 original spans, 32 exact instruction words, selected symbol/relocation metadata and 3 state-event ledgers. Raw spans carry exact VAs/file offsets/SHA256; input identities include accessor and immutable run10..12 reports. Output manifest excludes this report/reviews.
+
+No ARM, original libc, parser process, configured script, target OS/I/O, device/network or authentication route executes. No original helper harness is imported. Prior numeric lookup, calendar, ordinary byte-scanner, copy and complete OR examples remain read-only and are not rerun as a new matrix. Host models start after the separately reviewed short ordinary operand extraction, then follow actual logical-state stores and guards.
+
+## Local state is shared across the two separator lanes
+
+Within this PARENTESI invocation:
+
+| Local byte | Role and initial value | Selected source |
+|---|---|---|
+|fp−20|OR-seen flag 0|`0x4178`; set 1 at`0x4a10`|
+|fp−19|AND-seen flag 0|`0x4180`; set 1 at`0x5a08`|
+|fp−18|shared accumulator, initial`n`/110|`0x4188`; first-use stores`0x51c8`/`0x6188`|
+|fp−17|shared pending-result byte, initial`n`/110|`0x4190`; final-result stores`0x6acc`/`0x739c`|
+
+These are two flags and **one shared accumulator/pending pair**, rather than independent accumulated OR and AND terms. All offsets are local to one call; separate recursive invocations retain their own flags while sharing supplied output pointers, as previously reviewed. No global language-level type or product state is assigned to these bytes.
+
+### First-use versus repeated AND
+
+At`0x5230..0x5238`, the source tests only AND-seen. Zero branches to`0x5a04`, sets that flag 1 and enters its first-comparison lane. For selected short decimal constants/equality, the lane's actual fallback calls `atoi(left)`, `atoi(right)`, then `INT_OPERATORI` at`0x6180`, storing the result directly into **fp−18** at`0x6188`. This store does not combine or preserve an earlier OR accumulator. Its admission is AND-seen==0, not “both flags were0.”
+
+The shared continuation`0x618c..0x61d0` requests four zero bytes for each output pointer, increments the source cursor past`&`, resets the byte-output index and loops. It does not reset either seen flag or the pending-result byte. Exact buffer/caller footprints and capacity limits remain the earlier run12 boundary; these examples use only one-byte numeric operands/operators.
+
+When AND-seen was already nonzero, the selected repeated lane evaluates into fp−17 (`0x59b8`), normalizes accumulator/pending bytes to0/1, calls AND at`0x59ec`, stores the combined result into fp−18 at`0x59f4`, then explicitly resets pending to`n` at`0x59f8..0x59fc` before the same clear/scan continuation. This direct-versus-combine distinction is original control/data flow, not a host truth-table assumption.
+
+The original matching **AND(bool,bool)** provider at`0x19a0..0x1a10` returns 1 for the selected normalized byte arguments1/1,0 otherwise. Callers' explicit zero/nonzero normalization provides those0/1 arguments. The leaf uses XOR1 byte tests; this report does not generalize its behavior to arbitrary noncanonical Boolean bytes. Provider selection and primitive completion remain conditional; no leaf executes.
+
+### First-use OR can also replace an existing accumulator
+
+The corresponding OR test at`0x4238..0x4240` checks OR-seen only. Zero branches to`0x4a0c`, sets OR-seen1 and evaluates the current clause. For the selected constant lane, `INT_OPERATORI 0x51c0` writes its byte directly to fp−18 at`0x51c8`. Thus a first OR encountered after an earlier AND first-use can replace that earlier shared value. Existing AND-seen is not tested by this entry guard.
+
+The earlier reviewed repeated OR lane combines through`0x49f4`, stores to fp−18 and resets pending to`n`; its implementation is inherited rather than retested as a new OR corpus. This pass's new question is state ownership when the **other** seen flag is already 1.
+
+## Delimiter order and why a later finalizer can skip
+
+At the supplied final delimiter, OR finalization is considered first (`0x632c..0x634c`): OR-seen must be nonzero, accumulator!=`n`, pending==`n`. The chosen mixed paths satisfy those predicates after their second separator. Selected constant final-clause evaluation at`0x6ac4` stores pending at`0x6acc`; actual OR call`0x6b00` combines normalized accumulator/pending and stores accumulator at`0x6b08`.
+
+PARENTESI then performs its previously reviewed buffer clears/normalization to left0/1, operator`=`, right`1`. Crucially this **final** OR block does not reset pending to`n`; that byte retains the final clause's0/1. This differs from an intermediate repeated-OR boundary, whose pending reset is explicit.
+
+The subsequent AND gate at`0x6bfc..0x6c1c` also requires AND-seen!=0, accumulator!=`n`, **pending==`n`**. Its branch`0x6c1c` returns at`0x748c` when pending is not`n`. Consequently, after admitted final OR evaluation on these mixed paths, the AND flag can remain1 while its finalizer skips. No later AND helper or second normalization is reached in those selected states.
+
+For the AND-only control case, OR-seen stays0, so OR finalization is bypassed. Pending remains`n` after the intermediate AND combine; the AND gate admits its selected final comparison at`0x7394`, stores pending at`0x739c`, calls AND at`0x73d0` and stores the result at`0x73d8`, then normalizes the output buffers. This is a concrete counter-route confirming that the final AND block exists and is conditionally skipped rather than globally absent.
+
+## Discriminating finite state ledgers
+
+`host-mixed-state-ledgers.json` records **every logical boundary's before/after flag, accumulator and pending bytes**, selected direct-store/combine route and finalizer admission. It uses three readable supplied source shapes with exactly three short decimal-equality clauses and two separators. Ordinary extraction/`atoi`/integer comparison returns are explicit premises, not original parser execution. Symbolic action suffixes are not accepted DSL or action arguments.
+
+| Supplied condition shape | Clause bytes A/B/C | Second separator's exact selected effect | Final normalized buffers |
+|---|---|---|---|
+|`1=0&2=2\|3=0`|0/1/0|first OR overwrites accumulator0 with B=1 at`0x51c8`|left`1`, op`=`, right`1`|
+|`1=1\|2=0&3=0`|1/0/0|first AND overwrites accumulator1 with B=0 at`0x6188`|left`0`, op`=`, right`1`|
+|`1=1&2=2&3=0`|1/1/0|repeated AND combines1/1, then restores pending`n`|final AND gives left`0`, op`=`, right`1`|
+
+In both mixed ledgers, the last two clause bytes supply the selected final OR combination; the first clause was previously evaluated and its accumulator overwritten at the first use of the other separator. This conclusion is bounded to those exact reachable local states and branch premises. It is not a universal compiler/precedence specification, a claim that the configured generator emits unparenthesized mixed forms, or evidence that a real scene ignores a condition. Parenthesization, other types, additional operators and recursive output interactions can change the local state and remain distinct questions.
+
+Global source text remains unchanged in the selected modeled paths; writes are local state and supplied operand buffers. Actual IIF, overlapping global-line copies, later action-prefix parsing, marker/provider/runtime state and physical output are not executed. The earlier run10 capacity and missing-variable/global-binding limits remain open rather than being resolved by this logical-state model.
+
+## Confidence, bounds and correction history
+
+High confidence: separate flags/shared result offsets, first-use stores, repeated-AND combine/reset, OR-before-AND delimiter guards, pending-byte retention and normalized buffer ownership. Finite host ledgers transcribe these instructions and count no original visits/hooks. Conditional: successful ordinary short-field extraction and normal helper/provider/global/copy/caller state. No mixed-string/time/variable/percent/recursive grammar, accepted complete source, memory impact, product defect or action consequence is asserted.
+
+No author correction to an earlier report, source or canonical execution corpus was needed. New source evidence narrows a previously unresolved mixed-state question without rewriting the earlier ordinary/OR/recursive scopes.
+
+1. Configured extra/4 bodies or exact generator output are still needed to establish which mixed/parenthesized forms are actually emitted and valid.
+2. A justified bounded original PARENTESI experiment could independently test these local states while retaining actual branch/primitive/capacity contracts; none is run here.
+3. Full recursive mixed expressions, longer operand residual bytes, provider/global resolution and a complete source→IIF→specific action run remain separate unresolved joins.

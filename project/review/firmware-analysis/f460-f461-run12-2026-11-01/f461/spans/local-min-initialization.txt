@@ -1,0 +1,17 @@
+
+/home/bticino/bin/coso:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000003e68 <send_list_field@@Base+0x78>:
+    3e68:	d000001b 	adrp	x27, 5000 <init_socketd@@Base+0x60>
+    3e6c:	913ac360 	add	x0, x27, #0xeb0
+    3e70:	f9003fff 	str	xzr, [sp, #120]
+    3e74:	f90047e0 	str	x0, [sp, #136]
+    3e78:	a94783f6 	ldp	x22, x0, [sp, #120]
+    3e7c:	52800801 	mov	w1, #0x40                  	// #64
+    3e80:	f9400284 	ldr	x4, [x20]
+    3e84:	f94047e2 	ldr	x2, [sp, #136]
+    3e88:	aa1603e3 	mov	x3, x22
+    3e8c:	91250000 	add	x0, x0, #0x940

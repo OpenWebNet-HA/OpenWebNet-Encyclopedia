@@ -1,0 +1,52 @@
+
+/home/bticino/bin/bt_daemon:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000126d8 <harvest_str_shielded@@Base+0x96f0>:
+   126d8:	f8df 0798 	ldr.w	r0, [pc, #1944]	@ 12e74 <harvest_str_shielded@@Base+0x9e8c>
+   126dc:	6829      	ldr	r1, [r5, #0]
+   126de:	4478      	add	r0, pc
+   126e0:	f7f1 e8d2 	blx	3888 <g_strcmp0@plt>
+   126e4:	2800      	cmp	r0, #0
+   126e6:	f040 80c3 	bne.w	12870 <harvest_str_shielded@@Base+0x9888>
+   126ea:	686d      	ldr	r5, [r5, #4]
+   126ec:	2d00      	cmp	r5, #0
+   126ee:	f43f ad7f 	beq.w	121f0 <harvest_str_shielded@@Base+0x9208>
+   126f2:	f8df 0784 	ldr.w	r0, [pc, #1924]	@ 12e78 <harvest_str_shielded@@Base+0x9e90>
+   126f6:	f8d4 109c 	ldr.w	r1, [r4, #156]	@ 0x9c
+   126fa:	4478      	add	r0, pc
+   126fc:	f7f0 edaa 	blx	3254 <g_strdup_printf@plt>
+   12700:	6829      	ldr	r1, [r5, #0]
+   12702:	9000      	str	r0, [sp, #0]
+   12704:	f7f1 e8c0 	blx	3888 <g_strcmp0@plt>
+   12708:	2800      	cmp	r0, #0
+   1270a:	f47f ad71 	bne.w	121f0 <harvest_str_shielded@@Base+0x9208>
+   1270e:	686d      	ldr	r5, [r5, #4]
+   12710:	2d00      	cmp	r5, #0
+   12712:	f43f ad6d 	beq.w	121f0 <harvest_str_shielded@@Base+0x9208>
+   12716:	f8d4 0094 	ldr.w	r0, [r4, #148]	@ 0x94
+   1271a:	f7f0 efa2 	blx	3660 <g_list_last@plt>
+   1271e:	6804      	ldr	r4, [r0, #0]
+   12720:	2301      	movs	r3, #1
+   12722:	f8df 0758 	ldr.w	r0, [pc, #1880]	@ 12e7c <harvest_str_shielded@@Base+0x9e94>
+   12726:	6829      	ldr	r1, [r5, #0]
+   12728:	61a3      	str	r3, [r4, #24]
+   1272a:	4478      	add	r0, pc
+   1272c:	f7f1 e8ac 	blx	3888 <g_strcmp0@plt>
+   12730:	2800      	cmp	r0, #0
+   12732:	f000 8097 	beq.w	12864 <harvest_str_shielded@@Base+0x987c>
+   12736:	f8df 0748 	ldr.w	r0, [pc, #1864]	@ 12e80 <harvest_str_shielded@@Base+0x9e98>
+   1273a:	6829      	ldr	r1, [r5, #0]
+   1273c:	4478      	add	r0, pc
+   1273e:	f7f1 e8a4 	blx	3888 <g_strcmp0@plt>
+   12742:	2800      	cmp	r0, #0
+   12744:	f000 8088 	beq.w	12858 <harvest_str_shielded@@Base+0x9870>
+   12748:	f8df 0738 	ldr.w	r0, [pc, #1848]	@ 12e84 <harvest_str_shielded@@Base+0x9e9c>
+   1274c:	6829      	ldr	r1, [r5, #0]
+   1274e:	4478      	add	r0, pc
+   12750:	f7f1 e89a 	blx	3888 <g_strcmp0@plt>
+   12754:	4601      	mov	r1, r0
+   12756:	2800      	cmp	r0, #0
+   12758:	d078      	beq.n	1284c <harvest_str_shielded@@Base+0x9864>

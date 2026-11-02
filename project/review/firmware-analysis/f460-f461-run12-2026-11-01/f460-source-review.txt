@@ -1,0 +1,26 @@
+# F460 run12 independent source review — PASS, natural producer/consumer identity conditional
+
+I independently reviewed the frozen report/collector/evidence and freshly mapped original updater bytes. Read-only host `collect_consumer_v1.py --check` passes7 outputs/4 spans/27 guards. No updater/vendor/native/provider/parser/target I/O, semantic model, fixture, extraction, install, flash, mount or reboot executed. Original `/home/bticino/bin/dedrifupdater` is43,088 bytes/SHA256 `8f32212bee98b507690f1e22d6b26524c8a13dc20efcc8cc05900ac4142f9753`.
+
+Independent original ImageVFS/PT_LOAD comparisons confirm all4 raw spans/27 exact words, five actual imported-call PLT sequences/relocations, two safe literal joins, seven selected branch destinations, wrapper call and all9 immediate first copies. No author files were edited and no historical source collector/native corpus was replayed. Source claim and preservation boundaries agree.
+
+The selected dataflow is supported:
+
+- Wrapper0x66d0 preserves its suppliedX0 to the0x6708 call, sets W1=3, supplies output-cellSP4 inX2 and its incomingW1 separately inW3. Consumer0x5f30 saves these supplied values. The CMP W1,1 at0x5f3c has no intervening flag-changing instruction before unsigned B.LS0x5f78; selected3 takes the other branch. It loads C=[outerinput], then R=[C+56], then list=[R+8], and requests g_list_first. These are distinct pointer levels, not a guessed same-offset overlay.
+- Nonnull valid-node and ordinary GLib/list/GString/text/lifetime returns are premises. The source masks selector3 with0xfffffffd to1, then loads node0→GString0→text. The actual dot request0x5fe0 is g_strstr_len(text,-1,".") from its real PLT/GOT relocation, despite a misleading neighboring disassembler annotation. A nonzero dot result AND maskedselector1 reaches0x5ff0, reloads the SAME node/text and requests g_string_new at0x5ff8; returnedX0 is retained inX21. This is a local construction request, not observed filename contents or successful copying/allocation.
+- The separate Image substring/zero-mask companion does not establish extension validation. For the selected masked1 path, failure to choose the dot branch proceeds through the companion/next-node checks; no accepted-file or archive grammar is inferred. Empty/null-node continuation and broader selectors/return/outcell semantics remain open.
+
+The critical producer relation is correctly conditional: run08's recovery action uses R=[C+56] and its listR8, but **matching local pointer chains alone do not prove the same natural context, constructors, current objects/list, parser-to-consumer ordering or unchanged lifetime**. Record kind2, wrapper selector3 and package status4 remain separate namespaces. This new source packet does not close a whole updater pipeline or infer physical partition/Device/public-protocol meaning.
+
+The source stops before0x6000. I did not expand that continuation, extraction0x5140, precheck0x4b60, downstream command/filesystem/install/flash/mount/reboot or provider implementations. No filename strings are fabricated. A dot/Image substring operand is not a security/compatibility/authenticity outcome, and no key or private configuration is used. Receiving/transport/authentication/session/framing/MQTT/libjel and equivalent stopped routes remain closed.
+
+First-generation and read-only-check preservation is accurate: no failed generation/overwrite is reported; all9 current first copies match exact saved identities. Run08's authoritative v3 report and refinement are pinned, preserving the earlier opaque-helper zeroX0 wording precision without inventing a pointer return type or replaying it as new coverage.
+
+Exact reviewed pins:
+
+- REPORT.md: `d288575f22d4e76b0c257ce2cbfad0dd2424efc59f5fa20e92ac310f5675a620`.
+- collect_consumer_v1.py: `5abef98d606c834b4edc39adc25e906fc65e19e7e9e5f1ece9a36892c9a41eba`.
+- OUTPUT_MANIFEST.json: `9181f651e3c97453c06506fd3209814a935005b3ea72f3788b098cab260fdff8`.
+- first-candidate/INDEX.json: `8a4372ce6b9752247deea606a6130e111b732ce7b7b1fe132061e933a8768771`.
+
+PASS means bounded original-source/provenance/reproducibility agreement only. No correction is requested; natural common-context provenance and whole update outcomes remain unresolved.

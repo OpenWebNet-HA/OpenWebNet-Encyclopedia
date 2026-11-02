@@ -1,0 +1,51 @@
+# F460 2.0.12 run06: one actual BNIL trigger factory and local admission
+
+A fresh original AArch64 chain connects raw trigger row1 BNIL, its class/parser and selected initializer to a concrete compiled BnilTriggerRunner and local string-admission handler. An original local caller requests that handler after cast/ID checks. This is static source evidence, not a configured scene, parsed wire input, running subscription or physical action. New original execution, semantic fixtures/models, SQL and target operations: zero. Prior product ledgers are unchanged.
+
+## Original identity and reproduction
+
+Original `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62`, is ELF64 little-endian AArch64. SOURCE.json separates original code spans/bytes/guards from data tables, RTTI and relocation-backed method pointers. All layouts and source addresses are freshly derived; no MHS/ARM32 layouts, state enums or behavior are transferred. Device0207 supplies product role only.
+
+`python3 -B work/f460-firmware/2.0.12/research/2026-11-01-run06-trigger/collect_trigger_v1.py --check`
+
+Host reads/binutils only; exclusive first generation and immediate exact first copies, index bytes computed before index creation. No previous collector or firmware code is executed. No canonical failed generation or overwritten candidate exists in this packet.
+
+## Fresh raw factory and distinct class identity
+
+The factory uses the actual literal key `type`0x1954a8, const JsonCpp member access and asString requests (0x4f5f8..0x4f614), then compares the supplied type string with the length/string table at0x2136f0 (0x4f61c..0x4f654). Row1 is length4 and original literal BNIL0x196828; the row number is not the string length. After subtracting1 and bounding the result, the selected jump table0x196d44 entry0 resolves0x502f0. This selected block requests raw constructor0x4c100,56-byte allocation and base-copy helper0x4e2b0, installs raw AP0x2141a0 and stores status word52, then requests local vector insertion0x4f030.
+
+The original raw header0x214190 has RTTI0x219730/name `11BnilTrigger`0x197070. Its third method slot AP+16 resolves0x48bd0, distinct from destructor slots0/+8; the initializer actually calls this slot. Raw constructor0x4c100 temporarily installs AP0x214168 with RTTI `15BaseBnilTrigger`, so that temporary class is not mistaken for the final raw class.
+
+Common raw prefix0x4ba70 requests enabled via asBool and stores byte40; it requests type and stores a matched row index to word44. Other valid-object/string/conversion and full lookup/error semantics remain provider/parser premises. Raw status constructor0x4c100 initializes word52=-1, requests literal `status`0x1954e8 asString, and recognizes exact on/off/noStatus to stores0/1/-1. These are local schema labels and integers, not a public bus/physical mapping. Raw word48 is the common-parser operator word; no complete operator-name grammar is reconstructed here.
+
+## Selected compiled initializer and copied fields
+
+Original initializer0xf94c0 saves its supplied receiver asX20 and iterates its raw pointer range. It reads raw word44 and uses a fresh signed-halfword jump table0x1b5920, with entry1 resolving0xfac10 (0xf9518..0xf953c). This is a separate table and namespace from the factory's row-minus1 switch; no table is transferred from another product.
+
+Selected0xfac5c..0xfac84 calls the actual raw AP+16 method with hidden JSON resultX8=SP+976, then passes that SAME result address to raw parser0x4c100 in a temporary atSP+6152. The method prefix0x48bd0 confirms its own hidden-result ABI. The full serializer body/provider effects and arbitrary-value round-trip are not closed: this is an original return-to-reparse request under valid JSON/ordinary call premises, not a supplied fixture or guaranteed coherence for every raw input.
+
+The selected temporary is passed to compiled constructor0x15dbd0 at0xfaca8, together with a copied callback. That constructor installs compiled primary AP0x217f08 and secondary AP0x217f30, linked to fresh RTTI0x21d920/name `17BnilTriggerRunner`0x1b8e18. It copies raw byte40 to compiled byte80, raw words44/48 to compiled words84/88 through an eight-byte copy, and raw word52 to compiled word92 (0x15dca8..0x15dcc8). The raw ID string at+8/+16 is copied to compiled+48/+56 under normal string helper semantics. These offsets are relative to the96-byte compiled inner object, not the56-byte raw object.
+
+The initializer next requests112 bytes (0xfad20..0xfad24) and builds an aggregate with compiled inner at allocation+16; its callback is at inner+8, secondary raw/base subobject at inner+40. The selected normal copy requests preserve callback, raw-base fields and status before reinstating the compiled AP through original GOT-relative slot0x21ee10 (0xfad7c..0xfadb4). It requests local pair/vector insertion into supplied receiver+168 via0xf6d00. Allocation, copies, ownership/control counts, list availability and full exception/lifetime remain conditional.
+
+## Captured receiver and actual callback request
+
+At0xfac14..0xfac54, original source constructs a temporary callable with data first word equal to the **supplied initializer receiver X20**, manager0xf6cb0 and invoker0xf7ac0. Generic copy helper0x10ddd0 and the compiled constructor request manager operation2 and copy manager/invoker words; original manager operation2 reads and stores that first pointer. This establishes a source raw-pointer capture, not owning/shared lifetime or an actual successful scene launch.
+
+Compiled primary0x15dba0 checks callback-manager word24, passes storage at this+8 to invoker word32 and tail-calls it; the null-manager error delegate is outside scope. Invoker0xf7ac0 reads that storage's first pointer intoX0 and tail-branches to local0xf7650. This packet stops at that local receiver handoff and does not audit its body or claim what actions run. No external registration service is inferred.
+
+## Fresh local admission and selected caller
+
+Nonvirtual handler0x15dda0 first requires compiled enabled byte80 nonzero. It consumes the supplied C++ string's pointer/length at X1+0/+8. Exact byte/length checks recognize on/off/noStatus and produce local integers0/1/-1: original temporary values1/2/0 are decremented at0x15de34. Unknown/empty strings return on this path.
+
+Operator word88=2 admits only equality of configured word92 and the supplied-string-derived integer; operator88=3 admits inequality. Other numeric operator values reach the callback path after a recognized state. This is the actual selected source fallthrough, not a declaration that every other value belongs to a valid external grammar. No edge/crossing/history/deduplication behavior is inferred.
+
+On admission0x15de48 checks whether actual primary slot0 equals0x15dba0. The known-method path directly requests the stored callback through manager/invoker; another primary method is delegated through its actual slot0. These are two conditional source dispatches, not universal identity or runtime guarantees.
+
+An actual local caller0x8474c..0x847e4 obtains a supplied pointer from a returned16-byte-stride range, requests dynamic_cast from RTTI13TriggerRunner to17BnilTriggerRunner, then compares the compiled ID string+48/+56 with a supplied local ID string through0x7e750. That helper returns true for equal lengths and equal bytes under ordinary memcmp semantics. Only the selected successful-cast/ID-match path calls0x15dda0 at0x847e0 with X0=that compiled pointer and X1=X25+16, a provided local string object. The range provider, X25 record origin/type, outer branch admission, initialized IDs, pointer validity and lifetime remain explicit premises. Upstream receiving/parsing/transport is not followed.
+
+## Scope and remaining questions
+
+New source coverage is factory row/class identity, separate compiled-table selection, callback construction/copy, exact local state/operator admission and an actual local caller. The packet does not prove configured scene assets, arbitrary JSON round-trip, all operators, current providers, natural event subscription/order, callback success, full scene execution, concurrency/ownership or hardware/protocol capability. Raw trigger row1, raw type44, compiled operator88, record/string fields and public WHO/device namespaces are distinct. Receiving/transport/MQTT/libjel/auth/session/framing and equivalents remain closed.
+
+Ranked gaps: source of the provided caller record and outer branch under a separately bounded nontransport scope; full valid-object serializer/reparse value coherence; the local captured-receiver handoff beyond0xf7650 under justified lifecycle context. No negative global capability or safety/defect conclusion is drawn.

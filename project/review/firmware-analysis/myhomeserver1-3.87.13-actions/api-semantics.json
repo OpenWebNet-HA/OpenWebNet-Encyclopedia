@@ -1,0 +1,16 @@
+{
+  "method": "Primary Linux man-pages maintainer documentation consulted as external semantic context, separate from original target binaries and source-byte evidence",
+  "consulted_date": "2026-10-31",
+  "sources": [
+    {
+      "url": "https://man7.org/linux/man-pages/man2/nanosleep.2.html",
+      "bounded_fact": "Relative interval uses seconds/nanoseconds; an interrupted call can return a remaining interval. This is API context, not observed firmware timing."
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man3/clock_gettime.3.html",
+      "bounded_fact": "Successful clock retrieval supplies seconds and nanoseconds through a timespec. Actual packaged provider, layout and arithmetic remain independently established or conditional from original source."
+    }
+  ],
+  "no_target_header_or_execution_claim": true,
+  "original_runtime_calls": 0
+}

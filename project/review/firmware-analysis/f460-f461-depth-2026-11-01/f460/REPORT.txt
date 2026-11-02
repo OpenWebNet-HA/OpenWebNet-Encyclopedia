@@ -1,0 +1,31 @@
+# F460 2.0.12: fresh AArch64 SleepAction schema/initializer join
+
+One selected original scheduler path connects a raw SleepAction serializer to a same-result JSON reparse, an unsigned `seconds` field and a concrete compiled action constructor/callable-storage request. This is source analysis, not a configured scene, full factory admission proof, action invocation, timing-unit measurement or physical result. New original execution/models/fixtures are0; earlier MHS/product ledgers remain unchanged.
+
+Original `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62` is fresh ELF64 AArch64. PT_LOADs,64-bit relocations and original bytes are derived afresh; no ARM32 object layout, address or harness is transferred. Curated OWN-DEV0207 supplies product context only. Receiving/transport/MQTT/libjel/auth/session/framing bodies remain closed.
+
+## Selected raw source and actual class
+
+Relocation-backed raw header0x212ce0/AP0x212cf0 refers to RTTI0x218aa0/name `11SleepAction`; primary slot0 is original0x37e60. The action-name table at0x213bf0 has16-byte entries. Row10 at0x213c90 is length5/string `SLEEP` at0x196ad0:5 is the string length, not the selected enum. The raw serializer reads type word40, bounds it against23 and uses this table; complete upstream parsing/selection of row10 is a premise, not reimplemented.
+
+The selected raw-construction block0x530b4..0x53128 calls common parser0x496d0, sets that raw AP, looks up literal `seconds`0x195738 through const JsonCpp member access, requests asUInt, requests56-byte allocation/copy0x4e710, stores the returned word at raw52, reinstalls the AP and supplies the pointer to local vector helper0x52660. Those allocator/base-parser/copy/vector providers and the outer branch admission remain conditional. Nearest stripped/template names are not used to label functions.
+
+## Serializer value to selected initializer consumer
+
+Method0x37e60 retains rawthisX0 inX20 and hidden JSON resultX8 inX21. Its selected0x37f44..0x37f6c path loads raw52, requests `Json::Value(unsigned int)`, obtains member `seconds` in that result and requests assignment. The actual PLT at0x23cb0 resolves through slot0x21e4c8 to C1Ej; despite the displayed neighboring objdump symbol, it is not accepted as ios_base. Other scalar/default/assignment/provider behavior and full JSON coherence are not executed here.
+
+At selected initializer0xfff2c the raw object's slot0 is called with resultX8=SP+488. The same result address is passed to common parser0x496d0 at0xfff58. The selected block then sets the temporary raw AP, reads `seconds` from that same JSON through actual const access0x24a50/GOT0x21eb98, calls actual asUInt0x23e00/GOT0x21e570 and stores its word atSP+1404 (temporary raw SP+1352+52). This is an original virtual-return/caller dataflow, not a supplied parsed-object fixture or a guarantee that all raw values round-trip successfully.
+
+The temporary raw is passed to compiled constructor0x112a30 at0xfff90. The initializer next requests152 bytes, calls move helper0x10def0 and reinstalls compiled primary AP0x21cc50 at0xffff8. That header0x21cc40 has fresh RTTI `17SleepActionRunner`, distinct from the56-byte raw object. Append/vector ownership after this selected construction is not claimed here.
+
+## Concrete compiled seconds and callable binding
+
+Constructor0x112a30 saves destinationX0/sourceX1 inX19/X20. Its own code setsX21=destination+96. At0x112b24..0x112b28 it reads raw52 and stores to[X21+52], i.e. compiled148. Later0x112b38 reloads that exact word, builds a temporary callable whose manager/invoker pointers resolve0x1125f0/0x112640, stores the word into its data atSP+8 and requests local storage helper0x1303f0 at0x112b64. These are binding/storage requests; the manager/invoker/storage bodies, wait implementation and actual callback timing are not examined. The literal key `seconds` is a schema spelling, not measured elapsed behavior or proof that arbitrary UInt values are valid.
+
+## Reproduction and limits
+
+`python3 -B work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/collect_scheduler_v1.py --check`
+
+The collector checks7 source spans, selected byte guards, fresh ADRP/ADD and BL targets, raw/compiled RTTI-relative relocations, a single action-name table row and actual import PLT/GOT relocations. Source code and table/data evidence are separate. Generation is exclusive and immediately copies report/outputs/collector byte-for-byte with an index computed before opening it; --check only recomputes and compares. No canonical failed generation or overwritten candidate exists. An initial objdump probe selected an address outside .text and returned no code; no bogus source decode was used.
+
+This is one bounded initializer/value-consumer proof. Unknown actual scene assets, JSON validity/conversion/exceptions, full switch/factory selection, import binding, raw/base/move/storage delegates, runtime objects/lifetime and physical meaning remain explicit premises/gaps. Shared MHS spellings are not a behavioral transfer. No vendor/native/provider/OS/bus/network execution occurred.

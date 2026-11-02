@@ -1,0 +1,99 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b5998 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6ac24>:
+   b5998:	49e6      	ldr	r1, [pc, #920]	@ (b5d34 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6afc0>)
+   b599a:	4638      	mov	r0, r7
+   b599c:	4479      	add	r1, pc
+   b599e:	f75b e968 	blx	10c70 <_ZN4Json5ValueixEPKc@plt>
+   b59a2:	ab20      	add	r3, sp, #128	@ 0x80
+   b59a4:	4601      	mov	r1, r0
+   b59a6:	4618      	mov	r0, r3
+   b59a8:	9300      	str	r3, [sp, #0]
+   b59aa:	f75b eee4 	blx	11774 <_ZNK4Json5Value8asStringB5cxx11Ev@plt>
+   b59ae:	9b00      	ldr	r3, [sp, #0]
+   b59b0:	e9d3 3200 	ldrd	r3, r2, [r3]
+   b59b4:	b172      	cbz	r2, b59d4 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6ac60>
+   b59b6:	2a06      	cmp	r2, #6
+   b59b8:	f000 80b5 	beq.w	b5b26 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6adb2>
+   b59bc:	2a08      	cmp	r2, #8
+   b59be:	f000 80d6 	beq.w	b5b6e <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6adfa>
+   b59c2:	2a0f      	cmp	r2, #15
+   b59c4:	f000 80e3 	beq.w	b5b8e <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6ae1a>
+   b59c8:	2a0a      	cmp	r2, #10
+   b59ca:	f000 80ec 	beq.w	b5ba6 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6ae32>
+   b59ce:	2a05      	cmp	r2, #5
+   b59d0:	f000 80b5 	beq.w	b5b3e <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6adca>
+   b59d4:	aa22      	add	r2, sp, #136	@ 0x88
+   b59d6:	4293      	cmp	r3, r2
+   b59d8:	d005      	beq.n	b59e6 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6ac72>
+   b59da:	9a00      	ldr	r2, [sp, #0]
+   b59dc:	4618      	mov	r0, r3
+   b59de:	6891      	ldr	r1, [r2, #8]
+   b59e0:	3101      	adds	r1, #1
+   b59e2:	f75b ea66 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   b59e6:	6deb      	ldr	r3, [r5, #92]	@ 0x5c
+   b59e8:	2b04      	cmp	r3, #4
+   b59ea:	d07e      	beq.n	b5aea <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6ad76>
+   b59ec:	2b05      	cmp	r3, #5
+   b59ee:	d023      	beq.n	b5a38 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6acc4>
+   b59f0:	49d1      	ldr	r1, [pc, #836]	@ (b5d38 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6afc4>)
+   b59f2:	4638      	mov	r0, r7
+   b59f4:	4479      	add	r1, pc
+   b59f6:	f75b eb54 	blx	110a0 <_ZNK4Json5Value8isMemberEPKc@plt>
+   b59fa:	b138      	cbz	r0, b5a0c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6ac98>
+   b59fc:	49cf      	ldr	r1, [pc, #828]	@ (b5d3c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6afc8>)
+   b59fe:	4638      	mov	r0, r7
+   b5a00:	4479      	add	r1, pc
+   b5a02:	f75b eb4e 	blx	110a0 <_ZNK4Json5Value8isMemberEPKc@plt>
+   b5a06:	2800      	cmp	r0, #0
+   b5a08:	f040 80d9 	bne.w	b5bbe <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6ae4a>
+   b5a0c:	2008      	movs	r0, #8
+   b5a0e:	f75b e972 	blx	10cf4 <__cxa_allocate_exception@plt>
+   b5a12:	49cb      	ldr	r1, [pc, #812]	@ (b5d40 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6afcc>)
+   b5a14:	4680      	mov	r8, r0
+   b5a16:	4479      	add	r1, pc
+   b5a18:	f75b eeee 	blx	117f8 <_ZNSt16invalid_argumentC1EPKc@plt>
+   b5a1c:	4bc9      	ldr	r3, [pc, #804]	@ (b5d44 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6afd0>)
+   b5a1e:	4640      	mov	r0, r8
+   b5a20:	58f2      	ldr	r2, [r6, r3]
+   b5a22:	4bc9      	ldr	r3, [pc, #804]	@ (b5d48 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6afd4>)
+   b5a24:	58f1      	ldr	r1, [r6, r3]
+   b5a26:	f75b ee1a 	blx	1165c <__cxa_throw@plt>
+   b5a2a:	6959      	ldr	r1, [r3, #20]
+   b5a2c:	4618      	mov	r0, r3
+   b5a2e:	f041 0104 	orr.w	r1, r1, #4
+   b5a32:	f75b edee 	blx	11610 <_ZNSt9basic_iosIcSt11char_traitsIcEE5clearESt12_Ios_Iostate@plt>
+   b5a36:	e791      	b.n	b595c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6abe8>
+   b5a38:	49c4      	ldr	r1, [pc, #784]	@ (b5d4c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6afd8>)
+   b5a3a:	4638      	mov	r0, r7
+   b5a3c:	4479      	add	r1, pc
+   b5a3e:	f75b eb30 	blx	110a0 <_ZNK4Json5Value8isMemberEPKc@plt>
+   b5a42:	2800      	cmp	r0, #0
+   b5a44:	d0e2      	beq.n	b5a0c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6ac98>
+   b5a46:	49c2      	ldr	r1, [pc, #776]	@ (b5d50 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6afdc>)
+   b5a48:	4638      	mov	r0, r7
+   b5a4a:	4479      	add	r1, pc
+   b5a4c:	f75b eb28 	blx	110a0 <_ZNK4Json5Value8isMemberEPKc@plt>
+   b5a50:	2800      	cmp	r0, #0
+   b5a52:	d0db      	beq.n	b5a0c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6ac98>
+   b5a54:	4639      	mov	r1, r7
+   b5a56:	4628      	mov	r0, r5
+   b5a58:	f77c f9ec 	bl	31e34 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x12204>
+   b5a5c:	f8d9 0000 	ldr.w	r0, [r9]
+   b5a60:	9b03      	ldr	r3, [sp, #12]
+   b5a62:	4298      	cmp	r0, r3
+   b5a64:	d004      	beq.n	b5a70 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6acfc>
+   b5a66:	f8d9 1008 	ldr.w	r1, [r9, #8]
+   b5a6a:	3101      	adds	r1, #1
+   b5a6c:	f75b ea20 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   b5a70:	4658      	mov	r0, fp
+   b5a72:	f75b ea7e 	blx	10f70 <_ZN4Json17CharReaderBuilderD1Ev@plt>
+   b5a76:	4638      	mov	r0, r7
+   b5a78:	f75b e94e 	blx	10d18 <_ZN4Json5ValueD1Ev@plt>
+   b5a7c:	9905      	ldr	r1, [sp, #20]
+   b5a7e:	4640      	mov	r0, r8
+   b5a80:	4bb4      	ldr	r3, [pc, #720]	@ (b5d54 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x6afe0>)

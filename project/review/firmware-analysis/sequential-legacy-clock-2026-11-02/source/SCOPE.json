@@ -1,0 +1,122 @@
+{
+  "status": "APPROVED_SCOPE_SAVED_BEFORE_FIRST_SELECTED_BODY_READ",
+  "saved_UTC": "2026-11-02T08:35:45.364462+00:00",
+  "parent_decision": {
+    "path": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/SOURCE_SELECTION_DECISION.json",
+    "bytes": 1332,
+    "sha256": "cc0c8c28c94c55df7e4e327caf6d2a1f50e6c5c1dfe06367e8c1c435e1179b5e"
+  },
+  "sources": [
+    {
+      "product": "F453AV",
+      "version": "3.0.14",
+      "view": "normal",
+      "path": "work/f453av-firmware/3.0.14/analysis/rootfs/sbin/init",
+      "bytes": 4269,
+      "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb",
+      "body_read": false
+    },
+    {
+      "product": "F453AV",
+      "version": "3.0.14",
+      "view": "normal",
+      "path": "work/f453av-firmware/3.0.14/analysis/rootfs/etc/init.d/scripts/S10rtc_verify",
+      "bytes": 294,
+      "sha256": "0f6e3f123e1ad9cab1fcd00d87ce3617cfd2d5b50db78e457c385582fb983d10",
+      "body_read": false
+    },
+    {
+      "product": "F453AV",
+      "version": "3.0.14",
+      "view": "normal",
+      "path": "work/f453av-firmware/3.0.14/analysis/rootfs/bin/hwtosys.tcl",
+      "bytes": 231,
+      "sha256": "ae5d328983802c1540debd016fc10618d4b99654d406ccacca32e4fbdbea1963",
+      "body_read": false
+    },
+    {
+      "product": "F453AV",
+      "version": "3.0.14",
+      "view": "recovery",
+      "path": "work/f453av-firmware/3.0.14/analysis/recovery/sbin/init",
+      "bytes": 4269,
+      "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb",
+      "body_read": false
+    },
+    {
+      "product": "F453AV",
+      "version": "3.0.14",
+      "view": "recovery",
+      "path": "work/f453av-firmware/3.0.14/analysis/recovery/etc/init.d/scripts/S10rtc_verify",
+      "bytes": 294,
+      "sha256": "0f6e3f123e1ad9cab1fcd00d87ce3617cfd2d5b50db78e457c385582fb983d10",
+      "body_read": false
+    },
+    {
+      "product": "F453AV",
+      "version": "3.0.14",
+      "view": "recovery",
+      "path": "work/f453av-firmware/3.0.14/analysis/recovery/bin/hwtosys.tcl",
+      "bytes": 231,
+      "sha256": "ae5d328983802c1540debd016fc10618d4b99654d406ccacca32e4fbdbea1963",
+      "body_read": false
+    },
+    {
+      "product": "MH200N",
+      "version": "1.1.8",
+      "view": "normal",
+      "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/sbin/init",
+      "bytes": 4269,
+      "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb",
+      "body_read": false
+    },
+    {
+      "product": "MH200N",
+      "version": "1.1.8",
+      "view": "normal",
+      "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/etc/init.d/scripts/S10rtc_verify",
+      "bytes": 294,
+      "sha256": "0f6e3f123e1ad9cab1fcd00d87ce3617cfd2d5b50db78e457c385582fb983d10",
+      "body_read": false
+    },
+    {
+      "product": "MH200N",
+      "version": "1.1.8",
+      "view": "normal",
+      "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/bin/hwtosys.tcl",
+      "bytes": 44,
+      "sha256": "fe6a7e98ac58df697f294d4b319a5dfc2bd6c7cc90a4a28a25d5731d4d298ae1",
+      "body_read": false
+    },
+    {
+      "product": "MH200N",
+      "version": "1.1.8",
+      "view": "recovery",
+      "path": "work/mh200n-firmware/1.1.8/analysis/recovery/sbin/init",
+      "bytes": 4269,
+      "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb",
+      "body_read": false
+    },
+    {
+      "product": "MH200N",
+      "version": "1.1.8",
+      "view": "recovery",
+      "path": "work/mh200n-firmware/1.1.8/analysis/recovery/etc/init.d/scripts/S10rtc_verify",
+      "bytes": 294,
+      "sha256": "0f6e3f123e1ad9cab1fcd00d87ce3617cfd2d5b50db78e457c385582fb983d10",
+      "body_read": false
+    },
+    {
+      "product": "MH200N",
+      "version": "1.1.8",
+      "view": "recovery",
+      "path": "work/mh200n-firmware/1.1.8/analysis/recovery/bin/hwtosys.tcl",
+      "bytes": 231,
+      "sha256": "ae5d328983802c1540debd016fc10618d4b99654d406ccacca32e4fbdbea1963",
+      "body_read": false
+    }
+  ],
+  "body_limits": "Own sbin/init selected startup selector/loop/hwtosys caller lines only; S10rtc_verify and hwtosys.tcl bounded nonsecret scripts. All underlying hwclock/rtc-rw/Tcl/provider binaries and options/profile/systohw bodies remain opaque/unread. Init context already proved is inherited rather than newduplicatecoverage.",
+  "original_execution": 0,
+  "runtime_values_exported": false
+}

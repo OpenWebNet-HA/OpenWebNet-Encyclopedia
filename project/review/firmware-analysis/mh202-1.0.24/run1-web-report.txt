@@ -1,0 +1,48 @@
+# MH202 web run1: scenario command, status axes and configuration index
+
+The packaged PHP/browser source has a concrete WHO17 command/status interface and a distinct configured-scenario index. It corroborates the native taskmanager vocabulary without executing PHP, JavaScript, a server, helper, browser or network request. Source expressions and call sites are not proof of working PHP/server/runtime behavior. The closed authentication/session-framing branch was not followed; session and transport delegates remain external boundaries.
+
+## Source identity and method
+
+All inputs come from the verified MH2021.0.24 normal image, archive SHA256 bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7. Inputs are decoded Latin1 to preserve original bytes, since some vendor PHP has non-UTF8 comments. No text repair or eval/lint occurred. Nonsecret config extraction uses an explicit path/port constant allowlist; packaged password/private-key content is not included.
+
+| Original image path | SHA256 |
+| --- | --- |
+| `/usr/share/apache2/htdocs/myhome/supervision.php` | `d5ea7a9f5160bc3af32a7e8e9f484cb4d77975ccfc8fb146357b94937c0544d6` |
+| `/usr/share/apache2/htdocs/myhome/lib/configura.php` | `0f0eec8b100566d005cefb40fd362d59ac4633c79b67d93dfebd03fc04a42bbc` |
+| `/usr/share/apache2/htdocs/myhome/script.php` | `698677cf6ca7aa3dae4c580707fa7db3a9182370ff70f628dcf5732400bd013a` |
+| `/usr/share/apache2/htdocs/myhome/javascript/supervision.js` | `d8fc7f90344472da08de92d04bb14b1767446d261b2c7a4f30ba089d4b827ab0` |
+| `/usr/share/apache2/htdocs/myhome/checkstatus.php` | `bbc8b2c8d88b54a607b70cd9e46c168147a64c5eac17a53d6e510ae376781acd` |
+| `/usr/share/apache2/htdocs/myhome/lib/config.php` | `ab58b62f94e5945ee220066d98a0e83a7f4615b296c07682d6ab1e8db6e13cad` |
+| `/etc/apache2/httpd.conf` | `29257bd80154e557c689ffa6d30af8b67302027a1730ec2b45383fcf12f18c53` |
+| `/etc/php/apache2-php5/php.ini` | `8987234b8f911323c0e944e24b982d3af20897e8e061571859c38e21b020701d` |
+
+## Declared server versus observed runtime
+
+/etc/apache2/httpd.conf declares ServerRoot/usr(line29), Listen80/443(lines40/41), PHP5module(line56), DirectoryIndex candidates(line61/175) and DocumentRoot/usr/share/apache2/htdocs/myhome(line113). /etc/php/apache2-php5/php.ini:83 declares short_open_tag=On. These are packaged settings, not observed listeners or a claim of safe/live external exposure. Runtime replacement, startup failure, module ABI and actual short-tag interpretation remain unexecuted.
+
+## Actual configured index and identity distinction
+
+Original myhome/lib/config.php defines fileInfo as /home/bticino/cfg/extra/4/info.xml and the selected transport port constant20000. Path/constant lines alone do not connect that port or identify a live endpoint. Original lib/configura.php:19 reads fileInfo. Lines20..29 enumerate scenario_1 through scenario_300, extract name,id,description,scen_name with MyparseInfo, and stop at the first empty name. They append a |@|-separated cache record; lines32..35 prefix it with filemtime(fileInfo). The cache reader55..79 uses its selected temporary file and regenerates on modification-time mismatch or absence.
+
+The enumeration index is not the transmitted scene ID: supervision.php:28 splits the cached row and :32 selects info[n][2] as WHERE. That field originates in the XML id value. Do not impose a universal MH202 WHERE1..300 range from this300-entry UI loop. The native loader's numeric .spt search is a separate loop with its own gap behavior.
+
+## WHO17 command and two independent status axes
+
+supervision.php:30..35, given a selected button/operation, builds `*17*ACTION*ID##` and passes it to sendCmd. The actual modern browser callback in javascript/supervision.js:149..179 instead derives the opposite action from displayed state and sends a source-defined GET to checkstatus.php with dove/azione parameters. checkstatus.php:101..117 obtains those parameters, has a preceding ValidateUser outcome gate, and on the allowed nonempty branch constructs the same WHO17 string before sendCmd. The authorization function, raw transport, session establishment and returned-result semantics are not inspected or executed here.
+
+Both supervision.php:51..85 and checkstatus.php:160..178 use general query `*#17*0##` through rw_msgopen. The selected response consumer removes final two characters, splits on*, accepts WHO17 with positive ID and assigns WHAT1/2 to execution and WHAT3/4 to availability. checkstatus.php:170..173 stores these into two separate status positions. It serializes the selected result inside an XML status element at195..197. This is a source-level consumer, not captured accepted frames, a complete parser, JSON validity or proof of final ACK handling.
+
+The browser source aggiorna_stato53..75 maps those two axes into icon names. Its20,000millisecond variable and selected setTimeout at143 are client polling declarations, not a device/bus sampling interval or measured scheduling guarantee. No XMLHttpRequest,eval,DOM or callback ran. An icon representing the opposite action is not itself the current wire state.
+
+## Missing assets and unexecuted rendering
+
+The image's myhome/lang link targets /home/bticino/cfg/extra/2. The scenario index and native script files use extra/4. No regular descendants of extra/ are present in the authoritative normal-image regular manifest; this does not describe mounted persistent storage or the actual contents of missing2.xtz/4.xtz. Matching numbers alone do not prove how an updater installs those archives.
+
+script.php:34 retains the exact source `file_get_contents(.home...` expression with the extra/4 name/name suffix. It is not silently repaired or presented as a successfully parsed/rendered page. This initial batch does not establish whether that packaged view executes, is selected, replaced, or corrected in installed assets. The direct config.php/fileInfo and native taskmanager path evidence are stronger than assuming a working script-source viewer.
+
+## Reproduction, confidence and next questions
+
+Run `python3 work/mh202-firmware/research/2026-10-30/web/run1/collect_evidence.py --check`. It reproduces12files from8verified originals, with no source-defined code execution. Selected source excerpts, path constants and actual link target are retained. High confidence applies to literal paths, loop/command construction and source-consumer axes. Runtime route selection, XML/MyparseInfo behavior on real configured data, gaps/reload state, raw protocol acceptance, session/transport and visible browser behavior remain open.
+
+Highest-value next joins: native status publisher to web consumer under explicit transport boundaries; taskmanager event/FIFO lifecycle; configured info.xml identity versus numeric .spt records; independently sourced missing assets; bounded PHP configuration/syntax/service feasibility only if it will settle an actual interface question. No global web availability, device support or security/exploitability verdict follows from these source declarations.

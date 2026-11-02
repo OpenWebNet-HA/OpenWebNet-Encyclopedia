@@ -1,0 +1,23 @@
+{
+  "/home/bticino/matrix_mx/MHCatalogue.db": {
+    "bytes": 2633728,
+    "sha256": "bd2ff4d326692c85bc4eb3f86504d615758da97dc832389fac523734574833e9"
+  },
+  "/home/bticino/matrix_mx/matrix_mx": {
+    "bytes": 3180736,
+    "resolved": "/home/bticino/matrix_mx/matrix_mx",
+    "sha256": "16d92b02ffe89819f6947d93efa76a0f24f8b590a43d3e5d8fdc7226ec68a4ff"
+  },
+  "OpenWebNet-Encyclopedia/devices/definitions/own-dev-0207-f460-myhome-server.md": {
+    "bytes": 41934,
+    "sha256": "ed4af14a11813ba1fdc53dfbf131a388b2cf8066fc688888e30da7c158579932"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01/first-pass/REPORT.md": {
+    "bytes": 7328,
+    "sha256": "c7a2949ed3f49a14fa611561795c68f3f166d980326719d61029975069263945"
+  },
+  "work/f460-firmware/2.0.12/research/2026-11-01/image_vfs.py": {
+    "bytes": 5602,
+    "sha256": "32e453cb6af0e2daafb8325d7b5115c3c13883e57d279d347aa8ea4baa3e3838"
+  }
+}

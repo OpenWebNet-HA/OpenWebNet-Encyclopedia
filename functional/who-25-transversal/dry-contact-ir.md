@@ -24,8 +24,10 @@ Two published address forms are established:
 
 | `WHERE` | Application |
 | --- | --- |
-| `1..201` | Automation dry-contact interfaces configured using Virtual Configurator Software |
-| `[1-9][1-9]` | Alarm dry-contact interfaces and IR devices configured using physical `Z` and `N` configurators |
+| `3[1..201]` | Automation dry-contact interfaces configured using Virtual Configurator Software |
+| `3[1-9][1-9]` | Alarm dry-contact interfaces and IR devices configured using physical `Z` and `N` configurators |
+
+The leading `3` is a literal prefix, concatenated with the address component. Examples are `31` and `3201` for virtual contacts `1` and `201`, and `339` for physical configurators `Z3/N9`. Some resulting strings fit both source families; Configuration and product context remain necessary. These forms are explicit in the original specification's WHERE table on page 4. The [prefix correction record](../../project/review/scenario-suite-database-1.0.53/CONTACT_PREFIX_CORRECTION.json) preserves the earlier omitted-prefix text.
 
 The published device families include automation dry-contact interfaces such as 3477/F428 and alarm/IR interfaces such as 3480/F482 and IR detector families.
 
@@ -53,8 +55,12 @@ BtExperience selects this `WHO 25` receiver for its Automation contact Objects, 
 
 This source does not list MH202, F454 or MyHomeServer1. Their absence from this historical table is not a finding of incompatibility. Published dry-contact/IR availability does not establish the reply to every `WHO 25` request or support for the separate CEN+ and ScenarioPlus families. See [CEN+ gateway compatibility](cen-plus.md#gateway-compatibility-and-hardware-boundaries) for the CEN+ specification and the scoped replay observations; the replay comparison there covers CEN+ commands, not dry-contact state queries.
 
-**Physical MH200 capture inspection.** The [2026-10-22 capture](../../evidence/cap-mh200-who25-boundary-20261022/manifest.json) records NACK on MH200 firmware 2.1.0 for literal status request `*#25*21##` after 19.576 ms, `*25*31#1*339##` after 39.486 ms, and `*25*32#1*33##` after 14.686 ms. No dry-contact/IR interface was installed or configured. These are literal probe results: `WHERE 339` is outside the published address forms above, and none of the replies alone establishes a valid configured Device response or a gateway-wide rejection rule. The WHAT meanings remain 31 for ON/detection and 32 for OFF/no detection. Incoming physical WHO 25 events and physical bus forwarding were not tested.
+**Physical MH200 capture inspection.** The [2026-10-22 capture](../../evidence/cap-mh200-who25-boundary-20261022/manifest.json) records NACK on MH200 firmware 2.1.0 for literal status request `*#25*21##` after 19.576 ms, `*25*31#1*339##` after 39.486 ms, and `*25*32#1*33##` after 14.686 ms. No dry-contact/IR interface was installed or configured. These are literal probe results: `WHERE 339` fits the published prefix-`3` forms above, but no compatible target was configured, and none of the replies alone establishes a valid configured Device response or a gateway-wide rejection rule. The WHAT meanings remain 31 for ON/detection and 32 for OFF/no detection. Incoming physical WHO 25 events and physical bus forwarding were not tested.
 
 ## Functional navigation
 
 Dry contacts are indexed separately in [Functional Protocol](../README.md) so readers searching by function can reach this page directly while the canonical reference remains under `WHO 25`.
+
+## ScenarioSuite corroboration
+
+The [ScenarioSuite Contact profile](../../scenario-engine/scenario-suite-database.md#who-25-address-profiles-and-command-context) maps `WHO 25`, offers exactly the 201 strings formed by literal prefix `3` and `1..201` in selected event/condition areas, and separates event parameter `1` from requested-state parameter `0`. A General row with stored `30` exists in the raw address catalogue but is excluded from those Contact choices. This corroborates the virtual-address and parameter model without proving installed hardware or the physical-configurator profile.

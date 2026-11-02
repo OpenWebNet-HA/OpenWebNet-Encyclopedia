@@ -1,0 +1,65 @@
+# ScenarioSuite addressing source review - v2 supplement
+
+PASS for the frozen v2 source/report candidate; no required source correction found. This independent supplement preserves `WHO25_SOURCE_REVIEW.md` unchanged and extends that publisher-source correction review to the complete parent-authored addressing analysis, collector, stored choice sets and limited relational probes. It is source/SQL/document review, not native, vendor-generator, hardware or transport execution.
+
+## Replay and independent checks
+
+Executed only host read-only `collect_addressing_v2.py --check`: PASS, 4 outputs, 13 SQL queries, 2505 raw address rows, 11608 object-address association rows, 8 input pins, original execution0. Inspected the collector's absolute URI `mode=ro&immutable=1`, `uri=True`, query_onlyON and trusted_schemaOFF. Check mode reads frozen reference copies and compares exact output bytes without updating them or current repository files.
+
+Independently connected read-only to the exact original DB and verified complete source sets, not just count/endpoints:
+
+| WHERE type | Complete original ANA_DOVE strings | Number |
+| --- | --- | --- |
+|20|`'1'+str(n)` for integer n1..255|255|
+|21|`'2'+str(n)` for integer n0..2047|2048|
+|22|`'3'+str(n)` for integer n0..201|202|
+
+For each type, both set equality and row-count equality were verified. I then independently checked EVERY listed object/area choice group, including groups not individually asserted in the author's collector: ScenarioPLUS51 areas3/5/6 each exactly255 rows and prefix1+1..255; CENPLUS52 areas3/6/7/8/9 each exactly2048 rows and prefix2+0..2047; Contact53 areas3/4/6 each exactly201 rows and prefix3+1..201. That is 11 complete groups totalling11608 rows. Neither arithmetic intervals over the full concatenated decimal strings nor universal protocol domains are substituted for these finite source sets.
+
+Independently reread original object/WHO/command relations. The database CHI key14 maps to literal OPEN_CHI25; object keys51/52/53 are not WHO values. The selected command fragments and associations agree with the report: ScenarioPLUS430..433 are present in Action area5, whereas434 is present only in selected Start/Stop areas3/6; CENPLUS435..438 appear in areas3/6, and436 is the selected command in areas7/8/9; Contact439/440 carry31#1/32#1 in areas3/6 and441/442 carry31#0/32#0 in area4. These are catalogue fragments and editor-area declarations, not executed command substitution, event acceptance or OnlyIf evaluation.
+
+## Six orphan probes and their exact limits
+
+Independently repeated all six whole-table nonNULL-key probes with an alternative `NOT EXISTS` formulation rather than merely trusting the saved LEFT JOIN results:
+
+1. ASS_OBJ_DOVE.ID_OBJ to ANA_OGGETTI.ID_OBJ.
+2. ASS_OBJ_DOVE.ID_DOVE to ANA_DOVE.ID_DOVE.
+3. ANA_DOVE.ID_WHERE_TYPE to ANA_WHERE_TYPE.ID_WHERE_TYPE.
+4. ASS_OBJ_CHI.ID_CHI to ANA_CHI.ID_CHI.
+5. ASS_OBJ_COSA.ID_COSA to ANA_COSA.ID_COSA.
+6. ANA_OPEN_RULE_COMPILE.ID_OBJ to ANA_OGGETTI.ID_OBJ.
+
+Each found0 unmatched nonNULL values. Selected source PRAGMA foreign_key_list checks remain empty. This supports those six observed data relationships only: it is not foreign-key enforcement, all-table integrity, implicit-owner proof for every reused ID_ASS, object0 permission interpretation or a vendor consumer call graph.
+
+General is ANA_DOVE PK7795, OPEN_DOVE string30, WHERE type22. Its absence from Contact53's choice associations is independently consistent with the report. It does not exclude every runtime general-address route. Internal DB version query independently returns VERSION1/RELEASE0/BUILD53; this is distinct from installer3.5.38, package build and MH202 firmware1.0.24.
+
+## Publication and reference-source continuity
+
+All8 input identities were independently verified against saved input pins. The four reference copies are actual frozen inputs, so later repository corrections will not silently change this candidate's meaning or invalidate replay. In particular, frozen dry-contact and gateway-compatibility document hashes match the exact pre-correction sources pinned by the earlier `WHO25_SOURCE_REVIEW.md`.
+
+The PDF remains425272bytes/SHA256 `122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927`; text-layout SHA `e219d1216144abd34f77655d95afdf0b6de853f12c03c1e3971f4a9a4498f55d` and complete page4 render SHA `6d3d6616c866235501c5c41fcfc1530be38a60271d411d3fdb5754fcf89cc271` are unchanged. My earlier independent visual/original-PDF text review established the prefix3 in both page4 rows and kept page13 availability separate. The new report accurately incorporates that result: literal339 fits physical3+3+9 and virtual3+39 notation; it does not identify a configured interface, accepted command or successful physical transaction. The scope-correction plan preserves literal probes, replies/timings, raw captures, first snapshots and prior oracle outcomes. This supplement edits none of them.
+
+## Version history and first-candidate integrity
+
+Inspected the retained old script/report, NEW v2 script/report and DEVELOPMENT_HISTORY.json. The exact source diff changes workspace parent depth3 to4 and report/reproduction identities only; SQL, finite-set predicates and guards are unchanged. The old script resolves its source candidate before opening SQLite or creating reference/output files. The history reports a first source lookup StopIteration before SQL/generated evidence. I did not rerun the deliberately failed old script or claim an independently captured historical error trace beyond the retained history/source. Original old files are still present with the exact recorded collector hash.
+
+All6 immediate first-success candidate copies match their current files and snapshot index byte-for-byte: v2 report, v2 collector and4 outputs. Directory name `initial-candidate-v1` identifies that first successful candidate snapshot; it does not imply the failed v1 collector produced SQL evidence. No candidate overwrite, source behavior change or original-execution addition was found.
+
+No claim is added about active resource binding, full UI permissions, generator placeholders, exported scenario grammar, natural callbacks, network acceptance, hardware availability or physical behavior. No current repository or author artifact was edited; this review and its first-byte copy are new files only.
+
+## Exact reviewed pins
+
+Paths below are relative to `work/mh202-firmware/research/2026-10-31-database-analysis/addressing/`.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.v2.md` | `4584ccd771a7e941c038c491bc2c4a3ad3c77027429ccd9d4df8d7df614caac0` |
+| `collect_addressing_v2.py` | `28ac0e0d88e1a5cea3a4a6d7897caa25564687c6e94e46f8f271e7f64a4da038` |
+| `SQL_EVIDENCE.json` | `26de06e51251027c3f0033e8d0b7a780ad95cb092ef27e384b1effbeac3c6bca` |
+| `ADDRESS_CONTRACT.json` | `5bf4400490ae3a667319ed4e60c3b0e12edf9c5ef8c36bc7557c9e7109581331` |
+| `INPUT_PINS.json` | `ec9a095f51a9eb02cc52d7068969005f1d32b2ddef766a346ef3ba07bd8686c7` |
+| `OUTPUT_MANIFEST.json` | `1cc18901dffadedcf77d5af674f7a70470509e591259a242236ded65771784f0` |
+| `initial-candidate-v1/SNAPSHOT_INDEX.json` | `5189afc21eedcf8630c960d67658cc26de1f3305e6daafede9734548fcb46622` |
+| `REPORT.md` | `801b7fb08cb4207263a2c5f42240bdf5fce521b6f20debc71d6384e302f96276` |
+| `collect_addressing_v1.py` | `aabfb066dd44cce72049d7b07e91b5c0392a7ac8a388c0fdc3b66229c898f9d8` |
+| `DEVELOPMENT_HISTORY.json` | `795716c8f2492b707ce54434d750b82fe2c6e048b46946deb8474cd2ce0a8b54` |

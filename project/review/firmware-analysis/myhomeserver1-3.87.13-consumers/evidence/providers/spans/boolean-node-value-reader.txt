@@ -1,0 +1,79 @@
+
+
+
+Disassembly of section .text:
+
+000052c0 <get_val_bool_node_sens@@Base>:
+    52c0:	f8df c054 	ldr.w	ip, [pc, #84]	@ 5318 <get_val_bool_node_sens@@Base+0x58>
+    52c4:	4b15      	ldr	r3, [pc, #84]	@ (531c <get_val_bool_node_sens@@Base+0x5c>)
+    52c6:	b500      	push	{lr}
+    52c8:	b083      	sub	sp, #12
+    52ca:	44fc      	add	ip, pc
+    52cc:	f85c 3003 	ldr.w	r3, [ip, r3]
+    52d0:	681b      	ldr	r3, [r3, #0]
+    52d2:	9301      	str	r3, [sp, #4]
+    52d4:	f04f 0300 	mov.w	r3, #0
+    52d8:	b19a      	cbz	r2, 5302 <get_val_bool_node_sens@@Base+0x42>
+    52da:	f7fc ee9e 	blx	2018 <get_node_by_name@plt>
+    52de:	b118      	cbz	r0, 52e8 <get_val_bool_node_sens@@Base+0x28>
+    52e0:	6803      	ldr	r3, [r0, #0]
+    52e2:	2b02      	cmp	r3, #2
+    52e4:	d010      	beq.n	5308 <get_val_bool_node_sens@@Base+0x48>
+    52e6:	2000      	movs	r0, #0
+    52e8:	4a0d      	ldr	r2, [pc, #52]	@ (5320 <get_val_bool_node_sens@@Base+0x60>)
+    52ea:	4b0c      	ldr	r3, [pc, #48]	@ (531c <get_val_bool_node_sens@@Base+0x5c>)
+    52ec:	447a      	add	r2, pc
+    52ee:	58d3      	ldr	r3, [r2, r3]
+    52f0:	681a      	ldr	r2, [r3, #0]
+    52f2:	9b01      	ldr	r3, [sp, #4]
+    52f4:	405a      	eors	r2, r3
+    52f6:	f04f 0300 	mov.w	r3, #0
+    52fa:	d10a      	bne.n	5312 <get_val_bool_node_sens@@Base+0x52>
+    52fc:	b003      	add	sp, #12
+    52fe:	f85d fb04 	ldr.w	pc, [sp], #4
+    5302:	f7fd e89a 	blx	2438 <get_node_by_iname@plt>
+    5306:	e7ea      	b.n	52de <get_val_bool_node_sens@@Base+0x1e>
+    5308:	6883      	ldr	r3, [r0, #8]
+    530a:	2b14      	cmp	r3, #20
+    530c:	d1eb      	bne.n	52e6 <get_val_bool_node_sens@@Base+0x26>
+    530e:	6900      	ldr	r0, [r0, #16]
+    5310:	e7ea      	b.n	52e8 <get_val_bool_node_sens@@Base+0x28>
+    5312:	f7fc ef16 	blx	2140 <__stack_chk_fail@plt>
+    5316:	bf00      	nop
+    5318:	1b92      	subs	r2, r2, r6
+    531a:	0001      	movs	r1, r0
+    531c:	0178      	lsls	r0, r7, #5
+    531e:	0000      	movs	r0, r0
+    5320:	1b70      	subs	r0, r6, r5
+    5322:	0001      	movs	r1, r0
+
+00005324 <get_val_bool_node@@Base>:
+    5324:	4a0d      	ldr	r2, [pc, #52]	@ (535c <get_val_bool_node@@Base+0x38>)
+    5326:	4b0e      	ldr	r3, [pc, #56]	@ (5360 <get_val_bool_node@@Base+0x3c>)
+    5328:	b500      	push	{lr}
+    532a:	b083      	sub	sp, #12
+    532c:	447a      	add	r2, pc
+    532e:	58d3      	ldr	r3, [r2, r3]
+    5330:	4a0c      	ldr	r2, [pc, #48]	@ (5364 <get_val_bool_node@@Base+0x40>)
+    5332:	681b      	ldr	r3, [r3, #0]
+    5334:	9301      	str	r3, [sp, #4]
+    5336:	f04f 0300 	mov.w	r3, #0
+    533a:	4b09      	ldr	r3, [pc, #36]	@ (5360 <get_val_bool_node@@Base+0x3c>)
+    533c:	447a      	add	r2, pc
+    533e:	58d3      	ldr	r3, [r2, r3]
+    5340:	681a      	ldr	r2, [r3, #0]
+    5342:	9b01      	ldr	r3, [sp, #4]
+    5344:	405a      	eors	r2, r3
+    5346:	f04f 0300 	mov.w	r3, #0
+    534a:	d105      	bne.n	5358 <get_val_bool_node@@Base+0x34>
+    534c:	2201      	movs	r2, #1
+    534e:	b003      	add	sp, #12
+    5350:	f85d eb04 	ldr.w	lr, [sp], #4
+    5354:	f7fc bfd8 	b.w	2308 <get_val_bool_node_sens@plt>
+    5358:	f7fc eef2 	blx	2140 <__stack_chk_fail@plt>
+    535c:	1b30      	subs	r0, r6, r4
+    535e:	0001      	movs	r1, r0
+    5360:	0178      	lsls	r0, r7, #5
+    5362:	0000      	movs	r0, r0
+    5364:	1b20      	subs	r0, r4, r4
+    5366:	0001      	movs	r1, r0

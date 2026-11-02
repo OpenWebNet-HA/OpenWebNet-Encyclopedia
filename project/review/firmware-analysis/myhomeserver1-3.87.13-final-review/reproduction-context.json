@@ -1,0 +1,12 @@
+{
+  "scope": "Static inspection of unchanged host collector, not a newly executed failure/source replay",
+  "collector": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/collect_trigger_v1.py",
+  "collector_sha256": "c10653cb265171a5f46a04d22d6142e94f6e55a7eea8bb3168b330ee511404b8",
+  "pin_creation_line": 48,
+  "saved_input": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-numeric-trigger/trigger/INPUTS.json",
+  "saved_input_key": "curated_product_context",
+  "expected_Device_sha256": "5940b85c12632d36589ed34daf47167ebbe2f3e243868d624e8938364cc17855",
+  "retained_Device_snapshot": "integration/pre-edit/own-dev-0199-myhomeserver1-home-automation-server.md",
+  "actual_old_check_executed_after_document_change": false,
+  "reproduction_rule": "The old exact output check requires its historical inputs; the new supplement verifies the old Device snapshot explicitly without modifying old collectors or claiming current direct passes."
+}

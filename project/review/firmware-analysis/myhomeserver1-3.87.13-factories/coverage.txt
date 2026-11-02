@@ -1,0 +1,11 @@
+# Examined scope and limits
+
+| Area | New bounded evidence | Remaining boundary |
+| --- | --- | --- |
+| Catalogue owner | Actual RTTI/vtable/factory/base constructor; initialized15-column template, replacements, inner/wrapper aliases; conditional registry/walker/invoker | Current key/context origins, admission, later field uses, complete query/filter/version policy, runtime rows/lifetime |
+| Scene element factories | Three separate local type tables; selected SLEEP/SCENARIO44-byte constructors and normal-capacity action-vector transfer | Concrete trigger/condition classes, invalid/missing fields, reallocation/error/destruction, full grammar, target scene lookup |
+| Runner | Same scene to large initializer, selected action10 append, enabled/active launch guards, relocated worker entries, action traversal/stop-request byte | Full initializer, registration, individual runtime virtual methods, timing, complete cancellation/concurrency/unwind |
+
+Method: verified original files via ImageVFS, fresh ELF PT_LOAD maps, Thumb2 static disassembly, original relocations/PIC/RTTI/exidx, exact source bytes, finite plain-text substitution. Three current collectors reproduce70 outputs; output counts describe reproducibility rather than firmware coverage. No new original execution or live contact is performed. The ordinary C++/JsonCpp/SQLite/thread APIs are unexecuted delegates, not synthetic success stubs.
+
+Configured scene assets remain missing from the examined packaged prefix; extras80/81/94/95 are unbundled. Neither fact proves runtime absence or service inactivity. Previous reports remain immutable and retain their original bounded unknowns; current pages link this continuation. Full Device/source approval and physical/product support are not claimed.

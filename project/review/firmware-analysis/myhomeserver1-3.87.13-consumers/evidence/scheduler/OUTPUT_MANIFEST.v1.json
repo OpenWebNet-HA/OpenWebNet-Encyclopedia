@@ -1,0 +1,108 @@
+{
+  "files": {
+    "CONFIG_SCOPE.v1.json": {
+      "bytes": 401,
+      "sha256": "fc6155440bd52ba721772eeea4ef66d89a9c2ba086b449b5a70c0ec6df4a81a6"
+    },
+    "CRITICAL_BYTES.v1.json": {
+      "bytes": 625,
+      "sha256": "ca90b9f37538ec539309a99b95bfca8eafa1a8599a818979d89fd5cc7c6a328a"
+    },
+    "DIRECT_CALLS.v1.json": {
+      "bytes": 1893,
+      "sha256": "900db08b1376335d78bec8dd4da953b79a65cea52df26589289d09644d9ec664"
+    },
+    "FUNCTION_BOUNDARIES.v1.json": {
+      "bytes": 813,
+      "sha256": "fc710f1da986e6448845e78710943670e8860c5d0c8b0376f7483d4081e5b660"
+    },
+    "INPUTS.v1.json": {
+      "bytes": 1249,
+      "sha256": "d2eeafb9e97543b88d7a0971571a2577e479c30b7e34389242a71a21f99d0e54"
+    },
+    "METHOD.v1.json": {
+      "bytes": 773,
+      "sha256": "a88b24f5cf7b951195435e392a0d422ea7bbc8ab5fc95965b858d56c17c9c91b"
+    },
+    "PIC_LITERALS.v1.json": {
+      "bytes": 5360,
+      "sha256": "4835e9422428f25e86503b5d13ac44f37ec772860494282fec253d9d03b2c10b"
+    },
+    "PROVIDERS.v1.json": {
+      "bytes": 2555,
+      "sha256": "61749c5ebc439d90443c517439eb3e3557a7bf2946907c8321781ebfa6bd2a8d"
+    },
+    "SOURCE_SPANS.v1.json": {
+      "bytes": 4845,
+      "sha256": "1dfeedf4e1e465a83fbdc3332278289429f61d37b6972f713711cc2a8408bf4b"
+    },
+    "spans/directory-loader.txt": {
+      "bytes": 11842,
+      "sha256": "92a59b67c44a3fc58e77359f76a0d1b8878a42dde8cfeb24513e3ccd660db6b1"
+    },
+    "spans/extension-helper.txt": {
+      "bytes": 7117,
+      "sha256": "5474a1429375f7486818ccb6f2cde80aac654e7b7069af8efb1f794b3b1f3a87"
+    },
+    "spans/file-constructor-prefix.txt": {
+      "bytes": 7395,
+      "sha256": "8bb96af066b8a465b67fdc3189cbaae024cddaee2d7c943957df1c44ea395d7f"
+    },
+    "spans/file-error-tails.txt": {
+      "bytes": 6385,
+      "sha256": "33ea4344adaaf17f4e5167c901a6b02b28148464e07a0e6fea85644ccfc0f531"
+    },
+    "spans/file-extra-guards.txt": {
+      "bytes": 1961,
+      "sha256": "a7f6d00d2ede70d3e5e4d89bd524e70d6cafa74faaf6770ed5caffe22c815bac"
+    },
+    "spans/file-parser-pools.txt": {
+      "bytes": 3075,
+      "sha256": "87d8ddf5e9749e9b57b45bfc52bd8f06d59a5daf78e99e615dcddb8ea902160f"
+    },
+    "spans/file-schema-guards.txt": {
+      "bytes": 5959,
+      "sha256": "af38ff5e723b069df1972d3573c81fef025bca1192ef3d5e18bf9bb478a9080a"
+    },
+    "spans/loader-caller.txt": {
+      "bytes": 639,
+      "sha256": "7ff80b715d0931d42f7a5ea6632db65334a7545b3cab7741f6723db1cf340180"
+    },
+    "spans/loader-pools.txt": {
+      "bytes": 1895,
+      "sha256": "55bb68c2bbf7a6a547a87bd004af2792b678a4019fb7f8d00f77e0e47c6d9a95"
+    },
+    "spans/runner-constructor.txt": {
+      "bytes": 1302,
+      "sha256": "32f24f8ea5f1cec0daf226d43d69c7ffe3a74e91d9c5cea40271fe69bc400ff6"
+    },
+    "spans/scene-factory-handoffs.txt": {
+      "bytes": 7739,
+      "sha256": "02c8cba539b7a511287d122f979bd47a7d6c50dc881d8e7150d4674112520920"
+    },
+    "spans/scene-initial-fields.txt": {
+      "bytes": 8134,
+      "sha256": "ea09be81802cb7720897c8f18c01c8ca43774d085a810f2f2c2624c926016d08"
+    },
+    "spans/scene-pools.txt": {
+      "bytes": 2540,
+      "sha256": "1b1b6dcb09753048c68c5f4f114fec0f4845a13d35a4d3c8935b7006da775187"
+    },
+    "spans/scenesPath-getter.txt": {
+      "bytes": 4993,
+      "sha256": "452799d3295425dc5131e38f416a63db28d5e23750f976eec09e4d8510732091"
+    },
+    "spans/settings-caller.txt": {
+      "bytes": 1915,
+      "sha256": "b984a79b79914f2e0cc4363df198c0d1947181b882819c5e4fbb7d2493463878"
+    },
+    "spans/settings-parser-prefix.txt": {
+      "bytes": 6213,
+      "sha256": "2f2676546d0f0c0b70abf2d1d6c7e71d68258bdd389296fff44fb96ea6e9dfd8"
+    },
+    "spans/settings-scenesPath.txt": {
+      "bytes": 2686,
+      "sha256": "84d3a186ef638586e3dce408cfe5b5f4c4ebc8d11fb9456c3d83fa8e7e272aef"
+    }
+  }
+}

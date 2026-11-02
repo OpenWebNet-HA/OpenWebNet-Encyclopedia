@@ -1,0 +1,110 @@
+# F454 2.0.51: boot, storage, recovery and update examination
+
+First substantial static pass, 2026-10-29. All findings concern the hash-verified manufacturer package `F454_020051.fwz`, SHA-256 `15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3`. No vendor executable, init script, update command or hardware test was executed. Original images and synced project references were not modified.
+
+## Findings that materially improve the initial assessment
+
+1. The exact kernel configuration is recoverable. It confirms **TI DaVinci DM365, BASI board, ARM926T/ARMv5 and software floating point**. This is stronger evidence than the generic DaVinci image name.
+2. Normal and recovery are primarily different filesystem compositions, not different versions of the proprietary executable code. **All 325 shared ELF files with differing whole-file hashes have identical `.text` sections**, and all have identical `.gnu_debuglink` sections. Their raw differences largely involve prelink/relocation data.
+3. The complete original filesystem symlink inventory is available. Earlier 7-Zip working-tree extraction silently left some rejected symlink names as empty regular files. Those files are extraction artifacts, not firmware content. Use the original-image inventories, not `rglob` file counts or those empty scripts, to reconstruct boot.
+4. The persistent upgrade mechanism survives reboots through flags under a separate writable partition. It alternates between normal and recovery environments rather than simply replacing its running root filesystem.
+5. The BASI hardware abstraction contains an explicit partition/device record. It maps the normal and recovery kernel and rootfs destinations, plus persistent configuration and EEPROM access.
+
+## 1. Reproducible image comparison
+
+`inventory_boot.py` invokes read-only `7z l -slt` on each original ext3 image, separates real regular files from directories, symlinks and the virtual `[SYS]/Journal` entry, checks extracted file availability and sizes, and hashes every real regular file. It writes full file inventories, symlink inventories and the comparison.
+
+| Property | Normal | Recovery |
+|---|---:|---:|
+| Image entries reported by 7-Zip | 3,978 | 1,673 |
+| Actual regular file paths | 3,090 | 1,024 |
+| Original symlink paths | 543 | 443 |
+| Missing extracted regular files | 0 | 0 |
+| Extracted file size disagreements | 0 | 0 |
+| Regular file bytes, counting paths | 132,713,057 | 39,925,550 |
+
+These are path counts; hard-linked names can refer to the same inode. Sizes match the image metadata; this does not independently checksum every extracted file against a second extractor.
+
+Across shared regular-file paths, 685 are byte-identical and 338 differ. There are 2,067 normal-only regular files and one recovery-only file. There are no shared regular-file mode/UID/GID differences in this inventory.
+
+Of 111 shared regular files under `home/bticino/`, the only content difference is `sp/dbfiles_ws.xml`, where recovery adds `<fs_type>RECOVERY</fs_type>`. Proprietary binaries and libraries shared between images are byte-identical. The only normal-only vendor files in that tree are `bin/cleanup.sh` and `bin/compose-email.sh`; recovery-only is `sp/Recovery`. This expands the earlier five-executable comparison to all shared vendor regular files.
+
+Normal-only content includes 674 files under `home/httpd`, 616 under `usr/share`, 311 under `usr/lib`, 198 under `usr/local`, and 18 under `etc/apache2`. This is consistent with recovery retaining the gateway/update core while omitting the full web/multimedia/support environment; individual runtime behavior still needs testing.
+
+`compare_elf_sections.py` classifies the 338 changed shared files:
+
+- 325 are ELF pairs. Every pair has identical `.text` and `.gnu_debuglink` bytes.
+- 316 have the same build-ID note; nine have no comparable build-ID note.
+- 319 contain `.gnu.prelink_undo` in both images. Common differences include `.got`, `.gnu.liblist`, `.gnu.conflict` and `.dynbss`.
+- The 13 non-ELF differences are the four configuration/build metadata files, six module index files, two opkg alternatives records and the license manifest.
+
+**Interpretation:** it would be misleading to treat 338 changed hashes as 338 changed implementations. Exact whole-file identity still matters for reproducing images; identical `.text` alone does not prove every runtime datum or dependency resolution is identical.
+
+## 2. Kernel and hardware
+
+`extract_kernel.py` verifies the U-Boot header and payload CRCs, then locates the ARM zImage's embedded gzip stream at **uImage file offset `0x3172`**. The U-Boot compression flag is zero because the payload is an already self-decompressing zImage; that does not mean its interior lacks compression.
+
+- U-Boot name: `Linux-2.6.32.17-davinci1-c44221b`.
+- Header build time: `2016-02-11T09:07:25Z`.
+- Payload: 1,737,028 bytes; entry/load: `0x80008000`.
+- Decompressed kernel: 3,668,480 bytes; SHA-256 `7eca710bc8ebe4b9787cfedc6b0773e83170075ce4ba7e17d140639448153f84`.
+- Full banner: Linux `2.6.32.17-davinci1-c44221b9cd7e82d5ec494320685310d138f4dd07`, built by `bticino@F454-yocto`, GCC 4.8.2, `#1 PREEMPT Thu Feb 11 10:07:14 CET 2016`.
+- `IKCFG_ST` contains a recoverable gzip configuration, saved as `kernel.config`.
+
+Relevant configuration evidence:
+
+| Setting | `kernel.config` line | Consequence |
+|---|---:|---|
+| `CONFIG_ARCH_DAVINCI_DM365=y` | 205 | Specific SoC family selected by this kernel |
+| `CONFIG_MACH_BASI=y` | 211 | BASI board selected; DINGO and other listed boards are not selected |
+| `CONFIG_CPU_ARM926T=y` | 233 | ARM926 target |
+| `CONFIG_CPU_32v5=y` | 234 | ARMv5 code model |
+| `CONFIG_ARM_THUMB=y` | 246 | Kernel supports Thumb userspace |
+| `CONFIG_PREEMPT=y` | 275 | Preemptible build |
+| `CONFIG_AEABI=y` | 277 | ARM EABI userspace |
+| `CONFIG_CMDLINE=""` | 308 | Built-in command line does not identify active root or recovery mode |
+| `# CONFIG_VFP is not set` | 324 | No kernel VFP support |
+| `CONFIG_IKCONFIG=y`, `_PROC=y` | 55–56 | Configuration preservation is intentional |
+
+This strengthens the hardware/emulation requirements, but a BASI machine definition, peripherals and bootloader environment still need reconstruction for full-system emulation. No U-Boot binary or live environment is included among this package's four top-level members.
+
+## 3. Boot and run modes
+
+The original-image symlink records, not the incomplete extracted links, establish:
+
+- `/etc/inittab:5` sets default runlevel 5.
+- `/etc/inittab:9` runs `/etc/init.d/rcS` for sysinit.
+- `/etc/inittab:31` starts a 115200-baud serial getty on `ttyS0`; a local `tty1` getty is also defined.
+- Sysinit links run mount/checkroot, read-only-rootfs preparation, volatile-directory setup, device/syslog/audio preparation, then `S95-dedrifu_env.sh` and `S96-dedrifu.sh`.
+- `S41ZarlinkFwUpdate` points to `/usr/local/bin/HwBsp-A-ZarlinkFwUpdate_F454.sh`. That script checks four hardware checksum registers and conditionally loads `zl38005.bin` into the Zarlink audio processor. This is a peripheral-firmware path separate from the gateway OS update.
+- Normal runlevel 5 includes `S30gstti-init`, then `S98-bt_daemon-apps.sh` and `S99rmnologin.sh`. Recovery lacks the GStreamer init link but includes the application-daemon link.
+- Runlevel 4 instead starts `S97-bt-networking.sh` and `S98-watchdog.sh`; it does not start the normal application daemon through a runlevel link. Its networking script enables Ethernet DHCP and a USB Ethernet gadget/static address plus DHCP server. This is a distinct maintenance-oriented boot profile; exact triggers selecting runlevel 4 remain open.
+
+`etc/init.d/bt_daemon-apps.sh:3–6` sets the vendor library path, adds localhost, changes to `/home/bticino`, and starts `bin/bt_daemon`. The daemon's process and dynamic-service behavior is a separate research target. Merely finding `apache2`, `dropbear`, `vsftpd`, `openvpn` or `php-fpm` init scripts does **not** establish that those services listen by default: their startup may be controlled by the vendor daemon/configuration.
+
+## 4. Persistent and volatile storage
+
+`etc/fstab:3–6` configures root read-only with journaling, `/dev/mmcblk0p7` as writable/synchronous ext3 at `/home/bticino/cfg/extra`, procfs, and tmpfs `/var/volatile`. `etc/default/rcS` sets `ROOTFS_READ_ONLY=yes` and disables rootfs fsck on normal boot.
+
+`etc/init.d/read-only-rootfs-hook.sh:30–36` handles a read-only `/var/lib` by copying it into the volatile tree and bind-mounting it. `etc/default/volatiles/00_core` defines volatile log, network, daemon, flags, email, records, messages and download directories. Original symlinks route `/tmp`, runtime state and several `/etc` files into these volatile paths.
+
+The distinction matters: firmware defaults, ephemeral runtime copies and persistent user configuration are separate evidence classes. `/var/tmp/stack_open.xml` is a volatile link to the packaged configuration according to the volatile setup file; it must not automatically be interpreted as the live installation's persisted settings.
+
+### BASI device record and partition destinations
+
+`liblghal.so.0.0!hal_board` at VA `0xa4dc` reads `/proc/cpuinfo`; the BASI comparison at `0xa5a0` selects board enum **0**. `Device::get_device` at `0x561c` indexes records of size **`0x11e` (286)** at table VA **`0x12dd6`**. Record 0 contains:
+
+| Record offset | Stored device | Role established by consumer |
+|---|---|---|
+| `0x00` | I²C EEPROM path `.../1-0053/eeprom` | Device configuration/identity storage |
+| `0x64` | `/dev/mmcblk0p7` | Persistent extra/configuration; corroborated by fstab |
+| `0x82` | `/dev/mmcblk0p2` | Recovery kernel partition consumed by `mount_kernel_recovery` |
+| `0xa0` | `/dev/mmcblk0p5` | Normal kernel partition consumed by `mount_kernel` |
+| `0xbe` | `/dev/mmcblk0p3` | Recovery rootfs destination consumed by `update_fs_recovery` |
+| `0xdc` | `/dev/mmcblk0p6` | Normal rootfs destination consumed by `update_fs` |
+| `0xfa` | `ext3` | Filesystem type |
+
+Consumer evidence: normal update call chain at `0x6950–0x6978` uses record+`0xdc`; recovery at `0x6cb4–0x6cdc` uses record+`0xbe`; mount recovery at `0x6410` uses record+`0x82`; normal mount at `0x5e68` passes record+`0xa0`. The normal/recovery rootfs writer assembles a gzip-to-block-device shell command in the BASI branch. This is a static destination map, **not** a recovered partition table with sector boundaries, sizes or actual current mount state.
+
+`etc/fw_env.config` separately configures the U-Boot environment utility against `/dev/mmcblk0p1`, offset `0x5ee00`, environment size `0x1000`. No contents of that live environment were read.
+

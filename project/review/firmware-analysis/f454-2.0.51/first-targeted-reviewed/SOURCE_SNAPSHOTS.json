@@ -1,0 +1,60 @@
+{
+  "scope": "Exact eleven principal/supplementary documents pinned by the first targeted integration review, before batch2 promotion. Prior review and evidence remain unchanged.",
+  "files": [
+    {
+      "source_path": "reverse-engineering/firmware-analysis/f454-2.0.51-follow-up.md",
+      "source_sha256": "ea7bafebfd9efe5661a36a16bcd690f31ace037a6681e54a6a84407e7f0da204",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/first-targeted-reviewed/reverse-engineering__firmware-analysis__f454-2.0.51-follow-up.md.txt"
+    },
+    {
+      "source_path": "reverse-engineering/firmware-analysis/f454-2.0.51.md",
+      "source_sha256": "eb774bf167c48a619e893244b04489cdcb5183455de72c643fb8c3320d5b6d9a",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/first-targeted-reviewed/reverse-engineering__firmware-analysis__f454-2.0.51.md.txt"
+    },
+    {
+      "source_path": "reverse-engineering/firmware-analysis/README.md",
+      "source_sha256": "8aa3bad529d32a91db6adad2bcb0c6d96da78d12431992534541a5c35d6a7df1",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/first-targeted-reviewed/reverse-engineering__firmware-analysis__README.md.txt"
+    },
+    {
+      "source_path": "devices/definitions/own-dev-0002-audio-video-web-server-gateway.md",
+      "source_sha256": "b3965d163dfb6c7675460ad13714572a46c6df12ec51fbaa31324ba44d31715d",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/first-targeted-reviewed/devices__definitions__own-dev-0002-audio-video-web-server-gateway.md.txt"
+    },
+    {
+      "source_path": "diagnostics/dim1-device-identity.md",
+      "source_sha256": "df460bc77a64985a2f7f3d943cdaa25214533613d228aa82ba5b9f7e3087d72d",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/first-targeted-reviewed/diagnostics__dim1-device-identity.md.txt"
+    },
+    {
+      "source_path": "functional/who-4-temperature-control/dimensions.md",
+      "source_sha256": "1a4de975d97ab2f83e8de9f69ce5b2bb81408a4fb48c3a3db13e16b0051f9bf1",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/first-targeted-reviewed/functional__who-4-temperature-control__dimensions.md.txt"
+    },
+    {
+      "source_path": "functional/who-18-energy-management/dimensions.md",
+      "source_sha256": "cdb921df9223bab86d4746d2d37ed5a890e56e6a62ae5f51da9738acc23a833b",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/first-targeted-reviewed/functional__who-18-energy-management__dimensions.md.txt"
+    },
+    {
+      "source_path": "functional/who-8-video-door-entry-telephony/README.md",
+      "source_sha256": "03268c5a148e5bd016f557b326b02003a870b62081a073f6a70d666de1af06d3",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/first-targeted-reviewed/functional__who-8-video-door-entry-telephony__README.md.txt"
+    },
+    {
+      "source_path": "device-model/firmware.md",
+      "source_sha256": "ad681ed30c0c38ce0cee5509330ddd8e8e343a19b063b64d5ea3a8866fa01b87",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/first-targeted-reviewed/device-model__firmware.md.txt"
+    },
+    {
+      "source_path": "reverse-engineering/README.md",
+      "source_sha256": "7e4ac3bf373177fda08721aa3a1da629cd7829a7c150a434b2b713d3bed35c92",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/first-targeted-reviewed/reverse-engineering__README.md.txt"
+    },
+    {
+      "source_path": "devices/work-queue.yaml",
+      "source_sha256": "a76b1ce9ce10e24ad669670b9e91888e1ea2c50197696da3dc3fdad78ab4fcfd",
+      "snapshot": "project/review/firmware-analysis/f454-2.0.51/first-targeted-reviewed/devices__work-queue.yaml.txt"
+    }
+  ]
+}

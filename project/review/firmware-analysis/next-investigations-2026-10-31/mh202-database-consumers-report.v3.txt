@@ -1,0 +1,68 @@
+# ScenarioSuite database query and rule materialization consumers
+
+Fifteen original .NET methods now connect the previously inspected tables to actual SQL construction and record-to-class materialization. This supplements the separate main compiler/writer chain. Source bytes are parsed/disassembled on the host only; no vendor assembly, .NET runtime, SQLite driver, compiler or configured scenario is executed.
+
+## Inputs and method identities
+
+The recovered original assemblies are unchanged selected installer members under default/targetDir. DataManager SHA256c52f483e0a5abbd5ca0ada6214afd0125fbe895005ea1e775c087c6b491e3492, Core7b7269a14652472fc471568430364a038f02a8c881cb5c9db089a7683e38307b. Exact length, CLI MethodDef token, RVA, file offset, method-header/code size and raw span hash accompany each method. Tokens are assembly-scoped and IL offsets are code-relative excluding each method header (12-byte fat or1-byte tiny, recorded per method).
+
+| Assembly | MethodDef | RVA | Method |
+| --- | --- | --- | --- |
+|DataManager|06000030|4690|GetOPENRuleCompile|
+|DataManager|06000032|4aac|GetStatusRequestCompile|
+|Core|060000bd|e408|GetOPENRuleCompile|
+|Core|060000be|e618|CastGetOPENRuleCompile_Record2Class|
+|Core|060000c1|efcc|GetStatusRequestCompile|
+|Core|060000c2|f0dc|CastGetStatusRequestCompile_Record2Class|
+
+The collector verifies the actual RVAs rather than assuming this prose table. Generic TypeSpec identities remain unresolved in the listing where appropriate; method/property names and original tokens are retained. Metadata-backed callees are source relations, not proof of live dependency binding or framework behavior.
+
+## Actual area-controlled query
+
+DataManager.GetOPENRuleCompile formal parameters are ID_OBJ, nullable ID_COSA, ID_AREA and outputDataSet. Original switch IL001c..0077 maps area3..9 to TRIGGER_START_AREA, COND_OK_AREA, ACT_AREA, TRIGGER_STOP_AREA, TRIGGER_ENABLE, TRIGGER_DISABLE and PANIC_KEY. Invalid area leaves the selected field empty and returns0 on the inspected error branch.
+
+For an ordinary selected area and integer command, original IL00c8..010d constructs SELECT * FROM ANA_OPEN_RULE_COMPILE WHERE ID_OBJ =<object> AND <selectedflag> <> 0 AND ID_COSA=<command>. It requests the SQLite adapter/connection/Fill. The result table is added to the outputDataSet only when Fill's stored count is greater than0; the ordinary continuation returns1 even when no rows were added. Exceptions in the outer selected path return0. No Boolean-success meaning is transferred to a generated scenario or delivery operation.
+
+Host read-only queries reproduce four finite source-derived selections on the pinned database: Counter66/Set619/Action5 returns rule579; Counter66/Value618/OnlyIf4 returns623; Boolean67/True622/OnlyIf4 returns no rows; Alarm39/Event238/Action5 returns231. These are host SQL facts under explicit integer/area premises, not executed DataManager/driver calls, editor permission or a configured compilation attempt. The last case does not establish that the UI offers an alarm action.
+
+## Core normal-empty-result fallback, with raw branches verified
+
+Core.GetOPENRuleCompile calls that manager at IL002a. A normal managerreturn1 selects its named-table path. If table lookup is NULL, IL0052 branches to IL00d0, sets the local default flag and reaches the default constructor at IL00f8. In contrast, managerreturn0 selects IL00d4 and returns−3; it does NOT request the default. The ordinary nonempty-table path materializes records and appends them to a new output list. Cast failure selects−3; the outer catch selects−99. Those are local API returns, not wire acknowledgements.
+
+The default object has IdOPENRule1, object/command0, primary role/enable/disable flags1, COND_KO_AREA/ACT_ELSE_AREA0, panic text converted from1 and first three fields ID_CHI/ID_COSA/ID_DOVE. It then supplies a one-entry output list and returns0. This is an explicit source fallback under the stated provider/DataSet premises, not an observed generated frame or evidence that any unsupported UI function becomes available. Original substitution/formatter behavior belongs to the separate compiler chain.
+
+A material pre-promotion parent interpretation error is preserved: exploratory dncil operands were BODY-relative, while the display column was IL-relative. The first message inverted the two branches; the peer independently recomputed signed deltas and parent confirmed rawbytes. Correct proofs: IL0036 bytes4099000000→IL00d4; IL0052 bytes2c7c→IL00d0; IL00d2 bytes2b08→IL00dc. No report or canonical source finding was promoted with the earlier interpretation. Current collector independently checks every selected method branch/switch target against rawbytes and decoded instruction boundaries, recording both coordinate systems. Earlier exploratory scripts/outputs and an explicit correction record remain unchanged.
+
+## Actual class materialization and status rule path
+
+Core.CastGetOPENRuleCompile_Record2Class uses ordinary DataRow late Item lookups, IsDBNull guards and conversion/property calls to copy the selected ID/role/enable/disable/panic fields and all ten OPEN_FIELD values. COND_KO_AREA and ACT_ELSE_AREA are set to0 directly, rather than read from nonexistent columns in this database. Names from generic log messages are not mistaken for the method identity.
+
+DataManager.GetStatusRequestCompile independently builds a SELECT on ANA_STATUS_REQUEST_COMPILE using ID_OBJ and ID_COSA, without an area flag. It requests Fill and uses the same positive-count table-add/ordinaryreturn1 pattern. Core.GetStatusRequestCompile requires its named table, iterates selected rows, creates a cStatusRequestCompile and assigns the output after each successful cast. Multiple normally processed rows therefore leave the last supplied enumeration item; no SQL ORDER BY or database-order guarantee is invented. There is no analogous default object on the inspected status method. NULL table/manager0/cast errors follow the selected−3 paths; outer exceptions select−99.
+
+Status materialization reads REQUEST_DIMENSION, REPLY_FUNCTION, REPLY_DIMENSION, REPLY_PAR and CUSTOM_VALUTATION, among its identifiers/discriminators. REPLY_PAR is copied through ToString/set_ReplyPar at IL02c8..0317. That closes its source-to-property path, not a one-based/zero-based indexing convention for EXTRACTVALUE. The finite host status query66/618 yields row65/Dimension6/EXTRACTVALUE/parameterstring1; original runtime evaluation and indexing remain unexecuted.
+
+## Confidence, reproduction and boundaries
+
+Established static: exact formal parameter/area switch, constructed SQL fragments, framework requests, table-add and return branches, class property stores and the separately guarded default. Host-only: five selected SQL result sets. Conditional: ordinary .NET/VB/DataSet/SQLite API behavior, live resource binding, callbacks and provider ordering. Unclosed: UI permission filtering/precedence, effective editor validation, actual EXTRACTVALUE indexing, complete compiler output and deployment/physical outcomes.
+
+Run collect_binding_v1.py --check. The frozen exploratory utilityv3 is a dependency; its raw operands are explicitly normalized and independently verified in the collector. Earlier two JSON-serialization failures produced only empty exploratory output files; they executed no vendor code and did not generate a candidate. No original instructions or native corpus are added.
+
+## Graphic-type dispatch resolves the Counter range ambiguity
+
+New original consumer evidence resolves the earlier candidate equality join from field ID_KIND to ANA_RANGE. Core.AddAuxFieldWhat (MethodDef06000100/RVA1f82c) reads GraphicType at IL01ad, subtracts1 and switches at IL01b4. Independently decoded raw targets are IL01ca (combo), IL02a6 (range), IL03fe (text). The range branch requests GetRangeFieldValues at IL02b3, while the text branch passes the SAME auxiliary definition's IdKind to GetTextFieldValues at IL0404..040b. Numerical equality of ID_KIND across those tables is not a relationship overriding that dispatch.
+
+Core.GetAuxiliaryField/CastAuxiliaryField_Record2Class (060000a2/RVAb6d0 and060000a3/RVAb91c) supply GraphicType and IdKind from their named fields. Core.GetTextFieldValues (060000a8/RVAc46c) delegates to DataManager06000028/RVA3888. That actual manager constructs SELECT * FROM ANA_TEXT WHERE ANA_TEXT.ID_KIND= followed by the supplied ID at IL0046 and following conversion/concatenation; Core.CastTextFieldValues_Record2Class (060000a9/RVAc588) copies REGEXP to the returned property at IL00d2..0113.
+
+Read-only host queries on the pinned database establish fields29/31 have graphic3/kind2, field30 graphic3/kind3. Their selected text rows are ANA_TEXT2 CountValue and ANA_TEXT3 ValueStep, both literal [0-32000]. They do not select the numerically equal temperature-labelled ANA_RANGE2 or time-labelled ANA_RANGE3 through this source path. Those earlier range rows remain exact database facts, but the proposed Counter consumer connection is superseded. No Counter temperature/time units follow from them. Prior completed database reports and snapshots remain unchanged.
+
+The text consumer checks that REGEXP starts with '[' and ends with ']' (IL0431..0467), strips the brackets, splits on '-' and converts the first two components to integer locals (IL046c..04d3). For these supplied two rows the host interpretation yields0 and32000. This is a bracketed range-description parser, not evidence that [0-32000] is used as a .NET regular expression. The local upper-bound value is not transformed into an executed enforcement claim here. The selected path copies a supplied default through ToDouble into ValueDouble at IL0509..0517, with lower value fallback on conversion exception at IL0526..052b, then appends the new cAux_Field. Its entire editor validation/update path is unexecuted.
+
+Class.cAux_Field constructor (0600017c/RVA3b2c) directly initializes _GraphicType3 and _Moltiplicatore1 at IL0006..000f; getter0600018d/RVA3c98 reads that field. The selected text branch contains no multiplier setter. GetOpenParameterObject06000022/RVA6630's graphic3/conversion0 branch reads ValueDouble and Moltiplicatore then multiplies (IL061e..062b) before ToString/Replace. Thus under the ordinary source-produced object and unchanged-property premises this path starts with multiplier1, rather than inheriting10 from ANA_RANGE2. Later saved-project edits/provider/property mutation remain separate premises; no generated frame or execution was fabricated.
+
+This consumer refinement narrows the earlier database discrepancy and agrees with the selected MH2020..32000 source guards. It does not establish identical UI enforcement, automatic firmware slot-to-script-variable propagation, all conversion rules, indexing convention, configured project or physical outcome.
+
+## Supplemental method and validation scope
+
+The evidence directory contains15 selected methods/4832 decoded static IL instructions,361 independently checked branch/switch instructions and378 normalized targets,9 host read-only SQL selections and four original source identities (three assemblies plus database). These counts are source-processing inventories, not instruction execution or coverage percentages. Six query/materializer methods and GetOpenParameterObject overlap the separately reviewed generator chain; no independent extra coverage is claimed for that overlap.
+
+Earlier preliminary REPORT.md is retained unchanged; REPORT.v2.md fixes only its two manually typed materializer RVAs before adding this consumer section. DEVELOPMENT_HISTORY.json preserves the exact preliminary hash and notes the two early serialization failures and pre-promotion branch-coordinate interpretation correction. First candidate copies and a pinned output manifest are retained; regeneration refuses to overwrite.

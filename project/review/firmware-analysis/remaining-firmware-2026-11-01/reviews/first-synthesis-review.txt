@@ -1,0 +1,40 @@
+# Remaining-firmware first-pass synthesis review
+
+PASS. No documentary refinement requested. This is an independent documentary comparison of REPORT_CANDIDATE.md with the three source packets, central datastore evidence and three actual source-peer reviews. F459/central datastore claims are source-aware from this reviewer's preceding independent bounded audit; F450/F455 and MH200N/F453AV rely on their separate independent source reviews and authoritative reports. This is not another complete source/header/acquisition audit or collector/native replay. Only current report/source/evidence reads, hashes, DDL token comparison and local-reference checks were performed. No author, original, old dossier or repository bytes were changed.
+
+The report correctly counts six packages while naming five product groups, with F450 standard and PROD distinct. Equal retained F450 root images/3,839 regular-file identities are not package or runtime equivalence; three versus eight outer members and encrypted50.xtz remain separate. The encrypted50/master.sqlite declaration is289,792 bytes/CRC52150069, not a verified plaintext header, parsed schema or configured store. F455's301,016-byte non-ELF opaque payload remains outside the filesystem census and supplies no CPU/filesystem/vector-table claim.
+
+The bounded central result is16,088 offset-zero first64-byte reads across eight filesystem views and two application bundles, zero SQLite3 starts and301 structured paths including repeated views. It does not exclude embedded/encrypted/runtime/configured or missing data. F453AV Thumbs.db is OLE compound, not a SQLite catalogue. XML/process/script names remain metadata/file leads, not relational schemas or installed configurations. No SQLite schema/count/data query ran and the unused helper is not promoted to a tested parser contract.
+
+F459's sqlite3_open import/dependency and two safe constants remain source leads, without a caller/argument/create/DDL-execution join. The displayed SQL block is token-for-token the retained143-byte original CREATE TABLE shared literal with formatting whitespace only: pluginname/key varchar90, value varchar32768, persistent boolean default0 and the composite(pluginname,key) key are preserved. This is not an extracted schema or executed SQL. The field name persistent and /tmp path do not establish durability. Legacy sqlite_open and SQLite3 providers remain distinct, as do framework manifest2.1.0, outer firmware020105/local directory2.1.5 and runtime identity. Driver wrapper and static executable are separate and were not executed.
+
+The legacy source summary retains separate normal/recovery/application views, selected Tcl source handoff and unclosed application-copy/boot composition. MH200N task/scripting components are not assumed to have MH202 language/behavior; F453AV audio/video names and scsai metadata are not electrical/hardware attribution. Raw legacy flags and all scanned ELF32 little-endian ARM headers do not transfer modern AArch64/hard-float/Thumb object assumptions. F450 declarations/template/imports similarly do not prove active BACnet configuration, complete support or installed readiness.
+
+The report explicitly separates static host extraction/header/identity/initial metadata from target execution and runtime/physical observation. No vendor/native/provider/OS-service/network/bus/mount/live operation, database query, decryption or closed receiving/transport/authentication/session/framing route was added. Earlier MHS/F454/MH202 ledgers are unchanged; source/Device/runtime/physical approval and configured consumers/providers/lifetime remain open. No repository or public-reference changes are claimed by this work-only candidate.
+
+## Exact documentary checks
+
+- The8,564-byte candidate equals its announced SHA256 e3513837f66ee0d8eaa9a109c4438b5e5cda21bd23c521e343527c0afca3f228 and exact first copy; the non-circular report-first-candidate index agrees.
+- All four cited absolute local source-report links exist; there are no fragment anchors or future-artifact targets in this candidate.
+- The formatted SQL block preserves every original DDL token. No SQL engine was invoked to compare it.
+- The three actual source reviews match their announced identities and the current authoritative source packets. Current source version/history distinctions remain explicit: the central syntax correction occurred before outputs, and F450's staged prose/count correction does not invent earlier generated reports or canonical failure.
+- This reviewer did not rerun either other author's source collector, the completed central scan, prior corpora or broad historical protection checks during synthesis review. No new current candidate or report correction was required.
+
+## Exact read-time pins
+
+| File | SHA-256 |
+| --- | --- |
+| `work/remaining-firmware-exploration/2026-11-01/REPORT_CANDIDATE.md` | `e3513837f66ee0d8eaa9a109c4438b5e5cda21bd23c521e343527c0afca3f228` |
+| `work/remaining-firmware-exploration/2026-11-01/report-first-candidate/INDEX.json` | `99e0df86481244ed20f135bc5849a7ce99134acb65aa292442260478b8dbe4a9` |
+| `work/f450-firmware/2.0.10/research/2026-11-01-first-exploration/REPORT.md` | `9e525852d8ca2d7ca4f485f10ff8425764da215fdb4a1c51c1987a8aa75d0d78` |
+| `work/mh200n-firmware/1.1.8/research/2026-11-01-first-exploration/REPORT.md` | `77c1b90bf0d3fe2d4a651d26f5f93dad728b04ebf8c3e7f0efd60c94b402f778` |
+| `work/f459-firmware/2.1.5/research/2026-11-01-first-exploration/REPORT.md` | `855e0f3016343bc4b8ab387a7f0ded5265c0dd67e67630e179b41bfb29863e8f` |
+| `work/remaining-firmware-exploration/2026-11-01/DATASTORE_REPORT.md` | `12b20af312682aa8ed5aad402dfa2bc94337b90d0375806da07d88a8e1e2e804` |
+| `work/remaining-firmware-exploration/2026-11-01/DATASTORES.json` | `eb2629e80f037b0c2f297d2a036357999ef7b8e9013abe0c28a365ed49c8fce6` |
+| `work/remaining-firmware-exploration/2026-11-01/SCAN_SUMMARY.json` | `1d4f7170644b40b29ea3a54644a56fd73daab2df9d1eacd02591f96036d81c14` |
+| `work/remaining-firmware-exploration/2026-11-01/DATASTORE_OVERVIEW.json` | `4f2370ea5a9d133d1850026aed45d7a84684888088a15d0efcc07664851afafe` |
+| `work/remaining-firmware-exploration/2026-11-01/reviews/f459-datastore-review.md` | `b66f7eab96717444051f43bfc3179db04ff2162594e9835d8e7dac073fa22a14` |
+| `work/remaining-firmware-exploration/2026-11-01/reviews/legacy-source-review.md` | `f7085bf8319916f21dc834b8707d81bf584b164718b21d5684d1f112dbd37a76` |
+| `work/remaining-firmware-exploration/2026-11-01/reviews/f450-f455-source-review.md` | `d5c71e073adf278cb54a741fd9630513936fc63047966544eb498982c7bb6e3e` |
+
+PASS is bounded to these current bytes and source-to-summary limits. Later final identity/branch/completion checks remain separately verifiable work.

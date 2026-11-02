@@ -1,0 +1,32 @@
+{
+  "changes": [
+    "exact unversioned-or-versioned import matcher",
+    "authoritative report/repro/snapshot v2 names",
+    "honest pre-output failure disclosure and preserved v1/history copies"
+  ],
+  "first_failed_files": {
+    "FIRST_GENERATION_FAILURE.json": {
+      "bytes": 933,
+      "sha256": "9d5b58f4b7ee73615e60b527a350bdc0d61fc8c78702b5d69927483da6ec2480"
+    },
+    "REPORT.md": {
+      "bytes": 9369,
+      "sha256": "dd78ee833414f4476a4e658df3c9683afd6cd0bf75e5bb0b3fb3a91bef66d783"
+    },
+    "collect_values_v1.py": {
+      "bytes": 10183,
+      "sha256": "8c0496ad8b691bf589192155a07f85fb21a64c82e59fa4e536916d06d264f6b6"
+    }
+  },
+  "new_collector_sha256": "e6bd23219c93fd466942cdc91e98c98a289a1800061bbab27436117a131eda9d",
+  "new_report_sha256": "57cf16095f0da61eddf81d3b0133f30ab8b6848ec9f2fc1f74dea8001924c97d",
+  "original_execution": 0,
+  "reason": "Strict import-declaration encoding matcher correction; original source/interpretation unchanged",
+  "root_snapshot": {
+    "path": "../integration/pre-v2-serializer/INDEX.json",
+    "sha256": "c92c60090acd3cc57fb282826701068f83ad313fd21abb46915ede4f352572dd"
+  },
+  "source_outcome_change": false,
+  "v1_failure": "exact symbol required @version, original JsonCpp relocations have unversioned name at line-end",
+  "v2_guard": "exact mangled symbol plus optional explicit version suffix at line end; still exactly one R_ARM_JUMP_SLOT"
+}

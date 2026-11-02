@@ -1,0 +1,11 @@
+{
+  "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md",
+  "snapshot": "myhomeserver1-3.87.13-research-synthesis.md",
+  "before_sha256": "03dc425c580d209ae4dbd6749e0455ab7e514f3873208b9c3543b0148f4c10d6",
+  "after_sha256": "217ab6d2fb2edc99c6befa30677edd9fc44c7d09269ed68d5ca207ed28fa27ae",
+  "operation": "insert-before-exact-anchor",
+  "anchor": "## Timing, cancellation and lifetime answer different questions\n",
+  "insert": "The [selected request-value continuation](myhomeserver1-3.87.13-action-request-values.md) identifies the actual local descriptor constants `2.0` and `light.setStatus`, and traces captured target ID plus conditionally positive signed speed through the concrete merge into `params.id`/`params.speed`. Its outer request ID has a separate UUID-request producer. These local construction facts narrow the earlier descriptor/conversion premises, while full JSON, other parameters, runtime/provider success, downstream delivery and physical meaning remain unresolved.\n\n",
+  "new_page": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-action-request-values.md",
+  "new_page_sha256": "c9b66541bd2d45a02188a414363a91254df8ccf61d16a752bbf8c79212f3434c"
+}

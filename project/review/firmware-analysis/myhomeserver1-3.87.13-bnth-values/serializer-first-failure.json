@@ -1,0 +1,13 @@
+{
+  "cause_under_investigation": "import declaration matcher requires @ after symbol; do not change source until parent snapshot/version release",
+  "command": "python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-bnth-values/serializer/collect_values_v1.py",
+  "exit_code": 1,
+  "location": "collect_values_v1.py build(), line44, assert len(r)==1,symbol",
+  "preserved_actual_files": {
+    "REPORT.md": "dd78ee833414f4476a4e658df3c9683afd6cd0bf75e5bb0b3fb3a91bef66d783",
+    "collect_values_v1.py": "8c0496ad8b691bf589192155a07f85fb21a64c82e59fa4e536916d06d264f6b6"
+  },
+  "provenance": "Later transcription from returned terminal traceback, not a contemporaneously saved raw stderr file or independently authenticated missing historical artifact. No generated output existed.",
+  "stage": "first canonical generation, before any generated output write",
+  "terminal_exception": "AssertionError: _ZN4Json5ValueC1Ed"
+}

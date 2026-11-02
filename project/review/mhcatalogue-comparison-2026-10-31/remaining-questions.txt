@@ -1,0 +1,8 @@
+# Remaining consumers after the catalogue comparison
+
+1. Trace the actual matrix_mx MHCatalogue path/open/query and runtime replacement policy. Determine which of these catalogue records it reads, rather than infer purpose from placement or the database version label.
+2. Trace device/firmware alternative resolution, especially missing builds, negative fields, Prototype/RC/default/status and selected mode-ID-to-code conversion. Catalogue declarations do not prove those alternatives are admitted.
+3. Trace source-specific Configuration-field and child-range resolution, including owner-zero sentinels and reused IDs. The complete comparison provides a precise set of candidate cases; it does not establish the vendor migrates or merges these two databases.
+4. Determine actual consumers of retained package/language/external-resource metadata and reference/template tables. Their equal rows or absent links do not prove files are deployed or runtime state is populated.
+
+These are future source investigations, not unfinished row comparisons or an automatically scheduled continuation. Existing F454/MH202 closed authentication/session/framing branches remain closed. Physical support, actual configured state and wider Device gates require their own evidence.

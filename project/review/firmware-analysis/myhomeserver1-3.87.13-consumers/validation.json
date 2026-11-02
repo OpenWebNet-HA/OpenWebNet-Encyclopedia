@@ -1,0 +1,204 @@
+{
+  "status": "PASS",
+  "scope": "Current static consumer source/export/history/old reference preservation; not original/runtime execution or full Device approval",
+  "completed_UTC": "2026-10-31T20:04:05.082777+00:00",
+  "current_collectors": 3,
+  "current_outputs": 59,
+  "exact_exports": 77,
+  "author_reports": {
+    "catalogue/REPORT.v2.md": "609c22da91d9f4b1cf2d51dca5fb50fc3665190907fa96bd0cb8f18a1b7708a4",
+    "scheduler/REPORT.md": "d41cdc4417f72070792d1e45b1930787fd5e5511c61907ce166b2f231f0c5f12",
+    "providers/REPORT.v2.md": "a15c6eddf21993e7b5f41372c747412fce771471632429b4da2896ac5c4b13da"
+  },
+  "review_pins": [
+    {
+      "path": "reviews/CATALOGUE_SOURCE_REVIEW.md",
+      "sha256": "85e166345757cf44804c694f2e6b8630e568714f514993225f718a37ffa7ebdc"
+    },
+    {
+      "path": "reviews/SCHEDULER_SOURCE_REVIEW.md",
+      "sha256": "e83d452ec93694ed7d61c830d8f057480b3407f66fca42307cd87f743b492f87"
+    },
+    {
+      "path": "reviews/PROVIDERS_SOURCE_REVIEW.md",
+      "sha256": "6546ceef43a36ba30a5b5d8c9ee936f802f6ba99693c32cf5abde683b940c7e3"
+    },
+    {
+      "path": "reviews/PROVIDERS_SECOND_REVIEW.md",
+      "sha256": "6bc4a7ba043abf4c132a1e64d08cdb8ecb838e859226875b5bc1fb467ddadc0f"
+    },
+    {
+      "path": "reviews/INTEGRATION_REVIEW.v2.md",
+      "sha256": "d8cbb75b7fb865bcd8c307e645bbfb545f91a3da387f6f2e4508714ec779b0c8"
+    },
+    {
+      "path": "reviews/INTEGRATION_SECOND_REVIEW.v2.md",
+      "sha256": "1ef212307f378544461c9a9dd6a83f3389725701d302e2883536b4e095b5a230"
+    }
+  ],
+  "snapshot_indexes": [
+    {
+      "index": "catalogue/references-v1/INDEX.json",
+      "rows": 2,
+      "sha256": "acef2a1d18a67bdd8c6b4cd9c3c5670931e20a403ddc1a20a2ccd151322ee458"
+    },
+    {
+      "index": "catalogue/development-before-v2/SNAPSHOT_INDEX.json",
+      "rows": 2,
+      "sha256": "e09dd5e31628d7b1e2795bd9b28f8739e2c7e78a23b1a68208d6cf17b8874a73"
+    },
+    {
+      "index": "catalogue/initial-generated-v2/SNAPSHOT_INDEX.json",
+      "rows": 18,
+      "sha256": "9240a3c8beddc7ab2efff7b712fa0042f5c2f28cfb645c503aa717e5144450c8"
+    },
+    {
+      "index": "scheduler/first-candidate/SNAPSHOT.json",
+      "rows": 28,
+      "sha256": "c6ed199b33837536d87b04d6698d2b71de6bce4bc5b06f7aa3d404f008060cd5"
+    },
+    {
+      "index": "scheduler/report-first-candidate/SNAPSHOT.json",
+      "rows": 1,
+      "sha256": "a8a98a80e78dd431a7f3d8cd1382ecc8538108765aa46df416a30c273e2ff8ee"
+    },
+    {
+      "index": "providers/first-candidate/INDEX.json",
+      "rows": 17,
+      "sha256": "e67efdeae8d8eec41c96349e3f572c00af0804fae4bdd660a190f3af5a09d2aa"
+    },
+    {
+      "index": "providers/report-v2-first/INDEX.json",
+      "rows": 2,
+      "sha256": "fff9c48df00d600857e9ae317a1e7096f9db8920fdff90855ad46a6ca8a7483a"
+    }
+  ],
+  "snapshot_rows": 70,
+  "protected_dossiers": [
+    {
+      "root": "work/f454-firmware/research/2026-10-29",
+      "files": 1917,
+      "index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-targeted",
+      "files": 107,
+      "index_sha256": "ddb83866292f70631b968b91f07e08fbc79415b5e1762cf3699f8e326eacff79"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-targeted-2",
+      "files": 130,
+      "index_sha256": "2dc3f9e3541478eff304d1d9bb368d02504c39cc3d5d8d3aec7ca96650032d82"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-final-pass",
+      "files": 83,
+      "index_sha256": "bf27345d8ce8d1e4e9277ad9346c62fcfde1f0b33bb20783ae5e66963ad100f2"
+    },
+    {
+      "root": "work/mh202-firmware/research/2026-10-30",
+      "files": 2904,
+      "index_sha256": "c65b6ab0961d6ba4ec7e19471c16993be0470b7d5eac3bbd1f93ad78aaeaf8f0"
+    },
+    {
+      "root": "work/firmware-product-followup/2026-10-31",
+      "files": 330,
+      "index_sha256": "624c42bcff5bd7b014dae7686648b3f3019be7956dd90de93c253dab7f891be7"
+    },
+    {
+      "root": "work/artifact-conservation/2026-10-31",
+      "files": 91,
+      "index_sha256": "5fa10c935d988778c9ce909e73e1b04f5635c034fd749a5ed96a8a5bcd323ed4"
+    },
+    {
+      "root": "work/mh202-firmware/research/2026-10-31-database-analysis",
+      "files": 128,
+      "index_sha256": "6292be5148fb4590c4b7e7229af6efe75eb547c79e755113369d24cfff37b828"
+    },
+    {
+      "root": "work/firmware-next-investigations/2026-10-31",
+      "files": 354,
+      "index_sha256": "47235b5e1fd5748bddb239b5f538cc87b7361c9c8cbb9d09dac530b9d0f08782"
+    },
+    {
+      "root": "work/installer-database-audit/2026-10-31",
+      "files": 18,
+      "index_sha256": "812a8e16432596609936272a46af2d942b1f4bf4fa141a0fa564018197ffe0b8"
+    },
+    {
+      "root": "work/installer-database-conservation/2026-10-31",
+      "files": 44,
+      "index_sha256": "627d109115fa8b8a0ab90ab2d644ccceba329187bd650c380c343424ed93e719"
+    },
+    {
+      "root": "work/installer-database-analysis/2026-10-31",
+      "files": 166,
+      "index_sha256": "898b879a364515f3a978864e5fc6e8f8b2577ec619f48eef9515203c1e2280f6"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31",
+      "files": 238,
+      "index_sha256": "85d5fa383d6a0bd54734b022b78c8fc375f9e71dba24e40c2bccbced2965dce2"
+    },
+    {
+      "root": "work/myhomeserver1-database-conservation/2026-10-31",
+      "files": 11,
+      "index_sha256": "e95c6cb5e89214f29b2cabda8707e2d640c436814c537cc3c2eee3ee192534f0"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13",
+      "files": 50,
+      "index_sha256": "bd315f66fc3e8bddfb1d1ade3a43c4c9cefd713cac075ee971024d59c80b33ca"
+    },
+    {
+      "root": "work/mhcatalogue-comparison/2026-10-31",
+      "files": 228,
+      "index_sha256": "1fb864fa45df95ca01d2bd6baea61c1cd99b85a14e4aade0f7a8baf8da40b25a"
+    }
+  ],
+  "protected_indexed_entries": 6799,
+  "historical_reference_substitutions": [
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "retained_prior": "work/mhcatalogue-comparison/2026-10-31/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "sha256": "0581a52f32a95f4cae419693fe8d20b4ecf272f5e195f40070b00e166aea173f"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/integration/pre-edit/internals/mhcatalogue-source-profiles.md",
+      "sha256": "35cab23085fdc9120784916657da218aabd783a0f2008705ba8e41cc3485f809"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "sha256": "c787f9bc0f70f8ab99dc8341331c4f72714b9e29878034efd5b4d9a0ba70a9e7"
+    }
+  ],
+  "current_document_pins": [
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md",
+      "sha256": "ff3b179e05c69f6a1f34ab97ee76c43c3e72bdfff89d6c6661644c4bd45f4583"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "sha256": "ee2ac5108fec4dca958afa73832cc874f43aebb9e1e6f4ffa5d5c4ecaab4d381"
+    },
+    {
+      "path": "internals/mhcatalogue-source-profiles.md",
+      "sha256": "5c60cbbf8796612b1efaa80392d77cf067b1ec647ca802dae72f91b673da2dac"
+    },
+    {
+      "path": "project/review/firmware-analysis/myhomeserver1-3.87.13-consumers/README.md",
+      "sha256": "4b806d4bb483b5fcd77a9f9057cd2bf1b29a52b724a47d44181d0b7491bb4abc"
+    }
+  ],
+  "Git_status": "M device-model/firmware.md\n M devices/definitions/own-dev-0002-audio-video-web-server-gateway.md\n M devices/definitions/own-dev-0151-mh202-scenario-programmer.md\n M devices/work-queue.yaml\n M diagnostics/dim1-device-identity.md\n M functional/who-14-special-commands/README.md\n M functional/who-15-cen/README.md\n M functional/who-17-scenario-management/README.md\n M functional/who-18-energy-management/dimensions.md\n M functional/who-22-sound-diffusion/README.md\n M functional/who-25-transversal/README.md\n M functional/who-25-transversal/cen-plus.md\n M functional/who-25-transversal/dry-contact-ir.md\n M functional/who-4-temperature-control/dimensions.md\n M functional/who-5-alarm/README.md\n M functional/who-8-video-door-entry-telephony/README.md\n M functional/who-9-auxiliaries/README.md\n M internals/README.md\n M internals/data-store-responsibilities.md\n M internals/implementation-boundaries.md\n M internals/installation-and-source-layout.md\n M project/review/who25-gateway-compatibility.md\n M reverse-engineering/README.md\n M scenario-engine/README.md\n M scenario-engine/open-questions.md\n M scenario-engine/sources-and-identifiers.md\n M sources/artifact-manifest.yaml\n?? internals/device-application-databases.md\n?? internals/mhcatalogue-source-profiles.md\n?? internals/project-and-plant-templates.md\n?? project/review/firmware-analysis/\n?? project/review/installer-databases-3.5.38/\n?? project/review/mhcatalogue-comparison-2026-10-31/\n?? project/review/scenario-suite-database-1.0.53/\n?? reverse-engineering/firmware-analysis/\n?? scenario-engine/scenario-suite-database.md\n?? scenario-engine/scenario-suite-generator.md\n?? scenario-engine/scenario-suite-variants.md",
+  "branch": "docs/static-firmware-analysis-findings",
+  "staged": false,
+  "committed": false,
+  "published": false,
+  "source_manifest_modified": false,
+  "current_original_vendor_target_SQL_runtime_physical_execution": 0,
+  "wider_Device_gates": "Pending, unchanged",
+  "final_mechanical_requirement": "Actual current review/validation targets must exist before final strict ECV/ESG check; FINAL_CHECKS.json records the later result."
+}

@@ -1,0 +1,12 @@
+{
+  "boundaries": [
+    "normal ABI/allocation/JsonCpp conversion/provider success",
+    "missing-key null asUInt/asString semantics not executed or independently derived here",
+    "complete original object validity and constructor reachability",
+    "configured assets/runtime and physical behavior"
+  ],
+  "original_execution": 0,
+  "scope": "Original raw serializer/static JsonCpp request sites and same-result initializer reparse/storage; no JsonCpp execution or transport/delegate bodies.",
+  "semantic_models_or_fixtures": 0,
+  "target_IO": 0
+}

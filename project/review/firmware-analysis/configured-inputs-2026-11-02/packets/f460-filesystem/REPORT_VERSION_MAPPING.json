@@ -1,0 +1,12 @@
+{
+  "current_report": {
+    "path": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission/REPORT.v2.md",
+    "bytes": 5083,
+    "sha256": "69e004bdab8f0bd2a58af69dee1d1b94c294089f108e432bb12ebdf03900d523"
+  },
+  "canonical_report": "work/configured-scene-module-investigation/2026-11-02/source/f460-scene-admission/REPORT.md",
+  "canonical_report_sha256": "cfb0b3b7778fb732dac7f78f65c85c46a48323f461be36d92cc5e2b006e97b65",
+  "collector": "collect_filesystem_v1.py unchanged; --check still pins canonical old REPORT.md",
+  "change": "Clarify SP+0x50=80decimal and SP+0x198=408decimal; append version-role note only",
+  "parent_snapshot": "work/configured-scene-module-investigation/2026-11-02/parent-before-f460-report-v2/INDEX.json"
+}

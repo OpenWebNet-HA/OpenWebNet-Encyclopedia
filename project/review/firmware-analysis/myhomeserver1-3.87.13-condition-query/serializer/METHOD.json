@@ -1,0 +1,7 @@
+{
+  "development": "V1 stopped before generated outputs at a strict class-identity assertion; exact original temporary/final class distinction is asserted in v2. Failed normal/check/index attempts are later transcribed in DEVELOPMENT_HISTORY.v2.json; root preserved exact pre-v2 files. No original execution or guard weakening.",
+  "original_execution": 0,
+  "scope": "One BNLD raw serializer/commonconditionbase/operator decoder and same-result caller; no repeated predicate/TBB or provider/transport/auth/session/framing body.",
+  "semantic_models_or_fixtures": 0,
+  "target_IO": 0
+}

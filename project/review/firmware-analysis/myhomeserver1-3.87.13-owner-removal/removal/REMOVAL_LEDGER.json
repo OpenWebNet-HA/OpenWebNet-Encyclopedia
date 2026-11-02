@@ -1,0 +1,23 @@
+{
+  "caller": "3e73c loadssuppliedcontextfromSP20;3e740receiver=contextword0;IDnumericwordfromSP28;3e742callsb6b5c",
+  "eraser_paths": "selectednonwhole-rangebodyb63e2ff; whole-tree branchb636c callsb5dac andresetsheader, fullrecursiveimplementationnotinspected",
+  "inherited_positive_join": "selectedactualSceneRunnerownerdispose1a048 adds12 thena5a3c; priorreportscopedsceneholder/compiledactionvectorrelease appliesconditionally",
+  "matched_normal_order": [
+    "loadcontrolfromnode24",
+    "zeroentirepairnode20/24 atb6bbc",
+    "ifcontrolnonnull decrementstrong+4 via direct/atomicbranch",
+    "priorcount1 invokescontroladdresspoint+8 disposal beforecontinuation",
+    "onselectedlastweakcount requestcontroladdresspoint+12 destruction",
+    "normalcontinuationb6bda requestskeyederaseb6324",
+    "selectednonwhole-range eraserrequestsrebalance/remove thennode28Bdeleteandcount20decrement"
+  ],
+  "receiver": "suppliednumericfirsttree root+8,nodekey16,pair20/24; equalitywithstartupmaincontainer is explicitpremise",
+  "scope": "Positive source removal/release request, not actualafterpoll removal, replacement, workercompletion, destructionguarantee or physical consequence.",
+  "unclosed": [
+    "callerouterargument/eligibility/activatedentry and actualsamecontaineridentity",
+    "normalproviders/tree/key/count/controltype and no concurrent mutation",
+    "fullrangeeraserrecursivebody/rebalance/deallocator/exceptionbehavior",
+    "otherowners/workerretention/completeconcurrentlifetime",
+    "configuredscene/assets and actualtargetexecution"
+  ]
+}

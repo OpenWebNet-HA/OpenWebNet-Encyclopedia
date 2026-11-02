@@ -1,0 +1,53 @@
+# BNIL event-trigger integration: independent documentary review
+
+Verdict: PASS for the frozen current documents and existing exact source exports. No correction requested. This review is source-aware of my independent admission audit and compares schema/capture/publication claims documentarily against their reports and independent source reviews. It is not a new raw-source re-audit of those other areas, all-encyclopedia review, native replay, complete accepted-input proof or runtime/physical assessment. No author, source, repository or previous review file was edited.
+
+## Source-to-summary checks
+
+The current human page and capsule correctly separate local BNIL trigger row1, raw44-byte object, compiled64-byte inner and76-byte allocation/control aggregate. Raw enabled28/type32/operator36/status40 become inner48/52/56/60; the id string is raw4 versus inner24. Raw factory index-decrement and compiled direct-index tables remain distinct from public OPEN namespaces. The schema operator-name and status mappings are accurately summarized without assigning physical or general mathematical meaning from private labels.
+
+The callback capture is the same scene pointer saved by the initializer. Its manager op2 copies the raw pointer; no local strong scene retention follows. The persistent callable in the runner and the scene+104 handle append close a local construction/publication edge. They do not prove an external subscription or active event-service registration. The page avoids that inference despite the registration directory name.
+
+Primary default fire0xee59c and the separate nonvirtual handler0xee708 are accurately distinguished; adjacent destructor/cleanup slots are not mislabeled as admission. The selected callable reaches the captured-scene wrapper and launch entry under valid live callable/provider premises. The scene enable/active, condition and action-worker gates remain later source boundaries, rather than guaranteed completion.
+
+The selected typed/ID-matched caller, exact enabled/state/operator guards and callback relation agree with my current source audit. Exact lowercase on/off/noStatus produce local0/1/minus-one. Operator2 compares equality and3 inequality against configured inner60; other words take the selected request without those comparisons, not an ordered higher/lower test. No public raw grammar, configuration domain, natural repeated firing or system-wide deduplication claim is made.
+
+The page explicitly retains the critical temporary-owner ordering: copied trigger controls and buffer are released before later ID/handler calls. Continued lifetime may depend on the scene vector or other owners. Neither adequate lifetime nor a UAF/leak follows. Upstream event construction/classification, valid input/object/type/ID/provider premises, complete dispatcher/binding/validation, all errors/unwind and concurrency remain unresolved. The diagram is labeled a conditional source relation, not an observed transaction.
+
+Curated OWN-DEV-0199 is linked for the MyHOME home-automation/scenario product role only. No F454/MH202 layouts or private BNIL physical interpretation are transferred. The previous serialization page receives only the correctly scoped continuation link; its source ownership/history remains historical. Coverage/ranking retain configured extras80/81/94/95, natural owner order, positive reset-owner and physical gaps without repackaging completed matrices as new coverage. All new execution counts remain0 and wider Device/source gates stay pending.
+
+## Preservation, identities and local links
+
+All8 current documents match their exact frozen candidate bytes/lengths/hashes. All69 SOURCE_EXPORTS pairs match their local source and published bytes, declared sizes and hashes. The saved parent read-only source checks report20 schema,15 callback/publication and18 admission outputs,53 total. This documentary review does not claim a new whole-method replay or native corpus.
+
+Admission REPORT.v2 is the exact single recorded spacing substitution; original report, current code/results, first snapshots and WORDING_REFINEMENT remain retained. DEVELOPMENT_NOTES identifies its unsaved exploratory inline SyntaxError only by an actual excerpt and expressly makes no historical-file hash claim. Current source and retained bytes can be verified without certifying unavailable earlier query bytes or historical execution.
+
+All28 existing local targets among30 Markdown link occurrences resolve; there are0 fragment occurrences. The only pending targets are capsule integration-review.txt and validation.json. These must become actual exact files before the parent's strict final link/identity/repository gates. This review certifies neither future bytes nor a placeholder, missing-link exemption or reduced guard scope.
+
+## Exact current document pins
+
+| Workspace-relative file | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-trigger.md` | `9c00b5afa69dfeed629a8d4a67508b22c3457a5dd323a77ff8858f3898247df5` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md` | `60b5db067af68cd9e2a4d27ccfd65dee0c9db74581c42783400d63099d21e3ab` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-event-trigger/README.md` | `cfa6f004a9ebcb11ded21ea27d4160fb6e3e6f57b98b002d987969f18fc23a04` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-event-trigger/SOURCE_EXPORTS.json` | `d489957084fa8a6084cd9927b2c0a1e16343a59de249117539f82eb9cc84470c` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-event-trigger/synthesis.txt` | `11531db44619880580e688ff7104ec82e6762b881bb475cd006d807bb4b32669` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-event-trigger/coverage.txt` | `e32c10fbe5c4755baea2aef6b5c8829408f428f5b47e5a4b498863a5f9de4353` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-event-trigger/remaining-questions.txt` | `472621277e1a5aaa07820782e1ff21a64f1cc6a30a5ab74d849100fb90e26b4a` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-event-trigger/source-checks.json` | `d752b269edacb6a3073d0f40f8d82f388b50911b5953e2adf484ab1a3edb410c` |
+
+## Source and independent-review applicability pins
+
+Paths below are relative to this research batch.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `schema/REPORT.md` | `9f6a8393a6e86acaf34f2f3538d187a4ec67f911eb1db5a72e2dd569b281a2c9` |
+| `registration/REPORT.md` | `6917cdb678ecff2a78cf91287a9ee87f31ee5adfb50e43b603b7111404d77223` |
+| `admission/REPORT.v2.md` | `b838a55616eb012ce7b00aa1f355ae1ae13bdff3e132359be5502f0b02ea47b3` |
+| `reviews/schema-source-review.md` | `87a58349d7ff7eda56d9281c76c59a5b367052d6ebd0ba058a7902ab1bef6792` |
+| `reviews/registration-source-review.md` | `53e4ad477776a570fe47e6a0a2b116aba246be54cd0486c1db42e6204fd79736` |
+| `reviews/admission-source-review.md` | `d6bb51d1f126cab5012cfad3e5781b8f7f1afef183aa7de53fa6576939a37378` |
+
+Candidate index SHA256 `a34011bd8e2a877608e002f0aa95dfd974b831c10e23e2fc1dfc0cf018216591`. SOURCE_EXPORTS.json SHA256 `d489957084fa8a6084cd9927b2c0a1e16343a59de249117539f82eb9cc84470c`.

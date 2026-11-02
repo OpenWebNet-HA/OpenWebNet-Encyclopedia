@@ -1,0 +1,44 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b9314:
+   b9314:	4b6b      	ldr	r3, [pc, #428]	@ (b94c4)
+   b9316:	463d      	mov	r5, r7
+   b9318:	9707      	str	r7, [sp, #28]
+   b931a:	f04f 0e0e 	mov.w	lr, #14
+   b931e:	f04f 0c00 	mov.w	ip, #0
+   b9322:	447b      	add	r3, pc
+   b9324:	cb0f      	ldmia	r3, {r0, r1, r2, r3}
+   b9326:	c507      	stmia	r5!, {r0, r1, r2}
+   b9328:	4640      	mov	r0, r8
+   b932a:	802b      	strh	r3, [r5, #0]
+   b932c:	68f1      	ldr	r1, [r6, #12]
+   b932e:	f8cd e020 	str.w	lr, [sp, #32]
+   b9332:	f88d c032 	strb.w	ip, [sp, #50]	@ 0x32
+   b9336:	f7b5 fa6b 	bl	6e810
+   b933a:	2200      	movs	r2, #0
+   b933c:	e011      	b.n	b9362
+   b933e:	6ab1      	ldr	r1, [r6, #40]	@ 0x28
+   b9340:	9a08      	ldr	r2, [sp, #32]
+   b9342:	e9dd 3c0d 	ldrd	r3, ip, [sp, #52]	@ 0x34
+   b9346:	428d      	cmp	r5, r1
+   b9348:	d879      	bhi.n	b943e
+   b934a:	1b49      	subs	r1, r1, r5
+   b934c:	4620      	mov	r0, r4
+   b934e:	428a      	cmp	r2, r1
+   b9350:	f8cd c000 	str.w	ip, [sp]
+   b9354:	bf28      	it	cs
+   b9356:	460a      	movcs	r2, r1
+   b9358:	4629      	mov	r1, r5
+   b935a:	f757 e8de 	blx	10518 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEjjPKcj@plt>
+   b935e:	9a0e      	ldr	r2, [sp, #56]	@ 0x38
+   b9360:	442a      	add	r2, r5
+   b9362:	e9dd 1307 	ldrd	r1, r3, [sp, #28]
+   b9366:	4620      	mov	r0, r4
+   b9368:	f756 eb98 	blx	fa9c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcjj@plt>
+   b936c:	1c42      	adds	r2, r0, #1
+   b936e:	4605      	mov	r5, r0
+   b9370:	d1e5      	bne.n	b933e

@@ -1,0 +1,59 @@
+# MH202 protocol/run16 independent source and saved-execution review
+
+**PASS after the author’s mask-wording precision update; no further correction requested.** The report accurately distinguishes the native48-byte libopenmsg pointer/string object from earlier libopen90/libcommon130 C++ objects and64-byte COSO envelope records. The two parsers execute original classification/field/allocator-wrapper code; the third entry serializes the same native-returned query object, without field reseeding. Its provider, primitive, setup-relocation and runtime boundaries remain explicit.
+
+I reran only `collect_evidence.py --check`:20 deterministic outputs reproduced byte for byte,13 inputs, six spans,21 word assertions and four safe literals. I independently mapped the original ELF load segments to verify all six span hashes and21 words, verified all13 input hashes and32 final author-manifest entries, inspected the original disassembly and harness, and recounted saved trace/primitive/redirect/result arrays. I additionally read/hash-checked all41 tool-package files recorded in the verified-package evidence, without importing or invoking the emulator. **I did not replay `emulate_pointer_parser.py` or execute original firmware instructions.** The parent performs its separate native replay; this review is source/harness/saved-result auditing, not independent observed reexecution.
+
+## Original source and output checks
+
+- Fresh same-build `/home/bticino/lib/libopenmsg.so` exports parser0x2704, serializer0x1e9c and allocator wrapper0x1c80. Selected direct DT_NEEDED/import lines from actual COSO/libcoso/thermo TR support the named candidate; they do not prove complete plugin closure/live resolution or absence of interposition.
+- `new_open_msg` requests48 zeroed bytes, returns the allocation through its pointer slot and performs actual field-zero stores. Each parser starts with a null output slot and calls that original wrapper through its one explicit PLT redirect. Neither original constructor nor classifier/WHO/WHERE extraction is replaced by a host no-op. Existing-object cleanup, allocation failures, NULL input, lists/parameters and full accepted-language coverage remain untested.
+- Parser0x2704 first performs original character/token control flow and numeric-character mask tests; its GOT0xee78 loads the GLib exported cell, then the table pointer. I checked the original cell word0xe50c8→0x9ed8a, the512-byte table hash and digit halfwords. The saved reads per parser are exactly one4-byte cell read and three2-byte digit entries: `2,0,0` and `4,1,0` respectively. Relocations and symbol metadata identify the actual packaged data; those are not substituted host classification results.
+- The ordinary command follows original kind1 store0x2834/0x2838 and field paths. The selected query follows original WHO/WHERE helpers, DIM store+32, null value list and original kind3 store0x2a90/0x2a98. Saved object words/field readbacks agree with WHO2/WHAT0/WHERE0/kind1 and WHO4/WHERE1/DIM0/kind3, null optional pointers20/24/28 and list offsets4/12/36/40. These numeric kinds have this object's local namespace, not a generic OPEN enum.
+- Serializer entry2 reuses session1, consumes parser entry1's exact returned pointer and does not reinitialize parsed fields. Its code reads kind3/pointer fields, selects the original kind3 table entry0x1fcc→0x202c and actual format `*#%s*%s*%s##`, stores the produced output pointer at0x2048 and returns literal0 at0x2020 after cleanup. The saved text equals `*#4*1*0##`, with the48 object bytes unchanged. This is narrower than unchanged pointed-to storage generally, complete round-trip/domain validation or a plugin/transport transaction.
+- The modeled cleanup helper matches candidate libutils0x1904..0x192c for these valid pointer slots: nonnull pointed allocation is freed/slot cleared; null pointed value returns. Its modeled r0 is not substituted for the serializer's final explicit return0. The private allocation ledger is distinct from original allocation/free execution.
+
+## Containment and primitive audit
+
+The harness reads current MH202 images through the verified accessor and uses no F454 firmware/VAs/layouts/fixtures. The old tooling directory supplies only the separately verified Unicorn2.1.4 package. Each of two private sessions copies original ELF bytes, performs exactly two declared setup data relocations (parser GOT and GLib exported pointer cell), then protects libopenmsg read/execute and GLib read-only/nonexecuting. Four setup writes are not firmware instructions, loader execution or callbacks. The serializer reuses the second session, with no further relocation setup.
+
+Only private stack/input/output/heap are writable. The source PC allowlist covers the actual parser, WHO/WHERE helpers, allocator wrapper and serializer; nested new_open_msg is an original definition reached by an explicit redirect. Unknown PCs/imports, interrupts and invalid/protected accesses abort. Each top-level entry has100000 code-hook and emulator-instruction limits, a64KiB heap and4096-byte allocation/string limits. The GLib native-read hook admits only the exported4-byte cell and512-byte table; original GLib code is outside allowed PC ranges. These controls bound this selected experiment, not memory-safety or real loader equivalence for all inputs.
+
+The ordinary primitives are explicit selected string operations, successful zeroed allocation, two exact formats and cleanup/free ledger. No primitive manufactures parsed grammar fields/kinds. `g_strndup` uses the selected terminated bounded input strings and host copy semantics; broader malformed/unbounded libc semantics are not claimed. Unexpected lists and other imports abort. No target OS/syscall/process/device/network, configured plugins, authentication or caller-framing branch executes.
+
+## Independent saved accounting
+
+| Entry | Original visits | C/GLib primitives | Definition redirects | EXIT | Stops | Code hooks |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| WHO2 parser |266|19|1|1|0|287|
+| WHO4 query parser |287|18|1|1|0|307|
+| Serializer on actual query object |78|9|0|1|0|88|
+| Total |631|46|2|3|0|682|
+
+I checked every saved original PC against the source allowlist, primitive/redirect-array lengths and per-entry arithmetic. All three explicit returns are0; the result has three entries, two parser calls and one serializer call. Nested wrapper calls do not add top-level entries. Memory-read observers and setup relocation writes are separate from code hooks; historical native corpora/replays are not added. These are audited saved counts, not this reviewer's new native coverage.
+
+The collector-only syntax draft/history is explicitly retained as preparation and is not evidence of a prior original-code result. The report correctly limits what is narrowed for COSO15/thermo15: selected parser/kind and query serializer premises. Actual record replacement, STM admission, configuration, queue/callback state, output delivery and physical behavior remain separate. My independent thermo/run16 state-machine report is static and is not retroactively promoted to native execution by this parser result.
+
+## Mask-wording finalization review
+
+The author’s later self-review replaced ambiguous “bit8” prose/metadata with exact mask`0x0008` (bit index3), matching original instruction `0x27b0 e3130008`, `tst r3,#8`. I verified the exact four-file pre-change snapshot and its hash index, the report/collector/table-JSON differences and the refreshed32-entry manifest. Only those three prior author entries changed; the saved old manifest is history. The report also records this precision update. Native harness/source instruction words/results/counts and the other evidence are unchanged. `collect_evidence.py --check` was rerun successfully after the change; no native replay or extra original coverage occurred.
+
+Prior review SHA256 before this authorized pin refresh was `533a874de08b46ab6ffbd9489c0d5736c4549f5d18fdbd1db509240ceab95acb`. Snapshot `development-before-mask-wording/REPORT.md` pins the previously reviewed report `1b40bac82cca814b6f946474efb8aa61498d207fb49eceab54cc38be69d38389`; its collector `7c7c58fd580e0de4e19d633c23071eca65279c0084b5479827f92f3d151b4222` and old manifest `0d07d99db0a8bb56c713f080f45895bccbd6cf804e850dbe09aa0aeb8150b8a6` also match the earlier review pins. The final table metadata SHA256 is `97f471b19680d036e55a69de7212a350fd009c9bc989201274ccb5269932adef`.
+
+## Exact reviewed pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `protocol/run16/REPORT.md` | `5304eb2d0038900b37c34498f33dce37fc83df630445899355c76a267991c024` |
+| `protocol/run16/collect_evidence.py` | `f24adda6a5ae8c308f3a5cc931fba015b0e39b4c7caacee192a7bbc069d42e55` |
+| `protocol/run16/emulate_pointer_parser.py` | `54ab357c2a4c62f61ffb0fd192b799f2e9624c037851582b9ee9f6b8ef3281cc` |
+| `protocol/run16/parser-results.json` | `2a26a10b6321046b278d42cb43c4f1d06d00f066570f9da6bb5e84a459f1aea7` |
+| `protocol/run16/verified-tool-package.json` | `9f9bae4d6be11b8849669aeca2375469304e78ab5697abb89e47d3d73f6ca36a` |
+| `protocol/run16/input-hashes.json` | `3eac233ee13989bc69af014f61a47e4235c5e4d6d260c1d6d5c74e2fda8b7059` |
+| `protocol/run16/original-spans.json` | `d4b7227d069d14727f4ba3d86febd39583292fda7fb978a2b2e84e6487e74481` |
+| `protocol/run16/critical-words.json` | `0b1a2debf71f9a90524524f94d1d5b24bb639231acf3ebc4281b270b431a125f` |
+| `protocol/run16/output-manifest.json` | `64507a2c3ace6dc8c6279bb43b3cd338ebe59d58d89efb4169045d41c7f18abe` |
+
+Principal originals were independently checked: `/home/bticino/lib/libopenmsg.so` SHA256`7a4793f740c4cb41a774bf06e3af3acf4bd8a7606c5329ac70d7e0e7fd64bcd7`; `/usr/lib/libglib-2.0.so.0.2800.7` SHA256`029c2a7913131a84c46958d9ed445cb8a79dd1c8abc61116321badb7ad2735c0`.
+
+No author code/evidence, earlier dossier, synced reference, firmware or repository documentation was edited by this reviewer.

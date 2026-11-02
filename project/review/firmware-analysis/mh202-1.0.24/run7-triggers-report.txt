@@ -1,0 +1,51 @@
+# MH2021.0.24 isolated ordinary-comparator execution - run7
+
+The ordinary trigger comparison helper has now run as original ARM instructions in a bounded userspace emulator. Thirteen synthetic helper calls reproduce the prior selected literal/list/range/negation/exhaustion observations. This advances evidence from a host transcription to original function execution under declared primitive contracts. It still does not execute an original raw-frame parser, trigger normalizer, dispatcher, configured script, firmware service or physical gateway.
+
+This is the first MH202 original-code helper execution in this dossier. Canonical corpus counts: **1485 original ARM instruction visits,75 primitive callbacks,1560 code-hook visits,13 helper calls; firmware processes and target OS calls0.** Counts describe one saved13-case corpus; independent verification replays repeat it and are not added to that corpus count. Earlier six checkpoints' original-execution0 remains historically correct; the three other run7 author areas are static-only.
+
+## Original and analysis-tool provenance
+
+Input is verified normal-image `/home/bticino/bin/bt_taskmanager`, SHA256 `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e`. Only original function bytes `[0xc6dc,0xc8e0)` are executable in the private test map. Its original file offset is0x46dc, span SHA256 `4044fe1a3de303d2897afa24045780b77e5d476fe25eeca455c61e15d8e176e0`. ImageVFS verifies the backing original; the original image/tree and previous reports remain unchanged.
+
+Default and bundled Python probes earlier lacked named packages in their ordinary search paths. This pass found an existing **standalone analysis-tool package**, Unicorn2.1.4, under read-only `work/f454-firmware/research/tooling`. All41 hash-bearing wheel RECORD entries were verified before import. The tool alone is reused; no F454 firmware, object layout, harness, input fixture, module or authentication investigation is imported. `validation/run7/tool-readiness.json` records the discovery; `isolation-and-provenance.json` pins package files/RECORD and original MH202 accessor/function identities.
+
+Imports disable Python bytecode writes. The earlier analysis-tool files remain read-only. The shared host tool is not the original firmware's libc, OS or loader. No package download/installation, target loader, unisolated vendor binary or firmware process was used.
+
+## Isolation and execution boundary
+
+Every case creates a fresh ARM emulator and independent mapped memory. Code page permissions are read/execute after writing the selected function. Strings and stack occupy separate read/write maps. No target filesystem, device, network, process, dynamic-loader or syscall implementation is supplied.
+
+The harness permits original program counters only inside the selected function; it rejects unknown code addresses, any interrupt and invalid/unmapped memory. It never automatically maps a fault. Each call has a100000-instruction cap and1-second emulator timeout, and must return normally to the private sentinel at0xf000 without a guard violation.
+
+Two imported PLT sites are explicit host primitives: strlen at0x9b5c and atoi at0x994c. They read bounded emulator strings, compute declared host results, update emulated registers and return to emulated LR. They perform no target or host I/O. Numeric fixtures are nonoverflow decimal strings; this does not implement packaged libc malformed-input behavior. Original BL/call-site and comparison/branch instructions run, while the two primitive bodies do not. Primitive75 is separate from1485 original visits; counting both as original instructions would be incorrect.
+
+The harness's initial author version had a Python syntax error before import or instruction execution. It was corrected without changing inputs, caps or isolation; no failed original experiment is hidden or promoted as a result.
+
+## Actual selected helper results
+
+`execution-results.json` retains inputs, expected source returns, actual original returns, per-case visit/callback counts, primitive arguments/results and instruction-trace hashes. All cases return through the sentinel with no interrupt, unknown-PC or memory violation.
+
+| Selected case | Original helper return |
+| --- | ---: |
+| Equal literal strings |0|
+| Different literal byte |1|
+| Bracket list includes2 / excludes3 |0 /1|
+| Inclusive range1..3 at lower/upper bound / outside4 |0 /0 /1|
+| Negated1 compared with2 /1 |0 /1|
+| Selected single-member bracket `[1]` compared with1 |1|
+| Pattern `AB`, event `ABC` |0|
+| Pattern `ABC`, event `AB` |0|
+| List `[1,2]`, event `002` |0|
+
+Here0 and1 are source helper return codes, not a public acknowledgement or action result. The two exhausted-prefix examples now use original helper code, but they remain synthetic helper strings. No valid wire message, accepted configured directive, physical false trigger or bypass is established. Similarly this does not broaden the prior selected grammar to malformed, mixed, negative or overflowing patterns.
+
+Original normalizer0xcb38, special comparator0xc8e0, original libc/parser and whole callback/trigger state were not executed. This batch intentionally validates the existing finite helper scope before attempting a larger join; repeating the static model alone would not have added equivalent evidence.
+
+## Reproduction, confidence and next work
+
+Run `python3 -B work/mh202-firmware/research/2026-10-30/triggers/run7/emulate_comparator.py --check`. It verifies the tool package hashes, reads original MH202 bytes, reruns the guarded13-case original-function corpus and strictly compares two saved deterministic outputs plus manifest. No output is rewritten with --check. A failure is not retried with weakened guards or mocked success.
+
+High confidence: selected original instructions produce the saved returns under explicit strlen/atoi contracts and private inputs. Conditional: declared primitives, emulator semantics and synthetic memory/ABI setup. Unresolved: actual original parser/normalizer/special comparator, deployed directives, state/ownership, scheduling and physical behavior. Tool discovery demonstrates a feasible isolated helper route; it does not make broader process/runtime execution safe or complete.
+
+The next useful step is a justified original normalizer/parser or special-comparator join with fresh MH202 provider/layout evidence and explicit new boundaries. Closed authentication/framing work remains closed. No live gateway contact or firmware flashing is authorized by this helper result.

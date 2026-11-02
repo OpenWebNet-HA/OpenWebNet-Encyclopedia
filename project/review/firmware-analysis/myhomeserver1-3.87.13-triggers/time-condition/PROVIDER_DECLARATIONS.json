@@ -1,0 +1,49 @@
+{
+  "boundary": "Candidate definitions/direct requests only; effective binding and API success/timezone/locale not observed.",
+  "objects": {
+    "/home/bticino/scheduling_manager/scheduling_manager": {
+      "DT_NEEDED": [
+        "libapplogger.so.1",
+        "libjsoncpp.so.25",
+        "libuuid.so.1",
+        "libdw.so.1",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-armhf.so.3"
+      ],
+      "selected_symbols": [
+        "10: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt6chrono3_V212system_clock3nowEv@GLIBCXX_3.4.19 (6)",
+        "152: 00000000     0 FUNC    GLOBAL DEFAULT  UND localtime@GLIBC_2.4 (2)",
+        "292: 00000000     0 FUNC    GLOBAL DEFAULT  UND time@GLIBC_2.4 (2)",
+        "328: 00000000     0 FUNC    GLOBAL DEFAULT  UND mktime@GLIBC_2.4 (2)"
+      ]
+    },
+    "/lib/libc.so.6": {
+      "DT_NEEDED": [
+        "ld-linux-armhf.so.3"
+      ],
+      "selected_symbols": [
+        "329: 00079b29    20 FUNC    GLOBAL DEFAULT   13 localtime@@GLIBC_2.4",
+        "1417: 0007a3d5   132 FUNC    GLOBAL DEFAULT   13 mktime@@GLIBC_2.4",
+        "2148: 0008263d    60 FUNC    GLOBAL DEFAULT   13 __clock_gettime@@GLIBC_PRIVATE",
+        "3048: 0008263d    60 FUNC    GLOBAL DEFAULT   13 clock_gettime@@GLIBC_2.17",
+        "3050: 0008263d    60 FUNC    GLOBAL DEFAULT   13 clock_gettime@GLIBC_2.4",
+        "3075: 0007a475    56 FUNC    WEAK   DEFAULT   13 time@@GLIBC_2.4"
+      ]
+    },
+    "/usr/lib/libstdc++.so.6.0.29": {
+      "DT_NEEDED": [
+        "libm.so.6",
+        "libc.so.6",
+        "ld-linux-armhf.so.3",
+        "libgcc_s.so.1"
+      ],
+      "selected_symbols": [
+        "24: 00000000     0 FUNC    GLOBAL DEFAULT  UND clock_gettime@GLIBC_2.17 (54)",
+        "1522: 000959a1    42 FUNC    GLOBAL DEFAULT   12 _ZNSt6chrono3_V212system_clock3nowEv@@GLIBCXX_3.4.19",
+        "3999: 0007db25    42 FUNC    GLOBAL DEFAULT   12 _ZNSt6chrono12system_clock3nowEv@@GLIBCXX_3.4.11"
+      ]
+    }
+  }
+}

@@ -1,0 +1,131 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b509c:
+   b509c:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   b50a0:	460d      	mov	r5, r1
+   b50a2:	e9d0 7800 	ldrd	r7, r8, [r0]
+   b50a6:	f06f 4170 	mvn.w	r1, #4026531840	@ 0xf0000000
+   b50aa:	b083      	sub	sp, #12
+   b50ac:	eba8 0307 	sub.w	r3, r8, r7
+   b50b0:	10db      	asrs	r3, r3, #3
+   b50b2:	428b      	cmp	r3, r1
+   b50b4:	f000 8098 	beq.w	b51e8
+   b50b8:	2b01      	cmp	r3, #1
+   b50ba:	4691      	mov	r9, r2
+   b50bc:	461a      	mov	r2, r3
+   b50be:	bf38      	it	cc
+   b50c0:	2201      	movcc	r2, #1
+   b50c2:	189c      	adds	r4, r3, r2
+   b50c4:	4606      	mov	r6, r0
+   b50c6:	eba5 0a07 	sub.w	sl, r5, r7
+   b50ca:	d26a      	bcs.n	b51a2
+   b50cc:	2c00      	cmp	r4, #0
+   b50ce:	f040 8086 	bne.w	b51de
+   b50d2:	2208      	movs	r2, #8
+   b50d4:	46a3      	mov	fp, r4
+   b50d6:	efc0 1010 	vmov.i32	d17, #0	@ 0x00000000
+   b50da:	eb0b 000a 	add.w	r0, fp, sl
+   b50de:	f969 078f 	vld1.32	{d16}, [r9]
+   b50e2:	42bd      	cmp	r5, r7
+   b50e4:	f949 178f 	vst1.32	{d17}, [r9]
+   b50e8:	f940 078f 	vst1.32	{d16}, [r0]
+   b50ec:	d026      	beq.n	b513c
+   b50ee:	ebab 0307 	sub.w	r3, fp, r7
+   b50f2:	3b04      	subs	r3, #4
+   b50f4:	2b08      	cmp	r3, #8
+   b50f6:	d960      	bls.n	b51ba
+   b50f8:	f1aa 0008 	sub.w	r0, sl, #8
+   b50fc:	f1ba 0f08 	cmp.w	sl, #8
+   b5100:	ea4f 00d0 	mov.w	r0, r0, lsr #3
+   b5104:	463b      	mov	r3, r7
+   b5106:	f100 0001 	add.w	r0, r0, #1
+   b510a:	d066      	beq.n	b51da
+   b510c:	0841      	lsrs	r1, r0, #1
+   b510e:	465a      	mov	r2, fp
+   b5110:	eb07 1101 	add.w	r1, r7, r1, lsl #4
+   b5114:	f963 0a8d 	vld1.32	{d16-d17}, [r3]!
+   b5118:	4299      	cmp	r1, r3
+   b511a:	f942 0a8d 	vst1.32	{d16-d17}, [r2]!
+   b511e:	d1f9      	bne.n	b5114
+   b5120:	f020 0301 	bic.w	r3, r0, #1
+   b5124:	4298      	cmp	r0, r3
+   b5126:	d006      	beq.n	b5136
+   b5128:	00db      	lsls	r3, r3, #3
+   b512a:	18fa      	adds	r2, r7, r3
+   b512c:	445b      	add	r3, fp
+   b512e:	f962 078f 	vld1.32	{d16}, [r2]
+   b5132:	f943 078f 	vst1.32	{d16}, [r3]
+   b5136:	f10a 0208 	add.w	r2, sl, #8
+   b513a:	445a      	add	r2, fp
+   b513c:	4545      	cmp	r5, r8
+   b513e:	d022      	beq.n	b5186
+   b5140:	eba8 0805 	sub.w	r8, r8, r5
+   b5144:	462b      	mov	r3, r5
+   b5146:	f1a8 0c08 	sub.w	ip, r8, #8
+   b514a:	f1b8 0f08 	cmp.w	r8, #8
+   b514e:	ea4f 0cdc 	mov.w	ip, ip, lsr #3
+   b5152:	f10c 0c01 	add.w	ip, ip, #1
+   b5156:	d03e      	beq.n	b51d6
+   b5158:	ea4f 005c 	mov.w	r0, ip, lsr #1
+   b515c:	4611      	mov	r1, r2
+   b515e:	eb05 1000 	add.w	r0, r5, r0, lsl #4
+   b5162:	f963 0a8d 	vld1.32	{d16-d17}, [r3]!
+   b5166:	4298      	cmp	r0, r3
+   b5168:	f941 0a8d 	vst1.32	{d16-d17}, [r1]!
+   b516c:	d1f9      	bne.n	b5162
+   b516e:	f02c 0301 	bic.w	r3, ip, #1
+   b5172:	459c      	cmp	ip, r3
+   b5174:	d006      	beq.n	b5184
+   b5176:	00db      	lsls	r3, r3, #3
+   b5178:	441d      	add	r5, r3
+   b517a:	4413      	add	r3, r2
+   b517c:	f965 078f 	vld1.32	{d16}, [r5]
+   b5180:	f943 078f 	vst1.32	{d16}, [r3]
+   b5184:	4442      	add	r2, r8
+   b5186:	b137      	cbz	r7, b5196
+   b5188:	68b1      	ldr	r1, [r6, #8]
+   b518a:	4638      	mov	r0, r7
+   b518c:	9201      	str	r2, [sp, #4]
+   b518e:	1bc9      	subs	r1, r1, r7
+   b5190:	f75b ee8e 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   b5194:	9a01      	ldr	r2, [sp, #4]
+   b5196:	e9c6 b200 	strd	fp, r2, [r6]
+   b519a:	60b4      	str	r4, [r6, #8]
+   b519c:	b003      	add	sp, #12
+   b519e:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+   b51a2:	f64f 74f8 	movw	r4, #65528	@ 0xfff8
+   b51a6:	f6c7 74ff 	movt	r4, #32767	@ 0x7fff
+   b51aa:	4620      	mov	r0, r4
+   b51ac:	f75b ec66 	blx	10a7c <_Znwj@plt>
+   b51b0:	4683      	mov	fp, r0
+   b51b2:	4404      	add	r4, r0
+   b51b4:	f100 0208 	add.w	r2, r0, #8
+   b51b8:	e78d      	b.n	b50d6
+   b51ba:	4639      	mov	r1, r7
+   b51bc:	465a      	mov	r2, fp
+   b51be:	680b      	ldr	r3, [r1, #0]
+   b51c0:	3208      	adds	r2, #8
+   b51c2:	3108      	adds	r1, #8
+   b51c4:	f842 3c08 	str.w	r3, [r2, #-8]
+   b51c8:	f851 3c04 	ldr.w	r3, [r1, #-4]
+   b51cc:	f842 3c04 	str.w	r3, [r2, #-4]
+   b51d0:	4290      	cmp	r0, r2
+   b51d2:	d1f4      	bne.n	b51be
+   b51d4:	e7af      	b.n	b5136
+   b51d6:	2300      	movs	r3, #0
+   b51d8:	e7cd      	b.n	b5176
+   b51da:	2300      	movs	r3, #0
+   b51dc:	e7a4      	b.n	b5128
+   b51de:	428c      	cmp	r4, r1
+   b51e0:	bf28      	it	cs
+   b51e2:	460c      	movcs	r4, r1
+   b51e4:	00e4      	lsls	r4, r4, #3
+   b51e6:	e7e0      	b.n	b51aa
+   b51e8:	4801      	ldr	r0, [pc, #4]	@ (b51f0)
+   b51ea:	4478      	add	r0, pc
+   b51ec:	f75b eda6 	blx	10d3c <_ZSt20__throw_length_errorPKc@plt>
+   b51f0:	f57a 0005 	sbcs.w	r0, sl, #8716288	@ 0x850000

@@ -1,0 +1,276 @@
+{
+  "status": "PASS",
+  "scope": "Three bounded static source areas and exact current exports/reviews/immutable versions/history; no original execution/runtime/physical/full Device approval",
+  "completed_UTC": "2026-10-31T22:37:36.662847+00:00",
+  "collectors": 3,
+  "deterministic_outputs": 61,
+  "exact_source_exports": 76,
+  "source_and_documentary_reviews": {
+    "reviews/reset-alias-source-review.md": "3a3956d5b99738057a7c02241a5bbe5fd729dc36448d99c535dfb02024d48f84",
+    "reviews/worker-ownership-source-review.md": "a930352dc1f3ad01fff1fdf5a80f93683b510486fef6147abda14c6049085d66",
+    "reviews/schema-activation-source-review.md": "43afb2076bd868f65e49b6a7feddd0f30dc6294d7849976248fa835e55ddccc6",
+    "reviews/integration-review.md": "ddc229e0667a0d2e40bafe6ba02faf53486ef2611b6f1bb6b752f8e8a221d3d8"
+  },
+  "snapshot_indexes": [
+    {
+      "index": "reset-alias/first-candidate/INDEX.json",
+      "rows": 29,
+      "sha256": "8a7fb244333c61d4725ca917e7f9aeee67d937c8815c6884e8d6b3f3e9494c92"
+    },
+    {
+      "index": "worker-ownership/first-candidate/SNAPSHOT.json",
+      "rows": 20,
+      "sha256": "9530dc60e280a8dce5763e945111a7fe2b610844c26f71016ddd448c0e90004d"
+    },
+    {
+      "index": "worker-ownership/report-first-candidate/SNAPSHOT.json",
+      "rows": 1,
+      "sha256": "08e6e058a1eed619046dfb57136a0d59dd48fab1b933856c7be172cc842edb65"
+    },
+    {
+      "index": "worker-ownership/v2-first-candidate/INDEX.json",
+      "rows": 2,
+      "sha256": "3cefd55803507ecf32d59589371ea7a731d2f5224e921dc6b62602281ffb3340"
+    },
+    {
+      "index": "schema-activation/first-candidate/INDEX.json",
+      "rows": 16,
+      "sha256": "faea1e071f4a6cece8cb87d1ea19471b7b9eaa0037430fb751045d284d3f7e81"
+    },
+    {
+      "index": "schema-activation/report-first-candidate/INDEX.json",
+      "rows": 1,
+      "sha256": "ac14f4868bd3e5f2a50b06cc1c32878427fb28f49ed4079efedcc93c05772ea1"
+    }
+  ],
+  "snapshot_rows": 69,
+  "protected_indexed_entries": 8307,
+  "protected_dossiers": [
+    {
+      "root": "work/f454-firmware/research/2026-10-29",
+      "files": 1917,
+      "index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-targeted",
+      "files": 107,
+      "index_sha256": "ddb83866292f70631b968b91f07e08fbc79415b5e1762cf3699f8e326eacff79"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-targeted-2",
+      "files": 130,
+      "index_sha256": "2dc3f9e3541478eff304d1d9bb368d02504c39cc3d5d8d3aec7ca96650032d82"
+    },
+    {
+      "root": "work/f454-firmware/research/2026-10-30-final-pass",
+      "files": 83,
+      "index_sha256": "bf27345d8ce8d1e4e9277ad9346c62fcfde1f0b33bb20783ae5e66963ad100f2"
+    },
+    {
+      "root": "work/mh202-firmware/research/2026-10-30",
+      "files": 2904,
+      "index_sha256": "c65b6ab0961d6ba4ec7e19471c16993be0470b7d5eac3bbd1f93ad78aaeaf8f0"
+    },
+    {
+      "root": "work/firmware-product-followup/2026-10-31",
+      "files": 330,
+      "index_sha256": "624c42bcff5bd7b014dae7686648b3f3019be7956dd90de93c253dab7f891be7"
+    },
+    {
+      "root": "work/artifact-conservation/2026-10-31",
+      "files": 91,
+      "index_sha256": "5fa10c935d988778c9ce909e73e1b04f5635c034fd749a5ed96a8a5bcd323ed4"
+    },
+    {
+      "root": "work/mh202-firmware/research/2026-10-31-database-analysis",
+      "files": 128,
+      "index_sha256": "6292be5148fb4590c4b7e7229af6efe75eb547c79e755113369d24cfff37b828"
+    },
+    {
+      "root": "work/firmware-next-investigations/2026-10-31",
+      "files": 354,
+      "index_sha256": "47235b5e1fd5748bddb239b5f538cc87b7361c9c8cbb9d09dac530b9d0f08782"
+    },
+    {
+      "root": "work/installer-database-audit/2026-10-31",
+      "files": 18,
+      "index_sha256": "812a8e16432596609936272a46af2d942b1f4bf4fa141a0fa564018197ffe0b8"
+    },
+    {
+      "root": "work/installer-database-conservation/2026-10-31",
+      "files": 44,
+      "index_sha256": "627d109115fa8b8a0ab90ab2d644ccceba329187bd650c380c343424ed93e719"
+    },
+    {
+      "root": "work/installer-database-analysis/2026-10-31",
+      "files": 166,
+      "index_sha256": "898b879a364515f3a978864e5fc6e8f8b2577ec619f48eef9515203c1e2280f6"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31",
+      "files": 238,
+      "index_sha256": "85d5fa383d6a0bd54734b022b78c8fc375f9e71dba24e40c2bccbced2965dce2"
+    },
+    {
+      "root": "work/myhomeserver1-database-conservation/2026-10-31",
+      "files": 11,
+      "index_sha256": "e95c6cb5e89214f29b2cabda8707e2d640c436814c537cc3c2eee3ee192534f0"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13",
+      "files": 50,
+      "index_sha256": "bd315f66fc3e8bddfb1d1ade3a43c4c9cefd713cac075ee971024d59c80b33ca"
+    },
+    {
+      "root": "work/mhcatalogue-comparison/2026-10-31",
+      "files": 228,
+      "index_sha256": "1fb864fa45df95ca01d2bd6baea61c1cd99b85a14e4aade0f7a8baf8da40b25a"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers",
+      "files": 277,
+      "index_sha256": "0fee5ce7f2f839af29b4f22f2e5b7429dd75c56c253e39b8febd6dfd24f8aaca"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories",
+      "files": 294,
+      "index_sha256": "01a7ca5d6c2779048b04554eb394e633896511441a483ca413f4de061ac95360"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions",
+      "files": 270,
+      "index_sha256": "6c97ed8608d12533336d49840f71a6ae1816527ab8f0c8304cb8d82497c4c1ea"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-triggers",
+      "files": 255,
+      "index_sha256": "98b39e6e03a68556ab8639f52d47bd7296719da3365511132f970d2e00673115"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup",
+      "files": 203,
+      "index_sha256": "1e65b3dd131bcdaa97a73043a489e9acedb041aa5831d46288a2c3f00293c566"
+    },
+    {
+      "root": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation",
+      "files": 209,
+      "index_sha256": "9437d63e5be7271e2da97c7c7c06a821e645bbe3736e4cf0759862a90266ebbf"
+    }
+  ],
+  "historical_reference_substitutions": [
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "retained_prior": "work/mhcatalogue-comparison/2026-10-31/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "sha256": "0581a52f32a95f4cae419693fe8d20b4ecf272f5e195f40070b00e166aea173f"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/integration/pre-edit/internals/mhcatalogue-source-profiles.md",
+      "sha256": "35cab23085fdc9120784916657da218aabd783a0f2008705ba8e41cc3485f809"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "sha256": "c787f9bc0f70f8ab99dc8341331c4f72714b9e29878034efd5b4d9a0ba70a9e7"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/integration/pre-edit/internals/mhcatalogue-source-profiles.md",
+      "sha256": "5c60cbbf8796612b1efaa80392d77cf067b1ec647ca802dae72f91b673da2dac"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md",
+      "sha256": "ff3b179e05c69f6a1f34ab97ee76c43c3e72bdfff89d6c6661644c4bd45f4583"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "sha256": "ee2ac5108fec4dca958afa73832cc874f43aebb9e1e6f4ffa5d5c4ecaab4d381"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-factories.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-actions/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-factories.md",
+      "sha256": "00ff0103bb815431071651ee12c170078e345649728e36e3bfe0eb7c9f4bea10"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-actions.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-triggers/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-actions.md",
+      "sha256": "8fbbecb80d000f43bdfbb05cfd9d89eb761820d10878445bd273d7ecceb80a45"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-time-scenarios.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-startup/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-time-scenarios.md",
+      "sha256": "3387b6f658f8950db4ebfc81df7b5ec24adfbddbf6ab3cd1af40938afe0724b8"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-startup.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-startup.md",
+      "sha256": "373bc378d94e31a59a0f7e9b40ac143a474d0a98e220336bb46d366f17cb4e88"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-cancellation.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-cancellation.md",
+      "sha256": "2c23c61974b9307a7af5981111abe0bbc0fc1cda36900d64ac49e5daa7f13925"
+    }
+  ],
+  "current_document_pins": [
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-lifetime.md",
+      "snapshot": "0-myhomeserver1-3.87.13-lifetime.md",
+      "sha256": "8ce553099d5dc56a22329d172b0e88c007628ac420d026bcb61d42a681a0c7bc",
+      "bytes": 5273
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-cancellation.md",
+      "snapshot": "1-myhomeserver1-3.87.13-cancellation.md",
+      "sha256": "361effbac491faf6daa0dd91da9d67ee76b39321afca2a5e760a6648df92a3ab",
+      "bytes": 5498
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-lifetime/README.md",
+      "snapshot": "2-README.md",
+      "sha256": "b6c88bb4aaafcc7e3cade62cf7a32b7a57fe235a33d2671278f0ac9778577bdc",
+      "bytes": 2684
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-lifetime/SOURCE_EXPORTS.json",
+      "snapshot": "3-SOURCE_EXPORTS.json",
+      "sha256": "9296c6ec2e8de4f648675923e2252a325d9633f92f24daa1a7d2a677b4312a6f",
+      "bytes": 23502
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-lifetime/synthesis.txt",
+      "snapshot": "4-synthesis.txt",
+      "sha256": "56026d5ac262d837b79431d24b65f34fbb2d8a49c8828be745b9e83b7e21fea6",
+      "bytes": 1134
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-lifetime/coverage.txt",
+      "snapshot": "5-coverage.txt",
+      "sha256": "f45578fc32d6db475802c0cf828cdae6bf85b076bb9ebe2c998db93e4b7c2da6",
+      "bytes": 817
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-lifetime/remaining-questions.txt",
+      "snapshot": "6-remaining-questions.txt",
+      "sha256": "cd71cb8a4efc3c93cd745e7ec342e384d8638ed7adfd6ff45a33cb5b776b9dda",
+      "bytes": 1168
+    },
+    {
+      "source": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-lifetime/source-checks.json",
+      "snapshot": "7-source-checks.json",
+      "sha256": "623435da3553fdf5dd4452f1a1689646d15cf987582558e1d54904269d0cd388",
+      "bytes": 1375
+    }
+  ],
+  "branch": "docs/static-firmware-analysis-findings",
+  "staged": false,
+  "committed": false,
+  "published": false,
+  "source_manifest_modified": false,
+  "original_execution": 0,
+  "host_semantic_models_or_scene_objects": 0,
+  "wider_Device_gates": "Pending, unchanged",
+  "final_requirement": "Actual review/validation copies must subsequently pass strict ESG/ECV/diff; FINAL_CHECKS records actual results."
+}

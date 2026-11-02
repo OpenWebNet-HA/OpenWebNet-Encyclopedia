@@ -1,0 +1,35 @@
+# MH202 interpreter run2 independent static review
+
+**PASS within the stated scope; no material correction requested.** Independently reran `functional/run2-interpreter/collect_evidence.py --check`: 16 outputs, six original spans, 13 original-word assertions, two verified original inputs and zero original execution. No producer output manifest was present at review time; collector byte-for-byte check covers its16 generated outputs.
+
+## Source/dataflow findings checked
+
+- The executable's actual IIF prefix comparison uses length3 at0x9b70, with pool0xa98c→literal0xae96. At0x9bcc..0x9be0 it passes comma inr0, integer3 inr1, the operator buffer inr2, left buffer inr3 and right buffer onstack to PARENTESI. The subsequent0x9be4..0x9bf0 IIF call passes left/operator/right. PARENTESI stores then increments its second argument at0x419c..0x41a4 and uses it as a global-line index at0x41ac..0x41bc. Source-position3, rather than an argument-count claim, is justified. The full expression grammar remains unproven.
+- The caller does not consume IIF's return: after0x9bf0 it prepares a logger call and then ordinary prefix comparisons, with the separate later normal next-node path loading linked-record+8. This is not a successful script run or a guarantee for all control paths.
+- Direct dependency/import/export evidence names the candidate libdomotica provider. Actual IIF PIC arithmetic0x74b8+8+0xac54 yields0x12114; GOT offset0x118 points to relocation0x1222c for linea. Library and executable export distinct declared linea addresses0x12284/0x134a4, both1024bytes. Report correctly conditions a joined line rewrite on effective symbol binding and does not claim runtime interposition was executed.
+- Selected `$V` branch passes the suffix after V as source to strcpy, indexes numeric variable records by8 and reads+4; a right `$V` repeats lookup, while the selected other-right path calls atoi at0x7620 and INT_OPERATORI at0x7634. Broader variable lookup/string/mixed-type behavior is not silently modeled.
+- Original INT_OPERATORI literal/PIC references establish exactly `=`, `<`, `<=`, `>`, `>=`, `<>`. The relational branches use signed GE/GT/LE/LT and unknown operator reaches0. Seven host examples agree with those narrow comparisons. The preserved C-style-token expectation was a host transcription error caught before outputs, not firmware behavior.
+- IIF's internal boolean byte branches at0x797c..0x7984. Nonzero executes one strchr-comma→suffix+1→strcpy(global_line,suffix) request at0x79b4..0x79e8; zero executes two successive requests at0x7a1c..0x7a88. Both refer to the same GOT-resolved linea. The report's nonzero hypothetical suffix retains `TRUE_TEXT,FALSE_TEXT`; it does not incorrectly truncate to only TRUE_TEXT.
+
+## Required boundaries retained
+
+The source/destination strcpy ranges overlap. The saved host strings are explicitly **hypothetical forward-copy suffixes**, not portable C behavior, packaged-libc results, actual line contents after PARENTESI or valid complete script fixtures. No original libc/PARENTESI/IIF/interpreter execution, malformed-input exploration or actual runtime binding occurred. The report appropriately avoids equating this per-line target with the manufacturer's complete scenario-level Only if stage or disabled-marker policy.
+
+Correction history is preserved: current CORRECTIONS.md maps the exact pre-literal-check collector draft to corrected current operators/model. No history rewrite or original firmware change occurred.
+
+## Exact reviewed pins
+
+Paths below are relative to `functional/run2-interpreter/`.
+
+| Artifact | SHA256 |
+|---|---|
+| `REPORT.md` | `15040bc8a3a8e066796839c0f772cacc83141271eaa81adf7455d59d68a75386` |
+| `collect_evidence.py` | `b1727ff39ac0157a5535e1f8a13bdf43bc0047d9488af68854d8a4ca506ee629` |
+| `CORRECTIONS.md` | `44615bc97101d385016dbdf705589a2f8df9f717ba0b2288fa079280544fe835` |
+| `development-before-literal-check/collect_evidence.py.txt` | `ebb04a210778b57152287260094a9dceacb6b46789e2a398b9ef1d75bc43082d` |
+| `input-hashes.json` | `3c82a0c9794a90969b5336b667ef3dfc7685ffa0a2f9a35fdc3848303960c17f` |
+| `original-spans.json` | `09b4542e2d65231c0c4da9b8c6035575c010c216910a18ce16e4f2bc2b2e4716` |
+| `word-and-literal-evidence.json` | `a59af9ab911a60295bb92edb49a464d1698c38e9af5bf3fb371748a623a56562` |
+| `host-local-models.json` | `d9a43c368b2ad5f943a353f6eae9ef65487d78991a22e18c1814c590d3f87590` |
+
+Reviewer wrote only `reviews/run2/interpreter-review.md`; producer artifacts remain unchanged.

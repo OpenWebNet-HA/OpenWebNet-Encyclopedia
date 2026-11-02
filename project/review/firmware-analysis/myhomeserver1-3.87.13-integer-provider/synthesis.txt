@@ -1,0 +1,7 @@
+# Constructor-reachable signed scalar source
+
+The actual packaged Value(int) constructor supplies type1 and stores its signed32 argument as lowword plus arithmetic signword. The same candidate's type1 asInt route calls its actual isInt helper before loading the lowword. The selected helper's ADDS/ADC of2^31 and CLZ-high test admits that constructor-produced sign-extended representation. Fresh symbols/ABI/PLT/relocation/word evidence narrows the selected trigger's signed scalar premise.
+
+This is source algebra only. It is not the executed double corpus, an unsigned-provider analogy, a numerical fixture, original integer execution or full JSON member/map/assignment/reparse. Effective binding, valid unchanged objects, normal ABI/canary/delegate returns, active configuration, full errors/lifetime/concurrency and physical meaning remain open.
+
+All new original visits/guest/provider execution/replay/model cases are0. The MHS cumulative ledger remains1 corpus/eight entries/340 original code-hook visits/zero C primitives/12 redirects/eight EXIT/zero stops/360 hooks, with four setup data relocations separate. Historical static0 and F454/MH202 ledgers remain separate. The final handoff is ready; safe final allowance/closure coordination takes priority over more source expansion.

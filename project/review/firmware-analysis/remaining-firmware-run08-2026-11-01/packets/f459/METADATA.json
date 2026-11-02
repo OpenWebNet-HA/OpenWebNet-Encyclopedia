@@ -1,0 +1,185 @@
+{
+  "ELF_class": 32,
+  "PT_LOAD": [
+    [
+      1,
+      0,
+      0,
+      0,
+      40840,
+      40840,
+      5,
+      32768
+    ],
+    [
+      1,
+      40960,
+      73728,
+      73728,
+      816,
+      832,
+      6,
+      32768
+    ]
+  ],
+  "actual_Qt_provider_or_method_lookup_execution": 0,
+  "actual_SQLite_queries": 0,
+  "callback_body": "OPAQUE/UNEXPANDED",
+  "code_span": {
+    "bytes_hex": "040090e51c309fe5182090e503308fe0000052e30000000a0aebffea08209fe5020093e71eff2fe120ad000068010000",
+    "end_exclusive": "0x747c",
+    "sha256": "273fd3060aa176345c445f6d1af2552194afc6a231d739019dc372195aa9a027",
+    "start": "0x744c"
+  },
+  "data_extents": [
+    {
+      "VA": "0x12058",
+      "bytes": 24,
+      "bytes_hex": "000000000c92000040930000bc7400000000000000000000",
+      "name": "own-static-metaobject",
+      "sha256": "d51402e06aba61643f6cec0445f8a21371b0d6d7b5b31c1cfd0daaa0c65a9dc1"
+    },
+    {
+      "VA": "0x9340",
+      "bytes": 56,
+      "bytes_hex": "07000000000000000000000000000000090000000e0000000000000000000000000000000000000000000000000000000000000001000000",
+      "name": "own-revision7-header",
+      "sha256": "fcd1926c5bac06a7f59e49f949d0c40b32f849a68385d88b10a231eef86bc9ad"
+    },
+    {
+      "VA": "0x9418",
+      "bytes": 20,
+      "bytes_hex": "0c000000000000005f0000000200000008000000",
+      "name": "selected-local-method-row8",
+      "sha256": "0cbcb28a2412e4a74b6fca2e76f3c52c9c14486d205db7c75cf1d7139ed2e811"
+    },
+    {
+      "VA": "0x92cc",
+      "bytes": 16,
+      "bytes_hex": "ffffffff090000000000000066000000",
+      "name": "selected-string-record12",
+      "sha256": "e94164f4ef0e8738c7aebce1c7cb3ae66d867b75c74ea9001899c592b51b9d8f"
+    },
+    {
+      "VA": "0x9332",
+      "bytes": 10,
+      "bytes_hex": "5f6f6e4368616e676500",
+      "name": "selected-string-bytes",
+      "sha256": "e630372a7369a0d17bd9fc8c4da0926ac1e50339bd896bd507b4bb729e545d36"
+    },
+    {
+      "VA": "0x94bc",
+      "bytes": 4,
+      "bytes_hex": "2b000000",
+      "name": "selected-parameter-word",
+      "sha256": "7c9bf6a88aed1539a3276462bb9e977bede22cf2c89f96bf61f590da5504ccc7"
+    }
+  ],
+  "guards": [
+    {
+      "VA": "0x744c",
+      "word": "e5900004"
+    },
+    {
+      "VA": "0x7450",
+      "word": "e59f301c"
+    },
+    {
+      "VA": "0x7454",
+      "word": "e5902018"
+    },
+    {
+      "VA": "0x7458",
+      "word": "e08f3003"
+    },
+    {
+      "VA": "0x745c",
+      "word": "e3520000"
+    },
+    {
+      "VA": "0x7460",
+      "word": "0a000000"
+    },
+    {
+      "VA": "0x7464",
+      "word": "eaffeb0a"
+    },
+    {
+      "VA": "0x7468",
+      "word": "e59f2008"
+    },
+    {
+      "VA": "0x746c",
+      "word": "e7930002"
+    },
+    {
+      "VA": "0x7470",
+      "word": "e12fff1e"
+    }
+  ],
+  "machine": 40,
+  "new_DB": false,
+  "new_code_spans": 1,
+  "new_data_extents": 6,
+  "original": {
+    "bytes": 43208,
+    "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libmhshared.so.1",
+    "sha256": "4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377"
+  },
+  "original_execution": 0,
+  "relocations": [
+    {
+      "VA": "0x12058",
+      "actual_relocation": "00012058  00002902 R_ARM_ABS32            00000000   _ZN7QObject16staticMetaObjectE",
+      "word": "00000000"
+    },
+    {
+      "VA": "0x1205c",
+      "actual_relocation": "0001205c  00000017 R_ARM_RELATIVE",
+      "word": "0000920c"
+    },
+    {
+      "VA": "0x12060",
+      "actual_relocation": "00012060  00000017 R_ARM_RELATIVE",
+      "word": "00009340"
+    },
+    {
+      "VA": "0x12064",
+      "actual_relocation": "00012064  00000017 R_ARM_RELATIVE",
+      "word": "000074bc"
+    },
+    {
+      "VA": "0x122e8",
+      "actual_relocation": "000122e8  00007515 R_ARM_GLOB_DAT         00012058   _ZN8mhShared16staticMetaObjectE",
+      "word": "00000000"
+    }
+  ],
+  "selected_interpretation": {
+    "absolute_baseclass_method_index": "not assigned",
+    "argument_count": 0,
+    "context": "Qt5 revision7-compatible format premise, not exact target headers/provider",
+    "header_revision": 7,
+    "inherited_static_dispatch_target": "own staticMetaObject field+12\u2192local74bc; inherited run07 mode0/index8 selects PLT request to candidate _onChange",
+    "local_index": 8,
+    "local_method_count": 9,
+    "method_data_word_offset": 14,
+    "name": "_onChange",
+    "name_string_record_index": 12,
+    "raw_other_words_not_public_semantics": [
+      95,
+      2,
+      8
+    ],
+    "row_words": [
+      12,
+      0,
+      95,
+      2,
+      8
+    ]
+  },
+  "symbols": {
+    "_ZN8mhShared16staticMetaObjectE": "117: 00012058    24 OBJECT  GLOBAL DEFAULT   20 _ZN8mhShared16staticMetaObjectE",
+    "_ZNK8mhShared10metaObjectEv": "101: 0000744c    48 FUNC    GLOBAL DEFAULT   11 _ZNK8mhShared10metaObjectEv"
+  }
+}

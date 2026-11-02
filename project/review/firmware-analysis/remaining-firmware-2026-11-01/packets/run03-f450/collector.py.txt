@@ -1,0 +1,109 @@
+#!/usr/bin/env python3
+"""One original local resource-array forwarding chain; static bytes only."""
+from pathlib import Path
+import argparse,hashlib,json,struct,subprocess,re,xml.etree.ElementTree as ET
+O=Path(__file__).resolve().parent;W=O.parents[4];T=W/'work/f450-firmware/2.0.10/analysis/rootfs'
+D=T/'home/bticino/bin/bt_daemon';U=T/'home/bticino/lib/libutils.so';X=T/'home/bticino/cfg/stack_open.xml'
+def sha(b):return hashlib.sha256(b).hexdigest()
+def enc(v):return(json.dumps(v,sort_keys=True,indent=2)+'\n').encode()
+def build():
+ pins=[]
+ def read(p):
+  assert p.is_file()and not p.is_symlink();b=p.read_bytes();pins.append({'path':str(p.relative_to(W)),'bytes':len(b),'sha256':sha(b)});return b
+ db=read(D);ub=read(U);xb=read(X)
+ prior=W/'work/f450-firmware/2.0.10/research/2026-11-01-night01-archive/ARCHIVE_METADATA.json';archive=json.loads(read(prior))
+ assert sha(db)=='85e7ca65b4d1c4e8ab23a93ac532aea568dd06272fefb1b1be928eeba18f3d73'
+ def image(b):
+  assert b[:6]==b'\x7fELF\x01\x01';h=struct.unpack_from('<HHIIIIIHHHHHH',b,16);assert h[1]==40 and h[6]==0x5000002
+  p=[struct.unpack_from('<8I',b,h[4]+i*h[8])for i in range(h[9])];ls=[x for x in p if x[0]==1]
+  def off(a,n=4):
+   r=[x[1]+a-x[2]for x in ls if x[2]<=a and a+n<=x[2]+x[4]];assert len(r)==1,hex(a);return r[0]
+  def word(a):return struct.unpack_from('<I',b,off(a))[0]
+  return h,ls,off,word
+ dh,dl,do,dw=image(db);uh,ul,uo,uw=image(ub)
+ dg={0xf96c:0xe92d4800,0xf978:0xe50b0010,0xf984:0xebffeaf8,0xf994:0xe3530000,0xf998:0xaa000008,0xf9c0:0xe51b3008,0xf9c4:0xe3530000,0xf9c8:0x1a000007,0xf9e4:0xe51b0010,0xf9e8:0xebfff380,0xc7f0:0xe92d4870,0xc800:0xe50b0848,0xdb4c:0xe51b3848,0xdb50:0xe5933050,0xdb54:0xe3530000,0xdb58:0x0a00002c,0xdb74:0xe51f254c,0xdb7c:0xe5832000,0xdb88:0xe5832004,0xdb94:0xe5832008,0xdba0:0xe583200c,0xdba4:0xe51b3848,0xdba8:0xe593204c,0xdbb0:0xe5832010,0xdbb8:0xe3a03000,0xdbbc:0xe5823014,0xdbc0:0xe51f0588,0xdbc4:0xebfff18a,0xdbd4:0xe3730001,0xdbd8:0x1a000020}
+ ug={0x3488:0xe92d4030,0x3490:0xe3a05000,0x3494:0xe28d4008,0x3498:0xe5245004,0x349c:0xebfff8d8,0x34a0:0xe1a01004,0x34a4:0xe1a02005,0x34a8:0xebfff8f6,0x34ac:0xe5dd0005,0x34b4:0xe8bd8030}
+ for a,v in dg.items():assert dw(a)==v,hex(a)
+ for a,v in ug.items():assert uw(a)==v,hex(a)
+ def branch(word,a,link):
+  x=word(a);assert(x&0x0f000000)==(0x0b000000 if link else 0x0a000000);n=x&0xffffff;n-=1<<24 if n&(1<<23)else 0;return a+8+n*4
+ for a,v in {0xf984:0xa56c,0xf9e8:0xc7f0,0xdbc4:0xa1f4}.items():assert branch(dw,a,True)==v
+ for a,v in {0xf998:0xf9c0,0xf9c8:0xf9ec,0xdb58:0xdc10,0xdbd8:0xdc60}.items():assert branch(dw,a,False)==v
+ assert branch(uw,0x349c,True)==0x1804 and branch(uw,0x34a8,True)==0x1888
+ def pool(a):
+  w=dw(a);assert(w&0x0f7f0000)==0x051f0000;return a+8+((w&0xfff)if w&(1<<23)else-(w&0xfff))
+ pairs={0xdb74:0xd630,0xdb78:0xd640,0xdb80:0xd634,0xdb8c:0xd638,0xdb98:0xd63c,0xdbac:0xd640,0xdbb4:0xd640,0xdbc0:0xd640}
+ for a,v in pairs.items():assert pool(a)==v
+ assert dw(0xd640)==0x23e8c
+ literals=[]
+ for p,a,s in [(0xd630,0x189c0,'unzip'),(0xd634,0x189c8,'-d'),(0xd638,0x189cc,'/var/tmp'),(0xd63c,0x189d8,'-o')]:
+  assert dw(p)==a;z=s.encode()+b'\0';assert db[do(a,len(z)):do(a,len(z))+len(z)]==z;literals.append({'pool':hex(p),'VA':hex(a),'text':s,'bytes_with_NUL':z.hex()})
+ assert any(x[2]<=0x23e8c and 0x23e8c+24<=x[2]+x[5]for x in dl)
+ spans=[]
+ for label,img,off,a,z in [('direct-caller',db,do,0xf96c,0xfa04),('callee-entry-preservation',db,do,0xc7f0,0xc804),('provided-field-gate-and-array',db,do,0xdb4c,0xdbdc),('literal-pools',db,do,0xd630,0xd644),('candidate-call-wrapper',ub,uo,0x3488,0x34b8),('call-import',db,do,0xa1f4,0xa200),('fork-import',db,do,0xa56c,0xa578),('call-nowait-import',ub,uo,0x1804,0x1810),('waitpid-import',ub,uo,0x1888,0x1894)]:
+  data=img[off(a,z-a):off(a,z-a)+z-a];spans.append({'label':label,'image':'bt_daemon'if img is db else'libutils.so','VA':hex(a),'end_exclusive':hex(z),'file_offset':hex(off(a,z-a)),'bytes_hex':data.hex(),'sha256':sha(data)})
+ def immediate(w):
+  v=w&255;r=((w>>8)&15)*2;return((v>>r)|(v<<(32-r)))&0xffffffff if r else v
+ imports=[]
+ for file,word,stub,name in [(D,dw,0xa1f4,'call'),(D,dw,0xa56c,'fork'),(U,uw,0x1804,'call_nowait'),(U,uw,0x1888,'waitpid')]:
+  a,b,c=[word(stub+i)for i in [0,4,8]];assert a&0xfffff000==0xe28fc000 and b&0xfffff000==0xe28cc000 and c&0xfffff000==0xe5bcf000
+  slot=stub+8+immediate(a)+immediate(b)+(c&0xfff)
+  text=subprocess.check_output(['readelf','-rW',str(file)],text=True)
+  rows=[x.strip()for x in text.splitlines()if'R_ARM_JUMP_SLOT'in x and re.search(r'\b'+name+r'(?:@|\s|$)',x)]
+  assert len(rows)==1 and int(rows[0].split()[0],16)==slot
+  imports.append({'image':file.name,'PLT':hex(stub),'GOT_slot':hex(slot),'name':name,'relocation':rows[0]})
+ dynamic=subprocess.check_output(['readelf','-dW',str(D)],text=True);needed=re.findall(r'\(NEEDED\).*?\[(.*?)\]',dynamic);assert'libutils.so'in needed
+ symbols=subprocess.check_output(['readelf','--dyn-syms','-W',str(U)],text=True);definitions=[x.strip()for x in symbols.splitlines()if re.search(r'\bcall$',x)and' UND 'not in x];assert len(definitions)==1 and int(definitions[0].split()[1],16)==0x3488 and int(definitions[0].split()[2])==48
+ tree=ET.fromstring(xb);extra=tree.find('.//extra');safe={x.tag:x.text for x in extra if x.tag in ['enable','check','nocheck']};assert safe=={'enable':'0','check':'50','nocheck':None}
+ lines=xb.decode().splitlines();xml_lines=[{'line':i,'text':s}for i,s in enumerate(lines,1)if i in [51,52,53,54,55]]
+ source={'images':[{'path':str(D.relative_to(W)),'bytes':len(db),'sha256':sha(db),'ELF32_LE_machine':dh[1],'flags':hex(dh[6])},{'path':str(U.relative_to(W)),'bytes':len(ub),'sha256':sha(ub),'ELF32_LE_machine':uh[1],'flags':hex(uh[6])}],'guard_words':{'bt_daemon':[{'VA':hex(a),'word':hex(v)}for a,v in dg.items()],'libutils.so':[{'VA':hex(a),'word':hex(v)}for a,v in ug.items()]},'literal_pool_joins':[{'instruction':hex(a),'pool':hex(v)}for a,v in pairs.items()],'safe_literals':literals,'request_table':'0x23e8c','candidate_call_definition':definitions[0],'imports':imports,'DT_NEEDED':needed,'limits':'Valid supplied C/mappings and ordinary callee-save/call binding/normal returns remain premises. No original process/provider instruction executes.'}
+ flow={'direct_caller':'0xf96c savesENTRYR0 C atFP-16; fork numeric0 leg forwardsC at0xf9e8→0xc7f0','callee_storage':'C7f0 entryR0 saved atFP-2120','selected_gate':'Earlier admission OPEN; providedC+80 is compared with0 and zero skips selected table via0xdc10','table_words':['literal unzip','literal -d','literal /var/tmp','literal -o','provided word[C+76]','0'],'request':'0xdbc4→call@PLT0xa1f4(address0x23e8c)','candidate_provider':'Under binding to packaged libutils.so call0x3488, originalR0 is forwarded unmodified to opaque call_nowait@0x349c','normal_return':'waitpid is requested with returnedR0, scratch-word address inR1 and0inR2; LDRB[SP+5]returns byte0..255 on normal return, not proved exit/success meaning','caller_test':'Selected caller compares importedcall machine result with−1; source-only, no error-policy/defect conclusion','separate_XML_declaration':{'path':str(X.relative_to(W)),'sha256':sha(xb),'safe_extra_fields':safe,'selected_lines':xml_lines,'join_to_C_fields':'NOT ESTABLISHED'},'extra50_association':'OPEN; no mapping fromXMLcheck50 or this providedC+76 to PROD50.xtz is proved','decryption_trials':0,'recovered_database':False,'execution':{'original_native_vendor_provider':0,'OS_target_network_bus':0,'SQL':0,'models_fixtures':0}}
+ report=f'''# F450 night03: original provided-resource array and qualified local handoff
+
+This new bounded source chain supplies a six-word request containing unzip/-d//var/tmp/-o, a provided field andNULL to an actual import, through a qualified local caller. It does **not** establish that the provided field names PROD50.xtz, that the XML check50 populates it, that an archive is decoded or that a database is recovered. The concrete50 producer/packaging-input gap remains OPEN. No password/key guess, decryption or target execution occurs.
+
+## Original caller and supplied owner
+
+SOURCE.json pins fresh F450 bt_daemon (`85e7ca65b4d1c4e8ab23a93ac532aea568dd06272fefb1b1be928eeba18f3d73`) and packaged libutils.so identities, own ELF32 little-endian ARM machine40/flags0x5000002, nine PT_LOAD-backed source/data/PLT spans and{len(dg)+len(ug)} exact words. Stripped nearest-symbol labels are not used as function names. No other-product layouts or runtime objects are forced.
+
+Original local entry0xf96c stores supplied entryR0 C atFP-16. It requests imported fork at0xf984; its signed negative leg is separate, and the selected numeric-zero branch through0xf9c0/0xf9c8 reloads C at0xf9e4 then BL0xf9e8→0xc7f0. Nonzero skips that call. Ordinary provider/callee-save ABI, valid stack and normal diagnostic returns are premises; numeric0 is source fact, not an observed child process or activation. Callee0xc7f0 saves the same entryR0 atFP-2120. C's actual type, constructor, configuration owner, natural outer admission and lifetime remain unproved.
+
+## Exact selected resource request
+
+After earlier unclosed admission,0xdb4c loads that C;0xdb50 reads its word+80. Comparison0xdb54 and zero branch0xdb58→0xdc10 skip this selected construction when zero. On the retained nonzero leg, original pool loads/stores fill address0x23e8c in order:0literalunzip,+4literal-d,+8literal/var/tmp,+12literal-o,+16the provided word[C+76],+20zero.0xdbc0 loads the table address and0xdbc4 requests imported call through original stub0xa1f4. This exactly constructs a conventional argument-vector-shaped request; the provider is not presumed to execute it, and the supplied word is not read as a string or assigned an archive pathname/secret.
+
+The actual original DT_NEEDED declaration includes libutils.so, whose defined call is0x3488/48bytes. Under that explicit live-binding premise, its complete tiny body preserves originalR0 until0x349c requests call_nowait via a self/import PLT. The call_nowait body stays opaque. The wrapper then requests waitpid with its returnedR0, a zero-initialized scratch-word address inR1 and0inR2;0x34ac uses LDRB[SP+5] for the normal returned byte. Its range0..255 is an instruction-level fact, not certified launch, wait-status, exit-code or extraction-success semantics. The caller's separate CMN against−1 is retained without inventing a full error policy or alleging a defect. Fork, call_nowait, waitpid, logging, loader binding and process implementations are not executed or expanded.
+
+All four original PLT/GOT/JUMP_SLOT relationships are decoded from each own image rather than inferred from names. The source proves the pointer/table forwarding request with ordinary valid-object and normal-call premises, not actual command execution, completion or lifetime safety. Unknown writes/aliases and surrounding control flow remain open; no global absence or universal consumer policy is claimed.
+
+##50 remains a separate declaration and unresolved producer
+
+Original stack_open.xml lines51-55 have extra/enable0, check50 and empty nocheck. Only those whitelisted nonsecret fields/lines are retained. They are on-disk declarations, not active configuration; this packet does **not** map them to C+76 or C+80. The selected table has no separately supplied literal password option. That fact does not identify a packaging key/algorithm or prove no key exists elsewhere. A different discovered unzip site was excluded from this packet rather than conflated with this caller.
+
+The earlier encrypted archive metadata remains inherited:50.xtz SHA256 `824b9b224689afa75d27d5271cbb812d18d0a13915696f1404d21500191bf9d8`, encrypted member50/master.sqlite declared289792bytes/CRC52150069. Its source bytes are not decoded or reinterpreted here. Night01's local copy→SQLite request remains separate, not repeated new coverage or an assumed natural sequence. There is no recovered/generated DB to query or upload. A genuine, qualified source relation from a configuration/packaging producer to the actual archive input is still needed.
+
+## Reproduction and containment
+
+`python3 -B collect_resource_v1.py --check` reproduces raw-byte/pool/branch/PLT/identity and whitelisted XML checks using host readelf only. Author host ARM objdump was used to read selected original spans, never to execute instructions. Initial canonical outputs/script are exclusive and immediately frozen in exact first copies; the index bytes are computed before its own file is opened. No failed canonical generation or overwritten candidate is claimed.
+
+All original/vendor/provider/native/emulator/helper/model/fixture/SQL/target OS/network/bus and decryption executions are0. No shell command, fork, unzip, wait or filesystem operation is invoked on behalf of the firmware. No key, credential, private identifier, raw configuration or adjacent payload values are exported. System/output/receiving/transport/authentication/session/framing/MQTT/libjel and equivalent closed implementations remain opaque. Original images, acquisition records, old packets/ledgers, source registry and repository remain unchanged; parent alone controls any future genuine database archival operation.
+'''
+ out={'SOURCE.json':enc(source),'SPANS.json':enc(spans),'POINTER_FLOW.json':enc(flow),'INPUTS.json':enc({'files':sorted(pins,key=lambda x:x['path'])}),'REPORT.md':report.encode()}
+ out['OUTPUT_MANIFEST.json']=enc({'collector_sha256':sha(Path(__file__).read_bytes()),'files':{n:{'bytes':len(v),'sha256':sha(v)}for n,v in sorted(out.items())},'scope':'Canonical generated members excluding this manifest'})
+ return out
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build()
+ if a.check:
+  for n,b in out.items():assert(O/n).read_bytes()==b,n
+  rows=json.loads((O/'first-candidate/INDEX.json').read_text())['files'];assert len(rows)==7
+  for x in rows:
+   b=(O/'first-candidate'/x['copy']).read_bytes();assert sha(b)==x['sha256']and len(b)==x['bytes'];assert b==(O/x['copy']).read_bytes()
+ else:
+  assert not(O/'first-candidate').exists()and all(not(O/n).exists()for n in out)
+  for n,b in out.items():(O/n).open('xb').write(b)
+  d=O/'first-candidate';d.mkdir();rows=[]
+  for n,b in sorted({**out,Path(__file__).name:Path(__file__).read_bytes()}.items()):
+   (d/n).open('xb').write(b);rows.append({'copy':n,'bytes':len(b),'sha256':sha(b)})
+  index=enc({'scope':'Exact first generated outputs/collector; index excluded and bytes computed before opening','files':rows});(d/'INDEX.json').open('xb').write(index)
+ print(json.dumps({'status':'PASS','outputs':len(out),'source_spans':9,'word_guards':40,'first_copies':7,'original_execution':0,'decryption_trials':0,'recovered_database':False}))
+if __name__=='__main__':main()

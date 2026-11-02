@@ -1,0 +1,10 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+000000000017abe0 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x23c50>:
+  17abe0:	d503245f 	bti	c
+  17abe4:	b9407800 	ldr	w0, [x0, #120]
+  17abe8:	d65f03c0 	ret

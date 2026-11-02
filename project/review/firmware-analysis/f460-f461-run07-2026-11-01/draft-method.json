@@ -1,0 +1,19 @@
+{
+  "scope": "Prepared source-scoped insertion and historical/current boundary clarification; independent documentary review required",
+  "anchor": "## Evidence status and next questions\n",
+  "appendix": "ANALYSIS_APPENDIX_DRAFT.md",
+  "substitutions": [
+    {
+      "before": "The callback captures the supplied initializer receiver as a raw pointer and reaches a local handoff whose body is outside this packet.",
+      "after": "The callback captures the supplied initializer receiver as a raw pointer and reaches a local handoff whose body was outside the initial trigger packet; the later section below follows that boundary."
+    },
+    {
+      "before": "The positive additions include F460's wait/completion, catalogue/selector and local state-trigger factory/admission paths, plus F461's matcher/field/route, selected output-record and address-shape/prefix contracts.",
+      "after": "The positive additions include F460's wait/completion, catalogue/selector, state-trigger and conditional SceneRunner worker paths, plus F461's matcher/field/route, selected output/address-prefix and bounded HAL getter contracts."
+    },
+    {
+      "before": "The next useful source work is broader receiver/scene ownership and admission, root parameter provenance and complete catalogue selection for F460, and main/config selection, natural message producers, remaining address/suffix and diagnostic paths, and later output ownership for F461.",
+      "after": "The next useful source work includes receiver/worker lifecycle and condition/action policy, actual boot/config/update paths and complete catalogue selection for F460; F461 still needs a permitted identity consumer, platform/config provenance, natural message producers and later output/address ownership."
+    }
+  ]
+}

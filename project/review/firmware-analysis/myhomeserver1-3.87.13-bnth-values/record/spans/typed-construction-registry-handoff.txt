@@ -1,0 +1,57 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00053c22:
+   53c22:	f003 fb13 	bl	5724c
+   53c26:	9019      	str	r0, [sp, #100]	@ 0x64
+   53c28:	2058      	movs	r0, #88	@ 0x58
+   53c2a:	f7bc ef28 	blx	10a7c <_Znwj@plt>
+   53c2e:	4603      	mov	r3, r0
+   53c30:	4ac2      	ldr	r2, [pc, #776]	@ (53f3c)
+   53c32:	efc0 0011 	vmov.i32	d16, #1	@ 0x00000001
+   53c36:	1d19      	adds	r1, r3, #4
+   53c38:	9819      	ldr	r0, [sp, #100]	@ 0x64
+   53c3a:	f941 078f 	vst1.32	{d16}, [r1]
+   53c3e:	2103      	movs	r1, #3
+   53c40:	f859 2002 	ldr.w	r2, [r9, r2]
+   53c44:	6159      	str	r1, [r3, #20]
+   53c46:	9918      	ldr	r1, [sp, #96]	@ 0x60
+   53c48:	3208      	adds	r2, #8
+   53c4a:	601a      	str	r2, [r3, #0]
+   53c4c:	4abc      	ldr	r2, [pc, #752]	@ (53f40)
+   53c4e:	f859 2002 	ldr.w	r2, [r9, r2]
+   53c52:	6259      	str	r1, [r3, #36]	@ 0x24
+   53c54:	9904      	ldr	r1, [sp, #16]
+   53c56:	3208      	adds	r2, #8
+   53c58:	621d      	str	r5, [r3, #32]
+   53c5a:	611a      	str	r2, [r3, #16]
+   53c5c:	2200      	movs	r2, #0
+   53c5e:	2500      	movs	r5, #0
+   53c60:	64d9      	str	r1, [r3, #76]	@ 0x4c
+   53c62:	655c      	str	r4, [r3, #84]	@ 0x54
+   53c64:	a94a      	add	r1, sp, #296	@ 0x128
+   53c66:	2400      	movs	r4, #0
+   53c68:	619a      	str	r2, [r3, #24]
+   53c6a:	839a      	strh	r2, [r3, #28]
+   53c6c:	649a      	str	r2, [r3, #72]	@ 0x48
+   53c6e:	651a      	str	r2, [r3, #80]	@ 0x50
+   53c70:	f103 0210 	add.w	r2, r3, #16
+   53c74:	924a      	str	r2, [sp, #296]	@ 0x128
+   53c76:	460a      	mov	r2, r1
+   53c78:	9104      	str	r1, [sp, #16]
+   53c7a:	4659      	mov	r1, fp
+   53c7c:	ed83 9b0c 	vstr	d9, [r3, #48]	@ 0x30
+   53c80:	ed83 8b10 	vstr	d8, [r3, #64]	@ 0x40
+   53c84:	e9c3 450a 	strd	r4, r5, [r3, #40]	@ 0x28
+   53c88:	e9c3 450e 	strd	r4, r5, [r3, #56]	@ 0x38
+   53c8c:	934b      	str	r3, [sp, #300]	@ 0x12c
+   53c8e:	f0ba ff3f 	bl	10eb10
+   53c92:	9904      	ldr	r1, [sp, #16]
+   53c94:	4604      	mov	r4, r0
+   53c96:	6848      	ldr	r0, [r1, #4]
+   53c98:	2800      	cmp	r0, #0
+   53c9a:	f47e adde 	bne.w	5285a
+   53c9e:	f7fe bdde 	b.w	5285e

@@ -1,0 +1,191 @@
+{
+  "scope": "Exact selected final documentary/navigation/reference/review exports, not a self-contained copy of all captured inputs or original firmware",
+  "files": [
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/verification/REPORT.md",
+      "export": "verification/REPORT.txt",
+      "bytes": 3772,
+      "sha256": "64e79871bb0f27aa9371b137247531dcceba162756c664b59128454d685c910c"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/verification/CATALOGUE.md",
+      "export": "verification/CATALOGUE.txt",
+      "bytes": 6865,
+      "sha256": "6419e3f3b82721524dd1a93950bc25a36fdec7213aff5b6040485a7f6e7be5ee"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/verification/CATALOGUE.json",
+      "export": "verification/CATALOGUE.json",
+      "bytes": 90479,
+      "sha256": "bf95392a35a3874945418b1e8e3027c0a9d327434d2129d015d1965cb6b677dd"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/verification/INPUTS.json",
+      "export": "verification/INPUTS.json",
+      "bytes": 122471,
+      "sha256": "6b4e2345c93993a223bf3ee7d9ce4b795fb8702a02342c9557e601d4ac2a725c"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/verification/CAPTURE.json",
+      "export": "verification/CAPTURE.json",
+      "bytes": 324689,
+      "sha256": "fe2b23785bc0c9c747c4fa20e506d83e182a283b487dd130a30e5f7de6f81253"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/verification/HISTORICAL_REFERENCES.json",
+      "export": "verification/HISTORICAL_REFERENCES.json",
+      "bytes": 56969,
+      "sha256": "c5ae02929c35f4ae039ceda9c32dc31d37091d42bda758536eafa5c62d6ef41b"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/verification/SAVED_CHECKS.json",
+      "export": "verification/SAVED_CHECKS.json",
+      "bytes": 30973,
+      "sha256": "eccb429d7e6149124d66070198aa8478a909fa8a5ac2b6f8564a75173983e36d"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/verification/VERSION_NAVIGATION.json",
+      "export": "verification/VERSION_NAVIGATION.json",
+      "bytes": 85754,
+      "sha256": "569c0124684d4803dd274e96836f1ca60d9d67310108ddcf8402c62bc1a1c9df"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/verification/OUTPUT_MANIFEST.json",
+      "export": "verification/OUTPUT_MANIFEST.json",
+      "bytes": 1146,
+      "sha256": "0091eb7e2c1c0ecf2972f6134e6502b311ab40e5138d9e80cde790d23b4b1230"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/verification/build_navigation_v1.py",
+      "export": "verification/build_navigation_v1.py",
+      "bytes": 19665,
+      "sha256": "ade3afc1d7e3725cce99cfae43d745c5f5bd5cc73e2676a917882d6c20ef094d"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/PLAN.json",
+      "export": "plan.json",
+      "bytes": 784,
+      "sha256": "380e79cbbd5c86d3f5f7f3c7ccf0fe9d4ce16b769b31ec5003b94ce4d46b7208"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/NAVIGATION_CHECK.json",
+      "export": "navigation-check.json",
+      "bytes": 369,
+      "sha256": "8c94f6a1a83db2faba70f9c26fd36ca9e8e0ad0099b4a7fb78650061819788d8"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/handoff/HANDOFF_CANDIDATE.md",
+      "export": "handoff.txt",
+      "bytes": 16284,
+      "sha256": "6a61539cd196a2bb691363690811be5c0243db2679952fe6746f1f7860bbc1dc"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/integration/DOCUMENT_PATCH.json",
+      "export": "document-patch.json",
+      "bytes": 9235,
+      "sha256": "fc49b7cf7e756a60ec3a3815e651861d42fb37a7b3240a379dd3f83c2fe6a342"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/integration/REFERENCE_PATCH_CANDIDATE.json",
+      "export": "reference-patch-candidate.json",
+      "bytes": 9235,
+      "sha256": "fc49b7cf7e756a60ec3a3815e651861d42fb37a7b3240a379dd3f83c2fe6a342"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/integration/pre-edit/INDEX.json",
+      "export": "pre-edit-index.json",
+      "bytes": 1303,
+      "sha256": "3d8b28cffdf6911bd222cef37bc301ddb26757ffa47392c80ac10f1e8d679085"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/SYNTHESIS.md",
+      "export": "synthesis.txt",
+      "bytes": 2941,
+      "sha256": "658eff958e46b195da91dcb24565c04171c2d56830ec964a29b471c3e9b9901b"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/COVERAGE.md",
+      "export": "coverage.txt",
+      "bytes": 3599,
+      "sha256": "26126717c05c0fca85207a91c2ecc3a0b39ff8d26011219b7c750b7db0da6977"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/RANKED_REMAINING_QUESTIONS.md",
+      "export": "remaining-questions.txt",
+      "bytes": 2788,
+      "sha256": "b9c0ce8b0e589752a49523573352a49681738820e3cc9c01aceb4216d182e8d6"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/integration/pre-edit/README.md",
+      "export": "pre-edit/README.txt",
+      "bytes": 11061,
+      "sha256": "33a04d33f248a91c67de7a70e25ec2a54766b793b813efddafe40cde14fc17c0"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/integration/pre-edit/f460-f461-deep-analysis.md",
+      "export": "pre-edit/f460-f461-deep-analysis.txt",
+      "bytes": 43781,
+      "sha256": "3195fb54f4d533cbd6ba01eb8956a9141faa14ff687af4bbf43ed21c8b1e5734"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/integration/pre-edit/mhcatalogue-source-profiles.md",
+      "export": "pre-edit/mhcatalogue-source-profiles.txt",
+      "bytes": 15603,
+      "sha256": "bc9859ace2563197d759e9e1ed0471a6ba3fe564be0b61ec8b4797ae547467ba"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/integration/pre-edit/own-dev-0207-f460-myhome-server.md",
+      "export": "pre-edit/own-dev-0207-f460-myhome-server.txt",
+      "bytes": 41934,
+      "sha256": "ed4af14a11813ba1fdc53dfbf131a388b2cf8066fc688888e30da7c158579932"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/integration/pre-edit/own-dev-0208-f461-myhome-server-third-party-integration.md",
+      "export": "pre-edit/own-dev-0208-f461-myhome-server-third-party-integration.txt",
+      "bytes": 39923,
+      "sha256": "89f0a1cd681924ec8bf6b093c4c39d3d037b14cd416547b8111bffecd2eb5323"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/integration/reference-candidates/README.md",
+      "export": "reference-candidates/README.txt",
+      "bytes": 11179,
+      "sha256": "aa7c70da0facac0260d00d38de3235ef4c8656874daf0f21c10c23b6e6d0e1f3"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/integration/reference-candidates/f460-f461-deep-analysis.md",
+      "export": "reference-candidates/f460-f461-deep-analysis.txt",
+      "bytes": 44139,
+      "sha256": "7ecc06f5c9a6381697a2372b12dcaf6d56f1a3f074d9f016d5d6b8b7de578f3e"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/integration/reference-candidates/own-dev-0207-f460-myhome-server.md",
+      "export": "reference-candidates/own-dev-0207-f460-myhome-server.txt",
+      "bytes": 42538,
+      "sha256": "c36fa47758ff05e6e5fbeaf7d4d3549d6fed38e4e032cba299021ee261bf157e"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/integration/reference-candidates/own-dev-0208-f461-myhome-server-third-party-integration.md",
+      "export": "reference-candidates/own-dev-0208-f461-myhome-server-third-party-integration.txt",
+      "bytes": 40583,
+      "sha256": "ebdedce1537eec88678e418addcd076923a7f6997a659998f6c3affb51e3e259"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/reviews/handoff-source-review.md",
+      "export": "handoff-source-review.txt",
+      "bytes": 20009,
+      "sha256": "8d2952a3c8c80e7535e0af767579d66708cd86277dc68371bd1adaa9da50bd91"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/reviews/navigation-review.md",
+      "export": "navigation-review.txt",
+      "bytes": 6100,
+      "sha256": "17597e7aac279d10ff20cd97dbaba868969336ebc40ca5cbf68b09383a7e677e"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-final/reviews/run15-state-correction-review.md",
+      "export": "run15-state-correction-review.txt",
+      "bytes": 3270,
+      "sha256": "5741fb096b7af9cf58fa7c6cd6bf2dcda4611c3769ee603be50cdea81d1eb89f"
+    }
+  ]
+}

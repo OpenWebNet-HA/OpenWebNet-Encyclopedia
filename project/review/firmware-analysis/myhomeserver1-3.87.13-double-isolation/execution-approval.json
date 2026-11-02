@@ -1,0 +1,12 @@
+{
+  "approved": true,
+  "scope": "MHS_JSONCPP_DOUBLE_ONLY",
+  "independent_preflight_pass": true,
+  "harness_sha256": "1ef53f7e04a20cb43c37dfb1cae965bb119bcda167db9b372b58b02bf1cb4a15",
+  "preflight_sha256": "dcc9dffa77e22c8a2ca0ffd1ec5eaed52f6f730bef03d1a5519cf639ebcebad4",
+  "independent_review": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-double-isolation/reviews/isolation-preflight.md",
+  "independent_review_sha256": "2efa4cef0980458c03412c661103518f0f18a2b0b7e85b5f7518890437c149f6",
+  "root_review_sha256": "175c0f6f84ceaf7349209542c5dfbb4e7a1affc858001e209d71f28f78fde6c6",
+  "approved_UTC": "2026-11-01T03:21:19.122779+00:00",
+  "limit": "One frozen canonical run only, no retries/guard changes; complete failures accounted if any visits; isolated provider helper, no targetOS/process/network"
+}

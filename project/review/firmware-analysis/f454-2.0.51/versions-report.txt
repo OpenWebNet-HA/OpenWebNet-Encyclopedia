@@ -1,0 +1,29 @@
+# Run20 — packaged component versions and evidence quality
+
+The normal-image license manifest has769 package records grouped into106 recipe/version pairs; recovery has115 records/66 pairs. These metadata counts include package splits/locales and are neither unique executable counts nor runtime-loaded components. This pass parses that metadata and independently reads selected binary version text through the authoritative ImageVFS; it does not repeat the875-ELF inventory, execute vendor binaries/version scripts, or contact a service.
+
+A material distinction is OpenSSL: the manifest and original libcrypto text identify **1.0.1m (19 Mar2015)** even though the ABI filename is `libssl.so.1.0.0`. The vendor test script `/usr/local/bin/getssllibversion-a-os.sh` derives its result by splitting matching filenames on dots. On the packaged path `/usr/lib/libssl.so.1.0.0`, that pure filename model yields1.0.0. It is not an actual release query. This static script observation does not claim the script was run on hardware.
+
+## Selected versions
+
+“Not listed” below means this recipe is absent from recovery's license metadata; the selected binary path is also checked in the JSON. It is not a proof that recovery can never load externally supplied software. A version token/banner corroborates metadata, while a filename alone is kept as an ABI/path fact.
+
+| Recipe/component | Normal manifest version | Recovery manifest version | Selected normal binary evidence |
+|---|---|---|---|
+| apache2 | 2.4.9 | Not listed | Apache/2.4.9 @file0x4f7d4 /VA0x577d4; Apache/2.4.9 (Unix) @file0x4f83c /VA0x5783c |
+| busybox | 1.22.1 | 1.22.1 | BusyBox v1.22.1 @file0x7d955 /VA0x85955; BusyBox v1.22.1 (2016-02-11 10:31:09 CET) @file0x85425 /VA0x8d425 |
+| cppcms | 1.0.5 | Not listed | Manifest plus present hashed file; no selected version-text match |
+| dropbear | 2014.63 | 2014.63 | dropbear_2014.63 @file0x2f4e0 /VA0x374e0 |
+| eglibc | 2.19 | 2.19 | GNU C Library (EGLIBC) stable release version 2.19 @file0x129a40 /VA0x47679a40 |
+| glib-2.0 | 2.38.2 | 2.38.2 | Manifest plus present hashed file; no selected version-text match |
+| gstreamer | 0.10.36 | Not listed | Manifest plus present hashed file; no selected version-text match |
+| libpcre | 8.36 | Not listed | 8.36 2014-09-26 @file0x215f8 /VA0x479415f8 |
+| gcc-runtime | 4.8.2 | 4.8.2 | Manifest plus present hashed file; no selected version-text match |
+| libxml2 | 2.9.1 | 2.9.1 | Manifest plus present hashed file; no selected version-text match |
+| openssl | 1.0.1m | 1.0.1m | OpenSSL 1.0.1m 19 Mar 2015 @file0x1128d4 /VA0x47b9a8d4 |
+| openvpn | 2.1.3 | Not listed | OpenVPN 2.1.3 arm-poky-linux-gnueabi [SSL] [LZO2] [EPOLL] built on Feb 11 2016 @file0x5d734 /VA0x65734 |
+| php | 5.4.14 | Not listed | 5.4.14 @file0x38c9b0 /VA0x3949b0 |
+| vsftpd | 3.0.0 | 3.0.0 | vsftpd: version 3.0.0 @file0x1369c /VA0x1b69c; vsFTPd 3.0.0 @file0x13b11 /VA0x1bb11 |
+| zlib | 1.2.8 | 1.2.8 | Manifest plus present hashed file; no selected version-text match |
+| sqlite3 | 3.8.3.1 | Not listed | Manifest plus present hashed file; no selected version-text match |
+

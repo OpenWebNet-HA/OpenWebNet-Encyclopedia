@@ -1,0 +1,45 @@
+{
+  "result": "PASS",
+  "scope": "Strict ECV/ESG/Git checks after actual review and identity-validation files existed; no placeholder or checker exemption",
+  "checks": [
+    {
+      "cmd": "python3 -B OpenWebNet-Encyclopedia/project/review/checks/check_esg.py OpenWebNet-Encyclopedia",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "af7475",
+          "wall_time_seconds": 3.976854381,
+          "exit_code": 0,
+          "original_token_count": 21,
+          "output": "STATS human_pages=393 support_pages=147 objective_failures=0 review_candidates=6869\n"
+        }
+      }
+    },
+    {
+      "cmd": "python3 -B OpenWebNet-Encyclopedia/project/review/checks/check_ecv.py OpenWebNet-Encyclopedia",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "9e0631",
+          "wall_time_seconds": 1.683690324,
+          "exit_code": 0,
+          "original_token_count": 16,
+          "output": "STATS human_pages=393 objective_failures=0 review_candidates=14\n"
+        }
+      }
+    },
+    {
+      "cmd": "git -C OpenWebNet-Encyclopedia diff --check",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "02bd82",
+          "wall_time_seconds": 0.00001081,
+          "exit_code": 0,
+          "original_token_count": 0,
+          "output": ""
+        }
+      }
+    }
+  ]
+}

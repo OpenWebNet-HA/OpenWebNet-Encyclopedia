@@ -1,0 +1,95 @@
+{
+  "checkpoint": "run25",
+  "status": "Two independently reviewed static WHO25 source areas plus curated-reference reading; documentary integration and final verification recorded separately",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "static_translator_report",
+      "research_path": "work/mh202-firmware/research/2026-10-30/who25/run25-tr/REPORT.md",
+      "source_sha256": "5764447ab2b1928fe93a0861ef1dad22b973688a7d6e2e393e316313aae7f53b",
+      "published": "run25-tr-report.txt",
+      "published_sha256": "5764447ab2b1928fe93a0861ef1dad22b973688a7d6e2e393e316313aae7f53b"
+    },
+    {
+      "role": "independent_source_review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run25/tr-review.md",
+      "source_sha256": "f363407e447d7ffdd8a4d6894b54560721e1088106f81cc5212663d9609dfe6c",
+      "published": "run25-tr-review.txt",
+      "published_sha256": "f363407e447d7ffdd8a4d6894b54560721e1088106f81cc5212663d9609dfe6c"
+    },
+    {
+      "role": "static_stm_report",
+      "research_path": "work/mh202-firmware/research/2026-10-30/who25/run25-stm/REPORT.md",
+      "source_sha256": "22e23d353a1ef956a69a4c2c80f7e510124872af602be0b545e06dcca3cd06b5",
+      "published": "run25-stm-report.txt",
+      "published_sha256": "22e23d353a1ef956a69a4c2c80f7e510124872af602be0b545e06dcca3cd06b5"
+    },
+    {
+      "role": "independent_source_review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run25/stm-review.md",
+      "source_sha256": "ccb3b6c0abd4b419ca59e012c6beb4ff45de8fbae85962dc1b08877bc05eebaf",
+      "published": "run25-stm-review.txt",
+      "published_sha256": "ccb3b6c0abd4b419ca59e012c6beb4ff45de8fbae85962dc1b08877bc05eebaf"
+    },
+    {
+      "role": "curated_reference_boundary_reading_not_new_source_or_oracle_review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run25/REFERENCE_BOUNDARIES.md",
+      "source_sha256": "e0339217ccf75a1408c591f714a300bc127e1ec0a8a903f766faa2f3fb8d5b95",
+      "published": "run25-reference-boundaries.txt",
+      "published_sha256": "e0339217ccf75a1408c591f714a300bc127e1ec0a8a903f766faa2f3fb8d5b95"
+    },
+    {
+      "role": "independent_documentary_reference_review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run25/reference-review.md",
+      "source_sha256": "54e02dd862c99b5fe3b851ac9c0a76025997fc45b83319d2024afc9fe4774b07",
+      "published": "run25-reference-review.txt",
+      "published_sha256": "54e02dd862c99b5fe3b851ac9c0a76025997fc45b83319d2024afc9fe4774b07"
+    },
+    {
+      "role": "exact_pre_edit_reference_pins",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run25/reference-locators.json",
+      "source_sha256": "9d3a9195c7155b57b2277574a3878e8a800204749f43b9508624daf250cd1ea7",
+      "published": "run25-reference-locators.json",
+      "published_sha256": "9d3a9195c7155b57b2277574a3878e8a800204749f43b9508624daf250cd1ea7"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/who25/run25-tr/collect_translation_v1.py",
+      "sha256": "b0f4eb53aa4ab863eccdcbd727746dc197b6338afa7f6605417f462c7a2148be",
+      "method": "static original source and explicit finite host ledgers; no original execution"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/who25/run25-stm/collect_stm_v1.py",
+      "sha256": "7fd7c54ae4caf7e29ffcfffa56792f95a58522d9da9d20e90c3493fcc975b078",
+      "method": "static original source and explicit finite host ledgers; no original execution"
+    }
+  ],
+  "new_original_execution": 0,
+  "generated_outputs": {
+    "translator_including_manifest": 23,
+    "stm_including_manifest": 20,
+    "total": 43
+  },
+  "finite_host_cases": 13,
+  "canonical_execution": {
+    "new_corpora": 0,
+    "corpora": 14,
+    "top_level_entries": 68,
+    "original_instruction_visits": 31581,
+    "primitive_callbacks": 3140,
+    "linker_redirect_callbacks": 128,
+    "exit_boundaries": 24,
+    "selector_read_stop_boundaries": 2,
+    "code_hook_visits": 34875,
+    "firmware_processes": 0,
+    "target_OS_calls": 0
+  },
+  "limits": [
+    "Four translator examples independent, not native roundtrip/parser/domain/physical proof",
+    "Own24-byte context/ID-status/timer/API requests do not establish natural admitted exchanges or measured timing",
+    "Existing public variants/oracle-v1-v3/physical captures read only as curated context, not newly verified or rerun",
+    "Earlier frozen draft/reports/native corpora and missing-history limits preserved"
+  ]
+}

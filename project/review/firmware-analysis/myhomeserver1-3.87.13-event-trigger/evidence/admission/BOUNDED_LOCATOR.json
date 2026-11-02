@@ -1,0 +1,11 @@
+{
+  "encodings": "selected ThumbBL/B.W forms only",
+  "end_exclusive": "0x113fb0",
+  "scope": "Only retained direct caller validated; not indirect-call/global-absence proof.",
+  "start": "0x11880",
+  "stride": 2,
+  "syntactic_candidates": [
+    "0x53a92"
+  ],
+  "target": "0xee708"
+}

@@ -1,0 +1,37 @@
+{
+  "canonical_guest_attempts": 0,
+  "changes": [
+    "PLT redirect ARMmode/size4 guard",
+    "private EXIT Thumbmode/size2 guard",
+    "actual UC_MEM_READ/WRITE constants and unexpectedevent STOP",
+    "NEW v3 plan/preflight snapshot/history names"
+  ],
+  "failures": 0,
+  "history": "Actual prior drafts retained, no hypothetical recovered historical bytes.",
+  "new_plan_sha256": "bf9d23f03b1d2b8423652381d47894c61633a4245a20fc99d441199a55b83826",
+  "new_v3_sha256": "1ef53f7e04a20cb43c37dfb1cae965bb119bcda167db9b372b58b02bf1cb4a15",
+  "original_execution": 0,
+  "parent_pre_v3_snapshot": {
+    "path": "../integration/pre-v3-harness/INDEX.json",
+    "sha256": "1d83da4bff0d211bfb82ebb245e15fd2e8a0dfca899b6cd94bef01d121bcffd5"
+  },
+  "stage": "before any static generation or guest execution",
+  "unchanged_actual_stage_files": {
+    "DRAFT_HISTORY.json": {
+      "bytes": 1157,
+      "sha256": "b808c84b7cc63938f1b3a3bb699e2482c6ed66e52d4adc22cdec50302ba6a9a8"
+    },
+    "REPORT.PLAN.md": {
+      "bytes": 8683,
+      "sha256": "69545b3e3989119f3226347e0916b88fa97672a4f06f569ea17edf2b01da6e60"
+    },
+    "isolate_double_v1.py": {
+      "bytes": 15985,
+      "sha256": "5a9c7288d9e99d1c42d6e8a3c4863f922e1e10799af43c45a1b4969d23f68c01"
+    },
+    "isolate_double_v2.py": {
+      "bytes": 17054,
+      "sha256": "2a0d92654a132921dea699a32c18cd45d7353f2b880303c52881fe6e73ebbe3f"
+    }
+  }
+}

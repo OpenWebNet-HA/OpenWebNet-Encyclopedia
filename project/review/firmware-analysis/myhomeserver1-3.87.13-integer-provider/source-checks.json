@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "command": "provider/collect_integer_v1.py --check",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "9ca7b7",
+          "wall_time_seconds": 0.057043885,
+          "exit_code": 0,
+          "original_token_count": 23,
+          "output": "{\"check\": true, \"outputs\": 13, \"spans\": 9, \"guards\": 20, \"original_execution_additions\": 0}\n"
+        }
+      }
+    }
+  ],
+  "scope": "Readonly candidate-provider source reproduction only; no numeric fixtures or original execution"
+}

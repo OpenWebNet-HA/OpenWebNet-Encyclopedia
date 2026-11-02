@@ -1,0 +1,155 @@
+#!/usr/bin/env python3
+"""One original local resource read/token prefix; no target/provider/model execution."""
+import sys
+sys.dont_write_bytecode=True
+import argparse
+import hashlib
+import json
+import re
+import struct
+import subprocess
+from pathlib import Path
+
+HERE=Path(__file__).resolve().parent
+ROOT=next(p for p in HERE.parents if(p/'work/mh200n-firmware').is_dir())
+BASE=Path('work/mh200n-firmware/1.1.8')
+GUARDS={
+ 0xa1dc:0xe92d41f0,0xa1e4:0xe1a04000,0xa1e8:0xe1a08001,0xa1ec:0xe1a07002,
+ 0xa1f8:0xe24ddb01,0xa21c:0xe1a00004,0xa220:0xe3a01000,0xa224:0xebfffa48,
+ 0xa228:0xe3a01000,0xa22c:0xe1a06000,0xa230:0xe3a02b01,0xa234:0xe1a0000d,
+ 0xa238:0xebfffa64,0xa23c:0xe1a00006,0xa240:0xe1a0100d,0xa244:0xe3a02b01,
+ 0xa248:0xebfffa6c,0xa254:0xe1a0400d,0xa278:0xe1a00004,0xa27c:0xe59f1140,
+ 0xa280:0xebfffaac,0xa284:0xe3500000,0xa288:0x02800001,0xa28c:0x0a000045,
+ 0xa290:0xe3a00000,0xa294:0xe59f1128,0xa298:0xebfffaa6,0xa29c:0xe3500000,
+ 0xa2a0:0x02800002,0xa2a4:0x0a00003f,0xa3a8:0xe28ddb01,0xa3ac:0xe8bd81f0,
+ 0xa424:0xebffff6c,
+}
+SPANS=[('new-consumer-prefix',0xa1dc,0xa2a8),('selected-return-epilogue',0xa3a8,0xa3b0),
+       ('delimiter-pool',0xa3c4,0xa3c8),('inherited-local-caller-context',0xa3ec,0xa430),
+       ('open-PLT',0x8b4c,0x8b58),('memset-PLT',0x8bd0,0x8bdc),
+       ('read-PLT',0x8c00,0x8c0c),('strtok-PLT',0x8d38,0x8d44)]
+
+
+def sha(b):return hashlib.sha256(b).hexdigest()
+def enc(x):return(json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+def exclusive(p,b):
+ p.parent.mkdir(parents=True,exist_ok=True)
+ with p.open('xb')as f:f.write(b)
+
+
+def build():
+ pins={}
+ def read(p):
+  p=Path(p);f=ROOT/p;assert not p.is_absolute()and '..'not in p.parts and f.is_file()and not f.is_symlink()and ROOT in f.resolve().parents
+  b=f.read_bytes();pins[str(p)]={'path':str(p),'bytes':len(b),'sha256':sha(b)};return b
+ manifest=json.loads(read(BASE/'analysis/normal-regular-files.json'))
+ p=BASE/'analysis/rootfs/bin/bt_start';b=read(p);assert len(b)==manifest['bin/bt_start']['bytes']and sha(b)==manifest['bin/bt_start']['sha256']
+ assert sha(b)=='63c0b0a9b6f67e6564f23f5ffcf18c3716bc27dc9b0b03009324af0fa0a21d48'
+ assert b[:8]==bytes.fromhex('7f454c4601010161')
+ h=struct.unpack_from('<HHIIIIIHHHHHH',b,16);assert h[0]==2 and h[1]==40 and h[6]==0x202 and h[8]==32
+ ph=[struct.unpack_from('<8I',b,h[4]+i*h[8])for i in range(h[9])]
+ loads=[{'offset':s[1],'VA':s[2],'file_bytes':s[4],'memory_bytes':s[5],'flags':s[6]}for s in ph if s[0]==1]
+ def off(va,n=4):
+  xs=[s['offset']+va-s['VA']for s in loads if s['VA']<=va and va+n<=s['VA']+s['file_bytes']];assert len(xs)==1,hex(va);return xs[0]
+ def word(v):return struct.unpack_from('<I',b,off(v))[0]
+ def branch(v,link=True):
+  w=word(v);assert w&0x0f000000==(0x0b000000 if link else 0x0a000000)
+  x=w&0xffffff;x-=1<<24 if x&(1<<23)else 0;return v+8+x*4
+ def pool(v):
+  w=word(v);assert w&0x0f7f0000==0x051f0000
+  return v+8+(w&0xfff)*(1 if w&(1<<23)else -1)
+ for v,w in GUARDS.items():assert word(v)==w,(hex(v),hex(word(v)))
+ calls={0xa224:0x8b4c,0xa238:0x8bd0,0xa248:0x8c00,0xa280:0x8d38,0xa298:0x8d38,0xa424:0xa1dc}
+ for v,t in calls.items():assert branch(v)==t
+ assert branch(0xa28c,False)==branch(0xa2a4,False)==0xa3a8
+ assert pool(0xa27c)==pool(0xa294)==0xa3c4 and word(0xa3c4)==0xe488
+ assert b[off(0xe488,2):off(0xe488,2)+2]==b'*\0'
+ rel=subprocess.check_output(['readelf','-rW',str(ROOT/p)],text=True)
+ imports=[]
+ for name,plt,slot in [('open',0x8b4c,0x186f4),('memset',0x8bd0,0x18720),('read',0x8c00,0x18730),('strtok',0x8d38,0x18798)]:
+  x,y,z=[word(plt+i)for i in [0,4,8]];assert x==0xe28fc600 and y==0xe28cca0f and z&0xfffff000==0xe5bcf000
+  assert plt+8+0xf000+(z&0xfff)==slot
+  rows=[l.strip()for l in rel.splitlines()if'R_ARM_JUMP_SLOT'in l and re.search(r'\b'+name+r'@GLIBC_',l)]
+  assert len(rows)==1 and int(rows[0].split()[0],16)==slot
+  imports.append({'name':name,'PLT_VA':hex(plt),'GOT_slot':hex(slot),'PLT_words':[hex(x),hex(y),hex(z)],'original_relocation':rows[0]})
+ spans=[]
+ for label,start,end in SPANS:
+  o=off(start,end-start);raw=b[o:o+end-start]
+  asm=subprocess.check_output(['objdump','-d','-m','arm',f'--start-address={start}',f'--stop-address={end}',str(ROOT/p)],text=True)
+  spans.append({'label':label,'start_VA':hex(start),'end_exclusive_VA':hex(end),'file_offset':hex(o),'bytes_hex':raw.hex(),'sha256':sha(raw),'host_disassembly':asm})
+ for n in ['REPORT.md','SOURCE.json']:
+  read(BASE/'research/2026-11-01-night01-resources'/n)
+ read('OpenWebNet-Encyclopedia/devices/definitions/own-dev-0131-mh200n-scenario-programmer.md')
+ source={'original':pins[str(p)],'header52_hex':b[:52].hex(),'PT_LOAD':loads,'spans':spans,
+         'guards':[{'VA':hex(v),'word':hex(w)}for v,w in sorted(GUARDS.items())],
+         'direct_calls':[{'VA':hex(v),'target':hex(t)}for v,t in calls.items()],
+         'selected_return_branch_targets':[{'VA':'0xa28c','target':'0xa3a8'},{'VA':'0xa2a4','target':'0xa3a8'}],
+         'delimiter':{'VA':'0xe488','file_offset':hex(off(0xe488,2)),'exact_hex':'2a00','display':'*','pool':'0xa3c4'},'imports':imports}
+ flow={'scope':'One actual provided-path resource-consumer prefix; no original data supplied or read',
+       'inherited_argument':'Prior selected same-cell load→0xa3ec→0xa424 passes its providedR0 into0xa1dc under prior source/normal-return/no-mutation premises',
+       'preserved_arguments':{'R4':'provided pathname','R8':'provided R1 output address','R7':'provided R2 output address'},
+       'requests':[{'VA':'0xa224','API':'open','R0':'provided pathname','R1':0,'saved_return':'R6'},
+                   {'VA':'0xa238','API':'memset','R0':'SP buffer','R1':0,'R2':1024},
+                   {'VA':'0xa248','API':'read','R0':'saved open machine return R6','R1':'same SP buffer','R2':1024},
+                   {'VA':'0xa280','API':'strtok','R0':'same buffer','R1':'compiled * delimiter'},
+                   {'VA':'0xa298','API':'strtok','R0':0,'R1':'same delimiter'}],
+       'selected_missing_token_returns':{'first':1,'second':2,'epilogue':'0xa3a8 restores1024-byte stack allocation and saved registers'},
+       'open_limits':['No explicit check on open/read machine result before selected token requests in this bounded prefix','Valid FD/buffer/string state and normal C provider semantics are premises','Subsequent tokens/field outputs/full grammar, cleanup and success return remain unexamined','No copy/install/mount/partition or current runtime data claim']}
+ report=f'''# MH200N 1.1.8 night03 — actual local resource read and first-token gates
+
+This packet follows the prior source-selected resource pointer into its **actual local consumer0xa1dc**. The bounded new result is provided pathname→open request→same-return/same-buffer read request→first two token-presence gates and selected numeric returns. It does not recover or execute a resource, prove its complete grammar, copy/install an application, identify a live partition or establish startup success. All original/vendor/provider/native/target/OS/device/network/bus operations, mounts, clocks, SQL, semantic models and fixtures are0.
+
+## Exact source and inherited caller boundary
+
+Original MH200N1.1.8 normal `/bin/bt_start`,36080 bytes/SHA256 `63c0b0a9b6f67e6564f23f5ffcf18c3716bc27dc9b0b03009324af0fa0a21d48`, is freshly mapped ELF32 little-endian ARM EXEC, raw flags0x202. Exact original PT_LOADs, code/PLT bytes, words and relocation identities are retained. No modern ARM/MHS/MH202 layout, script language or provider implementation is transferred. Curated OWN-DEV-0131 supplies scenario-programmer product context only.
+
+The unchanged night01 source already proves a selected later main fragment loads the resource-path cell intoR0 and calls0xa3ec. Its bounded prefix retains thatR0, supplies two zero-initialized local output-word addresses inR1/R2 and calls0xa1dc at0xa424. That caller span is re-pinned as **inherited context**, not repeated marker/cell coverage. The earlier/later main admission, actually chosen resource path, no relevant mutation/aliases, valid provided addresses, callee-save ABI and normal returns remain premises. F453AV's separate module request is not used to infer this consumer's behavior.
+
+## Actual pathname, descriptor-return and buffer arguments
+
+Entry0xa1dc saves suppliedR0 inR4 at0xa1e4, suppliedR1 inR8 and suppliedR2 inR7, then allocates1024 stack bytes at0xa1f8. A selected diagnostic path remains an opaque normal-return prerequisite; it does not become a readiness result or data observation.
+
+At0xa21c the consumer reloads the SAME provided pathname intoR0, setsR1=0 and requests actual **open@GLIBC_2.0** at0xa224. Its returned machine word is retained inR6 at0xa22c. The source requests **memset(bufferSP,0,1024)** at0xa238, then **read(savedR6,sameSPbuffer,1024)** at0xa248. Exact register assignments establish the argument chain; no file/device open or read is performed by this analysis.
+
+Within this selected prefix there is **no explicit test of the open or read machine result before the later token requests**. This is a bounded source fact, not a global failure-policy or defect claim. A valid descriptor, usable/terminated buffer, appropriate actual data and normal provider semantics are not supplied by the source request alone. Zeroing before a possible1024-byte read is not promoted into an unconditional C-string, complete read, valid resource or safety guarantee. No arbitrary data fixture is injected.
+
+## Same-buffer tokenizer and exact selected returns
+
+The consumer retains the sameSP buffer pointer inR4 at0xa254, supplies it asR0 at0xa278, and loads literal **`*`** through pool0xa3c4→0xe488 intoR1. The original two bytes are2a00.0xa280 requests **strtok@GLIBC_2.0**. CMP0 at0xa284 followed by ADDEQ R0,R0,#1 and BEQ0xa28c selects numeric**1** through common epilogue0xa3a8 when the first request returnsNULL.
+
+On the nonnull selected continuation,0xa290 setsR0=0, reloads the SAME delimiter and0xa298 requests strtok again. CMP0/ADDEQ #2/BEQ at0xa29c..0xa2a4 select numeric**2** through the SAME epilogue when that request returnsNULL. Under ordinary strtok continuation semantics this is the next token request. These are local machine-return codes, not OS errors, child exits, application modes or public protocol statuses.
+
+The epilogue0xa3a8 restores the1024-byte allocation then returns saved registers/PC. The nonnull second-token continuation and all subsequent token-field stores, full resource format/validation, output values, complete cleanup and successful-return semantics remain **unexamined**. No token content, key, private configuration, resource body or later diagnostic string is exported. The inspected prefix does not establish raw protocol acceptance, script compilation, archive compatibility or installation.
+
+## Actual imports, evidence and reproducibility
+
+The four calls are connected to actual original ARM PLT/GOT/JUMP_SLOT identities for open/memset/read/strtok, not nearest disassembler names. Effective binding and ordinary ARM32 call/provider conventions remain premises; provider bodies, target OS behavior and actual access outcomes remain opaque. SOURCE.json supplies{len(SPANS)} exact spans (including one inherited caller context),{len(GUARDS)} fixed word guards,6 direct-call targets, two selected branch targets, delimiter bytes/pool and4 original import proofs. ARGUMENT_FLOW.json keeps provided arguments, buffer and numeric-return namespaces distinct.
+
+Reproduce with `python3 -B collect_consumer_v1.py --check`: host readelf/disassembly/hash/byte verification only. It never executes original/provider/emulator code or reads a target/host device path. Initial output generation refuses overwrites and freezes exact report/collector/outputs immediately, with an index precomputed before opening itself. No failed canonical generation or generated overwrite occurred. Earlier reports/source trees/ledgers and public/source-registry/repository/remote records remain unchanged.
+
+The next permitted gap is a separately bounded subsequent resource-field/output contract, then a source-backed relationship to an actual local application-file/copy request. The current prefix and prior selected path do not force copy/install behavior or naturally configured resource state. Output/receiving/transport/authentication/session/framing/MQTT/libjel and equivalent closed bodies remain opaque. All new original execution remains0.
+'''
+ out={'SOURCE.json':enc(source),'ARGUMENT_FLOW.json':enc(flow),'INPUTS.json':enc({'files':sorted(pins.values(),key=lambda x:x['path'])}),'REPORT.md':report.encode()}
+ out['OUTPUT_MANIFEST.json']=enc({'scope':'Generated members excluding manifest itself','files':{n:{'bytes':len(v),'sha256':sha(v)}for n,v in sorted(out.items())}})
+ return out
+
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args()
+ names=['SOURCE.json','ARGUMENT_FLOW.json','INPUTS.json','REPORT.md','OUTPUT_MANIFEST.json']
+ if not a.check:assert not any((HERE/n).exists()for n in names)and not(HERE/'first-candidate').exists()
+ out=build()
+ if a.check:
+  for n,b in out.items():assert(HERE/n).read_bytes()==b,n
+  for x in json.loads((HERE/'first-candidate/INDEX.json').read_text())['files']:
+   b=(HERE/'first-candidate'/x['copy']).read_bytes();assert len(b)==x['bytes']and sha(b)==x['sha256']and b==(HERE/x['copy']).read_bytes()
+ else:
+  for n,b in out.items():exclusive(HERE/n,b)
+  copies={**out,'collect_consumer_v1.py':Path(__file__).read_bytes()};idx={'scope':'Exact first outputs/collector; index excludes itself','files':[{'copy':n,'bytes':len(b),'sha256':sha(b)}for n,b in sorted(copies.items())]}
+  p=HERE/'first-candidate';p.mkdir()
+  for n,b in copies.items():exclusive(p/n,b)
+  exclusive(p/'INDEX.json',enc(idx))
+ print(json.dumps({'status':'PASS','outputs':len(out),'spans':len(SPANS),'guards':len(GUARDS),'original_execution':0}))
+
+
+if __name__=='__main__':main()

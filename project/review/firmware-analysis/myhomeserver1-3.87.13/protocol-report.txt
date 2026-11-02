@@ -1,0 +1,99 @@
+# MyHOMEServer1 3.87.13: first static protocol/functional pass
+
+This image contains two distinct OPEN implementation families and concrete auxiliary/automation translation registration code. The selected COSO auxiliary route can be followed from its descriptor relocation through the local numeric dispatch and body construction. This is packaged implementation evidence, not an observed installation, accepted command, bus transaction, or exhaustive support table.
+
+Original ARM/Thumb execution: **0**. Emulation, services, vendor processes, network/bus access and target system calls: **0**. The two saved examples are explicitly host reconstructions from selected source predicates. No older firmware object layout, harness, command matrix or native-execution ledger was imported.
+
+## Scope and identities
+
+All image paths below refer to the original normal image; recovery comparisons are explicit. Local inputs live under `work/myhomeserver1-firmware/3.87.13/analysis/rootfs/` and `analysis/recovery/`. Only this new `research/2026-10-31/protocol/` directory was written. The package/root README and canonical `OWN-DEV-0199` description were read for scope; its reusable catalogue Object216 label is not implementation evidence for F454 audiovisual functions or a dedicated AI bus role.
+
+| Original image path | SHA-256 |
+| --- | --- |
+| `/home/bticino/bin/bt_device` | `f237866f0379eb180dd8c532d22e4f3b66f8156aa4ce8ac420e4a460883c0f4c` |
+| `/home/bticino/bin/openserver` | `d55fae40b7a6ac1a433ac7ea556387d14a9c8e1080780f74c88fd54e4a425748` |
+| `/home/bticino/bin/coso` | `f470a622df6dd32ded11d347cb198bdc2aa8878423d761066495a1607c2fb095` |
+| `/home/bticino/lib/libdiag.so.1.0.0` | `5f76086203faf31eac8545a06388415c9c3be4d6102b4e8646080135484f9073` |
+| `/home/bticino/libcoso/libcoso.so` | `a53c9f9624ecdc9c5482f6df9611b084890d410f793bc11e669b84e4b5d78056` |
+| `/home/bticino/libcoso/libplug_aux_tr.so` | `8f67ba2520583558539ee55bb1cf36bac4f2cbbf4c31b0f8e1342e26e140eb3e` |
+| `/home/bticino/libcoso/libplug_automation_tr.so` | `899a9840bea137ac27b5ab0c646fb80f9f802318f0032c835198e0e28d448c6a` |
+| `/usr/lib/libopenmsg.so.1.0.0` | `8d1ac556922c280688b0e424737682d9ec2caa83b6783b621677fcdba153c8e1` |
+| `/usr/lib/libutils.so.1.1.0` | `0b1049f66e1b2944c9859078ba14c5af0d558f327725d6b94345c81e0343982e` |
+| `/usr/lib/libcommon.so.1.0.0` | `b2e72a4f5f8c3d8089a95a276b5b3bf601b09a9a50486d006816037176f68893` |
+
+`ELF_INVENTORY.v1.json` covers all19 ordinary files in `/home/bticino/bin`, all13 in `/home/bticino/lib`, all7 in `/home/bticino/libcoso`, and five named additional providers in `/usr/lib`:44 original ELF objects. All44 are byte-identical to the corresponding recovery objects. This comparison does not cover every ELF in either filesystem or make the overall normal/recovery trees equivalent.
+
+All44 selected objects are ELF32 little-endian ARM, EABI5 hard-float according to their original ELF headers (`Flags 0x5000400`). Export values with low bit1 denote Thumb entrypoints: report instruction addresses clear that bit. For example `buf_to_openmsg` exports `0x3b4d` and its first instruction is at `0x3b4c`. ARM COSO plugin functions have even entry values. No ABI conclusions are taken from filenames alone.
+
+## Parser and provider separation
+
+`bt_device` directly declares `libopen.so.1`, `libdiag.so.1`, `libwhere.so.1` and `libbase.so.1` among its `DT_NEEDED` entries. It imports C++ `openwebnet::CreateMsgOpen(char*,int)` and diagnostic/WHERE classes. Selected definitions are:
+
+| Symbol | Packaged defining object | Export value |
+| --- | --- | --- |
+| `openwebnet::CreateMsgOpen(char*,int)` | `libopen.so.1.0.0` | `0xd909` |
+| Same name | `/usr/lib/libcommon.so.1.0.0` | `0x24d5d` |
+| `advanced_receive_from_scs` | `libbase.so.1.0.0` | `0x67b5` |
+| Same name | `/usr/lib/libcommon.so.1.0.0` | `0x16a95` |
+| `send_frame_toscsserver` | `libbase.so.1.0.0` | `0x6159` |
+| Same name | `/usr/lib/libcommon.so.1.0.0` | `0x1606d` |
+| `OPN_OpenScsDiagTranslator` constructor | `libdiag.so.1.0.0` | `0x1d9dd` |
+| `OPN_OpenScsWhere::getScsAddr(openwebnet&)` | `libwhere.so.1.0.0` | `0x4199` |
+
+These are dynamic declarations/definitions, not an effective runtime binding experiment. Selected original symlink targets are retained in `IMAGE_SYMLINKS.v1.json`; no host `ldd`, target loader or preload/interposition experiment ran. Search paths, complete transitive lookup order and actual live overrides remain unclosed. The repeated names require that distinction.
+
+In contrast, `openserver` directly declares `libopenmsg.so.1`, `libownv3msg.so.1`, `liblcm.so.1` and other providers; its direct dependency list does not contain `libopen.so.1`. COSO directly declares `libopenmsg.so.1` and `libcoso.so`. This establishes separate packaged parser/dependency families; it does not prove every possible transitive dependency, protocol dialect or active route.
+
+The fresh C parser object is materially different from prior studied layouts. `/usr/lib/libopenmsg.so.1.0.0::new_open_msg` at `0x3a24..0x3a78` calls `g_malloc0(56)` (`0x3a30..0x3a3c`) and initializes the discriminator at object+52 (`0x3a64`). The ordinary parser branch stores literal1 there at `0x3c28..0x3c32`, and stores a duplicated base field at+8 at `0x3c92`; its parameter list is at+12 (`0x3ccc`). The allocation, discriminator and normal-branch writes are original code, not a supplied parser result. Full input acceptance was not executed or modeled. Helper calls and later validation remain real prerequisites.
+
+## Original COSO registration, not a filename support catalogue
+
+The configured COSO `LibDir` is `/home/bticino/libcoso` and `PlugCfgDir` is `/home/bticino/cfg/coso_plugins` (`coso_cfg`, lines18-19). The ordinary plugin tree contains core, scs, debug, aux TR/STM and automation TR/STM files. No packaged scenario plugin was found in this **complete7-file directory enumeration**; that is not a statement about other providers or the product's scenario implementation.
+
+The vendor plugins also export many12-byte descriptor-name objects such as scenario, thermo and multi names. Their appearance inside another plugin's symbol table is not equivalent to a separately packaged implementation or an executed registration for those features.
+
+Two actual initializer bodies close more than the names:
+
+| Provider / original PCs | Established local action |
+| --- | --- |
+| `libplug_aux_tr.so::init_plugin`, `0x1330..0x1380` | Appends literal9 to descriptor+52 and descriptor+56, stores type2 at+32, calls `register_translation`. GOT relocation `0x13088` names descriptor `aux_tr_tr` at `0x130a0`; ABS32 relocation at descriptor+40 (`0x130c8`) names `aux_tr_translate` (`0x18d4`). |
+| `libplug_automation_tr.so::init_plugin`, `0x17c8..0x1814` | Appends literal1 to descriptor+52 and literal2 to descriptor+56; descriptor+32 is2. GOT relocation `0x170d4` names descriptor `automation_tr` at `0x170ec`; ABS32 at+36 (`0x17110`) names `automation_tr_init` (`0x2f70`), and+40 (`0x17114`) names `automation_tr_translate` (`0x3140`). |
+| Core `libcoso.so::register_translation`, `0x1ee0..0x1f74` | Calls unregister, prepends descriptor to manager+20, stores the manager at descriptor+64 and conditionally invokes descriptor+36. |
+
+Thus auxiliary registration contains9 in both directional criteria lists; automation registration contains reverse-side1 and forward-side2. The auxiliary formatting below independently uses literal WHO9. The automation values are registration criteria, not a reconstructed full WHO2 command table or evidence of movement. Actual loader invocation/order, successful provider prerequisites, active registration, outer matching and STM state are not executed here. The initializer bodies contain earlier version/configuration gates, retained in the auxiliary init span; reaching registration remains a premise.
+
+## Selected auxiliary route: exact local bodies
+
+`aux_tr_translate` at `0x18d4..0x1928` selects `aux_tr_scs2open` only for numeric callback axes `(r0,r1)=(1,2)` and `aux_tr_open2scs` only for `(2,1)`; other pairs return without invoking these branches. Those numbers are callback direction/representation axes, not WHO1/WHO2. The source input envelope is another object from the parsed object. Here envelope+56 selects representation2 or3, and the parsed object's+52 discriminator is separate. Their shared numeric values must not be conflated.
+
+For the selected forward branch (`0x16fc..0x18c8`):
+
+- Envelope representation3 supplies an already parsed pointer at+0. Representation2 instead calls original `buf_to_openmsg` at `0x17dc`, frees the former ASCII buffer, and replaces envelope+0/+56 with the parser result and literal3. Parser return/acceptance is not supplied by this analysis.
+- Parsed discriminator must equal1 at `0x1734..0x1740`. Decimal conversion of field+8 and field+16 occurs at `0x1758..0x1774`. These are the selected WHAT/WHERE text slots used by this local plain-command route; base-field/parameter parsing is not flattened into proof for arbitrary complex fields.
+- A switch on converted field+8 values0..10 chooses the two trailing bytes; `0x1730..0x1738` initializes first bytes `b0 00`. At `0x1804` the selected low-nibble code is ORed with converted field+16 shifted left4. The routine converts four bytes to ASCII through `array_to_ascii_hex_frame`, then calls `prepare_briefscs_frames` with criterion9 at `0x1830..0x1844`. This is a local helper handoff, not serial framing, publication or actuation.
+
+`HOST_RECONSTRUCTIONS.v1.json` records **postparsed synthetic** WHAT text`3`, WHERE text`5`, discriminator1, envelope representation3 and successful normal decimal conversions. Source switch entry for3 leads to `0x1878`, selecting `9b/0`; the composed four bytes are `b0 00 9b 50`, hence ASCII body`B0009B50`. No original parser, body builder or helper executed for this example. No bounds/validation claim is made for other decimal strings.
+
+For the independently selected reverse branch (`0x1568..0x16f4`), envelope type at+40 must be3 or9. It converts eight ASCII hex characters, requires first byte high nibble`b`, and switches on byte2 `9a`, `9b` or `9c` and byte3's low nibble. The chosen WHAT and byte3's high nibble are passed to safe literal`*9*%d*%d##`. Original PIC arithmetic at `0x1644` plus pool word`0x69c` at `0x16f8` resolves the format at VA`0x1ce8`. `scsmsg_to_openlist` is then called with criterion9 (`0x164c..0x1658`).
+
+The separate synthetic ASCII body`B0009C52` selects WHAT7 at `0x16b0`, WHERE5 from the high nibble, and constructed candidate`*9*7*5##`. It was not captured from hardware and is not paired with the forward example as an observed roundtrip. `ascii_hex_frame_to_array` and `array_to_ascii_hex_frame` original helper definitions are separately located at instruction VAs`0x3358` and`0x33c0` in `libutils.so.1.1.0`; their selected loops are retained. List construction, downstream serialization, STM admission and socket/bus effects remain outside this pass.
+
+## Packaged configuration and diagnostic identity limits
+
+`CONFIGURATION.v1.json` exports only whitelisted nonsecret fields and process metadata. In `stack_open.xml`, `bt_device` has `scs_enable=1` and `object_model_15_not_managed=1`; `bt_luci` has `disable_automation=1` (exact original line numbers in that output). COSO is listed as a process with numeric working_mode0, whereas `bt_device`, `openserver` and `scsserver` have1. The full startup/working-mode semantics are not inferred here, and these defaults do not establish which processes were active in a device. The coexistence of automation code and the `bt_luci` disable field is retained as distinct scope, not harmonized into global enabled/disabled functionality.
+
+`MANIFEST_IDENTITY.v1.json` pins update XML identity `MyHomeServer1`, firmware`3.87.13`, XML version`3.1`, Object model`5.0.67`. These are package declarations. `libdiag` exports `OPN_OpenScsDiagGenTr::o2s_deviceModel` at`0x9a2d` and `s2o_deviceModel` at`0xf319`, plus distinct Id, Termo, KeyObj and Ppt translator classes. Those definitions are entrypoint inventory only: no model query, translator registration, model/version formatter or diagnostic reply was executed/traced in this batch. In particular `5.0.67` is not a physically corroborated diagnostic identity.
+
+## Reproduction, integrity and coverage
+
+Run from the workspace with host Python only:
+
+```
+python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31/protocol/collect_protocol_v1.py --check
+```
+
+The collector reads original bytes, host `readelf` and host `objdump -m arm --dwarf=no-follow-links`; it does not load or run any original object. Separate-debug links are explicitly disabled in retained disassembly. Inputs97; selected ELFs44; retained spans10; exact ARM-word/Thumb-halfword guards25; host reconstruction cases2; generated outputs22 including the manifest. Every output comparison uses bytes. Initial generation refuses any existing candidate output; `--check` writes no candidate. `first-candidate/` immediately preserved all22 outputs and the collector,23 exact copies; its index was calculated before opening its own index file. The report is preserved separately on publication. Reviewer documents are deliberately excluded from author manifests to avoid self-hash cycles.
+
+Confidence is high for original identities/headers/declarations, the selected literal registration stores/callback relocations, allocation/discriminator writes and inspected local auxiliary arithmetic. Host examples demonstrate consistency with those selected branches, not original execution. Whole parser acceptance, complete key/WHO/WHERE grammar, provider binding, registry/STM/loader state, publication and physical behavior are unverified.
+
+Highest remaining questions, if later authorized, are: (1) exact original COSO outer criterion/WHO population and dispatch-to-STM handoff for one normal auxiliary or automation route; (2) concrete loader/provider closure for the repeated C++ parser/bridge symbols before any layout-based execution; (3) actual diagnostic factory/key and model formatter route; (4) normal level/interface/group addressing in the fresh `libwhere` implementation. No conclusion here requires inspecting session, authentication or transport framing internals.

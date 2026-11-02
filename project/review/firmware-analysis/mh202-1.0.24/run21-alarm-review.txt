@@ -1,0 +1,19 @@
+# MH202 post-decoded alarm routing independent source review
+
+PASS without corrections. Parent independently replayed collect_provenance.py --check and separately mapped original ELF loads to reproduce11 raw spans,34 exact instruction words,five input identities and19 manifest entries. The reviewer read classifier/category/metadata, descriptor-dependent delivery and actual field_receive/registry/alarm-registration source. No native helper or prior corpus was replayed.
+
+For supplied decoded category1 and unchanged historical body00004209, original classifier source returns9 because byte4 is4 and byte0 is notB; body byte4 minus48 gives criterion4. Source sets representation1/direction1/status3 and requests a new ID. This conditional qualification does not rewrite run20's explicit type3 fixture; both9 and3 fit the selected reverse guard. Raw admission/category origin and physical body meaning remain unproved.
+
+Record criterion4 is distinct from WHO4/outputWHO5; descriptor SL+56 belongs to a different object from record+56 representation. Exact original branches2970/2c60 permit callback2988 for selected descriptor2 and criterion4, while descriptor1/criterion4 goes2978→2d6c→298c and skips it. The copied owner reference and SL reference are not silently aliased. Target[r9+4] remains unresolved, so exported field_receive plus relocation alone does not establish actual slot binding or natural delivery.
+
+The conditional COSO router matches direction1/2 and sourcecriterion4 before requesting the alarm translator; status3 logging rejoins the scan. Active registry/order, callback identity, initialized descriptors and normal imports remain premises. No global drop, suppression, leak, defect, real alarm incident or completed event path is claimed. The source boundary stays post-decoded and does not inspect transport/connection/session/authentication/framing internals.
+
+All new original instructions, primitives, redirects, returns/stops/hooks, targetOS/process/network and physical observations are0. Confidence is high for selected original words/branches/stores and conditional registry predicates; unresolved for actual callbacks/config/raw admission/publication/physical significance. Earlier dossier and author bytes were unchanged by review. No old42/09 mapping is counted as a new execution.
+
+## Reviewed pins
+
+- `REPORT.md`: `7d7d27de1854e897b3761034265f7ee2dc4179edbc12eb31f4b85d9c8728c870`
+- `collect_provenance.py`: `7f870a1fa46a1ab3c5d85331dba87c667372a7b2cf24e17cf5e8b85309cae31f`
+- `output-manifest.json`: `19dc21040f1e2dd4c0c8c1f4b11d236c61db3542223848da0bdaae552f8bbbba`
+- `original-spans.json`: `e6cff619529c300bd45ed3943bce94ade6e38a302219260f75fd3e4cd3933be8`
+- `critical-words.json`: `28e464ced9df8da418dc7d6bbdf7a2856def54d9ec9b71fee496a3cd58d9aafb`

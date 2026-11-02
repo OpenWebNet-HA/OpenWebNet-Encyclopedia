@@ -1,0 +1,10 @@
+{
+  "FIRST_GENERATION_FAILURE.json": {
+    "bytes": 971,
+    "sha256": "472673527a560370a5336fcb90c93c73c6094b1db88479e7778dd58dedafa9ed"
+  },
+  "VERSION_HISTORY.v2.json": {
+    "bytes": 1059,
+    "sha256": "d1bc91ed8e577972a3c98669ab1742a61f184784a5b8058a82c99c3e87d7f055"
+  }
+}

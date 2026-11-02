@@ -1,0 +1,79 @@
+[
+  {
+    "bytes": 196,
+    "end_va_exclusive": "0x2eac0",
+    "name": "raw-factory-discriminator",
+    "sha256": "569b212c99484050a97fb9605e0d3e67d85f3a4f1042e098d8ab904b5f62299d",
+    "start_va": "0x2e9fc"
+  },
+  {
+    "bytes": 86,
+    "end_va_exclusive": "0x2f842",
+    "name": "raw-special-allocation",
+    "sha256": "cdfaf960bf6d8e8e7675d2d7fd4104b43a9f55f7f130e990f1994aba4ef83702",
+    "start_va": "0x2f7ec"
+  },
+  {
+    "bytes": 12,
+    "end_va_exclusive": "0x2f960",
+    "name": "raw-special-pools",
+    "sha256": "398d34fcc2bd98711b1a88c8cc2885dd2b590a109d3770d7604014df40d72d4a",
+    "start_va": "0x2f954"
+  },
+  {
+    "bytes": 652,
+    "end_va_exclusive": "0x2c904",
+    "name": "base-trigger-json",
+    "sha256": "f06297d12da60903e33622f8915de7c92ac63cbeeae6b4eab188f0e786953039",
+    "start_va": "0x2c678"
+  },
+  {
+    "bytes": 344,
+    "end_va_exclusive": "0x2d298",
+    "name": "time-json-parser",
+    "sha256": "09c8d60835fc829ddcc85f195c1e4d49de8b23c6d514c06c557a92b07ffa8f69",
+    "start_va": "0x2d140"
+  },
+  {
+    "bytes": 216,
+    "end_va_exclusive": "0x2e014",
+    "name": "raw-base-copy",
+    "sha256": "a9b1f78f88f4564ca096be16de10a72d6182343eced61df9756b8e60fbb1724b",
+    "start_va": "0x2df3c"
+  },
+  {
+    "bytes": 608,
+    "end_va_exclusive": "0x29d50",
+    "name": "time-serializer",
+    "sha256": "678c06ceefd6beff7c2414032384e22231de24f13d5ee09729617c163a05c3bf",
+    "start_va": "0x29af0"
+  },
+  {
+    "bytes": 64,
+    "end_va_exclusive": "0xa735e",
+    "name": "initializer-dispatch",
+    "sha256": "9b41a1af06a3aa6a9f2b2ee57d536cdeda70d84db931fbfb800ed00006b0715b",
+    "start_va": "0xa731e"
+  },
+  {
+    "bytes": 560,
+    "end_va_exclusive": "0xa8338",
+    "name": "compiled-time-handoff",
+    "sha256": "046a044b3c25850081869f35277d68bc55a611da5d6f4167da4ce1dd4cecc54c",
+    "start_va": "0xa8108"
+  },
+  {
+    "bytes": 32,
+    "end_va_exclusive": "0xa8b10",
+    "name": "compiled-time-pools",
+    "sha256": "5120f2e2dd8f95d4718d19227eaaf3eb29611ab695961048f7c5e4294b9dc53f",
+    "start_va": "0xa8af0"
+  },
+  {
+    "bytes": 528,
+    "end_va_exclusive": "0xb908c",
+    "name": "compiled-time-constructor",
+    "sha256": "bbe7939b5d8d31b1625ab8827879e999e8293cf94e445a933e6ab9ac788a6ec1",
+    "start_va": "0xb8e7c"
+  }
+]

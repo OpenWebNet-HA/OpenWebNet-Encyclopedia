@@ -1,0 +1,92 @@
+# ScenarioSuite database: final documentary integration review
+
+PASS for the exact11 current repository documents, source/correction provenance and9 exact exports pinned below. I read the new reference/capsule, nine existing-document diffs, author reports, source reviews and retained publisher/correction history. Variables/scheduler and schema baseline are source-aware because I independently reviewed their SQL/source evidence earlier. Addressing is documentary comparison to the designated independent source/SQL/publisher review, supplemented by my earlier selected DB corroboration and a current visual inspection of the complete saved page4 render. This is not a full fresh all-source semantic audit, native replay, editor/compiler evaluation, physical/oracle test or network acquisition. Only this NEW review is written; author/source/database/repository/old evidence files remain unchanged.
+
+## Current scope and declaration limits
+
+The new page explicitly separates this79-table Scen_SuiteDB_ENG.db from both four-table ScenarioDevices revisions, the catalogue and firmware runtime state. Current edits qualify the old hierarchy rather than transferring old IDs/FKs/CategoryFlag semantics. Exact source SHA/2542592bytes/version1.0.53,16families63objects597command definitions608compile/67status rules and24empty working tables remain source metadata, not installed support or configured scenarios.
+
+Absence of declared FKs and59PK tables/nine composite keys/20no-PK tables are correctly scoped. Integrity/selected implicit-join checks do not become FK enforcement, all-table semantic completeness or proof of application queries. ID_OBJ/ID_CHI/ID_COSA/ID_DOVE and stored OPEN fields are distinct. Complete address lists are concatenated raw-string sets, not arithmetic intervals or universal protocol acceptance.
+
+Scheduler object/area permissions, command associations and compile flags retain their disagreements. Alarm39 has noAction association/object permission while rules231..236 have ACT_AREA1; no precedence is invented. Engage/Disengage remain incoming event choices, without turning MH202 into an arming panel. CEN panic eligibility, timing forms and empty REPEAT/RESTART/SPT_PATH schema do not establish complete lifecycle, clock timing or generated scripts. Family activation is not physical support.
+
+Variable66/67 links to stored WHO17 and128-address selections provide useful context for inherited manager word/byte/adjustment source. They are not scene IDs, the300-file loader domain or named interpreter variables. Boolean OnlyIf versus compile/status declarations and text-control temperature/time range joins remain unresolved. Those joins do not establish units/effective validation/scaling or replace firmware guards. EXTRACTVALUE parameter1 has no established indexing/consumer semantics. No full Suite-to-firmware roundtrip or raw frame admission is promoted.
+
+ScenarioPLUS51, CENPLUS52 and Contact53 remain source-specific profiles with distinct command/area roles. Prefix1+1..255 is not made a universal ScenarioPlus domain; CEN+ prefix2+0..2047 is corroboration of the published model; Contact offered prefix3+1..201 excludes raw General30 within its selected associations only. STOP's selected role list, Contact parameter1event versus0requested-state, and other partial editor selections do not redefine the full public vocabulary or actual UI/compiler behavior.
+
+## Publisher-grounded correction, not a new capture result
+
+The preserved full page4 render visibly places literal3 in the separate left VALUE cell of BOTH WHERE rows, followed by1..201 or two1..9 digits. I independently viewed that complete render; its original PDF/render/text hashes match the designated source review. This selective source check agrees with the independent original-PDF text/visual review, not a full new13-page specification audit. Page13 availability is a different source claim and remains separate.
+
+The corrected canonical table restores both prefixes. WHERE339 fits the physical notation as3+3+9 and also the virtual notation as3+39; neither spelling identifies a configured interface or proves command/device acceptance. The old outside-published-forms interpretation is removed from current dry-contact and gateway-compatibility prose. Exact prior statements/hashes remain in pre-edit copies and CONTACT_PREFIX_CORRECTION.json. Literal probe frames, NACK timings, missing compatible-interface premise, WHAT31/32 meanings, positive controls and scope limits remain unchanged. No raw evidence path is modified in the current Git diff/status. No new gateway-wide rejection/support, immediate-NACK, physical forwarding or oracle outcome follows.
+
+The baseline review's earlier external ambiguity is retained as a read-time preflight; later publisher evidence resolves this specific notation question without rewriting that earlier record. The addressing initial failed parent-depth lookup and first successful v2 SQL candidate remain separately disclosed. Existing completed firmware/capture/oracle histories are not reclassified as new source execution or silently rewritten.
+
+## Exact bytes, links and integrity scope
+
+Independent host checks verify nine INTEGRATION_EDITS before/after identities, all9 pre-edit document snapshots, all11 actual first postintegration document copies and their noncircular index, all9 exact research/export byte pairs and3 method hashes. Current frozen comparison-source copies remain distinct from newly edited canonical references, so old source replay does not quietly repin current prose. Database/source indices and read-time baseline history are preserved.
+
+All156 local references and43 heading fragments across these11 current documents resolve. The capsule contains derived md/txt/json reports/fingerprints and pre-edit prose, not database bytes, a full source-row dump, vendor binaries or a self-contained compiler/runtime. Original DB and manufacturer inputs remain private/canonical with exact provenance. Publisher download/archive links are source identities, not a claim that this reviewer fetched current network contents.
+
+The three collectors'54 author queries and11 deterministic files are reproduction measures, not54 independent experiments or coverage. Baseline/reviewer SQL is separate, and no full broad query/source audit was repeated for this integration review. Parent will run final mechanical ESG/ECV/diff/hash/collector checks separately; they are not preclaimed PASS here and cannot replace semantic review or close Device gates. There are no future validation links required by these reviewed documents. Wider source/runtime/physical, actual generator/output, active editor/resource selection and Machine KB regeneration remain outside this batch.
+
+No additional source or reference wording correction is requested. This PASS applies to the pinned current bytes and stated source-aware/documentary limits; new final local summaries/validation/completion artifacts, if produced afterward, require their own honest identities and scope.
+
+## Exact11 current document pins
+
+Paths are repository-relative.
+
+| Document | SHA256 |
+|---|---|
+|scenario-engine/README.md|6eb9c3e98fad2153072b1d80cd12394a478bd7acc6871e1c13c5769a028bdd03|
+|scenario-engine/sources-and-identifiers.md|e01f111251fb5aea17424967bdfc02e844782c48114d77ef18a69390821def39|
+|scenario-engine/open-questions.md|fd9dcd78d4976cf3b68a88d7016b0ed67aa24e25454e016b09ea1e1e27e053fa|
+|functional/who-17-scenario-management/README.md|566fb6a2f90c22636a67f3c22114ac313ee0267dabbca3deb07624e928b16e81|
+|functional/who-25-transversal/README.md|5a9428be472d8d3d8a09bd36897bc71b131fe4d28de628cf2191b843ad27a51d|
+|functional/who-25-transversal/cen-plus.md|6d13fc46a98533dc0d0a69459a2a730011c043f69b0c029b4664c6367f307f67|
+|functional/who-25-transversal/dry-contact-ir.md|e3524907abe49823f78cd729d655f330f79851ada6f1cca1b5f7e7015c63ed3b|
+|project/review/who25-gateway-compatibility.md|1ab5d3c5b8d0e44a99d20c1b3fd2c35f7a9da152b1bb8644717f98dd2c3e4d86|
+|reverse-engineering/README.md|e3338b7eef3cdb19108350797ff6ee50e5984cf0df9f794465cbd410a64290ca|
+|scenario-engine/scenario-suite-database.md|9364ef33a962be871c6e5339534fa83141b22c234c76cca2b24bc58f2351e2fc|
+|project/review/scenario-suite-database-1.0.53/README.md|9cef9dfb6315280341ecc4d1fb20827252d467ba103dadef9aa106cbfd915ba9|
+
+## Exact capsule provenance and exports
+
+| Capsule-relative artifact | SHA256 |
+|---|---|
+|provenance.json|a62d44bcb73c946348183019223dc1c3ac2fb00de445535c06e8ca44ef379f66|
+|scheduler-report.txt|08082d7321d3ed4ec5e3ecb903d973ee1a28a9b296bf1101941ffd52a3a344e8|
+|variables-report.txt|d092247c9b31a99f7b5499af59e55e505d0b33479c442fd36d9618cf4a55ee88|
+|addressing-report.txt|4584ccd771a7e941c038c491bc2c4a3ad3c77027429ccd9d4df8d7df614caac0|
+|baseline-review.txt|1dfc37e924c5b4d308125600defdbf8f5f1d0f00091b14357773fc843af24af0|
+|variables-source-review.txt|abce9a514dc6e647848c0e2917f9c1af84bc81be76756183d543cf984930e37c|
+|scheduler-source-review.txt|5817428a561ca799d10a1775f1341557b38ed954a922408a9ff620c06959b445|
+|addressing-source-review.txt|f3cde28e4062cb056953bb9e644980a748eb68f53da382012aa18b3c4e28234b|
+|who25-source-review.txt|c2c944999f93c23e4f702738fb76ac55d8211657baca759cc731a3f9d9127e10|
+|addressing-development-history.json|795716c8f2492b707ce54434d750b82fe2c6e048b46946deb8474cd2ce0a8b54|
+|CONTACT_PREFIX_CORRECTION.json|9a7983277d086e61b631dca85b30089281228948a2770a89f45c3eb23a9356ca|
+|pre-edit-documents/SOURCE_SNAPSHOTS.json|43785ac3cadc6c8c30cd7a0deb09229296d762a6ae17e0d22a67f8002ecff2ec|
+
+## Exact local integration/source-history pins
+
+Paths are relative to the database-analysis research root.
+
+| Artifact | SHA256 |
+|---|---|
+|INTEGRATION_EDITS.json|f643cccc25db7ac18763df36612ecb765d8569f4cb7d71c7bf1a19c3d00b15fe|
+|pre-edit-documents/SOURCE_SNAPSHOTS.json|43785ac3cadc6c8c30cd7a0deb09229296d762a6ae17e0d22a67f8002ecff2ec|
+|initial-reference-candidates/SOURCE_SNAPSHOTS.json|92158ed8a5918232178fe8bcd798b981da9dfd537b68424e0bdd6c5353296342|
+|addressing/DEVELOPMENT_HISTORY.json|795716c8f2492b707ce54434d750b82fe2c6e048b46946deb8474cd2ce0a8b54|
+|addressing/public-source/WHO_25.pdf|122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927|
+|addressing/public-source/WHO_25-page4.png|6d3d6616c866235501c5c41fcfc1530be38a60271d411d3fdb5754fcf89cc271|
+|addressing/public-source/WHO_25.layout.txt|e219d1216144abd34f77655d95afdf0b6de853f12c03c1e3971f4a9a4498f55d|
+
+## Exact author method identities
+
+| Research-relative method | SHA256 |
+|---|---|
+|scheduler/collect_scheduler_v1.py|7ea40b7e0620f0722613ffb0b0286c7ecf05cd99551028756b0365a19921ee99|
+|variables/collect_variables_v1.py|7cf33829fb7821d1154f1e9558bf5cc06162d27ce063c2dc6b8b2587179cf160|
+|addressing/collect_addressing_v2.py|28ac0e0d88e1a5cea3a4a6d7897caa25564687c6e94e46f8f271e7f64a4da038|
+
+This review preserves its actual first bytes and assigns no fabricated hash to future validation or completion records.

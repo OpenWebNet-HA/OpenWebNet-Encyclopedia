@@ -1,0 +1,25 @@
+{
+  "collector_sha256": "65693bd2c7026595f1ad3a5951140892267187953a6cf768b8450932558684a4",
+  "new_models_fixtures": 0,
+  "new_original_Tcl_native_provider_clock_execution": 0,
+  "new_source_body_reads_outside_declared_scope": 0,
+  "outputs": {
+    "CONTRACTS.json": {
+      "bytes": 2031,
+      "sha256": "ad2ab7a501c82df3c42fd83172d41f06b9670ff1dbf6ebc6d361d1380c8db879"
+    },
+    "INPUTS.json": {
+      "bytes": 3641,
+      "sha256": "dc74ba7efab325208e57a9b4cabfe4598f6aa084cf077ce22517333a78868fb8"
+    },
+    "REPORT.md": {
+      "bytes": 5153,
+      "sha256": "0a442a9f32dc8dc639b5e64caa9c262a9437cd3338d682775b964abd5c5080e4"
+    },
+    "SOURCE_LINES.json": {
+      "bytes": 16888,
+      "sha256": "01c839d42ce1dac0903d45024854fe19e346a1bf7ec0a8fda48014e5772b1623"
+    }
+  },
+  "own_source_occurrences": 12
+}

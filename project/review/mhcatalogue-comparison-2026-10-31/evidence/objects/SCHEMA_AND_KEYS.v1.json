@@ -1,0 +1,2327 @@
+{
+  "declared_foreign_keys": {
+    "firmware": {
+      "AS_BUS_INTERFACE": [],
+      "AS_BUS_ITEM": [],
+      "AS_FIRMWARE_VIRGIN_OBJECT": [],
+      "AS_HIDDEN_KCONF": [],
+      "AS_ITEM_SYSTEM": [],
+      "AS_OBJECT_COLLECTION": [],
+      "AS_OBJECT_FIRMWARE": [],
+      "AS_OBJECT_FUNCTION": [],
+      "AS_OBJECT_SYSTEM": [],
+      "AS_OBJECT_VIRGIN_OBJECT": [],
+      "AS_SLOT_CONDITION": [],
+      "EN_BUS": [],
+      "EN_COLLECTION": [],
+      "EN_CONDITION": [],
+      "EN_CONF": [],
+      "EN_CONF_DATA_TYPE": [],
+      "EN_CONF_RANGE": [],
+      "EN_CONF_TYPE": [],
+      "EN_CONV_RULE": [],
+      "EN_DEVICE": [],
+      "EN_FILTER": [],
+      "EN_FILTER_RANGE": [],
+      "EN_FIRMWARE": [],
+      "EN_ITEM": [],
+      "EN_KEY_OBJECT": [],
+      "EN_OBJECT_ITEM_FAMILY": [],
+      "EN_SLOTS": [],
+      "EN_SLOT_KO_VIRGIN": [],
+      "EN_SYSTEM": [],
+      "EN_VIRGIN_OBJECT": []
+    },
+    "suite": {
+      "AS_BUS_INTERFACE": [],
+      "AS_BUS_ITEM": [],
+      "AS_FIRMWARE_VIRGIN_OBJECT": [],
+      "AS_HIDDEN_KCONF": [],
+      "AS_ITEM_SYSTEM": [],
+      "AS_OBJECT_COLLECTION": [],
+      "AS_OBJECT_FIRMWARE": [],
+      "AS_OBJECT_FUNCTION": [],
+      "AS_OBJECT_SYSTEM": [],
+      "AS_OBJECT_VIRGIN_OBJECT": [],
+      "AS_SLOT_CONDITION": [],
+      "EN_BUS": [],
+      "EN_COLLECTION": [],
+      "EN_CONDITION": [],
+      "EN_CONF": [],
+      "EN_CONF_DATA_TYPE": [],
+      "EN_CONF_RANGE": [],
+      "EN_CONF_TYPE": [],
+      "EN_CONV_RULE": [],
+      "EN_DEVICE": [],
+      "EN_FILTER": [],
+      "EN_FILTER_RANGE": [],
+      "EN_FIRMWARE": [],
+      "EN_ITEM": [],
+      "EN_KEY_OBJECT": [],
+      "EN_OBJECT_ITEM_FAMILY": [],
+      "EN_SLOTS": [],
+      "EN_SLOT_KO_VIRGIN": [],
+      "EN_SYSTEM": [],
+      "EN_VIRGIN_OBJECT": []
+    }
+  },
+  "same75stored_table_definitions": true,
+  "schema_sha256": {
+    "firmware": "d8171d20ba45b1fbda3dc96c7089912864a4e2882628314ccaaec38e2e715dad",
+    "suite": "d8171d20ba45b1fbda3dc96c7089912864a4e2882628314ccaaec38e2e715dad"
+  },
+  "table_info": {
+    "firmware": {
+      "AS_BUS_INTERFACE": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_bus_in",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "id_bus_out",
+          "notnull": 0,
+          "pk": 2,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "null",
+          "name": "id_key_object",
+          "notnull": 0,
+          "pk": 3,
+          "type": "INT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": "Null",
+          "name": "max_interface",
+          "notnull": 0,
+          "pk": 0,
+          "type": "VARCHAR"
+        }
+      ],
+      "AS_BUS_ITEM": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_bus",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "id_item",
+          "notnull": 0,
+          "pk": 2,
+          "type": "INTEGER"
+        }
+      ],
+      "AS_FIRMWARE_VIRGIN_OBJECT": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_virgin_key_object",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_firmware",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "null",
+          "name": "id_fw_virgin_object",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        }
+      ],
+      "AS_HIDDEN_KCONF": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_conf_range",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_conf",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "AS_ITEM_SYSTEM": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_item",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_system",
+          "notnull": 0,
+          "pk": 2,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "null",
+          "name": "modobj",
+          "notnull": 0,
+          "pk": 3,
+          "type": "INT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": "null",
+          "name": "main",
+          "notnull": 0,
+          "pk": 0,
+          "type": "tinyint"
+        }
+      ],
+      "AS_OBJECT_COLLECTION": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_key_object",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "id_collection",
+          "notnull": 0,
+          "pk": 2,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "null",
+          "name": "max_device",
+          "notnull": 0,
+          "pk": 0,
+          "type": "VARCHAR"
+        }
+      ],
+      "AS_OBJECT_FIRMWARE": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_object_firmware",
+          "notnull": 1,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "id_firmware",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "id_key_object",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "AS_OBJECT_FUNCTION": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_function",
+          "notnull": 1,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "id_object",
+          "notnull": 1,
+          "pk": 2,
+          "type": "INT"
+        }
+      ],
+      "AS_OBJECT_SYSTEM": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_key_object",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "id_system",
+          "notnull": 0,
+          "pk": 2,
+          "type": "INT"
+        }
+      ],
+      "AS_OBJECT_VIRGIN_OBJECT": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_virgin_key_object",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_key_object",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "AS_SLOT_CONDITION": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_slot",
+          "notnull": 1,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_condition",
+          "notnull": 1,
+          "pk": 2,
+          "type": "INT"
+        }
+      ],
+      "EN_BUS": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_bus",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "id_bus_type",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "level_descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": null,
+          "name": "level",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_COLLECTION": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_collection",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "id_system",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "id_collection_type",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "xml_key_conf",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": null,
+          "name": "xml_key_value",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 5,
+          "dflt_value": null,
+          "name": "collection_desc",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        }
+      ],
+      "EN_CONDITION": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_condition",
+          "notnull": 1,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "condition",
+          "notnull": 0,
+          "pk": 0,
+          "type": "VARCHAR"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "null",
+          "name": "id_conv_rule",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_CONF": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_conf",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "0",
+          "name": "id_key_object",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "0",
+          "name": "id_firmware",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": "null",
+          "name": "conf_name",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": "null",
+          "name": "id_conf_type",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 5,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 6,
+          "dflt_value": null,
+          "name": "descr_ext",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 7,
+          "dflt_value": "null",
+          "name": "hidden",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 8,
+          "dflt_value": null,
+          "name": "idx",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 9,
+          "dflt_value": "null",
+          "name": "id_conf_data_type",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 10,
+          "dflt_value": null,
+          "name": "progressive",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 11,
+          "dflt_value": null,
+          "name": "visible",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 12,
+          "dflt_value": null,
+          "name": "read_only",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_CONF_DATA_TYPE": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_conf_data_type",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "data_type",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        }
+      ],
+      "EN_CONF_RANGE": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_conf_range",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "value",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "name",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "descr_ext",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": "null",
+          "name": "default",
+          "notnull": 0,
+          "pk": 0,
+          "type": "VARCHAR"
+        },
+        {
+          "cid": 5,
+          "dflt_value": null,
+          "name": "progressive",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 6,
+          "dflt_value": "0",
+          "name": "id_conf",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 7,
+          "dflt_value": null,
+          "name": "digit",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 8,
+          "dflt_value": null,
+          "name": "step",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 9,
+          "dflt_value": null,
+          "name": "min_value",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 10,
+          "dflt_value": null,
+          "name": "max_value",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_CONF_TYPE": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_conf_type",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        }
+      ],
+      "EN_CONV_RULE": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_conv_rule",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "item_conf",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "item_conf_value",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "object_conf",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": null,
+          "name": "object_conf_value",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 5,
+          "dflt_value": null,
+          "name": "always_true",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 6,
+          "dflt_value": null,
+          "name": "jump_id_conv_rule",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 7,
+          "dflt_value": null,
+          "name": "id",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        }
+      ],
+      "EN_DEVICE": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_device",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "code",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "name",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "id_brand",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": null,
+          "name": "id_line",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 5,
+          "dflt_value": null,
+          "name": "visible",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 6,
+          "dflt_value": null,
+          "name": "id_item",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 7,
+          "dflt_value": null,
+          "name": "visibility_type",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 8,
+          "dflt_value": null,
+          "name": "dependent",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 9,
+          "dflt_value": "0",
+          "name": "is_gateway",
+          "notnull": 1,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 10,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "VARCHAR"
+        }
+      ],
+      "EN_FILTER": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_filter",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_object_firmware",
+          "notnull": 0,
+          "pk": 2,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "note",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "whole_range",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": "null",
+          "name": "id_conf",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_FILTER_RANGE": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_filter",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "range",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "note",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        }
+      ],
+      "EN_FIRMWARE": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_firmware",
+          "notnull": 1,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_item",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "null",
+          "name": "firmware_V",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": "null",
+          "name": "firmware_R",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": "null",
+          "name": "slots",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 5,
+          "dflt_value": "0",
+          "name": "id_status",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 6,
+          "dflt_value": "1",
+          "name": "FW_default",
+          "notnull": 0,
+          "pk": 0,
+          "type": "tinyint"
+        }
+      ],
+      "EN_ITEM": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_item",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "id_family",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_KEY_OBJECT": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_key_object",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "slots",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "visible",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": null,
+          "name": "id_family",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 5,
+          "dflt_value": null,
+          "name": "key_object",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_OBJECT_ITEM_FAMILY": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_family",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "family_name",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "progressive",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_SLOTS": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_slot",
+          "notnull": 1,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "first_slot",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "fixed_ko",
+          "notnull": 0,
+          "pk": 0,
+          "type": "BOOL"
+        },
+        {
+          "cid": 3,
+          "dflt_value": "null",
+          "name": "id_object_firmware",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_SLOT_KO_VIRGIN": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_slot_ko_virgin",
+          "notnull": 1,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_fw_virgin",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "null",
+          "name": "slots",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_SYSTEM": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_system",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "name",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "xml_key_system",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": null,
+          "name": "sys_modobj",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_VIRGIN_OBJECT": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_virgin_key_object",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "virgin_key_object",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ]
+    },
+    "suite": {
+      "AS_BUS_INTERFACE": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_bus_in",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "id_bus_out",
+          "notnull": 0,
+          "pk": 2,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "null",
+          "name": "id_key_object",
+          "notnull": 0,
+          "pk": 3,
+          "type": "INT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": "Null",
+          "name": "max_interface",
+          "notnull": 0,
+          "pk": 0,
+          "type": "VARCHAR"
+        }
+      ],
+      "AS_BUS_ITEM": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_bus",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "id_item",
+          "notnull": 0,
+          "pk": 2,
+          "type": "INTEGER"
+        }
+      ],
+      "AS_FIRMWARE_VIRGIN_OBJECT": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_virgin_key_object",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_firmware",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "null",
+          "name": "id_fw_virgin_object",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        }
+      ],
+      "AS_HIDDEN_KCONF": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_conf_range",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_conf",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "AS_ITEM_SYSTEM": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_item",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_system",
+          "notnull": 0,
+          "pk": 2,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "null",
+          "name": "modobj",
+          "notnull": 0,
+          "pk": 3,
+          "type": "INT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": "null",
+          "name": "main",
+          "notnull": 0,
+          "pk": 0,
+          "type": "tinyint"
+        }
+      ],
+      "AS_OBJECT_COLLECTION": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_key_object",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "id_collection",
+          "notnull": 0,
+          "pk": 2,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "null",
+          "name": "max_device",
+          "notnull": 0,
+          "pk": 0,
+          "type": "VARCHAR"
+        }
+      ],
+      "AS_OBJECT_FIRMWARE": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_object_firmware",
+          "notnull": 1,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "id_firmware",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "id_key_object",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "AS_OBJECT_FUNCTION": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_function",
+          "notnull": 1,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "id_object",
+          "notnull": 1,
+          "pk": 2,
+          "type": "INT"
+        }
+      ],
+      "AS_OBJECT_SYSTEM": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_key_object",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "id_system",
+          "notnull": 0,
+          "pk": 2,
+          "type": "INT"
+        }
+      ],
+      "AS_OBJECT_VIRGIN_OBJECT": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_virgin_key_object",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_key_object",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "AS_SLOT_CONDITION": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_slot",
+          "notnull": 1,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_condition",
+          "notnull": 1,
+          "pk": 2,
+          "type": "INT"
+        }
+      ],
+      "EN_BUS": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_bus",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "id_bus_type",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "level_descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": null,
+          "name": "level",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_COLLECTION": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_collection",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "id_system",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "id_collection_type",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "xml_key_conf",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": null,
+          "name": "xml_key_value",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 5,
+          "dflt_value": null,
+          "name": "collection_desc",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        }
+      ],
+      "EN_CONDITION": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_condition",
+          "notnull": 1,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "condition",
+          "notnull": 0,
+          "pk": 0,
+          "type": "VARCHAR"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "null",
+          "name": "id_conv_rule",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_CONF": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_conf",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "0",
+          "name": "id_key_object",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "0",
+          "name": "id_firmware",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": "null",
+          "name": "conf_name",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": "null",
+          "name": "id_conf_type",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 5,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 6,
+          "dflt_value": null,
+          "name": "descr_ext",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 7,
+          "dflt_value": "null",
+          "name": "hidden",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 8,
+          "dflt_value": null,
+          "name": "idx",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 9,
+          "dflt_value": "null",
+          "name": "id_conf_data_type",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 10,
+          "dflt_value": null,
+          "name": "progressive",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 11,
+          "dflt_value": null,
+          "name": "visible",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 12,
+          "dflt_value": null,
+          "name": "read_only",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_CONF_DATA_TYPE": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_conf_data_type",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "data_type",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        }
+      ],
+      "EN_CONF_RANGE": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_conf_range",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "value",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "name",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "descr_ext",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": "null",
+          "name": "default",
+          "notnull": 0,
+          "pk": 0,
+          "type": "VARCHAR"
+        },
+        {
+          "cid": 5,
+          "dflt_value": null,
+          "name": "progressive",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 6,
+          "dflt_value": "0",
+          "name": "id_conf",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 7,
+          "dflt_value": null,
+          "name": "digit",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 8,
+          "dflt_value": null,
+          "name": "step",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 9,
+          "dflt_value": null,
+          "name": "min_value",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 10,
+          "dflt_value": null,
+          "name": "max_value",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_CONF_TYPE": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_conf_type",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        }
+      ],
+      "EN_CONV_RULE": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_conv_rule",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "item_conf",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "item_conf_value",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "object_conf",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": null,
+          "name": "object_conf_value",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 5,
+          "dflt_value": null,
+          "name": "always_true",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 6,
+          "dflt_value": null,
+          "name": "jump_id_conv_rule",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 7,
+          "dflt_value": null,
+          "name": "id",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        }
+      ],
+      "EN_DEVICE": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_device",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "code",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "name",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "id_brand",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": null,
+          "name": "id_line",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 5,
+          "dflt_value": null,
+          "name": "visible",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 6,
+          "dflt_value": null,
+          "name": "id_item",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 7,
+          "dflt_value": null,
+          "name": "visibility_type",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 8,
+          "dflt_value": null,
+          "name": "dependent",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 9,
+          "dflt_value": "0",
+          "name": "is_gateway",
+          "notnull": 1,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 10,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "VARCHAR"
+        }
+      ],
+      "EN_FILTER": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_filter",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_object_firmware",
+          "notnull": 0,
+          "pk": 2,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "note",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "whole_range",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": "null",
+          "name": "id_conf",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_FILTER_RANGE": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_filter",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "range",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "note",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        }
+      ],
+      "EN_FIRMWARE": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_firmware",
+          "notnull": 1,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_item",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "null",
+          "name": "firmware_V",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": "null",
+          "name": "firmware_R",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": "null",
+          "name": "slots",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 5,
+          "dflt_value": "0",
+          "name": "id_status",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 6,
+          "dflt_value": "1",
+          "name": "FW_default",
+          "notnull": 0,
+          "pk": 0,
+          "type": "tinyint"
+        }
+      ],
+      "EN_ITEM": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_item",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "id_family",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_KEY_OBJECT": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_key_object",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "slots",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "visible",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": null,
+          "name": "id_family",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 5,
+          "dflt_value": null,
+          "name": "key_object",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_OBJECT_ITEM_FAMILY": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_family",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "family_name",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "progressive",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_SLOTS": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_slot",
+          "notnull": 1,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "first_slot",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "fixed_ko",
+          "notnull": 0,
+          "pk": 0,
+          "type": "BOOL"
+        },
+        {
+          "cid": 3,
+          "dflt_value": "null",
+          "name": "id_object_firmware",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_SLOT_KO_VIRGIN": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_slot_ko_virgin",
+          "notnull": 1,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": "null",
+          "name": "id_fw_virgin",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": "null",
+          "name": "slots",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_SYSTEM": [
+        {
+          "cid": 0,
+          "dflt_value": null,
+          "name": "id_system",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "name",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "dflt_value": null,
+          "name": "xml_key_system",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "dflt_value": null,
+          "name": "sys_modobj",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ],
+      "EN_VIRGIN_OBJECT": [
+        {
+          "cid": 0,
+          "dflt_value": "null",
+          "name": "id_virgin_key_object",
+          "notnull": 0,
+          "pk": 1,
+          "type": "INT"
+        },
+        {
+          "cid": 1,
+          "dflt_value": null,
+          "name": "descr",
+          "notnull": 0,
+          "pk": 0,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "dflt_value": null,
+          "name": "virgin_key_object",
+          "notnull": 0,
+          "pk": 0,
+          "type": "INT"
+        }
+      ]
+    }
+  }
+}

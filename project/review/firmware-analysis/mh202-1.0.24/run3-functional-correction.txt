@@ -1,0 +1,3 @@
+# Pre-output literal correction
+
+The first collector draft omitted the original leading blank in the exact twelve-byte directive prefix ` $NOMESCRIPT`. Its assertion stopped before writing generated evidence. The exact draft is preserved in development-before-literal-check/collect_evidence.py.txt; the corrected literal assertion matches original bytes. No firmware code or libc call ran, and no original input changed.

@@ -1,0 +1,63 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000028614 <_ZNKSt5ctypeIcE8do_widenEc@@Base-0x19f2c>:
+   28614:	5280068e 	mov	w14, #0x34                  	// #52
+   28618:	b90573f3 	str	w19, [sp, #1392]
+   2861c:	9115e3f3 	add	x19, sp, #0x578
+   28620:	a9007e62 	stp	x2, xzr, [x19]
+   28624:	d0000742 	adrp	x2, 112000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x6e820>
+   28628:	913f4042 	add	x2, x2, #0xfd0
+   2862c:	a9012269 	stp	x9, x8, [x19, #16]
+   28630:	52800bd3 	mov	w19, #0x5e                  	// #94
+   28634:	b9059bf2 	str	w18, [sp, #1432]
+   28638:	52800bf2 	mov	w18, #0x5f                  	// #95
+   2863c:	a9007ea1 	stp	x1, xzr, [x21]
+   28640:	d0000741 	adrp	x1, 112000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x6e820>
+   28644:	9136c021 	add	x1, x1, #0xdb0
+   28648:	a90122a9 	stp	x9, x8, [x21, #16]
+   2864c:	52800b35 	mov	w21, #0x59                  	// #89
+   28650:	b905c3ef 	str	w15, [sp, #1472]
+   28654:	d000074f 	adrp	x15, 112000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x6e820>
+   28658:	912e41ef 	add	x15, x15, #0xb90
+   2865c:	a9007f0d 	stp	x13, xzr, [x24]
+   28660:	528006cd 	mov	w13, #0x36                  	// #54
+   28664:	a9012309 	stp	x9, x8, [x24, #16]
+   28668:	b905ebf1 	str	w17, [sp, #1512]
+   2866c:	52801171 	mov	w17, #0x8b                  	// #139
+   28670:	a9007f2c 	stp	x12, xzr, [x25]
+   28674:	52800b0c 	mov	w12, #0x58                  	// #88
+   28678:	a9012329 	stp	x9, x8, [x25, #16]
+   2867c:	b90613f0 	str	w16, [sp, #1552]
+   28680:	52801190 	mov	w16, #0x8c                  	// #140
+   28684:	a9007f6b 	stp	x11, xzr, [x27]
+   28688:	d000074b 	adrp	x11, 112000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x6e820>
+   2868c:	9114c16b 	add	x11, x11, #0x530
+   28690:	a9012369 	stp	x9, x8, [x27, #16]
+   28694:	b9063bee 	str	w14, [sp, #1592]
+   28698:	911cc3ee 	add	x14, sp, #0x730
+   2869c:	f90327ff 	str	xzr, [sp, #1608]
+   286a0:	f90323ea 	str	x10, [sp, #1600]
+   286a4:	911ae3ea 	add	x10, sp, #0x6b8
+   286a8:	f9032be9 	str	x9, [sp, #1616]
+   286ac:	f9032fe8 	str	x8, [sp, #1624]
+   286b0:	b90663ed 	str	w13, [sp, #1632]
+   286b4:	911c23ed 	add	x13, sp, #0x708
+   286b8:	a9007fc7 	stp	x7, xzr, [x30]
+   286bc:	911a43e7 	add	x7, sp, #0x690
+   286c0:	a90123c9 	stp	x9, x8, [x30, #16]
+   286c4:	b9068bec 	str	w12, [sp, #1672]
+   286c8:	911b83ec 	add	x12, sp, #0x6e0
+   286cc:	a9007ce3 	stp	x3, xzr, [x7]
+   286d0:	d2800003 	mov	x3, #0x0                   	// #0
+   286d4:	a90120e9 	stp	x9, x8, [x7, #16]
+   286d8:	52800007 	mov	w7, #0x0                   	// #0
+   286dc:	b906b3f5 	str	w21, [sp, #1712]
+   286e0:	a9007d42 	stp	x2, xzr, [x10]
+   286e4:	aa1a03e2 	mov	x2, x26
+   286e8:	a9012149 	stp	x9, x8, [x10, #16]
+   286ec:	9000080a 	adrp	x10, 128000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x84820>
+   286f0:	911a014a 	add	x10, x10, #0x680

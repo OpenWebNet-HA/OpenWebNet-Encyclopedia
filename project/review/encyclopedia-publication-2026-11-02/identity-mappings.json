@@ -1,0 +1,21 @@
+{
+  "scope": "Exact publication-only changes after the completed editorial checkpoint; previous evidence indexes retain their point-in-time hashes and are not silently repinned",
+  "changes": [
+    {
+      "path": ".gitattributes",
+      "old_sha256": "804693f23c863058dca852cbf33055416d6fd2f0c2fbbdb2a1dc8659231e18f1",
+      "current_sha256": "4d944ec34e5f41881b5396d976d5def8e47dd077d39c6f4a8c93df02862777ae",
+      "before_copy": "project/review/encyclopedia-publication-2026-11-02/before/gitattributes.txt",
+      "before_copy_sha256": "804693f23c863058dca852cbf33055416d6fd2f0c2fbbdb2a1dc8659231e18f1",
+      "scope": "Whitespace checks scoped off only for verbatim .txt firmware-evidence exports and one exact immutable JSON record; Markdown/Python/ordinary JSON checks remain enabled; one exact publication before-copy .txt retains its original EOF bytes"
+    },
+    {
+      "path": "internals/device-application-databases.md",
+      "old_sha256": "2f2c484df82cef59ce337193bd19e0882689e0668ed054a47ef7496595c2cb33",
+      "current_sha256": "684da30c962c2e0ec00eff85150a141e2a907b3fe33e7f4a61cccbf4d9485f13",
+      "before_copy": "project/review/encyclopedia-publication-2026-11-02/before/device-application-databases.md.txt",
+      "before_copy_sha256": "2f2c484df82cef59ce337193bd19e0882689e0668ed054a47ef7496595c2cb33",
+      "scope": "One extra final LF removed; no prose/section/value/line-location changes"
+    }
+  ]
+}

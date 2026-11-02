@@ -1,0 +1,37 @@
+
+/usr/lib/liblghal.so.1.0.0:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000251b0 <hal_board@@Base>:
+   251b0:	d503233f 	paciasp
+   251b4:	d10183ff 	sub	sp, sp, #0x60
+   251b8:	d0000120 	adrp	x0, 4b000 <hal_save_microsemi_coeff@@Base+0x1e200>
+   251bc:	a9027bfd 	stp	x29, x30, [sp, #32]
+   251c0:	910083fd 	add	x29, sp, #0x20
+   251c4:	f947ac00 	ldr	x0, [x0, #3928]
+   251c8:	a90353f3 	stp	x19, x20, [sp, #48]
+   251cc:	a9045bf5 	stp	x21, x22, [sp, #64]
+   251d0:	f0000135 	adrp	x21, 4c000 <hal_save_microsemi_coeff@@Base+0x1f200>
+   251d4:	b94022b3 	ldr	w19, [x21, #32]
+   251d8:	f9400001 	ldr	x1, [x0]
+   251dc:	f9000fe1 	str	x1, [sp, #24]
+   251e0:	d2800001 	mov	x1, #0x0                   	// #0
+   251e4:	a900ffff 	stp	xzr, xzr, [sp, #8]
+   251e8:	3100067f 	cmn	w19, #0x1
+   251ec:	540001e0 	b.eq	25228 <hal_board@@Base+0x78>  // b.none
+   251f0:	d0000120 	adrp	x0, 4b000 <hal_save_microsemi_coeff@@Base+0x1e200>
+   251f4:	f947ac00 	ldr	x0, [x0, #3928]
+   251f8:	f9400fe2 	ldr	x2, [sp, #24]
+   251fc:	f9400001 	ldr	x1, [x0]
+   25200:	eb010042 	subs	x2, x2, x1
+   25204:	d2800001 	mov	x1, #0x0                   	// #0
+   25208:	54000e81 	b.ne	253d8 <hal_board@@Base+0x228>  // b.any
+   2520c:	2a1303e0 	mov	w0, w19
+   25210:	a9427bfd 	ldp	x29, x30, [sp, #32]
+   25214:	a94353f3 	ldp	x19, x20, [sp, #48]
+   25218:	a9445bf5 	ldp	x21, x22, [sp, #64]
+   2521c:	910183ff 	add	sp, sp, #0x60
+   25220:	d50323bf 	autiasp
+   25224:	d65f03c0 	ret

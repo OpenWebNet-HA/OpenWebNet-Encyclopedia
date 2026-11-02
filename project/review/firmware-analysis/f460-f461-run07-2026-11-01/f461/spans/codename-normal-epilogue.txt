@@ -1,0 +1,20 @@
+
+/usr/lib/liblghal.so.1.0.0:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+000000000000e558 <hal_get_codename@@Base+0x118>:
+    e558:	b00001e0 	adrp	x0, 4b000 <hal_save_microsemi_coeff@@Base+0x1e200>
+    e55c:	f947ac00 	ldr	x0, [x0, #3928]
+    e560:	f940c7e2 	ldr	x2, [sp, #392]
+    e564:	f9400001 	ldr	x1, [x0]
+    e568:	eb010042 	subs	x2, x2, x1
+    e56c:	d2800001 	mov	x1, #0x0                   	// #0
+    e570:	54000ba1 	b.ne	e6e4 <hal_get_codename@@Base+0x2a4>  // b.any
+    e574:	a9597bfd 	ldp	x29, x30, [sp, #400]
+    e578:	a95a53f3 	ldp	x19, x20, [sp, #416]
+    e57c:	a95b5bf5 	ldp	x21, x22, [sp, #432]
+    e580:	910703ff 	add	sp, sp, #0x1c0
+    e584:	d50323bf 	autiasp
+    e588:	d65f03c0 	ret

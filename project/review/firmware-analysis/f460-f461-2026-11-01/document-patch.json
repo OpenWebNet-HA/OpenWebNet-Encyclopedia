@@ -1,0 +1,12 @@
+{
+  "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+  "snapshot": "README.md",
+  "before_sha256": "312d54e3264bad9ddc1226ecebd93880359ae3f992265d8667d92fd9f81722fb",
+  "after_sha256": "b5fd4954e51a8a9a6ee0ca11c4044f288c36a404567154d3821bef65b3292f01",
+  "anchor": "\n## Evidence record\n",
+  "insert": "\n| [F4602.0.12 and F4612.0.11](f460-2.0.12-and-f461-2.0.11.md) | Existing canonical firmware-f460-020012 /firmware-f461-020011, exactSHA/size in the analysis | Parallel safe static extraction, fresh AArch64/boot/DB metadata and read-only source-profile comparison | Separate product declarations, shared catalogue and changed selected binaries; no firmware execution or runtime/physical approval |\n",
+  "new_page": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f460-2.0.12-and-f461-2.0.11.md",
+  "new_page_sha256": "702d30094daeb126727f7b8d485421fcca1fe849fb63280049770197ffb5d69e",
+  "device_definitions_modified": false,
+  "reason": "Keep curated Device input versions unchanged so the new per-product collectors remain directly reproducible; separate build reference retains its own partial source review scope"
+}

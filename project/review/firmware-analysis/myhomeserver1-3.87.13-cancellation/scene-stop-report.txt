@@ -1,0 +1,31 @@
+# MyHOMEServer1 3.87.13: scene stop, completion polling and relaunch guard
+
+This static continuation distinguishes three pieces of state: scene stop byte+144, scene active byte+145 and each compiled action's completion byte+4. Scene-worker cleanup can clear the first two without proving the third is set. Original instructions, processes, threads, clocks, timers, providers, services, network/bus and physical execution remain0.
+
+Original image object `/home/bticino/scheduling_manager/scheduling_manager` has SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. All addresses are linked ELF VAs, not observed PIE addresses. Fresh PT_LOAD translation and original bytes underpin six disassembly spans, eighteen exact instruction guards, three direct calls and one8-byte data literal. Nearest exported-template names are not function identities.
+
+## Stop request reaches actions, without joining them here
+
+Method0xa60b0 saves its scene receiver in r5. After selected string/logging cleanup returns,0xa6158 supplies1 and0xa615e stores scene+144. It loads the same compiled-action range+128/+132 at0xa6166 and walks8-byte entries, invoking each pointee's vtable+4 at0xa6176. The inspected method does not wait for each action to complete and does not itself clear scene+145.
+
+The frozen common/SLEEP/SCENARIO vtable evidence maps their+4 slots to common stop0xcd6f0. The preceding common-action report establishes that this selected method ignores its receiver and sets a shared cancellation byte under its mutex, then requests notify-all. This is an inherited mapping for those examined classes, not every derived action. Shared-domain ownership/reset is a separate author scope; clearing scene+144 is not evidence that shared cancellation clears.
+
+## Completion poll and the stop exit
+
+Action worker0xa6734 retains the scene in r7. Its already-established loop invokes action vtable+0 at0xa68b0 and then tests scene+144 at0xa68b6 before advancing. An inline blocking callback must return before that particular check; no immediate interruption is inferred.
+
+The continuation at0xa68c2 reads the same action range. The unrolled scan and its remainder paths call original getter0xcd97c, whose body reads each action's byte+4. An incomplete action reaches the polling request. Pool0xa6bf8 contains exact words `(1,0)`, loaded into d8 at0xa6914 and copied to stack+40 at0xa691a. r5=SP+40 from0xa684a is supplied as both r0 and r1 to `nanosleep` at0xa692e. Under the previously verified original libc wrapper and ordinary32-bit nanosleep ABI, this requests one second and zero nanoseconds. It is not a measured polling period, exact delay or cancellation deadline. Return−1 with errno4 retries using the same request/remainder storage; other normal returns continue.
+
+After that request returns,0xa693a reads scene+144. Nonzero at0xa6942 branches to0xa6994, leaving the completion scan even if an action's byte+4 is still zero. Otherwise the selected continuation scans completion again and can request another sleep. Complete/empty ranges have paths directly toward the same cleanup without that sleep. This establishes a positive stop exit, not a full proof of all exceptional/range/lifetime behavior.
+
+## Clearing scene state is separate from finishing action workers
+
+From0xa6994/0xa6996 the selected path performs logging/cleanup and optional JSON/delegate work. Under their normal returns,0xa6a98 supplies zero,0xa6aa0 clears scene+145 and0xa6aac clears scene+144. The branch through local initialization rejoins before those stores. Neither store writes action completion+4 or joins an underlying action worker.
+
+The earlier selected launch0xa5db0 reads enabled+65 at0xa5dbc and active+145 at0xa5dd6. Active0 permits its thread-request branch, which stores active1 and scene stop0. Thus a later request can again pass this local active guard after normal cleanup, subject to enabled/live state and provider success. This is restart eligibility in one caller, not an observed successful rerun or a reset of the shared action cancellation domain. Other entry points, exceptions, simultaneous starts/stops and object destruction remain open.
+
+## Reproduction and applicability
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/scene-stop/collect_scene_stop_v1.py --check`
+
+The collector emits14 deterministic outputs including manifest and immediately retains exact outputs/collector in `first-candidate`; report bytes are separately snapshotted before review. No supplied scene/action object, native helper, target API or host behavioral model runs. Earlier original-execution ledgers are unchanged. Confidence is high for these bounded source relations in this exact executable under normal provider/object/range premises. Full cancellation/restart semantics, shared reset aliases, action-worker lifetime/refcount/unwind, actual scheduling/timing/concurrency, configured assets and physical outcomes remain unproved; wider Device gates are unchanged.

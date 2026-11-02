@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+"""Selected local light-code/BNIL route; static source only, no receiving/provider execution."""
+import argparse,hashlib,importlib.util,json,re,struct,subprocess,sys
+from pathlib import Path
+sys.dont_write_bytecode=True
+D=Path(__file__).resolve().parent;P=D.parents[2];W=P.parents[2];H=lambda b:hashlib.sha256(b).hexdigest();J=lambda x:(json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+V=P/'research/2026-10-31/image_vfs.py';s=importlib.util.spec_from_file_location('routing_vfs',V);m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+S='/home/bticino/scheduling_manager/scheduling_manager';SHA='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26'
+SPANS=[('local-prefix-and-selected-label',0x521e4,0x52240),('classification-store',0x54daa,0x54db2),('selected-label-value',0x5544e,0x55452),('params-id-initial-guard',0x52322,0x52374),('params-id-population',0x54db2,0x54df4),('selected-producer-tail',0x5430c,0x54344),('producer-return-gate',0x527b4,0x527e4),('return-one-cleanup-leg',0x551b4,0x551ca),('scene-and-second-dispatch',0x52864,0x528aa),('record-and-trigger-dispatch',0x52d10,0x52d5c),('bnil-recipient',0x53a1a,0x53aa0),('iteration-step',0x5297e,0x52994),('prefix-equality',0x4f20c,0x4f244),('id-equality',0x4f000,0x4f024)]
+GUARDS=[(0x521e8,'2e21'),(0x5544e,'0123'),(0x54daa,'013b'),(0x54dac,'0293'),(0x52336,'0df5e07b'),(0x5235a,'062b'),(0x52362,'002b'),(0x5289c,'0298'),(0x528a2,'0a28'),(0x52d20,'d6e90087'),(0x52d46,'2b6a'),(0x52d48,'013b'),(0x52d4a,'162b'),(0x53a8c,'08f10801'),(0x52986,'0134')]
+def branch(z,pc):
+ a,b=struct.unpack('<HH',z);assert a&0xf800==0xf000;s=a>>10&1;i=1-((b>>13&1)^s);j=1-((b>>11&1)^s);n=(s<<24)|(i<<23)|(j<<22)|((a&1023)<<12)|((b&2047)<<1);return(pc+4+n-((1<<25)if s else 0))&0xffffffff
+def build():
+ v=m.ImageVFS();b=v.read_bytes(S);assert H(b)==SHA;ph=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);L=[struct.unpack_from('<8I',b,ph+i*sz)for i in range(n)]
+ def off(a,z):return next(o+a-va for t,o,va,_,fs,*_ in L if t==1 and va<=a and a+z<=va+fs)
+ def at(a,z):o=off(a,z);return b[o:o+z]
+ def w(a):return struct.unpack('<I',at(a,4))[0]
+ def text(a):return at(a,128).split(b'\0')[0].decode('ascii')
+ bp=v.root/S.lstrip('/');out={};spans=[]
+ for name,a,e in SPANS:
+  spans.append({'name':name,'start_va':hex(a),'end_va_exclusive':hex(e),'file_offset':hex(off(a,e-a)),'sha256':H(at(a,e-a))});z=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(bp)],text=True).replace(str(bp),S);z=re.sub(r' <([^>]+)>',lambda q:q[0]if'@plt'in q[1]else'',z);out['spans/'+name+'.txt']=z.encode()
+ for a,z in GUARDS:assert at(a,len(bytes.fromhex(z))).hex()==z
+ base=(w(0x52520)+0x51994+4)&0xffffffff;assert base==0x1659a4;slot=base+w(0x525d8);tt=w(slot);assert slot==0x166098 and tt==0x160e4c and w(tt+8)==5 and text(w(tt+12))=='light'
+ keys=[]
+ for p,pc,key in [(0x525dc,0x52326,'params'),(0x54ef4,0x54db6,'id'),(0x54ef8,0x54dc6,'id')]:a=(w(p)+pc+4)&0xffffffff;assert text(a)==key;keys.append({'pool_va':hex(p),'pc':hex(pc),'target_va':hex(a),'key':key})
+ tables=[]
+ for a,width,index,want in [(0x52374,2,0,0x54274),(0x528aa,2,0,0x52d10),(0x52d5c,4,0,0x53a1b)]:value=int.from_bytes(at(a+index*width,width),'little');target=(a+(2*value if width==2 else value))&0xffffffff;assert target==want;tables.append({'base_va':hex(a),'entry_bytes':width,'selected_index':index,'stored_value':hex(value),'target_pointer_or_va':hex(target),'scope':'TBH halfword scaled2; third table relative32 Thumb pointer, instruction entry0x53a1a'})
+ calls=[]
+ for pc,t in [(0x52236,0x4f20c),(0x54dae,0x52310),(0x5433c,0x10eb10),(0x54340,0x527b4),(0x551c6,0x52864),(0x52d12,0x5724c),(0x52d1c,0x10e3d8),(0x53a22,0xa6508),(0x53a5a,0x573a4),(0x53a82,0x4f000),(0x53a92,0xee708)]:assert branch(at(pc,4),pc)==t;calls.append({'pc':hex(pc),'bytes':at(pc,4).hex(),'target':hex(t)})
+ data=[]
+ for a,z,scope in [(0x52374,22,'first event-code TBH'),(0x528aa,22,'second event-code TBH'),(0x52d5c,92,'trigger-type relative32 pointer table')]:data.append({'start_va':hex(a),'bytes':z,'file_offset':hex(off(a,z)),'sha256':H(at(a,z)),'scope':scope})
+ pins=[{'path':str(p.relative_to(W)),'sha256':H(z),'bytes':len(z)}for p,z in [(bp,b),(V,V.read_bytes()),(P/'research/2026-11-01-event-trigger/admission/REPORT.md',(P/'research/2026-11-01-event-trigger/admission/REPORT.md').read_bytes())]]
+ out.update({'INPUTS.json':J(pins),'SOURCE_SPANS.json':J(spans),'BYTE_GUARDS.json':J([{'va':hex(a),'bytes':z}for a,z in GUARDS]),'SELECTED_DISCRIMINATOR.json':J({'got_base':hex(base),'slot':hex(slot),'table':hex(tt),'row':1,'length':5,'label':'light','source_string':'selected local std::string at SP88 before first dot; earlier construction/filters not closed','row_to_code':'exact row1 equality→5544e supplies1→54daa subtract1→SP8zero','scope':'Private local class/code, not external accepted method/wire/public WHO/physical meaning'}),'KEYS.json':J(keys),'TABLES.json':J(tables),'DATA_SPANS.json':J(data),'DIRECT_BRANCHES.json':J(calls),'ROUTE_LEDGER.json':J({'selected_event_code':0,'selected_raw_trigger_type':1,'id':'params object memberid asString/copy tostd::string SP448(fp); nonempty required when code<=6','first_phase':'TBH52374code0→54274 recordproducer; its tail10eb10 result mustbe1 for selectednormalcleanup551c6→52864','scene_loop':'accessor b69f8 then selected nodes+20 scene; rawtrigger pointers scene+0..4 in4Bstride; indexr4 starts0,compiledpairbyteoffsetsl starts0andincrements8','second_phase':'TBH528aacode0→52d10; getter5724c+ID to10e3d8 returnsSP152pair(r8record,r7control); actualproducer/provider handledseparately','trigger_dispatch':'rawtype32−1 unsigned<=22; relative32table52d5c entry0→Thumb53a1b','recipient':'compiledtrigger copiedvector indexr4/offsetsl,nonzeroobject,successfuldynamic_cast,normalcopycleanup,IDequality→ee708(typedrunner,&recordstring+8)','scope':'Conditional selected local route only. No external input acceptance/natural record/handler result or physical behavior.','unclosed':['earlier input-string/parser/filter/preclassification construction','firstphase recordconstruction/upsert and actualnormalreturn1','lookuprecord provider and validr8/control/objectstate','scene registry/raw and compiled vector alignment/type/lifetime','callbackhandler/root admission and physical consequences']}),'METHOD.json':J({'original_execution':0,'semantic_models_or_input_fixtures':0,'target_IO':0,'scope':'Local discriminator/ID guard/tables/loop/recipient aliases only; original imported parse/receiving/provider and transport/auth/session/framing bodies not followed.','history':'Exclusive first candidate, no generated overwrite; exploratory disassembly slices are not input acceptance or native execution.'})})
+ return out
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build();out['OUTPUT_MANIFEST.json']=J({'outputs':{n:{'bytes':len(z),'sha256':H(z)}for n,z in out.items()},'collector_sha256':H(Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes())})
+ if a.check:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  for n,p in json.loads((D/'first-candidate/INDEX.json').read_bytes()).items():z=(D/n).read_bytes();assert z==(D/'first-candidate'/n).read_bytes()and H(z)==p['sha256']and len(z)==p['bytes']
+ else:
+  C=D/'first-candidate';assert not C.exists();assert not any((D/n).exists()for n in out);copies={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),Path(__file__).name:Path(__file__).read_bytes()};ix=J({n:{'bytes':len(z),'sha256':H(z)}for n,z in copies.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in copies.items():p=C/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (C/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':a.check,'outputs':len(out),'spans':len(SPANS),'guards':len(GUARDS),'selected_tables':3,'calls':11,'inputs':3,'original_execution':0}))
+if __name__=='__main__':main()

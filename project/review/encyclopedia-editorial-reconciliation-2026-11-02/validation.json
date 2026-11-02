@@ -1,0 +1,182 @@
+{
+  "scope": "Actual local checks of the current editorial/data projection; no remote CI status or firmware/device execution",
+  "checks": [
+    {
+      "check": "FULL_BUILD_RESULT.v1.json",
+      "exit_code": 0,
+      "private_receipt_sha256": "d49f75437c63ad4201ae03ba59d865b95a3e4b80a1b9c9756f27e9551f3eb0ef",
+      "scope": "Actual unchanged official full source/claim/Device/coverage/lifecycle generator, private exclusive output, no repository generated artifact integration yet"
+    },
+    {
+      "check": "FULL_CHECK_RESULT.v1.json",
+      "exit_code": 0,
+      "private_receipt_sha256": "cd734c61e7c42f6ea584d7f26351dfba11bd94f53b891c1ebcadcfb28b6c50c7",
+      "scope": "Actual unchanged complete check.py: deterministic double generation, artifacts/manifest/schema/cross-artifact/reference/text hygiene/privacy/Device completeness and current working-file freshness; no CI proof bypass, no network provision"
+    },
+    {
+      "check": "machine-consistency-regressions-final",
+      "exit_code": 0,
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "knowledge/tests",
+        "-p",
+        "test_phase12_consistency.py"
+      ],
+      "private_receipt_sha256": "7a52d754a1e359e8ed56bff146f7aac5163d8182c6942ba1d9c2e43380bab394"
+    },
+    {
+      "check": "server-device-regressions",
+      "exit_code": 0,
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "devices/tools/tests",
+        "-v"
+      ],
+      "private_receipt_sha256": "9a8631103d06a9a9899b887860fd35b783d00883204d930e8b347d09b4edde1f"
+    },
+    {
+      "check": "who25-prefix-regression-current",
+      "exit_code": 0,
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "knowledge/tests",
+        "-p",
+        "test_who25_gateway_compatibility.py"
+      ],
+      "private_receipt_sha256": "5496684f83f65cac1dbb63f95fc3953d2633586dca76070f85ec03a2f1c0e573"
+    },
+    {
+      "check": "git-storage-index",
+      "exit_code": 0,
+      "argv": [
+        "python3",
+        "project/review/checks/check_git_storage.py"
+      ],
+      "private_receipt_sha256": "03fdb0e26abc8b6f844d9f28da626ed9236e5ae2b93757878e59671bda092444"
+    },
+    {
+      "check": "git-storage-regressions",
+      "exit_code": 0,
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "project/review/checks/tests"
+      ],
+      "private_receipt_sha256": "a0fb8fc5283951b3dbb6049290ee47f56897839595e26a2bd3846c60817fae76"
+    },
+    {
+      "check": "queue-final-accepted",
+      "exit_code": 0,
+      "argv": [
+        "python3",
+        "-B",
+        "devices/tools/build-device-work-queue.py",
+        "--check"
+      ],
+      "private_receipt_sha256": "2bf6aa73e34318a3025a0a898f583378a120d276cf7717e793674b51c072a711"
+    },
+    {
+      "check": "artifact-registry",
+      "exit_code": 0,
+      "argv": [
+        "python3",
+        "-B",
+        "project/review/checks/check_artifact_manifest.py"
+      ],
+      "private_receipt_sha256": "fe106db5dc8cf219e182fc4d38904b2b55980cab9d51975886543f96f7095f9d"
+    },
+    {
+      "check": "generated-diff-current",
+      "exit_code": 0,
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "private_receipt_sha256": "dadb1906efc05887675c0df6d8ccd0dfccc8d33ea0054afe4fc7b52bbd069a60"
+    },
+    {
+      "check": "esg-human-final",
+      "exit_code": 0,
+      "argv": [
+        "python3",
+        "-B",
+        "project/review/checks/check_esg.py",
+        "."
+      ],
+      "private_receipt_sha256": "d9f06508e69b61d4bb0300fe457e8418787e8469c5c27c7587243e1696ade506"
+    },
+    {
+      "check": "ecv-human-final",
+      "exit_code": 0,
+      "argv": [
+        "python3",
+        "-B",
+        "project/review/checks/check_ecv.py",
+        "."
+      ],
+      "private_receipt_sha256": "f2db204d388fad392a0bec51b130abf604658a841f0f1bffba7146196ac5407a"
+    },
+    {
+      "check": "esg-final",
+      "exit_code": 0,
+      "argv": [
+        "python3",
+        "-B",
+        "project/review/checks/check_esg.py",
+        "."
+      ],
+      "private_receipt_sha256": "aec9d7e8ad487951540109d9919e02da54c3ac1c0c92b1dd019b9ac779f6c30c",
+      "actual_stdout": "STATS human_pages=422 support_pages=204 objective_failures=0 review_candidates=7144"
+    },
+    {
+      "check": "ecv-final",
+      "exit_code": 0,
+      "argv": [
+        "python3",
+        "-B",
+        "project/review/checks/check_ecv.py",
+        "."
+      ],
+      "private_receipt_sha256": "f2db204d388fad392a0bec51b130abf604658a841f0f1bffba7146196ac5407a",
+      "actual_stdout": "STATS human_pages=422 objective_failures=0 review_candidates=13"
+    },
+    {
+      "check": "diff-final",
+      "exit_code": 0,
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "private_receipt_sha256": "dadb1906efc05887675c0df6d8ccd0dfccc8d33ea0054afe4fc7b52bbd069a60",
+      "actual_stdout": ""
+    }
+  ],
+  "regression_disposition": {
+    "current_selected_run": "85 of 86 passed; the sole stale exact Scenario Engine count was corrected after independent 341+30-4=367 verification",
+    "recheck": "The complete six-test consistency module then passed with exact equality retained",
+    "initial_broad_run": "Mid-migration run retained with six unresolved-build errors and one obsolete WHO25 assertion; complete official build/global check and corrected WHO25 regressions resolve those causes",
+    "not_claimed": "No blanket final unittest-discovery pass is asserted; full whole-corpus deterministic/global checks are recorded separately"
+  },
+  "catalogue": "Exact existing canonical Suite cache verified by SHA-256/size; no fresh private archive provisioning or remote status publication",
+  "storage": "All 11 large changed working files have LFS filters; index check is separately scoped to the unchanged staging index; legacy exceptions unchanged",
+  "limits": "Acceptance concerns source/knowledge consistency and accurately limited descriptions, not exhaustive Firmware, configured/runtime or Physical Device coverage",
+  "closing_editorial_scope": "Closing ESG/ECV/whitespace checks passed after the final review README was assembled; heuristic candidates are review cues, not automatic semantic verdicts."
+}

@@ -1,0 +1,10 @@
+{
+  "source": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md",
+  "old_snapshot": "integration/pre-wording-v2/myhomeserver1-3.87.13-serialization.md",
+  "old_sha256": "42f0374710a29a218da5e74303e98a5be90d25ac230c220d252d1aea1373a391",
+  "new_sha256": "69f408a664e4331c2d756285e3498ca7bbb777ae9d7c1a3a50d33951394df13a",
+  "exact_old": "All findings are static; original Firmware/JsonCpp/process/provider/thread/clock/network/bus and physical execution remains zero.",
+  "exact_new": "Those initial source-only findings had zero original execution. The later isolated scalar corpus below adds a separately counted original JsonCpp helper ledger; scheduler processes, threads, clocks, network/bus and physical execution remain zero.",
+  "reason": "Independent documentary review requires initial blanket execution-zero statement to retain historical scope after first isolated helper corpus",
+  "source_code_results_counts_unchanged": true
+}

@@ -1,0 +1,15 @@
+{
+  "changes": "F454 shortens displayed manufacturer paths (exact full paths remain in pinned original report), adds independently reviewed existing-mode2 admission predecessor to avoid initial-state inference. MH202 one spacing correction. First reference candidates retained; no author report or evidence modified.",
+  "files": [
+    {
+      "path": "reverse-engineering/firmware-analysis/f454-2.0.51-product-paths.md",
+      "before_sha256": "8e18ea5163bb36545652da05e19627b86c379afee84b70af65c1f73b7681c85e",
+      "after_sha256": "45929c59b9501a7c7b2e15bdae163d2a744b24f572060c2d6a368b74e889f9a2"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-scenario-resources.md",
+      "before_sha256": "1a80b233880c84ef56aca5bc8d1e6244b10e747a4e00a335d365da1d9ad53922",
+      "after_sha256": "99bc3f5389f52f3df7ac2e17b1715fdb2f047ed6489af1efe8bd320775062971"
+    }
+  ]
+}

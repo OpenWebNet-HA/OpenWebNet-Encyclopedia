@@ -1,0 +1,93 @@
+# Targeted batch2: VDE discovery consumption and complete initial status query
+
+The separate stack discovery setting now has an actual original consumer: `bt_upnp/upnpsearch/features/vde` controls a stored discovery flag, seven default search targets, and a selected detected-device update branch. This does **not** identify the factory `vdes/communication/vde_enabled` consumer or enable media processes.
+
+The API status-query suffix is also joined to its original global initializer, giving the initial request `*#8**35##` under normal successful initialization/no mutation. That initializer was already noted in the overnight web evidence; this batch independently verifies its identity with the previously traced query helper. A WHO8/DIM35 **status response producer and field semantics remain unresolved**. The selected bt_vct measure block cannot be promoted into such a producer.
+
+Static only: zero original ARM/JavaScript instructions, CPU helpers, vendor processes, services, sockets, device operations or live I/O executed. Host Python reads verified original ELF/configuration/frontend bytes and invokes host binutils. All writes are in this new batch directory; original trees, completed dossiers/indexes, prior targeted outputs and repository files are read-only. No authentication branch or prior execution matrix was revisited.
+
+## Actual discovery configuration→field→consumer
+
+Original `/home/bticino/bin/bt_upnp` SHA256 is `64c776e4e627c9adf7549d00dfb679241e31d9ce5c7147417e6d6411dea7ce45`. Addresses below are its original ELF VAs, not host addresses. Packaged `/home/bticino/cfg/stack_open.xml:427–437` supplies:
+
+```xml
+<bt_upnp>
+  <upnpsearch>
+    <default>1</default>
+    <features><vde>0</vde><igd>1</igd></features>
+  </upnpsearch>
+</bt_upnp>
+```
+
+The startup code loads **`/tmp/stack_open.xml`**, not that packaged path directly. Their actual runtime copy/replacement and successful parsing remain separate. This report compares the package declaration with the concrete code consumer; it does not assert the process observed these defaults on hardware.
+
+| Stage | Original code/data | Established consequence |
+|---|---|---|
+| Runtime filename | pool`0xca5c`→literal`0x18f30`; `0xbe88–0xbe8c` calls `ixmlLoadDocument` | Reads `/tmp/stack_open.xml` on this route. |
+| Parent selection | pool`0xca70`→`bt_upnp`; `0xbf8c–0xbfa8` selects the first matching document element | Not the factory `communication` hierarchy. |
+| Search/features selection | pool`0xcaa4`→`upnpsearch`, pool`0xcaa8`→`features`; `0xc0c8–0xc0f4` | Actual nested search configuration. The API uses descendant-tag lookup, not a newly enforced strict XML schema. |
+| VDE leaf | pool`0xcab0`→`vde`; `0xc140–0xc15c` gets first match/value | `SampleUtil_GetElementValue!0x14868` requires first child node type3, then duplicates its text, or returns null. |
+| Numeric state | `strtol` base10 at`0xc170`; store at`0xc174` | Stores field base`0x21ce8`+64=`0x21d28`, the original exported `feature_vde` address. |
+| Exact enabled branch | compare with1 at`0xc188`; `0xc198–0xc19c` | Adds **7 to search-target count** at base+56=`0x21d20`. This is a count increment, not a bitmask or seven enabled services. |
+| Missing leaf branch | `0xc514–0xc524` | Missing node-list result takes an explicit zero store to `feature_vde`; null value text follows a different path without that conversion/store. |
+
+`upnp-config-literals.json`, `discovery-fields.json`, bounded disassembly and11 opcode assertions pin this join. The distinct IGD/device-specific branches use other fields. Decimal conversion is not a new validation claim: no original XML/strtol execution or malformed-input campaign occurred.
+
+## Seven targets and later discovery boundary
+
+Original `loadDefaultDeviceType!0x15ef8` allocates `search_type_count*4` bytes, stores its pointer at base+60=`0x21d24`, then tests the **same** `feature_vde` at`0x15f0c–0x15f24`. When it equals1, `0x15f58–0x15f98` copies the first seven original table pointers at`0x21c08` into this list:
+
+| Index | Original target suffix, under `urn:schemas-bticino-it:device:` |
+|---:|---|
+|0|`interface:1`|
+|1|`switchboard:1`|
+|2|`vde_internalunit:1`|
+|3|`vde_AlarmLogger:1`|
+|4|`vde_Svr:1`|
+|5|`vde_externalunit:1`|
+|6|`vde_generic:1`|
+
+These are actual discovery type strings, not identified physical devices or universally supported media roles. With flag unequal1 this block does not copy those seven entries. Other feature branches can append their own targets; the whole search list is not asserted empty. The inspected startup code has conditional calls to `loadDefaultDeviceType`, including`0xc27c` when its selected default field converts to1; other explicit type-list initialization exists and is not collapsed into this default path.
+
+`BtCtrlPointStart!0x13db0` later reads this same count and list. Its loop at`0x13e90–0x13f20` loads each pointer and calls **`UpnpSearchAsync` at`0x13eec`**, with r1=35, r2=that target and r3=0. Its preceding `UpnpInit`/`UpnpRegisterClient` success checks remain explicit. This is the discovery library-call boundary; no actual initialization, threads, SSDP request or network response was executed. The value35 here is a search-call argument, a different namespace from OPEN DIM35.
+
+A separate concrete response-side consumer is `parseUpnpDetected!0xeee8`:
+
+- An earlier byte gate at`0xef10–0xef1c` can bypass processing; its full state meaning is not assigned here.
+- `0xef20–0xef2c` loads `feature_vde` through pool`0xf0f8`→`0x21d28` and branches only when its value equals1.
+- That selected branch calls imported `isCDP` at`0xf010`; only nonzero continues through a mutex/client-open path and imported **`parseDeviceUpdate` at`0xf054`**. Null client result returns without that call.
+- When VDE is unequal1, or `isCDP` is zero, the function continues to other feature/type paths. It does not universally discard every detected device.
+
+The imported classifier/update internals and their actual binding/peer behavior are outside this batch. The recovered relation is **discovery feature→selected search types and detected-device handling**, not camera activation, WHO8 session enablement, WHO7 readiness or the factory enable leaf. No direct launch/startup gate for bt_vct/bt_av_media follows from these reads.
+
+## Complete initial WHO8/DIM35 request
+
+Original `/home/bticino/bin/api-arm` SHA256 is `2248b877bcc4180f0f04ffb1bad71e0efe4607fd06eacf174a2a6a380ea2cb13`. The previous targeted report traced the status builder at`0xfbf44`: seven-byte prefix at literal`0x1336fc`, then `std::string` append of object`0x154638`, then exchange call`0xfbfa4`→`0x8aa84`. The new exact join is:
+
+1. The original `.init_array` contains function`0x110b4` (`api-init-array.json` pins the array bytes).
+2. That initializer loads base`0x154638` via literal pool`0x11480`. At`0x111ac` it sets constructor `this` to that exact base, loads pool`0x114a4` and calls the original C++ string constructor PLT at`0x111b4`.
+3. Pool`0x114a4` points to literal`0x1297ec`, whose original bytes are `##` followed by NUL. The query helper's pool`0xfc114` resolves to the same object address.
+4. Therefore the normal initialized suffix is `##`; together with the traced prefix the **initial constructed request is `*#8**35##`**, conditional on successful normal global initialization and no intervening mutation. No whole initializer/string constructor/exchange executed, no runtime snapshot was taken, and no universal immutability proof is asserted.
+
+The delimiter initializer was already present in overnight `web/run2` evidence; identifying it is reused evidence, not another independent experiment. This collector independently checks its original words/literals, `.init_array` membership and object identity with the selected status helper. It does not resume or investigate any authentication code.
+
+The packaged frontend's earlier-known gate remains unchanged: `VideoPlayerH264View.js:194–240` requires auto-switching result`"0"`, then splits `get_vde_iu_status` result on`*`; field index4 equal`"0"` allows `switchOnCamera`. The complete query does not establish the returned fields' actual producer/meaning, a live response schema, or any link to factory `vde_enabled`.
+
+## Selected bt_vct measure path: preserve the missing response join
+
+Original `/home/bticino/bin/bt_vct` SHA256 is `b9bf0ba4cc212b84be19f8b57c9f57bcc0cd7dfb9d7cdf31af578713f3ecd076`. The prior role evidence selects handler`0x143f0` for packaged `device=1`, but that is not a new complete request/session execution.
+
+The local shared measure block starts`0x14990`. Its two pool values`0x15370`/`0x15374` are **9001/9002**, not35. Those are the special branch entering the original translation delegate at`0x14a18`. Conditional on reaching this block with extracted dimension35, code instead stores local flag1 (`0x149e0–0x149e4`), compares dimension30 at`0x14a44`, then takes`0x148f0`. The nonzero flag selects `Extract_OpenOK` at`0x14908` and the shared send wrapper`0xdb44` via`0x14978–0x14984`. This selected route has no recovered DIM35 status-field formatter. The wrapper's actual transport remains unexecuted.
+
+**This is not proof that the full initial query reaches this block**, that it necessarily receives only an acknowledgement, or that no other component/role/state produces status. The parser, empty-WHERE handling, caller/session guards, upstream receiver routing and a complete response producer remain open. A nearby OpenScs translator call must not be assigned to DIM35 merely because it is in the shared measure handler. This batch makes that tempting but incorrect join explicit.
+
+## Reproduction and remaining work
+
+```sh
+python3 work/f454-firmware/research/2026-10-30-targeted-2/media/collect_evidence.py
+python3 work/f454-firmware/research/2026-10-30-targeted-2/media/collect_evidence.py --check
+```
+
+The collector saves34 static evidence files,20 original byte spans,11 exact word checks and9 input hashes; `--check` compares generated bytes without writing. `output-manifest.json` pins the collector/evidence outputs and excludes itself/this report. All references use original image paths or research-relative paths, with no private workspace prefix. No exact `vde_enabled` search was repeated.
+
+Ranked next boundaries: (1) recover an actual WHO8/DIM35 response producer and its fields or an independently justified full ordinary request routing path; (2) follow imported `isCDP`/`parseDeviceUpdate` only if classification/update semantics are needed, preserving provider/runtime limits; (3) recover factory `communication/vde_enabled`'s separate controlling consumer. Discovery flag consumption is now concrete, but it does not close factory enablement or physical media activation.

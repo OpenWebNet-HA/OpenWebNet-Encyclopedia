@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "area": "removal",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "d58519",
+          "wall_time_seconds": 0.837758763,
+          "exit_code": 0,
+          "original_token_count": 45,
+          "output": "{\"check\": true, \"outputs\": 14, \"spans\": 4, \"guards\": 16, \"direct_branches\": 4, \"locator_candidates\": 6, \"relocations\": 4, \"data_spans\": 2, \"inputs\": 5, \"original_execution\": 0}\n"
+        }
+      }
+    },
+    {
+      "area": "reset",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "84c77d",
+          "wall_time_seconds": 0.757314771,
+          "exit_code": 0,
+          "original_token_count": 14,
+          "output": "{\"check\": true, \"outputs\": 6, \"original_execution\": 0}\n"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "checked_at": "2026-10-30T17:53:25.412434+00:00",
+  "passed": true,
+  "scope": "Run6 selected static joins; source reviews and exact identity, not runtime/physical proof",
+  "original_execution": 0,
+  "scripts": [
+    {
+      "script": "functional/run6/collect_evidence.py",
+      "passed": true,
+      "output": "PASS: 20 outputs + manifest; 10 spans, 32 words, 4 inputs, 5 timeout/6 selected field/3 reset host cases; original execution0"
+    },
+    {
+      "script": "lifecycle/run6/collect_evidence.py",
+      "passed": true,
+      "output": "PASS: 12static outputs+manifest/7spans/17words/6hostcases/original execution0"
+    },
+    {
+      "script": "protocol/run6/collect_evidence.py",
+      "passed": true,
+      "output": "{\n  \"outputs\": 30,\n  \"inputs\": 8,\n  \"spans\": 24,\n  \"critical_words\": 30,\n  \"literals\": 2,\n  \"host_cases\": 8,\n  \"original_execution\": 0,\n  \"code_hooks\": 0\n}"
+    },
+    {
+      "script": "boot/run6/collect_process_helpers.py",
+      "passed": true,
+      "output": "{\n  \"outputs\": 16,\n  \"ELF_objects_unique\": 23,\n  \"closure_objects\": 23,\n  \"edges\": 102,\n  \"inputs\": 29,\n  \"spans\": 6,\n  \"critical_words\": 16,\n  \"original_execution\": 0,\n  \"code_hooks\": 0\n}"
+    }
+  ],
+  "published_exports": 8,
+  "local_links": 160,
+  "preserved_prior_artifacts": 577,
+  "reviewed_prior_document_snapshots": 34,
+  "document_pins": [
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24.md",
+      "sha256": "be50776611c575b2c5a7121dde5ff86487adda7d90bf47e70d20d34879aa1b78"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/mh202-1.0.24-state-and-routing.md",
+      "sha256": "bab80fcad8987a68e82f00c30b24fe4544273a327d16221474b5d3bf1c075a1f"
+    },
+    {
+      "path": "reverse-engineering/firmware-analysis/README.md",
+      "sha256": "0d08572985f519f93d556edc1421f9420ee48e13306556dbc4c0cfb2b75d55f9"
+    },
+    {
+      "path": "project/review/firmware-analysis/README.md",
+      "sha256": "653317d0bca414bf4a20fbc3ff75fb8cb6b0ad1d5a23420088d52bde4a869512"
+    },
+    {
+      "path": "project/review/firmware-analysis/mh202-1.0.24/README.md",
+      "sha256": "aac2ba0fbb4e0898a830f2754237763ab16d1e4a1e3779e78d2d64400efc9532"
+    },
+    {
+      "path": "functional/who-17-scenario-management/README.md",
+      "sha256": "6d2673093bce1561ecec6f79d10c016cee87349d8e2f304cf51fe41f35a6b04f"
+    },
+    {
+      "path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "sha256": "f94a7b5b281d9f2648a2e8d68745da36d5273fe2715ff106835e9cbf787a4512"
+    },
+    {
+      "path": "devices/work-queue.yaml",
+      "sha256": "c796c99b5ef6c86fce0b61d6931e10d900cec265cf1ba22e83a28a1def0e8e5d"
+    }
+  ],
+  "repository_checks": [
+    {
+      "name": "ESG",
+      "exit_code": 0,
+      "output": "STATS human_pages=382 support_pages=120 objective_failures=0 review_candidates=6866"
+    },
+    {
+      "name": "ECV",
+      "exit_code": 0,
+      "output": "STATS human_pages=382 objective_failures=0 review_candidates=14"
+    },
+    {
+      "name": "diff",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "protected_F454_dossiers": [
+    {
+      "dossier": "2026-10-29",
+      "index_sha256": "3a71c4fb8caac033058689279a0f4acde36cc385936c39f3e8d7faa9ad9947df",
+      "files_verified": 1917
+    },
+    {
+      "dossier": "2026-10-30-targeted",
+      "index_sha256": "ddb83866292f70631b968b91f07e08fbc79415b5e1762cf3699f8e326eacff79",
+      "files_verified": 107
+    },
+    {
+      "dossier": "2026-10-30-targeted-2",
+      "index_sha256": "2dc3f9e3541478eff304d1d9bb368d02504c39cc3d5d8d3aec7ca96650032d82",
+      "files_verified": 130
+    },
+    {
+      "dossier": "2026-10-30-final-pass",
+      "index_sha256": "bf27345d8ce8d1e4e9277ad9346c62fcfde1f0b33bb20783ae5e66963ad100f2",
+      "files_verified": 83
+    }
+  ],
+  "sources_changed": false,
+  "branch": "docs/static-firmware-analysis-findings",
+  "commits_or_pushes": false,
+  "overnight_status": "ACTIVE, final consolidation31October07:15Paris; cutoff08:00"
+}

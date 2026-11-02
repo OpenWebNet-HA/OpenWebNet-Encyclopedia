@@ -1,0 +1,92 @@
+# MH202 1.0.24 — conditional process providers and WHO1000 General route
+
+Static-only bounded run2. The two selected process dependency scopes separate the duplicate parser implementations: the modeled `bt_device` scope uses `libopen`/`libbase`, while the modeled `openserver` scope uses `libcommon`. A selected diagnostic General route also explains why the missing WHO1000 entry in the generic WHO→SCS map does **not**, by itself, prove that WHO1000 cannot produce an internal request: this class has a WHO1000-specific header branch. These are packaged-code findings, not observed bindings, parser execution, hardware acceptance, or publication.
+
+Image paths below are absolute paths **inside the firmware image**. Evidence filenames are relative to this report. The input archive/provenance and completed run1 dossier remain unchanged. No original ARM, loader, JavaScript, PHP, vendor process, network, device, or service was executed. Original instruction and code-hook counts are both zero. Host tools used are Python, `readelf`, and `objdump`.
+
+## 1. Provider closure before joining duplicate class names
+
+`/etc/init.d/bt_daemon-apps.sh` line3 exports `LD_LIBRARY_PATH=/home/bticino/lib:/home/bticino/libcoso`, and line6 starts `bin/bt_daemon &`. `startup-library-path.txt` preserves those selected lines. This is a packaged environment declaration, not proof of inheritance by every live process.
+
+`conditional-provider-closure.json` reconstructs breadth-first `DT_NEEDED` scopes for `/home/bticino/bin/bt_device` and `/home/bticino/bin/openserver`. Resolution uses those two declared directories and explicit conventional `/lib`, `/usr/lib` fallback directories; canonical symlink targets are obtained through the hash-checking image accessor. Counts include each executable itself and unique `DT_NEEDED` objects, not the ELF interpreter or subsequently loaded objects.
+
+| Selected executable | Unique objects | Parser provider in modeled scope | Transport provider in modeled scope | Duplicate implementation absent from this scope |
+| --- | ---: | --- | --- | --- |
+| `bt_device` | 27 | `/home/bticino/lib/libopen.so.0.0` | `/home/bticino/lib/libbase.so.0.0` | `libcommon.so.0.0` |
+| `openserver` | 29 | `/home/bticino/lib/libcommon.so.0.0` | No selected transport-import assertion needed here | `libopen.so.0.0`, `libbase.so.0.0` |
+
+There are no unresolved `DT_NEEDED` entries in either model. The union is35 unique ELF objects. No `RPATH`/`RUNPATH` occurs in these scopes. `libssl.so.1.0.0` and `libcrypto.so.1.0.0` do carry `DT_SYMBOLIC`; their metadata is retained, and neither defines the selected protocol symbols. This report does not generalize its selected-symbol lookup into a complete dynamic-loader emulator.
+
+Selected executable relocations and ordered definition candidates are retained separately, with `GLOBAL`/`WEAK`, visibility, version-bearing symbol spelling, original VA and size. The selected parser definitions in `libdiag`/`libopen`/`libwhere` have no `@` symbol-version suffix. In the modeled ordinary global scope:
+
+| Import | `bt_device` first candidate | `openserver` first candidate |
+| --- | --- | --- |
+| `openwebnet::CreateMsgOpen(char*, int)` | `libopen` `0xb370`,160bytes | `libcommon` `0x2646c`,160bytes |
+| `openwebnet::Extract_chi()` | `libopen` `0x993c` | `libcommon` `0x24900` |
+| `openwebnet::Extract_dove()` | `libopen` `0x995c` | `libcommon` `0x24920` |
+| `openwebnet::IsMeasureFrame()` | `libopen` `0x9a50` | No selected import claim |
+| `advanced_receive_from_scs` | `libbase` `0x6c80` | No selected import claim |
+| `send_frame_toscsserver` | `libbase` `0x7350` | No selected import claim |
+| `OPN_OpenScsDiagTranslator::open2scs(...)` | `libdiag` `0x2338c` | No selected import claim |
+
+Consequently, run1's differing object layouts should not be spliced across these processes. `libdiag` belongs to the `bt_device` closure and reparses using the `libopen` candidate layout. This does **not** prove bytes cross the process boundary as a C++ object; no such transport claim is made.
+
+The model assumes the packaged paths/environment, no preload/interposer, no additional `dlopen` namespace, and no runtime replacement. No `ld.so.cache`, `ld.so.conf`, or `ld.so.preload` filename appears in the two packaged regular-file/symlink metadata inventories searched; that is an extraction-metadata result, not absence on a running device. Runtime loader search/binding, actual environment and launch inheritance remain unobserved. Host `ldd` and original loader execution were not used.
+
+## 2. Selected ordinary measure/key path, with parser boundaries
+
+The selected synthetic text is `*#1000*1*0##`, chosen to investigate the ordinary WHO1000/DIM0 route. It is **not** a hardware capture, an emitted request or a proven accepted full-parser fixture. The dataflow below is conditional on successful ordinary parsing, constructor initialization and WHERE resolution.
+
+`libdiag::openKeyGen` `0x23f8c` creates a local `openwebnet` at `SP+4` (`0x23fac..0x23fb8`), then invokes `CreateMsgOpen(char*,int)` at `0x23fd8` using the input string's data and length. The kind load at `0x23fe0` is from `SP+0x6240`, hence object offset `0x623c`; compare4 at `0x23fe4` branches to `0x24188`. This independently connects the actual key-generator's object use to the candidate `libopen` layout rather than `libcommon`'s `0x1dec` kind offset.
+
+In candidate `libopen`, `CreateMsgOpen` `0xb370..0xb410` copies text to object+`0x5e3c`, records its length at+`0x5e38`, strips trailing CR/LF as coded, and tail-calls `IsCorrect` at `0xb408`. The saved selected classification span `0xaf68..0xb118` identifies the read-dimension form as kind4 at `0xb09c`, calls `Assegna_chi_dove_grandezza` at `0xb0a8`, and subsequently invokes address/interface assignment when kind is not1. The field-assignment span places WHERE at+540 (`0xab30`) and DIM at+900 (`0xaba0`). **This run does not model or execute the complete preliminary grammar, address/interface assignments or final acceptance.** The conditional fields WHO1000/WHERE1/DIM0 are input assumptions, not newly executed outputs.
+
+For kind4, the actual key-generator calls `Extract_grandezza` at `0x2419c`, `unpackKey` at `0x241b0`, and prefixes character `R` at `0x241d4`. `unpackKey` `0x229d0..0x22ba0` implements:
+
+- Without `#`, append the literal `P0` (PIC target `0x31912`).
+- With `#`, retain the prefix before the first `#`, append literal `P` (target `0x31bec`), then append one plus the number of additional `#` characters in the suffix. Thus the suffix encodes parameter count, not parameter values.
+
+The small host reconstruction checks DIM`0`→`R0P0` and DIM`0#1`→`R0P1`. These are consistency checks of transcribed dataflow, not native C++ string/map/parser execution. WHO and WHERE are not concatenated by this selected kind4 key branch; later routing can still consult both.
+
+## 3. Concrete General registration and WHO1000 header exception
+
+In the General constructor, the selected block `0x1aa9c..0x1ab00` constructs key `R0P0` from PIC target `0x3191d`, performs `map::operator[]` at `0x1aac0`, and copies the two-word member pointer from table base+72 (`0x1aad0`). The table slot is `0x380c8`; original `R_ARM_ABS32` relocation names `OPN_OpenScsDiagGenTr::o2s_allParameters` at `0x15b60`. This is constructor/data relocation evidence for the selected map entry. The all-class outer key/rule selection, registration collision behavior and factory initialization have not been executed or fully reconstructed in this run.
+
+`o2s_allParameters` `0x15b60..0x15c98` assigns suffix literal `8C000100` from PIC target `0x313ef` at `0x15c54..0x15c60`, then returns numeric0 at `0x15c64`. This is the class's response-type value; it is not the parser-kind namespace or a physical SCS selector.
+
+The original General `open2scs` `0x1913c` obtains a member through `getTranslFunc`, invokes it at `0x191a0`, and stores its returned response type at this+32 (`0x191a4`). It then calls `OPN_OpenScsWhere::getScsAddr` at `0x191b0` **before** testing WHO1000. The selected path therefore still depends on successful WHERE dispatch. `libwhere` outer `0x5228..0x5330` extracts/decimal-converts WHO, looks it up in a translator map and can throw on a missing key; this run does not close the map-initialization or selected translator precondition.
+
+After that precondition, General calls `getMainWho` at `0x19204`, compares1000 at `0x19208`, and branches at `0x1920c` to `0x1924c`. This branch assigns fixed header `$04` from PIC target `0x31747` rather than calling `scsHeader` at `0x19224`. The common normal continuation streams header then method suffix and pushes the assembled string into the output vector at `0x19288`.
+
+Under the stated selected-class/parser/WHERE/ordinary-C++ completion assumptions, the host-consistent internal ASCII candidate is therefore `$048C000100`. It is not serial bytes, a send call, a demonstrated transaction, or a physical-device reply. The static exception to the generic header path is the new result: **a missing WHO1000 entry in the generic `libopenscs` WHO→SCS map cannot alone settle this special General route.** Conversely, the existence of the special header does not prove global WHO1000 support or full reachability.
+
+## 4. Reproduction, identities and coverage
+
+From the workspace root, run:
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/protocol/run2/collect_evidence.py --check
+```
+
+The collector recomputes and strictly byte-compares24 outputs:35 unique closure ELF inputs,41 total input hashes,12 original-code spans,15 exact original-word assertions and5 PIC literal assertions. `input-hashes.json` includes original ELF/image metadata/script bytes, shared accessor/provenance and read-only prior run1 report; `original-spans.json` gives VA bounds, file offsets and byte hashes. `output-manifest.json` pins this report, collector and generated evidence while excluding later peer reviews to avoid a review/hash cycle.
+
+Principal original identities:
+
+| Image object | SHA256 |
+| --- | --- |
+| `/home/bticino/bin/bt_device` | `65dad019cc15cf5036c04ec7ef23d0f9c2f388324f44692f43af37fd82192f70` |
+| `/home/bticino/bin/openserver` | `5858374ef26a02c10381cb7ffd09cabbf762367ecce090e238cdde81c1ffced4` |
+| `/home/bticino/lib/libdiag.so.0.0` | `72da849b0b589758d1c0ca07bf8922359fd7e28dff8e1c20f481f688815f31fe` |
+| `/home/bticino/lib/libopen.so.0.0` | `868eeb717020232c11623224df17bd6b2034fffc2fb80043c39c34b76310fb04` |
+| `/home/bticino/lib/libwhere.so.0.0` | `334cf3461e23712a85098e171a1cbcc6c675fedc9a12dd516954adaf7ecbaea5` |
+| `/home/bticino/lib/libbase.so.0.0` | `5be579cf8ab074e9462e3e5b932343da5b28167cd5afb38cbdcebf7eb8ab9af5` |
+| `/home/bticino/lib/libcommon.so.0.0` | `07b2c6d09e4a1b317bb3b37aff8f7ddd72dcec15e1e7194fde00c4f0ce1ecab5` |
+
+This is targeted normal-image code analysis. Recovery whole-file equality of these components was established in read-only run1; this batch does not reestablish the entire recovery environment. F454 prior semantics have not been transplanted as MH202 results. No authentication/session/credential derivation was investigated.
+
+## 5. Ranked next questions
+
+1. Statically recover `libwhere` map initialization for WHO1000 and the selected address translator, then test whether the chosen ordinary WHERE1 precondition is justified. The fixed header is reached only after this call.
+2. Reconstruct the diagnostic outer key-vector/class registry lookup far enough to establish selected General reachability and collisions for `R0P0`; the individual map entry alone is insufficient.
+3. Trace the actual bt_device vector consumer/response-type handling and internal transport envelope for this route, maintaining its separation from physical serial traffic. Do not call the candidate “published” before that consumer is established.
+4. Expand provider closure to other executables only when needed for their concrete same-named class/helper calls; live loader interposition remains a separate observational question.

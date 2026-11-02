@@ -1,0 +1,8 @@
+# Ranked remaining questions
+
+1. A concrete owner/caller that resets or deliberately replaces the shared cancellation domain after stop. Unresolved wide/indirect aliases must not be treated as absence of reset.
+2. Actual action-worker ownership and completion cleanup after a scene leaves its completion poll, including object lifetime/unwind and concurrent starts/stops.
+3. Configured scene/class evidence connecting operational duration and its opaque second callback to a naturally used action. Metadata equality and constructor bindings alone do not establish timing or physical effects.
+4. Missing configured scenes/extras80/81/94/95 and effective startup/provider/readiness state; later registry mutation and active TIME/nested-scene lifetimes.
+
+Do not repeat the completed local polling, constructor/slot tables or bounded alias syntax scans without a new owner artifact. Closed authentication/session/framing/equivalent investigations remain closed. No live gateway/bus contact or target execution is part of this work.

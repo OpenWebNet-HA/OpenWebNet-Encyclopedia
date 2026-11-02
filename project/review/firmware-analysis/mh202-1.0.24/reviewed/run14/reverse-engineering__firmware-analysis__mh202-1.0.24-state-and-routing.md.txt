@@ -1,0 +1,342 @@
+# MH202 1.0.24 State and Routing
+
+This continuation adds selected static joins and seven bounded original-helper execution corpora to the [MH202 build profile](mh202-1.0.24.md). It uses the same archive SHA-256 `bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7`. The ordinary-comparator corpus records `1485` original ARM instruction visits and `75` explicit primitive callbacks across `13` calls; firmware processes and target OS calls remain `0`. The separate packaged-copy corpus adds `16` calls and `1280` original visits with zero primitives. Run9 adds a supplied-field normalizer/comparator handoff corpus and prepared suffix-helper corpus. Run10 additionally executes the full selected normal libopen builder/parser path. Run11 joins an actual libcommon parser to ordinary taskmanager normalization. Run12 adds native bracket/level cases. Combined canonical counts are `53` calls, `20104` original visits, `1972` C-primitive callbacks, `77` original-definition redirects and `11` return-boundary callbacks (`22164` hook visits); replays are not accumulated. Earlier checkpoints retain their static-only counts. Original ELF virtual addresses, file hashes, reproducible collectors and source reviews for the initial continuation are recorded in the [run2 provenance](../../project/review/firmware-analysis/mh202-1.0.24/run2-provenance.json).
+
+## Event matching and the configured panic frame
+
+An actual `bt_taskmanager` path now joins its WHO callback table, a changed-value handler, trigger matching and stored callback invocation. For the selected WHO 9 route, WHERE `1..10` and a changed cached WHAT can reach the matcher, subject to an additional readiness field. A first-known value and an unchanged value follow different paths; this is not a general rule for every event family.
+
+Before dispatch, the outer handler clears trigger-hit fields. The matcher marks matching entries, and the callback traversal clears each hit before calling its stored callback with the script record. It traverses all matched entries. The ordinary comparator has selected numeric list, inclusive range and negation branches. The [later trigger comparison analysis](#selected-trigger-comparison-rules) narrows these and the special comparator without establishing the complete pattern language. Configured trigger contents and actual event delivery are unavailable.
+
+The previously unresolved command gate now has a concrete setter. A configuration read selects `configuratore/setup/sicurezza/panic`; a full-frame comparison against that buffer sets global `0x1b4c4` and iterates scripts whose control state is nonzero, calling stop. The same global gates later ordinary matching and WHO 17 normal commands. This establishes a configured panic-frame path, not the accepted raw input, installed key, gate-reset mechanism or the manual's complete recovery procedure.
+
+The inspected matcher, start callback and always-start pass do not themselves test disabled field `+52`. A later [action-level marker consumer](#action-level-disablement-and-ipc-producers) narrows where suppression can occur; this is separate from start-event suppression and all-action policy. See the [event/control report](../../project/review/firmware-analysis/mh202-1.0.24/run2-functional-report.txt).
+
+## Control state, FIFO messages and restoration
+
+The original FIFO receiver and main-loop handoff now reach the native message handler. These letters are internal IPC commands, not additional WHO 17 wire operations.
+
+| Received first byte | Selected native receiver action |
+| --- | --- |
+| `S` | Set control state `2`, parse PID from payload offset `+2`, with additional previous-state cleanup conditions |
+| `R` | Set control state `2` |
+| `P` | Set control state `3` |
+| `E` | Invoke cleanup and selected request-association clearing |
+| `F` | Under length/global guards, parse a supplied OPEN string and pass it to the request helper; a qualifying helper result sets state `4` |
+
+The earlier WHO 17 status formatter tests whether control field `+60` is zero. Nonzero values include pending/request/pause/stop states; a formatted `WHAT 1` alone is not proof of a running child or physical action.
+
+Two startup passes have distinct conditions and a concrete order. The saved-status restoration pass interprets numeric mask `1` as execution/control and mask `2` as disabled. It relaunches saved-active records only when the `$RESTART=SI` flag is set. The subsequent always-start pass tests inactive control state and the `SEMPRE` flag. The outer readiness/once guard is retained. This supports saved-state restoration, not universal restart after every normal completion or EOF. The [saved-state file contract](#saved-state-file-contract) now narrows local storage policy. Complete readiness, actual persisted contents and request/publication ownership remain open.
+
+## Query readiness and the mode-4 gate
+
+The query-readiness object is separate from the command gate set by the configured panic comparison. A guarded working-mode `4` path also sets that same command gate, after requesting saved-state initialization; the gate is therefore not unique evidence of a received panic frame.
+
+The identified readiness helper walks an initial query list. It increments its cursor on a nonnegative request-helper result, and sets readiness when list traversal is exhausted. In the selected no-active-request/not-ready response path, either an OK or a KO predicate can invoke the next query step. This is not proof that all queries returned positive data or that a service/socket is healthy. The main restoration/always-start pass uses this flag under its existing once guard.
+
+A control-synchronization helper explicitly resets the query object's cursor/readiness and calls initialization callbacks. Those direct zero stores are separate from the command gate; indirect callback effects and complete gate clearing remain open. Fresh-process zero-fill is only an ordinary ELF-loader premise. See the [readiness/gate report](../../project/review/firmware-analysis/mh202-1.0.24/run6-lifecycle-report.txt).
+
+## Saved-state file contract
+
+The selected taskmanager file uses a `12`-byte header followed by `300` state bytes. Initialization sets four magic bytes and default state `0xff`. The writer marks header byte `4` as ASCII `1`, requests header and state writes, changes the marker to ASCII `0`, seeks back and requests the header again. It checks open failure but does not branch on the selected write, seek or close results before its explicit return `0`.
+
+The reader compares four magic bytes, then requests the state array. Marker `1` selects a log message and converges on that same read; it is not a rejection or rollback gate in this helper. Both read results are unchecked in the selected body. Missing/open or wrong-magic paths initialize defaults and request a save. These are local API-request/return rules, with actual stream contents, partial reads, crash recovery and durability unexecuted. See the [saved-state report](../../project/review/firmware-analysis/mh202-1.0.24/run4-lifecycle-report.txt).
+
+## Action-level disablement and IPC producers
+
+The selected `libdomotica` `OWRITE` constructs a runtime script `DISABLED` pathname and checks it through a stat wrapper. A stat result of `0` selects source return value `1` before the selected `F` request construction/write. This establishes an action-level guard; the return value does not prove that an action succeeded. The selected `OREAD` prefix reaches its first `F` write without this same marker check, so the evidence is specific to inspected paths.
+
+The marker-name join is conditional. Taskmanager derives a record name from `$NOME`; the interpreter has a separate name directive whose exact source prefix is ` $NOMESCRIPT`, including one leading ASCII space. It supplies its `Script` global, with unresolved effective binding and overlapping-copy behavior. Missing configured script bodies prevent proving that both names and runtime paths match on a deployed unit.
+
+Concrete producers format `S <pid>\n`, `F <text>\n` and `E\n`, corresponding to the reviewed receiver. Complete line delivery, globals, descriptors and original parser/response handling remain assumptions. Dedicated `R`/`P` producers were not located in the bounded direct-write scan of these two files; this is an unfinished join, not an absence or unsupported-state claim. See the [action/IPC report](../../project/review/firmware-analysis/mh202-1.0.24/run3-functional-report.txt).
+
+## Action return values and timing
+
+Two actual `OWRITE` callers handle the integer return differently. The selected `=OWRITE` prefix path stores it in a numeric record; the standalone prefix path continues without consuming it. A marker-skipped source return `1` can therefore become stored data, while establishing neither command emission nor action success. The full variable/statement grammar remains open.
+
+Original default-visible symbols and relocations support an executable-first candidate binding for `Script` and IPC globals under the declared ordinary-loader assumptions. This is a conditional symbol plan, not a full process closure or observed binding. Actual script content and name equality still depend on missing configured assets.
+
+A selected `SLEEP` helper distinguishes exact `ms`, which requests `usleep(amount*1000)`, from first-character minute/hour/second arithmetic. Its ordinary non-ms path divides larger amounts into `300`-second delegates plus a remainder. The candidate imported helper builds a seconds timeout under ordinary API contracts. No native unit parsing, elapsed sleep, interruption or complete configured DSL statement was executed. See the [caller/global/timing report](../../project/review/firmware-analysis/mh202-1.0.24/run4-functional-report.txt).
+
+## Interpreter conditional and operator spelling
+
+The original `bt_script` loop seeks to a stored line offset, reads into `linea`, recognizes prefix `IIF`, calls `PARENTESI` with comma and source position `3`, then calls the candidate `libdomotica` `IIF` implementation. The return value is unused; the interpreter continues testing the line's ordinary instruction prefixes.
+
+The selected numeric-variable branch reaches signed integer comparison. Its original operator strings are `=`, `<`, `<=`, `>`, `>=`, `<>`; an unrecognized operator returns zero in that helper. Additional variable/string branches and the complete expression grammar remain separate. A pre-promotion host assumption about equality spelling was caught by the original-literal assertion and corrected; the [correction record](../../project/review/firmware-analysis/mh202-1.0.24/run2-interpreter-correction.txt) preserves it.
+
+The helper's two conditional tails request one versus two comma-prefix removals through `strcpy` on the global line buffer. Source and destination overlap. The retained host example is explicitly a hypothetical forward-copy suffix model; actual packaged-libc handling in that original interpreter caller and resulting script execution were not demonstrated. The library and executable also export `linea`; the composed global-data join retains its provider-resolution assumption. This is a concrete per-line conditional target, not established equivalence to the product's entire scenario-level Only if stage. See the [interpreter report](../../project/review/firmware-analysis/mh202-1.0.24/run2-interpreter-report.txt).
+
+## Clock comparison is a numeric result
+
+The selected interpreter `=CHKTIME` prefix calls the matching `libdomotica` helper and stores its integer return in a numeric record. Exact selector `SYSTIME` compares current local hour/minute with second-string bytes `8,9` and `11,12`. Its returns are `0` equal, `1` current time later, `2` earlier; another selector returns `-1`. This is a three-way comparison, separate from a Boolean condition, duration sleep or complete scheduler policy.
+
+The helper uses ordinary `time`/`localtime` ABI assumptions. Its selected body does not add seconds/date checks or validate a calendar prefix. Source argument extraction includes potentially overlapping string copies; retained dummy-prefix examples are hypothetical copy models, not accepted deployed DSL statements. Full grammar, clock environment and action use remain open. See the [clock comparison report](../../project/review/firmware-analysis/mh202-1.0.24/run5-functional-report.txt).
+
+## Selected trigger comparison rules
+
+The ordinary helper compares literal bytes and selected nonnegative numeric bracket forms: comma lists, inclusive ranges and a negated number. Its selected single-member bracket path rejects that form. The helper exits with its match result when either cursor is exhausted, without a final equal-length test. Retained partial-string examples are helper-only models, not accepted network frames, valid configured directives or observed false triggers.
+
+For the special incoming prefix, the selected helper parses two objects and compares only designated nonempty trigger values. Trigger DIM `0` selects indices `0,1`; DIM `22` selects `0,1,5,6,7`. Empty selected trigger fields skip comparison. DIM `1` selector state remains unestablished; no match-all or defect verdict is assigned. Normalizer guard/formatter relations are recovered separately from full accepted normalization. These implementation positions are not new public WHERE or identity-field definitions. See the [trigger report](../../project/review/firmware-analysis/mh202-1.0.24/run3-triggers-report.txt).
+
+## Original ordinary-comparator evidence
+
+An existing standalone analysis-tool package made a fresh MH202-only leaf harness possible. It executes only original helper bytes `0xc6dc..0xc8e0` in private mapped ARM memory. Unknown code addresses, interrupts and unmapped access are rejected, with instruction/time caps. Host `strlen` and bounded nonoverflow `atoi` are declared primitives, not original libc execution; no vendor process or target I/O is supplied.
+
+The canonical `13`-call corpus records `1485` original instruction visits and `75` primitive callbacks, separately counted. Independent replay reproduces literal, selected bracket, leading-zero and prefix-exhaustion results, with no guard violations and the old tool files unchanged. This validates the selected helper scope beyond the previous host model. It still does not execute the original parser, normalizer, special comparator, dispatcher or configured scripts, so synthetic prefix examples do not establish valid raw frames or physical false triggers. See the [isolated-comparator report](../../project/review/firmware-analysis/mh202-1.0.24/run7-triggers-report.txt).
+
+## COSO scenario translation is separate from scheduling
+
+The scenario TR descriptor registers an initializer and translator at distinct offsets. Under selected post-parser fields and ordinary conversion/context contracts, its normal-command path constructs fixed-WHO `0` body candidates. A selected unsigned command range includes `0..31`; commands `40..44` use separate byte packing and parameter guards. These local branches are not a complete public support list or raw parser proof.
+
+One source-level detail matters: absent parameters for commands `40` and `41` produce byte `0xff`, because an earlier conditional instruction supplies integer `-1` before the OR/store. Independent review corrected an initial zero-default assumption and added explicit examples; this does not establish physical equivalence to command `43` or valid parameterless syntax.
+
+Matching two selector fields against private context leads to a four-byte body and the brief builder; mismatch leads to eight bytes and the extended builder. Native wrappers copy metadata and append to the supplied output list. In a selected reverse brief-status branch, bits in byte `0x80..0x83` choose two separate WHO `0` candidate strings. Actual parsing, address conversion, context, formatting, list operations and delivery were unexecuted. These translation/list boundaries do not make COSO the WHO `17` script scheduler. See the [COSO scenario translation report](../../project/review/firmware-analysis/mh202-1.0.24/run5-coso-report.txt).
+
+## COSO pending requests and nominal timer
+
+The separate scenario STM keeps a pending state/key, address strings and timer source. In its own parsed representation, a selected kind-`2` application request queues the existing record, saves the key/fields and enters state `1`. It requests a `1000`-unit timeout; comparison with the packaged GLib constructors/deadline arithmetic supports `1000` milliseconds under ordinary API/provider assumptions. No actual scheduling or elapsed second was observed.
+
+The callback chooses local NACK for state `1`, ACK for states `2/3`, invokes a supplied publication callback and resets. Selected field flags/key and address-comparison results affect those states, forwarding and rearming. One counter survives the selected reset helper: its equality-to-`2` completion depends on prior history, so this is not a universal second-reply-per-request policy.
+
+Native ACK/NACK and clone constructors have concrete metadata/list boundaries, including a new clone ID rather than a proven copy of the pending key. Actual dispatcher eligibility, metadata producers, address-helper outputs, callback ownership/refcounts and delivery remain open. These kind codes are not interchangeable with the separate C++ parser layouts. See the [scenario STM report](../../project/review/firmware-analysis/mh202-1.0.24/run6-functional-report.txt).
+
+## Actual COSO dispatcher and record keys
+
+The core application and field dispatchers compare each descriptor's numeric criterion list with record WHO field `+48`, then call different descriptor callbacks with the actual record and separate output-list addresses. A scenario criterion `0` therefore selects its STM handler for a supplied coherent post-parser WHO `0` record. This remains a post-parser/loaded-descriptor/container premise, not accepted network syntax or a complete natural round trip.
+
+The main's installed callback is now identified as `sm_receive`: the STM initializer inherits it, and its two supplied lists route toward OPEN and field handling. A constructor obtains record key `+60` from a local incrementing ID helper. Selected queued SCS feedback preserves that key while changing metadata flags; a fresh-field branch creates a new key. The feedback predicate's source/meaning, full translation eligibility, counter history and final writes/lifetimes remain open. See the [dispatcher/key report](../../project/review/firmware-analysis/mh202-1.0.24/run7-functional-report.txt).
+
+## Candidate process providers and a WHO 1000 exception
+
+Modeled dependency scopes now separate two same-named parser implementations, under the declared library paths, conventional fallback directories, and explicit no-preload/no-extra-namespace/runtime-replacement assumptions.
+
+| Process scope | Unique objects including executable | Selected candidate providers |
+| --- | ---: | --- |
+| `bt_device` | `27` | `libopen` parser, `libbase` transport, `libdiag` translator; `libcommon` absent from this modeled scope |
+| `openserver` | `29` | `libcommon` parser; `libopen` and `libbase` absent from this modeled scope |
+
+This is a static dependency/symbol model, not execution of the target loader. It narrows which native layout should be used for a specific code join and does not describe a C++ object crossing process boundaries.
+
+A selected diagnostic General path explains why the generic WHO-to-SCS table's missing WHO `1000` entry is insufficient for a global support verdict. For a conditional measure DIM `0`, the key generator forms `R0P0`; the General constructor maps that key to its all-parameters member. That member supplies suffix `8C000100`. The later General method calls WHERE resolution first, then has a WHO `1000` branch that supplies fixed header `$04` instead of the generic header helper.
+
+Under successful parser, selected-class, WHERE and ordinary C++ completion assumptions, the internal ASCII candidate is `$048C000100`. It is not an accepted raw request, serial bytes or a physical reply. Later source evidence establishes a present-null WHO `1000` WHERE entry: that lookup returns without translation or return-structure writes, while the selected General kind4/fixed-header path does not use those address fields. Missing-key handling remains a separate path. Initial General registration and a conditional first-vector-element handoff to the send import are also traced; full raw parser acceptance, caller state, original transport execution and response collection remain open. A later complete normal-factory key reconstruction finds `104` distinct keys across all five classes, leaving `R0P0` with General under ordinary completion and no later mutation assumptions. This closes that selected ownership question, rather than establishing runtime registry contents. See the [WHERE/registry/vector continuation](../../project/review/firmware-analysis/mh202-1.0.24/run3-protocol-report.txt). See the [provider/diagnostic report](../../project/review/firmware-analysis/mh202-1.0.24/run2-protocol-report.txt).
+
+A later caller creates a separate parsed object and WHERE-result buffer. Run5 traces its text pointer back to the original object's embedded raw buffer at offset `0x5e3c`; the distinct pointer slots are now connected by original dataflow. This narrows the earlier input-identity uncertainty, while leaving original parsed fields/raw text coherence, successful reparsing and mutation/provider assumptions explicit.
+
+Under a successful second WHO `1000` parse, null translation still leaves the local result bytes untouched. A selected response-type `0`, measure/DIM `0` path consults that marker to choose collector mode `7` or `8`. Three explicit prologue zero-fills do not cover the result, but a bounded direct-encoding search is not complete alias/callee-write analysis. Its actual prior byte remains unknown; no deterministic mode or guaranteed uninitialized-memory defect follows. Local helper return selects OPEN-OK versus OPEN-KO strings; actual collection/delivery remain unexecuted. See the [earlier factory/collector continuation](../../project/review/firmware-analysis/mh202-1.0.24/run4-protocol-report.txt) and [raw-buffer provenance refinement](../../project/review/firmware-analysis/mh202-1.0.24/run5-protocol-report.txt).
+
+## Diagnostic qualification and local completion
+
+A selected receive-selector `4` path reaches the original decoder, then requires successful decoded/reparsed diagnostic-family output. Conditional collector modes `7/8` share selected DIM/address qualifiers, including specific dimension shortcuts and a low requested-DIM fallback. Those predicates do not universally require received WHO equality to the request. This is post-decoder source evidence, with actual raw acceptance, context and providers unresolved.
+
+On the selected nonnegative forwarding path, mode `7` with nonzero requested DIM returns local `0` after its first qualifying result. Mode `8` counts/continues and has separate terminal-field and elapsed-check exits. Its selected received-timestamp elapsed-greater-than-`5` return `0` does not test the accepted count and can follow an unqualified diagnostic object. This is not a complete deadline or no-data policy.
+
+The caller maps local `0` to an OPEN-OK string choice. That choice alone is not a positive physical diagnostic result, successful output write or delivered acknowledgement. The array helper stops at the candidate parser's actual OPEN-OK kind, rather than an imported enum from another implementation. See the [collector qualification report](../../project/review/firmware-analysis/mh202-1.0.24/run6-protocol-report.txt).
+
+## Selected diagnostic DIM1 decode
+
+A selected internal `19`-character receive path now joins fixed-field guards, the first SCS key rule and the actual General member relocation. Key `D2S80` selects `s2o_deviceModel`; its first DIM1 value combines one hex nibble shifted by `8` with a separate two-character byte, followed by three individual nibble values. This is not four ordinary contiguous bytes.
+
+Two explicitly constructed host strings illustrate those widths and route conditions. WHO/WHERE conversions and final original serializer/parser validity remain unresolved, so neither string is promoted to captured data, accepted OPEN output or MH202 hardware identity. The conditional decoder tail appends an OPEN-OK candidate to the next array element; actual parsing, collector qualification and delivery remain separate. See the [DIM1 decode report](../../project/review/firmware-analysis/mh202-1.0.24/run7-protocol-report.txt).
+
+## Environment selector and the child launch filter
+
+The demonstrated daemon selector reads `MYRECOVERY` from an export of the current process environment. It does not demonstrate a consumer of the packaged `sp/Recovery` marker or a bootloader-variable reader. Exact value `yes` requests running-copy flag `2`; other values request `1`. Writes, readback, environment-file handling and status helpers retain their delegate/failure boundaries.
+
+A readback value `2` reaches a route that requests working status `2` and invokes the child launcher. The namespaces remain distinct: running-copy flag, current working status, per-child XML `working_mode`, packaged `normal_status`, and the recovery marker are separate quantities.
+
+The runtime configuration pointer initially names image-root-relative `var/tmp/stack_open.xml`. The packaged volatile-file rules declare a startup symlink to `home/bticino/cfg/stack_open.xml`; the applying script has existing-path guards and asynchronous link requests. This establishes the initial source policy, not a completed runtime link or identical effective XML. Later replacement/rewrite producers remain open. The selected XML text callback stores each child's `working_mode` into record `+8`. The actual launcher skips that record only when its saved current status equals `2` and the child mode equals `0`. Other current statuses do not apply this exclusion in that helper. Therefore a packaged child mode `0` is not a universal disabled flag.
+
+On the packaged nine-entry list, the conditional status-`2` model selects openserver, scsserver and bt_device; the other declared model cases include all nine. These are launch-call choices, not successful children or readiness observations. Argument-table validity, `call_nowait` semantics, stored results, actual XML contents and later supervision remain open. See the [daemon mode/configuration report](../../project/review/firmware-analysis/mh202-1.0.24/run2-boot-report.txt).
+
+An ordinary working-mode writer is also located in `openserver`: decimal configuration, extras and recovery-kernel status buffers must all equal `1` before it requests working mode `1`. Getter success, setter success/readback and later listen readiness remain separate. A selected pending recheck is an opportunity, not a guaranteed until-ready retry; its displayed nonzero-pending exits clear that pending flag. The daemon has a later mode-1 consumer behind its own guards. See the [startup/status report](../../project/review/firmware-analysis/mh202-1.0.24/run3-boot-report.txt) and [run3 provenance](../../project/review/firmware-analysis/mh202-1.0.24/run3-provenance.json).
+
+## Configuration container and copy requests
+
+Fresh MH202 daemon evidence identifies primary `conf.img` and mirror `conf_copy.img` containers, separate from the taskmanager saved-state file. A tokenized header supplies decimal checksum and length fields; writer payload starts at offset `1024`. The selected reader's unchecked raw-read count makes that current stream position conditional on a full read. Host reconstruction of the CRC table, length suffix and complement matches ordinary POSIX `cksum` examples; no firmware checksum or archive processing ran.
+
+The validator returns a checksum on equality, `0` on selected failures/mismatch and `-1` on a close-error branch. Startup tests nonzero rather than a Boolean validity result. In the selected unequal-copy route, exact original operands request mirror unlink followed by a copy call with primary as both source and destination. A log-based primary-to-mirror interpretation was corrected before promotion. The opposite repair-looking route has distinct mirror-to-primary operands. Copy/delegate outcomes and later fallback remain open; these code requests are not observed file damage or successful repair.
+
+The selected writer requests primary replacement before mirror replacement, uses the same header/payload, and tests exact `-1` for its selected write-error guards. It does not establish full writes, an atomic pair or durable installation. Both-zero startup selection skips the selected extraction calls; no factory-reset outcome follows. Full header literals and credentials are withheld. See the [configuration persistence report](../../project/review/firmware-analysis/mh202-1.0.24/run4-boot-report.txt) and its [correction record](../../project/review/firmware-analysis/mh202-1.0.24/run4-boot-correction.txt).
+
+## Default configuration fallback
+
+Selected extraction-helper normal returns are separate from the caller's source selection. The caller ignores those immediate returns, checks staged archive-file metadata, and later tests an opaque archive-helper result against exact `-1`. That comparison is not a proven child-process success convention. Separate fixed-content/configuration-status gates follow; complete marker strings and archive credentials remain withheld.
+
+Negative source selection reaches an actual default helper. It first checks a codename-specific restore pathname, trying the generic packaged default only when that first metadata check fails. A later failure after choosing the specific candidate does not become a generic retry in the inspected path. The generic original exists, with its hash retained and contents unexported.
+
+Under ordinary open/lock/destructor completion, a copy-helper result other than `-1` requests configuration status `1` and returns Boolean `1`; setter failure logs without changing that return. The caller then requests persistent-container rebuilding and ignores the writer's return. A Boolean `0` leaves negative selection and skips that writer, while ordinary continuations rejoin later configuration processing. These are concrete default-file/caller paths, not a complete factory reset, valid restored configuration, successful utility run or durable recovery. See the [default fallback report](../../project/review/firmware-analysis/mh202-1.0.24/run5-boot-report.txt).
+
+## Runtime XML fields and later HTTP requests
+
+The shared post-default step is a markup reader for temporary runtime configuration. Its start/end callbacks maintain an element-name list on the existing config object; a selected text path reaches `configuratore/setup/servizi`. Leaves `abil_pagine_web` and `abil_sdk` write bytes `180/181` from the first byte of each nonempty text chunk: ASCII `0` gives false, other first bytes true. This local rule does not prove actual GLib chunk boundaries or a whole Boolean grammar.
+
+Later ordinary-child code gates HTTP configuration on byte `180`, passes byte `181` to the HAL configuration call, and has a separate byte-`180` restart request. The generic packaged default has web flag `1`; an absent SDK leaf does not determine an already existing runtime byte. The selected parser/caller ignores parse-completion returns, so neither a local return nor these later calls certifies valid restored settings or working HTTP/SDK services. See the [runtime XML/service report](../../project/review/firmware-analysis/mh202-1.0.24/run7-boot-report.txt).
+
+## Daemon process-helper return mismatch
+
+A fresh conditional dependency model gives the daemon `23` packaged objects and selects `libutils` for `call`, `call_nowait` and `call_daemon`. This assumes ordinary packaged search/interposition rules and inherited library paths; it is not observed live binding.
+
+The complete selected `call` body initializes a status word, invokes `call_nowait`, requests `waitpid` without checking either returned number, and returns an unsigned byte from the word. Its ordinary return range is `0..255`. The previously documented configuration/archive/default-copy checks compare that result with exact `-1`, so they do not reject positive exit-byte results under this provider. Subsequent content/status/fallback gates remain separate; no actual command failure, invalid restoration or device damage was observed.
+
+`call_nowait` returns the parent's fork result before exec confirmation. `call_daemon` has a different parent PID/wait contract. Neither PID proves service readiness, and neither should inherit `call`'s byte convention. Prior reports' opaque-helper limits are narrowed by this later source join. See the [process-helper report](../../project/review/firmware-analysis/mh202-1.0.24/run6-boot-report.txt).
+
+## Exact packaged copy helper
+
+The original MH202 `lib/libc-2.8.so` exports an ordinary ARM `strcpy` at `0x70ad0..0x70bc0`. A fresh isolated harness executes only those bytes, with no imported primitives, loader or target OS. Sixteen supplied shrinking-suffix, identity and disjoint calls return the expected strings and destination pointers, preserving the checked callee-saved registers and stack. The corpus spans four base alignments and three shrinking offsets; it records `1280` original instruction visits and zero primitive callbacks.
+
+This narrows the earlier actual-copy uncertainty for these specific calls. It does not execute the `IIF`/`CHKTIME` callers, searches/tokenization, global line binding, complete script or configured assets; overlapping `strcpy` is not given a portable C guarantee by these results. Padding beyond the terminating NUL is explicitly supplied for word prefetch. Together with the independent run7 comparator corpus, that two-corpus subtotal is `29` helper calls, `2765` original visits, `75` primitive callbacks and `2840` code-hook visits. Replays are not accumulated. Firmware processes and target OS calls remain zero. See the [copy-helper report](../../project/review/firmware-analysis/mh202-1.0.24/run8-strings-report.txt).
+
+## Conditional COSO feedback and pending-query route
+
+The selected SCS receive prefix parses two unsigned fields using `*%02u*%02u`. The first selects its route; the second supplies the queued-feedback flag predicate. In route `1`, only a nonzero opaque send return reaches that feedback path. This includes negative numbers at this local comparison and is not a full-write success test. Selected queued feedback retains the body/key and sets flag `1` for a nonzero second field, `2` for zero.
+
+Under explicit parsed-kind/address/eligibility/queue-head premises, a WHO `0` measure request builds a body ending `1C80`; its selected reverse translation reconstructs a measure-query candidate and preserves the key/flags toward the STM field callback. A matching pending kind-`2` record with flag `1` reaches state `3`, then exits before the counter path; its later timeout can choose ACK. Flag `2` follows NACK/reset. This is a composed static route, not a naturally executed transaction, physical acknowledgement, guaranteed send convention or elapsed timeout. See the [COSO feedback report](../../project/review/firmware-analysis/mh202-1.0.24/run8-functional-report.txt).
+
+## Selected diagnostic WHO and WHERE continuation
+
+The original selected reverse providers resolve the earlier two synthetic `D2S80` examples to **WHO `1001`**, via the diagnostic flag and initialized WHO/system map. System `1` selects the Light WHERE translator; these particular D2/address-zero inputs yield WHERE `0`. The resulting host candidate strings are `*#1001*0*1*0*0*0*0##` and `*#1001*0*1*2629*1*2*3##`. Their arbitrary numbers are not an observed hardware identity.
+
+The actual libopen builder concatenates the dimension/value fields and tailcalls `IsCorrect`. Its displayed syntax/field branch writes kind `4`, then invokes address/interface assignment helpers. Their remaining guards and final object state are unclosed, so neither host string is promoted as accepted original-parser output or published traffic. WHO `1000`, diagnostic WHO `1001`, transport selector `4`, DIM `1` and parser kind `4` retain separate namespaces. See the [WHO/WHERE/builder report](../../project/review/firmware-analysis/mh202-1.0.24/run8-protocol-report.txt).
+
+## Marker supervision and watchdog requests
+
+The daemon's selected sweep skips records whose stored launch return is zero; other records, including `-1`, request metadata for a name-derived marker. Metadata success requests unlink and continues; failure returns immediately. It does not test PID liveness, marker age or contents. A separate libcommon helper creates a supplied marker only when metadata is nonzero, but actual matching caller/path/cadence is still unknown.
+
+An ordinary wrapping byte selects modulo-60 checkpoints. Under consecutive iterations the wrap adds checkpoint `256` after `240`, a gap of `16` iterations. These counts are not wall-clock seconds. A later gate requires sweep count greater than two and nonzero metadata for a relative flag before requesting the hardware helper. That helper retries `/dev/watchdog` open on exact `-1`, sleeps after every attempt including success, and requests the two bytes `0d00`; selected write/close returns are ignored. Driver acceptance, timeout, actual refresh/reset, marker ownership and full recovery policy remain unobserved. See the [watchdog report](../../project/review/firmware-analysis/mh202-1.0.24/run8-boot-report.txt).
+
+## Calendar comparison uses UTC date fields
+
+The actual `=CHKDATE` prefix calls packaged `CHKDATE` and stores its integer return in the selected numeric record. Exact selector `SYSDATE` requests `time` then `gmtime`, whereas the earlier `CHKTIME` path uses `localtime`. Under ordinary libc contracts this separates a UTC calendar-date comparison from local clock comparison; it is not an observed timezone setting or scheduling discrepancy.
+
+The selected helper scans the seventh star for a four-character year, sixth for a two-character month, and fifth for a two-character day. Selected empty components preserve the corresponding current component. It compares year, then month, then day, returning `0` equal, `1` current later, `2` earlier or `-1` for another selector. Complete source syntax, delimiter validity, real clock state, stored-value-to-IIF/action use and missing configured scripts remain open. See the [calendar report](../../project/review/firmware-analysis/mh202-1.0.24/run9-functional-report.txt).
+
+## Executed normalizer body under supplied parser fields
+
+Five bounded calls now execute original normalizer body `0xcb38`, with parser/object extraction, formatting and allocation explicitly modeled as host primitives. WHO `2` takes the unchanged-text route. Supplied WHO `1`/measure/DIM `1`/value `100` fields select `*1*0*11##`, or the level/interface variant. Two bracket fixtures execute the original NUL write at the first opening bracket and construct a temporary bracket-free parser argument; under the declared reparse fields they return `*1*1*11##` or its level/interface variant. The original input is shortened to `*1*` in those two cases.
+
+The four actual transformed outputs enter the original ordinary comparator: identical literal events return `0`; a changed WHAT digit returns `1`. Original normalizer visits are `383`, followed by `1132` comparator visits; total `13` calls, `1515` original visits and `142` explicit primitives. This is stronger than a host-only normalizer model but does not execute the native parser, real objects, outer matcher, callback latch or configured script. Fixture fields are not promoted as accepted raw grammar, and no physical dimmer meaning follows. See the [normalizer-body report](../../project/review/firmware-analysis/mh202-1.0.24/run9-triggers-report.txt).
+
+## Prepared final diagnostic helper state
+
+Original `Assegna_indirizzo` examines suffixes in WHO; supplied `1001` without a hash selects its object-nonwrite return. Original `Assegna_livello_interfaccia` copies WHERE into fullDove, then supplied WHERE `0` without a hash selects its normal return without changing kind. Four isolated calls on two prepared objects preserve kind `4`; fullDove was already supplied as `0`, so clearing/re-copying it leaves the final bytes unchanged.
+
+Together with the earlier static prefix, the selected path predicts final kind `4` under coherent preceding parser fields and ordinary imports. That earlier suffix-only corpus did not run the full builder/IsCorrect invocation; the later experiment below does. Register return values are not turned into an invented Boolean acceptance contract. This new corpus records `144` original visits, `24` primitive callbacks and `4` separate private EXIT callbacks (`172` hook visits). See the [prepared-suffix report](../../project/review/firmware-analysis/mh202-1.0.24/run9-protocol-report.txt).
+
+## A concrete matching application marker producer
+
+`bt_supervisione` builds its watchdog path from parsed `path_var` and its own name. Packaged value `/var` produces `/var/tmp/bticino/bt_wd/bt_supervisione`, matching the daemon record's consumer path under the earlier startup-alias/configuration premises. Untouched default `var` and null-pointer fallbacks are relative; no actual runtime fallback is asserted.
+
+The application requests the marker once before later socket creation, then after nonnegative event-wait returns, including timeout. A negative return with errno `4` resets the requested timeout and retries without that marker call; other negative returns leave the selected loop. Requested timeval `1/0` is not a fixed elapsed cadence. This ties one concrete progress point to a matching marker, while leaving provider binding, runtime XML, file creation, workload delays and real readiness unobserved. See the [application marker report](../../project/review/firmware-analysis/mh202-1.0.24/run9-boot-report.txt).
+
+## Numeric records, conditional text and later action prefix
+
+The selected interpreter assignment and `IIF` paths address eight-byte numeric records: key at offset `0`, integer value at `4`. Their shared named lookup is lookup-or-create, initializing the first empty record's value to zero. Assignment formats an ordinary ID `1` as key `001`; the selected IIF lookup uses its stripped operand text directly. `$V001` can therefore select that key under the shared-global/source premises, while `$V1` requests a distinct name. This does not establish what a missing configured generator emits.
+
+The calendar/time return is stored into that numeric value and later passed, with an explicit operator/right operand, to integer comparison. The comparison byte chooses one versus two comma-prefix copy requests on the current line. The executable then checks later action prefixes, including `OWRITE`, without treating the IIF return itself as a Boolean gate. Complete operand/PARENTESI transformation, global binding and valid source remain unclosed. The exact allocation request count and inclusive lookup comparison also retain an unresolved capacity contract; no boundary access or impact was tested. See the [numeric-record report](../../project/review/firmware-analysis/mh202-1.0.24/run10-functional-report.txt).
+
+## Full selected native builder and parser readback
+
+Two new isolated calls start from poisoned private object memory and execute original `CreateRdDimensionMsgOpen`, native reset, `IsCorrect`, field assignment and both suffix helpers. The original-written outputs are the two previously retained synthetic DIM1 texts, WHO `1001`, WHERE `0`, DIM `1`, four expected values and kind `4`. This closes the selected normal builder/parser-object path under the declared C-primitive and binding models; it does not execute the upstream raw diagnostic decoder/maps or establish physical identity or gateway traffic.
+
+The corpus records `7480` original visits, `838` C-primitive callbacks, `10` explicit PLT-to-original-definition redirects and `2` private EXIT callbacks (`8330` hook visits). Redirected native bodies execute; intercepted PLT stubs do not. Kind and memory readback are the result, with no invented Boolean return contract. The memory/string primitives are host models, including a private tokenizer; the original libc, loader, service and device remain unexecuted. See the [full normal builder report](../../project/review/firmware-analysis/mh202-1.0.24/run10-protocol-report.txt).
+
+## Special DIM1 selector write ownership
+
+The special comparator's stack arithmetic places two reset bases at local offsets `0` and `7676`, followed by the six-word selector region at `15352..15376`. Under the selected same-build libcommon definition, the default reset's maximum normal write extent is `7676`; its two write sets do not overlap the selector region. DIM1 reaches the first selector read without the explicit local stores used by the other mapped dimensions.
+
+That constructor-only pass left subsequent full parser effects, possible aliases and live binding unclosed. The later selected entry prefixes below execute two short parser-input pairs without consuming a selector; they do not establish production selector bytes, a match-all rule, a defect or physical outcome. Stack bytes are not assigned an ELF zero-fill premise. See the [selector-ownership report](../../project/review/firmware-analysis/mh202-1.0.24/run10-triggers-report.txt).
+
+## Selected WHO1 lighting translation
+
+Fresh MH202 lighting code joins descriptor criteria, actual COSO dispatch and one normal post-parser command/body route. For supplied kind `1`, WHERE `11`, no parameters and matching private/default selectors, WHAT `1` constructs body `11 00 12 00`, while WHAT `0` constructs `11 00 12 01`. The selected wrapper creates a p2p brief output record with type `9`, representation `1` and metadata/list boundaries. These bytes are conditional body candidates, not complete serial frames or additional public command definitions.
+
+A separate decoded opcode `12` branch formats fixed-WHO1 status candidates after successful address conversion. It is not an executed inverse or observed response to the forward body. Raw parser acceptance, effective plugin binding, lighting state-machine/echo behavior, lifetime/drain and physical state remain open. See the [lighting translation report](../../project/review/firmware-analysis/mh202-1.0.24/run10-coso-report.txt).
+
+## Ordinary operand extraction before IIF
+
+The caller clears three buffers of sizes `3`, `10`, `10`, then supplies a starting cursor to `PARENTESI`. The selected ordinary path advances from cursor `3` to `4` and scans the current global line until the supplied comma delimiter. Bytes `<`, `>` and `=` build the operator; other bytes build left then right operands around the first operator, with source-visible index resets. For bounded short operands, the caller's zeroed buffers provide termination.
+
+That unflagged path returns the byte after the delimiter without rewriting the global line. The caller passes the three buffers to IIF, whose comparison and comma-copy requests own the later line change. Recursive/logical branches exist, including normalized `0/1` comparison output, but full mixed precedence, configured source, bounds and resulting actions are not established by this ordinary-path evidence. See the [operand-parser report](../../project/review/firmware-analysis/mh202-1.0.24/run11-functional-report.txt).
+
+## Actual common parser drives ordinary normalization
+
+Two new calls execute taskmanager's original normalizer together with native libcommon constructor, reset, CreateMsgOpen/IsCorrect, field/suffix code, getters, measure predicate and destructor. This uses fresh `130`-byte fields and the common object layout, separately mapped from the executable. It does not reuse the different `90`-byte libopen layout.
+
+Input `*#1*11*1*100##` produces actual common kind `4`/WHO `1`/WHERE `11`/DIM `1`/value `100` before returning `*1*0*11##`. Ordinary `*1*1*11##` produces kind `3` and returns unchanged. Parser fields and constructors are no longer host-injected in these two cases. C string/memory/format/allocation primitives and explicit original-definition redirects remain modeled; live binding, configured scripts, physical interpretation and special DIM1 selectors remain open. New accounting is `3178` original visits, `346` primitives, `26` redirects and `2` EXIT callbacks (`3552` hooks). See the [common-parser/normalizer report](../../project/review/firmware-analysis/mh202-1.0.24/run11-protocol-report.txt).
+
+## Diagnostic outputs and no-data completion
+
+Original relocations identify the first diagnostic array forward's descriptor as `sock_cep_web_monitor`, before request DIM/WHERE filtering; the qualified forward uses `sock_cep_web`. Selected main server/result-store paths tie those globals to distinct application client slots. Imported socket/accept implementations and authorization/handshake/framing internals were not inspected; no connected peer or delivered output is established.
+
+A separate no-data branch starts two counters at `1` and can finish on the sixth consecutive supplied zero-select result. Requested timeout is `0/500000`; this is not a measured three-second deadline. At that finish, mode `8` can return `0` with accepted-count `0`, independently of the earlier received-timestamp elapsed branch. The existing caller's OPEN-OK choice for local return `0` therefore remains separate from a positive physical diagnostic answer. Context-stop and non-interrupt wait errors follow selected negative returns. See the [output/no-data report](../../project/review/firmware-analysis/mh202-1.0.24/run11-diagnostics-report.txt).
+
+## Reverse lighting address changes the WHAT prefix
+
+The actual reverse helper now supplies the address and flag for two private decoded-body forms. `B8 11 12 00/01` selects address byte `11` with flag `0`, giving conditional `*1*1*11##` or `*1*0*11##`. Direct `11 00 12 00/01` selects the same WHERE text with flag `1`, which adds `1000#` inside the WHAT portion: `*1*1000#1*11##` or `*1*1000#0*11##`.
+
+WHO remains `1`; the prefix is not diagnostic WHO `1000`. These are source/host decoded-body constructions, not original converter/parser acceptance, a natural echo, STM state or physical response. The earlier reverse examples expressly supplied flag `0`; this narrows their premise without changing the historical report. See the [reverse lighting report](../../project/review/firmware-analysis/mh202-1.0.24/run11-coso-report.txt).
+
+## Native bracket and level normalization
+
+Three further actual taskmanager/common-parser calls replace the corresponding supplied-field premises. The level/interface measure returns `*1*0*11#1#2##`. Bracket inputs `*1*[1,2]*11##` and its level/interface form execute the original first-`[` NUL mutation, construct temporary ordinary texts and parse those actual texts through common before returning `*1*1*11##` or `*1*1*11#1#2##`.
+
+The common parser sees rewritten ordinary text, not the original bracket expression; this selected normalizer path does not evaluate the bracket contents as a set. These synthetic unit cases do not establish configured grammar, special DIM1 selectors or physical trigger meaning. New accounting is `5022` original visits, `547` C callbacks, `41` redirects and `3` EXIT callbacks (`5613` hooks). See the [native bracket/level report](../../project/review/firmware-analysis/mh202-1.0.24/run12-protocol-report.txt).
+
+## Selected logical folding and recursive buffers
+
+A selected two-clause OR source path evaluates the first comparison at `|`, stores an accumulator, resets its output buffer state and evaluates the final comparison at the delimiter. The actual OR helper returns the combined comparison byte; PARENTESI then rewrites the operand buffers to a `0/1` left value, operator `=` and right value `1`. A separate displayed `(...)` path recursively shares the output buffers and resumes the outer cursor after the closing parenthesis.
+
+This is static source and four finite host compositions, not a complete precedence/grammar interpreter. The four-byte reset requests and the caller's earlier three-byte operator clear are exact footprints; full frame capacity and runtime effects remain separate. Actual configured expressions, global binding and guarded actions remain open. See the [logical-folding report](../../project/review/firmware-analysis/mh202-1.0.24/run12-functional-report.txt).
+
+## Lighting pending state and local receipts
+
+The actual lighting STM descriptor binds distinct application, field and timeout callbacks to a `44`-byte private context. A selected ordinary request stores ID/kind/WHERE, enters pending state `1` and requests timeout argument `1000`. A selected matching-ID/status-`1` field route reaches state `2`; the ordinary-request branch resets and constructs a local ACK. Status `2`, selected busy requests and timeout state `1` have NACK/reset paths; timeout states `2/3` select ACK.
+
+The matching-ID comparison is not established as a universal completion guard: a local mismatch route also reaches the ordinary completion branch if otherwise admitted. Outer routing/key/ownership constraints remain unclosed, so no cross-request effect or defect is inferred. Receipts, lists and timer requests are software boundaries, with no physical lighting confirmation or elapsed callback guarantee. See the [lighting STM report](../../project/review/firmware-analysis/mh202-1.0.24/run12-coso-report.txt).
+
+## Component versions are per binary and image
+
+Original opkg records and two static no-argument `phpversion` paths independently distinguish CLI `5.2.13` from bundled Apache module `5.1.6`. The earlier selected `php` package label remains valid for its named package; it is insufficient as one universal PHP version for this image. GLib's original integer objects `2/28/7` likewise distinguish release `2.28.7` from SONAME ABI `2.0`.
+
+The recovery package records omit the selected Apache/PHP/OpenSSL CLI packages, but actual path resolution matters: recovery `usr/sbin/httpd` is an image alias to BusyBox, while selected SSL/crypto/core libraries match normal bytes. No service process, module loading, package-manager query or recovery boot ran. See the [component/source-version audit](../../project/review/firmware-analysis/mh202-1.0.24/run12-inventory-report.txt).
+
+## Special DIM1 parser writes stop before selector consumption
+
+Two new native special-comparator entry prefixes execute both actual common constructors and parsers on supplied short WHO13 measurement pairs. The trigger parses DIM1 in both cases. The initial trial's received DIM1 text is explicitly entry-only; a later received DIM22 text satisfies the actual outer matcher's selected `*#13**22` prefix by static comparison. The outer matcher itself is not executed.
+
+All `882` observed native and modeled-primitive write events leave the six-word selector region unchanged. Both calls stop before original instruction `0xca48` reads its first selector word. The supplied canary bytes are private test state, never consumed or treated as production initialization. This closes selected parser-write effects without a comparison result, normal return, global parser bound or production-stack claim. New accounting is `8275` original visits, `925` C primitives, `34` redirects and `2` stop boundaries (`9236` hooks), with no new EXIT return. See the [special selector-prefix report](../../project/review/firmware-analysis/mh202-1.0.24/run13-protocol-report.txt).
+
+## Mixed logical separators share accumulated state
+
+Selected PARENTESI paths give OR and AND separate seen flags but one shared accumulator/pending pair. A first use of the other separator can overwrite the earlier accumulator with the current clause. At the final delimiter, admitted OR finalization retains the final comparison in the pending byte; the subsequent AND finalizer requires that byte still be its sentinel and therefore skips in the selected mixed states. An AND-only control takes a different combine/reset/finalization route.
+
+This is exact static store/guard evidence and three finite local-state ledgers. It does not establish a complete precedence specification, accepted configured mixed expressions, a running-script defect or a scene action consequence. Missing configured scripts and full recursion/source/global contracts remain explicit. See the [mixed logical-state report](../../project/review/firmware-analysis/mh202-1.0.24/run13-functional-report.txt).
+
+## Distinct WHO2 command and status translation
+
+Fresh automation translation code separates forward parsed-WHO criteria `2` from reverse SCS-routing criteria `1`; the two numeric lists belong to different direction axes. With supplied parsed kind `1`, WHERE `0`, absent selector and source-backed default private configuration `3`, WHAT `0/1` selects conditional ASCII bodies `B100120A/B1001208`. The core wrapper sets type `3`, representation `1`, copies source metadata and requests list insertion.
+
+A separate supplied reverse body `B8111208` selects decimal WHERE `11`, opcode `12`, value `08` and a fixed-WHO2 formatter, producing candidate `*2*1*11##` before a parser/list boundary. No causal round trip joins these examples. The bodies and status are static/host constructions, with no native translator/parser acceptance, complete command-support table, automation STM event or physical motion claim. See the [automation translation report](../../project/review/firmware-analysis/mh202-1.0.24/run13-coso-report.txt).
+
+## Diagnostic output object and result channels
+
+A fresh static alias audit ties the decoder's original output object through outer dispatch, the selected General member and composer to the final libopen builder. Temporary WHO/WHERE/DIM/value pointers remain live across the selected synchronous builder call on the normal cleanup path. The decoder later consumes that same object's raw text before constructing a separate next-array OPEN-OK object.
+
+Builder register return, composer return, response enum, class Boolean and parsed kind are separate channels. The selected composer does not test builder r0; later literal success and enum values therefore cannot substitute for a parser-validity contract. The earlier direct native builder readback is reused as saved evidence, with no new raw-to-registry/builder execution. Original registry, C++ container/stream initialization, accepted raw provenance and actual output delivery remain unresolved. See the [diagnostic ownership report](../../project/review/firmware-analysis/mh202-1.0.24/run14-protocol-report.txt).
+
+## Automation ordinary receipts differ from query timers
+
+The actual automation STM uses a `60`-byte private context, with query-active at `+28` and ordinary receipt-pending/saved ID at `+52/+56`. A selected admitted ordinary WHAT `0` request appends the original record and stores its ID without requesting a timer on that route. A distinct query route sets the query flag and requests timer argument `1000`.
+
+With query-active zero, selected matching-ID/status `1/2` field paths construct local ACK/NACK, clear receipt tracking and can forward the ordinary record. A mismatching ordinary record can still be forwarded without receipt or clearing. A hypothetical timer entry with query-active zero returns without clearing ordinary receipt tracking; the ordinary route is not shown to schedule that callback. These are static state/ownership relations, not a universal acknowledgement deadline, successful command exchange or physical automation result. Admission tables, outer key/status producers and lifetime remain open. See the [automation STM report](../../project/review/firmware-analysis/mh202-1.0.24/run14-coso-report.txt).
+
+## Selected WHO4 scalar text preserves raw values
+
+Fresh MH202 thermoregulation code maps two supplied eight-character ASCII bodies to candidate DIM0 text. Under the selected short-address/marker/opcode path, `B40130C8` formats `*#4*1*0*0200##`; `B50130F5` adds `256` to the final byte and formats `*#4*1*0*0501##`. These are static/host arithmetic and formatting examples, with no physical units, scale, signedness, error/reserved meaning or F454 classification assigned to `501`.
+
+The original `check_open_frame` is a coarse character/prefix/suffix screen. The selected downstream core helper duplicates text and metadata into a list record without invoking a full OPEN parser. This is distinct from parser/list helpers elsewhere in COSO and establishes neither raw-input acceptance nor delivered temperature data. Source/physical meaning, extended signed values, forward builders and STM query ownership remain open. See the [thermoregulation scalar report](../../project/review/firmware-analysis/mh202-1.0.24/run14-thermo-report.txt).
+
+## Remaining boundaries
+
+Eight named corpora total `55` top-level entries, including the two stopped special prefixes: `28379` original visits, `2897` C primitives, `111` original-definition redirects, `11` return boundaries and `2` selector-read stop boundaries (`31400` hook visits), without replay accumulation. Run14 adds only static evidence and no new corpus entries or instruction visits. Production selector history, full configured language/condition/action, coherent native diagnostic registry state, outer COSO ownership and live runtime/physical behavior remain open. Component labels apply to the identified files, with missing external assets and wider Device review gates retained. No exhaustive coverage claim is assigned.

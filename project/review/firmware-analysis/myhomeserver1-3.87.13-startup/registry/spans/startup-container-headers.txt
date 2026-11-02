@@ -1,0 +1,22 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00013288 <_ZNKSt5ctypeIcE8do_widenEc@@Base-0x6978>:
+   13288:	ac28      	add	r4, sp, #160	@ 0xa0
+   1328a:	aa29      	add	r2, sp, #164	@ 0xa4
+   1328c:	efc0 0010 	vmov.i32	d16, #0	@ 0x00000000
+   13290:	2300      	movs	r3, #0
+   13292:	e9c4 2203 	strd	r2, r2, [r4, #12]
+   13296:	aa2f      	add	r2, sp, #188	@ 0xbc
+   13298:	2070      	movs	r0, #112	@ 0x70
+   1329a:	e9c4 3301 	strd	r3, r3, [r4, #4]
+   1329e:	6163      	str	r3, [r4, #20]
+   132a0:	f10d 0b58 	add.w	fp, sp, #88	@ 0x58
+   132a4:	e9c4 3307 	strd	r3, r3, [r4, #28]
+   132a8:	62e3      	str	r3, [r4, #44]	@ 0x2c
+   132aa:	e9c4 2209 	strd	r2, r2, [r4, #36]	@ 0x24
+   132ae:	edcd 0b34 	vstr	d16, [sp, #208]	@ 0xd0
+   132b2:	f8cb 3000 	str.w	r3, [fp]

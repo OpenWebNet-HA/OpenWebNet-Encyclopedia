@@ -1,0 +1,226 @@
+[
+  {
+    "add_pc_instruction_va": "0x32eec",
+    "literal": "scenesPath",
+    "name": "scenesPath",
+    "pool_va": "0x33748",
+    "pool_word": "000e2f08",
+    "target_va": "0x115df8"
+  },
+  {
+    "add_pc_instruction_va": "0x176f8",
+    "literal": ".json",
+    "name": "json-extension",
+    "pool_va": "0x18140",
+    "pool_word": "000ff078",
+    "target_va": "0x116774"
+  },
+  {
+    "add_pc_instruction_va": "0x177d6",
+    "literal": "twiligts_times.json",
+    "name": "twilight-exclusion",
+    "pool_va": "0x18148",
+    "pool_word": "000fc8d2",
+    "target_va": "0x1140ac"
+  },
+  {
+    "add_pc_instruction_va": "0x1782e",
+    "literal": "action_schedule.json",
+    "name": "schedule-exclusion",
+    "pool_va": "0x1814c",
+    "pool_word": "000fc88e",
+    "target_va": "0x1140c0"
+  },
+  {
+    "add_pc_instruction_va": "0x17d3e",
+    "literal": "bool loadScenesFromFS(const string&, ScenesContainer&, TimeTriggersService&)",
+    "name": "loader-source-name",
+    "pool_va": "0x18178",
+    "pool_word": "000fc3ba",
+    "target_va": "0x1140fc"
+  },
+  {
+    "add_pc_instruction_va": "0x31e5c",
+    "literal": "name",
+    "name": "name",
+    "pool_va": "0x32418",
+    "pool_word": "00104abc",
+    "target_va": "0x13691c"
+  },
+  {
+    "add_pc_instruction_va": "0x31e88",
+    "literal": "hidden",
+    "name": "hidden",
+    "pool_va": "0x32428",
+    "pool_word": "000e2510",
+    "target_va": "0x11439c"
+  },
+  {
+    "add_pc_instruction_va": "0x31eb6",
+    "literal": "customizable",
+    "name": "customizable",
+    "pool_va": "0x3242c",
+    "pool_word": "000e24f6",
+    "target_va": "0x1143b0"
+  },
+  {
+    "add_pc_instruction_va": "0x31ed2",
+    "literal": "editable",
+    "name": "editable",
+    "pool_va": "0x32430",
+    "pool_word": "000e24ea",
+    "target_va": "0x1143c0"
+  },
+  {
+    "add_pc_instruction_va": "0x31ee6",
+    "literal": "has_button_trigger",
+    "name": "button-trigger",
+    "pool_va": "0x32434",
+    "pool_word": "000e24e2",
+    "target_va": "0x1143cc"
+  },
+  {
+    "add_pc_instruction_va": "0x31efa",
+    "literal": "id",
+    "name": "id-presence",
+    "pool_va": "0x32438",
+    "pool_word": "000e4bde",
+    "target_va": "0x116adc"
+  },
+  {
+    "add_pc_instruction_va": "0x31f5e",
+    "literal": "enabled",
+    "name": "enabled-presence",
+    "pool_va": "0x32440",
+    "pool_word": "000e247e",
+    "target_va": "0x1143e0"
+  },
+  {
+    "add_pc_instruction_va": "0x31f76",
+    "literal": "category",
+    "name": "category",
+    "pool_va": "0x32444",
+    "pool_word": "000e2416",
+    "target_va": "0x114390"
+  },
+  {
+    "add_pc_instruction_va": "0x31fbe",
+    "literal": "type",
+    "name": "type",
+    "pool_va": "0x32448",
+    "pool_word": "000e3f9a",
+    "target_va": "0x115f5c"
+  },
+  {
+    "add_pc_instruction_va": "0x32028",
+    "literal": "description",
+    "name": "description",
+    "pool_va": "0x3244c",
+    "pool_word": "000e2378",
+    "target_va": "0x1143a4"
+  },
+  {
+    "add_pc_instruction_va": "0x32060",
+    "literal": "triggers",
+    "name": "triggers",
+    "pool_va": "0x32454",
+    "pool_word": "000e2384",
+    "target_va": "0x1143e8"
+  },
+  {
+    "add_pc_instruction_va": "0x3207e",
+    "literal": "conditions",
+    "name": "conditions",
+    "pool_va": "0x3245c",
+    "pool_word": "000e2372",
+    "target_va": "0x1143f4"
+  },
+  {
+    "add_pc_instruction_va": "0x3208a",
+    "literal": "actions",
+    "name": "actions",
+    "pool_va": "0x32460",
+    "pool_word": "000e2372",
+    "target_va": "0x114400"
+  },
+  {
+    "add_pc_instruction_va": "0xb599c",
+    "literal": "category",
+    "name": "file-category",
+    "pool_va": "0xb5d34",
+    "pool_word": "0005e9f0",
+    "target_va": "0x114390"
+  },
+  {
+    "add_pc_instruction_va": "0xb59f4",
+    "literal": "id",
+    "name": "file-id",
+    "pool_va": "0xb5d38",
+    "pool_word": "000610e4",
+    "target_va": "0x116adc"
+  },
+  {
+    "add_pc_instruction_va": "0xb5a00",
+    "literal": "name",
+    "name": "file-name",
+    "pool_va": "0xb5d3c",
+    "pool_word": "00080f18",
+    "target_va": "0x13691c"
+  },
+  {
+    "add_pc_instruction_va": "0xb5a16",
+    "literal": "Invalid JSON scene format",
+    "name": "format-error",
+    "pool_va": "0xb5d40",
+    "pool_word": "0007e38e",
+    "target_va": "0x133da8"
+  },
+  {
+    "add_pc_instruction_va": "0xb5a3c",
+    "literal": "id",
+    "name": "file-special-id",
+    "pool_va": "0xb5d4c",
+    "pool_word": "0006109c",
+    "target_va": "0x116adc"
+  },
+  {
+    "add_pc_instruction_va": "0xb5a4a",
+    "literal": "category",
+    "name": "file-special-category",
+    "pool_va": "0xb5d50",
+    "pool_word": "0005e942",
+    "target_va": "0x114390"
+  },
+  {
+    "add_pc_instruction_va": "0xb5b0a",
+    "literal": "enabled",
+    "name": "file-enabled",
+    "pool_va": "0xb5d68",
+    "pool_word": "0005e8d2",
+    "target_va": "0x1143e0"
+  },
+  {
+    "add_pc_instruction_va": "0xb5b1a",
+    "literal": "category",
+    "name": "file-category-presence",
+    "pool_va": "0xb5d6c",
+    "pool_word": "0005e872",
+    "target_va": "0x114390"
+  },
+  {
+    "add_pc_instruction_va": "0xb5c1e",
+    "literal": "Scene JSON not found",
+    "name": "missing-file-error",
+    "pool_va": "0xb5d9c",
+    "pool_word": "0005f716",
+    "target_va": "0x115338"
+  },
+  {
+    "add_pc_instruction_va": "0xb5d04",
+    "literal": "Invalid JSON scene",
+    "name": "invalid-json-error",
+    "pool_va": "0xb5da8",
+    "pool_word": "0005f648",
+    "target_va": "0x115350"
+  }
+]

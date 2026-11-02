@@ -1,0 +1,38 @@
+# MH202 run6 functional source review — PASS
+
+Independent static source review of `functional/run6/REPORT.md`, collector and retained evidence. No corrections required. This reviewer authored the separate protocol/run6 collector investigation, not the scenario STM findings reviewed here. This review writes only this file; author artifacts and originals remain unchanged.
+
+## Reproduction and original checks
+
+`python3 work/mh202-firmware/research/2026-10-30/functional/run6/collect_evidence.py --check` passed:20 generated outputs plus manifest,10 spans,32 exact original words,4 original inputs and14 finite host cases (5timeout/6field/3reset). Independently read original files through ImageVFS, parsed ELF PT_LOAD mappings without importing the author collector, and recomputed all10 raw-span hashes/file offsets and32 word values. Independently checked all20 manifest entries and the14 finite model results. Original ARM/vendor/library/PHP/JS execution, timers, callbacks, I/O, instruction counts and hooks all remain0.
+
+I inspected the complete original application, field, reset/timeout, initializer, core registration, ACK/NACK constructors, clone helper and selected GLib constructors/deadline spans, not merely their saved hashes. The original input hashes in the pinned `input-hashes.json` are consistent with those reads. The source's mutable runtime data, actual dispatcher and effective provider binding are not established.
+
+## Semantic findings checked
+
+- Original STM application `0x1bb4..0x1ca0`: descriptor+56 private pointer, state+4 gate, idle record+4/+8=1, parsed kind+44=2 branch queues the existing record, duplicates WHERE/optional selectors, saves record+60 at private+8, state1 and pending kind2, then requests timer1000. This is already-parsed state; no accepted raw request or allocation/list success is manufactured.
+- Registration/initializer: core `0x20e8..0x2104` stores manager at descriptor+60 and passes manager+44 to the initializer. Plugin `0x1d58..0x1da8` allocates44bytes, retains descriptor, copies context/callback words to private+36/+40 and explicitly clears private+32. Descriptor callback relocations distinguish initializer, field and application handlers. This STM component remains separate from WHO17 taskmanager and TR translation.
+- Reset `0x1818..0x1894` clears state/key/pending fields and frees/destroys selected nonnull fields; it contains no counter+32 store. This preserves the author's exact counter-history boundary. No leak, lifetime or per-request second-reply claim follows.
+- Timeout `0x1894..0x1910`: state1 selects queue_nack; unsigned states2/3 select queue_ack; other displayed states skip queue/publication. All converge to reset and return0. State1..3 callback arguments include addresses of two local lists and descriptor+60 manager, with supplied function pointer private+40. This is an unexecuted publication boundary, not a delivered ACK or natural callback trace.
+- Field `0x1910..0x1bb4`: record format3 is already parsed; format2 uses parse/free/replace with unproved parse result. State1 key comparison uses private+8 versus record+60; matched flags+52=1/2 select state transition or NACK/reset, while nonmatching keys may fall through into later pending/state logic. Existing ordinary record append precedes the two selected lighting_parse_where output comparisons. Matching words increment counter+32 before pending/incoming-kind clone tests. Pending2 with incoming1/4 requests clone argument4; incremented count exactly2 queues ACK/reset, other counts rearm1000. These are conditional branch relationships, not full address equivalence or universal second reply behavior.
+- Core ACK/NACK `0x2a44..0x2b5c`: exact local strings `*#*0##`/`*#*1##`, kind metadata7/6, final record+4=2,+8=4,+56=2,+52=0 and list append agree. Clone argument4 takes `0x2fc8→0x3178` to new_message_to_opencmd; copied parsed kind, format3, decimal WHO, fresh id and zeroed+32/+36 agree. No pending key is simply copied into the clone.
+- Timer: plugin `0x1c70/0x1c74` and `0x1b14/0x1b18` pass1000. Original GLib ordinary constructor `0x351e0..0x35220` stores the unscaled interval at+64; seconds constructor `0x35184..0x351d4` multiplies by1000 for that field; selected deadline `0x334b4..0x334cc` multiplies the field by1000 and adds the supplied monotonic time. The report correctly makes the nominal1000ms interpretation conditional on ordinary provider/monotonic-time ABI and does not equate it with observed delay, attachment, scheduling or cancellation.
+
+No material scope error found. Full core dispatch, natural key/flag/counter history, address helper outputs, callback draining and actual physical scenario effects remain unresolved as stated. Host models transcribe selected predicates with supplied coherent objects; they do not execute original callbacks or reconstruct complete runtime behavior.
+
+## Exact reviewed pins
+
+Paths below are relative to `functional/run6/`. The pinned output manifest transitively covers all20 generated evidence outputs and excludes report/reviews; the report/collector are pinned separately here.
+
+| File | SHA256 |
+|---|---|
+| `REPORT.md` | `435709c2c5aee19831d8de311c052675bf86dc5eae2f5650ad28c812ba6533ac` |
+| `collect_evidence.py` | `91ed733fcbf77a33f727e0cdab0f4817f164a07d32d05c4e2e2b8a1c97d02212` |
+| `output-manifest.json` | `2d3e9b504a2cd29cc3a66807cfff55c957f442fe78d6f8026106eed5ff1cd39c` |
+| `input-hashes.json` | `6f506cd208549aa125c6c0e96d5854cb9887c674567e6655266a416931a24849` |
+| `original-spans.json` | `86f29397f1b17970c33aed10759cbcd493c0fdc07c7795e4144c868d67946260` |
+| `critical-words.json` | `01163d52cbbc490afc2f1b261f1ce83cd491bbf1fd6279b0131a012aebd935cf` |
+| `host-local-state-models.json` | `a49bbe661df1fa535ba4b9b9f320ddc9c5d90aa9e99e86a3894363d105e6d7ec` |
+| `timer-contract.json` | `11d7227464e93ea8184959fcbfffbf522fd00ce6125e3b75b89b39d62a26c4e3` |
+| `descriptor-and-private-layout.json` | `ba648e3477f4f74d111244b135b12ae9fc0ff3b93fa0babb8b45c60c17343806` |
+| `safe-ack-literals.json` | `d02dc93209f6a386b1b3c200ef4d60add3f382b8e276a7138ec6a4f74db3409a` |

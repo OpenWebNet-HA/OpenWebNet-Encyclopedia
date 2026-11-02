@@ -1,0 +1,52 @@
+# Condition serializer and local query: documentary integration review
+
+Verdict: PASS for the current frozen integration and existing exact exports. No correction requested. This review is source-aware of my independent serializer-v2 audit. Query statements are compared documentarily against the authoritative report and independent root source review/checker, not presented as my new full original-byte query audit or native replay. The scope is the current followup on the existing event-routing page, new capsule and bounded coordination documents, not the whole encyclopedia or complete firmware. No source, author, repository or previous review file was edited.
+
+## Source-to-summary assessment
+
+The current page distinguishes temporary BaseBnldCondition and final BnldCondition headers/address points while retaining the actual shared serializer entry. It correctly narrows the earlier serializer-opaque premise without silently rewriting completed source reports. The condition's own operator decoder, rather than transferred BNIL vocabulary, establishes local minus-one/0/1/2/3. Base emission skips operator minus-one and empty id; condition-specific table counts and provider assumptions remain source-scoped.
+
+The derived status/level split is accurate: raw status minus-one always requests signed level emission, including level minus-one, without adding status noStatus; raw0/1 requests on/off. Constructor-produced scalar coherence is conditional on ordinary successful JSON/string/member/assignment/reparse behavior, while original JSON member presence changes. The constructor's PRESENT-status path had already ignored the original level. The documents do not claim a universal roundtrip, arbitrary altered-object preservation, accepted raw grammar or physical meaning.
+
+The query followup accurately separates initial ordinary lookup0x10e3d8 from larger query0x10f4a0. A nonnull returned data/control pair reaches the selected direct-return leg before selector, discriminator and response-length checks. That is not global validation absence, an actual stale/unsuitable record or a defect. Suitable record type, state, owner/provider validity and the later record+8/+32 interpretation remain material premises.
+
+The miss path clears this registry's response-string length+100 and NUL through pointer+96; it is not a generic readiness flag. Selector0 reaches opaque local calls, whose normal returns/cleanup only conditionally reach the mutex/CV dependency. Registry mutex+72 and CV+24 are not the action-domain offset72 flag. The original deadline addition is retained as a count, without newly asserted provider units, elapsed timing or universal bound. Nonempty length after the comparison deadline can still reach response processing; a selected normal zero-length tail zeroes both output words. The imported JSON parse request is a stopping boundary, not proved reconstructed miss-record type or complete response interpretation.
+
+Actual response-string producer/notify, freshness/ID correlation, record type/readiness, effective providers, all errors/unwind/concurrency/lifetime, configured assets80/81/94/95 and physical observations remain open. No original JSON/query/native execution, coherent natural trigger->condition->action transaction, external transport acceptance, public support or full Device/source approval is claimed. Other event/condition/owner/reset questions are kept distinct from these completed local source tables and previous execution ledgers.
+
+## Preservation, exports and references
+
+All7 current documents match their frozen candidate copies, lengths and SHA256 pins. All47 SOURCE_EXPORTS pairs match local and published bytes, declared sizes and hashes. Current serializer21 and query19 first-candidate rows match their originals and indexes. The saved parent source checks record15 serializer and17 query outputs,32 total. This review does not claim a new source replay or original execution corpus.
+
+The root pre-v2 serializer snapshot retains3 exact available v1 files. Authoritative v2 and independent source review accurately disclose the initial strict temporary/final-header assertion failure before generated outputs, failed subsequent check/index attempts and separate corrected v2 assertions. DEVELOPMENT_HISTORY labels terminal details as later transcription, not a contemporaneously saved/hash-pinned failure file. The exploratory probe likewise has only its disclosed transcript excerpt, without invented historical-file authentication. Current identities/retained bytes are verified; unavailable historic terminal bytes and every development event are not certified. Earlier MH202 missing intermediate histories remain explicitly unverified.
+
+There are24 local Markdown link occurrences and0 fragments. All22 existing targets resolve. Capsule integration-review.txt and validation.json are intentionally pending actual assembly. This review certifies neither their future bytes nor their present existence. Parent must create the actual exact files before final strict identity/link/ESG/ECV/diff gates, with no placeholder or missing-link exemption. Coordination log entries are read within their bounded checkpoint sequence, not as premature certification of those final outputs.
+
+## Exact current document pins
+
+| Workspace-relative file | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-routing.md` | `4f2d6e51a6fe074bd47a32128ad65ed54d3129ecb780704bc946eaccf2a62d20` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-condition-query/README.md` | `c4f1b860c9d70f23d6bd0137cd8fc2fdc2b97453f5f8d1b35dd4de72e245942d` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/SYNTHESIS.md` | `6c8ba4e8895f379924ded01562a88de0688dfeb80fd81d86cdcd60c1becffa9c` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/COVERAGE.md` | `cb12df16d0714efe3768ea26b6c6fa10caa6801be8b8ef9074ca8af66dee4fac` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/RANKED_REMAINING_QUESTIONS.md` | `4b4d24d785bbbd97a7495c925dde8d5c625005f6249950225ff0424175df8f4d` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-query/RUN_LOG.md` | `c96d18431427438dea77a63efdda3c934779b1766f743273d71e30cdc990d7a8` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-condition-query/SOURCE_EXPORTS.json` | `3b80996d60e39babc1b14255c506f38451a7d7a07549fb7bac939e7769cfa9dd` |
+
+## Source/review/history applicability pins
+
+Paths below are relative to this research batch.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `serializer/REPORT.v2.md` | `b96a6bfb2a30d4c20ba50abb6a2243a5cfe378eb5842c469acb3d3baba8f17d5` |
+| `query/REPORT.md` | `9ce4b06aa2292df9ef10cc0fc983648738d7a4bda51b80ec8adcd7521586f63a` |
+| `reviews/serializer-source-review.md` | `a756c583024ebdaa97ede73a7958a9cc59a940c207bd65a912889e650dcb822e` |
+| `reviews/query-source-review.md` | `9afc63f6d2d647b7ca3a76fc3d8c536ffaf88132b3df1285c6061554d414cf40` |
+| `serializer/DEVELOPMENT_HISTORY.v2.json` | `973cc387241c5277b9f884a1355fadbeefa8b90d8f06ce262a3f6fe89092107d` |
+| `integration/pre-v2-serializer/INDEX.json` | `1bace59497b8a4cb29a617af4ca92f5fb97b4c408834c5819f689221240c730d` |
+| `serializer/first-candidate-v2/INDEX.json` | `8fcbde9f6c106708f03cb6ba27a5b95180ae42e0120811aeb771a0da9cd84cd1` |
+| `query/first-candidate/INDEX.json` | `1cc4817b1618126b175820a6859173959c889a0e486e94fcde66b35885e9e8ca` |
+
+Frozen candidate index SHA256 `1bbc0af34ae0c9cab3ff8fecde8f0cfe52fa52284c1f137557c71fcddd3d77ed`. SOURCE_EXPORTS.json SHA256 `3b80996d60e39babc1b14255c506f38451a7d7a07549fb7bac939e7769cfa9dd`.

@@ -1,0 +1,40 @@
+{
+  "files": [
+    {
+      "bytes": 90479,
+      "path": "CATALOGUE.json",
+      "sha256": "bf95392a35a3874945418b1e8e3027c0a9d327434d2129d015d1965cb6b677dd"
+    },
+    {
+      "bytes": 6865,
+      "path": "CATALOGUE.md",
+      "sha256": "6419e3f3b82721524dd1a93950bc25a36fdec7213aff5b6040485a7f6e7be5ee"
+    },
+    {
+      "bytes": 56969,
+      "path": "HISTORICAL_REFERENCES.json",
+      "sha256": "c5ae02929c35f4ae039ceda9c32dc31d37091d42bda758536eafa5c62d6ef41b"
+    },
+    {
+      "bytes": 122471,
+      "path": "INPUTS.json",
+      "sha256": "6b4e2345c93993a223bf3ee7d9ce4b795fb8702a02342c9557e601d4ac2a725c"
+    },
+    {
+      "bytes": 3772,
+      "path": "REPORT.md",
+      "sha256": "64e79871bb0f27aa9371b137247531dcceba162756c664b59128454d685c910c"
+    },
+    {
+      "bytes": 30973,
+      "path": "SAVED_CHECKS.json",
+      "sha256": "eccb429d7e6149124d66070198aa8478a909fa8a5ac2b6f8564a75173983e36d"
+    },
+    {
+      "bytes": 85754,
+      "path": "VERSION_NAVIGATION.json",
+      "sha256": "569c0124684d4803dd274e96836f1ca60d9d67310108ddcf8402c62bc1a1c9df"
+    }
+  ],
+  "scope": "Generated members excluding this manifest itself"
+}

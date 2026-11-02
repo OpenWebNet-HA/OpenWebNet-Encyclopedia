@@ -1,0 +1,35 @@
+# Shared-stop reset search: one new concrete caller exclusion
+
+**No additional reset owner for shared action-stop byte `0x167800` is established.** This bounded batch adds a concrete caller edge for one previously unresolved supplied receiver: `0xa7a06 -> 0xb2bc4` passes current SP+4280. Consequently, the selected constructor's zero byte store at receiver+72 (`0xb2c0c`) addresses current SP+4352 on that call, under ordinary valid-stack and normal ABI/provider premises. This is a source-backed exclusion for one call, not proof that the constructor can never receive a shared-global alias or that the firmware has no reset.
+
+Original source `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Original/native/vendor instructions, target APIs and host semantic cases executed: **0**. All original files and previous dossiers remain read-only. No transport, receiving, authentication, session, framing, MQTT or libjel implementation is followed.
+
+## Identity and previous boundary
+
+The prior independently reviewed stop-domain report identifies shared base `0x1677b8`, condition variable+0, mutex+48 and stop byte+72=`0x167800`. Startup initializer `0x1548e` writes zero; stop helper `0xcd706` writes one. Those two known stores are inherited anchors, not newly discovered reset coverage. The 22 prior byte-offset-72 candidate rows and 747 wider-store candidates are not rerun, rewritten or reclassified wholesale here.
+
+The prior reset-alias packet proved that the local store `0xb2c0c` uses supplied entry R0, retained in R4, but left natural callers open. This batch selects only that one constructor entry and derives a concrete normal caller. Scene stop/active bytes+144/+145, per-action completion+4, the local record-query registry mutex+72 and this shared stop-domain byte remain separate receivers and namespaces.
+
+## Exact new caller edge
+
+A deterministic query of the original executable's linear Thumb `objdump -d` rendering selects rendered direct `BL`, `BLX` or `B.W` operands whose numeric target is exactly **`0xb2bc4`**. It returns one instruction row: **`0xa7a06`**. The collector independently decodes that row's original branch bytes to the target; the selected caller source, not a nearest exported template label, establishes the receiver alias.
+
+At `0xa79f0`, R9 is set to current SP+4256. `0xa79f4` adds 24, so R9=SP+4280. The intervening virtual call at `0xa79fa` remains opaque; normal callee-preservation/return is a premise. At `0xa7a00`, R0=R9, and `0xa7a06` calls `0xb2bc4`.
+
+In that constructor's retained prefix, `0xb2bd4` saves R4=entry R0 and `0xb2bde` sets R10=R4+72. It calls local base helper `0x2b7d0` at `0xb2bea`; that helper's body is not re-expanded here. On its normal return, the source initializes R3=0 at `0xb2c00`, sets object+68=0 at `0xb2c0a`, stores byte zero at object+72 at `0xb2c0c`, and sets object+64=object+72 at `0xb2c10`. This is the selected empty inline-string pointer/length/terminator construction, rather than a reset API identified by its offset.
+
+The original PIC/GOT chain independently resolves the locally installed vtable header: base `0x1659a4`, slot `0x166b70`, header `0x16004c`, RTTI name **`18BncuSceneCondition`**. This supplies a local construction identity only; it is not public protocol meaning, a proof of every final derived object, a physical role, or an observed configured condition. No JSON member values or provider internals are exported.
+
+Composing just this caller and retained prefix gives the effective byte address **current SP+4280+72 = SP+4352**. With a valid separate stack and ordinary successful/callee-preserving returns, that address is not shared `.bss` flag `0x167800`. No actual target SP or runtime object is supplied.
+
+## Exact query limits and unresolved reset
+
+This is a finite original-byte/direct-operand query for one entry. Linear disassembly can render literal pools and tables as instructions; the retained positive call is separately decoded and manually source-checked. Other indirect calls, entry aliases, thunks, computed targets, arithmetic/bulk/provider writes, reinitialization paths, externally supplied destinations and concurrent mutation are not closed. One rendered direct caller is not a complete caller count or a reason to remove the entire constructor from the unresolved alias set.
+
+The result therefore narrows **one selected call-site hypothesis**. It does not subtract or change any of the original 22 historical rows, prove absence of another reset, establish a permanent latch or defect, or infer cancellation/relaunch outcomes. A positive reset owner after the known stop remains **OPEN**. A concrete additional receiver-producing caller or independently justified shared-object writer would be needed for further progress; repeating the old offset matrices would not close that question.
+
+The curated `OWN-DEV-0199` definition is pinned for MyHOMEServer1 item 2198 and home-automation/scenario product applicability only. It supplies no installed state, natural execution or physical observation for this source result.
+
+## Reproduction and preservation
+
+`python3 collect_reset_caller_v1.py --check` reads the exact original ELF through ImageVFS, derives PT_LOAD offsets, verifies the two source spans, selected instruction guards and direct calls, local PIC/GOT/RTTI and relative-relocation data, reproduces the bounded target query, and checks output bytes and exact immediate first copies. Generation is exclusive and refuses existing output/snapshot paths. The snapshot index is computed before its file is opened. No firmware or original helper is executed.

@@ -1,0 +1,32 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+0010f2d4:
+  10f2d4:	9a03      	ldr	r2, [sp, #12]
+  10f2d6:	4649      	mov	r1, r9
+  10f2d8:	a80b      	add	r0, sp, #44	@ 0x2c
+  10f2da:	f002 f8f1 	bl	1114c0
+  10f2de:	e9dd 360b 	ldrd	r3, r6, [sp, #44]	@ 0x2c
+  10f2e2:	2e00      	cmp	r6, #0
+  10f2e4:	f000 80ac 	beq.w	10f440
+  10f2e8:	f1b3 0800 	subs.w	r8, r3, #0
+  10f2ec:	bf18      	it	ne
+  10f2ee:	f04f 0801 	movne.w	r8, #1
+  10f2f2:	45b3      	cmp	fp, r6
+  10f2f4:	bf14      	ite	ne
+  10f2f6:	4643      	movne	r3, r8
+  10f2f8:	f048 0301 	orreq.w	r3, r8, #1
+  10f2fc:	f013 00ff 	ands.w	r0, r3, #255	@ 0xff
+  10f300:	d06a      	beq.n	10f3d8
+  10f302:	4632      	mov	r2, r6
+  10f304:	465b      	mov	r3, fp
+  10f306:	4621      	mov	r1, r4
+  10f308:	4626      	mov	r6, r4
+  10f30a:	f701 ebf4 	blx	10af4 <_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_@plt>
+  10f30e:	f8d9 3014 	ldr.w	r3, [r9, #20]
+  10f312:	3301      	adds	r3, #1
+  10f314:	f8c9 3014 	str.w	r3, [r9, #20]
+  10f318:	e635      	b.n	10ef86

@@ -1,0 +1,43 @@
+# Worker-lifetime and schema integration review
+
+PASS for current documentary/source-summary consistency. No correction requested. This review covers the new lifetime page, cancellation continuation link, capsule and current summary/check records. BN3L schema/construction is source-aware from this reviewer's independent schema-activation-source-review.md. Worker ownership and reset aliases are independent documentary comparisons with the authoritative source reports and their independent peer reviews; this is not a fresh full raw-source audit or native replay of those areas.
+
+## Claims and limits
+
+- Raw state+4 action/scene captures, action completion+4, holder words and external control counts are distinct. State cleanup under the candidate provider/normal return does not establish ownership of its raw receiver, whole lifetime adequacy or a failure. Successful detach can zero a holder before the worker completes; the page does not equate it with completion or a join.
+- Scene owner disposal joins its separate holder on the selected nonzero-word path before releasing compiled-action handles. Null/already-zero paths and successful detach remain separate. Conditional last-owner disposal is not guaranteed destruction of all actions or proof of no other owners. Selected SLEEP action disposal has its own holder check/delete-or-terminate behavior and no local join; this class-specific body is not generalized into a leak, use-after-free or whole-program missing-join claim.
+- The finite22 byte72-store classification is exactly2 known globals +9 current-stack +1 fresh allocation +10 caller-supplied objects. Source receiver facts reduce ambiguity for the ten stack/allocation cases under normal ABI/allocation premises. Caller-supplied destinations, wider/indirect writes and reinitialization remain open. No extra shared reset, global absence, permanent latch or physical consequence is claimed.
+- BN3L local action12/raw64/compiled116 remain separate from OPEN or product namespaces. Optional fields/defaults/status0/1/-1 and signed positive overrides agree with the original schema review. The serializer is an opaque coherence premise; operational8/12 move preservation plus the prior explicit setter is conditional construction dataflow, not naturally configured activation, complete JSON validity, timer behavior, a universal two-phase schedule or physical color/temperature meaning.
+- Product roles, missing assets, providers/readiness, lifetime/unwind/concurrency and physical observations remain open. Original/native/provider/thread/clock/parser/transport execution remains0. Local allowance-controlled scheduling is explicitly separate control metadata, not firmware evidence or a new observed device behavior.
+
+## Authoritative versions and preservation
+
+The authoritative worker report is REPORT.v2.md. Independently verified WORDING_REFINEMENT.json and applied exactly its two one-occurrence substitutions to actual v1 bytes: the resulting bytes equal v2. The first correction includes the residual-state destructor's normal-return fallthrough into holder replacement; the second distinguishes captured state+4 from action completion+4. All23 original pre-refinement source/report/output snapshot copies still match their recorded hashes and current retained v1 files. No old history is reconstructed or silently certified as precise v2 text. Collector/code/source outputs and execution counts remain unchanged.
+
+Verified all eight frozen current document/record pins and all76 SOURCE_EXPORTS source/published pairs by exact byte equality, size and hash. Existing source-check records are parent reproduction, not new independent native execution. All26 existing local Markdown links resolve, with no fragment links in this reviewed set. integration-review.txt and validation.json remain future actual-assembly targets; their bytes/final results are not certified here. Parent must assemble actual files and run strict final checks without placeholders or exemptions.
+
+Current reviewed pins:
+
+| File | SHA-256 |
+| --- | --- |
+| OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-lifetime.md | 8ce553099d5dc56a22329d172b0e88c007628ac420d026bcb61d42a681a0c7bc |
+| OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-cancellation.md | 361effbac491faf6daa0dd91da9d67ee76b39321afca2a5e760a6648df92a3ab |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-lifetime/README.md | b6c88bb4aaafcc7e3cade62cf7a32b7a57fe235a33d2671278f0ac9778577bdc |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-lifetime/SOURCE_EXPORTS.json | 9296c6ec2e8de4f648675923e2252a325d9633f92f24daa1a7d2a677b4312a6f |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-lifetime/synthesis.txt | 56026d5ac262d837b79431d24b65f34fbb2d8a49c8828be745b9e83b7e21fea6 |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-lifetime/coverage.txt | f45578fc32d6db475802c0cf828cdae6bf85b076bb9ebe2c998db93e4b7c2da6 |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-lifetime/remaining-questions.txt | cd71cb8a4efc3c93cd745e7ec342e384d8638ed7adfd6ff45a33cb5b776b9dda |
+| OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-lifetime/source-checks.json | 623435da3553fdf5dd4452f1a1689646d15cf987582558e1d54904269d0cd388 |
+
+Additional records:
+
+| Record | SHA-256 |
+| --- | --- |
+| integration/review-candidate/INDEX.json | 4ca0606b4e964ce210efbad6bc085defdb69f4ee842f4b6d8d37bc13983b87d3 |
+| worker-ownership/WORDING_REFINEMENT.json | 02b5abe79affb7411d11b209df5ef7c531983b001e0e553aeccaf3841b9dc7b8 |
+| integration/ownership-pre-refinement/INDEX.json | 72c34a9a1b9268de3bf80bd6c0952c57e202d1d38a02696d8a6329b474e0a07b |
+| reviews/worker-ownership-source-review.md | a930352dc1f3ad01fff1fdf5a80f93683b510486fef6147abda14c6049085d66 |
+| reviews/reset-alias-source-review.md | 3a3956d5b99738057a7c02241a5bbe5fd729dc36448d99c535dfb02024d48f84 |
+| reviews/schema-activation-source-review.md | 43afb2076bd868f65e49b6a7feddd0f30dc6294d7849976248fa835e55ddccc6 |
+
+No source, author, prior report/review, repository or scheduling control file was edited by this reviewer. This new ASCII review is exclusively created with an immediate exact first-review snapshot and precomputed non-self-referencing index before its hash is announced. No earlier candidate was overwritten.

@@ -138,3 +138,7 @@ Firmware `157`, used by `64391`, `64191`, and `64192`, declares four `slot` posi
 [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) defines Firmware capabilities. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) defines the diagnostic firmware-version response; observed traffic supplies the version returned by an installed Device. These values are correlated only when the selection is corroborated.
 
 See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.
+
+## Firmware implementation evidence
+
+Catalogue Firmware definitions describe capability associations; analysis of a manufacturer package describes a particular implementation build. The [Firmware Analysis index](../reverse-engineering/firmware-analysis/) retains artifact fingerprints, examined paths and method boundaries. The [F454 2.0.51 implementation reference](../reverse-engineering/firmware-analysis/f454-2.0.51.md) is distinct from that Device's historical catalogue records and does not establish an installed version or active Configuration.

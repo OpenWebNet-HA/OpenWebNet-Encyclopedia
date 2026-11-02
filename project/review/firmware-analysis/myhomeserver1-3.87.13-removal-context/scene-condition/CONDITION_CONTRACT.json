@@ -1,0 +1,61 @@
+{
+  "compiled": {
+    "ID": 108,
+    "bytes": 192,
+    "constructor": "0xc83e4",
+    "derived_id": 144,
+    "derived_name": 168,
+    "enabled": 132,
+    "operator": 140,
+    "schema_reparse": "Rawvirtualserializer\u21920xb2bc4; fullvaluecoherenceunclosed",
+    "type": 136
+  },
+  "consumer": {
+    "aggregate": "nonzero continuesloop; zero entersfailure; fullnormalaggregate inheritedfrompinnedreviewedservicepacket",
+    "local_query_or_otherfield_read": "noneinthisentire3instructionmethod",
+    "method": "c83d8 LDRB132; c83dc XOR1; c83e0return",
+    "ordinary_boolean_result": "enabled0\u21921,enabled1\u21920, not originalexecution",
+    "pointer": "a6d88 unchangedprimaryconditionpointee",
+    "scene_range": [
+      116,
+      120
+    ],
+    "selected_target": "compiledAP161fb8+8 storedThumbc83d9",
+    "virtual_call": "a6d90 vptr\u2192a6d92 slot+8\u2192a6d94call"
+  },
+  "limits": [
+    "not actualconfiguredinstance/sceneexecution/physicalrole",
+    "complete serializer/reparse/otherclassmethods notclosed",
+    "ABI/provider/string/construction/allocation/lifetime/unwind/concurrency premises",
+    "notunsupported/defect/productcapabilityabsenceclaim"
+  ],
+  "method_counts": {
+    "host_semantic_cases": 0,
+    "original_execution": 0,
+    "target_calls": 0
+  },
+  "publication": {
+    "availablecap": "a7264 movesONEunchangedpointer,zerosONEsourceword,end+4",
+    "entry_bytes": 4,
+    "growth": "opaque delegateb4fd4",
+    "scene_vector": 116,
+    "shared_control_word": "noneinthisselected4Bentry; no fullownershipinference",
+    "source": "compiledallocationR6\u2192SP568\u2192a7a20"
+  },
+  "raw": {
+    "base_ID": 4,
+    "bytes": 88,
+    "conversion": "ImportedJson asBool/asString; normalvalues/defaults/errorsunexecuted",
+    "derived_id": 40,
+    "derived_name": 64,
+    "enabled": 28,
+    "operator": 36,
+    "type": 32
+  },
+  "selection": {
+    "compiled_dispatch_index": 17,
+    "raw_factory_index": 16,
+    "raw_name_row": 17,
+    "source": "Actual selectedtables, not transferredneighborlayout"
+  }
+}

@@ -1,0 +1,31 @@
+
+/home/bticino/bin/dedrifupdater:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000005c90 <.text+0x34d0>:
+    5c90:	a9476bf9 	ldp	x25, x26, [sp, #112]
+    5c94:	a94873fb 	ldp	x27, x28, [sp, #128]
+    5c98:	97fff2aa 	bl	2740 <_ZN13StatusMachine9next_stepE11WorkingMode@plt>
+    5c9c:	97fff219 	bl	2500 <update_kernel_recovery@plt>
+    5ca0:	f9400fe0 	ldr	x0, [sp, #24]
+    5ca4:	97fff297 	bl	2700 <_ZN13StatusMachine13set_procedureE9Procedure@plt+0x8>
+    5ca8:	d0000000 	adrp	x0, 7000 <_ZN8PlatformC1Ei@plt+0x4578>
+    5cac:	912fc000 	add	x0, x0, #0xbf0
+    5cb0:	97fff158 	bl	2210 <g_get_current_time@plt+0x10>
+    5cb4:	52800000 	mov	w0, #0x0                   	// #0
+    5cb8:	900000a1 	adrp	x1, 19000 <_ZN8PlatformC1Ei@plt+0x16578>
+    5cbc:	f947fc21 	ldr	x1, [x1, #4088]
+    5cc0:	f94017e3 	ldr	x3, [sp, #40]
+    5cc4:	f9400022 	ldr	x2, [x1]
+    5cc8:	eb020063 	subs	x3, x3, x2
+    5ccc:	d2800002 	mov	x2, #0x0                   	// #0
+    5cd0:	54000341 	b.ne	5d38 <_ZN8PlatformC1Ei@plt+0x32b0>  // b.any
+    5cd4:	a9437bfd 	ldp	x29, x30, [sp, #48]
+    5cd8:	a94453f3 	ldp	x19, x20, [sp, #64]
+    5cdc:	a9455bf5 	ldp	x21, x22, [sp, #80]
+    5ce0:	a94663f7 	ldp	x23, x24, [sp, #96]
+    5ce4:	910243ff 	add	sp, sp, #0x90
+    5ce8:	d50323bf 	autiasp
+    5cec:	d65f03c0 	ret

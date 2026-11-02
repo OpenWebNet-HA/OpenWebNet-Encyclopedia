@@ -1,0 +1,256 @@
+{
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/INPUTS.json",
+      "published": "teardown/INPUTS.json",
+      "sha256": "a6c16f5e0502a2421f0384380882b35188aef86d9a174e5de338a830c758560f",
+      "bytes": 1148
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/ORIGINAL_SOURCE.json",
+      "published": "teardown/ORIGINAL_SOURCE.json",
+      "sha256": "47af2a761dbfed3ac42d9b7ac9cd6b8e8dbe86f4c1065d9e2e16f5b09d644c02",
+      "bytes": 7548
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/TEARDOWN_CONTRACT.json",
+      "published": "teardown/TEARDOWN_CONTRACT.json",
+      "sha256": "c01c483ff10c8fd2ca6c498b70ce4b1e13d6dc4e82306329e90153091bc98eeb",
+      "bytes": 2436
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/spans/condition-four-byte-append.txt",
+      "published": "teardown/spans/condition-four-byte-append.txt",
+      "sha256": "2df94da646406066a6794b4582f80b28a3d7303f938aa810e7526e145bcdc0d9",
+      "bytes": 485
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/spans/condition-null-leg.txt",
+      "published": "teardown/spans/condition-null-leg.txt",
+      "sha256": "edaa1ceebf44ed07d2248a10ec13bb40dc0ed4e8d82b8bf678d34bf6ae3dd7ae",
+      "bytes": 272
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/spans/condition-pointer-loop-and-storage.txt",
+      "published": "teardown/spans/condition-pointer-loop-and-storage.txt",
+      "sha256": "86e28ecc7cbb9334d9e9ed071469745b37bdfd5d1093ad8b42970edc314752c8",
+      "bytes": 884
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/spans/inherited-action-tail-into-condition.txt",
+      "published": "teardown/spans/inherited-action-tail-into-condition.txt",
+      "sha256": "e7b85b033451709230e149e1fbf551e87502d8b761f1832c7e2d848fe2fb34f2",
+      "bytes": 413
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/spans/scene-receiver-alias.txt",
+      "published": "teardown/spans/scene-receiver-alias.txt",
+      "sha256": "862befcff6e4e45238732d52d5a543c2c26a6c515f7b137425e7ef9089d9384c",
+      "bytes": 357
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/spans/selected-compiled-header-install.txt",
+      "published": "teardown/spans/selected-compiled-header-install.txt",
+      "sha256": "5fd6a8313852d6a817d95abe4005b325a67e672073b9a8c9df1a41c398ba90f4",
+      "bytes": 368
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/spans/selected-condition-publication.txt",
+      "published": "teardown/spans/selected-condition-publication.txt",
+      "sha256": "8fb190881c77230a903a6424dc017060a43608f4846e9f3d2965b204a21806fb",
+      "bytes": 665
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/spans/selected-deleting-destructor.txt",
+      "published": "teardown/spans/selected-deleting-destructor.txt",
+      "sha256": "41f453c54a52e2dd7bb818478cdc2c0397c2d347e6273eb78a254c517ca7f02e",
+      "bytes": 2401
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/OUTPUT_MANIFEST.json",
+      "published": "teardown/OUTPUT_MANIFEST.json",
+      "sha256": "c5898e90f559ad7490a32ef4b4df6ece7a1985ace919143c528cb4ab2aa18da6",
+      "bytes": 2109
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/collect_teardown_v1.py",
+      "published": "teardown/collector.py.txt",
+      "sha256": "71fb996acddf857c048843644862e792a6eed5e2c66df8914a2d6b6b3858f679",
+      "bytes": 10249
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/teardown/REPORT.md",
+      "published": "teardown-report.txt",
+      "sha256": "4bbc78187774b2e08795eedeafd212cc100ead905e19f6face1500fc0f40b2e1",
+      "bytes": 8797
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/reviews/teardown-source-review.md",
+      "published": "teardown-source-review.txt",
+      "sha256": "92d13f4d7a47e4fecb174602d7c91f1876d4f90e771f3070ce565f6b3340f080",
+      "bytes": 5363
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/INPUTS.json",
+      "published": "distinct-condition/INPUTS.json",
+      "sha256": "0b4e5a8aad638f1f2f5ceb618765badc6ef12c7d2532bf6326f35f5c73e5cd4a",
+      "bytes": 1371
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/ORIGINAL_SOURCE.json",
+      "published": "distinct-condition/ORIGINAL_SOURCE.json",
+      "sha256": "1f244c42554a27b4b028deef91f3e3aedf929cf254c8d11706b6142172ae5233",
+      "bytes": 7741
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/SELECTED_CONTRACT.json",
+      "published": "distinct-condition/SELECTED_CONTRACT.json",
+      "sha256": "6226f93530aec65694d1e340abd5b8e26c028cd787a84e1c969c213c1dc001c1",
+      "bytes": 2063
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/spans/cache-no-control-field-loads.txt",
+      "published": "distinct-condition/spans/cache-no-control-field-loads.txt",
+      "sha256": "f63834fc09b6bbda7bca5ba909333a929404a078a066c97a7d318c0e0c133d39",
+      "bytes": 541
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/spans/compiled-constructor.txt",
+      "published": "distinct-condition/spans/compiled-constructor.txt",
+      "sha256": "49c12e403a50bf016c2ec22abb9a1a3bda114e307f0edc17d8625f79b1017a73",
+      "bytes": 3412
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/spans/compiled-selected-initializer.txt",
+      "published": "distinct-condition/spans/compiled-selected-initializer.txt",
+      "sha256": "25582fc37883423f60ea623581dba5dea2a18ecd4a529d8ca4a05b0178dcd4de",
+      "bytes": 937
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/spans/condition-consumer-range.txt",
+      "published": "distinct-condition/spans/condition-consumer-range.txt",
+      "sha256": "90e4695641184823201076e6af81441bb8e9690f5f76e17ab52c57d4afebb03a",
+      "bytes": 442
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/spans/condition-consumer-slot.txt",
+      "published": "distinct-condition/spans/condition-consumer-slot.txt",
+      "sha256": "6a7579627ae4e7637acd513815ea6a7507441b59318145e4f011e0487db9bdcb",
+      "bytes": 370
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/spans/condition-pointer-append.txt",
+      "published": "distinct-condition/spans/condition-pointer-append.txt",
+      "sha256": "2df94da646406066a6794b4582f80b28a3d7303f938aa810e7526e145bcdc0d9",
+      "bytes": 485
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/spans/exact-equality.txt",
+      "published": "distinct-condition/spans/exact-equality.txt",
+      "sha256": "f9748bc01ceeae74fffe1ef69266c149e631012384c350674e3554985f5bbff7",
+      "bytes": 387
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/spans/normal-local-cleanup.txt",
+      "published": "distinct-condition/spans/normal-local-cleanup.txt",
+      "sha256": "84ab94fe9896ca7704d16fc057032c1f0fce327c70f5d46ddfa0130df34e4d97",
+      "bytes": 1160
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/spans/operator-dispatch.txt",
+      "published": "distinct-condition/spans/operator-dispatch.txt",
+      "sha256": "b365e4e71cb4e8badd2e628a2ae87bfbf0e060aa5325fce271a41602a49005a6",
+      "bytes": 278
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/spans/predicate-enabled-cache-prefix.txt",
+      "published": "distinct-condition/spans/predicate-enabled-cache-prefix.txt",
+      "sha256": "744be1f36e314a2211136894e9dc4ffdd577d6bd5c3cb9d968b9956ac4fc4cfe",
+      "bytes": 3066
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/spans/raw-base-enabled-copy.txt",
+      "published": "distinct-condition/spans/raw-base-enabled-copy.txt",
+      "sha256": "bac14974ca570ccf268533fb9c0172bbad5e824621a709ee19a142428798db22",
+      "bytes": 994
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/spans/raw-selected-factory.txt",
+      "published": "distinct-condition/spans/raw-selected-factory.txt",
+      "sha256": "d28cadaf8824150181522fcc74fe1e721e42d3015b163966ba1007477e17141b",
+      "bytes": 1292
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/spans/raw-selected-schema.txt",
+      "published": "distinct-condition/spans/raw-selected-schema.txt",
+      "sha256": "40e83397d7385d4d80aad873011ffe230146734ff5610fd792623f598bd77988",
+      "bytes": 3409
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/spans/selected-selector-load.txt",
+      "published": "distinct-condition/spans/selected-selector-load.txt",
+      "sha256": "e97c85e4aac25bdf3eedfc06b65a8287010154b45a8c1849dfca49ed7b00d9c7",
+      "bytes": 320
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/spans/selector-dispatch.txt",
+      "published": "distinct-condition/spans/selector-dispatch.txt",
+      "sha256": "491a120ab12b59cc1d8be224113048210b29197a2bd99f6663bec3bdfa545951",
+      "bytes": 274
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/OUTPUT_MANIFEST.json",
+      "published": "distinct-condition/OUTPUT_MANIFEST.json",
+      "sha256": "24c935d1920daed2c6da9dd1da138cd1f0d754c4f36700a43f692778efc49899",
+      "bytes": 3070
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/collect_distinct_condition_v1.py",
+      "published": "distinct-condition/collector.py.txt",
+      "sha256": "9d4184350efc20011de2152d8da1183fbab3d19976e7c9c7a6ac7f8b44f0cdf0",
+      "bytes": 9090
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/distinct-condition/REPORT.md",
+      "published": "distinct-condition-report.txt",
+      "sha256": "a931c47b595f61be0194befc3f39abafc464b4dce9a57b5cb1ca9d4ea2d6eda0",
+      "bytes": 8680
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/reviews/distinct-condition-source-review.md",
+      "published": "distinct-condition-source-review.txt",
+      "sha256": "ffa9942659b6c143ee0b1de00522d2a6194ca6e9d380dc762a72ebeb5ec658b3",
+      "bytes": 4217
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/SYNTHESIS.md",
+      "published": "synthesis.txt",
+      "sha256": "ea872633cd3c317d738987079c0fdbc1a79c7931db881863215bd87e1373fea6",
+      "bytes": 1695
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/COVERAGE.md",
+      "published": "coverage.txt",
+      "sha256": "8c9d629d2f1fa1ee26ca1866c6dac543fbf892b6e8eb64f6eab805670e151ab5",
+      "bytes": 1506
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/RANKED_REMAINING_QUESTIONS.md",
+      "published": "remaining-questions.txt",
+      "sha256": "43a0b7fa731c347e0a0847b12445d39ee85d6142dd581e15d50cac61b4aaf8bd",
+      "bytes": 1519
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/RUN_LOG.md",
+      "published": "run-log.txt",
+      "sha256": "ae193c2505ce5c1cb39658c9ee4a931fbc7b58cd8529955820c3c76cba6b9f2e",
+      "bytes": 1088
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/SOURCE_CHECKS.json",
+      "published": "source-checks.json",
+      "sha256": "db270e4ee24fee037e7e07824055ec8df1f5b17ee13f425c121286b6bc2bc7bc",
+      "bytes": 791
+    }
+  ]
+}

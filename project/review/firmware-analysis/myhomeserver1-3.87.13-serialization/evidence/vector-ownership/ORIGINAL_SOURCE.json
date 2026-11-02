@@ -1,0 +1,195 @@
+{
+  "byte_guards": [
+    {
+      "VA": "0xa72d0",
+      "bytes": "0190"
+    },
+    {
+      "VA": "0xa7646",
+      "bytes": "8033"
+    },
+    {
+      "VA": "0xa7648",
+      "bytes": "0793"
+    },
+    {
+      "VA": "0xa76be",
+      "bytes": "6360"
+    },
+    {
+      "VA": "0xa76c0",
+      "bytes": "2660"
+    },
+    {
+      "VA": "0xa76e2",
+      "bytes": "42f98f07"
+    },
+    {
+      "VA": "0xa76ec",
+      "bytes": "c660"
+    },
+    {
+      "VA": "0xa72a2",
+      "bytes": "42f98f07"
+    },
+    {
+      "VA": "0xa72aa",
+      "bytes": "0c60"
+    },
+    {
+      "VA": "0xa72ac",
+      "bytes": "4860"
+    },
+    {
+      "VA": "0xb50de",
+      "bytes": "69f98f07"
+    },
+    {
+      "VA": "0xb50e4",
+      "bytes": "49f98f17"
+    },
+    {
+      "VA": "0xb50e8",
+      "bytes": "40f98f07"
+    },
+    {
+      "VA": "0xb5196",
+      "bytes": "c6e900b2"
+    },
+    {
+      "VA": "0xb519a",
+      "bytes": "b460"
+    },
+    {
+      "VA": "0xa599e",
+      "bytes": "4b60"
+    },
+    {
+      "VA": "0xa59ae",
+      "bytes": "3460"
+    },
+    {
+      "VA": "0x1f8b8",
+      "bytes": "4260"
+    },
+    {
+      "VA": "0xb0b62",
+      "bytes": "c468"
+    }
+  ],
+  "direct_branch_joins": [
+    {
+      "VA": "0xa7676",
+      "bytes": "0ff08bff",
+      "target": "0xb7590"
+    },
+    {
+      "VA": "0xa7684",
+      "bytes": "0cf0e2fe",
+      "target": "0xb444c"
+    },
+    {
+      "VA": "0xa76f6",
+      "bytes": "fef743f9",
+      "target": "0xa5980"
+    },
+    {
+      "VA": "0xa76fe",
+      "bytes": "78f7d1f8",
+      "target": "0x1f8a4"
+    },
+    {
+      "VA": "0xa7706",
+      "bytes": "fff7bffd",
+      "target": "0xa7288"
+    },
+    {
+      "VA": "0xa770e",
+      "bytes": "78f7c9f8",
+      "target": "0x1f8a4"
+    },
+    {
+      "VA": "0xa72ba",
+      "bytes": "0df0efbe",
+      "target": "0xb509c"
+    }
+  ],
+  "growth_exidx": {
+    "boundary": "Grouped exception interval includes an earlier helper and terminal literal pool; not exact source function identity or all instructions.",
+    "enclosing_start": "0xb4fd4",
+    "end_exclusive": "0xb51f4",
+    "entry_VA": "0x14e658",
+    "selected_direct_branch_entry": "0xb509c"
+  },
+  "selected_control": {
+    "GOT_slot": "0x1669c4",
+    "RTTI_VA": "0x164938",
+    "RTTI_name": "St19_Sp_counted_deleterIP17SleepActionRunnerSt14default_deleteIS0_ESaIvELN9__gnu_cxx12_Lock_policyE2EE",
+    "dispose_Thumb": "0xb0b61",
+    "dispose_receiver_action_load": "owner+12 atb0b62",
+    "offset_pool": "0xa7f50",
+    "relative_relocations": [
+      "001669c4  00000017 R_ARM_RELATIVE",
+      "001619ec  00000017 R_ARM_RELATIVE"
+    ],
+    "vtable_header": "0x1619dc"
+  },
+  "spans": [
+    {
+      "end_VA_exclusive": "0xa7304",
+      "file_offset": "0xa72c0",
+      "name": "initializer-scene-pointer-save",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "ff4b05e2ce5b9745b80cc8b337852c6db1115f31f7b2983e07260f577754b38b",
+      "start_VA": "0xa72c0"
+    },
+    {
+      "end_VA_exclusive": "0xa7712",
+      "file_offset": "0xa7640",
+      "name": "selected-sleep-owner-to-append",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "54002d38833844b70edd57f0b899901c7fea1946dd4e911dae883450245d9b36",
+      "start_VA": "0xa7640"
+    },
+    {
+      "end_VA_exclusive": "0xa72c0",
+      "file_offset": "0xa7288",
+      "name": "normal-and-full-append",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "23e9dd1a36d463caf18f30d94436afc56e96d9d52d9ac2ec93ad7ac5c5b295cb",
+      "start_VA": "0xa7288"
+    },
+    {
+      "end_VA_exclusive": "0xb51f4",
+      "file_offset": "0xb509c",
+      "name": "growth-and-storage-transfer",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "f33e6a5fe90eed01958477add7c6a61fabba2c514dcce61f82abcfd3e711faeb",
+      "start_VA": "0xb509c"
+    },
+    {
+      "end_VA_exclusive": "0xa5a3c",
+      "file_offset": "0xa5980",
+      "name": "control-assignment-increment",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "b0df3cfe95d7cd9ca0edbd2a0b660a576d1e623d9c632995b5151f57c39647f1",
+      "start_VA": "0xa5980"
+    },
+    {
+      "end_VA_exclusive": "0x1f920",
+      "file_offset": "0x1f8a4",
+      "name": "temporary-control-release",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "22e49b7c9d8e19c9cef1d8d8a6fa18df822169fae5f71781473d2a44d396f03d",
+      "start_VA": "0x1f8a4"
+    },
+    {
+      "end_VA_exclusive": "0xb0b70",
+      "file_offset": "0xb0b60",
+      "name": "selected-control-dispose-boundary",
+      "path": "/home/bticino/scheduling_manager/scheduling_manager",
+      "raw_sha256": "f178d2031d60985d11c11aae6c7a1da3f584a68ba49d8bb980fbe924454c214a",
+      "start_VA": "0xb0b60"
+    }
+  ]
+}

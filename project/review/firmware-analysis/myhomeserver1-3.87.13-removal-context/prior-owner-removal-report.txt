@@ -1,0 +1,58 @@
+# MyHOMEServer1 3.87.13: one explicit scene-owner removal/release caller
+
+The original scheduler contains a positive numeric first-tree removal routine, called at a concrete local call site: it clears a matched node's scene/control pair, releases that control, then requests key-based erasure. On prior strong count1 it invokes the control's disposal slot before erasure continues. This source edge complements the previously established retained action-vector owner and scene-disposal paths; it is not an inferred removal merely from a destructor's existence.
+
+The retained local caller has supplied context/ID arguments. Their natural construction, external eligibility and equality with the startup main scene container remain explicit premises. No original/native/provider/vendor/target execution or semantic host fixture is performed. No executed removal after polling, eventual destruction, complete lifetime, safe/unsafe interleaving, leak/UAF, cancellation/restart guarantee or physical outcome is claimed.
+
+## Identity and distinct evidence
+
+Original image `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. ImageVFS and fresh ELF32 PT_LOAD mappings supply code/data bytes and original linked VAs. Thumb pointer bits, original relative relocations and pool data are kept distinct from instruction addresses. No nearby stripped-template name establishes function identity.
+
+Read-only inherited evidence is `2026-11-01-serialization/vector-ownership/REPORT.v2.md`, `2026-10-31-lifetime/worker-ownership/REPORT.v2.md` and `2026-10-31-startup/registry/REPORT.md`. Those establish selected action/control retention in scene+128, conditional scene disposal/compiled-vector cleanup and main's numeric first-tree registry. Their append/growth/thread/polling matrices are not rerun as new coverage. Curated OWN-DEV-0199 supplies home-automation/scenario context only, without assigning a public command or physical meaning to these private routines.
+
+New scope is one concrete local caller0x3e742, actual matching-node pair clear/release in0xb6b5c, and its keyed erase continuation0xb6324. The prior selected SceneRunner disposal identity is rechecked only to compose the conditional owner edge.
+
+## Concrete local caller and numeric first-tree match
+
+At0x3e73c..0x3e742 the caller loads a supplied context pointer from its current SP+20, reads receiver word0 from that context, loads the ID word from current SP+28 and calls0xb6b5c. The callee treats that ID as an unsigned numeric key through its original comparisons. No JSON/wire parsing, request name, argument production, external caller or transport body is followed; this is a concrete original call, not a claim it naturally executes for a particular user operation.
+
+The callee saves incoming receiver and ID, reads first-tree root at receiver+8 and compares node key+16 against the supplied ID, using child fields+8/+12 and receiver+4 as the end/header sentinel. Its selected matched path reaches node fields+20/+24, the same numeric key and pair layout independently established for the startup scene registry. Applying this operation to that actual container requires caller receiver equality with the startup main container; matching layout alone does not prove it.
+
+An empty tree or unsuccessful selected search requests the original out-of-range provider; the later catch/error contract is not a complete result domain here. The report follows only the normal found-key route under valid ordered-tree/object/ABI premises.
+
+## Pair clear happens before the control release
+
+The matched-node source performs these exact operations:
+
+1.0xb6bb0 loads the control pointer from node+24 into r4;0xb6bb4 advances the node alias to pair+20.
+2.0xb6bb8 supplies zero data;0xb6bbc writes both pair words zero. The record's stored scene pointer and control pointer are now cleared on this selected source path.
+3.If saved control r4 is nonzero, the source decrements control+4, using either the visible direct branch or the LDREX/STREX branch0xb6c18..0xb6c30.
+4.The comparison at0xb6bd2 tests the prior strong count. If it was1,0xb6bfe invokes control vtable/address-point+8 with that control as receiver. Other counts normally bypass this disposal request.
+5.After a normally returning disposal request, the source decrements control+8 through its selected direct/atomic branch; prior count1 requests address-point+12 at0xb6c14.
+6.Normal continuation0xb6bd6 supplies the same tree receiver and a pointer to the saved numeric ID to0xb6324 at0xb6bda. Following a normal eraser return, the local routine assigns result1; provider/stack/error outcomes remain conditional.
+
+This is source sequencing, not actual memory/count state. No arbitrary object or count fixture is supplied. Concurrent mutation, invalid objects, interposition, failures and exceptional exits can invalidate a simple sequential interpretation and are not supplied as outcomes. In particular node clearing before disposal does not by itself establish any thread-visible lifetime defect or atomic removal guarantee.
+
+## The keyed eraser is an actual continuation
+
+Helper0xb6324 searches numeric keys with the same node key+16 and tree header. It has distinct selected range branches. A whole-tree range calls recursive helper0xb5dac at0xb636e and resets header/root/count fields; that recursive implementation remains opaque here. It must not be collapsed into the non-whole-range branch.
+
+On its retained non-whole-range iteration,0xb63e4 requests next-node increment,0xb63f0 requests the packaged `_Rb_tree_rebalance_for_erase` import, and the returned erased node supplies its control word+24 at0xb63f6. This generic eraser can release a nonzero node control, but in the selected normal caller composition the matched scene/control pair was already zeroed before the call. Valid tree/key invariants and normal erase-provider correspondence are material premises of relating these aliases.
+
+The non-whole-range path requests sized delete28 for the erased node at0xb63ce..0xb63d2 and decrements tree count+20 at0xb63d6..0xb63de. It does not erase the scene's compiled action vector by offset coincidence; it removes the containing scene registry node. Complete rebalance/deallocation/recursive-clear behavior, exception safety, count validity and concurrent tree mutation are unexecuted delegates or unknowns.
+
+## Conditional selected SceneRunner disposal join
+
+For a removed control actually produced by the earlier selected loader, original GOT0x166c2c resolves owner header0x15fd24 and RTTI `St23_Sp_counted_ptr_inplaceI11SceneRunnerSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE`. Its dispose slot at header+16 (address-point+8) contains Thumb0x1a049. Original0x1a048 adds12 to the control receiver and tailbranches to scene teardown0xa5a3c. This matches the inherited allocation+12 SceneRunner relation and the release slot used at0xb6bfe.
+
+Under that actual control-type premise and prior strong count1, the explicit removal routine can therefore request the previously established SceneRunner teardown before keyed erasure returns. The inherited teardown source conditionally handles scene thread holder+140 before releasing compiled action handles at scene+128/+132. That inherited conditional path is not repeated as a new universal join-before-free claim. Null/already-detached holder paths, other scene/action owners, raw worker-state captures, other control types, normal destructor return and full concurrency/exception behavior remain unresolved.
+
+This provides a new positive removal-to-disposal caller edge. It does not prove that this caller runs when scene polling ends, that removal waits for every worker, that the registry control is naturally the last owner, or that removing a registry node always destroys the selected action. Trigger+104/condition+116 controls, raw scene definitions, compiled action+128 handles and the caller's context are distinct objects/axes.
+
+## Reproduction and remaining scope
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-owner-removal/removal/collect_removal_v1.py --check`
+
+The exclusive collector records four original code spans,16 byte guards, four direct branch joins, two pool-data spans, four relative relocations and five input hashes. A bounded halfword-position Thumb-BL locator finds six syntactic candidates for0xb6b5c; only0x3e742 is semantically retained. It is not an indirect/other-encoding/global caller-absence proof. Other candidates are not promoted to natural removal behavior.
+
+All deterministic outputs plus report/collector are immediately frozen with an index computed before opening it; existing generated files cause refusal. Confidence is high for selected original match/pair/count/call/erase ordering and conditional owner identity. Actual caller eligibility/context, configured scenes, valid providers/objects/counts, other owners, full erase/error/recursive paths, lifetime/concurrency, polling/removal order and physical effects remain open. No transport/session/authentication/framing/MQTT/libjel body or target process is inspected or executed.

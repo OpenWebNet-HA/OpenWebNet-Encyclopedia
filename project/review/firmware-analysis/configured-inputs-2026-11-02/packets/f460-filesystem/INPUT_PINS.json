@@ -1,0 +1,26 @@
+[
+  {
+    "bytes": 2161128,
+    "path": "work/f460-firmware/2.0.12/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager",
+    "role": "Own immutable F460 ELF64/AArch64 source",
+    "sha256": "5017302a7965f8eafe3ec1ac55946b2aecc3c4c1496923022c6e24ad74d6bf62"
+  },
+  {
+    "bytes": 13261,
+    "path": "work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/SOURCE.json",
+    "role": "Inherited construction context, no collector replay",
+    "sha256": "2b0aaadc55a2e7f62c00cbe8e611d8cc00a09020f4035133fc06224fd0fa6395"
+  },
+  {
+    "bytes": 8030,
+    "path": "work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/REPORT.md",
+    "role": "Inherited SceneRunner identity/scope, not new coverage",
+    "sha256": "578653ad15a4c18b203d9917867f32384d017894875e88054043fae29ff46557"
+  },
+  {
+    "bytes": 26200,
+    "path": "work/configured-scene-module-investigation/2026-11-02/admission/f46/ASSET_ADMISSION.json",
+    "role": "Current finite asset admission, no commissioned export",
+    "sha256": "bc3effb54795af6d1743e991e2d33a705d07a704acb5d13b9a92f5614c2a77fe"
+  }
+]

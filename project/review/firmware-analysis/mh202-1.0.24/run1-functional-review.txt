@@ -1,0 +1,40 @@
+# Independent static review — MH202 functional run1
+
+**PASS within the stated post-parser/static scope. No material correction requested.** Independently read the report/collector and original WHO17 dispatcher, record/status helpers, loader, callback branches and launch/stop code. Checked the original words directly through read-only ImageVFS/ELF LOAD offsets, rather than relying only on the analyst's saved hashes. No original ARM/JS, native process, shell command, FIFO, service, network or device operation ran; only this review file was written.
+
+## Reproduction and exact original checks
+
+`functional/run1/collect_evidence.py --check` passes **19 static outputs plus their manifest**, without rewriting evidence. Its eleven original table/pointer assertions reproduce. Independently asserted **26 original words/table entries** from `/home/bticino/bin/bt_taskmanager`, including WHO17 comparison0xa784, subtract-one WHAT dispatch0xa7cc/0xa7d4 and all four entries0xa7dc..0xa7e8; the global gate's WHAT2 exception0xa7c4; loader start/record-ID assignment0xce3c/0xce8c and increment/end compare0xd164/0xd168 plus literal301; both status renderer outcomes; all four callback pointers; mkfifo mode argument0xd544; launch system call0xd5b4; stop signal argument0xd498; one-byte write argument0xd4b4; and start callback tail branch0xd6f0. This is a static-byte/assertion check, not instruction execution or an interpreter.
+
+All19 output hashes match the current collector manifest. Original input hashes are verified by the collector/accessor; the original taskmanager hash is `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e`.
+
+## Semantic findings checked
+
+- **WHO/WHAT:** Original0xa738..0xa784 extracts numeric WHO/WHAT/WHERE/DIM, performs record lookup by WHERE, then gates WHO17. `IsNormalFrame` precedes the WHAT1..4 table. Table targets and downstream calls establish start/stop/enable/disable as reported. This remains parsed-object evidence; it does not prove original raw grammar acceptance or physical scenario execution.
+- **Start and global guards:** WHAT1 requires nonzero selected WHERE, an existing normal record, +60 zero and the separate counter<=29. The inspected branch does not itself test +52 as a disabled gate. The report correctly avoids inferring complete only-if/disabled/restart/panic policy from that omission. WHAT2 can pass the existing nonzero global gate; other commands take the alternative when that global is set. A `General Panic` logging label is not its setter or a reconstructed state machine.
+- **State axes:** Original0xcad0 chooses WHAT3 for +52 zero and WHAT4 otherwise;0xcb04 chooses WHAT2 for +60 zero and WHAT1 otherwise, formatting record+0 as ID. +52 enable/disable storage is separate from nonzero +60 execution/control state. In particular +60=5 after the equal-PID stop request still satisfies the nonzero renderer predicate; the report does not reduce every nonzero value to proven running/successful execution.
+- **Loader range versus transmitted identifier:** File loop r8 starts1 and stops at exclusive301, with failed opens continuing. Original0xce8c stores r8 into the temporary record's +0; that record ID is later used by status formatting. This supports IDs1..300 for records created by this loader. It is not a universal wire WHERE range, a scenario-body ID parser, or proof of how other potential record constructors behave. The report's narrower file-search statement is appropriate; a UI stopping at its first missing item would remain a separate policy.
+- **Path and directives:** `%s%d.spt/%d.spt` plus extra/4 is actual `sprintf`/`fopen` dataflow, not a filename-string guess. `$NOME` supplies the `snprintf` format argument and size31, so byte-for-byte copying/full validation must not be claimed. RESTART/SI, start/SEMPRE and generic trigger normalization/lookup/insertion are correctly separated. The callback pointers match the actual kind0..3 bindings and their tail calls; event matching, scheduling and callback invocation remain unjoined.
+- **Launch/FIFOs:** The code constructs both named FIFO paths, passes0600 to mkfifo, sets+60=1, builds the exact bt_script command and reaches a system import before descriptor opening/retries. These call sites do not establish successful creation/launch, child option semantics or PID update. Report language preserves this boundary.
+- **Stop:** Different PID selects kill(...,9) and cleanup. Equal PID uses descriptor+40 and original length1 with literal`E\n`, so only `E` is requested before setting state5. Neither a newline write nor successful exit follows from the call. Cleanup descriptor/path/PID/pointer actions are code-backed and not actual host actions.
+- **COSO/interpreter separation:** COSO's TR registration and STM exports are distinct from taskmanager WHO17 control. The report does not transfer WHO17 ownership to COSO or equate libdomotica `IIF` with a completed product only-if stage. Named interpreter imports/definitions are concrete next targets, not proof that the actual script parser has been followed into them.
+- **Missing assets:** The selected normal image's empty extra directory is supported by authoritative image inventory. It does not describe mounted persistent contents or the unseen4.xtz archive, and normal/recovery equivalence is not claimed by this report.
+
+## Reviewed pins
+
+Paths below are relative to `research/2026-10-30/functional/run1/`.
+
+| Artifact | SHA256 |
+|---|---|
+|`REPORT.md`|`4bd567b9a05afe7a728895966aabbcc2d6c20929b9ffa12d1524fe7f7b0061f6`|
+|`collect_evidence.py`|`a12e957b699b2c4b0a0340108d3efaffdf8b64c36bf7de49bc52b66a5c50a559`|
+|`inputs.json`|`b85cacf46c76eb23b196702fce2f8267fedcde03147ec5d668f9c115d9557f4d`|
+|`output-manifest.json`|`cea88a883051976a3bc3a742b15ad25d1cd520feed007cd2d444711e42072585`|
+|`word-checks.json`|`08be3ad5ec93b041f81e588b55000ec5df7e9d766022aae55b3658f0ad251da2`|
+|`who17-dispatch.txt`|`658789667662e0c8b017a54e3c574fc4fa54f1b03303212b4d609c14945a54df`|
+|`script-loader.txt`|`2125848ead74efcc9ff4f0d4f10db0e0646e297aa082014d06213224f83f9c66`|
+|`script-control.txt`|`83f9b9bae09fc5170fe71ebcb1fd904f49dfa736c0b13e0bf3005ab7c5ddc85f`|
+|`status-render.txt`|`124300222a52abb21ec598fb926ce0ff60da5eb2219eefc9ff9e5111a9619995`|
+|`coso-tr-registration.txt`|`3f3be1e6c67e8a305ee04d3c08d7a3455eb9f465ffc1d91166be450d9a93b313`|
+
+The report provides substantive original ownership/control/loader evidence while retaining parser, FIFO/PID/event lifecycle, only-if/restart/panic, missing script and physical/runtime limits. Further promotion should preserve those boundaries rather than treating helper reachability as service success.

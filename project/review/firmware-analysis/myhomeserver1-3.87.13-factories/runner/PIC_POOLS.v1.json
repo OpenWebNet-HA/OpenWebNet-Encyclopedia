@@ -1,0 +1,30 @@
+[
+  {
+    "add_pc_va": "0xa5e1a",
+    "name": "conditional-thread-vtable",
+    "pool_va": "0xa6084",
+    "pool_word": "0xbbfca",
+    "target": "0x161de8"
+  },
+  {
+    "add_pc_va": "0xa627a",
+    "name": "direct-thread-vtable",
+    "pool_va": "0xa64e4",
+    "pool_word": "0xbbb6a",
+    "target": "0x161de8"
+  },
+  {
+    "add_pc_va": "0xa7376",
+    "name": "initializer-start-callback",
+    "pool_va": "0xa7f00",
+    "pool_word": "0xffffed2f",
+    "target": "0xa60a9"
+  },
+  {
+    "add_pc_va": "0xa737a",
+    "name": "initializer-manager-callback",
+    "pool_va": "0xa7f04",
+    "pool_word": "0xffffe343",
+    "target": "0xa56c1"
+  }
+]

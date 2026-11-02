@@ -1,0 +1,49 @@
+# Typed local producer for the BNTH record+32 double
+
+A concrete scheduler-local producer now supplies the double assumed by the preceding BNTH comparison: the selected local event-code **3** branch constructs RTTI **`ItemStatusThermostat`**, converts the JSON member **`setpoint`** through imported `asDouble`, and writes that double to the embedded record's **+32**. It passes the typed record/control pair and local ID string to the same registry update helper used by the predicate's lookup. The matching-type update branch also copies an incoming changed +32 double into the stored record.
+
+This closes a positive local typed-field producer/registry/consumer correspondence. It does not prove accepted raw input, a natural event, physical thermostat behavior, measurement units, installed state, fresh data, or that every record returned for an ID has this type. Original/native/vendor instructions, JSON/provider/target calls and host semantic fixtures executed: **0**.
+
+Original image `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Source spans have fresh ELF32 PT_LOAD mappings, offsets and raw hashes in `ORIGINAL_SOURCE.json`. Original inputs and completed packets are read-only. No receiving, transport, authentication, session, framing, MQTT or libjel implementation is followed.
+
+## Selected local branch and JSON provenance
+
+The retained outer routine is the already examined scheduler-local structured-object consumer. Its local `params` member copy is at `0x52322..0x52332`; optional `params.id` is converted/copied into FP/current SP+448 at `0x54db2..0x54dda`. The preceding parse, prefix classifier/filter and complete input acceptance remain premises; imported JSON implementations are opaque. This packet does not fabricate an incoming payload or map a private event code to a public WHO.
+
+For a supplied local dispatch code **3**, the first TBH data base `0x52374`, entry index 3, contains `0x0bef`, reaching **`0x53b52`**. This local selector is separate from the record discriminator 3 written below; their equal integers do not by themselves establish one namespace.
+
+At `0x53b96..0x53bb6`, the producer checks exact key `setpoint` (`0x1151b4`) in the copied params object, accesses that member if present, requests imported `asDouble`, and copies D0 to **D9**. If the member is absent, original branch **`0x5517c`** explicitly writes an all-zero 64-bit value to D9 and rejoins the construction path. Consequently, the selected missing-member path supplies local double zero; it does not preserve an old value merely because the member was omitted. This is not a physical zero or missing-sensor interpretation, nor a proof of JsonCpp conversion/error behavior for invalid values.
+
+The adjacent `measure` conversion is a separate D8 source and ultimately a different record offset. Its name is not substituted for `setpoint`, and no unit/domain is inferred. Other member values, complete payload content, source IDs and private configuration are not exported.
+
+## Fresh record and control identities
+
+At `0x53c22`, getter `0x5724c` supplies the local registry receiver. Original `0x53c28..0x53c3a` requests **88 bytes** and initializes the visible control count words +4/+8 each to 1. The allocation's control header, through GOT `0x166878`, is `0x160d88`, whose RTTI is `St23_Sp_counted_ptr_inplaceI20ItemStatusThermostatSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE`.
+
+The embedded record begins at **allocation+16**, not the allocation+12 of the previously examined Light record. Its header comes through GOT **`0x166c80`** to **`0x160cf8`**, with RTTI name exactly **`20ItemStatusThermostat`**. `0x53c3e..0x53c44` writes literal 3 at allocation+20 = **record+4**. There is no Light-layout transfer.
+
+At **`0x53c7c`**, `VSTR D9,[allocation+48]` writes the selected converted/default double at **record+32**. D8 is independently stored at allocation+64 = record+48. Other words are initialized separately. The source therefore justifies the selected double's origin and position without inferring a physical device's data layout from a class name.
+
+At `0x53c70..0x53c8c`, the outgoing pair at SP+296 is **(allocation+16 record pointer, allocation/control pointer)**. `0x53c8e` invokes **`0x10eb10`** with that pair, the FP ID string and the getter's receiver. Successful allocation, object invariants, normal provider returns and complete control lifetime remain premises; no actual object is allocated by the research.
+
+## Same registry and selected stored-value update
+
+The getter's original PIC/GOT chain independently resolves base `0x1659a4`, slot **`0x166bf8`**, and local registry **`0x167368`**. This is positively the same receiver used by the BNTH predicate, not an address guessed from its name. The previous record packet establishes its string-keyed tree, node key at +16/+20 and record/control pair at +40/+44. Fresh retained generic installation source here writes the incoming record pointer to node+40 at `0x10ef90` and control to node+44 at `0x10efc6` on its selected normal installed-node continuation. Full insertion, all mismatched-type/error policies and provider/allocator/locking behavior are not re-proved.
+
+For an existing matching entry, `0x10eba6..0x10ebb8` obtains old record R4 and incoming record R6 and requires their discriminator words+4 to match before the selected switch. The type-3 TBH entry at base **`0x10ebc0`**, index 3, is **`0x00c3`**, reaching **`0x10ed46`**. This selected branch loads incoming+32 into D17 and old+32 into D19.
+
+The later source `0x10f0e0..0x10f0e8` compares those doubles and, on NE, enters the copy continuation. At **`0x10edfc`**, it writes D17 into **old record+32**, along with separately copied fields on that continuation. Thus both new-pair installation and a concrete matching-type changed-double path can supply the cached +32 value. This packet does not assert a complete update return contract, lock/notification ordering, physical freshness, exceptional floating behavior, or all unchanged/mismatched-type outcomes.
+
+## Actual BNTH consumer correspondence
+
+The preceding independently reviewed BNTH packet derives its own raw `setpoint` constructor path and configured double+160, and the predicate's ordinary lookup request `0x103cfa -> 0x10e3d8` with the same registry/ID. The lookup's found branch copies the stored node pair; it does not manufacture a new record layout.
+
+Fresh original **`0x103d20`** and **`0x10489c`** load **record+32 into D9** on the retained control-present and control-zero cache-hit legs. With an actual matching ID and suitable retained `ItemStatusThermostat` record, this is the double written above. The selected BNTH operator-2 path compares D9 with its own configured double+160. That comparison, its four-byte condition-vector publication/slot+8 call, and all-condition aggregation remain the preceding packet's separate scope; no new predicate matrix is claimed here.
+
+Type suitability remains explicit. The ordinary lookup is shared, and this source does not prove every possible ID has a Thermostat record, that the latest event reached it, or that a returned object remains valid across all concurrent changes. No physical source, measurement units, scalar range or natural configured condition follows from this positive producer join.
+
+## Reproduction and limits
+
+Run `python3 collect_record_value_v1.py --check`. The exclusive collector checks original identity/PT_LOAD source, exact byte guards, selected literals/PIC/GOT/RTTI/relative relocations, two selected TBH entries, local calls, prior/product pins, deterministic outputs and exact immediate first copies. The snapshot index is computed before opening its file. Existing generated candidates/snapshots are never overwritten.
+
+High confidence: selected `setpoint` conversion/default, typed embedded-record+16/+32 aliases, same receiver and record-pair handoff, matching-type changed-double copy, and consumer read position. Conditional: valid JSON/string conversion, branch eligibility, suitable cache ID/type, normal allocation/tree/control/provider behavior and lifetime. Unclosed: preceding input/receiving grammar and source, complete all-type registry policy and errors, cache freshness/concurrency/notification, physical semantics and actual execution. The curated OWN-DEV-0199 item-2198 context is a product-role pin only.

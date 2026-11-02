@@ -1,0 +1,10 @@
+# Coverage after run08
+
+| Strand | New selected reach | Still open |
+| --- | --- | --- |
+| MH200N application | Retained stream into line-read request; length-based last-byte store; same modified line into first formatter | Natural caller/files/actual data/providers/capacity/nonempty complete filename/grammar/compiler/installed state |
+| F459 | Conditional own static getter, selected revision7 metadata row/name and inherited dispatch-pointer join | Exact target headers/effective binding/name resolution/actual events/callback body/freshness/ownership/quiescence |
+| F450/F455 | Consolidated; no new source or repeated gap packet | Actual configured assets/plaintext DB; denied helper stays closed; authoritative F455 CPU/loader/map provenance |
+| F453AV | Prior own normal/recovery evidence inherited only | Natural admission/full component behavior/hardware/active environment |
+
+Two source packets only. Code/data/guard/output counts measure selected reach/integrity, not exhaustive semantic coverage. F459 adds one code span and six data extents; old dispatcher/watch/SQL evidence is inherited. Actual target/vendor/helper/native/model/fixture/Qt/SQLite/runtime/physical execution0. Actual R2 one encrypted support/zero plaintext; no new object. Full source/Device/runtime approval remains pending.

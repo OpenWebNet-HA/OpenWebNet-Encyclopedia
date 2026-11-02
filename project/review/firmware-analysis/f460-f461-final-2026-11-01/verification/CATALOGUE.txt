@@ -1,0 +1,25 @@
+# F460/F461 completed-checkpoint navigation
+
+These 15 rows locate saved checkpoints and 30 source reports. Row counts are not firmware coverage or capability counts. Report excerpts are exact navigation locators, not newly verified firmware claims.
+
+| Checkpoint | Bounded topic | F460 source report | F461 source report |
+|---|---|---|---|
+| 2026-11-01 | Package and first-pass provenance | [REPORT.md](${WORKSPACE}/work/f460-firmware/2.0.12/research/2026-11-01/first-pass/REPORT.md) (line 1) | [REPORT.v2.md](${WORKSPACE}/work/f461-firmware/2.0.11/research/2026-11-01/REPORT.v2.md) (line 1) |
+| 2026-11-01-depth | First selected compiled/source routes | [REPORT.md](${WORKSPACE}/work/f460-firmware/2.0.12/research/2026-11-01-deep-scheduler/REPORT.md) (line 1) | [REPORT.v2.md](${WORKSPACE}/work/f461-firmware/2.0.11/research/2026-11-01-deep-routing/REPORT.v2.md) (line 1) |
+| 2026-11-01-run03 | Sleep callable / translation callback dispatch | [REPORT.md](${WORKSPACE}/work/f460-firmware/2.0.12/research/2026-11-01-run03-sleep-invoker/REPORT.md) (line 1) | [REPORT.md](${WORKSPACE}/work/f461-firmware/2.0.11/research/2026-11-01-run03-translator-dispatch/REPORT.md) (line 1) |
+| 2026-11-01-run04 | Catalogue reader / field owner | [REPORT.v2.md](${WORKSPACE}/work/f460-firmware/2.0.12/research/2026-11-01-run04-catalogue/REPORT.v2.md) (line 1) | [REPORT.md](${WORKSPACE}/work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/REPORT.md) (line 1) |
+| 2026-11-01-run05 | Constructor selection / local translator output | [REPORT.md](${WORKSPACE}/work/f460-firmware/2.0.12/research/2026-11-01-run05-selector/REPORT.md) (line 1) | [REPORT.md](${WORKSPACE}/work/f461-firmware/2.0.11/research/2026-11-01-run05-translator-output/REPORT.md) (line 1) |
+| 2026-11-01-run06 | Trigger schema / address prefix | [REPORT.md](${WORKSPACE}/work/f460-firmware/2.0.12/research/2026-11-01-run06-trigger/REPORT.md) (line 1) | [REPORT.md](${WORKSPACE}/work/f461-firmware/2.0.11/research/2026-11-01-run06-address/REPORT.md) (line 1) |
+| 2026-11-01-run07 | Scene receiver / pure identity getter | [REPORT.md](${WORKSPACE}/work/f460-firmware/2.0.12/research/2026-11-01-run07-receiver/REPORT.md) (line 1) | [REPORT.md](${WORKSPACE}/work/f461-firmware/2.0.11/research/2026-11-01-run07-identity/REPORT.md) (line 1) |
+| 2026-11-01-run08 | Update manifest / daemon configuration | [REPORT.v3.md](${WORKSPACE}/work/f460-firmware/2.0.12/research/2026-11-01-run08-update/REPORT.v3.md) (line 1) | [REPORT.v2.md](${WORKSPACE}/work/f461-firmware/2.0.11/research/2026-11-01-run08-boot/REPORT.v2.md) (line 1) |
+| 2026-11-01-run09 | Condition pointer / platform selector | [REPORT.md](${WORKSPACE}/work/f460-firmware/2.0.12/research/2026-11-01-run09-condition/REPORT.md) (line 1) | [REPORT.md](${WORKSPACE}/work/f461-firmware/2.0.11/research/2026-11-01-run09-platform/REPORT.md) (line 1) |
+| 2026-11-01-run10 | Action polling / contextual address suffix | [REPORT.v2.md](${WORKSPACE}/work/f460-firmware/2.0.12/research/2026-11-01-run10-action-gate/REPORT.v2.md) (line 1) | [REPORT.md](${WORKSPACE}/work/f461-firmware/2.0.11/research/2026-11-01-run10-address/REPORT.md) (line 1) |
+| 2026-11-01-run11 | Provided-receiver control / configuration selection | [REPORT.md](${WORKSPACE}/work/f460-firmware/2.0.12/research/2026-11-01-run11-scene-control/REPORT.md) (line 1) | [REPORT.md](${WORKSPACE}/work/f461-firmware/2.0.11/research/2026-11-01-run11-config-selection/REPORT.md) (line 1) |
+| 2026-11-01-run12 | Update record / deferred clock request | [REPORT.md](${WORKSPACE}/work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/REPORT.md) (line 1) | [REPORT.md](${WORKSPACE}/work/f461-firmware/2.0.11/research/2026-11-01-run12-clock/REPORT.md) (line 1) |
+| 2026-11-01-run13 | Working-profile request / deadline producer gap | [REPORT.md](${WORKSPACE}/work/f460-firmware/2.0.12/research/2026-11-01-run13-compatibility/REPORT.md) (line 1) | [REPORT.v2.md](${WORKSPACE}/work/f461-firmware/2.0.11/research/2026-11-01-run13-deadline/REPORT.v2.md) (line 1) |
+| 2026-11-01-run14 | Numeric condition / module admission | [REPORT.v2.md](${WORKSPACE}/work/f460-firmware/2.0.12/research/2026-11-01-run14-numeric/REPORT.v2.md) (line 1) | [REPORT.md](${WORKSPACE}/work/f461-firmware/2.0.11/research/2026-11-01-run14-boot-selection/REPORT.md) (line 1) |
+| 2026-11-01-run15 | Numeric serialization / module removal request | [REPORT.v2.md](${WORKSPACE}/work/f460-firmware/2.0.12/research/2026-11-01-run15-serializer/REPORT.v2.md) (line 1) | [REPORT.v2.md](${WORKSPACE}/work/f461-firmware/2.0.11/research/2026-11-01-run15-module-removal/REPORT.v2.md) (line 1) |
+
+Exact sizes, hashes, headings and first VA-bearing report lines are in CATALOGUE.json. The links use the absolute workspace paths captured for this local dossier.
+
+VERSION_NAVIGATION.json retains the authoritative report name separately from canonical collector/first-copy identities. In particular run08 F460 uses report v3 over collector v2; run10 F460 first-candidate/REPORT.md is the v2 report alias; run13 and run15 F461 have report-only v2 refinements over retained v1 collector bindings.

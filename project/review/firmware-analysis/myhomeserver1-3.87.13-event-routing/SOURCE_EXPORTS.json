@@ -1,0 +1,448 @@
+{
+  "exports": [
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/BYTE_GUARDS.json",
+      "published": "routing/BYTE_GUARDS.json",
+      "sha256": "b9051a9f1c3c855e9838efe49d529962908887b4c07fc91454a516e35715bccf",
+      "bytes": 765
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/DATA_SPANS.json",
+      "published": "routing/DATA_SPANS.json",
+      "sha256": "f388c5556a5632c244190f49e0c8f0e9c7fe7a3ff027839088720dcd9b509c84",
+      "bytes": 624
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/DIRECT_BRANCHES.json",
+      "published": "routing/DIRECT_BRANCHES.json",
+      "sha256": "5527d77f93bbcfc131eec19da9a84b7e302aff2ca15e65f8bf61091b74b69b7b",
+      "bytes": 874
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/INPUTS.json",
+      "published": "routing/INPUTS.json",
+      "sha256": "3e328832ac7bf0c7334647b36caf89684b8f0fd639eab49cd3517cdd7b664107",
+      "bytes": 640
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/KEYS.json",
+      "published": "routing/KEYS.json",
+      "sha256": "7bbf5d73d12ab4fc32e48704310d6d49b1510f5bf7006f95b162fdd85da858ba",
+      "bytes": 310
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/METHOD.json",
+      "published": "routing/METHOD.json",
+      "sha256": "ae1025e04348a8ab466a8e259328c1e8c7b68124ef3b070ce76274b8b1294c8c",
+      "bytes": 412
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/ROUTE_LEDGER.json",
+      "published": "routing/ROUTE_LEDGER.json",
+      "sha256": "85030b800bd31ef394da81644a15f00561bb368dcca9d79b9ad6549b8676071e",
+      "bytes": 1383
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/SELECTED_DISCRIMINATOR.json",
+      "published": "routing/SELECTED_DISCRIMINATOR.json",
+      "sha256": "6df4f8cf84d438c6ed9ae8966b54f460754e494dfe373a04a7994c67a199a52e",
+      "bytes": 433
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/SOURCE_SPANS.json",
+      "published": "routing/SOURCE_SPANS.json",
+      "sha256": "1c900d843f406bdedd1ce493c1231996e763e3c27d6a9d6b82715c56b5b74192",
+      "bytes": 3059
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/TABLES.json",
+      "published": "routing/TABLES.json",
+      "sha256": "7f09144d4324bd72dd76c040b9699a130c37f57137e6b022fee189569536d14c",
+      "bytes": 753
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/spans/bnil-recipient.txt",
+      "published": "routing/spans/bnil-recipient.txt",
+      "sha256": "617c09fbad110a2525640de4e68671e1dd4a78e3f5eb759683fa128e5090ccf8",
+      "bytes": 1701
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/spans/classification-store.txt",
+      "published": "routing/spans/classification-store.txt",
+      "sha256": "bd9dcb78c874ea048002acf8251e75eb9b1d2a9bff8b0a6b0e1af885f657e1e3",
+      "bytes": 231
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/spans/id-equality.txt",
+      "published": "routing/spans/id-equality.txt",
+      "sha256": "4fa466eaf2a095811f4dc51ff97399eea26230a907133a32f87fcf26607ad8df",
+      "bytes": 669
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/spans/iteration-step.txt",
+      "published": "routing/spans/iteration-step.txt",
+      "sha256": "66702c205836219f0790278b699ff17230a42603f120a05fbcd3a3fc97e9f2d0",
+      "bytes": 429
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/spans/local-prefix-and-selected-label.txt",
+      "published": "routing/spans/local-prefix-and-selected-label.txt",
+      "sha256": "d25b72a1c745bddd7f09b741950e0a60bb6da5418086b1d0607a0e63c54c23dc",
+      "bytes": 1483
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/spans/params-id-initial-guard.txt",
+      "published": "routing/spans/params-id-initial-guard.txt",
+      "sha256": "a3c8a6af1885e9ed0b6f4d7a286ae6b0a4f4e72150a7e56f510431bf032a32bc",
+      "bytes": 1284
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/spans/params-id-population.txt",
+      "published": "routing/spans/params-id-population.txt",
+      "sha256": "b0a15253a3196b199d377c6c74602265a18126842e58c2700568c42d8c7c0974",
+      "bytes": 1152
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/spans/prefix-equality.txt",
+      "published": "routing/spans/prefix-equality.txt",
+      "sha256": "a3c98727c5c116351674e672153a8d71e0b99819ebbd0562695c88b9b9fe9e1b",
+      "bytes": 914
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/spans/producer-return-gate.txt",
+      "published": "routing/spans/producer-return-gate.txt",
+      "sha256": "a1effa6f40f873ef487bbc6282b5d5aa305516d128a8f4d854381a5645288ad1",
+      "bytes": 823
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/spans/record-and-trigger-dispatch.txt",
+      "published": "routing/spans/record-and-trigger-dispatch.txt",
+      "sha256": "f59c1b95807d75eae8914fc8ca5b70343f14a4f373d113e9be6d0adebf536dfb",
+      "bytes": 1125
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/spans/return-one-cleanup-leg.txt",
+      "published": "routing/spans/return-one-cleanup-leg.txt",
+      "sha256": "0c9bb6d196f07e25a2c3304d044186bd83993a9df407f95a23e452a75d2982fa",
+      "bytes": 451
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/spans/scene-and-second-dispatch.txt",
+      "published": "routing/spans/scene-and-second-dispatch.txt",
+      "sha256": "1f2eebf5b0bd58427d6dd7006fbdf31cdc18c037863b8e4b74c77457fc0098c9",
+      "bytes": 1184
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/spans/selected-label-value.txt",
+      "published": "routing/spans/selected-label-value.txt",
+      "sha256": "f67b8c7a7956dfe9a7d0dc10e3095e9b0201fbdb9e56a1d882e0043c71cd48f1",
+      "bytes": 193
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/spans/selected-producer-tail.txt",
+      "published": "routing/spans/selected-producer-tail.txt",
+      "sha256": "6a19e78a72d97dcf54af31e927b95f4c4b3e23ba472fcf578a6245c3672211ea",
+      "bytes": 912
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/OUTPUT_MANIFEST.json",
+      "published": "routing/OUTPUT_MANIFEST.json",
+      "sha256": "7b9b2e8eb3e29bf6df332b05d84169223d14808313071a662497a9afc42eead3",
+      "bytes": 3665
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/collect_routing_v1.py",
+      "published": "routing/collector.py.txt",
+      "sha256": "eedf8f0aa613cb3f00a5808ffab0adea9a029e3257aa8162356b2247172c9165",
+      "bytes": 8089
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/routing/REPORT.md",
+      "published": "routing-report.txt",
+      "sha256": "85ffa994ed3bebf07000cbe3335a13b345c8cc869f73996e5bbc07eb3e608159",
+      "bytes": 9707
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/reviews/routing-source-review.md",
+      "published": "routing-source-review.txt",
+      "sha256": "27e7befe155aa2398880de27dfd7553fa9e6db3b0b05b596b886c9ff51603ecd",
+      "bytes": 5227
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/FIELD_FLOW.json",
+      "published": "record/FIELD_FLOW.json",
+      "sha256": "7aa871a2a8a1857c66a753d384824a81d2982615a2061dbea63739aeca708560",
+      "bytes": 2340
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/INPUTS.json",
+      "published": "record/INPUTS.json",
+      "sha256": "7c1ef1bc214df48bcf47528eb370b15748790717c2f43b9312425a496f7bb2e8",
+      "bytes": 560
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/ORIGINAL_SOURCE.json",
+      "published": "record/ORIGINAL_SOURCE.json",
+      "sha256": "9178144804e130da5da46838666f27b90ee8de47e5615113a089b35a1163cf32",
+      "bytes": 10513
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/alternate-load-init.txt",
+      "published": "record/spans/alternate-load-init.txt",
+      "sha256": "2aac513bd11901efd8d20b070e0267402f75c161c6d3a11efc80f2a756054dd2",
+      "bytes": 2613
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/alternate-load-status-init.txt",
+      "published": "record/spans/alternate-load-status-init.txt",
+      "sha256": "ce86e129089a392cdd344a1e0f247c23a533a0cf5aeb55fc2ccdbf332676dfd1",
+      "bytes": 403
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/handler-id-state-handoff.txt",
+      "published": "record/spans/handler-id-state-handoff.txt",
+      "sha256": "e3110ba8da4d283ecd943e640fb6d1b73c5de5ee72ddaac42d8b1ffa08048865",
+      "bytes": 692
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/light-init-status-level.txt",
+      "published": "record/spans/light-init-status-level.txt",
+      "sha256": "8621ce23eb1730e90b746d40a1af2fba35c53fd952be983909e516df13afdd1f",
+      "bytes": 2554
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/light-map-equal-state-tests.txt",
+      "published": "record/spans/light-map-equal-state-tests.txt",
+      "sha256": "b64ba2725e5414f9c2ce1282d451a9b9e0f15044b531d03f03b3ff5027c78068",
+      "bytes": 939
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/light-map-update.txt",
+      "published": "record/spans/light-map-update.txt",
+      "sha256": "fa79eaf9a9cf5d39a3e9c78b88f19952e124f76910dbd10680df38d0aa8ab6ce",
+      "bytes": 861
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/light-owned-record-copy.txt",
+      "published": "record/spans/light-owned-record-copy.txt",
+      "sha256": "c54ccb52f721dd2e14932afe7d1326dbf920ac3bad5d1b3d6d43febc71871eae",
+      "bytes": 2165
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/load-record-copy-prefix.txt",
+      "published": "record/spans/load-record-copy-prefix.txt",
+      "sha256": "57b1b0a2338e846d8af58eb30e049b0333b980e3811448340675232b89448041",
+      "bytes": 2488
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/lookup-record-pair.txt",
+      "published": "record/spans/lookup-record-pair.txt",
+      "sha256": "4512f4f620db3665ea56ad5fbc6f81f89ce6c69f2e0d069d97eba6f35fc175f6",
+      "bytes": 2928
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/map-insert-delegate.txt",
+      "published": "record/spans/map-insert-delegate.txt",
+      "sha256": "0a21c65fcda445ab533fe13c4b6dc6ad7707c168d5049738d9a18071fe15aa4a",
+      "bytes": 1088
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/map-installed-pair.txt",
+      "published": "record/spans/map-installed-pair.txt",
+      "sha256": "8345f03ea528b25be004f95c97d63d2f9a3851d7db64d69f0dc3388aa7f4598d",
+      "bytes": 1159
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/map-node-construction.txt",
+      "published": "record/spans/map-node-construction.txt",
+      "sha256": "5b710bc6222acfbf44619edd8b2c64fd3c876284db9ce6df8620656932524dfd",
+      "bytes": 1388
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/map-search-and-type-table.txt",
+      "published": "record/spans/map-search-and-type-table.txt",
+      "sha256": "8e02ca8946cf20c3fa31620c8a3bdae15f079eb3124d22bf09260331ddb22e82",
+      "bytes": 2993
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/optional-id-copy.txt",
+      "published": "record/spans/optional-id-copy.txt",
+      "sha256": "6876a8207e31413950185ff2aaf28eea74f2c876306772599b7c7a69a5bc2c20",
+      "bytes": 1039
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/params-and-id-initialization.txt",
+      "published": "record/spans/params-and-id-initialization.txt",
+      "sha256": "553928325c8a642c2aa234a717e60eab3e558b26507d76a41949f4171d0abe5b",
+      "bytes": 930
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/record-type-selection.txt",
+      "published": "record/spans/record-type-selection.txt",
+      "sha256": "182ddcc9af94f5f506a6b403982d92f10fa1e5dff34efd984ce34b6b129c8c27",
+      "bytes": 770
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/route-lookup-handoff.txt",
+      "published": "record/spans/route-lookup-handoff.txt",
+      "sha256": "e0fa5c0123bb3fdd8540981a19ed52009a09c7d541cb1773c5c872245322bc01",
+      "bytes": 402
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/singleton-getter.txt",
+      "published": "record/spans/singleton-getter.txt",
+      "sha256": "e253d36fdb3ef371b785a1cdb4164fc7b0350e47c212b8f9f5b07e30666fa203",
+      "bytes": 1937
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/spans/temporary-record-stack-alias.txt",
+      "published": "record/spans/temporary-record-stack-alias.txt",
+      "sha256": "14e896354303f65c7245f2e963dd4b69fdbf59e53c97838ac57e39d5b0f28b23",
+      "bytes": 1135
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/OUTPUT_MANIFEST.json",
+      "published": "record/OUTPUT_MANIFEST.json",
+      "sha256": "d503120ac9357e9bb19f946d9ab185758b67a20f7f0631fc98fa0b360ca7b8c4",
+      "bytes": 3718
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/collect_record_v1.py",
+      "published": "record/collector.py.txt",
+      "sha256": "f852cc5b18dd6ade2391668fa62fd0530eba2f72d235e8936415d45c483d46ee",
+      "bytes": 8909
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/record/REPORT.md",
+      "published": "record-report.txt",
+      "sha256": "a6fafe145b644cb64258399b90a73990b57a930166952b5b45c4139840fc45f6",
+      "bytes": 9774
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/reviews/record-source-review.md",
+      "published": "record-source-review.txt",
+      "sha256": "d3802e67ec87b4c48e8d5f4794424fe6a33ff10fcae22b91cdace290d3b73687",
+      "bytes": 6604
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/condition/CONTRACT.json",
+      "published": "condition/CONTRACT.json",
+      "sha256": "1e86cae0de48f88b9620a1e39681824f89fd7a76e9be51a2cc81451b4b3e0f8b",
+      "bytes": 1113
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/condition/INPUTS.json",
+      "published": "condition/INPUTS.json",
+      "sha256": "e06c88902ee31abb0666efca382f049974d65209b19ea616ea274915aaca1055",
+      "bytes": 561
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/condition/ORIGINAL_SOURCE.json",
+      "published": "condition/ORIGINAL_SOURCE.json",
+      "sha256": "639e7dc0cfb329b984e35681e9f2d0fff7ecdd98fe315d95d19f9b3f0091dbf5",
+      "bytes": 4750
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/condition/spans/common-base-prefix.txt",
+      "published": "condition/spans/common-base-prefix.txt",
+      "sha256": "5f3646cd23640e2537f0cf2220bfeb9abd1246fecb6a536047f71387a6ce93ea",
+      "bytes": 1581
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/condition/spans/compiled-constructor.txt",
+      "published": "condition/spans/compiled-constructor.txt",
+      "sha256": "4ce522f452bf2b0e864602ceb90de0ee1bee5b9ce805e7d6323f452f7422bf28",
+      "bytes": 4695
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/condition/spans/compiled-dispatch-prefix.txt",
+      "published": "condition/spans/compiled-dispatch-prefix.txt",
+      "sha256": "d01aee532d6f96026d976aec6d42e8fa8f52ddc97c8f81055fe5a5b3cfed1402",
+      "bytes": 316
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/condition/spans/compiled-initializer.txt",
+      "published": "condition/spans/compiled-initializer.txt",
+      "sha256": "d7143fae65be447bdba40acb4e40f9ba89f92a87bc5fd46ee7fdec4ef4c91126",
+      "bytes": 1124
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/condition/spans/predicate-prefix.txt",
+      "published": "condition/spans/predicate-prefix.txt",
+      "sha256": "8f23ad6b41bc3475acc36871257cc1a75b281dc6a85f03374ddbe7106f251195",
+      "bytes": 9079
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/condition/spans/predicate-tail.txt",
+      "published": "condition/spans/predicate-tail.txt",
+      "sha256": "c3941a0a391ec0172858ba4586d32cf3d8cf6ea38a8a68c55cd4463eea632e88",
+      "bytes": 1268
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/condition/spans/raw-constructor.txt",
+      "published": "condition/spans/raw-constructor.txt",
+      "sha256": "ce764b57c5c5ffdb9dd5235e998e6f367be029b05dbdd8f260e547cb743d48fc",
+      "bytes": 4924
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/condition/spans/raw-factory.txt",
+      "published": "condition/spans/raw-factory.txt",
+      "sha256": "fe46e059b8cc2ed839b05b11078d9b577761bcb711ad39f2e8bcba02346df391",
+      "bytes": 1050
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/condition/OUTPUT_MANIFEST.json",
+      "published": "condition/OUTPUT_MANIFEST.json",
+      "sha256": "e04e10138361a9e8b0d96f1d740bc19e5d31c9229e94065144f8304888a9270c",
+      "bytes": 1919
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/condition/collect_condition_v1.py",
+      "published": "condition/collector.py.txt",
+      "sha256": "c106c24f779a7ecb4a7b5aff086d32e3fec8737689c06d54c2fcb15df11803a4",
+      "bytes": 6813
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/condition/REPORT.md",
+      "published": "condition-report.txt",
+      "sha256": "de7aa84c6c5c0cdfa8421a80e16655cba2f0b6c01a90ea70ead6933f334b2d5c",
+      "bytes": 5921
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/reviews/condition-source-review.md",
+      "published": "condition-source-review.txt",
+      "sha256": "27bbf4a522c35b192e6a774f991e8e6cf9f4a93d59dfd81617f0964cc8cb8137",
+      "bytes": 5812
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/SYNTHESIS.md",
+      "published": "synthesis.txt",
+      "sha256": "d86ba42ee6f7d7bc57d2167fb29138844bd984b8ce24271fb2a5b487499b1356",
+      "bytes": 1630
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/COVERAGE.md",
+      "published": "coverage.txt",
+      "sha256": "33a684815969c783f314a3e5b1b3eecfe40d3a344b866ad6c999d42cff91a5e1",
+      "bytes": 1503
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/RANKED_REMAINING_QUESTIONS.md",
+      "published": "remaining-questions.txt",
+      "sha256": "81944de4818ddd4d51cc28da3af3a8712a7d88f82e65ab16b589b05bef3c2acb",
+      "bytes": 1472
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/RUN_LOG.md",
+      "published": "run-log.txt",
+      "sha256": "5ddb57f555ba1a6e81c69e7e562d97b190a24a09494d30f9b662f2b1ab7ca54e",
+      "bytes": 941
+    },
+    {
+      "source": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-event-routing/SOURCE_CHECKS.json",
+      "published": "source-checks.json",
+      "sha256": "bda310930658b54e5a1a009057f90c96ea7df4567a7548c56188911059dcea53",
+      "bytes": 1158
+    }
+  ]
+}

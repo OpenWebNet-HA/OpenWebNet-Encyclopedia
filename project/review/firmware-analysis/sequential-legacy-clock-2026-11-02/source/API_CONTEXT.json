@@ -1,0 +1,9 @@
+{
+  "accessed_UTC_date": "2026-11-02",
+  "classification": "Official API documentary context only; no target release/effective provider assignment",
+  "full_document_bytes_hash": "Not retained; no invented document hash",
+  "original_execution": 0,
+  "paraphrase": "The documented comparison yields0 when both strings are equal and nonzero for inequality. This API context qualifies the source branch under ordinary Tcl semantics; target ettcl release and command binding remain unproved.",
+  "section": "string compare",
+  "url": "https://www.tcl-lang.org/man/tcl8.4/TclCmd/string.htm"
+}

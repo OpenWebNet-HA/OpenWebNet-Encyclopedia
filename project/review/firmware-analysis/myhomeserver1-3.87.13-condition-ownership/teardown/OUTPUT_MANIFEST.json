@@ -1,0 +1,60 @@
+{
+  "collector_sha256": "71fb996acddf857c048843644862e792a6eed5e2c66df8914a2d6b6b3858f679",
+  "counts": {
+    "byte_guards": 32,
+    "code_spans": 8,
+    "data_spans": 3,
+    "direct_requests": 9,
+    "import_PLT_proofs": 2,
+    "input_pins": 5,
+    "original_execution": 0,
+    "relative_and_import_relocations": 6
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 1148,
+      "sha256": "a6c16f5e0502a2421f0384380882b35188aef86d9a174e5de338a830c758560f"
+    },
+    "ORIGINAL_SOURCE.json": {
+      "bytes": 7548,
+      "sha256": "47af2a761dbfed3ac42d9b7ac9cd6b8e8dbe86f4c1065d9e2e16f5b09d644c02"
+    },
+    "TEARDOWN_CONTRACT.json": {
+      "bytes": 2436,
+      "sha256": "c01c483ff10c8fd2ca6c498b70ce4b1e13d6dc4e82306329e90153091bc98eeb"
+    },
+    "spans/condition-four-byte-append.txt": {
+      "bytes": 485,
+      "sha256": "2df94da646406066a6794b4582f80b28a3d7303f938aa810e7526e145bcdc0d9"
+    },
+    "spans/condition-null-leg.txt": {
+      "bytes": 272,
+      "sha256": "edaa1ceebf44ed07d2248a10ec13bb40dc0ed4e8d82b8bf678d34bf6ae3dd7ae"
+    },
+    "spans/condition-pointer-loop-and-storage.txt": {
+      "bytes": 884,
+      "sha256": "86e28ecc7cbb9334d9e9ed071469745b37bdfd5d1093ad8b42970edc314752c8"
+    },
+    "spans/inherited-action-tail-into-condition.txt": {
+      "bytes": 413,
+      "sha256": "e7b85b033451709230e149e1fbf551e87502d8b761f1832c7e2d848fe2fb34f2"
+    },
+    "spans/scene-receiver-alias.txt": {
+      "bytes": 357,
+      "sha256": "862befcff6e4e45238732d52d5a543c2c26a6c515f7b137425e7ef9089d9384c"
+    },
+    "spans/selected-compiled-header-install.txt": {
+      "bytes": 368,
+      "sha256": "5fd6a8313852d6a817d95abe4005b325a67e672073b9a8c9df1a41c398ba90f4"
+    },
+    "spans/selected-condition-publication.txt": {
+      "bytes": 665,
+      "sha256": "8fb190881c77230a903a6424dc017060a43608f4846e9f3d2965b204a21806fb"
+    },
+    "spans/selected-deleting-destructor.txt": {
+      "bytes": 2401,
+      "sha256": "41f453c54a52e2dd7bb818478cdc2c0397c2d347e6273eb78a254c517ca7f02e"
+    }
+  },
+  "report_sha256": "4bbc78187774b2e08795eedeafd212cc100ead905e19f6face1500fc0f40b2e1"
+}

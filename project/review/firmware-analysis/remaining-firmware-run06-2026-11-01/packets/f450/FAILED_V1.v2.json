@@ -1,0 +1,17 @@
+{
+  "change": "Derive span lengths from exact expected NUL literal bytes and fix template length guard to24; no original VA/content/hash guards weakened. Correct8firstcopy report and distinguish whole-file provenance reads from rejected-body decoding.",
+  "correct_failure": "First generation and chained --check both failed before outputs at line42: conf pathname NUL length18 was correct, template pathname NUL length was hardcoded23 but actual24.",
+  "new_collector": "collect_resource_v2.py",
+  "no_rerun_failed_v1": true,
+  "old_note_error": "Original FAILED_V1.json prematurely/reversely guessed conf actual17/template23; actual inspected printed lengths were18/24. Original note remains unchanged and parent-snapshotted.",
+  "original_execution": 0,
+  "outputs_before_v2": 0,
+  "parent_precorrection_snapshot": "work/remaining-firmware-investigation/2026-11-01-run06/integration/before-f450-v2/INDEX.json",
+  "source_issue": false,
+  "status": "CORRECTED_HISTORY_NOTE_NEW_VERSION",
+  "supersedes_explanation_only": {
+    "bytes": 654,
+    "path": "FAILED_V1.json",
+    "sha256": "d90c1a59c939e038ecd48e6fc5a03ab5070d76d716460bdbdfab06f1cf5174f9"
+  }
+}

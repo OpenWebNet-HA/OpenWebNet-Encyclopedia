@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+"""One raw BNLD trigger numeric serializer/reparse source edge, static only."""
+import sys
+sys.dont_write_bytecode=True
+from pathlib import Path
+import argparse,hashlib,importlib.util,json,os,re,struct,subprocess
+D=Path(__file__).resolve().parent;W=next(x for x in D.parents if(x/'sources').is_dir());R=W/'work/myhomeserver1-firmware/3.87.13/research';V=R/'2026-10-31/image_vfs.py';S='/home/bticino/scheduling_manager/scheduling_manager';H=lambda z:hashlib.sha256(z).hexdigest();J=lambda x:(json.dumps(x,indent=2,sort_keys=True)+'\n').encode()
+sp=importlib.util.spec_from_file_location('trigger_serializer_vfs',V);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+SPANS=[('serializer-status-selection',0x282e4,0x2830c),('numeric-level-arm',0x283c4,0x283e6),('serializer-normal-return',0x28352,0x2836c),('trigger-base-normal-members',0x23394,0x234ce),('same-JSON-reparse',0xa8dba,0xa8dd6),('constructor-status-guard',0x2cc22,0x2cc40),('constructor-numeric-word',0x2cc94,0x2ccb8)]
+GUARDS=[(0x282ec,'0e46'),(0x282f2,'0446'),(0x28302,'b36a'),(0x28306,'591c'),(0x2830a,'5bd0'),(0x283c6,'f16a'),(0x283c8,'2846'),(0x283d0,'2046'),(0x283d8,'2946'),(0x233a2,'0021'),(0x233a4,'0646'),(0x233b8,'ab68'),(0x23406,'297f'),(0xa8dc4,'9b68'),(0xa8dc6,'9847'),(0xa8dcc,'2146'),(0x2cc9e,'46f98f07'),(0x2ccac,'e062'),(0x2ccb0,'4ff0ff33'),(0x2ccb4,'a362')]
+def build():
+ v=m.ImageVFS();b=v.read_bytes(S);assert H(b)=='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26';ph=struct.unpack_from('<I',b,28)[0];es,n=struct.unpack_from('<HH',b,42);L=[struct.unpack_from('<8I',b,ph+i*es)for i in range(n)]
+ def off(a,n=1):return next(o+a-va for t,o,va,_,fs,*_ in L if t==1 and va<=a and a+n<=va+fs)
+ def raw(a,n):o=off(a,n);return b[o:o+n]
+ def u(a):return int.from_bytes(raw(a,4),'little')
+ def txt(a):o=off(a);e=b.index(0,o);assert e-o<128;return b[o:e].decode('ascii')
+ hp=v.root/v.resolve(S).lstrip('/');env=dict(os.environ,DEBUGINFOD_URLS='');out={};rs=[]
+ for name,a,e in SPANS:
+  z=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(hp)],text=True,env=env).replace(str(hp),S);z=re.sub(r' <([^>]+)>',lambda x:x[0]if'@plt'in x[1]else'',z);out['spans/'+name+'.txt']=z.encode();rs.append({'name':name,'start_VA':hex(a),'end_VA_exclusive':hex(e),'file_offset':hex(off(a,e-a)),'sha256':H(raw(a,e-a))})
+ for a,z in GUARDS:assert raw(a,len(bytes.fromhex(z))).hex()==z,hex(a)
+ def call(a,t,blx=False):
+  x,y=struct.unpack('<HH',raw(a,4));assert x&0xf800==0xf000;s=x>>10&1;i=1-((y>>13&1)^s);j=1-((y>>11&1)^s);d=s<<24|i<<23|j<<22|(x&1023)<<12|(y&2047)<<1
+  assert((((a+4)&~3)if blx else a+4)+d-((1<<25)if s else 0))&0xffffffff==t,hex(a)
+  return{'VA':hex(a),'target':hex(t),'BLX':blx,'bytes':raw(a,4).hex()}
+ calls=[call(a,t,x)for a,t,x in [(0x282fe,0x23394,False),(0x283ca,0x10dd4,True),(0x283d4,0x10c70,True),(0x283da,0x11294,True),(0xa8dd2,0x2cc00,False),(0x2cca6,0x11480,True)]]
+ h=0x160304;rt=u(h+4);assert txt(u(rt+4))=='11BnldTrigger'and u(h+16)==0x282e5
+ slot=(0x1659a4+u(0xa968c))&0xffffffff;assert slot==0x165f04 and u(slot)==h
+ assert 0x2830a+4+2*(int.from_bytes(raw(0x2830a,2),'little')&255)==0x283c4
+ keys=[]
+ for p,pc,k in [(0x28448,0x283d2,'level'),(0x23510,0x233e6,'type'),(0x23514,0x23412,'enabled'),(0x23518,0x23448,'operator'),(0x23528,0x234ba,'id'),(0x2cd34,0x2cc2e,'status'),(0x2cd40,0x2cc9c,'level')]:a=(u(p)+pc+4)&0xffffffff;assert txt(a)==k;keys.append({'pool':hex(p),'ADD_PC':hex(pc),'literal':hex(a),'key':k})
+ rel=subprocess.check_output(['readelf','-rW',str(hp)],text=True,env=env);rr=[]
+ for a in [h+4,h+16,slot]:z=next(x.strip()for x in rel.splitlines()if x.startswith(f'{a:08x} '));assert'R_ARM_RELATIVE'in z;rr.append(z)
+ imports=[]
+ for k in ['_ZN4Json5ValueC1Ei','_ZNK4Json5Value5asIntEv','_ZN4Json5ValueaSEOS0_']:
+  z=[s.strip()for s in rel.splitlines()if'R_ARM_JUMP_SLOT'in s and s.split()[-1]==k];assert len(z)==1;imports.extend(z)
+ pins={S:{'sha256':H(b),'bytes':len(b)}}
+ for p,k in [(V,'image_accessor'),(R/'2026-11-01-numeric-trigger/trigger/REPORT.md','inherited_numeric_handler_and_copy'),(R/'2026-11-01-double-isolation/harness/RESULTS.json','unchanged_saved_execution_ledger'),(W/'OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md','CURRENT_curated_product_context')]:z=p.read_bytes();pins[k]={'path':str(p.relative_to(W)),'sha256':H(z),'bytes':len(z)}
+ out['ORIGINAL_SOURCE.json']=J({'image':S,'spans':rs,'guards':[{'VA':hex(a),'bytes':z}for a,z in GUARDS],'calls':calls,'keys':keys,'raw_class':{'header':hex(h),'AP':hex(h+8),'RTTI':hex(rt),'name':'11BnldTrigger','selected_slot_plus8':hex(h+16),'Thumb_method':'0x282e5','actual_method':'0x282e4','GOT_slot':hex(slot)},'data':[{'VA':hex(h),'bytes':20,'raw_hex':raw(h,20).hex(),'sha256':H(raw(h,20))}],'relative_relocations':rr,'import_declarations':imports})
+ out['SELECTED_CONTRACT.json']=J({'ABI':'rawtrigger slot+8 method282e4 receives JSONdest r0→r4, raw r1→r6; NOT condition serializer28178','selected_path':'rawstatus40==-1→283c4 unconditionally serializes signed rawlevel44 viaJsonValue(int) toexactlevel; no levelzero/−1/range suppression','base':'23394 freshValueType0; normalmembers id(ifnonempty),type,enabled,operator(unless−1), no statusrequest','same_JSON':'a8dbe SP592 r4→r0 at a8dc0, rawvirtualslot+8 calla8dc6; SAMEr4→r1 a8dcc→2cc00 a8dd2','reparse':'ordinaryfreshJSONcontainslevel/no status→statusABSENTnumericarm2cc94; asIntresult→raw44; statusinitialized−1 andpositiveGTwrites−1 not0','conditional_coherence':'Validraw/vptr/storage + normalJSONfreshobject/member/intctor/moveassignment/asInt/string/base/copy semantics; not executed fullJSON or allvalues/domainproof','inherited_copy':'raw44→compiled64 andraw40→compiled60; caller numericselector−1/suitableeventinteger/on/ID/lifetime premises unchanged','method':{'original_execution_additions':0,'semantic_host_fixtures':0,'target_IO':0,'prior_MHS_canonical':'1corpus8entries340originalvisits0C12redirect8EXIT360hooks+4setup unchanged'},'boundaries':['unexaminedstatus-present serializer sibling','fullJSON/intprovider/errors/defaults/domain/range','actualconfiguredscene/event/cache/provider/lifetime/concurrency','publicprotocol/physicalmeaning or universalroundtrip']})
+ out['INPUTS.json']=J(pins);out['OUTPUT_MANIFEST.json']=J({'collector_sha256':H(Path(__file__).read_bytes()),'report_sha256':H((D/'REPORT.md').read_bytes()),'outputs':{n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()},'counts':{'spans':len(SPANS),'guards':len(GUARDS),'calls':len(calls),'keys':len(keys),'relative_relocations':len(rr),'import_declarations':len(imports),'inputs':len(pins),'original_execution_additions':0}})
+ return out
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');ck=ap.parse_args().check;out=build();C=D/'first-candidate';cp={**out,'REPORT.md':(D/'REPORT.md').read_bytes(),Path(__file__).name:Path(__file__).read_bytes()};ix=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in cp.items()})
+ if ck:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+  assert(C/'INDEX.json').read_bytes()==ix
+  for n,z in cp.items():assert(C/n).read_bytes()==z,n
+ else:
+  assert not C.exists();assert all(not(D/n).exists()for n in out)
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  C.mkdir()
+  for n,z in cp.items():p=C/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (C/'INDEX.json').open('xb').write(ix)
+ print(json.dumps({'check':ck,'outputs':len(out),'spans':len(SPANS),'guards':len(GUARDS),'original_execution_additions':0}))
+if __name__=='__main__':main()

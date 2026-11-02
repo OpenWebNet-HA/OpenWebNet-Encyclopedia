@@ -1,0 +1,31 @@
+{
+  "collector_sha256": "ca36fe66cd19d9cd5e88508cb0bcd1aab2f86f60a8e4476e99e8cdc39e0cb7dc",
+  "new_vendor_SQL_model_fixture_execution": 0,
+  "outputs": {
+    "ARCHIVES.json": {
+      "bytes": 1179,
+      "sha256": "46e6165227527e66a4f421f4e4668ac6ef4d23dfa537d1797c8cee040d9cbd5d"
+    },
+    "CANDIDATES.json": {
+      "bytes": 1643194,
+      "sha256": "7fa085f48a0fd8a37c32ad3b1040fbe70062ab7cb8326d681bfdc125a9c08412"
+    },
+    "INPUTS.json": {
+      "bytes": 2060,
+      "sha256": "0447d6eaac2f3ed261f5163dcd79a08d7f632358cbe1fa04e8ff7421f8ccdacd"
+    },
+    "REPORT.md": {
+      "bytes": 4026,
+      "sha256": "76f4e53ef07de0f7705cb8401ea65d02b59d69280511271ce2668fe4a5c6397d"
+    },
+    "SOURCES.json": {
+      "bytes": 5240011,
+      "sha256": "96b361a0b53849bdde3e31fabcc39e1706863d715c680c8cdc99e04f73b9eea9"
+    },
+    "SUMMARY.json": {
+      "bytes": 453,
+      "sha256": "cb816ee59f1923d2f06a85d60fb2c2f29f919739e972aeac1c4b0f781bfdcac2"
+    }
+  },
+  "source_code_bodies_disassembled_or_interpreted": 0
+}

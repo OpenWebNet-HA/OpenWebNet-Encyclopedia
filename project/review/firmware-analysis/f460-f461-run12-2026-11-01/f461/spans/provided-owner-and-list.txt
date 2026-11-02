@@ -1,0 +1,16 @@
+
+/home/bticino/bin/coso:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000003df0 <send_list_field@@Base>:
+    3df0:	a9b57bfd 	stp	x29, x30, [sp, #-176]!
+    3df4:	910003fd 	mov	x29, sp
+    3df8:	a90153f3 	stp	x19, x20, [sp, #16]
+    3dfc:	aa0003f3 	mov	x19, x0
+    3e00:	a90907e0 	stp	x0, x1, [sp, #144]
+    3e04:	f9400000 	ldr	x0, [x0]
+    3e08:	f9003be2 	str	x2, [sp, #112]
+    3e0c:	97fffb41 	bl	2b10 <g_list_length@plt>
+    3e10:	350000a0 	cbnz	w0, 3e24 <send_list_field@@Base+0x34>

@@ -1,0 +1,58 @@
+# F460 2.0.12 and F461 2.0.11 Parallel Firmware First Pass
+
+The two packages share much of their packaged platform and exactly the same embedded catalogue, while their application inventories and selected common binaries differ. Main applications use AArch64, requiring fresh layouts relative to the [ARM32 MyHOMEServer1 examination](myhomeserver1-3.87.13-research-synthesis.md). These are build-specific package/source findings; no firmware process, configured installation or physical bus was executed.
+
+## Reference and product scope
+
+[Curated F460](../../devices/definitions/own-dev-0207-f460-myhome-server.md) is the Home + Project/Home + Control server. [Curated F461](../../devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md) serves local third-party control. Shared installation documents and catalogue Objects do not transfer F460 app/alarm behavior or F454 AV/alarm hardware to F461. The [review capsule](../../project/review/firmware-analysis/f460-f461-2026-11-01/README.md) retains separate product reports, independent reviews, comparison code and exact evidence/history.
+
+| Original package | Canonical SHA256 | Actual update XML |
+| --- | --- | --- |
+|F460_020012.fwz,158564663 bytes|`b5a50d606578f47ecbf0d327d7078b1357abb78425ea821ce743cd486b801b26`|F460 /2.0.12 /XML3.1 /model5.0.132|
+|F461_020011.fwz,138644991 bytes|`cb6f3e9d875c14f74a0791d7f3f420ce9d4babadb4459c1250c6cba7e741af2b`|F461 /2.0.11 /XML3.1 /model5.0.134|
+
+Both packages already existed in the private R2 software archive. Their conserved archive-server copies were checked against canonical manifest SHA/size and copied locally through the existing authenticated connection. No publisher redownload, new remote upload or source-manifest edit occurred. Package declarations are not live diagnostic identities, and cross-product version numbers are separate branches.
+
+Host-only extraction checked flat member paths/types, nested ZIP CRCs, gzip trailers and ext filesystem geometry. F460 additionally checks its packaged Image.md5; F461 retains that file without an MD5-verification claim. Signature blobs are retained, with cryptographic authenticity unverified. Original images and regular-file trees are read-only; image links/special nodes remain metadata and were not materialized or mounted.
+
+## Different packaged applications on a related platform
+
+| Packaged evidence | F460 | F461 |
+| --- | --- | --- |
+|Normal / recovery ext4 size|1GiB /256MiB|1GiB /256MiB|
+|Normal / recovery regular files|5873 /6179|5853 /6133|
+|Selected main program ABI|AArch64 ELF64|AArch64 ELF64|
+|Normal stack XML process declarations|25|17|
+|Named scheduler, alarm, energy, player and bt_netatmo executable paths|Present in normal image|Those five exact paths absent from normal regular-file inventory|
+|Embedded catalogue|2633728 bytes, same SHA below|Byte-identical to F460|
+
+The normal images share5823 regular paths:5757 have identical complete hashes and66 differ. Eight selected common applications/core programs are present in both, and all eight differ in whole-file bytes. A byte difference does not by itself establish a changed function, while a common name or dependency does not establish identical layout or behavior. The header census also retains minority/other ELF machines; not every packaged object is AArch64.
+
+Both kernel bundles contain an ARM64 Image, six DTBs and a separate hygw_cortex-m.bin payload. The kernel and auxiliary payload hashes differ; all six corresponding DTB payloads match. DTB model/compatible strings are candidate board descriptions, not a physical probe or proof of the DTB actually selected. The kernel banner's anomalous2011 timestamp is not used as release chronology.
+
+Original startup scripts declare auxiliary-core/device-node sequencing. F461's inspected init path reaches a wrapper that waits for `/dev/ttyRPMSG30` before requesting bt_daemon, with separate normal/reduced stack declarations. Actual daemon working-mode consumers, provider binding, peripheral readiness and deployment are unproved. No SCS/IPC protocol or closed receiving/transport/authentication/session/framing body was analyzed.
+
+The missing named F461 scheduler path/declaration does not prove absent scenario capability: alternative owners and third-party control remain questions. Likewise, F460 alarm_manager is a packaged name, not evidence of F454-style alarm wiring. Actual configured extra-partition contents and scene assets remain outside these downloaded images.
+
+## One shared catalogue is not an installed-capability oracle
+
+Both normal embedded `home/bticino/matrix_mx/MHCatalogue.db` files have SHA256 `bd2ff4d326692c85bc4eb3f86504d615758da97dc832389fac523734574833e9`. Their equal bytes coexist with different executable inventories. Stored catalogue metadata cannot replace evidence of actual consumer selection, configured features or Physical Device support.
+
+| Full source-profile comparison | Equal table SQL definitions | Equal typed row multisets | Different typed row multisets |
+| --- | ---: | ---: | ---: |
+|F460 versus F461|75|75|0|
+|Shared F460/F461 profile versus MHS1|75|52|23|
+|Shared F460/F461 profile versus MyHOME Suite|75|42|33|
+
+The75-total scope includes SQLite's internal sqlite_sequence table; F461's narrower schema output lists74 noninternal application tables. Parent verification explicitly covers both scopes. Hashes preserve types and duplicate multiplicity without exporting raw rows. These differences are table-content fingerprints, not counts of new functions or stable-ID correspondences. Owner-aware semantic comparison and actual reader/filter/fallback behavior remain open.
+
+Per-product signature scans cover every extracted regular file, not only database extensions, and find one SQLite-header database per image. Unknown/encrypted/container formats and runtime-generated databases are not excluded. Host SQLite reads are immutable, query-only and trusted-schema-off; no firmware SQL process ran.
+
+## Highest-value next investigations
+
+1. F461's own AArch64 OPEN/parser, local command-router, plugin/WHO/address and diagnostic-object contracts, before using older helper layouts.
+2. F460's fresh scheduler/scene owners and matrix catalogue consumer, using MHS findings as discovery leads rather than transferred behavior.
+3. Original daemon profile/DTB/auxiliary-firmware selection and one justified local SCS/IPC handoff, retaining configured readiness and hardware limits.
+4. Owner-aware semantic catalogue comparison against Suite/MHS, keeping canonical source profiles distinct.
+
+Evidence covers original composition, declared startup and bounded structural data, not full Device/source approval or exhaustive command semantics. There was no original/native/helper/emulator/target OS/service/network/bus/physical execution or semantic fixture. Previous F454/MH202/MHS execution ledgers and corrections remain unchanged. Work is local on docs/static-firmware-analysis-findings without staging, commits or publication.

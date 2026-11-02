@@ -1,0 +1,18 @@
+{
+  "saved_UTC": "2026-11-01T11:40:23.483922+00:00",
+  "scope": "Exact parent snapshots before applying reviewer-requested documentary summary refinement; no author source/results changed",
+  "files": [
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run04/REFERENCE_DRAFT.md",
+      "snapshot": "REFERENCE_DRAFT.md",
+      "bytes": 9765,
+      "sha256": "ef40cb73f98688d1167c252abbce2d64247d828c6ff422194b88e50300d37aea"
+    },
+    {
+      "source": "work/f460-f461-comparison/2026-11-01-run04/REFERENCE_DRAFT_METHOD.json",
+      "snapshot": "REFERENCE_DRAFT_METHOD.json",
+      "bytes": 712,
+      "sha256": "b2b98553b524c0c1fc67a7e6bc08eaaa782a2c407db87bea05089c0e5d141b64"
+    }
+  ]
+}

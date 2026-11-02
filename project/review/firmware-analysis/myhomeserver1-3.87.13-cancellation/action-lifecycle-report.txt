@@ -1,0 +1,50 @@
+# MyHOMEServer1 3.87.13: operational duration and a conditional second callable
+
+A selected original compiled-action constructor provides a concrete positive producer for operational word+12 and for a second callable at+32. It copies raw base duration+36 into metadata+88, explicitly passes that metadata to setter0xcdaf0, then conditionally binds the second callable when the resulting operational word is nonzero. This refines the earlier SLEEP-specific boundary: metadata and operational storage are distinct, but an original derived constructor can connect them explicitly.
+
+This batch is restricted to local, nontransport constructor/storage/control flow. The original RTTI names the selected class `16Bn3lActionRunner`; no public device family, command meaning or physical operation is inferred from that spelling. Neither its first nor second invoker or manager body was inspected. No external send, command construction, transport, authentication, session, framing, MQTT or libjel delegate was followed.
+
+Original image path `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. VAs are original linked addresses with fresh PT_LOAD mapping, not observed runtime pointers. All original inputs and earlier reports remain read-only.
+
+## Bounded discovery and ownership
+
+The collector scans halfword positions over the bounded original text range0x11880..0x113fb0 for the selected Thumb BL encoding targeting0xcdaf0. It finds13 syntactic candidates. Only the caller at0xcf15e is validated and traced here. Literal-pool coincidences, indirect calls, other instruction forms and other code regions prevent using this locator as a whole-program caller or absence claim.
+
+Original exidx entry0x14ec88 places that caller in0xcf06c..0xcf5c8. In this actual constructor, GOT base0x1659a4 plus pool0xcf598 selects relocated slot0x166d24, pointing to vtable header0x164b14. RTTI0x164660 contains exact name `16Bn3lActionRunner`. Its primary address point0x164b1c contains Thumb0xcd849,0xcd6f1,0xcd551, the shared methods independently examined earlier. This attachment is checked by original relative relocations and bytes, rather than a nearest stripped-symbol annotation. The name and vtable do not establish active class use, natural input or product support.
+
+## The explicit metadata-to-operational producer
+
+The selected constructor keeps its raw input object in r5 and destination compiled object in r4. Original instructions0xcf114..0xcf128 read the raw+32/+36 pair and copy it into compiled metadata+84/+88. The inherited base-action parser identifies those raw fields as delay/duration; it uses JsonCpp asUInt. That prior interpretation remains source-scoped, with conversion/exception/input validity unexecuted here.
+
+At0xcf156 the constructor calls0xcd988 with the selected first word, setting operational+8. It then independently loads compiled metadata+88 at0xcf15a, passes the same destination r4 at0xcf15c and calls0xcdaf0 at0xcf15e. The original setter body at0xcdaf0 is `str r1,[r0,#12]; bx lr`. Thus operational+12 receives that raw-duration-derived word under normal constructor returns. This is an explicit dataflow join, not a rule based on equal offsets or a claim that all derived classes perform this assignment. In particular it does not rewrite the prior SLEEP constructor finding, which only established delay→operational+8 and kept duration metadata distinct.
+
+No arbitrary nonzero fixture is supplied. The conditional statement is exact: if this selected raw duration-derived word is nonzero and the constructor follows its normal path, the stored operational word is nonzero at the following read. No claim is made that such a configured scene is present, every uint is valid or any target timer runs.
+
+## Conditional second-callable storage
+
+The constructor forms a first callable and calls storage helper0xcd990 at0xcf290. Source-resolved code pointers are first invoker Thumb0xd14a5 and first manager Thumb0xcdbf9. Their bodies remain opaque. The relevant second-callable path is selected later by the actual operational getter:
+
+-0xcf2b0 calls0xcdaec, whose body reads destination+12.
+-0xcf2b6 is CBNZ to0xcf2f0. Zero takes the cleanup/return path; nonzero enters the selected second-callable construction.
+- That nonzero branch prepares a temporary callable whose original PIC joins resolve manager Thumb0xcdb01 and invoker Thumb0xcf065. The collector records only their pointer bindings and does not inspect or label their effects.
+-0xcf382 calls0xcda40 with the same destination object and temporary callable. The original helper requests the supplied manager's copy operation under ordinary normal-return semantics, moves callable data into destination+32 and stores the manager/invoker pair at+40/+44. The actual clone body, allocation lifetime and callable internals remain unexecuted delegates, rather than replaced successful fixtures.
+
+This closes an original construction/binding path for a second callable whose manager-presence slot+40 is sourced from a concrete nonzero function pointer. It is not proof of a successful callback invocation, correct captured object lifetime, a physical stop operation or natural runtime activation. The source labels first and second callable are used because a shared method named stop is a different path.
+
+## Relation to the shared execute and stop paths
+
+The previously reviewed shared contract is retained, with selected original spans re-pinned to make the limits explicit. Execute0xcd848 calls the first callable inline only when operational+8 iszero. After that callback returns, it freshly reads operational+12 at0xcd872; nonzero requests the second worker through0xcd8e0. Therefore constructor+12 being nonzero alone does not prove a second worker request: the first callback must return normally and the post-callback word must remain nonzero, along with ordinary allocation/thread provider premises.
+
+If operational+8 is nonzero, the selected common execute branch instead requests the first-wait worker. Its already reviewed local path does not automatically request the second worker. This batch does not turn a supplied delay and duration pair into a universally chained two-phase schedule.
+
+The second worker at0xcd720 reads operational+12, performs the separately analyzed shared wait and, only on its selected admitted callback path, checks manager+40 and calls invoker+44 with data+32 at0xcd7ca. Completion byte+4 is set1 after that callback returns at0xcd7d2. Shared stop may suppress this callback/completion path; original callback effects, waits, elapsed units, successful thread execution and concurrency are not revalidated by this batch.
+
+The primary shared stop method0xcd6f0 is not the second-callable storage helper or that second worker callback. The common report established its shared flag/mutex/notify path. No immediate callback interruption, restart/reset guarantee, eventual completion, leak/hang/defect or physical cancellation follows from these constructor assignments.
+
+## Reproduction and preservation
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31-cancellation/action-lifecycle/collect_duration_v1.py --check`
+
+The collector emits16 outputs including its manifest, with seven exact original Thumb2 spans, six selected direct BL checks,13 critical instruction-byte guards, four code-pointer PIC joins, four relative-relocation rows, a bounded13-candidate locator and four input pins. All16 outputs plus collector were immediately preserved in `first-candidate/`; its17-member snapshot index was computed before opening it. This first report is separately frozen in `report-first-candidate/`. No generated candidate failed or was overwritten. One exploratory slice began within a wide Thumb instruction; its first bogus decode was discarded, and the complete selected constructor is retained from its exidx start.
+
+Accounting: original instructions/native entries/provider/callback/redirect/EXIT/stop execution0; input/scene fixtures0; host semantic models0. Host Python/binutils only read original bytes. The new result is one concrete operational-duration producer plus conditional second-callable binding, not a complete caller table or a behavioral execution test. Natural configured input, full initializer/class activation, later field mutation, opaque invoker/clone/provider effects and complete stop/restart lifecycle remain open.

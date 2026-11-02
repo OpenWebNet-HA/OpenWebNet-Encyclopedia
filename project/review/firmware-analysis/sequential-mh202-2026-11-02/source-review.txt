@@ -1,0 +1,46 @@
+# Independent stage 1 MH202 source review and documentary preflight
+
+PASS for the four selected original IL/metadata methods, current REPORT.v4 with its explicit coordinate supplement, sanitized default-project admission and PAGE_CANDIDATE.v2 preflight. This is a conditional filesystem/XML-to-object collection contract, not a commissioned project, actual loader→CompileAll invocation, successful provider operation or emitted-script/runtime/physical result. Final public integration and later gates are not certified by this preflight.
+
+| Current/canonical file | Bytes | SHA256 |
+| --- | ---: | --- |
+| REPORT.v4.md | 12490 | `706ce09abc8c6c4eb776ef6eb8bfcb2dc959ef142437f8dce67b9e85d5fc4af9` |
+| REPORT.v2.md | 10271 | `64f80a2aa474b587cdb3352bc4b2a6946a29113c9c629f487b967c56175d26c5` |
+| collect_loader_v2.py | 9723 | `c442941c5e362b6540549f8baadd786b106ade105da291d4d606ae9dc005d4db` |
+| METHODS.v2.json | 96552 | `63875d7a17c048fbe7b6488e5401d46a88b3a681556744849f44b8962567d232` |
+| COORDINATE_MAPPING.v2.json | 4289 | `1e00784ae7e1616c9187a1be372c93afe3e7e49f63529e6ec18085f44ddec970` |
+| coordinate_supplement_v2.py | 4237 | `cfc2b42c350651b830fadd056b7315a95d978576a49170d6015636cd9406a65e` |
+| DEFAULT_PROJECT_ADMISSION.json | 4778 | `48a45619d3b40787c8d84af02a32df86edf2250208ceefe09bcfb212b88f8930` |
+| PAGE_CANDIDATE.v2.md | 4554 | `1db360d41f30b5385700b7cd0df171751b9274c359d63c8692e6ff7d27c25ebc` |
+
+## Independent original-source verification
+
+I checked exact own Core/Class assembly identities, PE RVA-to-file mapping, MethodDef tokens/RVAs/signatures and original raw method/header/body bytes for ONLY Core0600008d/8e98 and0600008e/8ecc, Class06000215/4b54 and06000220/4c3c. Independent byte partition checks cover all four selected IL streams; manually computed relative/switch arithmetic agrees with32 recorded destinations. I checked108 selected metadata operands/signatures against their own assembly tables. Tokens are assembly-local. No extra method/provider body or new CompileAll body was decoded.
+
+Actual `collect_loader_v2.py --check` passed,5canonical outputs/4methods/originalexecution0. All58 input pins, manifest collector/report/result identities and8immediate canonical firstcopies match exact bytes. V2 --check still checks REPORT.v2 and unchanged canonical v2 results; it does not silently validate current REPORT.v4 or repair the historical EH field label. Three separately pinned current report/supplement/tool copies are exact. Preparation, v1/type-guard failure and parent-before-generation/correction/page snapshots match their preserved identities.
+
+Own metadata declares Class ObservableCollection<cScenario> construction/backing field/getter and Core ObservableCollection return plus Collection<cScenario>.Add owner. I independently checked Core TypeRef87 Collection`1 and54 ObservableCollection`1, Class TypeRef21 ObservableCollection`1, their System.Collections.ObjectModel namespaces and the raw generic signatures/element type references. No List identity is inferred. Requesting a base-collection member through this getter remains an ordinary CLR binding/type/provider premise, not observed runtime binding or ownership proof.
+
+## Same-object path and limitations
+
+Core mode switch numeric0 passes the same receiver and supplied by-reference argument to the selected MH202 loader; the MH200N destination remains metadata only. The loader's new cScenariosCollection reference is published through that slot at IL00c5/00ca. Selected working-directory/name/temporary-directory operations and compiled ScenarioCollection.xml/info.xml/.xml operands are original call arguments, not observed files or successful copies. Ignored cleanup/copy returns do not establish successful operations.
+
+The selected File.Exists branch requests XmlSerializer for own declared cScenario and FileStream with numeric3. The Deserialize return passes own cScenario isinst and is stored local17. After the selected close/handler continuation, local17 is tested nonnull at IL0286/0288. The original then loads the supplied output reference, requests its collection getter and passes SAME local17 to Add at IL0293. Class constructor/getter IL positively connects its field0400011d to the new observable collection and returned reference. This is original local-reference identity under valid objects, unchanged/preserved output slot, ordinary provider binding and normal-return premises. External mutable calls and an actual caller retaining/passing that same instance are not thereby closed.
+
+The inherited CompileAll evidence remains inherited only. No actual UI/project/export caller here passes this loader's exact collection to it, no completed configured action/condition policy follows, and no generated script bytes were produced. Completion0 is a local return channel, not nonempty/complete loading or rollback/durability certification. The declared handlers include close/log requests that can fail; no full errors/unwind/lifetime/concurrency safety is inferred.
+
+## Coordinate correction and actual history
+
+I found the canonical METHODS.v2 field `exception_regions_dncil_body_coordinates` mislabeled. Raw fat EH section at body offset940/header417c0000 contains five24B clauses whose offsets are direct code-relative IL coordinates. Independently decoded tuples(flags,tryStart,tryLength,handlerStart,handlerLength,union) are (0,252,25,277,22,0x01000050), (0,599,25,624,22,0x01000050), (2,756,47,803,12,0), (0,699,121,820,15,0x01000050), (0,2,866,868,55,0x01000050). Ends are start+length. No12B method-header subtraction applies. Separately, instruction branch targets were body-relative in dncil and were correctly normalized. Current report/supplement make this distinction and retain the historical misnamed field unchanged.
+
+Parent exact snapshots preceded the report-only clarification. The first supplement's expected fourth try length104 was wrong; its strict host guard failed before outputs. Actual raw length121 is independently confirmed. Failed helper/reportv3/failure note remain exact; new helperv2/reportv4 are separately pinned. Actual `coordinate_supplement_v2.py --check` passed for all five clauses from unchanged saved body_hex only. No original source scope or semantic method behavior was changed, and no original execution occurred.
+
+The first two Core reads preceded the awaited internal root reply; that ordering defect remains disclosed, not recast as a clean pre-read receipt. Class helpers had scope authorization/declaration before reading and preceded a later STOP/snapshot-ack requirement; these phases are not conflated. Root subsequently snapshotted the actual scope/history/collector and authorized generation of the same four methods. V1 strict metadata guard then failed before outputs because manual List inference disagreed with actual Collection/ObservableCollection declarations. This is a host/source-inference failure, not a vendor/guest failure or provider result. No prior generated outputs, saved failed inline script/terminal hash or backdated authorization is invented. V2/coordinate refinements use new files and retain old code/report/history/firstcopies.
+
+## Default admission and candidate preflight
+
+I independently hashed all four retained manufacturer-default files; host XML parsing reproduced only root/tag counts/attribute names, and ZIP central-directory inspection reproduced member names/encryption flags/sizes. No XML leaf/private values were printed or exported; no encrypted member was decrypted, password tried or project synthesized. Retained installer defaults are not a commissioned installation or an accepted scenario export. Source-library/Suite applicability remains separate from MH202 firmware1.0.24; no MHS/F46 grammar/layout/product-role transfer occurs.
+
+PAGE_CANDIDATE.v2 accurately represents the conditional same-object path, distinct Collection/ObservableCollection declarations, default-versus-configured limits, existing compiler applicability premise and disclosed chronology/type-guard history. Its planned evidence-capsule link still requires actual integration; this preflight does not claim it currently resolves or certify future validation/strict checks. Exact unpublished old page was retained before the new type-wording version.
+
+Read-only static host PE/metadata/IL/hash/XML-structure/archive-directory checks only. No vendor CLR/reflection/XML/file/SQL provider/compiler, native/helper/emulator/guest/model/fixture/targetOS/network/bus/physical execution, source/repository/remote edit or stage2/3 investigation occurred. Only this new review and its immediate exact copy/index were written. Prior native ledgers, missing MH202run18/run21 intermediate-history limits and all closed routes/F450helper denial remain unchanged.

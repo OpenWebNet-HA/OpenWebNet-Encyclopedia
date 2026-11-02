@@ -1,0 +1,53 @@
+# Condition ownership and BNTH: documentary integration review
+
+Verdict: PASS for the frozen current integration and existing exact exports. No correction requested. This review is source-aware of my independent condition-teardown audit. BNTH claims are independently compared documentarily with their authoritative report and root source review/checker, not represented as my new original-byte BNTH audit, executed floating comparison or full firmware review. No author, source, repository, prior report or review file was edited; original/native/provider/JSON/target and semantic-fixture execution remains0.
+
+## Essential source-to-summary checks
+
+The serialization/action-ownership page accurately adds a positive disposal consumer for the same scene116 four-byte condition-pointer range. The walker advances4, skips null pointees and requests each nonnull primary slot+4, distinct from predicate slot+8 and action/trigger shared-control releases. Valid current object/vptr, vector/ABI/provider and normal-return premises remain material.
+
+The selected BNCUSCENE deleting body is summarized as conditional member-string buffer requests, condition-variable destructor at own+8 and sized-delete request192. The condition's own inline string116 is not scene116 vector storage. The scene's separate capacity124-minus-begin116 storage deletion request follows normally completed/skipped element callbacks. Original PLT/relocation identity is not observed successful provider/free/worker synchronization. Prior action and following trigger cleanup are source-order context, not every-path ordering, natural disposal timing or actual join/completion proof.
+
+The BNTH section derives its own row11/raw80/compiled184 identity and selected schema, without copying another condition's layouts or private meaning. Mode ABSENT and status ABSENT precede PRESENT setpoint/asDouble. Selector2 and raw double56 copy to compiled144/160; serializer/reparse value coherence and other subschema branches remain open. The local setpoint key does not establish units, public support, a supported domain or actual thermostat measurement.
+
+The enabled selected cache-hit path uses its own ID and registry0x167368; suitable nonnull record/type/lifetime remains a premise. Shared receiver alone does not identify record producer or physical field32. Separate original selector and operator tables lead to VCMP.F64 of configured160 and cached D9. Result1 on EQ/0 otherwise is correctly limited to ordinary finite-double/VFP/provider/cleanup premises; no NaN/unordered/exception/environment behavior or actual comparison fixture is supplied. The same primary pointer's four-byte publication and generic slot+8 consumer establish a conditional class-to-consumer relation, not naturally configured all-condition/scene/action execution.
+
+The prior BNCUSCENE finding and scoped storage-label correction remain historical, retained and linked. This batch adds a deleting consumer and a different nonconstant comparison, without reissuing the earlier finding as new coverage or declaring an unsupported feature/defect. Main-registry/context equality, positive shared reset, actual last owners/removal-after-poll, missing extras80/81/94/95, query/type/correlation, effective providers and full unwind/concurrency/physical evidence stay open. Wider Device/source gates, previous execution ledgers and closed transport/authentication/session/framing/equivalent boundaries remain unchanged.
+
+## Identity, preservation and references
+
+All8 current documents match exact frozen candidate bytes, sizes and SHA256 pins. All42 SOURCE_EXPORTS pairs match local source and published bytes/metadata. Teardown14 and BNTH21 first-candidate rows match current originals and indexes. Saved parent read-only source checks record12 teardown and19 distinct-condition outputs,31 total. This review adds no native or semantic corpus and does not claim a new full-source replay.
+
+Both previous human-page snapshots match their recorded hashes. Applying DOCUMENT_PATCH's two exact section insertions independently reproduces current page bytes; their earlier text otherwise remains unchanged. Earlier immutable failure/version/refinement records and unavailable MH202 intermediate histories stay scoped. Current first-copy identities are checked without certifying every historical development event or an absent old draft.
+
+There are33 local Markdown link occurrences and0 fragments. All31 existing targets resolve. Only capsule integration-review.txt and validation.json await actual assembly. This review certifies neither their future contents nor present existence. Parent must assemble their exact actual files and run final strict identity/link/ESG/ECV/diff gates with them present, without placeholders or missing-link exemptions. Coordination-log references to subsequent receipts are bounded sequencing, not premature final validation.
+
+## Exact current document pins
+
+| Workspace-relative file | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-serialization.md` | `af361935539177bd8fd7f4d6678edb9f315005a2d2c1789ce423da81e7d5a5bf` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-event-routing.md` | `39900de1777ceb80338c94f97b66f2594c45ae953147bd0147b7d7d63c0b2420` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-condition-ownership/README.md` | `65c5ca9b0cb22a933fa39399e4668e827d651963552406eb8b29f3676d438446` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/SYNTHESIS.md` | `ea872633cd3c317d738987079c0fdbc1a79c7931db881863215bd87e1373fea6` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/COVERAGE.md` | `8c9d629d2f1fa1ee26ca1866c6dac543fbf892b6e8eb64f6eab805670e151ab5` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/RANKED_REMAINING_QUESTIONS.md` | `43a0b7fa731c347e0a0847b12445d39ee85d6142dd581e15d50cac61b4aaf8bd` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-condition-ownership/RUN_LOG.md` | `ae193c2505ce5c1cb39658c9ee4a931fbc7b58cd8529955820c3c76cba6b9f2e` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-condition-ownership/SOURCE_EXPORTS.json` | `1a2a6e883bfba558cf12353de26440a72a019b9ab514af584742fc6dd3ecab79` |
+
+## Source/review/history applicability pins
+
+Paths below are relative to this research batch.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `teardown/REPORT.md` | `4bbc78187774b2e08795eedeafd212cc100ead905e19f6face1500fc0f40b2e1` |
+| `distinct-condition/REPORT.md` | `a931c47b595f61be0194befc3f39abafc464b4dce9a57b5cb1ca9d4ea2d6eda0` |
+| `reviews/teardown-source-review.md` | `92d13f4d7a47e4fecb174602d7c91f1876d4f90e771f3070ce565f6b3340f080` |
+| `reviews/distinct-condition-source-review.md` | `ffa9942659b6c143ee0b1de00522d2a6194ca6e9d380dc762a72ebeb5ec658b3` |
+| `teardown/first-candidate/INDEX.json` | `1001f245511a0fe98831e985c34cc22f34cf4233b30e34df1df1b76fa1588774` |
+| `distinct-condition/first-candidate/INDEX.json` | `07425a525e7985463953c08a205ea92b2e379bd526986fc9c8da9b5b6ee07a0f` |
+| `integration/pre-edit/INDEX.json` | `14d93f508e691eeaa0181fa690e65ce5edde5838b3434fd445930334b8a867f5` |
+| `integration/DOCUMENT_PATCH.json` | `eb661c85b6bf454e193a489e8fc6c04a970f4417425b29d2a65a957c1c05b061` |
+
+Current frozen index SHA256 `0ac47bd9459e761481daa3c5dc59fb6481df1467f4e8ebf166b8731ce294ce5e`. SOURCE_EXPORTS.json SHA256 `1a2a6e883bfba558cf12353de26440a72a019b9ab514af584742fc6dd3ecab79`.

@@ -1,0 +1,71 @@
+{
+  "checkpoint": "run22",
+  "validation": "validation/run22/final-checkpoint.json",
+  "files": [
+    {
+      "source": "reverse-engineering/firmware-analysis/mh202-1.0.24.md",
+      "source_sha256": "71684484025c02bf751377bdb821f653d238a06ab42829bcdc6c79c1a7d4326d",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/01-firmware-analysis-mh202-1.0.24.md.txt"
+    },
+    {
+      "source": "reverse-engineering/firmware-analysis/mh202-1.0.24-state-and-routing.md",
+      "source_sha256": "b96682c63e6706b297ae1980679a747a679be5fd17f82f0d0eca1d74b56b830c",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/02-firmware-analysis-mh202-1.0.24-state-and-routing.md.txt"
+    },
+    {
+      "source": "reverse-engineering/firmware-analysis/mh202-1.0.24-record-and-script-lifecycle.md",
+      "source_sha256": "5cf11f1059ebd65f9f1f3757f3834d7603a0ef0a46e8590f569823321ede33ab",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/03-firmware-analysis-mh202-1.0.24-record-and-script-lifecycle.md.txt"
+    },
+    {
+      "source": "reverse-engineering/firmware-analysis/mh202-1.0.24-functional-translation.md",
+      "source_sha256": "b513777d8e81688b8154c0842496e4868e09c945f25ffb15db8bbf014b628658",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/04-firmware-analysis-mh202-1.0.24-functional-translation.md.txt"
+    },
+    {
+      "source": "reverse-engineering/firmware-analysis/README.md",
+      "source_sha256": "f56367fc9139831c00dc5a8106b7935ad6818def4a3fceadb8d8cdcf6ac0b4b0",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/05-firmware-analysis-README.md.txt"
+    },
+    {
+      "source": "project/review/firmware-analysis/README.md",
+      "source_sha256": "7be5cc000c9ec13b9427236a6f13e69dc5baf9c584cc6243feb178d465fa5826",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/06-firmware-analysis-README.md.txt"
+    },
+    {
+      "source": "project/review/firmware-analysis/mh202-1.0.24/README.md",
+      "source_sha256": "f08092b80f46cce112eaa50b9103e23d829f2ded8c460d8fa6867c9df8eba2df",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/07-mh202-1.0.24-README.md.txt"
+    },
+    {
+      "source": "functional/who-17-scenario-management/README.md",
+      "source_sha256": "f9825e4dd40ef229a422df501ecaa44378b912833a3c45d3f7d3e8ad796b9402",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/08-who-17-scenario-management-README.md.txt"
+    },
+    {
+      "source": "functional/who-9-auxiliaries/README.md",
+      "source_sha256": "a1fad1cfa8364af1323922150a7376381703087c016b4b45b2c5f557659d1dbf",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/09-who-9-auxiliaries-README.md.txt"
+    },
+    {
+      "source": "functional/who-22-sound-diffusion/README.md",
+      "source_sha256": "064acf6f2b1655a51c883f9df69cdd10c2218506a742aa569b49b986d608348d",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/10-who-22-sound-diffusion-README.md.txt"
+    },
+    {
+      "source": "functional/who-5-alarm/README.md",
+      "source_sha256": "b4dd242f30c4c9dde1e4e04772eb7c39e74cd503b2e3cc241186701ac9f4abe3",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/11-who-5-alarm-README.md.txt"
+    },
+    {
+      "source": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "source_sha256": "708fe77bd87efeb59386b96faaa92eaf840a761b7d8f497559f4034263635d44",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/12-definitions-own-dev-0151-mh202-scenario-programmer.md.txt"
+    },
+    {
+      "source": "devices/work-queue.yaml",
+      "source_sha256": "4de5904a72dcc65bb8892af24f97c8c852033abb7ee6a21c12103ee2139484d4",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run22/13-devices-work-queue.yaml.txt"
+    }
+  ]
+}

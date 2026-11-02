@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "source": "work/remaining-firmware-investigation/2026-11-02-final/reviews/integration-review.md",
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/integration-review.txt",
+      "bytes": 13488,
+      "sha256": "6475c57f4d305708c3030eae2b53542f44fe1077786630ef09728fa1fc873c9c",
+      "role": "Actual completed gate/receipt. Identity validation and delete receipt retain their historical workflow phase; final verification records completion."
+    },
+    {
+      "source": "work/remaining-firmware-investigation/2026-11-02-final/VALIDATION.json",
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/validation.json",
+      "bytes": 4256,
+      "sha256": "90f09f5655753d4bdccf3993d0577ea6f7617c373c94c20bebb2c2ef9d1ae748",
+      "role": "Actual completed gate/receipt. Identity validation and delete receipt retain their historical workflow phase; final verification records completion."
+    },
+    {
+      "source": "work/remaining-firmware-investigation/2026-11-02-final/FINAL_CHECKS.json",
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/checks.json",
+      "bytes": 1011,
+      "sha256": "3062d17d42db0c1dd3f35282dba49ea050c9d87453d6a5159a0c8d8b5657090a",
+      "role": "Actual completed gate/receipt. Identity validation and delete receipt retain their historical workflow phase; final verification records completion."
+    },
+    {
+      "source": "work/remaining-firmware-investigation/2026-11-02-final/CLOSURE.json",
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/closure.json",
+      "bytes": 1233,
+      "sha256": "c558382effb41a43a966c40a15e9580111065f583a8951a568d73566b2650f13",
+      "role": "Actual completed gate/receipt. Identity validation and delete receipt retain their historical workflow phase; final verification records completion."
+    },
+    {
+      "source": "work/remaining-firmware-investigation/2026-11-02-final/reviews/automation-closure-review.md",
+      "export": "project/review/firmware-analysis/remaining-firmware-final-2026-11-02/closure-review.txt",
+      "bytes": 7853,
+      "sha256": "fe1e5c0e52d4587bd74a1f68ebfc774b1abda16ee9fd5a14c8b2bd33d73b9dd9",
+      "role": "Actual completed gate/receipt. Identity validation and delete receipt retain their historical workflow phase; final verification records completion."
+    }
+  ]
+}

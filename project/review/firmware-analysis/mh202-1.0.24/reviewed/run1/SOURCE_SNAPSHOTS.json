@@ -1,0 +1,37 @@
+{
+  "scope": "Exact run1 reviewed MH202 document bytes before run2 integration",
+  "review": "../../run1-integration-review.md",
+  "review_sha256": "52b69ac4be12f05cf00fb20fc93a6171366bfaec894c99d8adc2d04cc0296ee7",
+  "files": [
+    {
+      "source_path": "reverse-engineering/firmware-analysis/mh202-1.0.24.md",
+      "source_sha256": "38b07257b6ccc90b87f8b9f997acce5fc079da8bfea1597aff292ee831b45b12",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run1/reverse-engineering__firmware-analysis__mh202-1.0.24.md.txt"
+    },
+    {
+      "source_path": "reverse-engineering/firmware-analysis/README.md",
+      "source_sha256": "0d08572985f519f93d556edc1421f9420ee48e13306556dbc4c0cfb2b75d55f9",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run1/reverse-engineering__firmware-analysis__README.md.txt"
+    },
+    {
+      "source_path": "project/review/firmware-analysis/mh202-1.0.24/README.md",
+      "source_sha256": "b7863a94c2e80e36105f50fb4b37897385f1db9c2fb1f84270fa6fdcd775c5de",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run1/project__review__firmware-analysis__mh202-1.0.24__README.md.txt"
+    },
+    {
+      "source_path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "source_sha256": "8455d4b23663c5e88f77e655c438513324c726cbd7b133fa28ce445330420d9b",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run1/devices__definitions__own-dev-0151-mh202-scenario-programmer.md.txt"
+    },
+    {
+      "source_path": "devices/work-queue.yaml",
+      "source_sha256": "285df5222bb01648fc58006455f1b35e2a84ed2be92eacd765ff7f1eafdc4cdf",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run1/devices__work-queue.yaml.txt"
+    },
+    {
+      "source_path": "functional/who-17-scenario-management/README.md",
+      "source_sha256": "4367d9cc45fc805f397636c6986bae0808b8d458455914dc5041faceda659dc9",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run1/functional__who-17-scenario-management__README.md.txt"
+    }
+  ]
+}

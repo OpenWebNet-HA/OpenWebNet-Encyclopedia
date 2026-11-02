@@ -1,0 +1,8 @@
+{
+  "native_helpers": 0,
+  "original_instructions": 0,
+  "scope": "Domain visibility/exit ownership and restricted reference queries; previous worker timing/model matrices not rerun. Closed routes untouched.",
+  "semantic_host_models": 0,
+  "static_host_only": true,
+  "target_IO_clock_process_thread": 0
+}

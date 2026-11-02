@@ -1,0 +1,47 @@
+# MyHOMEServer1 3.87.13: enabled gate and runner workers
+
+The scene's enabled byte now has an original consumer: two selected launch functions read object+65 and skip their thread-request path when it is zero. Their separate thread-state vtables reach a condition-checking worker and an action worker. The action worker calls compiled objects from runner+128/+132; it does not call the scene JSON action-class serializer directly. All findings are static, with zero original instruction, thread, timer, SQL, target-process, service, network, bus or physical execution.
+
+Original image object: `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Addresses are linked ELF VAs, without observed runtime PIE bias. `SOURCE_SPANS.v1.json` pins each exact original range; `spans/` retains Thumb2 disassembly. Pool/table data are not instructions and nearest exported-template labels are not function identities.
+
+## Same scene object to runner initialization
+
+The preceding consumer batch established file constructor0xaf3d4 calling0xb57fc, which passes the same scene object and parsed JsonCpp root into0x31e34. After that call returns,0xaf3d4 clears storage at+104..146 and calls0xa72c0 at0xaf410 with the same object and saved incoming arguments. This is original dataflow under normal allocation/parser/constructor returns, not a supplied scene fixture.
+
+The ARM exception index entry0x14e308 identifies0xa72c0..0xaf364, a32932-byte function. The prefix is not the whole initializer. It resets+146 and traverses original scene ranges+0/+4, +12/+16 and+24/+28 in selected portions. Those raw scene vectors differ from compiled runtime ranges+104, +116 and+128. The selected initializer action loop reads action+28 at0xa75f4, bounds it by23, and uses TBH0xa75fc with table base0xa7600. Index10 has halfword0x18 and reaches0xa7630. That branch requests a virtual JSON serialization, base parsing0x2af90, an unsigned derived member at+40, constructor0xb7590 and a96-byte allocation/copy path. It supplies runner+128 to append helper0xa7288 at0xa7706. This closes a selected conversion/append boundary, without proving every initializer type, full helper behavior or complete runtime action semantics.
+
+On one selected trigger branch, the initializer builds a callback structure with its runner pointer and original callable Thumb0xa60a9. Exact PIC arithmetic is0xa7376+4+word[0xa7f00]→0xa60a9. Its wrapper at instruction0xa60a8 loads the supplied pointer and tailcalls0xa5db0. The accompanying original manager callback pointer resolves to Thumb0xa56c1. Registration helper0xb43d8, callback ownership, natural invocation and complete trigger grammar remain unresolved; the source does not establish that all trigger types use this route.
+
+## Enabled and active guards
+
+| Selected launch | Enabled read / false branch | Active read / nonzero branch | Selected request path |
+|---|---|---|---|
+|0xa5db0|0xa5dbc reads+65;0xa5dce→0xa5f02|0xa5dd6 reads+145; branch to0xa5e6e|Stores+145=1 and+144=0; requests thread state and detach|
+|0xa6210|0xa621c reads+65;0xa622e→0xa6362|0xa6236 reads+145; branch to0xa62ce|Stores+145=1 and+144=0; requests distinct thread-state vtable and detach|
+
+Both selected false/active branches lead away from their thread-allocation/request path into retained logging/cleanup code. The first path allocates a4-byte thread holder and8-byte state, stores the runner at state+4, requests `std::thread::_M_start_thread` at0xa5e22, stores the holder at runner+140, and requests detach. The second does the analogous request at0xa6282. The actual standard-library implementation, successful thread creation, lifecycle/unwind and live object state are not executed or proved. DMB instructions do not by themselves establish a lock, atomic compare-and-swap or concurrency guarantee.
+
+The bounded locator retains four matches for one exact Thumb32 `LDRB immediate12=65` encoding over `.text`. Two are the launch reads above; two lie in earlier copy/serialization contexts. It is a locator, not a proof that no other code form reads enabled, nor that every entry point enforces it.
+
+## Vtable-backed worker correspondence
+
+PIC calculations in both launch paths recover original vtable header0x161de8. Original data and relocation entries establish these distinct address points:
+
+| State vptr | Worker slot | Original Thumb pointer | Original entry |
+|---|---|---|---|
+|0x161df0|+8 at0x161df8|0xa6d19|0xa6d18|
+|0x161e04|+8 at0x161e0c|0xa6d11|0xa6d10→0xa6734|
+
+Both slots have original `R_ARM_RELATIVE` relocations (entries0x7f94/0x7fb4). RW data uses VA-to-file translation from PT_LOAD, not an equal-offset assumption. The first worker reads runner+116/+120 and invokes selected pointee vtable+8 predicates, testing each result for zero. A selected normal continuation tailcalls0xa6734 at0xa6f8c. Full condition-class ownership, every short-circuit/logging branch and actual predicate results are not closed.
+
+The second worker entry0xa6d10 loads runner from state+4 and tailcalls0xa6734. In that action worker,0xa6888 loads runner+128/+132. The selected nonempty traversal uses8-byte entries, dereferences each entry's object pointer and calls its vtable+0 at0xa68b0. After that call returns, it reads runner+144 at0xa68b6. Zero permits advancement; nonzero leaves that selected action-invocation loop. Later completion polling and cleanup remain conditional; no immediate interruption of an already entered action is inferred.
+
+A separate original method0xa60b0 stores+144=1 at0xa615e and traverses the same+128/+132 range, calling each pointee vtable+4 at0xa6176. This supplies the source basis for a selected stop-request/cancellation axis, while exact individual virtual-method effects, lifetime, scheduling and physical cancellation are unresolved. The worker's normal completion path stores zero to+145 and+144 at0xa6aa0/0xa6aac. These bytes must not be equated with MH202 control words, panic or restart semantics.
+
+## Reproduction and limits
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31-factories/runner/collect_runner_v1.py --check`
+
+The static collector verifies the original ELF/helper hashes, fresh PT_LOAD translation, ten SHA-pinned ranges, two relocation-backed worker slots, four exact PIC joins, three exidx boundaries, the selected action TBH entry and the bounded enabled locator. It emits19 deterministic files including its manifest. All outputs plus collector were copied immediately to the exclusive first-candidate snapshot; report bytes are frozen separately before review. No candidate generation assertion failed, no original code was executed, no callback primitive or scene fixture was supplied, and earlier corpora were neither replayed nor reset.
+
+Confidence is high for these bounded bytes/dataflow/guard/virtual-call relations. Applicability is this exact packaged3.87.13 executable under ordinary provider/normal-return premises. Full initializer coverage, live callback registration, compiled action-specific virtual-method semantics, timing units and elapsed behavior, configured scene assets, other entry points, concurrency/unwind and physical outcomes remain open. This batch does not establish a whole scheduler contract or full-source Device approval.

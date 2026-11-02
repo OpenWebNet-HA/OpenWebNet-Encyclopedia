@@ -1,0 +1,44 @@
+# MyHOMEServer1 3.87.13: BN3L schema and compiled-construction route
+
+This static continuation connects the exact local action discriminator `BN3L` to its raw64-byte object and selected116-byte compiled construction/move/append route. It also identifies the original optional field conversions and local status overrides. It is a source-backed construction route, not evidence of a configured scene, naturally running action, complete accepted JSON grammar, product support or physical operation. Original instructions, providers, JSON, processes, threads, clocks, timers, network/bus and physical execution remain0.
+
+Original image object `/home/bticino/scheduling_manager/scheduling_manager` SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Linked ELF VAs have no observed runtime bias. Fresh PT_LOAD translation is used for code/data; vtable/GOT RW data has a different file offset from VA. Six exact original spans,14 instruction guards, eight direct BL checks, ten PIC schema literals, two TBH selections and relocation-backed class headers are reproduced by the collector. No nearest exported-template name is used as class identity.
+
+## Raw type and selected schema
+
+The previously reviewed action-name table has exact row12 at0x160770: length4/string `BN3L`. Its raw factory uses table base0x30d78; entry12 at0x30d90 is0x031e and reaches0x313b4. That branch passes the current original JSON element to constructor0x2b0b4, requests64-byte allocation, copies the base action and six derived words into the allocated object, installs address point0x15fe98 and passes it to the scene+24 action vector helper0x30c8c at0x31400. Actual JsonCpp/allocation/vector returns remain conditional; no supplied input object or parser stub is used.
+
+Constructor0x2b0b4 uses the following exact original key spellings. Its id is a string; delay/duration use JsonCpp asUInt and are stored+32/+36. It resolves type through the same local action enum and stores+28. Names and enum values are not OPEN WHO, frame kind or physical categories.
+
+| Optional key | Raw offset | Selected conversion/source rule |
+| --- | --- | --- |
+|status|40|Present key uses asString; exact lowercase on/off/noStatus select0/1/−1 respectively|
+|brightness|44|Present key uses asInt; signed result>0 also stores status40=0|
+|saturation|48|Present key uses asInt; signed result>0 also stores status40=0|
+|hue|52|Present key uses asInt; signed result>0 also stores status40=0|
+|temperature|56|Present key uses asInt; signed result>0 also stores status40=0|
+|speed|60|Present key uses asInt, without that subsequent status override on this path|
+
+Before those optional checks, original vector stores set all six words40..63 to0xffffffff. The lowercase two/three-byte status spellings are direct character comparisons; the eight-byte noStatus literal resolves through relocated GOT0x166444. Their stored numeric values are local schema state, not bus WHAT or a statement about actual light state. Unknown status strings simply leave that selected initial word unchanged until later numeric processing; this is not a universal validity/acceptance guarantee. A zero or negative optional numeric result does not take the particular positive-value override, but its own field is still assigned on the selected normal conversion path. No unit, numeric domain, clipping policy or physical color/temperature behavior is established.
+
+The scalar rule order is status, brightness, saturation, hue, temperature, speed. Positive values in any of the four middle fields can therefore replace a previously selected off/noStatus local word with0. JsonCpp missing/null/wrong-type/overflow/exception behavior, alternative constructors and complete validation remain unexecuted; these source rules must not be advertised as an external command-support table.
+
+## Selected initializer reaches the concrete duration constructor
+
+The runner initializer's original action loop reads raw enum+28 at0xa75f4 and uses its separate TBH at0xa75fc, table base0xa7600. Entry12 at0xa7618 is0x25cc and reaches0xac198. That selected branch invokes the current raw action's virtual serializer, then supplies its returned JSON value to constructor0x2b0b4 again at0xac1b2. The serializer implementation is not analyzed in this batch: exact input/output semantic coherence is a retained delegate premise, rather than a copied-string or whole parser claim.
+
+It constructs a temporary compiled object with0xcf06c at0xac1ca. The preceding duration report establishes that constructor as `16Bn3lActionRunner`, explicitly writing raw-duration-derived metadata88 into operational12 and conditionally installing a second callable. The new initializer branch then requests116-byte allocation at0xac1ce/0xac1d0, uses common move0xb444c at0xac1d8, copies the selected metadata and six derived words, reinstalls derived primary/secondary vtables and supplies its handle to scene+128 append helper0xa7288 at0xac276.
+
+The raw factory class header0x15fe90 and compiled class header0x164b14 are recovered through distinct original relocation-backed GOT slots0x166eb8 and0x166d24. A raw64-byte object, a compiled116-byte object and their subobject/callable layouts must remain distinct even though both are selected by local enum12.
+
+## Operational duration survives the selected move
+
+Common move0xb444c reads the source operational pair+8/+12 at0xb4470 and stores the pair at destination+8/+12 at0xb447a. It transfers callable data and manager/invoker slots for the first and second callable, clearing the selected source manager storage, and transfers the thread-holder word+48 while clearing that source word. These are original local storage transfers, not execution of a callable, a running thread, successful ownership across every unwind or a full move/lifetime proof.
+
+Together with the preceding constructor report this closes a normal construction/move/append route to a compiled action whose operational duration need not be zero when the selected raw duration value is nonzero. It does not establish a present configured scene or a universal delay-then-duration sequence: common execute's nonzero-delay branch, fresh post-first-callback duration read, shared stop flag and provider/lifetime premises remain as reviewed earlier. The first/second callable invokers and all command/send/transport delegates stay opaque here; no physical role is assigned merely from a class spelling or optional schema keys.
+
+## Reproduction and boundaries
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-10-31-lifetime/schema-activation/collect_activation_v1.py --check`
+
+The collector emits15 deterministic files including manifest and immediately retains those plus its own exact bytes in first-candidate. This report is separately frozen before independent review. First generation succeeded without output overwrite or weakened guards. Host Python/binutils read original bytes only; original execution, semantic host models and configured input fixtures are0. Confidence is high for the bounded original spellings, branch selections, conversions, assignments and storage route. Configured assets, serializer coherence, complete grammar/validation, active class/provider state, timer/callback effects, concurrency/unwind and physical outcomes remain open; wider Device/source gates are unchanged.

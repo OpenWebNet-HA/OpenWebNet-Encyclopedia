@@ -1,0 +1,56 @@
+# Four systems.sqlite variants - independent source review
+
+PASS, no required correction found. This is an independent review of the other author's static database analysis. I replayed its read-only collector and independently queried the original four databases. No vendor expression, plugin, regex rule, CLR/JavaScript/ARM, configured application, network or physical operation executed. No author file, original database, previous dossier or repository source was edited.
+
+## Reproduction and complete comparison scope
+
+`collect_systems_v1.py --check` passed: 11 outputs, 4 variants, 9 tables each, all6 pairs, 196 recorded SQL statements, 14 input identities and80 selected literal ranges. The collector uses absolute immutable read-only SQLite URIs, query_onlyON/trusted_schemaOFF, verifies the flags and unchanged input bytes, and loads no extensions or vendor functions. Integrity/FK checks run SQLite's own host analysis; they do not execute product validators.
+
+Independently verified all4 original payload hashes against the conservation plan. Independent source row totals are4813 for1768_1.0,5007 for1768_2.1,5008 for1898_2.1 and4670 for F4541455. All nine tables contribute. Independently checked original full-row multisets and every declared-PK presence/change classification for all54 table-pair comparisons, including exact changed-column sets and both one-sided key sets. JSON canonical row serialization was used to avoid treating integer and real spellings as equal accidentally; it agrees with the saved full-row equality partition on these actual sources. No raw credentials/private template values were exported by the review.
+
+Independently verified5 declared FK families per variant, empty foreign_key_check results and integrity_check ok. ApplicationItems has no declared parent-link FK, so clean FK results do not erase the separate parent-graph evidence. Source table/row/key namespaces remain different from WHO, bus numbers or firmware offsets.
+
+## Surrogate-ID normalization audited independently
+
+Rebuilt the relation-linked item bags directly from original rows, linking each item to its properties, each property to all complex/behavior/property-validation children, and item validations to their item. Removed only the documented own generated PKs and owner-link FKs; retained literal parent IDs and all remaining fields. Compared duplicate-aware bags for all6 pairs. All shared/unmatched counts agree with LINKED_ITEM_COMPARISONS.v1.json.
+
+For these actual sources each complete normalized item bag is unique within its variant; therefore the reported unmatched item-ID lists do not conceal a duplicate-multiplicity mismatch in this dataset. This is a checked data property, not a generic guarantee or a graph-isomorphism result. Parent pointers, foreign item references inside strings and every other retained field remain literal; normalization does not establish active UI or semantic equivalence from a shared Name/Cid/Id.
+
+The two2.1 screens independently have exactly5 equal full-row tables: ApplicationItems, ApplicationComplexProperties, ApplicationCurrencies, ItemValidations and PropertyValidations. Their4 property changes at1495..1498 preserve the reported room/profile X/Y text constants: four1 values for1768, and1.25/1.33/1.27/1.34 for1898. The separate behavior comparison removes only BehaviourId and retains the owner/property selector/target fields; its scope is declaration comparison, not executed enablement or coordinate transformation.
+
+## Hierarchy and selected metadata checks
+
+Recomputed the original parent traversal without using author graph output. F454's direct missing-parent edges are exactly88/89 to83,92/93/94 to8, and156 to13;65 items cannot reach a root. The other three variants have no missing parents or root-unreachable items. This confirms retained disconnected template families, not an application fault, unsupported hardware conclusion or a proof that any reader consumes those rows. No cycles were found in the selected graphs.
+
+Independently checked EVERY exported selected original item/property/complex/behavior/validation row against the source primary-key row, including property-to-item and child-to-property ownership. Additionally verified the report's concrete F454 limit/address/control facts: page.vct maxNrChildren50; camera maxNrItems20, firstAvailableFor[1-95] versus address interval[0-95]; entrancePanel's separate maxNrItems20; alarmZone #[1-8]/max8/interval[1-8]/xmlFormatValue#{0}/default#1; burglar scenario max20 and max8-in-group. These are distinct source declarations, not dynamic camera count, simultaneous-call capacity, firmware/public address validators or blocked-command limits.
+
+Original selected validator names ValidateScsTypeAndVde, ValidateScsType and ValidateDuplicateAddress match their source rows. Their code/precedence was not inspected or executed. Camera address Type VideodoorAddressControl and advanced address PluginBasedAtt remain named consumers. Verified advanced behavior195/196 predicates IsAMBGENGR/IsNotAMBGENGR target property cid3018/3017; behavior205 has selector1 and ChangeApplicationItem target advancedOpenCloseCommandSafe. These are source data; no named predicate, setter, serialization or physical action is evaluated.
+
+The80 range records are analyst parsing of a bounded lexical metadata notation from selected stored values. They do not establish that a plugin interprets [11-1015] as every ordinary integer address or that every stated range is enforced. The review preserves static Cid/Id, mutable cid property, property ownership and behavior target namespaces separately.
+
+## Applicability, privacy and integrity
+
+Installer3.5.38, directory package builds, Settings.DeviceFirmwareVersion strings and device firmware2.0.51 are separate scopes. The registered hashes/member paths identify the conserved payloads; I did not independently repeat parent remote archival/readback. Six documentary snapshots remain inherited role/firmware context, not new hardware/manual/firmware execution. Their preservation does not turn the database into an SCS AI electrical map, answering-machine/DIM35 dynamic status producer or proof of an attached camera.
+
+All14 current input identities and all13 immediate first-candidate file copies match their saved hashes/current bytes. The snapshot index excludes itself and was computed before opening its output. The frozen candidate has not changed. Full comparisons expose changed keys/column names and whole-table fingerprints; only explicitly selected noncredential source families expose values. No account/private template values or per-secret hashes were added by this review.
+
+This source review adds no native coverage, configured-object fixture, UI validation proof, active-feature support table or physical outcome. The unresolved catalogue readers/serializers, retained-template activation, behavior predicates and coordinate consumers remain appropriate next boundaries.
+
+## Exact reviewed pins
+
+Paths below are relative to `work/installer-database-analysis/2026-10-31/systems/`.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `REPORT.md` | `ca046a1f5f6764935455040a09c3e2f7c8221ba466a448e89fe811168e922e5b` |
+| `collect_systems_v1.py` | `cd84f548182819f3ee3adc85d309902d0c0e1f26b73e4bda2520310137a425fc` |
+| `OUTPUT_MANIFEST.v1.json` | `ced62c91e1daeba02e4c5a93b9c58131116e96b17ee53e13a838f70d3d37b70e` |
+| `SCHEMA_AND_COUNTS.v1.json` | `266c0d617b893d79829f53f855dd8dff1f3bb6af4249540bf2addb33cb11e5d2` |
+| `ALL_TABLE_PAIR_DIFFERENCES.v1.json` | `8097e9487bb2e288a8d62f1f93427a9669af314059dc86099317444705decdc7` |
+| `LINKED_ITEM_COMPARISONS.v1.json` | `2b45ed30bd280bd5f65ac06abed66b747364a8e6a52d256a1d92c6797a0365ce` |
+| `GRAPH_AND_FK.v1.json` | `dc42b88c7040b03e55903aa21a8dd5d2e1c8261f2028958b81fe6997f51ab0c0` |
+| `SELECTED_SOURCE_ROWS.v1.json` | `81e863b702cd299f6d41c4982905e98c1028b66a099306af65ce57ca41430b04` |
+| `SELECTED_LITERAL_RANGES.v1.json` | `c44be749953458260d50980200f35771867e34fc448fe317a5b875f395bcaf88` |
+| `SQL_AND_SAFETY.v1.json` | `7f68b874b2af8e3f41d0d05ac53073266499c53333052b3cc8874b69d3017778` |
+| `INPUTS.v1.json` | `ca6208554108ad8ea43298467b5c60831c534809bca9bcc07583bfdd516c1bbb` |
+| `initial-generated-v1/SNAPSHOT_INDEX.json` | `505689a7777658c57b0d2179a686875368ed7ac1607fc6ec77593f70cf63077c` |

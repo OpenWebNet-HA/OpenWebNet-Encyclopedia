@@ -1,0 +1,113 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000a5a3c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5acc8>:
+   a5a3c:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+   a5a40:	4605      	mov	r5, r0
+   a5a42:	f8d0 008c 	ldr.w	r0, [r0, #140]	@ 0x8c
+   a5a46:	4fd6      	ldr	r7, [pc, #856]	@ (a5da0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b02c>)
+   a5a48:	447f      	add	r7, pc
+   a5a4a:	2800      	cmp	r0, #0
+   a5a4c:	f000 81a0 	beq.w	a5d90 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b01c>
+   a5a50:	6803      	ldr	r3, [r0, #0]
+   a5a52:	2b00      	cmp	r3, #0
+   a5a54:	f040 813a 	bne.w	a5ccc <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5af58>
+   a5a58:	e9d5 a91a 	ldrd	sl, r9, [r5, #104]	@ 0x68
+   a5a5c:	45d1      	cmp	r9, sl
+   a5a5e:	d034      	beq.n	a5aca <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5ad56>
+   a5a60:	4654      	mov	r4, sl
+   a5a62:	e002      	b.n	a5a6a <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5acf6>
+   a5a64:	3408      	adds	r4, #8
+   a5a66:	454c      	cmp	r4, r9
+   a5a68:	d026      	beq.n	a5ab8 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5ad44>
+   a5a6a:	6866      	ldr	r6, [r4, #4]
+   a5a6c:	f894 f01c 	pld	[r4, #28]
+   a5a70:	2e00      	cmp	r6, #0
+   a5a72:	d0f7      	beq.n	a5a64 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5acf0>
+   a5a74:	4bcb      	ldr	r3, [pc, #812]	@ (a5da4 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b030>)
+   a5a76:	f857 8003 	ldr.w	r8, [r7, r3]
+   a5a7a:	f898 3000 	ldrb.w	r3, [r8]
+   a5a7e:	2b00      	cmp	r3, #0
+   a5a80:	f000 814f 	beq.w	a5d22 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5afae>
+   a5a84:	6873      	ldr	r3, [r6, #4]
+   a5a86:	1e5a      	subs	r2, r3, #1
+   a5a88:	6072      	str	r2, [r6, #4]
+   a5a8a:	2b01      	cmp	r3, #1
+   a5a8c:	d1ea      	bne.n	a5a64 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5acf0>
+   a5a8e:	6833      	ldr	r3, [r6, #0]
+   a5a90:	4630      	mov	r0, r6
+   a5a92:	689b      	ldr	r3, [r3, #8]
+   a5a94:	4798      	blx	r3
+   a5a96:	f898 3000 	ldrb.w	r3, [r8]
+   a5a9a:	2b00      	cmp	r3, #0
+   a5a9c:	f000 816a 	beq.w	a5d74 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b000>
+   a5aa0:	68b3      	ldr	r3, [r6, #8]
+   a5aa2:	1e5a      	subs	r2, r3, #1
+   a5aa4:	60b2      	str	r2, [r6, #8]
+   a5aa6:	2b01      	cmp	r3, #1
+   a5aa8:	d1dc      	bne.n	a5a64 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5acf0>
+   a5aaa:	6833      	ldr	r3, [r6, #0]
+   a5aac:	4630      	mov	r0, r6
+   a5aae:	3408      	adds	r4, #8
+   a5ab0:	68db      	ldr	r3, [r3, #12]
+   a5ab2:	4798      	blx	r3
+   a5ab4:	454c      	cmp	r4, r9
+   a5ab6:	d1d8      	bne.n	a5a6a <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5acf6>
+   a5ab8:	f8c5 a06c 	str.w	sl, [r5, #108]	@ 0x6c
+   a5abc:	f8d5 008c 	ldr.w	r0, [r5, #140]	@ 0x8c
+   a5ac0:	b130      	cbz	r0, a5ad0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5ad5c>
+   a5ac2:	6803      	ldr	r3, [r0, #0]
+   a5ac4:	2b00      	cmp	r3, #0
+   a5ac6:	f040 8169 	bne.w	a5d9c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b028>
+   a5aca:	2104      	movs	r1, #4
+   a5acc:	f76b e9f0 	blx	10eb0 <_ZdlPvj@plt+0x4>
+   a5ad0:	e9d5 4920 	ldrd	r4, r9, [r5, #128]	@ 0x80
+   a5ad4:	454c      	cmp	r4, r9
+   a5ad6:	d103      	bne.n	a5ae0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5ad6c>
+   a5ad8:	e02b      	b.n	a5b32 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5adbe>
+   a5ada:	3408      	adds	r4, #8
+   a5adc:	45a1      	cmp	r9, r4
+   a5ade:	d026      	beq.n	a5b2e <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5adba>
+   a5ae0:	6866      	ldr	r6, [r4, #4]
+   a5ae2:	f894 f01c 	pld	[r4, #28]
+   a5ae6:	2e00      	cmp	r6, #0
+   a5ae8:	d0f7      	beq.n	a5ada <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5ad66>
+   a5aea:	4bae      	ldr	r3, [pc, #696]	@ (a5da4 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5b030>)
+   a5aec:	f857 8003 	ldr.w	r8, [r7, r3]
+   a5af0:	f898 3000 	ldrb.w	r3, [r8]
+   a5af4:	2b00      	cmp	r3, #0
+   a5af6:	f000 80f1 	beq.w	a5cdc <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5af68>
+   a5afa:	6873      	ldr	r3, [r6, #4]
+   a5afc:	1e5a      	subs	r2, r3, #1
+   a5afe:	6072      	str	r2, [r6, #4]
+   a5b00:	2b01      	cmp	r3, #1
+   a5b02:	d1ea      	bne.n	a5ada <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5ad66>
+   a5b04:	6833      	ldr	r3, [r6, #0]
+   a5b06:	4630      	mov	r0, r6
+   a5b08:	689b      	ldr	r3, [r3, #8]
+   a5b0a:	4798      	blx	r3
+   a5b0c:	f898 3000 	ldrb.w	r3, [r8]
+   a5b10:	2b00      	cmp	r3, #0
+   a5b12:	f000 8113 	beq.w	a5d3c <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5afc8>
+   a5b16:	68b3      	ldr	r3, [r6, #8]
+   a5b18:	1e5a      	subs	r2, r3, #1
+   a5b1a:	60b2      	str	r2, [r6, #8]
+   a5b1c:	2b01      	cmp	r3, #1
+   a5b1e:	d1dc      	bne.n	a5ada <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5ad66>
+   a5b20:	6833      	ldr	r3, [r6, #0]
+   a5b22:	4630      	mov	r0, r6
+   a5b24:	3408      	adds	r4, #8
+   a5b26:	68db      	ldr	r3, [r3, #12]
+   a5b28:	4798      	blx	r3
+   a5b2a:	45a1      	cmp	r9, r4
+   a5b2c:	d1d8      	bne.n	a5ae0 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5ad6c>
+   a5b2e:	f8d5 9080 	ldr.w	r9, [r5, #128]	@ 0x80
+   a5b32:	f1b9 0f00 	cmp.w	r9, #0
+   a5b36:	d006      	beq.n	a5b46 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x5add2>
+   a5b38:	f8d5 1088 	ldr.w	r1, [r5, #136]	@ 0x88
+   a5b3c:	4648      	mov	r0, r9
+   a5b3e:	eba1 0109 	sub.w	r1, r1, r9
+   a5b42:	f76b e9b6 	blx	10eb0 <_ZdlPvj@plt+0x4>

@@ -1,0 +1,34 @@
+# Independent source review: MyHOMEServer1 inventory first pass
+
+Result: PASS for the scoped structural and embedded-data findings. No required source or wording correction identified. This reviewer did not author the inventory source report or collector. Review is independent source/host-data comparison; no native firmware, CLR, JS, service, target OS call, network or bus execution occurred. It is not a whole-product semantic audit.
+
+## Exact candidate pins
+
+| Author artifact, relative to `inventory/` | SHA-256 |
+| --- | --- |
+| `REPORT.md` | `3f78472f276680b6903ae9c5c15eb6ace7753b28870975c49cb016d26f373fb7` |
+| `collect_inventory_v1.py` | `3816ae4a6427898e5deb3465aa604da814f5048c5e661ce2ccee56653d992fad` |
+| `OUTPUT_MANIFEST.v1.json` | `e94899e9ee191a7fbeadf0aa60ac6c2b81efecdd38dc4c5ddbe5acec958c6397` |
+| `INPUTS.json` | `ed5863d77e2a5fb08abe4fd484a3d79e3a9dbece460afee6580927d07a18ff42` |
+| `catalogue-comparison.json` | `96efd34ea7a2a8532d47ae8faf35ed3920a088b87e9172140c5ae46a38d312f8` |
+| `header-census.json` | `0d8c7b31fe78d7d1de7562deb3074b0865467c0af8cd8a7302eec3eb7720b648` |
+| `selected-applications.json` | `79aace174a7fa01df7323156f62da2c3201ccfe104daa11103b235eb271c71a8` |
+| `first-candidate/INDEX.json` | `f43fe775b6ec6df12620e54b972cba45132fbd23778be9825203c077a938757f` |
+
+## Reproduction and independently checked evidence
+
+The unmodified collector's read-only `--check` passed all13 outputs. I inspected the collector and metadata-only ImageVFS: reads require regular-file metadata and expected size/SHA, reject host symlinks, use read-only descriptors and original-image link metadata. SQLite author connections use immutable read-only URI plus query_only; this review also set trusted_schema=OFF in its separate connections. Neither method runs vendor expressions, original applications or target libraries.
+
+I independently read the prefix of every retained ordinary file and directly decoded saved ELF header fields from original bytes. Results agree: normal5924files =858ELF +1SQLite3 +5065other; recovery5384 =740ELF +1SQLite3 +4643other. The selected ZIP-local-header and REDIS prefixes have no matches. This is the exact named prefix/extension scope, not global absence of storage or container contents. All1598 original ELF header records' path/size/manifest identity, class and applicable ARM32 type/machine/entry/flags agree. Selected matrix_mx interpreter/Thumb-entry interpretation and hard-float EABI fields agree with its original header. No uniform ABI claim for all ELF roles is made.
+
+I separately recomputed the original manifest path intersections:5378 shared,5368 equal,10 differing,546normal-only and6recovery-only. I re-read the eight selected application's dynamic declarations and independently compared every saved DT_NEEDED/import-name set. Original matrix_mx contains one exact `MHCatalogue.db` literal at file offset0x1cce04, independently mapped through its PT_LOAD headers to VA0x1cce04. Its undefined dynamic symbols include sqlite3_open, open_v2, prepare_v2, step and exec. These facts justify the report's candidate-consumer lead. They do not trace a literal-to-path-to-open call chain, prove an executed read, or identify an active scenario owner; the report expressly leaves those open.
+
+For both database files I independently compared the complete stored CREATE TABLE strings and all75 complete typed row bags using direct Python Counter tuples, rather than relying only on the author's serialized digest equality. All75 table names/schema strings agree;42 row bags match and33 differ, with exactly the saved complete table partitions. Original hashes and sizes agree: embedded2233344bytes/SHA79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb, installer2625536bytes/SHAf0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5. No raw row contents or private identifiers were exported by this review.
+
+The embedded DB_INFO4/4/0 and integer export_date20240327, empty bounded MyHomeServer name/code lookup, empty firmware item2198 lookup, zero AS_FW_PACKAGE and104 EN_BUILDS counts were separately queried and agree. A missing self-description record is not absence of runtime support; data IDs and source versions remain separately scoped. Canonical installer metadata is not silently replaced by this embedded variant.
+
+All12 member identities in OUTPUT_MANIFEST and all27 INPUTS pins matched actual bytes. All14 indexed first-candidate collector/output copies matched their current originals and saved index hashes; the separately present first-candidate REPORT.md also byte-matches the reviewed report and hash above (the14-entry index itself does not list that later report copy). No author file was changed.
+
+## Scope assessment
+
+The report correctly separates packaged paths, headers/imports, literal leads, configuration key shapes, complete structural DB comparisons and physical/runtime conclusions. JSON values are withheld. Filename reuse does not transfer F454/MH202 behavior or parser layouts. Presence of modern scheduling/alarm applications does not prove scheduler policy or dedicated electrical topology. Manufacturer signature blobs are not reported as cryptographically verified, and missing80/81/94/95 extras remain missing inputs. Source completeness and runtime/provider/consumer closure remain future work.

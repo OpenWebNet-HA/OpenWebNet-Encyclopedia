@@ -1,0 +1,108 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/libcoso/libplug_aux_tr.so:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00001568 <aux_tr_scs2open@@Base>:
+    1568:	e5903028 	ldr	r3, [r0, #40]	@ 0x28
+    156c:	e3530003 	cmp	r3, #3
+    1570:	13530009 	cmpne	r3, #9
+    1574:	0a000001 	beq	1580 <aux_tr_scs2open@@Base+0x18>
+    1578:	e3a00001 	mov	r0, #1
+    157c:	e12fff1e 	bx	lr
+    1580:	e92d4030 	push	{r4, r5, lr}
+    1584:	e24dd00c 	sub	sp, sp, #12
+    1588:	e1a04000 	mov	r4, r0
+    158c:	e1a05001 	mov	r5, r1
+    1590:	e3a02008 	mov	r2, #8
+    1594:	e5900000 	ldr	r0, [r0]
+    1598:	e28d1004 	add	r1, sp, #4
+    159c:	ebfffeae 	bl	105c <ascii_hex_frame_to_array@plt>
+    15a0:	e5dd3004 	ldrb	r3, [sp, #4]
+    15a4:	e20330f0 	and	r3, r3, #240	@ 0xf0
+    15a8:	e35300b0 	cmp	r3, #176	@ 0xb0
+    15ac:	1a000008 	bne	15d4 <aux_tr_scs2open@@Base+0x6c>
+    15b0:	e5dd3006 	ldrb	r3, [sp, #6]
+    15b4:	e5dd2007 	ldrb	r2, [sp, #7]
+    15b8:	e353009b 	cmp	r3, #155	@ 0x9b
+    15bc:	e202100f 	and	r1, r2, #15
+    15c0:	0a000028 	beq	1668 <aux_tr_scs2open@@Base+0x100>
+    15c4:	e353009c 	cmp	r3, #156	@ 0x9c
+    15c8:	0a000014 	beq	1620 <aux_tr_scs2open@@Base+0xb8>
+    15cc:	e353009a 	cmp	r3, #154	@ 0x9a
+    15d0:	0a000002 	beq	15e0 <aux_tr_scs2open@@Base+0x78>
+    15d4:	e3a00001 	mov	r0, #1
+    15d8:	e28dd00c 	add	sp, sp, #12
+    15dc:	e8bd8030 	pop	{r4, r5, pc}
+    15e0:	e351000c 	cmp	r1, #12
+    15e4:	908ff101 	addls	pc, pc, r1, lsl #2
+    15e8:	eafffff9 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    15ec:	ea00003b 	b	16e0 <aux_tr_scs2open@@Base+0x178>
+    15f0:	eafffff7 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    15f4:	eafffff6 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    15f8:	eafffff5 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    15fc:	ea00003b 	b	16f0 <aux_tr_scs2open@@Base+0x188>
+    1600:	eafffff3 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    1604:	eafffff2 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    1608:	eafffff1 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    160c:	ea00002f 	b	16d0 <aux_tr_scs2open@@Base+0x168>
+    1610:	eaffffef 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    1614:	eaffffee 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    1618:	eaffffed 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    161c:	ea000029 	b	16c8 <aux_tr_scs2open@@Base+0x160>
+    1620:	e3510002 	cmp	r1, #2
+    1624:	0a000021 	beq	16b0 <aux_tr_scs2open@@Base+0x148>
+    1628:	e3510004 	cmp	r1, #4
+    162c:	0a00001d 	beq	16a8 <aux_tr_scs2open@@Base+0x140>
+    1630:	e3510001 	cmp	r1, #1
+    1634:	03a01006 	moveq	r1, #6
+    1638:	1affffe5 	bne	15d4 <aux_tr_scs2open@@Base+0x6c>
+    163c:	e59f00b4 	ldr	r0, [pc, #180]	@ 16f8 <aux_tr_scs2open@@Base+0x190>
+    1640:	e1a02222 	lsr	r2, r2, #4
+    1644:	e08f0000 	add	r0, pc, r0
+    1648:	ebfffe95 	bl	10a4 <g_strdup_printf@plt>
+    164c:	e3a03009 	mov	r3, #9
+    1650:	e1a02004 	mov	r2, r4
+    1654:	e1a01005 	mov	r1, r5
+    1658:	ebfffea3 	bl	10ec <scsmsg_to_openlist@plt>
+    165c:	e3a00000 	mov	r0, #0
+    1660:	e28dd00c 	add	sp, sp, #12
+    1664:	e8bd8030 	pop	{r4, r5, pc}
+    1668:	e351000c 	cmp	r1, #12
+    166c:	908ff101 	addls	pc, pc, r1, lsl #2
+    1670:	eaffffd7 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    1674:	ea000017 	b	16d8 <aux_tr_scs2open@@Base+0x170>
+    1678:	eaffffd5 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    167c:	eaffffd4 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    1680:	eaffffd3 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    1684:	ea000017 	b	16e8 <aux_tr_scs2open@@Base+0x180>
+    1688:	eaffffd1 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    168c:	eaffffd0 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    1690:	eaffffcf 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    1694:	ea000009 	b	16c0 <aux_tr_scs2open@@Base+0x158>
+    1698:	eaffffcd 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    169c:	eaffffcc 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    16a0:	eaffffcb 	b	15d4 <aux_tr_scs2open@@Base+0x6c>
+    16a4:	ea000003 	b	16b8 <aux_tr_scs2open@@Base+0x150>
+    16a8:	e3a01008 	mov	r1, #8
+    16ac:	eaffffe2 	b	163c <aux_tr_scs2open@@Base+0xd4>
+    16b0:	e3a01007 	mov	r1, #7
+    16b4:	eaffffe0 	b	163c <aux_tr_scs2open@@Base+0xd4>
+    16b8:	e3a0100a 	mov	r1, #10
+    16bc:	eaffffde 	b	163c <aux_tr_scs2open@@Base+0xd4>
+    16c0:	e3a01005 	mov	r1, #5
+    16c4:	eaffffdc 	b	163c <aux_tr_scs2open@@Base+0xd4>
+    16c8:	e3a01009 	mov	r1, #9
+    16cc:	eaffffda 	b	163c <aux_tr_scs2open@@Base+0xd4>
+    16d0:	e3a01002 	mov	r1, #2
+    16d4:	eaffffd8 	b	163c <aux_tr_scs2open@@Base+0xd4>
+    16d8:	e3a01003 	mov	r1, #3
+    16dc:	eaffffd6 	b	163c <aux_tr_scs2open@@Base+0xd4>
+    16e0:	e3a01000 	mov	r1, #0
+    16e4:	eaffffd4 	b	163c <aux_tr_scs2open@@Base+0xd4>
+    16e8:	e3a01004 	mov	r1, #4
+    16ec:	eaffffd2 	b	163c <aux_tr_scs2open@@Base+0xd4>
+    16f0:	e3a01001 	mov	r1, #1
+    16f4:	eaffffd0 	b	163c <aux_tr_scs2open@@Base+0xd4>
+    16f8:	0000069c 	muleq	r0, ip, r6

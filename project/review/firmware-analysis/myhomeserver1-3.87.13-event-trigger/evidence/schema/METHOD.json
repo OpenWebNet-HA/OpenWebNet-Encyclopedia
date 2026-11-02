@@ -1,0 +1,13 @@
+{
+  "history": "First canonical generation exclusive; source probes only before report. No generated candidate overwritten.",
+  "original_execution": 0,
+  "scope": "Local raw factory/base+derived schema/serializer and compiled constructor/move/append; callback/handler/registration/provider implementations remain separate.",
+  "semantic_models_or_fixtures": 0,
+  "target_IO": 0,
+  "unclosed": [
+    "JsonCpp/string/allocation/clone/vector success",
+    "complete parser validation/configured scene",
+    "actual handler/callback/registration behavior",
+    "runtime binding/unwind/lifetime/physical observations"
+  ]
+}

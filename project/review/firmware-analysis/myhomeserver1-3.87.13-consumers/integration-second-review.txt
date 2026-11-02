@@ -1,0 +1,37 @@
+# Second documentary review v2: provider wording precision
+
+PASS for this narrowly versioned documentary refinement; no further correction requested. The prior `reviews/INTEGRATION_SECOND_REVIEW.md` remains unchanged at SHA-256 `cbeedb6e4b9008b08cb98988351d925494ff7893626cfbef55c61fc158946ba0`. Its original source-summary/export review is retained as historical work. This v2 checks only the source report wording substitution, two new exact exports, two report-link substitutions and current seven-document identity. No complete source re-audit, collector rerun or firmware/SQL/parser/runtime execution was performed.
+
+The earlier authorship disclosure remains: I authored the catalogue consumer candidate and provider source review. Independent source reviews retain their distinct scopes. This document does not independently certify my own original source.
+
+## Current seven-document candidate
+
+Every current file matches its frozen `integration/review-candidate-v2` copy and declared size/hash. The new index is SHA-256 `ad6f86f750728fef439c28c4a4b472c879f1677e26f454c30cec248ff148e9aa`.
+
+| Workspace-relative document | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md` | 8902 | `ff3b179e05c69f6a1f34ab97ee76c43c3e72bdfff89d6c6661644c4bd45f4583` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md` | 10973 | `ee2ac5108fec4dca958afa73832cc874f43aebb9e1e6f4ffa5d5c4ecaab4d381` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | 11425 | `5c60cbbf8796612b1efaa80392d77cf067b1ec647ca802dae72f91b673da2dac` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-consumers/README.md` | 4553 | `4b806d4bb483b5fcd77a9f9057cd2bf1b29a52b724a47d44181d0b7491bb4abc` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/SYNTHESIS.md` | 2601 | `3f0982b54b2cd1973c083620891311db23f28dafffe24e617186d70b6801bd24` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/COVERAGE.md` | 2076 | `14f68a093f38427f75ac6c16cd08bed8ca2fef402429f55e4954753723b47799` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/RANKED_REMAINING_QUESTIONS.md` | 1336 | `d3cf75eb44d90a55f3ac1a9f3084287b453f7f07315878b5dd841d59c76db633` |
+
+## Exact refinement and preservation
+
+The source report v2 is SHA-256 `a15c6eddf21993e7b5f41372c747412fce771471632429b4da2896ac5c4b13da`; REPORT_PRECISION_HISTORY.json is `ed0973060344ff88aa64adf347693350b1554d9658bb4484195839e61504cc90`. Independently verified that replacing exactly the one history-specified sentence in old REPORT.md produces the complete new REPORT.v2.md bytes. Old REPORT.md remains unchanged at `653c93560b2a2604ad7973d62e4eabc4d64c41e645e5ece3b4bbd979b4438c9f`.
+
+The old sentence characterized the synthetic7 fixture as not an ABI-valid Boolean. The new sentence accurately states that the fixture does not establish parser-produced data or an application Boolean ABI contract, and explicitly does not claim a nonzero integer is invalid. The original source/model proves that a selected kind2/type20 node returns its stored word; it does not establish an external function prototype or a general Boolean-validity rule. Thus this precision appropriately narrows interpretation without changing the code/guard/model outcome.
+
+The collector SHA remains `e42d4032a27adb9afd577e9de14573030ea6d83b2eecb73c0206e352bff6e024` and original16-output manifest SHA remains `692c73f2b0b391ed4da2fc99ef2f9e7daae1a35220f3ba936edeb95a07f9b5f9`. Rechecked the saved manifest members against current bytes; all remain unchanged. No new test/case, source span, original instruction or result count was added. The original67-pair SOURCE_EXPORTS.json is unchanged at `b112fa8355415edb68740f0ea777d076de3cd07f841b1a428a52ec1b98f45e9a`; its prior full byte audit is referenced, not falsely reported as newly rerun.
+
+Independently verified both entries of the new PROVIDER_PRECISION_EXPORTS.json: REPORT.v2.md equals providers-report-v2.txt and the precision history equals providers-report-precision.json, with exact declared sizes and SHA-256 hashes. These are two additive source/export pairs; they do not overwrite the old67 mapping or old report export.
+
+Compared all seven v2 documents with the earlier frozen seven-document candidate. Exactly two documents change: the human consumer page and capsule README each replace only the provider-report link target with providers-report-v2.txt. The other five documents are byte-identical to the prior candidate. No source/applicability claim, catalogue-column assignment, scheduler-factory execution boundary or physical/local receipt distinction changed. The unknown reader SQL and separate two-column declaration, enabled-default versus gate, C/JsonCpp/OPEN separation and closed-route limits remain as reviewed previously.
+
+## Completion boundary
+
+The new provider report/history exports are actual verified files. The same six future capsule review-copy targets plus validation.json remain **PENDING mechanical completion** as recorded in the prior review. No future copy/validation bytes are certified here. The parent must create those actual files and complete strict ESG/link validation afterwards; this review grants no placeholders, exemptions or circular self-export approval.
+
+Old candidate snapshots, old review, original provider report/collector/cases/results and source files remain untouched. Only this new v2 review was written.

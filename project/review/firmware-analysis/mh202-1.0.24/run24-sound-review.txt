@@ -1,0 +1,37 @@
+# MH202 sound/run24 independent static source review
+
+PASS. No correction requested. This is an independent source, saved-evidence, finite-host-model and preservation review, with a static collector replay. It is not native replay or an observed application/configuration sequence. All author files and original inputs were read-only; this review is a new file.
+
+## Exact final identities
+
+| Author artifact, relative to research 2026-10-30 | SHA256 |
+| --- | --- |
+| sound/run24/REPORT.md | ed6b94b264364f28fc8501775e783c1ab5fb61ac1f65b353c792cfe5a33b9d31 |
+| sound/run24/collect_enable_v1.py | 0bbfa48964900e6ae875caf9e2276e341be1e669a67e22c2a26ce2213a22b9d9 |
+| sound/run24/output-manifest.json | fc21d2ffa73906a5010f33ff20727b9e469d6f922d34bdbd7bf079844c5a7463 |
+| sound/run24/initial-generated-v1/SNAPSHOT_INDEX.json | 9f194b315f4c26f721b0e41961ef4501c8def6f483aebf313d76055059acdc91 |
+| Original /home/bticino/libcoso/libplug_multi_stm.so | 8b9f393f5b8b4f47645821d7e7eedcc2cc15351f76d10fc8d8c8f6c38cd69128 |
+
+## Independent checks
+
+The exact command `python3 -B work/mh202-firmware/research/2026-10-30/sound/run24/collect_enable_v1.py --check` passes: 22 outputs including manifest, 14 original spans, 46 critical words, four inputs, three selected relocation rows, and four finite host cases. Reported original execution and hooks are zero. I independently reread the original image through ImageVFS, parsed ELF32 PT_LOAD mappings, compared all 14 raw-span hashes and 46 words to the saved evidence, and verified all four input hashes/lengths. This raw-byte comparison does not rely only on the producer's hashes.
+
+The output manifest's 21 evidence hashes and its report/collector pins match. The 24 actual first-candidate file copies indexed in initial-generated-v1 match both their recorded hashes and the current bytes. There is no correction or reconstructed historical version involved in this reviewed candidate. I independently recomputed the four selected value10 assignments, nonzero predicates, and target stack delta 36+116+20=172. These are host consistency checks, not target strtol/GLib/parser/initializer execution.
+
+## Original source findings checked
+
+At application entry 0xfc04..0xfc9c, descriptor+56 is stored in the local SP192 pointer slot. Representation3 supplies the direct parsed object; representation2 is a separate route. The check at 0xfc70 must return0. Parsed kind+44 equality5 at 0xfc8c/0xfc90 reaches 0xfe54, where DIM+32 is tested against the exact three bytes '1','5',NUL. The report correctly keeps kind5, WHO22/criteria22 and8, DIM15 and envelope representation56 separate. It does not turn this branch alone into exclusive WHO22 admission.
+
+The displayed local WHERE1 helper returns0 at 0xba14. After successful check_multi_where, check_open_multi at 0xbbcc..0xbbdc bypasses the kind1 WHAT branch for kind5. The report conditions this on coherent pointers, selectors and successful helpers; no complete raw grammar is claimed.
+
+The ordered list is parsed+40, passed through g_list_first at 0xfe98/0xfe9c. Counting the original node+4 advances confirms that 0x100a0 selects node10 after the preceding nine positions. Missing node branches 0x100a8 -> 0x10990, where r5 becomes0. NULL data at 0x100b0/0x100b4 likewise sets r5=0. NonNULL data is passed to strtol with endptrNULL/base10 at 0x100bc..0x100c4; its full return is copied to r5 at 0x100c8. There is no displayed Boolean normalization or range check between this conversion return and the selected store.
+
+Optional node11 is separate: 0x100cc..0x100f0 uses LR, with default1 at 0x10f00. Caller 0x10130/0x10134/0x10138 places values8/9/10 at outgoing stack12/16/20. The callee prologue at 0xf588/0xf58c subtracts 36+116 bytes. Original loads at callee SP164/168/172 and stores at 0xf9ac/0xf9b4/0xf9c0 therefore establish private252/256/260 respectively. The passed r0 is the address of the local private-pointer slot; the callee dereferences it. Imported init_status has same-image candidate0xf588, while actual binding remains conditional.
+
+The return continuation rereads private source252 instead of checking an initializer Boolean result. The selected zero-source path requests queue_ack_to_open at 0x10214 then returns local0; it does not prove successful reinitialization or any wire ACK. The prior sm_init utility0 callsite remains distinct from this later conditional setter.
+
+The table's value2/value3 packed caller bytes and values4/value5 source bits are suitably limited: preserved/unassigned bits are not promoted to fully initialized defaults. Missing-node continuations are shown, but neither exact accepted wire length nor general safety of short/NULL configurations is claimed. Supplied conversion7 being stored as7 correctly distinguishes a word from a Boolean. The four finite cases are converted-value fixtures, not fabricated raw frames or actual parsed/native inputs.
+
+## Scope retained
+
+The available setter can conditionally satisfy sound/run23's private260 nonzero predicate. This does not join a naturally received configuration to an active context, prove a complete initializer or parser, establish physical functions for values, or demonstrate persistence/publication/device activation. Original helper/provider/list/allocator completion, active routing and owner lifetime remain premises. No target process, syscall, service, transport/session/authentication/framing investigation or original execution was added. Clock units are a separate conditional provider analysis; this review assigns no timer consequence from a helper name or literal.

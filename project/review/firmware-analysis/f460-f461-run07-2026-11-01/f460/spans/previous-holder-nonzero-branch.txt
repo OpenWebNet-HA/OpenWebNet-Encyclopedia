@@ -1,0 +1,9 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000f79b8 <_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@@Base+0x7fe08>:
+   f79b8:	a9095bf5 	stp	x21, x22, [sp, #144]
+   f79bc:	97fcb079 	bl	23ba0 <pthread_setspecific@plt+0x10>

@@ -1,0 +1,114 @@
+
+/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000b86a4:
+   b86a4:	4a3e      	ldr	r2, [pc, #248]	@ (b87a0)
+   b86a6:	4b3f      	ldr	r3, [pc, #252]	@ (b87a4)
+   b86a8:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+   b86ac:	b084      	sub	sp, #16
+   b86ae:	447a      	add	r2, pc
+   b86b0:	58d3      	ldr	r3, [r2, r3]
+   b86b2:	681b      	ldr	r3, [r3, #0]
+   b86b4:	9303      	str	r3, [sp, #12]
+   b86b6:	f04f 0300 	mov.w	r3, #0
+   b86ba:	f890 3084 	ldrb.w	r3, [r0, #132]	@ 0x84
+   b86be:	b96b      	cbnz	r3, b86dc
+   b86c0:	2001      	movs	r0, #1
+   b86c2:	4a39      	ldr	r2, [pc, #228]	@ (b87a8)
+   b86c4:	4b37      	ldr	r3, [pc, #220]	@ (b87a4)
+   b86c6:	447a      	add	r2, pc
+   b86c8:	58d3      	ldr	r3, [r2, r3]
+   b86ca:	681a      	ldr	r2, [r3, #0]
+   b86cc:	9b03      	ldr	r3, [sp, #12]
+   b86ce:	405a      	eors	r2, r3
+   b86d0:	f04f 0300 	mov.w	r3, #0
+   b86d4:	d162      	bne.n	b879c
+   b86d6:	b004      	add	sp, #16
+   b86d8:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
+   b86dc:	4605      	mov	r5, r0
+   b86de:	2000      	movs	r0, #0
+   b86e0:	f758 efb0 	blx	11644 <time@plt>
+   b86e4:	4603      	mov	r3, r0
+   b86e6:	a802      	add	r0, sp, #8
+   b86e8:	9302      	str	r3, [sp, #8]
+   b86ea:	f758 ece0 	blx	110ac <localtime@plt>
+   b86ee:	f8df c0bc 	ldr.w	ip, [pc, #188]	@ b87ac
+   b86f2:	6980      	ldr	r0, [r0, #24]
+   b86f4:	44fc      	add	ip, pc
+   b86f6:	f8dc 3008 	ldr.w	r3, [ip, #8]
+   b86fa:	2b00      	cmp	r3, #0
+   b86fc:	d04a      	beq.n	b8794
+   b86fe:	f10c 0c04 	add.w	ip, ip, #4
+   b8702:	691a      	ldr	r2, [r3, #16]
+   b8704:	e9d3 1402 	ldrd	r1, r4, [r3, #8]
+   b8708:	4290      	cmp	r0, r2
+   b870a:	d807      	bhi.n	b871c
+   b870c:	469c      	mov	ip, r3
+   b870e:	b141      	cbz	r1, b8722
+   b8710:	460b      	mov	r3, r1
+   b8712:	691a      	ldr	r2, [r3, #16]
+   b8714:	e9d3 1402 	ldrd	r1, r4, [r3, #8]
+   b8718:	4290      	cmp	r0, r2
+   b871a:	d9f7      	bls.n	b870c
+   b871c:	b10c      	cbz	r4, b8722
+   b871e:	4623      	mov	r3, r4
+   b8720:	e7ef      	b.n	b8702
+   b8722:	4b23      	ldr	r3, [pc, #140]	@ (b87b0)
+   b8724:	447b      	add	r3, pc
+   b8726:	3304      	adds	r3, #4
+   b8728:	459c      	cmp	ip, r3
+   b872a:	d033      	beq.n	b8794
+   b872c:	f8dc 3010 	ldr.w	r3, [ip, #16]
+   b8730:	4298      	cmp	r0, r3
+   b8732:	d32f      	bcc.n	b8794
+   b8734:	f8dc 2014 	ldr.w	r2, [ip, #20]
+   b8738:	2301      	movs	r3, #1
+   b873a:	f8d5 10c0 	ldr.w	r1, [r5, #192]	@ 0xc0
+   b873e:	f002 021f 	and.w	r2, r2, #31
+   b8742:	4093      	lsls	r3, r2
+   b8744:	ea13 0001 	ands.w	r0, r3, r1
+   b8748:	d0bb      	beq.n	b86c2
+   b874a:	466c      	mov	r4, sp
+   b874c:	f105 0190 	add.w	r1, r5, #144	@ 0x90
+   b8750:	4620      	mov	r0, r4
+   b8752:	f7ff fbdd 	bl	b7f10
+   b8756:	f105 01a8 	add.w	r1, r5, #168	@ 0xa8
+   b875a:	4620      	mov	r0, r4
+   b875c:	e9dd 7500 	ldrd	r7, r5, [sp]
+   b8760:	f7ff fbd6 	bl	b7f10
+   b8764:	e9dd 8600 	ldrd	r8, r6, [sp]
+   b8768:	4620      	mov	r0, r4
+   b876a:	f758 e98e 	blx	10a88 <_ZNSt6chrono3_V212system_clock3nowEv@plt>
+   b876e:	e9dd 2300 	ldrd	r2, r3, [sp]
+   b8772:	42b5      	cmp	r5, r6
+   b8774:	bf08      	it	eq
+   b8776:	4547      	cmpeq	r7, r8
+   b8778:	d0a2      	beq.n	b86c0
+   b877a:	4542      	cmp	r2, r8
+   b877c:	eb73 0606 	sbcs.w	r6, r3, r6
+   b8780:	bfb4      	ite	lt
+   b8782:	2001      	movlt	r0, #1
+   b8784:	2000      	movge	r0, #0
+   b8786:	4297      	cmp	r7, r2
+   b8788:	f000 0001 	and.w	r0, r0, #1
+   b878c:	419d      	sbcs	r5, r3
+   b878e:	bfa8      	it	ge
+   b8790:	2000      	movge	r0, #0
+   b8792:	e796      	b.n	b86c2
+   b8794:	4807      	ldr	r0, [pc, #28]	@ (b87b4)
+   b8796:	4478      	add	r0, pc
+   b8798:	f758 ee4e 	blx	11438 <_ZSt20__throw_out_of_rangePKc@plt>
+   b879c:	f758 ed24 	blx	111e8 <__stack_chk_fail@plt>
+   b87a0:	d2f2      	bcs.n	b8788
+   b87a2:	000a      	movs	r2, r1
+   b87a4:	06b4      	lsls	r4, r6, #26
+   b87a6:	0000      	movs	r0, r0
+   b87a8:	d2da      	bcs.n	b8760
+   b87aa:	000a      	movs	r2, r1
+   b87ac:	ee00 000a 	cdp	0, 0, cr0, cr0, cr10, {0}
+   b87b0:	edd0 000a 	ldcl	0, cr0, [r0, #40]	@ 0x28
+   b87b4:	e4aa      	b.n	b810c
+   b87b6:	0005      	movs	r5, r0

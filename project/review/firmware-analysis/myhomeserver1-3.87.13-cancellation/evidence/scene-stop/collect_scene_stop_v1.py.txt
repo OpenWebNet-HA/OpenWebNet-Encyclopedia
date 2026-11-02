@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+"""Static loader/container/scene-ID insertion and captured callback-context alias proof."""
+import argparse,hashlib,importlib.util,json,struct,subprocess,sys
+from pathlib import Path
+sys.dont_write_bytecode=True
+D=Path(__file__).resolve().parent;P=D.parents[2];W=P.parents[2];H=lambda z:hashlib.sha256(z).hexdigest();J=lambda x:(json.dumps(x,sort_keys=True,indent=2)+'\n').encode()
+HELPER=P/'research/2026-10-31/image_vfs.py';sp=importlib.util.spec_from_file_location('registry_vfs',HELPER);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m)
+IMAGE='/home/bticino/scheduling_manager/scheduling_manager';SHA='7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26'
+SPANS=[('scene-stop-prefix',0xa60b0,0xa61fc),('worker-receiver',0xa6734,0xa677c),('poll-stack-binding',0xa683a,0xa6858),('action-dispatch-and-poll-cleanup',0xa6888,0xa6bdc),('first-launch-gates',0xa5db0,0xa5e6e),('completion-getter',0xcd97c,0xcd988)]
+CALLS=[(0xa6908,0xcd97c),(0xa6988,0xcd97c),(0xa6ae6,0xcd97c)]
+GUARDS=[(0xa6158,'0123'),(0xa615e,'85f89030'),(0xa6166,'d5e92045'),(0xa6174,'5b68'),(0xa6176,'9847'),(0xa684a,'0aad'),(0xa68b6,'99f80030'),(0xa691a,'8ded0a8b'),(0xa692a,'29462846'),(0xa693a,'99f80030'),(0xa6942,'3bbb'),(0xa6a98,'0023'),(0xa6aa0,'87f89130'),(0xa6aac,'87f89030'),(0xa5dbc,'90f84150'),(0xa5dd6,'90f89130'),(0xa5dee,'84f89130'),(0xa5dfa,'84f89060')]
+def build():
+ v=m.ImageVFS();b=v.read_bytes(IMAGE);assert H(b)==SHA;po=struct.unpack_from('<I',b,28)[0];sz,n=struct.unpack_from('<HH',b,42);loads=[]
+ for i in range(n):
+  q=struct.unpack_from('<8I',b,po+i*sz)
+  if q[0]==1:loads.append((q[2],q[1],q[4]))
+ def at(a,n):
+  for va,o,s in loads:
+   if va<=a and a+n<=va+s:return b[o+a-va:o+a-va+n]
+  raise ValueError(hex(a))
+ word=lambda a:struct.unpack('<I',at(a,4))[0]
+ bp=v.root/IMAGE.lstrip('/');out={};src=[]
+ for name,a,e in SPANS:
+  src.append({'name':name,'start_va':hex(a),'end_va_exclusive':hex(e),'bytes':e-a,'sha256':H(at(a,e-a))});out['spans/'+name+'.txt']=subprocess.check_output(['objdump','-d','-m','arm','-M','force-thumb','--dwarf=no-follow-links',f'--start-address={a}',f'--stop-address={e}',str(bp)],text=True).replace(str(W)+'/', '').encode()
+ calls=[]
+ for pc,target in CALLS:
+  a,z=struct.unpack('<HH',at(pc,4));assert a&0xf800==0xf000 and z&0xd000==0xd000;s=(a>>10)&1;i1=1-(((z>>13)&1)^s);i2=1-(((z>>11)&1)^s);imm=(s<<24)|(i1<<23)|(i2<<22)|((a&1023)<<12)|((z&2047)<<1);assert(pc+4+imm-((1<<25)if s else 0))&0xffffffff==target;calls.append({'call_va':hex(pc),'bytes_hex':at(pc,4).hex(),'target_va':hex(target)})
+ guards=[]
+ for a,h in GUARDS:assert at(a,len(bytes.fromhex(h))).hex()==h;guards.append({'va':hex(a),'bytes_hex':h})
+ assert at(0xa6bf8,8)==bytes.fromhex('0100000000000000')
+ inputs=[]
+ for p,z in [(bp,b),(HELPER,HELPER.read_bytes())]+[(P/q,(P/q).read_bytes())for q in ['research/2026-10-31-actions/common/REPORT.md','research/2026-10-31-actions/sleep/API_CONTEXT.json','research/2026-10-31-factories/runner/REPORT.md']]:inputs.append({'path':str(p.relative_to(W)),'bytes':len(z),'sha256':H(z)})
+ out.update({'INPUTS.v1.json':J(inputs),'SOURCE_SPANS.v1.json':J(src),'DIRECT_CALLS.v1.json':J(calls),'CRITICAL_BYTES.v1.json':J(guards),'POLL_LITERAL.v1.json':J({'pool_va':'0xa6bf8','bytes_hex':at(0xa6bf8,8).hex(),'words':[1,0],'load_va':'0xa6914','copy_va':'0xa691a','stack_pointer':'r5=SP+40 at0xa684a; r0=r1=r5 at0xa692a/0xa692c','import_call':'0xa692e to nanosleep PLT0x10e64','units':'Inherited original libc wrapper and ordinary nanosleep ABI: one second and zero nanoseconds; request not measured elapsed/cadence/deadline.'}),'FIELD_LEDGER.v1.json':J({'scene_stop144':{'set':'0xa615e=1','action_dispatch_read':'0xa68b6','poll_read_after_sleep':'0xa693a, nonzero branch0xa6942→0xa6994','clear':'0xa6aac=0 on selected normal cleanup'},'scene_active145':{'launch_guard':'0xa5dd6!=0 bypasses request','launch_set':'0xa5dee=1','cleanup':'0xa6aa0=0'},'action_completion4':{'reader':'0xcd97c directly called by polling','scope':'Separate from scene stop/active; no completion store in selected scene clear.'},'stop_virtual':'same compiled action vector128/132; slot+4 call0xa6176; known common/SLEEP/SCENARIO mapping inherited, not every derived class','normal_return':'Logging, C++/JSON/provider cleanup and live object/range assumptions explicit; exceptions/unwind/concurrency not closed.'}),'METHOD.v1.json':J({'original_execution':0,'host_models_or_scene_fixtures':0,'target_IO':0,'scope':'Positive scene stop/selected completion poll/normal scene-state clearing/one relaunch guard; not full CFG, natural callback/runtime or all derived actions. Global shared stop ownership is independently investigated, not inferred from scene byte clearing.','history':'No generated candidate overwritten. Pool bytes are data, not instructions. Ordinary ABI context reused from frozen prior report, no original provider execution.'})})
+ return out
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();out=build();out['OUTPUT_MANIFEST.v1.json']=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in out.items()})
+ if a.check:
+  for n,z in out.items():assert(D/n).read_bytes()==z,n
+ else:
+  assert not any((D/n).exists()for n in out),'refuse overwrite';S=D/'first-candidate';assert not S.exists();copies={**out,Path(__file__).name:Path(__file__).read_bytes()};idx=J({n:{'sha256':H(z),'bytes':len(z)}for n,z in copies.items()})
+  for n,z in out.items():p=D/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  for n,z in copies.items():p=S/n;p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(z)
+  (S/'SNAPSHOT.json').open('xb').write(idx)
+ print(json.dumps({'check':a.check,'outputs':len(out),'spans':len(SPANS),'calls':len(CALLS),'byte_guards':len(GUARDS),'poll_literals':1,'inputs':5,'original_execution':0}))
+if __name__=='__main__':main()

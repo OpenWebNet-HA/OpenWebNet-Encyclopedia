@@ -1,0 +1,41 @@
+{
+  "scope": "Exact independent/current-source-aware review records; final mechanical pending target resolution separately verified",
+  "exports": [
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/reviews/CATALOGUE_SOURCE_REVIEW.md",
+      "published": "catalogue-source-review.txt",
+      "size": 6602,
+      "sha256": "076f4e328091ed280c48522f9cc73c19757c57303509b4aa67e7001700543b17"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/reviews/CATALOGUE_SECOND_REVIEW.md",
+      "published": "catalogue-second-review.txt",
+      "size": 5126,
+      "sha256": "85ba6b50fc25a4b22a52ab5200b39431712e87e6b7fdccc2752ea7c415f90a97"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/reviews/OBJECTS_SOURCE_REVIEW.md",
+      "published": "objects-source-review.txt",
+      "size": 6643,
+      "sha256": "b6bc1ed1da1ed59f5c9605a387ec8080f613099740f516c7e0fe8532b491a00c"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/reviews/FIRMWARE_SOURCE_REVIEW.md",
+      "published": "firmware-source-review.txt",
+      "size": 5163,
+      "sha256": "6c5649a55cd704d60c40e7671ebe94f0ec39ecb71371c1e138b6504b62f7af77"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/reviews/INTEGRATION_REVIEW.md",
+      "published": "integration-review.txt",
+      "size": 9165,
+      "sha256": "e02a2acb8c8494a474fb19b8ea1f12729ecc602af1704c59da090dcf48255893"
+    },
+    {
+      "source": "work/mhcatalogue-comparison/2026-10-31/reviews/INTEGRATION_SECOND_REVIEW.md",
+      "published": "integration-second-review.txt",
+      "size": 7851,
+      "sha256": "73dfc318580f4b6bf6caa9049236714daee340ca5a0b8686013e32516aed592a"
+    }
+  ]
+}

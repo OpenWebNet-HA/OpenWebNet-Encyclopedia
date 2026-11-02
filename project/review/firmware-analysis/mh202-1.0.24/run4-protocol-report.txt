@@ -1,0 +1,92 @@
+# MH202 1.0.24 — final R0P0 factory ownership and response collector boundary
+
+**The normal completed factory leaves `R0P0` owned by General.** All five actual class C1 constructors contribute104 literal map-key assignments, and all104 keys are distinct. Thus the later classes do not overwrite General's selected key under the stated same-build/ordinary-container/no-later-mutation assumptions. This closes the specific final-owner gap retained in run3, without executing a factory or proving raw-parser acceptance.
+
+A separate original bt_device continuation exposes a new limitation: after a second parse/WHO-address lookup from a separately sourced text pointer, its response-type0/kind4/DIM0 route reads a local returned marker to choose collector mode8 versus7. If that second object also successfully parses as WHO1000, the null translator does not write that return structure. The second text/parsed-WHO identity and its prior storage state has not been exhaustively reconstructed, so this batch does **not** assign a deterministic collector mode from the selected request alone. This is an exact unfinished dataflow, not an uninitialized-memory defect or physical-failure claim.
+
+Original firmware/synced sources, completed dossiers and repository documents are unchanged. Only this run4 directory was written. Methods are host Python, ELF parsing, readelf metadata and objdump static decoding. Original ARM/JS/PHP/loader/vendor execution, emulation, code hooks, network/device/service operations and actual file/status/socket calls are all0. No authentication/credential/framing body was investigated.
+
+## Identity and inherited bounds
+
+Image paths below are inside the original firmware root. Normal-image inputs:
+
+| Object | SHA256 |
+| --- | --- |
+| `/home/bticino/lib/libdiag.so.0.0` | `72da849b0b589758d1c0ca07bf8922359fd7e28dff8e1c20f481f688815f31fe` |
+| `/home/bticino/bin/bt_device` | `65dad019cc15cf5036c04ec7ef23d0f9c2f388324f44692f43af37fd82192f70` |
+
+`input-hashes.json` also pins the shared accessor, firmware provenance and read-only run3 report/model. Run2's selected process/provider model and run3's null-WHERE/conditional first-vector/import findings are reused as explicit context. Their dependency tables, object layouts, map inventories and transport argument matrix are not repeated as new investigations. No F454 code or fixture is substituted.
+
+## 1. Complete class-constructor key coverage for the final-owner question
+
+The actual outer constructor is C1`0x24cb4`, not inferred from a nearest-symbol label: `outer-C1-consumer-binding.txt` records that definition and bt_device's corresponding C1 import relocation at`0x2e054`. This remains a candidate same-build binding, not a live loader observation.
+
+`complete-factory-registration-order.txt` preserves the original normal constructor order. For each class, the collector follows original literal-pointer loads to direct `std::string(char const*,...)` construction and then its known map operator[] call. Both positive and negative PC-relative LDR offsets are decoded. Every selected string-constructor call pairs one-to-one with a map-index call; no pending key is silently reused. All original full constructor ranges, literal/PC locators and resulting keys are saved in `all-class-literal-key-assignments.json`.
+
+| Factory order | Actual class C1 VA / size | Key assignments | Map field | Managed-key enumerator | Constructor call / registration call |
+| --- | --- | ---: | ---: | --- | --- |
+| General | `0x1a6e4` /5680 |55|+8|`0x14d5c`|`0x24dac` / `0x24de0`|
+| Termo | `0x21d14` /456 |4|+8|`0x209ec`|`0x24e04` / `0x24e38`|
+| Id | `0x1f4dc` /1036 |11|+8|`0x1e9ac`|`0x24e5c` / `0x24e90`|
+| KeyObj | `0x2af08` /1564 |17|+12|`0x26504`|`0x24eb4` / `0x24ef4`|
+| Ppt | `0x2fd68` /1564 |17|+12|`0x2c6a4`|`0x24f24` / `0x24f58`|
+
+The original class C1 jump-slot targets and managed-key vtable relocations are recorded in `C1-and-key-enumerator-relocations.txt`. Each saved enumerator iterates its own map and returns its keys; its map-field offset is independently asserted. Id's values are strings, while the other selected maps contain member pointers; that does not turn Id's values into additional outer keys. The extraction specifically associates the string **used for map indexing**, not every nearby printable literal.
+
+All104 assignments are104 unique keys, including across classes. General alone supplies `R0P0` (literal`0x3191d`, run2's actual member entry). The later key sets are retained in JSON rather than inferred from class names. They contain no `R0P0`; the collision set over these normal constructor assignments is empty.
+
+Run3 established that `initManagedFrames` indexes outer map[key] then assigns that class smart pointer; the saved registry span retains the exact assignment calls`0x24c54/0x24c5c`. Therefore the host consistency reconstruction leaves `R0P0→General` after all five registrations. This conclusion assumes all constructors/enumerators/assignments complete normally with the identified candidate providers and ordinary map/smart-pointer contracts. It excludes interposed constructors/getters, later external registry mutation and failed construction. It is not observed initialized memory or a universal immutable registry assertion.
+
+This is more than a string inventory: exact key-literal→string-constructor→map-index call chains, all selected constructor calls, enumerators and registration order are retained. It is still static reconstruction, not original code execution or full parser proof.
+
+## 2. Same response-type field reaches the caller's selected dispatcher
+
+The earlier selected General DIM0 method returns response-type0, and the outer translator obtains/stores its class response type at object+48 (`0x2376c`). The bt_device call is supplied a translator pointer at its global base+4 (`0x1e2d0`); the later dispatcher reads the same base+52 (`0x1ea88`), hence that object's +48 field. This is a numeric response-type namespace, separate from the outer method's Boolean result and parser kind4.
+
+At`0x1ea8c`, response4 selects a separate collector-argument route; response2 is tested at`0x1eac0`. A selected response0 takes neither and reaches the parsed-object measure predicate at`0x1eb3c`. This batch does not reinterpret response4/2 as the General0 case or repeat their full routes.
+
+The caller has already extracted DIM into r6 (`0x1e7ac..0x1e7b8`) and a decimal WHERE into r7 (`0x1e7c0..0x1e7e0`, skipping a leading `#` when present). For the explicitly assumed parsed WHO1000/DIM0/WHERE1/kind4 fields, r6=0 and r7=1 are host premises, not executed raw-parser outputs.
+
+## 3. A second local WHERE-result buffer matters to response collection
+
+Original`0x1e8f4..0x1e928` constructs a **second local parsed object** from a text pointer loaded from caller slot **FP−28672−2228** (`0x1e908/0x1e924`). The earlier original parsed-object pointer is loaded from distinct slot **FP−28672−2232**. This batch has not traced the source/relationship of those two slots, so it does not prove that the second text equals the selected original request or that the second object has WHO1000. It then calls `getScsAddr` at`0x1e93c` with structure-return destination **FP−224** (`0x1e938`). This is a different caller storage object from the General formatter's SP+372 result studied in run3.
+
+Under the **additional hypothesis that this second object successfully parses as WHO1000**, the reviewed libwhere helper returns without writing those bytes. The original request's assumed WHO1000 alone does not establish this second-object hypothesis. That does not synthesize a zero marker, and run3's observation that General ignored its result does not mean every later caller ignores a separate result.
+
+For response0/kind4, the selected DIM0 premise skips the DIM20/21 path (`0x1ec1c..0x1ec28`) and the unsigned DIM1..8 path (`0x1edd4..0x1eddc`). It reaches`0x1eed8`, which loads the marker byte from **FP−224**, and compares it with`0xd5` at`0x1eee4`:
+
+| Returned marker premise | Selected normal continuation |
+| --- | --- |
+| equals`0xd5` | r3 collector mode8 at`0x1efdc` |
+| differs from`0xd5` | r3 collector mode7 at`0x1f0f0` |
+
+Those are conditional code branches, not chosen fixture values. The second text's origin/parsed WHO and earlier initialization/stores/aliasing of FP−224 in the whole caller have **not** been exhaustively reconstructed. Accordingly this report does not call that storage guaranteed uninitialized, known zero, necessarily0xd5, a defect, a failure, or a reliable request-derived selector. The precise remaining question is the prior definition of that byte and its provenance at this second call.
+
+## 4. Concrete collector boundary and local ACK selection
+
+Both selected mode7/8 argument sequences reach the same original direct call at`0x1f168` to bt_device helper`0xf2dc`. The entry saves r0/r1/r2/r3 at`0xf2f0/0xf2f4/0xf304/0xf308`. Its caller supplies the selected descriptor pointer/state and original request object, r2=0, conditional mode7/8, and stack DIM/WHERE/context values. The DIM/WHERE and original request object are distinct from the second parser input whose returned marker influenced mode selection. No descriptor validity, collector mode meaning, accepted received frame, timeout or forwarding behavior is assigned from these call arguments alone.
+
+After the helper returns, the caller compares its result with0 at`0x1f174`; zero calls the imported `Extract_OpenOK` getter at`0x1f18c`, while nonzero calls `Extract_OpenKO` at`0x1f19c`. It passes that selected string to `invio_msg_open` at`0x1f1a8`. This is a local source return-dependent ACK-string choice and send-helper call site. It is not an observed acknowledgement, serial reply, successful output operation, physical support or a proof of the collector's return contract. This batch stops before interpreting the collector body or actual transport outcomes.
+
+The earlier conditional request `$048C000100` remains an internal candidate. Final normal-factory R0P0 ownership is now narrowed, but full raw parser/address normalization, request eligibility, actual caller storage/context, response collector and physical behavior remain distinct boundaries.
+
+## Reproduction and coverage
+
+```sh
+python3 work/mh202-firmware/research/2026-10-30/protocol/run4/collect_evidence.py --check
+```
+
+The collector reproduces32 deterministic outputs from6 pinned inputs:2 original ELFs, shared accessor/archive provenance and2 run3 artifacts. It saves25 original disassembly spans with file offsets/range hashes, records104 key-assignment chains/104 unique keys, checks10 selected class relocation records plus the outer C1 import/definition, and asserts20 selected instruction words plus the per-class map-offset/registration/pointer relations. It runs a static literal/direct-call pattern decoder and finite host consistency rules only. Original instructions/hooks are0/0.
+
+`output-manifest.json` pins the report, collector and generated evidence, excluding itself and future peer reviews. This is normal-image targeted scope, not complete firmware/recovery/runtime coverage. Original images, completed dossiers, source files and repo docs were not edited.
+
+## Next questions
+
+1. Establish the relation/origin of the distinct second text and original parsed-object slots, the second object's parsed WHO, and the prior definition of FP−224's marker before assigning collector mode7 or8 to WHO1000/DIM0. Maintain the distinction between helper nonwrite and whole-caller initialization.
+2. Statically trace a complete ordinary raw WHO1000 measure parser/address-normalization route now that normal-factory owner is determined; no synthetic string should become an accepted fixture without that proof.
+3. Decode one justified collector mode7/8 normal receive/qualification/completion path, preserving provider/descriptor/parser and ACK-output boundaries. Do not call source-level ACK choice a delivered acknowledgement.
+4. Retain the closed ordinary factory scope: interposition, external registry mutation, initialization failure and runtime/physical support are different questions.
+
+## Peer-review correction history
+
+The first author report called the second input “the request text,” without proving the relation between slots FP−28672−2228 and FP−28672−2232. Independent review identified that unsupported identity assumption. Current prose and model now separate those sources and explicitly require an additional second-parsed-WHO1000 hypothesis before applying the null-return result. This changes a prerequisite, not the original branch/registry facts or any executed outcome. Exact pre-review report, collector, model and manifest bytes are retained in `development-before-review/` with `snapshot-sha256.json`; no prior run dossier was rewritten.

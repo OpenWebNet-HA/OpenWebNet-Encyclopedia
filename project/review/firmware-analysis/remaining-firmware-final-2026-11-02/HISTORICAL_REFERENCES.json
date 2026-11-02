@@ -1,0 +1,35 @@
+{
+  "mappings": [
+    {
+      "current_bytes": 22983,
+      "current_sha256": "76e855cf78cfb618b60a6ee0df68805cab653c00384cf33c914502d6fda063bb",
+      "expected_old_sha256": "a7fc32f8063e19a678f6024942f97bde2a7118679360e0c063988fd3ba95411b",
+      "old_bytes": 22592,
+      "original_path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/f450-f453av-f455-f459-mh200n.md",
+      "reason": "Final bounded-investigation closure note/navigation; no semantic source upgrade",
+      "retained_export": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/remaining-firmware-final-2026-11-02/pre-edit/overview.txt",
+      "retained_local": "work/remaining-firmware-investigation/2026-11-02-final/integration/pre-edit/overview.md"
+    },
+    {
+      "current_bytes": 11635,
+      "current_sha256": "2a770e16c29599830e1257b890c6b20033e9154aaaec2c2973b3893dc22719dd",
+      "expected_old_sha256": "a4c84175a4a81c917b7d2fba567a8b203a1b43408fbbbf37279872d97ca0a9e9",
+      "old_bytes": 11620,
+      "original_path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/README.md",
+      "reason": "Final bounded-investigation closure note/navigation; no semantic source upgrade",
+      "retained_export": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/remaining-firmware-final-2026-11-02/pre-edit/firmware-index.txt",
+      "retained_local": "work/remaining-firmware-investigation/2026-11-02-final/integration/pre-edit/firmware-index.md"
+    },
+    {
+      "current_bytes": 10657,
+      "current_sha256": "800dbf69ca31d7d6420ededc3630512cbfe35d287685f636b7db8cdffed9476a",
+      "expected_old_sha256": "aef872bd6c65190fc42bc3444b02ac34f367ffd22795a3dae0985c76f6427c39",
+      "old_bytes": 10042,
+      "original_path": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/remaining-firmware-database-handoff.md",
+      "reason": "Final bounded-investigation closure note/navigation; no semantic source upgrade",
+      "retained_export": "OpenWebNet-Encyclopedia/project/review/firmware-analysis/remaining-firmware-final-2026-11-02/pre-edit/database-handoff.txt",
+      "retained_local": "work/remaining-firmware-investigation/2026-11-02-final/integration/pre-edit/database-handoff.md"
+    }
+  ],
+  "scope": "THREE exact expected-old-hash input mappings, no broad fallback/repinning/old validator replay"
+}

@@ -1,0 +1,7 @@
+# Run04 dual-analysis synthesis
+
+F460 original matrix source now connects a startup SQL template/global, constructor parameter substitution requests, the selected key89 object's SQL member, literal catalogue path/opening/prepare/step calls and column13 slots/column14 system-ID reads into own inner fields24/28. This is a selected consumer contract, not a complete selection algorithm or observed query. Repeated rows can overwrite fields; source lacks a selected first-ROW or null-column-text guard before conversion. Actual rows/provider/conversion outcomes, higher caller parameters and full error/resource behavior remain open without a defect claim.
+
+F461 actual scs field registration/configuration and its packed local route now join the previous matcher. Base route(1,0) alone does not match field(1,1); the command wrapper changes the upper word to one. Separate scsai route(1,2) shares lowword one, so namespaces and full64 comparison matter. Packaged enable values1/0 differ from fallback globals1/1; module/main/config selection and installed activation remain unproved. No physical alarm/bus role follows.
+
+Reviewed documentary integration adds these findings to the continuing firmware analysis and an explicitly separate F460/F461 appendix in catalogue source profiles. Earlier detailed owner-aware MHS/Suite comparisons are not reassigned to this third byte profile. New source/native/SQL/model/fixture/runtime/physical execution is zero; prior ledgers and histories remain separate unchanged.

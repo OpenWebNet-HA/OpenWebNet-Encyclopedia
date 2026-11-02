@@ -1,0 +1,51 @@
+{
+  "review": "../continuation-integration-review.md",
+  "review_sha256": "c71748ef102eb1b144883a92ae474456e686834e3e14333a0d28243727d4a04b",
+  "files": [
+    {
+      "source": "reverse-engineering/firmware-analysis/f454-2.0.51-continuation.md",
+      "snapshot": "reverse-engineering__firmware-analysis__f454-2.0.51-continuation.md.txt",
+      "sha256": "bacdad94f0e56c462f8d76757a0176f2c25990b59d36e6f20fe42027c860c2ea"
+    },
+    {
+      "source": "reverse-engineering/firmware-analysis/f454-2.0.51-follow-up.md",
+      "snapshot": "reverse-engineering__firmware-analysis__f454-2.0.51-follow-up.md.txt",
+      "sha256": "cee61700aed2526daf651fe423f8f86700a8924d1349b4e52af9c7fff0ba45b4"
+    },
+    {
+      "source": "reverse-engineering/firmware-analysis/f454-2.0.51.md",
+      "snapshot": "reverse-engineering__firmware-analysis__f454-2.0.51.md.txt",
+      "sha256": "b53c3dd934ece314cfe0b55b9738643647487d0d690dba5fd3d23051b270986a"
+    },
+    {
+      "source": "reverse-engineering/firmware-analysis/README.md",
+      "snapshot": "reverse-engineering__firmware-analysis__README.md.txt",
+      "sha256": "048199ee9310bc604eaaf116a371bd8f43f93d16c983fffd8b98c4ff922d65d9"
+    },
+    {
+      "source": "functional/who-4-temperature-control/dimensions.md",
+      "snapshot": "functional__who-4-temperature-control__dimensions.md.txt",
+      "sha256": "f42a1c8cb247eb4e99d05e12c46df7359b104cc17df70fa46e18e0ab47bd797e"
+    },
+    {
+      "source": "functional/who-18-energy-management/dimensions.md",
+      "snapshot": "functional__who-18-energy-management__dimensions.md.txt",
+      "sha256": "c86c9ebddd0572028a40f4810b9b18f431dc94b7f7be92f8e4a50acc4cd8e7e7"
+    },
+    {
+      "source": "functional/who-8-video-door-entry-telephony/README.md",
+      "snapshot": "functional__who-8-video-door-entry-telephony__README.md.txt",
+      "sha256": "652903dfd8f628d6b29f12800922464f95690baf0922a9075685a032d0443fe7"
+    },
+    {
+      "source": "devices/definitions/own-dev-0002-audio-video-web-server-gateway.md",
+      "snapshot": "devices__definitions__own-dev-0002-audio-video-web-server-gateway.md.txt",
+      "sha256": "f5f56c5a6a7dfd4e22d2cbffc521eae21028ddc98c752440b65856ccbde98021"
+    },
+    {
+      "source": "devices/work-queue.yaml",
+      "snapshot": "devices__work-queue.yaml.txt",
+      "sha256": "8146b54fc001af5379dd258b7b6a5b9567d2ca3cfae462cebcf7fcb1cd19bd3f"
+    }
+  ]
+}

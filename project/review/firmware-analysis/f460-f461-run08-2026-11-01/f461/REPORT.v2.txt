@@ -1,0 +1,36 @@
+# F461 run08 — local log-rotation configuration and service-selection policy
+
+This packet establishes an original F461 daemon branch beyond packaged startup declarations: decimal extras-status **1**, a separately configured receiver byte **360**, and `stat` of `/home/bticino/cfg/extra/70` jointly select local logging-service requests. It does not establish installed configuration, directory readiness, successful service startup, retained logs, or hardware behavior. All evidence is static; original instructions, target file calls, service calls and semantic models executed: **0**.
+
+The original `/home/bticino/bin/bt_daemon` is 141,968 bytes, SHA256 `b1a3f99cb78c97cd0aa98616c8074f56c8fd34fb10d2500138ea74ed5ed54c4e`, byte-identical in the verified normal and recovery trees. ELF64 AArch64 PT_LOAD mappings, exact spans, instruction guards, selected literal joins, and actual PLT-to-JUMP_SLOT identities are retained in `EVIDENCE.json`; original inputs are pinned in `INPUTS.json`. These identities do not prove that either image was booted. The curated F461 third-party-integration product role does not assign physical meaning to this internal logging policy.
+
+## Configuration field and initialization
+
+The selected default-initialization prefix at `0x190ec..0x1911c` takes its destination from the supplied X1 (`MOV X19,X1` at `0x190ec`) and writes byte zero at destination+360 (`0x19118`). This is a local initialization store, not an observed runtime reset.
+
+The XML text-handler fragment compares its current tag with literal `logrotation` (`0x1797c/0x17980`, literal VA `0x1ee88`) and branches on equality at `0x17988` to `0x17c14`. On that selected path, text equal to literal `0` or empty text writes byte zero (`0x17c28`); other supplied text writes byte one (`0x17c58/0x17c5c`). This is string comparison behavior, not decimal or full Boolean grammar validation. A separate key-file branch first requests `has_key` for `logrotation` (`0x195bc..0x195dc`); if present, it requests an integer and stores `value != 0` at the same destination-relative byte+360 (`0x1a2f4..0x1a314`). These are alternative local configuration producers; their full precedence and configuration-source selection remain outside this packet.
+
+Only a strict nonsecret whitelist is exported from packaged configuration: `/home/bticino/cfg/stack_open.xml` and `stack_open_reduced.xml` both contain `<logrotation>1</logrotation>` at line **62**, in both normal and recovery images. The entire files are hash-pinned but not reproduced. The callback's surrounding parser setup and selection of these files are inherited startup context, not a newly proved end-to-end parser execution here. A valid receiver carrying the selected configuration is a premise of the helper below.
+
+## Actual local status/file-result gate
+
+The original stripped helper is identified by its real VA **0x133f0**, not objdump's nearest unrelated exported symbol name. It preserves its receiver in X20, zeroes a local output buffer and requests `get_mystatus_extras_status(buffer)` at `0x13450`. It ignores that function's machine return, requests `strtol(buffer,NULL,10)` at `0x13460`, and compares the **low 32-bit result** against one at `0x13464`. Any unequal result goes directly to the normal epilogue at `0x134b8`. No full-string/end-pointer validation is performed in this selected fragment; the producer and meaning of the separate extras-status namespace are unclosed.
+
+When the low result equals one, it reads receiver byte+360 (`0x13470`). Zero takes a diagnostic-only branch and returns normally. Nonzero forms the exact local path `/home/bticino/cfg/extra/70` using the independently checked ADRP/ADD pair `0x1348c/0x13490`, then requests `stat(path,local_buffer)` at `0x134a0`.
+
+- `stat` return **zero** branches to `0x134fc`: request `hal_stop_SysLog_service`, request `logger::load_old_logs` on the loaded logger receiver, then request `hal_restart_SysLog`, and reach the normal epilogue.
+- Any **nonzero** `stat` result falls through: request `mkdir(path,0x1ff)` at `0x134b0`, then `hal_restart_SysLog` at `0x134b4`, and reach the normal epilogue. `0x1ff` is the requested numeric mode (0777 under the ordinary POSIX interpretation). The branch does not distinguish missing path from other errors, and does not test the `mkdir` result before restart.
+
+The selected code tests neither the stop/load/restart delegates' return values nor service readiness before returning. This is an ordering/request contract, not successful directory creation, durability, log restoration, or a whole helper Boolean result contract. The canary-protected epilogue is retained through complete RET at `0x134e4` and failure call at `0x13510`.
+
+## Caller and ownership boundary
+
+A real startup-prefix caller passes its same X19 receiver into this helper (`MOV X0,X19` at `0x62c0`, `BL 0x133f0` at `0x62c4`). The preceding selected prefix also requests local configuration loading via `0x19230`; this packet does not expand that whole parser or assert successful parsing. Additional exact direct calls to the same helper are proved at `0x63bc` and `0x1359c`. Their occurrence and scheduling are not observed, and the complete enclosing startup/control flows are not claimed.
+
+The imported names are established from original call instructions, actual AArch64 PLT ADRP/LDR slot resolution, and the executable's JUMP_SLOT relocations, rather than trusting a nearby disassembler label. Packaged dynamic providers, runtime interposition and all service/file/logger implementations are outside this packet. No receiving, output, transport, authentication, session, framing, MQTT or libjel implementation is expanded.
+
+## Reproduction and remaining question
+
+Run `python3 -B collect_boot_v2.py --check` from this directory for strict byte-for-byte reconstruction of the **11 outputs**, eight original spans, 18 exact instruction guards, five selected literal joins and nine import-call proofs. Generation is exclusive and refuses existing candidates; immediate `first-candidate-v2/` copies include the report and collector, with an index computed before its own file is opened. The first v1 generation and attempted check both stopped before output writes because a readelf section-header token was passed to hexadecimal conversion. FIRST_FAILURE.json is a later accurate transcription of these two captured failures. Exact v1 report/collector/failure and parent pre-v2 copies remain unchanged. NEW v2 restricts relocation-address parsing to exact hexadecimal row prefixes; it changes no source guard or interpretation. No generated candidate was overwritten.
+
+Highest next gaps are the actual selected configuration receiver/source precedence, concrete extras-status producer and status semantics, and the normal provider-side consequences/readiness of the named logging-service delegates. The available branch is not evidence of actual use, global logging guarantees, universal recovery behavior, or a product security/defect conclusion.

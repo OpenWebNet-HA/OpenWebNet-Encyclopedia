@@ -1,0 +1,24 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/scheduling_manager/scheduling_manager:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00025014 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x53e4>:
+   25014:	6a29      	ldr	r1, [r5, #32]
+   25016:	2900      	cmp	r1, #0
+   25018:	d148      	bne.n	250ac <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x547c>
+   2501a:	6a69      	ldr	r1, [r5, #36]	@ 0x24
+   2501c:	2900      	cmp	r1, #0
+   2501e:	d136      	bne.n	2508e <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x545e>
+   25020:	6aa9      	ldr	r1, [r5, #40]	@ 0x28
+   25022:	4620      	mov	r0, r4
+   25024:	f7eb ee12 	blx	10c4c <_ZN4Json5ValueC1Ej@plt>
+   25028:	4939      	ldr	r1, [pc, #228]	@ (25110 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x54e0>)
+   2502a:	4630      	mov	r0, r6
+   2502c:	4479      	add	r1, pc
+   2502e:	f7eb ee20 	blx	10c70 <_ZN4Json5ValueixEPKc@plt>
+   25032:	4621      	mov	r1, r4
+   25034:	f7ec e92e 	blx	11294 <_ZN4Json5ValueaSEOS0_@plt>
+   25038:	4620      	mov	r0, r4
+   2503a:	f7eb ee6e 	blx	10d18 <_ZN4Json5ValueD1Ev@plt>

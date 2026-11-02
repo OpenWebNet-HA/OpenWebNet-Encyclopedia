@@ -1,0 +1,50 @@
+# MyHOMEServer1 3.87.13: selected action request constants and parameters
+
+Original local descriptor constructor0xd20c0 writes version `2.0` and method `light.setStatus`. Its outer request ID is populated through imported UUID generation/unparse requests. Separately, selected converter0xd163c emits `params.id` from a present source string and `params.speed` from a present signed word. A positive source chain connects the first BN3L callable's captured ID and conditional positive speed word through its actual intervening merge into those converter input fields. These are local source contracts, not a demonstrated generated request, delivery, command support, physical light operation or elapsed schedule.
+
+Original image `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. VAs are linked original addresses; fresh ELF PT_LOAD translation is used. All originals and earlier packets remain read-only. The preceding action-output/callable packet supplies the reviewed capture/adapters and four-member request handoff to0x5dda0; it is cited, not rerun or replaced. No receiving/output/transport/MQTT/libjel/authentication/session/framing delegate body is inspected here.
+
+## Concrete descriptor identity and normal constructor writes
+
+Constructor0xd20c0 retains its output-storage argument r0 in r4. Two relocation-backed class headers occur during construction. GOT base0x1659a4 plus pool0xd22ac selects slot0x165fd0, whose original relative addend is header0x1607e8. Its RTTI name is `14JsonRpcRequest`; initial vptr is header+8. Later pool0xd22bc selects slot0x166460, relative addend header0x162154, RTTI name `18LightSetStatusBean`. At0xd2164 the final vptr is that header+8 (address point0x16215c). Its primary method points to Thumb0xd197d; that method body is outside this packet. The selected standalone parameter helper is0xd163c, not that primary virtual method, and the raw64-byte BN3L action and compiled116-byte action are separate objects.
+
+The original version literal resolves from pool0xd22b0 plus PC at0xd20e8 to0x116134, bytes `2.0\0`. Instructions0xd20ea..0xd2104 copy its three characters into the descriptor's first string (pointer+4, length+8, inline+12) and terminate it. The initial class/base representation therefore has a version string at object+4; the class name alone is not used to infer a wire protocol.
+
+The method literal resolves from pool0xd22c0 plus PC at0xd2170 to0x1361d4, exact `light.setStatus\0`. Instructions0xd2176..0xd21ac build a temporary15-character string and request the imported string assignment into descriptor+28. This is the string later used under the `method` key and also supplied as the second argument of the selected0x5dda0 callsite, as proved in the preceding packet. Normal valid string/assignment/provider returns remain premises. No neighboring method, device-family support or accepted external grammar is inferred from the literal.
+
+## Two UUID request pairs, one outer ID field
+
+After the first imported mutex lock returns0,0xd211c requests `uuid_generate_random` into localSP28. The constructor requests a36-character string at descriptor+52 and at0xd213a passes its data pointer to imported `uuid_unparse_lower`, then requests mutex unlock. Later, after a second lock returns0,0xd21ca requests generation again into the same local UUID storage,0xd21de requests lower-format conversion into a temporary36-character string, and0xd21ee requests assignment of that temporary into descriptor+52.
+
+Thus the selected normal path contains two generation/unparse request pairs, and the later string assignment replaces the earlier outer-ID string value. This is a positive source ordering fact; neither library was executed. No UUID bytes, uniqueness, successful randomness, actual identity or defect is inferred. Nonzero mutex-return branches request an imported system-error throw; error/unwind semantics are not audited. Normal canary/provider behavior is required for the return at0xd2214..0xd221c.
+
+The outer descriptor ID at+52 must remain distinct from the captured configured ID that becomes `params.id`. The former comes from the UUID API requests; the latter is copied from the action's captured string. They are not assumed equal or interchangeable.
+
+## Standalone parameter helper and two selected fields
+
+At0xd163c, r0 is destination JsonCpp storage and r1 is the source optional-field record; the helper saves them in r6 and r4. It requests a new JsonCpp value with local enum argument0. Under ordinary valid-object/provider returns, its source-specific presence tests determine which members are written. This is not an assertion of a whole provider or parser execution.
+
+- Source byte0 nonzero at0xd165e..0xd1664 selects0xd1772. That arm constructs a string JsonCpp value from source+4, looks up exact key `id` (PIC pool0xd1950, target0x116adc), requests move assignment and temporary destruction, then returns to the next local presence check. Byte0 is a presence marker, not the configured ID's integer value.
+- Source byte36 nonzero at0xd16f0..0xd16f6 selects0xd17d8. That arm loads source signed word40 into r1 and requests the original imported `Json::Value(int)` constructor, looks up exact key `speed` (PIC pool0xd195c, target0x115280), requests move assignment/destruction and proceeds to the next checks. The converter itself does not repeat the caller's positive-value comparison at this selected write.
+
+The exact constructor and JsonCpp accessor/assignment imports are verified through original BLX, ARM PLT stubs and jump-slot relocations. Their declarations/bindings are candidates, not evidence of live interposition, successful map allocation or actual JSON text output. No other parameter-field matrix, status-table semantics or physical speed unit/range is claimed.
+
+## Actual first-callable merge, rather than an offset substitution
+
+The preceding packet establishes the first52-byte capture's configured ID string at capture+4 and the compiled+112-derived word at capture0. In the first body, local source recordSP148 receives that ID and has presence byte0 set1. Original0xcf7a6..0xcf7b8 tests captured word0 signed>0; only on that selected condition it stores the word at source-record40 and sets source byte36=1. This is a caller condition, not a universal parameter domain or a supplied runtime fixture.
+
+Descriptor helper0xd20c0 is requested at0xcf7c0 with destinationSP404. Its normal constructor explicitly sets descriptor byte76=0 at0xd215a, so the original merge guard0xcf7c4..0xcf7ce takes the out-of-line0xd05ac branch. Because the local ID presence is1, that branch copies the source string+4 into descriptor+80, stores its length at+84, terminates it, and sets descriptor byte76=1 at0xd05f2 before rejoining0xcf7e4. The retained source includes the zero/one/multiple/long-string branches, imported string creation and memcpy requests; actual valid storage and normal provider returns remain conditional.
+
+At0xcf7f0..0xcf7f8, the original pair copy transfers localSP184/SP188 (recordSP148+36/+40) intoSP516/SP520. The actual converter source passed at0xcf900..0xcf904 isSP480, equal to descriptorSP404+76. Consequently those copied words are exactly converter source+36/+40, and the copied descriptor ID at+80 is converter source+4 with presence at source0. The schema offsets are joined through concrete original copies and call arguments, not by overlaying the prefix recordSP148 with the distinct converter inputSP480.
+
+The source therefore supports these selected conditional statements: a normally copied captured ID reaches the converter's `id` assignment, and a captured word satisfying the caller's signed>0 guard reaches its `speed` int-constructor request with byte36 nonzero. Other local record merges, status/name domains and complete payload validity remain outside the result. The first request's `params` value is then moved into the outer object by the previously reviewed callsite. The second callable's request constants can inherit the same descriptor constructor contract under normal returns, but this packet does not assert that its parameter record is populated identically or that it restores a prior physical state.
+
+## Reproducibility, preservation and limits
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-request-values/values/collect_values_v1.py --check`
+
+The exclusive collector records selected original code spans, critical byte guards, literal PIC joins, class/RTTI/relative relocations, direct local control-flow and selected external PLT import declarations. Code and pools/data are separately identified. It reproduces deterministic outputs without execution of original functions; generation refuses overwrite and immediately preserves exact output/report/collector copies with an index computed before opening it. First generation has no earlier generated candidate, output overwrite or canonical failure. Exploratory disassembly included surrounding pools and an unrelated next function; those are excluded from the retained selected code spans.
+
+Confidence is high for the bounded assignments, constants, caller merge and call arguments. Constructor/helper/caller blocks must actually be reached with valid objects and normal candidate-provider returns; no scene configuration, complete schema, active service, send result, runtime lifetime/concurrency, error handling or physical outcome is proved. No output delegate body or external parser was followed.
+
+New original execution, native/provider replay, semantic models and input fixtures are0. The saved cumulative MHS native experiment stays1 corpus,8 entries,340 original code-hook visits,0 C primitives,12 definition redirects,8 EXIT callbacks,0 guard stops,360 hooks and4 data-setup relocations. These new static source edges do not add a corpus or reset that ledger.

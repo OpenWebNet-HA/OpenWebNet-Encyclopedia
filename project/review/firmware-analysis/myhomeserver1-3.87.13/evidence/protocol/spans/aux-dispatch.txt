@@ -1,0 +1,29 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/home/bticino/libcoso/libplug_aux_tr.so:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000018d4 <aux_tr_translate@@Base>:
+    18d4:	e3500001 	cmp	r0, #1
+    18d8:	03510002 	cmpeq	r1, #2
+    18dc:	e92d4030 	push	{r4, r5, lr}
+    18e0:	e59d500c 	ldr	r5, [sp, #12]
+    18e4:	e1a04002 	mov	r4, r2
+    18e8:	0a00000a 	beq	1918 <aux_tr_translate@@Base+0x44>
+    18ec:	e3500002 	cmp	r0, #2
+    18f0:	03510001 	cmpeq	r1, #1
+    18f4:	e1a0e001 	mov	lr, r1
+    18f8:	03a00001 	moveq	r0, #1
+    18fc:	13a00000 	movne	r0, #0
+    1900:	18bd8030 	popne	{r4, r5, pc}
+    1904:	e1a02005 	mov	r2, r5
+    1908:	e1a00004 	mov	r0, r4
+    190c:	e8bd4030 	pop	{r4, r5, lr}
+    1910:	e1a01003 	mov	r1, r3
+    1914:	eafffe18 	b	117c <aux_tr_open2scs@plt>
+    1918:	e1a02005 	mov	r2, r5
+    191c:	e1a00004 	mov	r0, r4
+    1920:	e8bd4030 	pop	{r4, r5, lr}
+    1924:	e1a01003 	mov	r1, r3
+    1928:	eafffdc8 	b	1050 <aux_tr_scs2open@plt>

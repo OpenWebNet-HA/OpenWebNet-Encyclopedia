@@ -1,0 +1,70 @@
+[
+  {
+    "bytes_hex": "007a7047",
+    "va": "0x14e3c"
+  },
+  {
+    "bytes_hex": "2172",
+    "va": "0x15af8"
+  },
+  {
+    "bytes_hex": "0022",
+    "va": "0x15b54"
+  },
+  {
+    "bytes_hex": "0c46",
+    "va": "0x15b5c"
+  },
+  {
+    "bytes_hex": "2146",
+    "va": "0x15bf0"
+  },
+  {
+    "bytes_hex": "05f10800",
+    "va": "0x15bf2"
+  },
+  {
+    "bytes_hex": "0d46",
+    "va": "0x15c6c"
+  },
+  {
+    "bytes_hex": "0221",
+    "va": "0x15c70"
+  },
+  {
+    "bytes_hex": "0023",
+    "va": "0x15c78"
+  },
+  {
+    "bytes_hex": "c4e90053",
+    "va": "0x15c7c"
+  },
+  {
+    "bytes_hex": "0228",
+    "va": "0x155f6"
+  },
+  {
+    "bytes_hex": "6068",
+    "va": "0x1561c"
+  },
+  {
+    "bytes_hex": "b0fa80f0",
+    "va": "0x1561e"
+  },
+  {
+    "bytes_hex": "2068",
+    "va": "0x16ae8"
+  },
+  {
+    "bytes_hex": "0024",
+    "va": "0x17ecc"
+  },
+  {
+    "bytes_hex": "2046",
+    "va": "0x17ee6"
+  },
+  {
+    "bytes_hex": "00b1",
+    "va": "0x17f5e"
+  }
+]

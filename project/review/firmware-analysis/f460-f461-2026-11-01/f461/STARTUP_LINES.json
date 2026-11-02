@@ -1,0 +1,324 @@
+[
+  {
+    "path": "/etc/inittab",
+    "selected_lines": [
+      {
+        "line": 5,
+        "text": "id:5:initdefault:"
+      },
+      {
+        "line": 9,
+        "text": "si::sysinit:/etc/init.d/rcS"
+      },
+      {
+        "line": 27,
+        "text": "l5:5:wait:/etc/init.d/rc 5"
+      },
+      {
+        "line": 32,
+        "text": "mxc1:12345:respawn:/bin/start_getty 115200 ttymxc1 vt102"
+      }
+    ],
+    "sha256": "ad8d0055883f6261da2373e782dfe94c59723438f1bdf1103f31722ebd5a4bce"
+  },
+  {
+    "path": "/etc/init.d/rcS",
+    "selected_lines": [
+      {
+        "line": 32,
+        "text": "exec /etc/init.d/rc S"
+      }
+    ],
+    "sha256": "19ce896144ff4c85b826fe3cd5f940ff5d41ec19b6bb56f2966215da7888c7be"
+  },
+  {
+    "path": "/etc/init.d/rc",
+    "selected_lines": [
+      {
+        "line": 145,
+        "text": "\tfor i in /etc/rc$runlevel.d/S*"
+      },
+      {
+        "line": 147,
+        "text": "\t\t[ ! -f $i ] && continue"
+      },
+      {
+        "line": 170,
+        "text": "\t\t\t\tstartup $i start"
+      }
+    ],
+    "sha256": "fe3ec65c290c93066484033f332e035e498d6e9e6487de52a16c12d11979f466"
+  },
+  {
+    "path": "/etc/default/volatiles/00_core",
+    "selected_lines": [
+      {
+        "line": 34,
+        "text": "l root root 1777 /var/tmp /var/volatile/tmp"
+      },
+      {
+        "line": 35,
+        "text": "l root root 1777 /tmp /var/tmp"
+      },
+      {
+        "line": 71,
+        "text": "l root root 0777 /var/tmp/stack_open.xml /home/bticino/cfg/stack_open.xml"
+      }
+    ],
+    "sha256": "9bdd59b4adc07dbbe6964cf5930c53d150b54086aabb8ef3c6901d4547c8486b"
+  },
+  {
+    "path": "/etc/init.d/bt_daemon-apps.sh",
+    "selected_lines": [
+      {
+        "line": 15,
+        "text": "CFG_BASEDIR=/home/bticino/cfg"
+      },
+      {
+        "line": 16,
+        "text": "EXTRA_BASEDIR=${CFG_BASEDIR}/extra"
+      },
+      {
+        "line": 17,
+        "text": "DIR_USBKEY=${EXTRA_BASEDIR}/usbkey_dir"
+      },
+      {
+        "line": 19,
+        "text": "USER_LIBDIR=${DIR_USBKEY}/lib"
+      },
+      {
+        "line": 23,
+        "text": "\tFW_V=$(awk -F'[<>]' '/<ver_webserver>/ { print $3}' /home/bticino/sp/dbfiles_ws.xml) || true"
+      },
+      {
+        "line": 25,
+        "text": "\techo \"$FW_V\" > $FW_VER_FILE"
+      },
+      {
+        "line": 26,
+        "text": "\tif [ \"$FW_V\" != \"$OLD_FW_V\" ]; then"
+      },
+      {
+        "line": 27,
+        "text": "\t\trm -rf $DIR_USBKEY || true"
+      },
+      {
+        "line": 35,
+        "text": "\t\tlosetup /dev/loop2 $FILE_USBKEY || true"
+      },
+      {
+        "line": 36,
+        "text": "\t\tmount -o sync /dev/loop2 $DIR_USBKEY || true"
+      },
+      {
+        "line": 37,
+        "text": "\t\tif [ \"$(ls -A $USER_LIBDIR 2> /dev/null)\" ]; then"
+      },
+      {
+        "line": 39,
+        "text": "\t\t\trm /var/tmp/stack_open.xml || true"
+      },
+      {
+        "line": 40,
+        "text": "\t\t\tln -s ${CFG_BASEDIR}/stack_open_reduced.xml /var/tmp/stack_open.xml || true"
+      },
+      {
+        "line": 43,
+        "text": "\tif [ ! -d \"$DIR_USBKEY\" ] || [ ! -d \"$DIR_USBKEY/common-licenses\" ]; then"
+      },
+      {
+        "line": 45,
+        "text": "\t\tdd if=/dev/zero of=$FILE_USBKEY bs=1M count=50 || true"
+      },
+      {
+        "line": 46,
+        "text": "\t\tmkfs.vfat $FILE_USBKEY || true"
+      },
+      {
+        "line": 47,
+        "text": "\t\tfatlabel $FILE_USBKEY F461 || true"
+      },
+      {
+        "line": 56,
+        "text": "\t\tif [ -e ${CFG_BASEDIR}/ReadMe_OSS_F461.tar.gz ]; then"
+      },
+      {
+        "line": 57,
+        "text": "\t\t\tcp ${CFG_BASEDIR}/ReadMe_OSS_F461.tar.gz $DIR_USBKEY/ReadMe_OSS_F461.tar.gz >/dev/null 2>&1 || true"
+      },
+      {
+        "line": 63,
+        "text": "function wait_extra() {"
+      },
+      {
+        "line": 64,
+        "text": "\tS=$(( SECONDS + 10 ))"
+      },
+      {
+        "line": 65,
+        "text": "\twhile [ $SECONDS -lt $S ]; do"
+      },
+      {
+        "line": 67,
+        "text": "\t\tmount | grep extra -q || FOUND=0"
+      },
+      {
+        "line": 68,
+        "text": "\t\t[ \"$FOUND\" == \"1\" ] && break"
+      },
+      {
+        "line": 71,
+        "text": "\tif [ \"$FOUND\" == \"0\" ]; then"
+      },
+      {
+        "line": 73,
+        "text": "\t\tfsck.ext4 -y /dev/mmcblk0p7"
+      },
+      {
+        "line": 74,
+        "text": "\t\tmount /dev/mmcblk0p7 ${EXTRA_BASEDIR}"
+      },
+      {
+        "line": 75,
+        "text": "\t\t[ $? == 0 ] || reboot"
+      },
+      {
+        "line": 79,
+        "text": "function check_native() {"
+      },
+      {
+        "line": 80,
+        "text": "\tPERSISTENT=\"/home/bticino/cfg/extra/95/persistent/features\""
+      },
+      {
+        "line": 81,
+        "text": "\t[ -e \"${PERSISTENT}/netcom_native\" ] && rm -fr ${PERSISTENT}/netcom_native || true"
+      },
+      {
+        "line": 85,
+        "text": "\texport LD_LIBRARY_PATH=${USER_LIBDIR}:/usr/lib:/home/bticino/lib:/home/bticino/libcoso:/home/bticino/bt_netatmo/lib"
+      },
+      {
+        "line": 88,
+        "text": "\twhile [ ! -e /dev/ttyRPMSG30 ]; do sleep 0.1; done"
+      },
+      {
+        "line": 90,
+        "text": "\tcd /home/bticino"
+      },
+      {
+        "line": 91,
+        "text": "\tbin/bt_daemon &"
+      },
+      {
+        "line": 111,
+        "text": "\t\twait_extra"
+      },
+      {
+        "line": 112,
+        "text": "\t\tcheck_version"
+      },
+      {
+        "line": 113,
+        "text": "\t\tsetup_usbkey"
+      },
+      {
+        "line": 114,
+        "text": "\t\tcheck_native"
+      },
+      {
+        "line": 115,
+        "text": "\t\tstart &"
+      }
+    ],
+    "sha256": "39cfb97523c78c0bc61334f8ff1fea9da7d9a49353c561e56f3fb234fba3ff2e"
+  },
+  {
+    "path": "/etc/init.d/setup_m4.sh",
+    "selected_lines": [
+      {
+        "line": 4,
+        "text": "\tmodprobe imx_rpmsg_tty"
+      },
+      {
+        "line": 10,
+        "text": "\techo stop > /sys/class/remoteproc/remoteproc0/state"
+      },
+      {
+        "line": 15,
+        "text": "\techo mx_cortex-m.elf > /sys/class/remoteproc/remoteproc0/firmware"
+      },
+      {
+        "line": 16,
+        "text": "\techo start > /sys/class/remoteproc/remoteproc0/state"
+      },
+      {
+        "line": 18,
+        "text": "\tmodprobe imx_rpmsg"
+      },
+      {
+        "line": 19,
+        "text": "\tmodprobe imx_rpmsg_tty"
+      },
+      {
+        "line": 24,
+        "text": "\t\tstart &"
+      }
+    ],
+    "sha256": "ed40f3f69f3c79af4e74cb30aa83396437b3251fdfec111be16159c6db7d967d"
+  },
+  {
+    "path": "/etc/init.d/dedrifu_env.sh",
+    "selected_lines": [
+      {
+        "line": 2,
+        "text": "cat /proc/cmdline > /var/tmp/dedrifu_env.txt"
+      }
+    ],
+    "sha256": "4eb13580b3d0bcce2dd36af1dcd3337dbcef5436f967ad3b0d999abdd52e9041"
+  },
+  {
+    "path": "/home/bticino/bt_drover_mx/bt_drover_mx.sh",
+    "selected_lines": [
+      {
+        "line": 3,
+        "text": "trap 'killall bt_drover_mx; trap - SIGTERM; trap - SIGUSR1; trap - SIGUSR2; exit 0' SIGTERM"
+      },
+      {
+        "line": 4,
+        "text": "trap \"killall -SIGUSR1 bt_drover_mx; wait\" SIGUSR1"
+      },
+      {
+        "line": 5,
+        "text": "trap \"wait\" SIGUSR2"
+      },
+      {
+        "line": 7,
+        "text": "cd bt_drover_mx"
+      },
+      {
+        "line": 8,
+        "text": "./bt_drover_mx bt_drover_mx.conf &"
+      },
+      {
+        "line": 10,
+        "text": "wait"
+      }
+    ],
+    "sha256": "1c50567aca7f85a9ee10a4c0d1d3298b397e86d2dd47141282c955dafe226c37"
+  },
+  {
+    "path": "/etc/fstab",
+    "selected_lines": [
+      {
+        "line": 3,
+        "text": "/dev/root            /                        auto       ro              1  0"
+      },
+      {
+        "line": 8,
+        "text": "/dev/mmcblk0p7       /home/bticino/cfg/extra  ext4       rw,sync,noatime,noauto,errors=continue,data=journal   0  2"
+      }
+    ],
+    "sha256": "9ce26153f06360ff59bc22896e2e3026998d54e852c9ffa5ac12a3756f0aa784"
+  }
+]

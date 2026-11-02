@@ -1,0 +1,615 @@
+{
+  "checks": [
+    {
+      "check_identities": [
+        {
+          "bytes": 2162,
+          "copy": "source-inputs/dc2ea14ec0c632fb0bbc489cd64ed9a56563584e44536e3cb9e438807710bc42.bin",
+          "path": "work/f460-f461-comparison/2026-11-01/SOURCE_CHECKS.json",
+          "sha256": "dc2ea14ec0c632fb0bbc489cd64ed9a56563584e44536e3cb9e438807710bc42"
+        },
+        {
+          "bytes": 910,
+          "copy": "source-inputs/e5ffa4bf72d2a8c6c96292058993bae6d32bf22ed390f3ff85596e046bc640be.bin",
+          "path": "work/f460-f461-comparison/2026-11-01/FINAL_CHECKS.json",
+          "sha256": "e5ffa4bf72d2a8c6c96292058993bae6d32bf22ed390f3ff85596e046bc640be"
+        }
+      ],
+      "checkpoint": "2026-11-01",
+      "saved_completed_UTC": "2026-11-01T10:41:29.235809+00:00",
+      "saved_history_limit": "First candidates, exact pre-edit reference versions, original failed pre-output collector versions and narrowly refined report/metadata/document versions retained. Prior MH202 run18/run21 unavailable intermediate histories remain unverified.",
+      "saved_old_MHS_ledger": {
+        "EXIT_callbacks": 8,
+        "code_hook_steps": 360,
+        "guard_stop_callbacks": 0,
+        "linker_redirect_callbacks": 12,
+        "original_code_visits": 340,
+        "setup_data_relocations": 4
+      },
+      "saved_scope": "Separate canonical F460/F461 extraction/static first passes, independent source/documentary review and structural/typed-row comparative identities; no full source/Device/runtime/physical approval",
+      "saved_status": "PASS",
+      "scope": "Previously saved checks/status only; none rerun by this catalogue.",
+      "validation_identity": {
+        "bytes": 27374,
+        "copy": "source-inputs/cd0ca82fac38b18db01428ea2de7209ff87ffae39264e933024c8c13f7e58364.bin",
+        "path": "work/f460-f461-comparison/2026-11-01/IDENTITY_VALIDATION.json",
+        "sha256": "cd0ca82fac38b18db01428ea2de7209ff87ffae39264e933024c8c13f7e58364"
+      }
+    },
+    {
+      "check_identities": [
+        {
+          "bytes": 558,
+          "copy": "source-inputs/538c9dfa92170301aa214bb4b9942cb966f6741ffa36f293518ef740779a2274.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-depth/SOURCE_CHECKS.json",
+          "sha256": "538c9dfa92170301aa214bb4b9942cb966f6741ffa36f293518ef740779a2274"
+        },
+        {
+          "bytes": 870,
+          "copy": "source-inputs/dec63aadba0dcd32d0a358935276ff26fc68e139cb73c718dda4883e99ea1cae.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-depth/FINAL_CHECKS.json",
+          "sha256": "dec63aadba0dcd32d0a358935276ff26fc68e139cb73c718dda4883e99ea1cae"
+        }
+      ],
+      "checkpoint": "2026-11-01-depth",
+      "saved_completed_UTC": "2026-11-01T10:55:11.931627+00:00",
+      "saved_history_limit": "MH202 run18/run21 unavailable intermediate histories remain unverified",
+      "saved_old_MHS_ledger": {
+        "C_primitives": 0,
+        "EXIT": 8,
+        "FP_control_host_register_writes": 24,
+        "R0_SP_LR_host_register_writes": 24,
+        "corpora": 1,
+        "data_relocation_setups": 4,
+        "definition_redirects": 12,
+        "guard_stops": 0,
+        "original_code_hook_visits": 340,
+        "top_level_entries": 8,
+        "total_hooks": 360
+      },
+      "saved_scope": "Two selected original binary-source paths and exact source/review/document/history identities. No full Device/source/runtime/physical approval.",
+      "saved_status": "PASS",
+      "scope": "Previously saved checks/status only; none rerun by this catalogue.",
+      "validation_identity": {
+        "bytes": 26522,
+        "copy": "source-inputs/87c6cd66fcccef52832f2c11515e2d2bfc58043fc7a99b78f9d86cabd69cf0c9.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-depth/IDENTITY_VALIDATION.json",
+        "sha256": "87c6cd66fcccef52832f2c11515e2d2bfc58043fc7a99b78f9d86cabd69cf0c9"
+      }
+    },
+    {
+      "check_identities": [
+        {
+          "bytes": 641,
+          "copy": "source-inputs/232075a42983bddd7256e26ee7847b6b11ff01deb870f4aa881198f0f6a45b03.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run03/SOURCE_CHECKS.json",
+          "sha256": "232075a42983bddd7256e26ee7847b6b11ff01deb870f4aa881198f0f6a45b03"
+        },
+        {
+          "bytes": 863,
+          "copy": "source-inputs/ca6f6e1aff37f3f369e8c63f958b6f8b01f020354f1ae69b71c4f84a8f876a36.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run03/FINAL_CHECKS.json",
+          "sha256": "ca6f6e1aff37f3f369e8c63f958b6f8b01f020354f1ae69b71c4f84a8f876a36"
+        }
+      ],
+      "checkpoint": "2026-11-01-run03",
+      "saved_completed_UTC": "2026-11-01T11:12:44.672733+00:00",
+      "saved_history_limit": "All source/report/first copies unchanged. Exact landing snapshot and documentary insertion preserve historical pins. No new missing history; prior MH20218/21 limitations explicit.",
+      "saved_old_MHS_ledger": {
+        "C_primitives": 0,
+        "EXIT": 8,
+        "FP_control_host_register_writes": 24,
+        "R0_SP_LR_host_register_writes": 24,
+        "corpora": 1,
+        "data_relocation_setups": 4,
+        "definition_redirects": 12,
+        "guard_stops": 0,
+        "original_code_hook_visits": 340,
+        "top_level_entries": 8,
+        "total_hooks": 360
+      },
+      "saved_scope": "Two selected original binary-source paths and exact source/review/document/history identities. No full Device/source/runtime/physical approval.",
+      "saved_status": "PASS",
+      "scope": "Previously saved checks/status only; none rerun by this catalogue.",
+      "validation_identity": {
+        "bytes": 27995,
+        "copy": "source-inputs/27ad277dc13f40c60a4ffa0b419495c56398bccc70725feee5a6500e23dd0caf.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run03/IDENTITY_VALIDATION.json",
+        "sha256": "27ad277dc13f40c60a4ffa0b419495c56398bccc70725feee5a6500e23dd0caf"
+      }
+    },
+    {
+      "check_identities": [
+        {
+          "bytes": 644,
+          "copy": "source-inputs/8127383038c56926f009850b1dc5e2805340d6a64ba52d3d0971f49b30c35f04.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run04/SOURCE_CHECKS.json",
+          "sha256": "8127383038c56926f009850b1dc5e2805340d6a64ba52d3d0971f49b30c35f04"
+        },
+        {
+          "bytes": 854,
+          "copy": "source-inputs/bc82f5062578bbc431b9215af6009027b3e66d652e4e7084888332f0945683f0.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run04/FINAL_CHECKS.json",
+          "sha256": "bc82f5062578bbc431b9215af6009027b3e66d652e4e7084888332f0945683f0"
+        }
+      ],
+      "checkpoint": "2026-11-01-run04",
+      "saved_completed_UTC": "2026-11-01T11:50:10.085732+00:00",
+      "saved_history_limit": "Exact F460 v1/root-before-v2 and authoritative v2 plus failed-note history retained; one summary refinement has exact parent-before-edit/v1/v2 copies. No new missing history; prior MH20218/21 limitations remain explicit.",
+      "saved_old_MHS_ledger": {
+        "C_primitives": 0,
+        "EXIT": 8,
+        "FP_control_host_register_writes": 24,
+        "R0_SP_LR_host_register_writes": 24,
+        "corpora": 1,
+        "data_relocation_setups": 4,
+        "definition_redirects": 12,
+        "guard_stops": 0,
+        "original_code_hook_visits": 340,
+        "top_level_entries": 8,
+        "total_hooks": 360
+      },
+      "saved_scope": "Two selected original binary-source paths and exact source/review/document/history identities. No full Device/source/runtime/physical approval.",
+      "saved_status": "PASS",
+      "scope": "Previously saved checks/status only; none rerun by this catalogue.",
+      "validation_identity": {
+        "bytes": 29512,
+        "copy": "source-inputs/abb43ca3651081eeefbe636ee7e53e502e35f180367c36a12127eee2c14955e7.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run04/IDENTITY_VALIDATION.json",
+        "sha256": "abb43ca3651081eeefbe636ee7e53e502e35f180367c36a12127eee2c14955e7"
+      }
+    },
+    {
+      "check_identities": [
+        {
+          "bytes": 625,
+          "copy": "source-inputs/de0a8293b705c96587525d8107cde4f226b88ee3de5ee3ae0c78cad19fc1f85d.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run05/SOURCE_CHECKS.json",
+          "sha256": "de0a8293b705c96587525d8107cde4f226b88ee3de5ee3ae0c78cad19fc1f85d"
+        },
+        {
+          "bytes": 854,
+          "copy": "source-inputs/67e77a7ce27be6d80039ae7e46e3f8e07c54e2a5c825297c457519ca39f28a03.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run05/FINAL_CHECKS.json",
+          "sha256": "67e77a7ce27be6d80039ae7e46e3f8e07c54e2a5c825297c457519ca39f28a03"
+        }
+      ],
+      "checkpoint": "2026-11-01-run05",
+      "saved_completed_UTC": "2026-11-01T12:15:37.940850+00:00",
+      "saved_history_limit": "New source first generations/reproductions and documentary first candidate passed without correction. All previous failed/versioned/source/report/first-candidate histories remain protected. Prior MH20218/21 unavailable intermediate histories remain explicit.",
+      "saved_old_MHS_ledger": {
+        "C_primitives": 0,
+        "EXIT": 8,
+        "FP_control_host_register_writes": 24,
+        "R0_SP_LR_host_register_writes": 24,
+        "corpora": 1,
+        "data_relocation_setups": 4,
+        "definition_redirects": 12,
+        "guard_stops": 0,
+        "original_code_hook_visits": 340,
+        "top_level_entries": 8,
+        "total_hooks": 360
+      },
+      "saved_scope": "Two selected original binary-source paths and exact source/review/document/history identities. No full Device/source/runtime/physical approval.",
+      "saved_status": "PASS",
+      "scope": "Previously saved checks/status only; none rerun by this catalogue.",
+      "validation_identity": {
+        "bytes": 30238,
+        "copy": "source-inputs/4238070f57ee580477b8bdb6bd67254ce602b878732d9dffaf36166a7c58bc2f.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run05/IDENTITY_VALIDATION.json",
+        "sha256": "4238070f57ee580477b8bdb6bd67254ce602b878732d9dffaf36166a7c58bc2f"
+      }
+    },
+    {
+      "check_identities": [
+        {
+          "bytes": 618,
+          "copy": "source-inputs/0495b3f0f2084ba10a2e2f740c34c2c20288fad30a81322e3c44727af374bc24.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run06/SOURCE_CHECKS.json",
+          "sha256": "0495b3f0f2084ba10a2e2f740c34c2c20288fad30a81322e3c44727af374bc24"
+        },
+        {
+          "bytes": 854,
+          "copy": "source-inputs/98f662bdebf3541f1c1abe4e2229f0a2fd337ba19c382bee51b8cfec204b82c2.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run06/FINAL_CHECKS.json",
+          "sha256": "98f662bdebf3541f1c1abe4e2229f0a2fd337ba19c382bee51b8cfec204b82c2"
+        }
+      ],
+      "checkpoint": "2026-11-01-run06",
+      "saved_completed_UTC": "2026-11-01T12:48:31.051913+00:00",
+      "saved_history_limit": "No new canonical source generation/candidate correction. Valid-cast and method-identity precision recorded by source peer without changing author report. All old failed/versioned histories and MH20218/21 unavailable intermediate limitations remain protected.",
+      "saved_old_MHS_ledger": {
+        "C_primitives": 0,
+        "EXIT": 8,
+        "FP_control_host_register_writes": 24,
+        "R0_SP_LR_host_register_writes": 24,
+        "corpora": 1,
+        "data_relocation_setups": 4,
+        "definition_redirects": 12,
+        "guard_stops": 0,
+        "original_code_hook_visits": 340,
+        "top_level_entries": 8,
+        "total_hooks": 360
+      },
+      "saved_scope": "Two selected original binary-source paths and exact source/review/document/history identities. No full Device/source/runtime/physical approval.",
+      "saved_status": "PASS",
+      "scope": "Previously saved checks/status only; none rerun by this catalogue.",
+      "validation_identity": {
+        "bytes": 30749,
+        "copy": "source-inputs/2ea9edd57da1b2091242d301d6144ea20385353f40dd3e1dea9d6bc59cc1eb05.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run06/IDENTITY_VALIDATION.json",
+        "sha256": "2ea9edd57da1b2091242d301d6144ea20385353f40dd3e1dea9d6bc59cc1eb05"
+      }
+    },
+    {
+      "check_identities": [
+        {
+          "bytes": 648,
+          "copy": "source-inputs/5071ef4643f5e7f4d0690cc856d1ca378e25ed72b499d6bc83bdf9f8740ab2c2.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run07/SOURCE_CHECKS.json",
+          "sha256": "5071ef4643f5e7f4d0690cc856d1ca378e25ed72b499d6bc83bdf9f8740ab2c2"
+        },
+        {
+          "bytes": 840,
+          "copy": "source-inputs/e041c972aba2738ba3a3f217eb743b308d847fd08a2a90beebcce566741d7639.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run07/FINAL_CHECKS.json",
+          "sha256": "e041c972aba2738ba3a3f217eb743b308d847fd08a2a90beebcce566741d7639"
+        }
+      ],
+      "checkpoint": "2026-11-01-run07",
+      "saved_completed_UTC": "2026-11-01T13:20:58.320187+00:00",
+      "saved_history_limit": "No new canonical failure or source/documentary correction. Uncertain process caller stopped/excluded beforegeneration; only HALgetter spans promoted. Earlier failed/versioned histories and MH20218/21 limitations remain protected.",
+      "saved_old_MHS_ledger": {
+        "C_primitives": 0,
+        "EXIT": 8,
+        "FP_control_host_register_writes": 24,
+        "R0_SP_LR_host_register_writes": 24,
+        "corpora": 1,
+        "data_relocation_setups": 4,
+        "definition_redirects": 12,
+        "guard_stops": 0,
+        "original_code_hook_visits": 340,
+        "top_level_entries": 8,
+        "total_hooks": 360
+      },
+      "saved_scope": "Two selected original binary-source paths and exact source/review/document/history identities. No full Device/source/runtime/physical approval.",
+      "saved_status": "PASS",
+      "scope": "Previously saved checks/status only; none rerun by this catalogue.",
+      "validation_identity": {
+        "bytes": 31247,
+        "copy": "source-inputs/64543e83734717308fec83751a28cb361c30171c4c6833804acf1d0b59594f6d.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run07/IDENTITY_VALIDATION.json",
+        "sha256": "64543e83734717308fec83751a28cb361c30171c4c6833804acf1d0b59594f6d"
+      }
+    },
+    {
+      "check_identities": [
+        {
+          "bytes": 494,
+          "copy": "source-inputs/7f211626061a6124a4c5dd45b66f112ecd7d309ef626237b7e9c0a2bab41a5c1.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run08/SOURCE_CHECKS.json",
+          "sha256": "7f211626061a6124a4c5dd45b66f112ecd7d309ef626237b7e9c0a2bab41a5c1"
+        },
+        {
+          "bytes": 707,
+          "copy": "source-inputs/13e5c957bd8663bd6e0489a474904f8905b29d97bdeddb216abc1e93b9ae1361.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run08/FINAL_CHECKS.json",
+          "sha256": "13e5c957bd8663bd6e0489a474904f8905b29d97bdeddb216abc1e93b9ae1361"
+        }
+      ],
+      "checkpoint": "2026-11-01-run08",
+      "saved_completed_UTC": "2026-11-01T13:51:03.709166+00:00",
+      "saved_history_limit": "Exact failed/versioned source/validator/documentary candidates retained; see RUN_LOG and refinement histories. No new original behavior correction or missing draft history. MH20218/21 missing historical intermediates remain unverified.",
+      "saved_old_MHS_ledger": {
+        "C_primitives": 0,
+        "EXIT": 8,
+        "FP_control_host_register_writes": 24,
+        "R0_SP_LR_host_register_writes": 24,
+        "corpora": 1,
+        "data_relocation_setups": 4,
+        "definition_redirects": 12,
+        "guard_stops": 0,
+        "original_code_hook_visits": 340,
+        "top_level_entries": 8,
+        "total_hooks": 360
+      },
+      "saved_scope": "Two selected original update-manifest and daemon configuration/logging paths, exact source/review/history identities; no full source/Device/runtime/physical approval.",
+      "saved_status": "PASS",
+      "scope": "Previously saved checks/status only; none rerun by this catalogue.",
+      "validation_identity": {
+        "bytes": 31976,
+        "copy": "source-inputs/815f8d64ab6facb20876fd181c7e7ecdcad93054d966b96c8c20de3ec27b834b.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run08/IDENTITY_VALIDATION.json",
+        "sha256": "815f8d64ab6facb20876fd181c7e7ecdcad93054d966b96c8c20de3ec27b834b"
+      }
+    },
+    {
+      "check_identities": [
+        {
+          "bytes": 494,
+          "copy": "source-inputs/297656ccabe38633453e42c3ac13e6f10b72339b02db503b91c3f82ab461ca26.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run09/SOURCE_CHECKS.json",
+          "sha256": "297656ccabe38633453e42c3ac13e6f10b72339b02db503b91c3f82ab461ca26"
+        },
+        {
+          "bytes": 675,
+          "copy": "source-inputs/8dbf7f542a595a9d55a8a2ba25c11e742e1d888ee38efa1636a70edb278715c6.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run09/FINAL_CHECKS.json",
+          "sha256": "8dbf7f542a595a9d55a8a2ba25c11e742e1d888ee38efa1636a70edb278715c6"
+        }
+      ],
+      "checkpoint": "2026-11-01-run09",
+      "saved_completed_UTC": "2026-11-01T14:15:36.518425+00:00",
+      "saved_history_limit": "Both source first generations and current documentary/validator candidates pass without correction, failed generation or overwrite. Older exact failed/versioned histories and MH20218/21 unverified missing intermediates preserved.",
+      "saved_old_MHS_ledger": {
+        "C_primitives": 0,
+        "EXIT": 8,
+        "FP_control_host_register_writes": 24,
+        "R0_SP_LR_host_register_writes": 24,
+        "corpora": 1,
+        "data_relocation_setups": 4,
+        "definition_redirects": 12,
+        "guard_stops": 0,
+        "original_code_hook_visits": 340,
+        "top_level_entries": 8,
+        "total_hooks": 360
+      },
+      "saved_scope": "Two selected original binary-source paths and exact source/review/document/history identities. No full Device/source/runtime/physical approval.",
+      "saved_status": "PASS",
+      "scope": "Previously saved checks/status only; none rerun by this catalogue.",
+      "validation_identity": {
+        "bytes": 32404,
+        "copy": "source-inputs/60be0367a2c26ce51a3a4453e88c6e664145f56c5b549fe94ccffe0ec8e15650.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run09/IDENTITY_VALIDATION.json",
+        "sha256": "60be0367a2c26ce51a3a4453e88c6e664145f56c5b549fe94ccffe0ec8e15650"
+      }
+    },
+    {
+      "check_identities": [
+        {
+          "bytes": 478,
+          "copy": "source-inputs/4dc3545636c89523582da9264deebb3f5351cd28f0d1fc04b9420462cf8c70e6.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run10/SOURCE_CHECKS.json",
+          "sha256": "4dc3545636c89523582da9264deebb3f5351cd28f0d1fc04b9420462cf8c70e6"
+        },
+        {
+          "bytes": 664,
+          "copy": "source-inputs/b5e4f30139009ea2497ce0d3400f8f6495e902e51a8884d13adbe560b74c08af.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run10/FINAL_CHECKS.json",
+          "sha256": "b5e4f30139009ea2497ce0d3400f8f6495e902e51a8884d13adbe560b74c08af"
+        }
+      ],
+      "checkpoint": "2026-11-01-run10",
+      "saved_completed_UTC": "2026-11-01T14:44:52.468657+00:00",
+      "saved_history_limit": "F460 strict host v1guard failed before outputs; exact parent presnapshot/newv2 retained; first-copy report alias explicit. F461 exploratory CCMP correction before any files, no fabricated old hash. Current documentary/validator/gates pass; older histories/MH20218/21 limits protected.",
+      "saved_old_MHS_ledger": {
+        "C_primitives": 0,
+        "EXIT": 8,
+        "FP_control_host_register_writes": 24,
+        "R0_SP_LR_host_register_writes": 24,
+        "corpora": 1,
+        "data_relocation_setups": 4,
+        "definition_redirects": 12,
+        "guard_stops": 0,
+        "original_code_hook_visits": 340,
+        "top_level_entries": 8,
+        "total_hooks": 360
+      },
+      "saved_scope": "Two selected original binary-source paths and exact source/review/document/history identities. No full Device/source/runtime/physical approval.",
+      "saved_status": "PASS",
+      "scope": "Previously saved checks/status only; none rerun by this catalogue.",
+      "validation_identity": {
+        "bytes": 33163,
+        "copy": "source-inputs/0dc7d17f5285925c335a337532066568d200ed03fdfd68c2c2e0744ef612f28e.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run10/IDENTITY_VALIDATION.json",
+        "sha256": "0dc7d17f5285925c335a337532066568d200ed03fdfd68c2c2e0744ef612f28e"
+      }
+    },
+    {
+      "check_identities": [
+        {
+          "bytes": 533,
+          "copy": "source-inputs/ffdaa2207a2fcb81ea6ab4181c77733c5ad49ab49e16f90f8efbdac3d510fbef.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run11/SOURCE_CHECKS.json",
+          "sha256": "ffdaa2207a2fcb81ea6ab4181c77733c5ad49ab49e16f90f8efbdac3d510fbef"
+        },
+        {
+          "bytes": 653,
+          "copy": "source-inputs/b38846715c52efc6b26d1632c9b3ad111436822580d882ca2247ac750b49308f.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run11/FINAL_CHECKS.json",
+          "sha256": "b38846715c52efc6b26d1632c9b3ad111436822580d882ca2247ac750b49308f"
+        }
+      ],
+      "checkpoint": "2026-11-01-run11",
+      "saved_completed_UTC": "2026-11-01T15:17:57.504514+00:00",
+      "saved_history_limit": "Both source firstgenerations/currentdocumentary/validator candidates pass without correction/failure/overwrite; F460 caller/receiver identity remains OPEN. Earlier exact failed/versioned histories/MH20218/21 unavailableintermediates retained.",
+      "saved_old_MHS_ledger": {
+        "C_primitives": 0,
+        "EXIT": 8,
+        "FP_control_host_register_writes": 24,
+        "R0_SP_LR_host_register_writes": 24,
+        "corpora": 1,
+        "data_relocation_setups": 4,
+        "definition_redirects": 12,
+        "guard_stops": 0,
+        "original_code_hook_visits": 340,
+        "top_level_entries": 8,
+        "total_hooks": 360
+      },
+      "saved_scope": "Two selected original binary-source paths and exact source/review/document/history identities. No full Device/source/runtime/physical approval.",
+      "saved_status": "PASS",
+      "scope": "Previously saved checks/status only; none rerun by this catalogue.",
+      "validation_identity": {
+        "bytes": 33515,
+        "copy": "source-inputs/d7f5906f7d8b7a8afe532fcf0a049bd23720babd33be8b8561ed2818a2d8f59c.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run11/IDENTITY_VALIDATION.json",
+        "sha256": "d7f5906f7d8b7a8afe532fcf0a049bd23720babd33be8b8561ed2818a2d8f59c"
+      }
+    },
+    {
+      "check_identities": [
+        {
+          "bytes": 488,
+          "copy": "source-inputs/f18eb1164dbca36a7740d0eba4c0b2aa2e4797231ff552ea5837112f678b5a0c.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run12/SOURCE_CHECKS.json",
+          "sha256": "f18eb1164dbca36a7740d0eba4c0b2aa2e4797231ff552ea5837112f678b5a0c"
+        },
+        {
+          "bytes": 648,
+          "copy": "source-inputs/03e6857599fd2ecd7c03eda467814e221cf88c83e6bc31916f34a0ece07a1da3.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run12/FINAL_CHECKS.json",
+          "sha256": "03e6857599fd2ecd7c03eda467814e221cf88c83e6bc31916f34a0ece07a1da3"
+        }
+      ],
+      "checkpoint": "2026-11-01-run12",
+      "saved_completed_UTC": "2026-11-01T15:44:32.470711+00:00",
+      "saved_history_limit": "Both sourcefirstgenerations/currentdocumentary/validator pass without correction/failure/overwrite. Exploratory guessedhostrevision absent/noevidence; finalmetadata-selectedinput used. Allolderexactfailed/versioned histories/MH20218/21 limitations preserved.",
+      "saved_old_MHS_ledger": {
+        "C_primitives": 0,
+        "EXIT": 8,
+        "FP_control_host_register_writes": 24,
+        "R0_SP_LR_host_register_writes": 24,
+        "corpora": 1,
+        "data_relocation_setups": 4,
+        "definition_redirects": 12,
+        "guard_stops": 0,
+        "original_code_hook_visits": 340,
+        "top_level_entries": 8,
+        "total_hooks": 360
+      },
+      "saved_scope": "Two selected original binary-source paths and exact source/review/document/history identities. No full Device/source/runtime/physical approval.",
+      "saved_status": "PASS",
+      "scope": "Previously saved checks/status only; none rerun by this catalogue.",
+      "validation_identity": {
+        "bytes": 34069,
+        "copy": "source-inputs/acd8791df13a5553f1757b4045a00cd541bafc64cc409253f91492cfebda5058.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run12/IDENTITY_VALIDATION.json",
+        "sha256": "acd8791df13a5553f1757b4045a00cd541bafc64cc409253f91492cfebda5058"
+      }
+    },
+    {
+      "check_identities": [
+        {
+          "bytes": 496,
+          "copy": "source-inputs/8c195ff96412882b9f197310d75f4eaffb6d57488c2fa9b2610a0a03a96fdf28.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run13/SOURCE_CHECKS.json",
+          "sha256": "8c195ff96412882b9f197310d75f4eaffb6d57488c2fa9b2610a0a03a96fdf28"
+        },
+        {
+          "bytes": 647,
+          "copy": "source-inputs/45c6f19f1edcd4f86c3dd8beba6e3ab4b0e7622e2e3f92c9dd91c0f37358151b.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run13/FINAL_CHECKS.json",
+          "sha256": "45c6f19f1edcd4f86c3dd8beba6e3ab4b0e7622e2e3f92c9dd91c0f37358151b"
+        }
+      ],
+      "checkpoint": "2026-11-01-run13",
+      "saved_completed_UTC": "2026-11-01T16:17:07.553244+00:00",
+      "saved_history_limit": "F461 report-onlyv2 one-sentence scope refinement after exactparent3files, oldreport/code/results/firstcandidate unchanged; currentv2 separateidentity. Both sourcefirstgens/currentdocumentary/validator/gates pass, no failedgeneration/overwrite. Oldhistories/MH20218/21 limits protected.",
+      "saved_old_MHS_ledger": {
+        "C_primitives": 0,
+        "EXIT": 8,
+        "FP_control_host_register_writes": 24,
+        "R0_SP_LR_host_register_writes": 24,
+        "corpora": 1,
+        "data_relocation_setups": 4,
+        "definition_redirects": 12,
+        "guard_stops": 0,
+        "original_code_hook_visits": 340,
+        "top_level_entries": 8,
+        "total_hooks": 360
+      },
+      "saved_scope": "Two selected original binary-source paths and exact source/review/document/history identities. No full Device/source/runtime/physical approval.",
+      "saved_status": "PASS",
+      "scope": "Previously saved checks/status only; none rerun by this catalogue.",
+      "validation_identity": {
+        "bytes": 34752,
+        "copy": "source-inputs/4a38352457e2f1d72e49d4fe3434ea81ca81ae7b7723ed7d034625f1c0eff119.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run13/IDENTITY_VALIDATION.json",
+        "sha256": "4a38352457e2f1d72e49d4fe3434ea81ca81ae7b7723ed7d034625f1c0eff119"
+      }
+    },
+    {
+      "check_identities": [
+        {
+          "bytes": 484,
+          "copy": "source-inputs/b99ed25cdbf139907195b6488020d1796960f87bcde26a2cdeefd15af3a1d93c.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run14/SOURCE_CHECKS.json",
+          "sha256": "b99ed25cdbf139907195b6488020d1796960f87bcde26a2cdeefd15af3a1d93c"
+        },
+        {
+          "bytes": 648,
+          "copy": "source-inputs/dc008253d649070dedd06569e41cd572a1051f53ae8660be8584acb4b73c0b12.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run14/FINAL_CHECKS.json",
+          "sha256": "dc008253d649070dedd06569e41cd572a1051f53ae8660be8584acb4b73c0b12"
+        }
+      ],
+      "checkpoint": "2026-11-01-run14",
+      "saved_completed_UTC": "2026-11-01T16:47:20.757756+00:00",
+      "saved_history_limit": "Stagedunexecutedonefile F460v1collector retained before3pointer/versionfixes, no oldreport/output/canonicalfailure. Parentpreliminaryone-sentence appendixscopefix preserved beforepubliccandidate. Currentcanonicalsource/documentary/validator/gatesPASS. Olderhistories/MH20218/21 limits protected.",
+      "saved_old_MHS_ledger": {
+        "C_primitives": 0,
+        "EXIT": 8,
+        "FP_control_host_register_writes": 24,
+        "R0_SP_LR_host_register_writes": 24,
+        "corpora": 1,
+        "data_relocation_setups": 4,
+        "definition_redirects": 12,
+        "guard_stops": 0,
+        "original_code_hook_visits": 340,
+        "top_level_entries": 8,
+        "total_hooks": 360
+      },
+      "saved_scope": "Two selected original binary-source paths and exact source/review/document/history identities. No full Device/source/runtime/physical approval.",
+      "saved_status": "PASS",
+      "scope": "Previously saved checks/status only; none rerun by this catalogue.",
+      "validation_identity": {
+        "bytes": 35061,
+        "copy": "source-inputs/d826144f68248db339825d8f3f0bcccf57544ae7b98b97a5972901822a471341.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run14/IDENTITY_VALIDATION.json",
+        "sha256": "d826144f68248db339825d8f3f0bcccf57544ae7b98b97a5972901822a471341"
+      }
+    },
+    {
+      "check_identities": [
+        {
+          "bytes": 506,
+          "copy": "source-inputs/c7d0a924a2cbad434188ed5117072fc058d7cc0b7f6ca269b3fd44b796d490dc.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run15/SOURCE_CHECKS.json",
+          "sha256": "c7d0a924a2cbad434188ed5117072fc058d7cc0b7f6ca269b3fd44b796d490dc"
+        },
+        {
+          "bytes": 904,
+          "copy": "source-inputs/0dd4bda90d4a14165ea2c95fda614321a8678f1a0b36608f970f58d7741423f1.bin",
+          "path": "work/f460-f461-comparison/2026-11-01-run15/FINAL_CHECKS.json",
+          "sha256": "0dd4bda90d4a14165ea2c95fda614321a8678f1a0b36608f970f58d7741423f1"
+        }
+      ],
+      "checkpoint": "2026-11-01-run15",
+      "saved_completed_UTC": "2026-11-01T17:20:27.478309+00:00",
+      "saved_history_limit": null,
+      "saved_old_MHS_ledger": {
+        "C_primitives": 0,
+        "EXIT": 8,
+        "FP_control_host_register_writes": 24,
+        "R0_SP_LR_host_register_writes": 24,
+        "corpora": 1,
+        "data_relocation_setups": 4,
+        "definition_redirects": 12,
+        "guard_stops": 0,
+        "original_code_hook_visits": 340,
+        "top_level_entries": 8,
+        "total_hooks": 360
+      },
+      "saved_scope": "Final two selected original binary-source packets and exact source/review/document/history identities; saved checks and host hashes only, no full Device/runtime/physical approval.",
+      "saved_status": "PASS",
+      "scope": "Previously saved checks/status only; none rerun by this catalogue.",
+      "validation_identity": {
+        "bytes": 36694,
+        "copy": "source-inputs/db834a70fea933910b686746b9b2ebccbc01b09cb725a1a0853676520e719d93.bin",
+        "path": "work/f460-f461-comparison/2026-11-01-run15/IDENTITY_VALIDATION.json",
+        "sha256": "db834a70fea933910b686746b9b2ebccbc01b09cb725a1a0853676520e719d93"
+      }
+    }
+  ],
+  "scope": "Historical saved results only, no rerun"
+}

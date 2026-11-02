@@ -1,0 +1,21 @@
+{
+  "files": {
+    "INPUTS.json": {
+      "bytes": 1417,
+      "sha256": "7ee8fdcf5f7892681d76277836d34f2658fd25a61c16e1b617b7175ad7fba96c"
+    },
+    "POINTER_FLOW.json": {
+      "bytes": 1529,
+      "sha256": "a7024291d81dfcdfbcd77e76f78384088b37e59991cc05cef5663c7f014cc00f"
+    },
+    "REPORT.md": {
+      "bytes": 6363,
+      "sha256": "908ed410d6954c8080c0a50821ca1cbbd5e7c2533b7b4320893aebc4d6004f4c"
+    },
+    "SOURCE.json": {
+      "bytes": 16710,
+      "sha256": "877a472b9766e671f271e84a3ce3002072968b97a7f9284c092df7ec5e87c017"
+    }
+  },
+  "scope": "Generated members excluding this manifest"
+}

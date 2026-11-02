@@ -1,0 +1,43 @@
+# F450 night04 independent configuration-producer source review
+
+**PASS. No author correction requested.** The new positive contract is a registered supplied-owner callback whose selected db_name branch stores a duplication-request return at owner+76 and whose selected db_compressed branch stores a numeric-conversion return at owner+80. These match the prior selected consumer offsets under explicit ownership/admission premises. Extra/check50 identity, decoder/extraction behavior, effective configuration and recovered database remain open.
+
+I read the frozen collector/report/source/spans/producer-flow/inputs and performed its permitted read-only reproduction: `python3 -B work/f450-firmware/2.0.10/research/2026-11-01-night04-config-source/collect_config_v1.py --check`. Actual result PASS, six outputs,20 spans, seven exact first copies, original execution0. I separately decoded the original ELF/program headers, mapped and compared all20 spans,49 word guards,15 branch targets,11 pool joins, five safe literal ranges and eight actual PLT/GOT/JUMP_SLOT relationships. Independent artifact checks verified both original input identities, all generated manifest members and seven first copies. The independent audit JSON retains counts, exact frozen identities and one small reviewer-only table-allocation bridge. Original/helper/provider/target instructions were never executed.
+
+## Supplied owner and callback registration
+
+Fresh original bt_daemon SHA25685e7ca65b4d1c4e8ab23a93ac532aea568dd06272fefb1b1be928eeba18f3d73 is ELF32 little-endian ARM EXEC/machine40/flags0x5000002 with its own file-backed PT_LOAD mapping. At0xfafc..0xfb14 the selected caller requests calloc(1,240), saves returnedR0 viaR3 at lexicalFP-40, then supplies the loaded word to0x12908. The local forwarder preserves providedR0 atFP-8, loads a pathname through original global0x23a74 and supplies the same owner asR1 to0x15744. The initialized global→0x19ee8→/var/tmp/stack_open.xml chain is exact; a writable global initializer does not establish its live value or file contents.
+
+Loader0x15744 uses signed pool offsets relative toFP-4. Independent arithmetic gives filenameFP-4120 and ownerFP-4124, without interchanging the two. Its selected later table stores put local callback0x1682c at table+8, then g_markup_parse_context_new receives that table,R1=0,same saved ownerR2,R3=0. The author spans omit the intervening allocation block, so I independently retained exact original0x1579c..0x157d4 bytes and the actual g_malloc0_n import metadata in the separate review audit: selected0x157c8 requests(1,20), then retains its machine return atFP-8. This corroborates the report's allocated-table request wording without assuming allocation success or executing that provider.
+
+The saved parser result is supplied asR0 at the selected parse request; the same4096-byte stack-buffer address supplied to read is supplied asR1 to parse, with saved read machine return asR2. Effective parser/input validity and normal read/parse/provider outcomes remain premises. Neither read requests nor the provided count establish actual bytes, success, complete XML or universal parser admission.
+
+## Actual text and numeric producers
+
+Callback0x1682c saves entryR1 atFP-52 andR2 atFP-56. EntryR3 is first saved atFP-60 and reloaded into the owner slotFP-40. Thus the report's retainedR3/FP-40 description is a qualified dataflow, not an assertion that the very first instruction storesR3 there. Under ordinary GLib markup ABI and actual provider binding those entry arguments have text, length and userdata-owner roles. Owner+168 supplies the selected list pointer. Exact root and later fullip_addressbook comparison requests qualify selected handling, while intervening decisions, valid list/object state, callback routing and lifetime remain explicit premises. I did not inspect start/end callback implementations or invent complete schema/list-population behavior.
+
+At0x17334 the original db_name literal is the comparison argument. The comparison's numeric-zero return is transformed to a Boolean and the selected fallthrough reaches0x1735c/0x17360, forwarding saved text and length asR0/R1 to actual strndup0xa1c4. The returned word flows viaR3 thenR2 into STR[R3+76] at0x17374, after reloading the saved owner intoR3. On the alternative selected db_compressed branch the numeric-zero comparison admits0x173ac→actual atoi0xa374; returnedR0 goes toR2, saved owner reloads intoR3, and0x173bc storesR2 at+80. These are source request/store contracts. I verified the original safe key bytes and exact output offsets, without supplying text, filename, integer, credentials or allocation values. Comparison/duplication/conversion providers remain opaque; string termination/length validity, expected ABI, binding, allocation and live ownership are not inferred from the requests.
+
+The later lexicalFP-40 loads at0x1145c/0x11464 respectively supply separate parser0x158f0 and selected prior consumer-caller0xf96c. The early allocation and later slot use do not prove uninterrupted natural flow or unchanged valid ownership across all unexamined code. The report keeps no invalidating aliases/mutations, lifetime, admission and actual effective fields conditional; this is essential to composing the new producer with the prior consumer. Equal offsets alone do not prove a runtime object instance.
+
+## XML, database and preservation limits
+
+Independent parsing verified only the whitelisted packaged XML facts: root tag, zero fullip_addressbook nodes, separate extra enable0/check50/empty nocheck. No complete configuration or adjacent private values are emitted. The packaged home/bticino/cfg path is distinct from the inspected /var/tmp initializer; copying/identity/effective-config relations are unproved. These safe declarations and db_name/db_compressed do not establish extra50 association, an archive path, decoder, key or password. The other unzip site and closed receiving/output/transport/authentication/session/framing/MQTT/libjel bodies remain unexpanded.
+
+All author/original/synced/completed files stayed unchanged. Static host readelf/disassembly/hash/XML readers are distinct from original execution. No original/vendor/native/helper/emulator/model/SQL/targetOS/device/network/bus/mount/flash/physical execution, extraction/decryption trial, synthetic database, remote write or upload occurred. No original database was recovered. The inherited archive remains one encrypted F450 support container and zero plaintext databases; parent alone controls remote archival operations. Previous MHS340 code-hook-visits/360hooks and separate F454/MH202 ledgers are unchanged, and no old corpus/collector was replayed. No staging, commits, publication or source-manifest edit was performed.
+
+## Frozen reviewed identities
+
+All paths below are within `work/f450-firmware/2.0.10/research/2026-11-01-night04-config-source`.
+
+| Member | Bytes | SHA-256 |
+|---|---:|---|
+| `INPUTS.json` | 432 | `a1d63fe63658cfc64e413455cf79cce424e8074068e4e46b1ae90b5ccfdccae1` |
+| `OUTPUT_MANIFEST.json` | 820 | `a8586a8d408300abdff46db6f0f63c64a825ace6294248e3b96b7a3e8bc0c65e` |
+| `PRODUCER_FLOW.json` | 1940 | `bc8b9ff977be55940ebe128d7997b81413ad23c6dafb729b10175e3e03518aa8` |
+| `REPORT.md` | 5332 | `e8de9351b23a232ab5898a7023f342f11fb40418a9773367c95575b1bfe88db7` |
+| `SOURCE.json` | 7847 | `a7bace175e8a5cab4167ffbaf44d33258ca7660411864f3ad1994dcbf7f33761` |
+| `SPANS.json` | 6232 | `592aab749233b837648b3c8ab46eb481b122dfc6b0a051b51a3ac6e9475c0d47` |
+| `collect_config_v1.py` | 14551 | `1c0769d6c64bf652a4f444d47bd50ca4cb28209a870e62e7e2fee4c2bc081c09` |
+
+Completed 2026-11-01T21:19:38.807273+00:00. This review is created exclusively with an immediate exact first copy and a precomputed non-circular index. The independent audit has its own exact first copy/index. No author correction or generated overwrite was requested.

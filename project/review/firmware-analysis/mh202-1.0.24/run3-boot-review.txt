@@ -1,0 +1,37 @@
+# MH202 boot run3 independent static review
+
+**PASS within the stated source/control-flow scope. No material correction requested.** Independently reproduced `boot/run3/collect_startup.py --check`: 21 outputs, ten original spans, 16 word assertions, 12 input pins, eight Boolean cases, original instructions/hooks0/0. All **24** producer-manifest entries independently match current bytes. No shell, XML callback, status file, connection helper, firmware instruction, service or network executed.
+
+## Critical checks
+
+- The original00_core line82 declares the exact runtime XML symlink and line46 separately declares `/var/tmp`→`/var/volatile/tmp`. Packaged S37 link names populate-volatile.sh. This is a producer policy, not a packaged resolved `stack_open.xml` symlink or actual runtime presence.
+- Original populate-volatile.sh selected ranges and its actual ending confirm six-field parsing, type-l handling, existing-link/file guards, background link_file and background eval. Packaged cache setting is no, with cache/config-iteration alternatives retained. The script has no later explicit wait completing these requests. Report correctly avoids a completion/readiness guarantee or an inferred chmod from0777.
+- Daemon's original config pointer/wrapper/binding agree with prior reviewed evidence: temporary runtime filename, config+100 list and launch object are concrete; effective runtime XML equality with packaged source remains conditional. Whole normal-image literal scan is accurately described as locators, not proof of all rewrite roles or indirect-name absence.
+- Original ordinary child branch0xf91c reaches0xc7f0, with launcher call0xee88; it does not itself prove working mode1 or readiness. Original later daemon consumer0xef08/0xef10/0xef18 reads/converts/compares1 behind config/global guards. Distinct status namespaces are retained.
+- Openserver uses three **different buffers**: recovery-kernel SP+0x8234, extras SP+0x8134, configuration SP+0x8034. All three getter calls precede the independent config/extras/kernel atoi comparisons with1. The passing last conversion is saved inr5 at0xeba0, used as sprintf argument at0xebc4, then setter0xebd4 requests text1. Eight0/1 host cases correctly isolate(1,1,1); no original getter or parser ran.
+- Getter return values are unused in this sequence. Setter zero skips its error log; nonzero logs and reaches the same0xebf4 continuation. There is no selected readback/abort proving a successful mode write. Later listen-helper call0xec04 follows, so an earlier mode1 request cannot stand in for completed listening or whole-system readiness.
+- Opaque helper calls at0xeae8 and0xecf4 were inspected only as call sites/results. Initial nonzero return selects0x1077c, which stores pending1 at SP+56 and rejoins0xeb30; zero follows the counter/sleep caller loop. No helper internals/session behavior was inspected.
+- The pending recheck tests SP+56 then repeats three status reads/comparisons. **Every displayed exit from a nonzero pending recheck clears that flag, including a failed status comparison**, as well as setter success/error paths. This reinforces the report's “conditional opportunity to recheck” limit; it must not become an until-ready retry guarantee. Actual later scheduling/state changes remain open.
+- Candidate libcommon setter/provider details retain prior protocol closure assumptions for openserver. Daemon binding remains separate and unresolved. No mode value is promoted to physical or health state.
+
+## Integration limits retained
+
+The positive new joins are a declared startup XML alias and an original three-status-gated working-mode1 write request. They do not prove an existing runtime link, effective runtime configuration, successful reads/writes, completed service readiness, physical communication or full supervision policy. The openserver connection helper remains opaque. No F454 instruction/state results were transferred.
+
+## Exact reviewed pins
+
+Paths below are relative to `boot/run3/`.
+
+| Artifact | SHA256 |
+|---|---|
+| `REPORT.md` | `4707944b94cce809d6c3beebb47a46ed13ea3f6c2d1b4270250de4b1e58e12c8` |
+| `collect_startup.py` | `91929717b6540838f75061eff6070aae4fe9d49206ba93526c0830266eae899f` |
+| `output-manifest.json` | `c62afb99129f617e9d030fcd893f11f07f0fde06a806b5d025731ab1578bf1e1` |
+| `input-hashes.json` | `2753562deb49be21b0fca39ce551385b21ef890cae7952d5e90b724fb4198a54` |
+| `original-spans.json` | `9a6a1b900cfa51c75f8b5f5556ee110adf1db2ecb866231eb7f961fd4cbbb655` |
+| `critical-words.json` | `b6c11c25476dda1b3603cd031f1e3d2a67ec58a5694bbd1154798a24ea3b744e` |
+| `startup-declarations.json` | `c3e361d2217c1a1c24d59bc72feb8e867b2d052d701e6a213319991158553260` |
+| `host-status-gate-model.json` | `31f4aaa8d7132e621d3febf3cbfa7a313e95cc800f74953f72fbdc9a08456a4d` |
+| `runtime-config-literal-locators.json` | `e5a1655e582f3750d608ab2dae9129a0c9fa3391672d8c69212538233ac5e26e` |
+
+Reviewer wrote only `reviews/run3/boot-review.md`; producer/original artifacts remain unchanged.

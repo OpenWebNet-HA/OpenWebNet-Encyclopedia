@@ -1,0 +1,47 @@
+
+Symbol table '.dynsym' contains 44 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000000f28     0 SECTION LOCAL  DEFAULT   10 .init
+     2: 0000000000013000     0 SECTION LOCAL  DEFAULT   21 .data
+     3: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_list_delete_link
+     4: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_list_append
+     5: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_deregisterTMCloneTable
+     6: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_free
+     7: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_list_free_full
+     8: 0000000000000000     0 FUNC    WEAK   DEFAULT  UND __cxa_finalize@GLIBC_2.17 (2)
+     9: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND run_parse_xml
+    10: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_ascii_strncasecmp
+    11: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_markup_parse_context_free
+    12: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_list_length
+    13: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND open@GLIBC_2.17 (2)
+    14: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_list_last
+    15: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_utf8_strlen
+    16: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_markup_parse_context_end_parse
+    17: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_strcmp0
+    18: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_markup_parse_context_new
+    19: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __stack_chk_fail@GLIBC_2.17 (2)
+    20: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_strdup_printf
+    21: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND close@GLIBC_2.17 (2)
+    22: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
+    23: 0000000000000000     0 OBJECT  GLOBAL DEFAULT  UND __stack_chk_guard@GLIBC_2.17 (3)
+    24: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_strv_length
+    25: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_list_first
+    26: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_ascii_strtoll
+    27: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_malloc0
+    28: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND g_strdup
+    29: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_registerTMCloneTable
+    30: 0000000000001c10   280 FUNC    GLOBAL DEFAULT   12 automation_get_where_type
+    31: 0000000000001b50    88 FUNC    GLOBAL DEFAULT   12 libautomation_get_version
+    32: 0000000000001fc0   292 FUNC    GLOBAL DEFAULT   12 automation_cfg_plant
+    33: 0000000000001310   212 FUNC    GLOBAL DEFAULT   12 automation_end_element
+    34: 0000000000001570   264 FUNC    GLOBAL DEFAULT   12 automation_cfg_text_plant
+    35: 0000000000001df0   184 FUNC    GLOBAL DEFAULT   12 automation_cfg_init
+    36: 0000000000001680  1028 FUNC    GLOBAL DEFAULT   12 automation_archive_text_plant
+    37: 0000000000001eb0   264 FUNC    GLOBAL DEFAULT   12 automation_cfg_position
+    38: 0000000000001d30   184 FUNC    GLOBAL DEFAULT   12 automation_archive_init
+    39: 0000000000001200   268 FUNC    GLOBAL DEFAULT   12 automation_start_element
+    40: 0000000000001bb0    88 FUNC    GLOBAL DEFAULT   12 libautomation_get_release
+    41: 0000000000001a90    84 FUNC    GLOBAL DEFAULT   12 automation_passthrough
+    42: 00000000000013f0   380 FUNC    GLOBAL DEFAULT   12 automation_text_position
+    43: 0000000000001af0    84 FUNC    GLOBAL DEFAULT   12 automation_error

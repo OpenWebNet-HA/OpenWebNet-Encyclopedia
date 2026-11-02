@@ -1,0 +1,11 @@
+{
+  "command": "python3 -B state/collect_state_v1.py --check",
+  "result": {
+    "chunk_id": "a84a5b",
+    "wall_time_seconds": 0.14126123,
+    "exit_code": 0,
+    "original_token_count": 27,
+    "output": "{\"check\": true, \"outputs\": 21, \"spans\": 17, \"guards\": 47, \"local_targets\": 18, \"new_original_execution\": 0}\n"
+  },
+  "scope": "Actual parent static source reproduction only, no original execution"
+}

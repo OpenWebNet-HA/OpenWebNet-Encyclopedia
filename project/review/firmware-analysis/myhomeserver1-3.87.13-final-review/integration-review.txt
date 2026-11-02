@@ -1,0 +1,53 @@
+# Final handoff documentary integration review
+
+PASS, no correction requested. This bounded review compares the exact current handoff, reference edits, capsule and coordination documents with the existing reviewed reports and the two current independent reviews. It is source-aware of my prior selected MHS helper/ownership/condition audits and documentary for other areas. It is not a fresh full-source or all-product semantic audit. No firmware/database bytes were newly investigated, source collector or vendor code was run, original helper was replayed, or semantic fixture was added.
+
+The handoff explains practical catalogue/scenario tooling without treating a catalogue profile, reused ID, local class, software request or omitted row as an installed capability or physical result. F454 AV/alarm, MH202 scheduler/script and MyHOMEServer1 C++/JSON roles remain distinct. Actual selected catalogue-opening and 15-column reader joins are correctly treated as completed source questions, while full selection/fallback/Prototype policy remains open. Raw/compiled objects, integer/double record representations, trigger/condition/action axes, completion/cancellation/ownership and provider/configuration boundaries remain separate. The numeric-trigger path is completed only to its selected conditional captured-scene request; public units/domain, natural delivery and full lifetime remain unproved. F454 status production and MH202 generator/native joins are not incorrectly presented as still-missing discoveries; their genuine activation/electrical/configured-export gaps remain.
+
+The Device0199 edit correctly distinguishes its historical documentation/catalogue review from the later exact-build study without completing wider Device/source gates. The catalogue-profile edit narrows its old reader gap without claiming complete runtime selection. I independently reconstructed those two exact substitutions and the separate overview-link insertion from their three preserved pre-edit pages. Those current bytes match the frozen candidate; unrelated page content is unchanged.
+
+The handoff v2 is reconstructed exactly from preserved v1 by its single reproduction-context paragraph substitution. It explicitly notes that both the old guide and old numeric source collector require their historical Device input for exact reproduction. The separate supplement describes only two new checkpoint rows and 38 direct pins: 614 old memberships resolve as 613 current plus one exact historical Device path/size/hash, and 142 numeric memberships as 141 current plus one exact historical overview. Those overlapping sets are not unique-file, coverage or fresh-test counts. The original 17-row guide and generator remain immutable. I rely on the current independent verification review for its complete membership audit; I did not rerun old commands, manufacture a failure or freshly authenticate all earlier source claims.
+
+The saved MyHOMEServer1 ledger remains one corpus/eight entries/340 original code-hook visits/zero C primitives/12 definition redirects/eight EXIT/zero guard stops/360 hooks, with four data-relocation setups separate. Historical static-zero scopes and F454/MH202 ledgers stay separate. No complete JSON/scenario/process/OS/thread/timer/network/bus/physical execution is implied, and visits are not retired instructions. Prior MH20218/21 unavailable intermediate-history limits, current configuration/provider/type/ID/lifetime/concurrency gaps and closed opaque routes remain explicit. The documents correctly leave the allowance heartbeat active until actual closure; this review certifies neither future deletion nor further investigation.
+
+## Pins, copies and pending completion
+
+Verified all 13 current document pins and exact candidate copies, 27 exact SOURCE_EXPORTS source/published pairs, all 11 supplement first copies and all four coordination first copies. Checked the three exact pre-edit reconstructions and the retained handoff v1-to-v2 history. Current source-peer reviews and their explicit narrow scopes support this summary; their honestly disclosed pre-output helper errors are not recast as author/firmware failures or invented historical files.
+
+Checked 90 local Markdown link occurrences and three fragment targets. All 88 existing targets and all fragments resolve. Only the intended later capsule integration-review.txt and validation.json targets await actual assembly. Final strict ESG/ECV/diff, full prior-file protection, completion/automation receipts and final validation are parent-owned subsequent checks against actual completed files. This review does not pre-certify future bytes, allow placeholders or endorse a missing-target exemption.
+
+## Exact current document pins
+
+| Artifact | SHA256 |
+| --- | --- |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-knowledge-handoff.md` | `4487454c6cb76efb3850b8ccdd30e9f01414eefccf5acbf84f8ff725cfc018e6` |
+| `OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-research-synthesis.md` | `060d6bf14627853d85dc6cf701afcae2aec884f62da519d29428067c953cb982` |
+| `OpenWebNet-Encyclopedia/devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md` | `bd64060e1e19f90eecad2808b62327847a0f541ae2fc46239bbda29a5efe5c98` |
+| `OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md` | `643f65b12698dffef8858d451290f69c7a517ed239c13e80dd27d3322298aa69` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-final-review/README.md` | `03264ba588301339d77990b15efaf5155afa894d76dcebb38db74e5e8f7e98f6` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-final-review/SOURCE_EXPORTS.json` | `93c541a519c57966c0c03b8b24f7e6d1f90729d656a2f8f338b0e2d0fac7527a` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-final-review/synthesis.txt` | `1e51d49de53ce274c1021c75a82aaad46fe93b43ce6869f99bac2ced897b8101` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-final-review/coverage.txt` | `f9092e3275d3129aeddd2e8e7a5c68035175f3109f94192ec1551bb87595965f` |
+| `OpenWebNet-Encyclopedia/project/review/firmware-analysis/myhomeserver1-3.87.13-final-review/remaining-questions.txt` | `7ad467a82bb8d806e57e6d7fbc2faa2ddf9c9964418c48b3657bc7de70ad0230` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/SYNTHESIS.md` | `1e51d49de53ce274c1021c75a82aaad46fe93b43ce6869f99bac2ced897b8101` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/COVERAGE.md` | `f9092e3275d3129aeddd2e8e7a5c68035175f3109f94192ec1551bb87595965f` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/RANKED_REMAINING_QUESTIONS.md` | `7ad467a82bb8d806e57e6d7fbc2faa2ddf9c9964418c48b3657bc7de70ad0230` |
+| `work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/RUN_LOG.md` | `66b6c765800815f6252bc7ca102f30385661c60022ca26f7da65372c3a6df21f` |
+
+## Reviewed source and history identities
+
+| Artifact | SHA256 |
+| --- | --- |
+| `reviews/handoff-source-review.v2.md` | `c593b86b9718fe4684ec7e52d692ebae6643ef8924999917c66ad91f43639d6a` |
+| `reviews/verification-review.md` | `4ebb622c1e71c4bbeeed7f16704ed161d6ebf80295121b967caf7cddd7f9439c` |
+| `handoff/HANDOFF_CANDIDATE.md` | `0d313e41b4214ce228d7d0a3e0f1a783090a15738c7e7ed105e6dd0e05438ad8` |
+| `handoff/HANDOFF_CANDIDATE.v2.md` | `4487454c6cb76efb3850b8ccdd30e9f01414eefccf5acbf84f8ff725cfc018e6` |
+| `handoff/VERSION_HISTORY.json` | `423d6c935310ca971d314afdf2a1ec0f84cac8c229d367450749ba5a0e33d5e0` |
+| `verification/REPORT.md` | `470c4b236c764b78b50e03ed017371696bf216689e7e8cd2a26ea87abd6aa2e8` |
+| `verification/build_supplement_v2.py` | `d5a903e05dbfb7988619924de139c2250d84a53389b3089fb604ab5709ec2ea0` |
+| `verification/first-candidate-v2/INDEX.json` | `51dc589878fbc6c06695af4351379d0967d5edd682650e1eacb7cf2703432aac` |
+| `integration/REFERENCE_PATCHES.json` | `cc59e26dcfc01bf147b40d35a68ee9e0397a4f829a86664e992f3042b73902ad` |
+| `integration/OVERVIEW_LINK_PATCH.json` | `f9ef9799c1f3cf740faab8095564c460c0af53c1f9f88a0ebe58e167551f9c79` |
+| `integration/REPRODUCTION_CONTEXT.json` | `606222d730932b7ac9ac0df6255e2b96d11098d6be805332a67f29d7bf46abcd` |
+| `integration/pre-edit/INDEX.json` | `bdc6c5f67619b05cb33cb07c5ae9f1583b0999ef756689097690e36a8f2502a9` |
+| `integration/review-candidate/INDEX.json` | `65f1177c683fc9164210f5c69a24b44c1087c97a796f8bb7c288ffc4d357f0a6` |

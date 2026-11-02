@@ -1,0 +1,79 @@
+# MH202 run11 — ordinary PARENTESI operand extraction and IIF caller
+
+**Static source/host evidence; original execution0.** This batch closes the previously supplied ordinary operand-buffer premise for one bounded source shape. It follows the original `PARENTESI` character scanner, output-buffer ownership and return into the actual IIF caller. It does not execute the parser, complete the recursive/logical language, validate a configured statement or run an action.
+
+## Result and provenance
+
+With the actual caller's comma delimiter and start position3, PARENTESI first increments the cursor to4. On the selected ordinary path it copies bytes before the first `<`, `>` or `=` into the left buffer, copies those operator bytes into the operator buffer, and copies subsequent ordinary bytes into the right buffer, stopping when the current byte equals the supplied delimiter. It returns that delimiter's index+1. It does not modify global `linea` on this selected path. The caller ignores that return and passes the three actual output buffers to IIF, which separately owns the previously reviewed global-line comma/suffix copy requests.
+
+Fresh normal-image inputs through the MH202 verified ImageVFS:
+
+| Original image path | Bytes | SHA256 |
+|---|---:|---|
+|`/home/bticino/bin/bt_script`|14884|`f056daa92247aa85920fa28aaf8e3a8bbde2c08da142ec735186a6100636d0b4`|
+|`/home/bticino/lib/libdomotica.so.0.0`|42908|`5ad4e213f9225c6703ed6925cd58712e7227fce7aee9f5ae8424629d3bb5ad09`|
+
+`python3 -B functional/run11/collect_evidence.py --check`, from the research root, strictly reproduces14 outputs plus manifest:6 original spans,29 instruction words, exact literal/GOT/provider facts and4 finite ordinary byte-scanner host cases. `parentesi-complete.txt` retains the entire original13152-byte named function including its pools; other spans isolate the actual selected route and caller. Source byte-span hashes and input/collector-output identities are separately recorded. No ARM, original libc, clock, interpreter process, configured script, target OS/I/O or authentication path executes. Prior calendar, copy, numeric lookup and comparison matrices are not rerun.
+
+## Actual caller buffer contract
+
+`interpreter-buffer-parse-iif-call.txt` (`bt_script 0x9b68..0x9c08`) preserves the source prefix and call. Exact first3-byte comparison selects `IIF`. Before parsing the executable requests zeroing **operator3 bytes at sp+63**, **left10 bytes at sp+53** and **right10 bytes at sp+43** (`0x9b94..0x9bc8`). At`0x9bcc..0x9be0` it passes:
+
+| Argument | Actual value |
+|---|---|
+|r0 delimiter|comma,44|
+|r1 source position|3|
+|r2 operator output|sp+63|
+|r3 left output|sp+53|
+|fifth stack argument, right output|sp+43|
+
+At`0x9be4..0x9bf0`, IIF receives left, operator and right in r0/r1/r2. No parser-return validation is interposed. The caller next logs/tests the current line, as previously reviewed. These output capacities and argument roles are original dataflow, not inferred from a symbol name or a supposed argument count.
+
+The library exports matching `PARENTESI(char,int,char*,char*,char*)` at`0x4140`, size13152. Its PIC base derives from`0x4158` PC+8 and pool`0x50cc` to`0x12114`. Both initial source access pool`0x50d0` and later pool`0x6b68` resolve to GOT`0x1222c`, relocated to `linea`. The executable/library have same-named globals. A coherent complete caller join therefore retains the effective global/provider binding premise; no loader or interposition executes here.
+
+## Selected ordinary scanner and exact termination
+
+In the prologue, delimiter is saved at fp−21, source cursor at fp−28, operator/left at fp−32/fp−36 and right at fp+4. A shared output index starts0 at fp−16. Boolean lane flags start0; their saved comparison bytes initially hold literal character`n` (110). Cursor increment at`0x419c..0x41a4` explains why caller position3 starts reading index4, without validating what byte3 actually contains.
+
+The loop's entry/condition is at`0x630c..0x6328`: load `linea[cursor]`, compare it to the supplied delimiter, branch back to the body on non-equality. This selected guard is delimiter-based; it does not separately stop at NUL or prove a readable closing separator. The finite host model requires a complete readable first-comma input, rather than exploring missing delimiters.
+
+Before ordinary scanning, the body has distinct checks for `(` (`0x41c0`), `%` (`0x4204`), `|` (`0x4230`) and `&` (`0x5228`). Host fixtures take none of those branches. The ordinary byte route is`0x61d4..0x630c`:
+
+- `<`, `>` or `=` selects the operator writer at`0x62b8`. If operator[0] is still zero, it resets the shared destination index to0 (`0x62c8..0x62cc`); `0x62f0` writes the current byte, then increments the index.
+- Any other selected byte with operator[0]==0 selects the left writer at`0x6238..0x6268`. Its index grows from the initial0.
+- Otherwise it selects the right writer. If right[0] is zero it resets the shared index to0 (`0x627c..0x6280`), then writes the byte at`0x62a4` and increments the index.
+- The current source cursor increments at`0x6300..0x6308`. Reaching the first comma exits scanning. No trimming is added on this route; ordinary whitespace is copied into the selected operand buffer.
+
+The ordinary scanner writes individual bytes but no explicit output terminator in this route. Its bounded short-field termination relies on the caller's prior zeroing and not overwriting those remaining bytes. The host model therefore restricts field lengths below3/10/10. The source's full capacity/grammar contract is not proved, and no out-of-bounds access or impact is executed/assessed.
+
+With both logical flags still0, `0x6334` skips the first logical-finalization block to`0x6bfc`, whose zero flag branch`0x6c04` reaches the common return. `0x748c..0x749c` returns cursor+1. Source writes on this selected ordinary path target only local control state and caller-supplied operand buffers; global source bytes remain unchanged. Later IIF mutation is a distinct operation.
+
+## Finite source-shape models and conditional IIF handoff
+
+`host-selected-operand-model.json` transcribes the selected byte copies and records each original-source index/destination index. It is **not original parser execution**, accepted DSL or a generator capture:
+
+| Supplied source shape before symbolic action suffixes | Left | Operator | Right |
+|---|---|---|---|
+|`IIF($V001=0,...)`|`$V001`|`=`|`0`|
+|`IIF($V001>=2,...)`|`$V001`|`>=`|`2`|
+|`IIF(1<>2,...)`|`1`|`<>`|`2`|
+|`IIF($V001 = 0,...)`|`$V001 `|`=`|` 0`|
+
+The final row records whitespace preservation, not a supported spelling. All four supplied buffers remain within the chosen short/terminated host premise. Source suffixes `TRUE_BODY,FALSE_BODY` are symbolic, and their closing-parenthesis/statement/action behavior is not validated. The selected opening byte, arbitrary operator sequence or full statement is not checked by this limited model.
+
+This narrows run10's supplied-operand boundary: under this ordinary scanner/global binding contract, the actual caller can pass left`$V001`, operator`=` and right`0` from that source shape to the already reviewed numeric IIF branch. That branch's lookup/create/global/capacity/return-use limits remain unchanged. No new clock comparison or lookup/operator matrix is performed, and no complete guarded action is run. The helper's returned cursor is not used to select action text; IIF separately requests one or two first-comma prefix removals on global `linea`.
+
+## Recursive and logical branches retained as boundaries
+
+The full source contains more than the selected ordinary scanner. At`0x41c8..0x41e8`, encountering`(` recursively calls the same named helper through PLT`0x1600` with delimiter`)`, current cursor and the same output buffers, then uses its return as the new cursor. Actual recursion/provider, nested text and shared-buffer interactions are not modeled or executed.
+
+The `|` and `&` paths set separate flags and use repeated typed comparisons, optional numeric/string/date-time substitutions and OR/AND helpers. Concrete OR call sites include`0x49f4/0x6b00`; AND includes`0x59ec/0x73d0`. Their finalization writes an explicit normalized comparison using two-byte copies: left`0` or`1`, right`1`, operator`=` (original literals resolved through pools`0x6b9c/0x6ba0/0x6ba4`). `boolean-output-normalization.txt` pins the latter AND-lane output. These are exact source sites, not a reconstructed full precedence, short-circuit, mixed-operator, quoting or recursion specification. No complete logical fixture is introduced this batch.
+
+## Confidence and next questions
+
+High confidence: actual buffer roles/capacities and calls, cursor/delimiter relation, selected ordinary byte destinations, first operator/right index resets, whitespace preservation, local/global write distinction and conditional operand→IIF correspondence. Host models are finite consistency transcriptions; effective providers/globals, original parser/libc and configured input remain conditional/unexecuted.
+
+1. Obtain real configured extra/4 source or an exact generator before labeling a complete statement, canonical whitespace/variable spelling, closing/action syntax or product-level Only-if behavior.
+2. Close one justified recursive/logical branch with exact source/field/cursor/output state; do not infer precedence or short-circuit solely from OR/AND names.
+3. An isolated original ordinary PARENTESI call could now use a justified shared `linea`/short-output fixture and strict call allowlist, but is not performed here. Its results would still need a separate original IIF/action caller join and accepted-source boundary.
+4. Preserve the distinct lookup capacity/unknown-name semantics and overlapping IIF copy/provider contracts rather than assuming this new ordinary scanner proof resolves them.

@@ -1,0 +1,23 @@
+{
+  "VA": "0x28be38",
+  "compiled_template": "SELECT DISTINCT EN_DEVICE.id_item, EN_CONF.conf_name, EN_CONF.idx, EN_CONF.id_conf, EN_CONF_RANGE.id_conf_range, EN_CONF_DATA_TYPE.id_conf_data_type, EN_CONF_RANGE.value, EN_CONF_RANGE.'default', EN_CONF_RANGE.'min_value', EN_CONF_RANGE.'max_value', EN_CONF_RANGE.'step', EN_CONF.hidden, AS_OBJECT_FIRMWARE.id_object_firmware, EN_KEY_OBJECT.slots, AS_OBJECT_SYSTEM.id_system FROM EN_DEVICE JOIN EN_ITEM ON EN_DEVICE.id_item=EN_ITEM.id_item JOIN AS_ITEM_SYSTEM ON EN_ITEM.id_item=AS_ITEM_SYSTEM.id_item JOIN EN_SYSTEM ON AS_ITEM_SYSTEM.id_system=EN_SYSTEM.id_system JOIN EN_OBJECT_ITEM_FAMILY ON EN_ITEM.id_family=EN_OBJECT_ITEM_FAMILY.id_family JOIN EN_FIRMWARE ON EN_ITEM.id_item=EN_FIRMWARE.id_item JOIN AS_OBJECT_FIRMWARE ON EN_FIRMWARE.id_firmware=AS_OBJECT_FIRMWARE.id_firmware JOIN EN_KEY_OBJECT ON AS_OBJECT_FIRMWARE.id_key_object=EN_KEY_OBJECT.id_key_object JOIN EN_CONF ON EN_KEY_OBJECT.id_key_object=EN_CONF.id_key_object JOIN EN_CONF_RANGE ON EN_CONF.id_conf=EN_CONF_RANGE.id_conf JOIN EN_CONF_DATA_TYPE ON EN_CONF.id_conf_data_type=EN_CONF_DATA_TYPE.id_conf_data_type JOIN EN_LINE ON EN_DEVICE.id_line=EN_LINE.id_line JOIN EN_BRAND ON EN_DEVICE.id_brand=EN_BRAND.id_brand JOIN AS_OBJECT_SYSTEM ON EN_KEY_OBJECT.id_key_object=AS_OBJECT_SYSTEM.id_key_object WHERE EN_CONF.read_only <> 1 AND AS_ITEM_SYSTEM.modobj=$modobj$ AND EN_LINE.line_modobj=$line_modobj$ AND EN_BRAND.brand_modobj=$brand_modobj$ AND EN_KEY_OBJECT.key_object=$key_object$ AND EN_CONF.id_conf NOT IN (     SELECT EN_FILTER.id_conf FROM EN_FILTER WHERE EN_FILTER.id_conf=EN_CONF.id_conf     AND EN_FILTER.id_object_firmware=AS_OBJECT_FIRMWARE.id_object_firmware     AND EN_FILTER.whole_range=1) AND EN_CONF_RANGE.value NOT IN (     SELECT EN_FILTER_RANGE.range     FROM EN_FILTER_RANGE     JOIN EN_FILTER ON EN_FILTER_RANGE.id_filter=EN_FILTER.id_filter     WHERE EN_FILTER.id_conf=EN_CONF.id_conf     AND EN_FILTER.id_object_firmware=AS_OBJECT_FIRMWARE.id_object_firmware     AND EN_FILTER.whole_range = 0) ORDER BY EN_CONF.idx",
+  "scope": "Original compiled template, not evaluated SQL or database rows.",
+  "sha256_utf8": "b8f5ad7c0d551851c629a35419105f60f0e9d0b07f11604eea6f5ef398ee334e",
+  "zero_based_projection": {
+    "0": "EN_DEVICE.id_item",
+    "1": "EN_CONF.conf_name",
+    "2": "EN_CONF.idx",
+    "3": "EN_CONF.id_conf",
+    "4": "EN_CONF_RANGE.id_conf_range",
+    "5": "EN_CONF_DATA_TYPE.id_conf_data_type",
+    "6": "EN_CONF_RANGE.value",
+    "7": "EN_CONF_RANGE.'default'",
+    "8": "EN_CONF_RANGE.'min_value'",
+    "9": "EN_CONF_RANGE.'max_value'",
+    "10": "EN_CONF_RANGE.'step'",
+    "11": "EN_CONF.hidden",
+    "12": "AS_OBJECT_FIRMWARE.id_object_firmware",
+    "13": "EN_KEY_OBJECT.slots",
+    "14": "AS_OBJECT_SYSTEM.id_system"
+  }
+}

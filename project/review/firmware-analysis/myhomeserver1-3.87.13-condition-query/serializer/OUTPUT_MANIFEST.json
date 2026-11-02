@@ -1,0 +1,63 @@
+{
+  "collector_sha256": "303754b80717c1e5ad422b84a5e218d1bb9fb865e9c52fd12d49763e2d11bc7f",
+  "development_sha256": "c2f7fe836dda54686f2f6eed7fda2d1266b256f5850bb7e31c0554f7d6bdfc60",
+  "outputs": {
+    "BYTE_GUARDS.json": {
+      "bytes": 853,
+      "sha256": "3e6a489bf9a80cc7698abff6ced4a664c25ea572ed0b8307a481fce5af0ce377"
+    },
+    "CLASS_TABLES.json": {
+      "bytes": 2212,
+      "sha256": "4d3561f8df44f50744df323ca77e7a1ca657bae824b09c5c7c96f5621cbb05d8"
+    },
+    "DATA_SPANS.json": {
+      "bytes": 611,
+      "sha256": "8aaa7a5329e98426d24da1352e327f01a0f06cc336bd5edb80c8427305ab10f4"
+    },
+    "DIRECT_CALLS.json": {
+      "bytes": 398,
+      "sha256": "bb6eedaf42d3af2a8a3a2cc3d86b320bdea12cda8ae281f9c25157decfd097a1"
+    },
+    "FIELD_RULES.json": {
+      "bytes": 971,
+      "sha256": "c4815f3a5c28afd0398580e653904f9cbf0309edc1728ec9eaf412c126136c43"
+    },
+    "INPUTS.json": {
+      "bytes": 640,
+      "sha256": "7ea195ef13a3267acc5d4ac44901bfb71e3d350d154588e8c128fefa2253c0ba"
+    },
+    "KEYS.json": {
+      "bytes": 1183,
+      "sha256": "b8a79a8f6fc12c1dd1d6c8371c4cf26e282f75f3dac72a27ee03ed36bdc1a72b"
+    },
+    "METHOD.json": {
+      "bytes": 586,
+      "sha256": "3574210a615fecee100ae2f0c61519326728d03fc3a99d2cb58ef46d42df5866"
+    },
+    "SOURCE_SPANS.json": {
+      "bytes": 1098,
+      "sha256": "3468d8411015718923b42576c9173bdaee8894a06a660830ebc0816a8a7a77c3"
+    },
+    "spans/base-condition-constructor.txt": {
+      "bytes": 9488,
+      "sha256": "f14e263b72791154822448133c24a1878a36627b66b01a8028e12365bf32ef2c"
+    },
+    "spans/base-condition-serializer.txt": {
+      "bytes": 5975,
+      "sha256": "193a26f210751fd207b4fd34c471f9b6aa99a91da6eb4b9ee086f2b7dd173f70"
+    },
+    "spans/bnld-constructor.txt": {
+      "bytes": 4924,
+      "sha256": "ce764b57c5c5ffdb9dd5235e998e6f367be029b05dbdd8f260e547cb743d48fc"
+    },
+    "spans/bnld-serializer.txt": {
+      "bytes": 5544,
+      "sha256": "b2a09fb274517520cf03037c353903c513874c33d8e047c26e19f4d3a566820f"
+    },
+    "spans/same-result-initializer.txt": {
+      "bytes": 1124,
+      "sha256": "d7143fae65be447bdba40acb4e40f9ba89f92a87bc5fd46ee7fdec4ef4c91126"
+    }
+  },
+  "report_sha256": "b96a6bfb2a30d4c20ba50abb6a2243a5cfe378eb5842c469acb3d3baba8f17d5"
+}

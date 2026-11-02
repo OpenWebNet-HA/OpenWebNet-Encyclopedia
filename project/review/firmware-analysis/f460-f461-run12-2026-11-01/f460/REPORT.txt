@@ -1,0 +1,33 @@
+# F460 run12: selected staged-list consumer and local string request
+
+A fresh original wrapper supplies literal selector3 to a later updater consumer. That consumer follows a context record's list, tests a selected filename text for a dot substring, and requests a new local GString from the same selected text. This adds a concrete local consumer beyond run08's XML staging producer. **Natural parser-to-consumer ordering and actual shared-context identity remain conditional.** No updater/provider/original instruction, target I/O, model, fixture, SQL, extraction, install, flash, mount or reboot executes. New execution is0; earlier ledgers are unchanged.
+
+## Source identity and scope
+
+Original `/home/bticino/bin/dedrifupdater`,43088 bytes, SHA256 `8f32212bee98b507690f1e22d6b26524c8a13dc20efcc8cc05900ac4142f9753`, is freshly mapped ELF64 little-endian AArch64 through the product ImageVFS. SOURCE.json retains exact code bytes/hex, selected instructions, branch targets, two safe compiled literals and actual BL/PLT/JUMP_SLOT import proofs. Curated Device0207 supplies product role only. Run08 authoritative REPORT.v3 and its return-value refinement/review are inherited by exact pins; its XML tables, action-list construction and opaque extraction/precheck helpers are not re-audited or repeated as new coverage.
+
+This packet follows only local0x66d0 ->0x5f30 -> selected string construction and stops before0x6000. Extraction0x5140, precheck0x4b60, downstream command/filesystem/update/flash/mount/reboot and provider bodies remain opaque. No signature/key material, trust/authenticity, firmware compatibility result or private configuration is read/exported to complete this source join.
+
+## Actual wrapper arguments and distinct pointer namespaces
+
+Wrapper0x66d0 leaves its supplied X0 intact before BL0x6708 to local0x5f30. It sets W1=**3** at0x6704, X2=addressSP+4 at0x66e0, and W3=its incoming W1 at0x66dc. The latter value is saved separately; no status/procedure meaning is assigned to it here. The wrapper stores the returned X0 in X19 and tests it after the call. This packet does not interpret the consumer's full return/outcell contract or the wrapper's later operations.
+
+Consumer0x5f30 preserves incoming X0 as X19, incoming selectorW1 as W22, output-cell X2 as X20 and W3 as W26. At0x5f74 it loads **C=[X19]**, distinct from the outer input pointer itself. The earlier comparison0x5f3c and unsigned-low-or-same branch0x5f78 distinguish selector<=1 from the selected3. On the selected3 route,0x5f7c loads **R=[C+56]**,0x5f80 reads **list=[R+8]**, and0x5f84 requests actual `g_list_first(list)`. A separate immediate branch source at0x63a4 uses C+48 for the other selector path; it is retained only to disambiguate the selected pointer chain, not as a whole selector matrix.
+
+Run08's selected recovery_firmware staging source writes record kind2 and appends GStrings through R=[C+56],R+8. Therefore **IF** the outer input/context/record pointers are the same valid objects, the new consumer reads that staged list. The record kind2 is not selector3, package status4, Device identity, installed partition or public protocol code. No actual common constructor/caller, current record state, parser execution, sequential pipeline or unchanged list is established merely by this matching source shape.
+
+## Selected node text and substring branch
+
+The normal selected path requires `g_list_first` to return a valid nonnull node. Null/empty-list continuation0x66c0 is outside the retained proof; no graceful empty-list/error behavior is claimed. At0x5fa4 the original masks W22 with0xfffffffd: selected3 becomes1. Two compiled comparison literals are formed independently: **`.`** atVA0x6a58 and **`Image`** atVA0x7d78. They are substring operands, not filename extensions, complete accepted paths or validation/security policy.
+
+The loop loads node+0 as its supplied GString pointer, then loads that object's pointer+0 as text. At0x5fe0 it requests actual `g_strstr_len(text,-1,".")`. A nonzero result and masked selector equal1 at0x5fe8/0x5fec reach0x5ff0. The source reloads that SAME node data and text pointers and requests actual `g_string_new(text)` at0x5ff8;0x5ffc saves returned X0 as X21. This is a positive same-text component-construction request, not an executed parser/string model, a supplied filename fixture, or a guarantee that an allocation/copy succeeds.
+
+The companion Image comparison and zero-masked-selector test are original local branches. For this selected masked1 path, a node not taking the dot-positive branch progresses through that companion check toward next=node+8; later nodes repeat the dot request. Other selectors and complete list semantics are not promoted into a supported-file table. Valid node/GString ABI, text storage, ordinary imported return values, stable traversal and lifetime remain premises.
+
+The packet ends at0x6000, before subsequent command/string/path/update behavior. It does not inspect downstream operation bodies, reconstruct a completed extraction command, claim a safe/valid filename or accepted archive, or infer installation, signature success, compatibility, output-cell meaning or an actual filesystem effect from this selected local request.
+
+## Reproduction and preservation
+
+Run `python3 -B work/f460-firmware/2.0.12/research/2026-11-01-run12-update-consumer/collect_consumer_v1.py --check`. The exclusive generator immediately copies report, collector and all evidence; its first-copy index is computed before opening that index. Check reconstructs and compares read-only. No failed generation or overwritten candidate occurred. All original trees, completed dossiers and execution ledgers remain unchanged.
+
+The new result is bounded: actual wrapper selector3 -> outer input/[input]context -> record56/list8 -> selected node/GString text -> dot substring guard -> same-text GString request. Remaining high-value gaps are a justified natural common context/caller and the separately authorized downstream component contract, without using forced assets or assuming parser/consumer order. Receiving/transport/MQTT/libjel/auth/session/framing and equivalent stopped routes remain closed. No physical, trust, security, defect or whole-update outcome follows.

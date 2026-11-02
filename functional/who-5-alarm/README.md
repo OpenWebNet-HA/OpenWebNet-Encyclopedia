@@ -19,3 +19,8 @@ Zone-specific requests similarly report whether a selected zone is engaged or di
 The published interface does not define a general-purpose modern security-control API. Implementations should therefore expose the documented states and events without inventing write semantics for status values that are only established as reports.
 
 `WHO 5` is distinct from Access Control [`WHO 23`](../who-23-access-control/) and from diagnostic protocol families. Common frame/session syntax is documented under [Protocol](../../protocol/).
+## MH202 implementation evidence
+
+In MH202 Firmware `1.0.24`, the inspected reverse-translation path maps opcode text `42` and status text `09` to `*5*27*##`. This source-derived candidate preserves an empty `WHERE`; it is not an observed alarm operation. The published `WHAT 27` meaning, Stop programming, remains unchanged, while the incoming status path's physical significance is unresolved.
+
+An isolated original-parser case represents the empty target with a NULL `WHERE` member. A same-object serialization case preserves the exact empty-field text. These establish selected local parsing/formatting behavior under modeled dependencies, without assigning a physical target or proving downstream publication. See [MH202 alarm translation](../../reverse-engineering/firmware-analysis/mh202-1.0.24-functional-translation.md#native-parsing-of-the-generated-candidates).

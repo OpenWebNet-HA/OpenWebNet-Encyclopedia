@@ -1,0 +1,27 @@
+{
+  "SQL_execution": 0,
+  "fixture": {
+    "$brand_modobj$": 1,
+    "$key_object$": 139,
+    "$line_modobj$": 0,
+    "$modobj$": 2
+  },
+  "original_execution": 0,
+  "remaining_placeholders": false,
+  "rendered_SQL_sha256": "50ce5db92e6576a59cfd3ed30690334bb22623d432965c6d9cf7f26b43a82834",
+  "scope": "Synthetic positive integer text substitution after the original construction/formatting boundaries; not original helper execution, accepted device or SQL evaluation",
+  "selected_column_to_field": [
+    {
+      "column": 13,
+      "expression": "EN_KEY_OBJECT.slots",
+      "inner_offset": 20,
+      "outer_offset": 32
+    },
+    {
+      "column": 14,
+      "expression": "AS_OBJECT_SYSTEM.id_system",
+      "inner_offset": 24,
+      "outer_offset": 36
+    }
+  ]
+}

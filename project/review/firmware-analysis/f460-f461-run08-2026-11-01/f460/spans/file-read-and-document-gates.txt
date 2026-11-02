@@ -1,0 +1,49 @@
+
+/home/bticino/bin/dedrifupdater:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000056f0 <.text+0x2f30>:
+    56f0:	aa1603e0 	mov	x0, x22
+    56f4:	52800001 	mov	w1, #0x0                   	// #0
+    56f8:	97fffe92 	bl	5140 <_ZN8PlatformC1Ei@plt+0x26b8>
+    56fc:	b4003060 	cbz	x0, 5d08 <_ZN8PlatformC1Ei@plt+0x3280>
+    5700:	f9400260 	ldr	x0, [x19]
+    5704:	52800002 	mov	w2, #0x0                   	// #0
+    5708:	d0000001 	adrp	x1, 7000 <_ZN8PlatformC1Ei@plt+0x4578>
+    570c:	91300021 	add	x1, x1, #0xc00
+    5710:	97fff298 	bl	2170 <_ZN7slogger5debugEPKcz@plt>
+    5714:	d0000000 	adrp	x0, 7000 <_ZN8PlatformC1Ei@plt+0x4578>
+    5718:	912fc013 	add	x19, x0, #0xbf0
+    571c:	aa1303e0 	mov	x0, x19
+    5720:	52800002 	mov	w2, #0x0                   	// #0
+    5724:	d2800001 	mov	x1, #0x0                   	// #0
+    5728:	97fff2e2 	bl	22b0 <g_build_filename@plt+0x8>
+    572c:	f9000fe0 	str	x0, [sp, #24]
+    5730:	b50002e0 	cbnz	x0, 578c <_ZN8PlatformC1Ei@plt+0x2d04>
+    5734:	f947eef7 	ldr	x23, [x23, #4056]
+    5738:	d0000001 	adrp	x1, 7000 <_ZN8PlatformC1Ei@plt+0x4578>
+    573c:	9130a021 	add	x1, x1, #0xc28
+    5740:	f94002e0 	ldr	x0, [x23]
+    5744:	97fff28b 	bl	2170 <_ZN7slogger5debugEPKcz@plt>
+    5748:	aa1303e0 	mov	x0, x19
+    574c:	97fff2b1 	bl	2210 <g_get_current_time@plt+0x10>
+    5750:	52800060 	mov	w0, #0x3                   	// #3
+    5754:	14000159 	b	5cb8 <_ZN8PlatformC1Ei@plt+0x3230>
+    5758:	f947eee0 	ldr	x0, [x23, #4056]
+    575c:	d0000001 	adrp	x1, 7000 <_ZN8PlatformC1Ei@plt+0x4578>
+    5760:	91306021 	add	x1, x1, #0xc18
+    5764:	f9400000 	ldr	x0, [x0]
+    5768:	97fff282 	bl	2170 <_ZN7slogger5debugEPKcz@plt>
+    576c:	d0000000 	adrp	x0, 7000 <_ZN8PlatformC1Ei@plt+0x4578>
+    5770:	912fc013 	add	x19, x0, #0xbf0
+    5774:	aa1303e0 	mov	x0, x19
+    5778:	52800002 	mov	w2, #0x0                   	// #0
+    577c:	d2800001 	mov	x1, #0x0                   	// #0
+    5780:	97fff2cc 	bl	22b0 <g_build_filename@plt+0x8>
+    5784:	f9000fe0 	str	x0, [sp, #24]
+    5788:	b4fffd60 	cbz	x0, 5734 <_ZN8PlatformC1Ei@plt+0x2cac>
+    578c:	97fff37d 	bl	2580 <EVP_MD_CTX_free@plt+0x8>
+    5790:	f9400c13 	ldr	x19, [x0, #24]
+    5794:	b4002c73 	cbz	x19, 5d20 <_ZN8PlatformC1Ei@plt+0x3298>

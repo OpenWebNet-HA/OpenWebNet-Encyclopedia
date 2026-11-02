@@ -1,0 +1,32 @@
+# Independent source review: selected local event routing
+
+Result: **PASS; no correction requested.**
+
+Scope: independent read-only source, collector, saved evidence and report audit of `event-routing/routing/`. I authored the separate record-production area, so the routing classifier and dispatch review is independent; the related record semantics are not self-certified by this review. I replayed only the host static collector `--check`. No original instructions, firmware helpers, JsonCpp parser, target API, native emulator, vendor process or transport/authentication/session/framing implementation was executed or followed.
+
+## Reproduction and independent source checks
+
+The collector reproduced **25 outputs, 14 code spans, 15 instruction guards, three selected tables, 11 branch joins and three input identities**, with original execution zero. Separately, I read original firmware bytes through ImageVFS, re-derived PT_LOAD mappings, independently compared all 14 raw-span hashes and 15 guards, and checked every generated member hash and all **27 exact first-candidate copies**. The report/collector and first snapshot remain unchanged.
+
+Original executable `/home/bticino/scheduling_manager/scheduling_manager` SHA256: `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`.
+
+## Selected joins checked against original source
+
+- `0x521e4..0x52204` requests the first dot search with position zero and selects a prefix endpoint bounded by the local string length. The source does not establish the complete upstream string/filter provenance. The independently recomputed GOT base `0x1659a4`, slot `0x166098`, table `0x160e4c`, row-one length five and bytes `light\0` agree. Equality helper `0x4f20c` compares lengths, and on the nonempty equal-length route delegates byte comparison; the selected row-one equality reaches `0x5544e`, supplies one and subtracts one at `0x54daa`, storing code zero at SP+8.
+- PIC key bytes resolve to `params` and `id`. The member copy, object test, optional `asString` and assignment into FP/current SP+448 are present. Code zero reaches the nonempty-length guard at `0x5235e..0x52364`. Successful JsonCpp/string behavior and earlier normal control flow remain premises; no external input grammar follows.
+- I independently recalculated the first TBH entry as `0x52374 + 2*0x0f80 = 0x54274`, and the second as `0x528aa + 2*0x0233 = 0x52d10`. The separate relative-word table at `0x52d5c` has selected value `0x0cbf`, producing Thumb pointer `0x53a1b` and instruction entry `0x53a1a`, after raw-trigger word+32 minus one and unsigned bound 22. This is not a third TBH or a shared event-code/trigger-type namespace.
+- The retained `0x5433c` producer-tail call returns through `0x527b4`: its saved result is compared with exactly one, and only the selected normal cleanup leg reaches `0x551c6 -> 0x52864`. This tail is a bounded selected branch, not a complete proof for every alternative record-construction branch. The author correctly keeps concrete producer effects and actual returned one conditional.
+- The second dispatch supplies FP to getter/lookup, and the output pair becomes R8/R7 at `0x52d20`. The raw-trigger pointer, returned event record/control, scene pointer, copied compiled-trigger handle and FP ID are separate aliases. `0x53a22` copies the compiled vector; the selected indexed nonzero entry is cast and later used after copy cleanup. Valid cast/object lifetime and aligned raw/compiled collections are explicitly assumed, not guaranteed.
+- The ID helper `0x4f000` requires equal lengths and matching selected bytes. Nonzero equality is required before `0x53a8c` forms R8+8 and `0x53a92` calls the separate nonvirtual handler `0xee708`. The routing source by itself does not prove every returned record's type/layout: the report retains valid record/object premises, and the separate record report distinguishes Light+8 from alternate Load+20. No handler behavior or physical availability is inferred here.
+- The loop increments raw pointer index by one and compiled handle offset by eight (`0x52986`, `0x5298e`), with raw range length divided by four. This is a selected index correlation, not identical layouts or a universal consistency/safety claim.
+
+## Limits retained
+
+The report appropriately separates original source evidence from normal-provider and object-state assumptions. It does not promote a private `light` label to public WHO, electrical lane, accepted wire grammar, actual configured trigger, natural traffic, dispatch readiness, event delivery, scene execution, or hardware behavior. It does not claim a complete audit of outer routine `0x51968..0x55ed4`, every producer return/cleanup branch, the full table, registry construction, ownership/unwind/concurrency, or earlier parsing and filters. Those limits are material and remain open.
+
+## Exact reviewed pins
+
+- `REPORT.md`: `85ffa994ed3bebf07000cbe3335a13b345c8cc869f73996e5bbc07eb3e608159`
+- `collect_routing_v1.py`: `eedf8f0aa613cb3f00a5808ffab0adea9a029e3257aa8162356b2247172c9165`
+- `OUTPUT_MANIFEST.json`: `7b9b2e8eb3e29bf6df332b05d84169223d14808313071a662497a9afc42eead3`
+- `first-candidate/INDEX.json`: `aec37b32ea7dbf340b805768eea40eed0f5550f197ec3298ef4314ed962b3ca6`

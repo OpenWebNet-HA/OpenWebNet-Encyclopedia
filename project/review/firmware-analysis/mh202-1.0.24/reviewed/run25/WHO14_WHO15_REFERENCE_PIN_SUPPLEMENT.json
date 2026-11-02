@@ -1,0 +1,15 @@
+{
+  "role": "Two reference pages frozen before narrow MH202 implementation notes, prior fourteen-document index unchanged",
+  "files": [
+    {
+      "source": "functional/who-14-special-commands/README.md",
+      "source_sha256": "19fe928cfe21226d8595930b12be3696df45d8caf18bcc9a21867b0cb22edd33",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run25/reference-who-14-special-commands-README.md.txt"
+    },
+    {
+      "source": "functional/who-15-cen/README.md",
+      "source_sha256": "daff88e28ce1273ba2d3ded02f40192a0478ce40765dcdb3a4dd114af3b5b00d",
+      "snapshot": "project/review/firmware-analysis/mh202-1.0.24/reviewed/run25/reference-who-15-cen-README.md.txt"
+    }
+  ]
+}

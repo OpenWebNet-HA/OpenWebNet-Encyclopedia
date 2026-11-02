@@ -1,0 +1,74 @@
+[
+  {
+    "add_pc_va": "0x2d170",
+    "literal": "time",
+    "name": "time",
+    "pool_va": "0x2d284",
+    "target_va": "0x11530c",
+    "word": "0xe8198"
+  },
+  {
+    "add_pc_va": "0x2d1b0",
+    "literal": "days",
+    "name": "days",
+    "pool_va": "0x2d288",
+    "target_va": "0x115264",
+    "word": "0xe80b0"
+  },
+  {
+    "add_pc_va": "0x2c6a6",
+    "literal": "enabled",
+    "name": "enabled",
+    "pool_va": "0x2c8d8",
+    "target_va": "0x1143e0",
+    "word": "0xe7d36"
+  },
+  {
+    "add_pc_va": "0x2c6d0",
+    "literal": "id",
+    "name": "id-presence",
+    "pool_va": "0x2c8dc",
+    "target_va": "0x116adc",
+    "word": "0xea408"
+  },
+  {
+    "add_pc_va": "0x2c6e2",
+    "literal": "id",
+    "name": "id",
+    "pool_va": "0x2c8e0",
+    "target_va": "0x116adc",
+    "word": "0xea3f6"
+  },
+  {
+    "add_pc_va": "0x2c748",
+    "literal": "type",
+    "name": "type",
+    "pool_va": "0x2c8e8",
+    "target_va": "0x115f5c",
+    "word": "0xe9810"
+  },
+  {
+    "add_pc_va": "0x2c79a",
+    "literal": "operator",
+    "name": "operator",
+    "pool_va": "0x2c8f0",
+    "target_va": "0x115198",
+    "word": "0xe89fa"
+  },
+  {
+    "add_pc_va": "0x29bd8",
+    "literal": "time",
+    "name": "serialized-time",
+    "pool_va": "0x29d40",
+    "target_va": "0x11530c",
+    "word": "0xeb730"
+  },
+  {
+    "add_pc_va": "0x29c62",
+    "literal": "days",
+    "name": "serialized-days",
+    "pool_va": "0x29d44",
+    "target_va": "0x115264",
+    "word": "0xeb5fe"
+  }
+]

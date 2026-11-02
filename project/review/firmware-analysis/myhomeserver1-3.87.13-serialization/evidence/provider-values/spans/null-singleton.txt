@@ -1,0 +1,43 @@
+
+work/myhomeserver1-firmware/3.87.13/analysis/rootfs/usr/lib/libjsoncpp.so.1.9.5:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00015bc8 <_ZN4Json5Value13nullSingletonEv@@Base>:
+   15bc8:	b570      	push	{r4, r5, r6, lr}
+   15bca:	4d16      	ldr	r5, [pc, #88]	@ (15c24 <_ZN4Json5Value13nullSingletonEv@@Base+0x5c>)
+   15bcc:	4e16      	ldr	r6, [pc, #88]	@ (15c28 <_ZN4Json5Value13nullSingletonEv@@Base+0x60>)
+   15bce:	447d      	add	r5, pc
+   15bd0:	682c      	ldr	r4, [r5, #0]
+   15bd2:	f3bf 8f5b 	dmb	ish
+   15bd6:	447e      	add	r6, pc
+   15bd8:	f014 0401 	ands.w	r4, r4, #1
+   15bdc:	d003      	beq.n	15be6 <_ZN4Json5Value13nullSingletonEv@@Base+0x1e>
+   15bde:	4813      	ldr	r0, [pc, #76]	@ (15c2c <_ZN4Json5Value13nullSingletonEv@@Base+0x64>)
+   15be0:	4478      	add	r0, pc
+   15be2:	3008      	adds	r0, #8
+   15be4:	bd70      	pop	{r4, r5, r6, pc}
+   15be6:	4628      	mov	r0, r5
+   15be8:	f7f5 eecc 	blx	b984 <__cxa_guard_acquire@plt>
+   15bec:	2800      	cmp	r0, #0
+   15bee:	d0f6      	beq.n	15bde <_ZN4Json5Value13nullSingletonEv@@Base+0x16>
+   15bf0:	4621      	mov	r1, r4
+   15bf2:	f105 0008 	add.w	r0, r5, #8
+   15bf6:	f7f5 e8fc 	blx	adf0 <_ZN4Json5ValueC1ENS_9ValueTypeE@plt>
+   15bfa:	4c0d      	ldr	r4, [pc, #52]	@ (15c30 <_ZN4Json5Value13nullSingletonEv@@Base+0x68>)
+   15bfc:	4b0d      	ldr	r3, [pc, #52]	@ (15c34 <_ZN4Json5Value13nullSingletonEv@@Base+0x6c>)
+   15bfe:	4a0e      	ldr	r2, [pc, #56]	@ (15c38 <_ZN4Json5Value13nullSingletonEv@@Base+0x70>)
+   15c00:	447c      	add	r4, pc
+   15c02:	58f1      	ldr	r1, [r6, r3]
+   15c04:	f104 0008 	add.w	r0, r4, #8
+   15c08:	447a      	add	r2, pc
+   15c0a:	f7f4 efda 	blx	abc0 <__aeabi_atexit@plt+0x4>
+   15c0e:	4620      	mov	r0, r4
+   15c10:	f7f5 e9b8 	blx	af84 <__cxa_guard_release@plt>
+   15c14:	e7e3      	b.n	15bde <_ZN4Json5Value13nullSingletonEv@@Base+0x16>
+   15c16:	4809      	ldr	r0, [pc, #36]	@ (15c3c <_ZN4Json5Value13nullSingletonEv@@Base+0x74>)
+   15c18:	4478      	add	r0, pc
+   15c1a:	f7f5 e9ae 	blx	af78 <__cxa_guard_abort@plt>
+   15c1e:	f7f5 ebaa 	blx	b374 <__cxa_end_cleanup@plt>
+   15c22:	bf00      	nop

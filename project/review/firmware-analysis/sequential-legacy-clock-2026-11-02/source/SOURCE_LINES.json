@@ -1,0 +1,636 @@
+{
+  "own_sources": [
+    {
+      "bytes": 4269,
+      "path": "work/f453av-firmware/3.0.14/analysis/rootfs/sbin/init",
+      "product": "F453AV",
+      "relative_path": "sbin/init",
+      "role": "INHERITED startup selector context, freshly identity/line checked, not duplicate new functional coverage",
+      "safe_selected_lines": [
+        {
+          "line": 103,
+          "text": "# Run scripts in /etc/init.d/scripts    "
+        },
+        {
+          "line": 104,
+          "text": "foreach n [lsort [glob -nocomplain /etc/init.d/scripts/S*]] {"
+        },
+        {
+          "line": 105,
+          "text": "    try [list source $n]"
+        },
+        {
+          "line": 106,
+          "text": "}"
+        }
+      ],
+      "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb",
+      "version": "3.0.14",
+      "view": "normal"
+    },
+    {
+      "bytes": 294,
+      "path": "work/f453av-firmware/3.0.14/analysis/rootfs/etc/init.d/scripts/S10rtc_verify",
+      "product": "F453AV",
+      "relative_path": "etc/init.d/scripts/S10rtc_verify",
+      "role": "NEW selected local clock-flag/read/branch/request script contract",
+      "safe_selected_lines": [
+        {
+          "line": 1,
+          "text": "puts \"S10rtc_verify\""
+        },
+        {
+          "line": 2,
+          "text": "set t [open /proc/sys/dev/btweb/rtc_invalid r]"
+        },
+        {
+          "line": 3,
+          "text": "gets $t line"
+        },
+        {
+          "line": 4,
+          "text": "scan $line %d num"
+        },
+        {
+          "line": 5,
+          "text": "if [expr $num==1] then {"
+        },
+        {
+          "line": 6,
+          "text": " puts \"Date Wrong\""
+        },
+        {
+          "line": 7,
+          "text": " date -s 2000.1.1-00:00:00"
+        },
+        {
+          "line": 8,
+          "text": "# hwclock --systohc --utc"
+        },
+        {
+          "line": 9,
+          "text": " puts \"Fixed only system clock\""
+        },
+        {
+          "line": 10,
+          "text": "#  puts \"Doing nothing\""
+        },
+        {
+          "line": 11,
+          "text": "} else {puts \"Date Correct\"}"
+        },
+        {
+          "line": 12,
+          "text": ""
+        },
+        {
+          "line": 13,
+          "text": "close $t"
+        }
+      ],
+      "sha256": "0f6e3f123e1ad9cab1fcd00d87ce3617cfd2d5b50db78e457c385582fb983d10",
+      "version": "3.0.14",
+      "view": "normal"
+    },
+    {
+      "bytes": 231,
+      "path": "work/f453av-firmware/3.0.14/analysis/rootfs/bin/hwtosys.tcl",
+      "product": "F453AV",
+      "relative_path": "bin/hwtosys.tcl",
+      "role": "NEW selected wrapper contract; natural caller OPEN and separate from init-to-S10 contract",
+      "safe_selected_lines": [
+        {
+          "line": 1,
+          "text": "#!/bin/ettclsh"
+        },
+        {
+          "line": 2,
+          "text": "set str1 \"armv5tel\""
+        },
+        {
+          "line": 3,
+          "text": "set str [exec uname -m]"
+        },
+        {
+          "line": 4,
+          "text": "#puts $str"
+        },
+        {
+          "line": 5,
+          "text": "set str1 \"armv5tel\""
+        },
+        {
+          "line": 6,
+          "text": "if [string compare $str $str1] then {"
+        },
+        {
+          "line": 7,
+          "text": "# puts \"SA1110\""
+        },
+        {
+          "line": 8,
+          "text": " exec rtc-rw r"
+        },
+        {
+          "line": 9,
+          "text": " } else {"
+        },
+        {
+          "line": 10,
+          "text": "# puts \"PXA255\" "
+        },
+        {
+          "line": 11,
+          "text": " exec hwclock --hctosys --utc"
+        },
+        {
+          "line": 12,
+          "text": "}"
+        },
+        {
+          "line": 13,
+          "text": ""
+        },
+        {
+          "line": 14,
+          "text": "#puts \"end\""
+        }
+      ],
+      "sha256": "ae5d328983802c1540debd016fc10618d4b99654d406ccacca32e4fbdbea1963",
+      "version": "3.0.14",
+      "view": "normal"
+    },
+    {
+      "bytes": 4269,
+      "path": "work/f453av-firmware/3.0.14/analysis/recovery/sbin/init",
+      "product": "F453AV",
+      "relative_path": "sbin/init",
+      "role": "INHERITED startup selector context, freshly identity/line checked, not duplicate new functional coverage",
+      "safe_selected_lines": [
+        {
+          "line": 103,
+          "text": "# Run scripts in /etc/init.d/scripts    "
+        },
+        {
+          "line": 104,
+          "text": "foreach n [lsort [glob -nocomplain /etc/init.d/scripts/S*]] {"
+        },
+        {
+          "line": 105,
+          "text": "    try [list source $n]"
+        },
+        {
+          "line": 106,
+          "text": "}"
+        }
+      ],
+      "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb",
+      "version": "3.0.14",
+      "view": "recovery"
+    },
+    {
+      "bytes": 294,
+      "path": "work/f453av-firmware/3.0.14/analysis/recovery/etc/init.d/scripts/S10rtc_verify",
+      "product": "F453AV",
+      "relative_path": "etc/init.d/scripts/S10rtc_verify",
+      "role": "NEW selected local clock-flag/read/branch/request script contract",
+      "safe_selected_lines": [
+        {
+          "line": 1,
+          "text": "puts \"S10rtc_verify\""
+        },
+        {
+          "line": 2,
+          "text": "set t [open /proc/sys/dev/btweb/rtc_invalid r]"
+        },
+        {
+          "line": 3,
+          "text": "gets $t line"
+        },
+        {
+          "line": 4,
+          "text": "scan $line %d num"
+        },
+        {
+          "line": 5,
+          "text": "if [expr $num==1] then {"
+        },
+        {
+          "line": 6,
+          "text": " puts \"Date Wrong\""
+        },
+        {
+          "line": 7,
+          "text": " date -s 2000.1.1-00:00:00"
+        },
+        {
+          "line": 8,
+          "text": "# hwclock --systohc --utc"
+        },
+        {
+          "line": 9,
+          "text": " puts \"Fixed only system clock\""
+        },
+        {
+          "line": 10,
+          "text": "#  puts \"Doing nothing\""
+        },
+        {
+          "line": 11,
+          "text": "} else {puts \"Date Correct\"}"
+        },
+        {
+          "line": 12,
+          "text": ""
+        },
+        {
+          "line": 13,
+          "text": "close $t"
+        }
+      ],
+      "sha256": "0f6e3f123e1ad9cab1fcd00d87ce3617cfd2d5b50db78e457c385582fb983d10",
+      "version": "3.0.14",
+      "view": "recovery"
+    },
+    {
+      "bytes": 231,
+      "path": "work/f453av-firmware/3.0.14/analysis/recovery/bin/hwtosys.tcl",
+      "product": "F453AV",
+      "relative_path": "bin/hwtosys.tcl",
+      "role": "NEW selected wrapper contract; natural caller OPEN and separate from init-to-S10 contract",
+      "safe_selected_lines": [
+        {
+          "line": 1,
+          "text": "#!/bin/ettclsh"
+        },
+        {
+          "line": 2,
+          "text": "set str1 \"armv5tel\""
+        },
+        {
+          "line": 3,
+          "text": "set str [exec uname -m]"
+        },
+        {
+          "line": 4,
+          "text": "#puts $str"
+        },
+        {
+          "line": 5,
+          "text": "set str1 \"armv5tel\""
+        },
+        {
+          "line": 6,
+          "text": "if [string compare $str $str1] then {"
+        },
+        {
+          "line": 7,
+          "text": "# puts \"SA1110\""
+        },
+        {
+          "line": 8,
+          "text": " exec rtc-rw r"
+        },
+        {
+          "line": 9,
+          "text": " } else {"
+        },
+        {
+          "line": 10,
+          "text": "# puts \"PXA255\" "
+        },
+        {
+          "line": 11,
+          "text": " exec hwclock --hctosys --utc"
+        },
+        {
+          "line": 12,
+          "text": "}"
+        },
+        {
+          "line": 13,
+          "text": ""
+        },
+        {
+          "line": 14,
+          "text": "#puts \"end\""
+        }
+      ],
+      "sha256": "ae5d328983802c1540debd016fc10618d4b99654d406ccacca32e4fbdbea1963",
+      "version": "3.0.14",
+      "view": "recovery"
+    },
+    {
+      "bytes": 4269,
+      "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/sbin/init",
+      "product": "MH200N",
+      "relative_path": "sbin/init",
+      "role": "INHERITED startup selector context, freshly identity/line checked, not duplicate new functional coverage",
+      "safe_selected_lines": [
+        {
+          "line": 103,
+          "text": "# Run scripts in /etc/init.d/scripts    "
+        },
+        {
+          "line": 104,
+          "text": "foreach n [lsort [glob -nocomplain /etc/init.d/scripts/S*]] {"
+        },
+        {
+          "line": 105,
+          "text": "    try [list source $n]"
+        },
+        {
+          "line": 106,
+          "text": "}"
+        }
+      ],
+      "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb",
+      "version": "1.1.8",
+      "view": "normal"
+    },
+    {
+      "bytes": 294,
+      "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/etc/init.d/scripts/S10rtc_verify",
+      "product": "MH200N",
+      "relative_path": "etc/init.d/scripts/S10rtc_verify",
+      "role": "NEW selected local clock-flag/read/branch/request script contract",
+      "safe_selected_lines": [
+        {
+          "line": 1,
+          "text": "puts \"S10rtc_verify\""
+        },
+        {
+          "line": 2,
+          "text": "set t [open /proc/sys/dev/btweb/rtc_invalid r]"
+        },
+        {
+          "line": 3,
+          "text": "gets $t line"
+        },
+        {
+          "line": 4,
+          "text": "scan $line %d num"
+        },
+        {
+          "line": 5,
+          "text": "if [expr $num==1] then {"
+        },
+        {
+          "line": 6,
+          "text": " puts \"Date Wrong\""
+        },
+        {
+          "line": 7,
+          "text": " date -s 2000.1.1-00:00:00"
+        },
+        {
+          "line": 8,
+          "text": "# hwclock --systohc --utc"
+        },
+        {
+          "line": 9,
+          "text": " puts \"Fixed only system clock\""
+        },
+        {
+          "line": 10,
+          "text": "#  puts \"Doing nothing\""
+        },
+        {
+          "line": 11,
+          "text": "} else {puts \"Date Correct\"}"
+        },
+        {
+          "line": 12,
+          "text": ""
+        },
+        {
+          "line": 13,
+          "text": "close $t"
+        }
+      ],
+      "sha256": "0f6e3f123e1ad9cab1fcd00d87ce3617cfd2d5b50db78e457c385582fb983d10",
+      "version": "1.1.8",
+      "view": "normal"
+    },
+    {
+      "bytes": 44,
+      "path": "work/mh200n-firmware/1.1.8/analysis/rootfs/bin/hwtosys.tcl",
+      "product": "MH200N",
+      "relative_path": "bin/hwtosys.tcl",
+      "role": "NEW selected wrapper contract; natural caller OPEN and separate from init-to-S10 contract",
+      "safe_selected_lines": [
+        {
+          "line": 1,
+          "text": "#!/bin/ettclsh"
+        },
+        {
+          "line": 2,
+          "text": "exec hwclock --hctosys --utc"
+        }
+      ],
+      "sha256": "fe6a7e98ac58df697f294d4b319a5dfc2bd6c7cc90a4a28a25d5731d4d298ae1",
+      "version": "1.1.8",
+      "view": "normal"
+    },
+    {
+      "bytes": 4269,
+      "path": "work/mh200n-firmware/1.1.8/analysis/recovery/sbin/init",
+      "product": "MH200N",
+      "relative_path": "sbin/init",
+      "role": "INHERITED startup selector context, freshly identity/line checked, not duplicate new functional coverage",
+      "safe_selected_lines": [
+        {
+          "line": 103,
+          "text": "# Run scripts in /etc/init.d/scripts    "
+        },
+        {
+          "line": 104,
+          "text": "foreach n [lsort [glob -nocomplain /etc/init.d/scripts/S*]] {"
+        },
+        {
+          "line": 105,
+          "text": "    try [list source $n]"
+        },
+        {
+          "line": 106,
+          "text": "}"
+        }
+      ],
+      "sha256": "0f653e164cb7e35cf3665ff2468bd444871b3ff1c979076d1c509c229634d8bb",
+      "version": "1.1.8",
+      "view": "recovery"
+    },
+    {
+      "bytes": 294,
+      "path": "work/mh200n-firmware/1.1.8/analysis/recovery/etc/init.d/scripts/S10rtc_verify",
+      "product": "MH200N",
+      "relative_path": "etc/init.d/scripts/S10rtc_verify",
+      "role": "NEW selected local clock-flag/read/branch/request script contract",
+      "safe_selected_lines": [
+        {
+          "line": 1,
+          "text": "puts \"S10rtc_verify\""
+        },
+        {
+          "line": 2,
+          "text": "set t [open /proc/sys/dev/btweb/rtc_invalid r]"
+        },
+        {
+          "line": 3,
+          "text": "gets $t line"
+        },
+        {
+          "line": 4,
+          "text": "scan $line %d num"
+        },
+        {
+          "line": 5,
+          "text": "if [expr $num==1] then {"
+        },
+        {
+          "line": 6,
+          "text": " puts \"Date Wrong\""
+        },
+        {
+          "line": 7,
+          "text": " date -s 2000.1.1-00:00:00"
+        },
+        {
+          "line": 8,
+          "text": "# hwclock --systohc --utc"
+        },
+        {
+          "line": 9,
+          "text": " puts \"Fixed only system clock\""
+        },
+        {
+          "line": 10,
+          "text": "#  puts \"Doing nothing\""
+        },
+        {
+          "line": 11,
+          "text": "} else {puts \"Date Correct\"}"
+        },
+        {
+          "line": 12,
+          "text": ""
+        },
+        {
+          "line": 13,
+          "text": "close $t"
+        }
+      ],
+      "sha256": "0f6e3f123e1ad9cab1fcd00d87ce3617cfd2d5b50db78e457c385582fb983d10",
+      "version": "1.1.8",
+      "view": "recovery"
+    },
+    {
+      "bytes": 231,
+      "path": "work/mh200n-firmware/1.1.8/analysis/recovery/bin/hwtosys.tcl",
+      "product": "MH200N",
+      "relative_path": "bin/hwtosys.tcl",
+      "role": "NEW selected wrapper contract; natural caller OPEN and separate from init-to-S10 contract",
+      "safe_selected_lines": [
+        {
+          "line": 1,
+          "text": "#!/bin/ettclsh"
+        },
+        {
+          "line": 2,
+          "text": "set str1 \"armv5tel\""
+        },
+        {
+          "line": 3,
+          "text": "set str [exec uname -m]"
+        },
+        {
+          "line": 4,
+          "text": "#puts $str"
+        },
+        {
+          "line": 5,
+          "text": "set str1 \"armv5tel\""
+        },
+        {
+          "line": 6,
+          "text": "if [string compare $str $str1] then {"
+        },
+        {
+          "line": 7,
+          "text": "# puts \"SA1110\""
+        },
+        {
+          "line": 8,
+          "text": " exec rtc-rw r"
+        },
+        {
+          "line": 9,
+          "text": " } else {"
+        },
+        {
+          "line": 10,
+          "text": "# puts \"PXA255\" "
+        },
+        {
+          "line": 11,
+          "text": " exec hwclock --hctosys --utc"
+        },
+        {
+          "line": 12,
+          "text": "}"
+        },
+        {
+          "line": 13,
+          "text": ""
+        },
+        {
+          "line": 14,
+          "text": "#puts \"end\""
+        }
+      ],
+      "sha256": "ae5d328983802c1540debd016fc10618d4b99654d406ccacca32e4fbdbea1963",
+      "version": "1.1.8",
+      "view": "recovery"
+    }
+  ],
+  "private_runtime_values_exported": false,
+  "product_view_contexts": [
+    {
+      "archive_hash_role": "Inherited acquisition identity, not a fresh archive hash operation",
+      "artifact": "firmware-f453av-030014",
+      "package_archive_sha256_from_verified_acquisition": "673d7ab2802fc324802bb8f59c50e018850e8c724e923e0bd7cbc8b5cca86d4a",
+      "product": "F453AV",
+      "root": "work/f453av-firmware/3.0.14/analysis/rootfs",
+      "version": "3.0.14",
+      "view": "normal"
+    },
+    {
+      "archive_hash_role": "Inherited acquisition identity, not a fresh archive hash operation",
+      "artifact": "firmware-f453av-030014",
+      "package_archive_sha256_from_verified_acquisition": "673d7ab2802fc324802bb8f59c50e018850e8c724e923e0bd7cbc8b5cca86d4a",
+      "product": "F453AV",
+      "root": "work/f453av-firmware/3.0.14/analysis/recovery",
+      "version": "3.0.14",
+      "view": "recovery"
+    },
+    {
+      "archive_hash_role": "Inherited acquisition identity, not a fresh archive hash operation",
+      "artifact": "firmware-mh200n-010108",
+      "package_archive_sha256_from_verified_acquisition": "e32d3404302f3619bbbb564ae50554ab81ac6ef818b6e5a2290142a5e2ab5fb3",
+      "product": "MH200N",
+      "root": "work/mh200n-firmware/1.1.8/analysis/rootfs",
+      "version": "1.1.8",
+      "view": "normal"
+    },
+    {
+      "archive_hash_role": "Inherited acquisition identity, not a fresh archive hash operation",
+      "artifact": "firmware-mh200n-010108",
+      "package_archive_sha256_from_verified_acquisition": "e32d3404302f3619bbbb564ae50554ab81ac6ef818b6e5a2290142a5e2ab5fb3",
+      "product": "MH200N",
+      "root": "work/mh200n-firmware/1.1.8/analysis/recovery",
+      "version": "1.1.8",
+      "view": "recovery"
+    }
+  ],
+  "unique_selected_body_hashes": 4
+}

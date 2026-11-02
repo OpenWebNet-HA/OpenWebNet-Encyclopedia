@@ -1,0 +1,11 @@
+{
+  "scope": "Fresh official complete IR parse after removing exactly one surplus EOF LF; document bodies, section identities/line locations/privacy/annotations, guide findings and full IR are deeply identical to the fully validated projection",
+  "canonical_IR_equal": true,
+  "prior_IR_sha256": "c415f45427c0805fcde8b2e5b83041efe33673e6d9a23d68060531a3da6cf507",
+  "fresh_IR_sha256": "c415f45427c0805fcde8b2e5b83041efe33673e6d9a23d68060531a3da6cf507",
+  "prior_complete_check_receipt_sha256": "cd734c61e7c42f6ea584d7f26351dfba11bd94f53b891c1ebcadcfb28b6c50c7",
+  "current_manifest_sha256": "9b9d660bdc614fc075c60b8734251d4f888533f56eca8eeb29373626cca2abd6",
+  "generator_or_schema_or_curated_claim_changes": false,
+  "new_full_check_run": false,
+  "evidence_qualification": "Previous complete check remains a check of exactly the same canonical IR/inputs/outputs; source raw-byte formatting changes have an explicit publication addendum, not silently repinned historical checks"
+}

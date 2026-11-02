@@ -1,0 +1,39 @@
+# F450 standard/PROD 2.0.10 and F455 1.1.2: bounded first exploration
+
+The F450 packages retain identical normal root images and all 3,839 regular-file identities, but their outer packages differ. F455 is a separate opaque standalone payload. These findings concern exact retained originals, not installed devices or runtime equivalence.
+
+## Exact applicability and package distinction
+
+- F450 standard archive: 13,265,378 bytes, SHA256 `9e625012d3e8629bea15d608f7c1de160e971499a39f3fd86f0c68103da8b9da`.
+- F450 PROD archive: 13,444,140 bytes, SHA256 `27c5640916f980be2c16fd14ed7818d8b361e69b439e7a774bd4e90e57b9b96f`.
+- F455 archive: 180,196 bytes, SHA256 `cd99299fc729679b4eade46acda7bd4f5e619a0a9eac34a1f6a3b73b625a18f9`.
+
+Both F450 fwz.xml originals are identical 790-byte files (`4b5709921d308716dbd4f9dea0ccea9f5265331ea67beb0c0076e6ee5d9d330c`). Their name/version are F450/2.0.10 and object-model labels are 1.0.52/2.0.52 (lines3-9). They declare firmware and recovery_firmware actions using the same two file labels, plus extra_download 50.xtz (lines13-24); status4 orders actions2,1,3 (lines26-29). This is manifest declaration, not actual recovery selection or installation proof.
+
+The standard outer ZIP has three members; PROD has eight. PROD adds 50.xtz, bubl.bin, default_env.img, parts.in and u-boot.bin. Only metadata/hashes of these packaging additions are used; environment contents are not inspected or exported. Shared extracted gzip/uImage/fwz.xml and normal image hashes match. The normal image SHA256 is `92aa546baf4c330b842e6e0f0336acd264787a944c9b27838c5aacdd04ff1f10`. Each retained regular tree totals 26,156,366 bytes; all individual sizes/hashes were verified. Saved link/special-node metadata remains separate; this collector never makes or follows target links.
+
+## F450 architecture and selected startup structure
+
+Fresh original headers identify 337 regular ELF files; ABI counts are in ELF_HEADERS.json. The selected bt_daemon, bacclient, ebacgw, libopen.so.0.0 and libopenmsg.so are ELF32 little-endian ARM (machine40), flags0x5000002/EABI5. This is distinct from later AArch64 F460/F461 and does not authorize transferring their layouts. The uImage header name is `Arago/2.6.32.17-davinci1/lago`; its numeric OS/architecture/type/compression tuple is [5,2,2,0] and declared payload size is 1522640. Header bytes are saved, not a statement about a booted kernel or hardware.
+
+Original etc/init.d/bt_daemon-apps.sh lines3,5,6 request library path `/home/bticino/lib:/home/bticino/libcoso`, directory `/home/bticino`, and `bin/bt_daemon &`. The safe stack_open.xml process names at lines63,68,73,78,83 are bacclient, ebacgw, bt_device, scsserver and bt_termo. STARTUP_SAFE.json retains only these whitelisted declarations/script lines. Actual configuration selection, startup, module binding and readiness are unproved; no script is sourced or run.
+
+## Structured data and concrete follow-up leads
+
+PROD 50.xtz central-directory metadata lists `50/master.sqlite`, declared289,792 bytes, CRC32 52150069, encrypted, plus encrypted zero-byte extra.xml. Neither content is available to this packet. No password/key study, decryption attempt or SQLite query was made. The standard outer package does not contain 50.xtz despite the identical manifest reference. This is an explicit package-composition gap, not a runtime missing-file defect.
+
+Original `home/bticino/cfg/BACnetTemplates.xml` is8,503 bytes/SHA256 `b837e1f86167dfdbf814f0e562c9c2b7349d603939c4945eb3937efc8477ea04`: root BACnetTemplates, eight DeviceType and126 object elements, attribute names class/grandezza/name/unit. `home/bticino/sp/dbfiles_ws.xml` is477 bytes/SHA256 `be6767b12639e64a4ca3e136be73a93d5e61e2f2dd35daee1172c6919945a05a`: a Root_Element wrapper with general_info and five metadata leaf element names. Structural counts reveal no configured device instances or accepted protocol/support table.
+
+bacclient contains both XML filename literals and bt_daemon contains dbfiles_ws.xml; exact file offsets and PT_LOAD-derived VAs are in SELECTED_COMPONENTS.json. ebacgw declares DT_NEEDED libsqlite3.so.0 and selected SQLite symbol imports including sqlite3_open. These are useful original consumer candidates, not proved calls, query ownership, successful opening, schema compatibility or live bindings. The parent owns the wider DB signature/schema census; this collector does not duplicate it or infer global DB absence.
+
+## F455 standalone boundary
+
+fwz.xml declares Basic Gateway, version1.1.2, model label5.0.8, and file F455_1_1_2.bin with update mode bootloader. The extracted payload is301,016 bytes/SHA256 `6d61c308888ccd78f6fb289cf23e672203921a50931b838533a7a315c5d49ccc`. Its first64 raw bytes and little-endian word interpretation are saved in F455_HEADER.json. It has none of the selected ELF/ZIP/gzip/SQLite magic values at offset0; the whitelisted ASCII F455 marker occurs at299056. No architecture, executable section, vector table, load address, filesystem or data grammar is established. The curated OWN-DEV-0152 product role is context only, not a binary capability oracle; credential material is not copied.
+
+## Ranked remaining questions and reproducibility
+
+1. Obtain an authorized genuine plaintext/source form of the encrypted PROD master.sqlite; central-directory naming alone cannot establish its schema or configured content. No further key/decryption investigation is part of this packet.
+2. Separately trace bacclient's two XML literal users and ebacgw's declared SQLite opening consumer, stopping at closed delegates; names/imports alone do not close these joins.
+3. Identify F455's original format/target using authoritative packaging/tool metadata before interpreting code or structured objects.
+
+Run `python3 -B collect_firstpass_v2.py --check` from this directory. Initial outputs and collector/report copies are exclusive and frozen immediately; index bytes are computed before its own file is opened. --check only compares bytes. All original firmware/native/provider/model/fixture/vendor/SQL/target OS/network/bus execution additions are0; host readelf and metadata parsing are analysis tools. Canonical archive provenance/CRC checks are inherited separately from acquisition, not cryptographic authenticity. No old dossier or source/repository file is edited. There were no failed canonical generations or overwritten candidates in this packet. A staged unexecuted v1 script was retained before the sole six-to-five XML leaf-count prose correction and v2 reproduction-name update; VERSION_HISTORY.v2.json pins the exact parent snapshot and changes. Exploratory host-only reads preceded this frozen collector; one harmless invalid-escape SyntaxWarning in an ad-hoc search did not execute target code or create evidence outputs. Full runtime, physical support, authentication and transport behavior remain outside scope.

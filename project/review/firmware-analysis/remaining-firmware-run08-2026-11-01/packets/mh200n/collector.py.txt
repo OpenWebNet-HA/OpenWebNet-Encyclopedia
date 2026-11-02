@@ -1,0 +1,210 @@
+#!/usr/bin/env python3
+"""Static listing-stream to line-byte/store and filename-format request evidence."""
+import sys
+sys.dont_write_bytecode = True
+import argparse
+import hashlib
+import json
+import re
+import struct
+import subprocess
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = next(p for p in HERE.parents if (p / 'work/mh200n-firmware').is_dir())
+BASE = Path('work/mh200n-firmware/1.1.8')
+GUARDS = {
+    0xa988: 0xe1a03000, 0xa98c: 0xe50b3010, 0xa990: 0xe51b3010,
+    0xa994: 0xe3530000, 0xa998: 0x1a00000a,
+    0xa9c8: 0xe24b3074, 0xa9cc: 0xe1a00003, 0xa9d0: 0xe3a01050,
+    0xa9d4: 0xe51b2010, 0xa9d8: 0xebfffd1d, 0xa9dc: 0xe1a03000,
+    0xa9e0: 0xe3530000, 0xa9e4: 0x0a00001c,
+    0xa9e8: 0xe24b3074, 0xa9ec: 0xe1a00003, 0xa9f0: 0xebfffd62,
+    0xa9f4: 0xe1a03000, 0xa9f8: 0xe3e02068, 0xa9fc: 0xe24b100c,
+    0xaa00: 0xe0813003, 0xaa04: 0xe0832002, 0xaa08: 0xe3a03000,
+    0xaa0c: 0xe5c23000, 0xaa10: 0xe24b3e46, 0xaa14: 0xe243300c,
+    0xaa18: 0xe2433008, 0xaa1c: 0xe24bc074, 0xaa20: 0xe1a00003,
+    0xaa24: 0xe59f1078, 0xaa28: 0xe59f2078, 0xaa2c: 0xe1a0300c,
+    0xaa30: 0xebfffcb3,
+}
+SPANS = [('new-retained-stream-and-selected-admission', 0xa988, 0xa99c),
+         ('new-read-line-byte-store-and-first-format', 0xa9c8, 0xaa34),
+         ('selected-safe-format-and-prefix-pools', 0xaaa4, 0xaaac),
+         ('fgets-PLT', 0x9e54, 0x9e60), ('strlen-PLT', 0x9f80, 0x9f8c),
+         ('sprintf-PLT', 0x9d04, 0x9d10)]
+
+
+def sha(b):
+    return hashlib.sha256(b).hexdigest()
+
+
+def enc(x):
+    return (json.dumps(x, indent=2, sort_keys=True) + '\n').encode()
+
+
+def exclusive(p, b):
+    p.parent.mkdir(parents=True, exist_ok=True)
+    with p.open('xb') as f:
+        f.write(b)
+
+
+def build():
+    pins = {}
+
+    def read(p):
+        p = Path(p)
+        f = ROOT / p
+        assert not p.is_absolute() and '..' not in p.parts
+        assert f.is_file() and not f.is_symlink() and ROOT in f.resolve().parents
+        b = f.read_bytes()
+        pins[str(p)] = {'path': str(p), 'bytes': len(b), 'sha256': sha(b)}
+        return b
+
+    manifest = json.loads(read(BASE / 'analysis/application-regular-files.json'))
+    original = BASE / 'analysis/application/home/bticino/bin/bt_taskmanager'
+    b = read(original)
+    assert len(b) == manifest['home/bticino/bin/bt_taskmanager']['bytes'] == 159048
+    assert sha(b) == manifest['home/bticino/bin/bt_taskmanager']['sha256'] == 'ad68f9bf43f7f10af122f34d3cb14b7d8c02730c46225a9a6cd1bf3e663072cb'
+    assert b[:8] == bytes.fromhex('7f454c4601010161')
+    h = struct.unpack_from('<HHIIIIIHHHHHH', b, 16)
+    assert h[0:2] == (2, 40) and h[6] == 0x202 and h[8] == 32
+    ph = [struct.unpack_from('<8I', b, h[4] + i * h[8]) for i in range(h[9])]
+    loads = [{'offset': s[1], 'VA': s[2], 'file_bytes': s[4], 'memory_bytes': s[5], 'flags': s[6]} for s in ph if s[0] == 1]
+
+    def off(a, n=4):
+        xs = [s['offset'] + a - s['VA'] for s in loads if s['VA'] <= a and a + n <= s['VA'] + s['file_bytes']]
+        assert len(xs) == 1, hex(a)
+        return xs[0]
+
+    def word(a):
+        return struct.unpack_from('<I', b, off(a))[0]
+
+    def branch(a, linked):
+        w = word(a)
+        assert w & 0x0f000000 == (0x0b000000 if linked else 0x0a000000)
+        n = w & 0xffffff
+        if n & (1 << 23):
+            n -= 1 << 24
+        return a + 8 + n * 4
+
+    for a, v in GUARDS.items():
+        assert word(a) == v, hex(a)
+    calls = {0xa9d8: 0x9e54, 0xa9f0: 0x9f80, 0xaa30: 0x9d04}
+    branches = {0xa998: 0xa9c8, 0xa9e4: 0xaa5c}
+    for a, v in calls.items():
+        assert branch(a, True) == v
+    for a, v in branches.items():
+        assert branch(a, False) == v
+    joins = []
+    for a, p, v in [(0xaa24, 0xaaa4, 0x2b918), (0xaa28, 0xaaa8, 0x2b928)]:
+        w = word(a)
+        assert w & 0x0f7f0000 == 0x051f0000 and a + 8 + (w & 4095) == p and word(p) == v
+        joins.append({'instruction_VA': hex(a), 'pool_VA': hex(p), 'pool_word': hex(v)})
+    literals = []
+    for a, text in [(0x2b918, 'rm -f %s%s.zip'), (0x2b928, '/home/bticino/script/')]:
+        raw = text.encode('ascii') + b'\0'
+        assert b[off(a, len(raw)):off(a, len(raw)) + len(raw)] == raw
+        literals.append({'VA': hex(a), 'file_offset': hex(off(a, len(raw))), 'text': text, 'NUL_bytes_hex': raw.hex(), 'role': 'Compiled formatter argument only, never a submitted command or live pathname'})
+    rel = subprocess.check_output(['readelf', '-rW', str(ROOT / original)], text=True)
+
+    def immediate(v):
+        n = v & 255
+        r = ((v >> 8) & 15) * 2
+        return ((n >> r) | (n << (32 - r))) & 0xffffffff if r else n
+
+    imports = []
+    for name, a in [('fgets', 0x9e54), ('strlen', 0x9f80), ('sprintf', 0x9d04)]:
+        u, v, z = [word(a + i) for i in (0, 4, 8)]
+        assert u & 0xfffff000 == 0xe28fc000 and v & 0xfffff000 == 0xe28cc000 and z & 0xfffff000 == 0xe5bcf000
+        slot = a + 8 + immediate(u) + immediate(v) + (z & 4095)
+        rows = [x.strip() for x in rel.splitlines() if 'R_ARM_JUMP_SLOT' in x and re.search(r'\b' + name + r'@GLIBC_', x)]
+        assert len(rows) == 1 and int(rows[0].split()[0], 16) == slot
+        imports.append({'name': name, 'PLT_VA': hex(a), 'GOT_slot': hex(slot), 'words': [hex(u), hex(v), hex(z)], 'original_relocation': rows[0]})
+    spans = []
+    for label, a, z in SPANS:
+        o = off(a, z - a)
+        raw = b[o:o + z - a]
+        asm = subprocess.check_output(['objdump', '-d', '-m', 'arm', f'--start-address={a}', f'--stop-address={z}', str(ROOT / original)], text=True)
+        spans.append({'label': label, 'start_VA': hex(a), 'end_exclusive_VA': hex(z), 'file_offset': hex(o), 'bytes_hex': raw.hex(), 'sha256': sha(raw), 'host_disassembly': asm})
+    prior = BASE / 'research/2026-11-01-night07-application'
+    ps = json.loads(read(prior / 'SOURCE.json'))
+    pf = json.loads(read(prior / 'ARGUMENT_FLOW.json'))
+    read(prior / 'REPORT.md')
+    assert ps['original']['sha256'] == sha(b) and pf['fopen_request']['VA'] == '0xa984'
+    assert pf['buffer'].startswith('Each selected construction yields the same local address FP-1140')
+    source = {'component': 'Own MH200N separate application bundle; not an installed overlay',
+              'original': pins[str(original)], 'header52_hex': b[:52].hex(), 'PT_LOAD': loads,
+              'mapping_role': 'Own ELF32 LE ARM EXEC/rawflags0x202 verified for mapping only; prior formatting/system/fopen context inherited, not new coverage',
+              'spans': spans, 'word_guards': [{'VA': hex(a), 'word': hex(v)} for a, v in sorted(GUARDS.items())],
+              'direct_calls': [{'VA': hex(a), 'target': hex(v)} for a, v in calls.items()],
+              'selected_branches': [{'VA': hex(a), 'target': hex(v)} for a, v in branches.items()],
+              'pool_joins': joins, 'safe_literals': literals, 'imports': imports,
+              'store_address_algebra': {'line_buffer': 'FP-116', 'L': 'ordinary strlen return for that line', 'MVN_R2_104_signed': -105, 'FP_base': 'FP-12', 'selected_STRB_address': '(FP-12)+L-105=(FP-116)+L-1', 'stored_byte': 0, 'premise': 'Valid nonempty terminated line and writable last-byte address; not a newline test'},
+              'stop': 'Immediately after first filename sprintf0xaa30; no later formatting/system/cleanup/provider body covered'}
+    flow = {'scope': 'One retained listing stream to local line-byte store and first filename-format request',
+            'inherited': 'Night07 only supplies compiled listing path/fopen request0xa984 and local routine/frame context; no command/listing/file outcome or outer caller is established',
+            'stream': 'Returned fopen machine wordR0 copied viaR3 intoFP-16 at0xa988..a98c, selected nonzero test branches0xa998→0xa9c8; valid FILE/provider state remains a premise',
+            'read_request': {'VA': '0xa9d8', 'R0': 'line buffer FP-116', 'R1': 80, 'R2': 'same retained stream word fromFP-16'},
+            'selected_line': 'Read return is compared with0; selected nonnull fallthrough supplies original line bufferFP-116 to strlen0xa9f0, not an invented returned object',
+            'byte_store': 'For valid nonempty C-string with lengthL,0xaa0c writes byte0 at line[L-1]; no explicit positive-length/newline-byte test in this bounded strlen-to-store span',
+            'format_request': {'VA': '0xaa30', 'R0': 'prior local output buffer FP-1140', 'R1': 'compiled rm -f %s%s.zip format', 'R2': 'compiled /home/bticino/script/ prefix', 'R3': 'same modified line buffer FP-116', 'meaning': 'String-format request only; no rm/system/file mutation or archive operation proved'},
+            'premises': ['Natural outer caller/local-routine admission and expected own ARM32 frame/ABI not established at runtime', 'Valid retained stream/provider state, line buffer capacity80 and lifetime, ordinary fgets/strlen semantics and normal returns', 'Nonempty terminated C string and writable line[L-1]; nonnull read alone is not substituted for these premises', 'Valid writable destination capacity/lifetime and expected sprintf/import binding without invalidating side effects'],
+            'limits': ['No original file/listing data, generated command, fixture/model or provider/body execution', 'No newline identity, full line/filename completeness, successful read/listing, filename validity/safety or whole error policy', 'No deletion, ZIP existence/content, archive/input relation, scenario grammar/compiler/parser or actual script acceptance', 'No next formatter, loop/cleanup/later consumer/receiving/output/transport/auth/session/framing/MQTT/libjel/JS provider body', 'No installed overlay/current configuration/startup/protocol/hardware outcome']}
+    report = '''# MH200N 1.1.8 night08 — retained listing stream and one filename-format consumer
+
+The new positive continuation retains the prior fopen return as a listing-stream word, supplies it to **fgets with a local buffer/count80**, and on the selected nonnull read uses strlen to locate one byte store before passing the modified line to a filename-formatting request. The stream/line/output-buffer roles are distinct. This is source dataflow under valid stream/string/capacity/ABI/provider premises, not an executed listing/read, newline parser, complete filename, deletion, scenario grammar or script compiler.
+
+## Own source and inherited admission
+
+The original separate-bundle taskmanager remains159048 bytes/SHA256 ad68f9bf43f7f10af122f34d3cb14b7d8c02730c46225a9a6cd1bf3e663072cb. Its own application manifest and fresh ELF32 little-endian ARM EXEC/machine40/raw flags0x202/PT_LOADs support addresses only; the separate application bundle is not an installed overlay. Night07 REPORT/SOURCE/ARGUMENT_FLOW are pinned as inherited context for the local routine/frame and actual listing-path fopen request0xa984. Their prior formatter/system/fopen chain is not replayed or counted as new coverage. Natural outer-caller/local-routine admission, current files and ordinary own ARM32 calling/frame conventions remain unproved; no MH202/MHS/F454 or normal/recovery semantics are transferred.
+
+## Same retained stream into the line buffer
+
+0xa988 copies the prior returnedR0 intoR3;0xa98c stores that word atFP-16.0xa990..0xa998 test it and select the nonzero branch to0xa9c8. A valid FILE/provider object is a premise rather than a consequence of a nonzero word. At0xa9c8..0xa9d4, R0 is local line bufferFP-116, R1 is numeric80, andR2 is that SAME savedFP-16 word. BL0xa9d8 requests the actual fgets import. No stream, file or target path is opened/read by this analysis.
+
+The read machine return is compared with0. Its selected nonnull fallthrough supplies the original configured line bufferFP-116 to actual strlen0xa9f0. Ordinary fgets/strlen semantics, appropriate valid terminated data, capacity/lifetime and normal provider returns remain premises. No actual line bytes, private values or synthetic input are provided, and nonnull return is not promoted into a complete/nonempty filename or a successfully generated prior listing.
+
+## Exact byte store and first filename-format request
+
+The returned lengthL is combined with original constants: MVN R2,104 gives signed−105; the other base isFP−12; the ADD instructions form(FP−12)+L−105=(FP−116)+L−1. STRB0 at0xaa0c therefore zeros **line[L−1] under a valid nonempty C-string/writable-address premise**. The selected strlen-to-store span has no explicit positive-length or newline-byte test. This is not proof that a newline was present/removed, that a complete filename survived, a runtime safety/defect verdict or a whole error-policy analysis.
+
+0xaa10..0xaa20 reconstruct prior local output bufferFP−1140 while0xaa1c supplies the same modified lineFP−116.0xaa24 loads exact compiled format `rm -f %s%s.zip` via0xaaa4→0x2b918;0xaa28 loads exact compiled prefix `/home/bticino/script/` via0xaaa8→0x2b928. With the modified line inR3, BL0xaa30 requests actual sprintf. Valid writable destination capacity/lifetime, ordinary formatting/termination, expected ABI/import binding and normal returns remain explicit premises. The literal is a **formatting operand only**: no command is generated/submitted by the collector, no system/rm/file mutation is requested in this selected span, and no ZIP existence, archive content, extraction, accepted script or scenario semantics is established. The packet stops immediately after this first formatter, before subsequent formatting, loop/cleanup or other consumers.
+
+## Evidence and boundaries
+
+SOURCE.json retains six exact original spans,32 fixed word guards, three BL targets, two selected admission/read branches, two pool joins/two safe literals and three original PLT/GOT/JUMP_SLOT proofs for fgets/strlen/sprintf. ARGUMENT_FLOW.json separates saved stream, configured line buffer, returned length, modified line and output buffer, with string/capacity/admission limits. INPUTS.json pins own original binary/manifest and three immutable night07 members. Provider bodies, surrounding diagnostics/failed branches and complete local routine remain opaque/unreviewed.
+
+Reproduce `python3 -B collect_list_consumer_v2.py --check`: deterministic host static bytes/hash/ELF parsing, readelf and bounded ARM disassembly only. The first v1 invocation failed parsing an unmatched closing brace at line143 before build execution or outputs; its chained --check was not reached. Exact v1/FAILED_V1 and immediate failure copies remain unchanged, with the parent pre-correction snapshot at run08/parent-before-mh-v2. NEWv2 corrects only that source-dictionary syntax, its own filename/reproduction labels and this honest history paragraph; all original source/hash/VA/word guards remain unchanged. V2 is compiled before canonical generation; generation refuses existing outputs and immediately retains exact first copies of collector/all five outputs with a precomputed non-circular index. Successful v2 initial generation and separate read-only reproduction are required before freeze; no failed output/report or historical hash is invented. No old collector, original/vendor/native/helper/emulator/model/fixture/SQL/targetstartup/OS/device/service/network/bus/mount/physical operation, shell/listing/file/provider or command is executed. No private/full configuration or receiving/output/transport/authentication/session/framing/MQTT/libjel/JS/provider body or equivalent denied F450 helper is expanded. New original execution0; database recovery/generation0 and remote writes0. Parent owns public/repository/archive changes; cumulative archive remains inherited one encrypted F450 support container/zero plaintext databases. Originals/synced/completed evidence, source manifest and MHS340 code-hook-visits/360 hooks plus separate F454/MH202 ledgers remain unchanged.
+'''
+    out = {'SOURCE.json': enc(source), 'ARGUMENT_FLOW.json': enc(flow), 'INPUTS.json': enc({'files': sorted(pins.values(), key=lambda x: x['path'])}), 'REPORT.md': report.encode()}
+    out['OUTPUT_MANIFEST.json'] = enc({'scope': 'Generated members excluding this manifest', 'files': {n: {'bytes': len(v), 'sha256': sha(v)} for n, v in sorted(out.items())}})
+    return out
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--check', action='store_true')
+    a = ap.parse_args()
+    names = ['SOURCE.json', 'ARGUMENT_FLOW.json', 'INPUTS.json', 'REPORT.md', 'OUTPUT_MANIFEST.json']
+    if not a.check:
+        assert not any((HERE / n).exists() for n in names) and not (HERE / 'first-candidate').exists()
+    out = build()
+    if a.check:
+        for n, b in out.items():
+            assert (HERE / n).read_bytes() == b, n
+        for x in json.loads((HERE / 'first-candidate/INDEX.json').read_bytes())['files']:
+            b = (HERE / 'first-candidate' / x['copy']).read_bytes()
+            assert len(b) == x['bytes'] and sha(b) == x['sha256'] and b == (HERE / x['copy']).read_bytes()
+    else:
+        for n, b in out.items():
+            exclusive(HERE / n, b)
+        copies = {**out, 'collect_list_consumer_v2.py': Path(__file__).read_bytes()}
+        ix = {'scope': 'Immediate exact first outputs and collector; precomputed index excludes itself', 'files': [{'copy': n, 'bytes': len(b), 'sha256': sha(b)} for n, b in sorted(copies.items())]}
+        for n, b in copies.items():
+            exclusive(HERE / 'first-candidate' / n, b)
+        exclusive(HERE / 'first-candidate/INDEX.json', enc(ix))
+    print(json.dumps({'status': 'PASS', 'outputs': len(out), 'spans': len(SPANS), 'guards': len(GUARDS), 'original_execution': 0, 'new_coverage': 'retained stream to line-byte-store and first filename-format request'}))
+
+
+if __name__ == '__main__':
+    main()

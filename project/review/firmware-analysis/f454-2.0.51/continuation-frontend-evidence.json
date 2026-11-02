@@ -1,0 +1,170 @@
+{
+  "method": "Static frontend source/bundle inspection only; no JavaScript, browser, model/view or network execution",
+  "inputs": [
+    {
+      "image_path": "/home/httpd/html/myhome/js/libs/myhome/jquery.myhomeliveupdate.js",
+      "sha256": "a2494f1c835a31793bc212486d6b023f4b771b8391a3ed393935c157b611a86c",
+      "bytes": 5876,
+      "ranges": [
+        [
+          59,
+          73
+        ],
+        [
+          126,
+          143
+        ]
+      ],
+      "evidence": "live-events.txt"
+    },
+    {
+      "image_path": "/home/httpd/html/myhome/js/libs/myEvents/jquery.myevents.js",
+      "sha256": "498ce6a45ae4d4ddd8ec78ca4f93b0a06247673d78334af23b0a66411252ce9c",
+      "bytes": 15399,
+      "ranges": [
+        [
+          21,
+          39
+        ],
+        [
+          166,
+          187
+        ],
+        [
+          259,
+          282
+        ]
+      ],
+      "evidence": "event-dispatch.txt"
+    },
+    {
+      "image_path": "/home/httpd/html/myhome/js/libs/myObjects/jquery.myobjects.js",
+      "sha256": "fcdefbcc86d1e71a18a1556cb576cb1414598ff6ecf59ef96ade1e28f910c233",
+      "bytes": 14354,
+      "ranges": [
+        [
+          28,
+          35
+        ],
+        [
+          133,
+          179
+        ]
+      ],
+      "evidence": "object-cache.txt"
+    },
+    {
+      "image_path": "/home/httpd/html/myhome/js/models/thermo/TemperatureZoneModel.js",
+      "sha256": "f10197efdcb43b947df3933211d1947b0f3c075268e606aed166e8efa8c24f49",
+      "bytes": 2403,
+      "ranges": [
+        [
+          12,
+          34
+        ]
+      ],
+      "evidence": "model.txt"
+    },
+    {
+      "image_path": "/home/httpd/html/myhome/js/views/base/BaseView.js",
+      "sha256": "7a6963cf09dc2709e92a8530870990445324f2ec295bfdc1e0290692132142a4",
+      "bytes": 5154,
+      "ranges": [
+        [
+          76,
+          86
+        ]
+      ],
+      "evidence": "view-dispatch.txt"
+    },
+    {
+      "image_path": "/home/httpd/html/myhome/js/views/objectsPartial/ThermoUnitZoneView.js",
+      "sha256": "2f315fd5f5d7248a9d4ed6ade9002645b91f15c35307f52110bc02b47f0763a1",
+      "bytes": 15014,
+      "ranges": [
+        [
+          19,
+          27
+        ],
+        [
+          62,
+          71
+        ],
+        [
+          254,
+          267
+        ]
+      ],
+      "evidence": "controlled-view.txt"
+    },
+    {
+      "image_path": "/home/httpd/html/myhome/js/views/objectsPartial/ExternalProbeObjectView.js",
+      "sha256": "997f9ce3c109a9855c9ee1c04438432f6f10065090914321f4830171672504f3",
+      "bytes": 3028,
+      "ranges": [
+        [
+          14,
+          19
+        ],
+        [
+          44,
+          60
+        ],
+        [
+          63,
+          74
+        ]
+      ],
+      "evidence": "external-view.txt"
+    },
+    {
+      "image_path": "/home/httpd/html/myhome/js/main.js",
+      "sha256": "c0d68679c485d4dafa51c7837f6f28b7abc2546b27d28a79a6a33ef0f0c2aa92",
+      "bytes": 3978,
+      "ranges": [
+        [
+          15,
+          20
+        ]
+      ],
+      "evidence": "module-map.txt"
+    },
+    {
+      "image_path": "/home/httpd/html/myhome/js/libs/myhome/jquery.myhomeapi.js",
+      "sha256": "0a8a583135b6bbc812b32f5407cde3a790dc72af010667658c2d3fdd0fbd7e13",
+      "bytes": 103248,
+      "ranges": [
+        [
+          2188,
+          2237
+        ]
+      ],
+      "evidence": "renderer.txt"
+    }
+  ],
+  "selected_bundle": {
+    "image_path": "/home/httpd/html/myhome/js/main-built.js",
+    "sha256": "270f101d725a949b43f6d1a4db9e94c0b3476d7e257a6f73fde591480e35566c",
+    "anchors": [
+      {
+        "marker": "this.fireEventBurstInternal=function",
+        "end_marker": "this.clearEventBus=function",
+        "character_offset": 1741185,
+        "fragment": "this.fireEventBurstInternal=function(e,t){if($.isArray(e))for(var n in e)if(e[n]&&e[n].eventName&&e[n].where!=null){var r=e[n].id;t&&(jQuery.myhomeliveupdate.last_event_id=r!=null&&Number(r)==r?Number(r):0),this.fireEvent(e[n].eventName,e[n].where,e[n])}else jQuery.myhomeapi.log(\"Invalid event object: \"+JSON.stringify(e[n]));else jQuery.myhomeapi.log(\"The bust is not an array: \"+JSON.stringify(e))},"
+      },
+      {
+        "marker": "this.get_uii_for_objects_by_where=function",
+        "end_marker": "this.update_status_for_object=function",
+        "character_offset": 1732366,
+        "fragment": "this.get_uii_for_objects_by_where=function(e){var t=[];for(var n in $objects)$objects[n].attributes&&($objects[n].attributes.where==e?t.push(n):$objects[n].attributes.where_probe&&$objects[n].attributes.eprobe&&$objects[n].attributes.eprobe==\"1\"&&$objects[n].attributes.where_probe==e&&t.push(n));return t},"
+      },
+      {
+        "marker": "this.update_status_for_object=function",
+        "end_marker": "this.get_status_display_text=function",
+        "character_offset": 1732673,
+        "fragment": "this.update_status_for_object=function(e,t,n){if($objects[t]&&jQuery.isFunction($objects[t].get)){var r=$objects[t].get(\"ID\");if(r==\"8002\"||r==\"8004\"||r==\"8005\"||r==\"8006\"||r==\"8007\"||r==\"8009\"||r==\"8008\"){var i=eventToStatusMapping[e],s=n[i];$objects[t].set(i,s);if(e==\"cu_zone_set_mode\"){var o=eventToStatusMapping.cu_zone_set_season;if(n[o]){var u=n[o];$objects[t].set(o,u)}}}else{var a=e.split(\"_\")[0],f=$objects[t];jQuery.isFunction(f.updateStatus)?f.updateStatus(n):(f.set(\"status\",eventToStatusMapping[e]),f.set(a,eventToStatusMapping[e]))}}},"
+      }
+    ]
+  },
+  "scope": "Selected thermal event routed to a matching object and registered view. Parameters remain same object except uii annotation in inspected source. Runtime callbacks, object availability, transport/JSON parsing and DOM effects are not executed."
+}

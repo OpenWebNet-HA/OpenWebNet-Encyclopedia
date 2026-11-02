@@ -1,0 +1,21 @@
+# MH202 run5 independent extraction/default-restore source review
+
+PASS for the selected static report; no required correction. Parent read original MH202 daemon spans and reproduced collect_restore.py --check:15 outputs,8 spans,22 word assertions,6 inputs and6 finite host cases, original execution0. Independently mapped original ELF ranges/offsets/hashes and checked22 words; the generic default is1910 bytes with the retained exact hash. Its XML contents were not displayed or exported. See validation/run5/independent-boot-source.json.
+
+Source checks support mode0 extractor header failure normal-1 versus destination-open exit(-1), ordinary0 and selected stdio error returns. Main immediately branches/overwrites rather than testing each extractor result; it separately queries staged archive metadata. Metadata availability is not a payload validity/readback test or a stale-file incident claim.
+
+Verified archive helper exact-1 comparison, separate content/status gate and negative selection branch. Actual opaque call provider/child exit semantics remain unestablished. Fixed marker/header/password/full archive argv stay withheld. A non-1 result is not promoted to successful utility execution or full XML validity.
+
+Read original specific/generic default paths and guarded transitions: generic selection only follows first metadata failure, while a selected specific open/lock/copy failure does not become a generic retry. Both copy calls compare opaque result only with-1. Non-1 requests conf-status1 and sets Boolean1; status setter failure logs without changing it. Unchecked fopen→fileno remains an ordinary-completion boundary in the model. No actual lock, copy or file availability was supplied to firmware.
+
+Verified caller0x10da8/0x10db4/0x10dc0/0x10ddc: fallback nonzero sets selection1, requests writer and ignores its return; fallback0 leaves negative and skips writer. Both ordinary paths rejoin0x10de0 and0x1556c continuation. This proves neither complete factory reset nor normal-startup, durability or hardware recovery. The report consistently keeps helper return, main selection, configuration status, external utility and physical outcome namespaces separate.
+
+All older dossiers/images and synced sources unchanged. Source evidence and host transcription are the limits; no ARM/vendor code, original I/O, live service, mount, device/network, commits or publishing.
+
+## Final pins
+
+- `boot/run5/REPORT.md` SHA256 `0ca889b14130dd039b050f1d4f4166ec02d54fa28b5d28d2987f0e6049b54421`
+- `boot/run5/collect_restore.py` SHA256 `1f2e254dc156152ce144904bbf8762695112e25d4d839a96805590f2786c2434`
+- `boot/run5/output-manifest.json` SHA256 `f361c15bda5f9fea1181b88b79823591aa835ab63ec2fa37d6e3576de68263af`
+- `boot/run5/host-fallback-contract-model.json` SHA256 `dda6eed114c29beade61239b6554dc57de55db57e4cd98d8dbfe6c3dd127aa61`
+- `validation/run5/independent-boot-source.json` SHA256 `a403273b571372196df518a4a16d519eff0464671241bc43ca60c2bc7726ae0e`

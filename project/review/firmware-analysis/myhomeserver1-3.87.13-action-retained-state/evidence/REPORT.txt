@@ -1,0 +1,61 @@
+# MyHOMEServer1 3.87.13: one retained-state producer and consumer
+
+The first and second BN3L callable bodies access the same original linked global base0x167808. On a selected nonnull query-return path, the first assigns the returned record's string+8 into global+24 and copies three record words into global48/52/56. The second reads that same global string; one exact `on` branch sets a local status marker/value pair which is copied into the actual parameter-converter input. Its selected converter table entry then supplies string `on` to the `status` member. This establishes a positive local storage/dataflow relation under normal valid-object/provider premises. It does not prove physical state restoration, rollback, natural first/second invocation order, record freshness, ID correlation or concurrency safety.
+
+Original image `/home/bticino/scheduling_manager/scheduling_manager`, SHA256 `7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26`. Addresses are linked original VAs, not observed runtime pointers. Fresh ELF PT_LOAD mapping is used. Originals and all earlier packets remain read-only; new original instructions, vendor/provider processes, native replays, semantic models, input fixtures, network/bus and physical execution are0.
+
+## Inherited entry and explicit provider boundary
+
+The reviewed action-output/callable packet establishes the two tiny invoker adapters, distinct52-byte and24-byte captures, first body0xcf5c8 and second body0xcdd14. It also establishes the selected four-member local request calls to0x5dda0. The action-request-values packet establishes descriptor constants `2.0` / `light.setStatus` and selected ID/speed conversion. Those are inherited, not new constructor/request coverage here.
+
+First body0xcf5c8 retains its capture pointer in fp and derives capture+4 as the supplied configured ID string. It tests capture48 (duration-derived on the inherited normal construction path). Zero at0xcf5f8 branches to0xcf6ba and skips this selected query/copy block. With nonzero capture48, its guarded path requests local helper0x10f4a0 at0xcf61e, with output pair storageSP96, a GOT-sourced receiver, selector0 and that captured string address. Helper0x10f4a0 remains opaque: this packet does not inspect its lookup, receiving, parser or transport implementation, or infer the type/freshness/correct identity of any result.
+
+After normal return,0xcf622 loads result pair word0 into r4. CBZ0xcf624 skips the selected copy block when that word is null. A nonnull word is subsequently used as a source object with a string subobject at+8 and readable words36/40/44. These source accesses do not themselves establish a concrete cached-record class, type tag, active device or physical category. Pair word1 is used in separate conditional ownership bookkeeping; full provider/control-block lifetime and concurrency are not re-audited.
+
+## Same global proved by original address arithmetic
+
+Three separate original PC-relative additions converge on the same linked base G=0x167808:
+
+| Source use | Literal pool | Original ADD-PC | Result |
+| --- | --- | --- | --- |
+| first string destination |0xd01ac|0xcf648|G|
+| first numeric tuple destination |0xd01b0|0xcf656|G|
+| second string source |0xce890|0xcdda8|G|
+
+The collector retains each pool word, original instruction bytes and arithmetic. G lies inside the original writable PT_LOAD memory extent and `.bss` NOBITS section; no file-backed runtime content is read or invented for it. These direct PIC addresses are not an imported same-name binding or a guessed match of offsets. The global's selected access layout is identified from the code, not overlaid with a Light/Thermostat cached-record class or the compiled action/capture layouts. No RTTI class identity or complete extent is assigned to this anonymous retained storage.
+
+At0xcf640..0xcf64c the first body requests string assignment with destinationG+24 and source returnedRecord+8. On normal assignment return,0xcf654..0xcf660 copies returnedRecord36→G48, returnedRecord40→G52 and returnedRecord44→G56. This is a concrete string-plus-three-word producer tuple. Only the string's selected downstream state path is interpreted here; the three numeric properties, their physical meanings and complete later uses are not mapped.
+
+The storage is not shown to be keyed by the supplied configured ID: the producer query receives that ID, but the retained destination is a fixed linked global address. That does not establish a collision, race, defect or even that two different actions naturally reach this path. The separate shared action-stop byte previously identified at0x167800 is a different address and namespace; this packet does not infer a relationship from adjacency.
+
+## One exact consumer: global string `on`
+
+The second body retains its own string-only capture in r6 and constructs local optional recordSP268. Its copied configured ID and presence byte are inherited source facts. At0xcdda2..0xcddb0 the fresh PIC join resolves G and LDRD reads the string pointer/length pair atG+24/G+28. This is the very string subobject written by the first selected assignment, not the second capture's configured ID or an outer request UUID.
+
+The retained selected branch is narrowly conditional: if that global string is valid, length2 and its two bytes are exactly lowercase `o`/`n`,0xcddbe selects0xced78. The two original byte comparisons at0xced7a/0xced82 must both succeed. This path reaches0xced6a with r1 still equal to the earlier literal1 from0xcddac; SUBS0xced6c makes0. It stores local record status word32=0 at0xced70 and presence byte28=1 at0xced72, then rejoins0xcddc8. Other strings, absent/uninitialized values and the off/noStatus branches are not given a semantic matrix here.
+
+This is a value transformation from a selected string to a local code. Code0 here is not an OPEN WHAT, wire kind, physical command or the raw action discriminator. No actual global value or configured fixture was supplied or evaluated.
+
+## Actual record-to-parameter copy and selected table value
+
+The second body requests descriptor helper0xd20c0 with destinationSP524. The preceding reviewed source establishes its local parameter presence byte76 initially0 under normal construction. The merge at0xcddd4..0xcdde4 tests that byte and the local ID presence. Its selected out-of-line0xce084 ID-copy path sets descriptor presence76=1 and rejoins0xcddf4. String creation/copy and normal provider returns remain conditional; this packet does not repeat the full ID field analysis.
+
+At0xcddf4..0xcde00 the original pair copy takes localSP296/SP300 (recordSP268+28/+32) toSP628/SP632. The selected converter call0xcdf16 passes sourceSP600, equal to descriptorSP524+76. Therefore this copied pair is exactly converter source presence28/status32. It is not the original prefix recordSP268, an assumed overlay, or a marker copied by a host fixture.
+
+Converter0xd163c initially saves its result/source arguments in r6/r4. At0xd1668 nonzero source byte28 selects the status processing; source word32 is incremented, unsigned-compared with2 and, for the selected code0, uses table index1. Original GOT base0x1659a4 plus pool0xd194c reaches relocated slot0x166eb4, whose relative addend is table0x16216c. Index1 contains length2 and a relative string pointer at0x162178 to literal0x1362d4, exact `on\0`.
+
+The retained selected short-string path copies those two literal bytes, terminates the temporary and requests a JsonCpp string constructor. PIC pool0xd1944 at0xd1694 resolves key `status` at0x1151ac. The helper requests member lookup/move assignment and temporary destruction, then proceeds to later presence checks. Normal candidate JsonCpp/string/memcpy binding and returns are explicit premises; no JSON provider, serializer, output delegate or parser was executed.
+
+Thus, if the selected producer previously wrote a valid `on` string into G+24, that value is still present when the second body reads it, all selected normal paths are reached and providers return as required, the source chain asks for a `status` string `on` in the second parameter object. This is a conditional source-level preservation relation. The source does not prove that the producer and consumer concern the same naturally queued action, that no other code mutates G, that a record is current, or that the request is sent/accepted or restores a device.
+
+## Reproduction and preservation
+
+`python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-retained-state/state/collect_state_v1.py --check`
+
+The exclusive collector verifies the original image/PT_LOADs, selected instruction spans and guards, direct local control-flow, three converging G-address PIC joins, selected table/key relocations, and ordinary import-call/PLT source declarations. It records memory-only global location separately from file-backed data. It does not follow0x10f4a0,0x5dda0 or receiving/transport/MQTT/libjel/authentication/session/framing bodies. No complete record/property matrix, global reference scan or absence claim is produced.
+
+Outputs/report/collector are immediately preserved byte-for-byte in first-candidate with an index computed before opening it. Generation refuses overwrite; --check only reads/recomputes. First generation has no previous generated candidate, canonical failure or overwritten output. Exploratory bounded host disassemblies included neighboring branches, but only the selected retained code/data spans support this report.
+
+Confidence is high for the original address equality, store/load/copy edges and selected exact-string branch. Initialization, actual cache/provider types, configured input, natural call ordering, field freshness, global mutation/locking, complete object lifetime, unwind and physical outcome remain open. This is the final source packet in this continuation; further work is consolidation only.
+
+The unchanged saved MHS native ledger remains1 corpus,8 entries,340 original code-hook visits,0 C primitives,12 definition redirects,8 EXIT callbacks,0 guard stops,360 hooks and4 data-setup relocations. New execution/models/fixtures are0; this packet adds source evidence, not another native test corpus.

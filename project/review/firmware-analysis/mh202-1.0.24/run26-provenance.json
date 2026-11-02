@@ -1,0 +1,96 @@
+{
+  "checkpoint": "run26",
+  "status": "Two independently reviewed static source families plus curated-reference boundaries; documentary integration and final verification recorded separately",
+  "artifact_id": "firmware-mh202-010024",
+  "archive_sha256": "bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7",
+  "exports": [
+    {
+      "role": "static_WHO14_report",
+      "research_path": "work/mh202-firmware/research/2026-10-30/who14/run26/REPORT.md",
+      "source_sha256": "e76adbf02e3531cebf52b54be84041601a07d7ed53cd3d83218da6ebe7531a15",
+      "published": "run26-who14-report.txt",
+      "published_sha256": "e76adbf02e3531cebf52b54be84041601a07d7ed53cd3d83218da6ebe7531a15"
+    },
+    {
+      "role": "independent_source_review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run26/who14-review.md",
+      "source_sha256": "2ab3271af5c4468d3997be1ead1c8c0f39a95b899e4b32ca5713895c3288ada4",
+      "published": "run26-who14-review.txt",
+      "published_sha256": "2ab3271af5c4468d3997be1ead1c8c0f39a95b899e4b32ca5713895c3288ada4"
+    },
+    {
+      "role": "static_WHO15_report",
+      "research_path": "work/mh202-firmware/research/2026-10-30/who15/run26/REPORT.md",
+      "source_sha256": "b5150e300259ddca55b0c5239549ef8f31579ab208cdd0a6e5d4a9dfdd8c5e86",
+      "published": "run26-who15-report.txt",
+      "published_sha256": "b5150e300259ddca55b0c5239549ef8f31579ab208cdd0a6e5d4a9dfdd8c5e86"
+    },
+    {
+      "role": "independent_source_review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run26/who15-review.md",
+      "source_sha256": "531250905b3fa7d62b50e0f70aced5da26db8f65a1e8faf3025eef2e8dc47254",
+      "published": "run26-who15-review.txt",
+      "published_sha256": "531250905b3fa7d62b50e0f70aced5da26db8f65a1e8faf3025eef2e8dc47254"
+    },
+    {
+      "role": "curated_reference_reading_not_new_primary_source_or_physical_review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run26/REFERENCE_BOUNDARIES.md",
+      "source_sha256": "79e122c1ef5beabca8ba1659514eaf72f9307d2dba841bee7c46a9da4a5e497c",
+      "published": "run26-reference-boundaries.txt",
+      "published_sha256": "79e122c1ef5beabca8ba1659514eaf72f9307d2dba841bee7c46a9da4a5e497c"
+    },
+    {
+      "role": "independent_documentary_reference_review",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reviews/run26/reference-review.md",
+      "source_sha256": "6affc0a27d02105952908987b54833bc8c03948b4a2729b20fac942bff49bafd",
+      "published": "run26-reference-review.txt",
+      "published_sha256": "6affc0a27d02105952908987b54833bc8c03948b4a2729b20fac942bff49bafd"
+    },
+    {
+      "role": "exact_pre_edit_reference_pins",
+      "research_path": "work/mh202-firmware/research/2026-10-30/reconciliation/run26/reference-locators.json",
+      "source_sha256": "662f84e5f02ee4dfc9770d2da66f98ea26f0dffa32879a0daf2f2838a4b72bfc",
+      "published": "run26-reference-locators.json",
+      "published_sha256": "662f84e5f02ee4dfc9770d2da66f98ea26f0dffa32879a0daf2f2838a4b72bfc"
+    }
+  ],
+  "collectors": [
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/who14/run26/collect_who14_v1.py",
+      "sha256": "92fee06a4b684f5bd99d864c0284bd51f476675c939a461d29f285158b6c2493",
+      "method": "static original source with explicit address/configuration/host ledger premises, zero original execution"
+    },
+    {
+      "research_path": "work/mh202-firmware/research/2026-10-30/who15/run26/collect_cen_v1.py",
+      "sha256": "f2cdbacc00d3ff515b67d282e516eb3c44ca34807d8f893c3dbde4b228729fa9",
+      "method": "static original source with explicit address/configuration/host ledger premises, zero original execution"
+    }
+  ],
+  "new_original_execution": 0,
+  "generated_outputs": {
+    "WHO14_including_manifest": 22,
+    "WHO15_including_manifest": 24,
+    "total": 46
+  },
+  "finite_host_cases": 11,
+  "canonical_execution": {
+    "new_corpora": 0,
+    "corpora": 14,
+    "top_level_entries": 68,
+    "original_instruction_visits": 31581,
+    "primitive_callbacks": 3140,
+    "linker_redirect_callbacks": 128,
+    "exit_boundaries": 24,
+    "selector_read_stop_boundaries": 2,
+    "code_hook_visits": 34875,
+    "firmware_processes": 0,
+    "target_OS_calls": 0
+  },
+  "limits": [
+    "Independent synthetic forward/reverse constructions are not causal native/parser/physical evidence",
+    "WHO14 supplied address/helper/config premises explicit; own8-byte pending state not another module layout",
+    "WHO15 selected padding/address source and no-allocation STM do not expand public parameter or raw input domains",
+    "Reference labels/grammars retain their attributed existing scope, no new spec/database/oracle/physical review",
+    "Frozen draft and prior history limits remain unchanged"
+  ]
+}

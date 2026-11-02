@@ -1,0 +1,109 @@
+# MH202 run14 — diagnostic output-reference ownership and return channels
+
+**Static original-code/dataflow audit; new original execution0.** This bounded continuation joins a previously implicit storage contract: under the selected normal D2S80/General route, the final libopen builder receives the **same output object reference** originally supplied to bt_device's local decoder. The composer creates an array of borrowed value-string pointers, invokes the synchronous builder while its strings/vector remain live, then cleans up those temporary inputs. Separate local return channels do not turn the builder's r0 into a validation Boolean.
+
+This is not a new native raw→registry→builder experiment. A full native join would require coherent original C++ registry, stream, string/vector, logger and object initialization beyond the verified direct C-interface builder harness; unknown state is not filled in to force that claim. No new native calls, original visits, C primitive callbacks, linker redirects, EXIT, stop callbacks or code hooks occur. Prior eight-corpus execution totals remain unchanged.
+
+## Inherited evidence versus new relations
+
+Read-only inherited results:
+
+* Run2 supplies the explicitly conditional normal-image bt_device provider closure; live interposition remains unknown.
+* Run4 supplies completed same-build class-registration ownership:104 unique literal keys, with selected D2S80 assigned to General under the stated no-later-mutation premise.
+* Run7 supplies the selected19-character selector4 raw guards, first key rule D2S80, relocated member `s2o_deviceModel 0x18c30`, noncontiguous payload extraction, DIM1 composer call and conditional decoder tail.
+* Run8 supplies selected getOpenWho→1001, getOpenWhere→`0`, and final builder text under ordinary initialized-map/string/stream contracts.
+* Run10 supplies already executed direct builder arguments and resulting kind4 objects for the two selected candidate endpoints. Those saved results are compared here, not rerun or recounted as new native coverage.
+
+Newly closed relations are the ten-move output alias chain, borrowed-char-pointer/cleanup contract, precise independence of normal return/response-enum/parsed-state channels, and the decoder's use of that same output object's raw text. Fresh retained evidence adds29 four-byte source-address slots not covered by run7/8 retained spans, all in libdiag. This is116 source bytes (a span-set difference, not native instruction coverage); many newly joined relations use bytes already retained previously. `inherited-versus-new-scope.json` makes that distinction explicit.
+
+## Same output object all the way to the builder
+
+Let `D` be the original output pointer supplied in r0 to bt_device local decoder entry `0x12588`. Original VAs, register/stack locations and calls establish:
+
+| Original instruction | Storage/call effect | Alias |
+| --- | --- | --- |
+| bt_device `0x125a8` | stores incoming r0 at decoder SP+20 | `D` |
+| bt_device `0x13214` | loads SP+20 into outer-call r2 | `D` |
+| libdiag outer `0x22d94` | saves r2 into r9 | `D` |
+| outer `0x230dc` | passes r9 as virtual-call r3 | `D` |
+| General dispatch `0x16564` | saves incoming r3 in sl | `D` |
+| General dispatch `0x16594` | passes sl as selected-member r1 | `D` |
+| deviceModel `0x18c40` | saves incoming r1 in r8 | `D` |
+| deviceModel `0x18e54` | passes r8 as composer r2 | `D` |
+| composer `0x16de0` | saves incoming r2 into fp | `D` |
+| composer `0x16f08` | passes fp as builder r0 | `D` |
+
+The selected member pointer has the zero adjustment recorded in run7's original relocation/registration evidence. General's raw std::string copy at `0x1657c` is a copy of the **raw input string**, not a replacement output object. Ordinary ABI register preservation and normal selected calls are premises. No different output object is substituted in these verified moves; no runtime pointer trace or entire-CFG execution is claimed. The ten-step host symbolic ledger transcribes these moves only.
+
+The original decoder raw pointer is separately retained in r9 at `0x125b0`, converted to std::string for the outer call at `0x131fc`, and passed through the selected member/composer as already mapped in run7. Registry/vector/object initialization remains a condition, rather than becoming an executed fact because the alias chain is now explicit.
+
+## Borrowed arguments and synchronous lifetime boundary
+
+Composer entry `0x16dcc` pushes36 bytes and reserves212 bytes, so its fifth incoming vector argument is loaded from current SP+248 at `0x16de8`. It creates a new pointer table of `vector.size()*4` bytes (`0x16dfc..0x16e04`). For each element, `vector::operator[]` returns the string reference, `0x16e20` reads the first word of that binary's string representation, and `0x16e24` stores that character-data pointer in the table. These instructions borrow the string storage; they do not deep-copy payload characters into the pointer table.
+
+At the actual builder call `0x16f14`, the original argument layout is:
+
+| C-interface argument | Original source |
+| --- | --- |
+| r0 output object | same `D`, via composer fp |
+| r1 WHO char pointer | holder at SP+204, loaded to r7 at `0x16eac` |
+| r2 WHERE char pointer | holder at SP+200, loaded to r8 at `0x16eb0` |
+| r3 DIM char pointer | temporary string at SP+188, loaded at `0x16ef4` |
+| `[SP]` values char-pointer array | allocated table r6, stored at `0x16f10` |
+| `[SP+4]` count | vector size, stored at `0x16f00` |
+
+The original normal cleanup ordering is builder return, DIM string destructor `0x16f24`, pointer-table `delete[] 0x16f34` if nonnull, WHERE destructor `0x16f3c`, WHO destructor `0x16f6c`, composer return, caller by-value vector destructor `0x18e7c`, then original vector destructor `0x18e84`. Thus the selected synchronous builder call precedes release of these inputs on the normal source path. This is a source lifetime relation under ordinary same-build C++ string/container/allocation behavior, not executed allocation, successful runtime initialization, unwind analysis or a general memory-safety finding.
+
+The libopen builder's retained entry/tail at `0xb680..0xb800` and immutable native run10 establish the endpoint contract that consumes these C strings. No C++ primitive is replaced/executed in this batch.
+
+## Four distinct result channels and decoder consumption
+
+The selected normal call edges do not use the builder r0 as a validation condition:
+
+1. Composer calls `CreateRdDimensionMsgOpen` at `0x16f14`, then `0x16f18` branches directly to normal cleanup. Its result is not tested on this continuation. Composer returns literal1 at `0x16f70`.
+2. deviceModel similarly takes its normal cleanup after composer return and sets **response enum0** at `0x18e88`. That0 is not General's Boolean failure result.
+3. General stores the member's numeric enum at this+32 at `0x165a0`, then its selected normal tail returns **Boolean1** at `0x167b0`.
+4. Outer saves the selected class Boolean in r4 at `0x230e8` and returns it through `0x2333c`; bt_device saves it at `0x1321c` and tests it at `0x13234`.
+
+This is scoped selected normal control flow, not a global assertion that validation is absent everywhere. Exceptions/fallback rules and other member branches have their own behavior. Parser writes/kind, local r0 observations, response enum and route Boolean are separate.
+
+The immutable run10 endpoint results make the distinction concrete: both native builder cases returned an r0 register observation0 while leaving kind4, with WHO1001, WHERE0 and DIM1. That observation was never a clean Boolean API contract; it cannot be inverted into rejection or silently equated with a later class Boolean1.
+
+For the selected normal DIM1 decoder continuation, bt_device uses the same `D` to call the DIM accessor at `0x1323c..0x13248`, branches around DIM23 special handling, and eventually loads `D+0x5e3c` as raw text at `0x133dc..0x133e8` for logging. This newly ties its consumer to the actual builder destination rather than an assumed separate buffer. Normal logging/string cleanup reaches `0x144dc`.
+
+At `0x144e4..0x144f8`, the decoder separately forms `D+0x624c` (the next libopen-sized array object), supplies the inherited OPEN-OK literal and length6, and branches directly to the original `CreateMsgOpen` import at `0x14740`. That call's result is followed by literal decoder return1 at `0x14744`. It does not reconstruct object0 from its text at this tail. Actual next-object parsing, resulting sentinel kind, collector qualification/recipient/output descriptor, socket publication and physical response remain unexecuted here.
+
+## Endpoint comparison and retained boundary
+
+Host-only comparison confirms the inherited selected raw-route reconstruction supplies the same C-interface argument **values** already used by run10:
+
+| Synthetic source candidate inherited from run7 | WHO / WHERE / DIM | Value strings | Already saved run10 result |
+| --- | --- | --- | --- |
+| `$04D200010480000000` | `1001` / `0` / `1` | `0,0,0,0` | kind4, raw `*#1001*0*1*0*0*0*0##` |
+| `$04D200010480A12345` | `1001` / `0` / `1` | `2629,1,2,3` | kind4, raw `*#1001*0*1*2629*1*2*3##` |
+
+This equality links two scoped contracts under their initialization/provider/ordinary-primitive premises. It is not execution of the original raw decoder, key rule, registry lookup, WHO/WHERE maps/streams or General composer. The source candidates remain synthetic;2629 is not MH202 identity or captured traffic. No new candidate matrix or full-builder replay is presented as new coverage.
+
+A strict fresh native full join would need verified state for outer/General registries and vtables, standard strings/containers/streams, WHO/WHERE initialized maps, logger and caller output storage. Supplying all of those as unchecked callbacks would leave the important boundaries intact while making the invocation look more complete. This batch therefore stops at reviewable static ownership/dataflow proof and inherited endpoint equality.
+
+## Provenance, reproducibility and accounting
+
+Original paths are rooted within the normal firmware image:
+
+| Image | SHA256 |
+| --- | --- |
+| `/home/bticino/bin/bt_device` | `65dad019cc15cf5036c04ec7ef23d0f9c2f388324f44692f43af37fd82192f70` |
+| `/home/bticino/lib/libdiag.so.0.0` | `72da849b0b589758d1c0ca07bf8922359fd7e28dff8e1c20f481f688815f31fe` |
+| `/home/bticino/lib/libopen.so.0.0` | `868eeb717020232c11623224df17bd6b2034fffc2fb80043c39c34b76310fb04` |
+
+`collect_evidence.py --check` strictly reproduces26 host evidence outputs from15 pinned inputs:16 original spans with VA/file-offset/byte hashes,45 exact instruction-word assertions, selected relocations,10-step symbolic alias ledger, borrowed-pointer/lifetime ledger, inherited/new-scope ledger and endpoint/return-channel comparison. `output-manifest.json` pins finished author outputs/report/collector and excludes itself/reviews to avoid cycles.
+
+From the workspace root:
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/protocol/run14/collect_evidence.py --check
+```
+
+PASS. This invokes only host Python/readelf/objdump/read-only original access and saved-result comparison. Original ARM/vendor/JS/PHP, target processes/OS/syscalls, network/device I/O and authentication work are all0 here. Canonical new native corpus/call/visit/primitive/redirect/EXIT/stop/code-hook additions are all0. Earlier files and sources remain unchanged.
+
+Highest next question is coherent original registry/standard-object initialization for a deliberately bounded D2S80→General→WHO/WHERE→builder native call, with explicit allocator/logger/container coverage. The alternative useful boundary is the actual local decoder/collector output-descriptor join; this static alias result alone does not close either live publication or accepted raw-input provenance.

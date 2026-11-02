@@ -1,0 +1,9 @@
+# Run05 coverage and boundaries
+
+| Area | Selected examined reach | Open boundary |
+| --- | --- | --- |
+| F460 selector | Actual key89/function-pointer registration, range copy/manager data, same global lookup, supplied-owner getters and argument pointers, invoker→constructor, returned-pair vector storage | Actual startup/map population/key list/owner class/config values, complete cache/error paths, full publication/reference/lifetime/concurrency, SQL results/compatibility |
+| F461 converter output | One exact guarded parsed-object/selector/formatting branch, conditionalASCII normal form,72B record assignment/copy/list, selected return/temporary cleanup | Natural parsed producer/public grammar, actual providers, other branches/addresses/private modes, global IDs/lifetime, later output/physical meaning |
+| Reference scope | Catalogue-profile parameter roles are source-only F460; source-normal form remains a typed-object consequence | No stable-ID/product/installed mapping, F461 reader transfer, raw frame/test or physical support claim |
+
+F460:16 deterministic outputs/13 selected spans/43 guards/5 PIC joins/7 direct calls/7 branch checks/6 pins/18 first copies. F461:17 outputs/10 spans/36 plugin plus15 core guards/7 PIC joins/6 imports/19 first copies. Counts are selected reach/integrity, not coverage percentages or executed semantic cases. Both first generations, source peers and parent read-only reconstruction pass. New original/helper/native/emulator/SQL/model/fixture/target OS/process/service/network/bus/physical execution is zero. Earlier MHS one-corpus/eight-entry/340-original-code-hook-visit record and separate F454/MH202 ledgers remain unchanged. Full Device/source gates pending.

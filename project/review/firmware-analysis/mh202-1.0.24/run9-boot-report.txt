@@ -1,0 +1,59 @@
+# MH2021.0.24 run9 — supervision application watchdog marker producer
+
+## Result and scope
+
+A concrete normal application producer now joins run8’s supervisor consumer: **bt_supervisione constructs and supplies `/var/tmp/bticino/bt_wd/bt_supervisione` when its parsed `path_var` is `/var`**. The packaged stack configuration declares that value and a daemon record with the exact same name. Marker requests occur once during application initialization and after each nonnegative return from its selected event-loop `select` call. They measure progress to those program points, not successful command processing, a live bus or complete functional readiness.
+
+This is static original-code inspection plus host-only formatting/branch models. Original ARM/vendor/parser/JS/PHP execution, original instructions executed, emulator hooks and live I/O are all **0**. No processes, signals, status/file/config changes, network, devices or mounts are performed. The output contains only explicit public path/name/format metadata; no credentials, templates, fixed archive headers or full archive arguments are inspected/exported.
+
+## Provenance and reproduction
+
+Original normal-image application `/home/bticino/bin/bt_supervisione` SHA256 `fe2485cd65500c39d9a8ea414238e8a18ee83fda24268359ca33067fcf2059c7`. ImageVFS verifies bytes against the original-image manifest. `input-hashes.json` pins all6 inputs: the application, packaged stack configuration, shared VFS and prior run2/run3/run8 reports. The latter supply the already established launcher, startup-alias and consumer/primitive boundaries without redoing their matrices.
+
+Run `python3 work/mh202-firmware/research/2026-10-30/boot/run9/collect_marker.py --check`. It strictly reproduces17 outputs:10 original disassembly spans and associated hashes,17 asserted words, selected literal/pointer/callback identities, whitelisted packaged configuration, import metadata and4 path plus4 event-wait host cases. `original-spans.json` records exact original VA ranges/file offsets/hashes. The separately generated author output manifest pins report, collector and generated evidence and excludes itself or later reviews. Earlier sources/reports/repository files remain untouched.
+
+## 1. The application constructs the actual marker pathname
+
+Application initialization invokes configuration/default setup `0x9e00` at `0x107c8`, then loads global base `0x1b8ec` through pool `0x112a8`. Setup supplies the public application name **`bt_supervisione`** (pool `0x9eb0`, target `0x11b98`) and default `path_var` string **`var`** (pool `0x9ea8`, target `0x12fd2`) into its configuration object. It invokes parser `0x11310` at `0x9e54`, using the filename pointer stored at `0x1b3d0`: **`/var/tmp/stack_open.xml`**.
+
+The driver installs start/end/text callbacks `0x11640`, `0x11610`, `0x113f8` through pools `0x113ec/0x113f0/0x113f4`. Start appends an element name to the userdata list, end removes the last name. The selected text callback checks root then branch `sw` (or its alternative hw/version path) before the public leaf **`path_var`**. Its `0x115b4..0x115d4` path duplicates the supplied text chunk using its length and stores the result at userdata+8. The packaged field is exactly `/root/sw/path_var`=`/var`. This is a selected callback/dataflow proof, not complete successful XML parsing: callbacks can receive chunks and later chunks may replace earlier values; parser return/error contracts and full configuration mutations are not executed here.
+
+After that parser call returns, `0x9e58` reads configuration+8. If null, it puts the bare application-name pointer in global+12 (`0x9e64`). Otherwise it passes:
+
+`asprintf(&global[+12], "%s/tmp/bticino/bt_wd/%s", path_var, "bt_supervisione")`
+
+at `0x9e70..0x9e7c`. Exact original format is pool `0x9ec4`, target `0x11ba8`. The code then checks the resulting pointer at global+12 and substitutes the bare name if that pointer is null (`0x9e80..0x9e88`). It does **not** check the asprintf integer return here. The host null-pointer fixture is precisely that observed pointer condition, not an assertion about how a failed library allocation changes the pointer.
+
+With `/var`, ordinary formatting gives the absolute matching path. With untouched default `var`, it gives **relative** `var/tmp/bticino/bt_wd/bt_supervisione`; if the selected pointer is null it uses relative `bt_supervisione`. Their interpretation depends on working directory and other configuration. An earlier optional chdir request at `0x107b4..0x107c0` precedes setup; its success/current directory is not established. These fallback cases are not evidence that the packaged normal configuration actually uses a mismatching path. The `-w` option stores a marker pointer before setup (`0xbbe8..0xbc10`); this batch makes no promise of effective command-line override, since the later selected setup stores the slot again.
+
+## 2. Concrete initial and event-loop requests
+
+At `0x1081c..0x10824`, initialization loads global+12 (absolute slot `0x1b8f8`) and calls imported **bt_wd_common**. It then requests creation of its application server sockets. Thus this first marker request occurs before those later initialization steps; it cannot attest that they succeeded.
+
+The selected loop assembles the descriptor set and calls `select` at **`0x10a08`**. Its timeout pointer is SP+15524, matching the two initialized words at SP+15524/SP+15528. Initialization `0x10870` and timeout/reset routes `0x10b8c..0x10ba0` write **1 and0**; under the target Linux timeval contract these request one second and zero microseconds. This is a requested wait, not an observed clock interval. Ready descriptors can return sooner, select can modify the timeout, and intervening connection/event work can block or consume time. No global per-second heartbeat guarantee follows.
+
+The original return policy is exact:
+
+| select result | Marker request in this iteration | Selected next route |
+|---|---|---|
+| nonnegative, including0 | yes, global+12→bt_wd_common at `0x10a4c..0x10a54` | result0 takes timeout work; positive takes ready-descriptor processing |
+| negative, errno4 | no | reset timeout words1/0 and retry via `0x10a24..0x10a38`→`0x10888` |
+| negative, other errno | no | warning call then local exit/cleanup route `0x11234` |
+
+The marker call’s return is ignored; after it, `0x10a58` tests the **saved select result** r4. Selected readiness/timeout delegates are not expanded into complete application transaction semantics. The observed code progress is stronger than a free-running timer but weaker than proof that any particular request completed. Repeated EINTR-like returns may bypass the marker call on this selected route; this is a branch property, not an observed watchdog failure.
+
+## 3. Join to the daemon record and primitive
+
+The packaged `/home/bticino/cfg/stack_open.xml` contains daemon record `p6`: name `bt_supervisione`, path `bin`, working_mode0. The separate similarly named client record is not substituted for this daemon record. Prior run2’s original launcher model selects mode0 records when its working-status comparison is not2; prior run3 established the configured startup alias from the packaged stack file to `/var/tmp/stack_open.xml`, without proving actual runtime alias creation or current content. Consequently the normal join is conditional on that configuration actually being applied and normal delegates returning.
+
+Prior run8’s original daemon consumer constructs `/var/tmp/bticino/bt_wd/`+record.name for nonzero record+12, giving **the same full path** as this producer when the parsed path_var is `/var`. The source relation closes a previously missing concrete producer pathname, not a whole-system execution proof. It does not prove the launched PID, process liveness, readiness or marker creation.
+
+This application directly declares DT_NEEDED `libcommon.so.0` and imports bt_wd_common; `selected-import-metadata.txt` records this metadata. Run8 established candidate same-build libcommon producer primitive `0xf930`: existing marker metadata success returns without touching the marker; nonzero metadata requests creat0644 then close/log handling. This pass neither repeats that helper’s guard matrix nor claims a new complete bt_supervisione symbol closure/live binding. Exact primitive behavior remains conditional on that candidate provider and ordinary imported contracts. With this provider, repeated application requests can be no-ops while the marker exists; after the supervisor unlinks it, a later qualifying request can create it again. That describes requested producer/consumer coordination, not observed filesystem timing or hardware watchdog behavior.
+
+## Remaining questions
+
+1. Check complete conditional application provider ownership only if a later claim needs stronger primitive binding. No runtime interposition/loader is observed here.
+2. Determine whether particular normal workload/delegates can postpone the select-return point; source path and request count alone supply no deadline bound.
+3. Actual runtime alias/configuration, callbacks, child launch, descriptors, metadata/create success and supervisor consumption remain unobserved. The declared XML `time` field in the separate client record is not assigned heartbeat meaning in this report.
+
+No F454 VAs/fixtures or HTTP/authentication/session internals are used.

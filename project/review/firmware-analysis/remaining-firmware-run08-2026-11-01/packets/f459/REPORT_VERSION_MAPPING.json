@@ -1,0 +1,9 @@
+{
+  "source": "work/f459-firmware/2.1.5/research/2026-11-01-night08-metadata/REPORT.v2.md",
+  "bytes": 4658,
+  "sha256": "58d1d0e679735953293ba9097d7cf59c6c9360679b9e189c4ccd4a341d870232",
+  "canonical_report": "work/f459-firmware/2.1.5/research/2026-11-01-night08-metadata/REPORT.md",
+  "canonical_report_sha256": "0bd38bbd4f7f3bf9a38f38895965462c995851dbdedfb8a2c6e37cf3d255f215",
+  "change": "Only clarify hexadecimal offset0x66 (102decimal) and append exact version-role note; code/results/canonicalreport unchanged",
+  "parent_snapshot": "work/remaining-firmware-investigation/2026-11-01-run08/parent-before-f459-report-v2/INDEX.json"
+}

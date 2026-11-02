@@ -1,0 +1,31 @@
+# Independent review — MH202 protocol/run8
+
+**PASS, within the report’s stated static scope. No material correction requested.** Reviewed the current author report, collector, selected disassembly, PIC strings/vtable relocations, original words, host cases and manifest. This review executes no original ARM, vendor/parser/JS/PHP code, loader or firmware process; no hooks or live I/O. It does not certify whole-parser acceptance, effective live binding or physical device support.
+
+## Reproduction and independent byte checks
+
+Ran `python3 work/mh202-firmware/research/2026-10-30/protocol/run8/collect_evidence.py --check`: exact reproduction of25 outputs,9 input identities,18 original spans,28 critical words,4 literals,2 vtable relocation lines and2 host cases. Independently mapped the original ELF PT_LOAD bytes through the verified normal-image accessor and checked all18 span hashes and28 words. Verified all27 manifest entries and independently reconstructed both candidate value lists/texts directly from the retained synthetic raw strings. Additionally read the original pool word at libopenscs VA0x2634 and verified1001, rather than trusting its report label.
+
+## Source conclusions checked
+
+- **WHO selection:** char overload0x26c8 selects raw[8], substitutes raw[11] only for ASCII9, and preserves diagnostic argument into the integer overload0x2350. The latter compares matching WHO keys with1000 at0x23ac; diagnostic=true skips the normal key. Original pair construction0x2410..0x2470 and pool0x2634 distinguish WHO1/system1 and WHO1001/system1. Ordinary initialized map/stream semantics therefore support selectedWHO1001. This is neither genericWHO1000 nor a universal arithmetic decoder.
+- **WHERE selection:** checked the original system1→Light singleton construction/lookup, vptr and two selected vtable relocation targets. The length19 address branch at0x6258..0x6268 retains the high nibble and shifts it4, unlike the non19 branch’s low-nibble shift8. Both private cases give address0. The markerD2 compare at0x87a4 and zero-component OR at0x87ac/0x87b0 lead to the literal `0` and return-string construction. The report’s separate system map/WHO map namespaces and initialization/provider premises are appropriate.
+- **Builder/parser boundary:** the original five-argument builder0xb680 concatenates the reported fields and separators, uses suffix pool0xb7f8+14, stores length and trims terminal CR/LF, and tailbranches through IsCorrect@plt at0xb7e8. It is accurate to include the parser call while withholding acceptance. The selected syntax screens and branch0xb09c write internal kind4 before field helper0xb0a8. The helper’s WHO+0/WHERE+540/DIM+900,90-byte value slots+990 and count+0x6244 agree with the report for these ordinary token/string premises.
+- **Remaining guard boundary:** the subsequent calls at0xb0d4 and0xb0ec remain unclosed in this batch. The report does not invent an IsCorrect boolean, final object readback, final parser acceptance or successful publication. Original kind4, transport selector4, DIM1 and response enum0 are kept distinct.
+
+The two texts and arbitrary value2629 are explicitly host-derived from synthetic inputs, with `original_parser_accepted:null`; they are not captures or hardware/model identities. Prior run7 unknowns are narrowed prospectively without rewriting the historical dossier. Review inspected the present source joins and reproduction, not all transitive historical assumptions or every possible grammar/input path. Effective symbol binding, C++ initialization/interposition, later address/interface guards, actual descriptors and runtime output remain conditional or unresolved.
+
+## Exact reviewed identities
+
+- `protocol/run8/REPORT.md` SHA256 `aaad509a73f84b0985ca856e90eb41aa015ea55a07e8949033ab16de382d73d7`.
+- `protocol/run8/collect_evidence.py` SHA256 `91637f33f182cfa457070d0f82372d8943298a747c4c6de225ad68bbc199f55c`.
+- `protocol/run8/output-manifest.json` SHA256 `be241f4e43b72cf6c13b4f19dab03cc3a679be6770886a8cfeb246a82c749a00`.
+- `protocol/run8/original-spans.json` SHA256 `8d4d5205b65a21d188dc1ed308f06845f7424a7b429d3aae9b136b70b9f97891`.
+- `protocol/run8/critical-words.json` SHA256 `f26442210794f5aa284c060e7afec917f9a9b7ac002f6922d06e6b9cb4cc5781`.
+- `protocol/run8/host-selected-builder-model.json` SHA256 `920e0dd14df2e485627f36fc5795196fed65efe70e4c62164e316b5efe84daea`.
+
+Original normal-image libraries independently rehashed from accessor bytes:
+
+- `/home/bticino/lib/libopenscs.so.0.0` SHA256 `b9b1c5f6937c0aea88f416517706b3dd38d46476974f252cd1c6b39aef62127a`.
+- `/home/bticino/lib/libwhere.so.0.0` SHA256 `334cf3461e23712a85098e171a1cbcc6c675fedc9a12dd516954adaf7ecbaea5`.
+- `/home/bticino/lib/libopen.so.0.0` SHA256 `868eeb717020232c11623224df17bd6b2034fffc2fb80043c39c34b76310fb04`.

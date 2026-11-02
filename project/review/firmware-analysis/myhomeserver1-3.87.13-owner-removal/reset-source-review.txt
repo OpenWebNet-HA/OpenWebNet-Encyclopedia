@@ -1,0 +1,20 @@
+# Independent selected reset-candidate caller review
+
+Verdict: PASS, no correction requested. Root independently read original caller0xa79ea..0xa7a0a and constructor prefix0xb2bc4..0xb2c14, checked exact source identity with a separate ImageVFS/ELF32 PT_LOAD mapper and reproduced the author's read-only source check. No original firmware/helper/provider/target process/JSON/scene/clock/network/bus/physical execution or semantic fixture occurred.
+
+The independent script check_reset_caller_independently_v1.py verifies scheduler SHA2567d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26,2 original raw span hashes,9 instruction guards,2 separately decoded Thumb direct calls, the PIC/GOT/RTTI chain and8 exact first copies. The author --check reproduces6 outputs, including its exact-numeric-target rendered query. That query's one rendered direct hit is only a locator result under linear disassembly; it does not enumerate indirect callers or prove global writer absence.
+
+Original0xa79f0 derives R9=current SP+4256,0xa79f4 adds24, and0xa7a00 supplies that R9 as R0 before BL0xa7a06 to0xb2bc4. An intervening virtual call is opaque, so normal return and callee-preservation remain premises. The selected constructor saves R4=entry R0 and derives R10=R4+72; after normal base-helper return, it explicitly zeros the inline length+68 and byte+72, then installs string pointer+64=object+72. Thus composing this particular source caller/prefix yields current SP+4352 under valid separate-stack/ABI premises, not the shared BSS flag0x167800. No actual target SP is supplied.
+
+The original locally installed class header0x16004c, RTTI/name18BncuSceneCondition and linked GOT0x166b70 are independent local construction evidence. They do not establish all later derived identities, physical function, accepted schema or every natural caller. The same numeric offset72 in this inline string, action shared-stop flag and registry mutex remains separate namespaces.
+
+The report correctly retains prior global initializer0 and stop1 as inherited facts; it does not count either as a new reset. It leaves all22 historical rows unchanged, does not rerun the747 wider candidates, and leaves this constructor's other callers/aliases, indirect/bulk/provider writes, errors/unwind and concurrency unresolved. A positive shared reset owner remains OPEN. This is a new narrow caller exclusion, not a reset discovery, permanent latch, defect, physical cancellation outcome or full-source/Device approval.
+
+Reviewed SHA256:
+
+| Artifact | SHA256 |
+| --- | --- |
+|reset/REPORT.md|2ba2740c2dd49d5cb9a40c265c0effc083c30d2fe172c053b21ee7d2ab63fdbd|
+|reset/collect_reset_caller_v1.py|4ab1bba16aa0f245b8dde908012519fd017ae3cd278f647eb929be8a254798af|
+|reset/OUTPUT_MANIFEST.json|95e2855f49ea20fa27db7fd6fdfd1c4192555a0638b6ff20f0236cc765248109|
+|reset/first-candidate/INDEX.json|659ea2e2c8cf7e58bbb321575454ad0b478b1710ed44ca8e1fbfbc9c309e66e4|

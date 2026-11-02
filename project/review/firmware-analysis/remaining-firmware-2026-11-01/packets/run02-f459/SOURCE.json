@@ -1,0 +1,403 @@
+{
+  "ELF_class": 32,
+  "PT_LOAD": [
+    [
+      1,
+      0,
+      0,
+      0,
+      40840,
+      40840,
+      5,
+      32768
+    ],
+    [
+      1,
+      40960,
+      73728,
+      73728,
+      816,
+      832,
+      6,
+      32768
+    ]
+  ],
+  "calls": [
+    {
+      "GOT": "0x12258",
+      "PLT_bytes_hex": "00c68fe20fca8ce2dcffbce5",
+      "call_VA": "0x32e8",
+      "relocation": "00012258  00003716 R_ARM_JUMP_SLOT        00000000   sqlite3_exec",
+      "symbol": "sqlite3_exec",
+      "target_PLT": "0x2274",
+      "word": "ebfffbe1"
+    },
+    {
+      "GOT": "0x121e0",
+      "PLT_bytes_hex": "00c68fe210ca8ce2ccf0bce5",
+      "call_VA": "0x32fc",
+      "relocation": "000121e0  00001a16 R_ARM_JUMP_SLOT        00000000   _ZN7QString16fromAscii_helperEPKci",
+      "symbol": "_ZN7QString16fromAscii_helperEPKci",
+      "target_PLT": "0x210c",
+      "word": "ebfffb82"
+    },
+    {
+      "GOT": "0x12210",
+      "PLT_bytes_hex": "00c68fe210ca8ce26cf0bce5",
+      "call_VA": "0x3318",
+      "relocation": "00012210  00002516 R_ARM_JUMP_SLOT        00000000   _ZNK7QString8toLatin1Ev",
+      "symbol": "_ZNK7QString8toLatin1Ev",
+      "target_PLT": "0x219c",
+      "word": "ebfffb9f"
+    },
+    {
+      "GOT": "0x121d4",
+      "PLT_bytes_hex": "00c68fe210ca8ce2e4f0bce5",
+      "call_VA": "0x3330",
+      "relocation": "000121d4  00001816 R_ARM_JUMP_SLOT        00000000   _ZNK10QByteArray8toBase64Ev",
+      "symbol": "_ZNK10QByteArray8toBase64Ev",
+      "target_PLT": "0x20e8",
+      "word": "ebfffb6c"
+    },
+    {
+      "GOT": "0x121e0",
+      "PLT_bytes_hex": "00c68fe210ca8ce2ccf0bce5",
+      "call_VA": "0x3354",
+      "relocation": "000121e0  00001a16 R_ARM_JUMP_SLOT        00000000   _ZN7QString16fromAscii_helperEPKci",
+      "symbol": "_ZN7QString16fromAscii_helperEPKci",
+      "target_PLT": "0x210c",
+      "word": "ebfffb6c"
+    },
+    {
+      "GOT": "0x12210",
+      "PLT_bytes_hex": "00c68fe210ca8ce26cf0bce5",
+      "call_VA": "0x3374",
+      "relocation": "00012210  00002516 R_ARM_JUMP_SLOT        00000000   _ZNK7QString8toLatin1Ev",
+      "symbol": "_ZNK7QString8toLatin1Ev",
+      "target_PLT": "0x219c",
+      "word": "ebfffb88"
+    },
+    {
+      "GOT": "0x121d4",
+      "PLT_bytes_hex": "00c68fe210ca8ce2e4f0bce5",
+      "call_VA": "0x3390",
+      "relocation": "000121d4  00001816 R_ARM_JUMP_SLOT        00000000   _ZNK10QByteArray8toBase64Ev",
+      "symbol": "_ZNK10QByteArray8toBase64Ev",
+      "target_PLT": "0x20e8",
+      "word": "ebfffb54"
+    },
+    {
+      "GOT": "0x121e0",
+      "PLT_bytes_hex": "00c68fe210ca8ce2ccf0bce5",
+      "call_VA": "0x33b8",
+      "relocation": "000121e0  00001a16 R_ARM_JUMP_SLOT        00000000   _ZN7QString16fromAscii_helperEPKci",
+      "symbol": "_ZN7QString16fromAscii_helperEPKci",
+      "target_PLT": "0x210c",
+      "word": "ebfffb53"
+    },
+    {
+      "GOT": "0x12210",
+      "PLT_bytes_hex": "00c68fe210ca8ce26cf0bce5",
+      "call_VA": "0x33d8",
+      "relocation": "00012210  00002516 R_ARM_JUMP_SLOT        00000000   _ZNK7QString8toLatin1Ev",
+      "symbol": "_ZNK7QString8toLatin1Ev",
+      "target_PLT": "0x219c",
+      "word": "ebfffb6f"
+    },
+    {
+      "GOT": "0x121d4",
+      "PLT_bytes_hex": "00c68fe210ca8ce2e4f0bce5",
+      "call_VA": "0x33f8",
+      "relocation": "000121d4  00001816 R_ARM_JUMP_SLOT        00000000   _ZNK10QByteArray8toBase64Ev",
+      "symbol": "_ZNK10QByteArray8toBase64Ev",
+      "target_PLT": "0x20e8",
+      "word": "ebfffb3a"
+    },
+    {
+      "GOT": "0x121e0",
+      "PLT_bytes_hex": "00c68fe210ca8ce2ccf0bce5",
+      "call_VA": "0x3424",
+      "relocation": "000121e0  00001a16 R_ARM_JUMP_SLOT        00000000   _ZN7QString16fromAscii_helperEPKci",
+      "symbol": "_ZN7QString16fromAscii_helperEPKci",
+      "target_PLT": "0x210c",
+      "word": "ebfffb38"
+    },
+    {
+      "GOT": "0x122d4",
+      "PLT_bytes_hex": "00c68fe20fca8ce2e4febce5",
+      "call_VA": "0x3454",
+      "relocation": "000122d4  00005516 R_ARM_JUMP_SLOT        00000000   _ZN7QString6numberEii",
+      "symbol": "_ZN7QString6numberEii",
+      "target_PLT": "0x23e8",
+      "word": "ebfffbe3"
+    },
+    {
+      "GOT": "0x121fc",
+      "PLT_bytes_hex": "00c68fe210ca8ce294f0bce5",
+      "call_VA": "0x34a4",
+      "relocation": "000121fc  00001f16 R_ARM_JUMP_SLOT        00000000   _ZNK7QString8multiArgEiPPKS_",
+      "symbol": "_ZNK7QString8multiArgEiPPKS_",
+      "target_PLT": "0x2160",
+      "word": "ebfffb2d"
+    },
+    {
+      "GOT": "0x12210",
+      "PLT_bytes_hex": "00c68fe210ca8ce26cf0bce5",
+      "call_VA": "0x34b4",
+      "relocation": "00012210  00002516 R_ARM_JUMP_SLOT        00000000   _ZNK7QString8toLatin1Ev",
+      "symbol": "_ZNK7QString8toLatin1Ev",
+      "target_PLT": "0x219c",
+      "word": "ebfffb38"
+    },
+    {
+      "GOT": "0x12258",
+      "PLT_bytes_hex": "00c68fe20fca8ce2dcffbce5",
+      "call_VA": "0x34d8",
+      "relocation": "00012258  00003716 R_ARM_JUMP_SLOT        00000000   sqlite3_exec",
+      "symbol": "sqlite3_exec",
+      "target_PLT": "0x2274",
+      "word": "ebfffb65"
+    },
+    {
+      "GOT": "0x12258",
+      "PLT_bytes_hex": "00c68fe20fca8ce2dcffbce5",
+      "call_VA": "0x369c",
+      "relocation": "00012258  00003716 R_ARM_JUMP_SLOT        00000000   sqlite3_exec",
+      "symbol": "sqlite3_exec",
+      "target_PLT": "0x2274",
+      "word": "ebfffaf4"
+    }
+  ],
+  "database_recovered_or_generated": false,
+  "guards": [
+    {
+      "VA": "0x32a0",
+      "word": "e1a07000"
+    },
+    {
+      "VA": "0x32b8",
+      "word": "e1a08002"
+    },
+    {
+      "VA": "0x32c0",
+      "word": "e1a05001"
+    },
+    {
+      "VA": "0x32d0",
+      "word": "e5970008"
+    },
+    {
+      "VA": "0x32d4",
+      "word": "e08f1001"
+    },
+    {
+      "VA": "0x32dc",
+      "word": "e1a0a003"
+    },
+    {
+      "VA": "0x32f0",
+      "word": "e3a01053"
+    },
+    {
+      "VA": "0x32f4",
+      "word": "e08f0000"
+    },
+    {
+      "VA": "0x32f8",
+      "word": "e5976008"
+    },
+    {
+      "VA": "0x3304",
+      "word": "e287100c"
+    },
+    {
+      "VA": "0x3314",
+      "word": "e1a00003"
+    },
+    {
+      "VA": "0x3324",
+      "word": "e28d1048"
+    },
+    {
+      "VA": "0x335c",
+      "word": "e58d0050"
+    },
+    {
+      "VA": "0x3360",
+      "word": "e1a01005"
+    },
+    {
+      "VA": "0x3380",
+      "word": "e28d1054"
+    },
+    {
+      "VA": "0x33c0",
+      "word": "e58d005c"
+    },
+    {
+      "VA": "0x33c4",
+      "word": "e1a01008"
+    },
+    {
+      "VA": "0x33e4",
+      "word": "e1a01009"
+    },
+    {
+      "VA": "0x3430",
+      "word": "e58d0068"
+    },
+    {
+      "VA": "0x3438",
+      "word": "e1a00002"
+    },
+    {
+      "VA": "0x343c",
+      "word": "e1a0100a"
+    },
+    {
+      "VA": "0x3440",
+      "word": "e3a0200a"
+    },
+    {
+      "VA": "0x3474",
+      "word": "e1a0000c"
+    },
+    {
+      "VA": "0x3484",
+      "word": "e58dc084"
+    },
+    {
+      "VA": "0x3488",
+      "word": "e1a01004"
+    },
+    {
+      "VA": "0x3490",
+      "word": "e28d3078"
+    },
+    {
+      "VA": "0x3494",
+      "word": "e3a02004"
+    },
+    {
+      "VA": "0x3498",
+      "word": "e58d5078"
+    },
+    {
+      "VA": "0x349c",
+      "word": "e58d807c"
+    },
+    {
+      "VA": "0x34a0",
+      "word": "e58dc080"
+    },
+    {
+      "VA": "0x34c4",
+      "word": "e1a00006"
+    },
+    {
+      "VA": "0x34c8",
+      "word": "e0831001"
+    },
+    {
+      "VA": "0x34cc",
+      "word": "e59d300c"
+    },
+    {
+      "VA": "0x34d0",
+      "word": "e58d3000"
+    },
+    {
+      "VA": "0x34d4",
+      "word": "e1a03002"
+    },
+    {
+      "VA": "0x34e0",
+      "word": "e58d003c"
+    },
+    {
+      "VA": "0x368c",
+      "word": "e5970008"
+    },
+    {
+      "VA": "0x3698",
+      "word": "e08f1001"
+    },
+    {
+      "VA": "0x36a0",
+      "word": "e59d003c"
+    },
+    {
+      "VA": "0x36a8",
+      "word": "e3500000"
+    },
+    {
+      "VA": "0x36ac",
+      "word": "0a00016d"
+    }
+  ],
+  "host_SQLite_queries": 0,
+  "machine": 40,
+  "original": {
+    "bytes": 43208,
+    "path": "work/f459-firmware/2.1.5/analysis/rootfs/home/bticino/drivermanager/modules/libmhshared.so.1",
+    "sha256": "4d1ac668776d9edfd3af97e2664032b0b4c36af6aacdda166aabeddeafbc5377"
+  },
+  "original_execution": 0,
+  "selected_symbol": [
+    "112: 0000329c  3416 FUNC    GLOBAL DEFAULT   11 _ZN8mhShared5writeE7QStringS0_i"
+  ],
+  "spans": [
+    {
+      "bytes_hex": "f04f2de90070a0e1240d9fe58cd04de200008fe014008de518cd9fe50280a0e114209de50150a0e10c1d9fe50cc092e70020a0e3080097e501108fe000c08de503a0a0e10230a0e10cc08de5e1fbffebe80c9fe55310a0e300008fe0086097e582fbffeb48308de20c1087e228308de544408de244008de50300a0e19ffbffeb4cc08de20c00a0e148108de230c08de544408de26cfbffeb4c309de50c2093e5041093e5020093e0e102000a000051e32a02001a44408de26cfbffeb54208de250008de50510a0e10200a0e12c208de550508de244408de288fbffeb58308de20300a0e154108de234308de550508de244408de254fbffeb58309de50c2093e5041093e5020093e0c702000a000051e30602001a50508de244408de253fbffeb60908de25c008de50810a0e10900a0e150508de25c808de244408de26ffbffeb64c08de20c00a0e10910a0e138c08de550508de25c808de244408de23afbffeb64309de50c2093e5041093e5020093e0ab02000a000051e3e001001a50508de25c808de244408de238fbffeb6c208de220208de568008de568308de20200a0e10a10a0e10a20a0e350508de25c808de21c308de544408de2e3fbffeb70c08de278008de268208de21c208de510c08de544408de224008de50c00a0e16cc08de250508de25c808de284c08de50410a0e11cc09de578308de20420a0e378508de57c808de580c08de52dfbffeb74008de270108de218008de538fbffeb74309de50020a0e30c1093e50600a0e1011083e00c309de500308de50230a0e165fbffeb74609de53c008de5",
+      "end_exclusive": "0x34e4",
+      "name": "entry-three-encoded-fields-and-query",
+      "sha256": "22575f183ef2fae9e6f6d873188798f40a67c05560de4e867d16418a3071290a",
+      "start": "0x329c"
+    },
+    {
+      "bytes_hex": "58199fe50020a0e30cc09de5080097e50230a0e100c08de501108fe0f4faffeb3c009de538399fe5000050e36d01000a",
+      "end_exclusive": "0x36b0",
+      "name": "normal-later-exec-and-retained-result-test",
+      "sha256": "291cfe4f03080ac068487b5d129d94693405021ddd8f9106ef62ac5c2821edc2",
+      "start": "0x3680"
+    },
+    {
+      "bytes_hex": "0230d3e7000053e30600000a0030a0e3013083e2030051e117feff0a0320d0e7000052e3f9ffff1a0310a0e112feffea0230d3e7000053e30600000a0030a0e3013083e2030051e1f1fdff0a0320d0e7000052e3f9ffff1a0310a0e1ecfdffea0230d3e7000053e30600000a0030a0e3013083e2030051e1cdfdff0a0320d0e7000052e3f9ffff1a0310a0e1c8fdffea",
+      "end_exclusive": "0x3c2c",
+      "name": "nonempty-string-local-connectors",
+      "sha256": "c320f211f30b00b8d0e7dc7ca0a617a6e739259f20f5453553b525108f47991a",
+      "start": "0x3b9c"
+    },
+    {
+      "bytes_hex": "0010a0e153fdffea0010a0e137fdffea0010a0e11dfdffea",
+      "end_exclusive": "0x3ed8",
+      "name": "null-local-connectors",
+      "sha256": "88efd3edf2a5b0760733035ecd2fbad346e6cc8c6b796ff02da75b1f871bb10d",
+      "start": "0x3ec0"
+    }
+  ],
+  "strings": [
+    {
+      "VA": "0x8f54",
+      "bytes_hex": "424547494e3b00",
+      "instruction": "0x32d4",
+      "pool": "0x3fd8",
+      "text": "BEGIN;"
+    },
+    {
+      "VA": "0x8f5c",
+      "bytes_hex": "5245504c41434520494e544f207368617265642028706c7567696e6e616d652c6b65792c76616c75652c70657273697374656e74292076616c7565732028272531272c272532272c272533272c27253427293b00",
+      "instruction": "0x32f4",
+      "pool": "0x3fdc",
+      "text": "REPLACE INTO shared (pluginname,key,value,persistent) values ('%1','%2','%3','%4');"
+    },
+    {
+      "VA": "0x8fb0",
+      "bytes_hex": "454e443b00",
+      "instruction": "0x3698",
+      "pool": "0x3fe0",
+      "text": "END;"
+    }
+  ],
+  "zErrorMessage_relocation": "00012300  00007b15 R_ARM_GLOB_DAT         0001233c   zErrorMessage"
+}

@@ -1,0 +1,46 @@
+{
+  "collector_sha256": "1b2d28451f0fa216a932a1bc201849cabe4b512e039f44824b4f396c036c14bf",
+  "original_execution": 0,
+  "outputs": {
+    "INPUT_PINS.json": {
+      "bytes": 624,
+      "sha256": "fef125fc58bb51af525d18e50f94380ca98b8adfe9dfbf7ea15610e6562db964"
+    },
+    "REPORT.md": {
+      "bytes": 4520,
+      "sha256": "901fd74d2d0f097eb2bdc2c1099c4a32f9d54285984318b9048e4e79c17e41b4"
+    },
+    "SOURCE.json": {
+      "bytes": 9661,
+      "sha256": "af21885ba7d74f5bf909c84750061ba70e52a9d05f176ef6a473749c5f69fd59"
+    },
+    "spans/local-mode-and-index-selector.txt": {
+      "bytes": 1391,
+      "sha256": "2929db0f2d50bf4bea03f85de9b77192274cbb5d33e9118c02f30af57e7a39ae"
+    },
+    "spans/local-temporary-connector.txt": {
+      "bytes": 792,
+      "sha256": "4deade6631f2ea66121ae97a6a4b8fea6645813110d726320f76ad4b0a6cb0a3"
+    },
+    "spans/monitor-entry-context.txt": {
+      "bytes": 325,
+      "sha256": "cf1359cb9648af2191093607decfbd44c924617658b25cdb1f325723aae43612"
+    },
+    "spans/own-meta-call-dispatch.txt": {
+      "bytes": 1515,
+      "sha256": "2a977409eb04fb65511c99a8ade16e93da2b01c9729b9febcff796d12734019a"
+    },
+    "spans/same-receiver-watcher-and-list-gate.txt": {
+      "bytes": 1040,
+      "sha256": "184428e6adcf1ac197745a1effd36e150bd24b7ab7ea3ccd950ee9a65e922229"
+    },
+    "spans/selected-add-and-connection-requests.txt": {
+      "bytes": 1585,
+      "sha256": "365e151357fa7bba382bc0a860c591f8b786672742a5eccaf2f600735a05fb54"
+    },
+    "spans/selected-index8-call.txt": {
+      "bytes": 282,
+      "sha256": "c20616dae82d7cc4bb699dd142aa9d09a3e1fdbb623c35ae3820861c1ef8e087"
+    }
+  }
+}

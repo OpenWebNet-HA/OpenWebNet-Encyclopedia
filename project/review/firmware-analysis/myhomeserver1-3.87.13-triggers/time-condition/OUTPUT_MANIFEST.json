@@ -1,0 +1,93 @@
+{
+  "collector_sha256": "ed5b329acbd662270b4f1c204236a9a7a20b9996508d7dc1c10bb93bcb3698d2",
+  "counts": {
+    "PIC": 13,
+    "days_host_cases": 6,
+    "halfword_guards": 20,
+    "inputs": 6,
+    "original_execution": 0,
+    "predicate_host_cases": 7,
+    "relocations": 5,
+    "spans": 13,
+    "vtables": 2
+  },
+  "outputs": {
+    "FIELDS_AND_FLOW.json": {
+      "bytes": 2348,
+      "sha256": "dd598f63af053d1ba845270394c3a4cd5895e6d6dfa8ff553ca8b568b27c7f18"
+    },
+    "HOST_MODELS.json": {
+      "bytes": 2572,
+      "sha256": "5e5f5e886622d78312ef620e40a3908e2d12092819483a119095e1877cc89c0b"
+    },
+    "INPUTS.json": {
+      "bytes": 1014,
+      "sha256": "58c331282a7961fc424aa9d8b20b5b02f58b36d6e79051c58ae0219c56b916ef"
+    },
+    "METHOD.json": {
+      "bytes": 334,
+      "sha256": "dd7859d1dbe1e2f03478133b76cd42db5060fcead9605f570f277e14db8d1750"
+    },
+    "ORIGINAL_SOURCE.json": {
+      "bytes": 8910,
+      "sha256": "a93c693f92450d1230d209daf33d7fdeceb594d8435686d5b8e1f1ee9e7a2316"
+    },
+    "PROVIDER_DECLARATIONS.json": {
+      "bytes": 1978,
+      "sha256": "7fc4b784814f4167e4322829193cb7021791283295da4ac34e0d932bc80050ab"
+    },
+    "spans/base-enabled-enum.txt": {
+      "bytes": 4381,
+      "sha256": "249dd969ccff231577a10f6fb18603801454cd858caaf2b490ed62dc9f5f042a"
+    },
+    "spans/base-pools.txt": {
+      "bytes": 971,
+      "sha256": "adfa1b47953e42926d0513be118efba386304846bbc283a2b95042826804a297"
+    },
+    "spans/boundary-helper.txt": {
+      "bytes": 30969,
+      "sha256": "0340389e493e1d6f43497b2f1d0d8e8371d258add4e58adfcbd96a7b02cbf91b"
+    },
+    "spans/candidate-system-clock-now.txt": {
+      "bytes": 742,
+      "sha256": "f598c40bb05e657770c8ad86c2755cb8312f8a385d763ab8fdd0a68f83b89c29"
+    },
+    "spans/compiled-condition-dispatch.txt": {
+      "bytes": 1724,
+      "sha256": "ddc5ed4a1c5d9cef1a73f8da00bf2ba64d3000357f12cc76b9508980b4ee175a"
+    },
+    "spans/compiled-time-allocation.txt": {
+      "bytes": 1443,
+      "sha256": "5b37b7c67389116988c29aabaf69611450b8f9dad1b89389fea1b41d39818b53"
+    },
+    "spans/compiled-time-constructor.txt": {
+      "bytes": 9923,
+      "sha256": "d894681b50cd2c3c0f9a3b8c82695f86dddf23ad7e2b045244b6fd16c65c6d2b"
+    },
+    "spans/raw-factory-discriminator.txt": {
+      "bytes": 3908,
+      "sha256": "614035d11208074061c14a362e3d5feff243e85bcf20c8856ad141ef7398d38c"
+    },
+    "spans/raw-factory-pools.txt": {
+      "bytes": 2938,
+      "sha256": "3b1de71b1f47bb9b6396a218122deb3e2ffe249282576abdad9d4f64fda9ae7e"
+    },
+    "spans/raw-time-allocation.txt": {
+      "bytes": 2267,
+      "sha256": "e6d1d51fc4f18b7147615d5cdc009e740a0cedded73ddf1d26b90c8c5324ff30"
+    },
+    "spans/raw-time-constructor.txt": {
+      "bytes": 5865,
+      "sha256": "ca1fdfae0361fcf48de2f264b2f3955828719e099b03014f525a5c6d25477dfc"
+    },
+    "spans/time-predicate.txt": {
+      "bytes": 4158,
+      "sha256": "90b1fc2c8480a3eaed454c87915d9cc106b3c049d3de1bc92778cdb67a79480d"
+    },
+    "spans/time-serializer.txt": {
+      "bytes": 6436,
+      "sha256": "a25923abe615198c21428a9e47c9d50bee18f01c7cc504c50c7de9f883dfb62b"
+    }
+  },
+  "report_sha256": "fa454ddeb43cb055d90270313119aa0a2d5df55ab28b2c002a89c98ca07fccf2"
+}

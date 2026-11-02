@@ -1,0 +1,44 @@
+# MH202 scenario-generation artifact provenance - bounded product-led follow-up
+
+The official MyHOME Suite 3.5.38 installer now supplies genuine manufacturer resources for device package `1902_1.0_LGG`. This closes the earlier local resource-availability gap. It does not supply a demonstrated user-generated `.spt`/`info.xml` pair or prove a script-generation grammar.
+
+## Source chain and identity
+
+The frozen `DOCUMENTARY_INPUTS.v1.json` preserves the previously examined Device OWN-DEV-0151 item1902/firmware-definition561 associations: 15 rows, 13 unique normalized paths across BT/LGG/LG, including the shared SDC association. The catalogue default build `1.0.0`, Suite release `3.5.38`, package directory `1902_1.0_LGG`, and examined firmware archive `1.0.24` are separate version namespaces. Their mutual applicability is not established by names.
+
+The publisher installer is `MyHOME_Suite_030538.exe`, 599437936 bytes, SHA256 `707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b`, acquired from `https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe`. Registered size and digest match. This pass makes no fresh Authenticode claim. Vendor binaries remain private acquisition inputs.
+
+`EVIDENCE.v1.json` pins all 25 selected extracted files and their exact installer and workspace-relative paths. Parent extraction proof covers 21 decoded CookFS pages with decoded-size and CRC32 checks. The index has 8166 entries, 6586 files and 3585 pages; 363338 of 363367 decoded index bytes were consumed, leaving 29 trailing metadata bytes unparsed. This is selected-file provenance, not complete installer-format validation. Earlier InstallJammer and assumed-MD5 attempts stopped; the parent retains their failed/versioned artifacts. The current v2 extraction uses actual size/CRC metadata and does not validate the obsolete MD5 assumption.
+
+## Concrete new resources
+
+All paths below start at installer path `default/resTargetDir4/devices/1902_1.0_LGG/` and are available privately under `acquisition/selected-files-v2/` at that same path. Actual LGG resources are available; all 15 catalogue association paths are not thereby proved physically present.
+
+| Resource | Exact relative path | Static result |
+| --- | --- | --- |
+| Director | `xml/DIRECTOR/director.xml` | XML root `director`; conversion/project management structure exists |
+| Extra | `xml/Extra/extra.xml` | XML root `extra`; operation and project structure exists |
+| Protocol | `xml/Protocol/protocol.xml` | Identity/hash and XML structural names only; values not exported or interpreted |
+| SDC | `xml/SDC/sdc.xml` | Component/step/scenario-suite structure exists |
+| Project conversions | `xml/prj2conf.xml`, `xml/conf2prj.xml`, `xml/MH200N2MH202.xml` | Conversion rule structures available; not executed or promoted to script grammar |
+| Scenario integration | `xml/Steps/Step_2/Scenariosuite.xml` | Root `scenarioSuite`, scenario/collection-limit tag names present; no value or runtime claim |
+| Scenario database | `xml/Steps/Step_2/Scen_SuiteDB_ENG.db` | SQLite header verified; read-only table-name query includes `TMP_SCENARI`, `TMP_TRIGGER`, `TMP_STEP_ACT`, `ANA_OPEN_RULE_COMPILE`; no rows inspected/exported |
+| Default project | `defaultProject/project/0/project.xml`, associated `extra.xml` files and `.xtz`/`.prj` containers | Manufacturer defaults, not a demonstrated configured user project |
+
+Four genuine installer assemblies also provide a specific next generator lead. Under `default/targetDir/`, `Bticino.ScenarioSuite.Core.dll` contains UTF-16LE `.spt` at file offsets `0xef99a`, `0xf498a` and `info.xml` at `0xef8f2`; `Bticino.ScenarioSuite.OSJConverter.dll` contains `.spt` at `0x4b24`, `0x4b40`, `info.xml` at `0x4cca`, `0x4fca`. Core also has `OWRITE` at `0xee0fe`, and `TRIGGER`/`IIF` literal matches. Exact whitelisted matches and file hashes are recorded. These are substring matches in assembly bytes, not executed generators, method ownership, output grammar or a natural script emission proof.
+
+## Default archive and missing-script boundary
+
+Host ZIP central-directory reading, without decrypting payloads, gives `cfgRestore/4.xtz` only directory `4/` and encrypted `4/extra.xml` (180 uncompressed bytes); default `project/4.xtz` similarly has `4/extra.xml` (177 bytes). `cfgRestore/2.xtz` contains `2/extra.xml` plus language PHP files. `project/0.xtz` contains `0/extra.xml` and `0/project.xml`; `project.prj` contains nested `0.xtz`/`4.xtz`. This does not make the restoration/default archives genuine installed scenario scripts. No password guessing or decryption was attempted.
+
+No `.spt` or basename `info.xml` path occurs in the decoded top-level CookFS index, or in the five selected ZIP central directories. This is a bounded listing result: opaque/nested/encrypted content and dynamic generator outputs remain outside it. The six-root local filename inventory is frozen in `LOCAL_DISCOVERY.v1.json` as a bounded capture of pre-existing research/source roots, with the entire new acquisition/output tree excluded. Its recorded capture time follows the installer acquisition time; it is not a literal pre-acquisition snapshot. That excluded-tree scope establishes no current global absence and does not contradict the positive installer acquisition.
+
+The examined `work/mh202-firmware/MH202_010024.fwz` ZIP contains only its normal/recovery image archives, `fwz.xml` and `uImage`. Its `fwz.xml` refers to separate action3 `4.xtz` and action4 `2.xtz` downloads. The similarly named installer defaults do not establish identity with those firmware-download payloads, installed extra4, or a configured scenario directory. The completed overnight `FINAL_REPORT.md` remains unchanged.
+
+## Reproduction, controls and next question
+
+Run `python3 -B work/mh202-firmware/research/2026-10-31-scenario-artifacts/collect_artifacts_v1.py --check`. It verifies frozen input hashes, installer identity and every selected resource; regenerates safe structural/literal/directory evidence in memory; and compares exact output bytes. It does not reacquire or re-extract the installer, execute a vendor tool, evaluate Tcl/XML transformations, run JavaScript/ARM, decrypt ZIP payloads, or issue target/network operations. Host analysis necessarily reads files and uses Python's read-only SQLite parser. Original execution count is zero; no new firmware tests or native coverage are claimed.
+
+First collector/output bytes are immediately preserved in `initial-artifacts-v1/` with hashes. Generation refuses existing outputs; `--check` is read-only. Parent acquisition and earlier finished dossiers remain untouched. XML output includes names/counts only; no element or attribute values, credentials, keys or private project identifiers are exported. One exploratory schema query failed on a relative-path URI before outputs existed and was corrected by resolving the host path; no candidate was overwritten.
+
+The highest remaining source question is which original ScenarioSuite method writes `.spt` and `info.xml` and how it consumes the actual project/database objects. The four assemblies, scenario DB schema and concrete Director/SDC/conversion resources now provide genuine product-specific starting points. A configured project/export or a bounded static method-to-output trace is still required before claiming a generation contract. Firmware1.0.24 compatibility, installed script presence, UI behavior and physical scenario outcomes remain unproved.

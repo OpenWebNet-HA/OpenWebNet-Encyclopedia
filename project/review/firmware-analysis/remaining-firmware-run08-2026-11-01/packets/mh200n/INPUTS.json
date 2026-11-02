@@ -1,0 +1,29 @@
+{
+  "files": [
+    {
+      "bytes": 65147,
+      "path": "work/mh200n-firmware/1.1.8/analysis/application-regular-files.json",
+      "sha256": "a7cccfe283df71bb9d4c2ad29a3510b5e8671eb58714fe11eb864618a4fd30a0"
+    },
+    {
+      "bytes": 159048,
+      "path": "work/mh200n-firmware/1.1.8/analysis/application/home/bticino/bin/bt_taskmanager",
+      "sha256": "ad68f9bf43f7f10af122f34d3cb14b7d8c02730c46225a9a6cd1bf3e663072cb"
+    },
+    {
+      "bytes": 2300,
+      "path": "work/mh200n-firmware/1.1.8/research/2026-11-01-night07-application/ARGUMENT_FLOW.json",
+      "sha256": "578681749e14ca6f12c08c5cb40e8455cccd5d98076d7816aec9cf0f6b1b24f1"
+    },
+    {
+      "bytes": 5280,
+      "path": "work/mh200n-firmware/1.1.8/research/2026-11-01-night07-application/REPORT.md",
+      "sha256": "5e38a4897b40485d2fcfd755a617347e2d7680e8d455c9a539b402483e3dcbb1"
+    },
+    {
+      "bytes": 12516,
+      "path": "work/mh200n-firmware/1.1.8/research/2026-11-01-night07-application/SOURCE.json",
+      "sha256": "7e511fa58fb12cc4b0545bd487d735c13b3b62744a1e1541c0dbcb9579cfb305"
+    }
+  ]
+}

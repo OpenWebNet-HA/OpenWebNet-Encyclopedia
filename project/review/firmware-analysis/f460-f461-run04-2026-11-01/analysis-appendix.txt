@@ -1,0 +1,20 @@
+## F460: catalogue opening, SQL producer and selected reader
+
+Fresh original `matrix_mx` source connects a selected reader to the literal `/home/bticino/matrix_mx/MHCatalogue.db` path, an opening request and a 15-column SQL producer. A startup template and constructor-supplied substitutions reach the same SQL member consumed by that reader. The original reader obtains columns13 and14 as text and requests decimal conversion into its own destination fields; the SQL identifies those columns as `EN_KEY_OBJECT.slots` and `AS_OBJECT_SYSTEM.id_system`.
+
+This is positive evidence that selected code consumes catalogue metadata, with its own AArch64 object and pointer dataflow. It does not execute a query, reconstruct every final substituted string or establish full Device/Firmware selection, compatibility, fallback or Prototype/RC policy. Successful filesystem, string and SQLite providers, valid rows and actual conversion outcomes remain conditional. A class/query key is not a physical Device identifier.
+
+The [catalogue source profiles](../../internals/mhcatalogue-source-profiles.md#additional-f460f461-profile-and-selected-f460-consumer) now distinguish this build-specific consumer evidence and the shared F460/F461 database profile from the earlier owner-aware MHS/Suite comparison. Identical database bytes do not transfer this F460 binary reader to F461.
+
+## F461: field registration and complete route identity
+
+Original `libplug_scs.so` conditionally registers an actual field descriptor, and the packaged candidate core inserts that same pointer into the manager's field list. This is the list used by the earlier matcher, distinct from its translation-descriptor list. The plugin receives a configuration directory through an original initializer-argument handoff; actual module/config selection and effective provider binding remain premises.
+
+The selected packaged configuration has `SCSEnable=1` and `SCSAIEnable=0`. The original fallback globals start at one for both, so the local registration result depends on whether configuration loading succeeds and which values are used. These safe whitelisted values describe packaged settings, not installed activation, absent capabilities or physical connector roles. The initializer/connect/send/receive implementations remain outside this packet.
+
+The generic local message constructor sets a 64-bit route whose low/high32 words are `(1,0)`. The command-specific wrapper writes the upper word to one, producing `(1,1)`, which matches the selected field descriptor's complete route value. A separate wrapper produces `(1,2)` for another field. Both routes have low word one, so inspecting only that word would merge distinct paths. The matcher separately uses the full route for field matching and its low word for a direction comparison.
+
+Under the earlier same-manager, valid-object/list, due/criterion and provider premises, this constructor result supplies the route and direction needed for the selected translator orientation. Natural command admission, public WHO/dialect interpretation and physical output remain open. The separate SCSAI name/settings do not establish F454-style alarm hardware.
+
+The [run04 source and review capsule](../../project/review/firmware-analysis/f460-f461-run04-2026-11-01/README.md) retains the original build hashes, mappings, code guards, selected spans, safe configuration whitelist and exact source/review/reference history for both additions.
+

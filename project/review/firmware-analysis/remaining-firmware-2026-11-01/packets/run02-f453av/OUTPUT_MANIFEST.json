@@ -1,0 +1,25 @@
+{
+  "files": {
+    "COMPARISONS.json": {
+      "bytes": 1663,
+      "sha256": "26fe05e2e556e09acc3e0c7090c1dee0fe3fedb8b2513cc8282d2b86765cf247"
+    },
+    "INPUTS.json": {
+      "bytes": 2926,
+      "sha256": "5abf23c9cda54c9545a35ebeafe1342ca93297ca61b815f9e7fcd40baa65642a"
+    },
+    "MODULE.json": {
+      "bytes": 2817,
+      "sha256": "151353d4db381eda9a1272c66e5691b298ba378f860b5bf375f61a4d9359f9f0"
+    },
+    "REPORT.md": {
+      "bytes": 6387,
+      "sha256": "30aa6c495f788ef11feb91381cf0347ca25c09dc8b1bc6bedf69a8e6996f363e"
+    },
+    "STARTUP.json": {
+      "bytes": 2798,
+      "sha256": "dc10b03318ad5e04fb998698062574003b784e27c42b602f73e987c117130113"
+    }
+  },
+  "scope": "Generated members excluding manifest itself"
+}

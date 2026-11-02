@@ -1,0 +1,7 @@
+{
+  "command": "python3 -B work/myhomeserver1-firmware/3.87.13/research/2026-11-01-action-output/callable/collect_callable_v1.py --check",
+  "exit_code": 0,
+  "stdout": "{\"check\": true, \"outputs\": 18, \"spans\": 14, \"guards\": 30, \"direct_calls\": 12, \"new_original_execution\": 0}\n",
+  "capture": "Parent observed tool return, transcribed without invented raw receipt or timestamp",
+  "original_execution": 0
+}

@@ -1,0 +1,38 @@
+{
+  "generator": {
+    "bytes": 14812,
+    "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-final-review/verification/build_supplement_v2.py",
+    "sha256": "d5a903e05dbfb7988619924de139c2250d84a53389b3089fb604ab5709ec2ea0"
+  },
+  "outputs": {
+    "INPUTS.json": {
+      "bytes": 9475,
+      "sha256": "f3c767d3eadf6a43423e96f94da05875d8b16acbe4568bd0455225feab07121a"
+    },
+    "NAVIGATION.json": {
+      "bytes": 9157,
+      "sha256": "027b5a22dcf6370653d2ee237e61931fdd67b05515d9dfdcfadb27d325e6f8f4"
+    },
+    "NAVIGATION.md": {
+      "bytes": 2178,
+      "sha256": "00055dd385816dded10a70e14a745b1bf47ce8bfd67b73d42a2326568e1f327d"
+    },
+    "PROTECTED_CHECK.json": {
+      "bytes": 2218,
+      "sha256": "fbccf7712d96eb39b46a3a837fce3272394929a0711bbebd60df0a35199bda0f"
+    },
+    "REPORT.md": {
+      "bytes": 3559,
+      "sha256": "470c4b236c764b78b50e03ed017371696bf216689e7e8cd2a26ea87abd6aa2e8"
+    },
+    "SAVED_LEDGER.json": {
+      "bytes": 831,
+      "sha256": "6527e3cae73791f371fe8c8cf3c71b2292eadb5c3f4ffcb25dd1a12d988d2f60"
+    },
+    "SOURCE_IDENTITY.json": {
+      "bytes": 2768,
+      "sha256": "17a7c94754d1b25669ba9549b4676501d1f182ca81f56cb92da2a9bf6f5f7f3b"
+    }
+  },
+  "scope": "Manifest excludes itself; first-candidate index separately pins it."
+}

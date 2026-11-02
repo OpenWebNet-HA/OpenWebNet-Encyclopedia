@@ -1,0 +1,89 @@
+{
+  "files": [
+    {
+      "bytes": 12130,
+      "export": "project/review/firmware-analysis/sequential-legacy-clock-2026-11-02/source/collect_clock_v1.py.txt",
+      "sha256": "65693bd2c7026595f1ad3a5951140892267187953a6cf768b8450932558684a4",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/source-component/collect_clock_v1.py"
+    },
+    {
+      "bytes": 5153,
+      "export": "project/review/firmware-analysis/sequential-legacy-clock-2026-11-02/source/REPORT.txt",
+      "sha256": "0a442a9f32dc8dc639b5e64caa9c262a9437cd3338d682775b964abd5c5080e4",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/source-component/REPORT.md"
+    },
+    {
+      "bytes": 3641,
+      "export": "project/review/firmware-analysis/sequential-legacy-clock-2026-11-02/source/INPUTS.json",
+      "sha256": "dc74ba7efab325208e57a9b4cabfe4598f6aa084cf077ce22517333a78868fb8",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/source-component/INPUTS.json"
+    },
+    {
+      "bytes": 16888,
+      "export": "project/review/firmware-analysis/sequential-legacy-clock-2026-11-02/source/SOURCE_LINES.json",
+      "sha256": "01c839d42ce1dac0903d45024854fe19e346a1bf7ec0a8fda48014e5772b1623",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/source-component/SOURCE_LINES.json"
+    },
+    {
+      "bytes": 2031,
+      "export": "project/review/firmware-analysis/sequential-legacy-clock-2026-11-02/source/CONTRACTS.json",
+      "sha256": "ad2ab7a501c82df3c42fd83172d41f06b9670ff1dbf6ebc6d361d1380c8db879",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/source-component/CONTRACTS.json"
+    },
+    {
+      "bytes": 818,
+      "export": "project/review/firmware-analysis/sequential-legacy-clock-2026-11-02/source/OUTPUT_MANIFEST.json",
+      "sha256": "fe98da8caa2780d049a3cf96a28248f7db5ee374308717dc8c20cf574f0e0418",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/source-component/OUTPUT_MANIFEST.json"
+    },
+    {
+      "bytes": 4406,
+      "export": "project/review/firmware-analysis/sequential-legacy-clock-2026-11-02/source/SCOPE.json",
+      "sha256": "e930d8767cd3c9fb40cc47e1fd18a9e449c249dbe4d335f15afa72a3840ddcd0",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/source-component/SCOPE.json"
+    },
+    {
+      "bytes": 589,
+      "export": "project/review/firmware-analysis/sequential-legacy-clock-2026-11-02/source/API_CONTEXT.json",
+      "sha256": "70483004815ce7bf62733a7a50d3a249b48fdc7e51824443a61ec581106d0000",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/source-component/API_CONTEXT.json"
+    },
+    {
+      "bytes": 6076,
+      "export": "project/review/firmware-analysis/sequential-legacy-clock-2026-11-02/source/QUALIFICATION_PROPOSAL.json",
+      "sha256": "f10d03d5c1e3678bcadfe53db4dc3539fce43f665d8b3787c84bd9b168c8c764",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/source-component/QUALIFICATION_PROPOSAL.json"
+    },
+    {
+      "bytes": 1332,
+      "export": "project/review/firmware-analysis/sequential-legacy-clock-2026-11-02/SOURCE_SELECTION_DECISION.json",
+      "sha256": "cc0c8c28c94c55df7e4e327caf6d2a1f50e6c5c1dfe06367e8c1c435e1179b5e",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/SOURCE_SELECTION_DECISION.json"
+    },
+    {
+      "bytes": 776,
+      "export": "project/review/firmware-analysis/sequential-legacy-clock-2026-11-02/DEVICE_CONTEXT.json",
+      "sha256": "061208946b2050a93729ba01daab97268991bbf553fdb352fe64812759454197",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/DEVICE_CONTEXT.json"
+    },
+    {
+      "bytes": 391,
+      "export": "project/review/firmware-analysis/sequential-legacy-clock-2026-11-02/DOCUMENTARY_PREPARATION_HISTORY.json",
+      "sha256": "fca619bff657a5b773eaaeab6e44e8eee0717276882d0f3da34c74ef4d5afc6d",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/DOCUMENTARY_PREPARATION_HISTORY.json"
+    },
+    {
+      "bytes": 368,
+      "export": "project/review/firmware-analysis/sequential-legacy-clock-2026-11-02/PARENT_SOURCE_CHECK.json",
+      "sha256": "bf68664fcffe7a487472606b9ae5e8fa6a331fc500848b92fe4ec4478343728e",
+      "source": "work/sequential-firmware-priorities/2026-11-02/stage3-legacy-components/PARENT_SOURCE_CHECK.json"
+    },
+    {
+      "bytes": 6742,
+      "export": "project/review/firmware-analysis/sequential-legacy-clock-2026-11-02/source-review.txt",
+      "sha256": "cf1ef79eafb9d38e59f58dc0347a0513d4f569dc457d9ee785b9a4d6eb265327",
+      "source": "work/sequential-firmware-priorities/2026-11-02/reviews/stage3-legacy-source-review.md"
+    }
+  ],
+  "scope": "Own12sourceoccurrences with bounded safe source lines; inherited startupselector, newflagconsumer/separatewrappercomparison; no actualclock/provider execution"
+}

@@ -1,0 +1,65 @@
+
+/home/bticino/matrix_mx/matrix_mx:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000da5f0 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x36e10>:
+   da5f0:	d503233f 	paciasp
+   da5f4:	d10103ff 	sub	sp, sp, #0x40
+   da5f8:	b00011e2 	adrp	x2, 317000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1c0070>
+   da5fc:	a9017bfd 	stp	x29, x30, [sp, #16]
+   da600:	910043fd 	add	x29, sp, #0x10
+   da604:	f947dc42 	ldr	x2, [x2, #4024]
+   da608:	a90253f3 	stp	x19, x20, [sp, #32]
+   da60c:	aa0003f4 	mov	x20, x0
+   da610:	a9035bf5 	stp	x21, x22, [sp, #48]
+   da614:	91004016 	add	x22, x0, #0x10
+   da618:	f9400040 	ldr	x0, [x2]
+   da61c:	f90007e0 	str	x0, [sp, #8]
+   da620:	d2800000 	mov	x0, #0x0                   	// #0
+   da624:	f9000296 	str	x22, [x20]
+   da628:	b40005a1 	cbz	x1, da6dc <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x36efc>
+   da62c:	aa0103f5 	mov	x21, x1
+   da630:	aa0103e0 	mov	x0, x1
+   da634:	97fd1e93 	bl	22080 <_ZNSt8ios_baseD2Ev@plt>
+   da638:	f90003e0 	str	x0, [sp]
+   da63c:	aa0003f3 	mov	x19, x0
+   da640:	f1003c1f 	cmp	x0, #0xf
+   da644:	540002c8 	b.hi	da69c <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x36ebc>  // b.pmore
+   da648:	f100041f 	cmp	x0, #0x1
+   da64c:	54000241 	b.ne	da694 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x36eb4>  // b.any
+   da650:	394002a0 	ldrb	w0, [x21]
+   da654:	39004280 	strb	w0, [x20, #16]
+   da658:	b00011e0 	adrp	x0, 317000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_@@Base+0x1c0070>
+   da65c:	f9000693 	str	x19, [x20, #8]
+   da660:	38336adf 	strb	wzr, [x22, x19]
+   da664:	f947dc00 	ldr	x0, [x0, #4024]
+   da668:	f94007e2 	ldr	x2, [sp, #8]
+   da66c:	f9400001 	ldr	x1, [x0]
+   da670:	eb010042 	subs	x2, x2, x1
+   da674:	d2800001 	mov	x1, #0x0                   	// #0
+   da678:	54000301 	b.ne	da6d8 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x36ef8>  // b.any
+   da67c:	a9417bfd 	ldp	x29, x30, [sp, #16]
+   da680:	a94253f3 	ldp	x19, x20, [sp, #32]
+   da684:	a9435bf5 	ldp	x21, x22, [sp, #48]
+   da688:	910103ff 	add	sp, sp, #0x40
+   da68c:	d50323bf 	autiasp
+   da690:	d65f03c0 	ret
+   da694:	b4fffe20 	cbz	x0, da658 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x36e78>
+   da698:	14000009 	b	da6bc <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x36edc>
+   da69c:	910003e1 	mov	x1, sp
+   da6a0:	aa1403e0 	mov	x0, x20
+   da6a4:	d2800002 	mov	x2, #0x0                   	// #0
+   da6a8:	97fd1cbe 	bl	219a0 <_Znam@plt+0x10>
+   da6ac:	aa0003f6 	mov	x22, x0
+   da6b0:	f9000280 	str	x0, [x20]
+   da6b4:	f94003e1 	ldr	x1, [sp]
+   da6b8:	f9000a81 	str	x1, [x20, #16]
+   da6bc:	aa1303e2 	mov	x2, x19
+   da6c0:	aa1603e0 	mov	x0, x22
+   da6c4:	aa1503e1 	mov	x1, x21
+   da6c8:	97fd1bd6 	bl	21620 <_ZNK4Json5Value6asBoolEv@plt+0x8>
+   da6cc:	f9400296 	ldr	x22, [x20]
+   da6d0:	f94003f3 	ldr	x19, [sp]
+   da6d4:	17ffffe1 	b	da658 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE7reserveEm@@Base+0x36e78>

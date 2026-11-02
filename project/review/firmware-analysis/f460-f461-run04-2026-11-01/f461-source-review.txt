@@ -1,0 +1,23 @@
+# Independent F461 run04 source review
+
+PASS; no source correction requested. This is an independent static source and artifact review by the F460 author, not a vendor/native/runtime or physical replay.
+
+I reproduced `python3 -B work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/collect_field_v1.py --check`: 21 outputs, 11 selected spans, 32 exact instruction guards and 23 exact first copies. Separately from the author collector I read the three original extracted ELF byte streams, checked all three SHA256 identities, derived each fresh ELF64 PT_LOAD map and independently verified every saved span hash and all 32 words. All 20 non-self output-manifest members and all 23 current/first-copy byte identities match. No author bytes were changed; no vendor instruction, syscall, semantic fixture or provider body executed.
+
+Original source agrees with the selected positive joins. The two exported 112-byte descriptor identities and GLOB_DAT/ABS64 rows distinguish scs_field_bus0x15220 from scsai_field_bus0x151b0, including their routes at+80 and private storage+96. Conditional plugin calls0x33d8/0x3424 pass those supplied descriptors to the named register_field_bus import. Candidate libcoso0x2650 prepends the same descriptor to manager+24, writes manager+104 and conditionally invokes descriptor+48 with same descriptor and manager+56 after a second get_plug_m request. Same-manager identity across calls, provider binding and normal list/allocation/helper returns remain explicit premises; this is not active initialization/connection proof.
+
+The original data and instructions independently establish base route words(1,0) at constant0x4160, store to message+8 at0x2cf4 and direction word+16=2. Wrapper0x2d30 writes upper route word+12=1; wrapper0x2d50 writes2. Thus full64 routes(1,1)/(1,2) match their respective original descriptors and are not interchangeable merely because low32 is1. The actual constructor/import/normal-return premise is retained. No WHO, electrical role, accepted input or delivery inference follows.
+
+Configuration review checked successful-load boolean requests/stores and original nonzero registration gates, including failed-load use of existing globals. Both original data words0x15190/0x15194 are1; the safe packaged whitelist separately says SCSEnable=1 and SCSAIEnable=0. These are distinct source and selected-file contexts. The supplied directory duplication into plugin-data+16 and selected indirect initializer call using that same field have original source support, but main/CLI precedence and actual chosen module/file remain open. Only three approved safe values are exported; adjacent tuning/configuration values and callback bodies are not promoted or interpreted.
+
+Run03 composition remains conditional on the same manager/list objects, criteria and local message content. Descriptor route+80, translation criterion-list+80, descriptor private+96, manager lists and public protocol axes are kept distinct. F461 product context does not establish F454 alarm hardware or physical AI attribution. No failed canonical generation or overwritten candidate was found in the saved first-candidate set; review does not certify undocumented exploratory history.
+
+Exact reviewed pins:
+
+- `work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/REPORT.md`: `91a541f322d8126f3dc8c5e64547242ebedecbb8c3d6b959e9494ffe2ee2ff3f`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/collect_field_v1.py`: `1f2825c7b7207879acd413aefac96d2a1e4b141f85b2a25f8f40c40cde7cbc81`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/SOURCE.json`: `4506c6a656bd61fc870269c225e5c98ccf73db3d3168c22bc14b782cc6485b14`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/CONFIG_WHITELIST.json`: `211b531d83be72a6e57706c7de174f95f2adf60be5e1d3acc28c41ca9b33ddef`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/INPUTS.json`: `5e54b029ef9e52cc2b3bfe9e67bc6739dcf855afaefd941f2d8ebb449c9a7f51`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/OUTPUT_MANIFEST.json`: `c8ea0aefd8fa39af8aee84af02aa6005632a623b7fae705be386f7967fac9358`.
+- `work/f461-firmware/2.0.11/research/2026-11-01-run04-field-owner/first-candidate/INDEX.json`: `57baa9185654f7bd9e7f4990dd0bdde3625eb50be7ed83467354a3b32bb01835`.

@@ -1,0 +1,55 @@
+{
+  "historical_reference_policy": "ONLY two exact path+expectedsize+expectedSHA mappings. Old614 Device and numeric142 overview use retained pre-edit bytes; every other613/141 member must match current path. No global pre-edit fallback.",
+  "predecessor_catalogue": [
+    {
+      "bytes": 3479,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/REPORT.md",
+      "sha256": "41a3481502c1951bf58c7d475518d670fb9acd806c26bd509ce10902be9152f8"
+    },
+    {
+      "bytes": 23383,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/build_navigation_v1.py",
+      "sha256": "d901db90423620f626101a0c412e404b9d65fa7506730cb63eddb66a74cdc656"
+    },
+    {
+      "bytes": 133066,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/CATALOGUE.json",
+      "sha256": "c7c4a1af363f1b8a60980e2281695f5708c240e99383d9239d87371e1088fdca"
+    },
+    {
+      "bytes": 8852,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/CATALOGUE.md",
+      "sha256": "692bdffd1c0f648599a5eecc6ad8bd9b0b4361a0594b2b26cded6d4c863d774e"
+    },
+    {
+      "bytes": 146684,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/INPUTS.json",
+      "sha256": "470397b9d7f8cbc15d01f3451d3da26fb43d96f6b3d339d760d6418eb315d342"
+    },
+    {
+      "bytes": 1454,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/OUTPUT_MANIFEST.json",
+      "sha256": "ab35365ff80e110705975330befd9644bc26db372b4a4986fbe0ddd906edd757"
+    },
+    {
+      "bytes": 2819,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/SAVED_CORPUS.json",
+      "sha256": "17f93c8ee2e00f7cfaad49f7d41c40305bb4f24564b7521acc999c866afc6ee9"
+    },
+    {
+      "bytes": 8452,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/VERSION_NAVIGATION.json",
+      "sha256": "2af645d3576ecfc64dcfabca287025a875b8c4ad046d28d4268ba4e81789a39d"
+    },
+    {
+      "bytes": 1172,
+      "path": "work/myhomeserver1-firmware/3.87.13/research/2026-11-01-synthesis/navigation/first-candidate-v1/INDEX.json",
+      "sha256": "eb99ef1bdf998e0006e68b25ea3eb44e4bdf39b605e8d3f9bc4894f494c6c0b3"
+    }
+  ],
+  "provider_sha256": "5916ac361655304327bbf9b2632c1724e49e25b3dd2a10bb27aaa815503ebc36",
+  "scalar_provider": "/usr/lib/libjsoncpp.so.1.9.5",
+  "scheduler_image": "/home/bticino/scheduling_manager/scheduling_manager",
+  "scheduler_sha256": "7d748f49f55a2fe788a6797fd59eef90e79e417f9b309f39e58207a52504da26",
+  "source_scope": "Inherited saved original identities, not fresh original binary/database/firmware source checks"
+}

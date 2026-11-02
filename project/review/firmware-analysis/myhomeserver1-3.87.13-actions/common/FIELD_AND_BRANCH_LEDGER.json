@@ -1,0 +1,94 @@
+{
+  "common_primary_methods": {
+    "execute": "0xcd848",
+    "stop": "0xcd6f0",
+    "third_method": "0xcd550 immediate BXLR; not completion getter"
+  },
+  "completion_caller": {
+    "accessor": "0xcd97c reads action byte4",
+    "boundary": "Caller polling source, not successful eventual completion or elapsed guarantee",
+    "selected_direct_call": "0xa6908 tests its return"
+  },
+  "execute": {
+    "entry_resets_completion_to": 0,
+    "first_word_nonzero": [
+      "request delay worker thread",
+      "local execute does not request duration worker on this branch"
+    ],
+    "first_word_zero": [
+      "call start callable inline",
+      "if secondword0 set completion1",
+      "else request duration worker thread; completion remains0 until worker normal callback return"
+    ],
+    "local_normal_return": 1,
+    "not_checked": [
+      "shared stop flag on inline path",
+      "already active/completed guard",
+      "successful thread run or delivery"
+    ]
+  },
+  "original_execution": 0,
+  "per_action": {
+    "completion_byte": 4,
+    "first_operational_wait_word": 8,
+    "second_operational_wait_word": 12,
+    "start_callable_data": 16,
+    "start_callable_invoker": 28,
+    "start_callable_manager": 24,
+    "stop_callable_data": 32,
+    "stop_callable_invoker": 44,
+    "stop_callable_manager": 40,
+    "thread_holder": 48
+  },
+  "selected_sleep_metadata_distinction": {
+    "JSON_duration_to_operational12": "not established; metadata88 must not be substituted for operational12",
+    "normalbasecopy": "b444c copies actual operational8/12 independently of later JSON metadata",
+    "operational8_12_initial_zero": true,
+    "parsed32_36_copied_metadata84_88": true,
+    "parsed_delay_to_operational8": "sourceb7632\u2192b7652\u2192cd988"
+  },
+  "shared_domain": {
+    "base": "0x1677b8",
+    "condition_variable_request": 0,
+    "initializer_zero_store": "0x1548e",
+    "mutex_base": 48,
+    "scope": "Same exact PC-derived global across selected common methods, not a per-action stop byte. No exhaustive indirect-alias/reset absence claim.",
+    "stop_byte": 72,
+    "stop_set_store": "0xcd706"
+  },
+  "stop": {
+    "does_not_locally": [
+      "invoke action-specific stop callable",
+      "set per-action completion1",
+      "reset shared stopbyte"
+    ],
+    "effect": [
+      "lock shared mutex",
+      "set sharedbyte1",
+      "notify_all shared condition variable",
+      "unlock"
+    ],
+    "receiver_used": false
+  },
+  "unclosed": [
+    "all setters/later global resets via other forms",
+    "natural runtime activation and live stop state",
+    "full callables/error/unwind/shared ownership",
+    "API clock/provider/binding and time structures beyond source arguments",
+    "all derived action applicability and complete cancellation/concurrency"
+  ],
+  "wait_workers": {
+    "callback_scope": "Opaque installed action-specific callable, no inspection or synthetic successful callback here. Flag changed while inside callable is not rechecked before subsequent completion1 store.",
+    "first": "0xcd5c4 loads action8, calls start callable after selected deadline",
+    "second": "0xcd720 loads action12, calls stop callable after selected deadline",
+    "shared_wait_flow": [
+      "lock global mutex; lock nonzero requests system_error throw",
+      "steady_clock now + unsigned32word*60000000000 modulo2^64",
+      "if shared flag nonzero unlock/return without callback/completion write",
+      "divide signed64 deadline by1e9; pass low32 quotient/remainder pair to clockwait clockID1",
+      "ignore clockwait return; refresh clock and compare signed deadline",
+      "if not reached and flag0 repeat; flag1 unlock/return",
+      "when reached unlock; if savedflag0 invoke phase callback then set action completion1"
+    ]
+  }
+}

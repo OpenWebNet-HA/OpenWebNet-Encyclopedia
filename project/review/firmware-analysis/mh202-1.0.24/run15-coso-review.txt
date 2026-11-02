@@ -1,0 +1,47 @@
+# Independent source review — MH202 COSO run15
+
+**PASS; no material correction required.** I independently reviewed the author report/collector, original SCS/core/TR/main/STM source spans and finite record ledgers. I did not author this COSO batch. This review performs host read/disassembly/state checks only: original ARM/libc/parser/plugin/callback/allocator/list/timer execution0, no target OS/process/live I/O or physical transaction. It adds no native corpus.
+
+## Reproduction and original checks
+
+`python3 -B work/mh202-firmware/research/2026-10-30/coso/run15/collect_evidence.py --check` passes25 outputs plus manifest,19 spans,34 word assertions,5 original files,10 PIC-resolved literals and2 finite ledgers. All25 manifest hashes match current evidence. Saved comparison is strict bytes; author report/history are separately pinned here.
+
+Separately from the collector, I read all five fresh originals through ImageVFS, independently verified their whole-file size/hash identities, mapped original VAs using PT_LOAD, and checked all19 raw-byte span hashes and34 original words. I independently resolved all10 literal pools and compared their exact terminated text bytes. I checked the two fixed record/state ledgers retain pointer tokenQ/ID41/status1 or2 across the declared in-place replacement, route2 and final pending-clear state. These are source-contract checks, not original execution or parser acceptance.
+
+## Source and scope findings
+
+* Core `prepare_scs_from_open` source ID load/copy at `0x2238/0x2250` supports ID lineage; it does not establish actual queue placement or body/causal response provenance. SCS `0x2ca4..0x2d40` obtains the existing queue-head data pointer, preserves it at SP+48, removes its queue link, then writes status+52=1/2 from the previously scanned header field, representation+56=1 and direction+12=1. Its displayed stores do not assign a new ID. Natural queue/body identity, the header's physical meaning and prior route/send completion are correctly explicit premises.
+* The selected reverse source slices ASCII `B1/00/12/0A`. Its B1+00 branch sets the address path to `0`; successful `0A` comparison supplies zero directly to the `%d` formatting argument. The declared private configword3 bypasses config4 suffix creation. Final source arguments produce `*2*0*0##` and pass the **nonnull existing record** to `add_open_buf_to_msg_list` at `0x3658`. These literal/body/config relations are conditional source semantics, not observed serial bytes, actual configuration or parsed-kind proof.
+* Complete core helper `0x2340..0x2430` saves source pointer in r7. It requests parsing and frees the formatted input; it does not test parser success before later dereferencing its result. The selected nonnull branch frees only the old body/parsed object under ordinary imported ownership behavior, then stores the new parsed pointer/routing/type/representation/direction/metadata into that same r7 record. It directly stores neither message+52 status nor+60 ID. The distinct null-source branch at `0x2418..0x242c` allocates64 bytes and calls/stores `new_id`. Preservation is correctly conditional on successful coherent parsing and ordinary nonaliasing imports, not a universal lifetime or parser-safety guarantee.
+* Actual main `field_receive` checks descriptor axes/direction and criterion against incoming route1, calls the relocated automation TR with the same record, and after selected return0 tests output membership for that original pointer at `0xb9d4`. The retained in-place append satisfies that membership under normal lists. This avoids the selected `free_message` branch; no complete reclamation/lifetime claim is inferred.
+* The synchronizer boundary is retained rather than bypassed: main `0xb9fc` foreach uses original callback `0xad70` with manager+28 registry, which compares criteria and can invoke synchronizer descriptor+40 at `0xadc0`. Unknown active callbacks may change the record. The joined receipt result therefore requires an empty list or callbacks preserving the selected record/body/routing/parsed/status/ID state. Source method arguments and this premise agree with the host ledger.
+* Main then calls `send_to_sm_from_field`; its callback `0xade8` reads record+48, matches STM criterion2 and calls descriptor+40 with descriptor, the same record and field/OPEN output-list addresses. Relocated automation callback `0x1c0c` and WHO2 registration criterion are actual source identities, not guessed from plugin names. Additional descriptors/criteria may run; the author does not promote a one-selected-path ledger to a complete multi-plugin model.
+* Under coherent normal WHO2/parsedkind1, declared query-active0/pending1/savedID41 and unchanged record ID41/status1 or2, the original run14 branch requests local ACK or NACK, clears pending, sets savedID−1 and forwards the original record with metadata+8=3. Message status+52, message ID+60, context pending+52, context savedID+56, routing+48 and parsed kinds remain distinct namespaces. This is local queue/list/receipt policy; physical success/error/motion/delivery remains unknown.
+
+The fixed host ledgers agree: header nonzero→status1/local_ACK, zero→status2/local_NACK; both retain pointerQ/ID41 through replacement, both obtain route2 and finish context pending0/ID−1. Parser output, active registry/provider/global/callback preservation and no intervening request replacement are premises. They do not prove a natural forward/reverse roundtrip or that the actual queue head is a physical response.
+
+## Author-stage assertion correction history
+
+I independently compared `development-before-assert/collect_evidence.py` with the final script. The only difference is the expected original word at core VA `0x2250`: old `e58c303c` versus actual/final `e582303c`, changing the asserted store base register from ip to r2. The original raw bytes confirm the final word. This is an assertion encoding correction, not a semantic model/source change. The assertion loop precedes the output-write loop, so the reported failed draft stops before generated output writes. The retained exact draft hash is pinned below. No original execution occurred in that development failure or this review.
+
+## Exact reviewed identities
+
+Research paths are relative to `research/2026-10-30`; firmware paths identify original image files.
+
+| Artifact | SHA256 |
+| --- | --- |
+| `coso/run15/REPORT.md` | `26826089a28b89869ae5ef5a3e4b00ea1ffb2ebda200bea13ecd67357149894d` |
+| `coso/run15/collect_evidence.py` | `70446fd3fb80a8c38a13709514bb532dbd189b21ef605e815dd6662fb95bcc63` |
+| `coso/run15/output-manifest.json` (25 entries) | `f00ac714841e3223ddd244a379f55a93f16d046a151941ccd29b9bc1f5551218` |
+| `coso/run15/input-hashes.json` | `e2c4820a1f40f1dae0f8be0727d232a39eb857e86459f90a6396ea24811fcd9a` |
+| `coso/run15/original-spans.json` | `bb855d37fb52f48a5fc5f6aef5e43001ae15bea45805ec72c375c80640c351fe` |
+| `coso/run15/host-selected-record-identity-ledger.json` | `1a4639d60686129f61b7df4dfbcbbcbd67bef97b142cebbfd020e0f782fdca5a` |
+| `coso/run15/actual-dispatch-pointer-contract.json` | `3e48b4edd43fcccad4c3534f9e5c380c12d9c26cfbe0c4c0a48195d85d75f645` |
+| `coso/run15/development-before-assert/collect_evidence.py` | `66714dab74c99dacbe5f4c0f0af47c645b587920c73a97466cf4d67279e35353` |
+| `/home/bticino/bin/coso` | `6865c2d1d441d25effa31275080ded70ad3538a8a49288e3002ffb196b066175` |
+| `/home/bticino/libcoso/libcoso.so` | `f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97` |
+| `/home/bticino/libcoso/libplug_scs.so` | `07fe8d2b35264df4961e1cc9b648808a6ee5b32754a705b237fb90d0a6a6f6af` |
+| `/home/bticino/libcoso/libplug_automation_tr.so` | `76108725f70176f3e9d960f0f96c26359f1893f8b0f34a5c131e930a2751f62b` |
+| `/home/bticino/libcoso/libplug_automation_stm.so` | `0d8969f4623493fa8a054694a836d958b612e137fe34d89ba1d3ccade7ce43fb` |
+
+Only this reviewer-owned file is written. Author evidence, historical files, synced sources and images remain unchanged. The author output manifest excludes report/reviews; these separate pins avoid a review/provenance cycle. No required correction, native-count addition or broader runtime/physical claim is requested.

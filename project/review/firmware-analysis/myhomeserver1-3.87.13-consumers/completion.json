@@ -1,0 +1,50 @@
+{
+  "status": "requested_bounded_consumer_continuation_complete",
+  "completed_UTC": "2026-10-31T20:05:48.926756+00:00",
+  "scope": "MyHOMEServer1 3.87.13 actual catalogue opening/selected reader, scenario-file loading/factory handoff and separate C JSON local-receipt contracts. Incomplete query ownership/runner/action/runtime semantics retained.",
+  "encyclopedia_page": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13-consumers.md",
+  "page_sha256": "ff3b179e05c69f6a1f34ab97ee76c43c3e72bdfff89d6c6661644c4bd45f4583",
+  "authoritative_reports": {
+    "catalogue/REPORT.v2.md": "609c22da91d9f4b1cf2d51dca5fb50fc3665190907fa96bd0cb8f18a1b7708a4",
+    "scheduler/REPORT.md": "d41cdc4417f72070792d1e45b1930787fd5e5511c61907ce166b2f231f0c5f12",
+    "providers/REPORT.v2.md": "a15c6eddf21993e7b5f41372c747412fce771471632429b4da2896ac5c4b13da"
+  },
+  "current_collectors": 3,
+  "deterministic_outputs": 59,
+  "exact_exports": 77,
+  "source_reviews": 4,
+  "current_documentary_reviews": 2,
+  "validation_sha256": "be7b711aa5546edde5018a3c2bdb3c2b3d642ad183c1148d36f30e65778511e2",
+  "final_checks_sha256": "2e3ea327e53cfd4691385a99730636beae19badff67d9f9abc1fac1194f3e202",
+  "pending_review_link_resolution": "All seven earlier pending targets now actual exact files; final strict ESG/ECV/Git success, no placeholders/exemptions",
+  "protected_earlier_indexed_entries": 6799,
+  "historical_reference_substitutions": [
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "retained_prior": "work/mhcatalogue-comparison/2026-10-31/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "sha256": "0581a52f32a95f4cae419693fe8d20b4ecf272f5e195f40070b00e166aea173f"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/internals/mhcatalogue-source-profiles.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/integration/pre-edit/internals/mhcatalogue-source-profiles.md",
+      "sha256": "35cab23085fdc9120784916657da218aabd783a0f2008705ba8e41cc3485f809"
+    },
+    {
+      "current_reference": "OpenWebNet-Encyclopedia/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "retained_prior": "work/myhomeserver1-firmware/3.87.13/research/2026-10-31-consumers/integration/pre-edit/reverse-engineering/firmware-analysis/myhomeserver1-3.87.13.md",
+      "sha256": "c787f9bc0f70f8ab99dc8341331c4f72714b9e29878034efd5b4d9a0ba70a9e7"
+    }
+  ],
+  "current_original_vendor_target_SQL_services_network_bus_physical_execution": 0,
+  "host_resolved_node_cases": 8,
+  "earlier_firmware_execution_ledgers": "Unchanged; no replay or reset",
+  "branch": "docs/static-firmware-analysis-findings",
+  "staged": false,
+  "committed": false,
+  "published": false,
+  "source_manifest_modified": false,
+  "coverage": "COVERAGE.md",
+  "remaining_questions": "RANKED_REMAINING_QUESTIONS.md",
+  "wider_Device_gates": "Pending, unchanged",
+  "automation_created": false
+}

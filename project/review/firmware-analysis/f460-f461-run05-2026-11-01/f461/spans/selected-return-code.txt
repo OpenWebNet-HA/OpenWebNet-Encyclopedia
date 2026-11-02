@@ -1,0 +1,11 @@
+
+/home/bticino/libcoso/libplug_automation_tr.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000041b0 <automation_tr_translate@@Base+0x780>:
+    41b0:	aa1703e0 	mov	x0, x23
+    41b4:	52800017 	mov	w23, #0x0                   	// #0
+    41b8:	97fff73a 	bl	1ea0 <g_free@plt>
+    41bc:	17fffeb1 	b	3c80 <automation_tr_translate@@Base+0x250>

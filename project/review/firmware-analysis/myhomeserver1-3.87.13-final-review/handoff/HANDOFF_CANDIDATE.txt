@@ -1,0 +1,67 @@
+# Firmware Research: Practical Impact and Next Evidence
+
+The MyHOMEServer1 work now supports a build-specific implementation map, a usable distinction between catalogue sources, and concrete scenario-engine findings. Its practical value is knowing which artifact and code path can answer a question, and which additional evidence is still needed before a software result becomes a product or physical claim.
+
+The [current research synthesis](myhomeserver1-3.87.13-research-synthesis.md) explains the implementation. This handoff focuses on how to use that knowledge. It consolidates existing reviewed reports and adds no firmware-source investigation, database analysis, native execution or physical observation. The [handoff review and verification capsule](../../project/review/firmware-analysis/myhomeserver1-3.87.13-final-review/README.md) retains its sources, independent reviews and later-checkpoint verification.
+
+## What changes for catalogue tooling
+
+The embedded MHCatalogue.db and MyHOME Suite's database must remain separate canonical source profiles. Their75 table definitions match, but the embedded schema has an additional index and33 table row multisets differ. Equal names, data-version labels or integer IDs are insufficient to merge their contents. The [complete source-profile comparison](../../internals/mhcatalogue-source-profiles.md) distinguishes reused Configuration IDs, equivalent renumbered fields, retained owners and genuine metadata changes.
+
+An importer can use those source-owned relationships to avoid assigning a field or range to the wrong product. It should retain artifact identity, owner context, NULL/type distinctions and duplicate multiplicity. It should not replace the canonical Suite device descriptions with the embedded profile or infer incompatibility from an omitted row. The embedded database even omits MyHOMEServer1's own catalogue item; it is not a complete self-capability declaration.
+
+Code evidence now gives the selected catalogue data a concrete consumer: matrix_mx requests opening the embedded path, and one class139 reader receives its actual15-column SQL template. Columns13/14 supply slots/system ID. Those [consumer](myhomeserver1-3.87.13-consumers.md) and [owner](myhomeserver1-3.87.13-factories.md) joins are completed source questions. Full device/Firmware selection, fallback and missing or Prototype/RC handling remain open. Stored catalogue labels are neither tested compatibility nor a release-status guarantee.
+
+## What changes for scenario and state tooling
+
+The [scene-engine studies](myhomeserver1-3.87.13-research-synthesis.md) identify selected JSON-facing schemas, virtual serialization/reparse requests, compiled runners, callbacks and consumers. This provides grounded starting points for offline fixtures and future generator work. It does not provide a complete accepted-input grammar or justify deploying a new scene generator without genuine configured inputs and validation.
+
+The evidence distinguishes several things a tool must keep separate:
+
+| Distinction | Practical consequence |
+| --- | --- |
+|Raw schema objects and compiled runners|A raw field's name or offset does not establish its operational use after construction/reparse.|
+|Triggers, conditions and actions|Their local type indices, methods, operator rules and storage representations are separate.|
+|BNLD numeric trigger and BNLD condition|The actual trigger is row3 with a signed-integer handler; the condition is a different row/class and caller.|
+|Integer and double cached fields|The same offset32 in different record types does not establish a shared numeric representation or unit.|
+|Scene stop/active, action completion and shared cancellation|Clearing scene state does not prove action completion, reset the shared flag or establish a successful restart.|
+|Retained owners, raw captures and detached holders|An ownership/disposal request or cleared holder word is not proof that a worker has finished.|
+
+For example, the [numeric trigger](myhomeserver1-3.87.13-event-trigger.md#bnld-numeric-trigger) has a real selected caller with ID/status/value guards and a captured-scene callback. Its four signed comparisons are source-supported. Natural delivery, configured admission, complete JSON/provider behavior, crossing/deduplication and physical units remain separate questions. Likewise, the BNCUSCENE enabled-only predicate is a concrete local finding without a product-wide defect or unsupported-feature conclusion.
+
+## Product roles guide the questions
+
+| Product | Curated role | Relevant implementation evidence |
+| --- | --- | --- |
+|[F454](../../devices/definitions/own-dev-0002-audio-video-web-server-gateway.md)|Audio/video web server and gateway, with documented SCS AV and dedicated burglar-alarm SCS AI connections|Separate alarm software ownership and AV/private-state paths; software serial attribution remains distinct from electrical wiring.|
+|[MH202](../../devices/definitions/own-dev-0151-mh202-scenario-programmer.md)|Scenario programmer/scheduler with distinct Start, OnlyIf, Stop, Action, restart and panic behavior|ScenarioSuite resources and generator/native script-consumer joins; alarm reactions do not establish F454-style alarm hardware or arming capability.|
+|[MyHOMEServer1](../../devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md)|SCS/Ethernet home-automation server with app commissioning and scenario functions|Own C++/JSON scheduling engine and distinct embedded catalogue; neither MH202 script semantics nor F454 hardware roles follow from shared labels.|
+
+Shared vocabulary, component names and earlier research methods are useful search leads. Each build still needs its own original bytes, ABI, object identity, provider and caller evidence. A reusable catalogue Object named F454 does not install F454 AV/alarm hardware in another product. Revision-specific manuals and app workflows also remain distinct from observed installed state.
+
+## Exactly what is demonstrated
+
+| Evidence level | What this research supports |
+| --- | --- |
+|Archived data and metadata|Exact artifact identities, stored records/relationships and source-profile differences.|
+|Static implementation|Selected code/dataflow, construction, branch, callback and ownership requests under stated object/provider/configuration premises.|
+|Isolated original helper execution|One packaged JsonCpp constructor/SAME-object asDouble corpus on four finite supplied bit patterns, including signed zero.|
+|Configured runtime and physical behavior|No complete MyHOMEServer1 scene, target process, service or physical installation was executed by this examination.|
+
+The cumulative MyHOMEServer1 helper ledger is one corpus, eight top-level entries,340 original code-hook visits, zero C primitives,12 definition redirects and eight private EXIT boundaries:360 hooks, with four data-relocation setups separate. There were no guest failures or CPU replays. Visits are not measured retired instructions. The private binding/canary/storage/CPU fixtures and limited scalar scope remain explicit; the experiment does not execute full JSON member/map/assignment/serialization/reparse or the scene engine. Earlier F454/MH202 execution records remain separate, and historical static-zero reports are not rewritten into new experiments.
+
+## The next decisive evidence
+
+| Product | Concrete next evidence | Avoid repeating a question already closed |
+| --- | --- | --- |
+|MyHOMEServer1|Genuine configured scene/generator assets and effective JSON/provider/type/ID behavior; a justified local action-output handoff, positive shared reset or natural owner/polling/removal sequence|Do not repeat selected field/callback tables as a substitute for configuration, correlation or lifetime evidence. Missing extras80/81/94/95 cannot be invented.|
+|F454|Initial role1 AV-state activation and complete private-state lifecycle; independently justified board/resource or net evidence connecting the separate serial record to SCS AI|The [video-status producer](f454-2.0.51-av-and-board.md) is already identified. ttyS2/line2 is not by itself DM365 UART2 or an electrical connector mapping.|
+|MH202|A genuine configured ScenarioSuite input/export for exact .spt/info.xml bytes and complete accepted script/lifecycle behavior|[Generator and native syntax joins](mh202-1.0.24-generated-scenarios.md) already exist. Installer defaults and missing separately configured2.xtz/4.xtz are not a production export.|
+
+These are future evidence requirements, not actions performed by this handoff. Closed receiving/transport/MQTT/libjel/authentication/session/framing investigations remain closed. Physical tests, live contact or vendor-runtime execution require their own authorized setup.
+
+## Verification and disposition
+
+The frozen17-row guide covers checkpoints through double-isolation. The handoff's separate supplement adds synthesis and numeric-trigger as later checkpoints; it does not regenerate that guide or call row counts coverage. A documented Device-reference scope correction retains the exact old Device version used by the guide. The new verification checks that historical pin explicitly instead of claiming the old collector still passes against a changed working path.
+
+The MyHOMEServer1 Device page now distinguishes its earlier documentation/catalogue review from the later build examination. The database profile likewise distinguishes completed selected-reader joins from its still-open full selection policy. Those corrections add no physical capability and do not complete Device/source review gates. Exact prior versions, first candidates, saved validations and the unavailable MH202 run18/run21 intermediate-history limits remain retained. Work is local on docs/static-firmware-analysis-findings, uncommitted and unstaged; this handoff does not publish it or claim exhaustive knowledge.

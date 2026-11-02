@@ -1,0 +1,41 @@
+# Independent review — MH202 protocol/run11
+
+**PASS within the selected two-input parser→normalizer scope; no material correction requested.** Reviewed final report, static collector, fresh two-image harness, original disassembly/words/import metadata, saved parsed readbacks/output traces and manifest. Reviewer reran the host static collector only, not the emulator. Native assessment is an independent source/saved-result audit; parent’s independent replay remains separate. Reviewer original ARM/vendor/parser/JS/PHP execution and live I/O:0.
+
+## Reproduction and original byte checks
+
+`collect_evidence.py --check` strictly reproduced18 outputs from9 pinned inputs, with11 original spans and15 words, layout/import metadata and a two-call ledger. Independently mapped both original ELF PT_LOAD files through ImageVFS and checked every span hash and asserted word. Checked every saved original PC is aligned/file-backed in its declared image, independently recounted trace/event/redirect lengths and hook sums, checked supplied source strings against parsed/readback/output fields and verified all23 final manifest entries. These audits do not regenerate dynamic traces or substitute for emulator `--check`.
+
+Original normal-image identities:
+
+- `/home/bticino/bin/bt_taskmanager`: `ce9dc7b8f78bcda6b89ba518a02c42e8ef420e23bb54f1e1606e75ae3e97966e`.
+- `/home/bticino/lib/libcommon.so.0.0`: `07b2c6d09e4a1b317bb3b37aff8f7ddd72dcec15e1e7194fde00c4f0ce1ecab5`.
+
+## Source/ABI and execution-boundary review
+
+The actual taskmanager normalizer0xcb38 has a16-byte push and7768-byte local frame; its constructor receives localSP+12. The harness computes that exact private object location and poisons the stack before entry. Original constructor C1 at common0x24bf0 calls original Null, not a supplied no-op; actual CreateMsgOpen0x2646c also calls Null and tailbranches original IsCorrect0x25e38. Common C1/D1, field/suffix helpers, getters and predicate are original bodies. D1 is genuinely a one-instruction return in source. The read-only parsed observation at taskmanager0xcb94 occurs at an already-counted original-PC hook entry immediately after CreateMsgOpen returns; it supplies no field/result and is not an additional primitive/redirect/EXIT code-hook entry.
+
+Verified fresh common getter/layout arithmetic uses130-byte stride: WHAT650, WHERE780, DIM1300, values1430+130×index, raw6636, kind7660. IsMeasure tests kind4. No90-byte libopen layout is loaded into this object and no run10 parsed fields are injected. Both images have overlapping linked VA spaces; explicit private common base0x10000000 keeps images distinct and preserves PC-relative selected instructions/constants. The harness does not apply a target loader or claim whole-library runtime relocation/initialization. Its explicit original-function PLT redirects are selected-provider bindings, not live loader observations. Direct NEEDED common-before-open and retained relocation/symbol evidence support this concrete model choice while preserving the report’s no-full-closure/no-interposition qualification.
+
+The actual normalizer measure path checks WHO1, IsMeasure, DIM1 and value0 decimal100, then empty-level branch formats WHERE11 and the source fixed pattern `*1*0*%s##`. The normal kind3 path fails IsMeasure and duplicates the original input. Saved readbacks are actual model-produced common fields before decision: kind4/WHO1/WHERE11/DIM1/value100 versus kind3/WHO1/WHAT1/WHERE11. Returned strings match `*1*0*11##` and unchanged `*1*1*11##`; inputs remain unchanged. These are two constructed ordinary no-bracket cases, not configured records, full trigger grammar or physical dimmer meaning.
+
+Private image mappings are read/execute; writable regions are stack/input/heap. PC admission is limited to the taskmanager normalizer and named common definitions/getters. Unknown PC, interrupt or protected/unmapped access aborts;100000 caps bound each top-level call. Primitive callbacks model only selected memory/string/decimal/format/strdup behavior on allowed guest ranges. Source reads distinguish4096-capped cstring from region-bounded strtok scanning. The input region being writable is explicit, with unchanged input checked afterwards. Private strdup is modeled allocation/copy; it does not imply an original allocator ran. No target syscall, service, device, network, loader/ELF-init or process operation is forwarded.
+
+## Saved new-area accounting and limits
+
+Exactly **2 top-level calls:3178 original instruction visits+346 C primitive callbacks+26 original-body PLT redirects+2 private EXIT boundaries=3552 code-hook steps**. Measure case1714/189/15/1=1919; ordinary case1464/157/11/1=1633. Original visits exclude intercepted PLT and EXIT entries. Constructor/parser/getter/destructor work is counted as original instructions, not silently replaced with primitive-return fixtures. The host collector only recounts saved traces; this review does not add native calls or merge prior/parent corpora.
+
+No report correction was needed. The final text correctly leaves special WHO13/DIM1 selector provenance and that comparator’s different object/frame unresolved. It does not infer selector initialization, global correctness/defect, event matching/latch/script startup/action, runtime provider selection, naturally deployed input or physical effect. Evidence closes the earlier supplied-parser-field boundary only for these two common-provider normalizer fixtures.
+
+## Exact reviewed artifact hashes
+
+- `protocol/run11/REPORT.md` SHA256 `b609d52cb82e37d6dedc7906a71b24732713e305f1a7a9b9377a253e61d306d5`.
+- `protocol/run11/collect_evidence.py` SHA256 `884db0a9b4e5f766e3efc40dc27f8eaad6c033eb296de831e9d3bb30399ae6a2`.
+- `protocol/run11/emulate_common_normalizer.py` SHA256 `a650972f4601dcd1be29e67b2a14a5abccf3236e0ca48ec8f41bbf181678a27a`.
+- `protocol/run11/normalizer-results.json` SHA256 `878a4261595e6d35857aa2f8c20faf936a0c230c663f5d41807755a24330ce81`.
+- `protocol/run11/execution-ledger.json` SHA256 `505e634ed9a464ef2a076e1e8abfde25d7c4971025c2b5fac165133efe028c45`.
+- `protocol/run11/output-manifest.json` SHA256 `209dc8a15497a751145e7f95edb202f7b6c9c9bc07733f5c08e2839ee5e9cb29`.
+- `protocol/run11/original-spans.json` SHA256 `718fdd6f5083df2931ad2e52f13437e53e246ce9d7931e0ca54df21e3e94ceaa`.
+- `protocol/run11/critical-words.json` SHA256 `778e63f59ffb4295bfd9fcc67e1da96e390c19dbfb9a804e19c00ac0431607dd`.
+- `protocol/run11/selected-common-layout-and-binding.json` SHA256 `baaa269119a6be90f6bdf8ac91836e9120bd763615b7e13079ad13b7b2aff439`.
+- `protocol/run11/verified-tool-package.json` SHA256 `9f9bae4d6be11b8849669aeca2375469304e78ab5697abb89e47d3d73f6ca36a`.

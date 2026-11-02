@@ -1,0 +1,69 @@
+# MH202 run20 — selected WHO5 incoming alarm-status translation
+
+**Fresh static original source; original/runtime/physical execution0.** MH202's actual alarm translation plugin has a reverse direction from source criterion4 to parsed WHO5. On the selected post-record brief path, opcode text`42` and status text`09` map to exact candidate text **`*5*27*##`**, then pass that text and the existing input record to the core conversion/list helper. This establishes a concrete software status mapping and output boundary, not a physical alarm state, bus-admitted body, observed parser acceptance or completed publication.
+
+The one host case supplies an eight-character ASCII body`00004209` solely to follow this ordinary branch without taking the separate special-prefix or extended-status branches. It is not a captured packet, validated SCS encoding or claimed product operation. No arming-command matrix, source-language mapping, live gateway/bus, process/OS/network, original parser/library execution, authentication or framing branch is used.
+
+## Actual plugin, descriptor and routing axes
+
+Normal-image `/home/bticino/libcoso/libplug_alarm_tr.so` SHA256 is `47a85dc85bd64a09fd11f6681a7f93f9361a19b042491eca0b7f6fd5ea4354ff`.
+
+The actual descriptor is **alarm_tr0xc3cc**. Original R_ARM_ABS32 relocations bind descriptor36 at0xc3f0 to `alarm_tr_init0x34e4` and descriptor40 at0xc3f4 to `alarm_tr_translate0x2230`. Descriptor44/48 contain direction values1/2. Initializer setup0x174c..0x17a4 sets descriptor type32=2, starts criterion lists52/56 atnull, appends numeric **4 to52** and **5 to56**, then calls imported register_translation. These are separate routing criteria: source4 is not WHO5, and the parsed-output side is WHO5. Registration is an original request, not observed plugin activation or a complete core admission proof.
+
+`alarm_tr_init0x34e4` reuses or requests an eight-byte zeroed private context at descriptor60, then explicitly clears its words0/4. The selected opcode42 status route does not consume the distinct opcode4C cached-payload path; the context is not assigned an alarm-state meaning here. Configuration/version/log setup and effective dynamic loader state are outside the selected reverse result.
+
+Translator entry0x2230 retains direction arguments in r4/sl, the input record in fp, an output-list pointer from r3, and the supplied descriptor pointer as a fifth argument. `0x2288/0x22c0/0x22d4` selects **(1,2)** for this reverse route. Pair(2,1) tailcalls a separate forward helper, which is not reconstructed as an arming operation in this batch. Invalid/other direction branches are not a new support matrix.
+
+## Selected input representation and exact copies
+
+At0x2348..0x2350, input record type40=4 takes a separate extended branch. The selected type3 remains in the brief branch; type9 is another locally admitted type but is not the host case. Record representation56 must equal1 at0x2370..0x2378, and type40 must be3 or9 at0x237c..0x2388. These are actual local record guards, not raw parser/serial/device admission rules or generic enum meanings transferred from another build.
+
+Because the selected second direction argument is2, the four g_strndup requests at0x2394/0x23a8/0x23bc/0x23d0 each copy two characters from record0 offsets0/2/4/6 into separate temporary strings. The host fixture supplies a terminated, owned eight-character ASCII body and valid record/context/list storage; no original copy or allocation runs.
+
+For synthetic`00004209`, the four slices are`00`,`00`,`42`,`09`. The type3 path checks its first slice against public literal`B4` at0x24f0..0x2504; the selected mismatch reaches ordinary g_string_new at0x23f8/0x23fc. A normal nonnull return is required by this selected continuation. The other special brief-prefix path, extended type4 blocks, malformed/short bodies and allocation/error behavior remain separate. The first two slices in this selected status path are not interpreted as a demonstrated device address or hardware header.
+
+## Opcode42/status09 to WHO5 text and same-record handoff
+
+The common reverse branch first compares its third slice with exact public literal`4C` at0x2408..0x241c. Selected`42` misses that cached-payload route and reaches0x26a0. Original comparisons then establish:
+
+| Source | Selected relation/effect |
+| --- | --- |
+|0x26a0..0x26b4|third slice equals original literal`42`|
+|0x26d8..0x26ec|fourth slice equals original literal`09`|
+|0x26f0..0x26fc|duplicate original literal`27` into temporary WHAT text|
+|0x271c..0x2730|format original`*%s*%s*##` with fixed WHO text`5` and WHAT text`27`|
+|0x2734..0x273c|call add_open_buf_to_msg_list(formatted text, same input record, supplied output-list pointer)|
+|0x2740..0x2744|set local result r4=0, then take normal temporary cleanup|
+
+Original PIC base is computed from0x2250+pool0x3124; `safe-status-selection-literals.json` asserts exact addresses/bytes for the seven relevant public comparison/WHO/WHAT/format literals. The resulting candidate is **`*5*27*##`**, with an empty WHERE field. It is not a measurement dimension output or a proven alarm condition label. This batch intentionally assigns neither “armed/disarmed,” a fault type nor any physical meaning to WHAT27 from its number or plugin name.
+
+The plugin frees the four copied body strings, temporary WHAT and its ordinary GString on the selected normal return path0x2438..0x24a4. Core helper result r0 is not tested before local r4 is set0; the selected eventual return is therefore a local normal-completion value, not a publication/delivery/physical-success indicator. Any parser/helper failure or exception can invalidate the normal-return premise and is not simulated here.
+
+## Actual candidate core boundary and conditional metadata
+
+The plugin imports add_open_buf_to_msg_list through JUMP_SLOT0xc304. Candidate same-build `/home/bticino/libcoso/libcoso.so` exports it at0x2340; selected symbol metadata is retained. The plugin directly NEEDEDs libalarm.so and libopenmsg.so, but the selected reverse branch does not call libalarm's forward address helper. These are candidate definition/import/needed relations, not a full process closure or observed binding against interposition/overrides.
+
+Original core0x2340..0x2440 initializes its local parser output slot, calls buf_to_openmsg at0x2390 and frees the supplied formatted text at0x2398. With the selected existing nonnull record and representation1, it frees that record's old body at0x23b4, stores the parser-produced object at record0 and writes type40=2, representation56=3, direction12=2, metadata4=2, metadata8/16=0 and routing48 from the parsed WHO decimal text. It appends the **same record pointer** through g_list_append and updates the output-list head.
+
+Thus, **conditional on normal parser/provider/object/allocator/list completion with WHO5**, routing48 becomes5, while status52/ID60 remain unchanged on this selected nonnull path. These are original static store relations, not actual resulting record observations for`*5*27*##`. The candidate core does not check parser r0 before using its local output object; this report does not assume every formatted text succeeds. In particular the empty-WHERE candidate's actual pointer-parser acceptance is **unexecuted** here.
+
+Protocol/run17 previously executed this core helper only for a different WHO2 text and supplied record under private models. It supplies a useful named boundary, not transferable WHO5 execution coverage. No old native fixture/result is relabeled as an alarm test, and no new original helper is run. The formatted text is owned by the core delegate; body slices and WHAT are separate plugin temporaries. Actual allocator ownership, future records/queues/callback lifetime and destruction remain runtime premises.
+
+## Finite host evidence, limits and reproduction
+
+`host-selected-status-ledger.json` follows one supplied representation1/type3 record through original branch predicates, two-character-copy relations, exact literal selection, format and helper-call arguments. Its normal-return result0 is a source transcription, not an observed original return. Parser acceptance/list publication/physical meaning fields explicitly remain unknown. It does not supply a real routing parser, validate arbitrary ASCII/binary data, or claim all status values/addresses are supported.
+
+| Original normal-image file | SHA256 |
+| --- | --- |
+| `/home/bticino/libcoso/libplug_alarm_tr.so` |`47a85dc85bd64a09fd11f6681a7f93f9361a19b042491eca0b7f6fd5ea4354ff`|
+| `/home/bticino/libcoso/libcoso.so` |`f5984bb276d865d54f5665849cbf6ed8c458c347aa9c69e2d7608260212add97`|
+
+```sh
+python3 -B work/mh202-firmware/research/2026-10-30/alarm/run20/collect_alarm.py --check
+```
+
+PASS:16 deterministic outputs, eight original spans,28 exact instruction words, four input identities, seven safe literal assertions, four callback/import relocation rows and one host case. `original-spans.json` records source VAs/file offsets/raw hashes; input identities pin the two original images, shared verified image accessor and immutable protocol17 context report. Original/native/C primitive/linker/EXIT/stop/hook counts all0. Earlier dossiers, firmware, synced sources and repository files are unchanged.
+
+High confidence static: actual descriptor/callback/criterion identities, selected type/representation/direction guards, body-slice positions,42/09→27 literal selection, empty-WHERE WHO5 format, same-record helper arguments and candidate core stores. Conditional: valid record/routing/context/storage, ordinary copies/allocation/logging, selected parser/provider completion and output-list lifetime. Unknown: actual SCS body admission/address meaning, empty-WHERE native acceptance, effective plugin/provider/queue configuration, complete alarm-state taxonomy, transport/publication and physical state.
+
+The next useful narrow questions are actual same-build parser acceptance of this exact generated WHO5 candidate and the upstream record-routing producer supplying a real source criterion4 status body. Neither can be answered from plugin naming or by treating the synthetic prefix as a captured hardware event.

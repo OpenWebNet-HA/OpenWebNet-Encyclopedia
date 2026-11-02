@@ -1,0 +1,37 @@
+
+/home/bticino/libcoso/libplug_scs.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+000000000000342c <init_plugin@@Base+0x2ac>:
+    342c:	aa1c03e1 	mov	x1, x28
+    3430:	d2800003 	mov	x3, #0x0                   	// #0
+    3434:	aa1603e0 	mov	x0, x22
+    3438:	90000002 	adrp	x2, 3000 <scs_send_msg@@Base+0x810>
+    343c:	9123c042 	add	x2, x2, #0x8f0
+    3440:	97fffb44 	bl	2150 <g_key_file_get_integer@plt>
+    3444:	2a0003e4 	mov	w4, w0
+    3448:	5289c420 	mov	w0, #0x4e21                	// #20001
+    344c:	7100009f 	cmp	w4, #0x0
+    3450:	aa1c03e1 	mov	x1, x28
+    3454:	1a801084 	csel	w4, w4, w0, ne	// ne = any
+    3458:	b90016a4 	str	w4, [x21, #20]
+    345c:	d2800003 	mov	x3, #0x0                   	// #0
+    3460:	aa1603e0 	mov	x0, x22
+    3464:	90000002 	adrp	x2, 3000 <scs_send_msg@@Base+0x810>
+    3468:	91240042 	add	x2, x2, #0x900
+    346c:	97fffb39 	bl	2150 <g_key_file_get_integer@plt>
+    3470:	7100001f 	cmp	w0, #0x0
+    3474:	528005a1 	mov	w1, #0x2d                  	// #45
+    3478:	1a811004 	csel	w4, w0, w1, ne	// ne = any
+    347c:	b90012a4 	str	w4, [x21, #16]
+    3480:	aa1603e0 	mov	x0, x22
+    3484:	90000002 	adrp	x2, 3000 <scs_send_msg@@Base+0x810>
+    3488:	90000001 	adrp	x1, 3000 <scs_send_msg@@Base+0x810>
+    348c:	91244042 	add	x2, x2, #0x910
+    3490:	91248021 	add	x1, x1, #0x920
+    3494:	d2800003 	mov	x3, #0x0                   	// #0
+    3498:	97fffb2e 	bl	2150 <g_key_file_get_integer@plt>
+    349c:	2a0003fb 	mov	w27, w0
+    34a0:	17ffff93 	b	32ec <init_plugin@@Base+0x16c>
